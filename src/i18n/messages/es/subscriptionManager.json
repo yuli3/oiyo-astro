@@ -1,0 +1,43 @@
+{
+  "list": {
+    "keep": "Mantener",
+    "keepAction": "Mantener esta suscripción",
+    "review": "Revisar",
+    "reviewAction": "Revisar el uso",
+    "cancel": "Cancelar",
+    "cancelAction": "Cancelar suscripción",
+    "monthly": "Mensual",
+    "used": "Usado",
+    "timesPerMonth": "veces/mes",
+    "satisfaction": "Satisfacción",
+    "valueScore": "Puntuación de Valor"
+  },
+  "title": "Gestor de Suscripciones",
+  "subtitle": "Rastrea y optimiza tus suscripciones mensuales",
+  "addSubscription": {
+    "title": "Agregar Suscripción",
+    "nameLabel": "Nombre del Servicio",
+    "namePlaceholder": "ej. Netflix, Spotify",
+    "priceLabel": "Precio Mensual",
+    "pricePlaceholder": "0.00",
+    "usageLabel": "Uso Mensual",
+    "usageUnit": "veces",
+    "satisfactionLabel": "Satisfacción",
+    "submit": "Agregar"
+  },
+  "summary": {
+    "monthlyTotal": "Total Mensual",
+    "yearlyTotal": "Total Anual",
+    "potentialSavings": "Ahorros Potenciales"
+  },
+  "tips": {
+    "title": "Consejos Inteligentes",
+    "tip1": "Revisa las suscripciones que no hayas usado en 30 días.",
+    "tip2": "Combina planes familiares para reducir costos.",
+    "tip3": "Configura un recordatorio en el calendario para revisar cada mes."
+  },
+  "empty": {
+    "title": "Sin Suscripciones Aún",
+    "description": "Comienza a agregar tus suscripciones para rastrear tus gastos."
+  }
+}

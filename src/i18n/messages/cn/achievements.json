@@ -1,0 +1,41 @@
+{
+  "filters": {
+    "all": "全部",
+    "testCompletion": "测试",
+    "social": "社交",
+    "streak": "连续记录"
+  },
+  "notifications": {
+    "empty": "暂无新通知。"
+  },
+  "page": {
+    "title": "我的成就",
+    "subtitle": "追踪您的进度和已解锁的里程碑。"
+  },
+  "badgesUnlocked": "已解锁徽章",
+  "overallProgress": "总体进度",
+  "viewAll": "查看全部",
+  "emptyCategory": "此类别暂无成就。",
+  "labels": {
+    "level": "等级",
+    "points": "点数"
+  },
+  "title": "成就",
+  "unlocked": "已解锁",
+  "firstTest": {
+    "name": "探索者",
+    "description": "Explored 3 categories."
+  },
+  "fiveTests": {
+    "name": "探索者",
+    "description": "Explored 3 categories."
+  },
+  "tenTests": {
+    "name": "探索者",
+    "description": "Explored 3 categories."
+  },
+  "explorer": {
+    "name": "探索者",
+    "description": "探索了 3 个类别。"
+  }
+}

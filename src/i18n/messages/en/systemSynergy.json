@@ -1,0 +1,19 @@
+{
+  "title": "System Synergy",
+  "saju": {
+    "title": "Saju",
+    "description": "Four Pillars of Destiny."
+  },
+  "chineseZodiac": {
+    "title": "Chinese Zodiac",
+    "description": "12 Animal Signs."
+  },
+  "tarot": {
+    "title": "Tarot",
+    "description": "Card reading."
+  },
+  "numerology": {
+    "title": "Numerology",
+    "description": "Number meanings."
+  }
+}

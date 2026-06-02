@@ -1,0 +1,293 @@
+{
+  "title": "Four Pillars (Saju)",
+  "systemName": "Four Pillars of Destiny",
+  "narrative": "Saju Myeongli",
+  "stems": {
+    "gap": {
+      "name": "Gap",
+      "meaning": "Yang Wood",
+      "symbol": "Large Forest Tree"
+    },
+    "eul": {
+      "name": "Eul",
+      "meaning": "Yin Wood",
+      "symbol": "Flower/Vine"
+    },
+    "byeong": {
+      "name": "Byeong",
+      "meaning": "Yang Fire",
+      "symbol": "The Sun"
+    },
+    "jeong": {
+      "name": "Jeong",
+      "meaning": "Yin Fire",
+      "symbol": "Candle/Torch"
+    },
+    "mu": {
+      "name": "Mu",
+      "meaning": "Yang Earth",
+      "symbol": "High Mountain"
+    },
+    "gi": {
+      "name": "Gi",
+      "meaning": "Yin Earth",
+      "symbol": "Garden Soil"
+    },
+    "gyeong": {
+      "name": "Gyeong",
+      "meaning": "Yang Metal",
+      "symbol": "Axe/Raw Metal"
+    },
+    "sin": {
+      "name": "Sin",
+      "meaning": "Yin Metal",
+      "symbol": "Jewelry/Dagger"
+    },
+    "im": {
+      "name": "Im",
+      "meaning": "Yang Water",
+      "symbol": "Ocean/Lake"
+    },
+    "gye": {
+      "name": "Gye",
+      "meaning": "Yin Water",
+      "symbol": "Rain/Mist"
+    }
+  },
+  "branches": {
+    "zi": {
+      "name": "Zi",
+      "animal": "Rat",
+      "season": "Winter"
+    },
+    "chou": {
+      "name": "Chou",
+      "animal": "Ox",
+      "season": "Late Winter"
+    },
+    "yin": {
+      "name": "Yin",
+      "animal": "Tiger",
+      "season": "Spring"
+    },
+    "mao": {
+      "name": "Mao",
+      "animal": "Rabbit",
+      "season": "Spring"
+    },
+    "chen": {
+      "name": "Chen",
+      "animal": "Dragon",
+      "season": "Late Spring"
+    },
+    "si": {
+      "name": "Si",
+      "animal": "Snake",
+      "season": "Summer"
+    },
+    "wu": {
+      "name": "Wu",
+      "animal": "Horse",
+      "season": "Summer"
+    },
+    "wei": {
+      "name": "Wei",
+      "animal": "Goat",
+      "season": "Late Summer"
+    },
+    "shen": {
+      "name": "Shen",
+      "animal": "Monkey",
+      "season": "Autumn"
+    },
+    "you": {
+      "name": "You",
+      "animal": "Rooster",
+      "season": "Autumn"
+    },
+    "xu": {
+      "name": "Xu",
+      "animal": "Dog",
+      "season": "Late Autumn"
+    },
+    "hai": {
+      "name": "Hai",
+      "animal": "Pig",
+      "season": "Winter"
+    }
+  },
+  "@/components/ontology/FactionCard": "Faction Card",
+  "@/components/ontology/GenericFactionCard": "Generic Faction Card",
+  "": "",
+  "labels": {
+    "undiscovered": "Undiscovered",
+    "meaning": "Meaning",
+    "element": "Element",
+    "nameVibration": "Name Vibration",
+    "westernZodiac": "Western Zodiac",
+    "sign": "Sign",
+    "observation": "Observation",
+    "easternZodiac": "Eastern Zodiac",
+    "animal": "Animal",
+    "dominion": "Dominion",
+    "bureau": "Bureau"
+  },
+  "returnToHome": "Return Home",
+  "contactSupport": "Contact Support",
+  "syncingData": "Syncing Data",
+  "guest": "Guest",
+  "calibration": "Calibration",
+  "changeOrigin": "Change Origin",
+  "todayInsight": {
+    "title": "Today's Insight",
+    "soulOracle": "Soul Oracle",
+    "innerResonance": "Inner Resonance",
+    "manifestMore": "Manifest More"
+  },
+  "readingsLink": "Readings",
+  "cards": {
+    "vitality": {
+      "title": "Vitality"
+    },
+    "resonance": {
+      "description": "Your resonance pattern.",
+      "subtitle": "Resonance"
+    },
+    "foundation": {
+      "description": "Your core foundation.",
+      "subtitle": "Foundation"
+    },
+    "elemental": {
+      "description": "Your elemental mix.",
+      "subtitle": "Elemental Affinity",
+      "title": "Elements"
+    },
+    "onomancy": {
+      "description": "Your name vibration.",
+      "subtitle": "Name Alchemy"
+    },
+    "cognition": {
+      "description": "Your thought pattern.",
+      "subtitle": "Cognition"
+    },
+    "vocation": {
+      "description": "Your vocational path.",
+      "subtitle": "Vocation"
+    },
+    "destiny": {
+      "description": "Your destiny trajectory.",
+      "subtitle": "Destiny"
+    }
+  },
+  "resonanceTitle": "Resonance Profile",
+  "sections": {
+    "testArchitecture": {
+      "title": "Test Architecture",
+      "description": "Background structural info."
+    },
+    "emotionalResonance": {
+      "title": "Emotional Resonance",
+      "description": "How you connect emotionally."
+    },
+    "grandArchives": {
+      "title": "The Grand Archives",
+      "description": "Historical knowledge base."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "Elements"
+    },
+    "riasec": {
+      "description": "RIASEC Career Type"
+    },
+    "saju": {
+      "label": "Saju",
+      "description": "Four Pillars Analysis",
+      "polarity": "Polarity",
+      "element": "Element"
+    },
+    "archiveEntry": "Archive Entry",
+    "recordVerified": "Record Verified",
+    "tuning": {
+      "color": "Color",
+      "number": "Number",
+      "direction": "Direction",
+      "flower": "Flower",
+      "gemstone": "Gemstone",
+      "luckyStar": "Lucky Star",
+      "title": "Tuning",
+      "favorableDays": "Favorable Days",
+      "synergy": "Synergy"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "Zi Wei"
+  },
+  "_": "",
+  "elements": {
+    "wood": {
+      "name": "Wood",
+      "short": "W"
+    },
+    "fire": {
+      "name": "Fire",
+      "short": "F"
+    },
+    "earth": {
+      "name": "Earth",
+      "short": "E"
+    },
+    "metal": {
+      "name": "Metal",
+      "short": "M"
+    },
+    "water": {
+      "name": "Water",
+      "short": "Wa"
+    },
+    "viewModes": {
+      "chart": "Chart",
+      "balance": "Balance",
+      "cycle": "Cycle"
+    },
+    "chartLabel": "Elemental Chart",
+    "influence": "Influence Level",
+    "cycle": {
+      "title": "Elemental Cycle",
+      "description": "How elements interact.",
+      "generation": "Generation",
+      "destruction": "Control"
+    },
+    "interpretation": {
+      "title": "Interpretation",
+      "dominant": "Dominant Element",
+      "balanceAdvice": "Balance Advice",
+      "balanceDescription": "Detailed balance profile"
+    }
+  },
+  "pillars": {
+    "viewModes": {
+      "traditional": "Traditional View",
+      "modern": "Modern View"
+    },
+    "traditionalDescription": "Classic interpretation of the pillars.",
+    "meaning": "Meaning",
+    "represents": "Represents",
+    "composition": "Composition",
+    "heavenlyStem": "Heavenly Stem",
+    "earthlyBranch": "Earthly Branch",
+    "modernMeaning": "Modern adaptation"
+  },
+  "result": {
+    "pillars": {
+      "title": "Your Pillars"
+    }
+  },
+  "accuracy": "High Accuracy",
+  "duration": "Duration: 5 min",
+  "terms": {
+    "dayMaster": "Day Master"
+  }
+}

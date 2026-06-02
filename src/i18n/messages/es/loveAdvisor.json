@@ -1,0 +1,21 @@
+{
+  "modes": {
+    "serious": "Orientación sincera",
+    "funny": "Ingenio y asombro",
+    "realistic": "Sabiduría fundamentada"
+  },
+  "ui": {
+    "additionalTips": "Susurros de sabiduría",
+    "askAnotherQuestion": "Plantear una nueva consulta",
+    "share": "Transmitir descubrimiento",
+    "searchPlaceholder": "Habla tu preocupación al Oráculo...",
+    "randomAdvice": "🎲 Invocar información aleatoria",
+    "allCategories": "omnia",
+    "noResultsTitle": "Resonancia oscurecida",
+    "noResultsDescription": "El Oráculo no encuentra ninguna coincidencia inmediata para esta investigación. Vuelva a plantear su pregunta con una redacción diferente.",
+    "clearSearch": "Consulta de purga"
+  },
+  "meta": {
+    "title": "Oráculo de resonancia del corazón"
+  }
+}

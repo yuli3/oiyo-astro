@@ -1,0 +1,10 @@
+{
+  "actions": {
+    "refresh": "Refresh Insights",
+    "like": "great",
+    "share": "Share"
+  },
+  "loading": "We are preparing today's insights...",
+  "focusArea": "Areas to focus on today: {area}",
+  "actionTip": "Today's practical tip"
+}

@@ -1,0 +1,70 @@
+{
+  "title": "五行周期",
+  "influence": "五行影响力",
+  "chartLabel": "五行构成",
+  "interpretation": {
+    "balanceAdvice": "均衡之道",
+    "balanceDescription": "如何调和汝之五行气韵。",
+    "dominant": "主导五行",
+    "title": "解析"
+  },
+  "viewModes": {
+    "chart": "五行图谱",
+    "balance": "五行均衡",
+    "cycle": "生克循环"
+  },
+  "water": {
+    "name": "木 (木)",
+    "description": "进取、仁慈，拥有活跃的创造性思维。",
+    "keywords": ["智慧", "灵活性", "洞察力", "活力"],
+    "strengths": ["洞察力", "适应性", "学习"],
+    "careers": ["研究员", "哲学家", "贸易", "心理学"],
+    "short": "水"
+  },
+  "wood": {
+    "name": "木 (木)",
+    "description": "进取、仁慈，拥有活跃的创造性思维。",
+    "keywords": ["生长", "创建", "驾驶", "仁"],
+    "strengths": ["驾驶", "规划", "同情"],
+    "careers": ["规划师", "教育家", "Art", "设计"],
+    "short": "木"
+  },
+  "fire": {
+    "name": "木 (木)",
+    "description": "进取、仁慈，拥有活跃的创造性思维。",
+    "keywords": ["热情", "表达", "活力", "辐射"],
+    "strengths": ["社交性", "领导", "创造力"],
+    "careers": ["艺人", "销售量", "设计", "IT"],
+    "short": "火"
+  },
+  "earth": {
+    "name": "木 (木)",
+    "description": "进取、仁慈，拥有活跃的创造性思维。",
+    "keywords": ["包容性", "调解", "相信", "稳定"],
+    "strengths": ["可靠性", "坚持", "诚信度"],
+    "careers": ["房地产", "农业", "建筑学", "政治"],
+    "short": "土"
+  },
+  "metal": {
+    "name": "木 (木)",
+    "description": "进取、仁慈，拥有活跃的创造性思维。",
+    "keywords": ["原则", "正义", "决定", "精确"],
+    "strengths": ["果断", "准确性", "正直"],
+    "careers": ["军队", "合法的", "金融", "工程"],
+    "short": "金"
+  },
+  "cycle": {
+    "description": "进取、仁慈，拥有活跃的创造性思维。",
+    "destruction": "相克循环",
+    "generation": "相生循环",
+    "title": "解析"
+  },
+  "strengths": "优势",
+  "careers": "职业指导",
+  "subtitle": "了解五行",
+  "status": {
+    "strong": "强",
+    "balanced": "和",
+    "weak": "弱"
+  }
+}

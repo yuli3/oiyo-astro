@@ -1,0 +1,94 @@
+{
+  "tradition": "mayan",
+  "version": "1.0.0",
+  "shards": {
+    "seals": {
+      "1": {
+        "name": "Imix",
+        "alias": "Red Dragon",
+        "keywords": ["Nurturing", "Birth", "Being"],
+        "description": "The primal source of life. Imix represents the beginning, the chaotic potential from which all forms emerge.",
+        "glyphPath": "/assets/mythos/mayan/imix.svg",
+        "archetype": "The Primal Mother"
+      },
+      "2": {
+        "name": "Ik",
+        "alias": "White Wind",
+        "keywords": ["Spirit", "Communicate", "Breath"],
+        "description": "The breath of spirit that moves through all things. Ik is communication, inspiration, and the wind that spreads seeds.",
+        "glyphPath": "/assets/mythos/mayan/ik.svg",
+        "archetype": "The High Priestess"
+      },
+      "3": {
+        "name": "Akbal",
+        "alias": "Blue Night",
+        "keywords": ["Intuition", "Dream", "Abundance"],
+        "description": "The sanctuary of the self. Akbal is the darkness of the womb, the place where dreams are born and abundance resides.",
+        "glyphPath": "/assets/mythos/mayan/akbal.svg",
+        "archetype": "The Dreamer"
+      },
+      "4": {
+        "name": "Kan",
+        "alias": "Yellow Seed",
+        "keywords": ["Flowering", "Target", "Awareness"],
+        "description": "The potential for growth. Kan represents the seed planted in fertile ground, ready to burst forth with intention.",
+        "glyphPath": "/assets/mythos/mayan/kan.svg",
+        "archetype": "The Innocent"
+      },
+      "5": {
+        "name": "Chicchan",
+        "alias": "Red Serpent",
+        "keywords": ["Life Force", "Survive", "Instinct"],
+        "description": "The vitality of the body. Chicchan is the kundalini energy, the wisdom of the body, and the instinct for survival.",
+        "glyphPath": "/assets/mythos/mayan/chicchan.svg",
+        "archetype": "The Initiate"
+      }
+    },
+    "tones": {
+      "1": {
+        "name": "Magnetic",
+        "power": "Unify",
+        "action": "Attract",
+        "description": "The point of origin. Magnetic energy attracts all that is needed to fulfill the purpose.",
+        "geometry": "Point"
+      },
+      "7": {
+        "name": "Resonant",
+        "power": "Channel",
+        "action": "Inspire",
+        "description": "The tuning fork. Resonant energy aligns the self with higher vibrations to channel inspiration.",
+        "geometry": "Column"
+      },
+      "13": {
+        "name": "Cosmic",
+        "power": "Endure",
+        "action": "Transcend",
+        "description": "The completion of the cycle. Cosmic energy represents presence, endurance, and the return to source.",
+        "geometry": "Spiral"
+      }
+    }
+  },
+  "l10n": {
+    "en": {},
+    "ko": {
+      "seals": {
+        "1": {
+          "name": "이믹스",
+          "alias": "붉은 용",
+          "keywords": ["현존", "탄생", "양육"]
+        },
+        "2": {
+          "name": "이크",
+          "alias": "하얀 바람",
+          "keywords": ["영혼", "소통", "호흡"]
+        }
+      },
+      "tones": {
+        "1": {
+          "name": "자기 존재의",
+          "power": "통일"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "successTitle": "Succès",
+  "successMessage": "Soumise.",
+  "errorTitle": "Erreur",
+  "errorMessage": "Échoué.",
+  "subjectLabel": "Sujette",
+  "subjectPlaceholder": "Entrez le sujet",
+  "categoryLabel": "Catégorie",
+  "priorityLabel": "Priorité",
+  "descriptionLabel": "Description",
+  "descriptionPlaceholder": "Entrez la description",
+  "submitting": "Soumission...",
+  "submitButton": "Soumettre",
+  "title": "Formulaire"
+}

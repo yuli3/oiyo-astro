@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "keywords": "keywords, tags, seo",
+    "resultTitle": "Análisis de resultados de moneyHabits",
+    "resultDescription": "Descifrando los patrones geométricos de tu identidad...",
+    "testTitle": "Evaluación de hábitos de dinero",
+    "testDescription": "Analizando los ecos profundos de tus elecciones...",
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+  },
+  "hero": {
+    "subtitle": "Información detallada",
+    "cta": "Iniciar prueba",
+    "badge": "insignia de hábitos de dinero",
+    "title": "Tu Perfil Financiero"
+  },
+  "benefits": {
+    "items": {
+      "0": {
+        "emoji": "mi",
+        "title": "Tu Perfil Financiero",
+        "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+      },
+      "1": {
+        "emoji": "mi",
+        "title": "Tu Perfil Financiero",
+        "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+      },
+      "2": {
+        "emoji": "mi",
+        "title": "Tu Perfil Financiero",
+        "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+      }
+    },
+    "title": "Tu Perfil Financiero"
+  },
+  "cta": {
+    "subtitle": "Información detallada",
+    "button": "Comenzar",
+    "title": "Tu Perfil Financiero"
+  },
+  "faq": {
+    "items": {
+      "0": {
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "1": {
+        "question": "How do you navigate life's currents?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      "2": {
+        "question": "How do you navigate life's currents?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "3": {
+        "question": "How do you navigate life's currents?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      }
+    },
+    "title": "Tu Perfil Financiero"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      }
+    ]
+  },
+  "test": {
+    "insightBullets": ["Fuerza de firma", "Punto de pivote", "2"],
+    "common": {
+      "progress": "Progreso"
+    },
+    "test": {
+      "insightBullets": [
+        "Explora la arquitectura profunda de tu paisaje interior."
+      ],
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando...",
+      "selectOption": "Seleccionar"
+    },
+    "result": {
+      "title": "Tu Perfil Financiero",
+      "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+    },
+    "meta": {
+      "title": "Tu Perfil Financiero",
+      "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos",
+      "keywords": "keywords, tags, seo"
+    },
+    "progress": "Progreso",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "selectOption": "Seleccionar",
+    "subtitle": "Información detallada",
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos",
+    "keywords": "palabras clave, etiquetas, SEO",
+    "finish": "Finalizar",
+    "swipeHint": "Sugerencia de deslizar"
+  },
+  "result": {
+    "chart": {
+      "impulseControl": "Control de impulsos",
+      "savingCapacity": "Capacidad de ahorro",
+      "planningSkill": "Habilidad de planificación",
+      "emotionalControl": "Control emocional"
+    },
+    "test": {
+      "insightBullets": ["Descubre los patrones únicos que definen tu camino."],
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando...",
+      "selectOption": "Seleccionar"
+    },
+    "result": {
+      "title": "Tu Perfil Financiero",
+      "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+    },
+    "meta": {
+      "title": "Tu Perfil Financiero",
+      "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos",
+      "keywords": "keywords, tags, seo"
+    },
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos",
+    "keywords": "palabras clave, etiquetas, SEO",
+    "loading": "Cargando...",
+    "shareTitle": "Panel de Control",
+    "copySuccess": "Copia exitosa",
+    "scoresTitle": "Panel de Control",
+    "impulseRisk": "Riesgo de impulso",
+    "strengths": "Fortalezas",
+    "challenges": "Desafíos",
+    "actionTips": "Consejos de acción",
+    "savingRecommendation": "Recomendación de ahorro",
+    "recommendedPercentage": "Porcentaje recomendado",
+    "share": "Compartir",
+    "retake": "Repetir"
+  },
+  "title": "Tu Perfil Financiero",
+  "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos",
+  "keywords": "palabras clave, etiquetas, SEO"
+}

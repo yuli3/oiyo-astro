@@ -1,0 +1,25 @@
+// Auto-generated shard for namespace: chart
+
+export type ChartKeys =
+  | "africa"
+  | "all"
+  | "allAges"
+  | "asia"
+  | "avgScore"
+  | "china"
+  | "egen"
+  | "europe"
+  | "female"
+  | "france"
+  | "global"
+  | "japan"
+  | "korea"
+  | "male"
+  | "northAmerica"
+  | "oceania"
+  | "personalityRankings"
+  | "scoreDistribution"
+  | "southAmerica"
+  | "spain"
+  | "teto"
+  | "users";

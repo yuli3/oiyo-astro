@@ -1,0 +1,14 @@
+{
+  "title": "Big Five Personality Test",
+  "badge": "OCEAN Model",
+  "resultTitle": "Your Personality Profile",
+  "restart": "Retake Test",
+  "save": "Save Results",
+  "dimensions": {
+    "openness": "Openness",
+    "conscientiousness": "Conscientiousness",
+    "extraversion": "Extraversion",
+    "agreeableness": "Agreeableness",
+    "neuroticism": "Neuroticism"
+  }
+}

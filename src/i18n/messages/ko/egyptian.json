@@ -1,0 +1,267 @@
+{
+  "title": "이집트 점성술",
+  "description": "수호신과 데칸에 대한 고대 케메티아의 지혜.",
+  "systemName": "이집트 점성술",
+  "narrative": "고대 네테루와 데칸",
+  "guardianDeity": "수호신",
+  "ariaLabel": "이집트 신: {신}, {속성}을 소유함.",
+  "deities": {
+    "thoth": {
+      "name": "토트",
+      "symbol": "따오기",
+      "traits": ["지적인", "의사소통", "궁금한", "창의적"],
+      "strengths": ["문제 해결", "글쓰기", "가르침", "메모리"],
+      "challenges": ["지나치게 생각하다", "신경질", "분리"],
+      "domain": ["지혜", "글쓰기", "마법", "Moon"]
+    },
+    "horus": {
+      "name": "호루스",
+      "symbol": "매",
+      "traits": ["용기 있는", "거창한", "보호", "카리스마 넘치는"],
+      "strengths": ["지도", "전략", "정당성", "결정"],
+      "challenges": ["충동성", "거만", "갈등"],
+      "domain": ["Sky", "War", "보호", "왕권"]
+    },
+    "wadjet": {
+      "name": "와드젯",
+      "symbol": "코브라",
+      "traits": ["보호", "충실한", "사나운", "Just"],
+      "strengths": ["직관", "보호", "결단력"],
+      "challenges": ["소유욕", "질투", "복수심"],
+      "domain": ["보호", "왕족", "정당성", "자연"]
+    },
+    "sekhmet": {
+      "name": "세크메트",
+      "symbol": "암사자",
+      "traits": ["사나운", "열렬한", "보호", "강한"],
+      "strengths": ["용기", "치유", "변환", "힘"],
+      "challenges": ["화", "파괴", "극단론"],
+      "domain": ["War", "치유", "Sun", "파괴"]
+    },
+    "bastet": {
+      "name": "베팅",
+      "symbol": "고양이",
+      "traits": ["육성", "놀기 좋아하는", "독립적인", "관능적인"],
+      "strengths": ["우아함", "보호", "직관", "매력"],
+      "challenges": ["예측 불가능성", "화장대", "독립"],
+      "domain": ["Home", "비옥", "Cats", "Joy"]
+    },
+    "isis": {
+      "name": "이시스",
+      "symbol": "왕좌",
+      "traits": ["육성", "Wise", "마법 같은", "단호한"],
+      "strengths": ["치유", "마법", "보호", "헌신"],
+      "challenges": ["과잉보호", "시장 조작", "고통"],
+      "domain": ["마법", "어머니", "지혜", "자연"]
+    },
+    "osiris": {
+      "name": "오시리스",
+      "symbol": "크룩과 도리깨",
+      "traits": ["Wise", "Just", "인내심 있는", "재생"],
+      "strengths": ["심판", "갱신", "안정", "공평"],
+      "challenges": ["수동성", "분리", "우울"],
+      "domain": ["하계", "농업", "갱생", "심판"]
+    },
+    "hathor": {
+      "name": "하토르",
+      "symbol": "암소",
+      "traits": ["사랑하는", "즐거운", "예술적", "육성"],
+      "strengths": ["창의성", "Love", "조화", "기쁨"],
+      "challenges": ["대사", "질투", "화장대"],
+      "domain": ["Love", "아름다움", "음악", "Joy"]
+    },
+    "anubis": {
+      "name": "아누비스",
+      "symbol": "재칼",
+      "traits": ["신비한", "보호", "충실한", "심각한"],
+      "strengths": ["변환", "안내", "보호", "진실"],
+      "challenges": ["격리", "집착", "어둠"],
+      "domain": ["죽음", "미라화", "내세", "보호"]
+    },
+    "seth": {
+      "name": "세스",
+      "symbol": "세스 동물",
+      "traits": ["강한", "혼돈", "거창한", "예측할 수 없음"],
+      "strengths": ["힘", "용기", "독립", "변환"],
+      "challenges": ["혼돈", "폭행", "질투", "격리"],
+      "domain": ["혼돈", "사막", "폭풍", "외국인"]
+    },
+    "geb": {
+      "name": "게브",
+      "symbol": "거위",
+      "traits": ["접지됨", "인내심 있는", "육성", "안정적인"],
+      "strengths": ["안정", "비옥", "인내심", "지혜"],
+      "challenges": ["고집", "소유욕", "관성"],
+      "domain": ["지구", "비옥", "탄산수", "뱀"]
+    },
+    "nut": {
+      "name": "너트",
+      "symbol": "별이 빛나는 몸",
+      "traits": ["미묘한", "보호", "질서 있는", "산모"],
+      "strengths": ["비전", "보호", "신비", "무한대"],
+      "challenges": ["거리", "비현실", "압도하다"],
+      "domain": ["Sky", "별", "코스모스", "출생"]
+    },
+    "ra": {
+      "name": "라",
+      "symbol": "썬디스크",
+      "traits": ["강한", "창의적인", "광점", "권위 있는"],
+      "strengths": ["지도", "활력", "조명", "진실"],
+      "challenges": ["자부심", "번아웃", "권세"],
+      "domain": ["Sun", "창조", "Life", "주문하다"]
+    }
+  },
+  "resonance": {
+    "note": "아카이브는 {domain} 신인 {deity}의 보호 아래 당신의 영혼을 관찰합니다. 고대 케멧에서는 이 시기에 태어난 사람들이 {특성} 에너지를 가지고 있다고 믿었습니다. 이것은 운명이 아니라 고대 관찰의 메아리입니다."
+  },
+  "elements": {
+    "Air": "공기",
+    "Earth": "지구",
+    "Fire": "불",
+    "Water": "물"
+  },
+  "colors": {
+    "Azure": "하늘빛",
+    "Silver": "은",
+    "White": "하얀색",
+    "Brown": "갈색",
+    "Green": "녹색",
+    "Amber": "호박색",
+    "Gold": "금",
+    "Crimson": "진홍",
+    "Orange": "주황색",
+    "Deep Blue": "딥블루",
+    "Turquoise": "터키 옥",
+    "Sea Green": "씨 그린"
+  },
+  "@/components/ontology/FactionCard": "@/components/ontology/FactionCard",
+  "@/components/ontology/GenericFactionCard": "@/components/ontology/GenericFactionCard",
+  "": "",
+  "labels": {
+    "undiscovered": "발견되지 않은",
+    "meaning": "의미",
+    "element": "요소",
+    "nameVibration": "이름 진동",
+    "westernZodiac": "서부 황도대",
+    "sign": "징후",
+    "observation": "관찰",
+    "easternZodiac": "동부 황도대",
+    "animal": "동물",
+    "dominion": "지배",
+    "bureau": "국"
+  },
+  "returnToHome": "집으로 돌아가기",
+  "contactSupport": "지원팀에 문의",
+  "syncingData": "데이터 동기화 중...",
+  "guest": "손님",
+  "calibration": "구경 측정",
+  "changeOrigin": "원산지 변경",
+  "todayInsight": {
+    "title": "오늘의 통찰",
+    "soulOracle": "소울 오라클",
+    "innerResonance": "내면의 공명",
+    "manifestMore": "매니페스트 더보기"
+  },
+  "readingsLink": "판독값 보기",
+  "cards": {
+    "vitality": {
+      "title": "활력"
+    },
+    "resonance": {
+      "description": "다른 사람들과의 에너지적인 공명.",
+      "subtitle": "소울 주파수"
+    },
+    "foundation": {
+      "description": "내면 세계의 기둥.",
+      "subtitle": "핵심 기초"
+    },
+    "elemental": {
+      "description": "당신의 본성을 형성하는 원소의 힘.",
+      "subtitle": "원소 친화력",
+      "title": "강요"
+    },
+    "onomancy": {
+      "description": "당신의 이름에 숨겨진 의미가 담겨있습니다.",
+      "subtitle": "이름 연금술"
+    },
+    "cognition": {
+      "description": "세상을 인식하고 처리하는 독특한 방식.",
+      "subtitle": "마인드 패턴"
+    },
+    "vocation": {
+      "description": "당신의 영혼이 자연스럽게 뛰어난 길.",
+      "subtitle": "소울 콜링"
+    },
+    "destiny": {
+      "description": "당신의 삶이 엮어지는 호는 더 커집니다.",
+      "subtitle": "운명의 길"
+    }
+  },
+  "resonanceTitle": "공명",
+  "sections": {
+    "testArchitecture": {
+      "title": "테스트 아키텍처",
+      "description": "평가의 디자인과 구조."
+    },
+    "emotionalResonance": {
+      "title": "정서적 공명",
+      "description": "감정이 어떻게 흐르고 경로를 형성하는지."
+    },
+    "grandArchives": {
+      "title": "그랜드 아카이브",
+      "description": "귀하의 결과에서 추출된 지혜의 모음입니다."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "강요"
+    },
+    "riasec": {
+      "description": "당신의 직업 성격 유형."
+    },
+    "saju": {
+      "label": "전에",
+      "description": "운명의 네 기둥.",
+      "polarity": "극성",
+      "element": "요소"
+    },
+    "archiveEntry": "아카이브 항목",
+    "recordVerified": "기록 확인됨",
+    "tuning": {
+      "color": "행운의 색",
+      "number": "행운의 숫자",
+      "direction": "상서로운 방향",
+      "flower": "소울 플라워",
+      "gemstone": "수호석",
+      "luckyStar": "럭키스타",
+      "title": "우주 튜닝",
+      "favorableDays": "유리한 날",
+      "synergy": "시너지"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "자웨이두슈"
+  },
+  "_": "_",
+  "mayan": {
+    "systemName": "마야 달력",
+    "narrative": "마야 이야기",
+    "solarSeal": "솔라 씰",
+    "tone": "은하계 톤"
+  },
+  "celtic": {
+    "systemName": "켈트 나무 달력",
+    "narrative": "켈트 서사",
+    "treeSign": "나무 표시",
+    "ogham": "오검 기호"
+  },
+  "egyptianGuardian": "이집트 수호자",
+  "celticTreeSign": "켈트 나무 표시",
+  "birthSymbols": "출생 기호",
+  "symbols": {
+    "Stone": "결석",
+    "Flower": "꽃",
+    "Star": "별"
+  }
+}

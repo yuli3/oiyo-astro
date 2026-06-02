@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Synaptic Connection Grid",
+    "subtitle": "Live Resonance Field",
+    "analyze": "Iniciar calibración",
+    "share": "Transmitir profecía"
+  },
+  "share": {
+    "saveToStory": "Archivar a la historia",
+    "instruction": "Preserva la revelación y manifiestala en tu tapiz digital."
+  },
+  "status": {
+    "complete": "Alquimias relacionales sintetizadas",
+    "incomplete": "Calibración en curso ({count}/4)",
+    "continue": "Continuar calibración"
+  },
+  "pillars": {
+    "attachment": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "Iniciar consulta"
+    },
+    "communication": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "Iniciar consulta"
+    },
+    "conflict": {
+      "result": {
+        "title": "Synaptic Connection Grid",
+        "subtitle": "Live Resonance Field",
+        "lead": "Esta es la frecuencia principal a través de la cual navegas por la fricción.",
+        "scoreHeadline": "Postura dominante",
+        "scoreDescription": "El patrón de respuesta que gobierna tu campo energético.",
+        "traitsTitle": "Rasgos arquetípicos",
+        "strengthsTitle": "Alquimias fundamentales",
+        "challengesTitle": "Nodos de conciencia",
+        "tipsTitle": "Rituales de integración",
+        "breakdownTitle": "Desglose armónico",
+        "realLifeTitle": "Manifestaciones en la realidad"
+      },
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "Iniciar consulta"
+    },
+    "loveLanguage": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "Iniciar consulta"
+    }
+  },
+  "empty": {
+    "title": "Synaptic Connection Grid",
+    "description": "Complete las cuatro consultas principales para revelar su geometría interpersonal única."
+  },
+  "grid": {
+    "title": "Red de conexión sináptica",
+    "subtitle": "Campo de resonancia en vivo"
+  }
+}

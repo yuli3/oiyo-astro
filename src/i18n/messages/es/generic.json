@@ -1,0 +1,700 @@
+{
+  "generic": {
+    "questions": [
+      {
+        "id": "EI_01",
+        "text": "Cuando conoces gente nueva, tú:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Acércate activamente a ellas y comienza conversaciones.",
+            "value": "E"
+          },
+          {
+            "text": "Espera a que se acerquen a ti primero.",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_02",
+        "text": "Cuando estás estresado, tú:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Conocer amigas y hablar para sentirse mejor",
+            "value": "E"
+          },
+          {
+            "text": "Pasa tiempo a solas para organizar tus pensamientos.",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_03",
+        "text": "En fiestas o reuniones, usted:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Habla activamente con muchas personas diferentes.",
+            "value": "E"
+          },
+          {
+            "text": "Tener conversaciones profundas con algunas personas cercanas.",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_04",
+        "text": "Al resolver problemas, usted:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Discute con otros para obtener ideas.",
+            "value": "E"
+          },
+          {
+            "text": "Piensa profundamente solo antes de llegar a conclusiones.",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_05",
+        "text": "Acerca de las llamadas telefónicas, usted:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Disfrute de llamadas largas y llame a otras personas con frecuencia",
+            "value": "E"
+          },
+          {
+            "text": "Haz llamadas cortas solo cuando sea necesario",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_06",
+        "text": "La forma ideal de pasar tu fin de semana es:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Estar activa afuera con amigas",
+            "value": "E"
+          },
+          {
+            "text": "Disfrutar de pasatiempos solo en casa",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_07",
+        "text": "En reuniones o debates, usted:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Comparte opiniones inmediatamente y participa activamente",
+            "value": "E"
+          },
+          {
+            "text": "Piensa bien antes de hablar con cautela.",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "SN_01",
+        "text": "Al iniciar un nuevo proyecto:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Comience con planes y detalles específicos",
+            "value": "S"
+          },
+          {
+            "text": "Visualice primero la visión general y las posibilidades.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_02",
+        "text": "Al recibir información, usted:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Centrarse en hechos y datos concretos.",
+            "value": "S"
+          },
+          {
+            "text": "Busque significados y posibilidades ocultos.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_03",
+        "text": "Entre pasado y futuro:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Valorar las experiencias y tradiciones pasadas.",
+            "value": "S"
+          },
+          {
+            "text": "Están interesados ​​en posibilidades y cambios futuros.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_04",
+        "text": "Al aprender, usted:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Aprende paso a paso metódicamente",
+            "value": "S"
+          },
+          {
+            "text": "Comprenda el contexto general antes de conocer los detalles.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_05",
+        "text": "En la vida diaria, usted:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Persigue cosas realistas y prácticas.",
+            "value": "S"
+          },
+          {
+            "text": "Como nuevas ideas e innovaciones.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_06",
+        "text": "Al analizar los problemas, usted:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Centrarse en soluciones específicas",
+            "value": "S"
+          },
+          {
+            "text": "Explorar diversas perspectivas y nuevos enfoques.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_07",
+        "text": "Al encontrar arte o literatura:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Prefiere expresiones realistas y claras.",
+            "value": "S"
+          },
+          {
+            "text": "Se sienten atraídos por expresiones simbólicas y abstractas.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "TF_01",
+        "text": "Al tomar decisiones, usted:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Priorizar el análisis lógico y los criterios objetivos",
+            "value": "T"
+          },
+          {
+            "text": "Considere los valores personales y el impacto emocional.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_02",
+        "text": "En situaciones de conflicto, usted:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Intentar resolver basándose en hechos y principios.",
+            "value": "T"
+          },
+          {
+            "text": "Priorizar las emociones y relaciones de los involucrados.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_03",
+        "text": "Al recibir críticas, usted:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Analizar objetivamente para encontrar áreas de mejora.",
+            "value": "T"
+          },
+          {
+            "text": "Sentirse herido pero tratar de entender sus intenciones.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_04",
+        "text": "Al evaluar a otros:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Juzgar en función de las habilidades y el desempeño.",
+            "value": "T"
+          },
+          {
+            "text": "Valorar el carácter y el esfuerzo.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_05",
+        "text": "Cuando trabajas en equipo, tú:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Priorizar la eficiencia y los resultados",
+            "value": "T"
+          },
+          {
+            "text": "Valorar la armonía y el ambiente del equipo.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_06",
+        "text": "Cuando una amiga busca consejo:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Proporcionar soluciones al problema.",
+            "value": "T"
+          },
+          {
+            "text": "Empatizar con sus emociones y consolarlas.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_07",
+        "text": "En reglas y situaciones excepcionales:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Los principios de Think deben aplicarse de manera consistente",
+            "value": "T"
+          },
+          {
+            "text": "Piensa que se debe mostrar flexibilidad dependiendo de la situación.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "JP_01",
+        "text": "En la vida diaria, usted:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Hacer planes y seguirlas",
+            "value": "J"
+          },
+          {
+            "text": "Actuar con flexibilidad según cada situación",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_02",
+        "text": "Cuando trabaje en tareas con fechas límite:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Trabaje en ello de manera constante y por adelantado",
+            "value": "J"
+          },
+          {
+            "text": "Trabajar intensamente a medida que se acerca la fecha límite",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_03",
+        "text": "Cuando vas de viaje, tú:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Preparar horarios detallados y reservas con antelación.",
+            "value": "J"
+          },
+          {
+            "text": "Haz planes aproximados y disfruta espontáneamente.",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_04",
+        "text": "Acerca de organizar su habitación o escritorio:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Siempre debe estar limpio y organizado.",
+            "value": "J"
+          },
+          {
+            "text": "Un poco desordenado está bien siempre y cuando puedas encontrar lo que necesitas.",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_05",
+        "text": "Cuando surgen nuevas oportunidades:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Considere cuidadosamente antes de decidir",
+            "value": "J"
+          },
+          {
+            "text": "Pruébelo primero y ajústelo después",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_06",
+        "text": "Al comprar, usted:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Decide lo que necesitas con antelación y cómpralo.",
+            "value": "J"
+          },
+          {
+            "text": "Navega y compra en el acto lo que te llame la atención",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_07",
+        "text": "Cuando necesitas tomar una decisión:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Decide rápidamente y ponlo en acción",
+            "value": "J"
+          },
+          {
+            "text": "Mantenga abiertas múltiples opciones y decida lentamente",
+            "value": "P"
+          }
+        ]
+      }
+    ],
+    "types": {
+      "ISTJ": {
+        "strengths": [
+          "Fuerte responsabilidad",
+          "Atención precisa al detalle",
+          "Enfoque intenso",
+          "Honestidad"
+        ],
+        "challenges": [
+          "Resistencia al cambio",
+          "Inflexibilidad",
+          "Insensibilidad a los sentimientos de los demás"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ISFJ": {
+        "strengths": [
+          "Cuidado meticuloso",
+          "Diligencia",
+          "Fuerte instinto protector",
+          "Ejecución práctica"
+        ],
+        "challenges": [
+          "Autosacrificio excesivo",
+          "Sensibilidad a la crítica",
+          "Dificultad para expresar las propias emociones"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "INFJ": {
+        "strengths": [
+          "Perspicacia profunda",
+          "Decisión y fuerza de voluntad",
+          "Empatía",
+          "Resolución creativa de problemas"
+        ],
+        "challenges": [
+          "Perfeccionismo excesivo",
+          "Vulnerabilidad al agotamiento",
+          "Dificultad para revelar el verdadero yo"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "INTJ": {
+        "strengths": [
+          "Pensamiento Estratégico",
+          "Convicción independiente",
+          "Curiosidad intelectual",
+          "Eficiencia"
+        ],
+        "challenges": [
+          "Actitud cínica",
+          "Directo en la comunicación",
+          "Escepticismo ante las reglas sociales"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ISTP": {
+        "strengths": [
+          "Gestión tranquila de crisis",
+          "Manejo práctico",
+          "Juicio objetivo",
+          "Adaptabilidad flexible"
+        ],
+        "challenges": [
+          "Falta de consideración por los sentimientos de los demás",
+          "Fácilmente aburrida",
+          "Dificultad para seguir adelante con los planes"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ISFP": {
+        "strengths": [
+          "Sensibilidad Artística",
+          "Fuerte empatía",
+          "Inmersión en el presente",
+          "Modestia"
+        ],
+        "challenges": [
+          "Indecisión",
+          "Dificultad para planificar el futuro",
+          "Necesidad de pasar tiempo a solas con frecuencia"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "INFP": {
+        "strengths": [
+          "Imaginación viva",
+          "Fuerte altruismo",
+          "Mente abierta",
+          "Búsqueda de la autenticidad"
+        ],
+        "challenges": [
+          "Demasiado idealista",
+          "Tomarse las críticas personalmente",
+          "Pasando por alto los detalles prácticos"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "INTP": {
+        "strengths": [
+          "Análisis lógico",
+          "Ideas originales",
+          "Perspectiva objetiva",
+          "Comprensión intelectual rápida"
+        ],
+        "challenges": [
+          "Falta de implementación",
+          "Actitud demasiado analítica",
+          "Dificultad en situaciones sociales"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ESTP": {
+        "strengths": [
+          "Acción audaz",
+          "Encanto social",
+          "Excelente juicio situacional",
+          "Sentido práctico"
+        ],
+        "challenges": [
+          "Comportamiento impulsivo",
+          "Falta de planificación profunda",
+          "Resistencia a las reglas y la disciplina"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ESFP": {
+        "strengths": [
+          "Capacidad de proporcionar alegría",
+          "Afinidad social",
+          "Ayuda práctica",
+          "Observación"
+        ],
+        "challenges": [
+          "Falta de enfoque",
+          "Evitación de conflictos",
+          "Excesiva alegría o búsqueda de estimulación"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ENFP": {
+        "strengths": [
+          "Imaginación viva",
+          "Fuerte afinidad",
+          "Actitud optimista",
+          "Habilidades de comunicación"
+        ],
+        "challenges": [
+          "Implementación dispersa y carente de implementación",
+          "Vulnerabilidad al estrés emocional",
+          "Dificultad con tareas repetitivas"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ENTP": {
+        "strengths": [
+          "Pensamiento original",
+          "ingenio rápido",
+          "Habilidades de debate lógico",
+          "Franqueza"
+        ],
+        "challenges": [
+          "Puede ser mal entendida debido a un debate amoroso",
+          "Falta de finalización de los detalles",
+          "Tendencia a ignorar los sentimientos de los demás"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ESTJ": {
+        "strengths": [
+          "Fuerte impulso",
+          "Habilidades de organización y gestión",
+          "Autogestión diligente",
+          "Juicio práctico"
+        ],
+        "challenges": [
+          "Puede ser demasiado estricta",
+          "Falta de empatía",
+          "Resistencia a los nuevos métodos"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ESFJ": {
+        "strengths": [
+          "Cálida inclusión",
+          "Fuerte responsabilidad",
+          "Colaboración excepcional",
+          "Altruismo práctico"
+        ],
+        "challenges": [
+          "Demasiado consciente de las opiniones de los demás",
+          "Fácilmente herido por las críticas",
+          "Dificultad para decir no"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ENFJ": {
+        "strengths": [
+          "Liderazgo carismático",
+          "Fuerte empatía",
+          "Capacidad de alentar a las demás",
+          "Responsabilidad"
+        ],
+        "challenges": [
+          "Idealismo excesivo",
+          "Implicación excesiva en los problemas de los demás",
+          "Autocrítica severa"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      },
+      "ENTJ": {
+        "strengths": [
+          "Planificación Estratégica",
+          "Liderazgo fuerte",
+          "Juicio Lógico",
+          "Maximizar la eficiencia"
+        ],
+        "challenges": [
+          "Frialdad que puede parecer impersonal",
+          "falta de paciencia",
+          "Puede dominar las opiniones de los demás"
+        ],
+        "name": "Comandante",
+        "emoji": "👔",
+        "description": "Líderes audaces, imaginativos y de voluntad fuerte, que siempre encuentran un camino o lo crean.",
+        "detailedDescription": "Estratega nato, ve la vida como una serie de desafíos a superar. Su voluntad de hierro y su racionalidad le permiten llevar a cabo proyectos complejos. Valora la eficiencia y no duda en tomar la iniciativa para dirigir a los demás hacia el éxito."
+      }
+    }
+  }
+}

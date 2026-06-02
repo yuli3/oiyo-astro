@@ -1,0 +1,36 @@
+{
+  "success": {
+    "confirming": "确认付款...",
+    "pleaseWait": "请稍等。",
+    "confirmFailed": "无法确认付款",
+    "title": "Payment Failed",
+    "activated": "您的高级功能已激活。 您现在可以使用所有高级功能。",
+    "nextSteps": "后续步骤：",
+    "step1": "在仪表板上查看高级分析",
+    "step2": "获取人工智能驱动的见解",
+    "step3": "下载 PDF 报告",
+    "goToDashboard": "转到仪表板",
+    "backToHome": "返回首页",
+    "tryAgain": "再试一次"
+  },
+  "fail": {
+    "title": "付款失败",
+    "errors": {
+      "USER_CANCEL": "用户取消付款。",
+      "INVALID_CARD": "卡信息无效。",
+      "INSUFFICIENT_FUNDS": "资金不足。",
+      "PAYMENT_TIMEOUT": "付款超时。",
+      "default": "处理您的付款时发生错误。"
+    },
+    "howToResolve": "如何解决：",
+    "solutions": {
+      "verifyCard": "验证您的卡信息",
+      "checkFunds": "检查您是否有足够的资金",
+      "tryDifferent": "尝试不同的付款方式",
+      "contactSupport": "如果问题仍然存在，请联系支持人员"
+    },
+    "tryAgain": "再试一次",
+    "goToDashboard": "转到仪表板",
+    "backToHome": "返回首页"
+  }
+}

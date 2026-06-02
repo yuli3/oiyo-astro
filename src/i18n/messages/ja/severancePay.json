@@ -1,0 +1,1149 @@
+{
+  "labels": {
+    "hireDate": "入社日",
+    "resignationDate": "退職日",
+    "monthlySalary": "月給（税引前）",
+    "annualBonus": "年間ボーナス（按分）",
+    "annualLeave": "未使用年次休暇手当",
+    "severancePay": "推定退職金"
+  },
+  "results": {
+    "tenure": "勤務期間",
+    "estimated": "推定退職金",
+    "total": "推定退職金総額"
+  },
+  "basis": {
+    "title": "マイ・インサイト",
+    "tenure": "勤務期間",
+    "monthlyBase": "月額基本給",
+    "annualBonus": "年間ボーナス（按分）",
+    "annualLeave": "未使用年次休暇手当",
+    "threeMonthTotal": "3ヶ月間の総賃金",
+    "avgDailyWage": "平均日給",
+    "formula": "* 計算式: 平均日給 × 30日 × (勤務日数 ÷ 365)"
+  },
+  "legal": {
+    "title": "マイ・インサイト",
+    "note": "この計算機は参考用であり、実際の退職金は異なる場合があります。",
+    "item1": "勤労者退職給付保障法に基づく標準公式を使用しています。",
+    "item2": "実際の平均賃金には、直近3ヶ月に受け取ったすべての賃金（基本給、手当、ボーナスなど）が含まれます。",
+    "item3": "中間清算などの複雑なケースについては、労働弁護士にご相談ください。",
+    "item4": "勤務期間が1年未満の従業員は退職金を受け取る資格がありません。"
+  },
+  "error": {
+    "lessThanYear": "勤務期間が1年未満の場合、退職金は発生しません。",
+    "invalidDate": "入社日は退職日より後にはできません。"
+  },
+  "meta": {
+    "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認",
+    "disclaimer": "この計算は推定値です。実際の退職金は会社の方針や特定の労働契約により異なる場合があります。",
+    "title": "マイ・インサイト",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "test": {
+    "insightBullets": ["合成を待っています..."],
+    "progress": "Awaiting synthesis...",
+    "submit": "Awaiting synthesis...",
+    "loading": "Awaiting synthesis...",
+    "selectOption": "Awaiting synthesis..."
+  },
+  "result": {
+    "title": "マイ・インサイト",
+    "description": "Awaiting synthesis..."
+  },
+  "moneyHabits": {
+    "meta": {
+      "keywords": "Awaiting synthesis...",
+      "resultTitle": "Awaiting synthesis...",
+      "resultDescription": "Awaiting synthesis...",
+      "testTitle": "お金の習慣の評価",
+      "testDescription": "Awaiting synthesis...",
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認",
+      "cta": "Awaiting synthesis...",
+      "badge": "Global Benchmarking",
+      "title": "マイ・インサイト"
+    },
+    "benefits": {
+      "items": {
+        "0": {
+          "emoji": "E",
+          "title": "マイ・インサイト",
+          "description": "Awaiting synthesis..."
+        },
+        "1": {
+          "emoji": "E",
+          "title": "マイ・インサイト",
+          "description": "Awaiting synthesis..."
+        },
+        "2": {
+          "emoji": "E",
+          "title": "マイ・インサイト",
+          "description": "Awaiting synthesis..."
+        }
+      },
+      "title": "マイ・インサイト"
+    },
+    "cta": {
+      "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認",
+      "button": "Take Tests Now",
+      "title": "マイ・インサイト"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "1": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "2": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "3": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      },
+      "title": "マイ・インサイト"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🚀",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "💡",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🎯",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🔥",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "⭐",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": [
+        "合成を待っています...",
+        "合成を待っています...",
+        "合成を待っています..."
+      ],
+      "common": {
+        "progress": "Awaiting synthesis...",
+        "next": "Awaiting synthesis...",
+        "previous": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "start": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "results": "Awaiting synthesis...",
+        "dashboard": "Awaiting synthesis...",
+        "insights": "Awaiting synthesis..."
+      },
+      "test": {
+        "insightBullets": ["合成を待っています..."],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis..."
+      },
+      "result": {
+        "title": "マイ・インサイト",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "マイ・インサイト",
+        "description": "Awaiting synthesis...",
+        "keywords": "Awaiting synthesis..."
+      },
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認",
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis...",
+      "finish": "仕上げる",
+      "swipeHint": "スワイプヒント"
+    },
+    "result": {
+      "chart": {
+        "impulseControl": "インパルス制御",
+        "savingCapacity": "容量の節約",
+        "planningSkill": "企画力",
+        "emotionalControl": "感情のコントロール"
+      },
+      "test": {
+        "insightBullets": ["合成を待っています..."],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis..."
+      },
+      "result": {
+        "title": "マイ・インサイト",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "マイ・インサイト",
+        "description": "Awaiting synthesis...",
+        "keywords": "Awaiting synthesis..."
+      },
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "shareTitle": "Awaiting synthesis...",
+      "copySuccess": "コピー成功",
+      "scoresTitle": "Awaiting synthesis...",
+      "impulseRisk": "衝動のリスク",
+      "strengths": "Awaiting synthesis...",
+      "challenges": "課題",
+      "actionTips": "アクションのヒント",
+      "savingRecommendation": "保存の推奨事項",
+      "recommendedPercentage": "推奨される割合",
+      "share": "Awaiting synthesis...",
+      "retake": "Awaiting synthesis..."
+    },
+    "title": "マイ・インサイト",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "payment": {
+    "checkout": {
+      "orderName": "Oiyo.net {planName} 購読"
+    },
+    "errors": {
+      "PLAN_NOT_FOUND": "Awaiting synthesis...",
+      "PAYMENT_SERVICE_ERROR": "Awaiting synthesis...",
+      "PROVIDER_REQUIRED": "Awaiting synthesis...",
+      "LOCALE_REQUIRED": "Awaiting synthesis...",
+      "CURRENCY_REQUIRED": "Awaiting synthesis...",
+      "TOSS_CLIENT_KEY_REQUIRED": "Awaiting synthesis...",
+      "LEMONSQUEEZY_CONFIG_REQUIRED": "Awaiting synthesis...",
+      "generic": "Awaiting synthesis..."
+    },
+    "failed": {
+      "help": {
+        "technical": {
+          "refresh": "ページを更新する",
+          "browser": "別のブラウザを試してください",
+          "network": "Awaiting synthesis...",
+          "incognito": "シークレットモード/プライベートモードを試す",
+          "title": "マイ・インサイト"
+        },
+        "payment": {
+          "title": "マイ・インサイト",
+          "checkCard": "Check your card details",
+          "checkFunds": "Ensure sufficient funds",
+          "tryAnother": "Awaiting synthesis...",
+          "contactBank": "Contact your bank"
+        }
+      },
+      "meta": {
+        "title": "マイ・インサイト",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🚀",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "💡",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🎯",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🔥",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "⭐",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🚀",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "💡",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🎯",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🔥",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "⭐",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "合成を待っています...",
+          "合成を待っています...",
+          "合成を待っています..."
+        ],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis...",
+        "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🚀",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "💡",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🎯",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🔥",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "⭐",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          }
+        ]
+      },
+      "result": {
+        "title": "マイ・インサイト",
+        "description": "Awaiting synthesis..."
+      },
+      "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認",
+      "genericTitle": "支払いエラー",
+      "genericDescription": "Awaiting synthesis...",
+      "genericAction": "もう一度やり直してください",
+      "unknownTitle": "不明なエラー",
+      "unknownDescription": "Awaiting synthesis...",
+      "unknownAction": "サポートに連絡する",
+      "orderId": "注文ID",
+      "orderIdNote": "Awaiting synthesis...",
+      "technicalDetails": "技術的な詳細",
+      "errorCode": "エラーコード",
+      "errorMessage": "エラーメッセージ",
+      "whatNext": "何ができるでしょうか？",
+      "contactSupport": "サポートに連絡する",
+      "backToHome": "ホームに戻る",
+      "needHelp": "助けが必要ですか?",
+      "stillNeedHelp": "まだ問題がありますか?",
+      "getSupport": "サポートを受ける",
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "success": {
+      "meta": {
+        "title": "マイ・インサイト",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🚀",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "💡",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🎯",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🔥",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "⭐",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🚀",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "💡",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🎯",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🔥",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "⭐",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "合成を待っています...",
+          "合成を待っています...",
+          "合成を待っています..."
+        ],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis...",
+        "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🚀",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "💡",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🎯",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "🔥",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          },
+          {
+            "icon": "⭐",
+            "title": "合成を待っています...",
+            "description": "合成を待っています...",
+            "question": "合成を待っています...",
+            "answer": "合成を待っています..."
+          }
+        ]
+      },
+      "result": {
+        "title": "マイ・インサイト",
+        "description": "Awaiting synthesis..."
+      },
+      "welcome', { name: user": {
+        "firstName || user": {
+          "fullName || t('success": {
+            "user": "ユーザー"
+          }
+        }
+      },
+      "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認",
+      "verifying": "支払いを確認しています...",
+      "verifyingDescription": "Awaiting synthesis...",
+      "premiumActive": "プレミアムアクティブ",
+      "welcome": "{名前}さん、ようこそ！",
+      "user": "ユーザー",
+      "paymentDetails": "お支払い詳細",
+      "orderId": "注文ID",
+      "amount": "額",
+      "status": "状態",
+      "confirmed": "確認済み",
+      "verificationSuccess": "Awaiting synthesis...",
+      "verificationFailed": "Awaiting synthesis...",
+      "verificationNetworkError": "Awaiting synthesis...",
+      "verificationRetry": "検証を再試行する",
+      "verificationPending": "確認待ち",
+      "approvedAt": "承認日",
+      "featuresUnlocked": "Awaiting synthesis...",
+      "nextSteps": "次は何ですか?",
+      "goToDashboard": "ダッシュボードに移動",
+      "takeTest": "テストを受ける",
+      "supportNote": "Awaiting synthesis...",
+      "contactSupport": "サポートに連絡する",
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "test": {
+      "insightBullets": ["合成を待っています..."],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "meta": {
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis..."
+    },
+    "checkCard": "カードの詳細を確認する",
+    "checkFunds": "十分な資金を確保する",
+    "tryAnother": "Awaiting synthesis...",
+    "contactBank": "銀行にお問い合わせください"
+  },
+  "globalComparison": {
+    "meta": {
+      "cta": {
+        "button": "Take Tests Now"
+      },
+      "keywords": "Awaiting synthesis...",
+      "badge": "Global Benchmarking",
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "filters": {
+      "region": "🌏 地域を選択してください",
+      "age": "👥 年齢層",
+      "gender": "⚧ 性別",
+      "test": "Awaiting synthesis..."
+    },
+    "tabs": {
+      "overview": "📈 概要",
+      "regional": "🗺️ 地域比較",
+      "demographics": "👥 人口統計",
+      "rankings": "🏆ランキング"
+    },
+    "chart": {
+      "scoreDistribution": "📊 スコア分布",
+      "personalityRankings": "🏆性格タイプランキング",
+      "avgScore": "平均スコア",
+      "users": "ユーザー",
+      "topRankText": "あなたは世界中のユーザーの上位 {percent}% にランクされています 🚀",
+      "allAges": "全年齢対象",
+      "all": "全て",
+      "male": "男",
+      "female": "女性",
+      "global": "グローバル",
+      "asia": "アジア",
+      "europe": "ヨーロッパ",
+      "northAmerica": "北米",
+      "korea": "韓国",
+      "southAmerica": "南アメリカ",
+      "africa": "アフリカ",
+      "oceania": "オセアニア"
+    },
+    "demographics": {
+      "comingSoon": "📊 人口統計分析機能は近日公開予定です。"
+    },
+    "cta": {
+      "button": "今すぐテストを受けてください",
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "features": {
+      "benchmarking": {
+        "title": "マイ・インサイト",
+        "description": "Awaiting synthesis..."
+      },
+      "regional": {
+        "title": "マイ・インサイト",
+        "description": "Awaiting synthesis..."
+      }
+    },
+    "insights": {
+      "yourScore": "あなたのスコア",
+      "globalAverage": "世界平均",
+      "percentile": "パーセンタイル",
+      "topPerformers": "トップパフォーマー",
+      "aboveAverage": "平均以上",
+      "belowAverage": "低い",
+      "regions": "地域"
+    },
+    "test": {
+      "insightBullets": ["合成を待っています..."],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "badge": "グローバルベンチマーク",
+    "loading": "Awaiting synthesis...",
+    "noData": "📋 分析するデータがありません。 まずは性格診断を行ってください。",
+    "title": "マイ・インサイト",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "luck": {
+    "meta": {
+      "keywords": "Awaiting synthesis..."
+    },
+    "hero": {
+      "eyebrow": "Smart Wallet Lab",
+      "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認",
+      "cta": "Awaiting synthesis..."
+    }
+  },
+  "spendingStyle": {
+    "meta": {
+      "keywords": "Awaiting synthesis..."
+    },
+    "hero": {
+      "eyebrow": "スマートウォレットラボ",
+      "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認",
+      "cta": "Awaiting synthesis..."
+    }
+  },
+  "nJobler": {
+    "test": {
+      "insightBullets": [
+        "合成を待っています...",
+        "合成を待っています...",
+        "合成を待っています..."
+      ],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認"
+    },
+    "meta": {
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🚀",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "💡",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🎯",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🔥",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "⭐",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🚀",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "💡",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🎯",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🔥",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "⭐",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🚀",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "💡",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🎯",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🔥",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "⭐",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        }
+      ]
+    },
+    "result": {
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "マイ・インサイト",
+    "description": "Awaiting synthesis..."
+  },
+  "giftTax": {
+    "test": {
+      "insightBullets": [
+        "合成を待っています...",
+        "合成を待っています...",
+        "合成を待っています..."
+      ],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認"
+    },
+    "meta": {
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🚀",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "💡",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🎯",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🔥",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "⭐",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🚀",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "💡",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🎯",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🔥",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "⭐",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🚀",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "💡",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🎯",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "🔥",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        },
+        {
+          "icon": "⭐",
+          "title": "合成を待っています...",
+          "description": "合成を待っています...",
+          "question": "合成を待っています...",
+          "answer": "合成を待っています..."
+        }
+      ]
+    },
+    "result": {
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "マイ・インサイト",
+    "description": "Awaiting synthesis..."
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "合成を待っています...",
+        "a": "合成を待っています..."
+      },
+      {
+        "q": "合成を待っています...",
+        "a": "合成を待っています..."
+      },
+      {
+        "q": "合成を待っています...",
+        "a": "合成を待っています..."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "title": "合成を待っています...",
+        "description": "合成を待っています..."
+      },
+      {
+        "title": "合成を待っています...",
+        "description": "合成を待っています..."
+      },
+      {
+        "title": "合成を待っています...",
+        "description": "合成を待っています..."
+      }
+    ]
+  },
+  "hub": {
+    "meta": {
+      "title": "マイ・インサイト",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "マイ・インサイト",
+    "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認"
+  },
+  "subtitle": "入社日、退職日、3ヶ月分の給与を使用して推定退職金を確認",
+  "optional": "オプション",
+  "currency": "USD",
+  "disclaimer": "この計算は推定値です。実際の退職金は会社の方針や特定の労働契約により異なる場合があります。",
+  "ko-KR": "コ・Ｋ・Ｒ",
+  "title": "マイ・インサイト"
+}

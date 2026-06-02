@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "您的价值观档案",
+    "description": "发现对您真正重要的事物",
+    "keywords": "价值观, 个人价值, 人生优先事项, 自我发现, 评估"
+  },
+  "hero": {
+    "title": "您的价值观档案",
+    "subtitle": "了解驱动您决策和行动的因素",
+    "cta": "发现我的价值观",
+    "badge": "💎 自我发现"
+  },
+  "test": {
+    "progress": "进度",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "loading": "正在分析您的价值观...",
+    "selectOption": "请选择",
+    "insightBullets": [
+      "检查你的核心价值观",
+      "我了解优先事项。",
+      "让你的生活与重要的事情保持一致"
+    ]
+  },
+  "result": {
+    "title": "您的价值观档案",
+    "description": "发现对您真正重要的事物"
+  }
+}

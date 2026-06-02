@@ -1,0 +1,64 @@
+{
+  "stars": {
+    "cheonaek": {
+      "name": "Cheonaek (The Star of Hardship)",
+      "description": "Growing into a greater person through early trials. It involves wisely overcoming hardships to forge a solid self.",
+      "keyword": "Hardship, Resilience"
+    },
+    "cheonbok": {
+      "name": "Cheonbok (The Star of Blessings)",
+      "description": "Symbolizes heavenly blessings and material abundance. It is a fortunate energy where an honest effort leads to a comfortable life and prosperity.",
+      "keyword": "Blessings, Prosperity"
+    },
+    "cheongan": {
+      "name": "Cheongan (The Star of Strategy)",
+      "description": "Symbolizes extraordinary mental agility and judgment. It is the energy of a strategist who wisely solves complex problems to achieve goals.",
+      "keyword": "Strategy, Ingenuity"
+    },
+    "cheongo": {
+      "name": "Cheongo (The Star of Solitude)",
+      "description": "Symbolizes noble bearing and an independent spirit. It exercises the most powerful reflective force when alone, walking its own path.",
+      "keyword": "Solitude, Independence"
+    },
+    "cheongwi": {
+      "name": "Cheongwi (The Noble Star)",
+      "description": "Natural elegance and an energy that commands respect. It symbolizes a noble path and a pursuit of honor.",
+      "keyword": "Nobility, Honor"
+    },
+    "cheongwon": {
+      "name": "Cheongwon (The Star of Authority)",
+      "description": "Symbolizes command over others and powerful charisma. It is the energy of a leader exercising authority at the center of an organization.",
+      "keyword": "Power, Leadership"
+    },
+    "cheonin": {
+      "name": "Cheonin (The Star of Tenacity)",
+      "description": "Symbolizes insight as sharp as a blade and persistent endurance. It is the energy of powerful execution that completes difficult tasks to the end.",
+      "keyword": "Tenacity, Sharpness"
+    },
+    "cheonmun": {
+      "name": "Cheonmun (The Star of Literacy)",
+      "description": "Energy that combines academic depth and literary talent. Through deep contemplation, it realizes the truths of the world and spreads knowledge.",
+      "keyword": "Literacy, Wisdom"
+    },
+    "cheonpa": {
+      "name": "Cheonpa (The Star of Breakthrough)",
+      "description": "A powerful force of destruction and creation that breaks existing molds to pave new paths. It cultivates innovation through constant challenge.",
+      "keyword": "Breakthrough, Innovation"
+    },
+    "cheonsu": {
+      "name": "Cheonsu (The Star of Longevity)",
+      "description": "Symbolizes unchanging vitality and calm patience over time. It lives a long, healthy life by valuing every moment without hurrying.",
+      "keyword": "Longevity, Persistence"
+    },
+    "cheonye": {
+      "name": "Cheonye (The Star of Artistry)",
+      "description": "Symbolizes versatile skills and rich artistic sensibility. It breathes beautiful inspiration into the world with its own original sense.",
+      "keyword": "Artistry, Talent"
+    },
+    "cheonyeok": {
+      "name": "Cheonyeok (The Star of Movement)",
+      "description": "A dynamic energy that moves across the wide world instead of staying in one place. It expands life’s horizons by experiencing various places and environments.",
+      "keyword": "Movement, Change"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "handless": {
+    "title": "Sélection de date impériale",
+    "subtitle": "Calculez les jours de pureté pour les grandes entreprises.",
+    "legend": {
+      "good": "Jour propice (pur)",
+      "bad": "Présence spirituelle (à éviter)"
+    },
+    "directions": {
+      "East": "Garde Est",
+      "West": "Garde Ouest",
+      "South": "Garde Sud",
+      "North": "Garde Nord"
+    },
+    "info": "La sagesse ancienne met en garde contre les esprits errants (« Fils »). Les jours se terminant par 9 ou 0 sont divinement protégés."
+  }
+}

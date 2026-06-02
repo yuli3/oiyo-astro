@@ -1,0 +1,46 @@
+{
+  "dailyInsight": {
+    "cosmicEnergy": "宇宙のエネルギー",
+    "flowerOfDay": "今日の誕生花",
+    "crystalOfPower": "パワーストーン",
+    "guidingStar": "守護星"
+  },
+  "composition": "構成",
+  "earthlyBranch": "地支",
+  "heavenlyStem": "天干",
+  "meaning": "意味",
+  "modernMeaning": "現代的な解釈",
+  "represents": "象徴",
+  "traditionalDescription": "伝統的な説明",
+  "viewModes": {
+    "modern": "現代的な視点",
+    "traditional": "伝統的な視点"
+  },
+  "interpretationSuffix": "解説",
+  "modern": {
+    "year": {
+      "description": "あなたが残すべき遺産の現れであり、未来に秘められた無限の可能性です。"
+    },
+    "month": {
+      "description": "あなたが残すべき遺産の現れであり、未来に秘められた無限の可能性です。"
+    },
+    "day": {
+      "description": "あなたが残すべき遺産の現れであり、未来に秘められた無限の可能性です。"
+    },
+    "hour": {
+      "description": "あなたが残すべき遺産の現れであり、未来に秘められた無限の可能性です。"
+    }
+  },
+  "year": "年柱",
+  "month": "月柱",
+  "day": "日柱",
+  "hour": "時柱",
+  "yearMeaning": "あなたのルーツと先祖の気運を象徴する、年柱の深い真理です。",
+  "monthMeaning": "社会的な繋がりと職業的な環境において発揮される、月柱のエネルギーです。",
+  "dayMeaning": "自己の核であり本質的な性向を表す、日柱の解釈です。",
+  "hourMeaning": "将来の潜在能力と晩年の実りを示す、時柱の解説です。",
+  "yearRepresents": "先祖、幼少期、親の背景、そして人生の土台",
+  "monthRepresents": "社会性、職業的成功、兄弟関係、そして青年期",
+  "dayRepresents": "自分自身、配偶者、現在の環境、そして中年期",
+  "hourRepresents": "子女、老後の生活、内面的な欲求、そして最終的な結実"
+}

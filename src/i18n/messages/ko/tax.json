@@ -1,0 +1,1837 @@
+{
+  "gift": {
+    "meta": {
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "증여세 계산",
+      "badge": "글로벌 벤치마킹"
+    },
+    "rel": {
+      "child_adult": "5000만원 공제",
+      "child_minor": "2000만원 공제",
+      "spouse": "6억 공제",
+      "parent": "5000만원 공제",
+      "other_relative": "1000만원 공제",
+      "other": "공제 없음"
+    },
+    "result": {
+      "title": "My Insights",
+      "deduction": "공제액",
+      "taxBase": "Tax Base",
+      "rate": "연 수익률 (%)",
+      "selfReport": "* 자진신고 시 3% 공제된 예상 납부액입니다.",
+      "description": "Awaiting synthesis..."
+    },
+    "tip": {
+      "title": "My Insights",
+      "desc": "당신만의 고유한 성향 분석"
+    },
+    "test": {
+      "insightBullets": [
+        "Wealth Resonance",
+        "Lineage Protection",
+        "Temporal Efficiency"
+      ],
+      "progress": "진행률",
+      "submit": "계산하기",
+      "loading": "계산 중...",
+      "selectOption": "선택해주세요",
+      "next": "다음",
+      "previous": "이전"
+    },
+    "deduction": {
+      "child_adult": "5000만원 공제",
+      "child_minor": "2000만원 공제",
+      "spouse": "6억 공제",
+      "parent": "5000만원 공제",
+      "other_relative": "1000만원 공제",
+      "other": "공제 없음"
+    },
+    "unit": {
+      "currency": "원",
+      "tenYear": "최근 10년",
+      "aggregation": "합산과세 대상"
+    },
+    "resultInfo": {
+      "selfReport": "* 자진신고 시 3% 공제된 예상 납부액입니다.",
+      "consult": "* 실제 세금은 세무 전문가와 상담이 필요합니다."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "subtitle": "증여세 계산",
+    "disclaimer": "본 결과는 단순 참고용이며 법적 효력이 없습니다. 정확한 권리분석은 전문가와 상담하세요.",
+    "relationship": "관계",
+    "giftAmount": "증여금액",
+    "pastGiftAmount": "과거 증여금액",
+    "calculateBtn": "Calculate Btn"
+  },
+  "freelancer": {
+    "meta": {
+      "title": "My Insights",
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관",
+      "description": "Awaiting synthesis...",
+      "subtitle": "증여세 계산"
+    },
+    "inputs": {
+      "jobType": "직종",
+      "revenue": "연간 수입금액 (세전)",
+      "expenseRate": "단순경비율",
+      "dependents": "부양가족 수",
+      "calculate": "Calculate"
+    },
+    "jobs": {
+      "developer": "개발자 (940909)",
+      "creator": "크리에이터/BJ (940306)",
+      "writer": "작가 (940100)",
+      "designer": "디자이너 (940500)",
+      "delivery": "배달라이더 (940911)",
+      "it": "IT 프리랜서 (940909)"
+    },
+    "results": {
+      "refundTitle": "환급 예상",
+      "paymentTitle": "납부 예상",
+      "totalTax": "Total Tax",
+      "alreadyPaid": "기납부 세액 (3.3%)",
+      "refundMsg": "5월 종합소득세 신고 시 환급받을 가능성이 높습니다.",
+      "paymentMsg": "5월 종합소득세 신고 시 추가 납부가 필요할 수 있습니다.",
+      "calculated": "산출 세액",
+      "withheld": "원천징수세액"
+    },
+    "tips": {
+      "content": "현재 수익률로 자산이 2배가 되는데 약 {years}년이 걸립니다."
+    },
+    "loading": {
+      "step1": "초기 자본을 확인하고 있습니다...",
+      "step2": "복리 수익을 계산하는 중입니다...",
+      "step3": "최종 자산을 예측하고 있습니다...",
+      "step4": "최적 전략 생성 중"
+    },
+    "labels": {
+      "jobType": "직종",
+      "annualRevenue": "연간 매출"
+    },
+    "tooltips": {
+      "simpleRate": "단순경비율 적용 대상자 기준",
+      "beforeTax": "3.3% 공제 전 총 금액"
+    },
+    "formTitle": "프리랜서 소득세 계산"
+  },
+  "cardOptimization": {
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+    },
+    "inputs": {
+      "salary": "급여",
+      "creditCard": "신용카드",
+      "debitCard": "체크카드",
+      "calculate": "Calculate"
+    },
+    "loading": {
+      "title": "My Insights",
+      "step1": "초기 자본을 확인하고 있습니다...",
+      "step2": "복리 수익을 계산하는 중입니다...",
+      "step3": "최종 자산을 예측하고 있습니다...",
+      "step4": "최적 전략 생성 중"
+    },
+    "tips": {
+      "content": "현재 수익률로 자산이 2배가 되는데 약 {years}년이 걸립니다."
+    },
+    "diagnosis": {
+      "strategies": {
+        "switchDebit": "급여의 25%를 초과했어요. 이제 체크카드를 쓰세요. (공제율 30%)"
+      },
+      "labels": {
+        "minThreshold": "최소 사용 금액 (급여 25%)",
+        "ccUsed": "현재 신용카드 사용액",
+        "ccVsThreshold": "기준 대비 신용카드"
+      },
+      "title": "My Insights"
+    },
+    "test": {
+      "insightBullets": [
+        "Unveil the hidden layers of your personal philosophy."
+      ],
+      "progress": "진행률",
+      "submit": "계산하기",
+      "loading": "계산 중...",
+      "selectOption": "선택해주세요",
+      "next": "다음",
+      "previous": "이전"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "vat": {
+    "modes": {
+      "total": "합계금액",
+      "supply": "공급가액 기준"
+    },
+    "labels": {
+      "totalAmount": "합계금액 (부가세 포함)",
+      "supplyAmount": "공급가액 (부가세 별도)"
+    },
+    "results": {
+      "supplyPrice": "공급가액",
+      "vat": "부가가치세",
+      "total": "합계금액"
+    },
+    "tip": {
+      "content": "현재 수익률로 자산이 2배가 되는데 약 {years}년이 걸립니다.",
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "증여세 계산",
+      "disclaimer": "본 결과는 단순 참고용이며 법적 효력이 없습니다. 정확한 권리분석은 전문가와 상담하세요.",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "진행률",
+      "next": "다음",
+      "previous": "이전",
+      "submit": "계산하기",
+      "loading": "계산 중...",
+      "selectOption": "선택해주세요"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "subtitle": "증여세 계산",
+    "currency": "원",
+    "disclaimer": "본 결과는 단순 참고용이며 법적 효력이 없습니다. 정확한 권리분석은 전문가와 상담하세요.",
+    "title": "My Insights",
+    "ko-KR": "한국어"
+  },
+  "test": {
+    "insightBullets": ["Discover the unique patterns that define your path."],
+    "progress": "진행률",
+    "submit": "계산하기",
+    "loading": "계산 중...",
+    "selectOption": "선택해주세요",
+    "next": "다음",
+    "previous": "이전"
+  },
+  "tax": {
+    "freelancer": {
+      "meta": {
+        "title": "My Insights",
+        "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관",
+        "description": "Awaiting synthesis...",
+        "subtitle": "증여세 계산"
+      },
+      "inputs": {
+        "jobType": "직종",
+        "revenue": "연간 수입금액 (세전)",
+        "expenseRate": "단순경비율",
+        "dependents": "부양가족 수",
+        "calculate": "Calculate"
+      },
+      "tips": {
+        "content": "현재 수익률로 자산이 2배가 되는데 약 {years}년이 걸립니다."
+      },
+      "loading": {
+        "step1": "초기 자본을 확인하고 있습니다...",
+        "step2": "복리 수익을 계산하는 중입니다...",
+        "step3": "최종 자산을 예측하고 있습니다...",
+        "step4": "최적 전략 생성 중"
+      },
+      "results": {
+        "refundTitle": "환급 예상",
+        "paymentTitle": "납부 예상",
+        "totalTax": "Total Tax",
+        "alreadyPaid": "기납부 세액 (3.3%)",
+        "refundMsg": "5월 종합소득세 신고 시 환급받을 가능성이 높습니다.",
+        "paymentMsg": "5월 종합소득세 신고 시 추가 납부가 필요할 수 있습니다.",
+        "calculated": "산출 세액",
+        "withheld": "원천징수세액"
+      },
+      "labels": {
+        "jobType": "직종",
+        "annualRevenue": "연간 매출"
+      },
+      "tooltips": {
+        "simpleRate": "단순경비율 적용 대상자 기준",
+        "beforeTax": "3.3% 공제 전 총 금액"
+      },
+      "jobs": {
+        "developer": "개발자 (940909)",
+        "creator": "크리에이터/BJ (940306)",
+        "writer": "작가 (940100)",
+        "designer": "디자이너 (940500)",
+        "delivery": "배달라이더 (940911)",
+        "it": "IT 프리랜서 (940909)"
+      },
+      "formTitle": "프리랜서 소득세 계산"
+    },
+    "cardOptimization": {
+      "inputs": {
+        "salary": "급여",
+        "creditCard": "신용카드",
+        "debitCard": "체크카드",
+        "calculate": "Calculate"
+      },
+      "loading": {
+        "title": "My Insights",
+        "step1": "초기 자본을 확인하고 있습니다...",
+        "step2": "복리 수익을 계산하는 중입니다...",
+        "step3": "최종 자산을 예측하고 있습니다...",
+        "step4": "최적 전략 생성 중"
+      },
+      "tips": {
+        "content": "현재 수익률로 자산이 2배가 되는데 약 {years}년이 걸립니다."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+      },
+      "diagnosis": {
+        "strategies": {
+          "switchDebit": "급여의 25%를 초과했어요. 이제 체크카드를 쓰세요. (공제율 30%)",
+          "optimizeCredit": "신용카드 혜택을 놓치지 마세요. {amount} 더 채우세요.",
+          "startDeduction": "아직 공제 구간 전이에요. {amount} 더 사용하면 공제가 시작돼요."
+        },
+        "labels": {
+          "minThreshold": "최소 사용 금액 (급여 25%)",
+          "ccUsed": "현재 신용카드 사용액",
+          "ccVsThreshold": "기준 대비 신용카드"
+        },
+        "title": "My Insights"
+      },
+      "unit": {
+        "currency": "원"
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "진행률",
+        "next": "다음",
+        "previous": "이전",
+        "submit": "계산하기",
+        "loading": "계산 중...",
+        "selectOption": "선택해주세요"
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    }
+  },
+  "nJobler": {
+    "unit": {
+      "currency": "원"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "payUser": "Pay User",
+      "refundUser": "Refund User",
+      "warning": "Warning",
+      "safe": "안전 (추천)",
+      "totalTax": "Total Tax",
+      "taxBase": "Tax Base"
+    },
+    "tip": {
+      "title": "My Insights",
+      "desc": "당신만의 고유한 성향 분석"
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "진행률",
+      "next": "다음",
+      "previous": "이전",
+      "submit": "계산하기",
+      "loading": "계산 중...",
+      "selectOption": "선택해주세요",
+      "subtitle": "증여세 계산"
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "subtitle": "증여세 계산",
+    "disclaimer": "본 결과는 단순 참고용이며 법적 효력이 없습니다. 정확한 권리분석은 전문가와 상담하세요.",
+    "salaryInput": "Salary Input",
+    "salaryPlaceholder": "예: 50000000",
+    "bizInput": "Biz Input",
+    "bizPlaceholder": "예: 10000000",
+    "bizDesc": "Biz 상세 분석 리포트",
+    "calculateBtn": "Calculate Btn"
+  },
+  "compoundInterest": {
+    "labels": {
+      "principal": "원금 합계",
+      "monthlyContribution": "월 적립금",
+      "period": "기간 (년)",
+      "rate": "연 수익률 (%)"
+    },
+    "loading": {
+      "step1": "초기 자본을 확인하고 있습니다...",
+      "step2": "복리 수익을 계산하는 중입니다...",
+      "step3": "최종 자산을 예측하고 있습니다..."
+    },
+    "results": {
+      "finalAmount": "최종 예상 금액",
+      "principal": "원금 합계",
+      "interest": "총 복리 이자"
+    },
+    "tip": {
+      "content": "현재 수익률로 자산이 2배가 되는데 약 {years}년이 걸립니다.",
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "증여세 계산",
+      "disclaimer": "본 결과는 단순 참고용이며 법적 효력이 없습니다. 정확한 권리분석은 전문가와 상담하세요.",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "진행률",
+      "next": "다음",
+      "previous": "이전",
+      "submit": "계산하기",
+      "loading": "계산 중...",
+      "selectOption": "선택해주세요",
+      "subtitle": "증여세 계산"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "subtitle": "증여세 계산",
+    "currency": "원",
+    "years": "년",
+    "calculate": "Calculate",
+    "disclaimer": "본 결과는 단순 참고용이며 법적 효력이 없습니다. 정확한 권리분석은 전문가와 상담하세요.",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "ko-KR": "한국어"
+  },
+  "jeonseGuard": {
+    "input": {
+      "subtitle": "증여세 계산",
+      "houseValue": "매매 시세",
+      "deposit": "전세 보증금",
+      "mortgage": "선순위 대출금 (근저당)",
+      "mortgageDesc": "등기부등본을 확인하여 기재된 채권최고액 또는 실제 대출금을 입력하세요.",
+      "unit": "원",
+      "title": "My Insights"
+    },
+    "checklist": {
+      "items": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "증여세 계산",
+      "disclaimer": "본 결과는 단순 참고용이며 법적 효력이 없습니다. 정확한 권리분석은 전문가와 상담하세요.",
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "debtRatio": "예상 전세가율"
+    },
+    "hero": {
+      "subtitle": "증여세 계산",
+      "badge": "글로벌 벤치마킹"
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "진행률",
+      "next": "다음",
+      "previous": "이전",
+      "submit": "계산하기",
+      "loading": "계산 중...",
+      "selectOption": "선택해주세요",
+      "subtitle": "증여세 계산"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🛡️",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⚖️",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📝",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🏦",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "subtitle": "증여세 계산",
+    "currency": "원",
+    "optional": "선택사항",
+    "calculate": "Calculate",
+    "disclaimer": "본 결과는 단순 참고용이며 법적 효력이 없습니다. 정확한 권리분석은 전문가와 상담하세요.",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "safe": "안전 (추천)",
+    "caution": "주의 (확인 필요)",
+    "danger": "위험 (계약 유의)"
+  },
+  "moneyHabits": {
+    "meta": {
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관",
+      "resultTitle": "머니 해빗 분석 결과",
+      "resultDescription": "나의 소비 심리와 재무 행동 패턴에 대한 심층 분석입니다.",
+      "testTitle": "머니 해빗 진단",
+      "testDescription": "나의 돈 관리 습관점수를 계산합니다.",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "증여세 계산",
+      "cta": "소비 진단 시작",
+      "badge": "글로벌 벤치마킹",
+      "title": "My Insights"
+    },
+    "benefits": {
+      "items": {
+        "0": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        },
+        "1": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        },
+        "2": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        }
+      },
+      "title": "My Insights"
+    },
+    "cta": {
+      "subtitle": "증여세 계산",
+      "button": "테스트 하러 가기",
+      "title": "My Insights"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "1": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "2": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "3": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      },
+      "title": "My Insights"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📝",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "common": {
+        "progress": "진행률",
+        "next": "다음",
+        "previous": "이전",
+        "submit": "계산하기",
+        "start": "시작하기",
+        "loading": "계산 중...",
+        "results": "진단 결과",
+        "dashboard": "대시보드",
+        "insights": "맞춤형 인사이트"
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "진행률",
+        "next": "다음",
+        "previous": "이전",
+        "submit": "계산하기",
+        "loading": "계산 중...",
+        "selectOption": "선택해주세요"
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+      },
+      "progress": "진행률",
+      "next": "다음",
+      "previous": "이전",
+      "submit": "계산하기",
+      "loading": "계산 중...",
+      "selectOption": "선택해주세요",
+      "subtitle": "증여세 계산",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관",
+      "finish": "완료",
+      "swipeHint": "좌우로 넘겨보세요"
+    },
+    "result": {
+      "chart": {
+        "impulseControl": "충동 조절",
+        "savingCapacity": "저축 능력",
+        "planningSkill": "계획성",
+        "emotionalControl": "감정 조절"
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "진행률",
+        "next": "다음",
+        "previous": "이전",
+        "submit": "계산하기",
+        "loading": "계산 중...",
+        "selectOption": "선택해주세요"
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+      },
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관",
+      "loading": "계산 중...",
+      "shareTitle": "성찰의 시간",
+      "copySuccess": "복사되었습니다",
+      "scoresTitle": "성찰의 시간",
+      "impulseRisk": "충동 구매 위험도",
+      "strengths": "나의 강점",
+      "challenges": "보완할 점",
+      "actionTips": "실천 팁",
+      "savingRecommendation": "추천 저축 방법",
+      "recommendedPercentage": "권장 저축 비율",
+      "share": "결과 공유",
+      "retake": "다시 테스트하기"
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+  },
+  "payment": {
+    "checkout": {
+      "orderName": "Oiyo.net {planName} 구독"
+    },
+    "errors": {
+      "PLAN_NOT_FOUND": "구독 플랜을 찾을 수 없어요.",
+      "PAYMENT_SERVICE_ERROR": "결제 서비스에서 오류가 발생했어요. 다시 시도해 주세요.",
+      "PROVIDER_REQUIRED": "결제 제공자 설정이 필요해요.",
+      "LOCALE_REQUIRED": "결제에 필요한 언어 정보를 확인해 주세요.",
+      "CURRENCY_REQUIRED": "결제 통화 정보가 필요해요.",
+      "TOSS_CLIENT_KEY_REQUIRED": "Toss 클라이언트 키가 설정되어 있지 않어요.",
+      "LEMONSQUEEZY_CONFIG_REQUIRED": "LemonSqueezy 스토어 또는 상품 ID가 필요해요.",
+      "generic": "결제에 실패했어요. 다시 시도해 주세요."
+    },
+    "failed": {
+      "help": {
+        "technical": {
+          "refresh": "페이지를 새로고침하세요",
+          "browser": "다른 브라우저를 시도하세요",
+          "network": "인터넷 연결을 확인해요",
+          "incognito": "시크릿/사생활 보호 모드를 시도하세요",
+          "title": "My Insights"
+        },
+        "payment": {
+          "title": "My Insights",
+          "checkCard": "카드 정보를 확인해요",
+          "checkFunds": "잔액이 충분한지 확인해요",
+          "tryAnother": "다른 결제 방법을 시도하세요",
+          "contactBank": "카드사에 문의하세요"
+        }
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "Awaiting synthesis...",
+          "Awaiting synthesis...",
+          "Awaiting synthesis..."
+        ],
+        "progress": "진행률",
+        "next": "다음",
+        "previous": "이전",
+        "submit": "계산하기",
+        "loading": "계산 중...",
+        "selectOption": "선택해주세요",
+        "subtitle": "증여세 계산"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "subtitle": "증여세 계산",
+      "genericTitle": "결제 오류",
+      "genericDescription": "결제 처리 중 오류가 발생했어요. 다시 시도해 주세요.",
+      "genericAction": "다시 시도",
+      "unknownTitle": "알 수 없는 오류",
+      "unknownDescription": "예상치 못한 오류가 발생했어요. 고객 지원에 문의해 주세요.",
+      "unknownAction": "고객 지원 문의",
+      "orderId": "주문번호",
+      "orderIdNote": "고객 지원에 문의할 때 이 주문번호를 참조용으로 보관해 주세요.",
+      "technicalDetails": "기술적 세부사항",
+      "errorCode": "오류 코드",
+      "errorMessage": "오류 메시지",
+      "whatNext": "어떻게 해야 하나요?",
+      "contactSupport": "고객 지원 문의",
+      "backToHome": "홈으로 돌아가기",
+      "needHelp": "도움이 필요하신가요?",
+      "stillNeedHelp": "여전히 문제가 있으신가요?",
+      "getSupport": "지원 받기",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "success": {
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "📊",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚫",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "📂",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💎",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "Awaiting synthesis...",
+          "Awaiting synthesis...",
+          "Awaiting synthesis..."
+        ],
+        "progress": "진행률",
+        "next": "다음",
+        "previous": "이전",
+        "submit": "계산하기",
+        "loading": "계산 중...",
+        "selectOption": "선택해주세요",
+        "subtitle": "증여세 계산"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "welcome', { name: user": {
+        "firstName || user": {
+          "fullName || t('success": {
+            "user": "사용자"
+          }
+        }
+      },
+      "subtitle": "증여세 계산",
+      "verifying": "결제 확인 중...",
+      "verifyingDescription": "결제 확인 중이니 잠시만 기다려 주세요",
+      "premiumActive": "프리미엄 활성화됨",
+      "welcome": "{name}님 환영해요!",
+      "user": "사용자",
+      "paymentDetails": "결제 상세 정보",
+      "orderId": "주문번호",
+      "amount": "금액",
+      "status": "상태",
+      "confirmed": "확인됨",
+      "verificationSuccess": "결제가 정상적으로 확인되었어요. 프리미엄 기능을 바로 이용하실 수 있어요.",
+      "verificationFailed": "결제를 확인하지 못했어요. 다시 시도해 주세요.",
+      "verificationNetworkError": "결제 서버에 연결할 수 없어요. 잠시 후 다시 시도해 주세요.",
+      "verificationRetry": "결제 다시 확인",
+      "verificationPending": "확인 대기 중",
+      "approvedAt": "승인 시간",
+      "featuresUnlocked": "프리미엄 기능이 이제 사용 가능해요",
+      "nextSteps": "다음 단계는?",
+      "goToDashboard": "대시보드로 이동",
+      "takeTest": "테스트 받기",
+      "supportNote": "도움이 필요하신가요? 프리미엄 지원팀이 도와드리겠어요.",
+      "contactSupport": "고객 지원 문의",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "진행률",
+      "next": "다음",
+      "previous": "이전",
+      "submit": "계산하기",
+      "loading": "계산 중...",
+      "selectOption": "선택해주세요"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+    },
+    "checkCard": "카드 정보를 확인해요",
+    "checkFunds": "잔액이 충분한지 확인해요",
+    "tryAnother": "다른 결제 방법을 시도하세요",
+    "contactBank": "카드사에 문의하세요"
+  },
+  "globalComparison": {
+    "meta": {
+      "cta": {
+        "button": "테스트 하러 가기"
+      },
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관",
+      "badge": "글로벌 벤치마킹",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "filters": {
+      "region": "🌏 지역 선택",
+      "age": "👥 연령대",
+      "gender": "⚧ 성별",
+      "test": "테스트 제목"
+    },
+    "tabs": {
+      "overview": "📈 개요",
+      "regional": "🗺️ 지역별 비교",
+      "demographics": "👥 인구통계",
+      "rankings": "🏆 순위"
+    },
+    "chart": {
+      "scoreDistribution": "📊 점수 분포",
+      "personalityRankings": "🏆 성격 유형 순위",
+      "avgScore": "평균 점수",
+      "users": "사용자",
+      "topRankText": "전 세계 사용자 중 상위 {percent}%에 위치해요 🚀",
+      "allAges": "모든 연령",
+      "all": "전체",
+      "male": "남성",
+      "female": "여성",
+      "global": "전 세계",
+      "asia": "아시아",
+      "europe": "유럽",
+      "northAmerica": "북미",
+      "korea": "한국",
+      "southAmerica": "South America",
+      "africa": "Africa",
+      "oceania": "Oceania"
+    },
+    "demographics": {
+      "comingSoon": "📊 인구통계 분석 기능이 곧 출시돼요."
+    },
+    "cta": {
+      "button": "테스트 하러 가기",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "features": {
+      "benchmarking": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "regional": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      }
+    },
+    "insights": {
+      "yourScore": "나의 점수",
+      "globalAverage": "전체 평균",
+      "percentile": "백분위",
+      "topPerformers": "상위권",
+      "aboveAverage": "평균 이상",
+      "belowAverage": "낮음",
+      "regions": "지역별 분포"
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "진행률",
+      "next": "다음",
+      "previous": "이전",
+      "submit": "계산하기",
+      "loading": "계산 중...",
+      "selectOption": "선택해주세요"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "badge": "글로벌 벤치마킹",
+    "loading": "계산 중...",
+    "noData": "📋 분석할 데이터가 없어요. 먼저 성격 테스트를 완료해주세요.",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+  },
+  "luck": {
+    "meta": {
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+    },
+    "hero": {
+      "eyebrow": "스마트 월렛 연구소",
+      "subtitle": "증여세 계산",
+      "cta": "소비 진단 시작"
+    }
+  },
+  "spendingStyle": {
+    "meta": {
+      "keywords": "소비 성향 테스트, 예산 관리, 소비 심리, 재무 습관"
+    },
+    "hero": {
+      "eyebrow": "스마트 월렛 연구소",
+      "subtitle": "증여세 계산",
+      "cta": "소비 진단 시작"
+    }
+  },
+  "giftTax": {
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "진행률",
+      "next": "다음",
+      "previous": "이전",
+      "submit": "계산하기",
+      "loading": "계산 중...",
+      "selectOption": "선택해주세요",
+      "subtitle": "증여세 계산"
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "💰",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📉",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "📝",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "📉",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "💸",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      }
+    ]
+  },
+  "result": {
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "🧮",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "📊",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      }
+    ]
+  },
+  "title": "My Insights"
+}

@@ -1,0 +1,11 @@
+{
+  "badge": "Resilience Assessment",
+  "intro": "Discover your capacity to adapt and bounce back.",
+  "result": {
+    "level": "Resilience Level",
+    "score": "Current Score",
+    "profile_title": "Resilience Profile",
+    "guidance_title": "Guidance for Growth"
+  },
+  "title": "Resilience Score"
+}

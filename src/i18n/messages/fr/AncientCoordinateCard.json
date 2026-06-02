@@ -1,0 +1,14 @@
+{
+  "mayan": {
+    "systemName": "Calendrier Maya",
+    "narrative": "Synchronisation Galactique",
+    "solarSeal": "Sceau Solaire",
+    "tone": "Tonalité Galactique"
+  },
+  "celtic": {
+    "systemName": "Calendrier Celtique des Arbres",
+    "narrative": "Sagesse des Arbres",
+    "treeSign": "Signe de l'Arbre",
+    "ogham": "Symbole Ogham"
+  }
+}

@@ -1,0 +1,181 @@
+{
+  "labels": {
+    "principal": "Principal",
+    "monthlyContribution": "Monthly Contribution",
+    "period": "Period",
+    "rate": "Rate"
+  },
+  "results": {
+    "finalAmount": "Final Amount",
+    "principal": "Principal",
+    "interest": "Interest"
+  },
+  "tip": {
+    "content": "At this rate, your money will double in approximately {years} years.",
+    "title": "My Insights"
+  },
+  "meta": {
+    "subtitle": "Detailed information",
+    "disclaimer": "Disclaimer",
+    "title": "Compoundinterest Test",
+    "description": "Discover your personal insights with this in-depth analysis.",
+    "keywords": "Key, words"
+  },
+  "test": {
+    "progress": "Progress",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "selectOption": "Select Option",
+    "subtitle": "Detailed information",
+    "insightBullets": ["Signature Strength", "Pivot Point", "2"]
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What drives your inner world?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What drives your inner world?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Small choices accumulate into a grand destiny."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What is your unique core frequency?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How do you navigate life's currents?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What is your unique core frequency?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Inner harmony guides your everyday actions."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What drives your inner world?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What is your unique core frequency?",
+        "answer": "Your unique perspective shapes your reality."
+      }
+    ]
+  },
+  "result": {
+    "title": "Result",
+    "description": "Your personalized analysis results and recommendations."
+  },
+  "subtitle": "Visualize the power of compound interest over time",
+  "currency": "Currency",
+  "years": "Years",
+  "disclaimer": "Calculated based on monthly compounding. Taxes and fees are not included.",
+  "title": "Your Financial Profile",
+  "description": "Explore our suite of tools designed for deep finance insights.",
+  "ko-KR": "Ko- K R"
+}

@@ -1,0 +1,15 @@
+{
+  "daySun": "日",
+  "dayMon": "一",
+  "dayTue": "二",
+  "dayWed": "三",
+  "dayThu": "四",
+  "dayFri": "五",
+  "daySat": "六",
+  "a": "A",
+  "saveFailed": "保存失败",
+  "moodQuestion": "今天感觉如何？",
+  "close": "关闭",
+  "saved": "保存成功",
+  "saveAsImage": "保存为图片"
+}

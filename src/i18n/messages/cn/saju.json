@@ -1,0 +1,293 @@
+{
+  "title": "四柱命理 (Four Pillars)",
+  "systemName": "四柱命理",
+  "narrative": "您的四柱命理原局",
+  "stems": {
+    "gap": {
+      "name": "亥",
+      "meaning": "阴水",
+      "symbol": "渗透雨水/雾气"
+    },
+    "eul": {
+      "name": "亥",
+      "meaning": "阴水",
+      "symbol": "渗透雨水/雾气"
+    },
+    "byeong": {
+      "name": "亥",
+      "meaning": "阴水",
+      "symbol": "渗透雨水/雾气"
+    },
+    "jeong": {
+      "name": "亥",
+      "meaning": "阴水",
+      "symbol": "渗透雨水/雾气"
+    },
+    "mu": {
+      "name": "亥",
+      "meaning": "阴水",
+      "symbol": "渗透雨水/雾气"
+    },
+    "gi": {
+      "name": "亥",
+      "meaning": "阴水",
+      "symbol": "渗透雨水/雾气"
+    },
+    "gyeong": {
+      "name": "亥",
+      "meaning": "阴水",
+      "symbol": "渗透雨水/雾气"
+    },
+    "sin": {
+      "name": "亥",
+      "meaning": "阴水",
+      "symbol": "渗透雨水/雾气"
+    },
+    "im": {
+      "name": "亥",
+      "meaning": "阴水",
+      "symbol": "渗透雨水/雾气"
+    },
+    "gye": {
+      "name": "亥",
+      "meaning": "阴水",
+      "symbol": "渗透雨水/雾气"
+    }
+  },
+  "branches": {
+    "zi": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "chou": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "yin": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "mao": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "chen": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "si": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "wu": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "wei": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "shen": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "you": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "xu": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "hai": {
+      "name": "亥",
+      "animal": "亥",
+      "season": "初冬"
+    }
+  },
+  "@/components/ontology/FactionCard": "",
+  "@/components/ontology/GenericFactionCard": "",
+  "": "",
+  "labels": {
+    "undiscovered": "未探索",
+    "meaning": "含义",
+    "element": "元素",
+    "nameVibration": "姓名振动",
+    "westernZodiac": "西方星座",
+    "sign": "星座",
+    "observation": "观察",
+    "easternZodiac": "东方生肖",
+    "animal": "生肖",
+    "dominion": "统辖",
+    "bureau": "天宫"
+  },
+  "returnToHome": "返回首页",
+  "contactSupport": "联系支持",
+  "syncingData": "正在同步数据...",
+  "guest": "访客",
+  "calibration": "校准",
+  "changeOrigin": "更改起源",
+  "todayInsight": {
+    "title": "今日洞察",
+    "soulOracle": "灵魂神谕",
+    "innerResonance": "内在共鸣",
+    "manifestMore": "显化更多"
+  },
+  "readingsLink": "查看解读",
+  "cards": {
+    "vitality": {
+      "title": "生命活力"
+    },
+    "resonance": {
+      "description": "您的共鸣模式。",
+      "subtitle": "共鸣"
+    },
+    "foundation": {
+      "description": "您的核心基础。",
+      "subtitle": "基础"
+    },
+    "elemental": {
+      "description": "您的元素组合。",
+      "subtitle": "元素亲和力",
+      "title": "元素"
+    },
+    "onomancy": {
+      "description": "您姓名的振动频率。",
+      "subtitle": "姓名炼金"
+    },
+    "cognition": {
+      "description": "您的思维模式。",
+      "subtitle": "认知"
+    },
+    "vocation": {
+      "description": "您的职业路径。",
+      "subtitle": "职业"
+    },
+    "destiny": {
+      "description": "您的命运轨迹。",
+      "subtitle": "命运"
+    }
+  },
+  "resonanceTitle": "共鸣档案",
+  "sections": {
+    "testArchitecture": {
+      "title": "测试架构",
+      "description": "背景结构信息。"
+    },
+    "emotionalResonance": {
+      "title": "情感共鸣",
+      "description": "您的情感联结方式。"
+    },
+    "grandArchives": {
+      "title": "大档案馆",
+      "description": "历史知识库。"
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "元素"
+    },
+    "riasec": {
+      "description": "RIASEC 职业类型"
+    },
+    "saju": {
+      "label": "四柱",
+      "description": "四柱分析",
+      "polarity": "极性",
+      "element": "元素"
+    },
+    "archiveEntry": "进入档案",
+    "recordVerified": "记录已验证",
+    "tuning": {
+      "color": "幸运色",
+      "number": "幸运数字",
+      "direction": "吉利方向",
+      "flower": "幸运花卉",
+      "gemstone": "幸运宝石",
+      "luckyStar": "幸运星",
+      "title": "调频",
+      "favorableDays": "吉利日期",
+      "synergy": "协同"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "紫微斗数"
+  },
+  "_": "",
+  "elements": {
+    "wood": {
+      "name": "木",
+      "short": "木"
+    },
+    "fire": {
+      "name": "火",
+      "short": "火"
+    },
+    "earth": {
+      "name": "土",
+      "short": "土"
+    },
+    "metal": {
+      "name": "金",
+      "short": "金"
+    },
+    "water": {
+      "name": "水",
+      "short": "水"
+    },
+    "viewModes": {
+      "chart": "图表",
+      "balance": "平衡",
+      "cycle": "循环"
+    },
+    "chartLabel": "元素图表",
+    "influence": "影响程度",
+    "cycle": {
+      "title": "五行循环",
+      "description": "元素之间的相互作用。",
+      "generation": "相生",
+      "destruction": "相克"
+    },
+    "interpretation": {
+      "title": "解读",
+      "dominant": "主导元素",
+      "balanceAdvice": "平衡建议",
+      "balanceDescription": "详细平衡档案"
+    }
+  },
+  "pillars": {
+    "viewModes": {
+      "traditional": "传统视图",
+      "modern": "现代视图"
+    },
+    "traditionalDescription": "四柱的传统解读。",
+    "meaning": "含义",
+    "represents": "代表",
+    "composition": "组成",
+    "heavenlyStem": "天干",
+    "earthlyBranch": "地支",
+    "modernMeaning": "现代诠释"
+  },
+  "result": {
+    "pillars": {
+      "title": "您的四柱"
+    }
+  },
+  "accuracy": "极高准确度",
+  "duration": "时长：5分钟",
+  "terms": {
+    "dayMaster": "日主"
+  }
+}

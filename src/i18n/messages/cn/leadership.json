@@ -1,0 +1,555 @@
+{
+  "leadership": {
+    "meta": {
+      "title": "权威型领导者",
+      "description": "您在复杂的相位波动中提供绝对的确定性。您重视产出的纯度与演进的效率，通过发出高频且明确的指令来主导团队的行动轨迹。您是团队在面临外部频率剧烈干涉（危机）时的定海神针。",
+      "keywords": "领导力, 管理性格, OIYO, 影响力, 职场心理"
+    },
+    "hero": {
+      "badge": "💼 领导力原型",
+      "title": "权威型领导者",
+      "description": "您在复杂的相位波动中提供绝对的确定性。您重视产出的纯度与演进的效率，通过发出高频且明确的指令来主导团队的行动轨迹。您是团队在面临外部频率剧烈干涉（危机）时的定海神针。",
+      "cta": "开启观测"
+    },
+    "test": {
+      "analyzing": "正在解码您的领导力基因...",
+      "calculating": "正在匹配您的领导力相位...",
+      "loading": "正在唤醒您内在的支配力量...",
+      "questionProgress": "观测进度 {current} / {total}"
+    },
+    "result": {
+      "yourStyle": "您的领导力原型",
+      "score": "原型契合度",
+      "coreApproach": "通过明确指令下达、刚性标准管控与效率极致化实现目标闭环",
+      "strengths": "主导强项",
+      "challenges": "潜在相位干扰",
+      "communication": "交互风格",
+      "decisionMaking": "Quick and independent decision-making",
+      "teamManagement": "Setting clear roles, responsibilities, and performance standards",
+      "bestEnvironment": "理想协作环境",
+      "developmentTips": "演进智慧谏言",
+      "famousLeaders": "等频知名领导者",
+      "idealFor": "建议共鸣领域"
+    },
+    "questions": {
+      "q1": {
+        "options": [
+          {
+            "text": "提出清晰的愿景并激励团队"
+          },
+          {
+            "text": "一起集思广益并收集团队意见"
+          },
+          {
+            "text": "识别每个成员的优势并提供 1:1 辅导"
+          },
+          {
+            "text": "制定总体战略并明确方向"
+          }
+        ],
+        "text": "从长远观测，您希望团队演化成怎样的形态？"
+      },
+      "q2": {
+        "options": [
+          {
+            "text": "询问您如何提供帮助并提供所需的支持"
+          },
+          {
+            "text": "一起分析问题并寻找解决方案"
+          },
+          {
+            "text": "提出明确的解决方案和行动计划"
+          },
+          {
+            "text": "通过提出问题并自己解决来帮助他们成长"
+          }
+        ],
+        "text": "从长远观测，您希望团队演化成怎样的形态？"
+      },
+      "q3": {
+        "options": [
+          {
+            "text": "听取团队意见，共同决定"
+          },
+          {
+            "text": "从长远目标和战略角度判断"
+          },
+          {
+            "text": "迅速做出决定并给出明确的指示"
+          },
+          {
+            "text": "检查是否符合愿景并决定"
+          }
+        ],
+        "text": "从长远观测，您希望团队演化成怎样的形态？"
+      },
+      "q4": {
+        "options": [
+          {
+            "text": "激励团队成员并引领变革"
+          },
+          {
+            "text": "制定个人发展辅导计划"
+          },
+          {
+            "text": "共同分析原因，寻找改进措施"
+          },
+          {
+            "text": "重新建立明确的标准和责任"
+          }
+        ],
+        "text": "从长远观测，您希望团队演化成怎样的形态？"
+      },
+      "q5": {
+        "options": [
+          {
+            "text": "帮助团队成员成长和发展"
+          },
+          {
+            "text": "呈现清晰愿景，描绘未来"
+          },
+          {
+            "text": "支持团队成员并帮助他们取得成功"
+          },
+          {
+            "text": "制定战略以实现组织目标"
+          }
+        ],
+        "text": "从长远观测，您希望团队演化成怎样的形态？"
+      },
+      "q6": {
+        "options": [
+          {
+            "text": "提供便利，让每个人都可以分享意见"
+          },
+          {
+            "text": "提醒大局和长期目标"
+          },
+          {
+            "text": "高效运行并得出清晰的结论"
+          },
+          {
+            "text": "连接团队想法，创造协同效应"
+          }
+        ],
+        "text": "从长远观测，您希望团队演化成怎样的形态？"
+      },
+      "q7": {
+        "options": [
+          {
+            "text": "分享我们追求的团队愿景和价值观"
+          },
+          {
+            "text": "询问他们需要什么并帮助他们调整"
+          },
+          {
+            "text": "有一对一的时间了解优势和目标"
+          },
+          {
+            "text": "解释明确的角色和期望"
+          }
+        ],
+        "text": "从长远观测，您希望团队演化成怎样的形态？"
+      },
+      "q8": {
+        "options": [
+          {
+            "text": "鼓励自由的想法分享和实验"
+          },
+          {
+            "text": "呈现创新愿景并激发灵感"
+          },
+          {
+            "text": "帮助团队成员协作并产生协同效应"
+          },
+          {
+            "text": "教练发展个人创造力优势"
+          }
+        ],
+        "text": "从长远观测，您希望团队演化成怎样的形态？"
+      },
+      "q9": {
+        "options": [
+          {
+            "text": "倾听双方的意见，共同寻找解决方案"
+          },
+          {
+            "text": "根据明确的原则和标准做出决定"
+          },
+          {
+            "text": "通过提醒更大的目标来解决冲突"
+          },
+          {
+            "text": "帮助理解观点并用作增长机会"
+          }
+        ],
+        "text": "从长远观测，您希望团队演化成怎样的形态？"
+      },
+      "q10": {
+        "options": [
+          {
+            "text": "每个成员都发挥最佳水平的团队"
+          },
+          {
+            "text": "不断创新、引领变革的团队"
+          },
+          {
+            "text": "有效实现战略目标的团队"
+          },
+          {
+            "text": "一个协作并产生协同效应的团队"
+          }
+        ],
+        "text": "从长远观测，您希望团队演化成怎样的形态？"
+      }
+    },
+    "styles": {
+      "transformational": {
+        "strengths": [
+          "为团队成员提供强大的动力和灵感",
+          "鼓励创新想法和创造性思维",
+          "建立积极的组织文化",
+          "提出并执行长期愿景",
+          "帮助团队充分发挥潜力"
+        ],
+        "challenges": [
+          "倾向于关注愿景而不是细节执行",
+          "难以管理变革疲劳",
+          "可能会忽视短期目标",
+          "忽视实际限制的可能性"
+        ],
+        "bestEnvironment": [
+          "需要变革和创新的组织",
+          "鼓励创造力和挑战的文化",
+          "长期愿景很重要的项目",
+          "优先考虑团队发展和成长的环境"
+        ],
+        "developmentTips": [
+          "强化详细的执行计划技能",
+          "平衡短期目标与长期愿景",
+          "监控团队的变革疲劳",
+          "考虑现实的限制",
+          "定期反馈和绩效评估"
+        ],
+        "famousLeaders": [
+          "史蒂夫·乔布斯（苹果公司）",
+          "埃隆·马斯克（特斯拉、SpaceX）",
+          "理查德·布兰森（维珍集团）",
+          "奥普拉·温弗瑞（Harpo Productions）"
+        ],
+        "idealFor": [
+          "初创公司和成长型公司",
+          "数字化转型项目",
+          "组织文化创新",
+          "新业务开发"
+        ],
+        "title": "权威型领导者",
+        "subtitle": "通过清晰指标与坚决意志主导高效产出的守卫者",
+        "description": "您在复杂的相位波动中提供绝对的确定性。您重视产出的纯度与演进的效率，通过发出高频且明确的指令来主导团队的行动轨迹。您是团队在面临外部频率剧烈干涉（危机）时的定海神针。",
+        "coreApproach": "通过明确指令下达、刚性标准管控与效率极致化实现目标闭环",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "democratic": {
+        "strengths": [
+          "高团队参与度和承诺",
+          "反映不同观点的决策",
+          "强大的团队凝聚力和信任",
+          "发现创意",
+          "提高团队成员的主人翁意识"
+        ],
+        "challenges": [
+          "决策可能需要更长的时间",
+          "难以应对紧急情况",
+          "建立共识过程的复杂性",
+          "可能缺乏明确的方向"
+        ],
+        "bestEnvironment": [
+          "高技能团队",
+          "创造力很重要的项目",
+          "长期规划",
+          "稳定的工作环境"
+        ],
+        "developmentTips": [
+          "为需要快速决策的情况做好准备",
+          "认识到有时需要领导力",
+          "学会防止低效的讨论",
+          "提供明确的指导方针",
+          "管理时间表和优先事项"
+        ],
+        "famousLeaders": [
+          "纳尔逊·曼德拉（南非总统）",
+          "安格拉·默克尔（德国总理）",
+          "沃伦·巴菲特（伯克希尔哈撒韦公司）",
+          "霍华德·舒尔茨（星巴克）"
+        ],
+        "idealFor": ["研发团队", "创意项目", "教育和学术机构", "非营利组织"],
+        "title": "权威型领导者",
+        "subtitle": "通过清晰指标与坚决意志主导高效产出的守卫者",
+        "description": "您在复杂的相位波动中提供绝对的确定性。您重视产出的纯度与演进的效率，通过发出高频且明确的指令来主导团队的行动轨迹。您是团队在面临外部频率剧烈干涉（危机）时的定海神针。",
+        "coreApproach": "通过明确指令下达、刚性标准管控与效率极致化实现目标闭环",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "coaching": {
+        "strengths": [
+          "高团队满意度和忠诚度",
+          "发现和发展个人优势",
+          "长期人才发展",
+          "积极反馈文化",
+          "提高团队成员的自我效能"
+        ],
+        "challenges": [
+          "高时间和能源消耗",
+          "注重长期发展而非短期成果",
+          "难以为所有团队成员提供同等的关注",
+          "有时可能需要直接指导"
+        ],
+        "bestEnvironment": [
+          "重视人才发展的组织",
+          "长期项目",
+          "具有浓厚学习文化的环境",
+          "需要专业发展的团队"
+        ],
+        "developmentTips": [
+          "平衡团队目标与个人发展",
+          "开展高效的辅导课程",
+          "学习短期成就的方法",
+          "培养团体辅导技能",
+          "优先级设定和时间管理"
+        ],
+        "famousLeaders": [
+          "比尔·坎贝尔（硅谷传奇教练）",
+          "约翰·伍登（加州大学洛杉矶分校篮球教练）",
+          "萨蒂亚·纳德拉（微软）",
+          "卢英德 (百事公司)"
+        ],
+        "idealFor": ["咨询公司", "教育项目", "早期创业团队", "高成长企业"],
+        "title": "权威型领导者",
+        "subtitle": "通过清晰指标与坚决意志主导高效产出的守卫者",
+        "description": "您在复杂的相位波动中提供绝对的确定性。您重视产出的纯度与演进的效率，通过发出高频且明确的指令来主导团队的行动轨迹。您是团队在面临外部频率剧烈干涉（危机）时的定海神针。",
+        "coreApproach": "通过明确指令下达、刚性标准管控与效率极致化实现目标闭环",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "visionary": {
+        "strengths": [
+          "呈现强大的愿景和方向",
+          "实现长期目标的能力",
+          "在不确定性中提供清晰度",
+          "赋予团队成员使命感",
+          "创新思维和战略制定"
+        ],
+        "challenges": [
+          "可能会忽略细节的执行",
+          "可能缺乏对当前问题的关注",
+          "愿景与现实之间的差距",
+          "倾向于忽视短期目标"
+        ],
+        "bestEnvironment": [
+          "需要变革的组织",
+          "新市场开发",
+          "长期项目",
+          "创新很重要的行业"
+        ],
+        "developmentTips": [
+          "制定执行计划和详细策略",
+          "加强对当前问题的关注",
+          "将短期目标与愿景联系起来",
+          "倾听团队成员的现实关切",
+          "设置增量里程碑"
+        ],
+        "famousLeaders": [
+          "小马丁·路德·金",
+          "杰夫·贝佐斯（亚马逊）",
+          "马克·扎克伯格（元）",
+          "马云（阿里巴巴）"
+        ],
+        "idealFor": ["初创公司成立", "业务转型", "新市场进入", "组织架构调整"],
+        "title": "权威型领导者",
+        "subtitle": "通过清晰指标与坚决意志主导高效产出的守卫者",
+        "description": "您在复杂的相位波动中提供绝对的确定性。您重视产出的纯度与演进的效率，通过发出高频且明确的指令来主导团队的行动轨迹。您是团队在面临外部频率剧烈干涉（危机）时的定海神针。",
+        "coreApproach": "通过明确指令下达、刚性标准管控与效率极致化实现目标闭环",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "servant": {
+        "strengths": [
+          "高度的团队信任和忠诚度",
+          "重视团队福利和满意度",
+          "建立积极的组织文化",
+          "提高团队自主权和责任感",
+          "建立长期关系"
+        ],
+        "challenges": [
+          "做出困难决定时犹豫不决",
+          "平衡团队需求与组织目标",
+          "有时需要强有力的领导",
+          "忽视自己需求的可能性"
+        ],
+        "bestEnvironment": [
+          "协作很重要的环境",
+          "重视长期关系的组织",
+          "基于团队合作的项目",
+          "以人为本的文化"
+        ],
+        "developmentTips": [
+          "在需要时做出坚定的决定",
+          "平衡组织目标与团队福利",
+          "自我照顾和界限设定",
+          "加强绩效管理",
+          "培养有效的授权技巧"
+        ],
+        "famousLeaders": [
+          "特蕾莎修女",
+          "赫伯·凯莱赫（西南航空）",
+          "谢丽尔·桑德伯格（脸书）",
+          "保罗·波尔曼（联合利华）"
+        ],
+        "idealFor": [
+          "非营利组织",
+          "医疗及福利机构",
+          "教育机构",
+          "以客户服务为中心的公司"
+        ],
+        "title": "权威型领导者",
+        "subtitle": "通过清晰指标与坚决意志主导高效产出的守卫者",
+        "description": "您在复杂的相位波动中提供绝对的确定性。您重视产出的纯度与演进的效率，通过发出高频且明确的指令来主导团队的行动轨迹。您是团队在面临外部频率剧烈干涉（危机）时的定海神针。",
+        "coreApproach": "通过明确指令下达、刚性标准管控与效率极致化实现目标闭环",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "strategic": {
+        "strengths": [
+          "明确的目标和执行计划",
+          "基于数据的决策",
+          "高效的资源配置",
+          "风险管理能力",
+          "长期成就"
+        ],
+        "challenges": [
+          "可能缺乏改变的灵活性",
+          "倾向于将流程置于人员之上",
+          "限制创造力和自发性",
+          "由于分析过多导致执行延迟"
+        ],
+        "bestEnvironment": [
+          "营商环境复杂",
+          "市场竞争激烈",
+          "长期项目",
+          "以绩效为导向的组织"
+        ],
+        "developmentTips": [
+          "培养灵活性和适应性",
+          "考虑团队情绪和动机",
+          "鼓励快速执行和实验",
+          "拥抱创造性思维",
+          "平衡直觉与数据"
+        ],
+        "famousLeaders": [
+          "拉里·佩奇（谷歌）",
+          "蒂姆·库克（苹果）",
+          "岩田聪（任天堂）",
+          "玛丽·巴拉（通用汽车）"
+        ],
+        "idealFor": ["制造业", "金融服务", "大型企业", "项目管理"],
+        "title": "权威型领导者",
+        "subtitle": "通过清晰指标与坚决意志主导高效产出的守卫者",
+        "description": "您在复杂的相位波动中提供绝对的确定性。您重视产出的纯度与演进的效率，通过发出高频且明确的指令来主导团队的行动轨迹。您是团队在面临外部频率剧烈干涉（危机）时的定海神针。",
+        "coreApproach": "通过明确指令下达、刚性标准管控与效率极致化实现目标闭环",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "collaborative": {
+        "strengths": [
+          "团队凝聚力强",
+          "有效的协作文化",
+          "整合不同观点",
+          "创造性地解决问题",
+          "相互支持和信任"
+        ],
+        "challenges": [
+          "决策速度可能放缓",
+          "冲突管理困难",
+          "缺乏明确的方向",
+          "个人责任不明确"
+        ],
+        "bestEnvironment": [
+          "解决复杂问题",
+          "跨职能项目",
+          "环境需要创新",
+          "多元化就是力量的团队"
+        ],
+        "developmentTips": [
+          "培养快速决策能力",
+          "建设性的冲突管理技能",
+          "定义明确的角色和职责",
+          "高效的会议管理",
+          "认可个人表现的方法"
+        ],
+        "famousLeaders": [
+          "苏珊·沃西基 (YouTube)",
+          "埃里克·施密特（谷歌）",
+          "罗斯·马塞洛 (Salesforce)",
+          "肯尼思·切诺特（美国运通）"
+        ],
+        "idealFor": ["敏捷团队", "设计思维项目", "初创公司", "咨询"],
+        "title": "权威型领导者",
+        "subtitle": "通过清晰指标与坚决意志主导高效产出的守卫者",
+        "description": "您在复杂的相位波动中提供绝对的确定性。您重视产出的纯度与演进的效率，通过发出高频且明确的指令来主导团队的行动轨迹。您是团队在面临外部频率剧烈干涉（危机）时的定海神针。",
+        "coreApproach": "通过明确指令下达、刚性标准管控与效率极致化实现目标闭环",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "authoritative": {
+        "strengths": [
+          "快速决策和执行",
+          "明确的目标和期望",
+          "有效的危机应对",
+          "一致的标准和流程",
+          "高生产率"
+        ],
+        "challenges": [
+          "限制团队创造力的可能性",
+          "团队参与度和积极性低",
+          "依赖性增加",
+          "可能会抵制变革"
+        ],
+        "bestEnvironment": [
+          "危机情况",
+          "需要明确方向的环境",
+          "拥有许多新成员的组织",
+          "快速执行很重要的项目"
+        ],
+        "developmentTips": [
+          "提供团队投入的机会",
+          "鼓励创造力和自主性",
+          "培养情感沟通技巧",
+          "实践授权和授权",
+          "学习灵活的方法"
+        ],
+        "famousLeaders": [
+          "史蒂夫·乔布斯（早期苹果公司）",
+          "戈登·拉姆齐",
+          "玛格丽特·撒切尔",
+          "隆巴尔迪获胜"
+        ],
+        "idealFor": ["危机管理", "军队/警察", "制造生产管理", "应急响应小组"],
+        "title": "权威型领导者",
+        "subtitle": "通过清晰指标与坚决意志主导高效产出的守卫者",
+        "description": "您在复杂的相位波动中提供绝对的确定性。您重视产出的纯度与演进的效率，通过发出高频且明确的指令来主导团队的行动轨迹。您是团队在面临外部频率剧烈干涉（危机）时的定海神针。",
+        "coreApproach": "通过明确指令下达、刚性标准管控与效率极致化实现目标闭环",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      }
+    }
+  }
+}

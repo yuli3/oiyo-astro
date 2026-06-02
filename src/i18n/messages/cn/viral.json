@@ -1,0 +1,118 @@
+{
+  "share": {
+    "button": "分享您的见解",
+    "title": "Personality Resonance Analysis",
+    "progress": "Until Next Level",
+    "preview": "卡片预览",
+    "kakao": "KakaoTalk",
+    "moreOptions": "探索共享选项"
+  },
+  "referral": {
+    "stats": {
+      "total": "邀请总数",
+      "points": "精华点",
+      "premium": "专业访问日"
+    },
+    "tier": {
+      "progress": "直到下一个级别",
+      "needed": "仍需邀请",
+      "rewards": "可用奖励",
+      "premiumDays": "专业访问日"
+    },
+    "link": {
+      "title": "Personality Resonance Analysis",
+      "copy": "复制链接",
+      "copied": "链接已复制！"
+    },
+    "rewards": {
+      "title": "Personality Resonance Analysis",
+      "friendSignup": "朋友觉醒后",
+      "firstTest": "在他们的第一次洞察中",
+      "friendPremium": "在他们的职业之旅中",
+      "active30": "入住 30 天后"
+    },
+    "title": "Personality Resonance Analysis",
+    "subtitle": "Compare your essence through a multitude of lenses."
+  },
+  "comparison": {
+    "quickActions": {
+      "friend": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "similar": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "celeb": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      }
+    },
+    "tabs": {
+      "similar": "Spirit",
+      "population": "全球平均水平",
+      "celeb": "Icon",
+      "ideal": "Partner"
+    },
+    "sections": {
+      "similar": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "population": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "celeb": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "ideal": {
+        "title": "Personality Resonance Analysis",
+        "desc": "探索与您最相配的气质。"
+      }
+    },
+    "card": {
+      "viewDetails": "探索详情",
+      "share": "共享卡"
+    },
+    "metrics": {
+      "compatibility": "谐波兼容性",
+      "similarity": "共振相似度",
+      "insights": "核心见解",
+      "strengths": "辐射优势"
+    },
+    "modal": {
+      "close": "确认",
+      "recommendations": "建议路径："
+    },
+    "levels": {
+      "high": "Pivotal Difference",
+      "mediumHigh": "充满活力",
+      "medium": "Noteworthy Shift",
+      "low": "Gentle Variance"
+    },
+    "diffs": {
+      "high": "关键差异",
+      "medium": "值得注意的转变",
+      "low": "温和的变化"
+    },
+    "types": {
+      "friend": "朋友",
+      "similar": "精神",
+      "average": "平均的",
+      "celeb": "图标",
+      "ideal": "伙伴"
+    },
+    "status": {
+      "loading": "分析共振...",
+      "similarLoading": "在圣所寻找志同道合的灵魂......",
+      "avgLoading": "绘制您在全球挂毯中的位置...",
+      "celebLoading": "检查与全球图标的共鸣...",
+      "idealLoading": "设计你的和声补语..."
+    },
+    "title": "人格共振分析",
+    "subtitle": "通过多种视角比较你的本质。"
+  }
+}

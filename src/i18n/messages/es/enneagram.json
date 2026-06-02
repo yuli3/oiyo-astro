@@ -1,0 +1,443 @@
+{
+  "enneagram": {
+    "meta": {
+      "title": "Eneagrama: Explora los 9 Tipos de Personalidad",
+      "description": "Explora tu mundo interior y obtén perspectivas para tu crecimiento a través de los 9 tipos de personalidad del Eneagrama. Descubre motivaciones, miedos, fortalezas y caminos de crecimiento.",
+      "keywords": "Eneagrama, tipos de personalidad, autodescubrimiento, psicología, comprensión de relaciones, OIYO"
+    },
+    "hero": {
+      "badge": "🎭 9 Tipos de Personalidad",
+      "title": "Profundiza en el Conocimiento de Ti Mismo",
+      "description": "El Eneagrama es una herramienta poderosa que ilumina las motivaciones y miedos esenciales ocultos tras tu comportamiento. Descubre tu luz y tu sombra únicas.",
+      "cta": "Encontrar mi Tipo"
+    },
+    "triads": {
+      "gut": "Centro Instintivo (8, 9, 1): Tomadores de decisiones intuitivos que lidian con la ira y el control",
+      "heart": "Centro Emocional (2, 3, 4): Orientados a las emociones y relaciones, lidian con la imagen y la identidad",
+      "head": "Centro Mental (5, 6, 7): Pensadores analíticos que lidian con el miedo y la seguridad"
+    },
+    "typesSection": {
+      "title": "Aprende más sobre los 9 Tipos"
+    },
+    "types": {
+      "type1": "Tipo 1. El Reformador",
+      "type2": "Tipo 2. El Ayudador",
+      "type3": "Tipo 3. El Triunfador",
+      "type4": "Tipo 4. El Individualista",
+      "type5": "Tipo 5. El Investigador",
+      "type6": "Tipo 6. El Leal",
+      "type7": "Tipo 7. El Entusiasta",
+      "type8": "Tipo 8. El Desafiador",
+      "type9": "Tipo 9. El Pacificador"
+    },
+    "features": {
+      "title": "El Valor del Eneagrama",
+      "feature1_title": "Autocomprensión Profunda",
+      "feature1_description": "Ve más allá de la personalidad superficial para iluminar las necesidades y miedos fundamentales que te impulsan.",
+      "feature2_title": "Caminos de Crecimiento Personalizados",
+      "feature2_description": "Comprende cómo reacciona cada tipo bajo estrés e integración, y encuentra direcciones para tu crecimiento.",
+      "feature3_title": "Comprende las Dinámicas de las Relaciones",
+      "feature3_description": "Relaciones más profundas y saludables al comprender los estilos de comunicación y los patrones de conflicto.",
+      "feature4_title": "Desbloquea tu Potencial",
+      "feature4_description": "Reconoce tus fortalezas únicas y aprende a equilibrarlas en tu vida y carrera."
+    },
+    "cta": {
+      "title": "Viaje hacia una Vida Auténtica",
+      "subtitle": "Comienza tu evaluación del Eneagrama hoy mismo."
+    },
+    "test": {
+      "analyzing": "Analizando...",
+      "findingType": "Identificando tu tipo de Eneagrama",
+      "questionProgress": "Pregunta {current} / {total}"
+    },
+    "result": {
+      "typeHeader": "Tipo {type}",
+      "personalitySection": "📖 Tu Personalidad",
+      "motivationLabel": "Motivación Principal",
+      "fearLabel": "Miedo Principal",
+      "strengthsLabel": "Fortalezas",
+      "challengesLabel": "Desafíos de Crecimiento",
+      "growthPathLabel": "Camino de Crecimiento",
+      "integrationLabel": "Dirección de Crecimiento (Integración)",
+      "disintegrationLabel": "Dirección de Estrés (Desintegración)",
+      "careersLabel": "Carreras Recomendadas",
+      "famousPeopleLabel": "Gente Famosa"
+    },
+    "profiles": {
+      "type1": {
+        "title": "Tipo 1: El Reformador",
+        "subtitle": "Perfeccionista, Ético e Idealista",
+        "description": "Los Reformadores buscan la rectitud y la moralidad. Son meticulosos, diligentes y tienen un fuerte deseo de hacer del mundo un lugar mejor.",
+        "coreMotivation": "Ser moralmente perfecto y correcto.",
+        "coreFear": "El defecto moral, ser corrupto o malo.",
+        "strengths": [
+          "Fuerte ética y moral",
+          "Diligente y responsable",
+          "Sistemático y organizado",
+          "Busca la mejora y el progreso",
+          "Honesto y confiable"
+        ],
+        "challenges": [
+          "Autocrítica y perfeccionismo excesivos",
+          "Falta de flexibilidad",
+          "Actitud crítica hacia los demás",
+          "Tendencia a reprimir la ira",
+          "Dificultad para disfrutar del descanso y la diversión"
+        ],
+        "growthPath": [
+          "Practicar la aceptación de la imperfección",
+          "Ser más amable contigo mismo",
+          "Incluir la diversión y el juego en la vida diaria",
+          "Expresar la ira de manera saludable"
+        ],
+        "famousPeople": [
+          "mahatma gandhi",
+          "Nelson Mandela",
+          "Platón",
+          "Confucio"
+        ],
+        "career": [
+          "Juez",
+          "Profesor",
+          "Gerente de Calidad",
+          "Editora",
+          "Arquitecto",
+          "Contador"
+        ]
+      },
+      "type2": {
+        "title": "Tipo 2: El Ayudador",
+        "subtitle": "Cálido, Empático y Generoso",
+        "description": "Los Ayudadores encuentran gran alegría en ayudar a los demás. Son sensibles a las necesidades ajenas y cuidan de su entorno con un corazón cálido.",
+        "coreMotivation": "Ser amado y necesitado.",
+        "coreFear": "No ser amado y ser rechazado.",
+        "strengths": [
+          "Cálido y altamente empático",
+          "Identifica bien las necesidades de los demás",
+          "Construye y mantiene buenas relaciones",
+          "Generoso y abnegado",
+          "Positivo y alentador"
+        ],
+        "challenges": [
+          "Tendencia a ignorar sus propias necesidades",
+          "Dificultad para decir que no",
+          "Necesidad de ser apreciado",
+          "Puede volverse manipulador",
+          "Dificultad para establecer límites"
+        ],
+        "growthPath": [
+          "Reconocer tus propios sentimientos y necesidades",
+          "Practicar decir un \"no\" saludable",
+          "Practicar el amor incondicional",
+          "Priorizar el autocuidado"
+        ],
+        "famousPeople": [
+          "Madre Teresa",
+          "Oprah Winfrey",
+          "Papa Francisco",
+          "Jennifer Garner"
+        ],
+        "career": [
+          "Enfermero",
+          "Consejero",
+          "Profesor",
+          "Trabajador Social",
+          "Especialista en RRHH",
+          "Médico"
+        ]
+      },
+      "type3": {
+        "title": "Tipo 3: El Triunfador",
+        "subtitle": "Orientado a Objetivos, Eficiente y Adaptable",
+        "description": "Los Triunfadores buscan el éxito y el reconocimiento. Hacen todo lo posible para demostrar sus habilidades y aspiran a una vida productiva y eficiente.",
+        "coreMotivation": "Tener éxito y ser valorado.",
+        "coreFear": "Ser alguien sin valor o un fracaso.",
+        "strengths": [
+          "Gran capacidad para alcanzar objetivos",
+          "Eficiente y productivo",
+          "Seguro de sí mismo y enérgico",
+          "Gran adaptabilidad",
+          "Excelente comunicación"
+        ],
+        "challenges": [
+          "Ignorar los sentimientos en favor del trabajo",
+          "Competitividad excesiva",
+          "Obsesión con la imagen",
+          "Tendencia al exceso de trabajo",
+          "Miedo al fracaso"
+        ],
+        "growthPath": [
+          "Reconocer los sentimientos más allá de los logros",
+          "Valorar el descanso y el yo interior",
+          "Buscar la conexión auténtica",
+          "Aprender a aceptar el fracaso como un proceso"
+        ],
+        "famousPeople": [
+          "Tony Robbins",
+          "Taylor Swift",
+          "bill clinton",
+          "Lady Gaga"
+        ],
+        "career": [
+          "CEO",
+          "Gerente de Marketing",
+          "Emprendedor",
+          "Representante de Ventas",
+          "Orador Público",
+          "Actriz"
+        ]
+      },
+      "type4": {
+        "title": "Tipo 4: El Individualista",
+        "subtitle": "Creativo, Sensible e Introspectivo",
+        "description": "Los Individualistas valoran la autenticidad y la identidad única. Se sumergen profundamente en sus emociones y buscan ser una presencia única en el mundo.",
+        "coreMotivation": "Descubrir su verdadero yo y encontrar significado personal.",
+        "coreFear": "Ser alguien común o no tener identidad.",
+        "strengths": [
+          "Creativo y artístico",
+          "Comprensión emocional profunda",
+          "Auténtico y honesto",
+          "Altamente empático",
+          "Aprecia la singularidad y la belleza"
+        ],
+        "challenges": [
+          "Inmersión profunda en emociones negativas",
+          "Autoconciencia excesiva y envidia",
+          "Cambios de humor",
+          "Sentirse incomprendido",
+          "Retirada de la realidad"
+        ],
+        "growthPath": [
+          "Mantener la disciplina y rutinas diarias",
+          "Centrarse en el presente en lugar del pasado",
+          "Transformar las emociones en acción creativa",
+          "Reconocer las similitudes con los demás"
+        ],
+        "famousPeople": [
+          "Vicente van Gogh",
+          "Johnny Depp",
+          "Frida Kahlo",
+          "Amy Winehouse"
+        ],
+        "career": [
+          "Artista",
+          "Diseñador",
+          "Escritor",
+          "Músico",
+          "Psicoterapeuta",
+          "Actriz"
+        ]
+      },
+      "type5": {
+        "title": "Tipo 5: El Investigador",
+        "subtitle": "Intelectual, Analítico y Observador",
+        "description": "Los Investigadores buscan el conocimiento y la comprensión. Se centran en analizar el mundo objetivamente, recopilando información y desarrollando su propia experiencia.",
+        "coreMotivation": "Ser capaz, conocedor y competente.",
+        "coreFear": "Ser incompetente, inútil o ignorante.",
+        "strengths": [
+          "Excelentes habilidades analíticas y perspicacia",
+          "Independiente y autónomo",
+          "Objetivo y justo",
+          "Conocimientos profundos",
+          "Concentración excepcional"
+        ],
+        "challenges": [
+          "Dificultad para expresar emociones",
+          "Tendencia al aislamiento social",
+          "Protección excesiva de la privacidad",
+          "Obsesión con conservar la energía",
+          "Priorizar el pensamiento sobre la acción"
+        ],
+        "growthPath": [
+          "Explorar el mundo de las emociones",
+          "Conectarse con otros socialmente",
+          "Convertir el conocimiento en acción",
+          "Practicar el compartir y la generosidad"
+        ],
+        "famousPeople": [
+          "Albert Einstein",
+          "Esteban Hawking",
+          "Bill Gates",
+          "Mark Zuckerberg"
+        ],
+        "career": [
+          "Investigador",
+          "Programador",
+          "Profesor",
+          "Analista",
+          "Ingeniero",
+          "Autor"
+        ]
+      },
+      "type6": {
+        "title": "Tipo 6: El Leal",
+        "subtitle": "Responsable, Comprometido y Vigilante",
+        "description": "Los Leales buscan la seguridad y la certeza. Son altamente responsables, cooperativos y excelentes para predecir y prepararse para riesgos potenciales.",
+        "coreMotivation": "Tener seguridad y apoyo confiable.",
+        "coreFear": "Quedarse sin apoyo ni guía; estar inseguro.",
+        "strengths": [
+          "Leal y dedicado",
+          "Fuerte sentido de la responsabilidad",
+          "Capacidad para predecir problemas",
+          "Jugador de equipo cooperativo",
+          "Confiable"
+        ],
+        "challenges": [
+          "Preocupación y ansiedad excesivas",
+          "Dificultad para tomar decisiones",
+          "Ambivalencia hacia la autoridad",
+          "Imaginar los peores escenarios",
+          "Duda y desconfianza"
+        ],
+        "growthPath": [
+          "Confiar en tu sabiduría interior",
+          "Practicar el coraje",
+          "Mantenerse en el momento presente",
+          "Desarrollar la independencia"
+        ],
+        "famousPeople": [
+          "Tom Hanks",
+          "jay leno",
+          "George H.W. Arbusto",
+          "Ellen DeGeneres"
+        ],
+        "career": [
+          "Gerente de Proyectos",
+          "Especialista en Seguridad",
+          "Abogado",
+          "Soldado",
+          "Oficial de Policía",
+          "Profesor"
+        ]
+      },
+      "type7": {
+        "title": "Tipo 7: El Entusiasta",
+        "subtitle": "樂観的、冒険的、そして多趣味",
+        "description": "Los Entusiastas buscan nuevas experiencias y una vida alegre. Son enérgicos, versátiles y siempre exploran posibilidades positivas.",
+        "coreMotivation": "Ser feliz, estar satisfecho y tener una vida alegre.",
+        "coreFear": "El dolor y la privación.",
+        "strengths": [
+          "Optimista y positivo",
+          "Creativo e innovador",
+          "Altamente adaptable",
+          "Enérgico y vivaz",
+          "Diversos intereses y talentos"
+        ],
+        "challenges": [
+          "Falta de enfoque",
+          "Comportamiento impulsivo",
+          "Evitar el dolor y las emociones negativas",
+          "Actividad excesiva y fatiga",
+          "Evitar responsabilidades"
+        ],
+        "growthPath": [
+          "Practicar el estar en el momento",
+          "Construir relaciones profundas",
+          "Aceptar el dolor como parte del crecimiento",
+          "Desarrollar el hábito de terminar tareas"
+        ],
+        "famousPeople": [
+          "robin williams",
+          "Jim Carrey",
+          "Steven Spielberg",
+          "mozart"
+        ],
+        "career": [
+          "Planificador",
+          "Comercializador",
+          "Escritor de Viajes",
+          "Planificador de Eventos",
+          "Emprendedor",
+          "Comediante"
+        ]
+      },
+      "type8": {
+        "title": "Tipo 8: El Desafiador",
+        "subtitle": "Poderoso, Decidido y Protector",
+        "description": "Los Desafiadores buscan el control y la justicia. Son asertivos y decisivos, esforzándose por proteger a quienes les importan y tomar la iniciativa en el mundo.",
+        "coreMotivation": "Ser fuerte, influyente y proteger el yo.",
+        "coreFear": "Ser controlado o dañado por otros.",
+        "strengths": [
+          "Fuerte liderazgo",
+          "Decisión y orientación a la acción",
+          "Fuerte sentido de la justicia",
+          "Honesto y directo",
+          "Protector y solidario"
+        ],
+        "challenges": [
+          "Excesivamente dominante",
+          "Agresivo y confrontativo",
+          "Dificultad para mostrar vulnerabilidad",
+          "Necesidad excesiva de control",
+          "Dificultad para controlar la ira"
+        ],
+        "growthPath": [
+          "Reconocer el poder de la gentileza",
+          "Ver la vulnerabilidad como coraje",
+          "Confiar en los demás",
+          "Desarrollar la sensibilidad emocional"
+        ],
+        "famousPeople": [
+          "Martín Luther King Jr.",
+          "Winston Churchil",
+          "Malcolm X",
+          "Serena Williams"
+        ],
+        "career": [
+          "CEO",
+          "Abogado",
+          "Líder Militar",
+          "Emprendedor",
+          "Político",
+          "Atleta"
+        ]
+      },
+      "type9": {
+        "title": "Tipo 9: El Pacificador",
+        "subtitle": "Tranquilo, Conciliador y Armonioso",
+        "description": "Los Pacificadores son personas calmadas y aceptantes. Buscan la armonía y la paz, tratando de mantener la estabilidad interior evitando el conflicto.",
+        "coreMotivation": "Tener paz y armonía en la vida.",
+        "coreFear": "El conflicto y la separación.",
+        "strengths": [
+          "Pacífico y estable",
+          "Altamente empático",
+          "Habilidades de mediación",
+          "Paciente",
+          "Aceptador e inclusivo"
+        ],
+        "challenges": [
+          "Indecisión",
+          "Falta de autoafirmación",
+          "Pereza y procrastinación",
+          "Evitación del conflicto",
+          "Ignorar sus propias necesidades"
+        ],
+        "growthPath": [
+          "Expresar tus propias opiniones",
+          "Establecer prioridades",
+          "Pasar a la acción",
+          "Ver el conflicto como una oportunidad de crecimiento"
+        ],
+        "famousPeople": [
+          "abraham lincoln",
+          "Reina Isabel II",
+          "walt disney",
+          "Carl Jung"
+        ],
+        "career": [
+          "Consejero",
+          "Mediador",
+          "Diplomático",
+          "Veterinario",
+          "Trabajador Social",
+          "Editora"
+        ]
+      }
+    }
+  },
+  "badge": "[FALTA: insignia]",
+  "coreStrengths": "Fortalezas Clave",
+  "integrationDisintegration": "Integración y Desintegración",
+  "growthToward": "Hacia el crecimiento →",
+  "stressToward": "Hacia el estrés →"
+}

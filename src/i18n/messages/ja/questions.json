@@ -1,0 +1,820 @@
+{
+  "0": {
+    "id": 1,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "迅速かつ果断に行動する",
+        "emoji": "⚡",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "みんなの気持ちを第一に考えて",
+        "emoji": "💭",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "すべての論理オプションを分析する",
+        "emoji": "🧠",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "直感に従ってください",
+        "emoji": "💡",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      }
+    ]
+  },
+  "1": {
+    "id": 2,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "主導権を握り、会話を主導する",
+        "emoji": "🎯",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "私が話すよりも聞いてください",
+        "emoji": "👂",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "グループのエネルギーに適応する",
+        "emoji": "🌊",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "個人的なストーリーを共有してつながる",
+        "emoji": "💫",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "2": {
+    "id": 3,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "直接かつ直ちに対処してください",
+        "emoji": "💥",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "あらゆる視点を理解しようとする",
+        "emoji": "🤝",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "Win-Winのソリューションを探す",
+        "emoji": "🎯",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "議論する前にスペースを与えてください",
+        "emoji": "🕰️",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "3": {
+    "id": 4,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "競技スポーツや挑戦",
+        "emoji": "🏆",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "創作活動とか芸術とか",
+        "emoji": "🎨",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "新しいことを学ぶ",
+        "emoji": "📚",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "大切な人と過ごす充実した時間",
+        "emoji": "👥",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "4": {
+    "id": 5,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "行動と実績で表現する",
+        "emoji": "💪",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "言葉と感情表現を使う",
+        "emoji": "💕",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "実践的なサポートを提供する",
+        "emoji": "🛠️",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "有意義な体験を生み出す",
+        "emoji": "✨",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "5": {
+    "id": 6,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "直接的かつ率直な",
+        "emoji": "📢",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "優しくて思いやりのある",
+        "emoji": "🌱",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "事実と論理的",
+        "emoji": "📊",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "感情表現豊か",
+        "emoji": "💭",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "6": {
+    "id": 7,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "コントロールして突き進む",
+        "emoji": "🚀",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "他の人にサポートを求める",
+        "emoji": "🤗",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "問題を論理的に分解する",
+        "emoji": "🧩",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "時間をかけて感情を処理する",
+        "emoji": "🧘",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "7": {
+    "id": 8,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "独立性と尊重",
+        "emoji": "🦅",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "感情的な親密さとつながり",
+        "emoji": "💞",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "お互いの目標と成長",
+        "emoji": "📈",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "理解と共感",
+        "emoji": "💝",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "questions": [
+    {
+      "dimension": "EI",
+      "id": "ei_1",
+      "options": [
+        {
+          "id": "ei_1_e",
+          "text": "社交的な状況からエネルギーを得る",
+          "value": "E"
+        },
+        {
+          "id": "not_1_i",
+          "text": "一人でいることでエネルギーを得る",
+          "value": "I"
+        }
+      ],
+      "text": "あなたは普段どうやってエネルギーを充電していますか？"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_2",
+      "options": [
+        {
+          "id": "ei_2_e",
+          "text": "まず会話を始めてください",
+          "value": "E"
+        },
+        {
+          "id": "not_2_i",
+          "text": "他の人が話すのを待ちます",
+          "value": "I"
+        }
+      ],
+      "text": "新しい人に会うとき、次のような傾向があります。"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_3",
+      "options": [
+        {
+          "id": "ei_3_e",
+          "text": "友人や知人がたくさんいる",
+          "value": "E"
+        },
+        {
+          "id": "not_3_i",
+          "text": "親しい友人が数人いる",
+          "value": "I"
+        }
+      ],
+      "text": "通常、あなたのソーシャル サークルは次のとおりです。"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_4",
+      "options": [
+        {
+          "id": "ei_4_e",
+          "text": "声に出して考えてみる",
+          "value": "E"
+        },
+        {
+          "id": "not_4_i",
+          "text": "話す前に考えてください",
+          "value": "I"
+        }
+      ],
+      "text": "考えを表現するという点では、次のことを好みます。"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_5",
+      "options": [
+        {
+          "id": "ei_5_e",
+          "text": "懸念事項について他の人に話す",
+          "value": "E"
+        },
+        {
+          "id": "not_5_i",
+          "text": "懸念事項を社内で処理する",
+          "value": "I"
+        }
+      ],
+      "text": "心配なときは:"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_6",
+      "options": [
+        {
+          "id": "ei_6_e",
+          "text": "アプローチしやすく、開けやすい",
+          "value": "E"
+        },
+        {
+          "id": "not_6_i",
+          "text": "最初は予約済みでプライベート",
+          "value": "I"
+        }
+      ],
+      "text": "他人の目には、あなたは次のように映ります。"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_7",
+      "options": [
+        {
+          "id": "ei_7_e",
+          "text": "ペースの速い環境を楽しむ",
+          "value": "E"
+        },
+        {
+          "id": "not_7_i",
+          "text": "ゆっくりとしたペースの環境を楽しむ",
+          "value": "I"
+        }
+      ],
+      "text": "あなたが好む環境のペースは次のとおりです。"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_8",
+      "options": [
+        {
+          "id": "ei_8_e",
+          "text": "グループでアクティブに過ごす",
+          "value": "E"
+        },
+        {
+          "id": "not_8_i",
+          "text": "少人数でも一人でも快適",
+          "value": "I"
+        }
+      ],
+      "text": "あなたが一番元気を感じるのはいつですか?"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_1",
+      "options": [
+        {
+          "id": "sn_1_s",
+          "text": "事実と詳細に焦点を当てる",
+          "value": "S"
+        },
+        {
+          "id": "sn_1_n",
+          "text": "全体像と可能性に焦点を当てる",
+          "value": "N"
+        }
+      ],
+      "text": "何か新しいことを学ぶときは、次のことを行います。"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_2",
+      "options": [
+        {
+          "id": "sn_2_s",
+          "text": "実用的で今でも役に立ちます",
+          "value": "S"
+        },
+        {
+          "id": "sn_2_n",
+          "text": "理論的かつ未来志向",
+          "value": "N"
+        }
+      ],
+      "text": "次のような情報を好みます。"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_3",
+      "options": [
+        {
+          "id": "sn_3_s",
+          "text": "現実的で現実的",
+          "value": "S"
+        },
+        {
+          "id": "sn_3_n",
+          "text": "想像力豊かで創造的",
+          "value": "N"
+        }
+      ],
+      "text": "あなたは次のような傾向があります。"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_4",
+      "options": [
+        {
+          "id": "sn_4_s",
+          "text": "過去の経験",
+          "value": "S"
+        },
+        {
+          "id": "sn_4_n",
+          "text": "直感とインスピレーション",
+          "value": "N"
+        }
+      ],
+      "text": "問題を解決するときは、次のものに依存します。"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_5",
+      "options": [
+        {
+          "id": "sn_5_s",
+          "text": "現実的で確実なものとは",
+          "value": "S"
+        },
+        {
+          "id": "sn_5_n",
+          "text": "何が可能であり、可能性があるのか",
+          "value": "N"
+        }
+      ],
+      "text": "あなたは次のことにもっと興味があります:"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_6",
+      "options": [
+        {
+          "id": "sn_6_s",
+          "text": "確立されたルーチンに固執する",
+          "value": "S"
+        },
+        {
+          "id": "sn_6_n",
+          "text": "新しいやり方を探す",
+          "value": "N"
+        }
+      ],
+      "text": "日常生活では、次のことが行われます。"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_7",
+      "options": [
+        {
+          "id": "sn_7_s",
+          "text": "具体的なデータと事実",
+          "value": "S"
+        },
+        {
+          "id": "sn_7_n",
+          "text": "抽象的なアイデアと理論",
+          "value": "N"
+        }
+      ],
+      "text": "あなたは以下と協力することを好みます:"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_8",
+      "options": [
+        {
+          "id": "sn_8_s",
+          "text": "常識",
+          "value": "S"
+        },
+        {
+          "id": "sn_8_n",
+          "text": "革新",
+          "value": "N"
+        }
+      ],
+      "text": "あなたが大切にしているもの:"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_1",
+      "options": [
+        {
+          "id": "tf_1_t",
+          "text": "論理的に分析して決定する",
+          "value": "T"
+        },
+        {
+          "id": "tf_1_f",
+          "text": "他者への影響を考慮して決定する",
+          "value": "F"
+        }
+      ],
+      "text": "あなたは普段どのように意思決定を行っていますか?"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_2",
+      "options": [
+        {
+          "id": "tf_2_t",
+          "text": "合理性と真実を優先する",
+          "value": "T"
+        },
+        {
+          "id": "tf_2_f",
+          "text": "人間関係と調和を優先する",
+          "value": "F"
+        }
+      ],
+      "text": "ディベートやディスカッションでは、次のことを行います。"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_3",
+      "options": [
+        {
+          "id": "tf_3_t",
+          "text": "客観的かつ冷静さを保つ",
+          "value": "T"
+        },
+        {
+          "id": "tf_3_f",
+          "text": "他人に共感しやすい",
+          "value": "F"
+        }
+      ],
+      "text": "他の人のジレンマを見たとき:"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_4",
+      "options": [
+        {
+          "id": "tf_4_t",
+          "text": "実践的なアドバイスを提供する",
+          "value": "T"
+        },
+        {
+          "id": "tf_4_f",
+          "text": "精神的なサポートを提供する",
+          "value": "F"
+        }
+      ],
+      "text": "友人が困っているとき、あなたは次のような傾向があります。"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_5",
+      "options": [
+        {
+          "id": "tf_5_t",
+          "text": "批判は必要なツールです",
+          "value": "T"
+        },
+        {
+          "id": "tf_5_f",
+          "text": "批評は感情を考慮すべきだ",
+          "value": "F"
+        }
+      ],
+      "text": "批判をどう見ていますか？"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_6",
+      "options": [
+        {
+          "id": "tf_6_t",
+          "text": "非個人的でルール志向",
+          "value": "T"
+        },
+        {
+          "id": "tf_6_f",
+          "text": "個人的で包括的",
+          "value": "F"
+        }
+      ],
+      "text": "あなたのワークスタイルはさらに次のとおりです。"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_7",
+      "options": [
+        {
+          "id": "tf_7_t",
+          "text": "事実をしっかりと踏まえる",
+          "value": "T"
+        },
+        {
+          "id": "tf_7_f",
+          "text": "合意を得るための妥協",
+          "value": "F"
+        }
+      ],
+      "text": "自分の意見がグループと異なる場合:"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_1",
+      "options": [
+        {
+          "id": "pj_1_j",
+          "text": "詳細な計画を立てる",
+          "value": "J"
+        },
+        {
+          "id": "pj_1_p",
+          "text": "流れに身を任せて",
+          "value": "P"
+        }
+      ],
+      "text": "休暇に行く前に、次のことを行います。"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_2",
+      "options": [
+        {
+          "id": "pj_2_j",
+          "text": "事前にタスクを完了する",
+          "value": "J"
+        },
+        {
+          "id": "pj_2_p",
+          "text": "締め切りのプレッシャーに頼る",
+          "value": "P"
+        }
+      ],
+      "text": "締め切りはどのように処理しますか?"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_3",
+      "options": [
+        {
+          "id": "pj_3_j",
+          "text": "整理され構造化された",
+          "value": "J"
+        },
+        {
+          "id": "pj_3_p",
+          "text": "柔軟かつカジュアル",
+          "value": "P"
+        }
+      ],
+      "text": "あなたのデスクや部屋は通常次のとおりです。"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_4",
+      "options": [
+        {
+          "id": "pj_4_j",
+          "text": "落ち着いていて安心感がある",
+          "value": "J"
+        },
+        {
+          "id": "pj_4_p",
+          "text": "閉じ込められていると感じる",
+          "value": "P"
+        }
+      ],
+      "text": "計画が完成したら、通常は次のことを行います。"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_5",
+      "options": [
+        {
+          "id": "pj_5_j",
+          "text": "最初に仕事をして、後で遊ぶ",
+          "value": "J"
+        },
+        {
+          "id": "pj_5_p",
+          "text": "仕事中に楽しみを見つける",
+          "value": "P"
+        }
+      ],
+      "text": "仕事と楽しみの順番は次のとおりです。"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_6",
+      "options": [
+        {
+          "id": "pj_6_j",
+          "text": "確実性と明確さ",
+          "value": "J"
+        },
+        {
+          "id": "pj_6_p",
+          "text": "開放性と多様性",
+          "value": "P"
+        }
+      ],
+      "text": "あなたは次のような生活を好みます:"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_7",
+      "options": [
+        {
+          "id": "pj_7_j",
+          "text": "計画を堅持し、驚きを減らす",
+          "value": "J"
+        },
+        {
+          "id": "pj_7_p",
+          "text": "変化に適応して受け入れる",
+          "value": "P"
+        }
+      ],
+      "text": "予期せぬ状況に直面したとき:"
+    }
+  ],
+  "signal": "信号",
+  "bond": "問い合わせ"
+}

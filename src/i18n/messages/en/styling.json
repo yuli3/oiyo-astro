@@ -1,0 +1,56 @@
+{
+  "scanner": {
+    "title": "AI Face Scanner",
+    "description": "Upload a photo or use camera to analyze your face shape & personal color.",
+    "action": {
+      "upload": "Upload",
+      "camera": "Camera",
+      "analyze": "Analyze Style"
+    },
+    "status": {
+      "analyzing": "Analyzing Face Struct...",
+      "detecting": "Detecting face shape & skin tone"
+    },
+    "error": {
+      "tooLarge": "Image too large (max 5MB)",
+      "cameraAccess": "Unable to access camera",
+      "failed": "Analysis failed. Please try a clearer photo."
+    }
+  },
+  "dashboard": {
+    "title": "AI Life Stylist",
+    "description": "Upload your photo. AI analyzes your face shape and personal color to recommend the perfect style.",
+    "upload": "Click to Upload Photo",
+    "retry": "Try Another Photo",
+    "labels": {
+      "faceShape": "Face Shape",
+      "personalColor": "Color analysis"
+    },
+    "status": {
+      "analyzing": "Analyzing..."
+    }
+  },
+  "recommendation": {
+    "complete": "Analysis Complete",
+    "analyzeAnother": "Analyze Another Photo",
+    "sections": {
+      "hair": "Best Hairstyles",
+      "eyewear": "Eyewear Match",
+      "palette": "Your Power Palette"
+    },
+    "shapes": {
+      "oval": "Oval",
+      "round": "Round",
+      "square": "Square",
+      "heart": "Heart",
+      "diamond": "Diamond",
+      "long": "Long"
+    },
+    "colors": {
+      "spring_warm": "Spring Warm",
+      "summer_cool": "Summer Cool",
+      "autumn_warm": "Autumn Warm",
+      "winter_cool": "Winter Cool"
+    }
+  }
+}

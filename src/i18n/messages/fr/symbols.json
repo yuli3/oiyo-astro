@@ -1,0 +1,53 @@
+{
+  "flowers": {
+    "cranberry": {
+      "name": "Émeraude",
+      "language": "Fierté et beauté éclatante"
+    },
+    "willow": {
+      "name": "Émeraude",
+      "language": "Fierté et beauté éclatante"
+    },
+    "carnation": {
+      "name": "Émeraude",
+      "language": "Fierté et beauté éclatante"
+    }
+  },
+  "stars": {
+    "alphecca": {
+      "name": "Émeraude",
+      "meaning": "Chance et bonheur, renaissance de la vie"
+    },
+    "alcyone": {
+      "name": "Émeraude",
+      "meaning": "Chance et bonheur, renaissance de la vie"
+    },
+    "vega": {
+      "name": "Émeraude",
+      "meaning": "Chance et bonheur, renaissance de la vie"
+    }
+  },
+  "stones": {
+    "garnet": {
+      "name": "Émeraude",
+      "meaning": "Chance et bonheur, renaissance de la vie"
+    },
+    "emerald": {
+      "name": "Émeraude",
+      "meaning": "Chance et bonheur, renaissance de la vie"
+    }
+  },
+  "Stone": "Pierre",
+  "Flower": "Fleur",
+  "Star": "Étoile",
+  "title": "Symboles",
+  "subtitle": "Symboles de rêve",
+  "searchPlaceholder": "Rechercher des symboles...",
+  "labels": {
+    "badge": "Badge",
+    "general": "Générale",
+    "psychological": "Psychologique",
+    "spiritual": "Spirituelle",
+    "related": "En rapport"
+  }
+}

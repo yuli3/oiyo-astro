@@ -1,0 +1,22 @@
+{
+  "title": "My Goals",
+  "new_goal": "New Goal",
+  "placeholder_title": "What is your goal?",
+  "progress": "Progress",
+  "no_goals": "No goals set yet. Start your journey today.",
+  "meta": {
+    "title": "Goals",
+    "description": "Manage your life goals.",
+    "keywords": "goals, test, analysis, personality"
+  },
+  "add_to_goals": "Add to goals",
+  "add_goal_desc": "Set a deadline and add it to your tracker.",
+  "goal_title": "Goals",
+  "goal_deadline": "Goal Deadline",
+  "setGoal": "Set Goal",
+  "myGoals": "My Goals",
+  "completed": "Completed",
+  "inProgress": "In Progress",
+  "save": "Save",
+  "cancel": "Cancel"
+}

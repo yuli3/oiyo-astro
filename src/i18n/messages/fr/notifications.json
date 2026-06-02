@@ -1,0 +1,54 @@
+{
+  "empty": "Aucune notification.",
+  "dailyInsight": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "view": "Voir",
+      "later": "Plus tard"
+    }
+  },
+  "aiHoroscope": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "bodyNoPersonality": "Votre horoscope personnalisé est prêt !",
+    "actions": {
+      "view": "View",
+      "later": "Plus tard"
+    }
+  },
+  "testReminder": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "continue": "Continuer",
+      "dismiss": "Rejeter"
+    }
+  },
+  "streak": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "celebrate": "Célébrer",
+      "share": "Partager"
+    }
+  },
+  "social": {
+    "twinMatch": {
+      "title": "📤 Test Shared",
+      "body": "A friend checked your test."
+    },
+    "newFriend": {
+      "title": "📤 Test Shared",
+      "body": "A friend checked your test."
+    },
+    "testShared": {
+      "title": "📤 Test partagé",
+      "body": "Un ami a vérifié votre test."
+    }
+  },
+  "actions": {
+    "view": "Voir",
+    "later": "Plus tard"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "success": {
+    "confirming": "Confirming payment...",
+    "pleaseWait": "Please wait a moment.",
+    "confirmFailed": "Failed to confirm payment",
+    "title": "Payment Successful!",
+    "activated": "Your premium features have been activated. You now have access to all premium features.",
+    "nextSteps": "Next Steps:",
+    "step1": "View advanced analytics on dashboard",
+    "step2": "Get AI-powered insights",
+    "step3": "Download PDF reports",
+    "goToDashboard": "Go to Dashboard",
+    "backToHome": "Back to Home",
+    "tryAgain": "Try Again"
+  },
+  "fail": {
+    "title": "Payment Failed",
+    "errors": {
+      "USER_CANCEL": "Payment was cancelled by user.",
+      "INVALID_CARD": "Invalid card information.",
+      "INSUFFICIENT_FUNDS": "Insufficient funds.",
+      "PAYMENT_TIMEOUT": "Payment timed out.",
+      "default": "An error occurred while processing your payment."
+    },
+    "howToResolve": "How to resolve:",
+    "solutions": {
+      "verifyCard": "Verify your card information",
+      "checkFunds": "Check if you have sufficient funds",
+      "tryDifferent": "Try a different payment method",
+      "contactSupport": "Contact support if the issue persists"
+    },
+    "tryAgain": "Try Again",
+    "goToDashboard": "Go to Dashboard",
+    "backToHome": "Back to Home"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "career": {
+    "global_leader": {
+      "title": "Líder de equipo global",
+      "description": "**Eres un comandante nato.**\n\nTu sola presencia impone respeto. Tienes la rara habilidad de ver el potencial en los demás y alinearlos hacia una visión única. Te desenvuelves con éxito en entornos de alta presión donde la capacidad de decisión es la moneda de cambio.",
+      "reasoning": "Tu estrella **« {primary} »** indica un fuerte magnetismo social, respaldado por tus rasgos extrovertidos."
+    },
+    "strategic_planner": {
+      "title": "Planificador estratégico",
+      "description": "**Eres el arquitecto del futuro.**\n\nMientras otros apagan incendios, tú los previenes. Sobresales al ver el panorama general y navegar por sistemas complejos. No solo resuelves problemas; diseñas soluciones que hacen que el problema quede obsoleto.",
+      "reasoning": "Tu **Intuición (N)** dominante te permite ver claramente las tendencias futuras, apoyada por tu naturaleza analítica."
+    }
+  },
+  "hobby": {
+    "meditation": {
+      "title": "Meditación mindfulness",
+      "description": "**Encuentra el poder en la quietud.**\n\nTu motor interno funciona a altas revoluciones. Para prevenir el agotamiento y mantener tu ventaja, necesitas cultivar una práctica de **«enfriamiento»**. La meditación no es solo relajación para ti; es un reinicio estratégico de tu sistema operativo.",
+      "reasoning": "Tienes un exceso de energía de **Fuego**. Las actividades basadas en el agua, como la meditación, te ayudan a refrescarte y concentrarte."
+    },
+    "hiking": {
+      "title": "Senderismo alpino",
+      "description": "**Toca la tierra para alcanzar el cielo.**\n\nTus pensamientos están a menudo en las nubes. Para aterrizar tus ideas elevadas y convertirlas en realidad, necesitas una conexión física con la tierra. El senderismo proporciona la resistencia y el ritmo que tu cuerpo anhela.",
+      "reasoning": "Tu carta carece de energía de **Tierra**. Conectar con las montañas estabiliza tu volátil potencial creativo."
+    }
+  },
+  "psychology": {
+    "shadow_work": {
+      "title": "Trabajo de sombra junguiano",
+      "description": "**Enfréntate a la mitad oscura de tu alma.**\n\nTu \"Sombra\" consiste en las partes de ti mismo que has rechazado: agresión, ambición o quizás vulnerabilidad. Al reprimirlas, te controlan desde el inconsciente. La **integración** es la meta. Reconoce tu capacidad para la oscuridad para poder elegir verdaderamente la luz.\n\n*   *Propuesta de diario:* ¿Qué cualidad de los demás te irrita más? Esa es tu sombra hablando.",
+      "reasoning": "Tu alta **Intuición Introvertida (Ni)** sugiere un mundo interior profundo listo para la exploración."
+    },
+    "inner_child": {
+      "title": "Sanación del niño interior",
+      "description": "**Reconecta con tu ser original.**\n\nAntes de que el mundo te dijera quién tenías que ser, tú *eras*. Tu niño interior tiene la llave de tu creatividad y de tus heridas emocionales más profundas. No se trata de ser infantil; se trata de recuperar la **vitalidad** que dejaste atrás en el pasado.",
+      "reasoning": "Tu puntuación de **Evitación de Daño** indica heridas no sanadas que requieren una atención amable."
+    },
+    "title": "Psicología"
+  },
+  "mythology": {
+    "hero_journey": {
+      "title": "La llamada a la aventura",
+      "description": "**Estás en el umbral.**\n\nEn el Monomito, el Héroe debe dejar el mundo conocido para aventurarse en la maravilla sobrenatural. Actualmente sientes una \"atracción\" hacia algo desconocido. **No rechaces la llamada.** Los desafíos venideros no son castigos; son los ritos de iniciación de tu nuevo yo.",
+      "reasoning": "Tu estrella **« 7 Killing »** (Siete Muertes) está activa, señalando un período de intenso desafío y transformación."
+    },
+    "trickster_archetype": {
+      "title": "Abraza al trickster",
+      "description": "**El caos es tu maestro.**\n\nEl Trickster (Loki, Hermes, Coyote) rompe las reglas para revelar la verdad. Actualmente te encuentras en un orden estancado. Necesitas **trastocar** tu propia vida. Haz lo inesperado. Ríete de lo serio. La innovación solo vive en el borde del caos.",
+      "reasoning": "Tu naturaleza **ENTP** prospera con la interrupción. Úsala de manera constructiva."
+    },
+    "title": "Mitología"
+  },
+  "science": {
+    "dopamine_fast": {
+      "title": "Protocolo de ayuno de dopamina",
+      "description": "**Reclama el sistema de recompensa de tu cerebro.**\n\nEn una era de hiperestimulación, tu línea base de satisfacción se ha desplomado. Te sientes aburrido porque estás sobrealimentado. La solución es la **resta**. Al eliminar los placeres fáciles (pantallas, azúcar) durante 24 horas, reinicias tu neuroquímica, haciendo que lo mundano vuelva a sentirse milagroso.",
+      "reasoning": "Tu rasgo de alta **Búsqueda de Novedad** te pone en riesgo de ciclos rápidos de agotamiento/aburrimiento."
+    },
+    "title": "Ciencia"
+  },
+  "spirituality": {
+    "taoist_flow": {
+      "title": "El camino del Wu Wei",
+      "description": "**Acción a través de la no acción.**\n\nTe estás esforzando demasiado. Estás empujando el río. El principio taoísta del *Wu Wei* enseña que la acción perfecta se siente sin esfuerzo. Deja de forzar los resultados. **Alíneate con la corriente.** Cuando dejes de luchar contra el flujo de tu vida, verás que te mueves más rápido que nunca.",
+      "reasoning": "Un exceso de energía de **Agua** sugiere que eres poderoso pero actualmente turbulento. Conéntrate en el flujo."
+    },
+    "title": "Espiritualidad"
+  },
+  "titles": {
+    "psychology": "Psicología",
+    "mythology": "Mitología",
+    "science": "Ciencia",
+    "spirituality": "Espiritualidad",
+    "careers": "Carreras",
+    "hobbies": "Pasatiempos"
+  },
+  "common": {
+    "title": "Recomendaciones personalizadas",
+    "match": "Coincidir",
+    "loading": "Cargando recomendaciones..."
+  },
+  "mbti": "MBTI",
+  "saju": "Saju",
+  "careers": {
+    "title": "Carreras"
+  },
+  "hobbies": {
+    "title": "Pasatiempos"
+  },
+  "highPriority": "Alta Prioridad",
+  "actions": {
+    "startNow": "Comenzar Ahora",
+    "completed": "Completado"
+  },
+  "title": "Recomendaciones",
+  "subtitle": "Descubre qué hacer a continuación según tu perfil.",
+  "filters": {
+    "hideDismissed": "Ocultar Descartados",
+    "showDismissed": "Mostrar Descartados",
+    "tests": "Tests",
+    "counseling": "Asesoramiento",
+    "all": "Todo",
+    "content": "Contenido",
+    "insights": "Perspectivas"
+  },
+  "stats": {
+    "pending": "Recomendaciones Pendientes",
+    "completed": "Completadas"
+  },
+  "emptyState": {
+    "title": "Aún No Hay Recomendaciones",
+    "description": "Completa más evaluaciones para recibir caminos personalizados.",
+    "cta": "Explorar Evaluaciones"
+  },
+  "header": {
+    "badge": "Recomendado para Ti",
+    "title": "¿Qué Explorar a Continuación?",
+    "subtitle": "Descubre más sobre tu personalidad"
+  },
+  "reason": {
+    "related": "🔗 Relacionado",
+    "category": "📂 Misma Categoría",
+    "popular": "⭐ Populares",
+    "completion": "🎯 Completa el Conjunto"
+  },
+  "ui": {
+    "minutes": "mín.",
+    "startTest": "Comenzar Test",
+    "browseAll": "Ver Todos los Tests"
+  }
+}

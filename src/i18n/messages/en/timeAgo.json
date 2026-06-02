@@ -1,0 +1,6 @@
+{
+  "now": "Just now",
+  "minute": "{count}m ago",
+  "hour": "{count}h ago",
+  "day": "{count}d ago"
+}

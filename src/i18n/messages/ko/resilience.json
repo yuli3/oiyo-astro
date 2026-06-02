@@ -1,0 +1,11 @@
+{
+  "badge": "탄력성 평가",
+  "intro": "적응하고 회복할 수 있는 능력을 찾아보세요.",
+  "result": {
+    "level": "탄력성 수준",
+    "score": "현재 점수",
+    "profile_title": "탄력성 프로필",
+    "guidance_title": "성장을 위한 지침"
+  },
+  "title": "탄력성 점수"
+}

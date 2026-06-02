@@ -1,0 +1,26 @@
+{
+  "defaults": {
+    "luckyElement": "一杯热茶",
+    "color": "柔和的橙色"
+  },
+  "fallback": {
+    "title": "珍贵的一天，温暖缘分的开始",
+    "prediction": "今天是你的真心传达给周围人的日子。在与家人或朋友的闲聊中，你会得到意想不到的安慰和力量。在忙碌的日常生活中，也请找点空闲时间回顾一下自己。",
+    "advice": "今天试着先问候周围的人。小小的关心会变成巨大的幸福回报给你。",
+    "luckyElement": "一杯热茶",
+    "mood": "温馨",
+    "color": "柔和的橙色"
+  },
+  "weatherTips": {
+    "sunny": "试着花点时间感受温暖的阳光。通过轻微的伸展运动或通风来补充能量。",
+    "cloudy": "像平静的云一样的一天。喝杯热饮，冷静地集中注意力。",
+    "rainy": "跟随下雨的节奏，享受舒适的日常和温暖的对话。",
+    "snowy": "下雪的气氛适合温馨。穿暖和些，以悠闲的节奏度过这一天。",
+    "stormy": "刮大风的日子，准备就是稳定感。保持警惕，在日程中留出余地。"
+  },
+  "shareOptional": {
+    "number": "🔢 幸运数字: {number}",
+    "weatherTip": "☁️ 天气贴士: {weatherTip}"
+  },
+  "shareTemplate": "{emoji} 今日性格运势 {emoji}\\n\\n{title}\\n\\n{prediction}\\n\\n💡 建议: {advice}\\n\\n🍀 幸运元素: {luckyElement}\\n🎨 幸运色: {color}"
+}

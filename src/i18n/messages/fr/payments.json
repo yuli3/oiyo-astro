@@ -1,0 +1,36 @@
+{
+  "success": {
+    "confirming": "Confirmation du paiement...",
+    "pleaseWait": "Veuillez patienter un instant.",
+    "confirmFailed": "Échec de la confirmation du paiement",
+    "title": "Payment Failed",
+    "activated": "Vos fonctionnalités premium ont été activées. Vous avez désormais accès à toutes les fonctionnalités premium.",
+    "nextSteps": "Prochaines étapes :",
+    "step1": "Afficher les analyses avancées sur le tableau de bord",
+    "step2": "Obtenez des informations basées sur l'IA",
+    "step3": "Télécharger les rapports PDF",
+    "goToDashboard": "Aller au tableau de bord",
+    "backToHome": "Retour à la maison",
+    "tryAgain": "Essayer à nouveau"
+  },
+  "fail": {
+    "title": "Échec du paiement",
+    "errors": {
+      "USER_CANCEL": "Le paiement a été annulé par l'utilisateur.",
+      "INVALID_CARD": "Informations de carte invalides.",
+      "INSUFFICIENT_FUNDS": "Fonds insuffisants.",
+      "PAYMENT_TIMEOUT": "Le paiement a expiré.",
+      "default": "Une erreur s'est produite lors du traitement de votre paiement."
+    },
+    "howToResolve": "Comment résoudre :",
+    "solutions": {
+      "verifyCard": "Vérifiez les informations de votre carte",
+      "checkFunds": "Vérifiez si vous disposez de fonds suffisants",
+      "tryDifferent": "Essayez un autre mode de paiement",
+      "contactSupport": "Contactez le support si le problème persiste"
+    },
+    "tryAgain": "Essayer à nouveau",
+    "goToDashboard": "Aller au tableau de bord",
+    "backToHome": "Retour à la maison"
+  }
+}

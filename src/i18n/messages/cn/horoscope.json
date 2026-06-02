@@ -1,0 +1,102 @@
+{
+  "title": "宇宙预报",
+  "subtitle": "2026年1月",
+  "description": "选择您的星座以显示本月的天体指引。星辰已对齐，为您照亮道路。",
+  "zodiac": {
+    "aries": {
+      "name": "白羊座",
+      "element": "火元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "taurus": {
+      "name": "金牛座",
+      "element": "土元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "gemini": {
+      "name": "双子座",
+      "element": "风元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "cancer": {
+      "name": "巨蟹座",
+      "element": "水元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "leo": {
+      "name": "狮子座",
+      "element": "火元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "virgo": {
+      "name": "处女座",
+      "element": "土元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "libra": {
+      "name": "天秤座",
+      "element": "风元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "scorpio": {
+      "name": "天蝎座",
+      "element": "水元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "sagittarius": {
+      "name": "射手座",
+      "element": "火元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "capricorn": {
+      "name": "摩羯座",
+      "element": "土元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "aquarius": {
+      "name": "水瓶座",
+      "element": "风元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    },
+    "pisces": {
+      "name": "双鱼座",
+      "element": "水元素",
+      "luckyDay": "幸运日",
+      "luckyColor": "幸运颜色"
+    }
+  },
+  "meta": {
+    "title": "您的星座运势",
+    "description": "今日占星洞察和您星座的指导",
+    "keywords": "星座运势, 占星术, 星座, 每日预测, 十二星座"
+  },
+  "hero": {
+    "title": "您的星座运势",
+    "subtitle": "发现今天星星为您准备的信息",
+    "cta": "查看我的运势"
+  },
+  "test": {
+    "insightBullets": ["每日占星指导", "个性化的十二生肖见解", "宇宙能量预测"],
+    "progress": "进度",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "loading": "加载中",
+    "selectOption": "请选择"
+  },
+  "result": {
+    "title": "您的星座运势",
+    "description": "今日占星洞察和您星座的指导"
+  }
+}

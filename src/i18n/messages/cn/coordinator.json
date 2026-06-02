@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "phase2": "第二阶段：基础",
+    "title": "生活协调员",
+    "subtitle": "将您的宇宙数据（Saju、Zodiac）与心理特征（MBTI）综合起来，以发现您的最佳人生道路。",
+    "dataInput": "数据输入",
+    "birthDate": "出生日期（对于 Saju）",
+    "mbtiType": "MBTI类型",
+    "calculatedSign": "计算符号：",
+    "analyzeSynergy": "分析协同效应",
+    "coreEssence": "核心精华",
+    "careerRecs": "职业推荐",
+    "hobbySynergy": "爱好协同",
+    "awaitingData": "等待数据...",
+    "enterDetails": "输入详细信息进行分析",
+    "select": "选择..."
+  },
+  "result": {
+    "match": "匹配",
+    "avgSalary": "平均工资",
+    "outlook": "前景"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Contenu",
+  "subtitle": "Apprenez à enregistrer et analyser efficacement vos rêves",
+  "gettingStarted": "Commencer",
+  "steps": [
+    "Gardez votre journal près de votre lit",
+    "Écrivez dès le réveil",
+    "Inclure les émotions et les couleurs"
+  ],
+  "whatToRecord": {
+    "title": "Contenu",
+    "basic": {
+      "title": "Contenu",
+      "items": ["Date et heure", "Emplacement", "Personnes impliquées"]
+    },
+    "content": {
+      "title": "Contenu",
+      "items": [
+        "Intrigue et événements",
+        "Émotions ressenties",
+        "Couleurs et symboles"
+      ]
+    }
+  },
+  "interpretationTips": "Conseils d'interprétation",
+  "interpretationTipsItems": [
+    "Rechercher des associations personnelles",
+    "Considérez votre contexte de vie actuel",
+    "Faites attention aux thèmes récurrents"
+  ],
+  "improveRecall": "Améliorer le rappel des rêves",
+  "improveRecallItems": [
+    "Fixez-vous une intention avant de dormir",
+    "Réveillez-vous lentement",
+    "Enregistrez des fragments immédiatement"
+  ]
+}

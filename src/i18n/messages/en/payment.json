@@ -1,0 +1,438 @@
+{
+  "feature": "Feature",
+  "plan": "Plan",
+  "billing": {
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "saveUp": "Save up to",
+    "year": "/year",
+    "month": "/month",
+    "save": "Save"
+  },
+  "plans": {
+    "popular": "Most Popular",
+    "free": "Basic",
+    "current": "Current Plan",
+    "continueUsing": "Continue Using",
+    "getStarted": "Get Started",
+    "subscribe": "Subscribe Now",
+    "cancelAnytime": "Cancel Anytime"
+  },
+  "info": {
+    "allPlansInclude": "All plans include",
+    "securePayment": "Secure Payment",
+    "instantAccess": "Instant Access",
+    "customerSupport": "Priority Support"
+  },
+  "checkout": {
+    "orderName": "Subscribe to Oiyo.net {planName}"
+  },
+  "errors": {
+    "PLAN_NOT_FOUND": "Subscription plan not found.",
+    "PAYMENT_SERVICE_ERROR": "An error occurred with the payment service. Please try again later.",
+    "PROVIDER_REQUIRED": "Payment service settings are missing.",
+    "LOCALE_REQUIRED": "Language settings are required for payment processing.",
+    "CURRENCY_REQUIRED": "Currency settings are required for payment processing.",
+    "TOSS_CLIENT_KEY_REQUIRED": "Toss payment key has not been set.",
+    "LEMONSQUEEZY_CONFIG_REQUIRED": "LemonSqueezy settings are missing.",
+    "generic": "Payment failed. Please try again."
+  },
+  "failed": {
+    "help": {
+      "technical": {
+        "refresh": "Refresh page",
+        "browser": "Try with a different browser",
+        "network": "Check your internet connection status",
+        "incognito": "Try in incognito/private mode",
+        "title": "technical solution"
+      },
+      "payment": {
+        "title": "Payment related confirmation",
+        "checkCard": "Check card information",
+        "checkFunds": "Check balance/limit",
+        "tryAnother": "Try a different payment method",
+        "contactBank": "Card company/bank inquiry"
+      }
+    },
+    "meta": {
+      "title": "Payment failed",
+      "description": "Payment processing failed."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Your unique perspective shapes your reality."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+      "progress": "progress",
+      "submit": "Submit",
+      "loading": "Creating a mirror that reflects your true self...",
+      "selectOption": "Select option",
+      "subtitle": "Detailed analysis information"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        }
+      ]
+    },
+    "result": {
+      "title": "analysis results",
+      "description": "Customized analysis results and recommendations just for you."
+    },
+    "subtitle": "Your payment cannot be processed",
+    "genericTitle": "payment error",
+    "genericDescription": "An error occurred while processing your payment. Please try again.",
+    "genericAction": "try again",
+    "unknownTitle": "unknown error",
+    "unknownDescription": "An unexpected error occurred. Please contact our customer support team.",
+    "unknownAction": "Contact customer support",
+    "orderId": "order number",
+    "orderIdNote": "Please include this order number with your inquiry to expedite processing.",
+    "technicalDetails": "Technical details",
+    "errorCode": "error code",
+    "errorMessage": "error message",
+    "whatNext": "What should I do?",
+    "contactSupport": "Contact customer support",
+    "backToHome": "return to home",
+    "needHelp": "Need help?",
+    "stillNeedHelp": "Still having issues?",
+    "getSupport": "Get support",
+    "title": "Your Asset Profile",
+    "description": "Explore tools designed for in-depth financial analysis."
+  },
+  "success": {
+    "meta": {
+      "title": "Payment successful",
+      "description": "Your premium membership registration has been completed."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Inner harmony guides your everyday actions."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+      "progress": "progress",
+      "submit": "Submit",
+      "loading": "Distilling the wave of existence that defines your unique identity...",
+      "selectOption": "Select option",
+      "subtitle": "Detailed analysis information"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Small choices accumulate into a grand destiny."
+        }
+      ]
+    },
+    "result": {
+      "title": "analysis results",
+      "description": "Customized analysis results and recommendations just for you."
+    },
+    "welcome', { name: user": {
+      "firstName || user": {
+        "fullName || t('success": {}
+      }
+    },
+    "subtitle": "Congratulations on becoming a premium member",
+    "verifying": "Confirming payment...",
+    "verifyingDescription": "Please wait while we verify your payment information.",
+    "premiumActive": "Premium activated",
+    "welcome": "Welcome, {name}!",
+    "user": "user",
+    "paymentDetails": "Payment Details",
+    "orderId": "order number",
+    "amount": "payment amount",
+    "status": "situation",
+    "confirmed": "Payment completed",
+    "verificationSuccess": "Your payment has been successfully confirmed. Try out premium features right now.",
+    "verificationFailed": "Payment confirmation failed. Please try again.",
+    "verificationNetworkError": "Unable to connect to payment server. Please try again later.",
+    "verificationRetry": "OK Retry",
+    "verificationPending": "Waiting for approval",
+    "approvedAt": "Approval date and time",
+    "featuresUnlocked": "Premium features available",
+    "nextSteps": "What to do next",
+    "goToDashboard": "Go to dashboard",
+    "takeTest": "Start testing",
+    "supportNote": "Need help? Our premium support team is standing by.",
+    "contactSupport": "Contact customer support",
+    "title": "Your Asset Profile",
+    "description": "Explore tools designed for in-depth financial analysis."
+  },
+  "test": {
+    "insightBullets": ["Mapping the constellation of your truest self."],
+    "progress": "progress",
+    "submit": "Submit",
+    "loading": "Analyzing",
+    "selectOption": "Select"
+  },
+  "result": {
+    "title": "analysis results",
+    "description": "Discover your money habits and wealth management style"
+  },
+  "meta": {
+    "title": "Money orientation and wealth management test",
+    "description": "Discover your money habits and wealth management style",
+    "keywords": "Money propensity, asset management, investment, spending habits, financial health"
+  },
+  "checkCard": "Please check your card information again.",
+  "checkFunds": "Please check if your balance or limit is sufficient.",
+  "tryAnother": "Try a different payment method",
+  "contactBank": "Please contact your credit card company or bank."
+}

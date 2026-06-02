@@ -1,0 +1,10 @@
+{
+  "title": "档案",
+  "subtitle": "历史记录",
+  "labels": {
+    "ancient": "古代文献",
+    "charts": "图表",
+    "texts": "手稿"
+  },
+  "cta": "查看档案"
+}

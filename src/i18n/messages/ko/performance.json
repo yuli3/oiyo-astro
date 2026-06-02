@@ -1,0 +1,105 @@
+{
+  "title": "성능 지표",
+  "subtitle": "성장과 성과 분석",
+  "actions": {
+    "refresh": "새로 고치다",
+    "implement": "구현하기",
+    "later": "나중에"
+  },
+  "metrics": {
+    "impact": "영향",
+    "difficulty": "어려움",
+    "time": "예상 시간",
+    "steps": "단계",
+    "example": "예"
+  },
+  "score": "성과 점수: {score}",
+  "filters": {
+    "title": "필터",
+    "description": "사용자 정의 필터를 사용하여 성능 데이터를 쿼리합니다.",
+    "start": "시작 시간",
+    "end": "종료 시간",
+    "path": "페이지 경로",
+    "placeholder": "예: /ontology/saju",
+    "apply": "적용하기",
+    "reset": "초기화"
+  },
+  "summary": {
+    "title": "실제 사용자 성능 요약",
+    "recent": "최근 {count}",
+    "rating": {
+      "title": "평점 공유",
+      "description": "수집된 지표의 품질 상태",
+      "good": "좋은",
+      "needsImprovement": "평균",
+      "poor": "가난한"
+    },
+    "device": {
+      "title": "연결 및 장치",
+      "description": "사용자 환경 배포",
+      "memory": "평균 장치 메모리",
+      "noData": "데이터 없음",
+      "noConnection": "아직 연결 정보가 없습니다."
+    },
+    "sessions": {
+      "title": "최근 세션",
+      "description": "Supabase의 최신 성능 로그",
+      "unknownPath": "알 수 없는 경로",
+      "connection": "연결",
+      "averageScore": "평균 점수"
+    },
+    "pagination": {
+      "prev": "이전",
+      "next": "다음",
+      "page": "{현재} 페이지",
+      "pageOf": "{현재} / {총계}"
+    }
+  },
+  "cards": {
+    "lcp": "평균 LCP",
+    "fid": "평균 FID",
+    "cls": "평균 CLS",
+    "fcp": "평균 FCP",
+    "inp": "평균 INP",
+    "ttfb": "평균 TTFB"
+  },
+  "realtime": {
+    "title": "실시간 현황",
+    "load": "시스템 부하",
+    "memory": "메모리 압박",
+    "network": "네트워크 품질",
+    "recommendations": "즉각적인 권장 사항:"
+  },
+  "tabs": {
+    "trends": "성과 동향",
+    "bundle": "번들 분석",
+    "recommendations": "최적화 추천"
+  },
+  "charts": {
+    "cmsTrends": {
+      "title": "핵심 웹 바이탈 동향",
+      "description": "시간 경과에 따른 측정항목 변화"
+    },
+    "loadTime": {
+      "title": "페이지 로드 시간",
+      "description": "시간이 지남에 따라 로드 시간이 변경됩니다."
+    },
+    "bundleDistribution": {
+      "title": "번들 크기 분석",
+      "description": "파일 유형별 크기 분포"
+    },
+    "bundleDetails": {
+      "title": "상세한 분석",
+      "description": "번들 크기 및 최적화 상태",
+      "optimization": "최적화 제안:"
+    }
+  },
+  "loading": "성능 데이터를 수집하는 중...",
+  "noIssues": {
+    "title": "모든 성능 기준이 충족되었습니다!",
+    "description": "현재 성능은 훌륭합니다. 정기적인 모니터링을 계속하세요."
+  },
+  "remote": {
+    "title": "원격 성능 데이터"
+  }
+}

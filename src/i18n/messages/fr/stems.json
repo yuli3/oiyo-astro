@@ -1,0 +1,82 @@
+{
+  "GAP": {
+    "characteristics": [
+      "souveraineté",
+      "bienveillance",
+      "volonté inflexible",
+      "croissance verticale"
+    ],
+    "name": "Eau Yin (Gui)",
+    "meaning": "La Rosée du Matin",
+    "description": "La bume ou la pluie fine qui imprègne doucement le monde pour nourrir la vie."
+  },
+  "EUL": {
+    "characteristics": ["résilience", "diplomatie", "survie", "interconnexion"],
+    "name": "Eau Yin (Gui)",
+    "meaning": "La Rosée du Matin",
+    "description": "La bume ou la pluie fine qui imprègne doucement le monde pour nourrir la vie."
+  },
+  "BYEONG": {
+    "characteristics": [
+      "éclat",
+      "passion",
+      "transparence",
+      "influence publique"
+    ],
+    "name": "Eau Yin (Gui)",
+    "meaning": "La Rosée du Matin",
+    "description": "La bume ou la pluie fine qui imprègne doucement le monde pour nourrir la vie."
+  },
+  "JEONG": {
+    "characteristics": ["dévotion", "se concentrer", "chaleur", "éclairage"],
+    "name": "Eau Yin (Gui)",
+    "meaning": "La Rosée du Matin",
+    "description": "La bume ou la pluie fine qui imprègne doucement le monde pour nourrir la vie."
+  },
+  "MU": {
+    "characteristics": ["confiance", "stabilité", "neutralité", "embrassant"],
+    "name": "Eau Yin (Gui)",
+    "meaning": "La Rosée du Matin",
+    "description": "La bume ou la pluie fine qui imprègne doucement le monde pour nourrir la vie."
+  },
+  "GI": {
+    "characteristics": ["nourrir", "cultivation", "maternité", "pragmatisme"],
+    "name": "Eau Yin (Gui)",
+    "meaning": "La Rosée du Matin",
+    "description": "La bume ou la pluie fine qui imprègne doucement le monde pour nourrir la vie."
+  },
+  "GYEONG": {
+    "characteristics": [
+      "révolution",
+      "justice",
+      "caractère décisif",
+      "loyauté"
+    ],
+    "name": "Eau Yin (Gui)",
+    "meaning": "La Rosée du Matin",
+    "description": "La bume ou la pluie fine qui imprègne doucement le monde pour nourrir la vie."
+  },
+  "SIN": {
+    "characteristics": [
+      "perfectionnisme",
+      "précision",
+      "sensibilité",
+      "élégance"
+    ],
+    "name": "Eau Yin (Gui)",
+    "meaning": "La Rosée du Matin",
+    "description": "La bume ou la pluie fine qui imprègne doucement le monde pour nourrir la vie."
+  },
+  "IM": {
+    "characteristics": ["sagesse", "adaptabilité", "dynamisme", "immensité"],
+    "name": "Eau Yin (Gui)",
+    "meaning": "La Rosée du Matin",
+    "description": "La bume ou la pluie fine qui imprègne doucement le monde pour nourrir la vie."
+  },
+  "GYE": {
+    "characteristics": ["intuition", "infiltration", "douceur", "stratégie"],
+    "name": "Eau Yin (Gui)",
+    "meaning": "La Rosée du Matin",
+    "description": "La bume ou la pluie fine qui imprègne doucement le monde pour nourrir la vie."
+  }
+}

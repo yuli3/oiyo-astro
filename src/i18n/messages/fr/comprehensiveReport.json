@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "generatedOn": "Genèse du Rapport",
+    "testsCompleted": "Rituels Accomplis",
+    "dimensionsAnalyzed": "Dimensions Explorées",
+    "consistencyScore": "Harmonie Intérieure",
+    "keyStrengths": "Forces Ancestrales",
+    "title": "Rapport d'Ontologie Intégrale"
+  },
+  "errors": {
+    "unableToGenerate": "Le destin refuse de se dévoiler",
+    "insufficientData": "Échos insuffisants",
+    "needThreeTests": "Il vous faut accomplir 3 rituels pour forger ce rapport sacré.",
+    "pdfFailed": "Échec de l'archivage. Veuillez invoquer à nouveau.",
+    "reportNotFound": "Le parchemin des vérités est introuvable",
+    "takeMoreTests": "S'aventurer plus loin"
+  },
+  "notifications": {
+    "linkCopied": "Le lien est gravé dans l'éther"
+  },
+  "test": {
+    "progress": "Cheminement",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Délivrer",
+    "loading": "Consultation des astres",
+    "selectOption": "Choisissez votre vérité",
+    "insightBullets": [
+      "Consolider tous les résultats de tests en un seul",
+      "Découvrez des modèles de personnalité cohérents",
+      "Guide de croissance personnalisé fourni"
+    ]
+  },
+  "result": {
+    "title": "Rapport d'Ontologie Intégrale",
+    "description": "Une vision unifiée de votre architecture psychologique et spirituelle."
+  },
+  "meta": {
+    "title": "Rapport d'Ontologie Intégrale",
+    "description": "Une vision unifiée de votre architecture psychologique et spirituelle.",
+    "keywords": "synthèse, profil ontologique, miroir de l'âme, architecture intérieure"
+  },
+  "subtitle": "Le miroir sacré de vos multiples visages",
+  "downloadPDF": "Archiver le Savoir",
+  "shareReport": "Diffuser l'Éclat",
+  "generating": "Manifestation",
+  "analyzing": "Contemplation",
+  "generatingPDF": "Gravure du Savoir",
+  "sharing": "Diffusion",
+  "dominantTraits": "Traits Souverains",
+  "dimensions": "Dimensions du Soi",
+  "dimensionsDescription": "L'architecture de votre essence à travers les prismes sacrés",
+  "strengths": "Dons de Nature",
+  "strengthsDescription": "L'éclat de vos vertus et de vos maîtrises",
+  "growthAreas": "Champs Fertiles",
+  "growthAreasDescription": "Les territoires de votre métamorphose future",
+  "testsByCategory": "Distribution des Rituels",
+  "testsByCategoryDescription": "Cartographie de vos explorations passées",
+  "shareTitle": "Partager l'Éclat de mon Essence",
+  "shareText": "Contemplez cette vision unifiée de mon architecture intérieure"
+}

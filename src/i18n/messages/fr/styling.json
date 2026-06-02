@@ -1,0 +1,56 @@
+{
+  "scanner": {
+    "title": "AI Life Stylist",
+    "description": "Upload your photo. AI analyzes your face shape and personal color to recommend the perfect style.",
+    "action": {
+      "upload": "Click to Upload Photo",
+      "camera": "Caméra",
+      "analyze": "Analyser le style"
+    },
+    "status": {
+      "analyzing": "Analyzing...",
+      "detecting": "Détection de la forme du visage et du teint"
+    },
+    "error": {
+      "tooLarge": "Image trop grande (max 5 Mo)",
+      "cameraAccess": "Impossible d'accéder à la caméra",
+      "failed": "L'analyse a échoué. Veuillez essayer une photo plus claire."
+    }
+  },
+  "dashboard": {
+    "title": "Styliste de vie IA",
+    "description": "Téléchargez votre photo. L'IA analyse la forme de votre visage et votre couleur personnelle pour vous recommander le style parfait.",
+    "upload": "Cliquez pour télécharger une photo",
+    "retry": "Essayez une autre photo",
+    "labels": {
+      "faceShape": "Forme du visage",
+      "personalColor": "Analyse des couleurs"
+    },
+    "status": {
+      "analyzing": "Analyser..."
+    }
+  },
+  "recommendation": {
+    "complete": "Analyse terminée",
+    "analyzeAnother": "Analyser une autre photo",
+    "sections": {
+      "hair": "Meilleures coiffures",
+      "eyewear": "Match de lunettes",
+      "palette": "Votre palette de puissance"
+    },
+    "shapes": {
+      "oval": "Ovale",
+      "round": "Ronde",
+      "square": "Carré",
+      "heart": "Cœur",
+      "diamond": "Diamant",
+      "long": "Longue"
+    },
+    "colors": {
+      "spring_warm": "Printemps chaud",
+      "summer_cool": "Été frais",
+      "autumn_warm": "Automne chaud",
+      "winter_cool": "Frais d'hiver"
+    }
+  }
+}

@@ -1,0 +1,353 @@
+{
+  "jobMatch": {
+    "meta": {
+      "hero": {
+        "eyebrow": "Awaiting deep synthesis...",
+        "subtitle": "Awaiting deep synthesis...",
+        "subtitleDetail": "Subtitle Detail",
+        "cta": "Awaiting deep synthesis..."
+      },
+      "keywords": "productivity, work efficiency, time management, focus, work habits",
+      "title": "Your Productivity Profile",
+      "description": "Explore our suite of tools designed for deep productivity insights."
+    },
+    "hero": {
+      "test": {
+        "loadingSteps": {
+          "step1": "Profiling your career DNA...",
+          "step2": "Analyzing work style patterns...",
+          "step3": "Identifying potential synergy...",
+          "step4": "Calculating job match score..."
+        },
+        "insightBullets": ["绘制最真实自我的星座图。"],
+        "progress": "Progress",
+        "submit": "提交",
+        "loading": "Crafting a mirror that reflects your truest self...",
+        "selectOption": "Select Option",
+        "next": "Next",
+        "previous": "Previous"
+      },
+      "result": {
+        "title": "Your Productivity Profile",
+        "description": "Explore our suite of tools designed for deep productivity insights."
+      },
+      "meta": {
+        "title": "Your Productivity Profile",
+        "description": "Explore our suite of tools designed for deep productivity insights.",
+        "keywords": "productivity, work efficiency, time management, focus, work habits"
+      },
+      "title": "Your Productivity Profile",
+      "eyebrow": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "subtitleDetail": "Subtitle Detail",
+      "cta": "Awaiting deep synthesis...",
+      "start": "Awaiting deep synthesis...",
+      "insightHint": "洞察提示"
+    },
+    "landing": {
+      "benefits": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        }
+      ],
+      "metrics": [
+        {
+          "label": "公制1",
+          "value": "100%"
+        }
+      ],
+      "steps": [
+        {
+          "title": "高级洞察力",
+          "description": "开始"
+        }
+      ],
+      "previewTitle": "预览",
+      "previewDescription": "对您的旅程进行详细的分析和见解。",
+      "benefitsTitle": "Assessment",
+      "stepsTitle": "评估",
+      "faqTitle": "Unveil the hidden layers of your personal philosophy.",
+      "ctaSecondary": "生产力C二级"
+    },
+    "test": {
+      "insightBullets": ["标志性强度", "枢轴点", "2"],
+      "test": {
+        "insightBullets": ["揭开你个人哲学的隐藏层。"],
+        "progress": "Progress",
+        "submit": "提交",
+        "loading": "Crafting a mirror that reflects your truest self...",
+        "selectOption": "Select Option",
+        "next": "Next",
+        "previous": "Previous"
+      },
+      "result": {
+        "title": "Your Productivity Profile",
+        "description": "Explore our suite of tools designed for deep productivity insights."
+      },
+      "meta": {
+        "title": "Your Productivity Profile",
+        "description": "Explore our suite of tools designed for deep productivity insights.",
+        "keywords": "productivity, work efficiency, time management, focus, work habits"
+      },
+      "intro": {
+        "title": "Your Productivity Profile",
+        "desc": "Awaiting deep synthesis...",
+        "btn_start": "Awaiting deep synthesis..."
+      },
+      "processing": {
+        "title": "Your Productivity Profile",
+        "desc": "Awaiting deep synthesis..."
+      },
+      "progress": "Progress",
+      "submit": "提交",
+      "loading": "Crafting a mirror that reflects your truest self...",
+      "selectOption": "Select Option",
+      "subtitle": "Awaiting deep synthesis...",
+      "questionLabel": "问题标签",
+      "insightHint": "洞察提示",
+      "start": "Awaiting deep synthesis...",
+      "next": "Next",
+      "previous": "Previous",
+      "test_title": "Awaiting deep synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "小小的选择累积成伟大的命运。"
+        }
+      ],
+      "question1": "How do you navigate life's currents?",
+      "answer1": "Small choices accumulate into a grand destiny.",
+      "question2": "What is your unique core frequency?",
+      "answer2": "You possess an intuitive compass that points toward growth.",
+      "question3": "What drives your inner world?",
+      "answer3": "Your unique perspective shapes your reality."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "scoreLabels": {
+          "strategic": "Strategic",
+          "creative": "Creative",
+          "analytical": "Analytical",
+          "service": "Service",
+          "technical": "Technical",
+          "social": "Social",
+          "entrepreneurial": "Entrepreneurial"
+        },
+        "primaryThemeTitle": "Primary Match",
+        "secondaryThemeTitle": "Secondary Match",
+        "scorecardTitle": "Career Scorecard",
+        "idealRolesTitle": "Ideal Roles",
+        "collaborationTitle": "Collaboration Style",
+        "signalsTitle": "Career Signals",
+        "growthTitle": "Growth Focus",
+        "interviewTitle": "Interview Prompts",
+        "actionPlanTitle": "Action Plan",
+        "actionPlanSubtitle": "Strategic steps for your career growth",
+        "recommendationsTitle": "Next Steps"
+      },
+      "badges": {
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "intro": {
+        "paragraphs": [
+          "您的个人资料结合了您最主要的专业特征，以确定您将蓬勃发展的工作环境。",
+          "根据您的回复，我们确定了您应对挑战和创造价值的清晰模式。"
+        ],
+        "readingGuide": "Note: Your scores represent relative dominance, not absolute ability.",
+        "scoreExplainer": "Distribution of your professional orientations"
+      },
+      "actionSteps": [
+        "审查您的主要主题的增长重点领域",
+        "使用面试提示为您的下一次职业发展做好准备",
+        "考虑为您的次要主题推荐的角色",
+        "与导师或同事分享您的结果"
+      ],
+      "title": "Your Productivity Profile",
+      "summary": "Your personalized career alignment breakdown.",
+      "scorecardBadge": "{count} questions total",
+      "nextStepsDescription": "Based on your matching profile, we recommend these tools for your growth.",
+      "shareSuccess": "Result copied to clipboard!",
+      "shareCta": "Copy Summary",
+      "retake": "Retake Test"
+    },
+    "title": "Your Productivity Profile",
+    "description": "Explore our suite of tools designed for deep productivity insights.",
+    "heroTitle": "Awaiting deep synthesis...",
+    "eyebrow": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis...",
+    "cta": "Awaiting deep synthesis...",
+    "start": "Awaiting deep synthesis..."
+  }
+}

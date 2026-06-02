@@ -1,0 +1,11 @@
+{
+  "subtitle": "朝鮮時代の歴史的人物分析",
+  "title": "あなたの歴史的原型",
+  "labels": {
+    "faction": "所属する学派",
+    "innate": "本来の性質",
+    "behavioral": "行動パターン",
+    "comparison": "一致度",
+    "alignment": "性向の調和"
+  }
+}

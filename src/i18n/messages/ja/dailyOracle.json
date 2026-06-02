@@ -1,0 +1,26 @@
+{
+  "identify": {
+    "description": "あなたの運勢を特定します。"
+  },
+  "title": "今日の神託",
+  "subtitle": "宇宙の整列",
+  "loading": "星座を分析中...",
+  "source": {
+    "PAYMENT": "コマース",
+    "MAYAN": "マヤ暦",
+    "SAJU": "四柱推命",
+    "MBTI": "心理学(MBTI)",
+    "TCI": "気質検査",
+    "BIG5": "Big 5 性格"
+  },
+  "category": {
+    "EARTH": "大地の鼓動",
+    "CELESTIAL": "天空の潮流",
+    "SPIRIT": "聖なる恩寵",
+    "HUMAN": "人間の理"
+  },
+  "modal": {
+    "noteTitle": "設計者のノート",
+    "noteDesc": "この洞察は、シナプス・プロトコル上で実行される {source} エンジンから導き出されました。"
+  }
+}

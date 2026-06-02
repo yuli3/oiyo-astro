@@ -1,0 +1,20 @@
+{
+  "units": {
+    "hours": "小时",
+    "days": "天",
+    "years": "年",
+    "months": "个月"
+  },
+  "labels": {
+    "hourlyWage": "时薪",
+    "annualLeave": "年假津贴",
+    "severancePay": "遣散费",
+    "dailyHours": "每日工作时间",
+    "remainingDays": "剩余年假",
+    "servicePeriod": "任职期间",
+    "monthlyBase": "月基本工资",
+    "annualBonus": "年度奖金",
+    "totalAllowance": "年假津贴总额",
+    "standardMonthlyHours": "标准每月工作时间"
+  }
+}

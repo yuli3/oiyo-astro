@@ -1,0 +1,88 @@
+{
+  "lifePath": {
+    "title": "라이프 타임라인",
+    "description": "인생의 여정은 주요 단계를 통해 매핑됩니다.",
+    "phases": {
+      "foundation": {
+        "period": "파운데이션(0-20)",
+        "title": "자기 발견",
+        "description": "핵심 온톨로지를 학습하고 형성하는 기간입니다."
+      },
+      "prime": {
+        "period": "프라임 (20-40)",
+        "title": "잠재적 실현",
+        "description": "최대의 에너지와 전문적인 성장."
+      },
+      "wisdom": {
+        "period": "지혜(40+)",
+        "title": "유산과 내면의 평화",
+        "description": "노력의 결실을 거두고 지혜를 나누세요."
+      }
+    }
+  },
+  "destiny": {
+    "title": "데스티니 타임라인",
+    "yearly": "연간 흐름",
+    "monthly": "월간 리듬",
+    "daily": "일일 에너지",
+    "themes": {
+      "1": "새로운 시작과 독립",
+      "2": "협력과 인내",
+      "3": "창의적인 표현과 즐거움",
+      "4": "주문 및 기반 구축",
+      "5": "변화와 자유",
+      "6": "책임과 가정",
+      "7": "성찰과 지혜",
+      "8": "힘과 성취",
+      "9": "완료 및 놓아주기"
+    },
+    "inflectionPoint": "최대 변곡 에너지",
+    "chronos": "크로노스 타임라인"
+  },
+  "radar": {
+    "title": "필수 동기화 레이더",
+    "dimensions": {
+      "mind": "정신",
+      "destiny": "운명",
+      "time": "시간",
+      "drive": "운전하다",
+      "vitality": "활력"
+    },
+    "description": "당신의 심리, 운명, 시간의 흐름 사이의 정렬을 시각화합니다."
+  },
+  "sanctum": {
+    "title": "별의 성소",
+    "description": "성찰과 명상을 위한 개인 공간입니다.",
+    "enter": "성소에 들어가라"
+  },
+  "quantum": {
+    "title": "양자 운명 시뮬레이터",
+    "subtitle": "평행 생활 경로 테스트",
+    "simulate": "시뮬레이션 실행",
+    "results": "시뮬레이션 결과",
+    "reset": "원래 프로필 재설정",
+    "labels": {
+      "mbti": "MBTI",
+      "element": "요소",
+      "personalYear": "개인 연도",
+      "lifeType": "라이프 타입(HD)"
+    },
+    "simulationMode": "시뮬레이션 모드 활성: 모든 결과는 가상 데이터를 기반으로 합니다."
+  },
+  "biological": {
+    "title": "생물학적 탄력성 코칭",
+    "subtitle": "호르몬 균형 및 생활 방식 제안",
+    "circadian": "일주기 리듬",
+    "energy": "에너지 수준",
+    "advice": "권장 조치",
+    "mainFunction": "주요 기능",
+    "lifestyleAdvice": "라이프 스타일 조언"
+  },
+  "synergy": {
+    "title": "시너지 원형",
+    "compatibility": "호환성",
+    "traits": "주요 특성",
+    "level": "시너지 수준",
+    "unlocked": "합성 원형 잠금 해제"
+  }
+}

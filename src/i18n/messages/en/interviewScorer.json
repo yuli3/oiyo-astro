@@ -1,0 +1,27 @@
+{
+  "test": {
+    "sampleQuestions": {
+      "1": "Please tell us about your strengths and weaknesses.",
+      "2": "What motivated you to apply to our company?",
+      "3": "Describe your most challenging experience and how you overcame it.",
+      "4": "Where do you see yourself 5 years after joining the company?"
+    },
+    "title": "interview answer scorer",
+    "description": "AI analyzes your interview answers and provides scores and points for improvement.",
+    "inputTitle": "Choosing Interview Questions",
+    "inputDescription": "Select the question you want answered or enter your own.",
+    "questionPlaceholder": "Enter your question or select above...",
+    "answerPlaceholder": "Please write your answer here (minimum 100 characters recommended)...",
+    "wordCount": "number of characters",
+    "recommendedLength": "Recommended length: 300 to 500 characters.",
+    "analyzeButton": "Analyze your answers"
+  },
+  "result": {
+    "score": "answer score",
+    "feedback": "feedback",
+    "originality": "originality",
+    "logic": "logic",
+    "completeness": "completeness",
+    "positivity": "positivity"
+  }
+}

@@ -1,0 +1,436 @@
+{
+  "day_01": {
+    "flower": {
+      "name": "수선화",
+      "meaning": "새로운 시작과 영원한 생명"
+    },
+    "stone": {
+      "name": "아쿠아마린(평화)",
+      "meaning": "평온함, 용기, 정신적 명료함"
+    },
+    "star": {
+      "name": "아크튜러스(대각성)",
+      "meaning": "북쪽의 수호자; 보호와 명예"
+    }
+  },
+  "day_02": {
+    "flower": {
+      "name": "미나리 아재비",
+      "meaning": "화려한 매력과 배은망덕함"
+    },
+    "stone": {
+      "name": "아쿠아마린(희망)",
+      "meaning": "신뢰와 감정적 짐의 해방"
+    },
+    "star": {
+      "name": "데네볼라",
+      "meaning": "독립과 지혜를 통한 힘"
+    }
+  },
+  "day_03": {
+    "flower": {
+      "name": "자체 운영",
+      "meaning": "당신의 존재가 내 고통을 달래줍니다"
+    },
+    "stone": {
+      "name": "혈석(활력)",
+      "meaning": "육체적인 힘과 영적인 용기"
+    },
+    "star": {
+      "name": "스피카(양손)",
+      "meaning": "예술적 성공과 고귀한 정신"
+    }
+  },
+  "day_04": {
+    "flower": {
+      "name": "산딸기",
+      "meaning": "후회와 겸손한 자비"
+    },
+    "stone": {
+      "name": "혈석(희생)",
+      "meaning": "이타심과 내면의 정화"
+    },
+    "star": {
+      "name": "벨트",
+      "meaning": "다른 사람의 고통에 대한 인식; 공감"
+    }
+  },
+  "day_05": {
+    "flower": {
+      "name": "수레 국화",
+      "meaning": "우아함과 정교함"
+    },
+    "stone": {
+      "name": "옥",
+      "meaning": "영혼의 풍요와 영생"
+    },
+    "star": {
+      "name": "레굴루스(영천성)",
+      "meaning": "리더십과 사자의 마음"
+    }
+  },
+  "day_06": {
+    "flower": {
+      "name": "데이지",
+      "meaning": "순수함과 새로운 시작"
+    },
+    "stone": {
+      "name": "터키 옥",
+      "meaning": "더 높은 자아와의 의사소통"
+    },
+    "star": {
+      "name": "알파카",
+      "meaning": "창의성과 수많은 영예의 화환입니다."
+    }
+  },
+  "day_07": {
+    "flower": {
+      "name": "등쪽 목자",
+      "meaning": "아빠의 실수인가, 아니면 불타는 사랑인가"
+    },
+    "stone": {
+      "name": "황수정",
+      "meaning": "풍요와 태양에너지"
+    },
+    "star": {
+      "name": "Antares (Shin Sui)",
+      "meaning": "전략적 초점과 전사의 성공"
+    }
+  },
+  "day_08": {
+    "flower": {
+      "name": "호랑이 귀",
+      "meaning": "애정과 집중"
+    },
+    "stone": {
+      "name": "월장석",
+      "meaning": "직관과 주기적인 재생"
+    },
+    "star": {
+      "name": "비버",
+      "meaning": "지적인 능력과 능숙한 말하기"
+    }
+  },
+  "day_09": {
+    "flower": {
+      "name": "낙엽송",
+      "meaning": "대담함과 용기"
+    },
+    "stone": {
+      "name": "호랑이 눈",
+      "meaning": "명확한 비전과 결단력 있는 행동"
+    },
+    "star": {
+      "name": "폴룩스",
+      "meaning": "보호 능력과 영적 통찰력"
+    }
+  },
+  "day_10": {
+    "flower": {
+      "name": "느릅나무",
+      "meaning": "차가운 인내심"
+    },
+    "stone": {
+      "name": "적철광",
+      "meaning": "두려움을 접지하고 풀어줌"
+    },
+    "star": {
+      "name": "베가(Vegas)",
+      "meaning": "영감을 주는 성공과 카리스마 있는 힘"
+    }
+  },
+  "day_11": {
+    "flower": {
+      "name": "이시아",
+      "meaning": "자신감과 자부심"
+    },
+    "stone": {
+      "name": "소달라이트",
+      "meaning": "정서적 균형과 합리적 선택"
+    },
+    "star": {
+      "name": "프로키온",
+      "meaning": "폭풍 전의 행동과 성공"
+    }
+  },
+  "day_12": {
+    "flower": {
+      "name": "수양버들",
+      "meaning": "버려졌지만 지속되는 사랑"
+    },
+    "stone": {
+      "name": "공작석",
+      "meaning": "과거로부터의 변화와 해방"
+    },
+    "star": {
+      "name": "베텔게우스",
+      "meaning": "보편적인 성공과 지속적인 유산"
+    }
+  },
+  "day_13": {
+    "flower": {
+      "name": "옥잠화",
+      "meaning": "요염함과 모성애"
+    },
+    "stone": {
+      "name": "청금석",
+      "meaning": "깊은 지혜와 영적인 진리"
+    },
+    "star": {
+      "name": "리겔",
+      "meaning": "기술적 우수성과 혁신적인 비전"
+    }
+  },
+  "day_14": {
+    "flower": {
+      "name": "아몬드 꽃",
+      "meaning": "희망과 경계"
+    },
+    "stone": {
+      "name": "벽옥",
+      "meaning": "에너지와 신체적 안정성을 키우는 것"
+    },
+    "star": {
+      "name": "벨라트릭스",
+      "meaning": "강인함과 빠른 의사결정력"
+    }
+  },
+  "day_15": {
+    "flower": {
+      "name": "포이즌멜론(브리오니아)",
+      "meaning": "거절 또는 겸손한 매력"
+    },
+    "stone": {
+      "name": "산호",
+      "meaning": "안전한 여행과 정서적 힐링"
+    },
+    "star": {
+      "name": "시리우스(천상의 별)",
+      "meaning": "야망과 찬란한 명성"
+    }
+  },
+  "day_16": {
+    "flower": {
+      "name": "박하",
+      "meaning": "정서적 따뜻함"
+    },
+    "stone": {
+      "name": "형석",
+      "meaning": "정신적 집중과 산만함"
+    },
+    "star": {
+      "name": "카노푸스",
+      "meaning": "리더십과 진정한 중심 찾기"
+    }
+  },
+  "day_17": {
+    "flower": {
+      "name": "콩꽃",
+      "meaning": "축하 또는 단순한 기쁨"
+    },
+    "stone": {
+      "name": "어벤츄린",
+      "meaning": "기회와 영혼의 행운"
+    },
+    "star": {
+      "name": "아케르나르",
+      "meaning": "높은 지능과 세련된 성공"
+    }
+  },
+  "day_18": {
+    "flower": {
+      "name": "아스파라거스",
+      "meaning": "매력과 변화"
+    },
+    "stone": {
+      "name": "태양석",
+      "meaning": "존재의 기쁨과 내면의 광채"
+    },
+    "star": {
+      "name": "알페락",
+      "meaning": "지성과 자유에 대한 의지"
+    }
+  },
+  "day_19": {
+    "flower": {
+      "name": "치자나무",
+      "meaning": "은밀한 사랑과 세련됨"
+    },
+    "stone": {
+      "name": "석류석",
+      "meaning": "보호와 흔들리지 않는 충성심"
+    },
+    "star": {
+      "name": "기적적",
+      "meaning": "조화, 친절, 심미적 여유"
+    }
+  },
+  "day_20": {
+    "flower": {
+      "name": "보라색 튤립",
+      "meaning": "영원한 사랑과 왕족"
+    },
+    "stone": {
+      "name": "에메랄드",
+      "meaning": "마음의 재생과 치유"
+    },
+    "star": {
+      "name": "알마크",
+      "meaning": "예술적 길과 끝없는 다양성"
+    }
+  },
+  "day_21": {
+    "flower": {
+      "name": "벚꽃",
+      "meaning": "애정과 달콤함"
+    },
+    "stone": {
+      "name": "사파이어",
+      "meaning": "정신적 명료함과 신성한 인도"
+    },
+    "star": {
+      "name": "쉐라탄",
+      "meaning": "신호를 기다리십시오. 전략적 인내심"
+    }
+  },
+  "day_22": {
+    "flower": {
+      "name": "맬로",
+      "meaning": "온화함과 모성애"
+    },
+    "stone": {
+      "name": "녹주석",
+      "meaning": "마음의 순수함과 맑은 시야"
+    },
+    "star": {
+      "name": "정육점팀",
+      "meaning": "사회 정의와 타인에 대한 배려"
+    }
+  },
+  "day_23": {
+    "flower": {
+      "name": "글라디올러스",
+      "meaning": "성격의 힘과 완전성"
+    },
+    "stone": {
+      "name": "지르콘",
+      "meaning": "성실성, 자신감, 미덕"
+    },
+    "star": {
+      "name": "셰디르",
+      "meaning": "삶에 대한 존재와 통제"
+    }
+  },
+  "day_24": {
+    "flower": {
+      "name": "금화화(캘리포니아 포피)",
+      "meaning": "상상력과 성공"
+    },
+    "stone": {
+      "name": "호박",
+      "meaning": "따뜻함, 치유, 그리고 고대의 지혜"
+    },
+    "star": {
+      "name": "알데바란(필수오)",
+      "meaning": "동양의 윤리와 수호자"
+    }
+  },
+  "day_25": {
+    "flower": {
+      "name": "등산 장미",
+      "meaning": "눈부신 아름다움과 헌신"
+    },
+    "stone": {
+      "name": "모거나이트",
+      "meaning": "연민과 무조건적인 수용"
+    },
+    "star": {
+      "name": "문지기",
+      "meaning": "독립적인 행동과 직접적인 힘"
+    }
+  },
+  "day_26": {
+    "flower": {
+      "name": "흰 앵초",
+      "meaning": "젊은 사랑과 순수"
+    },
+    "stone": {
+      "name": "쿤자이트",
+      "meaning": "정서적 개방성과 평화"
+    },
+    "star": {
+      "name": "북극성(북극성)",
+      "meaning": "목적 찾기"
+    }
+  },
+  "day_27": {
+    "flower": {
+      "name": "칼세올라리아",
+      "meaning": "도움이 되거나 겸손한 우아함"
+    },
+    "stone": {
+      "name": "황철석",
+      "meaning": "논리, 보호, 내면의 방어"
+    },
+    "star": {
+      "name": "멘카르",
+      "meaning": "그룹에 대한 의무와 깊은 집중"
+    }
+  },
+  "day_28": {
+    "flower": {
+      "name": "꽃아카시아(로비니아)",
+      "meaning": "우정과 우아함"
+    },
+    "stone": {
+      "name": "흑요석",
+      "meaning": "강도를 통한 명확성; 진실을 마주하다"
+    },
+    "star": {
+      "name": "정오",
+      "meaning": "진실과 통찰력 있는 목표에 대한 메시지"
+    }
+  },
+  "day_29": {
+    "flower": {
+      "name": "우엉",
+      "meaning": "인내와 인내"
+    },
+    "stone": {
+      "name": "레피돌라이트",
+      "meaning": "불안의 전환과 완화"
+    },
+    "star": {
+      "name": "알파드",
+      "meaning": "창의성과 고독의 길"
+    }
+  },
+  "day_30": {
+    "flower": {
+      "name": "금빛 막대(빗자루)",
+      "meaning": "겸손함과 깔끔함"
+    },
+    "stone": {
+      "name": "자수정",
+      "meaning": "영적 성장과 신성한 평화"
+    },
+    "star": {
+      "name": "알테어(현우)",
+      "meaning": "두려움 없는 야망과 급속한 상승"
+    }
+  },
+  "day_31": {
+    "flower": {
+      "name": "검은 가시나무",
+      "meaning": "엄격함과 고난은 힘을 낳는다"
+    },
+    "stone": {
+      "name": "알렉산더 보석",
+      "meaning": "반대의 영광과 통일"
+    },
+    "star": {
+      "name": "포말하우트",
+      "meaning": "높은 영적 성공과 명확성"
+    }
+  }
+}

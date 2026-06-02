@@ -1,0 +1,355 @@
+{
+  "jobMatch": {
+    "meta": {
+      "hero": {
+        "eyebrow": "Awaiting deep synthesis...",
+        "subtitle": "Awaiting deep synthesis...",
+        "subtitleDetail": "Subtitle Detail",
+        "cta": "Awaiting deep synthesis..."
+      },
+      "keywords": "productivity, work efficiency, time management, focus, work habits",
+      "title": "Your Productivity Profile",
+      "description": "Explore our suite of tools designed for deep productivity insights."
+    },
+    "hero": {
+      "test": {
+        "loadingSteps": {
+          "step1": "Profiling your career DNA...",
+          "step2": "Analyzing work style patterns...",
+          "step3": "Identifying potential synergy...",
+          "step4": "Calculating job match score..."
+        },
+        "insightBullets": ["Cartographier la constellation de votre vrai moi."],
+        "progress": "Progress",
+        "submit": "Soumettre",
+        "loading": "Crafting a mirror that reflects your truest self...",
+        "selectOption": "Select Option",
+        "next": "Next",
+        "previous": "Previous"
+      },
+      "result": {
+        "title": "Your Productivity Profile",
+        "description": "Explore our suite of tools designed for deep productivity insights."
+      },
+      "meta": {
+        "title": "Your Productivity Profile",
+        "description": "Explore our suite of tools designed for deep productivity insights.",
+        "keywords": "productivity, work efficiency, time management, focus, work habits"
+      },
+      "title": "Your Productivity Profile",
+      "eyebrow": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "subtitleDetail": "Subtitle Detail",
+      "cta": "Awaiting deep synthesis...",
+      "start": "Awaiting deep synthesis...",
+      "insightHint": "Astuce"
+    },
+    "landing": {
+      "benefits": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Métrique 1",
+          "value": "100%"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Aperçu Premium",
+          "description": "Commencer"
+        }
+      ],
+      "previewTitle": "Aperçu",
+      "previewDescription": "Analyse détaillée et informations pour votre voyage.",
+      "benefitsTitle": "Assessment",
+      "stepsTitle": "Évaluation",
+      "faqTitle": "Unveil the hidden layers of your personal philosophy.",
+      "ctaSecondary": "Productivité Ctasecondaire"
+    },
+    "test": {
+      "insightBullets": ["Force de signature", "Point pivot", "2"],
+      "test": {
+        "insightBullets": [
+          "Dévoilez les couches cachées de votre philosophie personnelle."
+        ],
+        "progress": "Progress",
+        "submit": "Soumettre",
+        "loading": "Crafting a mirror that reflects your truest self...",
+        "selectOption": "Select Option",
+        "next": "Next",
+        "previous": "Previous"
+      },
+      "result": {
+        "title": "Your Productivity Profile",
+        "description": "Explore our suite of tools designed for deep productivity insights."
+      },
+      "meta": {
+        "title": "Your Productivity Profile",
+        "description": "Explore our suite of tools designed for deep productivity insights.",
+        "keywords": "productivity, work efficiency, time management, focus, work habits"
+      },
+      "intro": {
+        "title": "Your Productivity Profile",
+        "desc": "Awaiting deep synthesis...",
+        "btn_start": "Awaiting deep synthesis..."
+      },
+      "processing": {
+        "title": "Your Productivity Profile",
+        "desc": "Awaiting deep synthesis..."
+      },
+      "progress": "Progress",
+      "submit": "Soumettre",
+      "loading": "Crafting a mirror that reflects your truest self...",
+      "selectOption": "Select Option",
+      "subtitle": "Awaiting deep synthesis...",
+      "questionLabel": "Étiquette de question",
+      "insightHint": "Astuce",
+      "start": "Awaiting deep synthesis...",
+      "next": "Next",
+      "previous": "Previous",
+      "test_title": "Awaiting deep synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        }
+      ],
+      "question1": "How do you navigate life's currents?",
+      "answer1": "Small choices accumulate into a grand destiny.",
+      "question2": "What is your unique core frequency?",
+      "answer2": "You possess an intuitive compass that points toward growth.",
+      "question3": "What drives your inner world?",
+      "answer3": "Your unique perspective shapes your reality."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "scoreLabels": {
+          "strategic": "Strategic",
+          "creative": "Creative",
+          "analytical": "Analytical",
+          "service": "Service",
+          "technical": "Technical",
+          "social": "Social",
+          "entrepreneurial": "Entrepreneurial"
+        },
+        "primaryThemeTitle": "Primary Match",
+        "secondaryThemeTitle": "Secondary Match",
+        "scorecardTitle": "Career Scorecard",
+        "idealRolesTitle": "Ideal Roles",
+        "collaborationTitle": "Collaboration Style",
+        "signalsTitle": "Career Signals",
+        "growthTitle": "Growth Focus",
+        "interviewTitle": "Interview Prompts",
+        "actionPlanTitle": "Action Plan",
+        "actionPlanSubtitle": "Strategic steps for your career growth",
+        "recommendationsTitle": "Next Steps"
+      },
+      "badges": {
+        "primary": "Primary",
+        "secondary": "Secondary"
+      },
+      "intro": {
+        "paragraphs": [
+          "Votre profil combine vos traits professionnels les plus dominants pour identifier les environnements de travail dans lesquels vous vous épanouirez.",
+          "Sur la base de vos réponses, nous avons identifié une tendance claire dans la manière dont vous abordez les défis et créez de la valeur."
+        ],
+        "readingGuide": "Note: Your scores represent relative dominance, not absolute ability.",
+        "scoreExplainer": "Distribution of your professional orientations"
+      },
+      "actionSteps": [
+        "Passez en revue les domaines prioritaires de croissance de votre thème principal",
+        "Utilisez les invites d'entretien pour préparer votre prochaine évolution de carrière",
+        "Considérez les rôles recommandés pour votre thème secondaire",
+        "Partagez vos résultats avec un mentor ou un pair"
+      ],
+      "title": "Your Productivity Profile",
+      "summary": "Your personalized career alignment breakdown.",
+      "scorecardBadge": "{count} questions total",
+      "nextStepsDescription": "Based on your matching profile, we recommend these tools for your growth.",
+      "shareSuccess": "Result copied to clipboard!",
+      "shareCta": "Copy Summary",
+      "retake": "Retake Test"
+    },
+    "title": "Your Productivity Profile",
+    "description": "Explore our suite of tools designed for deep productivity insights.",
+    "heroTitle": "Awaiting deep synthesis...",
+    "eyebrow": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis...",
+    "cta": "Awaiting deep synthesis...",
+    "start": "Awaiting deep synthesis..."
+  }
+}

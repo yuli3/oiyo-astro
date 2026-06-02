@@ -1,0 +1,178 @@
+{
+  "title": "Precios",
+  "hero": {
+    "title": "Precios",
+    "subtitle": "Apoya el santuario y desbloquea toda la profundidad de las coordenadas de tu destino.",
+    "featurePrompt": "Desbloquea {función} para continuar tu viaje."
+  },
+  "sections": {
+    "pricing": "Seleccionar oferta",
+    "features": "Capacidades profundas",
+    "faq": "Consultas comunes",
+    "trust": "Garantía de resonancia"
+  },
+  "meta": {
+    "title": "Precios",
+    "description": "Descubra la profundidad de su destino con nuestras ofertas premium.",
+    "keywords": "fijación de precios, prima, saju, astrología, mbti",
+    "ogTitle": "Ofrendas Sagradas",
+    "ogDescription": "Apoya el santuario y desbloquea tu destino."
+  },
+  "@tosspayments/payment-sdk": "@tosspayments/payment-sdk",
+  "upgrade": {
+    "order_name": "Suscripción Pro (mensual)",
+    "title": "Pricing",
+    "subtitle": "Revele capas más profundas de su alma con nuestras herramientas analíticas más poderosas.",
+    "price_suffix": "/mes",
+    "cancel_anytime": "Cancelar en cualquier momento",
+    "processing": "Alineando estrellas...",
+    "button": "Comience su viaje profesional",
+    "prices": {
+      "en": "$7.99",
+      "ko": "₩9,900",
+      "ja": "¥1,200",
+      "cn": "¥58",
+      "es": "€7.99",
+      "fr": "€7.99"
+    },
+    "secure_payment_toss": "Asegurado mediante pagos Toss",
+    "secure_payment_lemon": "Asegurado a través de Lemon Squeezy",
+    "comparison_title": "Elige tu camino"
+  },
+  "faq": {
+    "title": "Pricing",
+    "answer1": "Sí, puedes pausar o cancelar tu suscripción en cualquier momento. Tus funciones Pro permanecerán activas hasta el final de tu ciclo actual.",
+    "question1": "¿Puedo cancelar mi suscripción en cualquier momento?",
+    "answer2": "Ofrecemos un reembolso completo para cualquier solicitud realizada dentro de los 7 días posteriores a tu suscripción inicial.",
+    "question2": "¿Ofrecen reembolsos?",
+    "answer3": "Aceptamos las principales tarjetas de crédito, PayPal y Apple Pay a nivel mundial. Para nuestros usuarios en Corea, Toss, KakaoPay y transferencias bancarias locales también están disponibles.",
+    "question3": "¿Qué métodos de pago aceptan?",
+    "q1": {
+      "q": "Which payment methods do you accept?",
+      "a": "We accept major credit cards, PayPal, and Apple Pay globally. For our users in Korea, Toss, KakaoPay, and local bank transfers are also available."
+    },
+    "q2": {
+      "q": "Which payment methods do you accept?",
+      "a": "We accept major credit cards, PayPal, and Apple Pay globally. For our users in Korea, Toss, KakaoPay, and local bank transfers are also available."
+    },
+    "q3": {
+      "q": "¿Qué métodos de pago aceptan?",
+      "a": "Aceptamos las principales tarjetas de crédito, PayPal y Apple Pay a nivel mundial. Para nuestros usuarios en Corea, Toss, KakaoPay y transferencias bancarias locales también están disponibles."
+    }
+  },
+  "feature": "Funcionalidad",
+  "trust": {
+    "secure": {
+      "title": "Pagos Seguros",
+      "description": "Tus transacciones están protegidas por cifrado de vanguardia."
+    },
+    "instant": {
+      "title": "Acceso Instantáneo",
+      "description": "Desbloquea las funciones premium inmediatamente tras la suscripción."
+    },
+    "satisfaction": {
+      "title": "Satisfacción Garantizada",
+      "description": "Exploración sin riesgos con nuestra política de reembolso de 7 días."
+    }
+  },
+  "comparison": {
+    "title": "Pricing",
+    "description": "Step into new features and beta tests before the world sees them."
+  },
+  "columns": {
+    "features": "Características",
+    "free": "Básica",
+    "premium": "Pro"
+  },
+  "plan": "Plan",
+  "billing": {
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "saveUp": "Ahorra hasta",
+    "year": "/año",
+    "month": "/mes",
+    "save": "Ahorrar"
+  },
+  "plans": {
+    "popular": "El Más Popular",
+    "free": "Básico",
+    "current": "Plan Actual",
+    "continueUsing": "Continuar Usando",
+    "getStarted": "Comenzar",
+    "subscribe": "Suscribirse Ahora",
+    "cancelAnytime": "Cancelar en Cualquier Momento"
+  },
+  "info": {
+    "allPlansInclude": "Todos los planes incluyen",
+    "securePayment": "Pago Seguro",
+    "instantAccess": "Acceso Instantáneo",
+    "customerSupport": "Soporte Prioritario"
+  },
+  "features": {
+    "basicTests": "Pruebas básicas ilimitadas",
+    "saveResults": "Almacenamiento de viaje de conocimiento",
+    "basicSharing": "Compartir resultados básicos",
+    "basicConsultation": "Consulta Básica",
+    "deepAnalysis": "Análisis profundo de IA",
+    "pdfDownload": "Informes de información en PDF",
+    "compatibility": "Análisis avanzado de armonía",
+    "personalInsights": "Orientación semanal personalizada",
+    "prioritySupport": "Apoyo prioritario al santuario",
+    "dataExport": "Portabilidad de datos personales"
+  },
+  "detailed_features": {
+    "advanced-analytics": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "ai-insights": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "pdf-export": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "data-export": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "priority-support": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "custom-themes": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "early-access": {
+      "name": "Acceso pionero",
+      "description": "Acceda a nuevas funciones y pruebas beta antes de que el mundo las vea."
+    }
+  },
+  "planDetails": {
+    "free": {
+      "name": "Basic",
+      "description": "Begin your journey of self-discovery",
+      "features": {
+        "unlimitedTests": "Unlimited Basic Tests",
+        "resultStorage": "Insight Journey Storage",
+        "basicSharing": "Basic Result Sharing",
+        "communitySupport": "Community Support"
+      }
+    },
+    "premium": {
+      "name": "Pro",
+      "description": "Unlock the full depth of your destiny",
+      "features": {
+        "allFreeFeatures": "Everything in Basic",
+        "aiAnalysis": "AI Deep Analysis",
+        "pdfReports": "PDF Insight Reports",
+        "advancedCompatibility": "Advanced Harmony Analysis",
+        "personalizedInsights": "Tailored Weekly Guidance",
+        "prioritySupport": "Priority Sanctuary Support",
+        "customExport": "Personal Data Portability"
+      }
+    }
+  }
+}

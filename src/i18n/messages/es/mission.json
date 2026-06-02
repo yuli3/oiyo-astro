@@ -1,0 +1,38 @@
+{
+  "title": "Nuestra Misión",
+  "description": "Para ayudarte a encontrarte a ti mismo.",
+  "counselor": {
+    "title": {
+      "ko": "Awaiting deep synthesis...",
+      "en": "Wisdom Curator",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "Curateur de sagesse",
+      "es": "Curador de sabiduría"
+    },
+    "blessing": "La bendición de tu existencia única.",
+    "shadowWork": "Guía compasiva para tus sombras interiores."
+  },
+  "coordinator": {
+    "title": {
+      "ko": "Awaiting deep synthesis...",
+      "en": "Wisdom Curator",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "Curateur de sagesse",
+      "es": "Curador de sabiduría"
+    },
+    "ritual": "Rituales prácticos para tu equilibrio diario."
+  },
+  "curator": {
+    "title": {
+      "ko": "Awaiting deep synthesis...",
+      "en": "Curador de sabiduría",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "Curador de sabiduría",
+      "es": "Curador de sabiduría"
+    },
+    "wisdom": "Fragmentos atemporales de conocimiento seleccionados para usted."
+  }
+}

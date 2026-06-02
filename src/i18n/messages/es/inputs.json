@@ -1,0 +1,31 @@
+{
+  "birthDate": "Fecha de Nacimiento",
+  "birthTime": "Hora de Nacimiento",
+  "calculate": "Calcular",
+  "formTitle": "Ingrese sus Detalles",
+  "privacyNote": "Sus datos no se almacenan de forma permanente.",
+  "nameLabel": "Nombre",
+  "namePlaceholder": "Ingrese su nombre",
+  "birthDateLabel": "Fecha de Nacimiento",
+  "birthTimeLabel": "Hora de Nacimiento",
+  "hourPlaceholder": "S.S",
+  "minutePlaceholder": "MM",
+  "locationLabel": "Lugar de Nacimiento",
+  "locationPlaceholder": "Ciudad, País",
+  "trueSolarTime": "Usar Hora Solar Verdadera",
+  "timeUnknownTitle": "Hora Desconocida",
+  "timeUnknownDesc": "Si se desconoce la hora, los cálculos pueden ser menos precisos.",
+  "genderLabel": "Género",
+  "genderPlaceholder": "Seleccionar Género",
+  "genderMale": "Masculino",
+  "genderFemale": "Femenino",
+  "calendarNoticeDesc": "Verifique la selección del calendario solar/lunar.",
+  "analyzing": "Analizando...",
+  "submitButton": "Analizar Destino",
+  "secureTransmission": "Transmisión Segura",
+  "location": "Lugar de Nacimiento",
+  "gender": "Género",
+  "title": {
+    "saju": "Entrada de Saju"
+  }
+}

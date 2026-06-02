@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "hero": {
+      "badge": "コミュニケーション分析",
+      "subtitle": "あなた独自のつながり方。"
+    },
+    "cta": {
+      "button": "診断結果を見る"
+    },
+    "sections": {
+      "strengths": "Key Strengths",
+      "traits": "Key Traits",
+      "challenges": "Challenges",
+      "workingWith": "Working With You"
+    },
+    "breakdown": {
+      "title": "コミュニケーションスタイル"
+    },
+    "additionalInsights": {
+      "title": "コミュニケーションスタイル"
+    },
+    "sharing": {
+      "testName": "Communication Style Test"
+    },
+    "keywords": "コミュニケーション, スタイル, 診断, 結果",
+    "title": "コミュニケーションスタイル",
+    "description": "コミュニケーションスタイルの分析。",
+    "scoreHeadline": "Primary Style",
+    "scoreDescription": "Your primary communication style is {primary}."
+  },
+  "hero": {
+    "subtitle": "あなた独自のつながり方。",
+    "cta": "診断を開始",
+    "badge": "コミュニケーション分析",
+    "title": "コミュニケーションスタイル"
+  },
+  "cta": {
+    "button": "診断結果を見る"
+  },
+  "matcher": {
+    "meta": {
+      "hero": {
+        "subtitle": "あなた独自のつながり方。"
+      },
+      "keywords": "コミュニケーション, スタイル, 診断, 結果",
+      "title": "コミュニケーションスタイル",
+      "description": "コミュニケーションスタイルの分析。"
+    },
+    "hero": {
+      "subtitle": "あなた独自のつながり方。",
+      "title": "コミュニケーションスタイル"
+    },
+    "selector": {
+      "subtitle": "あなた独自のつながり方。",
+      "person1": "1人目",
+      "person2": "2人目",
+      "selectType": "スタイルを選択",
+      "analyze": "分析する",
+      "title": "コミュニケーションスタイル"
+    },
+    "profile": {
+      "primaryStyle": "主要なコミュニケーションスタイル",
+      "strengths": "Key Strengths",
+      "preferredChannels": "好みのチャネル",
+      "communicationStyle": "コミュニケーションスタイル"
+    },
+    "analysis": {
+      "excellent": "最高の相性",
+      "good": "良い相性",
+      "fair": "普通の相性",
+      "challenging": "努力が必要",
+      "strengths": "Key Strengths",
+      "challenges": "Challenges",
+      "noChallenges": "特筆すべき課題は見つかりませんでした",
+      "improvementTips": "具体的な改善アドバイス",
+      "title": "コミュニケーションスタイル"
+    },
+    "actions": {
+      "tryAgain": "もう一度試す",
+      "share": "プロフィールを共有"
+    },
+    "sharing": {
+      "text": "コミュニケーションにおいて最も大切なことは何ですか？",
+      "copied": "コピーしました！",
+      "title": "コミュニケーションスタイル"
+    },
+    "benefits": {
+      "workplace": {
+        "title": "コミュニケーションスタイル",
+        "description": "コミュニケーションスタイルの分析。"
+      },
+      "relationships": {
+        "title": "コミュニケーションスタイル",
+        "description": "コミュニケーションスタイルの分析。"
+      },
+      "growth": {
+        "title": "コミュニケーションスタイル",
+        "description": "コミュニケーションスタイルの分析。"
+      }
+    },
+    "faq": {
+      "title": "コミュニケーションスタイル",
+      "question1": "どのくらいの時間がかかりますか？",
+      "answer1": "約2分で完了し、12個の直感的な質問で構成されています。",
+      "question2": "結果をどう活用すればいいですか？",
+      "answer2": "自分の習慣を理解し、他者との接し方を改善するために活用してください。",
+      "question3": "正確ですか？",
+      "answer3": "確立されたコミュニケーションパターンに基づいて、最適な洞察を提供します。",
+      "question4": "友人と共有できますか？",
+      "answer4": "もちろんです！お互いのスタイルを知ることで、不要な衝突を避けられます。"
+    },
+    "test": {
+      "progress": "省察の進捗",
+      "submit": "私の声を統合する",
+      "selectOption": "あなたの真実を響かせる道を選択",
+      "insightBullets": [
+        "会話の銀の糸をマッピングします。",
+        "あなたの意図が他の人の耳に届く反響に耳を傾けてください。",
+        "あなたの表現力豊かな魂の断片を集めてください。"
+      ],
+      "next": "前進",
+      "previous": "省察的な一歩",
+      "loading": "あなたのコミュニケーションの本質を映す鏡を作成中..."
+    },
+    "result": {
+      "title": "コミュニケーションスタイル",
+      "description": "コミュニケーションスタイルの分析。"
+    },
+    "title": "コミュニケーションスタイル",
+    "description": "コミュニケーションスタイルの分析。",
+    "keywords": "コミュニケーション, スタイル, 診断, 結果"
+  },
+  "benefits": {
+    "items": [
+      {
+        "title": "声の明瞭さ",
+        "description": "あなたが発するすべての言葉の背後にある主要な推進力を理解します。"
+      },
+      {
+        "title": "共感的に傾聴する",
+        "description": "あらゆる会話の中で、言葉にならない欲求を聞き出す耳を養いましょう。"
+      },
+      {
+        "title": "対立の錬金術",
+        "description": "会話の摩擦を、より深い理解のための火花に変えます。"
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "「コミュニケーションの原型」とは何ですか?",
+        "answer": "これは、社会的文脈における情報の処理、伝達、受信の基本的なパターンです。"
+      },
+      {
+        "question": "私の原型は私の社会的能力を定義しますか?",
+        "answer": "全くない。 それがあなたのスタイルを定義します。 熟練は、自分のスタイルを知り、他人の言語を学ぶことから生まれます。"
+      }
+    ]
+  },
+  "test": {
+    "progress": "省察の進捗",
+    "next": "前進",
+    "previous": "省察的な一歩",
+    "submit": "私の声を統合する",
+    "selectOption": "あなたの真実を響かせる道を選択",
+    "subtitle": "あなた独自のつながり方。",
+    "insightBullets": [
+      "社会的自己の構造を追跡します。",
+      "あなたのユニークな表現力豊かな魂のパターンを照らします。",
+      "トランスミッションの微妙な振動をデコードします。"
+    ],
+    "title": "コミュニケーションスタイル",
+    "loading": "あなたのコミュニケーションの本質を映す鏡を作成中..."
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "🗣️",
+        "title": "プロトタイプの識別",
+        "description": "核となる表現力豊かなリズムを正確にマッピングします。"
+      },
+      {
+        "icon": "👂",
+        "title": "共感的な意識",
+        "description": "あらゆる会話の裏側に耳を傾ける技術。"
+      }
+    ]
+  },
+  "result": {
+    "sections": {
+      "strengths": "Key Strengths",
+      "traits": "Key Traits",
+      "challenges": "Challenges",
+      "workingWith": "Working With You"
+    },
+    "breakdown": {
+      "title": "コミュニケーションスタイル"
+    },
+    "additionalInsights": {
+      "title": "コミュニケーションスタイル"
+    },
+    "sharing": {
+      "testName": "Communication Style Test"
+    },
+    "meta": {
+      "title": "コミュニケーションスタイル",
+      "description": "コミュニケーションスタイルの分析。",
+      "keywords": "コミュニケーション, スタイル, 診断, 結果"
+    },
+    "title": "コミュニケーションスタイル",
+    "description": "コミュニケーションスタイルの分析。",
+    "subtitle": "あなた独自のつながり方。",
+    "scoreHeadline": "Primary Style",
+    "scoreDescription": "Your primary communication style is {primary}."
+  },
+  "title": "コミュニケーションスタイル",
+  "description": "コミュニケーションスタイルの分析。",
+  "keywords": "コミュニケーション, スタイル, 診断, 結果"
+}

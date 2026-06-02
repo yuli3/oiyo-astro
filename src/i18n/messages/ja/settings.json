@@ -1,0 +1,44 @@
+{
+  "subtitle": "デジタルな存在の周波数を調整します。サンクチュアリがあなたの魂とどのように相互作用するかを調整してください。",
+  "title": "サンクチュアリの構成",
+  "subscription": {
+    "title": "Subscription Management",
+    "noActive": "No Active Subscription",
+    "noActiveDesc": "Unlock premium features today.",
+    "viewPlans": "View Plans",
+    "renewsOn": "Renews on {date}",
+    "expiresOn": "Expires on {date}",
+    "cancelSubscription": "Cancel Subscription",
+    "confirmCancel": "Are you sure?"
+  },
+  "sections": {
+    "access": {
+      "title": "サンクチュアリの構成",
+      "security": {
+        "title": "Sanctuary Configuration",
+        "description": "High contrast dark theme enabled"
+      },
+      "manage": "管理",
+      "signout": {
+        "title": "Sanctuary Configuration",
+        "description": "High contrast dark theme enabled"
+      }
+    },
+    "preferences": {
+      "title": "サンクチュアリの構成",
+      "signals": {
+        "title": "サンクチュアリの構成",
+        "description": "ハイコントラストのダークテーマが有効です"
+      },
+      "language": {
+        "title": "サンクチュアリの構成",
+        "description": "ハイコントラストのダークテーマが有効です"
+      },
+      "change": "変更",
+      "void": {
+        "title": "サンクチュアリの構成",
+        "description": "ハイコントラストのダークテーマが有効です"
+      }
+    }
+  }
+}

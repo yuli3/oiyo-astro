@@ -1,0 +1,41 @@
+{
+  "filters": {
+    "all": "すべて",
+    "testCompletion": "テスト",
+    "social": "ソーシャル",
+    "streak": "連続記録"
+  },
+  "notifications": {
+    "empty": "新しい通知はありません。"
+  },
+  "page": {
+    "title": "私の実績",
+    "subtitle": "進捗と解放したマイルストーンを確認しましょう。"
+  },
+  "badgesUnlocked": "獲得したバッジ",
+  "overallProgress": "総合進捗",
+  "viewAll": "すべて見る",
+  "emptyCategory": "このカテゴリにはまだ実績がありません。",
+  "labels": {
+    "level": "レベル",
+    "points": "ポイント"
+  },
+  "title": "達成",
+  "unlocked": "解放",
+  "firstTest": {
+    "name": "探索者",
+    "description": "Explored 3 categories."
+  },
+  "fiveTests": {
+    "name": "探索者",
+    "description": "Explored 3 categories."
+  },
+  "tenTests": {
+    "name": "探索者",
+    "description": "Explored 3 categories."
+  },
+  "explorer": {
+    "name": "探索者",
+    "description": "3つのカテゴリーを調べました。"
+  }
+}

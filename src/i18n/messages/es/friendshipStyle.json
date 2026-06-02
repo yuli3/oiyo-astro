@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Kindred Resonance",
+    "resultTitle": "{título} - Revelación",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "keywords": "resonancia de amistad, arquetipos sociales, geometría del alma, Oiyo"
+  },
+  "hero": {
+    "title": "Resonancia afín",
+    "subtitle": "Comprenda el ritmo profundo a través del cual construye y mantiene vínculos conmovedores.",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "cta": "Iniciar consulta",
+    "badge": "Your Kindred Signature"
+  },
+  "test": {
+    "insightBullets": [
+      "Descubre los patrones únicos que definen tu camino.",
+      "Ilumina las capas tácitas de tu filosofía social.",
+      "Nutre el vínculo sagrado a través de la conciencia."
+    ],
+    "progress": "Ascenso de resonancia",
+    "next": "Adelante",
+    "previous": "Reflejar",
+    "submit": "Revelar la síntesis",
+    "loading": "Distilling your social map...",
+    "selectOption": "Marca el camino de la verdad"
+  },
+  "result": {
+    "ai": {
+      "title": "Kindred Resonance",
+      "premium": "Informe alquímico personalizado",
+      "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+      "processing": "Sintetizando dinámicas...",
+      "processingKo": "Tratamiento...",
+      "upgrade": "Actualice para desbloquear el análisis alquímico",
+      "generate": "Generar estrategia alquímica",
+      "complete": "Análisis social sagrado completo"
+    },
+    "traits": {
+      "title": "Kindred Resonance"
+    },
+    "connections": {
+      "title": "Kindred Resonance",
+      "vibe": "Tu firma se alinea más armoniosamente con estos arquetipos:",
+      "proTip": "Nota de sabiduría: Su frecuencia complementa naturalmente estos arquetipos, facilitando la confianza inmediata y el crecimiento recursivo."
+    },
+    "actions": {
+      "retake": "Reiniciar la calibración",
+      "returnHome": "Regresar a Nexo"
+    },
+    "title": "Kindred Resonance",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "loading": "Destilando tu mapa social...",
+    "badge": "Su firma afín"
+  },
+  "title": "Resonancia afín",
+  "description": "Descubre los colores y temperaturas únicos de las amistades que colorean tu mundo."
+}

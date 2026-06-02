@@ -1,0 +1,89 @@
+{
+  "messages": {
+    "general": "당신의 이야기를 준비 중입니다...",
+    "stars": "운명의 실타래를 동기화하는 중...",
+    "rainbow": "무지개에 물을 주다...",
+    "flowers": "당신의 정체성의 기하학적 패턴을 해독합니다...",
+    "fox": "당신의 성격의 비밀 구조를 지도로 그려보세요...",
+    "stardust": "운명의 실타래를 동기화하는 중...",
+    "oracle": "오라클을 받고..",
+    "cards": "당신의 선택이 주는 깊은 울림을 분석하는 중...",
+    "moon": "달을 닦는 중...",
+    "dreams": "꿈을 짜다...",
+    "magic": "작은 마법을 부리다...",
+    "whale": "당신의 선택이 주는 깊은 울림을 분석하는 중...",
+    "trees": "천년고목이 회의를 하고 있다..",
+    "roots": "뿌리의 지하세계에 소식을 전하는 중...",
+    "ontology": "당신의 영혼의 디자인을 읽어보세요...",
+    "resonance": "당신의 영적 주파수를 조화롭게...",
+    "fortune": "수정구슬을 바라보며...",
+    "finance": "당신의 번영을 계산해 보세요...",
+    "relationship": "두 영혼의 주파수를 동기화하는 중...",
+    "cat_dog": "당신의 선택이 주는 깊은 울림을 분석하는 중...",
+    "milky_way": "은하수 너머에서 영감을 얻다...",
+    "moonlight": "당신의 정체성의 기하학적 패턴을 해독합니다...",
+    "wave_secret": "당신의 정체성의 기하학적 패턴을 해독합니다...",
+    "saju": "운명의 달력을 맞추다..."
+  },
+  "default": "운명의 실타래를 동기화하는 중...",
+  "rootLoading": {
+    "subtitle": "Are you lost?"
+  },
+  "localeLoading": {
+    "subtitle": "Are you lost?",
+    "title": "Test",
+    "description": "Discover OIYO tools and revelations."
+  },
+  "globalError": {
+    "tryAgain": "다시 시도",
+    "goHome": "Home",
+    "helpText": "문제가 지속되면 지원팀에 문의하세요."
+  },
+  "notFound": {
+    "title": "Test",
+    "subtitle": "길을 잃었나요?",
+    "description": "Discover OIYO tools and revelations.",
+    "goHome": "집",
+    "goBack": "돌아가기",
+    "suggestionsTitle": "어쩌면 당신은 이 페이지 중 하나를 찾고 있습니까?",
+    "popularTestsTitle": "인기 있는 테스트",
+    "egentetoTest": "테스트가 필요해요",
+    "mbtiAlternative": "MBTI 대안",
+    "allTests": "모든 테스트 보기",
+    "exploreTitle": "인기 있는 발견을 탐색해보세요",
+    "categoryCore": "핵심 성격",
+    "categoryLifestyle": "라이프 스타일",
+    "color": "색상",
+    "travel": "여행",
+    "relationship": {
+      "communicationStyle": "커뮤니케이션 스타일"
+    },
+    "test": {
+      "progress": "진전",
+      "next": "다음",
+      "previous": "이전의",
+      "submit": "제출하기",
+      "loading": "로드 중",
+      "selectOption": "선택하기",
+      "insightBullets": ["통찰력"]
+    },
+    "result": {
+      "title": "Test",
+      "description": "Discover OIYO tools and revelations."
+    },
+    "meta": {
+      "title": "시험",
+      "description": "OIYO 도구와 계시를 알아보세요.",
+      "keywords": "시험, 계시, OIYO"
+    }
+  },
+  "poetic": [
+    "별들의 속삭임을 들으며...",
+    "운명을 읽는다...",
+    "우주의 에너지를 모아...",
+    "기다려주세요, 신비한 이야기가 펼쳐집니다...",
+    "깊은 밤 달이 들려주는 이야기를 글로 적어보세요...",
+    "별자리가 보내는 신호를 해석하는 중...",
+    "답을 찾기 위해 시간의 강을 건너..."
+  ]
+}

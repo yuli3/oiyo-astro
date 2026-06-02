@@ -1,0 +1,14 @@
+{
+  "welcome": {
+    "title": "完了",
+    "description": "Setup finished."
+  },
+  "interests": {
+    "title": "完了",
+    "description": "Setup finished."
+  },
+  "complete": {
+    "title": "完了",
+    "description": "セットアップが完了しました。"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "share": {
+    "button": "귀하의 통찰력을 공유하십시오",
+    "title": "Personality Resonance Analysis",
+    "progress": "Until Next Level",
+    "preview": "카드 미리보기",
+    "kakao": "카카오톡",
+    "moreOptions": "공유 옵션 살펴보기"
+  },
+  "referral": {
+    "stats": {
+      "total": "총 초대 수",
+      "points": "에센스 포인트",
+      "premium": "프로 액세스 일수"
+    },
+    "tier": {
+      "progress": "다음 레벨까지",
+      "needed": "여전히 초대가 필요함",
+      "rewards": "사용 가능한 보상",
+      "premiumDays": "Pro 액세스 일수"
+    },
+    "link": {
+      "title": "Personality Resonance Analysis",
+      "copy": "링크 복사",
+      "copied": "링크가 복사되었습니다!"
+    },
+    "rewards": {
+      "title": "Personality Resonance Analysis",
+      "friendSignup": "친구가 깨어났을 때",
+      "firstTest": "처음으로 통찰력을 얻었을 때",
+      "friendPremium": "프로 여행을 하면서",
+      "active30": "30일 이후"
+    },
+    "title": "Personality Resonance Analysis",
+    "subtitle": "Compare your essence through a multitude of lenses."
+  },
+  "comparison": {
+    "quickActions": {
+      "friend": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "similar": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "celeb": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      }
+    },
+    "tabs": {
+      "similar": "Spirit",
+      "population": "글로벌 평균",
+      "celeb": "Icon",
+      "ideal": "Partner"
+    },
+    "sections": {
+      "similar": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "population": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "celeb": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "ideal": {
+        "title": "Personality Resonance Analysis",
+        "desc": "당신의 기질을 가장 아름답게 보완하는 기질을 탐구합니다."
+      }
+    },
+    "card": {
+      "viewDetails": "세부정보 살펴보기",
+      "share": "카드 공유"
+    },
+    "metrics": {
+      "compatibility": "고조파 호환성",
+      "similarity": "공명 유사성",
+      "insights": "핵심 통찰력",
+      "strengths": "빛나는 강점"
+    },
+    "modal": {
+      "close": "확인하다",
+      "recommendations": "권장 경로:"
+    },
+    "levels": {
+      "high": "Pivotal Difference",
+      "mediumHigh": "떠는",
+      "medium": "Noteworthy Shift",
+      "low": "Gentle Variance"
+    },
+    "diffs": {
+      "high": "중요한 차이점",
+      "medium": "주목할만한 변화",
+      "low": "온화한 변화"
+    },
+    "types": {
+      "friend": "친구",
+      "similar": "영혼",
+      "average": "평균",
+      "celeb": "상",
+      "ideal": "파트너"
+    },
+    "status": {
+      "loading": "공명 분석 중...",
+      "similarLoading": "성소에서 친절한 영혼을 구합니다.",
+      "avgLoading": "글로벌 태피스트리에서 귀하의 위치를 ​​매핑 중입니다...",
+      "celebLoading": "글로벌 아이콘과 공명 확인 중...",
+      "idealLoading": "고조파 보완 설계..."
+    },
+    "title": "성격 공명 분석",
+    "subtitle": "다양한 렌즈를 통해 당신의 본질을 비교해보세요."
+  }
+}

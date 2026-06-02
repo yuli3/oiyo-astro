@@ -1,0 +1,25 @@
+{
+  "title": "希腊化占星术",
+  "description": "由上升点、太阳和月亮计算得出的阿拉伯点，代表物质上的繁荣与健康。",
+  "principles": {
+    "sect": {
+      "term": "福点 (Lot of Fortune)",
+      "description": "由上升点、太阳和月亮计算得出的阿拉伯点，代表物质上的繁荣与健康。"
+    },
+    "essential_dignity": {
+      "term": "福点 (Lot of Fortune)",
+      "description": "由上升点、太阳和月亮计算得出的阿拉伯点，代表物质上的繁荣与健康。"
+    },
+    "lot_of_fortune": {
+      "term": "福点 (Lot of Fortune)",
+      "description": "由上升点、太阳和月亮计算得出的阿拉伯点，代表物质上的繁荣与健康。"
+    }
+  },
+  "resonance": {
+    "note": "档案正在观测你的{sect}生图。你的命运由{primary}（主导）和{secondary}（次导）锚定，并由{participating}提供支持。"
+  },
+  "sect": {
+    "Day": "昼间",
+    "Night": "夜间"
+  }
+}

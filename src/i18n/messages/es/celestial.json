@@ -1,0 +1,8 @@
+{
+  "status": "Estado Celestial",
+  "active": "Resonancia Activa",
+  "orbitalVelocity": "Velocidad Orbital",
+  "km": "km/s",
+  "lunarPhase": "Fase Lunar",
+  "waxing": "Luna Creciente"
+}

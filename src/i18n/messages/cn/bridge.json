@@ -1,0 +1,20 @@
+{
+  "catalyst": {
+    "title": "The Harmonious Traveler",
+    "description": "You navigate life with a balanced alignment between your innate fate and modern psychology. Your journey is one of integration.",
+    "friction": "Lack of a singular, dominant drive.",
+    "synergy": "Versatility and adaptability."
+  },
+  "bastion": {
+    "title": "The Harmonious Traveler",
+    "description": "You navigate life with a balanced alignment between your innate fate and modern psychology. Your journey is one of integration.",
+    "friction": "Lack of a singular, dominant drive.",
+    "synergy": "Versatility and adaptability."
+  },
+  "traveler": {
+    "title": "和谐的旅行者",
+    "description": "您可以在先天命运和现代心理学之间取得平衡，从而驾驭生活。 你的旅程是一场整合之旅。",
+    "friction": "缺乏单一的、主导性的驱动力。",
+    "synergy": "多功能性和适应性。"
+  }
+}

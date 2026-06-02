@@ -1,0 +1,541 @@
+{
+  "egenteto": {
+    "meta": {
+      "hero": {
+        "badge": "personalityTwin badge",
+        "subtitle": "Ma tendance à le découvrir grâce à l'équilibre hormonal",
+        "cta": "Find My Twins"
+      },
+      "benefits": {
+        "subtitle": "Détails"
+      },
+      "types": {
+        "subtitle": "Introduction aux types"
+      },
+      "keywords": "Eggenteto, analyse de personnalité, hormones, test psychologique, compatibilité",
+      "description": "Analysez votre équilibre en testostérone et en œstrogènes pour découvrir vos tendances cachées.",
+      "title": "Besoin d'une analyse de personnalité"
+    },
+    "hero": {
+      "subtitle": "Mon essence vue à travers l'équilibre hormonal",
+      "cta": "Find My Twins",
+      "badge": "personalityTwin badge",
+      "title": "J'ai besoin d'un diagnostic de personnalité",
+      "description": "Analysez votre équilibre en testostérone et en œstrogènes pour découvrir vos tendances cachées."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "Connaissez votre type",
+          "description": "Êtes-vous à dominante testostérone ou œstrogène ?"
+        },
+        {
+          "icon": "💕",
+          "title": "Match de rencontre",
+          "description": "Trouvez des partenaires compatibles pour votre type hormonal."
+        },
+        {
+          "icon": "🎯",
+          "title": "Découverte de soi",
+          "description": "Comprenez vos motivations comportementales."
+        },
+        {
+          "icon": "🌟",
+          "title": "Partager les résultats",
+          "description": "Comparez instantanément les types avec vos amis."
+        }
+      ],
+      "subtitle": "Ce qu'un diagnostic peut vous dire",
+      "title": "Analyse nécessaire"
+    },
+    "types": {
+      "tetonam": {
+        "name": "Tétonam",
+        "emoji": "💖",
+        "subtitle": "hommes ayant un taux de testostérone élevé",
+        "description": "Ils sont axés sur les objectifs, aiment la compétition et préfèrent les solutions logiques."
+      },
+      "egennam": {
+        "name": "j'en ai besoin",
+        "emoji": "💖",
+        "subtitle": "hommes hyperestrogènes",
+        "description": "Ils ont une excellente empathie, valorisent l’harmonie et ont une sensibilité délicate."
+      },
+      "tetonye": {
+        "name": "Fille Téton",
+        "emoji": "💖",
+        "subtitle": "femmes ayant un taux de testostérone élevé",
+        "description": "Ils sont proactifs, décisifs et ont un fort sentiment d’indépendance."
+      },
+      "egennye": {
+        "name": "Egennyeo",
+        "emoji": "💖",
+        "subtitle": "femmes hyperestrogènes",
+        "description": "Chaleureux, accueillant et intuitif."
+      },
+      "subtitle": "4 archétypes",
+      "title": "Introduction aux types de personnalité"
+    },
+    "resultPage": {
+      "breadcrumbs": {
+        "home": "Home",
+        "test": "diagnostic",
+        "result": "résultat"
+      },
+      "test": {
+        "insightBullets": ["Cartographier la constellation de votre vrai moi."],
+        "progress": "progrès",
+        "submit": "Afficher les résultats",
+        "loading": "Analyser...",
+        "selectOption": "Select Option",
+        "next": "suivante",
+        "previous": "avant"
+      },
+      "result": {
+        "title": "Votre type d'oeuf",
+        "description": "L'équilibre hormonal révèle votre vrai moi"
+      },
+      "meta": {
+        "title": "Résultats d'analyse de personnalité nécessaires",
+        "description": "Quel est votre type de personnalité en fonction de l’équilibre entre testostérone et œstrogène ?",
+        "keywords": "Eggenteto, test de personnalité, hormones, MBTI, compatibilité amoureuse"
+      },
+      "titleTemplate": "résultat {typeName} | Test de personnalité Egenteto",
+      "descriptionTemplate": "Vous êtes {typeName} ! {typeDescription} Découvrez votre type de personnalité et votre compatibilité amoureuse avec le test Eggenteto."
+    },
+    "relationship": {
+      "compatibility": {
+        "title": "Résumé des informations",
+        "subtitle": "Détails",
+        "description": "Feuille de route de croissance suggérée par l’IA",
+        "chain": "Chaîne",
+        "note": "Note"
+      }
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "answer": "Your unique perspective shapes your reality.",
+          "question": "What drives your inner world?"
+        },
+        "1": {
+          "answer": "Your unique perspective shapes your reality.",
+          "question": "What drives your inner world?"
+        },
+        "2": {
+          "answer": "Your unique perspective shapes your reality.",
+          "question": "What drives your inner world?"
+        },
+        "3": {
+          "answer": "Your unique perspective shapes your reality.",
+          "question": "What drives your inner world?"
+        },
+        "4": {
+          "answer": "Your unique perspective shapes your reality.",
+          "question": "What drives your inner world?"
+        }
+      },
+      "title": "Résumé des informations"
+    },
+    "result": {
+      "title": "Résultats d'analyse détaillés",
+      "traits": "traits de personnalité",
+      "description": "Nous explorons votre potentiel grâce à une analyse approfondie sous différents angles.",
+      "compatibility": "Compatibilité",
+      "share": "Partager",
+      "copied": "Copié",
+      "copy": "Copie",
+      "retake": "Diagnostiquer à nouveau"
+    },
+    "test": {
+      "title": "Résultats d'analyse personnalisés",
+      "subtitle": "Rapport d'analyse approfondie",
+      "progress": "progrès",
+      "submit": "Rapport Destiny ouvert",
+      "next": "suivante",
+      "previous": "Précédemment"
+    },
+    "navigation": {
+      "home": "Maison"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "text": "J'ai tendance à être très direct et honnête, même si cela peut blesser quelqu'un.",
+        "category": "T"
+      },
+      {
+        "id": "q2",
+        "text": "Je suis profondément ému par les émotions des autres, même des étrangers.",
+        "category": "E"
+      },
+      {
+        "id": "q3",
+        "text": "J'aime la compétition et le sentiment de remporter un défi.",
+        "category": "T"
+      },
+      {
+        "id": "q4",
+        "text": "Je donne souvent la priorité à l’harmonie de groupe plutôt qu’à mes propres besoins individuels.",
+        "category": "E"
+      },
+      {
+        "id": "q5",
+        "text": "Je préfère analyser les situations de manière logique plutôt que de me fier à mon intuition.",
+        "category": "T"
+      },
+      {
+        "id": "q6",
+        "text": "Je trouve facile de m'imaginer à la place de quelqu'un d'autre.",
+        "category": "E"
+      },
+      {
+        "id": "q7",
+        "text": "Je suis à l'aise de prendre des risques pour atteindre mes objectifs.",
+        "category": "T"
+      },
+      {
+        "id": "q8",
+        "text": "Je suis sensible aux signaux subtils et au langage corporel des autres.",
+        "category": "E"
+      },
+      {
+        "id": "q9",
+        "text": "Je préfère les hiérarchies claires et les rôles définis dans une équipe.",
+        "category": "T"
+      },
+      {
+        "id": "q10",
+        "text": "J'apprécie davantage les conversations profondes et significatives que les bavardages superficiels.",
+        "category": "E"
+      },
+      {
+        "id": "q11",
+        "text": "On me décrit souvent comme quelqu'un d'affirmé et de déterminé.",
+        "category": "T"
+      },
+      {
+        "id": "q12",
+        "text": "J'essaie naturellement de servir de médiateur lorsque je constate un conflit entre amis.",
+        "category": "E"
+      }
+    ],
+    "badge": "personalityTwin badge",
+    "cta": "Find My Twins",
+    "title": "Besoin d'une analyse de personnalité",
+    "description": "Découvrez votre vraie personnalité grâce à l'équilibre hormonal",
+    "keywords": "Diagnostic de personnalité, Eggenteto, hormones, test psychologique",
+    "subtitle": "Détails",
+    "male": "Femelle",
+    "female": "Femelle",
+    "a": "Populaire"
+  },
+  "personalityTwin": {
+    "finder": {
+      "meta": {
+        "hero": {
+          "badge": "personalityTwin badge",
+          "subtitle": "Découvrez des informations approfondies sur vous-même."
+        },
+        "features": {
+          "subtitle": "Détails"
+        },
+        "keywords": "Analyse de personnalité, découverte de soi, insight premium",
+        "title": "Rapport d'analyse approfondie",
+        "description": "Nous explorons votre potentiel grâce à une analyse approfondie sous différents angles."
+      },
+      "hero": {
+        "badge": "personalityTwin badge",
+        "subtitle": "Trouvez une âme qui vous ressemble parfaitement",
+        "cta": "Find My Twins",
+        "title": "Personnage jumeau",
+        "description": "Nous vous aiderons à trouver des personnes du monde entier qui ont des pensées et des valeurs incroyablement similaires."
+      },
+      "features": {
+        "list": [
+          "Trouvez des amis qui vous comprennent vraiment",
+          "Découvrez la compatibilité amoureuse",
+          "Établir des relations professionnelles significatives",
+          "Connectez-vous avec des personnes partageant les mêmes idées"
+        ],
+        "accurate": {
+          "title": "Analyse IA de haute précision",
+          "description": "Analysez des milliers de points de données pour calculer la similarité."
+        },
+        "anonymous": {
+          "title": "anonymat complet",
+          "description": "Les informations personnelles sont entièrement protégées et peuvent être utilisées en toute sécurité."
+        },
+        "realtime": {
+          "title": "Correspondance en temps réel",
+          "description": "Trouvez votre adolescent parmi les utilisateurs actuellement actifs."
+        },
+        "subtitle": "Principales caractéristiques",
+        "title": "Caractéristiques de Persona Twin"
+      },
+      "test": {
+        "insightBullets": [
+          "Découvrez les modèles uniques qui définissent votre chemin."
+        ],
+        "progress": "progrès",
+        "submit": "Rapport Destiny ouvert",
+        "loading": "Chargement",
+        "selectOption": "Select Option",
+        "next": "suivante",
+        "previous": "Précédemment"
+      },
+      "result": {
+        "title": "Résultats d'analyse détaillés",
+        "description": "Nous explorons votre potentiel grâce à une analyse approfondie sous différents angles."
+      },
+      "noMatches": "Aucun jumeau trouvé pour l'instant",
+      "findNow": "Trouver des jumeaux",
+      "matches": "{count} correspondances trouvées",
+      "topMatch": "Meilleure correspondance : {percentage} % de similitudes",
+      "title": "Personnage jumeau",
+      "description": "Trouver un ami avec une personnalité similaire à la mienne",
+      "keywords": "Correspondance de personnalité, trouver des amis, MBTI, âme sœur"
+    },
+    "ui": {
+      "matchTypes": {
+        "perfectTwin": "Jumeau à la personnalité parfaite ! 🎯",
+        "closeMatch": "Personnalité très similaire ! ✨",
+        "complementary": "Relation complémentaire ! 🤝",
+        "opposite": "Match opposé mais passionnant ! 🌓"
+      },
+      "compatibilityLevels": {
+        "excellent": "Excellent",
+        "great": "Grande compatibilité!",
+        "good": "Bonne compatibilité !",
+        "decent": "Compatibilité décente",
+        "unique": "Combinaison unique"
+      },
+      "subtitle": "Rapport d'analyse approfondie",
+      "searching": "Découvrez votre texture unique grâce à une analyse plus sophistiquée.",
+      "noMatches": "Découvrez votre texture unique grâce à une analyse plus sophistiquée.",
+      "noMatchesDesc": "Nous explorons votre potentiel grâce à une analyse approfondie sous différents angles.",
+      "similarity": "Similarité",
+      "sharedTraits": "Caractéristiques partagées",
+      "sharedTraitsNone": "Aucun trait partagé pour l'instant",
+      "sharedTraitsList": "Caractéristiques partagées : {traits}",
+      "sharedTraitsListMore": "Traits partagés : {traits}...",
+      "differences": "Différences",
+      "connectTwin": "Connectez-vous avec Twin",
+      "shareResult": "Partager le résultat",
+      "findMore": "Find More Twins",
+      "stats": "Statistiques",
+      "totalProfiles": "Total des profils",
+      "recentMatches": "Matchs récents",
+      "backToList": "Retour à la liste",
+      "compatibility": "Compatibilité",
+      "title": "Résumé des informations"
+    },
+    "meta": {
+      "keywords": "Analyse de personnalité, découverte de soi, insight premium",
+      "resultTitle": "Découvrez votre texture unique grâce à une analyse plus sophistiquée.",
+      "resultDescription": "Nous explorons votre potentiel grâce à une analyse approfondie sous différents angles.",
+      "testTitle": "Découvrez votre texture unique grâce à une analyse plus sophistiquée.",
+      "testDescription": "Nous explorons votre potentiel grâce à une analyse approfondie sous différents angles.",
+      "title": "Test de personnalité jumelle",
+      "description": "Nous explorons votre potentiel grâce à une analyse approfondie sous différents angles."
+    },
+    "hero": {
+      "subtitle": "Rapport d'analyse approfondie",
+      "cta": "Trouver mes jumeaux",
+      "badge": "personnalitéTwin badge"
+    },
+    "button": {
+      "finding": "Trouver des jumeaux...",
+      "findTwins": "Trouver mes jumeaux",
+      "helper": "Découvrez votre texture unique grâce à une analyse plus sophistiquée."
+    },
+    "stats": {
+      "twinsFound": "twins found",
+      "avgMatch": "Correspondance moyenne",
+      "excellent": "Excellent",
+      "bestMatch": "Meilleure correspondance"
+    },
+    "matchQuality": {
+      "destinyTwin": "Destin jumeau",
+      "perfectMatch": "Correspondance parfaite",
+      "amazingMatch": "Match incroyable",
+      "greatMatch": "Super match",
+      "goodMatch": "Bon match",
+      "fairMatch": "Correspondance équitable"
+    },
+    "list": {
+      "findingTwins": "Retrouver ses jumeaux...",
+      "noTwinsTitle": "Aucun jumeau trouvé pour l'instant",
+      "noTwinsDescription": "Nous explorons votre potentiel grâce à une analyse approfondie sous différents angles.",
+      "searchAgain": "Rechercher à nouveau",
+      "allTwins": "Tous les jumeaux",
+      "twinsFound": "jumeaux trouvés",
+      "findMore": "Trouver plus de jumeaux"
+    },
+    "card": {
+      "testResults": "Résultats des tests",
+      "sharedTests": "Tests partagés",
+      "specialInsights": "Informations spéciales",
+      "totalTests": "tests terminés",
+      "match": "Correspondre"
+    },
+    "cta": {
+      "subtitle": "Rapport d'analyse approfondie"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Ontologie 1",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🚀",
+          "title": "Ontologie 2",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "💡",
+          "title": "Ontologie 3",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🎯",
+          "title": "Ontologie 4",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🔥",
+          "title": "Ontologie 5",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "⭐",
+          "title": "Ontologie 6",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Ontologie 1",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "🚀",
+          "title": "Ontologie 2",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "💡",
+          "title": "Ontologie 3",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🎯",
+          "title": "Ontologie 4",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🔥",
+          "title": "Ontologie 5",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "⭐",
+          "title": "Ontologie 6",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Ontologie 1",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🚀",
+          "title": "Ontologie 2",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "💡",
+          "title": "Ontologie 3",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🎯",
+          "title": "Ontologie 4",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "🔥",
+          "title": "Ontologie 5",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "⭐",
+          "title": "Ontologie 6",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Force de signature", "Point pivot", "2"],
+      "progress": "progrès",
+      "submit": "Rapport Destiny ouvert",
+      "loading": "Veuillez patienter, analyse...",
+      "selectOption": "Sélectionnez une option",
+      "subtitle": "Détails",
+      "next": "suivante",
+      "previous": "au précédent"
+    },
+    "result": {
+      "title": "Résultats d'analyse détaillés",
+      "description": "Nous explorons votre potentiel grâce à une analyse approfondie sous différents angles."
+    },
+    "title": "Résultats d'analyse personnalisés",
+    "description": "Découvrez une variété d’outils d’analyse d’identité conçus pour une découverte de soi approfondie."
+  }
+}

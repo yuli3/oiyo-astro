@@ -1,0 +1,336 @@
+{
+  "chineseZodiac": {
+    "title": "Numérologie",
+    "description": "Life path",
+    "accuracy": "Élevé",
+    "duration": "Rapide"
+  },
+  "numerology": {
+    "title": "Numérologie",
+    "description": "Chemin de vie",
+    "accuracy": "Élevé",
+    "duration": "Rapide"
+  },
+  "primal-origin": {
+    "landing": {
+      "badge": "La Révélation Ultime",
+      "title": "L'Origine Primordiale",
+      "subtitle": "Déverrouillez votre sceau numérique et révélez votre destin",
+      "cta": "Dévoiler Mon Origine",
+      "features": {
+        "triple": {
+          "title": "L'Origine Primordiale",
+          "desc": "Comment votre groupe sanguin influence vos traits cosmiques et votre personnalité."
+        },
+        "celestial": {
+          "title": "L'Origine Primordiale",
+          "desc": "Comment votre groupe sanguin influence vos traits cosmiques et votre personnalité."
+        },
+        "genetic": {
+          "title": "L'Origine Primordiale",
+          "desc": "Comment votre groupe sanguin influence vos traits cosmiques et votre personnalité."
+        }
+      }
+    },
+    "input": {
+      "title": "L'Origine Primordiale",
+      "subtitle": "Déverrouillez votre sceau numérique et révélez votre destin",
+      "nameLabel": "Nom (Optionnel)",
+      "namePlaceholder": "Votre nom complet",
+      "genderLabel": "Genre",
+      "male": "Homme",
+      "female": "Femme",
+      "birthDateLabel": "Date de Naissance",
+      "birthTimeLabel": "Heure de Naissance",
+      "bloodTypeLabel": "Groupe Sanguin",
+      "submitButton": "Dévoiler Mon Origine",
+      "decrypting": "Déchiffrement de l'Origine..."
+    }
+  },
+  "T": "T",
+  "dailyLucky": {
+    "back": "Retour",
+    "colors": {
+      "beige": "Beige",
+      "black": "Noir",
+      "gold": "Or",
+      "green": "Vert",
+      "mint": "Menthe",
+      "navy": "Bleu Marine",
+      "pink": "Rose",
+      "purple": "Violet",
+      "red": "Rouge",
+      "sky": "Bleu Ciel",
+      "white": "Blanc"
+    },
+    "directions": {
+      "east": "Est",
+      "north": "Nord",
+      "northeast": "Nord-Est",
+      "northwest": "Nord-Ouest",
+      "south": "Sud",
+      "southeast": "Sud-Est",
+      "southwest": "Sud-Ouest",
+      "west": "Ouest"
+    },
+    "footer": "Guidance Quotidienne",
+    "items": {
+      "book": "Livre",
+      "cap": "Casquette",
+      "coffee": "Café",
+      "coin": "Pièce",
+      "earring": "Boucle d'oreille",
+      "glasses": "Lunettes",
+      "headphones": "Casque",
+      "key": "Clé",
+      "mirror": "Miroir",
+      "pen": "Stylo",
+      "perfume": "Parfum",
+      "phone": "Téléphone",
+      "plant": "Plante",
+      "ring": "Bague",
+      "sneakers": "Baskets",
+      "umbrella": "Parapluie",
+      "watch": "Montre"
+    },
+    "keyword": "Mot-clé du Jour",
+    "keywords": {
+      "cleaning": "Nettoyage",
+      "connection": "Connexion",
+      "courage": "Courage",
+      "creativity": "Créativité",
+      "focus": "Se concentrer",
+      "kindness": "Bonté",
+      "patience": "Patience",
+      "rest": "Repos",
+      "savings": "Économies",
+      "silence": "Silence"
+    },
+    "meta": {
+      "description": "Vous avez besoin de repos",
+      "keywords": "fortune",
+      "title": "L'Origine Primordiale"
+    },
+    "result": {
+      "description": "Vous avez besoin de repos",
+      "title": "L'Origine Primordiale"
+    },
+    "sharePersonalizedPrefix": "Ma Chance",
+    "shareTemplate": "Regarde ça",
+    "subtitle": "Déverrouillez votre sceau numérique et révélez votre destin",
+    "test": {
+      "insightBullets": ["Une vision profonde"],
+      "loading": "Chargement...",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "progress": "Progrès",
+      "selectOption": "Sélectionner",
+      "submit": "Soumettre"
+    },
+    "title": "L'Origine Primordiale",
+    "yourLucky": "Vos Objets Chanceux",
+    "zodiac": {
+      "aquarius": "Verseau",
+      "aries": "Bélier",
+      "cancer": "Cancer",
+      "capricorn": "Capricorne",
+      "gemini": "Gémeaux",
+      "leo": "Lion",
+      "libra": "Balance",
+      "pisces": "Poissons",
+      "sagittarius": "Sagittaire",
+      "scorpio": "Scorpion",
+      "taurus": "Taureau",
+      "virgo": "Vierge"
+    }
+  },
+  "dailyOracle": {
+    "hub": {
+      "luckyDesc": "Vérifiez votre chance",
+      "luckyTitle": "Objets Chanceux",
+      "personaDesc": "Votre persona du jour",
+      "personaTitle": "Personnage",
+      "subtitle": "Déverrouillez votre sceau numérique et révélez votre destin",
+      "tabs": {
+        "lucky": "Chance",
+        "oracle": "Oracle",
+        "personality": "Personnalité"
+      },
+      "title": "L'Origine Primordiale"
+    },
+    "identify": {
+      "button": "Commencer",
+      "description": "Vous avez besoin de repos",
+      "title": "L'Origine Primordiale"
+    },
+    "loading": "Chargement...",
+    "share": "Partager",
+    "subtitle": "Déverrouillez votre sceau numérique et révélez votre destin",
+    "title": "L'Origine Primordiale"
+  },
+  "dailyReading": {
+    "cards": {
+      "refresh": "Actualiser",
+      "reminder": "Rappel",
+      "subtitle": "Déverrouillez votre sceau numérique et révélez votre destin"
+    },
+    "hero": {
+      "cta": "Dévoiler Mon Origine",
+      "eyebrow": "Aujourd'hui",
+      "subtitle": "Déverrouillez votre sceau numérique et révélez votre destin"
+    },
+    "meta": {
+      "description": "Vous avez besoin de repos",
+      "keywords": "fortune",
+      "title": "L'Origine Primordiale"
+    },
+    "summary": {
+      "energy": "Énergie",
+      "focus": "Se concentrer",
+      "luckyColor": "Couleur"
+    }
+  },
+  "days": "Jours",
+  "description": "Vous avez besoin de repos",
+  "energyScore": "Score d'Énergie",
+  "feature1Desc": "Fonctionnalité 1",
+  "feature1Title": "Titre 1",
+  "feature2Desc": "Fonctionnalité 2",
+  "feature2Title": "Titre 2",
+  "feature3Desc": "Fonctionnalité 3",
+  "feature3Title": "Titre 3",
+  "historySubtitle": "Lectures Passées",
+  "historyTitle": "Historique",
+  "hub": {
+    "cta": "Dévoiler Mon Origine",
+    "description": "Vous avez besoin de repos",
+    "subtitle": "Déverrouillez votre sceau numérique et révélez votre destin",
+    "title": "L'Origine Primordiale"
+  },
+  "longestStreak": "Plus Longue Série",
+  "meta": {
+    "description": "Vous avez besoin de repos",
+    "keywords": "fortune",
+    "subtitle": "Déverrouillez votre sceau numérique et révélez votre destin",
+    "title": "L'Origine Primordiale"
+  },
+  "mostCommon": "Plus Commun",
+  "noData": "Pas de Données",
+  "question": "Question",
+  "questions": {
+    "q1": {
+      "options": {
+        "o1": "Option 1",
+        "o2": "Option 2",
+        "o3": "Option 3",
+        "o4": "Option 4"
+      },
+      "text": "Question 5"
+    },
+    "q2": {
+      "options": {
+        "o1": "Option 1",
+        "o2": "Option 2",
+        "o3": "Option 3",
+        "o4": "Option 4"
+      },
+      "text": "Question 5"
+    },
+    "q3": {
+      "options": {
+        "o1": "Option 1",
+        "o2": "Option 2",
+        "o3": "Option 3",
+        "o4": "Option 4"
+      },
+      "text": "Question 5"
+    },
+    "q4": {
+      "options": {
+        "o1": "Option 1",
+        "o2": "Option 2",
+        "o3": "Option 3",
+        "o4": "Option 4"
+      },
+      "text": "Question 5"
+    },
+    "q5": {
+      "options": {
+        "o1": "Option 1",
+        "o2": "Option 2",
+        "o3": "Option 3",
+        "o4": "Option 4"
+      },
+      "text": "Question 5"
+    }
+  },
+  "reminder": "Rappel",
+  "reminderText": "N'oubliez pas",
+  "result": {
+    "description": "Vous avez besoin de repos",
+    "title": "L'Origine Primordiale"
+  },
+  "results": {
+    "balanced": {
+      "advice": "Faites une pause",
+      "description": "Vous avez besoin de repos",
+      "traits": {
+        "0": "Paisible",
+        "1": "Détendu",
+        "2": "Lent"
+      },
+      "type": "Reposant"
+    },
+    "energetic": {
+      "advice": "Faites une pause",
+      "description": "Vous avez besoin de repos",
+      "traits": {
+        "0": "Paisible",
+        "1": "Détendu",
+        "2": "Lent"
+      },
+      "type": "Reposant"
+    },
+    "reflective": {
+      "advice": "Faites une pause",
+      "description": "Vous avez besoin de repos",
+      "traits": {
+        "0": "Paisible",
+        "1": "Détendu",
+        "2": "Lent"
+      },
+      "type": "Reposant"
+    },
+    "restful": {
+      "advice": "Faites une pause",
+      "description": "Vous avez besoin de repos",
+      "traits": {
+        "0": "Paisible",
+        "1": "Détendu",
+        "2": "Lent"
+      },
+      "type": "Reposant"
+    }
+  },
+  "shareResult": "Partager Résultat",
+  "shareTitle": "Partager",
+  "startDaily": "Lancer Quotidien",
+  "subtitle": "Déverrouillez votre sceau numérique et révélez votre destin",
+  "takeOtherTests": "Faire d'autres tests",
+  "test": {
+    "insightBullets": ["Une vision profonde"],
+    "loading": "Chargement...",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "progress": "Progrès",
+    "selectOption": "Sélectionner",
+    "submit": "Soumettre"
+  },
+  "title": "L'Origine Primordiale",
+  "todayAdvice": "Conseil du Jour",
+  "totalDays": "Jours Totaux",
+  "trendChart": "Graphique de Tendance",
+  "uniqueTypes": "Types Uniques",
+  "viewHistory": "Voir Historique",
+  "welcomeTitle": "Bienvenue"
+}

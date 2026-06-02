@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "back": "단계 추적",
+    "logout": "서버링크(로그아웃)"
+  },
+  "search": {
+    "placeholder": "연대기를 검색해 보세요..."
+  },
+  "actions": {
+    "export": "기록 내보내기"
+  },
+  "alerts": {
+    "title": "시스템 공명"
+  },
+  "status": {
+    "healthy": "조화로운",
+    "warning": "불안정한",
+    "critical": "골절"
+  },
+  "metrics": {
+    "activeUsers": "활동적인 영혼",
+    "systemLoad": "에테르 부하",
+    "latency": "시간적 변화",
+    "errorRate": "리프트 빈도"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "birthdate": "生年月日",
+    "analyze": "分析する",
+    "dob": "生年月日",
+    "check": "確認"
+  },
+  "meta": {
+    "title": "誕生花を探す",
+    "description": "あなたの魂に似た花は何でしょうか？",
+    "keywords": "誕生花, 花言葉, 性格テスト, 誕生日, 花"
+  },
+  "result": {
+    "stone": "誕生石",
+    "flower": "誕生花",
+    "color": "守護色",
+    "title": "誕生花を探す",
+    "description": "あなたの魂に似た花は何でしょうか？"
+  },
+  "test": {
+    "progress": "進捗",
+    "submit": "送信",
+    "loading": "読み込み中",
+    "selectOption": "選択",
+    "insightBullets": [
+      "花の象徴的な意味を分析してみると…",
+      "性格特性を分析しています...",
+      "誕生花の運命を確かめる…。"
+    ],
+    "next": "次へ",
+    "previous": "前へ"
+  },
+  "title": "誕生花を探す",
+  "description": "あなたの魂に似た花は何でしょうか？"
+}

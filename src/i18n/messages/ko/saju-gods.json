@@ -1,0 +1,117 @@
+{
+  "title": "십신(십신)",
+  "gods": {
+    "BI_GYEON": {
+      "name": "친구",
+      "meaning": "병렬/동등 전력",
+      "keywords": "독립, 평등, 동지애"
+    },
+    "GEOP_JAE": {
+      "name": "롭 웰스",
+      "meaning": "경쟁자",
+      "keywords": "야망, 경쟁, 추진력"
+    },
+    "SIK_SIN": {
+      "name": "신을 먹다",
+      "meaning": "아티스트",
+      "keywords": "창의성, 즐거움, 표현력"
+    },
+    "SANG_GWAN": {
+      "name": "상처받는 장교",
+      "meaning": "반역자",
+      "keywords": "혁신, 도전, 광채"
+    },
+    "PYEON_JAE": {
+      "name": "간접적인 부",
+      "meaning": "기업가",
+      "keywords": "위험, 기회, 유동성"
+    },
+    "JEONG_JAE": {
+      "name": "직접적인 부",
+      "meaning": "절약기",
+      "keywords": "안정성, 절약, 기획"
+    },
+    "PYEON_GWAN": {
+      "name": "일곱 살인",
+      "meaning": "전사",
+      "keywords": "힘, 규율, 용기"
+    },
+    "JEONG_GWAN": {
+      "name": "직속임원",
+      "meaning": "외교관",
+      "keywords": "명예, 규칙, 지위"
+    },
+    "PYEON_IN": {
+      "name": "간접 자원",
+      "meaning": "미스틱",
+      "keywords": "직관, 파격, 미스터리"
+    },
+    "JEONG_IN": {
+      "name": "직접 자원",
+      "meaning": "학자",
+      "keywords": "지혜, 지원, 전통"
+    }
+  },
+  "fateStars": {
+    "cheonaek": {
+      "name": "고난의 별",
+      "keyword": "회복력",
+      "description": "초기 시련을 통해 더 큰 사람으로 성장합니다."
+    },
+    "cheonbok": {
+      "name": "축복의 별",
+      "keyword": "번영",
+      "description": "정직한 노력을 통해 하늘의 축복과 물질적 풍요를 누리십시오."
+    },
+    "cheongan": {
+      "name": "전략의 별",
+      "keyword": "전략",
+      "description": "뛰어난 정신적 민첩성과 전략적 판단력."
+    },
+    "cheongo": {
+      "name": "고독의 별",
+      "keyword": "독립",
+      "description": "고귀한 태도와 자주적이고 자기반성적인 정신."
+    },
+    "cheongwi": {
+      "name": "노블스타",
+      "keyword": "귀족",
+      "description": "깊은 존경심을 불러일으키는 자연스러운 우아함과 에너지."
+    },
+    "cheongwon": {
+      "name": "권위의 별",
+      "keyword": "권한",
+      "description": "타인을 지배하는 지휘력과 강력한 리더십 카리스마."
+    },
+    "cheonin": {
+      "name": "끈기의 별",
+      "keyword": "끈기",
+      "description": "칼날만큼 날카로운 통찰력과 끈질긴 실행력."
+    },
+    "cheonmun": {
+      "name": "읽고 쓰는 능력의 별",
+      "keyword": "지혜",
+      "description": "학문적 깊이와 뛰어난 문학적 재능을 결합한 에너지."
+    },
+    "cheonpa": {
+      "name": "돌파의 스타",
+      "keyword": "혁신",
+      "description": "새로운 길을 개척하는 강력한 돌파구입니다."
+    },
+    "cheonsu": {
+      "name": "장수의 별",
+      "keyword": "장수",
+      "description": "시간이 지나도 변함없는 생명력과 차분한 인내심."
+    },
+    "cheonye": {
+      "name": "예술의 별",
+      "keyword": "예술적 기교",
+      "description": "다재다능한 기술과 풍부한 예술적 감성."
+    },
+    "cheonyeok": {
+      "name": "운동의 별",
+      "keyword": "움직임",
+      "description": "움직임을 통해 지평을 확장하는 역동적인 에너지."
+    }
+  }
+}

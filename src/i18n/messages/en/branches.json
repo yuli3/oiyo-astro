@@ -1,0 +1,86 @@
+{
+  "JA": {
+    "animal": "Rat",
+    "meaning": "Smart",
+    "name": "Ja",
+    "season": "Winter",
+    "time": "Midnight"
+  },
+  "CHUK": {
+    "animal": "Ox",
+    "meaning": "Diligent",
+    "name": "Chuk",
+    "season": "Late Winter",
+    "time": "1-3 AM"
+  },
+  "IN": {
+    "animal": "Tiger",
+    "meaning": "Brave",
+    "name": "In",
+    "season": "Early Spring",
+    "time": "3-5 AM"
+  },
+  "MYO": {
+    "animal": "Rabbit",
+    "meaning": "Cautious",
+    "name": "Myo",
+    "season": "Spring",
+    "time": "5-7 AM"
+  },
+  "JIN": {
+    "animal": "Dragon",
+    "meaning": "Powerful",
+    "name": "Jin",
+    "season": "Late Spring",
+    "time": "7-9 AM"
+  },
+  "SA": {
+    "animal": "Snake",
+    "meaning": "Wise",
+    "name": "Sa",
+    "season": "Early Summer",
+    "time": "9-11 AM"
+  },
+  "O": {
+    "animal": "Horse",
+    "meaning": "Active",
+    "name": "O",
+    "season": "Summer",
+    "time": "11 AM - 1 PM"
+  },
+  "MI": {
+    "animal": "Sheep",
+    "meaning": "Gentle",
+    "name": "Mi",
+    "season": "Late Summer",
+    "time": "1-3 PM"
+  },
+  "SIN": {
+    "animal": "Monkey",
+    "meaning": "Clever",
+    "name": "Sin",
+    "season": "Early Autumn",
+    "time": "3-5 PM"
+  },
+  "YU": {
+    "animal": "Rooster",
+    "meaning": "Industrious",
+    "name": "Yu",
+    "season": "Autumn",
+    "time": "5-7 PM"
+  },
+  "SUL": {
+    "animal": "Dog",
+    "meaning": "Loyal",
+    "name": "Sul",
+    "season": "Late Autumn",
+    "time": "7-9 PM"
+  },
+  "HAE": {
+    "animal": "Pig",
+    "meaning": "Honest",
+    "name": "Hae",
+    "season": "Early Winter",
+    "time": "9-11 PM"
+  }
+}

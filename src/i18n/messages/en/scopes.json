@@ -1,0 +1,23 @@
+{
+  "title": "Personalized Analysis",
+  "daily": {
+    "title": "Daily Pulse",
+    "description": "A quick look at today's energy and focus."
+  },
+  "weekly": {
+    "title": "Weekly Rhythm",
+    "description": "Plan your week with perspectives on upcoming trends."
+  },
+  "monthly": {
+    "title": "Monthly Horizon",
+    "description": "Expand your perspective by diving into this month's themes."
+  },
+  "yearly": {
+    "title": "Annual Compass",
+    "description": "Align your long-term goals with the year's major movements."
+  },
+  "all": "All",
+  "personal": "Personal",
+  "professional": "Professional",
+  "social": "Social"
+}

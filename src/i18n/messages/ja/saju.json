@@ -1,0 +1,293 @@
+{
+  "title": "四柱推命 (Four Pillars)",
+  "systemName": "四柱推命",
+  "narrative": "あなたの四柱推命の原局",
+  "stems": {
+    "gap": {
+      "name": "亥(い)",
+      "meaning": "陰の水",
+      "symbol": "しみ込む雨水・霧"
+    },
+    "eul": {
+      "name": "亥(い)",
+      "meaning": "陰の水",
+      "symbol": "しみ込む雨水・霧"
+    },
+    "byeong": {
+      "name": "亥(い)",
+      "meaning": "陰の水",
+      "symbol": "しみ込む雨水・霧"
+    },
+    "jeong": {
+      "name": "亥(い)",
+      "meaning": "陰の水",
+      "symbol": "しみ込む雨水・霧"
+    },
+    "mu": {
+      "name": "亥(い)",
+      "meaning": "陰の水",
+      "symbol": "しみ込む雨水・霧"
+    },
+    "gi": {
+      "name": "亥(い)",
+      "meaning": "陰の水",
+      "symbol": "しみ込む雨水・霧"
+    },
+    "gyeong": {
+      "name": "亥(い)",
+      "meaning": "陰の水",
+      "symbol": "しみ込む雨水・霧"
+    },
+    "sin": {
+      "name": "亥(い)",
+      "meaning": "陰の水",
+      "symbol": "しみ込む雨水・霧"
+    },
+    "im": {
+      "name": "亥(い)",
+      "meaning": "陰の水",
+      "symbol": "しみ込む雨水・霧"
+    },
+    "gye": {
+      "name": "亥(い)",
+      "meaning": "陰の水",
+      "symbol": "しみ込む雨水・霧"
+    }
+  },
+  "branches": {
+    "zi": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "chou": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "yin": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "mao": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "chen": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "si": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "wu": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "wei": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "shen": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "you": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "xu": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    },
+    "hai": {
+      "name": "亥(い)",
+      "animal": "亥",
+      "season": "初冬"
+    }
+  },
+  "@/components/ontology/FactionCard": "派閥カード",
+  "@/components/ontology/GenericFactionCard": "汎用派閥カード",
+  "": "",
+  "labels": {
+    "undiscovered": "未発見",
+    "meaning": "意味",
+    "element": "元素",
+    "nameVibration": "名前の振動",
+    "westernZodiac": "西洋星座",
+    "sign": "サイン",
+    "observation": "観察",
+    "easternZodiac": "東洋星座",
+    "animal": "動物",
+    "dominion": "支配領域",
+    "bureau": "局"
+  },
+  "returnToHome": "ホームに戻る",
+  "contactSupport": "サポートに問い合わせる",
+  "syncingData": "データを同期中",
+  "guest": "ゲスト",
+  "calibration": "キャリブレーション",
+  "changeOrigin": "起源を変更する",
+  "todayInsight": {
+    "title": "今日のインサイト",
+    "soulOracle": "ソウルオラクル",
+    "innerResonance": "内なる共鳴",
+    "manifestMore": "さらに顕現する"
+  },
+  "readingsLink": "リーディング",
+  "cards": {
+    "vitality": {
+      "title": "生命力"
+    },
+    "resonance": {
+      "description": "あなたの共鳴パターン。",
+      "subtitle": "共鳴"
+    },
+    "foundation": {
+      "description": "あなたのコアの基盤。",
+      "subtitle": "基盤"
+    },
+    "elemental": {
+      "description": "あなたの元素の組み合わせ。",
+      "subtitle": "元素の親和性",
+      "title": "元素"
+    },
+    "onomancy": {
+      "description": "あなたの名前の振動。",
+      "subtitle": "名前の錬金術"
+    },
+    "cognition": {
+      "description": "あなたの思考パターン。",
+      "subtitle": "認知"
+    },
+    "vocation": {
+      "description": "あなたの職業の道。",
+      "subtitle": "天職"
+    },
+    "destiny": {
+      "description": "あなたの運命の軌跡。",
+      "subtitle": "運命"
+    }
+  },
+  "resonanceTitle": "共鳴プロフィール",
+  "sections": {
+    "testArchitecture": {
+      "title": "テストの構造",
+      "description": "背景の構造的情報。"
+    },
+    "emotionalResonance": {
+      "title": "感情的共鳴",
+      "description": "感情的なつながり方。"
+    },
+    "grandArchives": {
+      "title": "大記録保管所",
+      "description": "歴史的知識の基盤。"
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "元素"
+    },
+    "riasec": {
+      "description": "RIASECキャリアタイプ"
+    },
+    "saju": {
+      "label": "四柱推命",
+      "description": "四柱推命の分析",
+      "polarity": "極性",
+      "element": "元素"
+    },
+    "archiveEntry": "アーカイブエントリー",
+    "recordVerified": "記録確認済み",
+    "tuning": {
+      "color": "色",
+      "number": "数字",
+      "direction": "方位",
+      "flower": "花",
+      "gemstone": "宝石",
+      "luckyStar": "幸運の星",
+      "title": "チューニング",
+      "favorableDays": "吉日",
+      "synergy": "シナジー"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "紫微斗数"
+  },
+  "_": "",
+  "elements": {
+    "wood": {
+      "name": "木",
+      "short": "木"
+    },
+    "fire": {
+      "name": "火",
+      "short": "火"
+    },
+    "earth": {
+      "name": "土",
+      "short": "土"
+    },
+    "metal": {
+      "name": "金",
+      "short": "金"
+    },
+    "water": {
+      "name": "水",
+      "short": "水"
+    },
+    "viewModes": {
+      "chart": "チャート",
+      "balance": "バランス",
+      "cycle": "サイクル"
+    },
+    "chartLabel": "元素チャート",
+    "influence": "影響レベル",
+    "cycle": {
+      "title": "元素サイクル",
+      "description": "元素の相互作用。",
+      "generation": "相生",
+      "destruction": "相剋"
+    },
+    "interpretation": {
+      "title": "解釈",
+      "dominant": "主要元素",
+      "balanceAdvice": "バランスアドバイス",
+      "balanceDescription": "詳細なバランスプロフィール"
+    }
+  },
+  "pillars": {
+    "viewModes": {
+      "traditional": "伝統的な見方",
+      "modern": "現代的な見方"
+    },
+    "traditionalDescription": "四柱の古典的な解釈。",
+    "meaning": "意味",
+    "represents": "象徴するもの",
+    "composition": "構成",
+    "heavenlyStem": "天干",
+    "earthlyBranch": "地支",
+    "modernMeaning": "現代的な解釈"
+  },
+  "result": {
+    "pillars": {
+      "title": "あなたの四柱"
+    }
+  },
+  "accuracy": "高精度",
+  "duration": "所要時間: 5分",
+  "terms": {
+    "dayMaster": "日主"
+  }
+}

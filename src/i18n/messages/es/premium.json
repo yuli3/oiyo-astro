@@ -1,0 +1,15 @@
+{
+  "reportGate": {
+    "badge": "Informe premium",
+    "title": "Guía de vida de precisión solo para ti",
+    "description": "Desbloquee un informe de alta densidad que integra Saju, MBTI, biorritmos y fortunas de por vida. Visualice su futuro claramente con una tarifa de consulta de $1.",
+    "benefits": {
+      "fortune": "Fortuna de por vida",
+      "financial": "Picos financieros",
+      "content": "Contenido de 20 páginas",
+      "expert": "Análisis experto"
+    },
+    "action": "Pague $1 y vea el informe",
+    "secure": "Micropago seguro de $1"
+  }
+}

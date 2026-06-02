@@ -1,0 +1,27 @@
+{
+  "skills": {
+    "empathy": {
+      "title": "Lógica Social",
+      "desc": "Las relaciones unilaterales no pueden durar. Los corazones también deben circular."
+    },
+    "boundaries": {
+      "title": "Lógica Social",
+      "desc": "Las relaciones unilaterales no pueden durar. Los corazones también deben circular."
+    },
+    "expression": {
+      "title": "Lógica Social",
+      "desc": "Las relaciones unilaterales no pueden durar. Los corazones también deben circular."
+    },
+    "reciprocity": {
+      "title": "Lógica Social",
+      "desc": "Las relaciones unilaterales no pueden durar. Los corazones también deben circular."
+    }
+  },
+  "advice": {
+    "introvert": "Tu profundidad se convierte en un refugio cómodo en las relaciones.",
+    "extrovert": "Tu energía es el sol que infunde vitalidad a las relaciones."
+  },
+  "title": "Lógica Social",
+  "description": "Sabiduría para conectar con otros mientras te proteges en relaciones complejas.",
+  "narrative": "Las relaciones no son una técnica, sino ajustar la temperatura del corazón."
+}

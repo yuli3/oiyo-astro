@@ -1,0 +1,479 @@
+{
+  "meta": {
+    "hero": {
+      "badge": "职业罗盘",
+      "subtitle": "发现关于您自己的见解"
+    },
+    "keywords": "职业评估, 性格测试, RIASEC, 霍兰德代码, 职业咨询, 工作满意度, 职业匹配, 工作性格",
+    "description": "探索与您的性格类型和能力相匹配的最佳职业路径。",
+    "title": "OIYO 职业 - 寻找您的天职"
+  },
+  "types": {
+    "realistic": {
+      "name": "现实型 (执行者)",
+      "emoji": "🔧"
+    },
+    "investigative": {
+      "name": "研究型 (思考者)",
+      "emoji": "🔬"
+    },
+    "artistic": {
+      "name": "艺术型 (创造者)",
+      "emoji": "🎨"
+    },
+    "social": {
+      "name": "社会型 (助人者)",
+      "emoji": "👥"
+    },
+    "enterprising": {
+      "name": "企业型 (说服者)",
+      "emoji": "💼"
+    },
+    "conventional": {
+      "name": "常规型 (组织者)",
+      "emoji": "📊"
+    },
+    "subtitle": "哪种类型最能描述您？"
+  },
+  "hero": {
+    "badge": "🎯 基于科学",
+    "subtitle": "根据您的性格类型发现理想的职业路径",
+    "cta": "寻找我的职业匹配",
+    "title": "仪表板",
+    "description": "分析您独特的特质"
+  },
+  "benefits": {
+    "subtitle": "使您的职业生涯与您的天生优势和兴趣相一致",
+    "items": [
+      {
+        "icon": "🎯",
+        "title": "完美的职业匹配",
+        "description": "寻找适合您天生性格的工作。"
+      },
+      {
+        "icon": "😊",
+        "title": "工作满意度",
+        "description": "在您可以大放异彩的环境中工作。"
+      },
+      {
+        "icon": "📈",
+        "title": "职业成长",
+        "description": "利用您的优势更快地获得晋升。"
+      },
+      {
+        "icon": "⚖️",
+        "title": "工作与生活平衡",
+        "description": "选择一个符合您生活价值观的职业。"
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "哪种职业适合我？",
+        "description": "基于心理学家使用的 RIASEC 模型。",
+        "question": "它是科学的吗？",
+        "answer": "它是基于心理学家使用的 RIASEC 模型。"
+      },
+      {
+        "icon": "🚀",
+        "title": "结果有多准确？",
+        "description": "是的，它有助于规划专业和实习选择。",
+        "question": "学生可以使用它吗？",
+        "answer": "是的，它有助于规划专业和实习选择。"
+      },
+      {
+        "icon": "💡",
+        "title": "准确性",
+        "description": "在识核心兴趣方面表现出极高的准确性。",
+        "question": "它准确吗？",
+        "answer": "在识核心兴趣方面表现出极高的准确性。"
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "📊",
+        "title": "RIASEC 分析",
+        "description": "对 6 个兴趣领域的详细分析。",
+        "question": "RIASEC 分析",
+        "answer": "对 6 个兴趣领域的详细分析。"
+      },
+      {
+        "icon": "📋",
+        "title": "职业列表",
+        "description": "为您精心挑选的 50 多个推荐职位。",
+        "question": "职业列表",
+        "answer": "为您精心挑选的 50 多个推荐职位。"
+      },
+      {
+        "icon": "🚀",
+        "title": "成长路径",
+        "description": "针对特定行业的实用建议。",
+        "question": "成长路径",
+        "answer": "针对特定行业的实用建议。"
+      }
+    ]
+  },
+  "test": {
+    "scale": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    },
+    "test": {
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中",
+      "selectOption": "选择选项",
+      "insightBullets": ["见解"],
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "详细分析报告",
+      "description": "我们正在为您准备该服务提供的具体价值和见解。"
+    },
+    "meta": {
+      "title": "定制诊断",
+      "description": "我们正在为您准备该服务提供的具体价值和见解。",
+      "keywords": "能力测试, 职业探索, 职位推荐"
+    },
+    "title": "仪表板",
+    "description": "深入的数据驱动报告",
+    "primaryType": "主要类型",
+    "allTypes": "所有类型",
+    "careers": "职业",
+    "workEnvironment": "工作环境",
+    "secondaryType": "次要类型",
+    "understanding": "了解",
+    "retake": "重新测试",
+    "subtitle": "详情",
+    "rateInstructions": "评分说明",
+    "progress": "进度",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "loading": "加载中",
+    "selectOption": "选择选项",
+    "insightBullets": ["见解"]
+  },
+  "result": {
+    "test": {
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中",
+      "selectOption": "选择选项",
+      "insightBullets": ["见解"],
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "详细分析报告",
+      "description": "我们正在为您准备该服务提供的具体价值和见解。"
+    },
+    "meta": {
+      "title": "定制诊断",
+      "description": "我们正在为您准备该服务提供的具体价值和见解。",
+      "keywords": "测试结果, 职业分析, 职位契合度"
+    },
+    "title": "详细分析报告",
+    "description": "我们正在为您准备该服务提供的具体价值和见解。",
+    "primaryType": "主要类型",
+    "allTypes": "所有类型",
+    "careers": "职业",
+    "workEnvironment": "工作环境",
+    "secondaryType": "次要类型",
+    "understanding": "了解",
+    "retake": "重新测试"
+  },
+  "title": "职业洞察",
+  "description": "分析您独特的特质",
+  "keywords": "关键词",
+  "career": {
+    "types": {
+      "realistic": {
+        "traits": ["诚实和真诚", "实用、现实", "熟练使用工具", "独立的"],
+        "careerSuggestions": [
+          "机械工程师",
+          "电工",
+          "Chef",
+          "汽车技师",
+          "兽医",
+          "景观设计师",
+          "飞行员"
+        ],
+        "name": "常规型",
+        "alias": "组织者",
+        "description": "喜欢结构化、有序的工作环境，擅长处理细节和数据。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "investigative": {
+        "traits": ["分析性和逻辑性", "求知欲强", "精确的", "独立思考者"],
+        "careerSuggestions": [
+          "软件开发人员",
+          "数据分析师",
+          "研究科学家",
+          "医师",
+          "经济学家",
+          "心理学家",
+          "药剂师"
+        ],
+        "name": "常规型",
+        "alias": "组织者",
+        "description": "喜欢结构化、有序的工作环境，擅长处理细节和数据。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "artistic": {
+        "traits": ["创意与原创", "自由精神", "富有表现力", "非常规"],
+        "careerSuggestions": [
+          "平面设计师",
+          "作家",
+          "营销创意",
+          "建筑师",
+          "音乐家",
+          "演员",
+          "时装设计师"
+        ],
+        "name": "常规型",
+        "alias": "组织者",
+        "description": "喜欢结构化、有序的工作环境，擅长处理细节和数据。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "social": {
+        "traits": ["善解人意", "合作社", "友好的", "善于沟通"],
+        "careerSuggestions": [
+          "老师",
+          "顾问",
+          "社会工作者",
+          "护士",
+          "人力资源专家",
+          "教练/培训师",
+          "物理治疗师"
+        ],
+        "name": "常规型",
+        "alias": "组织者",
+        "description": "喜欢结构化、有序的工作环境，擅长处理细节和数据。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "enterprising": {
+        "traits": ["雄心勃勃", "自信的", "有说服力", "精力充沛"],
+        "careerSuggestions": [
+          "销售经理",
+          "业务主管",
+          "律师",
+          "企业家",
+          "营销经理",
+          "房地产经纪人",
+          "专案经理"
+        ],
+        "name": "常规型",
+        "alias": "组织者",
+        "description": "喜欢结构化、有序的工作环境，擅长处理细节和数据。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "conventional": {
+        "traits": ["注重细节", "有组织", "负责任的", "高效的"],
+        "careerSuggestions": [
+          "会计",
+          "数据输入",
+          "行政助理",
+          "台板",
+          "报税员",
+          "图书管理员",
+          "保险承保人"
+        ],
+        "name": "常规型",
+        "alias": "组织者",
+        "description": "喜欢结构化、有序的工作环境，擅长处理细节和数据。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      }
+    },
+    "questions": [
+      {
+        "id": "1",
+        "text": "我喜欢使用工具和机械",
+        "type": "实际的",
+        "weight": 3
+      },
+      {
+        "id": "2",
+        "text": "与理论讨论相比，我更喜欢实际的实践工作",
+        "type": "实际的",
+        "weight": 3
+      },
+      {
+        "id": "3",
+        "text": "我喜欢看到工作的实际成果",
+        "type": "实际的",
+        "weight": 2
+      },
+      {
+        "id": "4",
+        "text": "我喜欢建造、修理或修理东西",
+        "type": "实际的",
+        "weight": 3
+      },
+      {
+        "id": "5",
+        "text": "我更喜欢在户外或车间工作",
+        "type": "实际的",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "text": "我喜欢通过研究和分析解决复杂的问题",
+        "type": "调查性的",
+        "weight": 3
+      },
+      {
+        "id": "7",
+        "text": "我喜欢深入了解事物的运作方式",
+        "type": "调查性的",
+        "weight": 3
+      },
+      {
+        "id": "8",
+        "text": "我更喜欢独立应对智力挑战",
+        "type": "调查性的",
+        "weight": 2
+      },
+      {
+        "id": "9",
+        "text": "我喜欢收集和分析数据",
+        "type": "调查性的",
+        "weight": 3
+      },
+      {
+        "id": "10",
+        "text": "我喜欢尝试和测试新理论",
+        "type": "调查性的",
+        "weight": 2
+      },
+      {
+        "id": "11",
+        "text": "我喜欢创造性地表达自己",
+        "type": "艺术的",
+        "weight": 3
+      },
+      {
+        "id": "12",
+        "text": "我更喜欢没有严格规则的灵活工作环境",
+        "type": "艺术的",
+        "weight": 2
+      },
+      {
+        "id": "13",
+        "text": "我喜欢使用颜色、设计或创意概念",
+        "type": "艺术的",
+        "weight": 3
+      },
+      {
+        "id": "14",
+        "text": "我重视工作中的原创性和创新性",
+        "type": "艺术的",
+        "weight": 3
+      },
+      {
+        "id": "15",
+        "text": "我喜欢可以进行创造性诠释的项目",
+        "type": "艺术的",
+        "weight": 2
+      },
+      {
+        "id": "16",
+        "text": "我喜欢帮助别人解决他们的问题",
+        "type": "社会的",
+        "weight": 3
+      },
+      {
+        "id": "17",
+        "text": "我喜欢在团队和协作环境中工作",
+        "type": "社会的",
+        "weight": 2
+      },
+      {
+        "id": "18",
+        "text": "我在教导或指导他人中找到满足感",
+        "type": "社会的",
+        "weight": 3
+      },
+      {
+        "id": "19",
+        "text": "与以任务为中心的工作相比，我更喜欢以人为本的工作",
+        "type": "社会的",
+        "weight": 3
+      },
+      {
+        "id": "20",
+        "text": "我喜欢对他人产生积极影响",
+        "type": "社会的",
+        "weight": 2
+      },
+      {
+        "id": "21",
+        "text": "我喜欢领导项目和管理团队",
+        "type": "进取的",
+        "weight": 3
+      },
+      {
+        "id": "22",
+        "text": "我喜欢竞争激烈、以结果为导向的环境",
+        "type": "进取的",
+        "weight": 2
+      },
+      {
+        "id": "23",
+        "text": "我喜欢说服他人并影响决策",
+        "type": "进取的",
+        "weight": 3
+      },
+      {
+        "id": "24",
+        "text": "我喜欢冒经过计算的风险来实现目标",
+        "type": "进取的",
+        "weight": 3
+      },
+      {
+        "id": "25",
+        "text": "我更喜欢能够快速进步的环境",
+        "type": "进取的",
+        "weight": 2
+      },
+      {
+        "id": "26",
+        "text": "我更喜欢结构化、有组织的工作环境",
+        "type": "传统的",
+        "weight": 3
+      },
+      {
+        "id": "27",
+        "text": "我喜欢处理数据、数字和详细信息",
+        "type": "传统的",
+        "weight": 2
+      },
+      {
+        "id": "28",
+        "text": "我喜欢遵循既定的程序和准则",
+        "type": "传统的",
+        "weight": 3
+      },
+      {
+        "id": "29",
+        "text": "我更喜欢可预测的工作流程和明确的期望",
+        "type": "传统的",
+        "weight": 3
+      },
+      {
+        "id": "30",
+        "text": "我擅长组织和管理行政任务",
+        "type": "传统的",
+        "weight": 2
+      }
+    ]
+  }
+}

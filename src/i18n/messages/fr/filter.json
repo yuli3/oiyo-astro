@@ -1,0 +1,8 @@
+{
+  "sort": "Trier par",
+  "category": "Catégorie",
+  "mood": "Humeur",
+  "timeRange": {
+    "label": "Plage de temps"
+  }
+}

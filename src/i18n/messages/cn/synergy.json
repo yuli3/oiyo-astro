@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "协议：大共振",
+    "titlePrefix": "两个灵魂，",
+    "titleSuffix": "一个命运",
+    "description": "对齐两个灵魂签名。 帝国神谕将把他们的宇宙线编织成一张命运的挂毯。"
+  },
+  "status": {
+    "accessing": "访问帝国档案馆...",
+    "insufficient": "灵魂数据不足",
+    "insufficientDesc": "想要编织命运，圣域中至少要记录两本本源。",
+    "newOrigin": "记录新起点",
+    "scrollForSynergy": "滚动查看协同矩阵"
+  },
+  "selection": {
+    "master": "宣扬者（杨）",
+    "resonance": "回应者（阴）",
+    "synthesize": "启动神圣合成"
+  },
+  "report": {
+    "layers": {
+      "destiny": "命运",
+      "psychology": "心",
+      "vibration": "振动"
+    },
+    "narrative": {
+      "vision": "甲骨文的愿景"
+    },
+    "title": "Sacred Synthesis: The Weaving of Fate"
+  },
+  "title": "神圣合成：命运的编织",
+  "backButton": "返回庇护所",
+  "shareButton": "分享宇宙纽带",
+  "oracleTitle": "神谕洞察",
+  "dimensionsTitle": "维度共鸣",
+  "analysis": {
+    "detailed": "详细协同分析"
+  },
+  "iching": {
+    "title": "易经",
+    "revelation": "卦象启示"
+  },
+  "partialDataWarning": "命运之线尚不完整。",
+  "addMoreInfo": "提供更多灵魂数据",
+  "cta": {
+    "title": "你们共同的命运在等待",
+    "subtitle": "将这段缘分记录在档案中",
+    "share": "分享结果",
+    "download": "下载档案"
+  }
+}

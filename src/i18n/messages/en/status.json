@@ -1,0 +1,15 @@
+{
+  "loading": "Loading...",
+  "error": "An error occurred",
+  "success": "Success",
+  "empty": "No data available",
+  "scrollForSynergy": "Scroll for Synergy",
+  "analyzing": "Analyzing...",
+  "label": "Status",
+  "all": "All",
+  "open": "Open",
+  "in_progress": "In Progress",
+  "waiting_user": "Waiting for User",
+  "resolved": "Resolved",
+  "closed": "Closed"
+}

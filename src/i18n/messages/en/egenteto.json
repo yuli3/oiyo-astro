@@ -1,0 +1,155 @@
+{
+  "chart": {
+    "teto": "Teto type",
+    "egen": "Eggen type"
+  },
+  "daily": {
+    "insights": {
+      "tetonam": [
+        {
+          "type": "motivation",
+          "icon": "💪",
+          "title": "Overcome the challenge",
+          "message": "Your natural leadership shines brightest when faced with obstacles. Take the lead on that project today!",
+          "action": "Set an example at your next meeting"
+        },
+        {
+          "type": "relationship",
+          "icon": "🤝",
+          "title": "Show your soft side",
+          "message": "Balance strength and vulnerability. Someone close to you needs your emotional support today.",
+          "action": "Ask your loved one how they really feel"
+        },
+        {
+          "type": "growth",
+          "icon": "🎯",
+          "title": "Overcome the challenge",
+          "message": "Your natural leadership shines brightest when faced with obstacles. Take the lead on that project today!",
+          "action": "Set an example at your next meeting"
+        }
+      ],
+      "egennam": [
+        {
+          "type": "creativity",
+          "icon": "🎨",
+          "title": "Express your artistic side",
+          "message": "Your aesthetic sense is heightened today. Create something beautiful or admire the art around you.",
+          "action": "Visit a gallery or create something artistic"
+        },
+        {
+          "type": "relationship",
+          "icon": "💕",
+          "title": "Deep connection is important",
+          "message": "Your empathic nature may help someone heal today. Please listen to those in need.",
+          "action": "Have meaningful conversations with friends"
+        },
+        {
+          "type": "wellness",
+          "icon": "🧘",
+          "title": "Appreciate your subtlety",
+          "message": "Your emotional intelligence is a gift. When you feel overwhelmed, take time for self-care.",
+          "action": "Practice mindfulness or meditation"
+        }
+      ],
+      "tetonye": [
+        {
+          "type": "ambition",
+          "icon": "🔥",
+          "title": "blaze your own path",
+          "message": "Your independent spirit is your superpower. Don’t be afraid to take an unconventional path today.",
+          "action": "Make the bold decision you've been putting off"
+        },
+        {
+          "type": "confidence",
+          "icon": "⚡",
+          "title": "Own your power",
+          "message": "Your confidence inspires others. Share your ideas boldly – ​​the world needs your unique perspective.",
+          "action": "Speak up when your voice matters"
+        },
+        {
+          "type": "balance",
+          "icon": "⚖️",
+          "title": "strength in vulnerability",
+          "message": "Your strength doesn't mean you have to do everything alone. Today, accept help graciously.",
+          "action": "Ask for help with difficult tasks"
+        }
+      ],
+      "egenteto": [
+        {
+          "type": "nurturing",
+          "icon": "🌸",
+          "title": "Your Care Heals",
+          "message": "Your nurturing energy is exactly what someone needs today. Trust your instincts to reach out.",
+          "action": "Check in on someone you care about"
+        },
+        {
+          "type": "intuition",
+          "icon": "✨",
+          "title": "Trust Your Inner Voice",
+          "message": "Your intuition is especially strong today. Pay attention to those gentle nudges and gut feelings.",
+          "action": "Make a decision based on your intuition"
+        },
+        {
+          "type": "self_care",
+          "icon": "🛁",
+          "title": "Fill Your Own Cup",
+          "message": "You give so much to others. Remember to nurture yourself too - you deserve the same care you give.",
+          "action": "Do something purely for your own joy"
+        }
+      ]
+    },
+    "title": "Today's Insight",
+    "action": "action of the day"
+  },
+  "compatibility": {
+    "levels": {
+      "perfect": "A match made in heaven",
+      "great": "Perfect match",
+      "good": "good relationship",
+      "challenging": "A relationship that requires effort"
+    },
+    "title": "couple compatibility test",
+    "description": "Check your romantic compatibility through the other person's Eggenteto type.",
+    "selectPartner": "Select the opponent's type",
+    "selectDesc": "Please select the type of person you would like to check compatibility with.",
+    "scoreLabel": "{score}% match",
+    "insights": "relationship insights",
+    "combination": "Our union:",
+    "loveLanguages": "Love Language:",
+    "dateIdeas": "Perfect date ideas:",
+    "tryAnother": "Check out other types",
+    "share": "Share your results"
+  },
+  "result": {
+    "title": "Your Profile",
+    "traits": "Key Traits",
+    "description": "Detailed Description",
+    "compatibility": "Compatibility",
+    "share": "Share Result",
+    "copied": "Copied to clipboard",
+    "copy": "Copy Link",
+    "retake": "Retake Test"
+  },
+  "a": "A",
+  "saveResult": "Save Result",
+  "saveError": "Failed to save result.",
+  "personalityAnalysis": "Personality Analysis",
+  "compatibilityChartTitle": "Compatibility Chart",
+  "compatibilityLabel": "Compatibility",
+  "insights": "Insights",
+  "traitsGuide": "Traits Guide",
+  "strengths": "Strengths",
+  "growthAreas": "Growth Areas",
+  "match": "Match",
+  "coupleTest": "Couple Test",
+  "coupleTestDesc": "Test compatibility with your partner.",
+  "loveLanguage": "Love Language",
+  "loveLanguageDesc": "How you express and receive love.",
+  "idealDate": "Ideal Date",
+  "awards": "Awards",
+  "growth": "Growth Path",
+  "growthComingSoon": "Growth Path Coming Soon",
+  "growthComingSoonDesc": "Insights for personal development are on the way.",
+  "saveImage": "Save Image",
+  "backToHome": "Back to Home"
+}

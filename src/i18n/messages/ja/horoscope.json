@@ -1,0 +1,106 @@
+{
+  "title": "コズミック・フォーキャスト",
+  "subtitle": "2026年1月",
+  "description": "あなたの星座を選択して、今月の天上の導きを明らかにしてください。星々があなたの道を照らすために整列しました。",
+  "zodiac": {
+    "aries": {
+      "name": "牡羊座",
+      "element": "火の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "taurus": {
+      "name": "牡牛座",
+      "element": "土の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "gemini": {
+      "name": "双子座",
+      "element": "風の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "cancer": {
+      "name": "蟹座",
+      "element": "水の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "leo": {
+      "name": "獅子座",
+      "element": "火の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "virgo": {
+      "name": "乙女座",
+      "element": "アースエレメント",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "libra": {
+      "name": "天秤座",
+      "element": "風の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "scorpio": {
+      "name": "蠍座",
+      "element": "水の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "sagittarius": {
+      "name": "射手座",
+      "element": "火の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "capricorn": {
+      "name": "山羊座",
+      "element": "土の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "aquarius": {
+      "name": "水瓶座",
+      "element": "風の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    },
+    "pisces": {
+      "name": "魚座",
+      "element": "水の要素",
+      "luckyDay": "ラッキーデイ",
+      "luckyColor": "ラッキーカラー"
+    }
+  },
+  "meta": {
+    "title": "あなたの星占い",
+    "description": "今日の占星術の洞察とあなたの星座のガイダンス",
+    "keywords": "星占い, 占星術, 星座, 今日の運勢, 12星座"
+  },
+  "hero": {
+    "title": "あなたの星占い",
+    "subtitle": "今日、星があなたに用意しているものを発見",
+    "cta": "私の星占いを読む"
+  },
+  "test": {
+    "insightBullets": [
+      "毎日の占星術指導",
+      "パーソナライズされた星座の洞察",
+      "宇宙エネルギー予測"
+    ],
+    "progress": "進捗",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信",
+    "loading": "読み込み中",
+    "selectOption": "選択"
+  },
+  "result": {
+    "title": "あなたの星占い",
+    "description": "今日の占星術の洞察とあなたの星座のガイダンス"
+  }
+}

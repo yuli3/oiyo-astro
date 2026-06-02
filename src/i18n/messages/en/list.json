@@ -1,0 +1,13 @@
+{
+  "keep": "Keep",
+  "keepAction": "Keep It",
+  "review": "Review",
+  "reviewAction": "Review It",
+  "cancel": "Cancel",
+  "cancelAction": "Cancel Subscription",
+  "monthly": "Monthly",
+  "used": "Used",
+  "timesPerMonth": "times/month",
+  "satisfaction": "Satisfaction",
+  "valueScore": "Value Score"
+}

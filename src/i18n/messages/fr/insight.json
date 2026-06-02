@@ -1,0 +1,10 @@
+{
+  "actions": {
+    "refresh": "Actualiser l'insight",
+    "like": "J'aime",
+    "share": "Partager"
+  },
+  "loading": "Préparation de ton insight du jour...",
+  "focusArea": "Zone d'attention : {area}",
+  "actionTip": "Conseil d'action"
+}

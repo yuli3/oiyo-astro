@@ -1,0 +1,10 @@
+{
+  "actions": {
+    "refresh": "Actualizar insight",
+    "like": "Me gusta",
+    "share": "Compartir"
+  },
+  "loading": "Analizando los ecos profundos de tus elecciones...",
+  "focusArea": "Área de enfoque hoy: {area}",
+  "actionTip": "Consejo de acción"
+}

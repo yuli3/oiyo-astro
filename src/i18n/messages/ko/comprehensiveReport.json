@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "generatedOn": "생성일",
+    "testsCompleted": "테스트 완료",
+    "dimensionsAnalyzed": "분석된 차원",
+    "consistencyScore": "일관성 점수",
+    "keyStrengths": "핵심 강점",
+    "title": "종합 분석 요약"
+  },
+  "errors": {
+    "unableToGenerate": "보고서를 생성할 수 없습니다.",
+    "insufficientData": "테스트 데이터 부족",
+    "needThreeTests": "포괄적인 보고서를 생성하려면 최소한 세 가지 테스트를 완료해야 합니다.",
+    "pdfFailed": "PDF 생성에 실패했습니다. 다시 시도해 주세요.",
+    "reportNotFound": "신고 내용을 찾을 수 없습니다.",
+    "takeMoreTests": "더 많은 테스트를 해보세요"
+  },
+  "notifications": {
+    "linkCopied": "링크가 복사되었습니다"
+  },
+  "test": {
+    "progress": "진전",
+    "next": "다음",
+    "previous": "~ 전에",
+    "submit": "제출하기",
+    "loading": "로드 중",
+    "selectOption": "선택하기",
+    "insightBullets": [
+      "모든 테스트 결과를 하나로 통합",
+      "일관된 성격 패턴 발견",
+      "개인화된 성장 가이드 제공"
+    ]
+  },
+  "result": {
+    "title": "종합적인 성격 보고서",
+    "description": "나의 완전한 성격 프로필과 인사이트를 확인해 보세요."
+  },
+  "meta": {
+    "title": "종합적인 성격 보고서",
+    "description": "모든 테스트 결과가 포함된 완전한 성격 분석 보고서를 받아보세요.",
+    "keywords": "종합보고서, 성격분석, 심리검사, 성격프로필"
+  },
+  "subtitle": "모든 테스트에서 완전한 성격 프로필",
+  "downloadPDF": "PDF 다운로드",
+  "shareReport": "보고서 공유",
+  "generating": "만들기",
+  "analyzing": "분석 중",
+  "generatingPDF": "PDF 만들기",
+  "sharing": "공유",
+  "dominantTraits": "주요 특징",
+  "dimensions": "성격 차원",
+  "dimensionsDescription": "다양한 테스트를 통해 분석된 나의 성격차원",
+  "strengths": "힘",
+  "strengthsDescription": "나의 핵심 강점과 뛰어난 능력",
+  "growthAreas": "성장 영역",
+  "growthAreasDescription": "발전가능성이 있는 분야와 개선방향",
+  "testsByCategory": "카테고리별 테스트",
+  "testsByCategoryDescription": "완료된 테스트 배포",
+  "shareTitle": "종합 인성 보고서 공유",
+  "shareText": "종합적인 성격 분석 보고서를 확인해보세요"
+}

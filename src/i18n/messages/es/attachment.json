@@ -1,0 +1,561 @@
+{
+  "attachment": {
+    "meta": {
+      "hero": {
+        "badge": "💞 Ciencia del Vínculo",
+        "subtitle": "Un mapa sagrado para navegar el territorio del corazón.",
+        "cta": "Iniciar Escaneo del Apego",
+        "secondaryCta": "Explorar los Arquetipos"
+      },
+      "benefits": {
+        "subtitle": "Un mapa sagrado para navegar el territorio del corazón."
+      },
+      "keywords": "estilo de apego, psicología relacional, autoconocimiento, resonancia emocional, sistema nervioso",
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+    },
+    "hero": {
+      "badge": "💞 Ciencia del Vínculo",
+      "subtitle": "Un mapa sagrado para navegar el territorio del corazón.",
+      "cta": "Iniciar Escaneo del Apego",
+      "secondaryCta": "Explorar los Arquetipos",
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+    },
+    "benefits": {
+      "subtitle": "Un mapa sagrado para navegar el territorio del corazón.",
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Estabilidad sagrada",
+          "description": "Descubrir un ancla inmutable en medio de las siempre cambiantes tormentas de conexión.",
+          "question": "¿Cómo puedo cultivar un santuario interior?",
+          "answer": "Honrando el anhelo del cuerpo de ser testigo y el camino del alma hacia la paz."
+        },
+        {
+          "icon": "🚀",
+          "title": "Ecos ancestrales",
+          "description": "Decodificando antiguos susurros grabados en los patrones de relaciones modernas.",
+          "question": "¿Qué legado está contenido en mis instintos?",
+          "answer": "La sabiduría a menudo llega como un recuerdo de lo que una vez nos protegió."
+        },
+        {
+          "icon": "💡",
+          "title": "Límites fluidos",
+          "description": "La refinada habilidad de permanecer abierto al amor mientras se protege el santuario del yo.",
+          "question": "¿Dónde termina mi energía y comienza la tuya?",
+          "answer": "La claridad es la mayor misericordia que uno puede realizar dentro de cualquier unión."
+        },
+        {
+          "icon": "🎯",
+          "title": "Restauración de resonancia",
+          "description": "Transformando la fricción de la discordia en el oro brillante de una intimidad más profunda.",
+          "question": "¿Se pueden tejer con más fuerza los hilos rotos?",
+          "answer": "Los vínculos más resistentes pertenecen a aquellos que han aprendido la alquimia de la disculpa."
+        },
+        {
+          "icon": "🔥",
+          "title": "Autonomía soberana",
+          "description": "Fomentar un espíritu salvaje e independiente mientras habitamos con gracia en el pueblo de los demás.",
+          "question": "¿Cómo puedo permanecer cerca pero libre?",
+          "answer": "La verdadera pertenencia requiere el coraje de permanecer uno mismo incluso en el silencio."
+        },
+        {
+          "icon": "⭐",
+          "title": "Presencia dinámica",
+          "description": "Dominar la frecuencia del \"aquí y ahora\" para disolver las sombras de los miedos de abandono del pasado.",
+          "question": "¿Cómo puedo liberar los fantasmas del ayer?",
+          "answer": "El momento presente es el único lugar donde puede nacer la verdadera conexión."
+        }
+      ],
+      "title": "Las Últimas Reflexiones del Oráculo"
+    },
+    "types": {
+      "secure": {
+        "name": "Alquimista de la Seguridad",
+        "emoji": "🌈",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "anxiousPreoccupied": {
+        "name": "Alquimista de la Seguridad",
+        "emoji": "🌈",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "dismissiveAvoidant": {
+        "name": "Alquimista de la Seguridad",
+        "emoji": "🌈",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "fearfulAvoidant": {
+        "name": "Alquimista de la Seguridad",
+        "emoji": "🌈",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "earnedSecure": {
+        "name": "Alquimista de la Seguridad",
+        "emoji": "🌈",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "subtitle": "Un mapa sagrado para navegar el territorio del corazón.",
+      "title": "Las Últimas Reflexiones del Oráculo"
+    },
+    "relationships": {
+      "highlights": [
+        "Ilumina tu modelo relacional para los demás. Reemplaza la niebla de la proyección con la claridad del verdadero testimonio.",
+        "Crea rituales sagrados de regreso después de las inevitables fricciones de la vida. Asegúrese de que ninguna herida quede desatendida.",
+        "Encarna el arquetipo del ancestro estable. Enseñe a la próxima generación que la reparación siempre es posible."
+      ],
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Susurros somáticos",
+          "description": "Aprenda a escuchar las señales sutiles que envía el cuerpo antes de que la mente racional elija sus palabras.",
+          "question": "¿Cómo puedo reconocer mis señales de límites físicos?",
+          "answer": "La sabiduría comienza cuando haces una pausa para presenciar la tensión de una respiración o el suave pulso del corazón."
+        },
+        {
+          "icon": "🚀",
+          "title": "Resonancia Cósmica",
+          "description": "Explora cómo tu frecuencia relacional única interactúa con las constelaciones de los demás.",
+          "question": "¿Pueden armonizarse diferentes estilos?",
+          "answer": "Cada encuentro es una sinfonía única. La clave está en la conciencia del director."
+        },
+        {
+          "icon": "💡",
+          "title": "Alquimia del miedo",
+          "description": "Sublima el plomo de viejas ansiedades en el oro de la intimidad consciente.",
+          "question": "¿Cuál es la raíz de la ansiedad relacional?",
+          "answer": "A menudo es la forma que tiene el corazón de anhelar una seguridad que alguna vez le fue negada."
+        },
+        {
+          "icon": "🎯",
+          "title": "Protocolos básicos seguros",
+          "description": "Diseñar una base estable que permita tanto la exploración como el retorno.",
+          "question": "¿Cómo construyo una base segura para un socio?",
+          "answer": "Convirtiéndonos en un puerto constante donde la verdad pueda atracar sin temor a ser juzgada."
+        },
+        {
+          "icon": "🔥",
+          "title": "Testigo soberana",
+          "description": "Fomente un observador interior que observe el momento de un detonante sin sumergirse en él.",
+          "question": "¿Cómo puedo romper el ciclo de bucles reactivos?",
+          "answer": "El espacio entre el impulso y la acción es donde reside el poder del alma."
+        },
+        {
+          "icon": "⭐",
+          "title": "Dominio de la interdependencia",
+          "description": "Descubra el camino sagrado intermedio entre el vacío del aislamiento y la niebla de la fusión.",
+          "question": "¿Cómo es una interdependencia saludable?",
+          "answer": "Dos mundos enteros que mantienen sus propios horizontes y eligen compartir un único cielo."
+        }
+      ],
+      "title": "Las Últimas Reflexiones del Oráculo"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Mapeo neurosomático",
+          "description": "Realice un seguimiento preciso de cómo responde su sistema nervioso a la invitación a la intimidad.",
+          "question": "¿Cómo registra mi cuerpo la conexión?",
+          "answer": "A través de la resonancia de la seguridad y los ecos de la protección del pasado."
+        },
+        {
+          "icon": "🚀",
+          "title": "Fusión de identidad",
+          "description": "Descubra cómo sus arquetipos centrales de apego influyen en su percepción de sí mismo y de los demás.",
+          "question": "¿Dónde se encuentra mi identidad y la conexión?",
+          "answer": "Somos espejos que reflejan las verdades más ocultas de cada uno."
+        },
+        {
+          "icon": "💡",
+          "title": "Plano relacional",
+          "description": "Visualice la compleja arquitectura de sus vínculos, desde los cimientos hasta los límites.",
+          "question": "¿Qué forma tiene mi conexión?",
+          "answer": "Un tapiz tejido con hilos de miedo y fibras de amor."
+        },
+        {
+          "icon": "🎯",
+          "title": "Exploración anclada",
+          "description": "Reflexión guiada para anclarte dentro de tus verdaderos principios relacionales.",
+          "question": "¿Cómo puedo permanecer anclado en la verdad?",
+          "answer": "Regresando a la quietud donde la brújula del alma siempre apunta a casa."
+        },
+        {
+          "icon": "🔥",
+          "title": "Lente de reparación",
+          "description": "Identificar las herramientas específicas necesarias para cerrar brechas y fortalecer la confianza.",
+          "question": "¿Cómo curo los hilos de conexión?",
+          "answer": "La paciencia es la aguja que repara las grietas más delicadas del corazón."
+        },
+        {
+          "icon": "⭐",
+          "title": "Resonancia arquetípica",
+          "description": "Comprenda qué patrones antiguos están guiando su viaje hacia la pertenencia moderna.",
+          "question": "¿Qué arquetipo me guía hoy?",
+          "answer": "El que tiene la llave para abrir la puerta donde estás ahora mismo."
+        }
+      ]
+    },
+    "test": {
+      "test": {
+        "progress": "Pregunta {current} de {total}",
+        "submit": "Revelar",
+        "loading": "Sincronizando...",
+        "selectOption": "Elegir Resonancia",
+        "insightBullets": [
+          "Mapeando los patrones celestiales de tus conexiones más verdaderas."
+        ],
+        "next": "Avanzar",
+        "previous": "Retornar"
+      },
+      "result": {
+        "title": "Las Últimas Reflexiones del Oráculo",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "meta": {
+        "title": "Las Últimas Reflexiones del Oráculo",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro.",
+        "keywords": "estilo de apego, psicología relacional, autoconocimiento, resonancia emocional, sistema nervioso"
+      },
+      "progress": "Pregunta {current} de {total}",
+      "submit": "Revelar",
+      "loading": "Sincronizando...",
+      "selectOption": "Elegir Resonancia",
+      "subtitle": "Un mapa sagrado para navegar el territorio del corazón.",
+      "insightBullets": [
+        "Frecuencia central de sus bonos",
+        "Geometría de tus límites",
+        "Alquimia de tu sanación"
+      ],
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "instruction": "Responde desde la quietud de tu interior, permitiendo que cada escenario revele tu impulso instintivo.",
+      "helperText": "Respira profundamente entre preguntas; la autoconciencia florece con la compasión.",
+      "restart": "Comenzar de Nuevo",
+      "next": "Avanzar",
+      "previous": "Retornar"
+    },
+    "result": {
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "subtitle": "Un mapa sagrado para navegar el territorio del corazón."
+    },
+    "title": "Las Últimas Reflexiones del Oráculo",
+    "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro.",
+    "keywords": "estilo de apego, psicología relacional, autoconocimiento, resonancia emocional, sistema nervioso",
+    "answers": "Respuestas"
+  },
+  "attachmentStyle": {
+    "meta": {
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro.",
+      "keywords": "estilo de apego, psicología relacional, autoconocimiento, resonancia emocional, sistema nervioso"
+    },
+    "hero": {
+      "badge": "💞 Ciencia del Vínculo",
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "subtitle": "Un mapa sagrado para navegar el territorio del corazón.",
+      "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro.",
+      "cta": "Iniciar Escaneo del Apego",
+      "secondaryCta": "Explorar los Arquetipos"
+    },
+    "benefits": {
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "subtitle": "Un mapa sagrado para navegar el territorio del corazón.",
+      "items": [
+        {
+          "icon": "🔍",
+          "title": "Patrones de decodificación",
+          "description": "Traducir los hábitos defensivos a un lenguaje muy refinado del corazón, libre del peso de la vergüenza."
+        },
+        {
+          "icon": "🤝",
+          "title": "Arquitecta de reparación",
+          "description": "Utilice guiones y rituales específicamente adaptados a la resonancia única de su sistema nervioso."
+        },
+        {
+          "icon": "🛡️",
+          "title": "Tutela segura",
+          "description": "Aprenda el arte de proteger su energía sagrada mientras permanece abierto a la luz de la intimidad."
+        },
+        {
+          "icon": "🌱",
+          "title": "Curación sublime",
+          "description": "Combine la regulación somática con la comunicación reflexiva para fomentar la evolución holística."
+        }
+      ]
+    },
+    "types": {
+      "secure": {
+        "name": "Alquimista de la Seguridad",
+        "emoji": "🌈",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "anxiousPreoccupied": {
+        "name": "Alquimista de la Seguridad",
+        "emoji": "🌈",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "dismissiveAvoidant": {
+        "name": "Alquimista de la Seguridad",
+        "emoji": "🌈",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "fearfulAvoidant": {
+        "name": "Alquimista de la Seguridad",
+        "emoji": "🌈",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "earnedSecure": {
+        "name": "Alquimista de la Seguridad",
+        "emoji": "🌈",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "subtitle": "Un mapa sagrado para navegar el territorio del corazón."
+    },
+    "relationships": {
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro.",
+      "highlights": [
+        "Revela tu perfil a tus seres queridos para transmutar la oscuridad de la duda en la luz de la empatía.",
+        "Codiseñar rituales para el 'Gran Retorno' después del conflicto: reconexión gradual, reflexión compartida o silencio sagrado.",
+        "Encarna el arquetipo del ancestro estable. Dejemos que la sabiduría de la reparación se convierta en un legado vivo."
+      ]
+    },
+    "test": {
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "subtitle": "Un mapa sagrado para navegar el territorio del corazón.",
+      "instruction": "Responde desde la quietud de tu interior, permitiendo que cada escenario revele tu impulso instintivo.",
+      "progress": "Pregunta {current} de {total}",
+      "helperText": "Respira profundamente entre preguntas; la autoconciencia florece con la compasión.",
+      "previous": "Retornar",
+      "restart": "Comenzar de Nuevo"
+    },
+    "result": {
+      "cta": {
+        "retake": "Reexplorar las Profundidades",
+        "explore": "Descubrir Todos los Arquetipos"
+      },
+      "overview": {
+        "lead": "Tu estilo de apego primordial es {primary}, sostenido por los instintos de {secondary}.",
+        "answerCount": "Basado en {total} preguntas de resonancia profunda.",
+        "paragraphs": [
+          "Su modelo de apego es un mapa viviente para explorar la exquisita arquitectura de la intimidad, la autonomía y la seguridad. Esto no es una mera teoría. Es el resultado de rastrear las mareas internas de tu cuerpo: los cambios sutiles en el pulso, la contracción inconsciente de la respiración y los bucles de pensamiento que surgen cuando la conexión se siente vulnerable. Al iluminar estos patrones, transformamos los instintos reactivos en un lenguaje refinado para sus vínculos más preciados.",
+          "La fusión de tus tipos primario y secundario muestra que tu alma relacional es fluida, no fija. Incluso si un patrón es el guardián dominante, dentro de ti reside una constelación de instintos auxiliares que pueden proporcionar un ritmo más estable a través de la claridad de la estructura o la gracia de un suave distanciamiento. Cuando orquestas conscientemente estos diversos aspectos de ti mismo, puedes servir como un profundo ejemplo para tu pareja de lo que significa sanar sin el peso de la culpa.",
+          "Este perfil también sirve como un gentil centinela, capturando las \"señales de precaución\" de su sistema nervioso: la sombra de ansiedad que se filtra cuando un mensaje no recibe respuesta, los muros mentales construidos detrás de un malentendido susurrado o el entumecimiento que enmascara un anhelo de reconocimiento profundo. Al reconocer estos momentos temprano, puedes aplicar escrituras sagradas y rituales de conexión a tierra antes de que los viejos pilotos automáticos tomen el mando.",
+          "Reflexione sobre cómo estas fortalezas esenciales pueden adaptarse desde el intenso calor de la unión romántica a los vastos paisajes de la familia, la amistad y el ámbito profesional. Un ancla estable te permite aceptar el amor no como una deuda que hay que pagar, sino como un derecho natural de nacimiento, y un instinto evolucionado se convertirá en un laboratorio seguro para probar formas de ser más vibrantes.",
+          "Esta idea es una invitación a hacer un nuevo pacto con tu propio cuerpo. Al integrar estrategias de regulación del sistema nervioso, le recuerda a su sistema nervioso que es seguro absorber la atención a un ritmo sostenible. La verdadera alquimia no ocurre cuando la cabeza comprende un concepto abstracto, sino cuando el cuerpo experimenta la seguridad como una sensación práctica.",
+          "Finalmente, recuerda que no recorre este camino solo. Este plano es una herramienta para la conexión. Invita a consejeros, mentores o seres queridos de confianza a tu experimento para encontrar la verdad. Los patrones de apego nacieron en presencia de otros y sólo pueden transformarse y trascenderse dentro del espacio sagrado de la relación."
+        ]
+      },
+      "primarySection": {
+        "scoreHeadline": "Influencia Dominante",
+        "scoreDescription": "En este momento, {primary} guía la mayoría de tus respuestas relacionales.",
+        "strengthsTitle": "Fortalezas para Celebrar",
+        "growthTitle": "Umbrales de Evolución",
+        "relationshipTitle": "Estrategias Vinculares",
+        "regulationTitle": "Invitaciones a la Calma"
+      },
+      "secondarySection": {
+        "title": "Las Últimas Reflexiones del Oráculo",
+        "highlightTitle": "Formas de invocar a {secondary}",
+        "paragraphs": [
+          "Su tipo auxiliar es como un instrumento silencioso que agrega profundidad a la melodía. Cuando el patrón primario sienta el peso del estrés, invite a esta resonancia a proporcionar un ritmo más estable a través de la claridad de la estructura o la gracia de un suave distanciamiento.",
+          "Hablar de estos arquetipos con compañeros de confianza disuelve las sombras de la vergüenza y te guía hacia la danza colaborativa de la reparación."
+        ]
+      },
+      "scoreBreakdown": {
+        "title": "Las Últimas Reflexiones del Oráculo",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro."
+      },
+      "additionalInsights": {
+        "title": "Las Últimas Reflexiones del Oráculo",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro.",
+        "items": [
+          "Pruebe primero nuevos guiones de comunicación dentro de sus relaciones más confiables. El éxito proporcionará la base para la confianza.",
+          "Mapee sus momentos de activación y registre qué rituales de reparación específicos realmente calmaron su sistema nervioso.",
+          "Combine la regulación somática con el reencuadre mental para apoyar la evolución holística del yo.",
+          "Háblate a ti mismo con la gentileza de un sabio: 'Mi cuerpo simplemente busca un santuario. Puedo honrar esta necesidad con una elección de profunda compasión.'",
+          "Tómate un tiempo cada temporada para reflexionar sobre el apego y comprobar tus límites, la calidad de tu presencia y tus hábitos de reparación."
+        ]
+      },
+      "actionPlan": {
+        "title": "Las Últimas Reflexiones del Oráculo",
+        "description": "Restaura el vínculo. Tras una desconexión, sé el primero en tender el puente. Reconoce el impacto mutuo y ofrece tu presencia como un espacio de reencuentro.",
+        "steps": [
+          {
+            "title": "Semana 1 · El Pergamino de la Conciencia",
+            "description": "Reflexione sobre una fricción reciente. ¿Qué creía tu alma apegada en ese momento? ¿Qué temía? Registre límites específicos o ecos de tranquilidad que habrían servido como un puente seguro."
+          },
+          {
+            "title": "Semana 2 · El Laboratorio de Resonancia",
+            "description": "Utilice la estructura alquímica: \"Cuando ocurre X, siento Y. Busco el apoyo de Z\". Practique primero en relaciones de bajo riesgo antes de acercarse a sus seres queridos."
+          },
+          {
+            "title": "Semana 3 · Orquestación del Sistema Nervioso",
+            "description": "Recuerde sus situaciones desencadenantes más frecuentes y practique herramientas de respiración, golpecitos o movimiento para que sus células recuerden la sensación de seguridad."
+          },
+          {
+            "title": "Semana 4 · El Ritual de Reparación",
+            "description": "Después de una tensión inevitable, comience la reparación nombrando con valentía el impacto, buscando humildemente retroalimentación y codiseñando un camino más resonante hacia el futuro."
+          }
+        ]
+      },
+      "styles": {
+        "secure": {
+          "summary": "Eres un alquimista de tu propia alma, habiendo transformado el plomo de tus experiencias pasadas en el oro de una seguridad consciente.",
+          "strengths": [
+            "Expresa claramente los matices sutiles de tu mundo interior sin exagerar ni minimizar.",
+            "Poseer una creencia inquebrantable de que los desacuerdos pueden resolverse.",
+            "Ofrezca consuelo abundantemente y recíbalo con un corazón lleno de gracia.",
+            "Un maestro de la \"reparación rápida\", que atiende los defectos antes de que se conviertan en heridas.",
+            "Comunique sus necesidades al amanecer antes de que se hunda en el crepúsculo del resentimiento."
+          ],
+          "growth": [
+            "Recuerda que ni siquiera el socio más dedicado puede leer todos tus silencios; seguir solicitando apoyo específico.",
+            "Asegúrese de no funcionar demasiado para evitar decepcionar a los demás a expensas de su propio descanso.",
+            "Cultive el arte de la \"presencia pura\", simplemente sin la necesidad de diseñar soluciones.",
+            "Mantenga una suave curiosidad sobre cómo las sombras del estrés o la tristeza actúan sobre sus aguas tranquilas."
+          ],
+          "relationship": [
+            "Actuar como modelo de \"validación transparente\" para proporcionar un santuario a los compañeros menos estables.",
+            "Comparte las rutinas que anclan tu alma, para que otros puedan tomar prestada tu tranquilidad en medio de la tormenta.",
+            "Considere sagradamente la 'interdependencia saludable', recordando que recibir apoyo es una fortaleza, no una debilidad.",
+            "Utilice su voz anclada para proponer el establecimiento de límites colaborativos."
+          ],
+          "regulation": [
+            "Cuando una conversación se intensifica, disminuya la velocidad de su respiración y alargue con precisión la duración de su exhalación.",
+            "Nombra tus sensaciones físicas para permanecer integradas con la verdad del cuerpo mientras se une con la lógica de la mente.",
+            "Recuerde: \"Puedo permanecer plenamente presente aquí sin renunciar a mi propio santuario\"."
+          ]
+        },
+        "anxiousPreoccupied": {
+          "summary": "Eres un alquimista de tu propia alma, habiendo transformado el plomo de tus experiencias pasadas en el oro de una seguridad consciente.",
+          "strengths": [
+            "Posee una intuición refinada que capta los cambios internos de sus seres queridos.",
+            "Protege con dedicación la llama de la conexión, vertiendo inmensa energía para superar cualquier distanciamiento.",
+            "Una fuente de afirmación fundamental y exploración incansable de los mundos internos de los demás.",
+            "Aprecia una esperanza inmortal por el poder de reparación, sin importar cuán larga sea la noche."
+          ],
+          "growth": [
+            "Practique una pausa sagrada cuando surja la necesidad de acercarse. Respira y pregunta qué es lo que realmente busca tu alma.",
+            "Practica la vulnerabilidad de solicitar claramente: 'Siento ~; Necesito ~,' en lugar de intentar leer entre líneas.",
+            "Reúna una 'liturgia de evidencia' sobre la lealtad de sus seres queridos para que su sistema nervioso pueda descansar en la verdad.",
+            "Recuerda que tu profunda capacidad de anhelo es un regalo sagrado, no una carga que debas deshacerte."
+          ],
+          "relationship": [
+            "Establezca ritmos compartidos de conexión para despejar la niebla de la espera y la duda.",
+            "Presente su sensibilidad como un tesoro raro, para que sus compañeros puedan considerar su valor como sagrado.",
+            "Co-orquestar planes para el reencuentro después de un tiempo separados."
+          ],
+          "regulation": [
+            "Invoca el ritmo respiratorio de 4 a 6 para reducir la urgencia de tu pulso antes de decir la verdad.",
+            "Tranquiliza tu yo físico con un ritual de 'autotoque': coloca una mano sobre tu corazón o acuna suavemente tu mejilla.",
+            "Repite el mantra: 'El afecto sólo hace una pausa; no desaparece. Me sostienen incluso en el silencio.'"
+          ]
+        },
+        "dismissiveAvoidant": {
+          "summary": "Eres un alquimista de tu propia alma, habiendo transformado el plomo de tus experiencias pasadas en el oro de una seguridad consciente.",
+          "strengths": [
+            "Un abanderado que permanece imperturbable en momentos de crisis, diseñando caminos para el progreso práctico.",
+            "Profundo respeto por la santidad del espacio personal y la autonomía del alma.",
+            "Muévete con elegancia y confianza en ti mismo, o al menos no cargues a los demás con el peso de tus necesidades.",
+            "Capaz de refinar mareas internas complejas en un lenguaje claro una vez que se establece la confianza."
+          ],
+          "growth": [
+            "Observe los momentos en los que se utiliza el 'escudo de la lógica' para enmascarar la vulnerabilidad del dolor o el anhelo.",
+            "Experimente con una 'ofrecimiento gradual': compartir una pequeña y sutil necesidad antes de resolver los problemas en soledad.",
+            "Comience la práctica de afrontar la retroalimentación en lugar de retroceder cuando llegue.",
+            "Permítase buscar consuelo en los testigos elegidos, aunque sea por un breve momento."
+          ],
+          "relationship": [
+            "Explique claramente su topografía específica de intimidad para que sus compañeros no se basen en conjeturas.",
+            "Diseñe rituales de conexión con un propósito superior: creación compartida, peregrinación o una visión común.",
+            "Siempre proporcione una \"promesa de regreso\" cuando necesite tiempo a solas, indicando el motivo y cuándo regresará.",
+            "Ofrezca obsequios de alabanza hablada. La gratitud no expresada es como una lámpara que nunca se enciende."
+          ],
+          "regulation": [
+            "Relaje suavemente la armadura de sus hombros y la tensión de su mandíbula antes de entablar un diálogo difícil.",
+            "Ancla en la verdad: 'Puedo permanecer plenamente en presencia de los demás manteniendo los límites de mi alma'.",
+            "Utilice la 'estimulación bilateral' (golpeándose alternativamente los muslos) para permanecer presente en el aquí y ahora."
+          ]
+        },
+        "fearfulAvoidant": {
+          "summary": "Eres un alquimista de tu propia alma, habiendo transformado el plomo de tus experiencias pasadas en el oro de una seguridad consciente.",
+          "strengths": [
+            "Poseer una intuición cristalina, percibiendo incluso los más mínimos cambios en la atmósfera relacional.",
+            "Capaz de revelar niveles muy profundos de vulnerabilidad una vez que se garantiza la seguridad.",
+            "Un alquimista dedicado a curar patrones antiguos que ya no sirven a tu evolución.",
+            "Capaz de presenciar y honrar verdades multifacéticas simultáneamente."
+          ],
+          "growth": [
+            "Realice un seguimiento de los desencadenantes específicos que conducen a retiradas repentinas y cree guiones de recuperación para utilizar en esos momentos.",
+            "Tenga el coraje de realizar una 'investigación proactiva': pedir confirmación a la otra persona antes de actuar basándose en el miedo.",
+            "Distinga sabiamente entre relaciones seguras para la vulnerabilidad y aquellas que requieren límites más firmes.",
+            "Bendito seas por anclarte en la presencia de tu pareja incluso en situaciones llenas de inquietud."
+          ],
+          "relationship": [
+            "Ilumina y explica a tu pareja el complejo tira y afloja de emociones que ocurren dentro de ti.",
+            "Utilice calendarios compartidos o rutinas inmutables como anclas confiables para generar confianza.",
+            "Establezca un plan de seguridad colectivo: tiempos de espera durante el conflicto, frases de estabilización, etc.",
+            "Busque profesionales o comunidades que puedan presenciar y apoyar su crecimiento."
+          ],
+          "regulation": [
+            "Utilice técnicas de estabilización que combinen la respiración, el movimiento y la información sensorial cuando surja la ansiedad.",
+            "Repite el mantra: 'Tengo miedo, pero puedo quedarme aquí'. Puedo irme por un momento y luego regresar.'",
+            "Practica 'orientarte hacia la verdad' encontrando y nombrando 5 objetos a tu alrededor para regresar al presente."
+          ]
+        },
+        "earnedSecure": {
+          "summary": "Eres un alquimista de tu propia alma, habiendo transformado el plomo de tus experiencias pasadas en el oro de una seguridad consciente.",
+          "strengths": [
+            "Entreteje suavemente los conocimientos adquiridos a partir de la reflexión en el tejido de las interacciones diarias.",
+            "Actúe como un mentor compasivo, guiando a otros a través del panorama de vulnerabilidad basándose en la sabiduría heredada.",
+            "Guarda sagradamente los límites del yo sin cortar los vínculos de conexión con los demás.",
+            "Mantenga sus necesidades como sagradas mientras asume con gracia la responsabilidad de su impacto en los demás."
+          ],
+          "growth": [
+            "Continúe actualizando sus estrategias de afrontamiento a medida que cambien las circunstancias de la vida.",
+            "Celebre plenamente los majestuosos logros de su proceso de curación en lugar de centrarse únicamente en el siguiente objetivo.",
+            "Utilice no sólo la gestión de crisis, sino también la alegría y el juego como prácticas profundas de apego.",
+            "Estar orgullosa de y reconocer su propio crecimiento."
+          ],
+          "relationship": [
+            "Codiseña rituales de conexión para fortalecer la base segura que estás construyendo.",
+            "Comparta los métodos que lo transformaron (llevar un diario, terminología psicológica, ciclos de recuperación, etc.) con sus seres queridos.",
+            "Concédete la misma misericordia infinita que otorgas a los demás."
+          ],
+          "regulation": [
+            "Armoniza cuerpo y mente combinando respiración y movimiento.",
+            "Invoque la afirmación: \"Estoy creando seguridad para mí mismo y lo merezco\".",
+            "Honre su plenitud dedicándose un tiempo regular al cuidado del sistema nervioso."
+          ]
+        }
+      },
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "subtitle": "Un mapa sagrado para navegar el territorio del corazón.",
+      "sharePrompt": "Comparte esta sabiduría con quienes caminan a tu lado."
+    },
+    "faq": {
+      "title": "Las Últimas Reflexiones del Oráculo",
+      "items": [
+        {
+          "question": "¿Puede esta investigación reemplazar la sabiduría de los curanderos?",
+          "answer": "No. Esta es una herramienta reflexiva diseñada para iluminar su viaje junto a terapeutas certificados o guías espirituales."
+        },
+        {
+          "question": "¿La geometría de mi accesorio está fijada para siempre?",
+          "answer": "De nada. A través del testimonio intencional y la práctica constante de reparación, la resonancia del alma se ancla y se vuelve más segura a lo largo de ciclos de tiempo."
+        },
+        {
+          "question": "¿Cómo puedo aprovechar mejor estas revelaciones?",
+          "answer": "Comience con un ritual, un guión nuevo o un cambio sutil en el sistema nervioso cada semana. Invita a tu comunidad a tus victorias, para que la curación se convierta en una obra maestra colectiva."
+        }
+      ]
+    }
+  }
+}

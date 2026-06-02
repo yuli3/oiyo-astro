@@ -1,0 +1,14 @@
+{
+  "classifications": {
+    "Master Artisan": "Master Artisan",
+    "Grinder": "Grinder",
+    "Tortured Critic": "Tortured Critic",
+    "Free Spirit": "Free Spirit"
+  },
+  "title": "Perfectionism Type",
+  "badge": "Perfectionism",
+  "adaptive": "Adaptive",
+  "maladaptive": "Maladaptive",
+  "restart": "Restart",
+  "save": "Save Result"
+}

@@ -1,0 +1,114 @@
+{
+  "counselor": {
+    "identity": [
+      {
+        "id": "t_ns_high",
+        "tags": ["ns_high"],
+        "content": {
+          "ko": "새로운 자극을 향한 탐험가적 갈망이 당신의 원동력임을 관찰합니다.",
+          "en": "I observe that your explorer-like longing for new stimuli is your driving force."
+        }
+      },
+      {
+        "id": "t_ha_high",
+        "tags": ["ha_high"],
+        "content": {
+          "ko": "신중하고 세밀한 위험 감찰 능력이 당신의 생존 전략이자 강력한 무기입니다.",
+          "en": "Your cautious and detailed risk-monitoring ability is both your survival strategy and a powerful weapon."
+        }
+      },
+      {
+        "id": "t_p_high",
+        "tags": ["p_high"],
+        "content": {
+          "ko": "한계를 넘어서는 불굴의 인내가 당신의 본질적인 코어를 형성하고 있습니다.",
+          "en": "An indomitable patience that transcends limits forms your essential core."
+        }
+      },
+      {
+        "id": "s_sect_day",
+        "tags": ["sect_day"],
+        "content": {
+          "ko": "태양의 공적인 빛 아래에서 당신의 리더십과 야망이 가장 선명하게 드러날 것입니다.",
+          "en": "Your leadership and ambition will reveal themselves most clearly under the public light of the Sun."
+        }
+      },
+      {
+        "id": "s_sect_night",
+        "tags": ["sect_night"],
+        "content": {
+          "ko": "달이 비추는 침묵의 시간 속에서 당신의 깊은 직관과 창조성이 깨어나는 타입입니다.",
+          "en": "You are the type whose deep intuition and creativity awaken during the silent hours illuminated by the Moon."
+        }
+      }
+    ],
+    "state": [
+      {
+        "id": "st_velocity_high",
+        "tags": ["velocity_high"],
+        "content": {
+          "ko": "당신은 현재 은하계를 가로지르는 거대한 역동성 속에 놓여 있습니다.",
+          "en": "You are currently situated within a vast dynamism traversing the galaxy."
+        }
+      },
+      {
+        "id": "st_sonfreeday",
+        "tags": ["sonfreeday"],
+        "content": {
+          "ko": "전통적인 에너지가 조화로운 평형을 이루어, 새로운 시작을 위한 최적의 창이 열렸습니다.",
+          "en": "Traditional energies have reached a harmonious equilibrium, opening an optimal window for new beginnings."
+        }
+      }
+    ],
+    "catalyst": [
+      {
+        "id": "cat_decan_fire",
+        "tags": ["decan_aries", "decan_leo", "decan_sagittarius"],
+        "content": {
+          "ko": "당신의 내면에서 타오르는 화성적 열정이 정체된 상황을 돌파할 촉매제가 될 것입니다.",
+          "en": "The Martian passion burning within you will be the catalyst to break through stagnant situations."
+        }
+      },
+      {
+        "id": "cat_decan_water",
+        "tags": ["decan_cancer", "decan_scorpio", "decan_pisces"],
+        "content": {
+          "ko": "당신의 유연한 공감력과 감정적 정화 능력이 주변을 치유하는 촉매로 작용합니다.",
+          "en": "Your flexible empathy and emotional purification abilities act as a catalyst for healing those around you."
+        }
+      }
+    ],
+    "destiny": [
+      {
+        "id": "des_archive",
+        "tags": ["generic"],
+        "content": {
+          "ko": "당신이 설계하는 삶의 궤적은 곧 고대의 지혜와 미래의 데이터가 만나는 위대한 아카이브가 될 것입니다.",
+          "en": "The trajectory of life you are designing will soon become a great archive where ancient wisdom meets future data."
+        }
+      }
+    ]
+  },
+  "observer": {
+    "identity": [
+      {
+        "id": "o_quantum",
+        "tags": ["complexity_high"],
+        "content": {
+          "ko": "다차원적 확률이 이례적으로 중첩된 관찰자로서 당신은 현실을 붕괴시키고 재조립할 힘이 있습니다.",
+          "en": "As an observer with exceptionally superimposed multidimensional probabilities, you have the power to collapse and reassemble reality."
+        }
+      }
+    ],
+    "state": [
+      {
+        "id": "o_cosmic_position",
+        "tags": ["generic"],
+        "content": {
+          "ko": "당신의 존재적 좌표는 현재 초당 30km의 공전 속도로 은하계의 새로운 영역으로 진입하고 있습니다.",
+          "en": "Your existential coordinates are currently entering a new sector of the galaxy at an orbital velocity of 30 km/s."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Coordonnées Cosmiques",
+  "orbitalVelocity": "Vitesse Orbitale",
+  "galacticVelocity": "Vitesse Galactique",
+  "axialTilt": "Inclinaison Axiale",
+  "distanceFromSun": "Distance du Soleil",
+  "locationTooltip": "Voir les données de localisation"
+}

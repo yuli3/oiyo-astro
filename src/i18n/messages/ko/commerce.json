@@ -1,0 +1,48 @@
+{
+  "plans": {
+    "free": {
+      "features": {
+        "basic": "기본 지혜 좌표(사주, 조디악, 켈트 등)에 대한 액세스"
+      },
+      "name": "찾는 사람",
+      "description": "삶의 기본 좌표와 고대 지혜의 단편을 탐험해보세요."
+    },
+    "offering": {
+      "features": {
+        "ai_oracle": "AI 그랜드 오라클: 영혼 서사 합성(1 세션)"
+      },
+      "name": "입회자",
+      "description": "단 하나의 신성한 제물로 그랜드 오라클을 깨우세요."
+    },
+    "pro": {
+      "features": {
+        "unlimited_ai": "무제한 AI Oracle 합성 및 위원회 관점",
+        "archive": "개인 유산 아카이브 및 우선 지원"
+      },
+      "name": "키퍼",
+      "description": "지혜의 모든 채널을 열고 주권적 통찰력의 시대를 받아들이십시오."
+    }
+  },
+  "AccessGuard": {
+    "features": {
+      "grand_oracle": {
+        "lockTitle": "숨겨진 깨달음이 기다립니다",
+        "lockDescription": "당신의 운명의 파편이 모였습니다. 그랜드 오라클은 이를 개인적인 신화로 엮을 준비가 되어 있습니다. 예언을 깨워줄래?"
+      }
+    },
+    "actions": {
+      "offering": "신성한 제물을 바치다 ($1)",
+      "subscriber": "주권자 키퍼가 되세요"
+    }
+  },
+  "grandOracle": {
+    "resting": "오라클은 현재 영원한 침묵 속에 있습니다. 정렬이 바뀌면 반환해 주세요.",
+    "casting": "합성 캐스팅",
+    "weaving": "영혼의 조각을 짜다...",
+    "sovereignWisdom": "주권자 지혜",
+    "wisdomOfSovereign": "당신의 길을 향한 오라클의 선물입니다.",
+    "ready": "당신의 운명은 명백합니다.",
+    "interrupted": "합성이 중단되었습니다. 다시 시도해 주세요."
+  },
+  "payment": "결제 옵션"
+}

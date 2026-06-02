@@ -1,0 +1,8 @@
+{
+  "card": {
+    "recommendedAssets": "Featured Assets",
+    "highRisk": "high risk",
+    "lowRisk": "low risk",
+    "mediumRisk": "medium risk"
+  }
+}

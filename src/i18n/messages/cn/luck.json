@@ -1,0 +1,455 @@
+{
+  "meta": {
+    "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+  },
+  "hero": {
+    "eyebrow": "金钱动力",
+    "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "cta": "展示我的金钱蓝图"
+  },
+  "colors": {
+    "green_blue": "蓝 / 绿",
+    "red_purple": "红 / 紫",
+    "yellow_brown": "黄 / 褐",
+    "white_gold": "白 / 金 / 银",
+    "black_navy": "黑 / 深蓝"
+  },
+  "directions": {
+    "east": "东",
+    "south": "南",
+    "center": "中央",
+    "west": "西",
+    "north": "北"
+  },
+  "items": {
+    "plants": "生机勃勃的植物",
+    "wooden_accessories": "木制配饰",
+    "books": "书籍和文具",
+    "electronics": "电子产品",
+    "candles": "蜡烛和香薰",
+    "glasses": "眼镜和太阳镜",
+    "pottery": "陶器和陶瓷",
+    "stones": "天然石",
+    "square_objects": "方形物品",
+    "metal_jewelry": "金属首饰",
+    "mirrors": "镜子",
+    "fountain_pens": "钢笔",
+    "fountains": "小喷泉",
+    "glassware": "透明玻璃器皿",
+    "paintings": "风景画",
+    "hobby_painting": "绘画",
+    "hobby_writing": "写作",
+    "hobby_photography": "摄影",
+    "hobby_music": "音乐",
+    "hobby_crafts": "工艺",
+    "hobby_pottery": "陶器",
+    "hobby_dancing": "跳舞",
+    "hobby_theater": "剧院"
+  },
+  "stemSeasonItems": {
+    "GAP_Spring": ["参天大树", "绿色面料"],
+    "GAP_Summer": ["安静的树荫", "蓝色口音"],
+    "BYEONG_Winter": ["温暖的灯光", "红色配饰"],
+    "SIN_Autumn": ["高级珠宝", "锋利的剪刀"]
+  },
+  "combinations": {
+    "Harmony": {
+      "title": "癸亥 (水猪)",
+      "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。"
+    },
+    "Conflict": {
+      "title": "癸亥 (水猪)",
+      "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。"
+    },
+    "Neutral": {
+      "title": "癸亥 (水猪)",
+      "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。"
+    }
+  },
+  "element": {
+    "wood": {
+      "item_desc": "透明玻璃器皿或与水有关的物品",
+      "direction_adv": "利用北方的灵活智慧之气"
+    },
+    "fire": {
+      "item_desc": "透明玻璃器皿或与水有关的物品",
+      "direction_adv": "利用北方的灵活智慧之气"
+    },
+    "earth": {
+      "item_desc": "透明玻璃器皿或与水有关的物品",
+      "direction_adv": "利用北方的灵活智慧之气"
+    },
+    "metal": {
+      "item_desc": "透明玻璃器皿或与水有关的物品",
+      "direction_adv": "利用北方的灵活智慧之气"
+    },
+    "water": {
+      "item_desc": "透明玻璃器皿或与水有关的物品",
+      "direction_adv": "利用北方的灵活智慧之气"
+    }
+  },
+  "advice": {
+    "pillars": {
+      "gap_ja": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "eul_chug": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "byeong_in": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "jeong_myo": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "mu_jin": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gi_sa": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gyeong_o": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "sin_mi": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "im_sin": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gye_yu": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gap_sul": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "eul_hae": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "byeong_ja": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "jeong_chug": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "mu_in": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gi_myo": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gyeong_jin": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "sin_sa": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "im_o": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gye_mi": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gap_sin": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "eul_yu": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "byeong_sul": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "jeong_hae": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "mu_ja": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gi_chug": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gyeong_in": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "sin_myo": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "im_jin": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gye_sa": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gap_o": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "eul_mi": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "byeong_sin": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "jeong_yu": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "mu_sul": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gi_hae": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gyeong_ja": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "sin_chug": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "im_in": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gye_myo": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gap_jin": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "eul_sa": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "byeong_o": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "jeong_mi": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "mu_sin": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gi_yu": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gyeong_sul": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "sin_hae": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "im_ja": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gye_chug": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gap_in": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "eul_myo": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "byeong_jin": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "jeong_sa": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "mu_o": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gi_mi": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gyeong_sin": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "sin_yu": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "im_sul": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      },
+      "gye_hae": {
+        "title": "癸亥 (水猪)",
+        "advice": "百川归海的形态。以宏大的包容力和灵活性完成万物，并准备下一步。",
+        "direction": "西北",
+        "conflict": "东南"
+      }
+    }
+  }
+}

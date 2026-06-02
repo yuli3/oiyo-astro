@@ -1,0 +1,14 @@
+{
+  "mayan": {
+    "systemName": "玛雅星际曼陀罗",
+    "narrative": "银河同步",
+    "solarSeal": "太阳印记",
+    "tone": "银河音调"
+  },
+  "celtic": {
+    "systemName": "凯尔特树木星座",
+    "narrative": "树木的智慧",
+    "treeSign": "树木星座",
+    "ogham": "欧甘字母"
+  }
+}

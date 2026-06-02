@@ -1,0 +1,10 @@
+{
+  "title": "아카이브",
+  "subtitle": "역사적 기록",
+  "labels": {
+    "ancient": "고대 문헌",
+    "charts": "차트",
+    "texts": "원고"
+  },
+  "cta": "아카이브 보기"
+}

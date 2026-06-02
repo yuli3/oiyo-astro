@@ -1,0 +1,15 @@
+{
+  "successTitle": "Success",
+  "successMessage": "Submitted.",
+  "errorTitle": "Error",
+  "errorMessage": "Failed.",
+  "subjectLabel": "Subject",
+  "subjectPlaceholder": "Enter subject",
+  "categoryLabel": "Category",
+  "priorityLabel": "Priority",
+  "descriptionLabel": "Description",
+  "descriptionPlaceholder": "Enter description",
+  "submitting": "Submitting...",
+  "submitButton": "Submit",
+  "title": "Form"
+}

@@ -1,0 +1,31 @@
+{
+  "birthDate": "Birth Date",
+  "birthTime": "Birth Time",
+  "calculate": "Calculate",
+  "formTitle": "Enter Your Details",
+  "privacyNote": "Your data is not stored permanently.",
+  "nameLabel": "Name",
+  "namePlaceholder": "Enter your name",
+  "birthDateLabel": "Date of Birth",
+  "birthTimeLabel": "Time of Birth",
+  "hourPlaceholder": "HH",
+  "minutePlaceholder": "MM",
+  "locationLabel": "Place of Birth",
+  "locationPlaceholder": "City, Country",
+  "trueSolarTime": "Use True Solar Time",
+  "timeUnknownTitle": "Unknown Time",
+  "timeUnknownDesc": "If time is unknown, calculations may be less accurate.",
+  "genderLabel": "Gender",
+  "genderPlaceholder": "Select Gender",
+  "genderMale": "Male",
+  "genderFemale": "Female",
+  "calendarNoticeDesc": "Please double check solar/lunar calendar selection.",
+  "analyzing": "Analyzing...",
+  "submitButton": "Analyze Destiny",
+  "secureTransmission": "Secure Transmission",
+  "location": "place of birth",
+  "gender": "gender",
+  "title": {
+    "saju": "Saju Input"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "modes": {
+    "serious": "Conseils sincères",
+    "funny": "Esprit et merveille",
+    "realistic": "Sagesse fondée"
+  },
+  "ui": {
+    "additionalTips": "Murmures de sagesse",
+    "askAnotherQuestion": "Poser une nouvelle demande",
+    "share": "Transmettre la découverte",
+    "searchPlaceholder": "Parlez de votre inquiétude à l'Oracle...",
+    "randomAdvice": "🎲 Invoquer un aperçu aléatoire",
+    "allCategories": "Omnia",
+    "noResultsTitle": "Résonance obscurcie",
+    "noResultsDescription": "L'Oracle ne trouve aucune correspondance immédiate pour cette enquête. Reposez votre question avec une formulation différente.",
+    "clearSearch": "Demande de purge"
+  },
+  "meta": {
+    "title": "Oracle de résonance cardiaque"
+  }
+}

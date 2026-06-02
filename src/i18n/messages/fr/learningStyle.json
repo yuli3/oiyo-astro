@@ -1,0 +1,127 @@
+{
+  "visual": {
+    "label": "Apprenant Lecture/Écriture",
+    "description": "Vous apprenez mieux par la lecture et l'écriture. Vous préférez les informations textuelles, la prise de notes et le traitement de l'information par le mot écrit.",
+    "environment": "Espaces calmes et confortables avec un éclairage adapté à la lecture et à l'écriture. Préfère les environnements ayant accès aux livres, au papier et aux instruments d'écriture."
+  },
+  "auditory": {
+    "label": "Apprenant Lecture/Écriture",
+    "description": "Vous apprenez mieux par la lecture et l'écriture. Vous préférez les informations textuelles, la prise de notes et le traitement de l'information par le mot écrit.",
+    "environment": "Espaces calmes et confortables avec un éclairage adapté à la lecture et à l'écriture. Préfère les environnements ayant accès aux livres, au papier et aux instruments d'écriture."
+  },
+  "kinesthetic": {
+    "label": "Apprenant Lecture/Écriture",
+    "description": "Vous apprenez mieux par la lecture et l'écriture. Vous préférez les informations textuelles, la prise de notes et le traitement de l'information par le mot écrit.",
+    "environment": "Espaces calmes et confortables avec un éclairage adapté à la lecture et à l'écriture. Préfère les environnements ayant accès aux livres, au papier et aux instruments d'écriture."
+  },
+  "reading": {
+    "label": "Apprenant Lecture/Écriture",
+    "description": "Vous apprenez mieux par la lecture et l'écriture. Vous préférez les informations textuelles, la prise de notes et le traitement de l'information par le mot écrit.",
+    "environment": "Espaces calmes et confortables avec un éclairage adapté à la lecture et à l'écriture. Préfère les environnements ayant accès aux livres, au papier et aux instruments d'écriture."
+  },
+  "questions": {
+    "options": {
+      "q1": {
+        "a": "Regarder un tutoriel vidéo",
+        "b": "Se faire expliquer les étapes par quelqu'un",
+        "c": "Commencer simplement à l'utiliser et apprendre par essais et erreurs",
+        "d": "Lire le manuel ou les instructions"
+      },
+      "q2": {
+        "a": "Regarder un tutoriel vidéo",
+        "b": "Se faire expliquer les étapes par quelqu'un",
+        "c": "Commencer simplement à l'utiliser et apprendre par essais et erreurs",
+        "d": "Lire le manuel ou les instructions"
+      },
+      "q3": {
+        "a": "Regarder un tutoriel vidéo",
+        "b": "Se faire expliquer les étapes par quelqu'un",
+        "c": "Commencer simplement à l'utiliser et apprendre par essais et erreurs",
+        "d": "Lire le manuel ou les instructions"
+      },
+      "q4": {
+        "a": "Regarder un tutoriel vidéo",
+        "b": "Se faire expliquer les étapes par quelqu'un",
+        "c": "Commencer simplement à l'utiliser et apprendre par essais et erreurs",
+        "d": "Lire le manuel ou les instructions"
+      },
+      "q5": {
+        "a": "Regarder un tutoriel vidéo",
+        "b": "Se faire expliquer les étapes par quelqu'un",
+        "c": "Commencer simplement à l'utiliser et apprendre par essais et erreurs",
+        "d": "Lire le manuel ou les instructions"
+      },
+      "q6": {
+        "a": "Regarder un tutoriel vidéo",
+        "b": "Se faire expliquer les étapes par quelqu'un",
+        "c": "Commencer simplement à l'utiliser et apprendre par essais et erreurs",
+        "d": "Lire le manuel ou les instructions"
+      },
+      "q7": {
+        "a": "Regarder un tutoriel vidéo",
+        "b": "Se faire expliquer les étapes par quelqu'un",
+        "c": "Commencer simplement à l'utiliser et apprendre par essais et erreurs",
+        "d": "Lire le manuel ou les instructions"
+      },
+      "q8": {
+        "a": "Regarder un tutoriel vidéo",
+        "b": "Se faire expliquer les étapes par quelqu'un",
+        "c": "Commencer simplement à l'utiliser et apprendre par essais et erreurs",
+        "d": "Lire le manuel ou les instructions"
+      },
+      "q9": {
+        "a": "Regarder un tutoriel vidéo",
+        "b": "Se faire expliquer les étapes par quelqu'un",
+        "c": "Commencer simplement à l'utiliser et apprendre par essais et erreurs",
+        "d": "Lire le manuel ou les instructions"
+      },
+      "q10": {
+        "a": "Regarder un tutoriel vidéo",
+        "b": "Se faire expliquer les étapes par quelqu'un",
+        "c": "Commencer simplement à l'utiliser et apprendre par essais et erreurs",
+        "d": "Lire le manuel ou les instructions"
+      }
+    },
+    "q1": "Pour apprendre quelque chose de nouveau, vous préférez :",
+    "q2": "Quand vous devez vous souvenir d'un numéro de téléphone, vous :",
+    "q3": "En classe, vous apprenez mieux quand l'instructeur :",
+    "q4": "Pour réviser un examen, ce qui vous aide le plus est de :",
+    "q5": "Pour essayer de résoudre un problème, vous avez l'habitude de :",
+    "q6": "Vous vous souvenez mieux des informations lorsqu'elles sont :",
+    "q7": "Pour donner des indications à quelqu'un, vous :",
+    "q8": "Votre environnement d'étude idéal est :",
+    "q9": "Quand vous rencontrez de nouvelles personnes, vous vous souvenez plus clairement des :",
+    "q10": "Pour apprendre un nouveau logiciel, vous préférez :"
+  },
+  "tips": {
+    "visual": [
+      "Utiliser des cartes mentales et des diagrammes",
+      "Surlignez le texte important avec des couleurs",
+      "Regarder des vidéos éducatives"
+    ],
+    "auditory": [
+      "Écoutez des conférences enregistrées",
+      "Participer à des groupes d'étude",
+      "Lire les notes à haute voix"
+    ],
+    "kinesthetic": [
+      "Se déplacer pendant ses études",
+      "Utiliser des activités pratiques",
+      "Écrire des notes à la main"
+    ],
+    "reading": [
+      "Prendre des notes écrites détaillées",
+      "Réécrivez les notes avec vos propres mots",
+      "Utiliser des listes et des plans"
+    ]
+  },
+  "title": "ADN Cognitif",
+  "badge": "Modèle d'Apprentissage VARK",
+  "intro": "Découvrez les secrets de votre cerveau. Identifiez si vous apprenez le plus efficacement par la vision, le son, le texte ou l'action.",
+  "result": {
+    "title": "Résultat du Style d'Apprentissage",
+    "studyTips": "Conseils d'Étude",
+    "environment": "Environnement Optimal",
+    "careerFit": "Carrières Recommandées"
+  }
+}

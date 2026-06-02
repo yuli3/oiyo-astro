@@ -1,0 +1,6 @@
+{
+  "now": "방금",
+  "minute": "{count}분 전",
+  "hour": "{count}시간 전",
+  "day": "{count}일 전"
+}

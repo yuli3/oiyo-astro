@@ -1,0 +1,150 @@
+{
+  "title": "駅馬",
+  "systemName": "紫微斗数",
+  "narrative": "紫色の星々の物語",
+  "resonance": {
+    "professionalChart": "命盤分析：あなたの{lifePalace}宮に生命力が宿り、命宮には{starCount}個の主星が輝いています。官禄宮（{bureau}）の流れも注目に値します。"
+  },
+  "stars": {
+    "zi_wei": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tian_ji": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tai_yang": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "wu_qu": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tian_tong": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "lian_zhen": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tian_fu": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tai_yin": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tan_lang": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "ju_men": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tian_xiang": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tian_liang": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "qi_sha": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "po_jun": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "zuo_fu": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "you_bi": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "wen_chang": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "wen_qu": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tian_kui": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tian_yue": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "qing_yang": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tuo_luo": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "huo_xing": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "ling_xing": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "di_kong": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "di_jie": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "lu_cun": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    },
+    "tian_ma": {
+      "name": "天馬星",
+      "title": "駅馬",
+      "keywords": "移動, 旅行"
+    }
+  }
+}

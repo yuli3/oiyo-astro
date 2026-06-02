@@ -1,0 +1,106 @@
+{
+  "title": "우주 예측",
+  "subtitle": "2026년 1월",
+  "description": "이번 달의 천체 안내를 공개하려면 별자리를 선택하세요. 별들이 당신의 길을 밝히기 위해 정렬되었습니다.",
+  "zodiac": {
+    "aries": {
+      "name": "양자리",
+      "element": "불의 요소",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "taurus": {
+      "name": "황소자리",
+      "element": "지구 요소",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "gemini": {
+      "name": "쌍둥이자리",
+      "element": "에어엘리먼트",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "cancer": {
+      "name": "암",
+      "element": "물의 요소",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "leo": {
+      "name": "사자 별자리",
+      "element": "불의 요소",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "virgo": {
+      "name": "처녀 자리",
+      "element": "지구 요소",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "libra": {
+      "name": "천칭",
+      "element": "에어엘리먼트",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "scorpio": {
+      "name": "천갈궁",
+      "element": "물의 요소",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "sagittarius": {
+      "name": "궁수",
+      "element": "불의 요소",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "capricorn": {
+      "name": "염소자리",
+      "element": "지구 요소",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "aquarius": {
+      "name": "물병자리",
+      "element": "에어엘리먼트",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    },
+    "pisces": {
+      "name": "물고기",
+      "element": "물의 요소",
+      "luckyDay": "행운의 날",
+      "luckyColor": "행운의 색"
+    }
+  },
+  "meta": {
+    "title": "오늘의 운세",
+    "description": "오늘의 맞춤형 운세와 점성술 통찰력을 받아보세요.",
+    "keywords": "운세, 점성술, 운세, 오늘의 운세, 별자리"
+  },
+  "hero": {
+    "title": "오늘의 운세",
+    "subtitle": "오늘 스타들이 나에게 보내는 메시지를 확인해보세요",
+    "cta": "내 별자리 보기"
+  },
+  "test": {
+    "insightBullets": [
+      "일일 점성술 안내",
+      "맞춤형 황도대 통찰력",
+      "우주 에너지 예측"
+    ],
+    "progress": "진전",
+    "next": "다음",
+    "previous": "~ 전에",
+    "submit": "제출하기",
+    "loading": "로드 중",
+    "selectOption": "선택하기"
+  },
+  "result": {
+    "title": "내 재산",
+    "description": "오늘의 별자리 통찰력 및 가이드"
+  }
+}

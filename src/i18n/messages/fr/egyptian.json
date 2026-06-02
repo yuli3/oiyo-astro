@@ -1,0 +1,272 @@
+{
+  "title": "Astrologie Égyptienne",
+  "description": "Sagesse ancienne de Kemet avec les Dieux Gardiens et les Décans.",
+  "systemName": "Astrologie Égyptienne",
+  "narrative": "Neters et Décans Anciens",
+  "guardianDeity": "Dieu Gardien",
+  "ariaLabel": "Dieu Égyptien : {god}, avec les attributs {attributes}.",
+  "deities": {
+    "thoth": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Intellectuelle", "Communicative", "Curieuse", "Inventive"],
+      "strengths": [
+        "Résolution de problèmes",
+        "En écrivant",
+        "Enseignement",
+        "Mémoire"
+      ],
+      "challenges": ["Trop réfléchir", "Nervosité", "Détachement"],
+      "domain": ["Sagesse", "En écrivant", "Magie", "Moon"]
+    },
+    "horus": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Courageuse", "Ambitieuse", "Protectrice", "Charismatique"],
+      "strengths": ["Direction", "Stratégie", "Justice", "Détermination"],
+      "challenges": ["Impulsivité", "Arrogance", "Conflit"],
+      "domain": ["Sky", "War", "Protection", "Royauté"]
+    },
+    "wadjet": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Protectrice", "Loyale", "Féroce", "Just"],
+      "strengths": ["Intuition", "Protection", "Esprit de décision"],
+      "challenges": ["Possessivité", "Jalousie", "Vengeance"],
+      "domain": ["Protection", "Royauté", "Justice", "Nature"]
+    },
+    "sekhmet": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Féroce", "Passionnée", "Protectrice", "Puissant"],
+      "strengths": ["Courage", "Guérison", "Transformation", "Force"],
+      "challenges": ["Colère", "Destruction", "Extrémisme"],
+      "domain": ["War", "Guérison", "Sun", "Destruction"]
+    },
+    "bastet": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Nourrir", "Espiègle", "Indépendante", "Sensuelle"],
+      "strengths": ["Grâce", "Protection", "Intuition", "Charme"],
+      "challenges": ["Imprévisibilité", "Vanité", "Indépendance"],
+      "domain": ["Home", "Fécondité", "Cats", "Joy"]
+    },
+    "isis": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Nourrir", "Wise", "Magique", "Déterminée"],
+      "strengths": ["Guérison", "Magie", "Protection", "Dévotion"],
+      "challenges": ["Surprotection", "Manipulation", "Chagrin"],
+      "domain": ["Magie", "Maternité", "Sagesse", "Nature"]
+    },
+    "osiris": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Wise", "Just", "Patient", "Régénératrice"],
+      "strengths": ["Jugement", "Renouvellement", "Stabilité", "Justice"],
+      "challenges": ["Passivité", "Détachement", "Mélancolie"],
+      "domain": ["Pègre", "Agriculture", "Renaissance", "Jugement"]
+    },
+    "hathor": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Aimante", "Joyeux", "Artistique", "Nourrir"],
+      "strengths": ["Créativité", "Love", "Harmonie", "Plaisir"],
+      "challenges": ["Indulgence", "Jalousie", "Vanité"],
+      "domain": ["Love", "Beauté", "Musique", "Joy"]
+    },
+    "anubis": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Mystérieuse", "Protectrice", "Loyale", "Sérieuse"],
+      "strengths": ["Transformation", "Conseils", "Protection", "Vérité"],
+      "challenges": ["Isolement", "Obsession", "Obscurité"],
+      "domain": ["La mort", "Momification", "Vie après la mort", "Protection"]
+    },
+    "seth": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Puissant", "Chaotique", "Ambitieuse", "Imprévisible"],
+      "strengths": ["Force", "Courage", "Indépendance", "Transformation"],
+      "challenges": ["Chaos", "Violence", "Jalousie", "Isolement"],
+      "domain": ["Chaos", "Déserte", "Tempêtes", "Étrangères"]
+    },
+    "geb": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Fondé", "Patient", "Nourrir", "Écurie"],
+      "strengths": ["Stabilité", "Fécondité", "Patience", "Sagesse"],
+      "challenges": ["Entêtement", "Possessivité", "Inertie"],
+      "domain": ["Terre", "Fécondité", "Minéraux", "Serpents"]
+    },
+    "nut": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Éthérée", "Protectrice", "Cosmique", "Maternelle"],
+      "strengths": ["Vision", "Protection", "Mystère", "Infini"],
+      "challenges": ["Distance", "Irréalité", "Submerger"],
+      "domain": ["Sky", "Étoiles", "Cosmos", "Naissance"]
+    },
+    "ra": {
+      "name": "Râ",
+      "symbol": "Disque Solaire",
+      "traits": ["Puissant", "Créative", "Radiante", "Faisant autorité"],
+      "strengths": ["Direction", "Vitalité", "Éclairage", "Vérité"],
+      "challenges": ["Fierté", "Épuisement", "Dominance"],
+      "domain": ["Sun", "Création", "Life", "Commande"]
+    }
+  },
+  "resonance": {
+    "note": "Les archives observent votre âme sous la protection de {deity}, dieu de {domain}. Dans l'ancienne Kemet, on croyait que ceux nés à cette époque portaient l'énergie {traits}. Ce n'est pas un destin, mais un écho d'observations anciennes."
+  },
+  "elements": {
+    "Air": "Air",
+    "Earth": "Terre",
+    "Fire": "Feu",
+    "Water": "Eau"
+  },
+  "colors": {
+    "Azure": "Azur",
+    "Silver": "Argent",
+    "White": "Blanc",
+    "Brown": "Brun",
+    "Green": "Vert",
+    "Amber": "Ambre",
+    "Gold": "Or",
+    "Crimson": "Cramoisi",
+    "Orange": "Orange",
+    "Deep Blue": "Bleu Profond",
+    "Turquoise": "Turquoise",
+    "Sea Green": "Vert Océan"
+  },
+  "@/components/ontology/FactionCard": "Carte de Faction",
+  "@/components/ontology/GenericFactionCard": "Carte de Faction Générique",
+  "": "",
+  "labels": {
+    "undiscovered": "Non Découvert",
+    "meaning": "Signification",
+    "element": "Élément",
+    "nameVibration": "Vibration du Nom",
+    "westernZodiac": "Zodiaque Occidental",
+    "sign": "Signe",
+    "observation": "Observation",
+    "easternZodiac": "Zodiaque Oriental",
+    "animal": "Animal",
+    "dominion": "Domination",
+    "bureau": "Bureau"
+  },
+  "returnToHome": "Retour à l'Accueil",
+  "contactSupport": "Contacter le Support",
+  "syncingData": "Synchronisation des Données",
+  "guest": "Invité",
+  "calibration": "Calibration",
+  "changeOrigin": "Changer l'Origine",
+  "todayInsight": {
+    "title": "Perspicacité du Jour",
+    "soulOracle": "Oracle de l'Âme",
+    "innerResonance": "Résonance Intérieure",
+    "manifestMore": "Manifester Davantage"
+  },
+  "readingsLink": "Lectures",
+  "cards": {
+    "vitality": {
+      "title": "Vitalité"
+    },
+    "resonance": {
+      "description": "Votre schéma de résonance.",
+      "subtitle": "Résonance"
+    },
+    "foundation": {
+      "description": "Votre fondation essentielle.",
+      "subtitle": "Fondation"
+    },
+    "elemental": {
+      "description": "Votre mélange élémentaire.",
+      "subtitle": "Affinité Élémentaire",
+      "title": "Éléments"
+    },
+    "onomancy": {
+      "description": "La vibration de votre nom.",
+      "subtitle": "Alchimie du Nom"
+    },
+    "cognition": {
+      "description": "Votre schéma de pensée.",
+      "subtitle": "Cognition"
+    },
+    "vocation": {
+      "description": "Votre chemin vocationnel.",
+      "subtitle": "Vocation"
+    },
+    "destiny": {
+      "description": "Votre trajectoire de destin.",
+      "subtitle": "Destin"
+    }
+  },
+  "resonanceTitle": "Profil de Résonance",
+  "sections": {
+    "testArchitecture": {
+      "title": "Architecture des Tests",
+      "description": "Informations structurelles de fond."
+    },
+    "emotionalResonance": {
+      "title": "Résonance Émotionnelle",
+      "description": "Comment vous vous connectez émotionnellement."
+    },
+    "grandArchives": {
+      "title": "Les Grandes Archives",
+      "description": "Base de connaissances historiques."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "Éléments"
+    },
+    "riasec": {
+      "description": "Type de Carrière RIASEC"
+    },
+    "saju": {
+      "label": "Saju",
+      "description": "Analyse des Quatre Piliers",
+      "polarity": "Polarité",
+      "element": "Élément"
+    },
+    "archiveEntry": "Entrée des Archives",
+    "recordVerified": "Dossier Vérifié",
+    "tuning": {
+      "color": "Couleur",
+      "number": "Nombre",
+      "direction": "Direction",
+      "flower": "Fleur",
+      "gemstone": "Pierre Précieuse",
+      "luckyStar": "Étoile Chanceuse",
+      "title": "Harmonisation",
+      "favorableDays": "Jours Favorables",
+      "synergy": "Synergie"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "Zi Wei"
+  },
+  "_": "",
+  "mayan": {
+    "systemName": "Calendrier Maya",
+    "narrative": "Synchronisation Galactique",
+    "solarSeal": "Sceau Solaire",
+    "tone": "Tonalité Galactique"
+  },
+  "celtic": {
+    "systemName": "Calendrier Celtique des Arbres",
+    "narrative": "Sagesse des Arbres",
+    "treeSign": "Signe de l'Arbre",
+    "ogham": "Symbole Ogham"
+  },
+  "egyptianGuardian": "Gardien Égyptien",
+  "celticTreeSign": "Signe de l'Arbre Celtique",
+  "birthSymbols": "Symboles de Naissance",
+  "symbols": {
+    "Stone": "Pierre",
+    "Flower": "Fleur",
+    "Star": "Étoile"
+  }
+}

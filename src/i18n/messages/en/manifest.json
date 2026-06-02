@@ -1,0 +1,67 @@
+{
+  "manifest": {
+    "academy": {
+      "title": "The School of Life & Resonance",
+      "description": "Mastering the Art of Living",
+      "h1": "Oiyo Academy",
+      "seoTitle": "Academy",
+      "keywords": "Education, Life, Resonance"
+    },
+    "big5": {
+      "title": "Big 5 Personality Test",
+      "description": "Discover your true self through the scientific lens of the five major personality traits.",
+      "h1": "Big 5 Personality Test",
+      "seoTitle": "Big 5 Personality Test - Oiyo",
+      "keywords": "Big 5, OCEAN, Personality Test, Psychology, MBTI alternative"
+    },
+    "bias": {
+      "title": "Cognitive Filters",
+      "description": "Identify your thinking patterns and biases based on Daniel Kahneman's behavioral economics.",
+      "h1": "Cognitive Bias Analysis",
+      "seoTitle": "Cognitive Bias & Heuristics Analysis",
+      "keywords": "Cognitive Bias, Heuristics, Psychology"
+    },
+    "consumption": {
+      "title": "Wealth & Value DNA",
+      "description": "Analyze your relationship with money and value based on psychological accounting.",
+      "h1": "Consumption Style",
+      "seoTitle": "Consumption Style & Wealth Values",
+      "keywords": "Consumption, Wealth, Value, Psychology"
+    },
+    "country": {
+      "title": "Global Heritage Match",
+      "description": "Find which country's culture aligns with your values using Hofstede's Cultural Dimensions.",
+      "h1": "Cultural Dimensions",
+      "seoTitle": "Cultural Dimension & Country Alignment",
+      "keywords": "Hofstede, Culture, Country, Values"
+    },
+    "mbti": {
+      "title": "MBTI (Myers-Briggs Type Indicator)",
+      "description": "Unlock your true potential by understanding your personality architecture.",
+      "h1": "MBTI Analysis",
+      "seoTitle": "The Imperial MBTI Assessment",
+      "keywords": "MBTI, Personality, 16 Types, Jung"
+    },
+    "tci": {
+      "title": "TCI (Temperament & Character)",
+      "description": "Analyze your innate temperament and acquired character through 7 dimensions.",
+      "h1": "TCI Profile",
+      "seoTitle": "TCI Assessment - Oiyo",
+      "keywords": "TCI, Temperament, Character, Psychology"
+    },
+    "resilience": {
+      "title": "Soul Resilience",
+      "description": "Measure your ability to bounce back from adversity using the CD-RISC model.",
+      "h1": "Resilience Capacity",
+      "seoTitle": "Soul Resilience (CD-RISC) Analysis",
+      "keywords": "Resilience, CD-RISC, Psychology, Grit"
+    },
+    "learning": {
+      "title": "Cognitive Learning DNA",
+      "description": "Discover your optimal learning strategy based on the VARK model.",
+      "h1": "Learning Profile",
+      "seoTitle": "Learning Style (VARK) Analysis",
+      "keywords": "Learning Style, VARK, Education, Strategy"
+    }
+  }
+}

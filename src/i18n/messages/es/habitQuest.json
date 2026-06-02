@@ -1,0 +1,33 @@
+{
+  "habitQuest": {
+    "quests": {
+      "mood": "Registre su estado de ánimo",
+      "mindfulness": "Practica la atención plena",
+      "city": "Explorar la guía de la ciudad"
+    },
+    "meta": {
+      "keywords": "habits, gamification, rpg, self-improvement",
+      "subtitle": "Level up your life daily",
+      "disclaimer": "XP and Level are stored locally and will be reset if you clear app data.",
+      "description": "Comprehensive analysis and insights",
+      "title": "My Insights"
+    },
+    "hero": {
+      "subtitle": "Level up your life daily",
+      "badge": "Unveil the hidden layers of your personal philosophy."
+    },
+    "landing": {
+      "cta": "Comienza la aventura"
+    },
+    "subtitle": "Sube de nivel tu vida diariamente",
+    "levelTitle": "Nivel {nivel} Aventurero",
+    "levelName": "Nivel {nivel}",
+    "streak": "{días} ¡Racha de días! 🔥",
+    "nextLevelMsg": "¡Se necesitan {xp} XP para el siguiente nivel!",
+    "dailyQuests": "Misiones diarias",
+    "disclaimer": "XP and Level are stored locally and will be reset if you clear app data.",
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights",
+    "T": "Dashboard"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "foundation": {
+    "title": "形成期",
+    "description": "人生の基盤を築く学びと成長の時期。",
+    "period": "若年期"
+  },
+  "prime": {
+    "title": "活動期",
+    "description": "可能性を最大限に発揮し、成果を追求する時期。",
+    "period": "壮年期"
+  },
+  "wisdom": {
+    "title": "成熟期",
+    "description": "経験を振り返り、内なる知恵を深める時期。",
+    "period": "老年期"
+  }
+}

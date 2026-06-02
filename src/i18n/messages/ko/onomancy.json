@@ -1,0 +1,29 @@
+{
+  "components": {
+    "sound": {
+      "name": "소리에너지",
+      "description": "이름을 부를 때 발생하는 독특한 진동과 파동."
+    },
+    "meaning": {
+      "name": "의미와 의도",
+      "description": "인물 속에 담긴 의도와 그 이면에 숨겨진 운명적 암시."
+    },
+    "balance": {
+      "name": "원소의 조화",
+      "description": "이름의 문자 간의 균형과 조화."
+    }
+  },
+  "result": {
+    "excellent": "세상에 널리 이롭게 될 매우 상서로운 이름입니다.",
+    "good": "좋은 이름은 부를수록 행운이 따른다.",
+    "fair": "평범함 속에 특별함을 숨긴 이름.",
+    "caution": "좀 더 부드럽게 불러주면 더 좋을 것 같은 이름."
+  },
+  "title": "유일성",
+  "description": "당신의 이름 속에 담긴 독특한 에너지와 운명의 흐름을 읽어보세요.",
+  "narrative": "당신의 이름은 당신이 매일 세상에 시전하는 가장 강력한 주문입니다.",
+  "missingForce": "잃어버린 힘",
+  "none": "없음",
+  "vibrationFill": "진동 채우기",
+  "circularText": "진동 루프"
+}

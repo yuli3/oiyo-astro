@@ -1,0 +1,60 @@
+{
+  "mbti": {
+    "title": "Évaluation de la personnalité MBTI",
+    "resultLabel": "Votre résultat",
+    "description": "Selon vos réponses, votre type de personnalité est {type}.",
+    "retake": "Recalibrer l'essence"
+  },
+  "riasec": {
+    "codes": {
+      "R": {
+        "name": "Réaliste",
+        "desc": "Habile à travailler avec des machines, des outils et des systèmes. Vous appréciez les résultats pratiques et le travail manuel.",
+        "jobs": "Ingénieur, Chef, Athlète, Technicien, etc."
+      },
+      "I": {
+        "name": "Investigateur",
+        "desc": "Analytique et logique. Vous aimez résoudre des problèmes complexes et explorer des curiosités intellectuelles par la recherche.",
+        "jobs": "Scientifique, Programmeur, Médecin, Chercheur, etc."
+      },
+      "A": {
+        "name": "Artistique",
+        "desc": "Créatif et d'esprit libre. Vous aimez donner forme à des idées originales grâce à votre sensibilité artistique.",
+        "jobs": "Artiste, Écrivain, Designer, Acteur, etc."
+      },
+      "S": {
+        "name": "Sociale",
+        "desc": "Trouvez du sens à aider, enseigner et conseiller les autres. Vous appréciez l'échange émotionnel et la coopération.",
+        "jobs": "Enseignant, Conseiller, Infirmier, Travailleur Social, etc."
+      },
+      "E": {
+        "name": "Entreprenant",
+        "desc": "Orienté vers les objectifs avec un excellent leadership. Vous appréciez les activités persuasives et dynamiques qui dirigent les personnes et les organisations.",
+        "jobs": "Entrepreneur, Vendeur, Politicien, Marketeur, etc."
+      },
+      "C": {
+        "name": "Conventionnel",
+        "desc": "Systématique et précis. Exceller dans l'organisation des données et l'exécution efficace des tâches selon les règles.",
+        "jobs": "Comptable, Administrateur, Analyste de données, Banquier, etc."
+      }
+    },
+    "title": "Évaluation des intérêts professionnels (RIASEC)",
+    "resultLabel": "Votre aperçu",
+    "description": "Selon notre analyse, votre modèle d'intérêt professionnel principal est {type}.",
+    "retake": "Recalibrer l'essence"
+  },
+  "start": "Commencer",
+  "continue": "Continuer",
+  "complete": "Terminer",
+  "progress": "Étape",
+  "results": "Voir les résultats",
+  "mode": "[MANQUANT : mode]",
+  "badge": "[MANQUANT : insigne]",
+  "dimensionAnalysis": "[MANQUANT : analyse dimensionnelle]",
+  "recommendedPaths": "[MANQUANT : Chemins recommandés]",
+  "oracleTitle": "[MANQUANT : Titre oracle]",
+  "title": "[MANQUANT : titre]",
+  "retake": "[MANQUANT : reprendre]",
+  "calcError": "Impossible de calculer le résultat",
+  "calcErrorRetry": "Réessayer"
+}

@@ -1,0 +1,178 @@
+{
+  "title": "定价",
+  "hero": {
+    "title": "价格计划",
+    "subtitle": "支持圣殿，解锁您命运坐标的全部深度。",
+    "featurePrompt": "解锁 {feature} 以继续您的旅程。"
+  },
+  "sections": {
+    "pricing": "选择方案",
+    "features": "深层功能",
+    "faq": "常见疑问",
+    "trust": "安心保障"
+  },
+  "meta": {
+    "title": "价格计划",
+    "description": "通过我们的高级方案解锁您命运的深度。",
+    "keywords": "价格, 高级版, 四柱, 占星, MBTI",
+    "ogTitle": "圣品",
+    "ogDescription": "支持庇护所并解锁你的命运。"
+  },
+  "@tosspayments/payment-sdk": "@tosspayments/payment-sdk",
+  "upgrade": {
+    "order_name": "专业版订阅（每月）",
+    "title": "Pricing",
+    "subtitle": "使用我们最强大的分析工具揭示您灵魂的更深层次。",
+    "price_suffix": "/月",
+    "cancel_anytime": "随时取消",
+    "processing": "对齐星星...",
+    "button": "开始职业之旅",
+    "prices": {
+      "en": "$7.99",
+      "ko": "₩9,900",
+      "ja": "¥1,200",
+      "cn": "¥58",
+      "es": "€7.99",
+      "fr": "€7.99"
+    },
+    "secure_payment_toss": "通过 Toss Payments 进行担保",
+    "secure_payment_lemon": "通过 Lemon Squeezy 确保安全",
+    "comparison_title": "选择你的道路"
+  },
+  "faq": {
+    "title": "Pricing",
+    "answer1": "可以，您可以随时暂停或取消订阅。您的专业功能将在当前周期结束前保持有效。",
+    "question1": "我可以随时取消订阅吗？",
+    "answer2": "我们对订阅后7天内的任何退款请求提供全额退款。",
+    "question2": "是否提供退款？",
+    "answer3": "我们在全球接受主要信用卡、PayPal 和 Apple Pay。韩国用户还可使用 Toss、KakaoPay 和本地银行转账。",
+    "question3": "支持哪些支付方式？",
+    "q1": {
+      "q": "Which payment methods do you accept?",
+      "a": "We accept major credit cards, PayPal, and Apple Pay globally. For our users in Korea, Toss, KakaoPay, and local bank transfers are also available."
+    },
+    "q2": {
+      "q": "Which payment methods do you accept?",
+      "a": "We accept major credit cards, PayPal, and Apple Pay globally. For our users in Korea, Toss, KakaoPay, and local bank transfers are also available."
+    },
+    "q3": {
+      "q": "你们接受哪些付款方式？",
+      "a": "我们接受全球主要信用卡、PayPal 和 Apple Pay。 对于韩国的用户，还可以使用 Toss、KakaoPay 和当地银行转账。"
+    }
+  },
+  "feature": "功能",
+  "trust": {
+    "secure": {
+      "title": "安全支付",
+      "description": "您的交易受到行业领先加密技术的保护。"
+    },
+    "instant": {
+      "title": "即时访问",
+      "description": "订阅后立即解锁高级功能。"
+    },
+    "satisfaction": {
+      "title": "满意保障",
+      "description": "7天退款政策，无风险探索。"
+    }
+  },
+  "comparison": {
+    "title": "Pricing",
+    "description": "Step into new features and beta tests before the world sees them."
+  },
+  "columns": {
+    "features": "特征",
+    "free": "基本的",
+    "premium": "专业版"
+  },
+  "plan": "套餐",
+  "billing": {
+    "monthly": "月付",
+    "yearly": "年付",
+    "saveUp": "最多节省",
+    "year": "/年",
+    "month": "/月",
+    "save": "节省"
+  },
+  "plans": {
+    "popular": "最受欢迎",
+    "free": "基础版",
+    "current": "当前套餐",
+    "continueUsing": "继续使用",
+    "getStarted": "立即开始",
+    "subscribe": "立即订阅",
+    "cancelAnytime": "随时可取消"
+  },
+  "info": {
+    "allPlansInclude": "所有套餐包含",
+    "securePayment": "安全支付",
+    "instantAccess": "即时访问",
+    "customerSupport": "优先支持"
+  },
+  "features": {
+    "basicTests": "无限制的基本测试",
+    "saveResults": "洞察之旅存储",
+    "basicSharing": "基本结果共享",
+    "basicConsultation": "基础咨询",
+    "deepAnalysis": "人工智能深度分析",
+    "pdfDownload": "PDF 洞察报告",
+    "compatibility": "高级和声分析",
+    "personalInsights": "量身定制的每周指导",
+    "prioritySupport": "优先庇护所支持",
+    "dataExport": "个人数据可移植性"
+  },
+  "detailed_features": {
+    "advanced-analytics": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "ai-insights": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "pdf-export": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "data-export": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "priority-support": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "custom-themes": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "early-access": {
+      "name": "先锋访问",
+      "description": "在世界看到新功能和 Beta 测试之前就进行这些测试。"
+    }
+  },
+  "planDetails": {
+    "free": {
+      "name": "Basic",
+      "description": "Begin your journey of self-discovery",
+      "features": {
+        "unlimitedTests": "Unlimited Basic Tests",
+        "resultStorage": "Insight Journey Storage",
+        "basicSharing": "Basic Result Sharing",
+        "communitySupport": "Community Support"
+      }
+    },
+    "premium": {
+      "name": "Pro",
+      "description": "Unlock the full depth of your destiny",
+      "features": {
+        "allFreeFeatures": "Everything in Basic",
+        "aiAnalysis": "AI Deep Analysis",
+        "pdfReports": "PDF Insight Reports",
+        "advancedCompatibility": "Advanced Harmony Analysis",
+        "personalizedInsights": "Tailored Weekly Guidance",
+        "prioritySupport": "Priority Sanctuary Support",
+        "customExport": "Personal Data Portability"
+      }
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "title": "吠陀占星术 (Vedic Astrology)",
+  "description": "古印度的月宿体系。",
+  "systemName": "吠陀占星术",
+  "narrative": "纳沙特拉 (月宿)",
+  "resonance": {
+    "note": "星档正在观测您的月亮驻留之地——{nakshatraName} ({moonSign})。古圣先贤将此星宿与神祇{deity}相联。这并非预言，而是您诞生瞬间月光所触及的天空记忆。"
+  },
+  "nakshatras": {
+    "1": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "2": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "3": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "4": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "5": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "6": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "7": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "8": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "9": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "10": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "11": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "12": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "13": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "14": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "15": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "16": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "17": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "18": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "19": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "20": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "21": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "22": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "23": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "24": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "25": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "26": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    },
+    "27": {
+      "name": "雷瓦蒂 (Revati)",
+      "meaning": "富裕者",
+      "deity": "普善 (Pushan)",
+      "keywords": "旅程, 滋养, 繁荣, 完成",
+      "animal": "象",
+      "symbol": "鱼/鼓"
+    }
+  }
+}

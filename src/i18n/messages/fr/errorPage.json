@@ -1,0 +1,25 @@
+{
+  "404": {
+    "title": "The flow of wisdom is veiled in mist.",
+    "description": "Even in the clearest Sanctuary, fog sometimes rises. We are refocusing the path for your journey, please wait a moment.",
+    "backHome": "Retour à la Place du Sanctuaire"
+  },
+  "500": {
+    "title": "The flow of wisdom is veiled in mist.",
+    "description": "Even in the clearest Sanctuary, fog sometimes rises. We are refocusing the path for your journey, please wait a moment.",
+    "retry": "Tentative de réalignement"
+  },
+  "title": "Le flux de la sagesse est voilé par la brume.",
+  "description": "Même dans le Sanctuaire le plus clair, le brouillard se lève parfois. Nous recentrons le chemin de votre voyage, veuillez patienter un instant.",
+  "primaryAction": "Réaligner à nouveau",
+  "secondaryAction": "Reposez-vous à la passerelle",
+  "homeButton": "Retour au sanctuaire",
+  "badgeLabel": "Momentanément suspendu",
+  "supportPrompt": "Si la brume ne se dissipe pas, veuillez transmettre cette signature de résonance aux Sages.",
+  "referenceIdLabel": "Signature de résonance",
+  "contactSupport": "Demander conseil",
+  "supportEmail": "sages@oiyo.net",
+  "startTest": "Initiation du voyage",
+  "badge": "Échos du Sanctuaire",
+  "fallbackMessage": "Une distorsion temporaire trouvée dans les fils du cosmos."
+}

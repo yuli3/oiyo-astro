@@ -1,0 +1,20 @@
+{
+  "payment": "Problème de paiement",
+  "account": "Aide sur le compte",
+  "technical": "Assistance technique",
+  "feature_request": "Demande de fonctionnalité",
+  "general": "Enquête générale",
+  "ALL": "Toutes les catégories",
+  "title": "Catégories",
+  "progressLabel": "Progression",
+  "all": "Tout",
+  "viral": "Tendance",
+  "finance": "Finance & Richesse",
+  "career": "Carrière & Succès",
+  "mental": "Équilibre Mental",
+  "love": "Amour & Relations",
+  "labor": "Vocation",
+  "living": "Art de Vivre",
+  "fortune": "Destinée",
+  "finance_tax": "Impôts"
+}

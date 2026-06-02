@@ -1,0 +1,105 @@
+{
+  "title": "性能数据",
+  "subtitle": "分析您的成长与成就",
+  "actions": {
+    "refresh": "刷新",
+    "implement": "执行",
+    "later": "稍后"
+  },
+  "metrics": {
+    "impact": "影响",
+    "difficulty": "难度",
+    "time": "预估时间",
+    "steps": "步骤",
+    "example": "示例"
+  },
+  "score": "性能得分: {score}",
+  "filters": {
+    "title": "性能数据",
+    "description": "当前性能表现出色。继续进行定期监控。",
+    "start": "开始时间",
+    "end": "结束时间",
+    "path": "页面路径",
+    "placeholder": "例如：/ontology/saju",
+    "apply": "应用",
+    "reset": "重置"
+  },
+  "summary": {
+    "title": "性能数据总结",
+    "recent": "最近 {count} 次",
+    "rating": {
+      "title": "性能评级",
+      "description": "当前性能表现出色。继续进行定期监控。",
+      "good": "良好",
+      "needsImprovement": "有待提高",
+      "poor": "较差"
+    },
+    "device": {
+      "title": "设备分析",
+      "description": "当前性能表现出色。继续进行定期监控。",
+      "memory": "内存压力",
+      "noData": "暂无数据",
+      "noConnection": "暂无连接信息。"
+    },
+    "sessions": {
+      "title": "会话数据",
+      "description": "当前性能表现出色。继续进行定期监控。",
+      "unknownPath": "未知路径",
+      "connection": "连接",
+      "averageScore": "平均分"
+    },
+    "pagination": {
+      "prev": "上一页",
+      "next": "下一页",
+      "page": "第 {current} 页",
+      "pageOf": "{当前} / {总计}"
+    }
+  },
+  "cards": {
+    "lcp": "平均 LCP",
+    "fid": "平均 FID",
+    "cls": "平均 CLS",
+    "fcp": "平均 FCP",
+    "inp": "平均 INP",
+    "ttfb": "平均 TTFB"
+  },
+  "realtime": {
+    "title": "实时监控",
+    "load": "系统负载",
+    "memory": "内存压力",
+    "network": "网络质量",
+    "recommendations": "优化建议"
+  },
+  "tabs": {
+    "trends": "性能趋势",
+    "bundle": "包分析",
+    "recommendations": "优化建议"
+  },
+  "charts": {
+    "cmsTrends": {
+      "title": "内容趋势",
+      "description": "当前性能表现出色。继续进行定期监控。"
+    },
+    "loadTime": {
+      "title": "负载时间",
+      "description": "当前性能表现出色。继续进行定期监控。"
+    },
+    "bundleDistribution": {
+      "title": "包空间分布",
+      "description": "当前性能表现出色。继续进行定期监控。"
+    },
+    "bundleDetails": {
+      "title": "包详情",
+      "description": "当前性能表现出色。继续进行定期监控。",
+      "optimization": "优化建议："
+    }
+  },
+  "loading": "正在收集性能数据...",
+  "noIssues": {
+    "title": "性能数据",
+    "description": "当前性能表现出色。继续进行定期监控。"
+  },
+  "remote": {
+    "title": "性能数据"
+  }
+}

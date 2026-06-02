@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "back": "Volver sobre los pasos",
+    "logout": "Servir enlace (cerrar sesión)"
+  },
+  "search": {
+    "placeholder": "Busca en las crónicas..."
+  },
+  "actions": {
+    "export": "Exportar registros"
+  },
+  "alerts": {
+    "title": "Resonancias del sistema"
+  },
+  "status": {
+    "healthy": "Armoniosa",
+    "warning": "Inestable",
+    "critical": "Fracturada"
+  },
+  "metrics": {
+    "activeUsers": "Almas activas",
+    "systemLoad": "Carga etérica",
+    "latency": "Cambio temporal",
+    "errorRate": "Frecuencia de ruptura"
+  }
+}

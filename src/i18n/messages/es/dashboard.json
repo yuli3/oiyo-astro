@@ -1,0 +1,408 @@
+{
+  "subtitle": "Un espacio para conocerme",
+  "title": "Mi Santuario",
+  "sovereign": {
+    "sections": {
+      "hero": "Héroe",
+      "oracle": "Oráculo",
+      "ontology": "Ontología",
+      "vault": "Bóveda",
+      "growth": "Crecimiento"
+    },
+    "labels": {
+      "ascend": "Ascender a la Profecía",
+      "celestialChart": "Carta Celeste",
+      "archives": "Archivos Imperiales",
+      "evolution": "Evolución en progreso",
+      "unlocked": "{count} Fragmentos Premium",
+      "exploration": "Progreso de Exploración: {percent}%"
+    },
+    "growth": {
+      "full": "Despertar Completo",
+      "unfinished": "El Viaje Inconcluso",
+      "fullDesc": "Has manifestado todos los fragmentos primarios de tu soberanía. El universo se inclina ante tu completa autoconsciencia.",
+      "unfinishedDesc": "Hay fragmentos de tu ontología que aún no se han manifestado en el reino físico. Ilumina las sombras que quedan para completar tu despertar.",
+      "review": "Revisar Todas las Verdades",
+      "discover": "Descubrir Fragmentos Faltantes"
+    }
+  },
+  "profile": {
+    "labels": {
+      "entity": "Entidad Soberana",
+      "title": "Tu Registro Sagrado",
+      "description": "La compilación de cada verdad que has declarado a través de las dimensiones de OIYO.",
+      "scroll": "Desplazar Fragmentos de Vida",
+      "reflection": "El Reflejo del Alma",
+      "timeline": "Línea de Tiempo de la Verdad",
+      "archive": "Archivo de Manifestación",
+      "ascension": "Estado de Ascensión",
+      "ascensionDesc": "Cada diagnóstico completado es una capa de niebla eliminada de tu verdadero yo. Te acercas a un estado completo de despertar ontológico.",
+      "shards": "Fragmentos",
+      "tier": "Nivel"
+    }
+  },
+  "recommendations": {
+    "createGoal": {
+      "title": "Tu Registro Sagrado",
+      "description": "La compilación de cada verdad que has declarado a través de las dimensiones de OIYO.",
+      "action": "Comprobar Ahora"
+    },
+    "takeTest": {
+      "title": "Tu Registro Sagrado",
+      "description": "La compilación de cada verdad que has declarado a través de las dimensiones de OIYO.",
+      "action": "Comprobar Ahora"
+    },
+    "checkCompatibility": {
+      "title": "Tu Registro Sagrado",
+      "description": "La compilación de cada verdad que has declarado a través de las dimensiones de OIYO.",
+      "action": "Comprobar Ahora"
+    }
+  },
+  "vault": {
+    "title": "Tu Registro Sagrado",
+    "description": "La compilación de cada verdad que has declarado a través de las dimensiones de OIYO.",
+    "securedCount": "{count} Asegurados",
+    "premiumArtifact": "Artefacto Premium",
+    "view": "Ver",
+    "locked": "Cerradura Sagrada Activada",
+    "claim": "Reclamar Artefacto →",
+    "empty": "\\\"La tesorería sigue velada en silencio. Comienza tu viaje de autodescubrimiento para poblar estos salones con conocimiento eterno.\\\"",
+    "firstTrial": "Iniciar Primera Prueba"
+  },
+  "fragmentsTitle": "Fragmentos Dispersos",
+  "fragmentsDesc": "Los datos de tu alma están dispersos entre las estrellas. Reúnelos para ver la imagen completa.",
+  "beginJourney": "Comenzar Viaje",
+  "heroTitle": "Mi Universo",
+  "heroSubtitle": "¿Qué historia te cuenta hoy el cielo?",
+  "continue": "Continuar Viaje",
+  "revelation": "Revelación Universal",
+  "premiumTitle": "Análisis Premium",
+  "rootsTitle": "Raíces Primordiales",
+  "branchesTitle": "Crecimiento de Ramas",
+  "primalOrigin": "Origen Primordial",
+  "destinyCoordinates": "Coordenadas del Destino",
+  "unveilRoots": "Desvela tus raíces cósmicas",
+  "socialCognition": "Cognición Social",
+  "socialDNA": "ADN Social",
+  "mapGrowth": "Mapea tu crecimiento social",
+  "viewReport": "Ver Informe",
+  "unlockNow": "Desbloquear Ahora",
+  "history": "Historial de Descubrimientos",
+  "noHistory": "Tu viaje apenas comienza. Inicia una nueva exploración.",
+  "startDiscovery": "Iniciar Descubrimiento",
+  "lockedTitle": "Sabiduría Sellada",
+  "lockedDescription": "Los datos en esta área esperan tu descubrimiento. Completa el análisis para desbloquear.",
+  "viewAll": "Ver todo",
+  "categories": {
+    "personality": "Personalidad y Temperamento",
+    "destiny": "Destino y Ciclos",
+    "cognitive": "Cognición y Pensamiento",
+    "wisdom": "Sabiduría Clásica"
+  },
+  "resonanceLabels": {
+    "harmonic": "Flujo Armónico",
+    "balanced": "Equilibrado",
+    "friction": "Alta Fricción"
+  },
+  "guidanceTitle": "Guía de Camino",
+  "guidanceSubtitle": "Tu decreto imperial para tu carrera y el alma",
+  "recommendedCareers": "Rutas profesionales recomendadas",
+  "recommendedHobbies": "Pasiones recomendadas",
+  "soulGuidance": "Guía del alma",
+  "basedOn": "Basado en {type}",
+  "labels": {
+    "undiscovered": "No descubierto",
+    "meaning": "Significado",
+    "element": "Elemento",
+    "nameVibration": "Vibración del Nombre",
+    "westernZodiac": "Zodíaco Occidental",
+    "sign": "Signo",
+    "observation": "Observación",
+    "easternZodiac": "Zodíaco Oriental",
+    "animal": "Animal",
+    "dominion": "Dominio",
+    "bureau": "Oficina",
+    "alignment": "Alineación"
+  },
+  "humanDesign": {
+    "types": {
+      "Generator": "Generador",
+      "Projector": "Proyector",
+      "Manifestor": "Manifestador",
+      "Reflector": "Reflector",
+      "Manifesting Generator": "Generador Manifestador"
+    }
+  },
+  "common": {
+    "noGuidance": "Aún no hay orientación disponible."
+  },
+  "celticTrees": {
+    "birch": "Abedul",
+    "rowan": "Serbal",
+    "ash": "Fresno",
+    "alder": "Aliso",
+    "willow": "Sauce",
+    "hawthorn": "Espino",
+    "oak": "Roble",
+    "holly": "Acebo",
+    "hazel": "Avellano",
+    "vine": "Vid",
+    "ivy": "Hiedra",
+    "reed": "Caña",
+    "elder": "Saúco"
+  },
+  "mayanTones": {
+    "magnetic": "Magnético (Magnetic)",
+    "lunar": "Lunar (Lunar)",
+    "electric": "Eléctrico (Electric)",
+    "selfExisting": "Auto-Existente (Self-Existing)",
+    "overtone": "Entonado (Overtone)",
+    "rhythmic": "Rítmico (Rhythmic)",
+    "resonant": "Resonante (Resonant)",
+    "galactic": "Galáctico (Galactic)",
+    "solar": "Solar (Solar)",
+    "planetary": "Planetario (Planetary)",
+    "spectral": "Espectral (Spectral)",
+    "crystal": "Cristal (Crystal)",
+    "cosmic": "Cósmico (Cosmic)"
+  },
+  "mayanSeals": {
+    "dragon": "Dragón (Dragon)",
+    "wind": "Viento (Wind)",
+    "night": "Noche (Night)",
+    "seed": "Semilla (Seed)",
+    "serpent": "Serpiente (Serpent)",
+    "worldbridger": "Enlazador de Mundos (Worldbridger)",
+    "hand": "Mano (Hand)",
+    "star": "Estrella (Star)",
+    "moon": "Luna (Moon)",
+    "dog": "Perro (Dog)",
+    "monkey": "Mono (Monkey)",
+    "human": "Humano (Human)",
+    "skywalker": "Caminante del Cielo (Skywalker)",
+    "wizard": "Mago (Wizard)",
+    "eagle": "Águila (Eagle)",
+    "warrior": "Guerrero (Warrior)",
+    "earth": "Tierra (Earth)",
+    "mirror": "Espejo (Mirror)",
+    "storm": "Tormenta (Storm)",
+    "sun": "Sol (Sun)"
+  },
+  "elements": {
+    "wood": "Madera (Wood)",
+    "fire": "Fuego (Fire)",
+    "earth": "Tierra (Earth)",
+    "metal": "Metal (Metal)",
+    "water": "Agua (Water)",
+    "Wood": "Madera (Wood)",
+    "Fire": "Fuego (Fire)",
+    "Earth": "Tierra (Earth)",
+    "Metal": "Metal (Metal)",
+    "Water": "Agua (Water)",
+    "Air": "Aire (Air)"
+  },
+  "returnToHome": "Volver al inicio",
+  "contactSupport": "Contactar soporte",
+  "syncingData": "Sincronizando tus datos...",
+  "guest": "Invitado",
+  "calibration": "Calibración",
+  "changeOrigin": "Cambiar Origen",
+  "todayInsight": {
+    "title": "Sabiduría del Día",
+    "soulOracle": "Oráculo del Alma",
+    "innerResonance": "Resonancia Interior",
+    "manifestMore": "Manifestar Más"
+  },
+  "readingsLink": "Ver Todas las Lecturas",
+  "cards": {
+    "vitality": {
+      "title": "Índice de Vitalidad"
+    },
+    "resonance": {
+      "description": "Tu compatibilidad con la corriente cósmica de hoy.",
+      "subtitle": "Resonancia Diaria"
+    },
+    "foundation": {
+      "description": "Las fuerzas elementales que dan forma a tu destino.",
+      "subtitle": "Fundación Elemental"
+    },
+    "elemental": {
+      "description": "Tu huella elemental y su influencia.",
+      "subtitle": "Perfil Elemental",
+      "title": "Elementos"
+    },
+    "onomancy": {
+      "description": "La frecuencia vibratoria de tu nombre.",
+      "subtitle": "Análisis del Nombre"
+    },
+    "cognition": {
+      "description": "Tu estilo cognitivo y patrones de pensamiento.",
+      "subtitle": "Mapa Cognitivo"
+    },
+    "vocation": {
+      "description": "Caminos profesionales alineados con tu plano del alma.",
+      "subtitle": "Guía Vocacional"
+    },
+    "destiny": {
+      "description": "Los hilos kármicos tejidos en tu camino de vida.",
+      "subtitle": "Hilo del Destino"
+    }
+  },
+  "resonanceTitle": "Centro de Resonancia",
+  "sections": {
+    "testArchitecture": {
+      "title": "Arquitectura de Tests",
+      "description": "Explora los sistemas utilizados para descifrar tu identidad."
+    },
+    "emotionalResonance": {
+      "title": "Resonancia Emocional",
+      "description": "Tu frecuencia emocional y patrones relacionales."
+    },
+    "grandArchives": {
+      "title": "Grandes Archivos",
+      "description": "Un registro completo de tu viaje de autodescubrimiento."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "Análisis Elemental"
+    },
+    "riasec": {
+      "description": "Perfil de aptitud profesional según el código Holland."
+    },
+    "saju": {
+      "label": "Cuatro Pilares",
+      "description": "Tus coordenadas del destino coreano.",
+      "polarity": "Polaridad",
+      "element": "Elemento"
+    },
+    "archiveEntry": "Entrada de Archivo",
+    "recordVerified": "Registro Verificado",
+    "tuning": {
+      "color": "Color de la Suerte",
+      "number": "Número de la Suerte",
+      "direction": "Dirección de la Suerte",
+      "flower": "Flor de la Suerte",
+      "gemstone": "Piedra Preciosa de la Suerte",
+      "luckyStar": "Estrella de la Suerte",
+      "title": "Sintonía de Fortuna",
+      "favorableDays": "Días Favorables",
+      "synergy": "Puntuación de Sinergia"
+    }
+  },
+  "systems": {
+    "ziwei": "Zi Wei Dou Shu"
+  },
+  "dailyInsight": {
+    "cosmicEnergy": "Energía Cósmica",
+    "flowerOfDay": "Flor del Día",
+    "crystalOfPower": "Cristal del Poder",
+    "guidingStar": "Estrella Guía"
+  },
+  "sajuForm": {
+    "title": "Ingresar Datos de Nacimiento",
+    "description": "Usamos tus coordenadas de nacimiento para calcular tus Cuatro Pilares.",
+    "name": "Nombre",
+    "birthDate": "Fecha de Nacimiento",
+    "birthTime": "Hora de Nacimiento",
+    "timeHint": "Dejar en blanco si se desconoce",
+    "gender": "Género",
+    "female": "Femenino",
+    "male": "Masculino"
+  },
+  "scope": {
+    "weekly": "Fortuna Semanal",
+    "monthly": "Fortuna Mensual",
+    "yearly": "Fortuna Anual"
+  },
+  "rating": {
+    "critical": "Advertencia",
+    "low": "Bajo",
+    "moderate": "Moderado",
+    "good": "Bueno",
+    "excellent": "Excelente"
+  },
+  "card": {
+    "score": "Puntuación: {score}/100",
+    "advice": "💡 Consejo",
+    "luckyNumbers": "Números de la Suerte",
+    "luckyColors": "Colores de la Suerte",
+    "warnings": "⚠️ Advertencias"
+  },
+  "no_results": "No se encontraron artefactos en su colección.",
+  "discover_btn": "Descubre tu camino",
+  "result_label": "Resultado de síntesis",
+  "view_details": "Ver sabiduría detallada",
+  "header": {
+    "title": "Mi panel",
+    "description": "Bienvenido a tu espacio sagrado."
+  },
+  "moonPhase": {
+    "Full": "Luna llena",
+    "New": "Luna nueva",
+    "Waxing": "Depilación",
+    "Waning": "menguante",
+    "New Moon": "Luna nueva",
+    "Waxing Crescent": "Creciente",
+    "First Quarter": "Cuarto creciente",
+    "Waxing Gibbous": "Gibosa creciente",
+    "Full Moon": "Luna llena",
+    "Waning Gibbous": "Gibosa menguante",
+    "Last Quarter": "Cuarto menguante",
+    "Waning Crescent": "Menguante"
+  },
+  "modern": {
+    "economic": {
+      "title": "Análisis de la escuela económica",
+      "subtitle": "Orientación Económica",
+      "factions": {
+        "ECON_CLASSICAL": {
+          "name": "Economía clásica",
+          "description": "Se centra en las elecciones racionales individuales y el equilibrio del mercado. Este enfoque valora la responsabilidad personal y la eficiencia orgánica de los sistemas equilibrados."
+        },
+        "ECON_KEYNESIAN": {
+          "name": "Economía keynesiana",
+          "description": "Enfatiza la demanda agregada y la intervención proactiva. Esta perspectiva valora la estabilidad colectiva y la sabiduría de una acción oportuna y de apoyo."
+        },
+        "ECON_MONETARIST": {
+          "name": "Monetarismo",
+          "description": "Se centra en la oferta monetaria y la estabilidad de precios a largo plazo. Valora la coherencia, las reglas claras y la previsibilidad de los sistemas fundamentales."
+        },
+        "ECON_BEHAVIORAL": {
+          "name": "Economía del comportamiento",
+          "description": "Aplica conocimientos psicológicos para explicar las decisiones económicas. Valora la comprensión humana, la empatía y la realidad matizada de las elecciones cotidianas."
+        },
+        "ECON_AUSTRIAN": {
+          "name": "escuela austriaca",
+          "description": "Enfatiza el descubrimiento empresarial y el subjetivismo. Valora la libertad creativa, la visión personal y el valor único de las perspectivas individuales."
+        }
+      }
+    },
+    "political": {
+      "title": "Análisis de orientación política",
+      "subtitle": "Panorama político",
+      "factions": {
+        "POL_CONSERVATISM": {
+          "name": "Conservatismo",
+          "description": "Valora la tradición, la estabilidad y la reforma gradual. Este enfoque busca preservar la sabiduría adquirida con tanto esfuerzo y al mismo tiempo garantizar un futuro seguro y estable."
+        },
+        "POL_LIBERALISM": {
+          "name": "Liberalismo",
+          "description": "Enfatiza la libertad individual, la igualdad y el progreso. Valora la libertad de explorar nuevas posibilidades y la dignidad inherente de cada persona."
+        },
+        "POL_SOCIALISM": {
+          "name": "Socialismo",
+          "description": "Se centra en la justicia social, la igualdad y el bienestar comunitario. Valora el apoyo mutuo, el bienestar colectivo y la fuerza que se encuentra en la solidaridad."
+        },
+        "POL_LIBERTARIANISM": {
+          "name": "Libertarianismo",
+          "description": "Prioriza la mínima intervención y la máxima autonomía individual. Valora la autodeterminación y la protección del espacio y la iniciativa privados."
+        },
+        "POL_MODERATISM": {
+          "name": "Moderatismo",
+          "description": "Busca el equilibrio entre orden y progreso. Valora las soluciones pragmáticas, el diálogo y la búsqueda de puntos comunes para el bien común."
+        }
+      }
+    }
+  }
+}

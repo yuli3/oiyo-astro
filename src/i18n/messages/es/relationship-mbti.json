@@ -1,0 +1,212 @@
+{
+  "mbtiResult": {
+    "labels": {
+      "A": "Activo",
+      "P": "Pasivo",
+      "Q": "Rápido",
+      "S": "Pausado",
+      "E": "Expresivo",
+      "M": "Misterioso",
+      "D": "Directo",
+      "I": "Indirecto"
+    },
+    "result": {
+      "dimensions": {
+        "approach": "Modo de acercamiento",
+        "attraction": "Expresión del interés",
+        "flirting": "Estilo de seducción",
+        "defensiveness": "Mecanismo de defensa"
+      },
+      "style": "Mi Estilo Amoroso",
+      "advice": "Consejos para crecer",
+      "strengths": "Fortalezas en el amor",
+      "analysis": "Análisis detallado del estilo",
+      "retake": "Volver a hacer",
+      "home": "Inicio",
+      "sharePrompt": "¡Comparte tu estilo amoroso y descubre tu afinidad con tus amigos!"
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "dimension": "acercarse",
+      "text": "Cuando te encuentras con alguien que te conmueve el alma, ¿cómo tiendes a moverte?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Me acerco de manera proactiva, creando la primera chispa en el desarrollo de nuestra historia."
+        },
+        {
+          "id": "P",
+          "text": "Espero a que el universo se alinee, dejando que la otra persona inicie nuestra conexión."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "dimension": "atracción",
+      "text": "¿Con qué rapidez suele encenderse en tu interior el fuego de la atracción?",
+      "options": [
+        {
+          "id": "Q",
+          "text": "Es un rayo repentino; Conozco la profundidad de mi interés casi al instante."
+        },
+        {
+          "id": "S",
+          "text": "Es un amanecer suave; mis sentimientos crecen constantemente a medida que realmente llego a conocer al otro."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "dimension": "galanteo",
+      "text": "¿Cómo muestras tu interés ante aquellos que te cautivan?",
+      "options": [
+        {
+          "id": "E",
+          "text": "Soy un libro abierto, que muestra claramente mi admiración a través de palabras y gestos vibrantes."
+        },
+        {
+          "id": "M",
+          "text": "Tejo una sutil red de misterio, dejando sentir mi interés a través del silencio y los matices."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "dimension": "actitud defensiva",
+      "text": "Cuando el conflicto nubla el panorama emocional, ¿cuál es su reacción natural?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Enfrento la tormenta de frente, abordando el tema central con honestidad inmediata."
+        },
+        {
+          "id": "I",
+          "text": "Primero navego por la periferia, buscando un camino más suave y reflexivo hacia la reconciliación."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "dimension": "acercarse",
+      "text": "Si una reunión social presenta una conexión potencial, ¿cuál es tu instinto?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Me acerco a ellos con intención, haciendo sentir mi presencia desde el principio."
+        },
+        {
+          "id": "P",
+          "text": "Permanezco en mi propio espacio, permitiendo que otros graviten hacia mí primero."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "dimension": "atracción",
+      "text": "¿Cuál es tu ritmo habitual a la hora de desarrollar los capítulos de un nuevo romance?",
+      "options": [
+        {
+          "id": "Q",
+          "text": "Me sumerjo temprano en las profundidades, ansioso por explorar la intensidad de nuestro vínculo."
+        },
+        {
+          "id": "S",
+          "text": "Primero saboreo las aguas poco profundas, generando confianza y familiaridad con el tiempo."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "dimension": "galanteo",
+      "text": "¿Cuál es el idioma principal de su interés romántico?",
+      "options": [
+        {
+          "id": "E",
+          "text": "Elogios generosos y declaraciones claras y sentidas de mis sentimientos."
+        },
+        {
+          "id": "M",
+          "text": "Contacto visual intenso y cambios sutiles de energía que invitan a la curiosidad."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "dimension": "actitud defensiva",
+      "text": "¿Cómo proteges tu santuario interior cuando surgen tensiones?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Declaro mis límites de forma clara y contundente para evitar malentendidos."
+        },
+        {
+          "id": "I",
+          "text": "Me retiro ligeramente para procesar, permitiendo que la atmósfera se enfríe antes de volver a participar."
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "dimension": "acercarse",
+      "text": "En el baile de la conexión, ¿quién prefieres que marque el ritmo?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Prefiero tomar la iniciativa y garantizar que nuestro impulso siga aumentando."
+        },
+        {
+          "id": "P",
+          "text": "Prefiero responder a sus indicaciones y encontrar gracia en el flujo que inician."
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "dimension": "atracción",
+      "text": "¿Su corazón suele decidir rápidamente o requiere pruebas exhaustivas?",
+      "options": [
+        {
+          "id": "Q",
+          "text": "Mi corazón es un río que fluye rápidamente, fácilmente arrastrado por una conexión poderosa."
+        },
+        {
+          "id": "S",
+          "text": "Mi corazón es una montaña firme que requiere tiempo y constancia para ser movido."
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "dimension": "galanteo",
+      "text": "¿Cuánto de tu intención romántica revelas inicialmente?",
+      "options": [
+        {
+          "id": "E",
+          "text": "Hago evidentes mis intenciones, sin dejar lugar a dudas sobre mi interés."
+        },
+        {
+          "id": "M",
+          "text": "Mantengo mis intenciones escondidas detrás de un velo de intriga, dejándolas adivinar."
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "dimension": "actitud defensiva",
+      "text": "¿Cuál es su enfoque típico para resolver un desacuerdo acalorado?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Priorizo ​​\"sacarlo\" y llegar a una resolución lo más rápido posible."
+        },
+        {
+          "id": "I",
+          "text": "Priorizo ​​\"enfriarme\" y abordar las consecuencias emocionales antes que los hechos."
+        }
+      ]
+    }
+  ],
+  "title": "Test de Estilo Amoroso"
+}

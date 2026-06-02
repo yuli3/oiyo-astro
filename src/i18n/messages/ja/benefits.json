@@ -1,0 +1,22 @@
+{
+  "performance": {
+    "title": "パフォーマンス",
+    "description": "ピークパフォーマンスの追跡。"
+  },
+  "offline": {
+    "title": "オフラインモード",
+    "description": "どこでもアクセス。"
+  },
+  "notifications": {
+    "title": "通知",
+    "description": "最新情報を入手。"
+  },
+  "homeScreen": {
+    "title": "ホーム画面",
+    "description": "クイックアクセス。"
+  },
+  "fortune": "幸運",
+  "financial": "財務",
+  "content": "コンテンツ",
+  "expert": "専門家"
+}

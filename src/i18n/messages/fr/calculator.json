@@ -1,0 +1,20 @@
+{
+  "units": {
+    "hours": "heures",
+    "days": "jours",
+    "years": "ans",
+    "months": "mois"
+  },
+  "labels": {
+    "hourlyWage": "salaire horaire",
+    "annualLeave": "indemnité de congés payés",
+    "severancePay": "indemnité de licenciement",
+    "dailyHours": "heures quotidiennes",
+    "remainingDays": "jours restants",
+    "servicePeriod": "période de service",
+    "monthlyBase": "salaire de base mensuel",
+    "annualBonus": "prime annuelle",
+    "totalAllowance": "indemnité totale",
+    "standardMonthlyHours": "heures mensuelles standard"
+  }
+}

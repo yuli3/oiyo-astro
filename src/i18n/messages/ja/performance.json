@@ -1,0 +1,105 @@
+{
+  "title": "リモートパフォーマンスデータ",
+  "subtitle": "成長と成果の分析",
+  "actions": {
+    "refresh": "更新",
+    "implement": "実装",
+    "later": "後"
+  },
+  "metrics": {
+    "impact": "影響",
+    "difficulty": "難易度",
+    "time": "予測時間",
+    "steps": "ステップ",
+    "example": "例"
+  },
+  "score": "パフォーマンススコア: {score}",
+  "filters": {
+    "title": "リモートパフォーマンスデータ",
+    "description": "現在のパフォーマンスは良好です。定期的なモニタリングを継続してください。",
+    "start": "開始時間",
+    "end": "終了時間",
+    "path": "ページパス",
+    "placeholder": "例: /ontology/saju",
+    "apply": "適用",
+    "reset": "リセット"
+  },
+  "summary": {
+    "title": "リモートパフォーマンスデータ",
+    "recent": "最近の{count}件",
+    "rating": {
+      "title": "リモートパフォーマンスデータ",
+      "description": "現在のパフォーマンスは良好です。定期的なモニタリングを継続してください。",
+      "good": "良い",
+      "needsImprovement": "平均",
+      "poor": "悪い"
+    },
+    "device": {
+      "title": "リモートパフォーマンスデータ",
+      "description": "現在のパフォーマンスは良好です。定期的なモニタリングを継続してください。",
+      "memory": "メモリ圧迫",
+      "noData": "データなし",
+      "noConnection": "接続情報なし"
+    },
+    "sessions": {
+      "title": "リモートパフォーマンスデータ",
+      "description": "現在のパフォーマンスは良好です。定期的なモニタリングを継続してください。",
+      "unknownPath": "不明なパス",
+      "connection": "繋がり",
+      "averageScore": "平均スコア"
+    },
+    "pagination": {
+      "prev": "前へ",
+      "next": "次へ",
+      "page": "{current}ページ",
+      "pageOf": "{現在} / {合計}"
+    }
+  },
+  "cards": {
+    "lcp": "平均 LCP",
+    "fid": "平均 FID",
+    "cls": "平均 CLS",
+    "fcp": "平均 FCP",
+    "inp": "平均 INP",
+    "ttfb": "平均 TTFB"
+  },
+  "realtime": {
+    "title": "リモートパフォーマンスデータ",
+    "load": "システム負荷",
+    "memory": "メモリ圧迫",
+    "network": "ネットワーク品質",
+    "recommendations": "最適化の推奨"
+  },
+  "tabs": {
+    "trends": "パフォーマンストレンド",
+    "bundle": "バンドル分析",
+    "recommendations": "最適化の推奨"
+  },
+  "charts": {
+    "cmsTrends": {
+      "title": "リモートパフォーマンスデータ",
+      "description": "現在のパフォーマンスは良好です。定期的なモニタリングを継続してください。"
+    },
+    "loadTime": {
+      "title": "リモートパフォーマンスデータ",
+      "description": "現在のパフォーマンスは良好です。定期的なモニタリングを継続してください。"
+    },
+    "bundleDistribution": {
+      "title": "リモートパフォーマンスデータ",
+      "description": "現在のパフォーマンスは良好です。定期的なモニタリングを継続してください。"
+    },
+    "bundleDetails": {
+      "title": "リモートパフォーマンスデータ",
+      "description": "現在のパフォーマンスは良好です。定期的なモニタリングを継続してください。",
+      "optimization": "最適化の提案:"
+    }
+  },
+  "loading": "パフォーマンスデータを収集しています...",
+  "noIssues": {
+    "title": "リモートパフォーマンスデータ",
+    "description": "現在のパフォーマンスは良好です。定期的なモニタリングを継続してください。"
+  },
+  "remote": {
+    "title": "リモートパフォーマンスデータ"
+  }
+}

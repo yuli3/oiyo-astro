@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "完美主义拖延者",
+    "description": "等待“完美”时机才开始。",
+    "keywords": "时间管理, 生产力, 工作风格, 性格"
+  },
+  "landing": {
+    "title": "完美主义拖延者",
+    "subtitle": "在5分钟内发现您的生产力蓝图。",
+    "description": "等待“完美”时机才开始。",
+    "cta": "开始分析",
+    "features": [
+      "⏰ 6 时间管理类型分析",
+      "📈 个性化生产力技巧",
+      "🎯 最佳活动时间",
+      "💡 工作方式建议"
+    ],
+    "typesTitle": "6种时间管理风格",
+    "types": {
+      "earlyBird": {
+        "title": "完美主义拖延者",
+        "description": "等待“完美”时机才开始。",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "nightOwl": {
+        "title": "完美主义拖延者",
+        "description": "等待“完美”时机才开始。",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "executor": {
+        "title": "完美主义拖延者",
+        "description": "等待“完美”时机才开始。",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "planner": {
+        "title": "完美主义拖延者",
+        "description": "等待“完美”时机才开始。",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "flexible": {
+        "title": "完美主义拖延者",
+        "description": "等待“完美”时机才开始。",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "procrastinator": {
+        "title": "完美主义拖延者",
+        "description": "等待“完美”时机才开始。",
+        "icon": "⏳",
+        "bg": "橙子"
+      }
+    }
+  }
+}

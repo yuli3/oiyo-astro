@@ -1,0 +1,422 @@
+{
+  "day_01": {
+    "flower": {
+      "name": "almond",
+      "meaning": "true love and boundaries"
+    },
+    "stone": {
+      "name": "diamond (clear)",
+      "meaning": "Indestructible light and absolute truth"
+    },
+    "star": {
+      "name": "Alperac",
+      "meaning": "The pursuit of freedom and rapid movement"
+    }
+  },
+  "day_02": {
+    "flower": {
+      "name": "anemone",
+      "meaning": "Protection from expectations and evil"
+    },
+    "stone": {
+      "name": "diamond (combined)",
+      "meaning": "Eternal love and soul bond"
+    },
+    "star": {
+      "name": "Mirach",
+      "meaning": "Harmony, Beauty, and the Virtue of Relationships"
+    }
+  },
+  "day_03": {
+    "flower": {
+      "name": "trumpet daffodil",
+      "meaning": "self-esteem and respect"
+    },
+    "stone": {
+      "name": "Diamond (Tangin)",
+      "meaning": "Victory and inner strength to overcome adversity"
+    },
+    "star": {
+      "name": "Almark",
+      "meaning": "Artistic diversity and aesthetic brilliance"
+    }
+  },
+  "day_04": {
+    "flower": {
+      "name": "red anemone",
+      "meaning": "i love you"
+    },
+    "stone": {
+      "name": "Quartz (pure)",
+      "meaning": "Amplification of energy and mental clarity"
+    },
+    "star": {
+      "name": "Sheratan",
+      "meaning": "Watch for vigilance and the coming dawn"
+    }
+  },
+  "day_05": {
+    "flower": {
+      "name": "fig",
+      "meaning": "abundance and longevity"
+    },
+    "stone": {
+      "name": "Quartz (Power)",
+      "meaning": "Aura harmony and spiritual focus"
+    },
+    "star": {
+      "name": "Mesar Team",
+      "meaning": "Social order and administrative justice"
+    }
+  },
+  "day_06": {
+    "flower": {
+      "name": "Adonis",
+      "meaning": "Eternal happiness and beautiful memories"
+    },
+    "stone": {
+      "name": "rock crystal",
+      "meaning": "Heavenly vibrations and purity of soul"
+    },
+    "star": {
+      "name": "Hamal",
+      "meaning": "Independent leadership and direct power"
+    }
+  },
+  "day_07": {
+    "flower": {
+      "name": "peacock fern",
+      "meaning": "Discretion and natural elegance"
+    },
+    "stone": {
+      "name": "zircon",
+      "meaning": "Moral behavior and social respect"
+    },
+    "star": {
+      "name": "Shedir",
+      "meaning": "Feminine strength and royal influence"
+    }
+  },
+  "day_08": {
+    "flower": {
+      "name": "goldenrod",
+      "meaning": "Philanthropy and hidden passion"
+    },
+    "stone": {
+      "name": "tiger eye",
+      "meaning": "Balance between extremes and practical insights"
+    },
+    "star": {
+      "name": "Aldebaran (Pilsuo)",
+      "meaning": "Guardian of Truth and the East"
+    }
+  },
+  "day_09": {
+    "flower": {
+      "name": "cherry blossoms",
+      "meaning": "Spiritual beauty and the transience of life"
+    },
+    "stone": {
+      "name": "Pyrite",
+      "meaning": "Logical shield and mental protection"
+    },
+    "star": {
+      "name": "Menkar",
+      "meaning": "Collective Obligation and the Path of the Unconscious"
+    }
+  },
+  "day_10": {
+    "flower": {
+      "name": "binka",
+      "meaning": "cheerful memories"
+    },
+    "stone": {
+      "name": "lapis lazuli",
+      "meaning": "Visual truth and spiritual nobility"
+    },
+    "star": {
+      "name": "Capella",
+      "meaning": "Nurturing Protection and Divine Grace"
+    }
+  },
+  "day_11": {
+    "flower": {
+      "name": "flower fern",
+      "meaning": "Please come"
+    },
+    "stone": {
+      "name": "aquamarine",
+      "meaning": "calming the waves of the mind"
+    },
+    "star": {
+      "name": "Rigel",
+      "meaning": "Technical proficiency and innovative foresight"
+    }
+  },
+  "day_12": {
+    "flower": {
+      "name": "peach blossom",
+      "meaning": "slave of love"
+    },
+    "stone": {
+      "name": "topaz",
+      "meaning": "Crystals of sunlight; faith and hope"
+    },
+    "star": {
+      "name": "Betelgeuse",
+      "meaning": "Universal success that comes after transformation"
+    }
+  },
+  "day_13": {
+    "flower": {
+      "name": "pale peach",
+      "meaning": "humble love"
+    },
+    "stone": {
+      "name": "citrine",
+      "meaning": "Abundance, Success, and Clear Intentions"
+    },
+    "star": {
+      "name": "Sirius (celestial star)",
+      "meaning": "Ambition and brilliant reputation"
+    }
+  },
+  "day_14": {
+    "flower": {
+      "name": "white morning glory",
+      "meaning": "overflowing joy"
+    },
+    "stone": {
+      "name": "sunstone",
+      "meaning": "Vitality and joy of being"
+    },
+    "star": {
+      "name": "castor",
+      "meaning": "Intellectual agility and dual perspective"
+    }
+  },
+  "day_15": {
+    "flower": {
+      "name": "wind orchid",
+      "meaning": "true charm"
+    },
+    "stone": {
+      "name": "moonstone",
+      "meaning": "Intuition and the Divine Feminine"
+    },
+    "star": {
+      "name": "Pollux",
+      "meaning": "Critical Wisdom and Protective Power"
+    }
+  },
+  "day_16": {
+    "flower": {
+      "name": "tulip",
+      "meaning": "Beautiful eyes and fame"
+    },
+    "stone": {
+      "name": "Aventurine",
+      "meaning": "Gambler's Luck and Open Mind"
+    },
+    "star": {
+      "name": "Procyon",
+      "meaning": "Action and success before the storm"
+    }
+  },
+  "day_17": {
+    "flower": {
+      "name": "german irises",
+      "meaning": "great news"
+    },
+    "stone": {
+      "name": "jade",
+      "meaning": "Eternal Goodness and Material Fortune"
+    },
+    "star": {
+      "name": "Regulus (Yeongcheonseong)",
+      "meaning": "The pinnacle of a king's honor and ambition"
+    }
+  },
+  "day_18": {
+    "flower": {
+      "name": "Own operation",
+      "meaning": "Inspiration and Patience"
+    },
+    "stone": {
+      "name": "malachite",
+      "meaning": "positive change and growth"
+    },
+    "star": {
+      "name": "Spica (each hand)",
+      "meaning": "Artistic success and noble spirit"
+    }
+  },
+  "day_19": {
+    "flower": {
+      "name": "delphinium",
+      "meaning": "Clear and clear"
+    },
+    "stone": {
+      "name": "amethyst",
+      "meaning": "Spiritual tranquility and inner peace"
+    },
+    "star": {
+      "name": "Arcturus (Guardian)",
+      "meaning": "Wisdom and Honor to Find the Way"
+    }
+  },
+  "day_20": {
+    "flower": {
+      "name": "pear tree",
+      "meaning": "Gentle affection and lasting friendship"
+    },
+    "stone": {
+      "name": "emerald",
+      "meaning": "Hope, Rebirth, and True Love"
+    },
+    "star": {
+      "name": "Antares (Shin Sui)",
+      "meaning": "Strategic victory, but beware of conflict"
+    }
+  },
+  "day_21": {
+    "flower": {
+      "name": "weeping willow",
+      "meaning": "The elegance of my sorrow and love"
+    },
+    "stone": {
+      "name": "sapphire",
+      "meaning": "Divine Insight and Spiritual Truth"
+    },
+    "star": {
+      "name": "alphard",
+      "meaning": "the solitary one; original genius"
+    }
+  },
+  "day_22": {
+    "flower": {
+      "name": "asters",
+      "meaning": "Trustworthy Love and Diversity"
+    },
+    "stone": {
+      "name": "Beryl",
+      "meaning": "Clarity of vision and mental focus"
+    },
+    "star": {
+      "name": "alpeca",
+      "meaning": "Honorable Success and Sophistication"
+    }
+  },
+  "day_23": {
+    "flower": {
+      "name": "balloon flower",
+      "meaning": "A kind heart and unchanging love"
+    },
+    "stone": {
+      "name": "pumpkin",
+      "meaning": "Warmth, Healing, and Ancient Wisdom"
+    },
+    "star": {
+      "name": "Vega (Vegas)",
+      "meaning": "Inspirational Success and Charisma"
+    }
+  },
+  "day_24": {
+    "flower": {
+      "name": "geranium",
+      "meaning": "Determined and peaceful mind"
+    },
+    "stone": {
+      "name": "jasper",
+      "meaning": "Grounding Energy and Stability"
+    },
+    "star": {
+      "name": "Altair (Hyunwoo)",
+      "meaning": "Fearless flight and high ambition"
+    }
+  },
+  "day_25": {
+    "flower": {
+      "name": "middle lily",
+      "meaning": "dignity and authority"
+    },
+    "stone": {
+      "name": "hematite",
+      "meaning": "Grounding and spiritual protection"
+    },
+    "star": {
+      "name": "Deneb",
+      "meaning": "Elegance, Majesty, and High Wisdom"
+    }
+  },
+  "day_26": {
+    "flower": {
+      "name": "Rice field",
+      "meaning": "stability and usefulness"
+    },
+    "stone": {
+      "name": "Sodalite",
+      "meaning": "Objectivity and rational choice"
+    },
+    "star": {
+      "name": "Fomalhaut",
+      "meaning": "Spiritual success and clear insight"
+    }
+  },
+  "day_27": {
+    "flower": {
+      "name": "training",
+      "meaning": "Eloquence and pure heart"
+    },
+    "stone": {
+      "name": "fluorite",
+      "meaning": "Mental focus and distraction"
+    },
+    "star": {
+      "name": "Achernar",
+      "meaning": "Philosophical success and high status"
+    }
+  },
+  "day_28": {
+    "flower": {
+      "name": "red primrose",
+      "meaning": "unparalleled achievement"
+    },
+    "stone": {
+      "name": "Bloodstone",
+      "meaning": "Vitality, Courage, and Strength"
+    },
+    "star": {
+      "name": "canopus",
+      "meaning": "Find a fixed point in a changing flow"
+    }
+  },
+  "day_29": {
+    "flower": {
+      "name": "camellia tree",
+      "meaning": "Beautiful charm and perfection"
+    },
+    "stone": {
+      "name": "onyx",
+      "meaning": "Inner strength and mental discipline"
+    },
+    "star": {
+      "name": "Polaris (North Star)",
+      "meaning": "The power to find the true north"
+    }
+  },
+  "day_30": {
+    "flower": {
+      "name": "golden chain tree",
+      "meaning": "Pensive beauty and charm"
+    },
+    "stone": {
+      "name": "Chrysoprase",
+      "meaning": "Healing of the heart and new joy"
+    },
+    "star": {
+      "name": "Algol",
+      "meaning": "Raw power and intense transformation"
+    }
+  }
+}

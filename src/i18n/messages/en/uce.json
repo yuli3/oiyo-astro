@@ -1,0 +1,133 @@
+{
+  "title": "Universal Correlation Engine",
+  "subtitle": "Cross-Domain Insight Engine",
+  "resonance": {
+    "title": "Overall Resonance Score",
+    "high": "Very High Harmony",
+    "moderate": "Balanced Harmony",
+    "low": "Growth Potential"
+  },
+  "cosmic_synthesis": "Synthesis: {mythos} with {elementDesc} {trait}",
+  "archetype": {
+    "title": "Your Archetype",
+    "radiantCatalyst": "The Radiant Catalyst",
+    "deepSeer": "The Deep Seer",
+    "growingPioneer": "The Growing Pioneer",
+    "steadfastGuardian": "The Steadfast Guardian",
+    "embracingMediator": "The Embracing Mediator",
+    "harmoniousTraveler": "The Harmonious Traveler",
+    "default": "The Seeker",
+    "wood": "The Growing Pioneer",
+    "fire": "The Radiant Catalyst",
+    "earth": "The Steadfast Guardian",
+    "metal": "The Sharp Strategist",
+    "water": "The Deep Seer"
+  },
+  "synergy": {
+    "title": "Synergy Domains",
+    "description": "Points where your traits reinforce each other.",
+    "tciSaju": "Your {dominant} temperament resonates with your {element} energy",
+    "hspStar": "Your sensitivity harmonizes with {starName}",
+    "hobbyRiasec": "Your hobbies align with your vocational profile",
+    "mayan_tci": "Mayan solar seal influences TCI dimensions",
+    "celtic_resilience": "Celtic tree wisdom supports resilience",
+    "sect_decan": "Time sect and decan create balanced energy",
+    "stone_tci": "Zodiac stone energies modulate TCI scores",
+    "mayan_career": "Mayan tone guides career timing",
+    "celtic_hobby": "Celtic tree archetype inspires hobby selection"
+  },
+  "friction": {
+    "title": "Friction Domains",
+    "description": "Opposing energies detected. These are opportunities for growth.",
+    "highHAFire": "High harm avoidance conflicts with fire energy",
+    "highNSEarth": "High novelty seeking clashes with earth's stillness",
+    "hspHighFire": "High sensitivity may be overwhelmed by fire energy",
+    "lowResilienceMetal": "Low resilience meets metal's sharpness"
+  },
+  "cognitiveRisks": {
+    "title": "Cognitive Bias Warnings",
+    "description": "Potential bias risks based on your TCI profile."
+  },
+  "resilience": {
+    "title": "Resilience Actions",
+    "description": "Wellness suggestions tailored to your elemental energy.",
+    "gratitudeJournal": "Write 3 lines in a gratitude journal daily",
+    "fireBreathing": "Deep breathing meditation for fire energy balance",
+    "waterSleep": "Regular sleep schedule for water energy stability"
+  },
+  "hobbies": {
+    "title": "Recommended Hobbies",
+    "description": "Personalized recommendations based on your RIASEC profile.",
+    "toastmasters": {
+      "name": "Public Speaking",
+      "description": "Build confidence through structured speaking practice"
+    },
+    "fluid_art": {
+      "name": "Fluid Art",
+      "description": "Creative expression through fluid painting techniques"
+    }
+  },
+  "questions": {
+    "q13": "When thinking about past events, do you often think 'I knew it all along'?",
+    "q14": "Do you prefer maintaining the status quo over embracing change?",
+    "q15": "Do you continue things you don't like simply because you've already invested time/money?"
+  },
+  "options": {
+    "q13": {
+      "a": "Always. I predicted the outcome.",
+      "b": "Sometimes, but I usually couldn't predict.",
+      "c": "I check whether I actually predicted it."
+    },
+    "q14": {
+      "a": "Familiar is comfortable. Change is unnecessary risk.",
+      "b": "I accept change if needed.",
+      "c": "I choose carefully between change and stability."
+    },
+    "q15": {
+      "a": "I finish what I started because it's wasteful not to.",
+      "b": "I quit if it's not useful.",
+      "c": "It depends, but I cut losses if needed."
+    }
+  },
+  "types": {
+    "hindsight_bias": {
+      "name": "Hindsight Bias",
+      "subtitle": "I knew it all along!",
+      "description": "The tendency to believe, after learning an outcome, that one would have foreseen it.",
+      "examples": [
+        "Saying 'I knew that stock would fall' even though you didn't predict it.",
+        "After an election, thinking 'Of course they would win.'"
+      ],
+      "overcome": [
+        "Consciously recall the uncertainty at the time of decision.",
+        "Keep a decision journal to record predictions before outcomes."
+      ]
+    },
+    "status_quo_bias": {
+      "name": "Status Quo Bias",
+      "subtitle": "Change is unnecessary risk",
+      "description": "The preference to keep things the same, even when changing would be better.",
+      "examples": [
+        "Hesitating to switch jobs even when better opportunities arise.",
+        "Maintaining unsatisfying relationships out of fear of change."
+      ],
+      "overcome": [
+        "Objectively evaluate the hidden costs of the current state.",
+        "Start with small changes to build tolerance for change."
+      ]
+    },
+    "sunk_cost_fallacy": {
+      "name": "Sunk Cost Fallacy",
+      "subtitle": "We've come too far to quit",
+      "description": "The tendency to continue an endeavor because of previously invested resources.",
+      "examples": [
+        "Watching a boring movie to the end because 'I paid for it.'",
+        "Continuing a failing project because 'we've invested so much.'"
+      ],
+      "overcome": [
+        "Decide from a 'from now on' perspective. Forget past investments.",
+        "Ask yourself if you would make the same choice if starting fresh."
+      ]
+    }
+  }
+}

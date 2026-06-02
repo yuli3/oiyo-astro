@@ -1,0 +1,117 @@
+{
+  "title": "Ten Gods (Sipshin)",
+  "gods": {
+    "BI_GYEON": {
+      "name": "Friend",
+      "meaning": "Parallel/Equal Power",
+      "keywords": "Independence, Equality, Comradeship"
+    },
+    "GEOP_JAE": {
+      "name": "Rob Wealth",
+      "meaning": "Competitor",
+      "keywords": "Ambition, Competition, Drive"
+    },
+    "SIK_SIN": {
+      "name": "Eating God",
+      "meaning": "Artist",
+      "keywords": "Creativity, Pleasure, Expression"
+    },
+    "SANG_GWAN": {
+      "name": "Hurting Officer",
+      "meaning": "Rebel",
+      "keywords": "Innovation, Defiance, Brilliance"
+    },
+    "PYEON_JAE": {
+      "name": "Indirect Wealth",
+      "meaning": "Entrepreneur",
+      "keywords": "Risk, Opportunity, Fluidity"
+    },
+    "JEONG_JAE": {
+      "name": "Direct Wealth",
+      "meaning": "Saver",
+      "keywords": "Stability, Thrift, Planning"
+    },
+    "PYEON_GWAN": {
+      "name": "Seven Killings",
+      "meaning": "Warrior",
+      "keywords": "Power, Discipline, Courage"
+    },
+    "JEONG_GWAN": {
+      "name": "Direct Officer",
+      "meaning": "Diplomat",
+      "keywords": "Honor, Rules, Status"
+    },
+    "PYEON_IN": {
+      "name": "Indirect Resource",
+      "meaning": "Mystic",
+      "keywords": "Intuition, Unconventionality, Mystery"
+    },
+    "JEONG_IN": {
+      "name": "Direct Resource",
+      "meaning": "Scholar",
+      "keywords": "Wisdom, Support, Tradition"
+    }
+  },
+  "fateStars": {
+    "cheonaek": {
+      "name": "Star of Hardship",
+      "keyword": "Resilience",
+      "description": "Growing into a greater person through early trials."
+    },
+    "cheonbok": {
+      "name": "Star of Blessings",
+      "keyword": "Prosperity",
+      "description": "Heavenly blessings and material abundance through honest effort."
+    },
+    "cheongan": {
+      "name": "Star of Strategy",
+      "keyword": "Strategy",
+      "description": "Extraordinary mental agility and strategic judgment."
+    },
+    "cheongo": {
+      "name": "Star of Solitude",
+      "keyword": "Independence",
+      "description": "Noble bearing and an independent, self-reflective spirit."
+    },
+    "cheongwi": {
+      "name": "Noble Star",
+      "keyword": "Nobility",
+      "description": "Natural elegance and energy that commands deep respect."
+    },
+    "cheongwon": {
+      "name": "Star of Authority",
+      "keyword": "Authority",
+      "description": "Command over others and powerful leadership charisma."
+    },
+    "cheonin": {
+      "name": "Star of Tenacity",
+      "keyword": "Tenacity",
+      "description": "Insight as sharp as a blade and persistent execution."
+    },
+    "cheonmun": {
+      "name": "Star of Literacy",
+      "keyword": "Wisdom",
+      "description": "Energy combining academic depth and exceptional literary talent."
+    },
+    "cheonpa": {
+      "name": "Star of Breakthrough",
+      "keyword": "Innovation",
+      "description": "A powerful force of breakthrough that paves new paths."
+    },
+    "cheonsu": {
+      "name": "Star of Longevity",
+      "keyword": "Longevity",
+      "description": "Unchanging vitality and calm patience over time."
+    },
+    "cheonye": {
+      "name": "Star of Artistry",
+      "keyword": "Artistry",
+      "description": "Versatile skills and rich artistic sensibility."
+    },
+    "cheonyeok": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    }
+  }
+}

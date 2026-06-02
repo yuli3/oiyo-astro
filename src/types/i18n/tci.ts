@@ -1,0 +1,67 @@
+// Auto-generated shard for namespace: tci
+
+export type Tci_dimensionsKeys =
+  | "C.label"
+  | "HA.label"
+  | "NS.label"
+  | "P.label"
+  | "RD.label"
+  | "SD.label"
+  | "ST.label";
+
+export type Tci_optionsKeys = "1" | "2" | "3" | "4" | "5";
+
+export type Tci_questionsKeys =
+  | "tci_1"
+  | "tci_2"
+  | "tci_3"
+  | "tci_4"
+  | "tci_5"
+  | "tci_6"
+  | "tci_7"
+  | "tci_8"
+  | "tci_9"
+  | "tci_10"
+  | "tci_11"
+  | "tci_12"
+  | "tci_13"
+  | "tci_14";
+
+export type TciKeys =
+  | "badge"
+  | "balanced"
+  | "dimensions.C.label"
+  | "dimensions.HA.label"
+  | "dimensions.NS.label"
+  | "dimensions.P.label"
+  | "dimensions.RD.label"
+  | "dimensions.SD.label"
+  | "dimensions.ST.label"
+  | "nature"
+  | "neuroscienceGuide"
+  | "nurture"
+  | "options.1"
+  | "options.2"
+  | "options.3"
+  | "options.4"
+  | "options.5"
+  | "paradoxDesc"
+  | "paradoxLabel"
+  | "questions.tci_1"
+  | "questions.tci_2"
+  | "questions.tci_3"
+  | "questions.tci_4"
+  | "questions.tci_5"
+  | "questions.tci_6"
+  | "questions.tci_7"
+  | "questions.tci_8"
+  | "questions.tci_9"
+  | "questions.tci_10"
+  | "questions.tci_11"
+  | "questions.tci_12"
+  | "questions.tci_13"
+  | "questions.tci_14"
+  | "restart"
+  | "resultTitle"
+  | "subtitle"
+  | "title";

@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "tes idées de blog",
+    "description": "Idées de contenu fraîches adaptées à ton niche",
+    "keywords": "idées de blog, création de contenu, écriture, blogging, créativité"
+  },
+  "hero": {
+    "title": "tes idées de blog",
+    "subtitle": "Ne soyez plus jamais à court d'idées de contenu",
+    "cta": "Générer des idées",
+    "badge": "✍️ Création de contenu"
+  },
+  "categories": {
+    "lifestyle": "Mode de vie",
+    "technology": "Technologie",
+    "business": "Affaires",
+    "health": "Santé & Bien-être",
+    "travel": "Voyages",
+    "food": "Nourriture & Cuisine"
+  },
+  "result": {
+    "title": "tes idées de blog",
+    "description": "Idées de contenu fraîches adaptées à ton niche"
+  }
+}

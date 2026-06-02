@@ -1,0 +1,18 @@
+{
+  "intro": {
+    "badge": "Kindred Resonance Audit",
+    "title": "Social Bonding Alchemies",
+    "quote": "Unlock the blueprint of your social connections. Utilizing archetypal bonding patterns to map how you trust, relate, and resonate.",
+    "startButton": "Initiate Calibration"
+  },
+  "questions": {
+    "bond": "Bonding Field"
+  },
+  "results": {
+    "profile": "Bonding Signature",
+    "vulnerability": "Nucleus of Sensitivity",
+    "strategy": "Integration Directives",
+    "restart": "Re-Initiate Calibration"
+  },
+  " ": ""
+}

@@ -1,0 +1,10 @@
+{
+  "personality": "Personality",
+  "career": "Career",
+  "relationships": "Relationships",
+  "wellness": "Wellness",
+  "creativity": "Creativity",
+  "lifestyle": "Lifestyle",
+  "prompt": "Select at least one interest.",
+  "selected": "{count} selected"
+}

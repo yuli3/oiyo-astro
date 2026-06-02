@@ -1,0 +1,130 @@
+{
+  "career": {
+    "global_leader": {
+      "title": "Leader d'équipe global",
+      "description": "**Vous êtes un commandant né.**\n\nVotre seule présence impose le respect. Vous possédez cette rare capacité à voir le potentiel chez les autres et à les aligner vers une vision commune. Vous vous épanouissez dans les environnements à enjeux élevés où l'esprit de décision est la règle.",
+      "reasoning": "Votre étoile **« {primary} »** indique un fort magnétisme social, soutenu par vos traits extravertis."
+    },
+    "strategic_planner": {
+      "title": "Planificateur stratégique",
+      "description": "**Vous êtes l'architecte du futur.**\n\nPendant que les autres éteignent des incendies, vous les prévenez. Vous excellez à voir la situation dans son ensemble et à naviguer dans des systèmes complexes. Vous ne vous contentez pas de résoudre des problèmes ; vous concevez des solutions qui rendent le problème obsolète.",
+      "reasoning": "Votre **Intuition (N)** dominante vous permet de voir clairement les tendances futures, soutenue par votre nature analytique."
+    }
+  },
+  "hobby": {
+    "meditation": {
+      "title": "Méditation de pleine conscience",
+      "description": "**Trouvez la force dans l'immobilité.**\n\nVotre moteur interne tourne à plein régime. Pour éviter l'épuisement et garder votre avantage, vous devez cultiver une pratique de **« refroidissement »**. La méditation n'est pas seulement de la relaxation pour vous ; c'est un redémarrage stratégique de votre système d'exploitation.",
+      "reasoning": "Vous avez un excès d'énergie **Feu**. Les activités basées sur l'eau comme la méditation aident à vous apaiser et à vous concentrer."
+    },
+    "hiking": {
+      "title": "Randonnée alpine",
+      "description": "**Touchez la terre pour atteindre le ciel.**\n\nVos pensées sont souvent dans les nuages. Pour ancrer vos idées nobles et les transformer en réalité, vous avez besoin d'une connexion physique avec la terre. La randonnée offre la résistance et le rythme dont votre corps a soif.",
+      "reasoning": "Votre thème manque d'énergie **Terre**. Le contact avec les montagnes stabilise votre potentiel créatif volatil."
+    }
+  },
+  "psychology": {
+    "shadow_work": {
+      "title": "Travail de l'ombre jungien",
+      "description": "**Affrontez la moitié sombre de votre âme.**\n\nVotre « Ombre » est constituée des parties de vous-même que vous avez rejetées — l'agression, l'ambition, ou peut-être la vulnérabilité. En les réprimant, elles vous contrôlent depuis l'inconscient. L'**intégration** est le but. Reconnaissez votre capacité à l'obscurité pour vraiment choisir la lumière.\n\n*   *Piste de réflexion :* Quelle qualité chez les autres vous irrite le plus ? C'est votre ombre qui parle.",
+      "reasoning": "Une forte **Intuition Introvertie (Ni)** suggère un monde intérieur profond prêt à être exploré."
+    },
+    "inner_child": {
+      "title": "Guérison de l'enfant intérieur",
+      "description": "**Reconnectez-vous avec votre moi originel.**\n\nAvant que le monde ne vous dise qui vous deviez être, vous *étiez*. Votre enfant intérieur détient la clé de votre créativité et de vos blessures émotionnelles les plus profondes. Il ne s'agit pas d'être enfantin ; il s'agit de récupérer la **vitalité** que vous avez laissée derrière vous dans le passé.",
+      "reasoning": "Votre score d'**Évitement du Danger** indique des blessures non guéries qui nécessitent une attention douce."
+    },
+    "title": "Psychologie"
+  },
+  "mythology": {
+    "hero_journey": {
+      "title": "L'appel à l'aventure",
+      "description": "**Vous êtes sur le seuil.**\n\nDans le Monomythe, le Héros doit quitter le monde connu pour s'aventurer dans l'éveil surnaturel. Vous ressentez actuellement un « attrait » pour quelque chose d'inconnu. **Ne refusez pas l'appel.** Les défis à venir ne sont pas des punitions ; ce sont les rites d'initiation de votre nouveau moi.",
+      "reasoning": "Votre étoile **« 7 Killing »** (Sept Tués) est active, signalant une période de défis intenses et de transformation."
+    },
+    "trickster_archetype": {
+      "title": "Incarnez le trickster",
+      "description": "**Le chaos est votre professeur.**\n\nLe Trickster (Loki, Hermès, Coyote) enfreint les règles pour révéler la vérité. Vous êtes actuellement dans un ordre stagnant. Vous devez **bouleverser** votre propre vie. Faites l'inattendu. Riez du sérieux. L'innovation ne vit qu'à la frontière du chaos.",
+      "reasoning": "Votre nature **ENTP** s'épanouit dans la perturbation. Utilisez-la de manière constructive."
+    },
+    "title": "Mythologie"
+  },
+  "science": {
+    "dopamine_fast": {
+      "title": "Protocole de jeûne à la dopamine",
+      "description": "**Réappropriez-vous le système de récompense de votre cerveau.**\n\nÀ une époque d'hyper-stimulation, votre seuil de satisfaction est au plus bas. Vous vous ennuyez parce que vous êtes suralimenté. La solution est la **soustraction**. En supprimant les plaisirs faciles (écrans, sucre) pendant 24 heures, vous réinitialisez votre neurochimie, rendant le banal à nouveau miraculeux.",
+      "reasoning": "Votre trait élevé de **Recherche de Nouveauté** vous expose à des cycles rapides d'épuisement et d'ennui."
+    },
+    "title": "Science"
+  },
+  "spirituality": {
+    "taoist_flow": {
+      "title": "La voie du Wu Wei",
+      "description": "**L'action par la non-action.**\n\nVous essayez trop fort. Vous poussez la rivière. Le principe taoïste du *Wu Wei* enseigne que l'action parfaite semble sans effort. Arrêtez de forcer les résultats. **Alignez-vous sur le courant.** Quand vous arrêterez de lutter contre le flux de votre vie, vous constaterez que vous avancez plus vite que jamais.",
+      "reasoning": "Un excès d'énergie **Eau** suggère que vous êtes puissant mais actuellement turbulent. Concentrez-vous sur le flux."
+    },
+    "title": "Spiritualité"
+  },
+  "titles": {
+    "psychology": "Psychologie",
+    "mythology": "Mythologie",
+    "science": "Science",
+    "spirituality": "Spiritualité",
+    "careers": "Carrières",
+    "hobbies": "Loisirs"
+  },
+  "common": {
+    "title": "Recommandations personnalisées",
+    "match": "Faire correspondre",
+    "loading": "Chargement des recommandations..."
+  },
+  "mbti": "MBTI",
+  "saju": "Saju",
+  "careers": {
+    "title": "Carrières"
+  },
+  "hobbies": {
+    "title": "Loisirs"
+  },
+  "highPriority": "Haute Priorité",
+  "actions": {
+    "startNow": "Commencer Maintenant",
+    "completed": "Terminé"
+  },
+  "title": "Recommandations",
+  "subtitle": "Découvrez quoi faire ensuite selon votre profil.",
+  "filters": {
+    "hideDismissed": "Masquer les Ignorés",
+    "showDismissed": "Afficher les Ignorés",
+    "tests": "Tests",
+    "counseling": "Conseil",
+    "all": "Tout",
+    "content": "Contenu",
+    "insights": "Perspectives"
+  },
+  "stats": {
+    "pending": "Recommandations en Attente",
+    "completed": "Terminées"
+  },
+  "emptyState": {
+    "title": "Aucune Recommandation Pour l'Instant",
+    "description": "Complétez plus d'évaluations pour recevoir des parcours personnalisés.",
+    "cta": "Explorer les Évaluations"
+  },
+  "header": {
+    "badge": "Recommandé pour Vous",
+    "title": "Que Explorer Ensuite ?",
+    "subtitle": "Découvrez-en plus sur votre personnalité"
+  },
+  "reason": {
+    "related": "🔗 Connexe",
+    "category": "📂 Même Catégorie",
+    "popular": "⭐ Populaire",
+    "completion": "🎯 Compléter l'Ensemble"
+  },
+  "ui": {
+    "minutes": "min",
+    "startTest": "Commencer le Test",
+    "browseAll": "Parcourir Tous les Tests"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "habitQuest": {
+    "quests": {
+      "mood": "기분을 기록하세요",
+      "mindfulness": "마음챙김 연습",
+      "city": "시티 가이드 살펴보기"
+    },
+    "meta": {
+      "keywords": "성격분석, 자기발견, 프리미엄 인사이트",
+      "subtitle": "Level up your life daily",
+      "disclaimer": "부인 성명",
+      "description": "미래 성장을 위한 핵심 조언",
+      "title": "계기반"
+    },
+    "hero": {
+      "subtitle": "Level up your life daily",
+      "badge": "내면의 풍경을 구성하는 깊은 구조를 탐험해보세요."
+    },
+    "landing": {
+      "cta": "모험 시작"
+    },
+    "subtitle": "매일 당신의 삶을 레벨업하세요",
+    "levelTitle": "레벨 {level} 모험가",
+    "levelName": "레벨 {레벨}",
+    "streak": "{days} 연속! 🔥",
+    "nextLevelMsg": "다음 레벨을 위해서는 {xp} XP가 필요합니다!",
+    "dailyQuests": "일일 퀘스트",
+    "disclaimer": "정확한 분석 데이터가 당신의 잠재력을 증명합니다.",
+    "title": "계기반",
+    "description": "미래 성장을 위한 핵심 조언",
+    "T": "계기반"
+  }
+}

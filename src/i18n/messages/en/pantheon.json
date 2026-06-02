@@ -1,0 +1,11 @@
+{
+  "title": "Divine Pantheon",
+  "egyptianGuardian": "Egyptian Guardian",
+  "celticTreeSign": "Celtic Tree Sign",
+  "birthSymbols": "Birth Symbols",
+  "symbols": {
+    "Stone": "Stone",
+    "Flower": "Flower",
+    "Star": "Star"
+  }
+}

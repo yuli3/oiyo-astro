@@ -1,0 +1,42 @@
+{
+  "description": "[누락: 설명]",
+  "title": "[누락: 제목]",
+  "labels": {
+    "inputParameters": "[누락: labels.inputParameters]"
+  },
+  "relationship": "[누락: 관계]",
+  "rel": {
+    "selectPlaceholder": "[누락: rel.selectPlaceholder]",
+    "child_adult": "[누락: rel.child_adult]",
+    "child_minor": "[누락: rel.child_minor]",
+    "spouse": "[누락: 친척.배우자]",
+    "parent": "[누락: rel.parent]",
+    "other_relative": "[누락: rel.other_relative]",
+    "other": "[누락: rel.other]"
+  },
+  "giftAmount": "[누락: 선물 금액]",
+  "pastGiftAmount": "[누락: 과거 선물 금액]",
+  "calculateBtn": "[누락됨: 계산Btn]",
+  "result": {
+    "deductionDesc": "[누락: result.deductionDesc]",
+    "deduction": "[누락: 결과.공제]",
+    "taxBase": "[누락: result.taxBase]",
+    "rateDesc": "[누락: 결과.rateDesc]",
+    "rate": "[누락: 결과.비율]",
+    "title": "[누락: 결과.제목]",
+    "selfReport": "[누락: result.selfReport]"
+  },
+  "placeholder": "[누락: 자리 표시자]",
+  "tip": {
+    "title": "[누락: 팁.제목]",
+    "desc": "[누락:tip.desc]"
+  },
+  "disclaimer": "[누락: 면책조항]",
+  "test": {
+    "insightBullets": ["완벽한 선물 찾기", "성격과 예산 분석", "AI 맞춤 추천"]
+  },
+  "meta": {
+    "title": "선물 추천",
+    "description": "개성과 예산에 맞춘 AI 선물 추천"
+  }
+}

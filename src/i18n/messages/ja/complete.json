@@ -1,0 +1,8 @@
+{
+  "success": "成功！",
+  "message": "すべての準備が整いました。",
+  "benefits": {
+    "dashboard": "ダッシュボードへのアクセス",
+    "recommendations": "パーソナライズされたおすすめ"
+  }
+}

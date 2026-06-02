@@ -1,0 +1,46 @@
+{
+  "description": "特別な日のための完璧なギフトを見つけましょう。",
+  "title": "ギフトのおすすめ",
+  "labels": {
+    "inputParameters": "入力パラメータ"
+  },
+  "relationship": "関係性",
+  "rel": {
+    "selectPlaceholder": "関係を選択",
+    "child_adult": "成人した子供",
+    "child_minor": "未成年の子供",
+    "spouse": "配偶者",
+    "parent": "両親",
+    "other_relative": "その他の親戚",
+    "other": "その他"
+  },
+  "giftAmount": "ギフトの予算",
+  "pastGiftAmount": "過去のギフト履歴",
+  "calculateBtn": "ギフトを計算する",
+  "result": {
+    "deductionDesc": "控除の説明",
+    "deduction": "控除額",
+    "taxBase": "課税標準",
+    "rateDesc": "税率の説明",
+    "rate": "税率",
+    "title": "計算結果",
+    "selfReport": "自己申告"
+  },
+  "placeholder": "予算を入力してください",
+  "tip": {
+    "title": "ヒント",
+    "desc": "ギフトに意味を込めてみましょう。"
+  },
+  "disclaimer": "このおすすめは参考用です。",
+  "test": {
+    "insightBullets": [
+      "完璧なギフトを見つけてください",
+      "性格と予算の分析",
+      "AI によるパーソナライズされたレコメンデーション"
+    ]
+  },
+  "meta": {
+    "title": "ギフトのおすすめ",
+    "description": "性格と予算に基づいたAIギフト提案"
+  }
+}

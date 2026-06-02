@@ -1,0 +1,10 @@
+{
+  "guidanceTitle": "Soul Guidance",
+  "guidanceSubtitle": "Paths aligned with your inner resonance",
+  "recommendedCareers": "Recommended Careers",
+  "recommendedHobbies": "Recommended Hobbies",
+  "soulGuidance": "Your soul's calling points toward these directions.",
+  "common": {
+    "noGuidance": "No guidance available at this time."
+  }
+}

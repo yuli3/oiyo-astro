@@ -1,0 +1,195 @@
+{
+  "aries": "Aries",
+  "taurus": "Taurus",
+  "gemini": "Gemini",
+  "cancer": "Cancer",
+  "leo": "Leo",
+  "virgo": "Virgo",
+  "libra": "Libra",
+  "scorpio": "Scorpio",
+  "sagittarius": "Sagittarius",
+  "capricorn": "Capricorn",
+  "aquarius": "Aquarius",
+  "pisces": "Pisces",
+  "meta": {
+    "title": "Zodiac Guide",
+    "description": "Decoding the geometric patterns of your identity...",
+    "keywords": "zodiac signs, astrology, horoscope, zodiac compatibility",
+    "resultTitle": "Your Zodiac Analysis",
+    "resultDescription": "Designing a mirror that reflects your true essence...",
+    "resultKeywords": "zodiac analysis, sign traits, astrology report"
+  },
+  "benefits": {
+    "love": {
+      "title": "Love & Relationships",
+      "description": "How you connect with other signs."
+    },
+    "career": {
+      "title": "Career & Success",
+      "description": "Mapping the secret architecture of your personality..."
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "What is the core essence of a zodiac sign?",
+        "answer": "It is an archetypal lens through which the universe's infinite complexity is filtered into a unique human resonance."
+      },
+      {
+        "question": "Does my sign dictate my entire destiny?",
+        "answer": "The stars incline, but do not compel; they provide the celestial blueprint, but you are the architect of your own awakening."
+      }
+    ],
+    "title": "Questions for the Universe"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Archetypal Resonance",
+        "description": "A deep dive into the psychological and spiritual motifs of your primary sign."
+      },
+      {
+        "icon": "🧭",
+        "title": "Astral Navigation",
+        "description": "Strategic insights on how to align your daily actions with the seasonal celestial flow."
+      }
+    ]
+  },
+  "test": {
+    "title": "Personalized Analysis",
+    "subtitle": "We are interpreting your answers to reveal your unique essence.",
+    "calculating": "Calculating your sign..."
+  },
+  "title": "Personalized Analysis",
+  "description": "Discover the secrets revealed by your answers.",
+  "result": {
+    "title": "Personalized Analysis",
+    "description": "Discover the secrets revealed by your answers."
+  },
+  "hero": {
+    "title": "Discover your Sign",
+    "subtitle": "Decoding the geometric patterns of your identity..."
+  },
+  "preview": {
+    "title": "Personalized Analysis"
+  },
+  "cta": {
+    "title": "Personalized Analysis",
+    "subtitle": "Syncing the threads of your destiny...",
+    "button": "View Personality"
+  },
+  "T": "Page Title",
+  "info": {
+    "accurate": {
+      "title": "Personalized Analysis",
+      "description": "Discover the secrets revealed by your answers."
+    },
+    "detailed": {
+      "title": "Personalized Analysis",
+      "description": "Discover the secrets revealed by your answers."
+    }
+  },
+  "compatibility": {
+    "title": "Zodiac Compatibility Analysis",
+    "subtitle": "Discover the harmony between two signs and understand your relationship dynamics.",
+    "selectionTitle": "Choose Signs to Analyze",
+    "selectionDesc": "Select two zodiac signs for a detailed compatibility breakdown.",
+    "mySign": "My Sign",
+    "partnerSign": "Partner Sign",
+    "placeholder": "Select a sign",
+    "analyzeBtn": "Analyze Compatibility",
+    "analyzingBtn": "Analyzing...",
+    "levels": {
+      "excellent": "Excellent Match",
+      "good": "Good Match",
+      "fair": "Fair Match",
+      "challenging": "Challenging Match"
+    },
+    "categories": {
+      "love": "Love & Romance",
+      "friendship": "Friendship",
+      "business": "Work & Business",
+      "communication": "Communication"
+    },
+    "sections": {
+      "scorecard": "Compatibility Breakdown",
+      "strengths": "Relationship Strengths",
+      "challenges": "Growth Challenges",
+      "advice": "Cosmic Advice for Growth"
+    },
+    "actions": {
+      "share": "Share Results",
+      "retake": "New Analysis",
+      "copySuccess": "Copied to clipboard!"
+    },
+    "analysis": {
+      "strengths": {
+        "traitMatch": "{sign1}'s {trait1} and {sign2}'s {trait2} creates a harmonious resonance.",
+        "sameElement": "Both signs share the same element, fostering a natural understanding.",
+        "complementaryElement": "Your elements are complementary, creating a balanced and synergistic bond.",
+        "respect": "A relationship built on mutual recognition and respect for each other's strengths."
+      },
+      "challenges": {
+        "traitConflict": "{sign1}'s {trait1} nature might occasionally clash with {sign2}'s {trait2} tendency.",
+        "misunderstanding": "Differing approaches to life may lead to initial misunderstandings.",
+        "communication": "Understanding each other's distinct communication styles is key to harmony."
+      },
+      "tips": {
+        "respect": "Respect and embrace your differences as opportunities for growth.",
+        "communication": "Maintain open and honest communication at all times.",
+        "personalTime": "Value and respect each other's need for personal space.",
+        "sharedInterests": "Explore and nurture common interests that you can enjoy together.",
+        "conflict": "When conflicts arise, prioritize understanding each other's perspective.",
+        "excellent": "A match made in heaven! Trust the cosmic flow and nurture this special bond.",
+        "challenging": "A challenging yet rewarding path. Your efforts to understand will deepen your connection."
+      }
+    }
+  },
+  "extended": {
+    "corePersonality": {
+      "leader": "Natural leader with a strong independent spirit",
+      "innovator": "Creative innovator with artistic sensibilities",
+      "analyst": "Reflective analyst with practical wisdom",
+      "balanced": "Mapping the secret architecture of your personality..."
+    },
+    "lifeTheme": "Harmonious integration of wisdom, creativity, and practical action",
+    "compatibilityAnalysis": {
+      "excellent": "Excellent harmony across all systems. Your cosmic energies are very well aligned.",
+      "good": "Good overall compatibility. Minor adjustments can improve your natural flow.",
+      "moderate": "Syncing the threads of your destiny...",
+      "diverse": "Diverse energies that can be harmonized through awareness and practice."
+    },
+    "timeline": {
+      "currentTheme_spring": "New Beginnings and Growth",
+      "currentTheme_summer": "Peak Energy and Achievement",
+      "currentTheme_autumn": "Harvest and Consolidation",
+      "currentTheme_winter": "Reflection and Planning",
+      "currentTheme_default": "Growth and Development",
+      "advice": {
+        "strengths": "Focus on your natural strengths",
+        "intuition": "Trust your intuition in making decisions",
+        "balance": "Maintain balance in all areas of life"
+      },
+      "upcoming": {
+        "next3": "A period of steady progress with opportunities for new connections",
+        "nextYear": "Significant growth in personal and professional areas",
+        "transitions": [
+          "Career advancement opportunities",
+          "Deepening of important relationships",
+          "Personal spiritual growth"
+        ]
+      }
+    }
+  },
+  "subtitle": "Discover your astrological profile.",
+  "oracle": {
+    "selectZodiac": "Select a Zodiac Sign",
+    "synchronize": "Synchronize Stars",
+    "imperialDecree": "Imperial Decree",
+    "analysisBasis": "Basis of Analysis",
+    "message": "Cosmic Message",
+    "actionRitual": "Action Ritual",
+    "fateVsWill": "Fate vs Will"
+  }
+}

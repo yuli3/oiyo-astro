@@ -1,0 +1,539 @@
+{
+  "egenteto": {
+    "meta": {
+      "hero": {
+        "badge": "인기",
+        "subtitle": "호르몬 균형을 통해 알아내는 나의 성향",
+        "cta": "지금 시작하세요"
+      },
+      "benefits": {
+        "subtitle": "세부"
+      },
+      "types": {
+        "subtitle": "유형 소개"
+      },
+      "keywords": "에겐테토, 성격분석, 호르몬, 심리테스트, 궁합",
+      "description": "테스토스테론과 에스트로겐 균형을 분석하여 숨겨진 성향을 찾아보세요.",
+      "title": "성격분석이 필요한 분"
+    },
+    "hero": {
+      "subtitle": "호르몬 밸런스로 본 나의 본질",
+      "cta": "진단 시작하기",
+      "badge": "🔥 한국 트렌드",
+      "title": "성격 진단이 필요해요",
+      "description": "테스토스테론과 에스트로겐 균형을 분석하여 숨겨진 성향을 찾아보세요."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "당신의 유형을 알아라",
+          "description": "당신은 테스토스테론이나 에스트로겐이 우세합니까?"
+        },
+        {
+          "icon": "💕",
+          "title": "데이트 매치",
+          "description": "귀하의 호르몬 유형에 맞는 파트너를 찾으십시오."
+        },
+        {
+          "icon": "🎯",
+          "title": "자기 발견",
+          "description": "당신의 행동 드라이브를 이해하십시오."
+        },
+        {
+          "icon": "🌟",
+          "title": "결과 공유",
+          "description": "즉시 친구와 유형을 비교해보세요."
+        }
+      ],
+      "subtitle": "진단을 통해 알 수 있는 것",
+      "title": "필요한 분석"
+    },
+    "types": {
+      "tetonam": {
+        "name": "테토남",
+        "emoji": "💖",
+        "subtitle": "테스토스테론이 높은 남성",
+        "description": "그들은 목표 지향적이고, 경쟁을 즐기며, 논리적인 해결책을 선호합니다."
+      },
+      "egennam": {
+        "name": "나는 그것이 필요하다",
+        "emoji": "💖",
+        "subtitle": "고에스트로겐 남성",
+        "description": "공감능력이 뛰어나고 화합을 중시하며 섬세한 감성을 갖고 있다."
+      },
+      "tetonye": {
+        "name": "테톤 소녀",
+        "emoji": "💖",
+        "subtitle": "테스토스테론이 높은 여성",
+        "description": "이들은 적극적이고 결단력이 있으며 독립심이 강합니다."
+      },
+      "egennye": {
+        "name": "에게겐어",
+        "emoji": "💖",
+        "subtitle": "고에스트로겐 여성",
+        "description": "따뜻하고 수용적이며 직관적입니다."
+      },
+      "subtitle": "4가지 원형",
+      "title": "성격 유형 소개"
+    },
+    "resultPage": {
+      "breadcrumbs": {
+        "home": "집",
+        "test": "진단",
+        "result": "결과"
+      },
+      "test": {
+        "insightBullets": ["당신의 진정한 자아의 별자리를 지도로 그려보세요."],
+        "progress": "진전",
+        "submit": "결과 보기",
+        "loading": "분석 중...",
+        "selectOption": "선택하기",
+        "next": "다음",
+        "previous": "~ 전에"
+      },
+      "result": {
+        "title": "당신의 에젠테토 유형",
+        "description": "호르몬 균형이 당신의 진정한 모습을 드러낸다"
+      },
+      "meta": {
+        "title": "필요한 성격분석 결과",
+        "description": "테스토스테론과 에스트로겐의 균형에 따라 당신의 성격 유형은 무엇입니까?",
+        "keywords": "에게테토, 성격테스트, 호르몬, MBTI, 연애적합성"
+      },
+      "titleTemplate": "{typeName} 결과 | 에젠테토 성격 테스트",
+      "descriptionTemplate": "당신은 {typeName}입니다! {typeDescription} Eggenteto 테스트를 통해 당신의 성격 유형과 연애 궁합을 알아보세요."
+    },
+    "relationship": {
+      "compatibility": {
+        "title": "통찰력 요약",
+        "subtitle": "세부",
+        "description": "AI가 제시하는 성장 로드맵",
+        "chain": "체인",
+        "note": "메모"
+      }
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "answer": "공고",
+          "question": "질문"
+        },
+        "1": {
+          "answer": "공고",
+          "question": "질문"
+        },
+        "2": {
+          "answer": "공고",
+          "question": "질문"
+        },
+        "3": {
+          "answer": "공고",
+          "question": "질문"
+        },
+        "4": {
+          "answer": "공고",
+          "question": "질문"
+        }
+      },
+      "title": "통찰력 요약"
+    },
+    "result": {
+      "title": "상세 분석 결과",
+      "traits": "성격 특성",
+      "description": "다양한 각도에서의 심층적인 분석을 통해 당신의 가능성을 찾아드립니다.",
+      "compatibility": "호환성",
+      "share": "공유하기",
+      "copied": "복사됨",
+      "copy": "복사",
+      "retake": "다시 진단해 보세요"
+    },
+    "test": {
+      "title": "맞춤형 분석 결과",
+      "subtitle": "심층 분석 보고서",
+      "progress": "진전",
+      "submit": "데스티니 보고서 열기",
+      "next": "다음",
+      "previous": "이전에"
+    },
+    "navigation": {
+      "home": "집"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "text": "나는 누군가의 감정을 상하게 할지라도 매우 직접적이고 정직한 경향이 있습니다.",
+        "category": "T"
+      },
+      {
+        "id": "q2",
+        "text": "나는 타인, 심지어 낯선 사람의 감정에 깊은 감동을 받습니다.",
+        "category": "E"
+      },
+      {
+        "id": "q3",
+        "text": "나는 경쟁과 도전에서 승리하는 느낌을 즐긴다.",
+        "category": "T"
+      },
+      {
+        "id": "q4",
+        "text": "나는 종종 나 자신의 개인적인 필요보다 집단의 조화를 우선시합니다.",
+        "category": "E"
+      },
+      {
+        "id": "q5",
+        "text": "나는 직관에 의존하기보다는 논리적으로 상황을 분석하는 것을 선호한다.",
+        "category": "T"
+      },
+      {
+        "id": "q6",
+        "text": "나는 다른 사람의 입장에 있는 나 자신을 상상하기가 쉽다.",
+        "category": "E"
+      },
+      {
+        "id": "q7",
+        "text": "나는 목표를 달성하기 위해 위험을 감수하는 것이 편하다.",
+        "category": "T"
+      },
+      {
+        "id": "q8",
+        "text": "나는 다른 사람의 미묘한 신호와 신체 언어에 민감합니다.",
+        "category": "E"
+      },
+      {
+        "id": "q9",
+        "text": "나는 팀 내에서 명확한 계층 구조와 정의된 역할을 선호합니다.",
+        "category": "T"
+      },
+      {
+        "id": "q10",
+        "text": "나는 표면적인 대화보다 깊고 의미 있는 대화를 더 중요하게 생각합니다.",
+        "category": "E"
+      },
+      {
+        "id": "q11",
+        "text": "나는 종종 단호하고 결단력이 있는 사람으로 묘사됩니다.",
+        "category": "T"
+      },
+      {
+        "id": "q12",
+        "text": "친구들 사이에 갈등이 생기면 자연스럽게 중재하려고 노력해요.",
+        "category": "E"
+      }
+    ],
+    "badge": "🔥 인기 급상승",
+    "cta": "테스트 받기",
+    "title": "성격분석이 필요한 분",
+    "description": "호르몬 균형을 통해 당신의 진짜 성격을 알아보세요",
+    "keywords": "성격진단,에겐테토,호르몬,심리검사",
+    "subtitle": "세부",
+    "male": "남성",
+    "female": "여성",
+    "a": "인기 있는"
+  },
+  "personalityTwin": {
+    "finder": {
+      "meta": {
+        "hero": {
+          "badge": "인기 있는",
+          "subtitle": "자신에 대한 깊은 통찰력을 발견하십시오."
+        },
+        "features": {
+          "subtitle": "세부"
+        },
+        "keywords": "성격분석, 자기발견, 프리미엄 인사이트",
+        "title": "심층 분석 보고서",
+        "description": "다양한 각도에서의 심층적인 분석을 통해 당신의 가능성을 찾아드립니다."
+      },
+      "hero": {
+        "badge": "🔍 당신의 성격 쌍둥이를 찾아보세요",
+        "subtitle": "당신과 꼭 닮은 영혼을 찾아보세요",
+        "cta": "내 쌍둥이를 찾아보세요",
+        "title": "페르소나 트윈",
+        "description": "우리는 전 세계에서 믿을 수 없을 정도로 비슷한 생각과 가치관을 가진 사람들을 찾을 수 있도록 도와드립니다."
+      },
+      "features": {
+        "list": [
+          "당신을 진정으로 이해하는 친구를 찾으세요",
+          "로맨틱한 궁합을 찾아보세요",
+          "의미 있는 전문적 관계 구축",
+          "같은 생각을 가진 사람들과 연결"
+        ],
+        "accurate": {
+          "title": "고정밀 AI 분석",
+          "description": "수천 개의 데이터 포인트를 분석하여 유사성을 계산합니다."
+        },
+        "anonymous": {
+          "title": "완전한 익명성",
+          "description": "개인정보는 철저히 보호되어 안전하게 이용될 수 있습니다."
+        },
+        "realtime": {
+          "title": "실시간 매칭",
+          "description": "현재 활성 사용자 중에서 귀하의 트윈을 찾으십시오."
+        },
+        "subtitle": "주요 기능",
+        "title": "페르소나 트윈의 특징"
+      },
+      "test": {
+        "insightBullets": ["귀하의 경로를 정의하는 고유한 패턴을 찾아보세요."],
+        "progress": "진전",
+        "submit": "데스티니 보고서 열기",
+        "loading": "로드 중",
+        "selectOption": "선택하기",
+        "next": "다음",
+        "previous": "이전에"
+      },
+      "result": {
+        "title": "상세 분석 결과",
+        "description": "다양한 각도에서의 심층적인 분석을 통해 당신의 가능성을 찾아드립니다."
+      },
+      "noMatches": "아직 쌍둥이가 발견되지 않았습니다",
+      "findNow": "쌍둥이 찾기",
+      "matches": "{count}개의 일치 항목을 찾았습니다.",
+      "topMatch": "상위 일치: {percentage}% 유사",
+      "title": "페르소나 트윈",
+      "description": "나와 비슷한 성격의 친구를 찾아보세요",
+      "keywords": "성격매칭, 친구찾기, MBTI, 소울메이트"
+    },
+    "ui": {
+      "matchTypes": {
+        "perfectTwin": "완벽한 성격 쌍둥이! 🎯",
+        "closeMatch": "성격이 너무 비슷해요! ✨",
+        "complementary": "보완적인 관계! 🤝",
+        "opposite": "정반대이지만 매력적인 매치! 🌓"
+      },
+      "compatibilityLevels": {
+        "excellent": "환상적인 호환성!",
+        "great": "뛰어난 호환성!",
+        "good": "좋은 호환성!",
+        "decent": "괜찮은 호환성",
+        "unique": "독특한 조합"
+      },
+      "subtitle": "심층 분석 보고서",
+      "searching": "보다 정교한 분석을 통해 당신만의 질감을 발견해보세요.",
+      "noMatches": "보다 정교한 분석을 통해 당신만의 질감을 발견해보세요.",
+      "noMatchesDesc": "다양한 각도에서의 심층적인 분석을 통해 당신의 가능성을 찾아드립니다.",
+      "similarity": "유사",
+      "sharedTraits": "공유 특성",
+      "sharedTraitsNone": "아직 공유된 특성이 없습니다.",
+      "sharedTraitsList": "공유 특성: {traits}",
+      "sharedTraitsListMore": "공유 특성: {특성}...",
+      "differences": "차이점",
+      "connectTwin": "트윈과 연결",
+      "shareResult": "결과 공유",
+      "findMore": "더 찾아보세요",
+      "stats": "통계",
+      "totalProfiles": "총 프로필",
+      "recentMatches": "최근 경기",
+      "backToList": "목록으로 돌아가기",
+      "compatibility": "호환성",
+      "title": "통찰력 요약"
+    },
+    "meta": {
+      "keywords": "성격분석, 자기발견, 프리미엄 인사이트",
+      "resultTitle": "보다 정교한 분석을 통해 당신만의 질감을 발견해보세요.",
+      "resultDescription": "다양한 각도에서의 심층적인 분석을 통해 당신의 가능성을 찾아드립니다.",
+      "testTitle": "보다 정교한 분석을 통해 당신만의 질감을 발견해보세요.",
+      "testDescription": "다양한 각도에서의 심층적인 분석을 통해 당신의 가능성을 찾아드립니다.",
+      "title": "성격쌍둥이 테스트",
+      "description": "다양한 각도에서의 심층적인 분석을 통해 당신의 가능성을 찾아드립니다."
+    },
+    "hero": {
+      "subtitle": "심층 분석 보고서",
+      "cta": "내 쌍둥이 찾기",
+      "badge": "개성트윈 뱃지"
+    },
+    "button": {
+      "finding": "쌍둥이를 찾아서...",
+      "findTwins": "내 쌍둥이 찾기",
+      "helper": "보다 정교한 분석을 통해 당신만의 질감을 발견해보세요."
+    },
+    "stats": {
+      "twinsFound": "쌍둥이 발견",
+      "avgMatch": "평균 일치",
+      "excellent": "훌륭한",
+      "bestMatch": "최고의 경기"
+    },
+    "matchQuality": {
+      "destinyTwin": "데스티니 트윈",
+      "perfectMatch": "완벽한 일치",
+      "amazingMatch": "놀라운 경기",
+      "greatMatch": "훌륭한 경기",
+      "goodMatch": "좋은 경기",
+      "fairMatch": "공정한 경기"
+    },
+    "list": {
+      "findingTwins": "쌍둥이를 찾아서...",
+      "noTwinsTitle": "아직 쌍둥이가 발견되지 않았습니다",
+      "noTwinsDescription": "다양한 각도에서의 심층적인 분석을 통해 당신의 가능성을 찾아드립니다.",
+      "searchAgain": "다시 검색",
+      "allTwins": "모든 쌍둥이",
+      "twinsFound": "쌍둥이 발견",
+      "findMore": "더 많은 쌍둥이 찾기"
+    },
+    "card": {
+      "testResults": "테스트 결과",
+      "sharedTests": "공유 테스트",
+      "specialInsights": "특별한 통찰력",
+      "totalTests": "테스트 완료",
+      "match": "성냥"
+    },
+    "cta": {
+      "subtitle": "심층 분석 보고서"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "온톨로지 1",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "온톨로지 2",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "온톨로지 3",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "온톨로지 4",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "온톨로지 5",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "온톨로지 6",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "온톨로지 1",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "온톨로지 2",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "💡",
+          "title": "온톨로지 3",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "온톨로지 4",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "온톨로지 5",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "온톨로지 6",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "온톨로지 1",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "온톨로지 2",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "💡",
+          "title": "온톨로지 3",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "온톨로지 4",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "온톨로지 5",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "온톨로지 6",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["시그니처 강도", "피벗 포인트", "2"],
+      "progress": "진전",
+      "submit": "데스티니 보고서 열기",
+      "loading": "분석 중입니다...",
+      "selectOption": "옵션 선택",
+      "subtitle": "세부",
+      "next": "다음",
+      "previous": "이전으로"
+    },
+    "result": {
+      "title": "상세 분석 결과",
+      "description": "다양한 각도에서의 심층적인 분석을 통해 당신의 가능성을 찾아드립니다."
+    },
+    "title": "맞춤형 분석 결과",
+    "description": "심층적인 자기 발견을 위해 설계된 다양한 신원 분석 도구를 경험해보세요."
+  }
+}

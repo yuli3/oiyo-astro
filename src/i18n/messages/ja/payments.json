@@ -1,0 +1,36 @@
+{
+  "success": {
+    "confirming": "支払いを確認しています...",
+    "pleaseWait": "しばらくお待ちください。",
+    "confirmFailed": "支払いの確認に失敗しました",
+    "title": "Payment Failed",
+    "activated": "プレミアム機能が有効になりました。 すべてのプレミアム機能にアクセスできるようになりました。",
+    "nextSteps": "次のステップ:",
+    "step1": "ダッシュボードで高度な分析を表示する",
+    "step2": "AI を活用した洞察を得る",
+    "step3": "PDF レポートをダウンロード",
+    "goToDashboard": "ダッシュボードに移動",
+    "backToHome": "ホームに戻る",
+    "tryAgain": "もう一度やり直してください"
+  },
+  "fail": {
+    "title": "支払いに失敗しました",
+    "errors": {
+      "USER_CANCEL": "ユーザーにより支払いがキャンセルされました。",
+      "INVALID_CARD": "カード情報が無効です。",
+      "INSUFFICIENT_FUNDS": "資金が不足しています。",
+      "PAYMENT_TIMEOUT": "支払いがタイムアウトしました。",
+      "default": "支払いの処理中にエラーが発生しました。"
+    },
+    "howToResolve": "解決方法:",
+    "solutions": {
+      "verifyCard": "カード情報を確認してください",
+      "checkFunds": "十分な資金があるかどうかを確認する",
+      "tryDifferent": "別の支払い方法を試してください",
+      "contactSupport": "問題が解決しない場合はサポートにお問い合わせください"
+    },
+    "tryAgain": "もう一度やり直してください",
+    "goToDashboard": "ダッシュボードに移動",
+    "backToHome": "ホームに戻る"
+  }
+}

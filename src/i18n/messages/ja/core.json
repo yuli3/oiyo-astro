@@ -1,0 +1,2611 @@
+{
+  "home": {
+    "enhancedTestGrid": {
+      "categories": {
+        "all": "統合ハブ",
+        "personality": "本質と魂",
+        "career": "天職と労働",
+        "utility": "実用的プリズム",
+        "fun": "軽やかな叡智"
+      },
+      "sortBy": {
+        "popularity": "普遍的な共鳴",
+        "newest": "新たな洞察",
+        "time": "時の律動",
+        "difficulty": "知的深層度"
+      },
+      "difficulty": {
+        "easy": "親しみやすい",
+        "medium": "深遠",
+        "hard": "超越的"
+      },
+      "test": {
+        "progress": "覚醒の進捗",
+        "submit": "真実を明かす",
+        "loading": "宇宙のパターンを解読中...",
+        "selectOption": "あなたの核心と最も深く共鳴する道を選択してください。",
+        "insightBullets": [
+          "自分の潜在意識を探ってみると…",
+          "アーキタイプをマッピングしています...",
+          "自分の内なる真実を明らかにする..."
+        ],
+        "next": "上昇",
+        "previous": "省察"
+      },
+      "result": {
+        "title": "自己に対して開く",
+        "description": "あなたの現在の共鳴の診断結果。"
+      },
+      "meta": {
+        "title": "オントロジー診断 | OIYOコレクション",
+        "description": "人間のエクスペリエンスをマッピングするための厳選されたテスト スイート。",
+        "keywords": "自己実現, 統合的プロフィール, オントロジー・マップ"
+      },
+      "filters": "視界の精製",
+      "viewMode": "視点の転換",
+      "estimatedTime": "精進時間",
+      "minutes": "省察の時間（分）",
+      "startTest": "旅の始まり",
+      "noResults": "該当するレンズを通しては、いかなる残像も見当たりません。",
+      "clearFilters": "視点の初期化",
+      "popular": "高い共鳴度",
+      "featured": "書記の選択",
+      "new": "生成される叡智",
+      "tryDifferentFilters": "別のレンズを通して、自己の異なる側面を照らしてみてください。",
+      "searchPlaceholder": "What part of yourself do you wish to see?"
+    },
+    "title": "おいよサンクチュアリ",
+    "description": "深い自己観察と天体調整の空間へようこそ。",
+    "keywords": "自己実現, 統合的プロフィール, オントロジー・マップ",
+    "errorFallbackTitle": "システムの不協和音",
+    "errorFallbackDescription": "信号が途切れました。ホーム聖域へ戻ってください。",
+    "subtitle": "断片化されたアイデンティティが、一つの輝かしい全一性（Wholeness）へと収束する瞬間を目撃してください。",
+    "searchPlaceholder": "自分のどの部分を見たいですか？"
+  },
+  "lifeAnalysis": {
+    "features": {
+      "timing": {
+        "title": "時間の流れ",
+        "love": "関係の潮流",
+        "business": "専門的な結実",
+        "crisis": "不穏な影",
+        "marriage": "結合の調和"
+      },
+      "wealth": {
+        "title": "マテリアルフロー",
+        "fortune": "豊穣の潜在力",
+        "style": "繁栄の習慣",
+        "spending": "資源の均衡"
+      },
+      "career": {
+        "title": "職業と労働",
+        "direction": "人生の行進方向",
+        "capability": "潜在的な適性",
+        "talent": "持って生まれた資質",
+        "welcome": "現れる成功"
+      },
+      "interest": {
+        "title": "情熱と集中力",
+        "main": "核心への集中"
+      },
+      "health": {
+        "title": "重要な誠実さ",
+        "organs": "身体的な警告信号"
+      },
+      "loveStyle": {
+        "title": "ハートの相性",
+        "type": "関係的な原型"
+      }
+    },
+    "title": "運命の統合的青写真",
+    "price": "1,000",
+    "priceUsd": "$1.00",
+    "originalPrice": "10,000",
+    "discountRate": "90%",
+    "description": "あなたの人生の軌跡のあらゆる側面を詳述する、非常に明確なレポート。",
+    "cta": "設計図を獲得",
+    "oneTimePayment": "一回限りのアクセス（非継続）"
+  },
+  "wholeSelf": {
+    "card": {
+      "header": "核心の顕現"
+    },
+    "labels": {
+      "money": "繁栄の潮流",
+      "color": "個別のスペクトル"
+    },
+    "values": {
+      "money": {
+        "impulsive-spender": "刹那を楽しむ探求者",
+        "careful-saver": "備蓄の守護者",
+        "social-spender": "寛容な繋ぎ手",
+        "investment-planner": "成長の設計者",
+        "experience-seeker": "Curator of Memories",
+        "security-focused": "土台の構築者"
+      },
+      "color": {
+        "warm-spring": "天上の早春の花",
+        "bright-spring": "燦然たる太陽の覚醒",
+        "light-summer": "清明な碧海の静寂",
+        "cool-summer": "精緻なる氷河の平穏",
+        "soft-autumn": "収穫の黄金色の均衡",
+        "warm-autumn": "深き琥珀色の共鳴",
+        "cool-winter": "恒星の水晶のごとき高潔さ",
+        "bright-winter": "絶対的な金剛石の明澄さ"
+      }
+    },
+    "actions": {
+      "download": "叡智の保存"
+    },
+    "meta": {
+      "subtitle": "断片化されたアイデンティティが、一つの輝かしい全一性（Wholeness）へと収束する瞬間を目撃してください。",
+      "disclaimer": "あなたの本質は外部へ流出せず、あなただけのデバイスという独立した聖域に留まります。",
+      "keywords": "自己実現, 統合的プロフィール, オントロジー・マップ",
+      "title": "統合されたパーソナリティオントロジー",
+      "description": "あなたの心理的および精神的な構造の統一されたビジョン。"
+    },
+    "hero": {
+      "subtitle": "断片化されたアイデンティティが、一つの輝かしい全一性（Wholeness）へと収束する瞬間を目撃してください。",
+      "badge": "ホリスティック共鳴"
+    },
+    "test": {
+      "progress": "覚醒の進捗",
+      "submit": "真実を明かす",
+      "loading": "宇宙のパターンを解読中...",
+      "selectOption": "あなたの核心と最も深く共鳴する道を選択してください。",
+      "insightBullets": [
+        "あなたの日常生活を形作る隠れた幾何学模様を発見してください。"
+      ],
+      "next": "上昇",
+      "previous": "省察"
+    },
+    "result": {
+      "title": "自己の総合",
+      "description": "あなた独自の心理的特徴を雄弁に明らかにします。"
+    },
+    "subtitle": "断片化されたアイデンティティが、一つの輝かしい全一性（Wholeness）へと収束する瞬間を目撃してください。",
+    "missing": "未だ顕れぬ領域",
+    "disclaimer": "あなたの本質は外部へ流出せず、あなただけのデバイスという独立した聖域に留まります。",
+    "title": "私の内なる地図",
+    "description": "あなたの潜在意識と意識の特性の風景を横断してください。",
+    "a": "永遠の共鳴"
+  },
+  "twinFinder": {
+    "title": "ツインファインダー",
+    "noMatches": "一致するものが見つかりませんでした。",
+    "findNow": "今すぐ探す"
+  },
+  "dailyHoroscope": {
+    "title": "結果",
+    "subtitle": "デイリーチェックイン",
+    "sections": {
+      "energy": "エネルギー予報",
+      "lucky": {
+        "title": "結果",
+        "direction": "方向",
+        "color": "色",
+        "number": "番号",
+        "item": "タリスマン"
+      },
+      "action": {
+        "title": "結果",
+        "do": "追求する",
+        "avoid": "控える"
+      },
+      "ritual": "毎日の儀式"
+    },
+    "elements": {
+      "wood": "成長と慈善",
+      "fire": "情熱と明晰さ",
+      "earth": "安定性と信頼性",
+      "metal": "正義と定義",
+      "water": "知恵と流れ"
+    },
+    "oracleMessage": "深層合成を待っています...",
+    "actionableAdvice": "深層合成を待っています..."
+  },
+  "dailyInsightsGenerator": {
+    "personalityDescriptors": {
+      "assertive": "生まれながらのリーダー",
+      "analytical": "思慮深い分析家",
+      "expressive": "活気あるコミュニケーター",
+      "adventurer": "大胆な探検家",
+      "blue": "穏やかな魂",
+      "explorer": "好奇心旺盛な発見者",
+      "default": "今日はあなた独自の強みを活用してください。"
+    },
+    "customization": {
+      "greeting": "こんにちは！",
+      "personalizedMessage": "あなたのユニークな旅を応援しています。"
+    },
+    "contextualTips": {
+      "assertive-motivation": "リーダーシップは、自分自身の模範を通じて他人にインスピレーションを与えるときに最も強力になります。",
+      "adventurer-creativity": "今日は、探検への愛を独創的な実験に向けてみましょう。",
+      "blue-wellness": "共感能力が高いあなたは、自分を大切にすることで他者をより良くケアできるようになります。",
+      "default": "今日はあなた独自の強みを活用してください。"
+    },
+    "fallback": {
+      "content": {
+        "title": "結果",
+        "message": "すべての人は独自の強みと才能を持っています。今日は、あなたの中にある特別な資質を認め、祝福する日です。",
+        "actionTip": "今日は意識的に自分の強みを一つ使ってみましょう。",
+        "affirmation": "私は価値があり、ユニークな存在です。"
+      },
+      "customization": {
+        "greeting": "こんにちは！",
+        "personalizedMessage": "あなたのユニークな旅を応援しています。",
+        "contextualTip": "あなたの個性が世界をより豊かにします。"
+      }
+    },
+    "shareTemplate": "{emoji} {title}\\n\\n{message}\\n\\n💡 {actionTip}\\n\\n✨ {affirmation}",
+    "sharePersonalizedPrefix": "{挨拶}"
+  },
+  "dailyReading": {
+    "meta": {
+      "keywords": "今日の運勢, エネルギー, アドバイス, 日次診断",
+      "title": "結果",
+      "description": "心と体が休息を求めています。"
+    },
+    "hero": {
+      "eyebrow": "デイリーリチュアル",
+      "subtitle": "デイリーチェックイン",
+      "cta": "今日のメッセージを開く"
+    },
+    "cards": {
+      "subtitle": "デイリーチェックイン",
+      "refresh": "新しいカードを引く",
+      "reminder": "また明日！"
+    },
+    "summary": {
+      "energy": "エネルギー予報",
+      "focus": "集中キーワード",
+      "luckyColor": "ラッキーカラー"
+    }
+  },
+  "welcomeTitle": "今日のあなたを発見",
+  "alreadyCompleted": "今日の診断は完了しました！",
+  "comeBackTomorrow": "明日も新しい診断があなたを待っています。",
+  "feature1Title": "たった2分",
+  "feature1Desc": "毎日の簡単なチェックインで、自分の状態を把握。",
+  "feature2Title": "日替わりの質問",
+  "feature2Desc": "毎日異なる質問で、新しい自分を発見。",
+  "feature3Title": "30日間の記録",
+  "feature3Desc": "気分の変化を長期的にトラッキング。",
+  "startDaily": "今日の診断を始める",
+  "viewHistory": "履歴を見る",
+  "days": "日",
+  "totalDays": "合計日数",
+  "longestStreak": "最長継続日数",
+  "uniqueTypes": "ユニークタイプ数",
+  "question": "今日の気分はどうですか？",
+  "todayAdvice": "今日のアドバイス",
+  "shareResult": "結果をシェア",
+  "copyLink": "リンクをコピー",
+  "copied": "コピーしました！",
+  "reminder": "また明日！",
+  "reminderText": "明日もチェックインを忘れずに。",
+  "shareTitle": "今日のパーソナリティ運勢",
+  "historyTitle": "私の診断履歴",
+  "historySubtitle": "過去の記録を振り返る",
+  "trendChart": "エネルギートレンド",
+  "energyScore": "エネルギースコア",
+  "calendarView": "カレンダー表示",
+  "mostCommon": "最も多いタイプ",
+  "noData": "データなし",
+  "takeOtherTests": "他の診断を受ける",
+  "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+  "dynamics": {
+    "hero": {
+      "title": "成長の推奨事項",
+      "subtitle": "家族独自のダイナミクスを理解し、関係を強化する方法を発見しましょう",
+      "description": "コミュニケーションを強化し、対立を解決するための個別化されたアクションプランを受け取りましょう。",
+      "analyzing": "家族のダイナミクスを分析中...",
+      "analyzeAnother": "別の家族を分析"
+    },
+    "features": {
+      "comprehensive": {
+        "title": "成長の推奨事項",
+        "description": "コミュニケーションを強化し、対立を解決するための個別化されたアクションプランを受け取りましょう。"
+      },
+      "harmony": {
+        "title": "成長の推奨事項",
+        "description": "コミュニケーションを強化し、対立を解決するための個別化されたアクションプランを受け取りましょう。"
+      },
+      "growth": {
+        "title": "成長の推奨事項",
+        "description": "コミュニケーションを強化し、対立を解決するための個別化されたアクションプランを受け取りましょう。"
+      }
+    },
+    "sections": {
+      "howWorks": "家族力学分析の仕組み",
+      "whatAnalyze": "分析内容",
+      "whatGet": "提供内容",
+      "faq": "よくある質問"
+    },
+    "analyze": {
+      "list": [
+        "家族間のコミュニケーションパターン",
+        "競合解決スタイルと互換性",
+        "家族内の精神的サポートシステム",
+        "個人の性格特性の相互作用",
+        "役割に基づいた関係力学"
+      ]
+    },
+    "results": {
+      "list": [
+        "全体的な家族の調和スコア",
+        "詳細な関係分析",
+        "強みと成長分野",
+        "パーソナライズされた改善の推奨事項",
+        "実践的な家庭調和のヒント"
+      ]
+    },
+    "faq": {
+      "placeholder": {
+        "question": "FAQ {number} 質問",
+        "answer": "FAQ {number} 回答内容"
+      }
+    },
+    "badge": "家族分析"
+  },
+  "astrologyHub": {
+    "title": "占星術センター",
+    "subtitle": "東洋と西洋の古代の知恵を探ってください。",
+    "tabs": {
+      "western": "西の黄道帯",
+      "chinese": "中国の黄道帯",
+      "extended": "拡張ゾディアック"
+    },
+    "westernTitle": "西の黄道帯",
+    "westernDesc": "あなたの星座の特徴と毎日の星占いを発見してください。",
+    "chineseTitle": "中国の黄道帯",
+    "chineseDesc": "あなたの動物の星座とそれがあなたの運命について何を語っているかを発見してください。",
+    "meta": {
+      "title": "占星術ハブ",
+      "description": "統一占星術の読み方: 中国および拡張黄道帯。"
+    }
+  },
+  "dailyTarot": {
+    "subtitle": "今日の運勢をカードでチェック",
+    "disclaimer": "タロットの結果は楽しむためのものであり、アドバイスのためのものであり、あなたの意志が最も重要です。",
+    "clickToDraw": "カードを引く",
+    "drawAgain": "もう一度描く",
+    "title": "デイリータロット",
+    "description": "あなたの一日を照らす神秘的なカードをご紹介します。",
+    "meta": {
+      "title": "毎日のタロット占い",
+      "description": "毎日のタロットカード占いで、今日のアドバイスや運勢をチェック。"
+    }
+  },
+  "extendedZodiac": {
+    "corePersonality": {
+      "leader": "強い独立心を持つ天性のリーダー",
+      "innovator": "芸術的な感性を備えたクリエイティブ・イノベーター",
+      "analyst": "実践的な知恵を備えた思慮深いアナリスト",
+      "balanced": "多様な強みを備えたバランスの取れた人材"
+    },
+    "lifeTheme": "知恵、創造性、実践的な行動の調和のとれた統合",
+    "compatibilityAnalysis": {
+      "excellent": "すべてのシステムにわたる優れた調和。 あなたの宇宙エネルギーは非常によく調和しています。",
+      "good": "全体的な互換性が良好です。 わずかな調整で自然な流れを改善できます。",
+      "moderate": "成長とバランスの機会との適度な互換性。",
+      "diverse": "意識的な認識と実践を通じて調和できる多様なエネルギー。"
+    },
+    "timeline": {
+      "currentTheme_spring": "新たな始まりと成長",
+      "currentTheme_summer": "ピーク時のエネルギーと成果",
+      "currentTheme_autumn": "収穫と統合",
+      "currentTheme_winter": "反省と計画",
+      "currentTheme_default": "成長と発展",
+      "advice": {
+        "strengths": "自分本来の強みに焦点を当てる",
+        "intuition": "決断は自分の直感を信じてください",
+        "balance": "生活のあらゆる面でバランスを保つ"
+      },
+      "upcoming": {
+        "next3": "新たなつながりが生まれる、着実な進歩の時期",
+        "nextYear": "個人的および専門的な分野での大幅な成長",
+        "transitions": [
+          "キャリアアップの機会",
+          "大切な関係を深める",
+          "個人の精神的な成長"
+        ]
+      }
+    }
+  },
+  "dreamJournal": {
+    "meta": {
+      "title": "夢日記",
+      "description": "夢を記録して分析する",
+      "keywords": "夢日記、夢分析、夢解釈"
+    },
+    "hero": {
+      "title": "夢日記",
+      "badge": "人気のある",
+      "subtitle": "あなたの夢のための完全ガイド",
+      "description": "夢に関する深い洞察のために設計された一連のツールを探索してください。"
+    },
+    "tabs": {
+      "analysis": "あなたの夢のタイプ",
+      "symbols": "記号辞書",
+      "journal": "夢日記のヒント"
+    },
+    "result": {
+      "title": "夢分析",
+      "copied": "クリップボードにコピーされました!",
+      "characteristics": "あなたの夢の特徴",
+      "dreamPatterns": "あなたの夢のパターン",
+      "interpretationTips": "夢の解釈のヒント",
+      "commonSymbols": "あなたのよく見る夢のシンボル",
+      "dreamTypeBreakdown": "あなたの夢のタイプの内訳",
+      "share": "共有",
+      "shareText": "私は {type} の夢想家です! ここであなたの夢の性格をチェックしてください: {url}",
+      "retake": "再受験"
+    },
+    "symbols": {
+      "title": "夢のシンボル辞典",
+      "subtitle": "よくある夢のシンボルの背後にある意味を発見する",
+      "searchPlaceholder": "シンボルを検索..."
+    },
+    "journal": {
+      "title": "ドリームジャーナルガイド",
+      "subtitle": "夢を効果的に記録して分析する方法を学ぶ",
+      "gettingStarted": "はじめる",
+      "whatToRecord": "何を記録するか",
+      "interpretationTips": "解釈のヒント",
+      "improveRecall": "夢の想起を改善する"
+    },
+    "test": {
+      "progress": "質問 {current}/{total}",
+      "selectOption": "オプションを選択してください"
+    }
+  },
+  "chineseZodiac": {
+    "animals": {
+      "rat": {
+        "name": "ねずみ",
+        "years": "1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020",
+        "personality": "知的で機知に富み、頭の回転が速い。 天性のリーダーシップと優れたビジネス洞察力。"
+      },
+      "ox": {
+        "name": "牛",
+        "years": "1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021",
+        "personality": "信頼でき、忍耐強く、勤勉です。 伝統と安定を大切にします。"
+      },
+      "tiger": {
+        "name": "虎",
+        "years": "1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022",
+        "personality": "勇敢で、自信があり、競争力があります。 天性のリーダーシップと強いカリスマ性。"
+      },
+      "rabbit": {
+        "name": "うさぎ",
+        "years": "1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023",
+        "personality": "優しくて、静かで、エレガント。 平和と調和のとれた関係を大切にします。"
+      },
+      "dragon": {
+        "name": "ドラゴン",
+        "years": "1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012, 2024",
+        "personality": "エネルギッシュで、知的で、才能に溢れています。 天性のカリスマ性とリーダーシップ能力。"
+      },
+      "snake": {
+        "name": "蛇",
+        "years": "1929, 1941, 1953, 1965, 1977, 1989, 2001, 2013, 2025",
+        "personality": "聡明で直感力があり、ミステリアスな魅力を持っています。 深い思考力と優れた判断力を持つ人。"
+      },
+      "horse": {
+        "name": "馬",
+        "years": "1930, 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026",
+        "personality": "エネルギッシュで、独立心があり、陽気です。 自由と冒険を愛する。"
+      },
+      "goat": {
+        "name": "ヤギ",
+        "years": "1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, 2027",
+        "personality": "優しくて情に厚く、芸術的センスも高い。 美しさと調和を大切にします。"
+      },
+      "monkey": {
+        "name": "猿",
+        "years": "1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016, 2028",
+        "personality": "賢くて好奇心旺盛で順応性が高い。 学習速度が速く、問題解決能力に優れています。"
+      },
+      "rooster": {
+        "name": "オンドリ",
+        "years": "1933, 1945, 1957, 1969, 1981, 1993, 2005, 2017, 2029",
+        "personality": "自信があり、勤勉で、勇敢です。 天性のパフォーマンス能力と強い信念。"
+      },
+      "dog": {
+        "name": "犬",
+        "years": "1934, 1946, 1958, 1970, 1982, 1994, 2006, 2018, 2030",
+        "personality": "忠実で責任感があり、信頼できる。 正義感が強く、正義感が強い。"
+      },
+      "pig": {
+        "name": "豚",
+        "years": "1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031",
+        "personality": "正直で、寛大で、勤勉です。 家族を大切にし、人生の楽しみを楽しみます。"
+      }
+    },
+    "duration": "約6分",
+    "accuracy": "88% のパターン一致",
+    "benefits": {
+      "title": "中国の黄道帯分析の利点",
+      "personality": {
+        "title": "特性分析",
+        "description": "自分の生来の傾向と可能性を発見してください。"
+      },
+      "fortune": {
+        "title": "フォーチュンフロー",
+        "description": "あなたの年運・運勢が分かります。"
+      },
+      "compatibility": {
+        "title": "互換性",
+        "description": "他の星座とどのように一致するかを確認してください。"
+      }
+    },
+    "faq": {
+      "title": "よくある質問",
+      "question1": "太陰暦または太陽暦に基づいていますか?",
+      "answer1": "兆候は春の始まり（約2月4日）までに決定されます。",
+      "question2": "互換性はどの程度正確ですか?",
+      "answer2": "それは長年にわたる伝統に基づいています。 参考にして楽しんでください。",
+      "question3": "「サムジェ」とは何ですか？",
+      "answer3": "9年ごとに繰り返される3年間の慎重な期間。",
+      "question4": "自分のサインがわからない場合はどうすればよいですか?",
+      "answer4": "生年月日を入力してください。生年月日を計算します。"
+    }
+  },
+  "sharing": {
+    "imageTitle": "フォーチュンリーディング",
+    "kakaoTitle": "私の運命の地図",
+    "viewResult": "結果を見る",
+    "cardTitle": "フォーチュンカード",
+    "dominantElement": "支配的な要素",
+    "personalityType": "性格タイプ",
+    "tagline": "自分だけのユニークなライフスタイルをデザインする",
+    "title": "おみくじ結果",
+    "copySuccess": "✅ コピーしました！",
+    "shareImage": "画像を共有する",
+    "download": "結果の保存",
+    "copyUrl": "URLをコピー",
+    "copyText": "テキストをコピーする",
+    "socialPlatforms": "ソーシャルメディア",
+    "encouragement": "友達と共有する"
+  },
+  "dreamInterpretation": {
+    "meta": {
+      "title": "夢の解釈",
+      "description": "あなたの夢に隠された意味を発見してください。",
+      "keywords": "夢の解釈、夢の意味、象徴主義",
+      "testTitle": "あなたの夢を分析してください",
+      "testDescription": "あなたの潜在意識のシンボルを深く掘り下げてみましょう。"
+    },
+    "hero": {
+      "badge": "推奨",
+      "title": "夢の解釈",
+      "subtitle": "夢を理解するためのガイド",
+      "description": "潜在意識からのメッセージを解き放ちましょう。"
+    },
+    "test": {
+      "title": "夢分析",
+      "subtitle": "あなたの夢の謎を解き明かしましょう"
+    }
+  },
+  "date": "最終更新日",
+  "gender": "⚧ 性別",
+  "hour": "時間",
+  "minute": "分",
+  "vitality": {
+    "fatigueAnalysis": {
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+      }
+    }
+  },
+  "petCompatibility": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "テストを開始"
+    },
+    "marketing": {
+      "about": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "feature1": "肌のトーン、目の色、髪の色に基づいた科学的な色彩分析",
+        "feature2": "ワードローブやメイクアップのための個別のカラーパレット提案",
+        "feature3": "最適な結果を得るための季節別色彩理論の適用",
+        "feature4": "あなたの自然な特徴を最大限に活かすプロフェッショナルなスタイリングチップ"
+      }
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "どのように推薦されますか？",
+      "answer1": "あなたの興味、性格、現在の気分を統合的に分析します。",
+      "question2": "初心者でも大丈夫ですか？",
+      "answer2": "はい、入門しやすい趣味から専門的なものまで幅広く提案します。",
+      "question3": "Are these hobbies suitable for beginners?",
+      "answer3": "Includes options for all skill levels from beginner to advanced."
+    }
+  },
+  "decision": {
+    "hub": {
+      "tabs": {
+        "helper": "Decision Helper",
+        "style": "Decision Style"
+      },
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "helperTitle": "Random Decision Maker",
+      "helperDesc": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    }
+  },
+  "food": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "badge": "人気",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "cta": "テストを開始"
+    },
+    "landing": {
+      "benefits": {
+        "items": [
+          {
+            "icon": "🍽️",
+            "title": "自分のスタイルを見つけよう",
+            "description": "食べ物や食事に対する独自のアプローチを理解します。"
+          },
+          {
+            "icon": "👨‍🍳",
+            "title": "料理に関する洞察",
+            "description": "自分のタイプに基づいて料理を上達させるためのヒントを入手してください。"
+          },
+          {
+            "icon": "🤝",
+            "title": "ソーシャルダイニング",
+            "description": "食事をしながら他の人とどのように交流するかを学びましょう。"
+          },
+          {
+            "icon": "🥗",
+            "title": "健康上のニュアンス",
+            "description": "あなたの性格が栄養の選択にどのような影響を与えるかを確認してください。"
+          }
+        ],
+        "title": "Awaiting deep synthesis..."
+      },
+      "types": {
+        "items": [
+          {
+            "emoji": "🌍",
+            "name": "冒険者",
+            "description": "常に新しい味と体験を求めています。"
+          },
+          {
+            "emoji": "🏠",
+            "name": "伝統主義者",
+            "description": "古典的なホッとする料理と家族のレシピが大好きです。"
+          },
+          {
+            "emoji": "⭐",
+            "name": "完璧主義者",
+            "description": "高品質の食材とプレゼンテーションを高く評価します。"
+          }
+        ],
+        "title": "Awaiting deep synthesis..."
+      }
+    },
+    "test": {
+      "progress": "進捗",
+      "submit": "分析結果を見る",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "sections": {
+        "traits": "主な特徴",
+        "cuisines": "理想的な料理",
+        "restaurantStyle": "レストランのスタイル",
+        "cookingStyle": "料理のスタイル",
+        "breakdown": "費用の詳細"
+      },
+      "loading": "色を分析中...",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "retakeTest": "診断をやり直す"
+    }
+  },
+  "lifeBalance": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "categories": {
+      "relationships": "家族、友人、パートナーとのつながりの質",
+      "career": "仕事の満足度、専門的な成長、達成感",
+      "personal": "自己啓発、趣味、学習、興味",
+      "environment": "居住空間や周囲の環境の質と快適さ",
+      "fun": "余暇活動、娯楽、人生の喜び",
+      "contribution": "目的意識、他者への援助、ポジティブな影響",
+      "health": "身体的および精神的な健康状態",
+      "finance": "収入、支出管理、将来への備え"
+    },
+    "categoryDescriptions": {
+      "relationships": "家族、友人、パートナーとのつながりの質",
+      "career": "仕事の満足度、専門的な成長、達成感",
+      "personal": "自己啓発、趣味、学習、興味",
+      "environment": "居住空間や周囲の環境の質と快適さ",
+      "fun": "余暇活動、娯楽、人生の喜び",
+      "contribution": "目的意識、他者への援助、ポジティブな影響",
+      "health": "身体的および精神的な健康状態",
+      "finance": "収入、支出管理、将来への備え"
+    },
+    "balanceLevels": {
+      "well-balanced": "素晴らしいです！人生のほとんどの分野で強い調和が保たれています。この調子でバランスを維持しましょう。",
+      "moderately-balanced": "良い進捗です！概ねバランスが取れていますが、いくつかの分野ではさらなる注意が必要です。改善すべき分野に焦点を当て、より良いウェルビーイングを目指しましょう。",
+      "needs-attention": "行動を起こす時です！大きな不均衡が全体的なウェルビーイングに影響を与えています。最も弱い分野を優先し、アクションプランを立てましょう。",
+      "critical-imbalance": "重要！人生の主要な分野で即座の対応が必要です。まずは小さな一歩から始め、必要に応じて周囲のサポートを求めてください。"
+    },
+    "balanceDescriptions": {
+      "well-balanced": "素晴らしいです！人生のほとんどの分野で強い調和が保たれています。この調子でバランスを維持しましょう。",
+      "moderately-balanced": "良い進捗です！概ねバランスが取れていますが、いくつかの分野ではさらなる注意が必要です。改善すべき分野に焦点を当て、より良いウェルビーイングを目指しましょう。",
+      "needs-attention": "行動を起こす時です！大きな不均衡が全体的なウェルビーイングに影響を与えています。最も弱い分野を優先し、アクションプランを立てましょう。",
+      "critical-imbalance": "重要！人生の主要な分野で即座の対応が必要です。まずは小さな一歩から始め、必要に応じて周囲のサポートを求めてください。"
+    },
+    "recommendationsByLevel": {
+      "well-balanced": [
+        "このバランスを維持する現在の習慣を継続する",
+        "他の人がバランスを取れるように自分の戦略を共有する",
+        "自分の得意分野で挑戦的な目標を設定する"
+      ],
+      "moderately-balanced": [
+        "今月は 1 ～ 2 つの改善分野にエネルギーを集中します",
+        "無視された生活エリアのための特定の時間をスケジュールする",
+        "モチベーションを維持するために得意分野での成功を祝う"
+      ],
+      "needs-attention": [
+        "今週改善すべき優先分野を 1 つ選択してください",
+        "今日から実行できる具体的な小さなアクションを見つける",
+        "友人、家族、専門家に助けを求めることを検討してください"
+      ],
+      "critical-imbalance": [
+        "必要に応じて専門家の助けを求めてください - 一人で行う必要はありません",
+        "基本的なセルフケアから始めましょう：睡眠、栄養、運動",
+        "信頼できる友人や家族にサポートを依頼する"
+      ]
+    },
+    "heroTitle": "ライフバランス・ホイール",
+    "heroSubtitle": "わずか5分で、8つの主要分野におけるあなたの生活のバランスを可視化し、改善しましょう",
+    "feature1": "肌のトーン、目の色、髪の色に基づいた科学的な色彩分析",
+    "feature2": "ワードローブやメイクアップのための個別のカラーパレット提案",
+    "feature3": "最適な結果を得るための季節別色彩理論の適用",
+    "assessmentTitle": "ライフバランスを評価する",
+    "assessmentSubtitle": "各分野の現在の満足度を1（非常に不満）から10（非常に満足）で評価してください",
+    "sliderLabel": "スコア (1-10)",
+    "calculateBalance": "結果を見る",
+    "resultsTitle": "あなたのライフバランス分析",
+    "balanceScore": "バランススコア",
+    "balanceLevel": "バランスレベル",
+    "strongestAreas": "あなたの強み",
+    "improvementAreas": "改善が必要な分野",
+    "chartTitle": "あなたのライフバランス・ホイール",
+    "shareCopied": "結果をクリップボードにコピーしました！",
+    "shareText": "私のライフバランススコア：{score}/100 - {level}！あなたのバランスもチェック：https://oiyo.net/ja/life-balance-wheel",
+    "howItWorksTitle": "診断の仕組み",
+    "step1Title": "興味を分析",
+    "step1Description": "あなたのプロフィールを理解する",
+    "step2Title": "趣味をマッチング",
+    "step2Description": "あなたに合うものを見つける",
+    "step3Title": "活動を開始",
+    "step3Description": "旅を始める",
+    "faqTitle": "よくある質問",
+    "faq1Question": "測定される8つの生活分野は何ですか？",
+    "faq1Answer": "健康・ウェルビーイング、対人関係、キャリア・仕事、経済的安定、自己成長、住環境、レジャー・楽しみ、そして価値・貢献です。",
+    "faq2Question": "バランススコアはどのように計算されますか？",
+    "faq2Answer": "全分野の平均満足度と不均衡に対するペナルティを組み合わせて算出されます。一部の分野で高得点でも、他が極端に低い場合は全体スコアに影響します。",
+    "faq3Question": "良いバランススコアとはどれくらいですか？",
+    "faq3Answer": "70-100は非常にバランスが良い、50-69は概ね良好、30-49は注意が必要、30未満は深刻です。目標は全分野の調和であり、必ずしも全項目満点である必要はありません。",
+    "faq4Question": "どのくらいの頻度でチェックすべきですか？",
+    "faq4Answer": "進捗を確認するために、毎月または四半期ごとのチェックをお勧めします。大きな人生の転換期や、余裕がないと感じる時にも役立ちます。",
+    "recommendations": "成長のアドバイス",
+    "disclaimer": "Awaiting deep synthesis...",
+    "share": "結果をシェア",
+    "shareResults": "結果を共有する",
+    "retake": "テストをやり直す"
+  },
+  "lifeSlogan": {
+    "meta": {
+      "hero": {
+        "subtitle": "Awaiting deep synthesis...",
+        "cta": "テストを開始"
+      },
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "テストを開始"
+    },
+    "marketing": {
+      "about": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "feature1": "肌のトーン、目の色、髪の色に基づいた科学的な色彩分析",
+        "feature2": "ワードローブやメイクアップのための個別のカラーパレット提案",
+        "feature3": "最適な結果を得るための季節別色彩理論の適用",
+        "feature4": "あなたの自然な特徴を最大限に活かすプロフェッショナルなスタイリングチップ"
+      }
+    },
+    "categories": {
+      "growth": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "love": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "success": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "peace": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "adventure": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "wisdom": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "どのように推薦されますか？",
+      "answer1": "あなたの興味、性格、現在の気分を統合的に分析します。",
+      "question2": "初心者でも大丈夫ですか？",
+      "answer2": "はい、入門しやすい趣味から専門的なものまで幅広く提案します。",
+      "question3": "Are these hobbies suitable for beginners?",
+      "answer3": "Includes options for all skill levels from beginner to advanced."
+    },
+    "slogans": {
+      "growth": {
+        "motivational": {
+          "main": "知恵は静かな瞬間に囁く",
+          "alt1": "知識は理解へと変化する",
+          "alt2": "道は求める者に現れる",
+          "alt3": "学びは旅であり、目的地ではない"
+        },
+        "calm": {
+          "main": "知恵は静かな瞬間に囁く",
+          "alt1": "知識は理解へと変化する",
+          "alt2": "道は求める者に現れる",
+          "alt3": "学びは旅であり、目的地ではない"
+        }
+      },
+      "love": {
+        "poetic": {
+          "main": "知恵は静かな瞬間に囁く",
+          "alt1": "知識は理解へと変化する",
+          "alt2": "道は求める者に現れる",
+          "alt3": "学びは旅であり、目的地ではない"
+        }
+      },
+      "success": {
+        "bold": {
+          "main": "知恵は静かな瞬間に囁く",
+          "alt1": "知識は理解へと変化する",
+          "alt2": "道は求める者に現れる",
+          "alt3": "学びは旅であり、目的地ではない"
+        }
+      },
+      "peace": {
+        "calm": {
+          "main": "知恵は静かな瞬間に囁く",
+          "alt1": "知識は理解へと変化する",
+          "alt2": "道は求める者に現れる",
+          "alt3": "学びは旅であり、目的地ではない"
+        }
+      },
+      "adventure": {
+        "bold": {
+          "main": "知恵は静かな瞬間に囁く",
+          "alt1": "知識は理解へと変化する",
+          "alt2": "道は求める者に現れる",
+          "alt3": "学びは旅であり、目的地ではない"
+        }
+      },
+      "wisdom": {
+        "poetic": {
+          "main": "知恵は静かな瞬間に囁く",
+          "alt1": "知識は理解へと変化する",
+          "alt2": "道は求める者に現れる",
+          "alt3": "学びは旅であり、目的地ではない"
+        }
+      }
+    },
+    "inspiration": {
+      "growth": {
+        "quote1": "唯一の真の知恵は、自分が何も知らないということを知ることだ。- ソクラテス",
+        "quote2": "知恵は驚きから始まる。- ソクラテス",
+        "quote3": "知識は語り、知恵は聴く。- ジミ・ヘンドリックス"
+      },
+      "love": {
+        "quote1": "唯一の真の知恵は、自分が何も知らないということを知ることだ。- ソクラテス",
+        "quote2": "知恵は驚きから始まる。- ソクラテス",
+        "quote3": "知識は語り、知恵は聴く。- ジミ・ヘンドリックス"
+      },
+      "success": {
+        "quote1": "唯一の真の知恵は、自分が何も知らないということを知ることだ。- ソクラテス",
+        "quote2": "知恵は驚きから始まる。- ソクラテス",
+        "quote3": "知識は語り、知恵は聴く。- ジミ・ヘンドリックス"
+      },
+      "peace": {
+        "quote1": "唯一の真の知恵は、自分が何も知らないということを知ることだ。- ソクラテス",
+        "quote2": "知恵は驚きから始まる。- ソクラテス",
+        "quote3": "知識は語り、知恵は聴く。- ジミ・ヘンドリックス"
+      },
+      "adventure": {
+        "quote1": "唯一の真の知恵は、自分が何も知らないということを知ることだ。- ソクラテス",
+        "quote2": "知恵は驚きから始まる。- ソクラテス",
+        "quote3": "知識は語り、知恵は聴く。- ジミ・ヘンドリックス"
+      },
+      "wisdom": {
+        "quote1": "唯一の真の知恵は、自分が何も知らないということを知ることだ。- ソクラテス",
+        "quote2": "知恵は驚きから始まる。- ソクラテス",
+        "quote3": "知識は語り、知恵は聴く。- ジミ・ヘンドリックス"
+      }
+    },
+    "usageTips": {
+      "growth": {
+        "tip1": "意思決定のガイドラインとして使用してください",
+        "tip2": "個人のミッションステートメントに含めてください",
+        "tip3": "共有して継続的な学びを促しましょう"
+      },
+      "love": {
+        "tip1": "意思決定のガイドラインとして使用してください",
+        "tip2": "個人のミッションステートメントに含めてください",
+        "tip3": "共有して継続的な学びを促しましょう"
+      },
+      "success": {
+        "tip1": "意思決定のガイドラインとして使用してください",
+        "tip2": "個人のミッションステートメントに含めてください",
+        "tip3": "共有して継続的な学びを促しましょう"
+      },
+      "peace": {
+        "tip1": "意思決定のガイドラインとして使用してください",
+        "tip2": "個人のミッションステートメントに含めてください",
+        "tip3": "共有して継続的な学びを促しましょう"
+      },
+      "adventure": {
+        "tip1": "意思決定のガイドラインとして使用してください",
+        "tip2": "個人のミッションステートメントに含めてください",
+        "tip3": "共有して継続的な学びを促しましょう"
+      },
+      "wisdom": {
+        "tip1": "意思決定のガイドラインとして使用してください",
+        "tip2": "個人のミッションステートメントに含めてください",
+        "tip3": "共有して継続的な学びを促しましょう"
+      }
+    }
+  },
+  "cityMatch": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "テストを開始",
+      "participants": "人の冒険家が参加しました"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🌏",
+          "title": "グローバルデータベース",
+          "description": "世界中の 25 以上の主要都市にわたる分析。"
+        },
+        {
+          "icon": "🎯",
+          "title": "パーソナライズされたマッチング",
+          "description": "あなた独自のライフスタイルと仕事の好みに基づいて。"
+        },
+        {
+          "icon": "📊",
+          "title": "詳細な洞察",
+          "description": "各都市の安全性、コスト、文化に関するデータを取得します。"
+        },
+        {
+          "icon": "✨",
+          "title": "楽しい結果",
+          "description": "夢の目的地を友達と共有しましょう。"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "questions": [
+        {
+          "q": "マッチングにはどのようなデータが使用されますか?",
+          "a": "当社は、気候、生活費、安全性、文化的関心などに関するお客様の好みを考慮します。"
+        },
+        {
+          "q": "ノマドライフにも使えますか？",
+          "a": "はい！ このテストには、デジタル遊牧民にとって重要な指標が含まれています。"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "cta": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "button": "今すぐ始める"
+    },
+    "test": {
+      "common": {
+        "progress": "進捗",
+        "next": "次へ",
+        "previous": "前へ",
+        "submit": "分析結果を見る",
+        "start": "開始",
+        "loading": "色を分析中...",
+        "results": "診断結果",
+        "dashboard": "ダッシュボード",
+        "insights": "パーソナル洞察"
+      },
+      "seeResults": "結果を見る",
+      "selectOption": "選択肢を選んでください",
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "relationship": {
+        "compatibility": "マッチングスコア"
+      },
+      "breakdownLabels": {
+        "climate": "気候",
+        "lifestyle": "ライフスタイル",
+        "culture": "文化・芸術",
+        "practical": "実用性"
+      },
+      "cityDetails": {
+        "population": "人口",
+        "continent": "大陸",
+        "timezone": "タイムゾーン",
+        "safety": "治安",
+        "cost": "生活費",
+        "jobs": "仕事の機会",
+        "culture": "文化・芸術",
+        "weather": "天気",
+        "transport": "交通"
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "topMatch": "あなたに最適なマッチ",
+      "whyThisCity": "なぜこの都市？",
+      "breakdown": "費用の詳細",
+      "otherMatches": "他にもおすすめの都市",
+      "share": "結果をシェア",
+      "exploreCity": "この都市について詳しく知る",
+      "retake": "テストをやり直す"
+    }
+  },
+  "music": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "badge": "人気",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "自分のタイプを発見する",
+          "description": "選んだ音楽があなたについて何を語るかを知る"
+        },
+        {
+          "title": "推奨事項を取得する",
+          "description": "お気に入りの新しいアーティストやジャンルを見つけてください"
+        },
+        {
+          "title": "他の人とつながる",
+          "description": "同じような音楽趣味を持つ人々と出会う"
+        },
+        {
+          "title": "視野を広げましょう",
+          "description": "快適ゾーンの外で音楽を探求する"
+        }
+      ],
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "types": {
+      "explorer": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "traditionalist": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "mainstream": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "intense": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "contemporary": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "このテストはどの程度正確ですか?",
+          "answer": "私たちのテストは音楽心理学の研究とユーザーからのフィードバックに基づいています。"
+        },
+        {
+          "question": "おすすめの音楽を入手できますか?",
+          "answer": "はい、パーソナライズされたアーティストとジャンルの提案が届きます。"
+        },
+        {
+          "question": "テストを再受験できますか?",
+          "answer": "絶対に！ あなたの好みは時間の経過とともに進化するかもしれません。"
+        },
+        {
+          "question": "私のデータはプライベートですか?",
+          "answer": "はい、私たちはあなたの回答を保存したり共有したりしません。"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    }
+  },
+  "life": {
+    "hub": {
+      "tabs": {
+        "balance": "人生バランス",
+        "goals": "目標プランナー",
+        "habits": "習慣アシスタント",
+        "countdown": "人生カウントダウン",
+        "decision": "意思決定ツール",
+        "slogan": "人生スローガン",
+        "simulator": "人生シミュレーター",
+        "analysis": "総合分析",
+        "recharge": "リチャージポイント"
+      },
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "balanceDescription": "現在の人生のバランス状態を可視化します。",
+      "goalsDescription": "人生の目標を設定し、追跡しましょう。",
+      "habitsDescription": "より良い人生のための前向きな習慣を作りましょう。",
+      "countdownDescription": "残りの時間を可視化し、モチベーションを高めましょう。",
+      "sloganDescription": "自分だけの人生スローガンを作ってみましょう。",
+      "simulatorDescription": "様々な人生の選択肢と結果をシミュレートしてみましょう。",
+      "analysisDescription": "生活パターンを総合的に分析します。",
+      "rechargeDescription": "自分に必要な休息量を計算してみましょう。"
+    },
+    "lifeCountdown": {
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "cityGuide": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "テストを開始"
+    },
+    "title": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis...",
+    "disclaimer": "Awaiting deep synthesis...",
+    "noData": "データを読み込めませんでした。"
+  },
+  "artStyle": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "テストを開始",
+      "badge": "人気",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "seniorCompanion": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "💬",
+          "title": "談笑",
+          "description": "いつでも温かい会話を"
+        },
+        {
+          "icon": "🎵",
+          "title": "メモリーレーン",
+          "description": "思い出を共有して回想する"
+        },
+        {
+          "icon": "📰",
+          "title": "デイリーニュース",
+          "description": "読みやすいニュースで最新情報を入手"
+        },
+        {
+          "icon": "🎮",
+          "title": "頭脳ゲーム",
+          "description": "頭脳を研ぎ澄ますための楽しいアクティビティ"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "safety": {
+      "items": [
+        "すべての会話はプライベートで安全です",
+        "私たちはあなたの個人情報を決して共有しません",
+        "いつでも止められるよ",
+        "緊急連絡先がいつでも利用可能"
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "emergency": {
+      "resources": [
+        {
+          "name": "緊急サービス",
+          "phone": "911",
+          "description": "緊急の場合には",
+          "hours": "24/7"
+        },
+        {
+          "name": "シニアヘルプライン",
+          "phone": "1-800-677-1116",
+          "description": "高齢者のサポートとリソース",
+          "hours": "月曜～金曜 午前 9 時～午後 8 時（EST）"
+        }
+      ],
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    }
+  },
+  "storyMaker": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "features": {
+      "title": "Awaiting deep synthesis...",
+      "feature1Emoji": "✨",
+      "feature1Title": "趣味の発見",
+      "feature1Description": "情熱を見つける",
+      "feature2Emoji": "📊",
+      "feature2Title": "費用分析",
+      "feature2Description": "予算を計画する",
+      "feature3Emoji": "🎯",
+      "feature3Title": "目標トラッカー",
+      "feature3Description": "モチベーションを維持する",
+      "feature4Emoji": "📱",
+      "feature4Title": "簡単な共有",
+      "feature4Description": "友達と共有する"
+    },
+    "howItWorks": {
+      "title": "Awaiting deep synthesis...",
+      "step1Title": "興味を分析",
+      "step1Description": "あなたのプロフィールを理解する",
+      "step2Title": "趣味をマッチング",
+      "step2Description": "あなたに合うものを見つける",
+      "step3Title": "活動を開始",
+      "step3Description": "旅を始める",
+      "step4Title": "進捗を追跡",
+      "step4Description": "軌道を維持する",
+      "step5Title": "保存",
+      "step5Description": "完成したストーリーを保存します。"
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "どのように推薦されますか？",
+      "answer1": "あなたの興味、性格、現在の気分を統合的に分析します。",
+      "question2": "初心者でも大丈夫ですか？",
+      "answer2": "はい、入門しやすい趣味から専門的なものまで幅広く提案します。",
+      "question3": "Are these hobbies suitable for beginners?",
+      "answer3": "Includes options for all skill levels from beginner to advanced.",
+      "question4": "How often should I try a new hobby?",
+      "answer4": "Start with one, explore it fully, and then add more.",
+      "question5": "What if I don't like the recommendations?",
+      "answer5": "Retake the test or explore other categories to find a better match.",
+      "question6": "Can hobbies improve mental health?",
+      "answer6": "Yes, interesting hobbies can reduce stress and improve overall wellbeing."
+    }
+  },
+  "personalColorPalette": {
+    "marketing": {
+      "about": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "feature1": "肌のトーン、目の色、髪の色に基づいた科学的な色彩分析",
+        "feature2": "ワードローブやメイクアップのための個別のカラーパレット提案",
+        "feature3": "最適な結果を得るための季節別色彩理論の適用",
+        "feature4": "あなたの自然な特徴を最大限に活かすプロフェッショナルなスタイリングチップ",
+        "feature5": "個別のレコメンド"
+      }
+    },
+    "seasons": {
+      "spring": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "summer": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "autumn": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "winter": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "どのように推薦されますか？",
+      "answer1": "あなたの興味、性格、現在の気分を統合的に分析します。",
+      "question2": "初心者でも大丈夫ですか？",
+      "answer2": "はい、入門しやすい趣味から専門的なものまで幅広く提案します。",
+      "question3": "Are these hobbies suitable for beginners?",
+      "answer3": "Includes options for all skill levels from beginner to advanced."
+    },
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "badge": "人気",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "テストを開始"
+    },
+    "test": {
+      "progress": "進捗",
+      "submit": "分析結果を見る",
+      "loading": "色を分析中...",
+      "selectOption": "選択肢を選んでください",
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "starterCost": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "inputs": {
+      "calculate": "費用を計算",
+      "tier": "装備グレードを選択",
+      "hobby": "趣味を選択"
+    },
+    "result": {
+      "total": "推定合計費用",
+      "breakdown": "費用の詳細",
+      "gears": "装備/小道具",
+      "lesson": "レッスン/講習",
+      "clothing": "衣類/靴",
+      "packageIncludes": "含まれる項目"
+    },
+    "tips": {
+      "title": "Awaiting deep synthesis...",
+      "content": "費用は平均的な推定値であり、ブランドや購入先によって異なる場合があります。"
+    },
+    "tiers": {
+      "entry": "入門用（コスパ）",
+      "mid": "中級用（おすすめ）",
+      "pro": "上級者用（ハイエンド）"
+    },
+    "hobbies": {
+      "cycling": "自転車/ライディング",
+      "tennis": "テニス",
+      "golf": "ゴルフ",
+      "camping": "キャンプ",
+      "photography": "写真/カメラ",
+      "baking": "ベーキング",
+      "climbing": "クライミング",
+      "yoga": "ヨガ/ピラテス"
+    },
+    "features": {
+      "items": [
+        {
+          "title": "パーソナライズされた予算計算",
+          "desc": "初心者からプロフェッショナルレベルまでの段階的なコストを計算します。",
+          "icon": "電卓"
+        },
+        {
+          "title": "詳細な見積り分析",
+          "desc": "用具、服装、レッスンなどのカテゴリ別に詳細な費用を表示します。",
+          "icon": "円グラフ"
+        },
+        {
+          "title": "コスト削減のヒント",
+          "desc": "不必要な支出を削減するための実践的なアドバイスを提供します。",
+          "icon": "貯金箱"
+        },
+        {
+          "title": "PDFとして保存",
+          "desc": "算出した見積書はPDFとして保存し、いつでも確認できます。",
+          "icon": "ダウンロード"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "howItWorks": {
+      "steps": [
+        {
+          "title": "趣味を選ぶ",
+          "description": "興味のある趣味活動を選択してください。"
+        },
+        {
+          "title": "レベルを設定する",
+          "description": "現在のスキル レベルまたは目標レベルを選択します。"
+        },
+        {
+          "title": "チェック結果",
+          "description": "詳細な予算分析と個別のアドバイスを確認してください。"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "コストはどの程度正確ですか?",
+          "answer": "平均市場価格データに基づいて計算されていますが、ブランドや小売店によって異なる場合があります。"
+        },
+        {
+          "question": "すべての機器を一度に購入する必要がありますか?",
+          "answer": "いいえ、最初に必須の機器を購入することをお勧めします。 まずはエントリーレベルのコスト効率の高い製品から始めましょう。"
+        },
+        {
+          "question": "他の趣味も追加される予定ですか？",
+          "answer": "はい、ユーザー様からご要望の多かった趣味は順次更新してまいります。"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis..."
+  },
+  "recommendation": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "テストを開始"
+    },
+    "result": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "matchReasons": {
+      "mbti": "{type}タイプに最適なアクティビティです",
+      "mood": "今のあなたの気分をリフレッシュさせます",
+      "bloodType": "血液型 {type} の傾向とよく一致します",
+      "zodiac": "{sign}の特性と非常に相性が良いです",
+      "riasec": "{code} の興味のある分野に完全に適合します"
+    },
+    "personalizedTips": {
+      "mbtiIntrovert": "一人で快適に始めることができます",
+      "mbtiPerceiving": "自由なスケジュールで楽しむことができます",
+      "moodStress": "特にストレス解消に役立ちます",
+      "moodPositive": "ポジティブなエネルギーをより高めることができます",
+      "beginner": "初心者でも簡単に始めることができます",
+      "busy": "忙しい日常の中でも楽しむことができます",
+      "budget": "少ない費用で始めることができます"
+    },
+    "faq": {
+      "question1": "どのように推薦されますか？",
+      "answer1": "あなたの興味、性格、現在の気分を統合的に分析します。",
+      "question2": "初心者でも大丈夫ですか？",
+      "answer2": "はい、入門しやすい趣味から専門的なものまで幅広く提案します。",
+      "question3": "これらの趣味は初心者に適していますか?",
+      "answer3": "初心者から上級者まで、あらゆるスキルレベルに対応したオプションが含まれています。",
+      "question4": "新しい趣味にはどのくらいの頻度で挑戦すればよいですか?",
+      "answer4": "1 つから始めて、徹底的に調べてから、さらに追加してください。",
+      "question5": "推奨事項が気に入らない場合はどうすればよいですか?",
+      "answer5": "テストを再受験するか、他のカテゴリを探索して、より適切なカテゴリを見つけてください。",
+      "question6": "趣味はメンタルヘルスを改善することができますか?",
+      "answer6": "はい、興味深い趣味はストレスを軽減し、全体的な健康を改善します。",
+      "title": "Awaiting deep synthesis..."
+    },
+    "features": {
+      "title": "Awaiting deep synthesis...",
+      "feature1Emoji": "✨",
+      "feature1Title": "趣味の発見",
+      "feature1Description": "情熱を見つける",
+      "feature2Emoji": "📊",
+      "feature2Title": "費用分析",
+      "feature2Description": "予算を計画する",
+      "feature3Emoji": "🎯",
+      "feature3Title": "目標トラッカー",
+      "feature3Description": "モチベーションを維持する",
+      "feature4Emoji": "📱",
+      "feature4Title": "簡単な共有",
+      "feature4Description": "友達と共有する"
+    },
+    "howItWorks": {
+      "title": "Awaiting deep synthesis...",
+      "step1Title": "興味を分析",
+      "step1Description": "あなたのプロフィールを理解する",
+      "step2Title": "趣味をマッチング",
+      "step2Description": "あなたに合うものを見つける",
+      "step3Title": "活動を開始",
+      "step3Description": "旅を始める",
+      "step4Title": "進捗を追跡",
+      "step4Description": "軌道を維持する"
+    }
+  },
+  "roulette": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    }
+  },
+  "cup": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "テストを開始"
+    },
+    "title": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis..."
+  },
+  "writingPrompts": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "ライティング, インスピレーション, 日記, プロンプト"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "badge": "人気",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "styleConsultant": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis...",
+    "privacyNote": "Awaiting deep synthesis..."
+  },
+  "petCounselor": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis...",
+    "disclaimer": "Awaiting deep synthesis..."
+  },
+  "preview": {
+    "subtitle": "詳細情報",
+    "title": "個別分析結果"
+  },
+  "analysts": "冷静な理性の裏にある温かいビジョンを応援します。(INTJ, INTP, ENTJ, ENTP)",
+  "diplomats": "あなたの理想と共感が世界をより温かくしています。(INFJ, INFP, ENFJ, ENFP)",
+  "sentinels": "黙々と自分の立場を守るあなたが真のヒーローです。(ISTJ, ISFJ, ESTJ, ESFJ)",
+  "explorers": "瞬間を楽しみ限界に挑戦するあなたのエネルギーが羨ましい!(ISTP, ISFP, ESTP, ESFP)",
+  "A": "人気",
+  "B": "人気",
+  "Copied to clipboard!": "クリップボードにコピーされました!",
+  "data": "Data",
+  "analyze": "分析する",
+  "workHub": {
+    "tabs": {
+      "style": "Decision Style",
+      "salary": "Salary & Tax",
+      "tax": "Freelancer Tax",
+      "leadership": "Leadership",
+      "meeting": "Meeting Survival",
+      "job": "Job Match",
+      "interview": "Interview Scorer",
+      "labor": "Awaiting deep synthesis...",
+      "focus": "Awaiting deep synthesis..."
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "title": "Interview Scorer",
+    "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "styleDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "salaryDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "taxDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "leadershipDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "meetingDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+  },
+  "decisionHub": {
+    "tabs": {
+      "helper": "Decision Helper",
+      "style": "Decision Style"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "title": "Interview Scorer",
+    "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "helperTitle": "Random Decision Maker",
+    "helperDesc": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+  },
+  "meetingSurvival": {
+    "meta": {
+      "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "title": "Interview Scorer"
+    },
+    "landing": {
+      "steps": ["0", "1", "2", "3"],
+      "types": {
+        "strategist": {
+          "title": "Interview Scorer",
+          "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+        },
+        "mediator": {
+          "title": "Interview Scorer",
+          "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+        },
+        "facilitator": {
+          "title": "Interview Scorer",
+          "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+        },
+        "observer": {
+          "title": "Interview Scorer",
+          "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+        },
+        "challenger": {
+          "title": "Interview Scorer",
+          "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+        },
+        "executor": {
+          "title": "Interview Scorer",
+          "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+        },
+        "title": "Interview Scorer"
+      },
+      "faq": {
+        "list": {
+          "0": {
+            "a": "人気",
+            "q": "機能リクエスト"
+          },
+          "1": {
+            "a": "人気",
+            "q": "機能リクエスト"
+          },
+          "2": {
+            "a": "人気",
+            "q": "機能リクエスト"
+          }
+        },
+        "title": "Interview Scorer"
+      },
+      "test": {
+        "insightBullets": [
+          "あなたの個人的な哲学の隠された層を明らかにします。"
+        ],
+        "progress": "進行状況",
+        "submit": "送信",
+        "loading": "読み込み中...",
+        "selectOption": "オプションを選択",
+        "next": "次へ",
+        "previous": "前へ"
+      },
+      "result": {
+        "advisor": {
+          "tip": "💡 Career Coach's Tip",
+          "content": "Knowing your style is important, but understanding your colleagues' styles can increase meeting efficiency by 200%."
+        },
+        "title": "Interview Scorer",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loading": "読み込み中...",
+        "analyzing": "Analyzing Response...",
+        "yourStyle": "あなたのミーティングサバイバルスタイル",
+        "secondaryType": "Secondary Type",
+        "detailedAnalysis": "Detailed Score Breakdown",
+        "keyTraits": "Key Traits",
+        "yourStrengths": "Your Strengths",
+        "challenges": "Challenges",
+        "improvementTips": "Improvement Tips",
+        "meetingTips": "Meeting Tips",
+        "shareResults": "Share Results",
+        "retakeTest": "Retake Test",
+        "goHome": "Go Home",
+        "copied": "クリップボードにコピーされました!"
+      },
+      "meta": {
+        "title": "Interview Scorer",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "cta": "Start Test",
+      "howItWorks": "仕組み",
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "署名の強度",
+          "description": "包括的な分析とパーソナライズされた洞察",
+          "question": "生産性・作業効率性テストとは何ですか?",
+          "answer": "このテストは、生産性と作業効率に関連するパターンと傾向を理解するのに役立ちます。"
+        },
+        {
+          "icon": "🚀",
+          "title": "ピボットポイント",
+          "description": "より良い結果をもたらすデータに基づく推奨事項",
+          "question": "結果はどの程度正確ですか?",
+          "answer": "私たちのテストは確立された心理学研究に基づいており、あなたのパターンや行動に関する貴重な洞察を提供します。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "署名の強度",
+          "description": "包括的な分析とパーソナライズされた洞察",
+          "question": "生産性・作業効率性テストとは何ですか?",
+          "answer": "このテストは、生産性と作業効率に関連するパターンと傾向を理解するのに役立ちます。"
+        },
+        {
+          "icon": "🚀",
+          "title": "ピボットポイント",
+          "description": "より良い結果をもたらすデータに基づく推奨事項",
+          "question": "結果はどの程度正確ですか?",
+          "answer": "私たちのテストは確立された心理学研究に基づいており、あなたのパターンや行動に関する貴重な洞察を提供します。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "署名の強度",
+          "description": "包括的な分析とパーソナライズされた洞察",
+          "question": "生産性・作業効率性テストとは何ですか?",
+          "answer": "このテストは、生産性と作業効率に関連するパターンと傾向を理解するのに役立ちます。"
+        },
+        {
+          "icon": "🚀",
+          "title": "ピボットポイント",
+          "description": "より良い結果をもたらすデータに基づく推奨事項",
+          "question": "結果はどの程度正確ですか?",
+          "answer": "私たちのテストは確立された心理学研究に基づいており、あなたのパターンや行動に関する貴重な洞察を提供します。"
+        }
+      ]
+    },
+    "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "startButton": "テストの開始"
+  },
+  "decisionMaking": {
+    "meta": {
+      "hero": {
+        "badge": "Productivity Psychology",
+        "cta": "Start Test"
+      },
+      "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "hero": {
+      "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "cta": "Start Test",
+      "badge": "Productivity Psychology",
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "result": {
+      "loading": {
+        "title": "Interview Scorer",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "sections": {
+        "strengths": "強み",
+        "traits": "Traits",
+        "challenges": "課題",
+        "idealSituations": "理想的な状況",
+        "tips": "ヒント",
+        "breakdown": "壊す"
+      },
+      "test": {
+        "insightBullets": ["本当の自分の星座をマッピングします。"],
+        "progress": "進行状況",
+        "submit": "送信",
+        "loading": "読み込み中...",
+        "selectOption": "オプションを選択",
+        "next": "次へ",
+        "previous": "前へ"
+      },
+      "result": {
+        "title": "Interview Scorer",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "meta": {
+        "title": "Interview Scorer",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "title": "Interview Scorer",
+      "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "backHome": "ホームに戻る",
+      "sharePrompt": "プロンプトを共有する",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "retakeTest": "再受験"
+    },
+    "test": {
+      "test": {
+        "insightBullets": ["本当の自分の星座をマッピングします。"],
+        "progress": "進行状況",
+        "submit": "送信",
+        "loading": "読み込み中...",
+        "selectOption": "オプションを選択",
+        "next": "次へ",
+        "previous": "前へ"
+      },
+      "result": {
+        "title": "Interview Scorer",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "meta": {
+        "title": "Interview Scorer",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "insightBullets": ["あなたの内なる風景の奥深い構造を探索してください。"],
+      "title": "Interview Scorer",
+      "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "submit": "送信",
+      "progress": "進行状況",
+      "loading": "読み込み中...",
+      "selectOption": "オプションを選択",
+      "previous": "前へ",
+      "next": "次へ"
+    },
+    "title": "Interview Scorer",
+    "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "data": "Data"
+  },
+  "yearInReview": {
+    "meta": {
+      "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "input": {
+      "nameLabel": "名前（またはニックネーム）",
+      "namePlaceholder": "例えばジョン・ドゥ",
+      "placeholder": "{month} で最も思い出に残る瞬間は何ですか?"
+    },
+    "actions": {
+      "generate": "タイムラインの生成",
+      "download": "画像として保存",
+      "generating": "生成中...",
+      "edit": "編集"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "署名の強度",
+          "description": "包括的な分析とパーソナライズされた洞察",
+          "question": "生産性・作業効率性テストとは何ですか?",
+          "answer": "このテストは、生産性と作業効率に関連するパターンと傾向を理解するのに役立ちます。"
+        },
+        {
+          "icon": "🚀",
+          "title": "ピボットポイント",
+          "description": "より良い結果をもたらすデータに基づく推奨事項",
+          "question": "結果はどの程度正確ですか?",
+          "answer": "私たちのテストは確立された心理学研究に基づいており、あなたのパターンや行動に関する貴重な洞察を提供します。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "署名の強度",
+          "description": "包括的な分析とパーソナライズされた洞察",
+          "question": "生産性・作業効率性テストとは何ですか?",
+          "answer": "このテストは、生産性と作業効率に関連するパターンと傾向を理解するのに役立ちます。"
+        },
+        {
+          "icon": "🚀",
+          "title": "ピボットポイント",
+          "description": "より良い結果をもたらすデータに基づく推奨事項",
+          "question": "結果はどの程度正確ですか?",
+          "answer": "私たちのテストは確立された心理学研究に基づいており、あなたのパターンや行動に関する貴重な洞察を提供します。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "署名の強度",
+          "description": "包括的な分析とパーソナライズされた洞察",
+          "question": "生産性・作業効率性テストとは何ですか?",
+          "answer": "このテストは、生産性と作業効率に関連するパターンと傾向を理解するのに役立ちます。"
+        },
+        {
+          "icon": "🚀",
+          "title": "ピボットポイント",
+          "description": "より良い結果をもたらすデータに基づく推奨事項",
+          "question": "結果はどの程度正確ですか?",
+          "answer": "私たちのテストは確立された心理学研究に基づいており、あなたのパターンや行動に関する貴重な洞察を提供します。"
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["あなたの個人的な哲学の隠された層を明らかにします。"],
+      "progress": "進行状況",
+      "submit": "送信",
+      "loading": "読み込み中...",
+      "selectOption": "オプションを選択",
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "noEvents": "イベントは記録されていません。",
+    "title": "Interview Scorer",
+    "a": "人気"
+  },
+  "workFocus": {
+    "solution": {
+      "priority": "優先度",
+      "implementation": "実装"
+    },
+    "test": {
+      "insightBullets": [
+        "自分の道を定義するユニークなパターンを見つけてください。"
+      ],
+      "progress": "進行状況",
+      "submit": "送信",
+      "loading": "読み込み中...",
+      "selectOption": "オプションを選択",
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "feature1": {
+      "title": "Interview Scorer",
+      "desc": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "feature2": {
+      "title": "Interview Scorer",
+      "desc": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "feature3": {
+      "title": "Interview Scorer",
+      "desc": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "hero": {
+      "badge": "Productivity Psychology",
+      "startTest": "Start Test"
+    },
+    "loading": "読み込み中...",
+    "distractionAnalysis": "📊 気を散らす分析",
+    "solutions": "パーソナライズされたソリューション",
+    "weeklyPlan": "週間行動計画",
+    "share": "共有",
+    "shareText": "Work Focus Analysis\\\\nType: {type}",
+    "shareTitle": "Work Focus Analysis Results",
+    "home": "home",
+    "copied": "クリップボードにコピーされました!",
+    "data": "Data",
+    "insights": "洞察",
+    "heroTitle": "Interview Scorer",
+    "heroSubtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "retake": "再テスト"
+  },
+  "okr": {
+    "test": {
+      "insightBullets": ["署名の強度", "ピボットポイント", "2"],
+      "progress": "進行状況",
+      "submit": "送信",
+      "loading": "読み込み中...",
+      "selectOption": "オプションを選択",
+      "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        }
+      ]
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "title": "Interview Scorer",
+    "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+  },
+  "pomodoro": {
+    "test": {
+      "insightBullets": ["署名の強度", "ピボットポイント", "2"],
+      "progress": "進行状況",
+      "submit": "送信",
+      "loading": "読み込み中...",
+      "selectOption": "オプションを選択",
+      "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        }
+      ]
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "title": "Interview Scorer",
+    "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+  },
+  "decisionHelper": {
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "cards": {
+      "sun": {
+        "name": "Fog",
+        "answer": "内面の調和が日々の行動の指針となります。",
+        "meaning": "意味"
+      },
+      "star": {
+        "name": "Fog",
+        "answer": "内面の調和が日々の行動の指針となります。",
+        "meaning": "意味"
+      },
+      "emperor": {
+        "name": "Fog",
+        "answer": "内面の調和が日々の行動の指針となります。",
+        "meaning": "意味"
+      },
+      "wheel": {
+        "name": "Fog",
+        "answer": "内面の調和が日々の行動の指針となります。",
+        "meaning": "意味"
+      },
+      "moon": {
+        "name": "Fog",
+        "answer": "内面の調和が日々の行動の指針となります。",
+        "meaning": "意味"
+      },
+      "hermit": {
+        "name": "Fog",
+        "answer": "内面の調和が日々の行動の指針となります。",
+        "meaning": "意味"
+      },
+      "hanged": {
+        "name": "Fog",
+        "answer": "内面の調和が日々の行動の指針となります。",
+        "meaning": "意味"
+      },
+      "tower": {
+        "name": "Fog",
+        "answer": "内面の調和が日々の行動の指針となります。",
+        "meaning": "意味"
+      },
+      "sword": {
+        "name": "Fog",
+        "answer": "内面の調和が日々の行動の指針となります。",
+        "meaning": "意味"
+      },
+      "fog": {
+        "name": "霧",
+        "answer": "内面の調和が日々の行動の指針となります。",
+        "meaning": "意味"
+      }
+    },
+    "breadcrumbs": {
+      "home": "家"
+    },
+    "title": "Interview Scorer",
+    "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "disclaimer": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "instruction": "カードを選んでください...",
+    "oracleSays": "オラクルは言う",
+    "askAgain": "もう一度質問する",
+    "hero": "ヒーロー"
+  },
+  "procrastination": {
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "hero": {
+      "title": "Interview Scorer",
+      "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "cta": "テストの開始",
+      "badge": "生産性心理学",
+      "startTest": "テストの開始"
+    },
+    "feature1": {
+      "title": "Interview Scorer",
+      "desc": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "feature2": {
+      "title": "Interview Scorer",
+      "desc": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "feature3": {
+      "title": "Interview Scorer",
+      "desc": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "faq1Question": "How is it scored?",
+    "faq1Answer": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "faq2Question": "Is it saved?",
+    "faq2Answer": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "faq3Question": "Can I use it for any job?",
+    "faq3Answer": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "faq4Question": "Is it free?",
+    "faq4Answer": "Yes, completely free to use.",
+    "heroTitle": "Interview Scorer",
+    "heroSubtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "howItWorksTitle": "仕組み",
+    "step1Title": "テストを受けてください",
+    "step1Description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "step2Title": "自分のタイプを知る",
+    "step2Description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "step3Title": "ヒントを受け取る",
+    "step3Description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "faqTitle": "FAQ"
+  },
+  "grandparentConnection": {
+    "meta": {
+      "hero": {
+        "badge": "抜群の問い合わせ",
+        "subtitle": "Build a bond beyond time.",
+        "cta": "キャリブレーションの開始",
+        "secondaryCta": "認識を深める"
+      },
+      "benefits": {
+        "subtitle": "Build a bond beyond time."
+      },
+      "keywords": "世代間の共鳴、祖父母の錬金術、レガシービルディング、オイヨ",
+      "title": "Oracle of Heart's Resonance | Oiyo",
+      "description": "Profound insights for a rich connection across generations."
+    },
+    "connection": {
+      "cards": [
+        {
+          "title": "ハイブリッドレゾナンスメニュー",
+          "description": "物理的な儀式とデジタルのタッチポイントを融合させて、訪問間の関係をダイナミックに保ちます。"
+        },
+        {
+          "icon": "🎨",
+          "title": "世代間の物語の弧",
+          "description": "世代間のギャップを埋める共有の経験やストーリーを共同作成します。"
+        }
+      ]
+    },
+    "hero": {
+      "subtitle": "時を超えて絆を築きましょう。",
+      "title": "Oracle of Heart's Resonance | Oiyo"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "レガシートランスミッション",
+          "description": "チャンネルを開いて一族の知恵を流しましょう。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "時の橋",
+          "description": "世代間の隔たりを超えて深い理解を構築します。",
+          "question": "世代間共鳴とは何ですか？",
+          "answer": "それは、年齢や経験の違いを越えて魂の周波数が出会う場所です。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "世代間マッピング",
+          "description": "祖父母と孫の間のユニークなエネルギー交流を分析します。"
+        }
+      ]
+    },
+    "result": {
+      "title": "Oracle of Heart's Resonance | Oiyo",
+      "description": "Profound insights for a rich connection across generations."
+    },
+    "title": "Oracle of Heart's Resonance | Oiyo",
+    "description": "世代を超えた豊かなつながりのための深い洞察。"
+  }
+}

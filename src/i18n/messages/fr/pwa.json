@@ -1,0 +1,27 @@
+{
+  "benefits": {
+    "performance": {
+      "description": "Accès rapide en un clic",
+      "title": "Ajouter à l'accueil"
+    },
+    "offline": {
+      "description": "Accès rapide en un clic",
+      "title": "Ajouter à l'accueil"
+    },
+    "notifications": {
+      "description": "Accès rapide en un clic",
+      "title": "Ajouter à l'accueil"
+    },
+    "homeScreen": {
+      "description": "Accès rapide en un clic",
+      "title": "Ajouter à l'accueil"
+    }
+  },
+  "title": "Ajouter à l'accueil",
+  "subtitle": "Ajouter à l'écran d'accueil pour une meilleure expérience",
+  "close": "Fermer",
+  "installing": "Installation...",
+  "install": "Installer",
+  "dismiss": "Plus tard",
+  "manualInstructions": "Sélectionnez \\\"Ajouter à l'écran d'accueil\\\" dans le menu de ton navigateur"
+}

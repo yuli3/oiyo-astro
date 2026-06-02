@@ -1,0 +1,43 @@
+{
+  "list": {
+    "keep": "Keep",
+    "keepAction": "Keep this subscription",
+    "review": "Review",
+    "reviewAction": "Review usage",
+    "cancel": "Cancel",
+    "cancelAction": "Cancel subscription",
+    "monthly": "Monthly",
+    "used": "Used",
+    "timesPerMonth": "times/month",
+    "satisfaction": "Satisfaction",
+    "valueScore": "Value Score"
+  },
+  "title": "Subscription Manager",
+  "subtitle": "Track and optimize your monthly subscriptions",
+  "addSubscription": {
+    "title": "Add Subscription",
+    "nameLabel": "Service Name",
+    "namePlaceholder": "e.g. Netflix, Spotify",
+    "priceLabel": "Monthly Price",
+    "pricePlaceholder": "0.00",
+    "usageLabel": "Monthly Usage",
+    "usageUnit": "times",
+    "satisfactionLabel": "Satisfaction",
+    "submit": "Add"
+  },
+  "summary": {
+    "monthlyTotal": "Monthly Total",
+    "yearlyTotal": "Yearly Total",
+    "potentialSavings": "Potential Savings"
+  },
+  "tips": {
+    "title": "Smart Tips",
+    "tip1": "Review subscriptions you haven't used in 30 days.",
+    "tip2": "Combine family plans to reduce costs.",
+    "tip3": "Set a calendar reminder to review monthly."
+  },
+  "empty": {
+    "title": "No Subscriptions Yet",
+    "description": "Start adding your subscriptions to track your spending."
+  }
+}

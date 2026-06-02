@@ -1,0 +1,48 @@
+{
+  "plans": {
+    "free": {
+      "features": {
+        "basic": "Acceso a coordenadas básicas de sabiduría (Saju, Zodíaco, Celta, etc.)"
+      },
+      "name": "The Keeper",
+      "description": "Open all channels of wisdom and embrace the era of sovereign insight."
+    },
+    "offering": {
+      "features": {
+        "ai_oracle": "AI Grand Oracle: Síntesis narrativa del alma (1 sesión)"
+      },
+      "name": "The Keeper",
+      "description": "Open all channels of wisdom and embrace the era of sovereign insight."
+    },
+    "pro": {
+      "features": {
+        "unlimited_ai": "Síntesis ilimitada de AI Oracle y perspectivas del consejo",
+        "archive": "Archivo de patrimonio personal y soporte prioritario"
+      },
+      "name": "La guardian",
+      "description": "Abran todos los canales de sabiduría y abracen la era de la visión soberana."
+    }
+  },
+  "AccessGuard": {
+    "features": {
+      "grand_oracle": {
+        "lockTitle": "Una epifanía oculta te espera",
+        "lockDescription": "Los fragmentos de tu destino están reunidos. El Gran Oráculo está listo para tejerlos en un mito personal. ¿Despertarás la profecía?"
+      }
+    },
+    "actions": {
+      "offering": "Hacer una ofrenda sagrada ($1)",
+      "subscriber": "Conviértete en un guardián soberano"
+    }
+  },
+  "grandOracle": {
+    "resting": "El Oráculo se baña actualmente en el silencio eterno. Regrese cuando la alineación haya cambiado.",
+    "casting": "Lanzando la síntesis",
+    "weaving": "Tejiendo fragmentos de tu alma...",
+    "sovereignWisdom": "Sabiduría soberana",
+    "wisdomOfSovereign": "El regalo del Oráculo a tu camino.",
+    "ready": "Tu destino es manifiesto.",
+    "interrupted": "La síntesis fue interrumpida. Por favor inténtalo de nuevo."
+  },
+  "payment": "Opciones de Pago"
+}

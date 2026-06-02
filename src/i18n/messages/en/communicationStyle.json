@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "hero": {
+      "badge": "verbal resonance",
+      "subtitle": "Discover the unique frequency at which your soul interacts with the world."
+    },
+    "cta": {
+      "button": "The conversation journey begins"
+    },
+    "sections": {
+      "strengths": "The shining talent of your voice",
+      "traits": "architecture of expression",
+      "challenges": "Echo of Dissonance",
+      "workingWith": "Get in tune with your rhythm"
+    },
+    "breakdown": {
+      "title": "The Anatomy of Your Conversation"
+    },
+    "additionalInsights": {
+      "title": "Wisdom for a Deeper Connection"
+    },
+    "sharing": {
+      "testName": "A journey of resonance in communication"
+    },
+    "keywords": "Communication style, relationship connection, conversation archetype, empathic resonance, effective communication",
+    "title": "Universal communication integrated analysis",
+    "description": "It is a panoramic exploration of your unique patterns of expression and the bridges you build with others.",
+    "scoreHeadline": "Mapping the Expressive Soul",
+    "scoreDescription": "The fundamental rhythm of your communication is ready to be integrated."
+  },
+  "hero": {
+    "subtitle": "Understanding the patterns hidden in your language opens the way to true connection.",
+    "cta": "Explore my frequency",
+    "badge": "mastery of conversation",
+    "title": "Communication resonance analysis"
+  },
+  "cta": {
+    "button": "Enter the sanctuary of conversation"
+  },
+  "matcher": {
+    "meta": {
+      "hero": {
+        "subtitle": "See how two uniquely expressive souls find a common rhythm."
+      },
+      "keywords": "Compatibility, communication match, relationship harmony, conversation synergy",
+      "title": "Synergy connection analysis",
+      "description": "Measures the harmony and friction between two different communication archetypes."
+    },
+    "hero": {
+      "subtitle": "Discovering the sacred geometry of shared conversation.",
+      "title": "relationship resonance matcher"
+    },
+    "selector": {
+      "subtitle": "Select archetypes to observe cosmic interactions.",
+      "person1": "first speaker",
+      "person2": "second speaker",
+      "selectType": "Choosing a communication archetype",
+      "analyze": "connectivity synthesis",
+      "title": "Synergy Matcher"
+    },
+    "profile": {
+      "primaryStyle": "Dominant Expression Frequency",
+      "strengths": "relational talent",
+      "preferredChannels": "a resonant medium",
+      "communicationStyle": "inner voice"
+    },
+    "analysis": {
+      "excellent": "heavenly harmony",
+      "good": "a resonant flow",
+      "fair": "evolving understanding",
+      "challenging": "Holy Trial for Alignment",
+      "strengths": "confluence",
+      "challenges": "echo of friction",
+      "noChallenges": "No significant dissonance was observed.",
+      "improvementTips": "wisdom for harmony",
+      "title": "synthesis of connections"
+    },
+    "actions": {
+      "tryAgain": "Curating connections again",
+      "share": "Radiating this unity"
+    },
+    "sharing": {
+      "text": "What does shared silence say about your connection?",
+      "copied": "Resonance shared!",
+      "title": "Synergy Mapping"
+    },
+    "benefits": {
+      "workplace": {
+        "title": "Collaborative Resilience",
+        "description": "Optimize your professional trajectory by understanding the different rhythm patterns of your colleagues."
+      },
+      "relationships": {
+        "title": "intimate resonance",
+        "description": "Deepen the resonance of empathy and reduce the shadow of misunderstanding."
+      },
+      "growth": {
+        "title": "evolutionary dialogue",
+        "description": "Transform every interaction into a mirror for your personal ascension."
+      }
+    },
+    "faq": {
+      "title": "Seeker's Question",
+      "question1": "How precise is this resonance mapping?",
+      "answer1": "It captures the structural essence of your delivery and reception, providing guidance for intentional growth.",
+      "question2": "Can I tune my frequency for others?",
+      "answer2": "Your fundamental rhythm is constant, but you can tune your expressive techniques for higher harmony.",
+      "question3": "Is this just for romantic relationships?",
+      "answer3": "No, it illuminates every bridge you place, from the boardroom to the dining table.",
+      "question4": "Can you share this wisdom with others?",
+      "answer4": "Of course. Sharing your profile invites others to tune in for smoother interactions with you."
+    },
+    "test": {
+      "progress": "Composite progress",
+      "submit": "analysis seal",
+      "selectOption": "Choose expressions that resonate",
+      "insightBullets": [
+        "Map the silver thread of your conversations.",
+        "Listen for the echoes of your intentions reaching the ears of others.",
+        "Collect fragments of your expressive soul."
+      ],
+      "next": "continue",
+      "previous": "reflection",
+      "loading": "Deciphering the hidden frequencies of your interactions..."
+    },
+    "result": {
+      "title": "synergy synthesis",
+      "description": "The complex interaction of shared frequencies has been mapped."
+    },
+    "title": "synergy of communication",
+    "description": "It is a deep exploration of the interplay between unique communication essences.",
+    "keywords": "Synergy, connection, compatibility, communication"
+  },
+  "benefits": {
+    "items": [
+      {
+        "title": "clarity of voice",
+        "description": "Understand the key drivers behind every word you utter."
+      },
+      {
+        "title": "empathic listening",
+        "description": "Develop an ear for unspoken desires in any conversation."
+      },
+      {
+        "title": "Alchemy of Conflict",
+        "description": "Transform the friction of conversation into a spark for deeper understanding."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "What is a ‘communication archetype’?",
+        "answer": "It is your fundamental pattern of processing, communicating, and receiving information in a social context."
+      },
+      {
+        "question": "Does my archetype define my social competence?",
+        "answer": "Not at all. It defines your style. Mastery comes from knowing your style and learning the language of others."
+      }
+    ]
+  },
+  "test": {
+    "progress": "reflective progress",
+    "next": "advance",
+    "previous": "a reflective walk",
+    "submit": "my voice synthesis",
+    "selectOption": "Choose a path that echoes your truth",
+    "subtitle": "Listen to the patterns that govern how you speak and how you sound.",
+    "insightBullets": [
+      "Tracing the architecture of the social self.",
+      "Illuminating your unique expressive soul patterns.",
+      "Decoding the subtle vibrations of your transmission."
+    ],
+    "title": "Exploring Expressive Resonance",
+    "loading": "We are creating a mirror that reflects your communicative essence..."
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "🗣️",
+        "title": "prototype identification",
+        "description": "Precise mapping of your core expressive rhythms."
+      },
+      {
+        "icon": "👂",
+        "title": "empathic awareness",
+        "description": "The art of listening to the other side of every conversation."
+      }
+    ]
+  },
+  "result": {
+    "sections": {
+      "strengths": "shining strengths",
+      "traits": "structural characteristics",
+      "challenges": "evolutionary obstacles",
+      "workingWith": "coordination with you"
+    },
+    "breakdown": {
+      "title": "anatomy of style"
+    },
+    "additionalInsights": {
+      "title": "Strategies for Connecting"
+    },
+    "sharing": {
+      "testName": "communication identity"
+    },
+    "meta": {
+      "title": "expressive result | OIYO",
+      "description": "A detailed analysis of your unique communication frequency.",
+      "keywords": "Communication results, prototype analysis, relationship growth"
+    },
+    "title": "revealed voice",
+    "description": "A constellation of your communication characteristics is now visible.",
+    "subtitle": "An overview of how you interact with the collective soul through dialogue.",
+    "scoreHeadline": "Main Expression Style",
+    "scoreDescription": "Your primary resonance is {primary}."
+  },
+  "title": "Expression resonance analysis",
+  "description": "A deep exploration of the architecture of your unique voice and relational patterns.",
+  "keywords": "Communication, empathy, conversation, relationship, resonance"
+}

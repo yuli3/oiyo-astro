@@ -1,0 +1,136 @@
+{
+  "saju": {
+    "fire_dm": {
+      "meaning": "Le **Feu** représente l'**expansion**, l'**illumination** et le sommet de l'énergie **Yang**.\n\nComme le soleil à midi, c'est la force qui rend toutes choses visibles. Ce n'est pas seulement de la chaleur, mais la **clarté** qui vient d'une exposition totale.",
+      "present": "Actuellement, votre éclat intérieur cherche une issue. Vous êtes dans une phase de **haute visibilité** et d'influence.\n\n*   Vos actions sont observées par les autres.\n*   Vous avez l'énergie nécessaire pour initier de nouveaux mouvements.\n*   Des choses cachées vous sont révélées.",
+      "future": "À l'avenir, cela implique la nécessité de canaliser votre chaleur de manière constructive.\n\nS'il n'est pas maîtrisé, le feu s'épuise. Pour le préserver, vous devez :\n\n1.  Privilégier une **passion durable** plutôt que des éclats explosifs.\n2.  Trouver une source de 'bois' (apprentissage) pour continuer à alimenter votre feu."
+    },
+    "water_dm": {
+      "meaning": "L'**Eau Yang (Ren)** est l'énergie de l'**Océan** : vaste, puissante et irrésistible.\n\nComme la mer, vous possédez une profondeur que peu de gens peuvent comprendre. Vous êtes **dynamique** et **adaptable**, capable de traverser les obstacles comme un tsunami ou de couler autour d'eux avec une profonde sagesse.",
+      "present": "Vous êtes actuellement dans un état d'**accumulation stratégique**. Comme un barrage stockant de l'énergie, vous rassemblez des ressources et de la sagesse.\n\n*   Votre intuition est à son comble.\n*   Le mouvement est essentiel pour vous en ce moment ; ne stagnez pas.\n*   Vous évacuez d'anciennes habitudes.",
+      "future": "Votre succès futur réside dans l'**élan**.\n\nUne fois que l'océan se met en marche, rien ne peut l'arrêter. Votre défi sera de diriger cette énergie massive sans tout détruire sur votre passage. Concentrez-vous sur le **flux plutôt que sur la force**."
+    },
+    "wood_dm": {
+      "meaning": "Le **Bois Yang (Jia)** est l'archétype du **Grand Pin** : droit, inflexible et s'élançant vers le ciel.\n\nVous représentez la **croissance** dans sa forme la plus directe. Vous êtes indépendant, bienveillant et possédez une volonté naturelle de protéger et d'abriter les autres.",
+      "present": "Vous êtes dans une phase de **mobilité ascendante**. Vos racines tiennent bon tandis que vos branches cherchent de nouveaux sommets.\n\n*   Votre leadership est sollicité.\n*   L'entêtement peut être votre principal blocage en ce moment.\n*   Vous construisez quelque chose de destiné à durer des décennies.",
+      "future": "Ce chemin mène à l'**héritage**.\n\nL'arbre ne bouge pas, mais il grandit jusqu'à toucher les nuages. Votre avenir vous demande d'être le **pilier** sur lequel les autres s'appuient. Assurez-vous que vos racines (vos valeurs) sont assez profondes pour soutenir votre ambition."
+    },
+    "earth_dm": {
+      "meaning": "La **Terre Yang (Wu)** est la **Montagne** : immuable, digne de confiance et majestueuse.\n\nVous êtes l'ancre de la réalité. Alors que les autres changent avec le vent, vous restez. Vous offrez **perspective** et **stabilité**, observant le monde d'un point de vue élevé.",
+      "present": "Vous servez actuellement de **fondation** pour les autres. Vous êtes le rocher dans l'orage de quelqu'un.\n\n*   Les gens vous confient leurs secrets (et leurs biens).\n*   Vous pouvez vous sentir 'coincé', mais en réalité, vous apportez une stabilité nécessaire.\n*   Il est temps de révéler les trésors cachés dans votre montagne.",
+      "future": "Votre destin est celui de l'**accumulation et de la confiance**.\n\nLes montagnes ne chassent pas ; elles attirent. À l'avenir, le succès viendra à vous parce que vous êtes le point le plus fiable sur la carte. Cultivez votre richesse intérieure."
+    },
+    "metal_dm": {
+      "meaning": "Le **Métal Yang (Geng)** est l'**Épée** ou le **Minerai Brut** : dur, tranchant et forgé par le feu.\n\nVous représentez la **justice**, l'**altruisme** et le pouvoir d'exécution. Vous ne craignez pas le conflit s'il mène à la vérité. Vous tranchez la confusion pour trouver le cœur.",
+      "present": "Vous traversez une période de **raffinement**. La vie vous martèle, mais cela vous forge en une arme plus aiguisée.\n\n*   La force de décision est votre super-pouvoir en ce moment.\n*   Vous coupez des liens qui ne servent plus à rien.\n*   Votre résilience est élevée ; vous pouvez supporter des pressions qui en écraseraient d'autres.",
+      "future": "Cela implique un avenir d'**autorité**.\n\nL'épée trempée dans le feu commande le respect. Vous serez appelé à défendre des standards et à vous battre pour ce qui est juste. Votre tranchant guérira (bistouri) ou détruira (arme) ; choisissez avec sagesse."
+    },
+    "wood_yin_dm": {
+      "meaning": "Le **Bois Yin (Yi)** est la **Fleur** ou le **Lierre** : flexible, résistant et survivant inlassablement.\n\nContrairement à l'arbre rigide, vous pouvez plier sous le vent. Vous êtes un **survivant**. Vous utilisez l'esprit, le charme et le réseau pour atteindre la lumière du soleil depuis n'importe quelle position.",
+      "present": "Vous êtes dans l'**adaptation stratégique**. Vous trouvez des fissures dans le pavé pour pousser.\n\n*   La collaboration est plus efficace pour vous que la compétition.\n*   Vous utilisez votre environnement à votre avantage.\n*   Votre charme ouvre des portes que la force ne pourrait pas ouvrir.",
+      "future": "Votre avenir est celui d'une **diversité florissante**.\n\nLa vigne couvre toute la forêt, pas seulement un endroit. Vous étendrez votre influence loin par vos connexions. Votre force est votre capacité à rebondir après n'importe quoi."
+    },
+    "fire_yin_dm": {
+      "meaning": "Le **Feu Yin (Ding)** est la **Bougie** ou la **Lumière des Étoiles** : focalisé, mystique et guide.\n\nAlors que le soleil éclaire le monde entier, la bougie éclaire le *chemin*. Vous êtes intime, sensible et capable d'allumer l'inspiration dans les lieux obscurs. Vous êtes le **mentor**.",
+      "present": "Vous êtes actuellement un **guide** pour des individus spécifiques. Vous apportez de la clarté dans un moment de confusion.\n\n*   Vos intuitions sont d'une précision perçante en ce moment.\n*   Vous pouvez vous sentir sensible ou vaciller facilement ; protégez votre flamme.\n*   Vous allumez chez les autres des idées qui deviendront des brasiers.",
+      "future": "Cela mène à un rôle de **leadership spirituel ou intellectuel**.\n\nLes étoiles guident les navires. À l'avenir, votre valeur ne viendra pas de votre volume, mais de votre **précision**. Cultivez votre sagesse intérieure ; elle sera la lumière que les autres recherchent."
+    },
+    "earth_yin_dm": {
+      "meaning": "La **Terre Yin (Ji)** est la **Terre de Jardin** : nourricière, productive et polyvalente.\n\nVous êtes l'élément le plus ingénieux. Vous pouvez tout faire pousser. Vous êtes **gentil**, **pratique** et possédez une capacité innée pour le multitâche et la gestion de détails complexes.",
+      "present": "Vous êtes actuellement dans une phase de **culture**. Vous jonglez avec de nombreuses responsabilités et les faites toutes s'épanouir.\n\n*   Vous êtes essentiel au fonctionnement quotidien de votre équipe/famille.\n*   Les autres dépendent de votre énergie nourricière.\n*   Vous transformez le potentiel brut en résultats concrets.",
+      "future": "Votre avenir réserve une **récolte d'abondance**.\n\nLa terre du jardin n'est jamais vide. Votre vie sera remplie des fruits divers de votre travail. Votre défi est de ne pas donner trop de nutriments aux mauvaises herbes. Choisissez ce que vous cultivez."
+    },
+    "metal_yin_dm": {
+      "meaning": "Le **Métal Yin (Xin)** est le **Bijou** ou la **Dague** : raffiné, précieux et brillant.\n\nVous n'êtes pas du minerai brut ; vous êtes déjà poli. Vous valorisez l'**esthétique**, la **précision** et la **reconnaissance**. Vous avez un ego délicat mais un noyau de résilience dur comme le diamant.",
+      "present": "Vous recherchez la **reconnaissance**. Vous connaissez votre valeur et attendez le bon projecteur.\n\n*   L'attention aux détails est votre chemin actuel vers le succès.\n*   Vous êtes sensible aux critiques car vous visez la perfection.\n*   Vous exposez vos talents uniques.",
+      "future": "Cela implique un avenir de **distinction**.\n\nLe diamant se démarque des autres pierres. Vous ne serez pas \"l'un des nombreux\" ; vous serez unique. Votre voyage consiste à conserver votre éclat sans craindre les éraflures du monde. Valorisez-vous."
+    },
+    "water_yin_dm": {
+      "meaning": "L'**Eau Yin (Gui)** est la **Brume** ou la **Pluie** : pénétrante, intuitive et nourricière.\n\nVous êtes l'énergie la plus spirituelle et la plus insaisissable. Comme la brume, vous pouvez aller partout. Vous êtes **imaginatif**, **doux** et possédez une intelligence tranquille qui imprègne tout.",
+      "present": "Vous opérez dans le **subconscient**. Vous influencez les situations sans faire de bruit.\n\n*   Votre intuition est psychiquement forte.\n*   Vous nourrissez des idées ou des personnes dans leurs premières étapes.\n*   Vous vous adaptez à la forme de votre contenant.",
+      "future": "Votre avenir est celui d'une **influence omniprésente**.\n\nLa pluie donne vie à toute la vallée. Vous aurez un impact subtil mais inéluctable sur votre monde. Votre force réside dans votre douceur. Faites confiance à votre savoir intérieur plutôt qu'à la logique extérieure."
+    }
+  },
+  "mbti": {
+    "advocate": {
+      "meaning": "L'**Avocat (INFJ)** parcourt le pont entre les mondes, guidé par une boussole morale interne que les autres ne voient pas.\n\nVous êtes un **mystique** en tenue civile. Vous voyez les courants sous-jacents du potentiel humain et êtes animé par une conviction profonde et silencieuse d'aider les autres à s'accomplir. Vous êtes **rare**, perspicace et souvent incompris car votre logique est émotionnelle et intuitive.",
+      "present": "Actuellement, vous **ressentez l'invisible**. Vous agissez comme un catalyseur silencieux pour la croissance de quelqu'un.\n\n*   Vous pouvez vous sentir épuisé par les interactions superficielles ; vous aspirez à la profondeur.\n*   Votre intuition capte les tendances futures avant qu'elles ne se produisent.\n*   Vous cherchez une 'cause' digne de votre dévotion.",
+      "future": "Votre avenir implique une **profonde synthèse spirituelle**.\n\nVous ne trouverez la paix que lorsque votre vie extérieure correspondra à vos idéaux intérieurs. Votre chemin n'est pas de conquérir le monde, mais de le **guérir**. Vous dirigerez en inspirant les autres à devenir de meilleures versions d'eux-mêmes."
+    },
+    "campaigner": {
+      "meaning": "L'**Inspirateur (ENFP)** est une étincelle d'**enthousiasme cosmique**, voyant mille possibilités dans un seul moment.\n\nVous êtes l'**esprit libre** du monde. Vous n'êtes pas seulement 'sociable' ; vous êtes un collectionneur d'âmes et d'histoires. Votre énergie est contagieuse et votre super-pouvoir est de voir le potentiel chez chaque personne que vous rencontrez.",
+      "present": "Actuellement, vous tissez une **toile de connexion**. Vous explorez de nouvelles idées et refusez d'être mis dans une case.\n\n*   Il est probable que vous commenciez trois projets sans en finir aucun (et c'est acceptable pour le moment).\n*   Socialement, vous êtes le ciment qui maintient un groupe uni.\n*   Vous recherchez l'intensité émotionnelle.",
+      "future": "Cela implique un avenir de **renouvellement constant**.\n\nLa stagnation est votre ennemi. Votre avenir sera défini par le nombre de fois où vous serez capable de vous réinventer. Vous inspirerez par votre courage à vivre avec authenticité et joie. **Continuez de bouger.**"
+    },
+    "architect": {
+      "meaning": "L'**Architecte (INTJ)** possède une vision qui s'étend au-delà de l'horizon. Vous voyez la **structure** là où les autres voient le chaos.\n\nVous êtes le **cerveau**. Vous n'acceptez pas les choses telles qu'elles sont ; vous vous demandez constamment : \"Comment cela pourrait-il être mieux ?\". Vous êtes indépendant, stratégique et valorisez la compétence par-dessus tout.",
+      "present": "Actuellement, vous **déconstruisez** un problème complexe pour bâtir un nouveau paradigme.\n\n*   Il est probable que vous soyez dans une phase d'intense solitude ou d'étude concentrée.\n*   Vous filtrez le bruit et l'inefficacité de votre vie.\n*   Vous planifiez un coup qui n'aura aucun sens pour les autres jusqu'à ce qu'il réussisse.",
+      "future": "Votre avenir sera défini par la **souveraineté**.\n\nVous construirez des systèmes qui vous survivront. Qu'il s'agisse d'une entreprise, d'une théorie ou d'une structure familiale, vous posez les briques de quelque chose de permanent. Dirigez depuis l'ombre de votre compréhension."
+    },
+    "logician": {
+      "meaning": "Le **Logicien (INTP)** est le **philosophe** de l'univers, questionnant constamment la nature sous-jacente de la réalité.\n\nVous vivez dans un monde de théories et de modèles. Vous êtes **analytique**, non conventionnel et inlassablement curieux. La tradition ne vous importe pas ; ce qui vous importe, c'est ce qui *fonctionne* et ce qui est *vrai*.",
+      "present": "Vous êtes actuellement dans une profonde **boucle d'analyse**. Vous décortiquez une nouvelle idée ou un nouveau système pour en comprendre la mécanique.\n\n*   Vous vous détachez probablement des obligations sociales pour vous concentrer sur la réflexion.\n*   Vous trouvez des failles dans les systèmes existants que d'autres ignorent.\n*   Accumuler des connaissances est votre principal moteur en ce moment.",
+      "future": "Votre avenir contient la promesse de l'**innovation**.\n\nVos pensées abstraites sont les plans des futures technologies ou philosophies du monde. Votre chemin est de traduire votre logique interne complexe en quelque chose que le monde peut utiliser."
+    },
+    "commander": {
+      "meaning": "Le **Commandant (ENTJ)** est l'incarnation de l'**action décisive**. Vous n'attendez pas l'avenir, vous le forgez.\n\nVous êtes un leader né qui voit l'inefficacité comme un ennemi personnel. Vous êtes **audacieux**, stratégique et charismatique. Vous avez la capacité unique de rallier les autres vers un objectif commun et ambitieux.",
+      "present": "Vous êtes actuellement en train de **mobiliser des forces**. Vous organisez les personnes et les ressources pour exécuter un grand plan.\n\n*   Vous êtes intolérant envers l'incompétence ou le retard.\n*   Vous prenez des décisions difficiles que d'autres craignent de prendre.\n*   Votre énergie est focalisée sur l'évolutivité et l'impact.",
+      "future": "Cela implique un avenir de **bâtisseur d'empire**.\n\nQue ce soit dans les affaires ou dans la société, vous êtes destiné à laisser une grande empreinte. Votre défi sera d'équilibrer votre volonté de réussir avec les besoins des personnes qui vous suivent."
+    },
+    "debater": {
+      "meaning": "L'**Innovateur (ENTP)** est le **partenaire d'entraînement mental** du monde. Vous remettez en question le statu quo simplement pour voir s'il tient la route.\n\nVous êtes **spirituel**, vif d'esprit et adorez l'exercice de la pensée. Vous êtes l'avocat du diable ultime, non pour causer des ennuis, mais pour découvrir la vérité par la friction.",
+      "present": "En ce moment, vous **secouez les choses**. Vous testez les limites et proposez de nouvelles idées radicales.\n\n*   La routine vous ennuie et vous cherchez une stimulation intellectuelle.\n*   Vous connectez des concepts sans rapport pour créer quelque chose de nouveau.\n*   Vous défiez l'autorité ou les normes établies.",
+      "future": "Votre avenir est celui de l'**innovation disruptive**.\n\nVous êtes le catalyseur du changement. Vous briserez les anciens systèmes pour que de meilleurs puissent être construits. Votre héritage sera les nouvelles perspectives que vous aurez forcé le monde à envisager."
+    },
+    "mediator": {
+      "meaning": "Le **Médiateur (INFP)** est le **poète** et le guérisseur, guidé par un noyau de valeurs inébranlables.\n\nVous êtes un rêveur qui croit en la bonté inhérente des gens. Vous êtes **gentil**, créatif et parlez le langage de l'âme. Vous recherchez l'harmonie et l'authenticité par-dessus tout.",
+      "present": "Vous êtes actuellement dans une **quête de sens**. Vous examinez votre vie pour vous assurer qu'elle correspond à vos valeurs.\n\n*   Vous vous retirez dans votre monde intérieur pour vous ressourcer.\n*   Vous vous exprimez à travers l'art ou l'écriture.\n*   Vous soutenez silencieusement une cause ou une personne en qui vous croyez.",
+      "future": "Votre avenir implique une **expression authentique**.\n\nVous trouverez votre voix. Quand vous parlez avec votre cœur, vous avez le pouvoir de déplacer des montagnes. Votre chemin est d'apporter beauté et compassion dans un monde dur."
+    },
+    "protagonist": {
+      "meaning": "Le **Protagoniste (ENFJ)** est le **leader bienveillant**, animé par la mission d'élever l'humanité.\n\nVous êtes charismatique et inspirant, avec une capacité naturelle à voir le potentiel des autres. Vous êtes **empathique** mais résolu. Vous ne dirigez pas par la force, mais par l'exemple et la connexion.",
+      "present": "Vous agissez actuellement comme **mentor** ou guide pour un groupe. Vous prenez la responsabilité du bien-être émotionnel des autres.\n\n*   Vous êtes le centre émotionnel de votre communauté.\n*   Vous donnez une voix à ceux qui ne peuvent pas parler pour eux-mêmes.\n*   Vous vous efforcez de créer un consensus et l'harmonie.",
+      "future": "Cela implique un avenir d'**élévation collective**.\n\nVous grandissez en élevant les autres. Votre succès est lié à la croissance de ceux qui vous entourent. Vous dirigerez probablement un mouvement ou une communauté vers un idéal plus élevé."
+    },
+    "logistician": {
+      "meaning": "Le **Logisticien (ISTJ)** est la **sentinelle** de la société. Vous êtes pratique, orienté vers les faits et fiable comme un roc.\n\nVous valorisez la **tradition**, l'ordre et la sécurité. Vous n'avez pas besoin d'éloges, vous avez besoin de savoir que le travail a été bien fait. Vous êtes le pilier qui permet au monde de fonctionner.",
+      "present": "Vous êtes actuellement en train d'**établir l'ordre**. Vous nettoyez le chaos et mettez en place des systèmes efficaces.\n\n*   Vous vous concentrez sur le devoir et la responsabilité.\n*   Vous êtes la personne sur qui les autres comptent quand les choses tournent mal.\n*   Vous gérez soigneusement les ressources et les risques.",
+      "future": "Votre avenir est celui d'une **stabilité inébranlable**.\n\nVous construisez des choses qui durent. Votre dévouement silencieux se traduira par une vie de sécurité et de respect. Vous êtes le gardien de la sagesse et de ce qui compte vraiment."
+    },
+    "defender": {
+      "meaning": "Le **Défenseur (ISFJ)** est le **protecteur**. Vous êtes chaleureux, dévoué et prêt à défendre vos proches.\n\nVous êtes un véritable altruiste. Vous êtes **observateur** et vous vous souvenez des petits détails qui font que les gens se sentent spéciaux. Vous travaillez dur dans l'ombre pour assurer harmonie et sécurité.",
+      "present": "Actuellement, vous **prenez soin** de votre cercle. Vous faites passer les besoins des autres avant les vôtres.\n\n*   Vous travaillez inlassablement pour maintenir la tradition et le confort.\n*   Vous êtes le soutien émotionnel d'un proche.\n*   Vous veillez à ce que les besoins pratiques soient satisfaits avec amour.",
+      "future": "Cela implique un avenir de **connexion profonde**.\n\nVous serez entouré de la gratitude de ceux dont vous avez pris soin. Votre héritage est la sécurité et le bonheur de votre famille et de votre communauté."
+    },
+    "executive": {
+      "meaning": "L'**Exécutif (ESTJ)** est l'**administrateur**. Vous avez une vision claire de la façon dont les choses devraient fonctionner et la volonté de le réaliser.\n\nVous représentez la **tradition** et l'ordre. Vous excellez dans la gestion des personnes et des choses. Vous valorisez l'honnêteté, le dévouement et la dignité.",
+      "present": "En ce moment, vous **imposez des standards**. Vous prenez en main une situation qui manque de direction.\n\n*   Vous organisez une équipe ou un projet avec une précision militaire.\n*   Vous veillez à ce que les règles soient suivies pour le bien de tous.\n*   Vous vous concentrez sur des résultats tangibles et l'efficacité.",
+      "future": "Votre avenir implique un **leadership institutionnel**.\n\nVous êtes un pilier de votre communauté. Vous occuperez probablement des postes de haute responsabilité. Votre chemin est de construire et de maintenir les structures qui permettent à la société d'exister."
+    },
+    "consul": {
+      "meaning": "Le **Consul (ESFJ)** est l'**hôte** du monde. Vous êtes populaire, social et profondément attentionné.\n\nVous aimez les gens. Vous êtes le premier à offrir de l'aide et l'organisateur de chaque rassemblement. Vous valorisez l'**harmonie** et êtes sensible aux sentiments des autres.",
+      "present": "Vous êtes actuellement en train de **connecter les gens**. Vous veillez à ce que tout le monde se sente inclus et valorisé.\n\n*   Vous planifiez des événements ou rassemblez les gens.\n*   Vous servez de médiateur dans les conflits pour restaurer l'harmonie.\n*   Vous apportez un soutien pratique à vos amis.",
+      "future": "Cela implique un avenir d'**abondance sociale**.\n\nVous ne serez jamais seul. Votre vie sera riche en relations et en respect communautaire. Votre chaleur crée un réseau de soutien qui vous soutiendra pour toujours."
+    },
+    "virtuoso": {
+      "meaning": "Le **Virtuoses (ISTP)** est l'**artisan**. Vous explorez le monde avec vos mains et votre esprit calme et rationnel.\n\nVous êtes un **solutionneur de problèmes**. Vous êtes réservé, observateur et maître des outils. Vous passez d'un projet à l'autre, apprenant comment fonctionne le monde en le démontant.",
+      "present": "Vous êtes actuellement en train de **maîtriser une compétence**. Vous êtes concentré sur un projet ou un problème pratique.\n\n*   Vous expérimentez par essais et erreurs.\n*   Vous résolvez une crise par une action rapide et calme.\n*   Vous cherchez la liberté vis-à-vis des règles et des contraintes.",
+      "future": "Votre avenir est celui de la **maîtrise**.\n\nVous deviendrez la personne capable de tout réparer. Votre indépendance et votre talent vous permettront de naviguer dans n'importe quelle situation. Vous êtes l'ultime survivant et créateur."
+    },
+    "adventurer": {
+      "meaning": "L'**Aventurier (ISFP)** est l'**artiste**. Vous vivez dans un monde sensoriel et coloré, inspiré par les connexions avec les gens et les idées.\n\nVous êtes une **âme libre**. Vous brisez les règles non par provocation, mais pour être vous-même. Vous êtes gentil, passionné et profondément en contact avec votre sens esthétique.",
+      "present": "Vous êtes actuellement en train de vous **exprimer**. Vous explorez qui vous êtes à travers des expériences.\n\n*   Vous expérimentez avec votre style ou votre art.\n*   Vous évitez les engagements qui vous semblent étouffants.\n*   Vous vivez l'instant présent et savourez la beauté.",
+      "future": "Cela implique un avenir de **création unique**.\n\nVotre vie sera votre chef-d'œuvre. Vous inspirerez les autres en leur montrant comment trouver la beauté dans le quotidien. Votre chemin est d'être fidèle à votre propre rythme."
+    },
+    "entrepreneur": {
+      "meaning": "L'**Entrepreneur (ESTP)** est le **dynamo**. Vous vivez sur le fil du rasoir, plein d'énergie et d'action.\n\nVous êtes un **preneur de risques**. Vous êtes la personne la plus perspicace de la pièce lorsqu'il s'agit de lire instantanément les gens et les situations. Vous foncez avant de regarder, et vous réparez les choses en cours de route.",
+      "present": "Actuellement, vous **agissez**. Vous vous lancez tête baissée dans une nouvelle opportunité.\n\n*   Vous développez votre réseau et utilisez votre charisme.\n*   Vous résolvez des problèmes immédiats par une improvisation ingénieuse.\n*   Vous recherchez l'excitation et des récompenses tangibles.",
+      "future": "Votre avenir implique un **succès audacieux**.\n\nVous êtes un moteur naturel. Vous créerez probablement des entreprises ou dirigerez des projets qui demandent une réflexion rapide. Votre énergie ouvrira des portes fermées pour d'autres."
+    },
+    "entertainer": {
+      "meaning": "L'**Amuseur (ESFP)** est la **vedette**. Vous adorez les projecteurs et la vie est votre scène.\n\nVous êtes **spontané**, énergique et enthousiaste. Vous rendez la vie amusante pour tous ceux qui vous entourent. Vous avez un grand cœur et aimez encourager les autres.",
+      "present": "Vous êtes actuellement en train de **jouer**. Vous êtes au centre de l'attention et apportez de l'énergie au groupe.\n\n*   Vous profitez de l'instant présent et encouragez les autres à vous rejoindre.\n*   Vous utilisez vos compétences sociales pour aplanir les difficultés.\n*   Vous recherchez le plaisir et les expériences partagées.",
+      "future": "Cela implique un avenir d'**impact joyeux**.\n\nVous apportez de la lumière partout où vous allez. Votre héritage sera les sourires et les rires que vous avez créés. Vous rappelez au monde que la vie est faite pour être appréciée."
+    }
+  }
+}

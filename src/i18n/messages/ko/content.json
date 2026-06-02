@@ -1,0 +1,13 @@
+{
+  "tips": {
+    "tip1": "팁 1",
+    "tip2": "팁 2",
+    "tip3": "팁 3"
+  },
+  "heading": "표제",
+  "subheading": "소제목",
+  "description1": "설명 1",
+  "description2": "설명 2",
+  "cta": "여기를 클릭하세요",
+  "tipsTitle": "팁"
+}

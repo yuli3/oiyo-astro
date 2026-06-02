@@ -1,0 +1,229 @@
+{
+  "meta": {
+    "title": "礼物推荐",
+    "description": "用柔和的香气营造氛围",
+    "keywords": "礼物推荐, 礼物查找器, 完美礼物, 生日礼物, 纪念日礼物"
+  },
+  "hero": {
+    "title": "礼物推荐",
+    "subtitle": "为您特别的人准备的完美礼物",
+    "cta": "开始测试"
+  },
+  "features": {
+    "personalized": {
+      "title": "礼物推荐",
+      "description": "用柔和的香气营造氛围"
+    },
+    "variety": {
+      "title": "礼物推荐",
+      "description": "用柔和的香气营造氛围"
+    },
+    "shoppingLinks": {
+      "title": "礼物推荐",
+      "description": "用柔和的香气营造氛围"
+    }
+  },
+  "howItWorks": {
+    "steps": {
+      "1": {
+        "title": "礼物推荐",
+        "desc": "前5名推荐"
+      },
+      "2": {
+        "title": "礼物推荐",
+        "desc": "前5名推荐"
+      },
+      "3": {
+        "title": "礼物推荐",
+        "desc": "前5名推荐"
+      },
+      "4": {
+        "title": "礼物推荐",
+        "desc": "前5名推荐"
+      }
+    },
+    "title": "礼物推荐"
+  },
+  "cta": {
+    "button": "立即开始 →"
+  },
+  "landing": {
+    "subtitle": "为您特别的人准备的完美礼物",
+    "cta": "开始测试"
+  },
+  "ui": {
+    "selectOption": "选择选项",
+    "progress": "进度",
+    "previous": "上一步"
+  },
+  "result": {
+    "title": "礼物推荐",
+    "subtitle": "为您特别的人准备的完美礼物",
+    "match": "匹配度",
+    "reasons": "💡 推荐理由：",
+    "shopNow": "立即购买",
+    "save": "保存",
+    "retake": "获取新推荐",
+    "share": "分享结果",
+    "loading": "加载中..."
+  },
+  "data": {
+    "questions": {
+      "age": {
+        "options": {
+          "10s": "青少年",
+          "20s": "20多岁",
+          "30s": "30多岁",
+          "40s": "40多岁",
+          "50plus": "50岁以上"
+        },
+        "question": "是什么场合？"
+      },
+      "personality": {
+        "options": {
+          "active": "活泼外向",
+          "calm": "冷静内向",
+          "creative": "创意艺术",
+          "practical": "务实逻辑"
+        },
+        "question": "是什么场合？"
+      },
+      "interests": {
+        "options": {
+          "tech": "科技/数码",
+          "fashion": "时尚/美容",
+          "food": "美食/烹饪",
+          "sports": "运动/健身",
+          "art": "艺术与设计",
+          "home": "家居/装饰"
+        },
+        "question": "是什么场合？"
+      },
+      "budget": {
+        "options": {
+          "under20": "150元以下",
+          "20to50": "150-350元",
+          "50to100": "350-700元",
+          "over100": "700元以上"
+        },
+        "question": "是什么场合？"
+      },
+      "relationship": {
+        "options": {
+          "family": "家人",
+          "friend": "朋友",
+          "romantic": "恋人",
+          "colleague": "同事"
+        },
+        "question": "是什么场合？"
+      },
+      "occasion": {
+        "options": {
+          "birthday": "生日",
+          "holiday": "节日/纪念日",
+          "thanks": "感谢",
+          "just-because": "没什么原因"
+        },
+        "question": "是什么场合？"
+      }
+    },
+    "products": {
+      "wireless-earbuds": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["非常适合音乐爱好者", "实用的礼物", "流行单品"]
+      },
+      "smart-watch": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["对于那些对医疗保健感兴趣的人", "最新技术", "实用又时尚"]
+      },
+      "perfume-set": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["浪漫的礼物", "豪华套餐", "非常适合特殊日子"]
+      },
+      "handbag": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["对于那些对时尚感兴趣的人", "可长期使用", "特别的礼物"]
+      },
+      "gourmet-set": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["非常适合烹饪爱好者", "独特的礼物", "实际的"]
+      },
+      "coffee-maker": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["对于咖啡爱好者来说", "可供日常使用", "豪华礼物"]
+      },
+      "yoga-mat": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["对于运动爱好者来说", "健康的生活方式", "实用的礼物"]
+      },
+      "fitness-tracker": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": [
+          "对于那些对医疗保健感兴趣的人",
+          "健康生活方式的完美伴侣",
+          "实际的"
+        ]
+      },
+      "diffuser": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["对于那些长时间呆在家里的人", "舒适的氛围", "实际的"]
+      },
+      "luxury-blanket": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["当您想送出一份舒适的礼物时", "实用又奢华", "四季皆可用"]
+      },
+      "art-book": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["对于艺术爱好者", "收藏价值", "智能礼物"]
+      },
+      "concert-tickets": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": [
+          "当您想将某种体验作为礼物赠送时",
+          "创造回忆",
+          "对于文化爱好者"
+        ]
+      },
+      "notebook-set": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["价格合理", "实际的", "不给任何人带来负担"]
+      },
+      "candle-set": {
+        "name": "蜡烛套装",
+        "description": "用柔和的香气营造氛围",
+        "priceRange": "150-350元",
+        "reasons": ["价格合理", "大气的礼物", "实际的"]
+      }
+    }
+  },
+  "title": "礼物推荐",
+  "findGift": "寻找礼物",
+  "occasion": "特殊场合",
+  "budget": "预算"
+}

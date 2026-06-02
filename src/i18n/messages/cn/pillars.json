@@ -1,0 +1,46 @@
+{
+  "dailyInsight": {
+    "cosmicEnergy": "[缺失：dailyInsight.cosmicEnergy]",
+    "flowerOfDay": "[缺失：dailyInsight.flowerOfDay]",
+    "crystalOfPower": "[缺失：dailyInsight.crystalOfPower]",
+    "guidingStar": "[缺失：dailyInsight.guidingStar]"
+  },
+  "composition": "构成",
+  "earthlyBranch": "地支",
+  "heavenlyStem": "天干",
+  "meaning": "含义",
+  "modernMeaning": "现代解读",
+  "represents": "象征",
+  "traditionalDescription": "传统描述",
+  "viewModes": {
+    "modern": "现代视图",
+    "traditional": "传统视图"
+  },
+  "interpretationSuffix": "解析",
+  "modern": {
+    "year": {
+      "description": "这是你遗赠资产的显化，也是未来潜力的门户。"
+    },
+    "month": {
+      "description": "这是你遗赠资产的显化，也是未来潜力的门户。"
+    },
+    "day": {
+      "description": "这是你遗赠资产的显化，也是未来潜力的门户。"
+    },
+    "hour": {
+      "description": "这是你遗赠资产的显化，也是未来潜力的门户。"
+    }
+  },
+  "year": "年柱",
+  "month": "月柱",
+  "day": "日柱",
+  "hour": "时柱",
+  "yearMeaning": "年柱深意，象征你的生命之根与祖辈的余荫。",
+  "monthMeaning": "月柱气息，在社会联结与职业场域中显化的能量。",
+  "dayMeaning": "日柱解析，揭示自我的核心与最内在的性格特质。",
+  "hourMeaning": "时柱解说，洞察未来的潜能与晚年的结实成果。",
+  "yearRepresents": "祖先、童年、父母背景及生命根基",
+  "monthRepresents": "社交、职业成就、兄弟姐妹及青年时期",
+  "dayRepresents": "自我、配偶、当下环境及中年时期",
+  "hourRepresents": "子女、晚年生活、内心渴望及最终成果"
+}

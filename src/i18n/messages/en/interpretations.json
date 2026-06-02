@@ -1,0 +1,136 @@
+{
+  "saju": {
+    "fire_dm": {
+      "meaning": "**Fire** represents *expansion*, *illumination*, and the peak of **Yang** energy.\n\nLike the sun at noon, it is the force that makes all things visible. It is not just heat, but the **clarity** that comes from total exposure.",
+      "present": "Currently, your inner radiance is seeking an outlet. You are in a phase of **high visibility** and influence.\n\n*   Your actions are being watched by others.\n*   You have the energy to start new movements.\n*   Hidden things are being revealed to you.",
+      "future": "In the future, this implies a need to channel your heat constructively.\n\nIf uncontrolled, fire burns out. To sustain this, you must:\n\n1.  Focus on **sustainable passion** over explosive bursts.\n2.  Find a 'wood' source (learning) to keep fueling your fire."
+    },
+    "water_dm": {
+      "meaning": "**Yang Water (Ren)** is the energy of the **Ocean**—vast, powerful, and unstoppable.\n\nLike the sea, you possess a depth that few can fathom. You are **dynamic** and **adaptive**, capable of crashing through obstacles like a tsunami or flowing around them with profound wisdom.",
+      "present": "You are currently in a state of **strategic accumulation**. Like a dam storing power, you are gathering resources and wisdom.\n\n*   Your intuition is peaking.\n*   Movement is essential for you right now; do not stagnate.\n*   You are washing away old habits.",
+      "future": "Your future success lies in **momentum**.\n\nOnce the ocean starts moving, nothing can stop it. Your challenge will be to direct this massive energy without destroying everything in your path. Focus on **flow over force**."
+    },
+    "wood_dm": {
+      "meaning": "**Yang Wood (Jia)** is the archetype of the **Great Pine Tree**—standing tall, unbending, and reaching for the sky.\n\nYou represent **growth** in its most direct form. You are independent, benevolent, and possess a natural drive to protect and shelter others.",
+      "present": "You are in a phase of **upward mobility**. Your roots are holding firm while your branches seek new heights.\n\n*   Your leadership is being called upon.\n*   Stubbornness may be your greatest blockage right now.\n*   You are building something meant to last for decades.",
+      "future": "This path leads to **legacy**. \n\nThe tree does not move, but it grows until it touches the clouds. Your future asks you to be the **pillar** that others lean on. Ensure your roots (values) are deep enough to support your ambition."
+    },
+    "earth_dm": {
+      "meaning": "**Yang Earth (Wu)** is the **Mountain**—immovable, trustworthy, and majestic.\n\nYou are the anchor of reality. While others change with the wind, you remain. You offer **perspective** and **stability**, observing the world from a higher vantage point.",
+      "present": "You are currently serving as a **foundation** for others. You are the rock in someone's storm.\n\n*   People are trusting you with their secrets (and assets).\n*   You may feel 'stuck', but you are actually providing necessary stability.\n*   It is time to reveal the treasures hidden within your mountain.",
+      "future": "Your destiny is one of **accumulation and trust**.\n\nMountains do not chase; they attract. In the future, success will come to you because you are the most reliable point on the map. Cultivate your inner richness."
+    },
+    "metal_dm": {
+      "meaning": "**Yang Metal (Geng)** is the **Sword** or **Raw Ore**—tough, sharp, and forged in fire.\n\nYou represent **justice**, **altruism**, and the power of execution. You are not afraid of conflict if it leads to the truth. You cut through confusion to find the core.",
+      "present": "You are in a period of **refinement**. You are being hammered by life, but this is forging you into a sharper weapon.\n\n*   Decisiveness is your superpower right now.\n*   You are severing ties that no longer serve a purpose.\n*   Endurance is high; you can handle pressure that would crush others.",
+      "future": "This implies a future of **authority**.\n\nThe sword that has been tempered in fire commands respect. You will be called to uphold standards and fight for what is right. Your sharpness will either heal (scalpel) or destroy (weapon)—choose wisely."
+    },
+    "wood_yin_dm": {
+      "meaning": "**Yin Wood (Yi)** is the **Flower** or **Ivy**—flexible, resilient, and relentlessly surviving.\n\nUnlike the rigid tree, you can bend with the wind. You are a **survivor**. You use wit, charm, and networking to reach sunlight from any position.",
+      "present": "You are engaging in **strategic adaptation**. You are finding cracks in the pavement to grow through.\n\n*   Collaboration is more effective than competition for you.\n*   You are utilizing your environment to your advantage.\n*   Your charm is opening doors that force could not.",
+      "future": "Your future is one of **flourishing diversity**.\n\nThe vine covers the whole forest, not just one spot. You will spread your influence far and wide through connections. Your strength is your ability to recover from anything."
+    },
+    "fire_yin_dm": {
+      "meaning": "**Yin Fire (Ding)** is the **Candle** or **Starlight**—focused, mystical, and guiding.\n\nWhile the sun lights the whole world, the candle lights the *path*. You are intimate, sensitive, and capable of igniting inspiration in dark places. You are the **mentor**.",
+      "present": "You are currently a **guide** for specific individuals. You are providing clarity in a time of confusion.\n\n*   Your insights are piercingly accurate right now.\n*   You may feel sensitive or easily flickering; protect your flame.\n*   You are sparking ideas in others that will grow into bonfires.",
+      "future": "This leads to a role of **spiritual or intellectual leadership**.\n\nStars navigate ships. In the future, your value will come not from your loudness, but from your **precision**. Cultivate your inner wisdom; it will be the light others seek."
+    },
+    "earth_yin_dm": {
+      "meaning": "**Yin Earth (Ji)** is the **Garden Soil**—nurturing, productive, and versatile.\n\nYou are the most resourceful of all elements. You can grow anything. You are **kind**, **practical**, and possess an innate ability to multitask and manage complex details.",
+      "present": "You are currently in a phase of **cultivation**. You are juggling many responsibilities and making them all bloom.\n\n*   You are essential to the daily operations of your team/family.\n*   Others rely on your nurturing energy.\n*   You are transforming raw potential into actual results.",
+      "future": "Your future holds a **harvest of abundance**.\n\nThe garden soil never stays empty. Your life will be filled with the diverse fruits of your labor. Your challenge is not to give too much of your nutrients to weeds. Curate what you grow."
+    },
+    "metal_yin_dm": {
+      "meaning": "**Yin Metal (Xin)** is the **Jewelry** or **Dagger**—refined, precious, and shining.\n\nYou are not raw ore; you are already polished. You value **aesthetics**, **precision**, and **recognition**. You have a delicate ego but a core of diamond-hard resilience.",
+      "present": "You are seeking **recognition**. You know your worth and are waiting for the right spotlight.\n\n*   Attention to detail is your current path to success.\n*   You are sensitive to criticism because you strive for perfection.\n*   You are showcasing your unique talents.",
+      "future": "This implies a future of **distinction**.\n\nThe diamond is set apart. You will not be \"one of many\"; you will be unique. Your journey is to maintain your shine without fearing the scratches of the world. Value yourself."
+    },
+    "water_yin_dm": {
+      "meaning": "**Yin Water (Gui)** is the **Mist** or **Rain**—pervasive, intuitive, and nurturing.\n\nYou are the most spiritual and elusive energy. Like mist, you can go anywhere. You are **imaginative**, **gentle**, and possess a quiet intelligence that soaks into everything.",
+      "present": "You are operating in the **subconscious**. You are influencing situations without being loud.\n\n*   Your intuition is psychically strong.\n*   You are nurturing ideas or people in their early stages.\n*   You are adapting to the shape of your container.",
+      "future": "Your future is one of **ubiquitous influence**.\n\nRain brings life to the whole valley. You will have a subtle but inescapable impact on your world. Your strength lies in your softness. Trust your inner knowing over external logic."
+    }
+  },
+  "mbti": {
+    "advocate": {
+      "meaning": "**The Advocate (INFJ)** walks the bridge between worlds, guided by an internal moral compass that others cannot see.\n\nYou are a **mystic** in modern clothes. You see the hidden currents of human potential and are driven by a deep, quiet conviction to help others realize it. You are **rare**, insightful, and often misunderstood because your logic is emotional and intuitive.",
+      "present": "Presently, you are **sensing the unseen**. You are acting as a silent catalyst for someone's growth.\n\n*   You may feel drained by surface-level interactions; crave depth.\n*   Your intuition is picking up on future trends before they happen.\n*   You are seeking a 'cause' worthy of your devotion.",
+      "future": "Your future involves a **profound spiritual synthesis**.\n\nYou will find peace only when your outer life matches your inner ideals. Your path is not to conquer the world, but to **heal** it. You will lead by inspiring others to be better versions of themselves."
+    },
+    "campaigner": {
+      "meaning": "**The Campaigner (ENFP)** is a spark of **cosmic enthusiasm**, seeing a thousand possibilities in a single moment.\n\nYou are the **free spirit** of the zodiacs. You are not just 'social'; you are a collector of souls and stories. Your energy is infectious, and your superpower is seeing the potential in everyone you meet.",
+      "present": "Currently, you are weaving a **tapestry of connection**. You are exploring new ideas and refusing to be boxed in.\n\n*   You are likely starting three projects and finishing none (and that's okay right now).\n*   Socially, you are the glue holding a group together.\n*   You are searching for emotional intensity.",
+      "future": "This implies a future of **constant renewal**.\n\nStagnation is your enemy. Your future will be defined by how many times you can reinvent yourself. You will inspire many by demonstrating the courage to live authentically and joyfully. **Keep moving.**"
+    },
+    "architect": {
+      "meaning": "**The Architect (INTJ)** possesses a vision that spans beyond the horizon. You see the **structure** where others see chaos.\n\nYou are the **mastermind**. You do not accept things as they are; you constantly ask, \"How can this be better?\" You are independent, strategic, and value competence above all else.",
+      "present": "Presently, you are **deconstructing** a complex problem to build a new paradigm.\n\n*   You are likely in a phase of intense solitude or focused study.\n*   You are filtering out noise and inefficiency from your life.\n*   You are planning a move that won't make sense to others until it succeeds.",
+      "future": "Your future will be defined by **sovereignty**.\n\nYou will build systems that outlast you. Whether it is a company, a theory, or a family structure, you are laying the bricks for something permanent. Lead from the shadows of your understanding."
+    },
+    "logician": {
+      "meaning": "**The Logician (INTP)** is the **philosopher** of the universe, constantly questioning the underlying nature of reality.\n\nYou live in a world of theories and patterns. You are **analytical**, unconventional, and relentlessly curious. You don't care about tradition—you care about what *works* and what is *true*.",
+      "present": "You are currently in a deep **analysis loop**. You are dissecting a new idea or system to understand its mechanics.\n\n*   You are likely detaching from social obligations to focus on thinking.\n*   You are finding flaws in existing systems that others ignore.\n*   Accumulating knowledge is your primary drive right now.",
+      "future": "Your future holds the promise of **innovation**.\n\nYour abstract thoughts are the blueprints for the future technologies or philosophies of the world. Your path is to translate your complex internal logic into something the world can use."
+    },
+    "commander": {
+      "meaning": "**The Commander (ENTJ)** is the embodiment of **decisive action**. You do not wait for the future; you forge it.\n\nYou are a natural leader who sees inefficiency as a personal enemy. You are **bold**, strategic, and charismatic. You have the unique ability to rally others towards a common, ambitious goal.",
+      "present": "You are currently **marshaling forces**. You are organizing people and resources to execute a major plan.\n\n*   You are intolerant of incompetence or delay.\n*   You are making tough decisions that others are afraid to make.\n*   Your energy is focused on scaling and impact.",
+      "future": "This implies a future of **empire building**.\n\nWhether in business or society, you are destined to leave a large footprint. Your challenge will be to balance your drive for achievement with the needs of the individuals following you."
+    },
+    "debater": {
+      "meaning": "**The Debater (ENTP)** is the **mental sparring partner** of the world. You challenge the status quo simply to see if it stands up.\n\nYou are **witty**, quick-thinking, and love the exercise of the mind. You are the ultimate devil's advocate, not to cause trouble, but to uncover the truth through friction.",
+      "present": "You are currently **shaking things up**. You are testing boundaries and proposing radical new ideas.\n\n*   You are bored by routine and seeking intellectual stimulation.\n*   You are connecting unrelated concepts to create something new.\n*   You are challenging authority or established norms.",
+      "future": "Your future is one of **disruptive innovation**.\n\nYou are the catalyst for change. You will break down old systems so better ones can be built. Your legacy will be the new perspectives you forced the world to consider."
+    },
+    "mediator": {
+      "meaning": "**The Mediator (INFP)** is the **poet** and the healer, guided by a core of unshakable values.\n\nYou are a dreamer who believes in the inherent goodness of people. You are **gentle**, creative, and speak the language of the soul. You seek harmony and authenticity above all else.",
+      "present": "You are currently on a **quest for meaning**. You are examining your life to ensure it aligns with your values.\n\n*   You are retreating into your inner world to recharge.\n*   You are expressing yourself through art or writing.\n*   You are silently supporting a cause or person you believe in.",
+      "future": "Your future involves **authentic expression**.\n\nYou will find your voice. When you speak from your heart, you have the power to move mountains. Your path is to bring beauty and compassion into a harsh world."
+    },
+    "protagonist": {
+      "meaning": "**The Protagonist (ENFJ)** is the **benevolent leader**, driven by a mission to uplift humanity.\n\nYou are charismatic and inspiring, with a natural ability to see the potential in others. You are **empathetic** yet decisive. You lead not by force, but by example and connection.",
+      "present": "You are currently **mentoring** or guiding a group. You are taking responsibility for the emotional well-being of others.\n\n*   You are the emotional center of your community.\n*   You are speaking up for those who cannot speak for themselves.\n*   You are striving to create consensus and harmony.",
+      "future": "This implies a future of **collective elevation**.\n\nYou rise by lifting others. Your success is tied to the growth of those around you. You will likely lead a movement or community towards a higher ideal."
+    },
+    "logistician": {
+      "meaning": "**The Logistician (ISTJ)** is the **sentinel** of society. You are practical, fact-minded, and reliable as rock.\n\nYou value **tradition**, order, and security. You don't need praise; you need to know that the job was done correctly. You are the backbone that keeps the world running.",
+      "present": "You are currently **establishing order**. You are cleaning up chaos and implementing efficient systems.\n\n*   You are focused on duty and responsibility.\n*   You are the person others rely on when things go wrong.\n*   You are carefully managing resources and risks.",
+      "future": "Your future is one of **unshakable stability**.\n\nYou build things that last. Your quiet dedication will result in a life of security and respect. You are the keeper of wisdom and the guardian of what matters."
+    },
+    "defender": {
+      "meaning": "**The Defender (ISFJ)** is the **protector**. You are warm, dedicated, and ready to defend your loved ones.\n\nYou are a true altruist. You are **observant** and remember the small details that make people feel special. You work hard behind the scenes to ensure harmony and safety.",
+      "present": "You are currently **nurturing** your circle. You are putting the needs of others before your own.\n\n*   You are working tirelessly to maintain tradition and comfort.\n*   You are the emotional support for someone close to you.\n*   You are ensuring that practical needs are met with love.",
+      "future": "This implies a future of **deep connection**.\n\nYou will be surrounded by the gratitude of those you've cared for. Your legacy is the safety and happiness of your family and community."
+    },
+    "executive": {
+      "meaning": "**The Executive (ESTJ)** is the **administrator**. You possess a clear vision of how things should work and the will to make it happen.\n\nYou represent **tradition** and **order**. You are excellent at managing people and things. You value honesty, dedication, and dignity.",
+      "present": "You are currently **enforcing standards**. You are taking charge of a situation that lacks direction.\n\n*   You are organizing a team or project with military precision.\n*   You are ensuring that rules are followed for the greater good.\n*   You are focused on tangible results and efficiency.",
+      "future": "Your future involves **institutional leadership**.\n\nYou are a pillar of your community. You will likely hold positions of high responsibility. Your path is to build and maintain the structures that allow society to function."
+    },
+    "consul": {
+      "meaning": "**The Consul (ESFJ)** is the **host** of the world. You are popular, social, and deeply caring.\n\nYou love people. You are the first to offer help and the organizer of every gathering. You value **harmony** and are sensitive to the feelings of others.",
+      "present": "You are currently **connecting people**. You are ensuring that everyone feels included and valued.\n\n*   You are planning events or gathering people together.\n*   You are mediating conflicts to restore harmony.\n*   You are providing practical support to your friends.",
+      "future": "This implies a future of **social abundance**.\n\nYou will never be alone. Your life will be rich with relationships and community respect. Your warmth creates a network of support that will sustain you forever."
+    },
+    "virtuoso": {
+      "meaning": "**The Virtuoso (ISTP)** is the **craftsman**. You explore the world with your hands and your cool, rational mind.\n\nYou are a **troubleshooter**. You are quiet, observational, and master of tools. You move from project to project, learning how the world works by taking it apart.",
+      "present": "You are currently **mastering a skill**. You are focused on a hands-on project or problem.\n\n*   You are experimenting with trial and error.\n*   You are solving a crisis with calm, rapid action.\n*   You are seeking freedom from rules and constraints.",
+      "future": "Your future is one of **mastery**.\n\nYou will become the person who can fix anything. Your independence and skill will allow you to navigate any situation. You are the ultimate survivor and creator."
+    },
+    "adventurer": {
+      "meaning": "**The Adventurer (ISFP)** is the **artist**. You live in a colorful, sensual world, inspired by connections with people and ideas.\n\nYou are a **free soul**. You break norms not to be disruptive, but to be yourself. You are gentle, passionate, and deeply in touch with your aesthetic sense.",
+      "present": "You are currently **expressing yourself**. You are exploring who you are through experiences.\n\n*   You are experimenting with your style or art.\n*   You are avoiding commitments that feel stifling.\n*   You are living in the moment and enjoying beauty.",
+      "future": "This implies a future of **unique creation**.\n\nYour life will be your masterpiece. You will inspire others by showing them how to find beauty in the everyday. Your path is to stay true to your own rhythm."
+    },
+    "entrepreneur": {
+      "meaning": "**The Entrepreneur (ESTP)** is the **dynamo**. You live on the edge, full of energy and action.\n\nYou are a **risk-taker**. You are the smartest person in the room when it comes to reading people and situations instantly. You leap before you look, and you fix things as you go.",
+      "present": "You are currently **taking action**. You are diving headfirst into a new opportunity.\n\n*   You are networking and using your charisma.\n*   You are solving immediate problems with clever improvisation.\n*   You are seeking excitement and tangible rewards.",
+      "future": "Your future involves **bold success**.\n\nYou are a natural mover and shaker. You will likely build businesses or lead ventures that require quick thinking. Your energy will open doors that are closed to others."
+    },
+    "entertainer": {
+      "meaning": "**The Entertainer (ESFP)** is the **star**. You love the spotlight and life is your stage.\n\nYou are **spontaneous**, energetic, and enthusiastic. You make life fun for everyone around you. You have a huge heart and love to encourage others.",
+      "present": "You are currently **performing**. You are the center of attention and bringing energy to a group.\n\n*   You are living for the now and encouraging others to join you.\n*   You are using your social skills to smooth over difficulties.\n*   You are seeking joy and shared experiences.",
+      "future": "This implies a future of **joyful impact**.\n\nYou bring light wherever you go. Your legacy will be the smiles and laughter you created. You remind the world that life is meant to be enjoyed."
+    }
+  }
+}

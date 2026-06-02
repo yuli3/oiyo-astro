@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Analizador de Patrones de Sueño",
+    "description": "Analiza tus patrones de sueño y mejora la calidad de tu descanso."
+  },
+  "landing": {
+    "title": "Analizador de Patrones de Sueño",
+    "subtitle": "El primer paso hacia un mejor descanso",
+    "cta": "Iniciar Análisis"
+  },
+  "result": {
+    "loading": "Cargando resultados..."
+  }
+}

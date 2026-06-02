@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "hero": "영웅",
+    "oracle": "신탁",
+    "ontology": "존재론",
+    "vault": "둥근 천장",
+    "growth": "성장"
+  },
+  "labels": {
+    "ascend": "오르다",
+    "celestialChart": "천체도",
+    "archives": "아카이브",
+    "evolution": "진화"
+  },
+  "growth": {
+    "full": "완전 성장",
+    "unfinished": "다듬지 않은",
+    "fullDesc": "완전한 성장 경로.",
+    "unfinishedDesc": "진행 중인 경로입니다.",
+    "review": "검토",
+    "discover": "발견하기"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "mayan": {
+    "systemName": "Mayan Calendar",
+    "narrative": "Mayan Narrative",
+    "solarSeal": "Solar Seal",
+    "tone": "Galactic Tone"
+  },
+  "celtic": {
+    "systemName": "Celtic Tree Calendar",
+    "narrative": "Celtic Narrative",
+    "treeSign": "Tree Sign",
+    "ogham": "Ogham Symbol"
+  }
+}

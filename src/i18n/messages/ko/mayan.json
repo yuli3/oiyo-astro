@@ -1,0 +1,230 @@
+{
+  "systemName": "마야 드림스펠",
+  "narrative": "은하계 동기화",
+  "solarSeal": "솔라 씰",
+  "tone": "은하계 톤",
+  "title": "마야 점성술",
+  "description": "은하 서명의 Dreamspell/Tzolkin 시스템.",
+  "toneOf": "{힘}의 힘",
+  "kin": "킨 {kin}",
+  "ariaLabel": "마야 킨: {tone} {essence}의 음색, {seal} 봉인.",
+  "affirmation": "나는 {sealAction}을(를) 위해 {tonePower}했습니다. 나는 {toneEssence}의 {toneName} 톤으로 {sealEssence}의 {sealOutput}을 봉인합니다.",
+  "daily_wisdom": {
+    "intro": "마야 달력에 따르면 오늘은 {title}의 날입니다. {keyword}에 집중하세요."
+  },
+  "tones": {
+    "magnetic": {
+      "name": "자기",
+      "essence": "목적",
+      "power": "통합",
+      "action": "끌어 들이다"
+    },
+    "lunar": {
+      "name": "달의",
+      "essence": "도전",
+      "power": "편광",
+      "action": "안정화"
+    },
+    "electric": {
+      "name": "전기 같은",
+      "essence": "서비스",
+      "power": "활성화",
+      "action": "노예"
+    },
+    "selfExisting": {
+      "name": "자체 존재",
+      "essence": "형태",
+      "power": "정의",
+      "action": "측정하다"
+    },
+    "overtone": {
+      "name": "상음",
+      "essence": "발광",
+      "power": "권한 부여",
+      "action": "명령"
+    },
+    "rhythmic": {
+      "name": "리듬",
+      "essence": "평등",
+      "power": "정리",
+      "action": "균형"
+    },
+    "resonant": {
+      "name": "공명",
+      "essence": "조율",
+      "power": "채널",
+      "action": "고무하다"
+    },
+    "galactic": {
+      "name": "은하계",
+      "essence": "진실성",
+      "power": "조화",
+      "action": "모델"
+    },
+    "solar": {
+      "name": "태양광",
+      "essence": "의도",
+      "power": "맥박",
+      "action": "깨닫다"
+    },
+    "planetary": {
+      "name": "지구의",
+      "essence": "표명",
+      "power": "완벽",
+      "action": "생산하다"
+    },
+    "spectral": {
+      "name": "유령 같은",
+      "essence": "해방",
+      "power": "용해",
+      "action": "풀어 주다"
+    },
+    "crystal": {
+      "name": "결정",
+      "essence": "협력",
+      "power": "헌신",
+      "action": "보편화하다"
+    },
+    "cosmic": {
+      "name": "질서 있는",
+      "essence": "있음",
+      "power": "인내",
+      "action": "초월"
+    }
+  },
+  "seals": {
+    "dragon": {
+      "name": "용",
+      "essence": "존재",
+      "power": "육성",
+      "action": "출생"
+    },
+    "wind": {
+      "name": "바람",
+      "essence": "영혼",
+      "power": "소통",
+      "action": "호흡"
+    },
+    "night": {
+      "name": "밤",
+      "essence": "풍부",
+      "power": "꿈",
+      "action": "직관"
+    },
+    "seed": {
+      "name": "씨앗",
+      "essence": "개화",
+      "power": "대상",
+      "action": "의식"
+    },
+    "serpent": {
+      "name": "뱀",
+      "essence": "생명력",
+      "power": "생존",
+      "action": "본능"
+    },
+    "worldbridger": {
+      "name": "월드브리저",
+      "essence": "기회",
+      "power": "균등화",
+      "action": "죽음"
+    },
+    "hand": {
+      "name": "손",
+      "essence": "완수",
+      "power": "지식",
+      "action": "치유"
+    },
+    "star": {
+      "name": "별",
+      "essence": "우아",
+      "power": "아름다움",
+      "action": "미술"
+    },
+    "moon": {
+      "name": "달",
+      "essence": "유니버셜 워터",
+      "power": "정화",
+      "action": "흐름"
+    },
+    "dog": {
+      "name": "개",
+      "essence": "충의",
+      "power": "사랑",
+      "action": "마음"
+    },
+    "monkey": {
+      "name": "원숭이",
+      "essence": "환각",
+      "power": "연극",
+      "action": "마법"
+    },
+    "human": {
+      "name": "인간",
+      "essence": "지혜",
+      "power": "영향",
+      "action": "자유 의지"
+    },
+    "skywalker": {
+      "name": "스카이워커",
+      "essence": "각성",
+      "power": "탐색",
+      "action": "공간"
+    },
+    "wizard": {
+      "name": "마법사",
+      "essence": "수용성",
+      "power": "매혹",
+      "action": "시대를 초월한"
+    },
+    "eagle": {
+      "name": "독수리",
+      "essence": "정신",
+      "power": "생성",
+      "action": "비전"
+    },
+    "warrior": {
+      "name": "전사",
+      "essence": "대담",
+      "power": "질문",
+      "action": "지능"
+    },
+    "earth": {
+      "name": "지구",
+      "essence": "동시성",
+      "power": "진화",
+      "action": "항해"
+    },
+    "mirror": {
+      "name": "거울",
+      "essence": "주문하다",
+      "power": "반영",
+      "action": "끝없는"
+    },
+    "storm": {
+      "name": "폭풍",
+      "essence": "자가발전",
+      "power": "촉매작용",
+      "action": "에너지"
+    },
+    "sun": {
+      "name": "해",
+      "essence": "유니버설 파이어",
+      "power": "깨달음",
+      "action": "삶"
+    }
+  },
+  "void": "하루는 시간을 초월합니다. 당신은 당신 자신의 우주의 중심입니다.",
+  "mayan": {
+    "systemName": "마야 드림스펠",
+    "narrative": "은하계 동기화",
+    "solarSeal": "솔라 씰",
+    "tone": "은하계 톤"
+  },
+  "celtic": {
+    "systemName": "켈트 나무 조디악",
+    "narrative": "나무의 지혜",
+    "treeSign": "나무 표시",
+    "ogham": "오검 문자"
+  }
+}

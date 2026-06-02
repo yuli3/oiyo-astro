@@ -1,0 +1,7 @@
+{
+  "lastUpdated": "最終更新",
+  "responses": "回答",
+  "ticketNumber": "チケット番号",
+  "empty": "チケットが見つかりませんでした。",
+  "emptyMessage": "まだチケットを送信していません。"
+}

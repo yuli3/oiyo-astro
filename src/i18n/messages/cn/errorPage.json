@@ -1,0 +1,25 @@
+{
+  "404": {
+    "title": "The flow of wisdom is veiled in mist.",
+    "description": "Even in the clearest Sanctuary, fog sometimes rises. We are refocusing the path for your journey, please wait a moment.",
+    "backHome": "返回庇护广场"
+  },
+  "500": {
+    "title": "The flow of wisdom is veiled in mist.",
+    "description": "Even in the clearest Sanctuary, fog sometimes rises. We are refocusing the path for your journey, please wait a moment.",
+    "retry": "尝试重新调整"
+  },
+  "title": "智慧的流动笼罩在迷雾之中。",
+  "description": "即使在最清澈的庇护所里，有时也会升起雾气。 我们正在重新调整您的旅程路径，请稍等。",
+  "primaryAction": "再次重新调整",
+  "secondaryAction": "在网关处休息",
+  "homeButton": "返回庇护所",
+  "badgeLabel": "暂时暂停",
+  "supportPrompt": "如果雾气没有消散，请将这个共振签名传递给圣贤们。",
+  "referenceIdLabel": "共振签名",
+  "contactSupport": "寻求律师",
+  "supportEmail": "sages@oiyo.net",
+  "startTest": "旅程的开始",
+  "badge": "圣所的回声",
+  "fallbackMessage": "在宇宙的丝线中发现的暂时扭曲。"
+}

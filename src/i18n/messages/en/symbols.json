@@ -1,0 +1,53 @@
+{
+  "flowers": {
+    "cranberry": {
+      "name": "Cranberry",
+      "language": "Comfort for the heart"
+    },
+    "willow": {
+      "name": "Willow",
+      "language": "Sadness, Flexibility"
+    },
+    "carnation": {
+      "name": "Carnation",
+      "language": "Pride and Beauty"
+    }
+  },
+  "stars": {
+    "alphecca": {
+      "name": "Alphecca",
+      "meaning": "Artistic talent and success"
+    },
+    "alcyone": {
+      "name": "Alcyone",
+      "meaning": "Deep intuition and mysticism"
+    },
+    "vega": {
+      "name": "Vega",
+      "meaning": "Success"
+    }
+  },
+  "stones": {
+    "garnet": {
+      "name": "Garnet",
+      "meaning": "Friendship, Trust, Purity"
+    },
+    "emerald": {
+      "name": "Emerald",
+      "meaning": "Luck, Happiness, Rebirth"
+    }
+  },
+  "Stone": "Stone",
+  "Flower": "Flower",
+  "Star": "Star",
+  "title": "Symbols",
+  "subtitle": "Dream Symbols",
+  "searchPlaceholder": "Search symbols...",
+  "labels": {
+    "badge": "Badge",
+    "general": "General",
+    "psychological": "Psychological",
+    "spiritual": "Spiritual",
+    "related": "Related"
+  }
+}

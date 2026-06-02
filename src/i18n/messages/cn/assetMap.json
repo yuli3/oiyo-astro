@@ -1,0 +1,179 @@
+{
+  "test": {
+    "progress": "进度",
+    "submit": "提交",
+    "loading": "加载中...",
+    "selectOption": "选择选项",
+    "subtitle": "你的积蓄能维持到多少岁？",
+    "insightBullets": ["洞察力", "财务状况分析", "风险评估"],
+    "next": "下一步",
+    "previous": "上一步"
+  },
+  "meta": {
+    "title": "你的财务档案",
+    "description": "探索我们为深度财务分析设计的工具套件",
+    "keywords": "理财个性, 金钱管理, 预算, 消费习惯, 财务健康"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "📉",
+        "title": "退休后何时耗尽资产",
+        "description": "它准确预测你的钱将在什么年龄用完。",
+        "question": "我的钱能用多久？",
+        "answer": "资产寿命计算"
+      },
+      {
+        "icon": "💸",
+        "title": "反映通货膨胀率",
+        "description": "它不是简单的计算，而是显示了考虑到通货膨胀的现实未来价值。",
+        "question": "现在和未来100万韩元？",
+        "answer": "反映购买力变化"
+      },
+      {
+        "icon": "💡",
+        "title": "风险管理",
+        "description": "我们提供专家级的财务分析。",
+        "question": "你能分享一下吗？",
+        "answer": "大约需要 2-3 分钟。"
+      },
+      {
+        "icon": "🎯",
+        "title": "为退休做准备",
+        "description": "建立个性化的投资策略。",
+        "question": "你能相信它吗？",
+        "answer": "基于验证的数据。"
+      },
+      {
+        "icon": "🔥",
+        "title": "税收优化",
+        "description": "风险最小化，利润最大化。",
+        "question": "你能分享一下吗？",
+        "answer": "是的，您可以立即使用它。"
+      },
+      {
+        "icon": "⭐",
+        "title": "资产配置策略",
+        "description": "风险最小化，利润最大化。",
+        "question": "结果准确吗？",
+        "answer": "大约需要 2-3 分钟。"
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "📈",
+        "title": "如何设定回报率？",
+        "description": "通常指存款利率或标准普尔 500 指数的平均回报率 (7-8%)。",
+        "question": "多少回报率合适？",
+        "answer": "根据投资倾向设定"
+      },
+      {
+        "icon": "🏥",
+        "title": "包括医疗费吗？",
+        "description": "将其计入基本生活费用或留出一些额外的钱是个好主意。",
+        "question": "意外开支怎么办？",
+        "answer": "建议设立额外资金"
+      },
+      {
+        "icon": "💡",
+        "title": "最大化投资回报",
+        "description": "建立个性化的投资策略。",
+        "question": "你能分享一下吗？",
+        "answer": "您可以随时分享。"
+      },
+      {
+        "icon": "🎯",
+        "title": "资产配置策略",
+        "description": "帮助您实现长期财务目标。",
+        "question": "多久时间？",
+        "answer": "大约需要 2-3 分钟。"
+      },
+      {
+        "icon": "🔥",
+        "title": "风险管理",
+        "description": "建立个性化的投资策略。",
+        "question": "我该如何使用它？",
+        "answer": "是的，您可以立即使用它。"
+      },
+      {
+        "icon": "⭐",
+        "title": "最大化投资回报",
+        "description": "帮助您实现长期财务目标。",
+        "question": "你能相信它吗？",
+        "answer": "是的，您可以立即使用它。"
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "📊",
+        "title": "实时资产波动图",
+        "description": "通过直观的图表检查每年的资产变化。",
+        "question": "提供可视化？",
+        "answer": "互动图表"
+      },
+      {
+        "icon": "📱",
+        "title": "移动优化",
+        "description": "您可以随时随地轻松运行模拟。",
+        "question": "移动支持？",
+        "answer": "完美兼容"
+      },
+      {
+        "icon": "💡",
+        "title": "税收优化",
+        "description": "风险最小化，利润最大化。",
+        "question": "多久时间？",
+        "answer": "基于验证的数据。"
+      },
+      {
+        "icon": "🎯",
+        "title": "加强金融稳定",
+        "description": "风险最小化，利润最大化。",
+        "question": "我该如何使用它？",
+        "answer": "您可以随时分享。"
+      },
+      {
+        "icon": "🔥",
+        "title": "最大化投资回报",
+        "description": "获取基于数据的投资见解。",
+        "question": "我该如何使用它？",
+        "answer": "您可以随时分享。"
+      },
+      {
+        "icon": "⭐",
+        "title": "加强金融稳定",
+        "description": "风险最小化，利润最大化。",
+        "question": "你能分享一下吗？",
+        "answer": "基于验证的数据。"
+      }
+    ]
+  },
+  "result": {
+    "title": "你的财务档案",
+    "description": "探索我们为深度财务分析设计的工具套件",
+    "depletionTitle": "控制面板",
+    "warning": "Warning",
+    "safe": "Safe"
+  },
+  "subtitle": "你的积蓄能维持到多少岁？",
+  "currentAge": "当前年龄",
+  "retireAge": "退休年龄",
+  "currentAsset": "当前资产",
+  "monthlySave": "月储蓄",
+  "monthlySpend": "月支出",
+  "returnRate": "回报率",
+  "inflationRate": "通货膨胀率",
+  "age": "年龄",
+  "currencyUnit": "USD",
+  "unitSave": "(Pre-retirement, USD)",
+  "unitSpend": "(Post-retirement, PV)",
+  "chartRetire": "Retirement",
+  "chartAgeSuffix": "yrs",
+  "disclaimer": "免责声明",
+  "title": "你的财务档案",
+  "description": "探索我们为深度财务分析设计的工具套件"
+}

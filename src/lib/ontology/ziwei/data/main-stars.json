@@ -1,0 +1,156 @@
+[
+  {
+    "id": "zi_wei",
+    "name": "紫微",
+    "englishName": "The Emperor",
+    "element": "Earth",
+    "polarity": "Yin",
+    "quality": "North Star",
+    "keywords": ["Leadership", "Dignity", "Responsibility"],
+    "intro": "The supreme ruler of the star map.",
+    "lore": "Zi Wei is the Polaris, the motionless center representing authority."
+  },
+  {
+    "id": "tian_ji",
+    "name": "天機",
+    "englishName": "The Strategist",
+    "element": "Wood",
+    "polarity": "Yin",
+    "quality": "North Star",
+    "keywords": ["Intelligence", "Strategy", "Calculation"],
+    "intro": "The divine advisor.",
+    "lore": "Tian Ji governs wisdom, travel, and the kindness of siblings."
+  },
+  {
+    "id": "tai_yang",
+    "name": "太陽",
+    "englishName": "The Sun",
+    "element": "Fire",
+    "polarity": "Yang",
+    "quality": "South Star",
+    "keywords": ["Radiance", "Generosity", "Fame"],
+    "intro": "The source of light and energy.",
+    "lore": "Tai Yang represents outward expansion, philanthropy, and masculine figures."
+  },
+  {
+    "id": "wu_qu",
+    "name": "武曲",
+    "englishName": "The Finance Star",
+    "element": "Metal",
+    "polarity": "Yin",
+    "quality": "North Star",
+    "keywords": ["Wealth", "Action", "Decisiveness"],
+    "intro": "The treasurer and warrior.",
+    "lore": "Wu Qu governs financial action, mining, and disciplined execution."
+  },
+  {
+    "id": "tian_tong",
+    "name": "天同",
+    "englishName": "The Pleasure Star",
+    "element": "Water",
+    "polarity": "Yang",
+    "quality": "South Star",
+    "keywords": ["Contentment", "Childlike", "Harmony"],
+    "intro": "The lucky star of longevity.",
+    "lore": "Tian Tong favors relaxation, emotional connection, and reducing conflict."
+  },
+  {
+    "id": "lian_zhen",
+    "name": "廉貞",
+    "englishName": "The Complex Star",
+    "element": "Fire",
+    "polarity": "Yin",
+    "quality": "North Star",
+    "keywords": ["Passion", "Precision", "Intensity"],
+    "intro": "The star of intricate relations.",
+    "lore": "Lian Zhen governs electronic precision, intense emotions, and political maneuvering."
+  },
+  {
+    "id": "tian_fu",
+    "name": "天府",
+    "englishName": "The Treasury",
+    "element": "Earth",
+    "polarity": "Yang",
+    "quality": "South Star",
+    "keywords": ["Stability", "Management", "Caution"],
+    "intro": "The celestial warehouse.",
+    "lore": "Tian Fu represents accumulating wealth, prudent management, and conservative leadership."
+  },
+  {
+    "id": "tai_yin",
+    "name": "太陰",
+    "englishName": "The Moon",
+    "element": "Water",
+    "polarity": "Yin",
+    "quality": "North Star",
+    "keywords": ["Intuition", "Accumulation", "Gentleness"],
+    "intro": "The essence of feminine energy.",
+    "lore": "Tai Yin governs real estate, subtle emotions, and feminine figures."
+  },
+  {
+    "id": "tan_lang",
+    "name": "貪狼",
+    "englishName": "The Wolf",
+    "element": "Wood",
+    "polarity": "Yang",
+    "quality": "North Star",
+    "keywords": ["Desire", "Socializing", "Curiosity"],
+    "intro": "The star of attraction.",
+    "lore": "Tan Lang governs desires, metaphysics, entertainment, and complex social webs."
+  },
+  {
+    "id": "ju_men",
+    "name": "巨門",
+    "englishName": "The Orator",
+    "element": "Water",
+    "polarity": "Yin",
+    "quality": "North Star",
+    "keywords": ["Communication", "Analysis", "Skepticism"],
+    "intro": "The giant gate of speech.",
+    "lore": "Ju Men governs verbal ability, legal disputes, and uncovering hidden truths."
+  },
+  {
+    "id": "tian_xiang",
+    "name": "天相",
+    "englishName": "The General",
+    "element": "Water",
+    "polarity": "Yang",
+    "quality": "South Star",
+    "keywords": ["Loyalty", "Service", "Image"],
+    "intro": "The sealkeeper and supporter.",
+    "lore": "Tian Xiang governs support roles, clothing, appearance, and mediation."
+  },
+  {
+    "id": "tian_liang",
+    "name": "天梁",
+    "englishName": "The Sage",
+    "element": "Earth",
+    "polarity": "Yang",
+    "quality": "South Star",
+    "keywords": ["Wisdom", "Protection", "Longevity"],
+    "intro": "The problem solver.",
+    "lore": "Tian Liang turns chaos into order, representing medicine, consulting, and elder guidance."
+  },
+  {
+    "id": "qi_sha",
+    "name": "七殺",
+    "englishName": "The Power Star",
+    "element": "Metal",
+    "polarity": "Yang",
+    "quality": "South Star",
+    "keywords": ["Action", "Power", "Risk-taking"],
+    "intro": "The commander on the field.",
+    "lore": "Qi Sha is the star of solitary power, traversing borders and establishing new territories."
+  },
+  {
+    "id": "po_jun",
+    "name": "破軍",
+    "englishName": "The Pioneer",
+    "element": "Water",
+    "polarity": "Yin",
+    "quality": "North Star",
+    "keywords": ["Innovation", "Destruction", "Change"],
+    "intro": "The vanguard of revolution.",
+    "lore": "Po Jun breaks existing structures to build new ones, governing huge shifts and consumption."
+  }
+]

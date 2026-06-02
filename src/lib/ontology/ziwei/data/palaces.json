@@ -1,0 +1,122 @@
+[
+  {
+    "key": "life",
+    "name": "Life",
+    "cnName": "命宮",
+    "koName": "명궁",
+    "description": {
+      "en": "The core essence of the self, destiny, and overall life trajectory.",
+      "ko": "나의 본질, 운명의 큰 흐름, 성격과 외모를 주관하는 가장 중요한 궁."
+    }
+  },
+  {
+    "key": "siblings",
+    "name": "Siblings",
+    "cnName": "兄弟宮",
+    "koName": "형제궁",
+    "description": {
+      "en": "Relationships with siblings, close friends, and peers.",
+      "ko": "형제, 자매, 그리고 형제처럼 가까운 동료와의 관계."
+    }
+  },
+  {
+    "key": "spouse",
+    "name": "Spouse",
+    "cnName": "夫妻宮",
+    "koName": "부처궁",
+    "description": {
+      "en": "Marriage, romantic partners, and emotional intimacy.",
+      "ko": "배우자, 연인, 결혼 생활과 애정운."
+    }
+  },
+  {
+    "key": "children",
+    "name": "Children",
+    "cnName": "子女宮",
+    "koName": "자녀궁",
+    "description": {
+      "en": "Children, subordinates, creativity, and sexual life.",
+      "ko": "자녀와의 관계, 부하 직원, 창작 활동, 그리고 성적인 에너지."
+    }
+  },
+  {
+    "key": "wealth",
+    "name": "Wealth",
+    "cnName": "財帛宮",
+    "koName": "재백궁",
+    "description": {
+      "en": "Financial luck, money management style, and sources of income.",
+      "ko": "재물운, 돈을 버는 방식, 경제적 가치관."
+    }
+  },
+  {
+    "key": "health",
+    "name": "Health",
+    "cnName": "疾厄宮",
+    "koName": "질액궁",
+    "description": {
+      "en": "Physical constitution, innate health weaknesses, and hidden potential.",
+      "ko": "타고난 체질, 건강상의 취약점, 잠재된 질병."
+    }
+  },
+  {
+    "key": "travel",
+    "name": "Travel",
+    "cnName": "遷移宮",
+    "koName": "천이궁",
+    "description": {
+      "en": "External environment, travel luck, and public image.",
+      "ko": "외부 활동, 여행, 이사, 대외적인 이미지와 사회적 적응력."
+    }
+  },
+  {
+    "key": "friends",
+    "name": "Friends",
+    "cnName": "交友宮",
+    "koName": "노복궁",
+    "description": {
+      "en": "Subordinates, employees, broad social circles, and support networks.",
+      "ko": "부하, 고용인, 넓은 의미의 대인 관계와 인맥."
+    }
+  },
+  {
+    "key": "career",
+    "name": "Career",
+    "cnName": "官祿宮",
+    "koName": "관록궁",
+    "description": {
+      "en": "Professional path, career achievements, and academic success.",
+      "ko": "직업, 사업, 학업 성취, 사회적 지위."
+    }
+  },
+  {
+    "key": "property",
+    "name": "Property",
+    "cnName": "田宅宮",
+    "koName": "전택궁",
+    "description": {
+      "en": "Real estate, home environment, family heritage, and savings.",
+      "ko": "부동산, 주거 환경, 가문의 유산, 저축."
+    }
+  },
+  {
+    "key": "mental",
+    "name": "Mental",
+    "cnName": "福德宮",
+    "koName": "복덕궁",
+    "description": {
+      "en": "Mental well-being, spiritual interests, hobbies, and inner happiness.",
+      "ko": "정신적인 만족, 취미, 영성, 내면의 행복과 복."
+    }
+  },
+  {
+    "key": "parents",
+    "name": "Parents",
+    "cnName": "父母宮",
+    "koName": "부모궁",
+    "description": {
+      "en": "Parents, elders, superiors, and correct genetic inheritance.",
+      "ko": "부모님, 윗사람, 상사와의 관계, 그리고 유전적 특성."
+    }
+  }
+]

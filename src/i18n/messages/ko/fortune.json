@@ -1,0 +1,336 @@
+{
+  "chineseZodiac": {
+    "title": "Numerology",
+    "description": "Life path",
+    "accuracy": "높은",
+    "duration": "빠른"
+  },
+  "numerology": {
+    "title": "수비학",
+    "description": "생활 경로",
+    "accuracy": "높은",
+    "duration": "빠른"
+  },
+  "primal-origin": {
+    "landing": {
+      "badge": "궁극적인 계시",
+      "title": "The Primal Origin",
+      "subtitle": "Unlock your digital seal and reveal your destiny",
+      "cta": "나의 기원을 밝혀라",
+      "features": {
+        "triple": {
+          "title": "The Primal Origin",
+          "desc": "How your blood type influences your cosmic traits and personality."
+        },
+        "celestial": {
+          "title": "The Primal Origin",
+          "desc": "How your blood type influences your cosmic traits and personality."
+        },
+        "genetic": {
+          "title": "The Primal Origin",
+          "desc": "혈액형이 우주적 특성과 성격에 어떻게 영향을 미치는지."
+        }
+      }
+    },
+    "input": {
+      "title": "원시적 기원",
+      "subtitle": "디지털 봉인을 풀고 운명을 밝혀보세요",
+      "nameLabel": "이름(선택사항)",
+      "namePlaceholder": "당신의 이름",
+      "genderLabel": "성별",
+      "male": "남성",
+      "female": "여성",
+      "birthDateLabel": "생년월일",
+      "birthTimeLabel": "출생 시간",
+      "bloodTypeLabel": "혈액형",
+      "submitButton": "나의 기원을 밝혀라",
+      "decrypting": "Origin을 해독하는 중..."
+    }
+  },
+  "T": "티",
+  "dailyLucky": {
+    "back": "뒤쪽에",
+    "colors": {
+      "beige": "베이지",
+      "black": "검은색",
+      "gold": "금",
+      "green": "녹색",
+      "mint": "박하",
+      "navy": "해군",
+      "pink": "분홍색",
+      "purple": "보라",
+      "red": "빨간색",
+      "sky": "하늘색",
+      "white": "하얀색"
+    },
+    "directions": {
+      "east": "동쪽",
+      "north": "북쪽",
+      "northeast": "북동",
+      "northwest": "북서",
+      "south": "남쪽",
+      "southeast": "남동",
+      "southwest": "남서",
+      "west": "서쪽"
+    },
+    "footer": "일일안내",
+    "items": {
+      "book": "책",
+      "cap": "캡",
+      "coffee": "커피",
+      "coin": "동전",
+      "earring": "귀걸이",
+      "glasses": "안경",
+      "headphones": "헤드폰",
+      "key": "열쇠",
+      "mirror": "거울",
+      "pen": "펜",
+      "perfume": "향수",
+      "phone": "핸드폰",
+      "plant": "식물",
+      "ring": "반지",
+      "sneakers": "운동화",
+      "umbrella": "우산",
+      "watch": "보다"
+    },
+    "keyword": "일일 키워드",
+    "keywords": {
+      "cleaning": "청소",
+      "connection": "연결",
+      "courage": "용기",
+      "creativity": "창의성",
+      "focus": "집중",
+      "kindness": "친절",
+      "patience": "인내심",
+      "rest": "나머지",
+      "savings": "저금",
+      "silence": "고요"
+    },
+    "meta": {
+      "description": "You need rest",
+      "keywords": "fortune",
+      "title": "The Primal Origin"
+    },
+    "result": {
+      "description": "You need rest",
+      "title": "The Primal Origin"
+    },
+    "sharePersonalizedPrefix": "내 행운을 빌어요",
+    "shareTemplate": "이것을 확인해보세요",
+    "subtitle": "Unlock your digital seal and reveal your destiny",
+    "test": {
+      "insightBullets": ["심오한 통찰력"],
+      "loading": "로드 중...",
+      "next": "다음",
+      "previous": "이전의",
+      "progress": "진전",
+      "selectOption": "선택하기",
+      "submit": "제출하기"
+    },
+    "title": "The Primal Origin",
+    "yourLucky": "당신의 행운의 아이템",
+    "zodiac": {
+      "aquarius": "물병자리",
+      "aries": "양자리",
+      "cancer": "암",
+      "capricorn": "염소자리",
+      "gemini": "쌍둥이자리",
+      "leo": "사자 별자리",
+      "libra": "천칭",
+      "pisces": "물고기",
+      "sagittarius": "궁수",
+      "scorpio": "천갈궁",
+      "taurus": "황소자리",
+      "virgo": "처녀 자리"
+    }
+  },
+  "dailyOracle": {
+    "hub": {
+      "luckyDesc": "행운을 확인해보세요",
+      "luckyTitle": "행운의 아이템",
+      "personaDesc": "당신의 일상 페르소나",
+      "personaTitle": "페르소나",
+      "subtitle": "Unlock your digital seal and reveal your destiny",
+      "tabs": {
+        "lucky": "운이 좋은",
+        "oracle": "신탁",
+        "personality": "성격"
+      },
+      "title": "The Primal Origin"
+    },
+    "identify": {
+      "button": "시작",
+      "description": "You need rest",
+      "title": "The Primal Origin"
+    },
+    "loading": "Loading...",
+    "share": "공유하기",
+    "subtitle": "Unlock your digital seal and reveal your destiny",
+    "title": "The Primal Origin"
+  },
+  "dailyReading": {
+    "cards": {
+      "refresh": "새로 고치다",
+      "reminder": "Reminder",
+      "subtitle": "Unlock your digital seal and reveal your destiny"
+    },
+    "hero": {
+      "cta": "Unveil My Origin",
+      "eyebrow": "오늘",
+      "subtitle": "Unlock your digital seal and reveal your destiny"
+    },
+    "meta": {
+      "description": "You need rest",
+      "keywords": "fortune",
+      "title": "The Primal Origin"
+    },
+    "summary": {
+      "energy": "에너지",
+      "focus": "집중",
+      "luckyColor": "색상"
+    }
+  },
+  "days": "날",
+  "description": "You need rest",
+  "energyScore": "에너지 점수",
+  "feature1Desc": "특징 1",
+  "feature1Title": "제목 1",
+  "feature2Desc": "특징 2",
+  "feature2Title": "제목 2",
+  "feature3Desc": "특징 3",
+  "feature3Title": "제목 3",
+  "historySubtitle": "지난 독서",
+  "historyTitle": "역사",
+  "hub": {
+    "cta": "Unveil My Origin",
+    "description": "You need rest",
+    "subtitle": "Unlock your digital seal and reveal your destiny",
+    "title": "The Primal Origin"
+  },
+  "longestStreak": "최장 연속",
+  "meta": {
+    "description": "You need rest",
+    "keywords": "행운",
+    "subtitle": "Unlock your digital seal and reveal your destiny",
+    "title": "The Primal Origin"
+  },
+  "mostCommon": "가장 일반적인",
+  "noData": "데이터 없음",
+  "question": "질문",
+  "questions": {
+    "q1": {
+      "options": {
+        "o1": "옵션 1",
+        "o2": "옵션 2",
+        "o3": "옵션 3",
+        "o4": "옵션 4"
+      },
+      "text": "Question 5"
+    },
+    "q2": {
+      "options": {
+        "o1": "옵션 1",
+        "o2": "옵션 2",
+        "o3": "옵션 3",
+        "o4": "옵션 4"
+      },
+      "text": "Question 5"
+    },
+    "q3": {
+      "options": {
+        "o1": "옵션 1",
+        "o2": "옵션 2",
+        "o3": "옵션 3",
+        "o4": "옵션 4"
+      },
+      "text": "Question 5"
+    },
+    "q4": {
+      "options": {
+        "o1": "옵션 1",
+        "o2": "옵션 2",
+        "o3": "옵션 3",
+        "o4": "옵션 4"
+      },
+      "text": "Question 5"
+    },
+    "q5": {
+      "options": {
+        "o1": "옵션 1",
+        "o2": "옵션 2",
+        "o3": "옵션 3",
+        "o4": "옵션 4"
+      },
+      "text": "질문 5"
+    }
+  },
+  "reminder": "알림",
+  "reminderText": "잊지 마세요",
+  "result": {
+    "description": "You need rest",
+    "title": "The Primal Origin"
+  },
+  "results": {
+    "balanced": {
+      "advice": "Take a break",
+      "description": "You need rest",
+      "traits": {
+        "0": "Peaceful",
+        "1": "Relaxed",
+        "2": "Slow"
+      },
+      "type": "Restful"
+    },
+    "energetic": {
+      "advice": "Take a break",
+      "description": "You need rest",
+      "traits": {
+        "0": "Peaceful",
+        "1": "Relaxed",
+        "2": "Slow"
+      },
+      "type": "Restful"
+    },
+    "reflective": {
+      "advice": "Take a break",
+      "description": "You need rest",
+      "traits": {
+        "0": "Peaceful",
+        "1": "Relaxed",
+        "2": "Slow"
+      },
+      "type": "Restful"
+    },
+    "restful": {
+      "advice": "휴식을 취하세요",
+      "description": "휴식이 필요해요",
+      "traits": {
+        "0": "평화로운",
+        "1": "편안한",
+        "2": "느린"
+      },
+      "type": "평안한"
+    }
+  },
+  "shareResult": "결과 공유",
+  "shareTitle": "공유하기",
+  "startDaily": "매일 시작",
+  "subtitle": "Unlock your digital seal and reveal your destiny",
+  "takeOtherTests": "다른 테스트를 받아보세요",
+  "test": {
+    "insightBullets": ["심오한 통찰력"],
+    "loading": "로드 중...",
+    "next": "다음",
+    "previous": "이전의",
+    "progress": "진전",
+    "selectOption": "선택하기",
+    "submit": "제출하기"
+  },
+  "title": "The Primal Origin",
+  "todayAdvice": "오늘의 조언",
+  "totalDays": "총 일수",
+  "trendChart": "추세 차트",
+  "uniqueTypes": "고유 유형",
+  "viewHistory": "기록 보기",
+  "welcomeTitle": "환영"
+}

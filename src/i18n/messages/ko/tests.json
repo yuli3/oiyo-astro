@@ -1,0 +1,480 @@
+{
+  "color": {
+    "meta": {
+      "keywords": "성격, 자기발견, 통찰",
+      "title": "심층 분석 보고서",
+      "description": "다차원적인 심층 분석을 통해 잠재된 잠재력을 탐색해보세요."
+    },
+    "types": {
+      "subtitle": "심층 분석 보고서",
+      "red": {
+        "name": "역동적인 리더",
+        "description": "심층 역량 다이어그램"
+      },
+      "blue": {
+        "name": "사려 깊은 분석가",
+        "description": "데이터로 입증된 실제 경향"
+      },
+      "green": {
+        "name": "조화로운 서포터",
+        "description": "심층 역량 다이어그램"
+      },
+      "yellow": {
+        "name": "열정적인 창조자",
+        "description": "AI가 제안하는 성장 로드맵"
+      },
+      "title": "통찰력 요약"
+    },
+    "hero": {
+      "subtitle": "심층 분석 보고서",
+      "cta": "보다 정교한 분석을 통해 당신만의 질감을 발견해보세요.",
+      "badge": "🎨 심리학 기반",
+      "title": "성격 분석",
+      "description": "AI가 제안하는 성장 로드맵"
+    },
+    "benefits": {
+      "subtitle": "심층 분석 보고서",
+      "items": {
+        "0": {
+          "title": "통찰력 요약",
+          "description": "데이터로 입증된 실제 경향"
+        },
+        "1": {
+          "title": "통찰력 요약",
+          "description": "데이터로 입증된 실제 경향"
+        },
+        "2": {
+          "title": "통찰력 요약",
+          "description": "데이터로 입증된 실제 경향"
+        },
+        "3": {
+          "title": "통찰력 요약",
+          "description": "심층 역량 다이어그램"
+        }
+      },
+      "title": "통찰력 요약"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "자주 묻는 질문",
+          "answer": "가이드 세부정보"
+        },
+        "1": {
+          "question": "자주 묻는 질문",
+          "answer": "가이드 세부정보"
+        },
+        "2": {
+          "question": "자주 묻는 질문",
+          "answer": "가이드 세부정보"
+        },
+        "3": {
+          "question": "자주 묻는 질문",
+          "answer": "가이드 세부정보"
+        }
+      },
+      "title": "통찰력 요약"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "시그니처 강도",
+          "description": "종합적인 분석과 개인화된 통찰력",
+          "question": "당신의 선택을 이끄는 요인은 무엇입니까?",
+          "answer": "당신의 내면의 가치는 당신의 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "피벗 포인트",
+          "description": "더 나은 결과를 위한 데이터 기반 권장 사항",
+          "question": "당신의 선택을 이끄는 요인은 무엇입니까?",
+          "answer": "당신의 내면의 가치는 당신의 일상적인 행동을 안내합니다."
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "breakdown": "고장",
+        "strengths": "강점",
+        "growthAreas": "성장 분야",
+        "colorPalette": "컬러 팔레트",
+        "careerSuggestions": "직업 제안",
+        "relationshipTips": "관계 팁"
+      },
+      "tabs": {
+        "traits": "특징",
+        "colors": "그림 물감",
+        "career": "직업",
+        "relationships": "관계"
+      },
+      "retake": "재응시 분석",
+      "title": "상세 분석 결과",
+      "description": "다차원적인 심층 분석을 통해 잠재된 잠재력을 탐색해보세요."
+    },
+    "test": {
+      "title": "통찰력 요약",
+      "finish": "마치다",
+      "progress": "진전",
+      "submit": "데스티니 보고서 열기",
+      "loading": "로드 중",
+      "selectOption": "선택하기",
+      "insightBullets": ["당신의 진정한 자아의 별자리를 지도로 그려보세요."],
+      "previous": "이전의",
+      "next": "다음"
+    }
+  },
+  "bloodType": {
+    "meta": {
+      "keywords": "성격, 자기발견, 통찰",
+      "compatibilityTitle": "혈액형 적합도 분석 | 완벽한 혈액형 매칭",
+      "compatibilityDescription": "다차원적인 심층 분석을 통해 잠재된 잠재력을 탐색해보세요.",
+      "title": "심층 분석 보고서",
+      "description": "다차원적인 심층 분석을 통해 잠재된 잠재력을 탐색해보세요."
+    },
+    "hero": {
+      "subtitle": "심층 분석 보고서",
+      "icon": "🧭"
+    },
+    "test": {
+      "selectBloodType": "혈액형을 선택하세요",
+      "personality": {
+        "title": "통찰력 요약",
+        "traits": "특징",
+        "positive": "긍정적인",
+        "challenges": "도전과제",
+        "button": "데스티니 보고서 열기"
+      },
+      "compatibility": {
+        "button": "데스티니 보고서 열기",
+        "title": "통찰력 요약",
+        "my": "나의",
+        "partner": "파트너",
+        "result": "결과 제목",
+        "score": "점수"
+      },
+      "share": "공유하기",
+      "retake": "재응시 분석",
+      "progress": "진전",
+      "submit": "데스티니 보고서 열기",
+      "loading": "로드 중",
+      "selectOption": "선택하기",
+      "insightBullets": ["당신의 진정한 자아의 별자리를 지도로 그려보세요."],
+      "next": "다음",
+      "previous": "이전의"
+    },
+    "Copied to clipboard!": "클립보드에 복사되었습니다!",
+    "result": {
+      "title": "상세 분석 결과",
+      "description": "다차원적인 심층 분석을 통해 잠재된 잠재력을 탐색해보세요."
+    },
+    "Link copied to clipboard!": "링크가 클립보드에 복사되었습니다!"
+  },
+  "animal": {
+    "meta": {
+      "title": "동물 성격 테스트",
+      "description": "다차원적인 심층 분석을 통해 잠재된 잠재력을 탐색해보세요.",
+      "keywords": "성격, 자기발견, 통찰"
+    },
+    "hero": {
+      "title": "동물 성격 테스트",
+      "subtitle": "당신의 영혼의 동물을 찾아보세요",
+      "cta": "테스트 시작"
+    },
+    "title": "동물 성격 테스트",
+    "description": "다차원적인 심층 분석을 통해 잠재된 잠재력을 탐색해보세요.",
+    "subtitle": "심층 분석 보고서",
+    "introTitle": "내가 동물이라면 어떨까?",
+    "feature1Title": "보다 정교한 분석을 통해 당신만의 질감을 발견해보세요.",
+    "feature1Desc": "다차원적인 심층 분석을 통해 잠재된 잠재력을 탐색해보세요.",
+    "feature2Title": "상세한 분석",
+    "feature2Desc": "다차원적인 심층 분석을 통해 잠재된 잠재력을 탐색해보세요.",
+    "feature3Title": "보다 정교한 분석을 통해 당신만의 질감을 발견해보세요.",
+    "feature3Desc": "다차원적인 심층 분석을 통해 잠재된 잠재력을 탐색해보세요.",
+    "animalTypes": "다양한 동물 유형",
+    "startTest": "테스트 시작"
+  },
+  "futureSelf": {
+    "meta": {
+      "keywords": "성격, 자기발견, 통찰"
+    },
+    "hero": {
+      "eyebrow": "시간여행 연구실",
+      "subtitle": "오늘의 일상과 우선 순위를 입력하여 삶이 자연스럽게 어떻게 전개되는지에 대한 현실적인 스토리라인을 탐색하세요.",
+      "cta": "내 미래를 시뮬레이션해 보세요"
+    }
+  },
+  "career": {
+    "meta": {
+      "keywords": "RIASEC, 직업 평가, 진로 가이드, 정체성, 진로 원형",
+      "hero": {
+        "badge": "직업적 공명",
+        "subtitle": "당신의 타고난 재능이 가장 밝게 빛나는 직업 궤도를 발견해보세요."
+      },
+      "description": "RIASEC 직업 프레임워크를 통해 직업적 정체성을 심층적으로 탐구하세요.",
+      "title": "직업 공명 심층 분석"
+    },
+    "types": {
+      "subtitle": "당신의 본질과 공감하는 직업적 원형은 무엇입니까?",
+      "realistic": {
+        "name": "현실적인 빌더",
+        "emoji": "📊"
+      },
+      "investigative": {
+        "name": "탐구적인 사상가",
+        "emoji": "📊"
+      },
+      "artistic": {
+        "name": "예술 창작자",
+        "emoji": "📊"
+      },
+      "social": {
+        "name": "사회 도우미",
+        "emoji": "📊"
+      },
+      "enterprising": {
+        "name": "진취적인 설득",
+        "emoji": "📊"
+      },
+      "conventional": {
+        "name": "기존 정리함",
+        "emoji": "📊"
+      }
+    },
+    "hero": {
+      "badge": "RIASEC 경력 적성",
+      "subtitle": "당신의 타고난 재능이 가장 빛나는 전문적인 궤도를 해석합니다.",
+      "cta": "여행 시작",
+      "title": "직업 공명 분석",
+      "description": "귀하의 직업적 강점과 정체성에 대한 깊은 통찰력을 제공합니다."
+    },
+    "benefits": {
+      "subtitle": "당신의 직업적 빈도를 이해함으로써 당신은 목적이 있는 전문 지식의 세계를 우아하게 탐색할 수 있습니다.",
+      "items": [
+        {
+          "title": "코어 정렬",
+          "description": "당신의 가장 깊은 가치와 기술에 자연스럽게 공감하는 직업을 찾아보세요."
+        },
+        {
+          "title": "환경 조화",
+          "description": "당신이 진정으로 성공할 수 있는 직장 문화와 분위기를 파악하십시오."
+        },
+        {
+          "title": "전략적 명확성",
+          "description": "귀하의 직업적 성장과 장기적인 직업 유산에 대한 명확한 지도를 얻으세요."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "RIASEC 프레임워크의 본질은 무엇입니까?",
+          "answer": "이는 귀하의 성격 패턴이 직업적 환경으로 어떻게 변환되는지를 보여주는 렌즈입니다."
+        },
+        {
+          "question": "오늘 이러한 통찰력을 어떻게 활용할 수 있습니까?",
+          "answer": "현재 작업을 자연스러운 직업 리듬에 맞추면 마찰이 줄어들고 성취도가 높아집니다."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "🎯",
+          "title": "원형 식별",
+          "description": "6가지 핵심 직업 유형에 대한 귀하의 성격을 정확하게 매핑합니다."
+        },
+        {
+          "icon": "🧭",
+          "title": "방향성 통찰력",
+          "description": "가장 높은 공명을 제공하는 경로를 선택하기 위한 전략적 지침입니다."
+        }
+      ]
+    },
+    "title": "직업적 공명",
+    "description": "전문적인 연금술을 위해 설계된 심층적인 도구를 경험해보세요.",
+    "test": {
+      "scale": {
+        "1": "전혀 동의하지 않음",
+        "2": "맞지 않다",
+        "3": "중립적",
+        "4": "동의하다",
+        "5": "전적으로 동의함"
+      },
+      "title": "직업적 정렬 평가",
+      "description": "당신의 직업적 성향에 대한 명상적인 탐구.",
+      "subtitle": "당신의 타고난 재능이 가장 밝게 빛나는 직업 궤도를 발견해보세요.",
+      "rateInstructions": "각 진술을 숙고하고 그것이 당신의 진실과 어느 정도 공감하는지 선택하십시오.",
+      "progress": "탐사 진행",
+      "submit": "내 경로 확인",
+      "selectOption": "선택하세요",
+      "insightBullets": [
+        "열정과 규율이 만나는 선을 추적합니다.",
+        "당신의 직업적 운명의 반향을 들어보세요.",
+        "당신의 직업적 정체성의 파편들을 모으십시오."
+      ],
+      "next": "계속하기",
+      "previous": "이전으로",
+      "loading": "귀하의 전문적 유산을 위한 청사진을 설계합니다..."
+    },
+    "result": {
+      "title": "소명의 발견",
+      "description": "이제 귀하의 전문적 재능이 명확하게 드러났습니다.",
+      "primaryType": "지배적인 원형",
+      "allTypes": "전체 스펙트럼",
+      "careers": "권장 경로",
+      "workEnvironment": "이상적인 환경",
+      "secondaryType": "보조 원형",
+      "understanding": "전형적인 지혜",
+      "retake": "다시 반성하다"
+    }
+  },
+  "testGrid": {
+    "searchPlaceholder": "원형, 운명, 패턴을 검색하세요...",
+    "filterAll": "모두 보기",
+    "categories": {
+      "personality": "본질과 영혼"
+    },
+    "sortBy": {
+      "popularity": "대중적 공명",
+      "newest": "새로운 통찰력",
+      "time": "지속",
+      "difficulty": "지적 깊이"
+    },
+    "startTest": "여행 시작",
+    "noResults": "이 검색에 대한 에코를 찾을 수 없습니다.",
+    "clearFilters": "관점 재설정",
+    "sortPopular": "높은 공명",
+    "sortAlpha": "알파벳순",
+    "new": "새로운",
+    "trending": "더운",
+    "empty": {
+      "title": "검색결과가 없습니다",
+      "description": "다른 키워드로 검색해 보거나 필터를 조정해 보세요.",
+      "clearFilters": "필터 재설정"
+    },
+    "test": {
+      "progress": "반영 진행",
+      "submit": "내 경로 확인",
+      "loading": "당신의 진정한 모습을 비추는 거울을 닦으며...",
+      "selectOption": "당신의 진실과 공감하는 아이템을 선택하세요",
+      "insightBullets": [
+        "열정과 규율이 만나는 선을 추적합니다.",
+        "당신의 진정한 자아의 메아리를 들어보세요.",
+        "당신의 개인 정체성의 파편을 모으십시오."
+      ],
+      "next": "계속하기",
+      "previous": "되돌아보기"
+    },
+    "result": {
+      "title": "존재로의 조리개",
+      "description": "현재 공명 상태의 진단 결과입니다."
+    },
+    "meta": {
+      "title": "온톨로지 진단 | OIYO 컬렉션",
+      "description": "인간 경험을 매핑하기 위해 선별된 테스트 모음입니다.",
+      "keywords": "자기발견, 원형분석, 지혜테스트"
+    }
+  },
+  "learning": {
+    "meta": {
+      "description": "심층적인 자기 발견을 위해 설계된 다양한 신원 분석 도구를 경험해보세요.",
+      "title": "맞춤형 분석 결과",
+      "keywords": "온톨로지, OIYO, 테스트"
+    },
+    "hero": {
+      "title": "맞춤형 분석 결과",
+      "subtitle": "심층 분석 보고서",
+      "description": "심층적인 자기 발견을 위해 설계된 다양한 신원 분석 도구를 경험해보세요.",
+      "badge": "인기 있는"
+    }
+  },
+  "travel": {
+    "hero": {
+      "description": "당신의 성격에 완벽하게 어울리는 방식으로 세상을 탐험해보세요.",
+      "badge": "여행 심리학",
+      "title": "여행 경향 심층 분석",
+      "subtitle": "당신은 철저한 디자이너인가, 아니면 자유로운 영혼인가? 당신의 진정한 여행 스타일을 발견해보세요.",
+      "cta": "진단 시작"
+    },
+    "test": {
+      "title": "여행 스타일 진단",
+      "subtitle": "당신의 여행 페르소나를 찾으려면 다음 질문에 답하세요.",
+      "progress": "진전",
+      "submit": "내 운명을 밝혀라",
+      "loading": "여행 프로필을 분석하는 중...",
+      "selectOption": "옵션 선택",
+      "insightBullets": ["여행 스타일", "이상적인 동반자", "목적지 팁"],
+      "next": "다음",
+      "previous": "이전의"
+    },
+    "result": {
+      "subtitle": "분석결과",
+      "title": "귀하의 여행 프로필",
+      "description": "당신의 여행 성격에 대한 상세한 분석.",
+      "loading": "결과 생성 중...",
+      "sections": {
+        "traits": "주요 특성",
+        "destinations": "추천 여행지",
+        "packing": "포장 스타일",
+        "planning": "계획 스타일"
+      },
+      "retakeTest": "재응시 시험"
+    },
+    "types": {
+      "items": [
+        {
+          "name": "모험가",
+          "description": "새로운 경험과 스릴을 추구합니다."
+        },
+        {
+          "name": "입안자",
+          "description": "모든 것을 정리하고 준비했습니다."
+        },
+        {
+          "name": "릴랙서",
+          "description": "휴가는 전혀 아무것도 하지 않는 것을 의미합니다."
+        },
+        {
+          "name": "사진작가",
+          "description": "매 순간을 포착하는 것이 우선입니다."
+        },
+        {
+          "name": "미식가",
+          "description": "요리 경험이 여행을 정의합니다."
+        },
+        {
+          "name": "문화 탐구자",
+          "description": "역사와 지역 전통에 빠져보세요."
+        }
+      ],
+      "title": "여행자 유형"
+    },
+    "meta": {
+      "title": "여행 성향 테스트",
+      "description": "당신의 여행 스타일과 이상적인 목적지를 찾아보세요.",
+      "keywords": "여행 성격, 여행 스타일, 휴가 테스트, 여행 계획"
+    },
+    "benefits": {
+      "title": "자신의 여행 스타일을 아는 것이 중요한 이유",
+      "items": [
+        {
+          "title": "실패 방지 여행",
+          "description": "당신에게 꼭 맞는 목적지를 찾아보세요."
+        },
+        {
+          "title": "스마트 예산",
+          "description": "당신에게 중요한 것에 돈을 쓰십시오."
+        },
+        {
+          "title": "더 많은 즐거움",
+          "description": "스트레스를 줄이고 만족도를 높이세요."
+        },
+        {
+          "title": "더 나은 조화",
+          "description": "여행 동반자와의 차이점을 이해하십시오."
+        }
+      ]
+    }
+  }
+}

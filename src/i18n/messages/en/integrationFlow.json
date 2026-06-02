@@ -1,0 +1,19 @@
+{
+  "title": "Integration Flow",
+  "foundation": {
+    "title": "Foundation",
+    "description": "Build your base."
+  },
+  "alignment": {
+    "title": "Alignment",
+    "description": "Align your energy."
+  },
+  "synthesis": {
+    "title": "Synthesis",
+    "description": "Combine insights."
+  },
+  "action": {
+    "title": "Action",
+    "description": "Take action."
+  }
+}

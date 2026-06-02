@@ -1,0 +1,46 @@
+{
+  "dailyInsight": {
+    "cosmicEnergy": "[누락: dailyInsight.cosmicEnergy]",
+    "flowerOfDay": "[누락: dailyInsight.flowerOfDay]",
+    "crystalOfPower": "[누락: dailyInsight.crystalOfPower]",
+    "guidingStar": "[누락: dailyInsight.guidingStar]"
+  },
+  "composition": "구성",
+  "earthlyBranch": "지상의 가지",
+  "heavenlyStem": "천상의 줄기",
+  "meaning": "의미",
+  "modernMeaning": "현대적 해석",
+  "represents": "나타냅니다",
+  "traditionalDescription": "전통적인 설명",
+  "viewModes": {
+    "modern": "현대적인 전망",
+    "traditional": "전통적인 관점"
+  },
+  "interpretationSuffix": "해석",
+  "modern": {
+    "year": {
+      "description": "조상으로부터 물려받은 기반이자 세상에 남기는 첫 발자국입니다."
+    },
+    "month": {
+      "description": "귀하의 직업적 환경과 사회적 관계의 틀."
+    },
+    "day": {
+      "description": "당신 존재의 핵심이자 원시 에너지입니다."
+    },
+    "hour": {
+      "description": "당신이 남길 유산과 미래 잠재력의 발현."
+    }
+  },
+  "year": "연도 기둥",
+  "month": "월 기둥",
+  "day": "데이 필러",
+  "hour": "시간 기둥",
+  "yearMeaning": "당신의 뿌리와 조상의 에너지를 상징하는 해 기둥의 깊은 의미.",
+  "monthMeaning": "사회적 관계와 직업적 환경에서 표현되는 이달의 기둥의 에너지.",
+  "dayMeaning": "자아의 핵심과 본질적인 경향을 나타내는 낮기둥(Day Pillar)의 해석.",
+  "hourMeaning": "미래의 잠재력과 이후의 삶의 열매를 보여주는 시간 기둥에 대한 설명입니다.",
+  "yearRepresents": "조상, 유년기, 부모의 배경, 삶의 기반",
+  "monthRepresents": "사회성, 직업적 성취, 형제관계, 청소년기",
+  "dayRepresents": "나, 배우자, 현재환경, 중년",
+  "hourRepresents": "어린이, 노년, 내면의 욕망, 풍요로움"
+}

@@ -1,0 +1,100 @@
+{
+  "questions": [
+    {
+      "id": "amour_1",
+      "pair": ["mots", "time"],
+      "texts": {
+        "words": "Entendre des mots d’affirmation chuchotés guérit mon âme fatiguée.",
+        "time": "Partager un moment de présence indivise crée un lien sacré."
+      }
+    },
+    {
+      "id": "amour_2",
+      "pair": ["cadeaux", "acts"],
+      "texts": {
+        "gifts": "Un jeton réfléchi sert de symbole tangible de notre connexion.",
+        "acts": "Un fardeau enlevé de mes épaules est la véritable forme de soin."
+      }
+    },
+    {
+      "id": "amour_3",
+      "pair": ["touche", "time"],
+      "texts": {
+        "touch": "Une douce étreinte en dit plus long que mille mots.",
+        "time": "Marcher ensemble en silence est plus profond que la solitude."
+      }
+    },
+    {
+      "id": "amour_4",
+      "pair": ["mots", "touche"],
+      "texts": {
+        "words": "Je m'épanouis lorsque mes vertus sont reconnues et exprimées à haute voix.",
+        "touch": "Se tenir la main m’ancre dans les courants chaotiques de la vie."
+      }
+    },
+    {
+      "id": "amour_5",
+      "pair": ["acts", "time"],
+      "texts": {
+        "acts": "Je me sens chéri lorsque les obstacles quotidiens sont supprimés pour moi.",
+        "time": "J'apprécie les longues conversations ininterrompues jusque tard dans la nuit."
+      }
+    },
+    {
+      "id": "amour_6",
+      "pair": ["cadeaux", "mots"],
+      "texts": {
+        "gifts": "Je chéris les artefacts qui portent le souvenir de notre lien.",
+        "words": "Je chéris les lettres qui immortalisent nos sentiments à l’encre."
+      }
+    },
+    {
+      "id": "amour_7",
+      "pair": ["touche", "cadeaux"],
+      "texts": {
+        "touch": "La proximité physique m'assure de notre unité tacite.",
+        "gifts": "Un cadeau surprise m'assure que je suis constamment dans vos pensées."
+      }
+    },
+    {
+      "id": "amour_8",
+      "pair": ["acts", "mots"],
+      "texts": {
+        "acts": "Je fais confiance au dévouement qui se manifeste par un service dévoué.",
+        "words": "Je fais confiance à la dévotion qui s’exprime par des éloges encourageants."
+      }
+    },
+    {
+      "id": "amour_9",
+      "pair": ["time", "cadeaux"],
+      "texts": {
+        "time": "Le plus beau cadeau est la générosité de votre présence.",
+        "gifts": "Le plus beau cadeau est un objet tangible choisi avec une profonde perspicacité."
+      }
+    },
+    {
+      "id": "amour_10",
+      "pair": ["touche", "acts"],
+      "texts": {
+        "touch": "Être assis à proximité recharge mes réserves émotionnelles.",
+        "acts": "Voir une tâche accomplie pour moi recharge mes réserves émotionnelles."
+      }
+    },
+    {
+      "id": "amour_11",
+      "pair": ["mots", "cadeaux"],
+      "texts": {
+        "words": "Je me sens plus en sécurité lorsque vous verbalisez votre engagement.",
+        "gifts": "Je me sens plus en sécurité lorsque l’on se souvient d’occasions spéciales avec de grands gestes."
+      }
+    },
+    {
+      "id": "amour_12",
+      "pair": ["acts", "time"],
+      "texts": {
+        "acts": "Les actions me parlent le langage de la vraie romance.",
+        "time": "Les expériences partagées me parlent le langage de la vraie romance."
+      }
+    }
+  ]
+}

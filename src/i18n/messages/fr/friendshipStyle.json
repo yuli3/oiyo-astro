@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Kindred Resonance",
+    "resultTitle": "{titre} - Révélation",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "keywords": "résonance d'amitié, archétypes sociaux, géométrie de l'âme, Oiyo"
+  },
+  "hero": {
+    "title": "Résonance apparentée",
+    "subtitle": "Comprenez le rythme profond à travers lequel vous construisez et entretenez des liens émouvants.",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "cta": "Lancer une enquête",
+    "badge": "Your Kindred Signature"
+  },
+  "test": {
+    "insightBullets": [
+      "Découvrez les modèles uniques qui définissent votre chemin.",
+      "Illuminez les couches tacites de votre philosophie sociale.",
+      "Nourrissez le lien sacré grâce à la conscience."
+    ],
+    "progress": "Ascension de résonance",
+    "next": "Avant",
+    "previous": "Refléter",
+    "submit": "Révéler la synthèse",
+    "loading": "Distilling your social map...",
+    "selectOption": "Marquez le chemin de la vérité"
+  },
+  "result": {
+    "ai": {
+      "title": "Kindred Resonance",
+      "premium": "Rapport alchimique sur mesure",
+      "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+      "processing": "Synthétiser la dynamique...",
+      "processingKo": "Traitement...",
+      "upgrade": "Mise à niveau pour débloquer l'analyse alchimique",
+      "generate": "Générer une stratégie alchimique",
+      "complete": "Analyse sociale sacrée terminée"
+    },
+    "traits": {
+      "title": "Kindred Resonance"
+    },
+    "connections": {
+      "title": "Kindred Resonance",
+      "vibe": "Votre signature s'aligne le plus harmonieusement avec ces archétypes :",
+      "proTip": "Note de sagesse : votre fréquence complète naturellement ces archétypes, facilitant une confiance immédiate et une croissance récursive."
+    },
+    "actions": {
+      "retake": "Relancer l'étalonnage",
+      "returnHome": "Retourner à Nexus"
+    },
+    "title": "Kindred Resonance",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "loading": "Distiller votre carte sociale...",
+    "badge": "Votre signature de parenté"
+  },
+  "title": "Résonance apparentée",
+  "description": "Découvrez les couleurs et températures uniques des amitiés qui colorent votre monde."
+}

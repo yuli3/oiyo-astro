@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "blueprint": "原始蓝图 (Primal Blueprint)",
+    "archives": "宏伟档案馆 (The Grand Archives)",
+    "mythos": "全球神话 (Global Mythos)",
+    "biorhythm": "生物节律 (Biorhythm)",
+    "tuning": "和谐调律 (Harmonic Tuning)",
+    "becoming": "生成(Becoming)之道"
+  },
+  "labels": {
+    "stars": "有{count}颗星辰正在影响您的路径",
+    "moonIn": "月亮位于{sign}",
+    "sephira": "萨弗拉: {name}",
+    "lifePath": "生命路径 {number}",
+    "unknown": "未知",
+    "physical": "身体",
+    "emotional": "情绪",
+    "intellectual": "智力",
+    "dominantAura": "主导气场",
+    "dominantAuraDesc": "贯穿您灵魂的最强大的元素流向。",
+    "color": "颜色",
+    "direction": "方向",
+    "number": "数字",
+    "gemstone": "宝石",
+    "flower": "花卉",
+    "takeTest": "开始测试",
+    "viewFormula": "查看测算原理",
+    "sajuTitle": "The Celestial Formula",
+    "sajuSubtitle": "The Eight Pillars & Elemental Resonance"
+  },
+  "explanation": {
+    "wolf": "晚间能量达到巅峰，具有创造力且强烈的特质。",
+    "ectomorph": "具有卓越的精神专注力，敏感且精炼的能量体系。",
+    "becomingValue": "共振生命数 {value}",
+    "totem": "守护图腾"
+  },
+  "systems": {
+    "ziwei": "紫微斗数 (Zi Wei Dou Shu)",
+    "vedic": "吠陀占星 (Vedic Nakshatra)",
+    "kabbalah": "卡巴拉路径 (Kabbalah Path)",
+    "celtic": "凯尔特树历",
+    "egyptian": "埃及守护神",
+    "mayan": "玛雅精神",
+    "iching": "易经卦象 (I Ching)",
+    "hellenistic": "希腊心理占星"
+  },
+  "synergy": {
+    "advice": "勇敢地走你的路。",
+    "description": "Compatible with your rhythm.",
+    "title": "普遍起源"
+  },
+  "social": {
+    "beneficial": {
+      "description": "Compatible with your rhythm."
+    },
+    "compatible": {
+      "description": "符合你的节奏。"
+    }
+  },
+  "title": "宇宙蓝图",
+  "subtitle": "探索灵魂的汇聚之线。",
+  "description": "多维特质的综合对齐。",
+  "tabs": {
+    "essence": "内在本质",
+    "destiny": "命运之路",
+    "biology": "生物节律"
+  },
+  "close": "关闭档案",
+  "essence": {
+    "title": "本质",
+    "quote": "你存在的真相就在内心。",
+    "soulFormula": "灵魂公式",
+    "humanDesign": "人类设计",
+    "authority": "权威",
+    "locked": "智慧已锁定"
+  },
+  "destiny": {
+    "title": "命运",
+    "lifePath": "人生道路",
+    "seeker": "探索者",
+    "animal": "精神动物"
+  },
+  "biology": {
+    "title": "生物",
+    "chronotype": "时间型",
+    "constitution": "体质"
+  },
+  " ": ""
+}

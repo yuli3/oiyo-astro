@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "常见问题",
+    "description": "健康老龄化不是独自实现的。与家人、朋友和专业人士合作，建立可持续的健康。",
+    "keywords": "积极老龄化, 老年健康, 健康衰老, 运动与正念, 护理支持, 长寿设计"
+  },
+  "hero": {
+    "badge": "🌿 长寿实验室",
+    "subtitle": "大多数人根据情况混合2-3个因素。你的组合使你的计划独一无二。",
+    "cta": "开始检查"
+  },
+  "aging": {
+    "result": {
+      "error": {
+        "message": "Awaiting deep synthesis...",
+        "retakeButton": "Awaiting deep synthesis..."
+      }
+    },
+    "meta": {
+      "title": "常见问题",
+      "description": "健康老龄化不是独自实现的。与家人、朋友和专业人士合作，建立可持续的健康。",
+      "keywords": "积极老龄化, 老年健康, 健康衰老, 运动与正念, 护理支持, 长寿设计"
+    },
+    "hero": {
+      "badge": "🌿 长寿实验室",
+      "title": "常见问题",
+      "subtitle": "大多数人根据情况混合2-3个因素。你的组合使你的计划独一无二。",
+      "description": "健康老龄化不是独自实现的。与家人、朋友和专业人士合作，建立可持续的健康。",
+      "cta": "开始检查",
+      "secondaryCta": "查看关键因素、行动计划和支持伙伴。"
+    },
+    "benefits": {
+      "title": "常见问题",
+      "subtitle": "大多数人根据情况混合2-3个因素。你的组合使你的计划独一无二。"
+    },
+    "types": {
+      "movement": {
+        "name": "恢复",
+        "emoji": "😴",
+        "description": "健康老龄化不是独自实现的。与家人、朋友和专业人士合作，建立可持续的健康。"
+      },
+      "socialConnection": {
+        "name": "恢复",
+        "emoji": "😴",
+        "description": "健康老龄化不是独自实现的。与家人、朋友和专业人士合作，建立可持续的健康。"
+      },
+      "mindfulness": {
+        "name": "恢复",
+        "emoji": "😴",
+        "description": "健康老龄化不是独自实现的。与家人、朋友和专业人士合作，建立可持续的健康。"
+      },
+      "purpose": {
+        "name": "恢复",
+        "emoji": "😴",
+        "description": "健康老龄化不是独自实现的。与家人、朋友和专业人士合作，建立可持续的健康。"
+      },
+      "restoration": {
+        "name": "恢复",
+        "emoji": "😴",
+        "description": "健康老龄化不是独自实现的。与家人、朋友和专业人士合作，建立可持续的健康。"
+      },
+      "title": "常见问题",
+      "subtitle": "大多数人根据情况混合2-3个因素。你的组合使你的计划独一无二。"
+    },
+    "relationships": {
+      "title": "常见问题",
+      "description": "健康老龄化不是独自实现的。与家人、朋友和专业人士合作，建立可持续的健康。"
+    },
+    "faq": {
+      "title": "常见问题"
+    }
+  },
+  "hub": {
+    "tabs": {
+      "sleep": "睡眠",
+      "stress": "压力",
+      "fatigue": "疲劳",
+      "aging": "抗衰老",
+      "detox": "排毒",
+      "emotion": "情绪",
+      "tools": "工具"
+    },
+    "title": "心情追踪器",
+    "description": "记录情绪并分析模式"
+  },
+  "sleepScore": {
+    "hero": {
+      "title": "心情追踪器",
+      "subtitle": "重获健康的数字生活",
+      "cta": "开始评估"
+    },
+    "benefits": {
+      "items": [
+        {
+          "emoji": "🌙",
+          "title": "睡眠模式分析",
+          "description": "全面分析睡眠开始、维持和唤醒状态。"
+        },
+        {
+          "emoji": "🔋",
+          "title": "能量回收",
+          "description": "了解您的睡眠如何影响第二天的活动。"
+        },
+        {
+          "emoji": "🧠",
+          "title": "个性化解决方案",
+          "description": "接受改善睡眠卫生的具体指导。"
+        }
+      ]
+    }
+  },
+  "detox": {
+    "hero": {
+      "title": "心情追踪器",
+      "subtitle": "重获健康的数字生活",
+      "cta": "开始评估"
+    },
+    "benefits": {
+      "items": [
+        {
+          "emoji": "👀",
+          "title": "眼睛疲劳",
+          "description": "减少因长时间接触屏幕而造成的眼睛疲劳和视力疲劳。"
+        },
+        {
+          "emoji": "🧠",
+          "title": "更好的专注",
+          "description": "通过多巴胺排毒重新获得深度注意力和注意力持续时间。"
+        },
+        {
+          "emoji": "😌",
+          "title": "缓解焦虑",
+          "description": "摆脱 FOMO 和通知焦虑，找到内心的平静。"
+        }
+      ]
+    }
+  },
+  "emotion": {
+    "hub": {
+      "moodTracker": {
+        "tabs": {
+          "journal": "日记",
+          "calendar": "日历",
+          "analytics": "分析"
+        },
+        "title": "心情追踪器",
+        "description": "记录情绪并分析模式",
+        "analyticsTitle": "心情统计",
+        "analyticsDescription": "分析日历中记录的心情数据。"
+      }
+    }
+  }
+}

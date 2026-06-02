@@ -1,0 +1,73 @@
+// Auto-generated shard for namespace: styling
+
+export type Styling_dashboardKeys =
+  | "description"
+  | "labels.faceShape"
+  | "labels.personalColor"
+  | "retry"
+  | "status.analyzing"
+  | "title"
+  | "upload";
+
+export type Styling_recommendationKeys =
+  | "analyzeAnother"
+  | "colors.autumn_warm"
+  | "colors.spring_warm"
+  | "colors.summer_cool"
+  | "colors.winter_cool"
+  | "complete"
+  | "sections.eyewear"
+  | "sections.hair"
+  | "sections.palette"
+  | "shapes.diamond"
+  | "shapes.heart"
+  | "shapes.long"
+  | "shapes.oval"
+  | "shapes.round"
+  | "shapes.square";
+
+export type Styling_scannerKeys =
+  | "action.analyze"
+  | "action.camera"
+  | "action.upload"
+  | "description"
+  | "error.cameraAccess"
+  | "error.failed"
+  | "error.tooLarge"
+  | "status.analyzing"
+  | "status.detecting"
+  | "title";
+
+export type StylingKeys =
+  | "dashboard.description"
+  | "dashboard.labels.faceShape"
+  | "dashboard.labels.personalColor"
+  | "dashboard.retry"
+  | "dashboard.status.analyzing"
+  | "dashboard.title"
+  | "dashboard.upload"
+  | "recommendation.analyzeAnother"
+  | "recommendation.colors.autumn_warm"
+  | "recommendation.colors.spring_warm"
+  | "recommendation.colors.summer_cool"
+  | "recommendation.colors.winter_cool"
+  | "recommendation.complete"
+  | "recommendation.sections.eyewear"
+  | "recommendation.sections.hair"
+  | "recommendation.sections.palette"
+  | "recommendation.shapes.diamond"
+  | "recommendation.shapes.heart"
+  | "recommendation.shapes.long"
+  | "recommendation.shapes.oval"
+  | "recommendation.shapes.round"
+  | "recommendation.shapes.square"
+  | "scanner.action.analyze"
+  | "scanner.action.camera"
+  | "scanner.action.upload"
+  | "scanner.description"
+  | "scanner.error.cameraAccess"
+  | "scanner.error.failed"
+  | "scanner.error.tooLarge"
+  | "scanner.status.analyzing"
+  | "scanner.status.detecting"
+  | "scanner.title";

@@ -1,0 +1,325 @@
+{
+  "labor": {
+    "annualLeave": {
+      "labels": {
+        "monthlySalary": "monthly basic salary",
+        "preTax": "Before tax",
+        "remainingDays": "remaining annual leave",
+        "dailyHours": "daily working hours"
+      },
+      "results": {
+        "total": "Total expected annual leave allowance",
+        "hourlyWage": "my normal hourly wage",
+        "dailyWage": "my normal daily wage"
+      },
+      "basis": {
+        "title": "📊 Basis of calculation",
+        "monthlyBase": "monthly basic salary",
+        "standardHours": "Standard monthly working hours",
+        "hourlyWage": "Normal hourly wage",
+        "dailyHours": "daily working hours",
+        "remainingDays": "remaining annual leave",
+        "totalAllowance": "total annual leave allowance"
+      },
+      "legal": {
+        "title": "⚖️ Legal Notice",
+        "note": "This calculator uses the standard calculation formula in accordance with Article 60 (Annual Paid Leave) of the Labor Standards Act.",
+        "item1": "Actual annual leave allowance may vary depending on ordinary wages, allowances, bonuses, etc.",
+        "item2": "For accurate calculations, please consult with your labor attorney or company's human resources team.",
+        "item3": "These results are for reference only and cannot be used as legal evidence."
+      },
+      "meta": {
+        "subtitle": "Check detailed information",
+        "disclaimer": "Disclaimer",
+        "title": "test",
+        "description": "Check out various financial tools and insights.",
+        "keywords": "Personality test, psychological test, free test"
+      },
+      "test": {
+        "insightBullets": ["Mapping the constellation of your truest self."],
+        "progress": "progress",
+        "submit": "Submit",
+        "loading": "Loading",
+        "selectOption": "Choose",
+        "next": "next",
+        "previous": "before"
+      },
+      "result": {
+        "title": "Detailed analysis report",
+        "description": "Check out detailed financial information."
+      },
+      "subtitle": "How much will the remaining annual leave be paid in money?",
+      "currency": "one",
+      "days": "Day",
+      "hours": "hour",
+      "ko-KR": "korean",
+      "title": "time for reflection",
+      "calculate": "Calculate"
+    },
+    "allowance": {
+      "inputs": {
+        "hourlyWage": "hourly rate",
+        "workingHours": "working hours per day",
+        "overtimeHours": "Week of overtime (hours)",
+        "nightHours": "Day and night shifts (hours)",
+        "holidayHours": "Weekly holiday work (hours)",
+        "isWeeklyHoliday": "Including weekly holiday allowance",
+        "calculate": "Calculate your salary"
+      },
+      "tips": {
+        "content": "The minimum hourly wage in 2025 is 10,030 won. If you work more than 15 hours a week, you are entitled to weekly holiday pay."
+      },
+      "loading": {
+        "step1": "Analyzing working hours...",
+        "step2": "Calculating statutory allowance items...",
+        "step3": "Checking weekly holiday allowance requirements...",
+        "step4": "Final expected salary calculation..."
+      },
+      "result": {
+        "overtime": "overtime pay",
+        "night": "night work allowance",
+        "holiday": "holiday work allowance",
+        "base": "basic salary",
+        "weekly": "Weekly holiday allowance",
+        "total": "Weekly Expected Salary",
+        "monthly": "Monthly Expected Salary",
+        "title": "salary details"
+      }
+    },
+    "unemployment": {
+      "inputs": {
+        "age": "Age",
+        "period": "Period",
+        "dailyWage": "Daily Wage",
+        "calculate": "Calculate"
+      },
+      "tips": {
+        "content": "Content"
+      },
+      "loading": {
+        "step1": "Checking employment history...",
+        "step2": "Calculating benefit amount...",
+        "step3": "Determining eligibility period...",
+        "step4": "Finalizing estimated benefits..."
+      },
+      "result": {
+        "total": "total",
+        "daily": "daily",
+        "period": "period",
+        "title": "Detailed analysis report",
+        "description": "Check out detailed financial information."
+      },
+      "meta": {
+        "title": "test",
+        "description": "Check out various financial tools and insights.",
+        "keywords": "Personality test, psychological test, free test"
+      },
+      "test": {
+        "insightBullets": ["Insight"],
+        "progress": "progress",
+        "next": "next",
+        "previous": "before",
+        "submit": "Submit",
+        "loading": "Loading",
+        "selectOption": "Choose"
+      },
+      "title": "time for reflection",
+      "description": "We have prepared detailed and warm analysis results, like a mirror reflecting your inner self."
+    },
+    "test": {
+      "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+      "progress": "progress",
+      "submit": "submit",
+      "loading": "Loading...",
+      "selectOption": "Select option",
+      "subtitle": "Details"
+    },
+    "meta": {
+      "title": "Customized analysis results",
+      "description": "Test detailed analysis reporttription"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Inner harmony guides your everyday actions."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        }
+      ]
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "Detailed analysis report"
+    },
+    "severancePay": {
+      "labels": {
+        "hireDate": "Date of joining",
+        "resignationDate": "Date of departure (or expected date of departure)",
+        "monthlySalary": "monthly basic salary",
+        "annualBonus": "annual bonus",
+        "annualLeave": "annual leave allowance",
+        "severancePay": "expected severance pay"
+      },
+      "results": {
+        "tenure": "Total number of days employed: {days} days",
+        "estimated": "This is the expected severance pay."
+      },
+      "basis": {
+        "title": "📊 Basis of calculation",
+        "tenure": "tenure",
+        "monthlyBase": "monthly basic salary",
+        "annualBonus": "annual bonus",
+        "annualLeave": "annual leave allowance",
+        "threeMonthTotal": "3 months gross wages",
+        "avgDailyWage": "average daily wage",
+        "formula": "* Calculation formula: average wage × 30 days × (number of days employed ÷ 365)"
+      },
+      "legal": {
+        "title": "⚖️ Legal Notice",
+        "note": "This calculator is for reference only; actual severance pay may vary.",
+        "item1": "We use the standard calculation formula according to the Employee Retirement Benefit Security Act.",
+        "item2": "The actual average wage includes all wages (base salary, allowances, bonuses, etc.) received over the past three months.",
+        "item3": "In complex cases such as interim settlement or calculation of continuous employment period, please consult with a labor attorney.",
+        "item4": "Those who have worked for less than one year are not eligible for severance pay."
+      },
+      "error": {
+        "lessThanYear": "If the period of employment is less than one year, no severance pay is incurred."
+      },
+      "subtitle": "Check the expected severance pay based on the date of hire, date of departure, and 3-month salary.",
+      "optional": "select",
+      "currency": "one",
+      "calculate": "Calculate"
+    },
+    "title": "my financial profile",
+    "description": "Check out detailed financial information."
+  }
+}

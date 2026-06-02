@@ -1,0 +1,110 @@
+{
+  "messages": {
+    "general": "Préparation de votre histoire...",
+    "stars": "Synchronisation des fils de votre voyage avec les étoiles...",
+    "rainbow": "Culture des nuances de votre arc-en-ciel intérieur...",
+    "flowers": "Décryptage des motifs géométriques de votre identité...",
+    "fox": "Tracé de l'architecture secrète de votre être...",
+    "stardust": "Alignement des constellations de votre dessein...",
+    "oracle": "Consultation de l'oracle du temps...",
+    "cards": "Analyse des échos profonds de vos choix...",
+    "moon": "Polissage de l'éclat de la lune pour vous...",
+    "dreams": "Tissage de l'essence de vos rêves...",
+    "magic": "Invocation d'une touche de magie pour votre périple...",
+    "whale": "Écoute des chants profonds de votre subconscient...",
+    "trees": "Les arbres millénaires partagent leurs secrets...",
+    "roots": "Transmission de nouvelles aux racines profondes de votre origine...",
+    "ontology": "Interprétation du schéma fondamental de votre âme...",
+    "resonance": "Harmonisation de vos fréquences spirituelles...",
+    "fortune": "Observation du flux de votre fortune dans le cosmos...",
+    "finance": "Culture des graines de votre prospérité future...",
+    "cat_dog": "Interprétation du langage silencieux de vos instincts...",
+    "milky_way": "Inspiration puisée aux confins de la Voie Lactée...",
+    "moonlight": "Baignade de votre profil dans la lumière de la clarté...",
+    "wave_secret": "Écoute du murmure des vagues sur votre destinée...",
+    "saju": "Alignement de votre Manse-ryeok cosmique...",
+    "relationship": "Analyzing relationship...",
+    "analyzing": "Analyzing data...",
+    "calculating": "Calcul des coordonnées cosmiques...",
+    "processing": "Traitement des données temporelles...",
+    "generating": "Générer votre profil unique...",
+    "almostDone": "Presque manifeste...",
+    "personalityAnalysis": "Décoder les schémas cognitifs...",
+    "responseAnalysis": "Analyser la résonance comportementale...",
+    "typeMatching": "Trouver des correspondances archétypales...",
+    "preparingResults": "Assemblage de la synthèse finale..."
+  },
+  "message": "Chargement...",
+  "tip": "S'il vous plaît, attendez.",
+  "analyzing": "Analyzing data...",
+  "calculating": "Calcul des coordonnées cosmiques...",
+  "processing": "Traitement des données temporelles...",
+  "generating": "Générer votre profil unique...",
+  "almostDone": "Presque manifeste...",
+  "personalityAnalysis": "Décoder les schémas cognitifs...",
+  "responseAnalysis": "Analyser la résonance comportementale...",
+  "typeMatching": "Trouver des correspondances archétypales...",
+  "preparingResults": "Assemblage de la synthèse finale...",
+  "please_wait": "Rassembler la sagesse. Veuillez garder de l'espace.",
+  "default": "Synchronisation des fils de votre destin...",
+  "rootLoading": {
+    "subtitle": "Vous êtes-vous égaré en chemin ?"
+  },
+  "localeLoading": {
+    "subtitle": "Vous êtes-vous égaré en chemin ?",
+    "title": "Évaluation de l'Être",
+    "description": "Déverrouillez une compréhension profonde avec les outils archétypaux d'OIYO."
+  },
+  "globalError": {
+    "tryAgain": "Réessayer",
+    "goHome": "Retour à l'Accueil",
+    "helpText": "Si ce déséquilibre persiste, veuillez contacter nos guides."
+  },
+  "notFound": {
+    "title": "Évaluation de l'Être",
+    "subtitle": "Vous êtes-vous égaré en chemin ?",
+    "description": "Déverrouillez une compréhension profonde avec les outils archétypaux d'OIYO.",
+    "goHome": "Retour à l'Accueil",
+    "goBack": "Revenir en arrière",
+    "suggestionsTitle": "Cherchiez-vous l'un de ces sentiers ?",
+    "popularTestsTitle": "Analyses Prisées",
+    "egentetoTest": "Analyse Egenteto",
+    "mbtiAlternative": "Alternative MBTI",
+    "allTests": "Explorer toutes les Analyses",
+    "exploreTitle": "Explorez les Analyses les plus Aimées",
+    "categoryCore": "Essence Personnelle",
+    "categoryLifestyle": "Style de Vie",
+    "color": "Archétypes de Couleur",
+    "travel": "Destinée de Voyage",
+    "relationship": {
+      "communicationStyle": "Alchimie du Dialogue"
+    },
+    "test": {
+      "progress": "Progression",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "submit": "Délivrer la requête",
+      "loading": "Calibrage...",
+      "selectOption": "Tracer le sentier",
+      "insightBullets": ["Découverte profonde"]
+    },
+    "result": {
+      "title": "Évaluation de l'Être",
+      "description": "Déverrouillez une compréhension profonde avec les outils archétypaux d'OIYO."
+    },
+    "meta": {
+      "title": "Évaluation de l'Être",
+      "description": "Déverrouillez une compréhension profonde avec les outils archétypaux d'OIYO.",
+      "keywords": "test de personnalité, perspectives, OIYO, développement personnel"
+    }
+  },
+  "poetic": [
+    "En écoutant les doux murmures du cosmos...",
+    "Interpréter le langage silencieux de votre destin...",
+    "Exploiter l’énergie rayonnante des étoiles…",
+    "Patience, une magnifique histoire se déroule pour vous...",
+    "Enregistrer les secrets de la lune dans le calme de la nuit...",
+    "Décoder les signaux lumineux de votre constellation...",
+    "Dériver le long du fleuve du temps pour trouver votre vérité..."
+  ]
+}

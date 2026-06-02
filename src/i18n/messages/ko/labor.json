@@ -1,0 +1,325 @@
+{
+  "labor": {
+    "annualLeave": {
+      "labels": {
+        "monthlySalary": "월 기본급",
+        "preTax": "세금 전",
+        "remainingDays": "남은 연차휴가",
+        "dailyHours": "일일 근무 시간"
+      },
+      "results": {
+        "total": "총 예상 연차휴가 수당",
+        "hourlyWage": "내 보통 시급",
+        "dailyWage": "Daily Wage"
+      },
+      "basis": {
+        "title": "📊 계산 기초",
+        "monthlyBase": "월 기본급",
+        "standardHours": "월별 표준근로시간",
+        "hourlyWage": "보통시급",
+        "dailyHours": "일일 근무 시간",
+        "remainingDays": "남은 연차휴가",
+        "totalAllowance": "총 연차휴가 수당"
+      },
+      "legal": {
+        "title": "⚖️ 법적 고지",
+        "note": "본 계산기는 근로기준법 제60조(연차유급휴가)에 따른 표준계산식을 사용합니다.",
+        "item1": "실제 연차휴가 수당은 통상임금, 수당, 상여금 등에 따라 달라질 수 있습니다.",
+        "item2": "정확한 계산을 위해서는 담당 노무사 또는 회사 인사팀에 문의하시기 바랍니다.",
+        "item3": "본 결과는 참고용일 뿐 법적 증거로 사용될 수 없습니다."
+      },
+      "meta": {
+        "subtitle": "상세정보를 확인하세요",
+        "disclaimer": "부인 성명",
+        "title": "시험",
+        "description": "다양한 금융 도구와 인사이트를 확인해 보세요.",
+        "keywords": "성격테스트, 심리테스트, 무료테스트"
+      },
+      "test": {
+        "insightBullets": ["당신의 진정한 자아의 별자리를 지도로 그려보세요."],
+        "progress": "진전",
+        "submit": "제출하기",
+        "loading": "로드 중",
+        "selectOption": "선택하기",
+        "next": "다음",
+        "previous": "~ 전에"
+      },
+      "result": {
+        "title": "상세 분석 보고서",
+        "description": "자세한 금융정보를 확인해보세요."
+      },
+      "subtitle": "남은 연차휴가는 얼마만큼 현금으로 지급되나요?",
+      "currency": "하나",
+      "days": "낮",
+      "hours": "시간",
+      "ko-KR": "한국인",
+      "title": "반성의 시간",
+      "calculate": "계산하기"
+    },
+    "allowance": {
+      "inputs": {
+        "hourlyWage": "시간당 요금",
+        "workingHours": "하루 근무 시간",
+        "overtimeHours": "초과 근무 주간(시간)",
+        "nightHours": "주간 및 야간 근무(시간)",
+        "holidayHours": "주휴일 근무(시간)",
+        "isWeeklyHoliday": "주휴수당 포함",
+        "calculate": "급여를 계산해 보세요"
+      },
+      "tips": {
+        "content": "Content"
+      },
+      "loading": {
+        "step1": "Checking employment history...",
+        "step2": "Calculating benefit amount...",
+        "step3": "Determining eligibility period...",
+        "step4": "Finalizing estimated benefits..."
+      },
+      "result": {
+        "overtime": "초과근무 수당",
+        "night": "야간 근무 수당",
+        "holiday": "휴일근로수당",
+        "base": "기본급",
+        "weekly": "주휴수당",
+        "total": "주간 기대 급여",
+        "monthly": "월별 예상 급여",
+        "title": "급여 내역"
+      }
+    },
+    "unemployment": {
+      "inputs": {
+        "age": "나이",
+        "period": "기간",
+        "dailyWage": "일당",
+        "calculate": "계산하기"
+      },
+      "tips": {
+        "content": "콘텐츠"
+      },
+      "loading": {
+        "step1": "채용 이력을 확인하는 중...",
+        "step2": "혜택 금액 계산 중...",
+        "step3": "자격 기간을 결정하는 중...",
+        "step4": "예상 이익을 마무리하는 중..."
+      },
+      "result": {
+        "total": "총",
+        "daily": "일일",
+        "period": "기간",
+        "title": "상세 분석 보고서",
+        "description": "자세한 금융정보를 확인해보세요."
+      },
+      "meta": {
+        "title": "시험",
+        "description": "다양한 금융 도구와 인사이트를 확인해 보세요.",
+        "keywords": "성격테스트, 심리테스트, 무료테스트"
+      },
+      "test": {
+        "insightBullets": ["통찰력"],
+        "progress": "진전",
+        "next": "다음",
+        "previous": "~ 전에",
+        "submit": "제출하기",
+        "loading": "로드 중",
+        "selectOption": "선택하기"
+      },
+      "title": "반성의 시간",
+      "description": "내면을 비추는 거울처럼 세밀하고 따뜻한 분석결과를 준비했습니다."
+    },
+    "test": {
+      "insightBullets": ["시그니처 강도", "피벗 포인트", "2"],
+      "progress": "진전",
+      "submit": "제출하기",
+      "loading": "로드 중...",
+      "selectOption": "옵션을 선택하세요",
+      "subtitle": "세부"
+    },
+    "meta": {
+      "title": "맞춤형 분석 결과",
+      "description": "테스트 상세 분석 보고서"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        }
+      ]
+    },
+    "result": {
+      "title": "상세 분석 보고서",
+      "description": "상세 분석 보고서"
+    },
+    "severancePay": {
+      "labels": {
+        "hireDate": "가입 날짜",
+        "resignationDate": "출발일(또는 출발예정일)",
+        "monthlySalary": "월 기본급",
+        "annualBonus": "연간 보너스",
+        "annualLeave": "연차휴가수당",
+        "severancePay": "예상 퇴직금"
+      },
+      "results": {
+        "tenure": "총 근무일수: {days}일",
+        "estimated": "예상되는 퇴직금입니다."
+      },
+      "basis": {
+        "title": "📊 계산 기초",
+        "tenure": "보유",
+        "monthlyBase": "월 기본급",
+        "annualBonus": "연간 보너스",
+        "annualLeave": "연차휴가수당",
+        "threeMonthTotal": "3개월 총 임금",
+        "avgDailyWage": "평균 일일 임금",
+        "formula": "* 계산식 : 평균임금 × 30일 × (근로일수 ¼ 365)"
+      },
+      "legal": {
+        "title": "⚖️ 법적 고지",
+        "note": "이 계산기는 참고용입니다. 실제 퇴직금은 달라질 수 있습니다.",
+        "item1": "근로자퇴직급여 보장법에 따른 표준산정식을 사용하고 있습니다.",
+        "item2": "실제 평균임금에는 최근 3개월 동안 받은 급여(기본급, 수당, 상여금 등)가 모두 포함됩니다.",
+        "item3": "중간정산이나 근속기간 산정 등 복잡한 사건은 노무사와 상담하시기 바랍니다.",
+        "item4": "1년 미만 근무한 사람은 퇴직금을 받을 수 없습니다."
+      },
+      "error": {
+        "lessThanYear": "근무기간이 1년 미만인 경우에는 퇴직금이 발생하지 않습니다."
+      },
+      "subtitle": "입사일, 퇴사일, 3개월 급여를 기준으로 예상 퇴직금을 확인하세요.",
+      "optional": "선택하다",
+      "currency": "하나",
+      "calculate": "계산하기"
+    },
+    "title": "내 금융 프로필",
+    "description": "자세한 금융정보를 확인해보세요."
+  }
+}

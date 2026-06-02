@@ -1,0 +1,173 @@
+{
+  "hero": {
+    "features": {
+      "comprehensive": "Multidimensional Audits",
+      "multiSource": "Diverse Lineage Wisdom",
+      "aiPowered": "Alchemical Synthesizer"
+    },
+    "title": "The Nexus of Affinity",
+    "subtitle": "Your comprehensive guide to navigating interpersonal alchemy."
+  },
+  "tabs": {
+    "compatibility": "Harmonic Alignment",
+    "romance": "Sacred Devotion",
+    "communication": "Dialogue Alchemy",
+    "friendship": "Kindred Spirits",
+    "pet": "Somatic Resonance"
+  },
+  "features": {
+    "multiSource": {
+      "title": "Diverse Archetypal Sources",
+      "description": "Synthesizing professional psychology with deep archetypal wisdom."
+    },
+    "scientific": {
+      "title": "Precision Calibration",
+      "description": "Utilizing deep psychological patterns to map the geometry of connection."
+    },
+    "personalized": {
+      "title": "Bespoke Revelations",
+      "description": "Insights crafted for your unique energetic signature."
+    },
+    "title": "Foundations of Recognition"
+  },
+  "types": {
+    "avoidant": {
+      "title": "The Reserved Sentinel",
+      "description": "Finds refuge in silence, seeking to preserve inner peace by avoiding discordant frequencies."
+    },
+    "confrontational": {
+      "title": "The Direct Catalyst",
+      "description": "Embraces friction as a means of clarification, valuing direct confrontation to restore alignment."
+    },
+    "harmonizing": {
+      "title": "The Alchemist of Peace",
+      "description": "Prioritizes collective resonance, seeking the middle ground to maintain the shared field."
+    },
+    "analytical": {
+      "title": "The Geometric Sage",
+      "description": "Resolves dissonance through the lens of logic, seeking the underlying structure of the friction."
+    },
+    "title": "Alchemies of Friction"
+  },
+  "faq": {
+    "title": "Whispers of Insight",
+    "answer1": "Friction is not a failure, but a powerful crucible for refining the spirit and cultivating conscious understanding.",
+    "answer2": "Knowing your archetypal stance allows you to transform unconscious reactions into intentional rituals of connection.",
+    "answer3": "Indeed; the soul's energetic signature is dynamic, evolving through experience and the cultivation of awareness.",
+    "answer4": "Discordant frequencies provide the most profound opportunities for growth. Mastery lies in harmonizing the disparate.",
+    "question1": "Is interpersonal friction a failure?",
+    "question2": "What is the benefit of mapping my stance?",
+    "question3": "Do these alchemical signatures evolve?",
+    "question4": "What if our frequencies are naturally discordant?"
+  },
+  "meta": {
+    "description": "Map your archetypal response to friction and discover wiser paths to relational harmony.",
+    "keywords": "conflict alchemy, relational resolution, soul psychology, coping frequencies, Oiyo",
+    "title": "Conflict Alchemy Profiler "
+  },
+  "error": {
+    "badgeLabel": "Field Distortion",
+    "title": "A disturbance in the frequency",
+    "description": "The ritual of connection was interrupted by an unforeseen energetic shift. Please attempt the calibration again.",
+    "primaryAction": "Re-Initiate Calibration",
+    "secondaryAction": "Return to Nexus",
+    "supportPrompt": "Should the distortion persist, please transmit this reference code to our scribes.",
+    "referenceIdLabel": "Resonance Reference",
+    "contactSupport": "Contact the Sages",
+    "supportEmail": "sages@oiyo.net",
+    "fallbackMessage": "An obscured error has manifested."
+  },
+  "hub": {
+    "categories": {
+      "romantic": {
+        "title": "Sacred Devotion",
+        "description": "Examine the shared frequencies and patterns of connection between intimate counterparts."
+      },
+      "friendship": {
+        "title": "Kindred Resonance",
+        "description": "Discover the profound synergy and shared alchemies between kindred spirits."
+      },
+      "family": {
+        "title": "Kinship Alchemy",
+        "description": "Understand the foundational roles and geometric patterns within your ancestral circle."
+      },
+      "professional": {
+        "title": "Professional Synergy",
+        "description": "Align your collective frequency to manifest excellence and creative brilliance in the material arena."
+      }
+    },
+    "cards": {
+      "couple": {
+        "title": "Unified Resonance",
+        "description": "A comprehensive audit of the shared field between devoted partners."
+      },
+      "dating": {
+        "title": "Early Affinity",
+        "description": "Discover the potential harmonics between emerging soul signatures."
+      },
+      "newlywed": {
+        "title": "Foundational Alchemies",
+        "description": "Calibrating the initial frequencies of a lifelong union."
+      },
+      "longTerm": {
+        "title": "Seasoned Synergy",
+        "description": "Nurturing the enduring resonance of a long-standing bond."
+      },
+      "engaged": {
+        "title": "Vow Calibration",
+        "description": "Preparing the energetic field for a sacred commitment."
+      },
+      "friend": {
+        "title": "Harmonic Affinity",
+        "description": "Check the resonance and shared frequencies of your friendship."
+      },
+      "bestfriend": {
+        "title": "Soul-Level Bond",
+        "description": "Examine the profound chemistry of your deepest kinship."
+      },
+      "acquaintance": {
+        "title": "Emergin Recognition",
+        "description": "Mapping the initial frequencies of a new encounter."
+      },
+      "parentChild": {
+        "title": "Ancestral Bridge",
+        "description": "The foundational dialogue between progenitor and offspring."
+      },
+      "siblings": {
+        "title": "Kinship Mirror",
+        "description": "Understanding the shared and divergent frequencies of sibling bonds."
+      },
+      "extendedFamily": {
+        "title": "Circle of Lineage",
+        "description": "Expanding awareness to the broader kinship field."
+      },
+      "inLaws": {
+        "title": "Adopted Harmonics",
+        "description": "Navigating the acquired alchemies of the extended circle."
+      },
+      "colleague": {
+        "title": "Collaborative Flow",
+        "description": "Optimizing the resonance for shared professional manifestations."
+      },
+      "managerEmployee": {
+        "title": "Alchemy of Mentorship",
+        "description": "Mapping the guidance and support frequencies within the professional field."
+      },
+      "businessPartner": {
+        "title": "Manifestation Synergy",
+        "description": "Checking the creative and strategic alignment of a partnership."
+      },
+      "mentorMentee": {
+        "title": "Wisdom Transmission",
+        "description": "The sacred geometry of knowledge and archetypal growth."
+      }
+    },
+    "badges": {
+      "new": "NEW",
+      "hot": "HOT"
+    }
+  },
+  "title": "The Nexus of Affinity ",
+  "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools.",
+  "keywords": "relationship hub, affinity nexus, soul resonance, interpersonal geometry, Oiyo"
+}

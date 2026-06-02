@@ -1,0 +1,30 @@
+{
+  "tabs": {
+    "essence": "Essence",
+    "destiny": "Destiny",
+    "biology": "Biology"
+  },
+  "essence": {
+    "title": "Soul Essence",
+    "quote": "The unique signature of your consciousness",
+    "soulFormula": "Soul Formula",
+    "humanDesign": "Human Design",
+    "authority": "Authority",
+    "locked": "Unlock to reveal your soul essence"
+  },
+  "destiny": {
+    "title": "Destiny Path",
+    "lifePath": "Life Path",
+    "seeker": "The Seeker",
+    "animal": "Guardian Animal"
+  },
+  "biology": {
+    "title": "Biological Rhythm",
+    "chronotype": "Chronotype",
+    "constitution": "Constitution"
+  },
+  "title": "Akashic Record",
+  "subtitle": "Your Soul's Archive",
+  "close": "Close",
+  "description": "Explore the timeless records of your soul's journey across lifetimes."
+}

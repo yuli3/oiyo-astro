@@ -1,0 +1,141 @@
+{
+  "tax": {
+    "gift": {
+      "meta": {
+        "title": "丰富流量：赠与税",
+        "description": "计算丰富的血统转移。",
+        "keywords": "赠与税、税收计算器、继承"
+      },
+      "hero": {
+        "subtitle": "神圣血统保护",
+        "badge": "金融"
+      },
+      "rel": {
+        "child_adult": "成人灵魂（儿童）",
+        "child_minor": "小灵魂（儿童）",
+        "spouse": "双火焰（配偶）",
+        "parent": "祖先灵魂（父母）",
+        "other_relative": "近亲",
+        "other": "其他连接",
+        "selectPlaceholder": "选择关系"
+      },
+      "result": {
+        "title": "丰度分析报告",
+        "deduction": "神圣演绎",
+        "taxBase": "应税香精",
+        "rate": "振动率",
+        "selfReport": "自愿表现",
+        "description": "探索您的财务共鸣的各个层次。"
+      },
+      "tip": {
+        "title": "圣人见解",
+        "desc": "赠与税扣除额每十年循环重置一次。 明智地规划您的血统转移，以尽量减少社会摩擦。"
+      },
+      "test": {
+        "insightBullets": ["财富共振", "血统保护", "时间效率"],
+        "progress": "对齐进度",
+        "submit": "提交意向",
+        "loading": "咨询天国税法...",
+        "selectOption": "选择路径",
+        "next": "向前",
+        "previous": "回溯"
+      },
+      "unit": {
+        "currency": "单位",
+        "tenYear": "十年周期",
+        "aggregation": "总体目标"
+      },
+      "resultInfo": {
+        "selfReport": "* 包括自愿表现 3% 的折扣。",
+        "consult": "* 咨询金融圣人以进行精确调整。"
+      },
+      "title": "财务反思",
+      "description": "反映您财务现实的精致镜子。",
+      "subtitle": "财富导航指南",
+      "disclaimer": "仅是预测，而非财务法令。",
+      "relationship": "关系",
+      "giftAmount": "圣供金额",
+      "pastGiftAmount": "历史转账金额",
+      "calculateBtn": "计算流量",
+      "placeholder": "输入金额",
+      "labels": {
+        "inputParameters": "坐标输入"
+      }
+    },
+    "vat": {
+      "modes": {
+        "total": "总流量",
+        "supply": "初级精华流"
+      },
+      "labels": {
+        "totalAmount": "总共振（含增值税）",
+        "supplyAmount": "净精华（不含增值税）"
+      },
+      "results": {
+        "supplyPrice": "初级精华",
+        "vat": "碎片税（增值税）",
+        "total": "全共振"
+      },
+      "tip": {
+        "content": "通常，碎片责任为精华的 10%。 将聚合流量除以1.1即可找到主要本质。",
+        "title": "增值税智慧"
+      },
+      "meta": {
+        "subtitle": "建筑师的效率",
+        "disclaimer": "系统免责声明",
+        "title": "增值税合成器",
+        "description": "净精与全共振之间无缝转换。",
+        "keywords": "增值税、税务、发票、业务"
+      },
+      "test": {
+        "insightBullets": ["等待合成..."],
+        "progress": "合成进展",
+        "next": "向前",
+        "previous": "回溯",
+        "submit": "最终确定",
+        "loading": "正在合成...",
+        "selectOption": "选择图层"
+      },
+      "result": {
+        "title": "综合报告",
+        "description": "确认您的业务共鸣水平。"
+      },
+      "subtitle": "精确计算一次流量和碎片流量",
+      "currency": "单位",
+      "disclaimer": "该工具提供结构模拟； 实际的财政义务可能有所不同。",
+      "title": "时间反射",
+      "description": "增值税信息和税率"
+    }
+  },
+  "salaryCalculator": {
+    "title": "活力转换器（薪资）",
+    "description": "可视化您的物质能量转换到社会网格中。",
+    "labels": {
+      "inputParameters": "输入坐标",
+      "salaryInput": "年度总能量",
+      "salaryPlaceholder": "输入金额 (例如: 300,000)",
+      "dependents": "卫星灵魂 (受扶养人)",
+      "children": "未来之火 (子女)",
+      "calculate": "执行计算",
+      "calculatePrompt": "设置坐标以查看明细",
+      "disclaimerText": "此计算为预测，可能与实际情况有所不同。"
+    },
+    "result": {
+      "title": "能源分配",
+      "grossPay": "总能量",
+      "netPay": "显化的活力 (实得)",
+      "nationalPension": "祖先基金 (养老金)",
+      "healthInsurance": "庇护所维护 (医保)",
+      "incomeTax": "主权分配 (个税)",
+      "harvestDescription": "基础能量水平",
+      "pensionRate": "长期安全锚",
+      "healthRate": "活力保存费",
+      "deductionDesc": "社会网格贡献",
+      "rateDesc": "当前振动率"
+    },
+    "advisor": {
+      "tip": "贤者建议",
+      "content": "即使在数字的网格中，您的共鸣也决定了每一碎片的价值。"
+    }
+  }
+}

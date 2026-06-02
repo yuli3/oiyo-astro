@@ -1,0 +1,49 @@
+{
+  "description": "实时反映2025年基准，化繁为简，一键推演复杂的税务博弈。",
+  "title": "生命力转化仪 (Vitality Converter)",
+  "labels": {
+    "salaryInput": "年薪规模",
+    "salaryPlaceholder": "请输入年薪额度",
+    "nonTaxable": "免税津贴",
+    "nonTaxableHelp": "请输入月度免税额度（基准 200,000 KRW）",
+    "dependents": "抚养人数 (含本人)",
+    "children": "20岁以下子女数",
+    "disclaimer": "⚖️ 法律声明",
+    "disclaimerText": "本推演基于2025年税率与保险费率。实际净收益可能因公司政策与特别扣除项而异。",
+    "calculatePrompt": "请输入年薪规模并点击推演按钮。",
+    "calculate": "推演计算",
+    "reset": "重置",
+    "inputParameters": "输入参数"
+  },
+  "result": {
+    "netPay": "预估月度净收益",
+    "grossPay": "月度总收益",
+    "nationalPension": "国民年金",
+    "healthInsurance": "健康保险",
+    "careInsurance": "长期疗养",
+    "employmentInsurance": "雇用保险",
+    "incomeTax": "所得税",
+    "localTax": "地方所得税",
+    "totalDeductions": "扣除额总计",
+    "title": "生命力转化仪 (Vitality Converter)",
+    "description": "实时反映2025年基准，化繁为简，一键推演复杂的税务博弈。",
+    "harvestDescription": "扣除各项费用后的预计月净薪资。",
+    "pensionRate": "国民养老金费率（4.5%）",
+    "healthRate": "医疗保险费率（3.545%）"
+  },
+  "advisor": {
+    "tip": "💡 智者建议",
+    "content": "建议对净收益应用 50/30/20 法则（生存/欲望/积蓄）。合理的税务管理能令你在年终获得惊喜的回馈。"
+  },
+  "loading": {
+    "title": "生命力转化仪 (Vitality Converter)",
+    "step1": "核对年薪丰饶度",
+    "step2": "计算扣除之额",
+    "step3": "应用时空税率",
+    "step4": "确认最终收益"
+  },
+  "meta": {
+    "title": "生命力转化仪 (Vitality Converter)",
+    "description": "实时反映2025年基准，化繁为简，一键推演复杂的税务博弈。"
+  }
+}

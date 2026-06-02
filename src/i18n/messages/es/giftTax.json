@@ -1,0 +1,158 @@
+{
+  "test": {
+    "progress": "Progreso",
+    "submit": "Entregar",
+    "loading": "Trazando los hilos plateados a lo largo de tu carta de destino...",
+    "selectOption": "Seleccionar opción",
+    "subtitle": "Información detallada",
+    "insightBullets": ["Fuerza de firma", "Punto de pivote", "2"]
+  },
+  "meta": {
+    "title": "Flujo de Abundancia",
+    "description": "Calculando el movimiento sagrado de la riqueza entre parientes."
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      }
+    ]
+  },
+  "result": {
+    "title": "Flujo de Abundancia",
+    "description": "Calculando el movimiento sagrado de la riqueza entre parientes."
+  },
+  "title": "Flujo de Abundancia",
+  "description": "Calculando el movimiento sagrado de la riqueza entre parientes."
+}

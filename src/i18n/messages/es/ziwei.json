@@ -1,0 +1,150 @@
+{
+  "title": "Pegasus",
+  "systemName": "Zi Wei Dou Shu",
+  "narrative": "Astrología de la estrella morada",
+  "resonance": {
+    "professionalChart": "Cuadro profesional: {oficina}. La vida en {lifePalace}. {starCount} estrellas en Life Palace."
+  },
+  "stars": {
+    "zi_wei": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tian_ji": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tai_yang": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "wu_qu": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tian_tong": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "lian_zhen": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tian_fu": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tai_yin": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tan_lang": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "ju_men": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tian_xiang": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tian_liang": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "qi_sha": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "po_jun": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "zuo_fu": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "you_bi": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "wen_chang": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "wen_qu": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tian_kui": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tian_yue": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "qing_yang": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tuo_luo": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "huo_xing": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "ling_xing": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "di_kong": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "di_jie": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "lu_cun": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    },
+    "tian_ma": {
+      "name": "Ma Tian",
+      "title": "Pegaso",
+      "keywords": "Movimiento, Viajes"
+    }
+  }
+}

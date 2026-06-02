@@ -1,0 +1,30 @@
+{
+  "title": "나의 분석",
+  "subtitle": "상세정보",
+  "genderSelection": {
+    "title": "나의 분석",
+    "subtitle": "상세정보",
+    "question": "질문",
+    "male": "남성",
+    "female": "여성"
+  },
+  "progress": "진전",
+  "selectOption": "선택하기",
+  "insightBullets": ["귀하의 경로를 정의하는 고유한 패턴을 찾아보세요."],
+  "start": "시작",
+  "continue": "계속하기",
+  "pause": "정지시키다",
+  "results": "결과",
+  "previous": "이전의",
+  "finish": "마치다",
+  "next": "다음",
+  "submit": "제출하기",
+  "loading": "로드 중",
+  "viewResults": "결과 보기",
+  "swipeHintLong": "질문을 탐색하려면 스와이프하세요.",
+  "resultTitle": "귀하의 분석 결과",
+  "step": "질문 {현재}/{총}개",
+  "instruction": "지침",
+  "restart": "테스트 다시 시작",
+  "helperText": "가장 좋은 답변을 선택하세요."
+}

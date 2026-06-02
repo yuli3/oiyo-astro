@@ -1,0 +1,133 @@
+{
+  "title": "推荐兴趣",
+  "subtitle": "都到这了不能放弃",
+  "resonance": {
+    "title": "推荐兴趣",
+    "high": "非常高的和谐",
+    "moderate": "均衡的和谐",
+    "low": "成长潜力"
+  },
+  "cosmic_synthesis": "综合: {mythos}与{elementDesc} {trait}",
+  "archetype": {
+    "title": "推荐兴趣",
+    "radiantCatalyst": "燃烧的革新家",
+    "deepSeer": "深刻的洞察者",
+    "growingPioneer": "成长的开拓者",
+    "steadfastGuardian": "坚固的守护者",
+    "embracingMediator": "包容的仲裁者",
+    "harmoniousTraveler": "和谐的旅行者",
+    "default": "和谐的旅行者",
+    "wood": "成长的开拓者 (The Growing Pioneer)",
+    "fire": "燃烧的革新家 (The Radiant Catalyst)",
+    "earth": "坚固的守护者 (The Steadfast Guardian)",
+    "metal": "锐利的战略家 (The Sharp Strategist)",
+    "water": "深刻的洞察者 (The Deep Seer)"
+  },
+  "synergy": {
+    "title": "推荐兴趣",
+    "description": "因为已经投入的成本（时间、金钱、努力）而做出非理性决定的错误。",
+    "tciSaju": "性格气质与四柱能量共鸣",
+    "hspStar": "感受性与命运之星形成和谐",
+    "hobbyRiasec": "兴趣与职业适应性一致",
+    "mayan_tci": "玛雅太阳纹章给予气质维度灵感",
+    "celtic_resilience": "凯尔特树木智慧支持恢复弹性",
+    "sect_decan": "昼夜的时间能量取得平衡",
+    "stone_tci": "诞生石能量调节气质",
+    "mayan_career": "玛雅音调指引职业时机",
+    "celtic_hobby": "凯尔特树木原型激发兴趣选择"
+  },
+  "friction": {
+    "title": "推荐兴趣",
+    "description": "因为已经投入的成本（时间、金钱、努力）而做出非理性决定的错误。",
+    "highHAFire": "高风险回避倾向与火能量冲突中",
+    "highNSEarth": "高刺激追求与土的停滞能量摩擦中",
+    "hspHighFire": "高敏感感受性可能会被火能量压倒",
+    "lowResilienceMetal": "低恢复弹性与金的锐利冲突中"
+  },
+  "cognitiveRisks": {
+    "title": "推荐兴趣",
+    "description": "因为已经投入的成本（时间、金钱、努力）而做出非理性决定的错误。"
+  },
+  "resilience": {
+    "title": "推荐兴趣",
+    "description": "因为已经投入的成本（时间、金钱、努力）而做出非理性决定的错误。",
+    "gratitudeJournal": "每天写3行感恩日记",
+    "fireBreathing": "调节火能量的深呼吸冥想",
+    "waterSleep": "稳定水能量的规律睡眠"
+  },
+  "hobbies": {
+    "title": "推荐兴趣",
+    "description": "因为已经投入的成本（时间、金钱、努力）而做出非理性决定的错误。",
+    "toastmasters": {
+      "name": "沉没成本谬误",
+      "description": "因为已经投入的成本（时间、金钱、努力）而做出非理性决定的错误。"
+    },
+    "fluid_art": {
+      "name": "沉没成本谬误",
+      "description": "因为已经投入的成本（时间、金钱、努力）而做出非理性决定的错误。"
+    }
+  },
+  "questions": {
+    "q13": "回想过去发生的事情时，是否经常觉得‘我就知道会这样’？",
+    "q14": "相比新的变化，是否更喜欢维持现状？",
+    "q15": "是否因为已经投入的时间或金钱，即使不喜欢也会坚持到底？"
+  },
+  "options": {
+    "q13": {
+      "a": "因为已经投入的太可惜，所以坚持到底。",
+      "b": "如果没有效用，果断放弃。",
+      "c": "看情况，如果需要止损就会做。"
+    },
+    "q14": {
+      "a": "因为已经投入的太可惜，所以坚持到底。",
+      "b": "如果没有效用，果断放弃。",
+      "c": "看情况，如果需要止损就会做。"
+    },
+    "q15": {
+      "a": "因为已经投入的太可惜，所以坚持到底。",
+      "b": "如果没有效用，果断放弃。",
+      "c": "看情况，如果需要止损就会做。"
+    }
+  },
+  "types": {
+    "hindsight_bias": {
+      "name": "沉没成本谬误",
+      "subtitle": "都到这了不能放弃",
+      "description": "因为已经投入的成本（时间、金钱、努力）而做出非理性决定的错误。",
+      "examples": [
+        "即使你没有预料到，也会说“我知道股票会下跌”。",
+        "选举后，心想“他们当然会赢”。"
+      ],
+      "overcome": [
+        "有意识地回忆起决策时的不确定性。",
+        "保留决策日志以记录结果之前的预测。"
+      ]
+    },
+    "status_quo_bias": {
+      "name": "沉没成本谬误",
+      "subtitle": "都到这了不能放弃",
+      "description": "因为已经投入的成本（时间、金钱、努力）而做出非理性决定的错误。",
+      "examples": [
+        "即使有更好的机会，也会犹豫是否要换工作。",
+        "由于害怕改变而维持不满意的关系。"
+      ],
+      "overcome": [
+        "客观评估当前状态的隐性成本。",
+        "从小的改变开始，建立对改变的容忍度。"
+      ]
+    },
+    "sunk_cost_fallacy": {
+      "name": "沉没成本谬误",
+      "subtitle": "都到这了不能放弃",
+      "description": "因为已经投入的成本（时间、金钱、努力）而做出非理性决定的错误。",
+      "examples": [
+        "把一部无聊的电影看完，因为“我付了钱”。",
+        "继续一个失败的项目，因为“我们投入了太多。”"
+      ],
+      "overcome": [
+        "从“从现在开始”的角度做出决定。 忘记过去的投资。",
+        "问问自己，如果重新开始，你是否会做出同样的选择。"
+      ]
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Tus ideas para el blog",
+    "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+    "keywords": "ideas para blogs, creación de contenido, escritura, blogs, creatividad"
+  },
+  "hero": {
+    "title": "Tus ideas para el blog",
+    "subtitle": "Nunca más te quedes sin ideas de contenido",
+    "cta": "Generar Ideas",
+    "badge": "✍️ Creación de Contenido"
+  },
+  "categories": {
+    "lifestyle": "Estilo de vida",
+    "technology": "Tecnología",
+    "business": "Negocios",
+    "health": "Salud y Bienestar",
+    "travel": "Viajes",
+    "food": "Comida y Cocina"
+  },
+  "result": {
+    "title": "Tus ideas para el blog",
+    "description": "Diseñando un espejo que refleja tu verdadera esencia..."
+  }
+}

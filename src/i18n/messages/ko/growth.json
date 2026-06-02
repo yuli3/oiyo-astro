@@ -1,0 +1,17 @@
+{
+  "title": "성장 여정",
+  "description": "자기 인식과 개인적 발전을 향한 길.",
+  "levelUp": "Congratulations! You have reached level {emoji} \\\"{title}\\\"!",
+  "levelTitles": {
+    "beginner": "초보자",
+    "explorer": "탐침",
+    "seeker": "시커",
+    "discoverer": "발견자",
+    "insightMaster": "통찰력 마스터",
+    "wisdomKeeper": "지혜의 수호자",
+    "selfAwareSage": "자기 인식 현자",
+    "enlightenedOne": "깨달은 자",
+    "personalityGuru": "성격 전문가",
+    "legendary": "전설적인"
+  }
+}

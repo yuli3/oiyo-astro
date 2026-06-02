@@ -1,0 +1,17 @@
+{
+  "level": {
+    "title": "Streak Stats",
+    "totalPoints": "总分",
+    "nextRewards": "下一级奖励：",
+    "currentLevel": "当前级别",
+    "progress": "进步"
+  },
+  "streak": {
+    "title": "连胜统计",
+    "bonuses": "连续奖金：",
+    "day7": "7 天：+50% 奖金",
+    "day14": "14 天：+100% 奖金",
+    "day30": "30 天：+150% 奖金",
+    "day100": "100 天：+300% 奖金"
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "JA": {
+    "animal": "쥐",
+    "meaning": "똑똑한",
+    "name": "그리고",
+    "season": "겨울",
+    "time": "자정"
+  },
+  "CHUK": {
+    "animal": "황소",
+    "meaning": "성실한",
+    "name": "추크",
+    "season": "늦겨울",
+    "time": "오전 1~3시"
+  },
+  "IN": {
+    "animal": "호랑이",
+    "meaning": "용감한",
+    "name": "~ 안에",
+    "season": "이른 봄",
+    "time": "오전 3~5시"
+  },
+  "MYO": {
+    "animal": "토끼",
+    "meaning": "조심성 있는",
+    "name": "묘",
+    "season": "봄",
+    "time": "오전 5~7시"
+  },
+  "JIN": {
+    "animal": "용",
+    "meaning": "강한",
+    "name": "진",
+    "season": "늦은 봄",
+    "time": "오전 7~9시"
+  },
+  "SA": {
+    "animal": "뱀",
+    "meaning": "지혜로운",
+    "name": "~에",
+    "season": "초여름",
+    "time": "오전 9~11시"
+  },
+  "O": {
+    "animal": "말",
+    "meaning": "활동적인",
+    "name": "영형",
+    "season": "여름",
+    "time": "오전 11시 - 오후 1시"
+  },
+  "MI": {
+    "animal": "양",
+    "meaning": "온화한",
+    "name": "미",
+    "season": "늦여름",
+    "time": "오후 1~3시"
+  },
+  "SIN": {
+    "animal": "원숭이",
+    "meaning": "영리한",
+    "name": "죄",
+    "season": "초가을",
+    "time": "오후 3~5시"
+  },
+  "YU": {
+    "animal": "수탉",
+    "meaning": "근면하다",
+    "name": "유",
+    "season": "가을",
+    "time": "오후 5~7시"
+  },
+  "SUL": {
+    "animal": "개",
+    "meaning": "충실한",
+    "name": "에",
+    "season": "늦가을",
+    "time": "오후 7~9시"
+  },
+  "HAE": {
+    "animal": "돼지",
+    "meaning": "솔직한",
+    "name": "ㅎ",
+    "season": "초겨울",
+    "time": "오후 9~11시"
+  }
+}

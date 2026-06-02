@@ -1,0 +1,17 @@
+{
+  "level": {
+    "title": "Level & Progress",
+    "totalPoints": "Total Points",
+    "nextRewards": "Next Level Rewards:",
+    "currentLevel": "Current Level",
+    "progress": "Progress"
+  },
+  "streak": {
+    "title": "Streak Stats",
+    "bonuses": "Streak Bonuses:",
+    "day7": "7 days: +50% bonus",
+    "day14": "14 days: +100% bonus",
+    "day30": "30 days: +150% bonus",
+    "day100": "100 days: +300% bonus"
+  }
+}

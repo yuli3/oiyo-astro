@@ -1,0 +1,46 @@
+{
+  "description": "[MANQUANT : description]",
+  "title": "[MANQUANT : titre]",
+  "labels": {
+    "inputParameters": "[MANQUANT : labels.inputParameters]"
+  },
+  "relationship": "[MANQUANT : relation]",
+  "rel": {
+    "selectPlaceholder": "[MANQUANT : rel.selectPlaceholder]",
+    "child_adult": "[MANQUANT : rel.child_adult]",
+    "child_minor": "[MANQUANT : rel.child_minor]",
+    "spouse": "[MANQUANT : conjoint(e) apparenté(e)]",
+    "parent": "[MANQUANT : rel.parent]",
+    "other_relative": "[MANQUANT : rel.other_relative]",
+    "other": "[MANQUANT : rel.autre]"
+  },
+  "giftAmount": "[MANQUANT : montant du cadeau]",
+  "pastGiftAmount": "[MANQUANT : pastGiftAmount]",
+  "calculateBtn": "[MANQUANT : calculerBtn]",
+  "result": {
+    "deductionDesc": "[MANQUANT : result.deductionDesc]",
+    "deduction": "[MANQUANT : résultat.déduction]",
+    "taxBase": "[MANQUANT : résultat.taxBase]",
+    "rateDesc": "[MANQUANT : result.rateDesc]",
+    "rate": "[MANQUANT : résultat.taux]",
+    "title": "[MANQUANT : résultat.titre]",
+    "selfReport": "[MANQUANT : result.selfReport]"
+  },
+  "placeholder": "[MANQUANT : espace réservé]",
+  "tip": {
+    "title": "[MANQUANT : tip.title]",
+    "desc": "[MANQUANT : tip.desc]"
+  },
+  "disclaimer": "[MANQUANT : avertissement]",
+  "test": {
+    "insightBullets": [
+      "Trouvez le cadeau parfait",
+      "Analyse de personnalité et de budget",
+      "Recommandations personnalisées par l'IA"
+    ]
+  },
+  "meta": {
+    "title": "recommandation de cadeau",
+    "description": "Recommandations de cadeaux IA adaptées à la personnalité et au budget"
+  }
+}

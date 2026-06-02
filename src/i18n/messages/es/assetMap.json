@@ -1,0 +1,183 @@
+{
+  "test": {
+    "progress": "Progreso",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "selectOption": "Seleccionar Opción",
+    "subtitle": "¿A qué edad se te acabará el dinero?",
+    "insightBullets": [
+      "Conocimiento",
+      "análisis de posición financiera",
+      "Evaluación de riesgos"
+    ],
+    "next": "Siguiente",
+    "previous": "Anterior"
+  },
+  "meta": {
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos",
+    "keywords": "personalidad financiera, gestión del dinero, presupuesto, hábitos de gasto, bienestar financiero"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "📉",
+        "title": "Cuándo agotar los activos después de la jubilación",
+        "description": "Predice exactamente a qué edad se acabará tu dinero.",
+        "question": "¿Cuánto tiempo durará mi dinero?",
+        "answer": "Cálculo de vida de activos"
+      },
+      {
+        "icon": "💸",
+        "title": "Reflejo de la tasa de inflación",
+        "description": "En lugar de simples cálculos, muestra valores futuros realistas teniendo en cuenta la inflación.",
+        "question": "¿1 millón de wones ahora y en el futuro?",
+        "answer": "Reflejo de cambios en el poder adquisitivo"
+      },
+      {
+        "icon": "💡",
+        "title": "Gestión de riesgos",
+        "description": "Proporcionamos análisis financieros a nivel de expertos.",
+        "question": "¿Puedes compartir?",
+        "answer": "Tarda unos 2-3 minutos."
+      },
+      {
+        "icon": "🎯",
+        "title": "preparándose para la jubilación",
+        "description": "Establecer una estrategia de inversión personalizada.",
+        "question": "¿Puedes confiar en ello?",
+        "answer": "Basado en datos verificados."
+      },
+      {
+        "icon": "🔥",
+        "title": "optimización fiscal",
+        "description": "Minimizar el riesgo y maximizar los beneficios.",
+        "question": "¿Puedes compartir?",
+        "answer": "Sí, puedes usarlo inmediatamente."
+      },
+      {
+        "icon": "⭐",
+        "title": "Estrategia de asignación de activos",
+        "description": "Minimizar el riesgo y maximizar los beneficios.",
+        "question": "¿Son precisos los resultados?",
+        "answer": "Tarda unos 2-3 minutos."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "📈",
+        "title": "¿Cómo configuro la tasa de rendimiento?",
+        "description": "Normalmente se refieren a las tasas de interés de los depósitos o al rendimiento promedio del S&P 500 (7-8%).",
+        "question": "¿Cuál es la tasa de rendimiento adecuada?",
+        "answer": "Establecer según la inclinación a la inversión."
+      },
+      {
+        "icon": "🏥",
+        "title": "¿Están incluidos los gastos médicos?",
+        "description": "Es una buena idea incluirlo en tus gastos básicos de vida o reservar algo de dinero extra.",
+        "question": "¿Qué pasa con los gastos inesperados?",
+        "answer": "Recomendar configurar fondos adicionales"
+      },
+      {
+        "icon": "💡",
+        "title": "Maximizar el retorno de la inversión",
+        "description": "Establecer una estrategia de inversión personalizada.",
+        "question": "¿Puedes compartir?",
+        "answer": "Puedes compartir en cualquier momento."
+      },
+      {
+        "icon": "🎯",
+        "title": "Estrategia de asignación de activos",
+        "description": "Ayudándole a alcanzar sus objetivos financieros a largo plazo.",
+        "question": "¿Cuánto tiempo se tarda?",
+        "answer": "Tarda unos 2-3 minutos."
+      },
+      {
+        "icon": "🔥",
+        "title": "Gestión de riesgos",
+        "description": "Establecer una estrategia de inversión personalizada.",
+        "question": "¿Cómo lo uso?",
+        "answer": "Sí, puedes usarlo inmediatamente."
+      },
+      {
+        "icon": "⭐",
+        "title": "Maximizar el retorno de la inversión",
+        "description": "Ayudándole a alcanzar sus objetivos financieros a largo plazo.",
+        "question": "¿Puedes confiar en ello?",
+        "answer": "Sí, puedes usarlo inmediatamente."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "📊",
+        "title": "Gráfico de fluctuación de activos en tiempo real",
+        "description": "Verifique los cambios de activos por año con un gráfico intuitivo.",
+        "question": "¿Proporcionar visualización?",
+        "answer": "gráfico interactivo"
+      },
+      {
+        "icon": "📱",
+        "title": "optimización móvil",
+        "description": "Puede ejecutar simulaciones fácilmente en cualquier momento y en cualquier lugar.",
+        "question": "¿Soporte móvil?",
+        "answer": "Perfectamente compatibles"
+      },
+      {
+        "icon": "💡",
+        "title": "optimización fiscal",
+        "description": "Minimizar el riesgo y maximizar los beneficios.",
+        "question": "¿Cuánto tiempo se tarda?",
+        "answer": "Basado en datos verificados."
+      },
+      {
+        "icon": "🎯",
+        "title": "Fortalecer la estabilidad financiera",
+        "description": "Minimizar el riesgo y maximizar los beneficios.",
+        "question": "¿Cómo lo uso?",
+        "answer": "Puedes compartir en cualquier momento."
+      },
+      {
+        "icon": "🔥",
+        "title": "Maximizar el retorno de la inversión",
+        "description": "Obtenga información sobre inversiones basada en datos.",
+        "question": "¿Cómo lo uso?",
+        "answer": "Puedes compartir en cualquier momento."
+      },
+      {
+        "icon": "⭐",
+        "title": "Fortalecer la estabilidad financiera",
+        "description": "Minimizar el riesgo y maximizar los beneficios.",
+        "question": "¿Puedes compartir?",
+        "answer": "Basado en datos verificados."
+      }
+    ]
+  },
+  "result": {
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos",
+    "depletionTitle": "Panel de Control",
+    "warning": "Warning",
+    "safe": "Safe"
+  },
+  "subtitle": "¿A qué edad se te acabará el dinero?",
+  "currentAge": "Edad Actual",
+  "retireAge": "Edad de Retiro",
+  "currentAsset": "Activos Actuales",
+  "monthlySave": "Ahorro Mensual",
+  "monthlySpend": "Gasto Mensual",
+  "returnRate": "Tasa de Retorno",
+  "inflationRate": "Tasa de Inflación",
+  "age": "Edad",
+  "currencyUnit": "USD",
+  "unitSave": "(Pre-retirement, USD)",
+  "unitSpend": "(Post-retirement, PV)",
+  "chartRetire": "Retirement",
+  "chartAgeSuffix": "yrs",
+  "disclaimer": "Descargo de responsabilidad",
+  "title": "Tu Perfil Financiero",
+  "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+}

@@ -1,0 +1,73 @@
+{
+  "yourScore": "我的能量分值",
+  "globalAverage": "全球平均",
+  "percentile": "百分位数",
+  "topPerformers": "高分群体",
+  "aboveAverage": "高于平均",
+  "belowAverage": "低于平均",
+  "regions": "能量分布",
+  "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself.",
+  "feature1": "[缺失：功能 1]",
+  "feature2": "[缺失：功能2]",
+  "feature3": "[缺失：功能3]",
+  "title": "Ready for more discoveries?",
+  "sections": {
+    "0": {
+      "id": "核",
+      "title": "核心共振分析",
+      "description": "探索定义你本质的基本振动。"
+    },
+    "1": {
+      "id": "光谱",
+      "title": "光谱应变和阴影",
+      "description": "照亮你存在的各个方面，从明亮到深刻。"
+    },
+    "2": {
+      "id": "原型",
+      "title": "进化原型",
+      "description": "确定指导您个人发展的永恒模式。"
+    },
+    "daily": "每日阅读",
+    "advice": "宇宙建议"
+  },
+  "features": {
+    "growth": {
+      "title": "Ready for more discoveries?",
+      "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself."
+    },
+    "ai": {
+      "title": "Ready for more discoveries?",
+      "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself."
+    }
+  },
+  "cta": {
+    "title": "准备好迎接更多发现了吗？",
+    "description": "探索我们全面的性格测试，以加深对自己的了解。",
+    "button": "探索测试"
+  },
+  "test": {
+    "insightBullets": [
+      "解码您选择的隐藏频率。",
+      "绘制你最近进化飞跃的星座图。",
+      "照亮形成您独特共鸣的模式。"
+    ],
+    "progress": "进度",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "📤 完成分析",
+    "selectOption": "请选择最符合你真实想法的选项",
+    "loading": "✨ 正在设计你的宇宙..."
+  },
+  "result": {
+    "title": "我的洞察",
+    "description": "对自我深邃而广阔的审视"
+  },
+  "meta": {
+    "title": "Ready for more discoveries?",
+    "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself.",
+    "keywords": "每日感悟、智慧、个性、指导、ai"
+  },
+  "keywords": "自我反省, 心理分析, 洞察, 成长",
+  "badge": "✨ 每日智慧",
+  "subtitle": "当天的智慧"
+}

@@ -1,0 +1,17 @@
+{
+  "level": {
+    "title": "Streak Stats",
+    "totalPoints": "Total de points",
+    "nextRewards": "Récompenses de niveau supérieur :",
+    "currentLevel": "Niveau actuel",
+    "progress": "Progrès"
+  },
+  "streak": {
+    "title": "Statistiques des séquences",
+    "bonuses": "Bonus de séquence :",
+    "day7": "7 jours : +50% de bonus",
+    "day14": "14 jours : +100% de bonus",
+    "day30": "30 jours : +150% de bonus",
+    "day100": "100 jours : +300% de bonus"
+  }
+}

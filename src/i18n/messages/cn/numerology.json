@@ -1,0 +1,261 @@
+{
+  "intro": {
+    "badge": "简介",
+    "button": "开始",
+    "description": "Result",
+    "quote": "数字就是生命",
+    "title": "Numerology"
+  },
+  "subtitle": "姓名与诞生之刻蕴含的灵性共鸣。",
+  "title": "生命灵数",
+  "input": {
+    "birthDate": "出生日期",
+    "birthDateError": "无效日期",
+    "calculating": "计算",
+    "dateLabel": "日期",
+    "description": "Result",
+    "fullName": "姓名",
+    "nameLabel": "姓名",
+    "namePlaceholder": "姓名",
+    "submit": "提交",
+    "title": "Numerology"
+  },
+  "results": {
+    "expression": "Expression Number",
+    "header": "标头",
+    "lifePath": "Life Path Number",
+    "personality": "Personality Number",
+    "recalibrate": "重新校准",
+    "soulUrge": "Soul Urge Number",
+    "vibrationalResonance": "Vibrational Resonance"
+  },
+  "meta": {
+    "description": "Result",
+    "keywords": "命理学",
+    "title": "命理学"
+  },
+  "hero": {
+    "backToHome": "后退",
+    "badge": "Intro",
+    "cosmicSignature": "宇宙签名",
+    "description": "Result",
+    "discover": "发现",
+    "highlight": "洞察力",
+    "mainTitle": "命理学",
+    "pageSubtitle": "古老的智慧",
+    "subtitle": "Discover the hidden mathematical patterns of your life.",
+    "title": "Numerology",
+    "your": "你的"
+  },
+  "result": {
+    "analyzeAnother": "其他",
+    "anotherPerson": "另一个人",
+    "dashboard": {
+      "advice": "建议",
+      "career": "职业",
+      "challenges": "挑战",
+      "strengths": "优势",
+      "yearEnergy": "年能源"
+    },
+    "dashboardTitle": "仪表板",
+    "description": "结果",
+    "lifeCoordination": "协调",
+    "readingTitle": "阅读",
+    "recommendedCities": "城市",
+    "soulFoods": "食品"
+  },
+  "meanings": {
+    "birthDay": "生日",
+    "destiny": "命运",
+    "lifePath": "Life Path Number",
+    "personality": "Personality Number",
+    "soulUrge": "Soul Urge Number"
+  },
+  "data": {
+    "meanings": {
+      "1": {
+        "careerSuggestions": [
+          "CEO",
+          "创业者",
+          "政治家",
+          "军事指挥官",
+          "发明家"
+        ],
+        "challenges": ["固执", "缺乏耐心", "自我倾向", "支配欲"],
+        "description": "Result",
+        "keywords": ["独立", "领导力", "创新", "野心"],
+        "name": "The Master Teacher",
+        "strengths": ["领导技能", "自立", "创新", "决心", "勇气"],
+        "traits": ["天生领导者", "独立", "有雄心", "富有创造力", "果断"]
+      },
+      "2": {
+        "careerSuggestions": [
+          "咨询师",
+          "外交官",
+          "教师",
+          "社会工作者",
+          "调解人"
+        ],
+        "challenges": ["优柔寡断", "过度敏感", "依赖性", "冲突规避"],
+        "description": "Result",
+        "keywords": ["合作", "和谐", "外交", "敏感性"],
+        "name": "The Master Teacher",
+        "strengths": ["同理心", "团队合作", "调解能力", "耐心", "忠诚度"],
+        "traits": ["外交手腕", "协作性", "敏感", "直觉性", "支持性"]
+      },
+      "3": {
+        "careerSuggestions": [
+          "艺术家",
+          "作家",
+          "演艺人员",
+          "设计师",
+          "公关专家"
+        ],
+        "challenges": ["精力分散", "流于表面", "奢侈倾向", "夸张"],
+        "description": "Result",
+        "keywords": ["表达", "社交性", "创造力", "乐观"],
+        "name": "The Master Teacher",
+        "strengths": ["沟通能力", "想象力", "激励灵感", "幽默", "艺术天赋"],
+        "traits": ["表现力强", "善于社交", "乐观", "富有创意", "有魅力"]
+      },
+      "4": {
+        "careerSuggestions": [
+          "工程师",
+          "建筑师",
+          "会计师",
+          "管理人员",
+          "研究员"
+        ],
+        "challenges": ["呆板僵化", "目光狭隘", "过于严肃", "缺乏灵活性"],
+        "description": "Result",
+        "keywords": ["稳定", "纪律", "秩序", "实用性"],
+        "name": "The Master Teacher",
+        "strengths": ["稳定性", "有条理", "可靠", "坚持不懈", "关注细节"],
+        "traits": ["勤奋", "实用主义", "有组织", "忠诚", "守律"]
+      },
+      "5": {
+        "careerSuggestions": ["导游", "销售专家", "市场营销", "记者", "飞行员"],
+        "challenges": ["坐立不安", "冲动", "不一致", "不负责任"],
+        "description": "Result",
+        "keywords": ["自由", "变化", "适应力", "好奇心"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "多才多艺",
+          "足智多谋",
+          "无所畏惧",
+          "进步意识",
+          "社交连接"
+        ],
+        "traits": ["冒险精神", "适应力强", "好奇心", "充满动力", "多才多艺"]
+      },
+      "6": {
+        "careerSuggestions": ["护士", "教师", "咨询师", "社会工作者", "厨师"],
+        "challenges": ["过度保护", "过度牺牲", "忧虑", "干涉他人"],
+        "description": "Result",
+        "keywords": ["关怀", "家庭", "服务", "同情"],
+        "name": "The Master Teacher",
+        "strengths": ["养育能力", "责任感", "治愈能力", "忠诚度", "服务精神"],
+        "traits": ["富有同情心", "负责任", "保护性", "大方", "家庭观念强"]
+      },
+      "7": {
+        "careerSuggestions": [
+          "研究员",
+          "科学家",
+          "哲学家",
+          "心理学家",
+          "灵性导师"
+        ],
+        "challenges": ["孤立", "悲观主义", "神秘兮兮", "完美主义"],
+        "description": "Result",
+        "keywords": ["灵性", "分析", "直觉", "智慧"],
+        "name": "The Master Teacher",
+        "strengths": ["直觉", "分析力", "智慧", "灵性", "研究能力"],
+        "traits": ["分析力强", "具有灵性", "直觉灵敏", "神秘感", "内省"]
+      },
+      "8": {
+        "careerSuggestions": ["高管", "银行家", "房地产专家", "律师", "创业者"],
+        "challenges": ["唯物主义", "工作狂倾向", "控制欲", "不耐烦"],
+        "description": "Result",
+        "keywords": ["成功", "物质掌控", "商务", "权威"],
+        "name": "The Master Teacher",
+        "strengths": ["商业能力", "领导力", "组织性", "果断力", "物质成就"],
+        "traits": ["有雄心", "有权威", "商业头脑", "物质导向", "强大"]
+      },
+      "9": {
+        "careerSuggestions": [
+          "人权活动家",
+          "艺术家",
+          "治愈者",
+          "教师",
+          "慈善家"
+        ],
+        "challenges": ["情感极端", "怨恨感", "情绪波动", "不切实际"],
+        "description": "Result",
+        "keywords": ["慈悲", "服务", "大爱", "智慧"],
+        "name": "The Master Teacher",
+        "strengths": ["慈悲", "大方", "艺术天赋", "智慧", "人道主义精神"],
+        "traits": ["富有慈悲心", "大方", "人道主义", "有艺术气息", "睿智"]
+      },
+      "11": {
+        "careerSuggestions": [
+          "灵性导师",
+          "咨询师",
+          "艺术家",
+          "发明家",
+          "治愈者"
+        ],
+        "challenges": ["过度敏感", "神经质", "不切实际", "极端"],
+        "description": "Result",
+        "keywords": ["直觉", "灵感", "启蒙", "启示"],
+        "name": "The Master Teacher",
+        "strengths": ["直觉", "灵感", "愿景", "理想主义", "灵性见解"],
+        "traits": ["高度直觉", "启发性", "敏感", "有远见", "灵性"]
+      },
+      "22": {
+        "careerSuggestions": [
+          "建筑师",
+          "城市规划师",
+          "CEO",
+          "高级工匠",
+          "大规模组织者"
+        ],
+        "challenges": ["不堪重负感", "自我怀疑", "完美主义", "压力"],
+        "description": "Result",
+        "keywords": ["掌控", "务实理想主义", "大局观", "实现"],
+        "name": "The Master Teacher",
+        "strengths": ["务实愿景", "组织性", "领导力", "体现现实", "系统性方法"],
+        "traits": ["愿景家", "务实", "大师级建设者", "系统化", "有雄心"]
+      },
+      "33": {
+        "careerSuggestions": [
+          "灵性导师",
+          "治愈者",
+          "咨询师",
+          "人道主义领袖",
+          "古鲁"
+        ],
+        "challenges": ["过度牺牲", "情感压抑", "完美主义", "倦怠"],
+        "description": "Result",
+        "keywords": ["慈悲", "治愈", "教导", "普世大爱"],
+        "name": "名师",
+        "strengths": ["无条件的爱", "治愈能力", "教导天赋", "慈悲", "灵性智慧"],
+        "traits": ["慈悲心", "治愈力", "教导力", "养育性", "灵性进化"]
+      }
+    }
+  },
+  "benefits": {
+    "destinyNumber": {
+      "description": "Result",
+      "title": "Numerology"
+    },
+    "lifePathNumber": {
+      "description": "Result",
+      "title": "Numerology"
+    },
+    "soulNumber": {
+      "description": "Result",
+      "title": "Numerology"
+    },
+    "title": "Numerology"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "meta": {
+    "cta": {
+      "button": "Take Tests Now"
+    },
+    "keywords": "keywords, tags, seo",
+    "badge": "Global Benchmarking",
+    "title": "Tableau de Bord",
+    "description": "Analyse complète et perspectives approfondies"
+  },
+  "filters": {
+    "region": "🌏 Sélectionnez une région",
+    "age": "👥 Tranche d'âge",
+    "gender": "⚧ Genre",
+    "test": "Titre du test"
+  },
+  "tabs": {
+    "overview": "📈 Aperçu",
+    "regional": "🗺️ Comparaison régionale",
+    "demographics": "👥 Démographie",
+    "rankings": "🏆 Classements"
+  },
+  "chart": {
+    "scoreDistribution": "📊 Répartition des scores",
+    "personalityRankings": "🏆 Classement des types de personnalité",
+    "avgScore": "score moyen",
+    "users": "utilisatrices",
+    "topRankText": "Vous vous classez parmi les {percent} % d'utilisateurs les plus performants dans le monde 🚀",
+    "allAges": "Tous les âges",
+    "all": "Toute",
+    "male": "Femelle",
+    "female": "Femelle",
+    "global": "Mondiale",
+    "asia": "Asie",
+    "europe": "Europe",
+    "northAmerica": "Amérique du Nord",
+    "korea": "Corée",
+    "southAmerica": "Amérique du Sud",
+    "africa": "Afrique",
+    "oceania": "Océanie"
+  },
+  "demographics": {
+    "comingSoon": "📊 Des fonctionnalités d'analyse démographique seront bientôt disponibles."
+  },
+  "cta": {
+    "button": "Faites des tests maintenant",
+    "title": "Tableau de Bord",
+    "description": "Analyse complète et perspectives approfondies"
+  },
+  "features": {
+    "benchmarking": {
+      "title": "Tableau de Bord",
+      "description": "Analyse complète et perspectives approfondies"
+    },
+    "regional": {
+      "title": "Tableau de Bord",
+      "description": "Analyse complète et perspectives approfondies"
+    }
+  },
+  "insights": {
+    "yourScore": "Votre score",
+    "globalAverage": "Moyenne mondiale",
+    "percentile": "Centile",
+    "topPerformers": "Les plus performants",
+    "aboveAverage": "Au-dessus de la moyenne",
+    "belowAverage": "Faible",
+    "regions": "Régions"
+  },
+  "test": {
+    "progress": "Progrès",
+    "submit": "Envoyer",
+    "loading": "📊 Analyzing...",
+    "selectOption": "Sélectionner",
+    "insightBullets": [
+      "Dévoilez les couches cachées de votre philosophie personnelle."
+    ]
+  },
+  "result": {
+    "title": "Tableau de Bord",
+    "description": "Analyse complète et perspectives approfondies"
+  },
+  "badge": "Analyse comparative mondiale",
+  "loading": "📊 Analyse...",
+  "noData": "📋 Aucune donnée à analyser. Veuillez d'abord effectuer des tests de personnalité.",
+  "title": "Tableau de Bord",
+  "description": "Analyse complète et perspectives approfondies",
+  "keywords": "mots-clés, tags, référencement"
+}

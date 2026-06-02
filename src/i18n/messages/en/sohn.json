@@ -1,0 +1,20 @@
+{
+  "sohn": {
+    "directions": {
+      "East": "east",
+      "West": "west",
+      "South": "south",
+      "North": "north"
+    },
+    "title": "hands free day calculator",
+    "tooltip": "‘Son’ means a ghost that causes damage. The last digit of the lunar calendar, 9 or 0, is an auspicious day when these ghosts ascend to heaven and do no harm on earth.",
+    "description": "Find a good day to make important decisions such as moving, changing jobs, or getting married.",
+    "lunar": "lunar calendar",
+    "safeDay": "Day without hands (lucky day)",
+    "safeDesc": "All movements are safe regardless of direction.",
+    "directionAlert": "direction caution",
+    "directionWarn": "{dir}It is a day when there is concern about damage to the village.",
+    "directionWarnGeneric": "Movement in certain directions requires caution.",
+    "upcoming": "The coming day without hands"
+  }
+}

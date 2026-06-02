@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "El Procrastinador Perfeccionista",
+    "description": "Espera el momento 'perfecto' para empezar.",
+    "keywords": "gestión del tiempo, productividad, estilo de trabajo, personalidad"
+  },
+  "landing": {
+    "title": "El Procrastinador Perfeccionista",
+    "subtitle": "Descubre tu esquema de productividad en 5 minutos.",
+    "description": "Espera el momento 'perfecto' para empezar.",
+    "cta": "Comenzar Análisis",
+    "features": [
+      "⏰ 6 Análisis del tipo de gestión del tiempo",
+      "📈 Consejos de productividad personalizados",
+      "🎯 Horas óptimas de actividad",
+      "💡 Recomendaciones de estilo de trabajo"
+    ],
+    "typesTitle": "6 Estilos de Gestión del Tiempo",
+    "types": {
+      "earlyBird": {
+        "title": "El Procrastinador Perfeccionista",
+        "description": "Espera el momento 'perfecto' para empezar.",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "nightOwl": {
+        "title": "El Procrastinador Perfeccionista",
+        "description": "Espera el momento 'perfecto' para empezar.",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "executor": {
+        "title": "El Procrastinador Perfeccionista",
+        "description": "Espera el momento 'perfecto' para empezar.",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "planner": {
+        "title": "El Procrastinador Perfeccionista",
+        "description": "Espera el momento 'perfecto' para empezar.",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "flexible": {
+        "title": "El Procrastinador Perfeccionista",
+        "description": "Espera el momento 'perfecto' para empezar.",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "procrastinator": {
+        "title": "El Procrastinador Perfeccionista",
+        "description": "Espera el momento 'perfecto' para empezar.",
+        "icon": "⏳",
+        "bg": "naranja"
+      }
+    }
+  }
+}

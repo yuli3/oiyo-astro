@@ -1,0 +1,22 @@
+{
+  "description": "消費税（VAT）を瞬時に計算します。",
+  "title": "消費税計算機",
+  "modes": {
+    "total": "税込金額から計算",
+    "supply": "税抜金額から計算"
+  },
+  "labels": {
+    "totalAmount": "税込金額（本体価格＋消費税）",
+    "supplyAmount": "税抜金額（本体価格）"
+  },
+  "results": {
+    "supplyPrice": "税抜価格",
+    "vat": "消費税額",
+    "total": "税込合計"
+  },
+  "tip": {
+    "title": "消費税とは？",
+    "content": "消費税は、商品やサービスの価値に加算される間接税です。"
+  },
+  "disclaimer": "このツールは参考用であり、実際の税額は異なる場合があります。"
+}

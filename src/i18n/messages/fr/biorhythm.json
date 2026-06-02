@@ -1,0 +1,201 @@
+{
+  "title": "Biorythme",
+  "subtitle": "Vos cycles physiques, émotionnels et intellectuels.",
+  "physical": "Physique",
+  "emotional": "Émotionnel",
+  "intellectual": "Intellectuel",
+  "test": {
+    "progress": "Progrès",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "loading": "Chargement",
+    "selectOption": "Sélectionner",
+    "subtitle": "Vérifiez votre condition aujourd'hui et planifiez une journée optimale",
+    "insightBullets": [
+      "Quel est votre rythme corporel aujourd’hui ?",
+      "Vérifiez votre état émotionnel",
+      "Trouver le temps d'activité optimal"
+    ]
+  },
+  "meta": {
+    "title": "Biorythme",
+    "description": "Analysez vos rythmes physiques, émotionnels et intellectuels pour trouver votre condition optimale.",
+    "keywords": "biorythme, rythme biologique, condition, rythme physique, rythme émotionnel"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Analyse précise du rythme",
+        "description": "Analyse précise basée sur la théorie scientifique du biorythme",
+        "question": "Votre biorythme est-il précis ?",
+        "answer": "Il offre une grande précision basée sur la théorie du biorythme qui a fait ses preuves depuis des décennies."
+      },
+      {
+        "icon": "🚀",
+        "title": "Connaître le moment optimal",
+        "description": "Nous vous indiquerons le moment optimal lors de la planification d’événements importants.",
+        "question": "Comment puis-je l'utiliser ?",
+        "answer": "Vous pouvez obtenir de meilleurs résultats si vous planifiez des réunions importantes, de l'exercice, des études, etc. les jours où votre rythme est bon."
+      },
+      {
+        "icon": "💡",
+        "title": "Gestion des conditions",
+        "description": "Vous pouvez connaître et vous préparer à l’avance aux changements de votre condition quotidienne.",
+        "question": "Dois-je le vérifier tous les jours ?",
+        "answer": "Oui, votre biorythme change chaque jour, il est donc bon de le vérifier régulièrement."
+      },
+      {
+        "icon": "🎯",
+        "title": "3 types d'analyse du rythme",
+        "description": "Nous analysons respectivement vos rythmes physiques, émotionnels et intellectuels.",
+        "question": "Quel rythme reconnaissez-vous ?",
+        "answer": "Vous pouvez vérifier les trois rythmes des cycles physique (23 jours), émotionnel (28 jours) et intellectuel (33 jours)."
+      },
+      {
+        "icon": "🔥",
+        "title": "totalement gratuit",
+        "description": "Toutes les fonctionnalités sont disponibles gratuitement",
+        "question": "Est-ce que ça coûte quelque chose ?",
+        "answer": "Il est fourni entièrement gratuitement et vous pouvez l’utiliser immédiatement sans vous inscrire en tant que membre."
+      },
+      {
+        "icon": "⭐",
+        "title": "Facile à utiliser",
+        "description": "Entrez simplement votre date de naissance et vous pourrez vérifier les résultats immédiatement.",
+        "question": "Combien de temps cela prend-il?",
+        "answer": "Vous pouvez vérifier les résultats immédiatement après avoir saisi votre date de naissance."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Qu’est-ce que le biorythme ?",
+        "description": "C'est un rythme biologique qui représente des changements périodiques dans le corps, les émotions et l'intellect.",
+        "question": "Qu’est-ce que le biorythme ?",
+        "answer": "Il fait référence à un modèle de changements dans le corps, les émotions et l’intellect qui se répète selon un certain cycle à partir du jour de la naissance."
+      },
+      {
+        "icon": "🚀",
+        "title": "Comment l'utiliser",
+        "description": "Placez les plannings importants sur des journées bien rythmées.",
+        "question": "Comment puis-je l'utiliser ?",
+        "answer": "Il est préférable de faire un travail important les jours à rythme élevé et de se reposer les jours à rythme faible."
+      },
+      {
+        "icon": "💡",
+        "title": "précision",
+        "description": "Il est basé sur une théorie scientifiquement prouvée.",
+        "question": "Quelle est sa précision ?",
+        "answer": "Bien qu’il puisse y avoir des différences individuelles, on dit que cela correspond au rythme que beaucoup de gens connaissent réellement."
+      },
+      {
+        "icon": "🎯",
+        "title": "Description des cycles",
+        "description": "Chaque rythme a son propre cycle",
+        "question": "Qu'est-ce que le cycle ?",
+        "answer": "Il se répète par cycles de 23 jours pour le corps, 28 jours pour les émotions et 33 jours pour l'intellect."
+      },
+      {
+        "icon": "🔥",
+        "title": "service gratuit",
+        "description": "Toutes les fonctionnalités sont fournies gratuitement",
+        "question": "Est-ce que ça coûte quelque chose ?",
+        "answer": "C'est entièrement gratuit et sans publicité."
+      },
+      {
+        "icon": "⭐",
+        "title": "fonction de partage",
+        "description": "Vous pouvez comparer votre biorythme avec vos amis",
+        "question": "Pouvez-vous partager ?",
+        "answer": "Oui, vous pouvez facilement le partager avec un lien et le comparer avec vos amis."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Analyse en temps réel",
+        "description": "Vérifiez le biorythme du jour en temps réel",
+        "question": "Quand dois-je vérifier ?",
+        "answer": "Le vérifier chaque matin m'aide à planifier ma journée."
+      },
+      {
+        "icon": "🚀",
+        "title": "prédiction future",
+        "description": "Vous pouvez vérifier à l’avance les futurs changements de rythme.",
+        "question": "Pouvez-vous voir l'avenir ?",
+        "answer": "Oui, vous pouvez vérifier votre biorythme jusqu'à un mois à l'avance."
+      },
+      {
+        "icon": "💡",
+        "title": "graphique fourni",
+        "description": "Identifiez les changements de rythme en un coup d'œil grâce à des graphiques intuitifs",
+        "question": "Est-ce facile à voir ?",
+        "answer": "Tout le monde peut facilement comprendre les graphiques colorés."
+      },
+      {
+        "icon": "🎯",
+        "title": "conseils personnalisés",
+        "description": "Nous vous recommandons des activités adaptées à votre rythme actuel.",
+        "question": "Puis-je avoir des conseils ?",
+        "answer": "Oui, nous vous informerons des activités et des précautions appropriées à chaque condition de rythme."
+      },
+      {
+        "icon": "🔥",
+        "title": "Analyse de compatibilité",
+        "description": "Vérifiez la compatibilité de votre biorythme avec un ami ou un amoureux.",
+        "question": "Pouvez-vous également voir la compatibilité ?",
+        "answer": "Si vous saisissez la date de naissance de deux personnes, nous analyserons votre compatibilité biorythmique."
+      },
+      {
+        "icon": "⭐",
+        "title": "Fonction de notification",
+        "description": "Nous vous informerons à l'avance des changements de rythme des jours importants.",
+        "question": "Puis-je recevoir des notifications ?",
+        "answer": "Vous pouvez définir une notification de biorythme pour la date souhaitée."
+      }
+    ]
+  },
+  "result": {
+    "title": "Biorythme",
+    "description": "Analysez vos rythmes physiques, émotionnels et intellectuels pour trouver votre condition optimale."
+  },
+  "hero": {
+    "title": "Biorythme",
+    "description": "Analysez vos rythmes physiques, émotionnels et intellectuels pour trouver votre condition optimale.",
+    "subtitle": "Vérifiez votre condition aujourd'hui et planifiez une journée optimale",
+    "badge": "Analyse de Biorythme"
+  },
+  "advice": {
+    "physical": {
+      "high": "La clarté mentale brille plus que jamais. C'est le moment optimal pour résoudre des problèmes complexes, prendre des décisions stratégiques ou explorer de nouveaux domaines en profondeur.",
+      "medium": "Les pensées sont claires et organisées. Une bonne énergie pour gérer des tâches logiques ou pour une communication claire, et avancer régulièrement vers vos objectifs.",
+      "low": "La concentration intellectuelle peut sembler être dans un doux brouillard. Au lieu de forcer l'analyse, lâchez prise. Parfois, les meilleures intuitions viennent dans le silence.",
+      "critical": "L'énergie intellectuelle est élevée mais peut être dispersée. Au lieu de vous précipiter vers des conclusions, concentrez-vous sur une pensée à la fois et jugez avec soin."
+    },
+    "emotional": {
+      "high": "La clarté mentale brille plus que jamais. C'est le moment optimal pour résoudre des problèmes complexes, prendre des décisions stratégiques ou explorer de nouveaux domaines en profondeur.",
+      "medium": "Les pensées sont claires et organisées. Une bonne énergie pour gérer des tâches logiques ou pour une communication claire, et avancer régulièrement vers vos objectifs.",
+      "low": "La concentration intellectuelle peut sembler être dans un doux brouillard. Au lieu de forcer l'analyse, lâchez prise. Parfois, les meilleures intuitions viennent dans le silence.",
+      "critical": "L'énergie intellectuelle est élevée mais peut être dispersée. Au lieu de vous précipiter vers des conclusions, concentrez-vous sur une pensée à la fois et jugez avec soin."
+    },
+    "intellectual": {
+      "high": "La clarté mentale brille plus que jamais. C'est le moment optimal pour résoudre des problèmes complexes, prendre des décisions stratégiques ou explorer de nouveaux domaines en profondeur.",
+      "medium": "Les pensées sont claires et organisées. Une bonne énergie pour gérer des tâches logiques ou pour une communication claire, et avancer régulièrement vers vos objectifs.",
+      "low": "La concentration intellectuelle peut sembler être dans un doux brouillard. Au lieu de forcer l'analyse, lâchez prise. Parfois, les meilleures intuitions viennent dans le silence.",
+      "critical": "L'énergie intellectuelle est élevée mais peut être dispersée. Au lieu de vous précipiter vers des conclusions, concentrez-vous sur une pensée à la fois et jugez avec soin."
+    }
+  },
+  "description": "Analysez vos rythmes physiques, émotionnels et intellectuels pour trouver votre condition optimale.",
+  "keywords": "biorythme, rythme biologique, condition, rythme physique, rythme émotionnel",
+  "synthesis": {
+    "wood_metal": "Résonance Bois/Métal : Concentrez-vous sur votre résilience.",
+    "fire_water": "Résonance Feu/Eau : Concentrez-vous sur votre sens de l'équilibre.",
+    "earth": "Résonance Terre : Concentrez-vous sur votre stabilité."
+  }
+}

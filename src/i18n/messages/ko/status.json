@@ -1,0 +1,15 @@
+{
+  "loading": "로드 중...",
+  "error": "오류가 발생했습니다",
+  "success": "성공",
+  "empty": "사용 가능한 데이터가 없습니다.",
+  "scrollForSynergy": "시너지 스크롤",
+  "analyzing": "분석 중...",
+  "label": "상태",
+  "all": "모두",
+  "open": "열려 있는",
+  "in_progress": "진행 중",
+  "waiting_user": "사용자를 기다리는 중",
+  "resolved": "해결됨",
+  "closed": "닫은"
+}

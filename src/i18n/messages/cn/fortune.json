@@ -1,0 +1,336 @@
+{
+  "chineseZodiac": {
+    "title": "数字命理学",
+    "description": "Life path",
+    "accuracy": "高",
+    "duration": "快的"
+  },
+  "numerology": {
+    "title": "数字命理学",
+    "description": "人生轨迹",
+    "accuracy": "高",
+    "duration": "快的"
+  },
+  "primal-origin": {
+    "landing": {
+      "badge": "终极启示",
+      "title": "原始起源",
+      "subtitle": "解锁你的数字封印，揭示命运",
+      "cta": "揭开我的起源",
+      "features": {
+        "triple": {
+          "title": "原始起源",
+          "desc": "血型如何影响你的宇宙特征和性格。"
+        },
+        "celestial": {
+          "title": "原始起源",
+          "desc": "血型如何影响你的宇宙特征和性格。"
+        },
+        "genetic": {
+          "title": "原始起源",
+          "desc": "血型如何影响你的宇宙特征和性格。"
+        }
+      }
+    },
+    "input": {
+      "title": "原始起源",
+      "subtitle": "解锁你的数字封印，揭示命运",
+      "nameLabel": "姓名（可选）",
+      "namePlaceholder": "你的全名",
+      "genderLabel": "性别",
+      "male": "男",
+      "female": "女",
+      "birthDateLabel": "出生日期",
+      "birthTimeLabel": "出生时间",
+      "bloodTypeLabel": "血型",
+      "submitButton": "揭开我的起源",
+      "decrypting": "正在解密起源..."
+    }
+  },
+  "T": "T",
+  "dailyLucky": {
+    "back": "返回",
+    "colors": {
+      "beige": "米色",
+      "black": "黑色",
+      "gold": "金色",
+      "green": "绿色",
+      "mint": "薄荷色",
+      "navy": "藏青色",
+      "pink": "粉色",
+      "purple": "紫色",
+      "red": "红色",
+      "sky": "天蓝色",
+      "white": "白色"
+    },
+    "directions": {
+      "east": "东",
+      "north": "北",
+      "northeast": "东北",
+      "northwest": "西北",
+      "south": "南",
+      "southeast": "东南",
+      "southwest": "西南",
+      "west": "西"
+    },
+    "footer": "今日指引",
+    "items": {
+      "book": "书",
+      "cap": "帽子",
+      "coffee": "咖啡",
+      "coin": "硬币",
+      "earring": "耳环",
+      "glasses": "眼镜",
+      "headphones": "耳机",
+      "key": "钥匙",
+      "mirror": "镜子",
+      "pen": "笔",
+      "perfume": "香水",
+      "phone": "手机",
+      "plant": "植物",
+      "ring": "戒指",
+      "sneakers": "运动鞋",
+      "umbrella": "雨伞",
+      "watch": "手表"
+    },
+    "keyword": "今日关键词",
+    "keywords": {
+      "cleaning": "清洁",
+      "connection": "连接",
+      "courage": "勇气",
+      "creativity": "创造力",
+      "focus": "焦点",
+      "kindness": "善良",
+      "patience": "耐心",
+      "rest": "休息",
+      "savings": "储蓄",
+      "silence": "静默"
+    },
+    "meta": {
+      "description": "你需要休息",
+      "keywords": "运势",
+      "title": "原始起源"
+    },
+    "result": {
+      "description": "你需要休息",
+      "title": "原始起源"
+    },
+    "sharePersonalizedPrefix": "我的运势",
+    "shareTemplate": "来看看这个",
+    "subtitle": "解锁你的数字封印，揭示命运",
+    "test": {
+      "insightBullets": ["深刻的洞察力"],
+      "loading": "加载中...",
+      "next": "下一步",
+      "previous": "上一步",
+      "progress": "进度",
+      "selectOption": "选择",
+      "submit": "提交"
+    },
+    "title": "原始起源",
+    "yourLucky": "你的幸运物品",
+    "zodiac": {
+      "aquarius": "水瓶座",
+      "aries": "白羊座",
+      "cancer": "巨蟹座",
+      "capricorn": "摩羯座",
+      "gemini": "双子座",
+      "leo": "狮子座",
+      "libra": "天秤座",
+      "pisces": "双鱼座",
+      "sagittarius": "射手座",
+      "scorpio": "天蝎座",
+      "taurus": "金牛座",
+      "virgo": "处女座"
+    }
+  },
+  "dailyOracle": {
+    "hub": {
+      "luckyDesc": "查看运势",
+      "luckyTitle": "幸运物品",
+      "personaDesc": "今日人格",
+      "personaTitle": "人格",
+      "subtitle": "解锁你的数字封印，揭示命运",
+      "tabs": {
+        "lucky": "幸运",
+        "oracle": "神谕",
+        "personality": "性格"
+      },
+      "title": "原始起源"
+    },
+    "identify": {
+      "button": "开始",
+      "description": "你需要休息",
+      "title": "原始起源"
+    },
+    "loading": "加载中...",
+    "share": "分享",
+    "subtitle": "解锁你的数字封印，揭示命运",
+    "title": "原始起源"
+  },
+  "dailyReading": {
+    "cards": {
+      "refresh": "刷新",
+      "reminder": "提醒",
+      "subtitle": "解锁你的数字封印，揭示命运"
+    },
+    "hero": {
+      "cta": "揭开我的起源",
+      "eyebrow": "今天",
+      "subtitle": "解锁你的数字封印，揭示命运"
+    },
+    "meta": {
+      "description": "你需要休息",
+      "keywords": "运势",
+      "title": "原始起源"
+    },
+    "summary": {
+      "energy": "能量",
+      "focus": "焦点",
+      "luckyColor": "颜色"
+    }
+  },
+  "days": "天",
+  "description": "你需要休息",
+  "energyScore": "能量分数",
+  "feature1Desc": "特征1",
+  "feature1Title": "标题1",
+  "feature2Desc": "特征2",
+  "feature2Title": "标题2",
+  "feature3Desc": "特征3",
+  "feature3Title": "标题3",
+  "historySubtitle": "过去解读",
+  "historyTitle": "历史",
+  "hub": {
+    "cta": "揭开我的起源",
+    "description": "你需要休息",
+    "subtitle": "解锁你的数字封印，揭示命运",
+    "title": "原始起源"
+  },
+  "longestStreak": "最长记录",
+  "meta": {
+    "description": "你需要休息",
+    "keywords": "运势",
+    "subtitle": "解锁你的数字封印，揭示命运",
+    "title": "原始起源"
+  },
+  "mostCommon": "最常见",
+  "noData": "无数据",
+  "question": "问题",
+  "questions": {
+    "q1": {
+      "options": {
+        "o1": "选项1",
+        "o2": "选项2",
+        "o3": "选项3",
+        "o4": "选项4"
+      },
+      "text": "问题5"
+    },
+    "q2": {
+      "options": {
+        "o1": "选项1",
+        "o2": "选项2",
+        "o3": "选项3",
+        "o4": "选项4"
+      },
+      "text": "问题5"
+    },
+    "q3": {
+      "options": {
+        "o1": "选项1",
+        "o2": "选项2",
+        "o3": "选项3",
+        "o4": "选项4"
+      },
+      "text": "问题5"
+    },
+    "q4": {
+      "options": {
+        "o1": "选项1",
+        "o2": "选项2",
+        "o3": "选项3",
+        "o4": "选项4"
+      },
+      "text": "问题5"
+    },
+    "q5": {
+      "options": {
+        "o1": "选项1",
+        "o2": "选项2",
+        "o3": "选项3",
+        "o4": "选项4"
+      },
+      "text": "问题5"
+    }
+  },
+  "reminder": "提醒",
+  "reminderText": "别忘了",
+  "result": {
+    "description": "你需要休息",
+    "title": "原始起源"
+  },
+  "results": {
+    "balanced": {
+      "advice": "休息一下",
+      "description": "你需要休息",
+      "traits": {
+        "0": "平和",
+        "1": "放松",
+        "2": "缓慢"
+      },
+      "type": "休息型"
+    },
+    "energetic": {
+      "advice": "休息一下",
+      "description": "你需要休息",
+      "traits": {
+        "0": "平和",
+        "1": "放松",
+        "2": "缓慢"
+      },
+      "type": "休息型"
+    },
+    "reflective": {
+      "advice": "休息一下",
+      "description": "你需要休息",
+      "traits": {
+        "0": "平和",
+        "1": "放松",
+        "2": "缓慢"
+      },
+      "type": "休息型"
+    },
+    "restful": {
+      "advice": "休息一下",
+      "description": "你需要休息",
+      "traits": {
+        "0": "平和",
+        "1": "放松",
+        "2": "缓慢"
+      },
+      "type": "休息型"
+    }
+  },
+  "shareResult": "分享结果",
+  "shareTitle": "分享",
+  "startDaily": "开始每日运势",
+  "subtitle": "解锁你的数字封印，揭示命运",
+  "takeOtherTests": "参加其他测试",
+  "test": {
+    "insightBullets": ["深刻的洞察力"],
+    "loading": "加载中...",
+    "next": "下一步",
+    "previous": "上一步",
+    "progress": "进度",
+    "selectOption": "选择",
+    "submit": "提交"
+  },
+  "title": "原始起源",
+  "todayAdvice": "今日建议",
+  "totalDays": "总天数",
+  "trendChart": "趋势图",
+  "uniqueTypes": "独特类型",
+  "viewHistory": "查看历史",
+  "welcomeTitle": "欢迎"
+}

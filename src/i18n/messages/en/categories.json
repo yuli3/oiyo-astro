@@ -1,0 +1,20 @@
+{
+  "payment": "Payment Issue",
+  "account": "Account Help",
+  "technical": "Technical Support",
+  "feature_request": "Feature Request",
+  "general": "General Inquiry",
+  "ALL": "All Categories",
+  "title": "Categories",
+  "progressLabel": "Progress",
+  "all": "All",
+  "viral": "🔥 Viral",
+  "finance": "Money",
+  "career": "Career",
+  "mental": "Mind",
+  "love": "Love",
+  "labor": "Work",
+  "living": "Lifestyle",
+  "fortune": "Fortune",
+  "finance_tax": "Tax"
+}

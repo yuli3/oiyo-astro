@@ -1,0 +1,26 @@
+{
+  "identify": {
+    "description": "Identify your fortune."
+  },
+  "title": "Daily Oracle",
+  "subtitle": "Cosmic Alignment",
+  "loading": "Consulting the Stars...",
+  "source": {
+    "PAYMENT": "Commerce",
+    "MAYAN": "Mayan Calendar",
+    "SAJU": "Saju (4 Pillars)",
+    "MBTI": "Psychology",
+    "TCI": "Temperament",
+    "BIG5": "Big 5 Traits"
+  },
+  "category": {
+    "EARTH": "Earth Element",
+    "CELESTIAL": "Celestial Element",
+    "SPIRIT": "Spirit Element",
+    "HUMAN": "Human Element"
+  },
+  "modal": {
+    "noteTitle": "Architect's Note",
+    "noteDesc": "This insight is derived from the {source} engine running on the Synapse Protocol."
+  }
+}

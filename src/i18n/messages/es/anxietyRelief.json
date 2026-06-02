@@ -1,0 +1,18 @@
+{
+  "title": "Alivio de la Ansiedad",
+  "description": "Encuentre la paz y la calma a través de ejercicios de respiración guiados.",
+  "breathingIn": "Respirar",
+  "breathingOut": "Exhalar",
+  "hold": "Sostener",
+  "start": "Comenzar",
+  "pause": "Pausa",
+  "reset": "Reiniciar",
+  "subtitle": "Santuario de respiración consciente",
+  "affirmations": {
+    "1": "Estoy seguro y conectado a tierra en este momento.",
+    "2": "Mi aliento es mi ancla en la tormenta.",
+    "3": "Libero lo que no puedo controlar.",
+    "4": "Cada respiración trae claridad y paz.",
+    "5": "Soy más fuerte que mis pensamientos ansiosos."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "templates": {
+    "combination": "{elementDesc} {zodiacDesc}. {consejo}"
+  },
+  "elements": {
+    "Wood": "Tú que posees la flexibilidad del árbol verde,",
+    "Fire": "Tú que llevas una pasión ardiente,",
+    "Earth": "Tú, inquebrantable como la tierra firme,",
+    "Metal": "Tú, con una determinación afilada como el acero,",
+    "Water": "Tú, sabio como el océano profundo,"
+  },
+  "zodiacs": {
+    "aries": "el espíritu pionero de Aries brilla.",
+    "taurus": "la perseverancia de Tauro construye el futuro.",
+    "gemini": "el ingenio de Géminis abre el camino.",
+    "cancer": "la benevolencia de Cáncer guarda el centro.",
+    "leo": "la majestad de Leo reina en el día.",
+    "virgo": "la perspicacia de Virgo ve la verdad.",
+    "libra": "el equilibrio de Libra crea armonía.",
+    "scorpio": "la tenacidad de Escorpio atraviesa la esencia.",
+    "sagittarius": "el espíritu aventurero de Sagitario apunta a la meta.",
+    "capricorn": "la ambición de Capricornio escala las cimas.",
+    "aquarius": "la innovación de Acuario crea lo nuevo.",
+    "pisces": "la intuición de Piscis hace realidad los sueños."
+  },
+  "advice": {
+    "default": "Hoy, el universo te pide paciencia y claridad.",
+    "active": "El cielo acoge tus acciones audaces.",
+    "rest": "Es momento de retirarse para recuperar fuerzas.",
+    "create": "Tu chispa creativa recibe la bendición del universo."
+  }
+}

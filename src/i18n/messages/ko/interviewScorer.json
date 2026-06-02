@@ -1,0 +1,27 @@
+{
+  "test": {
+    "sampleQuestions": {
+      "1": "당신의 강점과 약점에 대해 알려주세요.",
+      "2": "우리 회사에 지원하게 된 동기는 무엇입니까?",
+      "3": "가장 힘들었던 경험과 이를 어떻게 극복했는지 기술해 주십시오.",
+      "4": "입사 후 5년 후의 모습은 어떤가요?"
+    },
+    "title": "면접 답변 채점자",
+    "description": "AI가 면접 답변을 분석해 점수와 개선 포인트를 제공합니다.",
+    "inputTitle": "면접 질문 선택",
+    "inputDescription": "답변을 원하는 질문을 선택하거나 직접 입력하세요.",
+    "questionPlaceholder": "질문을 입력하거나 위에서 선택하세요...",
+    "answerPlaceholder": "여기에 답변을 적어주세요(최소 100자 권장)...",
+    "wordCount": "문자 수",
+    "recommendedLength": "권장 길이: 300~500자.",
+    "analyzeButton": "답변을 분석하세요"
+  },
+  "result": {
+    "score": "답변 점수",
+    "feedback": "피드백",
+    "originality": "독창",
+    "logic": "논리",
+    "completeness": "완전성",
+    "positivity": "양성"
+  }
+}

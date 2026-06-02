@@ -1,0 +1,276 @@
+{
+  "general": [
+    {
+      "icon": "✨",
+      "title": "Información premium",
+      "description": "Descubre los patrones únicos que definen tu camino.",
+      "question": "¿Cuál es su frecuencia central única?",
+      "answer": "La armonía interior guía tus acciones cotidianas."
+    },
+    {
+      "icon": "🚀",
+      "title": "Información premium",
+      "description": "Revela las capas ocultas de tu filosofía personal.",
+      "question": "¿Cómo navegas por las corrientes de la vida?",
+      "answer": "Tu perspectiva única da forma a tu realidad."
+    },
+    {
+      "icon": "💡",
+      "title": "Información premium",
+      "description": "Revela las capas ocultas de tu filosofía personal.",
+      "question": "¿Cómo navegas por las corrientes de la vida?",
+      "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+    },
+    {
+      "icon": "🎯",
+      "title": "Información premium",
+      "description": "Descubre los patrones únicos que definen tu camino.",
+      "question": "¿Qué impulsa tu mundo interior?",
+      "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+    },
+    {
+      "icon": "🔥",
+      "title": "Información premium",
+      "description": "Explora la arquitectura profunda de tu paisaje interior.",
+      "question": "¿Cuál es su frecuencia central única?",
+      "answer": "La armonía interior guía tus acciones cotidianas."
+    },
+    {
+      "icon": "⭐",
+      "title": "Información premium",
+      "description": "Explora la arquitectura profunda de tu paisaje interior.",
+      "question": "¿Qué impulsa tu mundo interior?",
+      "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+    }
+  ],
+  "billing": [
+    {
+      "question": "¿Cómo funciona la facturación?",
+      "answer": "Se le factura mensualmente el mismo día en que se suscribió inicialmente. Por ejemplo, si te suscribes el día 15, se te facturará el día 15 de cada mes. Recibirá un recibo por correo electrónico por cada pago."
+    },
+    {
+      "question": "¿Puedo cancelar en cualquier momento?",
+      "answer": "¡Absolutamente! Puede cancelar su suscripción en cualquier momento desde su panel de control. Continuará teniendo acceso premium hasta el final de su período de facturación actual y luego no se le volverá a cobrar."
+    },
+    {
+      "question": "¿Qué pasa cuando cancelo?",
+      "answer": "Cuando cancelas, conservas el acceso premium hasta el final de tu período de pago. Después de eso, su cuenta vuelve al nivel gratuito. Todos sus datos se conservan: no perderá ningún resultado de prueba ni progreso."
+    },
+    {
+      "question": "¿Puedo obtener un reembolso?",
+      "answer": "¡Sí! Ofrecemos una garantía de devolución de dinero de 7 días. Si solicita un reembolso dentro de los 7 días posteriores a la compra y no ha utilizado mucho el servicio, procesaremos un reembolso completo. Consulte nuestra Política de reembolso para obtener detalles completos."
+    },
+    {
+      "question": "¿Aumentarán los precios?",
+      "answer": "Si alguna vez aumentamos los precios, los suscriptores existentes serán notificados con al menos 30 días de anticipación. Su tarifa permanecerá igual durante al menos un ciclo de facturación adicional después de la notificación."
+    },
+    {
+      "question": "¿Ofrecen suscripciones anuales?",
+      "answer": "Actualmente solo ofrecemos suscripciones mensuales. Se planean planes anuales con descuentos para el futuro: ¡anunciaremos cuando estén disponibles!"
+    }
+  ],
+  "security": [
+    {
+      "question": "¿Mi información de pago está segura?",
+      "answer": "¡Sí! Nunca almacenamos la información de su tarjeta de crédito. Los pagos son procesados ​​por proveedores que cumplen con PCI-DSS (Toss Payments para Corea, LemonSqueezy a nivel internacional). Todas las transacciones están cifradas con SSL/TLS estándar de la industria."
+    },
+    {
+      "question": "¿Se compartirán mis datos de pago?",
+      "answer": "¡Nunca! Su información de pago permanece en el procesador de pagos (Toss o LemonSqueezy). Solo recibimos confirmación de que el pago se realizó correctamente; nunca vemos sus números de tarjeta ni datos bancarios reales."
+    },
+    {
+      "question": "¿Cómo se protegen mis datos?",
+      "answer": "Todos los datos de las pruebas de personalidad están encriptados y almacenados de forma segura. Cumplimos con el RGPD. Puedes exportar o eliminar tus datos en cualquier momento. La información de pago es manejada por procesadores de pagos certificados, no almacenada por nosotros."
+    },
+    {
+      "question": "¿Venden datos de usuarios?",
+      "answer": "En absoluto. Nunca vendemos, alquilamos ni compartimos su información personal ni los resultados de sus pruebas con terceros. Su privacidad es nuestra principal prioridad. Lea nuestra Política de Privacidad para obtener detalles completos."
+    }
+  ],
+  "technical": [
+    {
+      "question": "Mi pago falló. ¿Qué tengo que hacer?",
+      "answer": "Verifique los datos de su tarjeta y asegúrese de tener fondos suficientes. Si el problema persiste, pruebe con una tarjeta diferente o comuníquese con su banco."
+    },
+    {
+      "question": "No recibí mi recibo.",
+      "answer": "Los recibos se envían automáticamente a su correo electrónico. Revise su carpeta de spam o comuníquese con el soporte si no puede encontrarlo."
+    },
+    {
+      "question": "No puedo acceder a las funciones premium.",
+      "answer": "Intente cerrar sesión y volver a iniciarla. Si eso no funciona, verifique el estado de su suscripción en su panel de control. ¿Aún tienes problemas? ¡Contacta con el soporte!"
+    }
+  ],
+  "test": {
+    "insightBullets": ["Fuerza de firma", "Punto de pivote", "2"],
+    "progress": "Progreso",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "selectOption": "Seleccionar Opción",
+    "subtitle": "Todo lo que necesitas saber sobre pagos, facturación y suscripciones",
+    "next": "Siguiente",
+    "previous": "Anterior"
+  },
+  "meta": {
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      }
+    ]
+  },
+  "result": {
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+  },
+  "paymentMethods": {
+    "title": "Tu Perfil Financiero"
+  },
+  "pricing": {
+    "title": "Tu Perfil Financiero"
+  },
+  "subtitle": "Todo lo que necesitas saber sobre pagos, facturación y suscripciones",
+  "generalTitle": "Preguntas Generales",
+  "billingTitle": "Facturación y Suscripciones",
+  "securityTitle": "Seguridad y Privacidad",
+  "technicalTitle": "Problemas Técnicos",
+  "stillHaveQuestions": "¿Aún tienes preguntas? ¡Nuestro equipo de soporte está aquí para ayudar!",
+  "contactSupport": "Contactar Soporte",
+  "viewRefundPolicy": "Ver Política de Reembolso",
+  "title": "Tu Perfil Financiero",
+  "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+}

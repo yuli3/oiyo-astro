@@ -1,0 +1,192 @@
+{
+  "input": {
+    "subtitle": "Is my deposit safe? Check for 'Tin Can' Jeonse risks",
+    "houseValue": "주택 가치",
+    "deposit": "보증금",
+    "mortgage": "저당",
+    "mortgageDesc": "모기지 설명",
+    "unit": "원",
+    "title": "Your Financial Profile"
+  },
+  "checklist": {
+    "items": [
+      "주택담보대출에 대한 부동산 등록부 확인",
+      "집주인의 납세 증명서 요청",
+      "전세반납보험 가입 자격 확인",
+      "정확한 시세 확인(실거래가)",
+      "조항 추가: '대출이 거부된 경우 보증금을 반환'"
+    ],
+    "title": "Your Financial Profile"
+  },
+  "meta": {
+    "subtitle": "Is my deposit safe? Check for 'Tin Can' Jeonse risks",
+    "disclaimer": "This result is for reference only and has no legal effect. Consult an expert for accurate analysis.",
+    "keywords": "전세,임대,한국,보증금보호",
+    "title": "Your Financial Profile",
+    "description": "Explore our suite of tools designed for deep finance insights."
+  },
+  "hero": {
+    "subtitle": "Is my deposit safe? Check for 'Tin Can' Jeonse risks",
+    "badge": "부동산"
+  },
+  "test": {
+    "progress": "진전",
+    "submit": "제출하기",
+    "loading": "내부 아키텍처의 별자리 매핑...",
+    "selectOption": "옵션 선택",
+    "subtitle": "Is my deposit safe? Check for 'Tin Can' Jeonse risks",
+    "insightBullets": ["시그니처 강도", "피벗 포인트", "2"]
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+        "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+      },
+      {
+        "icon": "🚀",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "💡",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      },
+      {
+        "icon": "🎯",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "🔥",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+      },
+      {
+        "icon": "⭐",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      },
+      {
+        "icon": "🚀",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+      },
+      {
+        "icon": "💡",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      },
+      {
+        "icon": "🎯",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+        "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+        "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+      },
+      {
+        "icon": "🔥",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+      },
+      {
+        "icon": "⭐",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      },
+      {
+        "icon": "🚀",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+      },
+      {
+        "icon": "💡",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "🎯",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+        "question": "인생의 흐름을 어떻게 탐색합니까?",
+        "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+      },
+      {
+        "icon": "🔥",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+      },
+      {
+        "icon": "⭐",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      }
+    ]
+  },
+  "result": {
+    "title": "Your Financial Profile",
+    "description": "Explore our suite of tools designed for deep finance insights.",
+    "debtRatio": "부채비율"
+  },
+  "subtitle": "내 보증금은 안전한가요? '깡통' 전세위험 확인",
+  "currency": "통화",
+  "optional": "선택 과목",
+  "disclaimer": "본 결과는 참고용일 뿐 법적 효력은 없습니다. 정확한 분석은 전문가와 상담하세요.",
+  "title": "귀하의 금융 프로필",
+  "description": "심층적인 금융 통찰력을 위해 설계된 도구 제품군을 살펴보세요.",
+  "safe": "안전한",
+  "caution": "주의",
+  "danger": "위험"
+}

@@ -1,0 +1,2310 @@
+{
+  "subtitle": "사회적 자아가 갖고 있는 성격의 각인.",
+  "badgeText": "임페리얼 에디션",
+  "result": {
+    "sections": {
+      "dimensions_title": "본질",
+      "imperial_decree": "황실 칙령",
+      "strengths": "강점",
+      "weaknesses": "약점",
+      "retake_ceremony": "재응시식",
+      "career_title": "진로",
+      "career_suitable": "번창하다",
+      "career_avoid": "도전적인 핏",
+      "growth_title": "성장 여정",
+      "growth_challenges": "주요 과제",
+      "growth_tips": "성장 팁",
+      "deep_careers": "직업 심층 가이드",
+      "hobbies_title": "기분별 취미 추천"
+    }
+  },
+  "profiles": {
+    "ENFJ": {
+      "name": "주역",
+      "nickname": "선생님",
+      "description": "청중을 매료시킬 수 있는 카리스마 있고 영감을 주는 리더입니다.",
+      "summary": "카리스마 있고 따뜻해요.",
+      "traits": {
+        "keywords": ["카리스마", "이타주의"],
+        "strengths": ["신뢰할 수 있음", "천성적인 리더"],
+        "weaknesses": ["지나치게 희생적임", "민감함"]
+      },
+      "career": {
+        "suitable": ["교사", "사회복지사"],
+        "avoid": ["시스템 관리자"]
+      },
+      "growth": {
+        "challenges": ["자기 관리", "경계 설정", "비판 수용", "과도한 배려"],
+        "tips": [
+          "자기 관리를 우선시하세요",
+          "경계를 설정하세요",
+          "비판을 수용하세요",
+          "완벽주의를 완화하세요"
+        ]
+      }
+    },
+    "ENFP": {
+      "name": "캠페인가",
+      "nickname": "챔피언",
+      "description": "열정적이고 창의적이며 사교적인 자유로운 영혼.",
+      "summary": "열정적이고 창의적입니다.",
+      "traits": {
+        "keywords": ["창의적", "사교적"],
+        "strengths": ["열정적", "관찰력"],
+        "weaknesses": ["과도한 생각", "스트레스에 취약"]
+      },
+      "career": {
+        "suitable": ["저널리스트", "컨설턴트"],
+        "avoid": ["회계 감사"]
+      },
+      "growth": {
+        "challenges": ["집중력", "실행력", "정서적 안정", "세부 관리"],
+        "tips": [
+          "집중력을 향상시키세요",
+          "실행력을 기르세요",
+          "감정을 조율하세요",
+          "계획성을 높이세요"
+        ]
+      }
+    },
+    "ENTJ": {
+      "name": "사령관",
+      "nickname": "지도자",
+      "description": "대담하고 상상력이 풍부하며 의지가 강한 리더입니다.",
+      "summary": "효율적이고 체계적입니다.",
+      "traits": {
+        "keywords": ["효율적", "강한 의지"],
+        "strengths": ["전략적", "자신감"],
+        "weaknesses": ["고집스러움", "비관용적"]
+      },
+      "career": {
+        "suitable": ["CEO", "관리자"],
+        "avoid": ["일반 사무원"]
+      },
+      "growth": {
+        "challenges": ["감정적 공감", "세부 사항", "인내심", "비판 수용"],
+        "tips": [
+          "감정적인 배려를 늘리세요",
+          "인내심을 기르세요",
+          "타인의 말을 경청하세요",
+          "스트레스를 관리하세요"
+        ]
+      }
+    },
+    "ENTP": {
+      "name": "토론가",
+      "nickname": "공상가",
+      "description": "지적 도전에 저항할 수 없는 똑똑하고 호기심 많은 사상가입니다.",
+      "summary": "혁신적이고 유연합니다.",
+      "traits": {
+        "keywords": ["혁신적", "재치 있는"],
+        "strengths": ["박학다식", "독창적"],
+        "weaknesses": ["논쟁적", "둔감함"]
+      },
+      "career": {
+        "suitable": ["기업가", "변호사"],
+        "avoid": ["회계사"]
+      },
+      "growth": {
+        "challenges": ["집중력", "일관성", "감정적 공감", "반복 업무"],
+        "tips": [
+          "집중력을 향상시키세요",
+          "정서적 인식을 높이세요",
+          "일관성을 유지하세요",
+          "세부 사항에 주의를 기울이세요"
+        ]
+      }
+    },
+    "ESFJ": {
+      "name": "영사",
+      "nickname": "간병인",
+      "description": "매우 배려심 많고 사교적입니다.",
+      "summary": "사회적이며 협동적입니다.",
+      "traits": {
+        "keywords": ["사교적", "인기 있는"],
+        "strengths": ["따뜻함", "민감함"],
+        "weaknesses": ["애정 결핍", "융통성 없음"]
+      },
+      "career": {
+        "suitable": ["이벤트 플래너", "홍보(PR)"],
+        "avoid": ["개발자"]
+      },
+      "growth": {
+        "challenges": ["자기주장", "독립심", "비판 수용", "갈등 관리"],
+        "tips": [
+          "자기주장을 강화하세요",
+          "비판을 수용하세요",
+          "독립심을 기르세요",
+          "갈등 해결 방법을 배우세요"
+        ]
+      }
+    },
+    "ESFP": {
+      "name": "연예인",
+      "nickname": "수행자",
+      "description": "자발적이고 활력이 넘치며 열정적입니다.",
+      "summary": "외향적이고 활력이 넘칩니다.",
+      "traits": {
+        "keywords": ["외향적", "즉흥적"],
+        "strengths": ["대담함", "실용적"],
+        "weaknesses": ["예민함", "집중력 부족"]
+      },
+      "career": {
+        "suitable": ["배우", "호스트"],
+        "avoid": ["회계사"]
+      },
+      "growth": {
+        "challenges": ["집중력", "계획성", "비판 수용", "정서적 안정"],
+        "tips": [
+          "집중력을 향상시키세요",
+          "계획 능력을 기르세요",
+          "비판을 수용하세요",
+          "감정을 관리하세요"
+        ]
+      }
+    },
+    "ESTJ": {
+      "name": "경영진",
+      "nickname": "보호자",
+      "description": "훌륭한 관리자.",
+      "summary": "조직적이고 결단력이 있습니다.",
+      "traits": {
+        "keywords": ["조직적", "직설적"],
+        "strengths": ["헌신적", "충성스러움"],
+        "weaknesses": ["융통성 없음", "판단하려 함"]
+      },
+      "career": {
+        "suitable": ["프로젝트 매니저", "법관"],
+        "avoid": ["예술가"]
+      },
+      "growth": {
+        "challenges": ["감정적 공감", "유연성", "변화에 적응", "창의성"],
+        "tips": [
+          "감정적 배려를 늘리세요",
+          "유연성을 기르세요",
+          "타인의 말을 경청하세요",
+          "변화를 받아들이세요"
+        ]
+      }
+    },
+    "ESTP": {
+      "name": "기업가",
+      "nickname": "설득하다",
+      "description": "똑똑하고 활력이 넘치며 통찰력이 뛰어납니다.",
+      "summary": "활력이 넘치고 통찰력이 뛰어납니다.",
+      "traits": {
+        "keywords": ["에너지 넘치는", "통찰력 있는"],
+        "strengths": ["대담함", "실용적"],
+        "weaknesses": ["충동적", "위험 선호"]
+      },
+      "career": {
+        "suitable": ["영업", "기업가"],
+        "avoid": ["연구원"]
+      },
+      "growth": {
+        "challenges": ["계획성", "감정적 공감", "인내심", "장기적 사고"],
+        "tips": [
+          "계획 능력을 기르세요",
+          "정서적 인식을 높이세요",
+          "인내심을 기르세요",
+          "깊게 생각하세요"
+        ]
+      }
+    },
+    "INFJ": {
+      "name": "지지하다",
+      "nickname": "이상주의자",
+      "description": "조용하고 신비로우면서도 영감을 주고 지칠 줄 모르는 이상주의자입니다.",
+      "summary": "통찰력이 있고 원칙이 있습니다.",
+      "traits": {
+        "keywords": ["통찰력 있는", "창의적"],
+        "strengths": ["열정적", "이타적"],
+        "weaknesses": ["예민함", "완벽주의자"]
+      },
+      "career": {
+        "suitable": ["상담가", "작가"],
+        "avoid": ["영업"]
+      },
+      "growth": {
+        "challenges": ["현실주의", "갈등 관리", "자기 관리", "경계 설정"],
+        "tips": [
+          "현실성을 기르세요",
+          "자기 관리를 우선시하세요",
+          "갈등에 맞서세요",
+          "경계를 설정하세요"
+        ]
+      }
+    },
+    "INFP": {
+      "name": "중재인",
+      "nickname": "치료자",
+      "description": "시적이고 친절하며 이타적인 사람들은 항상 좋은 일을 돕기 위해 열심입니다.",
+      "summary": "이상주의적이고 공감적입니다.",
+      "traits": {
+        "keywords": ["공감적", "창의적"],
+        "strengths": ["충성스러움", "개방적"],
+        "weaknesses": ["지나친 이상주의", "자기 비판적"]
+      },
+      "career": {
+        "suitable": ["예술가", "심리학자"],
+        "avoid": ["콜센터"]
+      },
+      "growth": {
+        "challenges": ["결단력", "현실주의", "갈등 관리", "자기주장"],
+        "tips": [
+          "현실성을 기르세요",
+          "결단력을 향상시키세요",
+          "갈등 해결을 배우세요",
+          "자기주장을 강화하세요"
+        ]
+      }
+    },
+    "INTJ": {
+      "name": "건축가",
+      "nickname": "전략가",
+      "description": "모든 것에 대한 계획을 갖고 있는 상상력이 풍부하고 전략적인 사상가입니다.",
+      "summary": "전략적이고 독립적입니다.",
+      "traits": {
+        "keywords": ["전략적", "독립적"],
+        "strengths": ["합리적", "지식이 풍부함"],
+        "weaknesses": ["오만함", "비판적"]
+      },
+      "career": {
+        "suitable": ["과학자", "전략가"],
+        "avoid": ["안내 데스크"]
+      },
+      "growth": {
+        "challenges": ["감정적 소통", "즉흥적인 상황", "팀워크", "비판 수용"],
+        "tips": [
+          "감정을 표현하는 연습을 하세요",
+          "타인의 의견을 받아들이세요",
+          "완벽주의를 완화하세요",
+          "사회적 네트워크를 형성하세요"
+        ]
+      }
+    },
+    "INTP": {
+      "name": "논리학자",
+      "nickname": "사상가",
+      "description": "지식에 대한 끊임없는 갈증을 지닌 혁신적인 발명가.",
+      "summary": "분석적이고 객관적입니다.",
+      "traits": {
+        "keywords": ["분석적", "객관적"],
+        "strengths": ["추상적 사고", "독창적"],
+        "weaknesses": ["멍해 보임", "둔감함"]
+      },
+      "career": {
+        "suitable": ["소프트웨어 엔지니어", "수학자"],
+        "avoid": ["영업사원"]
+      },
+      "growth": {
+        "challenges": ["실행력", "감정적 소통", "시간 관리", "실질적 적용"],
+        "tips": [
+          "실행력을 향상시키세요",
+          "감정 표현을 늘리세요",
+          "스케줄 관리를 개선하세요",
+          "타인과 소통하세요"
+        ]
+      }
+    },
+    "ISFJ": {
+      "name": "방어자",
+      "nickname": "보호자",
+      "description": "매우 헌신적이고 따뜻한 보호자입니다.",
+      "summary": "지지적이고 충성스럽습니다.",
+      "traits": {
+        "keywords": ["협조적", "신뢰할 수 있는"],
+        "strengths": ["인내심", "실용적"],
+        "weaknesses": ["수줍음", "과부하"]
+      },
+      "career": {
+        "suitable": ["간호사", "교사"],
+        "avoid": ["CEO"]
+      },
+      "growth": {
+        "challenges": ["자기주장", "경계 설정", "변화에 적응", "갈등 관리"],
+        "tips": [
+          "자기주장을 강화하세요",
+          "경계를 설정하세요",
+          "자기 관리를 우선시하세요",
+          "변화를 받아들이세요"
+        ]
+      }
+    },
+    "ISFP": {
+      "name": "모험가",
+      "nickname": "아티스트",
+      "description": "유연하고 매력적인 아티스트.",
+      "summary": "민감하고 예술적입니다.",
+      "traits": {
+        "keywords": ["매력적", "민감함"],
+        "strengths": ["상상력이 풍부함", "열정적"],
+        "weaknesses": ["스트레스에 취약", "경쟁적"]
+      },
+      "career": {
+        "suitable": ["디자이너", "예술가"],
+        "avoid": ["법무 관련"]
+      },
+      "growth": {
+        "challenges": ["자기주장", "계획성", "현실주의", "갈등 관리"],
+        "tips": [
+          "자기주장을 강화하세요",
+          "계획 능력을 기르세요",
+          "현실성을 높이세요",
+          "스트레스를 관리하세요"
+        ]
+      }
+    },
+    "ISTJ": {
+      "name": "물류 전문가",
+      "nickname": "현실주의자",
+      "description": "실용적이고 사실을 생각하는 개인.",
+      "summary": "책임감 있고 질서정연합니다.",
+      "traits": {
+        "keywords": ["실용적", "사실 중심적"],
+        "strengths": ["정직함", "보편적"],
+        "weaknesses": ["고집스러움", "둔감함"]
+      },
+      "career": {
+        "suitable": ["회계사", "군인"],
+        "avoid": ["예술가"]
+      },
+      "growth": {
+        "challenges": ["변화에 적응", "감정적 소통", "유연성", "창의성"],
+        "tips": [
+          "변화를 수용하세요",
+          "감정 표현을 늘리세요",
+          "유연성을 기르세요",
+          "스트레스를 관리하세요"
+        ]
+      }
+    },
+    "ISTP": {
+      "name": "거장",
+      "nickname": "크래프터",
+      "description": "대담하고 실용적인 실험가.",
+      "summary": "대담하고 실습 가능합니다.",
+      "traits": {
+        "keywords": ["대담함", "실용적"],
+        "strengths": ["낙관적", "창의적"],
+        "weaknesses": ["고집스러움", "쉽게 질림"]
+      },
+      "career": {
+        "suitable": ["엔지니어", "정비사"],
+        "avoid": ["안내 데스크"]
+      },
+      "growth": {
+        "challenges": [
+          "감정적 소통",
+          "사회적 기술",
+          "장기적 계획",
+          "이론 학습"
+        ],
+        "tips": [
+          "감정 표현을 늘리세요",
+          "사교성을 기르세요",
+          "장기 계획을 세우세요",
+          "더 많이 소통하세요"
+        ]
+      }
+    }
+  },
+  "career": {
+    "types": {
+      "realistic": {
+        "traits": [
+          "정직하고 진실함",
+          "실용적이고 현실적",
+          "도구 사용에 능숙함",
+          "독립적인"
+        ],
+        "careerSuggestions": [
+          "기계 엔지니어",
+          "전공",
+          "Chef",
+          "자동차 기술자",
+          "수의사",
+          "조경가",
+          "조종사"
+        ],
+        "name": "현실적인 유형",
+        "alias": "개업의",
+        "description": "당신은 직접적이고 실용적인 작업을 선호하며 도구와 기계를 사용하여 물건을 만들거나 고치는 것을 즐깁니다. 나는 구체적인 결과가 눈에 보이는 수동 활동을 좋아한다.",
+        "workEnvironment": "작업장, 건설 현장, 실험실 또는 야외와 같은 실제 실습 환경. 우리는 도구, 기계, 유형의 프로젝트를 다룰 때 탁월한 능력을 발휘합니다."
+      },
+      "investigative": {
+        "traits": [
+          "분석적 및 논리적",
+          "지적 호기심",
+          "정밀한",
+          "독립적인 사상가"
+        ],
+        "careerSuggestions": [
+          "소프트웨어 개발자",
+          "데이터 분석가",
+          "연구 과학자",
+          "내과 의사",
+          "경제학자",
+          "심리학자",
+          "제약사"
+        ],
+        "name": "탐색형",
+        "alias": "사색가",
+        "description": "당신은 문제를 분석하고, 연구하고, 아이디어를 가지고 작업하는 것을 즐깁니다. 나는 지적 도전을 즐기고 사물이 작동하는 원리를 이해하는 것을 좋아합니다.",
+        "workEnvironment": "연구 시설, 실험실, 도서관 또는 학술 환경. 그들은 방해를 최소화하면서 조용하고 지적인 활동에 참여할 수 있는 환경을 선호합니다."
+      },
+      "artistic": {
+        "traits": [
+          "창의적이고 독창적인",
+          "자유로운 영혼",
+          "나타내는",
+          "틀에 얽매이지 않는"
+        ],
+        "careerSuggestions": [
+          "그래픽 디자이너",
+          "작가",
+          "마케팅 크리에이티브",
+          "건축가",
+          "음악가",
+          "배우",
+          "패션 디자이너"
+        ],
+        "name": "예술 유형",
+        "alias": "창조자",
+        "description": "당신은 창의적이고 자기 표현력이 뛰어나며 아이디어, 색상, 언어 또는 모양을 가지고 노는 것을 즐깁니다. 나는 독창성을 중요시하며 창의적인 표현이 가능한 환경을 즐깁니다.",
+        "workEnvironment": "창작 스튜디오, 극장, 갤러리 또는 유연한 작업 공간. 자신만의 속도로 창의력을 발휘하려면 자유가 필요합니다."
+      },
+      "social": {
+        "traits": ["공감", "협동조합", "친숙한", "좋은 의사소통자"],
+        "careerSuggestions": [
+          "선생님",
+          "참사관",
+          "사회 사업가",
+          "간호사",
+          "인사 전문가",
+          "코치/트레이너",
+          "물리치료사"
+        ],
+        "name": "사회적 유형",
+        "alias": "지원",
+        "description": "당신은 사람들을 돕고, 가르치고, 함께 일하는 것을 좋아합니다. 나는 다른 사람들을 돌보고 그들의 삶에 긍정적인 영향을 미치는 활동에 매력을 느낍니다.",
+        "workEnvironment": "학교, 병원, 주민센터 또는 상담실. 당신은 사람들을 돕고 소통하는 데 집중할 수 있는 환경에서 탁월합니다."
+      },
+      "enterprising": {
+        "traits": ["거창한", "자신감", "동기", "활력이 넘치는"],
+        "careerSuggestions": [
+          "영업 관리자",
+          "비즈니스 임원",
+          "변호사",
+          "기업가",
+          "마케팅 관리자",
+          "부동산 중개인",
+          "프로젝트 관리자"
+        ],
+        "name": "진취적인 유형",
+        "alias": "설득자",
+        "description": "당신은 목표를 달성하기 위해 다른 사람들을 이끌고, 설득하고, 조직하는 것을 즐깁니다. 당신은 경쟁적인 환경을 즐기고 위험을 감수하고 결정을 내리는 데 능숙합니다.",
+        "workEnvironment": "비즈니스 사무실, 매장 또는 리더십 위치. 경쟁적이고 결과 중심적인 환경에서 두각을 나타내십시오."
+      },
+      "conventional": {
+        "traits": ["세부 지향", "정리됨", "책임이 있는", "효율적인"],
+        "careerSuggestions": [
+          "회계사",
+          "데이터 입력",
+          "행정 보조원",
+          "벤치 플레이트",
+          "세무 대리인",
+          "사서",
+          "보험 인수자"
+        ],
+        "name": "관습적인 유형",
+        "alias": "조직자",
+        "description": "당신은 명확한 절차를 갖춘 구조화되고 질서정연한 업무 환경을 선호합니다. 데이터 정리, 세부사항 관리, 확립된 시스템 준수에 탁월합니다.",
+        "workEnvironment": "사무실, 은행, 정부 기관 또는 조직 조직. 명확한 계층 구조와 예측 가능성이 있는 환경을 선호합니다."
+      }
+    },
+    "questions": [
+      {
+        "id": "1",
+        "text": "나는 도구와 기계를 다루는 것을 좋아한다",
+        "type": "현실적인",
+        "weight": 3
+      },
+      {
+        "id": "2",
+        "text": "나는 이론적인 토론보다 실무적이고 실무적인 작업을 선호합니다.",
+        "type": "현실적인",
+        "weight": 3
+      },
+      {
+        "id": "3",
+        "text": "나는 내가 하는 일에서 가시적인 결과를 보고 싶다.",
+        "type": "현실적인",
+        "weight": 2
+      },
+      {
+        "id": "4",
+        "text": "나는 물건을 짓고, 고치고, 수리하는 것을 즐긴다",
+        "type": "현실적인",
+        "weight": 3
+      },
+      {
+        "id": "5",
+        "text": "나는 야외나 작업장에서 일하는 것을 선호한다",
+        "type": "현실적인",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "text": "나는 연구와 분석을 통해 복잡한 문제를 해결하는 것을 즐깁니다.",
+        "type": "조사",
+        "weight": 3
+      },
+      {
+        "id": "7",
+        "text": "나는 사물이 어떻게 작동하는지 깊은 수준에서 이해하고 싶습니다.",
+        "type": "조사",
+        "weight": 3
+      },
+      {
+        "id": "8",
+        "text": "나는 지적 과제에 대해 독립적으로 일하는 것을 선호합니다",
+        "type": "조사",
+        "weight": 2
+      },
+      {
+        "id": "9",
+        "text": "나는 데이터를 수집하고 분석하는 것을 좋아한다",
+        "type": "조사",
+        "weight": 3
+      },
+      {
+        "id": "10",
+        "text": "나는 새로운 이론을 실험하고 테스트하는 것을 좋아합니다.",
+        "type": "조사",
+        "weight": 2
+      },
+      {
+        "id": "11",
+        "text": "나는 창의적으로 표현하는 것을 좋아한다",
+        "type": "예술적",
+        "weight": 3
+      },
+      {
+        "id": "12",
+        "text": "나는 엄격한 규칙이 없는 유연한 근무 환경을 선호합니다.",
+        "type": "예술적",
+        "weight": 2
+      },
+      {
+        "id": "13",
+        "text": "나는 색상, 디자인 또는 창의적인 컨셉으로 작업하는 것을 좋아합니다.",
+        "type": "예술적",
+        "weight": 3
+      },
+      {
+        "id": "14",
+        "text": "나는 내 작업에서 독창성과 혁신을 중요하게 생각합니다.",
+        "type": "예술적",
+        "weight": 3
+      },
+      {
+        "id": "15",
+        "text": "나는 창의적인 해석이 가능한 프로젝트를 좋아한다",
+        "type": "예술적",
+        "weight": 2
+      },
+      {
+        "id": "16",
+        "text": "나는 다른 사람들의 문제 해결을 돕는 것을 좋아한다",
+        "type": "사회의",
+        "weight": 3
+      },
+      {
+        "id": "17",
+        "text": "나는 팀으로 일하고 협업하는 환경을 좋아합니다.",
+        "type": "사회의",
+        "weight": 2
+      },
+      {
+        "id": "18",
+        "text": "나는 다른 사람을 가르치거나 멘토링하는 일에서 성취감을 느낀다.",
+        "type": "사회의",
+        "weight": 3
+      },
+      {
+        "id": "19",
+        "text": "나는 업무 중심의 일보다 사람 중심의 일을 선호한다",
+        "type": "사회의",
+        "weight": 3
+      },
+      {
+        "id": "20",
+        "text": "나는 다른 사람에게 긍정적인 영향을 미치는 것을 좋아한다",
+        "type": "사회의",
+        "weight": 2
+      },
+      {
+        "id": "21",
+        "text": "나는 프로젝트를 주도하고 팀을 관리하는 것을 즐깁니다.",
+        "type": "진취적인",
+        "weight": 3
+      },
+      {
+        "id": "22",
+        "text": "나는 경쟁적이고 결과 지향적인 환경을 좋아합니다.",
+        "type": "진취적인",
+        "weight": 2
+      },
+      {
+        "id": "23",
+        "text": "나는 다른 사람을 설득하고 결정에 영향을 미치는 것을 좋아합니다.",
+        "type": "진취적인",
+        "weight": 3
+      },
+      {
+        "id": "24",
+        "text": "나는 목표를 달성하기 위해 계산된 위험을 감수하는 것을 좋아합니다",
+        "type": "진취적인",
+        "weight": 3
+      },
+      {
+        "id": "25",
+        "text": "나는 빠르게 발전할 수 있는 환경을 선호한다",
+        "type": "진취적인",
+        "weight": 2
+      },
+      {
+        "id": "26",
+        "text": "나는 구조화되고 조직화된 작업 환경을 선호합니다.",
+        "type": "전통적인",
+        "weight": 3
+      },
+      {
+        "id": "27",
+        "text": "나는 데이터, 숫자, 자세한 정보를 다루는 작업을 즐깁니다.",
+        "type": "전통적인",
+        "weight": 2
+      },
+      {
+        "id": "28",
+        "text": "나는 확립된 절차와 지침을 따르는 것을 좋아합니다.",
+        "type": "전통적인",
+        "weight": 3
+      },
+      {
+        "id": "29",
+        "text": "나는 예측 가능한 업무 루틴과 명확한 기대치를 선호합니다.",
+        "type": "전통적인",
+        "weight": 3
+      },
+      {
+        "id": "30",
+        "text": "나는 행정 업무를 정리하고 관리하는 데 능숙합니다.",
+        "type": "전통적인",
+        "weight": 2
+      }
+    ],
+    "suitable": ["교사", "사회복지사"],
+    "avoid": ["시스템 관리자"]
+  },
+  "learning": {
+    "types": {
+      "INTJ": {
+        "strengths": [
+          "독립적인 연구",
+          "복잡한 개념",
+          "장기 계획",
+          "논리적 분석"
+        ],
+        "challenges": ["지루한 반복", "암기", "그룹 작업", "자발적인 작업"],
+        "studyMethods": [
+          "컨셉 매핑",
+          "독서와 연구",
+          "온라인 강좌",
+          "문제 해결 초점"
+        ],
+        "recommendedTools": ["개념", "흑요석", "Anki", "칸아카데미"],
+        "examStrategies": [
+          "과거 패턴 분석",
+          "개념을 연결하다",
+          "연습 문제 만들기"
+        ],
+        "motivationTips": [
+          "명확한 목표를 설정하세요",
+          "큰 그림을 이해하라",
+          "실용적인 응용 프로그램 찾기"
+        ],
+        "name": "영리한 전략가",
+        "emoji": "🎉",
+        "description": "우리는 체계적이고 독립적인 학습을 선호하며 깊은 이해를 추구합니다.",
+        "optimalEnvironment": "방해받지 않는 조용하고 프라이빗한 공간",
+        "timeManagement": "체계적이고 장기적인 계획을 실행한다",
+        "idealGroupSize": "혼자 또는 1~2명",
+        "concentrationPeak": "저녁 시간"
+      },
+      "INTP": {
+        "strengths": [
+          "논리적 사고",
+          "창의적인 문제 해결",
+          "개념 이해",
+          "독립적인 연구"
+        ],
+        "challenges": ["회의 마감일", "다음 계획", "암기", "규칙적인 루틴"],
+        "studyMethods": ["이론 탐구", "실험", "온라인 토론", "소스 비교"],
+        "recommendedTools": ["위키피디아", "레딧", "스택 교환", "유튜브 강의"],
+        "examStrategies": [
+          "원리 이해",
+          "다양한 접근방식 연구",
+          "논리적 추론을 사용하라"
+        ],
+        "motivationTips": [
+          "흥미로운 주제 찾기",
+          "자유를 유지하다",
+          "창의성을 허용하라"
+        ],
+        "name": "논리적인 사상가",
+        "emoji": "🎉",
+        "description": "나는 지적 호기심이 강하고 이론적 이해를 중시하는 학습자이다.",
+        "optimalEnvironment": "자유로운 분위기의 조용한 공간",
+        "timeManagement": "유연하지만 명확한 마감일",
+        "idealGroupSize": "혼자 공부하는 것을 선호함",
+        "concentrationPeak": "늦은 밤 시간"
+      },
+      "ENTJ": {
+        "strengths": ["빠른 학습", "지도", "목표 달성", "조직"],
+        "challenges": [
+          "완벽주의",
+          "세부정보 누락",
+          "감성 콘텐츠",
+          "느린 학습자"
+        ],
+        "studyMethods": [
+          "리드 스터디 그룹",
+          "핵심 내용을 요약하세요",
+          "효율적인 암기",
+          "프리젠테이션"
+        ],
+        "recommendedTools": ["개념", "트렐로", "에버노트", "파워포인트"],
+        "examStrategies": ["시간 관리", "필수 사항에 집중", "반복 연습"],
+        "motivationTips": ["명확한 목표", "경쟁", "리더십 역할"],
+        "name": "대담한 지도자",
+        "emoji": "🎉",
+        "description": "나는 목표 지향적이고 효율성을 중시하는 주도적인 학습자입니다.",
+        "optimalEnvironment": "깔끔하게 정리된 사무실 같은 공간",
+        "timeManagement": "철저한 시간 계획과 우선순위 지정",
+        "idealGroupSize": "3~5명",
+        "concentrationPeak": "아침 시간"
+      },
+      "ENTP": {
+        "strengths": [
+          "창의적 사고",
+          "빠른 이해",
+          "토론 기술",
+          "새로운 방법을 시도하다"
+        ],
+        "challenges": ["일상적인 학습", "암기", "회의 마감일", "단순 반복"],
+        "studyMethods": [
+          "토론 및 토론",
+          "다양한 자원",
+          "프로젝트 기반",
+          "실험적 접근"
+        ],
+        "recommendedTools": [
+          "토론 플랫폼",
+          "TED 강연",
+          "코세라",
+          "마인드 매핑 도구"
+        ],
+        "examStrategies": [
+          "창의적인 답변",
+          "다양한 관점",
+          "마지막 순간의 집중"
+        ],
+        "motivationTips": ["새로운 도전", "토론 기회", "자유로운 학습 스타일"],
+        "name": "열띤 토론을 즐기는 토론자",
+        "emoji": "🎉",
+        "description": "나는 창의적이고 새로운 것을 시도하고 토론을 통해 배우는 것을 즐기는 학습자입니다.",
+        "optimalEnvironment": "자유롭고 활기찬 공간",
+        "timeManagement": "마감일이 임박했을 때 집중력을 발휘하세요",
+        "idealGroupSize": "3~4명의 토론 그룹",
+        "concentrationPeak": "오후와 저녁 사이"
+      },
+      "INFJ": {
+        "strengths": ["깊은 이해", "패턴 인식", "창의적인 표현", "장기 기억"],
+        "challenges": [
+          "피상적 암기",
+          "시간적 압박",
+          "경쟁 환경",
+          "비판적 평가"
+        ],
+        "studyMethods": ["저널링", "개념 연결", "심상", "스토리텔링"],
+        "recommendedTools": ["개념", "메모 읽기", "헤드스페이스", "다이어리"],
+        "examStrategies": [
+          "큰 그림을 이해하라",
+          "의미 있는 연결",
+          "정서적 기억"
+        ],
+        "motivationTips": ["의미 찾기", "개인 목표에 연결", "영감을 주는 환경"],
+        "name": "선의의 옹호자",
+        "emoji": "🎉",
+        "description": "나는 깊고 의미 있는 학습을 추구하는 지각 있는 학습자입니다.",
+        "optimalEnvironment": "조용하고 감동적인 공간",
+        "timeManagement": "스트레스를 최소화하는 여유로운 계획",
+        "idealGroupSize": "혼자 또는 소수의 엘리트 그룹",
+        "concentrationPeak": "이른 아침이나 늦은 저녁"
+      },
+      "INFP": {
+        "strengths": [
+          "창의적인 글쓰기",
+          "정서적 이해",
+          "독립적 학습",
+          "예술적 표현"
+        ],
+        "challenges": ["엄격한 규칙", "중요한 피드백", "빠른 마감일", "경쟁"],
+        "studyMethods": [
+          "자유 형식 메모",
+          "창의적인 프로젝트",
+          "독서",
+          "음악 반주"
+        ],
+        "recommendedTools": ["굿노트", "컬러펜", "스포티파이", "앱 읽기"],
+        "examStrategies": [
+          "독자적인 방법 개발",
+          "정서적 연결",
+          "편안한 사고방식"
+        ],
+        "motivationTips": ["개인적인 의미", "표현의 자유", "긍정적인 피드백"],
+        "name": "열정적인 중재자",
+        "emoji": "🎉",
+        "description": "가치 중심적이고 창의적인 방식으로 학습하기를 선호하는 학습자",
+        "optimalEnvironment": "편안하고 개인화되었으며 영감을 주는 공간",
+        "timeManagement": "창의성을 저해하지 않는 유연한 계획",
+        "idealGroupSize": "혼자 공부하는 것을 선호함",
+        "concentrationPeak": "유동적이지만 몰입하면 집중됨"
+      },
+      "ENFJ": {
+        "strengths": [
+          "협업 학습",
+          "의사소통",
+          "다른 사람을 이해하기",
+          "동기 부여"
+        ],
+        "challenges": ["솔로 학습", "비인격적인 주제", "경쟁", "비판적 분석"],
+        "studyMethods": ["스터디 그룹", "동료 교육", "토론", "역할극"],
+        "recommendedTools": ["Zoom", "불화", "구글 문서", "협업 도구"],
+        "examStrategies": ["그룹스터디", "서로 가르치다", "정서적 기억"],
+        "motivationTips": [
+          "함께 배우세요",
+          "다른 사람들을 도와주세요",
+          "긍정적인 분위기"
+        ],
+        "name": "그냥 사회운동가",
+        "emoji": "🎉",
+        "description": "나는 다른 사람들과 함께 성장하고 배우는 것을 즐기는 협력적인 학습자입니다.",
+        "optimalEnvironment": "따뜻하고 소통하는 공간",
+        "timeManagement": "단체 일정에 맞춘 조화로운 기획",
+        "idealGroupSize": "4~6명 정도의 스터디 그룹",
+        "concentrationPeak": "오전과 오후 사이"
+      },
+      "ENFP": {
+        "strengths": ["창의성", "열광", "다양한 관심사", "빠른 연결"],
+        "challenges": ["집중력 유지", "세부", "루틴", "장기 프로젝트"],
+        "studyMethods": [
+          "다양한 소재",
+          "게임화된 학습",
+          "그룹 활동",
+          "실험적 접근"
+        ],
+        "recommendedTools": ["Quizlet", "카훗", "유튜브", "인스타그램 교육"],
+        "examStrategies": [
+          "흥미로운 연결 찾기",
+          "다양한 방법을 시도해 보세요",
+          "게임과 같은 접근 방식"
+        ],
+        "motivationTips": ["새로운 자극", "재미있는 방법", "칭찬과 격려"],
+        "name": "재치 있는 활동가",
+        "emoji": "🎉",
+        "description": "나는 많은 에너지와 다양한 호기심을 지닌 열정적인 학습자입니다.",
+        "optimalEnvironment": "활기차고 자극적인 공간",
+        "timeManagement": "여러 개의 짧고 집중적인 세션",
+        "idealGroupSize": "다양한 사람들과",
+        "concentrationPeak": "기분에 따라 달라요"
+      },
+      "ISTJ": {
+        "strengths": ["근민", "암기", "조직", "계획 실행"],
+        "challenges": [
+          "추상적 개념",
+          "즉흥 연주",
+          "창의적인 작업",
+          "불분명한 지침"
+        ],
+        "studyMethods": [
+          "교과서 읽기",
+          "반복 암기",
+          "체계적인 노트",
+          "지난 논문"
+        ],
+        "recommendedTools": [
+          "전통적인 음표",
+          "뛰어나다",
+          "PDF 교과서",
+          "앱 예약"
+        ],
+        "examStrategies": [
+          "철저한 준비",
+          "반복학습",
+          "시간 기록",
+          "확고한 이해"
+        ],
+        "motivationTips": ["명확한 목표", "체계적인 계획", "성취"],
+        "name": "정직한 논리학자",
+        "emoji": "🎉",
+        "description": "근면하고 책임감이 있으며 전통적인 학습 방법을 선호합니다.",
+        "optimalEnvironment": "정적이고 잘 정돈된 공간",
+        "timeManagement": "정해진 시간표에 따라 학습",
+        "idealGroupSize": "혼자 또는 2명이 함께",
+        "concentrationPeak": "아침 시간"
+      },
+      "ISFJ": {
+        "strengths": ["세부 사항에 대한 관심", "인내심", "메모리", "책임"],
+        "challenges": ["추상이론", "비판적 사고", "급속한 변화", "경쟁"],
+        "studyMethods": [
+          "주의 깊게 메모하기",
+          "반복 연습",
+          "실제 사례",
+          "단계별"
+        ],
+        "recommendedTools": ["컬러펜", "체크리스트", "기획자", "전통 교과서"],
+        "examStrategies": ["충분한 검토", "세부정보 확인", "안정성 유지"],
+        "motivationTips": ["안정적인 환경", "칭찬과 인정", "실용적인 가치"],
+        "name": "용감한 수호자",
+        "emoji": "🎉",
+        "description": "꼼꼼하고 책임감이 강하며 차분하게 학습하는 안정적인 학습자입니다.",
+        "optimalEnvironment": "안정적이고 친숙하며 조용한 공간",
+        "timeManagement": "불안을 줄이기 위한 여유로운 계획",
+        "idealGroupSize": "친한 친구 한두 명",
+        "concentrationPeak": "아침 시간"
+      },
+      "ESTJ": {
+        "strengths": ["조직", "실행", "지도", "능률"],
+        "challenges": ["추상이론", "감성 콘텐츠", "느린 속도", "유연성"],
+        "studyMethods": ["요약", "플래시카드", "지난 논문", "주요 스터디 그룹"],
+        "recommendedTools": ["뛰어나다", "파워포인트", "기획자", "타이머"],
+        "examStrategies": ["엄격한 시간 관리", "필수 사항에 집중", "반복 연습"],
+        "motivationTips": ["명확한 목표", "눈에 보이는 결과", "리더십 역할"],
+        "name": "엄격한 관리자",
+        "emoji": "🎉",
+        "description": "효율성과 결과를 중시하고 체계적으로 실천하는 실천형 학습자입니다.",
+        "optimalEnvironment": "잘 나누어지고 정리된 공간",
+        "timeManagement": "체계적인 기획과 철저한 실행",
+        "idealGroupSize": "3~4명의 효율적인 그룹",
+        "concentrationPeak": "아침 시간"
+      },
+      "ESFJ": {
+        "strengths": ["협력", "책임", "실용적인 사항", "의사소통"],
+        "challenges": ["솔로 학습", "추상이론", "비판", "경쟁"],
+        "studyMethods": [
+          "그룹스터디",
+          "서로 퀴즈를 낸다",
+          "실제 사례",
+          "역할극"
+        ],
+        "recommendedTools": ["채팅 스터디 그룹", "Zoom", "공유 노트", "컬러펜"],
+        "examStrategies": ["함께 공부하세요", "상호 격려", "실용적인 이해"],
+        "motivationTips": ["사회적 분위기", "다른 사람들을 도와주세요", "칭찬"],
+        "name": "사교적인 외교관",
+        "emoji": "🎉",
+        "description": "나는 주변 사람들과 조화롭게 학습하는 것을 즐기는 협력적인 학습자입니다.",
+        "optimalEnvironment": "따뜻하고 소통하는 공간",
+        "timeManagement": "주변 사람들과의 약속이 포함된 계획",
+        "idealGroupSize": "4~6명의 활기찬 그룹",
+        "concentrationPeak": "오전과 오후 사이"
+      },
+      "ISTP": {
+        "strengths": ["문제 해결", "논리적 사고", "실용적인 기술", "빠른 응답"],
+        "challenges": ["이론학습", "장기 계획", "암기", "감성 콘텐츠"],
+        "studyMethods": ["실습", "비디오 학습", "직접적인 경험", "문제 해결"],
+        "recommendedTools": [
+          "유튜브 연습",
+          "칸아카데미",
+          "시뮬레이션",
+          "실용적인 도구"
+        ],
+        "examStrategies": [
+          "실제적인 문제",
+          "논리적 접근",
+          "효율적인 시간 활용"
+        ],
+        "motivationTips": ["실용적인 가치", "무료 방법", "도전과제"],
+        "name": "모든 거래의 잭",
+        "emoji": "🎉",
+        "description": "저는 실용적이고 실습적인 학습을 선호하는 문제 해결형 학습자입니다.",
+        "optimalEnvironment": "연습을 위한 여유 공간",
+        "timeManagement": "필요에 따라 유연한 조정",
+        "idealGroupSize": "혼자 또는 소그룹으로",
+        "concentrationPeak": "오후와 저녁 사이"
+      },
+      "ISFP": {
+        "strengths": ["창의성", "감광도", "실용적인 기술", "유연성"],
+        "challenges": ["엄격한 규칙", "경쟁", "비판", "장기 계획"],
+        "studyMethods": ["시각적 학습", "관행", "음악과 함께", "자유형"],
+        "recommendedTools": [
+          "iPad",
+          "심층 합성을 기다리는 중...",
+          "핀터레스트",
+          "유튜브"
+        ],
+        "examStrategies": ["편안한 마음가짐", "시각적 기억", "개인적인 방법"],
+        "motivationTips": ["자유로운 환경", "긍정적인 피드백", "창의적인 표현"],
+        "name": "호기심 많은 예술가",
+        "emoji": "🎉",
+        "description": "그는 자신의 속도에 맞춰 학습하는 것을 즐기는 매우 민감한 학습자입니다.",
+        "optimalEnvironment": "편안하고 아름다운 공간",
+        "timeManagement": "귀하의 상황에 맞는 유연한 계획",
+        "idealGroupSize": "혼자 공부하는 것을 선호함",
+        "concentrationPeak": "나만을 위한 편안한 시간"
+      },
+      "ESTP": {
+        "strengths": ["빠른 학습", "실용적인 기술", "적응성", "문제 해결"],
+        "challenges": ["이론학습", "암기", "긴 초점", "계획"],
+        "studyMethods": ["실습", "그룹 활동", "경쟁", "체험학습"],
+        "recommendedTools": [
+          "게임화된 앱",
+          "실용적인 도구",
+          "VR 학습",
+          "스포츠 비유"
+        ],
+        "examStrategies": ["실기 시험", "빠른 사고를 활용하라", "짧은 초점"],
+        "motivationTips": ["경쟁과 도전", "실용적인 가치", "즉각적인 피드백"],
+        "name": "모험심이 강한 사업가",
+        "emoji": "🎉",
+        "description": "나는 적극적이고 현실적인 경험을 통해 학습을 즐기는 학습자입니다.",
+        "optimalEnvironment": "활동적이고 직접 체험할 수 있는 공간",
+        "timeManagement": "마감 전 단기 몰입 계획",
+        "idealGroupSize": "3~5명의 활동 그룹",
+        "concentrationPeak": "오전과 오후 사이"
+      },
+      "ESFP": {
+        "strengths": ["사교성", "열광", "실용적인 기술", "재미있는 분위기"],
+        "challenges": ["솔로 학습", "이론", "집중하다", "장기 계획"],
+        "studyMethods": ["그룹 활동", "계략", "역할극", "음악과 함께"],
+        "recommendedTools": [
+          "카훗",
+          "소셜 앱",
+          "틱톡 교육",
+          "친구들과 함께 공부하세요"
+        ],
+        "examStrategies": ["재미있는 접근", "그룹 검토", "긍정적인 사고방식"],
+        "motivationTips": ["재미있는 방법", "친구들과 함께", "칭찬과 보상"],
+        "name": "자유분방한 연예인",
+        "emoji": "🎉",
+        "description": "나는 재미를 추구하고 사람들과 함께 학습하는 것을 선호하는 학습자입니다.",
+        "optimalEnvironment": "밝고 활기차며 자극적인 공간",
+        "timeManagement": "몇 가지 짧고 즐거운 학습 세션",
+        "idealGroupSize": "4~8명의 대규모 그룹",
+        "concentrationPeak": "낮"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "새로운 과목을 배울 때 당신은:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "혼자 조용히 교과서 들고 공부하기",
+            "preference": "I"
+          },
+          {
+            "text": "친구들과 함께 토론하고 공부해보세요",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "학습자료는 어떻게 기억하시나요?",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "구체적인 사실과 세부사항을 기억하세요.",
+            "preference": "S"
+          },
+          {
+            "text": "전체적인 컨셉과 패턴을 파악하세요",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "문제 해결을 위한 접근 방식:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "논리적 분석을 통해 답을 찾아보세요",
+            "preference": "T"
+          },
+          {
+            "text": "직관과 느낌으로 접근하라",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "시험 준비는 어떻게 하시나요?",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "체계적인 계획을 세우고 조기에 준비하라",
+            "preference": "J"
+          },
+          {
+            "text": "유연성을 유지하고 필요할 때 집중하세요",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "선호하는 수업 활동:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "개별 과제 또는 독립 프로젝트",
+            "preference": "I"
+          },
+          {
+            "text": "그룹 토론 또는 팀 프로젝트",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "복잡한 개념을 이해할 때:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "단계별 설명과 실제 사례가 필요합니다.",
+            "preference": "S"
+          },
+          {
+            "text": "추상적인 이론과 큰 그림을 먼저 살펴보세요",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "프로젝트 팀에서의 역할:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "객관적인 분석과 효율성 추구",
+            "preference": "T"
+          },
+          {
+            "text": "팀의 화합과 모두의 의견을 소중히 여깁니다.",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "과제 마감일이 다가올 때:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "계획대로 착실하게 진행",
+            "preference": "J"
+          },
+          {
+            "text": "마감 시간의 압박으로 집중력이 향상됩니다.",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "선호하는 학습 환경:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "조용한 도서관이나 개인 공간",
+            "preference": "I"
+          },
+          {
+            "text": "카페나 스터디카페 등 활기 넘치는 곳",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "선호하는 시험 문제 유형:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "사실 기반 객관식 또는 단답형",
+            "preference": "S"
+          },
+          {
+            "text": "창의적 사고가 필요한 에세이 문제",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "성적이 좋지 않을 때:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "객관적으로 원인을 분석하고 개선합니다.",
+            "preference": "T"
+          },
+          {
+            "text": "감정적으로 받아들이고 동기를 찾으세요",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "학습 계획을 세울 때:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "세부 일정과 목표를 명확하게 정의",
+            "preference": "J"
+          },
+          {
+            "text": "대략적인 방향을 설정하고 유연하게 조정",
+            "preference": "P"
+          }
+        ]
+      }
+    ]
+  },
+  "travel": {
+    "types": {
+      "INTJ": {
+        "preferences": ["문화 유적지", "박물관", "역사적인 장소", "건축학"],
+        "avoidances": [
+          "혼잡한 장소",
+          "자발적인 계획",
+          "그룹 투어",
+          "파티 분위기"
+        ],
+        "idealDestinations": {
+          "domestic": ["경주", "전주한옥마을", "안동", "제주 동부"],
+          "international": ["교토", "Rome", "프라하", "이스탄불"]
+        },
+        "activities": ["역사 투어", "아키텍처 실행", "독서", "사진술"],
+        "companionCompatibility": {
+          "best": ["ENFP", "ENTP", "INFP"],
+          "good": ["INTJ", "INTP", "ENTJ"],
+          "challenging": ["ESFP", "ESTP", "ESFJ"]
+        },
+        "name": "용감한 탐험가",
+        "emoji": "🎉",
+        "description": "철저한 계획과 효율성을 추구하는 자유여행자입니다.",
+        "planningStyle": "플랜 B를 포함한 상세한 여행 일정",
+        "budgetApproach": "중요한 곳에 예산을 전략적으로 할당",
+        "accommodation": "조용하고 편안한 프라이빗 공간",
+        "packingStyle": "체계적이고 최소한의 포장",
+        "foodExploration": "유명 맛집보다는 현지 음식을 알아보고 방문해보세요"
+      },
+      "INTP": {
+        "preferences": [
+          "독특한 장소",
+          "과학 박물관",
+          "숨겨진 보석",
+          "지역문화"
+        ],
+        "avoidances": [
+          "고정된 일정",
+          "관광객 함정",
+          "쇼핑 포커스",
+          "시끄러운 장소"
+        ],
+        "idealDestinations": {
+          "domestic": ["털털한 청년", "강릉", "통영", "속초"],
+          "international": ["아이슬란드", "뉴질랜드", "스위스", "노르웨이"]
+        },
+        "activities": ["자연탐험", "별 관찰", "묵상", "독특한 카페"],
+        "companionCompatibility": {
+          "best": ["ENFJ", "ENTJ", "INFJ"],
+          "good": ["INTP", "INTJ", "ENTP"],
+          "challenging": ["ESTJ", "ESFJ", "ISFJ"]
+        },
+        "name": "호기심 많은 탐험가",
+        "emoji": "🎉",
+        "description": "나는 나만의 독특한 경험을 찾는 자유 여행자입니다.",
+        "planningStyle": "큰 방향만 결정하고 현장에서 즉흥적으로 결정",
+        "budgetApproach": "흥미로운 경험에 유연하게 지출하세요",
+        "accommodation": "독립적이고 조용한 공간",
+        "packingStyle": "간단하고 꼭 필요한 것만 유지하세요.",
+        "foodExploration": "실험적인 현지 음식 챌린지"
+      },
+      "ENTJ": {
+        "preferences": ["랜드마크", "비즈니스 호텔", "고급 식사", "활동"],
+        "avoidances": [
+          "계획되지 않은 여행",
+          "느린 속도",
+          "불편한 숙박",
+          "시간낭비"
+        ],
+        "idealDestinations": {
+          "domestic": ["서울", "부산", "Jeju", "인천"],
+          "international": ["뉴욕", "싱가포르", "두바이", "홍콩"]
+        },
+        "activities": ["관광", "Golf", "와인 투어", "비즈니스 미팅"],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENTJ", "INTJ", "ENTP"],
+          "challenging": ["ISFJ", "ESFJ", "ISFP"]
+        },
+        "name": "정복자형 여행자",
+        "emoji": "🎉",
+        "description": "나는 효율성과 경험의 극대화를 추구하는 목표 지향적인 여행자입니다.",
+        "planningStyle": "경험을 극대화하기 위한 빡빡한 일정",
+        "budgetApproach": "프리미엄 경험에 과감하게 투자하세요",
+        "accommodation": "각종 시설을 갖춘 럭셔리 호텔",
+        "packingStyle": "효율적이고 실용적인 포장",
+        "foodExploration": "미쉐린 가이드 레스토랑을 방문해보세요"
+      },
+      "ENTP": {
+        "preferences": [
+          "모험 활동",
+          "야시장",
+          "지역주민 상호작용",
+          "즉흥적인 여행"
+        ],
+        "avoidances": [
+          "스탠다드 코스",
+          "럭셔리 투어",
+          "조용한 휴식",
+          "정규 일정"
+        ],
+        "idealDestinations": {
+          "domestic": ["강원도", "서제주", "경상시골", "섬 호핑"],
+          "international": ["동남아시아", "남아메리카", "동유럽", "중동"]
+        },
+        "activities": ["서핑", "스카이다이빙", "트레킹", "지역 파티"],
+        "companionCompatibility": {
+          "best": ["INFJ", "INTJ", "ISFJ"],
+          "good": ["ENTP", "ENFP", "ESTP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "모험을 즐기는 혁신가",
+        "emoji": "🎉",
+        "description": "나는 새로운 경험과 도전을 즐기는 자유분방한 여행자입니다.",
+        "planningStyle": "큰 그림을 그리고 그 자리에서 결정을 내리세요",
+        "budgetApproach": "경험에 따른 유연한 지출",
+        "accommodation": "게스트하우스, 호스텔",
+        "packingStyle": "최소한으로 저렴하고 현지에서 공급됩니다.",
+        "foodExploration": "길거리 음식과 현지 시장 탐험"
+      },
+      "INFJ": {
+        "preferences": ["영적인 장소", "자연", "조용한 카페", "미술관"],
+        "avoidances": ["파티 문화", "혼잡한 장소", "소음", "피상적인 경험"],
+        "idealDestinations": {
+          "domestic": ["제주올레길", "보성", "남해", "담양"],
+          "international": ["Bali", "산토리니", "교토", "부탄"]
+        },
+        "activities": ["심사 숙고", "Yoga", "사진술", "저널링"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ENFP", "INTP"],
+          "good": ["INFJ", "INFP", "ENFJ"],
+          "challenging": ["ESTP", "ESFP", "ESTJ"]
+        },
+        "name": "영혼 순례자",
+        "emoji": "🎉",
+        "description": "나는 의미와 영감을 찾는 감성 여행자입니다.",
+        "planningStyle": "의미 있는 장소를 중심으로 한 여유로운 여행 일정",
+        "budgetApproach": "경험의 가치에 따른 지출",
+        "accommodation": "평화롭고 아름다운 공간",
+        "packingStyle": "감성을 자극하는 소품을 가져오세요",
+        "foodExploration": "분위기 있는 레스토랑과 카페"
+      },
+      "INFP": {
+        "preferences": ["숨겨진 장소", "조용한 마을", "서점", "인디 매장"],
+        "avoidances": [
+          "관광 루트",
+          "시끄러운 장소",
+          "고정된 일정",
+          "그룹 활동"
+        ],
+        "idealDestinations": {
+          "domestic": ["해변 클라이밍 갱", "통영", "여수", "연주"],
+          "international": ["파리", "암스테르담", "프라하", "에든버러"]
+        },
+        "activities": ["걷는", "독서", "글쓰기", "사진술"],
+        "companionCompatibility": {
+          "best": ["ENTJ", "ENFJ", "INTJ"],
+          "good": ["INFP", "INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ESFJ", "ISTJ"]
+        },
+        "name": "방황하는 시인",
+        "emoji": "🎉",
+        "description": "나는 자유롭게 꿈을 꾸고 여행하는 낭만여행자이다.",
+        "planningStyle": "자유를 위한 느슨한 계획",
+        "budgetApproach": "의미 있는 경험에 투자하세요",
+        "accommodation": "독특하고 아늑한 공간",
+        "packingStyle": "감성적인 소품을 가져오세요",
+        "foodExploration": "분위기 있는 작은 레스토랑"
+      },
+      "ENFJ": {
+        "preferences": ["현지 체험", "요리 강습", "커뮤니티 투어", "자원"],
+        "avoidances": ["고독", "조용한 여행", "관광객 전용", "피상적인 경험"],
+        "idealDestinations": {
+          "domestic": ["제주마을", "연주", "부산", "속초"],
+          "international": ["이탈리아", "스페인", "멕시코", "태국"]
+        },
+        "activities": [
+          "현지인 만나기",
+          "요리 강습",
+          "문화교류",
+          "자원봉사 여행"
+        ],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENFJ", "ENFP", "ESFJ"],
+          "challenging": ["ISTP", "ISTJ", "INTP"]
+        },
+        "name": "문화 연결자",
+        "emoji": "🎉",
+        "description": "저는 관계를 통해 문화를 배우는 사회여행자입니다.",
+        "planningStyle": "사람 중심의 유연한 계획",
+        "budgetApproach": "경험과 사람에 투자하라",
+        "accommodation": "게스트하우스, B&B",
+        "packingStyle": "선물이나 나눔을 위한 포장",
+        "foodExploration": "현지인들이 많이 찾는 맛집"
+      },
+      "ENFP": {
+        "preferences": ["축제", "공연", "야시장", "지역 이벤트"],
+        "avoidances": ["고정된 일정", "조용한 여행", "홀로", "루틴"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "부산", "강릉", "여수"],
+          "international": ["바르셀로나", "방콕", "리우데자네이루", "Bali"]
+        },
+        "activities": ["축제", "당사자", "서핑", "새로운 사람들을 만나다"],
+        "companionCompatibility": {
+          "best": ["INTJ", "INFJ", "ISTJ"],
+          "good": ["ENFP", "ENTP", "ESFP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "무료 탐험가",
+        "emoji": "🎉",
+        "description": "나는 새로운 시도와 열정을 지닌 자유여행자이다.",
+        "planningStyle": "즉흥적이고 자유로운 여행",
+        "budgetApproach": "즐거운 경험에 과감하게 투자하세요",
+        "accommodation": "사교적인 분위기의 숙소",
+        "packingStyle": "필요한 것보다 더 많이 가져가세요",
+        "foodExploration": "인스타그램 핫플레이스"
+      },
+      "ISTJ": {
+        "preferences": [
+          "유명한 장소",
+          "박물관",
+          "역사적인 장소",
+          "안전한 장소"
+        ],
+        "avoidances": [
+          "즉흥적인 여행",
+          "위험한 장소",
+          "계획 변경",
+          "불편한 숙박"
+        ],
+        "idealDestinations": {
+          "domestic": ["경주", "연주", "안동", "수원"],
+          "international": ["일본", "독일", "스위스", "캐나다"]
+        },
+        "activities": ["관광", "사진술", "박물관 투어", "전통 체험"],
+        "companionCompatibility": {
+          "best": ["ESFP", "ESTP", "ENFP"],
+          "good": ["ISTJ", "ESTJ", "ISFJ"],
+          "challenging": ["ENTP", "ENFP", "ESFP"]
+        },
+        "name": "플래너형 여행자",
+        "emoji": "🎉",
+        "description": "나는 철저하게 준비하고 내 계획을 충실히 지키는 신중한 여행자이다.",
+        "planningStyle": "자세한 시간표 및 사전 예약",
+        "budgetApproach": "예산 내에서 안정적인 지출",
+        "accommodation": "검증된 체인 호텔",
+        "packingStyle": "체크리스트에 따른 철저한 준비",
+        "foodExploration": "유명하고 검증된 레스토랑"
+      },
+      "ISFJ": {
+        "preferences": [
+          "평화로운 장소",
+          "가족 명소",
+          "안전한 장소",
+          "편안한 휴식"
+        ],
+        "avoidances": ["모험", "군중", "불편감", "위험"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "속초", "여수", "경주"],
+          "international": ["일본", "대만", "싱가포르", "뉴질랜드"]
+        },
+        "activities": ["치유", "온천", "푸드 투어", "쇼핑"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ESTP", "ESFP"],
+          "good": ["ISFJ", "ISTJ", "ESFJ"],
+          "challenging": ["ENTP", "ENFP", "ESTP"]
+        },
+        "name": "편안한 여행자",
+        "emoji": "🎉",
+        "description": "나는 편안함과 안전을 최우선으로 생각하는 세심한 여행자입니다.",
+        "planningStyle": "안전하고 편안한 일정에 집중하세요",
+        "budgetApproach": "안정적이고 보수적인 지출",
+        "accommodation": "깨끗하고 편안한 호텔",
+        "packingStyle": "응급약품 등 필수품을 챙기세요",
+        "foodExploration": "친숙하고 맛있는 음식"
+      },
+      "ESTJ": {
+        "preferences": ["유명한 장소", "패키지 투어", "가이드 투어", "예의"],
+        "avoidances": ["계획 없음", "비효율성", "시간낭비", "불편감"],
+        "idealDestinations": {
+          "domestic": ["서울", "부산", "Jeju", "대전"],
+          "international": ["싱가포르", "홍콩", "도쿄", "베이징"]
+        },
+        "activities": ["관광", "쇼핑", "푸드 투어", "사진술"],
+        "companionCompatibility": {
+          "best": ["ISFP", "ISTP", "INFP"],
+          "good": ["ESTJ", "ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP", "INTP"]
+        },
+        "name": "효율적인 관광객",
+        "emoji": "🎉",
+        "description": "나는 체계적으로 계획하고 효율적으로 여행하는 여행자이다.",
+        "planningStyle": "분 단위까지 빡빡한 일정",
+        "budgetApproach": "비용 효율성과 효율성에 중점",
+        "accommodation": "위치가 좋고 편리한 호텔",
+        "packingStyle": "효율적이고 실용적인 포장",
+        "foodExploration": "유명한 레스토랑 목록을 방문해보세요"
+      },
+      "ESFJ": {
+        "preferences": ["가족 여행", "그룹 투어", "유명한 카페", "쇼핑"],
+        "avoidances": ["혼자 여행", "조용한 장소", "위험한 활동", "불편감"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "부산", "인천", "연주"],
+          "international": ["오키나와", "Guam", "호주", "하와이"]
+        },
+        "activities": ["쇼핑", "Food", "사진술", "카페 투어"],
+        "companionCompatibility": {
+          "best": ["ISTP", "ISFP", "INFP"],
+          "good": ["ESFJ", "ENFJ", "ESTJ"],
+          "challenging": ["INTP", "INTJ", "ISTP"]
+        },
+        "name": "사교적인 여행자",
+        "emoji": "🎉",
+        "description": "우리는 함께 즐거운 추억을 만들어가는 사람 중심의 여행자입니다.",
+        "planningStyle": "누구나 즐길 수 있는 여행 일정",
+        "budgetApproach": "나눔과 적절한 지출",
+        "accommodation": "편리하고 가족 친화적인 숙소",
+        "packingStyle": "다른 사람들을 위해 물건을 포장하는 중",
+        "foodExploration": "유명하고 인기있는 레스토랑"
+      },
+      "ISTP": {
+        "preferences": ["야외 활동", "스포츠", "자연", "모험"],
+        "avoidances": ["고정된 일정", "박물관", "쇼핑", "관광 루트"],
+        "idealDestinations": {
+          "domestic": ["강원도", "제주산", "경상해안", "산악 지역"],
+          "international": ["뉴질랜드", "노르웨이", "스위스", "캐나다"]
+        },
+        "activities": ["하이킹", "스키 타기", "다이빙", "자전거 타기"],
+        "companionCompatibility": {
+          "best": ["ESFJ", "ESTJ", "ENFJ"],
+          "good": ["ISTP", "ESTP", "ISFP"],
+          "challenging": ["ENFJ", "ESFJ", "INFJ"]
+        },
+        "name": "무료 백패커",
+        "emoji": "🎉",
+        "description": "저는 즉흥적이고 실용적인 활동에 집중하는 여행자입니다.",
+        "planningStyle": "최소한의 계획과 현장 대응",
+        "budgetApproach": "필요한 경우에만 실용적인 지출",
+        "accommodation": "캠핑, 저렴한 숙소",
+        "packingStyle": "실용적이고 가벼운 포장",
+        "foodExploration": "간단하고 빠른 식사"
+      },
+      "ISFP": {
+        "preferences": ["미술관", "자연", "카페", "대기 공간"],
+        "avoidances": ["시끄러운 장소", "계획", "돌진", "그룹 활동"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "강릉", "통영", "여수"],
+          "international": ["파리", "프로방스", "산토리니", "Bali"]
+        },
+        "activities": ["사진술", "그림", "카페", "걷는"],
+        "companionCompatibility": {
+          "best": ["ESTJ", "ESFJ", "ENTJ"],
+          "good": ["ISFP", "INFP", "ESFP"],
+          "challenging": ["ESTJ", "ENTJ", "ISTJ"]
+        },
+        "name": "감성 예술가 여행자",
+        "emoji": "🎉",
+        "description": "나는 아름다움과 자유를 찾는 감성 여행자입니다.",
+        "planningStyle": "당신의 마음이 이끄는대로 자유로운 일정",
+        "budgetApproach": "아름다운 경험에 투자하세요",
+        "accommodation": "예쁘고 분위기 있는 공간",
+        "packingStyle": "예쁜 옷과 액세서리에 집중하다",
+        "foodExploration": "예쁜 카페와 레스토랑"
+      },
+      "ESTP": {
+        "preferences": ["활동", "당사자", "밤문화", "익스트림 스포츠"],
+        "avoidances": ["박물관", "조용한 투어", "계획", "느린 속도"],
+        "idealDestinations": {
+          "domestic": ["부산", "강릉", "서제주", "양양"],
+          "international": ["푸켓", "Bali", "두바이", "이비자"]
+        },
+        "activities": ["서핑", "클럽활동", "수상 스포츠", "번지 점프"],
+        "companionCompatibility": {
+          "best": ["ISFJ", "ISTJ", "INFJ"],
+          "good": ["ESTP", "ESFP", "ENTP"],
+          "challenging": ["INFJ", "INFP", "ISFJ"]
+        },
+        "name": "활동가 여행자",
+        "emoji": "🎉",
+        "description": "나는 스릴과 재미를 찾는 활동적인 여행자입니다.",
+        "planningStyle": "즉석에서 즉석에서 결정",
+        "budgetApproach": "당신의 즐거움을 위해 과감하게 투자하세요",
+        "accommodation": "파티 분위기의 휴양 시설",
+        "packingStyle": "심플하고 활동적인 의상",
+        "foodExploration": "인기 레스토랑과 바"
+      },
+      "ESFP": {
+        "preferences": ["축제", "당사자", "쇼핑", "사람들"],
+        "avoidances": ["계획", "고요", "홀로", "지루함"],
+        "idealDestinations": {
+          "domestic": ["부산", "Jeju", "홍대", "강남"],
+          "international": ["라스베가스", "이비자", "방콕", "마이애미"]
+        },
+        "activities": ["당사자", "쇼핑", "쇼", "Food"],
+        "companionCompatibility": {
+          "best": ["ISTJ", "ISFJ", "INTJ"],
+          "good": ["ESFP", "ESTP", "ENFP"],
+          "challenging": ["INTJ", "ISTJ", "INFJ"]
+        },
+        "name": "파티 여행자",
+        "emoji": "🎉",
+        "description": "우리는 함께 축제를 즐기며 에너지를 발산하는 여행자입니다.",
+        "planningStyle": "즉흥적이고 자유로운 일정",
+        "budgetApproach": "즐거움을 위해 아낌없이 지출하세요",
+        "accommodation": "도시 중심부에 위치한 활기 넘치는 호텔",
+        "packingStyle": "더 많이 챙기고 더 많이 구매하세요",
+        "foodExploration": "인기 있고 사람이 많은 레스토랑"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "목적지에 도착하면 다음이 수행됩니다.",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "조용히 혼자서 탐색해 보세요.",
+            "preference": "I"
+          },
+          {
+            "text": "현지인 또는 다른 여행자와 채팅",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "여행 일정을 계획할 때:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "상세한 계획으로 유명한 명소에 집중하세요",
+            "preference": "S"
+          },
+          {
+            "text": "숨겨진 보석과 독특한 경험에 집중하세요",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "목적지 선택 기준:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "효율성과 가격 대비 가치",
+            "preference": "T"
+          },
+          {
+            "text": "분위기와 느낌",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "여행 준비:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "사전에 엄격히 예약하고 계획하세요",
+            "preference": "J"
+          },
+          {
+            "text": "대략적으로 계획하고 즉흥적으로 진행",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "여행 중 선호하는 활동:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "조용히 박물관이나 유적지를 둘러보세요.",
+            "preference": "I"
+          },
+          {
+            "text": "지역 축제나 만남",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "이상한 음식을 만났을 때:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "검증된 유명 맛집을 가다",
+            "preference": "S"
+          },
+          {
+            "text": "독특하고 새로운 것을 시도해 보세요.",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "여행 동반자와 의견이 다를 때:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "객관적인 기준에 따라 합리적으로 결정",
+            "preference": "T"
+          },
+          {
+            "text": "기분을 고려하여 조정",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "예상치 못한 일이 발생하는 경우:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "계획으로 돌아가려고 노력하세요",
+            "preference": "J"
+          },
+          {
+            "text": "새로운 기회로 받아들여",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "숙소 선택 기준:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "조용하고 편안한 프라이빗 공간",
+            "preference": "I"
+          },
+          {
+            "text": "사람들과 어울릴 수 있는 공간",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "여행정보는 어떻게 얻나요?",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "가이드북과 검증된 정보",
+            "preference": "S"
+          },
+          {
+            "text": "블로그 및 독특한 리뷰",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "예산을 초과하는 경우:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "계획 조정 및 지출 절감",
+            "preference": "T"
+          },
+          {
+            "text": "경험이 중요하므로 유연하게 대처하세요",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "여행 마지막 날:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "계획된 활동을 모두 완료하세요.",
+            "preference": "J"
+          },
+          {
+            "text": "남은 시간을 자유롭게 즐겨보세요",
+            "preference": "P"
+          }
+        ]
+      }
+    ]
+  },
+  "generic": {
+    "questions": [
+      {
+        "id": "EI_01",
+        "text": "새로운 사람들을 만날 때 당신은:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "적극적으로 다가가 대화를 시작해 보세요.",
+            "preference": "E"
+          },
+          {
+            "text": "그들이 먼저 다가올 때까지 기다리세요",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_02",
+        "text": "스트레스를 받을 때 당신은:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "친구를 만나서 이야기를 나누면 기분이 좋아집니다",
+            "preference": "E"
+          },
+          {
+            "text": "혼자만의 시간을 보내 생각을 정리해보세요",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_03",
+        "text": "파티나 모임에서 귀하는:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "다양한 사람들과 적극적으로 대화하라",
+            "preference": "E"
+          },
+          {
+            "text": "가까운 소수의 사람들과 깊은 대화를 나눠보세요",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_04",
+        "text": "문제를 해결할 때 다음을 수행합니다.",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "다른 사람들과 토론하여 아이디어를 얻으세요.",
+            "preference": "E"
+          },
+          {
+            "text": "결론을 내리기 전에 혼자 깊이 생각해 보세요",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_05",
+        "text": "전화 통화 시 귀하는 다음을 수행합니다.",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "긴 통화를 즐기고 다른 사람과 자주 통화하세요",
+            "preference": "E"
+          },
+          {
+            "text": "필요할 때만 짧은 통화를 하세요",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_06",
+        "text": "주말을 보내는 이상적인 방법은 다음과 같습니다.",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "친구들과 밖에서 활동하기",
+            "preference": "E"
+          },
+          {
+            "text": "집에서 혼자 취미생활 즐기기",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_07",
+        "text": "회의나 토론에서 귀하는 다음을 수행합니다.",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "즉시 의견을 공유하고 적극적으로 참여하세요.",
+            "preference": "E"
+          },
+          {
+            "text": "신중하게 말하기 전에 신중하게 생각하십시오.",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "SN_01",
+        "text": "새 프로젝트를 시작할 때:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "구체적인 계획과 세부사항부터 시작하세요.",
+            "preference": "S"
+          },
+          {
+            "text": "전체적인 비전과 가능성을 먼저 구상하세요",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_02",
+        "text": "정보를 받을 때 귀하는:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "구체적인 사실과 데이터에 집중",
+            "preference": "S"
+          },
+          {
+            "text": "숨겨진 의미와 가능성을 찾아보세요",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_03",
+        "text": "과거와 미래 사이:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "과거의 경험과 전통을 소중히 여기세요",
+            "preference": "S"
+          },
+          {
+            "text": "미래의 가능성과 변화에 관심이 있다",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_04",
+        "text": "배울 때 당신은:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "차근차근 체계적으로 배워보세요",
+            "preference": "S"
+          },
+          {
+            "text": "세부 사항을 배우기 전에 전반적인 맥락을 이해하십시오.",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_05",
+        "text": "일상 생활에서 당신은:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "현실적이고 실용적인 것을 추구하라",
+            "preference": "S"
+          },
+          {
+            "text": "새로운 아이디어와 혁신을 좋아합니다.",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_06",
+        "text": "문제를 살펴보면 다음과 같습니다.",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "특정 솔루션에 집중",
+            "preference": "S"
+          },
+          {
+            "text": "다양한 관점과 새로운 접근 방식 탐색",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_07",
+        "text": "예술이나 문학을 접할 때:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "사실적이고 명확한 표현을 선호합니다.",
+            "preference": "S"
+          },
+          {
+            "text": "상징적이고 추상적인 표현에 끌립니다.",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "TF_01",
+        "text": "결정을 내릴 때 귀하는 다음을 수행합니다.",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "논리적 분석과 객관적 기준을 우선시",
+            "preference": "T"
+          },
+          {
+            "text": "개인적인 가치와 정서적 영향을 고려하십시오.",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_02",
+        "text": "갈등 상황에서 귀하는:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "사실과 원칙을 바탕으로 해결하려고 노력하세요.",
+            "preference": "T"
+          },
+          {
+            "text": "관련된 사람들의 감정과 관계를 우선시합니다.",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_03",
+        "text": "비판을 받을 때 당신은:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "객관적으로 분석하여 개선할 부분을 찾습니다.",
+            "preference": "T"
+          },
+          {
+            "text": "상처받았지만 그들의 의도를 이해하려고 노력하세요",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_04",
+        "text": "다른 사람을 평가할 때:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "능력과 성과로 판단한다",
+            "preference": "T"
+          },
+          {
+            "text": "인격과 노력을 소중히 여기세요",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_05",
+        "text": "팀으로 일할 때 당신은:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "효율성과 결과를 우선시하세요",
+            "preference": "T"
+          },
+          {
+            "text": "팀 화합과 분위기를 중시",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_06",
+        "text": "친구가 조언을 구할 때:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "문제에 대한 해결책 제공",
+            "preference": "T"
+          },
+          {
+            "text": "그들의 감정에 공감하고 위로해 주세요.",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_07",
+        "text": "규칙 및 예외 상황에서:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "사고원칙은 일관되게 적용되어야 한다",
+            "preference": "T"
+          },
+          {
+            "text": "상황에 따라 유연성을 발휘해야 한다고 생각",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "JP_01",
+        "text": "일상 생활에서 당신은:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "계획을 세우고 따르세요.",
+            "preference": "J"
+          },
+          {
+            "text": "상황에 따라 유연하게 행동",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_02",
+        "text": "마감일이 있는 작업을 수행할 때:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "미리 꾸준히 노력하라",
+            "preference": "J"
+          },
+          {
+            "text": "마감일이 다가오면 집중적으로 일하라",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_03",
+        "text": "여행을 갈 때 당신은:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "자세한 일정과 예약을 미리 준비하세요",
+            "preference": "J"
+          },
+          {
+            "text": "대략적인 계획을 세우고 즉흥적으로 즐기세요",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_04",
+        "text": "방이나 책상 정리에 관하여:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "항상 깔끔하고 정돈되어 있어야 합니다",
+            "preference": "J"
+          },
+          {
+            "text": "필요한 것을 찾을 수 있다면 약간 지저분해도 괜찮습니다.",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_05",
+        "text": "새로운 기회가 생기면:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "신중히 고려해서 결정하세요",
+            "preference": "J"
+          },
+          {
+            "text": "먼저 시도해 보고 나중에 조정하세요.",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_06",
+        "text": "쇼핑할 때 귀하는:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "필요한 것을 미리 결정하고 구매하세요",
+            "preference": "J"
+          },
+          {
+            "text": "그 자리에서 둘러보고 눈에 띄는 것을 구입하세요.",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_07",
+        "text": "결정을 내려야 할 때:",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "빨리 결정하고 실행에 옮겨라",
+            "preference": "J"
+          },
+          {
+            "text": "여러 옵션을 열어두고 천천히 결정하세요.",
+            "preference": "P"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "성격의 건축학(MBTI)"
+}

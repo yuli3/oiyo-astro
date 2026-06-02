@@ -1,0 +1,93 @@
+import { SixLangString } from "../../interpretation/engine.contract";
+
+export const PROPHECY_TEN_GOD_Focus: Record<string, SixLangString> = {
+  bi_gyeon: {
+    en: "This is a time of self-assertion. Trust your own judgment above all else. A competitive spirit rises.",
+    es: "Este es un tiempo de autoafirmación. Confía en tu propio juicio por encima de todo. Surge un espíritu competitivo.",
+    fr: "C'est un temps d'affirmation de soi. Faites confiance à votre propre jugement avant tout. Un esprit de compétition s'éveille.",
+    ja: "自己主張の時期です。何よりも自分自身の判断を信じてください。競争心が強まります。",
+    ko: "자아를 확립하는 시기입니다. 무엇보다 자신의 판단을 믿으십시오. 경쟁심이 고조됩니다.",
+    zh: "这是自我肯定的时期。信任你自己的判断胜过一切。竞争意识正在抬头。",
+  },
+  geop_jae: {
+    en: "A turbulent wind blows. You may face unexpected competition or loss, but it fuels your ambition.",
+    es: "Sopla un viento turbulento. Puedes enfrentar competencia o pérdidas inesperadas, pero esto alimenta tu ambición.",
+    fr: "Un vent turbulent souffle. Vous pourriez faire face à une concurrence ou à une perte inattendue, mais cela alimente votre ambition.",
+    ja: "荒れ模様の風が吹いています。予期せぬ競争や損失に直面するかもしれませんが、それがあなたの野心を燃え立たせるでしょう。",
+    ko: "거센 바람이 붑니다. 예상치 못한 경쟁이나 손실을 마주할 수 있으나, 이는 당신의 야망을 불태울 것입니다.",
+    zh: "狂风大作。你可能会面临意想不到的竞争或损失，但这会激发你的雄心壮志。",
+  },
+  jeong_gwan: {
+    en: "Honor and order prevail. It is a time to follow the path and seek recognition within the system.",
+    es: "Prevalecen el honor y el orden. Es un tiempo para seguir el camino y buscar reconocimiento dentro del sistema.",
+    fr: "L'honneur et l'ordre prévalent. C'est le moment de suivre la voie et de rechercher la reconnaissance au sein du système.",
+    ja: "名誉と秩序が支配します。正道を進み、システム内での承認を求める時期です。",
+    ko: "명예와 질서가 지배합니다. 정도를 걷고 시스템 안에서 인정을 구해야 할 시기입니다.",
+    zh: "荣誉和秩序盛行。这是遵循正道并在系统内寻求认可的时期。",
+  },
+  jeong_in: {
+    en: "Wisdom and support arrive. You are protected by mentors or knowledge. A good time for study.",
+    es: "Llegan la sabiduría y el apoyo. Estás protegido por mentores o por el conocimiento. Un buen momento para el estudio.",
+    fr: "La sagesse et le soutien arrivent. Vous êtes protégé par des mentors ou par la connaissance. Un bon moment pour étudier.",
+    ja: "智慧と支援が届きます。メンターや知識によって守られています。学習には絶好の機会です。",
+    ko: "지혜와 후원이 도착합니다. 멘토나 지식의 보호를 받습니다. 공부하기에 좋은 시기입니다.",
+    zh: "智慧和支持已经到来。你受到导师或知识的保护。这是学习的好时机。",
+  },
+  jeong_jae: {
+    en: "Stable growth is favored. Focus on saving, planning, and appreciating steady returns.",
+    es: "Se favorece el crecimiento estable. Concéntrate en el ahorro, la planificación y la apreciación de los rendimientos constantes.",
+    fr: "Une croissance stable est favorisée. Concentrez-vous sur l'épargne, la planification et l'appréciation des rendements réguliers.",
+    ja: "安定した成長が好まれます。貯蓄、計画、そして着実な報酬に感謝することに集中してください。",
+    ko: "안정적인 성장이 유리합니다. 저축과 계획, 그리고 꾸준한 보상에 감사하는 데 집중하십시오.",
+    zh: "稳步增长受到青睐。专注于储蓄、规划和赏识稳定的回报。",
+  },
+  pyeon_gwan: {
+    en: "Pressure mounts. You carry heavy responsibilities or face a daunting challenge. Endurance is key.",
+    es: "La presión aumenta. Llevas pesadas responsabilidades o enfrentas un desafío abrumador. La resistencia es la clave.",
+    fr: "La pression monte. Vous portez de lourdes responsabilités ou faites face à un défi de taille. L'endurance est la clé.",
+    ja: "プレッシャーが高まります。重い責任を負うか、困難な挑戦に直面します。忍耐が鍵となります。",
+    ko: "압박감이 커집니다. 무거운 책임을 지거나 벅찬 도전을 마주합니다. 인내가 열쇠입니다.",
+    zh: "压力山大。你承担着沉重的责任，或面临严峻的挑战。耐力是关键。",
+  },
+  pyeon_in: {
+    en: "Mystical insights deepen. You may feel detached from reality, seeking intuitive or spiritual truth.",
+    es: "Los conocimientos místicos se profundizan. Puedes sentirte desconectado de la realidad, buscando la verdad intuitiva o espiritual.",
+    fr: "Les intuitions mystiques s'approfondissent. Vous pouvez vous sentir détaché de la réalité, à la recherche d'une vérité intuitive ou spirituelle.",
+    ja: "神秘的な洞察が深まります。現実から切り離されたように感じ、直感的または霊的な真理を求めるかもしれません。",
+    ko: "신비로운 통찰이 깊어집니다. 현실과 동떨어진 느낌을 받으며 직관적이거나 영적인 진실을 추구합니다.",
+    zh: "神秘的洞察力加深。你可能会感到脱离现实，寻求直觉或精神真理。",
+  },
+  pyeon_jae: {
+    en: "Windfall luck is in the air. Dynamic financial opportunities arise, but they come with instability.",
+    es: "La suerte inesperada está en el aire. Surgen oportunidades financieras dinámicas, pero vienen con inestabilidad.",
+    fr: "Une chance inattendue est dans l'air. Des opportunités financières dynamiques se présentent, mais elles s'accompagnent d'instabilité.",
+    ja: "棚ぼたの幸運が漂っています。ダイナミックな金銭的機会が訪れますが、不安定さを伴います。",
+    ko: "횡재수가 공기에 감돕니다. 역동적인 금전적 기회가 생기지만, 불안정함을 동반합니다.",
+    zh: "横财运临门。动态的财务机会出现，但伴随着不稳定性。",
+  },
+  sang_gwan: {
+    en: "Rebellion stirs within. You have the urge to break old rules and innovate, but mind your words.",
+    es: "La rebelión se agita en tu interior. Tienes el impulso de romper las viejas reglas e innovar, pero cuida tus palabras.",
+    fr: "La rébellion s'agite en vous. Vous avez l'urgence de briser les vieilles règles et d'innover, mais surveillez vos paroles.",
+    ja: "内なる反抗心がうずきます。古いルールを破って革新したいという衝動に駆られますが、言葉には気をつけてください。",
+    ko: "내면에서 반항심이 일어납니다. 낡은 규칙을 깨고 혁신하고 싶겠지만, 언행을 조심해야 합니다.",
+    zh: "内心萌生反叛之心。你有打破旧规则并进行创新的冲动，但要注意言辞。",
+  },
+  sik_sin: {
+    en: "Creativity flows like a river. It is an excellent time to start new projects or express yourself.",
+    es: "La creatividad fluye como un río. Es un excelente momento para iniciar nuevos proyectos o expresarte.",
+    fr: "La créativité coule comme un fleuve. C'est un excellent moment pour commencer de nouveaux projets ou pour vous exprimer.",
+    ja: "創造性が大河のように流れます。新しいプロジェクトを開始したり、自分を表現したりするのに最適な時期です。",
+    ko: "창의성이 강물처럼 흐릅니다. 새로운 프로젝트를 시작하거나 자신을 표현하기에 아주 좋은 시기입니다.",
+    zh: "创造力如江水般奔涌。这是启动新项目或表达自我的绝佳时机。",
+  },
+};
+
+export const PROPHECY_CLASH_WARNING: SixLangString = {
+  en: "Caution: The energies of the time clash with your foundation. Expect sudden changes or movement (moving house, travel, or shifting roles).",
+  es: "Precaución: Las energías del tiempo chocan con tu base. Espera cambios repentinos o movimiento (mudanza, viajes o cambio de roles).",
+  fr: "Attention : Les énergies du moment entrent en conflit avec vos fondations. Attendez-vous à des changements soudains ou à des mouvements (déménagement, voyage ou changement de rôle).",
+  ja: "注意：時のエネルギーがあなたの基盤と衝突しています。突然の変化や移動（引越し、旅行、役割の変化）を予期してください。",
+  ko: "주의: 시간의 에너지가 당신의 기반과 충돌합니다. 갑작스러운 변화나 이동(이사, 여행, 혹은 역할 변경)을 예상하십시오.",
+  zh: "注意：当前能量与你的根基发生冲突。预料会有突如其来的变化或移动（搬家、旅行或角色转变）。",
+};

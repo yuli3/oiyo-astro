@@ -1,0 +1,408 @@
+{
+  "subtitle": "了解自我的空间",
+  "title": "我的圣所",
+  "sovereign": {
+    "sections": {
+      "hero": "英雄",
+      "oracle": "神谕",
+      "ontology": "本体论",
+      "vault": "宝库",
+      "growth": "成长"
+    },
+    "labels": {
+      "ascend": "飞升至预言",
+      "celestialChart": "星象图",
+      "archives": "帝国档案馆",
+      "evolution": "进化中",
+      "unlocked": "{count} 个高级碎片",
+      "exploration": "探索进度：{percent}%"
+    },
+    "growth": {
+      "full": "完全觉醒",
+      "unfinished": "未竟之旅",
+      "fullDesc": "您已显化了主权的全部核心碎片。宇宙向您完全的自我意识致敬。",
+      "unfinishedDesc": "您的本体论中仍有尚未在物理领域显化的碎片。照亮残留的阴影以完成您的觉醒。",
+      "review": "回顾所有真相",
+      "discover": "发现缺失碎片"
+    }
+  },
+  "profile": {
+    "labels": {
+      "entity": "主权实体",
+      "title": "您的神圣记录",
+      "description": "您在 OIYO 各维度所宣布的每一个真相的汇编。",
+      "scroll": "滚动生命碎片",
+      "reflection": "灵魂的反思",
+      "timeline": "真相时间轴",
+      "archive": "显化档案馆",
+      "ascension": "飞升状态",
+      "ascensionDesc": "完成的每一次诊断都是从真实自我上拨开的一层迷雾。您正接近完全的本体论觉醒状态。",
+      "shards": "碎片",
+      "tier": "等级"
+    }
+  },
+  "recommendations": {
+    "createGoal": {
+      "title": "您的神圣记录",
+      "description": "您在 OIYO 各维度所宣布的每一个真相的汇编。",
+      "action": "立即检查"
+    },
+    "takeTest": {
+      "title": "您的神圣记录",
+      "description": "您在 OIYO 各维度所宣布的每一个真相的汇编。",
+      "action": "立即检查"
+    },
+    "checkCompatibility": {
+      "title": "您的神圣记录",
+      "description": "您在 OIYO 各维度所宣布的每一个真相的汇编。",
+      "action": "立即检查"
+    }
+  },
+  "vault": {
+    "title": "您的神圣记录",
+    "description": "您在 OIYO 各维度所宣布的每一个真相的汇编。",
+    "securedCount": "已获得 {count} 个",
+    "premiumArtifact": "高级遗物",
+    "view": "查看",
+    "locked": "神圣锁链已激活",
+    "claim": "领取遗物 →",
+    "empty": "“宝库仍被沉默笼罩。开始您的自我发现之旅，用永恒的知识填满这些大厅。”",
+    "firstTrial": "开始首次试炼"
+  },
+  "fragmentsTitle": "散落的碎片",
+  "fragmentsDesc": "你灵魂的数据散落在星辰之间。收集它们以查看全貌。",
+  "beginJourney": "开始旅程",
+  "heroTitle": "我的宇宙",
+  "heroSubtitle": "今天的天空在对你讲述什么故事？",
+  "continue": "继续旅程",
+  "revelation": "宇宙启示",
+  "premiumTitle": "高级分析",
+  "rootsTitle": "原始根源",
+  "branchesTitle": "分支生长",
+  "primalOrigin": "原始起源",
+  "destinyCoordinates": "命运坐标",
+  "unveilRoots": "揭开你的宇宙根源",
+  "socialCognition": "社会认知",
+  "socialDNA": "社会基因",
+  "mapGrowth": "绘制你的社会成长",
+  "viewReport": "查看报告",
+  "unlockNow": "立即解锁",
+  "history": "最近发现记录",
+  "noHistory": "你的旅程才刚刚开始。开始新的探索吧。",
+  "startDiscovery": "开始发现",
+  "lockedTitle": "封存的智慧",
+  "lockedDescription": "该区域的数据正在等待您的发现。完成分析以解锁。",
+  "viewAll": "查看全部",
+  "categories": {
+    "personality": "性格与气质",
+    "destiny": "命运与周期",
+    "cognitive": "认知与思考",
+    "wisdom": "古典智慧"
+  },
+  "resonanceLabels": {
+    "harmonic": "和谐流动",
+    "balanced": "平衡",
+    "friction": "高冲突"
+  },
+  "guidanceTitle": "探路者",
+  "guidanceSubtitle": "关于职业与灵魂的皇家法令",
+  "recommendedCareers": "推荐职业路径",
+  "recommendedHobbies": "推荐兴趣爱好",
+  "soulGuidance": "灵魂引导",
+  "basedOn": "基于 {type}",
+  "labels": {
+    "undiscovered": "未发现",
+    "meaning": "含义",
+    "element": "元素",
+    "nameVibration": "姓名振动",
+    "westernZodiac": "西方星座",
+    "sign": "星座",
+    "observation": "观察",
+    "easternZodiac": "东方生肖",
+    "animal": "生肖",
+    "dominion": "统辖",
+    "bureau": "天宫",
+    "alignment": "对齐"
+  },
+  "humanDesign": {
+    "types": {
+      "Generator": "生产者",
+      "Projector": "投射者",
+      "Manifestor": "显示者",
+      "Reflector": "反映者",
+      "Manifesting Generator": "显示生产者"
+    }
+  },
+  "common": {
+    "noGuidance": "尚无可用指南。"
+  },
+  "celticTrees": {
+    "birch": "桦树",
+    "rowan": "花楸",
+    "ash": "梣树",
+    "alder": "赤杨",
+    "willow": "柳树",
+    "hawthorn": "山楂",
+    "oak": "橡树",
+    "holly": "冬青",
+    "hazel": "榛树",
+    "vine": "葡萄藤",
+    "ivy": "常春藤",
+    "reed": "芦苇",
+    "elder": "接骨木"
+  },
+  "mayanTones": {
+    "magnetic": "磁性 (Magnetic)",
+    "lunar": "月亮 (Lunar)",
+    "electric": "电力 (Electric)",
+    "selfExisting": "自我存在 (Self-Existing)",
+    "overtone": "超频 (Overtone)",
+    "rhythmic": "韵律 (Rhythmic)",
+    "resonant": "共振 (Resonant)",
+    "galactic": "银河 (Galactic)",
+    "solar": "太阳 (Solar)",
+    "planetary": "行星 (Planetary)",
+    "spectral": "光谱 (Spectral)",
+    "crystal": "水晶 (Crystal)",
+    "cosmic": "宇宙 (Cosmic)"
+  },
+  "mayanSeals": {
+    "dragon": "红龙 (Dragon)",
+    "wind": "白风 (Wind)",
+    "night": "蓝夜 (Night)",
+    "seed": "黄种子 (Seed)",
+    "serpent": "红蛇 (Serpent)",
+    "worldbridger": "白世界桥 (Worldbridger)",
+    "hand": "蓝手 (Hand)",
+    "star": "黄星星 (Star)",
+    "moon": "红月 (Moon)",
+    "dog": "白狗 (Dog)",
+    "monkey": "蓝猴 (Monkey)",
+    "human": "黄人 (Human)",
+    "skywalker": "红天行者 (Skywalker)",
+    "wizard": "白巫师 (Wizard)",
+    "eagle": "蓝鹰 (Eagle)",
+    "warrior": "黄战士 (Warrior)",
+    "earth": "红地球 (Earth)",
+    "mirror": "白镜子 (Mirror)",
+    "storm": "蓝风暴 (Storm)",
+    "sun": "黄太阳 (Sun)"
+  },
+  "elements": {
+    "wood": "木 (Wood)",
+    "fire": "火 (Fire)",
+    "earth": "土 (Earth)",
+    "metal": "金 (Metal)",
+    "water": "水 (Water)",
+    "Wood": "木 (Wood)",
+    "Fire": "火 (Fire)",
+    "Earth": "土 (Earth)",
+    "Metal": "金 (Metal)",
+    "Water": "水 (Water)",
+    "Air": "气 (Air)"
+  },
+  "returnToHome": "返回首页",
+  "contactSupport": "联系支持",
+  "syncingData": "正在同步您的数据...",
+  "guest": "访客",
+  "calibration": "校准",
+  "changeOrigin": "更改起源",
+  "todayInsight": {
+    "title": "今日洞察",
+    "soulOracle": "灵魂神谕",
+    "innerResonance": "内在共鸣",
+    "manifestMore": "显化更多"
+  },
+  "readingsLink": "查看所有解读",
+  "cards": {
+    "vitality": {
+      "title": "生命活力指数"
+    },
+    "resonance": {
+      "description": "您今日与宇宙流的契合度。",
+      "subtitle": "每日共鸣"
+    },
+    "foundation": {
+      "description": "塑造您命运的元素力量。",
+      "subtitle": "元素基础"
+    },
+    "elemental": {
+      "description": "您的元素蓝图及其影响。",
+      "subtitle": "元素档案",
+      "title": "元素"
+    },
+    "onomancy": {
+      "description": "您姓名的振动频率。",
+      "subtitle": "姓名分析"
+    },
+    "cognition": {
+      "description": "您的认知风格与思维模式。",
+      "subtitle": "认知地图"
+    },
+    "vocation": {
+      "description": "与您灵魂蓝图契合的职业路径。",
+      "subtitle": "职业指南"
+    },
+    "destiny": {
+      "description": "编织进您人生轨迹的命运之线。",
+      "subtitle": "命运之线"
+    }
+  },
+  "resonanceTitle": "共鸣中心",
+  "sections": {
+    "testArchitecture": {
+      "title": "测试架构",
+      "description": "探索解码您身份的系统。"
+    },
+    "emotionalResonance": {
+      "title": "情感共鸣",
+      "description": "您的情感频率与关系模式。"
+    },
+    "grandArchives": {
+      "title": "大档案馆",
+      "description": "您自我探索旅程的完整记录。"
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "元素分析"
+    },
+    "riasec": {
+      "description": "Holland 职业倾向档案。"
+    },
+    "saju": {
+      "label": "四柱",
+      "description": "您的韩国命运坐标。",
+      "polarity": "极性",
+      "element": "元素"
+    },
+    "archiveEntry": "进入档案",
+    "recordVerified": "记录已验证",
+    "tuning": {
+      "color": "幸运色",
+      "number": "幸运数字",
+      "direction": "吉利方向",
+      "flower": "幸运花卉",
+      "gemstone": "幸运宝石",
+      "luckyStar": "幸运星",
+      "title": "运势调频",
+      "favorableDays": "吉利日期",
+      "synergy": "协同分数"
+    }
+  },
+  "systems": {
+    "ziwei": "紫微斗数"
+  },
+  "dailyInsight": {
+    "cosmicEnergy": "宇宙能量",
+    "flowerOfDay": "今日之花",
+    "crystalOfPower": "力量水晶",
+    "guidingStar": "引导之星"
+  },
+  "sajuForm": {
+    "title": "输入出生信息",
+    "description": "我们使用您的出生坐标来计算您的四柱。",
+    "name": "姓名",
+    "birthDate": "出生日期",
+    "birthTime": "出生时辰",
+    "timeHint": "不知道可留空",
+    "gender": "性别",
+    "female": "女性",
+    "male": "男性"
+  },
+  "scope": {
+    "weekly": "每周运势",
+    "monthly": "每月运势",
+    "yearly": "每年运运"
+  },
+  "rating": {
+    "critical": "警告",
+    "low": "低",
+    "moderate": "中等",
+    "good": "良好",
+    "excellent": "优秀"
+  },
+  "card": {
+    "score": "分数: {score}/100",
+    "advice": "💡 建议",
+    "luckyNumbers": "幸运数字",
+    "luckyColors": "幸运颜色",
+    "warnings": "⚠️ 警告"
+  },
+  "no_results": "在您的收藏中未发现任何文物。",
+  "discover_btn": "发现你的道路",
+  "result_label": "合成结果",
+  "view_details": "查看详细智慧",
+  "header": {
+    "title": "我的仪表板",
+    "description": "欢迎来到您的神圣空间。"
+  },
+  "moonPhase": {
+    "Full": "满月",
+    "New": "新月",
+    "Waxing": "打蜡",
+    "Waning": "渐弱",
+    "New Moon": "新月",
+    "Waxing Crescent": "娥眉月",
+    "First Quarter": "上弦月",
+    "Waxing Gibbous": "盈凸月",
+    "Full Moon": "满月",
+    "Waning Gibbous": "亏凸月",
+    "Last Quarter": "下弦月",
+    "Waning Crescent": "残月"
+  },
+  "modern": {
+    "economic": {
+      "title": "经济流派分析",
+      "subtitle": "经济导向",
+      "factions": {
+        "ECON_CLASSICAL": {
+          "name": "古典经济学",
+          "description": "关注个人理性选择和市场均衡。 这种方法重视个人责任和平衡系统的有机效率。"
+        },
+        "ECON_KEYNESIAN": {
+          "name": "凯恩斯主义经济学",
+          "description": "强调总需求和主动干预。 这种观点重视集体稳定和及时采取支持性行动的智慧。"
+        },
+        "ECON_MONETARIST": {
+          "name": "货币主义",
+          "description": "关注货币供应量和长期物价稳定。 重视基本系统的一致性、清晰的规则和可预测性。"
+        },
+        "ECON_BEHAVIORAL": {
+          "name": "行为经济学",
+          "description": "应用心理学见解来解释经济决策。 重视人类的理解、同理心以及日常选择的微妙现实。"
+        },
+        "ECON_AUSTRIAN": {
+          "name": "奥地利学派",
+          "description": "强调创业发现和主观主义。 重视创作自由、个人洞察力和个人观点的独特价值。"
+        }
+      }
+    },
+    "political": {
+      "title": "政治倾向分析",
+      "subtitle": "政治格局",
+      "factions": {
+        "POL_CONSERVATISM": {
+          "name": "保守主义",
+          "description": "重视传统、稳定和渐进改革。 这种方法旨在保存来之不易的智慧，同时确保安全稳定的未来。"
+        },
+        "POL_LIBERALISM": {
+          "name": "自由主义",
+          "description": "强调个人自由、平等和进步。 重视探索新可能性的自由和每个人固有的尊严。"
+        },
+        "POL_SOCIALISM": {
+          "name": "社会主义",
+          "description": "关注社会正义、平等和社区福利。 重视相互支持、集体福祉以及团结的力量。"
+        },
+        "POL_LIBERTARIANISM": {
+          "name": "自由主义",
+          "description": "优先考虑最小的干预和最大的个人自主权。 重视自决以及保护私人空间和主动性。"
+        },
+        "POL_MODERATISM": {
+          "name": "温和主义",
+          "description": "寻求秩序与进步之间的平衡。 重视务实的解决方案、对话以及寻找共同点以实现更大的利益。"
+        }
+      }
+    }
+  }
+}

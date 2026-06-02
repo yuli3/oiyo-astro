@@ -1,0 +1,23 @@
+{
+  "title": "Annual Compass",
+  "daily": {
+    "title": "Annual Compass",
+    "description": "Align your long-term goals with the year's major movements."
+  },
+  "weekly": {
+    "title": "Annual Compass",
+    "description": "Align your long-term goals with the year's major movements."
+  },
+  "monthly": {
+    "title": "Annual Compass",
+    "description": "Align your long-term goals with the year's major movements."
+  },
+  "yearly": {
+    "title": "年度指南针",
+    "description": "将您的长期目标与今年的主要行动保持一致。"
+  },
+  "all": "全部",
+  "personal": "个人的",
+  "professional": "专业的",
+  "social": "社会的"
+}

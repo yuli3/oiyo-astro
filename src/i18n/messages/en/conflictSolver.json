@@ -1,0 +1,52 @@
+{
+  "noData": {
+    "desc": "Initiate the ritual of awareness to reveal your personalized dialogue alchemies.",
+    "button": "Begin Calibration",
+    "title": "Awaiting Synchronicity"
+  },
+  "labels": {
+    "relation": "Kindred Context",
+    "situation": "Crucible Moment"
+  },
+  "relations": {
+    "partner": "Sacred Counterpart",
+    "friend": "Kindred Spirit",
+    "colleague": "Professional Ally"
+  },
+  "situations": {
+    "apology": "Ritual of Reparation (Ownership)",
+    "initiate": "Initiating Recognition (Grievance)",
+    "boundary": "Establishing Sanctuary (Boundaries)"
+  },
+  "meta": {
+    "subtitle": "Conflict Alchemy Synthesizer",
+    "disclaimer": "The Oracle's guidance is intended for evolutionary growth and mutual recognition.",
+    "title": "Manifest Script",
+    "description": "Suggests conscious communication rituals for relational restoration.",
+    "keywords": "conflict alchemy, relational recovery, sacred dialogue, communication rituals, Oiyo"
+  },
+  "test": {
+    "insightBullets": [
+      "Illuminate the unspoken layers of your relational stance."
+    ],
+    "progress": "Resonance Ascent",
+    "next": "Forward",
+    "previous": "Reflect",
+    "submit": "Reveal the Synthesis",
+    "loading": "Distilling dialogue alchemies...",
+    "selectOption": "Mark the path of truth"
+  },
+  "result": {
+    "title": "Dialogue Synthesis",
+    "description": "Personalized directives for restoring collective harmony."
+  },
+  "subtitle": "Bespoke alchemical scripts to harmonize discordant frequencies.",
+  "yourStyle": "Your Conflict Stance",
+  "retest": "Re-Initiate Calibration",
+  "resultTitle": "The Manifested Script",
+  "copy": "Preserve",
+  "copied": "Archived",
+  "disclaimer": "These scripts serve as foundational frequencies; adapt them to the unique cadence of your connection.",
+  "title": "Conflict Alchemy Synthesizer",
+  "description": "Guiding the vocalization of wisdom when relationship harmonics are strained."
+}

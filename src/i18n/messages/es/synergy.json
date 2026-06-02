@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "PROTOCOLO: GRAN RESONANCIA",
+    "titlePrefix": "dos almas,",
+    "titleSuffix": "Un destino",
+    "description": "Alinea dos firmas espirituales. El Oráculo Imperial tejerá sus hilos cósmicos en un único tapiz del destino."
+  },
+  "status": {
+    "accessing": "Accediendo a los Archivos Imperiales...",
+    "insufficient": "Datos del alma insuficientes",
+    "insufficientDesc": "Para tejer un destino, se deben registrar al menos dos Orígenes Primordiales en el santuario.",
+    "newOrigin": "Nuevo origen récord",
+    "scrollForSynergy": "Desplázate para ver la Matriz de Sinergia"
+  },
+  "selection": {
+    "master": "El Proclamador (Yang)",
+    "resonance": "El Respondedor (Yin)",
+    "synthesize": "Iniciar la síntesis sagrada"
+  },
+  "report": {
+    "layers": {
+      "destiny": "Destino",
+      "psychology": "Corazón",
+      "vibration": "Vibración"
+    },
+    "narrative": {
+      "vision": "La visión del oráculo"
+    },
+    "title": "Sacred Synthesis: The Weaving of Fate"
+  },
+  "title": "Síntesis sagrada: el tejido del destino",
+  "backButton": "Volver al Santuario",
+  "shareButton": "Compartir Vínculo Cósmico",
+  "oracleTitle": "Perspectiva del Oráculo",
+  "dimensionsTitle": "Resonancia Dimensional",
+  "analysis": {
+    "detailed": "Análisis de Sinergia Detallado"
+  },
+  "iching": {
+    "title": "El Libro de los Cambios",
+    "revelation": "Revelación del Hexagrama"
+  },
+  "partialDataWarning": "Los hilos del destino están incompletos.",
+  "addMoreInfo": "Proporcionar más datos del alma",
+  "cta": {
+    "title": "Tu Destino Compartido Te Espera",
+    "subtitle": "Registra este vínculo en los archivos",
+    "share": "Compartir Resultado",
+    "download": "Descargar Archivo"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "PROTOCOLE : GRANDE RÉSONANCE",
+    "titlePrefix": "Deux âmes,",
+    "titleSuffix": "Un destin",
+    "description": "Alignez deux signatures spirituelles. L'Oracle Impérial tissera ses fils cosmiques pour former une seule tapisserie du destin."
+  },
+  "status": {
+    "accessing": "Accéder aux archives impériales...",
+    "insufficient": "Données d'âme insuffisantes",
+    "insufficientDesc": "Pour tisser un destin, au moins deux Origines Primaires doivent être enregistrées dans le sanctuaire.",
+    "newOrigin": "Enregistrer une nouvelle origine",
+    "scrollForSynergy": "Faites défiler pour voir la Matrice de Synergie"
+  },
+  "selection": {
+    "master": "Le proclamateur (Yang)",
+    "resonance": "Le répondeur (Yin)",
+    "synthesize": "Initier la synthèse sacrée"
+  },
+  "report": {
+    "layers": {
+      "destiny": "Destin",
+      "psychology": "Cœur",
+      "vibration": "Vibration"
+    },
+    "narrative": {
+      "vision": "La vision de l'Oracle"
+    },
+    "title": "Sacred Synthesis: The Weaving of Fate"
+  },
+  "title": "Synthèse sacrée : le tissage du destin",
+  "backButton": "Retourner au Sanctuaire",
+  "shareButton": "Partager le Lien Cosmique",
+  "oracleTitle": "Perspicacité de l'Oracle",
+  "dimensionsTitle": "Résonance Dimensionnelle",
+  "analysis": {
+    "detailed": "Analyse de Synergie Détaillée"
+  },
+  "iching": {
+    "title": "Le Livre des Changements",
+    "revelation": "Révélation de l'Hexagramme"
+  },
+  "partialDataWarning": "Les fils du destin sont incomplets.",
+  "addMoreInfo": "Fournir plus de données sur l'âme",
+  "cta": {
+    "title": "Votre Destin Partagé Vous Attend",
+    "subtitle": "Enregistrez ce lien dans les archives",
+    "share": "Partager le Résultat",
+    "download": "Télécharger l'Archive"
+  }
+}

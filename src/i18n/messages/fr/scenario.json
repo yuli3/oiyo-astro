@@ -1,0 +1,96 @@
+{
+  "scenario": {
+    "meta": {
+      "hero": {
+        "subtitle": "Passez le test maintenant et voyez comment vous réagiriez dans des situations extrêmes !",
+        "feature1": "8 Scénarios Extrêmes",
+        "feature2": "5 Minutes",
+        "feature3": "MBTI Scientifique"
+      },
+      "features": {
+        "feature1Title": "Scénarios Captivants",
+        "feature1Description": "Oubliez les questions ennuyeuses ! Répondez à travers des scénarios passionnants comme l'apocalypse zombie, le voyage dans le temps et les rencontres extraterrestres.",
+        "feature2Title": "Analyse Précise",
+        "feature2Description": "Basé sur le cadre MBTI officiel analysant 4 dimensions : E-I, S-N, T-F, J-P pour ton personnalité en 16 types.",
+        "feature3Title": "Résultats Détaillés",
+        "feature3Description": "Obtenez des informations complètes : forces, faiblesses, suggestions de carrière, compatibilité et personnes célèbres de ton type."
+      },
+      "scenarios": {
+        "zombie": "Apocalypse Zombie",
+        "island": "Île Déserte",
+        "timeTravel": "Voyage dans le Temps",
+        "superpowers": "Super-pouvoirs",
+        "lottery": "Gagnant de Loterie",
+        "aliens": "Contact Alien",
+        "fantasy": "Monde Fantastique",
+        "space": "Station Spatiale"
+      },
+      "cta": {
+        "subtitle": "Passez le test maintenant et voyez comment vous réagiriez dans des situations extrêmes !",
+        "button": "Commencer le Test"
+      },
+      "keywords": "mots-clés, tags, SEO",
+      "title": "Tableau de Bord",
+      "description": "Analyse complète et perspectives"
+    },
+    "scenarios": {
+      "zombie": "Apocalypse Zombie",
+      "island": "Île Déserte",
+      "timeTravel": "Voyage dans le Temps",
+      "superpowers": "Super-pouvoirs",
+      "lottery": "Gagnant de Loterie",
+      "aliens": "Contact Alien",
+      "fantasy": "Monde Fantastique",
+      "space": "Station Spatiale",
+      "title": "Tableau de Bord"
+    },
+    "hero": {
+      "subtitle": "Passez le test maintenant et voyez comment vous réagiriez dans des situations extrêmes !",
+      "feature1": "8 Scénarios Extrêmes",
+      "feature2": "5 Minutes",
+      "feature3": "MBTI Scientifique",
+      "title": "Tableau de Bord"
+    },
+    "cta": {
+      "subtitle": "Passez le test maintenant et voyez comment vous réagiriez dans des situations extrêmes !",
+      "button": "Commencer le Test",
+      "title": "Tableau de Bord"
+    },
+    "features": {
+      "feature1Title": "Scénarios Captivants",
+      "feature1Description": "Oubliez les questions ennuyeuses ! Répondez à travers des scénarios passionnants comme l'apocalypse zombie, le voyage dans le temps et les rencontres extraterrestres.",
+      "feature2Title": "Analyse Précise",
+      "feature2Description": "Basé sur le cadre MBTI officiel analysant 4 dimensions : E-I, S-N, T-F, J-P pour ton personnalité en 16 types.",
+      "feature3Title": "Résultats Détaillés",
+      "feature3Description": "Obtenez des informations complètes : forces, faiblesses, suggestions de carrière, compatibilité et personnes célèbres de ton type.",
+      "title": "Tableau de Bord"
+    },
+    "faq": {
+      "title": "Tableau de Bord",
+      "question1": "Comment ton âme répond-elle face à l'inconnu ?",
+      "answer1": "Tu possèdes une boussole intuitive qui pointe vers la croissance.",
+      "question2": "Comment navigues-tu à travers les courants de la vie ?",
+      "answer2": "Les petits choix s'accumulent pour former un grand destin.",
+      "question3": "Qu'est-ce qui anime ton monde intérieur ?",
+      "answer3": "Tu possèdes une boussole intuitive qui pointe vers la croissance.",
+      "question4": "Qu'est-ce qui anime ton monde intérieur ?",
+      "answer4": "Tu possèdes une boussole intuitive qui pointe vers la croissance."
+    },
+    "test": {
+      "insightBullets": ["Cartographier la constellation de votre vrai moi."],
+      "progress": "Progrès",
+      "submit": "Envoyer",
+      "loading": "Chargement",
+      "selectOption": "Sélectionner",
+      "next": "Suivant",
+      "previous": "Précédent"
+    },
+    "result": {
+      "title": "Tableau de Bord",
+      "description": "Analyse complète et perspectives"
+    },
+    "title": "Tableau de Bord",
+    "description": "Analyse complète et perspectives",
+    "keywords": "mots-clés, tags, SEO"
+  }
+}

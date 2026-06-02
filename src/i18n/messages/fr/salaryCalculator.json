@@ -1,0 +1,49 @@
+{
+  "description": "Reflétant les taux de 2025, résolvez des calculs fiscaux complexes en un seul geste.",
+  "title": "Convertisseur de Vitalité (Vitality Converter)",
+  "labels": {
+    "salaryInput": "Salaire Annuel",
+    "salaryPlaceholder": "Saisissez le salaire annuel",
+    "nonTaxable": "Allocation Repas Non Imposable",
+    "nonTaxableHelp": "Saisissez l'allocation mensuelle non imposable (Base ₩200,000)",
+    "dependents": "Personnes à charge (vous compris)",
+    "children": "Nombre d'enfants (Moins de 20 ans)",
+    "disclaimer": "⚖️ Avertissement Légal",
+    "disclaimerText": "Ce calcul est une estimation basée sur les taux de 2025. Le salaire net réel peut varier selon la politique de l'entreprise.",
+    "calculatePrompt": "Saisissez votre salaire annuel et appuyez sur le bouton de calcul.",
+    "calculate": "Calculer",
+    "reset": "Réinitialiser",
+    "inputParameters": "Paramètres d'Entrée"
+  },
+  "result": {
+    "netPay": "Salaire Net Mensuel Estimé",
+    "grossPay": "Salaire Brut Mensuel",
+    "nationalPension": "Pension Nationale",
+    "healthInsurance": "Assurance Maladie",
+    "careInsurance": "Soins de Longue Durée",
+    "employmentInsurance": "Assurance Emploi",
+    "incomeTax": "Impôt sur le Revenu",
+    "localTax": "Impôt sur le Revenu Local",
+    "totalDeductions": "Total des Déductions",
+    "title": "Convertisseur de Vitalité (Vitality Converter)",
+    "description": "Reflétant les taux de 2025, résolvez des calculs fiscaux complexes en un seul geste.",
+    "harvestDescription": "Votre revenu mensuel estimé après les déductions cosmiques.",
+    "pensionRate": "Taux de Pension Nationale (4,5%)",
+    "healthRate": "Taux d'Assurance Maladie (3,545%)"
+  },
+  "advisor": {
+    "tip": "💡 Conseil du Conseiller",
+    "content": "Appliquez la règle 50/30/20 à votre salaire net estimé. Une gestion rigoureuse peut mener à des remboursements d'impôts."
+  },
+  "loading": {
+    "title": "Convertisseur de Vitalité (Vitality Converter)",
+    "step1": "Vérification du revenu annuel",
+    "step2": "Calcul des déductions",
+    "step3": "Application des taux d'imposition",
+    "step4": "Finalisation du salaire net"
+  },
+  "meta": {
+    "title": "Convertisseur de Vitalité (Vitality Converter)",
+    "description": "Reflétant les taux de 2025, résolvez des calculs fiscaux complexes en un seul geste."
+  }
+}

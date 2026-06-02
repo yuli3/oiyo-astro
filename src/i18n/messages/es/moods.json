@@ -1,0 +1,15 @@
+{
+  "daySun": "Dom",
+  "dayMon": "Lun",
+  "dayTue": "Mar",
+  "dayWed": "Mié",
+  "dayThu": "Jue",
+  "dayFri": "Vie",
+  "daySat": "Sáb",
+  "a": "A",
+  "saveFailed": "Error al guardar",
+  "moodQuestion": "¿Cómo te sientes hoy?",
+  "close": "Cerrar",
+  "saved": "Guardado con éxito",
+  "saveAsImage": "Guardar como Imagen"
+}

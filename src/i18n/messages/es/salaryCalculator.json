@@ -1,0 +1,49 @@
+{
+  "description": "Reflejando las tasas de 2025, resuelva cálculos fiscales complejos de una sola vez.",
+  "title": "Convertidor de Vitalidad (Vitality Converter)",
+  "labels": {
+    "salaryInput": "Salario Anual",
+    "salaryPlaceholder": "Ingrese el salario anual",
+    "nonTaxable": "Subsidio de Comida No Gravable",
+    "nonTaxableHelp": "Ingrese el subsidio mensual no gravable (Base ₩200,000)",
+    "dependents": "Dependientes (incluyéndose usted)",
+    "children": "Hijos menores de 20 años",
+    "disclaimer": "⚖️ Aviso Legal",
+    "disclaimerText": "Este cálculo es una estimación basada en las tasas de 2025. El salario neto real puede variar según la política de la empresa y las deducciones.",
+    "calculatePrompt": "Ingrese su salario anual y presione el botón de cálculo.",
+    "calculate": "Calcular",
+    "reset": "Reiniciar",
+    "inputParameters": "Parámetros de Entrada"
+  },
+  "result": {
+    "netPay": "Salario Neto Mensual Estimado",
+    "grossPay": "Salario Bruto Mensual",
+    "nationalPension": "Pensión Nacional",
+    "healthInsurance": "Seguro de Salud",
+    "careInsurance": "Atención a Largo Plazo",
+    "employmentInsurance": "Seguro de Empleo",
+    "incomeTax": "Impuesto sobre la Renta",
+    "localTax": "Impuesto sobre la Renta Local",
+    "totalDeductions": "Total de Deducciones",
+    "title": "Convertidor de Vitalidad (Vitality Converter)",
+    "description": "Reflejando las tasas de 2025, resuelva cálculos fiscales complejos de una sola vez.",
+    "harvestDescription": "Tu ingreso mensual estimado después de las deducciones cósmicas.",
+    "pensionRate": "Tasa de Pensión Nacional (4,5%)",
+    "healthRate": "Tasa de Seguro de Salud (3,545%)"
+  },
+  "advisor": {
+    "tip": "💡 Consejo del Asesor",
+    "content": "Aplique la regla 50/30/20 a su salario neto estimado. Una gestión cuidadosa de las deducciones puede llevar a reembolsos anuales."
+  },
+  "loading": {
+    "title": "Convertidor de Vitalidad (Vitality Converter)",
+    "step1": "Verificando ingresos anuales",
+    "step2": "Calculando deducciones",
+    "step3": "Aplicando tasas de impuestos",
+    "step4": "Finalizando salario neto"
+  },
+  "meta": {
+    "title": "Convertidor de Vitalidad (Vitality Converter)",
+    "description": "Reflejando las tasas de 2025, resuelva cálculos fiscales complejos de una sola vez."
+  }
+}

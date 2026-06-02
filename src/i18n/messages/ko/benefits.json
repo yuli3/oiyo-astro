@@ -1,0 +1,22 @@
+{
+  "performance": {
+    "title": "성능",
+    "description": "최고 성능 추적."
+  },
+  "offline": {
+    "title": "오프라인 모드",
+    "description": "어디서나 액세스할 수 있습니다."
+  },
+  "notifications": {
+    "title": "알림",
+    "description": "최신 정보를 받아보세요."
+  },
+  "homeScreen": {
+    "title": "홈 화면",
+    "description": "빠른 액세스."
+  },
+  "fortune": "행운",
+  "financial": "재정적인",
+  "content": "콘텐츠",
+  "expert": "전문가"
+}

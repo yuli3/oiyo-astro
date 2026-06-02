@@ -1,0 +1,17 @@
+{
+  "level": {
+    "title": "Streak Stats",
+    "totalPoints": "총점",
+    "nextRewards": "다음 레벨 보상:",
+    "currentLevel": "현재 레벨",
+    "progress": "진전"
+  },
+  "streak": {
+    "title": "연속 통계",
+    "bonuses": "연속 보너스:",
+    "day7": "7일: +50% 보너스",
+    "day14": "14일: +100% 보너스",
+    "day30": "30일: +150% 보너스",
+    "day100": "100일: +300% 보너스"
+  }
+}

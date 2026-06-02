@@ -1,0 +1,43 @@
+{
+  "list": {
+    "keep": "継続",
+    "keepAction": "このサブスクリプションを継続する",
+    "review": "見直す",
+    "reviewAction": "利用状況を見直す",
+    "cancel": "解約",
+    "cancelAction": "サブスクリプションを解約する",
+    "monthly": "月額",
+    "used": "利用回数",
+    "timesPerMonth": "回/月",
+    "satisfaction": "満足度",
+    "valueScore": "コスパスコア"
+  },
+  "title": "サブスクリプション管理",
+  "subtitle": "月々のサブスクリプションを把握して最適化しましょう",
+  "addSubscription": {
+    "title": "サブスクリプションを追加",
+    "nameLabel": "サービス名",
+    "namePlaceholder": "例: Netflix、Spotify",
+    "priceLabel": "月額料金",
+    "pricePlaceholder": "0.00",
+    "usageLabel": "月間利用回数",
+    "usageUnit": "回",
+    "satisfactionLabel": "満足度",
+    "submit": "追加する"
+  },
+  "summary": {
+    "monthlyTotal": "月額合計",
+    "yearlyTotal": "年額合計",
+    "potentialSavings": "節約できる金額"
+  },
+  "tips": {
+    "title": "賢いヒント",
+    "tip1": "30日間使っていないサブスクリプションを見直しましょう。",
+    "tip2": "ファミリープランをまとめてコストを抑えましょう。",
+    "tip3": "毎月見直すためのカレンダーリマインダーを設定しましょう。"
+  },
+  "empty": {
+    "title": "まだサブスクリプションがありません",
+    "description": "サブスクリプションを追加して支出を把握しましょう。"
+  }
+}

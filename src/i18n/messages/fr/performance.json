@@ -1,0 +1,105 @@
+{
+  "title": "Remote Performance Data",
+  "subtitle": "Analyser votre croissance et vos réalisations",
+  "actions": {
+    "refresh": "Rafraîchir",
+    "implement": "Mettre en œuvre",
+    "later": "Plus tard"
+  },
+  "metrics": {
+    "impact": "Impact",
+    "difficulty": "Difficulté",
+    "time": "Time Est.",
+    "steps": "Étapes",
+    "example": "Exemple"
+  },
+  "score": "Score de performance : {score}",
+  "filters": {
+    "title": "Remote Performance Data",
+    "description": "Current performance is excellent. Continue regular monitoring.",
+    "start": "Heure de début",
+    "end": "Heure de fin",
+    "path": "Chemin de la page",
+    "placeholder": "par exemple, /ontologie/saju",
+    "apply": "Appliquer",
+    "reset": "Réinitialiser"
+  },
+  "summary": {
+    "title": "Remote Performance Data",
+    "recent": "Récent {count}",
+    "rating": {
+      "title": "Remote Performance Data",
+      "description": "Current performance is excellent. Continue regular monitoring.",
+      "good": "Bien",
+      "needsImprovement": "Moyen",
+      "poor": "Pauvre"
+    },
+    "device": {
+      "title": "Remote Performance Data",
+      "description": "Current performance is excellent. Continue regular monitoring.",
+      "memory": "Memory Pressure",
+      "noData": "Aucune donnée",
+      "noConnection": "Aucune information de connexion pour l'instant."
+    },
+    "sessions": {
+      "title": "Remote Performance Data",
+      "description": "Current performance is excellent. Continue regular monitoring.",
+      "unknownPath": "Chemin inconnu",
+      "connection": "Connexion",
+      "averageScore": "Score moyen"
+    },
+    "pagination": {
+      "prev": "Précédente",
+      "next": "Suivant",
+      "page": "Page {actuelle}",
+      "pageOf": "{actuel} / {total}"
+    }
+  },
+  "cards": {
+    "lcp": "PCL moyen",
+    "fid": "FID moyen",
+    "cls": "CLS moyen",
+    "fcp": "FCP moyen",
+    "inp": "INP moyen",
+    "ttfb": "TTFB moyen"
+  },
+  "realtime": {
+    "title": "Remote Performance Data",
+    "load": "Charge du système",
+    "memory": "Pression de la mémoire",
+    "network": "Qualité du réseau",
+    "recommendations": "Optimization Recs"
+  },
+  "tabs": {
+    "trends": "Tendances des performances",
+    "bundle": "Analyse du bundle",
+    "recommendations": "Enregistrements d'optimisation"
+  },
+  "charts": {
+    "cmsTrends": {
+      "title": "Remote Performance Data",
+      "description": "Current performance is excellent. Continue regular monitoring."
+    },
+    "loadTime": {
+      "title": "Remote Performance Data",
+      "description": "Current performance is excellent. Continue regular monitoring."
+    },
+    "bundleDistribution": {
+      "title": "Remote Performance Data",
+      "description": "Current performance is excellent. Continue regular monitoring."
+    },
+    "bundleDetails": {
+      "title": "Remote Performance Data",
+      "description": "Current performance is excellent. Continue regular monitoring.",
+      "optimization": "Suggestions d'optimisation :"
+    }
+  },
+  "loading": "Collecte de données de performances...",
+  "noIssues": {
+    "title": "Remote Performance Data",
+    "description": "Les performances actuelles sont excellentes. Poursuivre une surveillance régulière."
+  },
+  "remote": {
+    "title": "Données de performances à distance"
+  }
+}

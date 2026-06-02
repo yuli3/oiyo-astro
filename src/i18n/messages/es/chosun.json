@@ -1,0 +1,11 @@
+{
+  "subtitle": "Descubre tu facción histórica",
+  "title": "Análisis de Facciones de Chosun",
+  "labels": {
+    "faction": "Facción",
+    "innate": "Naturaleza Innata",
+    "behavioral": "Rasgos de Comportamiento",
+    "comparison": "Puntuación de Coincidencia",
+    "alignment": "Detalles de Alineación"
+  }
+}

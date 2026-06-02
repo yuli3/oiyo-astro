@@ -1,0 +1,1149 @@
+{
+  "labels": {
+    "hireDate": "Fecha de Contratación",
+    "resignationDate": "Fecha de Renuncia",
+    "monthlySalary": "Diseñando un espejo que refleja tu verdadera esencia...",
+    "annualBonus": "Bono Anual (Prorrateado)",
+    "annualLeave": "Asignación de Vacaciones No Utilizadas",
+    "severancePay": "Liquidación Estimada"
+  },
+  "results": {
+    "tenure": "Período de Servicio",
+    "estimated": "Liquidación Estimada",
+    "total": "Liquidación Total Estimada"
+  },
+  "basis": {
+    "title": "Análisis Personalizado",
+    "tenure": "Período de Servicio",
+    "monthlyBase": "Salario Base Mensual",
+    "annualBonus": "Bono Anual (Prorrateado)",
+    "annualLeave": "Asignación de Vacaciones No Utilizadas",
+    "threeMonthTotal": "Salario Total de 3 Meses",
+    "avgDailyWage": "Salario Diario Promedio",
+    "formula": "* Fórmula: Salario Diario Promedio × 30 días × (Días de Servicio ÷ 365)"
+  },
+  "legal": {
+    "title": "Análisis Personalizado",
+    "note": "Sincronizando los hilos de tu destino...",
+    "item1": "Usa la fórmula estándar basada en la Ley de Seguridad de Beneficios de Jubilación de Empleados.",
+    "item2": "El salario promedio real incluye todos los salarios (base, bonos, etc.) recibidos en los últimos 3 meses.",
+    "item3": "Para casos complejos como liquidación provisional, por favor consulta a un abogado laboral.",
+    "item4": "Los empleados con menos de 1 año de servicio no tienen derecho a liquidación."
+  },
+  "error": {
+    "lessThanYear": "No se genera liquidación si el período de servicio es menor a un año.",
+    "invalidDate": "La fecha de contratación no puede ser posterior a la de renuncia."
+  },
+  "meta": {
+    "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses",
+    "disclaimer": "Este cálculo es solo una estimación. La liquidación real puede variar según la política de la empresa y contratos laborales específicos.",
+    "title": "Análisis Personalizado",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "test": {
+    "insightBullets": ["A la espera de síntesis..."],
+    "progress": "Awaiting synthesis...",
+    "submit": "Awaiting synthesis...",
+    "loading": "Awaiting synthesis...",
+    "selectOption": "Awaiting synthesis..."
+  },
+  "result": {
+    "title": "Análisis Personalizado",
+    "description": "Awaiting synthesis..."
+  },
+  "moneyHabits": {
+    "meta": {
+      "keywords": "Awaiting synthesis...",
+      "resultTitle": "Awaiting synthesis...",
+      "resultDescription": "Awaiting synthesis...",
+      "testTitle": "Evaluación de hábitos de dinero",
+      "testDescription": "Awaiting synthesis...",
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses",
+      "cta": "Awaiting synthesis...",
+      "badge": "Global Benchmarking",
+      "title": "Análisis Personalizado"
+    },
+    "benefits": {
+      "items": {
+        "0": {
+          "emoji": "mi",
+          "title": "Análisis Personalizado",
+          "description": "Awaiting synthesis..."
+        },
+        "1": {
+          "emoji": "mi",
+          "title": "Análisis Personalizado",
+          "description": "Awaiting synthesis..."
+        },
+        "2": {
+          "emoji": "mi",
+          "title": "Análisis Personalizado",
+          "description": "Awaiting synthesis..."
+        }
+      },
+      "title": "Análisis Personalizado"
+    },
+    "cta": {
+      "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses",
+      "button": "Take Tests Now",
+      "title": "Análisis Personalizado"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "1": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "2": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "3": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      },
+      "title": "Análisis Personalizado"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": [
+        "A la espera de síntesis...",
+        "A la espera de síntesis...",
+        "A la espera de síntesis..."
+      ],
+      "common": {
+        "progress": "Awaiting synthesis...",
+        "next": "Awaiting synthesis...",
+        "previous": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "start": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "results": "Awaiting synthesis...",
+        "dashboard": "Awaiting synthesis...",
+        "insights": "Awaiting synthesis..."
+      },
+      "test": {
+        "insightBullets": ["A la espera de síntesis..."],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis..."
+      },
+      "result": {
+        "title": "Análisis Personalizado",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "Análisis Personalizado",
+        "description": "Awaiting synthesis...",
+        "keywords": "Awaiting synthesis..."
+      },
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses",
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis...",
+      "finish": "Finalizar",
+      "swipeHint": "Sugerencia de deslizar"
+    },
+    "result": {
+      "chart": {
+        "impulseControl": "Control de impulsos",
+        "savingCapacity": "Capacidad de ahorro",
+        "planningSkill": "Habilidad de planificación",
+        "emotionalControl": "Control emocional"
+      },
+      "test": {
+        "insightBullets": ["A la espera de síntesis..."],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis..."
+      },
+      "result": {
+        "title": "Análisis Personalizado",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "Análisis Personalizado",
+        "description": "Awaiting synthesis...",
+        "keywords": "Awaiting synthesis..."
+      },
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "shareTitle": "Awaiting synthesis...",
+      "copySuccess": "Copia exitosa",
+      "scoresTitle": "Awaiting synthesis...",
+      "impulseRisk": "Riesgo de impulso",
+      "strengths": "Awaiting synthesis...",
+      "challenges": "Desafíos",
+      "actionTips": "Consejos de acción",
+      "savingRecommendation": "Recomendación de ahorro",
+      "recommendedPercentage": "Porcentaje recomendado",
+      "share": "Awaiting synthesis...",
+      "retake": "Awaiting synthesis..."
+    },
+    "title": "Análisis Personalizado",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "payment": {
+    "checkout": {
+      "orderName": "Oiyo.net {planName} Suscripción"
+    },
+    "errors": {
+      "PLAN_NOT_FOUND": "Awaiting synthesis...",
+      "PAYMENT_SERVICE_ERROR": "Awaiting synthesis...",
+      "PROVIDER_REQUIRED": "Awaiting synthesis...",
+      "LOCALE_REQUIRED": "Awaiting synthesis...",
+      "CURRENCY_REQUIRED": "Awaiting synthesis...",
+      "TOSS_CLIENT_KEY_REQUIRED": "Awaiting synthesis...",
+      "LEMONSQUEEZY_CONFIG_REQUIRED": "Awaiting synthesis...",
+      "generic": "Awaiting synthesis..."
+    },
+    "failed": {
+      "help": {
+        "technical": {
+          "refresh": "Actualizar la página",
+          "browser": "Pruebe con un navegador diferente",
+          "network": "Awaiting synthesis...",
+          "incognito": "Prueba el modo incógnito/privado",
+          "title": "Análisis Personalizado"
+        },
+        "payment": {
+          "title": "Análisis Personalizado",
+          "checkCard": "Check your card details",
+          "checkFunds": "Ensure sufficient funds",
+          "tryAnother": "Awaiting synthesis...",
+          "contactBank": "Contact your bank"
+        }
+      },
+      "meta": {
+        "title": "Análisis Personalizado",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "A la espera de síntesis...",
+          "A la espera de síntesis...",
+          "A la espera de síntesis..."
+        ],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis...",
+        "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "Análisis Personalizado",
+        "description": "Awaiting synthesis..."
+      },
+      "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses",
+      "genericTitle": "Error de pago",
+      "genericDescription": "Awaiting synthesis...",
+      "genericAction": "Intentar otra vez",
+      "unknownTitle": "Error desconocido",
+      "unknownDescription": "Awaiting synthesis...",
+      "unknownAction": "Contactar con soporte",
+      "orderId": "ID de pedido",
+      "orderIdNote": "Awaiting synthesis...",
+      "technicalDetails": "Detalles técnicos",
+      "errorCode": "Código de error",
+      "errorMessage": "Mensaje de error",
+      "whatNext": "¿Qué puedes hacer?",
+      "contactSupport": "Contactar con soporte",
+      "backToHome": "Volver a Inicio",
+      "needHelp": "¿Necesitar ayuda?",
+      "stillNeedHelp": "¿Aún tienes problemas?",
+      "getSupport": "Obtenga soporte",
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "success": {
+      "meta": {
+        "title": "Análisis Personalizado",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "A la espera de síntesis...",
+          "A la espera de síntesis...",
+          "A la espera de síntesis..."
+        ],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis...",
+        "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "A la espera de síntesis...",
+            "description": "A la espera de síntesis...",
+            "question": "A la espera de síntesis...",
+            "answer": "A la espera de síntesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "Análisis Personalizado",
+        "description": "Awaiting synthesis..."
+      },
+      "welcome', { name: user": {
+        "firstName || user": {
+          "fullName || t('success": {
+            "user": "Usuaria"
+          }
+        }
+      },
+      "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses",
+      "verifying": "Verificando pago...",
+      "verifyingDescription": "Awaiting synthesis...",
+      "premiumActive": "Premium activa",
+      "welcome": "¡Bienvenido {nombre}!",
+      "user": "Usuaria",
+      "paymentDetails": "Detalles de pago",
+      "orderId": "ID de pedido",
+      "amount": "Cantidad",
+      "status": "Estado",
+      "confirmed": "Confirmada",
+      "verificationSuccess": "Awaiting synthesis...",
+      "verificationFailed": "Awaiting synthesis...",
+      "verificationNetworkError": "Awaiting synthesis...",
+      "verificationRetry": "Reintentar la verificación",
+      "verificationPending": "En espera de confirmación",
+      "approvedAt": "Aprobado en",
+      "featuresUnlocked": "Awaiting synthesis...",
+      "nextSteps": "¿Qué sigue?",
+      "goToDashboard": "Ir al panel",
+      "takeTest": "Haz una prueba",
+      "supportNote": "Awaiting synthesis...",
+      "contactSupport": "Contactar con soporte",
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "test": {
+      "insightBullets": ["A la espera de síntesis..."],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "meta": {
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis..."
+    },
+    "checkCard": "Consulta los datos de tu tarjeta",
+    "checkFunds": "Garantizar fondos suficientes",
+    "tryAnother": "Awaiting synthesis...",
+    "contactBank": "Contacta con tu banco"
+  },
+  "globalComparison": {
+    "meta": {
+      "cta": {
+        "button": "Take Tests Now"
+      },
+      "keywords": "Awaiting synthesis...",
+      "badge": "Global Benchmarking",
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "filters": {
+      "region": "🌏 Seleccionar Región",
+      "age": "👥 Grupo de edad",
+      "gender": "⚧ Género",
+      "test": "Awaiting synthesis..."
+    },
+    "tabs": {
+      "overview": "📈 Descripción general",
+      "regional": "🗺️ Comparación regional",
+      "demographics": "👥 Demografía",
+      "rankings": "🏆 Clasificaciones"
+    },
+    "chart": {
+      "scoreDistribution": "📊 Distribución de puntuación",
+      "personalityRankings": "🏆 Clasificaciones de tipos de personalidad",
+      "avgScore": "puntuación promedio",
+      "users": "usuarias",
+      "topRankText": "Estás clasificado entre el {percent}% superior de usuarios en todo el mundo 🚀",
+      "allAges": "Todas las edades",
+      "all": "Toda",
+      "male": "Masculina",
+      "female": "Femenina",
+      "global": "Global",
+      "asia": "Asia",
+      "europe": "Europa",
+      "northAmerica": "América del norte",
+      "korea": "Corea",
+      "southAmerica": "Sudamerica",
+      "africa": "África",
+      "oceania": "Oceanía"
+    },
+    "demographics": {
+      "comingSoon": "📊 Próximamente funciones de análisis demográfico."
+    },
+    "cta": {
+      "button": "Realice pruebas ahora",
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "features": {
+      "benchmarking": {
+        "title": "Análisis Personalizado",
+        "description": "Awaiting synthesis..."
+      },
+      "regional": {
+        "title": "Análisis Personalizado",
+        "description": "Awaiting synthesis..."
+      }
+    },
+    "insights": {
+      "yourScore": "Tu puntuación",
+      "globalAverage": "Promedio mundial",
+      "percentile": "percentil",
+      "topPerformers": "Mejores artistas",
+      "aboveAverage": "Por encima del promedio",
+      "belowAverage": "Bajo",
+      "regions": "Regiones"
+    },
+    "test": {
+      "insightBullets": ["A la espera de síntesis..."],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "badge": "Evaluación comparativa global",
+    "loading": "Awaiting synthesis...",
+    "noData": "📋 No hay datos para analizar. Primero complete las pruebas de personalidad.",
+    "title": "Análisis Personalizado",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "luck": {
+    "meta": {
+      "keywords": "Awaiting synthesis..."
+    },
+    "hero": {
+      "eyebrow": "Smart Wallet Lab",
+      "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses",
+      "cta": "Awaiting synthesis..."
+    }
+  },
+  "spendingStyle": {
+    "meta": {
+      "keywords": "Awaiting synthesis..."
+    },
+    "hero": {
+      "eyebrow": "Laboratorio de billetera inteligente",
+      "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses",
+      "cta": "Awaiting synthesis..."
+    }
+  },
+  "nJobler": {
+    "test": {
+      "insightBullets": [
+        "A la espera de síntesis...",
+        "A la espera de síntesis...",
+        "A la espera de síntesis..."
+      ],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses"
+    },
+    "meta": {
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "Análisis Personalizado",
+    "description": "Awaiting synthesis..."
+  },
+  "giftTax": {
+    "test": {
+      "insightBullets": [
+        "A la espera de síntesis...",
+        "A la espera de síntesis...",
+        "A la espera de síntesis..."
+      ],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses"
+    },
+    "meta": {
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "A la espera de síntesis...",
+          "description": "A la espera de síntesis...",
+          "question": "A la espera de síntesis...",
+          "answer": "A la espera de síntesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "Análisis Personalizado",
+    "description": "Awaiting synthesis..."
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "A la espera de síntesis...",
+        "a": "A la espera de síntesis..."
+      },
+      {
+        "q": "A la espera de síntesis...",
+        "a": "A la espera de síntesis..."
+      },
+      {
+        "q": "A la espera de síntesis...",
+        "a": "A la espera de síntesis..."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "title": "A la espera de síntesis...",
+        "description": "A la espera de síntesis..."
+      },
+      {
+        "title": "A la espera de síntesis...",
+        "description": "A la espera de síntesis..."
+      },
+      {
+        "title": "A la espera de síntesis...",
+        "description": "A la espera de síntesis..."
+      }
+    ]
+  },
+  "hub": {
+    "meta": {
+      "title": "Análisis Personalizado",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "Análisis Personalizado",
+    "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses"
+  },
+  "subtitle": "Calcula tu liquidación estimada usando fecha de contratación, renuncia y salario de 3 meses",
+  "optional": "Opcional",
+  "currency": "USD",
+  "disclaimer": "Este cálculo es solo una estimación. La liquidación real puede variar según la política de la empresa y contratos laborales específicos.",
+  "ko-KR": "Ko-K R",
+  "title": "Análisis Personalizado"
+}

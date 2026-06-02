@@ -1,0 +1,21 @@
+{
+  "title": "Basique",
+  "subtitle": "Choisissez un préréglage.",
+  "recommended": "Recommandée",
+  "all": {
+    "title": "Basique",
+    "description": "Essential analysis."
+  },
+  "eastern": {
+    "title": "Basique",
+    "description": "Essential analysis."
+  },
+  "western": {
+    "title": "Basique",
+    "description": "Essential analysis."
+  },
+  "basic": {
+    "title": "Basique",
+    "description": "Analyse essentielle."
+  }
+}

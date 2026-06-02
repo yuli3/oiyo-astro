@@ -1,0 +1,21 @@
+{
+  "intro": {
+    "badge": "心智消耗观测 (Psychological Accounting)",
+    "title": "消费风格",
+    "quote": "在喧嚣的信息海洋中，您的灵魂是否感到了疲惫的牵引？",
+    "startButton": "启动消耗诊断"
+  },
+  "questions": {
+    "signal": "精神相位中的警示信号"
+  },
+  "results": {
+    "pattern": "损耗轨迹模式",
+    "impact": "对生命质量的波动影响",
+    "guidance": "智慧守护指南",
+    "recalibrate": "能量场重置建议"
+  },
+  "meta": {
+    "title": "消费风格",
+    "description": "消费风格测试与分析"
+  }
+}

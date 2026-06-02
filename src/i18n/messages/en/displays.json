@@ -1,0 +1,41 @@
+{
+  "AncientCoordinateCard": {
+    "colors": {
+      "red": "Red",
+      "white": "White",
+      "blue": "Blue",
+      "yellow": "Yellow"
+    },
+    "mayan": {
+      "systemName": "Mayan Dreamspell",
+      "narrative": "Visualizing Synchronicity",
+      "solarSeal": "Solar Seal",
+      "tone": "Tone",
+      "toneOf": "Tone of {power}",
+      "kin": "Kin {kin}",
+      "ariaLabel": "Mayan Synchronicity: You are {seal} bearing the galactic tone of {tone}. You embody the essence of {essence}."
+    },
+    "celtic": {
+      "systemName": "Celtic Druid",
+      "narrative": "The Natural Law",
+      "treeSign": "Tree Sign",
+      "ogham": "Ogham",
+      "ariaLabel": "Celtic Druid Coordinate: Your tree sign is {tree}, symbolizing {archetype}."
+    },
+    "egyptian": {
+      "systemName": "Egyptian Neteru",
+      "narrative": "The Divine Order",
+      "guardianDeity": "Guardian Deity",
+      "vedicSolar": "Vedic Solar Nakshatra",
+      "symbol": "Symbol: {symbol}",
+      "deity": "Deity: {deity}",
+      "decan": "Egyptian Decan",
+      "hellenisticSect": "Hellenistic Sect",
+      "sect": {
+        "day": "Day Sect",
+        "night": "Night Sect"
+      },
+      "ariaLabel": "Egyptian Guardian Deity: Your guardian is {god}. You possess the qualities of {attributes}."
+    }
+  }
+}

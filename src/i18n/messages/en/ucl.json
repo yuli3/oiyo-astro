@@ -1,0 +1,9 @@
+{
+  "shared": {
+    "mandala": {
+      "loading": "Tuning resonance frequencies...",
+      "error": "Mandala alignment failed.",
+      "accessibility": "Mandala visualizing energy"
+    }
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "hero": {
+    "features": {
+      "comprehensive": "다차원 감사",
+      "multiSource": "다양한 혈통의 지혜",
+      "aiPowered": "연금술 합성기"
+    },
+    "title": "The Nexus of Affinity ",
+    "subtitle": "대인 관계 연금술 탐색에 대한 포괄적인 가이드입니다."
+  },
+  "tabs": {
+    "compatibility": "고조파 정렬",
+    "romance": "신성한 헌신",
+    "communication": "대화 연금술",
+    "friendship": "친절한 영혼",
+    "pet": "신체 공명"
+  },
+  "features": {
+    "multiSource": {
+      "title": "The Nexus of Affinity ",
+      "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+    },
+    "scientific": {
+      "title": "The Nexus of Affinity ",
+      "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+    },
+    "personalized": {
+      "title": "The Nexus of Affinity ",
+      "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+    },
+    "title": "The Nexus of Affinity "
+  },
+  "types": {
+    "avoidant": {
+      "title": "The Nexus of Affinity ",
+      "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+    },
+    "confrontational": {
+      "title": "The Nexus of Affinity ",
+      "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+    },
+    "harmonizing": {
+      "title": "The Nexus of Affinity ",
+      "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+    },
+    "analytical": {
+      "title": "The Nexus of Affinity ",
+      "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+    },
+    "title": "The Nexus of Affinity "
+  },
+  "faq": {
+    "title": "The Nexus of Affinity ",
+    "answer1": "마찰은 실패가 아니라 정신을 정화하고 의식적 이해를 키우는 강력한 도가니입니다.",
+    "answer2": "당신의 전형적인 입장을 알면 무의식적인 반응을 의도적인 연결 의식으로 바꿀 수 있습니다.",
+    "answer3": "물론; 영혼의 에너지적 특징은 역동적이며, 경험과 자각의 함양을 통해 진화합니다.",
+    "answer4": "불일치하는 주파수는 성장을 위한 가장 심오한 기회를 제공합니다. 숙달은 서로 다른 것을 조화시키는 데 있습니다.",
+    "question1": "대인관계 마찰은 실패인가?",
+    "question2": "내 입장을 매핑하면 어떤 이점이 있나요?",
+    "question3": "이러한 연금술적 특징은 진화합니까?",
+    "question4": "만약 우리의 주파수가 자연스럽게 불일치한다면 어떻게 될까요?"
+  },
+  "meta": {
+    "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools.",
+    "keywords": "relationship hub, affinity nexus, soul resonance, interpersonal geometry, Oiyo",
+    "title": "The Nexus of Affinity "
+  },
+  "error": {
+    "badgeLabel": "필드 왜곡",
+    "title": "The Nexus of Affinity ",
+    "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools.",
+    "primaryAction": "교정 다시 시작",
+    "secondaryAction": "넥서스로 돌아가기",
+    "supportPrompt": "왜곡이 지속되면 이 참조 코드를 서기관에게 전송하십시오.",
+    "referenceIdLabel": "공명 참고자료",
+    "contactSupport": "현자들에게 연락하세요",
+    "supportEmail": "sages@oiyo.net",
+    "fallbackMessage": "가려진 오류가 나타났습니다."
+  },
+  "hub": {
+    "categories": {
+      "romantic": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "friendship": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "family": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "professional": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      }
+    },
+    "cards": {
+      "couple": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "dating": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "newlywed": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "longTerm": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "engaged": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "friend": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "bestfriend": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "acquaintance": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "parentChild": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "siblings": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "extendedFamily": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "inLaws": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "colleague": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "managerEmployee": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "businessPartner": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      },
+      "mentorMentee": {
+        "title": "The Nexus of Affinity ",
+        "description": "Navigate the complex landscape of human connection through our multi-dimensional suite of resonance tools."
+      }
+    },
+    "badges": {
+      "new": "새로운",
+      "hot": "더운"
+    }
+  },
+  "title": "친밀감의 결합",
+  "description": "다차원적인 공명 도구 제품군을 통해 인간 연결의 복잡한 환경을 탐색하세요.",
+  "keywords": "관계 허브, 친화력 넥서스, 영혼 공명, ​​대인 관계 기하학, Oiyo"
+}

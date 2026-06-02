@@ -1,0 +1,27 @@
+{
+  "test": {
+    "sampleQuestions": {
+      "1": "Awaiting deep synthesis...",
+      "2": "Awaiting deep synthesis...",
+      "3": "Awaiting deep synthesis...",
+      "4": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis...",
+    "inputTitle": "Awaiting deep synthesis...",
+    "inputDescription": "Awaiting deep synthesis...",
+    "questionPlaceholder": "Awaiting deep synthesis...",
+    "answerPlaceholder": "Awaiting deep synthesis...",
+    "wordCount": "Awaiting deep synthesis...",
+    "recommendedLength": "Awaiting deep synthesis...",
+    "analyzeButton": "Awaiting deep synthesis..."
+  },
+  "result": {
+    "score": "Awaiting deep synthesis...",
+    "feedback": "Awaiting deep synthesis...",
+    "originality": "Awaiting deep synthesis...",
+    "logic": "Awaiting deep synthesis...",
+    "completeness": "Awaiting deep synthesis...",
+    "positivity": "Awaiting deep synthesis..."
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "solarLineage": "阳历脉系",
+  "lunarLineage": "阴历脉系",
+  "compatibility": "契合度",
+  "title": "计算中...",
+  "description": "通过传统子平命理揭示的命运蓝图。",
+  "pillars": {
+    "title": "计算中...",
+    "interpretation": "解读",
+    "yearPillar": "年柱 (早年运)",
+    "yearPillarDesc": "象征祖先、童年以及您的根基。",
+    "monthPillar": "月柱 (青年运)",
+    "monthPillarDesc": "代表兄弟姐妹、社交能力以及职业环境。",
+    "dayPillar": "日柱 (中年运)",
+    "dayPillarDesc": "代表自身、配偶以及当前的环境。",
+    "hourPillar": "时柱 (晚年运)",
+    "hourPillarDesc": "呈现子孙、晚年福报以及未来的成就。"
+  },
+  "elements": {
+    "title": "计算中...",
+    "chartLabel": "五行平衡"
+  },
+  "overview": {
+    "interpretation": "概览",
+    "title": "{name} 的四柱解析",
+    "mainTraits": "主要特征",
+    "elementBalance": "五行平衡"
+  },
+  "analysis": "分析",
+  "tabs": {
+    "personality": "性格",
+    "fortune": "运势",
+    "advice": "建议"
+  },
+  "personality": {
+    "strengths": "我的优势",
+    "weaknesses": "改善点"
+  },
+  "fortune": {
+    "flow": {
+      "title": "{name} 的四柱解析"
+    },
+    "title": "{name} 的四柱解析",
+    "status": "分析完成"
+  },
+  "advice": "建议",
+  "ai": {
+    "general_analysis": "AI 深度分析",
+    "career": "事业运",
+    "wealth": "财富运",
+    "love": "感情运",
+    "health": "健康运",
+    "error": "无法加载 AI 分析数据。"
+  },
+  "meta": {
+    "test": {
+      "insightBullets": [
+        "解码您出生日期内的元素频率。",
+        "绘制支配你自然气质的季节流向。",
+        "Unveiling the secret interactions of the Ten Gods within your chart."
+      ],
+      "progress": "天命进度",
+      "submit": "开启我的命运",
+      "loading": "正在查阅帝国档案馆...",
+      "selectOption": "请输入您的信息",
+      "next": "继续",
+      "previous": "返回"
+    },
+    "result": {
+      "title": "{name} 的四柱解析",
+      "description": "通过传统子平命理揭示的命运蓝图。"
+    },
+    "title": "{name} 的四柱解析",
+    "description": "通过传统子平命理揭示的命运蓝图。",
+    "keywords": "四柱, 分析, 运势"
+  },
+  "modern": {
+    "title": "{name} 的四柱解析",
+    "mbtiSimilarity": "相似 MBTI",
+    "similarPersonality": "性格类型",
+    "strengths": "我的优势",
+    "challenges": "成长课题",
+    "careerSuggestions": "推荐职业",
+    "relationshipAdvice": "人际建议",
+    "economy": "经济倾向",
+    "mbtiSalary": "薪资趋势",
+    "globalComparison": "全球对比"
+  },
+  "lifestyle": {
+    "title": "{name} 的四柱解析",
+    "interpretation": "炼金路径：与您本质契合的志趣与职业。"
+  },
+  "retake": "重新测试",
+  "birthInfo": "出生信息",
+  "birthDate": "农历/公历生日",
+  "birthTime": "出生时间",
+  "mainAnalysis": "核心分析",
+  "dominantElement": "主导五行",
+  "personalityType": "性格类型",
+  "daily": {
+    "badge": "每日存在",
+    "risingTitle": "{branch} 之崛起",
+    "risingDesc": "您今天的能量呈现强劲的上升势头。{element} 元素增强了您的天然创造力。",
+    "flowTitle": "财务流动",
+    "flowDesc": "具备强劲的投资潜力。",
+    "loveTitle": "情感雷达",
+    "loveDesc": "敞开心扉，迎接新的对话。",
+    "colorTitle": "能量之色",
+    "colorDesc": "穿着此色以放大您的气场。",
+    "foodTitle": "灵魂食粮",
+    "foodDesc": "恢复您的生命活力。",
+    "unlockTitle": "开启您的人生命运",
+    "unlockDesc": "与上周相比，您的运势提升了 <span class='text-emerald-600 font-bold'>+{percent}%</span>。",
+    "viewReport": "查看完整报告"
+  },
+  "time": "时间",
+  "day": "日",
+  "month": "月",
+  "year": "年",
+  "fiveElements": "五行",
+  "traits": "特质",
+  "copy": "复制结果",
+  "style": "风格",
+  "home": "首页",
+  "primarySection": {
+    "scoreHeadline": "你的分数",
+    "bondingTitle": "建立纽带",
+    "conversationTitle": "沟通交流",
+    "caregiverTitle": "照顾者风格"
+  },
+  "scoreBreakdown": {
+    "title": "计算中...",
+    "description": "请稍候。"
+  },
+  "hybridIdeas": {
+    "title": "计算中..."
+  },
+  "supportPartners": {
+    "title": "计算中..."
+  },
+  "cta": {
+    "retake": "重新测试",
+    "explore": "探索更多"
+  },
+  "characteristics": "特征",
+  "dreamPatterns": "梦境模式",
+  "interpretationTips": "解读技巧",
+  "commonSymbols": "共同符号",
+  "dreamTypeBreakdown": "梦境细分",
+  "share": "分享",
+  "qualityOfLife": "生活质量",
+  "safetyScore": "安全分数",
+  "costOfLiving": "生活成本",
+  "readyExplore": "准备好去探索了吗？",
+  "exploreDescription": "寻找您的下一个目的地。",
+  "exploreTravel": "探索旅游",
+  "connectExpats": "联系外籍人士",
+  "copied": "结果已复制",
+  "writingStyle": "写作风格",
+  "strengths": "优势",
+  "growthAreas": "成长领域",
+  "favoriteGenres": "喜爱的类型",
+  "writingTips": "写作建议",
+  "personalizedPrompts": "您的提示词",
+  "personalizedPromptsSubtitle": "为您量身定制的提示词。",
+  "exploreMore": "探索更多",
+  "studyTips": "学习建议",
+  "environment": "环境",
+  "sections": {
+    "dimensions_title": "维度",
+    "strengths": "优势",
+    "traits": "特质",
+    "challenges": "挑战",
+    "idealSituations": "理想情境",
+    "tips": "提示",
+    "breakdown": "细分"
+  },
+  "level": "等级",
+  "score": "分数",
+  "profile_title": "档案",
+  "guidance_title": "引导",
+  "grossPay": "总税前工资",
+  "nationalPension": "国民养老金",
+  "healthInsurance": "医疗保险",
+  "incomeTax": "所得税",
+  "netPay": "税后净额",
+  "deduction": "扣减",
+  "taxBase": "税基",
+  "rate": "税率",
+  "selfReport": "自我报告",
+  "loading": {
+    "title": "计算中...",
+    "description": "请稍候。"
+  },
+  "retakeTest": "重新测试",
+  "backHome": "返回首页",
+  "sharePrompt": "分享您的结果。"
+}

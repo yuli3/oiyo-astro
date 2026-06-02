@@ -1,0 +1,2611 @@
+{
+  "home": {
+    "enhancedTestGrid": {
+      "categories": {
+        "all": "Hub Unificado",
+        "personality": "Esencia y Alma",
+        "career": "Fortunas y Labor",
+        "utility": "Prismas Funcionales",
+        "fun": "Sabiduría Ligera"
+      },
+      "sortBy": {
+        "popularity": "Atracción Universal",
+        "newest": "Nuevas Perspectivas",
+        "time": "Ritmo Temporal",
+        "difficulty": "Profundidad Intelectual"
+      },
+      "difficulty": {
+        "easy": "Accesible",
+        "medium": "Profundo",
+        "hard": "Trascendental"
+      },
+      "test": {
+        "progress": "Progreso del Despertar",
+        "submit": "Revelar la Verdad",
+        "loading": "Consultando los Patrones...",
+        "selectOption": "Elige la senda que resuene con tu núcleo.",
+        "insightBullets": [
+          "Explorando tu subconsciente...",
+          "Mapeando tus arquetipos...",
+          "Revelando tu verdad interior..."
+        ],
+        "next": "Ascender",
+        "previous": "Reflexionar"
+      },
+      "result": {
+        "title": "Apertura al Yo",
+        "description": "El resultado diagnóstico de su resonancia actual."
+      },
+      "meta": {
+        "title": "Diagnóstico de Ontología | La colección OIYO",
+        "description": "Un conjunto seleccionado de pruebas para mapear la experiencia humana.",
+        "keywords": "autorrealización, perfil holístico, mapa ontológico"
+      },
+      "filters": "Refinar Visión",
+      "viewMode": "Perspectiva",
+      "estimatedTime": "Duración del Ritual",
+      "minutes": "Minutos de Reflexión",
+      "startTest": "Comenzar Viaje",
+      "noResults": "No se encontraron ecos para esta búsqueda.",
+      "clearFilters": "Restablecer Perspectiva",
+      "popular": "Altamente Resonante",
+      "featured": "Elección del Escriba",
+      "new": "Sabiduría Emergente",
+      "tryDifferentFilters": "Tal vez un lente diferente revele lo que buscas.",
+      "searchPlaceholder": "What part of yourself do you wish to see?"
+    },
+    "title": "Santuario OIYO",
+    "description": "Bienvenidos a un espacio de profunda autoobservación y alineación celestial.",
+    "keywords": "autorrealización, perfil holístico, mapa ontológico",
+    "errorFallbackTitle": "Disonancia del Sistema",
+    "errorFallbackDescription": "Se perdió la señal. Regresa al Santuario del Home.",
+    "subtitle": "Presencia la convergencia de tus identidades fragmentadas en una totalidad singular y radiante.",
+    "searchPlaceholder": "¿Qué parte de ti deseas ver?"
+  },
+  "lifeAnalysis": {
+    "features": {
+      "timing": {
+        "title": "Flujo temporal",
+        "love": "Mareas Relacionales",
+        "business": "Cosecha Profesional",
+        "crisis": "Sombras ominosas",
+        "marriage": "Alineación de Unión"
+      },
+      "wealth": {
+        "title": "Flujo de materiales",
+        "fortune": "Potencial de Abundancia",
+        "style": "Hábito de Prosperidad",
+        "spending": "Equilibrio de Recursos"
+      },
+      "career": {
+        "title": "Vocación y Trabajo",
+        "direction": "Dirección del Sendero de Vida",
+        "capability": "Aptitud Latente",
+        "talent": "Dones Innatos",
+        "welcome": "Éxito Emergente"
+      },
+      "interest": {
+        "title": "Pasión y enfoque",
+        "main": "Foco Central"
+      },
+      "health": {
+        "title": "Integridad Vital",
+        "organs": "Signos de Advertencia Somática"
+      },
+      "loveStyle": {
+        "title": "Afinidades del corazón",
+        "type": "Arquetipo Relacional"
+      }
+    },
+    "title": "Plano Integral del Destino",
+    "price": "1,000",
+    "priceUsd": "$1.00",
+    "originalPrice": "10,000",
+    "discountRate": "90%",
+    "description": "Un informe nítido que detalla cada faceta de la trayectoria de su vida.",
+    "cta": "Obtener Plano",
+    "oneTimePayment": "Acceso Único (No recurrente)"
+  },
+  "wholeSelf": {
+    "card": {
+      "header": "Manifestación Central"
+    },
+    "labels": {
+      "money": "Flujo de Prosperidad",
+      "color": "Espectro Personal"
+    },
+    "values": {
+      "money": {
+        "impulsive-spender": "Explorador del Momento",
+        "careful-saver": "Guardián de la Reserva",
+        "social-spender": "Conector Generoso",
+        "investment-planner": "Arquitecto del Crecimiento",
+        "experience-seeker": "Curador de Memorias",
+        "security-focused": "Constructor de Cimientos"
+      },
+      "color": {
+        "warm-spring": "Floración Vernal Etérea",
+        "bright-spring": "Despertar Solar Radiante",
+        "light-summer": "Calma Azur Luminosa",
+        "cool-summer": "Serenidad Glacial Refinada",
+        "soft-autumn": "Equilibrio Oro de Cosecha",
+        "warm-autumn": "Resonancia Ámbar Profunda",
+        "cool-winter": "Integridad de Cristal Estelar",
+        "bright-winter": "Clarity Diamantina Absoluta"
+      }
+    },
+    "actions": {
+      "download": "Archivar Sabiduría"
+    },
+    "meta": {
+      "subtitle": "Presencia la convergencia de tus identidades fragmentadas en una totalidad singular y radiante.",
+      "disclaimer": "Tu esencia permanece privada, resguardada en el templo de tu propio dispositivo.",
+      "keywords": "autorrealización, perfil holístico, mapa ontológico",
+      "title": "Ontología de personalidad integrada",
+      "description": "Una visión unificada de tu arquitectura psicológica y espiritual."
+    },
+    "hero": {
+      "subtitle": "Presencia la convergencia de tus identidades fragmentadas en una totalidad singular y radiante.",
+      "badge": "Resonancia Holística"
+    },
+    "test": {
+      "progress": "Progreso del Despertar",
+      "submit": "Revelar la Verdad",
+      "loading": "Consultando los Patrones...",
+      "selectOption": "Elige la senda que resuene con tu núcleo.",
+      "insightBullets": [
+        "Descubre las geometrías ocultas que dan forma a tu vida diaria."
+      ],
+      "next": "Ascender",
+      "previous": "Reflexionar"
+    },
+    "result": {
+      "title": "Síntesis del yo",
+      "description": "Una revelación elocuente de su firma psicológica única."
+    },
+    "subtitle": "Presencia la convergencia de tus identidades fragmentadas en una totalidad singular y radiante.",
+    "missing": "Aún por Revelar",
+    "disclaimer": "Tu esencia permanece privada, resguardada en el templo de tu propio dispositivo.",
+    "title": "Mi mapa interior",
+    "description": "Atraviesa los paisajes de tus rasgos subconscientes y conscientes.",
+    "a": "Resonancia Eterna"
+  },
+  "twinFinder": {
+    "title": "Buscador de gemelos",
+    "noMatches": "No se encontraron coincidencias.",
+    "findNow": "Encontrar ahora"
+  },
+  "dailyHoroscope": {
+    "title": "Análisis Personalizado",
+    "subtitle": "Información detallada",
+    "sections": {
+      "energy": "Pronóstico de Energía",
+      "lucky": {
+        "title": "Análisis Personalizado",
+        "direction": "Dirección",
+        "color": "Color",
+        "number": "Número",
+        "item": "Talismán"
+      },
+      "action": {
+        "title": "Análisis Personalizado",
+        "do": "Buscar",
+        "avoid": "Abstenerse"
+      },
+      "ritual": "Ritual diario"
+    },
+    "elements": {
+      "wood": "Crecimiento y benevolencia",
+      "fire": "Pasión y claridad",
+      "earth": "Estabilidad y confianza",
+      "metal": "Justicia y definición",
+      "water": "Sabiduría y flujo"
+    },
+    "oracleMessage": "A la espera de una síntesis profunda...",
+    "actionableAdvice": "A la espera de una síntesis profunda..."
+  },
+  "dailyInsightsGenerator": {
+    "personalityDescriptors": {
+      "assertive": "Líder natural",
+      "analytical": "Analista reflexivo",
+      "expressive": "Comunicador vibrante",
+      "adventurer": "Explorador audaz",
+      "blue": "Alma pacífica",
+      "explorer": "Descubridor curioso",
+      "default": "Aprovecha tus fortalezas únicas hoy."
+    },
+    "customization": {
+      "greeting": "¡Hola!",
+      "personalizedMessage": "Celebramos tu viaje único."
+    },
+    "contextualTips": {
+      "assertive-motivation": "Tu liderazgo es más poderoso cuando inspiras a otros mediante tu propio ejemplo.",
+      "adventurer-creativity": "Canaliza tu amor por la exploración en la experimentación creativa hoy.",
+      "blue-wellness": "Tu empatía natural significa que cuidarte a ti mismo te ayuda a cuidar mejor de los demás.",
+      "default": "Aprovecha tus fortalezas únicas hoy."
+    },
+    "fallback": {
+      "content": {
+        "title": "Análisis Personalizado",
+        "message": "Cada persona tiene sus propias fortalezas y talentos únicos. Hoy es un día para reconocer y celebrar las cualidades especiales que hay en ti.",
+        "actionTip": "Descifrando los patrones geométricos de tu identidad...",
+        "affirmation": "Soy valioso y único."
+      },
+      "customization": {
+        "greeting": "¡Hola!",
+        "personalizedMessage": "Celebramos tu viaje único.",
+        "contextualTip": "Tu individualidad hace que el mundo sea más rico."
+      }
+    },
+    "shareTemplate": "{emoji} {title}\\n\\n{message}\\n\\n💡 {actionTip}\\n\\n✨ {affirmation}",
+    "sharePersonalizedPrefix": "{saludo}"
+  },
+  "dailyReading": {
+    "meta": {
+      "keywords": "key, words",
+      "title": "Análisis Personalizado",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "hero": {
+      "eyebrow": "Ritual Diario",
+      "subtitle": "Información detallada",
+      "cta": "Abrir mensaje de hoy"
+    },
+    "cards": {
+      "subtitle": "Información detallada",
+      "refresh": "Ver nuevas cartas",
+      "reminder": "See you tomorrow!"
+    },
+    "summary": {
+      "energy": "Pronóstico de Energía",
+      "focus": "Palabra Clave",
+      "luckyColor": "Color de la Suerte"
+    }
+  },
+  "welcomeTitle": "Descubre quién eres hoy",
+  "alreadyCompleted": "¡La prueba de hoy está completa!",
+  "comeBackTomorrow": "Analizando los ecos profundos de tus elecciones...",
+  "feature1Title": "Sólo 2 minutos",
+  "feature1Desc": "Mapeando la arquitectura secreta de tu personalidad...",
+  "feature2Title": "Diferentes preguntas diarias",
+  "feature2Desc": "Descifrando los patrones geométricos de tu identidad...",
+  "feature3Title": "Seguimiento de 30 días",
+  "feature3Desc": "Analizando los ecos profundos de tus elecciones...",
+  "startDaily": "Comience la prueba de hoy",
+  "viewHistory": "Ver historial",
+  "days": "días",
+  "totalDays": "Días totales",
+  "longestStreak": "Racha más larga",
+  "uniqueTypes": "Tipos únicos",
+  "question": "Pregunta",
+  "todayAdvice": "El consejo de hoy",
+  "shareResult": "Compartir resultado",
+  "copyLink": "Copiar enlace",
+  "copied": "¡Copiada!",
+  "reminder": "¡Nos vemos mañana!",
+  "reminderText": "Sincronizando los hilos de tu destino...",
+  "shareTitle": "Fortuna diaria de la personalidad",
+  "historyTitle": "Mi historia de personalidad",
+  "historySubtitle": "Mira hacia atrás en tus días pasados",
+  "trendChart": "Tendencia energética",
+  "energyScore": "Puntuación de energía",
+  "calendarView": "Vista de calendario",
+  "mostCommon": "Tipo más común",
+  "noData": "Sin datos",
+  "takeOtherTests": "Realizar otras pruebas",
+  "description": "Mapeando la arquitectura secreta de tu personalidad...",
+  "dynamics": {
+    "hero": {
+      "title": "Recomendaciones de Crecimiento",
+      "subtitle": "Comprenda las dinámicas únicas de su familia y descubra formas de fortalecer las relaciones",
+      "description": "Reciba planes de acción personalizados para fortalecer la comunicación y resolver conflictos.",
+      "analyzing": "Analizando dinámicas familiares...",
+      "analyzeAnother": "Analizar Otra Familia"
+    },
+    "features": {
+      "comprehensive": {
+        "title": "Recomendaciones de Crecimiento",
+        "description": "Reciba planes de acción personalizados para fortalecer la comunicación y resolver conflictos."
+      },
+      "harmony": {
+        "title": "Recomendaciones de Crecimiento",
+        "description": "Reciba planes de acción personalizados para fortalecer la comunicación y resolver conflictos."
+      },
+      "growth": {
+        "title": "Recomendaciones de Crecimiento",
+        "description": "Reciba planes de acción personalizados para fortalecer la comunicación y resolver conflictos."
+      }
+    },
+    "sections": {
+      "howWorks": "Cómo Funciona el Análisis de Dinámica Familiar",
+      "whatAnalyze": "Qué Analizamos",
+      "whatGet": "Qué Obtendrá",
+      "faq": "Preguntas Frecuentes"
+    },
+    "analyze": {
+      "list": [
+        "Patrones de comunicación entre miembros de la familia.",
+        "Estilos de resolución de conflictos y compatibilidad",
+        "sistema de apoyo emocional dentro de la familia",
+        "Interacciones de rasgos de personalidad individuales",
+        "Dinámica de relaciones basadas en roles"
+      ]
+    },
+    "results": {
+      "list": [
+        "Puntuación general de armonía familiar",
+        "Análisis detallado de las relaciones",
+        "Fortalezas y áreas de crecimiento",
+        "Recomendaciones de mejora personalizadas",
+        "Consejos prácticos para la armonía en el hogar"
+      ]
+    },
+    "faq": {
+      "placeholder": {
+        "question": "FAQ {number} Pregunta",
+        "answer": "FAQ {number} Contenido de la respuesta"
+      }
+    },
+    "badge": "Análisis Familiar"
+  },
+  "astrologyHub": {
+    "title": "Centro de Astrología",
+    "subtitle": "Explora la sabiduría antigua de Oriente y Occidente.",
+    "tabs": {
+      "western": "Zodíaco occidental",
+      "chinese": "Zodíaco Chino",
+      "extended": "Zodíaco extendido"
+    },
+    "westernTitle": "Zodíaco occidental",
+    "westernDesc": "Descubra los rasgos de su signo zodiacal y su horóscopo diario.",
+    "chineseTitle": "Zodíaco Chino",
+    "chineseDesc": "Descubre tu signo animal y lo que dice sobre tu destino.",
+    "meta": {
+      "title": "Centro de astrología",
+      "description": "Lecturas de astrología unificada: Zodíaco chino y extendido."
+    }
+  },
+  "dailyTarot": {
+    "subtitle": "Consulta la fortuna de hoy con tarjetas.",
+    "disclaimer": "Los resultados del tarot son para diversión y consejo, tu voluntad es lo más importante.",
+    "clickToDraw": "Sacar una carta",
+    "drawAgain": "dibujar de nuevo",
+    "title": "Tarot diario",
+    "description": "Conoce la carta mística que iluminará tu día.",
+    "meta": {
+      "title": "Fortuna diaria del tarot",
+      "description": "Lectura diaria de cartas del tarot, consulta los consejos y la fortuna de hoy."
+    }
+  },
+  "extendedZodiac": {
+    "corePersonality": {
+      "leader": "Líder natural con fuerte espíritu independiente.",
+      "innovator": "Innovadora creativa con sensibilidades artísticas.",
+      "analyst": "Analista pensativa con sabiduría práctica",
+      "balanced": "Individuo equilibrado con diversas fortalezas."
+    },
+    "lifeTheme": "Integración armoniosa de sabiduría, creatividad y acción práctica.",
+    "compatibilityAnalysis": {
+      "excellent": "Excelente armonía en todos los sistemas. Tus energías cósmicas están muy bien alineadas.",
+      "good": "Buena compatibilidad general. Pequeños ajustes pueden mejorar su flujo natural.",
+      "moderate": "Compatibilidad moderada con oportunidades de crecimiento y equilibrio.",
+      "diverse": "Diversas energías que pueden armonizarse a través de la conciencia y la práctica."
+    },
+    "timeline": {
+      "currentTheme_spring": "Nuevos comienzos y crecimiento",
+      "currentTheme_summer": "Energía máxima y logros",
+      "currentTheme_autumn": "Cosecha y Consolidación",
+      "currentTheme_winter": "Reflexión y planificación",
+      "currentTheme_default": "Crecimiento y desarrollo",
+      "advice": {
+        "strengths": "Concéntrate en tus fortalezas naturales",
+        "intuition": "Confía en tu intuición en las decisiones",
+        "balance": "Mantener el equilibrio en todos los ámbitos de la vida."
+      },
+      "upcoming": {
+        "next3": "Un período de progreso constante con oportunidades para nuevas conexiones",
+        "nextYear": "Importante crecimiento en el ámbito personal y profesional.",
+        "transitions": [
+          "Oportunidades de avance profesional",
+          "Profundización de relaciones importantes",
+          "Crecimiento espiritual personal"
+        ]
+      }
+    }
+  },
+  "dreamJournal": {
+    "meta": {
+      "title": "Diario de sueños",
+      "description": "Registra y analiza tus sueños",
+      "keywords": "diario de sueños, análisis de sueños, interpretación de sueños"
+    },
+    "hero": {
+      "title": "Diario de sueños",
+      "badge": "Popular",
+      "subtitle": "Guía completa para tus sueños.",
+      "description": "Explore nuestro conjunto de herramientas diseñadas para obtener conocimientos profundos sobre los sueños."
+    },
+    "tabs": {
+      "analysis": "El tipo de tus sueños",
+      "symbols": "Diccionario de símbolos",
+      "journal": "Consejos para el diario de sueños"
+    },
+    "result": {
+      "title": "Análisis de sueños",
+      "copied": "Copiada al portapapeles!",
+      "characteristics": "Las características de tus sueños",
+      "dreamPatterns": "Los patrones de tus sueños",
+      "interpretationTips": "Consejos para la interpretación de los sueños",
+      "commonSymbols": "Los símbolos comunes de tus sueños",
+      "dreamTypeBreakdown": "Desglose del tipo de tus sueños",
+      "share": "Compartir",
+      "shareText": "¡Soy un soñador {type}! Mira la personalidad de tus sueños aquí: {url}",
+      "retake": "Volver a tomar la prueba"
+    },
+    "symbols": {
+      "title": "Diccionario de símbolos de sueños",
+      "subtitle": "Descubra los significados detrás de los símbolos comunes de los sueños",
+      "searchPlaceholder": "Símbolos de búsqueda..."
+    },
+    "journal": {
+      "title": "Guía del diario de sueños",
+      "subtitle": "Aprenda a registrar y analizar eficazmente sus sueños.",
+      "gettingStarted": "Empezando",
+      "whatToRecord": "Qué grabar",
+      "interpretationTips": "Consejos de interpretación",
+      "improveRecall": "Mejorar el recuerdo de los sueños"
+    },
+    "test": {
+      "progress": "Pregunta {actual} de {total}",
+      "selectOption": "Seleccione una opción"
+    }
+  },
+  "chineseZodiac": {
+    "animals": {
+      "rat": {
+        "name": "Rata",
+        "years": "1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020",
+        "personality": "Inteligente, ingenioso y de pensamiento rápido. Liderazgo natural y excelente visión para los negocios."
+      },
+      "ox": {
+        "name": "Buey",
+        "years": "1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021",
+        "personality": "Confiable, paciente y diligente. Valora la tradición y la estabilidad."
+      },
+      "tiger": {
+        "name": "Tigre",
+        "years": "1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022",
+        "personality": "Valiente, confiado y competitivo. Liderazgo natural y fuerte carisma."
+      },
+      "rabbit": {
+        "name": "Coneja",
+        "years": "1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023",
+        "personality": "Suave, silencioso y elegante. Valora la paz y las relaciones armoniosas."
+      },
+      "dragon": {
+        "name": "Dragona",
+        "years": "1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012, 2024",
+        "personality": "Enérgico, inteligente y talentoso. Carisma natural y capacidad de liderazgo."
+      },
+      "snake": {
+        "name": "Serpiente",
+        "years": "1929, 1941, 1953, 1965, 1977, 1989, 2001, 2013, 2025",
+        "personality": "Sabio, intuitivo y posee un encanto misterioso. Pensador profundo y con buen criterio."
+      },
+      "horse": {
+        "name": "Caballo",
+        "years": "1930, 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026",
+        "personality": "Enérgico, independiente y alegre. Ama la libertad y la aventura."
+      },
+      "goat": {
+        "name": "Cabra",
+        "years": "1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, 2027",
+        "personality": "Gentil, compasivo y con un alto sentido artístico. Valora la belleza y la armonía."
+      },
+      "monkey": {
+        "name": "Mona",
+        "years": "1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016, 2028",
+        "personality": "Inteligente, curioso y adaptable. Aprendizaje rápido y excelentes habilidades para la resolución de problemas."
+      },
+      "rooster": {
+        "name": "Gallo",
+        "years": "1933, 1945, 1957, 1969, 1981, 1993, 2005, 2017, 2029",
+        "personality": "Confiado, diligente y valiente. Capacidad de desempeño natural y principios sólidos."
+      },
+      "dog": {
+        "name": "Perra",
+        "years": "1934, 1946, 1958, 1970, 1982, 1994, 2006, 2018, 2030",
+        "personality": "Leal, responsable y confiable. Fuerte sentido de justicia y equidad."
+      },
+      "pig": {
+        "name": "Cerda",
+        "years": "1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031",
+        "personality": "Honesto, generoso y diligente. Valora la familia y disfruta de los placeres de la vida."
+      }
+    },
+    "duration": "~6 minutos",
+    "accuracy": "88% de coincidencia de patrones",
+    "benefits": {
+      "title": "Beneficios del análisis del zodíaco chino",
+      "personality": {
+        "title": "Análisis de rasgos",
+        "description": "Descubre tus tendencias y potenciales innatos."
+      },
+      "fortune": {
+        "title": "Flujo de fortuna",
+        "description": "Comprenda su fortuna y suerte anuales."
+      },
+      "compatibility": {
+        "title": "Compatibilidad",
+        "description": "Vea cómo combina con otros signos."
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "question1": "¿Se basa en el calendario lunar o solar?",
+      "answer1": "Los signos están determinados por el comienzo de la primavera (aproximadamente el 4 de febrero).",
+      "question2": "¿Qué tan precisa es la compatibilidad?",
+      "answer2": "Se basa en una larga tradición; Úselo como referencia y diversión.",
+      "question3": "¿Qué es 'Samjae'?",
+      "answer3": "Un período de 3 años cautelosos que regresa cada 9 años.",
+      "question4": "¿Qué pasa si no conozco mi signo?",
+      "answer4": "Ingrese su fecha de nacimiento y la calcularemos por usted."
+    }
+  },
+  "sharing": {
+    "imageTitle": "Lectura de la fortuna",
+    "kakaoTitle": "Mi mapa de destino",
+    "viewResult": "Ver resultados",
+    "cardTitle": "Tarjeta de la fortuna",
+    "dominantElement": "Elemento dominante",
+    "personalityType": "Tipo de personalidad",
+    "tagline": "Diseña tu propio estilo de vida único",
+    "title": "Resultados de la fortuna",
+    "copySuccess": "✅ Copiada!",
+    "shareImage": "Compartir imagen",
+    "download": "Guardar resultado",
+    "copyUrl": "Copiar URL",
+    "copyText": "Copiar texto",
+    "socialPlatforms": "Redes Sociales",
+    "encouragement": "Comparte con tus amigas"
+  },
+  "dreamInterpretation": {
+    "meta": {
+      "title": "Interpretación de los sueños",
+      "description": "Descubre los significados ocultos en tus sueños.",
+      "keywords": "interpretación de los sueños, significado de los sueños, simbolismo",
+      "testTitle": "Analiza tus sueños",
+      "testDescription": "Sumérgete en tus símbolos subconscientes."
+    },
+    "hero": {
+      "badge": "Recomendada",
+      "title": "Interpretación de los sueños",
+      "subtitle": "Tu guía para entender los sueños",
+      "description": "Desbloquea los mensajes de tu mente subconsciente."
+    },
+    "test": {
+      "title": "Análisis de sueños",
+      "subtitle": "Descubre el misterio de tus sueños."
+    }
+  },
+  "date": "Última actualización",
+  "gender": "⚧ Género",
+  "hour": "Hora",
+  "minute": "Minuto",
+  "vitality": {
+    "fatigueAnalysis": {
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "keywords": "Awaiting deep synthesis..."
+      }
+    }
+  },
+  "petCompatibility": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "Empezar Test"
+    },
+    "marketing": {
+      "about": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "feature1": "Análisis de color científico basado en el tono de piel, color de ojos y cabello",
+        "feature2": "Sincronizando los hilos de tu destino...",
+        "feature3": "Aplicación de la teoría del color estacional para resultados óptimos",
+        "feature4": "Analizando los ecos profundos de tus elecciones..."
+      }
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "¿Cómo funcionan las recomendaciones?",
+      "answer1": "Mapeando la arquitectura secreta de tu personalidad...",
+      "question2": "¿Puedo obtener múltiples recomendaciones?",
+      "answer2": "Sí, proporcionamos varias sugerencias de hobbies basadas en tu perfil.",
+      "question3": "¿Son estos hobbies adecuados para principiantes?",
+      "answer3": "Analizando los ecos profundos de tus elecciones..."
+    }
+  },
+  "decision": {
+    "hub": {
+      "tabs": {
+        "helper": "Ayudante de decisión",
+        "style": "Estilo de decisión"
+      },
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "helperTitle": "Selector de decisión aleatorio",
+      "helperDesc": "¿Indeciso entre opciones? Deja que el destino decida por ti."
+    }
+  },
+  "food": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "badge": "Awaiting deep synthesis...",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "cta": "Empezar Test"
+    },
+    "landing": {
+      "benefits": {
+        "items": [
+          {
+            "icon": "🍽️",
+            "title": "Descubre tu estilo",
+            "description": "Comprenda su enfoque único hacia la comida y la cena."
+          },
+          {
+            "icon": "👨‍🍳",
+            "title": "Ideas de cocina",
+            "description": "Obtenga consejos sobre cómo mejorar su cocina según su tipo."
+          },
+          {
+            "icon": "🤝",
+            "title": "cenas sociales",
+            "description": "Aprenda cómo interactúa con los demás durante las comidas."
+          },
+          {
+            "icon": "🥗",
+            "title": "Matices de salud",
+            "description": "Vea cómo su personalidad afecta sus elecciones nutricionales."
+          }
+        ],
+        "title": "Awaiting deep synthesis..."
+      },
+      "types": {
+        "items": [
+          {
+            "emoji": "🌍",
+            "name": "La aventurera",
+            "description": "Siempre buscando nuevos sabores y experiencias."
+          },
+          {
+            "emoji": "🏠",
+            "name": "La tradicionalista",
+            "description": "Le encantan las comidas reconfortantes clásicas y las recetas familiares."
+          },
+          {
+            "emoji": "⭐",
+            "name": "La perfeccionista",
+            "description": "Aprecia los ingredientes y la presentación de alta calidad."
+          }
+        ],
+        "title": "Awaiting deep synthesis..."
+      }
+    },
+    "test": {
+      "progress": "Progreso",
+      "submit": "Obtener Análisis",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "sections": {
+        "traits": "Rasgos Clave",
+        "cuisines": "Cocinas Ideales",
+        "restaurantStyle": "Estilo de Restaurante",
+        "cookingStyle": "Estilo de Cocina",
+        "breakdown": "Desglose de Costos"
+      },
+      "loading": "Analizando colores...",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "retakeTest": "Volver a realizar el test"
+    }
+  },
+  "lifeBalance": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "categories": {
+      "relationships": "Diseñando un espejo que refleja tu verdadera esencia...",
+      "career": "Satisfacción laboral, crecimiento profesional y logros",
+      "personal": "Sincronizando los hilos de tu destino...",
+      "environment": "Analizando los ecos profundos de tus elecciones...",
+      "fun": "Actividades de ocio, entretenimiento y alegría de vivir",
+      "contribution": "Sentido de propósito, ayuda a los demás e impacto positivo",
+      "health": "Estado de salud física y mental",
+      "finance": "Ingresos, gestión de gastos y preparación para el futuro"
+    },
+    "categoryDescriptions": {
+      "relationships": "Diseñando un espejo que refleja tu verdadera esencia...",
+      "career": "Satisfacción laboral, crecimiento profesional y logros",
+      "personal": "Sincronizando los hilos de tu destino...",
+      "environment": "Analizando los ecos profundos de tus elecciones...",
+      "fun": "Actividades de ocio, entretenimiento y alegría de vivir",
+      "contribution": "Sentido de propósito, ayuda a los demás e impacto positivo",
+      "health": "Estado de salud física y mental",
+      "finance": "Ingresos, gestión de gastos y preparación para el futuro"
+    },
+    "balanceLevels": {
+      "well-balanced": "¡Buen trabajo! Tienes una fuerte armonía en la mayoría de las áreas de tu vida. Sigue así y mantén este equilibrio.",
+      "moderately-balanced": "¡Buen progreso! Tienes un equilibrio decente, pero algunas áreas necesitan más atención. Enfócate en las áreas a mejorar para un mayor bienestar.",
+      "needs-attention": "¡Es hora de actuar! Desequilibrios significativos están afectando a tu bienestar general. Prioriza las áreas más débiles y haz un plan de acción.",
+      "critical-imbalance": "¡Importante! Áreas clave de tu vida necesitan atención inmediata. Empieza poco a poco con un área y busca apoyo si es necesario."
+    },
+    "balanceDescriptions": {
+      "well-balanced": "¡Buen trabajo! Tienes una fuerte armonía en la mayoría de las áreas de tu vida. Sigue así y mantén este equilibrio.",
+      "moderately-balanced": "¡Buen progreso! Tienes un equilibrio decente, pero algunas áreas necesitan más atención. Enfócate en las áreas a mejorar para un mayor bienestar.",
+      "needs-attention": "¡Es hora de actuar! Desequilibrios significativos están afectando a tu bienestar general. Prioriza las áreas más débiles y haz un plan de acción.",
+      "critical-imbalance": "¡Importante! Áreas clave de tu vida necesitan atención inmediata. Empieza poco a poco con un área y busca apoyo si es necesario."
+    },
+    "recommendationsByLevel": {
+      "well-balanced": [
+        "Continuar con los hábitos actuales que mantienen este equilibrio.",
+        "Comparte tus estrategias para ayudar a otros a encontrar el equilibrio",
+        "Establece objetivos desafiantes en tus áreas fuertes"
+      ],
+      "moderately-balanced": [
+        "Concentre la energía en 1 o 2 áreas de mejora este mes",
+        "Programe un tiempo específico para áreas de vida desatendidas",
+        "Celebre los éxitos en áreas fuertes para mantener la motivación."
+      ],
+      "needs-attention": [
+        "Elija un área prioritaria para mejorar esta semana",
+        "Encuentre pequeñas acciones específicas que pueda realizar hoy",
+        "Considere buscar ayuda de amigos, familiares o profesionales."
+      ],
+      "critical-imbalance": [
+        "Busque ayuda profesional si es necesario; no tiene que hacerlo solo",
+        "Comience con cuidados personales básicos: sueño, nutrición, ejercicio.",
+        "Solicite apoyo de amigos o familiares de confianza"
+      ]
+    },
+    "heroTitle": "Rueda de Equilibrio de Vida",
+    "heroSubtitle": "Visualiza y mejora tu equilibrio de vida en 8 áreas clave en solo 5 minutos",
+    "feature1": "Análisis de color científico basado en el tono de piel, color de ojos y cabello",
+    "feature2": "Sincronizando los hilos de tu destino...",
+    "feature3": "Aplicación de la teoría del color estacional para resultados óptimos",
+    "assessmentTitle": "Evalúa tu Equilibrio de Vida",
+    "assessmentSubtitle": "Califica tu satisfacción actual en cada área del 1 (muy insatisfecho) al 10 (muy satisfecho)",
+    "sliderLabel": "Puntuación (1-10)",
+    "calculateBalance": "Ver Resultados",
+    "resultsTitle": "Tu Análisis de Equilibrio de Vida",
+    "balanceScore": "Puntuación de Equilibrio",
+    "balanceLevel": "Nivel de Equilibrio",
+    "strongestAreas": "Tus Áreas más Fuertes",
+    "improvementAreas": "Áreas de Mejora",
+    "chartTitle": "Tu Rueda de Equilibrio de Vida",
+    "shareCopied": "¡Resultados copiados al portapapeles!",
+    "shareText": "Mi puntuación de equilibrio vital: {score}/100 - {level}. Compruébalo: https://oiyo.net/es/life-balance-wheel",
+    "howItWorksTitle": "Cómo Funciona",
+    "step1Title": "Analizar Intereses",
+    "step1Description": "Entiende tu perfil",
+    "step2Title": "Combinar Hobbies",
+    "step2Description": "Encuentra tu combinación",
+    "step3Title": "Empezar la Actividad",
+    "step3Description": "Comienza tu viaje",
+    "faqTitle": "Preguntas Frecuentes",
+    "faq1Question": "¿Cuáles son las 8 áreas de la vida medidas?",
+    "faq1Answer": "Salud y Bienestar, Relaciones, Carrera y Trabajo, Estabilidad Financiera, Crecimiento Personal, Entorno Físico, Ocio y Diversión, y Propósito y Contribución.",
+    "faq2Question": "¿Cómo se calcula la puntuación de equilibrio?",
+    "faq2Answer": "La puntuación combina tu satisfacción media en todas las áreas con una penalización por desequilibrio. Las puntuaciones altas en algunas áreas no compensan totalmente las puntuaciones muy bajas en otras.",
+    "faq3Question": "¿Qué es una buena puntuación de equilibrio?",
+    "faq3Answer": "70-100 es Bien Equilibrado, 50-69 es Moderado, 30-49 Necesita Atención y menos de 30 es Crítico. El objetivo es la armonía entre áreas, no necesariamente la perfección en cada una.",
+    "faq4Question": "¿Con qué frecuencia debo comprobar mi equilibrio vital?",
+    "faq4Answer": "Se recomienda mensual o trimestralmente para seguir el progreso. Úsalo durante transiciones vitales importantes o cuando te sientas abrumado para recuperar la perspectiva.",
+    "recommendations": "Consejos",
+    "disclaimer": "Awaiting deep synthesis...",
+    "share": "Compartir resultado",
+    "shareResults": "Awaiting deep synthesis...",
+    "retake": "Volver a hacer el test"
+  },
+  "lifeSlogan": {
+    "meta": {
+      "hero": {
+        "subtitle": "Awaiting deep synthesis...",
+        "cta": "Empezar Test"
+      },
+      "keywords": "Awaiting deep synthesis...",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "Empezar Test"
+    },
+    "marketing": {
+      "about": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "feature1": "Análisis de color científico basado en el tono de piel, color de ojos y cabello",
+        "feature2": "Sincronizando los hilos de tu destino...",
+        "feature3": "Aplicación de la teoría del color estacional para resultados óptimos",
+        "feature4": "Analizando los ecos profundos de tus elecciones..."
+      }
+    },
+    "categories": {
+      "growth": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "love": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "success": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "peace": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "adventure": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "wisdom": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "¿Cómo funcionan las recomendaciones?",
+      "answer1": "Mapeando la arquitectura secreta de tu personalidad...",
+      "question2": "¿Puedo obtener múltiples recomendaciones?",
+      "answer2": "Sí, proporcionamos varias sugerencias de hobbies basadas en tu perfil.",
+      "question3": "¿Son estos hobbies adecuados para principiantes?",
+      "answer3": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "slogans": {
+      "growth": {
+        "motivational": {
+          "main": "Busca la verdad interior.",
+          "alt1": "Sabiduría en el silencio.",
+          "alt2": "Aprende de cada paso.",
+          "alt3": "Claridad y propósito."
+        },
+        "calm": {
+          "main": "Busca la verdad interior.",
+          "alt1": "Sabiduría en el silencio.",
+          "alt2": "Aprende de cada paso.",
+          "alt3": "Claridad y propósito."
+        }
+      },
+      "love": {
+        "poetic": {
+          "main": "Busca la verdad interior.",
+          "alt1": "Sabiduría en el silencio.",
+          "alt2": "Aprende de cada paso.",
+          "alt3": "Claridad y propósito."
+        }
+      },
+      "success": {
+        "bold": {
+          "main": "Busca la verdad interior.",
+          "alt1": "Sabiduría en el silencio.",
+          "alt2": "Aprende de cada paso.",
+          "alt3": "Claridad y propósito."
+        }
+      },
+      "peace": {
+        "calm": {
+          "main": "Busca la verdad interior.",
+          "alt1": "Sabiduría en el silencio.",
+          "alt2": "Aprende de cada paso.",
+          "alt3": "Claridad y propósito."
+        }
+      },
+      "adventure": {
+        "bold": {
+          "main": "Busca la verdad interior.",
+          "alt1": "Sabiduría en el silencio.",
+          "alt2": "Aprende de cada paso.",
+          "alt3": "Claridad y propósito."
+        }
+      },
+      "wisdom": {
+        "poetic": {
+          "main": "Busca la verdad interior.",
+          "alt1": "Sabiduría en el silencio.",
+          "alt2": "Aprende de cada paso.",
+          "alt3": "Claridad y propósito."
+        }
+      }
+    },
+    "inspiration": {
+      "growth": {
+        "quote1": "La única verdadera sabiduría está en saber que no sabes nada. - Sócrates",
+        "quote2": "Convierte tus heridas en sabiduría. - Oprah Winfrey",
+        "quote3": "El conocimiento habla, pero la sabiduría escucha. - Jimi Hendrix"
+      },
+      "love": {
+        "quote1": "La única verdadera sabiduría está en saber que no sabes nada. - Sócrates",
+        "quote2": "Convierte tus heridas en sabiduría. - Oprah Winfrey",
+        "quote3": "El conocimiento habla, pero la sabiduría escucha. - Jimi Hendrix"
+      },
+      "success": {
+        "quote1": "La única verdadera sabiduría está en saber que no sabes nada. - Sócrates",
+        "quote2": "Convierte tus heridas en sabiduría. - Oprah Winfrey",
+        "quote3": "El conocimiento habla, pero la sabiduría escucha. - Jimi Hendrix"
+      },
+      "peace": {
+        "quote1": "La única verdadera sabiduría está en saber que no sabes nada. - Sócrates",
+        "quote2": "Convierte tus heridas en sabiduría. - Oprah Winfrey",
+        "quote3": "El conocimiento habla, pero la sabiduría escucha. - Jimi Hendrix"
+      },
+      "adventure": {
+        "quote1": "La única verdadera sabiduría está en saber que no sabes nada. - Sócrates",
+        "quote2": "Convierte tus heridas en sabiduría. - Oprah Winfrey",
+        "quote3": "El conocimiento habla, pero la sabiduría escucha. - Jimi Hendrix"
+      },
+      "wisdom": {
+        "quote1": "La única verdadera sabiduría está en saber que no sabes nada. - Sócrates",
+        "quote2": "Convierte tus heridas en sabiduría. - Oprah Winfrey",
+        "quote3": "El conocimiento habla, pero la sabiduría escucha. - Jimi Hendrix"
+      }
+    },
+    "usageTips": {
+      "growth": {
+        "tip1": "Reflexiona sobre él antes de dormir.",
+        "tip2": "Úsalo como tema de conversación.",
+        "tip3": "Compártelo con tu mentor."
+      },
+      "love": {
+        "tip1": "Reflexiona sobre él antes de dormir.",
+        "tip2": "Úsalo como tema de conversación.",
+        "tip3": "Compártelo con tu mentor."
+      },
+      "success": {
+        "tip1": "Reflexiona sobre él antes de dormir.",
+        "tip2": "Úsalo como tema de conversación.",
+        "tip3": "Compártelo con tu mentor."
+      },
+      "peace": {
+        "tip1": "Reflexiona sobre él antes de dormir.",
+        "tip2": "Úsalo como tema de conversación.",
+        "tip3": "Compártelo con tu mentor."
+      },
+      "adventure": {
+        "tip1": "Reflexiona sobre él antes de dormir.",
+        "tip2": "Úsalo como tema de conversación.",
+        "tip3": "Compártelo con tu mentor."
+      },
+      "wisdom": {
+        "tip1": "Reflexiona sobre él antes de dormir.",
+        "tip2": "Úsalo como tema de conversación.",
+        "tip3": "Compártelo con tu mentor."
+      }
+    }
+  },
+  "cityMatch": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "Empezar Test",
+      "participants": "aventureros se han unido"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🌏",
+          "title": "Base de datos global",
+          "description": "Análisis en más de 25 ciudades importantes del mundo."
+        },
+        {
+          "icon": "🎯",
+          "title": "Partido personalizado",
+          "description": "Basado en su estilo de vida único y preferencias laborales."
+        },
+        {
+          "icon": "📊",
+          "title": "Información detallada",
+          "description": "Obtenga datos sobre seguridad, costos y cultura para cada ciudad."
+        },
+        {
+          "icon": "✨",
+          "title": "Resultados divertidos",
+          "description": "Comparte el destino de tus sueños con amigas."
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "questions": [
+        {
+          "q": "¿Qué datos se utilizan para comparar?",
+          "a": "Utilizamos sus preferencias de clima, costo de vida, seguridad e intereses culturales."
+        },
+        {
+          "q": "¿Puedo usar esto para un estilo de vida nómada?",
+          "a": "¡Sí! La prueba incluye métricas importantes para los nómadas digitales."
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "cta": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "button": "Empezar"
+    },
+    "test": {
+      "common": {
+        "progress": "Progreso",
+        "next": "Siguiente",
+        "previous": "Anterior",
+        "submit": "Obtener Análisis",
+        "start": "Awaiting deep synthesis...",
+        "loading": "Analizando colores...",
+        "results": "Awaiting deep synthesis...",
+        "dashboard": "Awaiting deep synthesis...",
+        "insights": "Awaiting deep synthesis..."
+      },
+      "seeResults": "Ver resultados",
+      "selectOption": "Selecciona una opción",
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "relationship": {
+        "compatibility": "Puntuación de compatibilidad"
+      },
+      "breakdownLabels": {
+        "climate": "Clima",
+        "lifestyle": "Estilo de vida",
+        "culture": "Cultura y Arte",
+        "practical": "Práctica"
+      },
+      "cityDetails": {
+        "population": "Población",
+        "continent": "Continente",
+        "timezone": "Zona horaria",
+        "safety": "Seguridad",
+        "cost": "Costo de vida",
+        "jobs": "Oportunidades laborales",
+        "culture": "Cultura y Arte",
+        "weather": "Clima",
+        "transport": "Transporte"
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "topMatch": "Tu mejor coincidencia",
+      "whyThisCity": "¿Por qué esta ciudad?",
+      "breakdown": "Desglose de Costos",
+      "otherMatches": "Mapeando la arquitectura secreta de tu personalidad...",
+      "share": "Compartir resultado",
+      "exploreCity": "Explorar más sobre esta ciudad",
+      "retake": "Volver a hacer el test"
+    }
+  },
+  "music": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "badge": "Awaiting deep synthesis...",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "Descubre tu tipo",
+          "description": "Aprende lo que tus elecciones musicales dicen sobre ti"
+        },
+        {
+          "title": "Obtener recomendaciones",
+          "description": "Encuentra nuevas artistas y géneros que te encantarán."
+        },
+        {
+          "title": "Conectar con otras",
+          "description": "Conoce gente con gustos musicales similares"
+        },
+        {
+          "title": "Expande tus horizontes",
+          "description": "Explora la música fuera de tu zona de confort"
+        }
+      ],
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "types": {
+      "explorer": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "traditionalist": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "mainstream": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "intense": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "contemporary": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "¿Qué tan precisa es esta prueba?",
+          "answer": "Nuestra prueba se basa en investigaciones sobre psicología musical y comentarios de los usuarios."
+        },
+        {
+          "question": "¿Recibiré recomendaciones musicales?",
+          "answer": "Sí, recibirás sugerencias personalizadas de artistas y géneros."
+        },
+        {
+          "question": "¿Puedo volver a realizar la prueba?",
+          "answer": "¡Absolutamente! Su gusto puede evolucionar con el tiempo."
+        },
+        {
+          "question": "¿Mis datos son privados?",
+          "answer": "Sí, no almacenamos ni compartimos sus respuestas."
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    }
+  },
+  "life": {
+    "hub": {
+      "tabs": {
+        "balance": "Equilibrio de vida",
+        "goals": "Planificador de metas",
+        "habits": "Asistente de hábitos",
+        "countdown": "Cuenta atrás de vida",
+        "decision": "Herramientas de decisión",
+        "slogan": "Lema de vida",
+        "simulator": "Simulador",
+        "analysis": "Análisis de vida",
+        "recharge": "Puntos de recarga"
+      },
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "balanceDescription": "Visualización de tu estado actual de equilibrio de vida.",
+      "goalsDescription": "Diseñando un espejo que refleja tu verdadera esencia...",
+      "habitsDescription": "Crea hábitos positivos para una vida mejor.",
+      "countdownDescription": "Visualiza tu tiempo restante y motívate.",
+      "sloganDescription": "Mapeando la arquitectura secreta de tu personalidad...",
+      "simulatorDescription": "Sincronizando los hilos de tu destino...",
+      "analysisDescription": "Análisis exhaustivo de tus patrones de vida.",
+      "rechargeDescription": "Calcula cuánta recarga necesitas."
+    },
+    "lifeCountdown": {
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "cityGuide": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "Empezar Test"
+    },
+    "title": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis...",
+    "disclaimer": "Awaiting deep synthesis...",
+    "noData": "No se pueden cargar los datos."
+  },
+  "artStyle": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "Empezar Test",
+      "badge": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "seniorCompanion": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "💬",
+          "title": "Charla amigable",
+          "description": "Tenga conversaciones cálidas en cualquier momento"
+        },
+        {
+          "icon": "🎵",
+          "title": "Carril de la memoria",
+          "description": "Compartir y recordar recuerdos."
+        },
+        {
+          "icon": "📰",
+          "title": "Noticias diarias",
+          "description": "Manténgase actualizado con noticias fáciles de leer"
+        },
+        {
+          "icon": "🎮",
+          "title": "Juegos mentales",
+          "description": "Actividades divertidas para mantener tu mente alerta"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "safety": {
+      "items": [
+        "Todas las conversaciones son privadas y seguras.",
+        "Nunca compartimos tu información personal.",
+        "Puedes parar cuando quieras",
+        "Los contactos de emergencia están siempre disponibles."
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "emergency": {
+      "resources": [
+        {
+          "name": "Servicios de emergencia",
+          "phone": "911",
+          "description": "Para emergencias inmediatas",
+          "hours": "24/7"
+        },
+        {
+          "name": "Línea de ayuda para personas mayores",
+          "phone": "1-800-677-1116",
+          "description": "Apoyo y recursos para el cuidado de personas mayores",
+          "hours": "Lunes a viernes de 9 a. m. a 8 p. m. EST"
+        }
+      ],
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    }
+  },
+  "storyMaker": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "features": {
+      "title": "Awaiting deep synthesis...",
+      "feature1Emoji": "✨",
+      "feature1Title": "Descubrimiento de Hobbies",
+      "feature1Description": "Encuentra tu pasión",
+      "feature2Emoji": "📊",
+      "feature2Title": "Análisis de Costos",
+      "feature2Description": "Planifica tu presupuesto",
+      "feature3Emoji": "🎯",
+      "feature3Title": "Rastreador de Metas",
+      "feature3Description": "Mantente motivado",
+      "feature4Emoji": "📱",
+      "feature4Title": "Compartir Fácilmente",
+      "feature4Description": "Comparte con tus amigos"
+    },
+    "howItWorks": {
+      "title": "Awaiting deep synthesis...",
+      "step1Title": "Analizar Intereses",
+      "step1Description": "Entiende tu perfil",
+      "step2Title": "Combinar Hobbies",
+      "step2Description": "Encuentra tu combinación",
+      "step3Title": "Empezar la Actividad",
+      "step3Description": "Comienza tu viaje",
+      "step4Title": "Seguimiento del Progreso",
+      "step4Description": "Analizando los ecos profundos de tus elecciones...",
+      "step5Title": "Explora nuestro conjunto de herramientas diseñado para obtener información profunda sobre el estilo de vida.",
+      "step5Description": "Explora nuestro conjunto de herramientas diseñado para obtener información profunda sobre el estilo de vida."
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "¿Cómo funcionan las recomendaciones?",
+      "answer1": "Mapeando la arquitectura secreta de tu personalidad...",
+      "question2": "¿Puedo obtener múltiples recomendaciones?",
+      "answer2": "Sí, proporcionamos varias sugerencias de hobbies basadas en tu perfil.",
+      "question3": "¿Son estos hobbies adecuados para principiantes?",
+      "answer3": "Analizando los ecos profundos de tus elecciones...",
+      "question4": "¿Con qué frecuencia debo probar un nuevo hobby?",
+      "answer4": "Empieza con uno, explóralo a fondo y luego añade más.",
+      "question5": "¿Y si no me gustan las recomendaciones?",
+      "answer5": "Vuelve a hacer el test o explora otras categorías para encontrar una mejor combinación.",
+      "question6": "¿Pueden los hobbies mejorar la salud mental?",
+      "answer6": "Sí, los hobbies interesantes pueden reducir el estrés y mejorar el bienestar general."
+    }
+  },
+  "personalColorPalette": {
+    "marketing": {
+      "about": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "feature1": "Análisis de color científico basado en el tono de piel, color de ojos y cabello",
+        "feature2": "Sincronizando los hilos de tu destino...",
+        "feature3": "Aplicación de la teoría del color estacional para resultados óptimos",
+        "feature4": "Analizando los ecos profundos de tus elecciones...",
+        "feature5": "Recomendaciones Personalizadas"
+      }
+    },
+    "seasons": {
+      "spring": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "summer": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "autumn": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "winter": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "¿Cómo funcionan las recomendaciones?",
+      "answer1": "Mapeando la arquitectura secreta de tu personalidad...",
+      "question2": "¿Puedo obtener múltiples recomendaciones?",
+      "answer2": "Sí, proporcionamos varias sugerencias de hobbies basadas en tu perfil.",
+      "question3": "¿Son estos hobbies adecuados para principiantes?",
+      "answer3": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "badge": "Awaiting deep synthesis...",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "Empezar Test"
+    },
+    "test": {
+      "progress": "Progreso",
+      "submit": "Obtener Análisis",
+      "loading": "Analizando colores...",
+      "selectOption": "Selecciona una opción",
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "starterCost": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "inputs": {
+      "calculate": "Calcular Costo",
+      "tier": "Seleccionar Nivel de Equipo",
+      "hobby": "Seleccionar Hobby"
+    },
+    "result": {
+      "total": "Costo Estimado Total",
+      "breakdown": "Desglose de Costos",
+      "gears": "Equipo/Accesorios",
+      "lesson": "Lecciones/Clases",
+      "clothing": "Ropa/Calzado",
+      "packageIncludes": "Artículos Incluidos"
+    },
+    "tips": {
+      "title": "Awaiting deep synthesis...",
+      "content": "Los costos son estimaciones promedio y pueden variar según la marca y el establecimiento."
+    },
+    "tiers": {
+      "entry": "Nivel inicial (Económico)",
+      "mid": "Nivel medio (Recomendado)",
+      "pro": "Profesional (Alta gama)"
+    },
+    "hobbies": {
+      "cycling": "Ciclismo",
+      "tennis": "Tenis",
+      "golf": "Golf",
+      "camping": "Camping",
+      "photography": "Fotografía",
+      "baking": "Repostería",
+      "climbing": "Escalada",
+      "yoga": "yoga/pilates"
+    },
+    "features": {
+      "items": [
+        {
+          "title": "Cálculo de presupuesto personalizado",
+          "desc": "Calcule los costos paso a paso desde el nivel inicial hasta el nivel profesional.",
+          "icon": "Calculadora"
+        },
+        {
+          "title": "Análisis de estimación detallado",
+          "desc": "Muestre costos detallados por categoría, como equipo, ropa y lecciones.",
+          "icon": "Gráfico circular"
+        },
+        {
+          "title": "Consejos para ahorrar costos",
+          "desc": "Proporcionar consejos prácticos para reducir gastos innecesarios.",
+          "icon": "alcancía"
+        },
+        {
+          "title": "Guardar como PDF",
+          "desc": "Guarde el presupuesto calculado como PDF y compruébelo en cualquier momento.",
+          "icon": "Descargar"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "howItWorks": {
+      "steps": [
+        {
+          "title": "Seleccionar pasatiempo",
+          "description": "Seleccione la actividad de hobby que le interese."
+        },
+        {
+          "title": "Establecer nivel",
+          "description": "Seleccione su nivel de habilidad actual o nivel objetivo."
+        },
+        {
+          "title": "Verificar resultados",
+          "description": "Consulta el análisis detallado del presupuesto y el asesoramiento personalizado."
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "¿Qué tan precisos son los costos?",
+          "answer": "Calculado en base a datos de precios promedio de mercado, pero puede variar según la marca y el minorista."
+        },
+        {
+          "question": "¿Necesito comprar todo el equipo a la vez?",
+          "answer": "No, recomendamos comprar primero el equipo esencial. Comience con productos rentables de nivel básico."
+        },
+        {
+          "question": "¿Está previsto añadir otras aficiones?",
+          "answer": "Sí, los pasatiempos con muchas solicitudes de los usuarios se actualizarán secuencialmente."
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis..."
+  },
+  "recommendation": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "Empezar Test"
+    },
+    "result": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "matchReasons": {
+      "mbti": "Un hobby muy adecuado para el tipo {type}",
+      "mood": "Una actividad perfectamente adaptada a tu estado de ánimo actual",
+      "bloodType": "Encaja bien con las tendencias del grupo sanguíneo {type}",
+      "zodiac": "Combina bien con las características del signo {sign}",
+      "riasec": "Encaja perfectamente con tu área de interés {code}"
+    },
+    "personalizedTips": {
+      "mbtiIntrovert": "Puedes empezar cómodamente por tu cuenta",
+      "mbtiPerceiving": "Diseñando un espejo que refleja tu verdadera esencia...",
+      "moodStress": "Especialmente útil para aliviar el estrés",
+      "moodPositive": "Puedes cultivar una energía más positiva",
+      "beginner": "Los principiantes pueden empezar fácilmente",
+      "busy": "Mapeando la arquitectura secreta de tu personalidad...",
+      "budget": "Sincronizando los hilos de tu destino..."
+    },
+    "faq": {
+      "question1": "¿Cómo funcionan las recomendaciones?",
+      "answer1": "Mapeando la arquitectura secreta de tu personalidad...",
+      "question2": "¿Puedo obtener múltiples recomendaciones?",
+      "answer2": "Sí, proporcionamos varias sugerencias de hobbies basadas en tu perfil.",
+      "question3": "¿Son estos hobbies adecuados para principiantes?",
+      "answer3": "Analizando los ecos profundos de tus elecciones...",
+      "question4": "¿Con qué frecuencia debo probar un nuevo hobby?",
+      "answer4": "Empieza con uno, explóralo a fondo y luego añade más.",
+      "question5": "¿Y si no me gustan las recomendaciones?",
+      "answer5": "Vuelve a hacer el test o explora otras categorías para encontrar una mejor combinación.",
+      "question6": "¿Pueden los hobbies mejorar la salud mental?",
+      "answer6": "Sí, los hobbies interesantes pueden reducir el estrés y mejorar el bienestar general.",
+      "title": "Awaiting deep synthesis..."
+    },
+    "features": {
+      "title": "Awaiting deep synthesis...",
+      "feature1Emoji": "✨",
+      "feature1Title": "Descubrimiento de Hobbies",
+      "feature1Description": "Encuentra tu pasión",
+      "feature2Emoji": "📊",
+      "feature2Title": "Análisis de Costos",
+      "feature2Description": "Planifica tu presupuesto",
+      "feature3Emoji": "🎯",
+      "feature3Title": "Rastreador de Metas",
+      "feature3Description": "Mantente motivado",
+      "feature4Emoji": "📱",
+      "feature4Title": "Compartir Fácilmente",
+      "feature4Description": "Comparte con tus amigos"
+    },
+    "howItWorks": {
+      "title": "Awaiting deep synthesis...",
+      "step1Title": "Analizar Intereses",
+      "step1Description": "Entiende tu perfil",
+      "step2Title": "Combinar Hobbies",
+      "step2Description": "Encuentra tu combinación",
+      "step3Title": "Empezar la Actividad",
+      "step3Description": "Comienza tu viaje",
+      "step4Title": "Seguimiento del Progreso",
+      "step4Description": "Analizando los ecos profundos de tus elecciones..."
+    }
+  },
+  "roulette": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    }
+  },
+  "cup": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "Empezar Test"
+    },
+    "title": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis..."
+  },
+  "writingPrompts": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "badge": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "styleConsultant": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis...",
+    "privacyNote": "Awaiting deep synthesis..."
+  },
+  "petCounselor": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis...",
+    "disclaimer": "Awaiting deep synthesis..."
+  },
+  "preview": {
+    "subtitle": "Información detallada",
+    "title": "Análisis Personalizado"
+  },
+  "analysts": "Animamos la visión cálida detrás de tu razón fría. (INTJ, INTP, ENTJ, ENTP)",
+  "diplomats": "Tus ideales y empatía están haciendo el mundo más cálido. (INFJ, INFP, ENFJ, ENFP)",
+  "sentinels": "Tú, que silenciosamente mantienes tu posición, eres el verdadero héroe. (ISTJ, ISFJ, ESTJ, ESFJ)",
+  "explorers": "¡Envidioso de tu energía para disfrutar el momento y desafiar límites! (ISTP, ISFP, ESTP, ESFP)",
+  "A": "Popular",
+  "B": "Popular",
+  "Copied to clipboard!": "Copiada al portapapeles!",
+  "data": "Data",
+  "analyze": "Analizar",
+  "workHub": {
+    "tabs": {
+      "style": "Decision Style",
+      "salary": "Salary & Tax",
+      "tax": "Freelancer Tax",
+      "leadership": "Leadership",
+      "meeting": "Meeting Survival",
+      "job": "Job Match",
+      "interview": "Interview Scorer",
+      "labor": "Awaiting deep synthesis...",
+      "focus": "Awaiting deep synthesis..."
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "title": "Interview Scorer",
+    "subtitle": "Analizando los ecos profundos de tus elecciones...",
+    "styleDescription": "Analizando los ecos profundos de tus elecciones...",
+    "salaryDescription": "Mapeando la arquitectura secreta de tu personalidad...",
+    "taxDescription": "Sincronizando los hilos de tu destino...",
+    "leadershipDescription": "Mapeando la arquitectura secreta de tu personalidad...",
+    "meetingDescription": "Analizando los ecos profundos de tus elecciones..."
+  },
+  "decisionHub": {
+    "tabs": {
+      "helper": "Decision Helper",
+      "style": "Decision Style"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "title": "Interview Scorer",
+    "subtitle": "Analizando los ecos profundos de tus elecciones...",
+    "helperTitle": "Random Decision Maker",
+    "helperDesc": "Diseñando un espejo que refleja tu verdadera esencia..."
+  },
+  "meetingSurvival": {
+    "meta": {
+      "keywords": "Descifrando los patrones geométricos de tu identidad...",
+      "description": "Analizando los ecos profundos de tus elecciones...",
+      "title": "Interview Scorer"
+    },
+    "landing": {
+      "steps": ["0", "1", "2", "3"],
+      "types": {
+        "strategist": {
+          "title": "Interview Scorer",
+          "description": "Analizando los ecos profundos de tus elecciones..."
+        },
+        "mediator": {
+          "title": "Interview Scorer",
+          "description": "Analizando los ecos profundos de tus elecciones..."
+        },
+        "facilitator": {
+          "title": "Interview Scorer",
+          "description": "Analizando los ecos profundos de tus elecciones..."
+        },
+        "observer": {
+          "title": "Interview Scorer",
+          "description": "Analizando los ecos profundos de tus elecciones..."
+        },
+        "challenger": {
+          "title": "Interview Scorer",
+          "description": "Analizando los ecos profundos de tus elecciones..."
+        },
+        "executor": {
+          "title": "Interview Scorer",
+          "description": "Analizando los ecos profundos de tus elecciones..."
+        },
+        "title": "Interview Scorer"
+      },
+      "faq": {
+        "list": {
+          "0": {
+            "a": "Popular",
+            "q": "Solicitud de Función"
+          },
+          "1": {
+            "a": "Popular",
+            "q": "Solicitud de Función"
+          },
+          "2": {
+            "a": "Popular",
+            "q": "Solicitud de Función"
+          }
+        },
+        "title": "Interview Scorer"
+      },
+      "test": {
+        "insightBullets": [
+          "Revela las capas ocultas de tu filosofía personal."
+        ],
+        "progress": "Progreso",
+        "submit": "Enviar",
+        "loading": "Cargando...",
+        "selectOption": "Seleccionar opción",
+        "next": "Siguiente",
+        "previous": "Anterior"
+      },
+      "result": {
+        "advisor": {
+          "tip": "💡 Career Coach's Tip",
+          "content": "Knowing your style is important, but understanding your colleagues' styles can increase meeting efficiency by 200%."
+        },
+        "title": "Interview Scorer",
+        "description": "Analizando los ecos profundos de tus elecciones...",
+        "loading": "Cargando...",
+        "analyzing": "Analyzing Response...",
+        "yourStyle": "Su estilo de supervivencia en reuniones",
+        "secondaryType": "Secondary Type",
+        "detailedAnalysis": "Detailed Score Breakdown",
+        "keyTraits": "Key Traits",
+        "yourStrengths": "Your Strengths",
+        "challenges": "Challenges",
+        "improvementTips": "Improvement Tips",
+        "meetingTips": "Meeting Tips",
+        "shareResults": "Share Results",
+        "retakeTest": "Retake Test",
+        "goHome": "Go Home",
+        "copied": "Copiada al portapapeles!"
+      },
+      "meta": {
+        "title": "Interview Scorer",
+        "description": "Analizando los ecos profundos de tus elecciones...",
+        "keywords": "Descifrando los patrones geométricos de tu identidad..."
+      },
+      "subtitle": "Analizando los ecos profundos de tus elecciones...",
+      "cta": "Start Test",
+      "howItWorks": "Cómo funciona",
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones...",
+      "keywords": "Descifrando los patrones geométricos de tu identidad..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Fuerza de firma",
+          "description": "Análisis completo y conocimientos personalizados.",
+          "question": "¿Qué es una prueba de productividad y eficiencia laboral?",
+          "answer": "Esta prueba le ayuda a comprender sus patrones y tendencias relacionados con la productividad y la eficiencia en el trabajo."
+        },
+        {
+          "icon": "🚀",
+          "title": "Punto de pivote",
+          "description": "Recomendaciones basadas en datos para mejores resultados",
+          "question": "¿Qué tan precisos son los resultados?",
+          "answer": "Nuestras pruebas se basan en investigaciones psicológicas establecidas y brindan información valiosa sobre sus patrones y comportamientos."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Fuerza de firma",
+          "description": "Análisis completo y conocimientos personalizados.",
+          "question": "¿Qué es una prueba de productividad y eficiencia laboral?",
+          "answer": "Esta prueba le ayuda a comprender sus patrones y tendencias relacionados con la productividad y la eficiencia en el trabajo."
+        },
+        {
+          "icon": "🚀",
+          "title": "Punto de pivote",
+          "description": "Recomendaciones basadas en datos para mejores resultados",
+          "question": "¿Qué tan precisos son los resultados?",
+          "answer": "Nuestras pruebas se basan en investigaciones psicológicas establecidas y brindan información valiosa sobre sus patrones y comportamientos."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Fuerza de firma",
+          "description": "Análisis completo y conocimientos personalizados.",
+          "question": "¿Qué es una prueba de productividad y eficiencia laboral?",
+          "answer": "Esta prueba le ayuda a comprender sus patrones y tendencias relacionados con la productividad y la eficiencia en el trabajo."
+        },
+        {
+          "icon": "🚀",
+          "title": "Punto de pivote",
+          "description": "Recomendaciones basadas en datos para mejores resultados",
+          "question": "¿Qué tan precisos son los resultados?",
+          "answer": "Nuestras pruebas se basan en investigaciones psicológicas establecidas y brindan información valiosa sobre sus patrones y comportamientos."
+        }
+      ]
+    },
+    "subtitle": "Analizando los ecos profundos de tus elecciones...",
+    "startButton": "Iniciar prueba"
+  },
+  "decisionMaking": {
+    "meta": {
+      "hero": {
+        "badge": "Productivity Psychology",
+        "cta": "Start Test"
+      },
+      "keywords": "Descifrando los patrones geométricos de tu identidad...",
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "hero": {
+      "subtitle": "Analizando los ecos profundos de tus elecciones...",
+      "cta": "Start Test",
+      "badge": "Productivity Psychology",
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "result": {
+      "loading": {
+        "title": "Interview Scorer",
+        "description": "Analizando los ecos profundos de tus elecciones..."
+      },
+      "sections": {
+        "strengths": "Fortalezas",
+        "traits": "Traits",
+        "challenges": "Desafíos",
+        "idealSituations": "Situaciones ideales",
+        "tips": "Consejos",
+        "breakdown": "Descomponer"
+      },
+      "test": {
+        "insightBullets": ["Mapeando la constelación de tu verdadero yo."],
+        "progress": "Progreso",
+        "submit": "Enviar",
+        "loading": "Cargando...",
+        "selectOption": "Seleccionar opción",
+        "next": "Siguiente",
+        "previous": "Anterior"
+      },
+      "result": {
+        "title": "Interview Scorer",
+        "description": "Analizando los ecos profundos de tus elecciones..."
+      },
+      "meta": {
+        "title": "Interview Scorer",
+        "description": "Analizando los ecos profundos de tus elecciones...",
+        "keywords": "Descifrando los patrones geométricos de tu identidad..."
+      },
+      "title": "Interview Scorer",
+      "subtitle": "Analizando los ecos profundos de tus elecciones...",
+      "backHome": "De vuelta a casa",
+      "sharePrompt": "Compartir mensaje",
+      "description": "Analizando los ecos profundos de tus elecciones...",
+      "retakeTest": "Volver a tomar la prueba"
+    },
+    "test": {
+      "test": {
+        "insightBullets": ["Mapeando la constelación de tu verdadero yo."],
+        "progress": "Progreso",
+        "submit": "Enviar",
+        "loading": "Cargando...",
+        "selectOption": "Seleccionar opción",
+        "next": "Siguiente",
+        "previous": "Anterior"
+      },
+      "result": {
+        "title": "Interview Scorer",
+        "description": "Analizando los ecos profundos de tus elecciones..."
+      },
+      "meta": {
+        "title": "Interview Scorer",
+        "description": "Analizando los ecos profundos de tus elecciones...",
+        "keywords": "Descifrando los patrones geométricos de tu identidad..."
+      },
+      "insightBullets": [
+        "Explora la arquitectura profunda de tu paisaje interior."
+      ],
+      "title": "Interview Scorer",
+      "subtitle": "Analizando los ecos profundos de tus elecciones...",
+      "submit": "Enviar",
+      "progress": "Progreso",
+      "loading": "Cargando...",
+      "selectOption": "Seleccionar opción",
+      "previous": "Anterior",
+      "next": "Siguiente"
+    },
+    "title": "Interview Scorer",
+    "description": "Analizando los ecos profundos de tus elecciones...",
+    "keywords": "Descifrando los patrones geométricos de tu identidad...",
+    "data": "Data"
+  },
+  "yearInReview": {
+    "meta": {
+      "keywords": "Descifrando los patrones geométricos de tu identidad...",
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "input": {
+      "nameLabel": "Nombre (o apodo)",
+      "namePlaceholder": "p.ej. Juan Pérez",
+      "placeholder": "¿Cuál fue el momento más memorable de {mes}?"
+    },
+    "actions": {
+      "generate": "Generar línea de tiempo",
+      "download": "Guardar como imagen",
+      "generating": "Generando...",
+      "edit": "Editar"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Fuerza de firma",
+          "description": "Análisis completo y conocimientos personalizados.",
+          "question": "¿Qué es una prueba de productividad y eficiencia laboral?",
+          "answer": "Esta prueba le ayuda a comprender sus patrones y tendencias relacionados con la productividad y la eficiencia en el trabajo."
+        },
+        {
+          "icon": "🚀",
+          "title": "Punto de pivote",
+          "description": "Recomendaciones basadas en datos para mejores resultados",
+          "question": "¿Qué tan precisos son los resultados?",
+          "answer": "Nuestras pruebas se basan en investigaciones psicológicas establecidas y brindan información valiosa sobre sus patrones y comportamientos."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Fuerza de firma",
+          "description": "Análisis completo y conocimientos personalizados.",
+          "question": "¿Qué es una prueba de productividad y eficiencia laboral?",
+          "answer": "Esta prueba le ayuda a comprender sus patrones y tendencias relacionados con la productividad y la eficiencia en el trabajo."
+        },
+        {
+          "icon": "🚀",
+          "title": "Punto de pivote",
+          "description": "Recomendaciones basadas en datos para mejores resultados",
+          "question": "¿Qué tan precisos son los resultados?",
+          "answer": "Nuestras pruebas se basan en investigaciones psicológicas establecidas y brindan información valiosa sobre sus patrones y comportamientos."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Fuerza de firma",
+          "description": "Análisis completo y conocimientos personalizados.",
+          "question": "¿Qué es una prueba de productividad y eficiencia laboral?",
+          "answer": "Esta prueba le ayuda a comprender sus patrones y tendencias relacionados con la productividad y la eficiencia en el trabajo."
+        },
+        {
+          "icon": "🚀",
+          "title": "Punto de pivote",
+          "description": "Recomendaciones basadas en datos para mejores resultados",
+          "question": "¿Qué tan precisos son los resultados?",
+          "answer": "Nuestras pruebas se basan en investigaciones psicológicas establecidas y brindan información valiosa sobre sus patrones y comportamientos."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Revela las capas ocultas de tu filosofía personal."],
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando...",
+      "selectOption": "Seleccionar opción",
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "subtitle": "Analizando los ecos profundos de tus elecciones...",
+    "noEvents": "No se registraron eventos.",
+    "title": "Interview Scorer",
+    "a": "Popular"
+  },
+  "workFocus": {
+    "solution": {
+      "priority": "Prioridad",
+      "implementation": "Implementación"
+    },
+    "test": {
+      "insightBullets": ["Descubre los patrones únicos que definen tu camino."],
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando...",
+      "selectOption": "Seleccionar opción",
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones...",
+      "keywords": "Descifrando los patrones geométricos de tu identidad..."
+    },
+    "feature1": {
+      "title": "Interview Scorer",
+      "desc": "Diseñando un espejo que refleja tu verdadera esencia..."
+    },
+    "feature2": {
+      "title": "Interview Scorer",
+      "desc": "Diseñando un espejo que refleja tu verdadera esencia..."
+    },
+    "feature3": {
+      "title": "Interview Scorer",
+      "desc": "Diseñando un espejo que refleja tu verdadera esencia..."
+    },
+    "hero": {
+      "badge": "Productivity Psychology",
+      "startTest": "Start Test"
+    },
+    "loading": "Cargando...",
+    "distractionAnalysis": "📊 Análisis de distracciones",
+    "solutions": "Soluciones personalizadas",
+    "weeklyPlan": "Plan de acción semanal",
+    "share": "Compartir",
+    "shareText": "Work Focus Analysis\\\\nType: {type}",
+    "shareTitle": "Work Focus Analysis Results",
+    "home": "home",
+    "copied": "Copiada al portapapeles!",
+    "data": "Data",
+    "insights": "Perspectivas",
+    "heroTitle": "Interview Scorer",
+    "heroSubtitle": "Diseñando un espejo que refleja tu verdadera esencia...",
+    "retake": "Repetir"
+  },
+  "okr": {
+    "test": {
+      "insightBullets": ["Fuerza de firma", "Punto de pivote", "2"],
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando...",
+      "selectOption": "Seleccionar opción",
+      "subtitle": "Analizando los ecos profundos de tus elecciones...",
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        }
+      ]
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "title": "Interview Scorer",
+    "description": "Analizando los ecos profundos de tus elecciones..."
+  },
+  "pomodoro": {
+    "test": {
+      "insightBullets": ["Fuerza de firma", "Punto de pivote", "2"],
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando...",
+      "selectOption": "Seleccionar opción",
+      "subtitle": "Analizando los ecos profundos de tus elecciones...",
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        }
+      ]
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "title": "Interview Scorer",
+    "description": "Analizando los ecos profundos de tus elecciones..."
+  },
+  "decisionHelper": {
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones...",
+      "keywords": "Descifrando los patrones geométricos de tu identidad..."
+    },
+    "cards": {
+      "sun": {
+        "name": "Fog",
+        "answer": "Tu perspectiva única moldea tu realidad.",
+        "meaning": "Significado"
+      },
+      "star": {
+        "name": "Fog",
+        "answer": "Tu perspectiva única moldea tu realidad.",
+        "meaning": "Significado"
+      },
+      "emperor": {
+        "name": "Fog",
+        "answer": "Tu perspectiva única moldea tu realidad.",
+        "meaning": "Significado"
+      },
+      "wheel": {
+        "name": "Fog",
+        "answer": "Tu perspectiva única moldea tu realidad.",
+        "meaning": "Significado"
+      },
+      "moon": {
+        "name": "Fog",
+        "answer": "Tu perspectiva única moldea tu realidad.",
+        "meaning": "Significado"
+      },
+      "hermit": {
+        "name": "Fog",
+        "answer": "Tu perspectiva única moldea tu realidad.",
+        "meaning": "Significado"
+      },
+      "hanged": {
+        "name": "Fog",
+        "answer": "Tu perspectiva única moldea tu realidad.",
+        "meaning": "Significado"
+      },
+      "tower": {
+        "name": "Fog",
+        "answer": "Tu perspectiva única moldea tu realidad.",
+        "meaning": "Significado"
+      },
+      "sword": {
+        "name": "Fog",
+        "answer": "Tu perspectiva única moldea tu realidad.",
+        "meaning": "Significado"
+      },
+      "fog": {
+        "name": "Niebla",
+        "answer": "Tu perspectiva única moldea tu realidad.",
+        "meaning": "Significado"
+      }
+    },
+    "breadcrumbs": {
+      "home": "hogar"
+    },
+    "title": "Interview Scorer",
+    "subtitle": "Analizando los ecos profundos de tus elecciones...",
+    "disclaimer": "Analizando los ecos profundos de tus elecciones...",
+    "instruction": "Elige una tarjeta...",
+    "oracleSays": "El oráculo dice",
+    "askAgain": "Preguntar de nuevo",
+    "hero": "héroe"
+  },
+  "procrastination": {
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "Analizando los ecos profundos de tus elecciones...",
+      "keywords": "Descifrando los patrones geométricos de tu identidad..."
+    },
+    "hero": {
+      "title": "Interview Scorer",
+      "subtitle": "Analizando los ecos profundos de tus elecciones...",
+      "cta": "Iniciar prueba",
+      "badge": "Psicología de la productividad",
+      "startTest": "Iniciar prueba"
+    },
+    "feature1": {
+      "title": "Interview Scorer",
+      "desc": "Diseñando un espejo que refleja tu verdadera esencia..."
+    },
+    "feature2": {
+      "title": "Interview Scorer",
+      "desc": "Diseñando un espejo que refleja tu verdadera esencia..."
+    },
+    "feature3": {
+      "title": "Interview Scorer",
+      "desc": "Diseñando un espejo que refleja tu verdadera esencia..."
+    },
+    "faq1Question": "How is it scored?",
+    "faq1Answer": "Mapeando la arquitectura secreta de tu personalidad...",
+    "faq2Question": "Is it saved?",
+    "faq2Answer": "Descifrando los patrones geométricos de tu identidad...",
+    "faq3Question": "Can I use it for any job?",
+    "faq3Answer": "Sincronizando los hilos de tu destino...",
+    "faq4Question": "Is it free?",
+    "faq4Answer": "Yes, completely free to use.",
+    "heroTitle": "Interview Scorer",
+    "heroSubtitle": "Diseñando un espejo que refleja tu verdadera esencia...",
+    "howItWorksTitle": "Cómo funciona",
+    "step1Title": "Haz la prueba",
+    "step1Description": "Analizando los ecos profundos de tus elecciones...",
+    "step2Title": "Consigue tu tipo",
+    "step2Description": "Diseñando un espejo que refleja tu verdadera esencia...",
+    "step3Title": "Recibir propinas",
+    "step3Description": "Descifrando los patrones geométricos de tu identidad...",
+    "faqTitle": "FAQ"
+  },
+  "grandparentConnection": {
+    "meta": {
+      "hero": {
+        "badge": "Investigación preeminente",
+        "subtitle": "Build a bond beyond time.",
+        "cta": "Iniciar calibración",
+        "secondaryCta": "Profundizar la conciencia"
+      },
+      "benefits": {
+        "subtitle": "Build a bond beyond time."
+      },
+      "keywords": "resonancia intergeneracional, alquimia de abuelos, construcción de legado, Oiyo",
+      "title": "Oracle of Heart's Resonance | Oiyo",
+      "description": "Profound insights for a rich connection across generations."
+    },
+    "connection": {
+      "cards": [
+        {
+          "title": "Menú de resonancia híbrida",
+          "description": "Combine rituales físicos y puntos de contacto digitales para mantener la relación dinámica entre visitas."
+        },
+        {
+          "icon": "🎨",
+          "title": "Arco narrativo intergeneracional",
+          "description": "Co-crear experiencias e historias compartidas que cierren la brecha generacional."
+        }
+      ]
+    },
+    "hero": {
+      "subtitle": "Construya un vínculo más allá del tiempo.",
+      "title": "Oracle of Heart's Resonance | Oiyo"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Transmisión heredada",
+          "description": "Abre los canales para dejar fluir la sabiduría del clan."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "El puente del tiempo",
+          "description": "Construir un entendimiento profundo a través de la división generacional.",
+          "question": "¿Qué es la resonancia intergeneracional?",
+          "answer": "Es el punto de encuentro de las frecuencias del alma a través de las divisiones de edad y experiencia."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Mapeo Intergeneracional",
+          "description": "Analiza el singular intercambio energético entre abuelo y nieto."
+        }
+      ]
+    },
+    "result": {
+      "title": "Oracle of Heart's Resonance | Oiyo",
+      "description": "Profound insights for a rich connection across generations."
+    },
+    "title": "Oracle of Heart's Resonance | Oiyo",
+    "description": "Perspectivas profundas para una rica conexión entre generaciones."
+  }
+}

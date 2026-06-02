@@ -1,0 +1,541 @@
+{
+  "egenteto": {
+    "meta": {
+      "hero": {
+        "badge": "popularity",
+        "subtitle": "My tendency to find out through hormonal balance",
+        "cta": "Get started now"
+      },
+      "benefits": {
+        "subtitle": "Details"
+      },
+      "types": {
+        "subtitle": "Introduction to types"
+      },
+      "keywords": "Eggenteto, personality analysis, hormones, psychological test, compatibility",
+      "description": "Analyze your testosterone and estrogen balance to discover your hidden tendencies.",
+      "title": "Egenteto personality analysis"
+    },
+    "hero": {
+      "subtitle": "My essence seen through hormonal balance",
+      "cta": "Getting Started with Diagnostics",
+      "badge": "🔥 Korean Trends",
+      "title": "Egenteto Personality Diagnosis",
+      "description": "Analyze your testosterone and estrogen balance to discover your hidden tendencies."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "Know Your Type",
+          "description": "Are you Testosterone or Estrogen dominant?"
+        },
+        {
+          "icon": "💕",
+          "title": "Dating Match",
+          "description": "Find compatible partners for your hormonal type."
+        },
+        {
+          "icon": "🎯",
+          "title": "Self Discovery",
+          "description": "Understand your behavioral drives."
+        },
+        {
+          "icon": "🌟",
+          "title": "Share Results",
+          "description": "Compare types with friends instantly."
+        }
+      ],
+      "subtitle": "What a diagnosis can tell you",
+      "title": "Egenteto Analysis"
+    },
+    "types": {
+      "tetonam": {
+        "name": "Tetonam",
+        "emoji": "💪",
+        "subtitle": "high testosterone men",
+        "description": "They are goal-oriented, enjoy competition, and prefer logical solutions."
+      },
+      "egennam": {
+        "name": "Egennam",
+        "emoji": "🌸",
+        "subtitle": "hyperestrogen men",
+        "description": "They have excellent empathy, value harmony, and have delicate sensibilities."
+      },
+      "tetonye": {
+        "name": "Teton girl",
+        "emoji": "🔥",
+        "subtitle": "high testosterone women",
+        "description": "They are proactive, decisive, and have a strong sense of independence."
+      },
+      "egennye": {
+        "name": "Egennyeo",
+        "emoji": "💖",
+        "subtitle": "hyperestrogen women",
+        "description": "Warm, accepting and intuitive."
+      },
+      "subtitle": "4 archetypes",
+      "title": "Introduction to personality types"
+    },
+    "resultPage": {
+      "breadcrumbs": {
+        "home": "home",
+        "test": "diagnosis",
+        "result": "result"
+      },
+      "test": {
+        "insightBullets": ["Mapping the constellation of your truest self."],
+        "progress": "progress",
+        "submit": "View results",
+        "loading": "Analyzing...",
+        "selectOption": "select",
+        "next": "next",
+        "previous": "before"
+      },
+      "result": {
+        "title": "Your Eggenteto Type",
+        "description": "Hormonal balance reveals your true self"
+      },
+      "meta": {
+        "title": "Egenteto personality analysis results",
+        "description": "What is your personality type based on the balance of testosterone and estrogen?",
+        "keywords": "Eggenteto, personality test, hormones, MBTI, romantic compatibility"
+      },
+      "titleTemplate": "{typeName} result | Egenteto Personality Test",
+      "descriptionTemplate": "You are {typeName}! {typeDescription} Find out your personality type and romantic compatibility with the Eggenteto test."
+    },
+    "relationship": {
+      "compatibility": {
+        "title": "Insight summary",
+        "subtitle": "Details",
+        "description": "Growth roadmap suggested by AI",
+        "chain": "Chain",
+        "note": "Note"
+      }
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "answer": "notification",
+          "question": "Questions"
+        },
+        "1": {
+          "answer": "notification",
+          "question": "Questions"
+        },
+        "2": {
+          "answer": "notification",
+          "question": "Questions"
+        },
+        "3": {
+          "answer": "notification",
+          "question": "Questions"
+        },
+        "4": {
+          "answer": "notification",
+          "question": "Questions"
+        }
+      },
+      "title": "Insight summary"
+    },
+    "result": {
+      "title": "Detailed analysis results",
+      "traits": "personality traits",
+      "description": "We explore your potential through in-depth analysis from various angles.",
+      "compatibility": "Compatibility",
+      "share": "Share",
+      "copied": "Copied",
+      "copy": "Copy",
+      "retake": "Diagnose again"
+    },
+    "test": {
+      "title": "Customized analysis results",
+      "subtitle": "In-depth analysis report",
+      "progress": "progress",
+      "submit": "Open Destiny Report",
+      "next": "next",
+      "previous": "Previously"
+    },
+    "navigation": {
+      "home": "Home"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "text": "I tend to be very direct and honest, even if it might hurt someone's feelings.",
+        "category": "T"
+      },
+      {
+        "id": "q2",
+        "text": "I am deeply moved by the emotions of others, even strangers.",
+        "category": "E"
+      },
+      {
+        "id": "q3",
+        "text": "I enjoy competition and the feeling of winning a challenge.",
+        "category": "T"
+      },
+      {
+        "id": "q4",
+        "text": "I often prioritize group harmony over my own individual needs.",
+        "category": "E"
+      },
+      {
+        "id": "q5",
+        "text": "I prefer to analyze situations logically rather than relying on intuition.",
+        "category": "T"
+      },
+      {
+        "id": "q6",
+        "text": "I find it easy to imagine myself in someone else's shoes.",
+        "category": "E"
+      },
+      {
+        "id": "q7",
+        "text": "I am comfortable taking risks to achieve my goals.",
+        "category": "T"
+      },
+      {
+        "id": "q8",
+        "text": "I am sensitive to the subtle cues and body language of others.",
+        "category": "E"
+      },
+      {
+        "id": "q9",
+        "text": "I prefer clear hierarchies and defined roles in a team.",
+        "category": "T"
+      },
+      {
+        "id": "q10",
+        "text": "I value deep, meaningful conversations more than surface-level chatter.",
+        "category": "E"
+      },
+      {
+        "id": "q11",
+        "text": "I am often described as assertive and decisive.",
+        "category": "T"
+      },
+      {
+        "id": "q12",
+        "text": "I naturally try to mediate when I see a conflict between friends.",
+        "category": "E"
+      }
+    ],
+    "badge": "🔥 Trending",
+    "cta": "Take Test",
+    "title": "Egenteto personality analysis",
+    "description": "Find out your true personality through hormonal balance",
+    "keywords": "Personality diagnosis, Eggenteto, hormones, psychological test",
+    "subtitle": "Details",
+    "male": "Male",
+    "female": "Female",
+    "a": "Popular"
+  },
+  "personalityTwin": {
+    "finder": {
+      "meta": {
+        "hero": {
+          "badge": "Popular",
+          "subtitle": "Discover deep insights about yourself."
+        },
+        "features": {
+          "subtitle": "Details"
+        },
+        "keywords": "Personality analysis, self-discovery, premium insight",
+        "title": "In-depth analysis report",
+        "description": "We explore your potential through in-depth analysis from various angles."
+      },
+      "hero": {
+        "badge": "🔍 Find your personality twin",
+        "subtitle": "Find a soul that perfectly resembles you",
+        "cta": "Find my twin",
+        "title": "Persona Twin",
+        "description": "We'll help you find people from all over the world who have incredibly similar thoughts and values."
+      },
+      "features": {
+        "list": [
+          "Find friends who truly understand you",
+          "Discover romantic compatibility",
+          "Build meaningful professional relationships",
+          "Connect with like-minded individuals"
+        ],
+        "accurate": {
+          "title": "High-precision AI analysis",
+          "description": "Analyze thousands of data points to calculate similarity."
+        },
+        "anonymous": {
+          "title": "complete anonymity",
+          "description": "Personal information is thoroughly protected and can be used safely."
+        },
+        "realtime": {
+          "title": "Real-time matching",
+          "description": "Find your tween among currently active users."
+        },
+        "subtitle": "Main features",
+        "title": "Characteristics of Persona Twin"
+      },
+      "test": {
+        "insightBullets": [
+          "Discover the unique patterns that define your path."
+        ],
+        "progress": "progress",
+        "submit": "Open Destiny Report",
+        "loading": "Loading",
+        "selectOption": "Select",
+        "next": "next",
+        "previous": "Previously"
+      },
+      "result": {
+        "title": "Detailed analysis results",
+        "description": "We explore your potential through in-depth analysis from various angles."
+      },
+      "noMatches": "No twins found yet",
+      "findNow": "Find Twins",
+      "matches": "{count} matches found",
+      "topMatch": "Top Match: {percentage}% similar",
+      "title": "Persona Twin",
+      "description": "Find a friend with a personality similar to mine",
+      "keywords": "Personality matching, finding friends, MBTI, soul mate"
+    },
+    "ui": {
+      "matchTypes": {
+        "perfectTwin": "Perfect personality twin! 🎯",
+        "closeMatch": "Very similar personality! ✨",
+        "complementary": "Complementary relationship! 🤝",
+        "opposite": "Opposite but fascinating match! 🌓"
+      },
+      "compatibilityLevels": {
+        "excellent": "Fantastic compatibility!",
+        "great": "Great compatibility!",
+        "good": "Good compatibility!",
+        "decent": "Decent compatibility",
+        "unique": "Unique combination"
+      },
+      "subtitle": "In-depth analysis report",
+      "searching": "Discover your unique texture through more sophisticated analysis.",
+      "noMatches": "Discover your unique texture through more sophisticated analysis.",
+      "noMatchesDesc": "We explore your potential through in-depth analysis from various angles.",
+      "similarity": "Similarity",
+      "sharedTraits": "Shared Traits",
+      "sharedTraitsNone": "No shared traits yet",
+      "sharedTraitsList": "Shared traits: {traits}",
+      "sharedTraitsListMore": "Shared traits: {traits}...",
+      "differences": "Differences",
+      "connectTwin": "Connect with Twin",
+      "shareResult": "Share Result",
+      "findMore": "Find More",
+      "stats": "Statistics",
+      "totalProfiles": "Total Profiles",
+      "recentMatches": "Recent Matches",
+      "backToList": "Back to List",
+      "compatibility": "Compatibility",
+      "title": "Insight summary"
+    },
+    "meta": {
+      "keywords": "Personality analysis, self-discovery, premium insight",
+      "resultTitle": "Discover your unique texture through more sophisticated analysis.",
+      "resultDescription": "We explore your potential through in-depth analysis from various angles.",
+      "testTitle": "Discover your unique texture through more sophisticated analysis.",
+      "testDescription": "We explore your potential through in-depth analysis from various angles.",
+      "title": "Personalitytwin Test",
+      "description": "We explore your potential through in-depth analysis from various angles."
+    },
+    "hero": {
+      "subtitle": "In-depth analysis report",
+      "cta": "Find My Twins",
+      "badge": "personalityTwin badge"
+    },
+    "button": {
+      "finding": "Finding Twins...",
+      "findTwins": "Find My Twins",
+      "helper": "Discover your unique texture through more sophisticated analysis."
+    },
+    "stats": {
+      "twinsFound": "Twins Found",
+      "avgMatch": "Avg Match",
+      "excellent": "Excellent",
+      "bestMatch": "Best Match"
+    },
+    "matchQuality": {
+      "destinyTwin": "Destiny Twin",
+      "perfectMatch": "Perfect Match",
+      "amazingMatch": "Amazing Match",
+      "greatMatch": "Great Match",
+      "goodMatch": "Good Match",
+      "fairMatch": "Fair Match"
+    },
+    "list": {
+      "findingTwins": "Finding your twins...",
+      "noTwinsTitle": "No Twins Found Yet",
+      "noTwinsDescription": "We explore your potential through in-depth analysis from various angles.",
+      "searchAgain": "Search Again",
+      "allTwins": "All Twins",
+      "twinsFound": "twins found",
+      "findMore": "Find More Twins"
+    },
+    "card": {
+      "testResults": "Test Results",
+      "sharedTests": "Shared Tests",
+      "specialInsights": "Special Insights",
+      "totalTests": "tests completed",
+      "match": "Match"
+    },
+    "cta": {
+      "subtitle": "In-depth analysis report"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Ontology 1",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "Ontology 2",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "💡",
+          "title": "Ontology 3",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🎯",
+          "title": "Ontology 4",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🔥",
+          "title": "Ontology 5",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "⭐",
+          "title": "Ontology 6",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Ontology 1",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🚀",
+          "title": "Ontology 2",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "💡",
+          "title": "Ontology 3",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🎯",
+          "title": "Ontology 4",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🔥",
+          "title": "Ontology 5",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "⭐",
+          "title": "Ontology 6",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Ontology 1",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "Ontology 2",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "💡",
+          "title": "Ontology 3",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🎯",
+          "title": "Ontology 4",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🔥",
+          "title": "Ontology 5",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "⭐",
+          "title": "Ontology 6",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+      "progress": "progress",
+      "submit": "Open Destiny Report",
+      "loading": "Please wait, analyzing...",
+      "selectOption": "Select Option",
+      "subtitle": "Details",
+      "next": "next",
+      "previous": "to previous"
+    },
+    "result": {
+      "title": "Detailed analysis results",
+      "description": "We explore your potential through in-depth analysis from various angles."
+    },
+    "title": "Customized analysis results",
+    "description": "Experience a variety of identity analysis tools designed for deep self-discovery."
+  }
+}

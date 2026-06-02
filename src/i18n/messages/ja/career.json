@@ -1,0 +1,499 @@
+{
+  "meta": {
+    "hero": {
+      "badge": "キャリア・コンパス",
+      "subtitle": "自分自身への洞察を深める"
+    },
+    "keywords": "キャリア評価, 性格テスト, RIASEC, ホランド・コード, キャリアカウンセリング, 仕事の満足度, キャリアマッチング, 仕事の適性",
+    "description": "あなたの性格タイプと適性に合った最適なキャリアパスを探索しましょう。",
+    "title": "OIYOキャリア - あなたの天職を見つける"
+  },
+  "types": {
+    "realistic": {
+      "name": "現実的 (実行者)",
+      "emoji": "🔧"
+    },
+    "investigative": {
+      "name": "研究的 (思考者)",
+      "emoji": "🔬"
+    },
+    "artistic": {
+      "name": "芸術的 (創造者)",
+      "emoji": "🎨"
+    },
+    "social": {
+      "name": "社会的 (援助者)",
+      "emoji": "👥"
+    },
+    "enterprising": {
+      "name": "企業的 (説得者)",
+      "emoji": "💼"
+    },
+    "conventional": {
+      "name": "慣習的 (組織者)",
+      "emoji": "📊"
+    },
+    "subtitle": "どのタイプがあなたを最もよく表していますか？"
+  },
+  "hero": {
+    "badge": "🎯 科学的根拠",
+    "subtitle": "性格タイプに基づいた理想的なキャリアパスを見つけましょう",
+    "cta": "キャリアマッチングを始める",
+    "title": "ダッシュボード",
+    "description": "あなた独自の気質分析"
+  },
+  "benefits": {
+    "subtitle": "あなたの天性の強みと興味にキャリアを合わせましょう",
+    "items": [
+      {
+        "icon": "🎯",
+        "title": "完璧なキャリアマッチング",
+        "description": "あなたの生まれ持った性格に合った仕事を見つけましょう。"
+      },
+      {
+        "icon": "😊",
+        "title": "仕事の満足度",
+        "description": "あなたが輝ける環境で働きましょう。"
+      },
+      {
+        "icon": "📈",
+        "title": "専門能力の成長",
+        "description": "強みを活かして、より早くステップアップしましょう。"
+      },
+      {
+        "icon": "⚖️",
+        "title": "ワークライフバランス",
+        "description": "あなたのライフスタイルの価値観に合った職業を選びましょう。"
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "どのキャリアが私に合っていますか？",
+        "description": "心理学者が使用するRIASECモデルに基づいています。",
+        "question": "科学的ですか？",
+        "answer": "心理学者が使用するRIASECモデルに基づいています。"
+      },
+      {
+        "icon": "🚀",
+        "title": "結果はどのくらい正確ですか？",
+        "description": "はい、専攻やインターンシップの選択に役立ちます。",
+        "question": "学生も使えますか？",
+        "answer": "はい、専攻やインターンシップの選択に役立ちます。"
+      },
+      {
+        "icon": "💡",
+        "title": "妥当性",
+        "description": "主要な興味を特定する上で非常に高い精度を示します。",
+        "question": "正確ですか？",
+        "answer": "主要な興味を特定する上で非常に高い精度を示します。"
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "📊",
+        "title": "RIASEC分析",
+        "description": "6つの興味領域に関する詳細な分析。",
+        "question": "RIASEC分析",
+        "answer": "6つの興味領域に関する詳細な分析。"
+      },
+      {
+        "icon": "📋",
+        "title": "職業リスト",
+        "description": "あなたのために厳選された50以上の推奨職種。",
+        "question": "職業リスト",
+        "answer": "あなたのために厳選された50以上のおすすめ求人。"
+      },
+      {
+        "icon": "🚀",
+        "title": "成長パス",
+        "description": "特定の業界に関する実践的なアドバイス。",
+        "question": "成長パス",
+        "answer": "特定の業界に関する実践的なアドバイス。"
+      }
+    ]
+  },
+  "test": {
+    "scale": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    },
+    "test": {
+      "progress": "進捗",
+      "submit": "提出する",
+      "loading": "読み込み中",
+      "selectOption": "オプションを選択",
+      "insightBullets": ["洞察"],
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "詳細分析レポート",
+      "description": "このサービスが提供する具体的な価値と洞察を準備しています。"
+    },
+    "meta": {
+      "title": "カスタマイズされた診断",
+      "description": "このサービスが提供する具体的な価値と洞察を準備しています。",
+      "keywords": "適性検査, キャリア探索, 職業推薦"
+    },
+    "title": "ダッシュボード",
+    "description": "詳細なデータ主導のレポート",
+    "primaryType": "主要タイプ",
+    "allTypes": "すべてのタイプ",
+    "careers": "職業",
+    "workEnvironment": "職場環境",
+    "secondaryType": "補助タイプ",
+    "understanding": "理解を深める",
+    "retake": "再受診",
+    "subtitle": "詳細",
+    "rateInstructions": "評価方法",
+    "progress": "進捗",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "提出する",
+    "loading": "読み込み中",
+    "selectOption": "オプションを選択",
+    "insightBullets": ["洞察"]
+  },
+  "result": {
+    "test": {
+      "progress": "進捗",
+      "submit": "提出する",
+      "loading": "読み込み中",
+      "selectOption": "オプションを選択",
+      "insightBullets": ["洞察"],
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "詳細分析レポート",
+      "description": "このサービスが提供する具体的な価値と洞察を準備しています。"
+    },
+    "meta": {
+      "title": "カスタマイズ診断",
+      "description": "このサービスが提供する具体的な価値と洞察を準備しています。",
+      "keywords": "テスト結果, キャリア分析, 適職"
+    },
+    "title": "詳細分析レポート",
+    "description": "このサービスが提供する具体的な価値と洞察を準備しています。",
+    "primaryType": "主要タイプ",
+    "allTypes": "すべてのタイプ",
+    "careers": "職業",
+    "workEnvironment": "職場環境",
+    "secondaryType": "補助タイプ",
+    "understanding": "理解を深める",
+    "retake": "再受診"
+  },
+  "title": "キャリア・インサイト",
+  "description": "あなた独自の気質分析",
+  "keywords": "キーワード",
+  "career": {
+    "types": {
+      "realistic": {
+        "traits": [
+          "正直で本物",
+          "実用的で現実的",
+          "道具の扱いに長けている",
+          "独立した"
+        ],
+        "careerSuggestions": [
+          "機械エンジニア",
+          "電気技師",
+          "Chef",
+          "自動車技術者",
+          "獣医",
+          "ランドスケープアーキテクト",
+          "パイロット"
+        ],
+        "name": "慣習型",
+        "alias": "組織家",
+        "description": "秩序ある環境を好み、細かなデータの管理に長けています。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "investigative": {
+        "traits": [
+          "分析的かつ論理的",
+          "知的好奇心旺盛",
+          "正確な",
+          "独立した思想家"
+        ],
+        "careerSuggestions": [
+          "ソフトウェア開発者",
+          "データアナリスト",
+          "研究員",
+          "医師",
+          "エコノミスト",
+          "心理学者",
+          "薬剤師"
+        ],
+        "name": "慣習型",
+        "alias": "組織家",
+        "description": "秩序ある環境を好み、細かなデータの管理に長けています。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "artistic": {
+        "traits": [
+          "クリエイティブかつオリジナル",
+          "自由な精神",
+          "表現力豊かな",
+          "型破りな"
+        ],
+        "careerSuggestions": [
+          "グラフィックデザイナー",
+          "ライター",
+          "マーケティングクリエイティブ",
+          "建築家",
+          "ミュージシャン",
+          "俳優",
+          "ファッションデザイナー"
+        ],
+        "name": "慣習型",
+        "alias": "組織家",
+        "description": "秩序ある環境を好み、細かなデータの管理に長けています。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "social": {
+        "traits": [
+          "共感的",
+          "協同組合",
+          "フレンドリー",
+          "優れたコミュニケーション能力"
+        ],
+        "careerSuggestions": [
+          "教師",
+          "カウンセラー",
+          "ソーシャルワーカー",
+          "看護師",
+          "人事スペシャリスト",
+          "コーチ/トレーナー",
+          "理学療法士"
+        ],
+        "name": "慣習型",
+        "alias": "組織家",
+        "description": "秩序ある環境を好み、細かなデータの管理に長けています。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "enterprising": {
+        "traits": ["野心的な", "自信を持って", "説得力のある", "元気いっぱい"],
+        "careerSuggestions": [
+          "営業部長",
+          "ビジネスエグゼクティブ",
+          "弁護士",
+          "起業家",
+          "マーケティングマネージャー",
+          "不動産業者",
+          "プロジェクトマネージャー"
+        ],
+        "name": "慣習型",
+        "alias": "組織家",
+        "description": "秩序ある環境を好み、細かなデータの管理に長けています。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "conventional": {
+        "traits": ["細部重視", "整頓された", "責任者", "効率的"],
+        "careerSuggestions": [
+          "会計士",
+          "データ入力",
+          "管理アシスタント",
+          "ベンチプレート",
+          "納税者",
+          "図書館員",
+          "保険引受業者"
+        ],
+        "name": "慣習型",
+        "alias": "組織家",
+        "description": "秩序ある環境を好み、細かなデータの管理に長けています。",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      }
+    },
+    "questions": [
+      {
+        "id": "1",
+        "text": "工具や機械を扱うのが好きです",
+        "type": "現実的な",
+        "weight": 3
+      },
+      {
+        "id": "2",
+        "text": "私は理論的な議論よりも実践的な実践的な作業を好みます",
+        "type": "現実的な",
+        "weight": 3
+      },
+      {
+        "id": "3",
+        "text": "自分の仕事から目に見える結果が得られるのが好きです",
+        "type": "現実的な",
+        "weight": 2
+      },
+      {
+        "id": "4",
+        "text": "物を作ったり、修理したり、修理したりするのが好きです",
+        "type": "現実的な",
+        "weight": 3
+      },
+      {
+        "id": "5",
+        "text": "私は屋外やワークショップで働くのが好きです",
+        "type": "現実的な",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "text": "研究と分析を通じて複雑な問題を解決するのが好きです",
+        "type": "捜査中",
+        "weight": 3
+      },
+      {
+        "id": "7",
+        "text": "物事が深いレベルでどのように機能するかを理解したい",
+        "type": "捜査中",
+        "weight": 3
+      },
+      {
+        "id": "8",
+        "text": "私は知的課題に独立して取り組むことを好みます",
+        "type": "捜査中",
+        "weight": 2
+      },
+      {
+        "id": "9",
+        "text": "データの収集と分析が好きです",
+        "type": "捜査中",
+        "weight": 3
+      },
+      {
+        "id": "10",
+        "text": "新しい理論を実験してテストするのが好きです",
+        "type": "捜査中",
+        "weight": 2
+      },
+      {
+        "id": "11",
+        "text": "創造的に自分を表現することを楽しんでいます",
+        "type": "芸術的",
+        "weight": 3
+      },
+      {
+        "id": "12",
+        "text": "厳格なルールのない柔軟な労働環境を好みます",
+        "type": "芸術的",
+        "weight": 2
+      },
+      {
+        "id": "13",
+        "text": "色、デザイン、クリエイティブなコンセプトを扱うのが好きです",
+        "type": "芸術的",
+        "weight": 3
+      },
+      {
+        "id": "14",
+        "text": "私は仕事において独創性と革新性を大切にしています",
+        "type": "芸術的",
+        "weight": 3
+      },
+      {
+        "id": "15",
+        "text": "創造的な解釈を可能にするプロジェクトが好きです",
+        "type": "芸術的",
+        "weight": 2
+      },
+      {
+        "id": "16",
+        "text": "他の人の問題解決を手伝うことに喜びを感じます",
+        "type": "社交",
+        "weight": 3
+      },
+      {
+        "id": "17",
+        "text": "チームや共同作業環境で働くのが好きです",
+        "type": "社交",
+        "weight": 2
+      },
+      {
+        "id": "18",
+        "text": "他の人に教えたり指導したりすることにやりがいを感じます",
+        "type": "社交",
+        "weight": 3
+      },
+      {
+        "id": "19",
+        "text": "私はタスク中心の仕事よりも人中心の仕事を好みます",
+        "type": "社交",
+        "weight": 3
+      },
+      {
+        "id": "20",
+        "text": "他の人にポジティブな影響を与えることに喜びを感じます",
+        "type": "社交",
+        "weight": 2
+      },
+      {
+        "id": "21",
+        "text": "プロジェクトを主導したりチームを管理したりすることが好きです",
+        "type": "進取的な",
+        "weight": 3
+      },
+      {
+        "id": "22",
+        "text": "競争的で結果重視の環境が好きです",
+        "type": "進取的な",
+        "weight": 2
+      },
+      {
+        "id": "23",
+        "text": "他人を説得したり、決定に影響を与えたりするのが好きです",
+        "type": "進取的な",
+        "weight": 3
+      },
+      {
+        "id": "24",
+        "text": "目標を達成するために計算されたリスクを取ることが好きです",
+        "type": "進取的な",
+        "weight": 3
+      },
+      {
+        "id": "25",
+        "text": "早く上達できる環境を好む",
+        "type": "進取的な",
+        "weight": 2
+      },
+      {
+        "id": "26",
+        "text": "私は構造的で組織化された作業環境を好みます",
+        "type": "従来の",
+        "weight": 3
+      },
+      {
+        "id": "27",
+        "text": "データ、数値、詳細な情報を扱うのが好きです",
+        "type": "従来の",
+        "weight": 2
+      },
+      {
+        "id": "28",
+        "text": "確立された手順やガイドラインに従うことが好きです",
+        "type": "従来の",
+        "weight": 3
+      },
+      {
+        "id": "29",
+        "text": "私は予測可能な作業ルーチンと明確な期待を好みます",
+        "type": "従来の",
+        "weight": 3
+      },
+      {
+        "id": "30",
+        "text": "私は管理タスクを整理して管理するのが得意です",
+        "type": "従来の",
+        "weight": 2
+      }
+    ]
+  }
+}

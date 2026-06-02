@@ -1,0 +1,131 @@
+{
+  "runes": {
+    "fehu": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "uruz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "thurisaz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "ansuz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "raido": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "kenaz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "gebo": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "wunjo": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "hagalaz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "nauthiz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "isa": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "jera": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "eihwaz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "perthro": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "algiz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "sowilo": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "tiwaz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "berkana": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "ehwaz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "mannaz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "laguz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "inguz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "dagaz": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    },
+    "othala": {
+      "name": "オソラ",
+      "meaning": "遺産",
+      "keyword": "祖先"
+    }
+  },
+  "title": "ルーン占い",
+  "description": "エルダー・フサークによる古代バイキングの知恵。",
+  "systemName": "北欧ルーン",
+  "narrative": "ユグドラシルの囁き",
+  "rune": "ルーン",
+  "reading": "ルーンリーディング",
+  "ariaLabel": "ルーン: {name}, 意味: {meaning}。"
+}

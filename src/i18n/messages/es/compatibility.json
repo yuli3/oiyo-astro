@@ -1,0 +1,90 @@
+{
+  "types": {
+    "soulmate": {
+      "name": "Alma Gemela",
+      "description": "Una armonía perfecta que no necesita explicación."
+    },
+    "complementary": {
+      "name": "Complementario",
+      "description": "Una relación donde las diferencias se vuelven encantos atractivos."
+    },
+    "mentor": {
+      "name": "Conexión Guía",
+      "description": "Una relación de desarrollo con aprendizaje mutuo."
+    },
+    "challenging": {
+      "name": "Estímulo de Crecimiento",
+      "description": "Una relación donde reconocer las diferencias trae una gran comprensión."
+    }
+  },
+  "scores": {
+    "high": "Química Fantástica",
+    "medium": "Armonía Cómoda",
+    "low": "Esfuerzo Requerido"
+  },
+  "title": "Compatibilidad Amorosa",
+  "description": "Analiza las relaciones y la sinergia.",
+  "narrative": "Vuestro encuentro es como una joya preciosa, donde cada uno completa lo que al otro le falta.",
+  "levels": {
+    "perfect": "Armonía Perfecta",
+    "great": "Gran Química",
+    "good": "Buen Potencial",
+    "challenging": "Oportunidad de Crecimiento"
+  },
+  "selectPartner": "Seleccionar Pareja",
+  "selectDesc": "Elige un destino para comparar con el tuyo.",
+  "insights": "Perspectivas Profundas",
+  "combination": "Combinación Cósmica",
+  "loveLanguages": "Lenguajes del Amor",
+  "dateIdeas": "Ideas para Citas",
+  "tryAnother": "Probar Otra Pareja",
+  "share": "Compartir Resultado",
+  "analysis": {
+    "excellent": "Almas Gemelas",
+    "veryGood": "Muy Bueno",
+    "good": "Buena Relación",
+    "average": "Promedio",
+    "needsWork": "Requiere Esfuerzo",
+    "challenging": "Atención a Conflictos"
+  },
+  "subtitle": "Descubre la armonía entre dos destinos",
+  "yourInfo": "Tu Información",
+  "partnerInfo": "Información de Pareja",
+  "result": {
+    "title": "Resultados de Compatibilidad",
+    "elements": "Elementos",
+    "zodiac": "Zodiaco",
+    "personality": "Personalidad",
+    "strengths": "Fortalezas",
+    "challenges": "Puntos de crecimiento",
+    "retake": "Repetir"
+  },
+  "error": "❌ Error",
+  "calculate": "Calcular Compatibilidad",
+  "traits": {
+    "controlling": {
+      "title": "Dinámica Difícil",
+      "description": "Fuerzas opuestas que pueden llevar al crecimiento a través de la fricción o el conflicto."
+    },
+    "neutral": {
+      "title": "Conexión Equilibrada",
+      "description": "Ni fuertemente favorable ni conflictiva, permitiendo una conexión estable."
+    },
+    "same": {
+      "title": "Espíritus Afines",
+      "description": "Energías similares que crean una comprensión profunda y amistad."
+    },
+    "supporting": {
+      "title": "Relación de Apoyo",
+      "description": "Una relación donde uno nutre y apoya al otro, creando una armonía natural."
+    }
+  },
+  "reasons": {
+    "same": "Relación cómoda como amigos que comparten el mismo elemento.",
+    "generates": "Relación dinámica donde entregas energía y vitalidad.",
+    "generated_by": "Relación de apoyo donde recibes calidez y sustento.",
+    "controls": "Relación activa que impulsa el logro a través del desafío mutuo.",
+    "controlled_by": "Relación disciplinada que encuentra el orden a través del ajuste mutuo.",
+    "neutral": "Una relación neutral sin interacción especial."
+  }
+}

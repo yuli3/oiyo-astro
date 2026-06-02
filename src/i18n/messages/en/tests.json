@@ -1,0 +1,484 @@
+{
+  "color": {
+    "meta": {
+      "keywords": "personality, self-discovery, insights",
+      "title": "Deep Analysis Report",
+      "description": "Explore your latent potential through multi-dimensional deep analysis."
+    },
+    "types": {
+      "subtitle": "Deep Analysis Report",
+      "red": {
+        "name": "The Dynamic Leader",
+        "description": "In-depth competency diagram"
+      },
+      "blue": {
+        "name": "The Thoughtful Analyst",
+        "description": "Data-proven real tendency"
+      },
+      "green": {
+        "name": "The Harmonious Supporter",
+        "description": "In-depth competency diagram"
+      },
+      "yellow": {
+        "name": "The Enthusiastic Creator",
+        "description": "AI-proposed growth roadmap"
+      },
+      "title": "Insight Summary"
+    },
+    "hero": {
+      "subtitle": "Deep Analysis Report",
+      "cta": "Discover your unique texture through more sophisticated analysis.",
+      "badge": "🎨 Psychology-Based",
+      "title": "Personality Analysis",
+      "description": "AI-proposed growth roadmap"
+    },
+    "benefits": {
+      "subtitle": "Deep Analysis Report",
+      "items": {
+        "0": {
+          "title": "Insight Summary",
+          "description": "Data-proven real tendency"
+        },
+        "1": {
+          "title": "Insight Summary",
+          "description": "Data-proven real tendency"
+        },
+        "2": {
+          "title": "Insight Summary",
+          "description": "Data-proven real tendency"
+        },
+        "3": {
+          "title": "Insight Summary",
+          "description": "In-depth competency diagram"
+        }
+      },
+      "title": "Insight Summary"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "Frequently Asked Questions",
+          "answer": "Guide details"
+        },
+        "1": {
+          "question": "Frequently Asked Questions",
+          "answer": "Guide details"
+        },
+        "2": {
+          "question": "Frequently Asked Questions",
+          "answer": "Guide details"
+        },
+        "3": {
+          "question": "Frequently Asked Questions",
+          "answer": "Guide details"
+        }
+      },
+      "title": "Insight Summary"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Signature Strength",
+          "description": "Comprehensive analysis and personalized insights",
+          "question": "What drives your choices?",
+          "answer": "Your inner values guide your everyday actions."
+        },
+        {
+          "icon": "🚀",
+          "title": "Pivot Point",
+          "description": "Data-driven recommendations for better outcomes",
+          "question": "What drives your choices?",
+          "answer": "Your inner values guide your everyday actions."
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "breakdown": "Breakdown",
+        "strengths": "Strengths",
+        "growthAreas": "Growth Areas",
+        "colorPalette": "Color Palette",
+        "careerSuggestions": "Career Suggestions",
+        "relationshipTips": "Relationship Tips"
+      },
+      "tabs": {
+        "traits": "Traits",
+        "colors": "Colors",
+        "career": "Career",
+        "relationships": "Relationships"
+      },
+      "retake": "Retake Analysis",
+      "title": "Detailed Analysis Results",
+      "description": "Explore your latent potential through multi-dimensional deep analysis."
+    },
+    "test": {
+      "title": "Insight Summary",
+      "finish": "Finish",
+      "progress": "Progress",
+      "submit": "Open Destiny Report",
+      "loading": "Loading",
+      "selectOption": "Select",
+      "insightBullets": ["Mapping the constellation of your truest self."],
+      "previous": "Previous",
+      "next": "Next"
+    }
+  },
+  "bloodType": {
+    "meta": {
+      "keywords": "personality, self-discovery, insights",
+      "compatibilityTitle": "Blood Type Compatibility Analysis | Perfect Blood Type Matching",
+      "compatibilityDescription": "Explore your latent potential through multi-dimensional deep analysis.",
+      "title": "Deep Analysis Report",
+      "description": "Explore your latent potential through multi-dimensional deep analysis."
+    },
+    "hero": {
+      "subtitle": "Deep Analysis Report",
+      "icon": "🩸"
+    },
+    "test": {
+      "selectBloodType": "Select Blood Type",
+      "personality": {
+        "title": "Insight Summary",
+        "traits": "Traits",
+        "positive": "Positive",
+        "challenges": "Challenges",
+        "button": "Open Destiny Report"
+      },
+      "compatibility": {
+        "button": "Open Destiny Report",
+        "title": "Insight Summary",
+        "my": "My",
+        "partner": "Partner",
+        "result": "Result Title",
+        "score": "Score"
+      },
+      "share": "Share",
+      "retake": "Retake Analysis",
+      "progress": "Progress",
+      "submit": "Open Destiny Report",
+      "loading": "Loading",
+      "selectOption": "Select",
+      "insightBullets": ["Mapping the constellation of your truest self."],
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "Copied to clipboard!": "Copied to clipboard!",
+    "result": {
+      "title": "Detailed Analysis Results",
+      "description": "Explore your latent potential through multi-dimensional deep analysis."
+    },
+    "Link copied to clipboard!": "Link copied to clipboard!"
+  },
+  "animal": {
+    "meta": {
+      "title": "Animal Personality Test",
+      "description": "Explore your latent potential through multi-dimensional deep analysis.",
+      "keywords": "personality, self-discovery, insights"
+    },
+    "hero": {
+      "title": "Animal Personality Test",
+      "subtitle": "Find your spirit animal",
+      "cta": "Start Test"
+    },
+    "title": "Animal Personality Test",
+    "description": "Explore your latent potential through multi-dimensional deep analysis.",
+    "subtitle": "Deep Analysis Report",
+    "introTitle": "What if I were an animal?",
+    "feature1Title": "Discover your unique texture through more sophisticated analysis.",
+    "feature1Desc": "Explore your latent potential through multi-dimensional deep analysis.",
+    "feature2Title": "Detailed Analysis",
+    "feature2Desc": "Explore your latent potential through multi-dimensional deep analysis.",
+    "feature3Title": "Discover your unique texture through more sophisticated analysis.",
+    "feature3Desc": "Explore your latent potential through multi-dimensional deep analysis.",
+    "animalTypes": "Various Animal Types",
+    "startTest": "Start Test"
+  },
+  "futureSelf": {
+    "meta": {
+      "keywords": "personality, self-discovery, insights"
+    },
+    "hero": {
+      "eyebrow": "Time Travel Lab",
+      "subtitle": "Feed in today’s routines and priorities to explore realistic storylines of how your life naturally unfolds.",
+      "cta": "Simulate My Future"
+    }
+  },
+  "career": {
+    "meta": {
+      "keywords": "RIASEC, Vocational Assessment, Career Guide, Identity, Career Archetype",
+      "hero": {
+        "badge": "Vocational Resonance",
+        "subtitle": "Discover the professional orbit where your natural talent shines brightest."
+      },
+      "description": "Explore your professional identity in depth through the RIASEC vocational framework.",
+      "title": "Vocational Resonance Deep Analysis"
+    },
+    "types": {
+      "subtitle": "Which professional archetype resonates with your essence?",
+      "realistic": {
+        "name": "Realistic Builder",
+        "emoji": "🔧"
+      },
+      "investigative": {
+        "name": "Investigative Thinker",
+        "emoji": "🔬"
+      },
+      "artistic": {
+        "name": "Artistic Creator",
+        "emoji": "🎨"
+      },
+      "social": {
+        "name": "Social Helper",
+        "emoji": "🤝"
+      },
+      "enterprising": {
+        "name": "Enterprising Persuader",
+        "emoji": "💼"
+      },
+      "conventional": {
+        "name": "Conventional Organizer",
+        "emoji": "📊"
+      }
+    },
+    "hero": {
+      "badge": "RIASEC Career Aptitude",
+      "subtitle": "Interpreting the professional orbit where your natural talents shine brightest.",
+      "cta": "Begin Journey",
+      "title": "Vocational Resonance Analysis",
+      "description": "Providing deep insights into your professional strengths and identity."
+    },
+    "benefits": {
+      "subtitle": "By understanding your professional frequency, you can navigate the world of purposeful expertise with grace.",
+      "items": [
+        {
+          "title": "Core Alignment",
+          "description": "Discover the careers that naturally resonate with your deepest values and skills."
+        },
+        {
+          "title": "Environmental Harmony",
+          "description": "Identify the work cultures and atmospheres where you will truly flourish."
+        },
+        {
+          "title": "Strategic Clarity",
+          "description": "Gain a clear map for your professional growth and long-term vocational legacy."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "What is the essence of the RIASEC framework?",
+          "answer": "It is a lens that reveals how your personality patterns translate into professional environments."
+        },
+        {
+          "question": "How can I use these insights today?",
+          "answer": "By aligning your current tasks with your natural vocational rhythm, you reduce friction and increase fulfillment."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "🎯",
+          "title": "Archetype Identification",
+          "description": "A precise mapping of your personality against the six core vocational types."
+        },
+        {
+          "icon": "🧭",
+          "title": "Directional Insights",
+          "description": "Strategic guidance for choosing paths that offer the highest resonance."
+        }
+      ]
+    },
+    "title": "Vocational Resonance",
+    "description": "Experience deep tools designed for professional alchemy.",
+    "test": {
+      "scale": {
+        "1": "Strongly Disagree",
+        "2": "Disagree",
+        "3": "Neutral",
+        "4": "Agree",
+        "5": "Strongly Agree"
+      },
+      "title": "Vocational Alignment Assessment",
+      "description": "A meditative exploration of your professional tendencies.",
+      "subtitle": "Discover the professional orbit where your natural talent shines brightest.",
+      "rateInstructions": "Reflect on each statement and choose the degree to which it resonates with your truth.",
+      "progress": "Exploration Progress",
+      "submit": "Confirm My Path",
+      "selectOption": "Please Select",
+      "insightBullets": [
+        "Tracing the lines where passion meets discipline.",
+        "Listening for the echo of your professional destiny.",
+        "Gathering the shards of your vocational identity."
+      ],
+      "next": "Continue",
+      "previous": "Reflect",
+      "loading": "Designing a blueprint for your professional legacy..."
+    },
+    "result": {
+      "title": "Discovery of Vocation",
+      "description": "The constellation of your professional talents is now clearly revealed.",
+      "primaryType": "Dominant Archetype",
+      "allTypes": "Full Spectrum",
+      "careers": "Recommended Paths",
+      "workEnvironment": "Ideal Environment",
+      "secondaryType": "Secondary Archetype",
+      "understanding": "Archetypal Wisdom",
+      "retake": "Reflect Again"
+    }
+  },
+  "testGrid": {
+    "searchPlaceholder": "Search for archetypes, fate, or patterns...",
+    "filterAll": "View All",
+    "categories": {
+      "personality": "Essence and Soul"
+    },
+    "sortBy": {
+      "popularity": "Popular Resonance",
+      "newest": "New Insights",
+      "time": "Duration",
+      "difficulty": "Intellectual Depth"
+    },
+    "startTest": "Begin Journey",
+    "noResults": "No echoes found for this search.",
+    "clearFilters": "Reset Perspective",
+    "sortPopular": "High Resonance",
+    "sortAlpha": "Alphabetical",
+    "new": "NEW",
+    "trending": "HOT",
+    "empty": {
+      "title": "No Search Results",
+      "description": "Try searching with other keywords or adjust filters.",
+      "clearFilters": "Reset Filters"
+    },
+    "test": {
+      "progress": "Reflection Progress",
+      "submit": "Confirm My Path",
+      "loading": "Polishing the mirror reflecting your truest self...",
+      "selectOption": "Select the item that resonates with your truth",
+      "insightBullets": [
+        "Tracing the lines where passion meets discipline.",
+        "Listening for the echo of your truest self.",
+        "Gathering the shards of your personal identity."
+      ],
+      "next": "Continue",
+      "previous": "Look Back"
+    },
+    "result": {
+      "title": "Aperture into Being",
+      "description": "Diagnosis result of your current resonance state."
+    },
+    "meta": {
+      "title": "Ontological Diagnosis | OIYO Collection",
+      "description": "A collection of tests curated to map human experience.",
+      "keywords": "self-discovery, archetype analysis, wisdom test"
+    }
+  },
+  "learning": {
+    "meta": {
+      "description": "Experience various identity analysis tools designed for deep self-discovery.",
+      "title": "Custom Analysis Results",
+      "keywords": "Ontology, OIYO, Test"
+    },
+    "hero": {
+      "title": "Custom Analysis Results",
+      "subtitle": "Deep Analysis Report",
+      "description": "Experience various identity analysis tools designed for deep self-discovery.",
+      "badge": "Popular"
+    }
+  },
+  "travel": {
+    "hero": {
+      "description": "Explore the world in a way that perfectly aligns with your personality.",
+      "badge": "Travel Psychology",
+      "title": "Travel Tendency Deep Analysis",
+      "subtitle": "Are you a thorough designer or a free spirit? Discover your true travel style.",
+      "cta": "Start Diagnosis"
+    },
+    "test": {
+      "title": "Travel Style Diagnosis",
+      "subtitle": "Answer these questions to find your travel persona.",
+      "progress": "Progress",
+      "submit": "Reveal My Destiny",
+      "loading": "Analyzing your travel profile...",
+      "selectOption": "Select Option",
+      "insightBullets": [
+        "Travel Style",
+        "Ideal Companions",
+        "Destination Tips"
+      ],
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "result": {
+      "subtitle": "Analysis Result",
+      "title": "Your Travel Profile",
+      "description": "Detailed analysis of your travel personality.",
+      "loading": "Generating results...",
+      "sections": {
+        "traits": "Key Traits",
+        "destinations": "Recommended Destinations",
+        "packing": "Packing Style",
+        "planning": "Planning Style"
+      },
+      "retakeTest": "Retake Test"
+    },
+    "types": {
+      "items": [
+        {
+          "name": "Adventurer",
+          "description": "Seeking new experiences and thrills."
+        },
+        {
+          "name": "Planner",
+          "description": "Organized and prepared for everything."
+        },
+        {
+          "name": "Relaxer",
+          "description": "Vacation means doing absolutely nothing."
+        },
+        {
+          "name": "Photographer",
+          "description": "Capturing every moment is the priority."
+        },
+        {
+          "name": "Foodie",
+          "description": "Culinary experiences define the trip."
+        },
+        {
+          "name": "Culture Seeker",
+          "description": "Immersing in history and local traditions."
+        }
+      ],
+      "title": "Traveler Types"
+    },
+    "meta": {
+      "title": "Travel Tendency Test",
+      "description": "Discover your travel style and ideal destinations.",
+      "keywords": "travel personality, travel style, vacation test, travel planning"
+    },
+    "benefits": {
+      "title": "Why it's important to know your travel style",
+      "items": [
+        {
+          "title": "Fail-proof Trips",
+          "description": "Find destinations that fit you perfectly."
+        },
+        {
+          "title": "Smart Budgeting",
+          "description": "Spend money on what matters to you."
+        },
+        {
+          "title": "More Enjoyment",
+          "description": "Reduce stress and increase satisfaction."
+        },
+        {
+          "title": "Better Harmony",
+          "description": "Understand differences with travel companions."
+        }
+      ]
+    }
+  }
+}

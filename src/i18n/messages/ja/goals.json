@@ -1,0 +1,22 @@
+{
+  "title": "Goals",
+  "new_goal": "新しい目標",
+  "placeholder_title": "あなたの目標は何ですか？",
+  "progress": "進捗",
+  "no_goals": "まだ目標は設定されていません。 Start your journey today.",
+  "meta": {
+    "title": "目標",
+    "description": "人生の目標を管理しましょう。",
+    "keywords": "目標、テスト、分析、性格"
+  },
+  "add_to_goals": "目標に追加する",
+  "add_goal_desc": "期限を設定してトラッカーに追加します。",
+  "goal_title": "目標",
+  "goal_deadline": "目標期限",
+  "setGoal": "目標を設定する",
+  "myGoals": "私の目標",
+  "completed": "完了",
+  "inProgress": "進行中",
+  "save": "保存",
+  "cancel": "キャンセル"
+}

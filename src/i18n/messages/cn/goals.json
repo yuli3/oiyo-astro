@@ -1,0 +1,22 @@
+{
+  "title": "Goals",
+  "new_goal": "新目标",
+  "placeholder_title": "你的目标是什么？",
+  "progress": "进步",
+  "no_goals": "尚未设定目标。 今天开始您的旅程。",
+  "meta": {
+    "title": "目标",
+    "description": "管理你的人生目标。",
+    "keywords": "目标、测试、分析、个性"
+  },
+  "add_to_goals": "添加到目标",
+  "add_goal_desc": "设置截止日期并将其添加到您的跟踪器中。",
+  "goal_title": "目标",
+  "goal_deadline": "目标期限",
+  "setGoal": "设定目标",
+  "myGoals": "我的目标",
+  "completed": "完全的",
+  "inProgress": "进行中",
+  "save": "节省",
+  "cancel": "取消"
+}

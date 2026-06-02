@@ -1,0 +1,20 @@
+{
+  "units": {
+    "hours": "시간",
+    "days": "낮",
+    "years": "년도",
+    "months": "개월"
+  },
+  "labels": {
+    "hourlyWage": "시간당 요금",
+    "annualLeave": "연차휴가수당",
+    "severancePay": "퇴직금",
+    "dailyHours": "일일 근무 시간",
+    "remainingDays": "남은 연차휴가",
+    "servicePeriod": "보유",
+    "monthlyBase": "월 기본급",
+    "annualBonus": "연간 보너스",
+    "totalAllowance": "총 연차휴가 수당",
+    "standardMonthlyHours": "월별 표준근로시간"
+  }
+}

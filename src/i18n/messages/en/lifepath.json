@@ -1,0 +1,184 @@
+{
+  "hero": {
+    "backToHome": "Back to Home",
+    "badge": "Life Path",
+    "cosmicSignature": "Your Cosmic Signature",
+    "description": "Reveal your life's purpose",
+    "discover": "Discover",
+    "highlight": "Insight",
+    "mainTitle": "Life Path Calculator",
+    "pageSubtitle": "Ancient Wisdom",
+    "subtitle": "Numerology",
+    "title": "Life Path",
+    "your": "Your"
+  },
+  "input": {
+    "birthDate": "Birth Date",
+    "birthDateError": "Invalid Date",
+    "calculating": "Calculating...",
+    "dateLabel": "Date of Birth",
+    "description": "Enter your birth details",
+    "fullName": "Full Name",
+    "nameLabel": "Name",
+    "namePlaceholder": "John Doe",
+    "submit": "Calculate",
+    "title": "Enter Details"
+  },
+  "intro": {
+    "badge": "Introduction",
+    "button": "Start",
+    "description": "Understand your numerological core",
+    "quote": "Numbers rule the universe",
+    "title": "About Life Path"
+  },
+  "meanings": {
+    "birthDay": "Birth Day",
+    "destiny": "Destiny",
+    "lifePath": "Life Path",
+    "personality": "Personality",
+    "soulUrge": "Soul Urge"
+  },
+  "meta": {
+    "description": "Life Path Numerology Calculator",
+    "keywords": "numerology, life path",
+    "title": "Life Path Calculator"
+  },
+  "result": {
+    "analyzeAnother": "Analyze Another",
+    "anotherPerson": "Check another person",
+    "dashboard": {
+      "advice": "Advice",
+      "career": "Career",
+      "challenges": "Challenges",
+      "strengths": "Strengths",
+      "yearEnergy": "Year Energy"
+    },
+    "dashboardTitle": "Your Dashboard",
+    "description": "Your detailed reading",
+    "lifeCoordination": "Life Coordination",
+    "readingTitle": "Your Reading",
+    "recommendedCities": "Recommended Cities",
+    "soulFoods": "Soul Foods"
+  },
+  "results": {
+    "expression": "Expression",
+    "header": "Results Header",
+    "lifePath": "Life Path",
+    "personality": "Personality",
+    "recalibrate": "Recalibrate",
+    "soulUrge": "Soul Urge",
+    "vibrationalResonance": "Vibrational Resonance"
+  },
+  "subtitle": "Reveal your path",
+  "title": "Life Path",
+  "numbers": {
+    "1": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Leader",
+      "keywords": [],
+      "name": "The Leader",
+      "strengths": [],
+      "traits": []
+    },
+    "2": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Mediator",
+      "keywords": [],
+      "name": "The Mediator",
+      "strengths": [],
+      "traits": []
+    },
+    "3": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Creative",
+      "keywords": [],
+      "name": "The Creative",
+      "strengths": [],
+      "traits": []
+    },
+    "4": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Builder",
+      "keywords": [],
+      "name": "The Builder",
+      "strengths": [],
+      "traits": []
+    },
+    "5": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Adventurer",
+      "keywords": [],
+      "name": "The Adventurer",
+      "strengths": [],
+      "traits": []
+    },
+    "6": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Nurturer",
+      "keywords": [],
+      "name": "The Nurturer",
+      "strengths": [],
+      "traits": []
+    },
+    "7": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Seeker",
+      "keywords": [],
+      "name": "The Seeker",
+      "strengths": [],
+      "traits": []
+    },
+    "8": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Powerhouse",
+      "keywords": [],
+      "name": "The Powerhouse",
+      "strengths": [],
+      "traits": []
+    },
+    "9": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Humanitarian",
+      "keywords": [],
+      "name": "The Humanitarian",
+      "strengths": [],
+      "traits": []
+    },
+    "11": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Intuitive",
+      "keywords": [],
+      "name": "The Master Intuitive",
+      "strengths": [],
+      "traits": []
+    },
+    "22": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Builder",
+      "keywords": [],
+      "name": "The Master Builder",
+      "strengths": [],
+      "traits": []
+    },
+    "33": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    }
+  }
+}

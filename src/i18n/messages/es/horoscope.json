@@ -1,0 +1,106 @@
+{
+  "title": "El Pronóstico Cósmico",
+  "subtitle": "Enero 2026",
+  "description": "Selecciona tu signo para revelar la guía celestial de este mes. Las estrellas se han alineado para iluminar tu camino.",
+  "zodiac": {
+    "aries": {
+      "name": "Aries",
+      "element": "Elemento Fuego",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "taurus": {
+      "name": "Tauro",
+      "element": "Elemento Tierra",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "gemini": {
+      "name": "Géminis",
+      "element": "Elemento Aire",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "cancer": {
+      "name": "Cáncer",
+      "element": "Elemento Agua",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "leo": {
+      "name": "Leona",
+      "element": "Elemento Fuego",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "virgo": {
+      "name": "Virgo",
+      "element": "Elemento Tierra",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "libra": {
+      "name": "Libra",
+      "element": "Elemento Aire",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "scorpio": {
+      "name": "Escorpio",
+      "element": "Elemento Agua",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "sagittarius": {
+      "name": "Sagitario",
+      "element": "Elemento Fuego",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "capricorn": {
+      "name": "Capricornio",
+      "element": "Elemento Tierra",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "aquarius": {
+      "name": "Acuario",
+      "element": "Elemento Aire",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    },
+    "pisces": {
+      "name": "Piscis",
+      "element": "Elemento Agua",
+      "luckyDay": "Día de suerte",
+      "luckyColor": "Color de la suerte"
+    }
+  },
+  "meta": {
+    "title": "Tu Horóscopo",
+    "description": "Perspectivas astrológicas de hoy y guía para tu signo zodiacal",
+    "keywords": "horóscopo, astrología, zodíaco, pronóstico diario, signos del zodiaco"
+  },
+  "hero": {
+    "title": "Tu Horóscopo",
+    "subtitle": "Analizando los ecos profundos de tus elecciones...",
+    "cta": "Leer Mi Horóscopo"
+  },
+  "test": {
+    "insightBullets": [
+      "Orientación astrológica diaria",
+      "Información personalizada del zodíaco",
+      "Pronóstico de energía cósmica"
+    ],
+    "progress": "Progreso",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "loading": "Cargando",
+    "selectOption": "Seleccionar"
+  },
+  "result": {
+    "title": "Tu Horóscopo",
+    "description": "Perspectivas astrológicas de hoy y guía para tu signo zodiacal"
+  }
+}

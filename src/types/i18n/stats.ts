@@ -1,0 +1,25 @@
+// Auto-generated shard for namespace: stats
+
+export type StatsKeys =
+  | "achievements"
+  | "badgeSubtitle"
+  | "badgeTitle"
+  | "completed"
+  | "completionRate"
+  | "level"
+  | "levelPrefix"
+  | "levelTitle"
+  | "maxLevelMessage"
+  | "pending"
+  | "percentile"
+  | "progressTitle"
+  | "remaining"
+  | "testsCompleted"
+  | "title"
+  | "toNextRank"
+  | "totalPointsSubtitle"
+  | "totalPointsTitle"
+  | "totalScore"
+  | "unlocked"
+  | "yourRank"
+  | "yourScore";

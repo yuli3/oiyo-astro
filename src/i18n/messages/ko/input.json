@@ -1,0 +1,62 @@
+{
+  "errors": {
+    "invalidDate": "날짜가 잘못되었습니다.",
+    "invalidTime": "시간이 잘못되었습니다.",
+    "unknown": "알 수 없는 오류가 발생했습니다."
+  },
+  "formTitle": "출생 세부정보 입력",
+  "privacyNote": "귀하의 정보는 분석 목적으로만 사용되며 영구적으로 저장되지 않습니다.",
+  "nameLabel": "이름",
+  "namePlaceholder": "이름을 입력하세요(선택사항)",
+  "birthDateLabel": "생년월일",
+  "birthTimeLabel": "출생 시간",
+  "hourPlaceholder": "허",
+  "minutePlaceholder": "MM",
+  "locationLabel": "출생지",
+  "locationPlaceholder": "도시 선택",
+  "trueSolarTime": "진태양시",
+  "timeUnknownTitle": "알 수 없는 시간",
+  "timeUnknownDesc": "시간을 알 수 없는 경우 분석은 날짜/연도 기둥에 중점을 둡니다.",
+  "genderLabel": "성별",
+  "genderPlaceholder": "선택하다",
+  "genderMale": "남성",
+  "genderFemale": "여성",
+  "calendarNoticeDesc": "우리는 달/태양 변환을 자동으로 처리합니다.",
+  "analyzing": "천체의 움직임을 계산하는 중...",
+  "submitButton": "운명을 밝혀라",
+  "secureTransmission": "안전한 연금술 전달",
+  "birthDate": "생년월일",
+  "birthTime": "출생 시간",
+  "location": "출생지",
+  "gender": "성별",
+  "dateLabel": "생일",
+  "timeLabel": "출생 시간",
+  "hourLabel": "시간",
+  "minuteLabel": "분",
+  "calendarNoticeTitle": "캘린더 시스템",
+  "timeline": {
+    "origin": "기원",
+    "moment": "순간",
+    "seal": "봉인하기"
+  },
+  "stage": {
+    "origin": {
+      "title": "누구세요?"
+    },
+    "moment": {
+      "title": "시작의 순간",
+      "lockedTitle": "좌표가 잠겼습니다.",
+      "hint": "정확한 분석을 위해 정확한 출생시간을 입력해 주세요."
+    },
+    "seal": {
+      "title": "봉인된 예언",
+      "description": "모든 시간 좌표가 정렬됩니다. 별들이 당신의 명령을 기다리고 있습니다."
+    }
+  },
+  "optional": "선택 과목",
+  "nextStep": "다음 단계",
+  "lockCoordinates": "좌표 잠금",
+  "unlock": "터놓다",
+  "anonymous": "익명의 여행자",
+  "revealProphecy": "봉인 해제 예언"
+}

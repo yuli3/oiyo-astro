@@ -1,0 +1,41 @@
+{
+  "AncientCoordinateCard": {
+    "colors": {
+      "red": "빨간색",
+      "white": "하얀색",
+      "blue": "파란색",
+      "yellow": "노란색"
+    },
+    "mayan": {
+      "systemName": "마야 드림스펠",
+      "narrative": "동시성 시각화",
+      "solarSeal": "솔라 씰",
+      "tone": "음정",
+      "toneOf": "{힘}의 음색",
+      "kin": "킨 {kin}",
+      "ariaLabel": "마야 동시성: 당신은 {tone}의 은하계 톤을 지닌 {seal}입니다. 당신은 {본질}의 본질을 구현합니다."
+    },
+    "celtic": {
+      "systemName": "켈트 드루이드",
+      "narrative": "자연법",
+      "treeSign": "나무 표시",
+      "ogham": "오검 문자",
+      "ariaLabel": "켈트 드루이드 좌표: 당신의 나무 표시는 {archetype}을 상징하는 {tree}입니다."
+    },
+    "egyptian": {
+      "systemName": "Egyptian Neteru",
+      "narrative": "신성한 질서",
+      "guardianDeity": "수호신",
+      "vedicSolar": "베딕 솔라 낙샤트라",
+      "symbol": "기호: {symbol}",
+      "deity": "신: {신}",
+      "decan": "이집트 데칸",
+      "hellenisticSect": "헬레니즘 종파",
+      "sect": {
+        "day": "낮 종파",
+        "night": "밤의 종파"
+      },
+      "ariaLabel": "이집트 수호신: 당신의 수호신은 {신}입니다. 당신은 {속성}의 특성을 가지고 있습니다."
+    }
+  }
+}

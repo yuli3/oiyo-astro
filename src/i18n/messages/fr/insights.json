@@ -1,0 +1,73 @@
+{
+  "yourScore": "Mon Score Énergétique",
+  "globalAverage": "Moyenne Globale",
+  "percentile": "Percentile",
+  "topPerformers": "Groupe de Tête",
+  "aboveAverage": "Au-dessus de la Moyenne",
+  "belowAverage": "En-dessous de la Moyenne",
+  "regions": "Distribution Énergétique",
+  "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself.",
+  "feature1": "[MANQUANT : fonctionnalité 1]",
+  "feature2": "[MANQUANT : fonctionnalité 2]",
+  "feature3": "[MANQUANT : fonctionnalité 3]",
+  "title": "Ready for more discoveries?",
+  "sections": {
+    "0": {
+      "id": "cœur",
+      "title": "Analyse de résonance centrale",
+      "description": "Une exploration des vibrations fondamentales qui définissent votre essence."
+    },
+    "1": {
+      "id": "spectrale",
+      "title": "Contraintes spectrales et ombres",
+      "description": "Illuminer les diverses facettes de votre être, du lumineux au profond."
+    },
+    "2": {
+      "id": "archétypes",
+      "title": "Archétypes évolutionnaires",
+      "description": "Identifier les schémas intemporels qui guident votre développement personnel."
+    },
+    "daily": "Lecture quotidienne",
+    "advice": "Conseils cosmiques"
+  },
+  "features": {
+    "growth": {
+      "title": "Ready for more discoveries?",
+      "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself."
+    },
+    "ai": {
+      "title": "Ready for more discoveries?",
+      "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself."
+    }
+  },
+  "cta": {
+    "title": "Prêt pour plus de découvertes ?",
+    "description": "Explorez nos tests de personnalité complets pour mieux comprendre vous-même.",
+    "button": "Explorer les tests"
+  },
+  "test": {
+    "insightBullets": [
+      "Décoder les fréquences cachées de vos choix.",
+      "Cartographier la constellation de vos récents sauts évolutifs.",
+      "Illuminer les motifs qui forment votre résonance unique."
+    ],
+    "progress": "Progrès",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "📤 Finaliser l'Analyse",
+    "selectOption": "Veuillez choisir l'option qui vous ressemble le plus",
+    "loading": "✨ Création de votre univers..."
+  },
+  "result": {
+    "title": "Mes Perspectives",
+    "description": "Un regard profond et vaste sur soi-même"
+  },
+  "meta": {
+    "title": "Ready for more discoveries?",
+    "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself.",
+    "keywords": "idées quotidiennes, sagesse, personnalité, conseils, IA"
+  },
+  "keywords": "Introspection, Psychologie, Analyse, Croissance",
+  "badge": "✨ Sagesse quotidienne",
+  "subtitle": "Sagesse du jour"
+}

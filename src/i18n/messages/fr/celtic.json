@@ -1,0 +1,83 @@
+{
+  "systemName": "Astrologie Celtique",
+  "narrative": "Sagesse des arbres.",
+  "treeSign": "Signe d'Arbre",
+  "ogham": "Ogham",
+  "trees": {
+    "birch": {
+      "tree": "Bouleau",
+      "archetype": "L'Accomplisseur",
+      "description": "Ambitieux et déterminé, possédant des qualités naturelles de leader."
+    },
+    "rowan": {
+      "tree": "Sorbier",
+      "archetype": "Le Penseur",
+      "description": "Philosophique et idéaliste, avec une passion pour changer le monde."
+    },
+    "ash": {
+      "tree": "Frêne",
+      "archetype": "L'Enchanteur",
+      "description": "Artistique et intuitif, avec une connexion profonde à la nature."
+    },
+    "alder": {
+      "tree": "Aulne",
+      "archetype": "Le Pionnier",
+      "description": "Aventureux et passionné, avec un charme qui mène les gens."
+    },
+    "willow": {
+      "tree": "Saule",
+      "archetype": "L'Observateur",
+      "description": "Patient et intelligent, avec une excellente mémoire."
+    },
+    "hawthorn": {
+      "tree": "Aubépine",
+      "archetype": "L'Illusionniste",
+      "description": "L'apparence extérieure diffère du moi intérieur ; créatif et curieux."
+    },
+    "oak": {
+      "tree": "Chêne",
+      "archetype": "Le Stabilisateur",
+      "description": "Fort et protecteur, un pilier de soutien pour les autres."
+    },
+    "holly": {
+      "tree": "Houx",
+      "archetype": "Le Souverain",
+      "description": "Noble et confiant, possédant la force de surmonter toute difficulté."
+    },
+    "hazel": {
+      "tree": "Noisetier",
+      "archetype": "Le Savant",
+      "description": "Intelligent, analytique et soucieux du détail."
+    },
+    "vine": {
+      "tree": "Vigne",
+      "archetype": "L'Égalisateur",
+      "description": "Élégant et charmant, avec des standards esthétiques élevés."
+    },
+    "ivy": {
+      "tree": "Lierre",
+      "archetype": "Le Survivant",
+      "description": "Persévérant et loyal, capable de s'adapter à tout environnement."
+    },
+    "reed": {
+      "tree": "Roseau",
+      "archetype": "L'Inquisiteur",
+      "description": "Aime découvrir les secrets, possède une profonde perspicacité et une volonté forte."
+    },
+    "elder": {
+      "tree": "Sureau",
+      "archetype": "Le Chercheur",
+      "description": "Poursuit la liberté et possède une nature philosophique cherchant un sens profond à la vie."
+    }
+  },
+  "ariaLabel": "Signe Celtique : {tree}, {archetype}",
+  "title": "Astrologie Celtique",
+  "egyptianGuardian": "Gardien Égyptien",
+  "celticTreeSign": "Signe de l'Arbre Celtique",
+  "birthSymbols": "Symboles de Naissance",
+  "symbols": {
+    "Stone": "Pierre",
+    "Flower": "Fleur",
+    "Star": "Étoile"
+  }
+}

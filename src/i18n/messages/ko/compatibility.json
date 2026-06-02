@@ -1,0 +1,90 @@
+{
+  "types": {
+    "soulmate": {
+      "name": "소울메이트",
+      "description": "설명이 필요없는 완벽한 하모니."
+    },
+    "complementary": {
+      "name": "보완적인",
+      "description": "다름이 매력적인 매력이 되는 관계."
+    },
+    "mentor": {
+      "name": "안내 연결",
+      "description": "상호 학습과 성장의 발전적 관계."
+    },
+    "challenging": {
+      "name": "성장 자극",
+      "description": "다름을 인정하는 것이 큰 깨달음을 가져오는 관계."
+    }
+  },
+  "scores": {
+    "high": "환상적인 화학",
+    "medium": "편안한 하모니",
+    "low": "노력이 필요함"
+  },
+  "title": "행운의 호환성",
+  "description": "관계와 시너지를 분석합니다.",
+  "narrative": "당신의 만남은 서로가 부족한 부분을 채워주는 귀중한 보석과 같습니다.",
+  "levels": {
+    "perfect": "완벽한 하모니",
+    "great": "훌륭한 화학",
+    "good": "좋은 잠재력",
+    "challenging": "성장 기회"
+  },
+  "selectPartner": "파트너 선택",
+  "selectDesc": "당신의 운명과 비교할 운명을 선택하세요.",
+  "insights": "깊은 통찰력",
+  "combination": "우주적 조합",
+  "loveLanguages": "사랑의 언어",
+  "dateIdeas": "데이트 아이디어",
+  "tryAnother": "다른 경기를 시도해보세요",
+  "share": "결과 공유",
+  "analysis": {
+    "excellent": "소울메이트",
+    "veryGood": "매우 좋은",
+    "good": "좋은 관계",
+    "average": "평균",
+    "needsWork": "일이 필요하다",
+    "challenging": "갈등을 조심하세요"
+  },
+  "subtitle": "두 운명의 조화를 발견해보세요",
+  "yourInfo": "귀하의 정보",
+  "partnerInfo": "파트너 정보",
+  "result": {
+    "title": "호환성 결과",
+    "elements": "강요",
+    "zodiac": "수대",
+    "personality": "성격",
+    "strengths": "강점",
+    "challenges": "성장 포인트",
+    "retake": "재큐레이트"
+  },
+  "error": "❌ 오류",
+  "calculate": "호환성 계산",
+  "traits": {
+    "controlling": {
+      "title": "도전적인 다이내믹",
+      "description": "마찰이나 갈등을 통해 성장으로 이어질 수 있는 반대 세력."
+    },
+    "neutral": {
+      "title": "균형 잡힌 연결",
+      "description": "강하게 지지하지도, 대립하지도 않아 안정적인 연결이 가능합니다."
+    },
+    "same": {
+      "title": "친절한 영혼",
+      "description": "비슷한 에너지 흐름이 깊은 이해와 우정을 만들어냅니다."
+    },
+    "supporting": {
+      "title": "지원관계",
+      "description": "서로에게 영양을 공급하고 지원하며 자연스러운 조화를 이루는 관계입니다."
+    }
+  },
+  "reasons": {
+    "same": "같은 요소를 공유하는 친구처럼 편안한 관계.",
+    "generates": "에너지와 활력을 주는 역동적인 관계.",
+    "generated_by": "따뜻함과 지지를 받는 지지적인 관계.",
+    "controls": "상호 도전을 통해 성취를 이끌어내는 적극적인 관계.",
+    "controlled_by": "상호 조정을 통해 질서를 찾는 규율 있는 관계.",
+    "neutral": "특별한 상호작용이 없는 중립적인 관계입니다."
+  }
+}

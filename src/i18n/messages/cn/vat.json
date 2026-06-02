@@ -1,0 +1,22 @@
+{
+  "description": "即时计算增值税（VAT）。",
+  "title": "增值税计算器",
+  "modes": {
+    "total": "从含税总额计算",
+    "supply": "从不含税价格计算"
+  },
+  "labels": {
+    "totalAmount": "含税总额（价值 + 税）",
+    "supplyAmount": "不含税供应价格"
+  },
+  "results": {
+    "supplyPrice": "供应价格",
+    "vat": "增值税金额",
+    "total": "含税总额"
+  },
+  "tip": {
+    "title": "什么是增值税？",
+    "content": "增值税是对商品和服务价值征收的消费税。"
+  },
+  "disclaimer": "本工具仅供参考和交流使用。"
+}

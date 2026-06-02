@@ -1,0 +1,6 @@
+{
+  "now": "En este momento",
+  "minute": "Hace {count} m",
+  "hour": "Hace {count}h",
+  "day": "Hace {count}d"
+}

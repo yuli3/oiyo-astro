@@ -1,0 +1,41 @@
+{
+  "filters": {
+    "all": "Tout",
+    "testCompletion": "Tests",
+    "social": "Social",
+    "streak": "Séries"
+  },
+  "notifications": {
+    "empty": "Aucune nouvelle notification."
+  },
+  "page": {
+    "title": "Mes Réalisations",
+    "subtitle": "Suivez votre progression et vos étapes débloquées."
+  },
+  "badgesUnlocked": "Badges Débloqués",
+  "overallProgress": "Progression Générale",
+  "viewAll": "Voir tout",
+  "emptyCategory": "Aucune réalisation dans cette catégorie pour l'instant.",
+  "labels": {
+    "level": "Niveau",
+    "points": "Points"
+  },
+  "title": "Réalisations",
+  "unlocked": "Débloqué",
+  "firstTest": {
+    "name": "Premier Test",
+    "description": "Premier test complété."
+  },
+  "fiveTests": {
+    "name": "High Five",
+    "description": "5 tests complétés."
+  },
+  "tenTests": {
+    "name": "Parfait 10",
+    "description": "10 tests complétés."
+  },
+  "explorer": {
+    "name": "Explorateur",
+    "description": "Exploré 3 catégories."
+  }
+}

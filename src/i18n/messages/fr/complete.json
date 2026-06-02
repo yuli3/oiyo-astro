@@ -1,0 +1,8 @@
+{
+  "success": "Succès!",
+  "message": "Vous êtes prêt.",
+  "benefits": {
+    "dashboard": "Accès au tableau de bord",
+    "recommendations": "Recommandations personnalisées"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "label": "Categoría",
+  "all": "Todo",
+  "payment": "Pago",
+  "account": "Cuenta",
+  "technical": "Técnica",
+  "feature_request": "Solicitud de función",
+  "general": "General"
+}

@@ -1,0 +1,13 @@
+{
+  "premium": {
+    "title": "Free",
+    "description": "Basic features."
+  },
+  "free": {
+    "title": "무료",
+    "description": "기본 기능."
+  },
+  "download": "다운로드",
+  "checkout": "점검",
+  "notice": "알아채다"
+}

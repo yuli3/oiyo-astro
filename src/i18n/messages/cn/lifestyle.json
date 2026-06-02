@@ -1,0 +1,45 @@
+{
+  "health": {
+    "sleepDream": {
+      "status": {
+        "no_data": {
+          "title": "无睡眠数据",
+          "desc": "还没有睡眠日志。 记录一下今天的睡眠情况。"
+        },
+        "critical_sleep": {
+          "title": "谨防睡眠不足",
+          "desc": "睡眠质量很差。 需要恢复。"
+        },
+        "good_state": {
+          "title": "良好的睡眠状态",
+          "desc": "看来你休息得足够了。 出色的。"
+        },
+        "neutral": {
+          "title": "正常睡眠状态",
+          "desc": "这还不错，但是为了获得更好的睡眠质量还有改进的空间。"
+        }
+      },
+      "metrics": {
+        "sleepScore": "睡眠评分",
+        "lastDream": "最后的梦",
+        "recorded": "已记录"
+      },
+      "prompts": {
+        "sleep": {
+          "title": "追踪您的睡眠",
+          "desc": "记录您今天的睡眠质量并检查您的分数。"
+        },
+        "dream": {
+          "title": "记录你的梦想",
+          "desc": "记录你记得的任何梦并解释它们的含义。"
+        }
+      },
+      "prescription": {
+        "title": "定制处方",
+        "desc": "看来你需要心灵和身体的平静。 尝试紧急按钮或呼吸练习。",
+        "button": "使用稳定性工具"
+      },
+      "quote": "睡眠是最好的冥想。 ——达赖喇嘛"
+    }
+  }
+}

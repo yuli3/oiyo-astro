@@ -1,0 +1,49 @@
+{
+  "description": "2025년 최신 세율을 반영하여 복잡한 세금계산을 한번에 해결해보세요.",
+  "title": "급여 계산기",
+  "labels": {
+    "salaryInput": "급여를 입력하세요",
+    "salaryPlaceholder": "급여를 입력해주세요",
+    "nonTaxable": "면세 식사비",
+    "nonTaxableHelp": "월급 중 과세 대상이 아닌 식사비 등을 입력하세요. (기본 20만원)",
+    "dependents": "부양가족 수(본인 포함)",
+    "children": "20세 미만 아동 수",
+    "disclaimer": "⚖️ 법적 고지",
+    "disclaimerText": "본 산정 결과는 2025년 세율 및 보험료를 기준으로 한 추정치이며, 실제 수령액은 회사 정책, 공제 항목 등에 따라 달라질 수 있습니다. 정확한 내용은 급여명세서를 확인하세요.",
+    "calculatePrompt": "연봉을 입력하고 계산버튼을 눌러주세요.",
+    "calculate": "계산하기",
+    "reset": "초기화",
+    "inputParameters": "입력 매개변수"
+  },
+  "result": {
+    "netPay": "예상월급",
+    "grossPay": "세전 급여",
+    "nationalPension": "국민연금",
+    "healthInsurance": "건강 보험",
+    "careInsurance": "장기요양",
+    "employmentInsurance": "고용 보험",
+    "incomeTax": "소득세",
+    "localTax": "지방소득세",
+    "totalDeductions": "총공제액",
+    "title": "📊 상세한 급여 분석",
+    "description": "이는 세금과 4대 보험을 공제한 실제 수입 추정치입니다.",
+    "harvestDescription": "우주 공제 후 예상 월간 수확량입니다.",
+    "pensionRate": "국민연금율(4.5%)",
+    "healthRate": "건강보험률(3.545%)"
+  },
+  "advisor": {
+    "tip": "💡 재정 고문의 조언",
+    "content": "예상되는 실제 소득을 기준으로 50/30/20 규칙(필수 지출/여가/저축)을 적용하세요. 세액공제 항목을 잘 고려하시면 연말정산시 환급을 받으실 수 있습니다."
+  },
+  "loading": {
+    "title": "급여 세부정보 분석 중...",
+    "step1": "연간 소득 확인",
+    "step2": "공제액 계산",
+    "step3": "세율 적용",
+    "step4": "순임금 확정"
+  },
+  "meta": {
+    "title": "급여 계산기 | 실제 급여 계산",
+    "description": "2025년 최신 세금 및 보험료를 포함한 급여계산기입니다. 국민연금, 건강보험, 소득세 등을 제외한 실제 월수입액을 정확하게 계산해 보세요."
+  }
+}

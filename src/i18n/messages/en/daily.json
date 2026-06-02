@@ -1,0 +1,40 @@
+{
+  "title": "Today's Reading",
+  "desc": "Your daily guidance.",
+  "status": {
+    "Gil": {
+      "title": "shining day of harmony",
+      "description": "The energy of the universe is on your side. Opportunities for growth and relationships are abundant."
+    },
+    "Hyung": {
+      "title": "Day of diligence and discipline",
+      "description": "Things may happen that test your resolve. Use this friction as a whetstone to sharpen your wisdom."
+    },
+    "Neutral": {
+      "title": "Day of Balance and Serenity",
+      "description": "The energy is harmonious and stable. Rather than making drastic changes, it is better to look within yourself and move forward steadily."
+    }
+  },
+  "elements": {
+    "Wood": "The energy of expansion and creation flows through you.",
+    "Fire": "The energy of passion and charisma burns brightly.",
+    "Earth": "The energy of stability and inclusiveness provides a strong foundation.",
+    "Metal": "The energy of clarity and determination cuts through the confusion.",
+    "Water": "The energy of wisdom and intuition flows deep and far."
+  },
+  "T": "T",
+  "subtitle": "What the stars say about your day",
+  "oracle": {
+    "selectZodiac": "Select your zodiac sign",
+    "synchronize": "Synchronize",
+    "imperialDecree": "Imperial Decree",
+    "analysisBasis": "Analysis Basis",
+    "message": "Today's Message",
+    "actionRitual": "Action Ritual",
+    "fateVsWill": "Fate vs. Will"
+  },
+  "dailyLucky": {
+    "title": "Today's Lucky Elements"
+  },
+  "action": "Take Action"
+}

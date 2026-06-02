@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "birthdate": "birth date",
+    "analyze": "analyze",
+    "dob": "birth date",
+    "check": "check"
+  },
+  "meta": {
+    "title": "birth flower test",
+    "description": "Check out your birth flower and its meaning based on your birthday.",
+    "keywords": "Birth flower, flower language, personality test, birthday, flower"
+  },
+  "result": {
+    "stone": "birthstone",
+    "flower": "birth flower",
+    "color": "protective color",
+    "title": "my birth flower",
+    "description": "Flowers that symbolize me and their meaning"
+  },
+  "test": {
+    "progress": "progress",
+    "submit": "submit",
+    "loading": "Loading",
+    "selectOption": "select",
+    "insightBullets": [
+      "Analyzing the symbolic meaning of flowers...",
+      "Analyzing personality traits...",
+      "Confirming the fate of the birth flower..."
+    ],
+    "next": "next",
+    "previous": "before"
+  },
+  "title": "Find my birth flower",
+  "description": "What flower resembles your soul?"
+}

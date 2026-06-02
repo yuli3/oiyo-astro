@@ -1,0 +1,50 @@
+{
+  "title": "宇宙旅者",
+  "archetypes": {
+    "radiant_catalyst": {
+      "title": "宇宙旅者",
+      "keywords": "平衡、和谐、统一"
+    },
+    "deep_seer": {
+      "title": "宇宙旅者",
+      "keywords": "平衡、和谐、统一"
+    },
+    "architect": {
+      "title": "宇宙旅者",
+      "keywords": "平衡、和谐、统一"
+    },
+    "messenger": {
+      "title": "宇宙旅者",
+      "keywords": "平衡、和谐、统一"
+    },
+    "growth_maker": {
+      "title": "宇宙旅者",
+      "keywords": "平衡、和谐、统一"
+    },
+    "refiner": {
+      "title": "宇宙旅者",
+      "keywords": "平衡、和谐、统一"
+    },
+    "spirit_walker": {
+      "title": "宇宙旅者",
+      "keywords": "平衡、和谐、统一"
+    },
+    "universal_traveler": {
+      "title": "宇宙旅者",
+      "keywords": "平衡、和谐、统一"
+    }
+  },
+  "narrative": {
+    "intro": "大档案馆开启，揭示你存在的模式。你是{archetype}。",
+    "body": "你的灵魂锻造于{element}。{synergy}。西方的星辰称你为{westernSign}，而东方的宫廷知你为{easternSign}。",
+    "conclusion": "带着{element}的智慧行走你的道路，这是你最大的力量。"
+  },
+  "synergies": {
+    "convergence": "横跨西方与吠陀天空的{element}汇聚",
+    "synthesis": "由{element}引领的独特融合"
+  },
+  "suggestions": {
+    "balance": "你的道路强大，然而{missing}的能量在你内心沉静。在他人或自然中寻找它。",
+    "harmony": "你行走在完全的元素和谐之中。"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "identify": {
+    "description": "당신의 운세를 확인해보세요."
+  },
+  "title": "데일리 오라클",
+  "subtitle": "우주 정렬",
+  "loading": "별들에게 자문을 구하다...",
+  "source": {
+    "PAYMENT": "상업",
+    "MAYAN": "마야 달력",
+    "SAJU": "사주(4개 기둥)",
+    "MBTI": "심리학",
+    "TCI": "기질",
+    "BIG5": "빅 5 특성"
+  },
+  "category": {
+    "EARTH": "지구 요소",
+    "CELESTIAL": "천상의 요소",
+    "SPIRIT": "정신 요소",
+    "HUMAN": "인간 요소"
+  },
+  "modal": {
+    "noteTitle": "건축가의 메모",
+    "noteDesc": "이 통찰력은 Synapse 프로토콜에서 실행되는 {source} 엔진에서 파생됩니다."
+  }
+}

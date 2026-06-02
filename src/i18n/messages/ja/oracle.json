@@ -1,0 +1,50 @@
+{
+  "title": "宇宙の旅人",
+  "archetypes": {
+    "radiant_catalyst": {
+      "title": "宇宙の旅人",
+      "keywords": "均衡、調和、統一"
+    },
+    "deep_seer": {
+      "title": "宇宙の旅人",
+      "keywords": "均衡、調和、統一"
+    },
+    "architect": {
+      "title": "宇宙の旅人",
+      "keywords": "均衡、調和、統一"
+    },
+    "messenger": {
+      "title": "宇宙の旅人",
+      "keywords": "均衡、調和、統一"
+    },
+    "growth_maker": {
+      "title": "宇宙の旅人",
+      "keywords": "均衡、調和、統一"
+    },
+    "refiner": {
+      "title": "宇宙の旅人",
+      "keywords": "均衡、調和、統一"
+    },
+    "spirit_walker": {
+      "title": "宇宙の旅人",
+      "keywords": "均衡、調和、統一"
+    },
+    "universal_traveler": {
+      "title": "宇宙の旅人",
+      "keywords": "均衡、調和、統一"
+    }
+  },
+  "narrative": {
+    "intro": "大いなる記録庫が開き、あなたの存在のパターンを明らかにします。あなたは{archetype}です。",
+    "body": "あなたの魂は{element}に鍛えられています。{synergy}。西洋の星々はあなたを{westernSign}と呼び、東洋の宮廷はあなたを{easternSign}として知っています。",
+    "conclusion": "{element}の叡智とともにあなたの道を歩みなさい、それがあなたの最大の力です。"
+  },
+  "synergies": {
+    "convergence": "西洋とヴェーダの空を横断する{element}の収束",
+    "synthesis": "{element}が導く独自の統合"
+  },
+  "suggestions": {
+    "balance": "あなたの道は強固ですが、{missing}のエネルギーがあなたの内で静かです。他者や自然の中にそれを求めなさい。",
+    "harmony": "あなたは完全なる元素の調和の中を歩んでいます。"
+  }
+}

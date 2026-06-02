@@ -1,0 +1,15 @@
+{
+  "loading": "加载中...",
+  "error": "发生错误",
+  "success": "成功",
+  "empty": "暂无数据",
+  "scrollForSynergy": "滚动以探索协同效应",
+  "analyzing": "分析中...",
+  "label": "状态",
+  "all": "全部",
+  "open": "开启",
+  "in_progress": "进行中",
+  "waiting_user": "等待用户",
+  "resolved": "已解决",
+  "closed": "已关闭"
+}

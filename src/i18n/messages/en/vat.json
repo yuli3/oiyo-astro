@@ -1,0 +1,22 @@
+{
+  "description": "Calculate Value Added Tax (VAT) instantly.",
+  "title": "VAT Calculator",
+  "modes": {
+    "total": "From Total Amount",
+    "supply": "From Supply Price"
+  },
+  "labels": {
+    "totalAmount": "Total Amount (Value + VAT)",
+    "supplyAmount": "Supply Price (Value w/o VAT)"
+  },
+  "results": {
+    "supplyPrice": "Supply Price",
+    "vat": "VAT Amount",
+    "total": "Total Amount"
+  },
+  "tip": {
+    "title": "What is VAT?",
+    "content": "VAT is a consumption tax added to the value of goods and services."
+  },
+  "disclaimer": "This tool is for conversational and indicative purposes only."
+}

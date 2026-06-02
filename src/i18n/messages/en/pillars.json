@@ -1,0 +1,46 @@
+{
+  "dailyInsight": {
+    "cosmicEnergy": "Cosmic Energy",
+    "flowerOfDay": "Flower of the Day",
+    "crystalOfPower": "Crystal of Power",
+    "guidingStar": "Guiding Star"
+  },
+  "composition": "Composition",
+  "earthlyBranch": "Earthly Branch",
+  "heavenlyStem": "Heavenly Stem",
+  "meaning": "Meaning",
+  "modernMeaning": "Modern Interpretation",
+  "represents": "Represents",
+  "traditionalDescription": "Traditional Description",
+  "viewModes": {
+    "modern": "Modern View",
+    "traditional": "Traditional View"
+  },
+  "interpretationSuffix": "Interpretation",
+  "modern": {
+    "year": {
+      "description": "The foundation inherited from your ancestors and the first footprints you leave on the world."
+    },
+    "month": {
+      "description": "Your professional environment and the framework of your social relationships."
+    },
+    "day": {
+      "description": "The core of your being and your primordial energy."
+    },
+    "hour": {
+      "description": "The manifestation of the legacy you will leave and your future potential."
+    }
+  },
+  "year": "Year Pillar",
+  "month": "Month Pillar",
+  "day": "Day Pillar",
+  "hour": "Hour Pillar",
+  "yearMeaning": "The deep significance of the Year Pillar, symbolizing your roots and ancestral energy.",
+  "monthMeaning": "The energy of the Month Pillar as expressed in social relationships and professional environments.",
+  "dayMeaning": "The interpretation of the Day Pillar, representing the core of the self and essential tendencies.",
+  "hourMeaning": "The explanation of the Hour Pillar, showing future potential and the fruits of later life.",
+  "yearRepresents": "Ancestors, childhood, parental background, and the foundation of life",
+  "monthRepresents": "Sociality, professional achievement, sibling relationships, and youth",
+  "dayRepresents": "Myself, spouse, current environment, and middle age",
+  "hourRepresents": "Children, later life, inner desires, and fruitfulness"
+}

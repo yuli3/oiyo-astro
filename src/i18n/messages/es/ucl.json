@@ -1,0 +1,9 @@
+{
+  "shared": {
+    "mandala": {
+      "loading": "Sintonizando frecuencias de resonancia...",
+      "error": "Fallo en la alineación del mandala.",
+      "accessibility": "Mandala visualizando energía"
+    }
+  }
+}

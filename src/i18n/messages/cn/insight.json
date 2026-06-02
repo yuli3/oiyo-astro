@@ -1,0 +1,10 @@
+{
+  "actions": {
+    "refresh": "刷新洞察",
+    "like": "点赞",
+    "share": "分享"
+  },
+  "loading": "正在准备今天的洞察...",
+  "focusArea": "今日重点领域: {area}",
+  "actionTip": "今日行动建议"
+}

@@ -1,0 +1,36 @@
+{
+  "moodCalendar": {
+    "grid": {
+      "title": "心情日历",
+      "noEntries": "还没有记录",
+      "addMood": "添加情感",
+      "daySun": "天",
+      "dayMon": "月",
+      "dayTue": "愤怒",
+      "dayWed": "数字",
+      "dayThu": "脖子",
+      "dayFri": "金子",
+      "daySat": "周六",
+      "moodQuestion": "你感觉如何？",
+      "close": "关闭",
+      "saveFailed": "保存失败",
+      "saved": "已保存",
+      "saveAsImage": "另存为图像"
+    }
+  },
+  "moodAnalyzer": {
+    "moods": {
+      "happy": "幸福",
+      "sad": "悲哀",
+      "anxious": "动荡",
+      "angry": "仇恨",
+      "calm": "宁静",
+      "excited": "兴奋的",
+      "sunny": "明朗",
+      "cloudy": "模糊",
+      "rainy": "雨",
+      "storm": "风暴",
+      "neutral": "中立性"
+    }
+  }
+}

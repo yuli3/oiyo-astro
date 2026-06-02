@@ -1,0 +1,443 @@
+{
+  "enneagram": {
+    "meta": {
+      "title": "Enneagram: Explore the 9 Personality Types",
+      "description": "Explore your inner world and gain insights for growth through the 9 Enneagram personality types. Discover core motivations, fears, strengths, and growth paths for each type.",
+      "keywords": "Enneagram, personality types, self-discovery, psychology, relationship understanding, OIYO"
+    },
+    "hero": {
+      "badge": "🎭 9 Personality Types",
+      "title": "Deepen Your Self-Understanding",
+      "description": "The Enneagram is a powerful tool that illuminates the essential motivations and fears hidden beneath your behavior. Discover your unique light and shadow.",
+      "cta": "Find My Type"
+    },
+    "triads": {
+      "gut": "Gut Center (8, 9, 1): Intuitive decision-makers dealing with anger and control",
+      "heart": "Heart Center (2, 3, 4): Emotional and relationship-oriented, dealing with image and identity",
+      "head": "Head Center (5, 6, 7): Analytical thinkers dealing with fear and security"
+    },
+    "typesSection": {
+      "title": "Learn More About the 9 Types"
+    },
+    "types": {
+      "type1": "Type 1. The Reformer",
+      "type2": "Type 2. The Helper",
+      "type3": "Type 3. The Achiever",
+      "type4": "Type 4. The Individualist",
+      "type5": "Type 5. The Investigator",
+      "type6": "Type 6. The Loyalist",
+      "type7": "Type 7. The Enthusiast",
+      "type8": "Type 8. The Challenger",
+      "type9": "Type 9. The Peacemaker"
+    },
+    "features": {
+      "title": "The Value of Enneagram",
+      "feature1_title": "Deep Self-Understanding",
+      "feature1_description": "Go beyond surface personality to illuminate the fundamental needs and fears that drive you.",
+      "feature2_title": "Customized Growth Paths",
+      "feature2_description": "Understand how each type reacts under stress and integration, and find directions for growth.",
+      "feature3_title": "Understand Relationship Dynamics",
+      "feature3_description": "Deeper, healthier relationships by understanding communication styles and conflict patterns.",
+      "feature4_title": "Unlock Your Potential",
+      "feature4_description": "Recognize your unique strengths and learn how to balance them in your life and career."
+    },
+    "cta": {
+      "title": "Journey Toward an Authentic Life",
+      "subtitle": "Start your Enneagram assessment today."
+    },
+    "test": {
+      "analyzing": "Analyzing...",
+      "findingType": "Identifying your Enneagram type",
+      "questionProgress": "Question {current} / {total}"
+    },
+    "result": {
+      "typeHeader": "Type {type}",
+      "personalitySection": "📖 Your Personality",
+      "motivationLabel": "Core Motivation",
+      "fearLabel": "Core Fear",
+      "strengthsLabel": "Strengths",
+      "challengesLabel": "Growth Challenges",
+      "growthPathLabel": "Growth Path",
+      "integrationLabel": "Direction of Growth (Integration)",
+      "disintegrationLabel": "Direction of Stress (Disintegration)",
+      "careersLabel": "Recommended Careers",
+      "famousPeopleLabel": "Famous People"
+    },
+    "profiles": {
+      "type1": {
+        "title": "Type 1: The Reformer",
+        "subtitle": "Principled and Idealistic Perfectionist",
+        "description": "Reformers pursue righteousness and morality. They are thorough, diligent, and have a strong desire to make the world a better place.",
+        "coreMotivation": "To be morally perfect and right.",
+        "coreFear": "Moral defect and being corrupt or bad.",
+        "strengths": [
+          "Strong ethics and morality",
+          "Diligent and responsible",
+          "Systematic and organized",
+          "Pursues improvement and progress",
+          "Honest and trustworthy"
+        ],
+        "challenges": [
+          "Excessive self-criticism and perfectionism",
+          "Lack of flexibility",
+          "Critical attitude toward others",
+          "Tendency to suppress anger",
+          "Difficulty enjoying rest and fun"
+        ],
+        "growthPath": [
+          "Practice accepting imperfection",
+          "Be kinder to yourself",
+          "Include fun and play in daily life",
+          "Express anger in healthy ways"
+        ],
+        "famousPeople": [
+          "Mahatma Gandhi",
+          "Nelson Mandela",
+          "Plato",
+          "Confucius"
+        ],
+        "career": [
+          "Judge",
+          "Teacher",
+          "Quality Manager",
+          "Editor",
+          "Architect",
+          "Accountant"
+        ]
+      },
+      "type2": {
+        "title": "Type 2: The Helper",
+        "subtitle": "Warm and Caring Supporter",
+        "description": "Helpers find great joy in helping others. They are sensitive to the needs of others and care for those around them with a warm heart.",
+        "coreMotivation": "To be loved and needed.",
+        "coreFear": "Being unloved and unwanted.",
+        "strengths": [
+          "Warm and highly empathetic",
+          "Identifies others' needs well",
+          "Builds and maintains relationships well",
+          "Generous and self-sacrificing",
+          "Positive and encouraging"
+        ],
+        "challenges": [
+          "Tendency to ignore own needs",
+          "Difficulty saying no",
+          "Need for appreciation",
+          "Can become manipulative",
+          "Difficulty setting boundaries"
+        ],
+        "growthPath": [
+          "Acknowledge your own feelings and needs",
+          "Practice saying a healthy \"no\"",
+          "Practice unconditional love",
+          "Prioritize self-care"
+        ],
+        "famousPeople": [
+          "Mother Teresa",
+          "Oprah Winfrey",
+          "Pope Francis",
+          "Jennifer Garner"
+        ],
+        "career": [
+          "Nurse",
+          "Counselor",
+          "Teacher",
+          "Social Worker",
+          "HR Specialist",
+          "Doctor"
+        ]
+      },
+      "type3": {
+        "title": "Type 3: The Achiever",
+        "subtitle": "Goal-Oriented and Efficient Strategist",
+        "description": "Achievers pursue success and recognition. They do their best to prove their abilities and aim for a productive and efficient life.",
+        "coreMotivation": "To succeed and be valued.",
+        "coreFear": "Being worthless or a failure.",
+        "strengths": [
+          "High ability to achieve goals",
+          "Efficient and productive",
+          "Confident and energetic",
+          "Strong adaptability",
+          "Excellent communication"
+        ],
+        "challenges": [
+          "Ignoring feelings for the sake of work",
+          "Excessive competitiveness",
+          "Obsession with image",
+          "Tendency to overwork",
+          "Fear of failure"
+        ],
+        "growthPath": [
+          "Acknowledge feelings beyond achievements",
+          "Value rest and inner self",
+          "Aim for authentic connection",
+          "Learn to accept failure as a process"
+        ],
+        "famousPeople": [
+          "Tony Robbins",
+          "Taylor Swift",
+          "Bill Clinton",
+          "Lady Gaga"
+        ],
+        "career": [
+          "CEO",
+          "Marketing Manager",
+          "Entrepreneur",
+          "Sales Representative",
+          "Public Speaker",
+          "Actor"
+        ]
+      },
+      "type4": {
+        "title": "Type 4: The Individualist",
+        "subtitle": "Creative and Sensitive Expressor",
+        "description": "Individualists value authenticity and unique identity. They immerse themselves deeply in their emotions and seek to be a one-of-a-kind presence in the world.",
+        "coreMotivation": "To discover true self and find personal meaning.",
+        "coreFear": "Being ordinary or having no identity.",
+        "strengths": [
+          "Creative and artistic",
+          "Deep emotional understanding",
+          "Authentic and honest",
+          "Highly empathetic",
+          "Appreciates uniqueness and beauty"
+        ],
+        "challenges": [
+          "Deep immersion in negative emotions",
+          "Self-consciousness and envy",
+          "Mood swings",
+          "Feeling misunderstood",
+          "Withdrawal from reality"
+        ],
+        "growthPath": [
+          "Maintain daily discipline and routines",
+          "Focus on the present rather than the past",
+          "Transform emotions into creative action",
+          "Acknowledge similarities with others"
+        ],
+        "famousPeople": [
+          "Vincent van Gogh",
+          "Johnny Depp",
+          "Frida Kahlo",
+          "Amy Winehouse"
+        ],
+        "career": [
+          "Artist",
+          "Designer",
+          "Writer",
+          "Musician",
+          "Psychotherapist",
+          "Actor"
+        ]
+      },
+      "type5": {
+        "title": "Type 5: The Investigator",
+        "subtitle": "Intellectual and Insightful Observer",
+        "description": "Investigators pursue knowledge and understanding. They focus on analyzing the world objectively, gathering information, and developing their own expertise.",
+        "coreMotivation": "To be capable, knowledgeable, and competent.",
+        "coreFear": "Being incompetent, helpless, or ignorant.",
+        "strengths": [
+          "Excellent analytical skills and insight",
+          "Independent and autonomous",
+          "Objective and fair",
+          "Deep expertise",
+          "Outstanding concentration"
+        ],
+        "challenges": [
+          "Difficulty expressing emotions",
+          "Tendency toward social isolation",
+          "Excessive privacy protection",
+          "Obsession with conserving energy",
+          "Prioritizing thought over action"
+        ],
+        "growthPath": [
+          "Explore the world of emotions",
+          "Connect with others socially",
+          "Turn knowledge into action",
+          "Practice sharing and generosity"
+        ],
+        "famousPeople": [
+          "Albert Einstein",
+          "Stephen Hawking",
+          "Bill Gates",
+          "Mark Zuckerberg"
+        ],
+        "career": [
+          "Researcher",
+          "Programmer",
+          "Professor",
+          "Analyst",
+          "Engineer",
+          "Author"
+        ]
+      },
+      "type6": {
+        "title": "Type 6: The Loyalist",
+        "subtitle": "Responsible and Reliable Guardian",
+        "description": "Loyalists pursue security and certainty. They are highly responsible, cooperative, and excellent at predicting and preparing for potential risks.",
+        "coreMotivation": "To have security and reliable support.",
+        "coreFear": "Being without support or guidance; being unsafe.",
+        "strengths": [
+          "Loyal and dedicated",
+          "Strong sense of responsibility",
+          "Ability to predict problems",
+          "Cooperative team player",
+          "Trustworthy"
+        ],
+        "challenges": [
+          "Excessive worry and anxiety",
+          "Difficulty making decisions",
+          "Ambivalence toward authority",
+          "Imagining worst-case scenarios",
+          "Doubt and distrust"
+        ],
+        "growthPath": [
+          "Trust your inner wisdom",
+          "Practice courage",
+          "Stay in the present moment",
+          "Develop independence"
+        ],
+        "famousPeople": [
+          "Tom Hanks",
+          "Jay Leno",
+          "George H.W. Bush",
+          "Ellen DeGeneres"
+        ],
+        "career": [
+          "Project Manager",
+          "Security Specialist",
+          "Lawyer",
+          "Soldier",
+          "Police Officer",
+          "Teacher"
+        ]
+      },
+      "type7": {
+        "title": "Type 7: The Enthusiast",
+        "subtitle": "Optimistic and Adventurous Explorer",
+        "description": "Enthusiasts pursue new experiences and a joyful life. They are energetic, versatile, and always explore positive possibilities.",
+        "coreMotivation": "To be happy, satisfied, and have a joyful life.",
+        "coreFear": "Pain and deprivation.",
+        "strengths": [
+          "Optimistic and positive",
+          "Creative and innovative",
+          "Highly adaptable",
+          "Energetic and lively",
+          "Diverse interests and talents"
+        ],
+        "challenges": [
+          "Lack of focus",
+          "Impulsive behavior",
+          "Avoiding pain and negative emotions",
+          "Excessive activity and fatigue",
+          "Avoiding responsibility"
+        ],
+        "growthPath": [
+          "Practice staying in the moment",
+          "Build deep relationships",
+          "Accept pain as part of growth",
+          "Develop the habit of finishing tasks"
+        ],
+        "famousPeople": [
+          "Robin Williams",
+          "Jim Carrey",
+          "Steven Spielberg",
+          "Mozart"
+        ],
+        "career": [
+          "Planner",
+          "Marketer",
+          "Travel Writer",
+          "Event Planner",
+          "Entrepreneur",
+          "Comedian"
+        ]
+      },
+      "type8": {
+        "title": "Type 8: The Challenger",
+        "subtitle": "Powerful and Confident Leader",
+        "description": "Challengers pursue control and justice. They are assertive and decisive, striving to protect those they care about and take initiative in the world.",
+        "coreMotivation": "To be strong, influential, and protect self.",
+        "coreFear": "Being controlled or harmed by others.",
+        "strengths": [
+          "Strong leadership",
+          "Decisiveness and action-oriented",
+          "Strong sense of justice",
+          "Honest and direct",
+          "Protective and supportive"
+        ],
+        "challenges": [
+          "Overly dominant",
+          "Aggressive and confrontational",
+          "Difficulty showing vulnerability",
+          "Excessive need for control",
+          "Difficulty controlling anger"
+        ],
+        "growthPath": [
+          "Acknowledge the power of gentleness",
+          "See vulnerability as courage",
+          "Trust others",
+          "Develop emotional sensitivity"
+        ],
+        "famousPeople": [
+          "Martin Luther King Jr.",
+          "Winston Churchill",
+          "Malcolm X",
+          "Serena Williams"
+        ],
+        "career": [
+          "CEO",
+          "Lawyer",
+          "Military Leader",
+          "Entrepreneur",
+          "Politician",
+          "Athlete"
+        ]
+      },
+      "type9": {
+        "title": "Type 9: The Peacemaker",
+        "subtitle": "Peaceful and Harmony-Seeking Mediator",
+        "description": "Peacemakers are calm and accepting people. They pursue harmony and peace, seeking to maintain inner stability by avoiding conflict.",
+        "coreMotivation": "To have peace and harmony in life.",
+        "coreFear": "Conflict and separation.",
+        "strengths": [
+          "Peaceful and stable",
+          "Highly empathetic",
+          "Mediation skills",
+          "Patient",
+          "Accepting and inclusive"
+        ],
+        "challenges": [
+          "Indecisiveness",
+          "Lack of self-assertion",
+          "Sloth and procrastination",
+          "Conflict avoidance",
+          "Ignoring own needs"
+        ],
+        "growthPath": [
+          "Express your own opinions",
+          "Set priorities",
+          "Move into action",
+          "See conflict as an opportunity for growth"
+        ],
+        "famousPeople": [
+          "Abraham Lincoln",
+          "Queen Elizabeth II",
+          "Walt Disney",
+          "Carl Jung"
+        ],
+        "career": [
+          "Counselor",
+          "Mediator",
+          "Diplomat",
+          "Veterinarian",
+          "Social Worker",
+          "Editor"
+        ]
+      }
+    }
+  },
+  "badge": "🎭 Enneagram",
+  "coreStrengths": "Core Strengths",
+  "integrationDisintegration": "Integration & Disintegration",
+  "growthToward": "Growth toward →",
+  "stressToward": "Stress toward →"
+}

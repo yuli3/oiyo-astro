@@ -1,0 +1,131 @@
+{
+  "runes": {
+    "fehu": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "uruz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "thurisaz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "ansuz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "raido": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "kenaz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "gebo": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "wunjo": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "hagalaz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "nauthiz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "isa": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "jera": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "eihwaz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "perthro": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "algiz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "sowilo": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "tiwaz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "berkana": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "ehwaz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "mannaz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "laguz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "inguz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "dagaz": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    },
+    "othala": {
+      "name": "Othala",
+      "meaning": "Héritage",
+      "keyword": "Ascendance"
+    }
+  },
+  "title": "Runes Nordiques",
+  "description": "Sagesse Viking ancienne de l'Ancien Futhark.",
+  "systemName": "Runes Nordiques",
+  "narrative": "Murmures d'Yggdrasil",
+  "rune": "Rune",
+  "reading": "Lecture de Rune",
+  "ariaLabel": "Rune : {name}, signifiant {meaning}."
+}

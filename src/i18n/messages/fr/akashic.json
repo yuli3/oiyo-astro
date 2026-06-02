@@ -1,0 +1,30 @@
+{
+  "tabs": {
+    "essence": "Essence",
+    "destiny": "Destinée",
+    "biology": "Rythme Biologique"
+  },
+  "essence": {
+    "title": "Archives Akashiques",
+    "quote": "La signature unique de votre conscience",
+    "soulFormula": "Formule de l'Âme",
+    "humanDesign": "Design Humain",
+    "authority": "Autorité",
+    "locked": "Débloquez pour révéler votre essence de l'âme"
+  },
+  "destiny": {
+    "title": "Archives Akashiques",
+    "lifePath": "Chemin de Vie",
+    "seeker": "Le Chercheur",
+    "animal": "Animal Gardien"
+  },
+  "biology": {
+    "title": "Archives Akashiques",
+    "chronotype": "Chronotype",
+    "constitution": "Constitution"
+  },
+  "title": "Archives Akashiques",
+  "subtitle": "Archives de l'Âme",
+  "close": "Fermer",
+  "description": "Explorez les archives intemporelles du voyage de votre âme à travers les vies."
+}

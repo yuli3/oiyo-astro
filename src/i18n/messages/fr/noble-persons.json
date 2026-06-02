@@ -1,0 +1,24 @@
+{
+  "roles": {
+    "guide": {
+      "name": "Le Catalyseur",
+      "description": "Des connexions précieuses qui vous aident dans le voyage de votre vie."
+    },
+    "supporter": {
+      "name": "Le Catalyseur",
+      "description": "Des connexions précieuses qui vous aident dans le voyage de votre vie."
+    },
+    "connector": {
+      "name": "Le Catalyseur",
+      "description": "Des connexions précieuses qui vous aident dans le voyage de votre vie."
+    },
+    "challenger": {
+      "name": "Le Catalyseur",
+      "description": "Des connexions précieuses qui vous aident dans le voyage de votre vie."
+    }
+  },
+  "title": "Personnes Nobles",
+  "description": "Des connexions précieuses qui vous aident dans le voyage de votre vie.",
+  "intro": "Si tu veux aller vite, marche seul. Si tu veux aller loin, marchons ensemble.",
+  "finding": "Regardez autour de vous. Votre personne noble est peut-être déjà à vos côtés."
+}

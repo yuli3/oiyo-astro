@@ -1,0 +1,22 @@
+{
+  "performance": {
+    "title": "Home Screen",
+    "description": "Quick access."
+  },
+  "offline": {
+    "title": "Home Screen",
+    "description": "Quick access."
+  },
+  "notifications": {
+    "title": "Home Screen",
+    "description": "Quick access."
+  },
+  "homeScreen": {
+    "title": "Pantalla de inicio",
+    "description": "Acceso rápido."
+  },
+  "fortune": "Fortuna",
+  "financial": "Financiera",
+  "content": "Contenido",
+  "expert": "Experta"
+}

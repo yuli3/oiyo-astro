@@ -1,0 +1,484 @@
+{
+  "color": {
+    "meta": {
+      "keywords": "personalidad viaje, estilo viaje, test vacaciones, planificación viaje",
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+    },
+    "types": {
+      "subtitle": "Resultado del Análisis",
+      "red": {
+        "name": "Buscador de Cultura (Culture Seeker)",
+        "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+      },
+      "blue": {
+        "name": "Buscador de Cultura (Culture Seeker)",
+        "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+      },
+      "green": {
+        "name": "Buscador de Cultura (Culture Seeker)",
+        "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+      },
+      "yellow": {
+        "name": "Buscador de Cultura (Culture Seeker)",
+        "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+      },
+      "title": "Armonía con Compañeros"
+    },
+    "hero": {
+      "subtitle": "Resultado del Análisis",
+      "cta": "Iniciar Diagnóstico",
+      "badge": "Psicología de Viajes",
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+    },
+    "benefits": {
+      "subtitle": "Resultado del Análisis",
+      "items": {
+        "0": {
+          "title": "Armonía con Compañeros",
+          "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+        },
+        "1": {
+          "title": "Armonía con Compañeros",
+          "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+        },
+        "2": {
+          "title": "Armonía con Compañeros",
+          "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+        },
+        "3": {
+          "title": "Armonía con Compañeros",
+          "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+        }
+      },
+      "title": "Armonía con Compañeros"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "¿Cómo usar estas ideas?",
+          "answer": "Al alinear tus tareas actuales con tu ritmo vocacional natural, reduces la fricción y aumentas la satisfacción."
+        },
+        "1": {
+          "question": "¿Cómo usar estas ideas?",
+          "answer": "Al alinear tus tareas actuales con tu ritmo vocacional natural, reduces la fricción y aumentas la satisfacción."
+        },
+        "2": {
+          "question": "¿Cómo usar estas ideas?",
+          "answer": "Al alinear tus tareas actuales con tu ritmo vocacional natural, reduces la fricción y aumentas la satisfacción."
+        },
+        "3": {
+          "question": "¿Cómo usar estas ideas?",
+          "answer": "Al alinear tus tareas actuales con tu ritmo vocacional natural, reduces la fricción y aumentas la satisfacción."
+        }
+      },
+      "title": "Armonía con Compañeros"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Fuerza de firma",
+          "description": "Análisis completo y conocimientos personalizados.",
+          "question": "¿Qué impulsa tus elecciones?",
+          "answer": "Tus valores internos guían tus acciones cotidianas."
+        },
+        {
+          "icon": "🚀",
+          "title": "Punto de pivote",
+          "description": "Recomendaciones basadas en datos para mejores resultados",
+          "question": "¿Qué impulsa tus elecciones?",
+          "answer": "Tus valores internos guían tus acciones cotidianas."
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "breakdown": "Tabla de Análisis",
+        "strengths": "Mis Fortalezas",
+        "growthAreas": "Áreas de Mejora",
+        "colorPalette": "Paleta de mi Alma",
+        "careerSuggestions": "Carreras Recomendadas",
+        "relationshipTips": "Guía Relacional"
+      },
+      "tabs": {
+        "traits": "Rasgos Principales",
+        "colors": "Energía de Color",
+        "career": "Trabajo/Carrera",
+        "relationships": "Relaciones Humanas"
+      },
+      "retake": "Reflexionar de Nuevo",
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+    },
+    "test": {
+      "title": "Armonía con Compañeros",
+      "finish": "Terminar",
+      "progress": "Progreso",
+      "submit": "Revelar mi Destino",
+      "loading": "Generando resultados...",
+      "selectOption": "Seleccionar Opción",
+      "insightBullets": ["Mapeando la constelación de tu verdadero yo."],
+      "previous": "Anterior",
+      "next": "Siguiente"
+    }
+  },
+  "bloodType": {
+    "meta": {
+      "keywords": "personalidad viaje, estilo viaje, test vacaciones, planificación viaje",
+      "compatibilityTitle": "Análisis de Compatibilidad Sanguínea | Encontrar la Pareja Perfecta",
+      "compatibilityDescription": "El flujo de energía sutil entre dos personas revelado por el grupo sanguíneo.",
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+    },
+    "hero": {
+      "subtitle": "Resultado del Análisis",
+      "icon": "🧭"
+    },
+    "test": {
+      "selectBloodType": "Seleccionar Grupo Sanguíneo",
+      "personality": {
+        "title": "Armonía con Compañeros",
+        "traits": "Rasgos Principales",
+        "positive": "Fortalezas y Encantos",
+        "challenges": "Puntos de Atención",
+        "button": "Ver Resultado de Compatibilidad"
+      },
+      "compatibility": {
+        "button": "Ver Resultado de Compatibilidad",
+        "title": "Armonía con Compañeros",
+        "my": "Yo",
+        "partner": "Pareja",
+        "result": "Resultado de Compatibilidad",
+        "score": "Puntuación de Compatibilidad"
+      },
+      "share": "Compartir",
+      "retake": "Reflexionar de Nuevo",
+      "progress": "Progreso",
+      "submit": "Revelar mi Destino",
+      "loading": "Generando resultados...",
+      "selectOption": "Seleccionar Opción",
+      "insightBullets": ["Mapeando la constelación de tu verdadero yo."],
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "Copied to clipboard!": "¡Enlace copiado!",
+    "result": {
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+    },
+    "Link copied to clipboard!": "¡Enlace copiado con éxito!"
+  },
+  "animal": {
+    "meta": {
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "keywords": "personalidad viaje, estilo viaje, test vacaciones, planificación viaje"
+    },
+    "hero": {
+      "title": "Armonía con Compañeros",
+      "subtitle": "Resultado del Análisis",
+      "cta": "Iniciar Diagnóstico"
+    },
+    "title": "Armonía con Compañeros",
+    "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+    "subtitle": "Resultado del Análisis",
+    "introTitle": "¿Y si yo fuera un animal?",
+    "feature1Title": "Descubrimiento del Temperamento Innato",
+    "feature1Desc": "Explica el temperamento innato antes del aprendizaje social mediante analogía con rasgos animales.",
+    "feature2Title": "Análisis Detallado",
+    "feature2Desc": "Más allá del simple entretenimiento, una visión profunda de tus patrones de comportamiento.",
+    "feature3Title": "Ecosistema Relacional",
+    "feature3Desc": "Te decimos con qué tipo de animal te llevas bien y con cuál tener cuidado.",
+    "animalTypes": "Diversos Tipos de Animales",
+    "startTest": "Comenzar Viaje"
+  },
+  "futureSelf": {
+    "meta": {
+      "keywords": "personalidad viaje, estilo viaje, test vacaciones, planificación viaje"
+    },
+    "hero": {
+      "eyebrow": "Laboratorio de Viaje en el Tiempo",
+      "subtitle": "Resultado del Análisis",
+      "cta": "Iniciar Diagnóstico"
+    }
+  },
+  "career": {
+    "meta": {
+      "keywords": "personalidad viaje, estilo viaje, test vacaciones, planificación viaje",
+      "hero": {
+        "badge": "Psicología de Viajes",
+        "subtitle": "Resultado del Análisis"
+      },
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "title": "Armonía con Compañeros"
+    },
+    "types": {
+      "subtitle": "Resultado del Análisis",
+      "realistic": {
+        "name": "Buscador de Cultura (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "investigative": {
+        "name": "Buscador de Cultura (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "artistic": {
+        "name": "Buscador de Cultura (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "social": {
+        "name": "Buscador de Cultura (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "enterprising": {
+        "name": "Buscador de Cultura (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "conventional": {
+        "name": "Buscador de Cultura (Culture Seeker)",
+        "emoji": "📊"
+      }
+    },
+    "hero": {
+      "badge": "Psicología de Viajes",
+      "subtitle": "Resultado del Análisis",
+      "cta": "Iniciar Diagnóstico",
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+    },
+    "benefits": {
+      "subtitle": "Resultado del Análisis",
+      "items": [
+        {
+          "title": "Alineación central",
+          "description": "Descubra las carreras que naturalmente resuenan con sus valores y habilidades más profundos."
+        },
+        {
+          "title": "Armonía ambiental",
+          "description": "Identifique las culturas y atmósferas laborales en las que realmente prosperará."
+        },
+        {
+          "title": "Claridad estratégica",
+          "description": "Obtenga un mapa claro para su crecimiento profesional y su legado vocacional a largo plazo."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "¿Cuál es la esencia del marco RIASEC?",
+          "answer": "Es una lente que revela cómo sus patrones de personalidad se traducen en entornos profesionales."
+        },
+        {
+          "question": "¿Cómo puedo utilizar estos conocimientos hoy?",
+          "answer": "Al alinear sus tareas actuales con su ritmo vocacional natural, reduce la fricción y aumenta la satisfacción."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "🎯",
+          "title": "Identificación de arquetipos",
+          "description": "Un mapeo preciso de su personalidad frente a los seis tipos vocacionales básicos."
+        },
+        {
+          "icon": "🧭",
+          "title": "Perspectivas direccionales",
+          "description": "Orientación estratégica para elegir caminos que ofrezcan la mayor resonancia."
+        }
+      ]
+    },
+    "title": "Armonía con Compañeros",
+    "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+    "test": {
+      "scale": {
+        "1": "Muy en desacuerdo",
+        "2": "En desacuerdo",
+        "3": "Neutral",
+        "4": "De acuerdo",
+        "5": "Muy de acuerdo"
+      },
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "subtitle": "Resultado del Análisis",
+      "rateInstructions": "Reflexiona sobre cada afirmación y elige el grado de resonancia con tu verdad.",
+      "progress": "Progreso",
+      "submit": "Revelar mi Destino",
+      "selectOption": "Seleccionar Opción",
+      "insightBullets": [
+        "Trazando las líneas donde la pasión se encuentra con la disciplina.",
+        "Escuchando el eco de tu destino profesional.",
+        "Reuniendo los fragmentos de tu identidad vocacional."
+      ],
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "loading": "Generando resultados..."
+    },
+    "result": {
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "primaryType": "Arquetipo Dominante",
+      "allTypes": "Espectro Completo",
+      "careers": "Caminos Recomendados",
+      "workEnvironment": "Entorno Ideal",
+      "secondaryType": "Arquetipo Secundario",
+      "understanding": "Sabiduría del Arquetipo",
+      "retake": "Reflexionar de Nuevo"
+    }
+  },
+  "testGrid": {
+    "searchPlaceholder": "Buscar arquetipos, destino o patrones...",
+    "filterAll": "Ver todo",
+    "categories": {
+      "personality": "Esencia y Alma"
+    },
+    "sortBy": {
+      "popularity": "Resonancia Popular",
+      "newest": "Nuevas Ideas",
+      "time": "Duración",
+      "difficulty": "Profundidad Intelectual"
+    },
+    "startTest": "Comenzar Viaje",
+    "noResults": "No se encontraron ecos para esta búsqueda.",
+    "clearFilters": "Reiniciar Filtros",
+    "sortPopular": "Alta Resonancia",
+    "sortAlpha": "Orden Alfabético",
+    "new": "NUEVO",
+    "trending": "TENDENCIA",
+    "empty": {
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "clearFilters": "Reiniciar Filtros"
+    },
+    "test": {
+      "progress": "Progreso",
+      "submit": "Revelar mi Destino",
+      "loading": "Generando resultados...",
+      "selectOption": "Seleccionar Opción",
+      "insightBullets": [
+        "Trazando las líneas donde la pasión se encuentra con la disciplina.",
+        "Escuchando el eco de tu verdadero yo.",
+        "Reuniendo los fragmentos de su identidad personal."
+      ],
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje."
+    },
+    "meta": {
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "keywords": "personalidad viaje, estilo viaje, test vacaciones, planificación viaje"
+    }
+  },
+  "learning": {
+    "meta": {
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "title": "Armonía con Compañeros",
+      "keywords": "personalidad viaje, estilo viaje, test vacaciones, planificación viaje"
+    },
+    "hero": {
+      "title": "Armonía con Compañeros",
+      "subtitle": "Resultado del Análisis",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "badge": "Psicología de Viajes"
+    }
+  },
+  "travel": {
+    "hero": {
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "badge": "Psicología de Viajes",
+      "title": "Armonía con Compañeros",
+      "subtitle": "Resultado del Análisis",
+      "cta": "Iniciar Diagnóstico"
+    },
+    "test": {
+      "title": "Armonía con Compañeros",
+      "subtitle": "Resultado del Análisis",
+      "progress": "Progreso",
+      "submit": "Revelar mi Destino",
+      "loading": "Generando resultados...",
+      "selectOption": "Seleccionar Opción",
+      "insightBullets": [
+        "Estilo de viaje",
+        "Compañeros ideales",
+        "Consejos de destino"
+      ],
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "subtitle": "Resultado del Análisis",
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "loading": "Generando resultados...",
+      "sections": {
+        "traits": "Rasgos Principales",
+        "destinations": "Destinos Recomendados",
+        "packing": "Estilo de Equipaje",
+        "planning": "Estilo de Planificación"
+      },
+      "retakeTest": "Repetir Test"
+    },
+    "types": {
+      "items": [
+        {
+          "name": "Aventurera",
+          "description": "Buscando nuevas experiencias y emociones."
+        },
+        {
+          "name": "Planificadora",
+          "description": "Organizada y preparada para todo."
+        },
+        {
+          "name": "Relajante",
+          "description": "Vacaciones significa no hacer absolutamente nada."
+        },
+        {
+          "name": "Fotógrafa",
+          "description": "Captar cada momento es la prioridad."
+        },
+        {
+          "name": "Conocedor gourmet",
+          "description": "Las experiencias culinarias definen el viaje."
+        },
+        {
+          "name": "Buscador de cultura",
+          "description": "Sumergirse en la historia y las tradiciones locales."
+        }
+      ],
+      "title": "Armonía con Compañeros"
+    },
+    "meta": {
+      "title": "Armonía con Compañeros",
+      "description": "Comprende y ajusta las diferencias con tus compañeros de viaje.",
+      "keywords": "personalidad viaje, estilo viaje, test vacaciones, planificación viaje"
+    },
+    "benefits": {
+      "title": "Armonía con Compañeros",
+      "items": [
+        {
+          "title": "Viajes a prueba de fallos",
+          "description": "Encuentra destinos que se ajusten perfectamente a ti."
+        },
+        {
+          "title": "Presupuesto inteligente",
+          "description": "Gasta dinero en lo que te importa."
+        },
+        {
+          "title": "Más disfrute",
+          "description": "Reducir el estrés y aumentar la satisfacción."
+        },
+        {
+          "title": "Mejor armonía",
+          "description": "Comprender las diferencias con los compañeros de viaje."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,227 @@
+{
+  "title": "ベーダ占星術 (Vedic Astrology)",
+  "description": "古代インドの月の宿システム。",
+  "systemName": "ベーダ占星術",
+  "narrative": "ナクシャトラ (月の宿)",
+  "resonance": {
+    "note": "アーカイブは、あなたの月が宿る場所、{nakshatraName} ({moonSign}) を観測します。古代の賢者たちは、この宿を神 {deity} と結びつけました。これは予言ではなく、あなたが生まれた瞬間に月の光が触れた天の記憶です。"
+  },
+  "nakshatras": {
+    "1": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "2": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "3": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "4": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "5": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "6": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "7": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "8": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "9": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "10": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "11": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "12": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "13": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "14": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "15": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "16": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "17": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "18": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "19": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "20": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "21": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "22": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "23": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "24": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "25": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "26": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    },
+    "27": {
+      "name": "レーヴァティ (Revati)",
+      "meaning": "豊かな者",
+      "deity": "プーシャン (Pushan)",
+      "keywords": "旅, 養育, 繁栄, 完成",
+      "animal": "象",
+      "symbol": "魚/太鼓"
+    }
+  }
+}

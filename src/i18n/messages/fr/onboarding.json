@@ -1,0 +1,57 @@
+{
+  "steps": {
+    "welcome": {
+      "description": "Découvrez votre empreinte cosmique à travers la sagesse ancienne et la psychologie moderne.",
+      "title": "Bienvenue dans Votre Sanctuaire"
+    },
+    "interests": {
+      "description": "Choisissez ce qui vous parle — nous personnaliserons votre parcours.",
+      "title": "Qu'est-ce qui vous attire ?"
+    },
+    "complete": {
+      "description": "Votre sanctuaire est prêt. Commencez votre voyage de découverte de soi.",
+      "title": "Votre Sanctuaire Vous Attend"
+    }
+  },
+  "interests": {
+    "personality": "Personnalité",
+    "career": "Carrière",
+    "relationships": "Relations",
+    "wellness": "Bien-être",
+    "creativity": "Créativité",
+    "lifestyle": "Style de vie",
+    "prompt": "Choisissez vos domaines d'intérêt"
+  },
+  "welcome": {
+    "user": "Bienvenue, {name}",
+    "description": "Vous avez rejoint une communauté de chercheurs explorant l'architecture du soi."
+  },
+  "features": {
+    "tests": {
+      "title": "Tests de Personnalité",
+      "description": "Plus de 30 évaluations fondées sur la science."
+    },
+    "history": {
+      "title": "Votre Historique",
+      "description": "Tous vos résultats sauvegardés et organisés."
+    },
+    "recommendations": {
+      "title": "Perspectives Personnalisées",
+      "description": "Des conseils adaptés à votre profil unique."
+    }
+  },
+  "complete": {
+    "success": "Accueil terminé",
+    "message": "Vos préférences ont été enregistrées. Bienvenue dans le Sanctuaire.",
+    "benefits": {
+      "dashboard": "Accédez à votre tableau de bord personnel",
+      "recommendations": "Recevez des recommandations personnalisées"
+    }
+  },
+  "actions": {
+    "skip": "Passer",
+    "completing": "Entrée dans le Sanctuaire...",
+    "getStarted": "Entrer dans le Sanctuaire",
+    "next": "Suivant"
+  }
+}

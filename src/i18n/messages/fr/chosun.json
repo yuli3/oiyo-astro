@@ -1,0 +1,11 @@
+{
+  "subtitle": "Découvrez votre faction historique",
+  "title": "Analyse des Factions de Chosun",
+  "labels": {
+    "faction": "Faction",
+    "innate": "Nature Innée",
+    "behavioral": "Traits Comportementaux",
+    "comparison": "Score de Correspondance",
+    "alignment": "Détails de l'Alignement"
+  }
+}

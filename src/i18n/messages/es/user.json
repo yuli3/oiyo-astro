@@ -1,0 +1,88 @@
+{
+  "lifePath": {
+    "title": "Arquetipo de Sinergia",
+    "description": "Tu espacio personal para la reflexión y la meditación.",
+    "phases": {
+      "foundation": {
+        "period": "Sabiduría (40+)",
+        "title": "Arquetipo de Sinergia",
+        "description": "Tu espacio personal para la reflexión y la meditación."
+      },
+      "prime": {
+        "period": "Sabiduría (40+)",
+        "title": "Arquetipo de Sinergia",
+        "description": "Tu espacio personal para la reflexión y la meditación."
+      },
+      "wisdom": {
+        "period": "Sabiduría (40+)",
+        "title": "Arquetipo de Sinergia",
+        "description": "Tu espacio personal para la reflexión y la meditación."
+      }
+    }
+  },
+  "destiny": {
+    "title": "Arquetipo de Sinergia",
+    "yearly": "Flujo anual",
+    "monthly": "Ritmo mensual",
+    "daily": "Energía diaria",
+    "themes": {
+      "1": "Nuevos comienzos e independencia",
+      "2": "Cooperación y paciencia",
+      "3": "Expresión creativa y alegría",
+      "4": "Orden y construcción de cimientos",
+      "5": "Cambio y libertad",
+      "6": "Responsabilidad y hogar",
+      "7": "Introspección y sabiduría",
+      "8": "Poder y logro",
+      "9": "Finalización y dejar ir"
+    },
+    "inflectionPoint": "Energía de inflexión máxima",
+    "chronos": "Línea de tiempo de Chronos"
+  },
+  "radar": {
+    "title": "Arquetipo de Sinergia",
+    "dimensions": {
+      "mind": "Mente",
+      "destiny": "Destino",
+      "time": "Tiempo",
+      "drive": "Impulso",
+      "vitality": "Vitalidad"
+    },
+    "description": "Tu espacio personal para la reflexión y la meditación."
+  },
+  "sanctum": {
+    "title": "Arquetipo de Sinergia",
+    "description": "Tu espacio personal para la reflexión y la meditación.",
+    "enter": "Entrar al Sanctum"
+  },
+  "quantum": {
+    "title": "Arquetipo de Sinergia",
+    "subtitle": "Equilibrio hormonal y sugerencias de estilo de vida",
+    "simulate": "Ejecutar simulación",
+    "results": "Resultados de la simulación",
+    "reset": "Restablecer perfil original",
+    "labels": {
+      "mbti": "MBTI",
+      "element": "Elemento",
+      "personalYear": "Año personal",
+      "lifeType": "Tipo de vida (HD)"
+    },
+    "simulationMode": "Modo de simulación activo: Todos los resultados se basan en datos virtuales."
+  },
+  "biological": {
+    "title": "Arquetipo de Sinergia",
+    "subtitle": "Equilibrio hormonal y sugerencias de estilo de vida",
+    "circadian": "Ritmo circadiano",
+    "energy": "Niveles de energía",
+    "advice": "Acción recomendada",
+    "mainFunction": "Función principal",
+    "lifestyleAdvice": "Consejos de estilo de vida"
+  },
+  "synergy": {
+    "title": "Arquetipo de Sinergia",
+    "compatibility": "Compatibilidad",
+    "traits": "Rasgos clave",
+    "level": "Nivel de sinergia",
+    "unlocked": "Arquetipo de síntesis desbloqueado"
+  }
+}

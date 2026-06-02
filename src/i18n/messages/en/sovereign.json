@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "hero": "Hero",
+    "oracle": "Oracle",
+    "ontology": "Ontology",
+    "vault": "Vault",
+    "growth": "Growth"
+  },
+  "labels": {
+    "ascend": "Ascend",
+    "celestialChart": "Celestial Chart",
+    "archives": "Archives",
+    "evolution": "Evolution"
+  },
+  "growth": {
+    "full": "Full Growth",
+    "unfinished": "Unfinished",
+    "fullDesc": "Complete growth path.",
+    "unfinishedDesc": "Path in progress.",
+    "review": "Review",
+    "discover": "Discover"
+  }
+}

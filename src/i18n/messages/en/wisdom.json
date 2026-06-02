@@ -1,0 +1,16 @@
+{
+  "sanctuary": {
+    "mental": {
+      "anxietyRelief": {
+        "title": "Anxiety Relief",
+        "description": "Find peace and calm through guided breathing exercises.",
+        "breathingIn": "Breathing In",
+        "breathingOut": "Breathing Out",
+        "hold": "Hold",
+        "start": "Start",
+        "pause": "Pause",
+        "reset": "Reset"
+      }
+    }
+  }
+}

@@ -1,0 +1,567 @@
+{
+  "dating": {
+    "meta": {
+      "test": {
+        "insightBullets": ["探索你内心景观的深层架构。"],
+        "progress": "进度",
+        "submit": "提交",
+        "loading": "加载中...",
+        "selectOption": "请选择选项",
+        "next": "下一步",
+        "previous": "上一步"
+      },
+      "result": {
+        "title": "个性化报告",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "meta": {
+        "title": "个性化报告",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "keywords": "MBTI约会, 分析, 评分, 专业"
+      },
+      "resultTitle": "MBTI约会结果分析",
+      "resultDescription": "深入分析您的MBTI约会结果。",
+      "testTitle": "MBTI约会评估",
+      "testDescription": "立即计算您的MBTI约会分数。",
+      "keywords": "MBTI约会, 分析, 评分, 专业",
+      "title": "个性化报告",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "hero": {
+      "subtitle": "自发且充满热情的表演者",
+      "badge": "新",
+      "cta": "开始测试",
+      "title": "个性化报告",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "在与新朋友的聚会上，我...",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "获得能量并引导对话。",
+            "emoji": "🥳",
+            "scores": {
+              "E": 1
+            }
+          },
+          {
+            "text": "在安静的地方与几个人进行深入的交谈。",
+            "emoji": "🤔",
+            "scores": {
+              "I": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "当我喜欢一个人的时候...",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "我首先被他们的现实优势（工作、风格等）所吸引。",
+            "emoji": "💼",
+            "scores": {
+              "S": 1
+            }
+          },
+          {
+            "text": "我首先被我与他们一起想象的未来所吸引。",
+            "emoji": "💭",
+            "scores": {
+              "N": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "当我和我的伴侣吵架时，我...",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "逻辑分析问题所在，并尝试找到解决方案。",
+            "emoji": "🧐",
+            "scores": {
+              "T": 1
+            }
+          },
+          {
+            "text": "首先检查他们的感受，并尝试用同理心来安慰他们。",
+            "emoji": "❤️",
+            "scores": {
+              "F": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "当计划约会时...",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "我完美地计划了一切，从餐厅到咖啡馆和路线。",
+            "emoji": "🗺️",
+            "scores": {
+              "J": 1
+            }
+          },
+          {
+            "text": "我会根据当天的心情自发决定去哪里。",
+            "emoji": "🎉",
+            "scores": {
+              "P": 1
+            }
+          }
+        ]
+      }
+    ],
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "MBTI 1",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🚀",
+          "title": "MBTI 2",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "💡",
+          "title": "MBTI 3",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "MBTI 4",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🔥",
+          "title": "MBTI 5",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "⭐",
+          "title": "MBTI 6",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "小小的选择累积成伟大的命运。"
+        }
+      ],
+      "subtitle": "自发且充满热情的表演者",
+      "title": "个性化报告"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "MBTI 1",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "MBTI 2",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "💡",
+          "title": "MBTI 3",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🎯",
+          "title": "MBTI 4",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🔥",
+          "title": "MBTI 5",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "⭐",
+          "title": "MBTI 6",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        }
+      ],
+      "title": "个性化报告"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "MBTI 1",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "🚀",
+          "title": "MBTI 2",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "💡",
+          "title": "MBTI 3",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "MBTI 4",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🔥",
+          "title": "MBTI 5",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "⭐",
+          "title": "MBTI 6",
+          "description": "探索你内心景观的深层架构。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["标志性强度", "枢轴点", "2"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中...",
+      "selectOption": "请选择选项",
+      "subtitle": "自发且充满热情的表演者",
+      "finish": "已完成",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "个性化报告",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "traits": "Traits",
+      "share": "分享",
+      "retake": "重新测试"
+    },
+    "types": {
+      "INTJ": {
+        "traits": ["战略", "独立的", "决定性", "完美主义者"],
+        "strengths": ["长期规划", "逻辑推理", "高能力"],
+        "challenges": [
+          "可能会显得傲慢",
+          "不喜欢不可预测性",
+          "情绪表达方面存在困难"
+        ],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INFP", "INFJ"],
+          "challenging": ["ISFP", "ESFP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "INTP": {
+        "traits": ["分析型", "好奇的", "抽象的", "富有想象力"],
+        "strengths": ["解决问题", "理论理解", "创造力"],
+        "challenges": [
+          "可能会心不在焉",
+          "不喜欢严格的规则",
+          "可能会在实际问题上遇到困难"
+        ],
+        "compatibility": {
+          "best": ["ENTJ", "ESTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ENTJ": {
+        "traits": ["决定性", "自信的", "雄心勃勃", "高效的"],
+        "strengths": ["领导", "战略规划", "直接沟通"],
+        "challenges": ["可能会不耐烦", "可能显得不敏感", "强烈的控制需求"],
+        "compatibility": {
+          "best": ["INFP", "INTP"],
+          "good": ["ENTP", "ENFJ"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ENTP": {
+        "traits": ["机智", "创新的", "灵活的", "精力充沛"],
+        "strengths": ["深刻的思想家", "热闹的对话", "适应性"],
+        "challenges": ["可以争论", "可能会难以保持一致性", "不能容忍停滞"],
+        "compatibility": {
+          "best": ["INFJ", "INTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "INFJ": {
+        "traits": ["富有洞察力", "有原则的", "有创造力的", "热情的"],
+        "strengths": ["情商", "同情", "正直"],
+        "challenges": ["避免冲突", "可能过于私密", "极高的标准"],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INTJ", "INFP"],
+          "challenging": ["ESTP", "ESFP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "INFP": {
+        "traits": ["善解人意", "理想主义", "有创造力的", "温和的"],
+        "strengths": ["深深的奉献", "思想开放", "同情"],
+        "challenges": ["可能过于敏感", "避免实际细节", "批评有困难"],
+        "compatibility": {
+          "best": ["ENFJ", "ENTJ"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ISTJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ENFJ": {
+        "traits": ["魅力型", "善解人意", "负责任的", "社会的"],
+        "strengths": ["沟通技巧", "高度同理心", "忠诚"],
+        "challenges": ["可能过于自我牺牲", "可能是过度保护", "对批评敏感"],
+        "compatibility": {
+          "best": ["INFP", "ISFP"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ISTP", "ESTP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ENFP": {
+        "traits": ["热情的", "传出", "富有想象力", "自发的"],
+        "strengths": ["伟大的沟通者", "正能量", "创意思想家"],
+        "challenges": ["不喜欢例行公事", "可能过于情绪化", "很难专注于一件事"],
+        "compatibility": {
+          "best": ["INTJ", "INFJ"],
+          "good": ["INFP", "ENFJ"],
+          "challenging": ["ISTJ", "ESTJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "subtitle": "自发且充满热情的表演者",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "身体接触",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ISTJ": {
+        "traits": ["负责任的", "可靠的", "实际的", "秩序"],
+        "strengths": ["忠诚", "组织", "直接"],
+        "challenges": ["可以是刚性的", "与变革作斗争", "可能显得麻木不仁"],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISFJ", "ESTJ"],
+          "challenging": ["ENFP", "ENTP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ISFJ": {
+        "traits": ["支持", "可靠的", "谦逊的", "善于观察"],
+        "strengths": ["同情", "实用性", "忠诚"],
+        "challenges": ["自我牺牲", "避免改变", "能把事情看成个人的"],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISTJ", "ISFP"],
+          "challenging": ["ENTP", "ENFP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ESTJ": {
+        "traits": ["直接的", "有组织", "投入的", "忠诚"],
+        "strengths": ["可靠性", "直接沟通", "传统导向"],
+        "challenges": ["可以专横", "难以表达感情", "不适应改变"],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "身体接触",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ESFJ": {
+        "traits": ["善于交际", "Warm", "忠诚", "和谐"],
+        "strengths": ["连接建设", "培育自然", "可靠性"],
+        "challenges": ["对批评敏感", "可能有需要", "关心状态"],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISFJ", "ENFJ"],
+          "challenging": ["INTP", "INTJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "身体接触",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ISTP": {
+        "traits": ["务实", "有创造力的", "独立的", "自发的"],
+        "strengths": ["危机管理", "实用性", "适应性"],
+        "challenges": ["可拆卸", "不喜欢承诺", "容易感到无聊"],
+        "compatibility": {
+          "best": ["ESFJ", "ESTJ"],
+          "good": ["ISTJ", "ESTP"],
+          "challenging": ["ENFJ", "INFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "身体接触",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ISFP": {
+        "traits": ["迷人", "敏感的", "富有想象力", "自发的"],
+        "strengths": ["同情", "创造力", "灵活性"],
+        "challenges": ["避免冲突", "不可预测", "容易有压力"],
+        "compatibility": {
+          "best": ["ENFJ", "ESFJ", "ESTJ"],
+          "good": ["ISFJ", "INFP"],
+          "challenging": ["INTJ", "ENTJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ESTP": {
+        "traits": ["魅力型", "精力充沛", "实际的", "善于观察"],
+        "strengths": ["危机中伟大", "爱玩", "有说服力"],
+        "challenges": ["风险倾向", "不耐烦", "可能会错过大图"],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESTP", "ESFP"],
+          "challenging": ["INFJ", "INFP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "subtitle": "自发且充满热情的表演者",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "身体接触",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "ESFP": {
+        "traits": ["爱玩", "社会的", "自发的", "审美的"],
+        "strengths": ["出色的人际交往能力", "积极的前景", "审美之眼"],
+        "challenges": ["避免冲突", "容易感到无聊", "长期规划不佳"],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESFP", "ESTP"],
+          "challenging": ["INTJ", "INFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "subtitle": "自发且充满热情的表演者",
+        "detailedDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loveLanguage": "身体接触",
+        "idealDate": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      }
+    },
+    "title": "个性化报告",
+    "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+  }
+}

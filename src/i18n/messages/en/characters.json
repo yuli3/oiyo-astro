@@ -1,0 +1,10 @@
+{
+  "title": "Select Character",
+  "subtitle": "Choose your avatar",
+  "traits": {
+    "empathy": "Empathy",
+    "optimism": "Optimism"
+  },
+  "select": "Select",
+  "changeCharacter": "Change Character"
+}

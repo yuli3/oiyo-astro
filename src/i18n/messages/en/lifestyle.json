@@ -1,0 +1,45 @@
+{
+  "health": {
+    "sleepDream": {
+      "status": {
+        "no_data": {
+          "title": "No sleep data",
+          "desc": "There are no sleep logs yet. Record your sleep today."
+        },
+        "critical_sleep": {
+          "title": "Beware of lack of sleep",
+          "desc": "Sleep quality is poor. Recovery is needed."
+        },
+        "good_state": {
+          "title": "good sleep condition",
+          "desc": "You seem to be getting enough rest. Excellent."
+        },
+        "neutral": {
+          "title": "normal sleep state",
+          "desc": "It's not bad, but there's room for improvement for a better night's sleep."
+        }
+      },
+      "metrics": {
+        "sleepScore": "sleep score",
+        "lastDream": "last dream",
+        "recorded": "logged"
+      },
+      "prompts": {
+        "sleep": {
+          "title": "Track your sleep",
+          "desc": "Record your sleep quality today and check your score."
+        },
+        "dream": {
+          "title": "record your dreams",
+          "desc": "Record any dreams you remember and interpret their meaning."
+        }
+      },
+      "prescription": {
+        "title": "custom prescription",
+        "desc": "It seems like you need peace of mind and body. Try the panic button or breathing exercises.",
+        "button": "Using stability tools"
+      },
+      "quote": "Sleep is the best meditation. - Dalai Lama"
+    }
+  }
+}

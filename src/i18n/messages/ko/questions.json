@@ -1,0 +1,820 @@
+{
+  "0": {
+    "id": 1,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "신속하고 단호하게 행동하라",
+        "emoji": "⚡",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "모두의 감정을 먼저 고려하세요",
+        "emoji": "💭",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "모든 논리적 옵션 분석",
+        "emoji": "🧠",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "직감대로 가세요",
+        "emoji": "💡",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      }
+    ]
+  },
+  "1": {
+    "id": 2,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "책임을 지고 대화를 주도하세요",
+        "emoji": "🎯",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "내가 말하는 것보다 더 많이 들어라",
+        "emoji": "👂",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "그룹의 에너지에 적응",
+        "emoji": "🌊",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "개인적인 이야기를 공유하여 소통하세요",
+        "emoji": "💫",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "2": {
+    "id": 3,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "직접적으로 즉시 해결하세요.",
+        "emoji": "💥",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "모든 관점을 이해하려고 노력하세요",
+        "emoji": "🤝",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "윈윈(win-win) 솔루션을 찾아보세요",
+        "emoji": "🎯",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "논의하기 전에 공간을 확보하세요",
+        "emoji": "🕰️",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "3": {
+    "id": 4,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "경쟁적인 스포츠 또는 도전",
+        "emoji": "🏆",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "창의적인 활동이나 예술",
+        "emoji": "🎨",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "새로운 것을 배우다",
+        "emoji": "📚",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "사랑하는 사람과 함께하는 소중한 시간",
+        "emoji": "👥",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "4": {
+    "id": 5,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "행동과 성취를 통해 표현",
+        "emoji": "💪",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "단어와 감정 표현을 사용하십시오",
+        "emoji": "💕",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "실질적인 지원을 해주세요",
+        "emoji": "🛠️",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "의미 있는 경험 만들기",
+        "emoji": "✨",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "5": {
+    "id": 6,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "직접적이고 간단함",
+        "emoji": "📢",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "온화하고 사려 깊다",
+        "emoji": "🌱",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "사실적 및 논리적",
+        "emoji": "📊",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "감정적으로 표현",
+        "emoji": "💭",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "6": {
+    "id": 7,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "통제하고 밀어붙여라",
+        "emoji": "🚀",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "다른 사람들로부터 지원을 구하세요.",
+        "emoji": "🤗",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "문제를 논리적으로 분해하라",
+        "emoji": "🧩",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "감정을 처리하는 데 시간을 투자하세요",
+        "emoji": "🧘",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "7": {
+    "id": 8,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "독립과 존중",
+        "emoji": "🦅",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "정서적 친밀감과 연결",
+        "emoji": "💞",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "공동의 목표와 성장",
+        "emoji": "📈",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "이해와 공감",
+        "emoji": "💝",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "questions": [
+    {
+      "dimension": "EI",
+      "id": "ei_1",
+      "options": [
+        {
+          "id": "ei_1_e",
+          "text": "사회적 상황에서 에너지를 얻으세요",
+          "value": "E"
+        },
+        {
+          "id": "not_1_i",
+          "text": "혼자 있으면 에너지를 얻을 수 있다",
+          "value": "I"
+        }
+      ],
+      "text": "평소 어떻게 에너지를 충전하시나요?"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_2",
+      "options": [
+        {
+          "id": "ei_2_e",
+          "text": "대화를 먼저 시작하세요",
+          "value": "E"
+        },
+        {
+          "id": "not_2_i",
+          "text": "다른 사람들이 말할 때까지 기다리세요",
+          "value": "I"
+        }
+      ],
+      "text": "새로운 사람들을 만날 때 당신은 다음과 같은 경향이 있습니다."
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_3",
+      "options": [
+        {
+          "id": "ei_3_e",
+          "text": "친구와 지인이 많다",
+          "value": "E"
+        },
+        {
+          "id": "not_3_i",
+          "text": "친한 친구가 몇 명 있어요",
+          "value": "I"
+        }
+      ],
+      "text": "귀하의 소셜 서클은 일반적으로 다음과 같습니다."
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_4",
+      "options": [
+        {
+          "id": "ei_4_e",
+          "text": "크게 생각해보세요",
+          "value": "E"
+        },
+        {
+          "id": "not_4_i",
+          "text": "말하기 전에 생각하기",
+          "value": "I"
+        }
+      ],
+      "text": "생각을 표현하는 측면에서 다음을 선호합니다."
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_5",
+      "options": [
+        {
+          "id": "ei_5_e",
+          "text": "다른 사람들과 우려 사항에 대해 이야기하십시오.",
+          "value": "E"
+        },
+        {
+          "id": "not_5_i",
+          "text": "우려사항을 내부적으로 처리",
+          "value": "I"
+        }
+      ],
+      "text": "우려사항이 있을 때:"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_6",
+      "options": [
+        {
+          "id": "ei_6_e",
+          "text": "접근 및 개방이 용이함",
+          "value": "E"
+        },
+        {
+          "id": "not_6_i",
+          "text": "처음에는 예약되어 있고 비공개입니다.",
+          "value": "I"
+        }
+      ],
+      "text": "다른 사람들의 눈에 당신은:"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_7",
+      "options": [
+        {
+          "id": "ei_7_e",
+          "text": "빠르게 변화하는 환경을 즐겨보세요",
+          "value": "E"
+        },
+        {
+          "id": "not_7_i",
+          "text": "느린 속도의 환경을 즐겨보세요",
+          "value": "I"
+        }
+      ],
+      "text": "선호하는 환경 속도는 다음과 같습니다."
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_8",
+      "options": [
+        {
+          "id": "ei_8_e",
+          "text": "그룹에서 활동적인 느낌",
+          "value": "E"
+        },
+        {
+          "id": "not_8_i",
+          "text": "소규모 그룹이나 혼자서도 편안하게",
+          "value": "I"
+        }
+      ],
+      "text": "가장 활력이 넘친다고 느낄 때는 언제인가요?"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_1",
+      "options": [
+        {
+          "id": "sn_1_s",
+          "text": "사실과 세부사항에 집중",
+          "value": "S"
+        },
+        {
+          "id": "sn_1_n",
+          "text": "큰 그림과 가능성에 집중하세요",
+          "value": "N"
+        }
+      ],
+      "text": "새로운 것을 배울 때 당신은:"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_2",
+      "options": [
+        {
+          "id": "sn_2_s",
+          "text": "이제는 실용적이고 유용합니다",
+          "value": "S"
+        },
+        {
+          "id": "sn_2_n",
+          "text": "이론적이고 미래지향적이다.",
+          "value": "N"
+        }
+      ],
+      "text": "귀하는 다음과 같은 정보를 선호합니다:"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_3",
+      "options": [
+        {
+          "id": "sn_3_s",
+          "text": "현실적이고 현실적인",
+          "value": "S"
+        },
+        {
+          "id": "sn_3_n",
+          "text": "상상력이 풍부하고 창의적입니다.",
+          "value": "N"
+        }
+      ],
+      "text": "당신은 다음과 같은 경향이 있습니다:"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_4",
+      "options": [
+        {
+          "id": "sn_4_s",
+          "text": "과거 경험",
+          "value": "S"
+        },
+        {
+          "id": "sn_4_n",
+          "text": "직감과 영감",
+          "value": "N"
+        }
+      ],
+      "text": "문제를 해결할 때 다음 사항에 더 의존합니다."
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_5",
+      "options": [
+        {
+          "id": "sn_5_s",
+          "text": "무엇이 실제적이고 확실한가",
+          "value": "S"
+        },
+        {
+          "id": "sn_5_n",
+          "text": "무엇이 가능하고 잠재력이 있는가?",
+          "value": "N"
+        }
+      ],
+      "text": "당신은 다음에 더 관심이 있습니다:"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_6",
+      "options": [
+        {
+          "id": "sn_6_s",
+          "text": "정해진 루틴을 고수하세요.",
+          "value": "S"
+        },
+        {
+          "id": "sn_6_n",
+          "text": "일을 하는 새로운 방법을 찾아보세요",
+          "value": "N"
+        }
+      ],
+      "text": "일상 생활에서 당신은:"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_7",
+      "options": [
+        {
+          "id": "sn_7_s",
+          "text": "구체적인 데이터 및 사실",
+          "value": "S"
+        },
+        {
+          "id": "sn_7_n",
+          "text": "추상적인 아이디어와 이론",
+          "value": "N"
+        }
+      ],
+      "text": "당신은 다음과 같이 일하는 것을 선호합니다:"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_8",
+      "options": [
+        {
+          "id": "sn_8_s",
+          "text": "상식",
+          "value": "S"
+        },
+        {
+          "id": "sn_8_n",
+          "text": "혁신",
+          "value": "N"
+        }
+      ],
+      "text": "당신은 다음을 중요하게 생각합니다:"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_1",
+      "options": [
+        {
+          "id": "tf_1_t",
+          "text": "논리적 분석을 통해 결정",
+          "value": "T"
+        },
+        {
+          "id": "tf_1_f",
+          "text": "타인에게 미치는 영향을 고려하여 결정",
+          "value": "F"
+        }
+      ],
+      "text": "당신은 보통 어떻게 결정을 내리나요?"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_2",
+      "options": [
+        {
+          "id": "tf_2_t",
+          "text": "합리성과 진실성을 우선시",
+          "value": "T"
+        },
+        {
+          "id": "tf_2_f",
+          "text": "관계와 화합을 우선시하라",
+          "value": "F"
+        }
+      ],
+      "text": "토론이나 토론에서 귀하는:"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_3",
+      "options": [
+        {
+          "id": "tf_3_t",
+          "text": "객관적이고 침착함을 유지하세요",
+          "value": "T"
+        },
+        {
+          "id": "tf_3_f",
+          "text": "다른 사람과 쉽게 공감",
+          "value": "F"
+        }
+      ],
+      "text": "다른 사람의 딜레마를 볼 때:"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_4",
+      "options": [
+        {
+          "id": "tf_4_t",
+          "text": "실용적인 조언을 제공",
+          "value": "T"
+        },
+        {
+          "id": "tf_4_f",
+          "text": "정서적 지지를 제공하라",
+          "value": "F"
+        }
+      ],
+      "text": "친구가 어려움에 처했을 때 당신은 다음과 같은 경향이 있습니다."
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_5",
+      "options": [
+        {
+          "id": "tf_5_t",
+          "text": "비판은 꼭 필요한 도구이다",
+          "value": "T"
+        },
+        {
+          "id": "tf_5_f",
+          "text": "비판은 감정을 고려해야 한다",
+          "value": "F"
+        }
+      ],
+      "text": "비판을 어떻게 보시나요?"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_6",
+      "options": [
+        {
+          "id": "tf_6_t",
+          "text": "비인격적이고 규칙 지향적입니다.",
+          "value": "T"
+        },
+        {
+          "id": "tf_6_f",
+          "text": "개인적이고 포괄적인",
+          "value": "F"
+        }
+      ],
+      "text": "귀하의 작업 스타일은 다음과 같습니다."
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_7",
+      "options": [
+        {
+          "id": "tf_7_t",
+          "text": "사실에 확고한 입장을 취하라",
+          "value": "T"
+        },
+        {
+          "id": "tf_7_f",
+          "text": "합의를 위한 타협",
+          "value": "F"
+        }
+      ],
+      "text": "귀하의 견해가 특정 그룹의 의견과 일치하지 않는 경우:"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_1",
+      "options": [
+        {
+          "id": "pj_1_j",
+          "text": "상세한 계획을 세우세요",
+          "value": "J"
+        },
+        {
+          "id": "pj_1_p",
+          "text": "흐름과 함께 가세요",
+          "value": "P"
+        }
+      ],
+      "text": "휴가를 떠나기 전에 당신은:"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_2",
+      "options": [
+        {
+          "id": "pj_2_j",
+          "text": "미리 작업을 완료하세요",
+          "value": "J"
+        },
+        {
+          "id": "pj_2_p",
+          "text": "마감일 압박에 의존",
+          "value": "P"
+        }
+      ],
+      "text": "마감일을 어떻게 처리합니까?"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_3",
+      "options": [
+        {
+          "id": "pj_3_j",
+          "text": "조직화되고 구조화됨",
+          "value": "J"
+        },
+        {
+          "id": "pj_3_p",
+          "text": "유연하고 캐주얼한",
+          "value": "P"
+        }
+      ],
+      "text": "귀하의 책상이나 방은 일반적으로 다음과 같습니다."
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_4",
+      "options": [
+        {
+          "id": "pj_4_j",
+          "text": "안정감과 안정감을 느껴보세요",
+          "value": "J"
+        },
+        {
+          "id": "pj_4_p",
+          "text": "갇혀있고 갇혀있는 느낌",
+          "value": "P"
+        }
+      ],
+      "text": "계획이 확정되면 일반적으로 다음을 수행합니다."
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_5",
+      "options": [
+        {
+          "id": "pj_5_j",
+          "text": "먼저 일하고 나중에 놀아라",
+          "value": "J"
+        },
+        {
+          "id": "pj_5_p",
+          "text": "일하면서 재미를 찾으세요",
+          "value": "P"
+        }
+      ],
+      "text": "일과 즐거움을 위한 순서는 다음과 같습니다:"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_6",
+      "options": [
+        {
+          "id": "pj_6_j",
+          "text": "확실성과 명확성",
+          "value": "J"
+        },
+        {
+          "id": "pj_6_p",
+          "text": "개방성과 다양성",
+          "value": "P"
+        }
+      ],
+      "text": "당신은 다음과 같은 삶을 선호합니다:"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_7",
+      "options": [
+        {
+          "id": "pj_7_j",
+          "text": "계획을 고수하고 놀라움을 줄이세요",
+          "value": "J"
+        },
+        {
+          "id": "pj_7_p",
+          "text": "변화에 적응하고 포용하세요",
+          "value": "P"
+        }
+      ],
+      "text": "예상치 못한 상황에 직면했을 때:"
+    }
+  ],
+  "signal": "신호",
+  "bond": "문의"
+}

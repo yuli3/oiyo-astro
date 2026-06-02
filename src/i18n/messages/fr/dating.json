@@ -1,0 +1,675 @@
+{
+  "dating": {
+    "meta": {
+      "test": {
+        "insightBullets": [
+          "Explorez l’architecture profonde de votre paysage intérieur."
+        ],
+        "progress": "Progrès",
+        "submit": "Envoyer",
+        "loading": "Chargement...",
+        "selectOption": "Sélectionner une option",
+        "next": "Suivant",
+        "previous": "Précédent"
+      },
+      "result": {
+        "title": "Analyse Personnalisée",
+        "description": "Découvrez divers outils et perspectives pour mbti."
+      },
+      "meta": {
+        "title": "Analyse Personnalisée",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "keywords": "Cartographie de l'architecture secrète de ta personnalité..."
+      },
+      "resultTitle": "Analyse des Résultats de Rencontre MBTI",
+      "resultDescription": "Plongée profonde dans tes résultats de rencontre MBTI.",
+      "testTitle": "Évaluation de Rencontre MBTI",
+      "testDescription": "Analyse des échos profonds de tes choix...",
+      "keywords": "Cartographie de l'architecture secrète de ta personnalité...",
+      "title": "Analyse Personnalisée",
+      "description": "Découvrez divers outils et perspectives pour mbti."
+    },
+    "hero": {
+      "subtitle": "Personnes spontanées et énergiques",
+      "badge": "Nouveau",
+      "cta": "Commencer le Test",
+      "title": "Analyse Personnalisée",
+      "description": "Découvrez divers outils et perspectives pour mbti."
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "Lors d'une fête avec de nouvelles personnes, je...",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Gagnez de l’énergie et menez des conversations.",
+            "emoji": "🥳",
+            "scores": {
+              "E": 1
+            }
+          },
+          {
+            "text": "Ayez des conversations approfondies avec quelques personnes dans un endroit calme.",
+            "emoji": "🤔",
+            "scores": {
+              "I": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Quand j'aime quelqu'un...",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Je suis d'abord attiré par leurs atouts réalistes (travail, style, etc.).",
+            "emoji": "💼",
+            "scores": {
+              "S": 1
+            }
+          },
+          {
+            "text": "Je suis d'abord attiré par le futur que j'imagine avec eux.",
+            "emoji": "💭",
+            "scores": {
+              "N": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Quand je me dispute avec mon partenaire, je...",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Analysez logiquement quel est le problème et essayez de trouver une solution.",
+            "emoji": "🧐",
+            "scores": {
+              "T": 1
+            }
+          },
+          {
+            "text": "Vérifiez d’abord leurs sentiments et essayez de les réconforter avec empathie.",
+            "emoji": "❤️",
+            "scores": {
+              "F": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Lorsque vous planifiez un rendez-vous...",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Je planifie tout parfaitement, des restaurants aux cafés et itinéraires.",
+            "emoji": "🗺️",
+            "scores": {
+              "J": 1
+            }
+          },
+          {
+            "text": "Je décide spontanément où aller en fonction de mon humeur du jour.",
+            "emoji": "🎉",
+            "scores": {
+              "P": 1
+            }
+          }
+        ]
+      }
+    ],
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Mbti 1",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🚀",
+          "title": "Mbti2",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "💡",
+          "title": "Mbti 3",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🎯",
+          "title": "Mbti 4",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🔥",
+          "title": "Mbti 5",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "⭐",
+          "title": "Mbti 6",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        }
+      ],
+      "subtitle": "Personnes spontanées et énergiques",
+      "title": "Analyse Personnalisée"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Mbti 1",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🚀",
+          "title": "Mbti2",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "💡",
+          "title": "Mbti 3",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "🎯",
+          "title": "Mbti 4",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "🔥",
+          "title": "Mbti 5",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "⭐",
+          "title": "Mbti 6",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        }
+      ],
+      "title": "Analyse Personnalisée"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Mbti 1",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🚀",
+          "title": "Mbti2",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "💡",
+          "title": "Mbti 3",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🎯",
+          "title": "Mbti 4",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🔥",
+          "title": "Mbti 5",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "⭐",
+          "title": "Mbti 6",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Force de signature", "Point pivot", "2"],
+      "progress": "Progrès",
+      "submit": "Envoyer",
+      "loading": "Chargement...",
+      "selectOption": "Sélectionner une option",
+      "subtitle": "Personnes spontanées et énergiques",
+      "finish": "Terminer",
+      "next": "Suivant",
+      "previous": "Précédent"
+    },
+    "result": {
+      "title": "Analyse Personnalisée",
+      "description": "Découvrez divers outils et perspectives pour mbti.",
+      "traits": "Traits",
+      "share": "Partager",
+      "retake": "Recommencer"
+    },
+    "types": {
+      "INTJ": {
+        "traits": [
+          "Stratégique",
+          "Indépendante",
+          "Décisive",
+          "Perfectionniste"
+        ],
+        "strengths": [
+          "Planification à long terme",
+          "Raisonnement logique",
+          "Haute compétence"
+        ],
+        "challenges": [
+          "Peut paraître arrogant",
+          "N'aime pas l'imprévisibilité",
+          "Luttes avec l'expression émotionnelle"
+        ],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INFP", "INFJ"],
+          "challenging": ["ISFP", "ESFP"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "INTP": {
+        "traits": ["Analytique", "Curieuse", "Abstraite", "Imaginative"],
+        "strengths": [
+          "Résolution de problèmes",
+          "Compréhension théorique",
+          "Créativité"
+        ],
+        "challenges": [
+          "Peut être distrait",
+          "N'aime pas les règles rigides",
+          "Peut avoir des difficultés avec des questions pratiques"
+        ],
+        "compatibility": {
+          "best": ["ENTJ", "ESTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ENTJ": {
+        "traits": ["Décisive", "Confiante", "Ambitieuse", "Efficace"],
+        "strengths": [
+          "Direction",
+          "Planification stratégique",
+          "Communication directe"
+        ],
+        "challenges": [
+          "Peut être impatient",
+          "Peut paraître insensible",
+          "Fort besoin de contrôle"
+        ],
+        "compatibility": {
+          "best": ["INFP", "INTP"],
+          "good": ["ENTP", "ENFJ"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ENTP": {
+        "traits": ["Spirituelle", "Novatrice", "Flexible", "Énergique"],
+        "strengths": [
+          "Des penseurs profonds",
+          "Des conversations animées",
+          "Adaptabilité"
+        ],
+        "challenges": [
+          "Peut être argumentatif",
+          "Peut avoir du mal avec la cohérence",
+          "Intolérant à la stagnation"
+        ],
+        "compatibility": {
+          "best": ["INFJ", "INTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "INFJ": {
+        "traits": [
+          "Perspicace",
+          "Fondé sur des principes",
+          "Créative",
+          "Passionnée"
+        ],
+        "strengths": ["Intelligence émotionnelle", "Compassion", "Intégrité"],
+        "challenges": [
+          "Évite les conflits",
+          "Peut être trop privé",
+          "Des normes extrêmement élevées"
+        ],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INTJ", "INFP"],
+          "challenging": ["ESTP", "ESFP"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "INFP": {
+        "traits": ["Empathique", "Idéaliste", "Créative", "Douce"],
+        "strengths": ["Dévotion profonde", "Ouverture d'esprit", "Compassion"],
+        "challenges": [
+          "Peut être trop sensible",
+          "Évite les détails pratiques",
+          "Difficulté avec la critique"
+        ],
+        "compatibility": {
+          "best": ["ENFJ", "ENTJ"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ISTJ"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ENFJ": {
+        "traits": ["Charismatique", "Empathique", "Responsable", "Sociale"],
+        "strengths": [
+          "Compétences en communication",
+          "Grande empathie",
+          "Loyauté"
+        ],
+        "challenges": [
+          "Peut être trop altruiste",
+          "Peut être surprotecteur",
+          "Sensible aux critiques"
+        ],
+        "compatibility": {
+          "best": ["INFP", "ISFP"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ISTP", "ESTP"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ENFP": {
+        "traits": ["Enthousiaste", "Sortante", "Imaginative", "Spontanée"],
+        "strengths": [
+          "Grands communicateurs",
+          "Énergie positive",
+          "Penseurs créatifs"
+        ],
+        "challenges": [
+          "N'aime pas la routine",
+          "Peut être trop émotif",
+          "Difficulté à se concentrer sur une chose"
+        ],
+        "compatibility": {
+          "best": ["INTJ", "INFJ"],
+          "good": ["INFP", "ENFJ"],
+          "challenging": ["ISTJ", "ESTJ"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "subtitle": "Personnes spontanées et énergiques",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Toucher physique",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ISTJ": {
+        "traits": ["Responsable", "Fiable", "Pratique", "Ordonnée"],
+        "strengths": ["Loyauté", "Organisation", "Franchise"],
+        "challenges": [
+          "Peut être rigide",
+          "Luttes avec le changement",
+          "Peut sembler insensible"
+        ],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISFJ", "ESTJ"],
+          "challenging": ["ENFP", "ENTP"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ISFJ": {
+        "traits": ["Soutien", "Fiable", "Humble", "Observatrice"],
+        "strengths": ["Compassion", "Praticité", "Loyauté"],
+        "challenges": [
+          "Le sacrifice de soi",
+          "Évite le changement",
+          "Peut prendre les choses personnellement"
+        ],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISTJ", "ISFP"],
+          "challenging": ["ENTP", "ENFP"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ESTJ": {
+        "traits": ["Direct", "Organisée", "Dédié", "Loyale"],
+        "strengths": [
+          "Fiabilité",
+          "Communication directe",
+          "Orienté vers la tradition"
+        ],
+        "challenges": [
+          "Peut être autoritaire",
+          "Difficultés à exprimer ses sentiments",
+          "Mal à l'aise avec le changement"
+        ],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Toucher physique",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ESFJ": {
+        "traits": ["Sociable", "Warm", "Loyale", "Harmonieuse"],
+        "strengths": [
+          "Création de connexions",
+          "Nourrir la nature",
+          "Fiabilité"
+        ],
+        "challenges": [
+          "Sensible aux critiques",
+          "Peut-être dans le besoin",
+          "Préoccupé par le statut"
+        ],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISFJ", "ENFJ"],
+          "challenging": ["INTP", "INTJ"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Toucher physique",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ISTP": {
+        "traits": ["Pragmatique", "Créative", "Indépendante", "Spontanée"],
+        "strengths": ["Gestion de crise", "Praticité", "Adaptabilité"],
+        "challenges": [
+          "Peut être détaché",
+          "N'aime pas l'engagement",
+          "Facilement ennuyé"
+        ],
+        "compatibility": {
+          "best": ["ESFJ", "ESTJ"],
+          "good": ["ISTJ", "ESTP"],
+          "challenging": ["ENFJ", "INFJ"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Toucher physique",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ISFP": {
+        "traits": ["Charmante", "Sensible", "Imaginative", "Spontanée"],
+        "strengths": ["Compassion", "Créativité", "Flexibilité"],
+        "challenges": [
+          "Évite les conflits",
+          "Imprévisible",
+          "Facilement stressé"
+        ],
+        "compatibility": {
+          "best": ["ENFJ", "ESFJ", "ESTJ"],
+          "good": ["ISFJ", "INFP"],
+          "challenging": ["INTJ", "ENTJ"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ESTP": {
+        "traits": ["Charismatique", "Énergique", "Pratique", "Observatrice"],
+        "strengths": [
+          "Génial en temps de crise",
+          "Aimant s'amuser",
+          "Persuasive"
+        ],
+        "challenges": [
+          "Sujet au risque",
+          "Impatiente",
+          "Peut manquer la vue d'ensemble"
+        ],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESTP", "ESFP"],
+          "challenging": ["INFJ", "INFP"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "subtitle": "Personnes spontanées et énergiques",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Toucher physique",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "ESFP": {
+        "traits": ["Aimant s'amuser", "Sociale", "Spontanée", "Esthétique"],
+        "strengths": [
+          "Excellentes compétences relationnelles",
+          "Perspectives positives",
+          "Oeil esthétique"
+        ],
+        "challenges": [
+          "Évite les conflits",
+          "Facilement ennuyé",
+          "Mauvaise planification à long terme"
+        ],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESFP", "ESTP"],
+          "challenging": ["INTJ", "INFJ"]
+        },
+        "name": "Amuseur",
+        "emoji": "🎉",
+        "description": "Découvrez divers outils et perspectives pour mbti.",
+        "subtitle": "Personnes spontanées et énergiques",
+        "detailedDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+        "loveLanguage": "Toucher physique",
+        "idealDate": "Conception d'un miroir qui reflète ta véritable essence..."
+      }
+    },
+    "title": "Analyse Personnalisée",
+    "description": "Découvrez divers outils et perspectives pour mbti."
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "solarLineage": "Lignée Solaire",
+  "lunarLineage": "Lignée Lunaire",
+  "compatibility": "Compatibilité",
+  "title": "Calcul...",
+  "description": "La carte de votre destin révélée par le Myungri traditionnel.",
+  "pillars": {
+    "title": "Calcul...",
+    "interpretation": "Overview",
+    "yearPillar": "Pilier de l'Année (Destin Précoce)",
+    "yearPillarDesc": "Symbolise vos ancêtres, votre enfance et vos racines.",
+    "monthPillar": "Pilier du Mois (Destin de Jeunesse)",
+    "monthPillarDesc": "Représente vos frères et sœurs, votre sociabilité et votre environnement professionnel.",
+    "dayPillar": "Pilier du Jour (Destin de Maturité)",
+    "dayPillarDesc": "Représente vous-même, votre conjoint et votre environnement actuel.",
+    "hourPillar": "Pilier de l'Heure (Destin Tardif)",
+    "hourPillarDesc": "Montre vos enfants, la fortune dans la vieillesse et vos accomplissements futurs."
+  },
+  "elements": {
+    "title": "Calcul...",
+    "chartLabel": "Équilibre Élémentaire"
+  },
+  "overview": {
+    "interpretation": "Aperçu",
+    "title": "Analyse Saju de {name}",
+    "mainTraits": "Caractéristiques Principales",
+    "elementBalance": "Équilibre des Éléments"
+  },
+  "analysis": "Analyse",
+  "tabs": {
+    "personality": "Personnalité",
+    "fortune": "Destinée",
+    "advice": "Conseil"
+  },
+  "personality": {
+    "strengths": "Mes Forces",
+    "weaknesses": "Points à Améliorer"
+  },
+  "fortune": {
+    "flow": {
+      "title": "Analyse Saju de {name}"
+    },
+    "title": "Analyse Saju de {name}",
+    "status": "Analyse Complétée"
+  },
+  "advice": "Conseil",
+  "ai": {
+    "general_analysis": "Analyse Approfondie de l'IA",
+    "career": "Carrière",
+    "wealth": "Richesse",
+    "love": "Amour",
+    "health": "Santé",
+    "error": "Impossible de charger les données d'analyse de l'IA."
+  },
+  "meta": {
+    "test": {
+      "insightBullets": [
+        "Décoder les fréquences élémentaires de votre date de naissance.",
+        "Cartographier le flux saisonnier qui régit votre tempérament naturel.",
+        "Unveiling the secret interactions of the Ten Gods within your chart."
+      ],
+      "progress": "Progression Céleste",
+      "submit": "Découvrir Mon Destin",
+      "loading": "Consultation des Archives Impériales...",
+      "selectOption": "Saisissez vos informations",
+      "next": "Continuer",
+      "previous": "Retour"
+    },
+    "result": {
+      "title": "Analyse Saju de {name}",
+      "description": "La carte de votre destin révélée par le Myungri traditionnel."
+    },
+    "title": "Analyse Saju de {name}",
+    "description": "La carte de votre destin révélée par le Myungri traditionnel.",
+    "keywords": "Saju, analyse, destinée"
+  },
+  "modern": {
+    "title": "Analyse Saju de {name}",
+    "mbtiSimilarity": "MBTI Similaire",
+    "similarPersonality": "Type de Personnalité",
+    "strengths": "Mes Forces",
+    "challenges": "Défis de Croissance",
+    "careerSuggestions": "Carrières Recommandées",
+    "relationshipAdvice": "Conseils Relationnels",
+    "economy": "Tendances Économiques",
+    "mbtiSalary": "Tendance Salariale",
+    "globalComparison": "Comparaison Globale"
+  },
+  "lifestyle": {
+    "title": "Analyse Saju de {name}",
+    "interpretation": "Route Alchimique : Passions et carrières en harmonie avec votre essence."
+  },
+  "retake": "Refaire",
+  "birthInfo": "Informations de Naissance",
+  "birthDate": "Anniversaire Solaire/Lunaire",
+  "birthTime": "Heure de Naissance",
+  "mainAnalysis": "Analyse Principale",
+  "dominantElement": "Élément Dominant",
+  "personalityType": "Type de Personnalité",
+  "daily": {
+    "badge": "Ontologie Quotidienne",
+    "risingTitle": "L'Ascension de {branch}",
+    "risingDesc": "Votre énergie aujourd'hui est caractérisée par un puissant élan ascendant. L'élément {element} amplifie votre créativité naturelle.",
+    "flowTitle": "Flux Financier",
+    "flowDesc": "Fort potentiel d'investissement.",
+    "loveTitle": "Radar de l'Amour",
+    "loveDesc": "Ouvrez votre cœur à de nouveaux dialogues.",
+    "colorTitle": "Couleur de Pouvoir",
+    "colorDesc": "Portez cette couleur pour magnifier votre présence.",
+    "foodTitle": "Nourriture de l'Âme",
+    "foodDesc": "Restaure votre vitalité.",
+    "unlockTitle": "Débloquez Votre Trajectoire de Vie",
+    "unlockDesc": "Votre fortune a augmenté de <span class='text-emerald-600 font-bold'>+{percent}%</span> par rapport à la semaine dernière.",
+    "viewReport": "Voir le Rapport Complet"
+  },
+  "time": "Temps",
+  "day": "Jour",
+  "month": "Mois",
+  "year": "Année",
+  "fiveElements": "Cinq éléments",
+  "traits": "Traits",
+  "copy": "Copier le résultat",
+  "style": "Style",
+  "home": "Accueil",
+  "primarySection": {
+    "scoreHeadline": "Votre score",
+    "bondingTitle": "Collage",
+    "conversationTitle": "Conversation",
+    "caregiverTitle": "Style de soignant"
+  },
+  "scoreBreakdown": {
+    "title": "Calcul...",
+    "description": "Please wait."
+  },
+  "hybridIdeas": {
+    "title": "Calcul..."
+  },
+  "supportPartners": {
+    "title": "Calcul..."
+  },
+  "cta": {
+    "retake": "Refaire",
+    "explore": "Explorer davantage"
+  },
+  "characteristics": "Caractéristiques",
+  "dreamPatterns": "Modèles de rêve",
+  "interpretationTips": "Conseils d'interprétation",
+  "commonSymbols": "Symboles communs",
+  "dreamTypeBreakdown": "Répartition des rêves",
+  "share": "Partager",
+  "qualityOfLife": "Qualité de vie",
+  "safetyScore": "Score de sécurité",
+  "costOfLiving": "Coût de la vie",
+  "readyExplore": "Prêt à explorer ?",
+  "exploreDescription": "Trouvez votre prochaine destination.",
+  "exploreTravel": "Explorer les voyages",
+  "connectExpats": "Connectez-vous avec les expatriés",
+  "copied": "Résultat copié",
+  "writingStyle": "Style d'écriture",
+  "strengths": "Points forts",
+  "growthAreas": "Domaines de croissance",
+  "favoriteGenres": "Genres préférés",
+  "writingTips": "Conseils d'écriture",
+  "personalizedPrompts": "Vos invites",
+  "personalizedPromptsSubtitle": "Des invites pour vous.",
+  "exploreMore": "Explorer davantage",
+  "studyTips": "Conseils d'étude",
+  "environment": "Environnement",
+  "sections": {
+    "dimensions_title": "Dimensions",
+    "strengths": "Points forts",
+    "traits": "Traits",
+    "challenges": "Défis",
+    "idealSituations": "Situations idéales",
+    "tips": "Conseils",
+    "breakdown": "Panne"
+  },
+  "level": "Niveau",
+  "score": "Score",
+  "profile_title": "Profil",
+  "guidance_title": "Conseils",
+  "grossPay": "Salaire brut",
+  "nationalPension": "Pension nationale",
+  "healthInsurance": "Assurance maladie",
+  "incomeTax": "Impôt sur le revenu",
+  "netPay": "Salaire net",
+  "deduction": "Déduction",
+  "taxBase": "Assiette fiscale",
+  "rate": "Taux d'imposition",
+  "selfReport": "Auto-évaluation",
+  "loading": {
+    "title": "Calcul...",
+    "description": "S'il vous plaît, attendez."
+  },
+  "retakeTest": "Reprendre le test",
+  "backHome": "Retour à la maison",
+  "sharePrompt": "Partagez votre résultat."
+}

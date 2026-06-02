@@ -1,0 +1,145 @@
+{
+  "routineGenerator": {
+    "meta": {
+      "resultTitle": "Result Title",
+      "resultDescription": "Your personalized analysis results and recommendations.",
+      "testTitle": "Routine Generator",
+      "testDescription": "Discover your personal insights with this in-depth analysis.",
+      "keywords": "productivity, work efficiency, time management, focus, work habits",
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "hero": {
+      "badge": "Life Optimization",
+      "subtitle": "Complete guide for your Productivity",
+      "cta": "Build My Routine",
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "benefits": {
+      "morning": {
+        "icon": "⚖️",
+        "description": "Comprehensive analysis and insights",
+        "title": "My Insights"
+      },
+      "night": {
+        "icon": "⚖️",
+        "description": "Comprehensive analysis and insights",
+        "title": "My Insights"
+      },
+      "personalized": {
+        "icon": "⚖️",
+        "description": "Comprehensive analysis and insights",
+        "title": "My Insights"
+      },
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Alignement énergétique",
+          "description": "Travaillez lorsque votre concentration est naturellement la plus nette.",
+          "question": "Pourquoi le timing est-il important ?",
+          "answer": "Aligner les tâches avec vos pics d’énergie biologique multiplie votre efficacité sans effort supplémentaire."
+        },
+        {
+          "icon": "🚀",
+          "title": "Prenez le moment",
+          "description": "Renforcez la cohérence grâce à des déclencheurs scientifiquement conçus.",
+          "question": "Comment les habitudes perdurent-elles ?",
+          "answer": "En ancrant les nouveaux comportements aux routines existantes, nous créons un chemin sans friction vers la cohérence."
+        }
+      ],
+      "title": "My Insights"
+    },
+    "cta": {
+      "subtitle": "Complete guide for your Productivity",
+      "button": "Start Building",
+      "title": "My Insights"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "Une routine rigide est-elle restrictive ?",
+          "answer": "La vraie structure crée la liberté. En automatisant les bases, vous libérez votre esprit pour la créativité."
+        },
+        {
+          "question": "Et si mon emploi du temps change ?",
+          "answer": "Nos routines sont modulaires. Vous pouvez adapter les blocs pour les adapter à la nature fluide de la réalité."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "Équilibrage de la charge cognitive",
+          "description": "Distribue les tâches difficiles aux moments de clarté mentale maximale."
+        },
+        {
+          "icon": "⚖️",
+          "title": "Intervalles réparateurs",
+          "description": "Pauses stratégiquement placées pour maintenir des performances élevées."
+        }
+      ]
+    },
+    "result": {
+      "benefits": [
+        "Concentration accrue",
+        "Meilleur sommeil",
+        "Fatigue décisionnelle réduite"
+      ],
+      "meta": {
+        "title": "My Insights",
+        "description": "Comprehensive analysis and insights",
+        "keywords": "productivity, work efficiency, time management, focus, work habits"
+      },
+      "shareTitle": "My Daily Routine",
+      "shareText": "Check out my personalized routine!",
+      "subtitle": "Complete guide for your Productivity",
+      "morning": "Morning Plan",
+      "night": "Night Plan",
+      "sunrise": "Sunrise Rhythm",
+      "starlight": "Starlight Rhythm",
+      "guide": "Navigateur de style de vie",
+      "saveImage": "Save Routine",
+      "generateNew": "Generate New",
+      "home": "Home",
+      "resultTitle": "Result Title",
+      "resultDescription": "Your personalized analysis results and recommendations."
+    },
+    "test": {
+      "intro": {
+        "title": "My Insights",
+        "description": "Comprehensive analysis and insights",
+        "start": "Start"
+      },
+      "loading": {
+        "title": "My Insights",
+        "description": "Comprehensive analysis and insights"
+      },
+      "navigation": {
+        "prev": "← Previous Step",
+        "complete": "Complete",
+        "start": "Start",
+        "finish": "Finish",
+        "next": "Next"
+      },
+      "guest": {
+        "welcome": "Welcome{name}!",
+        "saved": "Your result will be saved to your account.",
+        "guestMessage": "You are taking the test as a guest. The result will stay on this browser only."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Comprehensive analysis and insights",
+        "keywords": "productivity, work efficiency, time management, focus, work habits"
+      },
+      "progress": "Question {current} of {total}",
+      "testTitle": "Routine Generator",
+      "testDescription": "Discover your personal insights with this in-depth analysis.",
+      "title": "My Insights",
+      "subtitle": "Complete guide for your Productivity"
+    },
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights"
+  }
+}

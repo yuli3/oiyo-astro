@@ -1,0 +1,179 @@
+{
+  "noMbti": {
+    "desc": "Mapeando la arquitectura secreta de tu personalidad...",
+    "button": "Iniciar evaluación financiera"
+  },
+  "meta": {
+    "subtitle": "Analizando los ecos profundos de tus elecciones...",
+    "disclaimer": "Mapeando la arquitectura secreta de tu personalidad...",
+    "keywords": "mbti, salario, carrera, ingresos",
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+  },
+  "hero": {
+    "subtitle": "Analizando los ecos profundos de tus elecciones...",
+    "badge": "Carrera"
+  },
+  "test": {
+    "insightBullets": ["Fuerza de firma", "Punto de pivote", "2"],
+    "progress": "Progreso",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "selectOption": "Seleccionar Opción",
+    "subtitle": "Analizando los ecos profundos de tus elecciones..."
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      }
+    ]
+  },
+  "result": {
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+  },
+  "subtitle": "Analizando los ecos profundos de tus elecciones...",
+  "yourType": "tu tipo",
+  "strategyTitle": "The \\\"{style}\\\" Approach",
+  "strategyDesc": "You naturally excel at \\\"{focus}\\\". Use this as your leverage at the negotiation table.",
+  "targetSalaryLabel": "Etiqueta de salario objetivo",
+  "currency": "Divisa",
+  "insertSalary": "Insertar salario",
+  "scriptTitle": "Título del guión",
+  "tipsTitle": "Título de consejos",
+  "disclaimer": "Mapeando la arquitectura secreta de tu personalidad...",
+  "title": "Tu Perfil Financiero",
+  "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+}

@@ -1,0 +1,155 @@
+{
+  "chart": {
+    "teto": "Teto-type",
+    "egen": "Egen-type"
+  },
+  "daily": {
+    "insights": {
+      "tetonam": [
+        {
+          "type": "モチベーション",
+          "icon": "💪",
+          "title": "課題を克服する",
+          "message": "あなたの生まれ持ったリーダーシップは、障害に直面したときに最も輝きます。 今すぐそのプロジェクトを主導してください!",
+          "action": "次回のミーティングで模範を示す"
+        },
+        {
+          "type": "関係",
+          "icon": "🤝",
+          "title": "あなたの優しい面を見せてください",
+          "message": "強さと脆弱性のバランスをとる。 今日、あなたの近くにいる人があなたの精神的なサポートを必要としています。",
+          "action": "あなたの愛する人に本当の気持ちを聞いてください"
+        },
+        {
+          "type": "成長",
+          "icon": "🎯",
+          "title": "課題を克服する",
+          "message": "あなたの生まれ持ったリーダーシップは、障害に直面したときに最も輝きます。 今すぐそのプロジェクトを主導してください!",
+          "action": "次回のミーティングで模範を示す"
+        }
+      ],
+      "egennam": [
+        {
+          "type": "創造性",
+          "icon": "🎨",
+          "title": "自分の芸術的な側面を表現する",
+          "message": "今日のあなたの美意識は高まっています。 美しいものを作成したり、周囲の芸術を賞賛したりしてください。",
+          "action": "ギャラリーを訪れたり、芸術的なものを作成したりする"
+        },
+        {
+          "type": "関係",
+          "icon": "💕",
+          "title": "深い繋がりが大事",
+          "message": "あなたの共感的な性質が、今日誰かを癒すのに役立つかもしれません。 困っている人は聞いてください。",
+          "action": "友達と有意義な会話をする"
+        },
+        {
+          "type": "ウェルネス",
+          "icon": "🧘",
+          "title": "あなたの繊細さを評価してください",
+          "message": "あなたの心の知性は贈り物です。 疲れを感じたときは、セルフケアの時間を取ってください。",
+          "action": "マインドフルネスや瞑想を実践する"
+        }
+      ],
+      "tetonye": [
+        {
+          "type": "野心",
+          "icon": "🔥",
+          "title": "自分の道を切り開く",
+          "message": "あなたの独立精神はあなたのスーパーパワーです。 今日は型破りな道を進むことを恐れないでください。",
+          "action": "先延ばしにしてきた大胆な決断をする"
+        },
+        {
+          "type": "自信",
+          "icon": "⚡",
+          "title": "自分の力を自分のものにする",
+          "message": "あなたの自信は他の人にインスピレーションを与えます。 あなたのアイデアを大胆に共有してください – 世界はあなたのユニークな視点を必要としています。",
+          "action": "自分の声が重要なときは声を上げてください"
+        },
+        {
+          "type": "バランス",
+          "icon": "⚖️",
+          "title": "弱さの中の強さ",
+          "message": "あなたの強みは、あなたがすべてを一人でやらなければならないという意味ではありません。 今日は、助けを素直に受け入れてください。",
+          "action": "難しい仕事について助けを求める"
+        }
+      ],
+      "egenteto": [
+        {
+          "type": "育てる",
+          "icon": "🌸",
+          "title": "あなたのケアが癒します",
+          "message": "あなたの育成エネルギーは、まさに今日誰かが必要としているものです。 自分の直感を信じて手を差し伸べましょう。",
+          "action": "大切な人をチェックインする"
+        },
+        {
+          "type": "直感",
+          "icon": "✨",
+          "title": "自分の内なる声を信じてください",
+          "message": "今日のあなたの直感は特に強いです。 そうした優しい小言や直感に注目してください。",
+          "action": "自分の直感に基づいて決断を下す"
+        },
+        {
+          "type": "自己治療",
+          "icon": "🛁",
+          "title": "自分だけのカップを満たそう",
+          "message": "あなたは他の人にたくさんのものを与えます。 自分自身を育てることも忘れないでください。あなたもあなたと同じケアを受ける価値があります。",
+          "action": "純粋に自分の喜びのために何かをする"
+        }
+      ]
+    },
+    "title": "Couple Compatibility Test",
+    "action": "Today's Action"
+  },
+  "compatibility": {
+    "levels": {
+      "perfect": "Perfect Match",
+      "great": "Great Match",
+      "good": "Good Match",
+      "challenging": "Challenging"
+    },
+    "title": "Couple Compatibility Test",
+    "description": "Discover your romantic compatibility with your partner's Egenteto type",
+    "selectPartner": "Select Your Partner's Type",
+    "selectDesc": "Choose your partner's Egenteto type to see your compatibility",
+    "scoreLabel": "{score}% Compatible",
+    "insights": "Relationship Insights",
+    "combination": "Your Combination:",
+    "loveLanguages": "Love Languages:",
+    "dateIdeas": "Perfect Date Ideas:",
+    "tryAnother": "Try Another Type",
+    "share": "Share Results"
+  },
+  "result": {
+    "title": "あなたのプロフィール",
+    "traits": "主な特性",
+    "description": "詳細な説明",
+    "compatibility": "相性",
+    "share": "結果を共有",
+    "copied": "クリップボードにコピーしました",
+    "copy": "リンクをコピー",
+    "retake": "テストをやり直す"
+  },
+  "a": "A",
+  "saveResult": "結果を保存",
+  "saveError": "結果の保存に失敗しました。",
+  "personalityAnalysis": "性格分析",
+  "compatibilityChartTitle": "相性チャート",
+  "compatibilityLabel": "相性",
+  "insights": "インサイト",
+  "traitsGuide": "特性ガイド",
+  "strengths": "強み",
+  "growthAreas": "成長の領域",
+  "match": "マッチ",
+  "coupleTest": "カップルテスト",
+  "coupleTestDesc": "パートナーとの相性を確認してみましょう。",
+  "loveLanguage": "愛の言語",
+  "loveLanguageDesc": "愛の表現と受け取り方。",
+  "idealDate": "理想のデート",
+  "awards": "アワード",
+  "growth": "成長の道",
+  "growthComingSoon": "成長の道 — 近日公開",
+  "growthComingSoonDesc": "個人の成長に向けたインサイトを準備中です。",
+  "saveImage": "画像を保存",
+  "backToHome": "ホームに戻る"
+}

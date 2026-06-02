@@ -1,0 +1,57 @@
+{
+  "steps": {
+    "welcome": {
+      "description": "Oiyoへようこそ。あなたの宇宙的な自己を発見する旅を始めましょう。",
+      "title": "ようこそ"
+    },
+    "interests": {
+      "description": "興味のあるトピックを選択し、あなただけの体験を構成してください。",
+      "title": "興味を選択"
+    },
+    "complete": {
+      "description": "設定が完了しました。あなたのデータに基づいてパーソナライズされたインサイトを提供する準備ができました。",
+      "title": "準備完了"
+    }
+  },
+  "interests": {
+    "personality": "性格分析",
+    "career": "キャリアガイド",
+    "relationships": "人間関係のアドバイス",
+    "wellness": "メンタルウェルネス",
+    "creativity": "創造力アップ",
+    "lifestyle": "ライフスタイル",
+    "prompt": "最も興味のある分野は何ですか？"
+  },
+  "welcome": {
+    "user": "こんにちは",
+    "description": "あなたの潜在能力を探求し、毎日新しい視座を発見してください。"
+  },
+  "features": {
+    "tests": {
+      "title": "深層心理テスト",
+      "description": "多様な診断を通じて、本来の気質と傾向を多角的に理解することができます。"
+    },
+    "history": {
+      "title": "私だけのインサイトアーカイブ",
+      "description": "診断結果と毎日のインサイトを安全に保存し、いつでも確認できます。"
+    },
+    "recommendations": {
+      "title": "パーソナライズされた行動ガイド",
+      "description": "データに基づき、今必要なアドバイスやおすすめのアクティビティを提案します。"
+    }
+  },
+  "complete": {
+    "success": "設定完了！",
+    "message": "入力された情報に基づいて、最適なインサイトをキュレーションしています。",
+    "benefits": {
+      "dashboard": "あなた専用のダッシュボードが準備されました。",
+      "recommendations": "パーソナライズされたアドバイスが提案されます。"
+    }
+  },
+  "actions": {
+    "skip": "スキップ",
+    "completing": "完了中...",
+    "getStarted": "始める",
+    "next": "次へ"
+  }
+}

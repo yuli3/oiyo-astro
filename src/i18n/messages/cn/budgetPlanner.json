@@ -1,0 +1,198 @@
+{
+  "labels": {
+    "monthlyIncome": "每月收入",
+    "total": "全部的"
+  },
+  "tags": {
+    "mustHave": "必须有",
+    "niceToHave": "很高兴拥有",
+    "future": "未来"
+  },
+  "categories": {
+    "needs": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "wants": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "savings": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+  },
+  "descriptions": {
+    "needs": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "wants": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "savings": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+  },
+  "loading": {
+    "title": "你的财务档案",
+    "step1": "分析月收入",
+    "step2": "计算 50/30/20 分割",
+    "step3": "优化配置",
+    "step4": "最终确定预算蓝图"
+  },
+  "meta": {
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "disclaimer": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "title": "你的财务档案",
+    "description": "探索我们为深度财务分析设计的工具套件"
+  },
+  "hero": {
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "badge": "探索您内心景观的深层结构。"
+  },
+  "test": {
+    "progress": "进度",
+    "submit": "提交",
+    "loading": "加载中...",
+    "selectOption": "选择选项",
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "insightBullets": ["标志性强度", "枢轴点", "2"]
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "高级洞察力",
+        "description": "揭开你个人哲学的隐藏层。",
+        "question": "是什么驱动着你的内心世界？",
+        "answer": "你拥有一个指向成长的直觉指南针。"
+      },
+      {
+        "icon": "🚀",
+        "title": "高级洞察力",
+        "description": "绘制最真实自我的星座图。",
+        "question": "你如何驾驭生活的潮流？",
+        "answer": "小小的选择累积成伟大的命运。"
+      },
+      {
+        "icon": "💡",
+        "title": "高级洞察力",
+        "description": "发现定义您的道路的独特模式。",
+        "question": "你独特的核心频率是多少？",
+        "answer": "你拥有一个指向成长的直觉指南针。"
+      },
+      {
+        "icon": "🎯",
+        "title": "高级洞察力",
+        "description": "绘制最真实自我的星座图。",
+        "question": "你如何驾驭生活的潮流？",
+        "answer": "你拥有一个指向成长的直觉指南针。"
+      },
+      {
+        "icon": "🔥",
+        "title": "高级洞察力",
+        "description": "探索你内心景观的深层架构。",
+        "question": "你如何驾驭生活的潮流？",
+        "answer": "内在的和谐指导着你的日常行动。"
+      },
+      {
+        "icon": "⭐",
+        "title": "高级洞察力",
+        "description": "探索你内心景观的深层架构。",
+        "question": "是什么驱动着你的内心世界？",
+        "answer": "你拥有一个指向成长的直觉指南针。"
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "高级洞察力",
+        "description": "发现定义您的道路的独特模式。",
+        "question": "是什么驱动着你的内心世界？",
+        "answer": "内在的和谐指导着你的日常行动。"
+      },
+      {
+        "icon": "🚀",
+        "title": "高级洞察力",
+        "description": "揭开你个人哲学的隐藏层。",
+        "question": "你的灵魂对未知有何反应？",
+        "answer": "你独特的视角塑造了你的现实。"
+      },
+      {
+        "icon": "💡",
+        "title": "高级洞察力",
+        "description": "绘制最真实自我的星座图。",
+        "question": "你的灵魂对未知有何反应？",
+        "answer": "你拥有一个指向成长的直觉指南针。"
+      },
+      {
+        "icon": "🎯",
+        "title": "高级洞察力",
+        "description": "探索你内心景观的深层架构。",
+        "question": "你独特的核心频率是多少？",
+        "answer": "你独特的视角塑造了你的现实。"
+      },
+      {
+        "icon": "🔥",
+        "title": "高级洞察力",
+        "description": "探索你内心景观的深层架构。",
+        "question": "你独特的核心频率是多少？",
+        "answer": "你拥有一个指向成长的直觉指南针。"
+      },
+      {
+        "icon": "⭐",
+        "title": "高级洞察力",
+        "description": "探索你内心景观的深层架构。",
+        "question": "是什么驱动着你的内心世界？",
+        "answer": "小小的选择累积成伟大的命运。"
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "高级洞察力",
+        "description": "发现定义您的道路的独特模式。",
+        "question": "你如何驾驭生活的潮流？",
+        "answer": "你拥有一个指向成长的直觉指南针。"
+      },
+      {
+        "icon": "🚀",
+        "title": "高级洞察力",
+        "description": "发现定义您的道路的独特模式。",
+        "question": "你如何驾驭生活的潮流？",
+        "answer": "你拥有一个指向成长的直觉指南针。"
+      },
+      {
+        "icon": "💡",
+        "title": "高级洞察力",
+        "description": "揭开你个人哲学的隐藏层。",
+        "question": "你如何驾驭生活的潮流？",
+        "answer": "你独特的视角塑造了你的现实。"
+      },
+      {
+        "icon": "🎯",
+        "title": "高级洞察力",
+        "description": "发现定义您的道路的独特模式。",
+        "question": "你的灵魂对未知有何反应？",
+        "answer": "小小的选择累积成伟大的命运。"
+      },
+      {
+        "icon": "🔥",
+        "title": "高级洞察力",
+        "description": "发现定义您的道路的独特模式。",
+        "question": "你独特的核心频率是多少？",
+        "answer": "你拥有一个指向成长的直觉指南针。"
+      },
+      {
+        "icon": "⭐",
+        "title": "高级洞察力",
+        "description": "发现定义您的道路的独特模式。",
+        "question": "是什么驱动着你的内心世界？",
+        "answer": "你独特的视角塑造了你的现实。"
+      }
+    ]
+  },
+  "result": {
+    "title": "你的财务档案",
+    "description": "探索我们为深度财务分析设计的工具套件"
+  },
+  "subtitle": "利用 50/30/20 规则创建完美的金融投资组合",
+  "currency": "$",
+  "tip": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+  "calculate": "计算计划",
+  "reset": "重置计划",
+  "disclaimer": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+  "title": "你的财务档案",
+  "description": "探索我们为深度财务分析设计的工具套件",
+  "ko-KR": "科-KR"
+}

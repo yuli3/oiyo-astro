@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "birthdate": "Fecha de Nacimiento",
+    "analyze": "Analizar",
+    "dob": "Fecha de Nacimiento",
+    "check": "Verificar"
+  },
+  "meta": {
+    "title": "Encontrar Mi Flor de Nacimiento",
+    "description": "¿Qué flor se asemeja a tu alma?",
+    "keywords": "Flor de nacimiento, Lenguaje de las flores, Test de personalidad, Cumpleaños, Flores"
+  },
+  "result": {
+    "stone": "Piedra de Nacimiento",
+    "flower": "Flor de Nacimiento",
+    "color": "Color Protector",
+    "title": "Encontrar Mi Flor de Nacimiento",
+    "description": "¿Qué flor se asemeja a tu alma?"
+  },
+  "test": {
+    "progress": "Progreso",
+    "submit": "Enviar",
+    "loading": "Cargando",
+    "selectOption": "Seleccionar",
+    "insightBullets": [
+      "Analizando el significado simbólico de las flores...",
+      "Analizando rasgos de personalidad...",
+      "Confirmando el destino de la flor de nacimiento..."
+    ],
+    "next": "Siguiente",
+    "previous": "Anterior"
+  },
+  "title": "Encontrar Mi Flor de Nacimiento",
+  "description": "¿Qué flor se asemeja a tu alma?"
+}

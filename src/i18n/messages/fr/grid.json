@@ -1,0 +1,15 @@
+{
+  "daySun": "Dim",
+  "dayMon": "Lun",
+  "dayTue": "Mar",
+  "dayWed": "Mer",
+  "dayThu": "Jeu",
+  "dayFri": "Ven",
+  "daySat": "Sam",
+  "a": "A",
+  "saveFailed": "Échec de l'enregistrement",
+  "moodQuestion": "Comment s'est passée votre journée ?",
+  "close": "Fermer",
+  "saved": "Enregistré avec succès",
+  "saveAsImage": "Enregistrer en Image"
+}

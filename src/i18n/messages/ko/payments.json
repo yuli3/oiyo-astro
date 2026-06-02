@@ -1,0 +1,36 @@
+{
+  "success": {
+    "confirming": "결제 확인 중...",
+    "pleaseWait": "잠시만 기다려주세요.",
+    "confirmFailed": "결제 확인 실패",
+    "title": "Payment Failed",
+    "activated": "프리미엄 기능이 활성화되었습니다. 이제 모든 프리미엄 기능에 액세스할 수 있습니다.",
+    "nextSteps": "다음 단계:",
+    "step1": "대시보드에서 고급 분석 보기",
+    "step2": "AI 기반 통찰력 얻기",
+    "step3": "PDF 보고서 다운로드",
+    "goToDashboard": "대시보드로 이동",
+    "backToHome": "홈으로 돌아가기",
+    "tryAgain": "다시 시도"
+  },
+  "fail": {
+    "title": "결제 실패",
+    "errors": {
+      "USER_CANCEL": "사용자가 결제를 취소했습니다.",
+      "INVALID_CARD": "카드 정보가 잘못되었습니다.",
+      "INSUFFICIENT_FUNDS": "자금이 부족합니다.",
+      "PAYMENT_TIMEOUT": "결제 시간이 초과되었습니다.",
+      "default": "결제를 처리하는 동안 오류가 발생했습니다."
+    },
+    "howToResolve": "해결 방법:",
+    "solutions": {
+      "verifyCard": "카드 정보 확인",
+      "checkFunds": "자금이 충분한지 확인하세요.",
+      "tryDifferent": "다른 결제 수단을 사용해 보세요.",
+      "contactSupport": "문제가 지속되면 지원팀에 문의하세요."
+    },
+    "tryAgain": "다시 시도",
+    "goToDashboard": "대시보드로 이동",
+    "backToHome": "홈으로 돌아가기"
+  }
+}

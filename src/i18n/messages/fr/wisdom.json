@@ -1,0 +1,16 @@
+{
+  "sanctuary": {
+    "mental": {
+      "anxietyRelief": {
+        "title": "Soulagement de l'anxiété",
+        "description": "Trouvez la paix et le calme grâce à des exercices de respiration guidés.",
+        "breathingIn": "Inspirer",
+        "breathingOut": "Expirer",
+        "hold": "Prise",
+        "start": "Commencer",
+        "pause": "Pause",
+        "reset": "Réinitialiser"
+      }
+    }
+  }
+}

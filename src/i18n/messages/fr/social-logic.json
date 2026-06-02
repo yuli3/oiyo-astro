@@ -1,0 +1,27 @@
+{
+  "skills": {
+    "empathy": {
+      "title": "Logique Sociale",
+      "desc": "Les relations à sens unique ne peuvent durer. Les cœurs doivent aussi circuler."
+    },
+    "boundaries": {
+      "title": "Logique Sociale",
+      "desc": "Les relations à sens unique ne peuvent durer. Les cœurs doivent aussi circuler."
+    },
+    "expression": {
+      "title": "Logique Sociale",
+      "desc": "Les relations à sens unique ne peuvent durer. Les cœurs doivent aussi circuler."
+    },
+    "reciprocity": {
+      "title": "Logique Sociale",
+      "desc": "Les relations à sens unique ne peuvent durer. Les cœurs doivent aussi circuler."
+    }
+  },
+  "advice": {
+    "introvert": "Votre profondeur devient un abri confortable dans les relations.",
+    "extrovert": "Votre énergie est le soleil qui insuffle de la vitalité aux relations."
+  },
+  "title": "Logique Sociale",
+  "description": "Sagesse pour se connecter aux autres tout en se protégeant dans des relations complexes.",
+  "narrative": "Les relations ne sont pas une technique, mais un ajustement de la température du cœur."
+}

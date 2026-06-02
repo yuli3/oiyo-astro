@@ -1,0 +1,63 @@
+// Auto-generated shard for namespace: input
+
+export type Input_errorsKeys = "invalidDate" | "invalidTime" | "unknown";
+
+export type Input_stageKeys =
+  | "moment.hint"
+  | "moment.lockedTitle"
+  | "moment.title"
+  | "origin.title"
+  | "seal.description"
+  | "seal.title";
+
+export type Input_timelineKeys = "moment" | "origin" | "seal";
+
+export type InputKeys =
+  | "analyzing"
+  | "anonymous"
+  | "birthDate"
+  | "birthDateLabel"
+  | "birthTime"
+  | "birthTimeLabel"
+  | "calendarNoticeDesc"
+  | "calendarNoticeTitle"
+  | "dateLabel"
+  | "errors.invalidDate"
+  | "errors.invalidTime"
+  | "errors.unknown"
+  | "formTitle"
+  | "gender"
+  | "genderFemale"
+  | "genderLabel"
+  | "genderMale"
+  | "genderPlaceholder"
+  | "hourLabel"
+  | "hourPlaceholder"
+  | "location"
+  | "locationLabel"
+  | "locationPlaceholder"
+  | "lockCoordinates"
+  | "minuteLabel"
+  | "minutePlaceholder"
+  | "nameLabel"
+  | "namePlaceholder"
+  | "nextStep"
+  | "optional"
+  | "privacyNote"
+  | "revealProphecy"
+  | "secureTransmission"
+  | "stage.moment.hint"
+  | "stage.moment.lockedTitle"
+  | "stage.moment.title"
+  | "stage.origin.title"
+  | "stage.seal.description"
+  | "stage.seal.title"
+  | "submitButton"
+  | "timeLabel"
+  | "timeline.moment"
+  | "timeline.origin"
+  | "timeline.seal"
+  | "timeUnknownDesc"
+  | "timeUnknownTitle"
+  | "trueSolarTime"
+  | "unlock";

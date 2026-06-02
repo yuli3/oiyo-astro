@@ -1,0 +1,83 @@
+{
+  "systemName": "켈트 점성술",
+  "narrative": "나무의 지혜.",
+  "treeSign": "나무 표시",
+  "ogham": "오검 문자",
+  "trees": {
+    "birch": {
+      "tree": "자작나무",
+      "archetype": "성취자",
+      "description": "야망이 있고 추진력이 있으며 타고난 리더십 자질을 갖추고 있습니다."
+    },
+    "rowan": {
+      "tree": "마가목",
+      "archetype": "사상가",
+      "description": "철학적이고 이상주의적이며, 세상을 바꾸려는 열정을 가지고 있습니다."
+    },
+    "ash": {
+      "tree": "금연 건강 증진 협회",
+      "archetype": "인챈터",
+      "description": "예술적이고 직관적이며 자연과 깊은 관계를 맺고 있습니다."
+    },
+    "alder": {
+      "tree": "앨더",
+      "archetype": "트레일블레이저",
+      "description": "모험심이 강하고 열정적이며, 사람을 이끄는 매력이 있습니다."
+    },
+    "willow": {
+      "tree": "솜틀",
+      "archetype": "관찰자",
+      "description": "참을성이 많고 똑똑하며 기억력이 뛰어납니다."
+    },
+    "hawthorn": {
+      "tree": "산사나무",
+      "archetype": "환상주의자",
+      "description": "겉모습은 내면과 다르다. 창의적이고 호기심이 많습니다."
+    },
+    "oak": {
+      "tree": "오크",
+      "archetype": "안정제",
+      "description": "강하고 보호적이며 다른 사람들을 지지하는 기둥입니다."
+    },
+    "holly": {
+      "tree": "홀리",
+      "archetype": "통치자",
+      "description": "고귀하고 자신감이 넘치며 어떤 어려움도 극복할 수 있는 힘을 가지고 있습니다."
+    },
+    "hazel": {
+      "tree": "엷은 갈색",
+      "archetype": "아는 사람",
+      "description": "지능적이고 분석적이며 세부적입니다."
+    },
+    "vine": {
+      "tree": "덩굴",
+      "archetype": "이퀄라이저",
+      "description": "우아하고 매력적이며 높은 미적 기준을 갖추고 있습니다."
+    },
+    "ivy": {
+      "tree": "여자 이름",
+      "archetype": "생존자",
+      "description": "끈기 있고 충실하며 어떤 환경에도 적응할 수 있습니다."
+    },
+    "reed": {
+      "tree": "갈대",
+      "archetype": "심문관",
+      "description": "비밀을 밝히는 것을 좋아하고, 깊은 통찰력과 강한 의지를 가지고 있습니다."
+    },
+    "elder": {
+      "tree": "장로",
+      "archetype": "찾는 사람",
+      "description": "자유를 추구하며, 삶의 깊은 의미를 추구하는 철학적 성격을 갖고 있습니다."
+    }
+  },
+  "ariaLabel": "켈트 황도대: {나무}, {원형}",
+  "title": "켈트 점성술",
+  "egyptianGuardian": "이집트 수호자",
+  "celticTreeSign": "켈트 나무 표시",
+  "birthSymbols": "출생 기호",
+  "symbols": {
+    "Stone": "결석",
+    "Flower": "꽃",
+    "Star": "별"
+  }
+}

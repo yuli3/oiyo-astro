@@ -1,0 +1,15 @@
+{
+  "title": "Highlights",
+  "alignment": {
+    "title": "Alignment",
+    "description": "Your alignment score."
+  },
+  "compatibility": {
+    "title": "Compatibility",
+    "description": "Your compatibility."
+  },
+  "innerWork": {
+    "title": "Inner Work",
+    "description": "Areas for growth."
+  }
+}

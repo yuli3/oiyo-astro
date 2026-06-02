@@ -1,0 +1,36 @@
+{
+  "title": "Inventario HEXACO",
+  "description": "Analiza tu personalidad en 6 dimensiones basadas en el modelo HEXACO.",
+  "questions": {
+    "q1": "Trato de ser sincero al tratar con los demás.",
+    "q2": "No tengo cambios de humor frecuentes."
+  },
+  "results": {
+    "honesty": "Honestidad-Humildad",
+    "emotionality": "Emocionalidad",
+    "extraversion": "Extraversión",
+    "agreeableness": "Cordialidad",
+    "conscientiousness": "Responsabilidad",
+    "openness": "Apertura a la experiencia"
+  },
+  "axis": "Eje Ético",
+  "labels": {
+    "high": "Alta resonancia",
+    "low": "Baja resonancia",
+    "average": "Resonancia equilibrada"
+  },
+  "guardian": "Guardián de la Verdad",
+  "guardianDesc": "Tu alta puntuación en Honestidad-Humildad da fe de tu noble carácter.",
+  "restart": "Reiniciar Ritual",
+  "dimensions": {
+    "H": "Honestidad-Humildad",
+    "E": "Emocionalidad",
+    "X": "Extraversión",
+    "A": "Amabilidad",
+    "C": "Responsabilidad",
+    "O": "Apertura a la Experiencia"
+  },
+  "honestyLevel": "Nivel de Verdad: {level}",
+  "save": "Sellar el Acuerdo",
+  "uniqueDimension": "La Dimensión Única de HEXACO"
+}

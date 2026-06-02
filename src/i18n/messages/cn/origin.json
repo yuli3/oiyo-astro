@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "The Sonic Harmony",
+    "description": "Reveal your Egyptian Guardian and Celtic Tree Sign."
+  },
+  "hero": {
+    "title": "The Sonic Harmony",
+    "subtitle": "只需输入一次生日，即刻解锁西方星座、东方生肖、生命灵数以及今日的生物节律能量。\\n这一天，定义了独特的您。",
+    "inputLabel": "输入您的出生日期",
+    "analyze": "开始分析",
+    "analyzing": "正在对齐星辰..."
+  },
+  "trinity": {
+    "western": "西方星座",
+    "eastern": "东方生肖",
+    "numerology": "生命灵数",
+    "biorhythm": "生物节律",
+    "destiny": "命运准则"
+  },
+  "sections": {
+    "profile": "宇宙档案",
+    "insight": "每日洞察",
+    "analysisTitle": "宇宙自我分析",
+    "westernEssence": "西方星座本质",
+    "easternAnalysis": "东方生肖气场",
+    "growthCouncil": "成长智慧谏言",
+    "numerologicalDestiny": "灵数命运蓝图",
+    "vibrationNumber": "命运振动频率"
+  },
+  "biorhythm": {
+    "title": "The Sonic Harmony",
+    "physical": "躯体势能",
+    "emotional": "情感共振",
+    "intellectual": "认知频率"
+  },
+  "scroll": {
+    "cosmic": {
+      "title": "The Sonic Harmony",
+      "orbitalVelocity": "Orbital Velocity",
+      "galacticVelocity": "Galactic Velocity",
+      "axialTilt": "轴向倾斜",
+      "distanceFromSun": "Dist. to Sun",
+      "locationTooltip": "You were here"
+    },
+    "final": {
+      "premium": {
+        "title": "The Sonic Harmony",
+        "description": "Reveal your Egyptian Guardian and Celtic Tree Sign."
+      },
+      "free": {
+        "title": "The Sonic Harmony",
+        "description": "Reveal your Egyptian Guardian and Celtic Tree Sign."
+      },
+      "download": "Download PDF Artifact",
+      "checkout": "Unlock All Secrets ($9.99)",
+      "notice": "One-time payment. Instantly unlock lifetime access to high-res PDFs and all hidden mythic layers."
+    },
+    "oracleDisclosure": "Oracle's Disclosure",
+    "celestialAlignment": "天体排列",
+    "solarSign": "太阳能标志",
+    "lunarAnimal": "Lunar Animal",
+    "lifePath": "人生之路",
+    "geneticBlueprint": "基因蓝图",
+    "bloodType": "血型{类型}"
+  },
+  "premium": {
+    "onomancy": {
+      "title": "The Sonic Harmony",
+      "description": "Reveal your Egyptian Guardian and Celtic Tree Sign.",
+      "price": "$9.99"
+    },
+    "pantheon": {
+      "title": "The Sonic Harmony",
+      "description": "Reveal your Egyptian Guardian and Celtic Tree Sign.",
+      "price": "$9.99"
+    }
+  },
+  "pantheon": {
+    "symbols": {
+      "Stone": "Stone",
+      "Flower": "Flower",
+      "Star": "Star"
+    },
+    "title": "The Sonic Harmony",
+    "egyptianGuardian": "埃及守护者",
+    "celticTreeSign": "凯尔特树标志",
+    "birthSymbols": "出生符号"
+  },
+  "onomancy": {
+    "title": "The Sonic Harmony",
+    "missingForce": "Missing Force",
+    "none": "没有任何",
+    "vibrationFill": "Vibration Fill",
+    "circularText": "Celestial Resonance • Onomancy Analysis • Vibration Logic • "
+  },
+  "synergy": {
+    "adjective": "unique"
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "labels": {
+    "mirror": "The Mirror"
+  },
+  "hiddenSelf": {
+    "title": "The Hidden Self",
+    "description": "Unveiling the unconscious layers of your psyche.",
+    "ctaOrigin": "Discover Origin",
+    "ctaIdentity": "Explore Identity"
+  },
+  "status": {
+    "scrollForSynergy": "Scroll for synergy analysis"
+  },
+  "analysis": {
+    "detailed": "Detailed Resonance Analysis"
+  },
+  "iching": {
+    "title": "The Book of Changes",
+    "revelation": "Hexagram Revelation"
+  },
+  "cta": {
+    "title": "Your Shared Destiny Awaits",
+    "subtitle": "Record this bond in the archives",
+    "share": "Share Result",
+    "download": "Download Archive"
+  },
+  "title": "Resonance Archive",
+  "subtitle": "Your cosmic alignment.",
+  "offeringTitle": "Deep Resonance Offering",
+  "offeringDescription": "Unlock the deepest layers.",
+  "confidenceMeter": "Confidence Meter",
+  "revealed": "Traits Revealed",
+  "nameLabel": "Name",
+  "namePlaceholder": "Enter your name",
+  "birthLabel": "Birth Info",
+  "mbtiLabel": "MBTI Type",
+  "mbtiPlaceholder": "Enter your MBTI",
+  "bloodLabel": "Blood Type",
+  "bloodPlaceholder": "Enter your blood type",
+  "calculateButton": "Calculate Synergy",
+  "calculating": "Calculating...",
+  "backButton": "Return to Sanctuary",
+  "shareButton": "Share Cosmic Bond",
+  "dimensionsTitle": "Dimensional Resonance",
+  "oracleTitle": "Oracle Insight",
+  "partialDataWarning": "The threads of fate are incomplete.",
+  "addMoreInfo": "Provide more soul data",
+  "desc": "Understanding connections.",
+  "conflict": {
+    "title": "Conflict Analysis",
+    "description": "Analyze and understand conflict patterns in your relationships.",
+    "intro": {
+      "badge": "Conflict Analysis",
+      "title": "Conflict Resolution Style",
+      "quote": "Understanding how you handle disagreements reveals much about your relationships.",
+      "startButton": "Start Analysis"
+    }
+  },
+  "loveCommunication": {
+    "title": "Love Communication",
+    "description": "Understand communication styles in romantic relationships.",
+    "intro": {
+      "title": "Love Language Analysis",
+      "description": "Discover how you express and receive love in romantic relationships."
+    }
+  },
+  "synergy": {
+    "title": "Synergy Analysis",
+    "description": "Discover how different aspects of your personality work together.",
+    "hero": {
+      "badge": "Synergy",
+      "titlePrefix": "The Great",
+      "titleSuffix": "Synchronism",
+      "description": "Discover how different aspects of your personality work together."
+    },
+    "status": {
+      "accessing": "Accessing synergy data..."
+    }
+  },
+  "friendship": {
+    "intro": {
+      "badge": "Resonant Analysis",
+      "title": "Friendship Style Lab",
+      "quote": "Explore the invisible architecture of your bonds.",
+      "startButton": "Begin Exploration"
+    },
+    "questions": {
+      "bond": "Bond Query"
+    },
+    "results": {
+      "profile": "The Resonance Profile",
+      "vulnerability": "The Shadow Side",
+      "strategy": "The Path to Harmony",
+      "restart": "Retrace Your Steps"
+    }
+  },
+  "grandOracle": {
+    "title": "The Grand Oracle",
+    "desc": "The totality of your being, synthesized from all known systems."
+  },
+  "resonanceTitle": "Resonance Archive",
+  "resonanceVitalitySection": "Vitality Flow",
+  "resonanceVitalitySubtitle": "The pulse of your manifested energy"
+}

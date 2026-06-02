@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "hero": "ヒーロー",
+    "oracle": "オラクル",
+    "ontology": "存在論",
+    "vault": "保管庫",
+    "growth": "成長"
+  },
+  "labels": {
+    "ascend": "上昇",
+    "celestialChart": "天体図",
+    "archives": "アーカイブ",
+    "evolution": "進化"
+  },
+  "growth": {
+    "full": "完全な成長",
+    "unfinished": "未完成",
+    "fullDesc": "成長の道は完了しました。",
+    "unfinishedDesc": "進行中の道。",
+    "review": "確認",
+    "discover": "発見"
+  }
+}

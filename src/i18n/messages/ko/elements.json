@@ -1,0 +1,70 @@
+{
+  "title": "원소주기",
+  "influence": "원소 영향",
+  "chartLabel": "원소 구성",
+  "interpretation": {
+    "balanceAdvice": "균형을 위한 조언",
+    "balanceDescription": "요소의 균형을 맞추는 방법.",
+    "dominant": "주요 요소",
+    "title": "해석"
+  },
+  "viewModes": {
+    "chart": "요소 차트",
+    "balance": "요소 균형",
+    "cycle": "요소주기"
+  },
+  "water": {
+    "name": "Water (물)",
+    "description": "현명하고 유연하며 깊은 직관력을 가지고 있습니다.",
+    "keywords": ["지혜", "유연성", "통찰력", "활력"],
+    "strengths": ["통찰력", "적응성", "학습"],
+    "careers": ["연구원", "철학자", "거래", "심리학"],
+    "short": "물"
+  },
+  "wood": {
+    "name": "Wood (나무)",
+    "description": "성장지향적이고 창의적이며 유연한 사고를 가지고 있습니다.",
+    "keywords": ["성장", "창조", "운전하다", "자비심"],
+    "strengths": ["운전하다", "계획", "동정심"],
+    "careers": ["입안자", "교육자", "Art", "설계"],
+    "short": "목재"
+  },
+  "fire": {
+    "name": "Fire (화)",
+    "description": "열정적이고 밝으며 자기표현력이 강합니다.",
+    "keywords": ["열정", "표현", "에너지", "발광"],
+    "strengths": ["사교성", "지도", "창의성"],
+    "careers": ["연예인", "매상", "설계", "IT"],
+    "short": "불"
+  },
+  "earth": {
+    "name": "지구",
+    "description": "안정적이고 포용적이며 신뢰와 신뢰성을 최우선으로 생각합니다.",
+    "keywords": ["포함", "중개", "신뢰하다", "안정"],
+    "strengths": ["신뢰할 수 있음", "고집", "신뢰성"],
+    "careers": ["부동산", "농업", "건축학", "정치"],
+    "short": "지구"
+  },
+  "metal": {
+    "name": "금속",
+    "description": "결단력 있고 원칙적이며 섬세한 감각을 가지고 있습니다.",
+    "keywords": ["원칙", "정당성", "결정", "정도"],
+    "strengths": ["결단력", "정확성", "진실성"],
+    "careers": ["군대", "합법적인", "재원", "공학"],
+    "short": "금속"
+  },
+  "cycle": {
+    "description": "오행은 생성과 소멸의 순환을 통해 상호작용합니다.",
+    "destruction": "파괴적인 순환",
+    "generation": "생산주기",
+    "title": "원소주기"
+  },
+  "strengths": "강점",
+  "careers": "진로지도",
+  "subtitle": "5대 원소 이해",
+  "status": {
+    "strong": "강한",
+    "balanced": "균형 잡힌",
+    "weak": "약한"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "subtitle": "Sintoniza las frecuencias de tu existencia digital. Ajusta cómo el santuario interactúa con tu alma.",
+  "title": "Configuración del Santuario",
+  "subscription": {
+    "title": "Subscription Management",
+    "noActive": "No Active Subscription",
+    "noActiveDesc": "Unlock premium features today.",
+    "viewPlans": "View Plans",
+    "renewsOn": "Renews on {date}",
+    "expiresOn": "Expires on {date}",
+    "cancelSubscription": "Cancel Subscription",
+    "confirmCancel": "Are you sure?"
+  },
+  "sections": {
+    "access": {
+      "title": "Configuración del Santuario",
+      "security": {
+        "title": "Configuración del Santuario",
+        "description": "Tema oscuro de alto contraste activado"
+      },
+      "manage": "Gestionar",
+      "signout": {
+        "title": "Configuración del Santuario",
+        "description": "Tema oscuro de alto contraste activado"
+      }
+    },
+    "preferences": {
+      "title": "Configuración del Santuario",
+      "signals": {
+        "title": "Configuración del Santuario",
+        "description": "Tema oscuro de alto contraste activado"
+      },
+      "language": {
+        "title": "Configuración del Santuario",
+        "description": "Tema oscuro de alto contraste activado"
+      },
+      "change": "Cambiar",
+      "void": {
+        "title": "Configuración del Santuario",
+        "description": "Tema oscuro de alto contraste activado"
+      }
+    }
+  }
+}

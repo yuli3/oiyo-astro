@@ -1,0 +1,21 @@
+{
+  "modes": {
+    "serious": "誠実な指導",
+    "funny": "ウィットとワンダー",
+    "realistic": "根拠のある知恵"
+  },
+  "ui": {
+    "additionalTips": "知恵のささやき",
+    "askAnotherQuestion": "新しい問い合わせをする",
+    "share": "送信ディスカバリー",
+    "searchPlaceholder": "オラクルに懸念を伝えてください...",
+    "randomAdvice": "🎲 ランダムな洞察を呼び出す",
+    "allCategories": "オムニア",
+    "noResultsTitle": "隠された共鳴",
+    "noResultsDescription": "オラクルは、この問い合わせに直接一致するものを見つけませんでした。 別の表現で質問を立て直します。",
+    "clearSearch": "パージの問い合わせ"
+  },
+  "meta": {
+    "title": "ハート・レゾナンス・オラクル"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Values",
+  "free": {
+    "title": "Free",
+    "description": "Always free."
+  },
+  "privacy": {
+    "title": "Privacy",
+    "description": "Your data is yours."
+  }
+}

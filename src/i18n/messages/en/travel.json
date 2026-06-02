@@ -1,0 +1,810 @@
+{
+  "travel": {
+    "types": {
+      "INTJ": {
+        "preferences": [
+          "Cultural sites",
+          "Museums",
+          "Historic places",
+          "Architecture"
+        ],
+        "avoidances": [
+          "Crowded spots",
+          "Spontaneous plans",
+          "Group tours",
+          "Party atmosphere"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "Gyeongju",
+            "Jeonju Hanok Village",
+            "Andong",
+            "East Jeju"
+          ],
+          "international": ["Kyoto", "Rome", "Prague", "Istanbul"]
+        },
+        "activities": [
+          "History tours",
+          "Architecture runs",
+          "Reading",
+          "Photography"
+        ],
+        "companionCompatibility": {
+          "best": ["ENFP", "ENTP", "INFP"],
+          "good": ["INTJ", "INTP", "ENTJ"],
+          "challenging": ["ESFP", "ESTP", "ESFJ"]
+        },
+        "name": "The Architect",
+        "emoji": "🎯",
+        "description": "A strategist with a plan for everything and rich imagination.",
+        "planningStyle": "Detailed schedule including Plan B",
+        "budgetApproach": "Strategic budget allocation to valuable places",
+        "accommodation": "Quiet and comfortable private space",
+        "packingStyle": "Systematic and minimal packing",
+        "foodExploration": "Research local food rather than famous restaurants"
+      },
+      "INTP": {
+        "preferences": [
+          "Unique places",
+          "Science museums",
+          "Hidden gems",
+          "Local culture"
+        ],
+        "avoidances": [
+          "Fixed schedules",
+          "Tourist traps",
+          "Shopping focus",
+          "Noisy places"
+        ],
+        "idealDestinations": {
+          "domestic": ["Ulleungdo", "Gangneung", "Tongyeong", "Sokcho"],
+          "international": ["Iceland", "New Zealand", "Switzerland", "Norway"]
+        },
+        "activities": [
+          "Nature exploration",
+          "Stargazing",
+          "Contemplation",
+          "Unique cafes"
+        ],
+        "companionCompatibility": {
+          "best": ["ENFJ", "ENTJ", "INFJ"],
+          "good": ["INTP", "INTJ", "ENTP"],
+          "challenging": ["ESTJ", "ESFJ", "ISFJ"]
+        },
+        "name": "The Logician",
+        "emoji": "🔬",
+        "description": "An innovative inventor with an endless thirst for knowledge.",
+        "planningStyle": "Set broad direction and decide spontaneously on-site",
+        "budgetApproach": "Flexible spending on interesting experiences",
+        "accommodation": "Independent and quiet space",
+        "packingStyle": "Pack only essentials concisely",
+        "foodExploration": "Challenge experimental local food"
+      },
+      "ENTJ": {
+        "preferences": [
+          "Landmarks",
+          "Business hotels",
+          "Fine dining",
+          "Activities"
+        ],
+        "avoidances": [
+          "Unplanned trips",
+          "Slow pace",
+          "Uncomfortable stays",
+          "Wasting time"
+        ],
+        "idealDestinations": {
+          "domestic": ["Seoul", "Busan", "Jeju", "Incheon"],
+          "international": ["New York", "Singapore", "Dubai", "Hong Kong"]
+        },
+        "activities": [
+          "Sightseeing",
+          "Golf",
+          "Wine tours",
+          "Business meetings"
+        ],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENTJ", "INTJ", "ENTP"],
+          "challenging": ["ISFJ", "ESFJ", "ISFP"]
+        },
+        "name": "The Commander",
+        "emoji": "👔",
+        "description": "A strong-willed leader who always finds a way.",
+        "planningStyle": "Tight schedule to maximize experience",
+        "budgetApproach": "Bold investment in premium experiences",
+        "accommodation": "Luxury hotel with full amenities",
+        "packingStyle": "Efficient and practical packing",
+        "foodExploration": "Visit Michelin Guide restaurants"
+      },
+      "ENTP": {
+        "preferences": [
+          "Adventure activities",
+          "Night markets",
+          "Locals interaction",
+          "Spontaneous trips"
+        ],
+        "avoidances": [
+          "Standard courses",
+          "Luxury tours",
+          "Quiet rest",
+          "Regular schedules"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "Gangwon-do",
+            "West Jeju",
+            "Gyeongsang countryside",
+            "Island hopping"
+          ],
+          "international": [
+            "Southeast Asia",
+            "South America",
+            "Eastern Europe",
+            "Middle East"
+          ]
+        },
+        "activities": ["Surfing", "Skydiving", "Trekking", "Local parties"],
+        "companionCompatibility": {
+          "best": ["INFJ", "INTJ", "ISFJ"],
+          "good": ["ENTP", "ENFP", "ESTP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "The Debater",
+        "emoji": "💡",
+        "description": "An original thinker who can't resist interesting intellectual challenges.",
+        "planningStyle": "Set only broad framework and decide on-site",
+        "budgetApproach": "Flexible spending centered on experiences",
+        "accommodation": "Guesthouse, hostel",
+        "packingStyle": "Pack minimally and procure locally",
+        "foodExploration": "Street food and local market exploration"
+      },
+      "INFJ": {
+        "preferences": [
+          "Spiritual places",
+          "Nature",
+          "Quiet cafes",
+          "Art galleries"
+        ],
+        "avoidances": [
+          "Party culture",
+          "Crowded spots",
+          "Noise",
+          "Superficial experiences"
+        ],
+        "idealDestinations": {
+          "domestic": ["Jeju Olle Trail", "Boseong", "Namhae", "Damyang"],
+          "international": ["Bali", "Santorini", "Kyoto", "Bhutan"]
+        },
+        "activities": ["Meditation", "Yoga", "Photography", "Journaling"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ENFP", "INTP"],
+          "good": ["INFJ", "INFP", "ENFJ"],
+          "challenging": ["ESTP", "ESFP", "ESTJ"]
+        },
+        "name": "The Advocate",
+        "emoji": "🌟",
+        "description": "A quiet but insightful idealist who inspires people.",
+        "planningStyle": "Relaxed schedule focused on meaningful places",
+        "budgetApproach": "Spending based on value of experience",
+        "accommodation": "Peaceful and beautiful space",
+        "packingStyle": "Pack items that stimulate emotions",
+        "foodExploration": "Atmospheric restaurants and cafes"
+      },
+      "INFP": {
+        "preferences": [
+          "Hidden spots",
+          "Quiet villages",
+          "Bookstores",
+          "Indie shops"
+        ],
+        "avoidances": [
+          "Tourist routes",
+          "Noisy places",
+          "Fixed schedules",
+          "Group activities"
+        ],
+        "idealDestinations": {
+          "domestic": ["Gangneung Anmok Beach", "Tongyeong", "Yeosu", "Jeonju"],
+          "international": ["Paris", "Amsterdam", "Prague", "Edinburgh"]
+        },
+        "activities": ["Walking", "Reading", "Writing", "Photography"],
+        "companionCompatibility": {
+          "best": ["ENTJ", "ENFJ", "INTJ"],
+          "good": ["INFP", "INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ESFJ", "ISTJ"]
+        },
+        "name": "The Mediator",
+        "emoji": "✨",
+        "description": "Passionate people who always dedicate themselves to good causes.",
+        "planningStyle": "Loose plan for freedom",
+        "budgetApproach": "Spending on meaningful experiences",
+        "accommodation": "Unique and cozy space",
+        "packingStyle": "Pack sentimental items",
+        "foodExploration": "Small atmospheric restaurants"
+      },
+      "ENFJ": {
+        "preferences": [
+          "Local experiences",
+          "Cooking classes",
+          "Community tours",
+          "Volunteering"
+        ],
+        "avoidances": [
+          "Solitude",
+          "Quiet trips",
+          "Tourist-only",
+          "Superficial experiences"
+        ],
+        "idealDestinations": {
+          "domestic": ["Jeju villages", "Jeonju", "Busan", "Sokcho"],
+          "international": ["Italy", "Spain", "Mexico", "Thailand"]
+        },
+        "activities": [
+          "Meeting locals",
+          "Cooking classes",
+          "Cultural exchange",
+          "Volunteer trips"
+        ],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENFJ", "ENFP", "ESFJ"],
+          "challenging": ["ISTP", "ISTJ", "INTP"]
+        },
+        "name": "The Protagonist",
+        "emoji": "🤝",
+        "description": "A passionate leader who encourages people and wants to create a better world.",
+        "planningStyle": "Flexible plan centered on people",
+        "budgetApproach": "Investment in experiences and people",
+        "accommodation": "Guesthouse, homestay",
+        "packingStyle": "Pack gifts and items for sharing",
+        "foodExploration": "Restaurants where locals go"
+      },
+      "ENFP": {
+        "preferences": [
+          "Festivals",
+          "Performances",
+          "Night markets",
+          "Local events"
+        ],
+        "avoidances": ["Fixed schedules", "Quiet trips", "Alone", "Routines"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Busan", "Gangneung", "Yeosu"],
+          "international": ["Barcelona", "Bangkok", "Rio de Janeiro", "Bali"]
+        },
+        "activities": ["Festivals", "Parties", "Surfing", "Meeting new people"],
+        "companionCompatibility": {
+          "best": ["INTJ", "INFJ", "ISTJ"],
+          "good": ["ENFP", "ENTP", "ESFP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "The Campaigner",
+        "emoji": "🎨",
+        "description": "A passionate and creative free spirit who always finds joy.",
+        "planningStyle": "Spontaneous and free travel",
+        "budgetApproach": "Bold spending on enjoyable experiences",
+        "accommodation": "Social atmosphere accommodation",
+        "packingStyle": "End up packing more than needed",
+        "foodExploration": "Instagram hotspots"
+      },
+      "ISTJ": {
+        "preferences": [
+          "Famous spots",
+          "Museums",
+          "Historic sites",
+          "Safe places"
+        ],
+        "avoidances": [
+          "Spontaneous trips",
+          "Dangerous places",
+          "Plan changes",
+          "Uncomfortable stays"
+        ],
+        "idealDestinations": {
+          "domestic": ["Gyeongju", "Jeonju", "Andong", "Suwon"],
+          "international": ["Japan", "Germany", "Switzerland", "Canada"]
+        },
+        "activities": [
+          "Sightseeing",
+          "Photography",
+          "Museum tours",
+          "Traditional experiences"
+        ],
+        "companionCompatibility": {
+          "best": ["ESFP", "ESTP", "ENFP"],
+          "good": ["ISTJ", "ESTJ", "ISFJ"],
+          "challenging": ["ENTP", "ENFP", "ESFP"]
+        },
+        "name": "The Logistician",
+        "emoji": "📚",
+        "description": "Responsible people who think based on facts and are reliable.",
+        "planningStyle": "Detailed schedule with advance reservations",
+        "budgetApproach": "Stable spending within budget",
+        "accommodation": "Verified chain hotel",
+        "packingStyle": "Thorough preparation following checklist",
+        "foodExploration": "Famous and verified restaurants"
+      },
+      "ISFJ": {
+        "preferences": [
+          "Peaceful places",
+          "Family spots",
+          "Safe spots",
+          "Comfortable rest"
+        ],
+        "avoidances": ["Adventure", "Crowds", "Discomfort", "Danger"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Sokcho", "Yeosu", "Gyeongju"],
+          "international": ["Japan", "Taiwan", "Singapore", "New Zealand"]
+        },
+        "activities": ["Healing", "Onsen", "Food tours", "Shopping"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ESTP", "ESFP"],
+          "good": ["ISFJ", "ISTJ", "ESFJ"],
+          "challenging": ["ENTP", "ENFP", "ESTP"]
+        },
+        "name": "The Defender",
+        "emoji": "📖",
+        "description": "Dedicated people who do their best to protect those close to them.",
+        "planningStyle": "Schedule focused on safety and comfort",
+        "budgetApproach": "Stable and conservative spending",
+        "accommodation": "Clean and comfortable atmosphere hotel",
+        "packingStyle": "Thoroughly pack necessities including emergency medicine",
+        "foodExploration": "Familiar and delicious food"
+      },
+      "ESTJ": {
+        "preferences": [
+          "Famous spots",
+          "Package tours",
+          "Guided tours",
+          "Amenities"
+        ],
+        "avoidances": [
+          "No plans",
+          "Inefficiency",
+          "Time wasting",
+          "Discomfort"
+        ],
+        "idealDestinations": {
+          "domestic": ["Seoul", "Busan", "Jeju", "Daejeon"],
+          "international": ["Singapore", "Hong Kong", "Tokyo", "Beijing"]
+        },
+        "activities": ["Sightseeing", "Shopping", "Food tours", "Photography"],
+        "companionCompatibility": {
+          "best": ["ISFP", "ISTP", "INFP"],
+          "good": ["ESTJ", "ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP", "INTP"]
+        },
+        "name": "The Executive",
+        "emoji": "📊",
+        "description": "A practitioner with excellent ability to manage things and people.",
+        "planningStyle": "Tight schedule down to the minute",
+        "budgetApproach": "Focus on cost-effectiveness and efficiency",
+        "accommodation": "Convenient hotel with good location",
+        "packingStyle": "Efficient and practical packing",
+        "foodExploration": "Visit famous restaurant list"
+      },
+      "ESFJ": {
+        "preferences": [
+          "Family trips",
+          "Group tours",
+          "Famous cafes",
+          "Shopping"
+        ],
+        "avoidances": [
+          "Solo travel",
+          "Quiet places",
+          "Dangerous activities",
+          "Discomfort"
+        ],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Busan", "Incheon", "Jeonju"],
+          "international": ["Okinawa", "Guam", "Australia", "Hawaii"]
+        },
+        "activities": ["Shopping", "Food", "Photography", "Cafe tours"],
+        "companionCompatibility": {
+          "best": ["ISTP", "ISFP", "INFP"],
+          "good": ["ESFJ", "ENFJ", "ESTJ"],
+          "challenging": ["INTP", "INTJ", "ISTP"]
+        },
+        "name": "The Consul",
+        "emoji": "👥",
+        "description": "A popular personality who finds happiness in helping those around them.",
+        "planningStyle": "Schedule everyone can enjoy",
+        "budgetApproach": "Sharing and moderate spending",
+        "accommodation": "Family-friendly convenient accommodation",
+        "packingStyle": "Pack items for others too",
+        "foodExploration": "Famous and popular restaurants"
+      },
+      "ISTP": {
+        "preferences": ["Outdoor activities", "Sports", "Nature", "Adventure"],
+        "avoidances": [
+          "Fixed schedules",
+          "Museums",
+          "Shopping",
+          "Tourist routes"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "Gangwon-do",
+            "Jeju mountains",
+            "Gyeongsang coast",
+            "Mountain areas"
+          ],
+          "international": ["New Zealand", "Norway", "Switzerland", "Canada"]
+        },
+        "activities": ["Hiking", "Skiing", "Diving", "Biking"],
+        "companionCompatibility": {
+          "best": ["ESFJ", "ESTJ", "ENFJ"],
+          "good": ["ISTP", "ESTP", "ISFP"],
+          "challenging": ["ENFJ", "ESFJ", "INFJ"]
+        },
+        "name": "The Virtuoso",
+        "emoji": "🔧",
+        "description": "A practitioner skilled at handling various tools and solving problems.",
+        "planningStyle": "Minimal planning and on-site response",
+        "budgetApproach": "Practical spending only where needed",
+        "accommodation": "Camping, cheap lodging",
+        "packingStyle": "Practical and light packing",
+        "foodExploration": "Simple and quick meals"
+      },
+      "ISFP": {
+        "preferences": [
+          "Art galleries",
+          "Nature",
+          "Cafes",
+          "Atmospheric spaces"
+        ],
+        "avoidances": ["Noisy places", "Plans", "Rushing", "Group activities"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Gangneung", "Tongyeong", "Yeosu"],
+          "international": ["Paris", "Provence", "Santorini", "Bali"]
+        },
+        "activities": ["Photography", "Drawing", "Cafes", "Walking"],
+        "companionCompatibility": {
+          "best": ["ESTJ", "ESFJ", "ENTJ"],
+          "good": ["ISFP", "INFP", "ESFP"],
+          "challenging": ["ESTJ", "ENTJ", "ISTJ"]
+        },
+        "name": "The Adventurer",
+        "emoji": "🎭",
+        "description": "An artist who always seeks new experiences and enjoys the present.",
+        "planningStyle": "Free schedule following the heart",
+        "budgetApproach": "Investment in beautiful experiences",
+        "accommodation": "Pretty and atmospheric space",
+        "packingStyle": "Focus on pretty clothes and accessories",
+        "foodExploration": "Pretty cafes and restaurants"
+      },
+      "ESTP": {
+        "preferences": ["Activities", "Parties", "Nightlife", "Extreme sports"],
+        "avoidances": ["Museums", "Quiet tours", "Plans", "Slow pace"],
+        "idealDestinations": {
+          "domestic": ["Busan", "Gangneung", "West Jeju", "Yangyang"],
+          "international": ["Phuket", "Bali", "Dubai", "Ibiza"]
+        },
+        "activities": ["Surfing", "Clubbing", "Water sports", "Bungee jumping"],
+        "companionCompatibility": {
+          "best": ["ISFJ", "ISTJ", "INFJ"],
+          "good": ["ESTP", "ESFP", "ENTP"],
+          "challenging": ["INFJ", "INFP", "ISFJ"]
+        },
+        "name": "The Entrepreneur",
+        "emoji": "🚀",
+        "description": "An activist who doesn't fear risk and seizes opportunities of the moment.",
+        "planningStyle": "Decide spontaneously on-site",
+        "budgetApproach": "Bold investment for enjoyment",
+        "accommodation": "Party atmosphere resort facilities",
+        "packingStyle": "Simple and active attire",
+        "foodExploration": "Hot restaurants and bars"
+      },
+      "ESFP": {
+        "preferences": ["Festivals", "Parties", "Shopping", "People"],
+        "avoidances": ["Plans", "Silence", "Alone", "Boredom"],
+        "idealDestinations": {
+          "domestic": ["Busan", "Jeju", "Hongdae", "Gangnam"],
+          "international": ["Las Vegas", "Ibiza", "Bangkok", "Miami"]
+        },
+        "activities": ["Parties", "Shopping", "Shows", "Food"],
+        "companionCompatibility": {
+          "best": ["ISTJ", "ISFJ", "INTJ"],
+          "good": ["ESFP", "ESTP", "ENFP"],
+          "challenging": ["INTJ", "ISTJ", "INFJ"]
+        },
+        "name": "The Entertainer",
+        "emoji": "🎉",
+        "description": "A performer who makes others happy and energizes them.",
+        "planningStyle": "Spontaneous and free schedule",
+        "budgetApproach": "Generous spending for enjoyment",
+        "accommodation": "Lively hotel in the city center",
+        "packingStyle": "Pack a lot and buy even more",
+        "foodExploration": "Popular and crowded restaurants"
+      },
+      "items": [
+        {
+          "name": "The Adventurer",
+          "description": "Seeking new experiences and thrills."
+        },
+        {
+          "name": "The Planner",
+          "description": "Finding peace in perfect schedules."
+        },
+        {
+          "name": "The Relaxer",
+          "description": "Seeking true rest and healing."
+        },
+        {
+          "name": "The Culturalist",
+          "description": "Deep dwelling into history and arts."
+        },
+        {
+          "name": "The Budgeteer",
+          "description": "Smart consumer maximizing value."
+        },
+        {
+          "name": "The Luxurist",
+          "description": "Enjoying premium service and comfort."
+        }
+      ],
+      "title": "6 types of travelers"
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "When you arrive at your destination, you:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Quietly explore on your own",
+            "value": "I"
+          },
+          {
+            "text": "Chat with locals or other travelers",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "When planning your itinerary:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Focus on famous spots with detailed plans",
+            "value": "S"
+          },
+          {
+            "text": "Focus on hidden gems and unique experiences",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Criteria for choosing a destination:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Efficiency and value for money",
+            "value": "T"
+          },
+          {
+            "text": "Atmosphere and feeling",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Preparing for the trip:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Book and plan strictly in advance",
+            "value": "J"
+          },
+          {
+            "text": "Roughly plan and go spontaneously",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Preferred activity during travel:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Quietly visiting museums or ruins",
+            "value": "I"
+          },
+          {
+            "text": "Local festivals or meeting people",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "When encountering strange food:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Go to verified famous restaurants",
+            "value": "S"
+          },
+          {
+            "text": "Try something unique and new",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "When disagreeing with a travel companion:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Decide rationally based on objective criteria",
+            "value": "T"
+          },
+          {
+            "text": "Adjust considering feelings",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "If something unexpected happens:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Try to return to the plan",
+            "value": "J"
+          },
+          {
+            "text": "Accept it as a new opportunity",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Criteria for choosing accommodation:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Quiet and comfortable private space",
+            "value": "I"
+          },
+          {
+            "text": "Space where I can mingle with people",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "How do you get travel info?",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Guidebooks and verified info",
+            "value": "S"
+          },
+          {
+            "text": "Blogs and unique reviews",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "When exceeding the budget:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Adjust plan and cut spending",
+            "value": "T"
+          },
+          {
+            "text": "Be flexible as experience matters",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "On the last day of the trip:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Finish all planned activities",
+            "value": "J"
+          },
+          {
+            "text": "Enjoy remaining time freely",
+            "value": "P"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "title": "travel personality test",
+      "description": "What is my travel style? Personality analysis for the perfect trip",
+      "keywords": "Travel personality, travel style, travel destination recommendation, personality test"
+    },
+    "hero": {
+      "badge": "travel psychology",
+      "title": "travel personality test",
+      "description": "An intentional planner? Free spirit? Find out your true travel style!",
+      "cta": "Start testing"
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "Better Trips",
+          "description": "Find destinations and styles that suit you perfectly."
+        },
+        {
+          "title": "Smart Budgeting",
+          "description": "Learn how to spend your money where it counts."
+        },
+        {
+          "title": "More Enjoyment",
+          "description": "Reduce stress and maximize satisfaction during your trips."
+        },
+        {
+          "title": "Travel Harmony",
+          "description": "Understand differences with your travel companions."
+        }
+      ],
+      "title": "Benefits of knowing your travel personality"
+    },
+    "test": {
+      "title": "travel propensity test",
+      "subtitle": "Discover your unique travel style and receive customized travel destination recommendations",
+      "progress": "Progress: {current}/{total}",
+      "submit": "View results",
+      "next": "next",
+      "previous": "before"
+    },
+    "result": {
+      "sections": {
+        "traits": "travel style",
+        "idealDestinations": "Recommended travel destinations",
+        "travelTips": "travel tips",
+        "balance": "travel balance",
+        "strengths": "strength",
+        "challenges": "Things to watch out for",
+        "breakdown": "Propensity analysis table"
+      },
+      "title": "Travel personality analysis results",
+      "subtitle": "Check out my travel DNA",
+      "loading": "Analyzing travel style...",
+      "exploreMore": "Learn more",
+      "exploreMoreDescription": "Check out our other personality tests",
+      "retakeTest": "Test again"
+    },
+    "cityGuide": {
+      "meta": {
+        "title": "city ​​guide",
+        "description": "Find the city that's right for you"
+      },
+      "hero": {
+        "title": "Find the city that suits you",
+        "subtitle": "Find a city that fits your lifestyle"
+      },
+      "noData": {
+        "title": "I haven't found the city yet",
+        "desc": "Change the conditions and try searching again.",
+        "button": "Search again"
+      },
+      "filters": {
+        "climate": "climate",
+        "cost": "price",
+        "safety": "safety",
+        "internet": "internet speed"
+      }
+    }
+  }
+}

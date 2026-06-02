@@ -1,0 +1,438 @@
+{
+  "feature": "功能",
+  "plan": "套餐",
+  "billing": {
+    "monthly": "月付",
+    "yearly": "年付",
+    "saveUp": "最多节省",
+    "year": "/年",
+    "month": "/月",
+    "save": "节省"
+  },
+  "plans": {
+    "popular": "最受欢迎",
+    "free": "基础版",
+    "current": "当前套餐",
+    "continueUsing": "继续使用",
+    "getStarted": "立即开始",
+    "subscribe": "立即订阅",
+    "cancelAnytime": "随时可取消"
+  },
+  "info": {
+    "allPlansInclude": "所有套餐包含",
+    "securePayment": "安全支付",
+    "instantAccess": "即时访问",
+    "customerSupport": "优先支持"
+  },
+  "checkout": {
+    "orderName": "Oiyo.net {planName} 订阅"
+  },
+  "errors": {
+    "PLAN_NOT_FOUND": "未找到订阅计划。",
+    "PAYMENT_SERVICE_ERROR": "支付服务出现错误。请稍后重试。",
+    "PROVIDER_REQUIRED": "缺少支付平台配置。",
+    "LOCALE_REQUIRED": "支付处理需要语言设置。",
+    "CURRENCY_REQUIRED": "支付处理需要货币设置。",
+    "TOSS_CLIENT_KEY_REQUIRED": "未配置 Toss 支付密钥。",
+    "LEMONSQUEEZY_CONFIG_REQUIRED": "缺少 LemonSqueezy 配置。",
+    "generic": "支付失败。请重试。"
+  },
+  "failed": {
+    "help": {
+      "technical": {
+        "refresh": "刷新页面",
+        "browser": "尝试使用不同的浏览器",
+        "network": "检查您的网络连接",
+        "incognito": "尝试开启无痕/私密模式",
+        "title": "金钱性格与资产管理测试"
+      },
+      "payment": {
+        "title": "金钱性格与资产管理测试",
+        "checkCard": "请重新检查卡片信息",
+        "checkFunds": "请确保余额或限额充足",
+        "tryAnother": "尝试使用其他支付方式",
+        "contactBank": "请联系发卡行或银行"
+      }
+    },
+    "meta": {
+      "title": "金钱性格与资产管理测试",
+      "description": "发现您的金钱性格与资产管理风格"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你独特的视角塑造了你的现实。"
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["标志性强度", "枢轴点", "2"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中",
+      "selectOption": "选择",
+      "subtitle": "欢迎加入高级会员"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        }
+      ]
+    },
+    "result": {
+      "title": "金钱性格与资产管理测试",
+      "description": "发现您的金钱性格与资产管理风格"
+    },
+    "subtitle": "欢迎加入高级会员",
+    "genericTitle": "支付错误",
+    "genericDescription": "处理您的支付时出错。请重试。",
+    "genericAction": "重试",
+    "unknownTitle": "未知错误",
+    "unknownDescription": "发生了意外错误。请联系客户支持。",
+    "unknownAction": "联系支持",
+    "orderId": "订单编号",
+    "orderIdNote": "联系支持时请告知此订单编号，以便我们快速为您处理。",
+    "technicalDetails": "技术详情",
+    "errorCode": "错误代码",
+    "errorMessage": "错误信息",
+    "whatNext": "您可以做什么？",
+    "contactSupport": "联系支持",
+    "backToHome": "返回首页",
+    "needHelp": "需要帮助？",
+    "stillNeedHelp": "仍然遇到困难？",
+    "getSupport": "获取支持",
+    "title": "金钱性格与资产管理测试",
+    "description": "发现您的金钱性格与资产管理风格"
+  },
+  "success": {
+    "meta": {
+      "title": "金钱性格与资产管理测试",
+      "description": "发现您的金钱性格与资产管理风格"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["标志性强度", "枢轴点", "2"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中",
+      "selectOption": "选择",
+      "subtitle": "欢迎加入高级会员"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "小小的选择累积成伟大的命运。"
+        }
+      ]
+    },
+    "result": {
+      "title": "金钱性格与资产管理测试",
+      "description": "发现您的金钱性格与资产管理风格"
+    },
+    "welcome', { name: user": {
+      "firstName || user": {
+        "fullName || t('success": {}
+      }
+    },
+    "subtitle": "欢迎加入高级会员",
+    "verifying": "正在验证支付...",
+    "verifyingDescription": "请稍候，我们正在确认您的支付信息。",
+    "premiumActive": "高级会员已激活",
+    "welcome": "欢迎，{name}！",
+    "user": "用户",
+    "paymentDetails": "支付详情",
+    "orderId": "订单编号",
+    "amount": "金额",
+    "status": "状态",
+    "confirmed": "已确认",
+    "verificationSuccess": "支付已成功确认。高级功能现已可以使用。",
+    "verificationFailed": "无法确认您的支付。请重试。",
+    "verificationNetworkError": "无法连接到支付服务器。请稍后重试。",
+    "verificationRetry": "重试验证",
+    "verificationPending": "等待确认",
+    "approvedAt": "批准时间",
+    "featuresUnlocked": "高级功能现已开启",
+    "nextSteps": "接下来的步骤",
+    "goToDashboard": "前往控制板",
+    "takeTest": "开始测试",
+    "supportNote": "需要帮助？我们的高级支持团队随时为您待命。",
+    "contactSupport": "联系支持",
+    "title": "金钱性格与资产管理测试",
+    "description": "发现您的金钱性格与资产管理风格"
+  },
+  "test": {
+    "insightBullets": ["绘制最真实自我的星座图。"],
+    "progress": "进度",
+    "submit": "提交",
+    "loading": "加载中",
+    "selectOption": "选择"
+  },
+  "result": {
+    "title": "金钱性格与资产管理测试",
+    "description": "发现您的金钱性格与资产管理风格"
+  },
+  "meta": {
+    "title": "金钱性格与资产管理测试",
+    "description": "发现您的金钱性格与资产管理风格",
+    "keywords": "金钱性格, 资产管理, 理财, 消费习惯, 财务健康"
+  },
+  "checkCard": "请重新检查卡片信息",
+  "checkFunds": "请确保余额或限额充足",
+  "tryAnother": "尝试使用其他支付方式",
+  "contactBank": "请联系发卡行或银行"
+}

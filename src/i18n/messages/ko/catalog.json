@@ -1,0 +1,221 @@
+{
+  "tests": {
+    "mbti": {
+      "title": "심리적 유형",
+      "subtitle": "사회적 인지",
+      "description": "당신의 의식의 반복되는 패턴에 대한 부드러운 성찰."
+    },
+    "tci": {
+      "title": "성격과 기질",
+      "subtitle": "타고난 본질",
+      "description": "성격의 심층적인 생물학적 및 후천적 질감을 추적합니다."
+    },
+    "enneagram": {
+      "title": "핵심 동기",
+      "subtitle": "아홉 개의 시선",
+      "description": "당신의 선택과 두려움을 이끄는 신성한 동인을 공개합니다."
+    },
+    "hexaco": {
+      "title": "6차원",
+      "subtitle": "윤리적 공명",
+      "description": "당신의 영혼 속에 있는 정직과 겸손의 미묘한 진동을 측정해보세요."
+    },
+    "perfectionism": {
+      "title": "높은 기준",
+      "subtitle": "이상주의자의 길",
+      "description": "탁월함과 우아함 사이의 미묘한 균형을 이해합니다."
+    },
+    "country-preference": {
+      "title": "문화적 공명",
+      "subtitle": "이상적인 환경",
+      "description": "당신의 영혼과 가장 잘 조화되는 지리적 주파수를 찾아보세요."
+    },
+    "learning-style": {
+      "title": "인지 스타일",
+      "subtitle": "지식의 연금술",
+      "description": "당신의 마음이 어떻게 세상의 지혜를 우아하게 흡수하고 증류하는지 알아보세요."
+    },
+    "resilience": {
+      "title": "주권의 힘",
+      "subtitle": "적응성",
+      "description": "어떤 계절에도 성장하고, 발전하고, 번영할 수 있는 타고난 능력을 탐구하세요."
+    },
+    "decision-making": {
+      "title": "전략적 선택",
+      "subtitle": "결정 패턴",
+      "description": "인생에서 가장 결정적인 전환 뒤에 숨겨진 조용한 논리를 분석합니다."
+    },
+    "consumption-style": {
+      "title": "가치교환",
+      "subtitle": "머티리얼 리듬",
+      "description": "당신의 영혼의 가치가 물질 세계에서 어떻게 나타나는지 드러냅니다."
+    },
+    "cognitive-bias": {
+      "title": "인식 필터",
+      "subtitle": "인지 편향",
+      "description": "현실을 해석하는 미묘한 렌즈를 인식하게 됩니다."
+    },
+    "vitality": {
+      "title": "에너지 및 생활",
+      "subtitle": "내부 불꽃",
+      "description": "당신의 삶의 중요한 흐름의 썰물과 흐름을 모니터링하십시오."
+    },
+    "value-harmonizer": {
+      "title": "내부 나침반",
+      "subtitle": "가치 조화자",
+      "description": "매일의 행동을 마음의 영원한 진리에 맞추십시오."
+    },
+    "abundance": {
+      "title": "부의식",
+      "subtitle": "번영의 사고방식",
+      "description": "삶의 많은 선물에 대한 깊은 흐름 감각과 수용력을 배양합니다."
+    },
+    "riasec": {
+      "title": "직업 경로",
+      "subtitle": "직업적 관심분야",
+      "description": "당신의 타고난 재능이 본거지를 찾을 수 있는 전문적인 궤도를 찾으세요."
+    },
+    "hsp": {
+      "title": "감각 처리",
+      "subtitle": "민감도 프로필",
+      "description": "매우 수용적인 정신의 심오한 깊이를 포용합니다."
+    },
+    "bigfive": {
+      "title": "5요소 모델",
+      "subtitle": "성격 기초",
+      "description": "귀하의 고유한 존재감을 정의하는 차원에 대한 포괄적인 지도입니다."
+    },
+    "big5": {
+      "title": "5요소 모델",
+      "subtitle": "성격 기초",
+      "description": "귀하의 고유한 존재감을 정의하는 차원에 대한 포괄적인 지도입니다."
+    },
+    "saju": {
+      "title": "네 개의 기둥",
+      "subtitle": "원시 운명",
+      "description": "당신의 우주 기원에 대한 동부 점성술 분석."
+    },
+    "egenteto-v2": {
+      "title": "호르몬 원형",
+      "subtitle": "생화학적 정체성",
+      "description": "당신의 독특한 호르몬 지문이 당신의 기질을 어떻게 형성하는지 알아보세요."
+    },
+    "daily": {
+      "title": "데일리 오라클",
+      "subtitle": "시간적 정렬",
+      "description": "우주 정렬과 개인적인 통찰력의 일일 복용량."
+    }
+  },
+  "title": "영혼의 지도 제작",
+  "description": "당신 존재의 조용한 위도를 매핑합니다. 엄선된 평가를 통해 내면의 풍경을 평온하게 탐색해 보세요.",
+  "@/components/ontology/FactionCard": "@/components/ontology/FactionCard",
+  "@/components/ontology/GenericFactionCard": "@/components/ontology/GenericFactionCard",
+  "": "",
+  "labels": {
+    "undiscovered": "발견되지 않은",
+    "meaning": "의미",
+    "element": "요소",
+    "nameVibration": "이름 진동",
+    "westernZodiac": "서부 황도대",
+    "sign": "징후",
+    "observation": "관찰",
+    "easternZodiac": "동부 황도대",
+    "animal": "동물",
+    "dominion": "지배",
+    "bureau": "국"
+  },
+  "returnToHome": "집으로 돌아가기",
+  "contactSupport": "지원팀에 문의",
+  "syncingData": "데이터 동기화 중",
+  "guest": "손님",
+  "calibration": "구경 측정",
+  "changeOrigin": "원산지 변경",
+  "todayInsight": {
+    "title": "오늘의 통찰",
+    "soulOracle": "소울 오라클",
+    "innerResonance": "내면의 공명",
+    "manifestMore": "매니페스트 더보기"
+  },
+  "readingsLink": "독서",
+  "cards": {
+    "vitality": {
+      "title": "활력"
+    },
+    "resonance": {
+      "description": "당신의 공명 패턴.",
+      "subtitle": "공명"
+    },
+    "foundation": {
+      "description": "핵심 기반.",
+      "subtitle": "기반"
+    },
+    "elemental": {
+      "description": "당신의 원소 혼합.",
+      "subtitle": "원소 친화력",
+      "title": "강요"
+    },
+    "onomancy": {
+      "description": "당신의 이름 진동.",
+      "subtitle": "이름 연금술"
+    },
+    "cognition": {
+      "description": "당신의 사고 패턴.",
+      "subtitle": "인식"
+    },
+    "vocation": {
+      "description": "당신의 직업 경로.",
+      "subtitle": "직업"
+    },
+    "destiny": {
+      "description": "당신의 운명 궤적.",
+      "subtitle": "운명"
+    }
+  },
+  "resonanceTitle": "공명 프로필",
+  "sections": {
+    "testArchitecture": {
+      "title": "테스트 아키텍처",
+      "description": "배경 구조 정보."
+    },
+    "emotionalResonance": {
+      "title": "정서적 공명",
+      "description": "감정적으로 연결하는 방법."
+    },
+    "grandArchives": {
+      "title": "그랜드 아카이브",
+      "description": "역사적 지식 기반."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "강요"
+    },
+    "riasec": {
+      "description": "RIASEC 직업 유형"
+    },
+    "saju": {
+      "label": "전에",
+      "description": "4가지 핵심 분석",
+      "polarity": "극성",
+      "element": "요소"
+    },
+    "archiveEntry": "아카이브 항목",
+    "recordVerified": "기록 확인됨",
+    "tuning": {
+      "color": "색상",
+      "number": "숫자",
+      "direction": "방향",
+      "flower": "꽃",
+      "gemstone": "보석",
+      "luckyStar": "럭키스타",
+      "title": "동조",
+      "favorableDays": "유리한 날",
+      "synergy": "시너지"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "지 웨이"
+  },
+  "_": "_"
+}

@@ -1,0 +1,44 @@
+{
+  "subtitle": "调整您数字存在的频率。调整避难所如何与您的灵魂互动。",
+  "title": "避难所配置",
+  "subscription": {
+    "title": "Subscription Management",
+    "noActive": "No Active Subscription",
+    "noActiveDesc": "Unlock premium features today.",
+    "viewPlans": "View Plans",
+    "renewsOn": "Renews on {date}",
+    "expiresOn": "Expires on {date}",
+    "cancelSubscription": "Cancel Subscription",
+    "confirmCancel": "Are you sure?"
+  },
+  "sections": {
+    "access": {
+      "title": "避难所配置",
+      "security": {
+        "title": "Sanctuary Configuration",
+        "description": "High contrast dark theme enabled"
+      },
+      "manage": "管理",
+      "signout": {
+        "title": "Sanctuary Configuration",
+        "description": "High contrast dark theme enabled"
+      }
+    },
+    "preferences": {
+      "title": "避难所配置",
+      "signals": {
+        "title": "避难所配置",
+        "description": "高对比度深色模式已启用"
+      },
+      "language": {
+        "title": "避难所配置",
+        "description": "高对比度深色模式已启用"
+      },
+      "change": "更改",
+      "void": {
+        "title": "避难所配置",
+        "description": "高对比度深色模式已启用"
+      }
+    }
+  }
+}

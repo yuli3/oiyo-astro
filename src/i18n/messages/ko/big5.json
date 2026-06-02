@@ -1,0 +1,14 @@
+{
+  "title": "빅 파이브 성격 테스트",
+  "badge": "해양 모델",
+  "resultTitle": "당신의 성격 프로필",
+  "restart": "재응시 시험",
+  "save": "결과 저장",
+  "dimensions": {
+    "openness": "개방 상태",
+    "conscientiousness": "성실성",
+    "extraversion": "외향성",
+    "agreeableness": "친화성",
+    "neuroticism": "신경증"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "birthDate": "생년월일",
+  "birthTime": "출생 시간",
+  "calculate": "계산하기",
+  "formTitle": "세부 정보를 입력하세요",
+  "privacyNote": "귀하의 데이터는 영구적으로 저장되지 않습니다.",
+  "nameLabel": "이름",
+  "namePlaceholder": "이름을 입력하세요",
+  "birthDateLabel": "생일",
+  "birthTimeLabel": "출생 시간",
+  "hourPlaceholder": "허",
+  "minutePlaceholder": "MM",
+  "locationLabel": "출생지",
+  "locationPlaceholder": "도시, 국가",
+  "trueSolarTime": "진태양시 사용",
+  "timeUnknownTitle": "알 수 없는 시간",
+  "timeUnknownDesc": "시간을 알 수 없는 경우 계산의 정확성이 떨어질 수 있습니다.",
+  "genderLabel": "성별",
+  "genderPlaceholder": "성별 선택",
+  "genderMale": "남성",
+  "genderFemale": "여성",
+  "calendarNoticeDesc": "양력/음력 선택을 다시 한 번 확인해주세요.",
+  "analyzing": "분석 중...",
+  "submitButton": "운명을 분석하다",
+  "secureTransmission": "안전한 전송",
+  "location": "출생지",
+  "gender": "성별",
+  "title": {
+    "saju": "Saju Input"
+  }
+}

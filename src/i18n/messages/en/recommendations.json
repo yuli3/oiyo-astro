@@ -1,0 +1,130 @@
+{
+  "career": {
+    "global_leader": {
+      "title": "Global Team Leader",
+      "description": "**You are a natural born commander.**\n\nYour presence alone commands respect. You have the rare ability to see the potential in others and align them towards a singular vision. You thrive in high-stakes environments where decisiveness is currency.",
+      "reasoning": "Your **{primary}** star indicates strong social magnetism, supported by your extroverted traits."
+    },
+    "strategic_planner": {
+      "title": "Strategic Planner",
+      "description": "**You are the architect of the future.**\n\nWhile others are fighting fires, you are preventing them. You excel at seeing the big picture and navigating complex systems. You don't just solve problems; you design solutions that make the problem obsolete.",
+      "reasoning": "Your dominant **Intuition (N)** allows you to see future trends clearly, supported by your analytical nature."
+    }
+  },
+  "hobby": {
+    "meditation": {
+      "title": "Mindfulness Meditation",
+      "description": "**Find power in stillness.**\n\nYour internal engine runs hot. To prevent burnout and maintain your edge, you need to cultivate a practice of **cooling down**. Meditation isn't just relaxation for you; it's a strategic reboot of your operating system.",
+      "reasoning": "You have an excess of **Fire** energy. Water-based activities like meditation help cool and focus you."
+    },
+    "hiking": {
+      "title": "Alpine Hiking",
+      "description": "**Touch the earth to reach the sky.**\n\nYour thoughts are often in the clouds. To ground your lofty ideas and turn them into reality, you need physical connection with the land. Hiking provides the resistance and rhythm your body craves.",
+      "reasoning": "Your chart lacks **Earth** energy. Connecting with mountains stabilizes your volatile creative potential."
+    }
+  },
+  "psychology": {
+    "shadow_work": {
+      "title": "Jungian Shadow Work",
+      "description": "**Confront the darker half of your soul.**\n\nYour \"Shadow\" consists of the parts of yourself you've rejected—aggression, ambition, or perhaps vulnerability. By repressing them, they control you from the unconscious. **Integration** is the goal. Acknowledge your capacity for darkness to truly choose light.\n\n*   *Journaling Prompt:* What quality in others irritates you the most? That is your shadow talking.",
+      "reasoning": "High **Introverted Intuition (Ni)** suggests a deep inner world ripe for exploration."
+    },
+    "inner_child": {
+      "title": "Inner Child Healing",
+      "description": "**Reconnect with your original self.**\n\nBefore the world told you who to be, you *were*. Your inner child holds the key to your creativity and your deepest emotional wounds. This is not about being childish; it's about retrieving the **vitality** you left behind in the past.",
+      "reasoning": "Your **Harm Avoidance** score indicates unhealed wounds that require gentle attention."
+    },
+    "title": "Psychology"
+  },
+  "mythology": {
+    "hero_journey": {
+      "title": "The Call to Adventure",
+      "description": "**You are at the threshold.**\n\nIn the Monomyth, the Hero must leave the known world to venture into the supernatural wonder. You are currently feeling a \"pull\" towards something unknown. **Do not refuse the call.** The challenges ahead are not punishments; they are the initiation rites of your new self.",
+      "reasoning": "Your **7 Killing** star is active, signaling a period of intense challenge and transformation."
+    },
+    "trickster_archetype": {
+      "title": "Embrace the Trickster",
+      "description": "**Chaos is your teacher.**\n\nThe Trickster (Loki, Hermes, Coyote) breaks the rules to reveal the truth. You are currently in a stagnant order. You need to **disrupt** your own life. Do the unexpected. Laugh at the serious. Innovation only lives at the edge of chaos.",
+      "reasoning": "Your **ENTP** nature thrives on disruption. Use it constructively."
+    },
+    "title": "Mythology"
+  },
+  "science": {
+    "dopamine_fast": {
+      "title": "Dopamine Reset Protocol",
+      "description": "**Reclaim your brain's reward system.**\n\nIn an age of hyper-stimulation, your baseline for satisfaction has flatlined. You feel bored because you are overfed. The solution is **subtraction**. By removing easy pleasures (screens, sugar) for 24 hours, you reset your neurochemistry, making the mundane feel miraculous again.",
+      "reasoning": "Your high **Novelty Seeking** trait puts you at risk of rapid burnout/boredom cycles."
+    },
+    "title": "Science"
+  },
+  "spirituality": {
+    "taoist_flow": {
+      "title": "The Way of Wu Wei",
+      "description": "**Action through non-action.**\n\nYou are trying too hard. You are pushing the river. The Taoist principle of *Wu Wei* teaches that the perfect action feels effortless. Stop forcing outcomes. **Align with the current.** When you stop fighting the flow of your life, you will find you move faster than ever.",
+      "reasoning": "An excess of **Water** energy suggests you are powerful but currently turbulent. Focus on flow."
+    },
+    "title": "Spirituality"
+  },
+  "titles": {
+    "psychology": "Psychology",
+    "mythology": "Mythology",
+    "science": "Science",
+    "spirituality": "Spirituality",
+    "careers": "Careers",
+    "hobbies": "Hobbies"
+  },
+  "common": {
+    "title": "Personalized Recommendations",
+    "match": "Match",
+    "loading": "Loading recommendations..."
+  },
+  "mbti": "MBTI",
+  "saju": "Saju",
+  "careers": {
+    "title": "Careers"
+  },
+  "hobbies": {
+    "title": "Hobbies"
+  },
+  "highPriority": "High Priority",
+  "actions": {
+    "startNow": "Start Now",
+    "completed": "Completed"
+  },
+  "title": "Recommendations",
+  "subtitle": "Discover what to do next based on your profile.",
+  "filters": {
+    "hideDismissed": "Hide Dismissed",
+    "showDismissed": "Show Dismissed",
+    "tests": "Tests",
+    "counseling": "Counseling",
+    "all": "All",
+    "content": "Content",
+    "insights": "Insights"
+  },
+  "stats": {
+    "pending": "Pending Recommendations",
+    "completed": "Completed"
+  },
+  "emptyState": {
+    "title": "No Recommendations Yet",
+    "description": "Complete more assessments to receive personalized paths.",
+    "cta": "Explore Assessments"
+  },
+  "header": {
+    "badge": "Recommended for You",
+    "title": "What to Explore Next?",
+    "subtitle": "Discover more about your personality"
+  },
+  "reason": {
+    "related": "🔗 Related",
+    "category": "📂 Same Category",
+    "popular": "⭐ Popular",
+    "completion": "🎯 Complete the Set"
+  },
+  "ui": {
+    "minutes": "min",
+    "startTest": "Start Test",
+    "browseAll": "Browse All Tests"
+  }
+}

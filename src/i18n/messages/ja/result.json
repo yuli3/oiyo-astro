@@ -1,0 +1,198 @@
+{
+  "solarLineage": "太陽の系譜",
+  "lunarLineage": "月の系譜",
+  "compatibility": "相性",
+  "title": "計算中...",
+  "description": "伝統的な命理学を通じて映し出された、あなたの宿命の羅針盤。",
+  "pillars": {
+    "title": "計算中...",
+    "interpretation": "総評",
+    "yearPillar": "年柱 (初年運)",
+    "yearPillarDesc": "先祖、幼少期、そしてあなたのルーツを象徴します。",
+    "monthPillar": "月柱 (青年運)",
+    "monthPillarDesc": "兄弟、社会性、そして職業的な環境を表します。",
+    "dayPillar": "日柱 (中年運)",
+    "dayPillarDesc": "自分自身、配偶者、そして現在の環境を表します。",
+    "hourPillar": "時柱 (晩年運)",
+    "hourPillarDesc": "子供、老後の運勢、そして将来の成就を示します。"
+  },
+  "elements": {
+    "title": "計算中...",
+    "chartLabel": "五行バランス"
+  },
+  "overview": {
+    "interpretation": "概要",
+    "title": "{name}さんの四柱鑑定",
+    "mainTraits": "主な特徴",
+    "elementBalance": "五行バランス"
+  },
+  "analysis": "分析",
+  "tabs": {
+    "personality": "性格",
+    "fortune": "運勢",
+    "advice": "アドバイス"
+  },
+  "personality": {
+    "strengths": "あなたの強み",
+    "weaknesses": "補完すべき点"
+  },
+  "fortune": {
+    "flow": {
+      "title": "{name}さんの四柱鑑定"
+    },
+    "title": "{name}さんの四柱鑑定",
+    "status": "分析完了"
+  },
+  "advice": "アドバイス",
+  "ai": {
+    "general_analysis": "AI深層分析",
+    "career": "仕事運",
+    "wealth": "金運",
+    "love": "恋愛運",
+    "health": "健康運",
+    "error": "AI分析データを読み込めませんでした。"
+  },
+  "meta": {
+    "test": {
+      "insightBullets": [
+        "あなたの生年月日内の要素周波数を解読します。",
+        "あなたの自然な気質を支配する季節の流れをマッピングします。",
+        "Unveiling the secret interactions of the Ten Gods within your chart."
+      ],
+      "progress": "天命の進捗",
+      "submit": "自分の天命を解き明かす",
+      "loading": "帝国公式記録を紐解いています...",
+      "selectOption": "情報を入力してください",
+      "next": "次へ",
+      "previous": "戻る"
+    },
+    "result": {
+      "title": "{name}さんの四柱鑑定",
+      "description": "伝統的な命理学を通じて映し出された、あなたの宿命の羅針盤。"
+    },
+    "title": "{name}さんの四柱鑑定",
+    "description": "伝統的な命理学を通じて映し出された、あなたの宿命の羅針盤。",
+    "keywords": "四柱推命, 鑑定, 運勢"
+  },
+  "modern": {
+    "title": "{name}さんの四柱鑑定",
+    "mbtiSimilarity": "類似するMBTI",
+    "similarPersonality": "性格タイプ",
+    "strengths": "あなたの強み",
+    "challenges": "成長のための課題",
+    "careerSuggestions": "おすすめの職業",
+    "relationshipAdvice": "対人関係のアドバイス",
+    "economy": "経済的な傾向",
+    "mbtiSalary": "年収の推移",
+    "globalComparison": "世界的な比較"
+  },
+  "lifestyle": {
+    "title": "{name}さんの四柱鑑定",
+    "interpretation": "錬金術的経路：あなたの本質に響き渡る、志や天職の探求。"
+  },
+  "retake": "再受験",
+  "birthInfo": "出生情報",
+  "birthDate": "陽暦/陰暦 誕生日",
+  "birthTime": "生まれた時間",
+  "mainAnalysis": "主要分析",
+  "dominantElement": "優勢な五行",
+  "personalityType": "性格タイプ",
+  "daily": {
+    "badge": "今日のオントロジー",
+    "risingTitle": "{branch}の隆盛",
+    "risingDesc": "今日のあなたのエネルギーは、力強い上昇気流の中にあります。{element}の要素があなたの創造性を高めています。",
+    "flowTitle": "財政フロー",
+    "flowDesc": "強力な投資の可能性を秘めています。",
+    "loveTitle": "愛情のレーダー",
+    "loveDesc": "新しい対話に心を開いてみましょう。",
+    "colorTitle": "パワーカラー",
+    "colorDesc": "この色を身にまとい、存在感を高めましょう。",
+    "foodTitle": "魂の食事",
+    "foodDesc": "あなたの生命力を回復させます。",
+    "unlockTitle": "人生の軌跡をアンロック",
+    "unlockDesc": "あなたの運勢は先週に比べ、<span class='text-emerald-600 font-bold'>+{percent}%</span>上昇しています。",
+    "viewReport": "フルレポートを表示"
+  },
+  "time": "時間",
+  "day": "日",
+  "month": "月",
+  "year": "年",
+  "fiveElements": "五行",
+  "traits": "特徴",
+  "copy": "結果をコピー",
+  "style": "スタイル",
+  "home": "家庭",
+  "primarySection": {
+    "scoreHeadline": "あなたのスコア",
+    "bondingTitle": "絆",
+    "conversationTitle": "会話",
+    "caregiverTitle": "養育スタイル"
+  },
+  "scoreBreakdown": {
+    "title": "計算中...",
+    "description": "しばらくお待ちください。"
+  },
+  "hybridIdeas": {
+    "title": "計算中..."
+  },
+  "supportPartners": {
+    "title": "計算中..."
+  },
+  "cta": {
+    "retake": "再受験",
+    "explore": "詳細を見る"
+  },
+  "characteristics": "特性",
+  "dreamPatterns": "夢のパターン",
+  "interpretationTips": "解釈のヒント",
+  "commonSymbols": "共通のシンボル",
+  "dreamTypeBreakdown": "夢の分析",
+  "share": "共有",
+  "qualityOfLife": "生活の質",
+  "safetyScore": "安全スコア",
+  "costOfLiving": "生活費",
+  "readyExplore": "探検の準備はできましたか？",
+  "exploreDescription": "次の目的地を見つけましょう。",
+  "exploreTravel": "旅を探求する",
+  "connectExpats": "海外在住者とつながる",
+  "copied": "結果をコピーしました",
+  "writingStyle": "執筆スタイル",
+  "strengths": "強み",
+  "growthAreas": "成長分野",
+  "favoriteGenres": "好きなジャンル",
+  "writingTips": "執筆のヒント",
+  "personalizedPrompts": "あなたへのプロンプト",
+  "personalizedPromptsSubtitle": "あなたにおすすめのプロンプトです。",
+  "exploreMore": "もっと見る",
+  "studyTips": "学習のヒント",
+  "environment": "環境",
+  "sections": {
+    "dimensions_title": "次元",
+    "strengths": "強み",
+    "traits": "特徴",
+    "challenges": "課題",
+    "idealSituations": "理想的な状況",
+    "tips": "ヒント",
+    "breakdown": "内訳"
+  },
+  "level": "レベル",
+  "score": "スコア",
+  "profile_title": "プロフィール",
+  "guidance_title": "ガイダンス",
+  "grossPay": "額面給与",
+  "nationalPension": "国民年金",
+  "healthInsurance": "健康保険",
+  "incomeTax": "所得税",
+  "netPay": "手取り額",
+  "deduction": "控除",
+  "taxBase": "課税標準",
+  "rate": "税率",
+  "selfReport": "自己申告",
+  "loading": {
+    "title": "計算中...",
+    "description": "しばらくお待ちください。"
+  },
+  "retakeTest": "再受験",
+  "backHome": "ホームに戻る",
+  "sharePrompt": "結果を共有"
+}

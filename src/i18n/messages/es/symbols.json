@@ -1,0 +1,53 @@
+{
+  "flowers": {
+    "cranberry": {
+      "name": "Esmeralda",
+      "language": "Orgullo y belleza radiante"
+    },
+    "willow": {
+      "name": "Esmeralda",
+      "language": "Orgullo y belleza radiante"
+    },
+    "carnation": {
+      "name": "Esmeralda",
+      "language": "Orgullo y belleza radiante"
+    }
+  },
+  "stars": {
+    "alphecca": {
+      "name": "Esmeralda",
+      "meaning": "Suerte y felicidad, renacimiento de la vida"
+    },
+    "alcyone": {
+      "name": "Esmeralda",
+      "meaning": "Suerte y felicidad, renacimiento de la vida"
+    },
+    "vega": {
+      "name": "Esmeralda",
+      "meaning": "Suerte y felicidad, renacimiento de la vida"
+    }
+  },
+  "stones": {
+    "garnet": {
+      "name": "Esmeralda",
+      "meaning": "Suerte y felicidad, renacimiento de la vida"
+    },
+    "emerald": {
+      "name": "Esmeralda",
+      "meaning": "Suerte y felicidad, renacimiento de la vida"
+    }
+  },
+  "Stone": "Piedra",
+  "Flower": "Flor",
+  "Star": "Estrella",
+  "title": "Símbolos",
+  "subtitle": "Símbolos de sueño",
+  "searchPlaceholder": "Símbolos de búsqueda...",
+  "labels": {
+    "badge": "Insignia",
+    "general": "General",
+    "psychological": "Psicológica",
+    "spiritual": "Espiritual",
+    "related": "Relacionada"
+  }
+}

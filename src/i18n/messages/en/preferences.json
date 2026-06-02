@@ -1,0 +1,90 @@
+{
+  "country": {
+    "meta": {
+      "keywords": "country preference test, ideal country to live, expat life, immigration, lifestyle preferences, country search",
+      "hero": {
+        "badge": "Popular",
+        "subtitle": "Find the perfect place for you",
+        "cta": "Start"
+      },
+      "features": {
+        "subtitle": "Precision Analysis Metrics"
+      },
+      "title": "Result Report",
+      "description": "Based on scientific evidence and data, we suggest the country that best suits your inclinations."
+    },
+    "resultPage": {
+      "loadingTitle": "Adjusting analysis data...",
+      "loadingSubtitle": "Searching for perfect destinations for you!",
+      "metaTitle": "Perspective Analyzer",
+      "metaDescription": "A unique report combining deep data and intuition",
+      "test": {
+        "progress": "Progress",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "View Results",
+        "loading": "Analyzing",
+        "selectOption": "Select",
+        "insightBullets": ["Mapping the constellation of your truest self."]
+      },
+      "result": {
+        "title": "Final Diagnosis",
+        "description": "Based on scientific evidence and data, we suggest the country that best suits your inclinations."
+      },
+      "meta": {
+        "title": "Country Affinity Test",
+        "description": "Based on scientific evidence and data, we suggest the country that best suits your inclinations.",
+        "keywords": "personality test, self-discovery, psychology, personal growth, MBTI"
+      }
+    },
+    "hero": {
+      "subtitle": "Which countries match your values, lifestyle, and dreams?",
+      "badge": "🌍 Affinity Precision Analysis",
+      "cta": "Start Country Exploration",
+      "features": [
+        "🧭 Trade-off driven questions that surface your priorities",
+        "🎯 12 lifestyle dimensions including budget, language, and career",
+        "🌍 Diverse country matches across every continent",
+        "📊 Persona-ready insights you can share instantly"
+      ],
+      "title": "My Perspectives",
+      "description": "A unique report combining deep data and intuition"
+    },
+    "features": {
+      "subtitle": "Deep analysis across 12 dimensions for integral country search",
+      "items": [
+        {
+          "icon": "💸",
+          "title": "Cost of Living Insights",
+          "description": "Understand which countries align with your budget comfort and lifestyle expectations"
+        },
+        {
+          "icon": "🗣️",
+          "title": "Language & Community Fit",
+          "description": "Gauge how much local language support and community connection you need"
+        },
+        {
+          "icon": "💼",
+          "title": "Career & Growth Outlook",
+          "description": "Compare innovation hubs, creative scenes, and sustainability-focused economies"
+        },
+        {
+          "icon": "🌤️",
+          "title": "Climate & Geography",
+          "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+        }
+      ],
+      "title": "My Perspectives"
+    },
+    "types": {
+      "nordic": "The Nordic Seeker",
+      "mediterranean": "The Mediterranean Lover",
+      "tropical": "The Tropical Paradise Dweller",
+      "cosmopolitan": "The Global Citizen (Cosmopolitan)",
+      "mountainous": "The Mountain Explorer",
+      "coastal": "The Ocean Enthusiast",
+      "cultural": "The Heritage Appreciator",
+      "modern": "The Tech Pioneer"
+    }
+  }
+}

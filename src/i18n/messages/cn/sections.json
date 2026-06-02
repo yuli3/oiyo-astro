@@ -1,0 +1,26 @@
+{
+  "hair": "发型",
+  "eyewear": "眼镜",
+  "palette": "调色板",
+  "overview": {
+    "content": "内容概览。"
+  },
+  "usage": {
+    "content": "使用说明。"
+  },
+  "rights": {
+    "content": "权利说明。"
+  },
+  "conduct": {
+    "content": "行为规范。"
+  },
+  "ip": {
+    "content": "知识产权说明。"
+  },
+  "users": "用户",
+  "performance": "性能",
+  "pricing": "定价",
+  "features": "功能",
+  "faq": "常见问题",
+  "trust": "信任与安全"
+}

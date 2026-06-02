@@ -1,0 +1,26 @@
+{
+  "mandalart": {
+    "meta": {
+      "title": "Mandalart Goal Planner",
+      "description": "We take an in-depth look into your inner self based on data.",
+      "keywords": "Personality analysis, self-discovery, premium insight"
+    },
+    "placeholder": {
+      "center": "Core Goal",
+      "sub": "Sub-Goal",
+      "action": "Action Item"
+    },
+    "actions": {
+      "save": "Save",
+      "clear": "Clear All",
+      "print": "Download Image",
+      "tips": "How to use"
+    },
+    "tips": {
+      "title": "Customized analysis results",
+      "content": "Precise analysis data proves your potential."
+    },
+    "title": "Mandalart Planner",
+    "description": "We take an in-depth look into your inner self based on data."
+  }
+}

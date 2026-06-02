@@ -1,0 +1,118 @@
+{
+  "share": {
+    "button": "洞察を共有する",
+    "title": "Personality Resonance Analysis",
+    "progress": "Until Next Level",
+    "preview": "カードのプレビュー",
+    "kakao": "カカオトーク",
+    "moreOptions": "共有オプションを調べる"
+  },
+  "referral": {
+    "stats": {
+      "total": "合計招待数",
+      "points": "エッセンスポイント",
+      "premium": "プロアクセスデー"
+    },
+    "tier": {
+      "progress": "次のレベルまで",
+      "needed": "招待はまだ必要です",
+      "rewards": "利用可能な報酬",
+      "premiumDays": "プロアクセスの日数"
+    },
+    "link": {
+      "title": "Personality Resonance Analysis",
+      "copy": "リンクをコピー",
+      "copied": "リンクがコピーされました!"
+    },
+    "rewards": {
+      "title": "Personality Resonance Analysis",
+      "friendSignup": "友人の目覚めに合わせて",
+      "firstTest": "初めての洞察に基づいて",
+      "friendPremium": "プロとしての道を歩むにあたって",
+      "active30": "30 日間の滞在後"
+    },
+    "title": "Personality Resonance Analysis",
+    "subtitle": "Compare your essence through a multitude of lenses."
+  },
+  "comparison": {
+    "quickActions": {
+      "friend": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "similar": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "celeb": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      }
+    },
+    "tabs": {
+      "similar": "Spirit",
+      "population": "世界平均",
+      "celeb": "Icon",
+      "ideal": "Partner"
+    },
+    "sections": {
+      "similar": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "population": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "celeb": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "ideal": {
+        "title": "Personality Resonance Analysis",
+        "desc": "あなたの気質を最も美しく引き立てる気質を探求します。"
+      }
+    },
+    "card": {
+      "viewDetails": "詳細を調べる",
+      "share": "シェアカード"
+    },
+    "metrics": {
+      "compatibility": "高調波の互換性",
+      "similarity": "共鳴の類似性",
+      "insights": "核となる洞察",
+      "strengths": "輝く強さ"
+    },
+    "modal": {
+      "close": "確認する",
+      "recommendations": "推奨されるパス:"
+    },
+    "levels": {
+      "high": "Pivotal Difference",
+      "mediumHigh": "活気に満ちた",
+      "medium": "Noteworthy Shift",
+      "low": "Gentle Variance"
+    },
+    "diffs": {
+      "high": "決定的な違い",
+      "medium": "注目すべき変化",
+      "low": "穏やかな分散"
+    },
+    "types": {
+      "friend": "友達",
+      "similar": "精神",
+      "average": "平均",
+      "celeb": "アイコン",
+      "ideal": "パートナー"
+    },
+    "status": {
+      "loading": "共鳴を分析中...",
+      "similarLoading": "聖域で同志を求めて…",
+      "avgLoading": "地球規模のタペストリーの中で自分の場所をマッピングします...",
+      "celebLoading": "グローバルアイコンとの共鳴を確認しています...",
+      "idealLoading": "倍音の補音を設計しています..."
+    },
+    "title": "性格共鳴分析",
+    "subtitle": "さまざまなレンズを通して自分の本質を比較してください。"
+  }
+}

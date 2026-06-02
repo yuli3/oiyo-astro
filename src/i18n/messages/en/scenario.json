@@ -1,0 +1,96 @@
+{
+  "scenario": {
+    "meta": {
+      "hero": {
+        "subtitle": "new discoveries about me",
+        "feature1": "Key Insights",
+        "feature2": "Key Insights",
+        "feature3": "Key Insights"
+      },
+      "features": {
+        "feature1Title": "Detailed features",
+        "feature1Description": "It is an element that perfectly harmonizes with my personality.",
+        "feature2Title": "Detailed features",
+        "feature2Description": "It is an element that perfectly harmonizes with my personality.",
+        "feature3Title": "Detailed features",
+        "feature3Description": "It is an element that perfectly harmonizes with my personality."
+      },
+      "scenarios": {
+        "zombie": "zombie apocalypse",
+        "island": "desert island",
+        "timeTravel": "time travel",
+        "superpowers": "superpower",
+        "lottery": "winning the lotto",
+        "aliens": "alien encounter",
+        "fantasy": "fantasy",
+        "space": "space station"
+      },
+      "cta": {
+        "subtitle": "Details",
+        "button": "Getting started"
+      },
+      "keywords": "MBTI test, personality test, scenario test, fun MBTI, extreme scenario, personality quiz, 16 personalities, free personality test",
+      "title": "Scenario testing",
+      "description": "Take a scenario test."
+    },
+    "scenarios": {
+      "zombie": "zombie apocalypse",
+      "island": "desert island",
+      "timeTravel": "time travel",
+      "superpowers": "superpower",
+      "lottery": "winning the lotto",
+      "aliens": "alien encounter",
+      "fantasy": "fantasy",
+      "space": "space station",
+      "title": "dashboard"
+    },
+    "hero": {
+      "subtitle": "Find out your true personality through extreme situations! How would zombies, aliens, or winning the lottery react?",
+      "feature1": "8 extreme scenarios",
+      "feature2": "Takes 5 minutes",
+      "feature3": "Scientific MBTI",
+      "title": "dashboard"
+    },
+    "cta": {
+      "subtitle": "Take the test now and see how you react in extreme situations!",
+      "button": "Start testing",
+      "title": "dashboard"
+    },
+    "features": {
+      "feature1Title": "exciting scenario",
+      "feature1Description": "No more boring questions! Answer with exciting scenarios like zombie apocalypse, time travel, and alien encounters.",
+      "feature2Title": "accurate analysis",
+      "feature2Description": "Based on the official MBTI framework, 16 personality types are derived by analyzing four dimensions: E-I, S-N, T-F, and J-P.",
+      "feature3Title": "detailed results",
+      "feature3Description": "Receive comprehensive insights including strengths, weaknesses, career suggestions, compatibility, and celebrities of the same type.",
+      "title": "dashboard"
+    },
+    "faq": {
+      "title": "dashboard",
+      "question1": "Questions",
+      "answer1": "notification",
+      "question2": "Questions",
+      "answer2": "notification",
+      "question3": "Questions",
+      "answer3": "notification",
+      "question4": "Questions",
+      "answer4": "notification"
+    },
+    "test": {
+      "insightBullets": ["Mapping the constellation of your truest self."],
+      "progress": "progress",
+      "submit": "Submit",
+      "loading": "Loading",
+      "selectOption": "Select",
+      "next": "next",
+      "previous": "before"
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "We are ready with the specific value and insights this service provides you."
+    },
+    "title": "dashboard",
+    "description": "Key advice for future growth",
+    "keywords": "Personality diagnosis, mind vitamins, journey to find myself, OIYO"
+  }
+}

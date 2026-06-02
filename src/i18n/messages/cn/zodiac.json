@@ -1,0 +1,191 @@
+{
+  "aries": "白羊座",
+  "taurus": "金牛座",
+  "gemini": "双子座",
+  "cancer": "巨蟹座",
+  "leo": "狮子座",
+  "virgo": "处女座",
+  "libra": "天秤座",
+  "scorpio": "天蝎座",
+  "sagittarius": "射手座",
+  "capricorn": "摩羯座",
+  "aquarius": "水瓶座",
+  "pisces": "双鱼座",
+  "meta": {
+    "title": "星座匹配度分析",
+    "description": "为你提供深度的自我发现指南。",
+    "keywords": "十二星座, 占星术, 运势, 星座匹配",
+    "resultTitle": "你的星座分析",
+    "resultDescription": "设计一面映射你真实本质的镜子...",
+    "resultKeywords": "星座分析, 星座特征, 占星报告"
+  },
+  "benefits": {
+    "love": {
+      "title": "星座匹配度分析",
+      "description": "为你提供深度的自我发现指南。"
+    },
+    "career": {
+      "title": "星座匹配度分析",
+      "description": "为你提供深度的自我发现指南。"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "十二生肖的核心本质是什么？",
+        "answer": "它是一个原型透镜，通过它，宇宙的无限复杂性被过滤成独特的人类共鸣。"
+      },
+      {
+        "question": "我的星座决定了我的全部命运吗？",
+        "answer": "星星倾斜，但不强迫； 他们提供了天堂的蓝图，但你是你自己觉醒的建筑师。"
+      }
+    ],
+    "title": "星座匹配度分析"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "原型共鸣",
+        "description": "深入研究你的主要星座的心理和精神主题。"
+      },
+      {
+        "icon": "🧭",
+        "title": "星体导航",
+        "description": "关于如何使您的日常行为与季节性天体流动保持一致的战略见解。"
+      }
+    ]
+  },
+  "test": {
+    "title": "星座匹配度分析",
+    "subtitle": "探索两个星座之间的和谐，并理解你们的关系动态。",
+    "calculating": "正在计算你的星座..."
+  },
+  "title": "星座匹配度分析",
+  "description": "为你提供深度的自我发现指南。",
+  "result": {
+    "title": "星座匹配度分析",
+    "description": "为你提供深度的自我发现指南。"
+  },
+  "hero": {
+    "title": "星座匹配度分析",
+    "subtitle": "探索两个星座之间的和谐，并理解你们的关系动态。"
+  },
+  "preview": {
+    "title": "星座匹配度分析"
+  },
+  "cta": {
+    "title": "星座匹配度分析",
+    "subtitle": "探索两个星座之间的和谐，并理解你们的关系动态。",
+    "button": "查看性格"
+  },
+  "T": "页面标题",
+  "info": {
+    "accurate": {
+      "title": "星座匹配度分析",
+      "description": "为你提供深度的自我发现指南。"
+    },
+    "detailed": {
+      "title": "星座匹配度分析",
+      "description": "为你提供深度的自我发现指南。"
+    }
+  },
+  "compatibility": {
+    "title": "星座匹配度分析",
+    "subtitle": "探索两个星座之间的和谐，并理解你们的关系动态。",
+    "selectionTitle": "选择要分析的星座",
+    "selectionDesc": "选择两个星座以获取详细的匹配度分析。",
+    "mySign": "我的星座",
+    "partnerSign": "对方星座",
+    "placeholder": "请选择星座",
+    "analyzeBtn": "分析匹配度",
+    "analyzingBtn": "正在分析...",
+    "levels": {
+      "excellent": "全方位的高度和谐。你们的宇宙能量契合度极高。",
+      "good": "整体而言匹配度良好。细微的调整能让相处更自然顺畅。",
+      "fair": "平淡和谐",
+      "challenging": "这是一个具有挑战性但却值得的旅程。你为理解所付出的努力将加深你们的联系。"
+    },
+    "categories": {
+      "love": "爱情与浪漫",
+      "friendship": "友情",
+      "business": "工作与事业",
+      "communication": "时刻保持开放、坦诚的交流。"
+    },
+    "sections": {
+      "scorecard": "匹配度明细",
+      "strengths": "专注于你的天赋优势",
+      "challenges": "成长挑战",
+      "advice": "关于成长的宇宙建议"
+    },
+    "actions": {
+      "share": "分享结果",
+      "retake": "新的分析",
+      "copySuccess": "已复制到剪贴板！"
+    },
+    "analysis": {
+      "strengths": {
+        "traitMatch": "{sign1}的{trait1}与{sign2}的{trait2}创造了和谐的共鸣。",
+        "sameElement": "两个星座共享相同的元素，孕育出一种自然的理解力。",
+        "complementaryElement": "你们的元素相辅相成，创造出一种平衡且协同的纽带。",
+        "respect": "以此为机遇，尊重并拥抱你们的差异。"
+      },
+      "challenges": {
+        "traitConflict": "{sign1}的{trait1}特质偶尔会与{sign2}的{trait2}倾向产生冲突。",
+        "misunderstanding": "生活方式的不同可能导致早期的误解。",
+        "communication": "时刻保持开放、坦诚的交流。"
+      },
+      "tips": {
+        "respect": "以此为机遇，尊重并拥抱你们的差异。",
+        "communication": "时刻保持开放、坦诚的交流。",
+        "personalTime": "重视并尊重彼此对个人空间的需求。",
+        "sharedInterests": "共同探索并培养你们可以一起享受的兴趣爱好。",
+        "conflict": "发生冲突时，优先理解对方的观点。",
+        "excellent": "全方位的高度和谐。你们的宇宙能量契合度极高。",
+        "challenging": "这是一个具有挑战性但却值得的旅程。你为理解所付出的努力将加深你们的联系。"
+      }
+    }
+  },
+  "extended": {
+    "corePersonality": {
+      "leader": "拥有强大独立精神的天生领导者",
+      "innovator": "具有艺术触觉的创意创新者",
+      "analyst": "拥有实用智慧的深思熟虑的分析者",
+      "balanced": "寻求内在平衡的和平主义者"
+    },
+    "lifeTheme": "智慧、创意与务实行动的和谐统一",
+    "compatibilityAnalysis": {
+      "excellent": "全方位的高度和谐。你们的宇宙能量契合度极高。",
+      "good": "整体而言匹配度良好。细微的调整能让相处更自然顺畅。",
+      "moderate": "正在同步你的命运之丝...",
+      "diverse": "多元的能量可以通过觉察和练习实现和谐。"
+    },
+    "timeline": {
+      "currentTheme_spring": "新的开始与成长",
+      "currentTheme_summer": "能量巅峰与成就",
+      "currentTheme_autumn": "收获与巩固",
+      "currentTheme_winter": "反思与规划",
+      "currentTheme_default": "持续成长与发展",
+      "advice": {
+        "strengths": "专注于你的天赋优势",
+        "intuition": "做决策时相信你的直觉",
+        "balance": "在生活的各个领域保持平衡"
+      },
+      "upcoming": {
+        "next3": "一段稳步进展的时期，伴随着建立新联系的机会",
+        "nextYear": "个人和职业领域的显著成长年份",
+        "transitions": ["职业发展机会", "深化重要关系", "个人灵性成长"]
+      }
+    }
+  },
+  "subtitle": "探索你的占星档案。",
+  "oracle": {
+    "selectZodiac": "选择星座",
+    "synchronize": "同步星象",
+    "imperialDecree": "皇帝法令",
+    "analysisBasis": "分析依据",
+    "message": "宇宙信息",
+    "actionRitual": "行动仪式",
+    "fateVsWill": "命运与意志"
+  }
+}

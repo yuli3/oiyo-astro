@@ -1,0 +1,21 @@
+{
+  "description": "Explore your true self with our premium personality analyses.",
+  "keywords": "Deciphering the geometric patterns of your identity...",
+  "title": "Discovery Center",
+  "test": {
+    "insightBullets": [
+      "Consulting the alignment of the Ten Heavenly Stems.",
+      "Tracing the roots of the Twelve Earthly Branches.",
+      "Calculating the alchemical interactions of your soul."
+    ],
+    "progress": "Progress",
+    "submit": "View Saju Analysis Results",
+    "loading": "Calculating your Saju destiny...",
+    "selectOption": "Please enter your information",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "hero": {
+    "subtitle": "We are interpreting your answers to reveal your unique essence."
+  }
+}

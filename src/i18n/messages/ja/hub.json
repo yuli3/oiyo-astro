@@ -1,0 +1,80 @@
+{
+  "title": "開運センター",
+  "subtitle": "様々な神秘的ツールであなたの運命を切り開きましょう。",
+  "cta": "入る",
+  "hub": {
+    "meta": {
+      "title": "Finance Center",
+      "description": "財務性格テスト、計算機、ツール。"
+    },
+    "title": "ファイナンスセンター",
+    "subtitle": "当社の包括的なツールで自分の経済的運命をマスターしましょう"
+  },
+  "tabs": {
+    "comprehensive": "総合分析",
+    "saju": "四柱推命",
+    "tarot": "タロット",
+    "astrology": "占星術",
+    "numerology": "数秘術",
+    "dream": "夢日記",
+    "biorhythm": "バイオリズム",
+    "asset": "Awaiting deep synthesis...",
+    "budget": "Awaiting deep synthesis...",
+    "compound": "Awaiting deep synthesis...",
+    "gift": "Awaiting deep synthesis...",
+    "gig": "Awaiting deep synthesis...",
+    "freelancer": "Awaiting deep synthesis...",
+    "vat": "Awaiting deep synthesis...",
+    "card": "Awaiting deep synthesis...",
+    "realEstate": "Awaiting deep synthesis..."
+  },
+  "bizReport": "Awaiting deep synthesis...",
+  "calculate": "Awaiting deep synthesis...",
+  "dashboard": {
+    "scope": {
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "profile": {
+      "title": "開運センター",
+      "description": "Analysis based on your birth data"
+    },
+    "biorhythm": {
+      "title": "開運センター",
+      "physical": "Physical",
+      "emotional": "Emotional",
+      "intellectual": "Intellectual"
+    },
+    "fortune": {
+      "numerology": {
+        "title": "開運センター",
+        "lifePath": "Life Path",
+        "personalYear": "Personal Year"
+      }
+    },
+    "saju": {
+      "title": "開運センター",
+      "dominant": "Dominant Element",
+      "lacking": "Lacking Element"
+    },
+    "rating": {
+      "critical": "Critical",
+      "low": "Low",
+      "moderate": "Moderate",
+      "good": "Good",
+      "excellent": "Excellent"
+    },
+    "card": {
+      "score": "スコア: {スコア}",
+      "advice": "Advice",
+      "luckyNumbers": "Lucky Numbers",
+      "luckyColors": "Lucky Colors",
+      "warnings": "Warnings"
+    },
+    "title": "開運センター"
+  },
+  "comprehensiveTitle": "総合分析",
+  "comprehensiveDesc": "詳細を一度入力するだけで、複数の分野からの洞察を得られます。"
+}

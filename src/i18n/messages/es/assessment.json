@@ -1,0 +1,60 @@
+{
+  "mbti": {
+    "title": "Evaluación de Personalidad MBTI",
+    "resultLabel": "Tu Resultado",
+    "description": "Basado en tus respuestas, tu tipo de personalidad es {type}.",
+    "retake": "Recalibrar Esencia"
+  },
+  "riasec": {
+    "codes": {
+      "R": {
+        "name": "Realista",
+        "desc": "Habilidad en el manejo de máquinas, herramientas y sistemas. Disfruta de resultados prácticos y trabajo manual.",
+        "jobs": "Ingeniero, Chef, Atleta, Técnico, etc."
+      },
+      "I": {
+        "name": "Investigador",
+        "desc": "Analítico y lógico. Disfruta resolviendo problemas complejos y explorando curiosidades intelectuales a través de la investigación.",
+        "jobs": "Científico, Programador, Médico, Investigador, etc."
+      },
+      "A": {
+        "name": "Artístico",
+        "desc": "Creativo y de espíritu libre. Le gusta dar forma a ideas originales a través de su sensibilidad artística.",
+        "jobs": "Artista, Escritor, Diseñador, Actor, etc."
+      },
+      "S": {
+        "name": "Social",
+        "desc": "Encuentra sentido en ayudar, enseñar y aconsejar a los demás. Valora el intercambio emocional y la cooperación.",
+        "jobs": "Maestro, Consejero, Enfermero, Trabajador Social, etc."
+      },
+      "E": {
+        "name": "Emprendedor",
+        "desc": "Orientado a objetivos con excelente liderazgo. Disfruta de actividades persuasivas y dinámicas que lideren personas y organizaciones.",
+        "jobs": "Empresario, Vendedor, Político, Marketer, etc."
+      },
+      "C": {
+        "name": "Convencional",
+        "desc": "Sistemático y preciso. Destaca en la organización de datos y en la realización de tareas de forma eficiente según las normas.",
+        "jobs": "Contable, Administrador, Analista de Datos, Banquero, etc."
+      }
+    },
+    "title": "Evaluación de Intereses Profesionales (RIASEC)",
+    "resultLabel": "Tu Perspectiva",
+    "description": "Basado en nuestro análisis, tu patrón principal de interés profesional es {type}.",
+    "retake": "Recalibrar Esencia"
+  },
+  "start": "Comenzar exploración",
+  "continue": "Continuar",
+  "complete": "Completar",
+  "progress": "Etapa",
+  "results": "Ver resultados",
+  "mode": "[FALTA: modo]",
+  "badge": "[FALTA: insignia]",
+  "dimensionAnalysis": "[FALTA: análisis de dimensiones]",
+  "recommendedPaths": "[FALTA: rutas recomendadas]",
+  "oracleTitle": "[FALTA: título de Oracle]",
+  "title": "[FALTA: título]",
+  "retake": "[FALTA: retomar]",
+  "calcError": "No se pudo calcular el resultado",
+  "calcErrorRetry": "Intentar de nuevo"
+}

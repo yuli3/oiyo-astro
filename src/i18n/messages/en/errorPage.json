@@ -1,0 +1,25 @@
+{
+  "404": {
+    "title": "Path Dissolved into the Void",
+    "description": "The coordinates you seek have grown faint in this dimension. Perhaps the map has shifted, or the trail you followed was but a mirage.",
+    "backHome": "Return to Sanctuary Plaza"
+  },
+  "500": {
+    "title": "A Fleeting Cosmic Rift",
+    "description": "The celestial alignment has momentarily faltered. Even the most sacred Sanctuary requires a deep breath for healing.",
+    "retry": "Attempt Realignment"
+  },
+  "title": "The flow of wisdom is veiled in mist.",
+  "description": "Even in the clearest Sanctuary, fog sometimes rises. We are refocusing the path for your journey, please wait a moment.",
+  "primaryAction": "Realign Again",
+  "secondaryAction": "Rest at the Gateway",
+  "homeButton": "Return to Sanctuary",
+  "badgeLabel": "Momentarily Suspended",
+  "supportPrompt": "If the mist does not clear, please pass this resonance signature to the Sages.",
+  "referenceIdLabel": "Resonance Signature",
+  "contactSupport": "Seek Counsel",
+  "supportEmail": "sages@oiyo.net",
+  "startTest": "Initiation of the Journey",
+  "badge": "Echoes of the Sanctuary",
+  "fallbackMessage": "A temporary distortion found in the threads of the cosmos."
+}

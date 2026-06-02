@@ -1,0 +1,13 @@
+{
+  "premium": {
+    "title": "無料",
+    "description": "Basic features."
+  },
+  "free": {
+    "title": "無料",
+    "description": "基本的な機能。"
+  },
+  "download": "ダウンロード",
+  "checkout": "チェックアウト",
+  "notice": "知らせ"
+}

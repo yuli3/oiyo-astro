@@ -1,0 +1,14 @@
+{
+  "classifications": {
+    "Master Artisan": "マスター・アルチザン",
+    "Grinder": "グラインダー (努力家)",
+    "Tortured Critic": "苦悩する批評家",
+    "Free Spirit": "自由な精神"
+  },
+  "title": "完璧主義の傾向",
+  "badge": "完璧主義診断",
+  "adaptive": "適応的完璧主義",
+  "maladaptive": "不適応的完璧主義",
+  "restart": "再診断する",
+  "save": "結果を保存"
+}

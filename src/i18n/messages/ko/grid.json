@@ -1,0 +1,15 @@
+{
+  "daySun": "해",
+  "dayMon": "월",
+  "dayTue": "화요일",
+  "dayWed": "수요일",
+  "dayThu": "목",
+  "dayFri": "금",
+  "daySat": "앉았다",
+  "a": "에이",
+  "saveFailed": "저장하지 못했습니다.",
+  "moodQuestion": "오늘 어땠나요?",
+  "close": "닫다",
+  "saved": "성공적으로 저장되었습니다",
+  "saveAsImage": "이미지로 저장"
+}

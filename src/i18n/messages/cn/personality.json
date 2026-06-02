@@ -1,0 +1,539 @@
+{
+  "egenteto": {
+    "meta": {
+      "hero": {
+        "badge": "灵魂双生",
+        "subtitle": "详细信息",
+        "cta": "寻找我的双生"
+      },
+      "benefits": {
+        "subtitle": "详细信息"
+      },
+      "types": {
+        "subtitle": "详细信息"
+      },
+      "keywords": "双生, 匹配, 灵魂",
+      "description": "探索我们为深度身份洞察设计的系列工具。",
+      "title": "灵魂双生"
+    },
+    "hero": {
+      "subtitle": "详细信息",
+      "cta": "寻找我的双生",
+      "badge": "灵魂双生",
+      "title": "灵魂双生",
+      "description": "探索我们为深度身份洞察设计的系列工具。"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "了解你的类型",
+          "description": "您的睾酮激素或雌激素占主导地位吗？"
+        },
+        {
+          "icon": "💕",
+          "title": "约会比赛",
+          "description": "寻找适合您荷尔蒙类型的伴侣。"
+        },
+        {
+          "icon": "🎯",
+          "title": "自我发现",
+          "description": "了解您的行为驱动力。"
+        },
+        {
+          "icon": "🌟",
+          "title": "分享结果",
+          "description": "立即与朋友比较类型。"
+        }
+      ],
+      "subtitle": "详细信息",
+      "title": "灵魂双生"
+    },
+    "types": {
+      "tetonam": {
+        "name": "Egen 型女性",
+        "emoji": "💖",
+        "subtitle": "详细信息",
+        "description": "探索我们为深度身份洞察设计的系列工具。"
+      },
+      "egennam": {
+        "name": "Egen 型女性",
+        "emoji": "💖",
+        "subtitle": "详细信息",
+        "description": "探索我们为深度身份洞察设计的系列工具。"
+      },
+      "tetonye": {
+        "name": "Egen 型女性",
+        "emoji": "💖",
+        "subtitle": "详细信息",
+        "description": "探索我们为深度身份洞察设计的系列工具。"
+      },
+      "egennye": {
+        "name": "Egen 型女性",
+        "emoji": "💖",
+        "subtitle": "详细信息",
+        "description": "探索我们为深度身份洞察设计的系列工具。"
+      },
+      "subtitle": "详细信息",
+      "title": "灵魂双生"
+    },
+    "resultPage": {
+      "breadcrumbs": {
+        "home": "首页",
+        "test": "测试",
+        "result": "结果"
+      },
+      "test": {
+        "insightBullets": ["绘制最真实自我的星座图。"],
+        "progress": "进度",
+        "submit": "提交",
+        "loading": "载入中...",
+        "selectOption": "选择",
+        "next": "下一步",
+        "previous": "上一步"
+      },
+      "result": {
+        "title": "灵魂双生",
+        "description": "探索我们为深度身份洞察设计的系列工具。"
+      },
+      "meta": {
+        "title": "灵魂双生",
+        "description": "探索我们为深度身份洞察设计的系列工具。",
+        "keywords": "双生, 匹配, 灵魂"
+      },
+      "titleTemplate": "{typeName} 详细解析 | E-Gent 测试",
+      "descriptionTemplate": "您是 {typeName}！{typeDescription} 通过 E-Gent 测试发现您的性格原型与恋爱兼容性。"
+    },
+    "relationship": {
+      "compatibility": {
+        "title": "灵魂双生",
+        "subtitle": "详细信息",
+        "description": "探索我们为深度身份洞察设计的系列工具。",
+        "chain": "匹配链条",
+        "note": "注：兼容性仅供参考，真爱需要经营。"
+      }
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "answer": "Your unique perspective shapes your reality.",
+          "question": "What drives your inner world?"
+        },
+        "1": {
+          "answer": "Your unique perspective shapes your reality.",
+          "question": "What drives your inner world?"
+        },
+        "2": {
+          "answer": "Your unique perspective shapes your reality.",
+          "question": "What drives your inner world?"
+        },
+        "3": {
+          "answer": "Your unique perspective shapes your reality.",
+          "question": "What drives your inner world?"
+        },
+        "4": {
+          "answer": "Your unique perspective shapes your reality.",
+          "question": "What drives your inner world?"
+        }
+      },
+      "title": "灵魂双生"
+    },
+    "result": {
+      "title": "灵魂双生",
+      "traits": "特质",
+      "description": "探索我们为深度身份洞察设计的系列工具。",
+      "compatibility": "兼容性",
+      "share": "分享",
+      "copied": "已复制",
+      "copy": "复制链接",
+      "retake": "重新测试"
+    },
+    "test": {
+      "title": "灵魂双生",
+      "subtitle": "详细信息",
+      "progress": "进度",
+      "submit": "提交",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "navigation": {
+      "home": "首页"
+    },
+    "questions": [
+      {
+        "id": "q1",
+        "text": "我倾向于非常直接和诚实，即使这可能会伤害别人的感情。",
+        "category": "T"
+      },
+      {
+        "id": "q2",
+        "text": "我被别人的情感所深深感动，甚至是陌生人。",
+        "category": "E"
+      },
+      {
+        "id": "q3",
+        "text": "我喜欢竞争和赢得挑战的感觉。",
+        "category": "T"
+      },
+      {
+        "id": "q4",
+        "text": "我经常优先考虑团队和谐而不是我自己的个人需求。",
+        "category": "E"
+      },
+      {
+        "id": "q5",
+        "text": "我更喜欢逻辑地分析情况而不是依靠直觉。",
+        "category": "T"
+      },
+      {
+        "id": "q6",
+        "text": "我发现很容易想象自己处于别人的立场。",
+        "category": "E"
+      },
+      {
+        "id": "q7",
+        "text": "我乐于冒风险来实现我的目标。",
+        "category": "T"
+      },
+      {
+        "id": "q8",
+        "text": "我对他人的微妙暗示和肢体语言很敏感。",
+        "category": "E"
+      },
+      {
+        "id": "q9",
+        "text": "我更喜欢团队中清晰的层次结构和明确的角色。",
+        "category": "T"
+      },
+      {
+        "id": "q10",
+        "text": "我更看重深入、有意义的对话，而不是表面的闲聊。",
+        "category": "E"
+      },
+      {
+        "id": "q11",
+        "text": "我经常被描述为自信和果断的人。",
+        "category": "T"
+      },
+      {
+        "id": "q12",
+        "text": "当我看到朋友之间发生冲突时，我自然会尝试调解。",
+        "category": "E"
+      }
+    ],
+    "badge": "灵魂双生",
+    "cta": "寻找我的双生",
+    "title": "灵魂双生",
+    "description": "探索我们为深度身份洞察设计的系列工具。",
+    "keywords": "双生, 匹配, 灵魂",
+    "subtitle": "详细信息",
+    "male": "男性",
+    "female": "女性",
+    "a": "热门"
+  },
+  "personalityTwin": {
+    "finder": {
+      "meta": {
+        "hero": {
+          "badge": "灵魂双生",
+          "subtitle": "详细信息"
+        },
+        "features": {
+          "subtitle": "详细信息"
+        },
+        "keywords": "双生, 匹配, 灵魂",
+        "title": "灵魂双生",
+        "description": "探索我们为深度身份洞察设计的系列工具。"
+      },
+      "hero": {
+        "badge": "灵魂双生",
+        "subtitle": "详细信息",
+        "cta": "寻找我的双生",
+        "title": "灵魂双生",
+        "description": "探索我们为深度身份洞察设计的系列工具。"
+      },
+      "features": {
+        "list": [
+          "寻找真正懂你的朋友",
+          "发现浪漫的兼容性",
+          "建立有意义的专业关系",
+          "与志同道合的人联系"
+        ],
+        "accurate": {
+          "title": "灵魂双生",
+          "description": "探索我们为深度身份洞察设计的系列工具。"
+        },
+        "anonymous": {
+          "title": "灵魂双生",
+          "description": "探索我们为深度身份洞察设计的系列工具。"
+        },
+        "realtime": {
+          "title": "灵魂双生",
+          "description": "探索我们为深度身份洞察设计的系列工具。"
+        },
+        "subtitle": "详细信息",
+        "title": "灵魂双生"
+      },
+      "test": {
+        "insightBullets": ["发现定义您的道路的独特模式。"],
+        "progress": "进度",
+        "submit": "提交",
+        "loading": "载入中...",
+        "selectOption": "选择",
+        "next": "下一步",
+        "previous": "上一步"
+      },
+      "result": {
+        "title": "灵魂双生",
+        "description": "探索我们为深度身份洞察设计的系列工具。"
+      },
+      "noMatches": "暂未发现双生",
+      "findNow": "寻找双生",
+      "matches": "发现 {count} 位双生",
+      "topMatch": "最佳匹配：{percentage}% 相似度",
+      "title": "灵魂双生",
+      "description": "探索我们为深度身份洞察设计的系列工具。",
+      "keywords": "双生, 匹配, 灵魂"
+    },
+    "ui": {
+      "matchTypes": {
+        "perfectTwin": "完美双生 (Perfect Twin) 🎯",
+        "closeMatch": "高度共鸣 (Soul Mate) ✨",
+        "complementary": "互补互助 (Yin & Yang) 🤝",
+        "opposite": "致命吸引 (Magnetic) 🌓"
+      },
+      "compatibilityLevels": {
+        "excellent": "完美匹配",
+        "great": "极佳匹配",
+        "good": "良好匹配",
+        "decent": "尚可匹配",
+        "unique": "独特组合"
+      },
+      "subtitle": "详细信息",
+      "searching": "正在寻找您的双生...",
+      "noMatches": "暂未发现双生",
+      "noMatchesDesc": "您的独特性太高，暂时没有找到匹配的对象。请稍后再试。",
+      "similarity": "相似度",
+      "sharedTraits": "共有特质",
+      "sharedTraitsNone": "暂无共有特质",
+      "sharedTraitsList": "共有特质：{traits}",
+      "sharedTraitsListMore": "共有特质：{traits}...",
+      "differences": "差异点",
+      "connectTwin": "连接双生",
+      "shareResult": "分享结果",
+      "findMore": "寻找更多",
+      "stats": "统计数据",
+      "totalProfiles": "总档案数",
+      "recentMatches": "最近匹配",
+      "backToList": "返回列表",
+      "compatibility": "兼容性",
+      "title": "灵魂双生"
+    },
+    "meta": {
+      "keywords": "双生, 匹配, 灵魂",
+      "resultTitle": "双生分析结果",
+      "resultDescription": "这是您的双生匹配报告。",
+      "testTitle": "双生评估",
+      "testDescription": "开始寻找您的性格双生。",
+      "title": "灵魂双生",
+      "description": "探索我们为深度身份洞察设计的系列工具。"
+    },
+    "hero": {
+      "subtitle": "详细信息",
+      "cta": "寻找我的双生",
+      "badge": "灵魂双生"
+    },
+    "button": {
+      "finding": "正在寻找...",
+      "findTwins": "开始寻找",
+      "helper": "点击开始匹配"
+    },
+    "stats": {
+      "twinsFound": "位双生",
+      "avgMatch": "平均匹配度",
+      "excellent": "完美匹配",
+      "bestMatch": "最佳匹配"
+    },
+    "matchQuality": {
+      "destinyTwin": "命中注定",
+      "perfectMatch": "天作之合",
+      "amazingMatch": "极佳匹配",
+      "greatMatch": "高度匹配",
+      "goodMatch": "良好匹配",
+      "fairMatch": "一般匹配"
+    },
+    "list": {
+      "findingTwins": "正在寻找您的双生...",
+      "noTwinsTitle": "暂未发现",
+      "noTwinsDescription": "请稍后再来查看。",
+      "searchAgain": "重新搜索",
+      "allTwins": "所有双生",
+      "twinsFound": "位双生",
+      "findMore": "寻找更多"
+    },
+    "card": {
+      "testResults": "评估结果",
+      "sharedTests": "共同参与的测试",
+      "specialInsights": "特别洞察",
+      "totalTests": "已完成测试",
+      "match": "匹配度"
+    },
+    "cta": {
+      "subtitle": "详细信息"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "本体1",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "本体2",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "💡",
+          "title": "本体3",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🎯",
+          "title": "本体4",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🔥",
+          "title": "本体5",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "⭐",
+          "title": "本体6",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "本体1",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🚀",
+          "title": "本体2",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "💡",
+          "title": "本体3",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "🎯",
+          "title": "本体4",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🔥",
+          "title": "本体5",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "⭐",
+          "title": "本体6",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "本体1",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "本体2",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "💡",
+          "title": "本体3",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🎯",
+          "title": "本体4",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🔥",
+          "title": "本体5",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "⭐",
+          "title": "本体6",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["标志性强度", "枢轴点", "2"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "载入中...",
+      "selectOption": "选择",
+      "subtitle": "详细信息",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "灵魂双生",
+      "description": "探索我们为深度身份洞察设计的系列工具。"
+    },
+    "title": "灵魂双生",
+    "description": "探索我们为深度身份洞察设计的系列工具。"
+  }
+}

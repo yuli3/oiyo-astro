@@ -1,0 +1,41 @@
+{
+  "tradition": "vedic",
+  "version": "1.0.0",
+  "shards": {
+    "nakshatras": {
+      "1": {
+        "name": "Ashwini",
+        "ruler": "Ketu",
+        "deity": "Ashwini Kumaras (Physicians of Gods)",
+        "symbol": "Horse's Head",
+        "power": "Shidravyapani Shakti (Power to Quickly Heal)",
+        "lore": "Ashwini is the star of transport and speed. It has a youthful, healing energy that rushes to aid those in need.",
+        "myth": "The Ashwini Kumaras restored the youth of the sage Chyavana."
+      },
+      "4": {
+        "name": "Rohini",
+        "ruler": "Moon",
+        "deity": "Brahma / Prajapati",
+        "symbol": "Oxcart / Temple",
+        "power": "Rohana Shakti (Power to Grow and Create)",
+        "lore": "Rohini is the favorite wife of the Moon. It represents fertility, agriculture, and the material manifestation of desire.",
+        "myth": "The Moon (Soma) spending too much time with Rohini caused the other wives (Nakshatras) to complain, leading to the waxing and waning cycle."
+      }
+    }
+  },
+  "l10n": {
+    "en": {},
+    "ko": {
+      "nakshatras": {
+        "1": {
+          "name": "아슈위니",
+          "symbol": "말의 머리"
+        },
+        "4": {
+          "name": "로히니",
+          "symbol": "수레"
+        }
+      }
+    }
+  }
+}

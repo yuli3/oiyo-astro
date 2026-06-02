@@ -1,0 +1,198 @@
+{
+  "labels": {
+    "monthlyIncome": "Ingreso Mensual",
+    "total": "Total"
+  },
+  "tags": {
+    "mustHave": "Debe tener",
+    "niceToHave": "Encantada de tener",
+    "future": "Futura"
+  },
+  "categories": {
+    "needs": "Analizando los ecos profundos de tus elecciones...",
+    "wants": "Descifrando los patrones geométricos de tu identidad...",
+    "savings": "Descifrando los patrones geométricos de tu identidad..."
+  },
+  "descriptions": {
+    "needs": "Analizando los ecos profundos de tus elecciones...",
+    "wants": "Descifrando los patrones geométricos de tu identidad...",
+    "savings": "Descifrando los patrones geométricos de tu identidad..."
+  },
+  "loading": {
+    "title": "Tu Perfil Financiero",
+    "step1": "Analizando los ingresos mensuales",
+    "step2": "Calculando la división 50/30/20",
+    "step3": "Optimización de la asignación",
+    "step4": "Finalizando el anteproyecto presupuestario"
+  },
+  "meta": {
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "disclaimer": "Diseñando un espejo que refleja tu verdadera esencia...",
+    "keywords": "Analizando los ecos profundos de tus elecciones...",
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+  },
+  "hero": {
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "badge": "Revela las capas ocultas de tu filosofía personal."
+  },
+  "test": {
+    "progress": "Progreso",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "selectOption": "Seleccionar Opción",
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "insightBullets": ["Fuerza de firma", "Punto de pivote", "2"]
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "La armonía interior guía tus acciones cotidianas."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Mapeando la constelación de tu verdadero yo.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Explora la arquitectura profunda de tu paisaje interior.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "🚀",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "💡",
+        "title": "Información premium",
+        "description": "Revela las capas ocultas de tu filosofía personal.",
+        "question": "¿Cómo navegas por las corrientes de la vida?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      },
+      {
+        "icon": "🎯",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cómo responde tu alma a lo desconocido?",
+        "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+      },
+      {
+        "icon": "🔥",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Cuál es su frecuencia central única?",
+        "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+      },
+      {
+        "icon": "⭐",
+        "title": "Información premium",
+        "description": "Descubre los patrones únicos que definen tu camino.",
+        "question": "¿Qué impulsa tu mundo interior?",
+        "answer": "Tu perspectiva única da forma a tu realidad."
+      }
+    ]
+  },
+  "result": {
+    "title": "Tu Perfil Financiero",
+    "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos"
+  },
+  "subtitle": "Crea la cartera financiera perfecta con la regla 50/30/20",
+  "currency": "$",
+  "tip": "Mapeando la arquitectura secreta de tu personalidad...",
+  "calculate": "Calcular plan",
+  "reset": "Restablecer plan",
+  "disclaimer": "Diseñando un espejo que refleja tu verdadera esencia...",
+  "title": "Tu Perfil Financiero",
+  "description": "Explora nuestra suite de herramientas diseñadas para análisis financieros profundos",
+  "ko-KR": "Ko-K R"
+}

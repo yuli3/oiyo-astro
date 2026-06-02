@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Kindred Resonance",
+    "resultTitle": "{제목} - 계시",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "keywords": "우정 공명, 사회적 원형, 영혼 기하학, Oiyo"
+  },
+  "hero": {
+    "title": "친절한 공명",
+    "subtitle": "영혼의 유대를 구축하고 유지하는 심오한 리듬을 이해하십시오.",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "cta": "문의 시작",
+    "badge": "Your Kindred Signature"
+  },
+  "test": {
+    "insightBullets": [
+      "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+      "사회 철학의 무언의 층을 밝혀보세요.",
+      "의식적인 인식을 통해 신성한 유대를 키우세요."
+    ],
+    "progress": "공명 상승",
+    "next": "앞으로",
+    "previous": "이전으로",
+    "submit": "합성 공개",
+    "loading": "Distilling your social map...",
+    "selectOption": "진리의 길을 표시하라"
+  },
+  "result": {
+    "ai": {
+      "title": "Kindred Resonance",
+      "premium": "맞춤형 연금술 보고서",
+      "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+      "processing": "역학을 합성하는 중...",
+      "processingKo": "처리 중...",
+      "upgrade": "연금술 분석을 잠금 해제하려면 업그레이드하세요.",
+      "generate": "연금술 전략 생성",
+      "complete": "신성한 사회 분석 완료"
+    },
+    "traits": {
+      "title": "Kindred Resonance"
+    },
+    "connections": {
+      "title": "Kindred Resonance",
+      "vibe": "귀하의 서명은 다음 원형과 가장 조화롭게 일치합니다.",
+      "proTip": "지혜 참고 사항: 귀하의 빈도는 자연스럽게 이러한 원형을 보완하여 즉각적인 신뢰와 반복적인 성장을 촉진합니다."
+    },
+    "actions": {
+      "retake": "교정 다시 시작",
+      "returnHome": "넥서스로 돌아가기"
+    },
+    "title": "Kindred Resonance",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "loading": "소셜 지도를 정제하는 중...",
+    "badge": "당신의 친족 서명"
+  },
+  "title": "친절한 공명",
+  "description": "당신의 세상을 물들이는 우정의 독특한 색상과 온도를 발견해보세요."
+}

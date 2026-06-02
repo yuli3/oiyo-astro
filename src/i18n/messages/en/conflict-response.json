@@ -1,0 +1,531 @@
+{
+  "questions": [
+    {
+      "id": "cr_1",
+      "text": "When I disagree with someone, my reaction is...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Press logically to get my point across.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Avoid the situation for now and wait for emotions to cool.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "Give up my opinion to avoid hurting their feelings.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Suggest a point where both can compromise slightly.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Take time to find an alternative that satisfies both.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_2",
+      "text": "In a conflict, what I value most is...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Solving the problem accurately and winning",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Reducing psychic energy consumption",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "Maintaining the relationship with the other person",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Ending inefficient consumption and compromising",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Growth opportunity to deeply understand each other's needs",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_3",
+      "text": "When I feel angry, I...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Express my intentions firmly and strongly.",
+          "weights": {
+            "competing": 2,
+            "compromising": 1
+          }
+        },
+        {
+          "id": "b",
+          "text": "Shut up and leave the place.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "Apologize first to calm their anger.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Try to finish roughly at some point.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Try to talk about why I am angry.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_4",
+      "text": "When opinions differ in a team project, I...",
+      "options": [
+        {
+          "id": "a",
+          "text": "Persuade others to adopt my idea.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Just follow the direction the majority wants.",
+          "weights": {
+            "accommodating": 2,
+            "avoiding": 1
+          }
+        },
+        {
+          "id": "c",
+          "text": "Choose team peace even if I suffer a loss.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Suggest mixing each other's opinions half and half.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Propose finding a third way everyone can agree on.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_5",
+      "text": "How do I feel after resolving a conflict?",
+      "options": [
+        {
+          "id": "a",
+          "text": "A sense of victory that things went my way.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Relieved that it just ended quickly.",
+          "weights": {
+            "avoiding": 2,
+            "compromising": 1
+          }
+        },
+        {
+          "id": "c",
+          "text": "Happy that the other person is grateful.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Think we divided things fairly.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Feeling closer by solving the problem together.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_6",
+      "text": "When someone makes an unreasonable request?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Flatly say no.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Heard it but delay answering and avoid it.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "Accept it for the sake of goodness.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Suggest doing something else instead.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Ask the fundamental reason for making such a request.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_7",
+      "text": "If someone bursts into tears during an argument?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Continue saying emotion and logic are separate.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Don't know what to do and leave immediately.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "Apologize immediately and cater to their mood.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Tell them to calm down and talk again tomorrow.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Stop the conversation and empathize with their sadness.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_8",
+      "text": "When there is a difference in important values?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Try to prove I am right until the end.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Stop the discussion saying what can we do if we are different.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "Respect their values and adjust myself.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Draw a line of mutual respect and agree.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Create a larger framework where both values can coexist.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_9",
+      "text": "When discovering someone's mistake?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Point it out immediately and demand correction.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Pretend not to know to prevent conflict.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "Fix it myself so they don't lose face.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Tell them I'll fix this part, so you do that part.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Check the process behind the mistake together and find alternatives.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_10",
+      "text": "When a friend criticizes me?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Counterattack by pointing out their faults even more.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Cut off contact or ignore them.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "Say sorry unconditionally for now.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Sorry for the disappointment, but I had my own reasons.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Ask for the true feelings hidden behind the criticism.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_11",
+      "text": "To someone who is late for an appointment?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Strongly admonish them on the importance of punctuality.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Feel bad but just eat without saying anything.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "Smile and say it's fine, they must have been busy.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Tell them they should also have time waiting later.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Listen to why they were late and think of solutions together.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_12",
+      "text": "When a value you can never give up is challenged?",
+      "options": [
+        {
+          "id": "a",
+          "text": "Choose to give up the relationship rather than my values.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "Avoid the discussion itself and hide my thoughts.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "Accept their values and try to modify my thoughts.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "Leave only the core and concede the rest.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "Find a high-level consensus where my values and theirs harmonize.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    }
+  ],
+  "results": {
+    "accommodating": {
+      "title": "Sacrificial Accommodator",
+      "description": "Pursues harmony by putting others' needs before their own.",
+      "advice": "Your hurt heart is also a precious asset to care for.",
+      "resonanceImpact": "Soft resonance that flexibly deforms oneself to match others."
+    },
+    "avoiding": {
+      "title": "Silent Pacifist",
+      "description": "Tends to avoid conflict itself and preserve energy.",
+      "advice": "Sometimes honest conversation resolves problems faster than silence.",
+      "resonanceImpact": "Freezes conflict by stopping vibrations, but unresolved grudges remain."
+    },
+    "collaborating": {
+      "title": "Resonating Creator",
+      "description": "A style that creates a third alternative where everyone can win-win.",
+      "advice": "Efforts to find the best answer in every conflict can sometimes exhaust you.",
+      "resonanceImpact": "Amplifying resonance that merges two different vibrations to create greater harmony."
+    },
+    "competing": {
+      "title": "Firm Competitor",
+      "description": "A style that exerts strong drive to achieve their goals.",
+      "advice": "Remember that victory is not always more important than peace in relationships.",
+      "resonanceImpact": "A resonance that gives intense drive but may cause alienation for the other."
+    },
+    "compromising": {
+      "title": "Practical Negotiator",
+      "description": "Skilled at finding an appropriate middle ground by each conceding a bit.",
+      "advice": "Think about fundamental solutions, not just temporary agreements.",
+      "resonanceImpact": "Stable resonance that finds an appropriate compromise by adjusting frequencies."
+    }
+  }
+}

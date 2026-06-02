@@ -1,0 +1,585 @@
+{
+  "leadership": {
+    "meta": {
+      "title": "Leadership Style Diagnosis",
+      "description": "Discover your unique leadership style and learn how to become an effective leader.",
+      "keywords": "Leadership, management, team building, diagnosis"
+    },
+    "hero": {
+      "badge": "💼Leadership Style",
+      "title": "Discovering Your Leadership DNA",
+      "description": "Understand your natural leadership tendencies and learn how to adapt to different situations.",
+      "cta": "Getting Started with Diagnostics"
+    },
+    "test": {
+      "analyzing": "Analyzing your leadership DNA...",
+      "calculating": "Matching leadership style...",
+      "loading": "Awakening the leader within you...",
+      "questionProgress": "Question {current} / {total}"
+    },
+    "result": {
+      "yourStyle": "your leadership style",
+      "score": "Style matching",
+      "coreApproach": "core approach",
+      "strengths": "main strengths",
+      "challenges": "potential challenges",
+      "communication": "communication style",
+      "decisionMaking": "Decision-making style",
+      "teamManagement": "Team management style",
+      "bestEnvironment": "optimal environment",
+      "developmentTips": "Advice for Growth",
+      "famousLeaders": "Famous leaders of this style",
+      "idealFor": "Recommended Industries and Job Functions"
+    },
+    "questions": {
+      "q1": {
+        "options": [
+          {
+            "text": "Present a clear vision and inspire the team"
+          },
+          {
+            "text": "Brainstorm together and gather team input"
+          },
+          {
+            "text": "Identify each member's strengths and provide 1:1 coaching"
+          },
+          {
+            "text": "Develop overall strategy and set clear direction"
+          }
+        ],
+        "text": "When your team is given a new project, how do you get started?"
+      },
+      "q2": {
+        "options": [
+          {
+            "text": "Ask how you can help and provide needed support"
+          },
+          {
+            "text": "Analyze the problem together and find solutions"
+          },
+          {
+            "text": "Present clear solution and action plan"
+          },
+          {
+            "text": "Help them grow by asking questions to solve it themselves"
+          }
+        ],
+        "text": "When a team member is in trouble, what is your first reaction?"
+      },
+      "q3": {
+        "options": [
+          {
+            "text": "Listen to team opinions and decide together"
+          },
+          {
+            "text": "Judge from long-term goals and strategic perspective"
+          },
+          {
+            "text": "Decide quickly and give clear instructions"
+          },
+          {
+            "text": "Check if it aligns with vision and decide"
+          }
+        ],
+        "text": "When making important decisions, what do you usually do?"
+      },
+      "q4": {
+        "options": [
+          {
+            "text": "Motivate team members and lead change"
+          },
+          {
+            "text": "Create coaching plan for individual development"
+          },
+          {
+            "text": "Analyze causes together and find improvements"
+          },
+          {
+            "text": "Reestablish clear standards and responsibilities"
+          }
+        ],
+        "text": "How do you respond when your team is not performing well?"
+      },
+      "q5": {
+        "options": [
+          {
+            "text": "Helping team members grow and develop"
+          },
+          {
+            "text": "Presenting clear vision and painting the future"
+          },
+          {
+            "text": "Supporting team members and helping their success"
+          },
+          {
+            "text": "Developing strategy to achieve organizational goals"
+          }
+        ],
+        "text": "What role of a leader do you consider most important?"
+      },
+      "q6": {
+        "options": [
+          {
+            "text": "Facilitate so everyone can share opinions"
+          },
+          {
+            "text": "Remind of big picture and long-term goals"
+          },
+          {
+            "text": "Run efficiently and draw clear conclusions"
+          },
+          {
+            "text": "Connect team ideas and create synergy"
+          }
+        ],
+        "text": "What is your main role in team meetings?"
+      },
+      "q7": {
+        "options": [
+          {
+            "text": "Share team vision and values we pursue"
+          },
+          {
+            "text": "Ask what they need and help them adjust"
+          },
+          {
+            "text": "Have 1:1 time to understand strengths and goals"
+          },
+          {
+            "text": "Explain clear role and expectations"
+          }
+        ],
+        "text": "When new team members join, how do you welcome them?"
+      },
+      "q8": {
+        "options": [
+          {
+            "text": "Encourage free idea sharing and experimentation"
+          },
+          {
+            "text": "Present innovative vision and inspire"
+          },
+          {
+            "text": "Help team members collaborate and create synergy"
+          },
+          {
+            "text": "Coach to develop individual creative strengths"
+          }
+        ],
+        "text": "What do you do to increase creativity in your team?"
+      },
+      "q9": {
+        "options": [
+          {
+            "text": "Listen to both sides and find solution together"
+          },
+          {
+            "text": "Decide based on clear principles and standards"
+          },
+          {
+            "text": "Resolve conflict by reminding of bigger goals"
+          },
+          {
+            "text": "Help understand perspectives and use as growth opportunity"
+          }
+        ],
+        "text": "How do you deal with conflict situations?"
+      },
+      "q10": {
+        "options": [
+          {
+            "text": "A team where each member performs at their best"
+          },
+          {
+            "text": "A team that continuously innovates and leads change"
+          },
+          {
+            "text": "A team that effectively achieves strategic goals"
+          },
+          {
+            "text": "A team that collaborates and creates synergy"
+          }
+        ],
+        "text": "How do you want to develop your team in the long term?"
+      }
+    },
+    "styles": {
+      "transformational": {
+        "strengths": [
+          "Providing strong motivation and inspiration to team members",
+          "Encouraging innovative ideas and creative thinking",
+          "Building positive organizational culture",
+          "Presenting and executing long-term vision",
+          "Helping teams reach their full potential"
+        ],
+        "challenges": [
+          "Tendency to focus on vision over detailed execution",
+          "Difficulty managing change fatigue",
+          "May neglect short-term goals",
+          "Possibility of overlooking practical constraints"
+        ],
+        "bestEnvironment": [
+          "Organizations requiring change and innovation",
+          "Culture encouraging creativity and challenges",
+          "Projects where long-term vision is important",
+          "Environment prioritizing team development and growth"
+        ],
+        "developmentTips": [
+          "Strengthen detailed execution planning skills",
+          "Balance short-term goals with long-term vision",
+          "Monitor team for change fatigue",
+          "Consider realistic constraints",
+          "Regular feedback and performance reviews"
+        ],
+        "famousLeaders": [
+          "Steve Jobs (Apple)",
+          "Elon Musk (Tesla, SpaceX)",
+          "Richard Branson (Virgin Group)",
+          "Oprah Winfrey (Harpo Productions)"
+        ],
+        "idealFor": [
+          "Startups and growing companies",
+          "Digital transformation projects",
+          "Organizational culture innovation",
+          "New business development"
+        ],
+        "title": "transformational leader",
+        "subtitle": "A leader who leads change through inspiration and innovation",
+        "description": "You are a transformational leader who inspires and motivates your team and pursues continuous innovation and change. Present a vision and lead team members toward a better future.",
+        "coreApproach": "Organizational change through inspiration, motivation and innovation",
+        "communicationStyle": "Emotional communication through inspiring storytelling and shared vision",
+        "decisionMaking": "Decision-making with innovation and long-term impact",
+        "teamManagement": "Pursuing personal growth and team change simultaneously"
+      },
+      "democratic": {
+        "strengths": [
+          "High team engagement and commitment",
+          "Decisions reflecting diverse perspectives",
+          "Strong team cohesion and trust",
+          "Discovering creative ideas",
+          "Improving team members' ownership"
+        ],
+        "challenges": [
+          "Decision-making can take longer",
+          "Difficulty responding to urgent situations",
+          "Complexity of consensus-building process",
+          "Possibility of lacking clear direction"
+        ],
+        "bestEnvironment": [
+          "Highly skilled teams",
+          "Projects where creativity is important",
+          "Long-term planning",
+          "Stable work environment"
+        ],
+        "developmentTips": [
+          "Prepare for situations requiring quick decisions",
+          "Recognize need for leadership at times",
+          "Learn to prevent inefficient discussions",
+          "Provide clear guidelines",
+          "Manage timelines and priorities"
+        ],
+        "famousLeaders": [
+          "Nelson Mandela (President of South Africa)",
+          "Angela Merkel (German Chancellor)",
+          "Warren Buffett (Berkshire Hathaway)",
+          "Howard Schultz (Starbucks)"
+        ],
+        "idealFor": [
+          "R&D teams",
+          "Creative projects",
+          "Educational and academic institutions",
+          "Non-profit organizations"
+        ],
+        "title": "democratic leader",
+        "subtitle": "Leader who makes the best decisions through participation and consensus",
+        "description": "You are a democratic leader who respects the opinions of your team members and encourages participation. Leverage the team's collective intelligence through collaborative decision-making and ensure everyone has a sense of ownership.",
+        "coreApproach": "Decision-making through participation, consensus, and cooperation",
+        "communicationStyle": "Open and transparent two-way communication",
+        "decisionMaking": "Collect opinions from team members and reach consensus",
+        "teamManagement": "Autonomous team operation through participation and cooperation"
+      },
+      "coaching": {
+        "strengths": [
+          "High team satisfaction and loyalty",
+          "Discovering and developing individual strengths",
+          "Long-term talent development",
+          "Positive feedback culture",
+          "Improving team members' self-efficacy"
+        ],
+        "challenges": [
+          "High time and energy consumption",
+          "Focus on long-term development over short-term results",
+          "Difficulty providing equal attention to all team members",
+          "Direct instruction may be needed at times"
+        ],
+        "bestEnvironment": [
+          "Organizations where talent development is important",
+          "Long-term projects",
+          "Environment with strong learning culture",
+          "Teams needing professional development"
+        ],
+        "developmentTips": [
+          "Balance team goals with individual development",
+          "Run efficient coaching sessions",
+          "Learn methods for short-term achievement",
+          "Develop group coaching skills",
+          "Priority setting and time management"
+        ],
+        "famousLeaders": [
+          "Bill Campbell (Legendary Silicon Valley Coach)",
+          "John Wooden (UCLA Basketball Coach)",
+          "Satya Nadella (Microsoft)",
+          "Indra Nooyi (PepsiCo)"
+        ],
+        "idealFor": [
+          "Consulting firms",
+          "Educational programs",
+          "Early-stage startup teams",
+          "High-growth companies"
+        ],
+        "title": "Coaching type leader",
+        "subtitle": "Mentor-type leader who supports growth and development",
+        "description": "You are a coaching leader who cares deeply about the growth and development of each team member. We value 1:1 relationships and help each person discover their strengths and develop their capabilities.",
+        "coreApproach": "Personalized coaching and competency development",
+        "communicationStyle": "Reflective dialogue through listening and questioning",
+        "decisionMaking": "Consider growth and learning opportunities for team members",
+        "teamManagement": "Establish and implement a personalized development plan"
+      },
+      "visionary": {
+        "strengths": [
+          "Presenting powerful vision and direction",
+          "Ability to achieve long-term goals",
+          "Providing clarity amid uncertainty",
+          "Giving team members sense of purpose",
+          "Innovative thinking and strategy formulation"
+        ],
+        "challenges": [
+          "May neglect detailed execution",
+          "Possible lack of attention to current problems",
+          "Gap between vision and reality",
+          "Tendency to overlook short-term goals"
+        ],
+        "bestEnvironment": [
+          "Organizations needing change",
+          "New market development",
+          "Long-term projects",
+          "Industries where innovation is important"
+        ],
+        "developmentTips": [
+          "Develop execution plans and detailed strategies",
+          "Increase attention to current problems",
+          "Connect short-term goals with vision",
+          "Listen to team members' realistic concerns",
+          "Set incremental milestones"
+        ],
+        "famousLeaders": [
+          "Martin Luther King Jr.",
+          "Jeff Bezos (Amazon)",
+          "Mark Zuckerberg (Meta)",
+          "Jack Ma (Alibaba)"
+        ],
+        "idealFor": [
+          "Startup founding",
+          "Business transformation",
+          "New market entry",
+          "Organizational restructuring"
+        ],
+        "title": "an unconventional leader",
+        "subtitle": "A leader who envisions the future and presents direction",
+        "description": "You are a visionary leader who provides a clear vision and leads your team into the future. Sees the big picture, sets strategic direction, and inspires team members to move toward their goals.",
+        "coreApproach": "Presenting a clear vision and setting strategic direction",
+        "communicationStyle": "Forward-thinking and inspiring messaging",
+        "decisionMaking": "Based on long-term vision and strategic goals",
+        "teamManagement": "Team integration through shared vision and goal alignment"
+      },
+      "servant": {
+        "strengths": [
+          "High team trust and loyalty",
+          "Emphasis on team welfare and satisfaction",
+          "Building positive organizational culture",
+          "Improving team autonomy and responsibility",
+          "Building long-term relationships"
+        ],
+        "challenges": [
+          "Hesitation in making difficult decisions",
+          "Balancing team needs with organizational goals",
+          "Sometimes strong leadership is needed",
+          "Possibility of overlooking own needs"
+        ],
+        "bestEnvironment": [
+          "Environment where collaboration is important",
+          "Organizations valuing long-term relationships",
+          "Teamwork-based projects",
+          "People-centered culture"
+        ],
+        "developmentTips": [
+          "Make firm decisions when needed",
+          "Balance organizational goals with team welfare",
+          "Self-care and boundary setting",
+          "Strengthen performance management",
+          "Develop effective delegation skills"
+        ],
+        "famousLeaders": [
+          "Mother Teresa",
+          "Herb Kelleher (Southwest Airlines)",
+          "Sheryl Sandberg (Facebook)",
+          "Paul Polman (Unilever)"
+        ],
+        "idealFor": [
+          "Non-profit organizations",
+          "Healthcare and welfare institutions",
+          "Educational institutions",
+          "Customer service-focused companies"
+        ],
+        "title": "servant leader",
+        "subtitle": "A leader who serves team members and helps them succeed",
+        "description": "You are a servant leader who supports your team and puts their success first. We create an environment where team members can do their best with an attitude of service rather than authority.",
+        "coreApproach": "Leadership through team member support and service",
+        "communicationStyle": "Warm communication centered on listening and empathy",
+        "decisionMaking": "Putting the needs and well-being of team members first",
+        "teamManagement": "Developing autonomous teams through support and empowerment"
+      },
+      "strategic": {
+        "strengths": [
+          "Clear goals and execution plans",
+          "Data-based decision making",
+          "Efficient resource allocation",
+          "Risk management capability",
+          "Long-term achievement"
+        ],
+        "challenges": [
+          "Possible lack of flexibility to change",
+          "Tendency to prioritize process over people",
+          "Limiting creativity and spontaneity",
+          "Execution delay due to excessive analysis"
+        ],
+        "bestEnvironment": [
+          "Complex business environment",
+          "Highly competitive market",
+          "Long-term projects",
+          "Performance-oriented organization"
+        ],
+        "developmentTips": [
+          "Develop flexibility and adaptability",
+          "Consider team emotions and motivation",
+          "Encourage quick execution and experimentation",
+          "Embrace creative thinking",
+          "Balance intuition with data"
+        ],
+        "famousLeaders": [
+          "Larry Page (Google)",
+          "Tim Cook (Apple)",
+          "Satoru Iwata (Nintendo)",
+          "Mary Barra (General Motors)"
+        ],
+        "idealFor": [
+          "Manufacturing",
+          "Financial services",
+          "Large corporations",
+          "Project management"
+        ],
+        "title": "strategic leader",
+        "subtitle": "A leader who achieves goals through systematic analysis and planning",
+        "description": "You are a strategic leader who creates and executes strategies based on data and analysis. Set long-term goals and achieve results effectively through systematic planning.",
+        "coreApproach": "Data-based strategy establishment and systematic execution",
+        "communicationStyle": "Logical and systematic information delivery",
+        "decisionMaking": "Based on data analysis and strategic goals",
+        "teamManagement": "Systematic management through KPI and performance indicators"
+      },
+      "collaborative": {
+        "strengths": [
+          "Strong team cohesion",
+          "Effective collaboration culture",
+          "Integration of diverse perspectives",
+          "Creative problem solving",
+          "Mutual support and trust"
+        ],
+        "challenges": [
+          "Possible slowdown in decision-making speed",
+          "Difficulty in conflict management",
+          "Lack of clear direction",
+          "Unclear individual accountability"
+        ],
+        "bestEnvironment": [
+          "Complex problem solving",
+          "Cross-functional projects",
+          "Environment requiring innovation",
+          "Teams where diversity is strength"
+        ],
+        "developmentTips": [
+          "Develop quick decision-making ability",
+          "Constructive conflict management skills",
+          "Define clear roles and responsibilities",
+          "Efficient meeting management",
+          "Methods for recognizing individual performance"
+        ],
+        "famousLeaders": [
+          "Susan Wojcicki (YouTube)",
+          "Eric Schmidt (Google)",
+          "Ross Marcelo (Salesforce)",
+          "Kenneth Chenault (American Express)"
+        ],
+        "idealFor": [
+          "Agile teams",
+          "Design thinking projects",
+          "Startups",
+          "Consulting"
+        ],
+        "title": "cooperative leader",
+        "subtitle": "A leader who creates results through teamwork and synergy",
+        "description": "You are a cooperative leader who maximizes cooperation and synergy among team members. We achieve greater results by connecting each individual’s strengths and creating a culture of working together.",
+        "coreApproach": "Creating synergy through teamwork and collaboration",
+        "communicationStyle": "Promoting open and inclusive dialogue",
+        "decisionMaking": "Emphasis on the team's collective intelligence and consensus",
+        "teamManagement": "Team management through cooperation and interdependence"
+      },
+      "authoritative": {
+        "strengths": [
+          "Quick decision-making and execution",
+          "Clear goals and expectations",
+          "Effective crisis response",
+          "Consistent standards and processes",
+          "High productivity"
+        ],
+        "challenges": [
+          "Possibility of limiting team creativity",
+          "Low team engagement and motivation",
+          "Increased dependency",
+          "Possible resistance to change"
+        ],
+        "bestEnvironment": [
+          "Crisis situations",
+          "Environment requiring clear direction",
+          "Organization with many new members",
+          "Projects where quick execution is important"
+        ],
+        "developmentTips": [
+          "Provide opportunities for team input",
+          "Encourage creativity and autonomy",
+          "Develop emotional communication skills",
+          "Practice delegation and empowerment",
+          "Learn flexible approaches"
+        ],
+        "famousLeaders": [
+          "Steve Jobs (Early Apple)",
+          "Gordon Ramsay",
+          "Margaret Thatcher",
+          "Vince Lombardi"
+        ],
+        "idealFor": [
+          "Crisis management",
+          "Military/Police",
+          "Manufacturing production management",
+          "Emergency response teams"
+        ],
+        "title": "authoritative leader",
+        "subtitle": "A leader who drives performance with clear instructions and standards",
+        "description": "You are an authoritative leader who leads your team through clear standards and instructions. We value efficiency and performance, and achieve our goals through quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instructions and feedback",
+        "decisionMaking": "Fast, independent decision making",
+        "teamManagement": "Establish clear roles, responsibilities, and performance standards"
+      }
+    }
+  }
+}

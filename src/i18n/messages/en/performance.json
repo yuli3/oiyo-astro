@@ -1,0 +1,105 @@
+{
+  "title": "Performance Metrics",
+  "subtitle": "Analyzing your growth and achievements",
+  "actions": {
+    "refresh": "Refresh",
+    "implement": "Implement",
+    "later": "Later"
+  },
+  "metrics": {
+    "impact": "Impact",
+    "difficulty": "Difficulty",
+    "time": "Time Est.",
+    "steps": "Steps",
+    "example": "Example"
+  },
+  "score": "Performance Score: {score}",
+  "filters": {
+    "title": "Filters",
+    "description": "Query performance data with custom filters.",
+    "start": "Start Time",
+    "end": "End Time",
+    "path": "Page Path",
+    "placeholder": "e.g., /ontology/saju",
+    "apply": "Apply",
+    "reset": "Reset"
+  },
+  "summary": {
+    "title": "Real User Performance Summary",
+    "recent": "Recent {count}",
+    "rating": {
+      "title": "Rating Share",
+      "description": "Quality state of collected metrics",
+      "good": "Good",
+      "needsImprovement": "Average",
+      "poor": "Poor"
+    },
+    "device": {
+      "title": "Connection & Device",
+      "description": "User environment distribution",
+      "memory": "Avg Device Memory",
+      "noData": "No Data",
+      "noConnection": "No connection info yet."
+    },
+    "sessions": {
+      "title": "Recent Sessions",
+      "description": "Latest performance logs from Supabase",
+      "unknownPath": "Unknown Path",
+      "connection": "Connection",
+      "averageScore": "Avg Score"
+    },
+    "pagination": {
+      "prev": "Prev",
+      "next": "Next",
+      "page": "{current} Page",
+      "pageOf": "{current} / {total}"
+    }
+  },
+  "cards": {
+    "lcp": "Average LCP",
+    "fid": "Average FID",
+    "cls": "Average CLS",
+    "fcp": "Average FCP",
+    "inp": "Average INP",
+    "ttfb": "Average TTFB"
+  },
+  "realtime": {
+    "title": "Real-time Status",
+    "load": "System Load",
+    "memory": "Memory Pressure",
+    "network": "Network Quality",
+    "recommendations": "Immediate Recommendations:"
+  },
+  "tabs": {
+    "trends": "Performance Trends",
+    "bundle": "Bundle Analysis",
+    "recommendations": "Optimization Recs"
+  },
+  "charts": {
+    "cmsTrends": {
+      "title": "Core Web Vitals Trend",
+      "description": "Metric changes over time"
+    },
+    "loadTime": {
+      "title": "Page Load Time",
+      "description": "Load time changes over time"
+    },
+    "bundleDistribution": {
+      "title": "Bundle Size Analysis",
+      "description": "Size distribution by file type"
+    },
+    "bundleDetails": {
+      "title": "Detailed Analysis",
+      "description": "Bundle size and optimization state",
+      "optimization": "Optimization Suggestions:"
+    }
+  },
+  "loading": "Collecting performance data...",
+  "noIssues": {
+    "title": "All performance criteria met!",
+    "description": "Current performance is excellent. Continue regular monitoring."
+  },
+  "remote": {
+    "title": "Remote Performance Data"
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "country": {
+    "meta": {
+      "keywords": "personality test, self-discovery, psychology, personal growth, MBTI",
+      "hero": {
+        "badge": "🌍 Affinity Precision Analysis",
+        "subtitle": "Deep analysis across 12 dimensions for integral country search",
+        "cta": "Start Country Exploration"
+      },
+      "features": {
+        "subtitle": "Deep analysis across 12 dimensions for integral country search"
+      },
+      "title": "My Perspectives",
+      "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+    },
+    "resultPage": {
+      "loadingTitle": "调整分析数据...",
+      "loadingSubtitle": "为您寻找完美的目的地！",
+      "metaTitle": "透视分析仪",
+      "metaDescription": "结合深度数据和直觉的独特报告",
+      "test": {
+        "progress": "进步",
+        "next": "下一个",
+        "previous": "以前的",
+        "submit": "查看结果",
+        "loading": "分析中",
+        "selectOption": "选择",
+        "insightBullets": ["绘制最真实自我的星座图。"]
+      },
+      "result": {
+        "title": "My Perspectives",
+        "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+      },
+      "meta": {
+        "title": "My Perspectives",
+        "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles",
+        "keywords": "性格测试、自我发现、心理学、个人成长、MBTI"
+      }
+    },
+    "hero": {
+      "subtitle": "Deep analysis across 12 dimensions for integral country search",
+      "badge": "🌍 亲和度精度分析",
+      "cta": "开始国家探索",
+      "features": [
+        "🧭 权衡驱动的问题，揭示你的优先事项",
+        "🎯 12 个生活方式维度，包括预算、语言和职业",
+        "🌍 遍布各大洲的不同国家比赛",
+        "📊 可立即分享的人物角色洞察"
+      ],
+      "title": "我的观点",
+      "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+    },
+    "features": {
+      "subtitle": "12个维度深度分析，实现国家整体搜索",
+      "items": [
+        {
+          "icon": "💸",
+          "title": "生活成本洞察",
+          "description": "了解哪些国家/地区符合​​您的预算舒适度和生活方式期望"
+        },
+        {
+          "icon": "🗣️",
+          "title": "语言和社区契合度",
+          "description": "衡量您需要多少本地语言支持和社区联系"
+        },
+        {
+          "icon": "💼",
+          "title": "职业与成长展望",
+          "description": "比较创新中心、创意场景和注重可持续发展的经济体"
+        },
+        {
+          "icon": "🌤️",
+          "title": "气候与地理",
+          "description": "平衡您对季节、海岸线、山脉和户外生活方式的热爱"
+        }
+      ],
+      "title": "我的观点"
+    },
+    "types": {
+      "nordic": "北欧探索者",
+      "mediterranean": "地中海情人",
+      "tropical": "热带天堂居民",
+      "cosmopolitan": "全球公民（世界公民）",
+      "mountainous": "山地探险家",
+      "coastal": "海洋爱好者",
+      "cultural": "遗产鉴赏家",
+      "modern": "科技先锋"
+    }
+  }
+}

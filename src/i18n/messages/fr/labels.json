@@ -1,0 +1,14 @@
+{
+  "faceShape": "Forme du visage",
+  "personalColor": "Couleur personnelle",
+  "achievements": "Réalisations",
+  "totalAmount": "Montant total",
+  "supplyAmount": "Montant de l'offre",
+  "salaryInput": "Salaire",
+  "salaryPlaceholder": "Entrez le salaire",
+  "dependents": "Personnes à charge",
+  "children": "Enfants",
+  "calculate": "Calculer",
+  "calculatePrompt": "Entrez les détails à calculer.",
+  "disclaimerText": "Pas de conseils financiers."
+}

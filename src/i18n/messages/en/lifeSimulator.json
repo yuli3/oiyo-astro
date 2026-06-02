@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "keywords": "Life simulator, life choices, life simulation, career simulation, personality test, life game, future prediction, life path",
+    "title": "Customized analysis results",
+    "description": "lifeSimulator testing and analysis"
+  },
+  "hero": {
+    "subtitle": "Choose from the ages of 22 to 42 and find out your own life ending.",
+    "cta": "starting life"
+  },
+  "test": {
+    "progressTitle": "life progress",
+    "ageUnit": "count",
+    "stageLabel": "stage of life {stage}"
+  },
+  "stats": {
+    "career": "career",
+    "wealth": "property",
+    "relationship": "relationship",
+    "happiness": "happiness",
+    "health": "health"
+  },
+  "result": {
+    "rarity": {
+      "legendary": "legendary",
+      "rare": "rare",
+      "uncommon": "ordinary",
+      "common": "common"
+    },
+    "scoreLabel": "total score",
+    "rankingLabel": "top ranking",
+    "achievementsLabel": "major achievements",
+    "adviceLabel": "💡Life Advice",
+    "finalStatsTitle": "final stats",
+    "journeyTitle": "life journey",
+    "ageAxis": "age",
+    "share": "Share your results",
+    "retake": "live again"
+  },
+  "cta": {
+    "subtitle": "Make a choice and find out what life awaits you",
+    "button": "Start your journey"
+  }
+}

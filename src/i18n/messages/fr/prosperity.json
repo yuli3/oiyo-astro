@@ -1,0 +1,10 @@
+{
+  "title": "[MANQUANT : titre]",
+  "badge": "[MANQUANT : insigne]",
+  "intro": "[MANQUANT : introduction]",
+  "primaryStyle": "[MANQUANT : styleprimaire]",
+  "scoreIntensity": "[MANQUANT : scoreIntensité]",
+  "archetypeMsg": "Votre âme économique résonne avec l'énergie {type}. Cet archétype définit la manière dont vous attirez, maintenez et faites circuler l'abondance.",
+  "restart": "[MANQUANT : redémarrer]",
+  "save": "Enregistrer"
+}

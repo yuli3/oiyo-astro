@@ -1,0 +1,49 @@
+{
+  "description": "2025年の最新基準を反映し、複雑な税金計算を一瞬で解決します。",
+  "title": "生命力の変換 (Vitality Converter)",
+  "labels": {
+    "salaryInput": "年収",
+    "salaryPlaceholder": "年収を入力してください",
+    "nonTaxable": "非課税手当",
+    "nonTaxableHelp": "月額の非課税手当を入力（基準 200,000 KRW）",
+    "dependents": "扶養家族数（本人含む）",
+    "children": "20歳未満の子どもの数",
+    "disclaimer": "⚖️ 法的免責事項",
+    "disclaimerText": "この計算は2025年の税率と保険料率に基づいた概算です。実際の受取額は、会社の規定や控除項目によって異なる場合があります。",
+    "calculatePrompt": "年収を入力し、計算ボタンを押してください。",
+    "calculate": "計算する",
+    "reset": "リセット",
+    "inputParameters": "入力パラメーター"
+  },
+  "result": {
+    "netPay": "予想月間手取り額",
+    "grossPay": "月間総支給額",
+    "nationalPension": "国民年金",
+    "healthInsurance": "健康保険",
+    "careInsurance": "長期療養保険",
+    "employmentInsurance": "雇用保険",
+    "incomeTax": "所得税",
+    "localTax": "地方所得税",
+    "totalDeductions": "控除額合計",
+    "title": "生命力の変換 (Vitality Converter)",
+    "description": "2025年の最新基準を反映し、複雑な税金計算を一瞬で解決します。",
+    "harvestDescription": "控除後の予想月間手取り額です。",
+    "pensionRate": "国民年金保険料率（4.5%）",
+    "healthRate": "健康保険料率（3.545%）"
+  },
+  "advisor": {
+    "tip": "💡 アドバイザーの助言",
+    "content": "予想手取り額に対し、50/30/20ルール（消費/投資/貯蓄）を適用しましょう。適切な税額控除の管理は、年末調整での還付に繋がります。"
+  },
+  "loading": {
+    "title": "生命力の変換 (Vitality Converter)",
+    "step1": "年収の確認",
+    "step2": "控除額の算出",
+    "step3": "税率の適用",
+    "step4": "手取り額の確定"
+  },
+  "meta": {
+    "title": "生命力の変換 (Vitality Converter)",
+    "description": "2025年の最新基準を反映し、複雑な税金計算を一瞬で解決します。"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Guide du Journal des Rêves",
+    "description": "Explorez notre suite d'outils conçus pour obtenir des perspectives approfondies sur vos rêves.",
+    "keywords": "journal des rêves, analyse des rêves, interprétation des rêves"
+  },
+  "hero": {
+    "title": "Guide du Journal des Rêves",
+    "badge": "Populaire",
+    "subtitle": "Apprenez à enregistrer et analyser vos rêves efficacement.",
+    "description": "Explorez notre suite d'outils conçus pour obtenir des perspectives approfondies sur vos rêves."
+  },
+  "tabs": {
+    "analysis": "Votre Type de Rêveur",
+    "symbols": "Dictionnaire des Symboles",
+    "journal": "Conseils pour le Journal"
+  },
+  "result": {
+    "title": "Guide du Journal des Rêves",
+    "copied": "Copié dans le presse-papiers !",
+    "characteristics": "Vos Caractéristiques de Rêve",
+    "dreamPatterns": "Vos Modèles de Rêve",
+    "interpretationTips": "Conseils d'Interprétation",
+    "commonSymbols": "Vos Symboles de Rêve Communs",
+    "dreamTypeBreakdown": "Répartition par Type de Rêve",
+    "share": "Partager",
+    "shareText": "Je suis un rêveur de type {type} ! Découvrez votre personnalité de rêve ici : {url}",
+    "retake": "Refaire le Test"
+  },
+  "symbols": {
+    "title": "Guide du Journal des Rêves",
+    "subtitle": "Apprenez à enregistrer et analyser vos rêves efficacement.",
+    "searchPlaceholder": "Chercher un symbole..."
+  },
+  "journal": {
+    "title": "Guide du Journal des Rêves",
+    "subtitle": "Apprenez à enregistrer et analyser vos rêves efficacement.",
+    "gettingStarted": "Premiers Pas",
+    "whatToRecord": "Que Noter",
+    "interpretationTips": "Conseils d'Interprétation",
+    "improveRecall": "Améliorer le Rappel des Rêves"
+  },
+  "test": {
+    "progress": "Question {actuelle} / {total}",
+    "selectOption": "Veuillez sélectionner une option"
+  }
+}

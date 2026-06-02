@@ -1,0 +1,60 @@
+{
+  "mbti": {
+    "title": "MBTI 性格评估",
+    "resultLabel": "你的结果",
+    "description": "根据你的回答，你的性格类型是 {type}。",
+    "retake": "重测本质"
+  },
+  "riasec": {
+    "codes": {
+      "R": {
+        "name": "现实型 (Realistic)",
+        "desc": "擅长操作机器、工具和系统。喜欢实际成果和动手操作。",
+        "jobs": "工程师、厨师、运动员、技术人员等"
+      },
+      "I": {
+        "name": "研究型 (Investigative)",
+        "desc": "具有分析能力和逻辑性。喜欢通过研究解决复杂问题并探索知识好奇心。",
+        "jobs": "科学家、程序员、医生、研究员等"
+      },
+      "A": {
+        "name": "艺术型 (Artistic)",
+        "desc": "富有创造力和自由精神。喜欢通过艺术感性将原创想法付诸实践。",
+        "jobs": "艺术家、作家、设计师、演员等"
+      },
+      "S": {
+        "name": "社会型 (Social)",
+        "desc": "在帮助、教学和咨询他人中寻找意义。重视情感交流和合作。",
+        "jobs": "教师、咨询师、护士、社会工作者等"
+      },
+      "E": {
+        "name": "企业型 (Enterprising)",
+        "desc": "目标导向且具有出色的领导力。喜欢领导人员和组织的具有说服力和活力的活动。",
+        "jobs": "企业家、销售人员、政治家、市场营销人员等"
+      },
+      "C": {
+        "name": "常规型 (Conventional)",
+        "desc": "系统且精确。擅长整理数据并根据规则高效完成任务。",
+        "jobs": "会计师、行政人员、数据分析师、银行家等"
+      }
+    },
+    "title": "职业兴趣评估（RIASEC）",
+    "resultLabel": "您的见解",
+    "description": "根据我们的分析，您的主要职业兴趣模式是{type}。",
+    "retake": "重新校准精华液"
+  },
+  "start": "开始探索",
+  "continue": "继续",
+  "complete": "完成",
+  "progress": "阶段",
+  "results": "查看结果",
+  "mode": "[缺少：模式]",
+  "badge": "[缺失：徽章]",
+  "dimensionAnalysis": "[缺失：维度分析]",
+  "recommendedPaths": "[缺失：推荐路径]",
+  "oracleTitle": "[缺失：oracleTitle]",
+  "title": "[缺少：标题]",
+  "retake": "[缺失：重考]",
+  "calcError": "无法计算结果",
+  "calcErrorRetry": "重试"
+}

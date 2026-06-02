@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Questions Fréquemment Posées",
+    "description": "Chaque couleur du Tarot correspond à l'un des quatre éléments anciens.",
+    "keywords": "tarot, lecture de tarot, tarot quotidien, fortune"
+  },
+  "hero": {
+    "title": "Questions Fréquemment Posées",
+    "subtitle": "Découvre ce que les cartes te réservent aujourd'hui."
+  },
+  "benefits": {
+    "intuition": {
+      "title": "Questions Fréquemment Posées",
+      "description": "Chaque couleur du Tarot correspond à l'un des quatre éléments anciens."
+    },
+    "personality": {
+      "title": "Questions Fréquemment Posées",
+      "description": "Chaque couleur du Tarot correspond à l'un des quatre éléments anciens."
+    },
+    "guidance": {
+      "title": "Questions Fréquemment Posées",
+      "description": "Chaque couleur du Tarot correspond à l'un des quatre éléments anciens."
+    },
+    "title": "Questions Fréquemment Posées"
+  },
+  "marketing": {
+    "about": {
+      "history": {
+        "title": "Questions Fréquemment Posées",
+        "description": "Chaque couleur du Tarot correspond à l'un des quatre éléments anciens.",
+        "point1": "Originaire de l'Europe du XVe siècle",
+        "point2": "Évolution vers des applications mystiques",
+        "point3": "Interprétation psychologique moderne"
+      },
+      "elements": {
+        "title": "Questions Fréquemment Posées",
+        "description": "Chaque couleur du Tarot correspond à l'un des quatre éléments anciens.",
+        "fire": "Bâtons (Feu)",
+        "water": "Coupes (Eau)",
+        "air": "Épées (Air)",
+        "earth": "Deniers (Terre)"
+      },
+      "title": "Questions Fréquemment Posées"
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "question1": "Quelle est la précision du Tarot par IA ?",
+    "answer1": "Il fournit des interprétations modernes basées sur les significations et les schémas traditionnels.",
+    "question2": "Puis-je tirer les cartes pour quelqu'un d'autre ?",
+    "answer2": "Oui, mais il est recommandé de tirer d'abord pour ta propre énergie claire.",
+    "question3": "À quelle fréquence devrais-je consulter ?",
+    "answer3": "Chaque fois que tu ressens le besoin d'une nouvelle perspective ou de conseils.",
+    "question4": "Les cartes sont-elles aléatoires ?",
+    "answer4": "Les algorithmes assurent une distribution équitable et diversifiée à chaque tirage."
+  },
+  "accuracy": "Mystique",
+  "duration": "Durée : Indéterminée"
+}

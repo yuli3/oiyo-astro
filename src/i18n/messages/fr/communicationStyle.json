@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "hero": {
+      "badge": "Analyse de Communication",
+      "subtitle": "ton façon unique de vous connecter."
+    },
+    "cta": {
+      "button": "Voir les Résultats"
+    },
+    "sections": {
+      "strengths": "Key Strengths",
+      "traits": "Key Traits",
+      "challenges": "Challenges",
+      "workingWith": "Working With You"
+    },
+    "breakdown": {
+      "title": "Style de Communication"
+    },
+    "additionalInsights": {
+      "title": "Style de Communication"
+    },
+    "sharing": {
+      "testName": "Communication Style Test"
+    },
+    "keywords": "Communication, Style, Test, Résultats",
+    "title": "Style de Communication",
+    "description": "Analyse des échos profonds de tes choix...",
+    "scoreHeadline": "Primary Style",
+    "scoreDescription": "Your primary communication style is {primary}."
+  },
+  "hero": {
+    "subtitle": "ton façon unique de vous connecter.",
+    "cta": "Commencer le Test",
+    "badge": "Analyse de Communication",
+    "title": "Style de Communication"
+  },
+  "cta": {
+    "button": "Voir les Résultats"
+  },
+  "matcher": {
+    "meta": {
+      "hero": {
+        "subtitle": "ton façon unique de vous connecter."
+      },
+      "keywords": "Communication, Style, Test, Résultats",
+      "title": "Style de Communication",
+      "description": "Analyse des échos profonds de tes choix..."
+    },
+    "hero": {
+      "subtitle": "ton façon unique de vous connecter.",
+      "title": "Style de Communication"
+    },
+    "selector": {
+      "subtitle": "ton façon unique de vous connecter.",
+      "person1": "Personne 1",
+      "person2": "Personne 2",
+      "selectType": "Sélectionnez un style",
+      "analyze": "Analyser",
+      "title": "Style de Communication"
+    },
+    "profile": {
+      "primaryStyle": "Synchronisation des fils de ton destin...",
+      "strengths": "Key Strengths",
+      "preferredChannels": "Canaux préférés",
+      "communicationStyle": "Style de Communication"
+    },
+    "analysis": {
+      "excellent": "Excellent Match",
+      "good": "Bon Match",
+      "fair": "Match Normal",
+      "challenging": "Demande des Efforts",
+      "strengths": "Key Strengths",
+      "challenges": "Challenges",
+      "noChallenges": "Aucun défi significatif trouvé",
+      "improvementTips": "Conseils pratiques d'amélioration",
+      "title": "Style de Communication"
+    },
+    "actions": {
+      "tryAgain": "Réessayer",
+      "share": "Partager le Profil"
+    },
+    "sharing": {
+      "text": "Synchronisation des fils de ton destin...",
+      "copied": "Copié !",
+      "title": "Style de Communication"
+    },
+    "benefits": {
+      "workplace": {
+        "title": "Style de Communication",
+        "description": "Analyse des échos profonds de tes choix..."
+      },
+      "relationships": {
+        "title": "Style de Communication",
+        "description": "Analyse des échos profonds de tes choix..."
+      },
+      "growth": {
+        "title": "Style de Communication",
+        "description": "Analyse des échos profonds de tes choix..."
+      }
+    },
+    "faq": {
+      "title": "Style de Communication",
+      "question1": "Conception d'un miroir qui reflète ta véritable essence...",
+      "answer1": "Conception d'un miroir qui reflète ta véritable essence...",
+      "question2": "Comment utiliser les résultats ?",
+      "answer2": "Utilisez-les pour comprendre tes habitudes et améliorer la façon dont vous interagissez avec les autres.",
+      "question3": "Est-ce précis ?",
+      "answer3": "Il se base sur des schémas de communication établis pour vous donner la meilleure perspective.",
+      "question4": "Puis-je le partager ?",
+      "answer4": "Bien sûr ! Connaître les styles des autres aide à éviter les conflits."
+    },
+    "test": {
+      "progress": "Progression",
+      "submit": "Envoyer",
+      "selectOption": "Veuillez sélectionner une option",
+      "insightBullets": [
+        "Cartographiez le fil d’argent de vos conversations.",
+        "Écoutez les échos de vos intentions qui parviennent aux oreilles des autres.",
+        "Collectez des fragments de votre âme expressive."
+      ],
+      "next": "Suivant",
+      "previous": "Précédent",
+      "loading": "✨ Conception..."
+    },
+    "result": {
+      "title": "Style de Communication",
+      "description": "Analyse des échos profonds de tes choix..."
+    },
+    "title": "Style de Communication",
+    "description": "Analyse des échos profonds de tes choix...",
+    "keywords": "Communication, Style, Test, Résultats"
+  },
+  "benefits": {
+    "items": [
+      {
+        "title": "clarté de la voix",
+        "description": "Comprenez les principaux facteurs derrière chaque mot que vous prononcez."
+      },
+      {
+        "title": "écoute empathique",
+        "description": "Développez une oreille attentive aux désirs tacites dans toute conversation."
+      },
+      {
+        "title": "Alchimie du conflit",
+        "description": "Transformez les frictions de la conversation en une étincelle pour une compréhension plus profonde."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "Qu’est-ce qu’un « archétype de communication » ?",
+        "answer": "Il s’agit de votre modèle fondamental de traitement, de communication et de réception d’informations dans un contexte social."
+      },
+      {
+        "question": "Mon archétype définit-il ma compétence sociale ?",
+        "answer": "Pas du tout. Il définit votre style. La maîtrise vient de la connaissance de votre style et de l’apprentissage de la langue des autres."
+      }
+    ]
+  },
+  "test": {
+    "progress": "Progression",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Envoyer",
+    "selectOption": "Veuillez sélectionner une option",
+    "subtitle": "ton façon unique de vous connecter.",
+    "insightBullets": [
+      "Retracer l'architecture du moi social.",
+      "Illuminer vos modèles d’âme expressifs uniques.",
+      "Décoder les vibrations subtiles de votre transmission."
+    ],
+    "title": "Style de Communication",
+    "loading": "✨ Conception..."
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "🗣️",
+        "title": "identification du prototype",
+        "description": "Cartographie précise de vos rythmes expressifs centraux."
+      },
+      {
+        "icon": "👂",
+        "title": "conscience empathique",
+        "description": "L’art d’écouter l’autre côté de chaque conversation."
+      }
+    ]
+  },
+  "result": {
+    "sections": {
+      "strengths": "Key Strengths",
+      "traits": "Key Traits",
+      "challenges": "Challenges",
+      "workingWith": "Working With You"
+    },
+    "breakdown": {
+      "title": "Style de Communication"
+    },
+    "additionalInsights": {
+      "title": "Style de Communication"
+    },
+    "sharing": {
+      "testName": "Communication Style Test"
+    },
+    "meta": {
+      "title": "Style de Communication",
+      "description": "Analyse des échos profonds de tes choix...",
+      "keywords": "Communication, Style, Test, Résultats"
+    },
+    "title": "Style de Communication",
+    "description": "Analyse des échos profonds de tes choix...",
+    "subtitle": "ton façon unique de vous connecter.",
+    "scoreHeadline": "Primary Style",
+    "scoreDescription": "Your primary communication style is {primary}."
+  },
+  "title": "Style de Communication",
+  "description": "Analyse des échos profonds de tes choix...",
+  "keywords": "Communication, Style, Test, Résultats"
+}

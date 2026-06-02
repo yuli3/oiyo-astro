@@ -1,0 +1,131 @@
+{
+  "runes": {
+    "fehu": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "uruz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "thurisaz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "ansuz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "raido": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "kenaz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "gebo": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "wunjo": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "hagalaz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "nauthiz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "isa": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "jera": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "eihwaz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "perthro": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "algiz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "sowilo": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "tiwaz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "berkana": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "ehwaz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "mannaz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "laguz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "inguz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "dagaz": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    },
+    "othala": {
+      "name": "奥士拉",
+      "meaning": "传承",
+      "keyword": "祖先"
+    }
+  },
+  "title": "北欧卢恩符文",
+  "description": "源自古弗萨克的维京智慧。",
+  "systemName": "北欧符文",
+  "narrative": "世界树的低语",
+  "rune": "符文",
+  "reading": "符文解读",
+  "ariaLabel": "符文：{name}，含义：{meaning}。"
+}

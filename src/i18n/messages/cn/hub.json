@@ -1,0 +1,80 @@
+{
+  "title": "运势中心",
+  "subtitle": "通过各种神秘工具探索您的命运。",
+  "cta": "进入",
+  "hub": {
+    "meta": {
+      "title": "Finance Center",
+      "description": "财务性格测试、计算器和工具。"
+    },
+    "title": "金融中心",
+    "subtitle": "使用我们的综合工具掌握您的财务命运"
+  },
+  "tabs": {
+    "comprehensive": "综合分析",
+    "saju": "四柱八字",
+    "tarot": "塔罗牌",
+    "astrology": "占星术",
+    "numerology": "生命灵数",
+    "dream": "梦境日记",
+    "biorhythm": "生物节律",
+    "asset": "Awaiting deep synthesis...",
+    "budget": "Awaiting deep synthesis...",
+    "compound": "Awaiting deep synthesis...",
+    "gift": "Awaiting deep synthesis...",
+    "gig": "Awaiting deep synthesis...",
+    "freelancer": "Awaiting deep synthesis...",
+    "vat": "Awaiting deep synthesis...",
+    "card": "Awaiting deep synthesis...",
+    "realEstate": "Awaiting deep synthesis..."
+  },
+  "bizReport": "Awaiting deep synthesis...",
+  "calculate": "Awaiting deep synthesis...",
+  "dashboard": {
+    "scope": {
+      "daily": "今日",
+      "weekly": "本周",
+      "monthly": "本月",
+      "yearly": "年度"
+    },
+    "profile": {
+      "title": "运势中心",
+      "description": "基于时空坐标提取的基准数据。"
+    },
+    "biorhythm": {
+      "title": "运势中心",
+      "physical": "躯体能量",
+      "emotional": "情感共振",
+      "intellectual": "认知频率"
+    },
+    "fortune": {
+      "numerology": {
+        "title": "运势中心",
+        "lifePath": "生命路径数",
+        "personalYear": "个人流年数"
+      }
+    },
+    "saju": {
+      "title": "运势中心",
+      "dominant": "主导元素 (喜用)",
+      "lacking": "匮乏元素 (忌神)"
+    },
+    "rating": {
+      "critical": "相位失衡",
+      "low": "波动低迷",
+      "moderate": "共振平衡",
+      "good": "能量充盈",
+      "excellent": "巅峰共鸣"
+    },
+    "card": {
+      "score": "能量分值: {score}",
+      "advice": "观测神谕",
+      "luckyNumbers": "幸运频率数字",
+      "luckyColors": "共振颜色索引",
+      "warnings": "敏感相位警示"
+    },
+    "title": "运势中心"
+  },
+  "comprehensiveTitle": "综合分析",
+  "comprehensiveDesc": "一次性输入您的详细信息，即可获取多个领域的见解。"
+}

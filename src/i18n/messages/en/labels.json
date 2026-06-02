@@ -1,0 +1,14 @@
+{
+  "faceShape": "Face Shape",
+  "personalColor": "Personal Color",
+  "achievements": "Achievements",
+  "totalAmount": "Total Amount",
+  "supplyAmount": "Supply Amount",
+  "salaryInput": "Salary",
+  "salaryPlaceholder": "Enter salary",
+  "dependents": "Dependents",
+  "children": "Children",
+  "calculate": "Calculate",
+  "calculatePrompt": "Enter details to calculate.",
+  "disclaimerText": "Not financial advice."
+}

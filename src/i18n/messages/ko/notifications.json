@@ -1,0 +1,54 @@
+{
+  "empty": "알림이 없습니다.",
+  "dailyInsight": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "view": "보다",
+      "later": "나중에"
+    }
+  },
+  "aiHoroscope": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "bodyNoPersonality": "나만의 별자리 운세가 준비되었습니다!",
+    "actions": {
+      "view": "View",
+      "later": "나중에"
+    }
+  },
+  "testReminder": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "continue": "계속하기",
+      "dismiss": "닫기"
+    }
+  },
+  "streak": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "celebrate": "축하하기",
+      "share": "공유하기"
+    }
+  },
+  "social": {
+    "twinMatch": {
+      "title": "📤 Test Shared",
+      "body": "A friend checked your test."
+    },
+    "newFriend": {
+      "title": "📤 Test Shared",
+      "body": "A friend checked your test."
+    },
+    "testShared": {
+      "title": "📤 테스트 공유",
+      "body": "친구가 당신의 테스트를 확인했습니다."
+    }
+  },
+  "actions": {
+    "view": "보다",
+    "later": "나중에"
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "jobMatch": {
+    "meta": {
+      "hero": {
+        "eyebrow": "Detailed analysis",
+        "subtitle": "new discoveries about me",
+        "subtitleDetail": "Unlock your potential with deeper insights",
+        "cta": "Get started now"
+      },
+      "keywords": "Personality analysis, self-discovery, premium insight",
+      "title": "Productivity Diagnostics",
+      "description": "Find your own style to maximize work efficiency"
+    },
+    "hero": {
+      "test": {
+        "loadingSteps": {
+          "step1": "Analyzing career DNA...",
+          "step2": "Scanning work style pattern...",
+          "step3": "Identifying potential synergies...",
+          "step4": "Calculating optimal job matching..."
+        },
+        "insightBullets": ["Mapping the constellation of your truest self."],
+        "progress": "progress",
+        "submit": "Submit",
+        "loading": "Loading",
+        "selectOption": "Select",
+        "next": "next",
+        "previous": "before"
+      },
+      "result": {
+        "title": "Detailed analysis report",
+        "description": "We take an in-depth look into your inner self based on data."
+      },
+      "meta": {
+        "title": "Productivity Test",
+        "description": "Based on data, we take a detailed look into your inner self.",
+        "keywords": "Personality analysis, self-discovery, premium insight"
+      },
+      "title": "Performance report just for you",
+      "eyebrow": "precise analysis",
+      "subtitle": "Discover my work strengths and points of improvement",
+      "subtitleDetail": "Unlock your potential with deeper insights",
+      "cta": "Start Now",
+      "start": "Start",
+      "insightHint": "Insight Hint"
+    },
+    "landing": {
+      "benefits": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        }
+      ],
+      "metrics": [
+        {
+          "label": "Metric 1",
+          "value": "100%"
+        }
+      ],
+      "steps": [
+        {
+          "title": "Premium Insight",
+          "description": "Start"
+        }
+      ],
+      "previewTitle": "Preview",
+      "previewDescription": "Detailed analysis and insights for your journey.",
+      "benefitsTitle": "What you get from this test",
+      "stepsTitle": "Assessment",
+      "faqTitle": "Do you have any questions?",
+      "ctaSecondary": "Productivity Ctasecondary"
+    },
+    "test": {
+      "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+      "test": {
+        "insightBullets": [
+          "Unveil the hidden layers of your personal philosophy."
+        ],
+        "progress": "progress",
+        "submit": "Submit",
+        "loading": "Loading",
+        "selectOption": "Select",
+        "next": "next",
+        "previous": "before"
+      },
+      "result": {
+        "title": "Detailed analysis report",
+        "description": "Based on data, we take a detailed look into your inner self."
+      },
+      "meta": {
+        "title": "Productivity Test",
+        "description": "We take an in-depth look into your inner self based on data.",
+        "keywords": "Personality analysis, self-discovery, premium insight"
+      },
+      "intro": {
+        "title": "Finding my job aptitude",
+        "desc": "We analyze your work style and problem-solving tendencies and recommend the job that best suits you.",
+        "btn_start": "Job matching begins"
+      },
+      "processing": {
+        "title": "Complete career analysis...",
+        "desc": "We are looking for the best job based on your answers."
+      },
+      "progress": "progress",
+      "submit": "Submit",
+      "loading": "Loading...",
+      "selectOption": "Select option",
+      "subtitle": "Details",
+      "questionLabel": "Question Label",
+      "insightHint": "Insight Hint",
+      "start": "Start",
+      "next": "next",
+      "previous": "before",
+      "test_title": "job aptitude test"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Small choices accumulate into a grand destiny."
+        }
+      ],
+      "question1": "What is your unique frequency?",
+      "answer1": "Small choices add up to create a great destiny.",
+      "question2": "What drives you inside?",
+      "answer2": "Your unique perspective shapes reality.",
+      "question3": "How are you navigating the waves of life?",
+      "answer3": "Your unique perspective shapes reality."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "scoreLabels": {
+          "strategic": "strategist",
+          "creative": "creator",
+          "analytical": "analyst",
+          "service": "service",
+          "technical": "technical expert",
+          "social": "social",
+          "entrepreneurial": "enterprise"
+        },
+        "primaryThemeTitle": "main tendency",
+        "secondaryThemeTitle": "auxiliary tendency",
+        "scorecardTitle": "career scorecard",
+        "idealRolesTitle": "Recommended Job",
+        "collaborationTitle": "collaboration style",
+        "signalsTitle": "career signal",
+        "growthTitle": "growth point",
+        "interviewTitle": "Expected Interview Questions",
+        "actionPlanTitle": "action plan",
+        "actionPlanSubtitle": "Strategic Guide to Career Growth",
+        "recommendationsTitle": "next steps"
+      },
+      "badges": {
+        "primary": "main matching",
+        "secondary": "secondary matching"
+      },
+      "intro": {
+        "paragraphs": [
+          "Your profile combines your most dominant professional traits to identify the work environments where you will thrive.",
+          "Based on your responses, we've identified a clear pattern in how you approach challenges and create value."
+        ],
+        "readingGuide": "Note: Scores represent relative preferences and inclinations, not absolute ability.",
+        "scoreExplainer": "Distribution of my professional tendencies"
+      },
+      "actionSteps": [
+        "Review your primary theme's growth focus areas",
+        "Use the interview prompts to prepare for your next career move",
+        "Consider the recommended roles for your secondary theme",
+        "Share your results with a mentor or peer"
+      ],
+      "title": "Job matching results",
+      "summary": "This is the result of a career analysis that best matches my work tendencies.",
+      "scorecardBadge": "Based on {count} questions",
+      "nextStepsDescription": "Based on your matching profile, we recommend tools that will help you grow.",
+      "shareSuccess": "The results have been copied to your clipboard!",
+      "shareCta": "Copy summary",
+      "retake": "Test again"
+    },
+    "title": "my productivity profile",
+    "description": "We take an in-depth look into your inner self based on data.",
+    "heroTitle": "The first step to best performance",
+    "eyebrow": "precise diagnosis",
+    "subtitle": "Discover your work style and efficiency patterns",
+    "cta": "Get started now",
+    "start": "Getting started"
+  }
+}

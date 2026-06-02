@@ -1,0 +1,13 @@
+{
+  "premium": {
+    "title": "Premium",
+    "description": "Get all features."
+  },
+  "free": {
+    "title": "Free",
+    "description": "Basic features."
+  },
+  "download": "Download",
+  "checkout": "Checkout",
+  "notice": "Notice"
+}

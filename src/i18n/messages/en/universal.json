@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "blueprint": "Primal Blueprint",
+    "archives": "The Grand Archives",
+    "mythos": "Global Mythos",
+    "biorhythm": "Biorhythm",
+    "tuning": "Harmonic Tuning",
+    "becoming": "Path of Becoming"
+  },
+  "labels": {
+    "stars": "{count} stars are influencing your path",
+    "moonIn": "Moon in {sign}",
+    "sephira": "Sephira: {name}",
+    "lifePath": "Life Path {number}",
+    "unknown": "Unknown",
+    "physical": "Physical",
+    "emotional": "Emotional",
+    "intellectual": "Intellectual",
+    "dominantAura": "Dominant Aura",
+    "dominantAuraDesc": "The most powerful elemental flow piercing through your soul.",
+    "color": "Color",
+    "direction": "Direction",
+    "number": "Number",
+    "gemstone": "Gemstone",
+    "flower": "Flower",
+    "takeTest": "Take Test",
+    "viewFormula": "View Formula",
+    "sajuTitle": "The Celestial Formula",
+    "sajuSubtitle": "The Eight Pillars & Elemental Resonance"
+  },
+  "explanation": {
+    "wolf": "Evening peak, creative, and intense disposition.",
+    "ectomorph": "Excellent mental focus, sensitive, and lean energy system.",
+    "becomingValue": "Vibrating Life Number {value}",
+    "totem": "Guardian Totem"
+  },
+  "systems": {
+    "ziwei": "Zi Wei Dou Shu",
+    "vedic": "Vedic Nakshatra",
+    "kabbalah": "Kabbalah Path",
+    "celtic": "Celtic Tree Zodiac",
+    "egyptian": "Egyptian Patron Deity",
+    "mayan": "Mayan Spirit",
+    "iching": "I Ching Hexagram",
+    "hellenistic": "Hellenistic Sect"
+  },
+  "synergy": {
+    "advice": "Walk your path with courage.",
+    "description": "Your unique cosmic blueprint.",
+    "title": "Universal Origin"
+  },
+  "social": {
+    "beneficial": {
+      "description": "Seek those with strong {element} energy."
+    },
+    "compatible": {
+      "description": "Compatible with your rhythm."
+    }
+  },
+  "title": "Universal Blueprint",
+  "subtitle": "Discover the converging threads of your soul.",
+  "description": "A comprehensive alignment of your multi-dimensional traits.",
+  "tabs": {
+    "essence": "Inner Essence",
+    "destiny": "Destiny Path",
+    "biology": "Biological Rhythm"
+  },
+  "close": "Close Archive",
+  "essence": {
+    "title": "Essence",
+    "quote": "The truth of your being resides within.",
+    "soulFormula": "Soul Formula",
+    "humanDesign": "Human Design",
+    "authority": "Authority",
+    "locked": "Wisdom Locked"
+  },
+  "destiny": {
+    "title": "Destiny",
+    "lifePath": "Life Path",
+    "seeker": "The Seeker",
+    "animal": "Spirit Animal"
+  },
+  "biology": {
+    "title": "Biology",
+    "chronotype": "Chronotype",
+    "constitution": "Physical Constitution"
+  },
+  " ": ""
+}

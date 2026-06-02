@@ -1,0 +1,26 @@
+{
+  "about": {
+    "mission": "我们的神圣使命",
+    "values": "我们的核心价值",
+    "story": "编年史"
+  },
+  "legal": {
+    "privacy": {
+      "sanctity": "数据圣域",
+      "sanctity_header": "匿名的护盾",
+      "insight": "见解生成",
+      "insight_header": "集体智慧，个人主权",
+      "sovereignty": "灵魂主权",
+      "sovereignty_header": "遗忘权"
+    },
+    "terms": {
+      "pact": "契约认可",
+      "pact_header": "数字契约认可",
+      "duties": "使徒义务",
+      "duties_header": "真实探索的义务",
+      "knowledge": "神圣知识",
+      "knowledge_header": "共鸣算法的所有权"
+    }
+  },
+  "marketing": {}
+}

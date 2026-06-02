@@ -1,0 +1,21 @@
+{
+  "title": "预设",
+  "subtitle": "选择预设。",
+  "recommended": "推荐",
+  "all": {
+    "title": "全部预设",
+    "description": "查看所有可用预设。"
+  },
+  "eastern": {
+    "title": "东方智慧",
+    "description": "古老东方体系。"
+  },
+  "western": {
+    "title": "西方智慧",
+    "description": "现代西方体系。"
+  },
+  "basic": {
+    "title": "基础",
+    "description": "核心分析。"
+  }
+}

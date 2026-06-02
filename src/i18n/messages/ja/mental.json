@@ -1,0 +1,36 @@
+{
+  "moodCalendar": {
+    "grid": {
+      "title": "気分カレンダー",
+      "noEntries": "まだ記録がありません",
+      "addMood": "感情を加える",
+      "daySun": "日",
+      "dayMon": "月",
+      "dayTue": "激怒",
+      "dayWed": "番号",
+      "dayThu": "ネック",
+      "dayFri": "金",
+      "daySat": "土曜日",
+      "moodQuestion": "どう感じましたか？",
+      "close": "近い",
+      "saveFailed": "保存に失敗しました",
+      "saved": "保存されました",
+      "saveAsImage": "画像として保存"
+    }
+  },
+  "moodAnalyzer": {
+    "moods": {
+      "happy": "幸せ",
+      "sad": "悲しみ",
+      "anxious": "不安",
+      "angry": "アグロ",
+      "calm": "静けさ",
+      "excited": "興奮した",
+      "sunny": "明晰さ",
+      "cloudy": "ぼかし",
+      "rainy": "雨",
+      "storm": "嵐",
+      "neutral": "中立"
+    }
+  }
+}

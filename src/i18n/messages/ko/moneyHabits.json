@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "keywords": "keywords, tags, seo",
+    "resultTitle": "MoneyHabits 결과 분석",
+    "resultDescription": "귀하의 MoneyHabits 결과를 자세히 살펴보세요.",
+    "testTitle": "돈습관 평가",
+    "testDescription": "지금 귀하의 MoneyHabits 점수를 계산해 보세요.",
+    "title": "Your Financial Profile",
+    "description": "Explore our suite of tools designed for deep finance insights."
+  },
+  "hero": {
+    "subtitle": "Detailed information",
+    "cta": "테스트 시작",
+    "badge": "돈습관 배지",
+    "title": "귀하의 금융 프로필"
+  },
+  "benefits": {
+    "items": {
+      "0": {
+        "emoji": "이자형",
+        "title": "Your Financial Profile",
+        "description": "Explore our suite of tools designed for deep finance insights."
+      },
+      "1": {
+        "emoji": "이자형",
+        "title": "Your Financial Profile",
+        "description": "Explore our suite of tools designed for deep finance insights."
+      },
+      "2": {
+        "emoji": "이자형",
+        "title": "Your Financial Profile",
+        "description": "Explore our suite of tools designed for deep finance insights."
+      }
+    },
+    "title": "귀하의 금융 프로필"
+  },
+  "cta": {
+    "subtitle": "Detailed information",
+    "button": "시작",
+    "title": "귀하의 금융 프로필"
+  },
+  "faq": {
+    "items": {
+      "0": {
+        "question": "인생의 흐름을 어떻게 탐색합니까?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "1": {
+        "question": "How do you navigate life's currents?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      },
+      "2": {
+        "question": "How do you navigate life's currents?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "3": {
+        "question": "How do you navigate life's currents?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      }
+    },
+    "title": "귀하의 금융 프로필"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      },
+      {
+        "icon": "🚀",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+      },
+      {
+        "icon": "💡",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      },
+      {
+        "icon": "🎯",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+      },
+      {
+        "icon": "🔥",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "⭐",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "인생의 흐름을 어떻게 탐색합니까?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      }
+    ]
+  },
+  "test": {
+    "insightBullets": ["시그니처 강도", "피벗 포인트", "2"],
+    "common": {
+      "progress": "진전"
+    },
+    "test": {
+      "insightBullets": ["내면의 풍경의 깊은 건축물을 탐험해보세요."],
+      "progress": "진전",
+      "submit": "제출하기",
+      "loading": "Loading...",
+      "selectOption": "선택하기"
+    },
+    "result": {
+      "title": "Your Financial Profile",
+      "description": "Explore our suite of tools designed for deep finance insights."
+    },
+    "meta": {
+      "title": "Your Financial Profile",
+      "description": "Explore our suite of tools designed for deep finance insights.",
+      "keywords": "keywords, tags, seo"
+    },
+    "progress": "진전",
+    "submit": "제출하기",
+    "loading": "Loading...",
+    "selectOption": "Select",
+    "subtitle": "상세정보",
+    "title": "Your Financial Profile",
+    "description": "Explore our suite of tools designed for deep finance insights.",
+    "keywords": "키워드, 태그, SEO",
+    "finish": "마치다",
+    "swipeHint": "스와이프 힌트"
+  },
+  "result": {
+    "chart": {
+      "impulseControl": "충동 제어",
+      "savingCapacity": "저장 용량",
+      "planningSkill": "기획력",
+      "emotionalControl": "감정 조절"
+    },
+    "test": {
+      "insightBullets": ["귀하의 경로를 정의하는 고유한 패턴을 찾아보세요."],
+      "progress": "진전",
+      "submit": "제출하기",
+      "loading": "Loading...",
+      "selectOption": "선택하기"
+    },
+    "result": {
+      "title": "Your Financial Profile",
+      "description": "Explore our suite of tools designed for deep finance insights."
+    },
+    "meta": {
+      "title": "Your Financial Profile",
+      "description": "Explore our suite of tools designed for deep finance insights.",
+      "keywords": "keywords, tags, seo"
+    },
+    "title": "Your Financial Profile",
+    "description": "Explore our suite of tools designed for deep finance insights.",
+    "keywords": "키워드, 태그, SEO",
+    "loading": "로드 중...",
+    "shareTitle": "계기반",
+    "copySuccess": "복사 성공",
+    "scoresTitle": "계기반",
+    "impulseRisk": "충동 위험",
+    "strengths": "강점",
+    "challenges": "도전과제",
+    "actionTips": "액션 팁",
+    "savingRecommendation": "추천 저장",
+    "recommendedPercentage": "권장 비율",
+    "share": "공유하기",
+    "retake": "다시 잡다"
+  },
+  "title": "귀하의 금융 프로필",
+  "description": "심층적인 금융 통찰력을 위해 설계된 도구 제품군을 살펴보세요.",
+  "keywords": "키워드, 태그, SEO"
+}

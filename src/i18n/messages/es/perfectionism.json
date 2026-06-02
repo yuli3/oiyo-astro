@@ -1,0 +1,14 @@
+{
+  "classifications": {
+    "Master Artisan": "Maestro Artesano",
+    "Grinder": "El Luchador",
+    "Tortured Critic": "El Crítico Atormentado",
+    "Free Spirit": "Espíritu Libre"
+  },
+  "title": "Tipo de Perfeccionismo",
+  "badge": "Perfeccionismo",
+  "adaptive": "Adaptativo",
+  "maladaptive": "Maladaptativo",
+  "restart": "Reiniciar",
+  "save": "Guardar resultado"
+}

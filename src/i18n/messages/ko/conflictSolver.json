@@ -1,0 +1,50 @@
+{
+  "noData": {
+    "desc": "당신의 개인화된 대화 연금술을 드러내기 위해 인식의 의식을 시작하십시오.",
+    "button": "교정 시작",
+    "title": "Conflict Alchemy Synthesizer"
+  },
+  "labels": {
+    "relation": "유사한 맥락",
+    "situation": "시련의 순간"
+  },
+  "relations": {
+    "partner": "신성한 상대",
+    "friend": "친절한 영혼",
+    "colleague": "전문 동맹"
+  },
+  "situations": {
+    "apology": "보상 의식(소유권)",
+    "initiate": "인정(불만) 개시",
+    "boundary": "성역(경계) 설정"
+  },
+  "meta": {
+    "subtitle": "Bespoke alchemical scripts to harmonize discordant frequencies.",
+    "disclaimer": "These scripts serve as foundational frequencies; adapt them to the unique cadence of your connection.",
+    "title": "Conflict Alchemy Synthesizer",
+    "description": "Guiding the vocalization of wisdom when relationship harmonics are strained.",
+    "keywords": "갈등 연금술, 관계 회복, 신성한 대화, 의사소통 의식, 오이요(Oiyo)"
+  },
+  "test": {
+    "insightBullets": ["관계적 입장의 무언의 층을 조명하십시오."],
+    "progress": "공명 상승",
+    "next": "앞으로",
+    "previous": "이전으로",
+    "submit": "합성 공개",
+    "loading": "대화 연금술을 정제하는 중...",
+    "selectOption": "진리의 길을 표시하라"
+  },
+  "result": {
+    "title": "Conflict Alchemy Synthesizer",
+    "description": "Guiding the vocalization of wisdom when relationship harmonics are strained."
+  },
+  "subtitle": "불일치하는 주파수를 조화시키기 위한 맞춤형 연금술 스크립트입니다.",
+  "yourStyle": "당신의 갈등 입장",
+  "retest": "교정 다시 시작",
+  "resultTitle": "명시된 스크립트",
+  "copy": "보존하다",
+  "copied": "보관됨",
+  "disclaimer": "이러한 스크립트는 기본 주파수 역할을 합니다. 연결의 고유한 흐름에 맞게 조정하세요.",
+  "title": "갈등 연금술 합성기",
+  "description": "관계의 조화가 긴장될 때 지혜의 발성을 안내합니다."
+}

@@ -1,0 +1,21 @@
+{
+  "modes": {
+    "serious": "성실한 지도",
+    "funny": "재치와 경이로움",
+    "realistic": "근거 있는 지혜"
+  },
+  "ui": {
+    "additionalTips": "지혜의 속삭임",
+    "askAnotherQuestion": "새로운 문의하기",
+    "share": "발견 전송",
+    "searchPlaceholder": "우려사항을 Oracle에 알리십시오.",
+    "randomAdvice": "🎲 랜덤 인사이트 호출",
+    "allCategories": "옴니아",
+    "noResultsTitle": "공명이 가려짐",
+    "noResultsDescription": "Oracle은 이 문의와 즉시 일치하는 항목을 찾지 못했습니다. 다른 표현으로 질문을 다시 작성해 보세요.",
+    "clearSearch": "퍼지 문의"
+  },
+  "meta": {
+    "title": "하트 공명 오라클"
+  }
+}

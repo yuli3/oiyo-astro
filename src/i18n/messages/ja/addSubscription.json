@@ -1,0 +1,11 @@
+{
+  "title": "サブスクリプションを追加",
+  "nameLabel": "名前",
+  "namePlaceholder": "Netflix、Spotify...",
+  "priceLabel": "価格",
+  "pricePlaceholder": "0.00",
+  "usageLabel": "利用頻度",
+  "usageUnit": "回/月",
+  "satisfactionLabel": "満足度",
+  "submit": "サブスクリプションを追加"
+}

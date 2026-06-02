@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "The Sonic Harmony",
+    "description": "Reveal your Egyptian Guardian and Celtic Tree Sign."
+  },
+  "hero": {
+    "title": "The Sonic Harmony",
+    "subtitle": "Solo ingresa tu nacimiento una vez. Calculamos al instante tu Signo Solar, tu Animal Oriental, tu Camino de Vida y tu Biorritmo actual.\\nTu huella cósmica, decodificada en un instante.",
+    "inputLabel": "Analizando los ecos profundos de tus elecciones...",
+    "analyze": "Analizar Origen",
+    "analyzing": "Alineando estrellas..."
+  },
+  "trinity": {
+    "western": "Zodíaco Occidental",
+    "eastern": "Zodíaco Oriental",
+    "numerology": "Camino de Vida",
+    "biorhythm": "Biorritmo",
+    "destiny": "Destino"
+  },
+  "sections": {
+    "profile": "Perfil Cósmico",
+    "insight": "Perspectiva Diaria",
+    "analysisTitle": "Autoanálisis cósmico",
+    "westernEssence": "Esencia del Zodíaco Occidental",
+    "easternAnalysis": "Eastern Spirit Analysis",
+    "growthCouncil": "Growth Council",
+    "numerologicalDestiny": "Destino Numerológico",
+    "vibrationNumber": "Vibration Number"
+  },
+  "biorhythm": {
+    "title": "The Sonic Harmony",
+    "physical": "Índice físico",
+    "emotional": "Índice emocional",
+    "intellectual": "Índice intelectual"
+  },
+  "scroll": {
+    "cosmic": {
+      "title": "The Sonic Harmony",
+      "orbitalVelocity": "Orbital Velocity",
+      "galacticVelocity": "Galactic Velocity",
+      "axialTilt": "Inclinación axial",
+      "distanceFromSun": "Dist. to Sun",
+      "locationTooltip": "You were here"
+    },
+    "final": {
+      "premium": {
+        "title": "The Sonic Harmony",
+        "description": "Reveal your Egyptian Guardian and Celtic Tree Sign."
+      },
+      "free": {
+        "title": "The Sonic Harmony",
+        "description": "Reveal your Egyptian Guardian and Celtic Tree Sign."
+      },
+      "download": "Download PDF Artifact",
+      "checkout": "Unlock All Secrets ($9.99)",
+      "notice": "One-time payment. Instantly unlock lifetime access to high-res PDFs and all hidden mythic layers."
+    },
+    "oracleDisclosure": "Oracle's Disclosure",
+    "celestialAlignment": "Alineación celeste",
+    "solarSign": "Signo Solar",
+    "lunarAnimal": "Lunar Animal",
+    "lifePath": "Camino de vida",
+    "geneticBlueprint": "Plano genético",
+    "bloodType": "Tipo de sangre {tipo}"
+  },
+  "premium": {
+    "onomancy": {
+      "title": "The Sonic Harmony",
+      "description": "Reveal your Egyptian Guardian and Celtic Tree Sign.",
+      "price": "$9.99"
+    },
+    "pantheon": {
+      "title": "The Sonic Harmony",
+      "description": "Reveal your Egyptian Guardian and Celtic Tree Sign.",
+      "price": "$9.99"
+    }
+  },
+  "pantheon": {
+    "symbols": {
+      "Stone": "Stone",
+      "Flower": "Flower",
+      "Star": "Star"
+    },
+    "title": "The Sonic Harmony",
+    "egyptianGuardian": "Guardián egipcio",
+    "celticTreeSign": "Signo de árbol celta",
+    "birthSymbols": "Símbolos de nacimiento"
+  },
+  "onomancy": {
+    "title": "The Sonic Harmony",
+    "missingForce": "Missing Force",
+    "none": "Ninguna",
+    "vibrationFill": "Vibration Fill",
+    "circularText": "Celestial Resonance • Onomancy Analysis • Vibration Logic • "
+  },
+  "synergy": {
+    "adjective": "unique"
+  }
+}

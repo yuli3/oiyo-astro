@@ -1,0 +1,192 @@
+{
+  "input": {
+    "subtitle": "Enter the details accurately",
+    "houseValue": "House Value",
+    "deposit": "Deposit",
+    "mortgage": "Mortgage",
+    "mortgageDesc": "Mortgage Desc",
+    "unit": "KRW",
+    "title": "My Insights"
+  },
+  "checklist": {
+    "items": [
+      "Check Property Registry for mortgages",
+      "Request Landlord's Tax Clearance Certificate",
+      "Verify eligibility for Jeonse Return Insurance",
+      "Confirm accurate market price (Real transaction price)",
+      "Add clause: 'Return deposit if loan is denied'"
+    ],
+    "title": "My Insights"
+  },
+  "meta": {
+    "subtitle": "Detailed information",
+    "disclaimer": "Disclaimer",
+    "keywords": "jeonse, rental, korea, deposit protection",
+    "title": "Jeonseguard Test",
+    "description": "Discover your personal insights with this in-depth analysis."
+  },
+  "hero": {
+    "subtitle": "Secure Your Home",
+    "badge": "Real Estate"
+  },
+  "test": {
+    "progress": "Progress",
+    "submit": "Submit",
+    "loading": "Mapping the constellation of your inner architecture...",
+    "selectOption": "Select Option",
+    "subtitle": "Detailed information",
+    "insightBullets": ["Signature Strength", "Pivot Point", "2"]
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What is your unique core frequency?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What drives your inner world?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Small choices accumulate into a grand destiny."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What is your unique core frequency?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What drives your inner world?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What is your unique core frequency?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      }
+    ]
+  },
+  "result": {
+    "title": "Result",
+    "description": "Your personalized analysis results and recommendations.",
+    "debtRatio": "Debt Ratio"
+  },
+  "subtitle": "Is my deposit safe? Check for 'Tin Can' Jeonse risks",
+  "currency": "Currency",
+  "optional": "Optional",
+  "disclaimer": "This result is for reference only and has no legal effect. Consult an expert for accurate analysis.",
+  "title": "Your Financial Profile",
+  "description": "Explore our suite of tools designed for deep finance insights.",
+  "safe": "Safe",
+  "caution": "Caution",
+  "danger": "Danger"
+}

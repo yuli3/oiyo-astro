@@ -1,0 +1,2811 @@
+{
+  "subtitle": "L'empreinte du caractère portée par votre moi social.",
+  "badgeText": "Édition Impériale",
+  "result": {
+    "sections": {
+      "dimensions_title": "Essence",
+      "imperial_decree": "Décret Impérial",
+      "strengths": "Forces",
+      "weaknesses": "Faiblesses",
+      "retake_ceremony": "Retenter la Cérémonie",
+      "career_title": "Parcours Professionnels",
+      "career_suitable": "S'épanouit dans",
+      "career_avoid": "Postes difficiles",
+      "growth_title": "Parcours de Croissance",
+      "growth_challenges": "Défis Clés",
+      "growth_tips": "Conseils de Croissance",
+      "deep_careers": "Guide Approfondi des Carrières",
+      "hobbies_title": "Loisirs selon l'Humeur"
+    }
+  },
+  "profiles": {
+    "ENFJ": {
+      "name": "Protagoniste",
+      "nickname": "Enseignant",
+      "description": "Des leaders charismatiques et inspirants, capables de fasciner leurs auditeurs.",
+      "summary": "Charismatique et chaleureux.",
+      "traits": {
+        "keywords": ["Charismatique", "Altruiste"],
+        "strengths": ["Fiable", "Leader né"],
+        "weaknesses": ["Trop désintéressé", "Sensible"]
+      },
+      "career": {
+        "suitable": ["Enseignant", "Travailleur social"],
+        "avoid": ["Administrateur système"]
+      },
+      "growth": {
+        "challenges": [
+          "Prendre soin de soi",
+          "Fixer des limites",
+          "Accepter les critiques",
+          "Trop de sollicitude"
+        ],
+        "tips": [
+          "Priorisez le soin de soi",
+          "Fixez des limites",
+          "Acceptez les critiques",
+          "Atténuez le perfectionnisme"
+        ]
+      }
+    },
+    "ENFP": {
+      "name": "Inspirateur",
+      "nickname": "Championne",
+      "description": "Esprits libres enthousiastes, créatifs et sociables.",
+      "summary": "Enthousiaste et créatif.",
+      "traits": {
+        "keywords": ["Créatif", "Sociable"],
+        "strengths": ["Enthousiaste", "Observateur"],
+        "weaknesses": ["Réfléchit trop", "Vulnérable au stress"]
+      },
+      "career": {
+        "suitable": ["Journaliste", "Consultante"],
+        "avoid": ["Auditeur"]
+      },
+      "growth": {
+        "challenges": [
+          "Se concentrer",
+          "Exécution",
+          "Stabilité émotionnelle",
+          "Gestion des détails"
+        ],
+        "tips": [
+          "Améliorez votre focus",
+          "Développez des compétences d'exécution",
+          "Gérez vos émotions",
+          "Augmentez la planification"
+        ]
+      }
+    },
+    "ENTJ": {
+      "name": "Commandant",
+      "nickname": "Chef",
+      "description": "Leaders audacieux, imaginatifs et dotés d'une volonté forte, trouvant toujours un moyen.",
+      "summary": "Efficace et organisé.",
+      "traits": {
+        "keywords": ["Efficace", "Volonté forte"],
+        "strengths": ["Stratégique", "Confiant"],
+        "weaknesses": ["Têtu", "Intolérant"]
+      },
+      "career": {
+        "suitable": ["PDG", "Directrice"],
+        "avoid": ["Employé de bureau"]
+      },
+      "growth": {
+        "challenges": [
+          "Empathie émotionnelle",
+          "Détails",
+          "Patience",
+          "Accepter les critiques"
+        ],
+        "tips": [
+          "Augmentez la considération émotionnelle",
+          "Développez la patience",
+          "Écoutez les autres",
+          "Gérez le stress"
+        ]
+      }
+    },
+    "ENTP": {
+      "name": "Innovateur",
+      "nickname": "Visionnaire",
+      "description": "Penseurs intelligents et curieux qui ne peuvent s'empêcher de relever un défi intellectuel.",
+      "summary": "Innovant et flexible.",
+      "traits": {
+        "keywords": ["Innovant", "Esprit vif"],
+        "strengths": ["Cultivé", "Originale"],
+        "weaknesses": ["Argumentatif", "Insensible"]
+      },
+      "career": {
+        "suitable": ["Entrepreneuse", "Avocat"],
+        "avoid": ["Comptable"]
+      },
+      "growth": {
+        "challenges": [
+          "Se concentrer",
+          "Cohérence",
+          "Empathie émotionnelle",
+          "Tâches routinières"
+        ],
+        "tips": [
+          "Améliorez votre focus",
+          "Augmentez la conscience émotionnelle",
+          "Maintenez la cohérence",
+          "Faites attention aux détails"
+        ]
+      }
+    },
+    "ESFJ": {
+      "name": "Consule",
+      "nickname": "Collaborateur",
+      "description": "Personnes extrêmement attentionnées, sociales et populaires, toujours désireuses d'aider.",
+      "summary": "Social et coopératif.",
+      "traits": {
+        "keywords": ["Sociale", "Populaire"],
+        "strengths": ["Chaleureux", "Sensible"],
+        "weaknesses": ["Cherche l'approbation", "Inflexible"]
+      },
+      "career": {
+        "suitable": ["Organisateur d'événements", "Relation publique (PR)"],
+        "avoid": ["Développeur"]
+      },
+      "growth": {
+        "challenges": [
+          "Assertivité",
+          "Indépendance",
+          "Accepter les critiques",
+          "Gestion des conflits"
+        ],
+        "tips": [
+          "Augmentez l'assertivité",
+          "Acceptez les critiques",
+          "Développez votre indépendance",
+          "Apprenez la résolution de conflits"
+        ]
+      }
+    },
+    "ESFP": {
+      "name": "Amuseur",
+      "nickname": "Artiste",
+      "description": "Spontanés, énergiques et enthousiastes ; la vie n'est jamais ennuyeuse avec eux.",
+      "summary": "Extraverti et énergique.",
+      "traits": {
+        "keywords": ["Extraverti", "Spontané"],
+        "strengths": ["Audacieux", "Pratique"],
+        "weaknesses": ["Sensible", "Déconcentré"]
+      },
+      "career": {
+        "suitable": ["Acteur", "Animateur"],
+        "avoid": ["Comptable"]
+      },
+      "growth": {
+        "challenges": [
+          "Se concentrer",
+          "Planification",
+          "Accepter les critiques",
+          "Stabilité émotionnelle"
+        ],
+        "tips": [
+          "Améliorez votre focus",
+          "Développez des compétences de planification",
+          "Acceptez les critiques",
+          "Gérez vos émotions"
+        ]
+      }
+    },
+    "ESTJ": {
+      "name": "Directeur",
+      "nickname": "Gardien",
+      "description": "Excellents administrateurs, inégalés pour gérer les choses ou les gens.",
+      "summary": "Organisé et décidé.",
+      "traits": {
+        "keywords": ["Organisé", "Direct"],
+        "strengths": ["Dévoué", "Loyale"],
+        "weaknesses": ["Inflexible", "Jugeur"]
+      },
+      "career": {
+        "suitable": ["Chef de projet", "Juge"],
+        "avoid": ["Artiste"]
+      },
+      "growth": {
+        "challenges": [
+          "Empathie émotionnelle",
+          "Flexibilité",
+          "Adaptation au changement",
+          "Créativité"
+        ],
+        "tips": [
+          "Augmentez la considération émotionnelle",
+          "Développez la flexibilité",
+          "Écoutez les autres",
+          "Acceptez le changement"
+        ]
+      }
+    },
+    "ESTP": {
+      "name": "Entrepreneuse",
+      "nickname": "Persuadeur",
+      "description": "Personnes intelligentes, énergiques et perspicaces qui aiment vivre à la limite.",
+      "summary": "Energique et perspicace.",
+      "traits": {
+        "keywords": ["Énergique", "Perspicace"],
+        "strengths": ["Audacieux", "Pratique"],
+        "weaknesses": ["Impulsif", "Enclin au risque"]
+      },
+      "career": {
+        "suitable": ["Ventes", "Entrepreneuse"],
+        "avoid": ["Chercheur"]
+      },
+      "growth": {
+        "challenges": [
+          "Planification",
+          "Empathie émotionnelle",
+          "Patience",
+          "Pensée à long terme"
+        ],
+        "tips": [
+          "Développez des compétences de planification",
+          "Augmentez la conscience émotionnelle",
+          "Développez la patience",
+          "Réfléchissez profondément"
+        ]
+      }
+    },
+    "INFJ": {
+      "name": "Avocat",
+      "nickname": "Idéaliste",
+      "description": "Idéalistes calmes et mystiques, mais très inspirants et infatigables.",
+      "summary": "Perspicace et fidèle à ses principes.",
+      "traits": {
+        "keywords": ["Perspicace", "Créatif"],
+        "strengths": ["Passionné", "Altruiste"],
+        "weaknesses": ["Sensible", "Perfectionniste"]
+      },
+      "career": {
+        "suitable": ["Conseiller", "Écrivain"],
+        "avoid": ["Ventes"]
+      },
+      "growth": {
+        "challenges": [
+          "Réalisme",
+          "Gestion des conflits",
+          "Prendre soin de soi",
+          "Fixer des limites"
+        ],
+        "tips": [
+          "Développez le réalisme",
+          "Priorisez le soin de soi",
+          "Affrontez les conflits",
+          "Fixez des limites"
+        ]
+      }
+    },
+    "INFP": {
+      "name": "Médiateur",
+      "nickname": "Guérisseur",
+      "description": "Personnes poétiques, gentilles et altruistes, toujours désireuses d'aider une bonne cause.",
+      "summary": "Idéaliste et empathique.",
+      "traits": {
+        "keywords": ["Empathique", "Créatif"],
+        "strengths": ["Loyale", "Ouvert d'esprit"],
+        "weaknesses": ["Trop idéaliste", "Auto-critique"]
+      },
+      "career": {
+        "suitable": ["Artiste", "Psychologue"],
+        "avoid": ["Centre d'appels"]
+      },
+      "growth": {
+        "challenges": [
+          "Esprit de décision",
+          "Réalisme",
+          "Gestion des conflits",
+          "Assertivité"
+        ],
+        "tips": [
+          "Développez le réalisme",
+          "Améliorez votre esprit de décision",
+          "Apprenez la résolution de conflits",
+          "Augmentez l'assertivité"
+        ]
+      }
+    },
+    "INTJ": {
+      "name": "Architecte",
+      "nickname": "Stratège",
+      "description": "Penseurs imaginatifs et stratégiques, avec un plan pour tout.",
+      "summary": "Stratégique et indépendant.",
+      "traits": {
+        "keywords": ["Stratégique", "Indépendant"],
+        "strengths": ["Rationnel", "Informé"],
+        "weaknesses": ["Arrogante", "Jugeur"]
+      },
+      "career": {
+        "suitable": ["Scientifique", "Stratège"],
+        "avoid": ["Réceptionniste"]
+      },
+      "growth": {
+        "challenges": [
+          "Communication émotionnelle",
+          "Situations improvisées",
+          "Travail d'équipe",
+          "Accepter les critiques"
+        ],
+        "tips": [
+          "Entraînez-vous à exprimer vos émotions",
+          "Acceptez les opinions des autres",
+          "Atténuez le perfectionnisme",
+          "Créez un réseau social"
+        ]
+      }
+    },
+    "INTP": {
+      "name": "Logicien",
+      "nickname": "Banque d'idées",
+      "description": "Inventeurs innovants avec une soif insatiable de connaissances.",
+      "summary": "Analytique et objectif.",
+      "traits": {
+        "keywords": ["Analytique", "Objectif"],
+        "strengths": ["Pensée abstraite", "Originale"],
+        "weaknesses": ["Distrait", "Insensible"]
+      },
+      "career": {
+        "suitable": ["Ingénieur logiciel", "Mathématicien"],
+        "avoid": ["Vendeur"]
+      },
+      "growth": {
+        "challenges": [
+          "Exécution",
+          "Communication émotionnelle",
+          "Gestion du temps",
+          "Application pratique"
+        ],
+        "tips": [
+          "Améliorez l'exécution",
+          "Augmentez l'expression émotionnelle",
+          "Améliorez la gestion du planning",
+          "Communiquez avec les autres"
+        ]
+      }
+    },
+    "ISFJ": {
+      "name": "Défenseur",
+      "nickname": "Protecteur",
+      "description": "Protecteurs très dévoués et chaleureux, toujours prêts à défendre leurs proches.",
+      "summary": "Coopératif et loyal.",
+      "traits": {
+        "keywords": ["Coopératif", "Fiable"],
+        "strengths": ["Patient", "Pratique"],
+        "weaknesses": ["Timide", "Surcharge de travail"]
+      },
+      "career": {
+        "suitable": ["Infirmier", "Enseignant"],
+        "avoid": ["PDG"]
+      },
+      "growth": {
+        "challenges": [
+          "Assertivité",
+          "Fixer des limites",
+          "Adaptation au changement",
+          "Gestion des conflits"
+        ],
+        "tips": [
+          "Augmentez l'assertivité",
+          "Fixez des limites",
+          "Priorisez le soin de soi",
+          "Acceptez le changement"
+        ]
+      }
+    },
+    "ISFP": {
+      "name": "Aventurier",
+      "nickname": "Artiste",
+      "description": "Artistes flexibles et charmants, toujours prêts à explorer et à expérimenter de nouvelles choses.",
+      "summary": "Charmant et sensible.",
+      "traits": {
+        "keywords": ["Charmant", "Sensible"],
+        "strengths": ["Imaginatif", "Passionné"],
+        "weaknesses": ["Vulnérable au stress", "Compétitif"]
+      },
+      "career": {
+        "suitable": ["Designer", "Artiste"],
+        "avoid": ["Juridique"]
+      },
+      "growth": {
+        "challenges": [
+          "Assertivité",
+          "Planification",
+          "Réalisme",
+          "Gestion des conflits"
+        ],
+        "tips": [
+          "Augmentez l'assertivité",
+          "Développez la planification",
+          "Augmentez le réalisme",
+          "Gérez le stress"
+        ]
+      }
+    },
+    "ISTJ": {
+      "name": "Logisticien",
+      "nickname": "Réaliste",
+      "description": "Personnes pratiques et centrées sur les faits, dont le sérieux ne peut être mis en doute.",
+      "summary": "Responsable et ordonné.",
+      "traits": {
+        "keywords": ["Pratique", "Centré sur les faits"],
+        "strengths": ["Honnête", "Universel"],
+        "weaknesses": ["Têtu", "Insensible"]
+      },
+      "career": {
+        "suitable": ["Comptable", "Militaire"],
+        "avoid": ["Artiste"]
+      },
+      "growth": {
+        "challenges": [
+          "Adaptation au changement",
+          "Communication émotionnelle",
+          "Flexibilité",
+          "Créativité"
+        ],
+        "tips": [
+          "Acceptez le changement",
+          "Augmentez l'expression émotionnelle",
+          "Développez la flexibilité",
+          "Gestion du stress"
+        ]
+      }
+    },
+    "ISTP": {
+      "name": "Virtuose",
+      "nickname": "Technicien",
+      "description": "Expérimentateurs audacieux et pratiques, maîtres de toutes sortes d'outils.",
+      "summary": "Audacieux et pratique.",
+      "traits": {
+        "keywords": ["Audacieux", "Pratique"],
+        "strengths": ["Optimiste", "Créatif"],
+        "weaknesses": ["Têtu", "S'ennuie vite"]
+      },
+      "career": {
+        "suitable": ["Ingénieur", "Mécanicien"],
+        "avoid": ["Réceptionniste"]
+      },
+      "growth": {
+        "challenges": [
+          "Communication émotionnelle",
+          "Compétences sociales",
+          "Planification à long terme",
+          "Apprentissage théorique"
+        ],
+        "tips": [
+          "Augmentez l'expression émotionnelle",
+          "Développez des compétences sociales",
+          "Faites des plans à long terme",
+          "Communiquez davantage"
+        ]
+      }
+    }
+  },
+  "career": {
+    "types": {
+      "realistic": {
+        "traits": [
+          "Honnête et authentique",
+          "Pratique et réaliste",
+          "Habile avec les outils",
+          "Indépendante"
+        ],
+        "careerSuggestions": [
+          "Ingénieur Mécanique",
+          "Électricienne",
+          "Chef",
+          "Technicien automobile",
+          "Vétérinaire",
+          "Architecte paysagiste",
+          "Pilote"
+        ],
+        "name": "Type réaliste",
+        "alias": "praticienne",
+        "description": "Vous préférez le travail pratique et pratique et aimez utiliser des outils et des machines pour construire ou réparer des objets. J'aime les activités manuelles où des résultats concrets sont visibles.",
+        "workEnvironment": "Environnements pratiques et réels tels que des ateliers, des chantiers de construction, des laboratoires ou à l'extérieur. Nous excellons lorsque nous travaillons avec des outils, des machines et des projets concrets."
+      },
+      "investigative": {
+        "traits": [
+          "Analytique et logique",
+          "Intellectuellement curieux",
+          "Précise",
+          "Penseur indépendant"
+        ],
+        "careerSuggestions": [
+          "Développeur de logiciels",
+          "Analyste de données",
+          "Chercheur scientifique",
+          "Médecin",
+          "Économiste",
+          "Psychologue",
+          "Pharmacienne"
+        ],
+        "name": "Type exploratoire",
+        "alias": "notionnaliste",
+        "description": "Vous aimez analyser les problèmes, rechercher et travailler avec des idées. J'aime les défis intellectuels et j'aime comprendre les principes de fonctionnement des choses.",
+        "workEnvironment": "Installation de recherche, laboratoire, bibliothèque ou environnement universitaire. Ils préfèrent un environnement où ils peuvent se livrer à des activités intellectuelles calmes avec un minimum de perturbations."
+      },
+      "artistic": {
+        "traits": [
+          "Créatif et original",
+          "Esprit Libre",
+          "Expressive",
+          "Non conventionnel"
+        ],
+        "careerSuggestions": [
+          "Graphiste",
+          "Écrivaine",
+          "Marketing créatif",
+          "Architecte",
+          "Musicienne",
+          "Actrice",
+          "Couturier"
+        ],
+        "name": "type d'art",
+        "alias": "créatrice",
+        "description": "Vous êtes créatif et expressif et aimez jouer avec les idées, les couleurs, le langage ou les formes. J'apprécie l'originalité et j'apprécie un environnement où l'expression créative est possible.",
+        "workEnvironment": "Studio de création, théâtre, galerie ou espace de travail flexible. Vous avez besoin de liberté pour être créatif à votre rythme."
+      },
+      "social": {
+        "traits": ["Empathique", "Coopérative", "Amicale", "Bon communicateur"],
+        "careerSuggestions": [
+          "Professeure",
+          "Conseillère",
+          "Travailleur social",
+          "Infirmière",
+          "Spécialiste des ressources humaines",
+          "Coach/Formateur",
+          "Physiothérapeute"
+        ],
+        "name": "type social",
+        "alias": "aide",
+        "description": "Vous aimez aider, enseigner et travailler avec les gens. Je suis attiré par les activités qui prennent soin des autres et ont un impact positif sur leur vie.",
+        "workEnvironment": "École, hôpital, centre communautaire ou bureau de conseil. Vous excellez dans un environnement où vous pouvez vous concentrer sur l’aide et la communication avec les gens."
+      },
+      "enterprising": {
+        "traits": ["Ambitieuse", "Confiante", "Persuasive", "Énergique"],
+        "careerSuggestions": [
+          "Directeur des ventes",
+          "Dirigeant d'entreprise",
+          "Avocate",
+          "Entrepreneuse",
+          "Responsable marketing",
+          "Agent immobilier",
+          "Chef de projet"
+        ],
+        "name": "Type entreprenant",
+        "alias": "persuader",
+        "description": "Vous aimez diriger, persuader et organiser les autres pour atteindre leurs objectifs. Vous appréciez un environnement compétitif et savez prendre des risques et prendre des décisions.",
+        "workEnvironment": "Bureau d'affaires, surface de vente ou poste de direction. Démarquez-vous dans un environnement compétitif et axé sur les résultats."
+      },
+      "conventional": {
+        "traits": ["Souci du détail", "Organisée", "Responsable", "Efficace"],
+        "careerSuggestions": [
+          "Comptable",
+          "Saisie de données",
+          "adjointe administrative",
+          "Plaque de banc",
+          "Préparateur de déclarations de revenus",
+          "Bibliothécaire",
+          "Souscripteur d'assurance"
+        ],
+        "name": "type habituel",
+        "alias": "organisatrice",
+        "description": "Vous préférez un environnement de travail structuré et ordonné avec des procédures claires. Excellent pour organiser les données, gérer les détails et suivre les systèmes établis.",
+        "workEnvironment": "Bureau, banque, agence gouvernementale ou organisation organisée. Préférez les environnements avec des hiérarchies claires et une prévisibilité."
+      }
+    },
+    "questions": [
+      {
+        "id": "1",
+        "text": "J'aime travailler avec des outils et des machines",
+        "type": "réaliste",
+        "weight": 3
+      },
+      {
+        "id": "2",
+        "text": "Je préfère le travail pratique aux discussions théoriques",
+        "type": "réaliste",
+        "weight": 3
+      },
+      {
+        "id": "3",
+        "text": "J'aime voir des résultats tangibles de mon travail",
+        "type": "réaliste",
+        "weight": 2
+      },
+      {
+        "id": "4",
+        "text": "J'aime construire, réparer ou réparer des choses",
+        "type": "réaliste",
+        "weight": 3
+      },
+      {
+        "id": "5",
+        "text": "Je préfère travailler en extérieur ou en atelier",
+        "type": "réaliste",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "text": "J'aime résoudre des problèmes complexes par la recherche et l'analyse",
+        "type": "enquête",
+        "weight": 3
+      },
+      {
+        "id": "7",
+        "text": "J'aime comprendre comment les choses fonctionnent à un niveau profond",
+        "type": "enquête",
+        "weight": 3
+      },
+      {
+        "id": "8",
+        "text": "Je préfère travailler de manière indépendante sur des défis intellectuels",
+        "type": "enquête",
+        "weight": 2
+      },
+      {
+        "id": "9",
+        "text": "J'aime collecter et analyser des données",
+        "type": "enquête",
+        "weight": 3
+      },
+      {
+        "id": "10",
+        "text": "J'aime expérimenter et tester de nouvelles théories",
+        "type": "enquête",
+        "weight": 2
+      },
+      {
+        "id": "11",
+        "text": "J'aime m'exprimer de manière créative",
+        "type": "artistique",
+        "weight": 3
+      },
+      {
+        "id": "12",
+        "text": "Je préfère les environnements de travail flexibles sans règles strictes",
+        "type": "artistique",
+        "weight": 2
+      },
+      {
+        "id": "13",
+        "text": "J'aime travailler avec des couleurs, des designs ou des concepts créatifs",
+        "type": "artistique",
+        "weight": 3
+      },
+      {
+        "id": "14",
+        "text": "J'apprécie l'originalité et l'innovation dans mon travail",
+        "type": "artistique",
+        "weight": 3
+      },
+      {
+        "id": "15",
+        "text": "J'apprécie les projets qui permettent une interprétation créative",
+        "type": "artistique",
+        "weight": 2
+      },
+      {
+        "id": "16",
+        "text": "J'aime aider les autres à résoudre leurs problèmes",
+        "type": "sociale",
+        "weight": 3
+      },
+      {
+        "id": "17",
+        "text": "J'aime travailler en équipe et dans des environnements collaboratifs",
+        "type": "sociale",
+        "weight": 2
+      },
+      {
+        "id": "18",
+        "text": "Je m'épanouis en enseignant ou en encadrant les autres",
+        "type": "sociale",
+        "weight": 3
+      },
+      {
+        "id": "19",
+        "text": "Je préfère le travail axé sur les personnes au travail axé sur les tâches",
+        "type": "sociale",
+        "weight": 3
+      },
+      {
+        "id": "20",
+        "text": "J'aime avoir un impact positif sur les autres",
+        "type": "sociale",
+        "weight": 2
+      },
+      {
+        "id": "21",
+        "text": "J'aime diriger des projets et manager des équipes",
+        "type": "entreprenante",
+        "weight": 3
+      },
+      {
+        "id": "22",
+        "text": "J'aime les environnements compétitifs et axés sur les résultats",
+        "type": "entreprenante",
+        "weight": 2
+      },
+      {
+        "id": "23",
+        "text": "J'aime persuader les autres et influencer les décisions",
+        "type": "entreprenante",
+        "weight": 3
+      },
+      {
+        "id": "24",
+        "text": "J'aime prendre des risques calculés pour atteindre mes objectifs",
+        "type": "entreprenante",
+        "weight": 3
+      },
+      {
+        "id": "25",
+        "text": "Je préfère les environnements où je peux progresser rapidement",
+        "type": "entreprenante",
+        "weight": 2
+      },
+      {
+        "id": "26",
+        "text": "Je préfère les environnements de travail structurés et organisés",
+        "type": "conventionnelle",
+        "weight": 3
+      },
+      {
+        "id": "27",
+        "text": "J'aime travailler avec des données, des chiffres et des informations détaillées",
+        "type": "conventionnelle",
+        "weight": 2
+      },
+      {
+        "id": "28",
+        "text": "J'aime suivre les procédures et directives établies",
+        "type": "conventionnelle",
+        "weight": 3
+      },
+      {
+        "id": "29",
+        "text": "Je préfère les routines de travail prévisibles et les attentes claires",
+        "type": "conventionnelle",
+        "weight": 3
+      },
+      {
+        "id": "30",
+        "text": "J'excelle dans l'organisation et la gestion des tâches administratives",
+        "type": "conventionnelle",
+        "weight": 2
+      }
+    ],
+    "suitable": ["Enseignant", "Travailleur social"],
+    "avoid": ["Administrateur système"]
+  },
+  "learning": {
+    "types": {
+      "INTJ": {
+        "strengths": [
+          "Étude indépendante",
+          "Notions complexes",
+          "Planification à long terme",
+          "Analyse logique"
+        ],
+        "challenges": [
+          "Répétition ennuyeuse",
+          "Mémorisation par cœur",
+          "Travail de groupe",
+          "Tâches spontanées"
+        ],
+        "studyMethods": [
+          "Cartographie conceptuelle",
+          "Lecture et recherche",
+          "Cours en ligne",
+          "Objectif résolution de problèmes"
+        ],
+        "recommendedTools": ["Notion", "Obsidienne", "Anki", "Académie Khan"],
+        "examStrategies": [
+          "Analyser les modèles passés",
+          "Connecter les concepts",
+          "Créer des questions pratiques"
+        ],
+        "motivationTips": [
+          "Fixez-vous des objectifs clairs",
+          "Comprendre la situation dans son ensemble",
+          "Trouver des applications pratiques"
+        ],
+        "name": "Un stratège astucieux",
+        "emoji": "🎉",
+        "description": "Nous préférons un apprentissage systématique et indépendant et recherchons une compréhension approfondie.",
+        "optimalEnvironment": "Espace calme et privé sans distractions",
+        "timeManagement": "Exécuter des plans systématiques et à long terme",
+        "idealGroupSize": "Seul ou 1-2 personnes",
+        "concentrationPeak": "heure du dîner"
+      },
+      "INTP": {
+        "strengths": [
+          "Pensée logique",
+          "Résolution créative de problèmes",
+          "Compréhension des concepts",
+          "Recherche indépendante"
+        ],
+        "challenges": [
+          "Respect des délais",
+          "Suivre les plans",
+          "Mémorisation",
+          "Routines régulières"
+        ],
+        "studyMethods": [
+          "Exploration théorique",
+          "Expériences",
+          "Discussions en ligne",
+          "Comparer les sources"
+        ],
+        "recommendedTools": [
+          "Wikipédia",
+          "Reddit",
+          "Échange de pile",
+          "Conférences YouTube"
+        ],
+        "examStrategies": [
+          "Comprendre les principes",
+          "Étudier plusieurs approches",
+          "Utiliser un raisonnement logique"
+        ],
+        "motivationTips": [
+          "Trouver des sujets intéressants",
+          "Conserver la liberté",
+          "Permettre la créativité"
+        ],
+        "name": "un penseur logique",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant qui possède une forte curiosité intellectuelle et valorise la compréhension théorique.",
+        "optimalEnvironment": "Un espace calme avec une ambiance libre",
+        "timeManagement": "Des délais flexibles mais clairs",
+        "idealGroupSize": "Préférence pour apprendre seul",
+        "concentrationPeak": "tard dans la nuit"
+      },
+      "ENTJ": {
+        "strengths": [
+          "Apprentissage rapide",
+          "Direction",
+          "Atteinte des objectifs",
+          "Organisation"
+        ],
+        "challenges": [
+          "Perfectionnisme",
+          "Détails manquants",
+          "Contenu émotionnel",
+          "Apprenants lents"
+        ],
+        "studyMethods": [
+          "Diriger des groupes d’étude",
+          "Résumer les points clés",
+          "Mémorisation efficace",
+          "Présentations"
+        ],
+        "recommendedTools": ["Notion", "Trello", "Evernote", "PowerPoint"],
+        "examStrategies": [
+          "Gestion du temps",
+          "Concentrez-vous sur l'essentiel",
+          "Pratique répétée"
+        ],
+        "motivationTips": [
+          "Des objectifs clairs",
+          "Concours",
+          "Rôles de leadership"
+        ],
+        "name": "un leader audacieux",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant motivé, axé sur les objectifs et valorisant l'efficacité.",
+        "optimalEnvironment": "Un espace de type bureau bien organisé",
+        "timeManagement": "Planification minutieuse du temps et priorisation",
+        "idealGroupSize": "3-5 personnes",
+        "concentrationPeak": "heure du matin"
+      },
+      "ENTP": {
+        "strengths": [
+          "Pensée créative",
+          "Compréhension rapide",
+          "Compétences en matière de débat",
+          "Essayer de nouvelles méthodes"
+        ],
+        "challenges": [
+          "Apprentissage courant",
+          "Mémorisation",
+          "Respect des délais",
+          "Répétition simple"
+        ],
+        "studyMethods": [
+          "Discussions et débats",
+          "Ressources diverses",
+          "Basé sur un projet",
+          "Approche expérimentale"
+        ],
+        "recommendedTools": [
+          "Plateformes de débat",
+          "Conférences TED",
+          "Coursera",
+          "Outils de cartographie mentale"
+        ],
+        "examStrategies": [
+          "Des réponses créatives",
+          "Perspectives multiples",
+          "Focus de dernière minute"
+        ],
+        "motivationTips": [
+          "De nouveaux défis",
+          "Opportunités de débat",
+          "Style d'apprentissage gratuit"
+        ],
+        "name": "Un débatteur qui aime les débats houleux",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant créatif qui aime essayer de nouvelles choses et apprendre par le biais de discussions.",
+        "optimalEnvironment": "Un espace libre et vivant",
+        "timeManagement": "Utilisez votre concentration lorsque les échéances sont imminentes",
+        "idealGroupSize": "Groupe de discussion de 3-4 personnes",
+        "concentrationPeak": "entre l'après-midi et le soir"
+      },
+      "INFJ": {
+        "strengths": [
+          "Compréhension profonde",
+          "Reconnaissance de formes",
+          "Expression créative",
+          "Mémoire à long terme"
+        ],
+        "challenges": [
+          "Mémorisation superficielle",
+          "Pression temporelle",
+          "Environnement compétitif",
+          "Évaluation critique"
+        ],
+        "studyMethods": [
+          "Journalisation",
+          "Concepts de connexion",
+          "Visualisation",
+          "Raconter des histoires"
+        ],
+        "recommendedTools": [
+          "Notion",
+          "Notes de lecture",
+          "Espace de tête",
+          "Agenda"
+        ],
+        "examStrategies": [
+          "Comprendre la situation dans son ensemble",
+          "Des liens significatifs",
+          "Mémoire émotionnelle"
+        ],
+        "motivationTips": [
+          "Trouver du sens",
+          "Connectez-vous à vos objectifs personnels",
+          "Environnement inspirant"
+        ],
+        "name": "un défenseur bien intentionné",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant perspicace qui poursuit un apprentissage profond et significatif.",
+        "optimalEnvironment": "Un espace calme et inspirant",
+        "timeManagement": "Planifiez tranquillement pour minimiser le stress",
+        "idealGroupSize": "Seul ou en petit groupe d'élites",
+        "concentrationPeak": "tôt le matin ou tard le soir"
+      },
+      "INFP": {
+        "strengths": [
+          "Écriture créative",
+          "Compréhension émotionnelle",
+          "Apprentissage indépendant",
+          "Expression artistique"
+        ],
+        "challenges": [
+          "Des règles strictes",
+          "Commentaires critiques",
+          "Des délais rapides",
+          "Concours"
+        ],
+        "studyMethods": [
+          "Notes de forme libre",
+          "Projets créatifs",
+          "En lisant",
+          "Accompagnement musical"
+        ],
+        "recommendedTools": [
+          "Bonnes notes",
+          "Stylos de couleur",
+          "Spotify",
+          "Applications de lecture"
+        ],
+        "examStrategies": [
+          "Développer sa propre méthode",
+          "Connexion émotionnelle",
+          "Esprit détendu"
+        ],
+        "motivationTips": [
+          "Signification personnelle",
+          "Libre expression",
+          "Commentaires positifs"
+        ],
+        "name": "un médiateur passionné",
+        "emoji": "🎉",
+        "description": "Les apprenants qui préfèrent apprendre de manière créative et axée sur les valeurs",
+        "optimalEnvironment": "Un espace confortable, personnalisé et inspirant",
+        "timeManagement": "Une planification flexible qui n'étouffe pas la créativité",
+        "idealGroupSize": "Préférence pour apprendre seul",
+        "concentrationPeak": "Fluide mais concentré une fois immergé"
+      },
+      "ENFJ": {
+        "strengths": [
+          "Apprentissage collaboratif",
+          "Communication",
+          "Comprendre les autres",
+          "Motivation"
+        ],
+        "challenges": [
+          "Apprentissage en solo",
+          "Sujets impersonnels",
+          "Concours",
+          "Analyse critique"
+        ],
+        "studyMethods": [
+          "Groupes d'étude",
+          "Enseignement par les pairs",
+          "Discussions",
+          "Jeu de rôle"
+        ],
+        "recommendedTools": [
+          "Zoom",
+          "Discorde",
+          "Google Documents",
+          "Outils collaboratifs"
+        ],
+        "examStrategies": [
+          "Etude de groupe",
+          "Apprenez-vous les uns les autres",
+          "Mémoire émotionnelle"
+        ],
+        "motivationTips": [
+          "Apprendre ensemble",
+          "Aidez les autres",
+          "Ambiance positive"
+        ],
+        "name": "juste un activiste social",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant collaboratif qui aime grandir et apprendre avec les autres.",
+        "optimalEnvironment": "Un espace chaleureux et interactif",
+        "timeManagement": "Une planification harmonieuse adaptée aux horaires de groupe",
+        "idealGroupSize": "Groupe d'étude d'environ 4 à 6 personnes",
+        "concentrationPeak": "entre le matin et l'après-midi"
+      },
+      "ENFP": {
+        "strengths": [
+          "Créativité",
+          "Enthousiasme",
+          "Des intérêts divers",
+          "Connexions rapides"
+        ],
+        "challenges": [
+          "Rester concentré",
+          "Détails",
+          "Routines",
+          "Des projets à long terme"
+        ],
+        "studyMethods": [
+          "Des matériaux divers",
+          "Apprentissage gamifié",
+          "Activités de groupe",
+          "Approche expérimentale"
+        ],
+        "recommendedTools": [
+          "Quizlet",
+          "Kahoot",
+          "YouTube",
+          "Instagram éducatif"
+        ],
+        "examStrategies": [
+          "Trouver des connexions intéressantes",
+          "Essayez différentes méthodes",
+          "Approche ludique"
+        ],
+        "motivationTips": [
+          "Nouvelle stimulation",
+          "Des méthodes ludiques",
+          "Louange et encouragement"
+        ],
+        "name": "un activiste plein d'esprit",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant passionné avec beaucoup d'énergie et une curiosité diversifiée.",
+        "optimalEnvironment": "Un espace vivant et stimulant",
+        "timeManagement": "Plusieurs séances courtes et ciblées",
+        "idealGroupSize": "avec diverses personnes",
+        "concentrationPeak": "Cela dépend de votre humeur"
+      },
+      "ISTJ": {
+        "strengths": [
+          "Diligence",
+          "Mémorisation",
+          "Organisation",
+          "Exécution du plan"
+        ],
+        "challenges": [
+          "Concepts abstraits",
+          "Improvisation",
+          "Tâches créatives",
+          "Des instructions peu claires"
+        ],
+        "studyMethods": [
+          "Lecture de manuels",
+          "Mémorisation répétée",
+          "Notes systématiques",
+          "Articles antérieurs"
+        ],
+        "recommendedTools": [
+          "Notes traditionnelles",
+          "Exceller",
+          "Manuels PDF",
+          "Programmer des applications"
+        ],
+        "examStrategies": [
+          "Une préparation minutieuse",
+          "Apprentissage répété",
+          "Chronométrage",
+          "Solide compréhension"
+        ],
+        "motivationTips": [
+          "Des objectifs clairs",
+          "Plans systématiques",
+          "Réalisation"
+        ],
+        "name": "Un logicien intègre",
+        "emoji": "🎉",
+        "description": "Rigoureux et responsable, préfère les méthodes d'apprentissage traditionnelles",
+        "optimalEnvironment": "Espace statique et bien organisé",
+        "timeManagement": "Apprendre selon un horaire régulier",
+        "idealGroupSize": "Seul ou à 2 personnes",
+        "concentrationPeak": "heure du matin"
+      },
+      "ISFJ": {
+        "strengths": [
+          "Souci du détail",
+          "Patience",
+          "Mémoire",
+          "Responsabilité"
+        ],
+        "challenges": [
+          "Théorie abstraite",
+          "Pensée critique",
+          "Changement rapide",
+          "Concours"
+        ],
+        "studyMethods": [
+          "Prise de notes minutieuse",
+          "Pratique répétée",
+          "Exemples pratiques",
+          "Pas à pas"
+        ],
+        "recommendedTools": [
+          "Stylos de couleur",
+          "Listes de contrôle",
+          "Planificatrices",
+          "Manuels traditionnels"
+        ],
+        "examStrategies": [
+          "Examen suffisant",
+          "Vérifier les détails",
+          "Maintenir la stabilité"
+        ],
+        "motivationTips": [
+          "Environnement stable",
+          "Éloge et reconnaissance",
+          "Valeur pratique"
+        ],
+        "name": "courageux gardien",
+        "emoji": "🎉",
+        "description": "C'est un apprenant stable, méticuleux, doté d'un fort sens des responsabilités et qui apprend sereinement.",
+        "optimalEnvironment": "Un espace stable, familier et calme",
+        "timeManagement": "Un plan tranquille pour réduire l’anxiété",
+        "idealGroupSize": "un ou deux amis proches",
+        "concentrationPeak": "heure du matin"
+      },
+      "ESTJ": {
+        "strengths": ["Organisation", "Exécution", "Direction", "Efficacité"],
+        "challenges": [
+          "Théorie abstraite",
+          "Contenu émotionnel",
+          "Rythme lent",
+          "Flexibilité"
+        ],
+        "studyMethods": [
+          "Résumer",
+          "Cartes mémoire",
+          "Articles antérieurs",
+          "Groupes d'étude de premier plan"
+        ],
+        "recommendedTools": [
+          "Exceller",
+          "PowerPoint",
+          "Planificatrices",
+          "Minuteries"
+        ],
+        "examStrategies": [
+          "Une gestion stricte du temps",
+          "Concentrez-vous sur l'essentiel",
+          "Pratique répétée"
+        ],
+        "motivationTips": [
+          "Des objectifs clairs",
+          "Résultats visibles",
+          "Rôle de leadership"
+        ],
+        "name": "gestionnaire strict",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant pratique qui valorise l'efficacité et les résultats et pratique systématiquement.",
+        "optimalEnvironment": "Espace bien divisé et organisé",
+        "timeManagement": "Planification systématique et mise en œuvre minutieuse",
+        "idealGroupSize": "Groupe efficace de 3-4 personnes",
+        "concentrationPeak": "heure du matin"
+      },
+      "ESFJ": {
+        "strengths": [
+          "Coopération",
+          "Responsabilité",
+          "Praticité",
+          "Communication"
+        ],
+        "challenges": [
+          "Apprentissage en solo",
+          "Théorie abstraite",
+          "Critique",
+          "Concours"
+        ],
+        "studyMethods": [
+          "Etude de groupe",
+          "Testez-vous les uns les autres",
+          "Exemples concrets",
+          "Jeu de rôle"
+        ],
+        "recommendedTools": [
+          "Groupes d'étude par chat",
+          "Zoom",
+          "Notes partagées",
+          "Stylos de couleur"
+        ],
+        "examStrategies": [
+          "Étudier ensemble",
+          "Encouragement mutuel",
+          "Compréhension pratique"
+        ],
+        "motivationTips": ["Ambiance sociale", "Aidez les autres", "Louer"],
+        "name": "un diplomate sociable",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant coopératif qui aime apprendre en harmonie avec ceux qui m'entourent.",
+        "optimalEnvironment": "Un espace chaleureux et interactif",
+        "timeManagement": "Un plan qui comprend des promesses aux gens autour de vous",
+        "idealGroupSize": "Un groupe animé de 4 à 6 personnes",
+        "concentrationPeak": "entre le matin et l'après-midi"
+      },
+      "ISTP": {
+        "strengths": [
+          "Résolution de problèmes",
+          "Pensée logique",
+          "Compétences pratiques",
+          "Réponse rapide"
+        ],
+        "challenges": [
+          "Apprentissage théorique",
+          "Planification à long terme",
+          "Mémorisation",
+          "Contenu émotionnel"
+        ],
+        "studyMethods": [
+          "Pratique pratique",
+          "Apprentissage vidéo",
+          "Expérience directe",
+          "Résolution de problèmes"
+        ],
+        "recommendedTools": [
+          "Pratique YouTube",
+          "Académie Khan",
+          "Simulation",
+          "Outils pratiques"
+        ],
+        "examStrategies": [
+          "Problèmes pratiques",
+          "Approche logique",
+          "Utilisation efficace du temps"
+        ],
+        "motivationTips": ["Valeur pratique", "Méthodes gratuites", "Défis"],
+        "name": "touche-à-tout",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant qui cherche à résoudre des problèmes et qui préfère l'apprentissage pratique et concret.",
+        "optimalEnvironment": "Espace libre pour la pratique",
+        "timeManagement": "Ajustements flexibles selon les besoins",
+        "idealGroupSize": "Seul ou en petit groupe",
+        "concentrationPeak": "entre l'après-midi et le soir"
+      },
+      "ISFP": {
+        "strengths": [
+          "Créativité",
+          "Sensibilité",
+          "Compétences pratiques",
+          "Flexibilité"
+        ],
+        "challenges": [
+          "Des règles strictes",
+          "Concours",
+          "Critique",
+          "Planification à long terme"
+        ],
+        "studyMethods": [
+          "Apprentissage visuel",
+          "Pratique",
+          "Avec de la musique",
+          "Forme libre"
+        ],
+        "recommendedTools": [
+          "iPad",
+          "En attente d'une synthèse approfondie...",
+          "Pinterest",
+          "YouTube"
+        ],
+        "examStrategies": [
+          "État d'esprit confortable",
+          "Mémoire visuelle",
+          "Méthode personnelle"
+        ],
+        "motivationTips": [
+          "Environnement gratuit",
+          "Commentaires positifs",
+          "Expression créative"
+        ],
+        "name": "un artiste curieux",
+        "emoji": "🎉",
+        "description": "C'est un apprenant très sensible qui aime apprendre à son rythme.",
+        "optimalEnvironment": "Un espace confortable et magnifique",
+        "timeManagement": "Plan flexible adapté à votre situation",
+        "idealGroupSize": "Préférence pour apprendre seul",
+        "concentrationPeak": "Moment de détente pour soi"
+      },
+      "ESTP": {
+        "strengths": [
+          "Apprentissage rapide",
+          "Compétences pratiques",
+          "Adaptabilité",
+          "Résolution de problèmes"
+        ],
+        "challenges": [
+          "Apprentissage théorique",
+          "Mémorisation",
+          "Mise au point longue",
+          "Planification"
+        ],
+        "studyMethods": [
+          "Pratique pratique",
+          "Activités de groupe",
+          "Concours",
+          "Apprentissage expérientiel"
+        ],
+        "recommendedTools": [
+          "Applications gamifiées",
+          "Outils pratiques",
+          "Apprentissage de la réalité virtuelle",
+          "Analogies sportives"
+        ],
+        "examStrategies": [
+          "Tests pratiques",
+          "Utilisez une réflexion rapide",
+          "Mise au point courte"
+        ],
+        "motivationTips": [
+          "Compétition et défis",
+          "Valeur pratique",
+          "Commentaires immédiats"
+        ],
+        "name": "un homme d'affaires aventureux",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant qui aime apprendre à travers des expériences actives et réalistes.",
+        "optimalEnvironment": "Un espace actif et pratique",
+        "timeManagement": "Plan d'immersion à court terme avant la date limite",
+        "idealGroupSize": "Groupe actif de 3 à 5 personnes",
+        "concentrationPeak": "entre le matin et l'après-midi"
+      },
+      "ESFP": {
+        "strengths": [
+          "Sociabilité",
+          "Enthousiasme",
+          "Compétences pratiques",
+          "Ambiance amusante"
+        ],
+        "challenges": [
+          "Apprentissage en solo",
+          "Théorie",
+          "Se concentrer",
+          "Planification à long terme"
+        ],
+        "studyMethods": [
+          "Activités de groupe",
+          "Jeux",
+          "Jeu de rôle",
+          "Avec de la musique"
+        ],
+        "recommendedTools": [
+          "Kahoot",
+          "Applications sociales",
+          "Éducation TikTok",
+          "Étudier avec des amis"
+        ],
+        "examStrategies": [
+          "Approche ludique",
+          "Revue de groupe",
+          "Esprit positif"
+        ],
+        "motivationTips": [
+          "Des méthodes ludiques",
+          "Avec des amis",
+          "Louanges et récompenses"
+        ],
+        "name": "célébrité à l'esprit libre",
+        "emoji": "🎉",
+        "description": "Je suis un apprenant qui recherche le plaisir et préfère apprendre en étant entouré de gens.",
+        "optimalEnvironment": "Un espace lumineux, vibrant et stimulant",
+        "timeManagement": "Plusieurs séances d'apprentissage courtes et agréables",
+        "idealGroupSize": "Grands groupes de 4 à 8 personnes",
+        "concentrationPeak": "jour"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "Lorsque vous apprenez une nouvelle matière, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Étudier tranquillement seul avec des manuels",
+            "preference": "I"
+          },
+          {
+            "text": "Discutez et étudiez avec des amis",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Comment vous souvenez-vous du matériel d’étude ?",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Mémoriser des faits et des détails spécifiques",
+            "preference": "S"
+          },
+          {
+            "text": "Saisir les concepts et les modèles globaux",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Votre approche pour résoudre les problèmes :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Trouvez des réponses grâce à une analyse logique",
+            "preference": "T"
+          },
+          {
+            "text": "Aborder avec intuition et ressenti",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Comment se prépare-t-on aux examens ?",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Élaborez des plans systématiques et préparez-vous tôt",
+            "preference": "J"
+          },
+          {
+            "text": "Restez flexible et concentré en cas de besoin",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Activité de classe préférée :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Missions individuelles ou projets indépendants",
+            "preference": "I"
+          },
+          {
+            "text": "Discussions de groupe ou projets d’équipe",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Lors de la compréhension de concepts complexes :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Besoin d'explications étape par étape et d'exemples réels",
+            "preference": "S"
+          },
+          {
+            "text": "Regardez d’abord les théories abstraites et la situation dans son ensemble",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Votre rôle dans les équipes projet :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Poursuivre l’analyse objective et l’efficacité",
+            "preference": "T"
+          },
+          {
+            "text": "Valoriser l'harmonie de l'équipe et l'avis de chacun",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Lorsque la date limite de mission approche :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Progresser régulièrement selon le plan",
+            "preference": "J"
+          },
+          {
+            "text": "La pression des délais stimule la concentration",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Environnement d'étude préféré :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Bibliothèque calme ou espace personnel",
+            "preference": "I"
+          },
+          {
+            "text": "Lieux animés comme les cafés ou les cafés d'étude",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Type de question d'examen préféré :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Choix multiples factuels ou réponse courte",
+            "preference": "S"
+          },
+          {
+            "text": "Questions à développement nécessitant une réflexion créative",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Lorsque les notes ne sont pas bonnes, vous :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Analyser objectivement les causes et améliorer",
+            "preference": "T"
+          },
+          {
+            "text": "Accepter émotionnellement et trouver la motivation",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Lors de l’élaboration de plans d’études :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Définir clairement le calendrier et les objectifs détaillés",
+            "preference": "J"
+          },
+          {
+            "text": "Définir une direction approximative et ajuster avec flexibilité",
+            "preference": "P"
+          }
+        ]
+      }
+    ]
+  },
+  "travel": {
+    "types": {
+      "INTJ": {
+        "preferences": [
+          "Sites culturels",
+          "Musées",
+          "Lieux historiques",
+          "Architecture"
+        ],
+        "avoidances": [
+          "Des endroits bondés",
+          "Projets spontanés",
+          "Visites de groupe",
+          "Ambiance de fête"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "Kyongju",
+            "Village Hanok de Jeonju",
+            "Andong",
+            "Jeju Est"
+          ],
+          "international": ["Kyoto", "Rome", "Prague", "Istanbul"]
+        },
+        "activities": [
+          "Visites historiques",
+          "L'architecture s'exécute",
+          "En lisant",
+          "Photographie"
+        ],
+        "companionCompatibility": {
+          "best": ["ENFP", "ENTP", "INFP"],
+          "good": ["INTJ", "INTP", "ENTJ"],
+          "challenging": ["ESFP", "ESTP", "ESFJ"]
+        },
+        "name": "un explorateur courageux",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur indépendant qui recherche une planification minutieuse et une efficacité optimale.",
+        "planningStyle": "Itinéraire détaillé incluant le plan B",
+        "budgetApproach": "Allouez stratégiquement le budget là où cela compte",
+        "accommodation": "Espace privé calme et confortable",
+        "packingStyle": "Emballage systématique et minimal",
+        "foodExploration": "Recherchez et visitez des plats locaux plutôt que des restaurants célèbres"
+      },
+      "INTP": {
+        "preferences": [
+          "Des lieux uniques",
+          "Musées scientifiques",
+          "Joyaux cachés",
+          "Culture locale"
+        ],
+        "avoidances": [
+          "Horaires fixes",
+          "Pièges à touristes",
+          "Focus sur les achats",
+          "Lieux bruyants"
+        ],
+        "idealDestinations": {
+          "domestic": ["Jeunesse laineuse", "Gangneung", "Tongyeong", "Sokcho"],
+          "international": ["Islande", "Nouvelle-Zélande", "Suisse", "Norvège"]
+        },
+        "activities": [
+          "Exploration de la nature",
+          "Observation des étoiles",
+          "Contemplation",
+          "Cafés uniques"
+        ],
+        "companionCompatibility": {
+          "best": ["ENFJ", "ENTJ", "INFJ"],
+          "good": ["INTP", "INTJ", "ENTP"],
+          "challenging": ["ESTJ", "ESFJ", "ISFJ"]
+        },
+        "name": "explorateur curieux",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur libre à la recherche de ma propre expérience unique.",
+        "planningStyle": "Décidez uniquement de la grande direction et prenez des décisions impromptues sur place",
+        "budgetApproach": "Dépensez de manière flexible pour des expériences passionnantes",
+        "accommodation": "Espace indépendant et calme",
+        "packingStyle": "Restez simple et seulement l’essentiel",
+        "foodExploration": "Défi alimentaire local expérimental"
+      },
+      "ENTJ": {
+        "preferences": [
+          "Points de repère",
+          "Hôtels d'affaires",
+          "Gastronomie",
+          "Activités"
+        ],
+        "avoidances": [
+          "Voyages imprévus",
+          "Rythme lent",
+          "Des séjours inconfortables",
+          "Perdre du temps"
+        ],
+        "idealDestinations": {
+          "domestic": ["Séoul", "Pusan", "Jeju", "Incheon"],
+          "international": ["New York", "Singapour", "Dubaï", "Hong Kong"]
+        },
+        "activities": [
+          "Touristique",
+          "Golf",
+          "Visites œnologiques",
+          "Réunions d'affaires"
+        ],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENTJ", "INTJ", "ENTP"],
+          "challenging": ["ISFJ", "ESFJ", "ISFP"]
+        },
+        "name": "voyageur de type conquérant",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur axé sur les objectifs qui cherche à maximiser l'efficacité et l'expérience.",
+        "planningStyle": "Horaire serré pour maximiser votre expérience",
+        "budgetApproach": "Investissez hardiment dans des expériences premium",
+        "accommodation": "Hôtel de luxe avec des installations bien équipées",
+        "packingStyle": "Emballage efficace et pratique",
+        "foodExploration": "Visitez un restaurant du Guide Michelin"
+      },
+      "ENTP": {
+        "preferences": [
+          "Activités d'aventure",
+          "Marchés nocturnes",
+          "Interaction avec les locaux",
+          "Voyages spontanés"
+        ],
+        "avoidances": [
+          "Cours standards",
+          "Circuits de luxe",
+          "Repos tranquille",
+          "Horaires réguliers"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "Gangwon-do",
+            "Jeju Ouest",
+            "Campagne du Gyeongsang",
+            "Saut d'île en île"
+          ],
+          "international": [
+            "Asie du Sud-Est",
+            "Amérique du Sud",
+            "Europe de l'Est",
+            "Moyen-Orient"
+          ]
+        },
+        "activities": ["Surf", "Parachutisme", "Randonnée", "Fêtes locales"],
+        "companionCompatibility": {
+          "best": ["INFJ", "INTJ", "ISFJ"],
+          "good": ["ENTP", "ENFP", "ESTP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "innovateur aventureux",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur libre d'esprit qui aime les nouvelles expériences et les défis.",
+        "planningStyle": "Il suffit de dresser un tableau d’ensemble et de prendre des décisions sur place",
+        "budgetApproach": "Dépenses flexibles basées sur l'expérience",
+        "accommodation": "Maison d'hôtes, auberge",
+        "packingStyle": "Peu bon marché et d'origine locale",
+        "foodExploration": "Cuisine de rue et découverte des marchés locaux"
+      },
+      "INFJ": {
+        "preferences": [
+          "Lieux spirituels",
+          "Nature",
+          "Cafés tranquilles",
+          "Galeries d'art"
+        ],
+        "avoidances": [
+          "Culture de fête",
+          "Des endroits bondés",
+          "Bruit",
+          "Expériences superficielles"
+        ],
+        "idealDestinations": {
+          "domestic": ["Sentier Jeju Olle", "Boseong", "Namhae", "Damyang"],
+          "international": ["Bali", "Santorin", "Kyoto", "Bhoutan"]
+        },
+        "activities": ["Méditation", "Yoga", "Photographie", "Journalisation"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ENFP", "INTP"],
+          "good": ["INFJ", "INFP", "ENFJ"],
+          "challenging": ["ESTP", "ESFP", "ESTJ"]
+        },
+        "name": "âme pèlerine",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur émotionnel en quête de sens et d'inspiration.",
+        "planningStyle": "Itinéraire tranquille axé sur des lieux significatifs",
+        "budgetApproach": "Dépenses basées sur la valeur de l’expérience",
+        "accommodation": "espace paisible et magnifique",
+        "packingStyle": "Apportez des accessoires qui stimulent vos émotions",
+        "foodExploration": "Restaurants et cafés d'ambiance"
+      },
+      "INFP": {
+        "preferences": [
+          "Coins cachés",
+          "Villages tranquilles",
+          "Librairies",
+          "Boutiques indépendantes"
+        ],
+        "avoidances": [
+          "Itinéraires touristiques",
+          "Lieux bruyants",
+          "Horaires fixes",
+          "Activités de groupe"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "Gang d'escalade sur la plage",
+            "Tongyeong",
+            "Yeosu",
+            "Yeonju"
+          ],
+          "international": ["Paris", "Amsterdam", "Prague", "Édimbourg"]
+        },
+        "activities": ["Marche", "En lisant", "En écrivant", "Photographie"],
+        "companionCompatibility": {
+          "best": ["ENTJ", "ENFJ", "INTJ"],
+          "good": ["INFP", "INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ESFJ", "ISTJ"]
+        },
+        "name": "poète errant",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur romantique qui rêve et voyage librement.",
+        "planningStyle": "plan lâche pour la liberté",
+        "budgetApproach": "Dépensez pour des expériences significatives",
+        "accommodation": "Un espace unique et cosy",
+        "packingStyle": "Apportez des accessoires émotionnels",
+        "foodExploration": "Petit restaurant avec ambiance"
+      },
+      "ENFJ": {
+        "preferences": [
+          "Expériences locales",
+          "Cours de cuisine",
+          "Visites communautaires",
+          "Volontariat"
+        ],
+        "avoidances": [
+          "Solitude",
+          "Voyages tranquilles",
+          "Réservé aux touristes",
+          "Expériences superficielles"
+        ],
+        "idealDestinations": {
+          "domestic": ["Villages de Jeju", "Yeonju", "Pusan", "Sokcho"],
+          "international": ["Italie", "Espagne", "Mexique", "Thaïlande"]
+        },
+        "activities": [
+          "Rencontrer des locaux",
+          "Cours de cuisine",
+          "Échange culturel",
+          "Voyages de bénévoles"
+        ],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENFJ", "ENFP", "ESFJ"],
+          "challenging": ["ISTP", "ISTJ", "INTP"]
+        },
+        "name": "connecteur culturel",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur social qui apprend la culture à travers les relations.",
+        "planningStyle": "Une planification flexible et centrée sur les personnes",
+        "budgetApproach": "Investissez dans l’expérience et les gens",
+        "accommodation": "Maison d'hôtes, B&B",
+        "packingStyle": "Emballage pour cadeaux ou partage",
+        "foodExploration": "Restaurants fréquentés par les locaux"
+      },
+      "ENFP": {
+        "preferences": [
+          "Fêtes",
+          "Représentations",
+          "Marchés nocturnes",
+          "Événements locaux"
+        ],
+        "avoidances": [
+          "Horaires fixes",
+          "Voyages tranquilles",
+          "Seule",
+          "Routines"
+        ],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Pusan", "Gangneung", "Yeosu"],
+          "international": ["Barcelone", "Bangkok", "Rio de Janeiro", "Bali"]
+        },
+        "activities": [
+          "Fêtes",
+          "Fêtes",
+          "Surf",
+          "Rencontrer de nouvelles personnes"
+        ],
+        "companionCompatibility": {
+          "best": ["INTJ", "INFJ", "ISTJ"],
+          "good": ["ENFP", "ENTP", "ESFP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "explorateur gratuit",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur libre avec de nouvelles tentatives et passion.",
+        "planningStyle": "Voyages spontanés et gratuits",
+        "budgetApproach": "Dépensez avec audace pour des expériences agréables",
+        "accommodation": "Un hébergement à l'ambiance conviviale",
+        "packingStyle": "Prendre plus que ce dont vous avez besoin",
+        "foodExploration": "Endroit chaud sur Instagram"
+      },
+      "ISTJ": {
+        "preferences": [
+          "Lieux célèbres",
+          "Musées",
+          "Sites historiques",
+          "Des lieux sûrs"
+        ],
+        "avoidances": [
+          "Voyages spontanés",
+          "Lieux dangereux",
+          "Modifications du plan",
+          "Des séjours inconfortables"
+        ],
+        "idealDestinations": {
+          "domestic": ["Kyongju", "Yeonju", "Andong", "Suwon"],
+          "international": ["Japon", "Allemagne", "Suisse", "Canada"]
+        },
+        "activities": [
+          "Touristique",
+          "Photographie",
+          "Visites de musées",
+          "Expériences traditionnelles"
+        ],
+        "companionCompatibility": {
+          "best": ["ESFP", "ESTP", "ENFP"],
+          "good": ["ISTJ", "ESTJ", "ISFJ"],
+          "challenging": ["ENTP", "ENFP", "ESFP"]
+        },
+        "name": "voyageur de type planificateur",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur prudent qui se prépare minutieusement et respecte mon plan.",
+        "planningStyle": "Horaires détaillés et réservations à l'avance",
+        "budgetApproach": "Dépenses stables dans les limites du budget",
+        "accommodation": "Hôtel de chaîne vérifié",
+        "packingStyle": "Préparation minutieuse selon la checklist",
+        "foodExploration": "Restaurant réputé et éprouvé"
+      },
+      "ISFJ": {
+        "preferences": [
+          "Des lieux paisibles",
+          "Lieux familiaux",
+          "Des endroits sûrs",
+          "Repos confortable"
+        ],
+        "avoidances": ["Aventure", "Foules", "Inconfort", "Danger"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Sokcho", "Yeosu", "Kyongju"],
+          "international": ["Japon", "Taïwan", "Singapour", "Nouvelle-Zélande"]
+        },
+        "activities": ["Guérison", "Onsen", "Visites gastronomiques", "Achats"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ESTP", "ESFP"],
+          "good": ["ISFJ", "ISTJ", "ESFJ"],
+          "challenging": ["ENTP", "ENFP", "ESTP"]
+        },
+        "name": "voyageur confortable",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur attentif qui privilégie le confort et la sécurité.",
+        "planningStyle": "Concentrez-vous sur un horaire sûr et confortable",
+        "budgetApproach": "Dépenses stables et conservatrices",
+        "accommodation": "Un hôtel propre et confortable",
+        "packingStyle": "Prenez soin des fournitures essentielles telles que les médicaments d’urgence",
+        "foodExploration": "Nourriture familière et délicieuse"
+      },
+      "ESTJ": {
+        "preferences": [
+          "Lieux célèbres",
+          "Voyages à forfait",
+          "Visites guidées",
+          "Équipements"
+        ],
+        "avoidances": [
+          "Aucun projet",
+          "Inefficacité",
+          "Perte de temps",
+          "Inconfort"
+        ],
+        "idealDestinations": {
+          "domestic": ["Séoul", "Pusan", "Jeju", "Daejeon"],
+          "international": ["Singapour", "Hong Kong", "Tokyo", "Pékin"]
+        },
+        "activities": [
+          "Touristique",
+          "Achats",
+          "Visites gastronomiques",
+          "Photographie"
+        ],
+        "companionCompatibility": {
+          "best": ["ISFP", "ISTP", "INFP"],
+          "good": ["ESTJ", "ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP", "INTP"]
+        },
+        "name": "touriste efficace",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur qui planifie systématiquement et visite efficacement.",
+        "planningStyle": "Un planning serré à la minute près",
+        "budgetApproach": "Mettre l’accent sur la rentabilité et l’efficacité",
+        "accommodation": "Hôtel pratique et bien situé",
+        "packingStyle": "Emballage efficace et pratique",
+        "foodExploration": "Visitez une liste de restaurants célèbres"
+      },
+      "ESFJ": {
+        "preferences": [
+          "Voyages en famille",
+          "Visites de groupe",
+          "Cafés célèbres",
+          "Achats"
+        ],
+        "avoidances": [
+          "Voyage en solo",
+          "Lieux calmes",
+          "Activités dangereuses",
+          "Inconfort"
+        ],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Pusan", "Incheon", "Yeonju"],
+          "international": ["Okinawa", "Guam", "Australie", "Hawaii"]
+        },
+        "activities": ["Achats", "Food", "Photographie", "Visites de cafés"],
+        "companionCompatibility": {
+          "best": ["ISTP", "ISFP", "INFP"],
+          "good": ["ESFJ", "ENFJ", "ESTJ"],
+          "challenging": ["INTP", "INTJ", "ISTP"]
+        },
+        "name": "un voyageur sociable",
+        "emoji": "🎉",
+        "description": "Nous sommes des voyageurs centrés sur les personnes qui créons ensemble des souvenirs agréables.",
+        "planningStyle": "Un itinéraire accessible à tous",
+        "budgetApproach": "Partage et dépenses appropriées",
+        "accommodation": "Un hébergement pratique et familial",
+        "packingStyle": "Emballer des choses pour d'autres personnes",
+        "foodExploration": "Restaurant célèbre et populaire"
+      },
+      "ISTP": {
+        "preferences": [
+          "Activités de plein air",
+          "Sportive",
+          "Nature",
+          "Aventure"
+        ],
+        "avoidances": [
+          "Horaires fixes",
+          "Musées",
+          "Achats",
+          "Itinéraires touristiques"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "Gangwon-do",
+            "Montagnes de Jeju",
+            "Côte du Gyeongsang",
+            "Zones de montagne"
+          ],
+          "international": ["Nouvelle-Zélande", "Norvège", "Suisse", "Canada"]
+        },
+        "activities": ["Randonnée", "Ski", "Plongée", "Vélo"],
+        "companionCompatibility": {
+          "best": ["ESFJ", "ESTJ", "ENFJ"],
+          "good": ["ISTP", "ESTP", "ISFP"],
+          "challenging": ["ENFJ", "ESFJ", "INFJ"]
+        },
+        "name": "routard gratuit",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur qui se concentre sur les activités spontanées et pratiques.",
+        "planningStyle": "Planification minimale et réponse sur site",
+        "budgetApproach": "Dépenses pratiques uniquement lorsque cela est nécessaire",
+        "accommodation": "Camping, hébergement pas cher",
+        "packingStyle": "Emballage pratique et léger",
+        "foodExploration": "repas simple et rapide"
+      },
+      "ISFP": {
+        "preferences": [
+          "Galeries d'art",
+          "Nature",
+          "Cafés",
+          "Espaces atmosphériques"
+        ],
+        "avoidances": [
+          "Lieux bruyants",
+          "Forfaits",
+          "Se précipiter",
+          "Activités de groupe"
+        ],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Gangneung", "Tongyeong", "Yeosu"],
+          "international": ["Paris", "Provence", "Santorin", "Bali"]
+        },
+        "activities": ["Photographie", "Dessin", "Cafés", "Marche"],
+        "companionCompatibility": {
+          "best": ["ESTJ", "ESFJ", "ENTJ"],
+          "good": ["ISFP", "INFP", "ESFP"],
+          "challenging": ["ESTJ", "ENTJ", "ISTJ"]
+        },
+        "name": "voyageur artiste émotif",
+        "emoji": "🎉",
+        "description": "Je suis une voyageuse émotionnelle en quête de beauté et de liberté.",
+        "planningStyle": "Programme gratuit selon votre cœur",
+        "budgetApproach": "Investissez dans de belles expériences",
+        "accommodation": "Un espace joli et atmosphérique",
+        "packingStyle": "Miser sur de jolis vêtements et accessoires",
+        "foodExploration": "Jolis cafés et restaurants"
+      },
+      "ESTP": {
+        "preferences": [
+          "Activités",
+          "Fêtes",
+          "Vie nocturne",
+          "Sports extrêmes"
+        ],
+        "avoidances": [
+          "Musées",
+          "Visites tranquilles",
+          "Forfaits",
+          "Rythme lent"
+        ],
+        "idealDestinations": {
+          "domestic": ["Pusan", "Gangneung", "Jeju Ouest", "Yangyang"],
+          "international": ["Phuket", "Bali", "Dubaï", "Ibiza"]
+        },
+        "activities": [
+          "Surf",
+          "Clubbing",
+          "Sports nautiques",
+          "Saut à l'élastique"
+        ],
+        "companionCompatibility": {
+          "best": ["ISFJ", "ISTJ", "INFJ"],
+          "good": ["ESTP", "ESFP", "ENTP"],
+          "challenging": ["INFJ", "INFP", "ISFJ"]
+        },
+        "name": "voyageur activiste",
+        "emoji": "🎉",
+        "description": "Je suis un voyageur actif à la recherche de sensations fortes et de plaisir.",
+        "planningStyle": "Des décisions impromptues sur place",
+        "budgetApproach": "Investissez avec audace dans votre plaisir",
+        "accommodation": "Des installations de loisirs avec une ambiance de fête",
+        "packingStyle": "Tenue simple et active",
+        "foodExploration": "Restaurants et bars chauds"
+      },
+      "ESFP": {
+        "preferences": ["Fêtes", "Fêtes", "Achats", "Personnes"],
+        "avoidances": ["Forfaits", "Silence", "Seule", "Ennui"],
+        "idealDestinations": {
+          "domestic": ["Pusan", "Jeju", "Hongdae", "Gangnam"],
+          "international": ["Las Vegas", "Ibiza", "Bangkok", "Miami"]
+        },
+        "activities": ["Fêtes", "Achats", "Spectacles", "Food"],
+        "companionCompatibility": {
+          "best": ["ISTJ", "ISFJ", "INTJ"],
+          "good": ["ESFP", "ESTP", "ENFP"],
+          "challenging": ["INTJ", "ISTJ", "INFJ"]
+        },
+        "name": "voyageur de fête",
+        "emoji": "🎉",
+        "description": "Nous sommes des voyageurs qui profitent du festival ensemble et libérons de l'énergie.",
+        "planningStyle": "Horaire improvisé et gratuit",
+        "budgetApproach": "Dépensez généreusement pour le plaisir",
+        "accommodation": "Hôtel animé au coeur de la ville",
+        "packingStyle": "Prenez soin de plus et achetez plus",
+        "foodExploration": "Restaurant populaire et bondé"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "Lorsque vous arrivez à destination, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Explorez tranquillement par vous-même",
+            "preference": "I"
+          },
+          {
+            "text": "Discutez avec des locaux ou d'autres voyageurs",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Lors de la planification de votre itinéraire :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Concentrez-vous sur des spots célèbres avec des plans détaillés",
+            "preference": "S"
+          },
+          {
+            "text": "Concentrez-vous sur les trésors cachés et les expériences uniques",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Critères de choix d'une destination :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Efficacité et rapport qualité/prix",
+            "preference": "T"
+          },
+          {
+            "text": "Ambiance et ressenti",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Préparation du voyage :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Réservez et planifiez strictement à l'avance",
+            "preference": "J"
+          },
+          {
+            "text": "Planifiez grossièrement et partez spontanément",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Activité préférée pendant le voyage :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Visiter tranquillement des musées ou des ruines",
+            "preference": "I"
+          },
+          {
+            "text": "Fêtes locales ou rencontres",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Lorsque vous rencontrez de la nourriture étrange :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Aller dans des restaurants célèbres vérifiés",
+            "preference": "S"
+          },
+          {
+            "text": "Essayez quelque chose d'unique et de nouveau",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "En cas de désaccord avec un compagnon de voyage :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Décider rationnellement sur la base de critères objectifs",
+            "preference": "T"
+          },
+          {
+            "text": "Ajuster en tenant compte des sentiments",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Si quelque chose d’inattendu se produit :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Essayez de revenir au plan",
+            "preference": "J"
+          },
+          {
+            "text": "Acceptez-le comme une nouvelle opportunité",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Critères de choix d'un logement :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Espace privé calme et confortable",
+            "preference": "I"
+          },
+          {
+            "text": "Espace où je peux me mêler aux gens",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Comment obtenir des informations de voyage ?",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Guides et informations vérifiées",
+            "preference": "S"
+          },
+          {
+            "text": "Blogs et critiques uniques",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "En cas de dépassement du budget :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Ajuster le plan et réduire les dépenses",
+            "preference": "T"
+          },
+          {
+            "text": "Soyez flexible car l’expérience compte",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Le dernier jour du voyage :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Terminez toutes les activités planifiées",
+            "preference": "J"
+          },
+          {
+            "text": "Profitez librement du temps restant",
+            "preference": "P"
+          }
+        ]
+      }
+    ]
+  },
+  "generic": {
+    "questions": [
+      {
+        "id": "EI_01",
+        "text": "Lorsque vous rencontrez de nouvelles personnes, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Approchez-les activement et démarrez des conversations",
+            "preference": "E"
+          },
+          {
+            "text": "Attendez qu'ils vous approchent en premier",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_02",
+        "text": "Lorsque vous êtes stressé, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Rencontrez des amis et parlez pour vous sentir mieux",
+            "preference": "E"
+          },
+          {
+            "text": "Passez du temps seul pour organiser vos pensées",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_03",
+        "text": "Lors de fêtes ou de rassemblements, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Parlez activement avec de nombreuses personnes différentes",
+            "preference": "E"
+          },
+          {
+            "text": "Ayez des conversations approfondies avec quelques personnes proches",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_04",
+        "text": "Lorsque vous résolvez des problèmes, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Discutez avec les autres pour avoir des idées",
+            "preference": "E"
+          },
+          {
+            "text": "Réfléchissez profondément seul avant de tirer des conclusions",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_05",
+        "text": "Concernant les appels téléphoniques, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Profitez de longs appels et appelez fréquemment les autres",
+            "preference": "E"
+          },
+          {
+            "text": "Passez des appels courts uniquement lorsque cela est nécessaire",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_06",
+        "text": "La façon idéale de passer votre week-end est :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Être actif dehors avec des amis",
+            "preference": "E"
+          },
+          {
+            "text": "Profiter de ses loisirs seul à la maison",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_07",
+        "text": "Lors de réunions ou de discussions, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Partagez immédiatement vos opinions et participez activement",
+            "preference": "E"
+          },
+          {
+            "text": "Réfléchissez bien avant de parler avec prudence",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "SN_01",
+        "text": "Lorsque vous démarrez un nouveau projet :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Commencez par des plans et des détails spécifiques",
+            "preference": "S"
+          },
+          {
+            "text": "Imaginez d’abord la vision globale et les possibilités",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_02",
+        "text": "Lorsque vous recevez des informations, vous :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Concentrez-vous sur des faits et des données concrets",
+            "preference": "S"
+          },
+          {
+            "text": "Recherchez des significations et des possibilités cachées",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_03",
+        "text": "Entre passé et futur :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Valoriser les expériences et les traditions passées",
+            "preference": "S"
+          },
+          {
+            "text": "Sont intéressés par les possibilités et les changements futurs",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_04",
+        "text": "Lors de votre apprentissage, vous :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Apprendre étape par étape avec méthode",
+            "preference": "S"
+          },
+          {
+            "text": "Comprendre le contexte global avant d’apprendre les détails",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_05",
+        "text": "Dans la vie quotidienne, vous :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Poursuivre des choses réalistes et pratiques",
+            "preference": "S"
+          },
+          {
+            "text": "Comme les nouvelles idées et les innovations",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_06",
+        "text": "Lorsque vous examinez des problèmes, vous :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Focus sur des solutions spécifiques",
+            "preference": "S"
+          },
+          {
+            "text": "Explorez diverses perspectives et de nouvelles approches",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_07",
+        "text": "Lorsque vous rencontrez l’art ou la littérature :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Préfère les expressions réalistes et claires",
+            "preference": "S"
+          },
+          {
+            "text": "Sont attirés par les expressions symboliques et abstraites",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "TF_01",
+        "text": "Lorsque vous prenez des décisions, vous :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Prioriser l’analyse logique et les critères objectifs",
+            "preference": "T"
+          },
+          {
+            "text": "Tenez compte des valeurs personnelles et de l’impact émotionnel",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_02",
+        "text": "Dans les situations de conflit, vous :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Essayez de résoudre sur la base de faits et de principes",
+            "preference": "T"
+          },
+          {
+            "text": "Prioriser les émotions et les relations des personnes impliquées",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_03",
+        "text": "Lorsque vous recevez des critiques, vous :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Analyser objectivement pour trouver des axes d'amélioration",
+            "preference": "T"
+          },
+          {
+            "text": "Sentez-vous blessé mais essayez de comprendre leurs intentions",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_04",
+        "text": "Lorsque vous évaluez les autres :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Juger en fonction de ses capacités et de ses performances",
+            "preference": "T"
+          },
+          {
+            "text": "Valoriser le caractère et l’effort",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_05",
+        "text": "Lorsque vous travaillez en équipe, vous :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Prioriser l’efficacité et les résultats",
+            "preference": "T"
+          },
+          {
+            "text": "Valoriser l'harmonie et l'ambiance de l'équipe",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_06",
+        "text": "Lorsqu'un ami demande conseil :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Apporter des solutions au problème",
+            "preference": "T"
+          },
+          {
+            "text": "Faites preuve d'empathie avec leurs émotions et réconfortez-les",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_07",
+        "text": "Dans les règles et situations exceptionnelles :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Je pense que les principes doivent être appliqués de manière cohérente",
+            "preference": "T"
+          },
+          {
+            "text": "Pensez que la flexibilité doit être démontrée en fonction de la situation",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "JP_01",
+        "text": "Dans la vie quotidienne, vous :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Faites des plans et suivez-les",
+            "preference": "J"
+          },
+          {
+            "text": "Agir avec flexibilité en fonction de chaque situation",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_02",
+        "text": "Lorsque vous travaillez sur des tâches avec des délais :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Travaillez dessus régulièrement à l'avance",
+            "preference": "J"
+          },
+          {
+            "text": "Travailler intensément à l’approche de l’échéance",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_03",
+        "text": "Lorsque vous partez en voyage, vous :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Préparez les horaires détaillés et les réservations à l’avance",
+            "preference": "J"
+          },
+          {
+            "text": "Faites des projets approximatifs et profitez spontanément",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_04",
+        "text": "À propos de l'organisation de votre chambre ou de votre bureau :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Il doit toujours être propre et organisé",
+            "preference": "J"
+          },
+          {
+            "text": "Un peu de désordre, c'est bien tant que vous pouvez trouver ce dont vous avez besoin",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_05",
+        "text": "Lorsque de nouvelles opportunités se présentent :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Réfléchissez bien avant de décider",
+            "preference": "J"
+          },
+          {
+            "text": "Essayez-le d'abord et ajustez plus tard",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_06",
+        "text": "Lorsque vous magasinez, vous :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Décidez à l’avance de ce dont vous avez besoin et achetez-le",
+            "preference": "J"
+          },
+          {
+            "text": "Parcourez et achetez sur place ce qui attire votre attention",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_07",
+        "text": "Quand vous devez prendre une décision :",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "Décidez vite et mettez-le en action",
+            "preference": "J"
+          },
+          {
+            "text": "Gardez plusieurs options ouvertes et décidez lentement",
+            "preference": "P"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "Architecture de la Personnalité (MBTI)"
+}

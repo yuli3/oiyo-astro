@@ -1,0 +1,30 @@
+{
+  "title": "Classement",
+  "category": {
+    "points": "Points",
+    "streaks": "Traces",
+    "referrals": "Références",
+    "tests": "Essais"
+  },
+  "period": {
+    "today": "Aujourd'hui",
+    "week": "Semaine",
+    "month": "Mois",
+    "allTime": "Tout le temps"
+  },
+  "stats": {
+    "yourRank": "Votre classement",
+    "yourScore": "Votre score",
+    "percentile": "Centile",
+    "toNextRank": "Au rang suivant"
+  },
+  "ui": {
+    "you": "Toi",
+    "hallOfFame": "Temple de la renommée",
+    "showMore": "Afficher plus ({count})",
+    "participants": "{count} participants",
+    "noData": "Aucune donnée dans le classement pour l'instant.",
+    "noDataCta": "Terminez des tests pour gagner des points et gravir les échelons !",
+    "topPercentile": "Top % des {percentiles}"
+  }
+}

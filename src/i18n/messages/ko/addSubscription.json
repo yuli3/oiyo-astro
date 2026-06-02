@@ -1,0 +1,11 @@
+{
+  "title": "구독 추가",
+  "nameLabel": "이름",
+  "namePlaceholder": "넷플릭스, 스포티파이...",
+  "priceLabel": "가격",
+  "pricePlaceholder": "0",
+  "usageLabel": "용법",
+  "usageUnit": "회/월",
+  "satisfactionLabel": "만족",
+  "submit": "구독 추가"
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Analyseur de Sommeil",
+    "description": "Analysez votre rythme de sommeil et améliorez la qualité de votre repos."
+  },
+  "landing": {
+    "title": "Analyseur de Sommeil",
+    "subtitle": "Le premier pas vers un meilleur repos",
+    "cta": "Lancer l'Analyse"
+  },
+  "result": {
+    "loading": "Chargement des résultats..."
+  }
+}

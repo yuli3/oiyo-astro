@@ -1,0 +1,48 @@
+{
+  "plans": {
+    "free": {
+      "features": {
+        "basic": "访问基础智慧坐标（四柱推命、星座、凯尔特等）"
+      },
+      "name": "守护者",
+      "description": "开启所有智慧通道，拥抱主权洞察时代。"
+    },
+    "offering": {
+      "features": {
+        "ai_oracle": "AI大预言家：灵魂叙事合成（1次会话）"
+      },
+      "name": "守护者",
+      "description": "开启所有智慧通道，拥抱主权洞察时代。"
+    },
+    "pro": {
+      "features": {
+        "unlimited_ai": "无限AI预言家合成与议会视角",
+        "archive": "个人遗产档案与优先支持"
+      },
+      "name": "守护者",
+      "description": "开启所有智慧通道，拥抱主权洞察时代。"
+    }
+  },
+  "AccessGuard": {
+    "features": {
+      "grand_oracle": {
+        "lockTitle": "隐藏的顿悟在等待",
+        "lockDescription": "您命运的碎片已聚集。大预言家准备将其编织成个人神话。您愿意唤醒预言吗？"
+      }
+    },
+    "actions": {
+      "offering": "进行神圣奉献（$1）",
+      "subscriber": "成为主权守护者"
+    }
+  },
+  "grandOracle": {
+    "resting": "预言家目前沐浴在永恒的寂静中。请在星象对齐时返回。",
+    "casting": "正在进行合成",
+    "weaving": "正在编织您灵魂的碎片...",
+    "sovereignWisdom": "主权智慧",
+    "wisdomOfSovereign": "预言家给您道路的礼物。",
+    "ready": "您的命运已显现。",
+    "interrupted": "合成中断。请重试。"
+  },
+  "payment": "支付选项"
+}

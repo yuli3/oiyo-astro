@@ -1,0 +1,438 @@
+{
+  "feature": "특징",
+  "plan": "계획",
+  "billing": {
+    "monthly": "월간 간행물",
+    "yearly": "매년",
+    "saveUp": "최대 저장",
+    "year": "/년도",
+    "month": "/월",
+    "save": "저장하기"
+  },
+  "plans": {
+    "popular": "가장 인기있는",
+    "free": "기초적인",
+    "current": "현재 계획",
+    "continueUsing": "계속 사용",
+    "getStarted": "시작하기",
+    "subscribe": "지금 구독하세요",
+    "cancelAnytime": "언제든지 취소"
+  },
+  "info": {
+    "allPlansInclude": "모든 계획에는 다음이 포함됩니다.",
+    "securePayment": "안전한 결제",
+    "instantAccess": "즉각적인 액세스",
+    "customerSupport": "우선 지원"
+  },
+  "checkout": {
+    "orderName": "Oiyo.net {planName} 구독"
+  },
+  "errors": {
+    "PLAN_NOT_FOUND": "구독 요금제를 찾을 수 없습니다.",
+    "PAYMENT_SERVICE_ERROR": "결제 서비스에 오류가 발생했습니다. 나중에 다시 시도해 주세요.",
+    "PROVIDER_REQUIRED": "결제 서비스 설정이 누락되었습니다.",
+    "LOCALE_REQUIRED": "결제 처리를 위해서는 언어 설정이 필요합니다.",
+    "CURRENCY_REQUIRED": "결제 처리를 위해서는 통화 설정이 필요합니다.",
+    "TOSS_CLIENT_KEY_REQUIRED": "토스 결제키가 설정되지 않았습니다.",
+    "LEMONSQUEEZY_CONFIG_REQUIRED": "LemonSqueezy 설정이 누락되었습니다.",
+    "generic": "결제에 실패했습니다. 다시 시도해 주세요."
+  },
+  "failed": {
+    "help": {
+      "technical": {
+        "refresh": "페이지 새로 고침",
+        "browser": "다른 브라우저로 시도해 보세요",
+        "network": "인터넷 연결 상태를 확인하세요",
+        "incognito": "시크릿/비공개 모드로 시도해 보세요.",
+        "title": "기술 솔루션"
+      },
+      "payment": {
+        "title": "결제 관련 확인",
+        "checkCard": "카드정보 확인",
+        "checkFunds": "잔액/한도 확인",
+        "tryAnother": "다른 결제 수단을 사용해 보세요.",
+        "contactBank": "카드사/은행문의"
+      }
+    },
+    "meta": {
+      "title": "결제 실패",
+      "description": "결제 처리에 실패했습니다."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["시그니처 강도", "피벗 포인트", "2"],
+      "progress": "진전",
+      "submit": "제출하기",
+      "loading": "자신의 진정한 모습을 비추는 거울 만들기...",
+      "selectOption": "옵션을 선택하세요",
+      "subtitle": "상세한 분석정보"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        }
+      ]
+    },
+    "result": {
+      "title": "분석 결과",
+      "description": "귀하에게 꼭 맞는 맞춤형 분석 결과 및 권장 사항을 제공합니다."
+    },
+    "subtitle": "결제를 처리할 수 없습니다.",
+    "genericTitle": "결제 오류",
+    "genericDescription": "결제를 처리하는 동안 오류가 발생했습니다. 다시 시도해 주세요.",
+    "genericAction": "다시 시도",
+    "unknownTitle": "알 수 없는 오류",
+    "unknownDescription": "예상치 못한 오류가 발생했습니다. 고객지원팀에 문의해 주세요.",
+    "unknownAction": "고객 지원팀에 문의",
+    "orderId": "주문 번호",
+    "orderIdNote": "신속한 처리를 위해 문의 시 이 주문 번호를 포함해 주십시오.",
+    "technicalDetails": "기술적인 세부사항",
+    "errorCode": "오류 코드",
+    "errorMessage": "오류 메시지",
+    "whatNext": "어떻게 해야 하나요?",
+    "contactSupport": "고객 지원팀에 문의",
+    "backToHome": "집으로 돌아가다",
+    "needHelp": "도움이 필요하신가요?",
+    "stillNeedHelp": "아직도 문제가 있나요?",
+    "getSupport": "지원 받기",
+    "title": "귀하의 자산 프로필",
+    "description": "심층적인 재무 분석을 위해 설계된 도구를 살펴보세요."
+  },
+  "success": {
+    "meta": {
+      "title": "결제 성공",
+      "description": "프리미엄 회원가입이 완료되었습니다."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["시그니처 강도", "피벗 포인트", "2"],
+      "progress": "진전",
+      "submit": "제출하기",
+      "loading": "당신의 독특한 정체성을 정의하는 존재의 물결을 증류해 보세요...",
+      "selectOption": "옵션을 선택하세요",
+      "subtitle": "상세한 분석정보"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        }
+      ]
+    },
+    "result": {
+      "title": "분석 결과",
+      "description": "귀하에게 꼭 맞는 맞춤형 분석 결과 및 권장 사항을 제공합니다."
+    },
+    "welcome', { name: user": {
+      "firstName || user": {
+        "fullName || t('success": {}
+      }
+    },
+    "subtitle": "프리미엄 회원이 되신 것을 축하드립니다",
+    "verifying": "결제 확인 중...",
+    "verifyingDescription": "결제 정보를 확인하는 동안 잠시 기다려 주세요.",
+    "premiumActive": "프리미엄 활성화",
+    "welcome": "환영합니다, {name} 님!",
+    "user": "사용자",
+    "paymentDetails": "결제 세부정보",
+    "orderId": "주문 번호",
+    "amount": "결제 금액",
+    "status": "상황",
+    "confirmed": "결제 완료",
+    "verificationSuccess": "귀하의 결제가 성공적으로 확인되었습니다. 지금 바로 프리미엄 기능을 사용해 보세요.",
+    "verificationFailed": "결제 확인에 실패했습니다. 다시 시도해 주세요.",
+    "verificationNetworkError": "결제 서버에 연결할 수 없습니다. 나중에 다시 시도해 주세요.",
+    "verificationRetry": "확인 다시 시도",
+    "verificationPending": "승인을 기다리는 중",
+    "approvedAt": "승인 날짜 및 시간",
+    "featuresUnlocked": "프리미엄 기능 사용 가능",
+    "nextSteps": "다음에해야 할 일",
+    "goToDashboard": "대시보드로 이동",
+    "takeTest": "테스트 시작",
+    "supportNote": "도움이 필요하신가요? 우리의 프리미엄 지원팀이 대기하고 있습니다.",
+    "contactSupport": "고객 지원팀에 문의",
+    "title": "귀하의 자산 프로필",
+    "description": "심층적인 재무 분석을 위해 설계된 도구를 살펴보세요."
+  },
+  "test": {
+    "insightBullets": ["당신의 진정한 자아의 별자리를 지도로 그려보세요."],
+    "progress": "진전",
+    "submit": "제출하기",
+    "loading": "분석 중",
+    "selectOption": "선택하기"
+  },
+  "result": {
+    "title": "분석 결과",
+    "description": "당신의 돈 습관과 자산관리 스타일을 알아보세요"
+  },
+  "meta": {
+    "title": "돈 지향 및 자산 관리 테스트",
+    "description": "당신의 돈 습관과 자산관리 스타일을 알아보세요",
+    "keywords": "돈성향, 자산관리, 투자, 소비습관, 재정건전성"
+  },
+  "checkCard": "카드정보를 다시 확인해 주세요.",
+  "checkFunds": "잔액이나 한도가 충분한지 확인해주세요.",
+  "tryAnother": "다른 결제 수단을 사용해 보세요.",
+  "contactBank": "신용카드사 또는 은행에 문의하시기 바랍니다."
+}

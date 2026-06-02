@@ -1,0 +1,499 @@
+{
+  "meta": {
+    "hero": {
+      "badge": "Brújula de Carrera",
+      "subtitle": "Descubre perspectivas sobre ti mismo"
+    },
+    "keywords": "evaluación de carrera, test de personalidad, RIASEC, código Holland, orientación profesional, satisfacción laboral, emparejamiento de carrera, personalidad en el trabajo",
+    "description": "Explora los caminos de carrera óptimos que coincidan con tu tipo de personalidad y aptitud.",
+    "title": "OIYO Carrera - Encuentra Tu Vocación"
+  },
+  "types": {
+    "realistic": {
+      "name": "Realista (Ejecutores)",
+      "emoji": "🔧"
+    },
+    "investigative": {
+      "name": "Investigativo (Pensadores)",
+      "emoji": "🔬"
+    },
+    "artistic": {
+      "name": "Artístico (Creadores)",
+      "emoji": "🎨"
+    },
+    "social": {
+      "name": "Social (Ayudantes)",
+      "emoji": "👥"
+    },
+    "enterprising": {
+      "name": "Emprendedor (Persuasores)",
+      "emoji": "💼"
+    },
+    "conventional": {
+      "name": "Convencional (Organizadores)",
+      "emoji": "📊"
+    },
+    "subtitle": "¿Qué tipo te describe mejor?"
+  },
+  "hero": {
+    "badge": "🎯 Basado en la Ciencia",
+    "subtitle": "Descubre caminos de carrera ideales basados en tu tipo de personalidad",
+    "cta": "Encontrar Mi Combinación de Carrera",
+    "title": "Panel de Control",
+    "description": "Análisis de tu disposición única"
+  },
+  "benefits": {
+    "subtitle": "Alinea tu carrera con tus fortalezas e intereses naturales",
+    "items": [
+      {
+        "icon": "🎯",
+        "title": "Emparejamiento de Carrera Perfecto",
+        "description": "Encuentra trabajos que se ajusten a tu personalidad innata."
+      },
+      {
+        "icon": "😊",
+        "title": "Satisfacción Laboral",
+        "description": "Trabaja en un entorno donde puedas brillar."
+      },
+      {
+        "icon": "📈",
+        "title": "Crecimiento Profesional",
+        "description": "Asciende más rápido aprovechando tus fortalezas."
+      },
+      {
+        "icon": "⚖️",
+        "title": "Equilibrio Laboral-Personal",
+        "description": "Elige una carrera que coincida con tus valores de estilo de vida."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "¿Qué carrera es adecuada para mí?",
+        "description": "Basado en el modelo RIASEC utilizado por los psicólogos.",
+        "question": "¿Es científico?",
+        "answer": "Se basa en el modelo RIASEC utilizado por los psicólogos."
+      },
+      {
+        "icon": "🚀",
+        "title": "¿Qué tan precisos son los resultados?",
+        "description": "Sí, ayuda con las opciones de carrera y pasantías.",
+        "question": "¿Pueden usarlo los estudiantes?",
+        "answer": "Sí, ayuda con las opciones de carrera y pasantías."
+      },
+      {
+        "icon": "💡",
+        "title": "Precisión",
+        "description": "Muestra una precisión muy alta en la identificación de intereses centrales.",
+        "question": "¿Es preciso?",
+        "answer": "Muestra una precisión muy alta en la identificación de intereses centrales."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "📊",
+        "title": "Análisis RIASEC",
+        "description": "Análisis detallado de 6 áreas de interés.",
+        "question": "Análisis RIASEC",
+        "answer": "Análisis detallado de 6 áreas de interés."
+      },
+      {
+        "icon": "📋",
+        "title": "Lista de Carreras",
+        "description": "Más de 50 trabajos recomendados curados para ti.",
+        "question": "Lista de Carreras",
+        "answer": "Más de 50 trabajos recomendados curados para ti."
+      },
+      {
+        "icon": "🚀",
+        "title": "Ruta de Crecimiento",
+        "description": "Consejos prácticos para industrias específicas.",
+        "question": "Ruta de Crecimiento",
+        "answer": "Consejos prácticos para industrias específicas."
+      }
+    ]
+  },
+  "test": {
+    "scale": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    },
+    "test": {
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando",
+      "selectOption": "Seleccionar Opción",
+      "insightBullets": ["Perspectivas"],
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Informe de Análisis Detallado",
+      "description": "Estamos preparando valores y perspectivas específicos que este servicio te ofrece."
+    },
+    "meta": {
+      "title": "Diagnóstico Personalizado",
+      "description": "Estamos preparando valores y perspectivas específicos que este servicio te ofrece.",
+      "keywords": "test de aptitud, exploración de carrera, recomendación de trabajo"
+    },
+    "title": "Panel de Control",
+    "description": "Informe detallado basado en datos",
+    "primaryType": "Tipo Primario",
+    "allTypes": "Todos los Tipos",
+    "careers": "Carreras",
+    "workEnvironment": "Entorno Laboral",
+    "secondaryType": "Tipo Secundario",
+    "understanding": "Comprensión",
+    "retake": "Volver a tomar",
+    "subtitle": "Detalles",
+    "rateInstructions": "Instrucciones de Calificación",
+    "progress": "Progreso",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "loading": "Cargando",
+    "selectOption": "Seleccionar Opción",
+    "insightBullets": ["Perspectivas"]
+  },
+  "result": {
+    "test": {
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando",
+      "selectOption": "Seleccionar Opción",
+      "insightBullets": ["Perspectivas"],
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Informe de Análisis Detallado",
+      "description": "Estamos preparando valores y perspectivas específicos que este servicio te ofrece."
+    },
+    "meta": {
+      "title": "Diagnóstico Personalizado",
+      "description": "Estamos preparando valores y perspectivas específicos que este servicio te ofrece.",
+      "keywords": "resultados del test, análisis de carrera, ajuste laboral"
+    },
+    "title": "Informe de Análisis Detallado",
+    "description": "Estamos preparando valores y perspectivas específicos que este servicio te ofrece.",
+    "primaryType": "Tipo Primario",
+    "allTypes": "Todos los Tipos",
+    "careers": "Carreras",
+    "workEnvironment": "Entorno Laboral",
+    "secondaryType": "Tipo Secundario",
+    "understanding": "Comprensión",
+    "retake": "Volver a tomar"
+  },
+  "title": "Perspectivas de Carrera",
+  "description": "Análisis de tu disposición única",
+  "keywords": "Palabras clave",
+  "career": {
+    "types": {
+      "realistic": {
+        "traits": [
+          "Honesta y genuina",
+          "Práctico y realista",
+          "Hábil con herramientas",
+          "Independiente"
+        ],
+        "careerSuggestions": [
+          "Ingeniero Mecánico",
+          "Electricista",
+          "Chef",
+          "Técnica automotriz",
+          "Veterinaria",
+          "Arquitecta paisajista",
+          "Piloto"
+        ],
+        "name": "Convencional",
+        "alias": "El Organizador",
+        "description": "Prefieres entornos de trabajo estructurados y ordenados.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "investigative": {
+        "traits": [
+          "Analítico y Lógico",
+          "Intelectualmente curiosa",
+          "Precisa",
+          "Pensador independiente"
+        ],
+        "careerSuggestions": [
+          "Desarrolladora de software",
+          "Analista de datos",
+          "Científica de investigación",
+          "Médica",
+          "Economista",
+          "Psicóloga",
+          "Farmacéutica"
+        ],
+        "name": "Convencional",
+        "alias": "El Organizador",
+        "description": "Prefieres entornos de trabajo estructurados y ordenados.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "artistic": {
+        "traits": [
+          "Creativa y original",
+          "Espíritu libre",
+          "Expresiva",
+          "Poco convencional"
+        ],
+        "careerSuggestions": [
+          "Diseñador Gráfico",
+          "Escritora",
+          "Creativo de marketing",
+          "Arquitecta",
+          "Músico",
+          "Actriz",
+          "Diseñador de moda"
+        ],
+        "name": "Convencional",
+        "alias": "El Organizador",
+        "description": "Prefieres entornos de trabajo estructurados y ordenados.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "social": {
+        "traits": ["Empática", "Cooperativa", "Amistosa", "Buena comunicadora"],
+        "careerSuggestions": [
+          "Maestra",
+          "Consejera",
+          "Trabajadora social",
+          "Enfermera",
+          "Especialista en Recursos Humanos",
+          "Entrenador/Entrenador",
+          "Fisioterapeuta"
+        ],
+        "name": "Convencional",
+        "alias": "El Organizador",
+        "description": "Prefieres entornos de trabajo estructurados y ordenados.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "enterprising": {
+        "traits": ["Ambiciosa", "Segura", "Persuasiva", "Energética"],
+        "careerSuggestions": [
+          "Gerente de ventas",
+          "Ejecutiva de negocios",
+          "Abogada",
+          "Emprendedora",
+          "Gerente de Mercadeo",
+          "Agente de Bienes Raíces",
+          "Gerente de proyecto"
+        ],
+        "name": "Convencional",
+        "alias": "El Organizador",
+        "description": "Prefieres entornos de trabajo estructurados y ordenados.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "conventional": {
+        "traits": [
+          "Orientado al detalle",
+          "Organizada",
+          "Responsable",
+          "Eficiente"
+        ],
+        "careerSuggestions": [
+          "Contadora",
+          "Entrada de datos",
+          "Asistente administrativa",
+          "Placa de banco",
+          "Preparadora de impuestos",
+          "Bibliotecaria",
+          "Asegurador de seguros"
+        ],
+        "name": "Convencional",
+        "alias": "El Organizador",
+        "description": "Prefieres entornos de trabajo estructurados y ordenados.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      }
+    },
+    "questions": [
+      {
+        "id": "1",
+        "text": "Disfruto trabajando con herramientas y maquinaria.",
+        "type": "realista",
+        "weight": 3
+      },
+      {
+        "id": "2",
+        "text": "Prefiero el trabajo práctico a las discusiones teóricas.",
+        "type": "realista",
+        "weight": 3
+      },
+      {
+        "id": "3",
+        "text": "Me gusta ver resultados tangibles de mi trabajo.",
+        "type": "realista",
+        "weight": 2
+      },
+      {
+        "id": "4",
+        "text": "Disfruto construyendo, arreglando o reparando cosas.",
+        "type": "realista",
+        "weight": 3
+      },
+      {
+        "id": "5",
+        "text": "Prefiero trabajar al aire libre o en talleres.",
+        "type": "realista",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "text": "Disfruto resolviendo problemas complejos a través de la investigación y el análisis.",
+        "type": "investigadora",
+        "weight": 3
+      },
+      {
+        "id": "7",
+        "text": "Me gusta entender cómo funcionan las cosas a un nivel profundo.",
+        "type": "investigadora",
+        "weight": 3
+      },
+      {
+        "id": "8",
+        "text": "Prefiero trabajar de forma independiente en desafíos intelectuales.",
+        "type": "investigadora",
+        "weight": 2
+      },
+      {
+        "id": "9",
+        "text": "Disfruto recopilando y analizando datos.",
+        "type": "investigadora",
+        "weight": 3
+      },
+      {
+        "id": "10",
+        "text": "Me gusta experimentar y probar nuevas teorías.",
+        "type": "investigadora",
+        "weight": 2
+      },
+      {
+        "id": "11",
+        "text": "Disfruto expresándome creativamente",
+        "type": "artística",
+        "weight": 3
+      },
+      {
+        "id": "12",
+        "text": "Prefiero ambientes de trabajo flexibles y sin reglas estrictas.",
+        "type": "artística",
+        "weight": 2
+      },
+      {
+        "id": "13",
+        "text": "Me gusta trabajar con colores, diseños o conceptos creativos.",
+        "type": "artística",
+        "weight": 3
+      },
+      {
+        "id": "14",
+        "text": "Valoro la originalidad y la innovación en mi trabajo.",
+        "type": "artística",
+        "weight": 3
+      },
+      {
+        "id": "15",
+        "text": "Disfruto de proyectos que permiten la interpretación creativa.",
+        "type": "artística",
+        "weight": 2
+      },
+      {
+        "id": "16",
+        "text": "Disfruto ayudar a otros a resolver sus problemas.",
+        "type": "social",
+        "weight": 3
+      },
+      {
+        "id": "17",
+        "text": "Me gusta trabajar en equipos y entornos colaborativos.",
+        "type": "social",
+        "weight": 2
+      },
+      {
+        "id": "18",
+        "text": "Me siento satisfecho enseñando o asesorando a otros.",
+        "type": "social",
+        "weight": 3
+      },
+      {
+        "id": "19",
+        "text": "Prefiero el trabajo centrado en las personas al trabajo centrado en las tareas",
+        "type": "social",
+        "weight": 3
+      },
+      {
+        "id": "20",
+        "text": "Disfruto haciendo un impacto positivo en las demás",
+        "type": "social",
+        "weight": 2
+      },
+      {
+        "id": "21",
+        "text": "Disfruto liderando proyectos y gestionando equipos.",
+        "type": "emprendedora",
+        "weight": 3
+      },
+      {
+        "id": "22",
+        "text": "Me gustan los entornos competitivos y orientados a resultados.",
+        "type": "emprendedora",
+        "weight": 2
+      },
+      {
+        "id": "23",
+        "text": "Disfruto persuadir a las demás e influir en las decisiones",
+        "type": "emprendedora",
+        "weight": 3
+      },
+      {
+        "id": "24",
+        "text": "Me gusta tomar riesgos calculados para lograr objetivos.",
+        "type": "emprendedora",
+        "weight": 3
+      },
+      {
+        "id": "25",
+        "text": "Prefiero entornos donde pueda avanzar rápidamente",
+        "type": "emprendedora",
+        "weight": 2
+      },
+      {
+        "id": "26",
+        "text": "Prefiero ambientes de trabajo estructurados y organizados.",
+        "type": "convencional",
+        "weight": 3
+      },
+      {
+        "id": "27",
+        "text": "Disfruto trabajando con datos, números e información detallada.",
+        "type": "convencional",
+        "weight": 2
+      },
+      {
+        "id": "28",
+        "text": "Me gusta seguir procedimientos y pautas establecidas.",
+        "type": "convencional",
+        "weight": 3
+      },
+      {
+        "id": "29",
+        "text": "Prefiero rutinas de trabajo predecibles y expectativas claras.",
+        "type": "convencional",
+        "weight": 3
+      },
+      {
+        "id": "30",
+        "text": "Me destaco en la organización y gestión de tareas administrativas.",
+        "type": "convencional",
+        "weight": 2
+      }
+    ]
+  }
+}

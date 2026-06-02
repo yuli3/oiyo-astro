@@ -1,0 +1,14 @@
+{
+  "welcome": {
+    "title": "欢迎",
+    "description": "设置成功。"
+  },
+  "interests": {
+    "title": "兴趣",
+    "description": "正在保存您的选择。"
+  },
+  "complete": {
+    "title": "完成",
+    "description": "一切就绪。"
+  }
+}

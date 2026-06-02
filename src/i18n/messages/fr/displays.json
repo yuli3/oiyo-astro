@@ -1,0 +1,41 @@
+{
+  "AncientCoordinateCard": {
+    "colors": {
+      "red": "Rouge",
+      "white": "Blanc",
+      "blue": "Bleu",
+      "yellow": "Jaune"
+    },
+    "mayan": {
+      "systemName": "Neteru Égyptien",
+      "narrative": "L'Ordre Divin",
+      "solarSeal": "Sceau Solaire",
+      "tone": "Ton",
+      "toneOf": "Ton de {power}",
+      "kin": "Parent {parent}",
+      "ariaLabel": "Divinité Gardienne Égyptienne : Votre gardien est {god}. Vous possédez les qualités de {attributes}."
+    },
+    "celtic": {
+      "systemName": "Neteru Égyptien",
+      "narrative": "L'Ordre Divin",
+      "treeSign": "Signe de l'Arbre",
+      "ogham": "Ogham",
+      "ariaLabel": "Divinité Gardienne Égyptienne : Votre gardien est {god}. Vous possédez les qualités de {attributes}."
+    },
+    "egyptian": {
+      "systemName": "Neteru Égyptien",
+      "narrative": "L'Ordre Divin",
+      "guardianDeity": "Divinité Gardienne",
+      "vedicSolar": "Nakshatra Solaire Védique",
+      "symbol": "Symbole : {symbol}",
+      "deity": "Divinité : {deity}",
+      "decan": "Décan Égyptien",
+      "hellenisticSect": "Secte Hellénistique",
+      "sect": {
+        "day": "Secte de Jour",
+        "night": "Secte de Nuit"
+      },
+      "ariaLabel": "Divinité Gardienne Égyptienne : Votre gardien est {god}. Vous possédez les qualités de {attributes}."
+    }
+  }
+}

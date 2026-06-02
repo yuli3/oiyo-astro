@@ -1,0 +1,16 @@
+{
+  "title": "Next Actions",
+  "tip": "Tip",
+  "reflect": {
+    "title": "Reflect",
+    "description": "Take a moment."
+  },
+  "plan": {
+    "title": "Plan",
+    "description": "Plan your day."
+  },
+  "share": {
+    "title": "Share",
+    "description": "Share your results."
+  }
+}

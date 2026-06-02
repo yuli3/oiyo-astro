@@ -1,0 +1,82 @@
+{
+  "GAP": {
+    "characteristics": [
+      "sovereignty",
+      "benevolence",
+      "unbending will",
+      "vertical growth"
+    ],
+    "name": "Yang Wood (Jia/Gap)",
+    "meaning": "The Sovereign Tree",
+    "description": "The spirit of a giant tree reaching straight toward the heavens, symbolizing unbending ambition."
+  },
+  "EUL": {
+    "characteristics": [
+      "resilience",
+      "diplomacy",
+      "survival",
+      "interconnection"
+    ],
+    "name": "Yin Wood (Yi/Eul)",
+    "meaning": "The Vine of Life",
+    "description": "It holds the wisdom of a vine that adapts to any terrain and flourishes through flexibility."
+  },
+  "BYEONG": {
+    "characteristics": [
+      "radiance",
+      "passion",
+      "transparency",
+      "public influence"
+    ],
+    "name": "Yang Fire (Bing/Byeong)",
+    "meaning": "The Sun of All Things",
+    "description": "The impartial light of the sun, illuminating every corner of the world without discrimination."
+  },
+  "JEONG": {
+    "characteristics": ["devotion", "focus", "warmth", "illumination"],
+    "name": "Yin Fire (Ding/Jeong)",
+    "meaning": "The Mystical Flame",
+    "description": "A focused flame, like a candle or starlight, guiding lost souls through the darkness."
+  },
+  "MU": {
+    "characteristics": ["trust", "stability", "neutrality", "embracing"],
+    "name": "Yang Earth (Wu/Mu)",
+    "meaning": "The Eternal Mountain",
+    "description": "The majestic form of a mountain that observes history with unwavering stillness."
+  },
+  "GI": {
+    "characteristics": ["nurturing", "cultivation", "motherhood", "pragmatism"],
+    "name": "Yin Earth (Ji/Gi)",
+    "meaning": "The Fertile Soil",
+    "description": "The energy of fertile soil that accepts all seeds and brings them to fruition."
+  },
+  "GYEONG": {
+    "characteristics": ["revolution", "justice", "decisiveness", "loyalty"],
+    "name": "Yang Metal (Geng/Gyeong)",
+    "meaning": "The General's Blade",
+    "description": "An unrefined gemstone or heavy blade that enforces necessary change."
+  },
+  "SIN": {
+    "characteristics": [
+      "perfectionism",
+      "precision",
+      "sensitivity",
+      "elegance"
+    ],
+    "name": "Yin Metal (Xin/Sin)",
+    "meaning": "The Royal Jewel",
+    "description": "A well-crafted jewel, sharp and beautiful, demanding a delicate touch."
+  },
+  "IM": {
+    "characteristics": ["wisdom", "adaptability", "dynamism", "vastness"],
+    "name": "Yang Water (Ren/Im)",
+    "meaning": "The Vast Ocean",
+    "description": "A deep sea holding the secrets of life and infinite possibilities."
+  },
+  "GYE": {
+    "characteristics": ["intuition", "infiltration", "gentleness", "strategy"],
+    "name": "Yin Water (Gui/Gye)",
+    "meaning": "The Morning Dew",
+    "description": "The form of mist and light rain that gently permeates the world to nurture life."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "title": "Grand Oracle",
+  "archetypes": {
+    "radiant_catalyst": {
+      "title": "The Radiant Catalyst",
+      "keywords": "Ignition, Passion, Will"
+    },
+    "deep_seer": {
+      "title": "The Deep Seer",
+      "keywords": "Intuition, Flow, Mystery"
+    },
+    "architect": {
+      "title": "The Architect",
+      "keywords": "Stability, Foundation, Growth"
+    },
+    "messenger": {
+      "title": "The Messenger",
+      "keywords": "Intellect, Communication, Freedom"
+    },
+    "growth_maker": {
+      "title": "The Growth Maker",
+      "keywords": "Expansion, Roots, Life"
+    },
+    "refiner": {
+      "title": "The Refiner",
+      "keywords": "Precision, Strength, Clarity"
+    },
+    "spirit_walker": {
+      "title": "The Spirit Walker",
+      "keywords": "Connection, Space, Essence"
+    },
+    "universal_traveler": {
+      "title": "The Universal Traveler",
+      "keywords": "Balance, Harmony, Unity"
+    }
+  },
+  "narrative": {
+    "intro": "The Grand Archive opens to reveal the pattern of your existence. You are {archetype}.",
+    "body": "Your spirit is forged in {element}. {synergy}. Western stars name you {westernSign}, while the Eastern courts know you as the {easternSign}.",
+    "conclusion": "Walk your path with the wisdom of {element}, for it is your greatest strength."
+  },
+  "synergies": {
+    "convergence": "A convergence of {element} across Western and Vedic skies",
+    "synthesis": "A unique synthesis led by {element}"
+  },
+  "suggestions": {
+    "balance": "Your path is strong, yet the energy of {missing} is quiet within you. Seek it in others or in nature.",
+    "harmony": "You walk in complete elemental harmony."
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Kindred Resonance",
+    "resultTitle": "{title} - 啓示",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "keywords": "友情の共鳴、ソーシャルアーキタイプ、ソウルジオメトリー、オイヨ"
+  },
+  "hero": {
+    "title": "同族共鳴",
+    "subtitle": "あなたが魂の絆を築き、維持するための深いリズムを理解してください。",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "cta": "問い合わせを開始する",
+    "badge": "Your Kindred Signature"
+  },
+  "test": {
+    "insightBullets": [
+      "自分の道を定義するユニークなパターンを見つけてください。",
+      "あなたの社会哲学の暗黙の層に光を当てます。",
+      "意識的な認識を通じて神聖な絆を育みます。"
+    ],
+    "progress": "レゾナンス・アセント",
+    "next": "フォワード",
+    "previous": "反映する",
+    "submit": "合成を明らかにする",
+    "loading": "Distilling your social map...",
+    "selectOption": "真実の道をマークする"
+  },
+  "result": {
+    "ai": {
+      "title": "Kindred Resonance",
+      "premium": "オーダーメイドの錬金術レポート",
+      "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+      "processing": "ダイナミクスを合成中...",
+      "processingKo": "処理...",
+      "upgrade": "アップグレードして錬金術分析のロックを解除する",
+      "generate": "錬金術戦略を立てる",
+      "complete": "神聖な社会分析が完了しました"
+    },
+    "traits": {
+      "title": "Kindred Resonance"
+    },
+    "connections": {
+      "title": "Kindred Resonance",
+      "vibe": "あなたのシグネチャは、次のアーキタイプと最も調和して一致します。",
+      "proTip": "知恵のメモ: あなたの周波数は自然にこれらの原型を補完し、即時の信頼と再帰的な成長を促進します。"
+    },
+    "actions": {
+      "retake": "キャリブレーションを再開する",
+      "returnHome": "ネクサスに戻る"
+    },
+    "title": "Kindred Resonance",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "loading": "ソーシャル マップを抽出しています...",
+    "badge": "あなたの親族の署名"
+  },
+  "title": "同族共鳴",
+  "description": "あなたの世界を彩る友情のユニークな色と温度を発見してください。"
+}

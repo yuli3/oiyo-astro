@@ -1,0 +1,179 @@
+{
+  "noMbti": {
+    "desc": "Detailed analysis and insights for your journey.",
+    "button": "Start Financial Assessment"
+  },
+  "meta": {
+    "subtitle": "Detailed information",
+    "disclaimer": "Disclaimer",
+    "keywords": "mbti, salary, career, income",
+    "title": "Mbtisalary Test",
+    "description": "Discover your personal insights with this in-depth analysis."
+  },
+  "hero": {
+    "subtitle": "Unlock Your Earning Potential",
+    "badge": "Career"
+  },
+  "test": {
+    "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+    "progress": "Progress",
+    "submit": "Submit",
+    "loading": "Crafting a mirror that reflects your truest self...",
+    "selectOption": "Select Option",
+    "subtitle": "Detailed information"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What drives your inner world?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What is your unique core frequency?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Small choices accumulate into a grand destiny."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How do you navigate life's currents?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "What is your unique core frequency?",
+        "answer": "Small choices accumulate into a grand destiny."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "What is your unique core frequency?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What drives your inner world?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What is your unique core frequency?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "What drives your inner world?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What drives your inner world?",
+        "answer": "Your unique perspective shapes your reality."
+      }
+    ]
+  },
+  "result": {
+    "title": "Result",
+    "description": "Your personalized analysis results and recommendations."
+  },
+  "subtitle": "Negotiation scripts tailored to your personality type",
+  "yourType": "Your Type",
+  "strategyTitle": "The \"{style}\" Approach",
+  "strategyDesc": "You naturally excel at \"{focus}\". Use this as your leverage at the negotiation table.",
+  "targetSalaryLabel": "Target Salary Label",
+  "currency": "Currency",
+  "insertSalary": "Insert Salary",
+  "scriptTitle": "Script Title",
+  "tipsTitle": "Tips Title",
+  "disclaimer": "These scripts are for reference. Adapt them to your specific situation.",
+  "title": "Your Financial Profile",
+  "description": "Explore our suite of tools designed for deep finance insights."
+}

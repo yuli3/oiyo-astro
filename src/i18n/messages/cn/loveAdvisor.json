@@ -1,0 +1,21 @@
+{
+  "modes": {
+    "serious": "真诚指导",
+    "funny": "智慧与奇迹",
+    "realistic": "扎根的智慧"
+  },
+  "ui": {
+    "additionalTips": "智慧的低语",
+    "askAnotherQuestion": "提出新的询问",
+    "share": "传输发现",
+    "searchPlaceholder": "向 Oracle 表达您的担忧...",
+    "randomAdvice": "🎲 调用随机洞察力",
+    "allCategories": "奥尼亚",
+    "noResultsTitle": "共振被遮蔽",
+    "noResultsDescription": "神谕没有发现与此查询直接匹配的内容。 用不同的措辞重新提出你的问题。",
+    "clearSearch": "清除查询"
+  },
+  "meta": {
+    "title": "心共鸣神谕"
+  }
+}

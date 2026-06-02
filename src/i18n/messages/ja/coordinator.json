@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "phase2": "フェーズ 2: 基礎",
+    "title": "ライフコーディネーター",
+    "subtitle": "宇宙データ (サジュ、ゾディアック) と心理的特性 (MBTI) を統合して、最適なライフ パスを見つけます。",
+    "dataInput": "データ入力",
+    "birthDate": "生年月日（サジュの場合）",
+    "mbtiType": "MBTIタイプ",
+    "calculatedSign": "計算された符号:",
+    "analyzeSynergy": "シナジーを分析する",
+    "coreEssence": "コアエッセンス",
+    "careerRecs": "キャリアに関する推奨事項",
+    "hobbySynergy": "ホビーシナジー",
+    "awaitingData": "データを待っています...",
+    "enterDetails": "分析する詳細を入力します",
+    "select": "選択してください..."
+  },
+  "result": {
+    "match": "マッチ",
+    "avgSalary": "平均給与",
+    "outlook": "見通し"
+  }
+}

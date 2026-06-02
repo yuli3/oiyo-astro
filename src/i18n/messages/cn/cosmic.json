@@ -1,0 +1,8 @@
+{
+  "title": "宇宙坐标",
+  "orbitalVelocity": "轨道速度",
+  "galacticVelocity": "银河速度",
+  "axialTilt": "轴倾斜",
+  "distanceFromSun": "与太阳的距离",
+  "locationTooltip": "查看位置数据"
+}

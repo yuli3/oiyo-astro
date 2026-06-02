@@ -1,0 +1,11 @@
+{
+  "title": "神圣众神殿",
+  "egyptianGuardian": "埃及守护神",
+  "celticTreeSign": "凯尔特树木星座",
+  "birthSymbols": "诞生象征",
+  "symbols": {
+    "Stone": "诞生石",
+    "Flower": "诞生花",
+    "Star": "幸运星"
+  }
+}

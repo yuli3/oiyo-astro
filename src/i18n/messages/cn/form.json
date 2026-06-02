@@ -1,0 +1,15 @@
+{
+  "successTitle": "成功",
+  "successMessage": "已提交。",
+  "errorTitle": "错误",
+  "errorMessage": "失败的。",
+  "subjectLabel": "主题",
+  "subjectPlaceholder": "输入主题",
+  "categoryLabel": "类别",
+  "priorityLabel": "优先事项",
+  "descriptionLabel": "描述",
+  "descriptionPlaceholder": "输入描述",
+  "submitting": "正在提交...",
+  "submitButton": "提交",
+  "title": "形式"
+}

@@ -1,0 +1,22 @@
+{
+  "description": "부가가치세(VAT)를 즉시 계산하세요.",
+  "title": "부가가치세 계산기",
+  "modes": {
+    "total": "총액에서",
+    "supply": "공급 가격에서"
+  },
+  "labels": {
+    "totalAmount": "총액(가액+VAT)",
+    "supplyAmount": "공급 가격(VAT 제외 가치)"
+  },
+  "results": {
+    "supplyPrice": "공급가격",
+    "vat": "부가가치세 금액",
+    "total": "총액"
+  },
+  "tip": {
+    "title": "부가가치세(VAT)란 무엇입니까?",
+    "content": "부가가치세(VAT)는 상품과 서비스의 가치에 추가되는 소비세입니다."
+  },
+  "disclaimer": "이 도구는 대화 및 표시 목적으로만 사용됩니다."
+}

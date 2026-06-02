@@ -1,0 +1,57 @@
+{
+  "steps": {
+    "welcome": {
+      "description": "通过古老智慧与现代心理学探索您的宇宙蓝图。",
+      "title": "欢迎来到您的庇护所"
+    },
+    "interests": {
+      "description": "选择与您产生共鸣的内容 — 我们将为您量身定制旅程。",
+      "title": "什么在召唤您？"
+    },
+    "complete": {
+      "description": "您的庇护所已就绪。开启自我探索之旅。",
+      "title": "您的庇护所在等待"
+    }
+  },
+  "interests": {
+    "personality": "性格",
+    "career": "职业",
+    "relationships": "人际关系",
+    "wellness": "身心健康",
+    "creativity": "创造力",
+    "lifestyle": "生活方式",
+    "prompt": "选择您感兴趣的领域"
+  },
+  "welcome": {
+    "user": "欢迎，{name}",
+    "description": "您已加入一个探索自我架构的探索者社群。"
+  },
+  "features": {
+    "tests": {
+      "title": "性格测试",
+      "description": "超过 30 项基于科学的评估。"
+    },
+    "history": {
+      "title": "您的历史",
+      "description": "所有结果已保存并整理归档。"
+    },
+    "recommendations": {
+      "title": "个性化洞察",
+      "description": "根据您的独特档案量身定制的指引。"
+    }
+  },
+  "complete": {
+    "success": "引导流程已完成",
+    "message": "您的偏好已保存。欢迎来到庇护所。",
+    "benefits": {
+      "dashboard": "访问您的个人仪表板",
+      "recommendations": "获取个性化推荐"
+    }
+  },
+  "actions": {
+    "skip": "跳过",
+    "completing": "正在进入庇护所...",
+    "getStarted": "进入庇护所",
+    "next": "下一步"
+  }
+}

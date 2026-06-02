@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Synaptic Connection Grid",
+    "subtitle": "Live Resonance Field",
+    "analyze": "开始校准",
+    "share": "传递预言"
+  },
+  "share": {
+    "saveToStory": "存档到故事",
+    "instruction": "保存启示并将其体现在您的数字挂毯上。"
+  },
+  "status": {
+    "complete": "关系炼金术综合",
+    "incomplete": "正在进行校准 ({count}/4)",
+    "continue": "继续校准"
+  },
+  "pillars": {
+    "attachment": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "发起询价"
+    },
+    "communication": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "发起询价"
+    },
+    "conflict": {
+      "result": {
+        "title": "Synaptic Connection Grid",
+        "subtitle": "Live Resonance Field",
+        "lead": "这是您应对摩擦的主要频率。",
+        "scoreHeadline": "主导姿态",
+        "scoreDescription": "控制你的能量场的反应模式。",
+        "traitsTitle": "原型特征",
+        "strengthsTitle": "基础炼金术",
+        "challengesTitle": "意识节点",
+        "tipsTitle": "融合仪式",
+        "breakdownTitle": "谐波击穿",
+        "realLifeTitle": "现实中的表现"
+      },
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "发起询价"
+    },
+    "loveLanguage": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "发起询价"
+    }
+  },
+  "empty": {
+    "title": "Synaptic Connection Grid",
+    "description": "完成四个核心调查，揭示您独特的人际关系几何。"
+  },
+  "grid": {
+    "title": "突触连接网格",
+    "subtitle": "现场共振场"
+  }
+}

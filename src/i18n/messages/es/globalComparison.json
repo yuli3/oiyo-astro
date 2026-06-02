@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "cta": {
+      "button": "Take Tests Now"
+    },
+    "keywords": "keywords, tags, seo",
+    "badge": "Global Benchmarking",
+    "title": "Mi Análisis",
+    "description": "Análisis exhaustivo y perspectivas personalizadas"
+  },
+  "filters": {
+    "region": "🌏 Seleccionar Región",
+    "age": "👥 Grupo de edad",
+    "gender": "⚧ Género",
+    "test": "Título de la prueba"
+  },
+  "tabs": {
+    "overview": "📈 Descripción general",
+    "regional": "🗺️ Comparación regional",
+    "demographics": "👥 Demografía",
+    "rankings": "🏆 Clasificaciones"
+  },
+  "chart": {
+    "scoreDistribution": "📊 Distribución de puntuación",
+    "personalityRankings": "🏆 Clasificaciones de tipos de personalidad",
+    "avgScore": "puntuación promedio",
+    "users": "usuarias",
+    "topRankText": "Estás clasificado entre el {percent}% superior de usuarios en todo el mundo 🚀",
+    "allAges": "Todas las edades",
+    "all": "Toda",
+    "male": "Masculina",
+    "female": "Femenina",
+    "global": "Global",
+    "asia": "Asia",
+    "europe": "Europa",
+    "northAmerica": "América del norte",
+    "korea": "Corea",
+    "southAmerica": "Sudamerica",
+    "africa": "África",
+    "oceania": "Oceanía"
+  },
+  "demographics": {
+    "comingSoon": "📊 Próximamente funciones de análisis demográfico."
+  },
+  "cta": {
+    "button": "Realice pruebas ahora",
+    "title": "Mi Análisis",
+    "description": "Análisis exhaustivo y perspectivas personalizadas"
+  },
+  "features": {
+    "benchmarking": {
+      "title": "Mi Análisis",
+      "description": "Análisis exhaustivo y perspectivas personalizadas"
+    },
+    "regional": {
+      "title": "Mi Análisis",
+      "description": "Análisis exhaustivo y perspectivas personalizadas"
+    }
+  },
+  "insights": {
+    "yourScore": "Tu puntuación",
+    "globalAverage": "Promedio mundial",
+    "percentile": "percentil",
+    "topPerformers": "Mejores artistas",
+    "aboveAverage": "Por encima del promedio",
+    "belowAverage": "Bajo",
+    "regions": "Regiones"
+  },
+  "test": {
+    "progress": "Progreso",
+    "submit": "Enviar",
+    "loading": "📊 Analyzing...",
+    "selectOption": "Seleccionar",
+    "insightBullets": ["Revela las capas ocultas de tu filosofía personal."]
+  },
+  "result": {
+    "title": "Mi Análisis",
+    "description": "Análisis exhaustivo y perspectivas personalizadas"
+  },
+  "badge": "Evaluación comparativa global",
+  "loading": "📊Analizando...",
+  "noData": "📋 No hay datos para analizar. Primero complete las pruebas de personalidad.",
+  "title": "Mi Análisis",
+  "description": "Análisis exhaustivo y perspectivas personalizadas",
+  "keywords": "palabras clave, etiquetas, SEO"
+}

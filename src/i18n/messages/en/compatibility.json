@@ -1,0 +1,90 @@
+{
+  "types": {
+    "soulmate": {
+      "name": "Soulmate",
+      "description": "A perfect harmony that needs no explanation."
+    },
+    "complementary": {
+      "name": "Complementary",
+      "description": "A relationship where differences become attractive charms."
+    },
+    "mentor": {
+      "name": "Guiding Connection",
+      "description": "A developmental relationship of mutual learning and growth."
+    },
+    "challenging": {
+      "name": "Stimulus for Growth",
+      "description": "A relationship where acknowledging differences brings great realization."
+    }
+  },
+  "scores": {
+    "high": "Fantastic Chemistry",
+    "medium": "Comfortable Harmony",
+    "low": "Effort Required"
+  },
+  "title": "Fortune Compatibility",
+  "description": "Analyze relationships and synergy.",
+  "narrative": "Your meeting is like a precious gem, where each of you completes what the other lacks.",
+  "levels": {
+    "perfect": "Perfect Harmony",
+    "great": "Great Chemistry",
+    "good": "Good Potential",
+    "challenging": "Growth Opportunity"
+  },
+  "selectPartner": "Select Partner",
+  "selectDesc": "Choose a destiny to compare with yours.",
+  "insights": "Deep Insights",
+  "combination": "Cosmic Combination",
+  "loveLanguages": "Love Languages",
+  "dateIdeas": "Date Ideas",
+  "tryAnother": "Try Another Match",
+  "share": "Share Result",
+  "analysis": {
+    "excellent": "Soulmates",
+    "veryGood": "Very Good",
+    "good": "Good Relationship",
+    "average": "Average",
+    "needsWork": "Needs Work",
+    "challenging": "Watch for Conflict"
+  },
+  "subtitle": "Discover the harmony between two destinies",
+  "yourInfo": "Your Info",
+  "partnerInfo": "Partner Info",
+  "result": {
+    "title": "Compatibility Results",
+    "elements": "Elements",
+    "zodiac": "Zodiac",
+    "personality": "Personality",
+    "strengths": "Strengths",
+    "challenges": "Growth points",
+    "retake": "Re-curate"
+  },
+  "error": "❌ Error",
+  "calculate": "Calculate Compatibility",
+  "traits": {
+    "controlling": {
+      "title": "Challenging Dynamic",
+      "description": "Opposing forces that can lead to growth through friction or conflict."
+    },
+    "neutral": {
+      "title": "Balanced Connection",
+      "description": "Neither strongly supporting nor conflicting, allowing for a stable connection."
+    },
+    "same": {
+      "title": "Kindred Spirits",
+      "description": "Similar energy flows creating deep understanding and friendship."
+    },
+    "supporting": {
+      "title": "Supporting Relationship",
+      "description": "A relationship where one nourishes and supports the other, creating natural harmony."
+    }
+  },
+  "reasons": {
+    "same": "Comfortable relationship like friends sharing the same element.",
+    "generates": "Dynamic relationship where you give energy and vitality.",
+    "generated_by": "Supportive relationship where you receive warmth and support.",
+    "controls": "Active relationship that drives achievement through mutual challenge.",
+    "controlled_by": "Disciplined relationship that finds order through mutual adjustment.",
+    "neutral": "A neutral relationship with no special interaction."
+  }
+}

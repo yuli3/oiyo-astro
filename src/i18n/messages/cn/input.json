@@ -1,0 +1,62 @@
+{
+  "errors": {
+    "invalidDate": "日期不合法。",
+    "invalidTime": "时辰不合法。",
+    "unknown": "发生未知之玄机错误。"
+  },
+  "formTitle": "输入诞生天机",
+  "privacyNote": "汝之信息仅用于天命解析，玄机不留尘世，永不存储。",
+  "nameLabel": "名讳",
+  "namePlaceholder": "输入汝之名讳（可选）",
+  "birthDateLabel": "出生日期",
+  "birthTimeLabel": "出生时间",
+  "hourPlaceholder": "时",
+  "minutePlaceholder": "分",
+  "locationLabel": "诞生之地",
+  "locationPlaceholder": "选择城市",
+  "trueSolarTime": "真太阳时",
+  "timeUnknownTitle": "时辰不详",
+  "timeUnknownDesc": "若诞辰时辰不详，解析将侧重于年、月、日之柱。",
+  "genderLabel": "性别",
+  "genderPlaceholder": "选择",
+  "genderMale": "乾造（男）",
+  "genderFemale": "坤造（女）",
+  "calendarNoticeDesc": "吾等将自动处理公历与农历之转换。",
+  "analyzing": "推演天体运行之变...",
+  "submitButton": "揭示宿命",
+  "secureTransmission": "玄学加密传输",
+  "birthDate": "出生日期",
+  "birthTime": "出生时间",
+  "location": "出生地点",
+  "gender": "性别",
+  "dateLabel": "诞辰日期",
+  "timeLabel": "诞辰时辰",
+  "hourLabel": "时",
+  "minuteLabel": "分",
+  "calendarNoticeTitle": "历法系统",
+  "timeline": {
+    "origin": "根源",
+    "moment": "瞬间",
+    "seal": "法印"
+  },
+  "stage": {
+    "origin": {
+      "title": "封存之预言"
+    },
+    "moment": {
+      "title": "封存之预言",
+      "lockedTitle": "天命坐标已锁定",
+      "hint": "请输入准确的诞辰时辰，以获致精准解析。"
+    },
+    "seal": {
+      "title": "封存之预言",
+      "description": "时空坐标已然汇合。星辰待汝之令。"
+    }
+  },
+  "optional": "可选",
+  "nextStep": "下一步",
+  "lockCoordinates": "锁定天命坐标",
+  "unlock": "解除锁定",
+  "anonymous": "无名行者",
+  "revealProphecy": "开启天命预言"
+}

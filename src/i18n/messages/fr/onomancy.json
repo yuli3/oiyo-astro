@@ -1,0 +1,29 @@
+{
+  "components": {
+    "sound": {
+      "name": "Énergie Sonore",
+      "description": "La vibration unique et l'onde générées lorsque le nom est prononcé."
+    },
+    "meaning": {
+      "name": "Sens et Intention",
+      "description": "L'intention dans les caractères et la suggestion du destin cachée derrière eux."
+    },
+    "balance": {
+      "name": "Harmonie Élémentaire",
+      "description": "L'équilibre et l'harmonie entre les caractères du nom."
+    }
+  },
+  "result": {
+    "excellent": "Un nom hautement propice qui profitera largement au monde.",
+    "good": "Un bon nom qui apporte plus de fortune plus il est appelé.",
+    "fair": "Un nom qui cache l'extraordinaire dans l'ordinaire.",
+    "caution": "Un nom qui serait meilleur s'il était appelé un peu plus doucement."
+  },
+  "title": "Onomantie",
+  "description": "Lire l'énergie unique et le flux du destin au sein de votre nom.",
+  "narrative": "Votre nom est le sortilège le plus puissant que vous lancez chaque jour sur le monde.",
+  "missingForce": "Force Manquante",
+  "none": "Aucun",
+  "vibrationFill": "Remplissage Vibratoire",
+  "circularText": "Boucle de Vibration"
+}

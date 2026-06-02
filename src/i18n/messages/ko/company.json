@@ -1,0 +1,26 @@
+{
+  "about": {
+    "mission": "우리의 신성한 부름",
+    "values": "우리의 핵심 가치",
+    "story": "연대기"
+  },
+  "legal": {
+    "privacy": {
+      "sanctity": "데이터의 성역",
+      "sanctity_header": "익명의 방패",
+      "insight": "통찰력의 생성",
+      "insight_header": "집단지성, 개인주권",
+      "sovereignty": "영혼의 주권",
+      "sovereignty_header": "잊을 권리"
+    },
+    "terms": {
+      "pact": "서약에 대한 인식",
+      "pact_header": "디지털 프로토콜 승인",
+      "duties": "사도의 의무",
+      "duties_header": "진실된 조사의 의무",
+      "knowledge": "신성한 지식",
+      "knowledge_header": "공명 알고리즘의 소유권"
+    }
+  },
+  "marketing": {}
+}

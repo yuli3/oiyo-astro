@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "generatedOn": "Creation date",
+    "testsCompleted": "Tests Completed",
+    "dimensionsAnalyzed": "analyzed dimensions",
+    "consistencyScore": "Consistency Score",
+    "keyStrengths": "core strengths",
+    "title": "Comprehensive Analysis Summary"
+  },
+  "errors": {
+    "unableToGenerate": "Unable to generate report",
+    "insufficientData": "Lack of test data",
+    "needThreeTests": "You must complete at least three tests to generate a comprehensive report.",
+    "pdfFailed": "PDF creation failed. Please try again.",
+    "reportNotFound": "Report content not found",
+    "takeMoreTests": "Do more testing"
+  },
+  "notifications": {
+    "linkCopied": "Link has been copied"
+  },
+  "test": {
+    "progress": "progress",
+    "next": "next",
+    "previous": "before",
+    "submit": "Submit",
+    "loading": "Loading",
+    "selectOption": "Choose",
+    "insightBullets": [
+      "Consolidate all test results into one",
+      "Discover consistent personality patterns",
+      "Personalized growth guide provided"
+    ]
+  },
+  "result": {
+    "title": "Comprehensive personality report",
+    "description": "Check out my complete personality profile and insights."
+  },
+  "meta": {
+    "title": "Comprehensive personality report",
+    "description": "Get a complete personality analysis report incorporating all test results.",
+    "keywords": "Comprehensive report, personality analysis, psychological test, personality profile"
+  },
+  "subtitle": "Complete personality profile across all tests",
+  "downloadPDF": "Download PDF",
+  "shareReport": "Share report",
+  "generating": "Creating",
+  "analyzing": "Analyzing",
+  "generatingPDF": "Creating PDF",
+  "sharing": "Sharing",
+  "dominantTraits": "main characteristics",
+  "dimensions": "personality dimensions",
+  "dimensionsDescription": "Dimensions of my personality analyzed through various tests",
+  "strengths": "strength",
+  "strengthsDescription": "My core strengths and outstanding abilities",
+  "growthAreas": "growth area",
+  "growthAreasDescription": "Areas with potential for development and directions for improvement",
+  "testsByCategory": "Tests by Category",
+  "testsByCategoryDescription": "Distribution of completed tests",
+  "shareTitle": "Share comprehensive personality report",
+  "shareText": "Check out our comprehensive personality analysis report"
+}

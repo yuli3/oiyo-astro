@@ -1,0 +1,587 @@
+{
+  "economicPersonality": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "financial personality, money management, budgeting, spending habits, financial wellness"
+    },
+    "hero": {
+      "subtitle": "Discover your money personality",
+      "cta": "Start Test",
+      "badge": "💰 2025 Must-Take Finance Test",
+      "time": "⏱️ Takes 2 minutes",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "types": {
+      "spender": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "saver": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "investor": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "balanced": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "行为模式",
+          "description": "了解消费触发因素背后的心理。",
+          "question": "我为什么买？",
+          "answer": "往往是情绪化的。"
+        },
+        {
+          "icon": "💰",
+          "title": "节省潜力",
+          "description": "找出耗尽每月预算的小漏洞。",
+          "question": "我的钱在哪里？",
+          "answer": "小习惯日积月累。"
+        },
+        {
+          "icon": "📈",
+          "title": "投资风格",
+          "description": "了解您是冒险家还是安全寻求者。",
+          "question": "开始投资？",
+          "answer": "了解你的耐受力。"
+        }
+      ],
+      "benefit1": "📊 Your scores across 4 economic tendencies",
+      "benefit2": "💰 Type-specific financial strategies",
+      "benefit3": "⚠️需要注意的财务习惯",
+      "benefit4": "🎯 3 actionable implementation plans",
+      "benefit5": "🔄 与其他类型的兼容性",
+      "title": "Awaiting deep synthesis..."
+    },
+    "cta": {
+      "button": "Start Free Test",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "category": {
+      "saving": "Saving",
+      "investing": "Investing",
+      "spending": "Spending",
+      "education": "Education",
+      "protection": "Risk"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        }
+      ],
+      "title": "Awaiting deep synthesis...",
+      "question1": "How do you navigate life's currents?",
+      "answer1": "You possess an intuitive compass that points toward growth.",
+      "question2": "How do you navigate life's currents?",
+      "answer2": "Inner harmony guides your everyday actions.",
+      "question3": "What is your unique core frequency?",
+      "answer3": "Inner harmony guides your everyday actions.",
+      "question4": "How do you navigate life's currents?",
+      "answer4": "Your unique perspective shapes your reality."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "小小的选择累积成伟大的命运。"
+        }
+      ],
+      "feature1": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "feature2": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "feature3": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "feature4": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "test": {
+      "insightBullets": ["财务行为分析", "风险偏好评估", "定制节省策略"],
+      "questions": [
+        {
+          "id": "q1",
+          "question": "拿到工资后你首先要做的是什么？",
+          "options": {
+            "a": "先将固定金额转入储蓄账户",
+            "b": "立即购买我想要的东西",
+            "c": "存入投资账户并留意机会",
+            "d": "按计划分配生活开支、储蓄和投资"
+          }
+        },
+        {
+          "id": "q2",
+          "question": "如果你突然得到50万韩元（约400美元）怎么办？",
+          "options": {
+            "a": "买我一直想要的东西",
+            "b": "全部存入应急基金",
+            "c": "投资股票或基金",
+            "d": "花一些，剩下的存/投资"
+          }
+        },
+        {
+          "id": "q3",
+          "question": "您对财务管理有何看法？",
+          "options": {
+            "a": "钱就是用来花的！ 优洛",
+            "b": "安全的银行存款是最好的",
+            "c": "学习和投资——钱生钱",
+            "d": "享受生活，但为未来做好准备"
+          }
+        },
+        {
+          "id": "q4",
+          "question": "每天的咖啡费用为 5,000 韩元 - 每月 150,000 韩元！",
+          "options": {
+            "a": "咖啡是我的幸福！ 继续喝",
+            "b": "改为在家煮咖啡",
+            "c": "每月投资15万韩元",
+            "d": "减少到每周2-3次，其余的保存"
+          }
+        },
+        {
+          "id": "q5",
+          "question": "您的财务目标是什么？",
+          "options": {
+            "a": "享受当下！ 未来稍后到来",
+            "b": "至少节省1亿韩元以获得稳定的生活",
+            "c": "实现财务自由！ 让钱工作",
+            "d": "在保持生活质量的同时适度储蓄"
+          }
+        },
+        {
+          "id": "q6",
+          "question": "您对信用卡分期付款有何看法？",
+          "options": {
+            "a": "经常使用。 现在没钱也可以买",
+            "b": "切勿使用。 利息是浪费",
+            "c": "仅策略性地使用 0% 利息分期付款",
+            "d": "仅对大额采购使用 0% 分期付款"
+          }
+        },
+        {
+          "id": "q7",
+          "question": "您对财商教育的态度是什么？",
+          "options": {
+            "a": "不感兴趣。 而是花时间去享受乐趣",
+            "b": "只查看存款利率",
+            "c": "通过 YouTube、书籍、研讨会积极学习",
+            "d": "查找我需要的内容并进行练习"
+          }
+        },
+        {
+          "id": "q8",
+          "question": "给朋友的结婚彩礼钱？",
+          "options": {
+            "a": "10万+韩元！ 一生只有一次",
+            "b": "最低金额！ 我也在挣扎",
+            "c": "根据关系计算，准确给出",
+            "d": "遵循一般市场价格"
+          }
+        },
+        {
+          "id": "q9",
+          "question": "您拥有房屋的计划是什么？",
+          "options": {
+            "a": "月租很舒服。 不想贷款",
+            "b": "慢慢攒钱用现金购买",
+            "c": "通过投资建立种子资金，利用杠杆",
+            "d": "通过储蓄+投资进行系统准备"
+          }
+        },
+        {
+          "id": "q10",
+          "question": "如果你突然需要一大笔钱？",
+          "options": {
+            "a": "恐慌！ 没有应急资金，需要借钱",
+            "b": "从紧急基金中提取",
+            "c": "出售部分投资资产",
+            "d": "应急资金与流动资产结合解决"
+          }
+        }
+      ],
+      "progress": "Question {current} of {total}",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "提交",
+      "loading": "Analyzing your financial behavior pattern...",
+      "selectOption": "Select an option",
+      "subtitle": "发现你的金钱性格"
+    },
+    "result": {
+      "recommendations": {
+        "spender": [
+          {
+            "category": "保存",
+            "priority": "high",
+            "title": "通过自动传输开始强制保存",
+            "description": "设置在发薪日自动转账到储蓄账户，以便在您有机会消费之前进行储蓄。",
+            "steps": [
+              "设置从工资到储蓄账户的自动转账",
+              "从月收入的10%开始",
+              "3个月后增加至15%，6个月后增加至20%"
+            ],
+            "benefit": "1年后实现至少年薪15%的储蓄"
+          },
+          {
+            "category": "开支",
+            "priority": "high",
+            "title": "设定支出优先顺序",
+            "description": "在购买任何非必需品之前制定 24 小时等待规则，以减少冲动购买。",
+            "steps": [
+              "将商品添加到购物车并等待 24 小时",
+              "评价必要性 (1-10) 和满意度 (1-10)",
+              "仅当总分超过 15 分时才购买"
+            ],
+            "benefit": "冲动购买减少 50%"
+          }
+        ],
+        "saver": [
+          {
+            "category": "投资",
+            "priority": "high",
+            "title": "从小额投资开始",
+            "description": "仅靠储蓄无法战胜通货膨胀。 从低风险投资产品开始增加您的财富。",
+            "steps": [
+              "将 10% 的储蓄投资于低风险基金",
+              "从 ETF 或指数基金开始",
+              "每3个月增加投资比例5%"
+            ],
+            "benefit": "预计长期年回报率为4-6%"
+          },
+          {
+            "category": "开支",
+            "priority": "中等的",
+            "title": "为生活质量而支出",
+            "description": "过度节俭会降低生活质量。 投资于经验和自我奖励。",
+            "steps": [
+              "将每月预算的 5% 分配给体验/爱好",
+              "每季度与亲人外出就餐",
+              "确保年度旅行预算"
+            ],
+            "benefit": "增加幸福感并预防倦怠"
+          }
+        ],
+        "investor": [
+          {
+            "category": "保护",
+            "priority": "high",
+            "title": "确保应急基金",
+            "description": "仅靠投资资产无法应对突发开支。 保持流动性以确保安全。",
+            "steps": [
+              "将 6 个月的生活费用保存在可访问的帐户中",
+              "切勿投资应急基金",
+              "使用后立即补充"
+            ],
+            "benefit": "稳定应对突发情况"
+          },
+          {
+            "category": "投资",
+            "priority": "中等的",
+            "title": "加强风险管理",
+            "description": "使用多元化和止损原则来保护您不断增长的投资组合。",
+            "steps": [
+              "一项资产的投资不要超过 10%",
+              "-20%损失自动止损",
+              "定期重新平衡您的投资组合"
+            ],
+            "benefit": "防范重大损失，稳定收益"
+          }
+        ],
+        "balanced": [
+          {
+            "category": "教育",
+            "priority": "中等的",
+            "title": "更新金融知识",
+            "description": "保持平衡的投资组合需要在不断变化的市场中不断学习。",
+            "steps": [
+              "每月观看财经 YouTube/播客",
+              "每季度审查财务状况",
+              "每年请教专家"
+            ],
+            "benefit": "及时了解趋势并优化回报"
+          }
+        ]
+      },
+      "habitData": {
+        "spender": [
+          {
+            "habit": "立即购买新产品",
+            "impact": "消极的",
+            "tip": "一周后重新考虑是否还想要它"
+          },
+          {
+            "habit": "积极使用优惠券",
+            "impact": "积极的",
+            "tip": "安装优惠券应用程序并在购买前检查"
+          }
+        ],
+        "saver": [
+          {
+            "habit": "每月节省固定金额",
+            "impact": "积极的",
+            "tip": "设置自动传输更确定"
+          },
+          {
+            "habit": "甚至在必需品上也有节省的压力",
+            "impact": "消极的",
+            "tip": "将每月预算的5%用于自我奖励"
+          }
+        ],
+        "investor": [
+          {
+            "habit": "每日查看经济新闻",
+            "impact": "积极的",
+            "tip": "订阅时事通讯以获取有效信息"
+          },
+          {
+            "habit": "沉迷于短期利益",
+            "impact": "消极的",
+            "tip": "制定并遵循长期投资原则"
+          }
+        ],
+        "balanced": [
+          {
+            "habit": "定期审查收入和支出",
+            "impact": "积极的",
+            "tip": "使用预算应用程序更方便"
+          },
+          {
+            "habit": "设定目标但实现率低",
+            "impact": "中性的",
+            "tip": "设定具体且可衡量的目标"
+          }
+        ]
+      },
+      "warningData": {
+        "extremeSpender": "消费倾向非常高。 我们强烈推荐最低限度的储蓄计划。",
+        "extremeSaver": "储蓄率非常高。 考虑进行对冲通胀的投资。",
+        "extremeInvestor": "投资比例非常高。 请核实您的应急资金和风险管理。",
+        "underspending": "享受当下也很重要。 考虑适当的消费。"
+      },
+      "compatibility": {
+        "spender": {
+          "spender": {
+            "score": 60,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 70,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 65,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "saver": {
+          "spender": {
+            "score": 70,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 90,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 80,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "investor": {
+          "spender": {
+            "score": 65,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 80,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 75,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "balanced": {
+          "spender": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 95,
+            "name": "完美和谐",
+            "tip": "实现相互尊重的理想管理。"
+          }
+        },
+        "scoreLabel": "兼容性分数"
+      },
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "loading": "分析您的财务行为模式...",
+      "scoreBreakdown": "分数明细",
+      "yourScore": "你的分数",
+      "strengths": "标志性优势",
+      "weaknesses": "成长机会",
+      "actionSteps": "行动步骤",
+      "habits": "财务习惯",
+      "warnings": "辅导员的警告",
+      "compatibilityTitle": "金融和谐",
+      "compatibilityDesc": "您的财务个性如何与他人产生共鸣。",
+      "downloadPDF": "下载报告",
+      "share": "分享结果",
+      "retake": "重考",
+      "home": "家",
+      "linkCopied": "链接已复制到剪贴板！",
+      "shareTitle": "我的财务性格：{type}",
+      "shareText": "我发现了我的财务性格！ 在这里检查你的。"
+    },
+    "Failed to download image": {
+      "Please try again": {
+        "": "仪表板"
+      }
+    },
+    "title": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis..."
+  }
+}

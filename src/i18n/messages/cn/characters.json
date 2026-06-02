@@ -1,0 +1,10 @@
+{
+  "title": "选择角色",
+  "subtitle": "选择您的头像",
+  "traits": {
+    "empathy": "共情",
+    "optimism": "乐观"
+  },
+  "select": "选择",
+  "changeCharacter": "更改角色"
+}

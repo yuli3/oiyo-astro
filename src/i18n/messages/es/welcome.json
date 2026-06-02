@@ -1,0 +1,5 @@
+{
+  "user": "Usuario",
+  "description": "Bienvenido a su panel de control.",
+  "greeting": "Bienvenido de nuevo, {nombre}"
+}

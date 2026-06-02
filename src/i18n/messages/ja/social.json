@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Synaptic Connection Grid",
+    "subtitle": "Live Resonance Field",
+    "analyze": "キャリブレーションの開始",
+    "share": "予言を送信する"
+  },
+  "share": {
+    "saveToStory": "ストーリーへのアーカイブ",
+    "instruction": "啓示を保存し、デジタルタペストリーに表現してください。"
+  },
+  "status": {
+    "complete": "合成された関係錬金術",
+    "incomplete": "校正中 ({count}/4)",
+    "continue": "キャリブレーションを続行"
+  },
+  "pillars": {
+    "attachment": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "問い合わせを開始する"
+    },
+    "communication": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "問い合わせを開始する"
+    },
+    "conflict": {
+      "result": {
+        "title": "Synaptic Connection Grid",
+        "subtitle": "Live Resonance Field",
+        "lead": "これは、摩擦を乗り越える主な周波数です。",
+        "scoreHeadline": "ドミナントスタンス",
+        "scoreDescription": "あなたのエネルギーフィールドを支配する反応パターン。",
+        "traitsTitle": "典型的な特徴",
+        "strengthsTitle": "基礎錬金術",
+        "challengesTitle": "意識のノード",
+        "tipsTitle": "統合の儀式",
+        "breakdownTitle": "高調波内訳",
+        "realLifeTitle": "現実の現象"
+      },
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "問い合わせを開始する"
+    },
+    "loveLanguage": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "問い合わせを開始する"
+    }
+  },
+  "empty": {
+    "title": "Synaptic Connection Grid",
+    "description": "4 つの主要な質問に答えて、あなたのユニークな対人関係を明らかにしましょう。"
+  },
+  "grid": {
+    "title": "Synaptic 接続グリッド",
+    "subtitle": "ライブレゾナンスフィールド"
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "title": "Fortune Comprehensive Center",
+  "subtitle": "Check your destiny with various tools.",
+  "cta": "Enter",
+  "hub": {
+    "meta": {
+      "title": "Finance Center ",
+      "description": "Financial personality tests, calculators, and tools."
+    },
+    "title": "Finance Center",
+    "subtitle": "Master your financial destiny with our comprehensive tools"
+  },
+  "tabs": {
+    "comprehensive": "comprehensive horoscope",
+    "saju": "authentic fortune teller",
+    "tarot": "tarot",
+    "astrology": "astrology",
+    "numerology": "numerology",
+    "dream": "dream interpretation",
+    "biorhythm": "biorhythm",
+    "asset": "asset",
+    "budget": "budget",
+    "compound": "welfare",
+    "gift": "bestowal",
+    "gig": "N job",
+    "freelancer": "freelancer",
+    "vat": "surtax",
+    "card": "card",
+    "realEstate": "real estate"
+  },
+  "bizReport": "Detailed business analysis report",
+  "calculate": "Calculate",
+  "dashboard": {
+    "scope": {
+      "daily": "daily",
+      "weekly": "weekly",
+      "monthly": "monthly",
+      "yearly": "annual"
+    },
+    "profile": {
+      "title": "my profile",
+      "description": "Analysis data based on date of birth"
+    },
+    "biorhythm": {
+      "title": "biorhythm",
+      "physical": "body",
+      "emotional": "emotion",
+      "intellectual": "intelligence"
+    },
+    "fortune": {
+      "numerology": {
+        "title": "numerology",
+        "lifePath": "life pass",
+        "personalYear": "personal year"
+      }
+    },
+    "saju": {
+      "title": "Four fortunes (four fortunes)",
+      "dominant": "Dominant Element (Dragon God)",
+      "lacking": "Tribal Elemental (Yakshin)"
+    },
+    "rating": {
+      "critical": "very bad",
+      "low": "bad",
+      "moderate": "commonly",
+      "good": "well",
+      "excellent": "very good"
+    },
+    "card": {
+      "score": "Score: {score}",
+      "advice": "advice",
+      "luckyNumbers": "lucky number",
+      "luckyColors": "lucky color",
+      "warnings": "caution"
+    },
+    "title": "Horoscope Dashboard"
+  },
+  "comprehensiveTitle": "Comprehensive horoscope analysis",
+  "comprehensiveDesc": "Receive a multi-faceted fate analysis with just one entry of information."
+}

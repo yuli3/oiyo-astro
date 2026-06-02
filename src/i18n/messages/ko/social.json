@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "당신의 관계 연금술",
+    "subtitle": "신성한 연결의 숨겨진 패턴을 밝혀보세요. 당신의 유대감, 대화, 마찰, 헌신의 연금술을 통합된 인식의 장으로 종합하세요.",
+    "analyze": "교정 시작",
+    "share": "예언을 전하다"
+  },
+  "share": {
+    "saveToStory": "스토리에 보관",
+    "instruction": "계시를 보존하고 디지털 태피스트리에 나타내십시오."
+  },
+  "status": {
+    "complete": "관계형 연금술 합성",
+    "incomplete": "교정 진행 중({count}/4)",
+    "continue": "교정 계속"
+  },
+  "pillars": {
+    "attachment": {
+      "title": "결속 연금술",
+      "description": "당신의 영혼이 안식처와 연결을 찾는 방법.",
+      "action": "문의 시작"
+    },
+    "communication": {
+      "title": "대화 연금술",
+      "description": "당신이 표현하고 듣는 주파수.",
+      "action": "문의 시작"
+    },
+    "conflict": {
+      "result": {
+        "title": "갈등 연금술 프로파일러",
+        "subtitle": "당신의 독특한 전형적인 입장을 이해하세요.",
+        "lead": "이는 마찰을 탐색하는 기본 주파수입니다.",
+        "scoreHeadline": "지배적인 자세",
+        "scoreDescription": "당신의 에너지 장을 지배하는 반응 패턴.",
+        "traitsTitle": "전형적인 특성",
+        "strengthsTitle": "기초 연금술",
+        "challengesTitle": "인식의 노드",
+        "tipsTitle": "통합의 의식",
+        "breakdownTitle": "고조파 파괴",
+        "realLifeTitle": "현실의 발현"
+      },
+      "title": "갈등 연금술",
+      "description": "마찰을 지혜로 바꾸는 방법.",
+      "action": "문의 시작"
+    },
+    "loveLanguage": {
+      "title": "헌신적인 연금술",
+      "description": "신성한 애정을 전달하고 받는 방법.",
+      "action": "문의 시작"
+    }
+  },
+  "empty": {
+    "title": "관계형 청사진을 발견하세요",
+    "description": "당신의 고유한 대인 관계 기하학을 드러내려면 네 가지 핵심 질문을 완료하십시오."
+  },
+  "grid": {
+    "title": "시냅스 연결 그리드",
+    "subtitle": "라이브 공명장"
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "meta": {
+    "title": "Recommandation de cadeau",
+    "description": "Créez une ambiance avec des parfums doux",
+    "keywords": "Synchronisation des fils de ton destin..."
+  },
+  "hero": {
+    "title": "Recommandation de cadeau",
+    "subtitle": "Cadeaux parfaits pour ton personne spéciale",
+    "cta": "Commencer le quiz"
+  },
+  "features": {
+    "personalized": {
+      "title": "Recommandation de cadeau",
+      "description": "Créez une ambiance avec des parfums doux"
+    },
+    "variety": {
+      "title": "Recommandation de cadeau",
+      "description": "Créez une ambiance avec des parfums doux"
+    },
+    "shoppingLinks": {
+      "title": "Recommandation de cadeau",
+      "description": "Créez une ambiance avec des parfums doux"
+    }
+  },
+  "howItWorks": {
+    "steps": {
+      "1": {
+        "title": "Recommandation de cadeau",
+        "desc": "Top 5 des recommandations"
+      },
+      "2": {
+        "title": "Recommandation de cadeau",
+        "desc": "Top 5 des recommandations"
+      },
+      "3": {
+        "title": "Recommandation de cadeau",
+        "desc": "Top 5 des recommandations"
+      },
+      "4": {
+        "title": "Recommandation de cadeau",
+        "desc": "Top 5 des recommandations"
+      }
+    },
+    "title": "Recommandation de cadeau"
+  },
+  "cta": {
+    "button": "Commencer maintenant →"
+  },
+  "landing": {
+    "subtitle": "Cadeaux parfaits pour ton personne spéciale",
+    "cta": "Commencer le quiz"
+  },
+  "ui": {
+    "selectOption": "Sélectionner une option",
+    "progress": "Progrès",
+    "previous": "Précédent"
+  },
+  "result": {
+    "title": "Recommandation de cadeau",
+    "subtitle": "Cadeaux parfaits pour ton personne spéciale",
+    "match": "Correspondance",
+    "reasons": "💡 Pourquoi ce cadeau :",
+    "shopNow": "Acheter maintenant",
+    "save": "Enregistrer",
+    "retake": "Synchronisation des fils de ton destin...",
+    "share": "Partager les résultats",
+    "loading": "Chargement..."
+  },
+  "data": {
+    "questions": {
+      "age": {
+        "options": {
+          "10s": "Adolescent",
+          "20s": "Vingtaine",
+          "30s": "Trentaine",
+          "40s": "Quarantaine",
+          "50plus": "50 ans et plus"
+        },
+        "question": "Quelle est l'occasion ?"
+      },
+      "personality": {
+        "options": {
+          "active": "Actif & Extraverti",
+          "calm": "Calme & Introverti",
+          "creative": "Créatif & Artistique",
+          "practical": "Pratique & Logique"
+        },
+        "question": "Quelle est l'occasion ?"
+      },
+      "interests": {
+        "options": {
+          "tech": "Technologie/Gadgets",
+          "fashion": "Mode/Beauté",
+          "food": "Nourriture/Cuisine",
+          "sports": "Sport/Fitness",
+          "art": "Art et Design",
+          "home": "Maison/Décoration"
+        },
+        "question": "Quelle est l'occasion ?"
+      },
+      "budget": {
+        "options": {
+          "under20": "Moins de 20 €",
+          "20to50": "20-50 €",
+          "50to100": "50-100 €",
+          "over100": "Plus de 100 €"
+        },
+        "question": "Quelle est l'occasion ?"
+      },
+      "relationship": {
+        "options": {
+          "family": "Famille",
+          "friend": "Ami",
+          "romantic": "Partenaire romantique",
+          "colleague": "Collègue"
+        },
+        "question": "Quelle est l'occasion ?"
+      },
+      "occasion": {
+        "options": {
+          "birthday": "Anniversaire",
+          "holiday": "Fête/Anniversaire",
+          "thanks": "Merci",
+          "just-because": "Juste comme ça"
+        },
+        "question": "Quelle est l'occasion ?"
+      }
+    },
+    "products": {
+      "wireless-earbuds": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Parfait pour les mélomanes",
+          "cadeau pratique",
+          "article tendance"
+        ]
+      },
+      "smart-watch": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Pour ceux qui s'intéressent aux soins de santé",
+          "dernière technologie",
+          "Pratique et élégant"
+        ]
+      },
+      "perfume-set": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "cadeau romantique",
+          "forfait luxueux",
+          "Parfait pour les jours spéciaux"
+        ]
+      },
+      "handbag": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Pour ceux qui s'intéressent à la mode",
+          "Peut être utilisé pendant longtemps",
+          "cadeau spécial"
+        ]
+      },
+      "gourmet-set": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Parfait pour les amateurs de cuisine",
+          "cadeaux uniques",
+          "pratique"
+        ]
+      },
+      "coffee-maker": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Pour les amateurs de café",
+          "Disponible pour un usage quotidien",
+          "cadeau luxueux"
+        ]
+      },
+      "yoga-mat": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Pour les amateurs d'exercice",
+          "mode de vie sain",
+          "cadeau pratique"
+        ]
+      },
+      "fitness-tracker": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Pour ceux qui s'intéressent aux soins de santé",
+          "Le compagnon idéal pour un mode de vie sain",
+          "pratique"
+        ]
+      },
+      "diffuser": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Pour ceux qui passent beaucoup de temps à la maison",
+          "atmosphère confortable",
+          "pratique"
+        ]
+      },
+      "luxury-blanket": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Quand vous voulez offrir du confort",
+          "Pratique et luxueux",
+          "Disponible en toutes saisons"
+        ]
+      },
+      "art-book": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Pour les amateurs d'art",
+          "valeur de collection",
+          "cadeau intelligent"
+        ]
+      },
+      "concert-tickets": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "Quand vous souhaitez offrir une expérience en cadeau",
+          "faire des souvenirs",
+          "Pour les amateurs de culture"
+        ]
+      },
+      "notebook-set": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": [
+          "prix raisonnable",
+          "pratique",
+          "Aucun fardeau pour personne"
+        ]
+      },
+      "candle-set": {
+        "name": "Set de bougies",
+        "description": "Créez une ambiance avec des parfums doux",
+        "priceRange": "20-50 €",
+        "reasons": ["prix raisonnable", "un cadeau atmosphérique", "pratique"]
+      }
+    }
+  },
+  "title": "Recommandation de cadeau",
+  "findGift": "Trouver un cadeau",
+  "occasion": "Occasion Spéciale",
+  "budget": "Budget"
+}

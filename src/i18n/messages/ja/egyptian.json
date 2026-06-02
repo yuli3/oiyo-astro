@@ -1,0 +1,272 @@
+{
+  "title": "エジプト占星術",
+  "description": "守護神とデカンによる古代ケメトの知恵。",
+  "systemName": "エジプト占星術",
+  "narrative": "古代のネテルとデカン",
+  "guardianDeity": "守護神",
+  "ariaLabel": "エジプトの神: {god}, {attributes}を持つ。",
+  "deities": {
+    "thoth": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": [
+        "知的",
+        "コミュニケーション能力が高い",
+        "好奇心旺盛",
+        "独創的"
+      ],
+      "strengths": ["問題解決", "書き込み", "教える", "メモリ"],
+      "challenges": ["熟考の上", "神経質", "別働隊"],
+      "domain": ["知恵", "書き込み", "魔法", "Moon"]
+    },
+    "horus": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["勇敢な", "野心的な", "保護", "カリスマ性のある"],
+      "strengths": ["リーダーシップ", "戦略", "正義", "決定"],
+      "challenges": ["衝動性", "傲慢", "対立"],
+      "domain": ["Sky", "War", "保護", "王権"]
+    },
+    "wadjet": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["保護", "忠実な", "激しい", "Just"],
+      "strengths": ["直感", "保護", "決断力"],
+      "challenges": ["独占欲", "嫉妬", "復讐心"],
+      "domain": ["保護", "ロイヤリティー", "正義", "自然"]
+    },
+    "sekhmet": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["激しい", "情熱的", "保護", "強力な"],
+      "strengths": ["勇気", "ヒーリング", "変換", "強さ"],
+      "challenges": ["怒り", "破壊", "過激主義"],
+      "domain": ["War", "ヒーリング", "Sun", "破壊"]
+    },
+    "bastet": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["育成", "遊び心たっぷり", "独立した", "官能的"],
+      "strengths": ["グレース", "保護", "直感", "魅力"],
+      "challenges": ["予測不可能性", "虚栄心", "独立"],
+      "domain": ["Home", "生殖能力", "Cats", "Joy"]
+    },
+    "isis": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["育成", "Wise", "マジカル", "決定した"],
+      "strengths": ["ヒーリング", "魔法", "保護", "献身"],
+      "challenges": ["過保護", "操作", "悲しみ"],
+      "domain": ["魔法", "母性", "知恵", "自然"]
+    },
+    "osiris": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["Wise", "Just", "忍耐強い", "再生可能"],
+      "strengths": ["判定", "リニューアル", "安定性", "公平性"],
+      "challenges": ["受動性", "別働隊", "憂鬱"],
+      "domain": ["アンダーワールド", "農業", "再生", "判定"]
+    },
+    "hathor": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["愛する", "楽しい", "芸術的", "育成"],
+      "strengths": ["創造性", "Love", "調和", "喜び"],
+      "challenges": ["贅沢", "嫉妬", "虚栄心"],
+      "domain": ["Love", "美しさ", "音楽", "Joy"]
+    },
+    "anubis": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["不思議な", "保護", "忠実な", "深刻な"],
+      "strengths": ["変換", "ガイダンス", "保護", "真実"],
+      "challenges": ["分離", "執着", "暗闇"],
+      "domain": ["死", "ミイラ化", "死後の世界", "保護"]
+    },
+    "seth": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["強力な", "混沌とした", "野心的な", "予測不能"],
+      "strengths": ["強さ", "勇気", "独立", "変換"],
+      "challenges": ["カオス", "暴力", "嫉妬", "分離"],
+      "domain": ["カオス", "砂漠", "嵐", "外国人"]
+    },
+    "geb": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["接地", "忍耐強い", "育成", "安定した"],
+      "strengths": ["安定性", "生殖能力", "忍耐", "知恵"],
+      "challenges": ["頑固", "独占欲", "慣性"],
+      "domain": ["地球", "生殖能力", "ミネラル", "ヘビ"]
+    },
+    "nut": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["エーテル的", "保護", "宇宙", "母性"],
+      "strengths": ["ビジョン", "保護", "ミステリー", "無限大"],
+      "challenges": ["距離", "非現実", "圧倒する"],
+      "domain": ["Sky", "星", "コスモス", "誕生"]
+    },
+    "ra": {
+      "name": "ラー",
+      "symbol": "日盤",
+      "traits": ["強力な", "クリエイティブ", "輝く", "権威ある"],
+      "strengths": ["リーダーシップ", "活力", "照明", "真実"],
+      "challenges": ["誇り", "燃え尽き症候群", "支配力"],
+      "domain": ["Sun", "創造", "Life", "注文"]
+    }
+  },
+  "resonance": {
+    "note": "アーカイブは、{domain}の神である{deity}の保護の下、あなたの魂を観察します。古代ケメトでは、この時期に生まれた人は{traits}エネルギーを持つと信じられていました。これは運命ではなく、古代の観察の反響です。"
+  },
+  "elements": {
+    "Air": "風",
+    "Earth": "地",
+    "Fire": "火",
+    "Water": "水"
+  },
+  "colors": {
+    "Azure": "空色",
+    "Silver": "銀",
+    "White": "白",
+    "Brown": "茶",
+    "Green": "緑",
+    "Amber": "琥珀",
+    "Gold": "金",
+    "Crimson": "深紅",
+    "Orange": "橙",
+    "Deep Blue": "紺",
+    "Turquoise": "ターコイズ",
+    "Sea Green": "シーグリーン"
+  },
+  "@/components/ontology/FactionCard": "派閥カード",
+  "@/components/ontology/GenericFactionCard": "汎用派閥カード",
+  "": "",
+  "labels": {
+    "undiscovered": "未発見",
+    "meaning": "意味",
+    "element": "元素",
+    "nameVibration": "名前の振動",
+    "westernZodiac": "西洋星座",
+    "sign": "サイン",
+    "observation": "観察",
+    "easternZodiac": "東洋星座",
+    "animal": "動物",
+    "dominion": "支配領域",
+    "bureau": "局"
+  },
+  "returnToHome": "ホームに戻る",
+  "contactSupport": "サポートに問い合わせる",
+  "syncingData": "データを同期中...",
+  "guest": "ゲスト",
+  "calibration": "キャリブレーション",
+  "changeOrigin": "起源を変更する",
+  "todayInsight": {
+    "title": "今日のインサイト",
+    "soulOracle": "ソウルオラクル",
+    "innerResonance": "内なる共鳴",
+    "manifestMore": "さらに顕現する"
+  },
+  "readingsLink": "リーディングを見る",
+  "cards": {
+    "vitality": {
+      "title": "生命力"
+    },
+    "resonance": {
+      "description": "他者とのエネルギー的な共鳴。",
+      "subtitle": "魂の周波数"
+    },
+    "foundation": {
+      "description": "あなたの内なる世界の柱。",
+      "subtitle": "コアの基盤"
+    },
+    "elemental": {
+      "description": "あなたの本質を形作る元素の力。",
+      "subtitle": "元素の親和性",
+      "title": "元素"
+    },
+    "onomancy": {
+      "description": "あなたの名前に込められた隠された意味。",
+      "subtitle": "名前の錬金術"
+    },
+    "cognition": {
+      "description": "あなたが世界を知覚・処理する独自の方法。",
+      "subtitle": "心のパターン"
+    },
+    "vocation": {
+      "description": "あなたの魂が自然に輝くキャリアの道。",
+      "subtitle": "魂の天職"
+    },
+    "destiny": {
+      "description": "あなたの人生が織りなす大きな弧。",
+      "subtitle": "運命の道"
+    }
+  },
+  "resonanceTitle": "共鳴",
+  "sections": {
+    "testArchitecture": {
+      "title": "テストの構造",
+      "description": "あなたの診断の設計と構造。"
+    },
+    "emotionalResonance": {
+      "title": "感情的共鳴",
+      "description": "感情があなたの道にどのように流れ、形成するか。"
+    },
+    "grandArchives": {
+      "title": "大記録保管所",
+      "description": "あなたの結果から蒸留された知恵のコレクション。"
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "元素"
+    },
+    "riasec": {
+      "description": "あなたの職業的性格タイプ。"
+    },
+    "saju": {
+      "label": "四柱推命",
+      "description": "あなたの運命の四本の柱。",
+      "polarity": "極性",
+      "element": "元素"
+    },
+    "archiveEntry": "アーカイブエントリー",
+    "recordVerified": "記録確認済み",
+    "tuning": {
+      "color": "ラッキーカラー",
+      "number": "ラッキーナンバー",
+      "direction": "吉方位",
+      "flower": "魂の花",
+      "gemstone": "守護宝石",
+      "luckyStar": "幸運の星",
+      "title": "宇宙のチューニング",
+      "favorableDays": "吉日",
+      "synergy": "シナジー"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "紫微斗数"
+  },
+  "_": "",
+  "mayan": {
+    "systemName": "マヤ暦",
+    "narrative": "マヤの物語",
+    "solarSeal": "太陽の紋章",
+    "tone": "銀河の音"
+  },
+  "celtic": {
+    "systemName": "ケルトの樹木暦",
+    "narrative": "ケルトの物語",
+    "treeSign": "樹木のサイン",
+    "ogham": "オガムの記号"
+  },
+  "egyptianGuardian": "エジプトの守護神",
+  "celticTreeSign": "ケルトの樹木サイン",
+  "birthSymbols": "誕生のシンボル",
+  "symbols": {
+    "Stone": "石",
+    "Flower": "花",
+    "Star": "星"
+  }
+}

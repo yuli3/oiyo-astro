@@ -1,0 +1,40 @@
+{
+  "title": "[누락: 제목]",
+  "desc": "귀하의 일일 안내.",
+  "status": {
+    "Gil": {
+      "title": "빛나는 화합의 날",
+      "description": "우주의 에너지가 당신 편입니다. 성장과 관계의 기회는 풍부합니다."
+    },
+    "Hyung": {
+      "title": "근면과 규율의 날",
+      "description": "당신의 결심을 시험하는 일이 일어날 수도 있습니다. 이 마찰을 숫돌로 사용하여 지혜를 날카롭게 하세요."
+    },
+    "Neutral": {
+      "title": "균형과 평온의 날",
+      "description": "에너지는 조화롭고 안정적입니다. 과감한 변화를 꾀하기보다는 자신의 내면을 들여다보고 꾸준히 앞으로 나아가는 것이 좋습니다."
+    }
+  },
+  "elements": {
+    "Wood": "확장과 창조의 에너지가 당신을 통해 흐릅니다.",
+    "Fire": "열정과 카리스마의 에너지가 밝게 타오른다.",
+    "Earth": "안정과 포용의 에너지가 든든한 기반이 됩니다.",
+    "Metal": "명료함과 결단력의 에너지가 혼란을 가릅니다.",
+    "Water": "지혜와 직관의 에너지는 깊고 멀리 흐릅니다."
+  },
+  "T": "T",
+  "subtitle": "[누락: 자막]",
+  "oracle": {
+    "selectZodiac": "[누락: oracle.selectZodiac]",
+    "synchronize": "[누락: oracle.synchronize]",
+    "imperialDecree": "[누락: oracle.imperialDecree]",
+    "analysisBasis": "[누락: oracle.analyticBasis]",
+    "message": "[누락: oracle.message]",
+    "actionRitual": "[누락: oracle.actionRitual]",
+    "fateVsWill": "[누락: oracle.fateVsWill]"
+  },
+  "dailyLucky": {
+    "title": "[누락: dailyLucky.제목]"
+  },
+  "action": "[누락: 동작]"
+}

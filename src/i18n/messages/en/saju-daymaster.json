@@ -1,0 +1,142 @@
+{
+  "GAP": {
+    "traits": [
+      "Strong pioneer spirit signaling new beginnings.",
+      "Cannot tolerate injustice; possesses a straight and upright character.",
+      "Has leadership qualities and finds it difficult to be subordinate.",
+      "Excessive stubbornness can sometimes lead to self-righteousness, so flexibility is needed."
+    ],
+    "strengths": ["Drive", "Honesty", "Responsibility", "Independence"],
+    "weaknesses": ["Lack of flexibility", "Arrogance", "Dogmatic"],
+    "name": "Gap (甲)",
+    "nature": "Straight & Upright - The spirit of a soaring giant tree",
+    "lifePurpose": "To open paths that did not exist and to become a shelter for others through personal growth."
+  },
+  "EUL": {
+    "traits": [
+      "Excellent adaptability to the environment and strong practical tendencies.",
+      "Appears soft on the outside but possesses strong tenacity and survival instincts inside.",
+      "Creative and sensible, skilled in communication and harmony with others.",
+      "Lacks decisiveness and can be easily swayed by the surrounding environment."
+    ],
+    "strengths": ["Adaptability", "Flexibility", "Affinity", "Delicacy"],
+    "weaknesses": ["Capriciousness", "Dependence", "Indecisiveness"],
+    "name": "Eul (乙)",
+    "nature": "Persistence of weeds and vines that bend but do not break",
+    "lifePurpose": "To bloom one's own flower even in harsh environments and create a lush garden in solidarity with others."
+  },
+  "BYEONG": {
+    "traits": [
+      "Enjoys attention with an open and refreshing personality.",
+      "Passionate and progressive, values courtesy and honor.",
+      "Emotions are easily visible on the face, and does not hold grudges.",
+      "Can be hot-tempered and chase extravagance without substance."
+    ],
+    "strengths": ["Optimism", "Expressiveness", "Honesty", "Energy"],
+    "weaknesses": ["Impatience", "Vanity", "Emotional excess"],
+    "name": "Byeong (丙)",
+    "nature": "Radiant passion and fairness of the sun illuminating the world",
+    "lifePurpose": "To shine light in dark places and warm others' hearts with one's passion."
+  },
+  "JEONG": {
+    "traits": [
+      "Devoted and warm, possessing delicate sensitivity and insight.",
+      "Polite and calm on the outside, but hides explosive passion inside.",
+      "Pursues spiritual values and has excellent talent in religion or arts.",
+      "Thinks too much, tormenting oneself, or can be timid and sensitive."
+    ],
+    "strengths": ["Insight", "Devotion", "Artistry", "Calmness"],
+    "weaknesses": ["Sensitivity", "Obsession", "Passivity"],
+    "name": "Jeong (丁)",
+    "nature": "A candle lighting the darkness and a hot flame within the heart",
+    "lifePurpose": "To explore invisible truths and heal wounded souls with one's warmth."
+  },
+  "MU": {
+    "traits": [
+      "Heavy and prudent; has the tenacity to push through once decided.",
+      "Broad tolerance, acting as a sturdy pillar for people around.",
+      "Conservative, values credit like life, and pursues stability over change.",
+      "Can be overly stubborn and blunt, leading to communication breakdown."
+    ],
+    "strengths": ["Stability", "Drive", "Tolerance", "Trust"],
+    "weaknesses": ["Stubbornness", "Insensitivity", "Dryness"],
+    "name": "Mu (戊)",
+    "nature": "The weight and faith of a high mountain embracing all things",
+    "lifePurpose": "To become an unshakeable standard and a foundation where life can grow within that embrace."
+  },
+  "GI": {
+    "traits": [
+      "Simple and diligent, finds joy in taking care of and educating others.",
+      "Values substance and has excellent meticulous and realistic sense.",
+      "Strong self-defense mechanism and tends not to reveal true feelings easily.",
+      "Can appear petty due to suspicion and calculating practical benefits too much."
+    ],
+    "strengths": ["Diligence", "Inclusiveness", "Practicality", "Benevolence"],
+    "weaknesses": ["Self-centeredness", "Suspicion", "Conservatism"],
+    "name": "Gi (己)",
+    "nature": "Benevolence like mother earth nurturing all things",
+    "lifePurpose": "To cultivate the possibilities of surroundings into real fruits, just as growing a small seed into a giant tree."
+  },
+  "GYEONG": {
+    "traits": [
+      "Deep loyalty, cherishes relationships once formed, strong camaraderie.",
+      "Possesses cool-headed criticism and decisiveness, skilled in establishing discipline.",
+      "Appears cold on the outside but is warm and pure inside.",
+      "Can point out others' faults too sharply or reveal destructive tendencies."
+    ],
+    "strengths": ["Decisiveness", "Justice", "Loyalty", "Cool-headedness"],
+    "weaknesses": ["Critical", "Aggression", "Lack of flexibility"],
+    "name": "Gyeong (庚)",
+    "nature": "Uncompromising justice and firm decision",
+    "lifePurpose": "To establish order amidst chaos and solidify the essence by cutting away the unnecessary."
+  },
+  "SIN": {
+    "traits": [
+      "Strong self-esteem and neat, possessing aesthetic sense and refined manners.",
+      "Delicate and sensitive, easily spots others' mistakes, thorough self-management.",
+      "Cynical and prickly, but inner self is more fragile and easily hurt than anyone.",
+      "Can be obsessed with small things or tire oneself with excessive perfectionism."
+    ],
+    "strengths": [
+      "Perfectionism",
+      "Aesthetic eye",
+      "Clarity",
+      "Self-management"
+    ],
+    "weaknesses": ["Sensitivity", "Cynicism", "Narrow relationships"],
+    "name": "Sin (辛)",
+    "nature": "Splendor of a polished jewel and a sharp blade",
+    "lifePurpose": "To constantly polish oneself to become a jewel of the world below, and remove absurdities with sharp insight."
+  },
+  "IM": {
+    "traits": [
+      "Large scale, quick thinking, skilled in humor and improvisation.",
+      "Yearns for freedom and has a wanderer's temperament not bound anywhere.",
+      "Good tolerance and gathers people well, but sometimes has unfathomable darkness.",
+      "Lacks patience and may start things without finishing them."
+    ],
+    "strengths": ["Wisdom", "Affinity", "Creativity", "Tolerance"],
+    "weaknesses": ["Laziness", "Scheming", "Instability"],
+    "name": "Im (壬)",
+    "nature": "Vastness of the endlessly flowing sea and wisdom that makes things flow",
+    "lifePurpose": "To make stagnant places flow and harmonize all values of the world with immense tolerance."
+  },
+  "GYE": {
+    "traits": [
+      "Wise and deep-thinking, captures environmental changes faster than anyone.",
+      "Quietly takes care of practical benefits and has very strong intellectual curiosity.",
+      "Appears compliant but has persistence to penetrate silently towards goals.",
+      "Prone to daydreaming, severe mood swings, and slow decision-making due to weak heart."
+    ],
+    "strengths": [
+      "Intelligence",
+      "Adaptability",
+      "Persistence",
+      "Creative imagination"
+    ],
+    "weaknesses": ["Sorrow", "Frailty", "Nervousness"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  }
+}

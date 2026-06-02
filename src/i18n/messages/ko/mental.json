@@ -1,0 +1,36 @@
+{
+  "moodCalendar": {
+    "grid": {
+      "title": "기분 달력",
+      "noEntries": "아직 기록이 없습니다",
+      "addMood": "감정을 더하다",
+      "daySun": "낮",
+      "dayMon": "월",
+      "dayTue": "격노",
+      "dayWed": "숫자",
+      "dayThu": "목",
+      "dayFri": "금",
+      "daySat": "토요일",
+      "moodQuestion": "기분이 어땠나요?",
+      "close": "닫다",
+      "saveFailed": "저장 실패",
+      "saved": "저장됨",
+      "saveAsImage": "이미지로 저장"
+    }
+  },
+  "moodAnalyzer": {
+    "moods": {
+      "happy": "행복",
+      "sad": "슬픔",
+      "anxious": "불안",
+      "angry": "화남",
+      "calm": "평온",
+      "excited": "흥분한",
+      "sunny": "맑음",
+      "cloudy": "흐림",
+      "rainy": "비",
+      "storm": "폭풍",
+      "neutral": "중립"
+    }
+  }
+}

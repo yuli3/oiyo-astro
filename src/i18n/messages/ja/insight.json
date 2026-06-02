@@ -1,0 +1,10 @@
+{
+  "actions": {
+    "refresh": "インサイトを更新",
+    "like": "いいね",
+    "share": "共有する"
+  },
+  "loading": "今日のインサイトを準備しています...",
+  "focusArea": "今日の注目エリア: {area}",
+  "actionTip": "今日の実践チップ"
+}

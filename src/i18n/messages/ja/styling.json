@@ -1,0 +1,56 @@
+{
+  "scanner": {
+    "title": "AI Life Stylist",
+    "description": "Upload your photo. AI analyzes your face shape and personal color to recommend the perfect style.",
+    "action": {
+      "upload": "Click to Upload Photo",
+      "camera": "カメラ",
+      "analyze": "スタイルを分析する"
+    },
+    "status": {
+      "analyzing": "Analyzing...",
+      "detecting": "顔の形と肌の色を検出"
+    },
+    "error": {
+      "tooLarge": "画像が大きすぎます（最大5MB）",
+      "cameraAccess": "カメラにアクセスできません",
+      "failed": "分析に失敗しました。 より鮮明な写真をお試しください。"
+    }
+  },
+  "dashboard": {
+    "title": "AIライフスタイリスト",
+    "description": "写真をアップロードします。 AIがあなたの顔型とパーソナルカラーを分析し、ぴったりのスタイルを提案します。",
+    "upload": "クリックして写真をアップロード",
+    "retry": "別の写真を試してください",
+    "labels": {
+      "faceShape": "顔の形",
+      "personalColor": "色の分析"
+    },
+    "status": {
+      "analyzing": "分析中..."
+    }
+  },
+  "recommendation": {
+    "complete": "分析完了",
+    "analyzeAnother": "別の写真を分析する",
+    "sections": {
+      "hair": "ベストヘアスタイル",
+      "eyewear": "アイウェアマッチ",
+      "palette": "あなたのパワーパレット"
+    },
+    "shapes": {
+      "oval": "楕円形",
+      "round": "ラウンド",
+      "square": "四角",
+      "heart": "心臓",
+      "diamond": "ダイヤモンド",
+      "long": "長さ"
+    },
+    "colors": {
+      "spring_warm": "春の暖かい",
+      "summer_cool": "サマークール",
+      "autumn_warm": "秋は暖かい",
+      "winter_cool": "ウィンタークール"
+    }
+  }
+}

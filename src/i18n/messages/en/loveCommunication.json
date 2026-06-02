@@ -1,0 +1,12 @@
+{
+  "intro": {
+    "title": "Love Language",
+    "description": "Discover how your soul communicates affection through the five primal languages of love."
+  },
+  "badge": "IMPERIAL RESONANCE",
+  "primaryLabel": "Your Core Love Language",
+  "analysisTitle": "Distribution",
+  "secondaryLabel": "Secondary Resonance",
+  "secondaryDesc": "Your auxiliary channel for emotional connection.",
+  "questionPrefix": "I feel more loved when..."
+}

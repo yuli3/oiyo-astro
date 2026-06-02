@@ -1,0 +1,221 @@
+{
+  "tests": {
+    "mbti": {
+      "title": "Psychological Type",
+      "subtitle": "Social Cognition",
+      "description": "A gentle reflection on the recurring patterns of your consciousness."
+    },
+    "tci": {
+      "title": "Character & Temperament",
+      "subtitle": "Innate Essence",
+      "description": "Tracing the deep biological and acquired textures of your personality."
+    },
+    "enneagram": {
+      "title": "Core Motivations",
+      "subtitle": "The Nine Glances",
+      "description": "Unveiling the sacred drivers that guide your choices and fears."
+    },
+    "hexaco": {
+      "title": "Six Dimensions",
+      "subtitle": "Ethical Resonance",
+      "description": "Measuring the subtle vibrations of honesty and humility in your spirit."
+    },
+    "perfectionism": {
+      "title": "High Standards",
+      "subtitle": "The Idealist's Path",
+      "description": "Understanding the delicate balance between excellence and grace."
+    },
+    "country-preference": {
+      "title": "Cultural Resonance",
+      "subtitle": "Ideal Environment",
+      "description": "Seeking the geographic frequency that best harmonizes with your soul."
+    },
+    "learning-style": {
+      "title": "Cognitive Style",
+      "subtitle": "Alchemy of Knowledge",
+      "description": "Discovering how your mind gracefully absorbs and distills the world's wisdom."
+    },
+    "resilience": {
+      "title": "Sovereign Strength",
+      "subtitle": "Adaptability",
+      "description": "Exploring your innate capacity to rise, refine, and flourish in any season."
+    },
+    "decision-making": {
+      "title": "Strategic Choice",
+      "subtitle": "Decision Patterns",
+      "description": "Analyzing the silent logic behind your life's most defining turns."
+    },
+    "consumption-style": {
+      "title": "Value Exchange",
+      "subtitle": "Material Rhythm",
+      "description": "Revealing how your soul's values manifest in the material world."
+    },
+    "cognitive-bias": {
+      "title": "Perception Filter",
+      "subtitle": "Cognitive Bias",
+      "description": "Becoming aware of the subtle lenses through which you interpret reality."
+    },
+    "vitality": {
+      "title": "Energy & Life",
+      "subtitle": "Inner Flame",
+      "description": "Monitoring the ebb and flow of your life's vital current."
+    },
+    "value-harmonizer": {
+      "title": "Inner Compass",
+      "subtitle": "Value Harmonizer",
+      "description": "Aligning your daily actions with the eternal truths of your heart."
+    },
+    "abundance": {
+      "title": "Wealth Consciousness",
+      "subtitle": "Prosperity Mindset",
+      "description": "Cultivating a deep sense of flow and receptivity to life's many gifts."
+    },
+    "riasec": {
+      "title": "Vocational Path",
+      "subtitle": "Career Interests",
+      "description": "Finding the professional orbit where your natural talent finds its home."
+    },
+    "hsp": {
+      "title": "Sensory Processing",
+      "subtitle": "Sensitivity Profile",
+      "description": "Embracing the profound depth of a highly receptive spirit."
+    },
+    "bigfive": {
+      "title": "Five Factor Model",
+      "subtitle": "Personality Foundations",
+      "description": "A comprehensive map of the dimensions that define your unique presence."
+    },
+    "big5": {
+      "title": "Five Factor Model",
+      "subtitle": "Personality Foundations",
+      "description": "A comprehensive map of the dimensions that define your unique presence."
+    },
+    "saju": {
+      "title": "Four Pillars",
+      "subtitle": "Primal Destiny",
+      "description": "Eastern astrological analysis of your cosmic origin."
+    },
+    "egenteto-v2": {
+      "title": "Hormonal Archetype",
+      "subtitle": "Biochemical Identity",
+      "description": "Exploring how your unique hormonal fingerprint shapes your temperament."
+    },
+    "daily": {
+      "title": "Daily Oracle",
+      "subtitle": "Temporal Alignment",
+      "description": "Your daily dose of cosmic alignment and personal insights."
+    }
+  },
+  "title": "Soul's Cartography",
+  "description": "Mapping the silent latitudes of your being. Experience a tranquil exploration of your inner landscape through our curated assessments.",
+  "@/components/ontology/FactionCard": "Faction Card",
+  "@/components/ontology/GenericFactionCard": "Generic Faction Card",
+  "": "",
+  "labels": {
+    "undiscovered": "Undiscovered",
+    "meaning": "Meaning",
+    "element": "Element",
+    "nameVibration": "Name Vibration",
+    "westernZodiac": "Western Zodiac",
+    "sign": "Sign",
+    "observation": "Observation",
+    "easternZodiac": "Eastern Zodiac",
+    "animal": "Animal",
+    "dominion": "Dominion",
+    "bureau": "Bureau"
+  },
+  "returnToHome": "Return Home",
+  "contactSupport": "Contact Support",
+  "syncingData": "Syncing Data",
+  "guest": "Guest",
+  "calibration": "Calibration",
+  "changeOrigin": "Change Origin",
+  "todayInsight": {
+    "title": "Today's Insight",
+    "soulOracle": "Soul Oracle",
+    "innerResonance": "Inner Resonance",
+    "manifestMore": "Manifest More"
+  },
+  "readingsLink": "Readings",
+  "cards": {
+    "vitality": {
+      "title": "Vitality"
+    },
+    "resonance": {
+      "description": "Your resonance pattern.",
+      "subtitle": "Resonance"
+    },
+    "foundation": {
+      "description": "Your core foundation.",
+      "subtitle": "Foundation"
+    },
+    "elemental": {
+      "description": "Your elemental mix.",
+      "subtitle": "Elemental Affinity",
+      "title": "Elements"
+    },
+    "onomancy": {
+      "description": "Your name vibration.",
+      "subtitle": "Name Alchemy"
+    },
+    "cognition": {
+      "description": "Your thought pattern.",
+      "subtitle": "Cognition"
+    },
+    "vocation": {
+      "description": "Your vocational path.",
+      "subtitle": "Vocation"
+    },
+    "destiny": {
+      "description": "Your destiny trajectory.",
+      "subtitle": "Destiny"
+    }
+  },
+  "resonanceTitle": "Resonance Profile",
+  "sections": {
+    "testArchitecture": {
+      "title": "Test Architecture",
+      "description": "Background structural info."
+    },
+    "emotionalResonance": {
+      "title": "Emotional Resonance",
+      "description": "How you connect emotionally."
+    },
+    "grandArchives": {
+      "title": "The Grand Archives",
+      "description": "Historical knowledge base."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "Elements"
+    },
+    "riasec": {
+      "description": "RIASEC Career Type"
+    },
+    "saju": {
+      "label": "Saju",
+      "description": "Four Pillars Analysis",
+      "polarity": "Polarity",
+      "element": "Element"
+    },
+    "archiveEntry": "Archive Entry",
+    "recordVerified": "Record Verified",
+    "tuning": {
+      "color": "Color",
+      "number": "Number",
+      "direction": "Direction",
+      "flower": "Flower",
+      "gemstone": "Gemstone",
+      "luckyStar": "Lucky Star",
+      "title": "Tuning",
+      "favorableDays": "Favorable Days",
+      "synergy": "Synergy"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "Zi Wei"
+  },
+  "_": ""
+}

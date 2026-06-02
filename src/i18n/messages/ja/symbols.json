@@ -1,0 +1,53 @@
+{
+  "flowers": {
+    "cranberry": {
+      "name": "エメラルド",
+      "language": "誇りと輝かしい美しさ"
+    },
+    "willow": {
+      "name": "エメラルド",
+      "language": "誇りと輝かしい美しさ"
+    },
+    "carnation": {
+      "name": "エメラルド",
+      "language": "誇りと輝かしい美しさ"
+    }
+  },
+  "stars": {
+    "alphecca": {
+      "name": "エメラルド",
+      "meaning": "幸運と幸福、生命の復活"
+    },
+    "alcyone": {
+      "name": "エメラルド",
+      "meaning": "幸運と幸福、生命の復活"
+    },
+    "vega": {
+      "name": "エメラルド",
+      "meaning": "幸運と幸福、生命の復活"
+    }
+  },
+  "stones": {
+    "garnet": {
+      "name": "エメラルド",
+      "meaning": "幸運と幸福、生命の復活"
+    },
+    "emerald": {
+      "name": "エメラルド",
+      "meaning": "幸運と幸福、生命の復活"
+    }
+  },
+  "Stone": "石",
+  "Flower": "花",
+  "Star": "星",
+  "title": "シンボル",
+  "subtitle": "夢のシンボル",
+  "searchPlaceholder": "シンボルを検索...",
+  "labels": {
+    "badge": "バッジ",
+    "general": "一般",
+    "psychological": "心理的",
+    "spiritual": "スピリチュアル",
+    "related": "関連"
+  }
+}

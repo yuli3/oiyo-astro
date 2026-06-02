@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "phase2": "Fase 2: Fundación",
+    "title": "Coordinadora de vida",
+    "subtitle": "Sintetiza tus datos cósmicos (Saju, Zodiac) con rasgos psicológicos (MBTI) para descubrir tu camino de vida óptimo.",
+    "dataInput": "Entrada de datos",
+    "birthDate": "Fecha de nacimiento (para Saju)",
+    "mbtiType": "Tipo MBTI",
+    "calculatedSign": "Signo calculado:",
+    "analyzeSynergy": "Analizar la sinergia",
+    "coreEssence": "Esencia central",
+    "careerRecs": "Recomendaciones profesionales",
+    "hobbySynergy": "Sinergia de pasatiempos",
+    "awaitingData": "Esperando datos...",
+    "enterDetails": "Ingrese detalles para analizar",
+    "select": "Seleccionar..."
+  },
+  "result": {
+    "match": "Fósforo",
+    "avgSalary": "Salario promedio",
+    "outlook": "Perspectiva"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "habitAssistant": {
+    "meta": {
+      "hero": {
+        "subtitle": "new discoveries about me",
+        "badge": "popularity"
+      },
+      "keywords": "Personality analysis, self-discovery, premium insight",
+      "title": "Your Productivity Profile",
+      "description": "We take an in-depth look into your inner self based on data."
+    },
+    "hero": {
+      "subtitle": "In-depth analysis report",
+      "cta": "Find My Habit Style",
+      "badge": "🎯 Behavior Science",
+      "title": "Your Productivity Profile",
+      "description": "We take an in-depth look into your inner self based on data."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🏆",
+          "title": "Higher Success Rate",
+          "description": "Use strategies that match your natural tendencies for better results"
+        },
+        {
+          "icon": "⚡",
+          "title": "Faster Progress",
+          "description": "Avoid trial-and-error by using methods that work for your personality type"
+        },
+        {
+          "icon": "💪",
+          "title": "Sustainable Changes",
+          "description": "Build habits that stick by working with your natural patterns, not against them"
+        },
+        {
+          "icon": "🎯",
+          "title": "Personalized Strategies",
+          "description": "Get specific techniques, timing, and motivation methods for your type"
+        }
+      ],
+      "subtitle": "In-depth analysis report"
+    },
+    "types": {
+      "methodical": {
+        "name": "The Methodical Builder",
+        "emoji": "📋"
+      },
+      "social": {
+        "name": "The Social Motivator",
+        "emoji": "👥"
+      },
+      "flexible": {
+        "name": "The Flexible Adapter",
+        "emoji": "🌊"
+      },
+      "reward_driven": {
+        "name": "Precise analysis data proves your potential.",
+        "emoji": "🏅"
+      },
+      "intuitive": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "subtitle": "In-depth analysis report"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "What is your unique frequency?",
+          "answer": "Small choices add up to create a great destiny."
+        },
+        "1": {
+          "question": "What drives you inside?",
+          "answer": "Your unique perspective shapes reality."
+        },
+        "2": {
+          "question": "What is your unique frequency?",
+          "answer": "Your unique perspective shapes reality."
+        },
+        "3": {
+          "question": "What is your unique frequency?",
+          "answer": "You have an intuitive compass that points you toward growth."
+        },
+        "4": {
+          "question": "What drives you inside?",
+          "answer": "Inner harmony guides all of our daily actions."
+        }
+      },
+      "title": "Your Productivity Profile"
+    },
+    "frequency": {
+      "label": "Freq",
+      "daily": "Daily",
+      "weekly": "Weekly"
+    },
+    "priority": {
+      "label": "Prio",
+      "low": "Low",
+      "medium": "Med",
+      "high": "High"
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "We take an in-depth look into your inner self based on data."
+    },
+    "title": "dashboard",
+    "description": "Analysis of your unique tendencies",
+    "keywords": "Personality diagnosis, mind vitamins, journey to find myself, OIYO",
+    "submit": "Submit"
+  }
+}

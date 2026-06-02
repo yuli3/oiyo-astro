@@ -1,0 +1,110 @@
+{
+  "messages": {
+    "general": "Whispering back to the universe...",
+    "stars": "Tracing the alignment of the stars...",
+    "rainbow": "Deciphering the spectral geometry of your soul...",
+    "flowers": "Listening to the bloom of your inner garden...",
+    "fox": "Polishing the lens of your true essence...",
+    "stardust": "Sifting through the ancient stardust of your origin...",
+    "oracle": "Mapping the sacred architecture of your spirit...",
+    "cards": "Consulting the deep echoes of your path...",
+    "moon": "Bathed in the gentle glow of wisdom...",
+    "dreams": "Weaving the fine threads of your subconscious...",
+    "magic": "Summoning the dormant magic within your data...",
+    "whale": "Synchronizing the deep-sea rhythms of your destiny...",
+    "trees": "Gathering wisdom from the ancient roots of time...",
+    "roots": "Nurturing the foundational seeds of your identity...",
+    "ontology": "Interpreting your soul's unique blueprint...",
+    "resonance": "Finding harmony in your spiritual frequencies...",
+    "fortune": "Gazing into the clear waters of possibility...",
+    "finance": "Clarifying the path to your prosperity...",
+    "cat_dog": "Finding peace in the harmony of opposites...",
+    "milky_way": "Channeling inspiration from the celestial river...",
+    "moonlight": "Charting your course by the silver light of intention...",
+    "wave_secret": "Capturing the secrets whispered between waves and sand...",
+    "saju": "Aligning your primal cosmic rhythm...",
+    "relationship": "Unraveling the delicate gold threads of connection...",
+    "analyzing": "Synthesizing your essence...",
+    "calculating": "Calculating cosmic coordinates...",
+    "processing": "Processing temporal data...",
+    "generating": "Generating your unique profile...",
+    "almostDone": "Almost manifest...",
+    "personalityAnalysis": "Decoding cognitive patterns...",
+    "responseAnalysis": "Analyzing behavioral resonance...",
+    "typeMatching": "Finding archetypal matches...",
+    "preparingResults": "Assembling the final synthesis..."
+  },
+  "message": "Loading...",
+  "tip": "Please wait.",
+  "analyzing": "Synthesizing your essence...",
+  "calculating": "Calculating cosmic coordinates...",
+  "processing": "Processing temporal data...",
+  "generating": "Generating your unique profile...",
+  "almostDone": "Almost manifest...",
+  "personalityAnalysis": "Decoding cognitive patterns...",
+  "responseAnalysis": "Analyzing behavioral resonance...",
+  "typeMatching": "Finding archetypal matches...",
+  "preparingResults": "Assembling the final synthesis...",
+  "please_wait": "Gathering wisdom. Please hold space.",
+  "default": "Curating a narrative just for you...",
+  "rootLoading": {
+    "subtitle": "Preparing your voyage into self-discovery..."
+  },
+  "localeLoading": {
+    "subtitle": "Aligning your frequency with the stars...",
+    "title": "Calibrating the Sanctuary",
+    "description": "Please hold space for a moment."
+  },
+  "globalError": {
+    "tryAgain": "Try Again",
+    "goHome": "Return Home",
+    "helpText": "If you remain lost, please reach out to our sanctuary guides."
+  },
+  "notFound": {
+    "title": "Path Not Found",
+    "subtitle": "Have you wandered off the map?",
+    "description": "The coordinate you seek is currently beyond our reaches.",
+    "goHome": "Return to Home",
+    "goBack": "Go Back",
+    "suggestionsTitle": "Perhaps you were seeking one of these gateways?",
+    "popularTestsTitle": "Resonant Assessments",
+    "egentetoTest": "Egenteto Analysis",
+    "mbtiAlternative": "Cognitive DNA Mapping",
+    "allTests": "View All Gateways",
+    "exploreTitle": "Explore the Sanctuary",
+    "categoryCore": "Core Essence",
+    "categoryLifestyle": "Path & Lifestyle",
+    "color": "Chromatic Archetypes",
+    "travel": "Destiny Voyages",
+    "relationship": {
+      "communicationStyle": "Dialogue Alchemy"
+    },
+    "test": {
+      "progress": "Momentum",
+      "next": "Forward",
+      "previous": "Reflect",
+      "submit": "Submit your truth",
+      "loading": "Calibrating your essence...",
+      "selectOption": "Choose the resonant path",
+      "insightBullets": ["Profound Discovery"]
+    },
+    "result": {
+      "title": "Synthesis Report",
+      "description": "Explore the layered depths of your discovery."
+    },
+    "meta": {
+      "title": "The Sanctuary Assessment",
+      "description": "Unlock deeper understanding with OIYO's archetypal tools.",
+      "keywords": "personality test, insights, OIYO, self-development"
+    }
+  },
+  "poetic": [
+    "Listening to the gentle whispers of the cosmos...",
+    "Interpreting the silent language of your destiny...",
+    "Harnessing the radiant energy of the stars...",
+    "Patience, a magnificent story is unfolding for you...",
+    "Recording the moon's secrets in the stillness of the night...",
+    "Decoding the luminous signals of your constellation...",
+    "Drifting along the river of time to find your truth..."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "generatedOn": "生成日時",
+    "testsCompleted": "完了したテスト",
+    "dimensionsAnalyzed": "分析された次元",
+    "consistencyScore": "一貫性スコア",
+    "keyStrengths": "主な強み",
+    "title": "総合性格レポート"
+  },
+  "errors": {
+    "unableToGenerate": "レポートを生成できません",
+    "insufficientData": "テストデータが不足しています",
+    "needThreeTests": "総合レポートを生成するには、少なくとも3つのテストを完了する必要があります。",
+    "pdfFailed": "PDFの生成に失敗しました。もう一度お試しください。",
+    "reportNotFound": "レポートの内容が見つかりません",
+    "takeMoreTests": "さらにテストを受ける"
+  },
+  "notifications": {
+    "linkCopied": "リンクがコピーされました"
+  },
+  "test": {
+    "progress": "進捗",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "提出する",
+    "loading": "読み込み中",
+    "selectOption": "選択してください",
+    "insightBullets": [
+      "すべてのテスト結果を 1 つに統合する",
+      "一貫した性格パターンを発見する",
+      "パーソナライズされた成長ガイドを提供"
+    ]
+  },
+  "result": {
+    "title": "総合性格レポート",
+    "description": "すべてのテスト結果を統合した、完全な性格分析レポートを表示します。"
+  },
+  "meta": {
+    "title": "総合性格レポート",
+    "description": "すべてのテスト結果を統合した、完全な性格分析レポートを表示します。",
+    "keywords": "総合レポート, 性格分析, 心理テスト, 性格プロファイル"
+  },
+  "subtitle": "すべてのテストを網羅した完全な性格プロファイル",
+  "downloadPDF": "PDFダウンロード",
+  "shareReport": "レポートを共有",
+  "generating": "生成中",
+  "analyzing": "分析中",
+  "generatingPDF": "PDF生成中",
+  "sharing": "共有中",
+  "dominantTraits": "主要な特性",
+  "dimensions": "性格の次元",
+  "dimensionsDescription": "多様なテストを通じて分析されたあなたの性格次元",
+  "strengths": "強み",
+  "strengthsDescription": "あなたの主な強みと優れた能力",
+  "growthAreas": "成長領域",
+  "growthAreasDescription": "発展の可能性と改善の方向性",
+  "testsByCategory": "カテゴリー別テスト",
+  "testsByCategoryDescription": "完了したテストの分布",
+  "shareTitle": "総合性格レポートの共有",
+  "shareText": "総合性格分析レポートをチェックしてみてください"
+}

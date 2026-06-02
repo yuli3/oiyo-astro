@@ -1,0 +1,23 @@
+{
+  "title": "Annual Compass",
+  "daily": {
+    "title": "Annual Compass",
+    "description": "Align your long-term goals with the year's major movements."
+  },
+  "weekly": {
+    "title": "Annual Compass",
+    "description": "Align your long-term goals with the year's major movements."
+  },
+  "monthly": {
+    "title": "Annual Compass",
+    "description": "Align your long-term goals with the year's major movements."
+  },
+  "yearly": {
+    "title": "Boussole annuelle",
+    "description": "Alignez vos objectifs à long terme sur les mouvements majeurs de l’année."
+  },
+  "all": "Toute",
+  "personal": "Personnelle",
+  "professional": "Professionnelle",
+  "social": "Sociale"
+}

@@ -1,0 +1,17 @@
+{
+  "title": "成长之旅",
+  "description": "通往自我认知与个人蜕变的道路。",
+  "levelUp": "Congratulations! You have reached level {emoji} \\\"{title}\\\"!",
+  "levelTitles": {
+    "beginner": "初学者",
+    "explorer": "探险家",
+    "seeker": "探索者",
+    "discoverer": "发现者",
+    "insightMaster": "洞察大师",
+    "wisdomKeeper": "智慧守护者",
+    "selfAwareSage": "自知之明的圣人",
+    "enlightenedOne": "开悟者",
+    "personalityGuru": "人格大师",
+    "legendary": "传奇"
+  }
+}

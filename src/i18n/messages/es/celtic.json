@@ -1,0 +1,83 @@
+{
+  "systemName": "Astrología Celta",
+  "narrative": "Sabiduría de los árboles.",
+  "treeSign": "Signo de Árbol",
+  "ogham": "Ogham",
+  "trees": {
+    "birch": {
+      "tree": "Abedul",
+      "archetype": "El Logrador",
+      "description": "Ambicioso y motivado, posee cualidades de liderazgo naturales."
+    },
+    "rowan": {
+      "tree": "Serbal",
+      "archetype": "El Pensador",
+      "description": "Filosófico e idealista, con pasión por cambiar el mundo."
+    },
+    "ash": {
+      "tree": "Fresno",
+      "archetype": "El Encantador",
+      "description": "Artístico e intuitivo, con una profunda conexión con la naturaleza."
+    },
+    "alder": {
+      "tree": "Aliso",
+      "archetype": "El Pionero",
+      "description": "Aventurero y apasionado, con un encanto que guía a las personas."
+    },
+    "willow": {
+      "tree": "Sauce",
+      "archetype": "El Observador",
+      "description": "Paciente e inteligente, con una excelente memoria."
+    },
+    "hawthorn": {
+      "tree": "Espino",
+      "archetype": "El Ilusionista",
+      "description": "La apariencia externa difiere del ser interior; creativo y curioso."
+    },
+    "oak": {
+      "tree": "Roble",
+      "archetype": "El Estabilizador",
+      "description": "Fuerte y protector, un pilar de apoyo para los demás."
+    },
+    "holly": {
+      "tree": "Acebo",
+      "archetype": "El Gobernante",
+      "description": "Noble y seguro, posee la fuerza para superar cualquier dificultad."
+    },
+    "hazel": {
+      "tree": "Avellano",
+      "archetype": "El Conocedor",
+      "description": "Inteligente, analítico y detallista."
+    },
+    "vine": {
+      "tree": "Vid",
+      "archetype": "El Equilibrador",
+      "description": "Elegante y encantador, con altos estándares estéticos."
+    },
+    "ivy": {
+      "tree": "Hiedra",
+      "archetype": "El Superviviente",
+      "description": "Persistente y leal, capaz de adaptarse a cualquier entorno."
+    },
+    "reed": {
+      "tree": "Caña",
+      "archetype": "El Inquisidor",
+      "description": "Ama descubrir secretos, posee una profunda perspicacia y una fuerte voluntad."
+    },
+    "elder": {
+      "tree": "Saúco",
+      "archetype": "El Buscador",
+      "description": "Persigue la libertad y posee una naturaleza filosófica que busca un significado profundo en la vida."
+    }
+  },
+  "ariaLabel": "Signo Celta: {tree}, {archetype}",
+  "title": "Astrología Celta",
+  "egyptianGuardian": "Guardián Egipcio",
+  "celticTreeSign": "Signo del Árbol Celta",
+  "birthSymbols": "Símbolos de Nacimiento",
+  "symbols": {
+    "Stone": "Piedra",
+    "Flower": "Flor",
+    "Star": "Estrella"
+  }
+}

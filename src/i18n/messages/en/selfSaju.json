@@ -1,0 +1,42 @@
+{
+  "title": "Self Saju Analysis",
+  "description": "Discover your astrological pillars.",
+  "inputs": {
+    "birthDate": "Birth Date",
+    "birthTime": "Birth Time",
+    "calculate": "Calculate"
+  },
+  "result": {
+    "title": "Analysis of my orders",
+    "description": "Life insights from the perspective of fortune telling",
+    "time": "Time Pillar",
+    "day": "Day Pillar",
+    "month": "Month Pillar",
+    "year": "Year Pillar",
+    "fiveElements": "Five Elements Analysis"
+  },
+  "meta": {
+    "title": "analysis of fortune telling",
+    "description": "Find out your destiny through analysis of traditional fortune-telling",
+    "keywords": "Fortune telling, fortune telling, fate, fortune telling analysis, Korean astrology"
+  },
+  "hero": {
+    "title": "analysis of fortune telling",
+    "subtitle": "Understand my life path with ancient wisdom",
+    "cta": "Find out my destiny",
+    "badge": "🔮 Traditional Wisdom"
+  },
+  "test": {
+    "insightBullets": [
+      "Understand your life purpose",
+      "Discover your strengths",
+      "Learn about your destiny"
+    ],
+    "progress": "progress",
+    "next": "next",
+    "previous": "before",
+    "submit": "Submit",
+    "loading": "Analyzing fate...",
+    "selectOption": "Choose"
+  }
+}

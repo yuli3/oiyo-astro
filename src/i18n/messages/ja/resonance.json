@@ -1,0 +1,104 @@
+{
+  "labels": {
+    "mirror": "鏡"
+  },
+  "hiddenSelf": {
+    "title": "隠れた自己",
+    "description": "あなたの心理の無意識の層を明かします。",
+    "ctaOrigin": "起源を発見する",
+    "ctaIdentity": "アイデンティティを探る"
+  },
+  "status": {
+    "scrollForSynergy": "スクロールしてシナジー分析をご覧ください"
+  },
+  "analysis": {
+    "detailed": "詳細な共鳴分析"
+  },
+  "iching": {
+    "title": "易経",
+    "revelation": "卦の啓示"
+  },
+  "cta": {
+    "title": "あなたの共有された運命が待っています",
+    "subtitle": "この絆をアーカイブに記録しましょう",
+    "share": "結果を共有",
+    "download": "アーカイブをダウンロード"
+  },
+  "title": "共鳴アーカイブ",
+  "subtitle": "あなたの宇宙的な調和。",
+  "offeringTitle": "深い共鳴の供物",
+  "offeringDescription": "最も深い層を解き明かしましょう。",
+  "confidenceMeter": "信頼度メーター",
+  "revealed": "明かされた特性",
+  "nameLabel": "お名前",
+  "namePlaceholder": "名前を入力してください",
+  "birthLabel": "生年月日",
+  "mbtiLabel": "MBTIタイプ",
+  "mbtiPlaceholder": "MBTIを入力してください",
+  "bloodLabel": "血液型",
+  "bloodPlaceholder": "血液型を入力してください",
+  "calculateButton": "シナジーを計算する",
+  "calculating": "計算中...",
+  "backButton": "聖域に戻る",
+  "shareButton": "宇宙の絆を共有",
+  "dimensionsTitle": "次元的共鳴",
+  "oracleTitle": "オラクルのインサイト",
+  "partialDataWarning": "運命の糸が完全ではありません。",
+  "addMoreInfo": "より多くの魂のデータを入力する",
+  "desc": "つながりを理解する。",
+  "friendship": {
+    "intro": {
+      "badge": "共鳴分析",
+      "title": "友情スタイルラボ",
+      "quote": "絆の目に見えない構造を探求しましょう。",
+      "startButton": "探求を始める"
+    },
+    "questions": {
+      "bond": "絆への問い"
+    },
+    "results": {
+      "profile": "共鳴プロフィール",
+      "vulnerability": "影の側面",
+      "strategy": "調和への道",
+      "restart": "手順をたどる"
+    }
+  },
+  "grandOracle": {
+    "title": "大いなる神託",
+    "desc": "つながりを理解する。"
+  },
+  "resonanceTitle": "共鳴アーカイブ",
+  "resonanceVitalitySection": "生命力の流れ",
+  "resonanceVitalitySubtitle": "あなたの顕現したエネルギーの波動",
+  "conflict": {
+    "title": "紛争分析",
+    "description": "人間関係における対立パターンを分析して理解します。",
+    "intro": {
+      "badge": "紛争分析",
+      "title": "紛争解決スタイル",
+      "quote": "意見の相違にどう対処するかを理解すると、人間関係について多くのことが明らかになります。",
+      "startButton": "分析を開始する"
+    }
+  },
+  "loveCommunication": {
+    "title": "ラブコミュニケーション",
+    "description": "恋愛関係におけるコミュニケーションスタイルを理解する。",
+    "intro": {
+      "title": "愛の言語分析",
+      "description": "恋愛関係において愛をどのように表現し、受け取るのかを発見してください。"
+    }
+  },
+  "synergy": {
+    "title": "シナジー分析",
+    "description": "あなたの性格のさまざまな側面がどのように連携しているかを発見してください。",
+    "hero": {
+      "badge": "相乗効果",
+      "titlePrefix": "ザ・グレート",
+      "titleSuffix": "同期性",
+      "description": "あなたの性格のさまざまな側面がどのように連携しているかを発見してください。"
+    },
+    "status": {
+      "accessing": "シナジー データにアクセスしています..."
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ui": {
+    "title": "通知",
+    "all": "全て",
+    "unread": "未読",
+    "readAll": "すべて既読としてマークする",
+    "markRead": "既読としてマークする",
+    "view": "ビュー",
+    "viewAll": "すべての通知を表示"
+  },
+  "empty": {
+    "noUnread": "未読の通知はありません",
+    "noNotifications": "まだ通知はありません"
+  },
+  "time": {
+    "justNow": "ちょうど今",
+    "minutesAgo": "{分}分前",
+    "hoursAgo": "{時間}時間前",
+    "daysAgo": "{日}日前"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "title": "Pieces of Life",
+  "description": "The activities you immerse yourself in are the treasures that complete your destiny.",
+  "placeholder": "Type a hobby and press Enter...",
+  "suggestion_title": "Resonance Suggested for You",
+  "toast_success": "A new piece of light has been added to your universe.",
+  "missing_element_hint": "We recommend activities to harmonize your {element} energy."
+}

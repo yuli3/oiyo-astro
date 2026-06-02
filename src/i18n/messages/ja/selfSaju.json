@@ -1,0 +1,42 @@
+{
+  "title": "四柱推命セルフ診断",
+  "description": "あなたの四柱を発見しましょう。",
+  "inputs": {
+    "birthDate": "生年月日",
+    "birthTime": "出生時刻",
+    "calculate": "計算する"
+  },
+  "result": {
+    "title": "あなたの運命分析",
+    "description": "四柱推命からの洞察",
+    "time": "時柱",
+    "day": "日柱",
+    "month": "月柱",
+    "year": "年柱",
+    "fiveElements": "五行分析"
+  },
+  "meta": {
+    "title": "あなたの運命分析",
+    "description": "四柱推命からの洞察",
+    "keywords": "四柱推命, 運命, 占い, 韓国占星術"
+  },
+  "hero": {
+    "title": "あなたの運命分析",
+    "subtitle": "古代の知恵であなたの人生の道を理解",
+    "cta": "私の運命を発見",
+    "badge": "🔮 伝統的知恵"
+  },
+  "test": {
+    "insightBullets": [
+      "自分の人生の目的を理解する",
+      "自分の強みを発見する",
+      "自分の運命について学ぶ"
+    ],
+    "progress": "進捗",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "送信",
+    "loading": "運命を分析中...",
+    "selectOption": "選択"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "plans": {
+    "free": {
+      "features": {
+        "basic": "Access to basic wisdom coordinates (Saju, Zodiac, Celtic, etc.)"
+      },
+      "name": "The Seeker",
+      "description": "Explore the basic coordinates of life and fragments of ancient wisdom."
+    },
+    "offering": {
+      "features": {
+        "ai_oracle": "AI Grand Oracle: Soul Narrative Synthesis (1 session)"
+      },
+      "name": "The Initiate",
+      "description": "Wake the Grand Oracle with a single sacred offering."
+    },
+    "pro": {
+      "features": {
+        "unlimited_ai": "Unlimited AI Oracle Synthesis & Council Perspectives",
+        "archive": "Personal Heritage Archive & Priority Support"
+      },
+      "name": "The Keeper",
+      "description": "Open all channels of wisdom and embrace the era of sovereign insight."
+    }
+  },
+  "AccessGuard": {
+    "features": {
+      "grand_oracle": {
+        "lockTitle": "A Hidden Epiphany Awaits",
+        "lockDescription": "Your destiny's fragments are gathered. The Grand Oracle is ready to weave them into a personal myth. Will you wake the prophecy?"
+      }
+    },
+    "actions": {
+      "offering": "Make a Sacred Offering ($1)",
+      "subscriber": "Become a Sovereign Keeper"
+    }
+  },
+  "grandOracle": {
+    "resting": "The Oracle is currently bathing in the eternal silence. Please return when the alignment has shifted.",
+    "casting": "Casting the Synthesis",
+    "weaving": "Weaving fragments of your soul...",
+    "sovereignWisdom": "Sovereign Wisdom",
+    "wisdomOfSovereign": "The Oracle's gift to your path.",
+    "ready": "Your destiny is manifest.",
+    "interrupted": "The synthesis was interrupted. Please try again."
+  },
+  "payment": "Payment Options"
+}

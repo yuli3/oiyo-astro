@@ -1,0 +1,8 @@
+{
+  "status": "天体の状態",
+  "active": "活性共鳴",
+  "orbitalVelocity": "軌道速度",
+  "km": "km/s",
+  "lunarPhase": "月の位相",
+  "waxing": "上弦の月"
+}

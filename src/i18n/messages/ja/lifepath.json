@@ -1,0 +1,184 @@
+{
+  "hero": {
+    "backToHome": "ホームに戻る",
+    "badge": "Introduction",
+    "cosmicSignature": "あなたの宇宙のサイン",
+    "description": "The Master Teacher",
+    "discover": "発見する",
+    "highlight": "洞察力",
+    "mainTitle": "ライフパス計算機",
+    "pageSubtitle": "古代の知恵",
+    "subtitle": "Reveal your path",
+    "title": "ライフパス",
+    "your": "あなたの"
+  },
+  "input": {
+    "birthDate": "生年月日",
+    "birthDateError": "無効な日付",
+    "calculating": "計算中...",
+    "dateLabel": "生年月日",
+    "description": "The Master Teacher",
+    "fullName": "フルネーム",
+    "nameLabel": "名前",
+    "namePlaceholder": "ジョン・ドゥ",
+    "submit": "計算する",
+    "title": "Life Path"
+  },
+  "intro": {
+    "badge": "導入",
+    "button": "始める",
+    "description": "The Master Teacher",
+    "quote": "数字が宇宙を支配する",
+    "title": "Life Path"
+  },
+  "meanings": {
+    "birthDay": "誕生日",
+    "destiny": "運命",
+    "lifePath": "ライフパス",
+    "personality": "人格",
+    "soulUrge": "ソウル・衝動"
+  },
+  "meta": {
+    "description": "The Master Teacher",
+    "keywords": "数秘術、ライフパス",
+    "title": "Life Path"
+  },
+  "result": {
+    "analyzeAnother": "別の分析",
+    "anotherPerson": "別の人をチェックする",
+    "dashboard": {
+      "advice": "アドバイス",
+      "career": "キャリア",
+      "challenges": "課題",
+      "strengths": "強み",
+      "yearEnergy": "年エネルギー"
+    },
+    "dashboardTitle": "あなたのダッシュボード",
+    "description": "The Master Teacher",
+    "lifeCoordination": "ライフコーディネート",
+    "readingTitle": "あなたの読書",
+    "recommendedCities": "おすすめの都市",
+    "soulFoods": "ソウルフード"
+  },
+  "results": {
+    "expression": "表現",
+    "header": "結果ヘッダー",
+    "lifePath": "ライフパス",
+    "personality": "人格",
+    "recalibrate": "再調整する",
+    "soulUrge": "ソウル・衝動",
+    "vibrationalResonance": "振動共鳴"
+  },
+  "subtitle": "自分の道を明らかにする",
+  "title": "ライフパス",
+  "numbers": {
+    "1": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "2": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "3": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "4": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "5": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "6": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "7": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "8": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "9": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "11": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "22": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "33": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "マスターティーチャー",
+      "keywords": [],
+      "name": "マスターティーチャー",
+      "strengths": [],
+      "traits": []
+    }
+  }
+}

@@ -1,0 +1,2601 @@
+{
+  "home": {
+    "enhancedTestGrid": {
+      "categories": {
+        "all": "全域枢纽",
+        "personality": "本真与灵魂",
+        "career": "天职与劳作",
+        "utility": "实相之棱镜",
+        "fun": "智慧之微光"
+      },
+      "sortBy": {
+        "popularity": "普世共鸣",
+        "newest": "新近洞察",
+        "time": "时空之律动",
+        "difficulty": "智性深度"
+      },
+      "difficulty": {
+        "easy": "易于入门",
+        "medium": "深奥",
+        "hard": "超凡"
+      },
+      "test": {
+        "progress": "觉醒之进境",
+        "submit": "直面真谛",
+        "loading": "解构宇宙模式中...",
+        "selectOption": "请择取与您本心共鸣最深之路径。",
+        "insightBullets": [
+          "探索你的潜意识...",
+          "绘制你的原型...",
+          "揭示你内心的真实..."
+        ],
+        "next": "上升",
+        "previous": "省察"
+      },
+      "result": {
+        "title": "向自我开放",
+        "description": "您当前共振的诊断结果。"
+      },
+      "meta": {
+        "title": "本体诊断| OIYO系列",
+        "description": "一套精心策划的测试来绘制人类体验。",
+        "keywords": "自我实现, 全息档案, 本体论地图"
+      },
+      "filters": "澄澈视野",
+      "viewMode": "视角切换",
+      "estimatedTime": "精进时间",
+      "minutes": "省察之分",
+      "startTest": "开启行旅",
+      "noResults": "在此视角下，未曾发现任何灵性的残响。",
+      "clearFilters": "重置视野",
+      "popular": "高度共振",
+      "featured": "书记之选",
+      "new": "初现之智",
+      "tryDifferentFilters": "或可尝试执持另一棱镜，观测自我的不同侧面。",
+      "searchPlaceholder": "What part of yourself do you wish to see?"
+    },
+    "title": "OIYO保护区",
+    "description": "欢迎来到深度自我观察和天体排列的空间。",
+    "keywords": "自我实现, 全息档案, 本体论地图",
+    "errorFallbackTitle": "系统之不谐",
+    "errorFallbackDescription": "信号已佚。请归于起始圣所。",
+    "subtitle": "见证碎片化的身份如何收敛于一个辉煌而完整的全一性状态。",
+    "searchPlaceholder": "你希望看到自己的哪一部分？"
+  },
+  "lifeAnalysis": {
+    "features": {
+      "timing": {
+        "title": "时间流",
+        "love": "关系之潮汐",
+        "business": "事业之结实",
+        "crisis": "不祥之阴翳",
+        "marriage": "合契之和谐"
+      },
+      "wealth": {
+        "title": "物料流程",
+        "fortune": "丰饶之潜能",
+        "style": "繁荣之习性",
+        "spending": "资源之均衡"
+      },
+      "career": {
+        "title": "职业与劳动",
+        "direction": "行路之方位",
+        "capability": "潜隐之才干",
+        "talent": "天赋之秉性",
+        "welcome": "显化之成功"
+      },
+      "interest": {
+        "title": "激情与专注",
+        "main": "核心之聚焦"
+      },
+      "health": {
+        "title": "至关重要的诚信",
+        "organs": "形体之警讯"
+      },
+      "loveStyle": {
+        "title": "心有缘",
+        "type": "情欲之原型"
+      }
+    },
+    "title": "命运的整体蓝图",
+    "price": "1,000",
+    "priceUsd": "$1.00",
+    "originalPrice": "10,000",
+    "discountRate": "90%",
+    "description": "一份清晰的报告，详细描述了您生活轨迹的各个方面。",
+    "cta": "获取蓝图",
+    "oneTimePayment": "单次支付 (非周期性 access)"
+  },
+  "wholeSelf": {
+    "card": {
+      "header": "核心之显现"
+    },
+    "labels": {
+      "money": "繁荣之流向",
+      "color": "个体之光谱"
+    },
+    "values": {
+      "money": {
+        "impulsive-spender": "刹那之探险家",
+        "careful-saver": "积蓄之守护者",
+        "social-spender": "慷慨之连接者",
+        "investment-planner": "增长之建筑师",
+        "experience-seeker": "记忆之策展人",
+        "security-focused": "基石之修筑者"
+      },
+      "color": {
+        "warm-spring": " ethereal 般之早春花卉",
+        "bright-spring": "灿烂太阳之觉醒",
+        "light-summer": "清明碧海之静谧",
+        "cool-summer": "精炼冰川之平稳",
+        "soft-autumn": "收获之金色平衡",
+        "warm-autumn": "深邃琥珀之共鸣",
+        "cool-winter": "恒星般水晶之高洁",
+        "bright-winter": "绝对金刚石之明澈"
+      }
+    },
+    "actions": {
+      "download": "典藏智慧"
+    },
+    "meta": {
+      "subtitle": "见证碎片化的身份如何收敛于一个辉煌而完整的全一性状态。",
+      "disclaimer": "您的本性不假外求，仅存于您的设备这一独立圣所之中。",
+      "keywords": "自我实现, 全息档案, 本体论地图",
+      "title": "综合人格本体论",
+      "description": "您的心理和精神架构的统一愿景。"
+    },
+    "hero": {
+      "subtitle": "见证碎片化的身份如何收敛于一个辉煌而完整的全一性状态。",
+      "badge": "整体性共鸣"
+    },
+    "test": {
+      "progress": "觉醒之进境",
+      "submit": "直面真谛",
+      "loading": "解构宇宙模式中...",
+      "selectOption": "请择取与您本心共鸣最深之路径。",
+      "insightBullets": ["发现塑造您日常生活的隐藏几何形状。"],
+      "next": "上升",
+      "previous": "省察"
+    },
+    "result": {
+      "title": "自我的综合",
+      "description": "雄辩地揭示您独特的心理特征。"
+    },
+    "subtitle": "见证碎片化的身份如何收敛于一个辉煌而完整的全一性状态。",
+    "missing": "尚未显露之领域",
+    "disclaimer": "您的本性不假外求，仅存于您的设备这一独立圣所之中。",
+    "title": "我的内心地图",
+    "description": "穿越你的潜意识和意识特征的风景。",
+    "a": "永恒之共鸣"
+  },
+  "twinFinder": {
+    "title": "双胞胎查找器",
+    "noMatches": "未找到匹配项。",
+    "findNow": "立即查找"
+  },
+  "dailyHoroscope": {
+    "title": "结果",
+    "subtitle": "每日签到",
+    "sections": {
+      "energy": "能量预报",
+      "lucky": {
+        "title": "结果",
+        "direction": "方向",
+        "color": "颜色",
+        "number": "数字",
+        "item": "护符"
+      },
+      "action": {
+        "title": "结果",
+        "do": "追求",
+        "avoid": "避免"
+      },
+      "ritual": "日常仪式"
+    },
+    "elements": {
+      "wood": "成长与仁慈",
+      "fire": "激情与清晰",
+      "earth": "稳定与信任",
+      "metal": "正义与定义",
+      "water": "智慧与流动"
+    },
+    "oracleMessage": "今日之神谕正穿透命运的尘埃，向您揭示生命波动的微光。",
+    "actionableAdvice": "顺应此时空的潮流，建议您采取针对性的相位校准方案。"
+  },
+  "dailyInsightsGenerator": {
+    "personalityDescriptors": {
+      "assertive": "天生的领导者",
+      "analytical": "深思熟虑的分析师",
+      "expressive": "充满活力的沟通者",
+      "adventurer": "大胆的探险家",
+      "blue": "宁静的灵魂",
+      "explorer": "好奇的发现者",
+      "default": "今天就发挥你独特的优势吧。"
+    },
+    "customization": {
+      "greeting": "你好！",
+      "personalizedMessage": "我们为你独特的旅程喝彩。"
+    },
+    "contextualTips": {
+      "assertive-motivation": "当你通过自己的榜样启发他人时，你的领导能力最为强大。",
+      "adventurer-creativity": "今天，将你对探索的热爱转化为创新的尝试。",
+      "blue-wellness": "你天生的同理心意味着照顾好自己能让你更好地照顾他人。",
+      "default": "今天就发挥你独特的优势吧。"
+    },
+    "fallback": {
+      "content": {
+        "title": "结果",
+        "message": "每个人都有自己独特的优势和天赋。今天是一个认可并庆祝你内在特质的日子。",
+        "actionTip": "今天请有意识地使用你的一个优势。",
+        "affirmation": "我是有价值且独特的。"
+      },
+      "customization": {
+        "greeting": "你好！",
+        "personalizedMessage": "我们为你独特的旅程喝彩。",
+        "contextualTip": "你的个性让世界更加丰富多彩。"
+      }
+    },
+    "shareTemplate": "{emoji} {title}\\n\\n{message}\\n\\n💡 {actionTip}\\n\\n✨ {affirmation}",
+    "sharePersonalizedPrefix": "{问候语}"
+  },
+  "dailyReading": {
+    "meta": {
+      "keywords": "今日运势, 能量, 建议, 每日诊断",
+      "title": "结果",
+      "description": "您的身心正在渴望休息。"
+    },
+    "hero": {
+      "eyebrow": "每日仪式",
+      "subtitle": "每日签到",
+      "cta": "查看今日讯息"
+    },
+    "cards": {
+      "subtitle": "每日签到",
+      "refresh": "抽取新卡",
+      "reminder": "明天见！"
+    },
+    "summary": {
+      "energy": "能量预报",
+      "focus": "聚焦关键词",
+      "luckyColor": "幸运色彩"
+    }
+  },
+  "welcomeTitle": "发现今天的你",
+  "alreadyCompleted": "今日诊断已完成！",
+  "comeBackTomorrow": "明天也有新的诊断等着你。",
+  "feature1Title": "只需2分钟",
+  "feature1Desc": "通过每日简单的签到，掌握自身状态。",
+  "feature2Title": "每日不同问题",
+  "feature2Desc": "每天不同的问题，发现新的自己。",
+  "feature3Title": "30天记录",
+  "feature3Desc": "长期追踪情绪变化。",
+  "startDaily": "开始今日诊断",
+  "viewHistory": "查看历史",
+  "days": "天",
+  "totalDays": "总天数",
+  "longestStreak": "最长连续天数",
+  "uniqueTypes": "独特类型数",
+  "question": "今天感觉如何？",
+  "todayAdvice": "今日建议",
+  "shareResult": "分享结果",
+  "copyLink": "复制链接",
+  "copied": "已复制！",
+  "reminder": "明天见！",
+  "reminderText": "别忘了明天也来签到。",
+  "shareTitle": "今日性格运势",
+  "historyTitle": "我的诊断历史",
+  "historySubtitle": "回顾过去的记录",
+  "trendChart": "能量趋势",
+  "energyScore": "能量分数",
+  "calendarView": "日历视图",
+  "mostCommon": "最常见类型",
+  "noData": "无数据",
+  "takeOtherTests": "参加其他测试",
+  "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+  "dynamics": {
+    "hero": {
+      "title": "成长建议",
+      "subtitle": "了解您家庭独特的动态并发现加强关系的方法",
+      "description": "获得个性化行动计划，加强沟通并解决冲突。",
+      "analyzing": "正在分析家庭动态...",
+      "analyzeAnother": "分析另一个家庭"
+    },
+    "features": {
+      "comprehensive": {
+        "title": "成长建议",
+        "description": "获得个性化行动计划，加强沟通并解决冲突。"
+      },
+      "harmony": {
+        "title": "成长建议",
+        "description": "获得个性化行动计划，加强沟通并解决冲突。"
+      },
+      "growth": {
+        "title": "成长建议",
+        "description": "获得个性化行动计划，加强沟通并解决冲突。"
+      }
+    },
+    "sections": {
+      "howWorks": "家庭动态分析如何运作",
+      "whatAnalyze": "我们分析什么",
+      "whatGet": "您将获得什么",
+      "faq": "常见问题"
+    },
+    "analyze": {
+      "list": [
+        "家庭成员之间的沟通模式",
+        "冲突解决方式和兼容性",
+        "家庭内部的情感支持系统",
+        "个体人格特质相互作用",
+        "基于角色的关系动态"
+      ]
+    },
+    "results": {
+      "list": [
+        "家庭和睦总体得分",
+        "详细关系分析",
+        "优势和增长领域",
+        "个性化的改进建议",
+        "实用的家居和谐技巧"
+      ]
+    },
+    "faq": {
+      "placeholder": {
+        "question": "FAQ {number} 问题",
+        "answer": "FAQ {number} 答案内容"
+      }
+    },
+    "badge": "家庭分析"
+  },
+  "astrologyHub": {
+    "title": "占星中心",
+    "subtitle": "探索东方和西方的古老智慧。",
+    "tabs": {
+      "western": "西方十二生肖",
+      "chinese": "十二生肖",
+      "extended": "扩展十二生肖"
+    },
+    "westernTitle": "西方十二生肖",
+    "westernDesc": "发现您的星座特征和每日星座运势。",
+    "chineseTitle": "十二生肖",
+    "chineseDesc": "发现你的动物星座以及它对你命运的影响。",
+    "meta": {
+      "title": "占星学中心",
+      "description": "统一占星学读物：中国和扩展十二生肖。"
+    }
+  },
+  "dailyTarot": {
+    "subtitle": "用卡片查看今天的运势",
+    "disclaimer": "塔罗牌结果仅供娱乐和建议，您的意愿最重要。",
+    "clickToDraw": "抽一张卡",
+    "drawAgain": "再画一次",
+    "title": "每日塔罗牌",
+    "description": "来看看这张神秘的卡片，它会照亮你的一天。",
+    "meta": {
+      "title": "每日塔罗占卜",
+      "description": "每日塔罗牌占卜，查看今日建议与运势。"
+    }
+  },
+  "extendedZodiac": {
+    "corePersonality": {
+      "leader": "天生的领导者，具有强烈的独立精神",
+      "innovator": "具有艺术敏感性的创意创新者",
+      "analyst": "具有实践智慧的深思熟虑的分析师",
+      "balanced": "具有不同优势的平衡个体"
+    },
+    "lifeTheme": "智慧、创造力与实际行动的和谐统一",
+    "compatibilityAnalysis": {
+      "excellent": "所有系统之间的完美和谐。 你们的宇宙能量非常一致。",
+      "good": "整体兼容性好。 细微的调整可以增强您的自然流动。",
+      "moderate": "与成长和平衡的机会适度兼容。",
+      "diverse": "可以通过有意识的意识和实践来协调不同的能量。"
+    },
+    "timeline": {
+      "currentTheme_spring": "新的起点和成长",
+      "currentTheme_summer": "巅峰能量和成就",
+      "currentTheme_autumn": "收获与整合",
+      "currentTheme_winter": "反思与规划",
+      "currentTheme_default": "成长与发展",
+      "advice": {
+        "strengths": "专注于你的自然优势",
+        "intuition": "相信你的直觉做决定",
+        "balance": "在生活的各个方面保持平衡"
+      },
+      "upcoming": {
+        "next3": "稳步进步的时期，有新联系的机会",
+        "nextYear": "个人和专业领域的显着增长",
+        "transitions": ["职业发展机会", "深化重要关系", "个人灵性成长"]
+      }
+    }
+  },
+  "dreamJournal": {
+    "meta": {
+      "title": "梦想日记",
+      "description": "记录并分析你的梦境",
+      "keywords": "梦日记、梦分析、梦解析"
+    },
+    "hero": {
+      "title": "梦想日记",
+      "badge": "受欢迎的",
+      "subtitle": "你的梦想的完整指南",
+      "description": "探索我们专为深入梦想洞察而设计的工具套件。"
+    },
+    "tabs": {
+      "analysis": "你的梦想类型",
+      "symbols": "符号词典",
+      "journal": "梦想日记小贴士"
+    },
+    "result": {
+      "title": "梦境解析",
+      "copied": "已复制到剪贴板！",
+      "characteristics": "你的梦想特征",
+      "dreamPatterns": "你的梦想图案",
+      "interpretationTips": "解梦技巧",
+      "commonSymbols": "你常见的梦想符号",
+      "dreamTypeBreakdown": "你的梦想类型细分",
+      "share": "分享",
+      "shareText": "我是一个{type}梦想家！ 在这里查看您梦想的性格：{url}",
+      "retake": "重考"
+    },
+    "symbols": {
+      "title": "梦的象征词典",
+      "subtitle": "发现常见梦境符号背后的含义",
+      "searchPlaceholder": "搜索符号..."
+    },
+    "journal": {
+      "title": "梦想日记指南",
+      "subtitle": "了解如何有效记录和分析你的梦",
+      "gettingStarted": "入门",
+      "whatToRecord": "记录什么",
+      "interpretationTips": "口译技巧",
+      "improveRecall": "提高梦境回忆能力"
+    },
+    "test": {
+      "progress": "第 {当前} 个问题（共 {total} 个）",
+      "selectOption": "选择一个选项"
+    }
+  },
+  "chineseZodiac": {
+    "animals": {
+      "rat": {
+        "name": "鼠",
+        "years": "1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020",
+        "personality": "聪明、机智、思维敏捷。 天生的领导力和出色的商业头脑。"
+      },
+      "ox": {
+        "name": "牛",
+        "years": "1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021",
+        "personality": "可靠、耐心、勤奋。 重视传统和稳定。"
+      },
+      "tiger": {
+        "name": "老虎",
+        "years": "1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022",
+        "personality": "勇敢、自信、有竞争力。 天生的领导力和强大的魅力。"
+      },
+      "rabbit": {
+        "name": "兔子",
+        "years": "1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023",
+        "personality": "温柔、安静、优雅。 重视和平与和谐的关系。"
+      },
+      "dragon": {
+        "name": "龙",
+        "years": "1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012, 2024",
+        "personality": "精力充沛、聪明、有才华。 天生的魅力和领导能力。"
+      },
+      "snake": {
+        "name": "蛇",
+        "years": "1929, 1941, 1953, 1965, 1977, 1989, 2001, 2013, 2025",
+        "personality": "聪明、直觉强、具有神秘魅力。 深刻的思想家，具有良好的判断力。"
+      },
+      "horse": {
+        "name": "马",
+        "years": "1930, 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026",
+        "personality": "精力充沛、独立、开朗。 热爱自由和冒险。"
+      },
+      "goat": {
+        "name": "山羊",
+        "years": "1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, 2027",
+        "personality": "温柔、富有同情心，具有很高的艺术感。 重视美丽与和谐。"
+      },
+      "monkey": {
+        "name": "猴",
+        "years": "1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016, 2028",
+        "personality": "聪明、好奇、适应力强。 快速学习和出色的解决问题的能力。"
+      },
+      "rooster": {
+        "name": "公鸡",
+        "years": "1933, 1945, 1957, 1969, 1981, 1993, 2005, 2017, 2029",
+        "personality": "自信、勤奋、勇敢。 天生的表现能力和很强的原则性。"
+      },
+      "dog": {
+        "name": "狗",
+        "years": "1934, 1946, 1958, 1970, 1982, 1994, 2006, 2018, 2030",
+        "personality": "忠诚、负责、可靠。 具有强烈的正义感和公平感。"
+      },
+      "pig": {
+        "name": "猪",
+        "years": "1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031",
+        "personality": "诚实、慷慨、勤奋。 重视家庭，享受生活乐趣。"
+      }
+    },
+    "duration": "约 6 分钟",
+    "accuracy": "88% 模式匹配",
+    "benefits": {
+      "title": "十二生肖分析的好处",
+      "personality": {
+        "title": "特质分析",
+        "description": "发现你与生俱来的倾向和潜力。"
+      },
+      "fortune": {
+        "title": "财富流",
+        "description": "了解您一年的运势和运气。"
+      },
+      "compatibility": {
+        "title": "兼容性",
+        "description": "看看你如何与其他星座搭配。"
+      }
+    },
+    "faq": {
+      "title": "常见问题解答",
+      "question1": "是根据农历还是阳历？",
+      "answer1": "迹象由春季开始（大约 2 月 4 日）决定。",
+      "question2": "兼容性有多准确？",
+      "answer2": "它基于长期的传统； 将其用作参考和娱乐。",
+      "question3": "什么是“三才”？",
+      "answer3": "为期 3 年的谨慎期，每 9 年回归一次。",
+      "question4": "如果我不知道我的标志怎么办？",
+      "answer4": "输入您的出生日期，我们将为您计算。"
+    }
+  },
+  "sharing": {
+    "imageTitle": "财富阅读",
+    "kakaoTitle": "我的命运地图",
+    "viewResult": "查看结果",
+    "cardTitle": "财富卡",
+    "dominantElement": "主导元素",
+    "personalityType": "性格类型",
+    "tagline": "设计自己独特的生活方式",
+    "title": "财富结果",
+    "copySuccess": "✅ 已复制！",
+    "shareImage": "分享图片",
+    "download": "保存结果",
+    "copyUrl": "复制网址",
+    "copyText": "复制文本",
+    "socialPlatforms": "社交媒体",
+    "encouragement": "与您的朋友分享"
+  },
+  "dreamInterpretation": {
+    "meta": {
+      "title": "解梦",
+      "description": "发现梦中隐藏的含义。",
+      "keywords": "梦的解释、梦的含义、象征意义",
+      "testTitle": "分析你的梦想",
+      "testDescription": "深入了解你的潜意识符号。"
+    },
+    "hero": {
+      "badge": "受到推崇的",
+      "title": "解梦",
+      "subtitle": "理解梦境的指南",
+      "description": "解锁潜意识中的信息。"
+    },
+    "test": {
+      "title": "梦境解析",
+      "subtitle": "揭开你梦想的神秘面纱"
+    }
+  },
+  "date": "最后更新",
+  "gender": "⚧ 性别",
+  "hour": "小时",
+  "minute": "分钟",
+  "vitality": {
+    "fatigueAnalysis": {
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "keywords": "写作, 灵感, 日记, 提示"
+      }
+    }
+  },
+  "petCompatibility": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "开始测试"
+    },
+    "marketing": {
+      "about": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "feature1": "基于肤色、眼睛颜色和头发颜色的科学色彩分析",
+        "feature2": "针对衣橱和彩妆的个性化色板建议",
+        "feature3": "应用季节色彩理论以获得最佳效果",
+        "feature4": "最大化您自然特征的专业造型建议"
+      }
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "推荐是如何运作的？",
+      "answer1": "通过分析兴趣和性格来建议适合的兴趣爱好。",
+      "question2": "我可以获得多个推荐吗？",
+      "answer2": "是的，我们根据您的个人资料提供多种兴趣爱好建议。",
+      "question3": "这些兴趣爱好适合初学者吗？",
+      "answer3": "包含从初级到高级的所有技能水平的选项。"
+    }
+  },
+  "decision": {
+    "hub": {
+      "tabs": {
+        "helper": "Decision Helper",
+        "style": "Decision Style"
+      },
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "helperTitle": "Random Decision Maker",
+      "helperDesc": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    }
+  },
+  "food": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "badge": "热门",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "cta": "开始测试"
+    },
+    "landing": {
+      "benefits": {
+        "items": [
+          {
+            "icon": "🍽️",
+            "title": "发现你的风格",
+            "description": "了解您独特的食物和用餐方式。"
+          },
+          {
+            "icon": "👨‍🍳",
+            "title": "烹饪见解",
+            "description": "根据您的类型获取有关如何改进烹饪的提示。"
+          },
+          {
+            "icon": "🤝",
+            "title": "社交餐饮",
+            "description": "了解您如何在用餐时与他人互动。"
+          },
+          {
+            "icon": "🥗",
+            "title": "健康的细微差别",
+            "description": "了解您的个性如何影响您的营养选择。"
+          }
+        ],
+        "title": "Awaiting deep synthesis..."
+      },
+      "types": {
+        "items": [
+          {
+            "emoji": "🌍",
+            "name": "冒险家",
+            "description": "始终寻求新的口味和体验。"
+          },
+          {
+            "emoji": "🏠",
+            "name": "传统主义者",
+            "description": "喜欢经典的舒适食品和家庭食谱。"
+          },
+          {
+            "emoji": "⭐",
+            "name": "完美主义者",
+            "description": "欣赏高品质的原料和展示。"
+          }
+        ],
+        "title": "Awaiting deep synthesis..."
+      }
+    },
+    "test": {
+      "progress": "进度",
+      "submit": "获取分析",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "sections": {
+        "traits": "核心特质",
+        "cuisines": "理想菜系",
+        "restaurantStyle": "餐厅风格",
+        "cookingStyle": "烹饪风格",
+        "breakdown": "费用明细"
+      },
+      "loading": "正在分析颜色...",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "retakeTest": "重新测试"
+    }
+  },
+  "lifeBalance": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "categories": {
+      "relationships": "与家人、朋友和伴侣关系的质量",
+      "career": "工作满意度、职业成长和成就感",
+      "personal": "自我发展、爱好、学习和兴趣",
+      "environment": "居住空间和周围环境的质量与舒适度",
+      "fun": "休闲活动、娱乐和生活乐趣",
+      "contribution": "价值感、帮助他人和产生积极影响",
+      "health": "身体和心理健康状况",
+      "finance": "收入、支出管理和未来储备"
+    },
+    "categoryDescriptions": {
+      "relationships": "与家人、朋友和伴侣关系的质量",
+      "career": "工作满意度、职业成长和成就感",
+      "personal": "自我发展、爱好、学习和兴趣",
+      "environment": "居住空间和周围环境的质量与舒适度",
+      "fun": "休闲活动、娱乐和生活乐趣",
+      "contribution": "价值感、帮助他人和产生积极影响",
+      "health": "身体和心理健康状况",
+      "finance": "收入、支出管理和未来储备"
+    },
+    "balanceLevels": {
+      "well-balanced": "太棒了！您在生活的大多数领域都保持着良好的谐度。请继续保持并维护这种平衡。",
+      "moderately-balanced": "不错的进展！您的生活基本处于平衡状态，但有些领域仍需更多关注。专注于需要改进的领域以获得更好的福祉。",
+      "needs-attention": "是时候采取行动了！明显的失衡正在影响您的整体福祉。优先处理最薄弱的领域，并制定行动计划。",
+      "critical-imbalance": "重要提示！您生活中的关键领域需要立即关注。从一个小领域开始，并在需要时寻求支持。"
+    },
+    "balanceDescriptions": {
+      "well-balanced": "太棒了！您在生活的大多数领域都保持着良好的谐度。请继续保持并维护这种平衡。",
+      "moderately-balanced": "不错的进展！您的生活基本处于平衡状态，但有些领域仍需更多关注。专注于需要改进的领域以获得更好的福祉。",
+      "needs-attention": "是时候采取行动了！明显的失衡正在影响您的整体福祉。优先处理最薄弱的领域，并制定行动计划。",
+      "critical-imbalance": "重要提示！您生活中的关键领域需要立即关注。从一个小领域开始，并在需要时寻求支持。"
+    },
+    "recommendationsByLevel": {
+      "well-balanced": [
+        "继续保持当前的习惯以保持这种平衡",
+        "分享您的策略以帮助他人找到平衡",
+        "在你的强项领域设定具有挑战性的目标"
+      ],
+      "moderately-balanced": [
+        "本月将精力集中在 1-2 个改进领域",
+        "为被忽视的生活领域安排具体时间",
+        "庆祝在优势领域取得的成功以保持动力"
+      ],
+      "needs-attention": [
+        "选择本周需要改进的一个优先领域",
+        "查找您今天可以采取的具体小行动",
+        "考虑向朋友、家人或专业人士寻求帮助"
+      ],
+      "critical-imbalance": [
+        "如果需要，请寻求专业帮助 - 您不必独自完成",
+        "从基本的自我保健开始：睡眠、营养、锻炼",
+        "请求值得信赖的朋友或家人的支持"
+      ]
+    },
+    "heroTitle": "人生平衡轮",
+    "heroSubtitle": "只需5分钟，即可在8个关键领域中可视化并改善您的人生平衡",
+    "feature1": "基于肤色、眼睛颜色和头发颜色的科学色彩分析",
+    "feature2": "针对衣橱和彩妆的个性化色板建议",
+    "feature3": "应用季节色彩理论以获得最佳效果",
+    "assessmentTitle": "评估您的人生平衡",
+    "assessmentSubtitle": "请对您每个领域的当前满意度进行评分（1分：非常不满意，10分：非常满意）",
+    "sliderLabel": "评分 (1-10)",
+    "calculateBalance": "查看结果",
+    "resultsTitle": "您的人生平衡分析",
+    "balanceScore": "平衡得分",
+    "balanceLevel": "平衡等级",
+    "strongestAreas": "您的核心优势",
+    "improvementAreas": "待改进领域",
+    "chartTitle": "您的人生平衡轮",
+    "shareCopied": "结果已复制到剪贴板！",
+    "shareText": "我的人生平衡得分：{score}/100 - {level}！检查您的平衡状态：https://oiyo.net/cn/life-balance-wheel",
+    "howItWorksTitle": "运作原理",
+    "step1Title": "分析兴趣",
+    "step1Description": "了解您的个人资料",
+    "step2Title": "匹配爱好",
+    "step2Description": "找到适合您的选择",
+    "step3Title": "开始活动",
+    "step3Description": "开启您的旅程",
+    "faqTitle": "常见问题",
+    "faq1Question": "衡量的8大生活领域是什么？",
+    "faq1Answer": "健康与福祉、人际关系、事业与工作、财务稳健、个人成长、物理环境、休闲与乐趣，以及价值与贡献。",
+    "faq2Question": "平衡得分是如何计算的？",
+    "faq2Answer": "该分数结合了您在所有领域的平均满意度，并对失衡情况进行扣分。某些领域的高分不能完全弥补其他领域过低的分数。",
+    "faq3Question": "多少分才算好的平衡得分？",
+    "faq3Answer": "70-100分为非常平衡，50-69分为基本平衡，30-49分为需要关注，30分以下为严重失衡。目标是各领域间的和谐，而不仅是每个领域的完美。",
+    "faq4Question": "我应该多久检查一次人生平衡？",
+    "faq4Answer": "建议每月或每季度检查一次以追踪进展。在重大人生转折点或感到不知所措时使用，以重拾视角。",
+    "recommendations": "成长建议",
+    "disclaimer": "Awaiting deep synthesis...",
+    "share": "分享结果",
+    "shareResults": "分享结果",
+    "retake": "重新测试"
+  },
+  "lifeSlogan": {
+    "meta": {
+      "hero": {
+        "subtitle": "Awaiting deep synthesis...",
+        "cta": "开始测试"
+      },
+      "keywords": "写作, 灵感, 日记, 提示",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "开始测试"
+    },
+    "marketing": {
+      "about": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "feature1": "基于肤色、眼睛颜色和头发颜色的科学色彩分析",
+        "feature2": "针对衣橱和彩妆的个性化色板建议",
+        "feature3": "应用季节色彩理论以获得最佳效果",
+        "feature4": "最大化您自然特征的专业造型建议"
+      }
+    },
+    "categories": {
+      "growth": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "love": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "success": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "peace": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "adventure": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "wisdom": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "推荐是如何运作的？",
+      "answer1": "通过分析兴趣和性格来建议适合的兴趣爱好。",
+      "question2": "我可以获得多个推荐吗？",
+      "answer2": "是的，我们根据您的个人资料提供多种兴趣爱好建议。",
+      "question3": "这些兴趣爱好适合初学者吗？",
+      "answer3": "包含从初级到高级的所有技能水平的选项。"
+    },
+    "slogans": {
+      "growth": {
+        "motivational": {
+          "main": "智慧在寂静中耳语",
+          "alt1": "知识转化为理解",
+          "alt2": "道路会向探索者显现",
+          "alt3": "学习是旅程，而非目的地"
+        },
+        "calm": {
+          "main": "智慧在寂静中耳语",
+          "alt1": "知识转化为理解",
+          "alt2": "道路会向探索者显现",
+          "alt3": "学习是旅程，而非目的地"
+        }
+      },
+      "love": {
+        "poetic": {
+          "main": "智慧在寂静中耳语",
+          "alt1": "知识转化为理解",
+          "alt2": "道路会向探索者显现",
+          "alt3": "学习是旅程，而非目的地"
+        }
+      },
+      "success": {
+        "bold": {
+          "main": "智慧在寂静中耳语",
+          "alt1": "知识转化为理解",
+          "alt2": "道路会向探索者显现",
+          "alt3": "学习是旅程，而非目的地"
+        }
+      },
+      "peace": {
+        "calm": {
+          "main": "智慧在寂静中耳语",
+          "alt1": "知识转化为理解",
+          "alt2": "道路会向探索者显现",
+          "alt3": "学习是旅程，而非目的地"
+        }
+      },
+      "adventure": {
+        "bold": {
+          "main": "智慧在寂静中耳语",
+          "alt1": "知识转化为理解",
+          "alt2": "道路会向探索者显现",
+          "alt3": "学习是旅程，而非目的地"
+        }
+      },
+      "wisdom": {
+        "poetic": {
+          "main": "智慧在寂静中耳语",
+          "alt1": "知识转化为理解",
+          "alt2": "道路会向探索者显现",
+          "alt3": "学习是旅程，而非目的地"
+        }
+      }
+    },
+    "inspiration": {
+      "growth": {
+        "quote1": "唯一真正的智慧是知道自己一无所知。——苏格拉底",
+        "quote2": "智慧始于惊奇。——苏格拉底",
+        "quote3": "知识说话，但智慧倾听。——吉米·亨德里克斯"
+      },
+      "love": {
+        "quote1": "唯一真正的智慧是知道自己一无所知。——苏格拉底",
+        "quote2": "智慧始于惊奇。——苏格拉底",
+        "quote3": "知识说话，但智慧倾听。——吉米·亨德里克斯"
+      },
+      "success": {
+        "quote1": "唯一真正的智慧是知道自己一无所知。——苏格拉底",
+        "quote2": "智慧始于惊奇。——苏格拉底",
+        "quote3": "知识说话，但智慧倾听。——吉米·亨德里克斯"
+      },
+      "peace": {
+        "quote1": "唯一真正的智慧是知道自己一无所知。——苏格拉底",
+        "quote2": "智慧始于惊奇。——苏格拉底",
+        "quote3": "知识说话，但智慧倾听。——吉米·亨德里克斯"
+      },
+      "adventure": {
+        "quote1": "唯一真正的智慧是知道自己一无所知。——苏格拉底",
+        "quote2": "智慧始于惊奇。——苏格拉底",
+        "quote3": "知识说话，但智慧倾听。——吉米·亨德里克斯"
+      },
+      "wisdom": {
+        "quote1": "唯一真正的智慧是知道自己一无所知。——苏格拉底",
+        "quote2": "智慧始于惊奇。——苏格拉底",
+        "quote3": "知识说话，但智慧倾听。——吉米·亨德里克斯"
+      }
+    },
+    "usageTips": {
+      "growth": {
+        "tip1": "将其作为做决策的指导原则",
+        "tip2": "加入您的个人使命说明",
+        "tip3": "分享以激励持续学习"
+      },
+      "love": {
+        "tip1": "将其作为做决策的指导原则",
+        "tip2": "加入您的个人使命说明",
+        "tip3": "分享以激励持续学习"
+      },
+      "success": {
+        "tip1": "将其作为做决策的指导原则",
+        "tip2": "加入您的个人使命说明",
+        "tip3": "分享以激励持续学习"
+      },
+      "peace": {
+        "tip1": "将其作为做决策的指导原则",
+        "tip2": "加入您的个人使命说明",
+        "tip3": "分享以激励持续学习"
+      },
+      "adventure": {
+        "tip1": "将其作为做决策的指导原则",
+        "tip2": "加入您的个人使命说明",
+        "tip3": "分享以激励持续学习"
+      },
+      "wisdom": {
+        "tip1": "将其作为做决策的指导原则",
+        "tip2": "加入您的个人使命说明",
+        "tip3": "分享以激励持续学习"
+      }
+    }
+  },
+  "cityMatch": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "开始测试",
+      "participants": "位冒险家已加入"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🌏",
+          "title": "全球数据库",
+          "description": "分析全球 25 个以上主要城市。"
+        },
+        {
+          "icon": "🎯",
+          "title": "个性化搭配",
+          "description": "基于您独特的生活方式和工作偏好。"
+        },
+        {
+          "icon": "📊",
+          "title": "详细见解",
+          "description": "获取每个城市的安全、成本和文化数据。"
+        },
+        {
+          "icon": "✨",
+          "title": "有趣的结果",
+          "description": "与朋友分享您的梦想目的地。"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "questions": [
+        {
+          "q": "使用什么数据进行匹配？",
+          "a": "我们会利用您对气候、生活成本、安全和文化兴趣的偏好。"
+        },
+        {
+          "q": "我可以将其用于游牧生活方式吗？",
+          "a": "是的！ 该测试包括对数字游牧民来说很重要的指标。"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "cta": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "button": "立即开始"
+    },
+    "test": {
+      "common": {
+        "progress": "进度",
+        "next": "下一步",
+        "previous": "上一步",
+        "submit": "获取分析",
+        "start": "Awaiting deep synthesis...",
+        "loading": "正在分析颜色...",
+        "results": "Awaiting deep synthesis...",
+        "dashboard": "Awaiting deep synthesis...",
+        "insights": "Awaiting deep synthesis..."
+      },
+      "seeResults": "查看结果",
+      "selectOption": "请选择一个选项",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "relationship": {
+        "compatibility": "匹配度得分"
+      },
+      "breakdownLabels": {
+        "climate": "气候",
+        "lifestyle": "生活方式",
+        "culture": "文化与艺术",
+        "practical": "实用性"
+      },
+      "cityDetails": {
+        "population": "人口",
+        "continent": "洲",
+        "timezone": "时区",
+        "safety": "安全",
+        "cost": "生活成本",
+        "jobs": "就业机会",
+        "culture": "文化与艺术",
+        "weather": "天气",
+        "transport": "交通"
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "topMatch": "您的最佳匹配",
+      "whyThisCity": "为什么是这个城市？",
+      "breakdown": "费用明细",
+      "otherMatches": "其他适合您的城市",
+      "share": "分享结果",
+      "exploreCity": "了解有关此城市的更多信息",
+      "retake": "重新测试"
+    }
+  },
+  "music": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "badge": "热门",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "发现你的类型",
+          "description": "了解您的音乐选择如何评价您"
+        },
+        {
+          "title": "获取推荐",
+          "description": "寻找您喜欢的新艺术家和流派"
+        },
+        {
+          "title": "与他人联系",
+          "description": "结识具有相似音乐品味的人"
+        },
+        {
+          "title": "拓展你的视野",
+          "description": "探索舒适区之外的音乐"
+        }
+      ],
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "types": {
+      "explorer": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "traditionalist": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "mainstream": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "intense": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "contemporary": {
+        "name": "Senior Helpline",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "这项测试的准确度如何？",
+          "answer": "我们的测试基于音乐心理学研究和用户反馈。"
+        },
+        {
+          "question": "我会收到音乐推荐吗？",
+          "answer": "是的，您将收到个性化的艺术家和流派建议。"
+        },
+        {
+          "question": "我可以重新参加考试吗？",
+          "answer": "绝对地！ 您的品味可能会随着时间的推移而变化。"
+        },
+        {
+          "question": "我的数据是私人的吗？",
+          "answer": "是的，我们不会存储或分享您的回复。"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    }
+  },
+  "life": {
+    "hub": {
+      "tabs": {
+        "balance": "生活平衡",
+        "goals": "目标规划器",
+        "habits": "习惯助手",
+        "countdown": "生活倒计时",
+        "decision": "决策工具",
+        "slogan": "生活标语",
+        "simulator": "生活模拟器",
+        "analysis": "综合分析",
+        "recharge": "充电点"
+      },
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "balanceDescription": "可视化您当前的生活平衡状态。",
+      "goalsDescription": "设定并跟踪您的生活目标。",
+      "habitsDescription": "建立积极的习惯，创造更美好的生活。",
+      "countdownDescription": "可视化您的剩余时间并获得动力。",
+      "sloganDescription": "创建您的个性化生活标语。",
+      "simulatorDescription": "模拟不同的生活选择和结果。",
+      "analysisDescription": "全面分析您的生活模式。",
+      "rechargeDescription": "计算您需要的休息量。"
+    },
+    "lifeCountdown": {
+      "meta": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "cityGuide": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "开始测试"
+    },
+    "title": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis...",
+    "disclaimer": "Awaiting deep synthesis...",
+    "noData": "无法加载数据。"
+  },
+  "artStyle": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "开始测试",
+      "badge": "热门",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "seniorCompanion": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "💬",
+          "title": "友好聊天",
+          "description": "随时进行温暖的交谈"
+        },
+        {
+          "icon": "🎵",
+          "title": "记忆巷",
+          "description": "分享和回忆回忆"
+        },
+        {
+          "icon": "📰",
+          "title": "每日新闻",
+          "description": "通过易于阅读的新闻了解最新动态"
+        },
+        {
+          "icon": "🎮",
+          "title": "脑力游戏",
+          "description": "有趣的活动让你保持头脑敏锐"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "safety": {
+      "items": [
+        "所有对话都是私密且安全的",
+        "我们绝不会分享您的个人信息",
+        "你可以随时停止",
+        "紧急联系人随时可用"
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "emergency": {
+      "resources": [
+        {
+          "name": "紧急服务",
+          "phone": "911",
+          "description": "用于紧急紧急情况",
+          "hours": "24/7"
+        },
+        {
+          "name": "高级热线",
+          "phone": "1-800-677-1116",
+          "description": "老年护理支持和资源",
+          "hours": "美国东部时间周一至周五上午 9 点至晚上 8 点"
+        }
+      ],
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    }
+  },
+  "storyMaker": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "features": {
+      "title": "Awaiting deep synthesis...",
+      "feature1Emoji": "✨",
+      "feature1Title": "发现爱好",
+      "feature1Description": "寻找您的热情所在",
+      "feature2Emoji": "📊",
+      "feature2Title": "费用分析",
+      "feature2Description": "规划您的预算",
+      "feature3Emoji": "🎯",
+      "feature3Title": "目标追踪",
+      "feature3Description": "保持动力",
+      "feature4Emoji": "📱",
+      "feature4Title": "轻松分享",
+      "feature4Description": "与朋友分享"
+    },
+    "howItWorks": {
+      "title": "Awaiting deep synthesis...",
+      "step1Title": "分析兴趣",
+      "step1Description": "了解您的个人资料",
+      "step2Title": "匹配爱好",
+      "step2Description": "找到适合您的选择",
+      "step3Title": "开始活动",
+      "step3Description": "开启您的旅程",
+      "step4Title": "追踪进度",
+      "step4Description": "保持在正轨上",
+      "step5Title": "保存发布",
+      "step5Description": "保存并分享您的佳作。"
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "推荐是如何运作的？",
+      "answer1": "通过分析兴趣和性格来建议适合的兴趣爱好。",
+      "question2": "我可以获得多个推荐吗？",
+      "answer2": "是的，我们根据您的个人资料提供多种兴趣爱好建议。",
+      "question3": "这些兴趣爱好适合初学者吗？",
+      "answer3": "包含从初级到高级的所有技能水平的选项。",
+      "question4": "我应该多久尝试一次新的兴趣爱好？",
+      "answer4": "先开始一个，充分探索后再增加更多。",
+      "question5": "如果不喜欢推荐怎么办？",
+      "answer5": "重新进行测试或探索其他类别，以找到更好的匹配。",
+      "question6": "兴趣爱好可以改善心理健康吗？",
+      "answer6": "是的，有趣的兴趣爱好可以减轻压力并改善整体幸福感。"
+    }
+  },
+  "personalColorPalette": {
+    "marketing": {
+      "about": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis...",
+        "feature1": "基于肤色、眼睛颜色和头发颜色的科学色彩分析",
+        "feature2": "针对衣橱和彩妆的个性化色板建议",
+        "feature3": "应用季节色彩理论以获得最佳效果",
+        "feature4": "最大化您自然特征的专业造型建议",
+        "feature5": "个性化推荐"
+      }
+    },
+    "seasons": {
+      "spring": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "summer": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "autumn": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "winter": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "title": "Awaiting deep synthesis...",
+      "question1": "推荐是如何运作的？",
+      "answer1": "通过分析兴趣和性格来建议适合的兴趣爱好。",
+      "question2": "我可以获得多个推荐吗？",
+      "answer2": "是的，我们根据您的个人资料提供多种兴趣爱好建议。",
+      "question3": "这些兴趣爱好适合初学者吗？",
+      "answer3": "包含从初级到高级的所有技能水平的选项。"
+    },
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "badge": "热门",
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "开始测试"
+    },
+    "test": {
+      "progress": "进度",
+      "submit": "获取分析",
+      "loading": "正在分析颜色...",
+      "selectOption": "请选择一个选项",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "starterCost": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "inputs": {
+      "calculate": "计算费用",
+      "tier": "选择装备等级",
+      "hobby": "选择兴趣爱好"
+    },
+    "result": {
+      "total": "总预计费用",
+      "breakdown": "费用明细",
+      "gears": "装备/道具",
+      "lesson": "课程/培训",
+      "clothing": "服装/鞋子",
+      "packageIncludes": "包含项目"
+    },
+    "tips": {
+      "title": "Awaiting deep synthesis...",
+      "content": "费用为平均估计值，可能会根据品牌和购买渠道而有所不同。"
+    },
+    "tiers": {
+      "entry": "入门级（性价比）",
+      "mid": "中级（推荐）",
+      "pro": "专业级（高端）"
+    },
+    "hobbies": {
+      "cycling": "自行车/骑行",
+      "tennis": "网球",
+      "golf": "高尔夫",
+      "camping": "露营",
+      "photography": "摄影/相机",
+      "baking": "烘焙",
+      "climbing": "攀岩",
+      "yoga": "瑜伽/普拉提"
+    },
+    "features": {
+      "items": [
+        {
+          "title": "个性化预算计算",
+          "desc": "计算从入门级到专业级的逐步成本。",
+          "icon": "计算器"
+        },
+        {
+          "title": "详细的估算分析",
+          "desc": "按类别显示详细成本，例如设备、服装和课程。",
+          "icon": "饼图"
+        },
+        {
+          "title": "节省成本的技巧",
+          "desc": "提供有关减少不必要支出的实用建议。",
+          "icon": "扑满"
+        },
+        {
+          "title": "另存为 PDF",
+          "desc": "将计算出的估算值保存为 PDF 并随时检查。",
+          "icon": "下载"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "howItWorks": {
+      "steps": [
+        {
+          "title": "选择爱好",
+          "description": "请选择您感兴趣的爱好活动。"
+        },
+        {
+          "title": "设置级别",
+          "description": "选择您当前的技能水平或目标水平。"
+        },
+        {
+          "title": "检查结果",
+          "description": "查看详细的预算分析和个性化建议。"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "成本的准确度如何？",
+          "answer": "根据平均市场价格数据计算，但可能因品牌和零售商而异。"
+        },
+        {
+          "question": "我需要一次性购买所有设备吗？",
+          "answer": "不，我们建议先购买必要的设备。 从入门级的具有成本效益的产品开始。"
+        },
+        {
+          "question": "是否计划增加其他爱好？",
+          "answer": "是的，用户请求较多的兴趣爱好将会依次更新。"
+        }
+      ],
+      "title": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis..."
+  },
+  "recommendation": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "开始测试"
+    },
+    "result": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis..."
+    },
+    "matchReasons": {
+      "mbti": "非常适合{type}类型的兴趣爱好",
+      "mood": "非常适合您当前心情的活动",
+      "bloodType": "非常符合{type}型血的倾向",
+      "zodiac": "非常符合{sign}星座的特征",
+      "riasec": "非常符合您的{code}兴趣领域"
+    },
+    "personalizedTips": {
+      "mbtiIntrovert": "您可以独自舒适地开始",
+      "mbtiPerceiving": "您可以根据灵活的日程安排来享受",
+      "moodStress": "对缓解压力特别有帮助",
+      "moodPositive": "可以进一步提升积极的能量",
+      "beginner": "初学者也可以轻松开始",
+      "busy": "即使在忙碌的日常生活中也可以享受",
+      "budget": "可以用较低的费用开始"
+    },
+    "faq": {
+      "question1": "推荐是如何运作的？",
+      "answer1": "通过分析兴趣和性格来建议适合的兴趣爱好。",
+      "question2": "我可以获得多个推荐吗？",
+      "answer2": "是的，我们根据您的个人资料提供多种兴趣爱好建议。",
+      "question3": "这些兴趣爱好适合初学者吗？",
+      "answer3": "包含从初级到高级的所有技能水平的选项。",
+      "question4": "我应该多久尝试一次新的兴趣爱好？",
+      "answer4": "先开始一个，充分探索后再增加更多。",
+      "question5": "如果不喜欢推荐怎么办？",
+      "answer5": "重新进行测试或探索其他类别，以找到更好的匹配。",
+      "question6": "兴趣爱好可以改善心理健康吗？",
+      "answer6": "是的，有趣的兴趣爱好可以减轻压力并改善整体幸福感。",
+      "title": "Awaiting deep synthesis..."
+    },
+    "features": {
+      "title": "Awaiting deep synthesis...",
+      "feature1Emoji": "✨",
+      "feature1Title": "发现爱好",
+      "feature1Description": "寻找您的热情所在",
+      "feature2Emoji": "📊",
+      "feature2Title": "费用分析",
+      "feature2Description": "规划您的预算",
+      "feature3Emoji": "🎯",
+      "feature3Title": "目标追踪",
+      "feature3Description": "保持动力",
+      "feature4Emoji": "📱",
+      "feature4Title": "轻松分享",
+      "feature4Description": "与朋友分享"
+    },
+    "howItWorks": {
+      "title": "Awaiting deep synthesis...",
+      "step1Title": "分析兴趣",
+      "step1Description": "了解您的个人资料",
+      "step2Title": "匹配爱好",
+      "step2Description": "找到适合您的选择",
+      "step3Title": "开始活动",
+      "step3Description": "开启您的旅程",
+      "step4Title": "追踪进度",
+      "step4Description": "保持在正轨上"
+    }
+  },
+  "roulette": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    }
+  },
+  "cup": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "subtitle": "Awaiting deep synthesis...",
+      "cta": "开始测试"
+    },
+    "title": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis..."
+  },
+  "writingPrompts": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "写作, 灵感, 日记, 提示"
+    },
+    "hero": {
+      "title": "Awaiting deep synthesis...",
+      "badge": "热门",
+      "subtitle": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    }
+  },
+  "styleConsultant": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis...",
+    "privacyNote": "Awaiting deep synthesis..."
+  },
+  "petCounselor": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "subtitle": "Awaiting deep synthesis...",
+    "disclaimer": "Awaiting deep synthesis..."
+  },
+  "preview": {
+    "subtitle": "详细信息",
+    "title": "个性化报告"
+  },
+  "analysts": "为您冷静理性背后的温暖愿景加油。(INTJ, INTP, ENTJ, ENTP)",
+  "diplomats": "您的理想和同理心让世界更温暖。(INFJ, INFP, ENFJ, ENFP)",
+  "sentinels": "默默坚守岗位的您才是真正的英雄。(ISTJ, ISFJ, ESTJ, ESFJ)",
+  "explorers": "羡慕您享受当下、挑战极限的能量!(ISTP, ISFP, ESTP, ESFP)",
+  "A": "热门",
+  "B": "热门",
+  "Copied to clipboard!": "已复制到剪贴板！",
+  "data": "Data",
+  "analyze": "分析",
+  "workHub": {
+    "tabs": {
+      "style": "Decision Style",
+      "salary": "Salary & Tax",
+      "tax": "Freelancer Tax",
+      "leadership": "Leadership",
+      "meeting": "Meeting Survival",
+      "job": "Job Match",
+      "interview": "Interview Scorer",
+      "labor": "Awaiting deep synthesis...",
+      "focus": "Awaiting deep synthesis..."
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "title": "Interview Scorer",
+    "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "styleDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "salaryDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "taxDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "leadershipDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "meetingDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+  },
+  "decisionHub": {
+    "tabs": {
+      "helper": "Decision Helper",
+      "style": "Decision Style"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "title": "Interview Scorer",
+    "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "helperTitle": "Random Decision Maker",
+    "helperDesc": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+  },
+  "meetingSurvival": {
+    "meta": {
+      "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "title": "Interview Scorer"
+    },
+    "landing": {
+      "steps": ["0", "1", "2", "3"],
+      "types": {
+        "strategist": {
+          "title": "Interview Scorer",
+          "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+        },
+        "mediator": {
+          "title": "Interview Scorer",
+          "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+        },
+        "facilitator": {
+          "title": "Interview Scorer",
+          "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+        },
+        "observer": {
+          "title": "Interview Scorer",
+          "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+        },
+        "challenger": {
+          "title": "Interview Scorer",
+          "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+        },
+        "executor": {
+          "title": "Interview Scorer",
+          "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+        },
+        "title": "Interview Scorer"
+      },
+      "faq": {
+        "list": {
+          "0": {
+            "a": "热门",
+            "q": "功能请求"
+          },
+          "1": {
+            "a": "热门",
+            "q": "功能请求"
+          },
+          "2": {
+            "a": "热门",
+            "q": "功能请求"
+          }
+        },
+        "title": "Interview Scorer"
+      },
+      "test": {
+        "insightBullets": ["揭开你个人哲学的隐藏层。"],
+        "progress": "进度",
+        "submit": "提交",
+        "loading": "加载中...",
+        "selectOption": "请选择选项",
+        "next": "下一步",
+        "previous": "上一步"
+      },
+      "result": {
+        "advisor": {
+          "tip": "💡 Career Coach's Tip",
+          "content": "Knowing your style is important, but understanding your colleagues' styles can increase meeting efficiency by 200%."
+        },
+        "title": "Interview Scorer",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "loading": "加载中...",
+        "analyzing": "Analyzing Response...",
+        "yourStyle": "您的会议生存方式",
+        "secondaryType": "Secondary Type",
+        "detailedAnalysis": "Detailed Score Breakdown",
+        "keyTraits": "Key Traits",
+        "yourStrengths": "Your Strengths",
+        "challenges": "Challenges",
+        "improvementTips": "Improvement Tips",
+        "meetingTips": "Meeting Tips",
+        "shareResults": "Share Results",
+        "retakeTest": "Retake Test",
+        "goHome": "Go Home",
+        "copied": "已复制到剪贴板！"
+      },
+      "meta": {
+        "title": "Interview Scorer",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "cta": "Start Test",
+      "howItWorks": "它是如何运作的",
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "标志性强度",
+          "description": "全面分析和个性化见解",
+          "question": "什么是生产力和工作效率测试？",
+          "answer": "该测试可帮助您了解与生产力和工作效率相关的模式和趋势。"
+        },
+        {
+          "icon": "🚀",
+          "title": "枢轴点",
+          "description": "数据驱动的建议以获得更好的结果",
+          "question": "结果有多准确？",
+          "answer": "我们的测试基于既定的心理学研究，并为您的模式和行为提供有价值的见解。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "标志性强度",
+          "description": "全面分析和个性化见解",
+          "question": "什么是生产力和工作效率测试？",
+          "answer": "该测试可帮助您了解与生产力和工作效率相关的模式和趋势。"
+        },
+        {
+          "icon": "🚀",
+          "title": "枢轴点",
+          "description": "数据驱动的建议以获得更好的结果",
+          "question": "结果有多准确？",
+          "answer": "我们的测试基于既定的心理学研究，并为您的模式和行为提供有价值的见解。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "标志性强度",
+          "description": "全面分析和个性化见解",
+          "question": "什么是生产力和工作效率测试？",
+          "answer": "该测试可帮助您了解与生产力和工作效率相关的模式和趋势。"
+        },
+        {
+          "icon": "🚀",
+          "title": "枢轴点",
+          "description": "数据驱动的建议以获得更好的结果",
+          "question": "结果有多准确？",
+          "answer": "我们的测试基于既定的心理学研究，并为您的模式和行为提供有价值的见解。"
+        }
+      ]
+    },
+    "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "startButton": "开始测试"
+  },
+  "decisionMaking": {
+    "meta": {
+      "hero": {
+        "badge": "Productivity Psychology",
+        "cta": "Start Test"
+      },
+      "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "hero": {
+      "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "cta": "Start Test",
+      "badge": "Productivity Psychology",
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "result": {
+      "loading": {
+        "title": "Interview Scorer",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "sections": {
+        "strengths": "优势",
+        "traits": "Traits",
+        "challenges": "挑战",
+        "idealSituations": "理想情况",
+        "tips": "尖端",
+        "breakdown": "分解"
+      },
+      "test": {
+        "insightBullets": ["绘制最真实自我的星座图。"],
+        "progress": "进度",
+        "submit": "提交",
+        "loading": "加载中...",
+        "selectOption": "请选择选项",
+        "next": "下一步",
+        "previous": "上一步"
+      },
+      "result": {
+        "title": "Interview Scorer",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "meta": {
+        "title": "Interview Scorer",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "title": "Interview Scorer",
+      "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "backHome": "返回首页",
+      "sharePrompt": "分享提示",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "retakeTest": "重考"
+    },
+    "test": {
+      "test": {
+        "insightBullets": ["绘制最真实自我的星座图。"],
+        "progress": "进度",
+        "submit": "提交",
+        "loading": "加载中...",
+        "selectOption": "请选择选项",
+        "next": "下一步",
+        "previous": "上一步"
+      },
+      "result": {
+        "title": "Interview Scorer",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "meta": {
+        "title": "Interview Scorer",
+        "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+        "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+      },
+      "insightBullets": ["探索你内心景观的深层架构。"],
+      "title": "Interview Scorer",
+      "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "submit": "提交",
+      "progress": "进度",
+      "loading": "加载中...",
+      "selectOption": "请选择选项",
+      "previous": "上一步",
+      "next": "下一步"
+    },
+    "title": "Interview Scorer",
+    "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "data": "Data"
+  },
+  "yearInReview": {
+    "meta": {
+      "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "input": {
+      "nameLabel": "姓名（或昵称）",
+      "namePlaceholder": "例如约翰·多伊",
+      "placeholder": "{月}中最难忘的时刻是什么？"
+    },
+    "actions": {
+      "generate": "生成时间线",
+      "download": "另存为图像",
+      "generating": "生成...",
+      "edit": "编辑"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "标志性强度",
+          "description": "全面分析和个性化见解",
+          "question": "什么是生产力和工作效率测试？",
+          "answer": "该测试可帮助您了解与生产力和工作效率相关的模式和趋势。"
+        },
+        {
+          "icon": "🚀",
+          "title": "枢轴点",
+          "description": "数据驱动的建议以获得更好的结果",
+          "question": "结果有多准确？",
+          "answer": "我们的测试基于既定的心理学研究，并为您的模式和行为提供有价值的见解。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "标志性强度",
+          "description": "全面分析和个性化见解",
+          "question": "什么是生产力和工作效率测试？",
+          "answer": "该测试可帮助您了解与生产力和工作效率相关的模式和趋势。"
+        },
+        {
+          "icon": "🚀",
+          "title": "枢轴点",
+          "description": "数据驱动的建议以获得更好的结果",
+          "question": "结果有多准确？",
+          "answer": "我们的测试基于既定的心理学研究，并为您的模式和行为提供有价值的见解。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "标志性强度",
+          "description": "全面分析和个性化见解",
+          "question": "什么是生产力和工作效率测试？",
+          "answer": "该测试可帮助您了解与生产力和工作效率相关的模式和趋势。"
+        },
+        {
+          "icon": "🚀",
+          "title": "枢轴点",
+          "description": "数据驱动的建议以获得更好的结果",
+          "question": "结果有多准确？",
+          "answer": "我们的测试基于既定的心理学研究，并为您的模式和行为提供有价值的见解。"
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["揭开你个人哲学的隐藏层。"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中...",
+      "selectOption": "请选择选项",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "noEvents": "没有记录任何事件。",
+    "title": "Interview Scorer",
+    "a": "热门"
+  },
+  "workFocus": {
+    "solution": {
+      "priority": "优先事项",
+      "implementation": "执行"
+    },
+    "test": {
+      "insightBullets": ["发现定义您的道路的独特模式。"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中...",
+      "selectOption": "请选择选项",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "feature1": {
+      "title": "Interview Scorer",
+      "desc": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "feature2": {
+      "title": "Interview Scorer",
+      "desc": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "feature3": {
+      "title": "Interview Scorer",
+      "desc": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "hero": {
+      "badge": "Productivity Psychology",
+      "startTest": "Start Test"
+    },
+    "loading": "加载中...",
+    "distractionAnalysis": "📊 分心分析",
+    "solutions": "个性化解决方案",
+    "weeklyPlan": "每周行动计划",
+    "share": "分享",
+    "shareText": "Work Focus Analysis\\\\nType: {type}",
+    "shareTitle": "Work Focus Analysis Results",
+    "home": "home",
+    "copied": "已复制到剪贴板！",
+    "data": "Data",
+    "insights": "见解",
+    "heroTitle": "Interview Scorer",
+    "heroSubtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "retake": "重新测试"
+  },
+  "okr": {
+    "test": {
+      "insightBullets": ["标志性强度", "枢轴点", "2"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中...",
+      "selectOption": "请选择选项",
+      "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "小小的选择累积成伟大的命运。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "小小的选择累积成伟大的命运。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        }
+      ]
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "title": "Interview Scorer",
+    "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+  },
+  "pomodoro": {
+    "test": {
+      "insightBullets": ["标志性强度", "枢轴点", "2"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中...",
+      "selectOption": "请选择选项",
+      "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        }
+      ]
+    },
+    "result": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "title": "Interview Scorer",
+    "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+  },
+  "decisionHelper": {
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "cards": {
+      "sun": {
+        "name": "Fog",
+        "answer": "您拥有一把指向成长的直觉指南针。",
+        "meaning": "意义"
+      },
+      "star": {
+        "name": "Fog",
+        "answer": "您拥有一把指向成长的直觉指南针。",
+        "meaning": "意义"
+      },
+      "emperor": {
+        "name": "Fog",
+        "answer": "您拥有一把指向成长的直觉指南针。",
+        "meaning": "意义"
+      },
+      "wheel": {
+        "name": "Fog",
+        "answer": "您拥有一把指向成长的直觉指南针。",
+        "meaning": "意义"
+      },
+      "moon": {
+        "name": "Fog",
+        "answer": "您拥有一把指向成长的直觉指南针。",
+        "meaning": "意义"
+      },
+      "hermit": {
+        "name": "Fog",
+        "answer": "您拥有一把指向成长的直觉指南针。",
+        "meaning": "意义"
+      },
+      "hanged": {
+        "name": "Fog",
+        "answer": "您拥有一把指向成长的直觉指南针。",
+        "meaning": "意义"
+      },
+      "tower": {
+        "name": "Fog",
+        "answer": "您拥有一把指向成长的直觉指南针。",
+        "meaning": "意义"
+      },
+      "sword": {
+        "name": "Fog",
+        "answer": "您拥有一把指向成长的直觉指南针。",
+        "meaning": "意义"
+      },
+      "fog": {
+        "name": "多雾路段",
+        "answer": "您拥有一把指向成长的直觉指南针。",
+        "meaning": "意义"
+      }
+    },
+    "breadcrumbs": {
+      "home": "家"
+    },
+    "title": "Interview Scorer",
+    "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "disclaimer": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "instruction": "选一张卡...",
+    "oracleSays": "甲骨文说",
+    "askAgain": "再问一次",
+    "hero": "英雄"
+  },
+  "procrastination": {
+    "meta": {
+      "title": "Interview Scorer",
+      "description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "hero": {
+      "title": "Interview Scorer",
+      "subtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "cta": "开始测试",
+      "badge": "生产力心理学",
+      "startTest": "开始测试"
+    },
+    "feature1": {
+      "title": "Interview Scorer",
+      "desc": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "feature2": {
+      "title": "Interview Scorer",
+      "desc": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "feature3": {
+      "title": "Interview Scorer",
+      "desc": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "faq1Question": "How is it scored?",
+    "faq1Answer": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "faq2Question": "Is it saved?",
+    "faq2Answer": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "faq3Question": "Can I use it for any job?",
+    "faq3Answer": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "faq4Question": "Is it free?",
+    "faq4Answer": "Yes, completely free to use.",
+    "heroTitle": "Interview Scorer",
+    "heroSubtitle": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "howItWorksTitle": "它是如何运作的",
+    "step1Title": "参加测试",
+    "step1Description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "step2Title": "获取您的类型",
+    "step2Description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "step3Title": "接收提示",
+    "step3Description": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "faqTitle": "FAQ"
+  },
+  "grandparentConnection": {
+    "meta": {
+      "hero": {
+        "badge": "卓越的探究",
+        "subtitle": "Build a bond beyond time.",
+        "cta": "开始校准",
+        "secondaryCta": "加深认识"
+      },
+      "benefits": {
+        "subtitle": "Build a bond beyond time."
+      },
+      "keywords": "代际共鸣、祖父母炼金术、遗产建筑、Oiyo",
+      "title": "Oracle of Heart's Resonance | Oiyo",
+      "description": "Profound insights for a rich connection across generations."
+    },
+    "connection": {
+      "cards": [
+        {
+          "title": "混合共振菜单",
+          "description": "将身体仪式和数字接触点相结合，以保持访问之间的关系动态。"
+        },
+        {
+          "icon": "🎨",
+          "title": "代际叙事弧",
+          "description": "共同创造弥合代沟的共同经历和故事。"
+        }
+      ]
+    },
+    "hero": {
+      "subtitle": "建立超越时间的纽带。",
+      "title": "Oracle of Heart's Resonance | Oiyo"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "传统传输",
+          "description": "打通渠道，让宗族智慧流动。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "时间之桥",
+          "description": "建立跨越代沟的深刻理解。",
+          "question": "什么是代际共振？",
+          "answer": "它是跨越年龄和经验鸿沟的灵魂频率的交汇点。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "代际映射",
+          "description": "分析祖孙之间独特的能量交流。"
+        }
+      ]
+    },
+    "result": {
+      "title": "Oracle of Heart's Resonance | Oiyo",
+      "description": "Profound insights for a rich connection across generations."
+    },
+    "title": "Oracle of Heart's Resonance | Oiyo",
+    "description": "对跨代人丰富联系的深刻见解。"
+  }
+}

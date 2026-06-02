@@ -1,0 +1,16 @@
+{
+  "sanctuary": {
+    "mental": {
+      "anxietyRelief": {
+        "title": "缓解焦虑",
+        "description": "通过引导呼吸练习找到平静与平静。",
+        "breathingIn": "吸气",
+        "breathingOut": "呼气",
+        "hold": "抓住",
+        "start": "开始",
+        "pause": "暂停",
+        "reset": "重置"
+      }
+    }
+  }
+}

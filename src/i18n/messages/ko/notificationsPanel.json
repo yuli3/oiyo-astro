@@ -1,0 +1,21 @@
+{
+  "ui": {
+    "title": "알림",
+    "all": "모두",
+    "unread": "읽히지 않는",
+    "readAll": "모두 읽음으로 표시",
+    "markRead": "읽음으로 표시",
+    "view": "보다",
+    "viewAll": "모든 알림 보기"
+  },
+  "empty": {
+    "noUnread": "읽지 않은 알림 없음",
+    "noNotifications": "아직 알림이 없습니다"
+  },
+  "time": {
+    "justNow": "방금",
+    "minutesAgo": "{분}분 전",
+    "hoursAgo": "{시간}시간 전",
+    "daysAgo": "{일}일 전"
+  }
+}

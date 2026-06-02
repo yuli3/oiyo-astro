@@ -1,0 +1,26 @@
+{
+  "about": {
+    "mission": "私たちの神聖な使命",
+    "values": "私たちのコアバリュー",
+    "story": "クロニクル"
+  },
+  "legal": {
+    "privacy": {
+      "sanctity": "データの聖域",
+      "sanctity_header": "匿名の盾",
+      "insight": "インサイトの生成",
+      "insight_header": "集合的な知恵、個人の主権",
+      "sovereignty": "魂の主権",
+      "sovereignty_header": "忘却の権利"
+    },
+    "terms": {
+      "pact": "誓約の認識",
+      "pact_header": "デジタル協約の承認",
+      "duties": "使徒の義務",
+      "duties_header": "真実の発見義務",
+      "knowledge": "神聖な知識",
+      "knowledge_header": "共鳴アルゴリズムの所有権"
+    }
+  },
+  "marketing": {}
+}

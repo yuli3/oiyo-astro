@@ -1,0 +1,883 @@
+{
+  "meta": {
+    "hero": {
+      "subtitle": "Sincronizando los hilos de tu destino...",
+      "badge": "📚 Educación"
+    },
+    "keywords": "palabras clave, etiquetas, seo",
+    "description": "Análisis exhaustivo y perspectivas personalizadas",
+    "title": "Mi Análisis"
+  },
+  "hero": {
+    "subtitle": "Sincronizando los hilos de tu destino...",
+    "cta": "Mapeando la arquitectura secreta de tu personalidad...",
+    "badge": "📚 Educación",
+    "title": "Mi Análisis",
+    "description": "Análisis exhaustivo y perspectivas personalizadas"
+  },
+  "result": {
+    "title": "Mi Análisis",
+    "studyTips": "Consejos de estudio",
+    "environment": "Ambiente",
+    "scores": "Montones",
+    "share": "Compartir",
+    "retake": "Repetir",
+    "description": "Análisis exhaustivo y perspectivas personalizadas"
+  },
+  "test": {
+    "insightBullets": ["Descubre los patrones únicos que definen tu camino."],
+    "previous": "Anterior",
+    "progress": "Progreso",
+    "next": "Siguiente",
+    "submit": "Enviar",
+    "loading": "Cargando",
+    "selectOption": "Seleccionar"
+  },
+  "title": "Mi Análisis",
+  "description": "Análisis exhaustivo y perspectivas personalizadas",
+  "keywords": "palabras clave, etiquetas, seo",
+  "Copied to clipboard!": "Copiada al portapapeles!",
+  "learning": {
+    "types": {
+      "INTJ": {
+        "strengths": [
+          "estudio independiente",
+          "Conceptos complejos",
+          "Planificación a largo plazo",
+          "Análisis lógico"
+        ],
+        "challenges": [
+          "repetición aburrida",
+          "memorización de memoria",
+          "Trabajo en grupo",
+          "Tareas espontáneas"
+        ],
+        "studyMethods": [
+          "Mapeo conceptual",
+          "Lectura e investigación",
+          "Cursos en línea",
+          "Enfoque en la resolución de problemas"
+        ],
+        "recommendedTools": ["Noción", "Obsidiana", "Anki", "Academia Khan"],
+        "examStrategies": [
+          "Analizar patrones pasados",
+          "Conectar conceptos",
+          "Crear preguntas de práctica"
+        ],
+        "motivationTips": [
+          "Establecer objetivos claros",
+          "Entender el panorama general",
+          "Encuentre aplicaciones prácticas"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "INTP": {
+        "strengths": [
+          "pensamiento lógico",
+          "Resolución creativa de problemas",
+          "Comprensión de conceptos",
+          "Investigación independiente"
+        ],
+        "challenges": [
+          "Cumplir los plazos",
+          "Siguiendo planes",
+          "Memorización",
+          "Rutinas regulares"
+        ],
+        "studyMethods": [
+          "Exploración teórica",
+          "experimentos",
+          "Discusiones en línea",
+          "Comparando fuentes"
+        ],
+        "recommendedTools": [
+          "Wikipedia",
+          "Reddit",
+          "Intercambio de pila",
+          "conferencias de youtube"
+        ],
+        "examStrategies": [
+          "entender los principios",
+          "Estudiar múltiples enfoques",
+          "Usa el razonamiento lógico"
+        ],
+        "motivationTips": [
+          "Encuentra temas interesantes",
+          "mantener la libertad",
+          "Permitir la creatividad"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENTJ": {
+        "strengths": [
+          "Aprendizaje rápido",
+          "Liderazgo",
+          "Logro de metas",
+          "Organización"
+        ],
+        "challenges": [
+          "perfeccionismo",
+          "Detalles faltantes",
+          "Contenido emocional",
+          "Aprendices lentas"
+        ],
+        "studyMethods": [
+          "Liderar grupos de estudio.",
+          "Resumir los puntos clave",
+          "Memorización eficiente",
+          "Presentaciones"
+        ],
+        "recommendedTools": ["Noción", "Trelo", "Evernote", "PowerPoint"],
+        "examStrategies": [
+          "Gestión del tiempo",
+          "Centrarse en lo esencial",
+          "Práctica repetida"
+        ],
+        "motivationTips": [
+          "Objetivos claros",
+          "Competencia",
+          "Roles de liderazgo"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENTP": {
+        "strengths": [
+          "Pensamiento creativo",
+          "Comprensión rápida",
+          "Habilidades de debate",
+          "Probando nuevos métodos"
+        ],
+        "challenges": [
+          "Aprendizaje de rutina",
+          "Memorización",
+          "Cumplir los plazos",
+          "repetición simple"
+        ],
+        "studyMethods": [
+          "Discusiones y debates",
+          "Recursos diversos",
+          "Basado en proyectos",
+          "Enfoque experimental"
+        ],
+        "recommendedTools": [
+          "Plataformas de debate",
+          "Charlas TED",
+          "Coursera",
+          "Herramientas de mapas mentales"
+        ],
+        "examStrategies": [
+          "Respuestas creativas",
+          "Múltiples perspectivas",
+          "Enfoque de última hora"
+        ],
+        "motivationTips": [
+          "Nuevos desafíos",
+          "Oportunidades de debate",
+          "estilo de aprendizaje libre"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "INFJ": {
+        "strengths": [
+          "Comprensión profunda",
+          "Reconocimiento de patrones",
+          "Expresión creativa",
+          "Memoria a largo plazo"
+        ],
+        "challenges": [
+          "Memorización superficial",
+          "Presión de tiempo",
+          "Entorno competitivo",
+          "Evaluación crítica"
+        ],
+        "studyMethods": [
+          "Llevar un diario",
+          "Conectando conceptos",
+          "Visualización",
+          "contar historias"
+        ],
+        "recommendedTools": [
+          "Noción",
+          "notas de lectura",
+          "Espacio de cabeza",
+          "Diario"
+        ],
+        "examStrategies": [
+          "Entender el panorama general",
+          "Conexiones significativas",
+          "Memoria emocional"
+        ],
+        "motivationTips": [
+          "encontrar significado",
+          "Conéctate con objetivos personales",
+          "Ambiente inspirador"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "INFP": {
+        "strengths": [
+          "Escritura creativa",
+          "Comprensión emocional",
+          "Aprendizaje independiente",
+          "Expresión artística"
+        ],
+        "challenges": [
+          "Reglas estrictas",
+          "Comentarios críticos",
+          "Plazos rápidos",
+          "Competencia"
+        ],
+        "studyMethods": [
+          "Notas de formato libre",
+          "Proyectos creativos",
+          "Lectura",
+          "acompañamiento musical"
+        ],
+        "recommendedTools": [
+          "Buenas notas",
+          "Bolígrafos de colores",
+          "Spotify",
+          "Aplicaciones de lectura"
+        ],
+        "examStrategies": [
+          "Desarrollar método propio",
+          "Conexión emocional",
+          "Mentalidad relajada"
+        ],
+        "motivationTips": [
+          "significado personal",
+          "libre expresión",
+          "Comentarios positivos"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENFJ": {
+        "strengths": [
+          "Aprendizaje colaborativo",
+          "Comunicación",
+          "Entendiendo a las demás",
+          "Motivación"
+        ],
+        "challenges": [
+          "aprendizaje en solitario",
+          "Temas impersonales",
+          "Competencia",
+          "Análisis crítico"
+        ],
+        "studyMethods": [
+          "grupos de estudio",
+          "Enseñanza entre pares",
+          "Discusiones",
+          "Juego de roles"
+        ],
+        "recommendedTools": [
+          "Zoom",
+          "Discordia",
+          "Documentos de Google",
+          "Herramientas de colaboración"
+        ],
+        "examStrategies": [
+          "estudio en grupo",
+          "enseñarnos unos a otros",
+          "Memoria emocional"
+        ],
+        "motivationTips": [
+          "aprender juntos",
+          "Ayudar a otras",
+          "Atmósfera positiva"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENFP": {
+        "strengths": [
+          "Creatividad",
+          "Entusiasmo",
+          "Diversos intereses",
+          "Conexiones rápidas"
+        ],
+        "challenges": [
+          "Mantener el enfoque",
+          "Detalles",
+          "Rutinas",
+          "Proyectos a largo plazo"
+        ],
+        "studyMethods": [
+          "Materiales diversos",
+          "Aprendizaje gamificado",
+          "Actividades grupales",
+          "Enfoque experimental"
+        ],
+        "recommendedTools": [
+          "cuestionario",
+          "Kahoot",
+          "YouTube",
+          "Instagram educativo"
+        ],
+        "examStrategies": [
+          "Encuentra conexiones interesantes",
+          "Pruebe varios métodos",
+          "Enfoque de juego"
+        ],
+        "motivationTips": [
+          "Nueva estimulación",
+          "Métodos divertidos",
+          "Elogios y aliento"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISTJ": {
+        "strengths": [
+          "Diligencia",
+          "Memorización",
+          "Organización",
+          "Ejecución del plan"
+        ],
+        "challenges": [
+          "Conceptos abstractos",
+          "Improvisación",
+          "Tareas creativas",
+          "Instrucciones poco claras"
+        ],
+        "studyMethods": [
+          "lectura de libros de texto",
+          "Memorización repetida",
+          "Notas sistemáticas",
+          "Artículos anteriores"
+        ],
+        "recommendedTools": [
+          "notas tradicionales",
+          "Sobresalir",
+          "libros de texto en pdf",
+          "Programar aplicaciones"
+        ],
+        "examStrategies": [
+          "Preparación minuciosa",
+          "Aprendizaje repetido",
+          "Mantener el tiempo",
+          "Comprensión sólida"
+        ],
+        "motivationTips": ["Metas claras", "Planes sistemáticos", "Logro"],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISFJ": {
+        "strengths": [
+          "Atención al detalle",
+          "Paciencia",
+          "Memoria",
+          "Responsabilidad"
+        ],
+        "challenges": [
+          "Teoría abstracta",
+          "Pensamiento crítico",
+          "Cambio rápido",
+          "Competencia"
+        ],
+        "studyMethods": [
+          "Tomar notas cuidadosamente",
+          "Práctica repetida",
+          "Ejemplos prácticos",
+          "Paso a paso"
+        ],
+        "recommendedTools": [
+          "Bolígrafos de colores",
+          "Listas de verificación",
+          "Planificadoras",
+          "Libros de texto tradicionales"
+        ],
+        "examStrategies": [
+          "revisión suficiente",
+          "Consultar detalles",
+          "Mantener la estabilidad"
+        ],
+        "motivationTips": [
+          "Entorno estable",
+          "Elogios y reconocimiento",
+          "Valor práctico"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESTJ": {
+        "strengths": ["Organización", "Ejecución", "Liderazgo", "Eficiencia"],
+        "challenges": [
+          "Teoría abstracta",
+          "Contenido emocional",
+          "ritmo lento",
+          "Flexibilidad"
+        ],
+        "studyMethods": [
+          "resumiendo",
+          "Tarjetas didácticas",
+          "Artículos anteriores",
+          "Liderar grupos de estudio"
+        ],
+        "recommendedTools": [
+          "Sobresalir",
+          "PowerPoint",
+          "Planificadoras",
+          "Temporizadores"
+        ],
+        "examStrategies": [
+          "Gestión estricta del tiempo",
+          "Centrarse en lo esencial",
+          "Práctica repetida"
+        ],
+        "motivationTips": [
+          "Objetivos claros",
+          "Resultados visibles",
+          "Rol de liderazgo"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESFJ": {
+        "strengths": [
+          "Cooperación",
+          "Responsabilidad",
+          "Sentido práctico",
+          "Comunicación"
+        ],
+        "challenges": [
+          "aprendizaje en solitario",
+          "Teoría abstracta",
+          "Crítica",
+          "Competencia"
+        ],
+        "studyMethods": [
+          "estudio en grupo",
+          "Cuestionarse unos a otros",
+          "Ejemplos de la vida real",
+          "Juego de roles"
+        ],
+        "recommendedTools": [
+          "grupos de estudio de chat",
+          "Zoom",
+          "Notas compartidas",
+          "Bolígrafos de colores"
+        ],
+        "examStrategies": [
+          "estudiar juntos",
+          "Estímulo mutuo",
+          "Comprensión práctica"
+        ],
+        "motivationTips": ["Ambiente social", "Ayudar a otras", "Elogio"],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISTP": {
+        "strengths": [
+          "resolución de problemas",
+          "pensamiento lógico",
+          "Habilidades practicas",
+          "Respuesta rápida"
+        ],
+        "challenges": [
+          "Aprendizaje teórico",
+          "Planificación a largo plazo",
+          "Memorización",
+          "Contenido emocional"
+        ],
+        "studyMethods": [
+          "Práctica práctica",
+          "Aprendizaje en vídeo",
+          "experiencia directa",
+          "resolución de problemas"
+        ],
+        "recommendedTools": [
+          "practica de youtube",
+          "Academia Khan",
+          "Simulaciones",
+          "Herramientas practicas"
+        ],
+        "examStrategies": [
+          "Problemas prácticos",
+          "Enfoque lógico",
+          "Uso eficiente del tiempo"
+        ],
+        "motivationTips": ["Valor práctico", "Métodos gratuitos", "Desafíos"],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISFP": {
+        "strengths": [
+          "Creatividad",
+          "Sensibilidad",
+          "Habilidades practicas",
+          "Flexibilidad"
+        ],
+        "challenges": [
+          "Reglas estrictas",
+          "Competencia",
+          "Crítica",
+          "Planificación a largo plazo"
+        ],
+        "studyMethods": [
+          "Aprendizaje visual",
+          "Práctica",
+          "con musica",
+          "forma libre"
+        ],
+        "recommendedTools": ["iPad", "Procrear", "Pinterest", "YouTube"],
+        "examStrategies": [
+          "Mentalidad cómoda",
+          "memoria visual",
+          "método personal"
+        ],
+        "motivationTips": [
+          "ambiente libre",
+          "Comentarios positivos",
+          "Expresión creativa"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESTP": {
+        "strengths": [
+          "Aprendizaje rápido",
+          "Habilidades practicas",
+          "Adaptabilidad",
+          "resolución de problemas"
+        ],
+        "challenges": [
+          "Aprendizaje teórico",
+          "Memorización",
+          "enfoque largo",
+          "Planificación"
+        ],
+        "studyMethods": [
+          "practica practica",
+          "Actividades grupales",
+          "Competencia",
+          "Aprendizaje experiencial"
+        ],
+        "recommendedTools": [
+          "Aplicaciones gamificadas",
+          "Herramientas practicas",
+          "aprendizaje de realidad virtual",
+          "Analogías deportivas"
+        ],
+        "examStrategies": [
+          "Pruebas practicas",
+          "Utilice el pensamiento rápido",
+          "Enfoque corto"
+        ],
+        "motivationTips": [
+          "Competencia y desafíos",
+          "Valor práctico",
+          "Comentarios inmediatos"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESFP": {
+        "strengths": [
+          "Sociabilidad",
+          "Entusiasmo",
+          "Habilidades practicas",
+          "Ambiente divertido"
+        ],
+        "challenges": [
+          "aprendizaje en solitario",
+          "Teoría",
+          "Enfocar",
+          "Planificación a largo plazo"
+        ],
+        "studyMethods": [
+          "Actividades grupales",
+          "Juegos",
+          "Juego de roles",
+          "con musica"
+        ],
+        "recommendedTools": [
+          "Kahoot",
+          "aplicaciones sociales",
+          "educación en tiktok",
+          "Estudiar con amigas"
+        ],
+        "examStrategies": [
+          "Enfoque divertido",
+          "Revisión grupal",
+          "Mentalidad positiva"
+        ],
+        "motivationTips": [
+          "Métodos divertidos",
+          "Con amigas",
+          "Alabanzas y recompensas"
+        ],
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "Al aprender un tema nuevo, usted:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Estudiar tranquilamente sola con libros de texto",
+            "value": "I"
+          },
+          {
+            "text": "Discutir y estudiar junto con amigos.",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "¿Cómo recuerdas el material de estudio?",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Memorizar hechos y detalles específicos.",
+            "value": "S"
+          },
+          {
+            "text": "Comprender conceptos y patrones generales.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Su enfoque para resolver problemas:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Encuentre respuestas a través del análisis lógico",
+            "value": "T"
+          },
+          {
+            "text": "Acércate con intuición y sentimiento.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "¿Cómo te preparas para los exámenes?",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Haga planes sistemáticos y prepárese con anticipación",
+            "value": "J"
+          },
+          {
+            "text": "Manténgase flexible y concéntrese cuando sea necesario",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Actividad de clase preferida:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Tareas individuales o proyectos independientes.",
+            "value": "I"
+          },
+          {
+            "text": "Discusiones grupales o proyectos en equipo.",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Al comprender conceptos complejos:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Necesita explicaciones paso a paso y ejemplos reales.",
+            "value": "S"
+          },
+          {
+            "text": "Mire primero las teorías abstractas y el panorama general.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Su papel en los equipos de proyecto:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Perseguir el análisis objetivo y la eficiencia.",
+            "value": "T"
+          },
+          {
+            "text": "Valorar la armonía del equipo y la opinión de todos.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Cuando se acerca la fecha límite para la tarea:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Progresar de manera constante según el plan",
+            "value": "J"
+          },
+          {
+            "text": "La presión de los plazos aumenta la concentración",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Ambiente de estudio preferido:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Biblioteca tranquila o espacio personal",
+            "value": "I"
+          },
+          {
+            "text": "Lugares animados como cafeterías o cafeterías de estudio.",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Tipo de pregunta de examen preferido:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Opción múltiple basada en hechos o respuesta corta",
+            "value": "S"
+          },
+          {
+            "text": "Preguntas de ensayo que requieren pensamiento creativo.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Cuando las calificaciones no son buenas, usted:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Analizar objetivamente las causas y mejorar.",
+            "value": "T"
+          },
+          {
+            "text": "Aceptar emocionalmente y encontrar motivación.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "Al hacer planes de estudio:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Defina claramente el cronograma y los objetivos detallados.",
+            "value": "J"
+          },
+          {
+            "text": "Establezca una dirección aproximada y ajuste con flexibilidad",
+            "value": "P"
+          }
+        ]
+      }
+    ]
+  }
+}

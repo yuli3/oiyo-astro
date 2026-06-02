@@ -1,0 +1,27 @@
+{
+  "benefits": {
+    "performance": {
+      "description": "Acceso rápido con un toque",
+      "title": "Añadir a inicio"
+    },
+    "offline": {
+      "description": "Acceso rápido con un toque",
+      "title": "Añadir a inicio"
+    },
+    "notifications": {
+      "description": "Acceso rápido con un toque",
+      "title": "Añadir a inicio"
+    },
+    "homeScreen": {
+      "description": "Acceso rápido con un toque",
+      "title": "Añadir a inicio"
+    }
+  },
+  "title": "Añadir a inicio",
+  "subtitle": "Añadir a la pantalla de inicio para una mejor experiencia",
+  "close": "Cerrar",
+  "installing": "Instalando...",
+  "install": "Instalar",
+  "dismiss": "Después",
+  "manualInstructions": "Seleccione \\\"Añadir a pantalla de inicio\\\" en el menú de su navegador"
+}

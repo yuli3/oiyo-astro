@@ -1,0 +1,8 @@
+{
+  "success": "¡Éxito!",
+  "message": "Ya está todo listo.",
+  "benefits": {
+    "dashboard": "Acceso al panel",
+    "recommendations": "Recomendaciones personalizadas"
+  }
+}

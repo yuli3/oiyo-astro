@@ -1,0 +1,112 @@
+{
+  "habitAssistant": {
+    "meta": {
+      "hero": {
+        "subtitle": "나에 대한 새로운 발견",
+        "badge": "🎯 Behavior Science"
+      },
+      "keywords": "성격분석, 자기발견, 프리미엄 인사이트",
+      "title": "귀하의 생산성 프로필",
+      "description": "데이터를 기반으로 당신의 내면을 심층적으로 살펴봅니다."
+    },
+    "hero": {
+      "subtitle": "심층 분석 보고서",
+      "cta": "내 습관 스타일 찾기",
+      "badge": "🎯 행동 과학",
+      "title": "귀하의 생산성 프로필",
+      "description": "데이터를 기반으로 당신의 내면을 심층적으로 살펴봅니다."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🏆",
+          "title": "더 높은 성공률",
+          "description": "더 나은 결과를 위해 타고난 성향에 맞는 전략을 사용하세요."
+        },
+        {
+          "icon": "⚡",
+          "title": "더 빠른 진행",
+          "description": "당신의 성격 유형에 맞는 방법을 사용하여 시행착오를 피하세요"
+        },
+        {
+          "icon": "💪",
+          "title": "지속가능한 변화",
+          "description": "자연스러운 패턴을 거스르는 것이 아니라 자연스러운 패턴을 활용하여 지속되는 습관을 만드세요."
+        },
+        {
+          "icon": "🎯",
+          "title": "맞춤형 전략",
+          "description": "귀하의 유형에 맞는 구체적인 기술, 타이밍 및 동기 부여 방법을 얻으십시오."
+        }
+      ],
+      "subtitle": "심층 분석 보고서"
+    },
+    "types": {
+      "methodical": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "social": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "flexible": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "reward_driven": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "intuitive": {
+        "name": "직관적인 통합자",
+        "emoji": "💡"
+      },
+      "subtitle": "심층 분석 보고서"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "당신의 고유 주파수는 무엇입니까?",
+          "answer": "작은 선택이 모여 위대한 운명을 만든다."
+        },
+        "1": {
+          "question": "무엇이 당신을 안으로 몰아넣나요?",
+          "answer": "당신의 독특한 관점이 현실을 형성합니다."
+        },
+        "2": {
+          "question": "당신의 고유 주파수는 무엇입니까?",
+          "answer": "당신의 독특한 관점이 현실을 형성합니다."
+        },
+        "3": {
+          "question": "당신의 고유 주파수는 무엇입니까?",
+          "answer": "당신은 성장을 향한 직관적인 나침반을 가지고 있습니다."
+        },
+        "4": {
+          "question": "무엇이 당신을 안으로 몰아넣나요?",
+          "answer": "내면의 조화는 우리의 모든 일상 활동을 안내합니다."
+        }
+      },
+      "title": "귀하의 생산성 프로필"
+    },
+    "frequency": {
+      "label": "Prio",
+      "daily": "일일",
+      "weekly": "주간"
+    },
+    "priority": {
+      "label": "프리오",
+      "low": "낮은",
+      "medium": "와 함께",
+      "high": "높은"
+    },
+    "result": {
+      "title": "상세 분석 보고서",
+      "description": "데이터를 기반으로 당신의 내면을 심층적으로 살펴봅니다."
+    },
+    "title": "계기반",
+    "description": "당신의 독특한 성향 분석",
+    "keywords": "성격진단, 마음비타민, 나를 찾는 여행, OIYO",
+    "submit": "제출하기"
+  }
+}

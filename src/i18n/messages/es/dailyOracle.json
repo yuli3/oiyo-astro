@@ -1,0 +1,26 @@
+{
+  "identify": {
+    "description": "Identifica tu fortuna."
+  },
+  "title": "Oráculo del Alba",
+  "subtitle": "Armonía del Cosmos",
+  "loading": "Descifrando constelaciones...",
+  "source": {
+    "PAYMENT": "Intercambios",
+    "MAYAN": "Calendario Maya",
+    "SAJU": "Sabiduría Oriental",
+    "MBTI": "Psique (MBTI)",
+    "TCI": "Temperamento (TCI)",
+    "BIG5": "Esencia (Big 5)"
+  },
+  "category": {
+    "EARTH": "Pulso Telúrico",
+    "CELESTIAL": "Corriente Celeste",
+    "SPIRIT": "Gracia Espiritual",
+    "HUMAN": "Razones Humanas"
+  },
+  "modal": {
+    "noteTitle": "Notas del Arquitecto",
+    "noteDesc": "Esta visión fue extraída del motor {source}, vibrando sobre el Protocolo Synapse."
+  }
+}

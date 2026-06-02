@@ -1,0 +1,227 @@
+{
+  "title": "베다 점성술",
+  "description": "고대 인도의 달 저택 시스템.",
+  "systemName": "베다 점성술",
+  "narrative": "낙샤트라 루나 맨션",
+  "resonance": {
+    "note": "아카이브는 {nakshatraName}({moonSign})에서 달 좌표를 관찰합니다. 고대 예언자들은 이 저택을 {신}과 연관시켰습니다. 이것은 예언이 아닙니다. 단지 당신이 태어났을 때 달빛이 하늘에 닿았던 부분을 반영한 것일 뿐입니다."
+  },
+  "nakshatras": {
+    "1": {
+      "name": "아쉬위니",
+      "meaning": "말머리 쌍둥이",
+      "deity": "아쉬위니 쿠마라스",
+      "keywords": "힐링, 속도, 새로운 시작, 충동",
+      "animal": "말",
+      "symbol": "말 머리"
+    },
+    "2": {
+      "name": "바라니어",
+      "meaning": "무기명",
+      "deity": "야마",
+      "keywords": "변신, 탄생, 죽음, 구속",
+      "animal": "코끼리",
+      "symbol": "요니(외음부)"
+    },
+    "3": {
+      "name": "크리티카",
+      "meaning": "커터",
+      "deity": "아그니",
+      "keywords": "정화, 불타오르는, 용기, 예리한 지능",
+      "animal": "양",
+      "symbol": "면도기/불꽃"
+    },
+    "4": {
+      "name": "로히니",
+      "meaning": "더 레드 원",
+      "deity": "수송아지",
+      "keywords": "성장, 아름다움, 관능, 물질적 부",
+      "animal": "뱀",
+      "symbol": "황소 카트"
+    },
+    "5": {
+      "name": "므리가시라",
+      "meaning": "디어 헤드",
+      "deity": "소마",
+      "keywords": "추구, 호기심, 온화함, 추구",
+      "animal": "뱀",
+      "symbol": "사슴 머리"
+    },
+    "6": {
+      "name": "아르드라",
+      "meaning": "촉촉한 것",
+      "deity": "루드라",
+      "keywords": "폭풍, 파괴, 갱신, 노력",
+      "animal": "개",
+      "symbol": "눈물방울/다이아몬드"
+    },
+    "7": {
+      "name": "푸나르바수",
+      "meaning": "빛의 귀환",
+      "deity": "아디티",
+      "keywords": "갱신, 회복, 반환, 풍요",
+      "animal": "고양이",
+      "symbol": "활과 화살통"
+    },
+    "8": {
+      "name": "푸샤",
+      "meaning": "영양가",
+      "deity": "브리하스파티",
+      "keywords": "영양, 보호, 확장, 상서로움",
+      "animal": "염소",
+      "symbol": "연꽃"
+    },
+    "9": {
+      "name": "아슬레샤",
+      "meaning": "포용자",
+      "deity": "나가스",
+      "keywords": "Kundalini, 신비주의, 최면, 변형",
+      "animal": "고양이",
+      "symbol": "똬리를 튼 뱀"
+    },
+    "10": {
+      "name": "마가",
+      "meaning": "마이티",
+      "deity": "피트리스(조상)",
+      "keywords": "권위, 조상, 유산, 제왕",
+      "animal": "쥐",
+      "symbol": "왕좌"
+    },
+    "11": {
+      "name": "푸르바 팔구니",
+      "meaning": "이전 레드 원",
+      "deity": "도망갔다",
+      "keywords": "즐거움, 휴식, 창의성, 로맨스",
+      "animal": "쥐",
+      "symbol": "해먹/침대 다리"
+    },
+    "12": {
+      "name": "우타라 팔구니",
+      "meaning": "후자의 빨간 것",
+      "deity": "아리만",
+      "keywords": "계약, 후원, 우정, 연합",
+      "animal": "황소",
+      "symbol": "침대 뒤"
+    },
+    "13": {
+      "name": "까지",
+      "meaning": "손",
+      "deity": "사비타",
+      "keywords": "기술, 장인정신, 웃음, 손재주",
+      "animal": "물소",
+      "symbol": "오픈 핸드"
+    },
+    "14": {
+      "name": "치트라",
+      "meaning": "더 브라이트 원",
+      "deity": "비슈바카르마",
+      "keywords": "건축물, 아름다움, 구조, 광채",
+      "animal": "호랑이",
+      "symbol": "진주/보석"
+    },
+    "15": {
+      "name": "스와티어",
+      "meaning": "검",
+      "deity": "바유",
+      "keywords": "독립, 유연성, 무역, 이동",
+      "animal": "물소",
+      "symbol": "검"
+    },
+    "16": {
+      "name": "비사카",
+      "meaning": "포크드",
+      "deity": "인드라-아그니",
+      "keywords": "목표, 결단력, 야망, 승리",
+      "animal": "호랑이",
+      "symbol": "아치길"
+    },
+    "17": {
+      "name": "아누라다",
+      "meaning": "후계자",
+      "deity": "미트라",
+      "keywords": "헌신, 우정, 조직, 성공",
+      "animal": "사슴",
+      "symbol": "로터스"
+    },
+    "18": {
+      "name": "제슈타",
+      "meaning": "가장 오래된",
+      "deity": "인드라",
+      "keywords": "패권, 보호, 선임, 영웅주의",
+      "animal": "사슴",
+      "symbol": "귀걸이/우산"
+    },
+    "19": {
+      "name": "에서",
+      "meaning": "루트",
+      "deity": "짜증이 난다",
+      "keywords": "유래, 해산, 조사, 재단",
+      "animal": "개",
+      "symbol": "사자의 뿌리/꼬리"
+    },
+    "20": {
+      "name": "푸르바 아샤다",
+      "meaning": "무패",
+      "deity": "아파스(워터스)",
+      "keywords": "무적, 정화, 선언, 긍지",
+      "animal": "원숭이",
+      "symbol": "부채/키질 바구니"
+    },
+    "21": {
+      "name": "우타라 아샤다",
+      "meaning": "나중에 무패",
+      "deity": "비슈바데프",
+      "keywords": "승리, 성취, 리더십, 정의",
+      "animal": "몽구스",
+      "symbol": "코끼리 엄니"
+    },
+    "22": {
+      "name": "슈라바나",
+      "meaning": "귀",
+      "deity": "비슈누",
+      "keywords": "듣기, 학습, 연결, 인내",
+      "animal": "원숭이",
+      "symbol": "귀/세 발자국"
+    },
+    "23": {
+      "name": "다니슈타",
+      "meaning": "드럼",
+      "deity": "답변",
+      "keywords": "부, 명성, 리듬, 풍요",
+      "animal": "사자",
+      "symbol": "드럼/플루트"
+    },
+    "24": {
+      "name": "샤타비샤",
+      "meaning": "백명의 치료사",
+      "deity": "바루나",
+      "keywords": "치유, 은둔, 신비, 혁신",
+      "animal": "말",
+      "symbol": "빈 원"
+    },
+    "25": {
+      "name": "푸르바 바드라파다",
+      "meaning": "이전의 행운의 발",
+      "deity": "그냥 에카파다",
+      "keywords": "강렬함, 변신, 불, 금욕주의",
+      "animal": "사자",
+      "symbol": "검/두 얼굴을 가진 남자"
+    },
+    "26": {
+      "name": "우타라 바드라파다",
+      "meaning": "후자의 행운의 발",
+      "deity": "부드냐의 종말",
+      "keywords": "깊이, 통제, 지혜, 연민",
+      "animal": "암소",
+      "symbol": "쌍둥이/뱀"
+    },
+    "27": {
+      "name": "레바티",
+      "meaning": "부자",
+      "deity": "푸샨",
+      "keywords": "여행, 자양분, 번영, 완성",
+      "animal": "코끼리",
+      "symbol": "생선/드럼"
+    }
+  }
+}

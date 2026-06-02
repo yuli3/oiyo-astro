@@ -1,0 +1,43 @@
+{
+  "list": {
+    "keep": "유지하기",
+    "keepAction": "이 구독을 유지하세요",
+    "review": "검토",
+    "reviewAction": "사용량 검토",
+    "cancel": "취소",
+    "cancelAction": "구독 취소",
+    "monthly": "월간 간행물",
+    "used": "사용된",
+    "timesPerMonth": "회/월",
+    "satisfaction": "만족",
+    "valueScore": "가치 점수"
+  },
+  "title": "구독 관리자",
+  "subtitle": "월간 구독 추적 및 최적화",
+  "addSubscription": {
+    "title": "구독 추가",
+    "nameLabel": "서비스 이름",
+    "namePlaceholder": "예를 들어 넷플릭스, 스포티파이",
+    "priceLabel": "월간 가격",
+    "pricePlaceholder": "0.00",
+    "usageLabel": "월간 사용량",
+    "usageUnit": "타임스",
+    "satisfactionLabel": "만족",
+    "submit": "추가하기"
+  },
+  "summary": {
+    "monthlyTotal": "월간 총액",
+    "yearlyTotal": "연간 합계",
+    "potentialSavings": "잠재적인 절감액"
+  },
+  "tips": {
+    "title": "스마트 팁",
+    "tip1": "30일 동안 사용하지 않은 구독을 검토하세요.",
+    "tip2": "가족 요금제를 결합하여 비용을 절감하세요.",
+    "tip3": "매월 검토할 수 있도록 캘린더 알림을 설정하세요."
+  },
+  "empty": {
+    "title": "아직 구독이 없습니다",
+    "description": "지출을 추적하려면 구독을 추가하세요."
+  }
+}

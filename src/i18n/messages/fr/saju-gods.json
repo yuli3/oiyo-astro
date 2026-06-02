@@ -1,0 +1,117 @@
+{
+  "title": "Dix dieux (Sipshin)",
+  "gods": {
+    "BI_GYEON": {
+      "name": "Star of Movement",
+      "meaning": "Scholar",
+      "keywords": "Wisdom, Support, Tradition"
+    },
+    "GEOP_JAE": {
+      "name": "Star of Movement",
+      "meaning": "Scholar",
+      "keywords": "Wisdom, Support, Tradition"
+    },
+    "SIK_SIN": {
+      "name": "Star of Movement",
+      "meaning": "Scholar",
+      "keywords": "Wisdom, Support, Tradition"
+    },
+    "SANG_GWAN": {
+      "name": "Star of Movement",
+      "meaning": "Scholar",
+      "keywords": "Wisdom, Support, Tradition"
+    },
+    "PYEON_JAE": {
+      "name": "Star of Movement",
+      "meaning": "Scholar",
+      "keywords": "Wisdom, Support, Tradition"
+    },
+    "JEONG_JAE": {
+      "name": "Star of Movement",
+      "meaning": "Scholar",
+      "keywords": "Wisdom, Support, Tradition"
+    },
+    "PYEON_GWAN": {
+      "name": "Star of Movement",
+      "meaning": "Scholar",
+      "keywords": "Wisdom, Support, Tradition"
+    },
+    "JEONG_GWAN": {
+      "name": "Star of Movement",
+      "meaning": "Scholar",
+      "keywords": "Wisdom, Support, Tradition"
+    },
+    "PYEON_IN": {
+      "name": "Star of Movement",
+      "meaning": "Scholar",
+      "keywords": "Wisdom, Support, Tradition"
+    },
+    "JEONG_IN": {
+      "name": "Star of Movement",
+      "meaning": "Savante",
+      "keywords": "Sagesse, Soutien, Tradition"
+    }
+  },
+  "fateStars": {
+    "cheonaek": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheonbok": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheongan": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheongo": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheongwi": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheongwon": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheonin": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheonmun": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheonpa": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheonsu": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheonye": {
+      "name": "Star of Movement",
+      "keyword": "Movement",
+      "description": "Dynamic energy that expands horizons through movement."
+    },
+    "cheonyeok": {
+      "name": "Étoile du mouvement",
+      "keyword": "Mouvement",
+      "description": "Une énergie dynamique qui élargit les horizons grâce au mouvement."
+    }
+  }
+}

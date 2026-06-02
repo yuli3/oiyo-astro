@@ -1,0 +1,46 @@
+{
+  "description": "Estimate your Korean gift tax instantly. Enter the gift amount and your relationship to the recipient to see the deduction, tax base, and applicable rate.",
+  "title": "Gift Tax Calculator",
+  "labels": {
+    "inputParameters": "Enter Gift Details"
+  },
+  "relationship": "Relationship to Recipient",
+  "rel": {
+    "selectPlaceholder": "Select a relationship",
+    "child_adult": "Adult Child",
+    "child_minor": "Minor Child",
+    "spouse": "Spouse",
+    "parent": "Parent",
+    "other_relative": "Other Relative",
+    "other": "Other (Non-relative)"
+  },
+  "giftAmount": "Gift Amount (KRW)",
+  "pastGiftAmount": "Prior Gifts in Last 10 Years (KRW)",
+  "calculateBtn": "Calculate Tax",
+  "result": {
+    "deductionDesc": "Basic deduction applied based on your relationship",
+    "deduction": "Tax Deduction",
+    "taxBase": "Taxable Amount",
+    "rateDesc": "Progressive tax rate applied to the taxable amount",
+    "rate": "Tax Rate",
+    "title": "Estimated Gift Tax",
+    "selfReport": "You are responsible for self-reporting this tax to the tax authority."
+  },
+  "placeholder": "e.g. 50,000,000",
+  "tip": {
+    "title": "Helpful Tip",
+    "desc": "Gifts to a spouse are deducted up to ₩600 million; to adult children up to ₩50 million; to minor children up to ₩20 million. Gifts made within the same 10-year period are combined."
+  },
+  "disclaimer": "This calculator provides an estimate only and is not legal or tax advice. Please consult a certified tax professional for your specific situation.",
+  "test": {
+    "insightBullets": [
+      "Find the perfect gift",
+      "Personality and Budget Analysis",
+      "AI personalized recommendations"
+    ]
+  },
+  "meta": {
+    "title": "gift recommendation",
+    "description": "AI gift recommendations tailored to personality and budget"
+  }
+}

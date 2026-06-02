@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "phase2": "2단계: 기초",
+    "title": "라이프 코디네이터",
+    "subtitle": "우주 데이터(사주, 별자리)와 심리적 특성(MBTI)을 종합하여 최적의 인생 경로를 찾아보세요.",
+    "dataInput": "데이터 입력",
+    "birthDate": "생년월일(사주용)",
+    "mbtiType": "MBTI 유형",
+    "calculatedSign": "계산된 부호:",
+    "analyzeSynergy": "시너지 분석",
+    "coreEssence": "코어 에센스",
+    "careerRecs": "직업 추천",
+    "hobbySynergy": "취미 시너지",
+    "awaitingData": "데이터 대기 중...",
+    "enterDetails": "분석할 세부정보를 입력하세요.",
+    "select": "선택하다..."
+  },
+  "result": {
+    "match": "성냥",
+    "avgSalary": "평균 급여",
+    "outlook": "시야"
+  }
+}

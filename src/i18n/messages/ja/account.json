@@ -1,0 +1,765 @@
+{
+  "dashboard": {
+    "meta": {
+      "keywords": "月間の流れ, 統合リポート, 要約, PDF指針",
+      "hero": {
+        "guestTitle": "個人分析官へようこそ",
+        "subtitle": "宇宙を旅するあなただけの歴史を記録します。"
+      },
+      "title": "深い洞察",
+      "description": "表面的な分析を超えた魂の指針書を提供します。"
+    },
+    "hero": {
+      "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+      "guestTitle": "個人分析官へようこそ"
+    },
+    "recentTests": {
+      "retake": "再テスト",
+      "share": "リポートのURLを共有",
+      "title": "深い洞察",
+      "viewAll": "すべて表示",
+      "noTests": "記録された旅はありません",
+      "startTesting": "新しい探索を開始"
+    },
+    "emotionSummary": {
+      "currentStreak": "連続省察日数",
+      "avgTemp": "平均感情温度: {temp}°C",
+      "title": "深い洞察",
+      "notLogged": "未記録",
+      "logNow": "今すぐ記録する"
+    },
+    "stats": {
+      "thisWeek": "今週",
+      "thisMonth": "今月",
+      "allTime": "全期間の旅"
+    },
+    "scope": {
+      "weekly": "週間リポート",
+      "monthly": "月",
+      "yearly": "年間リポート",
+      "daily": "日間の記録"
+    },
+    "card": {
+      "advice": "今日の助言",
+      "luckyNumbers": "幸運の調律数",
+      "luckyColors": "インスピレーションカラー",
+      "warnings": "内なる警告"
+    },
+    "title": "深い洞察",
+    "description": "表面的な分析を超えた魂の指針書を提供します。",
+    "keywords": "月間の流れ, 統合リポート, 要約, PDF指針",
+    "achievements": {
+      "emptyTitle": "まだ実績はありません。",
+      "emptyDescription": "探索を開始して、あなただけの歴史を記録しましょう。",
+      "emptyCta": "第一歩を踏み出す",
+      "title": "深い洞察",
+      "labels": {
+        "level": "等級",
+        "points": "欠片",
+        "achievements": "実績リスト"
+      },
+      "recentTitle": "最近到達した地",
+      "viewAll": "すべて表示",
+      "stats": {
+        "unlocked": "解明済み",
+        "completionRate": "完了率",
+        "remaining": "進行中"
+      },
+      "badgeCollection": "印章コレクション",
+      "nextTitle": "次に到達すべき地",
+      "notificationsTitle": "最新のニュース",
+      "notificationsEmpty": "穏やかな静寂",
+      "dismissAll": "すべて整理",
+      "dismiss": "閉じる",
+      "result": {
+        "title": "深い洞察",
+        "description": "表面的な分析を超えた魂の指針書を提供します。"
+      },
+      "meta": {
+        "title": "深い洞察",
+        "description": "表面的な分析を超えた魂の指針書を提供します。",
+        "keywords": "月間の流れ, 統合リポート, 要約, PDF指針"
+      },
+      "test": {
+        "progress": "航海の進捗",
+        "next": "次へ",
+        "previous": "前へ",
+        "submit": "マッピング完了",
+        "loading": "無意識の重なりを探索中...",
+        "selectOption": "より共鳴する真実を選んでください",
+        "insightBullets": ["洞察力"]
+      }
+    },
+    "testHistory": {
+      "title": "深い洞察",
+      "noTests": "記録された旅はありません",
+      "noTestsDescription": "まだあなたの物語は綴られていません。",
+      "takeFirstTest": "最初の扉を開く",
+      "viewResult": "記録を表示",
+      "viewAll": "すべて表示"
+    },
+    "T": "個人分析官",
+    "overview": {
+      "testsCompleted": "完了したテスト",
+      "totalPoints": "累積された欠片",
+      "currentStreak": "連続省察日数",
+      "achievementsUnlocked": "達成したマイルストーン"
+    },
+    "quickActions": {
+      "title": "深い洞察",
+      "takeTest": "真なる自己と対面する",
+      "viewAchievements": "達成履歴を確認",
+      "checkEmotion": "現在の波動をチェック",
+      "findTwin": "魂の同伴者を探索",
+      "downloadPDF": "分析リポートを保存"
+    },
+    "ontology": {
+      "twinFinder": {
+        "title": "深い洞察",
+        "noMatches": "まだ運命の相手は発見されていません。",
+        "findNow": "今すぐ探索する"
+      }
+    },
+    "common": {
+      "recommendations": {
+        "title": "深い洞察",
+        "error": "流れが一時的に途絶えました。",
+        "empty": "記録なし",
+        "exploreAll": "すべての道を探索",
+        "spotlightEyebrow": "特別な提案",
+        "loading": "無意識の重なりを探索中...",
+        "trending": "現在のトレンドの流れ",
+        "new": "新しい発見",
+        "takeTest": "真なる自己と対面する"
+      },
+      "next": "次へ",
+      "previous": "前へ",
+      "submit": "マッピング完了",
+      "start": "旅を開始",
+      "loading": "無意識の重なりを探索中...",
+      "results": "最終診断",
+      "dashboard": "私の分析官",
+      "insights": "核心的な洞察"
+    },
+    "profile": {
+      "title": "深い洞察",
+      "anonymous": "名もなき求道者",
+      "achievements": "実績リスト",
+      "badges": {
+        "newMember": "第一歩",
+        "explorer": "内なる開拓者"
+      },
+      "editProfile": "アイデンティティの修正",
+      "description": "表面的な分析を超えた魂の指針書を提供します。"
+    },
+    "biorhythm": {
+      "title": "深い洞察",
+      "physical": "身体のリズム",
+      "emotional": "感情の調律",
+      "intellectual": "知性の洞察"
+    },
+    "fortune": {
+      "numerology": {
+        "title": "深い洞察",
+        "lifePath": "生涯の経路",
+        "personalYear": "今年の流れ"
+      }
+    },
+    "saju": {
+      "title": "深い洞察",
+      "dominant": "主導的なエネルギー",
+      "lacking": "補完が必要な欠乏"
+    },
+    "test": {
+      "progress": "航海の進捗",
+      "submit": "マッピング完了",
+      "loading": "無意識の重なりを探索中...",
+      "selectOption": "より共鳴する真実を選んでください",
+      "insightBullets": ["本当の自分の星座をマッピングします。"],
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "深い洞察",
+      "description": "表面的な分析を超えた魂の指針書を提供します。"
+    }
+  },
+  "achievements": {
+    "labels": {
+      "level": "等級",
+      "points": "欠片"
+    },
+    "viewAll": "すべて表示",
+    "page": {
+      "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+      "title": "深い洞察"
+    },
+    "loading": {
+      "message": "⏳✨ あなたの大切なバッジと心地よい経験の足跡を集めています...",
+      "tip": "🥇 報酬を整理している間、他の性格の旅を探索し続けてください！"
+    },
+    "filters": {
+      "all": "すべて",
+      "unlocked": "解明済み",
+      "locked": "隠された神秘",
+      "testCompletion": "探求の完成",
+      "social": "社会的交感",
+      "streak": "持続的な精進",
+      "throttling": "調律中"
+    },
+    "stats": {
+      "level": "等級",
+      "points": "欠片",
+      "currentLevel": "現在の等級",
+      "totalPoints": "累積された欠片",
+      "achievementProgress": "達成の進捗",
+      "badgeCollection": "印章コレクション",
+      "unlockedAchievements": "達成された実績",
+      "completionRate": "完了率",
+      "remainingAchievements": "残された神秘",
+      "testsCompleted": "完了したテスト",
+      "totalScore": "統合スコア",
+      "unlocked": "解明済み",
+      "remaining": "進行中",
+      "title": "深い洞察",
+      "achievements": "実績リスト",
+      "maxLevelMessage": "絶頂の等級に到達しました。",
+      "levelPrefix": "Grade",
+      "levelTitle": "Grade {level}",
+      "totalPointsTitle": "累積されたエネルギー",
+      "totalPointsSubtitle": "現在までのすべてのポイント",
+      "progressTitle": "前進する歩み",
+      "badgeTitle": "名誉の印章",
+      "badgeSubtitle": "付与された権能",
+      "badgesUnlocked": "獲得した印章",
+      "overallProgress": "全体の完成度",
+      "emptyCategory": "このカテゴリーにはまだ足跡が記録されていません。"
+    },
+    "cards": {
+      "locked": {
+        "cta": "PDFとして保存"
+      },
+      "progress": {
+        "label": "{progress}% 達成済み"
+      }
+    },
+    "notifications": {
+      "empty": "記録なし",
+      "viewAll": "すべて表示",
+      "unlocked": "解明済み",
+      "earnedPoints": "{points}欠片のインスピレーションを獲得しました！",
+      "levelUp": "共鳴加速！ レベル{level}に到達しました。",
+      "newBadge": "新しい栄光の印章を獲得しました！"
+    },
+    "recent": {
+      "empty": "記録なし",
+      "title": "深い洞察"
+    },
+    "cta": {
+      "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+      "button": "探索を開始する →",
+      "title": "深い洞察",
+      "description": "表面的な分析を超えた魂の指針書を提供します。"
+    },
+    "firstTest": {
+      "cta": "PDFとして保存",
+      "name": "境界を越える者",
+      "title": "始まりの印章",
+      "description": "最初の内省を無事完了しました。"
+    },
+    "socialSharer": {
+      "cta": "PDFとして保存",
+      "title": "共有マスター",
+      "description": "あなたは自分の洞察を他の人と共有し、つながりを築きました。"
+    },
+    "categories": {
+      "testCompletion": "探求の完成",
+      "social": "社会的交感",
+      "streak": "持続的な精進",
+      "exploration": "飽くなき探求",
+      "sharing": "知恵の共有"
+    },
+    "rarity": {
+      "bronze": "{count}個のブロンズ",
+      "silver": "{count}個のシルバー",
+      "gold": "{count}個のゴールド",
+      "platinum": "{count}個のプラチナ",
+      "legendary": "驚異の神話"
+    },
+    "bloodTypeExplorer": {
+      "cta": "PDFとして保存",
+      "title": "血液型エクスプローラー",
+      "description": "血液型とその意味の謎について調べてきました。"
+    },
+    "sajuExplorer": {
+      "cta": "PDFとして保存",
+      "title": "サジュマスター",
+      "description": "形而上学的な運命の解釈を深く理解しました。"
+    },
+    "tarotExplorer": {
+      "cta": "PDFとして保存",
+      "title": "タロットエクスプローラー",
+      "description": "タロットカードの謎を解明しました。"
+    },
+    "namingExplorer": {
+      "cta": "PDFとして保存",
+      "title": "ネーミングマスター",
+      "description": "名前の力について調べてきました。"
+    },
+    "viralSharer": {
+      "cta": "PDFとして保存",
+      "title": "バイラルシェアラー",
+      "description": "あなたの株は広く反響を呼びました。"
+    },
+    "streakMaster": {
+      "cta": "PDFとして保存",
+      "title": "ストリークマスター",
+      "description": "長期にわたる連続記録を維持しています。"
+    },
+    "insightSeeker": {
+      "cta": "PDFとして保存",
+      "title": "洞察を求める人",
+      "description": "あなたは常に深い自己洞察を求めています。"
+    },
+    "communityPillar": {
+      "cta": "PDFとして保存",
+      "title": "コミュニティの柱",
+      "description": "コミュニティで知恵を共有し、他の人にインスピレーションを与えます。"
+    },
+    "summary": {
+      "myAchievements": "私のすべての実績",
+      "viewAll": "すべて表示"
+    },
+    "weeklyStreak": {
+      "cta": "PDFとして保存",
+      "title": "ウィークリーストリークマスター",
+      "description": "あなたは毎週の振り返りを長い間続けてきました。"
+    },
+    "meta": {
+      "keywords": "月間の流れ, 統合リポート, 要約, PDF指針",
+      "title": "深い洞察",
+      "description": "表面的な分析を超えた魂の指針書を提供します。"
+    },
+    "hero": {
+      "subtitle": "宇宙を旅するあなただけの歴史を記録します。"
+    },
+    "badges": {
+      "bronze": "{count}個のブロンズ",
+      "silver": "{count}個のシルバー",
+      "gold": "{count}個のゴールド",
+      "platinum": "{count}個のプラチナ"
+    },
+    "next": {
+      "empty": "記録なし"
+    },
+    "empty": {
+      "subtitle": "宇宙を旅するあなただけの歴史を記録します。"
+    },
+    "actions": {
+      "share": "リポートのURLを共有",
+      "retake": "再テスト",
+      "viewDetails": "詳細を表示"
+    },
+    "fiveTests": {
+      "name": "境界を越える者"
+    },
+    "tenTests": {
+      "name": "境界を越える者"
+    },
+    "explorer": {
+      "name": "境界を越える者"
+    },
+    "unlocked": "解明済み",
+    "demo": {
+      "simulate": "シミュレーション稼働",
+      "title": "深い洞察",
+      "reset": "初期状態に戻す"
+    },
+    "emptyTitle": "まだ実績はありません。",
+    "emptyDescription": "探索を開始して、あなただけの歴史を記録しましょう。",
+    "emptyCta": "第一歩を踏み出す",
+    "badgeCollection": "印章コレクション",
+    "recentTitle": "最近到達した地",
+    "nextTitle": "次に到達すべき地",
+    "levelTitle": "Grade {level}",
+    "pointsEarned": "{points}欠片を獲得",
+    "achievements": {
+      "firstTest": {
+        "name": "境界を越える者",
+        "description": "表面的な分析を超えた魂の指針書を提供します。"
+      },
+      "fiveTests": {
+        "name": "境界を越える者",
+        "description": "表面的な分析を超えた魂の指針書を提供します。"
+      },
+      "tenTests": {
+        "name": "境界を越える者",
+        "description": "表面的な分析を超えた魂の指針書を提供します。"
+      },
+      "explorer": {
+        "name": "境界を越える者",
+        "description": "表面的な分析を超えた魂の指針書を提供します。"
+      },
+      "title": "深い洞察",
+      "unlocked": "解明済み",
+      "socialSharer": {
+        "name": "共有の達人",
+        "description": "あなたの洞察を他者と共有し、絆を築きました。"
+      },
+      "bloodTypeExplorer": {
+        "name": "血液型探求家",
+        "description": "血液型の神秘とその意味を探求しました。"
+      },
+      "sajuExplorer": {
+        "name": "四柱推命マスター",
+        "description": "形而上学的な運命の解釈を深く理解しました。"
+      },
+      "categoryExplorer": {
+        "name": "カテゴリー探検家",
+        "description": "様々なカテゴリーを探索し、知識の幅を広げました。"
+      },
+      "testVeteran": {
+        "name": "テストベテラン",
+        "description": "数多くのテストを完了し、自己理解を深めました。"
+      },
+      "completionist": {
+        "name": "コンプリーショニスト",
+        "description": "利用可能なすべてのテストを完了しました。"
+      },
+      "shareMaster": {
+        "name": "共有マスター",
+        "description": "何度も結果を共有し、コミュニティに貢献しました。"
+      },
+      "dailyVisitor": {
+        "name": "日々の訪問者",
+        "description": "毎日内省の習慣を維持しました。"
+      },
+      "rareCombination": {
+        "name": "稀な組み合わせ",
+        "description": "珍しい性格の組み合わせを発見しました。"
+      },
+      "perfectMatch": {
+        "name": "完璧なマッチ",
+        "description": "自分に完璧に合う結果を見つけました。"
+      }
+    },
+    "emptyState": {
+      "title": "深い洞察",
+      "description": "表面的な分析を超えた魂の指針書を提供します。"
+    },
+    "dashboard": {
+      "emptyState": "記録なし",
+      "title": "深い洞察",
+      "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+      "summary": {
+        "unlocked": "解明済み",
+        "level": "等級",
+        "points": "欠片",
+        "completion": "完成"
+      },
+      "levelCard": {
+        "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+        "maxLevel": "絶頂の状態"
+      },
+      "recent": {
+        "title": "深い洞察",
+        "empty": "記録なし"
+      },
+      "categories": {
+        "title": "深い洞察",
+        "progressLabel": "習熟率"
+      },
+      "tier": {
+        "title": "深い洞察"
+      }
+    },
+    "test": {
+      "progress": "航海の進捗",
+      "submit": "マッピング完了",
+      "loading": "無意識の重なりを探索中...",
+      "selectOption": "より共鳴する真実を選んでください",
+      "insightBullets": ["あなたの個人的な哲学の隠された層を明らかにします。"],
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "深い洞察",
+      "description": "表面的な分析を超えた魂の指針書を提供します。"
+    },
+    "categoryExplorer": {
+      "cta": "さまざまなカテゴリを探索する",
+      "title": "カテゴリエクスプローラー",
+      "description": "さまざまなカテゴリーを探索し、知識を広げてきました。"
+    },
+    "testVeteran": {
+      "title": "テストベテラン",
+      "description": "あなたは数多くのテストを完了し、自己理解を深めてきました。"
+    },
+    "completionist": {
+      "title": "完全主義者",
+      "description": "利用可能なテストをすべて完了しました。"
+    },
+    "shareMaster": {
+      "title": "シェアマスター",
+      "description": "あなたは結果を何度も共有し、コミュニティに貢献してきました。"
+    },
+    "dailyVisitor": {
+      "title": "毎日の訪問者",
+      "description": "あなたは毎日反省する習慣を続けてきました。"
+    },
+    "rareCombination": {
+      "title": "珍しい組み合わせ",
+      "description": "珍しい性格の組み合わせを発見しました。"
+    },
+    "perfectMatch": {
+      "title": "完璧に一致",
+      "description": "あなたにぴったりの結果が見つかりました。"
+    }
+  },
+  "premium": {
+    "title": "深い洞察",
+    "description": "表面的な分析を超えた魂の指針書を提供します。"
+  },
+  "auth": {
+    "signIn": {
+      "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+      "title": "深い洞察",
+      "newUser": "聖域は初めてですか？",
+      "signUp": "旅を始める",
+      "description": "あなたが建てた知恵の塔を見つけてください。"
+    },
+    "signUp": {
+      "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+      "title": "新しい宇宙を生成",
+      "existingUser": "すでに探検家ですか？",
+      "signIn": "あなたの道に戻る"
+    },
+    "profile": {
+      "editProfile": "アイデンティティの修正",
+      "accountSettings": "空間設定",
+      "testHistory": "探索の記録",
+      "preferences": "好みのインスピレーション",
+      "welcome": "求道者 {name}さん、ようこそ。"
+    },
+    "auth": {
+      "signUp": {
+        "title": "深い洞察",
+        "description": "表面的な分析を超えた魂の指針書を提供します。",
+        "subtitle": "宇宙を旅するあなただけの歴史を記録します。"
+      },
+      "signIn": {
+        "title": "深い洞察",
+        "description": "表面的な分析を超えた魂の指針書を提供します。",
+        "subtitle": "宇宙を旅するあなただけの歴史を記録します。"
+      }
+    }
+  },
+  "onboarding": {
+    "title": "深い洞察",
+    "description": "表面的な分析を超えた魂の指針書を提供します。",
+    "steps": ["プロファイルの作成", "最初のテストを受ける", "結果を調べる"]
+  },
+  "analytics": {
+    "meta": {
+      "title": "深い洞察",
+      "description": "表面的な分析を超えた魂の指針書を提供します。",
+      "keywords": "月間の流れ, 統合リポート, 要約, PDF指針"
+    },
+    "advanced": {
+      "loading": "無意識の重なりを探索中...",
+      "analyzingData": "意味を抽出しています",
+      "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+      "refresh": "新たな波動に更新",
+      "totalInsights": "発見された知恵の総数",
+      "highPriority": "核心的な示唆",
+      "patterns": {
+        "frequency": "出現頻度",
+        "strength": "エネルギー強度",
+        "triggers": "トリガー要因",
+        "outcomes": "発現した結果",
+        "_text": "テキスト分析"
+      },
+      "avgConfidence": "平均精度",
+      "tabs": {
+        "evolution": "進化の過程",
+        "patterns": "繰り返されるパターン",
+        "predictions": "期待される展開",
+        "insights": "核心的な洞察"
+      },
+      "filterBy": "観点フィルター",
+      "confidence": "精密さ",
+      "noInsights": "準備された洞察はありません",
+      "evolution": {
+        "timeline": "時間の軌跡",
+        "stability": "維持される安定",
+        "growth": "前進する成長",
+        "volatility": "変動の幅",
+        "trend": "流れの趨勢",
+        "prediction": "可能性の予測"
+      },
+      "models": {
+        "accuracy": "推论精度",
+        "features": "核心的な属性",
+        "predictions": "期待される展開",
+        "lastTrained": "最終更新"
+      },
+      "title": "深い洞察",
+      "recommendations": "進むべき方向の提言"
+    },
+    "test": {
+      "progress": "航海の進捗",
+      "submit": "マッピング完了",
+      "loading": "無意識の重なりを探索中...",
+      "selectOption": "より共鳴する真実を選んでください",
+      "insightBullets": ["あなたの内なる風景の奥深い構造を探索してください。"],
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "深い洞察",
+      "description": "表面的な分析を超えた魂の指針書を提供します。"
+    }
+  },
+  "subscriptionManager": {
+    "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+    "addSubscription": {
+      "title": "深い洞察",
+      "nameLabel": "対象の名前",
+      "namePlaceholder": "サービス名称",
+      "priceLabel": "エネルギーコスト(価格)",
+      "pricePlaceholder": "コストを入力",
+      "usageLabel": "交感の頻度",
+      "usageUnit": "単位",
+      "satisfactionLabel": "内なる満足度",
+      "submit": "マッピング完了"
+    },
+    "summary": {
+      "monthlyTotal": "月間消費エネルギー",
+      "yearlyTotal": "年間消費エネルギー",
+      "potentialSavings": "確保可能なエネルギー"
+    },
+    "list": {
+      "monthly": "月",
+      "used": "使用量",
+      "timesPerMonth": "回/月",
+      "satisfaction": "この紐帯に満足していますか？",
+      "valueScore": "価値スコア",
+      "keep": "維持を推奨",
+      "keepAction": "意味のある繋がり",
+      "review": "再検討が必要",
+      "reviewAction": "もっと深く関わるか断絶を考慮",
+      "cancel": "断絶を推奨",
+      "cancelAction": "対価に対して価値が低い繋がり"
+    },
+    "tips": {
+      "tip1": "意味のない紐帯は直ちに断絶しましょう。",
+      "tip2": "短期よりは長期計画のメリットを確認しましょう。",
+      "tip3": "他人と同行できる経路を探しましょう。",
+      "title": "深い洞察"
+    },
+    "serviceName": "繋がり名",
+    "monthlyFee": "月間コスト",
+    "totalMonthly": "月合計",
+    "title": "深い洞察",
+    "empty": {
+      "title": "深い洞察",
+      "description": "あなたの人生パターンを形成する絆を追加して観察してください。"
+    }
+  },
+  "notifications": {
+    "aiHoroscope": {
+      "body": "{personality} タイプの銀河予報の準備ができました！",
+      "bodyNoPersonality": "銀河予報の准备ができました！",
+      "actions": {
+        "view": "予報を見る",
+        "later": "後で"
+      }
+    },
+    "testReminder": {
+      "body": "進行中の内面探求を完了して結果を確認してください。",
+      "actions": {
+        "continue": "今すぐ行く",
+        "dismiss": "閉じる"
+      }
+    },
+    "streak": {
+      "body": "素晴らしいですね！{count} 日間、自分自身を振り返り続けています。",
+      "actions": {
+        "celebrate": "お祝いする",
+        "share": "輝かせる"
+      }
+    },
+    "social": {
+      "twinMatch": {
+        "body": "あなたと精神的に似た魂を発見しました。"
+      },
+      "newFriend": {
+        "body": "誰かがあなたの洞察記録に強い関心を持っています。"
+      },
+      "testShared": {
+        "body": "友達があなたの記録をチェックしました。"
+      }
+    },
+    "actions": {
+      "view": "表示",
+      "later": "後で"
+    }
+  },
+  "progress": {
+    "meta": {
+      "title": "深い洞察",
+      "description": "表面的な分析を超えた魂の指針書を提供します。",
+      "keywords": "月間の流れ, 統合リポート, 要約, PDF指針"
+    },
+    "hero": {
+      "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+      "title": "深い洞察"
+    },
+    "title": "深い洞察",
+    "description": "表面的な分析を超えた魂の指針書を提供します。",
+    "keywords": "月間の流れ, 統合リポート, 要約, PDF指針",
+    "marketing": {
+      "about": {
+        "title": "深い洞察",
+        "tracking": {
+          "title": "深い洞察",
+          "description": "表面的な分析を超えた魂の指針書を提供します。",
+          "feature1": "内面風景の深い構造を探索しましょう。",
+          "feature2": "個人の哲学に隠された層ごとの意味を掘り下げましょう。",
+          "feature3": "内面風景の深い構造を探索しましょう。"
+        },
+        "insights": {
+          "title": "深い洞察",
+          "description": "表面的な分析を超えた魂の指針書を提供します。",
+          "feature1": "内面風景の深い構造を探索しましょう。",
+          "feature2": "個人の哲学に隠された層ごとの意味を掘り下げましょう。",
+          "feature3": "内面風景の深い構造を探索しましょう。"
+        }
+      }
+    }
+  },
+  "reports": {
+    "monthly": {
+      "meta": {
+        "keywords": "月間の流れ, 統合リポート, 要約, PDF指針"
+      },
+      "hero": {
+        "eyebrow": "洞察のダイジェスト",
+        "subtitle": "宇宙を旅するあなただけの歴史を記録します。",
+        "cta": "PDFとして保存"
+      },
+      "download": {
+        "cta": "PDFとして保存",
+        "share": "リポートのURLを共有"
+      },
+      "sections": {
+        "career": "志すすべき成長の原動力",
+        "relationships": "関係性の中での態度と紐帯",
+        "wellness": "エネルギーレベルと心の平穏"
+      }
+    }
+  },
+  "hero": {
+    "subtitle": "宇宙を旅するあなただけの歴史を記録します。"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Presets",
+  "subtitle": "Choose a preset.",
+  "recommended": "Recommended",
+  "all": {
+    "title": "All Presets",
+    "description": "View all available presets."
+  },
+  "eastern": {
+    "title": "Eastern Wisdom",
+    "description": "Ancient eastern systems."
+  },
+  "western": {
+    "title": "Western Wisdom",
+    "description": "Modern western systems."
+  },
+  "basic": {
+    "title": "Basic",
+    "description": "Essential analysis."
+  }
+}

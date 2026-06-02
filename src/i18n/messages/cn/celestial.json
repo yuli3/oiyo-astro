@@ -1,0 +1,8 @@
+{
+  "status": "天体状态",
+  "active": "活跃共鸣",
+  "orbitalVelocity": "轨道速度",
+  "km": "千米/秒",
+  "lunarPhase": "月相",
+  "waxing": "上弦月"
+}

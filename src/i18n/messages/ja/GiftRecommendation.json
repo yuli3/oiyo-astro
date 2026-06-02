@@ -1,0 +1,253 @@
+{
+  "meta": {
+    "title": "ギフトのおすすめ",
+    "description": "優しい香りで雰囲気を作る",
+    "keywords": "ギフトのおすすめ, ギフトファインダー, 完璧なギフト, 誕生日プレゼント, 記念日の贈り物"
+  },
+  "hero": {
+    "title": "ギフトのおすすめ",
+    "subtitle": "あなたの特別な人のための完璧なギフト",
+    "cta": "クイズを開始"
+  },
+  "features": {
+    "personalized": {
+      "title": "ギフトのおすすめ",
+      "description": "優しい香りで雰囲気を作る"
+    },
+    "variety": {
+      "title": "ギフトのおすすめ",
+      "description": "優しい香りで雰囲気を作る"
+    },
+    "shoppingLinks": {
+      "title": "ギフトのおすすめ",
+      "description": "優しい香りで雰囲気を作る"
+    }
+  },
+  "howItWorks": {
+    "steps": {
+      "1": {
+        "title": "ギフトのおすすめ",
+        "desc": "トップ5のおすすめ"
+      },
+      "2": {
+        "title": "ギフトのおすすめ",
+        "desc": "トップ5のおすすめ"
+      },
+      "3": {
+        "title": "ギフトのおすすめ",
+        "desc": "トップ5のおすすめ"
+      },
+      "4": {
+        "title": "ギフトのおすすめ",
+        "desc": "トップ5のおすすめ"
+      }
+    },
+    "title": "ギフトのおすすめ"
+  },
+  "cta": {
+    "button": "今すぐ開始 →"
+  },
+  "landing": {
+    "subtitle": "あなたの特別な人のための完璧なギフト",
+    "cta": "クイズを開始"
+  },
+  "ui": {
+    "selectOption": "オプションを選択",
+    "progress": "進捗",
+    "previous": "以前"
+  },
+  "result": {
+    "title": "ギフトのおすすめ",
+    "subtitle": "あなたの特別な人のための完璧なギフト",
+    "match": "マッチ",
+    "reasons": "💡 このギフトの理由:",
+    "shopNow": "今すぐ購入",
+    "save": "保存",
+    "retake": "新しいおすすめを取得",
+    "share": "結果を共有",
+    "loading": "読み込み中..."
+  },
+  "data": {
+    "questions": {
+      "age": {
+        "options": {
+          "10s": "ティーンエイジャー",
+          "20s": "20代",
+          "30s": "30代",
+          "40s": "40代",
+          "50plus": "50代以上"
+        },
+        "question": "どんな機会ですか？"
+      },
+      "personality": {
+        "options": {
+          "active": "活動的＆外交的",
+          "calm": "穏やか＆内向的",
+          "creative": "創造的＆芸術的",
+          "practical": "実用的＆論理的"
+        },
+        "question": "どんな機会ですか？"
+      },
+      "interests": {
+        "options": {
+          "tech": "テクノロジー/ガジェット",
+          "fashion": "ファッション/美容",
+          "food": "食べ物/料理",
+          "sports": "スポーツ/フィットネス",
+          "art": "アート＆デザイン",
+          "home": "ホーム/インテリア"
+        },
+        "question": "どんな機会ですか？"
+      },
+      "budget": {
+        "options": {
+          "under20": "2,000円未満",
+          "20to50": "2,000円〜5,000円",
+          "50to100": "5,000円〜10,000円",
+          "over100": "10,000円以上"
+        },
+        "question": "どんな機会ですか？"
+      },
+      "relationship": {
+        "options": {
+          "family": "家族",
+          "friend": "友達",
+          "romantic": "ロマンチックなパートナー",
+          "colleague": "同僚"
+        },
+        "question": "どんな機会ですか？"
+      },
+      "occasion": {
+        "options": {
+          "birthday": "誕生日",
+          "holiday": "休日/記念日",
+          "thanks": "感謝",
+          "just-because": "なんとなく"
+        },
+        "question": "どんな機会ですか？"
+      }
+    },
+    "products": {
+      "wireless-earbuds": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": ["音楽愛好家に最適", "実用的なギフト", "トレンドアイテム"]
+      },
+      "smart-watch": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": [
+          "ヘルスケアに興味のある方へ",
+          "最新の技術",
+          "実用的かつスタイリッシュ"
+        ]
+      },
+      "perfume-set": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": [
+          "ロマンチックな贈り物",
+          "豪華なパッケージ",
+          "特別な日にぴったり"
+        ]
+      },
+      "handbag": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": [
+          "ファッションに興味のある方へ",
+          "長く使える",
+          "特別な贈り物"
+        ]
+      },
+      "gourmet-set": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": ["料理愛好家に最適", "ユニークなギフト", "実用的"]
+      },
+      "coffee-maker": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": ["コーヒー愛好家向け", "日常的に使用可能", "豪華なギフト"]
+      },
+      "yoga-mat": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": [
+          "運動愛好家向け",
+          "健康的なライフスタイル",
+          "実用的なギフト"
+        ]
+      },
+      "fitness-tracker": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": [
+          "ヘルスケアに興味のある方へ",
+          "健康的なライフスタイルの完璧なパートナー",
+          "実用的"
+        ]
+      },
+      "diffuser": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": ["家で過ごす時間が長い方へ", "快適な雰囲気", "実用的"]
+      },
+      "luxury-blanket": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": [
+          "心地よさをプレゼントしたいときに",
+          "実用的かつ豪華",
+          "オールシーズンご利用いただけます"
+        ]
+      },
+      "art-book": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": [
+          "アート愛好家向け",
+          "収集価値のあるもの",
+          "インテリジェントな贈り物"
+        ]
+      },
+      "concert-tickets": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": [
+          "体験をプレゼントしたいときに",
+          "思い出作り",
+          "文化愛好家向け"
+        ]
+      },
+      "notebook-set": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": ["リーズナブルな価格", "実用的", "誰にも負担をかけない"]
+      },
+      "candle-set": {
+        "name": "キャンドルセット",
+        "description": "優しい香りで雰囲気を作る",
+        "priceRange": "2,000円〜5,000円",
+        "reasons": ["リーズナブルな価格", "雰囲気のある贈り物", "実用的"]
+      }
+    }
+  },
+  "title": "ギフトのおすすめ",
+  "findGift": "ギフトを探す",
+  "occasion": "特別な日",
+  "budget": "予算"
+}

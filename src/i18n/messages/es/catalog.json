@@ -1,0 +1,221 @@
+{
+  "tests": {
+    "mbti": {
+      "title": "Tipo Psicológico",
+      "subtitle": "Cognición Social",
+      "description": "Una reflexión suave sobre los patrones recurrentes de tu conciencia."
+    },
+    "tci": {
+      "title": "Carácter y Temperamento",
+      "subtitle": "Esencia Innata",
+      "description": "Trazando las texturas biológicas y adquiridas de tu personalidad."
+    },
+    "enneagram": {
+      "title": "Motivaciones Profundas",
+      "subtitle": "Las Nueve Miradas",
+      "description": "Desvelando los motores sagrados que guían tus elecciones y miedos."
+    },
+    "hexaco": {
+      "title": "Seis Dimensiones",
+      "subtitle": "Resonancia Ética",
+      "description": "Midiendo las vibraciones sutiles de honestidad y humildad en ti."
+    },
+    "perfectionism": {
+      "title": "Altos Estándares",
+      "subtitle": "El Camino del Idealista",
+      "description": "Comprendiendo el delicado equilibrio entre la excelencia y la gracia."
+    },
+    "country-preference": {
+      "title": "Resonancia Cultural",
+      "subtitle": "Entorno Ideal",
+      "description": "Buscando la frecuencia geográfica que mejor armoniza con tu alma."
+    },
+    "learning-style": {
+      "title": "Estilo Cognitivo",
+      "subtitle": "Alquimia del Conocimiento",
+      "description": "Descubriendo cómo tu mente absorbe y destila la sabiduría del mundo."
+    },
+    "resilience": {
+      "title": "Fuerza Soberana",
+      "subtitle": "Adaptabilidad",
+      "description": "Explorando tu capacidad innata de elevarte, refinarte y florecer en cualquier estación."
+    },
+    "decision-making": {
+      "title": "Elección Estratégica",
+      "subtitle": "Patrones de Decisión",
+      "description": "Analizando la lógica silenciosa detrás de los momentos más decisivos de tu vida."
+    },
+    "consumption-style": {
+      "title": "Intercambio de Valores",
+      "subtitle": "Ritmo Material",
+      "description": "Revelando cómo los valores de tu alma se manifiestan en el mundo material."
+    },
+    "cognitive-bias": {
+      "title": "Filtro de Percepción",
+      "subtitle": "Sesgo Cognitivo",
+      "description": "Tomando conciencia de los sutiles lentes a través de los cuales interpretas la realidad."
+    },
+    "vitality": {
+      "title": "Energía y Vida",
+      "subtitle": "Llama Interior",
+      "description": "Siguiendo el flujo y reflujo de la corriente vital de tu vida."
+    },
+    "value-harmonizer": {
+      "title": "Brújula Interior",
+      "subtitle": "Armonizador de Valores",
+      "description": "Alineando tus acciones cotidianas con las verdades eternas de tu corazón."
+    },
+    "abundance": {
+      "title": "Conciencia de la Abundancia",
+      "subtitle": "Mentalidad de Prosperidad",
+      "description": "Cultivando un profundo sentido de fluidez y receptividad a los muchos dones de la vida."
+    },
+    "riasec": {
+      "title": "Camino Vocacional",
+      "subtitle": "Intereses Profesionales",
+      "description": "Encontrando la órbita profesional donde tu talento natural encuentra su hogar."
+    },
+    "hsp": {
+      "title": "Procesamiento Sensorial",
+      "subtitle": "Perfil de Sensibilidad",
+      "description": "Abrazando la profundidad de un espíritu altamente receptivo."
+    },
+    "bigfive": {
+      "title": "Modelo de Cinco Factores",
+      "subtitle": "Fundamentos de la Personalidad",
+      "description": "Un mapa completo de las dimensiones que definen tu presencia única."
+    },
+    "big5": {
+      "title": "Modelo de Cinco Factores",
+      "subtitle": "Fundamentos de la Personalidad",
+      "description": "Un mapa completo de las dimensiones que definen tu presencia única."
+    },
+    "saju": {
+      "title": "Cuatro Pilares",
+      "subtitle": "Destino Primordial",
+      "description": "Análisis astrológico oriental de tu origen cósmico."
+    },
+    "egenteto-v2": {
+      "title": "Arquetipo Hormonal",
+      "subtitle": "Identidad Bioquímica",
+      "description": "Explorando cómo tu huella hormonal única moldea tu temperamento."
+    },
+    "daily": {
+      "title": "Oráculo Diario",
+      "subtitle": "Alineación Temporal",
+      "description": "Tu dosis diaria de alineación cósmica y perspectivas personales."
+    }
+  },
+  "title": "Cartografía del Alma (Soul's Cartography)",
+  "description": "Trazando las latitudes silenciosas de tu ser. Vive una exploración tranquila de tu paisaje interior a través de nuestras evaluaciones cuidadosamente seleccionadas.",
+  "@/components/ontology/FactionCard": "Tarjeta de Facción",
+  "@/components/ontology/GenericFactionCard": "Tarjeta de Facción Genérica",
+  "": "",
+  "labels": {
+    "undiscovered": "Sin Descubrir",
+    "meaning": "Significado",
+    "element": "Elemento",
+    "nameVibration": "Vibración del Nombre",
+    "westernZodiac": "Zodíaco Occidental",
+    "sign": "Signo",
+    "observation": "Observación",
+    "easternZodiac": "Zodíaco Oriental",
+    "animal": "Animal",
+    "dominion": "Dominio",
+    "bureau": "Oficina"
+  },
+  "returnToHome": "Volver al Inicio",
+  "contactSupport": "Contactar Soporte",
+  "syncingData": "Sincronizando Datos",
+  "guest": "Invitado",
+  "calibration": "Calibración",
+  "changeOrigin": "Cambiar Origen",
+  "todayInsight": {
+    "title": "Perspectiva de Hoy",
+    "soulOracle": "Oráculo del Alma",
+    "innerResonance": "Resonancia Interior",
+    "manifestMore": "Manifestar Más"
+  },
+  "readingsLink": "Lecturas",
+  "cards": {
+    "vitality": {
+      "title": "Vitalidad"
+    },
+    "resonance": {
+      "description": "Tu patrón de resonancia.",
+      "subtitle": "Resonancia"
+    },
+    "foundation": {
+      "description": "Tu fundación esencial.",
+      "subtitle": "Fundación"
+    },
+    "elemental": {
+      "description": "Tu mezcla elemental.",
+      "subtitle": "Afinidad Elemental",
+      "title": "Elementos"
+    },
+    "onomancy": {
+      "description": "La vibración de tu nombre.",
+      "subtitle": "Alquimia del Nombre"
+    },
+    "cognition": {
+      "description": "Tu patrón de pensamiento.",
+      "subtitle": "Cognición"
+    },
+    "vocation": {
+      "description": "Tu camino vocacional.",
+      "subtitle": "Vocación"
+    },
+    "destiny": {
+      "description": "Tu trayectoria del destino.",
+      "subtitle": "Destino"
+    }
+  },
+  "resonanceTitle": "Perfil de Resonancia",
+  "sections": {
+    "testArchitecture": {
+      "title": "Arquitectura del Test",
+      "description": "Información estructural de fondo."
+    },
+    "emotionalResonance": {
+      "title": "Resonancia Emocional",
+      "description": "Cómo te conectas emocionalmente."
+    },
+    "grandArchives": {
+      "title": "Los Grandes Archivos",
+      "description": "Base de conocimiento histórico."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "Elementos"
+    },
+    "riasec": {
+      "description": "Tipo de Carrera RIASEC"
+    },
+    "saju": {
+      "label": "Saju",
+      "description": "Análisis de los Cuatro Pilares",
+      "polarity": "Polaridad",
+      "element": "Elemento"
+    },
+    "archiveEntry": "Entrada de Archivo",
+    "recordVerified": "Registro Verificado",
+    "tuning": {
+      "color": "Color",
+      "number": "Número",
+      "direction": "Dirección",
+      "flower": "Flor",
+      "gemstone": "Piedra Preciosa",
+      "luckyStar": "Estrella de la Suerte",
+      "title": "Sintonización",
+      "favorableDays": "Días Favorables",
+      "synergy": "Sinergia"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "Zi Wei"
+  },
+  "_": ""
+}

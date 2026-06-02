@@ -1,0 +1,227 @@
+{
+  "title": "Vedic Astrology",
+  "description": "Ancient Indian system of lunar mansions.",
+  "systemName": "Vedic Astrology",
+  "narrative": "Nakshatra Lunar Mansions",
+  "resonance": {
+    "note": "The Archive observes your lunar coordinates at {nakshatraName} ({moonSign}). The ancient seers associated this mansion with {deity}. This is not prophecy—merely a reflection of where the Moon's light touched the sky at your birth."
+  },
+  "nakshatras": {
+    "1": {
+      "name": "Ashwini",
+      "meaning": "The Horse-Headed Twins",
+      "deity": "Ashwini Kumaras",
+      "keywords": "Healing, Speed, New Beginnings, Impulse",
+      "animal": "Horse",
+      "symbol": "Horse Head"
+    },
+    "2": {
+      "name": "Bharani",
+      "meaning": "The Bearer",
+      "deity": "Yama",
+      "keywords": "Transformation, Birth, Death, Restraint",
+      "animal": "Elephant",
+      "symbol": "Yoni (Vulva)"
+    },
+    "3": {
+      "name": "Krittika",
+      "meaning": "The Cutter",
+      "deity": "Agni",
+      "keywords": "Purification, Burning, Courage, Sharp Intellect",
+      "animal": "Sheep",
+      "symbol": "Razor/Flame"
+    },
+    "4": {
+      "name": "Rohini",
+      "meaning": "The Red One",
+      "deity": "Brahma",
+      "keywords": "Growth, Beauty, Sensuality, Material Wealth",
+      "animal": "Serpent",
+      "symbol": "Ox Cart"
+    },
+    "5": {
+      "name": "Mrigashira",
+      "meaning": "The Deer Head",
+      "deity": "Soma",
+      "keywords": "Seeking, Curiosity, Gentleness, Pursuit",
+      "animal": "Serpent",
+      "symbol": "Deer Head"
+    },
+    "6": {
+      "name": "Ardra",
+      "meaning": "The Moist One",
+      "deity": "Rudra",
+      "keywords": "Storms, Destruction, Renewal, Effort",
+      "animal": "Dog",
+      "symbol": "Teardrop/Diamond"
+    },
+    "7": {
+      "name": "Punarvasu",
+      "meaning": "The Return of Light",
+      "deity": "Aditi",
+      "keywords": "Renewal, Restoration, Return, Abundance",
+      "animal": "Cat",
+      "symbol": "Bow and Quiver"
+    },
+    "8": {
+      "name": "Pushya",
+      "meaning": "The Nourisher",
+      "deity": "Brihaspati",
+      "keywords": "Nourishment, Protection, Expansion, Auspiciousness",
+      "animal": "Goat",
+      "symbol": "Lotus Flower"
+    },
+    "9": {
+      "name": "Ashlesha",
+      "meaning": "The Embracer",
+      "deity": "Nagas",
+      "keywords": "Kundalini, Mysticism, Hypnotic, Transformation",
+      "animal": "Cat",
+      "symbol": "Coiled Serpent"
+    },
+    "10": {
+      "name": "Magha",
+      "meaning": "The Mighty",
+      "deity": "Pitris (Ancestors)",
+      "keywords": "Authority, Ancestors, Legacy, Regal",
+      "animal": "Rat",
+      "symbol": "Throne"
+    },
+    "11": {
+      "name": "Purva Phalguni",
+      "meaning": "The Former Red One",
+      "deity": "Bhaga",
+      "keywords": "Pleasure, Relaxation, Creativity, Romance",
+      "animal": "Rat",
+      "symbol": "Hammock/Bed Legs"
+    },
+    "12": {
+      "name": "Uttara Phalguni",
+      "meaning": "The Latter Red One",
+      "deity": "Aryaman",
+      "keywords": "Contracts, Patronage, Friendship, Union",
+      "animal": "Bull",
+      "symbol": "Back of Bed"
+    },
+    "13": {
+      "name": "Hasta",
+      "meaning": "The Hand",
+      "deity": "Savitar",
+      "keywords": "Skill, Craftsmanship, Laughter, Dexterity",
+      "animal": "Buffalo",
+      "symbol": "Open Hand"
+    },
+    "14": {
+      "name": "Chitra",
+      "meaning": "The Bright One",
+      "deity": "Vishvakarma",
+      "keywords": "Architecture, Beauty, Structure, Brilliance",
+      "animal": "Tiger",
+      "symbol": "Pearl/Gem"
+    },
+    "15": {
+      "name": "Swati",
+      "meaning": "The Sword",
+      "deity": "Vayu",
+      "keywords": "Independence, Flexibility, Trade, Movement",
+      "animal": "Buffalo",
+      "symbol": "Sword"
+    },
+    "16": {
+      "name": "Vishakha",
+      "meaning": "The Forked",
+      "deity": "Indra-Agni",
+      "keywords": "Goals, Determination, Ambition, Triumph",
+      "animal": "Tiger",
+      "symbol": "Archway"
+    },
+    "17": {
+      "name": "Anuradha",
+      "meaning": "The Successor",
+      "deity": "Mitra",
+      "keywords": "Devotion, Friendship, Organization, Success",
+      "animal": "Deer",
+      "symbol": "Lotus"
+    },
+    "18": {
+      "name": "Jyeshtha",
+      "meaning": "The Eldest",
+      "deity": "Indra",
+      "keywords": "Supremacy, Protection, Seniority, Heroism",
+      "animal": "Deer",
+      "symbol": "Earring/Umbrella"
+    },
+    "19": {
+      "name": "Mula",
+      "meaning": "The Root",
+      "deity": "Nirriti",
+      "keywords": "Origin, Dissolution, Investigation, Foundation",
+      "animal": "Dog",
+      "symbol": "Roots/Tail of Lion"
+    },
+    "20": {
+      "name": "Purva Ashadha",
+      "meaning": "The Undefeated",
+      "deity": "Apas (Waters)",
+      "keywords": "Invincibility, Purification, Declaration, Pride",
+      "animal": "Monkey",
+      "symbol": "Fan/Winnowing Basket"
+    },
+    "21": {
+      "name": "Uttara Ashadha",
+      "meaning": "The Later Undefeated",
+      "deity": "Vishvadevas",
+      "keywords": "Victory, Achievement, Leadership, Righteousness",
+      "animal": "Mongoose",
+      "symbol": "Elephant Tusk"
+    },
+    "22": {
+      "name": "Shravana",
+      "meaning": "The Ear",
+      "deity": "Vishnu",
+      "keywords": "Listening, Learning, Connection, Perseverance",
+      "animal": "Monkey",
+      "symbol": "Ear/Three Footprints"
+    },
+    "23": {
+      "name": "Dhanishta",
+      "meaning": "The Drums",
+      "deity": "Vasus",
+      "keywords": "Wealth, Fame, Rhythm, Abundance",
+      "animal": "Lion",
+      "symbol": "Drum/Flute"
+    },
+    "24": {
+      "name": "Shatabhisha",
+      "meaning": "The Hundred Healers",
+      "deity": "Varuna",
+      "keywords": "Healing, Seclusion, Mysteries, Innovation",
+      "animal": "Horse",
+      "symbol": "Empty Circle"
+    },
+    "25": {
+      "name": "Purva Bhadrapada",
+      "meaning": "The Former Lucky Feet",
+      "deity": "Aja Ekapada",
+      "keywords": "Intensity, Transformation, Fire, Asceticism",
+      "animal": "Lion",
+      "symbol": "Sword/Man with Two Faces"
+    },
+    "26": {
+      "name": "Uttara Bhadrapada",
+      "meaning": "The Latter Lucky Feet",
+      "deity": "Ahir Budhnya",
+      "keywords": "Depth, Control, Wisdom, Compassion",
+      "animal": "Cow",
+      "symbol": "Twin/Serpent"
+    },
+    "27": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    }
+  }
+}

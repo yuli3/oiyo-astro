@@ -1,0 +1,80 @@
+{
+  "title": "포춘종합센터",
+  "subtitle": "다양한 도구로 당신의 운명을 확인해 보세요.",
+  "cta": "입력하다",
+  "hub": {
+    "meta": {
+      "title": "Finance Center",
+      "description": "재무 성격 테스트, 계산기 및 도구."
+    },
+    "title": "파이낸스 센터",
+    "subtitle": "우리의 포괄적인 도구를 사용하여 재무 운명을 마스터하세요"
+  },
+  "tabs": {
+    "comprehensive": "종합운세",
+    "saju": "정통 점쟁이",
+    "tarot": "타로",
+    "astrology": "점성학",
+    "numerology": "수비학",
+    "dream": "꿈의 해석",
+    "biorhythm": "바이오리듬",
+    "asset": "유산",
+    "budget": "예산",
+    "compound": "복지",
+    "gift": "증여",
+    "gig": "N 직업",
+    "freelancer": "프리랜서",
+    "vat": "부가 요금",
+    "card": "카드",
+    "realEstate": "부동산"
+  },
+  "bizReport": "상세한 비즈니스 분석 보고서",
+  "calculate": "계산하기",
+  "dashboard": {
+    "scope": {
+      "daily": "일일",
+      "weekly": "주간",
+      "monthly": "월간 간행물",
+      "yearly": "연간"
+    },
+    "profile": {
+      "title": "내 프로필",
+      "description": "생년월일 기준 분석 데이터"
+    },
+    "biorhythm": {
+      "title": "바이오리듬",
+      "physical": "몸",
+      "emotional": "감정",
+      "intellectual": "지능"
+    },
+    "fortune": {
+      "numerology": {
+        "title": "수비학",
+        "lifePath": "라이프 패스",
+        "personalYear": "개인 연도"
+      }
+    },
+    "saju": {
+      "title": "네 가지 행운 (네 가지 행운)",
+      "dominant": "지배적 요소(용신)",
+      "lacking": "부족 정령(약신)"
+    },
+    "rating": {
+      "critical": "아주 나쁜",
+      "low": "나쁜",
+      "moderate": "천하게",
+      "good": "잘",
+      "excellent": "매우 좋은"
+    },
+    "card": {
+      "score": "점수: {점수}",
+      "advice": "조언",
+      "luckyNumbers": "행운의 숫자",
+      "luckyColors": "행운의 색",
+      "warnings": "주의"
+    },
+    "title": "운세 대시보드"
+  },
+  "comprehensiveTitle": "종합적인 운세 분석",
+  "comprehensiveDesc": "단 한 번의 정보 입력으로 다각적인 운명 분석을 받아보세요."
+}

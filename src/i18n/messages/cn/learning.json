@@ -1,0 +1,481 @@
+{
+  "meta": {
+    "hero": {
+      "subtitle": "发现您的学习风格并有效学习",
+      "badge": "📚 教育"
+    },
+    "keywords": "关键词, 标签, SEO",
+    "description": "全面分析和洞察",
+    "title": "仪表板"
+  },
+  "hero": {
+    "subtitle": "发现您的学习风格并有效学习",
+    "cta": "找到学习风格",
+    "badge": "📚 教育",
+    "title": "仪表板",
+    "description": "全面分析和洞察"
+  },
+  "result": {
+    "title": "仪表板",
+    "studyTips": "学习技巧",
+    "environment": "环境",
+    "scores": "分数",
+    "share": "分享",
+    "retake": "重新测试",
+    "description": "全面分析和洞察"
+  },
+  "test": {
+    "insightBullets": ["发现定义您的道路的独特模式。"],
+    "previous": "上一步",
+    "progress": "进度",
+    "next": "下一步",
+    "submit": "提交",
+    "loading": "加载中",
+    "selectOption": "请选择"
+  },
+  "title": "仪表板",
+  "description": "全面分析和洞察",
+  "keywords": "关键词, 标签, SEO",
+  "Copied to clipboard!": "已复制到剪贴板！",
+  "learning": {
+    "types": {
+      "INTJ": {
+        "strengths": ["独立学习", "复杂的概念", "长期规划", "逻辑分析"],
+        "challenges": ["无聊的重复", "死记硬背", "小组作业", "自发任务"],
+        "studyMethods": ["概念图", "阅读和研究", "在线课程", "解决问题的焦点"],
+        "recommendedTools": ["概念", "黑曜石", "Anki", "可汗学院"],
+        "examStrategies": ["分析过去的模式", "连接概念", "创建练习题"],
+        "motivationTips": ["设定明确的目标", "了解大局", "寻找实际应用"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "INTP": {
+        "strengths": ["逻辑思维", "创造性地解决问题", "概念理解", "独立研究"],
+        "challenges": ["满足最后期限", "后续计划", "记忆", "常规作息"],
+        "studyMethods": ["理论探索", "实验", "在线讨论", "比较来源"],
+        "recommendedTools": ["维基百科", "红迪网", "堆栈交换", "YouTube 讲座"],
+        "examStrategies": ["了解原理", "研究多种方法", "使用逻辑推理"],
+        "motivationTips": ["寻找有趣的话题", "维护自由", "允许创造力"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENTJ": {
+        "strengths": ["快速学习", "领导", "目标达成", "组织"],
+        "challenges": ["完美主义", "缺少细节", "情感内容", "学习速度慢"],
+        "studyMethods": ["领导研究小组", "总结要点", "高效记忆", "演讲"],
+        "recommendedTools": ["概念", "特雷洛", "印象笔记", "微软幻灯片软件"],
+        "examStrategies": ["时间管理", "专注于必需品", "反复练习"],
+        "motivationTips": ["明确的目标", "竞赛", "领导角色"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENTP": {
+        "strengths": ["创造性思维", "快速理解", "辩论技巧", "尝试新方法"],
+        "challenges": ["日常学习", "记忆", "满足最后期限", "简单的重复"],
+        "studyMethods": ["讨论和辩论", "资源丰富", "基于项目", "实验方法"],
+        "recommendedTools": ["辩论平台", "TED演讲", "Coursera", "思维导图工具"],
+        "examStrategies": ["创意答案", "多重视角", "最后一刻的焦点"],
+        "motivationTips": ["新挑战", "辩论机会", "自由的学习方式"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "INFJ": {
+        "strengths": ["深刻理解", "模式识别", "创意表达", "长期记忆"],
+        "challenges": ["肤浅的记忆", "时间压力", "竞争环境", "批判性评价"],
+        "studyMethods": ["写日记", "连接概念", "可视化", "评书"],
+        "recommendedTools": ["概念", "札记", "顶空", "日记"],
+        "examStrategies": ["了解大局", "有意义的联系", "情感记忆"],
+        "motivationTips": ["寻找意义", "连接到个人目标", "鼓舞人心的环境"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "INFP": {
+        "strengths": ["创意写作", "情感理解", "自主学习", "艺术表达"],
+        "challenges": ["严格的规则", "批评性反馈", "截止日期快", "竞赛"],
+        "studyMethods": ["自由格式笔记", "创意项目", "阅读", "音乐伴奏"],
+        "recommendedTools": ["好笔记", "彩色笔", "Spotify", "阅读应用程序"],
+        "examStrategies": ["开发自己的方法", "情感联系", "心态放松"],
+        "motivationTips": ["个人意义", "自由表达", "积极反馈"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENFJ": {
+        "strengths": ["协作学习", "沟通", "理解他人", "动机"],
+        "challenges": ["单独学习", "非个人话题", "竞赛", "批判性分析"],
+        "studyMethods": ["学习小组", "同伴教学", "讨论", "角色扮演"],
+        "recommendedTools": ["Zoom", "不和谐", "谷歌文档", "协作工具"],
+        "examStrategies": ["小组学习", "互相教导", "情感记忆"],
+        "motivationTips": ["一起学习", "帮助别人", "积极的氛围"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENFP": {
+        "strengths": ["创造力", "热情", "兴趣多样", "快速连接"],
+        "challenges": ["保持专注", "细节", "例程", "长期项目"],
+        "studyMethods": ["材质多样", "游戏化学习", "团体活动", "实验方法"],
+        "recommendedTools": ["小测验", "卡胡特", "YouTube", "Instagram 教育"],
+        "examStrategies": ["寻找有趣的联系", "尝试各种方法", "类似游戏的方法"],
+        "motivationTips": ["新刺激", "有趣的方法", "表扬和鼓励"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISTJ": {
+        "strengths": ["勤勉", "记忆", "组织", "计划执行"],
+        "challenges": ["抽象概念", "即兴创作", "创意任务", "指示不明确"],
+        "studyMethods": ["课本阅读", "反复背诵", "系统笔记", "过去的论文"],
+        "recommendedTools": ["传统笔记", "Excel", "PDF教科书", "安排应用程序"],
+        "examStrategies": ["充分的准备", "反复学习", "守时", "扎实的理解"],
+        "motivationTips": ["明确的目标", "系统化计划", "成就"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISFJ": {
+        "strengths": ["注重细节", "耐心", "记忆", "责任"],
+        "challenges": ["抽象理论", "批判性思维", "快速变化", "竞赛"],
+        "studyMethods": ["认真记笔记", "反复练习", "实际例子", "一步一步"],
+        "recommendedTools": ["彩色笔", "清单", "规划师", "传统教科书"],
+        "examStrategies": ["充分的审查", "查看详情", "保持稳定"],
+        "motivationTips": ["稳定的环境", "赞扬和认可", "实用价值"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESTJ": {
+        "strengths": ["组织", "执行", "领导", "效率"],
+        "challenges": ["抽象理论", "情感内容", "缓慢的节奏", "灵活性"],
+        "studyMethods": ["总结", "抽认卡", "过去的论文", "领导研究小组"],
+        "recommendedTools": ["Excel", "微软幻灯片软件", "规划师", "定时器"],
+        "examStrategies": ["严格的时间管理", "专注于必需品", "反复练习"],
+        "motivationTips": ["明确的目标", "看得见的结果", "领导角色"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESFJ": {
+        "strengths": ["合作", "责任", "实用性", "沟通"],
+        "challenges": ["单独学习", "抽象理论", "批评", "竞赛"],
+        "studyMethods": [
+          "小组学习",
+          "互相测验",
+          "现实生活中的例子",
+          "角色扮演"
+        ],
+        "recommendedTools": ["聊天学习小组", "Zoom", "共享笔记", "彩色笔"],
+        "examStrategies": ["一起学习", "共勉", "实际理解"],
+        "motivationTips": ["社会氛围", "帮助别人", "称赞"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISTP": {
+        "strengths": ["解决问题", "逻辑思维", "实用技能", "快速响应"],
+        "challenges": ["理论学习", "长期规划", "记忆", "情感内容"],
+        "studyMethods": ["动手实践", "视频学习", "直接体验", "解决问题"],
+        "recommendedTools": ["YouTube 练习", "可汗学院", "模拟", "实用工具"],
+        "examStrategies": ["实际问题", "逻辑方法", "高效利用时间"],
+        "motivationTips": ["实用价值", "免费方法", "挑战"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISFP": {
+        "strengths": ["创造力", "灵敏度", "实用技能", "灵活性"],
+        "challenges": ["严格的规则", "竞赛", "批评", "长期规划"],
+        "studyMethods": ["视觉学习", "实践", "有音乐", "自由形式"],
+        "recommendedTools": ["iPad", "生育", "兴趣", "YouTube"],
+        "examStrategies": ["心态舒适", "视觉记忆", "个人方法"],
+        "motivationTips": ["自由环境", "积极反馈", "创意表达"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESTP": {
+        "strengths": ["快速学习", "实用技能", "适应性", "解决问题"],
+        "challenges": ["理论学习", "记忆", "长焦", "规划"],
+        "studyMethods": ["实际操作", "团体活动", "竞赛", "体验式学习"],
+        "recommendedTools": [
+          "游戏化应用程序",
+          "实用工具",
+          "虚拟现实学习",
+          "体育类比"
+        ],
+        "examStrategies": ["实际测试", "运用快速思维", "短焦"],
+        "motivationTips": ["竞争与挑战", "实用价值", "即时反馈"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESFP": {
+        "strengths": ["社交性", "热情", "实用技能", "有趣的氛围"],
+        "challenges": ["单独学习", "理论", "重点", "长期规划"],
+        "studyMethods": ["团体活动", "游戏", "角色扮演", "有音乐"],
+        "recommendedTools": [
+          "卡胡特",
+          "社交应用",
+          "抖音教育",
+          "和朋友一起学习"
+        ],
+        "examStrategies": ["有趣的方法", "小组评审", "积极的心态"],
+        "motivationTips": ["有趣的方法", "和朋友一起", "表扬和奖励"],
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "当学习一门新学科时，你：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "一个人拿着课本静静学习",
+            "value": "I"
+          },
+          {
+            "text": "与朋友一起讨论和学习",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "你如何记住学习材料？",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "记住具体事实和细节",
+            "value": "S"
+          },
+          {
+            "text": "把握整体概念和模式",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "您解决问题的方法：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "通过逻辑分析寻找答案",
+            "value": "T"
+          },
+          {
+            "text": "用直觉和感觉来接近",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "你如何准备考试？",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "制定系统计划，及早准备",
+            "value": "J"
+          },
+          {
+            "text": "在需要时保持灵活性和专注",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "首选班级活动：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "个人作业或独立项目",
+            "value": "I"
+          },
+          {
+            "text": "小组讨论或团队项目",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "当理解复杂的概念时：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "需要逐步的解释和真实的例子",
+            "value": "S"
+          },
+          {
+            "text": "先看抽象理论和大局",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "您在项目团队中的角色：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "追求客观分析和效率",
+            "value": "T"
+          },
+          {
+            "text": "重视团队和谐和每个人的意见",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "当作业截止日期临近时：",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "按计划稳步推进",
+            "value": "J"
+          },
+          {
+            "text": "最后期限的压力提高了注意力",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "首选学习环境：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "安静的图书馆或个人空间",
+            "value": "I"
+          },
+          {
+            "text": "咖啡馆或学习咖啡馆等热闹的地方",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "首选考试问题类型：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "基于事实的多项选择或简答题",
+            "value": "S"
+          },
+          {
+            "text": "需要创造性思维的论文题",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "当成绩不好时，你：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "客观分析原因并改进",
+            "value": "T"
+          },
+          {
+            "text": "情感上接受并找到动力",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "制定学习计划时：",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "明确定义详细的时间表和目标",
+            "value": "J"
+          },
+          {
+            "text": "设定大致方向，灵活调整",
+            "value": "P"
+          }
+        ]
+      }
+    ]
+  }
+}

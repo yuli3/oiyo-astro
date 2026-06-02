@@ -1,0 +1,163 @@
+{
+  "test": {
+    "viewResults": "結果を確認する",
+    "swipeHintLong": "スワイプしてさらに表示",
+    "step": "フェーズ"
+  },
+  "actions": {
+    "next": "進む",
+    "back": "戻る",
+    "submit": "確認",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "share": "発信",
+    "save": "保存",
+    "edit": "編集する",
+    "delete": "削除する",
+    "close": "閉じる",
+    "previous": "前へ",
+    "goHome": "ホームへ",
+    "more": "もっと見る",
+    "report": "分析レポート",
+    "export": "知恵をエクスポート",
+    "continue": "さらに前へ",
+    "calculate": "エネルギー分析",
+    "startTest": "診断を開始",
+    "processing": "分析中...",
+    "retry": "再試行",
+    "start": "開始",
+    "home": "ホーム",
+    "retake": "分析をやり直す"
+  },
+  "navigation": {
+    "back": "戻る",
+    "logout": "ログアウト"
+  },
+  "status": {
+    "loading": "収集中...",
+    "error": "問題が発生しました",
+    "success": "正常に完了しました",
+    "empty": "データがありません",
+    "scrollForSynergy": "スクロールしてシナジーを探求する"
+  },
+  "modals": {
+    "confirmTitle": "本当に実行しますか？",
+    "confirmDescription": "この操作は取り消せません。"
+  },
+  "you": "あなた",
+  "hallOfFame": "殿堂",
+  "noData": "アーカイブが空です",
+  "noDataCta": "後でもう一度確認してください",
+  "minutes": "分",
+  "startTest": "旅を始める",
+  "browseAll": "すべてのゲートウェイを探索",
+  "title": "神聖なUI",
+  "all": "すべて",
+  "unread": "新しい知恵",
+  "readAll": "すべて既読にする",
+  "view": "表示",
+  "markRead": "既読にする",
+  "tagline": "あなたの運命の構造を解き明かす。",
+  "product": "ゲートウェイ",
+  "company": "サンクチュアリ",
+  "support": "ガイダンス",
+  "allRightsReserved": "すべての権利を保持。",
+  "wip": "進化中",
+  "copyright": "© {year} Oiyo.",
+  "copyrightFull": "© {year} Oiyo.net. 無断複写・転載を禁じます。",
+  "donate": "クリエイターを支援",
+  "koFi": "コーヒー",
+  "payPal": "ペイパル",
+  "daily": {
+    "title": "デイリーリチュアル",
+    "subtitle": "現在の天体の流れと同期しましょう。",
+    "oracle": {
+      "selectZodiac": "星座を選択してください",
+      "synchronize": "同期する",
+      "imperialDecree": "皇帝の勅令",
+      "analysisBasis": "宇宙分析の根拠",
+      "message": "星たちがあなたへのメッセージを囁いています。",
+      "actionRitual": "推奨リチュアル",
+      "fateVsWill": "現在の流れを航海する"
+    }
+  },
+  "close": "閉じる",
+  "questionOf": "問い",
+  "tryNow": "探求の旅を始める",
+  "goHome": "入り口に戻る",
+  "breadcrumbs": {
+    "ontology": "本体論の聖域",
+    "social": "社会的なDNA",
+    "origin": "根源的なルーツ",
+    "fortune": "運勢の門",
+    "offline": "オフライン",
+    "wellness": "内的な安らぎ",
+    "sleep": "眠りのスコア",
+    "test": "生の診断",
+    "insights": "日々の智慧のインサイト"
+  },
+  "emergency": {
+    "title": "⚠️ 即時の導きを受けることをお勧めします",
+    "description": "鑑定の結果、生命エネルギーの著しい消耗が見て取れます。健全な回復と支援のために、専門家と対話することを強くお勧めいたします。",
+    "getHelp": "専門の助力を受ける: 1393"
+  },
+  "step": "段階",
+  "home": "ホーム",
+  "sharing": {
+    "kakaoShare": "カカオトーク共有",
+    "instagram": "インスタグラム",
+    "moreApps": "他のアプリ",
+    "copied": "コピーしました!",
+    "copyLink": "リンクをコピー",
+    "creating": "作成中...",
+    "saveImage": "画像を保存",
+    "twitter": "ツイッター",
+    "facebook": "フェイスブック",
+    "keyTraits": "主な特徴",
+    "matchScore": "マッチスコア",
+    "shareResult": "結果をシェア",
+    "share": "シェア"
+  },
+  "progress": {
+    "of": "の",
+    "progressLabel": "進行率",
+    "stepLabel": "ステップ",
+    "greatStart": "いいスタートです! 🌟",
+    "almostThere": "もう少し! 💪"
+  },
+  "categories": {
+    "development": "自己啓発",
+    "lifestyle": "ライフスタイル",
+    "moreTests": "✨ もっとテスト",
+    "new": "新しい",
+    "personality": "個性",
+    "popular": "人気",
+    "popularTests": "🔥 人気テスト",
+    "relatedTests": "🎯 関連テスト",
+    "relationships": "人間関係",
+    "takeTest": "テストする",
+    "tools": "ツール",
+    "tryNext": "次を試す",
+    "wellness": "ウェルネス",
+    "viewAllTests": "すべてのテストを見る",
+    "discoverMore": "自分についてもっと知ろう"
+  },
+  "goals": {
+    "myGoals": "マイゴール",
+    "subtitle": "自己啓発の目標を設定し、進捗を追跡しましょう。",
+    "progressSnapshot": "{userId} の進捗スナップショット",
+    "completedGoals": "達成済み目標",
+    "completed": "完了",
+    "noGoals": "まだ目標がありません",
+    "noGoalsDesc": "個人の目標を設定して進捗の追跡を始めましょう。",
+    "createGoal": "目標を作成",
+    "progress": "進捗",
+    "details": "詳細"
+  },
+  "ontology": {
+    "economicSchool": "私の経済学派",
+    "economicSchoolSubtitle": "マクロ経済学派分析",
+    "realpolitik": "現実政治傾向",
+    "politicalMatrix": "私の政治的立場"
+  }
+}

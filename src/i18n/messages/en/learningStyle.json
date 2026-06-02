@@ -1,0 +1,127 @@
+{
+  "visual": {
+    "label": "visual learner",
+    "description": "We learn best through visual information such as charts, diagrams, and images. They prefer concepts to be represented pictorially, and often think in images.",
+    "environment": "A bright space with visual aids, whiteboards, charts, and few visual distractions. They thrive in an environment where information is clearly presented."
+  },
+  "auditory": {
+    "label": "auditory learner",
+    "description": "Learn best through listening and oral instructions. I prefer discussions, lectures, and explaining information out loud to understand and remember it.",
+    "environment": "A quiet space where you can speak out loud or listen to audio without being disturbed. Benefits from environments that allow for discussion and verbal processing."
+  },
+  "kinesthetic": {
+    "label": "kinesthetic learner",
+    "description": "We learn best through direct experience and physical activity. I prefer to learn by doing, moving, and handling materials.",
+    "environment": "A flexible space to move, use hands-on tools and relax. You learn best in an active environment that allows for physical participation."
+  },
+  "reading": {
+    "label": "Read/Write Learner",
+    "description": "We learn best through reading and writing. Prefer to process information through text-based information, note taking, and writing.",
+    "environment": "A quiet, comfortable space with adequate lighting for reading and writing. Prefers an environment with access to books, paper, and writing utensils."
+  },
+  "questions": {
+    "options": {
+      "q1": {
+        "a": "View diagrams, charts, or visual demonstrations",
+        "b": "listen to someone's explanation or discuss",
+        "c": "Try it yourself and practice",
+        "d": "Read more details"
+      },
+      "q2": {
+        "a": "Visualize or write down the number",
+        "b": "Repeat out loud several times",
+        "c": "Press it several times to build muscle memory.",
+        "d": "Write it down and read it again"
+      },
+      "q3": {
+        "a": "Use visual materials such as slides, diagrams, and videos",
+        "b": "Explain concepts verbally and encourage discussion",
+        "c": "Provides hands-on activities and demonstrations",
+        "d": "Detailed handouts and reading materials provided"
+      },
+      "q4": {
+        "a": "Create colorful mind maps and visual summaries",
+        "b": "Study and discuss out loud with others",
+        "c": "Practice using flashcards and solving problems",
+        "d": "Read notes and textbooks multiple times"
+      },
+      "q5": {
+        "a": "Draw a picture or diagram to visualize the solution",
+        "b": "Say the problem out loud",
+        "c": "Solve it step by step by hand",
+        "d": "Write down problems and potential solutions"
+      },
+      "q6": {
+        "a": "When presented as charts, graphs, or images",
+        "b": "When listening in lectures or discussions",
+        "c": "When experienced through practice and repetition",
+        "d": "When reading from a textbook or handout"
+      },
+      "q7": {
+        "a": "Draw or visually display a map",
+        "b": "Explain step by step in words",
+        "c": "Walk together or point directly",
+        "d": "Detailed directions are written in writing."
+      },
+      "q8": {
+        "a": "Good lighting and visual organization with charts on the walls.",
+        "b": "A quiet space where you can talk without being disturbed",
+        "c": "A space to move and handle materials",
+        "d": "A comfortable reading area with books and space to write."
+      },
+      "q9": {
+        "a": "face and appearance",
+        "b": "voice and tone",
+        "c": "Handshakes and Physical Feelings",
+        "d": "Name (after reading)"
+      },
+      "q10": {
+        "a": "Watch video tutorial",
+        "b": "Someone explain step by step",
+        "c": "Try it out and go through trial and error",
+        "d": "Read manuals or documentation"
+      }
+    },
+    "q1": "When learning something new, your preferred method is:",
+    "q2": "When you need to remember a phone number, you can:",
+    "q3": "You learn best in the classroom when the instructor:",
+    "q4": "When studying for an exam, the most helpful things to do are:",
+    "q5": "When trying to solve a problem, you usually:",
+    "q6": "Information is best remembered when:",
+    "q7": "When giving directions to someone, you:",
+    "q8": "Your ideal study environment is:",
+    "q9": "When you meet someone new, the best thing you remember is:",
+    "q10": "When learning a new software program, my preferred method is to:"
+  },
+  "tips": {
+    "visual": [
+      "Use mind maps and diagrams",
+      "Highlight important text with colors",
+      "Watch educational videos"
+    ],
+    "auditory": [
+      "Listen to recorded lectures",
+      "Participate in study groups",
+      "Read notes aloud"
+    ],
+    "kinesthetic": [
+      "Move around while studying",
+      "Use hands-on activities",
+      "Write notes by hand"
+    ],
+    "reading": [
+      "Take detailed written notes",
+      "Rewrite notes in your own words",
+      "Use lists and outlines"
+    ]
+  },
+  "title": "Cognitive DNA",
+  "badge": "VARK learning model",
+  "intro": "Unlock the secrets of your brain. Find out which method of learning is most effective: visual, auditory, text, or action.",
+  "result": {
+    "title": "Learning Style Result",
+    "studyTips": "Study Tips",
+    "environment": "Optimal Environment",
+    "careerFit": "Career Fit"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "components": {
+    "sound": {
+      "name": "Sound Energy",
+      "description": "The unique vibration and wave generated when the name is called."
+    },
+    "meaning": {
+      "name": "Meaning and Intent",
+      "description": "The intention within the characters and the fateful suggestion hidden behind them."
+    },
+    "balance": {
+      "name": "Elemental Harmony",
+      "description": "The balance and harmony between the characters of the name."
+    }
+  },
+  "result": {
+    "excellent": "A highly auspicious name that will benefit the world widely.",
+    "good": "A good name that brings more fortune the more it is called.",
+    "fair": "A name that hides extraordinariness within ordinariness.",
+    "caution": "A name that would be better if called a bit more softly."
+  },
+  "title": "Onomancy",
+  "description": "Reading the unique energy and flow of destiny within your name.",
+  "narrative": "Your name is the most powerful spell you cast upon the world every day.",
+  "missingForce": "Missing Force",
+  "none": "None",
+  "vibrationFill": "Vibrational Fill",
+  "circularText": "Vibration Loop"
+}

@@ -1,0 +1,671 @@
+{
+  "dating": {
+    "meta": {
+      "test": {
+        "insightBullets": [
+          "Explora la arquitectura profunda de tu paisaje interior."
+        ],
+        "progress": "Progreso",
+        "submit": "Enviar",
+        "loading": "Cargando...",
+        "selectOption": "Seleccionar opción",
+        "next": "Siguiente",
+        "previous": "Anterior"
+      },
+      "result": {
+        "title": "Análisis Personalizado",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia..."
+      },
+      "meta": {
+        "title": "Análisis Personalizado",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "keywords": "citas MBTI, análisis, puntuación, profesional"
+      },
+      "resultTitle": "Análisis de Resultados de Citas MBTI",
+      "resultDescription": "Análisis profundo de tus resultados de citas MBTI.",
+      "testTitle": "Evaluación de Citas MBTI",
+      "testDescription": "Analizando los ecos profundos de tus elecciones...",
+      "keywords": "citas MBTI, análisis, puntuación, profesional",
+      "title": "Análisis Personalizado",
+      "description": "Diseñando un espejo que refleja tu verdadera esencia..."
+    },
+    "hero": {
+      "subtitle": "Personas espontáneas y enérgicas",
+      "badge": "Nuevo",
+      "cta": "Comenzar Test",
+      "title": "Análisis Personalizado",
+      "description": "Diseñando un espejo que refleja tu verdadera esencia..."
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "En una fiesta con gente nueva, yo...",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Gana energía y lidera conversaciones.",
+            "emoji": "🥳",
+            "scores": {
+              "E": 1
+            }
+          },
+          {
+            "text": "Tenga conversaciones profundas con algunas personas en un lugar tranquilo.",
+            "emoji": "🤔",
+            "scores": {
+              "I": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Cuando me gusta alguien...",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Primero me atraen sus puntos fuertes realistas (trabajo, estilo, etc.).",
+            "emoji": "💼",
+            "scores": {
+              "S": 1
+            }
+          },
+          {
+            "text": "Lo primero que me atrae es el futuro que imagino con ellos.",
+            "emoji": "💭",
+            "scores": {
+              "N": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Cuando peleo con mi pareja, yo...",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Analiza lógicamente cuál es el problema e intenta buscar una solución.",
+            "emoji": "🧐",
+            "scores": {
+              "T": 1
+            }
+          },
+          {
+            "text": "Primero revisa sus sentimientos y trata de consolarlos con empatía.",
+            "emoji": "❤️",
+            "scores": {
+              "F": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Al planificar una cita...",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Planifico todo a la perfección, desde restaurantes hasta cafeterías y rutas.",
+            "emoji": "🗺️",
+            "scores": {
+              "J": 1
+            }
+          },
+          {
+            "text": "Decido adónde ir espontáneamente según mi estado de ánimo ese día.",
+            "emoji": "🎉",
+            "scores": {
+              "P": 1
+            }
+          }
+        ]
+      }
+    ],
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "mbti 1",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🚀",
+          "title": "MBTI 2",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "💡",
+          "title": "mbti 3",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🎯",
+          "title": "mbti 4",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🔥",
+          "title": "mbti 5",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "⭐",
+          "title": "mbti 6",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        }
+      ],
+      "subtitle": "Personas espontáneas y enérgicas",
+      "title": "Análisis Personalizado"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "mbti 1",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🚀",
+          "title": "MBTI 2",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "💡",
+          "title": "mbti 3",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "🎯",
+          "title": "mbti 4",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "🔥",
+          "title": "mbti 5",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "⭐",
+          "title": "mbti 6",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        }
+      ],
+      "title": "Análisis Personalizado"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "mbti 1",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "🚀",
+          "title": "MBTI 2",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "💡",
+          "title": "mbti 3",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🎯",
+          "title": "mbti 4",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🔥",
+          "title": "mbti 5",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "⭐",
+          "title": "mbti 6",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Fuerza de firma", "Punto de pivote", "2"],
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando...",
+      "selectOption": "Seleccionar opción",
+      "subtitle": "Personas espontáneas y enérgicas",
+      "finish": "Completado",
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Análisis Personalizado",
+      "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+      "traits": "Traits",
+      "share": "Compartir",
+      "retake": "Repetir"
+    },
+    "types": {
+      "INTJ": {
+        "traits": [
+          "Estratégica",
+          "Independiente",
+          "Decisiva",
+          "Perfeccionista"
+        ],
+        "strengths": [
+          "Planificación a largo plazo",
+          "razonamiento lógico",
+          "Alta competencia"
+        ],
+        "challenges": [
+          "Puede parecer arrogante",
+          "No le gusta la imprevisibilidad",
+          "Luchas con la expresión emocional."
+        ],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INFP", "INFJ"],
+          "challenging": ["ISFP", "ESFP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "INTP": {
+        "traits": ["Analítica", "Curiosa", "Abstracta", "Imaginativa"],
+        "strengths": [
+          "resolución de problemas",
+          "Comprensión teórica",
+          "Creatividad"
+        ],
+        "challenges": [
+          "Puede ser distraída",
+          "No le gustan las reglas rígidas",
+          "Puede tener dificultades con cuestiones prácticas."
+        ],
+        "compatibility": {
+          "best": ["ENTJ", "ESTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ENTJ": {
+        "traits": ["Decisiva", "Segura", "Ambiciosa", "Eficiente"],
+        "strengths": [
+          "Liderazgo",
+          "Planificación estratégica",
+          "comunicación directa"
+        ],
+        "challenges": [
+          "puede ser impaciente",
+          "Puede parecer insensible",
+          "Fuerte necesidad de control"
+        ],
+        "compatibility": {
+          "best": ["INFP", "INTP"],
+          "good": ["ENTP", "ENFJ"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ENTP": {
+        "traits": ["Ingeniosa", "Innovadora", "Flexible", "Energética"],
+        "strengths": [
+          "Pensadoras profundas",
+          "Conversaciones animadas",
+          "Adaptabilidad"
+        ],
+        "challenges": [
+          "Puede ser argumentativo",
+          "Puede tener problemas con la coherencia",
+          "Intolerante al estancamiento"
+        ],
+        "compatibility": {
+          "best": ["INFJ", "INTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "INFJ": {
+        "traits": ["perspicaz", "De principios", "Creativa", "Apasionada"],
+        "strengths": ["Inteligencia emocional", "Compasión", "Integridad"],
+        "challenges": [
+          "Evita conflictos",
+          "Puede ser demasiado privado",
+          "Estándares extremadamente altos"
+        ],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INTJ", "INFP"],
+          "challenging": ["ESTP", "ESFP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "INFP": {
+        "traits": ["Empática", "Idealista", "Creativa", "Amable"],
+        "strengths": ["Profunda devoción", "Mente abierta", "Compasión"],
+        "challenges": [
+          "Puede ser demasiado sensible",
+          "Evita detalles prácticos",
+          "Dificultad con la crítica."
+        ],
+        "compatibility": {
+          "best": ["ENFJ", "ENTJ"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ISTJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ENFJ": {
+        "traits": ["Carismática", "Empática", "Responsable", "Social"],
+        "strengths": ["Habilidades de comunicación", "Alta empatía", "Lealtad"],
+        "challenges": [
+          "Puede ser demasiado abnegado",
+          "Puede ser sobreprotector",
+          "Sensible a las críticas"
+        ],
+        "compatibility": {
+          "best": ["INFP", "ISFP"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ISTP", "ESTP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ENFP": {
+        "traits": ["Entusiasta", "Extrovertida", "Imaginativa", "Espontánea"],
+        "strengths": [
+          "Grandes comunicadoras",
+          "Energía positiva",
+          "Pensadores creativos"
+        ],
+        "challenges": [
+          "No le gusta la rutina",
+          "Puede ser demasiado emocional",
+          "Dificultad para concentrarse en una cosa."
+        ],
+        "compatibility": {
+          "best": ["INTJ", "INFJ"],
+          "good": ["INFP", "ENFJ"],
+          "challenging": ["ISTJ", "ESTJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Toque fisico",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ISTJ": {
+        "traits": ["Responsable", "Confiable", "Práctica", "Ordenada"],
+        "strengths": ["Lealtad", "Organización", "Franqueza"],
+        "challenges": [
+          "Puede ser rígida",
+          "Luchas con el cambio",
+          "Puede parecer insensible"
+        ],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISFJ", "ESTJ"],
+          "challenging": ["ENFP", "ENTP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ISFJ": {
+        "traits": ["De apoyo", "Confiable", "Humilde", "Observante"],
+        "strengths": ["Compasión", "Sentido práctico", "Lealtad"],
+        "challenges": [
+          "abnegado",
+          "Evita el cambio",
+          "Puede tomar las cosas personalmente"
+        ],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISTJ", "ISFP"],
+          "challenging": ["ENTP", "ENFP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ESTJ": {
+        "traits": ["Directa", "Organizada", "Dedicada", "Leal"],
+        "strengths": [
+          "Fiabilidad",
+          "comunicación directa",
+          "Orientado a la tradición"
+        ],
+        "challenges": [
+          "Puede ser mandona",
+          "Tiene dificultades para expresar sentimientos.",
+          "Incómodo con el cambio"
+        ],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Toque fisico",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ESFJ": {
+        "traits": ["Sociable", "Warm", "Leal", "Armoniosa"],
+        "strengths": [
+          "Construcción de conexión",
+          "Naturaleza nutritiva",
+          "Fiabilidad"
+        ],
+        "challenges": [
+          "Sensible a las críticas",
+          "Puede ser necesitada",
+          "Preocupada por el estado"
+        ],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISFJ", "ENFJ"],
+          "challenging": ["INTP", "INTJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Toque fisico",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ISTP": {
+        "traits": ["Pragmática", "Creativa", "Independiente", "Espontánea"],
+        "strengths": ["Gestión de crisis", "Sentido práctico", "Adaptabilidad"],
+        "challenges": [
+          "Puede ser separada",
+          "No le gusta el compromiso",
+          "Fácilmente aburrida"
+        ],
+        "compatibility": {
+          "best": ["ESFJ", "ESTJ"],
+          "good": ["ISTJ", "ESTP"],
+          "challenging": ["ENFJ", "INFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Toque fisico",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ISFP": {
+        "traits": ["Encantadora", "Sensible", "Imaginativa", "Espontánea"],
+        "strengths": ["Compasión", "Creatividad", "Flexibilidad"],
+        "challenges": [
+          "Evita conflictos",
+          "Imprevisible",
+          "Fácilmente estresada"
+        ],
+        "compatibility": {
+          "best": ["ENFJ", "ESFJ", "ESTJ"],
+          "good": ["ISFJ", "INFP"],
+          "challenging": ["INTJ", "ENTJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ESTP": {
+        "traits": ["Carismática", "Energética", "Práctica", "Observante"],
+        "strengths": [
+          "Genial en una crisis",
+          "amante de la diversión",
+          "Persuasiva"
+        ],
+        "challenges": [
+          "Propensa al riesgo",
+          "Impaciente",
+          "Puede perderse el panorama general"
+        ],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESTP", "ESFP"],
+          "challenging": ["INFJ", "INFP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Toque fisico",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      },
+      "ESFP": {
+        "traits": [
+          "amante de la diversión",
+          "Social",
+          "Espontánea",
+          "Estética"
+        ],
+        "strengths": [
+          "Grandes habilidades interpersonales",
+          "Perspectiva positiva",
+          "Ojo estético"
+        ],
+        "challenges": [
+          "Evita conflictos",
+          "Fácilmente aburrida",
+          "Mala planificación a largo plazo"
+        ],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESFP", "ESTP"],
+          "challenging": ["INTJ", "INFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "subtitle": "Personas espontáneas y enérgicas",
+        "detailedDescription": "Analizando los ecos profundos de tus elecciones...",
+        "loveLanguage": "Toque fisico",
+        "idealDate": "Sincronizando los hilos de tu destino..."
+      }
+    },
+    "title": "Análisis Personalizado",
+    "description": "Diseñando un espejo que refleja tu verdadera esencia..."
+  }
+}

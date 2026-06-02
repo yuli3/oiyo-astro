@@ -1,0 +1,41 @@
+{
+  "AncientCoordinateCard": {
+    "colors": {
+      "red": "红色",
+      "white": "白色",
+      "blue": "蓝色",
+      "yellow": "黄色"
+    },
+    "mayan": {
+      "systemName": "埃及涅特尔",
+      "narrative": "神圣秩序",
+      "solarSeal": "太阳图腾",
+      "tone": "银河音阶",
+      "toneOf": "{power}之音",
+      "kin": "主图腾 Kin {kin}",
+      "ariaLabel": "埃及守护神：您的守护者是 {god}。您拥有 {attributes} 的品质。"
+    },
+    "celtic": {
+      "systemName": "埃及涅特尔",
+      "narrative": "神圣秩序",
+      "treeSign": "树木星座",
+      "ogham": "奥甘符号",
+      "ariaLabel": "埃及守护神：您的守护者是 {god}。您拥有 {attributes} 的品质。"
+    },
+    "egyptian": {
+      "systemName": "埃及涅特尔",
+      "narrative": "神圣秩序",
+      "guardianDeity": "守护神",
+      "vedicSolar": "吠陀太阳星宿",
+      "symbol": "象征: {symbol}",
+      "deity": "神祇: {deity}",
+      "decan": "埃及德坎",
+      "hellenisticSect": "希腊化派别",
+      "sect": {
+        "day": "日间派别",
+        "night": "夜间派别"
+      },
+      "ariaLabel": "埃及守护神：您的守护者是 {god}。您拥有 {attributes} 的品质。"
+    }
+  }
+}

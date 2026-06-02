@@ -1,0 +1,21 @@
+{
+  "description": "Découvre ton potentiel caché grâce à nos analyses de personnalité expertes.",
+  "keywords": "Test, Résultats, Social, Profil",
+  "title": "OIYO | Ton Guide de Soi Premium",
+  "test": {
+    "insightBullets": [
+      "Consulter l'alignement des Dix Tiges Célestes.",
+      "Retracer les racines des douze branches terrestres.",
+      "Calculer les interactions alchimiques de votre âme."
+    ],
+    "progress": "Progression",
+    "submit": "Découvrir Mon Destin",
+    "loading": "Calcul de votre thème Saju en cours...",
+    "selectOption": "Veuillez saisir vos informations",
+    "next": "Suivant",
+    "previous": "Précédent"
+  },
+  "hero": {
+    "subtitle": "Analyse de tes réponses pour révéler ton personnalité sociale..."
+  }
+}

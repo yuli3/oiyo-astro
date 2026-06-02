@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Synaptic Connection Grid",
+    "subtitle": "Live Resonance Field",
+    "analyze": "Lancer l'étalonnage",
+    "share": "Transmettre la prophétie"
+  },
+  "share": {
+    "saveToStory": "Archiver dans l'histoire",
+    "instruction": "Préservez la révélation et manifestez-la sur votre tapisserie numérique."
+  },
+  "status": {
+    "complete": "Alchimies relationnelles synthétisées",
+    "incomplete": "Étalonnage en cours ({count}/4)",
+    "continue": "Continuer l'étalonnage"
+  },
+  "pillars": {
+    "attachment": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "Lancer une enquête"
+    },
+    "communication": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "Lancer une enquête"
+    },
+    "conflict": {
+      "result": {
+        "title": "Synaptic Connection Grid",
+        "subtitle": "Live Resonance Field",
+        "lead": "Il s’agit de la fréquence principale à travers laquelle vous naviguez dans les frictions.",
+        "scoreHeadline": "Position dominante",
+        "scoreDescription": "Le modèle de réponse qui régit votre champ énergétique.",
+        "traitsTitle": "Traits archétypaux",
+        "strengthsTitle": "Alchimies fondamentales",
+        "challengesTitle": "Nœuds de conscience",
+        "tipsTitle": "Rituels d'intégration",
+        "breakdownTitle": "Répartition harmonique",
+        "realLifeTitle": "Manifestations dans la réalité"
+      },
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "Lancer une enquête"
+    },
+    "loveLanguage": {
+      "title": "Synaptic Connection Grid",
+      "description": "Complete the four core inquiries to reveal your unique interpersonal geometry.",
+      "action": "Lancer une enquête"
+    }
+  },
+  "empty": {
+    "title": "Synaptic Connection Grid",
+    "description": "Complétez les quatre questions principales pour révéler votre géométrie interpersonnelle unique."
+  },
+  "grid": {
+    "title": "Grille de connexion synaptique",
+    "subtitle": "Champ de résonance en direct"
+  }
+}

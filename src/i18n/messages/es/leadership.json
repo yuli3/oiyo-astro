@@ -1,0 +1,585 @@
+{
+  "leadership": {
+    "meta": {
+      "title": "Authoritative Leader",
+      "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+      "keywords": "leadership, management, team building, assessment"
+    },
+    "hero": {
+      "badge": "💼 Leadership Style",
+      "title": "Authoritative Leader",
+      "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+      "cta": "Start Assessment"
+    },
+    "test": {
+      "analyzing": "Deciphering your leadership DNA...",
+      "calculating": "Calculating style match...",
+      "loading": "Unveiling your inner commander...",
+      "questionProgress": "Pregunta {actual} / {total}"
+    },
+    "result": {
+      "yourStyle": "Your Leadership Style",
+      "score": "Style Match",
+      "coreApproach": "Efficient goal achievement through clear direction and control",
+      "strengths": "Key Strengths",
+      "challenges": "Potential Challenges",
+      "communication": "Communication Style",
+      "decisionMaking": "Quick and independent decision-making",
+      "teamManagement": "Setting clear roles, responsibilities, and performance standards",
+      "bestEnvironment": "Best Environment",
+      "developmentTips": "Development Tips",
+      "famousLeaders": "Famous Leaders with this Style",
+      "idealFor": "Ideal Industries & Roles"
+    },
+    "questions": {
+      "q1": {
+        "options": [
+          {
+            "text": "Presentar una visión clara e inspirar al equipo."
+          },
+          {
+            "text": "Hagan una lluvia de ideas juntos y recopilen aportes del equipo"
+          },
+          {
+            "text": "Identifique las fortalezas de cada miembro y proporcione coaching 1:1"
+          },
+          {
+            "text": "Desarrollar una estrategia general y establecer una dirección clara."
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q2": {
+        "options": [
+          {
+            "text": "Pregunte cómo puede ayudar y brindar el apoyo necesario."
+          },
+          {
+            "text": "Analizar el problema juntos y encontrar soluciones."
+          },
+          {
+            "text": "Presentar una solución clara y un plan de acción."
+          },
+          {
+            "text": "Ayúdalos a crecer haciéndoles preguntas para resolverlas ellos mismos."
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q3": {
+        "options": [
+          {
+            "text": "Escuche las opiniones del equipo y decidan juntos"
+          },
+          {
+            "text": "Juzgar desde objetivos a largo plazo y una perspectiva estratégica."
+          },
+          {
+            "text": "Decide rápidamente y da instrucciones claras."
+          },
+          {
+            "text": "Comprueba si se alinea con la visión y decide."
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q4": {
+        "options": [
+          {
+            "text": "Motivar a los miembros del equipo y liderar el cambio."
+          },
+          {
+            "text": "Crear un plan de coaching para el desarrollo individual."
+          },
+          {
+            "text": "Analizar causas juntos y encontrar mejoras."
+          },
+          {
+            "text": "Restablecer estándares y responsabilidades claras"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q5": {
+        "options": [
+          {
+            "text": "Ayudar a los miembros del equipo a crecer y desarrollarse."
+          },
+          {
+            "text": "Presentar una visión clara y pintar el futuro."
+          },
+          {
+            "text": "Apoyar a los miembros del equipo y ayudar a su éxito."
+          },
+          {
+            "text": "Desarrollar una estrategia para lograr los objetivos organizacionales."
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q6": {
+        "options": [
+          {
+            "text": "Facilitar para que todas puedan compartir opiniones."
+          },
+          {
+            "text": "Recuerde el panorama general y los objetivos a largo plazo"
+          },
+          {
+            "text": "Ejecute de manera eficiente y saque conclusiones claras"
+          },
+          {
+            "text": "Conecte ideas de equipo y cree sinergia"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q7": {
+        "options": [
+          {
+            "text": "Compartir la visión del equipo y los valores que perseguimos."
+          },
+          {
+            "text": "Pregúnteles qué necesitan y ayúdelos a adaptarse."
+          },
+          {
+            "text": "Tener tiempo 1:1 para comprender las fortalezas y los objetivos."
+          },
+          {
+            "text": "Explicar claramente el papel y las expectativas."
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q8": {
+        "options": [
+          {
+            "text": "Fomentar el libre intercambio de ideas y la experimentación."
+          },
+          {
+            "text": "Presentar una visión innovadora e inspirar."
+          },
+          {
+            "text": "Ayude a los miembros del equipo a colaborar y crear sinergia"
+          },
+          {
+            "text": "Entrenador para desarrollar fortalezas creativas individuales."
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q9": {
+        "options": [
+          {
+            "text": "Escuche a ambas partes y encuentren una solución juntos"
+          },
+          {
+            "text": "Decidir basándose en principios y estándares claros"
+          },
+          {
+            "text": "Resolver conflictos recordando objetivos más importantes"
+          },
+          {
+            "text": "Ayudar a comprender las perspectivas y utilizarlas como oportunidad de crecimiento."
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q10": {
+        "options": [
+          {
+            "text": "Un equipo donde cada miembro rinde al máximo"
+          },
+          {
+            "text": "Un equipo que innova continuamente y lidera el cambio"
+          },
+          {
+            "text": "Un equipo que logra eficazmente objetivos estratégicos"
+          },
+          {
+            "text": "Un equipo que colabora y crea sinergia"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      }
+    },
+    "styles": {
+      "transformational": {
+        "strengths": [
+          "Proporcionar una fuerte motivación e inspiración a los miembros del equipo.",
+          "Fomentar ideas innovadoras y el pensamiento creativo.",
+          "Construyendo una cultura organizacional positiva",
+          "Presentar y ejecutar una visión a largo plazo.",
+          "Ayudar a los equipos a alcanzar su máximo potencial"
+        ],
+        "challenges": [
+          "Tendencia a centrarse en la visión sobre la ejecución detallada.",
+          "Dificultad para gestionar la fatiga del cambio.",
+          "Puede descuidar los objetivos a corto plazo.",
+          "Posibilidad de pasar por alto limitaciones prácticas"
+        ],
+        "bestEnvironment": [
+          "Organizaciones que requieren cambio e innovación.",
+          "Cultura que fomenta la creatividad y los desafíos.",
+          "Proyectos donde la visión a largo plazo es importante",
+          "Entorno que prioriza el desarrollo y crecimiento del equipo."
+        ],
+        "developmentTips": [
+          "Fortalecer las habilidades de planificación de ejecución detallada",
+          "Equilibre los objetivos a corto plazo con la visión a largo plazo",
+          "Supervisar al equipo para detectar fatiga por el cambio",
+          "Considere restricciones realistas",
+          "Comentarios periódicos y revisiones de desempeño"
+        ],
+        "famousLeaders": [
+          "Steve Jobs (Apple)",
+          "Elon Musk (Tesla, SpaceX)",
+          "Richard Branson (Grupo Virgen)",
+          "Oprah Winfrey (Harpo Producciones)"
+        ],
+        "idealFor": [
+          "Startups y empresas en crecimiento",
+          "Proyectos de transformación digital",
+          "Innovación en la cultura organizacional",
+          "Desarrollo de nuevos negocios"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "democratic": {
+        "strengths": [
+          "Alto compromiso y compromiso del equipo.",
+          "Decisiones que reflejan diversas perspectivas",
+          "Fuerte cohesión y confianza del equipo.",
+          "Descubriendo ideas creativas",
+          "Mejorar la propiedad de los miembros del equipo"
+        ],
+        "challenges": [
+          "La toma de decisiones puede llevar más tiempo",
+          "Dificultad para responder a situaciones urgentes.",
+          "Complejidad del proceso de creación de consenso",
+          "Posibilidad de carecer de una dirección clara"
+        ],
+        "bestEnvironment": [
+          "Equipos altamente capacitados",
+          "Proyectos donde la creatividad es importante",
+          "Planificación a largo plazo",
+          "Ambiente de trabajo estable"
+        ],
+        "developmentTips": [
+          "Prepárese para situaciones que requieran decisiones rápidas",
+          "Reconocer la necesidad de liderazgo en ocasiones.",
+          "Aprenda a prevenir discusiones ineficientes",
+          "Proporcionar directrices claras",
+          "Gestionar cronogramas y prioridades"
+        ],
+        "famousLeaders": [
+          "Nelson Mandela (Presidente de Sudáfrica)",
+          "Angela Merkel (canciller alemana)",
+          "Warren Buffett (Berkshire Hathaway)",
+          "Howard Schultz (Starbucks)"
+        ],
+        "idealFor": [
+          "Equipos de I+D",
+          "Proyectos creativos",
+          "Instituciones educativas y académicas",
+          "Organizaciones sin fines de lucro"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "coaching": {
+        "strengths": [
+          "Alta satisfacción y lealtad del equipo.",
+          "Descubrir y desarrollar las fortalezas individuales.",
+          "Desarrollo de talento a largo plazo",
+          "Cultura de retroalimentación positiva",
+          "Mejorar la autoeficacia de los miembros del equipo"
+        ],
+        "challenges": [
+          "Alto consumo de tiempo y energía.",
+          "Centrarse en el desarrollo a largo plazo por encima de los resultados a corto plazo",
+          "Dificultad para brindar la misma atención a todos los miembros del equipo.",
+          "A veces puede ser necesaria instrucción directa."
+        ],
+        "bestEnvironment": [
+          "Organizaciones donde el desarrollo del talento es importante",
+          "Proyectos a largo plazo",
+          "Entorno con una fuerte cultura de aprendizaje.",
+          "Equipos que necesitan desarrollo profesional"
+        ],
+        "developmentTips": [
+          "Equilibrar los objetivos del equipo con el desarrollo individual.",
+          "Realiza sesiones de coaching eficientes",
+          "Aprenda métodos para lograr logros a corto plazo.",
+          "Desarrollar habilidades de coaching grupal.",
+          "Establecimiento de prioridades y gestión del tiempo."
+        ],
+        "famousLeaders": [
+          "Bill Campbell (entrenador legendario de Silicon Valley)",
+          "John Wooden (entrenador de baloncesto de UCLA)",
+          "Satya Nadella (Microsoft)",
+          "Indra Nooyi (PepsiCo)"
+        ],
+        "idealFor": [
+          "Empresas consultoras",
+          "Programas educativos",
+          "Equipos de inicio en etapa inicial",
+          "Empresas de alto crecimiento"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "visionary": {
+        "strengths": [
+          "Presentar una visión y dirección poderosas.",
+          "Capacidad para alcanzar objetivos a largo plazo.",
+          "Proporcionar claridad en medio de la incertidumbre",
+          "Dar a los miembros del equipo un sentido de propósito",
+          "Pensamiento innovador y formulación de estrategias."
+        ],
+        "challenges": [
+          "Puede descuidar la ejecución detallada",
+          "Posible falta de atención a los problemas actuales",
+          "Brecha entre visión y realidad",
+          "Tendencia a pasar por alto los objetivos a corto plazo."
+        ],
+        "bestEnvironment": [
+          "Organizaciones que necesitan cambios",
+          "Nuevo desarrollo de mercado",
+          "Proyectos a largo plazo",
+          "Industrias donde la innovación es importante"
+        ],
+        "developmentTips": [
+          "Desarrollar planes de ejecución y estrategias detalladas.",
+          "Incrementar la atención a los problemas actuales.",
+          "Conecte las metas a corto plazo con la visión",
+          "Escuche las preocupaciones realistas de los miembros del equipo.",
+          "Establecer hitos incrementales"
+        ],
+        "famousLeaders": [
+          "Martín Luther King Jr.",
+          "Jeff Bezos (Amazon)",
+          "Mark Zuckerberg (Meta)",
+          "Jack Ma (Alibaba)"
+        ],
+        "idealFor": [
+          "Fundación de startups",
+          "Transformación empresarial",
+          "Nueva entrada al mercado",
+          "Reestructuración organizacional"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "servant": {
+        "strengths": [
+          "Alta confianza y lealtad del equipo",
+          "Énfasis en el bienestar y la satisfacción del equipo.",
+          "Construyendo una cultura organizacional positiva",
+          "Mejorar la autonomía y la responsabilidad del equipo",
+          "Construyendo relaciones a largo plazo"
+        ],
+        "challenges": [
+          "Vacilación al tomar decisiones difíciles.",
+          "Equilibrar las necesidades del equipo con los objetivos organizacionales",
+          "A veces se necesita un liderazgo fuerte",
+          "Posibilidad de pasar por alto las propias necesidades."
+        ],
+        "bestEnvironment": [
+          "Entorno donde la colaboración es importante",
+          "Organizaciones que valoran las relaciones a largo plazo",
+          "Proyectos basados ​​en el trabajo en equipo.",
+          "Cultura centrada en las personas"
+        ],
+        "developmentTips": [
+          "Tomar decisiones firmes cuando sea necesario",
+          "Equilibrar los objetivos organizacionales con el bienestar del equipo",
+          "Autocuidado y establecimiento de límites",
+          "Fortalecer la gestión del desempeño",
+          "Desarrollar habilidades de delegación efectivas."
+        ],
+        "famousLeaders": [
+          "Madre Teresa",
+          "Herb Kelleher (Aerolíneas del suroeste)",
+          "Sheryl Sandberg (Facebook)",
+          "Paul Polman (Unilever)"
+        ],
+        "idealFor": [
+          "Organizaciones sin fines de lucro",
+          "Instituciones sanitarias y de bienestar",
+          "Instituciones educativas",
+          "Empresas centradas en el servicio al cliente"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "strategic": {
+        "strengths": [
+          "Objetivos claros y planes de ejecución.",
+          "Toma de decisiones basada en datos",
+          "Asignación eficiente de recursos",
+          "Capacidad de gestión de riesgos",
+          "Logro a largo plazo"
+        ],
+        "challenges": [
+          "Posible falta de flexibilidad para cambiar",
+          "Tendencia a priorizar el proceso sobre las personas.",
+          "Limitar la creatividad y la espontaneidad.",
+          "Retraso en la ejecución por exceso de análisis"
+        ],
+        "bestEnvironment": [
+          "Entorno empresarial complejo",
+          "Mercado altamente competitivo",
+          "Proyectos a largo plazo",
+          "Organización orientada al desempeño"
+        ],
+        "developmentTips": [
+          "Desarrollar flexibilidad y adaptabilidad.",
+          "Considere las emociones y la motivación del equipo.",
+          "Fomentar la ejecución rápida y la experimentación.",
+          "Adopte el pensamiento creativo",
+          "Equilibra la intuición con los datos"
+        ],
+        "famousLeaders": [
+          "Página de Larry (Google)",
+          "Tim Cook (Apple)",
+          "Satoru Iwata (Nintendo)",
+          "María Barra (General Motors)"
+        ],
+        "idealFor": [
+          "Fabricación",
+          "Servicios financieros",
+          "Grandes corporaciones",
+          "Gestión de proyectos"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "collaborative": {
+        "strengths": [
+          "Fuerte cohesión del equipo",
+          "Cultura de colaboración efectiva",
+          "Integración de diversas perspectivas",
+          "Resolución creativa de problemas",
+          "Apoyo mutuo y confianza"
+        ],
+        "challenges": [
+          "Posible desaceleración en la velocidad de toma de decisiones",
+          "Dificultad en la gestión de conflictos.",
+          "Falta de dirección clara",
+          "Responsabilidad individual poco clara"
+        ],
+        "bestEnvironment": [
+          "Resolución de problemas complejos",
+          "Proyectos multifuncionales",
+          "Entorno que requiere innovación",
+          "Equipos donde la diversidad es la fuerza"
+        ],
+        "developmentTips": [
+          "Desarrollar la capacidad de tomar decisiones rápidas.",
+          "Habilidades constructivas de gestión de conflictos.",
+          "Definir roles y responsabilidades claras.",
+          "Gestión eficiente de reuniones",
+          "Métodos para reconocer el desempeño individual."
+        ],
+        "famousLeaders": [
+          "Susan Wojcicki (YouTube)",
+          "Eric Schmidt (Google)",
+          "Ross Marcelo (Salesforce)",
+          "Kenneth Chenault (American Express)"
+        ],
+        "idealFor": [
+          "Equipos ágiles",
+          "Proyectos de pensamiento de diseño.",
+          "Nuevas empresas",
+          "Consultante"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "authoritative": {
+        "strengths": [
+          "Rápida toma de decisiones y ejecución",
+          "Metas y expectativas claras.",
+          "Respuesta eficaz a la crisis",
+          "Estándares y procesos consistentes",
+          "Alta productividad"
+        ],
+        "challenges": [
+          "Posibilidad de limitar la creatividad del equipo.",
+          "Bajo compromiso y motivación del equipo.",
+          "Mayor dependencia",
+          "Posible resistencia al cambio."
+        ],
+        "bestEnvironment": [
+          "Situaciones de crisis",
+          "Entorno que requiere una dirección clara",
+          "Organización con muchos miembros nuevos.",
+          "Proyectos donde la ejecución rápida es importante"
+        ],
+        "developmentTips": [
+          "Proporcionar oportunidades para la aportación del equipo.",
+          "Fomentar la creatividad y la autonomía.",
+          "Desarrollar habilidades de comunicación emocional.",
+          "Practica la delegación y el empoderamiento",
+          "Aprenda enfoques flexibles"
+        ],
+        "famousLeaders": [
+          "Steve Jobs (primeros Apple)",
+          "Gordon Ramsey",
+          "Margarita Thatcher",
+          "Lombardi gana"
+        ],
+        "idealFor": [
+          "Gestión de crisis",
+          "Militar/Policía",
+          "Gestión de la producción manufacturera.",
+          "Equipos de respuesta a emergencias"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Logro eficiente de objetivos a través de una dirección y control claros.",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      }
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "noData": {
+    "desc": "Inicia el ritual de la conciencia para revelar tus alquimias de diálogo personalizadas.",
+    "button": "Comenzar la calibración",
+    "title": "Conflict Alchemy Synthesizer"
+  },
+  "labels": {
+    "relation": "Contexto afín",
+    "situation": "Momento del crisol"
+  },
+  "relations": {
+    "partner": "Contraparte Sagrada",
+    "friend": "Espíritu afín",
+    "colleague": "Aliada profesional"
+  },
+  "situations": {
+    "apology": "Ritual de Reparación (Propiedad)",
+    "initiate": "Iniciar el reconocimiento (queja)",
+    "boundary": "Estableciendo Santuario (Límites)"
+  },
+  "meta": {
+    "subtitle": "Bespoke alchemical scripts to harmonize discordant frequencies.",
+    "disclaimer": "These scripts serve as foundational frequencies; adapt them to the unique cadence of your connection.",
+    "title": "Conflict Alchemy Synthesizer",
+    "description": "Guiding the vocalization of wisdom when relationship harmonics are strained.",
+    "keywords": "alquimia de conflictos, recuperación relacional, diálogo sagrado, rituales de comunicación, Oiyo"
+  },
+  "test": {
+    "insightBullets": ["Ilumina las capas tácitas de tu postura relacional."],
+    "progress": "Ascenso de resonancia",
+    "next": "Adelante",
+    "previous": "Reflejar",
+    "submit": "Revelar la síntesis",
+    "loading": "Destilando alquimias del diálogo...",
+    "selectOption": "Marca el camino de la verdad"
+  },
+  "result": {
+    "title": "Conflict Alchemy Synthesizer",
+    "description": "Guiding the vocalization of wisdom when relationship harmonics are strained."
+  },
+  "subtitle": "Guiones alquímicos personalizados para armonizar frecuencias discordantes.",
+  "yourStyle": "Tu postura de conflicto",
+  "retest": "Reiniciar la calibración",
+  "resultTitle": "El guión manifestado",
+  "copy": "Preservar",
+  "copied": "Archivada",
+  "disclaimer": "Estos guiones sirven como frecuencias fundamentales; adáptalos a la cadencia única de tu conexión.",
+  "title": "Sintetizador de alquimia de conflictos",
+  "description": "Guiar la vocalización de la sabiduría cuando los armónicos de las relaciones están tensos."
+}

@@ -1,0 +1,141 @@
+{
+  "tax": {
+    "gift": {
+      "meta": {
+        "title": "풍요의 흐름: 증여세",
+        "description": "당신의 혈통에 풍요가 전달되는 것을 계산하십시오.",
+        "keywords": "증여세, 세금계산기, 상속세"
+      },
+      "hero": {
+        "subtitle": "신성한 혈통 보호",
+        "badge": "재원"
+      },
+      "rel": {
+        "child_adult": "성인 소울(소아)",
+        "child_minor": "마이너 소울(어린아이)",
+        "spouse": "듀얼 플레임(배우자)",
+        "parent": "조상의 영혼(부모)",
+        "other_relative": "친척",
+        "other": "기타 연결",
+        "selectPlaceholder": "관계 선택"
+      },
+      "result": {
+        "title": "풍부도 분석 보고서",
+        "deduction": "신성한 공제",
+        "taxBase": "과세 대상 본질",
+        "rate": "진동수",
+        "selfReport": "자발적인 발현",
+        "description": "재정적 공명의 계층을 탐색하십시오."
+      },
+      "tip": {
+        "title": "세이지 인사이트",
+        "desc": "증여세 공제는 10년마다 재설정됩니다. 사회적 마찰을 최소화하기 위해 계보 이전을 현명하게 계획하십시오."
+      },
+      "test": {
+        "insightBullets": ["부의 공명", "리니지 보호", "시간적 효율성"],
+        "progress": "정렬 진행",
+        "submit": "의도 제출",
+        "loading": "천체 세법 컨설팅...",
+        "selectOption": "경로 선택",
+        "next": "앞으로",
+        "previous": "재추적"
+      },
+      "unit": {
+        "currency": "단위",
+        "tenYear": "10년주기",
+        "aggregation": "집계 대상"
+      },
+      "resultInfo": {
+        "selfReport": "* 자발적 발현 시 3% 감면이 포함됩니다.",
+        "consult": "* 정확한 조정을 위해서는 금융 전문가와 상담하세요."
+      },
+      "title": "재무적 반영",
+      "description": "귀하의 재정적 현실을 정밀하게 보여주는 거울입니다.",
+      "subtitle": "부를 향한 항해사 가이드",
+      "disclaimer": "예상일 뿐이지 재정 법령은 아닙니다.",
+      "relationship": "관계",
+      "giftAmount": "신성한 헌금 금액",
+      "pastGiftAmount": "과거 이체 금액",
+      "calculateBtn": "흐름 계산",
+      "placeholder": "금액 입력",
+      "labels": {
+        "inputParameters": "좌표 입력"
+      }
+    },
+    "vat": {
+      "modes": {
+        "total": "집계 흐름",
+        "supply": "프라이머리 에센스 흐름"
+      },
+      "labels": {
+        "totalAmount": "총 공명(VAT 포함)",
+        "supplyAmount": "순 에센스(VAT 별도)"
+      },
+      "results": {
+        "supplyPrice": "일차 에센스",
+        "vat": "단편세(VAT)",
+        "total": "완전한 공명"
+      },
+      "tip": {
+        "content": "일반적으로 조각 의무는 본질의 10%입니다. 총 흐름을 1.1로 나누어 기본 본질을 찾습니다.",
+        "title": "부가가치세 지혜"
+      },
+      "meta": {
+        "subtitle": "건축가를 위한 효율성",
+        "disclaimer": "시스템 면책조항",
+        "title": "VAT 합성기",
+        "description": "순수 본질과 전체 공명 사이를 원활하게 변환합니다.",
+        "keywords": "부가가치세, 세금, 송장, 사업"
+      },
+      "test": {
+        "insightBullets": ["합성을 기다리는 중..."],
+        "progress": "합성 진행",
+        "next": "앞으로",
+        "previous": "재추적",
+        "submit": "마무리",
+        "loading": "합성 중...",
+        "selectOption": "레이어 선택"
+      },
+      "result": {
+        "title": "합성 보고서",
+        "description": "비즈니스 공명 수준을 확인하세요."
+      },
+      "subtitle": "기본 및 조각 흐름을 정확하게 계산합니다.",
+      "currency": "단위",
+      "disclaimer": "이 도구는 구조 시뮬레이션을 제공합니다. 실제 재정 의무는 다를 수 있습니다.",
+      "title": "시간적 반사",
+      "description": "부가가치세 정보 및 세율"
+    }
+  },
+  "salaryCalculator": {
+    "title": "활력 변환기 (급여)",
+    "description": "물질적 에너지 전환을 사회적 그리드로 시각화하세요.",
+    "labels": {
+      "inputParameters": "입력 좌표",
+      "salaryInput": "연간 총에너지",
+      "salaryPlaceholder": "금액 입력(예: 50,000,000)",
+      "dependents": "위성 영혼(종속)",
+      "children": "퓨처 스파크(어린이)",
+      "calculate": "계산 실행",
+      "calculatePrompt": "내역을 보려면 좌표를 설정하세요.",
+      "disclaimerText": "이 계산은 추정치이며 실제 리프트 조정과 다를 수 있습니다."
+    },
+    "result": {
+      "title": "에너지 분배",
+      "grossPay": "총 에너지",
+      "netPay": "발현된 활력(순)",
+      "nationalPension": "조상기금(연금)",
+      "healthInsurance": "성역 유지 관리(건강)",
+      "incomeTax": "주권 기여(세금)",
+      "harvestDescription": "기본 에너지 수준",
+      "pensionRate": "장기 보안 앵커",
+      "healthRate": "활력보존비",
+      "deductionDesc": "소셜 그리드 약속",
+      "rateDesc": "현재 진동률"
+    },
+    "advisor": {
+      "tip": "현명한 조언",
+      "content": "숫자의 격자에서도 당신의 공명이 모든 조각의 가치를 결정합니다."
+    }
+  }
+}

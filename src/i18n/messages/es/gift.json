@@ -1,0 +1,46 @@
+{
+  "description": "[FALTA: descripción]",
+  "title": "[FALTA: título]",
+  "labels": {
+    "inputParameters": "[FALTA: etiquetas.inputParameters]"
+  },
+  "relationship": "[FALTA: relación]",
+  "rel": {
+    "selectPlaceholder": "[FALTA: rel.selectPlaceholder]",
+    "child_adult": "[FALTA: rel.child_adult]",
+    "child_minor": "[FALTA: rel.child_minor]",
+    "spouse": "[Falta: esposa rel.]",
+    "parent": "[FALTA: rel.padre]",
+    "other_relative": "[FALTA: rel.other_relative]",
+    "other": "[FALTA: rel.otro]"
+  },
+  "giftAmount": "[FALTA: monto del regalo]",
+  "pastGiftAmount": "[FALTA: pasadoGiftAmount]",
+  "calculateBtn": "[FALTA: calcularBtn]",
+  "result": {
+    "deductionDesc": "[FALTA: resultado.deducciónDesc]",
+    "deduction": "[FALTA: resultado.deducción]",
+    "taxBase": "[FALTA: resultado.taxBase]",
+    "rateDesc": "[FALTA: resultado.rateDesc]",
+    "rate": "[FALTA: tasa.resultado]",
+    "title": "[FALTA: resultado.título]",
+    "selfReport": "[FALTA: resultado.selfReport]"
+  },
+  "placeholder": "[FALTA: marcador de posición]",
+  "tip": {
+    "title": "[FALTA: consejo.título]",
+    "desc": "[FALTA: tip.desc]"
+  },
+  "disclaimer": "[FALTA: descargo de responsabilidad]",
+  "test": {
+    "insightBullets": [
+      "Encuentra el regalo perfecto",
+      "Análisis de personalidad y presupuesto.",
+      "Recomendaciones personalizadas de IA"
+    ]
+  },
+  "meta": {
+    "title": "recomendación de regalo",
+    "description": "Recomendaciones de regalos de IA adaptadas a la personalidad y al presupuesto"
+  }
+}

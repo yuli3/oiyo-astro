@@ -1,0 +1,89 @@
+{
+  "messages": {
+    "general": "正在准备你的故事...",
+    "stars": "同步你的命运之线......",
+    "rainbow": "浇灌彩虹...",
+    "flowers": "破译你身份的几何图案......",
+    "fox": "绘制你个性的秘密架构...",
+    "stardust": "同步你的命运之线......",
+    "oracle": "收到神谕...",
+    "cards": "分析你的选择的深刻回响......",
+    "moon": "擦亮月亮...",
+    "dreams": "编织梦想...",
+    "magic": "施展一点魔法……",
+    "whale": "分析你的选择的深刻回响......",
+    "trees": "千年古树开会……",
+    "roots": "向根的地下世界发送消息……",
+    "ontology": "读懂你灵魂的设计……",
+    "resonance": "协调你的精神频率...",
+    "fortune": "凝视着水晶球……",
+    "finance": "计算你的繁荣...",
+    "relationship": "同步两个灵魂的频率...",
+    "cat_dog": "分析你的选择的深刻回响......",
+    "milky_way": "从银河系之外带来灵感......",
+    "moonlight": "破译你身份的几何图案......",
+    "wave_secret": "破译你身份的几何图案......",
+    "saju": "调整命运的日历..."
+  },
+  "default": "同步你的命运之线......",
+  "rootLoading": {
+    "subtitle": "Are you lost?"
+  },
+  "localeLoading": {
+    "subtitle": "Are you lost?",
+    "title": "Test",
+    "description": "Discover OIYO tools and revelations."
+  },
+  "globalError": {
+    "tryAgain": "再试一次",
+    "goHome": "Home",
+    "helpText": "如果问题仍然存在，请联系支持人员。"
+  },
+  "notFound": {
+    "title": "Test",
+    "subtitle": "你迷路了吗？",
+    "description": "Discover OIYO tools and revelations.",
+    "goHome": "家",
+    "goBack": "回去",
+    "suggestionsTitle": "也许您正在寻找这些页面之一？",
+    "popularTestsTitle": "热门测试",
+    "egentetoTest": "我需要测试",
+    "mbtiAlternative": "MBTI 替代方案",
+    "allTests": "查看所有测试",
+    "exploreTitle": "探索热门发现",
+    "categoryCore": "核心人格",
+    "categoryLifestyle": "生活方式",
+    "color": "颜色",
+    "travel": "旅行",
+    "relationship": {
+      "communicationStyle": "沟通方式"
+    },
+    "test": {
+      "progress": "进步",
+      "next": "下一个",
+      "previous": "以前的",
+      "submit": "提交",
+      "loading": "加载中",
+      "selectOption": "选择",
+      "insightBullets": ["洞察力"]
+    },
+    "result": {
+      "title": "Test",
+      "description": "Discover OIYO tools and revelations."
+    },
+    "meta": {
+      "title": "测试",
+      "description": "探索 OIYO 工具和启示。",
+      "keywords": "测试、启示、OIYO"
+    }
+  },
+  "poetic": [
+    "聆听星星的低语……",
+    "解读你的命运...",
+    "汇聚宇宙能量...",
+    "请稍等，一个神秘的故事正在展开……",
+    "写下深夜里月亮所讲的故事……",
+    "解读你的星座发送的信号......",
+    "跨越时间之河，寻找答案……"
+  ]
+}

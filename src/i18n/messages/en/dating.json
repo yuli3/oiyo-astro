@@ -1,0 +1,641 @@
+{
+  "dating": {
+    "meta": {
+      "test": {
+        "insightBullets": [
+          "Explore the deep architecture of your inner landscape."
+        ],
+        "progress": "Progress",
+        "submit": "Submit",
+        "loading": "Loading",
+        "selectOption": "Select",
+        "next": "Next",
+        "previous": "Previous"
+      },
+      "result": {
+        "title": "Detailed Analysis Report",
+        "description": "We are preparing specific values and insights this service provides to you."
+      },
+      "meta": {
+        "title": "Customized Diagnosis",
+        "description": "We are preparing specific values and insights this service provides to you.",
+        "keywords": "key, words"
+      },
+      "resultTitle": "MBTI Dating Result Analysis",
+      "resultDescription": "Deep analysis of MBTI dating results.",
+      "testTitle": "MBTI Dating Assessment",
+      "testDescription": "Calculate your MBTI dating score now.",
+      "keywords": "MBTI dating, analysis, score, expert",
+      "title": "Dating Test",
+      "description": "Take the dating test."
+    },
+    "hero": {
+      "subtitle": "What is my MBTI-based dating style?",
+      "badge": "New",
+      "cta": "Start Test",
+      "title": "Dashboard",
+      "description": "In-depth data-driven report"
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "At a party with new people, I...",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Gain energy and lead conversations.",
+            "emoji": "🥳",
+            "scores": {
+              "E": 1
+            }
+          },
+          {
+            "text": "Have deep conversations with a few people in a quiet place.",
+            "emoji": "🤔",
+            "scores": {
+              "I": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "When I like someone...",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "I'm first attracted to their realistic strengths (job, style, etc.).",
+            "emoji": "💼",
+            "scores": {
+              "S": 1
+            }
+          },
+          {
+            "text": "I'm first attracted to the future I imagine with them.",
+            "emoji": "💭",
+            "scores": {
+              "N": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "When I fight with my partner, I...",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Logically analyze what the problem is and try to find a solution.",
+            "emoji": "🧐",
+            "scores": {
+              "T": 1
+            }
+          },
+          {
+            "text": "First check their feelings and try to comfort them with empathy.",
+            "emoji": "❤️",
+            "scores": {
+              "F": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "When planning a date...",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "I plan everything perfectly, from restaurants to cafes and routes.",
+            "emoji": "🗺️",
+            "scores": {
+              "J": 1
+            }
+          },
+          {
+            "text": "I decide where to go spontaneously based on my mood that day.",
+            "emoji": "🎉",
+            "scores": {
+              "P": 1
+            }
+          }
+        ]
+      }
+    ],
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "mbti 1",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🚀",
+          "title": "mbti 2",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "💡",
+          "title": "mbti 3",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "mbti 4",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🔥",
+          "title": "mbti 5",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "⭐",
+          "title": "mbti 6",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Small choices accumulate into a grand destiny."
+        }
+      ],
+      "subtitle": "In-depth Analysis Report",
+      "title": "Dashboard"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "mbti 1",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "mbti 2",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "💡",
+          "title": "mbti 3",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🎯",
+          "title": "mbti 4",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🔥",
+          "title": "mbti 5",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "⭐",
+          "title": "mbti 6",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        }
+      ],
+      "title": "Dashboard"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "mbti 1",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🚀",
+          "title": "mbti 2",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "💡",
+          "title": "mbti 3",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "mbti 4",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🔥",
+          "title": "mbti 5",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "⭐",
+          "title": "mbti 6",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+      "progress": "Progress",
+      "submit": "Submit",
+      "loading": "Loading...",
+      "selectOption": "Select option",
+      "subtitle": "Details",
+      "finish": "Complete",
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "result": {
+      "title": "Detailed Analysis Report",
+      "description": "Detailed Analysis Report",
+      "traits": "Personality Traits",
+      "share": "Share",
+      "retake": "Retake Test"
+    },
+    "types": {
+      "INTJ": {
+        "traits": ["Strategic", "Independent", "Decisive", "Perfectionist"],
+        "strengths": [
+          "Long-term planning",
+          "Logical reasoning",
+          "High competence"
+        ],
+        "challenges": [
+          "Can appear arrogant",
+          "Dislikes unpredictability",
+          "Struggles with emotional expression"
+        ],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INFP", "INFJ"],
+          "challenging": ["ISFP", "ESFP"]
+        },
+        "name": "The Architect",
+        "emoji": "🎯",
+        "subtitle": "Strategic and independent mindset",
+        "description": "A strategist with a plan for everything and rich imagination.",
+        "detailedDescription": "INTJs value logic and strategy even in romance. They want a partner who can grow intellectually together, and though they may be awkward at expressing emotions, they are very devoted to those they trust.",
+        "loveLanguage": "Intellectual conversation",
+        "idealDate": "A night of debate or visiting a science museum."
+      },
+      "INTP": {
+        "traits": ["Analytical", "Curious", "Abstract", "Imaginative"],
+        "strengths": [
+          "Problem-solving",
+          "Theoretical understanding",
+          "Creativity"
+        ],
+        "challenges": [
+          "Can be absent-minded",
+          "Dislikes rigid rules",
+          "May struggle with practical matters"
+        ],
+        "compatibility": {
+          "best": ["ENTJ", "ESTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "The Logician",
+        "emoji": "🔬",
+        "subtitle": "Innovative inventor",
+        "description": "An innovative inventor with an endless thirst for knowledge.",
+        "detailedDescription": "INTPs are free thinkers. They value intellectual stimulation even in romance and prefer comfortable relationships that respect each other's privacy and preferences.",
+        "loveLanguage": "Sharing ideas",
+        "idealDate": "Bookstore trip followed by deep conversation in a cafe."
+      },
+      "ENTJ": {
+        "traits": ["Decisive", "Confident", "Ambitious", "Efficient"],
+        "strengths": [
+          "Leadership",
+          "Strategic planning",
+          "Direct communication"
+        ],
+        "challenges": [
+          "Can be impatient",
+          "May appear insensitive",
+          "Strong need for control"
+        ],
+        "compatibility": {
+          "best": ["INFP", "INTP"],
+          "good": ["ENTP", "ENFJ"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "The Commander",
+        "emoji": "👔",
+        "subtitle": "Bold and imaginative leader",
+        "description": "A strong-willed leader who always finds a way.",
+        "detailedDescription": "ENTJs bring a lot of energy and vision to relationships. They pursue a 'power couple' dynamic relationship and are reliable partners who actively help their partner grow.",
+        "loveLanguage": "Acts of devotion",
+        "idealDate": "Dinner at a fine restaurant or playing strategic board games."
+      },
+      "ENTP": {
+        "traits": ["Witty", "Innovative", "Flexible", "Energetic"],
+        "strengths": ["Deep thinkers", "Lively conversations", "Adaptability"],
+        "challenges": [
+          "Can be argumentative",
+          "May struggle with consistency",
+          "Intolerant of stagnation"
+        ],
+        "compatibility": {
+          "best": ["INFJ", "INTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "The Debater",
+        "emoji": "💡",
+        "subtitle": "Inventor who enjoys intellectual challenges",
+        "description": "An original thinker who can't resist interesting intellectual challenges.",
+        "detailedDescription": "ENTPs are brainstormers who constantly come up with new ideas. You need a partner who can enjoy your playful debates, and you aim for a fun romance with never a dull moment.",
+        "loveLanguage": "Witty conversation",
+        "idealDate": "Watching a comedy show or learning a new hobby together."
+      },
+      "INFJ": {
+        "traits": ["Insightful", "Principled", "Creative", "Passionate"],
+        "strengths": ["Emotional intelligence", "Compassion", "Integrity"],
+        "challenges": [
+          "Avoids conflict",
+          "Can be too private",
+          "Extremely high standards"
+        ],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INTJ", "INFP"],
+          "challenging": ["ESTP", "ESFP"]
+        },
+        "name": "The Advocate",
+        "emoji": "🌟",
+        "subtitle": "Calm and mysterious idealist",
+        "description": "A quiet but insightful idealist who inspires people.",
+        "detailedDescription": "INFJs are rare people with deep inner worlds. They have high ideals about relationships and seek a soulmate who deeply understands each other and exchanges inspiration.",
+        "loveLanguage": "Quality time",
+        "idealDate": "Stargazing or a walk in quiet and beautiful nature."
+      },
+      "INFP": {
+        "traits": ["Empathetic", "Idealistic", "Creative", "Gentle"],
+        "strengths": ["Deep devotion", "Open-mindedness", "Compassion"],
+        "challenges": [
+          "Can be overly sensitive",
+          "Avoids practical details",
+          "Difficulty with criticism"
+        ],
+        "compatibility": {
+          "best": ["ENFJ", "ENTJ"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ISTJ"]
+        },
+        "name": "The Mediator",
+        "emoji": "✨",
+        "subtitle": "Passionate and kind altruist",
+        "description": "Passionate people who always dedicate themselves to good causes.",
+        "detailedDescription": "INFPs follow their hearts. They value authenticity and emotional depth above all else, and become the most faithful supporters who cheer for their partner's dreams and growth.",
+        "loveLanguage": "Words of affirmation",
+        "idealDate": "A cozy picnic or visiting an old used bookstore."
+      },
+      "ENFJ": {
+        "traits": ["Charismatic", "Empathetic", "Responsible", "Social"],
+        "strengths": ["Communication skills", "High empathy", "Loyalty"],
+        "challenges": [
+          "Can be too self-sacrificing",
+          "May be overprotective",
+          "Sensitive to criticism"
+        ],
+        "compatibility": {
+          "best": ["INFP", "ISFP"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ISTP", "ESTP"]
+        },
+        "name": "The Protagonist",
+        "emoji": "🤝",
+        "subtitle": "Charismatic and inspiring leader",
+        "description": "A passionate leader who encourages people and wants to create a better world.",
+        "detailedDescription": "ENFJs are natural helpers. They are very sensitive to their partner's feelings and needs, and excel at creating a warm and encouraging relationship atmosphere.",
+        "loveLanguage": "Quality time",
+        "idealDate": "Doing volunteer work together or hosting a small gathering with close friends."
+      },
+      "ENFP": {
+        "traits": ["Enthusiastic", "Outgoing", "Imaginative", "Spontaneous"],
+        "strengths": [
+          "Great communicators",
+          "Positive energy",
+          "Creative thinkers"
+        ],
+        "challenges": [
+          "Dislikes routine",
+          "Can be overly emotional",
+          "Difficulty focusing on one thing"
+        ],
+        "compatibility": {
+          "best": ["INTJ", "INFJ"],
+          "good": ["INFP", "ENFJ"],
+          "challenging": ["ISTJ", "ESTJ"]
+        },
+        "name": "The Campaigner",
+        "emoji": "🎨",
+        "description": "A passionate and creative free spirit who always finds joy.",
+        "subtitle": "Free-spirited soul",
+        "detailedDescription": "ENFPs infuse curiosity and energy into relationships. They value emotional bonds and always try to make the relationship more interesting in new ways.",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Attending a lively festival or spontaneous trip without plans."
+      },
+      "ISTJ": {
+        "traits": ["Responsible", "Reliable", "Practical", "Orderly"],
+        "strengths": ["Loyalty", "Organization", "Directness"],
+        "challenges": [
+          "Can be rigid",
+          "Struggles with change",
+          "May seem insensitive"
+        ],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISFJ", "ESTJ"],
+          "challenging": ["ENFP", "ENTP"]
+        },
+        "name": "The Logistician",
+        "emoji": "📚",
+        "subtitle": "Practical and devoted administrator",
+        "description": "Responsible people who think based on facts and are reliable.",
+        "detailedDescription": "ISTJs are the cornerstone of stability. Though not highly expressive, they show love through actions. They demonstrate commitment through trust, practical help, and building a stable future together.",
+        "loveLanguage": "Acts of service",
+        "idealDate": "Dinner at a traditional and verified restaurant and organized activities like bowling."
+      },
+      "ISFJ": {
+        "traits": ["Supportive", "Reliable", "Humble", "Observant"],
+        "strengths": ["Compassion", "Practicality", "Loyalty"],
+        "challenges": [
+          "Self-sacrificing",
+          "Avoids change",
+          "Can take things personally"
+        ],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISTJ", "ISFP"],
+          "challenging": ["ENTP", "ENFP"]
+        },
+        "name": "The Defender",
+        "emoji": "📖",
+        "subtitle": "Devoted and warm protector",
+        "description": "Dedicated people who do their best to protect those close to them.",
+        "detailedDescription": "ISFJs are very thoughtful. They remember small things their partner likes, and are devoted lovers who prioritize their partner's comfort and happiness over their own needs.",
+        "loveLanguage": "Acts of service",
+        "idealDate": "Cooking special meals together at home or quiet movie watching."
+      },
+      "ESTJ": {
+        "traits": ["Direct", "Organized", "Dedicated", "Loyal"],
+        "strengths": [
+          "Reliability",
+          "Direct communication",
+          "Tradition-oriented"
+        ],
+        "challenges": [
+          "Can be bossy",
+          "Struggles with expressing feelings",
+          "Uncomfortable with change"
+        ],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP"]
+        },
+        "name": "The Executive",
+        "emoji": "📊",
+        "subtitle": "Excellent organizational operator",
+        "description": "A practitioner with excellent ability to manage things and people.",
+        "detailedDescription": "ESTJs bring structure and trust. They openly state what they want and express love by organizing a stable life and being a reliable teammate.",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Dining at a well-known authentic restaurant or watching a sports game."
+      },
+      "ESFJ": {
+        "traits": ["Sociable", "Warm", "Loyal", "Harmonious"],
+        "strengths": ["Connection building", "Nurturing nature", "Reliability"],
+        "challenges": [
+          "Sensitive to criticism",
+          "May be needy",
+          "Concerned about status"
+        ],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISFJ", "ENFJ"],
+          "challenging": ["INTP", "INTJ"]
+        },
+        "name": "The Consul",
+        "emoji": "👥",
+        "subtitle": "Compassionate and sociable personality",
+        "description": "A popular personality who finds happiness in helping those around them.",
+        "detailedDescription": "ESFJs are the life of the party and the center of the home. They are sensitive to their partner's happiness and social relationships, and want to express and confirm love through frequent communication and gatherings.",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Double date with friends or attending a lively local festival."
+      },
+      "ISTP": {
+        "traits": ["Pragmatic", "Creative", "Independent", "Spontaneous"],
+        "strengths": ["Crisis management", "Practicality", "Adaptability"],
+        "challenges": [
+          "Can be detached",
+          "Dislikes commitment",
+          "Easily bored"
+        ],
+        "compatibility": {
+          "best": ["ESFJ", "ESTJ"],
+          "good": ["ISTJ", "ESTP"],
+          "challenging": ["ENFJ", "INFJ"]
+        },
+        "name": "The Virtuoso",
+        "emoji": "🔧",
+        "subtitle": "Bold and practical analyzer",
+        "description": "A practitioner skilled at handling various tools and solving problems.",
+        "detailedDescription": "ISTPs are people who enjoy the present. They need a lot of personal space and prefer to build intimacy through adventure and activities together rather than emotional conversations.",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Hiking, climbing, or hands-on date making something together."
+      },
+      "ISFP": {
+        "traits": ["Charming", "Sensitive", "Imaginative", "Spontaneous"],
+        "strengths": ["Compassion", "Creativity", "Flexibility"],
+        "challenges": ["Avoids conflict", "Unpredictable", "Easily stressed"],
+        "compatibility": {
+          "best": ["ENFJ", "ESFJ", "ESTJ"],
+          "good": ["ISFJ", "INFP"],
+          "challenging": ["INTJ", "ENTJ"]
+        },
+        "name": "The Adventurer",
+        "emoji": "🎭",
+        "subtitle": "Flexible and charming artist",
+        "description": "An artist who always seeks new experiences and enjoys the present.",
+        "detailedDescription": "ISFPs are people with unique individuality. They are very sensitive to their partner's needs and surrounding atmosphere, and want a partner who can understand their quiet creative world.",
+        "loveLanguage": "Acts of service",
+        "idealDate": "Visiting an art gallery or outdoor date where you can see beautiful sunsets."
+      },
+      "ESTP": {
+        "traits": ["Charismatic", "Energetic", "Practical", "Observant"],
+        "strengths": ["Great in a crisis", "Fun-loving", "Persuasive"],
+        "challenges": ["Risk-prone", "Impatient", "May miss the big picture"],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESTP", "ESFP"],
+          "challenging": ["INFJ", "INFP"]
+        },
+        "name": "The Entrepreneur",
+        "emoji": "🚀",
+        "subtitle": "Smart and energetic wheeler-dealer",
+        "description": "An activist who doesn't fear risk and seizes opportunities of the moment.",
+        "detailedDescription": "ESTPs are action-oriented. Charismatic and persuasive, they live for thrilling moments. They prefer bright energy to overly deep analysis, enjoying fun together through activities.",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Energetic concert or thrilling sports game watching."
+      },
+      "ESFP": {
+        "traits": ["Fun-loving", "Social", "Spontaneous", "Aesthetic"],
+        "strengths": [
+          "Great people skills",
+          "Positive outlook",
+          "Aesthetic eye"
+        ],
+        "challenges": [
+          "Avoids conflict",
+          "Easily bored",
+          "Poor long-term planning"
+        ],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESFP", "ESTP"],
+          "challenging": ["INTJ", "INFJ"]
+        },
+        "name": "The Entertainer",
+        "emoji": "🎉",
+        "description": "A performer who makes others happy and energizes them.",
+        "subtitle": "Sociable and active personality",
+        "detailedDescription": "ESFPs bring vitality wherever they go. They carefully take care of their partner to always keep them happy and enjoy glamorous and lively romance sharing present emotions and sensory experiences.",
+        "loveLanguage": "Physical touch",
+        "idealDate": "Going dancing together or attending a glamorous event."
+      }
+    },
+    "title": "Customized Analysis Result",
+    "description": "Explore your hidden potential through multi-dimensional in-depth analysis."
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "GAP": {
+    "traits": [
+      "新たな始まりを告げる強いパイオニア精神。",
+      "不公平を容認できない。 まっすぐでまっすぐな性格の持ち主。",
+      "リーダーシップの資質があり、従属的になるのが苦手です。",
+      "頑固すぎると独善につながることもあるので、柔軟性が必要です。"
+    ],
+    "strengths": ["ドライブ", "正直", "責任", "独立"],
+    "weaknesses": ["柔軟性の欠如", "傲慢", "独断的"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "EUL": {
+    "traits": [
+      "環境適応力に優れ、実践的な傾向が強い。",
+      "一見柔らかそうに見えますが、内面には強い粘り強さと生存本能を持っています。",
+      "創造的で感性が豊かで、他者とのコミュニケーションと調和が得意です。",
+      "決断力に欠け、周囲の環境に流されやすい。"
+    ],
+    "strengths": ["適応性", "柔軟性", "アフィニティ", "珍味"],
+    "weaknesses": ["気まぐれさ", "依存", "優柔不断"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "BYEONG": {
+    "traits": [
+      "オープンでさわやかな性格で注目を集める。",
+      "情熱的で進歩的で、礼儀と名誉を大切にします。",
+      "感情が顔に表れやすく、恨みを持ちません。",
+      "短気で、中身のない贅沢を追い求めることがあります。"
+    ],
+    "strengths": ["楽観", "表現力", "正直", "エネルギー"],
+    "weaknesses": ["焦り", "虚栄心", "過剰な感情"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "JEONG": {
+    "traits": [
+      "献身的で温厚で、繊細な感受性と洞察力を持っています。",
+      "一見礼儀正しく冷静だが、内に爆発的な情熱を秘めている。",
+      "精神的な価値観を追求し、宗教や芸術において優れた才能を持っています。",
+      "考えすぎて自分を苦しめたり、臆病で敏感になったりすることもあります。"
+    ],
+    "strengths": ["洞察力", "献身", "芸術性", "静けさ"],
+    "weaknesses": ["感度", "執着", "受動性"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "MU": {
+    "traits": [
+      "重くて慎重。 一度決めたらやり抜く粘り強さがある。",
+      "包容力が広く、周囲の人の強い支柱となる。",
+      "保守的で、信用を命のように大切にし、変化よりも安定を追求します。",
+      "あまりにも頑固で無愛想になり、コミュニケーションの破綻につながる可能性があります。"
+    ],
+    "strengths": ["安定性", "ドライブ", "許容範囲", "信頼"],
+    "weaknesses": ["頑固", "鈍感さ", "乾燥"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "GI": {
+    "traits": [
+      "シンプルで勤勉で、他人の世話をしたり、教育したりすることに喜びを感じます。",
+      "本質を大切にし、緻密で現実的な感覚に優れています。",
+      "自己防衛機能が強く、なかなか本心を明かさない傾向があります。",
+      "猜疑心が強く、現実的な利益を計算しすぎているため、取るに足らないものに見える可能性があります。"
+    ],
+    "strengths": ["勤勉", "包括性", "実用性", "慈悲"],
+    "weaknesses": ["自己中心性", "疑い", "保守主義"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "GYEONG": {
+    "traits": [
+      "深い忠誠心、一度築いた人間関係を大切にし、強い仲間意識。",
+      "冷静な批判力と決断力を持ち、規律を確立することに長けています。",
+      "外見は冷たく見えますが、内面は温かく純粋です。",
+      "他人の欠点をあまりにも鋭く指摘したり、破壊的な傾向を明らかにしたりすることがあります。"
+    ],
+    "strengths": ["決断力", "正義", "忠誠心", "冷徹さ"],
+    "weaknesses": ["致命的", "侵略", "柔軟性の欠如"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "SIN": {
+    "traits": [
+      "自尊心が強く、きちんとしていて、美意識と洗練されたマナーを持っています。",
+      "繊細で繊細、他人の間違いに気づきやすく、自己管理が徹底している。",
+      "シニカルでトゲトゲだけど、内面は誰よりも弱く傷つきやすい。",
+      "小さなことに執着したり、過度の完璧主義に疲れたりする可能性があります。"
+    ],
+    "strengths": ["完璧主義", "審美眼", "明瞭さ", "自己管理"],
+    "weaknesses": ["感度", "皮肉", "狭い人間関係"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "IM": {
+    "traits": [
+      "スケールが大きく、頭の回転が速く、ユーモアと即興が得意。",
+      "自由を望み、どこにも縛られない放浪者気質。",
+      "包容力があり、人をよく集めるが、時に底知れぬ闇を抱えている。",
+      "忍耐力に欠けており、物事を終わらせずに始めてしまう可能性があります。"
+    ],
+    "strengths": ["知恵", "アフィニティ", "創造性", "許容範囲"],
+    "weaknesses": ["怠惰", "陰謀", "不安定"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "GYE": {
+    "traits": [
+      "賢明で深い考えを持ち、環境の変化を誰よりも早く捉えます。",
+      "実利を黙々と考え、知的好奇心が非常に強い。",
+      "従順に見えますが、目標に向かって静かに突き進む粘り強さを持っています。",
+      "心臓が弱いため、空想にふける傾向があり、気分の変動が激しく、意思決定が遅くなります。"
+    ],
+    "strengths": ["知能", "適応性", "持続性", "創造的な想像力"],
+    "weaknesses": ["悲しみ", "虚弱", "神経質"],
+    "name": "Gye (癸)",
+    "nature": "万物を濡らす謙虚で知的な雨露の波",
+    "lifePurpose": "世界の渇きと渇きを癒し、知的探求を通じて目に見えない生命の原理を伝えること。"
+  }
+}

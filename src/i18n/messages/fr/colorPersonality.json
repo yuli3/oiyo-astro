@@ -1,0 +1,199 @@
+{
+  "questions": {
+    "cp_1": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_2": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_3": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_4": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_5": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_6": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_7": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_8": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_9": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_10": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_11": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    },
+    "cp_12": {
+      "options": {
+        "a": "La Stabilité",
+        "b": "La Passion",
+        "c": "L'Innovation"
+      },
+      "text": "Comment définiriez-vous vos valeurs en un mot ?"
+    }
+  },
+  "results": {
+    "blue": {
+      "traits": {
+        "0": "Hautement intuitif et artistique.",
+        "1": "Vit dans son propre univers unique."
+      },
+      "harmony": {
+        "reason": "Ajoute un sentiment de stabilité à votre monde intuitif."
+      },
+      "title": "Diagnostic de Personnalité Couleur",
+      "advice": "Conseils"
+    },
+    "green": {
+      "traits": {
+        "0": "Hautement intuitif et artistique.",
+        "1": "Vit dans son propre univers unique."
+      },
+      "harmony": {
+        "reason": "Ajoute un sentiment de stabilité à votre monde intuitif."
+      },
+      "title": "Diagnostic de Personnalité Couleur",
+      "advice": "Conseils"
+    },
+    "red": {
+      "traits": {
+        "0": "Hautement intuitif et artistique.",
+        "1": "Vit dans son propre univers unique."
+      },
+      "harmony": {
+        "reason": "Ajoute un sentiment de stabilité à votre monde intuitif."
+      },
+      "title": "Diagnostic de Personnalité Couleur",
+      "advice": "Conseils"
+    },
+    "yellow": {
+      "traits": {
+        "0": "Hautement intuitif et artistique.",
+        "1": "Vit dans son propre univers unique."
+      },
+      "harmony": {
+        "reason": "Ajoute un sentiment de stabilité à votre monde intuitif."
+      },
+      "title": "Diagnostic de Personnalité Couleur",
+      "advice": "Conseils"
+    },
+    "gray": {
+      "traits": {
+        "0": "Hautement intuitif et artistique.",
+        "1": "Vit dans son propre univers unique."
+      },
+      "harmony": {
+        "reason": "Ajoute un sentiment de stabilité à votre monde intuitif."
+      },
+      "title": "Diagnostic de Personnalité Couleur",
+      "advice": "Conseils"
+    },
+    "brown": {
+      "traits": {
+        "0": "Hautement intuitif et artistique.",
+        "1": "Vit dans son propre univers unique."
+      },
+      "harmony": {
+        "reason": "Ajoute un sentiment de stabilité à votre monde intuitif."
+      },
+      "title": "Diagnostic de Personnalité Couleur",
+      "advice": "Conseils"
+    },
+    "black": {
+      "traits": {
+        "0": "Hautement intuitif et artistique.",
+        "1": "Vit dans son propre univers unique."
+      },
+      "harmony": {
+        "reason": "Ajoute un sentiment de stabilité à votre monde intuitif."
+      },
+      "title": "Diagnostic de Personnalité Couleur",
+      "advice": "Conseils"
+    },
+    "violet": {
+      "traits": {
+        "0": "Hautement intuitif et artistique.",
+        "1": "Vit dans son propre univers unique."
+      },
+      "harmony": {
+        "reason": "Ajoute un sentiment de stabilité à votre monde intuitif."
+      },
+      "title": "Diagnostic de Personnalité Couleur",
+      "advice": "Conseils"
+    }
+  },
+  "title": "Diagnostic de Personnalité Couleur",
+  "badge": "Personnalité des couleurs",
+  "intro": "Quelle est la couleur de l'âme qui vous représente ?",
+  "analysis": "Analyse de Personnalité",
+  "traits": "Traits Clés",
+  "advice": "Conseils",
+  "harmony": "Harmonie Relationnelle",
+  "restart": "Recommencer",
+  "save": "Enregistrer les Résultats"
+}

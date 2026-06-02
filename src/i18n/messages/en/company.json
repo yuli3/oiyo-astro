@@ -1,0 +1,26 @@
+{
+  "about": {
+    "mission": "our sacred calling",
+    "values": "OUR CORE VALUES",
+    "story": "chronology"
+  },
+  "marketing": {},
+  "legal": {
+    "privacy": {
+      "sanctity": "Sanctuary of data",
+      "sanctity_header": "anonymous shield",
+      "insight": "generation of insight",
+      "insight_header": "Collective wisdom, individual sovereignty",
+      "sovereignty": "sovereignty of the soul",
+      "sovereignty_header": "right to forget"
+    },
+    "terms": {
+      "pact": "Awareness of the Pledge",
+      "pact_header": "Approval of digital protocols",
+      "duties": "Apostle's Duty",
+      "duties_header": "duty of truthful inquiry",
+      "knowledge": "sacred knowledge",
+      "knowledge_header": "Ownership of Resonance Algorithm"
+    }
+  }
+}

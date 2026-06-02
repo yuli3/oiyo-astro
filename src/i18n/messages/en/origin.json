@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "My Primal Origin",
+    "description": "Discover your true self through a destiny trio of astrology, biorhythm, and numerology."
+  },
+  "hero": {
+    "title": "My Primal Origin",
+    "subtitle": "Everything is revealed with your birth date. Check your Western Zodiac, Eastern Chinese Zodiac, Life Path, and Biorhythm energies with a single input.",
+    "inputLabel": "Enter your birth date",
+    "analyze": "Analyze Origin",
+    "analyzing": "Aligning the stars..."
+  },
+  "trinity": {
+    "western": "Western Zodiac",
+    "eastern": "Eastern Zodiac",
+    "numerology": "Life Path",
+    "biorhythm": "Biorhythm",
+    "destiny": "Destiny"
+  },
+  "sections": {
+    "profile": "Cosmic Profile",
+    "insight": "Daily Insight",
+    "analysisTitle": "Cosmic Self Analysis",
+    "westernEssence": "Western Zodiac Essence",
+    "easternAnalysis": "Eastern Energy Analysis",
+    "growthCouncil": "Advice for Growth",
+    "numerologicalDestiny": "Numerological Destiny",
+    "vibrationNumber": "Number of Destiny"
+  },
+  "biorhythm": {
+    "title": "Real-time Bio-Orbit",
+    "physical": "Physical Index",
+    "emotional": "Emotional Index",
+    "intellectual": "Intellectual Index"
+  },
+  "scroll": {
+    "cosmic": {
+      "title": "Cosmic Prologue",
+      "orbitalVelocity": "Earth Orbital Velocity",
+      "galacticVelocity": "Galactic Orbital Velocity",
+      "axialTilt": "Axial Tilt",
+      "distanceFromSun": "Distance from Sun",
+      "locationTooltip": "Where You Remained"
+    },
+    "final": {
+      "premium": {
+        "title": "Keep your myth forever.",
+        "description": "High-resolution images and collectible PDF reports woven just for you are ready."
+      },
+      "free": {
+        "title": "Would you like to keep all these revelations as sacred relics?",
+        "description": "Unlock all invisible truths and obtain an eternal digital relic."
+      },
+      "download": "Download PDF Relic",
+      "checkout": "Unlock All Secrets of the Sanctuary (₩9,900)",
+      "notice": "A one-time payment immediately unlocks high-resolution PDFs and all hidden mythological layers for life."
+    },
+    "oracleDisclosure": "Divine Revelation",
+    "celestialAlignment": "Celestial Alignment",
+    "solarSign": "Solar Sign",
+    "lunarAnimal": "Lunar Guardian",
+    "lifePath": "Life Path",
+    "geneticBlueprint": "Genetic Blueprint",
+    "bloodType": "Blood Type {type}"
+  },
+  "premium": {
+    "onomancy": {
+      "title": "Unlock Sound Weaving (Onomancy)",
+      "description": "Discover how the vibrations of your name complement your Saju.",
+      "price": "₩9,900"
+    },
+    "pantheon": {
+      "title": "Unlock the Hall of Myths",
+      "description": "Check the Egyptian guardian deity and Celtic tree that protect you.",
+      "price": "₩9,900"
+    }
+  },
+  "pantheon": {
+    "symbols": {
+      "Stone": "Birthstone",
+      "Flower": "Birth Flower",
+      "Star": "Birth Star"
+    },
+    "title": "Hall of Myths",
+    "egyptianGuardian": "Egyptian Guardian",
+    "celticTreeSign": "Celtic Tree Sign",
+    "birthSymbols": "Birth Symbols"
+  },
+  "onomancy": {
+    "title": "Harmony of Sound",
+    "missingForce": "Missing Element",
+    "none": "None",
+    "vibrationFill": "Vibrational Complement",
+    "circularText": "Celestial Resonance • Onomancy Analysis • Logic of Vibration • "
+  },
+  "synergy": {
+    "adjective": "Special"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "noData": {
+    "desc": "启动意识仪式来揭示您的个性化对话炼金术。",
+    "button": "开始校准",
+    "title": "Conflict Alchemy Synthesizer"
+  },
+  "labels": {
+    "relation": "亲属背景",
+    "situation": "严峻时刻"
+  },
+  "relations": {
+    "partner": "神圣对应物",
+    "friend": "志同道合的精神",
+    "colleague": "专业盟友"
+  },
+  "situations": {
+    "apology": "赔偿仪式（所有权）",
+    "initiate": "发起认可（申诉）",
+    "boundary": "建立庇护所（边界）"
+  },
+  "meta": {
+    "subtitle": "Bespoke alchemical scripts to harmonize discordant frequencies.",
+    "disclaimer": "These scripts serve as foundational frequencies; adapt them to the unique cadence of your connection.",
+    "title": "Conflict Alchemy Synthesizer",
+    "description": "Guiding the vocalization of wisdom when relationship harmonics are strained.",
+    "keywords": "冲突炼金术、关系恢复、神圣对话、沟通仪式、Oiyo"
+  },
+  "test": {
+    "insightBullets": ["阐明你的关系立场中不言而喻的层面。"],
+    "progress": "共振上升",
+    "next": "向前",
+    "previous": "反映",
+    "submit": "揭示综合",
+    "loading": "蒸馏对话炼金术...",
+    "selectOption": "标记真理之路"
+  },
+  "result": {
+    "title": "Conflict Alchemy Synthesizer",
+    "description": "Guiding the vocalization of wisdom when relationship harmonics are strained."
+  },
+  "subtitle": "定制炼金术脚本来协调不和谐的频率。",
+  "yourStyle": "你的冲突立场",
+  "retest": "重新开始校准",
+  "resultTitle": "显化脚本",
+  "copy": "保存",
+  "copied": "已存档",
+  "disclaimer": "这些脚本作为基本频率； 使它们适应您的连接的独特节奏。",
+  "title": "冲突炼金合成器",
+  "description": "当关系和声紧张时指导智慧的发声。"
+}

@@ -1,0 +1,59 @@
+{
+  "title": "Evaluación TCI",
+  "subtitle": "Inventario de Temperamento y Carácter (TCI)",
+  "dimensions": {
+    "C": {
+      "label": "Cooperatividad"
+    },
+    "HA": {
+      "label": "Evitación del Daño"
+    },
+    "NS": {
+      "label": "Búsqueda de Novedad"
+    },
+    "P": {
+      "label": "Persistencia"
+    },
+    "RD": {
+      "label": "Dependencia de la Recompensa"
+    },
+    "SD": {
+      "label": "Autodirección"
+    },
+    "ST": {
+      "label": "Autotrascendencia"
+    }
+  },
+  "options": {
+    "1": "Muy en desacuerdo",
+    "2": "En desacuerdo",
+    "3": "Neutral",
+    "4": "De acuerdo",
+    "5": "Muy de acuerdo"
+  },
+  "questions": {
+    "tci_1": "Mi espíritu se siente constantemente atraído por el encanto de lo desconocido y lo nuevo.",
+    "tci_2": "Encuentro un profundo consuelo en el ritmo de las rutinas familiares.",
+    "tci_3": "Las reflexiones sobre las sombras del futuro suelen pesar mucho en mi mente.",
+    "tci_4": "Camino con un optimismo innato, confiando en que la luz me guiará.",
+    "tci_5": "El calor del reconocimiento y el elogio alimenta mi corazón.",
+    "tci_6": "Me mantengo firme como un pino solitario, indiferente a los vientos de la opinión pública.",
+    "tci_7": "Resisto las tormentas hasta que mi misión se completa.",
+    "tci_8": "Cuando el camino se vuelve demasiado espinoso, elijo una nueva dirección con facilidad.",
+    "tci_9": "Soy el arquitecto soberano de mi propio destino.",
+    "tci_10": "A menudo me siento como una hoja a la deriva en el río del destino.",
+    "tci_11": "Me veo a mí mismo como un hilo en el gran tapiz de la humanidad.",
+    "tci_12": "En el jardín de la vida, cuido mis propias flores primero.",
+    "tci_13": "Siento una resonancia sagrada que une a todos los seres vivos.",
+    "tci_14": "Confío solo en el mundo tangible que puedo tocar y medir."
+  },
+  "badge": "Arquitectura Psicológica",
+  "resultTitle": "Perfil Ontológico",
+  "paradoxLabel": "Paradoja del Alma",
+  "paradoxDesc": "La interacción de {key} dentro de tu resonancia.",
+  "nature": "Naturaleza Primordial (Temperamento)",
+  "nurture": "Carácter Manifestado",
+  "balanced": "Armonía Equilibrada",
+  "restart": "Reiniciar Evaluación",
+  "neuroscienceGuide": "Neurociencia de Tus Dimensiones"
+}

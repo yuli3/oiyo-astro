@@ -1,0 +1,52 @@
+{
+  "noData": {
+    "desc": "Initiez le rituel de prise de conscience pour révéler vos alchimies de dialogue personnalisées.",
+    "button": "Commencer l'étalonnage",
+    "title": "Conflict Alchemy Synthesizer"
+  },
+  "labels": {
+    "relation": "Contexte apparenté",
+    "situation": "Moment de creuset"
+  },
+  "relations": {
+    "partner": "Homologue sacré",
+    "friend": "Esprit apparenté",
+    "colleague": "Allié professionnel"
+  },
+  "situations": {
+    "apology": "Rituel de Réparation (Propriété)",
+    "initiate": "Initier la reconnaissance (grief)",
+    "boundary": "Établir un sanctuaire (limites)"
+  },
+  "meta": {
+    "subtitle": "Bespoke alchemical scripts to harmonize discordant frequencies.",
+    "disclaimer": "These scripts serve as foundational frequencies; adapt them to the unique cadence of your connection.",
+    "title": "Conflict Alchemy Synthesizer",
+    "description": "Guiding the vocalization of wisdom when relationship harmonics are strained.",
+    "keywords": "alchimie des conflits, récupération relationnelle, dialogue sacré, rituels de communication, Oiyo"
+  },
+  "test": {
+    "insightBullets": [
+      "Illuminez les couches tacites de votre position relationnelle."
+    ],
+    "progress": "Ascension de résonance",
+    "next": "Avant",
+    "previous": "Refléter",
+    "submit": "Révéler la synthèse",
+    "loading": "Distiller les alchimies du dialogue...",
+    "selectOption": "Marquez le chemin de la vérité"
+  },
+  "result": {
+    "title": "Conflict Alchemy Synthesizer",
+    "description": "Guiding the vocalization of wisdom when relationship harmonics are strained."
+  },
+  "subtitle": "Scripts alchimiques sur mesure pour harmoniser les fréquences discordantes.",
+  "yourStyle": "Votre position de conflit",
+  "retest": "Relancer l'étalonnage",
+  "resultTitle": "Le scénario manifesté",
+  "copy": "Préserver",
+  "copied": "Archivé",
+  "disclaimer": "Ces scripts servent de fréquences fondamentales ; adaptez-les à la cadence unique de votre connexion.",
+  "title": "Synthétiseur d'alchimie de conflit",
+  "description": "Guider la vocalisation de la sagesse lorsque les harmoniques relationnelles sont tendues."
+}

@@ -1,0 +1,145 @@
+{
+  "salaryCalculator": {
+    "title": "Vitality Converter (Salary)",
+    "description": "Visualize your material energy conversion into the societal grid.",
+    "labels": {
+      "inputParameters": "Input Coordinates",
+      "salaryInput": "Annual Gross Energy",
+      "salaryPlaceholder": "Enter amount (e.g. 50,000,000)",
+      "dependents": "Satellite Souls (Dependents)",
+      "children": "Future Sparks (Children)",
+      "calculate": "Execute Calculation",
+      "calculatePrompt": "Set your coordinates to see the breakdown",
+      "disclaimerText": "This calculation is a projection and may differ from actual rift adjustments."
+    },
+    "result": {
+      "title": "Energy Distribution",
+      "grossPay": "Gross Energy",
+      "netPay": "Manifested Vitality (Net)",
+      "nationalPension": "Ancestral Fund (Pension)",
+      "healthInsurance": "Sanctuary Maintenance (Health)",
+      "incomeTax": "Sovereign Contribution (Tax)",
+      "harvestDescription": "Base energy level",
+      "pensionRate": "Long-term security anchor",
+      "healthRate": "Vitality preservation fee",
+      "deductionDesc": "Social grid commitment",
+      "rateDesc": "Current vibrational rate"
+    },
+    "advisor": {
+      "tip": "Sage Advice",
+      "content": "Even in the grid of numbers, your resonance determines the value of every shard."
+    }
+  },
+  "tax": {
+    "gift": {
+      "meta": {
+        "title": "Abundance Flow: Gift Tax",
+        "description": "Calculate the transfer of abundance to your lineage.",
+        "keywords": "gift tax, tax calculator, succession"
+      },
+      "hero": {
+        "subtitle": "Sacred Lineage Protection",
+        "badge": "Finance"
+      },
+      "rel": {
+        "child_adult": "Adult Soul (Child)",
+        "child_minor": "Minor Soul (Child)",
+        "spouse": "Dual Flame (Spouse)",
+        "parent": "Ancestral Soul (Parent)",
+        "other_relative": "Kindred Relative",
+        "other": "Other Connection",
+        "selectPlaceholder": "Select Relation"
+      },
+      "result": {
+        "title": "Abundance Analysis Report",
+        "deduction": "Sacred Deduction",
+        "taxBase": "Taxable Essence",
+        "rate": "Vibrational Rate",
+        "selfReport": "Voluntary Manifestation",
+        "description": "Explore the layers of your financial resonance."
+      },
+      "tip": {
+        "title": "Sage Insights",
+        "desc": "Gift tax deductions reset every decade cycle. Plan your lineage transfers wisely to minimize societal friction."
+      },
+      "test": {
+        "insightBullets": [
+          "Wealth Resonance",
+          "Lineage Protection",
+          "Temporal Efficiency"
+        ],
+        "progress": "Alignment Progress",
+        "submit": "Submit Intent",
+        "loading": "Consulting celestial tax laws...",
+        "selectOption": "Select Path",
+        "next": "Forward",
+        "previous": "Retrace"
+      },
+      "unit": {
+        "currency": "Units",
+        "tenYear": "Decade Cycle",
+        "aggregation": "Aggregate Target"
+      },
+      "resultInfo": {
+        "selfReport": "* Includes 3% reduction for voluntary manifestation.",
+        "consult": "* Consult with a financial sage for precise alignment."
+      },
+      "title": "Financial Reflection",
+      "description": "A refined mirror of your financial reality.",
+      "subtitle": "The Navigator's Guide to Wealth",
+      "disclaimer": "Projection only—not financial decree.",
+      "relationship": "Relation",
+      "giftAmount": "Sacred Offering Amount",
+      "pastGiftAmount": "Historic Transfer Amount",
+      "calculateBtn": "Calculate Flow",
+      "placeholder": "Enter amount",
+      "labels": {
+        "inputParameters": "Coordinate Entry"
+      }
+    },
+    "vat": {
+      "description": "Value Added Tax information and rates",
+      "modes": {
+        "total": "Aggregate Flow",
+        "supply": "Primary Essence Flow"
+      },
+      "labels": {
+        "totalAmount": "Total Resonance (incl. VAT)",
+        "supplyAmount": "Net Essence (excl. VAT)"
+      },
+      "results": {
+        "supplyPrice": "Primary Essence",
+        "vat": "Fragment Duty (VAT)",
+        "total": "Full Resonance"
+      },
+      "tip": {
+        "content": "Typically, the fragment duty is 10% of the essence. Divide the aggregate flow by 1.1 to find the primary essence.",
+        "title": "VAT Wisdom"
+      },
+      "meta": {
+        "subtitle": "Efficiency for Architects",
+        "disclaimer": "System Disclaimer",
+        "title": "VAT Synthesizer",
+        "description": "Seamlessly convert between net essence and full resonance.",
+        "keywords": "VAT, tax, invoice, business"
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "Synthesis Progress",
+        "next": "Forward",
+        "previous": "Retrace",
+        "submit": "Finalize",
+        "loading": "Synthesizing...",
+        "selectOption": "Choose Layer"
+      },
+      "result": {
+        "title": "Synthesis Report",
+        "description": "Confirm your business resonance levels."
+      },
+      "subtitle": "Precisely calculate primary and fragment flows",
+      "currency": "Units",
+      "disclaimer": "This tool provides structural simulations; actual fiscal duties may vary.",
+      "title": "Temporal Reflection"
+    }
+  }
+}

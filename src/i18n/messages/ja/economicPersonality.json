@@ -1,0 +1,591 @@
+{
+  "economicPersonality": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "financial personality, money management, budgeting, spending habits, financial wellness"
+    },
+    "hero": {
+      "subtitle": "Discover your money personality",
+      "cta": "Start Test",
+      "badge": "💰 2025 Must-Take Finance Test",
+      "time": "⏱️ Takes 2 minutes",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "types": {
+      "spender": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "saver": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "investor": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "balanced": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "行動パターン",
+          "description": "支出のトリガーの背後にある心理を理解します。",
+          "question": "なぜ購入するのですか?",
+          "answer": "感情的になることも多いです。"
+        },
+        {
+          "icon": "💰",
+          "title": "可能性を節約する",
+          "description": "毎月の予算を使い果たす小さな漏れを特定します。",
+          "question": "私のお金はどこにありますか？",
+          "answer": "小さな習慣が積み重なっていきます。"
+        },
+        {
+          "icon": "📈",
+          "title": "投資スタイル",
+          "description": "自分がリスクを冒す人なのか、それとも安全を求める人なのかを確認してください。",
+          "question": "投資を始めますか？",
+          "answer": "自分の許容範囲を知りましょう。"
+        }
+      ],
+      "benefit1": "📊 Your scores across 4 economic tendencies",
+      "benefit2": "💰 Type-specific financial strategies",
+      "benefit3": "⚠️気をつけるべき経済習慣",
+      "benefit4": "🎯 3 actionable implementation plans",
+      "benefit5": "🔄 他のタイプとの互換性",
+      "title": "Awaiting deep synthesis..."
+    },
+    "cta": {
+      "button": "Start Free Test",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "category": {
+      "saving": "Saving",
+      "investing": "Investing",
+      "spending": "Spending",
+      "education": "Education",
+      "protection": "Risk"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        }
+      ],
+      "title": "Awaiting deep synthesis...",
+      "question1": "How do you navigate life's currents?",
+      "answer1": "You possess an intuitive compass that points toward growth.",
+      "question2": "How do you navigate life's currents?",
+      "answer2": "Inner harmony guides your everyday actions.",
+      "question3": "What is your unique core frequency?",
+      "answer3": "Inner harmony guides your everyday actions.",
+      "question4": "How do you navigate life's currents?",
+      "answer4": "Your unique perspective shapes your reality."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        }
+      ],
+      "feature1": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "feature2": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "feature3": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "feature4": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "test": {
+      "insightBullets": [
+        "金融行動分析",
+        "リスク選好度の評価",
+        "カスタマイズされた節約戦略"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": "給料をもらったらまず何をしますか？",
+          "options": {
+            "a": "まずは一定額を普通預金口座に移す",
+            "b": "欲しかったものをすぐに購入",
+            "c": "投資口座に入金してチャンスをうかがう",
+            "d": "計画的に生活費、貯蓄、投資に充てる"
+          }
+        },
+        {
+          "id": "q2",
+          "question": "突然50万ウォン（約4万円）を手に入れたら？",
+          "options": {
+            "a": "ずっと欲しかったものを買う",
+            "b": "全額緊急資金に積み立てます",
+            "c": "株やファンドに投資する",
+            "d": "一部を支出し、残りを貯蓄/投資する"
+          }
+        },
+        {
+          "id": "q3",
+          "question": "財務管理についてはどう思いますか?",
+          "options": {
+            "a": "お金は使うためにあるのです！ ヨロ",
+            "b": "安全な銀行預金が一番良い",
+            "c": "勉強して投資 - お金がお金を生む",
+            "d": "人生を楽しみながら、将来に備える"
+          }
+        },
+        {
+          "id": "q4",
+          "question": "毎日のコーヒー代は5,000ウォン、月に換算すると15万ウォン！",
+          "options": {
+            "a": "コーヒーは私の幸せです！ 飲み続けてください",
+            "b": "自宅でコーヒーを作ることに切り替える",
+            "c": "毎月15万ウォンを投資",
+            "d": "週に2〜3回に減らし、残りは取っておきます"
+          }
+        },
+        {
+          "id": "q5",
+          "question": "あなたの経済的な目標は何ですか?",
+          "options": {
+            "a": "今この瞬間を楽しんでください！ 未来は後からやってくる",
+            "b": "安定した生活のために少なくとも1億ウォンを貯蓄しましょう",
+            "c": "経済的自由を実現しましょう！ お金を働かせる",
+            "d": "生活の質を維持しながら適度に節約する"
+          }
+        },
+        {
+          "id": "q6",
+          "question": "クレジットカードの分割払いについてどう思いますか?",
+          "options": {
+            "a": "頻繁に使用します。 今はお金がなくても買える",
+            "b": "決して使用しないでください。 利息は無駄だ",
+            "c": "戦略的に金利 0% の分割払いのみを使用する",
+            "d": "高額な購入の場合のみ 0% 分割払いを使用してください"
+          }
+        },
+        {
+          "id": "q7",
+          "question": "金融教育に対するあなたの姿勢は何ですか？",
+          "options": {
+            "a": "興味がありません。 むしろ楽しい時間を過ごしましょう",
+            "b": "預金金利だけを確認する",
+            "c": "YouTube、書籍、セミナーなどで積極的に学ぶ",
+            "d": "必要なことを調べて実践してください"
+          }
+        },
+        {
+          "id": "q8",
+          "question": "友人への結婚祝いのお金は？",
+          "options": {
+            "a": "10万ウォン以上！ それは一生に一度です",
+            "b": "最低金額！ 私も苦労しています",
+            "c": "関係に基づいて計算し、正確に与える",
+            "d": "一般的な市場レートに従う"
+          }
+        },
+        {
+          "id": "q9",
+          "question": "家を所有する計画は何ですか?",
+          "options": {
+            "a": "月々の家賃も安心です。 ローンは欲しくない",
+            "b": "ゆっくり貯金して現金で買う",
+            "c": "投資を通じてシードマネーを構築し、レバレッジを活用する",
+            "d": "貯蓄＋投資で計画的に備える"
+          }
+        },
+        {
+          "id": "q10",
+          "question": "急に大金が必要になったら？",
+          "options": {
+            "a": "パニック！ 緊急資金がないので借りる必要がある",
+            "b": "緊急資金からの引き出し",
+            "c": "投資資産の一部を売却する",
+            "d": "緊急資金と流動資産の組み合わせで解決"
+          }
+        }
+      ],
+      "progress": "Question {current} of {total}",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "提出する",
+      "loading": "Analyzing your financial behavior pattern...",
+      "selectOption": "Select an option",
+      "subtitle": "自分のお金に関する性格を発見する"
+    },
+    "result": {
+      "recommendations": {
+        "spender": [
+          {
+            "category": "節約",
+            "priority": "high",
+            "title": "自動転送による強制保存を開始する",
+            "description": "給料日に普通預金口座への自動送金を設定して、お金を使う前に節約しましょう。",
+            "steps": [
+              "給与から普通預金口座への自動振替を設定する",
+              "月収の10％からスタート",
+              "3か月後は15%、6か月後は20%に増加"
+            ],
+            "benefit": "1年後に年収の少なくとも15％の貯蓄を達成"
+          },
+          {
+            "category": "支出",
+            "priority": "high",
+            "title": "支出の優先順位を設定する",
+            "description": "衝動買いを減らすために、不要不急の購入の前に 24 時間待つルールを作成します。",
+            "steps": [
+              "商品をカートに追加して 24 時間待ちます",
+              "必要性 (1 ～ 10) と満足度 (1 ～ 10) を評価します。",
+              "合計スコアが 15 以上の場合のみ購入してください"
+            ],
+            "benefit": "衝動買いが 50% 削減"
+          }
+        ],
+        "saver": [
+          {
+            "category": "投資",
+            "priority": "high",
+            "title": "少額の投資から始めましょう",
+            "description": "貯蓄だけではインフレには勝てません。 資産を増やすために低リスクの投資商品から始めましょう。",
+            "steps": [
+              "貯蓄の10％を低リスクファンドに投資する",
+              "ETFやインデックスファンドから始める",
+              "3ヶ月ごとに出資比率を5％ずつ引き上げる"
+            ],
+            "benefit": "長期的には年間4～6%のリターンが期待できる"
+          },
+          {
+            "category": "支出",
+            "priority": "中くらい",
+            "title": "生活の質のための支出",
+            "description": "過度の倹約は生活の質を低下させます。 経験と自分へのご褒美に投資しましょう。",
+            "steps": [
+              "毎月の予算の5%を体験や趣味に充てる",
+              "四半期に一度、愛する人と外食する",
+              "年間の旅行予算を確保する"
+            ],
+            "benefit": "幸福感の向上と燃え尽き症候群の防止"
+          }
+        ],
+        "investor": [
+          {
+            "category": "保護",
+            "priority": "high",
+            "title": "緊急資金の確保",
+            "description": "投資資産だけでは急な出費には対応できません。 安全のために流動性を維持します。",
+            "steps": [
+              "6か月分の生活費をアクセス可能な口座に保管してください",
+              "緊急資金を決して投資しないでください",
+              "使用後はすぐに補充してください"
+            ],
+            "benefit": "不測の事態にも安定した対応"
+          },
+          {
+            "category": "投資",
+            "priority": "中くらい",
+            "title": "リスク管理の強化",
+            "description": "成長するポートフォリオを保護するには、多様化とストップロスの原則を使用してください。",
+            "steps": [
+              "1 つの資産に 10% を超えて投資しないでください",
+              "-20%損失時の自動ストップロス",
+              "ポートフォリオのバランスを定期的にリバランスする"
+            ],
+            "benefit": "大きな損失を防ぎ、安定した収益を実現"
+          }
+        ],
+        "balanced": [
+          {
+            "category": "教育",
+            "priority": "中くらい",
+            "title": "財務知識を更新する",
+            "description": "バランスの取れたポートフォリオを維持するには、変化する市場で継続的に学習する必要があります。",
+            "steps": [
+              "金融関連の YouTube/ポッドキャストを毎月視聴する",
+              "四半期ごとに財務状況を確認する",
+              "毎年専門家に相談する"
+            ],
+            "benefit": "トレンドを常に最新の状態に保ち、収益を最適化する"
+          }
+        ]
+      },
+      "habitData": {
+        "spender": [
+          {
+            "habit": "新しい製品をすぐに購入する",
+            "impact": "ネガティブ",
+            "tip": "1週間経ってもまだ欲しいかどうか再検討してください"
+          },
+          {
+            "habit": "割引クーポンを積極的に利用する",
+            "impact": "ポジティブ",
+            "tip": "クーポンアプリをインストールして購入前にチェック"
+          }
+        ],
+        "saver": [
+          {
+            "habit": "毎月一定額を積み立てる",
+            "impact": "ポジティブ",
+            "tip": "自動転送を設定するとより確実になります"
+          },
+          {
+            "habit": "必需品であっても節約することによるストレス",
+            "impact": "ネガティブ",
+            "tip": "毎月の予算の5%を自分へのご褒美に充てる"
+          }
+        ],
+        "investor": [
+          {
+            "habit": "経済ニュースを毎日チェックする",
+            "impact": "ポジティブ",
+            "tip": "ニュースレターを購読して効率的な情報を得る"
+          },
+          {
+            "habit": "短期的な利益に執着する",
+            "impact": "ネガティブ",
+            "tip": "長期的な投資原則を設定し、それに従う"
+          }
+        ],
+        "balanced": [
+          {
+            "habit": "収入と支出を定期的に見直す",
+            "impact": "ポジティブ",
+            "tip": "家計簿アプリを使うとさらに便利"
+          },
+          {
+            "habit": "目標を設定したが達成率が低い",
+            "impact": "中性",
+            "tip": "具体的で測定可能な目標を設定する"
+          }
+        ]
+      },
+      "warningData": {
+        "extremeSpender": "支出傾向は非常に高い。 最小限の貯蓄プランを強くお勧めします。",
+        "extremeSaver": "貯蓄率は非常に高いです。 インフレをヘッジするための投資を検討してください。",
+        "extremeInvestor": "出資比率は非常に高い。 緊急資金とリスク管理を確認してください。",
+        "underspending": "今を楽しむことも大切です。 適切な摂取を心がけましょう。"
+      },
+      "compatibility": {
+        "spender": {
+          "spender": {
+            "score": 60,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 70,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 65,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "saver": {
+          "spender": {
+            "score": 70,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 90,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 80,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "investor": {
+          "spender": {
+            "score": 65,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 80,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 75,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "balanced": {
+          "spender": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 95,
+            "name": "パーフェクトハーモニー",
+            "tip": "相互尊重のもと、理想の経営を実現します。"
+          }
+        },
+        "scoreLabel": "互換性スコア"
+      },
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "loading": "あなたの金融行動パターンを分析しています...",
+      "scoreBreakdown": "スコアの内訳",
+      "yourScore": "あなたのスコア",
+      "strengths": "特徴的な強み",
+      "weaknesses": "成長の機会",
+      "actionSteps": "アクションステップ",
+      "habits": "経済的な習慣",
+      "warnings": "カウンセラーの警告",
+      "compatibilityTitle": "財政的調和",
+      "compatibilityDesc": "あなたの経済的性格が他の人にどのように共鳴するか。",
+      "downloadPDF": "レポートのダウンロード",
+      "share": "結果を共有する",
+      "retake": "再受験",
+      "home": "家",
+      "linkCopied": "リンクがクリップボードにコピーされました!",
+      "shareTitle": "私の経済的性格: {type}",
+      "shareText": "自分の経済的性格が判明！ ここであなたのものを確認してください。"
+    },
+    "Failed to download image": {
+      "Please try again": {
+        "": "ダッシュボード"
+      }
+    },
+    "title": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis..."
+  }
+}

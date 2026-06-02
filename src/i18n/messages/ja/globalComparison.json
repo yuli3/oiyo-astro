@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "cta": {
+      "button": "Take Tests Now"
+    },
+    "keywords": "keywords, tags, seo",
+    "badge": "Global Benchmarking",
+    "title": "マイ・インサイト",
+    "description": "独自の性格・傾向分析"
+  },
+  "filters": {
+    "region": "🌏 地域を選択してください",
+    "age": "👥 年齢層",
+    "gender": "⚧ 性別",
+    "test": "テストタイトル"
+  },
+  "tabs": {
+    "overview": "📈 概要",
+    "regional": "🗺️ 地域比較",
+    "demographics": "👥 人口統計",
+    "rankings": "🏆ランキング"
+  },
+  "chart": {
+    "scoreDistribution": "📊 スコア分布",
+    "personalityRankings": "🏆性格タイプランキング",
+    "avgScore": "平均スコア",
+    "users": "ユーザー",
+    "topRankText": "あなたは世界中のユーザーの上位 {percent}% にランクされています 🚀",
+    "allAges": "全年齢対象",
+    "all": "全て",
+    "male": "男",
+    "female": "女性",
+    "global": "グローバル",
+    "asia": "アジア",
+    "europe": "ヨーロッパ",
+    "northAmerica": "北米",
+    "korea": "韓国",
+    "southAmerica": "南アメリカ",
+    "africa": "アフリカ",
+    "oceania": "オセアニア"
+  },
+  "demographics": {
+    "comingSoon": "📊 人口統計分析機能は近日公開予定です。"
+  },
+  "cta": {
+    "button": "今すぐテストを受けてください",
+    "title": "マイ・インサイト",
+    "description": "独自の性格・傾向分析"
+  },
+  "features": {
+    "benchmarking": {
+      "title": "マイ・インサイト",
+      "description": "独自の性格・傾向分析"
+    },
+    "regional": {
+      "title": "マイ・インサイト",
+      "description": "独自の性格・傾向分析"
+    }
+  },
+  "insights": {
+    "yourScore": "あなたのスコア",
+    "globalAverage": "世界平均",
+    "percentile": "パーセンタイル",
+    "topPerformers": "トップパフォーマー",
+    "aboveAverage": "平均以上",
+    "belowAverage": "低い",
+    "regions": "地域"
+  },
+  "test": {
+    "progress": "進行状況",
+    "submit": "送信",
+    "loading": "📊 Analyzing...",
+    "selectOption": "選択する",
+    "insightBullets": ["あなたの個人的な哲学の隠された層を明らかにします。"]
+  },
+  "result": {
+    "title": "マイ・インサイト",
+    "description": "独自の性格・傾向分析"
+  },
+  "badge": "グローバルベンチマーク",
+  "loading": "📊 分析中...",
+  "noData": "📋 No data to analyze. まずは性格診断を行ってください。",
+  "title": "マイ・インサイト",
+  "description": "独自の性格・傾向分析",
+  "keywords": "キーワード、タグ、SEO"
+}

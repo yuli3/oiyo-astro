@@ -1,0 +1,8 @@
+{
+  "sort": "排序方式",
+  "category": "类别",
+  "mood": "心情",
+  "timeRange": {
+    "label": "时间范围"
+  }
+}

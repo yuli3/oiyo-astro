@@ -1,0 +1,88 @@
+{
+  "lifePath": {
+    "title": "Life Timeline",
+    "description": "The journey of your life mapped through major phases.",
+    "phases": {
+      "foundation": {
+        "period": "Foundation (0-20)",
+        "title": "Self Discovery",
+        "description": "A period of learning and forming your core ontology."
+      },
+      "prime": {
+        "period": "Prime (20-40)",
+        "title": "Potential Realization",
+        "description": "Maximum energy and professional growth."
+      },
+      "wisdom": {
+        "period": "Wisdom (40+)",
+        "title": "Legacy & Inner Peace",
+        "description": "Reaping the fruits of your labor and sharing wisdom."
+      }
+    }
+  },
+  "destiny": {
+    "title": "Destiny Timeline",
+    "yearly": "Annual Flow",
+    "monthly": "Monthly Rhythm",
+    "daily": "Daily Energy",
+    "themes": {
+      "1": "New Beginnings & Independence",
+      "2": "Cooperation & Patience",
+      "3": "Creative Expression & Joy",
+      "4": "Order & Foundation Building",
+      "5": "Change & Freedom",
+      "6": "Responsibility & Home",
+      "7": "Introspection & Wisdom",
+      "8": "Power & Achievement",
+      "9": "Completion & Letting Go"
+    },
+    "inflectionPoint": "Max Inflection Energy",
+    "chronos": "Chronos Timeline"
+  },
+  "radar": {
+    "title": "Vital Synchronization Radar",
+    "dimensions": {
+      "mind": "Mind",
+      "destiny": "Destiny",
+      "time": "Time",
+      "drive": "Drive",
+      "vitality": "Vitality"
+    },
+    "description": "Visualizing the alignment between your psychology, destiny, and the flow of time."
+  },
+  "sanctum": {
+    "title": "Astral Sanctum",
+    "description": "Your personal space for reflection and meditation.",
+    "enter": "Enter Sanctum"
+  },
+  "quantum": {
+    "title": "Quantum Destiny Simulator",
+    "subtitle": "Testing parallel life paths",
+    "simulate": "Run Simulation",
+    "results": "Simulation Results",
+    "reset": "Reset Original Profile",
+    "labels": {
+      "mbti": "MBTI",
+      "element": "Element",
+      "personalYear": "Personal Year",
+      "lifeType": "Life Type (HD)"
+    },
+    "simulationMode": "Simulation Mode Active: All results are based on virtual data."
+  },
+  "biological": {
+    "title": "Biological Resilience Coaching",
+    "subtitle": "Hormonal balance and lifestyle suggestions",
+    "circadian": "Circadian Rhythm",
+    "energy": "Energy Levels",
+    "advice": "Recommended Action",
+    "mainFunction": "Main Function",
+    "lifestyleAdvice": "Lifestyle Advice"
+  },
+  "synergy": {
+    "title": "Synergy Archetype",
+    "compatibility": "Compatibility",
+    "traits": "Key Traits",
+    "level": "Synergy Level",
+    "unlocked": "Synthesis Archetype Unlocked"
+  }
+}

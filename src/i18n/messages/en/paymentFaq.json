@@ -1,0 +1,276 @@
+{
+  "general": [
+    {
+      "icon": "✨",
+      "title": "Premium Insight",
+      "description": "Discover the unique patterns that define your path.",
+      "question": "What is your unique core frequency?",
+      "answer": "Inner harmony guides your everyday actions."
+    },
+    {
+      "icon": "🚀",
+      "title": "Premium Insight",
+      "description": "Unveil the hidden layers of your personal philosophy.",
+      "question": "How do you navigate life's currents?",
+      "answer": "Your unique perspective shapes your reality."
+    },
+    {
+      "icon": "💡",
+      "title": "Premium Insight",
+      "description": "Unveil the hidden layers of your personal philosophy.",
+      "question": "How do you navigate life's currents?",
+      "answer": "Small choices accumulate into a grand destiny."
+    },
+    {
+      "icon": "🎯",
+      "title": "Premium Insight",
+      "description": "Discover the unique patterns that define your path.",
+      "question": "What drives your inner world?",
+      "answer": "You possess an intuitive compass that points toward growth."
+    },
+    {
+      "icon": "🔥",
+      "title": "Premium Insight",
+      "description": "Explore the deep architecture of your inner landscape.",
+      "question": "What is your unique core frequency?",
+      "answer": "Inner harmony guides your everyday actions."
+    },
+    {
+      "icon": "⭐",
+      "title": "Premium Insight",
+      "description": "Explore the deep architecture of your inner landscape.",
+      "question": "What drives your inner world?",
+      "answer": "You possess an intuitive compass that points toward growth."
+    }
+  ],
+  "billing": [
+    {
+      "question": "How does billing work?",
+      "answer": "You're billed monthly on the same day you initially subscribed. For example, if you subscribe on the 15th, you'll be billed on the 15th of each month. You'll receive an email receipt for each payment."
+    },
+    {
+      "question": "Can I cancel anytime?",
+      "answer": "Absolutely! You can cancel your subscription at any time from your dashboard. You'll continue to have premium access until the end of your current billing period, then you won't be charged again."
+    },
+    {
+      "question": "What happens when I cancel?",
+      "answer": "When you cancel, you keep premium access until the end of your paid period. After that, your account reverts to free tier. All your data is preserved - you won't lose any test results or progress."
+    },
+    {
+      "question": "Can I get a refund?",
+      "answer": "Yes! We offer a 7-day money-back guarantee. If you request a refund within 7 days of purchase and haven't extensively used the service, we'll process a full refund. See our Refund Policy for complete details."
+    },
+    {
+      "question": "Will prices increase?",
+      "answer": "If we ever increase prices, existing subscribers will be notified at least 30 days in advance. Your rate will stay the same for at least one additional billing cycle after the notification."
+    },
+    {
+      "question": "Do you offer annual subscriptions?",
+      "answer": "Currently we only offer monthly subscriptions. Annual plans with discounts are planned for the future - we'll announce when they become available!"
+    }
+  ],
+  "security": [
+    {
+      "question": "Is my payment information secure?",
+      "answer": "Yes! We never store your credit card information. Payments are processed by PCI-DSS compliant providers (Toss Payments for Korea, LemonSqueezy internationally). All transactions are encrypted with industry-standard SSL/TLS."
+    },
+    {
+      "question": "Will my payment details be shared?",
+      "answer": "Never! Your payment information stays with the payment processor (Toss or LemonSqueezy). We only receive confirmation that payment was successful - we never see your actual card numbers or banking details."
+    },
+    {
+      "question": "How is my data protected?",
+      "answer": "All personality test data is encrypted and stored securely. We're GDPR compliant. You can export or delete your data at any time. Payment info is handled by certified payment processors, not stored by us."
+    },
+    {
+      "question": "Do you sell user data?",
+      "answer": "Absolutely not. We never sell, rent, or share your personal information or test results with third parties. Your privacy is our top priority. Read our Privacy Policy for complete details."
+    }
+  ],
+  "technical": [
+    {
+      "question": "My payment failed. What should I do?",
+      "answer": "Check your card details and ensure you have sufficient funds. If the issue persists, try a different card or contact your bank."
+    },
+    {
+      "question": "I didn't receive my receipt.",
+      "answer": "Receipts are sent automatically to your email. Check your spam folder or contact support if you can't find it."
+    },
+    {
+      "question": "I can't access premium features.",
+      "answer": "Try logging out and logging back in. If that doesn't work, check your subscription status in your dashboard. Still having issues? Contact support!"
+    }
+  ],
+  "test": {
+    "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+    "progress": "progress",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "selectOption": "Select option",
+    "subtitle": "Check detailed information",
+    "next": "next",
+    "previous": "before"
+  },
+  "meta": {
+    "title": "Customized analysis results",
+    "description": "Check out various financial tools and insights."
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What is your unique core frequency?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What is your unique core frequency?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "How do you navigate life's currents?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Small choices accumulate into a grand destiny."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "What drives your inner world?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What drives your inner world?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Your unique perspective shapes your reality."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What is your unique core frequency?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What drives your inner world?",
+        "answer": "Small choices accumulate into a grand destiny."
+      }
+    ]
+  },
+  "result": {
+    "title": "Detailed analysis report",
+    "description": "Detailed analysis report"
+  },
+  "paymentMethods": {
+    "title": "time for reflection"
+  },
+  "pricing": {
+    "title": "time for reflection"
+  },
+  "subtitle": "Everything you need to know about payments, billing and subscriptions",
+  "generalTitle": "general questions",
+  "billingTitle": "Billing and Subscriptions",
+  "securityTitle": "Security and Privacy",
+  "technicalTitle": "technical issues",
+  "stillHaveQuestions": "Still have questions? Our customer support team is here to help!",
+  "contactSupport": "Contact customer support",
+  "viewRefundPolicy": "View refund policy",
+  "title": "my financial profile",
+  "description": "Check out detailed financial information."
+}

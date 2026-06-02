@@ -1,0 +1,25 @@
+{
+  "title": "Astrologie Hellénistique",
+  "description": "Une Part Arabe calculée à partir de l'Ascendant, du Soleil et de la Lune, représentant la prospérité matérielle et la santé.",
+  "principles": {
+    "sect": {
+      "term": "Part de Fortune",
+      "description": "Une Part Arabe calculée à partir de l'Ascendant, du Soleil et de la Lune, représentant la prospérité matérielle et la santé."
+    },
+    "essential_dignity": {
+      "term": "Part de Fortune",
+      "description": "Une Part Arabe calculée à partir de l'Ascendant, du Soleil et de la Lune, représentant la prospérité matérielle et la santé."
+    },
+    "lot_of_fortune": {
+      "term": "Part de Fortune",
+      "description": "Une Part Arabe calculée à partir de l'Ascendant, du Soleil et de la Lune, représentant la prospérité matérielle et la santé."
+    }
+  },
+  "resonance": {
+    "note": "L'Archive observe un Thème de {sect}. Votre destin est ancré par {primary} (Primaire) et {secondary} (Secondaire), avec {participating} offrant son soutien."
+  },
+  "sect": {
+    "Day": "Jour",
+    "Night": "Nuit"
+  }
+}

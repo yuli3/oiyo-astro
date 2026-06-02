@@ -1,0 +1,21 @@
+{
+  "intro": {
+    "badge": "Contabilidad psicológica",
+    "title": "consumptionStyle",
+    "quote": "How you spend money reflects how you treat the world and love your life.",
+    "startButton": "Start Diagnostic"
+  },
+  "questions": {
+    "signal": "Question"
+  },
+  "results": {
+    "pattern": "Spending DNA",
+    "impact": "Wealth Flow",
+    "guidance": "Financial Wisdom",
+    "recalibrate": "Retake Test"
+  },
+  "meta": {
+    "title": "consumptionStyle",
+    "description": "Diseñando un espejo que refleja tu verdadera esencia..."
+  }
+}

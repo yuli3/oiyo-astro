@@ -1,0 +1,80 @@
+{
+  "title": "Centre de Fortune",
+  "subtitle": "Découvre ton destin à travers divers outils mystiques.",
+  "cta": "Entrer",
+  "hub": {
+    "meta": {
+      "title": "Finance Center",
+      "description": "Tests de personnalité financière, calculatrices et outils."
+    },
+    "title": "Centre financier",
+    "subtitle": "Maîtrisez votre destinée financière avec nos outils complets"
+  },
+  "tabs": {
+    "comprehensive": "Analyse Complète",
+    "saju": "Saju (Traditionnel)",
+    "tarot": "Tarot",
+    "astrology": "Astrologie",
+    "numerology": "Numérologie",
+    "dream": "Journal des Rêves",
+    "biorhythm": "Biorhythme",
+    "asset": "Awaiting deep synthesis...",
+    "budget": "Awaiting deep synthesis...",
+    "compound": "Awaiting deep synthesis...",
+    "gift": "Awaiting deep synthesis...",
+    "gig": "Awaiting deep synthesis...",
+    "freelancer": "Awaiting deep synthesis...",
+    "vat": "Awaiting deep synthesis...",
+    "card": "Awaiting deep synthesis...",
+    "realEstate": "Awaiting deep synthesis..."
+  },
+  "bizReport": "Awaiting deep synthesis...",
+  "calculate": "Awaiting deep synthesis...",
+  "dashboard": {
+    "scope": {
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "profile": {
+      "title": "Centre de Fortune",
+      "description": "Analysis based on your birth data"
+    },
+    "biorhythm": {
+      "title": "Centre de Fortune",
+      "physical": "Physical",
+      "emotional": "Emotional",
+      "intellectual": "Intellectual"
+    },
+    "fortune": {
+      "numerology": {
+        "title": "Centre de Fortune",
+        "lifePath": "Life Path",
+        "personalYear": "Personal Year"
+      }
+    },
+    "saju": {
+      "title": "Centre de Fortune",
+      "dominant": "Dominant Element",
+      "lacking": "Lacking Element"
+    },
+    "rating": {
+      "critical": "Critical",
+      "low": "Low",
+      "moderate": "Moderate",
+      "good": "Good",
+      "excellent": "Excellent"
+    },
+    "card": {
+      "score": "Note : {note}",
+      "advice": "Advice",
+      "luckyNumbers": "Lucky Numbers",
+      "luckyColors": "Lucky Colors",
+      "warnings": "Warnings"
+    },
+    "title": "Centre de Fortune"
+  },
+  "comprehensiveTitle": "Analyse Globale",
+  "comprehensiveDesc": "Saisis tes informations une seule fois pour obtenir des analyses de plusieurs disciplines."
+}

@@ -1,0 +1,1149 @@
+{
+  "labels": {
+    "hireDate": "Date d'Embauche",
+    "resignationDate": "Date de Démission",
+    "monthlySalary": "Salaire Mensuel (Avant impôts)",
+    "annualBonus": "Prime Annuelle (Au prorata)",
+    "annualLeave": "Allocation Congés Annuels Non Utilisés",
+    "severancePay": "Indemnité de Départ Estimée"
+  },
+  "results": {
+    "tenure": "Période de Service",
+    "estimated": "Indemnité de Départ Estimée",
+    "total": "Indemnité de Départ Totale Estimée"
+  },
+  "basis": {
+    "title": "Tableau de Bord",
+    "tenure": "Période de Service",
+    "monthlyBase": "Salaire de Base Mensuel",
+    "annualBonus": "Prime Annuelle (Au prorata)",
+    "annualLeave": "Allocation Congés Annuels Non Utilisés",
+    "threeMonthTotal": "Salaire Total sur 3 Mois",
+    "avgDailyWage": "Salaire Journalier Moyen",
+    "formula": "* Formule : Salaire Journalier Moyen × 30 jours × (Jours de Service ÷ 365)"
+  },
+  "legal": {
+    "title": "Tableau de Bord",
+    "note": "Cette calculatrice est uniquement à titre de référence et l'indemnité de départ réelle peut varier.",
+    "item1": "Utilise la formule standard basée sur la Loi sur la sécurité des prestations de retraite des employés.",
+    "item2": "Le salaire moyen réel inclut tous les salaires (salaire de base, allocations, primes, etc.) reçus au cours des 3 derniers mois.",
+    "item3": "Pour les cas complexes comme le règlement intermédiaire, veuillez consulter un avocat du travail.",
+    "item4": "Les employés avec moins d'1 an de service n'ont pas droit à une indemnité de départ."
+  },
+  "error": {
+    "lessThanYear": "Aucune indemnité de départ n'est générée si la période de service est inférieure à un an.",
+    "invalidDate": "La date d'embauche ne peut pas être postérieure à la date de démission."
+  },
+  "meta": {
+    "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois",
+    "disclaimer": "Ce calcul n'est qu'une estimation. L'indemnité de départ réelle peut varier en fonction de la politique de l'entreprise et des contrats de travail spécifiques.",
+    "title": "Tableau de Bord",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "test": {
+    "insightBullets": ["En attente de synthèse..."],
+    "progress": "Awaiting synthesis...",
+    "submit": "Awaiting synthesis...",
+    "loading": "Awaiting synthesis...",
+    "selectOption": "Awaiting synthesis..."
+  },
+  "result": {
+    "title": "Tableau de Bord",
+    "description": "Awaiting synthesis..."
+  },
+  "moneyHabits": {
+    "meta": {
+      "keywords": "Awaiting synthesis...",
+      "resultTitle": "Awaiting synthesis...",
+      "resultDescription": "Awaiting synthesis...",
+      "testTitle": "Évaluation des habitudes d'argent",
+      "testDescription": "Awaiting synthesis...",
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois",
+      "cta": "Awaiting synthesis...",
+      "badge": "Global Benchmarking",
+      "title": "Tableau de Bord"
+    },
+    "benefits": {
+      "items": {
+        "0": {
+          "emoji": "E",
+          "title": "Tableau de Bord",
+          "description": "Awaiting synthesis..."
+        },
+        "1": {
+          "emoji": "E",
+          "title": "Tableau de Bord",
+          "description": "Awaiting synthesis..."
+        },
+        "2": {
+          "emoji": "E",
+          "title": "Tableau de Bord",
+          "description": "Awaiting synthesis..."
+        }
+      },
+      "title": "Tableau de Bord"
+    },
+    "cta": {
+      "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois",
+      "button": "Take Tests Now",
+      "title": "Tableau de Bord"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "1": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "2": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "3": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      },
+      "title": "Tableau de Bord"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🚀",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "💡",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🎯",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🔥",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "⭐",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": [
+        "En attente de synthèse...",
+        "En attente de synthèse...",
+        "En attente de synthèse..."
+      ],
+      "common": {
+        "progress": "Awaiting synthesis...",
+        "next": "Awaiting synthesis...",
+        "previous": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "start": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "results": "Awaiting synthesis...",
+        "dashboard": "Awaiting synthesis...",
+        "insights": "Awaiting synthesis..."
+      },
+      "test": {
+        "insightBullets": ["En attente de synthèse..."],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis..."
+      },
+      "result": {
+        "title": "Tableau de Bord",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "Tableau de Bord",
+        "description": "Awaiting synthesis...",
+        "keywords": "Awaiting synthesis..."
+      },
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois",
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis...",
+      "finish": "Finition",
+      "swipeHint": "Astuce de balayage"
+    },
+    "result": {
+      "chart": {
+        "impulseControl": "Contrôle des impulsions",
+        "savingCapacity": "Capacité d'économie",
+        "planningSkill": "Compétence de planification",
+        "emotionalControl": "Contrôle émotionnel"
+      },
+      "test": {
+        "insightBullets": ["En attente de synthèse..."],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis..."
+      },
+      "result": {
+        "title": "Tableau de Bord",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "Tableau de Bord",
+        "description": "Awaiting synthesis...",
+        "keywords": "Awaiting synthesis..."
+      },
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "shareTitle": "Awaiting synthesis...",
+      "copySuccess": "Copie réussie",
+      "scoresTitle": "Awaiting synthesis...",
+      "impulseRisk": "Risque impulsif",
+      "strengths": "Awaiting synthesis...",
+      "challenges": "Défis",
+      "actionTips": "Conseils d'action",
+      "savingRecommendation": "Recommandation d'enregistrement",
+      "recommendedPercentage": "Pourcentage recommandé",
+      "share": "Awaiting synthesis...",
+      "retake": "Awaiting synthesis..."
+    },
+    "title": "Tableau de Bord",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "payment": {
+    "checkout": {
+      "orderName": "Abonnement Oiyo.net {planName}"
+    },
+    "errors": {
+      "PLAN_NOT_FOUND": "Awaiting synthesis...",
+      "PAYMENT_SERVICE_ERROR": "Awaiting synthesis...",
+      "PROVIDER_REQUIRED": "Awaiting synthesis...",
+      "LOCALE_REQUIRED": "Awaiting synthesis...",
+      "CURRENCY_REQUIRED": "Awaiting synthesis...",
+      "TOSS_CLIENT_KEY_REQUIRED": "Awaiting synthesis...",
+      "LEMONSQUEEZY_CONFIG_REQUIRED": "Awaiting synthesis...",
+      "generic": "Awaiting synthesis..."
+    },
+    "failed": {
+      "help": {
+        "technical": {
+          "refresh": "Actualiser la page",
+          "browser": "Essayez un autre navigateur",
+          "network": "Awaiting synthesis...",
+          "incognito": "Essayez le mode incognito/privé",
+          "title": "Tableau de Bord"
+        },
+        "payment": {
+          "title": "Tableau de Bord",
+          "checkCard": "Check your card details",
+          "checkFunds": "Ensure sufficient funds",
+          "tryAnother": "Awaiting synthesis...",
+          "contactBank": "Contact your bank"
+        }
+      },
+      "meta": {
+        "title": "Tableau de Bord",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🚀",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "💡",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🎯",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🔥",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "⭐",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🚀",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "💡",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🎯",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🔥",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "⭐",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "En attente de synthèse...",
+          "En attente de synthèse...",
+          "En attente de synthèse..."
+        ],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis...",
+        "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🚀",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "💡",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🎯",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🔥",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "⭐",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          }
+        ]
+      },
+      "result": {
+        "title": "Tableau de Bord",
+        "description": "Awaiting synthesis..."
+      },
+      "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois",
+      "genericTitle": "Erreur de paiement",
+      "genericDescription": "Awaiting synthesis...",
+      "genericAction": "Essayer à nouveau",
+      "unknownTitle": "Erreur inconnue",
+      "unknownDescription": "Awaiting synthesis...",
+      "unknownAction": "Contacter l'assistance",
+      "orderId": "Numéro de commande",
+      "orderIdNote": "Awaiting synthesis...",
+      "technicalDetails": "Détails techniques",
+      "errorCode": "Code d'erreur",
+      "errorMessage": "Message d'erreur",
+      "whatNext": "Que pouvez-vous faire ?",
+      "contactSupport": "Contacter l'assistance",
+      "backToHome": "Retour à la maison",
+      "needHelp": "Besoin d'aide ?",
+      "stillNeedHelp": "Vous rencontrez toujours des problèmes ?",
+      "getSupport": "Obtenir de l'aide",
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "success": {
+      "meta": {
+        "title": "Tableau de Bord",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🚀",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "💡",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🎯",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🔥",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "⭐",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🚀",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "💡",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🎯",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🔥",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "⭐",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "En attente de synthèse...",
+          "En attente de synthèse...",
+          "En attente de synthèse..."
+        ],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis...",
+        "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🚀",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "💡",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🎯",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "🔥",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          },
+          {
+            "icon": "⭐",
+            "title": "En attente de synthèse...",
+            "description": "En attente de synthèse...",
+            "question": "En attente de synthèse...",
+            "answer": "En attente de synthèse..."
+          }
+        ]
+      },
+      "result": {
+        "title": "Tableau de Bord",
+        "description": "Awaiting synthesis..."
+      },
+      "welcome', { name: user": {
+        "firstName || user": {
+          "fullName || t('success": {
+            "user": "Utilisatrice"
+          }
+        }
+      },
+      "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois",
+      "verifying": "Vérification du paiement...",
+      "verifyingDescription": "Awaiting synthesis...",
+      "premiumActive": "Actif Premium",
+      "welcome": "Bienvenue {nom} !",
+      "user": "Utilisatrice",
+      "paymentDetails": "Détails du paiement",
+      "orderId": "Numéro de commande",
+      "amount": "Montante",
+      "status": "Statut",
+      "confirmed": "Confirmé",
+      "verificationSuccess": "Awaiting synthesis...",
+      "verificationFailed": "Awaiting synthesis...",
+      "verificationNetworkError": "Awaiting synthesis...",
+      "verificationRetry": "Réessayez la vérification",
+      "verificationPending": "En attente de confirmation",
+      "approvedAt": "Approuvé à",
+      "featuresUnlocked": "Awaiting synthesis...",
+      "nextSteps": "Quelle est la prochaine étape ?",
+      "goToDashboard": "Aller au tableau de bord",
+      "takeTest": "Faites un test",
+      "supportNote": "Awaiting synthesis...",
+      "contactSupport": "Contacter l'assistance",
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "test": {
+      "insightBullets": ["En attente de synthèse..."],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "meta": {
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis..."
+    },
+    "checkCard": "Vérifiez les détails de votre carte",
+    "checkFunds": "Assurer des fonds suffisants",
+    "tryAnother": "Awaiting synthesis...",
+    "contactBank": "Contactez votre banque"
+  },
+  "globalComparison": {
+    "meta": {
+      "cta": {
+        "button": "Take Tests Now"
+      },
+      "keywords": "Awaiting synthesis...",
+      "badge": "Global Benchmarking",
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "filters": {
+      "region": "🌏 Sélectionnez une région",
+      "age": "👥 Tranche d'âge",
+      "gender": "⚧ Genre",
+      "test": "Awaiting synthesis..."
+    },
+    "tabs": {
+      "overview": "📈 Aperçu",
+      "regional": "🗺️ Comparaison régionale",
+      "demographics": "👥 Démographie",
+      "rankings": "🏆 Classements"
+    },
+    "chart": {
+      "scoreDistribution": "📊 Répartition des scores",
+      "personalityRankings": "🏆 Classement des types de personnalité",
+      "avgScore": "score moyen",
+      "users": "utilisatrices",
+      "topRankText": "Vous vous classez parmi les {percent} % d'utilisateurs les plus performants dans le monde 🚀",
+      "allAges": "Tous les âges",
+      "all": "Toute",
+      "male": "Femelle",
+      "female": "Femelle",
+      "global": "Mondiale",
+      "asia": "Asie",
+      "europe": "Europe",
+      "northAmerica": "Amérique du Nord",
+      "korea": "Corée",
+      "southAmerica": "Amérique du Sud",
+      "africa": "Afrique",
+      "oceania": "Océanie"
+    },
+    "demographics": {
+      "comingSoon": "📊 Des fonctionnalités d'analyse démographique seront bientôt disponibles."
+    },
+    "cta": {
+      "button": "Faites des tests maintenant",
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "features": {
+      "benchmarking": {
+        "title": "Tableau de Bord",
+        "description": "Awaiting synthesis..."
+      },
+      "regional": {
+        "title": "Tableau de Bord",
+        "description": "Awaiting synthesis..."
+      }
+    },
+    "insights": {
+      "yourScore": "Votre score",
+      "globalAverage": "Moyenne mondiale",
+      "percentile": "Centile",
+      "topPerformers": "Les plus performants",
+      "aboveAverage": "Au-dessus de la moyenne",
+      "belowAverage": "Faible",
+      "regions": "Régions"
+    },
+    "test": {
+      "insightBullets": ["En attente de synthèse..."],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "badge": "Analyse comparative mondiale",
+    "loading": "Awaiting synthesis...",
+    "noData": "📋 Aucune donnée à analyser. Veuillez d'abord effectuer des tests de personnalité.",
+    "title": "Tableau de Bord",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "luck": {
+    "meta": {
+      "keywords": "Awaiting synthesis..."
+    },
+    "hero": {
+      "eyebrow": "Smart Wallet Lab",
+      "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois",
+      "cta": "Awaiting synthesis..."
+    }
+  },
+  "spendingStyle": {
+    "meta": {
+      "keywords": "Awaiting synthesis..."
+    },
+    "hero": {
+      "eyebrow": "Laboratoire de portefeuille intelligent",
+      "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois",
+      "cta": "Awaiting synthesis..."
+    }
+  },
+  "nJobler": {
+    "test": {
+      "insightBullets": [
+        "En attente de synthèse...",
+        "En attente de synthèse...",
+        "En attente de synthèse..."
+      ],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois"
+    },
+    "meta": {
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🚀",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "💡",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🎯",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🔥",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "⭐",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🚀",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "💡",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🎯",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🔥",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "⭐",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🚀",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "💡",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🎯",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🔥",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "⭐",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        }
+      ]
+    },
+    "result": {
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "Tableau de Bord",
+    "description": "Awaiting synthesis..."
+  },
+  "giftTax": {
+    "test": {
+      "insightBullets": [
+        "En attente de synthèse...",
+        "En attente de synthèse...",
+        "En attente de synthèse..."
+      ],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois"
+    },
+    "meta": {
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🚀",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "💡",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🎯",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🔥",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "⭐",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🚀",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "💡",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🎯",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🔥",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "⭐",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🚀",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "💡",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🎯",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "🔥",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        },
+        {
+          "icon": "⭐",
+          "title": "En attente de synthèse...",
+          "description": "En attente de synthèse...",
+          "question": "En attente de synthèse...",
+          "answer": "En attente de synthèse..."
+        }
+      ]
+    },
+    "result": {
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "Tableau de Bord",
+    "description": "Awaiting synthesis..."
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "En attente de synthèse...",
+        "a": "En attente de synthèse..."
+      },
+      {
+        "q": "En attente de synthèse...",
+        "a": "En attente de synthèse..."
+      },
+      {
+        "q": "En attente de synthèse...",
+        "a": "En attente de synthèse..."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "title": "En attente de synthèse...",
+        "description": "En attente de synthèse..."
+      },
+      {
+        "title": "En attente de synthèse...",
+        "description": "En attente de synthèse..."
+      },
+      {
+        "title": "En attente de synthèse...",
+        "description": "En attente de synthèse..."
+      }
+    ]
+  },
+  "hub": {
+    "meta": {
+      "title": "Tableau de Bord",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "Tableau de Bord",
+    "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois"
+  },
+  "subtitle": "Vérifiez ton indemnité de départ estimée en utilisant la date d'embauche, de démission et le salaire de 3 mois",
+  "optional": "Optionnel",
+  "currency": "USD",
+  "disclaimer": "Ce calcul n'est qu'une estimation. L'indemnité de départ réelle peut varier en fonction de la politique de l'entreprise et des contrats de travail spécifiques.",
+  "ko-KR": "Ko-KR",
+  "title": "Tableau de Bord"
+}

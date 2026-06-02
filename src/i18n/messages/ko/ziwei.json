@@ -1,0 +1,150 @@
+{
+  "title": "자웨이두슈",
+  "systemName": "자웨이두슈",
+  "narrative": "보라색 별 점성술",
+  "resonance": {
+    "professionalChart": "전문 차트: {bureau}. {lifePalace}에서의 삶. 라이프팰리스의 별 {starCount}개."
+  },
+  "stars": {
+    "zi_wei": {
+      "name": "지 웨이",
+      "title": "황제",
+      "keywords": "리더십, 존엄성, 책임"
+    },
+    "tian_ji": {
+      "name": "티안 지",
+      "title": "전략가",
+      "keywords": "지능, 전략, 계산"
+    },
+    "tai_yang": {
+      "name": "타이양",
+      "title": "태양",
+      "keywords": "광채, 관대함, 명성"
+    },
+    "wu_qu": {
+      "name": "우 쿠",
+      "title": "파이낸스 스타",
+      "keywords": "부, 행동, 결단력"
+    },
+    "tian_tong": {
+      "name": "티안통",
+      "title": "기쁨의 별",
+      "keywords": "만족, 어린이다운, 조화"
+    },
+    "lian_zhen": {
+      "name": "리안 젠",
+      "title": "더 콤플렉스 스타",
+      "keywords": "열정, 정확성, 강렬함"
+    },
+    "tian_fu": {
+      "name": "티안푸",
+      "title": "재무부",
+      "keywords": "안정성, 관리, 주의"
+    },
+    "tai_yin": {
+      "name": "타이인",
+      "title": "달",
+      "keywords": "직관, 축적, 부드러움"
+    },
+    "tan_lang": {
+      "name": "탄랑",
+      "title": "늑대",
+      "keywords": "욕망, 사교, 호기심"
+    },
+    "ju_men": {
+      "name": "네 하지만",
+      "title": "연설가",
+      "keywords": "의사소통, 분석, 회의주의"
+    },
+    "tian_xiang": {
+      "name": "티안 시앙",
+      "title": "장군",
+      "keywords": "충성도, 서비스, 이미지"
+    },
+    "tian_liang": {
+      "name": "티안 리앙",
+      "title": "세이지",
+      "keywords": "지혜, 보호, 장수"
+    },
+    "qi_sha": {
+      "name": "큐샤",
+      "title": "파워스타",
+      "keywords": "액션, 파워, 위험 감수"
+    },
+    "po_jun": {
+      "name": "6월",
+      "title": "개척자",
+      "keywords": "혁신, 파괴, 변화"
+    },
+    "zuo_fu": {
+      "name": "푸주오",
+      "title": "왼쪽 어시스턴트",
+      "keywords": "지원, 귀족"
+    },
+    "you_bi": {
+      "name": "유비",
+      "title": "오른쪽 어시스턴트",
+      "keywords": "지원, 로맨스"
+    },
+    "wen_chang": {
+      "name": "웬 창",
+      "title": "지력",
+      "keywords": "예술, 웅변"
+    },
+    "wen_qu": {
+      "name": "웬 쿠",
+      "title": "정신",
+      "keywords": "웅변, 논리"
+    },
+    "tian_kui": {
+      "name": "티안 쿠이",
+      "title": "수상자",
+      "keywords": "기회, 멘토"
+    },
+    "tian_yue": {
+      "name": "티안 유에",
+      "title": "아카데미 회원",
+      "keywords": "기회, 상태"
+    },
+    "qing_yang": {
+      "name": "양칭",
+      "title": "파괴적인",
+      "keywords": "공격성, 갈등"
+    },
+    "tuo_luo": {
+      "name": "투오루오",
+      "title": "장애",
+      "keywords": "지연, 걱정"
+    },
+    "huo_xing": {
+      "name": "후오싱",
+      "title": "불 같은",
+      "keywords": "난기류, 속도"
+    },
+    "ling_xing": {
+      "name": "링 싱",
+      "title": "사이렌",
+      "keywords": "숨겨진 위험"
+    },
+    "di_kong": {
+      "name": "콩에서",
+      "title": "무효의",
+      "keywords": "상실, 영성"
+    },
+    "di_jie": {
+      "name": "디 지에",
+      "title": "강도",
+      "keywords": "상실, 영성"
+    },
+    "lu_cun": {
+      "name": "루쿤",
+      "title": "재무부",
+      "keywords": "부, 안전"
+    },
+    "tian_ma": {
+      "name": "티안 마",
+      "title": "페가수스",
+      "keywords": "이동, 여행"
+    }
+  }
+}

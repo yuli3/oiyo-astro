@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "PROTOCOL: GRAND RESONANCE",
+    "titlePrefix": "Two Souls,",
+    "titleSuffix": "One Destiny",
+    "description": "Align two spirit signatures. The Imperial Oracle will weave their cosmic threads into a single tapestry of fate."
+  },
+  "status": {
+    "accessing": "Accessing Imperial Archives...",
+    "insufficient": "Insufficient Soul Data",
+    "insufficientDesc": "To weave a destiny, at least two Primal Origins must be recorded in the sanctuary.",
+    "newOrigin": "Record New Origin",
+    "scrollForSynergy": "Scroll to view Synergy Matrix"
+  },
+  "selection": {
+    "master": "The Proclaimer (Yang)",
+    "resonance": "The Responder (Yin)",
+    "synthesize": "Initiate Sacred Synthesis"
+  },
+  "report": {
+    "layers": {
+      "destiny": "Destiny",
+      "psychology": "Heart",
+      "vibration": "Vibration"
+    },
+    "narrative": {
+      "vision": "The Oracle's Vision"
+    },
+    "title": "The Mirror of Souls"
+  },
+  "title": "Sacred Synthesis: The Weaving of Fate",
+  "backButton": "Return to Sanctuary",
+  "shareButton": "Share Cosmic Bond",
+  "oracleTitle": "Oracle Insight",
+  "dimensionsTitle": "Dimensional Resonance",
+  "analysis": {
+    "detailed": "Detailed Synergy Analysis"
+  },
+  "iching": {
+    "title": "The Book of Changes",
+    "revelation": "Hexagram Revelation"
+  },
+  "partialDataWarning": "The threads of fate are incomplete.",
+  "addMoreInfo": "Provide more soul data",
+  "cta": {
+    "title": "Your Shared Destiny Awaits",
+    "subtitle": "Record this bond in the archives",
+    "share": "Share Result",
+    "download": "Download Archive"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "시간관리 스타일 분석",
+    "description": "당신의 고유한 시간 관리 프로필을 발견하고 생산성을 높이세요.",
+    "keywords": "시간관리, 생산성, 업무스타일, 성격"
+  },
+  "landing": {
+    "title": "나의 시간관리 스타일",
+    "subtitle": "5분 안에 생산성 청사진을 찾아보세요.",
+    "description": "시간 관리 방법을 이해하는 것은 잠재력을 최대한 발휘하기 위한 첫 번째 단계입니다. 우리의 과학적 분석은 핵심 패턴을 식별하고 실행 가능한 전략을 제공합니다.",
+    "cta": "분석 시작",
+    "features": [
+      "⏰ 6 시간관리 유형 분석",
+      "📈 맞춤형 생산성 팁",
+      "🎯 최적의 활동 시간",
+      "💡 업무 스타일 추천"
+    ],
+    "typesTitle": "6가지 시간 관리 스타일",
+    "types": {
+      "earlyBird": {
+        "title": "얼리버드",
+        "description": "아침에 최고조에 달하며 체계적인 시작을 좋아합니다.",
+        "icon": "😰",
+        "bg": "from-gray-50 to-slate-50"
+      },
+      "nightOwl": {
+        "title": "밤 올빼미",
+        "description": "세상이 조용할 때 창의적인 흐름을 찾습니다.",
+        "icon": "😰",
+        "bg": "from-gray-50 to-slate-50"
+      },
+      "executor": {
+        "title": "집행자",
+        "description": "할 일 목록에서 항목을 삭제하는 데 중점을 둡니다.",
+        "icon": "😰",
+        "bg": "from-gray-50 to-slate-50"
+      },
+      "planner": {
+        "title": "플래너",
+        "description": "조치를 취하기 전에 모든 세부 사항을 계획합니다.",
+        "icon": "😰",
+        "bg": "from-gray-50 to-slate-50"
+      },
+      "flexible": {
+        "title": "유연한",
+        "description": "변화하는 우선순위와 흐름에 쉽게 적응합니다.",
+        "icon": "😰",
+        "bg": "from-gray-50 to-slate-50"
+      },
+      "procrastinator": {
+        "title": "완벽주의자 미루는 사람",
+        "description": "'완벽한' 순간이 시작되기를 기다립니다.",
+        "icon": "😰",
+        "bg": "from-gray-50 to-slate-50"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "faceShape": "脸型",
+  "personalColor": "个人色彩",
+  "achievements": "成就",
+  "totalAmount": "总金额",
+  "supplyAmount": "供应金额",
+  "salaryInput": "薪水",
+  "salaryPlaceholder": "输入薪水",
+  "dependents": "受抚养人",
+  "children": "子女",
+  "calculate": "计算",
+  "calculatePrompt": "输入详细信息以计算。",
+  "disclaimerText": "非财务建议。"
+}

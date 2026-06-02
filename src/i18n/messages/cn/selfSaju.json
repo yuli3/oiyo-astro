@@ -1,0 +1,38 @@
+{
+  "title": "自助四柱分析",
+  "description": "探索您的命理支柱。",
+  "inputs": {
+    "birthDate": "出生日期",
+    "birthTime": "出生时辰",
+    "calculate": "计算"
+  },
+  "result": {
+    "title": "您的命运分析",
+    "description": "来自四柱命理的洞察",
+    "time": "时柱",
+    "day": "日柱",
+    "month": "月柱",
+    "year": "年柱",
+    "fiveElements": "五行分析"
+  },
+  "meta": {
+    "title": "您的命运分析",
+    "description": "来自四柱命理的洞察",
+    "keywords": "四柱, 命理, 算命, 韩国占星术"
+  },
+  "hero": {
+    "title": "您的命运分析",
+    "subtitle": "通过古老智慧了解您的人生道路",
+    "cta": "发现我的命运",
+    "badge": "🔮 传统智慧"
+  },
+  "test": {
+    "insightBullets": ["了解你的人生目标", "发现你的优势", "了解你的命运"],
+    "progress": "进度",
+    "next": "下一步",
+    "previous": "上一步",
+    "submit": "提交",
+    "loading": "正在分析您的命运...",
+    "selectOption": "请选择"
+  }
+}

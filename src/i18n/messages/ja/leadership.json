@@ -1,0 +1,580 @@
+{
+  "leadership": {
+    "meta": {
+      "title": "Authoritative Leader",
+      "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+      "keywords": "leadership, management, team building, assessment"
+    },
+    "hero": {
+      "badge": "💼 Leadership Style",
+      "title": "Authoritative Leader",
+      "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+      "cta": "Start Assessment"
+    },
+    "test": {
+      "analyzing": "Deciphering your leadership DNA...",
+      "calculating": "Calculating style match...",
+      "loading": "Unveiling your inner commander...",
+      "questionProgress": "質問 {現在} / {合計}"
+    },
+    "result": {
+      "yourStyle": "Your Leadership Style",
+      "score": "Style Match",
+      "coreApproach": "Efficient goal achievement through clear direction and control",
+      "strengths": "Key Strengths",
+      "challenges": "Potential Challenges",
+      "communication": "Communication Style",
+      "decisionMaking": "Quick and independent decision-making",
+      "teamManagement": "Setting clear roles, responsibilities, and performance standards",
+      "bestEnvironment": "Best Environment",
+      "developmentTips": "Development Tips",
+      "famousLeaders": "Famous Leaders with this Style",
+      "idealFor": "Ideal Industries & Roles"
+    },
+    "questions": {
+      "q1": {
+        "options": [
+          {
+            "text": "明確なビジョンを提示し、チームにインスピレーションを与える"
+          },
+          {
+            "text": "一緒にブレインストーミングを行い、チームの意見を収集する"
+          },
+          {
+            "text": "各メンバーの強みを特定し、1 対 1 でコーチングを提供します"
+          },
+          {
+            "text": "全体的な戦略を策定し、明確な方向性を設定する"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q2": {
+        "options": [
+          {
+            "text": "どのように支援できるかを尋ね、必要なサポートを提供する"
+          },
+          {
+            "text": "一緒に問題を分析し、解決策を見つけます"
+          },
+          {
+            "text": "明確な解決策と行動計画を提示する"
+          },
+          {
+            "text": "質問をして自分たちで解決することで、子どもたちの成長を助けます"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q3": {
+        "options": [
+          {
+            "text": "チームの意見を聞いて一緒に決める"
+          },
+          {
+            "text": "長期的な目標と戦略的な観点から判断する"
+          },
+          {
+            "text": "素早く決断し、明確な指示を与える"
+          },
+          {
+            "text": "ビジョンと一致するかどうかを確認して決定します"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q4": {
+        "options": [
+          {
+            "text": "チームメンバーのモチベーションを高め、変化をリードする"
+          },
+          {
+            "text": "個人の能力開発のためのコーチングプランを作成する"
+          },
+          {
+            "text": "一緒に原因を分析し、改善策を見つけます"
+          },
+          {
+            "text": "明確な基準と責任を再確立する"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q5": {
+        "options": [
+          {
+            "text": "チームメンバーの成長と発展を支援する"
+          },
+          {
+            "text": "明確なビジョンを提示し、未来を描く"
+          },
+          {
+            "text": "チームメンバーをサポートし、成功を支援する"
+          },
+          {
+            "text": "組織目標を達成するための戦略の策定"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q6": {
+        "options": [
+          {
+            "text": "全員が意見を共有できるようにファシリテーションを行う"
+          },
+          {
+            "text": "全体像と長期的な目標を思い出す"
+          },
+          {
+            "text": "効率的に実行し、明確な結論を導き出す"
+          },
+          {
+            "text": "チームのアイデアを結びつけ、相乗効果を生み出す"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q7": {
+        "options": [
+          {
+            "text": "チームのビジョンと追求する価値観を共有する"
+          },
+          {
+            "text": "何が必要かを尋ね、調整を手助けする"
+          },
+          {
+            "text": "強みと目標を理解するための 1 対 1 の時間を確保する"
+          },
+          {
+            "text": "明確な役割と期待を説明する"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q8": {
+        "options": [
+          {
+            "text": "自由なアイデアの共有と実験を奨励する"
+          },
+          {
+            "text": "革新的なビジョンを提示し、インスピレーションを与える"
+          },
+          {
+            "text": "チームメンバーが協力して相乗効果を生み出すのを支援する"
+          },
+          {
+            "text": "個々の創造力を伸ばすコーチング"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q9": {
+        "options": [
+          {
+            "text": "双方の意見を聞き、一緒に解決策を見つけます"
+          },
+          {
+            "text": "明確な原則と基準に基づいて決定する"
+          },
+          {
+            "text": "より大きな目標を思い出して対立を解決する"
+          },
+          {
+            "text": "視点を理解し、成長の機会として活用できるように支援する"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      },
+      "q10": {
+        "options": [
+          {
+            "text": "メンバー一人ひとりが最高のパフォーマンスを発揮できるチーム"
+          },
+          {
+            "text": "継続的に革新し、変化をリードするチーム"
+          },
+          {
+            "text": "戦略的目標を効果的に達成するチーム"
+          },
+          {
+            "text": "協力して相乗効果を生み出すチーム"
+          }
+        ],
+        "text": "How do you want to develop the team long-term?"
+      }
+    },
+    "styles": {
+      "transformational": {
+        "strengths": [
+          "チームメンバーに強いモチベーションとインスピレーションを与える",
+          "革新的なアイデアと創造的思考を奨励する",
+          "ポジティブな組織文化の構築",
+          "長期ビジョンの提示と実行",
+          "チームが潜在能力を最大限に発揮できるように支援する"
+        ],
+        "challenges": [
+          "詳細な実行よりもビジョンを重視する傾向",
+          "変化への疲労を管理するのが難しい",
+          "短期的な目標を無視する可能性がある",
+          "実際的な制約を見落とす可能性"
+        ],
+        "bestEnvironment": [
+          "変化と革新を必要とする組織",
+          "創造性と挑戦を奨励する文化",
+          "長期的なビジョンが重要なプロジェクト",
+          "チームの育成と成長を優先する環境"
+        ],
+        "developmentTips": [
+          "詳細な実行計画スキルの強化",
+          "短期的な目標と長期的なビジョンのバランスを取る",
+          "チームの変化疲労を監視する",
+          "現実的な制約を考慮する",
+          "定期的なフィードバックとパフォーマンスのレビュー"
+        ],
+        "famousLeaders": [
+          "スティーブ・ジョブズ (アップル)",
+          "イーロン・マスク (テスラ、スペースX)",
+          "リチャード・ブランソン (ヴァージン・グループ)",
+          "オプラ・ウィンフリー (ハーポ・プロダクションズ)"
+        ],
+        "idealFor": [
+          "スタートアップと成長企業",
+          "デジタル変革プロジェクト",
+          "組織文化の革新",
+          "新規事業開発"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "democratic": {
+        "strengths": [
+          "高いチームエンゲージメントとコミットメント",
+          "多様な視点を反映した意思決定",
+          "強いチームの結束力と信頼",
+          "創造的なアイデアの発見",
+          "チームメンバーのオーナーシップの向上"
+        ],
+        "challenges": [
+          "意思決定に時間がかかることがある",
+          "緊急事態への対応が難しい",
+          "合意形成プロセスの複雑さ",
+          "明確な方向性が欠如している可能性"
+        ],
+        "bestEnvironment": [
+          "高度なスキルを持つチーム",
+          "創造性が重要なプロジェクト",
+          "長期計画",
+          "安定した労働環境"
+        ],
+        "developmentTips": [
+          "素早い決断が必要な状況に備える",
+          "時にはリーダーシップの必要性を認識する",
+          "非効率な議論を防ぐ方法を学ぶ",
+          "明確なガイドラインを提供する",
+          "タイムラインと優先順位を管理する"
+        ],
+        "famousLeaders": [
+          "ネルソン・マンデラ (南アフリカ大統領)",
+          "アンゲラ・メルケル (ドイツ首相)",
+          "ウォーレン・バフェット (バークシャー・ハサウェイ)",
+          "ハワード・シュルツ (スターバックス)"
+        ],
+        "idealFor": [
+          "研究開発チーム",
+          "クリエイティブなプロジェクト",
+          "教育機関および学術機関",
+          "非営利団体"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "coaching": {
+        "strengths": [
+          "高いチーム満足度と忠誠心",
+          "個々の強みを発見し、伸ばす",
+          "長期的な人材育成",
+          "ポジティブフィードバックの文化",
+          "チームメンバーの自己効力感の向上"
+        ],
+        "challenges": [
+          "時間とエネルギーの消費が多い",
+          "短期的な結果よりも長期的な発展に重点を置く",
+          "チームメンバー全員に平等な注意を払うことが難しい",
+          "場合によっては直接の指示が必要になることもある"
+        ],
+        "bestEnvironment": [
+          "人材育成が重要な組織",
+          "長期プロジェクト",
+          "強力な学習文化のある環境",
+          "専門能力の開発が必要なチーム"
+        ],
+        "developmentTips": [
+          "チームの目標と個人の成長のバランスを取る",
+          "効率的なコーチング セッションを実施する",
+          "短期的に達成するための方法を学ぶ",
+          "グループコーチングスキルを開発する",
+          "優先順位の設定と時間管理"
+        ],
+        "famousLeaders": [
+          "ビル・キャンベル (シリコンバレーの伝説的なコーチ)",
+          "ジョン・ウッデン (UCLAバスケットボールコーチ)",
+          "サティア ナデラ (マイクロソフト)",
+          "インドラ・ヌーイ (ペプシコ社)"
+        ],
+        "idealFor": [
+          "コンサルティング会社",
+          "教育プログラム",
+          "初期段階のスタートアップチーム",
+          "高成長企業"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "visionary": {
+        "strengths": [
+          "強力なビジョンと方向性を提示する",
+          "長期的な目標を達成する能力",
+          "不確実性の中で明確さを提供する",
+          "チームメンバーに目的意識を与える",
+          "革新的な思考と戦略策定"
+        ],
+        "challenges": [
+          "詳細な実行を無視する可能性があります",
+          "現在の問題に対する注意が欠けている可能性",
+          "ビジョンと現実のギャップ",
+          "短期的な目標を無視する傾向がある"
+        ],
+        "bestEnvironment": [
+          "変化が必要な組織",
+          "新しい市場の開拓",
+          "長期プロジェクト",
+          "イノベーションが重要な業界"
+        ],
+        "developmentTips": [
+          "実行計画と詳細な戦略を策定する",
+          "現在の問題に対する注意を高める",
+          "短期的な目標とビジョンを結び付ける",
+          "チームメンバーの現実的な懸念に耳を傾ける",
+          "段階的なマイルストーンを設定する"
+        ],
+        "famousLeaders": [
+          "マーティン・ルーサー・キング・ジュニア",
+          "ジェフ・ベゾス (アマゾン)",
+          "マーク・ザッカーバーグ (メタ)",
+          "ジャック・マー (アリババ)"
+        ],
+        "idealFor": [
+          "スタートアップの創業",
+          "ビジネス変革",
+          "新規市場参入",
+          "組織再編"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "servant": {
+        "strengths": [
+          "高いチームの信頼と忠誠心",
+          "チームの福利厚生と満足度を重視",
+          "ポジティブな組織文化の構築",
+          "チームの自主性と責任の向上",
+          "長期的な関係を築く"
+        ],
+        "challenges": [
+          "難しい決断を下す際の躊躇",
+          "チームのニーズと組織の目標のバランスを取る",
+          "時には強力なリーダーシップが必要になることもある",
+          "自分自身のニーズを無視する可能性"
+        ],
+        "bestEnvironment": [
+          "コラボレーションが重要な環境",
+          "長期的な関係を重視する組織",
+          "チームワークベースのプロジェクト",
+          "人間中心の文化"
+        ],
+        "developmentTips": [
+          "必要なときにしっかりとした決断を下す",
+          "組織の目標とチームの福利厚生のバランスを取る",
+          "セルフケアと境界設定",
+          "業績管理の強化",
+          "効果的な委任スキルを開発する"
+        ],
+        "famousLeaders": [
+          "マザー・テレサ",
+          "ハーブ・ケレハー (サウスウエスト航空)",
+          "シェリル・サンドバーグ (Facebook)",
+          "ポール・ポルマン (ユニリーバ)"
+        ],
+        "idealFor": [
+          "非営利団体",
+          "医療福祉機関",
+          "教育機関",
+          "顧客サービスを重視する企業"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "strategic": {
+        "strengths": [
+          "明確な目標と実行計画",
+          "データに基づいた意思決定",
+          "効率的なリソース割り当て",
+          "リスク管理能力",
+          "長期にわたる実績"
+        ],
+        "challenges": [
+          "変化に対する柔軟性が欠如している可能性がある",
+          "人よりもプロセスを優先する傾向",
+          "創造性と自発性を制限する",
+          "過剰な分析による実行遅延"
+        ],
+        "bestEnvironment": [
+          "複雑なビジネス環境",
+          "競争の激しい市場",
+          "長期プロジェクト",
+          "成果主義組織"
+        ],
+        "developmentTips": [
+          "柔軟性と適応力を養う",
+          "チームの感情とモチベーションを考慮する",
+          "迅速な実行と実験を奨励する",
+          "創造的な思考を受け入れる",
+          "直感とデータのバランスを取る"
+        ],
+        "famousLeaders": [
+          "ラリー・ペイジ (Google)",
+          "ティム・クック (アップル)",
+          "Satoru Iwata (Nintendo)",
+          "メアリー・バーラ (ゼネラルモーターズ)"
+        ],
+        "idealFor": ["製造業", "金融サービス", "大企業", "プロジェクト管理"],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "collaborative": {
+        "strengths": [
+          "強いチームの結束力",
+          "効果的なコラボレーション文化",
+          "多様な視点の統合",
+          "創造的な問題解決",
+          "相互支援と信頼"
+        ],
+        "challenges": [
+          "意思決定スピードの低下の可能性",
+          "紛争管理の難しさ",
+          "明確な方向性の欠如",
+          "個人の責任が不明確"
+        ],
+        "bestEnvironment": [
+          "複雑な問題解決",
+          "部門横断的なプロジェクト",
+          "イノベーションを必要とする環境",
+          "多様性が強みとなるチーム"
+        ],
+        "developmentTips": [
+          "素早い意思決定能力を養う",
+          "建設的な紛争管理スキル",
+          "明確な役割と責任を定義する",
+          "効率的な会議運営",
+          "個人のパフォーマンスを評価する方法"
+        ],
+        "famousLeaders": [
+          "スーザン・ウォジツキ (YouTube)",
+          "エリック・シュミット (Google)",
+          "ロス・マルセロ (Salesforce)",
+          "ケネス・シェノールト (アメリカン・エキスプレス)"
+        ],
+        "idealFor": [
+          "アジャイルチーム",
+          "デザイン思考プロジェクト",
+          "スタートアップ",
+          "コンサルティング"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "Efficient goal achievement through clear direction and control",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      },
+      "authoritative": {
+        "strengths": [
+          "迅速な意思決定と実行",
+          "明確な目標と期待",
+          "効果的な危機対応",
+          "一貫した基準とプロセス",
+          "高い生産性"
+        ],
+        "challenges": [
+          "チームの創造性が制限される可能性",
+          "チームのエンゲージメントとモチベーションが低い",
+          "依存関係の増加",
+          "変化に対する抵抗の可能性"
+        ],
+        "bestEnvironment": [
+          "危機的状況",
+          "明確な方向性が求められる環境",
+          "新しいメンバーが多い組織",
+          "迅速な実行が重要なプロジェクト"
+        ],
+        "developmentTips": [
+          "チームの意見を得る機会を提供する",
+          "創造性と自主性を促進する",
+          "感情的なコミュニケーションスキルを開発する",
+          "委任と権限付与を実践する",
+          "柔軟なアプローチを学ぶ"
+        ],
+        "famousLeaders": [
+          "スティーブ・ジョブズ (初期の Apple)",
+          "ゴードン・ラムゼイ",
+          "マーガレット・サッチャー",
+          "ロンバルディが勝利"
+        ],
+        "idealFor": [
+          "危機管理",
+          "軍隊/警察",
+          "製造業の生産管理",
+          "緊急対応チーム"
+        ],
+        "title": "Authoritative Leader",
+        "subtitle": "Leader driving results with clear direction and standards",
+        "description": "You are an authoritative leader who leads the team through clear standards and direction. You value efficiency and results, achieving goals with quick decision-making and execution.",
+        "coreApproach": "明確な指示と制御による効率的な目標達成",
+        "communicationStyle": "Clear and direct instruction and feedback",
+        "decisionMaking": "Quick and independent decision-making",
+        "teamManagement": "Setting clear roles, responsibilities, and performance standards"
+      }
+    }
+  }
+}

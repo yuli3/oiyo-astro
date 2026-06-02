@@ -1,0 +1,11 @@
+{
+  "badge": "韧性评估",
+  "intro": "探索您从人生挑战中复原的能力。",
+  "result": {
+    "level": "韧性等级",
+    "score": "当前分数",
+    "profile_title": "韧性档案",
+    "guidance_title": "成长指引"
+  },
+  "title": "韧性评分"
+}

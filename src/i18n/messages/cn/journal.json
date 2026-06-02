@@ -1,0 +1,25 @@
+{
+  "title": "内容",
+  "subtitle": "学习如何有效地记录和分析您的梦境",
+  "gettingStarted": "开始使用",
+  "steps": ["把日记本放在床边", "醒来后立即书写", "包含情绪和颜色"],
+  "whatToRecord": {
+    "title": "内容",
+    "basic": {
+      "title": "内容",
+      "items": ["日期和时间", "地点", "相关人物"]
+    },
+    "content": {
+      "title": "内容",
+      "items": ["情节和事件", "感受到的情绪", "颜色和符号"]
+    }
+  },
+  "interpretationTips": "解梦技巧",
+  "interpretationTipsItems": [
+    "寻找个人联想",
+    "考虑当前的生活背景",
+    "注意反复出现的主题"
+  ],
+  "improveRecall": "提高梦境回忆",
+  "improveRecallItems": ["睡前设定意图", "慢慢醒来", "立即记录片段"]
+}

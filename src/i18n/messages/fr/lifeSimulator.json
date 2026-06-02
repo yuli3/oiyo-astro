@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "keywords": "simulateur de vie, choix de vie, simulation de vie, simulation de carrière, test, jeu de vie, prédiction d'avenir, parcours de vie",
+    "title": "Simulateur de Vie",
+    "description": "Cartographie de l'architecture secrète de ta personnalité..."
+  },
+  "hero": {
+    "subtitle": "Faites tes choix et découvrez quelle vie vous attend",
+    "cta": "Commencer"
+  },
+  "test": {
+    "progressTitle": "Life Progress",
+    "ageUnit": " years old",
+    "stageLabel": "Life Stage {stage}"
+  },
+  "stats": {
+    "career": "Carrière",
+    "wealth": "Fortune",
+    "relationship": "Relationship",
+    "happiness": "Bonheur",
+    "health": "Health"
+  },
+  "result": {
+    "rarity": {
+      "legendary": "Legendary",
+      "rare": "Rare",
+      "uncommon": "Uncommon",
+      "common": "Common"
+    },
+    "scoreLabel": "Total Score",
+    "rankingLabel": "Top Ranking",
+    "achievementsLabel": "Key Achievements",
+    "adviceLabel": "💡 Life Advice",
+    "finalStatsTitle": "Final Stats",
+    "journeyTitle": "Life Journey",
+    "ageAxis": "Age",
+    "share": "Share Result",
+    "retake": "Live Again"
+  },
+  "cta": {
+    "subtitle": "Faites tes choix et découvrez quelle vie vous attend",
+    "button": "Commencer"
+  }
+}

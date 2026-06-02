@@ -1,0 +1,571 @@
+{
+  "dating": {
+    "meta": {
+      "test": {
+        "insightBullets": ["내면의 깊은 심리 구조를 탐구하세요."],
+        "progress": "진전",
+        "submit": "제출하기",
+        "loading": "로드 중",
+        "selectOption": "선택하기",
+        "next": "다음",
+        "previous": "이전의"
+      },
+      "result": {
+        "title": "상세 분석 보고서",
+        "description": "우리는 이 서비스가 여러분에게 제공할 구체적인 가치와 통찰력을 준비하고 있습니다."
+      },
+      "meta": {
+        "title": "맞춤형 진단",
+        "description": "우리는 이 서비스가 여러분에게 제공할 구체적인 가치와 통찰력을 준비하고 있습니다.",
+        "keywords": "핵심, 단어"
+      },
+      "resultTitle": "MBTI 연애 결과 분석",
+      "resultDescription": "MBTI 데이트 결과에 대한 심층 분석.",
+      "testTitle": "MBTI 연애 평가",
+      "testDescription": "지금 당신의 MBTI 데이트 점수를 계산해보세요.",
+      "keywords": "MBTI 데이트,분석,점수,전문가",
+      "title": "데이트 테스트",
+      "description": "데이트 테스트를 받아보세요."
+    },
+    "hero": {
+      "subtitle": "나의 MBTI 기준 연애 스타일은?",
+      "badge": "새로운",
+      "cta": "테스트 시작",
+      "title": "계기반",
+      "description": "심층적인 데이터 기반 보고서"
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "처음 보는 사람들과 함께하는 파티에서 나는...",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "에너지를 얻으며 대화를 주도한다.",
+            "emoji": "🥳",
+            "scores": {
+              "E": 1
+            }
+          },
+          {
+            "text": "조용한 곳에서 몇몇 사람들과 깊은 대화를 나눈다.",
+            "emoji": "🤔",
+            "scores": {
+              "I": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "마음에 드는 사람을 발견했을 때...",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "상대방의 현실적인 조건(직업, 스타일 등)에 먼저 끌린다.",
+            "emoji": "💼",
+            "scores": {
+              "S": 1
+            }
+          },
+          {
+            "text": "상대방과 함께할 미래를 상상하며 먼저 끌린다.",
+            "emoji": "💭",
+            "scores": {
+              "N": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "연인과 다퉜을 때 나는...",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "문제가 무엇인지 논리적으로 분석하고 해결책을 찾으려 한다.",
+            "emoji": "🧐",
+            "scores": {
+              "T": 1
+            }
+          },
+          {
+            "text": "상대방의 감정을 먼저 살피고 공감하며 위로하려 한다.",
+            "emoji": "❤️",
+            "scores": {
+              "F": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "데이트 계획을 세울 때...",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "맛집부터 카페, 동선까지 완벽하게 계획한다.",
+            "emoji": "🗺️",
+            "scores": {
+              "J": 1
+            }
+          },
+          {
+            "text": "그날의 기분에 따라 즉흥적으로 갈 곳을 정한다.",
+            "emoji": "🎉",
+            "scores": {
+              "P": 1
+            }
+          }
+        ]
+      }
+    ],
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "내면의 목소리",
+          "description": "당신의 개인적 철학 속에 숨겨진 층을 밝혀냅니다.",
+          "question": "당신만의 고유한 핵심 주파수는 무엇인가요?",
+          "answer": "당신은 성장을 향한 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "추진력 분석",
+          "description": "당신의 내면 세계를 움직이는 힘을 탐구합니다.",
+          "question": "당신의 내면 세계를 움직이는 동력은 무엇인가요?",
+          "answer": "당신의 독특한 관점이 현실을 형성합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "깊은 통찰",
+          "description": "내면 풍경의 깊은 구조를 탐색합니다.",
+          "question": "삶의 흐름을 어떻게 헤쳐나가시나요?",
+          "answer": "당신은 성장을 향한 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "패턴 발견",
+          "description": "당신의 길을 정의하는 독특한 패턴을 발견하세요.",
+          "question": "미지의 세계에 당신의 영혼은 어떻게 반응하나요?",
+          "answer": "당신의 독특한 관점이 현실을 형성합니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "진정한 자아",
+          "description": "진정한 자아의 별자리를 그려봅니다.",
+          "question": "미지의 세계에 당신의 영혼은 어떻게 반응하나요?",
+          "answer": "당신의 독특한 관점이 현실을 형성합니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "거대한 운명",
+          "description": "당신의 길을 정의하는 독특한 패턴을 발견하세요.",
+          "question": "당신의 내면 세계를 움직이는 동력은 무엇인가요?",
+          "answer": "작은 선택들이 모여 거대한 운명을 만듭니다."
+        }
+      ],
+      "subtitle": "심층 분석 보고서",
+      "title": "계기반"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "내면의 목소리",
+          "description": "내면 풍경의 깊은 구조를 탐색합니다.",
+          "question": "당신만의 고유한 핵심 주파수는 무엇인가요?",
+          "answer": "당신의 독특한 관점이 현실을 형성합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "추진력 분석",
+          "description": "당신의 개인적 철학 속에 숨겨진 층을 밝혀냅니다.",
+          "question": "삶의 흐름을 어떻게 헤쳐나가시나요?",
+          "answer": "당신의 독특한 관점이 현실을 형성합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "깊은 통찰",
+          "description": "당신의 개인적 철학 속에 숨겨진 층을 밝혀냅니다.",
+          "question": "삶의 흐름을 어떻게 헤쳐나가시나요?",
+          "answer": "작은 선택들이 모여 거대한 운명을 만듭니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "패턴 발견",
+          "description": "당신의 길을 정의하는 독특한 패턴을 발견하세요.",
+          "question": "삶의 흐름을 어떻게 헤쳐나가시나요?",
+          "answer": "작은 선택들이 모여 거대한 운명을 만듭니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "진정한 자아",
+          "description": "당신의 개인적 철학 속에 숨겨진 층을 밝혀냅니다.",
+          "question": "삶의 흐름을 어떻게 헤쳐나가시나요?",
+          "answer": "내면의 조화가 당신의 일상적인 행동을 가이드합니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "거대한 운명",
+          "description": "당신의 길을 정의하는 독특한 패턴을 발견하세요.",
+          "question": "당신의 내면 세계를 움직이는 동력은 무엇인가요?",
+          "answer": "내면의 조화가 당신의 일상적인 행동을 가이드합니다."
+        }
+      ],
+      "title": "계기반"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "내면의 목소리",
+          "description": "당신의 길을 정의하는 독특한 패턴을 발견하세요.",
+          "question": "당신의 내면 세계를 움직이는 동력은 무엇인가요?",
+          "answer": "내면의 조화가 당신의 일상적인 행동을 가이드합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "추진력 분석",
+          "description": "당신의 개인적 철학 속에 숨겨진 층을 밝혀냅니다.",
+          "question": "미지의 세계에 당신의 영혼은 어떻게 반응하나요?",
+          "answer": "당신의 독특한 관점이 현실을 형성합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "깊은 통찰",
+          "description": "당신의 개인적 철학 속에 숨겨진 층을 밝혀냅니다.",
+          "question": "삶의 흐름을 어떻게 헤쳐나가시나요?",
+          "answer": "당신은 성장을 향한 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "패턴 발견",
+          "description": "진정한 자아의 별자리를 그려봅니다.",
+          "question": "당신의 내면 세계를 움직이는 동력은 무엇인가요?",
+          "answer": "당신은 성장을 향한 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "진정한 자아",
+          "description": "진정한 자아의 별자리를 그려봅니다.",
+          "question": "당신의 내면 세계를 움직이는 동력은 무엇인가요?",
+          "answer": "작은 선택들이 모여 거대한 운명을 만듭니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "거대한 운명",
+          "description": "내면 풍경의 깊은 구조를 탐색합니다.",
+          "question": "당신의 내면 세계를 움직이는 동력은 무엇인가요?",
+          "answer": "내면의 조화가 당신의 일상적인 행동을 가이드합니다."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["핵심 강점", "전환점", "비전"],
+      "progress": "진전",
+      "submit": "제출하기",
+      "loading": "로드 중...",
+      "selectOption": "옵션을 선택하세요",
+      "subtitle": "세부",
+      "finish": "완벽한",
+      "next": "다음",
+      "previous": "이전의"
+    },
+    "result": {
+      "title": "상세 분석 보고서",
+      "description": "상세 분석 보고서",
+      "traits": "성격 특성",
+      "share": "공유하기",
+      "retake": "재응시 시험"
+    },
+    "types": {
+      "INTJ": {
+        "traits": ["전략적", "독립적", "결단력", "완벽주의"],
+        "strengths": ["장기적 계획", "논리적 추론", "높은 유능함"],
+        "challenges": [
+          "오만해 보일 수 있음",
+          "예측 불가능을 싫어함",
+          "감정 표현의 어려움"
+        ],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INFP", "INFJ"],
+          "challenging": ["ISFP", "ESFP"]
+        },
+        "name": "건축가",
+        "emoji": "🎯",
+        "subtitle": "전략적이고 독립적인 사고방식",
+        "description": "모든 것에 대한 계획과 풍부한 상상력을 갖춘 전략가.",
+        "detailedDescription": "INTJ는 로맨스에서도 논리와 전략을 중시합니다. 함께 지적으로 성장할 수 있는 파트너를 원하며, 감정 표현이 서툴러도 신뢰하는 사람에게는 헌신적이다.",
+        "loveLanguage": "지적인 대화",
+        "idealDate": "토론의 밤 또는 과학 박물관 방문."
+      },
+      "INTP": {
+        "traits": ["분석적", "호기심", "추상적", "상상력"],
+        "strengths": ["문제 해결", "이론적 이해", "창의성"],
+        "challenges": [
+          "멍때리기 쉬움",
+          "엄격한 규칙 거부",
+          "현실적 문제에 약함"
+        ],
+        "compatibility": {
+          "best": ["ENTJ", "ESTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "논리학자",
+        "emoji": "🔬",
+        "subtitle": "혁신적인 발명가",
+        "description": "지식에 대한 끝없는 갈증을 지닌 혁신적인 발명가.",
+        "detailedDescription": "INTP는 자유로운 사상가입니다. 연애에서도 지적 자극을 중시하며, 서로의 사생활과 취향을 존중하는 편안한 관계를 선호한다.",
+        "loveLanguage": "아이디어 공유",
+        "idealDate": "서점 여행을 마치고 카페에서 깊은 대화를 나눈다."
+      },
+      "ENTJ": {
+        "traits": ["결단력", "자신감", "야망", "효율성"],
+        "strengths": ["리더십", "전략적 기획", "직설적 소통"],
+        "challenges": ["성격이 급함", "무심해 보일 수 있음", "통제 욕구"],
+        "compatibility": {
+          "best": ["INFP", "INTP"],
+          "good": ["ENTP", "ENFJ"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "사령관",
+        "emoji": "👔",
+        "subtitle": "대담하고 상상력이 풍부한 리더",
+        "description": "항상 길을 찾는 의지가 강한 리더.",
+        "detailedDescription": "ENTJ는 관계에 많은 에너지와 비전을 제공합니다. 이들은 '파워커플'의 역동적인 관계를 추구하며, 파트너의 성장을 적극적으로 돕는 든든한 파트너이다.",
+        "loveLanguage": "헌신의 행위",
+        "idealDate": "고급 레스토랑에서 저녁을 먹거나 전략적인 보드 게임을 즐겨 보세요."
+      },
+      "ENTP": {
+        "traits": ["재치", "혁신적", "유연함", "에너지"],
+        "strengths": ["깊은 사고", "활기찬 대화", "적응력"],
+        "challenges": [
+          "논쟁을 즐김",
+          "일관성 부족 가능성",
+          "정체된 것을 못 참음"
+        ],
+        "compatibility": {
+          "best": ["INFJ", "INTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "토론자",
+        "emoji": "💡",
+        "subtitle": "지적 도전을 즐기는 발명가",
+        "description": "흥미로운 지적 도전에 저항할 수 없는 독창적인 사상가입니다.",
+        "detailedDescription": "ENTP는 끊임없이 새로운 아이디어를 생각해내는 브레인스토머입니다. 유쾌한 토론을 즐길 수 있는 파트너가 필요하며, 지루할 틈 없이 즐거운 로맨스를 지향합니다.",
+        "loveLanguage": "재치 있는 대화",
+        "idealDate": "코미디 쇼를 보거나 새로운 취미를 함께 배우세요."
+      },
+      "INFJ": {
+        "traits": ["통찰력", "원칙주의", "창의적", "열정적"],
+        "strengths": ["정서 지능", "동정심", "진정성"],
+        "challenges": ["갈등 회피", "지나친 사생활 보호", "매우 높은 기준"],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INTJ", "INFP"],
+          "challenging": ["ESTP", "ESFP"]
+        },
+        "name": "옹호자",
+        "emoji": "🌟",
+        "subtitle": "차분하고 신비한 이상주의자",
+        "description": "조용하지만 통찰력이 있는 이상주의자로 사람들에게 영감을 줍니다.",
+        "detailedDescription": "INFJ는 깊은 내면 세계를 가진 드문 사람들입니다. 그들은 관계에 대한 높은 이상을 가지고 있으며, 서로를 깊이 이해하고 영감을 주고받는 소울메이트를 찾고 있습니다.",
+        "loveLanguage": "좋은 시간",
+        "idealDate": "조용하고 아름다운 자연 속에서 별을 관찰하거나 산책해보세요."
+      },
+      "INFP": {
+        "traits": ["공감 능력", "이상주의", "창의적", "온화함"],
+        "strengths": ["깊은 헌신", "개방성", "동정심"],
+        "challenges": ["지나치게 예민함", "현실 감각 부족", "비판에 취약함"],
+        "compatibility": {
+          "best": ["ENFJ", "ENTJ"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ISTJ"]
+        },
+        "name": "중재자",
+        "emoji": "✨",
+        "subtitle": "열정적이고 친절한 이타주의자",
+        "description": "항상 좋은 일을 위해 헌신하는 열정적인 사람들.",
+        "detailedDescription": "INFP는 그들의 마음을 따릅니다. 진정성과 정서적 깊이를 무엇보다 중요하게 여기며, 파트너의 꿈과 성장을 응원하는 가장 충실한 서포터가 됩니다.",
+        "loveLanguage": "확언의 말씀",
+        "idealDate": "아늑한 피크닉을 즐기거나 오래된 중고 서점을 방문해보세요."
+      },
+      "ENFJ": {
+        "traits": ["카리스마", "공감 능력", "책임감", "사교적"],
+        "strengths": ["의사소통 능력", "높은 공감성", "충성심"],
+        "challenges": ["지나친 자기희생", "과보호 경향", "비판에 민감함"],
+        "compatibility": {
+          "best": ["INFP", "ISFP"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ISTP", "ESTP"]
+        },
+        "name": "주인공",
+        "emoji": "🤝",
+        "subtitle": "카리스마 있고 영감을 주는 리더",
+        "description": "사람들을 격려하고 더 나은 세상을 만들고 싶어하는 열정적인 리더입니다.",
+        "detailedDescription": "ENFJ는 타고난 도우미입니다. 그들은 파트너의 감정과 요구에 매우 민감하며 따뜻하고 격려적인 관계 분위기를 조성하는 데 탁월합니다.",
+        "loveLanguage": "좋은 시간",
+        "idealDate": "함께 봉사활동을 하거나, 친한 친구들과 작은 모임을 주최하는 것입니다."
+      },
+      "ENFP": {
+        "traits": ["열정적", "외향적", "상상력", "즉흥적"],
+        "strengths": ["뛰어난 소통가", "긍정적 에너지", "창의적 사고"],
+        "challenges": ["반복 싫어함", "감정 기복", "한 가지 집중 어려움"],
+        "compatibility": {
+          "best": ["INTJ", "INFJ"],
+          "good": ["INFP", "ENFJ"],
+          "challenging": ["ISTJ", "ESTJ"]
+        },
+        "name": "캠페인가",
+        "emoji": "🎨",
+        "description": "늘 즐거움을 추구하는 열정적이고 창의적인 자유로운 영혼.",
+        "subtitle": "자유로운 영혼",
+        "detailedDescription": "ENFP는 관계에 호기심과 에너지를 불어넣습니다. 그들은 정서적 유대를 중요하게 여기며 항상 새로운 방식으로 관계를 더욱 흥미롭게 만들려고 노력합니다.",
+        "loveLanguage": "신체적 접촉",
+        "idealDate": "계획 없이 활기 넘치는 축제에 참석하거나 즉흥적으로 여행을 갑니다."
+      },
+      "ISTJ": {
+        "traits": ["책임감", "신뢰성", "실용적", "정돈됨"],
+        "strengths": ["충성심", "조직력", "직설적"],
+        "challenges": ["융통성 부족", "변화에 저항", "무심해 보일 수 있음"],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISFJ", "ESTJ"],
+          "challenging": ["ENFP", "ENTP"]
+        },
+        "name": "물류 전문가",
+        "emoji": "📚",
+        "subtitle": "실용적이고 헌신적인 관리자",
+        "description": "사실에 근거하여 생각하고, 신뢰할 수 있는 책임감 있는 사람.",
+        "detailedDescription": "ISTJ는 안정성의 초석입니다. 표현력이 뛰어나지는 않지만 행동으로 사랑을 표현합니다. 그들은 신뢰, 실질적인 도움, 함께 안정적인 미래를 구축하는 것을 통해 헌신을 보여줍니다.",
+        "loveLanguage": "서비스 행위",
+        "idealDate": "전통적이고 검증된 레스토랑에서 저녁 식사를 하고 볼링과 같은 활동을 조직합니다."
+      },
+      "ISFJ": {
+        "traits": ["지지적", "신뢰성", "겸손", "관찰력"],
+        "strengths": ["동정심", "실용성", "충성심"],
+        "challenges": ["자기희생적", "변화 회피", "개인적으로 받아들임"],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISTJ", "ISFP"],
+          "challenging": ["ENTP", "ENFP"]
+        },
+        "name": "수비수",
+        "emoji": "📖",
+        "subtitle": "헌신적이고 따뜻한 보호자",
+        "description": "가까운 사람들을 보호하기 위해 최선을 다하는 헌신적인 사람들.",
+        "detailedDescription": "ISFJ는 매우 사려 깊습니다. 그들은 파트너가 좋아하는 작은 것들을 기억하고, 자신의 필요보다 파트너의 편안함과 행복을 우선시하는 헌신적인 연인입니다.",
+        "loveLanguage": "서비스 행위",
+        "idealDate": "집에서 함께 특별한 식사를 요리하거나 조용히 영화를 감상해보세요."
+      },
+      "ESTJ": {
+        "traits": ["직설적", "조직적", "헌신적", "충성심"],
+        "strengths": ["신뢰성", "직설적 소통", "전통 중시"],
+        "challenges": ["지시적 성향", "감정 표현 어려움", "변화에 불편함"],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP"]
+        },
+        "name": "더 이그제큐티브",
+        "emoji": "📊",
+        "subtitle": "우수한 조직 운영자",
+        "description": "사물과 사람을 관리하는 능력이 뛰어난 수행자.",
+        "detailedDescription": "ESTJ는 구조와 신뢰를 가져옵니다. 자신이 원하는 것을 솔직하게 말하고 사랑을 표현하며 안정된 생활을 꾸려나가며 든든한 동료가 되어준다.",
+        "loveLanguage": "신체적 접촉",
+        "idealDate": "유명한 정통 레스토랑에서 식사를 하거나 스포츠 경기를 관람하는 것."
+      },
+      "ESFJ": {
+        "traits": ["사교적", "따뜻함", "충성심", "조화로움"],
+        "strengths": ["관계 형성", "보살핌", "신뢰성"],
+        "challenges": ["비판에 민감", "의존적일 수 있음", "지위에 관심"],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISFJ", "ENFJ"],
+          "challenging": ["INTP", "INTJ"]
+        },
+        "name": "영사",
+        "emoji": "👥",
+        "subtitle": "배려심 많고 사교적인 성격",
+        "description": "주변 사람들을 돕는 일에서 행복을 찾는 인기인.",
+        "detailedDescription": "ESFJ는 파티의 삶이자 가정의 중심입니다. 파트너의 행복과 사회적 관계에 민감하며, 잦은 소통과 모임을 통해 사랑을 표현하고 확인하고 싶어합니다.",
+        "loveLanguage": "신체적 접촉",
+        "idealDate": "친구들과 더블 데이트를 하거나 활기찬 지역 축제에 참석해 보세요."
+      },
+      "ISTP": {
+        "traits": ["실용적", "창의적", "독립적", "즉흥적"],
+        "strengths": ["위기 관리", "실용성", "적응력"],
+        "challenges": ["무생무취해 보임", "구속 싫어함", "쉽게 지루해함"],
+        "compatibility": {
+          "best": ["ESFJ", "ESTJ"],
+          "good": ["ISTJ", "ESTP"],
+          "challenging": ["ENFJ", "INFJ"]
+        },
+        "name": "거장",
+        "emoji": "🔧",
+        "subtitle": "대담하고 실용적인 분석기",
+        "description": "다양한 도구를 다루고 문제를 해결하는 데 능숙한 실무자입니다.",
+        "detailedDescription": "ISTP는 현재를 즐기는 사람들입니다. 그들은 개인적인 공간이 많이 필요하며 감정적인 대화보다는 함께 모험과 활동을 통해 친밀감을 쌓는 것을 선호합니다.",
+        "loveLanguage": "신체적 접촉",
+        "idealDate": "하이킹, 등산, 무언가를 함께 만들어가는 실습 데이트."
+      },
+      "ISFP": {
+        "traits": ["매력적", "감성적", "상상력", "즉흥적"],
+        "strengths": ["동정심", "창의성", "유연성"],
+        "challenges": ["갈등 회피", "예측 불가", "쉽게 스트레스 받음"],
+        "compatibility": {
+          "best": ["ENFJ", "ESFJ", "ESTJ"],
+          "good": ["ISFJ", "INFP"],
+          "challenging": ["INTJ", "ENTJ"]
+        },
+        "name": "모험가",
+        "emoji": "🎭",
+        "subtitle": "유연하고 매력적인 아티스트",
+        "description": "늘 새로운 경험을 추구하며 현재를 즐기는 아티스트.",
+        "detailedDescription": "ISFP는 독특한 개성을 지닌 사람들입니다. 그들은 파트너의 요구와 주변 분위기에 매우 민감하며, 조용하고 창의적인 세계를 이해할 수 있는 파트너를 원합니다.",
+        "loveLanguage": "서비스 행위",
+        "idealDate": "아름다운 일몰을 감상할 수 있는 미술관을 방문하거나 야외 데이트를 즐겨보세요."
+      },
+      "ESTP": {
+        "traits": ["카리스마", "에너지", "실용적", "관찰력"],
+        "strengths": ["위기 대처", "즐거움 추구", "설득력"],
+        "challenges": ["위험 감수", "성격 급함", "큰 그림 놓침"],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESTP", "ESFP"],
+          "challenging": ["INFJ", "INFP"]
+        },
+        "name": "기업가",
+        "emoji": "🚀",
+        "subtitle": "똑똑하고 활력이 넘치는 휠러 딜러",
+        "description": "위험을 두려워하지 않고 순간의 기회를 포착하는 활동가.",
+        "detailedDescription": "ESTP는 행동 지향적입니다. 카리스마 있고 설득력이 있는 그들은 스릴 넘치는 순간을 위해 살아갑니다. 지나치게 깊은 분석보다는 밝은 에너지를 선호하며, 활동을 통해 함께 즐거운 시간을 보낸다.",
+        "loveLanguage": "신체적 접촉",
+        "idealDate": "에너지 넘치는 콘서트나 스릴 넘치는 스포츠 경기 관람."
+      },
+      "ESFP": {
+        "traits": ["즐거움 추구", "사교적", "즉흥적", "미적 감각"],
+        "strengths": ["대인 관계 기술", "긍정적", "미적 안목"],
+        "challenges": ["갈등 회피", "쉽게 지루해함", "장기 계획 부족"],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESFP", "ESTP"],
+          "challenging": ["INTJ", "INFJ"]
+        },
+        "name": "엔터테이너",
+        "emoji": "🎉",
+        "description": "다른 사람을 행복하게 하고 활력을 주는 연주자.",
+        "subtitle": "사교적이고 활동적인 성격",
+        "detailedDescription": "ESFP는 어디를 가든 활력을 불어넣습니다. 파트너가 늘 행복할 수 있도록 세심하게 보살피며, 현재의 감정과 감각 경험을 공유하며 화려하고 발랄한 로맨스를 즐긴다.",
+        "loveLanguage": "신체적 접촉",
+        "idealDate": "함께 춤을 추거나 화려한 행사에 참석해보세요."
+      }
+    },
+    "title": "맞춤형 분석 결과",
+    "description": "다차원적인 심층 분석을 통해 숨겨진 잠재력을 탐색해보세요."
+  }
+}

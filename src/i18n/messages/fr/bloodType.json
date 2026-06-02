@@ -1,0 +1,114 @@
+{
+  "A": {
+    "traits": {
+      "keywords": "Leadership, Confiance, Élan, Réalité, Sociabilité",
+      "strengths": "Vigueur du meneur, Force de propulsion, Rayonnement social, Sens du réel, Optimisme conquérant",
+      "weaknesses": "Entêtement, Impétuosité, Arrogance de la force, Compétition, Simplicité d'esprit",
+      "personality": "Une force vive tournée vers l'action. Réaliste et pragmatique, il trace son sillon vers les sommets.",
+      "communication": "Prône la clarté et le verbe direct. Exprime ses certitudes avec une éloquence qui emporte l'adhésion.",
+      "leadership": "Meneur par nature, doté d'une volonté d'acier. Guide la troupe vers l'accomplissement des destins."
+    },
+    "relationships": {
+      "love": "Aime avec une ferveur conquérante. Guide la danse et offre son affection avec une clarté solaire.",
+      "friendship": "Cœur de la cité, rayonnant parmi les siens. Tisse d'immenses réseaux et veille sur ses pairs avec force.",
+      "work": "Prend la proue du navire et s'éveille dans l'arène du défi. Agit sans détour pour forger la réussite."
+    },
+    "career": {
+      "workStyle": "Orienté vers l'astre du but. Atteint les rivages du succès par la rapidité et la force souveraine.",
+      "advice": "Apprenez la patience des racines et la sagesse du silence ; écoutez les échos des autres voix."
+    },
+    "health": {
+      "mentalHealth": "Roc face aux tempêtes, se régénère avec ardeur. Maintient son souffle par une vie vibrante d'action.",
+      "stressManagement": "Exprimez votre feu par l'effort sacré. Le combat et le jeu sont vos alliés de paix.",
+      "lifestyle": "Vivez avec élan. Forgez votre temple par le mouvement et la juste nourriture de la terre."
+    },
+    "name": "Type O",
+    "nickname": "Le Leader Né",
+    "description": "La force vitale du Type O conquiert les sommets par sa volonté souveraine et son optimisme radieux.",
+    "element": "Terre"
+  },
+  "B": {
+    "traits": {
+      "keywords": "Leadership, Confiance, Élan, Réalité, Sociabilité",
+      "strengths": "Vigueur du meneur, Force de propulsion, Rayonnement social, Sens du réel, Optimisme conquérant",
+      "weaknesses": "Entêtement, Impétuosité, Arrogance de la force, Compétition, Simplicité d'esprit",
+      "personality": "Une force vive tournée vers l'action. Réaliste et pragmatique, il trace son sillon vers les sommets.",
+      "communication": "Prône la clarté et le verbe direct. Exprime ses certitudes avec une éloquence qui emporte l'adhésion.",
+      "leadership": "Meneur par nature, doté d'une volonté d'acier. Guide la troupe vers l'accomplissement des destins."
+    },
+    "relationships": {
+      "love": "Aime avec une ferveur conquérante. Guide la danse et offre son affection avec une clarté solaire.",
+      "friendship": "Cœur de la cité, rayonnant parmi les siens. Tisse d'immenses réseaux et veille sur ses pairs avec force.",
+      "work": "Prend la proue du navire et s'éveille dans l'arène du défi. Agit sans détour pour forger la réussite."
+    },
+    "career": {
+      "workStyle": "Orienté vers l'astre du but. Atteint les rivages du succès par la rapidité et la force souveraine.",
+      "advice": "Apprenez la patience des racines et la sagesse du silence ; écoutez les échos des autres voix."
+    },
+    "health": {
+      "mentalHealth": "Roc face aux tempêtes, se régénère avec ardeur. Maintient son souffle par une vie vibrante d'action.",
+      "stressManagement": "Exprimez votre feu par l'effort sacré. Le combat et le jeu sont vos alliés de paix.",
+      "lifestyle": "Vivez avec élan. Forgez votre temple par le mouvement et la juste nourriture de la terre."
+    },
+    "name": "Type O",
+    "nickname": "Le Leader Né",
+    "description": "La force vitale du Type O conquiert les sommets par sa volonté souveraine et son optimisme radieux.",
+    "element": "Terre"
+  },
+  "AB": {
+    "traits": {
+      "keywords": "Leadership, Confiance, Élan, Réalité, Sociabilité",
+      "strengths": "Vigueur du meneur, Force de propulsion, Rayonnement social, Sens du réel, Optimisme conquérant",
+      "weaknesses": "Entêtement, Impétuosité, Arrogance de la force, Compétition, Simplicité d'esprit",
+      "personality": "Une force vive tournée vers l'action. Réaliste et pragmatique, il trace son sillon vers les sommets.",
+      "communication": "Prône la clarté et le verbe direct. Exprime ses certitudes avec une éloquence qui emporte l'adhésion.",
+      "leadership": "Meneur par nature, doté d'une volonté d'acier. Guide la troupe vers l'accomplissement des destins."
+    },
+    "relationships": {
+      "love": "Aime avec une ferveur conquérante. Guide la danse et offre son affection avec une clarté solaire.",
+      "friendship": "Cœur de la cité, rayonnant parmi les siens. Tisse d'immenses réseaux et veille sur ses pairs avec force.",
+      "work": "Prend la proue du navire et s'éveille dans l'arène du défi. Agit sans détour pour forger la réussite."
+    },
+    "career": {
+      "workStyle": "Orienté vers l'astre du but. Atteint les rivages du succès par la rapidité et la force souveraine.",
+      "advice": "Apprenez la patience des racines et la sagesse du silence ; écoutez les échos des autres voix."
+    },
+    "health": {
+      "mentalHealth": "Roc face aux tempêtes, se régénère avec ardeur. Maintient son souffle par une vie vibrante d'action.",
+      "stressManagement": "Exprimez votre feu par l'effort sacré. Le combat et le jeu sont vos alliés de paix.",
+      "lifestyle": "Vivez avec élan. Forgez votre temple par le mouvement et la juste nourriture de la terre."
+    },
+    "name": "Type O",
+    "nickname": "Le Leader Né",
+    "description": "La force vitale du Type O conquiert les sommets par sa volonté souveraine et son optimisme radieux.",
+    "element": "Terre"
+  },
+  "O": {
+    "traits": {
+      "keywords": "Leadership, Confiance, Élan, Réalité, Sociabilité",
+      "strengths": "Vigueur du meneur, Force de propulsion, Rayonnement social, Sens du réel, Optimisme conquérant",
+      "weaknesses": "Entêtement, Impétuosité, Arrogance de la force, Compétition, Simplicité d'esprit",
+      "personality": "Une force vive tournée vers l'action. Réaliste et pragmatique, il trace son sillon vers les sommets.",
+      "communication": "Prône la clarté et le verbe direct. Exprime ses certitudes avec une éloquence qui emporte l'adhésion.",
+      "leadership": "Meneur par nature, doté d'une volonté d'acier. Guide la troupe vers l'accomplissement des destins."
+    },
+    "relationships": {
+      "love": "Aime avec une ferveur conquérante. Guide la danse et offre son affection avec une clarté solaire.",
+      "friendship": "Cœur de la cité, rayonnant parmi les siens. Tisse d'immenses réseaux et veille sur ses pairs avec force.",
+      "work": "Prend la proue du navire et s'éveille dans l'arène du défi. Agit sans détour pour forger la réussite."
+    },
+    "career": {
+      "workStyle": "Orienté vers l'astre du but. Atteint les rivages du succès par la rapidité et la force souveraine.",
+      "advice": "Apprenez la patience des racines et la sagesse du silence ; écoutez les échos des autres voix."
+    },
+    "health": {
+      "mentalHealth": "Roc face aux tempêtes, se régénère avec ardeur. Maintient son souffle par une vie vibrante d'action.",
+      "stressManagement": "Exprimez votre feu par l'effort sacré. Le combat et le jeu sont vos alliés de paix.",
+      "lifestyle": "Vivez avec élan. Forgez votre temple par le mouvement et la juste nourriture de la terre."
+    },
+    "name": "Tapez O",
+    "nickname": "Le Leader Né",
+    "description": "La force vitale du Type O conquiert les sommets par sa volonté souveraine et son optimisme radieux.",
+    "element": "Terre"
+  }
+}

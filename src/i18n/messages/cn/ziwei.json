@@ -1,0 +1,150 @@
+{
+  "title": "驿马",
+  "systemName": "紫微斗数",
+  "narrative": "紫微垣的星辰传说",
+  "resonance": {
+    "professionalChart": "命盘分析：生命力驻守于您的{lifePalace}，命宫中有{starCount}颗主星熠熠生辉。官禄宫（{bureau}）的气运流转亦值得关注。"
+  },
+  "stars": {
+    "zi_wei": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tian_ji": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tai_yang": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "wu_qu": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tian_tong": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "lian_zhen": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tian_fu": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tai_yin": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tan_lang": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "ju_men": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tian_xiang": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tian_liang": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "qi_sha": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "po_jun": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "zuo_fu": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "you_bi": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "wen_chang": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "wen_qu": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tian_kui": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tian_yue": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "qing_yang": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tuo_luo": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "huo_xing": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "ling_xing": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "di_kong": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "di_jie": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "lu_cun": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    },
+    "tian_ma": {
+      "name": "天马星",
+      "title": "驿马",
+      "keywords": "奔波, 远行"
+    }
+  }
+}

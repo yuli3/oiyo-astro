@@ -1,0 +1,62 @@
+{
+  "errors": {
+    "invalidDate": "Date invalide.",
+    "invalidTime": "Heure invalide.",
+    "unknown": "Une erreur inconnue est survenue."
+  },
+  "formTitle": "Saisir vos Détails de Naissance",
+  "privacyNote": "Vos informations sont utilisées uniquement pour l'analyse et ne sont jamais stockées de manière permanente.",
+  "nameLabel": "Nom",
+  "namePlaceholder": "Entrez votre nom (Optionnel)",
+  "birthDateLabel": "Date de naissance",
+  "birthTimeLabel": "Heure de naissance",
+  "hourPlaceholder": "HH",
+  "minutePlaceholder": "MM",
+  "locationLabel": "Lieu de Naissance",
+  "locationPlaceholder": "Sélectionner la Ville",
+  "trueSolarTime": "Heure Solaire Vraie",
+  "timeUnknownTitle": "Heure Inconnue",
+  "timeUnknownDesc": "Si l'heure est inconnue, l'analyse se concentrera sur les piliers Date/Année.",
+  "genderLabel": "Genre",
+  "genderPlaceholder": "Sélectionner",
+  "genderMale": "Homme",
+  "genderFemale": "Femme",
+  "calendarNoticeDesc": "Nous gérons automatiquement la conversion Lunaire/Solaire.",
+  "analyzing": "Calcul des mouvements célestes...",
+  "submitButton": "Révéler le Destin",
+  "secureTransmission": "Transmission d'Alchimie Sécurisée",
+  "birthDate": "Date de Naissance",
+  "birthTime": "Heure de Naissance",
+  "location": "Lieu de Naissance",
+  "gender": "Genre",
+  "dateLabel": "Date de Naissance",
+  "timeLabel": "Heure de Naissance",
+  "hourLabel": "Heure",
+  "minuteLabel": "Minute",
+  "calendarNoticeTitle": "Système de Calendrier",
+  "timeline": {
+    "origin": "ORIGINE",
+    "moment": "LE MOMENT",
+    "seal": "SCEAU"
+  },
+  "stage": {
+    "origin": {
+      "title": "La Prophétie Scellée"
+    },
+    "moment": {
+      "title": "La Prophétie Scellée",
+      "lockedTitle": "Coordonnées Verrouillées",
+      "hint": "Veuillez entrer votre heure de naissance exacte pour une analyse précise."
+    },
+    "seal": {
+      "title": "La Prophétie Scellée",
+      "description": "Toutes les coordonnées temporelles s'alignent. Les étoiles attendent votre commande."
+    }
+  },
+  "optional": "Optionnel",
+  "nextStep": "Prochaine Étape",
+  "lockCoordinates": "VERROUILLER LES COORDONNÉES",
+  "unlock": "Déverrouiller",
+  "anonymous": "Voyageur Anonyme",
+  "revealProphecy": "Desceller la Prophétie"
+}

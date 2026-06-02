@@ -1,0 +1,38 @@
+{
+  "title": "우리의 사명",
+  "description": "당신이 자신을 찾을 수 있도록 돕기 위해.",
+  "counselor": {
+    "title": {
+      "ko": "영혼 상담사",
+      "en": "Wisdom Curator",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "Curateur de sagesse",
+      "es": "Curador de sabiduría"
+    },
+    "blessing": "당신의 독특한 존재의 축복.",
+    "shadowWork": "내면의 그림자에 대한 자비로운 안내."
+  },
+  "coordinator": {
+    "title": {
+      "ko": "삶의 조정자",
+      "en": "Wisdom Curator",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "Curateur de sagesse",
+      "es": "Curador de sabiduría"
+    },
+    "ritual": "일상의 균형을 위한 실용적인 의식입니다."
+  },
+  "curator": {
+    "title": {
+      "ko": "지혜의 큐레이터",
+      "en": "지혜 큐레이터",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "지혜 큐레이터",
+      "es": "지혜의 치료사"
+    },
+    "wisdom": "당신을 위해 큐레이팅된 시대를 초월한 통찰력의 파편."
+  }
+}

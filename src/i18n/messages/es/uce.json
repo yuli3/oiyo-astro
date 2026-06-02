@@ -1,0 +1,133 @@
+{
+  "title": "Pasatiempos Recomendados",
+  "subtitle": "No puedo rendirme ahora",
+  "resonance": {
+    "title": "Pasatiempos Recomendados",
+    "high": "Armonía Muy Alta",
+    "moderate": "Armonía Equilibrada",
+    "low": "Potencial de Crecimiento"
+  },
+  "cosmic_synthesis": "Síntesis: {mythos} con {elementDesc} {trait}",
+  "archetype": {
+    "title": "Pasatiempos Recomendados",
+    "radiantCatalyst": "Catalizador Radiante",
+    "deepSeer": "Vidente Profundo",
+    "growingPioneer": "Pionero en Crecimiento",
+    "steadfastGuardian": "Guardián Inquebrantable",
+    "embracingMediator": "Mediador Acogedor",
+    "harmoniousTraveler": "Viajero Armonioso",
+    "default": "Viajero Armonioso",
+    "wood": "El Pionero en Crecimiento (The Growing Pioneer)",
+    "fire": "El Catalizador Radiante (The Radiant Catalyst)",
+    "earth": "El Guardián Inquebrantable (The Steadfast Guardian)",
+    "metal": "El Estratega Agudo (The Sharp Strategist)",
+    "water": "El Vidente Profundo (The Deep Seer)"
+  },
+  "synergy": {
+    "title": "Pasatiempos Recomendados",
+    "description": "Error de tomar decisiones irracionales debido a costos (tiempo, dinero, esfuerzo) ya invertidos.",
+    "tciSaju": "El temperamento y la energía Saju resuenan",
+    "hspStar": "La sensibilidad y la estrella del destino armonizan",
+    "hobbyRiasec": "Los pasatiempos y la aptitud profesional se alinean",
+    "mayan_tci": "El sello solar maya inspira las dimensiones temperamentales",
+    "celtic_resilience": "La sabiduría de los árboles celtas apoya la resiliencia",
+    "sect_decan": "La energía temporal del día y la noche se equilibra",
+    "stone_tci": "La energía de la piedra de nacimiento modula el temperamento",
+    "mayan_career": "El tono maya guía el timing profesional",
+    "celtic_hobby": "El arquetipo del árbol celta inspira la elección de pasatiempos"
+  },
+  "friction": {
+    "title": "Pasatiempos Recomendados",
+    "description": "Error de tomar decisiones irracionales debido a costos (tiempo, dinero, esfuerzo) ya invertidos.",
+    "highHAFire": "Conflicto entre alta evitación del daño y energía de fuego",
+    "highNSEarth": "Fricción entre alta búsqueda de novedades y energía estancada de tierra",
+    "hspHighFire": "La alta sensibilidad podría verse abrumada por la energía de fuego",
+    "lowResilienceMetal": "Baja resiliencia en conflicto con la agudeza del metal"
+  },
+  "cognitiveRisks": {
+    "title": "Pasatiempos Recomendados",
+    "description": "Error de tomar decisiones irracionales debido a costos (tiempo, dinero, esfuerzo) ya invertidos."
+  },
+  "resilience": {
+    "title": "Pasatiempos Recomendados",
+    "description": "Error de tomar decisiones irracionales debido a costos (tiempo, dinero, esfuerzo) ya invertidos.",
+    "gratitudeJournal": "Escribir 3 líneas de gratitud cada día",
+    "fireBreathing": "Meditación respiratoria para regular la energía de fuego",
+    "waterSleep": "Sueño regular para estabilizar la energía de agua"
+  },
+  "hobbies": {
+    "title": "Pasatiempos Recomendados",
+    "description": "Error de tomar decisiones irracionales debido a costos (tiempo, dinero, esfuerzo) ya invertidos.",
+    "toastmasters": {
+      "name": "Falacia de Costo Hundido",
+      "description": "Error de tomar decisiones irracionales debido a costos (tiempo, dinero, esfuerzo) ya invertidos."
+    },
+    "fluid_art": {
+      "name": "Falacia de Costo Hundido",
+      "description": "Error de tomar decisiones irracionales debido a costos (tiempo, dinero, esfuerzo) ya invertidos."
+    }
+  },
+  "questions": {
+    "q13": "Al pensar en el pasado, ¿te dices a menudo 'Sabía que pasaría'?",
+    "q14": "¿Prefieres mantener el statu quo antes que aceptar nuevos cambios?",
+    "q15": "¿Persistes en algo que no te gusta debido al tiempo o dinero ya invertido?"
+  },
+  "options": {
+    "q13": {
+      "a": "Sigo hasta el final porque es un desperdicio parar.",
+      "b": "Si no hay utilidad, abandono audazmente.",
+      "c": "Depende, pero corto las pérdidas si es necesario."
+    },
+    "q14": {
+      "a": "Sigo hasta el final porque es un desperdicio parar.",
+      "b": "Si no hay utilidad, abandono audazmente.",
+      "c": "Depende, pero corto las pérdidas si es necesario."
+    },
+    "q15": {
+      "a": "Sigo hasta el final porque es un desperdicio parar.",
+      "b": "Si no hay utilidad, abandono audazmente.",
+      "c": "Depende, pero corto las pérdidas si es necesario."
+    }
+  },
+  "types": {
+    "hindsight_bias": {
+      "name": "Falacia de Costo Hundido",
+      "subtitle": "No puedo rendirme ahora",
+      "description": "Error de tomar decisiones irracionales debido a costos (tiempo, dinero, esfuerzo) ya invertidos.",
+      "examples": [
+        "Decir \"Sabía que las acciones caerían\" aunque no lo predijeras.",
+        "Después de unas elecciones, pensar: \"Por supuesto que ganarían\"."
+      ],
+      "overcome": [
+        "Recordar conscientemente la incertidumbre en el momento de la decisión.",
+        "Lleve un diario de decisiones para registrar las predicciones antes que los resultados."
+      ]
+    },
+    "status_quo_bias": {
+      "name": "Falacia de Costo Hundido",
+      "subtitle": "No puedo rendirme ahora",
+      "description": "Error de tomar decisiones irracionales debido a costos (tiempo, dinero, esfuerzo) ya invertidos.",
+      "examples": [
+        "Dudar en cambiar de trabajo incluso cuando surgen mejores oportunidades.",
+        "Mantener relaciones insatisfactorias por miedo al cambio."
+      ],
+      "overcome": [
+        "Evaluar objetivamente los costos ocultos del estado actual.",
+        "Comience con pequeños cambios para generar tolerancia al cambio."
+      ]
+    },
+    "sunk_cost_fallacy": {
+      "name": "Falacia de Costo Hundido",
+      "subtitle": "No puedo rendirme ahora",
+      "description": "Error de tomar decisiones irracionales debido a costos (tiempo, dinero, esfuerzo) ya invertidos.",
+      "examples": [
+        "Ver una película aburrida hasta el final porque 'pagué por ella'.",
+        "Continuar con un proyecto fallido porque \"hemos invertido mucho\"."
+      ],
+      "overcome": [
+        "Decida desde una perspectiva de \"a partir de ahora\". Olvídese de inversiones pasadas.",
+        "Pregúntese si tomaría la misma decisión si comenzara de nuevo."
+      ]
+    }
+  }
+}

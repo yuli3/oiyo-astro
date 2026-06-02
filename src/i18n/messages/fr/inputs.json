@@ -1,0 +1,31 @@
+{
+  "birthDate": "Date de Naissance",
+  "birthTime": "Heure de Naissance",
+  "calculate": "Calculer",
+  "formTitle": "Entrez vos Détails",
+  "privacyNote": "Vos données ne sont pas stockées de manière permanente.",
+  "nameLabel": "Nom",
+  "namePlaceholder": "Entrez votre nom",
+  "birthDateLabel": "Date de Naissance",
+  "birthTimeLabel": "Heure de Naissance",
+  "hourPlaceholder": "HH",
+  "minutePlaceholder": "MM",
+  "locationLabel": "Lieu de Naissance",
+  "locationPlaceholder": "Ville, Pays",
+  "trueSolarTime": "Utiliser l'Heure Solaire Vraie",
+  "timeUnknownTitle": "Heure Inconnue",
+  "timeUnknownDesc": "Si l'heure est inconnue, les calculs peuvent être moins précis.",
+  "genderLabel": "Genre",
+  "genderPlaceholder": "Sélectionner le Genre",
+  "genderMale": "Homme",
+  "genderFemale": "Femme",
+  "calendarNoticeDesc": "Veuillez vérifier la sélection du calendrier solaire/lunaire.",
+  "analyzing": "Analyse en cours...",
+  "submitButton": "Analyser le Destin",
+  "secureTransmission": "Transmission Sécurisée",
+  "location": "Lieu de Naissance",
+  "gender": "Genre",
+  "title": {
+    "saju": "Saisie du Saju"
+  }
+}

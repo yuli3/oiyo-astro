@@ -1,0 +1,13 @@
+{
+  "premium": {
+    "title": "免费",
+    "description": "Basic features."
+  },
+  "free": {
+    "title": "免费",
+    "description": "基本特征。"
+  },
+  "download": "下载",
+  "checkout": "查看",
+  "notice": "注意"
+}

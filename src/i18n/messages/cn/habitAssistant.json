@@ -1,0 +1,112 @@
+{
+  "habitAssistant": {
+    "meta": {
+      "hero": {
+        "subtitle": "Which approach works best for your personality?",
+        "badge": "🎯 Behavior Science"
+      },
+      "keywords": "keywords, tags, seo",
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "hero": {
+      "subtitle": "Which approach works best for your personality?",
+      "cta": "找到我的习惯风格",
+      "badge": "🎯行为科学",
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🏆",
+          "title": "更高的成功率",
+          "description": "使用符合您自然倾向的策略以获得更好的结果"
+        },
+        {
+          "icon": "⚡",
+          "title": "进步更快",
+          "description": "使用适合您性格类型的方法来避免反复试验"
+        },
+        {
+          "icon": "💪",
+          "title": "可持续的变化",
+          "description": "遵循自然模式而不是违背自然模式，养成坚持的习惯"
+        },
+        {
+          "icon": "🎯",
+          "title": "个性化策略",
+          "description": "获取适合您类型的具体技巧、时机和激励方法"
+        }
+      ],
+      "subtitle": "Which approach works best for your personality?"
+    },
+    "types": {
+      "methodical": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "social": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "flexible": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "reward_driven": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "intuitive": {
+        "name": "直观的积分器",
+        "emoji": "💡"
+      },
+      "subtitle": "Which approach works best for your personality?"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "1": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "2": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "3": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "4": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        }
+      },
+      "title": "My Insights"
+    },
+    "frequency": {
+      "label": "Prio",
+      "daily": "日常的",
+      "weekly": "每周"
+    },
+    "priority": {
+      "label": "普里奥",
+      "low": "低的",
+      "medium": "和",
+      "high": "高的"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights",
+    "keywords": "keywords, tags, seo",
+    "submit": "提交"
+  }
+}

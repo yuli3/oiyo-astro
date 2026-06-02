@@ -1,0 +1,230 @@
+{
+  "systemName": "Dreamspell Maya",
+  "narrative": "Synchronisation Galactique",
+  "solarSeal": "Sceau Solaire",
+  "tone": "Tonalité Galactique",
+  "title": "Astrologie Maya",
+  "description": "Système Dreamspell/Tzolkin de signatures galactiques.",
+  "toneOf": "Pouvoir de l'{power}",
+  "kin": "Parent {parent}",
+  "ariaLabel": "Kin Maya : {tone} Tonalité de l'{essence}, {seal} Sceau.",
+  "affirmation": "Je {tonePower} afin de {sealAction}. Je scelle la {sealOutput} de l'{sealEssence} avec la tonalité {toneName} de l'{toneEssence}.",
+  "daily_wisdom": {
+    "intro": "Selon le calendrier Maya, aujourd'hui est le jour du {title}. Concentrez-vous sur {keyword}."
+  },
+  "tones": {
+    "magnetic": {
+      "name": "Magnétique",
+      "essence": "Objectif",
+      "power": "Unifier",
+      "action": "Attirer"
+    },
+    "lunar": {
+      "name": "Lunaire",
+      "essence": "Défi",
+      "power": "Polariser",
+      "action": "Stabiliser"
+    },
+    "electric": {
+      "name": "Électrique",
+      "essence": "Service",
+      "power": "Activer",
+      "action": "Lier"
+    },
+    "selfExisting": {
+      "name": "Auto-existant",
+      "essence": "Forme",
+      "power": "Définir",
+      "action": "Mesurer"
+    },
+    "overtone": {
+      "name": "Harmonique",
+      "essence": "Rayonnement",
+      "power": "Habiliter",
+      "action": "Commander"
+    },
+    "rhythmic": {
+      "name": "Rythmique",
+      "essence": "Égalité",
+      "power": "Organiser",
+      "action": "Équilibrer"
+    },
+    "resonant": {
+      "name": "Résonant",
+      "essence": "Accord",
+      "power": "Canaliser",
+      "action": "Inspirer"
+    },
+    "galactic": {
+      "name": "Galactique",
+      "essence": "Intégrité",
+      "power": "Harmoniser",
+      "action": "Modéliser"
+    },
+    "solar": {
+      "name": "Solaire",
+      "essence": "Intention",
+      "power": "Pulser",
+      "action": "Réaliser"
+    },
+    "planetary": {
+      "name": "Planétaire",
+      "essence": "Manifestation",
+      "power": "Perfectionner",
+      "action": "Produire"
+    },
+    "spectral": {
+      "name": "Spectrale",
+      "essence": "Libération",
+      "power": "Dissoudre",
+      "action": "Relâcher"
+    },
+    "crystal": {
+      "name": "Cristal",
+      "essence": "Coopération",
+      "power": "Dédier",
+      "action": "Universaliser"
+    },
+    "cosmic": {
+      "name": "Cosmique",
+      "essence": "Présence",
+      "power": "Perdurer",
+      "action": "Transcender"
+    }
+  },
+  "seals": {
+    "dragon": {
+      "name": "Dragonne",
+      "essence": "Être",
+      "power": "Nourrit",
+      "action": "Naissance"
+    },
+    "wind": {
+      "name": "Vent",
+      "essence": "Esprit",
+      "power": "Communique",
+      "action": "Souffle"
+    },
+    "night": {
+      "name": "Nuit",
+      "essence": "Abondance",
+      "power": "Rêve",
+      "action": "Intuition"
+    },
+    "seed": {
+      "name": "Graine",
+      "essence": "Floraison",
+      "power": "Cible",
+      "action": "Conscience"
+    },
+    "serpent": {
+      "name": "Serpent",
+      "essence": "Force Vitale",
+      "power": "Survit",
+      "action": "Instinct"
+    },
+    "worldbridger": {
+      "name": "Pont Mondial",
+      "essence": "Opportunité",
+      "power": "Égalise",
+      "action": "Mort"
+    },
+    "hand": {
+      "name": "Main",
+      "essence": "Accomplissement",
+      "power": "Sait",
+      "action": "Guérison"
+    },
+    "star": {
+      "name": "Étoile",
+      "essence": "Élégance",
+      "power": "Embellit",
+      "action": "Art"
+    },
+    "moon": {
+      "name": "Lune",
+      "essence": "Eau Universelle",
+      "power": "Purifie",
+      "action": "Flux"
+    },
+    "dog": {
+      "name": "Chien",
+      "essence": "Loyauté",
+      "power": "Aime",
+      "action": "Cœur"
+    },
+    "monkey": {
+      "name": "Singe",
+      "essence": "Illusion",
+      "power": "Joue",
+      "action": "Magie"
+    },
+    "human": {
+      "name": "Humain",
+      "essence": "Sagesse",
+      "power": "Influence",
+      "action": "Libre Arbitre"
+    },
+    "skywalker": {
+      "name": "Marcheur du Ciel",
+      "essence": "Éveil",
+      "power": "Explore",
+      "action": "Espace"
+    },
+    "wizard": {
+      "name": "Magicien",
+      "essence": "Réceptivité",
+      "power": "Enchante",
+      "action": "Intemporalité"
+    },
+    "eagle": {
+      "name": "Aigle",
+      "essence": "Esprit",
+      "power": "Crée",
+      "action": "Vision"
+    },
+    "warrior": {
+      "name": "Guerrier",
+      "essence": "Intrépidité",
+      "power": "Questionne",
+      "action": "Intelligence"
+    },
+    "earth": {
+      "name": "Terre",
+      "essence": "Synchronicité",
+      "power": "Évolue",
+      "action": "Navigation"
+    },
+    "mirror": {
+      "name": "Miroir",
+      "essence": "Ordre",
+      "power": "Reflète",
+      "action": "Infinité"
+    },
+    "storm": {
+      "name": "Tempête",
+      "essence": "Auto-génération",
+      "power": "Catalyse",
+      "action": "Énergie"
+    },
+    "sun": {
+      "name": "Soleil",
+      "essence": "Feu Universel",
+      "power": "Illumine",
+      "action": "Vie"
+    }
+  },
+  "void": "Le jour est hors du temps. Vous êtes le centre de votre propre univers.",
+  "mayan": {
+    "systemName": "Dreamspell Maya",
+    "narrative": "Synchronisation Galactique",
+    "solarSeal": "Sceau Solaire",
+    "tone": "Tonalité Galactique"
+  },
+  "celtic": {
+    "systemName": "Zodiaque Celtique des Arbres",
+    "narrative": "Sagesse des arbres",
+    "treeSign": "Signe de l'Arbre",
+    "ogham": "Ogham"
+  }
+}

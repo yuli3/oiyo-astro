@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "blueprint": "원시 설계도",
+    "archives": "그랜드 아카이브",
+    "mythos": "글로벌 신화",
+    "biorhythm": "바이오리듬",
+    "tuning": "고조파 튜닝",
+    "becoming": "존재의 길"
+  },
+  "labels": {
+    "stars": "{count}개의 별이 귀하의 경로에 영향을 미치고 있습니다",
+    "moonIn": "달이 뜬 {sign}",
+    "sephira": "세피라: {이름}",
+    "lifePath": "인생의 길 {숫자}",
+    "unknown": "알려지지 않은",
+    "physical": "물리적",
+    "emotional": "감정적인",
+    "intellectual": "지적인",
+    "dominantAura": "지배적인 아우라",
+    "dominantAuraDesc": "당신의 영혼을 관통하는 가장 강력한 원소의 흐름.",
+    "color": "색상",
+    "direction": "방향",
+    "number": "숫자",
+    "gemstone": "보석",
+    "flower": "꽃",
+    "takeTest": "테스트 받기",
+    "viewFormula": "수식 보기",
+    "sajuTitle": "신성한 성좌의 공식",
+    "sajuSubtitle": "여덟 자의 기운과 오행의 흐름"
+  },
+  "explanation": {
+    "wolf": "저녁 피크, 창의적이고 강렬한 성격.",
+    "ectomorph": "뛰어난 정신적 집중력, 민감성, 린 에너지 시스템.",
+    "becomingValue": "진동수명{value}",
+    "totem": "가디언 토템"
+  },
+  "systems": {
+    "ziwei": "자웨이두슈",
+    "vedic": "베다 낙샤트라",
+    "kabbalah": "카발라 경로",
+    "celtic": "켈트 나무 조디악",
+    "egyptian": "이집트 수호신",
+    "mayan": "마야 정신",
+    "iching": "이칭 헥사그램",
+    "hellenistic": "헬레니즘 종파"
+  },
+  "synergy": {
+    "advice": "용기를 가지고 당신의 길을 걸어가세요.",
+    "description": "Compatible with your rhythm.",
+    "title": "유니버설 오리진"
+  },
+  "social": {
+    "beneficial": {
+      "description": "Compatible with your rhythm."
+    },
+    "compatible": {
+      "description": "귀하의 리듬과 호환됩니다."
+    }
+  },
+  "title": "유니버설 청사진",
+  "subtitle": "당신의 영혼의 수렴 스레드를 발견하십시오.",
+  "description": "다차원적 특성을 포괄적으로 정렬합니다.",
+  "tabs": {
+    "essence": "내면의 본질",
+    "destiny": "운명의 길",
+    "biology": "생물학적 리듬"
+  },
+  "close": "아카이브 닫기",
+  "essence": {
+    "title": "본질",
+    "quote": "당신 존재의 진실은 내면에 있습니다.",
+    "soulFormula": "소울 포뮬러",
+    "humanDesign": "휴먼 디자인",
+    "authority": "권한",
+    "locked": "지혜가 잠겼습니다"
+  },
+  "destiny": {
+    "title": "운명",
+    "lifePath": "생활 경로",
+    "seeker": "찾는 사람",
+    "animal": "영혼의 동물"
+  },
+  "biology": {
+    "title": "생물학",
+    "chronotype": "크로노타입",
+    "constitution": "체질"
+  },
+  " ": " "
+}

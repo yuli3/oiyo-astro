@@ -1,0 +1,32 @@
+{
+  "title": "私の分析",
+  "subtitle": "詳細情報",
+  "genderSelection": {
+    "title": "私の分析",
+    "subtitle": "詳細情報",
+    "question": "質問",
+    "male": "男",
+    "female": "女性"
+  },
+  "progress": "進捗",
+  "selectOption": "選択",
+  "insightBullets": [
+    "自分の道を定義するユニークなパターンを見つけてください。"
+  ],
+  "start": "始める",
+  "continue": "続く",
+  "pause": "一時停止",
+  "results": "結果",
+  "previous": "前の",
+  "finish": "仕上げる",
+  "next": "次",
+  "submit": "提出する",
+  "loading": "読み込み中",
+  "viewResults": "結果を見る",
+  "swipeHintLong": "スワイプして質問を移動",
+  "resultTitle": "分析結果",
+  "step": "{total}問中{current}問目",
+  "instruction": "指示",
+  "restart": "テストを再開",
+  "helperText": "最も当てはまるものを選択してください。"
+}

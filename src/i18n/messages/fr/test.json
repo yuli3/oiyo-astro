@@ -1,0 +1,32 @@
+{
+  "title": "Mon analyse",
+  "subtitle": "Informations détaillées",
+  "genderSelection": {
+    "title": "Mon analyse",
+    "subtitle": "Informations détaillées",
+    "question": "Question",
+    "male": "Femelle",
+    "female": "Femelle"
+  },
+  "progress": "Progrès",
+  "selectOption": "Sélectionner",
+  "insightBullets": [
+    "Découvrez les modèles uniques qui définissent votre chemin."
+  ],
+  "start": "Commencer",
+  "continue": "Continuer",
+  "pause": "Pause",
+  "results": "Résultats",
+  "previous": "Précédente",
+  "finish": "Finition",
+  "next": "Suivante",
+  "submit": "Soumettre",
+  "loading": "Chargement",
+  "viewResults": "Afficher les résultats",
+  "swipeHintLong": "Faites glisser pour parcourir les questions",
+  "resultTitle": "Votre résultat d'analyse",
+  "step": "Question {actuelle} sur {total}",
+  "instruction": "Instructions",
+  "restart": "Redémarrer le test",
+  "helperText": "Sélectionnez la meilleure réponse."
+}

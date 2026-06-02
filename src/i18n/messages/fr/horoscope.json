@@ -1,0 +1,106 @@
+{
+  "title": "Prévisions Cosmiques",
+  "subtitle": "Janvier 2026",
+  "description": "Sélectionnez votre signe pour révéler la guidance céleste de ce mois. Les étoiles se sont alignées pour éclairer votre chemin.",
+  "zodiac": {
+    "aries": {
+      "name": "Bélier",
+      "element": "Élément Feu",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "taurus": {
+      "name": "Taureau",
+      "element": "Élément Terre",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "gemini": {
+      "name": "Gémeaux",
+      "element": "Élément Air",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "cancer": {
+      "name": "Cancer",
+      "element": "Élément Eau",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "leo": {
+      "name": "Lion",
+      "element": "Élément Feu",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "virgo": {
+      "name": "Vierge",
+      "element": "Élément Terre",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "libra": {
+      "name": "Balance",
+      "element": "Élément Air",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "scorpio": {
+      "name": "Scorpion",
+      "element": "Élément Eau",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "sagittarius": {
+      "name": "Sagittaire",
+      "element": "Élément Feu",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "capricorn": {
+      "name": "Capricorne",
+      "element": "Élément Terre",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "aquarius": {
+      "name": "Verseau",
+      "element": "Élément Air",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    },
+    "pisces": {
+      "name": "Poissons",
+      "element": "Élément Eau",
+      "luckyDay": "Jour de chance",
+      "luckyColor": "Couleur chanceuse"
+    }
+  },
+  "meta": {
+    "title": "Analyse Personnalisée",
+    "description": "Synchronisation des fils de ton destin...",
+    "keywords": "horoscope, astrologie, zodiaque, prévisions quotidiennes, signes astrologiques"
+  },
+  "hero": {
+    "title": "Analyse Personnalisée",
+    "subtitle": "Découvrez ce que les étoiles vous réservent aujourd'hui",
+    "cta": "Lire Mon Horoscope"
+  },
+  "test": {
+    "insightBullets": [
+      "Conseils astrologiques quotidiens",
+      "Informations personnalisées sur le zodiaque",
+      "Prévisions d'énergie cosmique"
+    ],
+    "progress": "Progrès",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Envoyer",
+    "loading": "Chargement",
+    "selectOption": "Sélectionner"
+  },
+  "result": {
+    "title": "Analyse Personnalisée",
+    "description": "Synchronisation des fils de ton destin..."
+  }
+}

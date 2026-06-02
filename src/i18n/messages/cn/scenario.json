@@ -1,0 +1,96 @@
+{
+  "scenario": {
+    "meta": {
+      "hero": {
+        "subtitle": "立即测试，看看您在极限情况下的反应！",
+        "feature1": "8种极限情景",
+        "feature2": "5分钟",
+        "feature3": "科学MBTI"
+      },
+      "features": {
+        "feature1Title": "引人入胜的情景",
+        "feature1Description": "忘记无聊的问题！通过僵尸末日、时间旅行、外星人遭遇等激动人心的情景来回答。",
+        "feature2Title": "准确分析",
+        "feature2Description": "基于官方MBTI框架，分析E-I、S-N、T-F、J-P四个维度，得出您的16种性格类型。",
+        "feature3Title": "详细结果",
+        "feature3Description": "获得全面的见解：优势、劣势、职业建议、配对以及与您同类型的名人。"
+      },
+      "scenarios": {
+        "zombie": "僵尸末日",
+        "island": "荒岛",
+        "timeTravel": "时间旅行",
+        "superpowers": "超能力",
+        "lottery": "中彩票",
+        "aliens": "外星人接触",
+        "fantasy": "奇幻世界",
+        "space": "空间站"
+      },
+      "cta": {
+        "subtitle": "立即测试，看看您在极限情况下的反应！",
+        "button": "开始测试"
+      },
+      "keywords": "关键词, 标签, SEO",
+      "title": "仪表板",
+      "description": "全面分析和洞察"
+    },
+    "scenarios": {
+      "zombie": "僵尸末日",
+      "island": "荒岛",
+      "timeTravel": "时间旅行",
+      "superpowers": "超能力",
+      "lottery": "中彩票",
+      "aliens": "外星人接触",
+      "fantasy": "奇幻世界",
+      "space": "空间站",
+      "title": "仪表板"
+    },
+    "hero": {
+      "subtitle": "立即测试，看看您在极限情况下的反应！",
+      "feature1": "8种极限情景",
+      "feature2": "5分钟",
+      "feature3": "科学MBTI",
+      "title": "仪表板"
+    },
+    "cta": {
+      "subtitle": "立即测试，看看您在极限情况下的反应！",
+      "button": "开始测试",
+      "title": "仪表板"
+    },
+    "features": {
+      "feature1Title": "引人入胜的情景",
+      "feature1Description": "忘记无聊的问题！通过僵尸末日、时间旅行、外星人遭遇等激动人心的情景来回答。",
+      "feature2Title": "准确分析",
+      "feature2Description": "基于官方MBTI框架，分析E-I、S-N、T-F、J-P四个维度，得出您的16种性格类型。",
+      "feature3Title": "详细结果",
+      "feature3Description": "获得全面的见解：优势、劣势、职业建议、配对以及与您同类型的名人。",
+      "title": "仪表板"
+    },
+    "faq": {
+      "title": "仪表板",
+      "question1": "是什么在驱动您的内心世界？",
+      "answer1": "微小的选择累积成宏大的命运。",
+      "question2": "您独特的内核频率是什么？",
+      "answer2": "您拥有一把指向成长的直觉指南针。",
+      "question3": "面对未知时，您的灵魂会做出怎样的回应？",
+      "answer3": "您独特的视角塑造了您的现实。",
+      "question4": "您是如何在生活的潮流中航行的？",
+      "answer4": "您独特的视角塑造了您的现实。"
+    },
+    "test": {
+      "insightBullets": ["绘制最真实自我的星座图。"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中",
+      "selectOption": "请选择",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "仪表板",
+      "description": "全面分析和洞察"
+    },
+    "title": "仪表板",
+    "description": "全面分析和洞察",
+    "keywords": "关键词, 标签, SEO"
+  }
+}

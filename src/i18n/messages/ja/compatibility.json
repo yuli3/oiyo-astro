@@ -1,0 +1,90 @@
+{
+  "types": {
+    "soulmate": {
+      "name": "成長の刺激",
+      "description": "お互いのエネルギーがどのように共鳴し合うかを分析します。"
+    },
+    "complementary": {
+      "name": "成長の刺激",
+      "description": "お互いのエネルギーがどのように共鳴し合うかを分析します。"
+    },
+    "mentor": {
+      "name": "成長の刺激",
+      "description": "お互いのエネルギーがどのように共鳴し合うかを分析します。"
+    },
+    "challenging": {
+      "name": "成長の刺激",
+      "description": "お互いのエネルギーがどのように共鳴し合うかを分析します。"
+    }
+  },
+  "scores": {
+    "high": "幻想的な呼吸",
+    "medium": "心地よい調和",
+    "low": "努力が必要な関係"
+  },
+  "title": "慈しみの調和",
+  "description": "あなたと相手のエネルギーの共鳴度を分析します。",
+  "narrative": "お二人の出会いは、互いの足りない部分を補い合う宝石のような縁（えにし）ですね。",
+  "levels": {
+    "perfect": "完璧な調和",
+    "great": "素晴らしい相性",
+    "good": "良好な関係",
+    "challenging": "努力が必要な関係"
+  },
+  "selectPartner": "相手を選択",
+  "selectDesc": "相性を確認する相手を選んでください。",
+  "insights": "相性の洞察",
+  "combination": "二人のエネルギーを合わせると",
+  "loveLanguages": "愛の言語の互換性",
+  "dateIdeas": "おすすめのデートプラン",
+  "tryAnother": "他の相手との相性を見る",
+  "share": "結果を共有",
+  "analysis": {
+    "excellent": "究極の相性",
+    "veryGood": "非常に良好",
+    "good": "良好な絆",
+    "average": "平穏な関係",
+    "needsWork": "歩み寄りが必要",
+    "challenging": "衝突の兆し"
+  },
+  "subtitle": "二つの宿命が織りなす響きを読み解く",
+  "yourInfo": "あなたの情報",
+  "partnerInfo": "相手の情報",
+  "result": {
+    "title": "慈しみの調和",
+    "elements": "五行の調和",
+    "zodiac": "十二支",
+    "personality": "性格の共鳴",
+    "strengths": "共鳴する強み",
+    "challenges": "成長への課題",
+    "retake": "再鑑定"
+  },
+  "error": "❌ 分析エラー",
+  "calculate": "相性を解読する",
+  "traits": {
+    "controlling": {
+      "title": "慈しみの調和",
+      "description": "一方が他方を育み、支え合うことで生まれる自然な調和です。"
+    },
+    "neutral": {
+      "title": "慈しみの調和",
+      "description": "一方が他方を育み、支え合うことで生まれる自然な調和です。"
+    },
+    "same": {
+      "title": "慈しみの調和",
+      "description": "一方が他方を育み、支え合うことで生まれる自然な調和です。"
+    },
+    "supporting": {
+      "title": "慈しみの調和",
+      "description": "一方が他方を育み、支え合うことで生まれる自然な調和です。"
+    }
+  },
+  "reasons": {
+    "same": "気の合う友人同士のように、居心地の良い関係です。",
+    "generates": "あなたがエネルギーを与え、相手に活力を注ぐ関係です。",
+    "generated_by": "相手から温かな支えと慈しみを受ける関係です。",
+    "controls": "互いに刺激し合い、高みを目指す活動的な関係です。",
+    "controlled_by": "相手との調整を通じて、新たな秩序を見出す関係です。",
+    "neutral": "特別な干渉がなく、淡々と落ち着いた関係です。"
+  }
+}

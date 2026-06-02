@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "keywords": "ancestral resonance, kinship alchemies, family soul patterns, Oiyo",
+    "title": "Ancestral Resonance Profiler ",
+    "description": "Examine the shared frequencies and archetypal roles within your foundational kinship circle."
+  },
+  "hero": {
+    "subtitle": "Understand your unique archetypal role and the dialogue geometry of your kinship.",
+    "cta": "Initiate Kinship Inquiry",
+    "badge": "👨‍👩‍👧‍👦 Kinship Alchemies",
+    "title": "Ancestral Resonance"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Kinship Alchemy",
+        "description": "Reveal the hidden energetic signatures that govern your familial interactions."
+      },
+      {
+        "icon": "🚀",
+        "title": "Legacy Trajectories",
+        "description": "Mapping the path of wisdom transmission across the generations."
+      }
+    ],
+    "subtitle": "Conscious awareness within the kinship field leads to profound collective healing and recognition."
+  },
+  "types": {
+    "peacemaker": {
+      "name": "The Alchemist of Peace",
+      "emoji": "🕊️"
+    },
+    "leader": {
+      "name": "The Visionary Steward",
+      "emoji": "🌟"
+    },
+    "supporter": {
+      "name": "The Nurturing Anchor",
+      "emoji": "🤗"
+    },
+    "independent": {
+      "name": "The Sovereign Soul",
+      "emoji": "🦋"
+    },
+    "connector": {
+      "name": "The Kinship Bridge",
+      "emoji": "🌉"
+    },
+    "problem_solver": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "subtitle": "Which archetypal frequency do you naturally embody within your kinship field?"
+  },
+  "test": {
+    "insightBullets": [
+      "Illuminate the unspoken layers of your kinship philosophy.",
+      "Trace the invisible threads of ancestral expectation.",
+      "Discover the harmonic role you play in your lineage."
+    ],
+    "progress": "Resonance Ascent",
+    "next": "Forward",
+    "previous": "Reflect",
+    "submit": "Reveal the Synthesis",
+    "loading": "Calibrating kinship harmonics...",
+    "selectOption": "Mark the path of truth",
+    "subtitle": "Instruction"
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Foundational Resonance",
+        "description": "Understanding the core engine of your kinship connection.",
+        "question": "What is kinship alchemy?",
+        "answer": "It is the study of how disparate family archetypes harmonize or create friction within a shared energetic field."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Ancestral Mapping",
+        "description": "A comprehensive audit of the historical and energetic patterns within your lineage."
+      }
+    ]
+  },
+  "result": {
+    "title": "The Revealed Blueprint",
+    "description": "A detailed synthesis of your kinship role and its implications for collective harmony."
+  },
+  "title": "Kinship Resonance",
+  "description": "Profound insights into your shared familial harmonics.",
+  "keywords": "ancestral resonance, kinship dialogue, Oiyo"
+}

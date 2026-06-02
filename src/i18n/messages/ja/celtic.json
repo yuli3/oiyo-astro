@@ -1,0 +1,83 @@
+{
+  "systemName": "ケルト占星術",
+  "narrative": "樹木の知恵。",
+  "treeSign": "樹木のサイン",
+  "ogham": "オガム",
+  "trees": {
+    "birch": {
+      "tree": "樺 (カバ)",
+      "archetype": "達成者",
+      "description": "野心的で意欲にあふれ、生まれながらのリーダーシップを備えています。"
+    },
+    "rowan": {
+      "tree": "ナナカマド",
+      "archetype": "思想家",
+      "description": "哲学的で理想主義的、世界を変えようとする情熱を持っています。"
+    },
+    "ash": {
+      "tree": "トネリコ",
+      "archetype": "魔法使い",
+      "description": "芸術的で直感的、自然と深い繋がりを持っています。"
+    },
+    "alder": {
+      "tree": "ハンノキ",
+      "archetype": "先駆者",
+      "description": "冒険好きで情熱的、人々を惹きつける魅力があります。"
+    },
+    "willow": {
+      "tree": "柳",
+      "archetype": "観察者",
+      "description": "忍耐強く知的で、優れた記憶力を持っています。"
+    },
+    "hawthorn": {
+      "tree": "サンザシ",
+      "archetype": "イリュージョニスト",
+      "description": "外見と内面が異なり、創造的で好奇心旺盛です。"
+    },
+    "oak": {
+      "tree": "オーク",
+      "archetype": "安定させる者",
+      "description": "強く保護的で、他者にとっての頼れる存在です。"
+    },
+    "holly": {
+      "tree": "ヒイラギ",
+      "archetype": "支配者",
+      "description": "高貴で自信に満ち、あらゆる困難を乗り越える強さを持っています。"
+    },
+    "hazel": {
+      "tree": "ハシバミ",
+      "archetype": "知る者",
+      "description": "知的で分析的、細部にまで注意を払います。"
+    },
+    "vine": {
+      "tree": "ブドウ",
+      "archetype": "調整者",
+      "description": "優雅で魅力的、高い美的基準を持っています。"
+    },
+    "ivy": {
+      "tree": "ツタ",
+      "archetype": "生存者",
+      "description": "粘り強く忠実、どんな環境にも適応する能力があります。"
+    },
+    "reed": {
+      "tree": "葦 (アシ)",
+      "archetype": "探求者",
+      "description": "秘密を暴くことを好み、深い洞察力と強い意志を持っています。"
+    },
+    "elder": {
+      "tree": "ニワトコ",
+      "archetype": "求道者",
+      "description": "自由を追求し、人生の深い意味を求める哲学的な性質を持っています。"
+    }
+  },
+  "ariaLabel": "ケルトの星占い: {tree}, {archetype}",
+  "title": "ケルト占星術",
+  "egyptianGuardian": "エジプトの守護神",
+  "celticTreeSign": "ケルトの樹木サイン",
+  "birthSymbols": "誕生のシンボル",
+  "symbols": {
+    "Stone": "石",
+    "Flower": "花",
+    "Star": "星"
+  }
+}

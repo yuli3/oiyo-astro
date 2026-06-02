@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "keywords": "ancestral resonance, kinship dialogue, Oiyo",
+    "title": "Kinship Resonance",
+    "description": "Profound insights into your shared familial harmonics."
+  },
+  "hero": {
+    "subtitle": "Instruction",
+    "cta": "Lancer une enquête de parenté",
+    "badge": "👨‍👩‍👧‍👦 Alchimies de parenté",
+    "title": "Kinship Resonance"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Alchimie de parenté",
+        "description": "Révélez les signatures énergétiques cachées qui régissent vos interactions familiales."
+      },
+      {
+        "icon": "🚀",
+        "title": "Trajectoires héritées",
+        "description": "Cartographier le chemin de la transmission de la sagesse à travers les générations."
+      }
+    ],
+    "subtitle": "Instruction"
+  },
+  "types": {
+    "peacemaker": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "leader": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "supporter": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "independent": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "connector": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "problem_solver": {
+      "name": "Le catalyseur de solutions",
+      "emoji": "🔧"
+    },
+    "subtitle": "Instruction"
+  },
+  "test": {
+    "insightBullets": [
+      "Illuminez les couches tacites de votre philosophie de parenté.",
+      "Tracez les fils invisibles de l'attente ancestrale.",
+      "Découvrez le rôle harmonieux que vous jouez dans votre lignée."
+    ],
+    "progress": "Ascension de résonance",
+    "next": "Avant",
+    "previous": "Refléter",
+    "submit": "Révéler la synthèse",
+    "loading": "Calibrer les harmoniques de parenté...",
+    "selectOption": "Marquez le chemin de la vérité",
+    "subtitle": "Instruction"
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Résonance fondamentale",
+        "description": "Comprendre le moteur principal de votre lien de parenté.",
+        "question": "Qu’est-ce que l’alchimie de parenté ?",
+        "answer": "C'est l'étude de la manière dont des archétypes familiaux disparates s'harmonisent ou créent des frictions au sein d'un champ énergétique partagé."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Cartographie ancestrale",
+        "description": "Un audit complet des modèles historiques et énergétiques au sein de votre lignée."
+      }
+    ]
+  },
+  "result": {
+    "title": "Kinship Resonance",
+    "description": "Profound insights into your shared familial harmonics."
+  },
+  "title": "Résonance de parenté",
+  "description": "Un aperçu profond de vos harmoniques familiales partagées.",
+  "keywords": "résonance ancestrale, dialogue de parenté, Oiyo"
+}

@@ -1,0 +1,62 @@
+{
+  "errors": {
+    "invalidDate": "Fecha inválida.",
+    "invalidTime": "Hora inválida.",
+    "unknown": "Ocurrió un error desconocido."
+  },
+  "formTitle": "Ingresar Detalles de Nacimiento",
+  "privacyNote": "Su información se utiliza solo para el análisis y nunca se almacena de forma permanente.",
+  "nameLabel": "Nombre",
+  "namePlaceholder": "Ingrese su nombre (Opcional)",
+  "birthDateLabel": "Fecha de nacimiento",
+  "birthTimeLabel": "hora de nacimiento",
+  "hourPlaceholder": "S.S",
+  "minutePlaceholder": "MM",
+  "locationLabel": "Lugar de Nacimiento",
+  "locationPlaceholder": "Seleccionar Ciudad",
+  "trueSolarTime": "Hora Solar Verdadera",
+  "timeUnknownTitle": "Hora Desconocida",
+  "timeUnknownDesc": "Si se desconoce la hora, el análisis se centrará en los pilares Fecha/Año.",
+  "genderLabel": "Género",
+  "genderPlaceholder": "Seleccionar",
+  "genderMale": "Masculino",
+  "genderFemale": "Femenino",
+  "calendarNoticeDesc": "Manejamos la conversión Lunar/Solar automáticamente.",
+  "analyzing": "Calculando movimientos celestiales...",
+  "submitButton": "Revelar el Destino",
+  "secureTransmission": "Transmisión de Alquimia Segura",
+  "birthDate": "Fecha de Nacimiento",
+  "birthTime": "Hora de Nacimiento",
+  "location": "Lugar de Nacimiento",
+  "gender": "Género",
+  "dateLabel": "Fecha de Nacimiento",
+  "timeLabel": "Hora de Nacimiento",
+  "hourLabel": "Hora",
+  "minuteLabel": "Minuto",
+  "calendarNoticeTitle": "Sistema de Calendario",
+  "timeline": {
+    "origin": "ORIGEN",
+    "moment": "EL MOMENTO",
+    "seal": "SELLO"
+  },
+  "stage": {
+    "origin": {
+      "title": "La Profecía Sellada"
+    },
+    "moment": {
+      "title": "La Profecía Sellada",
+      "lockedTitle": "Coordenadas Bloqueadas",
+      "hint": "Ingrese su hora exacta de nacimiento para un análisis preciso."
+    },
+    "seal": {
+      "title": "La Profecía Sellada",
+      "description": "Todas las coordenadas temporales se alinean. Las estrellas esperan su orden."
+    }
+  },
+  "optional": "Opcional",
+  "nextStep": "Siguiente Paso",
+  "lockCoordinates": "BLOQUEAR COORDENADAS",
+  "unlock": "Desbloquear",
+  "anonymous": "Viajero Anónimo",
+  "revealProphecy": "Desellar Profecía"
+}

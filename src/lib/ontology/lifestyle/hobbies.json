@@ -1,0 +1,92 @@
+{
+  "woodworking": {
+    "name": {
+      "ko": "목공예",
+      "en": "Woodworking",
+      "ja": "木工",
+      "cn": "木工",
+      "fr": "Travail du bois",
+      "es": "Carpintería"
+    },
+    "description": {
+      "ko": "나무 조각을 통해 질서와 형상을 창조하며 마음의 평온을 얻습니다.",
+      "en": "Create order and form through wood, finding peace of mind.",
+      "ja": "木を通じて秩序と形を創造し、心の平安を得ます。",
+      "cn": "通过木头创造秩序与形式，获得心境的平和。",
+      "fr": "Créez de l'ordre et de la forme à travers le bois, trouvant la paix de l'esprit.",
+      "es": "Crea orden y forma a través de la madera, encontrando la paz mental."
+    }
+  },
+  "boxing-kickboxing": {
+    "name": {
+      "ko": "복싱 & 킥복싱",
+      "en": "Boxing & Kickboxing",
+      "ja": "ボクシング＆キックボクシング",
+      "cn": "拳击与踢拳",
+      "fr": "Boxe et Kickboxing",
+      "es": "Boxeo y Kickboxing"
+    },
+    "description": {
+      "ko": "내면의 불꽃을 발산하여 스트레스를 태우고 강인한 자아를 구축합니다.",
+      "en": "Release your inner fire to burn away stress and build a strong self.",
+      "ja": "内面の炎を放出し、ストレスを焼き尽くして強い自己を築きます。",
+      "cn": "释放内在火焰以烧尽压力，并建立强大的自我。",
+      "fr": "Libérez votre feu intérieur pour brûler le stress et construire un moi fort.",
+      "es": "Libera tu fuego interior para quemar el estrés y construir un yo fuerte."
+    }
+  },
+  "tea-ceremony-meditation": {
+    "name": {
+      "ko": "다도와 명상",
+      "en": "Tea Ceremony & Meditation",
+      "ja": "茶道と瞑想",
+      "cn": "茶道与冥想",
+      "fr": "Cérémonie du thé et Méditation",
+      "es": "Ceremonia del té y Meditación"
+    },
+    "description": {
+      "ko": "정제된 움직임과 차 한 잔의 고요함으로 영혼의 불순물을 씻어냅니다.",
+      "en": "Wash away soul impurities with refined movements and the stillness of tea.",
+      "ja": "洗練された動きと一杯の茶の静寂で、魂の不純物を洗い流します。",
+      "cn": "以优雅的动作和一杯茶的宁静洗净灵魂的杂质。",
+      "fr": "Lavez les impuretés de l'âme avec des mouvements raffinés et le calme du thé.",
+      "es": "Lava las impurezas del alma con movimientos refinados y la quietud del té."
+    }
+  },
+  "gardening": {
+    "name": {
+      "ko": "가드닝 (원예)",
+      "en": "Gardening",
+      "ja": "ガーデニング",
+      "cn": "园艺",
+      "fr": "Jardinage",
+      "es": "Jardinería"
+    },
+    "description": {
+      "ko": "생명의 순환을 돌보며 자연의 속도에 맞춰 자신을 치유합니다.",
+      "en": "Heal yourself at the pace of nature while nurturing the cycle of life.",
+      "ja": "生命の循環を育みながら、自然のペースで自分を癒します。",
+      "cn": "在培养生命循环的同时，以自然的速度治愈自己。",
+      "fr": "Guérissez-vous au rythme de la nature tout en nourrissant le cycle de la vie.",
+      "es": "Cúrese al ritmo de la naturaleza mientras nutre el ciclo de la vida."
+    }
+  },
+  "astrophotography": {
+    "name": {
+      "ko": "천체 사진",
+      "en": "Astrophotography",
+      "ja": "天体写真",
+      "cn": "天文摄影",
+      "fr": "Astrophotographie",
+      "es": "Astrofotografía"
+    },
+    "description": {
+      "ko": "광활한 우주의 찰나를 기록하며 존재의 경이로움을 마주합니다.",
+      "en": "Encounter the wonder of existence by recording moments of the vast cosmos.",
+      "ja": "広大な宇宙の瞬間を記録し、存在の驚이로움을目にします。",
+      "cn": "通过记录广阔宇宙的瞬间，邂逅存在的奇迹。",
+      "fr": "Rencontrez l'émerveillement de l'existence en enregistrant des moments du vaste cosmos.",
+      "es": "Encuentra la maravilla de la existencia registrando momentos del vasto cosmos."
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "sephirot": {
+    "keter": {
+      "name": "Keter",
+      "meaning": "Crown",
+      "attribute": "Divine Will"
+    },
+    "chokhmah": {
+      "name": "Chokhmah",
+      "meaning": "Wisdom",
+      "attribute": "Revelation"
+    },
+    "binah": {
+      "name": "Binah",
+      "meaning": "Understanding",
+      "attribute": "Reasoning"
+    },
+    "chesed": {
+      "name": "Chesed",
+      "meaning": "Kindness",
+      "attribute": "Love"
+    },
+    "gevurah": {
+      "name": "Gevurah",
+      "meaning": "Severity",
+      "attribute": "Judgment"
+    },
+    "tiferet": {
+      "name": "Tiferet",
+      "meaning": "Beauty",
+      "attribute": "Compassion"
+    },
+    "netzach": {
+      "name": "Netzach",
+      "meaning": "Eternity",
+      "attribute": "Endurance"
+    },
+    "hod": {
+      "name": "Hod",
+      "meaning": "Glory",
+      "attribute": "Humility"
+    },
+    "yesod": {
+      "name": "Yesod",
+      "meaning": "Foundation",
+      "attribute": "Connection"
+    },
+    "malkuth": {
+      "name": "Malkuth",
+      "meaning": "Kingship",
+      "attribute": "Action"
+    }
+  },
+  "title": "Kabbalah Tree of Life",
+  "description": "Mystical path of the ten Sephirot.",
+  "systemName": "Kabbalah",
+  "narrative": "Divine Emanations",
+  "sephira": "Sephira",
+  "path": "Path",
+  "ariaLabel": "Sephira: {name}, representing {meaning}."
+}

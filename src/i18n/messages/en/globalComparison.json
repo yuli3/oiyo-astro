@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "cta": {
+      "button": "Start Financial Assessment"
+    },
+    "keywords": "global comparison, personality benchmarking, statistical analysis, average comparison, international personality",
+    "badge": "Popular",
+    "title": "Financial Personality Test",
+    "description": "Discover your financial personality and money management style"
+  },
+  "filters": {
+    "region": "🌏 Select Region",
+    "age": "👥 Age Group",
+    "gender": "⚧ Gender",
+    "test": "Test Title"
+  },
+  "tabs": {
+    "overview": "📈 Overview",
+    "regional": "🗺️ Regional Comparison",
+    "demographics": "👥 Demographics",
+    "rankings": "🏆 Rankings"
+  },
+  "chart": {
+    "scoreDistribution": "📊 Score Distribution",
+    "personalityRankings": "🏆 Personality Type Rankings",
+    "avgScore": "avg score",
+    "users": "users",
+    "topRankText": "You rank in the top {percent}% of users worldwide 🚀",
+    "allAges": "All Ages",
+    "all": "All",
+    "male": "Male",
+    "female": "Female",
+    "global": "Global",
+    "asia": "Asia",
+    "europe": "Europe",
+    "northAmerica": "North America",
+    "korea": "Korea",
+    "southAmerica": "South America",
+    "africa": "Africa",
+    "oceania": "Oceania"
+  },
+  "demographics": {
+    "comingSoon": "📊 Demographic analysis features coming soon."
+  },
+  "cta": {
+    "button": "Take Tests Now",
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights"
+  },
+  "features": {
+    "benchmarking": {
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "regional": {
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    }
+  },
+  "insights": {
+    "yourScore": "Your Score",
+    "globalAverage": "Global Average",
+    "percentile": "Percentile",
+    "topPerformers": "Top Performers",
+    "aboveAverage": "Above Average",
+    "belowAverage": "Low",
+    "regions": "Regions"
+  },
+  "test": {
+    "progress": "Progress",
+    "submit": "Submit",
+    "loading": "Loading",
+    "selectOption": "Select",
+    "insightBullets": ["Unveil the hidden layers of your personal philosophy."]
+  },
+  "result": {
+    "title": "Result",
+    "description": "Discover your financial personality and money management style"
+  },
+  "badge": "Global Benchmarking",
+  "loading": "📊 Analyzing...",
+  "noData": "📋 No data to analyze. Please complete personality tests first.",
+  "title": "My Insights",
+  "description": "Comprehensive analysis and insights",
+  "keywords": "keywords, tags, seo"
+}

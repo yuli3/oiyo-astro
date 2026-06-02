@@ -1,0 +1,44 @@
+{
+  "subtitle": "Accordez les fréquences de votre existence numérique. Ajustez comment le sanctuaire interagit avec votre âme.",
+  "title": "Configuration du Sanctuaire",
+  "subscription": {
+    "title": "Subscription Management",
+    "noActive": "No Active Subscription",
+    "noActiveDesc": "Unlock premium features today.",
+    "viewPlans": "View Plans",
+    "renewsOn": "Renews on {date}",
+    "expiresOn": "Expires on {date}",
+    "cancelSubscription": "Cancel Subscription",
+    "confirmCancel": "Are you sure?"
+  },
+  "sections": {
+    "access": {
+      "title": "Configuration du Sanctuaire",
+      "security": {
+        "title": "Configuration du Sanctuaire",
+        "description": "Thème sombre à haut contraste activé"
+      },
+      "manage": "Gérer",
+      "signout": {
+        "title": "Configuration du Sanctuaire",
+        "description": "Thème sombre à haut contraste activé"
+      }
+    },
+    "preferences": {
+      "title": "Configuration du Sanctuaire",
+      "signals": {
+        "title": "Configuration du Sanctuaire",
+        "description": "Thème sombre à haut contraste activé"
+      },
+      "language": {
+        "title": "Configuration du Sanctuaire",
+        "description": "Thème sombre à haut contraste activé"
+      },
+      "change": "Changer",
+      "void": {
+        "title": "Configuration du Sanctuaire",
+        "description": "Thème sombre à haut contraste activé"
+      }
+    }
+  }
+}

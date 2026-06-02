@@ -1,0 +1,8 @@
+{
+  "card": {
+    "recommendedAssets": "주요 자산",
+    "highRisk": "위험",
+    "lowRisk": "낮은 위험",
+    "mediumRisk": "중간 위험"
+  }
+}

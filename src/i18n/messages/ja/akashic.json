@@ -1,0 +1,30 @@
+{
+  "tabs": {
+    "essence": "本質",
+    "destiny": "運命",
+    "biology": "生体リズム"
+  },
+  "essence": {
+    "title": "アカシックレコード",
+    "quote": "あなたの意識の固有の署名",
+    "soulFormula": "魂の公式",
+    "humanDesign": "ヒューマンデザイン",
+    "authority": "権威",
+    "locked": "魂の本質を解き明かすにはアンロックしてください"
+  },
+  "destiny": {
+    "title": "アカシックレコード",
+    "lifePath": "ライフパス",
+    "seeker": "探求者",
+    "animal": "守護動物"
+  },
+  "biology": {
+    "title": "アカシックレコード",
+    "chronotype": "クロノタイプ",
+    "constitution": "体質"
+  },
+  "title": "アカシックレコード",
+  "subtitle": "魂の記録",
+  "close": "閉じる",
+  "description": "魂の旅の記録を探求してください。幾多の生涯を超えた永遠のアーカイブです。"
+}

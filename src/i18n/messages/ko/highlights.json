@@ -1,0 +1,15 @@
+{
+  "title": "하이라이트",
+  "alignment": {
+    "title": "조정",
+    "description": "귀하의 정렬 점수."
+  },
+  "compatibility": {
+    "title": "호환성",
+    "description": "당신의 호환성."
+  },
+  "innerWork": {
+    "title": "내부 작업",
+    "description": "성장을 위한 영역."
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "title": "Mi análisis",
+  "subtitle": "Información detallada",
+  "genderSelection": {
+    "title": "Mi análisis",
+    "subtitle": "Información detallada",
+    "question": "Pregunta",
+    "male": "Masculina",
+    "female": "Femenina"
+  },
+  "progress": "Progreso",
+  "selectOption": "Seleccionar",
+  "insightBullets": ["Descubre los patrones únicos que definen tu camino."],
+  "start": "Comenzar",
+  "continue": "Continuar",
+  "pause": "Pausa",
+  "results": "Resultados",
+  "previous": "Previa",
+  "finish": "Finalizar",
+  "next": "Próxima",
+  "submit": "Entregar",
+  "loading": "Cargando",
+  "viewResults": "Ver resultados",
+  "swipeHintLong": "Desliza para navegar por las preguntas",
+  "resultTitle": "El resultado de su análisis",
+  "step": "Pregunta {actual} de {total}",
+  "instruction": "Instrucciones",
+  "restart": "Reiniciar prueba",
+  "helperText": "Seleccione la mejor respuesta."
+}

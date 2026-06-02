@@ -1,0 +1,23 @@
+{
+  "dashboard": {
+    "phase2": "Phase 2 : Fondation",
+    "title": "Coordonnateur de vie",
+    "subtitle": "Synthétisez vos données cosmiques (Saju, Zodiaque) avec des traits psychologiques (MBTI) pour découvrir votre chemin de vie optimal.",
+    "dataInput": "Entrée de données",
+    "birthDate": "Date de naissance (pour Saju)",
+    "mbtiType": "Type MBTI",
+    "calculatedSign": "Signe calculé :",
+    "analyzeSynergy": "Analyser la synergie",
+    "coreEssence": "Essence de base",
+    "careerRecs": "Recommandations de carrière",
+    "hobbySynergy": "Synergie de loisirs",
+    "awaitingData": "En attente de données...",
+    "enterDetails": "Entrez les détails à analyser",
+    "select": "Sélectionner..."
+  },
+  "result": {
+    "match": "Correspondre",
+    "avgSalary": "Salaire moyen",
+    "outlook": "Perspectives"
+  }
+}

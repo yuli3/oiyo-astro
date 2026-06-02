@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "title": "Friend Gift Recommendation Quiz | Find the perfect gift",
+    "description": "We analyze the recipient's personality and tastes to recommend the perfect gift. AI-based gift recommendation service",
+    "keywords": "Gift Recommendations, Find a Gift, Perfect Gift, Birthday Gift, Anniversary Gift"
+  },
+  "hero": {
+    "title": "🎁 Find the perfect gift",
+    "subtitle": "Recommend customized gifts that take into account the recipient’s personality, tastes, and budget",
+    "cta": "Get gift recommendations"
+  },
+  "features": {
+    "personalized": {
+      "title": "Personalized Recommendations",
+      "description": "We analyze the personality and tastes of the recipient and recommend the most appropriate gift."
+    },
+    "variety": {
+      "title": "Various options",
+      "description": "We offer a variety of gift options depending on your budget and relationship."
+    },
+    "shoppingLinks": {
+      "title": "Purchase link provided",
+      "description": "Provides a link to purchase the recommended gift directly"
+    }
+  },
+  "howItWorks": {
+    "steps": {
+      "1": {
+        "title": "Enter your profile",
+        "desc": "Recipient's age, personality, and preferences"
+      },
+      "2": {
+        "title": "Budget Settings",
+        "desc": "Choose your gift budget range"
+      },
+      "3": {
+        "title": "AI analytics",
+        "desc": "Optimal Futures Analysis"
+      },
+      "4": {
+        "title": "Get Featured",
+        "desc": "Top 5 Recommended Gifts"
+      }
+    },
+    "title": "🎯 It works like this"
+  },
+  "cta": {
+    "button": "Get started now →"
+  },
+  "landing": {
+    "subtitle": "Find the perfect gift",
+    "cta": "Start the quiz"
+  },
+  "ui": {
+    "selectOption": "Please select an option",
+    "progress": "In progress",
+    "previous": "before"
+  },
+  "result": {
+    "title": "🎁 Recommended Gifts",
+    "subtitle": "Choose the perfect gift for the recipient",
+    "match": "matching",
+    "reasons": "💡 Reasons for recommendation:",
+    "shopNow": "purchase",
+    "save": "save",
+    "retake": "Get recommended again",
+    "share": "Share your results",
+    "loading": "Loading..."
+  },
+  "data": {
+    "questions": {
+      "age": {
+        "options": {
+          "10s": "teenager",
+          "20s": "20s",
+          "30s": "30s",
+          "40s": "40s",
+          "50plus": "Over 50s"
+        },
+        "question": "What is the age range of the person who will receive the gift?"
+      },
+      "personality": {
+        "options": {
+          "active": "active and outgoing",
+          "calm": "calm and introverted",
+          "creative": "creative and artistic",
+          "practical": "practical and logical"
+        },
+        "question": "What is the personality of the recipient?"
+      },
+      "interests": {
+        "options": {
+          "tech": "Technology/Home Appliances",
+          "fashion": "Fashion/Beauty",
+          "food": "food/cooking",
+          "sports": "exercise/sports",
+          "art": "Art & Design",
+          "home": "Home/Interior"
+        },
+        "question": "What is your main concern?"
+      },
+      "budget": {
+        "options": {
+          "under20": "Less than 20,000 won",
+          "20to50": "20,000-50,000 won",
+          "50to100": "50,000-100,000 won",
+          "over100": "100,000 won or more"
+        },
+        "question": "What is your budget?"
+      },
+      "relationship": {
+        "options": {
+          "family": "family",
+          "friend": "friend",
+          "romantic": "lover",
+          "colleague": "coworker"
+        },
+        "question": "What is your relationship with the recipient?"
+      },
+      "occasion": {
+        "options": {
+          "birthday": "birthday",
+          "holiday": "Holidays/anniversaries",
+          "thanks": "expression of gratitude",
+          "just-because": "without any special day"
+        },
+        "question": "What day is this gift for?"
+      }
+    },
+    "products": {
+      "wireless-earbuds": {
+        "name": "wireless earphones",
+        "description": "Enjoy music and calls with high-quality wireless earphones",
+        "priceRange": "50,000-100,000 won",
+        "reasons": ["Perfect for music lovers", "practical gift", "trendy item"]
+      },
+      "smart-watch": {
+        "name": "smart watch",
+        "description": "Health management and notifications at once",
+        "priceRange": "100,000 won or more",
+        "reasons": [
+          "For those interested in health care",
+          "latest technology",
+          "Practical and stylish"
+        ]
+      },
+      "perfume-set": {
+        "name": "perfume set",
+        "description": "Create special moments with luxurious perfume",
+        "priceRange": "50,000-100,000 won",
+        "reasons": [
+          "romantic gift",
+          "luxurious package",
+          "Perfect for special days"
+        ]
+      },
+      "handbag": {
+        "name": "luxury handbags",
+        "description": "Style and class at the same time",
+        "priceRange": "100,000 won or more",
+        "reasons": [
+          "For those interested in fashion",
+          "Can be used for a long time",
+          "special gift"
+        ]
+      },
+      "gourmet-set": {
+        "name": "High-quality food ingredient set",
+        "description": "Special dishes made with carefully selected high-quality ingredients",
+        "priceRange": "50,000-100,000 won",
+        "reasons": ["Perfect for cooking lovers", "unique gifts", "practical"]
+      },
+      "coffee-maker": {
+        "name": "premium coffee machine",
+        "description": "Enjoy cafe-quality coffee at home",
+        "priceRange": "100,000 won or more",
+        "reasons": [
+          "For coffee lovers",
+          "Available for daily use",
+          "luxurious gift"
+        ]
+      },
+      "yoga-mat": {
+        "name": "premium yoga mat",
+        "description": "Luxury yoga mat for comfortable exercise",
+        "priceRange": "50,000-100,000 won",
+        "reasons": [
+          "For exercise enthusiasts",
+          "healthy lifestyle",
+          "practical gift"
+        ]
+      },
+      "fitness-tracker": {
+        "name": "fitness tracker",
+        "description": "Exercise records and health management at once",
+        "priceRange": "50,000-100,000 won",
+        "reasons": [
+          "For those interested in health care",
+          "The perfect companion for a healthy lifestyle",
+          "practical"
+        ]
+      },
+      "diffuser": {
+        "name": "aroma diffuser",
+        "description": "Create a home atmosphere with a subtle scent",
+        "priceRange": "20,000-50,000 won",
+        "reasons": [
+          "For those who spend a lot of time at home",
+          "comfortable atmosphere",
+          "practical"
+        ]
+      },
+      "luxury-blanket": {
+        "name": "premium blanket",
+        "description": "Soft and warm luxury blanket",
+        "priceRange": "50,000-100,000 won",
+        "reasons": [
+          "When you want to give the gift of coziness",
+          "Practical and luxurious",
+          "Available in all seasons"
+        ]
+      },
+      "art-book": {
+        "name": "art book collection",
+        "description": "Collection of works by world-class artists",
+        "priceRange": "50,000-100,000 won",
+        "reasons": ["For art lovers", "collectible value", "intelligent gift"]
+      },
+      "concert-tickets": {
+        "name": "performance tickets",
+        "description": "Give the gift of a special experience",
+        "priceRange": "50,000-100,000 won",
+        "reasons": [
+          "When you want to give an experience as a gift",
+          "making memories",
+          "For culture lovers"
+        ]
+      },
+      "notebook-set": {
+        "name": "Advanced Note Set",
+        "description": "Practical notebook with clean design",
+        "priceRange": "Less than 20,000 won",
+        "reasons": ["reasonable price", "practical", "No burden to anyone"]
+      },
+      "candle-set": {
+        "name": "scented candle set",
+        "description": "Create an atmosphere with a subtle scent",
+        "priceRange": "20,000-50,000 won",
+        "reasons": ["reasonable price", "an atmospheric gift", "practical"]
+      }
+    }
+  },
+  "title": "gift recommendation",
+  "findGift": "Find a gift",
+  "occasion": "special day",
+  "budget": "budget"
+}

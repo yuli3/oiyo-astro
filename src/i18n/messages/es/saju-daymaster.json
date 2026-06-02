@@ -1,0 +1,142 @@
+{
+  "GAP": {
+    "traits": [
+      "Fuerte espíritu pionero que indica nuevos comienzos.",
+      "No puedo tolerar la injusticia; Posee un carácter recto y erguido.",
+      "Tiene cualidades de liderazgo y le resulta difícil estar subordinado.",
+      "La terquedad excesiva a veces puede conducir a la superioridad moral, por lo que se necesita flexibilidad."
+    ],
+    "strengths": ["Conducir", "Honestidad", "Responsabilidad", "Independencia"],
+    "weaknesses": ["Falta de flexibilidad", "Arrogancia", "Dogmática"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "EUL": {
+    "traits": [
+      "Excelente adaptabilidad al medio y fuertes tendencias prácticas.",
+      "Parece suave por fuera pero posee una fuerte tenacidad e instintos de supervivencia por dentro.",
+      "Creativo y sensato, hábil en comunicación y armonía con los demás.",
+      "Carece de decisión y puede dejarse influenciar fácilmente por el entorno que lo rodea."
+    ],
+    "strengths": ["Adaptabilidad", "Flexibilidad", "Afinidad", "Delicadeza"],
+    "weaknesses": ["capricho", "Dependencia", "Indecisión"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "BYEONG": {
+    "traits": [
+      "Disfruta de la atención con una personalidad abierta y refrescante.",
+      "Apasionado y progresista, valora la cortesía y el honor.",
+      "Las emociones son fácilmente visibles en el rostro y no guarda rencor.",
+      "Puede tener mal genio y perseguir extravagancias sin sustancia."
+    ],
+    "strengths": ["Optimismo", "expresividad", "Honestidad", "Energía"],
+    "weaknesses": ["Impaciencia", "Vanidad", "Exceso emocional"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "JEONG": {
+    "traits": [
+      "Devoto y cálido, poseedor de delicada sensibilidad y perspicacia.",
+      "Educada y tranquila por fuera, pero esconde una pasión explosiva por dentro.",
+      "Persigue valores espirituales y tiene un excelente talento en religión o artes.",
+      "Piensa demasiado, se atormenta o puede ser tímido y sensible."
+    ],
+    "strengths": ["Conocimiento", "Devoción", "Arte", "Calma"],
+    "weaknesses": ["Sensibilidad", "Obsesión", "Pasividad"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "MU": {
+    "traits": [
+      "Pesado y prudente; tiene la tenacidad para seguir adelante una vez decidido.",
+      "Amplia tolerancia, actuando como un pilar sólido para las personas que nos rodean.",
+      "Conservador, valora el crédito como la vida y busca la estabilidad por encima del cambio.",
+      "Puede ser demasiado terco y directo, lo que provoca una interrupción de la comunicación."
+    ],
+    "strengths": ["Estabilidad", "Conducir", "Tolerancia", "Confianza"],
+    "weaknesses": ["Testarudez", "Insensibilidad", "Sequedad"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "GI": {
+    "traits": [
+      "Sencillo y diligente, encuentra alegría en cuidar y educar a los demás.",
+      "Valora la sustancia y tiene un excelente sentido meticuloso y realista.",
+      "Fuerte mecanismo de autodefensa y tiende a no revelar fácilmente sus verdaderos sentimientos.",
+      "Puede parecer mezquino debido a la sospecha y al cálculo excesivo de los beneficios prácticos."
+    ],
+    "strengths": [
+      "Diligencia",
+      "Inclusividad",
+      "Sentido práctico",
+      "Benevolencia"
+    ],
+    "weaknesses": ["Egocentrismo", "Suspicion", "Conservatismo"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "GYEONG": {
+    "traits": [
+      "Profunda lealtad, aprecia las relaciones una vez formadas, fuerte camaradería.",
+      "Posee crítica serena y decisión, hábil para establecer disciplina.",
+      "Parece frío por fuera pero es cálido y puro por dentro.",
+      "Puede señalar demasiado claramente los defectos de los demás o revelar tendencias destructivas."
+    ],
+    "strengths": ["Decisión", "Justicia", "Lealtad", "Seriedad"],
+    "weaknesses": ["Crítica", "Agresión", "Falta de flexibilidad"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "SIN": {
+    "traits": [
+      "Fuerte autoestima y pulcro, poseedor de sentido estético y modales refinados.",
+      "Delicado y sensible, detecta fácilmente los errores de los demás, autocontrol minucioso.",
+      "Cínico y quisquilloso, pero su yo interior es más frágil y fácil de lastimar que nadie.",
+      "Puede obsesionarse con las pequeñas cosas o cansarse de un perfeccionismo excesivo."
+    ],
+    "strengths": ["perfeccionismo", "Ojo estético", "Claridad", "Autogestión"],
+    "weaknesses": ["Sensibilidad", "Cinismo", "Relaciones estrechas"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "IM": {
+    "traits": [
+      "Gran escala, pensamiento rápido, hábil en el humor y la improvisación.",
+      "Anhela la libertad y tiene un temperamento de vagabundo que no está atado a ninguna parte.",
+      "Buena tolerancia y reúne bien a la gente, pero a veces tiene una oscuridad insondable.",
+      "Le falta paciencia y puede empezar cosas sin terminarlas."
+    ],
+    "strengths": ["Sabiduría", "Afinidad", "Creatividad", "Tolerancia"],
+    "weaknesses": ["Pereza", "Intrigante", "Inestabilidad"],
+    "name": "Gye (癸)",
+    "nature": "Humble and intellectual wave of rain and dew wetting all things",
+    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+  },
+  "GYE": {
+    "traits": [
+      "Sabio y de pensamiento profundo, capta los cambios ambientales más rápido que nadie.",
+      "Se ocupa silenciosamente de los beneficios prácticos y tiene una curiosidad intelectual muy fuerte.",
+      "Parece dócil pero tiene persistencia para penetrar silenciosamente hacia los objetivos.",
+      "Propenso a soñar despierto, cambios de humor severos y toma de decisiones lenta debido a un corazón débil."
+    ],
+    "strengths": [
+      "Inteligencia",
+      "Adaptabilidad",
+      "Persistencia",
+      "Imaginación creativa"
+    ],
+    "weaknesses": ["Pena", "Fragilidad", "Nerviosismo"],
+    "name": "gye",
+    "nature": "Humilde e intelectual ola de lluvia y rocío que moja todas las cosas.",
+    "lifePurpose": "Saciar la sed y la sed del mundo y transmitir principios invisibles de la vida a través de la exploración intelectual."
+  }
+}

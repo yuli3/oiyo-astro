@@ -1,0 +1,43 @@
+{
+  "list": {
+    "keep": "保留",
+    "keepAction": "继续订阅",
+    "review": "审查",
+    "reviewAction": "查看使用情况",
+    "cancel": "取消",
+    "cancelAction": "取消订阅",
+    "monthly": "每月",
+    "used": "已使用",
+    "timesPerMonth": "次/月",
+    "satisfaction": "满意度",
+    "valueScore": "性价比评分"
+  },
+  "title": "订阅管理器",
+  "subtitle": "追踪并优化您的每月订阅",
+  "addSubscription": {
+    "title": "添加订阅",
+    "nameLabel": "服务名称",
+    "namePlaceholder": "例如：Netflix、Spotify",
+    "priceLabel": "每月费用",
+    "pricePlaceholder": "0.00",
+    "usageLabel": "每月使用次数",
+    "usageUnit": "次",
+    "satisfactionLabel": "满意度",
+    "submit": "添加"
+  },
+  "summary": {
+    "monthlyTotal": "每月总计",
+    "yearlyTotal": "每年总计",
+    "potentialSavings": "潜在节省"
+  },
+  "tips": {
+    "title": "智能建议",
+    "tip1": "审查30天内未使用过的订阅。",
+    "tip2": "合并家庭计划以降低费用。",
+    "tip3": "设置日历提醒每月定期审查。"
+  },
+  "empty": {
+    "title": "暂无订阅",
+    "description": "开始添加您的订阅以追踪支出。"
+  }
+}

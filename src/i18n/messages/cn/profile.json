@@ -1,0 +1,23 @@
+{
+  "title": "称谓",
+  "anonymous": "旅人",
+  "achievements": "里程碑",
+  "badges": {
+    "newMember": "新生灵魂",
+    "explorer": "求道者"
+  },
+  "editProfile": "编辑档案",
+  "labels": {
+    "entity": "实体",
+    "title": "称谓",
+    "description": "描述",
+    "scroll": "卷轴",
+    "timeline": "时间轴",
+    "archive": "档案馆",
+    "ascension": "飞升",
+    "ascensionDesc": "您的成长之路。",
+    "shards": "碎片",
+    "tier": "会员等级",
+    "reflection": "回溯"
+  }
+}

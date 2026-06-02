@@ -1,0 +1,42 @@
+{
+  "title": "Análisis Saju Personal",
+  "description": "Descubre tus pilares astrológicos.",
+  "inputs": {
+    "birthDate": "Fecha de Nacimiento",
+    "birthTime": "Hora de Nacimiento",
+    "calculate": "Calcular"
+  },
+  "result": {
+    "title": "Tu Análisis de Destino",
+    "description": "Descifrando los patrones geométricos de tu identidad...",
+    "time": "Pilar de la Hora",
+    "day": "Pilar del Día",
+    "month": "Pilar del Mes",
+    "year": "Pilar del Año",
+    "fiveElements": "Análisis de los Cinco Elementos"
+  },
+  "meta": {
+    "title": "Tu Análisis de Destino",
+    "description": "Descifrando los patrones geométricos de tu identidad...",
+    "keywords": "saju, cuatro pilares, destino, adivinación, astrología coreana"
+  },
+  "hero": {
+    "title": "Tu Análisis de Destino",
+    "subtitle": "Comprende tu camino de vida a través de la sabiduría antigua",
+    "cta": "Descubrir Mi Destino",
+    "badge": "🔮 Sabiduría Tradicional"
+  },
+  "test": {
+    "insightBullets": [
+      "Entiende tu propósito de vida",
+      "Descubre tus puntos fuertes",
+      "Aprende sobre tu destino"
+    ],
+    "progress": "Progreso",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "loading": "Analizando tu destino...",
+    "selectOption": "Seleccionar"
+  }
+}

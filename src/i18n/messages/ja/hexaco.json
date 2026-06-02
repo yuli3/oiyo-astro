@@ -1,0 +1,36 @@
+{
+  "title": "HEXACO 性格検査",
+  "description": "HEXACOモデルに基づき、あなたの性格を6つの次元で分析します。",
+  "questions": {
+    "q1": "私は他人に誠実に接しようと努めている。",
+    "q2": "私は感情の起伏が激しくない。"
+  },
+  "results": {
+    "honesty": "正直・謙虚さ",
+    "emotionality": "情緒性",
+    "extraversion": "外向性",
+    "agreeableness": "誠実さ（円満性）",
+    "conscientiousness": "勤勉性",
+    "openness": "体験への開放性"
+  },
+  "axis": "倫理的軸 (Ethical Axis)",
+  "labels": {
+    "high": "高共振",
+    "low": "低共振",
+    "average": "バランスのとれた共鳴"
+  },
+  "guardian": "真実の守護者",
+  "guardianDesc": "高い正直さ-謙虚さのスコアは、あなたの気高い品性を証明しています。",
+  "restart": "再試行",
+  "dimensions": {
+    "H": "正直さ-謙虚さ",
+    "E": "情緒性",
+    "X": "外向性",
+    "A": "協調性",
+    "C": "誠実性",
+    "O": "開放性"
+  },
+  "honestyLevel": "正直さレベル: {level}",
+  "save": "結果を保存",
+  "uniqueDimension": "HEXACOの独自次元"
+}

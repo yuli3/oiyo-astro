@@ -1,0 +1,36 @@
+{
+  "title": "HEXACO 性格测评",
+  "description": "基于 HEXACO 模型，从 6 个维度分析您的人格。",
+  "questions": {
+    "q1": "我努力诚实地对待他人。",
+    "q2": "我的情绪起伏不剧烈。"
+  },
+  "results": {
+    "honesty": "诚实-谦逊性",
+    "emotionality": "情绪性",
+    "extraversion": "外向性",
+    "agreeableness": "宜人性",
+    "conscientiousness": "尽责性",
+    "openness": "开放性"
+  },
+  "axis": "伦理坐标 (Ethical Axis)",
+  "labels": {
+    "high": "高共振",
+    "low": "低共振",
+    "average": "平衡共振"
+  },
+  "guardian": "真实守望者",
+  "guardianDesc": "卓越的“诚实-谦逊”分值印证了您的圣洁品质。",
+  "restart": "重启仪轨",
+  "dimensions": {
+    "H": "诚实-谦逊",
+    "E": "情绪性",
+    "X": "外向性",
+    "A": "宜人性",
+    "C": "尽责性",
+    "O": "经验开放性"
+  },
+  "honestyLevel": "诚信能级: {level}",
+  "save": "铭刻契约",
+  "uniqueDimension": "HEXACO 独特维度"
+}

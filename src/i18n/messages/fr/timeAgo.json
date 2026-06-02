@@ -1,0 +1,6 @@
+{
+  "now": "Tout à l' heure",
+  "minute": "il y a {count} m",
+  "hour": "il y a {count}h",
+  "day": "il y a {count}d"
+}

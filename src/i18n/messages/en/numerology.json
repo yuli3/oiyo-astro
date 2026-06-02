@@ -1,0 +1,477 @@
+{
+  "intro": {
+    "badge": "Intro",
+    "button": "Start",
+    "description": "Learn more",
+    "quote": "Numbers are life",
+    "title": "Introduction"
+  },
+  "subtitle": "The resonance of spiritual numeric values held by name and birth.",
+  "title": "Numerology",
+  "input": {
+    "birthDate": "Birth Date",
+    "birthDateError": "Invalid Date",
+    "calculating": "Calculating",
+    "dateLabel": "Date",
+    "description": "Enter Details",
+    "fullName": "Full Name",
+    "nameLabel": "Name",
+    "namePlaceholder": "Name",
+    "submit": "Submit",
+    "title": "Input"
+  },
+  "results": {
+    "expression": "Expression",
+    "header": "Header",
+    "lifePath": "Life Path",
+    "personality": "Personality",
+    "recalibrate": "Recalibrate",
+    "soulUrge": "Soul Urge",
+    "vibrationalResonance": "Resonance"
+  },
+  "meta": {
+    "description": "Numerology",
+    "keywords": "numerology",
+    "title": "Numerology"
+  },
+  "hero": {
+    "backToHome": "Back",
+    "badge": "Numerology",
+    "cosmicSignature": "Cosmic Signature",
+    "description": "Unlock the secrets of numbers",
+    "discover": "Discover",
+    "highlight": "Insight",
+    "mainTitle": "Numerology",
+    "pageSubtitle": "Ancient Wisdom",
+    "subtitle": "Calculate your numbers",
+    "title": "Numerology Calculator",
+    "your": "Your"
+  },
+  "result": {
+    "analyzeAnother": "Another",
+    "anotherPerson": "Another Person",
+    "dashboard": {
+      "advice": "Advice",
+      "career": "Career",
+      "challenges": "Challenges",
+      "strengths": "Strengths",
+      "yearEnergy": "Year Energy"
+    },
+    "dashboardTitle": "Dashboard",
+    "description": "Result",
+    "lifeCoordination": "Coordination",
+    "readingTitle": "Reading",
+    "recommendedCities": "Cities",
+    "soulFoods": "Foods"
+  },
+  "meanings": {
+    "birthDay": "Birthday",
+    "destiny": "Destiny",
+    "lifePath": "Life Path",
+    "personality": "Personality",
+    "soulUrge": "Soul Urge"
+  },
+  "data": {
+    "meanings": {
+      "1": {
+        "careerSuggestions": [
+          "CEO",
+          "Entrepreneur",
+          "Politician",
+          "Military Commander",
+          "Inventor"
+        ],
+        "challenges": ["Stubbornness", "Impatience", "Ego", "Dominance"],
+        "description": "The Leader",
+        "keywords": ["Independence", "Leadership", "Innovation", "Ambition"],
+        "name": "The Leader",
+        "strengths": [
+          "Leadership Skills",
+          "Self-reliance",
+          "Innovation",
+          "Determination",
+          "Courage"
+        ],
+        "traits": [
+          "Natural Leader",
+          "Independent",
+          "Ambitious",
+          "Creative",
+          "Decisive"
+        ]
+      },
+      "2": {
+        "careerSuggestions": [
+          "Counselor",
+          "Diplomat",
+          "Teacher",
+          "Social Worker",
+          "Mediator"
+        ],
+        "challenges": [
+          "Indecisiveness",
+          "Over-sensitivity",
+          "Dependence",
+          "Conflict Avoidance"
+        ],
+        "description": "The Diplomat",
+        "keywords": ["Cooperation", "Harmony", "Diplomacy", "Sensitivity"],
+        "name": "The Diplomat",
+        "strengths": [
+          "Empathy",
+          "Teamwork",
+          "Mediation",
+          "Patience",
+          "Loyalty"
+        ],
+        "traits": [
+          "Diplomatic",
+          "Cooperative",
+          "Sensitive",
+          "Intuitive",
+          "Supportive"
+        ]
+      },
+      "3": {
+        "careerSuggestions": [
+          "Artist",
+          "Writer",
+          "Entertainer",
+          "Designer",
+          "PR Specialist"
+        ],
+        "challenges": [
+          "Scattered Energy",
+          "Superficiality",
+          "Extravagance",
+          "Exaggeration"
+        ],
+        "description": "The Communicator",
+        "keywords": ["Expression", "Sociality", "Creativity", "Optimism"],
+        "name": "The Communicator",
+        "strengths": [
+          "Communication",
+          "Imagination",
+          "Inspiration",
+          "Humor",
+          "Artistic Talent"
+        ],
+        "traits": [
+          "Expressive",
+          "Sociable",
+          "Optimistic",
+          "Creative",
+          "Charismatic"
+        ]
+      },
+      "4": {
+        "careerSuggestions": [
+          "Engineer",
+          "Architect",
+          "Accountant",
+          "Manager",
+          "Researcher"
+        ],
+        "challenges": [
+          "Rigidity",
+          "Narrow-mindedness",
+          "Seriousness",
+          "Lack of Flexibility"
+        ],
+        "description": "The Worker",
+        "keywords": ["Stability", "Discipline", "Order", "Practicality"],
+        "name": "The Worker",
+        "strengths": [
+          "Stability",
+          "Methodical",
+          "Reliable",
+          "Persistence",
+          "Attention to Detail"
+        ],
+        "traits": [
+          "Hardworking",
+          "Practical",
+          "Organized",
+          "Loyal",
+          "Disciplined"
+        ]
+      },
+      "5": {
+        "careerSuggestions": [
+          "Travel Guide",
+          "Sales Specialist",
+          "Marketing",
+          "Journalist",
+          "Pilot"
+        ],
+        "challenges": [
+          "Restlessness",
+          "Impulsiveness",
+          "Inconsistency",
+          "Irresponsibility"
+        ],
+        "description": "The Freedom Seeker",
+        "keywords": ["Freedom", "Change", "Adaptability", "Curiosity"],
+        "name": "The Freedom Seeker",
+        "strengths": [
+          "Versatility",
+          "Resourcefulness",
+          "Fearlessness",
+          "Progressive",
+          "Social Connectivity"
+        ],
+        "traits": [
+          "Adventurous",
+          "Adaptable",
+          "Curious",
+          "Dynamic",
+          "Versatile"
+        ]
+      },
+      "6": {
+        "careerSuggestions": [
+          "Nurse",
+          "Teacher",
+          "Counselor",
+          "Social Worker",
+          "Chef"
+        ],
+        "challenges": [
+          "Over-protective",
+          "Over-sacrificing",
+          "Worrying",
+          "Interference"
+        ],
+        "description": "The Nurturer",
+        "keywords": ["Care", "Family", "Service", "Compassion"],
+        "name": "The Nurturer",
+        "strengths": [
+          "Nurturing",
+          "Responsibility",
+          "Healing Ability",
+          "Loyalty",
+          "Service Spirit"
+        ],
+        "traits": [
+          "Compassionate",
+          "Responsible",
+          "Protective",
+          "Generous",
+          "Family-oriented"
+        ]
+      },
+      "7": {
+        "careerSuggestions": [
+          "Researcher",
+          "Scientist",
+          "Philosopher",
+          "Psychologist",
+          "Spiritual Teacher"
+        ],
+        "challenges": [
+          "Isolation",
+          "Pessimism",
+          "Secretiveness",
+          "Perfectionism"
+        ],
+        "description": "The Seeker",
+        "keywords": ["Spirituality", "Analysis", "Intuition", "Wisdom"],
+        "name": "The Seeker",
+        "strengths": [
+          "Intuition",
+          "Analytical Power",
+          "Wisdom",
+          "Spirituality",
+          "Research Ability"
+        ],
+        "traits": [
+          "Analytical",
+          "Spiritual",
+          "Intuitive",
+          "Mysterious",
+          "Introspective"
+        ]
+      },
+      "8": {
+        "careerSuggestions": [
+          "Executive",
+          "Banker",
+          "Real Estate",
+          "Lawyer",
+          "Entrepreneur"
+        ],
+        "challenges": [
+          "Materialism",
+          "Workaholism",
+          "Control Issues",
+          "Impatience"
+        ],
+        "description": "The Powerhouse",
+        "keywords": ["Success", "Material Mastery", "Business", "Authority"],
+        "name": "The Powerhouse",
+        "strengths": [
+          "Business Ability",
+          "Leadership",
+          "Organization",
+          "Decisiveness",
+          "Material Success"
+        ],
+        "traits": [
+          "Ambitious",
+          "Authoritative",
+          "Business-minded",
+          "Material",
+          "Powerful"
+        ]
+      },
+      "9": {
+        "careerSuggestions": [
+          "Humanitarian Activist",
+          "Artist",
+          "Healer",
+          "Teacher",
+          "Philanthropist"
+        ],
+        "challenges": [
+          "Emotional Extremes",
+          "Resentment",
+          "Mood Swings",
+          "Impracticality"
+        ],
+        "description": "The Humanitarian",
+        "keywords": ["Compassion", "Service", "Universal Love", "Wisdom"],
+        "name": "The Humanitarian",
+        "strengths": [
+          "Compassion",
+          "Generosity",
+          "Artistic Talent",
+          "Wisdom",
+          "Humanitarianism"
+        ],
+        "traits": [
+          "Compassionate",
+          "Generous",
+          "Humanitarian",
+          "Artistic",
+          "Wise"
+        ]
+      },
+      "11": {
+        "careerSuggestions": [
+          "Spiritual Teacher",
+          "Counselor",
+          "Artist",
+          "Inventor",
+          "Healer"
+        ],
+        "challenges": [
+          "Hypersensitivity",
+          "Nervousness",
+          "Impracticality",
+          "Extremism"
+        ],
+        "description": "The Master Intuitive",
+        "keywords": ["Intuition", "Inspiration", "Enlightenment", "Revelation"],
+        "name": "The Master Intuitive",
+        "strengths": [
+          "Intuition",
+          "Inspiration",
+          "Vision",
+          "Idealism",
+          "Spiritual Insight"
+        ],
+        "traits": [
+          "Highly Intuitive",
+          "Inspirational",
+          "Sensitive",
+          "Visionary",
+          "Spiritual"
+        ]
+      },
+      "22": {
+        "careerSuggestions": [
+          "Architect",
+          "Urban Planner",
+          "CEO",
+          "Master Craftsman",
+          "Large-scale Organizer"
+        ],
+        "challenges": [
+          "Feeling Overwhelmed",
+          "Self-doubt",
+          "Perfectionism",
+          "Pressure"
+        ],
+        "description": "The Master Builder",
+        "keywords": [
+          "Mastery",
+          "Practical Idealism",
+          "Large-scale Vision",
+          "Realization"
+        ],
+        "name": "The Master Builder",
+        "strengths": [
+          "Practical Vision",
+          "Organization",
+          "Leadership",
+          "Manifestation",
+          "Systematic Approach"
+        ],
+        "traits": [
+          "Visionary",
+          "Practical",
+          "Master Builder",
+          "Systematic",
+          "Ambitious"
+        ]
+      },
+      "33": {
+        "careerSuggestions": [
+          "Spiritual Teacher",
+          "Healer",
+          "Counselor",
+          "Humanitarian Leader",
+          "Guru"
+        ],
+        "challenges": [
+          "Over-sacrificing",
+          "Emotional Overwhelm",
+          "Perfectionism",
+          "Burnout"
+        ],
+        "description": "The Master Teacher",
+        "keywords": ["Compassion", "Healing", "Teaching", "Universal Love"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Unconditional Love",
+          "Healing Ability",
+          "Teaching Talent",
+          "Compassion",
+          "Spiritual Wisdom"
+        ],
+        "traits": [
+          "Compassionate",
+          "Healing",
+          "Teaching",
+          "Nurturing",
+          "Spiritually Evolved"
+        ]
+      }
+    }
+  },
+  "benefits": {
+    "destinyNumber": {
+      "description": "Reveal your life's purpose",
+      "title": "Destiny Number"
+    },
+    "lifePathNumber": {
+      "description": "Understand your path",
+      "title": "Life Path Number"
+    },
+    "soulNumber": {
+      "description": "Discover your inner desires",
+      "title": "Soul Number"
+    },
+    "title": "Benefits"
+  }
+}

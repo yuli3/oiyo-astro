@@ -1,0 +1,24 @@
+{
+  "roles": {
+    "guide": {
+      "name": "The Guide",
+      "description": "A wise presence that shows the way when you are lost."
+    },
+    "supporter": {
+      "name": "The Supporter",
+      "description": "A strong pillar that silently protects your back and gives you strength."
+    },
+    "connector": {
+      "name": "The Connector",
+      "description": "A bridge that connects you to new opportunities and people."
+    },
+    "challenger": {
+      "name": "The Catalyst",
+      "description": "A stimulant that grows you through good-willed competition."
+    }
+  },
+  "title": "Noble Persons",
+  "description": "Precious connections that help you on your life's journey.",
+  "intro": "If you want to go fast, go alone. If you want to go far, go together.",
+  "finding": "Look around. Your noble person might already be by your side."
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Ciclos elementales",
+  "influence": "Influencia Elemental",
+  "chartLabel": "Composición Elemental",
+  "interpretation": {
+    "balanceAdvice": "Consejo para el Equilibrio",
+    "balanceDescription": "Cómo armonizar sus elementos.",
+    "dominant": "Elemento Dominante",
+    "title": "Interpretación"
+  },
+  "viewModes": {
+    "chart": "Gráfico de Elementos",
+    "balance": "Equilibrio Elemental",
+    "cycle": "Ciclo Elemental"
+  },
+  "water": {
+    "name": "Madera (木)",
+    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
+    "keywords": ["Sabiduría", "Flexibilidad", "Conocimiento", "Vitalidad"],
+    "strengths": ["Conocimiento", "Adaptabilidad", "Aprendiendo"],
+    "careers": ["Investigadora", "Filósofa", "Comercio", "Psicología"],
+    "short": "Metal"
+  },
+  "wood": {
+    "name": "Madera (木)",
+    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
+    "keywords": ["Crecimiento", "Creación", "Conducir", "Benevolencia"],
+    "strengths": ["Conducir", "Planificación", "Compasión"],
+    "careers": ["Planificadora", "Educadora", "Art", "Diseño"],
+    "short": "Metal"
+  },
+  "fire": {
+    "name": "Madera (木)",
+    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
+    "keywords": ["Pasión", "Expresión", "Energía", "Resplandor"],
+    "strengths": ["Sociabilidad", "Liderazgo", "Creatividad"],
+    "careers": ["Artista", "Ventas", "Diseño", "IT"],
+    "short": "Metal"
+  },
+  "earth": {
+    "name": "Madera (木)",
+    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
+    "keywords": ["Inclusión", "Mediación", "Confianza", "Estabilidad"],
+    "strengths": ["Fiabilidad", "Persistencia", "Integridad"],
+    "careers": ["Bienes raíces", "Agricultura", "Arquitectura", "Política"],
+    "short": "Metal"
+  },
+  "metal": {
+    "name": "Madera (木)",
+    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
+    "keywords": ["Principio", "Justicia", "Decisión", "Precisión"],
+    "strengths": ["Decisión", "Exactitud", "Integridad"],
+    "careers": ["Militar", "Legal", "Finanzas", "Ingeniería"],
+    "short": "Metal"
+  },
+  "cycle": {
+    "description": "Orientada al crecimiento, creativa y con un pensamiento flexible.",
+    "destruction": "Ciclo de Destrucción",
+    "generation": "Ciclo de Generación",
+    "title": "Interpretación"
+  },
+  "strengths": "Fortalezas",
+  "careers": "Orientación profesional",
+  "subtitle": "Comprender los cinco elementos",
+  "status": {
+    "strong": "Fuerte",
+    "balanced": "Equilibrado",
+    "weak": "Débil"
+  }
+}

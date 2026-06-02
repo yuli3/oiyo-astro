@@ -1,0 +1,187 @@
+{
+  "meta": {
+    "keywords": "keywords, tags, seo",
+    "resultTitle": "Analyse des résultats de moneyHabits",
+    "resultDescription": "Synchronisation des fils de ton destin...",
+    "testTitle": "Évaluation des habitudes d'argent",
+    "testDescription": "Synchronisation des fils de ton destin...",
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+  },
+  "hero": {
+    "subtitle": "Informations détaillées",
+    "cta": "Démarrer le test",
+    "badge": "Badge MoneyHabits",
+    "title": "ton Profil Financier"
+  },
+  "benefits": {
+    "items": {
+      "0": {
+        "emoji": "E",
+        "title": "ton Profil Financier",
+        "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+      },
+      "1": {
+        "emoji": "E",
+        "title": "ton Profil Financier",
+        "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+      },
+      "2": {
+        "emoji": "E",
+        "title": "ton Profil Financier",
+        "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+      }
+    },
+    "title": "ton Profil Financier"
+  },
+  "cta": {
+    "subtitle": "Informations détaillées",
+    "button": "Commencer",
+    "title": "ton Profil Financier"
+  },
+  "faq": {
+    "items": {
+      "0": {
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "1": {
+        "question": "How do you navigate life's currents?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      "2": {
+        "question": "How do you navigate life's currents?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "3": {
+        "question": "How do you navigate life's currents?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      }
+    },
+    "title": "ton Profil Financier"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "🚀",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "💡",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "🎯",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      },
+      {
+        "icon": "🔥",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "⭐",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      }
+    ]
+  },
+  "test": {
+    "insightBullets": ["Force de signature", "Point pivot", "2"],
+    "common": {
+      "progress": "Progrès"
+    },
+    "test": {
+      "insightBullets": [
+        "Explorez l’architecture profonde de votre paysage intérieur."
+      ],
+      "progress": "Progrès",
+      "submit": "Envoyer",
+      "loading": "Chargement...",
+      "selectOption": "Sélectionner"
+    },
+    "result": {
+      "title": "ton Profil Financier",
+      "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+    },
+    "meta": {
+      "title": "ton Profil Financier",
+      "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie",
+      "keywords": "keywords, tags, seo"
+    },
+    "progress": "Progrès",
+    "submit": "Envoyer",
+    "loading": "Chargement...",
+    "selectOption": "Sélectionner",
+    "subtitle": "Informations détaillées",
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie",
+    "keywords": "mots-clés, tags, référencement",
+    "finish": "Finition",
+    "swipeHint": "Astuce de balayage"
+  },
+  "result": {
+    "chart": {
+      "impulseControl": "Contrôle des impulsions",
+      "savingCapacity": "Capacité d'économie",
+      "planningSkill": "Compétence de planification",
+      "emotionalControl": "Contrôle émotionnel"
+    },
+    "test": {
+      "insightBullets": [
+        "Découvrez les modèles uniques qui définissent votre chemin."
+      ],
+      "progress": "Progrès",
+      "submit": "Envoyer",
+      "loading": "Chargement...",
+      "selectOption": "Sélectionner"
+    },
+    "result": {
+      "title": "ton Profil Financier",
+      "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+    },
+    "meta": {
+      "title": "ton Profil Financier",
+      "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie",
+      "keywords": "keywords, tags, seo"
+    },
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie",
+    "keywords": "mots-clés, tags, référencement",
+    "loading": "Chargement...",
+    "shareTitle": "Tableau de Bord",
+    "copySuccess": "Copie réussie",
+    "scoresTitle": "Tableau de Bord",
+    "impulseRisk": "Risque impulsif",
+    "strengths": "Forces",
+    "challenges": "Défis",
+    "actionTips": "Conseils d'action",
+    "savingRecommendation": "Recommandation d'enregistrement",
+    "recommendedPercentage": "Pourcentage recommandé",
+    "share": "Partager",
+    "retake": "Recommencer"
+  },
+  "title": "ton Profil Financier",
+  "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie",
+  "keywords": "mots-clés, tags, référencement"
+}

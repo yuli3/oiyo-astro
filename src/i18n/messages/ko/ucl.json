@@ -1,0 +1,9 @@
+{
+  "shared": {
+    "mandala": {
+      "loading": "공명 주파수 튜닝...",
+      "error": "만다라 정렬에 실패했습니다.",
+      "accessibility": "에너지를 시각화하는 만다라"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "page": {
+    "title": "Community",
+    "subtitle": "Join discussion spaces for every personality type."
+  },
+  "errors": {
+    "createSpace": "Failed to create discussion space. Please try again.",
+    "joinSpace": "Failed to join discussion space. Please try again.",
+    "createTopic": "Failed to create topic. Please try again.",
+    "spaceNotFound": "Related discussion space not found.",
+    "sendMessage": "Failed to send message. Please try again.",
+    "generic": "Something went wrong. Please try again."
+  }
+}

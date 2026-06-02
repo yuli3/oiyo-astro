@@ -1,0 +1,38 @@
+{
+  "title": "私たちの使命",
+  "description": "あなたが自分自身を見つけるのを助けること。",
+  "counselor": {
+    "title": {
+      "ko": "Awaiting deep synthesis...",
+      "en": "Wisdom Curator",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "Curateur de sagesse",
+      "es": "Curador de sabiduría"
+    },
+    "blessing": "あなたのユニークな存在の祝福。",
+    "shadowWork": "あなたの内なる影への思いやりのある導き。"
+  },
+  "coordinator": {
+    "title": {
+      "ko": "Awaiting deep synthesis...",
+      "en": "Wisdom Curator",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "Curateur de sagesse",
+      "es": "Curador de sabiduría"
+    },
+    "ritual": "毎日のバランスを整えるための実践的な儀式。"
+  },
+  "curator": {
+    "title": {
+      "ko": "Awaiting deep synthesis...",
+      "en": "ウィズダムキュレーター",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "ウィズダムキュレーター",
+      "es": "ウィズダム・ヒーラー"
+    },
+    "wisdom": "時代を超越した洞察の断片があなたのために厳選されています。"
+  }
+}

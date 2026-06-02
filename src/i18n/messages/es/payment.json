@@ -1,0 +1,438 @@
+{
+  "feature": "Funcionalidad",
+  "plan": "Plan",
+  "billing": {
+    "monthly": "Mensual",
+    "yearly": "Anual",
+    "saveUp": "Ahorra hasta",
+    "year": "/año",
+    "month": "/mes",
+    "save": "Ahorrar"
+  },
+  "plans": {
+    "popular": "El Más Popular",
+    "free": "Básico",
+    "current": "Plan Actual",
+    "continueUsing": "Continuar Usando",
+    "getStarted": "Comenzar",
+    "subscribe": "Suscribirse Ahora",
+    "cancelAnytime": "Cancelar en Cualquier Momento"
+  },
+  "info": {
+    "allPlansInclude": "Todos los planes incluyen",
+    "securePayment": "Pago Seguro",
+    "instantAccess": "Acceso Instantáneo",
+    "customerSupport": "Soporte Prioritario"
+  },
+  "checkout": {
+    "orderName": "Suscripción Oiyo.net {planName}"
+  },
+  "errors": {
+    "PLAN_NOT_FOUND": "Plan de suscripción no encontrado.",
+    "PAYMENT_SERVICE_ERROR": "Se produjo un error en el servicio de pago. Por favor, inténtalo de nuevo.",
+    "PROVIDER_REQUIRED": "Falta la configuración del proveedor de pago.",
+    "LOCALE_REQUIRED": "Se requiere la configuración de idioma para procesar el pago.",
+    "CURRENCY_REQUIRED": "Se requiere la configuración de moneda para procesar el pago.",
+    "TOSS_CLIENT_KEY_REQUIRED": "La clave de cliente de Toss no está configurada.",
+    "LEMONSQUEEZY_CONFIG_REQUIRED": "Falta la configuración de LemonSqueezy.",
+    "generic": "El pago falló. Por favor, inténtalo de nuevo."
+  },
+  "failed": {
+    "help": {
+      "technical": {
+        "refresh": "Actualiza la página",
+        "browser": "Prueba con un navegador diferente",
+        "network": "Verifica tu conexión a internet",
+        "incognito": "Prueba en modo incógnito/privado",
+        "title": "Test de Personalidad Financiera"
+      },
+      "payment": {
+        "title": "Test de Personalidad Financiera",
+        "checkCard": "Verifica los detalles de tu tarjeta",
+        "checkFunds": "Asegúrate de tener fondos suficientes",
+        "tryAnother": "Prueba con un método de pago diferente",
+        "contactBank": "Contacta con tu banco"
+      }
+    },
+    "meta": {
+      "title": "Test de Personalidad Financiera",
+      "description": "Descubre tu personalidad financiera y estilo de gestión del dinero"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Fuerza de firma", "Punto de pivote", "2"],
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando",
+      "selectOption": "Seleccionar",
+      "subtitle": "Bienvenido a Premium"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        }
+      ]
+    },
+    "result": {
+      "title": "Test de Personalidad Financiera",
+      "description": "Descubre tu personalidad financiera y estilo de gestión del dinero"
+    },
+    "subtitle": "Bienvenido a Premium",
+    "genericTitle": "Error de Pago",
+    "genericDescription": "Ocurrió un error al procesar tu pago. Por favor, inténtalo de nuevo.",
+    "genericAction": "Reintentar",
+    "unknownTitle": "Error Desconocido",
+    "unknownDescription": "Ocurrió un error inesperado. Por favor, contacta con soporte técnico.",
+    "unknownAction": "Contactar Soporte",
+    "orderId": "ID de Pedido",
+    "orderIdNote": "Por favor, guarda este ID de pedido para referencia cuando contactes con soporte.",
+    "technicalDetails": "Detalles Técnicos",
+    "errorCode": "Código de Error",
+    "errorMessage": "Mensaje de Error",
+    "whatNext": "¿Qué puedes hacer?",
+    "contactSupport": "Contactar Soporte",
+    "backToHome": "Volver al Inicio",
+    "needHelp": "¿Necesitas ayuda?",
+    "stillNeedHelp": "¿Sigues teniendo problemas?",
+    "getSupport": "Obtener Soporte",
+    "title": "Test de Personalidad Financiera",
+    "description": "Descubre tu personalidad financiera y estilo de gestión del dinero"
+  },
+  "success": {
+    "meta": {
+      "title": "Test de Personalidad Financiera",
+      "description": "Descubre tu personalidad financiera y estilo de gestión del dinero"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Fuerza de firma", "Punto de pivote", "2"],
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando",
+      "selectOption": "Seleccionar",
+      "subtitle": "Bienvenido a Premium"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        }
+      ]
+    },
+    "result": {
+      "title": "Test de Personalidad Financiera",
+      "description": "Descubre tu personalidad financiera y estilo de gestión del dinero"
+    },
+    "welcome', { name: user": {
+      "firstName || user": {
+        "fullName || t('success": {}
+      }
+    },
+    "subtitle": "Bienvenido a Premium",
+    "verifying": "Verificando Pago...",
+    "verifyingDescription": "Por favor, espera mientras confirmamos tu pago.",
+    "premiumActive": "Premium Activado",
+    "welcome": "¡Bienvenido/a, {name}!",
+    "user": "Usuario",
+    "paymentDetails": "Detalles del Pago",
+    "orderId": "ID de Pedido",
+    "amount": "Monto",
+    "status": "Estado",
+    "confirmed": "Confirmado",
+    "verificationSuccess": "Pago confirmado con éxito. Las funciones Premium ya están listas para usar.",
+    "verificationFailed": "No pudimos confirmar tu pago. Por favor, inténtalo de nuevo.",
+    "verificationNetworkError": "No pudimos contactar con el servidor de pago. Inténtalo de nuevo en un momento.",
+    "verificationRetry": "Reintentar verificación",
+    "verificationPending": "Esperando aprobación",
+    "approvedAt": "Aprobado el",
+    "featuresUnlocked": "Funciones Premium Ahora Disponibles",
+    "nextSteps": "¿Qué sigue?",
+    "goToDashboard": "Ir al Panel de Control",
+    "takeTest": "Realizar un Test",
+    "supportNote": "¿Necesitas ayuda? Nuestro equipo de soporte premium está aquí para ti.",
+    "contactSupport": "Contactar Soporte",
+    "title": "Test de Personalidad Financiera",
+    "description": "Descubre tu personalidad financiera y estilo de gestión del dinero"
+  },
+  "test": {
+    "insightBullets": ["Mapeando la constelación de tu verdadero yo."],
+    "progress": "Progreso",
+    "submit": "Enviar",
+    "loading": "Cargando",
+    "selectOption": "Seleccionar"
+  },
+  "result": {
+    "title": "Test de Personalidad Financiera",
+    "description": "Descubre tu personalidad financiera y estilo de gestión del dinero"
+  },
+  "meta": {
+    "title": "Test de Personalidad Financiera",
+    "description": "Descubre tu personalidad financiera y estilo de gestión del dinero",
+    "keywords": "personalidad financiera, gestión del dinero, presupuesto, hábitos de gasto, bienestar financiero"
+  },
+  "checkCard": "Verifica los detalles de tu tarjeta",
+  "checkFunds": "Asegúrate de tener fondos suficientes",
+  "tryAnother": "Prueba con un método de pago diferente",
+  "contactBank": "Contacta con tu banco"
+}

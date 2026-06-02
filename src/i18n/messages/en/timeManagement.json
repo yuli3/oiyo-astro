@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Time Management Style Analysis",
+    "description": "Discover your unique time management profile and boost your productivity.",
+    "keywords": "time management, productivity, work style, personality"
+  },
+  "landing": {
+    "title": "My Time Management Style",
+    "subtitle": "Discover your productivity blueprint in 5 minutes.",
+    "description": "Understanding how you manage time is the first step to unlocking your full potential. Our scientific analysis identifies your core patterns and provides actionable strategies.",
+    "cta": "Start Analysis",
+    "features": [
+      "⏰ 6 Time Management Type Analysis",
+      "📈 Personalized Productivity Tips",
+      "🎯 Optimal Activity Hours",
+      "💡 Work Style Recommendations"
+    ],
+    "typesTitle": "6 Time Management Styles",
+    "types": {
+      "earlyBird": {
+        "title": "The Early Bird",
+        "description": "Peaks in the morning and loves structured starts.",
+        "icon": "🌅",
+        "bg": "blue"
+      },
+      "nightOwl": {
+        "title": "The Night Owl",
+        "description": "Finds creative flow when the world is quiet.",
+        "icon": "🦉",
+        "bg": "purple"
+      },
+      "executor": {
+        "title": "The Executor",
+        "description": "Focuses on crossing items off the to-do list.",
+        "icon": "⚡",
+        "bg": "green"
+      },
+      "planner": {
+        "title": "The Planner",
+        "description": "Maps out every detail before taking action.",
+        "icon": "📅",
+        "bg": "yellow"
+      },
+      "flexible": {
+        "title": "The Flexible",
+        "description": "Adapts easily to changing priorities and flows.",
+        "icon": "🌊",
+        "bg": "cyan"
+      },
+      "procrastinator": {
+        "title": "The Perfectionist Procrastinator",
+        "description": "Waits for the 'perfect' moment to begin.",
+        "icon": "⏳",
+        "bg": "orange"
+      }
+    }
+  }
+}

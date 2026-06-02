@@ -1,0 +1,104 @@
+{
+  "labels": {
+    "mirror": "거울"
+  },
+  "hiddenSelf": {
+    "title": "숨겨진 자아",
+    "description": "당신의 정신의 무의식적인 층을 드러냅니다.",
+    "ctaOrigin": "원산지 발견",
+    "ctaIdentity": "정체성 탐색"
+  },
+  "status": {
+    "scrollForSynergy": "시너지 분석 스크롤"
+  },
+  "analysis": {
+    "detailed": "상세한 공명 분석"
+  },
+  "iching": {
+    "title": "변화의 책",
+    "revelation": "헥사그램 계시"
+  },
+  "cta": {
+    "title": "당신의 공유된 운명이 기다립니다",
+    "subtitle": "이 유대를 기록 보관소에 기록하세요",
+    "share": "결과 공유",
+    "download": "아카이브 다운로드"
+  },
+  "title": "공명 아카이브",
+  "subtitle": "당신의 우주 정렬.",
+  "offeringTitle": "깊은 공명 제공",
+  "offeringDescription": "가장 깊은 레이어를 잠금 해제하세요.",
+  "confidenceMeter": "신뢰도 측정기",
+  "revealed": "밝혀진 특성",
+  "nameLabel": "이름",
+  "namePlaceholder": "이름을 입력하세요",
+  "birthLabel": "출생 정보",
+  "mbtiLabel": "MBTI",
+  "mbtiPlaceholder": "MBTI를 입력하세요",
+  "bloodLabel": "혈액형",
+  "bloodPlaceholder": "혈액형을 입력하세요",
+  "calculateButton": "시너지 계산",
+  "calculating": "계산 중...",
+  "backButton": "성역으로 돌아가기",
+  "shareButton": "코스믹 본드 공유",
+  "dimensionsTitle": "차원 공명",
+  "oracleTitle": "오라클 인사이트",
+  "partialDataWarning": "운명의 실타래는 불완전하다.",
+  "addMoreInfo": "더 많은 영혼 데이터 제공",
+  "desc": "연결 이해.",
+  "friendship": {
+    "intro": {
+      "badge": "공명 분석",
+      "title": "우정스타일 연구실",
+      "quote": "보이지 않는 유대 구조를 탐험해보세요.",
+      "startButton": "탐험 시작"
+    },
+    "questions": {
+      "bond": "본드 쿼리"
+    },
+    "results": {
+      "profile": "공명 프로필",
+      "vulnerability": "섀도우 사이드",
+      "strategy": "조화로 가는 길",
+      "restart": "당신의 발걸음을 되짚어보세요"
+    }
+  },
+  "grandOracle": {
+    "title": "그랜드 오라클",
+    "desc": "알려진 모든 시스템으로부터 종합된 당신 존재의 총체입니다."
+  },
+  "resonanceTitle": "공명 아카이브",
+  "resonanceVitalitySection": "활력의 흐름",
+  "resonanceVitalitySubtitle": "당신이 표현한 에너지의 맥박",
+  "conflict": {
+    "title": "갈등 분석",
+    "description": "관계의 갈등 패턴을 분석하고 이해하십시오.",
+    "intro": {
+      "badge": "갈등 분석",
+      "title": "갈등 해결 스타일",
+      "quote": "불일치를 처리하는 방법을 이해하면 관계에 대해 많은 것을 알 수 있습니다.",
+      "startButton": "분석 시작"
+    }
+  },
+  "loveCommunication": {
+    "title": "사랑소통",
+    "description": "연애 관계의 의사소통 스타일을 이해하세요.",
+    "intro": {
+      "title": "사랑의 언어 분석",
+      "description": "낭만적인 관계에서 어떻게 사랑을 표현하고 받는지 알아보세요."
+    }
+  },
+  "synergy": {
+    "title": "시너지 분석",
+    "description": "당신의 성격의 다양한 측면이 어떻게 함께 작용하는지 알아보세요.",
+    "hero": {
+      "badge": "시너지",
+      "titlePrefix": "더 그레이트",
+      "titleSuffix": "동기",
+      "description": "당신의 성격의 다양한 측면이 어떻게 함께 작용하는지 알아보세요."
+    },
+    "status": {
+      "accessing": "시너지 데이터에 액세스하는 중..."
+    }
+  }
+}

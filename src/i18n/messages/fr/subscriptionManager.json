@@ -1,0 +1,43 @@
+{
+  "list": {
+    "keep": "Conserver",
+    "keepAction": "Conserver cet abonnement",
+    "review": "Réviser",
+    "reviewAction": "Réviser l'utilisation",
+    "cancel": "Annuler",
+    "cancelAction": "Annuler l'abonnement",
+    "monthly": "Mensuel",
+    "used": "Utilisé",
+    "timesPerMonth": "fois/mois",
+    "satisfaction": "Satisfaction",
+    "valueScore": "Score de Valeur"
+  },
+  "title": "Gestionnaire d'Abonnements",
+  "subtitle": "Suivez et optimisez vos abonnements mensuels",
+  "addSubscription": {
+    "title": "Ajouter un Abonnement",
+    "nameLabel": "Nom du Service",
+    "namePlaceholder": "ex. Netflix, Spotify",
+    "priceLabel": "Prix Mensuel",
+    "pricePlaceholder": "0.00",
+    "usageLabel": "Utilisation Mensuelle",
+    "usageUnit": "fois",
+    "satisfactionLabel": "Satisfaction",
+    "submit": "Ajouter"
+  },
+  "summary": {
+    "monthlyTotal": "Total Mensuel",
+    "yearlyTotal": "Total Annuel",
+    "potentialSavings": "Économies Potentielles"
+  },
+  "tips": {
+    "title": "Conseils Intelligents",
+    "tip1": "Révisez les abonnements que vous n'avez pas utilisés depuis 30 jours.",
+    "tip2": "Combinez les forfaits familiaux pour réduire les coûts.",
+    "tip3": "Définissez un rappel calendrier pour réviser chaque mois."
+  },
+  "empty": {
+    "title": "Aucun Abonnement Encore",
+    "description": "Commencez à ajouter vos abonnements pour suivre vos dépenses."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "summary": {
+    "generatedOn": "Fecha de Creación",
+    "testsCompleted": "Rituales Completados",
+    "dimensionsAnalyzed": "Dimensiones Analizadas",
+    "consistencyScore": "Puntuación de Armonía",
+    "keyStrengths": "Fortalezas Clave",
+    "title": "Reporte Integral de Personalidad"
+  },
+  "errors": {
+    "unableToGenerate": "No se puede revelar el reporte",
+    "insufficientData": "Datos insuficientes",
+    "needThreeTests": "Necesitas completar al menos 3 rituales para generar tu reporte integral.",
+    "pdfFailed": "Error al orquestar el PDF. Por favor, inténtalo de nuevo.",
+    "reportNotFound": "No se encuentra el pergamino de resultados",
+    "takeMoreTests": "Explorar más allá"
+  },
+  "notifications": {
+    "linkCopied": "El vínculo ha sido grabado"
+  },
+  "test": {
+    "progress": "Camino",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Revelar",
+    "loading": "Consultando a los astros",
+    "selectOption": "Elige tu verdad",
+    "insightBullets": [
+      "Consolide todos los resultados de las pruebas en uno",
+      "Descubra patrones de personalidad consistentes",
+      "Se proporciona una guía de crecimiento personalizada."
+    ]
+  },
+  "result": {
+    "title": "Reporte Integral de Personalidad",
+    "description": "Una visión unificada de tu arquitectura psicológica y espiritual."
+  },
+  "meta": {
+    "title": "Reporte Integral de Personalidad",
+    "description": "Una visión unificada de tu arquitectura psicológica y espiritual.",
+    "keywords": "síntesis, perfil ontológico, espejo del alma, arquitectura interior"
+  },
+  "subtitle": "El espejo sagrado de tus múltiples facetas",
+  "downloadPDF": "Archivar Sabiduría",
+  "shareReport": "Compartir el Brillo",
+  "generating": "Manifestando",
+  "analyzing": "Contemplando",
+  "generatingPDF": "Grabando Sabiduría",
+  "sharing": "Difundiendo",
+  "dominantTraits": "Rasgos Soberanos",
+  "dimensions": "Dimensiones del Ser",
+  "dimensionsDescription": "La arquitectura de tu esencia bajo los prismas sagrados",
+  "strengths": "Dones Naturales",
+  "strengthsDescription": "El fulgor de tus virtudes y habilidades",
+  "growthAreas": "Campos Fertiles",
+  "growthAreasDescription": "Territorios para tu transformación futura",
+  "testsByCategory": "Distribución de Rituales",
+  "testsByCategoryDescription": "Mapa de tus exploraciones pasadas",
+  "shareTitle": "Compartir el Brillo de mi Esencia",
+  "shareText": "Mira esta visión unificada de mi arquitectura interior"
+}

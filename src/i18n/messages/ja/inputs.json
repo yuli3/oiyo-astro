@@ -1,0 +1,31 @@
+{
+  "birthDate": "生年月日",
+  "birthTime": "出生時刻",
+  "calculate": "算出",
+  "formTitle": "詳細を入力してください",
+  "privacyNote": "入力されたデータが永続的に保存されることはありません。",
+  "nameLabel": "お名前",
+  "namePlaceholder": "お名前を入力してください",
+  "birthDateLabel": "生年月日",
+  "birthTimeLabel": "出生時刻",
+  "hourPlaceholder": "時",
+  "minutePlaceholder": "分",
+  "locationLabel": "出生場所",
+  "locationPlaceholder": "都市、国",
+  "trueSolarTime": "真太陽時を使用する",
+  "timeUnknownTitle": "時刻不明",
+  "timeUnknownDesc": "時刻が不明な場合は、算出の精度が低下する可能性があります。",
+  "genderLabel": "性別",
+  "genderPlaceholder": "性別を選択",
+  "genderMale": "男性",
+  "genderFemale": "女性",
+  "calendarNoticeDesc": "陽暦・陰暦の選択を再度ご確認ください。",
+  "analyzing": "分析中...",
+  "submitButton": "宿命を分析する",
+  "secureTransmission": "安全な伝送",
+  "location": "出生地",
+  "gender": "性別",
+  "title": {
+    "saju": "四柱入力"
+  }
+}

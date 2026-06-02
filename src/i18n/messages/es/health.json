@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Preguntas Frecuentes",
+    "description": "Envejecer saludablemente no se logra solo. Colabora con familia, amigos y profesionales para construir un bienestar sostenible.",
+    "keywords": "envejecimiento activo, bienestar senior, envejecimiento saludable, movimiento y atención, apoyo de cuidado, diseño de longevidad"
+  },
+  "hero": {
+    "badge": "🌿 Laboratorio de Longevidad",
+    "subtitle": "La mayoría de las personas mezclan 2-3 factores según la situación. Tu combinación hace que tu plan sea único.",
+    "cta": "Iniciar Chequeo"
+  },
+  "aging": {
+    "result": {
+      "error": {
+        "message": "Awaiting deep synthesis...",
+        "retakeButton": "Awaiting deep synthesis..."
+      }
+    },
+    "meta": {
+      "title": "Preguntas Frecuentes",
+      "description": "Envejecer saludablemente no se logra solo. Colabora con familia, amigos y profesionales para construir un bienestar sostenible.",
+      "keywords": "envejecimiento activo, bienestar senior, envejecimiento saludable, movimiento y atención, apoyo de cuidado, diseño de longevidad"
+    },
+    "hero": {
+      "badge": "🌿 Laboratorio de Longevidad",
+      "title": "Preguntas Frecuentes",
+      "subtitle": "La mayoría de las personas mezclan 2-3 factores según la situación. Tu combinación hace que tu plan sea único.",
+      "description": "Envejecer saludablemente no se logra solo. Colabora con familia, amigos y profesionales para construir un bienestar sostenible.",
+      "cta": "Iniciar Chequeo",
+      "secondaryCta": "Verificar factores clave, planes de acción y socios de apoyo."
+    },
+    "benefits": {
+      "title": "Preguntas Frecuentes",
+      "subtitle": "La mayoría de las personas mezclan 2-3 factores según la situación. Tu combinación hace que tu plan sea único."
+    },
+    "types": {
+      "movement": {
+        "name": "Restauración",
+        "emoji": "😴",
+        "description": "Envejecer saludablemente no se logra solo. Colabora con familia, amigos y profesionales para construir un bienestar sostenible."
+      },
+      "socialConnection": {
+        "name": "Restauración",
+        "emoji": "😴",
+        "description": "Envejecer saludablemente no se logra solo. Colabora con familia, amigos y profesionales para construir un bienestar sostenible."
+      },
+      "mindfulness": {
+        "name": "Restauración",
+        "emoji": "😴",
+        "description": "Envejecer saludablemente no se logra solo. Colabora con familia, amigos y profesionales para construir un bienestar sostenible."
+      },
+      "purpose": {
+        "name": "Restauración",
+        "emoji": "😴",
+        "description": "Envejecer saludablemente no se logra solo. Colabora con familia, amigos y profesionales para construir un bienestar sostenible."
+      },
+      "restoration": {
+        "name": "Restauración",
+        "emoji": "😴",
+        "description": "Envejecer saludablemente no se logra solo. Colabora con familia, amigos y profesionales para construir un bienestar sostenible."
+      },
+      "title": "Preguntas Frecuentes",
+      "subtitle": "La mayoría de las personas mezclan 2-3 factores según la situación. Tu combinación hace que tu plan sea único."
+    },
+    "relationships": {
+      "title": "Preguntas Frecuentes",
+      "description": "Envejecer saludablemente no se logra solo. Colabora con familia, amigos y profesionales para construir un bienestar sostenible."
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes"
+    }
+  },
+  "hub": {
+    "tabs": {
+      "sleep": "Sueño",
+      "stress": "Estrés",
+      "fatigue": "Fatiga",
+      "aging": "Envejecimiento",
+      "detox": "Detox",
+      "emotion": "Emoción",
+      "tools": "Herramientas"
+    },
+    "title": "Rastreador de estado de ánimo",
+    "description": "Registra tus emociones y analiza patrones"
+  },
+  "sleepScore": {
+    "hero": {
+      "title": "Rastreador de estado de ánimo",
+      "subtitle": "Recupera tu bienestar digital",
+      "cta": "Comenzar evaluación"
+    },
+    "benefits": {
+      "items": [
+        {
+          "emoji": "🌙",
+          "title": "Análisis de patrones de sueño",
+          "description": "Análisis completo del inicio, mantenimiento y estado de vigilia del sueño."
+        },
+        {
+          "emoji": "🔋",
+          "title": "Recuperación de energía",
+          "description": "Comprenda cómo su sueño afecta las actividades del día siguiente."
+        },
+        {
+          "emoji": "🧠",
+          "title": "Soluciones personalizadas",
+          "description": "Recibir orientación específica para mejorar la higiene del sueño."
+        }
+      ]
+    }
+  },
+  "detox": {
+    "hero": {
+      "title": "Rastreador de estado de ánimo",
+      "subtitle": "Recupera tu bienestar digital",
+      "cta": "Comenzar evaluación"
+    },
+    "benefits": {
+      "items": [
+        {
+          "emoji": "👀",
+          "title": "Fatiga ocular",
+          "description": "Reduzca la fatiga visual y la fatiga visual debido a la exposición prolongada a la pantalla."
+        },
+        {
+          "emoji": "🧠",
+          "title": "Mejor enfoque",
+          "description": "Recupere su concentración profunda y su capacidad de atención a través de la desintoxicación de dopamina."
+        },
+        {
+          "emoji": "😌",
+          "title": "Alivio de la ansiedad",
+          "description": "Encuentre la tranquilidad liberándose de FOMO y de la ansiedad por notificaciones."
+        }
+      ]
+    }
+  },
+  "emotion": {
+    "hub": {
+      "moodTracker": {
+        "tabs": {
+          "journal": "Diario",
+          "calendar": "Calendario",
+          "analytics": "Análisis"
+        },
+        "title": "Rastreador de estado de ánimo",
+        "description": "Registra tus emociones y analiza patrones",
+        "analyticsTitle": "Estadísticas de ánimo",
+        "analyticsDescription": "Analiza los datos de ánimo registrados en el calendario."
+      }
+    }
+  }
+}

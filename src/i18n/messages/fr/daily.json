@@ -1,0 +1,40 @@
+{
+  "title": "[MANQUANT : titre]",
+  "desc": "Votre guide quotidien",
+  "status": {
+    "Gil": {
+      "title": "Une Journée d'Équilibre",
+      "description": "Les énergies sont équilibrées, favorisant l'introspection et le progrès constant plutôt que les changements radicaux."
+    },
+    "Hyung": {
+      "title": "Une Journée d'Équilibre",
+      "description": "Les énergies sont équilibrées, favorisant l'introspection et le progrès constant plutôt que les changements radicaux."
+    },
+    "Neutral": {
+      "title": "Une Journée d'Équilibre",
+      "description": "Les énergies sont équilibrées, favorisant l'introspection et le progrès constant plutôt que les changements radicaux."
+    }
+  },
+  "elements": {
+    "Wood": "L'énergie d'expansion et de créativité circule à travers vous.",
+    "Fire": "L'énergie de la passion et du charisme brûle intensément.",
+    "Earth": "L'énergie de stabilité et de bienveillance constitue un socle solide.",
+    "Metal": "L'énergie de clarté et de décision tranche à travers la confusion.",
+    "Water": "L'énergie de sagesse et d'intuition coule profondément et loin."
+  },
+  "T": "[MANQUANT : T]",
+  "subtitle": "[MANQUANT : sous-titre]",
+  "oracle": {
+    "selectZodiac": "[MANQUANT : oracle.selectZodiac]",
+    "synchronize": "[MANQUANT : oracle.synchronize]",
+    "imperialDecree": "[MANQUANT : oracle.imperialDecree]",
+    "analysisBasis": "[MANQUANT : oracle.analysisBasis]",
+    "message": "[MANQUANT : oracle.message]",
+    "actionRitual": "[MANQUANT : oracle.actionRitual]",
+    "fateVsWill": "[MANQUANT : oracle.fateVsWill]"
+  },
+  "dailyLucky": {
+    "title": "[MANQUANT : dailyLucky.title]"
+  },
+  "action": "[MANQUANT : action]"
+}

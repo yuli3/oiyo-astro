@@ -1,0 +1,83 @@
+{
+  "systemName": "凯尔特占星术",
+  "narrative": "树木的智慧。",
+  "treeSign": "树木星座",
+  "ogham": "欧甘字母",
+  "trees": {
+    "birch": {
+      "tree": "桦树",
+      "archetype": "成就者",
+      "description": "雄心勃勃，充满动力，拥有天生的领导才能。"
+    },
+    "rowan": {
+      "tree": "花楸",
+      "archetype": "思想者",
+      "description": "哲学且理想主义，拥有改变世界的热情。"
+    },
+    "ash": {
+      "tree": "白蜡树",
+      "archetype": "魔法师",
+      "description": "具有艺术气息和直觉，与自然有着深厚的联系。"
+    },
+    "alder": {
+      "tree": "桤木",
+      "archetype": "开拓者",
+      "description": "富有冒险精神和激情，具有领导众人的魅力。"
+    },
+    "willow": {
+      "tree": "柳树",
+      "archetype": "观察者",
+      "description": "耐心且聪明，拥有极好的记忆力。"
+    },
+    "hawthorn": {
+      "tree": "山楂",
+      "archetype": "幻术师",
+      "description": "外表与内心不同；富有创造力和好奇心。"
+    },
+    "oak": {
+      "tree": "橡树",
+      "archetype": "稳定者",
+      "description": "坚强且具有保护性，是他人的支柱。"
+    },
+    "holly": {
+      "tree": "冬青",
+      "archetype": "统治者",
+      "description": "高贵且自信，拥有克服任何困难的力量。"
+    },
+    "hazel": {
+      "tree": "榛树",
+      "archetype": "智者",
+      "description": "聪明、善于分析且注重细节。"
+    },
+    "vine": {
+      "tree": "葡萄藤",
+      "archetype": "平衡者",
+      "description": "优雅迷人，拥有极高的审美标准。"
+    },
+    "ivy": {
+      "tree": "常春藤",
+      "archetype": "幸存者",
+      "description": "坚持且忠诚，能够适应任何环境。"
+    },
+    "reed": {
+      "tree": "芦苇",
+      "archetype": "探究者",
+      "description": "喜欢揭开秘密，拥有深刻的洞察力和坚强的意志。"
+    },
+    "elder": {
+      "tree": "接骨木",
+      "archetype": "寻觅者",
+      "description": "追求自由，具有寻求生命深层意义的哲学天性。"
+    }
+  },
+  "ariaLabel": "凯尔特星座：{tree}，{archetype}",
+  "title": "凯尔特占星学",
+  "egyptianGuardian": "埃及守护神",
+  "celticTreeSign": "凯尔特树木星座",
+  "birthSymbols": "诞生象征",
+  "symbols": {
+    "Stone": "诞生石",
+    "Flower": "诞生花",
+    "Star": "幸运星"
+  }
+}

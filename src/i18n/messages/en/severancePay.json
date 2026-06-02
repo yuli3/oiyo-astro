@@ -1,0 +1,1149 @@
+{
+  "labels": {
+    "hireDate": "Hire Date",
+    "resignationDate": "Resignation Date",
+    "monthlySalary": "Monthly Salary (Pre-tax)",
+    "annualBonus": "Discover your unique texture through more sophisticated analysis.",
+    "annualLeave": "Discover your unique texture through more sophisticated analysis.",
+    "severancePay": "Estimated Severance Pay"
+  },
+  "results": {
+    "tenure": "Total Tenure: {years} years {months} months {days} days",
+    "estimated": "Estimated Severance Pay",
+    "total": "Discover your unique texture through more sophisticated analysis."
+  },
+  "basis": {
+    "title": "📊 Calculation Basis",
+    "tenure": "Service Period",
+    "monthlyBase": "Monthly Base Salary",
+    "annualBonus": "Annual Bonus (Pro-rated)",
+    "annualLeave": "Discover your unique texture through more sophisticated analysis.",
+    "threeMonthTotal": "3-Month Total Wage",
+    "avgDailyWage": "Average Daily Wage",
+    "formula": "* Formula: Avg Daily Wage × 30 days × (Service Days ÷ 365)"
+  },
+  "legal": {
+    "title": "⚖️ Legal Disclaimer",
+    "note": "Discover your unique texture through more sophisticated analysis.",
+    "item1": "Discover your unique texture through more sophisticated analysis.",
+    "item2": "Discover your unique texture through more sophisticated analysis.",
+    "item3": "Discover your unique texture through more sophisticated analysis.",
+    "item4": "Discover your unique texture through more sophisticated analysis."
+  },
+  "error": {
+    "lessThanYear": "Discover your unique texture through more sophisticated analysis.",
+    "invalidDate": "Discover your unique texture through more sophisticated analysis."
+  },
+  "meta": {
+    "subtitle": "Details",
+    "disclaimer": "Disclaimer",
+    "title": "financial aptitude test",
+    "description": "Discover your money habits and wealth management style",
+    "keywords": "Personality analysis, self-discovery, premium insight"
+  },
+  "test": {
+    "insightBullets": ["Awaiting synthesis..."],
+    "progress": "progress",
+    "submit": "submit",
+    "loading": "Loading",
+    "selectOption": "Select"
+  },
+  "result": {
+    "title": "Financial Outlook Analysis",
+    "description": "Your personalized financial roadmap."
+  },
+  "moneyHabits": {
+    "meta": {
+      "keywords": "money, habits, finance",
+      "resultTitle": "Discover your unique texture through more sophisticated analysis.",
+      "resultDescription": "We explore your potential through in-depth analysis from various angles.",
+      "testTitle": "moneyHabits Assessment",
+      "testDescription": "We explore your potential through in-depth analysis from various angles.",
+      "title": "Moneyhabits Test",
+      "description": "We explore your potential through in-depth analysis from various angles."
+    },
+    "hero": {
+      "subtitle": "In-depth analysis report",
+      "cta": "Start Test",
+      "badge": "moneyHabits badge",
+      "title": "your financial profile"
+    },
+    "benefits": {
+      "items": {
+        "0": {
+          "emoji": "E",
+          "title": "time for reflection",
+          "description": "Detailed description"
+        },
+        "1": {
+          "emoji": "E",
+          "title": "time for reflection",
+          "description": "Detailed description"
+        },
+        "2": {
+          "emoji": "E",
+          "title": "time for reflection",
+          "description": "Detailed description"
+        }
+      },
+      "title": "your financial profile"
+    },
+    "cta": {
+      "subtitle": "Let's go",
+      "button": "Start",
+      "title": "your financial profile"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "What is your unique frequency?",
+          "answer": "Your unique perspective shapes reality."
+        },
+        "1": {
+          "question": "What drives you inside?",
+          "answer": "Inner harmony guides all of our daily actions."
+        },
+        "2": {
+          "question": "How does your soul react when faced with the unknown?",
+          "answer": "Small choices add up to create a great destiny."
+        },
+        "3": {
+          "question": "What is your unique frequency?",
+          "answer": "You have an intuitive compass that points you toward growth."
+        }
+      },
+      "title": "your financial profile"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "common": {
+        "progress": "progress",
+        "next": "next",
+        "previous": "before",
+        "submit": "Submit",
+        "start": "Getting started",
+        "loading": "Analyzing...",
+        "results": "Diagnostic results",
+        "dashboard": "dashboard",
+        "insights": "Custom Insights"
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "progress",
+        "submit": "submit",
+        "loading": "Loading",
+        "selectOption": "Select"
+      },
+      "result": {
+        "title": "Detailed analysis report",
+        "description": "Discover your money habits and wealth management style"
+      },
+      "meta": {
+        "title": "financial aptitude test",
+        "description": "Discover your money habits and wealth management style",
+        "keywords": "Personality analysis, self-discovery, premium insight"
+      },
+      "progress": "progress",
+      "submit": "submit",
+      "loading": "Loading...",
+      "selectOption": "Select option",
+      "subtitle": "Details",
+      "title": "dashboard",
+      "description": "In-depth, data-driven reports",
+      "keywords": "Personality diagnosis, mind vitamins, journey to find myself, OIYO",
+      "finish": "Finish",
+      "swipeHint": "Swipe Hint"
+    },
+    "result": {
+      "chart": {
+        "impulseControl": "Impulse Control",
+        "savingCapacity": "Saving Capacity",
+        "planningSkill": "Planning Skill",
+        "emotionalControl": "Emotional Control"
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "progress",
+        "submit": "submit",
+        "loading": "Loading",
+        "selectOption": "Select"
+      },
+      "result": {
+        "title": "Detailed analysis report",
+        "description": "Discover your money habits and wealth management style"
+      },
+      "meta": {
+        "title": "financial aptitude test",
+        "description": "Discover your money habits and wealth management style",
+        "keywords": "Personality analysis, self-discovery, premium insight"
+      },
+      "title": "Detailed analysis report",
+      "description": "Your customized analysis results and recommendations",
+      "keywords": "Personality diagnosis, mind vitamins, journey to find myself, OIYO",
+      "loading": "Loading...",
+      "shareTitle": "dashboard",
+      "copySuccess": "Copy Success",
+      "scoresTitle": "dashboard",
+      "impulseRisk": "Impulse Risk",
+      "strengths": "strength",
+      "challenges": "Challenges",
+      "actionTips": "Action Tips",
+      "savingRecommendation": "Saving Recommendation",
+      "recommendedPercentage": "Recommended Percentage",
+      "share": "Share",
+      "retake": "Diagnose again"
+    },
+    "title": "your financial profile",
+    "description": "Explore a suite of tools designed for in-depth financial analysis",
+    "keywords": "Personality diagnosis, mind vitamins, journey to find myself, OIYO"
+  },
+  "payment": {
+    "checkout": {
+      "orderName": "Oiyo.net {planName} Subscription"
+    },
+    "errors": {
+      "PLAN_NOT_FOUND": "Discover your unique texture through more sophisticated analysis.",
+      "PAYMENT_SERVICE_ERROR": "Discover your unique texture through more sophisticated analysis.",
+      "PROVIDER_REQUIRED": "Discover your unique texture through more sophisticated analysis.",
+      "LOCALE_REQUIRED": "Discover your unique texture through more sophisticated analysis.",
+      "CURRENCY_REQUIRED": "Discover your unique texture through more sophisticated analysis.",
+      "TOSS_CLIENT_KEY_REQUIRED": "Discover your unique texture through more sophisticated analysis.",
+      "LEMONSQUEEZY_CONFIG_REQUIRED": "Discover your unique texture through more sophisticated analysis.",
+      "generic": "Discover your unique texture through more sophisticated analysis."
+    },
+    "failed": {
+      "help": {
+        "technical": {
+          "refresh": "Refresh the page",
+          "browser": "Try a different browser",
+          "network": "Discover your unique texture through more sophisticated analysis.",
+          "incognito": "Try incognito/private mode",
+          "title": "dashboard"
+        },
+        "payment": {
+          "title": "dashboard",
+          "checkCard": "Check Card",
+          "checkFunds": "Check Funds",
+          "tryAnother": "Try Another",
+          "contactBank": "Contact Bank"
+        }
+      },
+      "meta": {
+        "title": "Customized analysis results",
+        "description": "Take the failed test."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "Awaiting synthesis...",
+          "Awaiting synthesis...",
+          "Awaiting synthesis..."
+        ],
+        "progress": "progress",
+        "submit": "submit",
+        "loading": "Loading...",
+        "selectOption": "Select option",
+        "subtitle": "Details"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "Detailed analysis report",
+        "description": "Your customized analysis results and recommendations"
+      },
+      "subtitle": "In-depth analysis report",
+      "genericTitle": "Payment Error",
+      "genericDescription": "We explore your potential through in-depth analysis from various angles.",
+      "genericAction": "Try Again",
+      "unknownTitle": "Unknown Error",
+      "unknownDescription": "We explore your potential through in-depth analysis from various angles.",
+      "unknownAction": "Contact Support",
+      "orderId": "Order ID",
+      "orderIdNote": "Discover your unique texture through more sophisticated analysis.",
+      "technicalDetails": "Technical Details",
+      "errorCode": "Error Code",
+      "errorMessage": "Error Message",
+      "whatNext": "What can you do?",
+      "contactSupport": "Contact Support",
+      "backToHome": "Back to Home",
+      "needHelp": "Need Help?",
+      "stillNeedHelp": "Still having trouble?",
+      "getSupport": "Get Support",
+      "title": "your financial profile",
+      "description": "Explore a suite of tools designed for in-depth financial analysis"
+    },
+    "success": {
+      "meta": {
+        "title": "Customized analysis results",
+        "description": "Take the success test."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "Awaiting synthesis...",
+          "Awaiting synthesis...",
+          "Awaiting synthesis..."
+        ],
+        "progress": "progress",
+        "submit": "submit",
+        "loading": "Loading...",
+        "selectOption": "Select option",
+        "subtitle": "Details"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "Detailed analysis report",
+        "description": "Your customized analysis results and recommendations"
+      },
+      "welcome', { name: user": {
+        "firstName || user": {
+          "fullName || t('success": {
+            "user": "User"
+          }
+        }
+      },
+      "subtitle": "Welcome to Premium",
+      "verifying": "Verifying Payment...",
+      "verifyingDescription": "We explore your potential through in-depth analysis from various angles.",
+      "premiumActive": "Premium Active",
+      "welcome": "Welcome {name}!",
+      "user": "User",
+      "paymentDetails": "Payment Details",
+      "orderId": "Order ID",
+      "amount": "Amount",
+      "status": "Status",
+      "confirmed": "Confirmed",
+      "verificationSuccess": "Discover your unique texture through more sophisticated analysis.",
+      "verificationFailed": "Discover your unique texture through more sophisticated analysis.",
+      "verificationNetworkError": "Discover your unique texture through more sophisticated analysis.",
+      "verificationRetry": "Retry verification",
+      "verificationPending": "Awaiting confirmation",
+      "approvedAt": "Approved At",
+      "featuresUnlocked": "Discover your unique texture through more sophisticated analysis.",
+      "nextSteps": "What's Next?",
+      "goToDashboard": "Go to Dashboard",
+      "takeTest": "Take a Test",
+      "supportNote": "Discover your unique texture through more sophisticated analysis.",
+      "contactSupport": "Contact Support",
+      "title": "your financial profile",
+      "description": "Explore a suite of tools designed for in-depth financial analysis"
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "progress",
+      "submit": "submit",
+      "loading": "Loading",
+      "selectOption": "Select"
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "Discover your money habits and wealth management style"
+    },
+    "meta": {
+      "title": "financial aptitude test",
+      "description": "Discover your money habits and wealth management style",
+      "keywords": "Personality analysis, self-discovery, premium insight"
+    },
+    "checkCard": "Check your card details",
+    "checkFunds": "Ensure sufficient funds",
+    "tryAnother": "Discover your unique texture through more sophisticated analysis.",
+    "contactBank": "Contact your bank"
+  },
+  "globalComparison": {
+    "meta": {
+      "cta": {
+        "button": "Discover your unique texture through more sophisticated analysis."
+      },
+      "keywords": "Personality analysis, self-discovery, premium insight",
+      "badge": "popularity",
+      "title": "financial aptitude test",
+      "description": "Discover your money habits and wealth management style"
+    },
+    "filters": {
+      "region": "🌏 Select Region",
+      "age": "👥 Age Group",
+      "gender": "⚧ Gender",
+      "test": "time for reflection"
+    },
+    "tabs": {
+      "overview": "📈 Overview",
+      "regional": "🗺️ Regional Comparison",
+      "demographics": "👥 Demographics",
+      "rankings": "🏆 Rankings"
+    },
+    "chart": {
+      "scoreDistribution": "📊 Score Distribution",
+      "personalityRankings": "🏆 Personality Type Rankings",
+      "avgScore": "avg score",
+      "users": "users",
+      "topRankText": "You rank in the top {percent}% of users worldwide 🚀",
+      "allAges": "All Ages",
+      "all": "All",
+      "male": "Male",
+      "female": "Female",
+      "global": "Global",
+      "asia": "Asia",
+      "europe": "Europe",
+      "northAmerica": "North America",
+      "korea": "Korea",
+      "southAmerica": "South America",
+      "africa": "Africa",
+      "oceania": "Oceania"
+    },
+    "demographics": {
+      "comingSoon": "📊 Demographic analysis features coming soon."
+    },
+    "cta": {
+      "button": "Take Tests Now",
+      "title": "dashboard",
+      "description": "Analysis of your unique tendencies"
+    },
+    "features": {
+      "benchmarking": {
+        "title": "dashboard",
+        "description": "In-depth, data-driven reports"
+      },
+      "regional": {
+        "title": "dashboard",
+        "description": "Analysis of your unique tendencies"
+      }
+    },
+    "insights": {
+      "yourScore": "Your Score",
+      "globalAverage": "Global Average",
+      "percentile": "Percentile",
+      "topPerformers": "Top Performers",
+      "aboveAverage": "Above Average",
+      "belowAverage": "Low",
+      "regions": "Regions"
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "progress",
+      "submit": "submit",
+      "loading": "Loading",
+      "selectOption": "Select"
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "Discover your money habits and wealth management style"
+    },
+    "badge": "Global Benchmarking",
+    "loading": "📊 Analyzing...",
+    "noData": "📋 No data to analyze. Please complete personality tests first.",
+    "title": "dashboard",
+    "description": "Analysis of your unique tendencies",
+    "keywords": "Personality diagnosis, mind vitamins, journey to find myself, OIYO"
+  },
+  "luck": {
+    "meta": {
+      "keywords": "Personality analysis, self-discovery, premium insight"
+    },
+    "hero": {
+      "eyebrow": "Money Momentum",
+      "subtitle": "In-depth analysis report",
+      "cta": "Reveal My Money Blueprint"
+    }
+  },
+  "spendingStyle": {
+    "meta": {
+      "keywords": "Personality analysis, self-discovery, premium insight"
+    },
+    "hero": {
+      "eyebrow": "Smart Wallet Lab",
+      "subtitle": "In-depth analysis report",
+      "cta": "Discover your unique texture through more sophisticated analysis."
+    }
+  },
+  "nJobler": {
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "progress",
+      "submit": "submit",
+      "loading": "Loading...",
+      "selectOption": "Select option",
+      "subtitle": "Details"
+    },
+    "meta": {
+      "title": "Customized analysis results",
+      "description": "Discover your personal insights with this deep dive"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "Your customized analysis results and recommendations"
+    },
+    "title": "your financial profile",
+    "description": "Explore a suite of tools designed for in-depth financial analysis"
+  },
+  "giftTax": {
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "progress",
+      "submit": "submit",
+      "loading": "Loading...",
+      "selectOption": "Select option",
+      "subtitle": "Details"
+    },
+    "meta": {
+      "title": "Customized analysis results",
+      "description": "Discover your personal insights with this deep dive"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "Your customized analysis results and recommendations"
+    },
+    "title": "your financial profile",
+    "description": "Explore a suite of tools designed for in-depth financial analysis"
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "Awaiting synthesis...",
+        "a": "Awaiting synthesis..."
+      },
+      {
+        "q": "Awaiting synthesis...",
+        "a": "Awaiting synthesis..."
+      },
+      {
+        "q": "Awaiting synthesis...",
+        "a": "Awaiting synthesis..."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      }
+    ]
+  },
+  "hub": {
+    "meta": {
+      "title": "Finance Center ",
+      "description": "We explore your potential through in-depth analysis from various angles."
+    },
+    "title": "Customized analysis results",
+    "subtitle": "In-depth analysis report"
+  },
+  "subtitle": "In-depth analysis report",
+  "optional": "Optional",
+  "currency": "₩",
+  "disclaimer": "Discover your unique texture through more sophisticated analysis.",
+  "ko-KR": "Ko- K R",
+  "title": "My Insights"
+}

@@ -1,0 +1,46 @@
+{
+  "dailyInsight": {
+    "cosmicEnergy": "[FALTA: dailyInsight.cosmicEnergy]",
+    "flowerOfDay": "[FALTA: dailyInsight.flowerOfDay]",
+    "crystalOfPower": "[FALTA: dailyInsight.crystalOfPower]",
+    "guidingStar": "[FALTA: dailyInsight.guidingStar]"
+  },
+  "composition": "Composición",
+  "earthlyBranch": "Rama terrenal",
+  "heavenlyStem": "Tallo celestial",
+  "meaning": "Significado",
+  "modernMeaning": "Interpretación moderna",
+  "represents": "Representa",
+  "traditionalDescription": "Descripción tradicional",
+  "viewModes": {
+    "modern": "Vista moderna",
+    "traditional": "Vista tradicional"
+  },
+  "interpretationSuffix": "Interpretación",
+  "modern": {
+    "year": {
+      "description": "La manifestación de tu legado y el portal hacia tus potenciales futuros."
+    },
+    "month": {
+      "description": "La manifestación de tu legado y el portal hacia tus potenciales futuros."
+    },
+    "day": {
+      "description": "La manifestación de tu legado y el portal hacia tus potenciales futuros."
+    },
+    "hour": {
+      "description": "La manifestación de tu legado y el portal hacia tus potenciales futuros."
+    }
+  },
+  "year": "Pilar del Año",
+  "month": "Pilar del Mes",
+  "day": "Pilar del Día",
+  "hour": "Pilar de la Hora",
+  "yearMeaning": "La resonancia profunda de tus raíces y de la energía ancestral.",
+  "monthMeaning": "La emanación de tu fuerza en las relaciones sociales y profesionales.",
+  "dayMeaning": "La interpretación de tu núcleo central y de tus inclinaciones esenciales.",
+  "hourMeaning": "La visión de tus potenciales futuros y el cumplimiento de tu destino tardío.",
+  "yearRepresents": "Antepasados, infancia, herencia parental y base de la vida",
+  "monthRepresents": "Sociabilidad, éxito profesional, hermanos y juventud",
+  "dayRepresents": "Uno mismo, pareja, entorno actual y madurez",
+  "hourRepresents": "Descendencia, vida tardía, deseos internos y frutos del destino"
+}

@@ -1,0 +1,11 @@
+{
+  "title": "Privacy",
+  "free": {
+    "title": "Privacy",
+    "description": "Your data is yours."
+  },
+  "privacy": {
+    "title": "Confidentialité",
+    "description": "Vos données vous appartiennent."
+  }
+}

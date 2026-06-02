@@ -1,0 +1,21 @@
+{
+  "title": "Basic",
+  "subtitle": "사전 설정을 선택합니다.",
+  "recommended": "추천",
+  "all": {
+    "title": "Basic",
+    "description": "Essential analysis."
+  },
+  "eastern": {
+    "title": "Basic",
+    "description": "Essential analysis."
+  },
+  "western": {
+    "title": "Basic",
+    "description": "Essential analysis."
+  },
+  "basic": {
+    "title": "기초적인",
+    "description": "필수 분석."
+  }
+}

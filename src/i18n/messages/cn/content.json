@@ -1,0 +1,13 @@
+{
+  "tips": {
+    "tip1": "提示1",
+    "tip2": "提示2",
+    "tip3": "提示3"
+  },
+  "heading": "标题",
+  "subheading": "副标题",
+  "description1": "描述1",
+  "description2": "描述2",
+  "cta": "点击这里",
+  "tipsTitle": "提示"
+}

@@ -1,0 +1,207 @@
+{
+  "deepWork": {
+    "noData": {
+      "desc": "There are no test results yet. Find a work rhythm that suits you.",
+      "button": "Getting Started with Diagnostics",
+      "title": "dashboard"
+    },
+    "modes": {
+      "work": "concentration",
+      "break": "rest"
+    },
+    "timerComplete": {
+      "work": "Focus time completed",
+      "break": "Break time completed"
+    },
+    "typeLabels": {
+      "structured_planner": "standard block",
+      "deep_diver": "Ultradian Rhythm",
+      "rhythmic_sprinter": "Pomodoro",
+      "creative_explorer": "creative pulse",
+      "flexible_adapter": "Agile flow",
+      "social_collaborator": "Coworking flow"
+    },
+    "types": {
+      "structured_planner": "systematic planner",
+      "deep_diver": "deep sea diver",
+      "rhythmic_sprinter": "rhythm sprinter",
+      "creative_explorer": "creative explorer",
+      "flexible_adapter": "flexible adaptor",
+      "social_collaborator": "social collaborator"
+    },
+    "prescriptions": {
+      "structured_planner": "You shine when you have structure. Follow the {work} minute focus / {break} minute break routine.",
+      "deep_diver": "Excellent concentration. Engage deeply for {work} minutes, then completely detach and relax for {break} minutes.",
+      "rhythmic_sprinter": "Short and bold! {work} minute sprints (pomodoros) beat procrastination.",
+      "creative_explorer": "Don't break the flow. Explore for {work} minutes, then let your heart take you for {break} minutes.",
+      "flexible_adapter": "Stay flexible. {work} minutes are standard, but if you lose focus, switch to {break} minutes of rest.",
+      "social_collaborator": "We get energy when we connect. Focus on working together (body double) for {work} minutes, then talk for {break} minutes."
+    },
+    "meta": {
+      "subtitle": "Deep Work Timer",
+      "disclaimer": "Disclaimer",
+      "title": "Deep Work Test",
+      "description": "Find your own rhythm to increase work concentration and efficiency",
+      "keywords": "Productivity, work efficiency, time management, concentration, work habits"
+    },
+    "test": {
+      "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+      "progress": "progress",
+      "submit": "View results",
+      "loading": "Analyzing...",
+      "selectOption": "Please select",
+      "subtitle": "Deep Work Style Diagnosis",
+      "next": "next",
+      "previous": "before"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What drives your inner world?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        }
+      ]
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "Detailed analysis report"
+    },
+    "subtitle": "Timer optimized for your brain type",
+    "yourType": "my type",
+    "retest": "Check again",
+    "title": "my productivity profile",
+    "prescriptionTitle": "customized prescription",
+    "disclaimer": "A notification sound may be played. Please adjust the volume in a quiet environment.",
+    "description": "Various tools and insights to improve productivity"
+  }
+}

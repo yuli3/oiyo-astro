@@ -1,0 +1,163 @@
+{
+  "test": {
+    "viewResults": "Ver resultados",
+    "swipeHintLong": "Desliza para ver más",
+    "step": "Fase"
+  },
+  "actions": {
+    "next": "Siguiente",
+    "back": "Regresar",
+    "submit": "Confirmar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "share": "Irradiar",
+    "save": "Preservar",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "close": "Cerrar",
+    "previous": "Anterior",
+    "goHome": "Ir al inicio",
+    "more": "Más",
+    "report": "Informe de análisis",
+    "export": "Exportar sabiduría",
+    "continue": "Continuar adelante",
+    "calculate": "Sintetizar Energía",
+    "startTest": "Iniciar Análisis",
+    "processing": "Sintetizando...",
+    "retry": "Reintentar",
+    "start": "Comenzar",
+    "home": "Inicio",
+    "retake": "Revisitar"
+  },
+  "navigation": {
+    "back": "Regresar",
+    "logout": "Cerrar sesión"
+  },
+  "status": {
+    "loading": "Sintonizando...",
+    "error": "Ha surgido un problema",
+    "success": "Completado con éxito",
+    "empty": "No hay datos",
+    "scrollForSynergy": "Desliza para explorar la sinergia"
+  },
+  "modals": {
+    "confirmTitle": "¿Estás seguro de continuar?",
+    "confirmDescription": "Esta acción no se puede deshacer."
+  },
+  "you": "Tú",
+  "hallOfFame": "Salón de la Fama",
+  "noData": "El archivo está vacío",
+  "noDataCta": "Por favor, vuelve a consultar más tarde",
+  "minutes": "mín.",
+  "startTest": "Comenzar el viaje",
+  "browseAll": "Explorar todos los portales",
+  "title": "Santa interfaz de usuario",
+  "all": "Todo",
+  "unread": "Nueva sabiduría",
+  "readAll": "Marcar todo como leído",
+  "view": "Ver",
+  "markRead": "Marcar como leído",
+  "tagline": "Diseña tu camino de vida ideal",
+  "product": "Portales",
+  "company": "Santuario",
+  "support": "Guía",
+  "allRightsReserved": "Todos los derechos preservados.",
+  "wip": "Evolucionando",
+  "copyright": "© {year} Oiyo.",
+  "copyrightFull": "© {year} Oiyo.net. Todos los derechos reservados.",
+  "donate": "Apoyar al creador",
+  "koFi": "Café",
+  "payPal": "PayPal",
+  "daily": {
+    "title": "Ritual diario",
+    "subtitle": "Sincronízate con el flujo celestial actual.",
+    "oracle": {
+      "selectZodiac": "Selecciona tu signo zodiacal",
+      "synchronize": "Sincronizar",
+      "imperialDecree": "Decreto Imperial",
+      "analysisBasis": "Base del análisis cósmico",
+      "message": "Las estrellas susurran un mensaje para ti.",
+      "actionRitual": "Ritual recomendado",
+      "fateVsWill": "Navegando el flujo actual"
+    }
+  },
+  "close": "Cerrar",
+  "questionOf": "Pregunta",
+  "tryNow": "Comienza tu viaje",
+  "goHome": "Volver al inicio",
+  "breadcrumbs": {
+    "ontology": "Santuario de Ontología",
+    "social": "ADN Social",
+    "origin": "Raíces Primordiales",
+    "fortune": "Portal de Fortuna",
+    "offline": "Desconectado",
+    "wellness": "Bienestar Interior",
+    "sleep": "Ritmo Nocturno",
+    "test": "Análisis de Perspicacia",
+    "insights": "Sabiduría Diaria"
+  },
+  "emergency": {
+    "title": "⚠️ Un momento para el cuidado",
+    "description": "Tu ritmo actual sugiere una profunda necesidad de descanso. Te animamos gentilmente a buscar apoyo de un guía profesional para tu bienestar.",
+    "getHelp": "Apoyo Sincero: 1393"
+  },
+  "step": "Fase",
+  "home": "Inicio",
+  "sharing": {
+    "kakaoShare": "Compartir en KakaoTalk",
+    "instagram": "Instagram",
+    "moreApps": "Más aplicaciones",
+    "copied": "¡Copiado!",
+    "copyLink": "Copiar enlace",
+    "creating": "Creando...",
+    "saveImage": "Guardar imagen",
+    "twitter": "Twitter",
+    "facebook": "Facebook",
+    "keyTraits": "Rasgos clave",
+    "matchScore": "Puntuación de compatibilidad",
+    "shareResult": "Compartir resultado",
+    "share": "Compartir"
+  },
+  "progress": {
+    "of": "de",
+    "progressLabel": "Progreso",
+    "stepLabel": "Paso",
+    "greatStart": "¡Buen comienzo! 🌟",
+    "almostThere": "¡Casi! 💪"
+  },
+  "categories": {
+    "development": "Desarrollo",
+    "lifestyle": "Estilo de vida",
+    "moreTests": "✨ Más tests",
+    "new": "Nuevo",
+    "personality": "Personalidad",
+    "popular": "Popular",
+    "popularTests": "🔥 Tests populares",
+    "relatedTests": "🎯 Tests relacionados",
+    "relationships": "Relaciones",
+    "takeTest": "Hacer el test",
+    "tools": "Herramientas",
+    "tryNext": "Probar el siguiente",
+    "wellness": "Bienestar",
+    "viewAllTests": "Ver todos los tests",
+    "discoverMore": "Descubre más sobre ti mismo"
+  },
+  "goals": {
+    "myGoals": "Mis objetivos",
+    "subtitle": "Establece metas de desarrollo personal y haz seguimiento de tu progreso.",
+    "progressSnapshot": "Instantánea de progreso para {userId}",
+    "completedGoals": "Objetivos completados",
+    "completed": "Completado",
+    "noGoals": "Aún no hay objetivos",
+    "noGoalsDesc": "Establece un objetivo de desarrollo personal para empezar a hacer seguimiento.",
+    "createGoal": "Crear objetivo",
+    "progress": "Progreso",
+    "details": "Detalles"
+  },
+  "ontology": {
+    "economicSchool": "Mi escuela económica",
+    "economicSchoolSubtitle": "Análisis de la escuela macroeconómica",
+    "realpolitik": "Tendencia Realpolitik",
+    "politicalMatrix": "Mi matriz política"
+  }
+}

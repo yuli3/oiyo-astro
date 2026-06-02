@@ -1,0 +1,17 @@
+{
+  "handless": {
+    "title": "Imperial Date Selection",
+    "subtitle": "Calculate the days of purity for grand undertakings.",
+    "legend": {
+      "good": "Auspicious Day (Pure)",
+      "bad": "Spirit Presence (Avoid)"
+    },
+    "directions": {
+      "East": "Guard East",
+      "West": "Guard West",
+      "South": "Guard South",
+      "North": "Guard North"
+    },
+    "info": "Ancient wisdom warns of wandering spirits ('Son'). Days ending in 9 or 0 are divinely protected."
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "templates": {
+    "combination": "{elementDesc} {zodiacDesc}. {conseil}"
+  },
+  "elements": {
+    "Wood": "Toi qui possèdes la souplesse de l'arbre verdoyant,",
+    "Fire": "Toi qui portes une passion ardente,",
+    "Earth": "Toi, inébranlable comme la terre ferme,",
+    "Metal": "Toi, doté d'une résolution tranchante comme l'acier,",
+    "Water": "Toi, sage comme l'océan profond,"
+  },
+  "zodiacs": {
+    "aries": "l'esprit pionnier du Bélier brille.",
+    "taurus": "la persévérance du Taureau bâtit l'avenir.",
+    "gemini": "l'esprit vif des Gémeaux ouvre la voie.",
+    "cancer": "la bienveillance du Cancer garde le centre.",
+    "leo": "la majesté du Lion règne sur la journée.",
+    "virgo": "la perspicacité de la Vierge voit la vérité.",
+    "libra": "l'équilibre de la Balance crée l'harmonie.",
+    "scorpio": "la ténacité du Scorpion perce l'essence.",
+    "sagittarius": "l'esprit d'aventure du Sagittaire vise le but.",
+    "capricorn": "l'ambition du Capricorne gravit les sommets.",
+    "aquarius": "l'innovation du Verseau crée le nouveau.",
+    "pisces": "l'intuition des Poissons fait du rêve une réalité."
+  },
+  "advice": {
+    "default": "Aujourd'hui, l'univers te demande patience et clarté.",
+    "active": "Le ciel accueille tes actions audacieuses.",
+    "rest": "C'est le moment de se retirer pour reprendre des forces.",
+    "create": "Ton étincelle créative reçoit la bénédiction de l'univers."
+  }
+}

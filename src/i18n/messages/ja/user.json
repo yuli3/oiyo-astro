@@ -1,0 +1,88 @@
+{
+  "lifePath": {
+    "title": "シナジー・アーキタイプ",
+    "description": "内省と瞑想のためのあなたの個人的な空間。",
+    "phases": {
+      "foundation": {
+        "period": "知恵 (40+)",
+        "title": "シナジー・アーキタイプ",
+        "description": "内省と瞑想のためのあなたの個人的な空間。"
+      },
+      "prime": {
+        "period": "知恵 (40+)",
+        "title": "シナジー・アーキタイプ",
+        "description": "内省と瞑想のためのあなたの個人的な空間。"
+      },
+      "wisdom": {
+        "period": "知恵 (40+)",
+        "title": "シナジー・アーキタイプ",
+        "description": "内省と瞑想のためのあなたの個人的な空間。"
+      }
+    }
+  },
+  "destiny": {
+    "title": "シナジー・アーキタイプ",
+    "yearly": "年間の流れ",
+    "monthly": "月間のリズム",
+    "daily": "毎日のエネルギー",
+    "themes": {
+      "1": "新たな始まりと独立",
+      "2": "協力と忍耐",
+      "3": "創造的な表現と喜び",
+      "4": "秩序と基盤の構築",
+      "5": "変化と自由",
+      "6": "責任と家庭",
+      "7": "内省と知恵",
+      "8": "力と達成",
+      "9": "完了と手放し"
+    },
+    "inflectionPoint": "ピーク変曲エネルギー",
+    "chronos": "クロノス・タイムライン"
+  },
+  "radar": {
+    "title": "シナジー・アーキタイプ",
+    "dimensions": {
+      "mind": "マインド",
+      "destiny": "運命",
+      "time": "時間",
+      "drive": "原動力",
+      "vitality": "活力"
+    },
+    "description": "内省と瞑想のためのあなたの個人的な空間。"
+  },
+  "sanctum": {
+    "title": "シナジー・アーキタイプ",
+    "description": "内省と瞑想のためのあなたの個人的な空間。",
+    "enter": "サンクタムに入る"
+  },
+  "quantum": {
+    "title": "シナジー・アーキタイプ",
+    "subtitle": "ホルモンバランスとライフスタイルの提案",
+    "simulate": "シュミレーション実行",
+    "results": "シュミレーション結果",
+    "reset": "元のプロファイルにリセット",
+    "labels": {
+      "mbti": "MBTI",
+      "element": "五行",
+      "personalYear": "パーソナルイヤー",
+      "lifeType": "ライフタイプ (HD)"
+    },
+    "simulationMode": "シュミレーションモード有効：すべての結果は仮想データに基づいています。"
+  },
+  "biological": {
+    "title": "シナジー・アーキタイプ",
+    "subtitle": "ホルモンバランスとライフスタイルの提案",
+    "circadian": "概日リズム",
+    "energy": "エネルギーレベル",
+    "advice": "推奨されるアクション",
+    "mainFunction": "主な機能",
+    "lifestyleAdvice": "ライフスタイルへのアドバイス"
+  },
+  "synergy": {
+    "title": "シナジー・アーキタイプ",
+    "compatibility": "相性",
+    "traits": "主な特徴",
+    "level": "シナジーレベル",
+    "unlocked": "統合アーキタイプがアンロックされました"
+  }
+}

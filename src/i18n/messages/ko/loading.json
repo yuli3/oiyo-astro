@@ -1,0 +1,110 @@
+{
+  "messages": {
+    "general": "Preparing your story...",
+    "stars": "Counting the stars...",
+    "rainbow": "Decoding the geometric patterns of your identity...",
+    "flowers": "Analyzing the deep echoes of your choices...",
+    "fox": "Designing a mirror that reflects your true essence...",
+    "stardust": "Gathering stardust...",
+    "oracle": "Mapping the secret architecture of your personality...",
+    "cards": "Analyzing the deep echoes of your choices...",
+    "moon": "Polishing the moon...",
+    "dreams": "Weaving dreams...",
+    "magic": "Analyzing the deep echoes of your choices...",
+    "whale": "Synchronizing the threads of your destiny...",
+    "trees": "Ancient trees in meeting...",
+    "roots": "Designing a mirror that reflects your true essence...",
+    "ontology": "Reading your soul's blueprint...",
+    "resonance": "Harmonizing your spiritual frequencies...",
+    "fortune": "Gazing into the crystal ball...",
+    "finance": "Calculating your prosperity...",
+    "cat_dog": "A cat licking a puppy...",
+    "milky_way": "Bringing inspiration from across the Milky Way...",
+    "moonlight": "Drawing a map with moonbeams...",
+    "wave_secret": "Listening to the secrets waves whisper to sandcastles...",
+    "saju": "Aligning your cosmic Manse-ryeok...",
+    "relationship": "Analyzing relationship...",
+    "analyzing": "Analyzing data...",
+    "calculating": "우주 좌표 계산 중...",
+    "processing": "시간 데이터 처리 중...",
+    "generating": "고유한 프로필을 생성하는 중...",
+    "almostDone": "거의 드러남...",
+    "personalityAnalysis": "인지 패턴을 해독하는 중...",
+    "responseAnalysis": "행동 공명 분석 중...",
+    "typeMatching": "전형적인 일치 항목을 찾는 중...",
+    "preparingResults": "최종 합성을 조립하는 중..."
+  },
+  "message": "로드 중...",
+  "tip": "기다리세요.",
+  "analyzing": "Analyzing data...",
+  "calculating": "우주 좌표 계산 중...",
+  "processing": "시간 데이터 처리 중...",
+  "generating": "고유한 프로필을 생성하는 중...",
+  "almostDone": "거의 드러남...",
+  "personalityAnalysis": "인지 패턴을 해독하는 중...",
+  "responseAnalysis": "행동 공명 분석 중...",
+  "typeMatching": "전형적인 일치 항목을 찾는 중...",
+  "preparingResults": "최종 합성을 조립하는 중...",
+  "please_wait": "지혜를 모으는 것. 공간을 확보해주세요.",
+  "default": "Preparing a story just for you...",
+  "rootLoading": {
+    "subtitle": "Are you lost?"
+  },
+  "localeLoading": {
+    "subtitle": "당신의 주파수를 별들과 일치시키세요...",
+    "title": "성소 보정",
+    "description": "잠시만 자리를 비워주세요."
+  },
+  "globalError": {
+    "tryAgain": "다시 시도",
+    "goHome": "Go Home",
+    "helpText": "If this problem persists, please contact our support team."
+  },
+  "notFound": {
+    "title": "Assessment",
+    "subtitle": "Are you lost?",
+    "description": "Unlock deeper understanding with OIYO's archetypal tools.",
+    "goHome": "Go Home",
+    "goBack": "돌아가기",
+    "suggestionsTitle": "Were you looking for one of these?",
+    "popularTestsTitle": "Popular Tests",
+    "egentetoTest": "Egenteto Test",
+    "mbtiAlternative": "MBTI Alternative",
+    "allTests": "View All Tests",
+    "exploreTitle": "Explore Popular Tests",
+    "categoryCore": "Core Personality",
+    "categoryLifestyle": "Lifestyle",
+    "color": "Color Archetypes",
+    "travel": "Travel Destiny",
+    "relationship": {
+      "communicationStyle": "대화 연금술"
+    },
+    "test": {
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Submit inquiry",
+      "loading": "Calibrating...",
+      "selectOption": "Mark the path",
+      "insightBullets": ["심오한 발견"]
+    },
+    "result": {
+      "title": "Assessment",
+      "description": "Unlock deeper understanding with OIYO's archetypal tools."
+    },
+    "meta": {
+      "title": "Assessment",
+      "description": "OIYO의 전형적인 도구를 통해 더 깊은 이해를 얻으세요.",
+      "keywords": "personality test, insights, OIYO, development"
+    }
+  },
+  "poetic": [
+    "우주의 부드러운 속삭임을 들으며...",
+    "운명의 침묵의 언어를 해석하다...",
+    "별의 빛나는 에너지를 활용해…",
+    "인내심을 가져라, 당신에게 장엄한 이야기가 펼쳐진다...",
+    "밤의 고요함 속에 달의 비밀을 기록하다...",
+    "별자리의 빛나는 신호를 해독합니다...",
+    "진실을 찾기 위해 시간의 강을 따라 표류하다..."
+  ]
+}

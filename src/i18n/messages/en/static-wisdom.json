@@ -1,0 +1,32 @@
+{
+  "templates": {
+    "combination": "{elementDesc} {zodiacDesc}. {advice}"
+  },
+  "elements": {
+    "Wood": "With the flexibility of a tree,",
+    "Fire": "Burning with bright passion,",
+    "Earth": "Standing firm like a mountain,",
+    "Metal": "Sharp and precise like a blade,",
+    "Water": "Flowing deep like the ocean,"
+  },
+  "zodiacs": {
+    "aries": "your pioneering Aries spirit is ready.",
+    "taurus": "your steadfast Taurus energy builds future.",
+    "gemini": "your witty Gemini mind sees all paths.",
+    "cancer": "your caring Cancer heart protects the core.",
+    "leo": "your regal Leo presence commands the day.",
+    "virgo": "your analytical Virgo eye spots the truth.",
+    "libra": "your balanced Libra soul seeks harmony.",
+    "scorpio": "your intense Scorpio focus pierces veils.",
+    "sagittarius": "your adventurous Sagittarius aim flies true.",
+    "capricorn": "your ambitious Capricorn will climbs high.",
+    "aquarius": "your visionary Aquarius mind innovates.",
+    "pisces": "your intuitive Pisces dream manifests."
+  },
+  "advice": {
+    "default": "Today, the stars ask for your patience and clarity.",
+    "active": "The sky welcomes your bold action.",
+    "rest": "It is a time to retreat and gather strength.",
+    "create": "Your creative spark is favored by the cosmos."
+  }
+}

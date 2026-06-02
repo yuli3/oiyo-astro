@@ -1,0 +1,21 @@
+{
+  "modes": {
+    "serious": "Sincere Guidance",
+    "funny": "Wit and Wonder",
+    "realistic": "Grounded Wisdom"
+  },
+  "ui": {
+    "additionalTips": "Whispers of Wisdom",
+    "askAnotherQuestion": "Pose a New Inquiry",
+    "share": "Transmit Discovery",
+    "searchPlaceholder": "Speak your concern to the Oracle...",
+    "randomAdvice": "🎲 Invoke Random Insight",
+    "allCategories": "Omnia",
+    "noResultsTitle": "Resonance Obscured",
+    "noResultsDescription": "The Oracle finds no immediate match for this inquiry. Re-pose your question with different phrasing.",
+    "clearSearch": "Purge Inquiry"
+  },
+  "meta": {
+    "title": "Heart Resonance Oracle "
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "empty": "暂无通知。",
+  "dailyInsight": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "view": "看法",
+      "later": "之后"
+    }
+  },
+  "aiHoroscope": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "bodyNoPersonality": "您的个性化星座运势已准备就绪！",
+    "actions": {
+      "view": "View",
+      "later": "之后"
+    }
+  },
+  "testReminder": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "continue": "继续",
+      "dismiss": "解雇"
+    }
+  },
+  "streak": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "celebrate": "庆祝",
+      "share": "分享"
+    }
+  },
+  "social": {
+    "twinMatch": {
+      "title": "📤 Test Shared",
+      "body": "A friend checked your test."
+    },
+    "newFriend": {
+      "title": "📤 Test Shared",
+      "body": "A friend checked your test."
+    },
+    "testShared": {
+      "title": "📤 测试分享",
+      "body": "一位朋友检查了你的测试。"
+    }
+  },
+  "actions": {
+    "view": "看法",
+    "later": "之后"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "title": "Annual Compass",
+  "daily": {
+    "title": "Annual Compass",
+    "description": "Align your long-term goals with the year's major movements."
+  },
+  "weekly": {
+    "title": "Annual Compass",
+    "description": "Align your long-term goals with the year's major movements."
+  },
+  "monthly": {
+    "title": "Annual Compass",
+    "description": "Align your long-term goals with the year's major movements."
+  },
+  "yearly": {
+    "title": "연간 나침반",
+    "description": "장기 목표를 올해의 주요 움직임에 맞춰 조정하세요."
+  },
+  "all": "모두",
+  "personal": "개인의",
+  "professional": "전문적인",
+  "social": "사회의"
+}

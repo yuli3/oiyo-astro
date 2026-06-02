@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "blueprint": "Esquema Primordial (Primal Blueprint)",
+    "archives": "Los Grandes Archivos (The Grand Archives)",
+    "mythos": "Mitos Globales (Global Mythos)",
+    "biorhythm": "Biorritmo (Biorhythm)",
+    "tuning": "Sintonía Armónica (Harmonic Tuning)",
+    "becoming": "Camino del Devenir (Becoming)"
+  },
+  "labels": {
+    "stars": "{count} estrellas influyen en tu camino",
+    "moonIn": "Luna en {sign}",
+    "sephira": "Séfira: {name}",
+    "lifePath": "Sendero de Vida {number}",
+    "unknown": "Desconocido",
+    "physical": "Físico",
+    "emotional": "Emocional",
+    "intellectual": "Intelectual",
+    "dominantAura": "Aura Dominante",
+    "dominantAuraDesc": "El flujo elemental más poderoso que atraviesa tu alma.",
+    "color": "Color",
+    "direction": "Dirección",
+    "number": "Número",
+    "gemstone": "Piedra preciosa",
+    "flower": "Flor",
+    "takeTest": "Comenzar el Test",
+    "viewFormula": "Ver la Fórmula",
+    "sajuTitle": "The Celestial Formula",
+    "sajuSubtitle": "The Eight Pillars & Elemental Resonance"
+  },
+  "explanation": {
+    "wolf": "Pico de energía al anochecer, temperamento creativo e intenso.",
+    "ectomorph": "Excelente enfoque mental, sensibilidad y sistema energético refinado.",
+    "becomingValue": "Número de Vida Vibrante {value}",
+    "totem": "Tótem Protector"
+  },
+  "systems": {
+    "ziwei": "Zi Wei Dou Shu",
+    "vedic": "Nakshatra védico",
+    "kabbalah": "Sendero de la Cábala",
+    "celtic": "Zodíaco Celta de los Árboles",
+    "egyptian": "Deidad Protectora Egipcia",
+    "mayan": "Espíritu Maya",
+    "iching": "Hexagrama del I Ching",
+    "hellenistic": "Secta Helenística"
+  },
+  "synergy": {
+    "advice": "Recorre tu camino con valentía.",
+    "description": "Compatible with your rhythm.",
+    "title": "Origen universal"
+  },
+  "social": {
+    "beneficial": {
+      "description": "Compatible with your rhythm."
+    },
+    "compatible": {
+      "description": "Compatible con tu ritmo."
+    }
+  },
+  "title": "Esquema Universal",
+  "subtitle": "Descubre los hilos convergentes de tu alma.",
+  "description": "Una alineación completa de tus rasgos multidimensionales.",
+  "tabs": {
+    "essence": "Esencia Interior",
+    "destiny": "Camino del Destino",
+    "biology": "Ritmo Biológico"
+  },
+  "close": "Cerrar el Archivo",
+  "essence": {
+    "title": "Esencia",
+    "quote": "La verdad de tu ser reside en tu interior.",
+    "soulFormula": "Fórmula del Alma",
+    "humanDesign": "Human Design",
+    "authority": "Autoridad",
+    "locked": "Sabiduría Bloqueada"
+  },
+  "destiny": {
+    "title": "Destino",
+    "lifePath": "Camino de Vida",
+    "seeker": "El Buscador",
+    "animal": "Animal Espiritual"
+  },
+  "biology": {
+    "title": "Biología",
+    "chronotype": "Cronotipo",
+    "constitution": "Constitución Física"
+  },
+  " ": ""
+}

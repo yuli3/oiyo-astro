@@ -1,0 +1,591 @@
+{
+  "economicPersonality": {
+    "meta": {
+      "title": "test",
+      "description": "Check out various functions and insights in finance.",
+      "keywords": "Personality test, psychological test, free test"
+    },
+    "hero": {
+      "subtitle": "Are you a ‘waster’ or an ‘investor’?",
+      "cta": "Start testing",
+      "badge": "💰 Essential investment items in 2025",
+      "time": "⏱️ Duration: 2 minutes",
+      "title": "My Economic Propensity Test",
+      "description": "My chances of becoming rich can be determined by my attitude toward money."
+    },
+    "types": {
+      "spender": {
+        "name": "king of consumption",
+        "tagline": "You only live once! YOLO",
+        "emoji": "🛍️"
+      },
+      "saver": {
+        "name": "Savings King",
+        "tagline": "Gather the dust and make a mountain",
+        "emoji": "🏦"
+      },
+      "investor": {
+        "name": "investment king",
+        "tagline": "money makes money",
+        "emoji": "📈"
+      },
+      "balanced": {
+        "name": "king of balance",
+        "tagline": "virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "title": "my financial profile"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "Behavioral Patterns",
+          "description": "Understand the psychology behind your spending triggers.",
+          "question": "Why do I buy?",
+          "answer": "It's often emotional."
+        },
+        {
+          "icon": "💰",
+          "title": "Saving Potential",
+          "description": "Identify small leaks that drain your monthly budget.",
+          "question": "Where is my money?",
+          "answer": "Small habits add up."
+        },
+        {
+          "icon": "📈",
+          "title": "Investment Style",
+          "description": "Discover if you are a risk-taker or a safety-seeker.",
+          "question": "Start investing?",
+          "answer": "Know your tolerance."
+        }
+      ],
+      "benefit1": "📊 4 scores of my economic inclination",
+      "benefit2": "💰 Customized investment strategies for each type",
+      "benefit3": "⚠️ Financial habits to watch out for",
+      "benefit4": "🎯 3 action plans",
+      "benefit5": "🔄 Compatibility with other types",
+      "title": "What you can gain from testing"
+    },
+    "cta": {
+      "button": "Start testing for free",
+      "title": "How is my bank account?",
+      "description": "Diagnose right now and start the habit of becoming rich."
+    },
+    "priority": {
+      "high": "height",
+      "medium": "middle",
+      "low": "lowness"
+    },
+    "category": {
+      "saving": "savings",
+      "investing": "invest",
+      "spending": "consumption",
+      "education": "learning",
+      "protection": "risk"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Inner harmony guides your everyday actions."
+        }
+      ],
+      "title": "Frequently Asked Questions",
+      "question1": "How long does the test take?",
+      "answer1": "It takes approximately 2 minutes and consists of 12 intuitive questions.",
+      "question2": "How do I use the results?",
+      "answer2": "Use it to examine your spending habits and find savings and investment methods that are right for you.",
+      "question3": "Do you recommend financial products?",
+      "answer3": "Rather than directly recommending products, we will provide you with criteria and strategies for selecting products.",
+      "question4": "Can I share it with my friends?",
+      "answer4": "Of course. Knowing each other's tendencies makes it easier to manage dating expenses and joint funds."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "Small choices accumulate into a grand destiny."
+        }
+      ],
+      "feature1": {
+        "title": "time for reflection",
+        "description": "Detailed description"
+      },
+      "feature2": {
+        "title": "time for reflection",
+        "description": "Detailed description"
+      },
+      "feature3": {
+        "title": "time for reflection",
+        "description": "Detailed description"
+      },
+      "feature4": {
+        "title": "time for reflection",
+        "description": "Detailed description"
+      },
+      "title": "my financial profile"
+    },
+    "test": {
+      "insightBullets": [
+        "Financial behavior analysis",
+        "Risk appetite assessment",
+        "Customized saving strategies"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": "What do you do first when you get paid?",
+          "options": {
+            "a": "Transfer a fixed amount to savings account first",
+            "b": "Buy something I wanted right away",
+            "c": "Deposit to investment account and watch for opportunities",
+            "d": "Allocate to living expenses, savings, and investments as planned"
+          }
+        },
+        {
+          "id": "q2",
+          "question": "If you suddenly get 500,000 won (about $400)?",
+          "options": {
+            "a": "Buy something I always wanted",
+            "b": "Put it all in emergency fund",
+            "c": "Invest in stocks or funds",
+            "d": "Spend some, save/invest the rest"
+          }
+        },
+        {
+          "id": "q3",
+          "question": "What do you think about financial management?",
+          "options": {
+            "a": "Money is meant to be spent! YOLO",
+            "b": "Safe bank deposits are the best",
+            "c": "Study and invest - money makes money",
+            "d": "Enjoy life, but prepare for the future"
+          }
+        },
+        {
+          "id": "q4",
+          "question": "Daily coffee costs 5,000 won - that's 150,000 won a month!",
+          "options": {
+            "a": "Coffee is my happiness! Keep drinking",
+            "b": "Switch to making coffee at home",
+            "c": "Invest that 150,000 won monthly",
+            "d": "Reduce to 2-3 times per week, save the rest"
+          }
+        },
+        {
+          "id": "q5",
+          "question": "What is your financial goal?",
+          "options": {
+            "a": "Enjoy the present moment! Future comes later",
+            "b": "Save at least 100M won for stable life",
+            "c": "Achieve financial freedom! Make money work",
+            "d": "Save moderately while maintaining quality of life"
+          }
+        },
+        {
+          "id": "q6",
+          "question": "What do you think about credit card installments?",
+          "options": {
+            "a": "Use often. Can buy without having money now",
+            "b": "Never use. Interest is wasteful",
+            "c": "Only use 0% interest installments strategically",
+            "d": "Use 0% installments only for large purchases"
+          }
+        },
+        {
+          "id": "q7",
+          "question": "What is your attitude toward financial education?",
+          "options": {
+            "a": "Not interested. Rather spend time having fun",
+            "b": "Only check deposit interest rates",
+            "c": "Actively learn via YouTube, books, seminars",
+            "d": "Look up what I need and practice"
+          }
+        },
+        {
+          "id": "q8",
+          "question": "Wedding gift money for a friend?",
+          "options": {
+            "a": "100,000+ won! It's once in a lifetime",
+            "b": "Minimum amount! I am struggling too",
+            "c": "Calculate based on relationship, give exactly",
+            "d": "Follow the general market rate"
+          }
+        },
+        {
+          "id": "q9",
+          "question": "What is your plan for owning a home?",
+          "options": {
+            "a": "Monthly rent is comfortable. Don't want loans",
+            "b": "Slowly save and buy with cash",
+            "c": "Build seed money through investment, use leverage",
+            "d": "Prepare systematically with savings + investment"
+          }
+        },
+        {
+          "id": "q10",
+          "question": "If you suddenly need a large sum of money?",
+          "options": {
+            "a": "Panic! No emergency fund, need to borrow",
+            "b": "Withdraw from emergency fund",
+            "c": "Sell part of investment assets",
+            "d": "Solve by combining emergency fund and liquid assets"
+          }
+        }
+      ],
+      "progress": "progress",
+      "next": "next",
+      "previous": "before",
+      "submit": "Submit",
+      "loading": "Loading",
+      "selectOption": "Choose",
+      "subtitle": "Discover your money personality"
+    },
+    "result": {
+      "recommendations": {
+        "spender": [
+          {
+            "category": "saving",
+            "priority": "high",
+            "title": "Start Forced Saving with Auto-Transfer",
+            "description": "Set up auto-transfer to a savings account on payday to save before you have a chance to spend.",
+            "steps": [
+              "Set up auto-transfer from salary to savings account",
+              "Start with 10% of monthly income",
+              "Increase to 15% after 3 months, 20% after 6 months"
+            ],
+            "benefit": "Achieve savings of at least 15% of annual salary after 1 year"
+          },
+          {
+            "category": "spending",
+            "priority": "high",
+            "title": "Set Spending Priorities",
+            "description": "Create a 24-hour waiting rule before any non-essential purchase to reduce impulse buying.",
+            "steps": [
+              "Add items to cart and wait 24 hours",
+              "Rate necessity (1-10) and satisfaction (1-10)",
+              "Only buy if total score is 15+"
+            ],
+            "benefit": "50% reduction in impulse purchases"
+          }
+        ],
+        "saver": [
+          {
+            "category": "investing",
+            "priority": "high",
+            "title": "Start with Small Investments",
+            "description": "Savings alone cannot beat inflation. Start with low-risk investment products to grow your wealth.",
+            "steps": [
+              "Invest 10% of savings in low-risk funds",
+              "Start with ETFs or index funds",
+              "Increase investment ratio by 5% every 3 months"
+            ],
+            "benefit": "Expect 4-6% annual return long-term"
+          },
+          {
+            "category": "spending",
+            "priority": "medium",
+            "title": "Spending for Quality of Life",
+            "description": "Excessive frugality lowers quality of life. Invest in experiences and self-reward.",
+            "steps": [
+              "Allocate 5% of monthly budget to experiences/hobbies",
+              "Dine out with loved ones quarterly",
+              "Secure annual travel budget"
+            ],
+            "benefit": "Increased happiness and burnout prevention"
+          }
+        ],
+        "investor": [
+          {
+            "category": "protection",
+            "priority": "high",
+            "title": "Secure Emergency Fund",
+            "description": "Investment assets alone cannot handle sudden expenses. Maintain liquidity for safety.",
+            "steps": [
+              "Keep 6 months of living expenses in an accessible account",
+              "Never invest your emergency fund",
+              "Replenish immediately after use"
+            ],
+            "benefit": "Stable response to unexpected situations"
+          },
+          {
+            "category": "investing",
+            "priority": "medium",
+            "title": "Strengthen Risk Management",
+            "description": "Use diversification and stop-loss principles to protect your growing portfolio.",
+            "steps": [
+              "Do not invest more than 10% in one asset",
+              "Auto stop-loss at -20% loss",
+              "Regularly rebalance your portfolio"
+            ],
+            "benefit": "Prevention of major losses and stable returns"
+          }
+        ],
+        "balanced": [
+          {
+            "category": "education",
+            "priority": "medium",
+            "title": "Update Financial Knowledge",
+            "description": "Maintaining a balanced portfolio requires continuous learning in a changing market.",
+            "steps": [
+              "Watch finance YouTube/podcasts monthly",
+              "Review financial status quarterly",
+              "Consult an expert annually"
+            ],
+            "benefit": "Stay updated with trends and optimize returns"
+          }
+        ]
+      },
+      "habitData": {
+        "spender": [
+          {
+            "habit": "Buy new products immediately",
+            "impact": "negative",
+            "tip": "Reconsider if you still want it after a week"
+          },
+          {
+            "habit": "Actively use discount coupons",
+            "impact": "positive",
+            "tip": "Install coupon apps and check before purchase"
+          }
+        ],
+        "saver": [
+          {
+            "habit": "Save fixed amount monthly",
+            "impact": "positive",
+            "tip": "Setting auto-transfer makes it more certain"
+          },
+          {
+            "habit": "Stress from saving even on necessities",
+            "impact": "negative",
+            "tip": "Use 5% of monthly budget for self-reward"
+          }
+        ],
+        "investor": [
+          {
+            "habit": "Check economic news daily",
+            "impact": "positive",
+            "tip": "Subscribe to newsletters for efficient info"
+          },
+          {
+            "habit": "Obsess over short-term gains",
+            "impact": "negative",
+            "tip": "Set and follow long-term investment principles"
+          }
+        ],
+        "balanced": [
+          {
+            "habit": "Regularly review income and expenses",
+            "impact": "positive",
+            "tip": "Using a budgeting app is more convenient"
+          },
+          {
+            "habit": "Set goals but low achievement rate",
+            "impact": "neutral",
+            "tip": "Set specific and measurable goals"
+          }
+        ]
+      },
+      "warningData": {
+        "extremeSpender": "Spending tendency is very high. We strongly recommend a minimal savings plan.",
+        "extremeSaver": "Savings ratio is very high. Consider investments to hedge against inflation.",
+        "extremeInvestor": "Investment ratio is very high. Please verify your emergency fund and risk management.",
+        "underspending": "Enjoying the present is also important. Consider appropriate consumption."
+      },
+      "compatibility": {
+        "spender": {
+          "spender": {
+            "score": 60,
+            "name": "Passionate Partners",
+            "tip": "Set spending management goals together and check each other's impulse purchases."
+          },
+          "saver": {
+            "score": 70,
+            "name": "Balanced Match",
+            "tip": "Learn from each other. Spender learns saving, Saver learns enjoying life."
+          },
+          "investor": {
+            "score": 65,
+            "name": "Growth Partners",
+            "tip": "Start learning about investing together for great synergy."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Match",
+            "tip": "Balanced type can guide for a stable relationship."
+          }
+        },
+        "saver": {
+          "spender": {
+            "score": 70,
+            "name": "Balanced Match",
+            "tip": "Learn from each other. Saver learns enjoying life, Spender learns saving."
+          },
+          "saver": {
+            "score": 90,
+            "name": "Stable Companions",
+            "tip": "Build strong bonds by achieving savings goals together."
+          },
+          "investor": {
+            "score": 80,
+            "name": "Future-Oriented Duo",
+            "tip": "Plan together on converting savings into investments."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Trustworthy Partners",
+            "tip": "Respect each other's financial philosophies."
+          }
+        },
+        "investor": {
+          "spender": {
+            "score": 65,
+            "name": "Growth Partners",
+            "tip": "Experience investment fun together to improve spending habits."
+          },
+          "saver": {
+            "score": 80,
+            "name": "Future-Oriented Duo",
+            "tip": "Build strategy on stable savings - a perfect combination."
+          },
+          "investor": {
+            "score": 75,
+            "name": "Ambitious Colleagues",
+            "tip": "Share info but warn each other about excessive risks."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Ideal Combination",
+            "tip": "Balanced type helps with risk management."
+          }
+        },
+        "balanced": {
+          "spender": {
+            "score": 85,
+            "name": "Perfect Match",
+            "tip": "Help improve spending habits with balanced advice."
+          },
+          "saver": {
+            "score": 85,
+            "name": "Trustworthy Partners",
+            "tip": "Find balance between savings and quality of life together."
+          },
+          "investor": {
+            "score": 85,
+            "name": "Ideal Combination",
+            "tip": "Great partner for balancing investment and stability."
+          },
+          "balanced": {
+            "score": 95,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "scoreLabel": "Compatibility Score"
+      },
+      "title": "Detailed analysis report",
+      "description": "Check out detailed financial information.",
+      "loading": "Analyzing your financial behavior pattern...",
+      "scoreBreakdown": "Score Breakdown",
+      "yourScore": "Your Score",
+      "strengths": "Signature Strengths",
+      "weaknesses": "Growth Opportunities",
+      "actionSteps": "Action Steps",
+      "habits": "Financial Habits",
+      "warnings": " counselor's Warnings",
+      "compatibilityTitle": "Financial Harmony",
+      "compatibilityDesc": "How your financial personality resonates with others.",
+      "downloadPDF": "Download Report",
+      "share": "Share Result",
+      "retake": "Retake Test",
+      "home": "Home",
+      "linkCopied": "Link copied to clipboard!",
+      "shareTitle": "My Financial Personality: {type}",
+      "shareText": "I found out my financial personality! Check yours here."
+    },
+    "Failed to download image": {
+      "Please try again": {
+        "": "dashboard"
+      }
+    },
+    "title": "my financial profile",
+    "description": "Check out detailed financial information."
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "moodCalendar": {
+    "grid": {
+      "title": "mood calendar",
+      "noEntries": "There are no records yet",
+      "addMood": "add emotion",
+      "daySun": "Day",
+      "dayMon": "month",
+      "dayTue": "fury",
+      "dayWed": "number",
+      "dayThu": "neck",
+      "dayFri": "gold",
+      "daySat": "saturday",
+      "moodQuestion": "How did you feel?",
+      "close": "close",
+      "saveFailed": "save failed",
+      "saved": "saved",
+      "saveAsImage": "Save as image"
+    }
+  },
+  "moodAnalyzer": {
+    "moods": {
+      "happy": "happiness",
+      "sad": "sorrow",
+      "anxious": "unrest",
+      "angry": "aggro",
+      "calm": "tranquility",
+      "excited": "excited",
+      "sunny": "lucidity",
+      "cloudy": "blur",
+      "rainy": "rain",
+      "storm": "storm",
+      "neutral": "neutrality"
+    }
+  }
+}

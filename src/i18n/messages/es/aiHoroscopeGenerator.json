@@ -1,0 +1,26 @@
+{
+  "defaults": {
+    "luckyElement": "Una taza de té caliente",
+    "color": "Naranja suave"
+  },
+  "fallback": {
+    "title": "Un día precioso, el comienzo de conexiones cálidas",
+    "prediction": "Hoy es un día en el que tus verdaderos sentimientos llegarán a quienes te rodean. Encontrarás consuelo y fuerza inesperados en pequeñas conversaciones con familiares o amigos. Tómate un momento para reflexionar sobre ti mismo en medio de tu ajetreada vida.",
+    "advice": "Pregunta primero cómo están los que te rodean. Un pequeño interés volverá como una gran felicidad.",
+    "luckyElement": "Una taza de té caliente",
+    "mood": "Acogedor",
+    "color": "Naranja suave"
+  },
+  "weatherTips": {
+    "sunny": "Intenta pasar tiempo sintiendo la cálida luz del sol. Recarga tu energía con estiramientos ligeros o aire fresco.",
+    "cloudy": "Un día tranquilo como una nube. Concéntrate con calma con una bebida caliente.",
+    "rainy": "Disfruta de una rutina relajante y una conversación cálida al ritmo de la lluvia.",
+    "snowy": "El ambiente nevado pide comodidad. Abrígate bien y disfruta del día a un ritmo pausado.",
+    "stormy": "En un día ventoso, la preparación es estabilidad. Mantente alerta y deja espacio en tu agenda."
+  },
+  "shareOptional": {
+    "number": "🔢 Número de la Suerte: {number}",
+    "weatherTip": "☁️ Consejo del Clima: {weatherTip}"
+  },
+  "shareTemplate": "{emoji} Horóscopo de Personalidad de Hoy {emoji}\\n\\n{title}\\n\\n{prediction}\\n\\n💡 Consejo: {advice}\\n\\n🍀 Elemento de Suerte: {luckyElement}\\n🎨 Color de Suerte: {color}"
+}

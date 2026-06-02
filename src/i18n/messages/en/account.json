@@ -1,0 +1,769 @@
+{
+  "dashboard": {
+    "meta": {
+      "keywords": "personality dashboard, test history, achievements, profile",
+      "hero": {
+        "guestTitle": "Soul Traveler",
+        "subtitle": "Listen to your inner voice and discover deep revelations"
+      },
+      "title": "Integrated Account Analysis",
+      "description": "Detailed analysis and deep meditation records for your journey."
+    },
+    "hero": {
+      "subtitle": "Your journey of self-discovery",
+      "guestTitle": "Welcome to your Personalized Analysis"
+    },
+    "recentTests": {
+      "retake": "Retake",
+      "share": "Share",
+      "title": "Recent Insights",
+      "viewAll": "View all history",
+      "noTests": "No journeys recorded",
+      "startTesting": "Start new exploration"
+    },
+    "emotionSummary": {
+      "currentStreak": "{days} day reflection streak",
+      "avgTemp": "Avg Temp: {temp}°C",
+      "title": "Internal Vibes",
+      "notLogged": "Not logged",
+      "logNow": "Log now"
+    },
+    "stats": {
+      "thisWeek": "This week",
+      "thisMonth": "This month",
+      "allTime": "All time"
+    },
+    "scope": {
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "daily": "Daily"
+    },
+    "card": {
+      "advice": "Advice of the day",
+      "luckyNumbers": "Tuning numbers",
+      "luckyColors": "Colors of inspiration",
+      "warnings": "Internal warnings"
+    },
+    "title": "My Insights",
+    "description": "Complete analysis and ideas revealing your unique nature",
+    "keywords": "keywords, tags, seo",
+    "achievements": {
+      "emptyTitle": "Summary",
+      "emptyDescription": "Detailed analysis and ideas for your journey.",
+      "emptyCta": "Start",
+      "title": "Achievements & Tuning",
+      "labels": {
+        "level": "Resonance Level",
+        "points": "Shards of Inspiration",
+        "achievements": "Milestones Reached"
+      },
+      "recentTitle": "Inner Growth",
+      "viewAll": "View all",
+      "stats": {
+        "unlocked": "Truths Revealed",
+        "completionRate": "Journey Completion Rate",
+        "remaining": "Remaining Possibilities"
+      },
+      "badgeCollection": "Badge Collection",
+      "nextTitle": "Next Destination",
+      "notificationsTitle": "Notifications",
+      "notificationsEmpty": "Quiet peace",
+      "dismissAll": "Dismiss all",
+      "dismiss": "Dismiss",
+      "result": {
+        "title": "Analysis Result",
+        "description": "Detailed analysis and ideas for your journey."
+      },
+      "meta": {
+        "title": "Account Analysis",
+        "description": "Detailed analysis and ideas for your journey.",
+        "keywords": "keywords"
+      },
+      "test": {
+        "progress": "Evolution Progress",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "Submit Record",
+        "loading": "Navigating the inner ocean...",
+        "selectOption": "Select the option that resonates with you",
+        "insightBullets": ["Insight"]
+      }
+    },
+    "testHistory": {
+      "title": "Accumulated Insights",
+      "noTests": "No tests",
+      "noTestsDescription": "You haven't written your story yet.",
+      "takeFirstTest": "Open the first door",
+      "viewResult": "View result",
+      "viewAll": "View all"
+    },
+    "T": "Summary",
+    "overview": {
+      "testsCompleted": "Explorations completed",
+      "totalPoints": "Total shards",
+      "currentStreak": "Reflection streak",
+      "achievementsUnlocked": "Achievements unlocked"
+    },
+    "quickActions": {
+      "title": "Internal Toolbox",
+      "takeTest": "Face your true self",
+      "viewAchievements": "View achievements",
+      "checkEmotion": "Check vibration",
+      "findTwin": "Find soulmate",
+      "downloadPDF": "Download PDF Report"
+    },
+    "ontology": {
+      "twinFinder": {
+        "title": "Resonating Souls",
+        "noMatches": "Your fated pair has not been discovered yet.",
+        "findNow": "Find now"
+      }
+    },
+    "common": {
+      "recommendations": {
+        "title": "Suggested Paths",
+        "error": "Designing a mirror that reflects your true essence...",
+        "empty": "No paths prepared",
+        "exploreAll": "Explore all",
+        "spotlightEyebrow": "Special Suggestion",
+        "loading": "Searching for path...",
+        "trending": "Trending now",
+        "new": "New discovery",
+        "takeTest": "Face your true self"
+      },
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Submit",
+      "start": "Start Journey",
+      "loading": "Analyzing the texture of the unconscious...",
+      "results": "Final Diagnosis",
+      "dashboard": "My Dashboard",
+      "insights": "Optimized Insights"
+    },
+    "profile": {
+      "title": "Traveler Information",
+      "anonymous": "Anonymous Truth-Seeker",
+      "achievements": "Achievement Log",
+      "badges": {
+        "newMember": "First Step",
+        "explorer": "Inner Pioneer"
+      },
+      "editProfile": "Edit profile",
+      "description": "Complete analysis and ideas"
+    },
+    "biorhythm": {
+      "title": "Bio-Rhythmic Energy Flow",
+      "physical": "Physical Rhythm",
+      "emotional": "Emotional Tuning",
+      "intellectual": "Intellectual Perspective"
+    },
+    "fortune": {
+      "numerology": {
+        "title": "Numerological Symbols",
+        "lifePath": "Life Path",
+        "personalYear": "Year Flow"
+      }
+    },
+    "saju": {
+      "title": "Metaphysical Configuration",
+      "dominant": "Dominant Element",
+      "lacking": "Balance Needed"
+    },
+    "test": {
+      "progress": "Exploration Stage",
+      "submit": "Submit",
+      "loading": "Searching for your position in the cosmic order...",
+      "selectOption": "Select the closest truth",
+      "insightBullets": ["Mapping the constellation of your truest self."],
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "result": {
+      "title": "Insight Result",
+      "description": "Detailed analysis and ideas for your journey."
+    }
+  },
+  "achievements": {
+    "labels": {
+      "level": "Resonance Level",
+      "points": "Shards of Inspiration"
+    },
+    "viewAll": "View all history",
+    "page": {
+      "subtitle": "🎉 Track badges, XP, and significant milestones that illuminate your self-discovery.",
+      "title": "My Footprints"
+    },
+    "loading": {
+      "message": "⏳✨ Gathering your badges and XP traces...",
+      "tip": "🥇 Keep exploring personality journeys while we organize your rewards!"
+    },
+    "filters": {
+      "all": "All",
+      "unlocked": "Revealed Records",
+      "locked": "Hidden Mysteries",
+      "testCompletion": "Fruit of Exploration",
+      "social": "Bond & Communion",
+      "streak": "Power of Constancy",
+      "throttling": "Tuning"
+    },
+    "stats": {
+      "level": "Level",
+      "points": "Total Points",
+      "currentLevel": "Current level",
+      "totalPoints": "Total points",
+      "achievementProgress": "Achievement progress",
+      "badgeCollection": "Badge collection",
+      "unlockedAchievements": "Unlocked achievements",
+      "completionRate": "Complete",
+      "remainingAchievements": "Remaining mysteries",
+      "testsCompleted": "Tests completed",
+      "totalScore": "Total score",
+      "unlocked": "Unlocked",
+      "remaining": "In progress",
+      "title": "Growth Metrics",
+      "achievements": "Achievements",
+      "maxLevelMessage": "You have reached the cusp level.",
+      "levelPrefix": "Level",
+      "levelTitle": "Summary",
+      "totalPointsTitle": "Accumulated Energy",
+      "totalPointsSubtitle": "All points so far",
+      "progressTitle": "Advance Steps",
+      "badgeTitle": "Badge of Honor",
+      "badgeSubtitle": "Granted Power",
+      "badgesUnlocked": "Footprints Earned",
+      "overallProgress": "Overall Progress",
+      "emptyCategory": "No footprints recorded in this category yet."
+    },
+    "cards": {
+      "locked": {
+        "cta": "View unlock requirements"
+      },
+      "progress": {
+        "label": "{progress}% completed"
+      }
+    },
+    "notifications": {
+      "empty": "No news of new milestones at this moment.",
+      "viewAll": "View all achievements",
+      "unlocked": "Achievement unlocked!",
+      "earnedPoints": "You earned {points} shards!",
+      "levelUp": "Resonance accelerated! You reached level {level}!",
+      "newBadge": "New badge earned!"
+    },
+    "recent": {
+      "empty": "No milestones unlocked yet.",
+      "title": "Recently reached"
+    },
+    "cta": {
+      "subtitle": "Syncing the threads of your destiny...",
+      "button": "Take tests →",
+      "title": "Invitation to the Inner World",
+      "description": "Complete analysis and ideas"
+    },
+    "firstTest": {
+      "cta": "Start first inner test",
+      "name": "Seal of Beginning",
+      "title": "Seal of Beginning",
+      "description": "You have successfully completed your first inner reflection."
+    },
+    "socialSharer": {
+      "cta": "Share inspiration with others",
+      "title": "Sharing Master",
+      "description": "You've shared your insights with others and built connections."
+    },
+    "categories": {
+      "testCompletion": "Test Completion",
+      "social": "Social Activity",
+      "streak": "Streak Participation",
+      "exploration": "Explorer",
+      "sharing": "Sharing Master"
+    },
+    "rarity": {
+      "bronze": "Bronze Earth",
+      "silver": "Silver Halo",
+      "gold": "Golden Sun",
+      "platinum": "Platinum Galaxy",
+      "legendary": "Legendary Myth"
+    },
+    "bloodTypeExplorer": {
+      "cta": "Explore the mystery of blood",
+      "title": "Blood Type Explorer",
+      "description": "You've explored the mysteries of blood types and their meanings."
+    },
+    "sajuExplorer": {
+      "cta": "Deepen into metaphysics",
+      "title": "Saju Master",
+      "description": "You've gained deep understanding of metaphysical destiny interpretation."
+    },
+    "tarotExplorer": {
+      "cta": "Draw destiny cards",
+      "title": "Tarot Explorer",
+      "description": "You've explored the mysteries of Tarot cards."
+    },
+    "namingExplorer": {
+      "cta": "Birth of a new name",
+      "title": "Naming Master",
+      "description": "You've explored the power of names."
+    },
+    "viralSharer": {
+      "cta": "Share another result",
+      "title": "Viral Sharer",
+      "description": "Your shares have resonated widely."
+    },
+    "streakMaster": {
+      "cta": "Keep the flow",
+      "title": "Streak Master",
+      "description": "You've maintained a long-term streak."
+    },
+    "insightSeeker": {
+      "cta": "Read today's idea",
+      "title": "Insight Seeker",
+      "description": "You are constantly seeking deep self-insight."
+    },
+    "communityPillar": {
+      "cta": "Vote in a poll",
+      "title": "Community Pillar",
+      "description": "You share wisdom and inspire others in the community."
+    },
+    "summary": {
+      "myAchievements": "All my achievements",
+      "viewAll": "View all"
+    },
+    "weeklyStreak": {
+      "cta": "Maintain weekly routine",
+      "title": "Weekly Streak Master",
+      "description": "You've maintained a weekly reflection for a long time."
+    },
+    "meta": {
+      "keywords": "achievement system, personality test badges, level system, achievement tracking, gamification",
+      "title": "Account Analysis",
+      "description": "Detailed analysis and ideas for your journey."
+    },
+    "hero": {
+      "subtitle": "Complete reflections and share results to expand your own universe!"
+    },
+    "badges": {
+      "bronze": "{count} Bronze",
+      "silver": "{count} Silver",
+      "gold": "{count} Gold",
+      "platinum": "{count} Platinum"
+    },
+    "next": {
+      "empty": "All milestones completed!"
+    },
+    "empty": {
+      "subtitle": "Try selecting a different filter or complete more tests!"
+    },
+    "actions": {
+      "share": "Share",
+      "retake": "Retake",
+      "viewDetails": "View details"
+    },
+    "fiveTests": {
+      "name": "5 Explorations completed"
+    },
+    "tenTests": {
+      "name": "10 Explorations completed"
+    },
+    "explorer": {
+      "name": "Expert Explorer"
+    },
+    "unlocked": "Revealed",
+    "demo": {
+      "simulate": "Simulate",
+      "title": "Experience Mode",
+      "reset": "Reset"
+    },
+    "emptyTitle": "No milestones established yet.",
+    "emptyDescription": "Analyzing deep echoes of your choices...",
+    "emptyCta": "Take the first step",
+    "badgeCollection": "Badge Collection",
+    "recentTitle": "Recently Achieved",
+    "nextTitle": "To Achieve Soon",
+    "levelTitle": "Level {level}",
+    "pointsEarned": "{points} shards earned",
+    "achievements": {
+      "firstTest": {
+        "name": "Seal of Beginning",
+        "description": "You have successfully completed your first inner reflection."
+      },
+      "fiveTests": {
+        "name": "Diligent Truth-Seeker",
+        "description": "You have completed 5 precise analyses."
+      },
+      "tenTests": {
+        "name": "Wise Truth-Seeker",
+        "description": "You have left a record of 10 profound reflections."
+      },
+      "explorer": {
+        "name": "Border Crosser",
+        "description": "You have mastered knowledge from diverse fields."
+      },
+      "title": "My Milestones",
+      "unlocked": "Revealed",
+      "socialSharer": {
+        "name": "Sharing Master",
+        "description": "You've shared your insights with others and built connections."
+      },
+      "bloodTypeExplorer": {
+        "name": "Blood Type Explorer",
+        "description": "You've explored the mysteries of blood types and their meanings."
+      },
+      "sajuExplorer": {
+        "name": "Saju Master",
+        "description": "You've gained deep understanding of metaphysical destiny interpretation."
+      },
+      "categoryExplorer": {
+        "name": "Category Explorer",
+        "description": "You've explored various categories and broadened your knowledge."
+      },
+      "testVeteran": {
+        "name": "Test Veteran",
+        "description": "You've completed numerous tests and deepened self-understanding."
+      },
+      "completionist": {
+        "name": "Completionist",
+        "description": "You've completed all available tests."
+      },
+      "shareMaster": {
+        "name": "Share Master",
+        "description": "You've shared results multiple times and contributed to the community."
+      },
+      "dailyVisitor": {
+        "name": "Daily Visitor",
+        "description": "You've maintained a daily reflection habit."
+      },
+      "rareCombination": {
+        "name": "Rare Combination",
+        "description": "You've discovered a rare personality combination."
+      },
+      "perfectMatch": {
+        "name": "Perfect Match",
+        "description": "You've found a result that perfectly matches you."
+      }
+    },
+    "emptyState": {
+      "title": "Quiet Silence",
+      "description": "Unknown land awaiting your footprints."
+    },
+    "dashboard": {
+      "emptyState": "No records",
+      "title": "Analysis Center",
+      "subtitle": "Space to know yourself deeper",
+      "summary": {
+        "unlocked": "Revealed",
+        "level": "Level",
+        "points": "Shards",
+        "completion": "Achievement"
+      },
+      "levelCard": {
+        "subtitle": "Current spirituality level",
+        "maxLevel": "Cusp State"
+      },
+      "recent": {
+        "title": "Recent Vibes",
+        "empty": "No records"
+      },
+      "categories": {
+        "title": "Distribution by Area",
+        "progressLabel": "Mastery Rate"
+      },
+      "tier": {
+        "title": "Soul Hierarchy"
+      }
+    },
+    "test": {
+      "progress": "Exploration Progress",
+      "submit": "Submit Record",
+      "loading": "Analyzing the texture of the unconscious...",
+      "selectOption": "Select the option that resonates with you",
+      "insightBullets": [
+        "Unveil the hidden layers of your personal philosophy."
+      ],
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "result": {
+      "title": "Insight Result",
+      "description": "Detailed analysis and ideas for your journey."
+    },
+    "categoryExplorer": {
+      "cta": "Explore various categories",
+      "title": "Category Explorer",
+      "description": "You've explored various categories and broadened your knowledge."
+    },
+    "testVeteran": {
+      "title": "Test Veteran",
+      "description": "You've completed numerous tests and deepened self-understanding."
+    },
+    "completionist": {
+      "title": "Completionist",
+      "description": "You've completed all available tests."
+    },
+    "shareMaster": {
+      "title": "Share Master",
+      "description": "You've shared results multiple times and contributed to the community."
+    },
+    "dailyVisitor": {
+      "title": "Daily Visitor",
+      "description": "You've maintained a daily reflection habit."
+    },
+    "rareCombination": {
+      "title": "Rare Combination",
+      "description": "You've discovered a rare personality combination."
+    },
+    "perfectMatch": {
+      "title": "Perfect Match",
+      "description": "You've found a result that perfectly matches you."
+    }
+  },
+  "premium": {
+    "title": "High Density Insight Functions",
+    "description": "Consult more precise data and deep connections."
+  },
+  "auth": {
+    "signIn": {
+      "subtitle": "Welcome back! Your cosmic journey records are awaiting your return.",
+      "title": "Sign In",
+      "description": "Find the tower of wisdom you built.",
+      "newUser": "New to the Sanctuary?",
+      "signUp": "Begin your journey"
+    },
+    "signUp": {
+      "subtitle": "Join thousands of explorers discovering their own truth. You can start now.",
+      "title": "Generate New Universe",
+      "existingUser": "Already an explorer?",
+      "signIn": "Return to your path"
+    },
+    "profile": {
+      "editProfile": "Edit Identity",
+      "accountSettings": "Space Settings",
+      "testHistory": "Exploration Log",
+      "preferences": "Preferred Inspiration",
+      "welcome": "Welcome, traveler {name}."
+    },
+    "auth": {
+      "signUp": {
+        "title": "Generate New Universe",
+        "description": "Complete analysis and ideas",
+        "subtitle": "Independent analysis space"
+      },
+      "signIn": {
+        "title": "Entry to Within",
+        "description": "Review the tower of wisdom you have built so far.",
+        "subtitle": "Truth Rediscovered"
+      }
+    }
+  },
+  "onboarding": {
+    "title": "Welcome to OIYO",
+    "description": "We will help you discover your true brilliance.",
+    "steps": ["Create Profile", "Take First Test", "Explore Results"]
+  },
+  "analytics": {
+    "meta": {
+      "title": "Mental Analysis Dashboard",
+      "description": "Observe your trend changes and reflection records.",
+      "keywords": "analysis, test history, personality ideas, dashboard"
+    },
+    "advanced": {
+      "loading": "Analyzing data levels...",
+      "analyzingData": "Extracting meaning",
+      "subtitle": "Deep Report",
+      "refresh": "Update with new vibrations",
+      "totalInsights": "Total wisdom discovered",
+      "highPriority": "Top Suggestions",
+      "patterns": {
+        "frequency": "Frequency",
+        "strength": "Energy Intensity",
+        "triggers": "Trigger Factors",
+        "outcomes": "Manifested Results",
+        "_text": "Text Analysis"
+      },
+      "avgConfidence": "Average Precision",
+      "tabs": {
+        "evolution": "Evolution Process",
+        "patterns": "Repetitive Patterns",
+        "predictions": "Future Suggestions",
+        "insights": "Key Insights"
+      },
+      "filterBy": "Point of View Filter",
+      "confidence": "Precision",
+      "noInsights": "No insights prepared",
+      "evolution": {
+        "timeline": "Time Trajectory",
+        "stability": "Maintained Stability",
+        "growth": "Forward Growth",
+        "volatility": "Variation Range",
+        "trend": "Flow Trend",
+        "prediction": "Possibility Projection"
+      },
+      "models": {
+        "accuracy": "Inference Accuracy",
+        "features": "Key Attributes",
+        "predictions": "Expected Development",
+        "lastTrained": "Last Update"
+      },
+      "title": "Deep Analysis Center",
+      "recommendations": "Direction Proposals"
+    },
+    "test": {
+      "progress": "Navigation Progress",
+      "submit": "Submit Record",
+      "loading": "Exploring layers of the unconscious...",
+      "selectOption": "Choose the truth that resonates most",
+      "insightBullets": [
+        "Explore the deep architecture of your inner landscape."
+      ],
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "result": {
+      "title": "Insight Result",
+      "description": "Detailed analysis and ideas for your journey."
+    }
+  },
+  "subscriptionManager": {
+    "subtitle": "Manage all intangible bonds you formed",
+    "addSubscription": {
+      "title": "Add Bond (Subscription)",
+      "nameLabel": "Goal Name",
+      "namePlaceholder": "Service Name",
+      "priceLabel": "Energy Cost (Price)",
+      "pricePlaceholder": "Enter Cost",
+      "usageLabel": "Communion Frequency",
+      "usageUnit": "Unit",
+      "satisfactionLabel": "Internal Satisfaction",
+      "submit": "Mapping Complete"
+    },
+    "summary": {
+      "monthlyTotal": "Monthly energy consumed",
+      "yearlyTotal": "Yearly energy consumed",
+      "potentialSavings": "Recoverable energy"
+    },
+    "list": {
+      "monthly": "mo",
+      "used": "Consumption",
+      "timesPerMonth": "times/mo",
+      "satisfaction": "Are you satisfied with this bond?",
+      "valueScore": "Value Score",
+      "keep": "Recommended Maintenance",
+      "keepAction": "Meaningful Bond",
+      "review": "Requires Review",
+      "reviewAction": "Engage more or consider severance",
+      "cancel": "Recommended Cut",
+      "cancelAction": "Low value bond for the cost"
+    },
+    "tips": {
+      "tip1": "Cut meaningless bonds immediately.",
+      "tip2": "Check if long-term plans are better.",
+      "tip3": "Look for paths you can share with others.",
+      "title": "Wise Guide"
+    },
+    "serviceName": "Bond Name",
+    "monthlyFee": "Monthly Cost",
+    "totalMonthly": "Monthly Total",
+    "title": "Bond Manager",
+    "empty": {
+      "title": "No Bonds Formed",
+      "description": "Add and observe the bonds that shape your life pattern."
+    }
+  },
+  "notifications": {
+    "aiHoroscope": {
+      "body": "The galactic forecast for you (type {personality}) is ready!",
+      "bodyNoPersonality": "Your galactic forecast is ready!",
+      "actions": {
+        "view": "View Forecast",
+        "later": "Later"
+      }
+    },
+    "testReminder": {
+      "body": "Finish your ongoing inner exploration to see results.",
+      "actions": {
+        "continue": "Go Now",
+        "dismiss": "Close"
+      }
+    },
+    "streak": {
+      "body": "Amazing! You've been reflecting on yourself for {count} days.",
+      "actions": {
+        "celebrate": "Celebrate",
+        "share": "Shine"
+      }
+    },
+    "social": {
+      "twinMatch": {
+        "body": "We discovered a soul spiritually similar to yours."
+      },
+      "newFriend": {
+        "body": "Someone is showing great interest in your insight records."
+      },
+      "testShared": {
+        "body": "A friend took a look at your records."
+      }
+    },
+    "actions": {
+      "view": "View",
+      "later": "Later"
+    }
+  },
+  "progress": {
+    "meta": {
+      "title": "My Evolution",
+      "description": "Mapping the journey of personal growth through reflection.",
+      "keywords": "progress, growth, observation, development"
+    },
+    "hero": {
+      "subtitle": "Complete your growth map with data obtained through continuous reflection.",
+      "title": "Growth Trajectory"
+    },
+    "title": "My Evolution",
+    "description": "Complete analysis and ideas",
+    "keywords": "analysis, ideas, direction",
+    "marketing": {
+      "about": {
+        "title": "Introduction",
+        "tracking": {
+          "title": "Reflection Trajectory",
+          "description": "Show your subtle changes with precise data.",
+          "feature1": "Map the constellation of your true self.",
+          "feature2": "Read the patterns that define the flow of life.",
+          "feature3": "Explore the deep structure of your inner landscape."
+        },
+        "insights": {
+          "title": "Deep Insights",
+          "description": "Offers soul guidance beyond superficial analysis.",
+          "feature1": "Explore the deep structure of your inner landscape.",
+          "feature2": "Reveal hidden layers of meaning in your personal philosophy.",
+          "feature3": "Explore the deep structure of your inner landscape."
+        }
+      }
+    }
+  },
+  "reports": {
+    "monthly": {
+      "meta": {
+        "keywords": "monthly flow, integrated report, summary, PDF guide"
+      },
+      "hero": {
+        "eyebrow": "Insight Summary",
+        "subtitle": "Consult hidden repetitive patterns in a month's records. Perfect material for self-reflection and growth.",
+        "cta": "Generate Monthly Report"
+      },
+      "download": {
+        "cta": "Save as PDF",
+        "share": "Share report link"
+      },
+      "sections": {
+        "career": "Growth engine to aspire to",
+        "relationships": "Attitude and bonds in relationships",
+        "wellness": "Energy level and peace of mind"
+      }
+    }
+  },
+  "hero": {
+    "subtitle": "Register your own chronicle as you travel through the universe."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "keywords": "Sincronizando los hilos de tu destino...",
+    "title": "Análisis Personalizado",
+    "description": "Mapeando la arquitectura secreta de tu personalidad..."
+  },
+  "hero": {
+    "subtitle": "Sincronizando los hilos de tu destino...",
+    "cta": "Comenzar"
+  },
+  "test": {
+    "progressTitle": "Life Progress",
+    "ageUnit": " years old",
+    "stageLabel": "Life Stage {stage}"
+  },
+  "stats": {
+    "career": "Analizando los ecos profundos de tus elecciones...",
+    "wealth": "Mapeando la arquitectura secreta de tu personalidad...",
+    "relationship": "Relationship",
+    "happiness": "Mapeando la arquitectura secreta de tu personalidad...",
+    "health": "Health"
+  },
+  "result": {
+    "rarity": {
+      "legendary": "Legendary",
+      "rare": "Rare",
+      "uncommon": "Uncommon",
+      "common": "Common"
+    },
+    "scoreLabel": "Total Score",
+    "rankingLabel": "Top Ranking",
+    "achievementsLabel": "Key Achievements",
+    "adviceLabel": "💡 Life Advice",
+    "finalStatsTitle": "Final Stats",
+    "journeyTitle": "Life Journey",
+    "ageAxis": "Age",
+    "share": "Share Result",
+    "retake": "Live Again"
+  },
+  "cta": {
+    "subtitle": "Sincronizando los hilos de tu destino...",
+    "button": "Comenzar"
+  }
+}

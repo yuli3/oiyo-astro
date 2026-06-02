@@ -1,0 +1,480 @@
+{
+  "color": {
+    "meta": {
+      "keywords": "旅行性格, 旅行スタイル, 休暇テスト, 旅行計画",
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。"
+    },
+    "types": {
+      "subtitle": "分析結果",
+      "red": {
+        "name": "文化探求者 (Culture Seeker)",
+        "description": "一緒に行く人との違いを理解し、調整することができます。"
+      },
+      "blue": {
+        "name": "文化探求者 (Culture Seeker)",
+        "description": "一緒に行く人との違いを理解し、調整することができます。"
+      },
+      "green": {
+        "name": "文化探求者 (Culture Seeker)",
+        "description": "一緒に行く人との違いを理解し、調整することができます。"
+      },
+      "yellow": {
+        "name": "文化探求者 (Culture Seeker)",
+        "description": "一緒に行く人との違いを理解し、調整することができます。"
+      },
+      "title": "同行者との調和"
+    },
+    "hero": {
+      "subtitle": "分析結果",
+      "cta": "診断開始",
+      "badge": "旅行心理学",
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。"
+    },
+    "benefits": {
+      "subtitle": "分析結果",
+      "items": {
+        "0": {
+          "title": "同行者との調和",
+          "description": "一緒に行く人との違いを理解し、調整することができます。"
+        },
+        "1": {
+          "title": "同行者との調和",
+          "description": "一緒に行く人との違いを理解し、調整することができます。"
+        },
+        "2": {
+          "title": "同行者との調和",
+          "description": "一緒に行く人との違いを理解し、調整することができます。"
+        },
+        "3": {
+          "title": "同行者との調和",
+          "description": "一緒に行く人との違いを理解し、調整することができます。"
+        }
+      },
+      "title": "同行者との調和"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "この洞察をどう活用できますか？",
+          "answer": "現在の業務をあなたの自然な職業的リズムに合わせることで、摩擦を減らし、達成感を高めることができます。"
+        },
+        "1": {
+          "question": "この洞察をどう活用できますか？",
+          "answer": "現在の業務をあなたの自然な職業的リズムに合わせることで、摩擦を減らし、達成感を高めることができます。"
+        },
+        "2": {
+          "question": "この洞察をどう活用できますか？",
+          "answer": "現在の業務をあなたの自然な職業的リズムに合わせることで、摩擦を減らし、達成感を高めることができます。"
+        },
+        "3": {
+          "question": "この洞察をどう活用できますか？",
+          "answer": "現在の業務をあなたの自然な職業的リズムに合わせることで、摩擦を減らし、達成感を高めることができます。"
+        }
+      },
+      "title": "同行者との調和"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "署名の強度",
+          "description": "包括的な分析とパーソナライズされた洞察",
+          "question": "何があなたの選択を促すのでしょうか？",
+          "answer": "あなたの内なる価値観があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "🚀",
+          "title": "ピボットポイント",
+          "description": "より良い結果をもたらすデータに基づく推奨事項",
+          "question": "何があなたの選択を促すのでしょうか？",
+          "answer": "あなたの内なる価値観があなたの毎日の行動を導きます。"
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "breakdown": "性向分析表",
+        "strengths": "私の強み",
+        "growthAreas": "補うべき点",
+        "colorPalette": "マイソウルパレット",
+        "careerSuggestions": "おすすめキャリア",
+        "relationshipTips": "関係ガイド"
+      },
+      "tabs": {
+        "traits": "主な特性",
+        "colors": "カラーエネルギー",
+        "career": "仕事/進路",
+        "relationships": "人間関係"
+      },
+      "retake": "再び省察する",
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。"
+    },
+    "test": {
+      "title": "同行者との調和",
+      "finish": "完了",
+      "progress": "進行率",
+      "submit": "私の運命を公開",
+      "loading": "結果生成中...",
+      "selectOption": "オプション選択",
+      "insightBullets": ["本当の自分の星座をマッピングします。"],
+      "previous": "前へ",
+      "next": "次へ"
+    }
+  },
+  "bloodType": {
+    "meta": {
+      "keywords": "旅行性格, 旅行スタイル, 休暇テスト, 旅行計画",
+      "compatibilityTitle": "血液型相性分析 | 完璧なマッチング探し",
+      "compatibilityDescription": "血液型で知る二人の微妙なエネルギーの流れ。",
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。"
+    },
+    "hero": {
+      "subtitle": "分析結果",
+      "icon": "🧭"
+    },
+    "test": {
+      "selectBloodType": "血液型選択",
+      "personality": {
+        "title": "同行者との調和",
+        "traits": "主な特性",
+        "positive": "長所と魅力",
+        "challenges": "注意点",
+        "button": "相性結果を見る"
+      },
+      "compatibility": {
+        "button": "相性結果を見る",
+        "title": "同行者との調和",
+        "my": "私",
+        "partner": "相手",
+        "result": "相性結果",
+        "score": "相性スコア"
+      },
+      "share": "共有する",
+      "retake": "再び省察する",
+      "progress": "進行率",
+      "submit": "私の運命を公開",
+      "loading": "結果生成中...",
+      "selectOption": "オプション選択",
+      "insightBullets": ["本当の自分の星座をマッピングします。"],
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "Copied to clipboard!": "リンクがコピーされました！",
+    "result": {
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。"
+    },
+    "Link copied to clipboard!": "リンクコピー完了！"
+  },
+  "animal": {
+    "meta": {
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "keywords": "旅行性格, 旅行スタイル, 休暇テスト, 旅行計画"
+    },
+    "hero": {
+      "title": "同行者との調和",
+      "subtitle": "分析結果",
+      "cta": "診断開始"
+    },
+    "title": "同行者との調和",
+    "description": "一緒に行く人との違いを理解し、調整することができます。",
+    "subtitle": "分析結果",
+    "introTitle": "もし私が動物なら？",
+    "feature1Title": "本能的気質の発見",
+    "feature1Desc": "社会的学習以前の生まれ持った気質を動物の特性になぞらえて説明します。",
+    "feature2Title": "詳細な分析",
+    "feature2Desc": "単なる遊びを超え、あなたの行動様式を深く洞察します。",
+    "feature3Title": "関係の生態系",
+    "feature3Desc": "どの動物タイプと相性が良く、どのタイプとは注意すべきかをお知らせします。",
+    "animalTypes": "多様な動物タイプ",
+    "startTest": "旅を始める"
+  },
+  "futureSelf": {
+    "meta": {
+      "keywords": "旅行性格, 旅行スタイル, 休暇テスト, 旅行計画"
+    },
+    "hero": {
+      "eyebrow": "タイムトラベル研究所",
+      "subtitle": "分析結果",
+      "cta": "診断開始"
+    }
+  },
+  "career": {
+    "meta": {
+      "keywords": "旅行性格, 旅行スタイル, 休暇テスト, 旅行計画",
+      "hero": {
+        "badge": "旅行心理学",
+        "subtitle": "分析結果"
+      },
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "title": "同行者との調和"
+    },
+    "types": {
+      "subtitle": "分析結果",
+      "realistic": {
+        "name": "文化探求者 (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "investigative": {
+        "name": "文化探求者 (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "artistic": {
+        "name": "文化探求者 (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "social": {
+        "name": "文化探求者 (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "enterprising": {
+        "name": "文化探求者 (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "conventional": {
+        "name": "文化探求者 (Culture Seeker)",
+        "emoji": "📊"
+      }
+    },
+    "hero": {
+      "badge": "旅行心理学",
+      "subtitle": "分析結果",
+      "cta": "診断開始",
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。"
+    },
+    "benefits": {
+      "subtitle": "分析結果",
+      "items": [
+        {
+          "title": "コアアライメント",
+          "description": "あなたの最も深い価値観とスキルに自然に共鳴するキャリアを見つけてください。"
+        },
+        {
+          "title": "環境調和",
+          "description": "あなたが真に能力を発揮できる職場文化と雰囲気を特定します。"
+        },
+        {
+          "title": "戦略の明確性",
+          "description": "自分の専門的な成長と長期的な職業遺産のための明確な地図を取得します。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "RIASEC フレームワークの本質は何ですか?",
+          "answer": "これは、あなたの性格パターンがプロフェッショナルな環境にどのように反映されるかを明らかにするレンズです。"
+        },
+        {
+          "question": "これらの洞察を今日からどのように活用できますか?",
+          "answer": "現在のタスクを自然な職業リズムに合わせることで、摩擦が減り、充実感が高まります。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "🎯",
+          "title": "原型の識別",
+          "description": "6 つの主要な職業タイプに対するあなたの性格の正確なマッピング。"
+        },
+        {
+          "icon": "🧭",
+          "title": "方向性に関する洞察",
+          "description": "最も高い共鳴をもたらすパスを選択するための戦略的ガイダンス。"
+        }
+      ]
+    },
+    "title": "同行者との調和",
+    "description": "一緒に行く人との違いを理解し、調整することができます。",
+    "test": {
+      "scale": {
+        "1": "全くそう思わない",
+        "2": "そう思わない",
+        "3": "どちらでもない",
+        "4": "そう思う",
+        "5": "非常にそう思う"
+      },
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "subtitle": "分析結果",
+      "rateInstructions": "各文章を省察し、あなたの真実と共鳴する程度を選択してください。",
+      "progress": "進行率",
+      "submit": "私の運命を公開",
+      "selectOption": "オプション選択",
+      "insightBullets": [
+        "情熱と規律が交わる境界線をたどります。",
+        "あなたの職業上の運命の反響に耳を傾けてください。",
+        "自分の職業アイデンティティの破片を集めます。"
+      ],
+      "next": "次へ",
+      "previous": "前へ",
+      "loading": "結果生成中..."
+    },
+    "result": {
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "primaryType": "支配的元型",
+      "allTypes": "全体スペクトル",
+      "careers": "推奨経路",
+      "workEnvironment": "理想的環境",
+      "secondaryType": "補助元型",
+      "understanding": "元型の知恵",
+      "retake": "再び省察する"
+    }
+  },
+  "testGrid": {
+    "searchPlaceholder": "元型、運命、あるいはパターンを検索...",
+    "filterAll": "全て見る",
+    "categories": {
+      "personality": "本質と魂"
+    },
+    "sortBy": {
+      "popularity": "大衆的共鳴",
+      "newest": "新しい洞察",
+      "time": "所要時間",
+      "difficulty": "知的深さ"
+    },
+    "startTest": "旅を始める",
+    "noResults": "この検索に対するこだまは見つかりません。",
+    "clearFilters": "フィルター初期化",
+    "sortPopular": "共鳴が高い順",
+    "sortAlpha": "あいうえお順",
+    "new": "新しい",
+    "trending": "熱い",
+    "empty": {
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "clearFilters": "フィルター初期化"
+    },
+    "test": {
+      "progress": "進行率",
+      "submit": "私の運命を公開",
+      "loading": "結果生成中...",
+      "selectOption": "オプション選択",
+      "insightBullets": [
+        "情熱と規律が交わる境界線をたどります。",
+        "本当の自分のエコーに耳を傾けてください。",
+        "あなたの個人的なアイデンティティの破片を集めること。"
+      ],
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。"
+    },
+    "meta": {
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "keywords": "旅行性格, 旅行スタイル, 休暇テスト, 旅行計画"
+    }
+  },
+  "learning": {
+    "meta": {
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "title": "同行者との調和",
+      "keywords": "旅行性格, 旅行スタイル, 休暇テスト, 旅行計画"
+    },
+    "hero": {
+      "title": "同行者との調和",
+      "subtitle": "分析結果",
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "badge": "旅行心理学"
+    }
+  },
+  "travel": {
+    "hero": {
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "badge": "旅行心理学",
+      "title": "同行者との調和",
+      "subtitle": "分析結果",
+      "cta": "診断開始"
+    },
+    "test": {
+      "title": "同行者との調和",
+      "subtitle": "分析結果",
+      "progress": "進行率",
+      "submit": "私の運命を公開",
+      "loading": "結果生成中...",
+      "selectOption": "オプション選択",
+      "insightBullets": ["トラベルスタイル", "理想的な仲間", "目的地のヒント"],
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "subtitle": "分析結果",
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "loading": "結果生成中...",
+      "sections": {
+        "traits": "主な特性",
+        "destinations": "おすすめ目的地",
+        "packing": "パッキングスタイル",
+        "planning": "計画スタイル"
+      },
+      "retakeTest": "再テスト"
+    },
+    "types": {
+      "items": [
+        {
+          "name": "冒険者",
+          "description": "新しい体験とスリルを求めて。"
+        },
+        {
+          "name": "プランナー",
+          "description": "すべてに対して組織化され、準備が整っています。"
+        },
+        {
+          "name": "リラクサー",
+          "description": "休暇とは、何もしないことを意味します。"
+        },
+        {
+          "name": "写真家",
+          "description": "あらゆる瞬間を捉えることが最優先です。"
+        },
+        {
+          "name": "食通",
+          "description": "料理の体験が旅を定義します。"
+        },
+        {
+          "name": "文化探求者",
+          "description": "歴史と地元の伝統に浸ります。"
+        }
+      ],
+      "title": "同行者との調和"
+    },
+    "meta": {
+      "title": "同行者との調和",
+      "description": "一緒に行く人との違いを理解し、調整することができます。",
+      "keywords": "旅行性格, 旅行スタイル, 休暇テスト, 旅行計画"
+    },
+    "benefits": {
+      "title": "同行者との調和",
+      "items": [
+        {
+          "title": "失敗しない旅行",
+          "description": "あなたにぴったりの目的地を見つけてください。"
+        },
+        {
+          "title": "賢い予算編成",
+          "description": "自分にとって大切なことにお金を使いましょう。"
+        },
+        {
+          "title": "もっと楽しむ",
+          "description": "ストレスを軽減し、満足感を高めます。"
+        },
+        {
+          "title": "より良いハーモニー",
+          "description": "旅行仲間との違いを理解する。"
+        }
+      ]
+    }
+  }
+}

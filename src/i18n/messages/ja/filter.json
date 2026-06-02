@@ -1,0 +1,8 @@
+{
+  "sort": "並び替え",
+  "category": "カテゴリー",
+  "mood": "気分",
+  "timeRange": {
+    "label": "期間"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "title": "我的分析",
+  "subtitle": "详情",
+  "genderSelection": {
+    "title": "我的分析",
+    "subtitle": "详情",
+    "question": "问题",
+    "male": "男性",
+    "female": "女性"
+  },
+  "progress": "进步",
+  "selectOption": "选择",
+  "insightBullets": ["发现定义您的道路的独特模式。"],
+  "start": "开始",
+  "continue": "继续",
+  "pause": "暂停",
+  "results": "结果",
+  "previous": "以前的",
+  "finish": "结束",
+  "next": "下一个",
+  "submit": "提交",
+  "loading": "加载中",
+  "viewResults": "查看结果",
+  "swipeHintLong": "滑动以进行答题",
+  "resultTitle": "您的分析结果",
+  "step": "第 {current} 个问题（共 {total} 个）",
+  "instruction": "说明",
+  "restart": "重新开始测试",
+  "helperText": "选择最符合的答案。"
+}

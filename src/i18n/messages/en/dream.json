@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Dream Journal",
+    "description": "Record and analyze your dreams.",
+    "keywords": "dream journal, dream analysis, dream interpretation"
+  },
+  "hero": {
+    "title": "Dream Journal",
+    "badge": "Popular",
+    "subtitle": "The ultimate guide to your dreams",
+    "description": "Discover various tools that provide deep insights into your dreams."
+  },
+  "tabs": {
+    "analysis": "My Dream Type",
+    "symbols": "Symbol Dictionary",
+    "journal": "Journaling Tips"
+  },
+  "result": {
+    "title": "Dream Analysis Result",
+    "copied": "Copied to clipboard!",
+    "characteristics": "Your Dream Characteristics",
+    "dreamPatterns": "Your Dream Patterns",
+    "interpretationTips": "Dream Interpretation Tips",
+    "commonSymbols": "Common Symbols",
+    "dreamTypeBreakdown": "Dream Type Breakdown",
+    "share": "Share",
+    "shareText": "I am a {type} dreamer! Check it out here: {url}",
+    "retake": "Retake Test"
+  },
+  "symbols": {
+    "title": "Dream Symbol Dictionary",
+    "subtitle": "Discover the meanings of frequently appearing symbols",
+    "searchPlaceholder": "Search symbols..."
+  },
+  "journal": {
+    "title": "Dream Journal Guide",
+    "subtitle": "Learn how to effectively record and analyze your dreams",
+    "gettingStarted": "Getting Started",
+    "whatToRecord": "What to Record",
+    "interpretationTips": "Interpretation Tips",
+    "improveRecall": "Improving Recall"
+  },
+  "test": {
+    "progress": "Question {current} / {total}",
+    "selectOption": "Please select an option"
+  }
+}

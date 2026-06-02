@@ -1,0 +1,73 @@
+{
+  "yourScore": "my score",
+  "globalAverage": "overall average",
+  "percentile": "percentile",
+  "topPerformers": "top rank",
+  "aboveAverage": "above average",
+  "belowAverage": "lowness",
+  "regions": "Distribution by region",
+  "description": "Personalized AI-powered insights and guidance to illuminate your path.",
+  "feature1": "Uncover hidden patterns in your personality with AI-driven analysis.",
+  "feature2": "Track your growth journey and celebrate every step forward.",
+  "feature3": "Receive daily wisdom tailored to your unique soul profile.",
+  "title": "Your Daily Insights",
+  "sections": {
+    "0": {
+      "id": "core",
+      "title": "Core Resonance Analysis",
+      "description": "An exploration of the fundamental vibrations that define your essence."
+    },
+    "1": {
+      "id": "spectral",
+      "title": "Spectral Strains & Shadows",
+      "description": "Illuminating the diverse facets of your being, from the luminous to the profound."
+    },
+    "2": {
+      "id": "archetypes",
+      "title": "Evolutionary Archetypes",
+      "description": "Identifying the timeless patterns that guide your personal development."
+    },
+    "daily": "Daily Reading",
+    "advice": "Cosmic Advice"
+  },
+  "features": {
+    "growth": {
+      "title": "Personal Growth",
+      "description": "Discover personalized recommendations for your spiritual journey and personal development."
+    },
+    "ai": {
+      "title": "AI-Powered Analysis",
+      "description": "Advanced artificial intelligence provides deep perspectives on your personality patterns."
+    }
+  },
+  "cta": {
+    "title": "Ready for more discoveries?",
+    "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself.",
+    "button": "Explore Tests"
+  },
+  "test": {
+    "insightBullets": [
+      "Decoding the hidden frequencies of your choices.",
+      "Mapping the constellation of your recent evolutionary leaps.",
+      "Illuminating the patterns that form your unique resonance."
+    ],
+    "progress": "progress",
+    "next": "next",
+    "previous": "before",
+    "submit": "📤 Submit",
+    "selectOption": "Please select your current preference",
+    "loading": "✨ Designing..."
+  },
+  "result": {
+    "title": "test results",
+    "description": "Result details"
+  },
+  "meta": {
+    "title": "Daily Insights",
+    "description": "Daily wisdom tailored to your soul.",
+    "keywords": "daily insights, wisdom, personality, guidance, ai"
+  },
+  "keywords": "Personality test, psychological test, free test, result sharing",
+  "badge": "✨ Daily Wisdom",
+  "subtitle": "Wisdom of the day"
+}

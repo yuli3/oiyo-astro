@@ -1,0 +1,195 @@
+{
+  "aries": "양자리",
+  "taurus": "황소자리",
+  "gemini": "쌍둥이자리",
+  "cancer": "암",
+  "leo": "사자 별자리",
+  "virgo": "처녀 자리",
+  "libra": "천칭",
+  "scorpio": "천갈궁",
+  "sagittarius": "궁수",
+  "capricorn": "염소자리",
+  "aquarius": "물병자리",
+  "pisces": "물고기",
+  "meta": {
+    "title": "조디악 가이드",
+    "description": "당신의 정체성의 기하학적 패턴을 해독합니다...",
+    "keywords": "조디악 표지판, 점성술, 별자리, 조디악 호환성",
+    "resultTitle": "귀하의 조디악 분석",
+    "resultDescription": "당신의 진정한 본질을 반영하는 거울을 디자인합니다...",
+    "resultKeywords": "황도대 분석, 별자리 특성, 점성술 보고서"
+  },
+  "benefits": {
+    "love": {
+      "title": "사랑과 관계",
+      "description": "다른 표지판과 연결하는 방법."
+    },
+    "career": {
+      "title": "경력 및 성공",
+      "description": "당신의 성격의 비밀 구조를 지도로 그려보세요..."
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "조디악 표지판의 핵심 본질은 무엇입니까?",
+        "answer": "이는 우주의 무한한 복잡성을 독특한 인간 공명으로 필터링하는 전형적인 렌즈입니다."
+      },
+      {
+        "question": "내 별자리가 내 운명 전체를 결정하나요?",
+        "answer": "별들은 기울지만 강요하지는 않습니다. 그들은 천상의 청사진을 제공하지만, 당신은 당신 자신의 깨어남의 건축가입니다."
+      }
+    ],
+    "title": "우주에 대한 질문"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "전형적인 공명",
+        "description": "주요 표시의 심리적, 영적 모티프에 대해 자세히 알아보세요."
+      },
+      {
+        "icon": "🧭",
+        "title": "아스트랄 네비게이션",
+        "description": "계절별 천체 흐름에 맞춰 일상 활동을 조정하는 방법에 대한 전략적 통찰력."
+      }
+    ]
+  },
+  "test": {
+    "title": "개인화된 분석",
+    "subtitle": "귀하의 답변을 해석하여 귀하의 고유한 본질을 드러내고 있습니다.",
+    "calculating": "부호를 계산하는 중..."
+  },
+  "title": "개인화된 분석",
+  "description": "귀하의 답변을 통해 밝혀진 비밀을 알아보세요.",
+  "result": {
+    "title": "개인화된 분석",
+    "description": "귀하의 답변을 통해 밝혀진 비밀을 알아보세요."
+  },
+  "hero": {
+    "title": "당신의 간판을 발견하세요",
+    "subtitle": "당신의 정체성의 기하학적 패턴을 해독합니다..."
+  },
+  "preview": {
+    "title": "개인화된 분석"
+  },
+  "cta": {
+    "title": "개인화된 분석",
+    "subtitle": "운명의 실타래를 동기화하는 중...",
+    "button": "성격 보기"
+  },
+  "T": "페이지 제목",
+  "info": {
+    "accurate": {
+      "title": "개인화된 분석",
+      "description": "귀하의 답변을 통해 밝혀진 비밀을 알아보세요."
+    },
+    "detailed": {
+      "title": "개인화된 분석",
+      "description": "귀하의 답변을 통해 밝혀진 비밀을 알아보세요."
+    }
+  },
+  "compatibility": {
+    "title": "조디악 호환성 분석",
+    "subtitle": "두 표지판 사이의 조화를 발견하고 관계 역학을 이해하십시오.",
+    "selectionTitle": "분석할 징후 선택",
+    "selectionDesc": "자세한 호환성 분석을 위해 두 개의 조디악 표지판을 선택하십시오.",
+    "mySign": "나의 사인",
+    "partnerSign": "파트너 사인",
+    "placeholder": "기호를 선택하세요",
+    "analyzeBtn": "호환성 분석",
+    "analyzingBtn": "분석 중...",
+    "levels": {
+      "excellent": "우수한 경기",
+      "good": "좋은 경기",
+      "fair": "공정한 경기",
+      "challenging": "도전적인 경기"
+    },
+    "categories": {
+      "love": "사랑과 로맨스",
+      "friendship": "우정",
+      "business": "업무 및 비즈니스",
+      "communication": "의사소통"
+    },
+    "sections": {
+      "scorecard": "호환성 분석",
+      "strengths": "관계의 강점",
+      "challenges": "성장 과제",
+      "advice": "성장을 위한 우주적 조언"
+    },
+    "actions": {
+      "share": "결과 공유",
+      "retake": "새로운 분석",
+      "copySuccess": "클립보드에 복사되었습니다!"
+    },
+    "analysis": {
+      "strengths": {
+        "traitMatch": "{sign1}의 {trait1}과 {sign2}의 {trait2}는 조화로운 공명을 만들어냅니다.",
+        "sameElement": "두 표시 모두 동일한 요소를 공유하여 자연스러운 이해를 촉진합니다.",
+        "complementaryElement": "귀하의 요소는 상호 보완적이며 균형 있고 시너지적인 유대감을 형성합니다.",
+        "respect": "서로의 장점에 대한 상호 인식과 존중을 바탕으로 구축된 관계입니다."
+      },
+      "challenges": {
+        "traitConflict": "{sign1}의 {trait1} 성격은 때때로 {sign2}의 {trait2} 성향과 충돌할 수 있습니다.",
+        "misunderstanding": "삶에 대한 서로 다른 접근 방식은 초기 오해로 이어질 수 있습니다.",
+        "communication": "서로의 독특한 의사소통 스타일을 이해하는 것이 조화의 핵심입니다."
+      },
+      "tips": {
+        "respect": "차이점을 성장의 기회로 존중하고 포용하세요.",
+        "communication": "항상 개방적이고 정직한 의사소통을 유지하십시오.",
+        "personalTime": "개인 공간에 대한 서로의 요구를 소중히 여기고 존중하십시오.",
+        "sharedInterests": "함께 즐길 수 있는 공통 관심사를 탐색하고 육성합니다.",
+        "conflict": "갈등이 생기면 서로의 관점을 이해하는 것이 우선입니다.",
+        "excellent": "천국에서 이루어진 일치! 우주의 흐름을 믿고 이 특별한 유대감을 키워보세요.",
+        "challenging": "도전적이면서도 보람있는 길입니다. 이해하려고 노력하면 연결이 깊어질 것입니다."
+      }
+    }
+  },
+  "extended": {
+    "corePersonality": {
+      "leader": "독립심이 강한 타고난 리더",
+      "innovator": "예술적인 감성을 지닌 창의적 혁신가",
+      "analyst": "실천적 지혜를 갖춘 성찰적 분석가",
+      "balanced": "당신의 성격의 비밀 구조를 지도로 그려보세요..."
+    },
+    "lifeTheme": "지혜, 창의성, 실천적 행동의 조화로운 통합",
+    "compatibilityAnalysis": {
+      "excellent": "모든 시스템에 걸친 탁월한 조화. 여러분의 우주 에너지는 매우 잘 정렬되어 있습니다.",
+      "good": "전반적인 호환성이 좋습니다. 약간의 조정으로 자연스러운 흐름이 향상될 수 있습니다.",
+      "moderate": "운명의 실타래를 동기화하는 중...",
+      "diverse": "자각과 실천을 통해 조화를 이룰 수 있는 다양한 에너지."
+    },
+    "timeline": {
+      "currentTheme_spring": "새로운 시작과 성장",
+      "currentTheme_summer": "피크 에너지 및 성과",
+      "currentTheme_autumn": "수확 및 통합",
+      "currentTheme_winter": "성찰과 계획",
+      "currentTheme_default": "성장과 발전",
+      "advice": {
+        "strengths": "타고난 강점에 집중하세요",
+        "intuition": "결정을 내릴 때 직감을 믿으세요",
+        "balance": "삶의 모든 영역에서 균형을 유지하세요"
+      },
+      "upcoming": {
+        "next3": "새로운 인연의 기회와 함께 꾸준한 발전을 이루는 시기",
+        "nextYear": "개인 및 직업 영역에서 상당한 성장",
+        "transitions": [
+          "경력 발전 기회",
+          "중요한 관계의 심화",
+          "개인적인 영적 성장"
+        ]
+      }
+    }
+  },
+  "subtitle": "당신의 점성술 프로필을 찾아보세요.",
+  "oracle": {
+    "selectZodiac": "조디악 표지판을 선택하세요",
+    "synchronize": "별 동기화",
+    "imperialDecree": "황실 칙령",
+    "analysisBasis": "분석의 기초",
+    "message": "우주 메시지",
+    "actionRitual": "액션 의식",
+    "fateVsWill": "운명 대 의지"
+  }
+}

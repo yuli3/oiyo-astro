@@ -1,0 +1,26 @@
+{
+  "defaults": {
+    "luckyElement": "positive energy",
+    "color": "blue"
+  },
+  "fallback": {
+    "title": "A precious day, the beginning of a warm relationship",
+    "prediction": "Today is the day to convey my true feelings to the people around me. You will gain unexpected comfort and strength from small conversations with family and friends. Even in your busy daily life, find some time to reflect on yourself.",
+    "advice": "Today, ask the people around you how they are doing. A little attention will bring you great happiness.",
+    "luckyElement": "a cup of warm tea",
+    "mood": "cozy",
+    "color": "soft orange"
+  },
+  "weatherTips": {
+    "sunny": "Make time to feel the warm sunlight. Replenish your energy through light stretching or ventilation.",
+    "cloudy": "It's a day like calm clouds. Stay calm and concentrate with a warm drink.",
+    "rainy": "Enjoy comfortable routines and warm conversations to the rhythm of a rainy day.",
+    "snowy": "A warmth suits the snowy air. Dress warmly and take on the day at a leisurely pace.",
+    "stormy": "On days with strong winds, preparation is the key to stability. Set boundaries and leave room in your schedule."
+  },
+  "shareOptional": {
+    "number": "🔢 Lucky number: {number}",
+    "weatherTip": "☁️ Weather Tip: {weatherTip}"
+  },
+  "shareTemplate": "{emoji} Today's Personality Horoscope {emoji} \n\n{title} \n\n{prediction} \n\n💡 Advice: {advice} \n\n🍀 Luck Element: {luckyElement} \n🎨Lucky color: {color}"
+}

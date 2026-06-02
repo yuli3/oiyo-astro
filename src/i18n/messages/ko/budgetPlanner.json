@@ -1,0 +1,198 @@
+{
+  "labels": {
+    "monthlyIncome": "월수입",
+    "total": "총"
+  },
+  "tags": {
+    "mustHave": "필수품",
+    "niceToHave": "가지고 있으면 좋다",
+    "future": "미래"
+  },
+  "categories": {
+    "needs": "Essential expenses like housing, food, and utilities.",
+    "wants": "Expenses that enhance your quality of life, like hobbies and dining out.",
+    "savings": "Money set aside for emergencies, retirement, and future goals."
+  },
+  "descriptions": {
+    "needs": "주택, 식비, 공과금과 같은 필수 비용입니다.",
+    "wants": "취미, 외식 등 삶의 질을 높이는 비용입니다.",
+    "savings": "긴급 상황, 은퇴 및 미래의 목표를 위해 따로 확보해 둔 돈입니다."
+  },
+  "loading": {
+    "title": "Your Financial Profile",
+    "step1": "월별 수입 분석",
+    "step2": "50/30/20 분할 계산",
+    "step3": "할당 최적화",
+    "step4": "예산 청사진 마무리"
+  },
+  "meta": {
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "disclaimer": "This is a general guideline. Adjust percentages based on your specific financial situation.",
+    "keywords": "예산, 재정, 자금 관리",
+    "title": "Your Financial Profile",
+    "description": "Explore our suite of tools designed for deep finance insights."
+  },
+  "hero": {
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "badge": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요."
+  },
+  "test": {
+    "progress": "진전",
+    "submit": "제출하기",
+    "loading": "잠재의식의 침묵의 언어를 번역하다...",
+    "selectOption": "옵션 선택",
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "insightBullets": ["시그니처 강도", "피벗 포인트", "2"]
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "🚀",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+        "question": "인생의 흐름을 어떻게 탐색합니까?",
+        "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+      },
+      {
+        "icon": "💡",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "🎯",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+        "question": "인생의 흐름을 어떻게 탐색합니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "🔥",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "인생의 흐름을 어떻게 탐색합니까?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      },
+      {
+        "icon": "⭐",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+      },
+      {
+        "icon": "🚀",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+      },
+      {
+        "icon": "💡",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "🎯",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+        "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+      },
+      {
+        "icon": "🔥",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "⭐",
+        "title": "프리미엄 인사이트",
+        "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "인생의 흐름을 어떻게 탐색합니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "🚀",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "인생의 흐름을 어떻게 탐색합니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "💡",
+        "title": "프리미엄 인사이트",
+        "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+        "question": "인생의 흐름을 어떻게 탐색합니까?",
+        "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+      },
+      {
+        "icon": "🎯",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+        "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+      },
+      {
+        "icon": "🔥",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+        "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+      },
+      {
+        "icon": "⭐",
+        "title": "프리미엄 인사이트",
+        "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+        "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+        "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+      }
+    ]
+  },
+  "result": {
+    "title": "Your Financial Profile",
+    "description": "Explore our suite of tools designed for deep finance insights."
+  },
+  "subtitle": "50/30/20 규칙으로 완벽한 금융 포트폴리오 만들기",
+  "currency": "$",
+  "tip": "팁: 모든 달러가 직업이 있는 제로 기반 예산 책정을 시도해 보세요!",
+  "calculate": "계획 계산",
+  "reset": "계획 재설정",
+  "disclaimer": "이는 일반적인 지침입니다. 귀하의 특정 재정 상황에 따라 비율을 조정하십시오.",
+  "title": "귀하의 금융 프로필",
+  "description": "심층적인 금융 통찰력을 위해 설계된 도구 제품군을 살펴보세요.",
+  "ko-KR": "고-KR"
+}

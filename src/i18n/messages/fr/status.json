@@ -1,0 +1,15 @@
+{
+  "loading": "Chargement...",
+  "error": "Une erreur est survenue",
+  "success": "Succès",
+  "empty": "Aucune donnée disponible",
+  "scrollForSynergy": "Faites défiler pour la synergie",
+  "analyzing": "Analyse...",
+  "label": "Statut",
+  "all": "Tout",
+  "open": "Ouvrir",
+  "in_progress": "En cours",
+  "waiting_user": "En attente de l'utilisateur",
+  "resolved": "Résolue",
+  "closed": "Fermée"
+}

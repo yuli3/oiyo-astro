@@ -1,0 +1,89 @@
+{
+  "sections": {
+    "blueprint": "根源的な青写真 (Primal Blueprint)",
+    "archives": "大いなる記録保管所 (The Grand Archives)",
+    "mythos": "世界の神話 (Global Mythos)",
+    "biorhythm": "バイオリズム (Biorhythm)",
+    "tuning": "高調波チューニング",
+    "becoming": "生成(Becoming)の道"
+  },
+  "labels": {
+    "stars": "{count}個の星があなたの道に影響を与えています",
+    "moonIn": "月が{sign}に位置しています",
+    "sephira": "セフィラ: {name}",
+    "lifePath": "ライフパス {number}",
+    "unknown": "不明",
+    "physical": "身体",
+    "emotional": "感情",
+    "intellectual": "知性",
+    "dominantAura": "支配的な気韻",
+    "dominantAuraDesc": "あなたの魂を貫く最も強力な元素の流転です。",
+    "color": "色",
+    "direction": "方位",
+    "number": "数字",
+    "gemstone": "宝石",
+    "flower": "花",
+    "takeTest": "テストを開始する",
+    "viewFormula": "四柱推命の理を視る",
+    "sajuTitle": "The Celestial Formula",
+    "sajuSubtitle": "The Eight Pillars & Elemental Resonance"
+  },
+  "explanation": {
+    "wolf": "夜にエネルギーが頂点に達し、創造的で強烈な気質を持ちます。",
+    "ectomorph": "精神的集中力に優れ、敏感で、繊細なエネルギー体系を持ちます。",
+    "becomingValue": "振動する生の数 {value}",
+    "totem": "守護トーテム"
+  },
+  "systems": {
+    "ziwei": "紫微斗数 (Zi Wei Dou Shu)",
+    "vedic": "ヴェーダ・ナクシャトラ (Vedic Nakshatra)",
+    "kabbalah": "カバラの道 (Kabbalah Path)",
+    "celtic": "ケルトの木の星座",
+    "egyptian": "エジプトの守護神",
+    "mayan": "マヤ・スピリット",
+    "iching": "易経 (I Ching)",
+    "hellenistic": "ヘレニズム・セクト"
+  },
+  "synergy": {
+    "advice": "勇気を持って自分の道を歩んでください。",
+    "description": "Compatible with your rhythm.",
+    "title": "ユニバーサル・オリジン"
+  },
+  "social": {
+    "beneficial": {
+      "description": "Compatible with your rhythm."
+    },
+    "compatible": {
+      "description": "自分のリズムに合わせて。"
+    }
+  },
+  "title": "ユニバーサル・ブループリント",
+  "subtitle": "魂の交差する糸を発見しましょう。",
+  "description": "あなたの多次元的な特性の包括的な整合。",
+  "tabs": {
+    "essence": "内なる本質",
+    "destiny": "運命の道",
+    "biology": "生体リズム"
+  },
+  "close": "アーカイブを閉じる",
+  "essence": {
+    "title": "本質",
+    "quote": "あなたの存在の真実は内側に宿っています。",
+    "soulFormula": "魂の公式",
+    "humanDesign": "ヒューマンデザイン",
+    "authority": "権威",
+    "locked": "知恵はロックされています"
+  },
+  "destiny": {
+    "title": "運命",
+    "lifePath": "ライフパス",
+    "seeker": "探求者",
+    "animal": "スピリットアニマル"
+  },
+  "biology": {
+    "title": "生物学",
+    "chronotype": "クロノタイプ",
+    "constitution": "体質"
+  },
+  " ": ""
+}

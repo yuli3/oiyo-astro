@@ -1,0 +1,471 @@
+{
+  "intro": {
+    "badge": "Phase 45: Pythagorean Synthesis",
+    "button": "Calculate Destiny",
+    "description": "Your Numerology analysis results.",
+    "quote": "Everything in the Universe is number. — Pythagoras",
+    "title": "Numerology"
+  },
+  "subtitle": "La résonance des valeurs spirituelles portées par votre nom et votre naissance.",
+  "title": "Numérologie",
+  "input": {
+    "birthDate": "Date of Birth",
+    "birthDateError": "Please enter a valid birth date",
+    "calculating": "Calculating...",
+    "dateLabel": "Birth Date",
+    "description": "Your Numerology analysis results.",
+    "fullName": "Nom et prénom",
+    "nameLabel": "Full Name (Birth Name)",
+    "namePlaceholder": "e.g. Jane Doe",
+    "submit": "Check My Destiny",
+    "title": "Numerology"
+  },
+  "results": {
+    "expression": "Expression Number",
+    "header": "THE DIVINE CODE",
+    "lifePath": "Life Path Number",
+    "personality": "Personality Number",
+    "recalibrate": "Recalibrer",
+    "soulUrge": "Soul Urge Number",
+    "vibrationalResonance": "Vibrational Resonance"
+  },
+  "meta": {
+    "description": "Your Numerology analysis results.",
+    "keywords": "numerology, life path number, destiny number, soul urge",
+    "title": "Numérologie"
+  },
+  "hero": {
+    "backToHome": "Back to Home",
+    "badge": "Phase 45: Pythagorean Synthesis",
+    "cosmicSignature": "Signature cosmique",
+    "description": "Your Numerology analysis results.",
+    "discover": "Découvrir",
+    "highlight": "Discover",
+    "mainTitle": "Discover Your Cosmic Signature",
+    "pageSubtitle": "Pythagorean wisdom and modern analysis. Light up your life's course.",
+    "subtitle": "Discover the hidden mathematical patterns of your life.",
+    "title": "Numerology",
+    "your": "Ton"
+  },
+  "result": {
+    "analyzeAnother": "Analyze Another",
+    "anotherPerson": "Analyze another person",
+    "dashboard": {
+      "advice": "Destined Advice",
+      "career": "Career Focus",
+      "challenges": "Potential Challenges",
+      "strengths": "Core Strengths",
+      "yearEnergy": "The Energy of This Year"
+    },
+    "dashboardTitle": "Numerology Dashboard",
+    "description": "Your Numerology analysis results.",
+    "lifeCoordination": "Life Coordination",
+    "readingTitle": "Your Numerology Chart",
+    "recommendedCities": "Recommended Cities",
+    "soulFoods": "Soul Foods"
+  },
+  "meanings": {
+    "birthDay": "Anniversaire",
+    "destiny": "Destin",
+    "lifePath": "Life Path Number",
+    "personality": "Personality Number",
+    "soulUrge": "Soul Urge Number"
+  },
+  "data": {
+    "meanings": {
+      "1": {
+        "careerSuggestions": [
+          "CEO",
+          "Entrepreneuse",
+          "Politicien",
+          "Commandant Militaire",
+          "Inventeur"
+        ],
+        "challenges": ["Entêtement", "Impatience", "Ego", "Dominance"],
+        "description": "Your Numerology analysis results.",
+        "keywords": ["Indépendance", "Direction", "Innovation", "Ambition"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Compétences de Leadership",
+          "Autonomie",
+          "Innovation",
+          "Détermination",
+          "Courage"
+        ],
+        "traits": [
+          "Leader Naturel",
+          "Indépendant",
+          "Ambitieux",
+          "Créatif",
+          "Décisif"
+        ]
+      },
+      "2": {
+        "careerSuggestions": [
+          "Conseiller",
+          "Diplomate",
+          "Enseignant",
+          "Travailleur Social",
+          "Médiateur"
+        ],
+        "challenges": [
+          "Indécision",
+          "Hypersensibilité",
+          "Dépendance",
+          "Évitement des conflits"
+        ],
+        "description": "Your Numerology analysis results.",
+        "keywords": ["Coopération", "Harmonie", "Diplomatie", "Sensibilité"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Empathie",
+          "Travail d'Équipe",
+          "Médiation",
+          "Patience",
+          "Loyauté"
+        ],
+        "traits": ["Diplomate", "Coopératif", "Sensible", "Intuitif", "Soutien"]
+      },
+      "3": {
+        "careerSuggestions": [
+          "Artiste",
+          "Écrivain",
+          "Artiste de spectacle",
+          "Designer",
+          "Spécialiste RP"
+        ],
+        "challenges": [
+          "Énergie Dispersée",
+          "Superficialité",
+          "Extravagance",
+          "Exagération"
+        ],
+        "description": "Your Numerology analysis results.",
+        "keywords": ["Expression", "Socialité", "Créativité", "Optimisme"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Communication",
+          "Imagination",
+          "Inspiration",
+          "Humour",
+          "Talent Artistique"
+        ],
+        "traits": [
+          "Expressif",
+          "Sociable",
+          "Optimiste",
+          "Créatif",
+          "Charismatique"
+        ]
+      },
+      "4": {
+        "careerSuggestions": [
+          "Ingénieur",
+          "Architecte",
+          "Comptable",
+          "Directrice",
+          "Chercheur"
+        ],
+        "challenges": [
+          "Rigidité",
+          "Étroitesse d'esprit",
+          "Sérieux excessif",
+          "Manque de flexibilité"
+        ],
+        "description": "Your Numerology analysis results.",
+        "keywords": ["Stabilité", "Discipline", "Ordre", "Pragmatisme"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Stabilité",
+          "Méthodique",
+          "Fiable",
+          "Persistance",
+          "Attention aux détails"
+        ],
+        "traits": [
+          "Travailleur",
+          "Pratique",
+          "Organisé",
+          "Loyale",
+          "Discipliné"
+        ]
+      },
+      "5": {
+        "careerSuggestions": [
+          "Guide de Voyage",
+          "Spécialiste des Ventes",
+          "Commercialisation",
+          "Journaliste",
+          "Pilote"
+        ],
+        "challenges": [
+          "Inquiétude",
+          "Impulsivité",
+          "Inconsistance",
+          "Irresponsabilité"
+        ],
+        "description": "Your Numerology analysis results.",
+        "keywords": ["Liberté", "Changement", "Adaptabilité", "Curiosité"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Polyvalence",
+          "Ingéniosité",
+          "Intrépidité",
+          "Progressiste",
+          "Connectivité Sociale"
+        ],
+        "traits": [
+          "Aventureux",
+          "Adaptable",
+          "Curieux",
+          "Dynamique",
+          "Polyvalent"
+        ]
+      },
+      "6": {
+        "careerSuggestions": [
+          "Infirmier",
+          "Enseignant",
+          "Conseiller",
+          "Travailleur Social",
+          "Chef"
+        ],
+        "challenges": [
+          "Surprotecteur",
+          "Sacrifice excessif",
+          "Inquiétude",
+          "Ingérence"
+        ],
+        "description": "Your Numerology analysis results.",
+        "keywords": ["Soin", "Famille", "Service", "Compassion"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Soin des autres",
+          "Responsabilité",
+          "Capacité de Guérison",
+          "Loyauté",
+          "Esprit de Service"
+        ],
+        "traits": [
+          "Compatissant",
+          "Responsable",
+          "Protecteur",
+          "Généreux",
+          "Orienté vers la famille"
+        ]
+      },
+      "7": {
+        "careerSuggestions": [
+          "Chercheur",
+          "Scientifique",
+          "Philosophe",
+          "Psychologue",
+          "Enseignant Spirituel"
+        ],
+        "challenges": ["Isolement", "Pessimisme", "Secret", "Perfectionnisme"],
+        "description": "Your Numerology analysis results.",
+        "keywords": ["Spiritualité", "Analyse", "Intuition", "Sagesse"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Intuition",
+          "Pouvoir Analytique",
+          "Sagesse",
+          "Spiritualité",
+          "Capacité de Recherche"
+        ],
+        "traits": [
+          "Analytique",
+          "Spirituel",
+          "Intuitif",
+          "Mystérieux",
+          "Introspectif"
+        ]
+      },
+      "8": {
+        "careerSuggestions": [
+          "Cadre Dirigeant",
+          "Banquier",
+          "Immobilier",
+          "Avocat",
+          "Entrepreneuse"
+        ],
+        "challenges": [
+          "Matérialisme",
+          "Workaholisme",
+          "Problèmes de contrôle",
+          "Impatience"
+        ],
+        "description": "Your Numerology analysis results.",
+        "keywords": ["Succès", "Maîtrise Matérielle", "Affaires", "Autorité"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Capacité en Affaires",
+          "Direction",
+          "Organisation",
+          "Décision",
+          "Succès Matériel"
+        ],
+        "traits": [
+          "Ambitieux",
+          "Autoritaire",
+          "Sens des affaires",
+          "Matériel",
+          "Puissant"
+        ]
+      },
+      "9": {
+        "careerSuggestions": [
+          "Activiste Humanitaire",
+          "Artiste",
+          "Guérisseur",
+          "Enseignant",
+          "Philanthrope"
+        ],
+        "challenges": [
+          "Extrêmes Émotionnels",
+          "Ressentiment",
+          "Sautes d'humeur",
+          "Manque de pragmatisme"
+        ],
+        "description": "Your Numerology analysis results.",
+        "keywords": ["Compassion", "Service", "Amour Universel", "Sagesse"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Compassion",
+          "Générosité",
+          "Talent Artistique",
+          "Sagesse",
+          "Humanitarisme"
+        ],
+        "traits": [
+          "Compatissant",
+          "Généreux",
+          "Humanitaire",
+          "Artistique",
+          "Sage"
+        ]
+      },
+      "11": {
+        "careerSuggestions": [
+          "Enseignant Spirituel",
+          "Conseiller",
+          "Artiste",
+          "Inventeur",
+          "Guérisseur"
+        ],
+        "challenges": [
+          "Hypersensibilité",
+          "Nervosité",
+          "Manque de pragmatisme",
+          "Extrémisme"
+        ],
+        "description": "Your Numerology analysis results.",
+        "keywords": ["Intuition", "Inspiration", "Éveil", "Révélation"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Intuition",
+          "Inspiration",
+          "Vision",
+          "Idéalisme",
+          "Perspicacité Spirituelle"
+        ],
+        "traits": [
+          "Hautement Intuitif",
+          "Inspirant",
+          "Sensible",
+          "Visionnaire",
+          "Spirituel"
+        ]
+      },
+      "22": {
+        "careerSuggestions": [
+          "Architecte",
+          "Urbaniste",
+          "CEO",
+          "Maître Artisan",
+          "Organisateur à grande échelle"
+        ],
+        "challenges": [
+          "Sentiment d'être submergé",
+          "Doute de soi",
+          "Perfectionnisme",
+          "Pression"
+        ],
+        "description": "Your Numerology analysis results.",
+        "keywords": [
+          "Maîtrise",
+          "Idéalisme Pratique",
+          "Vision à grande échelle",
+          "Réalisation"
+        ],
+        "name": "The Master Teacher",
+        "strengths": [
+          "Vision Pratique",
+          "Organisation",
+          "Direction",
+          "Manifestation",
+          "Approche Systématique"
+        ],
+        "traits": [
+          "Visionnaire",
+          "Pratique",
+          "Maître Bâtisseur",
+          "Systématique",
+          "Ambitieux"
+        ]
+      },
+      "33": {
+        "careerSuggestions": [
+          "Enseignant Spirituel",
+          "Guérisseur",
+          "Conseiller",
+          "Leader Humanitaire",
+          "Gourou"
+        ],
+        "challenges": [
+          "Sacrifice excessif",
+          "Accablement émotionnel",
+          "Perfectionnisme",
+          "Épuisement"
+        ],
+        "description": "Your Numerology analysis results.",
+        "keywords": [
+          "Compassion",
+          "Guérison",
+          "Enseignement",
+          "Amour Universel"
+        ],
+        "name": "Le maître enseignant",
+        "strengths": [
+          "Amour Inconditionnel",
+          "Capacité de Guérison",
+          "Talent d'Enseignement",
+          "Compassion",
+          "Sagesse Spirituelle"
+        ],
+        "traits": [
+          "Compatissant",
+          "Guérisseur",
+          "Enseignant",
+          "Protecteur",
+          "Spirituellement Évolué"
+        ]
+      }
+    }
+  },
+  "benefits": {
+    "destinyNumber": {
+      "description": "Your Numerology analysis results.",
+      "title": "Numerology"
+    },
+    "lifePathNumber": {
+      "description": "Your Numerology analysis results.",
+      "title": "Numerology"
+    },
+    "soulNumber": {
+      "description": "Your Numerology analysis results.",
+      "title": "Numerology"
+    },
+    "title": "Numerology"
+  }
+}

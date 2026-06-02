@@ -1,0 +1,57 @@
+{
+  "steps": {
+    "welcome": {
+      "description": "Descubre tu plano cósmico a través de la sabiduría ancestral y la psicología moderna.",
+      "title": "Bienvenido a Tu Santuario"
+    },
+    "interests": {
+      "description": "Elige lo que te resuena — personalizaremos tu recorrido.",
+      "title": "¿Qué te llama?"
+    },
+    "complete": {
+      "description": "Tu santuario está listo. Comienza tu viaje de autodescubrimiento.",
+      "title": "Tu Santuario te Espera"
+    }
+  },
+  "interests": {
+    "personality": "Personalidad",
+    "career": "Carrera",
+    "relationships": "Relaciones",
+    "wellness": "Bienestar",
+    "creativity": "Creatividad",
+    "lifestyle": "Estilo de vida",
+    "prompt": "Elige tus áreas de interés"
+  },
+  "welcome": {
+    "user": "Bienvenido, {name}",
+    "description": "Te has unido a una comunidad de buscadores que exploran la arquitectura del yo."
+  },
+  "features": {
+    "tests": {
+      "title": "Tests de Personalidad",
+      "description": "Más de 30 evaluaciones con base científica."
+    },
+    "history": {
+      "title": "Tu Historial",
+      "description": "Todos tus resultados guardados y organizados."
+    },
+    "recommendations": {
+      "title": "Perspectivas Personalizadas",
+      "description": "Orientación adaptada a tu perfil único."
+    }
+  },
+  "complete": {
+    "success": "Bienvenida completada",
+    "message": "Tus preferencias han sido guardadas. Bienvenido al Santuario.",
+    "benefits": {
+      "dashboard": "Accede a tu panel personal",
+      "recommendations": "Recibe recomendaciones personalizadas"
+    }
+  },
+  "actions": {
+    "skip": "Omitir",
+    "completing": "Entrando al Santuario...",
+    "getStarted": "Entrar al Santuario",
+    "next": "Siguiente"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "scenario": {
+    "meta": {
+      "hero": {
+        "subtitle": "今すぐテストを受けて、極限状況でのあなたの反応を確認しましょう！",
+        "feature1": "8つの極限シナリオ",
+        "feature2": "5分",
+        "feature3": "科学的MBTI"
+      },
+      "features": {
+        "feature1Title": "魅力的なシナリオ",
+        "feature1Description": "退屈な質問は忘れて！ゾンビアポカリプス、タイムトラベル、エイリアンとの遭遇など、エキサイティングなシナリオで答えましょう。",
+        "feature2Title": "正確な分析",
+        "feature2Description": "公式MBTIフレームワークに基づき、E-I、S-N、T-F、J-Pの4つの次元を分析して16の性格タイプを導き出します。",
+        "feature3Title": "詳細な結果",
+        "feature3Description": "強み、弱み、キャリア提案、相性、同じタイプの有名人など、包括的な洞察を得られます。"
+      },
+      "scenarios": {
+        "zombie": "ゾンビ",
+        "island": "無人島",
+        "timeTravel": "タイムトラベル",
+        "superpowers": "超能力",
+        "lottery": "ロト当せん",
+        "aliens": "エイリアン",
+        "fantasy": "ファンタジー",
+        "space": "宇宙ステーション"
+      },
+      "cta": {
+        "subtitle": "今すぐテストを受けて、極限状況でのあなたの反応を確認しましょう！",
+        "button": "テスト開始"
+      },
+      "keywords": "keywords, tags, seo",
+      "title": "マイ・インサイト",
+      "description": "独自の性格・傾向分析"
+    },
+    "scenarios": {
+      "zombie": "ゾンビ",
+      "island": "無人島",
+      "timeTravel": "タイムトラベル",
+      "superpowers": "超能力",
+      "lottery": "ロト当せん",
+      "aliens": "エイリアン",
+      "fantasy": "ファンタジー",
+      "space": "宇宙ステーション",
+      "title": "マイ・インサイト"
+    },
+    "hero": {
+      "subtitle": "今すぐテストを受けて、極限状況でのあなたの反応を確認しましょう！",
+      "feature1": "8つの極限シナリオ",
+      "feature2": "5分",
+      "feature3": "科学的MBTI",
+      "title": "マイ・インサイト"
+    },
+    "cta": {
+      "subtitle": "今すぐテストを受けて、極限状況でのあなたの反応を確認しましょう！",
+      "button": "テスト開始",
+      "title": "マイ・インサイト"
+    },
+    "features": {
+      "feature1Title": "魅力的なシナリオ",
+      "feature1Description": "退屈な質問は忘れて！ゾンビアポカリプス、タイムトラベル、エイリアンとの遭遇など、エキサイティングなシナリオで答えましょう。",
+      "feature2Title": "正確な分析",
+      "feature2Description": "公式MBTIフレームワークに基づき、E-I、S-N、T-F、J-Pの4つの次元を分析して16の性格タイプを導き出します。",
+      "feature3Title": "詳細な結果",
+      "feature3Description": "強み、弱み、キャリア提案、相性、同じタイプの有名人など、包括的な洞察を得られます。",
+      "title": "マイ・インサイト"
+    },
+    "faq": {
+      "title": "マイ・インサイト",
+      "question1": "未知の世界に直面したとき、あなたの魂はどう反応しますか？",
+      "answer1": "あなた独自の視点が現実を作り出します。",
+      "question2": "未知の世界に直面したとき、あなたの魂はどう反応しますか？",
+      "answer2": "小さな選択の積み重ねが偉大な運命を形作ります。",
+      "question3": "あなたの内面を動かす原動力は何ですか？",
+      "answer3": "小さな選択の積み重ねが偉大な運命を形作ります。",
+      "question4": "人生の荒波をどのように乗り越えていますか？",
+      "answer4": "小さな選択の積み重ねが偉大な運命を形作ります。"
+    },
+    "test": {
+      "insightBullets": ["本当の自分の星座をマッピングします。"],
+      "progress": "進行状況",
+      "submit": "送信",
+      "loading": "読み込み中",
+      "selectOption": "選択する",
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "マイ・インサイト",
+      "description": "独自の性格・傾向分析"
+    },
+    "title": "マイ・インサイト",
+    "description": "独自の性格・傾向分析",
+    "keywords": "keywords, tags, seo"
+  }
+}

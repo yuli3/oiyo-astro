@@ -1,0 +1,15 @@
+{
+  "daySun": "日",
+  "dayMon": "月",
+  "dayTue": "火",
+  "dayWed": "水",
+  "dayThu": "木",
+  "dayFri": "金",
+  "daySat": "土",
+  "a": "A",
+  "saveFailed": "保存に失敗しました",
+  "moodQuestion": "今日はどんな一日でしたか？",
+  "close": "閉じる",
+  "saved": "保存しました",
+  "saveAsImage": "画像として保存"
+}

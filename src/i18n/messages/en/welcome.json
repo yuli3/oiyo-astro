@@ -1,0 +1,5 @@
+{
+  "user": "User",
+  "description": "Welcome to your dashboard.",
+  "greeting": "Welcome back, {name}"
+}

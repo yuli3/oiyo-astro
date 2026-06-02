@@ -1,0 +1,408 @@
+{
+  "subtitle": "당신의 존재를 해독하는 온톨로지 대시보드",
+  "title": "지혜의 도서관",
+  "sovereign": {
+    "sections": {
+      "hero": "영웅",
+      "oracle": "신탁",
+      "ontology": "존재론",
+      "vault": "둥근 천장",
+      "growth": "성장"
+    },
+    "labels": {
+      "ascend": "예언으로 올라가다",
+      "celestialChart": "천체도",
+      "archives": "제국 기록 보관소",
+      "evolution": "진행 중인 진화",
+      "unlocked": "{count} 프리미엄 샤드",
+      "exploration": "탐사 진행률: {percent}%"
+    },
+    "growth": {
+      "full": "완전한 각성",
+      "unfinished": "끝나지 않은 여행",
+      "fullDesc": "당신은 당신의 주권의 모든 원시적 파편을 드러냈습니다. 우주는 당신의 완전한 자기 인식에 굴복합니다.",
+      "unfinishedDesc": "물리적 영역에 아직 나타나지 않은 온톨로지의 파편이 있습니다. 남은 그림자를 밝혀 각성을 완성하세요.",
+      "review": "모든 진실을 검토해 보세요",
+      "discover": "누락된 조각 찾기"
+    }
+  },
+  "profile": {
+    "labels": {
+      "entity": "주권 기관",
+      "title": "당신의 신성한 기록",
+      "description": "OIYO 차원 전반에 걸쳐 귀하가 선언한 모든 진실을 편집한 것입니다.",
+      "scroll": "스크롤 라이프 조각",
+      "reflection": "영혼의 반성",
+      "timeline": "진실 타임라인",
+      "archive": "발현 아카이브",
+      "ascension": "승천 상태",
+      "ascensionDesc": "모든 완료된 진단은 당신의 진정한 자아로부터 제거된 안개의 층입니다. 당신은 존재론적 각성의 완전한 상태에 접근합니다.",
+      "shards": "샤드",
+      "tier": "층"
+    }
+  },
+  "recommendations": {
+    "createGoal": {
+      "title": "목표 달성 시작",
+      "description": "첫 번째 목표를 설정하고 성취의 만족감을 느껴보세요.",
+      "action": "목표 만들기"
+    },
+    "takeTest": {
+      "title": "자신에 대해 더 자세히 알아보세요",
+      "description": "새로운 성격 테스트로 당신의 숨겨진 잠재력을 밝혀보세요.",
+      "action": "진정한 자아를 발견하세요"
+    },
+    "checkCompatibility": {
+      "title": "호환성 확인",
+      "description": "당신이 친구들과 얼마나 잘 어울리는지 확인해 보세요.",
+      "action": "지금 확인하세요"
+    }
+  },
+  "vault": {
+    "title": "신성한 보물",
+    "description": "디지털 유물과 영원한 두루마리 컬렉션입니다.",
+    "securedCount": "{count} 확보됨",
+    "premiumArtifact": "프리미엄 유물",
+    "view": "보다",
+    "locked": "신성한 자물쇠 활성화",
+    "claim": "유물 획득 →",
+    "empty": "\"재고는 침묵 속에 가려져 있습니다. 이 홀을 영원한 지식으로 채우기 위한 자기 발견의 여정을 시작하세요.\"",
+    "firstTrial": "첫 번째 평가판 시작"
+  },
+  "fragmentsTitle": "흩어진 파편",
+  "fragmentsDesc": "당신의 영혼의 데이터는 별들에 흩어져 있습니다. 전체 그림을 보려면 그것들을 모아보세요.",
+  "beginJourney": "여행 시작",
+  "heroTitle": "귀하의 온톨로지가 기다립니다",
+  "heroSubtitle": "고대의 지혜와 현대 심리학을 통해 우주의 청사진을 발견해보세요. 당신의 여행은 출생 좌표로 시작됩니다.",
+  "continue": "계속 여행",
+  "revelation": "우주적 계시",
+  "premiumTitle": "프리미엄 분석",
+  "rootsTitle": "원시 뿌리",
+  "branchesTitle": "분기 성장",
+  "primalOrigin": "원시 기원",
+  "destinyCoordinates": "운명의 좌표",
+  "unveilRoots": "우주의 뿌리를 밝혀라",
+  "socialCognition": "사회적 인지",
+  "socialDNA": "소셜 DNA",
+  "mapGrowth": "사회적 성장 지도",
+  "viewReport": "보고서 보기",
+  "unlockNow": "지금 잠금 해제",
+  "history": "최근 발견 기록",
+  "noHistory": "아직 검색 기록이 없습니다. 새로운 탐험을 시작해보세요.",
+  "startDiscovery": "검색 시작",
+  "lockedTitle": "잠긴 지혜",
+  "lockedDescription": "이 분야의 데이터가 부족합니다. 잠금을 해제하려면 분석을 완료하세요.",
+  "viewAll": "모두 보기",
+  "categories": {
+    "personality": "성격과 기질",
+    "destiny": "운명과 순환",
+    "cognitive": "인지 및 사고",
+    "wisdom": "고전적 지혜"
+  },
+  "resonanceLabels": {
+    "harmonic": "고조파 흐름",
+    "balanced": "균형 잡힌",
+    "friction": "높은 마찰"
+  },
+  "guidanceTitle": "패스파인더",
+  "guidanceSubtitle": "직업과 영혼을 위한 황실 칙령",
+  "recommendedCareers": "추천 직업 경로",
+  "recommendedHobbies": "권장되는 기쁨 추구",
+  "soulGuidance": "영혼의 인도",
+  "basedOn": "{type} 기준",
+  "labels": {
+    "undiscovered": "발견되지 않은",
+    "meaning": "의미",
+    "element": "요소",
+    "nameVibration": "이름 진동",
+    "westernZodiac": "서부 황도대",
+    "sign": "징후",
+    "observation": "관찰",
+    "easternZodiac": "동부 황도대",
+    "animal": "동물",
+    "dominion": "지배",
+    "bureau": "국",
+    "alignment": "조정"
+  },
+  "humanDesign": {
+    "types": {
+      "Generator": "발전기",
+      "Projector": "영사기",
+      "Manifestor": "매니페스터",
+      "Reflector": "반사기",
+      "Manifesting Generator": "매니페스트 생성기"
+    }
+  },
+  "celticTrees": {
+    "birch": "자작나무",
+    "rowan": "마가목",
+    "ash": "금연 건강 증진 협회",
+    "alder": "앨더",
+    "willow": "솜틀",
+    "hawthorn": "산사나무",
+    "oak": "오크",
+    "holly": "홀리",
+    "hazel": "엷은 갈색",
+    "vine": "덩굴",
+    "ivy": "여자 이름",
+    "reed": "갈대",
+    "elder": "장로"
+  },
+  "common": {
+    "noGuidance": "아직 안내가 없습니다."
+  },
+  "mayanTones": {
+    "magnetic": "자기",
+    "lunar": "달의",
+    "electric": "전기 같은",
+    "selfExisting": "자체 존재",
+    "overtone": "상음",
+    "rhythmic": "리듬",
+    "resonant": "공명",
+    "galactic": "은하계",
+    "solar": "태양광",
+    "planetary": "지구의",
+    "spectral": "유령 같은",
+    "crystal": "결정",
+    "cosmic": "질서 있는"
+  },
+  "mayanSeals": {
+    "dragon": "용",
+    "wind": "바람",
+    "night": "밤",
+    "seed": "씨앗",
+    "serpent": "뱀",
+    "worldbridger": "월드브리저",
+    "hand": "손",
+    "star": "별",
+    "moon": "달",
+    "dog": "개",
+    "monkey": "원숭이",
+    "human": "인간",
+    "skywalker": "스카이워커",
+    "wizard": "마법사",
+    "eagle": "독수리",
+    "warrior": "전사",
+    "earth": "지구",
+    "mirror": "거울",
+    "storm": "폭풍",
+    "sun": "해"
+  },
+  "elements": {
+    "wood": "목재",
+    "fire": "불",
+    "earth": "지구",
+    "metal": "금속",
+    "water": "물",
+    "Wood": "목재",
+    "Fire": "불",
+    "Earth": "지구",
+    "Metal": "금속",
+    "Water": "물",
+    "Air": "공기"
+  },
+  "returnToHome": "집으로 돌아가기",
+  "contactSupport": "지원팀에 문의",
+  "syncingData": "데이터 동기화 중...",
+  "guest": "손님",
+  "calibration": "구경 측정",
+  "changeOrigin": "원산지 변경",
+  "todayInsight": {
+    "title": "오늘의 통찰",
+    "soulOracle": "소울 오라클",
+    "innerResonance": "내면의 공명",
+    "manifestMore": "매니페스트 더보기"
+  },
+  "readingsLink": "모든 판독값 보기",
+  "cards": {
+    "vitality": {
+      "title": "활력 지수"
+    },
+    "resonance": {
+      "description": "오늘날 우주 흐름과의 호환성.",
+      "subtitle": "일상의 공명"
+    },
+    "foundation": {
+      "description": "당신의 운명을 결정짓는 원소의 힘.",
+      "subtitle": "원소 기초"
+    },
+    "elemental": {
+      "description": "당신의 원소 청사진과 그 영향력.",
+      "subtitle": "원소 프로필",
+      "title": "강요"
+    },
+    "onomancy": {
+      "description": "당신 이름의 진동 주파수.",
+      "subtitle": "이름 분석"
+    },
+    "cognition": {
+      "description": "당신의 인지 스타일과 사고 패턴.",
+      "subtitle": "인지 지도"
+    },
+    "vocation": {
+      "description": "당신의 영혼의 청사진에 맞춰진 진로.",
+      "subtitle": "직업안내"
+    },
+    "destiny": {
+      "description": "당신의 삶의 길에 짜여진 카르마 실.",
+      "subtitle": "운명의 실"
+    }
+  },
+  "resonanceTitle": "공명 허브",
+  "sections": {
+    "testArchitecture": {
+      "title": "테스트 아키텍처",
+      "description": "귀하의 신원을 해독하는 데 사용되는 시스템을 살펴보십시오."
+    },
+    "emotionalResonance": {
+      "title": "정서적 공명",
+      "description": "당신의 감정 빈도와 관계 패턴."
+    },
+    "grandArchives": {
+      "title": "그랜드 아카이브",
+      "description": "당신의 자기 발견 여정에 대한 완전한 기록입니다."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "원소 분석"
+    },
+    "riasec": {
+      "description": "홀랜드 코드 직업 적성 프로필."
+    },
+    "saju": {
+      "label": "네 개의 기둥",
+      "description": "당신의 한국 운명은 좌표입니다.",
+      "polarity": "극성",
+      "element": "요소"
+    },
+    "archiveEntry": "아카이브 항목",
+    "recordVerified": "기록 확인됨",
+    "tuning": {
+      "color": "행운의 색",
+      "number": "행운의 숫자",
+      "direction": "행운의 방향",
+      "flower": "행운의 꽃",
+      "gemstone": "행운의 보석",
+      "luckyStar": "럭키스타",
+      "title": "운세 조정",
+      "favorableDays": "유리한 날",
+      "synergy": "시너지 점수"
+    }
+  },
+  "systems": {
+    "ziwei": "자웨이두슈"
+  },
+  "dailyInsight": {
+    "cosmicEnergy": "우주에너지",
+    "flowerOfDay": "오늘의 꽃",
+    "crystalOfPower": "힘의 수정",
+    "guidingStar": "가이딩 스타"
+  },
+  "sajuForm": {
+    "title": "출생 세부정보 입력",
+    "description": "우리는 귀하의 출생 좌표를 사용하여 네 기둥을 계산합니다.",
+    "name": "이름",
+    "birthDate": "생년월일",
+    "birthTime": "출생 시간",
+    "timeHint": "알 수 없는 경우 공백으로 두세요.",
+    "gender": "성별",
+    "female": "여성",
+    "male": "남성"
+  },
+  "scope": {
+    "weekly": "주간운세",
+    "monthly": "월간운세",
+    "yearly": "연간운세"
+  },
+  "rating": {
+    "critical": "경고",
+    "low": "낮은",
+    "moderate": "보통의",
+    "good": "좋은",
+    "excellent": "훌륭한"
+  },
+  "card": {
+    "score": "점수: {점수}/100",
+    "advice": "💡 조언",
+    "luckyNumbers": "행운의 숫자",
+    "luckyColors": "행운의 색상",
+    "warnings": "⚠️ 경고"
+  },
+  "no_results": "컬렉션에 유물이 없습니다.",
+  "discover_btn": "당신의 길을 발견하세요",
+  "result_label": "합성결과",
+  "view_details": "지혜 자세히 보기",
+  "header": {
+    "title": "내 대시보드",
+    "description": "당신의 신성한 공간에 오신 것을 환영합니다."
+  },
+  "moonPhase": {
+    "New Moon": "삭 (신월)",
+    "Waxing Crescent": "초승달",
+    "First Quarter": "상현달",
+    "Waxing Gibbous": "상현망간달",
+    "Full Moon": "보름달",
+    "Waning Gibbous": "하현망간달",
+    "Last Quarter": "하현달",
+    "Waning Crescent": "그믐달",
+    "Full": "보름달",
+    "New": "삭 (신월)",
+    "Waxing": "차오르는 달",
+    "Waning": "기우는 달"
+  },
+  "modern": {
+    "economic": {
+      "title": "경제 학파 분석",
+      "subtitle": "경제 지향",
+      "factions": {
+        "ECON_CLASSICAL": {
+          "name": "고전경제학",
+          "description": "개인의 합리적인 선택과 시장 균형에 중점을 둡니다. 이 접근 방식은 개인의 책임과 균형 잡힌 시스템의 유기적 효율성을 중요하게 생각합니다."
+        },
+        "ECON_KEYNESIAN": {
+          "name": "케인지안 경제학",
+          "description": "총수요와 적극적인 개입을 강조합니다. 이러한 관점은 집단적 안정성과 시기적절하고 지원적인 조치의 지혜를 중요하게 생각합니다."
+        },
+        "ECON_MONETARIST": {
+          "name": "화폐주의",
+          "description": "화폐 공급과 장기적인 물가 안정성에 중점을 둡니다. 일관성, 명확한 규칙, 기본 시스템의 예측 가능성을 중요하게 생각합니다."
+        },
+        "ECON_BEHAVIORAL": {
+          "name": "행동경제학",
+          "description": "경제적 결정을 설명하기 위해 심리적 통찰력을 적용합니다. 인간의 이해, 공감, 일상적인 선택의 미묘한 현실을 중요하게 생각합니다."
+        },
+        "ECON_AUSTRIAN": {
+          "name": "오스트리아 학교",
+          "description": "기업가적 발견과 주관성을 강조합니다. 창의적 자유, 개인적인 통찰력, 개인 관점의 고유한 가치를 중요하게 생각합니다."
+        }
+      }
+    },
+    "political": {
+      "title": "정치적 성향 분석",
+      "subtitle": "정치적 지형",
+      "factions": {
+        "POL_CONSERVATISM": {
+          "name": "보수주의",
+          "description": "전통, 안정, 점진적인 개혁을 중시합니다. 이러한 접근 방식은 힘들게 얻은 지혜를 보존하는 동시에 안전하고 안정적인 미래를 보장하는 것을 추구합니다."
+        },
+        "POL_LIBERALISM": {
+          "name": "자유",
+          "description": "개인의 자유, 평등, 진보를 강조합니다. 새로운 가능성을 탐구할 수 있는 자유와 모든 사람의 고유한 존엄성을 소중히 여깁니다."
+        },
+        "POL_SOCIALISM": {
+          "name": "사회주의",
+          "description": "사회 정의, 평등, 지역 사회 복지에 중점을 둡니다. 상호 지원, 집단 복지, 연대에서 발견되는 힘을 중요하게 생각합니다."
+        },
+        "POL_LIBERTARIANISM": {
+          "name": "자유주의",
+          "description": "최소한의 개입과 최대의 개인 자율성을 우선시합니다. 자기 결정과 개인 공간 및 주도권의 보호를 중요하게 생각합니다."
+        },
+        "POL_MODERATISM": {
+          "name": "온건주의",
+          "description": "질서와 진행 사이의 균형을 추구합니다. 실용적인 해결책, 대화, 더 큰 이익을 위한 공통점 찾기를 중요하게 생각합니다."
+        }
+      }
+    }
+  }
+}

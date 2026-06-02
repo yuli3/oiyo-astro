@@ -1,0 +1,10 @@
+{
+  "options": {
+    "career": "Career",
+    "wealth": "Wealth",
+    "wellness": "Wellness",
+    "relationships": "Relationships",
+    "growth": "Growth"
+  },
+  "title": "Current Focus"
+}

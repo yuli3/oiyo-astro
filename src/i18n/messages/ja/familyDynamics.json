@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "keywords": "ancestral resonance, kinship dialogue, Oiyo",
+    "title": "Kinship Resonance",
+    "description": "Profound insights into your shared familial harmonics."
+  },
+  "hero": {
+    "subtitle": "Instruction",
+    "cta": "親族関係の調査を開始する",
+    "badge": "👨‍👩‍👧‍👦 親族の錬金術",
+    "title": "Kinship Resonance"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "親族の錬金術",
+        "description": "家族間の交流を支配する隠れたエネルギーの特徴を明らかにします。"
+      },
+      {
+        "icon": "🚀",
+        "title": "レガシーの軌跡",
+        "description": "世代を超えた知恵の伝達の道筋を描く。"
+      }
+    ],
+    "subtitle": "Instruction"
+  },
+  "types": {
+    "peacemaker": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "leader": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "supporter": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "independent": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "connector": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "problem_solver": {
+      "name": "ソリューションの触媒",
+      "emoji": "🔧"
+    },
+    "subtitle": "Instruction"
+  },
+  "test": {
+    "insightBullets": [
+      "あなたの親族関係の哲学の暗黙の層に光を当てます。",
+      "先祖の期待の目に見えない糸をたどります。",
+      "あなたの血統の中であなたが果たしている調和的な役割を発見してください。"
+    ],
+    "progress": "レゾナンス・アセント",
+    "next": "フォワード",
+    "previous": "反映する",
+    "submit": "合成を明らかにする",
+    "loading": "親族高調波を調整しています...",
+    "selectOption": "真実の道をマークする",
+    "subtitle": "命令"
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "基礎共鳴",
+        "description": "親族関係の中心となるエンジンを理解する。",
+        "question": "血縁錬金術とは何ですか？",
+        "answer": "これは、異なる家族の原型が、共有されるエネルギー領域内でどのように調和したり、摩擦を生み出したりするのかを研究するものです。"
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "祖先のマッピング",
+        "description": "あなたの血統内の歴史的およびエネルギー的パターンを包括的に監査します。"
+      }
+    ]
+  },
+  "result": {
+    "title": "Kinship Resonance",
+    "description": "Profound insights into your shared familial harmonics."
+  },
+  "title": "親族共鳴",
+  "description": "あなたが共有する家族の調和についての深い洞察。",
+  "keywords": "祖先の共鳴、血縁対話、おいよ"
+}

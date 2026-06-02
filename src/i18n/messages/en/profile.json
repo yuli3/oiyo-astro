@@ -1,0 +1,23 @@
+{
+  "title": "Profile",
+  "anonymous": "Anonymous",
+  "achievements": "Achievements",
+  "badges": {
+    "newMember": "New Member",
+    "explorer": "Explorer"
+  },
+  "editProfile": "Edit Profile",
+  "labels": {
+    "entity": "Entity",
+    "title": "Title",
+    "description": "Description",
+    "scroll": "Scroll",
+    "timeline": "Timeline",
+    "archive": "Archive",
+    "ascension": "Ascension",
+    "ascensionDesc": "Ascension path.",
+    "shards": "Shards",
+    "tier": "Tier",
+    "reflection": "Reflection"
+  }
+}

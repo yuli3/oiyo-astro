@@ -1,0 +1,178 @@
+{
+  "title": "Pricing",
+  "hero": {
+    "title": "Sacred Offerings",
+    "subtitle": "Support the sanctuary and unlock the full depth of your destiny's coordinates.",
+    "featurePrompt": "Unlock {feature} to continue your voyage."
+  },
+  "sections": {
+    "pricing": "Select Offering",
+    "features": "Deep Capabilities",
+    "faq": "Common Inquiries",
+    "trust": "Resonance Assurance"
+  },
+  "meta": {
+    "title": "Sacred Offerings | Oiyo.net",
+    "description": "Unlock the depth of your destiny with our premium offerings.",
+    "keywords": "pricing, premium, saju, astrology, mbti",
+    "ogTitle": "Sacred Offerings",
+    "ogDescription": "Support the sanctuary and unlock your destiny."
+  },
+  "@tosspayments/payment-sdk": "@tosspayments/payment-sdk",
+  "upgrade": {
+    "order_name": "Pro Subscription (Monthly)",
+    "title": "Upgrade to Pro",
+    "subtitle": "Unveil deeper layers of your soul with our most powerful analytical tools.",
+    "price_suffix": "/mo",
+    "cancel_anytime": "Cancel at any time",
+    "processing": "Aligning stars...",
+    "button": "Begin Pro Journey",
+    "prices": {
+      "en": "$7.99",
+      "ko": "₩9,900",
+      "ja": "¥1,200",
+      "cn": "¥58",
+      "es": "€7.99",
+      "fr": "€7.99"
+    },
+    "secure_payment_toss": "Secured via Toss Payments",
+    "secure_payment_lemon": "Secured via Lemon Squeezy",
+    "comparison_title": "Choose Your Path"
+  },
+  "faq": {
+    "title": "Sanctum FAQs",
+    "answer1": "Yes, you can pause or cancel your subscription at any time. Your Pro features will remain active until the end of your current cycle.",
+    "question1": "Can I cancel my journey at any time?",
+    "answer2": "We offer a full refund for any request made within 7 days of your initial subscription.",
+    "question2": "Do you offer refunds?",
+    "answer3": "We accept major credit cards, PayPal, and Apple Pay globally. For our users in Korea, Toss, KakaoPay, and local bank transfers are also available.",
+    "question3": "Which payment methods do you accept?",
+    "q1": {
+      "q": "Can I cancel my journey at any time?",
+      "a": "Yes, you can pause or cancel your subscription at any time. Your Pro features will remain active until the end of your current cycle."
+    },
+    "q2": {
+      "q": "Do you offer refunds?",
+      "a": "We offer a full refund for any request made within 7 days of your initial subscription."
+    },
+    "q3": {
+      "q": "Which payment methods do you accept?",
+      "a": "We accept major credit cards, PayPal, and Apple Pay globally. For our users in Korea, Toss, KakaoPay, and local bank transfers are also available."
+    }
+  },
+  "feature": "Feature",
+  "trust": {
+    "secure": {
+      "title": "Secure Payments",
+      "description": "Your transactions are protected by industry-leading encryption."
+    },
+    "instant": {
+      "title": "Instant Access",
+      "description": "Unlock premium features immediately upon subscription."
+    },
+    "satisfaction": {
+      "title": "Satisfaction Guaranteed",
+      "description": "Risk-free exploration with our 7-day refund policy."
+    }
+  },
+  "comparison": {
+    "title": "Feature Comparison",
+    "description": "Explore the differences between our Basic and Pro journeys."
+  },
+  "columns": {
+    "features": "Features",
+    "free": "Basic",
+    "premium": "Pro"
+  },
+  "plan": "Plan",
+  "billing": {
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "saveUp": "Save up to",
+    "year": "/year",
+    "month": "/month",
+    "save": "Save"
+  },
+  "plans": {
+    "popular": "Most Popular",
+    "free": "Basic",
+    "current": "Current Plan",
+    "continueUsing": "Continue Using",
+    "getStarted": "Get Started",
+    "subscribe": "Subscribe Now",
+    "cancelAnytime": "Cancel Anytime"
+  },
+  "info": {
+    "allPlansInclude": "All plans include",
+    "securePayment": "Secure Payment",
+    "instantAccess": "Instant Access",
+    "customerSupport": "Priority Support"
+  },
+  "features": {
+    "basicTests": "Unlimited Basic Tests",
+    "saveResults": "Insight Journey Storage",
+    "basicSharing": "Basic Result Sharing",
+    "basicConsultation": "Basic Consultation",
+    "deepAnalysis": "AI Deep Analysis",
+    "pdfDownload": "PDF Insight Reports",
+    "compatibility": "Advanced Harmony Analysis",
+    "personalInsights": "Tailored Weekly Guidance",
+    "prioritySupport": "Priority Sanctuary Support",
+    "dataExport": "Personal Data Portability"
+  },
+  "planDetails": {
+    "free": {
+      "name": "Basic",
+      "description": "Begin your journey of self-discovery",
+      "features": {
+        "unlimitedTests": "Unlimited Basic Tests",
+        "resultStorage": "Insight Journey Storage",
+        "basicSharing": "Basic Result Sharing",
+        "communitySupport": "Community Support"
+      }
+    },
+    "premium": {
+      "name": "Pro",
+      "description": "Unlock the full depth of your destiny",
+      "features": {
+        "allFreeFeatures": "Everything in Basic",
+        "aiAnalysis": "AI Deep Analysis",
+        "pdfReports": "PDF Insight Reports",
+        "advancedCompatibility": "Advanced Harmony Analysis",
+        "personalizedInsights": "Tailored Weekly Guidance",
+        "prioritySupport": "Priority Sanctuary Support",
+        "customExport": "Personal Data Portability"
+      }
+    }
+  },
+  "detailed_features": {
+    "advanced-analytics": {
+      "name": "Soul Dashboard",
+      "description": "Visualize the evolution of your personality and insights over time."
+    },
+    "ai-insights": {
+      "name": "Advanced AI Guidance",
+      "description": "Personalized growth wisdom and relationship harmony tips."
+    },
+    "pdf-export": {
+      "name": "Refined PDF Reports",
+      "description": "Download beautifully curated reports of your core insights."
+    },
+    "data-export": {
+      "name": "Data Sanctuary",
+      "description": "Export all your discovery data to a CSV format for your records."
+    },
+    "priority-support": {
+      "name": "Priority Support",
+      "description": "24/7 heartfelt guidance and swift responses to your needs."
+    },
+    "custom-themes": {
+      "name": "Aesthetic Customization",
+      "description": "Tailor your dashboard layout and themes to match your energy."
+    },
+    "early-access": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    }
+  }
+}

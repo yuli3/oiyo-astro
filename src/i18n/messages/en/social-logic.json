@@ -1,0 +1,27 @@
+{
+  "skills": {
+    "empathy": {
+      "title": "Aesthetics of Empathy",
+      "desc": "Deeply soaking into others' emotions without losing yourself."
+    },
+    "boundaries": {
+      "title": "Healthy Distancing",
+      "desc": "Respect begins at an appropriate distance."
+    },
+    "expression": {
+      "title": "Delivery of Sincerity",
+      "desc": "Hearts cannot touch if unspoken. Express yourself."
+    },
+    "reciprocity": {
+      "title": "Law of Reciprocity",
+      "desc": "One-sided relationships cannot last. Hearts must circulate too."
+    }
+  },
+  "advice": {
+    "introvert": "Your depth becomes a comfortable shelter in relationships.",
+    "extrovert": "Your energy is the sun that breathes vitality into relationships."
+  },
+  "title": "Social Logic",
+  "description": "Wisdom to connect with others while protecting yourself in complex relationships.",
+  "narrative": "Relationships are not a technique, but adjusting the temperature of the heart."
+}

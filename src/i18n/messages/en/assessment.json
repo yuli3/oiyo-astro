@@ -1,0 +1,60 @@
+{
+  "mbti": {
+    "title": "MBTI Personality Assessment",
+    "resultLabel": "Your Result",
+    "description": "Based on your answers, your personality type is {type}.",
+    "retake": "Recalibrate Essence"
+  },
+  "riasec": {
+    "codes": {
+      "R": {
+        "name": "Realistic",
+        "desc": "Skilled at working with machines, tools, and systems. You enjoy practical results and hands-on work.",
+        "jobs": "Engineer, Chef, Athlete, Technician, etc."
+      },
+      "I": {
+        "name": "Investigative",
+        "desc": "Analytical and logical. You enjoy solving complex problems and exploring intellectual curiosities through research.",
+        "jobs": "Scientist, Programmer, Doctor, Researcher, etc."
+      },
+      "A": {
+        "name": "Artistic",
+        "desc": "Creative and free-spirited. You like to give shape to original ideas through your artistic sensibilities.",
+        "jobs": "Artist, Writer, Designer, Actor, etc."
+      },
+      "S": {
+        "name": "Social",
+        "desc": "Find meaning in helping, teaching, and counseling others. You value emotional exchange and cooperation.",
+        "jobs": "Teacher, Counselor, Nurse, Social Worker, etc."
+      },
+      "E": {
+        "name": "Enterprising",
+        "desc": "Goal-oriented with excellent leadership. You enjoy persuasive and dynamic activities that lead people and organizations.",
+        "jobs": "Entrepreneur, Salesperson, Politician, Marketer, etc."
+      },
+      "C": {
+        "name": "Conventional",
+        "desc": "Systematic and precise. Excel at organizing data and completing tasks efficiently according to rules.",
+        "jobs": "Accountant, Administrator, Data Analyst, Banker, etc."
+      }
+    },
+    "title": "Career Interest Assessment (RIASEC)",
+    "resultLabel": "Your Insight",
+    "description": "Based on our analysis, your primary career interest pattern is {type}.",
+    "retake": "Recalibrate Essence"
+  },
+  "start": "Commence Inquiry",
+  "continue": "Continue",
+  "complete": "Complete",
+  "progress": "Chamber",
+  "results": "View Results",
+  "mode": "Mode",
+  "badge": "✨ Assessment",
+  "dimensionAnalysis": "Dimension Analysis",
+  "recommendedPaths": "Recommended Paths",
+  "oracleTitle": "Oracle Reading",
+  "title": "Personality Assessment",
+  "retake": "Retake Test",
+  "calcError": "Could not calculate your result",
+  "calcErrorRetry": "Try again"
+}

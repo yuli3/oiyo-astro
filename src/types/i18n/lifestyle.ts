@@ -1,0 +1,43 @@
+// Auto-generated shard for namespace: lifestyle
+
+export type Lifestyle_healthKeys =
+  | "sleepDream.metrics.lastDream"
+  | "sleepDream.metrics.recorded"
+  | "sleepDream.metrics.sleepScore"
+  | "sleepDream.prescription.button"
+  | "sleepDream.prescription.desc"
+  | "sleepDream.prescription.title"
+  | "sleepDream.prompts.dream.desc"
+  | "sleepDream.prompts.dream.title"
+  | "sleepDream.prompts.sleep.desc"
+  | "sleepDream.prompts.sleep.title"
+  | "sleepDream.quote"
+  | "sleepDream.status.critical_sleep.desc"
+  | "sleepDream.status.critical_sleep.title"
+  | "sleepDream.status.good_state.desc"
+  | "sleepDream.status.good_state.title"
+  | "sleepDream.status.neutral.desc"
+  | "sleepDream.status.neutral.title"
+  | "sleepDream.status.no_data.desc"
+  | "sleepDream.status.no_data.title";
+
+export type LifestyleKeys =
+  | "health.sleepDream.metrics.lastDream"
+  | "health.sleepDream.metrics.recorded"
+  | "health.sleepDream.metrics.sleepScore"
+  | "health.sleepDream.prescription.button"
+  | "health.sleepDream.prescription.desc"
+  | "health.sleepDream.prescription.title"
+  | "health.sleepDream.prompts.dream.desc"
+  | "health.sleepDream.prompts.dream.title"
+  | "health.sleepDream.prompts.sleep.desc"
+  | "health.sleepDream.prompts.sleep.title"
+  | "health.sleepDream.quote"
+  | "health.sleepDream.status.critical_sleep.desc"
+  | "health.sleepDream.status.critical_sleep.title"
+  | "health.sleepDream.status.good_state.desc"
+  | "health.sleepDream.status.good_state.title"
+  | "health.sleepDream.status.neutral.desc"
+  | "health.sleepDream.status.neutral.title"
+  | "health.sleepDream.status.no_data.desc"
+  | "health.sleepDream.status.no_data.title";

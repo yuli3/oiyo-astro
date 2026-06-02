@@ -1,0 +1,2020 @@
+{
+  "subtitle": "社会人格所承载的性格烙印。",
+  "badgeText": "帝国版",
+  "result": {
+    "sections": {
+      "dimensions_title": "本质",
+      "imperial_decree": "皇帝的法令",
+      "strengths": "优势",
+      "weaknesses": "劣势",
+      "retake_ceremony": "重试仪式",
+      "career_title": "职业路径",
+      "career_suitable": "适合的职业",
+      "career_avoid": "较难适应的职业",
+      "growth_title": "成长之旅",
+      "growth_challenges": "核心挑战",
+      "growth_tips": "成长建议",
+      "deep_careers": "职业深度指南",
+      "hobbies_title": "按心情推荐的爱好"
+    }
+  },
+  "profiles": {
+    "ENFJ": {
+      "name": "主人公",
+      "nickname": "教育家",
+      "description": "富有魅力、充满激情的领导者，能够让听众着迷。",
+      "summary": "富有魅力且温暖。",
+      "traits": {
+        "keywords": ["富有魅力", "利他主义"],
+        "strengths": ["可靠", "天生的领导者"],
+        "weaknesses": ["过于无私", "敏感"]
+      },
+      "career": {
+        "suitable": ["教师", "社会工作者"],
+        "avoid": ["系统管理员"]
+      },
+      "growth": {
+        "challenges": ["自我关怀", "建立界限", "接受批评", "过度关心"],
+        "tips": [
+          "优先考虑自我关怀",
+          "建立个人界限",
+          "学会接受批评",
+          "缓解完美主义"
+        ]
+      }
+    },
+    "ENFP": {
+      "name": "竞选者",
+      "nickname": "倡导者",
+      "description": "充满热情、富有创意且善于交际的自由灵魂。",
+      "summary": "热情且富有创意。",
+      "traits": {
+        "keywords": ["有创意", "社交性强"],
+        "strengths": ["热情的", "善于观察"],
+        "weaknesses": ["想太多", "易感压力"]
+      },
+      "career": {
+        "suitable": ["记者", "顾问"],
+        "avoid": ["审计员"]
+      },
+      "growth": {
+        "challenges": ["注意力", "执行力", "情绪稳定", "细节管理"],
+        "tips": ["提高专注力", "培养执行能力", "管理个人情绪", "增加计划性"]
+      }
+    },
+    "ENTJ": {
+      "name": "指挥官",
+      "nickname": "领导者",
+      "description": "大胆、富有想象力且意志强大的领导者，总能找到解决方法。",
+      "summary": "高效且有条理。",
+      "traits": {
+        "keywords": ["高效", "意志坚定"],
+        "strengths": ["战略性", "自信"],
+        "weaknesses": ["顽固", "不宽容"]
+      },
+      "career": {
+        "suitable": ["CEO", "管理者"],
+        "avoid": ["普通文员"]
+      },
+      "growth": {
+        "challenges": ["情感共鸣", "细节", "耐心", "接受批评"],
+        "tips": ["增加对他人的情感体谅", "培养耐心", "倾听他人意见", "管理压力"]
+      }
+    },
+    "ENTP": {
+      "name": "辩论家",
+      "nickname": "空想家",
+      "description": "聪明且好奇心强的思考者，无法抗拒智力上的挑战。",
+      "summary": "创新且灵活。",
+      "traits": {
+        "keywords": ["创新", "机智"],
+        "strengths": ["博学多才", "独创性"],
+        "weaknesses": ["爱争论", "不敏感"]
+      },
+      "career": {
+        "suitable": ["企业家", "律师"],
+        "avoid": ["会计师"]
+      },
+      "growth": {
+        "challenges": ["专注力", "一致性", "情感共鸣", "常规任务"],
+        "tips": ["提高专注力", "提升情感认知", "保持一致性", "注意细节"]
+      }
+    },
+    "ESFJ": {
+      "name": "执政官",
+      "nickname": "合作者",
+      "description": "非常有同情心、爱交际且受欢迎的人，总是渴望提供帮助。",
+      "summary": "社交且合作。",
+      "traits": {
+        "keywords": ["社交的", "受欢迎"],
+        "strengths": ["温暖", "敏感"],
+        "weaknesses": ["过于寻求认可", "死板"]
+      },
+      "career": {
+        "suitable": ["活动策划", "公关(PR)"],
+        "avoid": ["开发人员"]
+      },
+      "growth": {
+        "challenges": ["自信表达", "独立性", "接受批评", "处理冲突"],
+        "tips": ["增强自信表达", "接受批评", "培养独立性", "学习解决冲突"]
+      }
+    },
+    "ESFP": {
+      "name": "表演者",
+      "nickname": "演艺者",
+      "description": "自发的、精力充沛且热情的，生活在他们周围永不枯燥。",
+      "summary": "外向且精力充沛。",
+      "traits": {
+        "keywords": ["外向", "自发"],
+        "strengths": ["大胆", "务实"],
+        "weaknesses": ["敏感", "注意力不集中"]
+      },
+      "career": {
+        "suitable": ["演员", "主持人"],
+        "avoid": ["会计师"]
+      },
+      "growth": {
+        "challenges": ["专注力", "计划性", "接受批评", "情绪稳定"],
+        "tips": ["提高注意力", "培养计划能力", "接受批评", "管理情绪"]
+      }
+    },
+    "ESTJ": {
+      "name": "总经理",
+      "nickname": "守护者",
+      "description": "优秀的管理员，在管理事务或人方面无人能及。",
+      "summary": "有条理且果断。",
+      "traits": {
+        "keywords": ["有条理", "坦率"],
+        "strengths": ["奉献", "忠诚"],
+        "weaknesses": ["死板", "爱评判"]
+      },
+      "career": {
+        "suitable": ["项目经理", "法官"],
+        "avoid": ["艺术家"]
+      },
+      "growth": {
+        "challenges": ["情感共鸣", "灵活性", "适应变化", "创造力"],
+        "tips": ["增加情感体谅", "培养灵活性", "倾听他人意见", "接受变化"]
+      }
+    },
+    "ESTP": {
+      "name": "企业家",
+      "nickname": "说服者",
+      "description": "聪明、精力充沛且非常有洞察力的人，真正喜欢生活在边缘。",
+      "summary": "充满活力且有洞察力。",
+      "traits": {
+        "keywords": ["精力充沛", "洞察力强"],
+        "strengths": ["大胆", "务实"],
+        "weaknesses": ["冲动", "易陷风险"]
+      },
+      "career": {
+        "suitable": ["销售", "企业家"],
+        "avoid": ["研究员"]
+      },
+      "growth": {
+        "challenges": ["计划性", "情感共鸣", "耐心", "长期思考"],
+        "tips": ["培养计划能力", "提升情感认知", "培养耐心", "深入思考"]
+      }
+    },
+    "INFJ": {
+      "name": "提唱者",
+      "nickname": "理想主义者",
+      "description": "安静且神秘，但非常有启发性且不知疲倦的理想主义者。",
+      "summary": "有洞察力且有原则。",
+      "traits": {
+        "keywords": ["洞察力强", "创意"],
+        "strengths": ["热情的", "利他主义"],
+        "weaknesses": ["敏感", "完美主义者"]
+      },
+      "career": {
+        "suitable": ["心理咨询师", "作家"],
+        "avoid": ["销售"]
+      },
+      "growth": {
+        "challenges": ["现实主义", "处理冲突", "自我关怀", "建立界限"],
+        "tips": ["培养现实感", "优先自我关怀", "直面冲突", "建立个人界限"]
+      }
+    },
+    "INFP": {
+      "name": "调停者",
+      "nickname": "治愈者",
+      "description": "诗意的、善良的利他主义者，总是渴望帮助良好的事业。",
+      "summary": "理想主义且共情能力强。",
+      "traits": {
+        "keywords": ["共情力强", "创意"],
+        "strengths": ["忠诚", "思想开放"],
+        "weaknesses": ["过于理想化", "自我批评"]
+      },
+      "career": {
+        "suitable": ["艺术家", "心理学家"],
+        "avoid": ["呼叫中心"]
+      },
+      "growth": {
+        "challenges": ["果断", "现实主义", "处理冲突", "自信表达"],
+        "tips": ["培养现实感", "提高决策能力", "学习解决冲突", "增强自信表达"]
+      }
+    },
+    "INTJ": {
+      "name": "建筑师",
+      "nickname": "战略家",
+      "description": "富有想象力且具有战略性的思考者，对所有事情都有计划。",
+      "summary": "战略性且独立。",
+      "traits": {
+        "keywords": ["战略性", "独立"],
+        "strengths": ["理性", "博学"],
+        "weaknesses": ["傲慢", "爱评判"]
+      },
+      "career": {
+        "suitable": ["科学家", "战略家"],
+        "avoid": ["前台接待"]
+      },
+      "growth": {
+        "challenges": ["情感沟通", "即兴情况", "团队合作", "接受批评"],
+        "tips": ["练习情感表达", "接受他人意见", "缓解完美主义", "建立社交网络"]
+      }
+    },
+    "INTP": {
+      "name": "逻辑学家",
+      "nickname": "点子库",
+      "description": "创新的发明家，对知识有着永不满足的渴望。",
+      "summary": "分析性且客观。",
+      "traits": {
+        "keywords": ["分析性", "客观"],
+        "strengths": ["抽象思考", "独创性"],
+        "weaknesses": ["走神", "不敏感"]
+      },
+      "career": {
+        "suitable": ["软件工程师", "数学家"],
+        "avoid": ["销售员"]
+      },
+      "growth": {
+        "challenges": ["执行力", "情感沟通", "时间管理", "实际应用"],
+        "tips": ["培养执行能力", "增加情感表达", "改善日程管理", "与他人交流"]
+      }
+    },
+    "ISFJ": {
+      "name": "守卫者",
+      "nickname": "保护者",
+      "description": "非常敬业且温暖的保护者，时刻准备着保护他们所爱的人。",
+      "summary": "合作且忠诚。",
+      "traits": {
+        "keywords": ["合作", "可靠"],
+        "strengths": ["耐心", "务实"],
+        "weaknesses": ["害羞", "负担过重"]
+      },
+      "career": {
+        "suitable": ["护士", "教师"],
+        "avoid": ["CEO"]
+      },
+      "growth": {
+        "challenges": ["自信表达", "建立界限", "适应变化", "处理冲突"],
+        "tips": ["增强自信表达", "建立个人界限", "优先自我关怀", "学会接受变化"]
+      }
+    },
+    "ISFP": {
+      "name": "探险家",
+      "nickname": "艺术家",
+      "description": "灵活且富有魅力的艺术家，总是准备好探索和体验新事物。",
+      "summary": "有魅力且感性。",
+      "traits": {
+        "keywords": ["有魅力", "敏感"],
+        "strengths": ["想象力强", "热情的"],
+        "weaknesses": ["压力脆弱", "好胜心强"]
+      },
+      "career": {
+        "suitable": ["设计师", "艺术家"],
+        "avoid": ["法律相关"]
+      },
+      "growth": {
+        "challenges": ["自信表达", "计划性", "现实主义", "处理冲突"],
+        "tips": ["增强自信表达", "培养计划能力", "提高现实感", "管理压力"]
+      }
+    },
+    "ISTJ": {
+      "name": "物流师",
+      "nickname": "现实主义者",
+      "description": "务实且以事实为基础，可靠性无可置疑。",
+      "summary": "负责任且有条理。",
+      "traits": {
+        "keywords": ["务实", "关注事实"],
+        "strengths": ["诚实", "普适的"],
+        "weaknesses": ["顽固", "不敏感"]
+      },
+      "career": {
+        "suitable": ["会计师", "军人"],
+        "avoid": ["艺术家"]
+      },
+      "growth": {
+        "challenges": ["适应变化", "情感沟通", "灵活性", "创造力"],
+        "tips": ["学会接受变化", "增加情感表达", "培养灵活性", "压力管理"]
+      }
+    },
+    "ISTP": {
+      "name": "鉴赏家",
+      "nickname": "技术员",
+      "description": "大胆且实用的实验者，掌握各种工具。",
+      "summary": "大胆且务实。",
+      "traits": {
+        "keywords": ["大胆", "务实"],
+        "strengths": ["乐观", "创意"],
+        "weaknesses": ["顽固", "三分钟热度"]
+      },
+      "career": {
+        "suitable": ["工程师", "机械师"],
+        "avoid": ["前台接待"]
+      },
+      "growth": {
+        "challenges": ["情感沟通", "社交技巧", "长期计划", "理论学习"],
+        "tips": ["增加情感表达", "培养社交技巧", "制定长期计划", "增加对话交流"]
+      }
+    }
+  },
+  "career": {
+    "types": {
+      "realistic": {
+        "traits": ["诚实和真诚", "实用、现实", "熟练使用工具", "独立的"],
+        "careerSuggestions": [
+          "机械工程师",
+          "电工",
+          "Chef",
+          "汽车技师",
+          "兽医",
+          "景观设计师",
+          "飞行员"
+        ],
+        "name": "写实型",
+        "alias": "实践者",
+        "description": "您更喜欢动手、实际的工作，喜欢使用工具和机器来建造或修理东西。 我喜欢能看到具体结果的手动活动。",
+        "workEnvironment": "现实世界的实践环境，例如车间、建筑工地、实验室或户外。 当我们使用工具、机器和有形项目时，我们会表现出色。"
+      },
+      "investigative": {
+        "traits": ["分析性和逻辑性", "求知欲强", "精确的", "独立思考者"],
+        "careerSuggestions": [
+          "软件开发人员",
+          "数据分析师",
+          "研究科学家",
+          "医师",
+          "经济学家",
+          "心理学家",
+          "药剂师"
+        ],
+        "name": "探索型",
+        "alias": "观念论者",
+        "description": "您喜欢分析问题、研究和思考。 我喜欢智力挑战，喜欢理解事物运作的原理。",
+        "workEnvironment": "研究设施、实验室、图书馆或学术环境。 他们更喜欢能够在干扰最小的情况下从事安静的智力活动的环境。"
+      },
+      "artistic": {
+        "traits": ["创意与原创", "自由精神", "富有表现力", "非常规"],
+        "careerSuggestions": [
+          "平面设计师",
+          "作家",
+          "营销创意",
+          "建筑师",
+          "音乐家",
+          "演员",
+          "时装设计师"
+        ],
+        "name": "艺术类型",
+        "alias": "创造者",
+        "description": "你富有创造力和自我表达能力，喜欢玩弄想法、颜色、语言或形状。 我重视原创性并享受可以进行创造性表达的环境。",
+        "workEnvironment": "创意工作室、剧院、画廊或灵活的工作空间。 您需要按照自己的节奏自由发挥创造力。"
+      },
+      "social": {
+        "traits": ["善解人意", "合作社", "友好的", "善于沟通"],
+        "careerSuggestions": [
+          "老师",
+          "顾问",
+          "社会工作者",
+          "护士",
+          "人力资源专家",
+          "教练/培训师",
+          "物理治疗师"
+        ],
+        "name": "社会类型",
+        "alias": "援助",
+        "description": "您喜欢帮助、教导和与人合作。 我喜欢关心他人并对他们的生活产生积极影响的活动。",
+        "workEnvironment": "学校、医院、社区中心或咨询办公室。 您在可以专注于帮助他人和与他人沟通的环境中表现出色。"
+      },
+      "enterprising": {
+        "traits": ["雄心勃勃", "自信的", "有说服力", "精力充沛"],
+        "careerSuggestions": [
+          "销售经理",
+          "业务主管",
+          "律师",
+          "企业家",
+          "营销经理",
+          "房地产经纪人",
+          "专案经理"
+        ],
+        "name": "进取型",
+        "alias": "说服",
+        "description": "您喜欢领导、说服和组织他人实现目标。 您享受竞争环境，善于承担风险并做出决策。",
+        "workEnvironment": "商务办公室、销售楼层或领导职位。 在竞争激烈、结果驱动的环境中脱颖而出。"
+      },
+      "conventional": {
+        "traits": ["注重细节", "有组织", "负责任的", "高效的"],
+        "careerSuggestions": [
+          "会计",
+          "数据输入",
+          "行政助理",
+          "台板",
+          "报税员",
+          "图书管理员",
+          "保险承保人"
+        ],
+        "name": "习惯型",
+        "alias": "组织者",
+        "description": "您更喜欢结构化、有序、程序清晰的工作环境。 擅长组织数据、管理细节和遵循既定系统。",
+        "workEnvironment": "办公室、银行、政府机构或有组织的组织。 更喜欢具有清晰层次结构和可预测性的环境。"
+      }
+    },
+    "questions": [
+      {
+        "id": "1",
+        "text": "我喜欢使用工具和机械",
+        "type": "实际的",
+        "weight": 3
+      },
+      {
+        "id": "2",
+        "text": "与理论讨论相比，我更喜欢实际的实践工作",
+        "type": "实际的",
+        "weight": 3
+      },
+      {
+        "id": "3",
+        "text": "我喜欢看到工作的实际成果",
+        "type": "实际的",
+        "weight": 2
+      },
+      {
+        "id": "4",
+        "text": "我喜欢建造、修理或修理东西",
+        "type": "实际的",
+        "weight": 3
+      },
+      {
+        "id": "5",
+        "text": "我更喜欢在户外或车间工作",
+        "type": "实际的",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "text": "我喜欢通过研究和分析解决复杂的问题",
+        "type": "调查性的",
+        "weight": 3
+      },
+      {
+        "id": "7",
+        "text": "我喜欢深入了解事物的运作方式",
+        "type": "调查性的",
+        "weight": 3
+      },
+      {
+        "id": "8",
+        "text": "我更喜欢独立应对智力挑战",
+        "type": "调查性的",
+        "weight": 2
+      },
+      {
+        "id": "9",
+        "text": "我喜欢收集和分析数据",
+        "type": "调查性的",
+        "weight": 3
+      },
+      {
+        "id": "10",
+        "text": "我喜欢尝试和测试新理论",
+        "type": "调查性的",
+        "weight": 2
+      },
+      {
+        "id": "11",
+        "text": "我喜欢创造性地表达自己",
+        "type": "艺术的",
+        "weight": 3
+      },
+      {
+        "id": "12",
+        "text": "我更喜欢没有严格规则的灵活工作环境",
+        "type": "艺术的",
+        "weight": 2
+      },
+      {
+        "id": "13",
+        "text": "我喜欢使用颜色、设计或创意概念",
+        "type": "艺术的",
+        "weight": 3
+      },
+      {
+        "id": "14",
+        "text": "我重视工作中的原创性和创新性",
+        "type": "艺术的",
+        "weight": 3
+      },
+      {
+        "id": "15",
+        "text": "我喜欢可以进行创造性诠释的项目",
+        "type": "艺术的",
+        "weight": 2
+      },
+      {
+        "id": "16",
+        "text": "我喜欢帮助别人解决他们的问题",
+        "type": "社会的",
+        "weight": 3
+      },
+      {
+        "id": "17",
+        "text": "我喜欢在团队和协作环境中工作",
+        "type": "社会的",
+        "weight": 2
+      },
+      {
+        "id": "18",
+        "text": "我在教导或指导他人中找到满足感",
+        "type": "社会的",
+        "weight": 3
+      },
+      {
+        "id": "19",
+        "text": "与以任务为中心的工作相比，我更喜欢以人为本的工作",
+        "type": "社会的",
+        "weight": 3
+      },
+      {
+        "id": "20",
+        "text": "我喜欢对他人产生积极影响",
+        "type": "社会的",
+        "weight": 2
+      },
+      {
+        "id": "21",
+        "text": "我喜欢领导项目和管理团队",
+        "type": "进取的",
+        "weight": 3
+      },
+      {
+        "id": "22",
+        "text": "我喜欢竞争激烈、以结果为导向的环境",
+        "type": "进取的",
+        "weight": 2
+      },
+      {
+        "id": "23",
+        "text": "我喜欢说服他人并影响决策",
+        "type": "进取的",
+        "weight": 3
+      },
+      {
+        "id": "24",
+        "text": "我喜欢冒经过计算的风险来实现目标",
+        "type": "进取的",
+        "weight": 3
+      },
+      {
+        "id": "25",
+        "text": "我更喜欢能够快速进步的环境",
+        "type": "进取的",
+        "weight": 2
+      },
+      {
+        "id": "26",
+        "text": "我更喜欢结构化、有组织的工作环境",
+        "type": "传统的",
+        "weight": 3
+      },
+      {
+        "id": "27",
+        "text": "我喜欢处理数据、数字和详细信息",
+        "type": "传统的",
+        "weight": 2
+      },
+      {
+        "id": "28",
+        "text": "我喜欢遵循既定的程序和准则",
+        "type": "传统的",
+        "weight": 3
+      },
+      {
+        "id": "29",
+        "text": "我更喜欢可预测的工作流程和明确的期望",
+        "type": "传统的",
+        "weight": 3
+      },
+      {
+        "id": "30",
+        "text": "我擅长组织和管理行政任务",
+        "type": "传统的",
+        "weight": 2
+      }
+    ],
+    "suitable": ["教师", "社会工作者"],
+    "avoid": ["系统管理员"]
+  },
+  "learning": {
+    "types": {
+      "INTJ": {
+        "strengths": ["独立学习", "复杂的概念", "长期规划", "逻辑分析"],
+        "challenges": ["无聊的重复", "死记硬背", "小组作业", "自发任务"],
+        "studyMethods": ["概念图", "阅读和研究", "在线课程", "解决问题的焦点"],
+        "recommendedTools": ["概念", "黑曜石", "Anki", "可汗学院"],
+        "examStrategies": ["分析过去的模式", "连接概念", "创建练习题"],
+        "motivationTips": ["设定明确的目标", "了解大局", "寻找实际应用"],
+        "name": "聪明的战略家",
+        "emoji": "🎉",
+        "description": "我们更喜欢系统的、自主的学习，追求深刻的理解。",
+        "optimalEnvironment": "安静、私密的空间，不受干扰",
+        "timeManagement": "执行系统的、长期的计划",
+        "idealGroupSize": "单独或1-2人",
+        "concentrationPeak": "晚餐时间"
+      },
+      "INTP": {
+        "strengths": ["逻辑思维", "创造性地解决问题", "概念理解", "独立研究"],
+        "challenges": ["满足最后期限", "后续计划", "记忆", "常规作息"],
+        "studyMethods": ["理论探索", "实验", "在线讨论", "比较来源"],
+        "recommendedTools": ["维基百科", "红迪网", "堆栈交换", "YouTube 讲座"],
+        "examStrategies": ["了解原理", "研究多种方法", "使用逻辑推理"],
+        "motivationTips": ["寻找有趣的话题", "维护自由", "允许创造力"],
+        "name": "逻辑思考者",
+        "emoji": "🎉",
+        "description": "我是一个具有强烈求知欲、重视理论理解的学习者。",
+        "optimalEnvironment": "一个安静的空间，一个自由的氛围",
+        "timeManagement": "灵活但明确的期限",
+        "idealGroupSize": "偏好独自学习",
+        "concentrationPeak": "深夜时间"
+      },
+      "ENTJ": {
+        "strengths": ["快速学习", "领导", "目标达成", "组织"],
+        "challenges": ["完美主义", "缺少细节", "情感内容", "学习速度慢"],
+        "studyMethods": ["领导研究小组", "总结要点", "高效记忆", "演讲"],
+        "recommendedTools": ["概念", "特雷洛", "印象笔记", "微软幻灯片软件"],
+        "examStrategies": ["时间管理", "专注于必需品", "反复练习"],
+        "motivationTips": ["明确的目标", "竞赛", "领导角色"],
+        "name": "一个大胆的领导者",
+        "emoji": "🎉",
+        "description": "我是一个有动力的学习者，以目标为导向，重视效率。",
+        "optimalEnvironment": "组织良好的类似办公室的空间",
+        "timeManagement": "彻底的时间规划和优先顺序",
+        "idealGroupSize": "3-5人",
+        "concentrationPeak": "早上时间"
+      },
+      "ENTP": {
+        "strengths": ["创造性思维", "快速理解", "辩论技巧", "尝试新方法"],
+        "challenges": ["日常学习", "记忆", "满足最后期限", "简单的重复"],
+        "studyMethods": ["讨论和辩论", "资源丰富", "基于项目", "实验方法"],
+        "recommendedTools": ["辩论平台", "TED演讲", "Coursera", "思维导图工具"],
+        "examStrategies": ["创意答案", "多重视角", "最后一刻的焦点"],
+        "motivationTips": ["新挑战", "辩论机会", "自由的学习方式"],
+        "name": "喜欢激烈辩论的辩手",
+        "emoji": "🎉",
+        "description": "我是一个有创造力的学习者，喜欢尝试新事物并通过讨论学习。",
+        "optimalEnvironment": "自由而充满活力的空间",
+        "timeManagement": "当截止日期临近时集中注意力",
+        "idealGroupSize": "3-4人讨论组",
+        "concentrationPeak": "下午到晚上之间"
+      },
+      "INFJ": {
+        "strengths": ["深刻理解", "模式识别", "创意表达", "长期记忆"],
+        "challenges": ["肤浅的记忆", "时间压力", "竞争环境", "批判性评价"],
+        "studyMethods": ["写日记", "连接概念", "可视化", "评书"],
+        "recommendedTools": ["概念", "札记", "顶空", "日记"],
+        "examStrategies": ["了解大局", "有意义的联系", "情感记忆"],
+        "motivationTips": ["寻找意义", "连接到个人目标", "鼓舞人心的环境"],
+        "name": "善意的倡导者",
+        "emoji": "🎉",
+        "description": "我是一个有洞察力的学习者，追求深入而有意义的学习。",
+        "optimalEnvironment": "一个安静且鼓舞人心的空间",
+        "timeManagement": "悠闲地计划以尽量减少压力",
+        "idealGroupSize": "单独或一小群精英",
+        "concentrationPeak": "清晨或傍晚"
+      },
+      "INFP": {
+        "strengths": ["创意写作", "情感理解", "自主学习", "艺术表达"],
+        "challenges": ["严格的规则", "批评性反馈", "截止日期快", "竞赛"],
+        "studyMethods": ["自由格式笔记", "创意项目", "阅读", "音乐伴奏"],
+        "recommendedTools": ["好笔记", "彩色笔", "Spotify", "阅读应用程序"],
+        "examStrategies": ["开发自己的方法", "情感联系", "心态放松"],
+        "motivationTips": ["个人意义", "自由表达", "积极反馈"],
+        "name": "热情的调解人",
+        "emoji": "🎉",
+        "description": "喜欢以价值驱动和创造性方式学习的学习者",
+        "optimalEnvironment": "舒适、个性化且充满灵感的空间",
+        "timeManagement": "灵活的规划不会扼杀创造力",
+        "idealGroupSize": "偏好独自学习",
+        "concentrationPeak": "沉浸时流畅但专注"
+      },
+      "ENFJ": {
+        "strengths": ["协作学习", "沟通", "理解他人", "动机"],
+        "challenges": ["单独学习", "非个人话题", "竞赛", "批判性分析"],
+        "studyMethods": ["学习小组", "同伴教学", "讨论", "角色扮演"],
+        "recommendedTools": ["Zoom", "不和谐", "谷歌文档", "协作工具"],
+        "examStrategies": ["小组学习", "互相教导", "情感记忆"],
+        "motivationTips": ["一起学习", "帮助别人", "积极的氛围"],
+        "name": "只是社会活动家",
+        "emoji": "🎉",
+        "description": "我是一个协作学习者，喜欢与他人一起成长和学习。",
+        "optimalEnvironment": "一个温馨的互动空间",
+        "timeManagement": "根据团体日程安排进行协调规划",
+        "idealGroupSize": "学习小组约4-6人",
+        "concentrationPeak": "上午和下午之间"
+      },
+      "ENFP": {
+        "strengths": ["创造力", "热情", "兴趣多样", "快速连接"],
+        "challenges": ["保持专注", "细节", "例程", "长期项目"],
+        "studyMethods": ["材质多样", "游戏化学习", "团体活动", "实验方法"],
+        "recommendedTools": ["小测验", "卡胡特", "YouTube", "Instagram 教育"],
+        "examStrategies": ["寻找有趣的联系", "尝试各种方法", "类似游戏的方法"],
+        "motivationTips": ["新刺激", "有趣的方法", "表扬和鼓励"],
+        "name": "机智的活动家",
+        "emoji": "🎉",
+        "description": "我是一个充满热情的学习者，充满活力和多样化的好奇心。",
+        "optimalEnvironment": "一个充满活力和刺激的空间",
+        "timeManagement": "多次简短、集中的会议",
+        "idealGroupSize": "与不同的人",
+        "concentrationPeak": "取决于你的心情"
+      },
+      "ISTJ": {
+        "strengths": ["勤勉", "记忆", "组织", "计划执行"],
+        "challenges": ["抽象概念", "即兴创作", "创意任务", "指示不明确"],
+        "studyMethods": ["课本阅读", "反复背诵", "系统笔记", "过去的论文"],
+        "recommendedTools": ["传统笔记", "Excel", "PDF教科书", "安排应用程序"],
+        "examStrategies": ["充分的准备", "反复学习", "守时", "扎实的理解"],
+        "motivationTips": ["明确的目标", "系统化计划", "成就"],
+        "name": "一个正直的逻辑学家",
+        "emoji": "🎉",
+        "description": "勤奋负责，喜欢传统学习方式",
+        "optimalEnvironment": "静态且组织良好的空间",
+        "timeManagement": "按照固定时间表学习",
+        "idealGroupSize": "单独或与 2 人一起",
+        "concentrationPeak": "早上时间"
+      },
+      "ISFJ": {
+        "strengths": ["注重细节", "耐心", "记忆", "责任"],
+        "challenges": ["抽象理论", "批判性思维", "快速变化", "竞赛"],
+        "studyMethods": ["认真记笔记", "反复练习", "实际例子", "一步一步"],
+        "recommendedTools": ["彩色笔", "清单", "规划师", "传统教科书"],
+        "examStrategies": ["充分的审查", "查看详情", "保持稳定"],
+        "motivationTips": ["稳定的环境", "赞扬和认可", "实用价值"],
+        "name": "勇敢的守护者",
+        "emoji": "🎉",
+        "description": "他是一个学习稳重、一丝不苟、责任心强、学习冷静的人。",
+        "optimalEnvironment": "稳定、熟悉、安静的空间",
+        "timeManagement": "减少焦虑的悠闲计划",
+        "idealGroupSize": "一两个亲密的朋友",
+        "concentrationPeak": "早上时间"
+      },
+      "ESTJ": {
+        "strengths": ["组织", "执行", "领导", "效率"],
+        "challenges": ["抽象理论", "情感内容", "缓慢的节奏", "灵活性"],
+        "studyMethods": ["总结", "抽认卡", "过去的论文", "领导研究小组"],
+        "recommendedTools": ["Excel", "微软幻灯片软件", "规划师", "定时器"],
+        "examStrategies": ["严格的时间管理", "专注于必需品", "反复练习"],
+        "motivationTips": ["明确的目标", "看得见的结果", "领导角色"],
+        "name": "严格的经理",
+        "emoji": "🎉",
+        "description": "我是一个注重效率和结果、系统实践的务实学习者。",
+        "optimalEnvironment": "空间划分良好且组织有序",
+        "timeManagement": "系统规划、周密实施",
+        "idealGroupSize": "3-4人高效团",
+        "concentrationPeak": "早上时间"
+      },
+      "ESFJ": {
+        "strengths": ["合作", "责任", "实用性", "沟通"],
+        "challenges": ["单独学习", "抽象理论", "批评", "竞赛"],
+        "studyMethods": [
+          "小组学习",
+          "互相测验",
+          "现实生活中的例子",
+          "角色扮演"
+        ],
+        "recommendedTools": ["聊天学习小组", "Zoom", "共享笔记", "彩色笔"],
+        "examStrategies": ["一起学习", "共勉", "实际理解"],
+        "motivationTips": ["社会氛围", "帮助别人", "称赞"],
+        "name": "善于交际的外交官",
+        "emoji": "🎉",
+        "description": "我是一个合作学习者，喜欢与周围的人和谐地学习。",
+        "optimalEnvironment": "一个温馨的互动空间",
+        "timeManagement": "包含对周围人的承诺的计划",
+        "idealGroupSize": "4-6人的热闹团体",
+        "concentrationPeak": "上午和下午之间"
+      },
+      "ISTP": {
+        "strengths": ["解决问题", "逻辑思维", "实用技能", "快速响应"],
+        "challenges": ["理论学习", "长期规划", "记忆", "情感内容"],
+        "studyMethods": ["动手实践", "视频学习", "直接体验", "解决问题"],
+        "recommendedTools": ["YouTube 练习", "可汗学院", "模拟", "实用工具"],
+        "examStrategies": ["实际问题", "逻辑方法", "高效利用时间"],
+        "motivationTips": ["实用价值", "免费方法", "挑战"],
+        "name": "万事通",
+        "emoji": "🎉",
+        "description": "我是一个解决问题的学习者，喜欢实践、动手学习。",
+        "optimalEnvironment": "自由练习空间",
+        "timeManagement": "根据需要灵活调整",
+        "idealGroupSize": "单独或与一小群人一起",
+        "concentrationPeak": "下午到晚上之间"
+      },
+      "ISFP": {
+        "strengths": ["创造力", "灵敏度", "实用技能", "灵活性"],
+        "challenges": ["严格的规则", "竞赛", "批评", "长期规划"],
+        "studyMethods": ["视觉学习", "实践", "有音乐", "自由形式"],
+        "recommendedTools": ["iPad", "等待深度合成...", "兴趣", "YouTube"],
+        "examStrategies": ["心态舒适", "视觉记忆", "个人方法"],
+        "motivationTips": ["自由环境", "积极反馈", "创意表达"],
+        "name": "一位好奇的艺术家",
+        "emoji": "🎉",
+        "description": "他是一个高度敏感的学习者，喜欢按照自己的节奏学习。",
+        "optimalEnvironment": "一个舒适又美丽的空间",
+        "timeManagement": "根据您的情况量身定制灵活的计划",
+        "idealGroupSize": "偏好独自学习",
+        "concentrationPeak": "给自己一个放松的时间"
+      },
+      "ESTP": {
+        "strengths": ["快速学习", "实用技能", "适应性", "解决问题"],
+        "challenges": ["理论学习", "记忆", "长焦", "规划"],
+        "studyMethods": ["实际操作", "团体活动", "竞赛", "体验式学习"],
+        "recommendedTools": [
+          "游戏化应用程序",
+          "实用工具",
+          "虚拟现实学习",
+          "体育类比"
+        ],
+        "examStrategies": ["实际测试", "运用快速思维", "短焦"],
+        "motivationTips": ["竞争与挑战", "实用价值", "即时反馈"],
+        "name": "一位富有冒险精神的商人",
+        "emoji": "🎉",
+        "description": "我是一个喜欢通过积极和现实的经历来学习的学习者。",
+        "optimalEnvironment": "一个活跃的实践空间",
+        "timeManagement": "截止日期前的短期沉浸计划",
+        "idealGroupSize": "3-5人活跃团体",
+        "concentrationPeak": "上午和下午之间"
+      },
+      "ESFP": {
+        "strengths": ["社交性", "热情", "实用技能", "有趣的氛围"],
+        "challenges": ["单独学习", "理论", "重点", "长期规划"],
+        "studyMethods": ["团体活动", "游戏", "角色扮演", "有音乐"],
+        "recommendedTools": [
+          "卡胡特",
+          "社交应用",
+          "抖音教育",
+          "和朋友一起学习"
+        ],
+        "examStrategies": ["有趣的方法", "小组评审", "积极的心态"],
+        "motivationTips": ["有趣的方法", "和朋友一起", "表扬和奖励"],
+        "name": "自由奔放的名人",
+        "emoji": "🎉",
+        "description": "我是一个追求乐趣的学习者，喜欢通过与人相处来学习。",
+        "optimalEnvironment": "明亮、充满活力和刺激的空间",
+        "timeManagement": "几个简短而有趣的学习课程",
+        "idealGroupSize": "4-8人大团体",
+        "concentrationPeak": "白天"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "当学习一门新学科时，你：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "一个人拿着课本静静学习",
+            "preference": "I"
+          },
+          {
+            "text": "与朋友一起讨论和学习",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "你如何记住学习材料？",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "记住具体事实和细节",
+            "preference": "S"
+          },
+          {
+            "text": "把握整体概念和模式",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "您解决问题的方法：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "通过逻辑分析寻找答案",
+            "preference": "T"
+          },
+          {
+            "text": "用直觉和感觉来接近",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "你如何准备考试？",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "制定系统计划，及早准备",
+            "preference": "J"
+          },
+          {
+            "text": "在需要时保持灵活性和专注",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "首选班级活动：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "个人作业或独立项目",
+            "preference": "I"
+          },
+          {
+            "text": "小组讨论或团队项目",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "当理解复杂的概念时：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "需要逐步的解释和真实的例子",
+            "preference": "S"
+          },
+          {
+            "text": "先看抽象理论和大局",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "您在项目团队中的角色：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "追求客观分析和效率",
+            "preference": "T"
+          },
+          {
+            "text": "重视团队和谐和每个人的意见",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "当作业截止日期临近时：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "按计划稳步推进",
+            "preference": "J"
+          },
+          {
+            "text": "最后期限的压力提高了注意力",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "首选学习环境：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "安静的图书馆或个人空间",
+            "preference": "I"
+          },
+          {
+            "text": "咖啡馆或学习咖啡馆等热闹的地方",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "首选考试问题类型：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "基于事实的多项选择或简答题",
+            "preference": "S"
+          },
+          {
+            "text": "需要创造性思维的论文题",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "当成绩不好时，你：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "客观分析原因并改进",
+            "preference": "T"
+          },
+          {
+            "text": "情感上接受并找到动力",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "制定学习计划时：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "明确定义详细的时间表和目标",
+            "preference": "J"
+          },
+          {
+            "text": "设定大致方向，灵活调整",
+            "preference": "P"
+          }
+        ]
+      }
+    ]
+  },
+  "travel": {
+    "types": {
+      "INTJ": {
+        "preferences": ["文化遗址", "博物馆", "历史名胜", "建筑学"],
+        "avoidances": ["拥挤的地方", "自发计划", "团体旅游", "聚会气氛"],
+        "idealDestinations": {
+          "domestic": ["庆州", "全州韩屋村", "安东", "济州岛东部"],
+          "international": ["京都", "Rome", "布拉格", "伊斯坦布尔"]
+        },
+        "activities": ["历史之旅", "架构运行", "阅读", "摄影"],
+        "companionCompatibility": {
+          "best": ["ENFP", "ENTP", "INFP"],
+          "good": ["INTJ", "INTP", "ENTJ"],
+          "challenging": ["ESFP", "ESTP", "ESFJ"]
+        },
+        "name": "勇敢的探险家",
+        "emoji": "🎉",
+        "description": "我是一个追求周密计划和效率的独立旅行者。",
+        "planningStyle": "详细行程，包括B计划",
+        "budgetApproach": "战略性地分配预算",
+        "accommodation": "安静舒适的私人空间",
+        "packingStyle": "系统化和最小化的包装",
+        "foodExploration": "研究和参观当地美食而不是著名餐馆"
+      },
+      "INTP": {
+        "preferences": ["独特的地方", "科学博物馆", "隐藏的宝石", "当地文化"],
+        "avoidances": ["固定时间表", "旅游陷阱", "购物焦点", "吵闹的地方"],
+        "idealDestinations": {
+          "domestic": ["毛茸茸的青年", "江陵", "统营", "束草"],
+          "international": ["冰岛", "新西兰", "瑞士", "挪威"]
+        },
+        "activities": ["自然探索", "观星", "沉思", "独特的咖啡馆"],
+        "companionCompatibility": {
+          "best": ["ENFJ", "ENTJ", "INFJ"],
+          "good": ["INTP", "INTJ", "ENTP"],
+          "challenging": ["ESTJ", "ESFJ", "ISFJ"]
+        },
+        "name": "好奇的探险家",
+        "emoji": "🎉",
+        "description": "我是一名自由旅行者，寻找属于自己的独特体验。",
+        "planningStyle": "只定大方向，现场临时决定",
+        "budgetApproach": "灵活地花费在令人兴奋的体验上",
+        "accommodation": "独立安静的空间",
+        "packingStyle": "保持简单，只包含必需品",
+        "foodExploration": "实验性当地美食挑战"
+      },
+      "ENTJ": {
+        "preferences": ["地标", "商务酒店", "精致餐饮", "活动"],
+        "avoidances": ["计划外的旅行", "缓慢的节奏", "住宿不舒服", "浪费时间"],
+        "idealDestinations": {
+          "domestic": ["汉城", "釜山", "Jeju", "仁川"],
+          "international": ["纽约", "新加坡", "迪拜", "香港"]
+        },
+        "activities": ["观光", "Golf", "葡萄酒之旅", "商务会议"],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENTJ", "INTJ", "ENTP"],
+          "challenging": ["ISFJ", "ESFJ", "ISFP"]
+        },
+        "name": "征服者型旅行者",
+        "emoji": "🎉",
+        "description": "我是一个以目标为导向的旅行者，寻求最大限度地提高效率和体验。",
+        "planningStyle": "紧张的日程安排，最大化您的体验",
+        "budgetApproach": "大胆投资优质体验",
+        "accommodation": "豪华酒店，设施齐全",
+        "packingStyle": "高效实用的包装",
+        "foodExploration": "参观米其林指南餐厅"
+      },
+      "ENTP": {
+        "preferences": ["探险活动", "夜市", "当地人互动", "自发旅行"],
+        "avoidances": ["标准课程", "豪华旅游", "安静休息", "定期时间表"],
+        "idealDestinations": {
+          "domestic": ["江原道", "济州岛西部", "庆尚乡村", "跳岛游"],
+          "international": ["东南亚", "南美洲", "东欧", "中东"]
+        },
+        "activities": ["冲浪", "跳伞", "徒步旅行", "当地派对"],
+        "companionCompatibility": {
+          "best": ["INFJ", "INTJ", "ISFJ"],
+          "good": ["ENTP", "ENFP", "ESTP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "敢于冒险的创新者",
+        "emoji": "🎉",
+        "description": "我是一个自由奔放的旅行者，喜欢新的体验和挑战。",
+        "planningStyle": "只需绘制大图并当场做出决定",
+        "budgetApproach": "根据经验灵活支出",
+        "accommodation": "宾馆、旅社",
+        "packingStyle": "最低限度的便宜和本地采购",
+        "foodExploration": "街头美食和探索当地市场"
+      },
+      "INFJ": {
+        "preferences": ["精神场所", "自然", "安静的咖啡馆", "美术馆"],
+        "avoidances": ["党文化", "拥挤的地方", "噪音", "肤浅的经历"],
+        "idealDestinations": {
+          "domestic": ["济州偶来小路", "宝城", "南海", "潭阳"],
+          "international": ["Bali", "圣托里尼岛", "京都", "不丹"]
+        },
+        "activities": ["冥想", "Yoga", "摄影", "写日记"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ENFP", "INTP"],
+          "good": ["INFJ", "INFP", "ENFJ"],
+          "challenging": ["ESTP", "ESFP", "ESTJ"]
+        },
+        "name": "灵魂朝圣者",
+        "emoji": "🎉",
+        "description": "我是一个寻找意义和灵感的情感旅行者。",
+        "planningStyle": "悠闲的行程，重点关注有意义的地方",
+        "budgetApproach": "根据体验价值进行支出",
+        "accommodation": "宁静而美丽的空间",
+        "packingStyle": "带上激发情绪的道具",
+        "foodExploration": "大气的餐厅和咖啡馆"
+      },
+      "INFP": {
+        "preferences": ["隐藏点", "安静的村庄", "书店", "独立商店"],
+        "avoidances": ["旅游线路", "吵闹的地方", "固定时间表", "团体活动"],
+        "idealDestinations": {
+          "domestic": ["海滩攀岩帮", "统营", "丽水", "延州"],
+          "international": ["巴黎", "阿姆斯特丹", "布拉格", "爱丁堡"]
+        },
+        "activities": ["步行", "阅读", "写作", "摄影"],
+        "companionCompatibility": {
+          "best": ["ENTJ", "ENFJ", "INTJ"],
+          "good": ["INFP", "INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ESFJ", "ISTJ"]
+        },
+        "name": "流浪诗人",
+        "emoji": "🎉",
+        "description": "我是一个浪漫的旅行家，有梦想，自由旅行。",
+        "planningStyle": "宽松的自由计划",
+        "budgetApproach": "花在有意义的经历上",
+        "accommodation": "一个独特而舒适的空间",
+        "packingStyle": "带上情感道具",
+        "foodExploration": "小餐厅有气氛"
+      },
+      "ENFJ": {
+        "preferences": ["当地体验", "烹饪课程", "社区参观", "志愿服务"],
+        "avoidances": ["孤独", "安静的旅行", "仅限游客", "肤浅的经历"],
+        "idealDestinations": {
+          "domestic": ["济州岛村庄", "延州", "釜山", "束草"],
+          "international": ["意大利", "西班牙", "墨西哥", "泰国"]
+        },
+        "activities": ["与当地人见面", "烹饪课程", "文化交流", "志愿者旅行"],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENFJ", "ENFP", "ESFJ"],
+          "challenging": ["ISTP", "ISTJ", "INTP"]
+        },
+        "name": "文化连接器",
+        "emoji": "🎉",
+        "description": "我是一名社交旅行者，通过人际关系学习文化。",
+        "planningStyle": "以人为本，灵活规划",
+        "budgetApproach": "投资于经验和人员",
+        "accommodation": "宾馆、民宿",
+        "packingStyle": "包装礼物或分享",
+        "foodExploration": "当地人经常光顾的餐厅"
+      },
+      "ENFP": {
+        "preferences": ["节日", "演出", "夜市", "当地活动"],
+        "avoidances": ["固定时间表", "安静的旅行", "独自的", "例程"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "釜山", "江陵", "丽水"],
+          "international": ["巴塞罗那", "曼谷", "里约热内卢", "Bali"]
+        },
+        "activities": ["节日", "派对", "冲浪", "结识新朋友"],
+        "companionCompatibility": {
+          "best": ["INTJ", "INFJ", "ISTJ"],
+          "good": ["ENFP", "ENTP", "ESFP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "自由探险家",
+        "emoji": "🎉",
+        "description": "我是一个有新尝试、有激情的自由旅行者。",
+        "planningStyle": "自发且自由的旅行",
+        "budgetApproach": "大胆花钱享受愉快的体验",
+        "accommodation": "充满社交氛围的住宿",
+        "packingStyle": "拿走比你需要的更多的东西",
+        "foodExploration": "Instagram 热门地点"
+      },
+      "ISTJ": {
+        "preferences": ["著名景点", "博物馆", "历史古迹", "安全的地方"],
+        "avoidances": ["自发旅行", "危险场所", "计划变更", "住宿不舒服"],
+        "idealDestinations": {
+          "domestic": ["庆州", "延州", "安东", "水原"],
+          "international": ["日本", "德国", "瑞士", "加拿大"]
+        },
+        "activities": ["观光", "摄影", "博物馆参观", "传统体验"],
+        "companionCompatibility": {
+          "best": ["ESFP", "ESTP", "ENFP"],
+          "good": ["ISTJ", "ESTJ", "ISFJ"],
+          "challenging": ["ENTP", "ENFP", "ESFP"]
+        },
+        "name": "计划型旅行者",
+        "emoji": "🎉",
+        "description": "我是一个谨慎的旅行者，做好充分的准备并坚持我的计划。",
+        "planningStyle": "详细时间表和提前预订",
+        "budgetApproach": "预算内支出稳定",
+        "accommodation": "经过验证的连锁酒店",
+        "packingStyle": "根据清单精心准备",
+        "foodExploration": "著名且久经考验的餐厅"
+      },
+      "ISFJ": {
+        "preferences": ["宁静的地方", "家庭景点", "安全点", "舒适的休息"],
+        "avoidances": ["冒险", "人群", "不适", "危险"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "束草", "丽水", "庆州"],
+          "international": ["日本", "台湾", "新加坡", "新西兰"]
+        },
+        "activities": ["康复", "温泉", "美食之旅", "购物"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ESTP", "ESFP"],
+          "good": ["ISFJ", "ISTJ", "ESFJ"],
+          "challenging": ["ENTP", "ENFP", "ESTP"]
+        },
+        "name": "舒适的旅行者",
+        "emoji": "🎉",
+        "description": "我是一个细心的旅行者，优先考虑舒适和安全。",
+        "planningStyle": "专注于安全舒适的日程安排",
+        "budgetApproach": "支出稳定且保守",
+        "accommodation": "干净舒适的酒店",
+        "packingStyle": "照顾好急救药品等必需品",
+        "foodExploration": "熟悉又美味的食物"
+      },
+      "ESTJ": {
+        "preferences": ["著名景点", "跟团旅游", "导游服务", "便利设施"],
+        "avoidances": ["没有计划", "效率低下", "浪费时间", "不适"],
+        "idealDestinations": {
+          "domestic": ["汉城", "釜山", "Jeju", "大田"],
+          "international": ["新加坡", "香港", "东京", "北京"]
+        },
+        "activities": ["观光", "购物", "美食之旅", "摄影"],
+        "companionCompatibility": {
+          "best": ["ISFP", "ISTP", "INFP"],
+          "good": ["ESTJ", "ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP", "INTP"]
+        },
+        "name": "高效的游客",
+        "emoji": "🎉",
+        "description": "我是一个系统规划、高效旅游的旅行者。",
+        "planningStyle": "日程安排紧凑，精确到分钟",
+        "budgetApproach": "注重成本效益和效率",
+        "accommodation": "交通便利的酒店，位置好",
+        "packingStyle": "高效实用的包装",
+        "foodExploration": "访问著名餐厅列表"
+      },
+      "ESFJ": {
+        "preferences": ["家庭旅行", "团体旅游", "著名咖啡馆", "购物"],
+        "avoidances": ["独自旅行", "安静的地方", "危险活动", "不适"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "釜山", "仁川", "延州"],
+          "international": ["冲绳", "Guam", "澳大利亚", "夏威夷"]
+        },
+        "activities": ["购物", "Food", "摄影", "咖啡馆之旅"],
+        "companionCompatibility": {
+          "best": ["ISTP", "ISFP", "INFP"],
+          "good": ["ESFJ", "ENFJ", "ESTJ"],
+          "challenging": ["INTP", "INTJ", "ISTP"]
+        },
+        "name": "善于交际的旅行者",
+        "emoji": "🎉",
+        "description": "我们是以人为本的旅行者，共同创造美好的回忆。",
+        "planningStyle": "每个人都可以享受的行程",
+        "budgetApproach": "分享和适当的支出",
+        "accommodation": "方便、适合家庭的住宿",
+        "packingStyle": "帮别人收拾东西",
+        "foodExploration": "著名且受欢迎的餐厅"
+      },
+      "ISTP": {
+        "preferences": ["户外活动", "运动的", "自然", "冒险"],
+        "avoidances": ["固定时间表", "博物馆", "购物", "旅游线路"],
+        "idealDestinations": {
+          "domestic": ["江原道", "济州山", "庆尚南道海岸", "山区"],
+          "international": ["新西兰", "挪威", "瑞士", "加拿大"]
+        },
+        "activities": ["远足", "滑雪", "潜水", "骑自行车"],
+        "companionCompatibility": {
+          "best": ["ESFJ", "ESTJ", "ENFJ"],
+          "good": ["ISTP", "ESTP", "ISFP"],
+          "challenging": ["ENFJ", "ESFJ", "INFJ"]
+        },
+        "name": "免费背包客",
+        "emoji": "🎉",
+        "description": "我是一个注重自发性和实践性活动的旅行者。",
+        "planningStyle": "最少的规划和现场响应",
+        "budgetApproach": "仅在必要时进行实际支出",
+        "accommodation": "露营、廉价住宿",
+        "packingStyle": "实用轻便的包装",
+        "foodExploration": "简单快捷的一餐"
+      },
+      "ISFP": {
+        "preferences": ["美术馆", "自然", "咖啡馆", "大气空间"],
+        "avoidances": ["吵闹的地方", "计划", "冲", "团体活动"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "江陵", "统营", "丽水"],
+          "international": ["巴黎", "普罗旺斯", "圣托里尼岛", "Bali"]
+        },
+        "activities": ["摄影", "绘画", "咖啡馆", "步行"],
+        "companionCompatibility": {
+          "best": ["ESTJ", "ESFJ", "ENTJ"],
+          "good": ["ISFP", "INFP", "ESFP"],
+          "challenging": ["ESTJ", "ENTJ", "ISTJ"]
+        },
+        "name": "情感艺术家旅行者",
+        "emoji": "🎉",
+        "description": "我是一个寻找美丽和自由的情感旅行者。",
+        "planningStyle": "自由安排，随心所欲",
+        "budgetApproach": "投资美好体验",
+        "accommodation": "漂亮又大气的空间",
+        "packingStyle": "专注于漂亮的衣服和配饰",
+        "foodExploration": "漂亮的咖啡馆和餐馆"
+      },
+      "ESTP": {
+        "preferences": ["活动", "派对", "夜生活", "极限运动"],
+        "avoidances": ["博物馆", "安静的旅行", "计划", "缓慢的节奏"],
+        "idealDestinations": {
+          "domestic": ["釜山", "江陵", "济州岛西部", "阳阳"],
+          "international": ["普吉岛", "Bali", "迪拜", "伊维萨岛"]
+        },
+        "activities": ["冲浪", "泡吧", "水上运动", "蹦极"],
+        "companionCompatibility": {
+          "best": ["ISFJ", "ISTJ", "INFJ"],
+          "good": ["ESTP", "ESFP", "ENTP"],
+          "challenging": ["INFJ", "INFP", "ISFJ"]
+        },
+        "name": "激进旅行者",
+        "emoji": "🎉",
+        "description": "我是一位活跃的旅行者，寻找刺激和乐趣。",
+        "planningStyle": "当场即兴决定",
+        "budgetApproach": "大胆投资你的享受",
+        "accommodation": "充满派对氛围的娱乐设施",
+        "packingStyle": "简单又活泼的穿搭",
+        "foodExploration": "热门餐厅和酒吧"
+      },
+      "ESFP": {
+        "preferences": ["节日", "派对", "购物", "人们"],
+        "avoidances": ["计划", "沉默", "独自的", "无聊"],
+        "idealDestinations": {
+          "domestic": ["釜山", "Jeju", "弘大", "江南"],
+          "international": ["拉斯维加斯", "伊维萨岛", "曼谷", "迈阿密"]
+        },
+        "activities": ["派对", "购物", "演出", "Food"],
+        "companionCompatibility": {
+          "best": ["ISTJ", "ISFJ", "INTJ"],
+          "good": ["ESFP", "ESTP", "ENFP"],
+          "challenging": ["INTJ", "ISTJ", "INFJ"]
+        },
+        "name": "聚会旅行者",
+        "emoji": "🎉",
+        "description": "我们是一起享受节日、释放能量的旅行者。",
+        "planningStyle": "即兴且自由的日程安排",
+        "budgetApproach": "为了快乐而慷慨地花钱",
+        "accommodation": "位于市中心的热闹酒店",
+        "packingStyle": "多照顾、多买",
+        "foodExploration": "受欢迎且拥挤的餐厅"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "当您到达目的地时，您：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "自己静静探索",
+            "preference": "I"
+          },
+          {
+            "text": "与当地人或其他旅行者聊天",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "计划行程时：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "聚焦知名景点，详细规划",
+            "preference": "S"
+          },
+          {
+            "text": "专注于隐藏的宝石和独特的体验",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "选择目的地的标准：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "效率和性价比",
+            "preference": "T"
+          },
+          {
+            "text": "气氛和感觉",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "旅行准备：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "严格提前预订和计划",
+            "preference": "J"
+          },
+          {
+            "text": "大致计划并自发进行",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "旅行期间首选活动：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "安静地参观博物馆或遗址",
+            "preference": "I"
+          },
+          {
+            "text": "当地节日或与人见面",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "遇到奇怪的食物时：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "前往经过验证的知名餐厅",
+            "preference": "S"
+          },
+          {
+            "text": "尝试一些独特和新鲜的东西",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "当与旅伴意见不一致时：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "根据客观标准理性决策",
+            "preference": "T"
+          },
+          {
+            "text": "考虑感受进行调整",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "如果发生意外情况：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "尝试回到计划",
+            "preference": "J"
+          },
+          {
+            "text": "接受它作为一个新的机会",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "选择住宿的标准：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "安静舒适的私人空间",
+            "preference": "I"
+          },
+          {
+            "text": "我可以与人交往的空间",
+            "preference": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "您如何获取旅行信息？",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "指南和经过验证的信息",
+            "preference": "S"
+          },
+          {
+            "text": "博客和独特的评论",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "超出预算时：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "调整计划、削减开支",
+            "preference": "T"
+          },
+          {
+            "text": "经验很重要，所以要灵活",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "行程最后一天：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "完成所有计划的活动",
+            "preference": "J"
+          },
+          {
+            "text": "自由自在地享受剩余时间",
+            "preference": "P"
+          }
+        ]
+      }
+    ]
+  },
+  "generic": {
+    "questions": [
+      {
+        "id": "EI_01",
+        "text": "当结识新朋友时，你：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "积极接近他们并开始对话",
+            "preference": "E"
+          },
+          {
+            "text": "等待他们先接近你",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_02",
+        "text": "当你有压力时，你：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "与朋友见面并交谈以感觉更好",
+            "preference": "E"
+          },
+          {
+            "text": "花时间独处来整理你的思绪",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_03",
+        "text": "在聚会或聚会中，您：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "积极与许多不同的人交谈",
+            "preference": "E"
+          },
+          {
+            "text": "与一些亲密的人进行深入交谈",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_04",
+        "text": "解决问题时，您：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "与他人讨论以获得想法",
+            "preference": "E"
+          },
+          {
+            "text": "在得出结论之前独自深思熟虑",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_05",
+        "text": "关于电话，您：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "享受长时间通话并经常给其他人打电话",
+            "preference": "E"
+          },
+          {
+            "text": "仅在必要时拨打简短电话",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_06",
+        "text": "度过周末的理想方式是：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "与朋友一起在户外活动",
+            "preference": "E"
+          },
+          {
+            "text": "独自在家享受爱好",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_07",
+        "text": "在会议或讨论中，您：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "立即分享意见并积极参与",
+            "preference": "E"
+          },
+          {
+            "text": "谨慎说话前要三思而后行",
+            "preference": "I"
+          }
+        ]
+      },
+      {
+        "id": "SN_01",
+        "text": "开始新项目时：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "从具体的计划和细节开始",
+            "preference": "S"
+          },
+          {
+            "text": "首先设想总体愿景和可能性",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_02",
+        "text": "收到信息时，您：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "关注具体事实和数据",
+            "preference": "S"
+          },
+          {
+            "text": "寻找隐藏的意义和可能性",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_03",
+        "text": "过去与未来之间：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "重视过去的经验和传统",
+            "preference": "S"
+          },
+          {
+            "text": "对未来的可能性和变化感兴趣",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_04",
+        "text": "学习时，您：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "有条不紊地一步步学习",
+            "preference": "S"
+          },
+          {
+            "text": "在了解细节之前先了解整体背景",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_05",
+        "text": "在日常生活中，你：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "追求现实、务实的事情",
+            "preference": "S"
+          },
+          {
+            "text": "喜欢新想法和创新",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_06",
+        "text": "当你看问题时，你：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "专注于具体解决方案",
+            "preference": "S"
+          },
+          {
+            "text": "探索各种观点和新方法",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_07",
+        "text": "当遇到艺术或文学时：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "喜欢真实、清晰的表达",
+            "preference": "S"
+          },
+          {
+            "text": "被象征性和抽象表达所吸引",
+            "preference": "N"
+          }
+        ]
+      },
+      {
+        "id": "TF_01",
+        "text": "在做出决定时，您：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "优先考虑逻辑分析和客观标准",
+            "preference": "T"
+          },
+          {
+            "text": "考虑个人价值观和情感影响",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_02",
+        "text": "在冲突情况下，您：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "努力根据事实和原则解决",
+            "preference": "T"
+          },
+          {
+            "text": "优先考虑相关人员的情感和关系",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_03",
+        "text": "当受到批评时，你：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "客观分析，找出需要改进的地方",
+            "preference": "T"
+          },
+          {
+            "text": "感到受伤，但尝试理解他们的意图",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_04",
+        "text": "评价别人时：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "根据能力和表现进行判断",
+            "preference": "T"
+          },
+          {
+            "text": "重视品格和努力",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_05",
+        "text": "在团队中工作时，您：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "优先考虑效率和结果",
+            "preference": "T"
+          },
+          {
+            "text": "重视团队的和谐与氛围",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_06",
+        "text": "当朋友寻求建议时：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "提供问题的解决方案",
+            "preference": "T"
+          },
+          {
+            "text": "同情他们的情绪并安慰他们",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_07",
+        "text": "在规则和特殊情况下：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "认为原则应该一致地应用",
+            "preference": "T"
+          },
+          {
+            "text": "认为应根据情况表现出灵活性",
+            "preference": "F"
+          }
+        ]
+      },
+      {
+        "id": "JP_01",
+        "text": "在日常生活中，你：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "制定计划并遵循它们",
+            "preference": "J"
+          },
+          {
+            "text": "根据具体情况灵活行动",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_02",
+        "text": "当处理有截止日期的任务时：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "提前稳步开展工作",
+            "preference": "J"
+          },
+          {
+            "text": "随着最后期限的临近，加紧工作",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_03",
+        "text": "去旅行时，您：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "提前准备详细的时间表和预订",
+            "preference": "J"
+          },
+          {
+            "text": "制定粗略的计划并自发地享受",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_04",
+        "text": "关于整理你的房间或办公桌：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "它应该始终整洁有序",
+            "preference": "J"
+          },
+          {
+            "text": "有点乱也没关系，只要能找到你需要的就好",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_05",
+        "text": "当新的机会出现时：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "决定前要仔细考虑",
+            "preference": "J"
+          },
+          {
+            "text": "先尝试一下，然后再调整",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_06",
+        "text": "购物时，您：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "提前决定你需要什么并购买",
+            "preference": "J"
+          },
+          {
+            "text": "当场浏览并购买您感兴趣的商品",
+            "preference": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_07",
+        "text": "当你需要做出决定时：",
+        "dimension": "JP",
+        "options": [
+          {
+            "text": "迅速决定并付诸行动",
+            "preference": "J"
+          },
+          {
+            "text": "保持多种选择并慢慢做出决定",
+            "preference": "P"
+          }
+        ]
+      }
+    ]
+  },
+  "title": "性格建筑学 (MBTI)"
+}

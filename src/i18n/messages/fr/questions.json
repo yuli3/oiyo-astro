@@ -1,0 +1,820 @@
+{
+  "0": {
+    "id": 1,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "Agir rapidement et de manière décisive",
+        "emoji": "⚡",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "Considérez d'abord les sentiments de chacun",
+        "emoji": "💭",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "Analyser toutes les options logiques",
+        "emoji": "🧠",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "Suis mon instinct",
+        "emoji": "💡",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      }
+    ]
+  },
+  "1": {
+    "id": 2,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "Prendre les choses en main et diriger les conversations",
+        "emoji": "🎯",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "Écoute plus que je ne parle",
+        "emoji": "👂",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "S'adapter à l'énergie du groupe",
+        "emoji": "🌊",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "Partagez des histoires personnelles pour vous connecter",
+        "emoji": "💫",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "2": {
+    "id": 3,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "Abordez-le directement et immédiatement",
+        "emoji": "💥",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "Essayez de comprendre toutes les perspectives",
+        "emoji": "🤝",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "Recherchez des solutions gagnant-gagnant",
+        "emoji": "🎯",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "Donnez de l'espace avant de discuter",
+        "emoji": "🕰️",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "3": {
+    "id": 4,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "Sports de compétition ou défis",
+        "emoji": "🏆",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "Activités créatives ou artistiques",
+        "emoji": "🎨",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "Apprendre quelque chose de nouveau",
+        "emoji": "📚",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "Du temps de qualité avec ses proches",
+        "emoji": "👥",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "4": {
+    "id": 5,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "S'exprimer à travers des actions et des réalisations",
+        "emoji": "💪",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "Utiliser des mots et une expression émotionnelle",
+        "emoji": "💕",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "Apporter un soutien pratique",
+        "emoji": "🛠️",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "Créez des expériences significatives",
+        "emoji": "✨",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "5": {
+    "id": 6,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "Direct et simple",
+        "emoji": "📢",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "Doux et prévenant",
+        "emoji": "🌱",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "Factuel et logique",
+        "emoji": "📊",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "Émotionnellement expressif",
+        "emoji": "💭",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "6": {
+    "id": 7,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "Prenez le contrôle et avancez",
+        "emoji": "🚀",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "Rechercher le soutien des autres",
+        "emoji": "🤗",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "Décomposez le problème de manière logique",
+        "emoji": "🧩",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "Prenez le temps de traiter les émotions",
+        "emoji": "🧘",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "7": {
+    "id": 8,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "Indépendance et respect",
+        "emoji": "🦅",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "Intimité émotionnelle et connexion",
+        "emoji": "💞",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "Objectifs mutuels et croissance",
+        "emoji": "📈",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "Compréhension et empathie",
+        "emoji": "💝",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "questions": [
+    {
+      "dimension": "EI",
+      "id": "ei_1",
+      "options": [
+        {
+          "id": "ei_1_e",
+          "text": "Gagner de l’énergie grâce aux situations sociales",
+          "value": "E"
+        },
+        {
+          "id": "not_1_i",
+          "text": "Gagner de l'énergie en étant seul",
+          "value": "I"
+        }
+      ],
+      "text": "Comment rechargez-vous habituellement votre énergie ?"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_2",
+      "options": [
+        {
+          "id": "ei_2_e",
+          "text": "Entamez d'abord la conversation",
+          "value": "E"
+        },
+        {
+          "id": "not_2_i",
+          "text": "Attends que les autres parlent",
+          "value": "I"
+        }
+      ],
+      "text": "Lorsque vous rencontrez de nouvelles personnes, vous avez tendance à :"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_3",
+      "options": [
+        {
+          "id": "ei_3_e",
+          "text": "Avoir beaucoup d'amis et de connaissances",
+          "value": "E"
+        },
+        {
+          "id": "not_3_i",
+          "text": "Ayez quelques amis proches",
+          "value": "I"
+        }
+      ],
+      "text": "Votre cercle social est généralement :"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_4",
+      "options": [
+        {
+          "id": "ei_4_e",
+          "text": "Réfléchissez à voix haute",
+          "value": "E"
+        },
+        {
+          "id": "not_4_i",
+          "text": "Réfléchissez avant de parler",
+          "value": "I"
+        }
+      ],
+      "text": "Pour exprimer vos pensées, vous préférez :"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_5",
+      "options": [
+        {
+          "id": "ei_5_e",
+          "text": "Parler de ses préoccupations avec les autres",
+          "value": "E"
+        },
+        {
+          "id": "not_5_i",
+          "text": "Problèmes de processus en interne",
+          "value": "I"
+        }
+      ],
+      "text": "Lorsque vous avez un souci :"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_6",
+      "options": [
+        {
+          "id": "ei_6_e",
+          "text": "Facile à approcher et à ouvrir",
+          "value": "E"
+        },
+        {
+          "id": "not_6_i",
+          "text": "Réservé et privé initialement",
+          "value": "I"
+        }
+      ],
+      "text": "Aux yeux des autres, vous êtes :"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_7",
+      "options": [
+        {
+          "id": "ei_7_e",
+          "text": "Profitez d'environnements au rythme rapide",
+          "value": "E"
+        },
+        {
+          "id": "not_7_i",
+          "text": "Profitez d'environnements au rythme lent",
+          "value": "I"
+        }
+      ],
+      "text": "Le rythme d'environnement que vous préférez est :"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_8",
+      "options": [
+        {
+          "id": "ei_8_e",
+          "text": "Sentez-vous actif en groupe",
+          "value": "E"
+        },
+        {
+          "id": "not_8_i",
+          "text": "À l'aise en petits groupes ou seul",
+          "value": "I"
+        }
+      ],
+      "text": "Quand vous sentez-vous le plus énergique ?"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_1",
+      "options": [
+        {
+          "id": "sn_1_s",
+          "text": "Concentrez-vous sur les faits et les détails",
+          "value": "S"
+        },
+        {
+          "id": "sn_1_n",
+          "text": "Concentrez-vous sur la situation dans son ensemble et les possibilités",
+          "value": "N"
+        }
+      ],
+      "text": "Lorsque vous apprenez quelque chose de nouveau, vous :"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_2",
+      "options": [
+        {
+          "id": "sn_2_s",
+          "text": "Pratique et utile maintenant",
+          "value": "S"
+        },
+        {
+          "id": "sn_2_n",
+          "text": "Théorique et prospectif",
+          "value": "N"
+        }
+      ],
+      "text": "Vous préférez les informations qui sont :"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_3",
+      "options": [
+        {
+          "id": "sn_3_s",
+          "text": "Réaliste et terre-à-terre",
+          "value": "S"
+        },
+        {
+          "id": "sn_3_n",
+          "text": "Imaginatif et créatif",
+          "value": "N"
+        }
+      ],
+      "text": "Vous avez tendance à être :"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_4",
+      "options": [
+        {
+          "id": "sn_4_s",
+          "text": "Expérience passée",
+          "value": "S"
+        },
+        {
+          "id": "sn_4_n",
+          "text": "intuitions et inspiration",
+          "value": "N"
+        }
+      ],
+      "text": "Lorsque vous résolvez des problèmes, vous comptez davantage sur :"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_5",
+      "options": [
+        {
+          "id": "sn_5_s",
+          "text": "Ce qui est réel et certain",
+          "value": "S"
+        },
+        {
+          "id": "sn_5_n",
+          "text": "Ce qui est possible et potentiel",
+          "value": "N"
+        }
+      ],
+      "text": "Vous êtes plus intéressé par :"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_6",
+      "options": [
+        {
+          "id": "sn_6_s",
+          "text": "Respectez les routines établies",
+          "value": "S"
+        },
+        {
+          "id": "sn_6_n",
+          "text": "Rechercher de nouvelles façons de faire les choses",
+          "value": "N"
+        }
+      ],
+      "text": "Dans votre vie quotidienne, vous :"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_7",
+      "options": [
+        {
+          "id": "sn_7_s",
+          "text": "Données et faits concrets",
+          "value": "S"
+        },
+        {
+          "id": "sn_7_n",
+          "text": "Idées et théories abstraites",
+          "value": "N"
+        }
+      ],
+      "text": "Vous préférez travailler avec :"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_8",
+      "options": [
+        {
+          "id": "sn_8_s",
+          "text": "Bon sens",
+          "value": "S"
+        },
+        {
+          "id": "sn_8_n",
+          "text": "Innovation",
+          "value": "N"
+        }
+      ],
+      "text": "Vous appréciez :"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_1",
+      "options": [
+        {
+          "id": "tf_1_t",
+          "text": "Décider via une analyse logique",
+          "value": "T"
+        },
+        {
+          "id": "tf_1_f",
+          "text": "Décider en tenant compte de l’impact sur les autres",
+          "value": "F"
+        }
+      ],
+      "text": "Comment prenez-vous habituellement vos décisions ?"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_2",
+      "options": [
+        {
+          "id": "tf_2_t",
+          "text": "Privilégier la rationalité et la vérité",
+          "value": "T"
+        },
+        {
+          "id": "tf_2_f",
+          "text": "Privilégier les relations et l’harmonie",
+          "value": "F"
+        }
+      ],
+      "text": "Dans un débat ou une discussion, vous :"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_3",
+      "options": [
+        {
+          "id": "tf_3_t",
+          "text": "Restez objectif et calme",
+          "value": "T"
+        },
+        {
+          "id": "tf_3_f",
+          "text": "Faire facilement preuve d'empathie avec les autres",
+          "value": "F"
+        }
+      ],
+      "text": "Quand je vois le dilemme de quelqu'un d'autre :"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_4",
+      "options": [
+        {
+          "id": "tf_4_t",
+          "text": "Offrir des conseils pratiques",
+          "value": "T"
+        },
+        {
+          "id": "tf_4_f",
+          "text": "Offrir un soutien émotionnel",
+          "value": "F"
+        }
+      ],
+      "text": "Lorsqu’un ami est en difficulté, vous avez tendance à :"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_5",
+      "options": [
+        {
+          "id": "tf_5_t",
+          "text": "La critique est un outil nécessaire",
+          "value": "T"
+        },
+        {
+          "id": "tf_5_f",
+          "text": "La critique doit tenir compte des sentiments",
+          "value": "F"
+        }
+      ],
+      "text": "Comment percevez-vous les critiques ?"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_6",
+      "options": [
+        {
+          "id": "tf_6_t",
+          "text": "Impersonnel et axé sur les règles",
+          "value": "T"
+        },
+        {
+          "id": "tf_6_f",
+          "text": "Personnel et inclusif",
+          "value": "F"
+        }
+      ],
+      "text": "Votre style de travail est plus :"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_7",
+      "options": [
+        {
+          "id": "tf_7_t",
+          "text": "Restez ferme sur les faits",
+          "value": "T"
+        },
+        {
+          "id": "tf_7_f",
+          "text": "Compromis pour consensus",
+          "value": "F"
+        }
+      ],
+      "text": "Lorsque vos opinions ne sont pas d’accord avec celles d’un groupe :"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_1",
+      "options": [
+        {
+          "id": "pj_1_j",
+          "text": "Faire un plan détaillé",
+          "value": "J"
+        },
+        {
+          "id": "pj_1_p",
+          "text": "Suivez le courant",
+          "value": "P"
+        }
+      ],
+      "text": "Avant de partir en vacances, vous :"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_2",
+      "options": [
+        {
+          "id": "pj_2_j",
+          "text": "Effectuer les tâches à l'avance",
+          "value": "J"
+        },
+        {
+          "id": "pj_2_p",
+          "text": "Comptez sur la pression des délais",
+          "value": "P"
+        }
+      ],
+      "text": "Comment gérez-vous les délais ?"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_3",
+      "options": [
+        {
+          "id": "pj_3_j",
+          "text": "Organisé et structuré",
+          "value": "J"
+        },
+        {
+          "id": "pj_3_p",
+          "text": "Flexible et décontracté",
+          "value": "P"
+        }
+      ],
+      "text": "Votre bureau ou votre chambre est généralement :"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_4",
+      "options": [
+        {
+          "id": "pj_4_j",
+          "text": "Sentez-vous installé et en sécurité",
+          "value": "J"
+        },
+        {
+          "id": "pj_4_p",
+          "text": "Se sentir confiné et piégé",
+          "value": "P"
+        }
+      ],
+      "text": "Lorsque les plans sont finalisés, vous :"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_5",
+      "options": [
+        {
+          "id": "pj_5_j",
+          "text": "Travaillez d'abord, jouez plus tard",
+          "value": "J"
+        },
+        {
+          "id": "pj_5_p",
+          "text": "Trouver du plaisir en travaillant",
+          "value": "P"
+        }
+      ],
+      "text": "Votre ordre de travail et de plaisir est :"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_6",
+      "options": [
+        {
+          "id": "pj_6_j",
+          "text": "Certitude et clarté",
+          "value": "J"
+        },
+        {
+          "id": "pj_6_p",
+          "text": "Ouverture et variété",
+          "value": "P"
+        }
+      ],
+      "text": "Vous préférez la vie avec :"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_7",
+      "options": [
+        {
+          "id": "pj_7_j",
+          "text": "Respectez le plan, réduisez les surprises",
+          "value": "J"
+        },
+        {
+          "id": "pj_7_p",
+          "text": "S'adapter et accepter le changement",
+          "value": "P"
+        }
+      ],
+      "text": "Face à des situations inattendues :"
+    }
+  ],
+  "signal": "Signal",
+  "bond": "Enquête"
+}

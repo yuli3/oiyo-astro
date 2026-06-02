@@ -1,0 +1,83 @@
+{
+  "systemName": "Celtic Astrology",
+  "narrative": "Wisdom of the trees.",
+  "treeSign": "Tree Sign",
+  "ogham": "Ogham",
+  "trees": {
+    "birch": {
+      "tree": "Birch",
+      "archetype": "The Achiever",
+      "description": "Ambitious and driven, possessing natural leadership qualities."
+    },
+    "rowan": {
+      "tree": "Rowan",
+      "archetype": "The Thinker",
+      "description": "Philosophical and idealistic, with a passion for changing the world."
+    },
+    "ash": {
+      "tree": "Ash",
+      "archetype": "The Enchanter",
+      "description": "Artistic and intuitive, with a deep connection to nature."
+    },
+    "alder": {
+      "tree": "Alder",
+      "archetype": "The Trailblazer",
+      "description": "Adventurous and passionate, with a charm that leads people."
+    },
+    "willow": {
+      "tree": "Willow",
+      "archetype": "The Observer",
+      "description": "Patient and intelligent, with an excellent memory."
+    },
+    "hawthorn": {
+      "tree": "Hawthorn",
+      "archetype": "The Illusionist",
+      "description": "External appearance differs from inner self; creative and curious."
+    },
+    "oak": {
+      "tree": "Oak",
+      "archetype": "The Stabilizer",
+      "description": "Strong and protective, a pillar of support for others."
+    },
+    "holly": {
+      "tree": "Holly",
+      "archetype": "The Ruler",
+      "description": "Noble and confident, possessing the strength to overcome any difficulty."
+    },
+    "hazel": {
+      "tree": "Hazel",
+      "archetype": "The Knower",
+      "description": "Intelligent, analytical, and detail-oriented."
+    },
+    "vine": {
+      "tree": "Vine",
+      "archetype": "The Equalizer",
+      "description": "Elegant and charming, with high aesthetic standards."
+    },
+    "ivy": {
+      "tree": "Ivy",
+      "archetype": "The Survivor",
+      "description": "Persistent and loyal, capable of adapting to any environment."
+    },
+    "reed": {
+      "tree": "Reed",
+      "archetype": "The Inquisitor",
+      "description": "Loves uncovering secrets, possesses deep insight and strong will."
+    },
+    "elder": {
+      "tree": "Elder",
+      "archetype": "The Seeker",
+      "description": "Pursues freedom and possesses a philosophical nature seeking deep meaning in life."
+    }
+  },
+  "ariaLabel": "Celtic Zodiac: {tree}, {archetype}",
+  "title": "Celtic Astrology",
+  "egyptianGuardian": "Egyptian Guardian",
+  "celticTreeSign": "Celtic Tree Sign",
+  "birthSymbols": "Birth Symbols",
+  "symbols": {
+    "Stone": "Stone",
+    "Flower": "Flower",
+    "Star": "Star"
+  }
+}

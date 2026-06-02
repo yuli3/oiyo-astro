@@ -1,0 +1,80 @@
+{
+  "title": "Centro de Fortuna",
+  "subtitle": "Descubre tu destino a través de diversas herramientas místicas.",
+  "cta": "Ingresar",
+  "hub": {
+    "meta": {
+      "title": "Finance Center",
+      "description": "Tests de personalidad financiera, calculadoras y herramientas."
+    },
+    "title": "Centro Financiero",
+    "subtitle": "Domina tu destino financiero con nuestras herramientas integrales"
+  },
+  "tabs": {
+    "comprehensive": "Análisis Integral",
+    "saju": "Saju (Tradicional)",
+    "tarot": "Tarot",
+    "astrology": "Astrología",
+    "numerology": "Numerología",
+    "dream": "Diario de Sueños",
+    "biorhythm": "Biorritmo",
+    "asset": "Awaiting deep synthesis...",
+    "budget": "Awaiting deep synthesis...",
+    "compound": "Awaiting deep synthesis...",
+    "gift": "Awaiting deep synthesis...",
+    "gig": "Awaiting deep synthesis...",
+    "freelancer": "Awaiting deep synthesis...",
+    "vat": "Awaiting deep synthesis...",
+    "card": "Awaiting deep synthesis...",
+    "realEstate": "Awaiting deep synthesis..."
+  },
+  "bizReport": "Awaiting deep synthesis...",
+  "calculate": "Awaiting deep synthesis...",
+  "dashboard": {
+    "scope": {
+      "daily": "Daily",
+      "weekly": "Weekly",
+      "monthly": "Monthly",
+      "yearly": "Yearly"
+    },
+    "profile": {
+      "title": "Centro de Fortuna",
+      "description": "Analysis based on your birth data"
+    },
+    "biorhythm": {
+      "title": "Centro de Fortuna",
+      "physical": "Physical",
+      "emotional": "Emotional",
+      "intellectual": "Intellectual"
+    },
+    "fortune": {
+      "numerology": {
+        "title": "Centro de Fortuna",
+        "lifePath": "Life Path",
+        "personalYear": "Personal Year"
+      }
+    },
+    "saju": {
+      "title": "Centro de Fortuna",
+      "dominant": "Dominant Element",
+      "lacking": "Lacking Element"
+    },
+    "rating": {
+      "critical": "Critical",
+      "low": "Low",
+      "moderate": "Moderate",
+      "good": "Good",
+      "excellent": "Excellent"
+    },
+    "card": {
+      "score": "Puntuación: {puntuación}",
+      "advice": "Advice",
+      "luckyNumbers": "Lucky Numbers",
+      "luckyColors": "Lucky Colors",
+      "warnings": "Warnings"
+    },
+    "title": "Centro de Fortuna"
+  },
+  "comprehensiveTitle": "Análisis Integral",
+  "comprehensiveDesc": "Ingresa tus datos una vez para obtener perspectivas de múltiples disciplinas."
+}

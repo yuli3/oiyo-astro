@@ -1,0 +1,10 @@
+{
+  "title": "Archives",
+  "subtitle": "Documents historiques",
+  "labels": {
+    "ancient": "Textes anciens",
+    "charts": "Graphiques",
+    "texts": "Manuscrits"
+  },
+  "cta": "Voir les archives"
+}

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "keywords": "ancestral resonance, kinship dialogue, Oiyo",
+    "title": "Kinship Resonance",
+    "description": "Profound insights into your shared familial harmonics."
+  },
+  "hero": {
+    "subtitle": "Instruction",
+    "cta": "发起亲属关系查询",
+    "badge": "👨‍👩‍👧‍👦 血缘炼金术",
+    "title": "Kinship Resonance"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "血缘炼金术",
+        "description": "揭示控制您家庭互动的隐藏能量特征。"
+      },
+      {
+        "icon": "🚀",
+        "title": "遗留轨迹",
+        "description": "绘制代代相传的智慧之路。"
+      }
+    ],
+    "subtitle": "Instruction"
+  },
+  "types": {
+    "peacemaker": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "leader": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "supporter": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "independent": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "connector": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "problem_solver": {
+      "name": "解决方案催化剂",
+      "emoji": "🔧"
+    },
+    "subtitle": "Instruction"
+  },
+  "test": {
+    "insightBullets": [
+      "阐明你的亲属哲学中不言而喻的层面。",
+      "追踪祖先期望的无形线索。",
+      "发现您在血统中扮演的和谐角色。"
+    ],
+    "progress": "共振上升",
+    "next": "向前",
+    "previous": "反映",
+    "submit": "揭示综合",
+    "loading": "校准亲属谐波...",
+    "selectOption": "标记真理之路",
+    "subtitle": "操作说明"
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "基础共振",
+        "description": "了解亲属关系的核心引擎。",
+        "question": "什么是血缘炼金术？",
+        "answer": "它研究不同的家庭原型如何在共享的能量场内协调或产生摩擦。"
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "祖先测绘",
+        "description": "对您的血统中的历史和能量模式进行全面审核。"
+      }
+    ]
+  },
+  "result": {
+    "title": "Kinship Resonance",
+    "description": "Profound insights into your shared familial harmonics."
+  },
+  "title": "亲缘共鸣",
+  "description": "对你们共同的家庭和谐有深刻的见解。",
+  "keywords": "祖先共鸣、亲情对话、Oiyo"
+}

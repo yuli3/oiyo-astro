@@ -1,0 +1,61 @@
+{
+  "sephirot": {
+    "keter": {
+      "name": "Malkuth",
+      "meaning": "Royaume",
+      "attribute": "Action"
+    },
+    "chokhmah": {
+      "name": "Malkuth",
+      "meaning": "Royaume",
+      "attribute": "Action"
+    },
+    "binah": {
+      "name": "Malkuth",
+      "meaning": "Royaume",
+      "attribute": "Action"
+    },
+    "chesed": {
+      "name": "Malkuth",
+      "meaning": "Royaume",
+      "attribute": "Action"
+    },
+    "gevurah": {
+      "name": "Malkuth",
+      "meaning": "Royaume",
+      "attribute": "Action"
+    },
+    "tiferet": {
+      "name": "Malkuth",
+      "meaning": "Royaume",
+      "attribute": "Action"
+    },
+    "netzach": {
+      "name": "Malkuth",
+      "meaning": "Royaume",
+      "attribute": "Action"
+    },
+    "hod": {
+      "name": "Malkuth",
+      "meaning": "Royaume",
+      "attribute": "Action"
+    },
+    "yesod": {
+      "name": "Malkuth",
+      "meaning": "Royaume",
+      "attribute": "Action"
+    },
+    "malkuth": {
+      "name": "Malkuth",
+      "meaning": "Royaume",
+      "attribute": "Action"
+    }
+  },
+  "title": "Arbre de Vie Kabbalistique",
+  "description": "Chemin mystique des dix Sephirot.",
+  "systemName": "Kabbale",
+  "narrative": "Émanations Divines",
+  "sephira": "Séphira",
+  "path": "Chemin",
+  "ariaLabel": "Sephira : {name}, représentant {meaning}."
+}

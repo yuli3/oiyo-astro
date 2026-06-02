@@ -1,0 +1,206 @@
+{
+  "relationships": {
+    "egenteto": {
+      "related": ["communication-style", "decision-making", "leadership"],
+      "tags": ["personality", "core", "mbti-alternative"],
+      "category": "core-personality"
+    },
+    "communication-style": {
+      "related": ["decision-making", "leadership", "attachment-style"],
+      "tags": ["communication", "relationships", "social"],
+      "category": "core-personality"
+    },
+    "decision-making": {
+      "related": ["leadership", "egenteto", "burnout"],
+      "tags": ["thinking", "logic", "work"],
+      "category": "core-personality"
+    },
+    "music-taste": {
+      "related": ["art-style", "creative-writing-prompts"],
+      "tags": ["creative", "aesthetic", "mood"],
+      "category": "lifestyle"
+    },
+    "art-style": {
+      "related": ["music-taste", "creative-writing-prompts"],
+      "tags": ["creative", "visual", "aesthetic"],
+      "category": "lifestyle"
+    },
+    "attachment-style": {
+      "related": [
+        "romance-match",
+        "communication-style",
+        "grandparent-connection"
+      ],
+      "tags": ["relationships", "psychology", "emotional"],
+      "category": "relationships"
+    },
+    "romance-match": {
+      "related": ["attachment-style", "compatibility", "couple-compatibility"],
+      "tags": ["love", "relationships", "dating"],
+      "category": "relationships"
+    },
+    "compatibility": {
+      "related": ["couple-compatibility", "romance-match", "attachment-style"],
+      "tags": ["relationships", "compatibility", "matching"],
+      "category": "relationships"
+    },
+    "stress-response": {
+      "related": ["burnout", "sleep-optimization", "decision-making"],
+      "tags": ["wellness", "mental-health", "stress"],
+      "category": "wellness"
+    },
+    "burnout": {
+      "related": ["stress-response", "sleep-optimization", "leadership"],
+      "tags": ["wellness", "work", "mental-health"],
+      "category": "wellness"
+    },
+    "sleep-optimization": {
+      "related": ["stress-response", "burnout", "active-aging-wellness"],
+      "tags": ["wellness", "health", "rest"],
+      "category": "wellness"
+    },
+    "dream-journal": {
+      "related": ["sleep-optimization", "creative-writing-prompts", "tarot"],
+      "tags": ["subconscious", "psychology", "interpretation"],
+      "category": "wellness"
+    },
+    "career-personality": {
+      "related": ["job-match", "leadership", "mbti-learning"],
+      "tags": ["career", "work", "professional"],
+      "category": "personal-development"
+    },
+    "job-match": {
+      "related": ["career-personality", "leadership", "economic-personality"],
+      "tags": ["career", "job", "matching"],
+      "category": "personal-development"
+    },
+    "leadership": {
+      "related": ["decision-making", "career-personality", "burnout"],
+      "tags": ["leadership", "management", "work"],
+      "category": "personal-development"
+    },
+    "mbti-learning": {
+      "related": ["egenteto", "scenario-mbti", "mbti-travel"],
+      "tags": ["mbti", "learning", "education"],
+      "category": "personal-development"
+    },
+    "enneagram": {
+      "related": ["egenteto", "attachment-style", "communication-style"],
+      "tags": ["personality", "psychology", "core"],
+      "category": "core-personality"
+    },
+    "economic-personality": {
+      "related": ["job-match", "decision-making", "hobby-roulette"],
+      "tags": ["money", "finance", "lifestyle"],
+      "category": "personal-development"
+    },
+    "scenario-mbti": {
+      "related": ["egenteto", "mbti-learning", "mbti-travel"],
+      "tags": ["mbti", "scenarios", "interactive"],
+      "category": "entertainment"
+    },
+    "tarot": {
+      "related": ["dream-journal", "saju", "numerology"],
+      "tags": ["fortune", "mystical", "interpretation"],
+      "category": "entertainment"
+    },
+    "saju": {
+      "related": ["tarot", "numerology", "animal"],
+      "tags": ["fortune", "korean", "traditional"],
+      "category": "entertainment"
+    },
+    "numerology": {
+      "related": ["tarot", "saju", "animal"],
+      "tags": ["fortune", "numbers", "mystical"],
+      "category": "entertainment"
+    },
+    "animal": {
+      "related": ["egenteto"],
+      "tags": ["fun", "personality", "cute"],
+      "category": "entertainment"
+    },
+    "city-match": {
+      "related": ["country-preference", "lifestyle"],
+      "tags": ["travel", "city", "matching"],
+      "category": "lifestyle"
+    },
+    "country-preference": {
+      "related": ["city-match", "mbti-travel"],
+      "tags": ["travel", "culture", "international"],
+      "category": "lifestyle"
+    },
+    "mbti-travel": {
+      "related": ["mbti-learning", "scenario-mbti"],
+      "tags": ["mbti", "travel", "adventure"],
+      "category": "lifestyle"
+    },
+    "hobby-roulette": {
+      "related": ["art-style", "music-taste", "economic-personality"],
+      "tags": ["hobby", "leisure", "discovery"],
+      "category": "lifestyle"
+    },
+    "active-aging-wellness": {
+      "related": [
+        "grandparent-connection",
+        "sleep-optimization",
+        "stress-response"
+      ],
+      "tags": ["wellness", "aging", "health"],
+      "category": "wellness"
+    },
+    "grandparent-connection": {
+      "related": [
+        "active-aging-wellness",
+        "attachment-style",
+        "communication-style"
+      ],
+      "tags": ["family", "relationships", "intergenerational"],
+      "category": "relationships"
+    },
+    "creative-writing-prompts": {
+      "related": ["art-style", "music-taste", "dream-journal"],
+      "tags": ["creative", "writing", "expression"],
+      "category": "lifestyle"
+    },
+    "time-management-style": {
+      "related": ["burnout", "decision-making"],
+      "tags": ["productivity", "work", "efficiency"],
+      "category": "personal-development"
+    },
+    "sns-personality": {
+      "related": [
+        "communication-style",
+        "art-style",
+        "creative-writing-prompts"
+      ],
+      "tags": ["social", "communication", "digital"],
+      "category": "lifestyle"
+    }
+  },
+  "categories": {
+    "core-personality": {
+      "weight": 1.5,
+      "priority": 1
+    },
+    "lifestyle": {
+      "weight": 1.2,
+      "priority": 2
+    },
+    "relationships": {
+      "weight": 1.3,
+      "priority": 3
+    },
+    "wellness": {
+      "weight": 1.1,
+      "priority": 4
+    },
+    "personal-development": {
+      "weight": 1.4,
+      "priority": 5
+    },
+    "entertainment": {
+      "weight": 1.0,
+      "priority": 6
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "title": "HEXACO Personality Test",
+  "description": "Analyzes your personality across 6 dimensions based on the HEXACO model.",
+  "questions": {
+    "q1": "I try to be sincere when dealing with others.",
+    "q2": "I don't have frequent mood swings."
+  },
+  "results": {
+    "honesty": "Honesty-Humility",
+    "emotionality": "Emotionality",
+    "extraversion": "Extraversion",
+    "agreeableness": "Agreeableness",
+    "conscientiousness": "Conscientiousness",
+    "openness": "Openness to Experience"
+  },
+  "axis": "Ethical Axis",
+  "labels": {
+    "high": "High Resonance",
+    "low": "Low Resonance",
+    "average": "Balanced Resonance"
+  },
+  "guardian": "guardian of truth",
+  "guardianDesc": "A high Honesty-Humility score demonstrates your noble character.",
+  "restart": "Test again",
+  "dimensions": {
+    "H": "Honesty - Humility",
+    "E": "emotionality",
+    "X": "extroversion",
+    "A": "friendliness",
+    "C": "sincerity",
+    "O": "openness"
+  },
+  "honestyLevel": "Honesty level: {level}",
+  "save": "Save results",
+  "uniqueDimension": "The HEXACO Unique Dimension"
+}

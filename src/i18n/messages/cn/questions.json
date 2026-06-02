@@ -1,0 +1,820 @@
+{
+  "0": {
+    "id": 1,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "行动迅速果断",
+        "emoji": "⚡",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "首先考虑大家的感受",
+        "emoji": "💭",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "分析所有逻辑选项",
+        "emoji": "🧠",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "跟随我的直觉",
+        "emoji": "💡",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      }
+    ]
+  },
+  "1": {
+    "id": 2,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "负责并主导对话",
+        "emoji": "🎯",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "听的比我说的多",
+        "emoji": "👂",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "适应团体能量",
+        "emoji": "🌊",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "分享个人故事以建立联系",
+        "emoji": "💫",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "2": {
+    "id": 3,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "立即直接解决",
+        "emoji": "💥",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "尝试理解所有观点",
+        "emoji": "🤝",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "寻找双赢的解决方案",
+        "emoji": "🎯",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "在讨论之前留出空间",
+        "emoji": "🕰️",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "3": {
+    "id": 4,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "竞技运动或挑战",
+        "emoji": "🏆",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "创意活动或艺术",
+        "emoji": "🎨",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "学习新东西",
+        "emoji": "📚",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "与亲人共度美好时光",
+        "emoji": "👥",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "4": {
+    "id": 5,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "通过行动和成就来表达",
+        "emoji": "💪",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "使用言语和情感表达",
+        "emoji": "💕",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "给予实际支持",
+        "emoji": "🛠️",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "创造有意义的体验",
+        "emoji": "✨",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "5": {
+    "id": 6,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "直接、直接",
+        "emoji": "📢",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "温柔体贴",
+        "emoji": "🌱",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "事实与逻辑",
+        "emoji": "📊",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "情感表达",
+        "emoji": "💭",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "6": {
+    "id": 7,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "掌控并推动",
+        "emoji": "🚀",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "寻求他人的支持",
+        "emoji": "🤗",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "从逻辑上分解问题",
+        "emoji": "🧩",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "花时间处理情绪",
+        "emoji": "🧘",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "7": {
+    "id": 8,
+    "text": "Understanding and empathy",
+    "options": [
+      {
+        "text": "独立与尊重",
+        "emoji": "🦅",
+        "scores": {
+          "teto": 2,
+          "egen": 0
+        }
+      },
+      {
+        "text": "情感上的亲密和联系",
+        "emoji": "💞",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      },
+      {
+        "text": "共同目标和成长",
+        "emoji": "📈",
+        "scores": {
+          "teto": 1,
+          "egen": 1
+        }
+      },
+      {
+        "text": "理解和同理心",
+        "emoji": "💝",
+        "scores": {
+          "teto": 0,
+          "egen": 2
+        }
+      }
+    ]
+  },
+  "questions": [
+    {
+      "dimension": "EI",
+      "id": "ei_1",
+      "options": [
+        {
+          "id": "ei_1_e",
+          "text": "从社交场合获取能量",
+          "value": "E"
+        },
+        {
+          "id": "不是_1_i",
+          "text": "从独处中获取能量",
+          "value": "I"
+        }
+      ],
+      "text": "您通常如何补充能量？"
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_2",
+      "options": [
+        {
+          "id": "ei_2_e",
+          "text": "首先发起对话",
+          "value": "E"
+        },
+        {
+          "id": "不是_2_i",
+          "text": "等别人说话",
+          "value": "I"
+        }
+      ],
+      "text": "结识新朋友时，您倾向于："
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_3",
+      "options": [
+        {
+          "id": "ei_3_e",
+          "text": "有很多朋友和熟人",
+          "value": "E"
+        },
+        {
+          "id": "不是_3_i",
+          "text": "有几个亲密的朋友",
+          "value": "I"
+        }
+      ],
+      "text": "你的社交圈通常是："
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_4",
+      "options": [
+        {
+          "id": "ei_4_e",
+          "text": "大声思考",
+          "value": "E"
+        },
+        {
+          "id": "不是_4_i",
+          "text": "说话前先思考一下",
+          "value": "I"
+        }
+      ],
+      "text": "在表达想法方面，您更喜欢："
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_5",
+      "options": [
+        {
+          "id": "ei_5_e",
+          "text": "与他人谈论担忧",
+          "value": "E"
+        },
+        {
+          "id": "不是_5_i",
+          "text": "内部流程问题",
+          "value": "I"
+        }
+      ],
+      "text": "当您有疑虑时："
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_6",
+      "options": [
+        {
+          "id": "ei_6_e",
+          "text": "易于接近和打开",
+          "value": "E"
+        },
+        {
+          "id": "不是_6_i",
+          "text": "最初是保留和私有的",
+          "value": "I"
+        }
+      ],
+      "text": "在别人眼里，你是："
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_7",
+      "options": [
+        {
+          "id": "ei_7_e",
+          "text": "享受快节奏的环境",
+          "value": "E"
+        },
+        {
+          "id": "不是_7_i",
+          "text": "享受慢节奏的环境",
+          "value": "I"
+        }
+      ],
+      "text": "您喜欢的环境节奏是："
+    },
+    {
+      "dimension": "EI",
+      "id": "ei_8",
+      "options": [
+        {
+          "id": "ei_8_e",
+          "text": "在团体中感到活跃",
+          "value": "E"
+        },
+        {
+          "id": "不是_8_i",
+          "text": "适合小团体或独自一人",
+          "value": "I"
+        }
+      ],
+      "text": "你什么时候感觉最有活力？"
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_1",
+      "options": [
+        {
+          "id": "sn_1_s",
+          "text": "注重事实和细节",
+          "value": "S"
+        },
+        {
+          "id": "sn_1_n",
+          "text": "关注大局和可能性",
+          "value": "N"
+        }
+      ],
+      "text": "当学习新东西时，你："
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_2",
+      "options": [
+        {
+          "id": "sn_2_s",
+          "text": "现在实用又好用",
+          "value": "S"
+        },
+        {
+          "id": "sn_2_n",
+          "text": "理论性和面向未来",
+          "value": "N"
+        }
+      ],
+      "text": "您更喜欢以下信息："
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_3",
+      "options": [
+        {
+          "id": "sn_3_s",
+          "text": "现实、脚踏实地",
+          "value": "S"
+        },
+        {
+          "id": "sn_3_n",
+          "text": "富有想象力和创造力",
+          "value": "N"
+        }
+      ],
+      "text": "你往往是："
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_4",
+      "options": [
+        {
+          "id": "sn_4_s",
+          "text": "过往经历",
+          "value": "S"
+        },
+        {
+          "id": "sn_4_n",
+          "text": "预感和灵感",
+          "value": "N"
+        }
+      ],
+      "text": "在解决问题时，你更多地依赖于："
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_5",
+      "options": [
+        {
+          "id": "sn_5_s",
+          "text": "什么是实际的和确定的",
+          "value": "S"
+        },
+        {
+          "id": "sn_5_n",
+          "text": "什么是可能和潜力",
+          "value": "N"
+        }
+      ],
+      "text": "您更感兴趣的是："
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_6",
+      "options": [
+        {
+          "id": "sn_6_s",
+          "text": "坚持既定的惯例",
+          "value": "S"
+        },
+        {
+          "id": "sn_6_n",
+          "text": "寻找新的做事方式",
+          "value": "N"
+        }
+      ],
+      "text": "在日常生活中，您："
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_7",
+      "options": [
+        {
+          "id": "sn_7_s",
+          "text": "具体数据和事实",
+          "value": "S"
+        },
+        {
+          "id": "sn_7_n",
+          "text": "抽象思想和理论",
+          "value": "N"
+        }
+      ],
+      "text": "您更喜欢与以下人员合作："
+    },
+    {
+      "dimension": "SN",
+      "id": "sn_8",
+      "options": [
+        {
+          "id": "sn_8_s",
+          "text": "常识",
+          "value": "S"
+        },
+        {
+          "id": "sn_8_n",
+          "text": "创新",
+          "value": "N"
+        }
+      ],
+      "text": "您重视："
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_1",
+      "options": [
+        {
+          "id": "tf_1_t",
+          "text": "通过逻辑分析做出决定",
+          "value": "T"
+        },
+        {
+          "id": "tf_1_f",
+          "text": "通过考虑对他人的影响来做出决定",
+          "value": "F"
+        }
+      ],
+      "text": "你通常如何做决定？"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_2",
+      "options": [
+        {
+          "id": "tf_2_t",
+          "text": "理性和真理优先",
+          "value": "T"
+        },
+        {
+          "id": "tf_2_f",
+          "text": "优先考虑关系与和谐",
+          "value": "F"
+        }
+      ],
+      "text": "在辩论或讨论中，您："
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_3",
+      "options": [
+        {
+          "id": "tf_3_t",
+          "text": "保持客观和冷静",
+          "value": "T"
+        },
+        {
+          "id": "tf_3_f",
+          "text": "容易同情他人",
+          "value": "F"
+        }
+      ],
+      "text": "当看到别人的困境时："
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_4",
+      "options": [
+        {
+          "id": "tf_4_t",
+          "text": "提供实用建议",
+          "value": "T"
+        },
+        {
+          "id": "tf_4_f",
+          "text": "提供情感支持",
+          "value": "F"
+        }
+      ],
+      "text": "当朋友遇到麻烦时，你倾向于："
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_5",
+      "options": [
+        {
+          "id": "tf_5_t",
+          "text": "批评是必要的工具",
+          "value": "T"
+        },
+        {
+          "id": "tf_5_f",
+          "text": "批评要考虑感受",
+          "value": "F"
+        }
+      ],
+      "text": "你如何看待批评？"
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_6",
+      "options": [
+        {
+          "id": "tf_6_t",
+          "text": "客观且以规则为导向",
+          "value": "T"
+        },
+        {
+          "id": "tf_6_f",
+          "text": "个性化和包容性",
+          "value": "F"
+        }
+      ],
+      "text": "你的工作风格更多的是："
+    },
+    {
+      "dimension": "TF",
+      "id": "tf_7",
+      "options": [
+        {
+          "id": "tf_7_t",
+          "text": "坚持事实",
+          "value": "T"
+        },
+        {
+          "id": "tf_7_f",
+          "text": "妥协以达成共识",
+          "value": "F"
+        }
+      ],
+      "text": "当你的观点与某个团体不同意时："
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_1",
+      "options": [
+        {
+          "id": "pj_1_j",
+          "text": "制定详细计划",
+          "value": "J"
+        },
+        {
+          "id": "pj_1_p",
+          "text": "随波逐流",
+          "value": "P"
+        }
+      ],
+      "text": "去度假之前，您："
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_2",
+      "options": [
+        {
+          "id": "pj_2_j",
+          "text": "提前完成任务",
+          "value": "J"
+        },
+        {
+          "id": "pj_2_p",
+          "text": "依靠最后期限的压力",
+          "value": "P"
+        }
+      ],
+      "text": "你如何处理最后期限？"
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_3",
+      "options": [
+        {
+          "id": "pj_3_j",
+          "text": "有组织、有结构",
+          "value": "J"
+        },
+        {
+          "id": "pj_3_p",
+          "text": "灵活休闲",
+          "value": "P"
+        }
+      ],
+      "text": "您的办公桌或房间通常是："
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_4",
+      "options": [
+        {
+          "id": "pj_4_j",
+          "text": "感到安定和安全",
+          "value": "J"
+        },
+        {
+          "id": "pj_4_p",
+          "text": "感到受限和被困",
+          "value": "P"
+        }
+      ],
+      "text": "当计划最终确定后，您通常："
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_5",
+      "options": [
+        {
+          "id": "pj_5_j",
+          "text": "先工作，后娱乐",
+          "value": "J"
+        },
+        {
+          "id": "pj_5_p",
+          "text": "工作之余寻找乐趣",
+          "value": "P"
+        }
+      ],
+      "text": "您的工作和娱乐顺序是："
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_6",
+      "options": [
+        {
+          "id": "pj_6_j",
+          "text": "确定性和清晰度",
+          "value": "J"
+        },
+        {
+          "id": "pj_6_p",
+          "text": "开放性和多样性",
+          "value": "P"
+        }
+      ],
+      "text": "您更喜欢这样的生活："
+    },
+    {
+      "dimension": "PJ",
+      "id": "pj_7",
+      "options": [
+        {
+          "id": "pj_7_j",
+          "text": "坚持计划，减少意外",
+          "value": "J"
+        },
+        {
+          "id": "pj_7_p",
+          "text": "适应并拥抱变化",
+          "value": "P"
+        }
+      ],
+      "text": "遇到突发情况时："
+    }
+  ],
+  "signal": "信号",
+  "bond": "询问"
+}

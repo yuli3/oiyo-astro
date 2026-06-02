@@ -1,0 +1,1129 @@
+{
+  "labels": {
+    "hireDate": "入职日期",
+    "resignationDate": "离职日期",
+    "monthlySalary": "月薪（税前）",
+    "annualBonus": "年度奖金（按比例）",
+    "annualLeave": "未使用年假补助",
+    "severancePay": "估计离职金"
+  },
+  "results": {
+    "tenure": "服务期间",
+    "estimated": "估计离职金",
+    "total": "估计离职金总额"
+  },
+  "basis": {
+    "title": "我的深度分析",
+    "tenure": "服务期间",
+    "monthlyBase": "月基本工资",
+    "annualBonus": "年度奖金（按比例）",
+    "annualLeave": "未使用年假补助",
+    "threeMonthTotal": "3个月总工资",
+    "avgDailyWage": "平均日薪",
+    "formula": "* 公式：平均日薪 × 30天 × （服务天数 ÷ 365）"
+  },
+  "legal": {
+    "title": "我的深度分析",
+    "note": "此计算器仅供参考，实际离职金可能有所不同。",
+    "item1": "使用基于员工退休福利保障法的标准公式。",
+    "item2": "实际平均工资包括近3个月收到的所有工资（基本工资、补助、奖金等）。",
+    "item3": "对于中期结算等复杂情况，请咨询劳动律师。",
+    "item4": "服务不足1年的员工无权获得离职金。"
+  },
+  "error": {
+    "lessThanYear": "如果服务期不足1年，则不产生离职金。",
+    "invalidDate": "入职日期不能晚于离职日期。"
+  },
+  "meta": {
+    "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金",
+    "disclaimer": "此计算仅为估计值。实际离职金可能因公司政策和具体劳动合同而异。",
+    "title": "我的深度分析",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "test": {
+    "insightBullets": ["等待合成..."],
+    "progress": "Awaiting synthesis...",
+    "submit": "Awaiting synthesis...",
+    "loading": "Awaiting synthesis...",
+    "selectOption": "Awaiting synthesis..."
+  },
+  "result": {
+    "title": "我的深度分析",
+    "description": "Awaiting synthesis..."
+  },
+  "moneyHabits": {
+    "meta": {
+      "keywords": "Awaiting synthesis...",
+      "resultTitle": "Awaiting synthesis...",
+      "resultDescription": "Awaiting synthesis...",
+      "testTitle": "金钱习惯评估",
+      "testDescription": "Awaiting synthesis...",
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金",
+      "cta": "Awaiting synthesis...",
+      "badge": "Global Benchmarking",
+      "title": "我的深度分析"
+    },
+    "benefits": {
+      "items": {
+        "0": {
+          "emoji": "乙",
+          "title": "我的深度分析",
+          "description": "Awaiting synthesis..."
+        },
+        "1": {
+          "emoji": "乙",
+          "title": "我的深度分析",
+          "description": "Awaiting synthesis..."
+        },
+        "2": {
+          "emoji": "乙",
+          "title": "我的深度分析",
+          "description": "Awaiting synthesis..."
+        }
+      },
+      "title": "我的深度分析"
+    },
+    "cta": {
+      "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金",
+      "button": "Take Tests Now",
+      "title": "我的深度分析"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "1": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "2": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "3": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      },
+      "title": "我的深度分析"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🚀",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "💡",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🎯",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🔥",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "⭐",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["等待合成...", "等待合成...", "等待合成..."],
+      "common": {
+        "progress": "Awaiting synthesis...",
+        "next": "Awaiting synthesis...",
+        "previous": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "start": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "results": "Awaiting synthesis...",
+        "dashboard": "Awaiting synthesis...",
+        "insights": "Awaiting synthesis..."
+      },
+      "test": {
+        "insightBullets": ["等待合成..."],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis..."
+      },
+      "result": {
+        "title": "我的深度分析",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "我的深度分析",
+        "description": "Awaiting synthesis...",
+        "keywords": "Awaiting synthesis..."
+      },
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金",
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis...",
+      "finish": "结束",
+      "swipeHint": "滑动提示"
+    },
+    "result": {
+      "chart": {
+        "impulseControl": "脉冲控制",
+        "savingCapacity": "节省容量",
+        "planningSkill": "规划技巧",
+        "emotionalControl": "情绪控制"
+      },
+      "test": {
+        "insightBullets": ["等待合成..."],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis..."
+      },
+      "result": {
+        "title": "我的深度分析",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "我的深度分析",
+        "description": "Awaiting synthesis...",
+        "keywords": "Awaiting synthesis..."
+      },
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "shareTitle": "Awaiting synthesis...",
+      "copySuccess": "复制成功",
+      "scoresTitle": "Awaiting synthesis...",
+      "impulseRisk": "冲动风险",
+      "strengths": "Awaiting synthesis...",
+      "challenges": "挑战",
+      "actionTips": "行动建议",
+      "savingRecommendation": "保存建议",
+      "recommendedPercentage": "推荐百分比",
+      "share": "Awaiting synthesis...",
+      "retake": "Awaiting synthesis..."
+    },
+    "title": "我的深度分析",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "payment": {
+    "checkout": {
+      "orderName": "Oiyo.net {planName} 订阅"
+    },
+    "errors": {
+      "PLAN_NOT_FOUND": "Awaiting synthesis...",
+      "PAYMENT_SERVICE_ERROR": "Awaiting synthesis...",
+      "PROVIDER_REQUIRED": "Awaiting synthesis...",
+      "LOCALE_REQUIRED": "Awaiting synthesis...",
+      "CURRENCY_REQUIRED": "Awaiting synthesis...",
+      "TOSS_CLIENT_KEY_REQUIRED": "Awaiting synthesis...",
+      "LEMONSQUEEZY_CONFIG_REQUIRED": "Awaiting synthesis...",
+      "generic": "Awaiting synthesis..."
+    },
+    "failed": {
+      "help": {
+        "technical": {
+          "refresh": "刷新页面",
+          "browser": "尝试不同的浏览器",
+          "network": "Awaiting synthesis...",
+          "incognito": "尝试隐身/私人模式",
+          "title": "我的深度分析"
+        },
+        "payment": {
+          "title": "我的深度分析",
+          "checkCard": "Check your card details",
+          "checkFunds": "Ensure sufficient funds",
+          "tryAnother": "Awaiting synthesis...",
+          "contactBank": "Contact your bank"
+        }
+      },
+      "meta": {
+        "title": "我的深度分析",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🚀",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "💡",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🎯",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🔥",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "⭐",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🚀",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "💡",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🎯",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🔥",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "⭐",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": ["等待合成...", "等待合成...", "等待合成..."],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis...",
+        "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🚀",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "💡",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🎯",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🔥",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "⭐",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          }
+        ]
+      },
+      "result": {
+        "title": "我的深度分析",
+        "description": "Awaiting synthesis..."
+      },
+      "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金",
+      "genericTitle": "付款错误",
+      "genericDescription": "Awaiting synthesis...",
+      "genericAction": "再试一次",
+      "unknownTitle": "未知错误",
+      "unknownDescription": "Awaiting synthesis...",
+      "unknownAction": "联系支持人员",
+      "orderId": "订单号",
+      "orderIdNote": "Awaiting synthesis...",
+      "technicalDetails": "技术细节",
+      "errorCode": "错误代码",
+      "errorMessage": "错误信息",
+      "whatNext": "你能做什么？",
+      "contactSupport": "联系支持人员",
+      "backToHome": "返回首页",
+      "needHelp": "需要帮助吗？",
+      "stillNeedHelp": "仍有问题吗？",
+      "getSupport": "获得支持",
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "success": {
+      "meta": {
+        "title": "我的深度分析",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🚀",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "💡",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🎯",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🔥",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "⭐",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🚀",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "💡",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🎯",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🔥",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "⭐",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": ["等待合成...", "等待合成...", "等待合成..."],
+        "progress": "Awaiting synthesis...",
+        "submit": "Awaiting synthesis...",
+        "loading": "Awaiting synthesis...",
+        "selectOption": "Awaiting synthesis...",
+        "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🚀",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "💡",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🎯",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "🔥",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          },
+          {
+            "icon": "⭐",
+            "title": "等待合成...",
+            "description": "等待合成...",
+            "question": "等待合成...",
+            "answer": "等待合成..."
+          }
+        ]
+      },
+      "result": {
+        "title": "我的深度分析",
+        "description": "Awaiting synthesis..."
+      },
+      "welcome', { name: user": {
+        "firstName || user": {
+          "fullName || t('success": {
+            "user": "用户"
+          }
+        }
+      },
+      "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金",
+      "verifying": "正在验证付款...",
+      "verifyingDescription": "Awaiting synthesis...",
+      "premiumActive": "高级活跃",
+      "welcome": "欢迎{name}！",
+      "user": "用户",
+      "paymentDetails": "付款详情",
+      "orderId": "订单号",
+      "amount": "数量",
+      "status": "地位",
+      "confirmed": "确认的",
+      "verificationSuccess": "Awaiting synthesis...",
+      "verificationFailed": "Awaiting synthesis...",
+      "verificationNetworkError": "Awaiting synthesis...",
+      "verificationRetry": "重试验证",
+      "verificationPending": "等待确认",
+      "approvedAt": "批准时间",
+      "featuresUnlocked": "Awaiting synthesis...",
+      "nextSteps": "接下来是什么？",
+      "goToDashboard": "转到仪表板",
+      "takeTest": "参加测试",
+      "supportNote": "Awaiting synthesis...",
+      "contactSupport": "联系支持人员",
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "test": {
+      "insightBullets": ["等待合成..."],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "meta": {
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis...",
+      "keywords": "Awaiting synthesis..."
+    },
+    "checkCard": "检查您的卡详细信息",
+    "checkFunds": "确保资金充足",
+    "tryAnother": "Awaiting synthesis...",
+    "contactBank": "联系您的银行"
+  },
+  "globalComparison": {
+    "meta": {
+      "cta": {
+        "button": "Take Tests Now"
+      },
+      "keywords": "Awaiting synthesis...",
+      "badge": "Global Benchmarking",
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "filters": {
+      "region": "🌏 选择区域",
+      "age": "👥 年龄段",
+      "gender": "⚧ 性别",
+      "test": "Awaiting synthesis..."
+    },
+    "tabs": {
+      "overview": "📈 概述",
+      "regional": "🗺️区域比较",
+      "demographics": "👥 人口统计",
+      "rankings": "🏆 排名"
+    },
+    "chart": {
+      "scoreDistribution": "📊 分数分布",
+      "personalityRankings": "🏆 性格类型排名",
+      "avgScore": "平均分",
+      "users": "用户",
+      "topRankText": "您在全球用户中排名前 {percent}% 🚀",
+      "allAges": "所有年龄段",
+      "all": "全部",
+      "male": "男性",
+      "female": "女性",
+      "global": "全球的",
+      "asia": "亚洲",
+      "europe": "欧洲",
+      "northAmerica": "北美",
+      "korea": "韩国",
+      "southAmerica": "南美洲",
+      "africa": "非洲",
+      "oceania": "大洋洲"
+    },
+    "demographics": {
+      "comingSoon": "📊 人口统计分析功能即将推出。"
+    },
+    "cta": {
+      "button": "立即参加测试",
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "features": {
+      "benchmarking": {
+        "title": "我的深度分析",
+        "description": "Awaiting synthesis..."
+      },
+      "regional": {
+        "title": "我的深度分析",
+        "description": "Awaiting synthesis..."
+      }
+    },
+    "insights": {
+      "yourScore": "你的分数",
+      "globalAverage": "全球平均水平",
+      "percentile": "百分位数",
+      "topPerformers": "表现最佳者",
+      "aboveAverage": "高于平均水平",
+      "belowAverage": "低的",
+      "regions": "地区"
+    },
+    "test": {
+      "insightBullets": ["等待合成..."],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "badge": "全球标杆管理",
+    "loading": "Awaiting synthesis...",
+    "noData": "📋 没有数据可供分析。 请先完成性格测试。",
+    "title": "我的深度分析",
+    "description": "Awaiting synthesis...",
+    "keywords": "Awaiting synthesis..."
+  },
+  "luck": {
+    "meta": {
+      "keywords": "Awaiting synthesis..."
+    },
+    "hero": {
+      "eyebrow": "Smart Wallet Lab",
+      "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金",
+      "cta": "Awaiting synthesis..."
+    }
+  },
+  "spendingStyle": {
+    "meta": {
+      "keywords": "Awaiting synthesis..."
+    },
+    "hero": {
+      "eyebrow": "智能钱包实验室",
+      "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金",
+      "cta": "Awaiting synthesis..."
+    }
+  },
+  "nJobler": {
+    "test": {
+      "insightBullets": ["等待合成...", "等待合成...", "等待合成..."],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金"
+    },
+    "meta": {
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🚀",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "💡",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🎯",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🔥",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "⭐",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🚀",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "💡",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🎯",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🔥",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "⭐",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🚀",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "💡",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🎯",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🔥",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "⭐",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        }
+      ]
+    },
+    "result": {
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "我的深度分析",
+    "description": "Awaiting synthesis..."
+  },
+  "giftTax": {
+    "test": {
+      "insightBullets": ["等待合成...", "等待合成...", "等待合成..."],
+      "progress": "Awaiting synthesis...",
+      "submit": "Awaiting synthesis...",
+      "loading": "Awaiting synthesis...",
+      "selectOption": "Awaiting synthesis...",
+      "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金"
+    },
+    "meta": {
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🚀",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "💡",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🎯",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🔥",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "⭐",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🚀",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "💡",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🎯",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🔥",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "⭐",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🚀",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "💡",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🎯",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "🔥",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        },
+        {
+          "icon": "⭐",
+          "title": "等待合成...",
+          "description": "等待合成...",
+          "question": "等待合成...",
+          "answer": "等待合成..."
+        }
+      ]
+    },
+    "result": {
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "我的深度分析",
+    "description": "Awaiting synthesis..."
+  },
+  "faq": {
+    "items": [
+      {
+        "q": "等待合成...",
+        "a": "等待合成..."
+      },
+      {
+        "q": "等待合成...",
+        "a": "等待合成..."
+      },
+      {
+        "q": "等待合成...",
+        "a": "等待合成..."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "title": "等待合成...",
+        "description": "等待合成..."
+      },
+      {
+        "title": "等待合成...",
+        "description": "等待合成..."
+      },
+      {
+        "title": "等待合成...",
+        "description": "等待合成..."
+      }
+    ]
+  },
+  "hub": {
+    "meta": {
+      "title": "我的深度分析",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "我的深度分析",
+    "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金"
+  },
+  "subtitle": "使用入职日期、离职日期和3个月工资检查估计离职金",
+  "optional": "可选",
+  "currency": "USD",
+  "disclaimer": "此计算仅为估计值。实际离职金可能因公司政策和具体劳动合同而异。",
+  "ko-KR": "科-KR",
+  "title": "我的深度分析"
+}

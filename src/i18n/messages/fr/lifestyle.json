@@ -1,0 +1,45 @@
+{
+  "health": {
+    "sleepDream": {
+      "status": {
+        "no_data": {
+          "title": "Aucune donnée sur le sommeil",
+          "desc": "Il n'y a pas encore de journaux de sommeil. Enregistrez votre sommeil aujourd'hui."
+        },
+        "critical_sleep": {
+          "title": "Attention au manque de sommeil",
+          "desc": "La qualité du sommeil est médiocre. La récupération est nécessaire."
+        },
+        "good_state": {
+          "title": "bonne condition de sommeil",
+          "desc": "Vous semblez vous reposer suffisamment. Excellent."
+        },
+        "neutral": {
+          "title": "état de sommeil normal",
+          "desc": "Ce n'est pas mal, mais il y a place à amélioration pour une meilleure nuit de sommeil."
+        }
+      },
+      "metrics": {
+        "sleepScore": "score de sommeil",
+        "lastDream": "dernier rêve",
+        "recorded": "connecté"
+      },
+      "prompts": {
+        "sleep": {
+          "title": "Suivez votre sommeil",
+          "desc": "Enregistrez la qualité de votre sommeil aujourd'hui et vérifiez votre score."
+        },
+        "dream": {
+          "title": "enregistre tes rêves",
+          "desc": "Enregistrez tous les rêves dont vous vous souvenez et interprétez leur signification."
+        }
+      },
+      "prescription": {
+        "title": "ordonnance personnalisée",
+        "desc": "Il semble que vous ayez besoin de tranquillité d’esprit et de corps. Essayez le bouton panique ou des exercices de respiration.",
+        "button": "Utiliser les outils de stabilité"
+      },
+      "quote": "Le sommeil est la meilleure méditation. - Dalaï Lama"
+    }
+  }
+}

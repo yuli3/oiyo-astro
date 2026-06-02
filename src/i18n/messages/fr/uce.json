@@ -1,0 +1,133 @@
+{
+  "title": "Loisirs Recommandés",
+  "subtitle": "Je ne peux pas abandonner maintenant",
+  "resonance": {
+    "title": "Loisirs Recommandés",
+    "high": "Harmonie Très Élevée",
+    "moderate": "Harmonie Équilibrée",
+    "low": "Potentiel de Croissance"
+  },
+  "cosmic_synthesis": "Synthèse : {mythos} avec {elementDesc} {trait}",
+  "archetype": {
+    "title": "Loisirs Recommandés",
+    "radiantCatalyst": "Catalyseur Rayonnant",
+    "deepSeer": "Voyant Profond",
+    "growingPioneer": "Pionnier en Croissance",
+    "steadfastGuardian": "Gardien Inébranlable",
+    "embracingMediator": "Médiateur Accueillant",
+    "harmoniousTraveler": "Voyageur Harmonieux",
+    "default": "Voyageur Harmonieux",
+    "wood": "Le Pionnier en Croissance (The Growing Pioneer)",
+    "fire": "Le Catalyseur Rayonnant (The Radiant Catalyst)",
+    "earth": "Le Gardien Inébranlable (The Steadfast Guardian)",
+    "metal": "Le Stratège Perspicace (The Sharp Strategist)",
+    "water": "Le Voyant Profond (The Deep Seer)"
+  },
+  "synergy": {
+    "title": "Loisirs Recommandés",
+    "description": "Erreur consistant à prendre des décisions irrationnelles à cause des coûts (temps, argent, effort) déjà investis.",
+    "tciSaju": "Le tempérament et l'énergie Saju résonnent",
+    "hspStar": "La sensibilité et l'étoile du destin s'harmonisent",
+    "hobbyRiasec": "Les loisirs et l'aptitude professionnelle s'alignent",
+    "mayan_tci": "Le sceau solaire maya inspire les dimensions temperamentales",
+    "celtic_resilience": "La sagesse des arbres celtiques soutient la résilience",
+    "sect_decan": "L'énergie temporelle du jour et de la nuit s'équilibre",
+    "stone_tci": "L'énergie de la pierre de naissance module le tempérament",
+    "mayan_career": "Le ton maya guide le timing professionnel",
+    "celtic_hobby": "L'archétype de l'arbre celtique inspire le choix des loisirs"
+  },
+  "friction": {
+    "title": "Loisirs Recommandés",
+    "description": "Erreur consistant à prendre des décisions irrationnelles à cause des coûts (temps, argent, effort) déjà investis.",
+    "highHAFire": "Conflit entre l'évitement du danger élevé et l'énergie du feu",
+    "highNSEarth": "Friction entre la recherche de sensations élevée et l'énergie stagnante de la terre",
+    "hspHighFire": "La haute sensibilité pourrait être submergée par l'énergie du feu",
+    "lowResilienceMetal": "Faible résilience en conflit avec le tranchant du métal"
+  },
+  "cognitiveRisks": {
+    "title": "Loisirs Recommandés",
+    "description": "Erreur consistant à prendre des décisions irrationnelles à cause des coûts (temps, argent, effort) déjà investis."
+  },
+  "resilience": {
+    "title": "Loisirs Recommandés",
+    "description": "Erreur consistant à prendre des décisions irrationnelles à cause des coûts (temps, argent, effort) déjà investis.",
+    "gratitudeJournal": "Écrire 3 lignes de gratitude chaque jour",
+    "fireBreathing": "Méditation respiratoire pour réguler l'énergie du feu",
+    "waterSleep": "Sommeil régulier pour stabiliser l'énergie de l'eau"
+  },
+  "hobbies": {
+    "title": "Loisirs Recommandés",
+    "description": "Erreur consistant à prendre des décisions irrationnelles à cause des coûts (temps, argent, effort) déjà investis.",
+    "toastmasters": {
+      "name": "Erreur des Coûts Irrécupérables",
+      "description": "Erreur consistant à prendre des décisions irrationnelles à cause des coûts (temps, argent, effort) déjà investis."
+    },
+    "fluid_art": {
+      "name": "Erreur des Coûts Irrécupérables",
+      "description": "Erreur consistant à prendre des décisions irrationnelles à cause des coûts (temps, argent, effort) déjà investis."
+    }
+  },
+  "questions": {
+    "q13": "En pensant au passé, vous dites-vous souvent 'Je le savais' ?",
+    "q14": "Préférez-vous maintenir le statu quo plutôt que d'accepter de nouveaux changements ?",
+    "q15": "Persistez-vous dans une situation désagréable à cause du temps ou de l'argent déjà investi ?"
+  },
+  "options": {
+    "q13": {
+      "a": "Je continue jusqu'au bout car c'est du gâchis d'arrêter.",
+      "b": "S'il n'y a pas d'utilité, j'abandonne audacieusement.",
+      "c": "Ça dépend, mais je coupe les pertes si nécessaire."
+    },
+    "q14": {
+      "a": "Je continue jusqu'au bout car c'est du gâchis d'arrêter.",
+      "b": "S'il n'y a pas d'utilité, j'abandonne audacieusement.",
+      "c": "Ça dépend, mais je coupe les pertes si nécessaire."
+    },
+    "q15": {
+      "a": "Je continue jusqu'au bout car c'est du gâchis d'arrêter.",
+      "b": "S'il n'y a pas d'utilité, j'abandonne audacieusement.",
+      "c": "Ça dépend, mais je coupe les pertes si nécessaire."
+    }
+  },
+  "types": {
+    "hindsight_bias": {
+      "name": "Erreur des Coûts Irrécupérables",
+      "subtitle": "Je ne peux pas abandonner maintenant",
+      "description": "Erreur consistant à prendre des décisions irrationnelles à cause des coûts (temps, argent, effort) déjà investis.",
+      "examples": [
+        "Dire « Je savais que le titre allait chuter » même si vous ne l'aviez pas prédit.",
+        "Après une élection, penser « Bien sûr qu'ils gagneraient »."
+      ],
+      "overcome": [
+        "Rappelez-vous consciemment l’incertitude au moment de la décision.",
+        "Tenez un journal de décision pour enregistrer les prédictions avant les résultats."
+      ]
+    },
+    "status_quo_bias": {
+      "name": "Erreur des Coûts Irrécupérables",
+      "subtitle": "Je ne peux pas abandonner maintenant",
+      "description": "Erreur consistant à prendre des décisions irrationnelles à cause des coûts (temps, argent, effort) déjà investis.",
+      "examples": [
+        "Hésiter à changer d'emploi même lorsque de meilleures opportunités se présentent.",
+        "Entretenir des relations insatisfaisantes par peur du changement."
+      ],
+      "overcome": [
+        "Évaluez objectivement les coûts cachés de l’état actuel.",
+        "Commencez par de petits changements pour développer la tolérance au changement."
+      ]
+    },
+    "sunk_cost_fallacy": {
+      "name": "Erreur des Coûts Irrécupérables",
+      "subtitle": "Je ne peux pas abandonner maintenant",
+      "description": "Erreur consistant à prendre des décisions irrationnelles à cause des coûts (temps, argent, effort) déjà investis.",
+      "examples": [
+        "Regarder un film ennuyeux jusqu'à la fin parce que « je l'ai payé pour cela ».",
+        "Poursuivre un projet qui a échoué parce que « nous avons tellement investi »."
+      ],
+      "overcome": [
+        "Décidez dans une perspective « à partir de maintenant ». Oubliez les investissements passés.",
+        "Demandez-vous si vous feriez le même choix si vous repartiez à zéro."
+      ]
+    }
+  }
+}

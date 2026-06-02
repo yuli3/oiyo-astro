@@ -1,0 +1,22 @@
+{
+  "title": "Goals",
+  "new_goal": "Nuevo objetivo",
+  "placeholder_title": "¿Cuál es tu objetivo?",
+  "progress": "Progreso",
+  "no_goals": "No goals set yet. Comience su viaje hoy.",
+  "meta": {
+    "title": "Objetivos",
+    "description": "Gestiona tus objetivos de vida.",
+    "keywords": "metas, prueba, análisis, personalidad"
+  },
+  "add_to_goals": "Añadir a objetivos",
+  "add_goal_desc": "Establece una fecha límite y agrégala a tu rastreador.",
+  "goal_title": "Objetivos",
+  "goal_deadline": "Fecha límite de gol",
+  "setGoal": "Establecer objetivo",
+  "myGoals": "Mis metas",
+  "completed": "Terminada",
+  "inProgress": "En curso",
+  "save": "Ahorrar",
+  "cancel": "Cancelar"
+}

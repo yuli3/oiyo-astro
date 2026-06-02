@@ -1,0 +1,184 @@
+{
+  "hero": {
+    "backToHome": "Retour à la maison",
+    "badge": "Introduction",
+    "cosmicSignature": "Votre signature cosmique",
+    "description": "The Master Teacher",
+    "discover": "Découvrir",
+    "highlight": "Aperçu",
+    "mainTitle": "Calculateur de chemin de vie",
+    "pageSubtitle": "Sagesse ancienne",
+    "subtitle": "Reveal your path",
+    "title": "Chemin de vie",
+    "your": "Ton"
+  },
+  "input": {
+    "birthDate": "Date de naissance",
+    "birthDateError": "Date invalide",
+    "calculating": "Calculatrice...",
+    "dateLabel": "Date de naissance",
+    "description": "The Master Teacher",
+    "fullName": "Nom et prénom",
+    "nameLabel": "Nom",
+    "namePlaceholder": "John Doe",
+    "submit": "Calculer",
+    "title": "Life Path"
+  },
+  "intro": {
+    "badge": "Introduction",
+    "button": "Commencer",
+    "description": "The Master Teacher",
+    "quote": "Les nombres gouvernent l'univers",
+    "title": "Life Path"
+  },
+  "meanings": {
+    "birthDay": "Anniversaire",
+    "destiny": "Destin",
+    "lifePath": "Chemin de vie",
+    "personality": "Personnalité",
+    "soulUrge": "Besoin de l'âme"
+  },
+  "meta": {
+    "description": "The Master Teacher",
+    "keywords": "numérologie, chemin de vie",
+    "title": "Life Path"
+  },
+  "result": {
+    "analyzeAnother": "Analyser un autre",
+    "anotherPerson": "Vérifier une autre personne",
+    "dashboard": {
+      "advice": "Conseil",
+      "career": "Carrière",
+      "challenges": "Défis",
+      "strengths": "Points forts",
+      "yearEnergy": "Année Énergie"
+    },
+    "dashboardTitle": "Votre tableau de bord",
+    "description": "The Master Teacher",
+    "lifeCoordination": "Coordination de la vie",
+    "readingTitle": "Votre lecture",
+    "recommendedCities": "Villes recommandées",
+    "soulFoods": "Aliments pour l'âme"
+  },
+  "results": {
+    "expression": "Expression",
+    "header": "En-tête des résultats",
+    "lifePath": "Chemin de vie",
+    "personality": "Personnalité",
+    "recalibrate": "Recalibrer",
+    "soulUrge": "Besoin de l'âme",
+    "vibrationalResonance": "Résonance vibratoire"
+  },
+  "subtitle": "Révélez votre chemin",
+  "title": "Chemin de vie",
+  "numbers": {
+    "1": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "2": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "3": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "4": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "5": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "6": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "7": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "8": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "9": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "11": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "22": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "33": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "Le maître enseignant",
+      "keywords": [],
+      "name": "Le maître enseignant",
+      "strengths": [],
+      "traits": []
+    }
+  }
+}

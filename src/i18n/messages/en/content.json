@@ -1,0 +1,13 @@
+{
+  "tips": {
+    "tip1": "Tip 1",
+    "tip2": "Tip 2",
+    "tip3": "Tip 3"
+  },
+  "heading": "Heading",
+  "subheading": "Subheading",
+  "description1": "Description 1",
+  "description2": "Description 2",
+  "cta": "Click Here",
+  "tipsTitle": "Tips"
+}

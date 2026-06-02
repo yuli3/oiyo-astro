@@ -1,0 +1,96 @@
+{
+  "scenario": {
+    "meta": {
+      "hero": {
+        "subtitle": "¡Haz el test ahora y ve cómo reaccionarías en situaciones extremas!",
+        "feature1": "8 Escenarios Extremos",
+        "feature2": "5 Minutos",
+        "feature3": "MBTI Científico"
+      },
+      "features": {
+        "feature1Title": "Escenarios Atractivos",
+        "feature1Description": "¡Olvida las preguntas aburridas! Responde a través de escenarios emocionantes como apocalipsis zombi, viajes en el tiempo y encuentros alienígenas.",
+        "feature2Title": "Análisis Preciso",
+        "feature2Description": "Sincronizando los hilos de tu destino...",
+        "feature3Title": "Resultados Detallados",
+        "feature3Description": "Obtén información completa: fortalezas, debilidades, sugerencias de carrera, compatibilidad y personas famosas de tu tipo."
+      },
+      "scenarios": {
+        "zombie": "Apocalipsis Zombi",
+        "island": "Isla Desierta",
+        "timeTravel": "Viaje en el Tiempo",
+        "superpowers": "Superpoderes",
+        "lottery": "Ganador de Lotería",
+        "aliens": "Contacto Alienígena",
+        "fantasy": "Mundo de Fantasía",
+        "space": "Estación Espacial"
+      },
+      "cta": {
+        "subtitle": "¡Haz el test ahora y ve cómo reaccionarías en situaciones extremas!",
+        "button": "Comenzar Test"
+      },
+      "keywords": "keywords, tags, seo",
+      "title": "Mi Análisis",
+      "description": "Análisis exhaustivo y perspectivas personalizadas"
+    },
+    "scenarios": {
+      "zombie": "Apocalipsis Zombi",
+      "island": "Isla Desierta",
+      "timeTravel": "Viaje en el Tiempo",
+      "superpowers": "Superpoderes",
+      "lottery": "Ganador de Lotería",
+      "aliens": "Contacto Alienígena",
+      "fantasy": "Mundo de Fantasía",
+      "space": "Estación Espacial",
+      "title": "Mi Análisis"
+    },
+    "hero": {
+      "subtitle": "¡Haz el test ahora y ve cómo reaccionarías en situaciones extremas!",
+      "feature1": "8 Escenarios Extremos",
+      "feature2": "5 Minutos",
+      "feature3": "MBTI Científico",
+      "title": "Mi Análisis"
+    },
+    "cta": {
+      "subtitle": "¡Haz el test ahora y ve cómo reaccionarías en situaciones extremas!",
+      "button": "Comenzar Test",
+      "title": "Mi Análisis"
+    },
+    "features": {
+      "feature1Title": "Escenarios Atractivos",
+      "feature1Description": "¡Olvida las preguntas aburridas! Responde a través de escenarios emocionantes como apocalipsis zombi, viajes en el tiempo y encuentros alienígenas.",
+      "feature2Title": "Análisis Preciso",
+      "feature2Description": "Sincronizando los hilos de tu destino...",
+      "feature3Title": "Resultados Detallados",
+      "feature3Description": "Obtén información completa: fortalezas, debilidades, sugerencias de carrera, compatibilidad y personas famosas de tu tipo.",
+      "title": "Mi Análisis"
+    },
+    "faq": {
+      "title": "Mi Análisis",
+      "question1": "¿Cómo navegas las corrientes de la vida?",
+      "answer1": "Las pequeñas elecciones se acumulan en un gran destino.",
+      "question2": "¿Cómo responde tu alma ante lo desconocido?",
+      "answer2": "Las pequeñas elecciones se acumulan en un gran destino.",
+      "question3": "¿Cuál es tu frecuencia central única?",
+      "answer3": "La armonía interior guía tus acciones cotidianas.",
+      "question4": "¿Cuál es tu frecuencia central única?",
+      "answer4": "La armonía interior guía tus acciones cotidianas."
+    },
+    "test": {
+      "insightBullets": ["Mapeando la constelación de tu verdadero yo."],
+      "progress": "Progreso",
+      "submit": "Enviar",
+      "loading": "Cargando",
+      "selectOption": "Seleccionar",
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Mi Análisis",
+      "description": "Análisis exhaustivo y perspectivas personalizadas"
+    },
+    "title": "Mi Análisis",
+    "description": "Análisis exhaustivo y perspectivas personalizadas",
+    "keywords": "keywords, tags, seo"
+  }
+}

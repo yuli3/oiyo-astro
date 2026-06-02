@@ -1,0 +1,10 @@
+{
+  "options": {
+    "career": "직업",
+    "wealth": "자산 관리",
+    "wellness": "심리학/건강",
+    "relationships": "관계",
+    "growth": "자기계발"
+  },
+  "title": "현재 중점 분야"
+}

@@ -1,0 +1,8 @@
+{
+  "sort": "Ordenar por",
+  "category": "Categoría",
+  "mood": "Ánimo",
+  "timeRange": {
+    "label": "Rango de tiempo"
+  }
+}

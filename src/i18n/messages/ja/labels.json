@@ -1,0 +1,14 @@
+{
+  "faceShape": "顔の形",
+  "personalColor": "パーソナルカラー",
+  "achievements": "達成",
+  "totalAmount": "合計金額",
+  "supplyAmount": "供給金額",
+  "salaryInput": "給与",
+  "salaryPlaceholder": "給与を入力してください",
+  "dependents": "扶養家族",
+  "children": "子供",
+  "calculate": "計算",
+  "calculatePrompt": "詳細を入力して計算してください。",
+  "disclaimerText": "財務上の助言ではありません。"
+}

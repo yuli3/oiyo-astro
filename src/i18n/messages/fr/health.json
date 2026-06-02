@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Questions Fréquemment Posées",
+    "description": "Bien vieillir ne se fait pas seul. Collaborez avec la famille, les amis et les professionnels pour construire un bien-être durable.",
+    "keywords": "vieillissement actif, bien-être senior, bien vieillir, mouvement et conscience, soutien aux soins, design de longévité"
+  },
+  "hero": {
+    "badge": "🌿 Labo de Longévité",
+    "subtitle": "La plupart des gens mélangent 2-3 facteurs selon la situation. Votre combinaison rend votre plan unique.",
+    "cta": "Commencer le Bilan"
+  },
+  "aging": {
+    "result": {
+      "error": {
+        "message": "Awaiting deep synthesis...",
+        "retakeButton": "Awaiting deep synthesis..."
+      }
+    },
+    "meta": {
+      "title": "Questions Fréquemment Posées",
+      "description": "Bien vieillir ne se fait pas seul. Collaborez avec la famille, les amis et les professionnels pour construire un bien-être durable.",
+      "keywords": "vieillissement actif, bien-être senior, bien vieillir, mouvement et conscience, soutien aux soins, design de longévité"
+    },
+    "hero": {
+      "badge": "🌿 Labo de Longévité",
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "La plupart des gens mélangent 2-3 facteurs selon la situation. Votre combinaison rend votre plan unique.",
+      "description": "Bien vieillir ne se fait pas seul. Collaborez avec la famille, les amis et les professionnels pour construire un bien-être durable.",
+      "cta": "Commencer le Bilan",
+      "secondaryCta": "Vérifier les facteurs clés, plans d'action et partenaires de soutien."
+    },
+    "benefits": {
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "La plupart des gens mélangent 2-3 facteurs selon la situation. Votre combinaison rend votre plan unique."
+    },
+    "types": {
+      "movement": {
+        "name": "Restauration",
+        "emoji": "😴",
+        "description": "Bien vieillir ne se fait pas seul. Collaborez avec la famille, les amis et les professionnels pour construire un bien-être durable."
+      },
+      "socialConnection": {
+        "name": "Restauration",
+        "emoji": "😴",
+        "description": "Bien vieillir ne se fait pas seul. Collaborez avec la famille, les amis et les professionnels pour construire un bien-être durable."
+      },
+      "mindfulness": {
+        "name": "Restauration",
+        "emoji": "😴",
+        "description": "Bien vieillir ne se fait pas seul. Collaborez avec la famille, les amis et les professionnels pour construire un bien-être durable."
+      },
+      "purpose": {
+        "name": "Restauration",
+        "emoji": "😴",
+        "description": "Bien vieillir ne se fait pas seul. Collaborez avec la famille, les amis et les professionnels pour construire un bien-être durable."
+      },
+      "restoration": {
+        "name": "Restauration",
+        "emoji": "😴",
+        "description": "Bien vieillir ne se fait pas seul. Collaborez avec la famille, les amis et les professionnels pour construire un bien-être durable."
+      },
+      "title": "Questions Fréquemment Posées",
+      "subtitle": "La plupart des gens mélangent 2-3 facteurs selon la situation. Votre combinaison rend votre plan unique."
+    },
+    "relationships": {
+      "title": "Questions Fréquemment Posées",
+      "description": "Bien vieillir ne se fait pas seul. Collaborez avec la famille, les amis et les professionnels pour construire un bien-être durable."
+    },
+    "faq": {
+      "title": "Questions Fréquemment Posées"
+    }
+  },
+  "hub": {
+    "tabs": {
+      "sleep": "Sommeil",
+      "stress": "Stress",
+      "fatigue": "Fatigue",
+      "aging": "Vieillissement",
+      "detox": "Détox",
+      "emotion": "Émotion",
+      "tools": "Outils"
+    },
+    "title": "Suivi de l'humeur",
+    "description": "Enregistrez vos émotions et analysez les schémas"
+  },
+  "sleepScore": {
+    "hero": {
+      "title": "Suivi de l'humeur",
+      "subtitle": "Retrouvez votre bien-être numérique",
+      "cta": "Commencer l'évaluation"
+    },
+    "benefits": {
+      "items": [
+        {
+          "emoji": "🌙",
+          "title": "Analyse des habitudes de sommeil",
+          "description": "Analyse complète de l’endormissement, de son maintien et de son état de veille."
+        },
+        {
+          "emoji": "🔋",
+          "title": "Récupération d'énergie",
+          "description": "Comprenez l’impact de votre sommeil sur vos activités du lendemain."
+        },
+        {
+          "emoji": "🧠",
+          "title": "Solutions personnalisées",
+          "description": "Recevez des conseils spécifiques pour améliorer l’hygiène du sommeil."
+        }
+      ]
+    }
+  },
+  "detox": {
+    "hero": {
+      "title": "Suivi de l'humeur",
+      "subtitle": "Retrouvez votre bien-être numérique",
+      "cta": "Commencer l'évaluation"
+    },
+    "benefits": {
+      "items": [
+        {
+          "emoji": "👀",
+          "title": "Fatigue oculaire",
+          "description": "Réduisez la fatigue oculaire et la fatigue visuelle causées par une exposition prolongée à l’écran."
+        },
+        {
+          "emoji": "🧠",
+          "title": "Meilleure concentration",
+          "description": "Retrouvez votre concentration et votre attention profondes grâce à la désintoxication à la dopamine."
+        },
+        {
+          "emoji": "😌",
+          "title": "Soulagement de l'anxiété",
+          "description": "Trouvez la tranquillité d'esprit en vous libérant du FOMO et de l'anxiété liée aux notifications."
+        }
+      ]
+    }
+  },
+  "emotion": {
+    "hub": {
+      "moodTracker": {
+        "tabs": {
+          "journal": "Journal",
+          "calendar": "Calendrier",
+          "analytics": "Analytiques"
+        },
+        "title": "Suivi de l'humeur",
+        "description": "Enregistrez vos émotions et analysez les schémas",
+        "analyticsTitle": "Statistiques d'humeur",
+        "analyticsDescription": "Analyse les données d'humeur enregistrées dans le calendrier."
+      }
+    }
+  }
+}

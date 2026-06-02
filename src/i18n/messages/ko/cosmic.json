@@ -1,0 +1,8 @@
+{
+  "title": "우주 좌표",
+  "orbitalVelocity": "궤도 속도",
+  "galacticVelocity": "은하계 속도",
+  "axialTilt": "축 기울기",
+  "distanceFromSun": "태양으로부터의 거리",
+  "locationTooltip": "위치 데이터 보기"
+}

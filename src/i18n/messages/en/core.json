@@ -1,0 +1,2613 @@
+{
+  "home": {
+    "enhancedTestGrid": {
+      "categories": {
+        "all": "Unified Hub",
+        "personality": "Essence & Soul",
+        "career": "Fortunes & Labor",
+        "utility": "Functional Prisms",
+        "fun": "Light Wisdom"
+      },
+      "sortBy": {
+        "popularity": "Universal Attraction",
+        "newest": "New Perspectives",
+        "time": "Time Required",
+        "difficulty": "Intellectual Depth"
+      },
+      "difficulty": {
+        "easy": "Accessible",
+        "medium": "Deep",
+        "hard": "Trascendental"
+      },
+      "test": {
+        "progress": "Journey Progress",
+        "submit": "Finalize Alignment",
+        "loading": "Decoding the Arcanas...",
+        "selectOption": "Choose the expression that reflects your truth.",
+        "insightBullets": [
+          "Exploring your subconscious...",
+          "Mapping your archetypes...",
+          "Revealing your inner truth..."
+        ],
+        "next": "Continue",
+        "previous": "Revisit"
+      },
+      "result": {
+        "title": "Opening to the Self",
+        "description": "The diagnostic outcome of your current resonance."
+      },
+      "meta": {
+        "title": "Ontology Diagnostics | The OIYO Collection",
+        "description": "A curated suite of tests to map the human experience.",
+        "keywords": "Self-discovery, Archetypal analysis, MBTI alternatives, Wisdom tests"
+      },
+      "filters": "Refine Vision",
+      "viewMode": "Perspective",
+      "estimatedTime": "Ritual Duration",
+      "minutes": "Minutes of Reflection",
+      "startTest": "Begin Journey",
+      "noResults": "No echoes found for this search.",
+      "clearFilters": "Reset Perspective",
+      "popular": "Highly Resonant",
+      "featured": "Scribe's Choice",
+      "new": "Emerging Wisdom",
+      "tryDifferentFilters": "Perhaps a different lens will reveal what you seek.",
+      "searchPlaceholder": "Archetypes, Destiny, Patterns..."
+    },
+    "title": "OIYO Sanctuary",
+    "description": "Welcome to a space of deep self-observation and celestial alignment.",
+    "keywords": "Ontology, Self-Knowledge, Spiritual Depth, Psychological Clarity",
+    "errorFallbackTitle": "System Dissonance",
+    "errorFallbackDescription": "Signal lost. Return to the Sanctuary Home.",
+    "subtitle": "Discover the hidden rhythms of your life.",
+    "searchPlaceholder": "What part of yourself do you wish to see?"
+  },
+  "lifeAnalysis": {
+    "features": {
+      "timing": {
+        "title": "Temporal Flow",
+        "love": "Relational Tides",
+        "business": "Professional Harvest",
+        "crisis": "Shadows",
+        "marriage": "Union Alignment"
+      },
+      "wealth": {
+        "title": "Material Flow",
+        "fortune": "Abundance Potential",
+        "style": "Prosperity Habit",
+        "spending": "Resource Balance"
+      },
+      "career": {
+        "title": "Vocation and Labor",
+        "direction": "Life Path Direction",
+        "capability": "Latent Aptitude",
+        "talent": "Innate Gifts",
+        "welcome": "Emerging Success"
+      },
+      "interest": {
+        "title": "Passion and Focus",
+        "main": "Central Focus"
+      },
+      "health": {
+        "title": "Vital Integrity",
+        "organs": "Somatic Warning Signs"
+      },
+      "loveStyle": {
+        "title": "Heart Affinities",
+        "type": "Relational Archetype"
+      }
+    },
+    "title": "Integral Blueprint of Destiny",
+    "price": "1,000",
+    "priceUsd": "$1.00",
+    "originalPrice": "10,000",
+    "discountRate": "90%",
+    "description": "A crystal-clear report detailing every facet of your life's trajectory.",
+    "cta": "Get Blueprint",
+    "oneTimePayment": "One-time Payment (Non-recurring)"
+  },
+  "wholeSelf": {
+    "card": {
+      "header": "Core Manifestation"
+    },
+    "labels": {
+      "money": "Prosperity Flow",
+      "color": "Personal Spectrum"
+    },
+    "values": {
+      "money": {
+        "impulsive-spender": "Moment Explorer",
+        "careful-saver": "Reserve Guardian",
+        "social-spender": "Generous Connector",
+        "investment-planner": "Growth Architect",
+        "experience-seeker": "Memory Curator",
+        "security-focused": "Foundation Builder"
+      },
+      "color": {
+        "warm-spring": "Ethereal Vernal Bloom",
+        "bright-spring": "Radiant Solar Awakening",
+        "light-summer": "Luminous Azure Calm",
+        "cool-summer": "Refined Glacial Serenity",
+        "soft-autumn": "Harvest Gold Balance",
+        "warm-autumn": "Deep Amber Resonance",
+        "cool-winter": "Stellar Crystal Integrity",
+        "bright-winter": "Absolute Diamond Clarity"
+      }
+    },
+    "actions": {
+      "download": "Archive Wisdom"
+    },
+    "meta": {
+      "subtitle": "Architecture of the Self",
+      "disclaimer": "Privacy of the Soul",
+      "keywords": "self-actualization, holistic profile, ontological map",
+      "title": "Integrated Personality Ontology",
+      "description": "A unified vision of your psychological and spiritual architecture."
+    },
+    "hero": {
+      "subtitle": "The Universal Tapestry",
+      "badge": "Holistic Resonance"
+    },
+    "test": {
+      "progress": "Awakening Progress",
+      "submit": "Reveal Truth",
+      "loading": "Consulting Patterns...",
+      "selectOption": "Choose the path that resonates with your core.",
+      "insightBullets": [
+        "Discover the hidden geometries that shape your daily life."
+      ],
+      "next": "Ascend",
+      "previous": "Reflect"
+    },
+    "result": {
+      "title": "Synthesis of the Self",
+      "description": "An eloquent unveiling of your unique psychological signature."
+    },
+    "subtitle": "Witness the convergence of your fragmented identities into a singular, radiant whole.",
+    "missing": "Yet to be Revealed",
+    "disclaimer": "Your essence remains private, guarded in the temple of your own device.",
+    "title": "My Inner Map",
+    "description": "Traverse the landscapes of your subconscious and conscious traits.",
+    "a": "Eternal Resonance"
+  },
+  "twinFinder": {
+    "title": "Twin Finder",
+    "noMatches": "No matches found.",
+    "findNow": "Find Now"
+  },
+  "dailyHoroscope": {
+    "title": "Daily Imperial Decree",
+    "subtitle": "The stars align to guide your steps today.",
+    "sections": {
+      "energy": "Today's Cosmic Energy",
+      "lucky": {
+        "title": "Auspicious Signs",
+        "direction": "Direction",
+        "color": "Color",
+        "number": "Number",
+        "item": "Talisman"
+      },
+      "action": {
+        "title": "Noble Actions",
+        "do": "Pursue",
+        "avoid": "Refrain"
+      },
+      "ritual": "Daily Ritual"
+    },
+    "elements": {
+      "wood": "Growth and Benevolence",
+      "fire": "Passion and Clarity",
+      "earth": "Stability and Trust",
+      "metal": "Justice and Definition",
+      "water": "Wisdom and Flow"
+    },
+    "oracleMessage": "Awaiting deep synthesis...",
+    "actionableAdvice": "Awaiting deep synthesis..."
+  },
+  "dailyInsightsGenerator": {
+    "personalityDescriptors": {
+      "assertive": "Natural Leader",
+      "analytical": "Reflective Analyst",
+      "expressive": "Vibrant Communicator",
+      "adventurer": "Bold Explorer",
+      "blue": "Peaceful Soul",
+      "explorer": "Curious Discoverer",
+      "default": "Unique Individual"
+    },
+    "customization": {
+      "greeting": "Hello, {descriptor}!",
+      "personalizedMessage": "This advice is designed especially for your {personalities} personality."
+    },
+    "contextualTips": {
+      "assertive-motivation": "Your leadership is most powerful when you inspire others by example.",
+      "adventurer-creativity": "Channel your love for exploration into creative experimentation today.",
+      "blue-wellness": "Your natural empathy means taking care of yourself helps you care for others.",
+      "default": "Leverage your unique strengths today."
+    },
+    "fallback": {
+      "content": {
+        "title": "You are unique and valuable",
+        "message": "Every person has their own unique strengths and talents. Today is a day to celebrate them.",
+        "actionTip": "Mapping the secret architecture of your identity...",
+        "affirmation": "I am valuable and unique."
+      },
+      "customization": {
+        "greeting": "Hello!",
+        "personalizedMessage": "We celebrate your unique journey.",
+        "contextualTip": "Your individuality makes the world richer."
+      }
+    },
+    "shareTemplate": "{emoji} {title}\n\n{message}\n\n💡 {actionTip}\n\n✨ {affirmation}",
+    "sharePersonalizedPrefix": "{greeting}"
+  },
+  "dailyReading": {
+    "meta": {
+      "keywords": "daily horoscope, tarot, reading, biorhythm",
+      "title": "Personalized Analysis",
+      "description": "Daily reading and analysis"
+    },
+    "hero": {
+      "eyebrow": "Daily Ritual",
+      "subtitle": "Begin your day with stability by combining tarot sensitivity, astrological focus, and physical condition.",
+      "cta": "Open Today's Message"
+    },
+    "cards": {
+      "subtitle": "Refresh anytime if your mood changes. Cards update based on latest signals.",
+      "refresh": "New Cards",
+      "reminder": "Set Reminder"
+    },
+    "summary": {
+      "energy": "Energy Forecast",
+      "focus": "Keyword",
+      "luckyColor": "Lucky Color"
+    }
+  },
+  "welcomeTitle": "Discover Today's You",
+  "alreadyCompleted": "Today's Test Complete!",
+  "comeBackTomorrow": "Analyzing deep echoes of your choices...",
+  "feature1Title": "Just 2 Minutes",
+  "feature1Desc": "Mapping the secret architecture of your personality...",
+  "feature2Title": "Different Daily Questions",
+  "feature2Desc": "Deciphering geometric patterns of your identity...",
+  "feature3Title": "30-Day Tracking",
+  "feature3Desc": "Analyzing deep echoes of your choices...",
+  "startDaily": "Start Today's Test",
+  "viewHistory": "View History",
+  "days": "days",
+  "totalDays": "Total Days",
+  "longestStreak": "Longest Streak",
+  "uniqueTypes": "Unique Types",
+  "question": "Question",
+  "todayAdvice": "Today's Advice",
+  "shareResult": "Share Result",
+  "copyLink": "Copy Link",
+  "copied": "Copied!",
+  "reminder": "See you tomorrow!",
+  "reminderText": "Syncing the threads of your destiny...",
+  "shareTitle": "Daily Personality Fortune",
+  "historyTitle": "My Personality History",
+  "historySubtitle": "Look back at your past days",
+  "trendChart": "Energy Trend",
+  "energyScore": "Energy Score",
+  "calendarView": "Calendar View",
+  "mostCommon": "Most Common Type",
+  "noData": "No Data",
+  "takeOtherTests": "Take Other Tests",
+  "description": "Explore your hidden potential through multi-dimensional in-depth analysis.",
+  "dynamics": {
+    "hero": {
+      "title": "Family Dynamics Analyzer",
+      "subtitle": "Understand your family's unique dynamics and discover ways to strengthen your relationships",
+      "description": "Receive personalized insights to create a more harmonious home.",
+      "analyzing": "Analyzing family dynamics...",
+      "analyzeAnother": "Analyzing other families"
+    },
+    "features": {
+      "comprehensive": {
+        "title": "Comprehensive family analysis",
+        "description": "Understand family ecosystems by analyzing parent-child, sibling, and partner dynamics."
+      },
+      "harmony": {
+        "title": "harmony in the home",
+        "description": "Get practical tips to create a harmonious living environment that works for everyone."
+      },
+      "growth": {
+        "title": "Growth Recommendations",
+        "description": "Receive a personalized action plan to strengthen communication and resolve conflict."
+      }
+    },
+    "sections": {
+      "howWorks": "How Family Dynamics Analysis Works",
+      "whatAnalyze": "Analysis content",
+      "whatGet": "What we offer",
+      "faq": "Frequently Asked Questions"
+    },
+    "analyze": {
+      "list": [
+        "Communication patterns between family members",
+        "Conflict Resolution Styles and Compatibility",
+        "emotional support system within the family",
+        "Individual personality trait interactions",
+        "Role-based relationship dynamics"
+      ]
+    },
+    "results": {
+      "list": [
+        "Overall Family Harmony Score",
+        "Detailed relationship analysis",
+        "Strengths and Growth Areas",
+        "Personalized improvement recommendations",
+        "Practical home harmony tips"
+      ]
+    },
+    "faq": {
+      "placeholder": {
+        "question": "FAQ {number} questions",
+        "answer": "FAQ {number} Answers"
+      }
+    },
+    "badge": "family analysis"
+  },
+  "astrologyHub": {
+    "title": "Astrology Center",
+    "subtitle": "Explore ancient wisdom from East and West.",
+    "tabs": {
+      "western": "Western Zodiac",
+      "chinese": "Chinese Zodiac",
+      "extended": "Extended Zodiac"
+    },
+    "westernTitle": "Western Zodiac",
+    "westernDesc": "Discover your star sign traits and daily horoscope.",
+    "chineseTitle": "Chinese Zodiac",
+    "chineseDesc": "Discover your animal sign and what it says about your destiny.",
+    "meta": {
+      "title": "Astrology Hub ",
+      "description": "Unified astrology readings: Chinese and Extended Zodiac."
+    }
+  },
+  "dailyTarot": {
+    "subtitle": "Check today's fortune with cards",
+    "disclaimer": "Tarot results are for fun and advice, your will is most important.",
+    "clickToDraw": "Draw a Card",
+    "drawAgain": "Draw Again",
+    "title": "Daily Tarot",
+    "description": "Meet the mystical card that will illuminate your day.",
+    "meta": {
+      "title": "Daily Tarot Fortune",
+      "description": "Daily tarot card reading, check today's advice and fortune."
+    }
+  },
+  "extendedZodiac": {
+    "corePersonality": {
+      "leader": "Natural leader with strong independent spirit",
+      "innovator": "Creative innovator with artistic sensibilities",
+      "analyst": "Thoughtful analyst with practical wisdom",
+      "balanced": "Balanced individual with diverse strengths"
+    },
+    "lifeTheme": "Harmonious integration of wisdom, creativity, and practical action",
+    "compatibilityAnalysis": {
+      "excellent": "Excellent harmony across all systems. Your cosmic energies are very well aligned.",
+      "good": "Good overall compatibility. Minor adjustments can enhance your natural flow.",
+      "moderate": "Moderate compatibility with opportunities for growth and balance.",
+      "diverse": "Diverse energies that can be harmonized through conscious awareness and practice."
+    },
+    "timeline": {
+      "currentTheme_spring": "New Beginnings and Growth",
+      "currentTheme_summer": "Peak Energy and Achievement",
+      "currentTheme_autumn": "Harvest and Consolidation",
+      "currentTheme_winter": "Reflection and Planning",
+      "currentTheme_default": "Growth and Development",
+      "advice": {
+        "strengths": "Focus on your natural strengths",
+        "intuition": "Trust your intuition in decisions",
+        "balance": "Maintain balance in all areas of life"
+      },
+      "upcoming": {
+        "next3": "A period of steady progress with opportunities for new connections",
+        "nextYear": "Significant growth in personal and professional areas",
+        "transitions": [
+          "Career advancement opportunities",
+          "Deepening of important relationships",
+          "Personal spiritual growth"
+        ]
+      }
+    }
+  },
+  "dreamJournal": {
+    "meta": {
+      "title": "Dream Journal ",
+      "description": "Record and analyze your dreams",
+      "keywords": "dream journal, dream analysis, dream interpretation"
+    },
+    "hero": {
+      "title": "Dream Journal",
+      "badge": "Popular",
+      "subtitle": "Complete guide for your dreams",
+      "description": "Explore our suite of tools designed for deep dream insights."
+    },
+    "tabs": {
+      "analysis": "Your Dream Type",
+      "symbols": "Symbol Dictionary",
+      "journal": "Dream Journal Tips"
+    },
+    "result": {
+      "title": "Dream Analysis",
+      "copied": "Copied to clipboard!",
+      "characteristics": "Your Dream Characteristics",
+      "dreamPatterns": "Your Dream Patterns",
+      "interpretationTips": "Dream Interpretation Tips",
+      "commonSymbols": "Your Common Dream Symbols",
+      "dreamTypeBreakdown": "Your Dream Type Breakdown",
+      "share": "Share",
+      "shareText": "I'm a {type} dreamer! Check out your dream personality here: {url}",
+      "retake": "Retake Test"
+    },
+    "symbols": {
+      "title": "Dream Symbol Dictionary",
+      "subtitle": "Discover the meanings behind common dream symbols",
+      "searchPlaceholder": "Search symbols..."
+    },
+    "journal": {
+      "title": "Dream Journal Guide",
+      "subtitle": "Learn how to effectively record and analyze your dreams",
+      "gettingStarted": "Getting Started",
+      "whatToRecord": "What to Record",
+      "interpretationTips": "Interpretation Tips",
+      "improveRecall": "Improve Dream Recall"
+    },
+    "test": {
+      "progress": "Question {current} of {total}",
+      "selectOption": "Select an option"
+    }
+  },
+  "chineseZodiac": {
+    "animals": {
+      "rat": {
+        "name": "Rat",
+        "years": "1924, 1936, 1948, 1960, 1972, 1984, 1996, 2008, 2020",
+        "personality": "Intelligent, witty, and quick-thinking. Natural leadership and excellent business acumen."
+      },
+      "ox": {
+        "name": "Ox",
+        "years": "1925, 1937, 1949, 1961, 1973, 1985, 1997, 2009, 2021",
+        "personality": "Reliable, patient, and diligent. Values tradition and stability."
+      },
+      "tiger": {
+        "name": "Tiger",
+        "years": "1926, 1938, 1950, 1962, 1974, 1986, 1998, 2010, 2022",
+        "personality": "Brave, confident, and competitive. Natural leadership and strong charisma."
+      },
+      "rabbit": {
+        "name": "Rabbit",
+        "years": "1927, 1939, 1951, 1963, 1975, 1987, 1999, 2011, 2023",
+        "personality": "Gentle, quiet, and elegant. Values peace and harmonious relationships."
+      },
+      "dragon": {
+        "name": "Dragon",
+        "years": "1928, 1940, 1952, 1964, 1976, 1988, 2000, 2012, 2024",
+        "personality": "Energetic, intelligent, and talented. Natural charisma and leadership abilities."
+      },
+      "snake": {
+        "name": "Snake",
+        "years": "1929, 1941, 1953, 1965, 1977, 1989, 2001, 2013, 2025",
+        "personality": "Wise, intuitive, and possess mysterious charm. Deep thinker with good judgment."
+      },
+      "horse": {
+        "name": "Horse",
+        "years": "1930, 1942, 1954, 1966, 1978, 1990, 2002, 2014, 2026",
+        "personality": "Energetic, independent, and cheerful. Loves freedom and adventure."
+      },
+      "goat": {
+        "name": "Goat",
+        "years": "1931, 1943, 1955, 1967, 1979, 1991, 2003, 2015, 2027",
+        "personality": "Gentle, compassionate, and has high artistic sense. Values beauty and harmony."
+      },
+      "monkey": {
+        "name": "Monkey",
+        "years": "1932, 1944, 1956, 1968, 1980, 1992, 2004, 2016, 2028",
+        "personality": "Clever, curious, and adaptable. Fast learning and excellent problem-solving skills."
+      },
+      "rooster": {
+        "name": "Rooster",
+        "years": "1933, 1945, 1957, 1969, 1981, 1993, 2005, 2017, 2029",
+        "personality": "Confident, diligent, and courageous. Natural performance ability and strong principles."
+      },
+      "dog": {
+        "name": "Dog",
+        "years": "1934, 1946, 1958, 1970, 1982, 1994, 2006, 2018, 2030",
+        "personality": "Loyal, responsible, and reliable. Strong sense of justice and fairness."
+      },
+      "pig": {
+        "name": "Pig",
+        "years": "1935, 1947, 1959, 1971, 1983, 1995, 2007, 2019, 2031",
+        "personality": "Honest, generous, and diligent. Values family and enjoys the pleasures of life."
+      }
+    },
+    "duration": "~6 mins",
+    "accuracy": "88% pattern match",
+    "benefits": {
+      "title": "Benefits of Chinese Zodiac Analysis",
+      "personality": {
+        "title": "Trait Analysis",
+        "description": "Discover your innate tendencies and potentials."
+      },
+      "fortune": {
+        "title": "Fortune Flow",
+        "description": "Understand your annual fortune and luck."
+      },
+      "compatibility": {
+        "title": "Compatibility",
+        "description": "See how you match with other signs."
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "question1": "Is it based on lunar or solar calendar?",
+      "answer1": "Signs are determined by the start of spring (approx. Feb 4).",
+      "question2": "How accurate is compatibility?",
+      "answer2": "It's based on long-standing tradition; use it for reference and fun.",
+      "question3": "What is 'Samjae'?",
+      "answer3": "A period of 3 cautious years that returns every 9 years.",
+      "question4": "What if I don't know my sign?",
+      "answer4": "Enter your birth date and we will calculate it for you."
+    }
+  },
+  "sharing": {
+    "imageTitle": "Fortune Reading",
+    "kakaoTitle": "My Destiny Map",
+    "viewResult": "View Results",
+    "cardTitle": "Fortune Card",
+    "dominantElement": "Dominant Element",
+    "personalityType": "Personality Type",
+    "tagline": "Design your own unique lifestyle",
+    "title": "Fortune Results",
+    "copySuccess": "✅ Copied!",
+    "shareImage": "Share Image",
+    "download": "Save Result",
+    "copyUrl": "Copy URL",
+    "copyText": "Copy Text",
+    "socialPlatforms": "Social Media",
+    "encouragement": "Share with your friends"
+  },
+  "dreamInterpretation": {
+    "meta": {
+      "title": "Dream Interpretation ",
+      "description": "Discover the hidden meanings in your dreams.",
+      "keywords": "dream interpretation, dream meanings, symbolism",
+      "testTitle": "Analyze Your Dreams",
+      "testDescription": "Deep dive into your subconscious symbols."
+    },
+    "hero": {
+      "badge": "Recommended",
+      "title": "Dream Interpretation",
+      "subtitle": "Your guide to understanding dreams",
+      "description": "Unlock the messages from your subconscious mind."
+    },
+    "test": {
+      "title": "Dream Analysis",
+      "subtitle": "Unveil the mystery of your dreams"
+    }
+  },
+  "date": "Last updated",
+  "gender": "⚧ Gender",
+  "hour": "Hour",
+  "minute": "Minute",
+  "vitality": {
+    "fatigueAnalysis": {
+      "meta": {
+        "title": "Fatigue analysis",
+        "description": "Find the cause of chronic fatigue and restore your energy",
+        "keywords": "Fatigue, chronic fatigue, stress, vitality"
+      }
+    }
+  },
+  "petCompatibility": {
+    "meta": {
+      "title": "Pet Compatibility",
+      "description": "Which pet is the best fit for me?",
+      "keywords": "Pets, dogs, cats, compatibility"
+    },
+    "hero": {
+      "title": "Pet compatibility test",
+      "subtitle": "Find the pet that fits your lifestyle",
+      "cta": "Start testing"
+    },
+    "marketing": {
+      "about": {
+        "title": "About pet compatibility",
+        "description": "We analyze your lifestyle patterns and match you with the optimal pet.",
+        "feature1": "Lifestyle Matching",
+        "feature2": "Activity analysis",
+        "feature3": "Considering living environment",
+        "feature4": "Estimating Childcare Costs"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "question1": "Are the results accurate?",
+      "answer1": "Based on the information you enter, we will recommend the most suitable species.",
+      "question2": "Can I do this with my family?",
+      "answer2": "Yes, consider comprehensively the life patterns of your family members.",
+      "question3": "Are special animals included?",
+      "answer3": "Currently, it is mainly recommended for dogs, cats, and general small animals."
+    }
+  },
+  "decision": {
+    "hub": {
+      "tabs": {
+        "helper": "decision helper",
+        "style": "decision-making style"
+      },
+      "meta": {
+        "title": "decision tool",
+        "description": "Discover random decision assistants and decision-making style analysis in one place."
+      },
+      "title": "decision center",
+      "subtitle": "A set of tools for solving decision difficulties",
+      "helperTitle": "Random Decision Helper",
+      "helperDesc": "If the choice is difficult, leave it to fate."
+    }
+  },
+  "food": {
+    "meta": {
+      "title": "food personality test",
+      "description": "Personality type determined by my food tastes",
+      "keywords": "Food personality, gourmet, taste buds, eating habits, personality test"
+    },
+    "hero": {
+      "badge": "food psychology",
+      "title": "food personality test",
+      "description": "Am I a foodie or a picky eater? Find out your personality based on your food tastes!",
+      "cta": "Start testing"
+    },
+    "landing": {
+      "benefits": {
+        "items": [
+          {
+            "icon": "🍽️",
+            "title": "Discover your style",
+            "description": "Understand your unique approach to food and dining."
+          },
+          {
+            "icon": "👨‍🍳",
+            "title": "Cooking insights",
+            "description": "Get tips on how to improve your cooking based on your type."
+          },
+          {
+            "icon": "🤝",
+            "title": "Social dining",
+            "description": "Learn how you interact with others over meals."
+          },
+          {
+            "icon": "🥗",
+            "title": "Health nuances",
+            "description": "See how your personality affects your nutritional choices."
+          }
+        ],
+        "title": "What this test tells you"
+      },
+      "types": {
+        "items": [
+          {
+            "emoji": "🌍",
+            "name": "The Adventurer",
+            "description": "Always seeking new flavors and experiences."
+          },
+          {
+            "emoji": "🏠",
+            "name": "The Traditionalist",
+            "description": "Loves classic comfort foods and family recipes."
+          },
+          {
+            "emoji": "⭐",
+            "name": "The Perfectionist",
+            "description": "Appreciates high-quality ingredients and presentation."
+          }
+        ],
+        "title": "Typical types"
+      }
+    },
+    "test": {
+      "progress": "Progress: {current}/{total}",
+      "submit": "View results",
+      "title": "lifestyle",
+      "subtitle": "The perfect guide to my lifestyle",
+      "next": "next",
+      "previous": "before"
+    },
+    "result": {
+      "sections": {
+        "traits": "Key Features",
+        "cuisines": "Recommended Dishes",
+        "restaurantStyle": "restaurant style",
+        "cookingStyle": "cooking style",
+        "breakdown": "personality composition"
+      },
+      "loading": "Analyzing gourmet profile...",
+      "title": "lifestyle",
+      "subtitle": "The perfect guide to my lifestyle",
+      "retakeTest": "do it again"
+    }
+  },
+  "lifeBalance": {
+    "meta": {
+      "title": "life balance wheel",
+      "description": "Visualize and improve your life balance in 8 key areas in 5 minutes.",
+      "keywords": "Life balance, life wheel, work-life balance, life balance, self-diagnosis, well-being check, life balance, balance wheel"
+    },
+    "categories": {
+      "relationships": "interpersonal relationships",
+      "career": "Career & Work",
+      "personal": "self-development",
+      "environment": "living environment",
+      "fun": "Leisure & Fun",
+      "contribution": "Purpose & Contribution",
+      "health": "Health & Wellness",
+      "finance": "financial stability"
+    },
+    "categoryDescriptions": {
+      "relationships": "Quality of relationships with family, friends, and lovers",
+      "career": "Job satisfaction, professional growth, work accomplishment",
+      "personal": "Self-development, hobbies, learning, personal interests",
+      "environment": "Quality and comfort of living space and surroundings",
+      "fun": "Leisure activities, entertainment, enjoyment of life",
+      "contribution": "Sense of purpose, helping others, positive influence",
+      "health": "physical and mental health conditions;",
+      "finance": "Manage your income, expenses and future readiness"
+    },
+    "balanceLevels": {
+      "well-balanced": "balanced",
+      "moderately-balanced": "moderately balanced",
+      "needs-attention": "need attention",
+      "critical-imbalance": "serious imbalance"
+    },
+    "balanceDescriptions": {
+      "well-balanced": "Great! There is strong harmony in most areas of life. Keep up the good work and keep this balance.",
+      "moderately-balanced": "Good progress! It's a decent balance, but some areas need more attention. Enjoy better well-being by focusing on areas of improvement.",
+      "needs-attention": "It's time to act! Significant imbalances are affecting our overall well-being. Prioritize your weakest areas and create an action plan.",
+      "critical-imbalance": "It's important! Major areas of life require immediate attention. Start small, with one area, and seek help if you need it."
+    },
+    "recommendationsByLevel": {
+      "well-balanced": [
+        "Continue current habits that maintain this balance",
+        "Share your strategies to help others find balance",
+        "Set challenging goals in your strong areas"
+      ],
+      "moderately-balanced": [
+        "Focus energy on 1-2 improvement areas this month",
+        "Schedule specific time for neglected life areas",
+        "Celebrate successes in strong areas to maintain motivation"
+      ],
+      "needs-attention": [
+        "Choose one priority area to improve this week",
+        "Find specific small actions you can take today",
+        "Consider seeking help from friends, family, or professionals"
+      ],
+      "critical-imbalance": [
+        "Seek professional help if needed - you don't have to do it alone",
+        "Start with basic self-care: sleep, nutrition, exercise",
+        "Request support from trusted friends or family"
+      ]
+    },
+    "heroTitle": "life balance wheel",
+    "heroSubtitle": "Visualize and improve your life balance in 8 key areas in 5 minutes",
+    "feature1": "8 areas of life",
+    "feature2": "visual radar chart",
+    "feature3": "Custom Insights",
+    "assessmentTitle": "Diagnosing Life Balance",
+    "assessmentSubtitle": "Please rate your current satisfaction in each area from 1 (very dissatisfied) to 10 (very satisfied).",
+    "sliderLabel": "1-10 rating",
+    "calculateBalance": "View results",
+    "resultsTitle": "Analysis of my life balance",
+    "balanceScore": "balance score",
+    "balanceLevel": "balance level",
+    "strongestAreas": "my areas of strength",
+    "improvementAreas": "Areas needing improvement",
+    "chartTitle": "my life balance wheel",
+    "shareCopied": "The results have been copied to your clipboard!",
+    "shareText": "My life balance score: {score}/100 - {level}! Check your balance: https://oiyo.net/ko/life-balance-wheel",
+    "howItWorksTitle": "How it works",
+    "step1Title": "8 Area Assessment",
+    "step1Description": "Honestly evaluate your satisfaction in the areas of health, relationships, career, finances, self-development, environment, fun, and purpose.",
+    "step2Title": "Visual balance check",
+    "step2Description": "Check your life balance with an interactive radar chart that shows imbalances at a glance.",
+    "step3Title": "Get an action plan",
+    "step3Description": "Receive personalized recommendations to improve your weakest areas and maintain your strongest areas",
+    "faqTitle": "Frequently Asked Questions",
+    "faq1Question": "What are the eight areas of life that are measured?",
+    "faq1Answer": "Health & Wellness, Relationships, Career & Work, Financial Stability, Personal Development, Living Environment, Leisure & Fun, and Purpose & Contribution.",
+    "faq2Question": "How is the balance score calculated?",
+    "faq2Answer": "The balance score combines the average satisfaction across all domains with a penalty for imbalance. High scores in some areas do not compensate for very low scores in other areas.",
+    "faq3Question": "What is a good balance score?",
+    "faq3Answer": "A score of 70-100 is balanced, a score of 50-69 is average, a score of 30-49 requires caution, and a score below 30 requires immediate action. The goal is harmony between areas, not perfection in each area.",
+    "faq4Question": "How often should you check your life balance?",
+    "faq4Answer": "Check in monthly or quarterly to track your progress. Use it when making important life decisions or feeling overwhelmed. Regular checks maintain awareness and prevent imbalances.",
+    "recommendations": "Advice for Growth",
+    "disclaimer": "This diagnosis is based on an individual's subjective satisfaction and should be used for reference only.",
+    "share": "Share your results",
+    "shareResults": "Share your results",
+    "retake": "Diagnose again"
+  },
+  "lifeSlogan": {
+    "meta": {
+      "hero": {
+        "subtitle": "Create your own motto with beautiful visual badges",
+        "cta": "Create a slogan"
+      },
+      "keywords": "Life slogan, personal motto, motivational phrase, life philosophy, personal branding, inspirational slogan",
+      "title": "life slogan generator",
+      "description": "Find out your personality type through your choices in various hypothetical situations"
+    },
+    "hero": {
+      "title": "life slogan generator",
+      "subtitle": "Create your own motto with beautiful visual badges",
+      "cta": "Create a slogan"
+    },
+    "marketing": {
+      "about": {
+        "title": "Meaning of life slogan",
+        "description": "My life slogan represents my identity and values.",
+        "feature1": "Discover your own value",
+        "feature2": "artistic expression",
+        "feature3": "Setting direction in life",
+        "feature4": "Share and Connect"
+      }
+    },
+    "categories": {
+      "growth": {
+        "title": "growth",
+        "description": "When dreaming of development and change"
+      },
+      "love": {
+        "title": "love",
+        "description": "When you need a warm connection"
+      },
+      "success": {
+        "title": "success",
+        "description": "When moving towards your goal"
+      },
+      "peace": {
+        "title": "peace",
+        "description": "When you need peace of mind"
+      },
+      "adventure": {
+        "title": "adventure",
+        "description": "When enjoying a new challenge"
+      },
+      "wisdom": {
+        "title": "wisdom",
+        "description": "When you want deep insight"
+      },
+      "title": "slogan category"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "question1": "How do I use it?",
+      "answer1": "Use it on your social media profiles, phone wallpaper, or daily meditation.",
+      "question2": "Can I save the image?",
+      "answer2": "Yes, all created slogans can be saved as images.",
+      "question3": "Are there any copyright issues?",
+      "answer3": "You can use it freely for personal use."
+    },
+    "slogans": {
+      "growth": {
+        "motivational": {
+          "main": "Every day, I choose to become stronger",
+          "alt1": "Progress over perfection, always",
+          "alt2": "Grow through the process you go through",
+          "alt3": "Embrace the journey and trust the process"
+        },
+        "calm": {
+          "main": "Growth happens in quiet moments",
+          "alt1": "Patience breeds progress",
+          "alt2": "Small steps lead to great heights",
+          "alt3": "Blooms at my own pace"
+        }
+      },
+      "love": {
+        "poetic": {
+          "main": "Love is the light that illuminates my path",
+          "alt1": "With love, all things are possible",
+          "alt2": "my heart knows the way home",
+          "alt3": "Love changes everything it touches"
+        }
+      },
+      "success": {
+        "bold": {
+          "main": "Success is my only option",
+          "alt1": "I create my opportunities.",
+          "alt2": "Excellence is my standard",
+          "alt3": "Achievement is in my DNA"
+        }
+      },
+      "peace": {
+        "calm": {
+          "main": "Peace begins with one breath",
+          "alt1": "Stillness is my superpower",
+          "alt2": "Calm mind, open heart",
+          "alt3": "Finding stillness in chaos"
+        }
+      },
+      "adventure": {
+        "bold": {
+          "main": "Adventure awaits beyond your comfort zone",
+          "alt1": "I was born to explore",
+          "alt2": "Life is too short to choose safely",
+          "alt3": "Dare big, live to the fullest"
+        }
+      },
+      "wisdom": {
+        "poetic": {
+          "main": "Wisdom whispers in quiet moments",
+          "alt1": "Knowledge changes into understanding",
+          "alt2": "The way is revealed to those who seek it",
+          "alt3": "Learning is a journey, not a destination"
+        }
+      }
+    },
+    "inspiration": {
+      "growth": {
+        "quote1": "The only way out is through. - Robert Frost",
+        "quote2": "To become what we want, we can't stay where we are. - Max Defree",
+        "quote3": "Growing up is painful. Change is painful. But there is nothing more painful than stopping."
+      },
+      "love": {
+        "quote1": "Where there is love, there is life. - Mahatma Gandhi",
+        "quote2": "Love is the bridge between you and everything. - Rumi",
+        "quote3": "The thing we need to hold on to most in life is each other. - Audrey Hepburn"
+      },
+      "success": {
+        "quote1": "Success is not final, and failure is not fatal. - Winston Churchill",
+        "quote2": "The only place where success comes before effort is in the dictionary.",
+        "quote3": "Success is walking from failure to failure without losing passion."
+      },
+      "peace": {
+        "quote1": "Peace comes from within. Don't look outside. - swell",
+        "quote2": "Even in the midst of movement and chaos, remain still within yourself. - Deepak Chopra",
+        "quote3": "A harmonious, stress-free, inner peaceful life is the easiest way to exist."
+      },
+      "adventure": {
+        "quote1": "Life is either a daring adventure or nothing. - Helen Keller",
+        "quote2": "Adventure is valuable in itself. - Amelia Earhart",
+        "quote3": "The greatest adventure I can ever take is living the life of my dreams. - Oprah Winfrey"
+      },
+      "wisdom": {
+        "quote1": "The only true wisdom is knowing that I know nothing. - Socrates",
+        "quote2": "Wisdom begins with wonder. - Socrates",
+        "quote3": "Knowledge speaks, wisdom listens. - Jimi Hendrix"
+      }
+    },
+    "usageTips": {
+      "growth": {
+        "tip1": "Use it as an affirmation or mantra every morning",
+        "tip2": "Display it on your desk or workspace for motivation",
+        "tip3": "Share on social media to inspire others"
+      },
+      "love": {
+        "tip1": "Make it your relationship philosophy",
+        "tip2": "Use it for wedding vows or anniversary celebrations",
+        "tip3": "Share with your loved ones to remind them"
+      },
+      "success": {
+        "tip1": "Set it as your phone wallpaper for daily motivation",
+        "tip2": "Include it in your email signature",
+        "tip3": "Display it in your office or workspace"
+      },
+      "peace": {
+        "tip1": "Use during meditation or mindfulness practice",
+        "tip2": "Write it down in your diary as a daily reminder",
+        "tip3": "Mark your relaxation or meditation space"
+      },
+      "adventure": {
+        "tip1": "Make it your travel motto",
+        "tip2": "Add it to your bucket list or adventure diary",
+        "tip3": "Share before starting a new experience"
+      },
+      "wisdom": {
+        "tip1": "Use it as a guiding principle for decision making",
+        "tip2": "Include it in your personal mission statement",
+        "tip3": "Share to inspire continuous learning"
+      }
+    }
+  },
+  "cityMatch": {
+    "meta": {
+      "title": "City Match - Find your perfect city",
+      "description": "Which city around the world perfectly suits my lifestyle and personality?",
+      "keywords": "City match, travel destination recommendation, immigration, digital nomad, lifestyle"
+    },
+    "hero": {
+      "title": "Find my soul city",
+      "subtitle": "Through personality and lifestyle analysis, we recommend the best city to live in or travel to.",
+      "cta": "Start matching",
+      "participants": "adventurers participated"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🌏",
+          "title": "Global Database",
+          "description": "Analysis across 25+ major cities worldwide."
+        },
+        {
+          "icon": "🎯",
+          "title": "Personalized Match",
+          "description": "Based on your unique lifestyle and work preferences."
+        },
+        {
+          "icon": "📊",
+          "title": "Detailed Insights",
+          "description": "Get data on safety, cost, and culture for each city."
+        },
+        {
+          "icon": "✨",
+          "title": "Fun Results",
+          "description": "Share your dream destination with friends."
+        }
+      ],
+      "title": "Why You Should Take a City Match Test"
+    },
+    "faq": {
+      "questions": [
+        {
+          "q": "What data is used for matching?",
+          "a": "We use your preferences for climate, cost of living, safety, and cultural interests."
+        },
+        {
+          "q": "Can I use this for nomadic lifestyle?",
+          "a": "Yes! The test includes metrics important for digital nomads."
+        }
+      ],
+      "title": "Frequently Asked Questions"
+    },
+    "cta": {
+      "title": "Are you ready to discover your city?",
+      "subtitle": "Join thousands of others and find your own special place.",
+      "button": "Find my city now"
+    },
+    "test": {
+      "common": {
+        "progress": "progress",
+        "next": "next",
+        "previous": "before",
+        "submit": "Submit",
+        "start": "Getting started",
+        "loading": "Analyzing...",
+        "results": "Diagnostic results",
+        "dashboard": "dashboard",
+        "insights": "Custom Insights"
+      },
+      "seeResults": "View results",
+      "selectOption": "Choose an option",
+      "next": "next",
+      "previous": "before"
+    },
+    "result": {
+      "relationship": {
+        "compatibility": "goodness of fit score"
+      },
+      "breakdownLabels": {
+        "climate": "climate",
+        "lifestyle": "lifestyle",
+        "culture": "culture",
+        "practical": "realistic elements"
+      },
+      "cityDetails": {
+        "population": "population",
+        "continent": "continent",
+        "timezone": "slot",
+        "safety": "safety",
+        "cost": "cost of living",
+        "jobs": "job opportunity",
+        "culture": "culture and arts",
+        "weather": "weather",
+        "transport": "public transportation"
+      },
+      "title": "a city that suits me",
+      "subtitle": "Individual lifestyle and preference analysis results",
+      "topMatch": "Best matching city",
+      "whyThisCity": "Why this city?",
+      "breakdown": "Detailed analysis",
+      "otherMatches": "Other recommended cities for me",
+      "share": "Share your results",
+      "exploreCity": "Learn more about this city",
+      "retake": "Test again"
+    }
+  },
+  "music": {
+    "meta": {
+      "title": "Music Taste Test | Find your musical taste",
+      "description": "Discover your music taste personality and receive personalized recommendations",
+      "keywords": "Music taste, music personality, music test, music preference"
+    },
+    "hero": {
+      "badge": "🎵 Music Psychology",
+      "title": "music taste test",
+      "subtitle": "Find out about your unique music style",
+      "description": "Understand your music preferences and discover new artists you might like with our comprehensive music taste test."
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "Discover Your Type",
+          "description": "Learn what your music choices say about you"
+        },
+        {
+          "title": "Get Recommendations",
+          "description": "Find new artists and genres you'll love"
+        },
+        {
+          "title": "Connect with Others",
+          "description": "Meet people with similar musical tastes"
+        },
+        {
+          "title": "Expand Your Horizons",
+          "description": "Explore music outside your comfort zone"
+        }
+      ],
+      "title": "Why You Should Take a Music Taste Test",
+      "subtitle": "Understand your music preferences and discover new favorites"
+    },
+    "types": {
+      "explorer": {
+        "name": "explorer",
+        "description": "Always looking for new sounds and genres"
+      },
+      "traditionalist": {
+        "name": "traditionalist",
+        "description": "I love classic and timeless music"
+      },
+      "mainstream": {
+        "name": "popular wave",
+        "description": "Enjoy popular hits and chart-topping songs"
+      },
+      "intense": {
+        "name": "intense wave",
+        "description": "I prefer powerful, emotional music"
+      },
+      "contemporary": {
+        "name": "modernist",
+        "description": "Follows the latest trends"
+      },
+      "title": "music personality type",
+      "subtitle": "What type are you?"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "How accurate is this test?",
+          "answer": "Our test is based on music psychology research and user feedback."
+        },
+        {
+          "question": "Will I get music recommendations?",
+          "answer": "Yes, you'll receive personalized artist and genre suggestions."
+        },
+        {
+          "question": "Can I retake the test?",
+          "answer": "Absolutely! Your taste may evolve over time."
+        },
+        {
+          "question": "Is my data private?",
+          "answer": "Yes, we don't store or share your responses."
+        }
+      ],
+      "title": "Frequently Asked Questions"
+    }
+  },
+  "life": {
+    "hub": {
+      "tabs": {
+        "balance": "life balance",
+        "goals": "goal planner",
+        "habits": "habit secretary",
+        "countdown": "life countdown",
+        "decision": "decision tool",
+        "slogan": "life slogan",
+        "simulator": "life simulator",
+        "analysis": "Comprehensive analysis",
+        "recharge": "charging point"
+      },
+      "meta": {
+        "title": "life design studio",
+        "description": "Integrated tools for life planning: balance wheel, goal planner, habit assistant, life countdown."
+      },
+      "title": "life design studio",
+      "subtitle": "Design a purpose-driven life with a variety of tools.",
+      "balanceDescription": "Visualize the current state of balance in your life.",
+      "goalsDescription": "Set and track your life goals.",
+      "habitsDescription": "Create positive habits for a better life.",
+      "countdownDescription": "Visualize the time remaining and get motivated.",
+      "sloganDescription": "Create your own life slogan.",
+      "simulatorDescription": "Simulate various life choices and outcomes.",
+      "analysisDescription": "Comprehensively analyze your life patterns.",
+      "rechargeDescription": "Calculate the amount of rest you need."
+    },
+    "lifeCountdown": {
+      "meta": {
+        "title": "Life Countdown | Visualize your life week by week",
+        "description": "Powerful weekly life visualizations to inspire you to make the most of your time."
+      },
+      "title": "life countdown",
+      "subtitle": "Visualize your life week by week",
+      "description": "A powerful reminder to make the most of your time."
+    }
+  },
+  "cityGuide": {
+    "meta": {
+      "title": "city ​​guide",
+      "description": "Find the perfect city to suit your lifestyle",
+      "keywords": "City guide, city matching, lifestyle, city finder"
+    },
+    "hero": {
+      "title": "city ​​guide",
+      "subtitle": "Find your perfect city",
+      "cta": "city ​​navigation"
+    },
+    "title": "Find the city that suits you",
+    "subtitle": "Find a city that fits your lifestyle",
+    "disclaimer": "Recommendations are based on general lifestyle preferences",
+    "noData": "Data could not be loaded."
+  },
+  "artStyle": {
+    "meta": {
+      "title": "Art Style Test",
+      "description": "Discover your artistic preferences and style",
+      "keywords": "Art Style, Art Test, Artistic Personality, Art Preferences"
+    },
+    "hero": {
+      "title": "Art Style Test",
+      "subtitle": "Find your artistic personality",
+      "cta": "Start testing",
+      "badge": "art psychology",
+      "description": "Discover your unique artistic preferences and creative style"
+    }
+  },
+  "seniorCompanion": {
+    "meta": {
+      "title": "senior companion",
+      "description": "AI companion for seniors - friendly conversation and support",
+      "keywords": "Senior Companion, Elderly Support, AI Companion, Elderly Care"
+    },
+    "hero": {
+      "title": "senior companion",
+      "subtitle": "A friendly AI companion",
+      "description": "A warm and supportive AI companion designed for seniors"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "💬",
+          "title": "Friendly Chat",
+          "description": "Have warm conversations anytime"
+        },
+        {
+          "icon": "🎵",
+          "title": "Memory Lane",
+          "description": "Share and reminisce about memories"
+        },
+        {
+          "icon": "📰",
+          "title": "Daily News",
+          "description": "Stay updated with easy-to-read news"
+        },
+        {
+          "icon": "🎮",
+          "title": "Brain Games",
+          "description": "Fun activities to keep your mind sharp"
+        }
+      ],
+      "title": "How we can help"
+    },
+    "safety": {
+      "items": [
+        "All conversations are private and secure",
+        "We never share your personal information",
+        "You can stop anytime you want",
+        "Emergency contacts are always available"
+      ],
+      "title": "Safety is important"
+    },
+    "emergency": {
+      "resources": [
+        {
+          "name": "Emergency Services",
+          "phone": "911",
+          "description": "For immediate emergencies",
+          "hours": "24/7"
+        },
+        {
+          "name": "Senior Helpline",
+          "phone": "1-800-677-1116",
+          "description": "Eldercare support and resources",
+          "hours": "Mon-Fri 9AM-8PM EST"
+        }
+      ],
+      "title": "emergency resources",
+      "subtitle": "Help is always available"
+    }
+  },
+  "storyMaker": {
+    "meta": {
+      "title": "lifestyle",
+      "description": "Check out various tools and insights about lifestyle.",
+      "keywords": "Lifestyle, Test, Insight, OIYO"
+    },
+    "hero": {
+      "title": "lifestyle",
+      "subtitle": "The perfect guide to my lifestyle"
+    },
+    "features": {
+      "title": "lifestyle",
+      "feature1Emoji": "Check out detailed information about lifestyle.",
+      "feature1Title": "Check out detailed information about lifestyle.",
+      "feature1Description": "Check out detailed information about lifestyle.",
+      "feature2Emoji": "Check out detailed information about lifestyle.",
+      "feature2Title": "Check out detailed information about lifestyle.",
+      "feature2Description": "Check out detailed information about lifestyle.",
+      "feature3Emoji": "Check out detailed information about lifestyle.",
+      "feature3Title": "Check out detailed information about lifestyle.",
+      "feature3Description": "Check out detailed information about lifestyle.",
+      "feature4Emoji": "Check out detailed information about lifestyle.",
+      "feature4Title": "Check out detailed information about lifestyle.",
+      "feature4Description": "Check out detailed information about lifestyle."
+    },
+    "howItWorks": {
+      "title": "lifestyle",
+      "step1Title": "Check out detailed information about lifestyle.",
+      "step1Description": "Check out detailed information about lifestyle.",
+      "step2Title": "Check out detailed information about lifestyle.",
+      "step2Description": "Check out detailed information about lifestyle.",
+      "step3Title": "Check out detailed information about lifestyle.",
+      "step3Description": "Check out detailed information about lifestyle.",
+      "step4Title": "Check out detailed information about lifestyle.",
+      "step4Description": "Check out detailed information about lifestyle.",
+      "step5Title": "Check out detailed information about lifestyle.",
+      "step5Description": "Check out detailed information about lifestyle."
+    },
+    "faq": {
+      "title": "lifestyle",
+      "question1": "first question",
+      "answer1": "first answer",
+      "question2": "second question",
+      "answer2": "second answer",
+      "question3": "third question",
+      "answer3": "third answer",
+      "question4": "fourth question",
+      "answer4": "fourth answer",
+      "question5": "fifth question",
+      "answer5": "fifth answer",
+      "question6": "Check out detailed information about lifestyle.",
+      "answer6": "Check out detailed information about lifestyle."
+    }
+  },
+  "personalColorPalette": {
+    "marketing": {
+      "about": {
+        "title": "Introduction to personal color analysis",
+        "description": "Learn about colors that enhance your natural beauty and boost your confidence.",
+        "feature1": "Scientific color analysis based on skin tone, eye color, and hair color",
+        "feature2": "Customized color palette recommendations for your wardrobe and makeup",
+        "feature3": "Apply seasonal color theory for optimal results",
+        "feature4": "Expert styling tips to maximize your natural features",
+        "feature5": "Custom styling suggestions"
+      }
+    },
+    "seasons": {
+      "spring": {
+        "title": "spring warm tone",
+        "description": "Lively and lively colors go well together."
+      },
+      "summer": {
+        "title": "summer cool tone",
+        "description": "Soft and elegant pastel tones are attractive."
+      },
+      "autumn": {
+        "title": "Autumn warm tone",
+        "description": "The deep and profound colors stand out."
+      },
+      "winter": {
+        "title": "winter cool tone",
+        "description": "The vivid, urban contrast goes well with it."
+      },
+      "title": "Personal color by season"
+    },
+    "faq": {
+      "title": "Personal Color Frequently Asked Questions",
+      "question1": "Are the results accurate?",
+      "answer1": "Self-diagnosis is based on general characteristics.",
+      "question2": "Can it be used for makeup as well?",
+      "answer2": "Yes, it will help you choose foundation and color cosmetics.",
+      "question3": "Does it change as you get older?",
+      "answer3": "Your skin tone may change, but your unique seasonal type will not change much."
+    },
+    "meta": {
+      "title": "Personal Color Palette",
+      "description": "Find the color that makes you shine the most.",
+      "keywords": "Personal color, warm tone, cool tone, styling"
+    },
+    "hero": {
+      "badge": "Style analysis",
+      "title": "Personal Color Palette",
+      "subtitle": "Find my season and best color",
+      "cta": "Start your analysis"
+    },
+    "test": {
+      "progress": "progress",
+      "submit": "View results",
+      "loading": "Analyzing color...",
+      "selectOption": "Please select",
+      "next": "next",
+      "previous": "before"
+    },
+    "result": {
+      "title": "my color palette",
+      "description": "Check out the best colors and styling tips."
+    }
+  },
+  "starterCost": {
+    "meta": {
+      "title": "hobby cost calculator",
+      "description": "Planning a budget to start a hobby"
+    },
+    "inputs": {
+      "calculate": "cost calculation",
+      "tier": "Select Equipment Class",
+      "hobby": "Choose a hobby"
+    },
+    "result": {
+      "total": "total estimated cost",
+      "breakdown": "cost details",
+      "gears": "Equipment/Props",
+      "lesson": "Lesson/Class",
+      "clothing": "Clothing/Shoes",
+      "packageIncludes": "What's included"
+    },
+    "tips": {
+      "title": "Please know",
+      "content": "Costs are average estimates and may vary depending on the brand and where you purchase."
+    },
+    "tiers": {
+      "entry": "For beginners (cost-effective)",
+      "mid": "Intermediate (recommended)",
+      "pro": "Professional (high-end)"
+    },
+    "hobbies": {
+      "cycling": "Bicycle/Riding",
+      "tennis": "tennis",
+      "golf": "golf",
+      "camping": "camping",
+      "photography": "photo/camera",
+      "baking": "baking",
+      "climbing": "climbing",
+      "yoga": "Yoga/Pilates"
+    },
+    "features": {
+      "items": [
+        {
+          "title": "Personalized Budget Calculation",
+          "desc": "Calculate step-by-step costs from entry to professional level.",
+          "icon": "Calculator"
+        },
+        {
+          "title": "Detailed Estimate Analysis",
+          "desc": "Show detailed costs by category such as equipment, clothing, and lessons.",
+          "icon": "PieChart"
+        },
+        {
+          "title": "Cost Saving Tips",
+          "desc": "Provide practical advice on reducing unnecessary spending.",
+          "icon": "PiggyBank"
+        },
+        {
+          "title": "Save as PDF",
+          "desc": "Save the calculated estimate as a PDF and check it anytime.",
+          "icon": "Download"
+        }
+      ],
+      "title": "Key Insights"
+    },
+    "howItWorks": {
+      "steps": [
+        {
+          "title": "Select Hobby",
+          "description": "Please select the hobby activity you are interested in."
+        },
+        {
+          "title": "Set Level",
+          "description": "Select your current skill level or target level."
+        },
+        {
+          "title": "Check Results",
+          "description": "Check the detailed budget analysis and personalized advice."
+        }
+      ],
+      "title": "How to use"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "How accurate are the costs?",
+          "answer": "Calculated based on average market price data, but may vary by brand and retailer."
+        },
+        {
+          "question": "Do I need to buy all equipment at once?",
+          "answer": "No, we recommend buying essential equipment first. Start with cost-effective products at the entry level."
+        },
+        {
+          "question": "Are other hobbies planned to be added?",
+          "answer": "Yes, hobbies with many user requests will be updated sequentially."
+        }
+      ],
+      "title": "Frequently Asked Questions"
+    },
+    "title": "Hobby Startup Costs",
+    "description": "Find out how much it costs to start a new hobby"
+  },
+  "recommendation": {
+    "meta": {
+      "title": "Life hobby recommendation",
+      "description": "We suggest the perfect hobby that fits your personality and lifestyle.",
+      "keywords": "Hobby recommendations, finding hobbies, interests, activities"
+    },
+    "hero": {
+      "title": "Discover your perfect hobby",
+      "subtitle": "New fun that will infuse your personality and daily life",
+      "cta": "Get Recommendations"
+    },
+    "result": {
+      "title": "Recommended hobby report for you",
+      "subtitle": "Carefully selected based on personality and interest data"
+    },
+    "matchReasons": {
+      "mbti": "This activity is highly recommended for {type} personality type",
+      "mood": "It's the perfect activity to cheer you up right now",
+      "bloodType": "Fits well with the tendencies of blood type {type}",
+      "zodiac": "{sign} Goes well with the temperament of the zodiac sign",
+      "riasec": "Fits perfectly with your {code} interest area"
+    },
+    "personalizedTips": {
+      "mbtiIntrovert": "It's the perfect activity to enjoy some alone time",
+      "mbtiPerceiving": "Get started freely with a flexible schedule",
+      "moodStress": "Particularly effective in relieving daily stress",
+      "moodPositive": "You can develop more positive energy",
+      "beginner": "Even beginners can get started easily",
+      "busy": "You can enjoy it even in your busy daily life.",
+      "budget": "You can get started easily with minimal equipment"
+    },
+    "faq": {
+      "question1": "What is the recommended principle?",
+      "answer1": "We make suggestions based on your interests, tendencies, and current psychological state.",
+      "question2": "Is it suitable for beginners?",
+      "answer2": "We provide step-by-step recommendations, from beginner activities to advanced courses.",
+      "question3": "Are these hobbies suitable for beginners?",
+      "answer3": "Includes options for all skill levels from beginner to advanced.",
+      "question4": "How often should I try a new hobby?",
+      "answer4": "Start with one, explore it fully, and then add more.",
+      "question5": "What if I don't like the recommendations?",
+      "answer5": "Retake the test or explore other categories to find a better match.",
+      "question6": "Can hobbies improve mental health?",
+      "answer6": "Yes, interesting hobbies can reduce stress and improve overall wellbeing.",
+      "title": "Lifestyle"
+    },
+    "features": {
+      "title": "Main matching points",
+      "feature1Emoji": "✨",
+      "feature1Title": "Detailed features",
+      "feature1Description": "It is an element that perfectly harmonizes with my personality.",
+      "feature2Emoji": "✨",
+      "feature2Title": "Detailed features",
+      "feature2Description": "It is an element that perfectly harmonizes with my personality.",
+      "feature3Emoji": "✨",
+      "feature3Title": "Detailed features",
+      "feature3Description": "It is an element that perfectly harmonizes with my personality.",
+      "feature4Emoji": "✨",
+      "feature4Title": "Detailed features",
+      "feature4Description": "It is an element that perfectly harmonizes with my personality."
+    },
+    "howItWorks": {
+      "title": "Hobby Recommendation Process",
+      "step1Title": "Detailed features",
+      "step1Description": "It is an element that perfectly harmonizes with my personality.",
+      "step2Title": "Detailed features",
+      "step2Description": "It is an element that perfectly harmonizes with my personality.",
+      "step3Title": "Detailed features",
+      "step3Description": "It is an element that perfectly harmonizes with my personality.",
+      "step4Title": "Detailed features",
+      "step4Description": "It is an element that perfectly harmonizes with my personality."
+    }
+  },
+  "roulette": {
+    "meta": {
+      "title": "hobby roulette | random hobby selector",
+      "description": "Can’t decide on a hobby? Roulette chooses!",
+      "keywords": "Hobby Roulette, Random Hobby, Hobby Picker, Activity Finder"
+    }
+  },
+  "cup": {
+    "meta": {
+      "title": "hobby cup test",
+      "description": "Find activities that fill your energy",
+      "keywords": "Hobbies, cups, sense of accomplishment, activities"
+    },
+    "hero": {
+      "title": "Fill your ‘hobby cup’",
+      "subtitle": "Discover activities that prevent burnout and rejuvenate you",
+      "cta": "Start testing"
+    },
+    "title": "hobby cup test",
+    "subtitle": "Find a hobby that fills your cup"
+  },
+  "writingPrompts": {
+    "meta": {
+      "title": "lifestyle",
+      "description": "Check out various tools and insights about lifestyle.",
+      "keywords": "Lifestyle, Test, Insight, OIYO"
+    },
+    "hero": {
+      "title": "lifestyle",
+      "badge": "suggestion",
+      "subtitle": "The perfect guide to my lifestyle",
+      "description": "Check out detailed information about lifestyle."
+    }
+  },
+  "styleConsultant": {
+    "meta": {
+      "title": "lifestyle",
+      "description": "Check out various tools and insights about lifestyle."
+    },
+    "title": "lifestyle",
+    "description": "Check out detailed information about lifestyle.",
+    "privacyNote": "Check out detailed information about lifestyle."
+  },
+  "petCounselor": {
+    "meta": {
+      "title": "lifestyle",
+      "description": "Check out various tools and insights about lifestyle."
+    },
+    "title": "lifestyle",
+    "subtitle": "The perfect guide to my lifestyle",
+    "disclaimer": "Check out detailed information about lifestyle."
+  },
+  "preview": {
+    "subtitle": "Find out which type resonates with you",
+    "title": "16 Personality Types"
+  },
+  "analysts": "We celebrate the warm vision hidden behind cold logic. (INTJ, INTP, ENTJ, ENTP)",
+  "diplomats": "My ideals and empathy are making the world warmer. (INFJ, INFP, ENFJ, ENFP)",
+  "sentinels": "Those who quietly stand their ground are the true heroes. (ISTJ, ISFJ, ESTJ, ESFJ)",
+  "explorers": "I envy the energy of those who enjoy the moment and challenge limits! (ISTP, ISFP, ESTP, ESFP)",
+  "A": "Popularity",
+  "B": "Popularity",
+  "Copied to clipboard!": "Copied to clipboard!",
+  "data": "Analysis Data",
+  "analyze": "Analyze",
+  "workHub": {
+    "tabs": {
+      "style": "work style",
+      "salary": "Salary/Actual Receipt",
+      "tax": "freelance taxes",
+      "leadership": "leadership style",
+      "meeting": "Meeting Survival Style",
+      "job": "Find your calling",
+      "interview": "interview score calculator",
+      "labor": "Salary/Labor",
+      "focus": "Deep Work Timer"
+    },
+    "meta": {
+      "title": "Work & Career Hub",
+      "description": "Work tendency analysis, salary calculator, and freelance tax calculator all in one place."
+    },
+    "title": "Work & Career Hub",
+    "subtitle": "Helps with business productivity and financial growth.",
+    "styleDescription": "Discover your unique work style and way of collaborating.",
+    "salaryDescription": "Easily calculate your severance pay and actual salary.",
+    "taxDescription": "Calculate freelance comprehensive income tax and 3.3% tax in advance.",
+    "leadershipDescription": "Discover your leadership style and potential.",
+    "meetingDescription": "Find out what type of person I am in meetings."
+  },
+  "decisionHub": {
+    "tabs": {
+      "helper": "decision helper",
+      "style": "decision-making style"
+    },
+    "meta": {
+      "title": "decision solutions",
+      "description": "Random decision assistant and decision style analysis."
+    },
+    "title": "decision center",
+    "subtitle": "Helping you make better, faster, smarter decisions.",
+    "helperTitle": "Random Decision Helper",
+    "helperDesc": "Confused about your choice? Leave it to fate."
+  },
+  "meetingSurvival": {
+    "meta": {
+      "keywords": "Personality analysis, self-discovery, premium insight",
+      "description": "In-depth, data-driven reports",
+      "title": "dashboard"
+    },
+    "landing": {
+      "steps": ["0", "1", "2", "3"],
+      "types": {
+        "strategist": {
+          "title": "dashboard",
+          "description": "Analysis of your unique tendencies"
+        },
+        "mediator": {
+          "title": "dashboard",
+          "description": "Analysis of your unique tendencies"
+        },
+        "facilitator": {
+          "title": "dashboard",
+          "description": "Analysis of your unique tendencies"
+        },
+        "observer": {
+          "title": "dashboard",
+          "description": "Analysis of your unique tendencies"
+        },
+        "challenger": {
+          "title": "dashboard",
+          "description": "In-depth, data-driven reports"
+        },
+        "executor": {
+          "title": "dashboard",
+          "description": "Analysis of your unique tendencies"
+        },
+        "title": "dashboard"
+      },
+      "faq": {
+        "list": {
+          "0": {
+            "a": "popularity",
+            "q": "Feature Request"
+          },
+          "1": {
+            "a": "popularity",
+            "q": "Feature Request"
+          },
+          "2": {
+            "a": "popularity",
+            "q": "Feature Request"
+          }
+        },
+        "title": "dashboard"
+      },
+      "test": {
+        "insightBullets": [
+          "Unveil the hidden layers of your personal philosophy."
+        ],
+        "progress": "progress",
+        "submit": "Submit",
+        "loading": "Loading",
+        "selectOption": "Select",
+        "next": "next",
+        "previous": "before"
+      },
+      "result": {
+        "advisor": {
+          "tip": "💡 Advice from a career coach",
+          "content": "Knowing your own style is important, but understanding your colleagues' styles can increase meeting efficiency by 200%."
+        },
+        "title": "Detailed analysis report",
+        "description": "Based on data, we take a detailed look into your inner self.",
+        "loading": "Analyzing your meeting survival style...",
+        "analyzing": "We're analyzing your meeting survival style!",
+        "yourStyle": "Your Meeting Survival Style",
+        "secondaryType": "secondary type",
+        "detailedAnalysis": "Detailed score analysis",
+        "keyTraits": "main characteristics",
+        "yourStrengths": "your strengths",
+        "challenges": "challenge",
+        "improvementTips": "improvement tips",
+        "meetingTips": "Tips for using meetings",
+        "shareResults": "Share your results",
+        "retakeTest": "Test again",
+        "goHome": "Home",
+        "copied": "Copied to clipboard!"
+      },
+      "meta": {
+        "title": "Productivity Test",
+        "description": "We take an in-depth look into your inner self based on data.",
+        "keywords": "Personality analysis, self-discovery, premium insight"
+      },
+      "subtitle": "In-depth analysis report",
+      "cta": "Find Out",
+      "howItWorks": "How It Works",
+      "title": "dashboard",
+      "description": "Key advice for future growth",
+      "keywords": "Personality diagnosis, mind vitamins, journey to find myself, OIYO"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Signature Strength",
+          "description": "Comprehensive analysis and personalized insights",
+          "question": "What is a productivity and work efficiency test?",
+          "answer": "This test helps you understand your patterns and tendencies related to productivity and work efficiency."
+        },
+        {
+          "icon": "🚀",
+          "title": "Pivot Point",
+          "description": "Data-driven recommendations for better outcomes",
+          "question": "How accurate are the results?",
+          "answer": "Our tests are based on established psychological research and provide valuable insights into your patterns and behaviors."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Signature Strength",
+          "description": "Comprehensive analysis and personalized insights",
+          "question": "What is a productivity and work efficiency test?",
+          "answer": "This test helps you understand your patterns and tendencies related to productivity and work efficiency."
+        },
+        {
+          "icon": "🚀",
+          "title": "Pivot Point",
+          "description": "Data-driven recommendations for better outcomes",
+          "question": "How accurate are the results?",
+          "answer": "Our tests are based on established psychological research and provide valuable insights into your patterns and behaviors."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Signature Strength",
+          "description": "Comprehensive analysis and personalized insights",
+          "question": "What is a productivity and work efficiency test?",
+          "answer": "This test helps you understand your patterns and tendencies related to productivity and work efficiency."
+        },
+        {
+          "icon": "🚀",
+          "title": "Pivot Point",
+          "description": "Data-driven recommendations for better outcomes",
+          "question": "How accurate are the results?",
+          "answer": "Our tests are based on established psychological research and provide valuable insights into your patterns and behaviors."
+        }
+      ]
+    },
+    "subtitle": "In-depth analysis report",
+    "startButton": "Start Test"
+  },
+  "decisionMaking": {
+    "meta": {
+      "hero": {
+        "badge": "popularity",
+        "cta": "Get started now"
+      },
+      "keywords": "Personality analysis, self-discovery, premium insight",
+      "title": "Productivity Test",
+      "description": "Based on data, we take a detailed look into your inner self."
+    },
+    "hero": {
+      "subtitle": "In-depth analysis report",
+      "cta": "Take the Test",
+      "badge": "🧠 Decision Psychology",
+      "title": "Productivity Tools",
+      "description": "Analysis of your unique tendencies"
+    },
+    "result": {
+      "loading": {
+        "title": "dashboard",
+        "description": "In-depth, data-driven reports"
+      },
+      "sections": {
+        "strengths": "strength",
+        "traits": "personality traits",
+        "challenges": "Challenges",
+        "idealSituations": "Ideal Situations",
+        "tips": "Tips",
+        "breakdown": "Breakdown"
+      },
+      "test": {
+        "insightBullets": ["Mapping the constellation of your truest self."],
+        "progress": "progress",
+        "submit": "Submit",
+        "loading": "Loading",
+        "selectOption": "Select",
+        "next": "next",
+        "previous": "before"
+      },
+      "result": {
+        "title": "Detailed analysis report",
+        "description": "Based on data, we take a detailed look into your inner self."
+      },
+      "meta": {
+        "title": "Productivity Test",
+        "description": "Based on data, we take a detailed look into your inner self.",
+        "keywords": "Personality analysis, self-discovery, premium insight"
+      },
+      "title": "Detailed analysis report",
+      "subtitle": "Details",
+      "backHome": "Back Home",
+      "sharePrompt": "Share Prompt",
+      "description": "We take an in-depth look into your inner self based on data.",
+      "retakeTest": "Retake Test"
+    },
+    "test": {
+      "test": {
+        "insightBullets": ["Mapping the constellation of your truest self."],
+        "progress": "progress",
+        "submit": "Submit",
+        "loading": "Loading",
+        "selectOption": "Select",
+        "next": "next",
+        "previous": "before"
+      },
+      "result": {
+        "title": "Detailed analysis report",
+        "description": "Based on data, we take a detailed look into your inner self."
+      },
+      "meta": {
+        "title": "Productivity Test",
+        "description": "Based on data, we take a detailed look into your inner self.",
+        "keywords": "Personality analysis, self-discovery, premium insight"
+      },
+      "insightBullets": [
+        "Explore the deep architecture of your inner landscape."
+      ],
+      "title": "dashboard",
+      "subtitle": "Details",
+      "submit": "Submit",
+      "progress": "progress",
+      "loading": "Loading",
+      "selectOption": "Select",
+      "previous": "before",
+      "next": "next"
+    },
+    "title": "dashboard",
+    "description": "Analysis of your unique tendencies",
+    "keywords": "Personality diagnosis, mind vitamins, journey to find myself, OIYO",
+    "data": "analysis data"
+  },
+  "yearInReview": {
+    "meta": {
+      "keywords": "Personality analysis, self-discovery, premium insight",
+      "title": "Productivity Test",
+      "description": "We take an in-depth look into your inner self based on data."
+    },
+    "input": {
+      "nameLabel": "Name (or Nickname)",
+      "namePlaceholder": "e.g. John Doe",
+      "placeholder": "What was the most memorable moment in {month}?"
+    },
+    "actions": {
+      "generate": "Generate Timeline",
+      "download": "Save as Image",
+      "generating": "Generating...",
+      "edit": "Edit"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Signature Strength",
+          "description": "Comprehensive analysis and personalized insights",
+          "question": "What is a productivity and work efficiency test?",
+          "answer": "This test helps you understand your patterns and tendencies related to productivity and work efficiency."
+        },
+        {
+          "icon": "🚀",
+          "title": "Pivot Point",
+          "description": "Data-driven recommendations for better outcomes",
+          "question": "How accurate are the results?",
+          "answer": "Our tests are based on established psychological research and provide valuable insights into your patterns and behaviors."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Signature Strength",
+          "description": "Comprehensive analysis and personalized insights",
+          "question": "What is a productivity and work efficiency test?",
+          "answer": "This test helps you understand your patterns and tendencies related to productivity and work efficiency."
+        },
+        {
+          "icon": "🚀",
+          "title": "Pivot Point",
+          "description": "Data-driven recommendations for better outcomes",
+          "question": "How accurate are the results?",
+          "answer": "Our tests are based on established psychological research and provide valuable insights into your patterns and behaviors."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Signature Strength",
+          "description": "Comprehensive analysis and personalized insights",
+          "question": "What is a productivity and work efficiency test?",
+          "answer": "This test helps you understand your patterns and tendencies related to productivity and work efficiency."
+        },
+        {
+          "icon": "🚀",
+          "title": "Pivot Point",
+          "description": "Data-driven recommendations for better outcomes",
+          "question": "How accurate are the results?",
+          "answer": "Our tests are based on established psychological research and provide valuable insights into your patterns and behaviors."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": [
+        "Unveil the hidden layers of your personal philosophy."
+      ],
+      "progress": "progress",
+      "submit": "Submit",
+      "loading": "Loading",
+      "selectOption": "Select",
+      "next": "next",
+      "previous": "before"
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "Based on data, we take a detailed look into your inner self."
+    },
+    "subtitle": "In-depth analysis report",
+    "noEvents": "No events recorded.",
+    "title": "dashboard",
+    "a": "popularity"
+  },
+  "workFocus": {
+    "solution": {
+      "priority": "Priority",
+      "implementation": "Implementation"
+    },
+    "test": {
+      "insightBullets": ["Discover the unique patterns that define your path."],
+      "progress": "progress",
+      "submit": "Submit",
+      "loading": "Loading",
+      "selectOption": "Select",
+      "next": "next",
+      "previous": "before"
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "We take an in-depth look into your inner self based on data."
+    },
+    "meta": {
+      "title": "Productivity Test",
+      "description": "Based on data, we take a detailed look into your inner self.",
+      "keywords": "Personality analysis, self-discovery, premium insight"
+    },
+    "feature1": {
+      "title": "Identify Your Focus Style",
+      "desc": "Precise analysis data proves your potential."
+    },
+    "feature2": {
+      "title": "Optimize Your Environment",
+      "desc": "Precise analysis data proves your potential."
+    },
+    "feature3": {
+      "title": "Maximize Productivity",
+      "desc": "Precise analysis data proves your potential."
+    },
+    "hero": {
+      "badge": "evaluation",
+      "startTest": "Getting started"
+    },
+    "loading": "Loading your results...",
+    "distractionAnalysis": "📊 Distraction Analysis",
+    "solutions": "Personalized Solutions",
+    "weeklyPlan": "Weekly Action Plan",
+    "share": "Share",
+    "shareText": "Work Focus Analysis\\nType: {type}",
+    "shareTitle": "Precise analysis data proves your potential.",
+    "home": "return to home",
+    "copied": "Copied to clipboard!",
+    "data": "analysis data",
+    "insights": "Insights",
+    "heroTitle": "Analysis",
+    "heroSubtitle": "evaluation",
+    "retake": "do it again"
+  },
+  "okr": {
+    "test": {
+      "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+      "progress": "progress",
+      "submit": "Submit",
+      "loading": "Loading...",
+      "selectOption": "Select option",
+      "subtitle": "Details",
+      "next": "next",
+      "previous": "before"
+    },
+    "meta": {
+      "title": "Customized analysis results",
+      "description": "Test detailed analysis reporttription"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What drives your inner world?",
+          "answer": "Small choices accumulate into a grand destiny."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Small choices accumulate into a grand destiny."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        }
+      ]
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "Detailed analysis report"
+    },
+    "title": "Your Productivity Profile",
+    "description": "Based on data, we take a detailed look into your inner self."
+  },
+  "pomodoro": {
+    "test": {
+      "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+      "progress": "progress",
+      "submit": "Submit",
+      "loading": "Loading...",
+      "selectOption": "Select option",
+      "subtitle": "Details",
+      "next": "next",
+      "previous": "before"
+    },
+    "meta": {
+      "title": "Customized analysis results",
+      "description": "Test detailed analysis reporttription"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What drives your inner world?",
+          "answer": "Small choices accumulate into a grand destiny."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Small choices accumulate into a grand destiny."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What drives your inner world?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How does your soul respond to the unknown?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What drives your inner world?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "🚀",
+          "title": "Premium Insight",
+          "description": "Explore the deep architecture of your inner landscape.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "💡",
+          "title": "Premium Insight",
+          "description": "Discover the unique patterns that define your path.",
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        {
+          "icon": "🎯",
+          "title": "Premium Insight",
+          "description": "Mapping the constellation of your truest self.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Inner harmony guides your everyday actions."
+        },
+        {
+          "icon": "🔥",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "You possess an intuitive compass that points toward growth."
+        },
+        {
+          "icon": "⭐",
+          "title": "Premium Insight",
+          "description": "Unveil the hidden layers of your personal philosophy.",
+          "question": "How do you navigate life's currents?",
+          "answer": "Inner harmony guides your everyday actions."
+        }
+      ]
+    },
+    "result": {
+      "title": "Detailed analysis report",
+      "description": "Detailed analysis report"
+    },
+    "title": "Your Productivity Profile",
+    "description": "Based on data, we take a detailed look into your inner self."
+  },
+  "decisionHelper": {
+    "meta": {
+      "title": "Decision Helper",
+      "description": "We take an in-depth look into your inner self based on data.",
+      "keywords": "Productivity, OIYO, Test"
+    },
+    "cards": {
+      "sun": {
+        "name": "Sun",
+        "answer": "notification",
+        "meaning": "Meaning"
+      },
+      "star": {
+        "name": "Star",
+        "answer": "notification",
+        "meaning": "Meaning"
+      },
+      "emperor": {
+        "name": "Emperor",
+        "answer": "notification",
+        "meaning": "Meaning"
+      },
+      "wheel": {
+        "name": "Wheel",
+        "answer": "notification",
+        "meaning": "Meaning"
+      },
+      "moon": {
+        "name": "Moon",
+        "answer": "notification",
+        "meaning": "Meaning"
+      },
+      "hermit": {
+        "name": "Hermit",
+        "answer": "notification",
+        "meaning": "Meaning"
+      },
+      "hanged": {
+        "name": "Hanged",
+        "answer": "notification",
+        "meaning": "Meaning"
+      },
+      "tower": {
+        "name": "Tower",
+        "answer": "notification",
+        "meaning": "Meaning"
+      },
+      "sword": {
+        "name": "Sword",
+        "answer": "notification",
+        "meaning": "Meaning"
+      },
+      "fog": {
+        "name": "Fog",
+        "answer": "notification",
+        "meaning": "Meaning"
+      }
+    },
+    "breadcrumbs": {
+      "home": "home"
+    },
+    "title": "Decision Helper",
+    "subtitle": "In-depth analysis report",
+    "disclaimer": "Precise analysis data proves your potential.",
+    "instruction": "Pick a card...",
+    "oracleSays": "The Oracle Says",
+    "askAgain": "Ask Again",
+    "hero": "hero"
+  },
+  "procrastination": {
+    "meta": {
+      "title": "In-depth analysis report",
+      "description": "Based on data, we take a detailed look into your inner self.",
+      "keywords": "Personality analysis, self-discovery, premium insight"
+    },
+    "hero": {
+      "title": "In-depth analysis report",
+      "subtitle": "In-depth analysis report",
+      "cta": "Start Test",
+      "badge": "Productivity Psychology",
+      "startTest": "Start Test"
+    },
+    "feature1": {
+      "title": "Identify Triggers",
+      "desc": "Precise analysis data proves your potential."
+    },
+    "feature2": {
+      "title": "Customized analysis results",
+      "desc": "Precise analysis data proves your potential."
+    },
+    "feature3": {
+      "title": "Customized analysis results",
+      "desc": "Precise analysis data proves your potential."
+    },
+    "faq1Question": "Why do I procrastinate?",
+    "faq1Answer": "Precise analysis data proves your potential.",
+    "faq2Question": "Precise analysis data proves your potential.",
+    "faq2Answer": "Precise analysis data proves your potential.",
+    "faq3Question": "Precise analysis data proves your potential.",
+    "faq3Answer": "Precise analysis data proves your potential.",
+    "faq4Question": "Precise analysis data proves your potential.",
+    "faq4Answer": "Precise analysis data proves your potential.",
+    "heroTitle": "Precise analysis data proves your potential.",
+    "heroSubtitle": "In-depth analysis report",
+    "howItWorksTitle": "How It Works",
+    "step1Title": "Take the Test",
+    "step1Description": "We take an in-depth look into your inner self based on data.",
+    "step2Title": "Get Your Type",
+    "step2Description": "Based on data, we take a detailed look into your inner self.",
+    "step3Title": "Receive Tips",
+    "step3Description": "We take an in-depth look into your inner self based on data.",
+    "faqTitle": "Precise analysis data proves your potential."
+  },
+  "grandparentConnection": {
+    "meta": {
+      "hero": {
+        "badge": "Preeminent Inquiry",
+        "subtitle": "Unveil the unique dialect of your heart.",
+        "cta": "Initiate Calibration",
+        "secondaryCta": "Deepen Awareness"
+      },
+      "benefits": {
+        "subtitle": "Turning affection into a conscious ritual of recognition."
+      },
+      "keywords": "intergenerational resonance, grandparent alchemy, legacy building, Oiyo",
+      "title": "Intergenerational Resonance Profiler | Oiyo",
+      "description": "Explore the shared frequencies and connection patterns across generations."
+    },
+    "connection": {
+      "cards": [
+        {
+          "title": "Hybrid Resonance Menu",
+          "description": "Blend physical rituals and digital touchpoints to keep the relationship dynamic between visits."
+        },
+        {
+          "icon": "🎨",
+          "title": "Intergenerational Narrative Arc",
+          "description": "Co-create shared experiences and stories that bridge the generational gap."
+        }
+      ]
+    },
+    "hero": {
+      "subtitle": "Build a bond beyond time.",
+      "title": "Intergenerational Resonance"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Legacy Transmission",
+          "description": "Open the channels to let the clan wisdom flow."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "The Bridge of Time",
+          "description": "Building a deep understanding across the generational divide.",
+          "question": "What is intergenerational resonance?",
+          "answer": "It is the meeting point of soul frequencies across the divides of age and experience."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Intergenerational Mapping",
+          "description": "Analyzes the unique energetic exchange between grandparent and grandchild."
+        }
+      ]
+    },
+    "result": {
+      "title": "Legacy Revealed",
+      "description": "Your unique intergenerational connection signature."
+    },
+    "title": "Intergenerational Resonance",
+    "description": "Profound insights for a rich connection across generations."
+  }
+}

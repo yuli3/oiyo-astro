@@ -1,0 +1,57 @@
+{
+  "steps": {
+    "welcome": {
+      "description": "고대의 지혜와 현대 심리학을 통해 우주의 청사진을 발견해보세요.",
+      "title": "당신의 성역에 오신 것을 환영합니다"
+    },
+    "interests": {
+      "description": "마음에 드는 것을 선택하세요. 귀하의 여행을 맞춤화해 드립니다.",
+      "title": "당신에게 무슨 전화가 오나요?"
+    },
+    "complete": {
+      "description": "당신의 성소가 준비되었습니다. 자기 발견의 여정을 시작해보세요.",
+      "title": "당신의 안식처가 기다립니다"
+    }
+  },
+  "interests": {
+    "personality": "성격",
+    "career": "직업",
+    "relationships": "관계",
+    "wellness": "웰빙",
+    "creativity": "창의성",
+    "lifestyle": "라이프스타일",
+    "prompt": "관심분야를 선택하세요"
+  },
+  "welcome": {
+    "user": "환영합니다, {name}님",
+    "description": "당신은 자아의 구조를 탐구하는 구도자 커뮤니티에 가입했습니다."
+  },
+  "features": {
+    "tests": {
+      "title": "성격 테스트",
+      "description": "30개 이상의 과학적 근거가 있는 평가."
+    },
+    "history": {
+      "title": "당신의 역사",
+      "description": "모든 결과가 저장되고 정리되었습니다."
+    },
+    "recommendations": {
+      "title": "개인화된 통찰력",
+      "description": "귀하의 고유한 프로필에 맞는 지침을 제공합니다."
+    }
+  },
+  "complete": {
+    "success": "온보딩 완료",
+    "message": "귀하의 기본 설정이 저장되었습니다. 성역에 오신 것을 환영합니다.",
+    "benefits": {
+      "dashboard": "개인 대시보드에 액세스하세요",
+      "recommendations": "맞춤 추천 받기"
+    }
+  },
+  "actions": {
+    "skip": "건너뛰다",
+    "completing": "성역에 들어가다...",
+    "getStarted": "성소에 들어가세요",
+    "next": "다음"
+  }
+}

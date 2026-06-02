@@ -1,0 +1,26 @@
+{
+  "identify": {
+    "description": "Identifiez votre fortune."
+  },
+  "title": "Oracle de l'Aube",
+  "subtitle": "Résonance du Cosmos",
+  "loading": "Déchiffrement des constellations...",
+  "source": {
+    "PAYMENT": "Échanges",
+    "MAYAN": "Calendrier Maya",
+    "SAJU": "Sagesse Orientale",
+    "MBTI": "Psyché (MBTI)",
+    "TCI": "Tempérament (TCI)",
+    "BIG5": "Essence (Big 5)"
+  },
+  "category": {
+    "EARTH": "Souffle Tellurique",
+    "CELESTIAL": "Courant Céleste",
+    "SPIRIT": "Grâce Spirituelle",
+    "HUMAN": "Raisons Humaines"
+  },
+  "modal": {
+    "noteTitle": "Notes de l'Architecte",
+    "noteDesc": "Cette vision fut puisée dans l'éther du moteur {source}, vibrant sur le Protocole Synapse."
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Cycles élémentaires",
+  "influence": "Influence Élémentaire",
+  "chartLabel": "Composition Élémentaire",
+  "interpretation": {
+    "balanceAdvice": "Conseil pour l'Équilibre",
+    "balanceDescription": "Comment harmoniser vos éléments .",
+    "dominant": "Élément Dominant",
+    "title": "Interprétation"
+  },
+  "viewModes": {
+    "chart": "Graphique des Éléments",
+    "balance": "Équilibre Élémentaire",
+    "cycle": "Cycle Élémentaire"
+  },
+  "water": {
+    "name": "Bois (木)",
+    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
+    "keywords": ["Sagesse", "Flexibilité", "Aperçu", "Vitalité"],
+    "strengths": ["Aperçu", "Adaptabilité", "Apprentissage"],
+    "careers": ["Chercheuse", "Philosophe", "Commerce", "Psychologie"],
+    "short": "Metal"
+  },
+  "wood": {
+    "name": "Bois (木)",
+    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
+    "keywords": ["Croissance", "Création", "Conduire", "Bienveillance"],
+    "strengths": ["Conduire", "Planification", "Compassion"],
+    "careers": ["Planificatrice", "Éducatrice", "Art", "Conception"],
+    "short": "Metal"
+  },
+  "fire": {
+    "name": "Bois (木)",
+    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
+    "keywords": ["Passion", "Expression", "Énergie", "Éclat"],
+    "strengths": ["Sociabilité", "Direction", "Créativité"],
+    "careers": ["Artiste", "Ventes", "Conception", "IT"],
+    "short": "Metal"
+  },
+  "earth": {
+    "name": "Bois (木)",
+    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
+    "keywords": ["Inclusion", "Médiation", "Confiance", "Stabilité"],
+    "strengths": ["Fiabilité", "Persistance", "Fiabilité"],
+    "careers": ["Immobilier", "Agriculture", "Architecture", "Politique"],
+    "short": "Metal"
+  },
+  "metal": {
+    "name": "Bois (木)",
+    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
+    "keywords": ["Principe", "Justice", "Décision", "Précision"],
+    "strengths": ["Esprit de décision", "Précision", "Intégrité"],
+    "careers": ["Militaire", "Légale", "Finance", "Ingénierie"],
+    "short": "Métal"
+  },
+  "cycle": {
+    "description": "Orienté vers la croissance, créatif, et doté d'une pensée flexible.",
+    "destruction": "Cycle de Destruction",
+    "generation": "Cycle de Génération",
+    "title": "Interprétation"
+  },
+  "strengths": "Points forts",
+  "careers": "Orientation professionnelle",
+  "subtitle": "Comprendre les cinq éléments",
+  "status": {
+    "strong": "Fort",
+    "balanced": "Équilibré",
+    "weak": "Faible"
+  }
+}

@@ -1,0 +1,727 @@
+{
+  "meta": {
+    "hero": {
+      "subtitle": "学習スタイルを発見して効果的に勉強",
+      "badge": "📚 教育"
+    },
+    "keywords": "キーワード, タグ, 検索",
+    "description": "さらなる成長へのアドバイス",
+    "title": "マイ・インサイト"
+  },
+  "hero": {
+    "subtitle": "学習スタイルを発見して効果的に勉強",
+    "cta": "学習スタイルを見つける",
+    "badge": "📚 教育",
+    "title": "マイ・インサイト",
+    "description": "さらなる成長へのアドバイス"
+  },
+  "result": {
+    "title": "マイ・インサイト",
+    "studyTips": "勉強のヒント",
+    "environment": "環境",
+    "scores": "スコア",
+    "share": "シェア",
+    "retake": "再テスト",
+    "description": "さらなる成長へのアドバイス"
+  },
+  "test": {
+    "insightBullets": [
+      "自分の道を定義するユニークなパターンを見つけてください。"
+    ],
+    "previous": "前へ",
+    "progress": "進行状況",
+    "next": "次へ",
+    "submit": "送信",
+    "loading": "読み込み中",
+    "selectOption": "選択する"
+  },
+  "title": "マイ・インサイト",
+  "description": "さらなる成長へのアドバイス",
+  "keywords": "キーワード, タグ, 検索",
+  "Copied to clipboard!": "クリップボードにコピーされました!",
+  "learning": {
+    "types": {
+      "INTJ": {
+        "strengths": ["自由研究", "複雑な概念", "長期計画", "論理分析"],
+        "challenges": [
+          "退屈な繰り返し",
+          "丸暗記",
+          "グループワーク",
+          "自発的なタスク"
+        ],
+        "studyMethods": [
+          "コンセプトマッピング",
+          "読書と研究",
+          "オンラインコース",
+          "問題解決に重点を置く"
+        ],
+        "recommendedTools": ["概念", "黒曜石", "Anki", "カーンアカデミー"],
+        "examStrategies": [
+          "過去のパターンを分析する",
+          "概念を接続する",
+          "練習問題を作成する"
+        ],
+        "motivationTips": [
+          "明確な目標を設定する",
+          "全体像を理解する",
+          "実用的なアプリケーションを見つける"
+        ],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "INTP": {
+        "strengths": [
+          "論理的思考",
+          "創造的な問題解決",
+          "概念の理解",
+          "独立した研究"
+        ],
+        "challenges": ["期限を守る", "次の計画", "暗記", "定期的なルーチン"],
+        "studyMethods": [
+          "理論の探求",
+          "実験",
+          "オンラインディスカッション",
+          "ソースの比較"
+        ],
+        "recommendedTools": [
+          "ウィキペディア",
+          "レディット",
+          "スタック交換",
+          "YouTube講義"
+        ],
+        "examStrategies": [
+          "原則を理解する",
+          "複数のアプローチを研究する",
+          "論理的な推論を使用する"
+        ],
+        "motivationTips": [
+          "興味深いトピックを見つける",
+          "自由を維持する",
+          "創造性を許可する"
+        ],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENTJ": {
+        "strengths": ["高速学習", "リーダーシップ", "目標達成", "組織"],
+        "challenges": [
+          "完璧主義",
+          "詳細が不足しています",
+          "感情的な内容",
+          "学習が遅い人"
+        ],
+        "studyMethods": [
+          "研究グループを主導する",
+          "要点を要約する",
+          "効率的な暗記",
+          "プレゼンテーション"
+        ],
+        "recommendedTools": [
+          "概念",
+          "トレロ",
+          "エバーノート",
+          "パワーポイント"
+        ],
+        "examStrategies": ["時間管理", "必需品に焦点を当てる", "反復練習"],
+        "motivationTips": ["明確な目標", "競争", "リーダーシップの役割"],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENTP": {
+        "strengths": [
+          "創造的思考",
+          "素早い理解",
+          "ディベートスキル",
+          "新しい方法を試す"
+        ],
+        "challenges": ["日常的な学習", "暗記", "期限を守る", "単純な繰り返し"],
+        "studyMethods": [
+          "ディスカッションとディベート",
+          "多様なリソース",
+          "プロジェクトベース",
+          "実験的アプローチ"
+        ],
+        "recommendedTools": [
+          "ディベートプラットフォーム",
+          "TEDトーク",
+          "コーセラ",
+          "マインドマップツール"
+        ],
+        "examStrategies": [
+          "創造的な答え",
+          "複数の視点",
+          "最後の瞬間に集中する"
+        ],
+        "motivationTips": ["新たな挑戦", "討論の機会", "自由な学習スタイル"],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "INFJ": {
+        "strengths": [
+          "深い理解",
+          "パターン認識",
+          "クリエイティブな表現",
+          "長期記憶"
+        ],
+        "challenges": [
+          "表面的な暗記",
+          "時間的プレッシャー",
+          "競争環境",
+          "批判的な評価"
+        ],
+        "studyMethods": [
+          "ジャーナリング",
+          "概念を接続する",
+          "視覚化",
+          "ストーリーテリング"
+        ],
+        "recommendedTools": ["概念", "読書メモ", "ヘッドスペース", "日記"],
+        "examStrategies": [
+          "全体像を理解する",
+          "意味のあるつながり",
+          "感情的な記憶"
+        ],
+        "motivationTips": [
+          "意味を見つける",
+          "個人の目標につながる",
+          "刺激的な環境"
+        ],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "INFP": {
+        "strengths": [
+          "クリエイティブライティング",
+          "感情の理解",
+          "自主学習",
+          "芸術的表現"
+        ],
+        "challenges": [
+          "厳格なルール",
+          "批判的なフィードバック",
+          "締め切りが早い",
+          "競争"
+        ],
+        "studyMethods": [
+          "自由形式のメモ",
+          "クリエイティブなプロジェクト",
+          "読む",
+          "音楽伴奏"
+        ],
+        "recommendedTools": [
+          "グッドノート",
+          "カラーペン",
+          "スポティファイ",
+          "読書アプリ"
+        ],
+        "examStrategies": [
+          "独自のメソッドを開発する",
+          "感情的なつながり",
+          "リラックスした考え方"
+        ],
+        "motivationTips": [
+          "個人的な意味",
+          "自由な表現",
+          "肯定的なフィードバック"
+        ],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENFJ": {
+        "strengths": [
+          "協働学習",
+          "コミュニケーション",
+          "他者を理解する",
+          "モチベーション"
+        ],
+        "challenges": ["一人学習", "非個人的な話題", "競争", "批判的分析"],
+        "studyMethods": [
+          "研究会",
+          "ピアティーチング",
+          "ディスカッション",
+          "ロールプレイ"
+        ],
+        "recommendedTools": [
+          "Zoom",
+          "不和",
+          "Googleドキュメント",
+          "コラボレーションツール"
+        ],
+        "examStrategies": ["グループ学習", "お互いに教え合う", "感情的な記憶"],
+        "motivationTips": [
+          "一緒に学びましょう",
+          "他の人を助ける",
+          "ポジティブな雰囲気"
+        ],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ENFP": {
+        "strengths": ["創造性", "熱意", "多様な興味", "クイック接続"],
+        "challenges": ["集中力の維持", "詳細", "ルーチン", "長期プロジェクト"],
+        "studyMethods": [
+          "多様な素材",
+          "ゲーム化された学習",
+          "グループ活動",
+          "実験的アプローチ"
+        ],
+        "recommendedTools": [
+          "クイズレット",
+          "カフート",
+          "YouTube",
+          "Instagram教育"
+        ],
+        "examStrategies": [
+          "興味深いつながりを見つける",
+          "さまざまな方法を試してください",
+          "ゲーム的なアプローチ"
+        ],
+        "motivationTips": ["新しい刺激", "楽しい方法", "賞賛と励まし"],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISTJ": {
+        "strengths": ["勤勉", "暗記", "組織", "計画の実行"],
+        "challenges": [
+          "抽象的な概念",
+          "即興",
+          "クリエイティブなタスク",
+          "不明確な指示"
+        ],
+        "studyMethods": [
+          "教科書の読み聞かせ",
+          "繰り返し暗記する",
+          "体系的なメモ",
+          "過去の論文"
+        ],
+        "recommendedTools": [
+          "伝統的なノート",
+          "エクセル",
+          "PDF教科書",
+          "アプリのスケジュールを設定する"
+        ],
+        "examStrategies": [
+          "万全の準備",
+          "繰り返し学習",
+          "時間を計る",
+          "確かな理解"
+        ],
+        "motivationTips": ["明確な目標", "体系的な計画", "成果"],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISFJ": {
+        "strengths": ["細部へのこだわり", "忍耐", "メモリ", "責任"],
+        "challenges": [
+          "抽象理論",
+          "クリティカルシンキング",
+          "急速な変化",
+          "競争"
+        ],
+        "studyMethods": [
+          "注意深くメモを取る",
+          "反復練習",
+          "実践例",
+          "段階的に"
+        ],
+        "recommendedTools": [
+          "カラーペン",
+          "チェックリスト",
+          "プランナー",
+          "従来の教科書"
+        ],
+        "examStrategies": ["十分な検討", "詳細を確認する", "安定性を維持する"],
+        "motivationTips": ["安定した環境", "賞賛と認識", "実用的な価値"],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESTJ": {
+        "strengths": ["組織", "実行", "リーダーシップ", "効率"],
+        "challenges": [
+          "抽象理論",
+          "感情的な内容",
+          "ゆっくりとしたペース",
+          "柔軟性"
+        ],
+        "studyMethods": [
+          "要約する",
+          "フラッシュカード",
+          "過去の論文",
+          "主要な研究グループ"
+        ],
+        "recommendedTools": [
+          "エクセル",
+          "パワーポイント",
+          "プランナー",
+          "タイマー"
+        ],
+        "examStrategies": [
+          "厳格な時間管理",
+          "必需品に焦点を当てる",
+          "反復練習"
+        ],
+        "motivationTips": [
+          "明確な目標",
+          "目に見える結果",
+          "リーダーシップの役割"
+        ],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESFJ": {
+        "strengths": ["協力", "責任", "実用性", "コミュニケーション"],
+        "challenges": ["一人学習", "抽象理論", "批判", "競争"],
+        "studyMethods": [
+          "グループ学習",
+          "お互いにクイズを出し合う",
+          "実際の例",
+          "ロールプレイ"
+        ],
+        "recommendedTools": [
+          "チャット勉強会",
+          "Zoom",
+          "共有メモ",
+          "カラーペン"
+        ],
+        "examStrategies": ["一緒に勉強する", "相互励まし", "実践的な理解"],
+        "motivationTips": ["社交的な雰囲気", "他の人を助ける", "賞賛"],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISTP": {
+        "strengths": ["問題解決", "論理的思考", "実践的なスキル", "素早い対応"],
+        "challenges": ["理論学習", "長期計画", "暗記", "感情的な内容"],
+        "studyMethods": ["実践的な練習", "ビデオ学習", "直接体験", "問題解決"],
+        "recommendedTools": [
+          "YouTubeの練習",
+          "カーンアカデミー",
+          "シミュレーション",
+          "実用的なツール"
+        ],
+        "examStrategies": [
+          "実践的な問題",
+          "論理的なアプローチ",
+          "効率的な時間の使い方"
+        ],
+        "motivationTips": ["実用的な価値", "無料の方法", "課題"],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ISFP": {
+        "strengths": ["創造性", "感度", "実践的なスキル", "柔軟性"],
+        "challenges": ["厳格なルール", "競争", "批判", "長期計画"],
+        "studyMethods": ["視覚学習", "練習する", "音楽とともに", "自由形式"],
+        "recommendedTools": ["iPad", "子孫を残す", "ピンタレスト", "YouTube"],
+        "examStrategies": ["快適な考え方", "視覚記憶", "個人的な方法"],
+        "motivationTips": [
+          "自由な環境",
+          "肯定的なフィードバック",
+          "クリエイティブな表現"
+        ],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESTP": {
+        "strengths": ["高速学習", "実践的なスキル", "適応性", "問題解決"],
+        "challenges": ["理論学習", "暗記", "長い焦点", "企画"],
+        "studyMethods": ["実践", "グループ活動", "競争", "体験学習"],
+        "recommendedTools": [
+          "ゲーム化されたアプリ",
+          "実用的なツール",
+          "VR学習",
+          "スポーツの例え"
+        ],
+        "examStrategies": ["実技試験", "素早い思考を使う", "短焦点"],
+        "motivationTips": ["競争と課題", "実用的な価値", "即時フィードバック"],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      },
+      "ESFP": {
+        "strengths": ["社交性", "熱意", "実践的なスキル", "楽しい雰囲気"],
+        "challenges": ["一人学習", "理論", "集中", "長期計画"],
+        "studyMethods": [
+          "グループ活動",
+          "ゲーム",
+          "ロールプレイ",
+          "音楽とともに"
+        ],
+        "recommendedTools": [
+          "カフート",
+          "ソーシャルアプリ",
+          "TikTok教育",
+          "友達と一緒に勉強する"
+        ],
+        "examStrategies": [
+          "楽しいアプローチ",
+          "グループレビュー",
+          "ポジティブな考え方"
+        ],
+        "motivationTips": ["楽しい方法", "友達と", "賞賛と報酬"],
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "optimalEnvironment": "Bright and lively space",
+        "timeManagement": "Multiple short fun sessions",
+        "idealGroupSize": "4-8 large group",
+        "concentrationPeak": "Daytime hours"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "新しい科目を学習するときは、次のことを行います。",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "一人で教科書を持って静かに勉強する",
+            "value": "I"
+          },
+          {
+            "text": "友達と一緒に話し合って勉強しましょう",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "勉強した内容はどうやって覚えていますか？",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "具体的な事実と詳細を記憶する",
+            "value": "S"
+          },
+          {
+            "text": "全体的な概念とパターンを把握する",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "問題を解決するためのアプローチ:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "論理的な分析を通じて答えを見つける",
+            "value": "T"
+          },
+          {
+            "text": "直感と感覚でアプローチする",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "試験の準備はどのようにしていますか?",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "体系的な計画を立てて早めに準備しましょう",
+            "value": "J"
+          },
+          {
+            "text": "柔軟性を保ち、必要なときに集中できるようにする",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "希望するクラス活動:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "個人の課題または独立したプロジェクト",
+            "value": "I"
+          },
+          {
+            "text": "グループディスカッションやチームプロジェクト",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "複雑な概念を理解する場合:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "段階的な説明と実際の例が必要",
+            "value": "S"
+          },
+          {
+            "text": "抽象的な理論と全体像を最初に見る",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "プロジェクト チームにおけるあなたの役割:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "客観的な分析と効率性の追求",
+            "value": "T"
+          },
+          {
+            "text": "チームの和とみんなの意見を大切にする",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "課題の締め切りが近づくと:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "計画通り着実に進捗",
+            "value": "J"
+          },
+          {
+            "text": "締め切りのプレッシャーが集中力を高める",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "望ましい学習環境:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "静かな図書館または個人的なスペース",
+            "value": "I"
+          },
+          {
+            "text": "カフェや勉強カフェなどの賑やかな場所",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "推奨される試験問題の種類:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "事実に基づく多肢選択式または短答式",
+            "value": "S"
+          },
+          {
+            "text": "創造的な思考を必要とするエッセイの質問",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "成績が良くないと、次のようなことが起こります。",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "客観的に原因を分析し改善する",
+            "value": "T"
+          },
+          {
+            "text": "感情的に受け入れてモチベーションを見つける",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "学習計画を立てるとき:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "詳細なスケジュールと目標を明確に設定する",
+            "value": "J"
+          },
+          {
+            "text": "大まかな方向を設定し、柔軟に調整します",
+            "value": "P"
+          }
+        ]
+      }
+    ]
+  }
+}

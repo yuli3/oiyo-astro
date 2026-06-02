@@ -1,0 +1,118 @@
+{
+  "share": {
+    "button": "Share Your Insights",
+    "title": "Share & Grow Together",
+    "progress": "Your Journey Progress",
+    "preview": "Card Preview",
+    "kakao": "KakaoTalk",
+    "moreOptions": "Explore Sharing Options"
+  },
+  "referral": {
+    "stats": {
+      "total": "Total Invites",
+      "points": "Essence Points",
+      "premium": "Pro Access Days"
+    },
+    "tier": {
+      "progress": "Until Next Level",
+      "needed": "Invites Still Needed",
+      "rewards": "Available Rewards",
+      "premiumDays": "Days of Pro Access"
+    },
+    "link": {
+      "title": "Share Your Invite Link",
+      "copy": "Copy Link",
+      "copied": "Link Copied!"
+    },
+    "rewards": {
+      "title": "Reward Sanctuary",
+      "friendSignup": "Upon Friend's Awakening",
+      "firstTest": "Upon Their First Insight",
+      "friendPremium": "Upon Their Pro Journey",
+      "active30": "After 30 Days of Presence"
+    },
+    "title": "Invite Friends & Share the Light",
+    "subtitle": "Earn Essence Points and Pro benefits whenever a friend joins your circle."
+  },
+  "comparison": {
+    "quickActions": {
+      "friend": {
+        "title": "Compare with a Friend",
+        "desc": "Invite a friend to see how your souls dance together."
+      },
+      "similar": {
+        "title": "Find Kinred Spirits",
+        "desc": "Discover profiles that resonate with your frequency."
+      },
+      "celeb": {
+        "title": "Identify with Icons",
+        "desc": "Check your personality resonance with global icons."
+      }
+    },
+    "tabs": {
+      "similar": "Kindred Spirits",
+      "population": "Global average",
+      "celeb": "Global Icons",
+      "ideal": "Ideal Resonance"
+    },
+    "sections": {
+      "similar": {
+        "title": "Kinred Spirits",
+        "desc": "Anonymized profiles that share a high frequency of resonance with yours."
+      },
+      "population": {
+        "title": "The Global Tapestry",
+        "desc": "A view of where you stand within the collective data of thousands."
+      },
+      "celeb": {
+        "title": "Resonant Icons",
+        "desc": "Discover public figures and icons who share your psychological DNA."
+      },
+      "ideal": {
+        "title": "Ideal Harmony Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      }
+    },
+    "card": {
+      "viewDetails": "Explore Details",
+      "share": "Share Card"
+    },
+    "metrics": {
+      "compatibility": "Harmonic Compatibility",
+      "similarity": "Resonance Similarity",
+      "insights": "Core Insights",
+      "strengths": "Radiant Strengths"
+    },
+    "modal": {
+      "close": "Confirm",
+      "recommendations": "Suggested Paths:"
+    },
+    "levels": {
+      "high": "Profound",
+      "mediumHigh": "Vibrant",
+      "medium": "Balanced",
+      "low": "Subtle"
+    },
+    "diffs": {
+      "high": "Pivotal Difference",
+      "medium": "Noteworthy Shift",
+      "low": "Gentle Variance"
+    },
+    "types": {
+      "friend": "Friend",
+      "similar": "Spirit",
+      "average": "Average",
+      "celeb": "Icon",
+      "ideal": "Partner"
+    },
+    "status": {
+      "loading": "Analyzing resonance...",
+      "similarLoading": "Seeking kindred spirits in the sanctuary...",
+      "avgLoading": "Mapping your place in the global tapestry...",
+      "celebLoading": "Checking resonance with global icons...",
+      "idealLoading": "Designing your harmonic complement..."
+    },
+    "title": "Personality Resonance Analysis",
+    "subtitle": "Compare your essence through a multitude of lenses."
+  }
+}

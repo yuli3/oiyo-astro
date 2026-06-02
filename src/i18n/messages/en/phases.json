@@ -1,0 +1,17 @@
+{
+  "foundation": {
+    "title": "Foundation",
+    "description": "Building phase.",
+    "period": "Early Years"
+  },
+  "prime": {
+    "title": "Prime",
+    "description": "Peak activity.",
+    "period": "Middle Years"
+  },
+  "wisdom": {
+    "title": "Wisdom",
+    "description": "Review and reflection.",
+    "period": "Later Years"
+  }
+}

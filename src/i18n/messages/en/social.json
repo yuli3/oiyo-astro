@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "title": "Your Relational Alchemies",
+    "subtitle": "Unveil the hidden patterns of your sacred connections. Synthesize your bonding, dialogue, friction, and devotion alchemies into a unified field of awareness.",
+    "analyze": "Initiate Calibration",
+    "share": "Transmit Prophecy"
+  },
+  "share": {
+    "saveToStory": "Archive to Story",
+    "instruction": "Preserve the revelation and manifest it on your digital tapestry."
+  },
+  "status": {
+    "complete": "Relational Alchemies Synthesized",
+    "incomplete": "Calibration Ongoing ({count}/4)",
+    "continue": "Continue Calibration"
+  },
+  "pillars": {
+    "attachment": {
+      "title": "Bonding Alchemy",
+      "description": "How your soul seeks sanctuary and connection.",
+      "action": "Initiate Inquiry"
+    },
+    "communication": {
+      "title": "Dialogue Alchemy",
+      "description": "The frequencies through which you express and listen.",
+      "action": "Initiate Inquiry"
+    },
+    "conflict": {
+      "result": {
+        "title": "Conflict Alchemy Profiler",
+        "subtitle": "Understanding your unique archetypal stance.",
+        "lead": "This is the primary frequency through which you navigate friction.",
+        "scoreHeadline": "Dominant Stance",
+        "scoreDescription": "The response pattern that governs your energetic field.",
+        "traitsTitle": "Archetypal Traits",
+        "strengthsTitle": "Foundational Alchemies",
+        "challengesTitle": "Nodes of Awareness",
+        "tipsTitle": "Rituals of Integration",
+        "breakdownTitle": "Harmonic Breakdown",
+        "realLifeTitle": "Manifestations in Reality"
+      },
+      "title": "Conflict Alchemy",
+      "description": "How you transmute friction into wisdom.",
+      "action": "Initiate Inquiry"
+    },
+    "loveLanguage": {
+      "title": "Devotional Alchemy",
+      "description": "How you transmit and receive sacred affection.",
+      "action": "Initiate Inquiry"
+    }
+  },
+  "empty": {
+    "title": "Discover Your Relational Blueprint",
+    "description": "Complete the four core inquiries to reveal your unique interpersonal geometry."
+  },
+  "grid": {
+    "title": "Synaptic Connection Grid",
+    "subtitle": "Live Resonance Field"
+  }
+}

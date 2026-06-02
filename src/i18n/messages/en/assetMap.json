@@ -1,0 +1,183 @@
+{
+  "test": {
+    "progress": "progress",
+    "submit": "View results",
+    "loading": "Calculating future assets...",
+    "selectOption": "Please select",
+    "subtitle": "Enter asset information",
+    "insightBullets": [
+      "Insight",
+      "financial position analysis",
+      "risk assessment"
+    ],
+    "next": "next",
+    "previous": "before"
+  },
+  "meta": {
+    "title": "Aging Asset Simulation",
+    "description": "How long can you survive with your current assets? Simulate for free when your assets will be depleted after retirement.",
+    "keywords": "Retirement calculator, retirement funds, asset simulation, fire family"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "📉",
+        "title": "When to deplete assets after retirement",
+        "description": "It predicts exactly at what age your money will run out.",
+        "question": "How long will my money last?",
+        "answer": "Asset Life Calculation"
+      },
+      {
+        "icon": "💸",
+        "title": "Reflection of inflation rate",
+        "description": "Rather than simple calculations, it shows realistic future values ​​taking inflation into account.",
+        "question": "1 million won now and in the future?",
+        "answer": "Reflection of changes in purchasing power"
+      },
+      {
+        "icon": "💡",
+        "title": "Risk Management",
+        "description": "We provide expert-level financial analysis.",
+        "question": "Can you share?",
+        "answer": "It takes about 2-3 minutes."
+      },
+      {
+        "icon": "🎯",
+        "title": "preparing for retirement",
+        "description": "Establish a personalized investment strategy.",
+        "question": "Can you trust it?",
+        "answer": "Based on verified data."
+      },
+      {
+        "icon": "🔥",
+        "title": "tax optimization",
+        "description": "Minimize risk and maximize profits.",
+        "question": "Can you share?",
+        "answer": "Yes, you can use it immediately."
+      },
+      {
+        "icon": "⭐",
+        "title": "Asset Allocation Strategy",
+        "description": "Minimize risk and maximize profits.",
+        "question": "Are the results accurate?",
+        "answer": "It takes about 2-3 minutes."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "📈",
+        "title": "How do I set the rate of return?",
+        "description": "Typically refer to deposit interest rates or the average return on the S&P 500 (7-8%).",
+        "question": "What is the appropriate rate of return?",
+        "answer": "Set according to investment inclination"
+      },
+      {
+        "icon": "🏥",
+        "title": "Are medical expenses included?",
+        "description": "It's a good idea to include it in your basic living expenses or set aside some extra money.",
+        "question": "What about unexpected expenses?",
+        "answer": "Recommend setting up extra funds"
+      },
+      {
+        "icon": "💡",
+        "title": "Maximize return on investment",
+        "description": "Establish a personalized investment strategy.",
+        "question": "Can you share?",
+        "answer": "You can share at any time."
+      },
+      {
+        "icon": "🎯",
+        "title": "Asset Allocation Strategy",
+        "description": "Helping you achieve your long-term financial goals.",
+        "question": "How long does it take?",
+        "answer": "It takes about 2-3 minutes."
+      },
+      {
+        "icon": "🔥",
+        "title": "Risk Management",
+        "description": "Establish a personalized investment strategy.",
+        "question": "How do I use it?",
+        "answer": "Yes, you can use it immediately."
+      },
+      {
+        "icon": "⭐",
+        "title": "Maximize return on investment",
+        "description": "Helping you achieve your long-term financial goals.",
+        "question": "Can you trust it?",
+        "answer": "Yes, you can use it immediately."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "📊",
+        "title": "Real-time asset fluctuation graph",
+        "description": "Check asset changes by year with an intuitive chart.",
+        "question": "Provide visualization?",
+        "answer": "interactive chart"
+      },
+      {
+        "icon": "📱",
+        "title": "mobile optimization",
+        "description": "You can easily run simulations anytime, anywhere.",
+        "question": "Mobile support?",
+        "answer": "Perfectly compatible"
+      },
+      {
+        "icon": "💡",
+        "title": "tax optimization",
+        "description": "Minimize risk and maximize profits.",
+        "question": "How long does it take?",
+        "answer": "Based on verified data."
+      },
+      {
+        "icon": "🎯",
+        "title": "Strengthening financial stability",
+        "description": "Minimize risk and maximize profits.",
+        "question": "How do I use it?",
+        "answer": "You can share at any time."
+      },
+      {
+        "icon": "🔥",
+        "title": "Maximize return on investment",
+        "description": "Get data-based investment insights.",
+        "question": "How do I use it?",
+        "answer": "You can share at any time."
+      },
+      {
+        "icon": "⭐",
+        "title": "Strengthening financial stability",
+        "description": "Minimize risk and maximize profits.",
+        "question": "Can you share?",
+        "answer": "Based on verified data."
+      }
+    ]
+  },
+  "result": {
+    "title": "simulation results",
+    "description": "This is the result of my asset life prediction.",
+    "depletionTitle": "Expected time to exhaust assets",
+    "warning": "Caution: There is a risk that your assets will deplete before their expected lifespan.",
+    "safe": "Stable: The asset is expected to last its expected lifespan."
+  },
+  "subtitle": "At what age will my money become 0 won?",
+  "currentAge": "current age",
+  "retireAge": "retirement target age",
+  "currentAsset": "current net worth",
+  "monthlySave": "monthly savings",
+  "monthlySpend": "Monthly living expenses after retirement",
+  "returnRate": "return on investment",
+  "inflationRate": "inflation rate",
+  "age": "age",
+  "currencyUnit": "one",
+  "unitSave": "(Before retirement, won)",
+  "unitSpend": "(After retirement, present value won)",
+  "chartRetire": "retreat",
+  "chartAgeSuffix": "count",
+  "disclaimer": "These simulations are based on assumptions and actual results may differ.",
+  "title": "aging asset map",
+  "description": "Check the lifespan of the money you have."
+}

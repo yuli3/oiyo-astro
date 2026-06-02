@@ -1,0 +1,438 @@
+{
+  "feature": "Fonctionnalité",
+  "plan": "Forfait",
+  "billing": {
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "saveUp": "Économisez jusqu'à",
+    "year": "/an",
+    "month": "/mois",
+    "save": "Économiser"
+  },
+  "plans": {
+    "popular": "Le Plus Populaire",
+    "free": "Basique",
+    "current": "Forfait Actuel",
+    "continueUsing": "Continuer à Utiliser",
+    "getStarted": "Commencer",
+    "subscribe": "S'abonner Maintenant",
+    "cancelAnytime": "Annuler à Tout Moment"
+  },
+  "info": {
+    "allPlansInclude": "Tous les forfaits incluent",
+    "securePayment": "Paiement Sécurisé",
+    "instantAccess": "Accès Instantané",
+    "customerSupport": "Support Prioritaire"
+  },
+  "checkout": {
+    "orderName": "Abonnement Oiyo.net {planName}"
+  },
+  "errors": {
+    "PLAN_NOT_FOUND": "Plan d'abonnement introuvable.",
+    "PAYMENT_SERVICE_ERROR": "Une erreur s'est produite lors du paiement. Veuillez réessayer.",
+    "PROVIDER_REQUIRED": "Configuration du prestataire de paiement manquante.",
+    "LOCALE_REQUIRED": "La configuration de la langue est requise pour le paiement.",
+    "CURRENCY_REQUIRED": "La configuration de la devise est requise pour le paiement.",
+    "TOSS_CLIENT_KEY_REQUIRED": "La clé client Toss n'est pas configurée.",
+    "LEMONSQUEEZY_CONFIG_REQUIRED": "Configuration LemonSqueezy manquante.",
+    "generic": "Le paiement a échoué. Veuillez réessayer."
+  },
+  "failed": {
+    "help": {
+      "technical": {
+        "refresh": "Actualiser la page",
+        "browser": "Essayer un autre navigateur",
+        "network": "Vérifier votre connexion internet",
+        "incognito": "Essayer le mode navigation privée",
+        "title": "Test de Personnalité Financière"
+      },
+      "payment": {
+        "title": "Test de Personnalité Financière",
+        "checkCard": "Vérifiez les détails de votre carte",
+        "checkFunds": "Assurez-vous que les fonds sont suffisants",
+        "tryAnother": "Essayez un autre mode de paiement",
+        "contactBank": "Contactez votre banque"
+      }
+    },
+    "meta": {
+      "title": "Test de Personnalité Financière",
+      "description": "Découvrez votre personnalité financière et votre style de gestion de l'argent"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Force de signature", "Point pivot", "2"],
+      "progress": "Progression",
+      "submit": "Envoyer",
+      "loading": "Chargement",
+      "selectOption": "Sélectionner",
+      "subtitle": "Bienvenue chez Premium"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        }
+      ]
+    },
+    "result": {
+      "title": "Test de Personnalité Financière",
+      "description": "Découvrez votre personnalité financière et votre style de gestion de l'argent"
+    },
+    "subtitle": "Bienvenue chez Premium",
+    "genericTitle": "Erreur de Paiement",
+    "genericDescription": "Une erreur est survenue lors du traitement de votre paiement. Veuillez réessayer.",
+    "genericAction": "Réessayer",
+    "unknownTitle": "Erreur Inconnue",
+    "unknownDescription": "Une erreur inattendue est survenue. Veuillez contacter le support technique.",
+    "unknownAction": "Contacter le Support",
+    "orderId": "Numéro de Commande",
+    "orderIdNote": "Veuillez conserver ce numéro de commande pour toute référence ultérieure.",
+    "technicalDetails": "Détails Techniques",
+    "errorCode": "Code d'Erreur",
+    "errorMessage": "Message d'Erreur",
+    "whatNext": "Que pouvez-vous faire ?",
+    "contactSupport": "Contacter le Support",
+    "backToHome": "Retour à l'Accueil",
+    "needHelp": "Besoin d'aide ?",
+    "stillNeedHelp": "Vous avez toujours des difficultés ?",
+    "getSupport": "Obtenir de l'Aide",
+    "title": "Test de Personnalité Financière",
+    "description": "Découvrez votre personnalité financière et votre style de gestion de l'argent"
+  },
+  "success": {
+    "meta": {
+      "title": "Test de Personnalité Financière",
+      "description": "Découvrez votre personnalité financière et votre style de gestion de l'argent"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["Force de signature", "Point pivot", "2"],
+      "progress": "Progression",
+      "submit": "Envoyer",
+      "loading": "Chargement",
+      "selectOption": "Sélectionner",
+      "subtitle": "Bienvenue chez Premium"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        }
+      ]
+    },
+    "result": {
+      "title": "Test de Personnalité Financière",
+      "description": "Découvrez votre personnalité financière et votre style de gestion de l'argent"
+    },
+    "welcome', { name: user": {
+      "firstName || user": {
+        "fullName || t('success": {}
+      }
+    },
+    "subtitle": "Bienvenue chez Premium",
+    "verifying": "Vérification du Paiement...",
+    "verifyingDescription": "Veuillez patienter pendant la confirmation de votre paiement.",
+    "premiumActive": "Premium Activé",
+    "welcome": "Bienvenue, {name} !",
+    "user": "Utilisateur",
+    "paymentDetails": "Détails du Paiement",
+    "orderId": "Numéro de Commande",
+    "amount": "Montant",
+    "status": "Statut",
+    "confirmed": "Confirmé",
+    "verificationSuccess": "Paiement confirmé avec succès. Les fonctions Premium sont prêtes à l'emploi.",
+    "verificationFailed": "Nous n'avons pas pu confirmer votre paiement. Veuillez réessayer.",
+    "verificationNetworkError": "Impossible de contacter le serveur de paiement. Réessayez dans un instant.",
+    "verificationRetry": "Réessayer la vérification",
+    "verificationPending": "En attente d'approbation",
+    "approvedAt": "Approuvé le",
+    "featuresUnlocked": "Fonctions Premium Désormais Disponibles",
+    "nextSteps": "Et ensuite ?",
+    "goToDashboard": "Aller au Tableau de Bord",
+    "takeTest": "Passer un Test",
+    "supportNote": "Besoin d'aide ? Notre équipe de support premium est là pour vous.",
+    "contactSupport": "Contacter le Support",
+    "title": "Test de Personnalité Financière",
+    "description": "Découvrez votre personnalité financière et votre style de gestion de l'argent"
+  },
+  "test": {
+    "insightBullets": ["Cartographier la constellation de votre vrai moi."],
+    "progress": "Progression",
+    "submit": "Envoyer",
+    "loading": "Chargement",
+    "selectOption": "Sélectionner"
+  },
+  "result": {
+    "title": "Test de Personnalité Financière",
+    "description": "Découvrez votre personnalité financière et votre style de gestion de l'argent"
+  },
+  "meta": {
+    "title": "Test de Personnalité Financière",
+    "description": "Découvrez votre personnalité financière et votre style de gestion de l'argent",
+    "keywords": "personnalité financière, gestion de l'argent, budget, habitudes de dépenses, bien-être financier"
+  },
+  "checkCard": "Vérifiez les détails de votre carte",
+  "checkFunds": "Assurez-vous que les fonds sont suffisants",
+  "tryAnother": "Essayez un autre mode de paiement",
+  "contactBank": "Contactez votre banque"
+}

@@ -1,0 +1,531 @@
+{
+  "questions": [
+    {
+      "id": "cr_1",
+      "text": "誰かの意見に同意できないとき、私の反応は...",
+      "options": [
+        {
+          "id": "a",
+          "text": "私の主張を理解してもらうために論理的に押してください。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "今はその状況を避けて、感情が落ち着くのを待ちましょう。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "彼らの感情を傷つけないように、私の意見は放棄してください。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "両者がわずかに妥協できる点を提案します。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "時間をかけて両方を満たす代替案を見つけてください。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_2",
+      "text": "紛争の中で私が最も大切にしているのは…",
+      "options": [
+        {
+          "id": "a",
+          "text": "問題を正確に解決して勝利する",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "精神的エネルギーの消費を減らす",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "相手との関係を維持する",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "非効率な消費と妥協を終わらせる",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "お互いのニーズを深く理解する成長の機会",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_3",
+      "text": "怒りを感じたとき、私は...",
+      "options": [
+        {
+          "id": "a",
+          "text": "自分の意思をしっかりと強く表現します。",
+          "weights": {
+            "competing": 2,
+            "compromising": 1
+          }
+        },
+        {
+          "id": "b",
+          "text": "黙ってその場を立ち去ってください。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "彼らの怒りを静めるために、まず謝罪しましょう。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "ある時点で大まかに終了するようにしてください。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "なぜ私が怒っているのか話してみてください。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_4",
+      "text": "チームプロジェクトで意見が異なるとき、私は...",
+      "options": [
+        {
+          "id": "a",
+          "text": "私のアイデアを採用するように他の人を説得します。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "多数派が望む方向に従うだけです。",
+          "weights": {
+            "accommodating": 2,
+            "avoiding": 1
+          }
+        },
+        {
+          "id": "c",
+          "text": "たとえ負けてもチームの平和を選ぶ。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "お互いの意見を半々で混ぜ合わせることを提案します。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "全員が同意できる第 3 の方法を見つけることを提案します。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_5",
+      "text": "紛争を解決した後はどう感じますか?",
+      "options": [
+        {
+          "id": "a",
+          "text": "自分の思い通りになったという勝利感。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "あっという間に終わったので安心しました。",
+          "weights": {
+            "avoiding": 2,
+            "compromising": 1
+          }
+        },
+        {
+          "id": "c",
+          "text": "相手が感謝してくれると嬉しいです。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "私たちは物事を公平に分割したと思います。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "一緒に問題を解決することで親近感が高まります。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_6",
+      "text": "誰かが理不尽な要求をしたとき?",
+      "options": [
+        {
+          "id": "a",
+          "text": "きっぱりと「ノー」と言いましょう。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "聞こえましたが、答えるのを遅らせて避けてください。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "善のためにそれを受け入れてください。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "代わりに何か別のことをすることを提案してください。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "そのような要求をする根本的な理由を尋ねてください。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_7",
+      "text": "口論中に誰かが泣き出してしまったら？",
+      "options": [
+        {
+          "id": "a",
+          "text": "感情と論理は別だと言い続けます。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "何をすればいいのか分からず、すぐにその場を立ち去ってしまいます。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "すぐに謝罪し、相手の気分に応えましょう。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "落ち着いて明日もう一度話すように伝えてください。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "会話をやめて、彼らの悲しみに共感してください。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_8",
+      "text": "重要な価値観に違いがある場合は?",
+      "options": [
+        {
+          "id": "a",
+          "text": "最後まで私が正しいことを証明してみてください。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "意見が違ったら何ができるかという議論はやめてください。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "彼らの価値観を尊重し、自分自身を調整します。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "お互いを尊重し、同意するという一線を引いてください。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "両方の価値が共存できる、より大きなフレームワークを作成します。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_9",
+      "text": "誰かの間違いを発見したときは？",
+      "options": [
+        {
+          "id": "a",
+          "text": "直ちに指摘し、是正を要求してください。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "争いを避けるために知らないふりをする。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "彼らが面目を失わないように、自分で修正してください。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "私がこの部分を直すから、あなたがその部分をやってくださいと伝えてください。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "間違いの背後にあるプロセスを一緒に確認し、代替案を見つけます。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_10",
+      "text": "友達が私を批判したとき?",
+      "options": [
+        {
+          "id": "a",
+          "text": "さらに相手の欠点を指摘して反撃しましょう。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "連絡を絶つか無視してください。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "とりあえずは無条件でごめんなさいと言ってください。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "残念で申し訳ありませんが、私には私なりの理由がありました。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "批判の裏に隠された本当の気持ちを聞いてみましょう。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_11",
+      "text": "約束に遅れた人に?",
+      "options": [
+        {
+          "id": "a",
+          "text": "時間厳守の大切さを強く戒めます。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "気持ち悪いけど何も言わずに食べてください。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "にこにこして、大丈夫だよ、忙しかったんだろうね、と言います。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "後で待つ時間も必要だと伝えます。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "遅刻の理由を聞き、解決策を一緒に考えます。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_12",
+      "text": "決して譲れない価値観に挑戦される時は？",
+      "options": [
+        {
+          "id": "a",
+          "text": "自分の価値観ではなく、関係を放棄することを選択してください。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "議論自体を避け、自分の考えを隠します。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "彼らの価値観を受け入れて、自分の考えを修正してみてください。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "核心だけを残し、残りは譲ります。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "私の価値観と彼らの価値観が調和する、高いレベルの合意を見つけます。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    }
+  ],
+  "results": {
+    "accommodating": {
+      "title": "Practical Negotiator",
+      "description": "Skilled at finding an appropriate middle ground by each conceding a bit.",
+      "advice": "Think about fundamental solutions, not just temporary agreements.",
+      "resonanceImpact": "Stable resonance that finds an appropriate compromise by adjusting frequencies."
+    },
+    "avoiding": {
+      "title": "Practical Negotiator",
+      "description": "Skilled at finding an appropriate middle ground by each conceding a bit.",
+      "advice": "Think about fundamental solutions, not just temporary agreements.",
+      "resonanceImpact": "Stable resonance that finds an appropriate compromise by adjusting frequencies."
+    },
+    "collaborating": {
+      "title": "Practical Negotiator",
+      "description": "Skilled at finding an appropriate middle ground by each conceding a bit.",
+      "advice": "Think about fundamental solutions, not just temporary agreements.",
+      "resonanceImpact": "Stable resonance that finds an appropriate compromise by adjusting frequencies."
+    },
+    "competing": {
+      "title": "Practical Negotiator",
+      "description": "Skilled at finding an appropriate middle ground by each conceding a bit.",
+      "advice": "Think about fundamental solutions, not just temporary agreements.",
+      "resonanceImpact": "Stable resonance that finds an appropriate compromise by adjusting frequencies."
+    },
+    "compromising": {
+      "title": "実務交渉人",
+      "description": "お互いに少しずつ譲歩しながら、適切な妥協点を見つけるのが得意。",
+      "advice": "一時的な合意だけではなく、根本的な解決策を考えてみましょう。",
+      "resonanceImpact": "周波数を調整することで適切な妥協点を見つけた安定した共振。"
+    }
+  }
+}

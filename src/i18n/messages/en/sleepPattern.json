@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "sleep pattern analyzer",
+    "description": "Analyze your sleep patterns and improve your sleep quality"
+  },
+  "landing": {
+    "title": "sleep pattern analyzer",
+    "subtitle": "The first step to better rest",
+    "cta": "Start analysis"
+  },
+  "result": {
+    "loading": "Loading results..."
+  }
+}

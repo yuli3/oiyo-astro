@@ -1,0 +1,293 @@
+{
+  "title": "Saju (Quatre Piliers)",
+  "systemName": "Saju",
+  "narrative": "Votre charte Saju",
+  "stems": {
+    "gap": {
+      "name": "Hai (亥)",
+      "meaning": "Eau Yin",
+      "symbol": "Pluie fine ou brume pénétrante"
+    },
+    "eul": {
+      "name": "Hai (亥)",
+      "meaning": "Eau Yin",
+      "symbol": "Pluie fine ou brume pénétrante"
+    },
+    "byeong": {
+      "name": "Hai (亥)",
+      "meaning": "Eau Yin",
+      "symbol": "Pluie fine ou brume pénétrante"
+    },
+    "jeong": {
+      "name": "Hai (亥)",
+      "meaning": "Eau Yin",
+      "symbol": "Pluie fine ou brume pénétrante"
+    },
+    "mu": {
+      "name": "Hai (亥)",
+      "meaning": "Eau Yin",
+      "symbol": "Pluie fine ou brume pénétrante"
+    },
+    "gi": {
+      "name": "Hai (亥)",
+      "meaning": "Eau Yin",
+      "symbol": "Pluie fine ou brume pénétrante"
+    },
+    "gyeong": {
+      "name": "Hai (亥)",
+      "meaning": "Eau Yin",
+      "symbol": "Pluie fine ou brume pénétrante"
+    },
+    "sin": {
+      "name": "Hai (亥)",
+      "meaning": "Eau Yin",
+      "symbol": "Pluie fine ou brume pénétrante"
+    },
+    "im": {
+      "name": "Hai (亥)",
+      "meaning": "Eau Yin",
+      "symbol": "Pluie fine ou brume pénétrante"
+    },
+    "gye": {
+      "name": "Hai (亥)",
+      "meaning": "Eau Yin",
+      "symbol": "Pluie fine ou brume pénétrante"
+    }
+  },
+  "branches": {
+    "zi": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "chou": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "yin": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "mao": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "chen": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "si": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "wu": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "wei": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "shen": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "you": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "xu": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    },
+    "hai": {
+      "name": "Hai (亥)",
+      "animal": "Cochon",
+      "season": "Début de l'hiver"
+    }
+  },
+  "@/components/ontology/FactionCard": "Carte de Faction",
+  "@/components/ontology/GenericFactionCard": "Carte de Faction Générique",
+  "": "",
+  "labels": {
+    "undiscovered": "Non Découvert",
+    "meaning": "Signification",
+    "element": "Élément",
+    "nameVibration": "Vibration du Nom",
+    "westernZodiac": "Zodiaque Occidental",
+    "sign": "Signe",
+    "observation": "Observation",
+    "easternZodiac": "Zodiaque Oriental",
+    "animal": "Animal",
+    "dominion": "Domination",
+    "bureau": "Bureau"
+  },
+  "returnToHome": "Retour à l'Accueil",
+  "contactSupport": "Contacter le Support",
+  "syncingData": "Synchronisation des Données",
+  "guest": "Invité",
+  "calibration": "Calibration",
+  "changeOrigin": "Changer l'Origine",
+  "todayInsight": {
+    "title": "Perspicacité du Jour",
+    "soulOracle": "Oracle de l'Âme",
+    "innerResonance": "Résonance Intérieure",
+    "manifestMore": "Manifester Davantage"
+  },
+  "readingsLink": "Lectures",
+  "cards": {
+    "vitality": {
+      "title": "Vitalité"
+    },
+    "resonance": {
+      "description": "Votre schéma de résonance.",
+      "subtitle": "Résonance"
+    },
+    "foundation": {
+      "description": "Votre fondation essentielle.",
+      "subtitle": "Fondation"
+    },
+    "elemental": {
+      "description": "Votre mélange élémentaire.",
+      "subtitle": "Affinité Élémentaire",
+      "title": "Éléments"
+    },
+    "onomancy": {
+      "description": "La vibration de votre nom.",
+      "subtitle": "Alchimie du Nom"
+    },
+    "cognition": {
+      "description": "Votre schéma de pensée.",
+      "subtitle": "Cognition"
+    },
+    "vocation": {
+      "description": "Votre chemin vocationnel.",
+      "subtitle": "Vocation"
+    },
+    "destiny": {
+      "description": "Votre trajectoire de destin.",
+      "subtitle": "Destin"
+    }
+  },
+  "resonanceTitle": "Profil de Résonance",
+  "sections": {
+    "testArchitecture": {
+      "title": "Architecture des Tests",
+      "description": "Informations structurelles de fond."
+    },
+    "emotionalResonance": {
+      "title": "Résonance Émotionnelle",
+      "description": "Comment vous vous connectez émotionnellement."
+    },
+    "grandArchives": {
+      "title": "Les Grandes Archives",
+      "description": "Base de connaissances historiques."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "Éléments"
+    },
+    "riasec": {
+      "description": "Type de Carrière RIASEC"
+    },
+    "saju": {
+      "label": "Saju",
+      "description": "Analyse des Quatre Piliers",
+      "polarity": "Polarité",
+      "element": "Élément"
+    },
+    "archiveEntry": "Entrée des Archives",
+    "recordVerified": "Dossier Vérifié",
+    "tuning": {
+      "color": "Couleur",
+      "number": "Nombre",
+      "direction": "Direction",
+      "flower": "Fleur",
+      "gemstone": "Pierre Précieuse",
+      "luckyStar": "Étoile Chanceuse",
+      "title": "Harmonisation",
+      "favorableDays": "Jours Favorables",
+      "synergy": "Synergie"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "Zi Wei"
+  },
+  "_": "",
+  "elements": {
+    "wood": {
+      "name": "Bois",
+      "short": "Bo"
+    },
+    "fire": {
+      "name": "Feu",
+      "short": "Fe"
+    },
+    "earth": {
+      "name": "Terre",
+      "short": "Te"
+    },
+    "metal": {
+      "name": "Métal",
+      "short": "Mé"
+    },
+    "water": {
+      "name": "Eau",
+      "short": "Ea"
+    },
+    "viewModes": {
+      "chart": "Graphique",
+      "balance": "Équilibre",
+      "cycle": "Cycle"
+    },
+    "chartLabel": "Graphique Élémentaire",
+    "influence": "Niveau d'Influence",
+    "cycle": {
+      "title": "Cycle Élémentaire",
+      "description": "Comment les éléments interagissent.",
+      "generation": "Génération",
+      "destruction": "Contrôle"
+    },
+    "interpretation": {
+      "title": "Interprétation",
+      "dominant": "Élément Dominant",
+      "balanceAdvice": "Conseil d'Équilibre",
+      "balanceDescription": "Profil d'équilibre détaillé"
+    }
+  },
+  "pillars": {
+    "viewModes": {
+      "traditional": "Vue Traditionnelle",
+      "modern": "Vue Moderne"
+    },
+    "traditionalDescription": "Interprétation classique des piliers.",
+    "meaning": "Signification",
+    "represents": "Représente",
+    "composition": "Composition",
+    "heavenlyStem": "Tige Céleste",
+    "earthlyBranch": "Branche Terrestre",
+    "modernMeaning": "Adaptation Moderne"
+  },
+  "result": {
+    "pillars": {
+      "title": "Vos Piliers"
+    }
+  },
+  "accuracy": "Haute précision",
+  "duration": "Durée : 5 minutes",
+  "terms": {
+    "dayMaster": "Maître du Jour"
+  }
+}

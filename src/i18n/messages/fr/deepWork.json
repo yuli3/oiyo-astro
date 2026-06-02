@@ -1,0 +1,207 @@
+{
+  "deepWork": {
+    "noData": {
+      "desc": "Detailed analysis and insights for your journey.",
+      "button": "Start Assessment",
+      "title": "Your Productivity Profile"
+    },
+    "modes": {
+      "work": "Work",
+      "break": "Break"
+    },
+    "timerComplete": {
+      "work": "Work",
+      "break": "Break"
+    },
+    "typeLabels": {
+      "structured_planner": "You thrive on structure. Stick to the standard {work}min focus / {break}min break routine.",
+      "deep_diver": "You have high stamina. Go deep for {work}mins, then completely disconnect for {break}mins.",
+      "rhythmic_sprinter": "Short and punchy! The {work}min sprint (Pomodoro) beats your procrastination.",
+      "creative_explorer": "Don't interrupt the flow. Explore for {work}mins, then let your mind wander for {break}mins.",
+      "flexible_adapter": "Stay flexible. {work}mins is your baseline, but switch to a {break}min break if you lose flow.",
+      "social_collaborator": "You thrive on connection. Focus for {work}mins with a body-double or co-working video, then chat for {break}mins."
+    },
+    "types": {
+      "structured_planner": "You thrive on structure. Stick to the standard {work}min focus / {break}min break routine.",
+      "deep_diver": "You have high stamina. Go deep for {work}mins, then completely disconnect for {break}mins.",
+      "rhythmic_sprinter": "Short and punchy! The {work}min sprint (Pomodoro) beats your procrastination.",
+      "creative_explorer": "Don't interrupt the flow. Explore for {work}mins, then let your mind wander for {break}mins.",
+      "flexible_adapter": "Stay flexible. {work}mins is your baseline, but switch to a {break}min break if you lose flow.",
+      "social_collaborator": "You thrive on connection. Focus for {work}mins with a body-double or co-working video, then chat for {break}mins."
+    },
+    "prescriptions": {
+      "structured_planner": "You thrive on structure. Stick to the standard {work}min focus / {break}min break routine.",
+      "deep_diver": "You have high stamina. Go deep for {work}mins, then completely disconnect for {break}mins.",
+      "rhythmic_sprinter": "Short and punchy! The {work}min sprint (Pomodoro) beats your procrastination.",
+      "creative_explorer": "Don't interrupt the flow. Explore for {work}mins, then let your mind wander for {break}mins.",
+      "flexible_adapter": "Stay flexible. {work}mins is your baseline, but switch to a {break}min break if you lose flow.",
+      "social_collaborator": "You thrive on connection. Focus for {work}mins with a body-double or co-working video, then chat for {break}mins."
+    },
+    "meta": {
+      "subtitle": "Timer optimized for your brain type",
+      "disclaimer": "Audio alerts may play. Adjust volume in quiet environments.",
+      "title": "Your Productivity Profile",
+      "description": "Explore our suite of tools designed for deep productivity insights.",
+      "keywords": "productivity, work efficiency, time management, focus, work habits"
+    },
+    "test": {
+      "insightBullets": ["Force de signature", "Point pivot", "2"],
+      "progress": "Progress",
+      "submit": "Submit",
+      "loading": "Polishing the lens on your personal perspective...",
+      "selectOption": "Select Option",
+      "subtitle": "Timer optimized for your brain type",
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Les petits choix s’accumulent pour former un grand destin."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Cartographier la constellation de votre vrai moi.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "🚀",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "💡",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Quelle est votre fréquence centrale unique ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        },
+        {
+          "icon": "🎯",
+          "title": "Aperçu Premium",
+          "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+          "question": "Qu’est-ce qui anime votre monde intérieur ?",
+          "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+        },
+        {
+          "icon": "🔥",
+          "title": "Aperçu Premium",
+          "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+          "question": "Comment votre âme réagit-elle à l’inconnu ?",
+          "answer": "Votre perspective unique façonne votre réalité."
+        },
+        {
+          "icon": "⭐",
+          "title": "Aperçu Premium",
+          "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+          "question": "Comment naviguez-vous dans les courants de la vie ?",
+          "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+        }
+      ]
+    },
+    "result": {
+      "title": "Your Productivity Profile",
+      "description": "Explore our suite of tools designed for deep productivity insights."
+    },
+    "subtitle": "Minuterie optimisée pour votre type de cerveau",
+    "yourType": "Your Type",
+    "retest": "Retest",
+    "title": "Your Productivity Profile",
+    "prescriptionTitle": "Prescription Title",
+    "disclaimer": "Audio alerts may play. Adjust volume in quiet environments.",
+    "description": "Explore our suite of tools designed for deep productivity insights."
+  }
+}

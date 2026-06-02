@@ -1,0 +1,221 @@
+{
+  "tests": {
+    "mbti": {
+      "title": "心理タイプ",
+      "subtitle": "社会的認知",
+      "description": "あなたの意識の繰り返すパターンを穏やかに振り返ります。"
+    },
+    "tci": {
+      "title": "性格と気質",
+      "subtitle": "先天的な本質",
+      "description": "あなたの性格の深い生物学的・後天的な質感を辿ります。"
+    },
+    "enneagram": {
+      "title": "核となる動機",
+      "subtitle": "九つの視点",
+      "description": "あなたの選択と恐れを導く神聖な原動力を明かします。"
+    },
+    "hexaco": {
+      "title": "六つの次元",
+      "subtitle": "倫理的共鳴",
+      "description": "あなたの精神における誠実さと謙虚さの微細な振動を測ります。"
+    },
+    "perfectionism": {
+      "title": "高い基準",
+      "subtitle": "理想主義者の道",
+      "description": "卓越性と優雅さの繊細なバランスを理解します。"
+    },
+    "country-preference": {
+      "title": "文化的共鳴",
+      "subtitle": "理想の環境",
+      "description": "あなたの魂と最も調和する地理的周波数を探します。"
+    },
+    "learning-style": {
+      "title": "認知スタイル",
+      "subtitle": "知識の錬金術",
+      "description": "あなたの心が世界の知恵をどのように吸収・蒸留するかを発見します。"
+    },
+    "resilience": {
+      "title": "主権的強さ",
+      "subtitle": "適応力",
+      "description": "どんな季節にも立ち上がり、磨かれ、花開く先天的な能力を探ります。"
+    },
+    "decision-making": {
+      "title": "戦略的選択",
+      "subtitle": "決断パターン",
+      "description": "あなたの人生の最も重要な転換点の背後にある沈黙の論理を分析します。"
+    },
+    "consumption-style": {
+      "title": "価値の交換",
+      "subtitle": "物質的リズム",
+      "description": "あなたの魂の価値が物質世界でどのように現れるかを明かします。"
+    },
+    "cognitive-bias": {
+      "title": "知覚フィルター",
+      "subtitle": "認知バイアス",
+      "description": "あなたが現実を解釈する微細なレンズに気づくようになります。"
+    },
+    "vitality": {
+      "title": "エネルギーと生命",
+      "subtitle": "内なる炎",
+      "description": "あなたの生命力の満ち引きを観察します。"
+    },
+    "value-harmonizer": {
+      "title": "内なる羅針盤",
+      "subtitle": "価値の調和",
+      "description": "日々の行動をあなたの心の永遠の真実に沿わせます。"
+    },
+    "abundance": {
+      "title": "豊かさの意識",
+      "subtitle": "繁栄のマインドセット",
+      "description": "人生の多くの贈り物への深い流れと受容性を育みます。"
+    },
+    "riasec": {
+      "title": "職業の道",
+      "subtitle": "キャリアの興味",
+      "description": "あなたの天賦の才能が居場所を見つける職業的な軌道を探します。"
+    },
+    "hsp": {
+      "title": "感覚処理",
+      "subtitle": "感受性プロフィール",
+      "description": "高い受容性を持つ精神の深い豊かさを受け入れます。"
+    },
+    "bigfive": {
+      "title": "五因子モデル",
+      "subtitle": "性格の基盤",
+      "description": "あなたの独自の存在感を定義する次元の包括的な地図です。"
+    },
+    "big5": {
+      "title": "五因子モデル",
+      "subtitle": "性格の基盤",
+      "description": "あなたの独自の存在感を定義する次元の包括的な地図です。"
+    },
+    "saju": {
+      "title": "四柱",
+      "subtitle": "原始的な運命",
+      "description": "あなたの宇宙的起源の東洋占星術的分析。"
+    },
+    "egenteto-v2": {
+      "title": "ホルモンの原型",
+      "subtitle": "生化学的アイデンティティ",
+      "description": "あなたの独自のホルモンの指紋が気質をどのように形成するかを探ります。"
+    },
+    "daily": {
+      "title": "デイリーオラクル",
+      "subtitle": "時間的調整",
+      "description": "あなたの存在が描く静かな緯度を地図に記します。洗練された深層診断を通じて、内なる風景を穏やかに探索してください。"
+    }
+  },
+  "title": "魂の地図学 (Soul's Cartography)",
+  "description": "あなたの存在が描く静かな緯度を地図に記します。洗練された深層診断を通じて、内なる風景を穏やかに探索してください。",
+  "@/components/ontology/FactionCard": "派閥カード",
+  "@/components/ontology/GenericFactionCard": "汎用派閥カード",
+  "": "",
+  "labels": {
+    "undiscovered": "未発見",
+    "meaning": "意味",
+    "element": "元素",
+    "nameVibration": "名前の振動",
+    "westernZodiac": "西洋星座",
+    "sign": "サイン",
+    "observation": "観察",
+    "easternZodiac": "東洋星座",
+    "animal": "動物",
+    "dominion": "支配領域",
+    "bureau": "局"
+  },
+  "returnToHome": "ホームに戻る",
+  "contactSupport": "サポートに問い合わせる",
+  "syncingData": "データを同期中",
+  "guest": "ゲスト",
+  "calibration": "キャリブレーション",
+  "changeOrigin": "起源を変更する",
+  "todayInsight": {
+    "title": "今日のインサイト",
+    "soulOracle": "ソウルオラクル",
+    "innerResonance": "内なる共鳴",
+    "manifestMore": "さらに顕現する"
+  },
+  "readingsLink": "リーディング",
+  "cards": {
+    "vitality": {
+      "title": "生命力"
+    },
+    "resonance": {
+      "description": "あなたの共鳴パターン。",
+      "subtitle": "共鳴"
+    },
+    "foundation": {
+      "description": "あなたのコアの基盤。",
+      "subtitle": "基盤"
+    },
+    "elemental": {
+      "description": "あなたの元素の組み合わせ。",
+      "subtitle": "元素の親和性",
+      "title": "元素"
+    },
+    "onomancy": {
+      "description": "あなたの名前の振動。",
+      "subtitle": "名前の錬金術"
+    },
+    "cognition": {
+      "description": "あなたの思考パターン。",
+      "subtitle": "認知"
+    },
+    "vocation": {
+      "description": "あなたの職業の道。",
+      "subtitle": "天職"
+    },
+    "destiny": {
+      "description": "あなたの運命の軌跡。",
+      "subtitle": "運命"
+    }
+  },
+  "resonanceTitle": "共鳴プロフィール",
+  "sections": {
+    "testArchitecture": {
+      "title": "テストの構造",
+      "description": "背景の構造的情報。"
+    },
+    "emotionalResonance": {
+      "title": "感情的共鳴",
+      "description": "感情的なつながり方。"
+    },
+    "grandArchives": {
+      "title": "大記録保管所",
+      "description": "歴史的知識の基盤。"
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "元素"
+    },
+    "riasec": {
+      "description": "RIASECキャリアタイプ"
+    },
+    "saju": {
+      "label": "四柱推命",
+      "description": "四柱推命の分析",
+      "polarity": "極性",
+      "element": "元素"
+    },
+    "archiveEntry": "アーカイブエントリー",
+    "recordVerified": "記録確認済み",
+    "tuning": {
+      "color": "色",
+      "number": "数字",
+      "direction": "方位",
+      "flower": "花",
+      "gemstone": "宝石",
+      "luckyStar": "幸運の星",
+      "title": "チューニング",
+      "favorableDays": "吉日",
+      "synergy": "シナジー"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "紫微斗数"
+  },
+  "_": ""
+}

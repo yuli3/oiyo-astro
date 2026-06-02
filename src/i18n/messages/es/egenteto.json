@@ -1,0 +1,155 @@
+{
+  "chart": {
+    "teto": "Teto-type",
+    "egen": "Egen-type"
+  },
+  "daily": {
+    "insights": {
+      "tetonam": [
+        {
+          "type": "motivación",
+          "icon": "💪",
+          "title": "Superar el desafío",
+          "message": "Su liderazgo natural brilla más cuando se enfrenta a obstáculos. ¡Toma la iniciativa en ese proyecto hoy!",
+          "action": "Dé el ejemplo en su próxima reunión"
+        },
+        {
+          "type": "relación",
+          "icon": "🤝",
+          "title": "Muestra tu lado suave",
+          "message": "Equilibra fuerza y ​​vulnerabilidad. Alguien cercano a ti necesita tu apoyo emocional hoy.",
+          "action": "Pregúntale a tu ser querido cómo se siente realmente"
+        },
+        {
+          "type": "crecimiento",
+          "icon": "🎯",
+          "title": "Superar el desafío",
+          "message": "Su liderazgo natural brilla más cuando se enfrenta a obstáculos. ¡Toma la iniciativa en ese proyecto hoy!",
+          "action": "Dé el ejemplo en su próxima reunión"
+        }
+      ],
+      "egennam": [
+        {
+          "type": "creatividad",
+          "icon": "🎨",
+          "title": "Expresa tu lado artístico",
+          "message": "Tu sentido estético se ha intensificado hoy. Crea algo hermoso o admira el arte que te rodea.",
+          "action": "Visita una galería o crea algo artístico."
+        },
+        {
+          "type": "relación",
+          "icon": "💕",
+          "title": "La conexión profunda es importante",
+          "message": "Tu naturaleza empática puede ayudar a alguien a sanar hoy. Por favor escuche a los necesitados.",
+          "action": "Tener conversaciones significativas con amigas"
+        },
+        {
+          "type": "bienestar",
+          "icon": "🧘",
+          "title": "Aprecia tu sutileza",
+          "message": "Tu inteligencia emocional es un regalo. Cuando se sienta abrumado, tómese un tiempo para cuidarse.",
+          "action": "Practica la atención plena o la meditación."
+        }
+      ],
+      "tetonye": [
+        {
+          "type": "ambición",
+          "icon": "🔥",
+          "title": "abre tu propio camino",
+          "message": "Tu espíritu independiente es tu superpoder. No tengas miedo de tomar un camino poco convencional hoy.",
+          "action": "Toma la decisión audaz que has estado posponiendo"
+        },
+        {
+          "type": "confianza",
+          "icon": "⚡",
+          "title": "Sea dueño de su poder",
+          "message": "Tu confianza inspira a otros. Comparta sus ideas con valentía: el mundo necesita su perspectiva única.",
+          "action": "Habla cuando tu voz importe"
+        },
+        {
+          "type": "balance",
+          "icon": "⚖️",
+          "title": "fuerza en la vulnerabilidad",
+          "message": "Tu fuerza no significa que tengas que hacerlo todo solo. Hoy, acepta la ayuda con gracia.",
+          "action": "Pide ayuda con tareas difíciles."
+        }
+      ],
+      "egenteto": [
+        {
+          "type": "nutrir",
+          "icon": "🌸",
+          "title": "Tu cuidado cura",
+          "message": "Tu energía enriquecedora es exactamente lo que alguien necesita hoy. Confía en tus instintos para acercarte.",
+          "action": "Consulta a alguien que te importa"
+        },
+        {
+          "type": "intuición",
+          "icon": "✨",
+          "title": "Confía en tu voz interior",
+          "message": "Tu intuición es especialmente fuerte hoy. Presta atención a esos suaves empujones y a esas corazonadas.",
+          "action": "Toma una decisión basada en tu intuición"
+        },
+        {
+          "type": "cuidados personales",
+          "icon": "🛁",
+          "title": "Llena tu propia taza",
+          "message": "Das mucho a los demás. Recuerde cuidarse a sí mismo también: usted merece el mismo cuidado que brinda.",
+          "action": "Haz algo puramente para tu propia alegría."
+        }
+      ]
+    },
+    "title": "Couple Compatibility Test",
+    "action": "Today's Action"
+  },
+  "compatibility": {
+    "levels": {
+      "perfect": "Perfect Match",
+      "great": "Great Match",
+      "good": "Good Match",
+      "challenging": "Challenging"
+    },
+    "title": "Couple Compatibility Test",
+    "description": "Discover your romantic compatibility with your partner's Egenteto type",
+    "selectPartner": "Select Your Partner's Type",
+    "selectDesc": "Choose your partner's Egenteto type to see your compatibility",
+    "scoreLabel": "{score}% Compatible",
+    "insights": "Relationship Insights",
+    "combination": "Your Combination:",
+    "loveLanguages": "Love Languages:",
+    "dateIdeas": "Perfect Date Ideas:",
+    "tryAnother": "Try Another Type",
+    "share": "Share Results"
+  },
+  "result": {
+    "title": "Tu Perfil",
+    "traits": "Rasgos Clave",
+    "description": "Descripción Detallada",
+    "compatibility": "Compatibilidad",
+    "share": "Compartir Resultado",
+    "copied": "Copiado al portapapeles",
+    "copy": "Copiar Enlace",
+    "retake": "Repetir el Test"
+  },
+  "a": "A",
+  "saveResult": "Guardar Resultado",
+  "saveError": "Error al guardar el resultado.",
+  "personalityAnalysis": "Análisis de Personalidad",
+  "compatibilityChartTitle": "Gráfico de Compatibilidad",
+  "compatibilityLabel": "Compatibilidad",
+  "insights": "Perspectivas",
+  "traitsGuide": "Guía de Rasgos",
+  "strengths": "Fortalezas",
+  "growthAreas": "Áreas de Mejora",
+  "match": "Coincidencia",
+  "coupleTest": "Test de Pareja",
+  "coupleTestDesc": "Prueba la compatibilidad con tu pareja.",
+  "loveLanguage": "Lenguaje del Amor",
+  "loveLanguageDesc": "Cómo expresas y recibes amor.",
+  "idealDate": "Cita Ideal",
+  "awards": "Logros",
+  "growth": "Camino de Crecimiento",
+  "growthComingSoon": "Camino de Crecimiento Próximamente",
+  "growthComingSoonDesc": "Información para el desarrollo personal está en camino.",
+  "saveImage": "Guardar Imagen",
+  "backToHome": "Volver al Inicio"
+}

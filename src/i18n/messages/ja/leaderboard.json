@@ -1,0 +1,30 @@
+{
+  "title": "リーダーボード",
+  "category": {
+    "points": "ポイント",
+    "streaks": "縞模様",
+    "referrals": "紹介",
+    "tests": "テスト"
+  },
+  "period": {
+    "today": "今日",
+    "week": "週",
+    "month": "月",
+    "allTime": "オールタイム"
+  },
+  "stats": {
+    "yourRank": "あなたのランク",
+    "yourScore": "あなたのスコア",
+    "percentile": "パーセンタイル",
+    "toNextRank": "次のランクへ"
+  },
+  "ui": {
+    "you": "あなた",
+    "hallOfFame": "殿堂",
+    "showMore": "もっと見る ({count})",
+    "participants": "{count} 人の参加者",
+    "noData": "リーダーボードにはまだデータがありません。",
+    "noDataCta": "テストを完了してポイントを獲得し、ランクを上げましょう!",
+    "topPercentile": "上位 {パーセンタイル}%"
+  }
+}

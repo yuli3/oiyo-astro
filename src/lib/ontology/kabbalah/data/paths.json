@@ -1,0 +1,93 @@
+{
+  "tradition": "kabbalah",
+  "version": "1.0.0",
+  "shards": {
+    "paths": {
+      "1": {
+        "id": "keter",
+        "name": "Keter (Crown)",
+        "meaning": "Divine Will and Pure Existence",
+        "tarot": "The Aces",
+        "color": "Brilliant White"
+      },
+      "2": {
+        "id": "chokmah",
+        "name": "Chokmah (Wisdom)",
+        "meaning": "Pure Creative Energy",
+        "tarot": "The Twos",
+        "color": "Grey"
+      },
+      "3": {
+        "id": "binah",
+        "name": "Binah (Understanding)",
+        "meaning": "Form and Structure",
+        "tarot": "The Threes",
+        "color": "Black"
+      },
+      "4": {
+        "id": "chesed",
+        "name": "Chesed (Mercy)",
+        "meaning": "Loving Kindness and Expansion",
+        "tarot": "The Fours",
+        "color": "Blue"
+      },
+      "5": {
+        "id": "gevurah",
+        "name": "Gevurah (Severity)",
+        "meaning": "Strength and Judgment",
+        "tarot": "The Fives",
+        "color": "Red"
+      },
+      "6": {
+        "id": "tiferet",
+        "name": "Tiferet (Beauty)",
+        "meaning": "Harmony, Balance, and Compassion",
+        "tarot": "The Sun",
+        "color": "Yellow / Gold"
+      },
+      "7": {
+        "id": "netzach",
+        "name": "Netzach (Victory)",
+        "meaning": "Endurance and Emotion",
+        "tarot": "The Sevens",
+        "color": "Green"
+      },
+      "8": {
+        "id": "hod",
+        "name": "Hod (Glory)",
+        "meaning": "Intellect and Communication",
+        "tarot": "The Eights",
+        "color": "Orange"
+      },
+      "9": {
+        "id": "yesod",
+        "name": "Yesod (Foundation)",
+        "meaning": "The Unconscious and Dreams",
+        "tarot": "The Nines",
+        "color": "Violet"
+      },
+      "10": {
+        "id": "malkuth",
+        "name": "Malkuth (Kingdom)",
+        "meaning": "Physical Reality and Manifestation",
+        "tarot": "The World",
+        "color": "Earth Tones"
+      }
+    }
+  },
+  "l10n": {
+    "en": {},
+    "ko": {
+      "paths": {
+        "1": {
+          "name": "케테르 (왕관)",
+          "meaning": "신성한 의지"
+        },
+        "6": {
+          "name": "티페레트 (아름다움)",
+          "meaning": "조화와 균형"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "hero": {
+    "badge": "プロトコル:グランドレゾナンス",
+    "titlePrefix": "二つの魂、",
+    "titleSuffix": "一つの運命",
+    "description": "2つのスピリットサインを揃えます。 インペリアル・オラクルは、その宇宙の糸を運命の一枚のタペストリーに織り込みます。"
+  },
+  "status": {
+    "accessing": "帝国文書館にアクセスしています...",
+    "insufficient": "ソウルデータが不足しています",
+    "insufficientDesc": "運命を紡ぐには、少なくとも 2 つの原初の起源が聖域に記録されなければなりません。",
+    "newOrigin": "新たな原点を記録する",
+    "scrollForSynergy": "スクロールしてシナジーマトリクスを確認する"
+  },
+  "selection": {
+    "master": "宣言者（ヤン）",
+    "resonance": "レスポンダー (陰)",
+    "synthesize": "神聖な合成を開始する"
+  },
+  "report": {
+    "layers": {
+      "destiny": "運命",
+      "psychology": "心臓",
+      "vibration": "振動"
+    },
+    "narrative": {
+      "vision": "オラクルのビジョン"
+    },
+    "title": "Sacred Synthesis: The Weaving of Fate"
+  },
+  "title": "神聖合成 運命を紡ぐ",
+  "backButton": "聖域に戻る",
+  "shareButton": "宇宙の絆を共有",
+  "oracleTitle": "オラクルのインサイト",
+  "dimensionsTitle": "次元的共鳴",
+  "analysis": {
+    "detailed": "詳細なシナジー分析"
+  },
+  "iching": {
+    "title": "易経",
+    "revelation": "卦の啓示"
+  },
+  "partialDataWarning": "運命の糸が完全ではありません。",
+  "addMoreInfo": "より多くの魂のデータを入力する",
+  "cta": {
+    "title": "あなたの共有された運命が待っています",
+    "subtitle": "この絆をアーカイブに記録しましょう",
+    "share": "結果を共有",
+    "download": "アーカイブをダウンロード"
+  }
+}

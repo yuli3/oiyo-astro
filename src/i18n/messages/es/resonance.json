@@ -1,0 +1,104 @@
+{
+  "labels": {
+    "mirror": "El Espejo"
+  },
+  "hiddenSelf": {
+    "title": "El Yo Oculto",
+    "description": "Revelando las capas inconscientes de tu psique.",
+    "ctaOrigin": "Descubrir Origen",
+    "ctaIdentity": "Explorar Identidad"
+  },
+  "status": {
+    "scrollForSynergy": "Desplácese para ver el análisis de sinergias"
+  },
+  "analysis": {
+    "detailed": "Análisis de Resonancia Detallado"
+  },
+  "iching": {
+    "title": "El Libro de los Cambios",
+    "revelation": "Revelación del Hexagrama"
+  },
+  "cta": {
+    "title": "Tu Destino Compartido Te Espera",
+    "subtitle": "Registra este vínculo en los archivos",
+    "share": "Compartir Resultado",
+    "download": "Descargar Archivo"
+  },
+  "title": "Archivo de Resonancia",
+  "subtitle": "Tu alineación cósmica.",
+  "offeringTitle": "Ofrenda de Resonancia Profunda",
+  "offeringDescription": "Desbloquea las capas más profundas.",
+  "confidenceMeter": "Medidor de Confianza",
+  "revealed": "Rasgos Revelados",
+  "nameLabel": "Nombre",
+  "namePlaceholder": "Ingresa tu nombre",
+  "birthLabel": "Información de Nacimiento",
+  "mbtiLabel": "Tipo MBTI",
+  "mbtiPlaceholder": "Ingresa tu MBTI",
+  "bloodLabel": "Tipo de Sangre",
+  "bloodPlaceholder": "Ingresa tu tipo de sangre",
+  "calculateButton": "Calcular Sinergia",
+  "calculating": "Calculando...",
+  "backButton": "Regresar al Santuario",
+  "shareButton": "Compartir Vínculo Cósmico",
+  "dimensionsTitle": "Resonancia Dimensional",
+  "oracleTitle": "Oráculo",
+  "partialDataWarning": "Los hilos del destino están incompletos.",
+  "addMoreInfo": "Proporcionar más datos del alma",
+  "desc": "Comprender las conexiones.",
+  "conflict": {
+    "title": "Análisis de conflictos",
+    "description": "Analiza y comprende patrones de conflicto en tus relaciones.",
+    "intro": {
+      "badge": "Análisis de conflictos",
+      "title": "Estilo de resolución de conflictos",
+      "quote": "Comprender cómo manejas los desacuerdos revela mucho sobre tus relaciones.",
+      "startButton": "Iniciar análisis"
+    }
+  },
+  "loveCommunication": {
+    "title": "Comunicación amorosa",
+    "description": "Comprender los estilos de comunicación en las relaciones románticas.",
+    "intro": {
+      "title": "Análisis del lenguaje del amor",
+      "description": "Descubre cómo expresas y recibes amor en las relaciones románticas."
+    }
+  },
+  "synergy": {
+    "title": "Análisis de sinergia",
+    "description": "Descubra cómo diferentes aspectos de su personalidad trabajan juntos.",
+    "hero": {
+      "badge": "Sinergia",
+      "titlePrefix": "La Grande",
+      "titleSuffix": "Sincronismo",
+      "description": "Descubra cómo diferentes aspectos de su personalidad trabajan juntos."
+    },
+    "status": {
+      "accessing": "Accediendo a datos de sinergia..."
+    }
+  },
+  "friendship": {
+    "intro": {
+      "badge": "Análisis resonante",
+      "title": "Laboratorio de estilo de amistad",
+      "quote": "Explora la arquitectura invisible de tus vínculos.",
+      "startButton": "Comenzar la exploración"
+    },
+    "questions": {
+      "bond": "Consulta de vínculos"
+    },
+    "results": {
+      "profile": "El perfil de resonancia",
+      "vulnerability": "El lado oscuro",
+      "strategy": "El camino hacia la armonía",
+      "restart": "Vuelve sobre tus pasos"
+    }
+  },
+  "grandOracle": {
+    "title": "El gran oráculo",
+    "desc": "La totalidad de tu ser, sintetizada a partir de todos los sistemas conocidos."
+  },
+  "resonanceTitle": "Archivo de resonancia",
+  "resonanceVitalitySection": "Flujo de vitalidad",
+  "resonanceVitalitySubtitle": "El pulso de tu energía manifestada."
+}

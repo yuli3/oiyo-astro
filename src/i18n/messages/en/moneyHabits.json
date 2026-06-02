@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "keywords": "money, habits, finance",
+    "resultTitle": "moneyHabits Result Analysis",
+    "resultDescription": "Deep dive into your moneyHabits results.",
+    "testTitle": "moneyHabits Assessment",
+    "testDescription": "Calculate your moneyHabits scores now.",
+    "title": "Moneyhabits Test",
+    "description": "Take the moneyHabits test."
+  },
+  "hero": {
+    "subtitle": "Discover your spending style",
+    "cta": "Start Test",
+    "badge": "moneyHabits badge",
+    "title": "Your Financial Profile"
+  },
+  "benefits": {
+    "items": {
+      "0": {
+        "emoji": "E",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape."
+      },
+      "1": {
+        "emoji": "E",
+        "title": "Essential Pattern",
+        "description": "Unveil the hidden layers of your personal philosophy."
+      },
+      "2": {
+        "emoji": "E",
+        "title": "Essential Pattern",
+        "description": "Unveil the hidden layers of your personal philosophy."
+      }
+    },
+    "title": "Your Financial Profile"
+  },
+  "cta": {
+    "subtitle": "Let's go",
+    "button": "Start",
+    "title": "Your Financial Profile"
+  },
+  "faq": {
+    "items": {
+      "0": {
+        "question": "How do you navigate life's currents?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      "1": {
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "2": {
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      "3": {
+        "question": "What is your unique core frequency?",
+        "answer": "Inner harmony guides your everyday actions."
+      }
+    },
+    "title": "Your Financial Profile"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "What drives your inner world?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "What drives your inner world?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Inner harmony guides your everyday actions."
+      }
+    ]
+  },
+  "test": {
+    "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+    "common": {
+      "progress": "Progress"
+    },
+    "test": {
+      "insightBullets": [
+        "Explore the deep architecture of your inner landscape."
+      ],
+      "progress": "Progress",
+      "submit": "Submit",
+      "loading": "Loading",
+      "selectOption": "Select"
+    },
+    "result": {
+      "title": "Result",
+      "description": "Discover your financial personality and money management style"
+    },
+    "meta": {
+      "title": "Financial Personality Test",
+      "description": "Discover your financial personality and money management style",
+      "keywords": "financial personality, money management, budgeting, spending habits, financial wellness"
+    },
+    "progress": "Progress",
+    "submit": "Submit",
+    "loading": "Polishing the lens on your personal perspective...",
+    "selectOption": "Select Option",
+    "subtitle": "Detailed information",
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights",
+    "keywords": "keywords, tags, seo",
+    "finish": "Finish",
+    "swipeHint": "Swipe Hint"
+  },
+  "result": {
+    "chart": {
+      "impulseControl": "Impulse Control",
+      "savingCapacity": "Saving Capacity",
+      "planningSkill": "Planning Skill",
+      "emotionalControl": "Emotional Control"
+    },
+    "test": {
+      "insightBullets": ["Discover the unique patterns that define your path."],
+      "progress": "Progress",
+      "submit": "Submit",
+      "loading": "Loading",
+      "selectOption": "Select"
+    },
+    "result": {
+      "title": "Result",
+      "description": "Discover your financial personality and money management style"
+    },
+    "meta": {
+      "title": "Financial Personality Test",
+      "description": "Discover your financial personality and money management style",
+      "keywords": "financial personality, money management, budgeting, spending habits, financial wellness"
+    },
+    "title": "Result",
+    "description": "Your personalized analysis results and recommendations.",
+    "keywords": "keywords, tags, seo",
+    "loading": "Loading...",
+    "shareTitle": "Dashboard",
+    "copySuccess": "Copy Success",
+    "scoresTitle": "Dashboard",
+    "impulseRisk": "Impulse Risk",
+    "strengths": "Strengths",
+    "challenges": "Challenges",
+    "actionTips": "Action Tips",
+    "savingRecommendation": "Saving Recommendation",
+    "recommendedPercentage": "Recommended Percentage",
+    "share": "Share",
+    "retake": "Retake"
+  },
+  "title": "Your Financial Profile",
+  "description": "Explore our suite of tools designed for deep finance insights.",
+  "keywords": "keywords, tags, seo"
+}

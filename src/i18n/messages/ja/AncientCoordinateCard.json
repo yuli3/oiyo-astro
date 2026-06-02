@@ -1,0 +1,14 @@
+{
+  "mayan": {
+    "systemName": "マヤ暦",
+    "narrative": "マヤの物語",
+    "solarSeal": "太陽の紋章",
+    "tone": "銀河の音"
+  },
+  "celtic": {
+    "systemName": "ケルトの樹木暦",
+    "narrative": "ケルトの物語",
+    "treeSign": "樹木のサイン",
+    "ogham": "オガムの記号"
+  }
+}

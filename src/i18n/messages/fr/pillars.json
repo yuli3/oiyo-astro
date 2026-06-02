@@ -1,0 +1,46 @@
+{
+  "dailyInsight": {
+    "cosmicEnergy": "[MANQUANT : dailyInsight.cosmicEnergy]",
+    "flowerOfDay": "[MANQUANT : dailyInsight.flowerOfDay]",
+    "crystalOfPower": "[MANQUANT : dailyInsight. crystalOfPower]",
+    "guidingStar": "[MANQUANT : dailyInsight.guidingStar]"
+  },
+  "composition": "Composition",
+  "earthlyBranch": "Branche terrestre",
+  "heavenlyStem": "Tige céleste",
+  "meaning": "Signification",
+  "modernMeaning": "Interprétation moderne",
+  "represents": "Représente",
+  "traditionalDescription": "Description traditionnelle",
+  "viewModes": {
+    "modern": "Vue moderne",
+    "traditional": "Vue traditionnelle"
+  },
+  "interpretationSuffix": "Interprétation",
+  "modern": {
+    "year": {
+      "description": "La manifestation de votre héritage et le portail vers vos potentiels futurs."
+    },
+    "month": {
+      "description": "La manifestation de votre héritage et le portail vers vos potentiels futurs."
+    },
+    "day": {
+      "description": "La manifestation de votre héritage et le portail vers vos potentiels futurs."
+    },
+    "hour": {
+      "description": "La manifestation de votre héritage et le portail vers vos potentiels futurs."
+    }
+  },
+  "year": "Pilier de l'Année",
+  "month": "Pilier du Mois",
+  "day": "Pilier du Jour",
+  "hour": "Pilier de l'Heure",
+  "yearMeaning": "La résonance profonde de vos racines et de l'énergie ancestrale.",
+  "monthMeaning": "L'émanation de votre force dans les relations sociales et professionnelles.",
+  "dayMeaning": "L'interprétation de votre noyau central et de vos inclinaisons essentielles.",
+  "hourMeaning": "La vision de vos potentiels futurs et l'accomplissement de votre destinée tardive.",
+  "yearRepresents": "Ancêtres, enfance, héritage parental et socle de vie",
+  "monthRepresents": "Sociabilité, réussite professionnelle, fratrie et jeunesse",
+  "dayRepresents": "Soi-même, partenaire, environnement actuel et maturité",
+  "hourRepresents": "Descendance, vie tardive, désirs intérieurs et fruits du destin"
+}

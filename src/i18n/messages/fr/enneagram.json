@@ -1,0 +1,443 @@
+{
+  "enneagram": {
+    "meta": {
+      "title": "Ennéagramme : Explorez les 9 Types de Personnalité",
+      "description": "Explorez votre monde intérieur et obtenez des perspectives de croissance à travers les 9 types de personnalité de l'Ennéagramme. Découvrez les motivations, les peurs, les forces et les chemins de croissance.",
+      "keywords": "Ennéagramme, types de personnalité, découverte de soi, psychologie, compréhension des relations, OIYO"
+    },
+    "hero": {
+      "badge": "🎭 9 Types de Personnalité",
+      "title": "Approfondissez la Connaissance de Vous-même",
+      "description": "L'Ennéagramme est un outil puissant qui éclaire les motivations et les peurs essentielles cachées derrière votre comportement. Découvrez votre lumière et votre ombre uniques.",
+      "cta": "Trouver mon Type"
+    },
+    "triads": {
+      "gut": "Centre Instinctif (8, 9, 1) : Décideurs intuitifs traitant la colère et le contrôle",
+      "heart": "Centre Émotionnel (2, 3, 4) : Orientés vers les émotions et les relations, traitant l'image et l'identité",
+      "head": "Centre Mental (5, 6, 7) : Penseurs analytiques traitant la peur et la sécurité"
+    },
+    "typesSection": {
+      "title": "En savoir plus sur les 9 Types"
+    },
+    "types": {
+      "type1": "Type 1. Le Réformateur",
+      "type2": "Type 2. L'Altruiste",
+      "type3": "Type 3. Le Battant",
+      "type4": "Type 4. L'Individualiste",
+      "type5": "Type 5. L'Observateur",
+      "type6": "Type 6. Le Loyaliste",
+      "type7": "Type 7. L'Épicurien",
+      "type8": "Type 8. Le Chef",
+      "type9": "Type 9. Le Médiateur"
+    },
+    "features": {
+      "title": "La Valeur de l'Ennéagramme",
+      "feature1_title": "Compréhension Profonde de Soi",
+      "feature1_description": "Allez au-delà de la personnalité de surface pour éclairer les besoins et les peurs fondamentaux qui vous animent.",
+      "feature2_title": "Chemins de Croissance Personnalisés",
+      "feature2_description": "Comprenez comment chaque type réagit sous stress et en intégration, et trouvez des directions pour votre croissance.",
+      "feature3_title": "Comprendre la Dynamique des Relations",
+      "feature3_description": "Des relations plus profondes et plus saines en comprenant les styles de communication et les schémas de conflit.",
+      "feature4_title": "Libérez Votre Potentiel",
+      "feature4_description": "Reconnaissez vos forces uniques et apprenez à les équilibrer dans votre vie et votre carrière."
+    },
+    "cta": {
+      "title": "Voyage Vers une Vie Authentique",
+      "subtitle": "Commencez votre évaluation de l'Ennéagramme dès aujourd'hui."
+    },
+    "test": {
+      "analyzing": "Analyse en cours...",
+      "findingType": "Identification de votre type d'Ennéagramme",
+      "questionProgress": "Question {actuelle} / {total}"
+    },
+    "result": {
+      "typeHeader": "Tapez {type}",
+      "personalitySection": "📖 Votre Personnalité",
+      "motivationLabel": "Motivation Principale",
+      "fearLabel": "Peur Principale",
+      "strengthsLabel": "Forces",
+      "challengesLabel": "Défis de Croissance",
+      "growthPathLabel": "Chemin de Croissance",
+      "integrationLabel": "Direction de Croissance (Intégration)",
+      "disintegrationLabel": "Direction de Stress (Désintégration)",
+      "careersLabel": "Carrières Recommandées",
+      "famousPeopleLabel": "Personnalités Célèbres"
+    },
+    "profiles": {
+      "type1": {
+        "title": "Type 1 : Le Réformateur",
+        "subtitle": "Perfectionniste, Éthique et Idéaliste",
+        "description": "Les Réformateurs poursuivent la droiture et la moralité. Ils sont méticuleux, diligents et ont un fort désir de rendre le monde meilleur.",
+        "coreMotivation": "Être moralement parfait et droit.",
+        "coreFear": "Le défaut moral, être corrompu ou mauvais.",
+        "strengths": [
+          "Éthique et moralité fortes",
+          "Diligent et responsable",
+          "Systématique et organisé",
+          "Poursuit l'amélioration et le progrès",
+          "Honnête et fiable"
+        ],
+        "challenges": [
+          "Autocritique et perfectionnisme excessifs",
+          "Manque de flexibilité",
+          "Attitude critique envers les autres",
+          "Tendance à réprimer la colère",
+          "Difficulté à profiter du repos et du plaisir"
+        ],
+        "growthPath": [
+          "Pratiquer l'acceptation de l'imperfection",
+          "Être plus bienveillant envers soi-même",
+          "Inclure le plaisir et le jeu dans la vie quotidienne",
+          "Exprimer la colère de manière saine"
+        ],
+        "famousPeople": [
+          "Mahatma Gandhi",
+          "Nelson Mandela",
+          "Platon",
+          "Confucius"
+        ],
+        "career": [
+          "Juge",
+          "Enseignant",
+          "Responsable Qualité",
+          "Éditeur",
+          "Architecte",
+          "Comptable"
+        ]
+      },
+      "type2": {
+        "title": "Type 2 : L'Altruiste",
+        "subtitle": "Chaleureux, Empathique et Généreux",
+        "description": "Les Altruistes trouvent une grande joie à aider les autres. Ils sont sensibles aux besoins d'autrui et prennent soin de leur entourage avec un cœur chaleureux.",
+        "coreMotivation": "Être aimé et nécessaire.",
+        "coreFear": "Ne pas être aimé et être rejeté.",
+        "strengths": [
+          "Chaleureux et très empathique",
+          "Identifie bien les besoins des autres",
+          "Construit et maintient de bonnes relations",
+          "Généreux et dévoué",
+          "Positif et encourageant"
+        ],
+        "challenges": [
+          "Tendance à ignorer ses propres besoins",
+          "Difficulté à dire non",
+          "Besoin d'être apprécié",
+          "Peut devenir manipulateur",
+          "Difficulté à fixer des limites"
+        ],
+        "growthPath": [
+          "Reconnaître ses propres sentiments et besoins",
+          "Pratiquer un \"non\" sain",
+          "Pratiquer l'amour inconditionnel",
+          "Prioriser le soin de soi"
+        ],
+        "famousPeople": [
+          "Mère Teresa",
+          "Oprah Winfrey",
+          "Pape François",
+          "Jennifer Garner"
+        ],
+        "career": [
+          "Infirmier",
+          "Conseiller",
+          "Enseignant",
+          "Travailleur Social",
+          "Spécialiste RH",
+          "Médecin"
+        ]
+      },
+      "type3": {
+        "title": "Type 3 : Le Battant",
+        "subtitle": "Orienté vers les Objectifs, Efficace et Adaptable",
+        "description": "Les Battants poursuivent le succès et la reconnaissance. Ils font tout leur possible pour prouver leurs capacités et aspirent à une vie productive et efficace.",
+        "coreMotivation": "Réussir et être valorisé.",
+        "coreFear": "Être sans valeur ou un échec.",
+        "strengths": [
+          "Grande capacité à atteindre des objectifs",
+          "Efficace et productif",
+          "Confiant et énergique",
+          "Forte adaptabilité",
+          "Excellente communication"
+        ],
+        "challenges": [
+          "Ignorer les sentiments au profit du travail",
+          "Compétitivité excessive",
+          "Obsession de l'image",
+          "Tendance au surmenage",
+          "Peur de l'échec"
+        ],
+        "growthPath": [
+          "Reconnaître les sentiments au-delà des accomplissements",
+          "Valoriser le repos et le moi intérieur",
+          "Rechercher une connexion authentique",
+          "Apprendre à accepter l'échec comme un processus"
+        ],
+        "famousPeople": [
+          "Tony Robbins",
+          "Taylor Swift",
+          "Bill Clinton",
+          "Lady Gaga"
+        ],
+        "career": [
+          "CEO",
+          "Responsable Marketing",
+          "Entrepreneuse",
+          "Commercial",
+          "Conférencier",
+          "Acteur"
+        ]
+      },
+      "type4": {
+        "title": "Type 4 : L'Individualiste",
+        "subtitle": "Créatif, Sensible et Introspectif",
+        "description": "Les Individualistes valorisent l'authenticité et l'identité unique. Ils s'immergent profondément dans leurs émotions et cherchent à être une présence unique au monde.",
+        "coreMotivation": "Découvrir son vrai moi et trouver un sens personnel.",
+        "coreFear": "Être ordinaire ou ne pas avoir d'identité.",
+        "strengths": [
+          "Créatif et artistique",
+          "Compréhension émotionnelle profonde",
+          "Authentique et honnête",
+          "Très empathique",
+          "Apprécie l'unicité et la beauté"
+        ],
+        "challenges": [
+          "Immersion profonde dans les émotions négatives",
+          "Conscience de soi excessive et envie",
+          "Sautes d'humeur",
+          "Sentiment d'être incompris",
+          "Retrait de la réalité"
+        ],
+        "growthPath": [
+          "Maintenir une discipline et des routines quotidiennes",
+          "Se concentrer sur le présent plutôt que sur le passé",
+          "Transformer les émotions en action créative",
+          "Reconnaître les similitudes avec les autres"
+        ],
+        "famousPeople": [
+          "Vincent van Gogh",
+          "Johnny Depp",
+          "Frida Kahlo",
+          "Amy Winehouse"
+        ],
+        "career": [
+          "Artiste",
+          "Designer",
+          "Écrivain",
+          "Musicien",
+          "Psychothérapeute",
+          "Acteur"
+        ]
+      },
+      "type5": {
+        "title": "Type 5 : L'Observateur",
+        "subtitle": "Intellectuel, Analytique et Observateur",
+        "description": "Les Observateurs poursuivent la connaissance et la compréhension. Ils se concentrent sur l'analyse objective du monde, la collecte d'informations et le développement de leur propre expertise.",
+        "coreMotivation": "Être capable, savant et compétent.",
+        "coreFear": "Être incompétent, impuissant ou ignorant.",
+        "strengths": [
+          "Excellentes capacités d'analyse et perspicacité",
+          "Indépendant et autonome",
+          "Objectif et juste",
+          "Expertise approfondie",
+          "Concentration exceptionnelle"
+        ],
+        "challenges": [
+          "Difficulté à exprimer ses émotions",
+          "Tendance à l'isolement social",
+          "Protection excessive de la vie privée",
+          "Obsession de la conservation de l'énergie",
+          "Prioriser la pensée sur l'action"
+        ],
+        "growthPath": [
+          "Explorer le monde des émotions",
+          "Se connecter socialement aux autres",
+          "Transformer la connaissance en action",
+          "Pratiquer le partage et la générosité"
+        ],
+        "famousPeople": [
+          "Albert Einstein",
+          "Stephen Hawking",
+          "Bill Gates",
+          "Mark Zuckerberg"
+        ],
+        "career": [
+          "Chercheur",
+          "Programmeur",
+          "Professeur",
+          "Analyste",
+          "Ingénieur",
+          "Auteur"
+        ]
+      },
+      "type6": {
+        "title": "Type 6 : Le Loyaliste",
+        "subtitle": "Responsable, Engagé et Vigilant",
+        "description": "Les Loyalistes poursuivent la sécurité et la certitude. Ils sont hautement responsables, coopératifs et excellents pour prédire et se préparer aux risques potentiels.",
+        "coreMotivation": "Avoir de la sécurité et un soutien fiable.",
+        "coreFear": "Être sans soutien ni guide ; ne pas être en sécurité.",
+        "strengths": [
+          "Loyal et dévoué",
+          "Fort sens de la responsabilité",
+          "Capacité à prédire les problèmes",
+          "Esprit d'équipe et coopératif",
+          "Digne de confiance"
+        ],
+        "challenges": [
+          "Inquiétude et anxiété excessives",
+          "Difficulté à prendre des décisions",
+          "Ambivalence envers l'autorité",
+          "Imaginer les pires scénarios",
+          "Doute et méfiance"
+        ],
+        "growthPath": [
+          "Faire confiance à sa sagesse intérieure",
+          "Pratiquer le courage",
+          "Rester dans le moment présent",
+          "Développer son indépendance"
+        ],
+        "famousPeople": [
+          "Tom Hanks",
+          "Jay Leno",
+          "George H.W. Buisson",
+          "Ellen DeGenères"
+        ],
+        "career": [
+          "Chef de Projet",
+          "Spécialiste en Sécurité",
+          "Avocat",
+          "Soldat",
+          "Officier de Police",
+          "Enseignant"
+        ]
+      },
+      "type7": {
+        "title": "Type 7 : L’Épicurien",
+        "subtitle": "Optimiste, Aventureux et Polyvalent",
+        "description": "Les Épicuriens poursuivent de nouvelles expériences et une vie joyeuse. Ils sont énergiques, polyvalents et explorent toujours des possibilités positives.",
+        "coreMotivation": "Être heureux, satisfait et avoir une vie joyeuse.",
+        "coreFear": "La douleur et la privation.",
+        "strengths": [
+          "Optimiste et positif",
+          "Créatif et innovateur",
+          "Très adaptable",
+          "Énergique et vif",
+          "Intérêts et talents divers"
+        ],
+        "challenges": [
+          "Manque de concentration",
+          "Comportement impulsif",
+          "Éviter la douleur et les émotions négatives",
+          "Activité excessive et fatigue",
+          "Éviter les responsabilités"
+        ],
+        "growthPath": [
+          "Pratiquer la présence à l'instant",
+          "Construire des relations profondes",
+          "Accepter la douleur comme faisant partie de la croissance",
+          "Développer l'habitude de terminer les tâches"
+        ],
+        "famousPeople": [
+          "Robin Williams",
+          "Jim Carrey",
+          "Steven Spielberg",
+          "Mozart"
+        ],
+        "career": [
+          "Planificateur",
+          "Marketeur",
+          "Rédacteur de Voyage",
+          "Organisateur d'Événements",
+          "Entrepreneuse",
+          "Comédien"
+        ]
+      },
+      "type8": {
+        "title": "Type 8 : Le Chef",
+        "subtitle": "Puissant, Décidé et Protecteur",
+        "description": "Les Chefs poursuivent le contrôle et la justice. Ils sont assertifs et décisifs, s'efforçant de protéger ceux qui leur sont chers et de prendre l'initiative dans le monde.",
+        "coreMotivation": "Être fort, influent et protéger son intégrité.",
+        "coreFear": "Être contrôlé ou blessé par les autres.",
+        "strengths": [
+          "Leadership fort",
+          "Décision et orientation vers l'action",
+          "Fort sens de la justice",
+          "Honnête et direct",
+          "Protecteur et solidaire"
+        ],
+        "challenges": [
+          "Excessivement dominant",
+          "Agressif et confrontant",
+          "Difficulté à montrer sa vulnérabilité",
+          "Besoin excessif de contrôle",
+          "Difficulté à contrôler sa colère"
+        ],
+        "growthPath": [
+          "Reconnaître le pouvoir de la douceur",
+          "Voir la vulnérabilité comme un courage",
+          "Faire confiance aux autres",
+          "Développer sa sensibilité émotionnelle"
+        ],
+        "famousPeople": [
+          "Martin Luther King Jr.",
+          "Winston Churchill",
+          "Malcolm X",
+          "Serena Williams"
+        ],
+        "career": [
+          "CEO",
+          "Avocat",
+          "Chef Militaire",
+          "Entrepreneuse",
+          "Politicien",
+          "Athlète"
+        ]
+      },
+      "type9": {
+        "title": "Type 9 : Le Médiateur",
+        "subtitle": "Paisible, Conciliant et Harmonieux",
+        "description": "Les Médiateurs sont des personnes calmes et acceptantes. Ils poursuivent l'harmonie et la paix, cherchant à maintenir une stabilité intérieure en évitant les conflits.",
+        "coreMotivation": "Avoir la paix et l'harmonie dans la vie.",
+        "coreFear": "Le conflit et la séparation.",
+        "strengths": [
+          "Paisible et stable",
+          "Très empathique",
+          "Compétences de médiation",
+          "Patient",
+          "Acceptant et inclusif"
+        ],
+        "challenges": [
+          "Indécision",
+          "Manque d'auto-affirmation",
+          "Paresse et procrastination",
+          "Évitement des conflits",
+          "Ignorer ses propres besoins"
+        ],
+        "growthPath": [
+          "Exprimer ses propres opinions",
+          "Fixer des priorités",
+          "Passer à l'action",
+          "Voir le conflit comme une opportunité de croissance"
+        ],
+        "famousPeople": [
+          "Abraham Lincoln",
+          "Reine Elizabeth II",
+          "Walt Disney",
+          "Carl Jung"
+        ],
+        "career": [
+          "Conseiller",
+          "Médiateur",
+          "Diplomate",
+          "Vétérinaire",
+          "Travailleur Social",
+          "Éditeur"
+        ]
+      }
+    }
+  },
+  "badge": "[MANQUANT : insigne]",
+  "coreStrengths": "Forces Essentielles",
+  "integrationDisintegration": "Intégration & Désintégration",
+  "growthToward": "Vers la croissance →",
+  "stressToward": "Vers le stress →"
+}

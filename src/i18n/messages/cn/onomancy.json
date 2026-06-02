@@ -1,0 +1,29 @@
+{
+  "components": {
+    "sound": {
+      "name": "阴阳五行",
+      "description": "解读蕴含在名字中的独特能量与命运流向。"
+    },
+    "meaning": {
+      "name": "阴阳五行",
+      "description": "解读蕴含在名字中的独特能量与命运流向。"
+    },
+    "balance": {
+      "name": "阴阳五行",
+      "description": "解读蕴含在名字中的独特能量与命运流向。"
+    }
+  },
+  "result": {
+    "excellent": "广利世间的大吉之名。",
+    "good": "越叫越有福气的好名字。",
+    "fair": "平凡中暗藏非凡的名字。",
+    "caution": "更柔和地呼唤会更好的名字。"
+  },
+  "title": "姓名占卜",
+  "description": "解读蕴含在名字中的独特能量与命运流向。",
+  "narrative": "你的名字是你每天对这个世界施下的最强咒语。",
+  "missingForce": "缺失五行",
+  "none": "无",
+  "vibrationFill": "振动填充",
+  "circularText": "振动回路"
+}

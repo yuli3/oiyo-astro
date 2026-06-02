@@ -1,0 +1,14 @@
+{
+  "title": "RIASECキャリアコンパス",
+  "badge": "キャリア・コンパス",
+  "resultTitle": "あなたの職業興味パターン",
+  "dimensionAnalysis": "興味次元の分析",
+  "recommendedPaths": "推奨されるキャリアパス",
+  "hollandNote": "* ホランドの職業興味類型(RIASEC)理論に基づいています。",
+  "restart": "やり直す",
+  "save": "結果を保存",
+  "mode": "モード",
+  "oracleTitle": "オラクルのインサイト",
+  "codeProfiles": "あなたのコードタイプ詳細プロフィール",
+  "detailedVersion": "詳細版に挑戦 (48問)"
+}

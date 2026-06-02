@@ -1,0 +1,10 @@
+{
+  "personality": "性格",
+  "career": "キャリア",
+  "relationships": "人間関係",
+  "wellness": "ウェルネス",
+  "creativity": "創造性",
+  "lifestyle": "ライフスタイル",
+  "prompt": "少なくとも1つの興味を選択してください。",
+  "selected": "{count}個選択済み"
+}

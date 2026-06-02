@@ -1,0 +1,42 @@
+{
+  "description": "[缺失：描述]",
+  "title": "[缺少：标题]",
+  "labels": {
+    "inputParameters": "[缺失：labels.inputParameters]"
+  },
+  "relationship": "[缺失：关系]",
+  "rel": {
+    "selectPlaceholder": "[缺失：rel.selectPlaceholder]",
+    "child_adult": "[缺失：rel.child_adult]",
+    "child_minor": "[缺失：rel.child_minor]",
+    "spouse": "[失踪：亲属配偶]",
+    "parent": "[失踪：rel.parent]",
+    "other_relative": "[缺失：rel.other_relative]",
+    "other": "[缺失：rel.other]"
+  },
+  "giftAmount": "[缺少：礼物金额]",
+  "pastGiftAmount": "[缺失：过去的礼物金额]",
+  "calculateBtn": "[缺失：calculateBtn]",
+  "result": {
+    "deductionDesc": "[缺失：结果.deductionDesc]",
+    "deduction": "[缺失：结果.推导]",
+    "taxBase": "[缺失：结果.taxBase]",
+    "rateDesc": "[缺失：结果.rateDesc]",
+    "rate": "[缺失：结果率]",
+    "title": "[缺失：结果.标题]",
+    "selfReport": "[缺失：结果.selfReport]"
+  },
+  "placeholder": "[缺失：占位符]",
+  "tip": {
+    "title": "[缺失：提示.标题]",
+    "desc": "[缺失：tip.desc]"
+  },
+  "disclaimer": "[缺失：免责声明]",
+  "test": {
+    "insightBullets": ["找到完美的礼物", "个性和预算分析", "AI个性化推荐"]
+  },
+  "meta": {
+    "title": "礼物推荐",
+    "description": "基于个性和预算的智能礼物推荐"
+  }
+}

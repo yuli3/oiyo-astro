@@ -1,0 +1,14 @@
+{
+  "title": "ビッグファイブ性格診断",
+  "badge": "OCEANモデル",
+  "resultTitle": "あなたのパーソナリティプロファイル",
+  "restart": "やり直す",
+  "save": "結果を保存",
+  "dimensions": {
+    "openness": "開放性",
+    "conscientiousness": "誠実性",
+    "extraversion": "外向性",
+    "agreeableness": "協調性",
+    "neuroticism": "神経症的傾向"
+  }
+}

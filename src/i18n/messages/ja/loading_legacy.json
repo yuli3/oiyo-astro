@@ -1,0 +1,89 @@
+{
+  "messages": {
+    "general": "ストーリーを準備しています...",
+    "stars": "運命の糸を同期させています...",
+    "rainbow": "虹に水をやる…",
+    "flowers": "あなたのアイデンティティの幾何学模様を解読します...",
+    "fox": "あなたの性格の秘密の構造をマッピングしています...",
+    "stardust": "運命の糸を同期させています...",
+    "oracle": "神託を受けて…",
+    "cards": "あなたの選択の深い反響を分析しています...",
+    "moon": "月を磨いて…",
+    "dreams": "夢を紡ぐ…",
+    "magic": "ちょっとした魔法をかけて…",
+    "whale": "あなたの選択の深い反響を分析しています...",
+    "trees": "集会を開く樹齢千年の木々…",
+    "roots": "ルーツのアンダーグラウンドの世界にニュースを送ります...",
+    "ontology": "あなたの魂の設計を読み取る...",
+    "resonance": "スピリチュアルな周波数を調和させます...",
+    "fortune": "水晶玉を見​​つめて…",
+    "finance": "あなたの繁栄を計算しています...",
+    "relationship": "二人の魂の周波数を同期させる…",
+    "cat_dog": "あなたの選択の深い反響を分析しています...",
+    "milky_way": "天の川の彼方からインスピレーションをもたらします...",
+    "moonlight": "あなたのアイデンティティの幾何学模様を解読します...",
+    "wave_secret": "あなたのアイデンティティの幾何学模様を解読します...",
+    "saju": "運命の暦を合わせて…"
+  },
+  "default": "運命の糸を同期させています...",
+  "rootLoading": {
+    "subtitle": "Are you lost?"
+  },
+  "localeLoading": {
+    "subtitle": "Are you lost?",
+    "title": "Test",
+    "description": "Discover OIYO tools and revelations."
+  },
+  "globalError": {
+    "tryAgain": "もう一度やり直してください",
+    "goHome": "Home",
+    "helpText": "問題が解決しない場合は、サポートにお問い合わせください。"
+  },
+  "notFound": {
+    "title": "Test",
+    "subtitle": "迷っていますか？",
+    "description": "Discover OIYO tools and revelations.",
+    "goHome": "家",
+    "goBack": "戻る",
+    "suggestionsTitle": "おそらくこれらのページのいずれかを探していますか?",
+    "popularTestsTitle": "人気のテスト",
+    "egentetoTest": "テストが必要です",
+    "mbtiAlternative": "MBTI の代替案",
+    "allTests": "すべてのテストを表示",
+    "exploreTitle": "人気の発見を探る",
+    "categoryCore": "中心人物",
+    "categoryLifestyle": "ライフスタイル",
+    "color": "色",
+    "travel": "旅行",
+    "relationship": {
+      "communicationStyle": "コミュニケーションスタイル"
+    },
+    "test": {
+      "progress": "進捗",
+      "next": "次",
+      "previous": "前の",
+      "submit": "提出する",
+      "loading": "読み込み中",
+      "selectOption": "選択",
+      "insightBullets": ["洞察力"]
+    },
+    "result": {
+      "title": "Test",
+      "description": "Discover OIYO tools and revelations."
+    },
+    "meta": {
+      "title": "テスト",
+      "description": "OIYO ツールと啓示を発見してください。",
+      "keywords": "テスト、啓示、OIYO"
+    }
+  },
+  "poetic": [
+    "星のささやきを聞きながら…",
+    "あなたの運命を読み解く…",
+    "宇宙エネルギーを集めて…",
+    "お待ちください、不思議な物語が展開されます...",
+    "深い夜に月が語る物語を書き綴る…。",
+    "星座から送信された信号を解釈しています...",
+    "時の川を渡って答えを見つけよう..."
+  ]
+}

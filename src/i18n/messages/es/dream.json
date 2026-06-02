@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "Guía del Diario de Sueños",
+    "description": "Explora un conjunto de herramientas diseñadas para obtener perspectivas profundas de tus sueños.",
+    "keywords": "diario de sueños, análisis de sueños, interpretación de sueños"
+  },
+  "hero": {
+    "title": "Guía del Diario de Sueños",
+    "badge": "Popular",
+    "subtitle": "Aprende a registrar y analizar tus sueños de manera efectiva",
+    "description": "Explora un conjunto de herramientas diseñadas para obtener perspectivas profundas de tus sueños."
+  },
+  "tabs": {
+    "analysis": "Tu Tipo de Soñador",
+    "symbols": "Diccionario de Símbolos",
+    "journal": "Consejos para el Diario"
+  },
+  "result": {
+    "title": "Guía del Diario de Sueños",
+    "copied": "¡Copiado al portapapeles!",
+    "characteristics": "Tus Características de Sueño",
+    "dreamPatterns": "Tus Patrones de Sueño",
+    "interpretationTips": "Consejos de Interpretación",
+    "commonSymbols": "Tus Símbolos de Sueño Comunes",
+    "dreamTypeBreakdown": "Desglose por Tipo de Sueño",
+    "share": "Compartir",
+    "shareText": "¡Soy un soñador tipo {type}! Mira tu personalidad de sueño aquí: {url}",
+    "retake": "Hacer prueba de nuevo"
+  },
+  "symbols": {
+    "title": "Guía del Diario de Sueños",
+    "subtitle": "Aprende a registrar y analizar tus sueños de manera efectiva",
+    "searchPlaceholder": "Buscar símbolo..."
+  },
+  "journal": {
+    "title": "Guía del Diario de Sueños",
+    "subtitle": "Aprende a registrar y analizar tus sueños de manera efectiva",
+    "gettingStarted": "Primeros Pasos",
+    "whatToRecord": "Qué Registrar",
+    "interpretationTips": "Consejos de Interpretación",
+    "improveRecall": "Mejorar el Recuerdo de Sueños"
+  },
+  "test": {
+    "progress": "Pregunta {current} / {total}",
+    "selectOption": "Por favor selecciona una opción"
+  }
+}

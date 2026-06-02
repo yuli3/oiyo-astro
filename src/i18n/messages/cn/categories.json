@@ -1,0 +1,20 @@
+{
+  "payment": "支付问题",
+  "account": "账户帮助",
+  "technical": "技术支持",
+  "feature_request": "功能请求",
+  "general": "一般咨询",
+  "ALL": "所有类别",
+  "title": "类别",
+  "progressLabel": "进度",
+  "all": "全部",
+  "viral": "热门趋势",
+  "finance": "财富与理财",
+  "career": "职场与成功",
+  "mental": "心灵平衡",
+  "love": "情感与关系",
+  "labor": "职业倾向",
+  "living": "生活方式",
+  "fortune": "命运探索",
+  "finance_tax": "税务"
+}

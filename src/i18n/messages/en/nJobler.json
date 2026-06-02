@@ -1,0 +1,158 @@
+{
+  "test": {
+    "insightBullets": ["Signature Strength", "Pivot Point", "2"],
+    "progress": "Progress",
+    "submit": "Submit",
+    "loading": "Tracing the silver threads across your destiny chart...",
+    "selectOption": "Select Option",
+    "subtitle": "Detailed information"
+  },
+  "meta": {
+    "title": "Njobler Test",
+    "description": "Discover your personal insights with this in-depth analysis."
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What is your unique core frequency?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What is your unique core frequency?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "What is your unique core frequency?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "How does your soul respond to the unknown?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Small choices accumulate into a grand destiny."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Your unique perspective shapes your reality."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Premium Insight",
+        "description": "Mapping the constellation of your truest self.",
+        "question": "What drives your inner world?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🚀",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "What is your unique core frequency?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "💡",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "What drives your inner world?",
+        "answer": "Your unique perspective shapes your reality."
+      },
+      {
+        "icon": "🎯",
+        "title": "Premium Insight",
+        "description": "Discover the unique patterns that define your path.",
+        "question": "What is your unique core frequency?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      {
+        "icon": "🔥",
+        "title": "Premium Insight",
+        "description": "Explore the deep architecture of your inner landscape.",
+        "question": "What drives your inner world?",
+        "answer": "You possess an intuitive compass that points toward growth."
+      },
+      {
+        "icon": "⭐",
+        "title": "Premium Insight",
+        "description": "Unveil the hidden layers of your personal philosophy.",
+        "question": "How do you navigate life's currents?",
+        "answer": "Your unique perspective shapes your reality."
+      }
+    ]
+  },
+  "result": {
+    "title": "Result",
+    "description": "Your personalized analysis results and recommendations."
+  },
+  "title": "Your Financial Profile",
+  "description": "Explore our suite of tools designed for deep finance insights."
+}

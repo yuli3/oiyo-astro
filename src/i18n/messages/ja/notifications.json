@@ -1,0 +1,54 @@
+{
+  "empty": "通知はありません。",
+  "dailyInsight": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "view": "ビュー",
+      "later": "後で"
+    }
+  },
+  "aiHoroscope": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "bodyNoPersonality": "あなただけのホロスコープが完成しました！",
+    "actions": {
+      "view": "View",
+      "later": "後で"
+    }
+  },
+  "testReminder": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "continue": "続く",
+      "dismiss": "却下する"
+    }
+  },
+  "streak": {
+    "title": "📤 Test Shared",
+    "body": "A friend checked your test.",
+    "actions": {
+      "celebrate": "祝う",
+      "share": "共有"
+    }
+  },
+  "social": {
+    "twinMatch": {
+      "title": "📤 Test Shared",
+      "body": "A friend checked your test."
+    },
+    "newFriend": {
+      "title": "📤 Test Shared",
+      "body": "A friend checked your test."
+    },
+    "testShared": {
+      "title": "📤 テスト共有",
+      "body": "友達があなたのテストをチェックしてくれました。"
+    }
+  },
+  "actions": {
+    "view": "ビュー",
+    "later": "後で"
+  }
+}

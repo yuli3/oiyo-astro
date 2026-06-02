@@ -1,0 +1,11 @@
+{
+  "title": "添加订阅",
+  "nameLabel": "姓名",
+  "namePlaceholder": "Netflix、Spotify...",
+  "priceLabel": "价格",
+  "pricePlaceholder": "0.00",
+  "usageLabel": "使用情况",
+  "usageUnit": "次/月",
+  "satisfactionLabel": "满意度",
+  "submit": "添加订阅"
+}

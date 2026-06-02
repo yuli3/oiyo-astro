@@ -1,0 +1,18 @@
+{
+  "intro": {
+    "badge": "마찰의 연금술",
+    "title": "충돌 공명 프로파일러",
+    "quote": "마찰의 순간에 심리적 주파수를 발견하십시오. 당신의 전형적인 반응을 지배하는 생존 본능을 해독합니다.",
+    "startButton": "교정 시작"
+  },
+  "questions": {
+    "signal": "불협화음 신호"
+  },
+  "results": {
+    "pattern": "운영 패턴",
+    "impact": "공명 영향",
+    "guidance": "오라클 지시어",
+    "recalibrate": "교정 다시 시작"
+  },
+  " ": " "
+}

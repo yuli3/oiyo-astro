@@ -1,0 +1,11 @@
+{
+  "title": "隐私价值",
+  "free": {
+    "title": "免费",
+    "description": "您的数据属于您自己。"
+  },
+  "privacy": {
+    "title": "隐私",
+    "description": "您的数据属于您自己。"
+  }
+}

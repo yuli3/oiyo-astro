@@ -1,0 +1,865 @@
+{
+  "meta": {
+    "hero": {
+      "subtitle": "new discoveries about me",
+      "badge": "popularity"
+    },
+    "keywords": "Learning styles, teaching, study strategies, study methods",
+    "description": "Take a learning test.",
+    "title": "learning test"
+  },
+  "hero": {
+    "subtitle": "Discover your learning style and study effectively",
+    "cta": "Find your learning style",
+    "badge": "📚Education",
+    "title": "dashboard",
+    "description": "Analysis of your unique tendencies"
+  },
+  "result": {
+    "title": "Detailed analysis report",
+    "studyTips": "Study Tips",
+    "environment": "Environment",
+    "scores": "Scores",
+    "share": "Share",
+    "retake": "Diagnose again",
+    "description": "We are ready with the specific value and insights this service provides you."
+  },
+  "test": {
+    "insightBullets": ["Discover the unique patterns that define your path."],
+    "previous": "before",
+    "progress": "progress",
+    "next": "next",
+    "submit": "Submit",
+    "loading": "Loading",
+    "selectOption": "Select"
+  },
+  "title": "dashboard",
+  "description": "Key advice for future growth",
+  "keywords": "Personality diagnosis, mind vitamins, journey to find myself, OIYO",
+  "Copied to clipboard!": "Copied To Clipboard!",
+  "learning": {
+    "types": {
+      "INTJ": {
+        "strengths": [
+          "Independent study",
+          "Complex concepts",
+          "Long-term planning",
+          "Logical analysis"
+        ],
+        "challenges": [
+          "Boring repetition",
+          "Rote memorization",
+          "Group work",
+          "Spontaneous tasks"
+        ],
+        "studyMethods": [
+          "Concept mapping",
+          "Reading and research",
+          "Online courses",
+          "Problem-solving focus"
+        ],
+        "recommendedTools": ["Notion", "Obsidian", "Anki", "Khan Academy"],
+        "examStrategies": [
+          "Analyze past patterns",
+          "Connect concepts",
+          "Create practice questions"
+        ],
+        "motivationTips": [
+          "Set clear goals",
+          "Understand big picture",
+          "Find practical applications"
+        ],
+        "name": "The Architect",
+        "emoji": "🎯",
+        "description": "A strategist with a plan for everything and rich imagination.",
+        "optimalEnvironment": "Quiet and private space without distractions",
+        "timeManagement": "Systematic and long-term plan execution",
+        "idealGroupSize": "Alone or 1-2 people",
+        "concentrationPeak": "Evening hours"
+      },
+      "INTP": {
+        "strengths": [
+          "Logical thinking",
+          "Creative problem-solving",
+          "Concept understanding",
+          "Independent research"
+        ],
+        "challenges": [
+          "Meeting deadlines",
+          "Following plans",
+          "Memorization",
+          "Regular routines"
+        ],
+        "studyMethods": [
+          "Theory exploration",
+          "Experiments",
+          "Online discussions",
+          "Comparing sources"
+        ],
+        "recommendedTools": [
+          "Wikipedia",
+          "Reddit",
+          "Stack Exchange",
+          "YouTube lectures"
+        ],
+        "examStrategies": [
+          "Understand principles",
+          "Study multiple approaches",
+          "Use logical reasoning"
+        ],
+        "motivationTips": [
+          "Find interesting topics",
+          "Maintain freedom",
+          "Allow creativity"
+        ],
+        "name": "The Logician",
+        "emoji": "🔬",
+        "description": "An innovative inventor with an endless thirst for knowledge.",
+        "optimalEnvironment": "Quiet space with free atmosphere",
+        "timeManagement": "Flexible but clear deadlines",
+        "idealGroupSize": "Prefer solo learning",
+        "concentrationPeak": "Late night hours"
+      },
+      "ENTJ": {
+        "strengths": [
+          "Fast learning",
+          "Leadership",
+          "Goal achievement",
+          "Organization"
+        ],
+        "challenges": [
+          "Perfectionism",
+          "Missing details",
+          "Emotional content",
+          "Slow learners"
+        ],
+        "studyMethods": [
+          "Lead study groups",
+          "Summarize key points",
+          "Efficient memorization",
+          "Presentations"
+        ],
+        "recommendedTools": ["Notion", "Trello", "Evernote", "PowerPoint"],
+        "examStrategies": [
+          "Time management",
+          "Focus on essentials",
+          "Repeated practice"
+        ],
+        "motivationTips": [
+          "Clear objectives",
+          "Competition",
+          "Leadership roles"
+        ],
+        "name": "The Commander",
+        "emoji": "👔",
+        "description": "A strong-willed leader who always finds a way.",
+        "optimalEnvironment": "Well-organized office-like space",
+        "timeManagement": "Thorough time planning and priority setting",
+        "idealGroupSize": "3-5 people",
+        "concentrationPeak": "Morning hours"
+      },
+      "ENTP": {
+        "strengths": [
+          "Creative thinking",
+          "Quick understanding",
+          "Debate skills",
+          "Trying new methods"
+        ],
+        "challenges": [
+          "Routine learning",
+          "Memorization",
+          "Meeting deadlines",
+          "Simple repetition"
+        ],
+        "studyMethods": [
+          "Discussions and debates",
+          "Diverse resources",
+          "Project-based",
+          "Experimental approach"
+        ],
+        "recommendedTools": [
+          "Debate platforms",
+          "TED Talks",
+          "Coursera",
+          "Mind mapping tools"
+        ],
+        "examStrategies": [
+          "Creative answers",
+          "Multiple perspectives",
+          "Last-minute focus"
+        ],
+        "motivationTips": [
+          "New challenges",
+          "Debate opportunities",
+          "Free learning style"
+        ],
+        "name": "The Debater",
+        "emoji": "💡",
+        "description": "An original thinker who can't resist interesting intellectual challenges.",
+        "optimalEnvironment": "Free and lively space",
+        "timeManagement": "Utilize concentration when deadline is near",
+        "idealGroupSize": "3-4 person discussion group",
+        "concentrationPeak": "Afternoon to evening"
+      },
+      "INFJ": {
+        "strengths": [
+          "Deep understanding",
+          "Pattern recognition",
+          "Creative expression",
+          "Long-term memory"
+        ],
+        "challenges": [
+          "Superficial memorization",
+          "Time pressure",
+          "Competitive environment",
+          "Critical evaluation"
+        ],
+        "studyMethods": [
+          "Journaling",
+          "Connecting concepts",
+          "Visualization",
+          "Storytelling"
+        ],
+        "recommendedTools": ["Notion", "Reading notes", "Headspace", "Diary"],
+        "examStrategies": [
+          "Understand big picture",
+          "Meaningful connections",
+          "Emotional memory"
+        ],
+        "motivationTips": [
+          "Find meaning",
+          "Connect to personal goals",
+          "Inspiring environment"
+        ],
+        "name": "The Advocate",
+        "emoji": "🌟",
+        "description": "A quiet but insightful idealist who inspires people.",
+        "optimalEnvironment": "Quiet and inspiring space",
+        "timeManagement": "Relaxed plan minimizing stress",
+        "idealGroupSize": "Alone or select few",
+        "concentrationPeak": "Early morning or late evening"
+      },
+      "INFP": {
+        "strengths": [
+          "Creative writing",
+          "Emotional understanding",
+          "Independent learning",
+          "Artistic expression"
+        ],
+        "challenges": [
+          "Strict rules",
+          "Critical feedback",
+          "Quick deadlines",
+          "Competition"
+        ],
+        "studyMethods": [
+          "Free-form notes",
+          "Creative projects",
+          "Reading",
+          "Music accompaniment"
+        ],
+        "recommendedTools": [
+          "GoodNotes",
+          "Colored pens",
+          "Spotify",
+          "Reading apps"
+        ],
+        "examStrategies": [
+          "Develop own method",
+          "Emotional connection",
+          "Relaxed mindset"
+        ],
+        "motivationTips": [
+          "Personal meaning",
+          "Free expression",
+          "Positive feedback"
+        ],
+        "name": "The Mediator",
+        "emoji": "✨",
+        "description": "Passionate people who always dedicate themselves to good causes.",
+        "optimalEnvironment": "Comfortable and personalized inspiring space",
+        "timeManagement": "Flexible plan not hindering creativity",
+        "idealGroupSize": "Prefer solo learning",
+        "concentrationPeak": "Flexible but focuses when immersed"
+      },
+      "ENFJ": {
+        "strengths": [
+          "Collaborative learning",
+          "Communication",
+          "Understanding others",
+          "Motivation"
+        ],
+        "challenges": [
+          "Solo learning",
+          "Impersonal topics",
+          "Competition",
+          "Critical analysis"
+        ],
+        "studyMethods": [
+          "Study groups",
+          "Peer teaching",
+          "Discussions",
+          "Role-play"
+        ],
+        "recommendedTools": [
+          "Zoom",
+          "Discord",
+          "Google Docs",
+          "Collaboration tools"
+        ],
+        "examStrategies": [
+          "Group study",
+          "Teach each other",
+          "Emotional memory"
+        ],
+        "motivationTips": [
+          "Learn together",
+          "Help others",
+          "Positive atmosphere"
+        ],
+        "name": "The Protagonist",
+        "emoji": "🤝",
+        "description": "A passionate leader who encourages people and wants to create a better world.",
+        "optimalEnvironment": "Warm and interactive space",
+        "timeManagement": "Harmonious plan aligned with group schedule",
+        "idealGroupSize": "Study group of about 4-6 people",
+        "concentrationPeak": "Morning to afternoon"
+      },
+      "ENFP": {
+        "strengths": [
+          "Creativity",
+          "Enthusiasm",
+          "Diverse interests",
+          "Quick connections"
+        ],
+        "challenges": [
+          "Maintaining focus",
+          "Details",
+          "Routines",
+          "Long-term projects"
+        ],
+        "studyMethods": [
+          "Diverse materials",
+          "Gamified learning",
+          "Group activities",
+          "Experimental approach"
+        ],
+        "recommendedTools": [
+          "Quizlet",
+          "Kahoot",
+          "YouTube",
+          "Instagram educational"
+        ],
+        "examStrategies": [
+          "Find interesting connections",
+          "Try various methods",
+          "Game-like approach"
+        ],
+        "motivationTips": [
+          "New stimulation",
+          "Fun methods",
+          "Praise and encouragement"
+        ],
+        "name": "The Campaigner",
+        "emoji": "🎨",
+        "description": "A passionate and creative free spirit who always finds joy.",
+        "optimalEnvironment": "Lively and stimulating space",
+        "timeManagement": "Multiple short intensive sessions",
+        "idealGroupSize": "With diverse people",
+        "concentrationPeak": "Depends on mood"
+      },
+      "ISTJ": {
+        "strengths": [
+          "Diligence",
+          "Memorization",
+          "Organization",
+          "Plan execution"
+        ],
+        "challenges": [
+          "Abstract concepts",
+          "Improvisation",
+          "Creative tasks",
+          "Unclear instructions"
+        ],
+        "studyMethods": [
+          "Textbook reading",
+          "Repeated memorization",
+          "Systematic notes",
+          "Past papers"
+        ],
+        "recommendedTools": [
+          "Traditional notes",
+          "Excel",
+          "PDF textbooks",
+          "Schedule apps"
+        ],
+        "examStrategies": [
+          "Thorough preparation",
+          "Repeated learning",
+          "Time keeping",
+          "Solid understanding"
+        ],
+        "motivationTips": ["Clear goals", "Systematic plans", "Achievement"],
+        "name": "The Logistician",
+        "emoji": "📚",
+        "description": "Responsible people who think based on facts and are reliable.",
+        "optimalEnvironment": "Quiet and well-organized space",
+        "timeManagement": "Learning according to regular schedule",
+        "idealGroupSize": "Alone or about 2 people",
+        "concentrationPeak": "Morning hours"
+      },
+      "ISFJ": {
+        "strengths": [
+          "Attention to detail",
+          "Patience",
+          "Memory",
+          "Responsibility"
+        ],
+        "challenges": [
+          "Abstract theory",
+          "Critical thinking",
+          "Rapid change",
+          "Competition"
+        ],
+        "studyMethods": [
+          "Careful note-taking",
+          "Repeated practice",
+          "Practical examples",
+          "Step-by-step"
+        ],
+        "recommendedTools": [
+          "Colored pens",
+          "Checklists",
+          "Planners",
+          "Traditional textbooks"
+        ],
+        "examStrategies": [
+          "Sufficient review",
+          "Check details",
+          "Maintain stability"
+        ],
+        "motivationTips": [
+          "Stable environment",
+          "Praise and recognition",
+          "Practical value"
+        ],
+        "name": "The Defender",
+        "emoji": "📖",
+        "description": "Dedicated people who do their best to protect those close to them.",
+        "optimalEnvironment": "Stable, familiar, and quiet space",
+        "timeManagement": "Relaxed plan reducing anxiety",
+        "idealGroupSize": "One or two close friends",
+        "concentrationPeak": "Morning hours"
+      },
+      "ESTJ": {
+        "strengths": ["Organization", "Execution", "Leadership", "Efficiency"],
+        "challenges": [
+          "Abstract theory",
+          "Emotional content",
+          "Slow pace",
+          "Flexibility"
+        ],
+        "studyMethods": [
+          "Summarizing",
+          "Flashcards",
+          "Past papers",
+          "Leading study groups"
+        ],
+        "recommendedTools": ["Excel", "PowerPoint", "Planners", "Timers"],
+        "examStrategies": [
+          "Strict time management",
+          "Focus on essentials",
+          "Repeated practice"
+        ],
+        "motivationTips": [
+          "Clear objectives",
+          "Visible results",
+          "Leadership role"
+        ],
+        "name": "The Executive",
+        "emoji": "📊",
+        "description": "A practitioner with excellent ability to manage things and people.",
+        "optimalEnvironment": "Well-divided and systematic space",
+        "timeManagement": "Systematic planning and thorough execution",
+        "idealGroupSize": "Efficient group of about 3-4 people",
+        "concentrationPeak": "Morning hours"
+      },
+      "ESFJ": {
+        "strengths": [
+          "Cooperation",
+          "Responsibility",
+          "Practicality",
+          "Communication"
+        ],
+        "challenges": [
+          "Solo learning",
+          "Abstract theory",
+          "Criticism",
+          "Competition"
+        ],
+        "studyMethods": [
+          "Group study",
+          "Quiz each other",
+          "Real-life examples",
+          "Role-play"
+        ],
+        "recommendedTools": [
+          "Chat study groups",
+          "Zoom",
+          "Shared notes",
+          "Colored pens"
+        ],
+        "examStrategies": [
+          "Study together",
+          "Mutual encouragement",
+          "Practical understanding"
+        ],
+        "motivationTips": ["Social atmosphere", "Help others", "Praise"],
+        "name": "The Consul",
+        "emoji": "👥",
+        "description": "A popular personality who finds happiness in helping those around them.",
+        "optimalEnvironment": "Warm and interactive space",
+        "timeManagement": "Plan including commitments with people around",
+        "idealGroupSize": "Lively group of about 4-6 people",
+        "concentrationPeak": "Morning to afternoon"
+      },
+      "ISTP": {
+        "strengths": [
+          "Problem-solving",
+          "Logical thinking",
+          "Practical skills",
+          "Quick response"
+        ],
+        "challenges": [
+          "Theory learning",
+          "Long-term planning",
+          "Memorization",
+          "Emotional content"
+        ],
+        "studyMethods": [
+          "Hands-on practice",
+          "Video learning",
+          "Direct experience",
+          "Problem-solving"
+        ],
+        "recommendedTools": [
+          "YouTube practice",
+          "Khan Academy",
+          "Simulations",
+          "Practical tools"
+        ],
+        "examStrategies": [
+          "Practical problems",
+          "Logical approach",
+          "Efficient time use"
+        ],
+        "motivationTips": ["Practical value", "Free methods", "Challenges"],
+        "name": "The Virtuoso",
+        "emoji": "🔧",
+        "description": "A practitioner skilled at handling various tools and solving problems.",
+        "optimalEnvironment": "Free space allowing hands-on practice",
+        "timeManagement": "Flexible adjustment as needed",
+        "idealGroupSize": "Alone or small number",
+        "concentrationPeak": "Afternoon to evening"
+      },
+      "ISFP": {
+        "strengths": [
+          "Creativity",
+          "Sensitivity",
+          "Practical skills",
+          "Flexibility"
+        ],
+        "challenges": [
+          "Strict rules",
+          "Competition",
+          "Criticism",
+          "Long-term planning"
+        ],
+        "studyMethods": [
+          "Visual learning",
+          "Practice",
+          "With music",
+          "Free-form"
+        ],
+        "recommendedTools": ["iPad", "Procreate", "Pinterest", "YouTube"],
+        "examStrategies": [
+          "Comfortable mindset",
+          "Visual memory",
+          "Personal method"
+        ],
+        "motivationTips": [
+          "Free environment",
+          "Positive feedback",
+          "Creative expression"
+        ],
+        "name": "The Adventurer",
+        "emoji": "🎭",
+        "description": "An artist who always seeks new experiences and enjoys the present.",
+        "optimalEnvironment": "Comfortable space with beauty",
+        "timeManagement": "Flexible plan adapted to own condition",
+        "idealGroupSize": "Prefer solo learning",
+        "concentrationPeak": "Comfortable personal time"
+      },
+      "ESTP": {
+        "strengths": [
+          "Fast learning",
+          "Practical skills",
+          "Adaptability",
+          "Problem-solving"
+        ],
+        "challenges": [
+          "Theory learning",
+          "Memorization",
+          "Long focus",
+          "Planning"
+        ],
+        "studyMethods": [
+          "Practical practice",
+          "Group activities",
+          "Competition",
+          "Experiential learning"
+        ],
+        "recommendedTools": [
+          "Gamified apps",
+          "Practical tools",
+          "VR learning",
+          "Sports analogies"
+        ],
+        "examStrategies": [
+          "Practical tests",
+          "Use quick thinking",
+          "Short focus"
+        ],
+        "motivationTips": [
+          "Competition and challenges",
+          "Practical value",
+          "Immediate feedback"
+        ],
+        "name": "The Entrepreneur",
+        "emoji": "🚀",
+        "description": "An activist who doesn't fear risk and seizes opportunities of the moment.",
+        "optimalEnvironment": "Active and practice-oriented space",
+        "timeManagement": "Short-term intensive plan before deadline",
+        "idealGroupSize": "Active group of about 3-5 people",
+        "concentrationPeak": "Morning to afternoon"
+      },
+      "ESFP": {
+        "strengths": [
+          "Sociability",
+          "Enthusiasm",
+          "Practical skills",
+          "Fun atmosphere"
+        ],
+        "challenges": [
+          "Solo learning",
+          "Theory",
+          "Focus",
+          "Long-term planning"
+        ],
+        "studyMethods": [
+          "Group activities",
+          "Games",
+          "Role-play",
+          "With music"
+        ],
+        "recommendedTools": [
+          "Kahoot",
+          "Social apps",
+          "TikTok education",
+          "Study with friends"
+        ],
+        "examStrategies": ["Fun approach", "Group review", "Positive mindset"],
+        "motivationTips": ["Fun methods", "With friends", "Praise and rewards"],
+        "name": "The Entertainer",
+        "emoji": "🎉",
+        "description": "A performer who makes others happy and energizes them.",
+        "optimalEnvironment": "Bright, lively, and stimulating space",
+        "timeManagement": "Multiple short and fun learning sessions",
+        "idealGroupSize": "Large group of about 4-8 people",
+        "concentrationPeak": "Daytime"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "When learning a new subject, you:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Study quietly alone with textbooks",
+            "value": "I"
+          },
+          {
+            "text": "Discuss and study together with friends",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "How do you remember study material?",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Memorize specific facts and details",
+            "value": "S"
+          },
+          {
+            "text": "Grasp overall concepts and patterns",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Your approach to solving problems:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Find answers through logical analysis",
+            "value": "T"
+          },
+          {
+            "text": "Approach with intuition and feeling",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "How do you prepare for exams?",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Make systematic plans and prepare early",
+            "value": "J"
+          },
+          {
+            "text": "Stay flexible and focus when needed",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Preferred class activity:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Individual assignments or independent projects",
+            "value": "I"
+          },
+          {
+            "text": "Group discussions or team projects",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "When understanding complex concepts:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Need step-by-step explanations and real examples",
+            "value": "S"
+          },
+          {
+            "text": "Look at abstract theories and big picture first",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Your role in project teams:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Pursue objective analysis and efficiency",
+            "value": "T"
+          },
+          {
+            "text": "Value team harmony and everyone's opinion",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "When assignment deadline approaches:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Progress steadily according to plan",
+            "value": "J"
+          },
+          {
+            "text": "Deadline pressure boosts concentration",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Preferred study environment:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Quiet library or personal space",
+            "value": "I"
+          },
+          {
+            "text": "Lively places like cafes or study cafes",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "Preferred exam question type:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Fact-based multiple choice or short answer",
+            "value": "S"
+          },
+          {
+            "text": "Essay questions requiring creative thinking",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "When grades are not good, you:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Objectively analyze causes and improve",
+            "value": "T"
+          },
+          {
+            "text": "Accept emotionally and find motivation",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "When making study plans:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Clearly define detailed schedule and goals",
+            "value": "J"
+          },
+          {
+            "text": "Set rough direction and adjust flexibly",
+            "value": "P"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "title": "我们的使命",
+  "description": "助您发现真实的自己。",
+  "counselor": {
+    "title": {
+      "ko": "Awaiting deep synthesis...",
+      "en": "Wisdom Curator",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "Curateur de sagesse",
+      "es": "Curador de sabiduría"
+    },
+    "blessing": "你独特的存在的祝福。",
+    "shadowWork": "对你内心阴影的富有同情心的指导。"
+  },
+  "coordinator": {
+    "title": {
+      "ko": "Awaiting deep synthesis...",
+      "en": "Wisdom Curator",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "Curateur de sagesse",
+      "es": "Curador de sabiduría"
+    },
+    "ritual": "保持日常平衡的实用习惯。"
+  },
+  "curator": {
+    "title": {
+      "ko": "Awaiting deep synthesis...",
+      "en": "智慧策展人",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "智慧策展人",
+      "es": "智慧治疗师"
+    },
+    "wisdom": "为您精心策划的永恒见解碎片。"
+  }
+}

@@ -1,0 +1,591 @@
+{
+  "economicPersonality": {
+    "meta": {
+      "title": "시험",
+      "description": "금융의 다양한 기능과 인사이트를 확인해보세요.",
+      "keywords": "성격테스트, 심리테스트, 무료테스트"
+    },
+    "hero": {
+      "subtitle": "Discover your money personality",
+      "cta": "테스트 시작",
+      "badge": "💰 2025년 필수 투자 아이템",
+      "time": "⏱️ 소요시간: 2분",
+      "title": "나의 경제적 성향 테스트",
+      "description": "내가 부자가 될 가능성은 돈에 대한 나의 태도에 따라 결정될 수 있습니다."
+    },
+    "types": {
+      "spender": {
+        "name": "Perfect Harmony",
+        "tagline": "당신은 한 번만 살아요! 욜로",
+        "emoji": "⚖️"
+      },
+      "saver": {
+        "name": "Perfect Harmony",
+        "tagline": "먼지를 모아 산을 이루다",
+        "emoji": "⚖️"
+      },
+      "investor": {
+        "name": "Perfect Harmony",
+        "tagline": "돈이 돈을 벌다",
+        "emoji": "⚖️"
+      },
+      "balanced": {
+        "name": "Perfect Harmony",
+        "tagline": "절제의 미덕",
+        "emoji": "⚖️"
+      },
+      "title": "내 금융 프로필"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "행동 패턴",
+          "description": "지출을 유발하는 요인의 심리를 이해하세요.",
+          "question": "나는 왜 구매하는가?",
+          "answer": "감정적인 경우가 많습니다."
+        },
+        {
+          "icon": "💰",
+          "title": "잠재력 절감",
+          "description": "월 예산을 소모시키는 작은 누출을 식별하십시오.",
+          "question": "내 돈은 어디에 있습니까?",
+          "answer": "작은 습관이 쌓입니다."
+        },
+        {
+          "icon": "📈",
+          "title": "투자 스타일",
+          "description": "당신이 위험을 감수하는 사람인지, 안전을 추구하는 사람인지 알아보세요.",
+          "question": "투자를 시작하시겠습니까?",
+          "answer": "당신의 관용을 아십시오."
+        }
+      ],
+      "benefit1": "📊 나의 경제적 성향 4점",
+      "benefit2": "💰 유형별 맞춤형 투자 전략",
+      "benefit3": "⚠️ 주의해야 할 금융습관",
+      "benefit4": "🎯 3가지 실행 계획",
+      "benefit5": "🔄 다른 유형과의 호환성",
+      "title": "테스트를 통해 얻을 수 있는 것"
+    },
+    "cta": {
+      "button": "무료로 테스트 시작하기",
+      "title": "내 은행 계좌는 어떤가요?",
+      "description": "지금 바로 진단하고 부자가 되는 습관을 시작해 보세요."
+    },
+    "priority": {
+      "high": "키",
+      "medium": "가운데",
+      "low": "낮음"
+    },
+    "category": {
+      "saving": "저금",
+      "investing": "투자하다",
+      "spending": "소비",
+      "education": "학습",
+      "protection": "위험"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "인생의 흐름을 어떻게 탐색합니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        }
+      ],
+      "title": "자주 묻는 질문",
+      "question1": "시험은 얼마나 걸리나요?",
+      "answer1": "약 2분 정도 소요되며, 12개의 직관적인 질문으로 구성되어 있습니다.",
+      "question2": "결과를 어떻게 사용하나요?",
+      "answer2": "이를 활용하여 자신의 소비 습관을 살펴보고 자신에게 맞는 저축 및 투자 방법을 찾아보세요.",
+      "question3": "금융상품을 추천하시나요?",
+      "answer3": "제품을 직접 추천하기보다는 제품 선택의 기준과 전략을 알려드립니다.",
+      "question4": "친구들과 공유할 수 있나요?",
+      "answer4": "물론. 서로의 성향을 알면 연애비용, 공동자금 관리가 쉬워집니다."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🚀",
+          "title": "프리미엄 인사이트",
+          "description": "내면의 풍경의 깊은 건축물을 탐험해보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "내면의 조화는 일상적인 행동을 안내합니다."
+        },
+        {
+          "icon": "💡",
+          "title": "프리미엄 인사이트",
+          "description": "귀하의 경로를 정의하는 고유한 패턴을 찾아보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "당신의 독특한 관점이 당신의 현실을 형성합니다."
+        },
+        {
+          "icon": "🎯",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 개인 철학의 숨겨진 레이어를 밝혀보세요.",
+          "question": "당신의 영혼은 미지의 것에 어떻게 반응합니까?",
+          "answer": "당신은 성장을 가리키는 직관적인 나침반을 가지고 있습니다."
+        },
+        {
+          "icon": "🔥",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 내면 세계를 움직이는 것은 무엇입니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        },
+        {
+          "icon": "⭐",
+          "title": "프리미엄 인사이트",
+          "description": "당신의 진정한 자아의 별자리를 지도로 그려보세요.",
+          "question": "당신의 고유한 핵심 주파수는 무엇입니까?",
+          "answer": "작은 선택이 쌓여 큰 운명이 됩니다."
+        }
+      ],
+      "feature1": {
+        "title": "반성의 시간",
+        "description": "자세한 설명"
+      },
+      "feature2": {
+        "title": "반성의 시간",
+        "description": "자세한 설명"
+      },
+      "feature3": {
+        "title": "반성의 시간",
+        "description": "자세한 설명"
+      },
+      "feature4": {
+        "title": "반성의 시간",
+        "description": "자세한 설명"
+      },
+      "title": "내 금융 프로필"
+    },
+    "test": {
+      "insightBullets": [
+        "재무 행동 분석",
+        "위험 성향 평가",
+        "맞춤형 절약 전략"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": "월급을 받으면 가장 먼저 무엇을 하시나요?",
+          "options": {
+            "a": "일정 금액을 저축계좌로 먼저 이체하세요.",
+            "b": "내가 갖고 싶었던 물건을 당장 사세요",
+            "c": "투자계좌에 입금하고 기회를 지켜보세요",
+            "d": "생활비, 저축, 투자 등을 계획대로 배분"
+          }
+        },
+        {
+          "id": "q2",
+          "question": "갑자기 50만원(약 400달러)을 받게 된다면?",
+          "options": {
+            "a": "평소 갖고 싶었던 걸 사세요",
+            "b": "비상금에 다 넣어",
+            "c": "주식이나 펀드에 투자하세요",
+            "d": "일부를 쓰고 나머지는 저축/투자하세요"
+          }
+        },
+        {
+          "id": "q3",
+          "question": "재무관리에 대해 어떻게 생각하시나요?",
+          "options": {
+            "a": "돈은 쓰라고 있는 것입니다! 욜로",
+            "b": "안전한 은행 예금이 최고입니다",
+            "c": "공부하고 투자하라 - 돈이 돈을 만든다",
+            "d": "인생을 즐기되 미래를 준비하라"
+          }
+        },
+        {
+          "id": "q4",
+          "question": "일일 커피 비용은 5,000원입니다. 한 달에 150,000원입니다!",
+          "options": {
+            "a": "커피는 나의 행복입니다! 계속 마셔",
+            "b": "집에서 커피 만들기로 전환",
+            "c": "매달 15만원씩 투자하세요",
+            "d": "주 2~3회로 줄이고 나머지는 아껴두세요"
+          }
+        },
+        {
+          "id": "q5",
+          "question": "당신의 재정적 목표는 무엇입니까?",
+          "options": {
+            "a": "지금 이 순간을 즐겨보세요! 미래는 나중에 온다",
+            "b": "안정적인 생활을 위해 최소 1억원은 저축하세요",
+            "c": "경제적 자유를 얻으세요! 돈을 벌게 하라",
+            "d": "삶의 질을 유지하면서 적당히 저축하세요"
+          }
+        },
+        {
+          "id": "q6",
+          "question": "신용카드 할부금에 대해 어떻게 생각하시나요?",
+          "options": {
+            "a": "자주 사용하세요. 이제 돈 없어도 살 수 있다",
+            "b": "절대 사용하지 마십시오. 이자는 아깝다",
+            "c": "0% 이자할부만 전략적으로 사용하세요",
+            "d": "대량 구매시에만 0% 할부 이용"
+          }
+        },
+        {
+          "id": "q7",
+          "question": "금융교육에 대한 귀하의 태도는 어떻습니까?",
+          "options": {
+            "a": "관심이 없습니다. 차라리 즐거운 시간을 보내세요",
+            "b": "예금금리만 확인하세요",
+            "c": "유튜브, 도서, 세미나 등을 통해 적극적으로 학습",
+            "d": "나에게 필요한 것을 찾아보고 실천해보세요."
+          }
+        },
+        {
+          "id": "q8",
+          "question": "친구 결혼 선물로 돈?",
+          "options": {
+            "a": "10만원 이상! 일생에 한 번이에요",
+            "b": "최소금액! 나도 힘들어",
+            "c": "관계를 기반으로 계산하여 정확하게 제공",
+            "d": "일반 시장 금리를 따르세요"
+          }
+        },
+        {
+          "id": "q9",
+          "question": "집을 소유하기 위한 귀하의 계획은 무엇입니까?",
+          "options": {
+            "a": "월세는 편해요. 대출을 원하지 않음",
+            "b": "천천히 저축하고 현금으로 구매하세요",
+            "c": "투자를 통한 시드머니 구축, 레버리지 활용",
+            "d": "저축+투자로 체계적으로 준비하세요"
+          }
+        },
+        {
+          "id": "q10",
+          "question": "갑자기 많은 돈이 필요하다면?",
+          "options": {
+            "a": "공황! 비상금은 없어, 빌려야 해",
+            "b": "긴급자금 인출",
+            "c": "투자자산 일부 매각",
+            "d": "비상자금과 유동자산을 결합하여 해결"
+          }
+        }
+      ],
+      "progress": "진전",
+      "next": "다음",
+      "previous": "~ 전에",
+      "submit": "제출하기",
+      "loading": "Analyzing your financial behavior pattern...",
+      "selectOption": "선택하기",
+      "subtitle": "당신의 돈 성격을 찾아보세요"
+    },
+    "result": {
+      "recommendations": {
+        "spender": [
+          {
+            "category": "절약",
+            "priority": "high",
+            "title": "자동 전송으로 강제 저장 시작",
+            "description": "월급날에 저축 계좌로 자동 이체되도록 설정하여 지출 기회가 생기기 전에 저축하세요.",
+            "steps": [
+              "급여에서 저축계좌로 자동이체 설정",
+              "월수입의 10%부터 시작하세요",
+              "3개월 후 15%, 6개월 후 20%로 인상"
+            ],
+            "benefit": "1년 후 연봉의 15% 이상 저축 달성"
+          },
+          {
+            "category": "지출",
+            "priority": "high",
+            "title": "지출 우선순위 설정",
+            "description": "충동구매를 줄이기 위해 필수적이지 않은 구매 전 24시간 대기 규칙을 만드세요.",
+            "steps": [
+              "장바구니에 상품을 추가하고 24시간 동안 기다립니다.",
+              "필요성(1-10) 및 만족도(1-10)를 평가합니다.",
+              "총점이 15점 이상인 경우에만 구매하세요"
+            ],
+            "benefit": "충동구매 50%감소"
+          }
+        ],
+        "saver": [
+          {
+            "category": "투자",
+            "priority": "high",
+            "title": "소액 투자로 시작하세요",
+            "description": "저축만으로는 인플레이션을 이길 수 없습니다. 부를 늘리려면 위험도가 낮은 투자 상품으로 시작하세요.",
+            "steps": [
+              "저축액의 10%를 저위험 펀드에 투자하세요",
+              "ETF나 인덱스 펀드로 시작하세요",
+              "3개월마다 투자비율 5%씩 증가"
+            ],
+            "benefit": "장기적으로 연간 4~6%의 수익률을 기대합니다."
+          },
+          {
+            "category": "지출",
+            "priority": "중간",
+            "title": "삶의 질을 위한 지출",
+            "description": "지나친 절약은 삶의 질을 저하시킵니다. 경험과 자기 보상에 투자하세요.",
+            "steps": [
+              "체험/취미에 월 예산의 5% 할당",
+              "분기별로 사랑하는 사람들과 외식하기",
+              "연간 여행예산 확보"
+            ],
+            "benefit": "행복도 증가 및 탈진 예방"
+          }
+        ],
+        "investor": [
+          {
+            "category": "보호",
+            "priority": "high",
+            "title": "긴급자금 확보",
+            "description": "투자자산만으로는 갑작스런 비용 지출을 감당할 수 없습니다. 안전을 위해 유동성을 유지하세요.",
+            "steps": [
+              "6개월치 생활비를 접근 가능한 계좌에 보관하세요",
+              "비상금은 절대 투자하지 마세요",
+              "사용 후 즉시 보충"
+            ],
+            "benefit": "예상치 못한 상황에도 안정적으로 대응"
+          },
+          {
+            "category": "투자",
+            "priority": "중간",
+            "title": "리스크 관리 강화",
+            "description": "성장하는 포트폴리오를 보호하려면 다각화 및 손절매 원칙을 사용하세요.",
+            "steps": [
+              "하나의 자산에 10% 이상 투자하지 마세요",
+              "-20% 손실 시 자동 정지 손실",
+              "정기적으로 포트폴리오의 균형을 재조정하세요"
+            ],
+            "benefit": "큰 손실 방지 및 안정적인 수익 창출"
+          }
+        ],
+        "balanced": [
+          {
+            "category": "교육",
+            "priority": "중간",
+            "title": "금융 지식 업데이트",
+            "description": "균형 잡힌 포트폴리오를 유지하려면 변화하는 시장에서 지속적인 학습이 필요합니다.",
+            "steps": [
+              "매월 금융 YouTube/팟캐스트 시청",
+              "분기별 재무상태 검토",
+              "매년 전문가와 상담하세요"
+            ],
+            "benefit": "최신 트렌드를 유지하고 수익을 최적화하세요"
+          }
+        ]
+      },
+      "habitData": {
+        "spender": [
+          {
+            "habit": "새 제품을 즉시 구매하세요",
+            "impact": "부정적인",
+            "tip": "일주일 후에도 여전히 원하는지 다시 생각해보십시오."
+          },
+          {
+            "habit": "할인쿠폰을 적극 활용해보세요",
+            "impact": "긍정적인",
+            "tip": "쿠폰앱 설치 후 구매 전 확인하세요"
+          }
+        ],
+        "saver": [
+          {
+            "habit": "매월 일정금액 저축",
+            "impact": "긍정적인",
+            "tip": "자동 전송을 설정하면 더욱 확실해집니다."
+          },
+          {
+            "habit": "생필품이라도 저축으로 인한 스트레스",
+            "impact": "부정적인",
+            "tip": "월 예산의 5%를 자기 보상에 사용하세요"
+          }
+        ],
+        "investor": [
+          {
+            "habit": "매일경제뉴스를 확인하세요",
+            "impact": "긍정적인",
+            "tip": "효율적인 정보를 얻으려면 뉴스레터를 구독하세요."
+          },
+          {
+            "habit": "단기 이익에 집착하라",
+            "impact": "부정적인",
+            "tip": "장기 투자 원칙을 설정하고 따르십시오."
+          }
+        ],
+        "balanced": [
+          {
+            "habit": "정기적으로 수입과 지출을 검토하세요.",
+            "impact": "긍정적인",
+            "tip": "예산 앱을 사용하는 것이 더 편리합니다"
+          },
+          {
+            "habit": "목표를 설정했지만 달성률이 낮음",
+            "impact": "중립적",
+            "tip": "구체적이고 측정 가능한 목표를 설정하라"
+          }
+        ]
+      },
+      "warningData": {
+        "extremeSpender": "지출 성향이 매우 높습니다. 최소한의 저축 계획을 강력히 권장합니다.",
+        "extremeSaver": "저축률이 매우 높습니다. 인플레이션에 대비한 투자를 고려해보세요.",
+        "extremeInvestor": "투자비율이 매우 높습니다. 비상자금과 위험관리를 확인해주세요.",
+        "underspending": "현재를 즐기는 것도 중요하다. 적절한 소비를 고려해보세요."
+      },
+      "compatibility": {
+        "spender": {
+          "spender": {
+            "score": 60,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 70,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 65,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "saver": {
+          "spender": {
+            "score": 70,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 90,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 80,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "investor": {
+          "spender": {
+            "score": 65,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 80,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 75,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "balanced": {
+          "spender": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 95,
+            "name": "완벽한 하모니",
+            "tip": "상호존중을 바탕으로 이상적인 경영을 실현합니다."
+          }
+        },
+        "scoreLabel": "호환성 점수"
+      },
+      "title": "상세 분석 보고서",
+      "description": "자세한 금융정보를 확인해보세요.",
+      "loading": "귀하의 금융 행동 패턴을 분석하는 중...",
+      "scoreBreakdown": "점수 분석",
+      "yourScore": "당신의 점수",
+      "strengths": "시그니처 강점",
+      "weaknesses": "성장 기회",
+      "actionSteps": "행동 단계",
+      "habits": "금융 습관",
+      "warnings": "상담사의 경고",
+      "compatibilityTitle": "재정적 조화",
+      "compatibilityDesc": "귀하의 재정적 성격이 다른 사람들과 어떻게 공감하는지.",
+      "downloadPDF": "보고서 다운로드",
+      "share": "결과 공유",
+      "retake": "재응시 시험",
+      "home": "집",
+      "linkCopied": "링크가 클립보드에 복사되었습니다!",
+      "shareTitle": "나의 금융 성격: {type}",
+      "shareText": "나의 금융 성격을 알아봤습니다! 여기에서 확인해보세요."
+    },
+    "Failed to download image": {
+      "Please try again": {
+        "": "계기반"
+      }
+    },
+    "title": "내 금융 프로필",
+    "description": "자세한 금융정보를 확인해보세요."
+  }
+}

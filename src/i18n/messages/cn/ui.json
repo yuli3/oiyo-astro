@@ -1,0 +1,163 @@
+{
+  "test": {
+    "viewResults": "探索洞察",
+    "swipeHintLong": "滑动以揭示更多",
+    "step": "阶段"
+  },
+  "actions": {
+    "next": "继续",
+    "back": "反思",
+    "submit": "确认",
+    "cancel": "取消",
+    "confirm": "接受",
+    "share": "传播",
+    "save": "保存",
+    "edit": "提炼",
+    "delete": "释放",
+    "close": "关闭",
+    "previous": "上一步",
+    "goHome": "首页",
+    "more": "更多",
+    "report": "分析",
+    "export": "导出智慧",
+    "continue": "继续前行",
+    "calculate": "能量分析",
+    "startTest": "开启诊断",
+    "processing": "分析中...",
+    "retry": "重新尝试",
+    "start": "开启",
+    "home": "首页",
+    "retake": "重新开始分析"
+  },
+  "navigation": {
+    "back": "返回",
+    "logout": "释放会话"
+  },
+  "status": {
+    "loading": "收集中...",
+    "error": "一道阴影挡住了我们的去路",
+    "success": "恢复和谐",
+    "empty": "一个安静的空间",
+    "scrollForSynergy": "滚动以探索和谐"
+  },
+  "modals": {
+    "confirmTitle": "您确定吗？",
+    "confirmDescription": "此举动无法回溯。"
+  },
+  "you": "您的灵魂",
+  "hallOfFame": "名人堂",
+  "noData": "空空如也的档案馆",
+  "noDataCta": "待星辰对齐时再回来",
+  "minutes": "分钟",
+  "startTest": "开启旅程",
+  "browseAll": "探索所有门户",
+  "title": "神圣的用户界面",
+  "all": "全部",
+  "unread": "新智慧",
+  "readAll": "全部通晓",
+  "view": "探索",
+  "markRead": "标记为已见证",
+  "tagline": "揭开你命运的架构。",
+  "product": "入口",
+  "company": "圣所",
+  "support": "指引",
+  "allRightsReserved": "保留所有权利。",
+  "wip": "演变中",
+  "copyright": "© {year} Oiyo.",
+  "copyrightFull": "© {year} Oiyo.net. 保留所有权利。",
+  "donate": "赞助创作者",
+  "koFi": "咖啡",
+  "payPal": "贝宝",
+  "daily": {
+    "title": "每日仪式",
+    "subtitle": "与当前的星象流动同步。",
+    "oracle": {
+      "selectZodiac": "选择您的天体星座",
+      "synchronize": "同步",
+      "imperialDecree": "皇帝的法令",
+      "analysisBasis": "宇宙分析",
+      "message": "星辰正为您低语着讯息。",
+      "actionRitual": "推荐仪式",
+      "fateVsWill": "在当前的潮流中航行"
+    }
+  },
+  "close": "关闭",
+  "questionOf": "提问",
+  "tryNow": "开启您的探索旅程",
+  "goHome": "返回首页",
+  "breadcrumbs": {
+    "ontology": "本体论圣所",
+    "social": "社会性 DNA",
+    "origin": "本原根脉",
+    "fortune": "运势门户",
+    "offline": "离线状态",
+    "wellness": "内在安康",
+    "sleep": "睡眠评分",
+    "test": "生命诊断",
+    "insights": "每日智慧洞察"
+  },
+  "emergency": {
+    "title": "⚠️ 建议即刻寻求引导",
+    "description": "分析成果表明您当前生命力极度疲惫。我们强烈建议您与专业人士对谈，以获得应有的关怀与支援。",
+    "getHelp": "寻求专业引导: 1393"
+  },
+  "step": "阶段",
+  "home": "首页",
+  "sharing": {
+    "kakaoShare": "分享到KakaoTalk",
+    "instagram": "Instagram",
+    "moreApps": "更多应用",
+    "copied": "已复制!",
+    "copyLink": "复制链接",
+    "creating": "创建中...",
+    "saveImage": "保存图片",
+    "twitter": "Twitter",
+    "facebook": "Facebook",
+    "keyTraits": "主要特征",
+    "matchScore": "匹配分数",
+    "shareResult": "分享结果",
+    "share": "分享"
+  },
+  "progress": {
+    "of": "/",
+    "progressLabel": "进度",
+    "stepLabel": "步骤",
+    "greatStart": "好的开始! 🌟",
+    "almostThere": "快到了! 💪"
+  },
+  "categories": {
+    "development": "个人发展",
+    "lifestyle": "生活方式",
+    "moreTests": "✨ 更多测试",
+    "new": "新的",
+    "personality": "性格",
+    "popular": "热门",
+    "popularTests": "🔥 热门测试",
+    "relatedTests": "🎯 相关测试",
+    "relationships": "关系",
+    "takeTest": "参加测试",
+    "tools": "工具",
+    "tryNext": "试试下一个",
+    "wellness": "健康",
+    "viewAllTests": "查看所有测试",
+    "discoverMore": "发现更多关于自己的事"
+  },
+  "goals": {
+    "myGoals": "我的目标",
+    "subtitle": "设定自我发展目标并追踪进度。",
+    "progressSnapshot": "{userId} 的进度快照",
+    "completedGoals": "已完成目标",
+    "completed": "已完成",
+    "noGoals": "还没有设定目标",
+    "noGoalsDesc": "设定个人发展目标开始追踪进度。",
+    "createGoal": "创建目标",
+    "progress": "进度",
+    "details": "详情"
+  },
+  "ontology": {
+    "economicSchool": "我的经济学派",
+    "economicSchoolSubtitle": "宏观经济学派分析",
+    "realpolitik": "现实政治倾向",
+    "politicalMatrix": "我的政治格局"
+  }
+}

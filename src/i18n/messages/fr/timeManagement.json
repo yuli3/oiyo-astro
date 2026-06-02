@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Le Procrastinateur Perfectionniste",
+    "description": "Attend le moment 'parfait' pour commencer.",
+    "keywords": "gestion du temps, productivité, style de travail, personnalité"
+  },
+  "landing": {
+    "title": "Le Procrastinateur Perfectionniste",
+    "subtitle": "Découvrez votre schéma de productivité en 5 minutes.",
+    "description": "Attend le moment 'parfait' pour commencer.",
+    "cta": "Démarrer l'Analyse",
+    "features": [
+      "⏰ 6 Analyse du type de gestion du temps",
+      "📈 Conseils de productivité personnalisés",
+      "🎯 Heures d'activité optimales",
+      "💡 Recommandations sur le style de travail"
+    ],
+    "typesTitle": "6 Styles de Gestion du Temps",
+    "types": {
+      "earlyBird": {
+        "title": "Le Procrastinateur Perfectionniste",
+        "description": "Attend le moment 'parfait' pour commencer.",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "nightOwl": {
+        "title": "Le Procrastinateur Perfectionniste",
+        "description": "Attend le moment 'parfait' pour commencer.",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "executor": {
+        "title": "Le Procrastinateur Perfectionniste",
+        "description": "Attend le moment 'parfait' pour commencer.",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "planner": {
+        "title": "Le Procrastinateur Perfectionniste",
+        "description": "Attend le moment 'parfait' pour commencer.",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "flexible": {
+        "title": "Le Procrastinateur Perfectionniste",
+        "description": "Attend le moment 'parfait' pour commencer.",
+        "icon": "⏳",
+        "bg": "orange"
+      },
+      "procrastinator": {
+        "title": "Le Procrastinateur Perfectionniste",
+        "description": "Attend le moment 'parfait' pour commencer.",
+        "icon": "⏳",
+        "bg": "orange"
+      }
+    }
+  }
+}

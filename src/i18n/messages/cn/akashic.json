@@ -1,0 +1,30 @@
+{
+  "tabs": {
+    "essence": "本质",
+    "destiny": "命运",
+    "biology": "生物节律"
+  },
+  "essence": {
+    "title": "阿卡西记录",
+    "quote": "您意识的独特签名",
+    "soulFormula": "灵魂公式",
+    "humanDesign": "人类设计",
+    "authority": "权威",
+    "locked": "解锁以揭示您的灵魂本质"
+  },
+  "destiny": {
+    "title": "阿卡西记录",
+    "lifePath": "生命路径",
+    "seeker": "探索者",
+    "animal": "守护动物"
+  },
+  "biology": {
+    "title": "阿卡西记录",
+    "chronotype": "时间型",
+    "constitution": "体质"
+  },
+  "title": "阿卡西记录",
+  "subtitle": "灵魂档案",
+  "close": "关闭",
+  "description": "探索灵魂跨越生命旅程的永恒记录。"
+}

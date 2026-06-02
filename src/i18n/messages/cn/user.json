@@ -1,0 +1,88 @@
+{
+  "lifePath": {
+    "title": "协同原型",
+    "description": "您的反思与冥想私人空间。",
+    "phases": {
+      "foundation": {
+        "period": "智慧期 (40+)",
+        "title": "协同原型",
+        "description": "您的反思与冥想私人空间。"
+      },
+      "prime": {
+        "period": "智慧期 (40+)",
+        "title": "协同原型",
+        "description": "您的反思与冥想私人空间。"
+      },
+      "wisdom": {
+        "period": "智慧期 (40+)",
+        "title": "协同原型",
+        "description": "您的反思与冥想私人空间。"
+      }
+    }
+  },
+  "destiny": {
+    "title": "协同原型",
+    "yearly": "年度波动",
+    "monthly": "月度节奏",
+    "daily": "每日能量",
+    "themes": {
+      "1": "新的开始与独立",
+      "2": "合作与耐心",
+      "3": "创意表达与喜悦",
+      "4": "秩序与建立基础",
+      "5": "变化与自由",
+      "6": "责任与家庭",
+      "7": "内省与智慧",
+      "8": "力量与成就",
+      "9": "圆满与放下"
+    },
+    "inflectionPoint": "巅峰拐点能量",
+    "chronos": "时间轴 (Chronos)"
+  },
+  "radar": {
+    "title": "协同原型",
+    "dimensions": {
+      "mind": "心智",
+      "destiny": "命运",
+      "time": "时间",
+      "drive": "动力",
+      "vitality": "活力"
+    },
+    "description": "您的反思与冥想私人空间。"
+  },
+  "sanctum": {
+    "title": "协同原型",
+    "description": "您的反思与冥想私人空间。",
+    "enter": "进入圣所"
+  },
+  "quantum": {
+    "title": "协同原型",
+    "subtitle": "激素平衡与生活方式建议",
+    "simulate": "运行模拟",
+    "results": "模拟结果",
+    "reset": "重置为原始配置文件",
+    "labels": {
+      "mbti": "MBTI",
+      "element": "元素",
+      "personalYear": "个人年度",
+      "lifeType": "生命类型 (HD)"
+    },
+    "simulationMode": "模拟模式激活：所有结果均基于虚拟数据。"
+  },
+  "biological": {
+    "title": "协同原型",
+    "subtitle": "激素平衡与生活方式建议",
+    "circadian": "昼夜节律",
+    "energy": "能量水平",
+    "advice": "推荐行动",
+    "mainFunction": "核心功能",
+    "lifestyleAdvice": "生活建议"
+  },
+  "synergy": {
+    "title": "协同原型",
+    "compatibility": "兼容性",
+    "traits": "核心特质",
+    "level": "协同等级",
+    "unlocked": "综合原型已解锁"
+  }
+}

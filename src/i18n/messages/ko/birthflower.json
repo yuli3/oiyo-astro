@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "birthdate": "생년월일",
+    "analyze": "분석하기",
+    "dob": "생년월일",
+    "check": "확인하다"
+  },
+  "meta": {
+    "title": "탄생 꽃 테스트",
+    "description": "당신의 탄생화와 생일에 따른 의미를 확인해보세요.",
+    "keywords": "탄생꽃, 꽃말, 성격테스트, 생일, 꽃"
+  },
+  "result": {
+    "stone": "탄생석",
+    "flower": "탄생 꽃",
+    "color": "보호색",
+    "title": "나의 탄생 꽃",
+    "description": "나를 상징하는 꽃과 그 의미"
+  },
+  "test": {
+    "progress": "진전",
+    "submit": "제출하기",
+    "loading": "로드 중",
+    "selectOption": "선택하기",
+    "insightBullets": [
+      "꽃의 상징적 의미 분석 중...",
+      "성격 특성 분석 중...",
+      "탄생화 운명 확인 중..."
+    ],
+    "next": "다음",
+    "previous": "~ 전에"
+  },
+  "title": "나의 탄생화를 찾아보세요",
+  "description": "당신의 영혼을 닮은 꽃은 무엇입니까?"
+}

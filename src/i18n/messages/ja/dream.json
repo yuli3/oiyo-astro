@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "夢日記ガイド",
+    "description": "深い夢の洞察のために設計された一連のツールを探索してください。",
+    "keywords": "夢日記, 夢分析, 夢占い"
+  },
+  "hero": {
+    "title": "夢日記ガイド",
+    "badge": "人気",
+    "subtitle": "夢を効果的に記録し分析する方法を学びましょう",
+    "description": "深い夢の洞察のために設計された一連のツールを探索してください。"
+  },
+  "tabs": {
+    "analysis": "あなたの夢タイプ",
+    "symbols": "シンボル辞典",
+    "journal": "夢日記のヒント"
+  },
+  "result": {
+    "title": "夢日記ガイド",
+    "copied": "クリップボードにコピーしました！",
+    "characteristics": "あなたの夢の特徴",
+    "dreamPatterns": "あなたの夢のパターン",
+    "interpretationTips": "解釈のヒント",
+    "commonSymbols": "あなたの共通の夢のシンボル",
+    "dreamTypeBreakdown": "あなたの夢タイプ内訳",
+    "share": "シェア",
+    "shareText": "私は {type} タイプの夢想家です！ここであなたの夢の性格をチェックしてみてください: {url}",
+    "retake": "テストを再受ける"
+  },
+  "symbols": {
+    "title": "夢日記ガイド",
+    "subtitle": "夢を効果的に記録し分析する方法を学びましょう",
+    "searchPlaceholder": "シンボルを検索..."
+  },
+  "journal": {
+    "title": "夢日記ガイド",
+    "subtitle": "夢を効果的に記録し分析する方法を学びましょう",
+    "gettingStarted": "始めに",
+    "whatToRecord": "記録すべきこと",
+    "interpretationTips": "解釈のヒント",
+    "improveRecall": "夢の想起を改善する"
+  },
+  "test": {
+    "progress": "質問 {current} / {total}",
+    "selectOption": "オプションを選択してください"
+  }
+}

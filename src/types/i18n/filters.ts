@@ -1,0 +1,28 @@
+// Auto-generated shard for namespace: filters
+
+export type FiltersKeys =
+  | "age"
+  | "all"
+  | "apply"
+  | "content"
+  | "counseling"
+  | "description"
+  | "end"
+  | "gender"
+  | "hideDismissed"
+  | "insights"
+  | "locked"
+  | "path"
+  | "placeholder"
+  | "region"
+  | "reset"
+  | "showDismissed"
+  | "social"
+  | "start"
+  | "streak"
+  | "test"
+  | "testCompletion"
+  | "tests"
+  | "throttling"
+  | "title"
+  | "unlocked";

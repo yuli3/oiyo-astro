@@ -1,0 +1,20 @@
+{
+  "catalyst": {
+    "title": "The Harmonious Traveler",
+    "description": "You navigate life with a balanced alignment between your innate fate and modern psychology. Your journey is one of integration.",
+    "friction": "Lack of a singular, dominant drive.",
+    "synergy": "Versatility and adaptability."
+  },
+  "bastion": {
+    "title": "The Harmonious Traveler",
+    "description": "You navigate life with a balanced alignment between your innate fate and modern psychology. Your journey is one of integration.",
+    "friction": "Lack of a singular, dominant drive.",
+    "synergy": "Versatility and adaptability."
+  },
+  "traveler": {
+    "title": "El viajero armonioso",
+    "description": "Navegas por la vida con una alineación equilibrada entre tu destino innato y la psicología moderna. Su viaje es uno de integración.",
+    "friction": "Falta de un impulso singular y dominante.",
+    "synergy": "Versatilidad y adaptabilidad."
+  }
+}

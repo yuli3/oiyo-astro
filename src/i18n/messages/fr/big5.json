@@ -1,0 +1,14 @@
+{
+  "title": "Test de Personnalité Big Five",
+  "badge": "Modèle OCEAN",
+  "resultTitle": "Votre Profil de Personnalité",
+  "restart": "Refaire",
+  "save": "Enregistrer le résultat",
+  "dimensions": {
+    "openness": "Ouverture",
+    "conscientiousness": "Conscience",
+    "extraversion": "Extraversion",
+    "agreeableness": "Agréabilité",
+    "neuroticism": "Névrosisme"
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "meta": {
+    "keywords": "ancestral resonance, kinship dialogue, Oiyo",
+    "title": "Kinship Resonance",
+    "description": "Profound insights into your shared familial harmonics."
+  },
+  "hero": {
+    "subtitle": "Instruction",
+    "cta": "Iniciar una investigación de parentesco",
+    "badge": "👨‍👩‍👧‍👦 Alquimias de parentesco",
+    "title": "Kinship Resonance"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Alquimia de parentesco",
+        "description": "Revele las firmas energéticas ocultas que gobiernan sus interacciones familiares."
+      },
+      {
+        "icon": "🚀",
+        "title": "Trayectorias heredadas",
+        "description": "Mapeando el camino de la transmisión de la sabiduría a través de las generaciones."
+      }
+    ],
+    "subtitle": "Instruction"
+  },
+  "types": {
+    "peacemaker": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "leader": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "supporter": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "independent": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "connector": {
+      "name": "The Solution Catalyst",
+      "emoji": "🔧"
+    },
+    "problem_solver": {
+      "name": "El catalizador de la solución",
+      "emoji": "🔧"
+    },
+    "subtitle": "Instruction"
+  },
+  "test": {
+    "insightBullets": [
+      "Ilumina las capas tácitas de tu filosofía de parentesco.",
+      "Traza los hilos invisibles de la expectativa ancestral.",
+      "Descubre el papel armónico que juegas en tu linaje."
+    ],
+    "progress": "Ascenso de resonancia",
+    "next": "Adelante",
+    "previous": "Reflejar",
+    "submit": "Revelar la síntesis",
+    "loading": "Calibrando armónicos de parentesco...",
+    "selectOption": "Marca el camino de la verdad",
+    "subtitle": "Instrucción"
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Resonancia fundamental",
+        "description": "Comprender el motor central de su conexión de parentesco.",
+        "question": "¿Qué es la alquimia de parentesco?",
+        "answer": "Es el estudio de cómo arquetipos familiares dispares armonizan o crean fricción dentro de un campo energético compartido."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Mapeo Ancestral",
+        "description": "Una auditoría integral de los patrones históricos y energéticos dentro de su linaje."
+      }
+    ]
+  },
+  "result": {
+    "title": "Kinship Resonance",
+    "description": "Profound insights into your shared familial harmonics."
+  },
+  "title": "Resonancia de parentesco",
+  "description": "Conocimientos profundos sobre los armónicos familiares compartidos.",
+  "keywords": "resonancia ancestral, diálogo de parentesco, Oiyo"
+}

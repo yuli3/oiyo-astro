@@ -1,0 +1,25 @@
+{
+  "404": {
+    "title": "The flow of wisdom is veiled in mist.",
+    "description": "Even in the clearest Sanctuary, fog sometimes rises. We are refocusing the path for your journey, please wait a moment.",
+    "backHome": "サンクチュアリプラザに戻る"
+  },
+  "500": {
+    "title": "The flow of wisdom is veiled in mist.",
+    "description": "Even in the clearest Sanctuary, fog sometimes rises. We are refocusing the path for your journey, please wait a moment.",
+    "retry": "再調整を試みる"
+  },
+  "title": "知恵の流れは霧のベールに包まれています。",
+  "description": "最も晴れた聖域であっても、時々霧が立ち込めることがあります。 あなたの旅の道筋を再検討中です。しばらくお待ちください。",
+  "primaryAction": "もう一度調整し直す",
+  "secondaryAction": "ゲートウェイで休憩",
+  "homeButton": "サンクチュアリに戻る",
+  "badgeLabel": "一時的に停止中",
+  "supportPrompt": "霧が晴れない場合は、この共鳴署名を賢者に渡してください。",
+  "referenceIdLabel": "共鳴署名",
+  "contactSupport": "相談する",
+  "supportEmail": "sages@oiyo.net",
+  "startTest": "旅の始まり",
+  "badge": "サンクチュアリのエコー",
+  "fallbackMessage": "宇宙の糸に見られる一時的な歪み。"
+}

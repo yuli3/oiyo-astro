@@ -1,0 +1,36 @@
+{
+  "title": "Inventaire HEXACO",
+  "description": "Analyse votre personnalité selon 6 dimensions basées sur le modèle HEXACO.",
+  "questions": {
+    "q1": "J'essaie d'être sincère dans mes relations avec les autres.",
+    "q2": "Je n'ai pas de sautes d'humeur fréquentes."
+  },
+  "results": {
+    "honesty": "Honnêteté-Humilité",
+    "emotionality": "Émotivité",
+    "extraversion": "Extraversion",
+    "agreeableness": "Agréabilité",
+    "conscientiousness": "Conscience professionnelle",
+    "openness": "Ouverture à l'expérience"
+  },
+  "axis": "Axe de l'Éthique",
+  "labels": {
+    "high": "Haute résonance",
+    "low": "Faible résonance",
+    "average": "Résonance équilibrée"
+  },
+  "guardian": "Gardien de la Parole",
+  "guardianDesc": "Votre clarté dans l'Honnêteté-Humilité témoigne d'une âme de noble lignée.",
+  "restart": "Relancer le Rituel",
+  "dimensions": {
+    "H": "Honnêteté-Humilité",
+    "E": "Émotionalité",
+    "X": "Extraversion",
+    "A": "Agréabilité",
+    "C": "Consciencieusité",
+    "O": "Ouverture à l'Expérience"
+  },
+  "honestyLevel": "Niveau de Vérité: {level}",
+  "save": "Sceller l'Accord",
+  "uniqueDimension": "La Dimension Unique HEXACO"
+}

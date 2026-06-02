@@ -1,0 +1,15 @@
+{
+  "daySun": "Sun",
+  "dayMon": "Mon",
+  "dayTue": "Tue",
+  "dayWed": "Wed",
+  "dayThu": "Thu",
+  "dayFri": "Fri",
+  "daySat": "Sat",
+  "a": "A",
+  "saveFailed": "Failed to save",
+  "moodQuestion": "How was your day?",
+  "close": "Close",
+  "saved": "Saved successfully",
+  "saveAsImage": "Save as Image"
+}

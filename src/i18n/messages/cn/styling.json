@@ -1,0 +1,56 @@
+{
+  "scanner": {
+    "title": "AI Life Stylist",
+    "description": "Upload your photo. AI analyzes your face shape and personal color to recommend the perfect style.",
+    "action": {
+      "upload": "Click to Upload Photo",
+      "camera": "相机",
+      "analyze": "分析风格"
+    },
+    "status": {
+      "analyzing": "Analyzing...",
+      "detecting": "检测脸型和肤色"
+    },
+    "error": {
+      "tooLarge": "图片太大（最大 5MB）",
+      "cameraAccess": "无法访问相机",
+      "failed": "分析失败。 请尝试更清晰的照片。"
+    }
+  },
+  "dashboard": {
+    "title": "人工智能生活设计师",
+    "description": "上传您的照片。 AI 分析您的脸型和个人肤色，推荐完美的风格。",
+    "upload": "点击上传照片",
+    "retry": "尝试另一张照片",
+    "labels": {
+      "faceShape": "脸型",
+      "personalColor": "色彩分析"
+    },
+    "status": {
+      "analyzing": "正在分析..."
+    }
+  },
+  "recommendation": {
+    "complete": "分析完成",
+    "analyzeAnother": "分析另一张照片",
+    "sections": {
+      "hair": "最佳发型",
+      "eyewear": "眼镜搭配",
+      "palette": "你的电源面板"
+    },
+    "shapes": {
+      "oval": "椭圆形",
+      "round": "圆形的",
+      "square": "正方形",
+      "heart": "心",
+      "diamond": "钻石",
+      "long": "长的"
+    },
+    "colors": {
+      "spring_warm": "春暖花开",
+      "summer_cool": "夏日清凉",
+      "autumn_warm": "秋暖",
+      "winter_cool": "冬日清凉"
+    }
+  }
+}

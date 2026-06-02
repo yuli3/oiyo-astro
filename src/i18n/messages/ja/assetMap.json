@@ -1,0 +1,179 @@
+{
+  "test": {
+    "progress": "進行状況",
+    "submit": "送信",
+    "loading": "読み込み中...",
+    "selectOption": "オプションを選択",
+    "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "insightBullets": ["洞察力", "財務状況分析", "リスクアセスメント"],
+    "next": "次へ",
+    "previous": "前へ"
+  },
+  "meta": {
+    "title": "あなたの資産プロフィール",
+    "description": "深い財務分析のために設計されたツールスイートを見てみましょう",
+    "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "📉",
+        "title": "退職後の資産の取り崩し時期",
+        "description": "あなたのお金が何歳で枯渇するかを正確に予測します。",
+        "question": "私のお金はいつまで続くのでしょうか？",
+        "answer": "資産寿命の計算"
+      },
+      {
+        "icon": "💸",
+        "title": "インフレ率の反映",
+        "description": "単純な計算ではなく、インフレを考慮した現実的な将来価値を示します。",
+        "question": "現在も将来も100万ウォン?",
+        "answer": "購買力の変化の反映"
+      },
+      {
+        "icon": "💡",
+        "title": "リスク管理",
+        "description": "専門家レベルの財務分析を提供します。",
+        "question": "シェアしてもらえますか？",
+        "answer": "所要時間は約 2 ～ 3 分です。"
+      },
+      {
+        "icon": "🎯",
+        "title": "退職の準備をする",
+        "description": "パーソナライズされた投資戦略を確立します。",
+        "question": "信頼できますか？",
+        "answer": "検証済みのデータに基づいています。"
+      },
+      {
+        "icon": "🔥",
+        "title": "税金の最適化",
+        "description": "リスクを最小限に抑え、利益を最大化します。",
+        "question": "シェアしてもらえますか？",
+        "answer": "はい、すぐにご利用いただけます。"
+      },
+      {
+        "icon": "⭐",
+        "title": "資産配分戦略",
+        "description": "リスクを最小限に抑え、利益を最大化します。",
+        "question": "結果は正確ですか?",
+        "answer": "所要時間は約 2 ～ 3 分です。"
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "📈",
+        "title": "収益率はどのように設定すればよいですか?",
+        "description": "通常、預金金利または S&P 500 の平均収益率 (7 ～ 8%) を指します。",
+        "question": "適切な収益率はどれくらいですか?",
+        "answer": "投資傾向に応じて設定"
+      },
+      {
+        "icon": "🏥",
+        "title": "医療費は含まれていますか？",
+        "description": "基本的な生活費に含めるか、余分にお金を貯めておくと良いでしょう。",
+        "question": "予期せぬ出費はどうなりますか？",
+        "answer": "追加の資金を設定することをお勧めします"
+      },
+      {
+        "icon": "💡",
+        "title": "投資収益率を最大化する",
+        "description": "パーソナライズされた投資戦略を確立します。",
+        "question": "シェアしてもらえますか？",
+        "answer": "いつでも共有できます。"
+      },
+      {
+        "icon": "🎯",
+        "title": "資産配分戦略",
+        "description": "長期的な財務目標の達成を支援します。",
+        "question": "どのくらいかかりますか？",
+        "answer": "所要時間は約 2 ～ 3 分です。"
+      },
+      {
+        "icon": "🔥",
+        "title": "リスク管理",
+        "description": "パーソナライズされた投資戦略を確立します。",
+        "question": "どうやって使用すればいいですか？",
+        "answer": "はい、すぐにご利用いただけます。"
+      },
+      {
+        "icon": "⭐",
+        "title": "投資収益率を最大化する",
+        "description": "長期的な財務目標の達成を支援します。",
+        "question": "信頼できますか？",
+        "answer": "はい、すぐにご利用いただけます。"
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "📊",
+        "title": "リアルタイム資産変動グラフ",
+        "description": "直感的なグラフで年ごとの資産の変化を確認できます。",
+        "question": "視覚化を提供しますか?",
+        "answer": "インタラクティブなチャート"
+      },
+      {
+        "icon": "📱",
+        "title": "モバイルの最適化",
+        "description": "いつでもどこでも簡単にシミュレーションを実行できます。",
+        "question": "モバイルサポート?",
+        "answer": "完全に互換性があります"
+      },
+      {
+        "icon": "💡",
+        "title": "税金の最適化",
+        "description": "リスクを最小限に抑え、利益を最大化します。",
+        "question": "どのくらいかかりますか？",
+        "answer": "検証済みのデータに基づいています。"
+      },
+      {
+        "icon": "🎯",
+        "title": "財務の安定性の強化",
+        "description": "リスクを最小限に抑え、利益を最大化します。",
+        "question": "どうやって使用すればいいですか？",
+        "answer": "いつでも共有できます。"
+      },
+      {
+        "icon": "🔥",
+        "title": "投資収益率を最大化する",
+        "description": "データに基づいた投資に関する洞察を取得します。",
+        "question": "どうやって使用すればいいですか？",
+        "answer": "いつでも共有できます。"
+      },
+      {
+        "icon": "⭐",
+        "title": "財務の安定性の強化",
+        "description": "リスクを最小限に抑え、利益を最大化します。",
+        "question": "シェアしてもらえますか？",
+        "answer": "検証済みのデータに基づいています。"
+      }
+    ]
+  },
+  "result": {
+    "title": "あなたの資産プロフィール",
+    "description": "深い財務分析のために設計されたツールスイートを見てみましょう",
+    "depletionTitle": "ダッシュボード",
+    "warning": "Warning",
+    "safe": "Safe"
+  },
+  "subtitle": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+  "currentAge": "Current Age",
+  "retireAge": "Retire Age",
+  "currentAsset": "Current Asset",
+  "monthlySave": "Monthly Save",
+  "monthlySpend": "Monthly Spend",
+  "returnRate": "Return Rate",
+  "inflationRate": "Inflation Rate",
+  "age": "Age",
+  "currencyUnit": "USD",
+  "unitSave": "(Pre-retirement, USD)",
+  "unitSpend": "(Post-retirement, PV)",
+  "chartRetire": "Retirement",
+  "chartAgeSuffix": "yrs",
+  "disclaimer": "Disclaimer",
+  "title": "あなたの資産プロフィール",
+  "description": "深い財務分析のために設計されたツールスイートを見てみましょう"
+}

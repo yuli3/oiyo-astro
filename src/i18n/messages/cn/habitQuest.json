@@ -1,0 +1,33 @@
+{
+  "habitQuest": {
+    "quests": {
+      "mood": "记录你的心情",
+      "mindfulness": "练习正念",
+      "city": "探索城市指南"
+    },
+    "meta": {
+      "keywords": "habits, gamification, rpg, self-improvement",
+      "subtitle": "Level up your life daily",
+      "disclaimer": "XP and Level are stored locally and will be reset if you clear app data.",
+      "description": "Comprehensive analysis and insights",
+      "title": "My Insights"
+    },
+    "hero": {
+      "subtitle": "Level up your life daily",
+      "badge": "Unveil the hidden layers of your personal philosophy."
+    },
+    "landing": {
+      "cta": "开始冒险"
+    },
+    "subtitle": "每天提升你的生活水平",
+    "levelTitle": "{level} 级冒险家",
+    "levelName": "级别{级别}",
+    "streak": "{days} 天连续！ 🔥",
+    "nextLevelMsg": "下一关需要 {xp} XP！",
+    "dailyQuests": "每日任务",
+    "disclaimer": "XP and Level are stored locally and will be reset if you clear app data.",
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights",
+    "T": "Dashboard"
+  }
+}

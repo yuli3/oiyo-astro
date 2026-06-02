@@ -1,0 +1,61 @@
+{
+  "sephirot": {
+    "keter": {
+      "name": "Malkut",
+      "meaning": "Reinado",
+      "attribute": "Acción"
+    },
+    "chokhmah": {
+      "name": "Malkut",
+      "meaning": "Reinado",
+      "attribute": "Acción"
+    },
+    "binah": {
+      "name": "Malkut",
+      "meaning": "Reinado",
+      "attribute": "Acción"
+    },
+    "chesed": {
+      "name": "Malkut",
+      "meaning": "Reinado",
+      "attribute": "Acción"
+    },
+    "gevurah": {
+      "name": "Malkut",
+      "meaning": "Reinado",
+      "attribute": "Acción"
+    },
+    "tiferet": {
+      "name": "Malkut",
+      "meaning": "Reinado",
+      "attribute": "Acción"
+    },
+    "netzach": {
+      "name": "Malkut",
+      "meaning": "Reinado",
+      "attribute": "Acción"
+    },
+    "hod": {
+      "name": "Malkut",
+      "meaning": "Reinado",
+      "attribute": "Acción"
+    },
+    "yesod": {
+      "name": "Malkut",
+      "meaning": "Reinado",
+      "attribute": "Acción"
+    },
+    "malkuth": {
+      "name": "Malkut",
+      "meaning": "Reinado",
+      "attribute": "Acción"
+    }
+  },
+  "title": "Árbol de la Vida Cabalá",
+  "description": "Camino místico de las diez Sephirot.",
+  "systemName": "Cabalá",
+  "narrative": "Emanaciones Divinas",
+  "sephira": "Sefira",
+  "path": "Sendero",
+  "ariaLabel": "Sephira: {name}, representando {meaning}."
+}

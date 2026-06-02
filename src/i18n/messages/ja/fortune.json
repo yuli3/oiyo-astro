@@ -1,0 +1,336 @@
+{
+  "chineseZodiac": {
+    "title": "数秘術",
+    "description": "Life path",
+    "accuracy": "高い",
+    "duration": "素早い"
+  },
+  "numerology": {
+    "title": "数秘術",
+    "description": "ライフパス",
+    "accuracy": "高い",
+    "duration": "素早い"
+  },
+  "primal-origin": {
+    "landing": {
+      "badge": "究極の啓示",
+      "title": "根源の起源",
+      "subtitle": "デジタル・シールを解除し、運命を明らかにします",
+      "cta": "起源を解き明かす",
+      "features": {
+        "triple": {
+          "title": "根源の起源",
+          "desc": "血液型があなたの宇宙的な特性や性格にどう影響するか。"
+        },
+        "celestial": {
+          "title": "根源の起源",
+          "desc": "血液型があなたの宇宙的な特性や性格にどう影響するか。"
+        },
+        "genetic": {
+          "title": "根源の起源",
+          "desc": "血液型があなたの宇宙的な特性や性格にどう影響するか。"
+        }
+      }
+    },
+    "input": {
+      "title": "根源の起源",
+      "subtitle": "デジタル・シールを解除し、運命を明らかにします",
+      "nameLabel": "名前 (任意)",
+      "namePlaceholder": "フルネーム",
+      "genderLabel": "性別",
+      "male": "男性",
+      "female": "女性",
+      "birthDateLabel": "生年月日",
+      "birthTimeLabel": "出生時間",
+      "bloodTypeLabel": "血液型",
+      "submitButton": "起源を解き明かす",
+      "decrypting": "起源を解読中..."
+    }
+  },
+  "T": "T",
+  "dailyLucky": {
+    "back": "戻る",
+    "colors": {
+      "beige": "ベージュ",
+      "black": "黒",
+      "gold": "金",
+      "green": "緑",
+      "mint": "ミント",
+      "navy": "紺",
+      "pink": "ピンク",
+      "purple": "紫",
+      "red": "赤",
+      "sky": "空色",
+      "white": "白"
+    },
+    "directions": {
+      "east": "東",
+      "north": "北",
+      "northeast": "北東",
+      "northwest": "北西",
+      "south": "南",
+      "southeast": "南東",
+      "southwest": "南西",
+      "west": "西"
+    },
+    "footer": "今日のガイダンス",
+    "items": {
+      "book": "本",
+      "cap": "帽子",
+      "coffee": "コーヒー",
+      "coin": "コイン",
+      "earring": "イヤリング",
+      "glasses": "眼鏡",
+      "headphones": "ヘッドフォン",
+      "key": "鍵",
+      "mirror": "鏡",
+      "pen": "ペン",
+      "perfume": "香水",
+      "phone": "スマートフォン",
+      "plant": "植物",
+      "ring": "指輪",
+      "sneakers": "スニーカー",
+      "umbrella": "傘",
+      "watch": "時計"
+    },
+    "keyword": "今日のキーワード",
+    "keywords": {
+      "cleaning": "掃除",
+      "connection": "つながり",
+      "courage": "勇気",
+      "creativity": "創造性",
+      "focus": "フォーカス",
+      "kindness": "親切",
+      "patience": "忍耐",
+      "rest": "休息",
+      "savings": "貯蓄",
+      "silence": "静寂"
+    },
+    "meta": {
+      "description": "休息が必要です",
+      "keywords": "運勢",
+      "title": "根源の起源"
+    },
+    "result": {
+      "description": "休息が必要です",
+      "title": "根源の起源"
+    },
+    "sharePersonalizedPrefix": "私の運勢",
+    "shareTemplate": "チェックしてみて",
+    "subtitle": "デジタル・シールを解除し、運命を明らかにします",
+    "test": {
+      "insightBullets": ["深い洞察力"],
+      "loading": "読み込み中...",
+      "next": "次へ",
+      "previous": "前へ",
+      "progress": "進捗",
+      "selectOption": "選択",
+      "submit": "提出"
+    },
+    "title": "根源の起源",
+    "yourLucky": "あなたのラッキーアイテム",
+    "zodiac": {
+      "aquarius": "水瓶座",
+      "aries": "牡羊座",
+      "cancer": "蟹座",
+      "capricorn": "山羊座",
+      "gemini": "双子座",
+      "leo": "獅子座",
+      "libra": "天秤座",
+      "pisces": "魚座",
+      "sagittarius": "射手座",
+      "scorpio": "蠍座",
+      "taurus": "牡牛座",
+      "virgo": "乙女座"
+    }
+  },
+  "dailyOracle": {
+    "hub": {
+      "luckyDesc": "今日の運勢をチェック",
+      "luckyTitle": "ラッキーアイテム",
+      "personaDesc": "今日のペルソナ",
+      "personaTitle": "ペルソナ",
+      "subtitle": "デジタル・シールを解除し、運命を明らかにします",
+      "tabs": {
+        "lucky": "ラッキー",
+        "oracle": "オラクル",
+        "personality": "性格"
+      },
+      "title": "根源の起源"
+    },
+    "identify": {
+      "button": "開始",
+      "description": "休息が必要です",
+      "title": "根源の起源"
+    },
+    "loading": "読み込み中...",
+    "share": "シェア",
+    "subtitle": "デジタル・シールを解除し、運命を明らかにします",
+    "title": "根源の起源"
+  },
+  "dailyReading": {
+    "cards": {
+      "refresh": "更新",
+      "reminder": "リマインダー",
+      "subtitle": "デジタル・シールを解除し、運命を明らかにします"
+    },
+    "hero": {
+      "cta": "起源を解き明かす",
+      "eyebrow": "今日",
+      "subtitle": "デジタル・シールを解除し、運命を明らかにします"
+    },
+    "meta": {
+      "description": "休息が必要です",
+      "keywords": "運勢",
+      "title": "根源の起源"
+    },
+    "summary": {
+      "energy": "エネルギー",
+      "focus": "フォーカス",
+      "luckyColor": "色"
+    }
+  },
+  "days": "日",
+  "description": "休息が必要です",
+  "energyScore": "エネルギー・スコア",
+  "feature1Desc": "特徴1",
+  "feature1Title": "タイトル1",
+  "feature2Desc": "特徴2",
+  "feature2Title": "タイトル2",
+  "feature3Desc": "特徴3",
+  "feature3Title": "タイトル3",
+  "historySubtitle": "過去のリーディング",
+  "historyTitle": "履歴",
+  "hub": {
+    "cta": "起源を解き明かす",
+    "description": "休息が必要です",
+    "subtitle": "デジタル・シールを解除し、運命を明らかにします",
+    "title": "根源の起源"
+  },
+  "longestStreak": "最長記録",
+  "meta": {
+    "description": "休息が必要です",
+    "keywords": "運勢",
+    "subtitle": "デジタル・シールを解除し、運命を明らかにします",
+    "title": "根源の起源"
+  },
+  "mostCommon": "最も一般的",
+  "noData": "データなし",
+  "question": "質問",
+  "questions": {
+    "q1": {
+      "options": {
+        "o1": "オプション1",
+        "o2": "オプション2",
+        "o3": "オプション3",
+        "o4": "オプション4"
+      },
+      "text": "質問5"
+    },
+    "q2": {
+      "options": {
+        "o1": "オプション1",
+        "o2": "オプション2",
+        "o3": "オプション3",
+        "o4": "オプション4"
+      },
+      "text": "質問5"
+    },
+    "q3": {
+      "options": {
+        "o1": "オプション1",
+        "o2": "オプション2",
+        "o3": "オプション3",
+        "o4": "オプション4"
+      },
+      "text": "質問5"
+    },
+    "q4": {
+      "options": {
+        "o1": "オプション1",
+        "o2": "オプション2",
+        "o3": "オプション3",
+        "o4": "オプション4"
+      },
+      "text": "質問5"
+    },
+    "q5": {
+      "options": {
+        "o1": "オプション1",
+        "o2": "オプション2",
+        "o3": "オプション3",
+        "o4": "オプション4"
+      },
+      "text": "質問5"
+    }
+  },
+  "reminder": "リマインダー",
+  "reminderText": "忘れないでください",
+  "result": {
+    "description": "休息が必要です",
+    "title": "根源の起源"
+  },
+  "results": {
+    "balanced": {
+      "advice": "休憩を取る",
+      "description": "休息が必要です",
+      "traits": {
+        "0": "平和",
+        "1": "リラックス",
+        "2": "ゆっくり"
+      },
+      "type": "休息型"
+    },
+    "energetic": {
+      "advice": "休憩を取る",
+      "description": "休息が必要です",
+      "traits": {
+        "0": "平和",
+        "1": "リラックス",
+        "2": "ゆっくり"
+      },
+      "type": "休息型"
+    },
+    "reflective": {
+      "advice": "休憩を取る",
+      "description": "休息が必要です",
+      "traits": {
+        "0": "平和",
+        "1": "リラックス",
+        "2": "ゆっくり"
+      },
+      "type": "休息型"
+    },
+    "restful": {
+      "advice": "休憩を取る",
+      "description": "休息が必要です",
+      "traits": {
+        "0": "平和",
+        "1": "リラックス",
+        "2": "ゆっくり"
+      },
+      "type": "休息型"
+    }
+  },
+  "shareResult": "結果をシェア",
+  "shareTitle": "シェア",
+  "startDaily": "デイリーを始める",
+  "subtitle": "デジタル・シールを解除し、運命を明らかにします",
+  "takeOtherTests": "他の診断を受ける",
+  "test": {
+    "insightBullets": ["深い洞察力"],
+    "loading": "読み込み中...",
+    "next": "次へ",
+    "previous": "前へ",
+    "progress": "進捗",
+    "selectOption": "選択",
+    "submit": "提出"
+  },
+  "title": "根源の起源",
+  "todayAdvice": "今日のアドバイス",
+  "totalDays": "合計日数",
+  "trendChart": "トレンドチャート",
+  "uniqueTypes": "ユニークタイプ",
+  "viewHistory": "履歴を見る",
+  "welcomeTitle": "ようこそ"
+}

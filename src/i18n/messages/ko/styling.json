@@ -1,0 +1,56 @@
+{
+  "scanner": {
+    "title": "AI 얼굴 스캐너",
+    "description": "사진을 업로드하거나 카메라를 이용해 얼굴형과 개인색상을 분석해보세요.",
+    "action": {
+      "upload": "업로드",
+      "camera": "카메라",
+      "analyze": "스타일 분석"
+    },
+    "status": {
+      "analyzing": "얼굴 구조 분석 중...",
+      "detecting": "얼굴 모양 및 피부톤 감지"
+    },
+    "error": {
+      "tooLarge": "이미지가 너무 큼(최대 5MB)",
+      "cameraAccess": "카메라에 액세스할 수 없습니다.",
+      "failed": "분석에 실패했습니다. 좀 더 선명한 사진을 찍어보세요."
+    }
+  },
+  "dashboard": {
+    "title": "AI 라이프 스타일리스트",
+    "description": "사진을 업로드하세요. AI가 얼굴형과 퍼스널 컬러를 분석해 완벽한 스타일을 추천해준다.",
+    "upload": "사진을 업로드하려면 클릭하세요",
+    "retry": "다른 사진을 찍어 보세요",
+    "labels": {
+      "faceShape": "얼굴 모양",
+      "personalColor": "색상 분석"
+    },
+    "status": {
+      "analyzing": "분석 중..."
+    }
+  },
+  "recommendation": {
+    "complete": "분석 완료",
+    "analyzeAnother": "다른 사진 분석",
+    "sections": {
+      "hair": "최고의 헤어스타일",
+      "eyewear": "안경 매치",
+      "palette": "당신의 파워 팔레트"
+    },
+    "shapes": {
+      "oval": "타원형",
+      "round": "둥근",
+      "square": "정사각형",
+      "heart": "마음",
+      "diamond": "다이아몬드",
+      "long": "긴"
+    },
+    "colors": {
+      "spring_warm": "따뜻한 봄",
+      "summer_cool": "여름 쿨",
+      "autumn_warm": "따뜻한 가을",
+      "winter_cool": "겨울의 시원함"
+    }
+  }
+}

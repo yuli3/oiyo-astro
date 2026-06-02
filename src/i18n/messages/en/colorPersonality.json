@@ -1,0 +1,199 @@
+{
+  "questions": {
+    "cp_1": {
+      "options": {
+        "a": "Quiet and static blue light",
+        "b": "Vibrant and lively red tone",
+        "c": "The green of the forest gives a sense of stability"
+      },
+      "text": "What kind of atmosphere do you want when decorating a relaxation space?"
+    },
+    "cp_2": {
+      "options": {
+        "a": "Block all risks and carefully",
+        "b": "For the fastest and most efficient results",
+        "c": "Be open to new possibilities and changes"
+      },
+      "text": "What is your attitude when making important decisions?"
+    },
+    "cp_3": {
+      "options": {
+        "a": "peace",
+        "b": "victory",
+        "c": "freedom"
+      },
+      "text": "What word excites you the most?"
+    },
+    "cp_4": {
+      "options": {
+        "a": "reliable and orderly",
+        "b": "intense and attractive",
+        "c": "original and mysterious"
+      },
+      "text": "How do you want people to see you?"
+    },
+    "cp_5": {
+      "options": {
+        "a": "quiet time alone",
+        "b": "warm and comforting food",
+        "c": "drastic change or deviation"
+      },
+      "text": "What do you look for when you're stressed?"
+    },
+    "cp_6": {
+      "options": {
+        "a": "Inner peace and satisfaction",
+        "b": "social status and reputation",
+        "c": "Constant learning and expansion"
+      },
+      "text": "What are the criteria for success?"
+    },
+    "cp_7": {
+      "options": {
+        "a": "Achromatic colors (gray, black)",
+        "b": "Warm series (yellow, orange)",
+        "c": "Calm series (blue, green)"
+      },
+      "text": "What color clothes do you like to wear?"
+    },
+    "cp_8": {
+      "options": {
+        "a": "under a systematic plan",
+        "b": "In a spontaneous and free atmosphere",
+        "c": "Under strong pressure and competition"
+      },
+      "text": "When does your creativity shine?"
+    },
+    "cp_9": {
+      "options": {
+        "a": "The order of my life is falling apart",
+        "b": "forgotten by people",
+        "c": "Stopping and not growing"
+      },
+      "text": "What situation are you most afraid of?"
+    },
+    "cp_10": {
+      "options": {
+        "a": "Deep sleep and sufficient rest",
+        "b": "meeting new people",
+        "c": "Sense of accomplishment after achieving goal"
+      },
+      "text": "Where does your energy come from?"
+    },
+    "cp_11": {
+      "options": {
+        "a": "Fact-centered logical conversation",
+        "b": "Conversations that share emotions and inspiration",
+        "c": "Dialogue to find realistic solutions"
+      },
+      "text": "What is your preferred conversation style?"
+    },
+    "cp_12": {
+      "options": {
+        "a": "stability",
+        "b": "passion",
+        "c": "innovation"
+      },
+      "text": "How would you define your values ​​in one word?"
+    }
+  },
+  "results": {
+    "blue": {
+      "traits": {
+        "0": "Emotional stability and peace are our top priorities.",
+        "1": "Trustworthy and respects rules and order."
+      },
+      "harmony": {
+        "reason": "It brings bright vitality and change to your static daily life."
+      },
+      "title": "Guardian of Quiet Order (Blue)",
+      "advice": "Sometimes, let go of perfectionism and just go with the flow."
+    },
+    "green": {
+      "traits": {
+        "0": "They are very patient and do not give up on their beliefs.",
+        "1": "There is a desire for recognition and a strong sense of self-confidence."
+      },
+      "harmony": {
+        "reason": "It adds artistic inspiration and flexibility to your rigid thinking."
+      },
+      "title": "Tree of Strong Ego (Green)",
+      "advice": "Try to listen more flexibly to the opinions of others."
+    },
+    "red": {
+      "traits": {
+        "0": "Active, passionate and competitive.",
+        "1": "We produce results with strong desire and drive."
+      },
+      "harmony": {
+        "reason": "It calms and tones your overheated energy."
+      },
+      "title": "Blazing Flame of Life (Red)",
+      "advice": "Take time to slow down and focus on your inner voice."
+    },
+    "yellow": {
+      "traits": {
+        "0": "You are optimistic and love new changes and possibilities.",
+        "1": "I hate being restricted and pursue free communication."
+      },
+      "harmony": {
+        "reason": "It anchors your scattered energy firmly to the ground of reality."
+      },
+      "title": "Expansion of light into the future (Yellow)",
+      "advice": "Get into the habit of carefully examining realistic constraints."
+    },
+    "gray": {
+      "traits": {
+        "0": "Try to be neutral and avoid emotional involvement.",
+        "1": "Remain cautious to protect yourself."
+      },
+      "harmony": {
+        "reason": "It gives strong motivation and action to your colorless daily life."
+      },
+      "title": "Sentinel of Safe Boundaries (Gray)",
+      "advice": "Take a step out into the world and express your feelings."
+    },
+    "brown": {
+      "traits": {
+        "0": "We focus on realistic sensations and physical comfort.",
+        "1": "I prefer stability over adventure."
+      },
+      "harmony": {
+        "reason": "It stimulates a sense of adventure."
+      },
+      "title": "Comfort of the Earth (Brown)",
+      "advice": "Don't be afraid to try something new."
+    },
+    "black": {
+      "traits": {
+        "0": "Independent and professional.",
+        "1": "They do not reveal their true feelings easily."
+      },
+      "harmony": {
+        "reason": "It illuminates your deep inner self."
+      },
+      "title": "Master of Infinite Depth (Black)",
+      "advice": "Opening yourself up brings new opportunities."
+    },
+    "violet": {
+      "traits": {
+        "0": "They are highly intuitive and artistic.",
+        "1": "Live in your own unique world."
+      },
+      "harmony": {
+        "reason": "It adds stability to your intuitive world."
+      },
+      "title": "Prophet of Mysterious Intuition (Violet)",
+      "advice": "Try to convey abstract ideas concretely."
+    }
+  },
+  "title": "color personality diagnosis",
+  "badge": "Color Personality",
+  "intro": "What is the color of your soul that represents you?",
+  "analysis": "personality analysis",
+  "traits": "main characteristics",
+  "advice": "advice",
+  "harmony": "relationship harmony",
+  "restart": "do it again",
+  "save": "Save results"
+}

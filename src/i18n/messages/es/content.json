@@ -1,0 +1,13 @@
+{
+  "tips": {
+    "tip1": "Consejo 1",
+    "tip2": "Consejo 2",
+    "tip3": "Consejo 3"
+  },
+  "heading": "Título",
+  "subheading": "Subtítulo",
+  "description1": "Descripción 1",
+  "description2": "Descripción 2",
+  "cta": "Haga clic aquí",
+  "tipsTitle": "Consejos"
+}

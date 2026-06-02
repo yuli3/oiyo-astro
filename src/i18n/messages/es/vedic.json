@@ -1,0 +1,227 @@
+{
+  "title": "Astrología Védica",
+  "description": "Antiguo sistema indio de mansiones lunares.",
+  "systemName": "Astrología Védica",
+  "narrative": "Mansiones Lunares Nakshatra",
+  "resonance": {
+    "note": "El Archivo observa sus coordenadas lunares en {nakshatraName} ({moonSign}). Los antiguos videntes asociaron esta mansión con {deidad}. Esto no es una profecía, simplemente un reflejo de dónde la luz de la Luna tocó el cielo en tu nacimiento."
+  },
+  "nakshatras": {
+    "1": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "2": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elefante",
+      "symbol": "Fish/Drum"
+    },
+    "3": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "4": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "5": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "6": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "7": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "8": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "9": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "10": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "11": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "12": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "13": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "14": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "15": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "16": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "17": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "18": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "19": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "20": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "21": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "22": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "23": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "24": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "25": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "26": {
+      "name": "Revati",
+      "meaning": "The Wealthy",
+      "deity": "Pushan",
+      "keywords": "Journey, Nourishment, Prosperity, Completion",
+      "animal": "Elephant",
+      "symbol": "Fish/Drum"
+    },
+    "27": {
+      "name": "Revathi",
+      "meaning": "Los ricos",
+      "deity": "Pushán",
+      "keywords": "Viaje, alimento, prosperidad, finalización",
+      "animal": "Elefante",
+      "symbol": "Pescado/Tambor"
+    }
+  }
+}

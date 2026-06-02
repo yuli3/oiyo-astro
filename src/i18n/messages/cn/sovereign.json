@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "hero": "主角",
+    "oracle": "神谕",
+    "ontology": "本体论",
+    "vault": "宝库",
+    "growth": "成长"
+  },
+  "labels": {
+    "ascend": "飞升",
+    "celestialChart": "天体图",
+    "archives": "档案馆",
+    "evolution": "进化"
+  },
+  "growth": {
+    "full": "完全成长",
+    "unfinished": "未完成",
+    "fullDesc": "完整的成长路径。",
+    "unfinishedDesc": "正在进行的路径。",
+    "review": "回顾",
+    "discover": "发现"
+  }
+}

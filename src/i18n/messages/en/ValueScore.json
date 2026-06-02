@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Personal values ​​diagnosis",
+    "description": "Find out what is truly important to you through a values ​​diagnosis.",
+    "keywords": "Values, personal values, life priorities, self-discovery, diagnosis"
+  },
+  "hero": {
+    "title": "Personal values ​​diagnosis",
+    "subtitle": "Understand what drives my decisions and actions",
+    "cta": "Find out my values",
+    "badge": "💎 Self-discovery"
+  },
+  "test": {
+    "progress": "progress",
+    "next": "next",
+    "previous": "before",
+    "submit": "Submit",
+    "loading": "Analyzing your values...",
+    "selectOption": "Choose",
+    "insightBullets": [
+      "Check your core values",
+      "I understand priorities.",
+      "Align your life with what's important"
+    ]
+  },
+  "result": {
+    "title": "My values ​​profile",
+    "description": "Find out what's truly important to you"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Preguntas Frecuentes",
+    "description": "Mapeando la arquitectura secreta de tu personalidad...",
+    "keywords": "Diseñando un espejo que refleja tu verdadera esencia..."
+  },
+  "hero": {
+    "title": "Preguntas Frecuentes",
+    "subtitle": "Descifrando los patrones geométricos de tu identidad..."
+  },
+  "benefits": {
+    "intuition": {
+      "title": "Preguntas Frecuentes",
+      "description": "Mapeando la arquitectura secreta de tu personalidad..."
+    },
+    "personality": {
+      "title": "Preguntas Frecuentes",
+      "description": "Mapeando la arquitectura secreta de tu personalidad..."
+    },
+    "guidance": {
+      "title": "Preguntas Frecuentes",
+      "description": "Mapeando la arquitectura secreta de tu personalidad..."
+    },
+    "title": "Preguntas Frecuentes"
+  },
+  "marketing": {
+    "about": {
+      "history": {
+        "title": "Preguntas Frecuentes",
+        "description": "Mapeando la arquitectura secreta de tu personalidad...",
+        "point1": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "point2": "Evolución hacia la aplicación mística",
+        "point3": "Interpretación psicológica moderna"
+      },
+      "elements": {
+        "title": "Preguntas Frecuentes",
+        "description": "Mapeando la arquitectura secreta de tu personalidad...",
+        "fire": "Bastos (Fuego)",
+        "water": "Copas (Agua)",
+        "air": "Espadas (Aire)",
+        "earth": "Oros (Tierra)"
+      },
+      "title": "Preguntas Frecuentes"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "question1": "¿Qué tan preciso es el Tarot de IA?",
+    "answer1": "Mapeando la arquitectura secreta de tu personalidad...",
+    "question2": "¿Puedo leer para otra persona?",
+    "answer2": "Sí, pero se recomienda leer primero para tu propia energía clara.",
+    "question3": "¿Con qué frecuencia debo leer?",
+    "answer3": "Siempre que sientas que necesitas una nueva perspectiva u orientación.",
+    "question4": "¿Son las cartas aleatorias?",
+    "answer4": "Los algoritmos aseguran una distribución justa y diversa en cada lectura."
+  },
+  "accuracy": "Mística",
+  "duration": "Duración: Indefinida"
+}

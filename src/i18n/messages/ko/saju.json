@@ -1,0 +1,293 @@
+{
+  "title": "네 기둥(사주)",
+  "systemName": "운명의 네 기둥",
+  "narrative": "사주명리",
+  "stems": {
+    "gap": {
+      "name": "갭",
+      "meaning": "양우드",
+      "symbol": "큰 숲 나무"
+    },
+    "eul": {
+      "name": "을",
+      "meaning": "인우드",
+      "symbol": "꽃/덩굴"
+    },
+    "byeong": {
+      "name": "병",
+      "meaning": "불",
+      "symbol": "태양"
+    },
+    "jeong": {
+      "name": "정",
+      "meaning": "음불",
+      "symbol": "양초/토치"
+    },
+    "mu": {
+      "name": "~ 안에",
+      "meaning": "지구",
+      "symbol": "높은 산"
+    },
+    "gi": {
+      "name": "미군 병사",
+      "meaning": "음 지구",
+      "symbol": "정원 토양"
+    },
+    "gyeong": {
+      "name": "경",
+      "meaning": "메탈 원",
+      "symbol": "도끼/원금속"
+    },
+    "sin": {
+      "name": "죄",
+      "meaning": "인메탈",
+      "symbol": "보석/단검"
+    },
+    "im": {
+      "name": "나는",
+      "meaning": "양수",
+      "symbol": "바다/호수"
+    },
+    "gye": {
+      "name": "계",
+      "meaning": "음수",
+      "symbol": "비/안개"
+    }
+  },
+  "branches": {
+    "zi": {
+      "name": "낮",
+      "animal": "쥐",
+      "season": "겨울"
+    },
+    "chou": {
+      "name": "슈",
+      "animal": "황소",
+      "season": "늦겨울"
+    },
+    "yin": {
+      "name": "음",
+      "animal": "호랑이",
+      "season": "봄"
+    },
+    "mao": {
+      "name": "마오",
+      "animal": "토끼",
+      "season": "봄"
+    },
+    "chen": {
+      "name": "첸",
+      "animal": "용",
+      "season": "늦은 봄"
+    },
+    "si": {
+      "name": "그리고",
+      "animal": "뱀",
+      "season": "여름"
+    },
+    "wu": {
+      "name": "우",
+      "animal": "말",
+      "season": "여름"
+    },
+    "wei": {
+      "name": "웨이",
+      "animal": "염소",
+      "season": "늦여름"
+    },
+    "shen": {
+      "name": "쉔",
+      "animal": "원숭이",
+      "season": "가을"
+    },
+    "you": {
+      "name": "너",
+      "animal": "수탉",
+      "season": "가을"
+    },
+    "xu": {
+      "name": "쑤",
+      "animal": "개",
+      "season": "늦가을"
+    },
+    "hai": {
+      "name": "둘",
+      "animal": "돼지",
+      "season": "겨울"
+    }
+  },
+  "@/components/ontology/FactionCard": "@/components/ontology/FactionCard",
+  "@/components/ontology/GenericFactionCard": "@/components/ontology/GenericFactionCard",
+  "": "",
+  "labels": {
+    "undiscovered": "발견되지 않은",
+    "meaning": "의미",
+    "element": "요소",
+    "nameVibration": "이름 진동",
+    "westernZodiac": "서부 황도대",
+    "sign": "징후",
+    "observation": "관찰",
+    "easternZodiac": "동부 황도대",
+    "animal": "동물",
+    "dominion": "지배",
+    "bureau": "국"
+  },
+  "returnToHome": "집으로 돌아가기",
+  "contactSupport": "지원팀에 문의",
+  "syncingData": "데이터 동기화 중",
+  "guest": "손님",
+  "calibration": "구경 측정",
+  "changeOrigin": "원산지 변경",
+  "todayInsight": {
+    "title": "오늘의 통찰",
+    "soulOracle": "소울 오라클",
+    "innerResonance": "내면의 공명",
+    "manifestMore": "매니페스트 더보기"
+  },
+  "readingsLink": "독서",
+  "cards": {
+    "vitality": {
+      "title": "활력"
+    },
+    "resonance": {
+      "description": "당신의 공명 패턴.",
+      "subtitle": "공명"
+    },
+    "foundation": {
+      "description": "핵심 기반.",
+      "subtitle": "기반"
+    },
+    "elemental": {
+      "description": "당신의 원소 혼합.",
+      "subtitle": "원소 친화력",
+      "title": "강요"
+    },
+    "onomancy": {
+      "description": "당신의 이름 진동.",
+      "subtitle": "이름 연금술"
+    },
+    "cognition": {
+      "description": "당신의 사고 패턴.",
+      "subtitle": "인식"
+    },
+    "vocation": {
+      "description": "당신의 직업 경로.",
+      "subtitle": "직업"
+    },
+    "destiny": {
+      "description": "당신의 운명 궤적.",
+      "subtitle": "운명"
+    }
+  },
+  "resonanceTitle": "공명 프로필",
+  "sections": {
+    "testArchitecture": {
+      "title": "테스트 아키텍처",
+      "description": "배경 구조 정보."
+    },
+    "emotionalResonance": {
+      "title": "정서적 공명",
+      "description": "감정적으로 연결하는 방법."
+    },
+    "grandArchives": {
+      "title": "그랜드 아카이브",
+      "description": "역사적 지식 기반."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "강요"
+    },
+    "riasec": {
+      "description": "RIASEC 직업 유형"
+    },
+    "saju": {
+      "label": "전에",
+      "description": "4가지 핵심 분석",
+      "polarity": "극성",
+      "element": "요소"
+    },
+    "archiveEntry": "아카이브 항목",
+    "recordVerified": "기록 확인됨",
+    "tuning": {
+      "color": "색상",
+      "number": "숫자",
+      "direction": "방향",
+      "flower": "꽃",
+      "gemstone": "보석",
+      "luckyStar": "럭키스타",
+      "title": "동조",
+      "favorableDays": "유리한 날",
+      "synergy": "시너지"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "지 웨이"
+  },
+  "_": "_",
+  "elements": {
+    "wood": {
+      "name": "목재",
+      "short": "여"
+    },
+    "fire": {
+      "name": "불",
+      "short": "에프"
+    },
+    "earth": {
+      "name": "지구",
+      "short": "이자형"
+    },
+    "metal": {
+      "name": "금속",
+      "short": "중"
+    },
+    "water": {
+      "name": "물",
+      "short": "의"
+    },
+    "viewModes": {
+      "chart": "차트",
+      "balance": "균형",
+      "cycle": "주기"
+    },
+    "chartLabel": "원소 차트",
+    "influence": "영향력 수준",
+    "cycle": {
+      "title": "원소주기",
+      "description": "요소가 상호 작용하는 방식.",
+      "generation": "세대",
+      "destruction": "제어"
+    },
+    "interpretation": {
+      "title": "해석",
+      "dominant": "주요 요소",
+      "balanceAdvice": "잔액 조언",
+      "balanceDescription": "자세한 잔액 프로필"
+    }
+  },
+  "pillars": {
+    "viewModes": {
+      "traditional": "전통적인 관점",
+      "modern": "현대적인 전망"
+    },
+    "traditionalDescription": "기둥에 대한 고전적인 해석.",
+    "meaning": "의미",
+    "represents": "나타냅니다",
+    "composition": "구성",
+    "heavenlyStem": "천상의 줄기",
+    "earthlyBranch": "지상의 가지",
+    "modernMeaning": "현대적 적응"
+  },
+  "result": {
+    "pillars": {
+      "title": "당신의 기둥"
+    }
+  },
+  "accuracy": "높은 정확도",
+  "duration": "지속 시간: 5분",
+  "terms": {
+    "dayMaster": "데이 마스터"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "flowers": {
+    "cranberry": {
+      "name": "祖母绿",
+      "language": "自豪与耀眼的美丽"
+    },
+    "willow": {
+      "name": "祖母绿",
+      "language": "自豪与耀眼的美丽"
+    },
+    "carnation": {
+      "name": "祖母绿",
+      "language": "自豪与耀眼的美丽"
+    }
+  },
+  "stars": {
+    "alphecca": {
+      "name": "祖母绿",
+      "meaning": "幸运与幸福，生命的复活"
+    },
+    "alcyone": {
+      "name": "祖母绿",
+      "meaning": "幸运与幸福，生命的复活"
+    },
+    "vega": {
+      "name": "祖母绿",
+      "meaning": "幸运与幸福，生命的复活"
+    }
+  },
+  "stones": {
+    "garnet": {
+      "name": "祖母绿",
+      "meaning": "幸运与幸福，生命的复活"
+    },
+    "emerald": {
+      "name": "祖母绿",
+      "meaning": "幸运与幸福，生命的复活"
+    }
+  },
+  "Stone": "石头",
+  "Flower": "花",
+  "Star": "星星",
+  "title": "符号",
+  "subtitle": "梦想符号",
+  "searchPlaceholder": "搜索符号...",
+  "labels": {
+    "badge": "徽章",
+    "general": "一般的",
+    "psychological": "心理",
+    "spiritual": "精神",
+    "related": "有关的"
+  }
+}

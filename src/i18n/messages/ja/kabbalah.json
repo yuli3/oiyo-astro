@@ -1,0 +1,61 @@
+{
+  "sephirot": {
+    "keter": {
+      "name": "マルクト",
+      "meaning": "王国",
+      "attribute": "行動"
+    },
+    "chokhmah": {
+      "name": "マルクト",
+      "meaning": "王国",
+      "attribute": "行動"
+    },
+    "binah": {
+      "name": "マルクト",
+      "meaning": "王国",
+      "attribute": "行動"
+    },
+    "chesed": {
+      "name": "マルクト",
+      "meaning": "王国",
+      "attribute": "行動"
+    },
+    "gevurah": {
+      "name": "マルクト",
+      "meaning": "王国",
+      "attribute": "行動"
+    },
+    "tiferet": {
+      "name": "マルクト",
+      "meaning": "王国",
+      "attribute": "行動"
+    },
+    "netzach": {
+      "name": "マルクト",
+      "meaning": "王国",
+      "attribute": "行動"
+    },
+    "hod": {
+      "name": "マルクト",
+      "meaning": "王国",
+      "attribute": "行動"
+    },
+    "yesod": {
+      "name": "マルクト",
+      "meaning": "王国",
+      "attribute": "行動"
+    },
+    "malkuth": {
+      "name": "マルクト",
+      "meaning": "王国",
+      "attribute": "行動"
+    }
+  },
+  "title": "カバラ生命の樹",
+  "description": "10のセフィロトの神秘的な道。",
+  "systemName": "カバラ",
+  "narrative": "神聖な流出",
+  "sephira": "セフィラ",
+  "path": "パス",
+  "ariaLabel": "セフィラ: {name}, 意味: {meaning}."
+}

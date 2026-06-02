@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "L'Ombre Cognitive",
+    "description": "L'erreur logique consistant à se concentrer uniquement sur ceux qui sont sortis victorieux d'un processus de sélection, tout en ignorant le vaste cimetière invisible de ceux qui ont échoué.",
+    "keywords": "Architecture Cognitive, Heuristique Mentale, Psychologie de la Perception, Diagnostics de Sagesse"
+  },
+  "types": {
+    "confirmation_bias": {
+      "name": "Biais de Confirmation",
+      "subtitle": "La Chambre d'Écho du Soi",
+      "description": "Une tendance subconsciente à rechercher, interpréter et favoriser les informations qui s'alignent sur son sanctuaire de croyances établi, tout en excluant les vérités dissonantes.",
+      "examples": [
+        "Justifier sélectivement les données qui reflètent votre vision du monde existante.",
+        "Se confiner dans le cercle de relations unilatérales qui ne font qu'écho à votre propre voix."
+      ],
+      "overcome": [
+        "Inhabiter intentionnellement la perspective de 'l'Autre'.",
+        "Méditer sur la question suivante : 'Quelle vérité pourrait rendre ma conviction actuelle fausse ?'"
+      ]
+    },
+    "authority_bias": {
+      "name": "Biais d'Autorité",
+      "subtitle": "Adoration de la Couronne",
+      "description": "La tendance à accorder un poids et une précision excessifs aux déclarations des autorités perçues, réduisant au silence ses propres intuitions critiques.",
+      "examples": [
+        "Accepter une doctrine spécifique simplement parce qu'elle a été prononcée par un 'sage' de renom.",
+        "Hésiter à remettre en question des erreurs évidentes provenant de ceux qui portent les robes du pouvoir."
+      ],
+      "overcome": [
+        "Observer de près la réalité du message lui-même, détaché du statut du messager.",
+        "Se rappeler que même ceux qui se trouvent sur les autels les plus hauts ne sont pas à l'abri de l'imperfection humaine."
+      ]
+    },
+    "availability_heuristic": {
+      "name": "Heuristique de Disponibilité",
+      "subtitle": "Tyrannie de l'Immédiateté",
+      "description": "L'erreur consistant à juger de la probabilité d'événements en se basant uniquement sur des exemples qui viennent facilement à l'esprit, souvent influencés par des émotions récentes plutôt que par la réalité statistique.",
+      "examples": [
+        "Craindre davantage les chocs rares, comme la foudre, que les risques systémiques silencieux et persistants qui restent invisibles.",
+        "Évaluer l'état du monde à travers le prisme des gros titres sensationnalistes."
+      ],
+      "overcome": [
+        "Faire face à la géométrie froide et absolue des statistiques.",
+        "Ne pas laisser une seule histoire intense occulter la vérité universelle de d'innombrables existences."
+      ]
+    },
+    "anchoring_bias": {
+      "name": "Biais d'Ancrage",
+      "subtitle": "Gravité des Premières Impressions",
+      "description": "La tendance à rester attaché au premier fragment d'information rencontré, subordonnant toutes les révélations ultérieures à cette ancre initiale.",
+      "examples": [
+        "Accepter un prix comme juste simplement parce qu'un prix plus absurde l'a précédé.",
+        "Laisser les estimations initiales jeter une ombre sur tous les calculs futurs."
+      ],
+      "overcome": [
+        "Écarter les premiers chiffres présentés comme de simples illusions de contexte.",
+        "Avant que le monde ne jette son ancre sur vous, établissez votre propre base de référence indépendante."
+      ]
+    },
+    "dunning_kruger": {
+      "name": "Effet Dunning-Kruger",
+      "subtitle": "Illusion d'une Maîtrise Précoce",
+      "description": "Un état de dissonance cognitive où ceux qui ont peu de profondeur dans un domaine possèdent la plus grande confiance, ne parvenant pas à reconnaître le vaste océan de complexité qu'ils n'ont pas encore navigué.",
+      "examples": [
+        "Confondre l'acquisition d'une terminologie de base avec la maîtrise d'une discipline.",
+        "Rejeter une tâche spécifique comme triviale avant même d'avoir manipulé les mécanismes de son exécution."
+      ],
+      "overcome": [
+        "Maintenir un 'esprit de débutant' même en progressant.",
+        "Chercher la critique des maîtres pour cartographier les véritables limites de votre compréhension."
+      ]
+    },
+    "survivorship_bias": {
+      "name": "Biais de Survie",
+      "subtitle": "Le Silence des Disparus",
+      "description": "Un sophisme consistant à se concentrer uniquement sur ceux qui ont réussi un processus de sélection, tout en ignorant les innombrables échecs reposant dans des tombes invisibles.",
+      "examples": [
+        "Étudier uniquement les empreintes des géants tout en oubliant les nombreux disparus sur le même chemin.",
+        "Attribuer un résultat uniquement à la volonté, alors qu'il n'était que le résultat de fluctuations parmi les masses."
+      ],
+      "overcome": [
+        "Chercher les histoires de ceux qui n'ont pas réussi pour comprendre le coût réel du chemin.",
+        "Demander : 'Quelles données manquent dans ce récit de victoire ?'"
+      ]
+    }
+  },
+  "questions": {
+    "q1": "En plongeant profondément dans un nouveau royaume de connaissances, où s'attarde votre regard ?",
+    "q2": "Si un maître reconnu d'un domaine spécifique livre une déclaration, vous...",
+    "q3": "Dans votre propre estimation, où se situe votre compétence par rapport à l'ensemble du collectif ?",
+    "q4": "Quel impact le premier chiffre mentionné dans un échange de valeur a-t-il sur votre âme ?",
+    "q5": "En méditant sur ceux qui mènent des vies brillantes et réussies, que remarquez-vous ?",
+    "q6": "Lorsqu'une nouvelle révélation arrive et ébranle vos convictions existantes, vous...",
+    "q7": "Lequel des concepts suivants déclenche une vigilance plus profonde et plus primaire en vous ?",
+    "q8": "Pour ancrer un fait dans le fondement de votre réalité, à quoi faites-vous confiance ?",
+    "q9": "En considérant la sécurité d'un voyage, qu'est-ce qui vous émeut ?",
+    "q10": "Face à une 'remise sans précédent', quelles pensées votre observateur intérieur abrite-t-il ?",
+    "q11": "Après avoir terminé un livre sur un sujet complexe, quelle émotion ressentez-vous ?",
+    "q12": "Lorsque vous rencontrez un cas rare d'accomplissement de grands exploits sans suivre la tradition, vous...",
+    "q13": "Lorsqu'un marchand ambulant décrit un compagnon comme 'intelligent mais froid', comment le percevez-vous ?",
+    "q14": "Lorsque votre souvenir d'un événement passé diffère des archives ou du témoignage d'autres personnes...",
+    "q15": "Lors de la sélection entre deux artefacts identiques où l'un porte un sceau prestigieux et l'autre est simple..."
+  },
+  "options": {
+    "q1": {
+      "a": "Des confirmations qui justifient votre chemin actuel",
+      "b": "Une symphonie de perspectives diverses et conflictuelles",
+      "c": "Des résonances des nouvelles les plus récentes"
+    },
+    "q2": {
+      "a": "L'accepter comme une vérité du monde",
+      "b": "Disséquer soigneusement les motifs sous-jacents",
+      "c": "Réfléchir à des déclarations similaires rencontrées dans le passé"
+    },
+    "q3": {
+      "a": "Transcendant (bien au-dessus de la médiane)",
+      "b": "En équilibre avec l'ensemble",
+      "c": "Encore au stade d'un chercheur novice"
+    },
+    "q4": {
+      "a": "Il devient une ancre lourde qui lie toutes les offres ultérieures",
+      "b": "Le considérer simplement comme un point de départ pour le jeu",
+      "c": "Le laisser passer sans être affecté du tout"
+    },
+    "q5": {
+      "a": "Leur volonté unique et leur flamme intérieure",
+      "b": "L'alignement cosmique et la chance qui les ont favorisés",
+      "c": "Des victoires visualisées (excluant les échecs invisibles)"
+    },
+    "q6": {
+      "a": "Le rejeter comme un signe défectueux ou trompeur",
+      "b": "Le considérer comme un catalyseur de changement et méditer profondément",
+      "c": "Ressentir la douleur découlant d'une dissonance intérieure"
+    },
+    "q7": {
+      "a": "Des catastrophes rares et soudaines (centrées sur l'actualité)",
+      "b": "Une vitalité qui s'érode lentement et irrésistiblement (centrée sur les statistiques)",
+      "c": "Peur primale de l'abîme ancien"
+    },
+    "q8": {
+      "a": "Un influenceur avec un statut contemporain élevé",
+      "b": "Le poids collectif du consensus scientifique",
+      "c": "La vibration intime de l'expérience d'un ami"
+    },
+    "q9": {
+      "a": "Des souvenirs vifs de tragédies récentes",
+      "b": "La vérité silencieuse des probabilités historiques",
+      "c": "Votre propre intuition concernant le chemin"
+    },
+    "q10": {
+      "a": "C'est un cadeau rare présenté par ce moment",
+      "b": "Quelle est la valeur réelle cachée derrière cette présentation ?",
+      "c": "Je dois agir avant que la fenêtre d'opportunité ne se ferme"
+    },
+    "q11": {
+      "a": "Sento d'avoir saisi le cœur du mystère",
+      "b": "Sentir que j'ai à peine effleuré la surface de la vérité infinie",
+      "c": "Le secret est beaucoup plus simple que ce que les autres prétendent"
+    },
+    "q12": {
+      "a": "Penser que les vieilles traditions ne sont plus nécessaires",
+      "b": "Ce n'est qu'une seule étoile dans le ciel sombre d'innombrables échecs",
+      "c": "La grandeur ne s'apprend pas, elle naît"
+    },
+    "q13": {
+      "a": "Se concentrer sur l'attribut 'froid' et rester sur ses gardes",
+      "b": "Pondérer à la fois 'intelligent' et 'froid' comme des parties égales de leur essence",
+      "c": "Chercher une résonance supplémentaire avant de porter un jugement"
+    },
+    "q14": {
+      "a": "Maintenir que votre vision intérieure est la vérité absolue",
+      "b": "Accepter que les fils de la mémoire puissent s'effilocher et se déplacer avec le temps",
+      "c": "Faire taire la dissonance et aller de l'avant"
+    },
+    "q15": {
+      "a": "Graviter vers celui qui porte le sceau prestigieux",
+      "b": "Examiner les mécanismes internes sans tenir compte du sceau extérieur",
+      "c": "Choisir le chemin de la moindre résistance"
+    }
+  },
+  "recommendations": {
+    "confirmation-bias": "Nourrissez activement « l'avocat du diable » dans votre esprit.",
+    "authority-bias": "Rappelez-vous que la robe ne fait pas le sage ; questionnez la source.",
+    "availability-heuristic": "Regardez au-delà de l'image vive vers la vérité silencieuse des données.",
+    "anchoring-bias": "Définissez votre propre centre avant que le monde ne tente de le déplacer.",
+    "dunning-kruger": "Plus vous en savez, plus vous réalisez l'immensité de l'inconnu.",
+    "survivorship_bias": "Errez dans le cimetière des échecs pour voir la véritable carte du monde."
+  },
+  "title": "L'Ombre Cognitive",
+  "badge": "Architecture Psychologique",
+  "intro": "Dévoilez les raccourcis mentaux et les angles morts qui gouvernent votre jugement. Découvrez les schémas au sein de votre perception.",
+  "profile": "Mon Horizon Cognitif",
+  "remedy": "Le Sentier vers la Clarté"
+}

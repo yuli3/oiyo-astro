@@ -1,0 +1,26 @@
+{
+  "mandalart": {
+    "meta": {
+      "title": "Mandalart Planner",
+      "description": "Structure your core goals into 64 actionable steps.",
+      "keywords": "mandalart, goal setting, planner, productivity, Ohtani method"
+    },
+    "placeholder": {
+      "center": "中核的な目標",
+      "sub": "サブ目標",
+      "action": "アクションアイテム"
+    },
+    "actions": {
+      "save": "Save Plan",
+      "clear": "すべてクリア",
+      "print": "画像をダウンロード",
+      "tips": "使用方法"
+    },
+    "tips": {
+      "title": "Mandalart Planner",
+      "content": "Start from the center with your main goal. Surround it with 8 sub-goals, then expand each sub-goal into 8 specific action items."
+    },
+    "title": "マンダラートプランナー",
+    "description": "Structure your core goals into 64 actionable steps."
+  }
+}

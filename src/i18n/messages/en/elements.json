@@ -1,0 +1,70 @@
+{
+  "title": "Elemental Cycles",
+  "influence": "Elemental Influence",
+  "chartLabel": "Elemental Composition",
+  "interpretation": {
+    "balanceAdvice": "Advice for Balance",
+    "balanceDescription": "How to balance your elements.",
+    "dominant": "Dominant Element",
+    "title": "Interpretation"
+  },
+  "viewModes": {
+    "chart": "Element Chart",
+    "balance": "Element Balance",
+    "cycle": "Element Cycle"
+  },
+  "water": {
+    "name": "Water (水)",
+    "description": "Wise, flexible, and possesses deep intuitive insight.",
+    "keywords": ["Wisdom", "Flexibility", "Insight", "Vitality"],
+    "strengths": ["Insight", "Adaptability", "Learning"],
+    "careers": ["Researcher", "Philosopher", "Trade", "Psychology"],
+    "short": "Water"
+  },
+  "wood": {
+    "name": "Wood (木)",
+    "description": "Growth-oriented, creative, and possesses flexible thinking.",
+    "keywords": ["Growth", "Creation", "Drive", "Benevolence"],
+    "strengths": ["Drive", "Planning", "Compassion"],
+    "careers": ["Planner", "Educator", "Art", "Design"],
+    "short": "Wood"
+  },
+  "fire": {
+    "name": "Fire (火)",
+    "description": "Passionate, bright, and possesses a strong power of self-expression.",
+    "keywords": ["Passion", "Expression", "Energy", "Radiance"],
+    "strengths": ["Sociability", "Leadership", "Creativity"],
+    "careers": ["Entertainer", "Sales", "Design", "IT"],
+    "short": "Fire"
+  },
+  "earth": {
+    "name": "Earth (土)",
+    "description": "Stable, inclusive, and prioritizes trust and reliability.",
+    "keywords": ["Inclusion", "Mediation", "Trust", "Stability"],
+    "strengths": ["Reliability", "Persistence", "Trustworthiness"],
+    "careers": ["Real Estate", "Agriculture", "Architecture", "Politics"],
+    "short": "Earth"
+  },
+  "metal": {
+    "name": "Metal (金)",
+    "description": "Decisive, principle-oriented, and possesses delicate senses.",
+    "keywords": ["Principle", "Justice", "Decision", "Precision"],
+    "strengths": ["Decisiveness", "Accuracy", "Integrity"],
+    "careers": ["Military", "Legal", "Finance", "Engineering"],
+    "short": "Metal"
+  },
+  "cycle": {
+    "description": "The Five Elements interact in cycles of generation and destruction.",
+    "destruction": "Destructive Cycle",
+    "generation": "Productive Cycle",
+    "title": "Elemental Cycles"
+  },
+  "strengths": "Strengths",
+  "careers": "Career Guidance",
+  "subtitle": "Understanding the Five Elements",
+  "status": {
+    "strong": "Strong",
+    "balanced": "Balanced",
+    "weak": "Weak"
+  }
+}

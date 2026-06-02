@@ -1,0 +1,88 @@
+{
+  "lifePath": {
+    "title": "Archétype de synergie",
+    "description": "Votre espace personnel pour la réflexion et la méditation.",
+    "phases": {
+      "foundation": {
+        "period": "Sagesse (40+)",
+        "title": "Archétype de synergie",
+        "description": "Votre espace personnel pour la réflexion et la méditation."
+      },
+      "prime": {
+        "period": "Sagesse (40+)",
+        "title": "Archétype de synergie",
+        "description": "Votre espace personnel pour la réflexion et la méditation."
+      },
+      "wisdom": {
+        "period": "Sagesse (40+)",
+        "title": "Archétype de synergie",
+        "description": "Votre espace personnel pour la réflexion et la méditation."
+      }
+    }
+  },
+  "destiny": {
+    "title": "Archétype de synergie",
+    "yearly": "Flux annuel",
+    "monthly": "Rythme mensuel",
+    "daily": "Énergie quotidienne",
+    "themes": {
+      "1": "Nouveaux départs et indépendance",
+      "2": "Coopération et patience",
+      "3": "Expression créative et joie",
+      "4": "Ordre et construction de fondations",
+      "5": "Changement et liberté",
+      "6": "Responsabilité et foyer",
+      "7": "Introspection et sagesse",
+      "8": "Pouvoir et réussite",
+      "9": "Achèvement et lâcher-prise"
+    },
+    "inflectionPoint": "Énergie d'inflexion maximale",
+    "chronos": "Chronologie Chronos"
+  },
+  "radar": {
+    "title": "Archétype de synergie",
+    "dimensions": {
+      "mind": "Mental",
+      "destiny": "Destin",
+      "time": "Temps",
+      "drive": "Élan",
+      "vitality": "Vitalité"
+    },
+    "description": "Votre espace personnel pour la réflexion et la méditation."
+  },
+  "sanctum": {
+    "title": "Archétype de synergie",
+    "description": "Votre espace personnel pour la réflexion et la méditation.",
+    "enter": "Entrer dans le Sanctum"
+  },
+  "quantum": {
+    "title": "Archétype de synergie",
+    "subtitle": "Équilibre hormonal et suggestions de mode de vie",
+    "simulate": "Lancer la simulation",
+    "results": "Résultats de la simulation",
+    "reset": "Réinitialiser au profil d'origine",
+    "labels": {
+      "mbti": "MBTI",
+      "element": "Élément",
+      "personalYear": "Année personnelle",
+      "lifeType": "Type de vie (HD)"
+    },
+    "simulationMode": "Mode simulation actif : tous les résultats sont basés sur des données virtuelles."
+  },
+  "biological": {
+    "title": "Archétype de synergie",
+    "subtitle": "Équilibre hormonal et suggestions de mode de vie",
+    "circadian": "Rythme circadien",
+    "energy": "Niveaux d'énergie",
+    "advice": "Action recommandée",
+    "mainFunction": "Fonction principale",
+    "lifestyleAdvice": "Conseils de mode de vie"
+  },
+  "synergy": {
+    "title": "Archétype de synergie",
+    "compatibility": "Compatibilité",
+    "traits": "Traits clés",
+    "level": "Niveau de synergie",
+    "unlocked": "Archétype de synthèse déverrouillé"
+  }
+}

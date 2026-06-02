@@ -1,0 +1,41 @@
+{
+  "filters": {
+    "all": "All",
+    "testCompletion": "Tests",
+    "social": "Social",
+    "streak": "Streaks"
+  },
+  "notifications": {
+    "empty": "No new notifications."
+  },
+  "page": {
+    "title": "My Achievements",
+    "subtitle": "Track your progress and unlocked milestones."
+  },
+  "badgesUnlocked": "Badges Unlocked",
+  "overallProgress": "Overall Progress",
+  "viewAll": "View All",
+  "emptyCategory": "No achievements in this category yet.",
+  "labels": {
+    "level": "Level",
+    "points": "Points"
+  },
+  "title": "Achievements",
+  "unlocked": "Unlocked",
+  "firstTest": {
+    "name": "First Test",
+    "description": "Completed first test."
+  },
+  "fiveTests": {
+    "name": "High Five",
+    "description": "Completed 5 tests."
+  },
+  "tenTests": {
+    "name": "Perfect 10",
+    "description": "Completed 10 tests."
+  },
+  "explorer": {
+    "name": "Explorer",
+    "description": "Explored 3 categories."
+  }
+}

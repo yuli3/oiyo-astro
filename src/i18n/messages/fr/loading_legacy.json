@@ -1,0 +1,89 @@
+{
+  "messages": {
+    "general": "Préparez votre histoire...",
+    "stars": "Synchroniser les fils de votre destin...",
+    "rainbow": "Arroser l'arc-en-ciel...",
+    "flowers": "Décrypter les motifs géométriques de votre identité...",
+    "fox": "Cartographier l'architecture secrète de votre personnalité...",
+    "stardust": "Synchroniser les fils de votre destin...",
+    "oracle": "Recevoir l'oracle...",
+    "cards": "Analyser les échos profonds de vos choix…",
+    "moon": "Polir la lune...",
+    "dreams": "Tisser des rêves...",
+    "magic": "Faire un peu de magie...",
+    "whale": "Analyser les échos profonds de vos choix…",
+    "trees": "Des arbres millénaires en réunion...",
+    "roots": "Envoi de nouvelles au monde souterrain des racines...",
+    "ontology": "Lire le dessin de votre âme...",
+    "resonance": "Harmoniser vos fréquences spirituelles...",
+    "fortune": "Regarder dans la boule de cristal...",
+    "finance": "Calculer votre prospérité...",
+    "relationship": "Synchroniser les fréquences de deux âmes...",
+    "cat_dog": "Analyser les échos profonds de vos choix…",
+    "milky_way": "S'inspirer d'au-delà de la Voie Lactée...",
+    "moonlight": "Décrypter les motifs géométriques de votre identité...",
+    "wave_secret": "Décrypter les motifs géométriques de votre identité...",
+    "saju": "Aligner le calendrier du destin..."
+  },
+  "default": "Synchroniser les fils de votre destin...",
+  "rootLoading": {
+    "subtitle": "Are you lost?"
+  },
+  "localeLoading": {
+    "subtitle": "Are you lost?",
+    "title": "Test",
+    "description": "Discover OIYO tools and revelations."
+  },
+  "globalError": {
+    "tryAgain": "Essayer à nouveau",
+    "goHome": "Home",
+    "helpText": "Si le problème persiste, contactez le support."
+  },
+  "notFound": {
+    "title": "Test",
+    "subtitle": "Êtes-vous perdu?",
+    "description": "Discover OIYO tools and revelations.",
+    "goHome": "Maison",
+    "goBack": "Retourner",
+    "suggestionsTitle": "Peut-être recherchez-vous une de ces pages ?",
+    "popularTestsTitle": "Tests populaires",
+    "egentetoTest": "j'ai besoin d'un test",
+    "mbtiAlternative": "Alternative MBTI",
+    "allTests": "Afficher tous les tests",
+    "exploreTitle": "Explorez les découvertes populaires",
+    "categoryCore": "Personnalité fondamentale",
+    "categoryLifestyle": "Mode de vie",
+    "color": "Couleur",
+    "travel": "Voyage",
+    "relationship": {
+      "communicationStyle": "Style de communication"
+    },
+    "test": {
+      "progress": "Progrès",
+      "next": "Suivante",
+      "previous": "Précédente",
+      "submit": "Soumettre",
+      "loading": "Chargement",
+      "selectOption": "Sélectionner",
+      "insightBullets": ["Aperçu"]
+    },
+    "result": {
+      "title": "Test",
+      "description": "Discover OIYO tools and revelations."
+    },
+    "meta": {
+      "title": "Test",
+      "description": "Découvrez les outils et révélations OIYO.",
+      "keywords": "test, révélations, OIYO"
+    }
+  },
+  "poetic": [
+    "En écoutant les murmures des étoiles...",
+    "Lire votre destin...",
+    "Rassembler l'énergie cosmique...",
+    "Veuillez patienter, une histoire mystérieuse se déroule...",
+    "Écrire les histoires racontées par la lune dans la nuit profonde...",
+    "Interpréter les signaux envoyés par votre constellation...",
+    "Traverser le fleuve du temps pour trouver votre réponse..."
+  ]
+}

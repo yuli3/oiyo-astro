@@ -1,0 +1,42 @@
+{
+  "title": "자기사주분석",
+  "description": "점성술 기둥을 찾아보세요.",
+  "inputs": {
+    "birthDate": "생년월일",
+    "birthTime": "출생 시간",
+    "calculate": "계산하기"
+  },
+  "result": {
+    "title": "내 주문 분석",
+    "description": "운세로 보는 인생 통찰",
+    "time": "시간 기둥",
+    "day": "데이 필러",
+    "month": "월 기둥",
+    "year": "연도 기둥",
+    "fiveElements": "5요소 분석"
+  },
+  "meta": {
+    "title": "운세 분석",
+    "description": "전통점 분석을 통해 당신의 운명을 알아보세요",
+    "keywords": "운세, 운세, 운세, 운세분석, 한국점성술"
+  },
+  "hero": {
+    "title": "운세 분석",
+    "subtitle": "고대의 지혜로 내 인생의 길을 이해하십시오",
+    "cta": "나의 운명을 알아보세요",
+    "badge": "🔮 전통적 지혜"
+  },
+  "test": {
+    "insightBullets": [
+      "인생의 목적을 이해하라",
+      "당신의 강점을 발견하세요",
+      "당신의 운명에 대해 알아보세요"
+    ],
+    "progress": "진전",
+    "next": "다음",
+    "previous": "~ 전에",
+    "submit": "제출하기",
+    "loading": "운명을 분석하는 중...",
+    "selectOption": "선택하기"
+  }
+}

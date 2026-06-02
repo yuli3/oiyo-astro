@@ -1,0 +1,145 @@
+{
+  "tax": {
+    "gift": {
+      "meta": {
+        "title": "Flux d’abondance : taxe sur les donations",
+        "description": "Calculez le transfert d’abondance vers votre lignée.",
+        "keywords": "droits de donation, calculateur d'impôt, succession"
+      },
+      "hero": {
+        "subtitle": "Protection de la lignée sacrée",
+        "badge": "Finance"
+      },
+      "rel": {
+        "child_adult": "Âme adulte (enfant)",
+        "child_minor": "Âme mineure (enfant)",
+        "spouse": "Double Flamme (Conjoint)",
+        "parent": "Âme ancestrale (parent)",
+        "other_relative": "Parent apparenté",
+        "other": "Autre connexion",
+        "selectPlaceholder": "Sélectionner une relation"
+      },
+      "result": {
+        "title": "Rapport d'analyse de l'abondance",
+        "deduction": "Déduction sacrée",
+        "taxBase": "Essence imposable",
+        "rate": "Taux vibratoire",
+        "selfReport": "Manifestation volontaire",
+        "description": "Explorez les couches de votre résonance financière."
+      },
+      "tip": {
+        "title": "Aperçus de Sage",
+        "desc": "Les déductions fiscales sur les donations sont réinitialisées chaque cycle décennal. Planifiez judicieusement vos transferts de lignée pour minimiser les frictions sociétales."
+      },
+      "test": {
+        "insightBullets": [
+          "Résonance de richesse",
+          "Protection de la lignée",
+          "Efficacité temporelle"
+        ],
+        "progress": "Progrès de l’alignement",
+        "submit": "Soumettre l'intention",
+        "loading": "Consultation des lois fiscales célestes...",
+        "selectOption": "Sélectionnez le chemin",
+        "next": "Avant",
+        "previous": "Retracer"
+      },
+      "unit": {
+        "currency": "Unités",
+        "tenYear": "Cycle décennal",
+        "aggregation": "Cible globale"
+      },
+      "resultInfo": {
+        "selfReport": "* Comprend 3% de réduction pour manifestation volontaire.",
+        "consult": "* Consultez un sage financier pour un alignement précis."
+      },
+      "title": "Réflexion financière",
+      "description": "Un miroir raffiné de votre réalité financière.",
+      "subtitle": "Le guide du navigateur sur la richesse",
+      "disclaimer": "Projection uniquement – ​​pas de décret financier.",
+      "relationship": "Relation",
+      "giftAmount": "Montant de l'offrande sacrée",
+      "pastGiftAmount": "Montant du transfert historique",
+      "calculateBtn": "Calculer le débit",
+      "placeholder": "Entrez le montant",
+      "labels": {
+        "inputParameters": "Entrée des coordonnées"
+      }
+    },
+    "vat": {
+      "modes": {
+        "total": "Flux global",
+        "supply": "Flux d'essence primaire"
+      },
+      "labels": {
+        "totalAmount": "Résonance totale (TVA incluse)",
+        "supplyAmount": "Essence nette (hors TVA)"
+      },
+      "results": {
+        "supplyPrice": "Essence primaire",
+        "vat": "Droits sur les fragments (TVA)",
+        "total": "Résonance totale"
+      },
+      "tip": {
+        "content": "En règle générale, le droit aux fragments est de 10 % de l'essence. Divisez le flux global par 1,1 pour trouver l’essence primaire.",
+        "title": "La sagesse en matière de TVA"
+      },
+      "meta": {
+        "subtitle": "Efficacité pour les architectes",
+        "disclaimer": "Avis de non-responsabilité du système",
+        "title": "Synthétiseur TVA",
+        "description": "Convertissez en toute transparence entre l’essence nette et la résonance complète.",
+        "keywords": "TVA, taxe, facture, entreprise"
+      },
+      "test": {
+        "insightBullets": ["En attente de synthèse..."],
+        "progress": "Progrès de la synthèse",
+        "next": "Avant",
+        "previous": "Retracer",
+        "submit": "Finaliser",
+        "loading": "Synthétiser...",
+        "selectOption": "Choisir un calque"
+      },
+      "result": {
+        "title": "Rapport de synthèse",
+        "description": "Confirmez les niveaux de résonance de votre entreprise."
+      },
+      "subtitle": "Calculez avec précision les flux primaires et fragmentaires",
+      "currency": "Unités",
+      "disclaimer": "Cet outil fournit des simulations structurelles ; les droits fiscaux réels peuvent varier.",
+      "title": "Réflexion temporelle",
+      "description": "Informations et taux sur la taxe sur la valeur ajoutée"
+    }
+  },
+  "salaryCalculator": {
+    "title": "Convertisseur de vitalité (salaire)",
+    "description": "Visualisez votre conversion d’énergie matérielle dans le réseau sociétal.",
+    "labels": {
+      "inputParameters": "Coordonnées d'entrée",
+      "salaryInput": "Énergie brute annuelle",
+      "salaryPlaceholder": "Entrez le montant (ex. 60 000)",
+      "dependents": "Âmes satellites (Personnes à charge)",
+      "children": "Étincelles futures (Enfants)",
+      "calculate": "Exécuter le Calcul",
+      "calculatePrompt": "Définissez vos coordonnées pour voir la ventilation",
+      "disclaimerText": "Ce calcul est une projection et peut différer des ajustements réels."
+    },
+    "result": {
+      "title": "Distribution d'énergie",
+      "grossPay": "Énergie Brute",
+      "netPay": "Vitalité Manifestée (Net)",
+      "nationalPension": "Fonds Ancestral (Pension)",
+      "healthInsurance": "Maintenance du Sanctuaire (Santé)",
+      "incomeTax": "Contribution Souveraine (Impôt)",
+      "harvestDescription": "Niveau d'énergie de base",
+      "pensionRate": "Ancre de sécurité à long terme",
+      "healthRate": "Frais de préservation de la vitalité",
+      "deductionDesc": "Engagement envers la grille sociale",
+      "rateDesc": "Taux vibratoire actuel"
+    },
+    "advisor": {
+      "tip": "Conseil de Sage",
+      "content": "Même dans la grille des nombres, votre résonance détermine la valeur de chaque éclat."
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Hellenistic Astrology",
+  "description": "Ancient techniques from the Greek and Roman world.",
+  "principles": {
+    "sect": {
+      "term": "Sect",
+      "description": "The distinction between Day (Diurnal) and Night (Nocturnal) charts, determining which planets are most effective."
+    },
+    "essential_dignity": {
+      "term": "Essential Dignity",
+      "description": "The strength of a planet based on its zodiacal position (Domicile, Exaltation, Triplicity, Term, Face)."
+    },
+    "lot_of_fortune": {
+      "term": "Lot of Fortune",
+      "description": "An Arabic Part calculated from the Ascendant, Sun, and Moon, representing physical prosperity and health."
+    }
+  },
+  "resonance": {
+    "note": "The Archive observes a {sect} Chart. Your fate is anchored by {primary} (Primary) and {secondary} (Secondary), with {participating} offering support."
+  },
+  "sect": {
+    "Day": "Day",
+    "Night": "Night"
+  }
+}

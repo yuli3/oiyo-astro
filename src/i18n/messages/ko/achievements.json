@@ -1,0 +1,41 @@
+{
+  "filters": {
+    "all": "모두",
+    "testCompletion": "테스트",
+    "social": "사회의",
+    "streak": "줄무늬"
+  },
+  "notifications": {
+    "empty": "새로운 알림이 없습니다."
+  },
+  "page": {
+    "title": "내 성과",
+    "subtitle": "진행 상황과 잠금 해제된 마일스톤을 추적하세요."
+  },
+  "badgesUnlocked": "배지 잠금 해제",
+  "overallProgress": "전반적인 진행상황",
+  "viewAll": "모두 보기",
+  "emptyCategory": "이 카테고리에는 아직 업적이 없습니다.",
+  "labels": {
+    "level": "수준",
+    "points": "전철기"
+  },
+  "title": "업적",
+  "unlocked": "잠금 해제됨",
+  "firstTest": {
+    "name": "첫 번째 테스트",
+    "description": "1차 테스트를 완료했습니다."
+  },
+  "fiveTests": {
+    "name": "하이파이브",
+    "description": "5개의 테스트를 완료했습니다."
+  },
+  "tenTests": {
+    "name": "퍼펙트 10",
+    "description": "10개의 테스트를 완료했습니다."
+  },
+  "explorer": {
+    "name": "탐침",
+    "description": "3가지 카테고리를 탐색했습니다."
+  }
+}

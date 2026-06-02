@@ -1,0 +1,8 @@
+{
+  "title": "宇宙のエネルギー指標",
+  "orbitalVelocity": "軌道速度",
+  "galacticVelocity": "銀河速度",
+  "axialTilt": "自転軸の傾き",
+  "distanceFromSun": "太陽からの距離",
+  "locationTooltip": "現在地に基づく"
+}

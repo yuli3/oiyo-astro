@@ -1,0 +1,96 @@
+{
+  "scenario": {
+    "meta": {
+      "hero": {
+        "subtitle": "나에 대한 새로운 발견",
+        "feature1": "주요 통찰력",
+        "feature2": "주요 통찰력",
+        "feature3": "주요 통찰력"
+      },
+      "features": {
+        "feature1Title": "세부 기능",
+        "feature1Description": "내 성격과 완벽하게 조화를 이루는 요소입니다.",
+        "feature2Title": "세부 기능",
+        "feature2Description": "내 성격과 완벽하게 조화를 이루는 요소입니다.",
+        "feature3Title": "세부 기능",
+        "feature3Description": "내 성격과 완벽하게 조화를 이루는 요소입니다."
+      },
+      "scenarios": {
+        "zombie": "좀비 대재앙",
+        "island": "무인도",
+        "timeTravel": "시간 여행",
+        "superpowers": "초강대국",
+        "lottery": "로또에 당첨되다",
+        "aliens": "외계인과의 만남",
+        "fantasy": "공상",
+        "space": "우주 정거장"
+      },
+      "cta": {
+        "subtitle": "세부",
+        "button": "시작하기"
+      },
+      "keywords": "MBTI 테스트, 성격테스트, 시나리오 테스트, 재미있는MBTI, 익스트림 시나리오, 성격퀴즈, 16가지 성격, 무료 성격테스트",
+      "title": "시나리오 테스트",
+      "description": "시나리오 테스트를 받아보세요."
+    },
+    "scenarios": {
+      "zombie": "좀비 대재앙",
+      "island": "무인도",
+      "timeTravel": "시간 여행",
+      "superpowers": "초강대국",
+      "lottery": "로또에 당첨되다",
+      "aliens": "외계인과의 만남",
+      "fantasy": "공상",
+      "space": "우주 정거장",
+      "title": "계기반"
+    },
+    "hero": {
+      "subtitle": "극한 상황을 통해 당신의 진짜 성격을 알아보세요! 좀비, 외계인, 복권 당첨은 어떻게 반응할까요?",
+      "feature1": "8가지 극단적인 시나리오",
+      "feature2": "5분 정도 소요",
+      "feature3": "과학적 MBTI",
+      "title": "계기반"
+    },
+    "cta": {
+      "subtitle": "지금 테스트를 통해 극한 상황에서 어떻게 반응하는지 확인해 보세요!",
+      "button": "테스트 시작",
+      "title": "계기반"
+    },
+    "features": {
+      "feature1Title": "흥미로운 시나리오",
+      "feature1Description": "더 이상 지루한 질문은 그만! 좀비 대재앙, 시간 여행, 외계인과의 만남과 같은 흥미진진한 시나리오로 답해보세요.",
+      "feature2Title": "정확한 분석",
+      "feature2Description": "MBTI 공식 프레임워크를 기반으로 E-I, S-N, T-F, J-P의 4가지 차원을 분석하여 16가지 성격 유형을 도출합니다.",
+      "feature3Title": "자세한 결과",
+      "feature3Description": "강점, 약점, 진로 제안, 궁합, 동종 연예인 등 종합적인 인사이트를 받아보세요.",
+      "title": "계기반"
+    },
+    "faq": {
+      "title": "계기반",
+      "question1": "질문",
+      "answer1": "공고",
+      "question2": "질문",
+      "answer2": "공고",
+      "question3": "질문",
+      "answer3": "공고",
+      "question4": "질문",
+      "answer4": "공고"
+    },
+    "test": {
+      "insightBullets": ["당신의 진정한 자아의 별자리를 지도로 그려보세요."],
+      "progress": "진전",
+      "submit": "제출하기",
+      "loading": "로드 중",
+      "selectOption": "선택하기",
+      "next": "다음",
+      "previous": "~ 전에"
+    },
+    "result": {
+      "title": "상세 분석 보고서",
+      "description": "우리는 이 서비스가 귀하에게 제공하는 구체적인 가치와 통찰력을 제공할 준비가 되어 있습니다."
+    },
+    "title": "계기반",
+    "description": "미래 성장을 위한 핵심 조언",
+    "keywords": "성격진단, 마음비타민, 나를 찾는 여행, OIYO"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "identify": {
+    "description": "确定你的财富。"
+  },
+  "title": "今日神谕",
+  "subtitle": "寰宇校准",
+  "loading": "星象分析中...",
+  "source": {
+    "PAYMENT": "商业",
+    "MAYAN": "玛雅历",
+    "SAJU": "四柱命理",
+    "MBTI": "心理学(MBTI)",
+    "TCI": "气质测评",
+    "BIG5": "五大性格"
+  },
+  "category": {
+    "EARTH": "大地脉动",
+    "CELESTIAL": "苍穹之流",
+    "SPIRIT": "精神圣洗",
+    "HUMAN": "人间世相"
+  },
+  "modal": {
+    "noteTitle": "构建者注",
+    "noteDesc": "此洞察源自运行于 Synapse 协议上的 {source} 引擎。"
+  }
+}

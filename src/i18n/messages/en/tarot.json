@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "Tarot Reading",
+    "description": "Gain life insights through AI Tarot readings.",
+    "keywords": "tarot, tarot reading, daily tarot, fortune"
+  },
+  "hero": {
+    "title": "Tarot Reading",
+    "subtitle": "Discover what today's cards have in store for you."
+  },
+  "benefits": {
+    "intuition": {
+      "title": "Intuitive Insight",
+      "description": "Find clear answers in complex situations by stimulating the subconscious."
+    },
+    "personality": {
+      "title": "Self-Discovery",
+      "description": "Understand your strengths, weaknesses, and hidden potential."
+    },
+    "guidance": {
+      "title": "Future Guidance",
+      "description": "Receive direction for your next steps and important decisions."
+    },
+    "title": "Why Tarot?"
+  },
+  "marketing": {
+    "about": {
+      "history": {
+        "title": "Ancient Wisdom",
+        "description": "Tarot has been used for centuries as a tool for divination and self-reflection.",
+        "point1": "Originated in 15th-century Europe",
+        "point2": "Evolution toward mystical application",
+        "point3": "Modern psychological interpretation"
+      },
+      "elements": {
+        "title": "Connection with the Four Elements",
+        "description": "Each Tarot suit corresponds to one of the four ancient elements.",
+        "fire": "Wands (Fire)",
+        "water": "Cups (Water)",
+        "air": "Swords (Air)",
+        "earth": "Pentacles (Earth)"
+      },
+      "title": "About Tarot"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "question1": "How accurate is AI Tarot?",
+    "answer1": "It provides modern interpretations based on traditional meanings and patterns.",
+    "question2": "Can I read it for someone else?",
+    "answer2": "It is possible, but reading for your own clear energy first is recommended.",
+    "question3": "How often should I have a reading?",
+    "answer3": "Check whenever you feel the need for a new perspective or guidance.",
+    "question4": "Are the cards random?",
+    "answer4": "Algorithms ensure a fair and diverse spread every time."
+  },
+  "accuracy": "Mystic",
+  "duration": "Duration: Indefinite"
+}

@@ -1,0 +1,13 @@
+{
+  "premium": {
+    "title": "Gratuit",
+    "description": "Basic features."
+  },
+  "free": {
+    "title": "Gratuit",
+    "description": "Fonctionnalités de base."
+  },
+  "download": "Télécharger",
+  "checkout": "Vérifier",
+  "notice": "Avis"
+}

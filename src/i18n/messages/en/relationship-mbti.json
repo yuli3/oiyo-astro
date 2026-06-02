@@ -1,0 +1,212 @@
+{
+  "mbtiResult": {
+    "labels": {
+      "A": "Active",
+      "P": "Passive",
+      "Q": "Radical (Quick)",
+      "S": "Prudence (Slow)",
+      "E": "Expressive",
+      "M": "Mysterious",
+      "D": "Direct",
+      "I": "Indirect"
+    },
+    "result": {
+      "dimensions": {
+        "approach": "approach",
+        "attraction": "expression of liking",
+        "flirting": "seduction method",
+        "defensiveness": "defense mechanism"
+      },
+      "style": "my dating style",
+      "advice": "Advice for Growth",
+      "strengths": "Strengths in Love",
+      "analysis": "Detailed style analysis",
+      "retake": "do it again",
+      "home": "Home",
+      "sharePrompt": "Share your dating style test results with your friends and check your compatibility!"
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "dimension": "approach",
+      "text": "When you encounter someone who stirs your soul, how do you tend to move?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I reach out proactively, creating the first spark in our unfolding story."
+        },
+        {
+          "id": "P",
+          "text": "I wait for the universe to align, letting the other person initiate our connection."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "dimension": "attraction",
+      "text": "How quickly does the fire of attraction usually ignite within you?",
+      "options": [
+        {
+          "id": "Q",
+          "text": "It is a sudden lightning strike; I know the depth of my interest almost instantly."
+        },
+        {
+          "id": "S",
+          "text": "It is a gentle dawn; my feelings grow steadily as I truly come to know the other."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "dimension": "flirting",
+      "text": "How do you signal your interest to those who captivate you?",
+      "options": [
+        {
+          "id": "E",
+          "text": "I am an open book, wearing my admiration clearly through vibrant words and gestures."
+        },
+        {
+          "id": "M",
+          "text": "I weave a subtle web of mystery, letting my interest be felt through silence and nuance."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "dimension": "defensiveness",
+      "text": "When conflict clouds the emotional landscape, what is your natural reaction?",
+      "options": [
+        {
+          "id": "D",
+          "text": "I face the storm head-on, addressing the core issue with immediate honesty."
+        },
+        {
+          "id": "I",
+          "text": "I navigate the periphery first, seeking a softer, more reflective path to reconciliation."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "dimension": "approach",
+      "text": "If a social gathering presents a potential connection, what is your instinct?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I move towards them with intent, making my presence felt from the start."
+        },
+        {
+          "id": "P",
+          "text": "I remain in my own space, allowing others to gravitate towards me first."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "dimension": "attraction",
+      "text": "What is your typical pace when unfolding the chapters of a new romance?",
+      "options": [
+        {
+          "id": "Q",
+          "text": "I dive into the depths early, eager to explore the intensity of our bond."
+        },
+        {
+          "id": "S",
+          "text": "I savor the shallow waters first, building trust and familiarity over time."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "dimension": "flirting",
+      "text": "What is the primary language of your romantic interest?",
+      "options": [
+        {
+          "id": "E",
+          "text": "Generous compliments and clear, heartfelt declarations of my feelings."
+        },
+        {
+          "id": "M",
+          "text": "Intense eye contact and subtle shifts in energy that invite curiosity."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "dimension": "defensiveness",
+      "text": "How do you protect your inner sanctuary when tensions arise?",
+      "options": [
+        {
+          "id": "D",
+          "text": "I state my boundaries clearly and forcefully to prevent misunderstanding."
+        },
+        {
+          "id": "I",
+          "text": "I withdraw slightly to process, allowing the atmosphere to cool before re-engaging."
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "dimension": "approach",
+      "text": "In the dance of connection, who do you prefer should set the rhythm?",
+      "options": [
+        {
+          "id": "A",
+          "text": "I prefer to take the lead, ensuring our momentum continues to build."
+        },
+        {
+          "id": "P",
+          "text": "I prefer to respond to their lead, finding grace in the flow they initiate."
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "dimension": "attraction",
+      "text": "Does your heart usually decide quickly, or does it require extensive evidence?",
+      "options": [
+        {
+          "id": "Q",
+          "text": "My heart is a fast-flowing river, easily swept away by a powerful connection."
+        },
+        {
+          "id": "S",
+          "text": "My heart is a steady mountain, requiring time and consistency to be moved."
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "dimension": "flirting",
+      "text": "How much of your romantic intention do you reveal initially?",
+      "options": [
+        {
+          "id": "E",
+          "text": "I make my intentions obvious, leaving no room for doubt about my interest."
+        },
+        {
+          "id": "M",
+          "text": "I keep my intentions hidden behind a veil of intrigue, letting them guess."
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "dimension": "defensiveness",
+      "text": "What is your typical approach to resolving a heated disagreement?",
+      "options": [
+        {
+          "id": "D",
+          "text": "I prioritize 'getting it out' and reaching a resolution as quickly as possible."
+        },
+        {
+          "id": "I",
+          "text": "I prioritize 'cooling down' and addressing the emotional fallout before the facts."
+        }
+      ]
+    }
+  ],
+  "title": "dating style test"
+}

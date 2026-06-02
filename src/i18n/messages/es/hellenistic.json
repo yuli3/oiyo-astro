@@ -1,0 +1,25 @@
+{
+  "title": "Astrología Helenística",
+  "description": "Una Parte Arábica calculada a partir del Ascendente, el Sol y la Luna, que representa la prosperidad física y la salud.",
+  "principles": {
+    "sect": {
+      "term": "Parte de la Fortuna",
+      "description": "Una Parte Arábica calculada a partir del Ascendente, el Sol y la Luna, que representa la prosperidad física y la salud."
+    },
+    "essential_dignity": {
+      "term": "Parte de la Fortuna",
+      "description": "Una Parte Arábica calculada a partir del Ascendente, el Sol y la Luna, que representa la prosperidad física y la salud."
+    },
+    "lot_of_fortune": {
+      "term": "Parte de la Fortuna",
+      "description": "Una Parte Arábica calculada a partir del Ascendente, el Sol y la Luna, que representa la prosperidad física y la salud."
+    }
+  },
+  "resonance": {
+    "note": "El Archivo observa una Carta de {sect}. Tu destino está anclado por {primary} (Primario) y {secondary} (Secundario), con {participating} ofreciendo apoyo."
+  },
+  "sect": {
+    "Day": "Día",
+    "Night": "Noche"
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "tax": {
+    "gift": {
+      "meta": {
+        "title": "Flujo de abundancia: impuesto sobre donaciones",
+        "description": "Calcula la transferencia de abundancia a tu linaje.",
+        "keywords": "impuesto sobre donaciones, calculadora de impuestos, sucesiones"
+      },
+      "hero": {
+        "subtitle": "Protección del linaje sagrado",
+        "badge": "Finanzas"
+      },
+      "rel": {
+        "child_adult": "Alma adulta (niña)",
+        "child_minor": "Alma menor (niña)",
+        "spouse": "Llama dual (cónyuge)",
+        "parent": "Alma ancestral (madre)",
+        "other_relative": "Pariente afín",
+        "other": "Otra conexión",
+        "selectPlaceholder": "Seleccionar relación"
+      },
+      "result": {
+        "title": "Informe de análisis de abundancia",
+        "deduction": "Deducción Sagrada",
+        "taxBase": "Esencia imponible",
+        "rate": "Tasa de vibración",
+        "selfReport": "Manifestación voluntaria",
+        "description": "Explora las capas de tu resonancia financiera."
+      },
+      "tip": {
+        "title": "Perspectivas sabias",
+        "desc": "Las deducciones del impuesto sobre donaciones se reinician cada ciclo de década. Planifique sabiamente las transferencias de su linaje para minimizar la fricción social."
+      },
+      "test": {
+        "insightBullets": [
+          "Resonancia de riqueza",
+          "Protección de linaje",
+          "Eficiencia temporal"
+        ],
+        "progress": "Progreso de alineación",
+        "submit": "Enviar intención",
+        "loading": "Consultando leyes tributarias celestes...",
+        "selectOption": "Seleccionar ruta",
+        "next": "Adelante",
+        "previous": "Recordar"
+      },
+      "unit": {
+        "currency": "Unidades",
+        "tenYear": "Ciclo decenal",
+        "aggregation": "Objetivo agregado"
+      },
+      "resultInfo": {
+        "selfReport": "* Incluye reducción del 3% por manifestación voluntaria.",
+        "consult": "* Consulte con un experto financiero para una alineación precisa."
+      },
+      "title": "Reflexión financiera",
+      "description": "Un espejo refinado de su realidad financiera.",
+      "subtitle": "La guía del navegador hacia la riqueza",
+      "disclaimer": "Sólo proyección, no decreto financiero.",
+      "relationship": "Relación",
+      "giftAmount": "Cantidad de Ofrenda Sagrada",
+      "pastGiftAmount": "Monto de transferencia histórico",
+      "calculateBtn": "Calcular flujo",
+      "placeholder": "Ingrese la cantidad",
+      "labels": {
+        "inputParameters": "Entrada de coordenadas"
+      }
+    },
+    "vat": {
+      "modes": {
+        "total": "Flujo agregado",
+        "supply": "Flujo de esencia primaria"
+      },
+      "labels": {
+        "totalAmount": "Resonancia Total (IVA incluido)",
+        "supplyAmount": "Esencia Neta (sin IVA)"
+      },
+      "results": {
+        "supplyPrice": "Esencia primaria",
+        "vat": "Impuesto de fragmentos (IVA)",
+        "total": "Resonancia completa"
+      },
+      "tip": {
+        "content": "Normalmente, el impuesto sobre la fragmentación es del 10% de la esencia. Divida el flujo agregado por 1,1 para encontrar la esencia primaria.",
+        "title": "Sabiduría del IVA"
+      },
+      "meta": {
+        "subtitle": "Eficiencia para arquitectas",
+        "disclaimer": "Descargo de responsabilidad del sistema",
+        "title": "Sintetizador de IVA",
+        "description": "Convierta sin problemas entre esencia neta y resonancia total.",
+        "keywords": "IVA, impuestos, factura, negocios"
+      },
+      "test": {
+        "insightBullets": ["A la espera de síntesis..."],
+        "progress": "Progreso de síntesis",
+        "next": "Adelante",
+        "previous": "Recordar",
+        "submit": "Finalizar",
+        "loading": "Sintetizando...",
+        "selectOption": "Elija capa"
+      },
+      "result": {
+        "title": "Informe de síntesis",
+        "description": "Confirme sus niveles de resonancia empresarial."
+      },
+      "subtitle": "Calcule con precisión los flujos primarios y de fragmentos.",
+      "currency": "Unidades",
+      "disclaimer": "Esta herramienta proporciona simulaciones estructurales; Los derechos fiscales reales pueden variar.",
+      "title": "Reflexión temporal",
+      "description": "Información y tarifas del Impuesto sobre el Valor Añadido"
+    }
+  },
+  "salaryCalculator": {
+    "title": "Convertidor de vitalidad (salario)",
+    "description": "Visualice su conversión de energía material en la red social.",
+    "labels": {
+      "inputParameters": "Coordenadas de entrada",
+      "salaryInput": "Energía bruta anual",
+      "salaryPlaceholder": "Ingrese el monto (por ejemplo, 1,000,000)",
+      "dependents": "Almas satélite (Dependientes)",
+      "children": "Chispas futuras (Hijos)",
+      "calculate": "Ejecutar Cálculo",
+      "calculatePrompt": "Establece tus coordenadas para ver el desglose",
+      "disclaimerText": "Este cálculo es una proyección y puede diferir de los ajustes reales."
+    },
+    "result": {
+      "title": "Distribución de energía",
+      "grossPay": "Energía Bruta",
+      "netPay": "Vitalidad Manifestada (Neto)",
+      "nationalPension": "Fondo Ancestral (Pensión)",
+      "healthInsurance": "Mantenimiento del Santuario (Salud)",
+      "incomeTax": "Contribución Soberana (Impuestos)",
+      "harvestDescription": "Nivel base de energía",
+      "pensionRate": "Ancla de seguridad a largo plazo",
+      "healthRate": "Tarifa de preservación de vitalidad",
+      "deductionDesc": "Compromiso con la red social",
+      "rateDesc": "Frecuencia vibratoria actual"
+    },
+    "advisor": {
+      "tip": "Consejo Sabio",
+      "content": "Incluso en la red de números, tu resonancia determina el valor de cada fragmento."
+    }
+  }
+}

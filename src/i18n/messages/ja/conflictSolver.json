@@ -1,0 +1,50 @@
+{
+  "noData": {
+    "desc": "あなたのパーソナライズされた対話の錬金術を明らかにするために、意識の儀式を開始してください。",
+    "button": "校正の開始",
+    "title": "Conflict Alchemy Synthesizer"
+  },
+  "labels": {
+    "relation": "血縁関係",
+    "situation": "るつぼの瞬間"
+  },
+  "relations": {
+    "partner": "神聖な対応者",
+    "friend": "同類の精神",
+    "colleague": "プロの味方"
+  },
+  "situations": {
+    "apology": "償いの儀式（所有権）",
+    "initiate": "認識の開始 (苦情)",
+    "boundary": "サンクチュアリ（境界線）の確立"
+  },
+  "meta": {
+    "subtitle": "Bespoke alchemical scripts to harmonize discordant frequencies.",
+    "disclaimer": "These scripts serve as foundational frequencies; adapt them to the unique cadence of your connection.",
+    "title": "Conflict Alchemy Synthesizer",
+    "description": "Guiding the vocalization of wisdom when relationship harmonics are strained.",
+    "keywords": "紛争錬金術、関係回復、神聖な対話、コミュニケーションの儀式、オイヨ"
+  },
+  "test": {
+    "insightBullets": ["あなたの人間関係のスタンスの暗黙の層に光を当てます。"],
+    "progress": "レゾナンス・アセント",
+    "next": "フォワード",
+    "previous": "反映する",
+    "submit": "合成を明らかにする",
+    "loading": "対話錬金術を蒸留中...",
+    "selectOption": "真実の道をマークする"
+  },
+  "result": {
+    "title": "Conflict Alchemy Synthesizer",
+    "description": "Guiding the vocalization of wisdom when relationship harmonics are strained."
+  },
+  "subtitle": "不調和な周波数を調和させるための特注の錬金術スクリプト。",
+  "yourStyle": "あなたの対立スタンス",
+  "retest": "キャリブレーションを再開する",
+  "resultTitle": "明示されたスクリプト",
+  "copy": "保存する",
+  "copied": "アーカイブ済み",
+  "disclaimer": "これらのスクリプトは基本的な周波数として機能します。 接続の固有のリズムに合わせて調整します。",
+  "title": "紛争錬金術シンセサイザー",
+  "description": "人間関係の調和が緊張しているときに、知恵を発するように導きます。"
+}

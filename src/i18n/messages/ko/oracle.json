@@ -1,0 +1,50 @@
+{
+  "title": "그랜드 오라클",
+  "archetypes": {
+    "radiant_catalyst": {
+      "title": "빛나는 촉매",
+      "keywords": "점화, 열정, 의지"
+    },
+    "deep_seer": {
+      "title": "깊은 현자",
+      "keywords": "직관, 흐름, 미스터리"
+    },
+    "architect": {
+      "title": "건축가",
+      "keywords": "안정성, 기반, 성장"
+    },
+    "messenger": {
+      "title": "메신저",
+      "keywords": "지성, 의사소통, 자유"
+    },
+    "growth_maker": {
+      "title": "성장 메이커",
+      "keywords": "확장, 뿌리, 생명"
+    },
+    "refiner": {
+      "title": "정련소",
+      "keywords": "정밀성, 강도, 선명도"
+    },
+    "spirit_walker": {
+      "title": "스피릿 워커",
+      "keywords": "연결, 공간, 본질"
+    },
+    "universal_traveler": {
+      "title": "유니버설 트래블러",
+      "keywords": "균형, 조화, 화합"
+    }
+  },
+  "narrative": {
+    "intro": "그랜드 아카이브가 열리고 당신의 존재 패턴이 드러납니다. 당신은 {원형}입니다.",
+    "body": "당신의 영혼은 {element}에서 만들어졌습니다. {시너지}. 서양 스타들은 당신을 {westernSign}으로 명명하고, 동부 법원은 당신을 {easternSign}으로 알고 있습니다.",
+    "conclusion": "{element}의 지혜로 당신의 길을 걸어가세요. 그것이 당신의 가장 큰 힘이기 때문입니다."
+  },
+  "synergies": {
+    "convergence": "서부 하늘과 베다 하늘을 가로지르는 {element}의 수렴",
+    "synthesis": "{element}가 이끄는 독특한 합성"
+  },
+  "suggestions": {
+    "balance": "당신의 길은 강하지만 {missing}의 에너지는 당신 안에 조용합니다. 다른 사람이나 자연에서 그것을 찾으십시오.",
+    "harmony": "당신은 완전한 원소의 조화 속에서 걷습니다."
+  }
+}

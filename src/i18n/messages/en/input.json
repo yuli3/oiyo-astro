@@ -1,0 +1,62 @@
+{
+  "errors": {
+    "invalidDate": "Invalid date.",
+    "invalidTime": "Invalid time.",
+    "unknown": "An unknown error occurred."
+  },
+  "formTitle": "Enter Birth Details",
+  "privacyNote": "Your information is used for analysis only and is never stored permanently.",
+  "nameLabel": "Name",
+  "namePlaceholder": "Enter your name (Optional)",
+  "birthDateLabel": "Birth Date",
+  "birthTimeLabel": "Birth Time",
+  "hourPlaceholder": "HH",
+  "minutePlaceholder": "MM",
+  "locationLabel": "Birth Place",
+  "locationPlaceholder": "Select City",
+  "trueSolarTime": "True Solar Time",
+  "timeUnknownTitle": "Unknown Time",
+  "timeUnknownDesc": "If time is unknown, analysis will focus on Date/Year pillars.",
+  "genderLabel": "Gender",
+  "genderPlaceholder": "Select",
+  "genderMale": "Male",
+  "genderFemale": "Female",
+  "calendarNoticeDesc": "We handle Lunar/Solar conversion automatically.",
+  "analyzing": "Calculating celestial movements...",
+  "submitButton": "Reveal Destiny",
+  "secureTransmission": "Secure Alchemy Transmission",
+  "birthDate": "birth date",
+  "birthTime": "time of birth",
+  "location": "place of birth",
+  "gender": "gender",
+  "dateLabel": "Date of Birth",
+  "timeLabel": "Time of Birth",
+  "hourLabel": "Hour",
+  "minuteLabel": "Minute",
+  "calendarNoticeTitle": "Calendar System",
+  "timeline": {
+    "origin": "ORIGIN",
+    "moment": "THE MOMENT",
+    "seal": "SEAL"
+  },
+  "stage": {
+    "origin": {
+      "title": "Who are you?"
+    },
+    "moment": {
+      "title": "Moment of Inception",
+      "lockedTitle": "Coordinates Locked",
+      "hint": "Please enter your exact birth time for accurate analysis."
+    },
+    "seal": {
+      "title": "The Sealed Prophecy",
+      "description": "All temporal coordinates align. The stars await your command."
+    }
+  },
+  "optional": "Optional",
+  "nextStep": "Next Step",
+  "lockCoordinates": "LOCK COORDINATES",
+  "unlock": "Unlock",
+  "anonymous": "Anonymous Traveler",
+  "revealProphecy": "Unseal Prophecy"
+}

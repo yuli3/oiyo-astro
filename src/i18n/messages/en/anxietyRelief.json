@@ -1,0 +1,18 @@
+{
+  "title": "Anxiety Relief",
+  "description": "Find peace and calm through guided breathing exercises.",
+  "breathingIn": "Breathing In",
+  "breathingOut": "Breathing Out",
+  "hold": "Hold",
+  "start": "Start",
+  "pause": "Pause",
+  "reset": "Reset",
+  "subtitle": "Mindful Breathing Sanctuary",
+  "affirmations": {
+    "1": "I am safe and grounded in this moment.",
+    "2": "My breath is my anchor in the storm.",
+    "3": "I release what I cannot control.",
+    "4": "Each breath brings clarity and peace.",
+    "5": "I am stronger than my anxious thoughts."
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "test": {
+    "viewResults": "Voir les résultats",
+    "swipeHintLong": "Balayez pour en voir plus",
+    "step": "Phase"
+  },
+  "actions": {
+    "next": "Suivant",
+    "back": "Retour",
+    "submit": "Confirmer",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "share": "Irradier",
+    "save": "Préserver",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "close": "Fermer",
+    "previous": "Précédent",
+    "goHome": "Aller à l'accueil",
+    "more": "Plus",
+    "report": "Rapport d'analyse",
+    "export": "Exporter la sagesse",
+    "continue": "Poursuivre en avant",
+    "calculate": "Synthétiser l'Énergie",
+    "startTest": "Initier l'Analyse",
+    "processing": "Synthétisation...",
+    "retry": "Réessayer",
+    "start": "Commencer",
+    "home": "Accueil",
+    "retake": "Revisiter"
+  },
+  "navigation": {
+    "back": "Retour",
+    "logout": "Déconnexion"
+  },
+  "status": {
+    "loading": "Synchronisation...",
+    "error": "Un problème est survenu",
+    "success": "Terminé avec succès",
+    "empty": "Aucune donnée",
+    "scrollForSynergy": "Faites défiler pour explorer la synergie"
+  },
+  "modals": {
+    "confirmTitle": "Êtes-vous sûr de vouloir continuer ?",
+    "confirmDescription": "Cette action ne peut pas être annulée."
+  },
+  "you": "Vous",
+  "hallOfFame": "Temple de la renommée",
+  "noData": "L'archive est vide",
+  "noDataCta": "Veuillez vérifier plus tard",
+  "minutes": "min",
+  "startTest": "Commencer le voyage",
+  "browseAll": "Explorer tous les portails",
+  "title": "Interface utilisateur sacrée",
+  "all": "Tout",
+  "unread": "Nouvelle sagesse",
+  "readAll": "Tout marquer comme lu",
+  "view": "Voir",
+  "markRead": "Marquer comme lu",
+  "tagline": "Dévoilez l'architecture de votre destin.",
+  "product": "Portails",
+  "company": "Sanctuaire",
+  "support": "Guide",
+  "allRightsReserved": "Tous droits réservés.",
+  "wip": "Évolution",
+  "copyright": "© {year} Oiyo.",
+  "copyrightFull": "© {year} Oiyo.net. Tous droits réservés.",
+  "donate": "Soutenir le créateur",
+  "koFi": "Café",
+  "payPal": "Paypal",
+  "daily": {
+    "title": "Rituel quotidien",
+    "subtitle": "Synchronisez-vous avec le flux céleste actuel.",
+    "oracle": {
+      "selectZodiac": "Sélectionnez votre signe zodiacal",
+      "synchronize": "Synchroniser",
+      "imperialDecree": "Décret Impérial",
+      "analysisBasis": "Base de l'analyse cosmique",
+      "message": "Les étoiles murmurent un message pour vous.",
+      "actionRitual": "Rituel recommandé",
+      "fateVsWill": "Naviguer dans le flux actuel"
+    }
+  },
+  "close": "Fermer",
+  "questionOf": "Question",
+  "tryNow": "Commencez votre voyage",
+  "goHome": "Retour à l'accueil",
+  "breadcrumbs": {
+    "ontology": "Sanctuaire d'Ontologie",
+    "social": "ADN Social",
+    "origin": "Racines Primordiales",
+    "fortune": "Portail de Fortune",
+    "offline": "Hors ligne",
+    "wellness": "Bien-être Intérieur",
+    "sleep": "Rythme Nocturne",
+    "test": "Analyse de Perspicacité",
+    "insights": "Sagesse Quotidienne"
+  },
+  "emergency": {
+    "title": "⚠️ Un moment pour le soin",
+    "description": "Votre rythme actuel suggère un besoin profond de repos. Nous vous encourageons gentiment à solliciter le soutien d'un guide professionnel pour votre bien-être.",
+    "getHelp": "Soutien Sincère : 1393"
+  },
+  "step": "Phase",
+  "home": "Accueil",
+  "sharing": {
+    "kakaoShare": "Partage KakaoTalk",
+    "instagram": "Instagram",
+    "moreApps": "Autres applications",
+    "copied": "Copié!",
+    "copyLink": "Copier le lien",
+    "creating": "Création...",
+    "saveImage": "Enregistrer l'image",
+    "twitter": "Twitter",
+    "facebook": "Facebook",
+    "keyTraits": "Traits clés",
+    "matchScore": "Score de correspondance",
+    "shareResult": "Partager le résultat",
+    "share": "Partager"
+  },
+  "progress": {
+    "of": "sur",
+    "progressLabel": "Progression",
+    "stepLabel": "Étape",
+    "greatStart": "Bon départ! 🌟",
+    "almostThere": "Presque là! 💪"
+  },
+  "categories": {
+    "development": "Développement",
+    "lifestyle": "Style de vie",
+    "moreTests": "✨ Plus de tests",
+    "new": "Nouveau",
+    "personality": "Personnalité",
+    "popular": "Populaire",
+    "popularTests": "🔥 Tests populaires",
+    "relatedTests": "🎯 Tests associés",
+    "relationships": "Relations",
+    "takeTest": "Passer le test",
+    "tools": "Outils",
+    "tryNext": "Essayer le suivant",
+    "wellness": "Bien-être",
+    "viewAllTests": "Voir tous les tests",
+    "discoverMore": "Découvrez-en plus sur vous-même"
+  },
+  "goals": {
+    "myGoals": "Mes objectifs",
+    "subtitle": "Fixez des objectifs de développement personnel et suivez vos progrès.",
+    "progressSnapshot": "Aperçu de la progression pour {userId}",
+    "completedGoals": "Objectifs accomplis",
+    "completed": "Accompli",
+    "noGoals": "Pas encore d'objectifs",
+    "noGoalsDesc": "Fixez un objectif de développement personnel pour commencer à suivre vos progrès.",
+    "createGoal": "Créer un objectif",
+    "progress": "Progression",
+    "details": "Détails"
+  },
+  "ontology": {
+    "economicSchool": "Mon école économique",
+    "economicSchoolSubtitle": "Analyse de l'école macroéconomique",
+    "realpolitik": "Tendance réalpolitik",
+    "politicalMatrix": "Ma matrice politique"
+  }
+}

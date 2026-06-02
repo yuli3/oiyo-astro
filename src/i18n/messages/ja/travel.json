@@ -1,0 +1,785 @@
+{
+  "travel": {
+    "types": {
+      "INTJ": {
+        "preferences": ["文化遺産", "美術館・博物館", "史跡", "建築"],
+        "avoidances": [
+          "混雑スポット",
+          "自発的な計画",
+          "団体旅行",
+          "パーティーの雰囲気"
+        ],
+        "idealDestinations": {
+          "domestic": ["慶州", "全州韓屋村", "安東", "東済州"],
+          "international": ["京都", "Rome", "プラハ", "イスタンブール"]
+        },
+        "activities": ["歴史ツアー", "建築の実行", "読む", "写真"],
+        "companionCompatibility": {
+          "best": ["ENFP", "ENTP", "INFP"],
+          "good": ["INTJ", "INTP", "ENTJ"],
+          "challenging": ["ESFP", "ESTP", "ESFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "INTP": {
+        "preferences": [
+          "ユニークな場所",
+          "科学博物館",
+          "隠れた宝石",
+          "地元の文化"
+        ],
+        "avoidances": [
+          "固定スケジュール",
+          "観光客の罠",
+          "ショッピングに焦点を当てる",
+          "騒がしい場所"
+        ],
+        "idealDestinations": {
+          "domestic": ["ウールの若者", "江陵(カンヌン)", "統営", "束草"],
+          "international": [
+            "アイスランド",
+            "ニュージーランド",
+            "スイス",
+            "ノルウェー"
+          ]
+        },
+        "activities": ["自然探検", "星空観察", "熟考", "ユニークなカフェ"],
+        "companionCompatibility": {
+          "best": ["ENFJ", "ENTJ", "INFJ"],
+          "good": ["INTP", "INTJ", "ENTP"],
+          "challenging": ["ESTJ", "ESFJ", "ISFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENTJ": {
+        "preferences": [
+          "ランドマーク",
+          "ビジネスホテル",
+          "高級レストラン",
+          "活動内容"
+        ],
+        "avoidances": [
+          "予定外の旅行",
+          "ゆっくりとしたペース",
+          "不快な滞在",
+          "時間を無駄にする"
+        ],
+        "idealDestinations": {
+          "domestic": ["ソウル", "釜山", "Jeju", "仁川"],
+          "international": ["ニューヨーク", "シンガポール", "ドバイ", "香港"]
+        },
+        "activities": ["観光", "Golf", "ワインツアー", "ビジネスミーティング"],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENTJ", "INTJ", "ENTP"],
+          "challenging": ["ISFJ", "ESFJ", "ISFP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENTP": {
+        "preferences": [
+          "冒険活動",
+          "ナイトマーケット",
+          "地元の人々との交流",
+          "自発的な旅行"
+        ],
+        "avoidances": [
+          "スタンダードコース",
+          "贅沢なツアー",
+          "静かな休息",
+          "定期的なスケジュール"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "Gangwon-do",
+            "西済州",
+            "慶尚北道",
+            "アイランドホッピング"
+          ],
+          "international": ["東南アジア", "南アメリカ", "東欧", "中東"]
+        },
+        "activities": [
+          "サーフィン",
+          "スカイダイビング",
+          "トレッキング",
+          "地元のパーティー"
+        ],
+        "companionCompatibility": {
+          "best": ["INFJ", "INTJ", "ISFJ"],
+          "good": ["ENTP", "ENFP", "ESTP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "INFJ": {
+        "preferences": [
+          "スピリチュアルな場所",
+          "自然",
+          "静かなカフェ",
+          "アートギャラリー"
+        ],
+        "avoidances": [
+          "パーティー文化",
+          "混雑スポット",
+          "ノイズ",
+          "表面的な経験"
+        ],
+        "idealDestinations": {
+          "domestic": ["済州オルレトレイル", "宝城", "南海", "潭陽"],
+          "international": ["Bali", "サントリーニ島", "京都", "ブータン"]
+        },
+        "activities": ["瞑想", "Yoga", "写真", "ジャーナリング"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ENFP", "INTP"],
+          "good": ["INFJ", "INFP", "ENFJ"],
+          "challenging": ["ESTP", "ESFP", "ESTJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "INFP": {
+        "preferences": [
+          "隠れスポット",
+          "静かな村々",
+          "書店",
+          "インディーズショップ"
+        ],
+        "avoidances": [
+          "観光ルート",
+          "騒がしい場所",
+          "固定スケジュール",
+          "グループ活動"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "ビーチクライミングギャング",
+            "統営",
+            "麗水",
+            "ヨンジュ"
+          ],
+          "international": ["パリ", "アムステルダム", "プラハ", "エディンバラ"]
+        },
+        "activities": ["ウォーキング", "読む", "書き込み", "写真"],
+        "companionCompatibility": {
+          "best": ["ENTJ", "ENFJ", "INTJ"],
+          "good": ["INFP", "INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ESFJ", "ISTJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENFJ": {
+        "preferences": [
+          "地元の体験",
+          "料理教室",
+          "コミュニティツアー",
+          "ボランティア活動"
+        ],
+        "avoidances": ["孤独", "静かな旅", "観光客専用", "表面的な経験"],
+        "idealDestinations": {
+          "domestic": ["済州の村", "ヨンジュ", "釜山", "束草"],
+          "international": ["イタリア", "スペイン", "メキシコ", "タイ"]
+        },
+        "activities": [
+          "地元の人々との出会い",
+          "料理教室",
+          "文化交流",
+          "ボランティア旅行"
+        ],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENFJ", "ENFP", "ESFJ"],
+          "challenging": ["ISTP", "ISTJ", "INTP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENFP": {
+        "preferences": ["祭り", "公演", "ナイトマーケット", "地元のイベント"],
+        "avoidances": ["固定スケジュール", "静かな旅", "一人で", "ルーチン"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "釜山", "江陵(カンヌン)", "麗水"],
+          "international": [
+            "バルセロナ",
+            "バンコク",
+            "リオデジャネイロ",
+            "Bali"
+          ]
+        },
+        "activities": [
+          "祭り",
+          "パーティー",
+          "サーフィン",
+          "新しい人々との出会い"
+        ],
+        "companionCompatibility": {
+          "best": ["INTJ", "INFJ", "ISTJ"],
+          "good": ["ENFP", "ENTP", "ESFP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISTJ": {
+        "preferences": ["名所", "美術館・博物館", "史跡", "安全な場所"],
+        "avoidances": ["自発的な旅行", "危険な場所", "計画変更", "不快な滞在"],
+        "idealDestinations": {
+          "domestic": ["慶州", "ヨンジュ", "安東", "水原"],
+          "international": ["日本", "ドイツ", "スイス", "カナダ"]
+        },
+        "activities": ["観光", "写真", "美術館ツアー", "伝統的な体験"],
+        "companionCompatibility": {
+          "best": ["ESFP", "ESTP", "ENFP"],
+          "good": ["ISTJ", "ESTJ", "ISFJ"],
+          "challenging": ["ENTP", "ENFP", "ESFP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISFJ": {
+        "preferences": [
+          "平和な場所",
+          "ファミリー向けスポット",
+          "安全な場所",
+          "快適な休息"
+        ],
+        "avoidances": ["アドベンチャー", "群衆", "不快感", "危険"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "束草", "麗水", "慶州"],
+          "international": ["日本", "台湾", "シンガポール", "ニュージーランド"]
+        },
+        "activities": ["ヒーリング", "温泉", "グルメツアー", "買い物"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ESTP", "ESFP"],
+          "good": ["ISFJ", "ISTJ", "ESFJ"],
+          "challenging": ["ENTP", "ENFP", "ESTP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESTJ": {
+        "preferences": [
+          "名所",
+          "パッケージツアー",
+          "ガイド付きツアー",
+          "アメニティ"
+        ],
+        "avoidances": ["予定はありません", "非効率性", "時間の無駄", "不快感"],
+        "idealDestinations": {
+          "domestic": ["ソウル", "釜山", "Jeju", "大田"],
+          "international": ["シンガポール", "香港", "東京", "北京"]
+        },
+        "activities": ["観光", "買い物", "グルメツアー", "写真"],
+        "companionCompatibility": {
+          "best": ["ISFP", "ISTP", "INFP"],
+          "good": ["ESTJ", "ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP", "INTP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESFJ": {
+        "preferences": ["家族旅行", "団体旅行", "有名カフェ", "買い物"],
+        "avoidances": ["一人旅", "静かな場所", "危険な行為", "不快感"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "釜山", "仁川", "ヨンジュ"],
+          "international": ["沖縄", "Guam", "オーストラリア", "ハワイ"]
+        },
+        "activities": ["買い物", "Food", "写真", "カフェ巡り"],
+        "companionCompatibility": {
+          "best": ["ISTP", "ISFP", "INFP"],
+          "good": ["ESFJ", "ENFJ", "ESTJ"],
+          "challenging": ["INTP", "INTJ", "ISTP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISTP": {
+        "preferences": [
+          "アウトドアアクティビティ",
+          "スポーツ",
+          "自然",
+          "アドベンチャー"
+        ],
+        "avoidances": [
+          "固定スケジュール",
+          "美術館・博物館",
+          "買い物",
+          "観光ルート"
+        ],
+        "idealDestinations": {
+          "domestic": ["Gangwon-do", "済州山脈", "慶尚海岸", "山間部"],
+          "international": [
+            "ニュージーランド",
+            "ノルウェー",
+            "スイス",
+            "カナダ"
+          ]
+        },
+        "activities": ["ハイキング", "スキー", "ダイビング", "サイクリング"],
+        "companionCompatibility": {
+          "best": ["ESFJ", "ESTJ", "ENFJ"],
+          "good": ["ISTP", "ESTP", "ISFP"],
+          "challenging": ["ENFJ", "ESFJ", "INFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISFP": {
+        "preferences": [
+          "アートギャラリー",
+          "自然",
+          "カフェ",
+          "雰囲気のある空間"
+        ],
+        "avoidances": ["騒がしい場所", "予定", "急ぐ", "グループ活動"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "江陵(カンヌン)", "統営", "麗水"],
+          "international": ["パリ", "プロヴァンス", "サントリーニ島", "Bali"]
+        },
+        "activities": ["写真", "描画", "カフェ", "ウォーキング"],
+        "companionCompatibility": {
+          "best": ["ESTJ", "ESFJ", "ENTJ"],
+          "good": ["ISFP", "INFP", "ESFP"],
+          "challenging": ["ESTJ", "ENTJ", "ISTJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESTP": {
+        "preferences": [
+          "活動内容",
+          "パーティー",
+          "ナイトライフ",
+          "エクストリームスポーツ"
+        ],
+        "avoidances": [
+          "美術館・博物館",
+          "静かなツアー",
+          "予定",
+          "ゆっくりとしたペース"
+        ],
+        "idealDestinations": {
+          "domestic": ["釜山", "江陵(カンヌン)", "西済州", "襄陽"],
+          "international": ["プーケット", "Bali", "ドバイ", "イビサ"]
+        },
+        "activities": [
+          "サーフィン",
+          "クラブ遊び",
+          "ウォータースポーツ",
+          "バンジージャンプ"
+        ],
+        "companionCompatibility": {
+          "best": ["ISFJ", "ISTJ", "INFJ"],
+          "good": ["ESTP", "ESFP", "ENTP"],
+          "challenging": ["INFJ", "INFP", "ISFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESFP": {
+        "preferences": ["祭り", "パーティー", "買い物", "人々"],
+        "avoidances": ["予定", "沈黙", "一人で", "退屈"],
+        "idealDestinations": {
+          "domestic": ["釜山", "Jeju", "弘大", "江南"],
+          "international": ["ベガス", "イビサ", "バンコク", "マイアミ"]
+        },
+        "activities": ["パーティー", "買い物", "ショー", "Food"],
+        "companionCompatibility": {
+          "best": ["ISTJ", "ISFJ", "INTJ"],
+          "good": ["ESFP", "ESTP", "ENFP"],
+          "challenging": ["INTJ", "ISTJ", "INFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "人生を楽しみ、周囲を明るくするパフォーマー。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "items": [
+        {
+          "name": "冒険者",
+          "description": "新しい体験とスリルを求めて。"
+        },
+        {
+          "name": "プランナー",
+          "description": "完璧なスケジュールの中で平和を見つける。"
+        },
+        {
+          "name": "リラクサー",
+          "description": "本当の休息と癒しを求めて。"
+        },
+        {
+          "name": "文化主義者",
+          "description": "歴史と芸術を深く掘り下げる。"
+        },
+        {
+          "name": "予算担当者",
+          "description": "価値を最大化する賢い消費者。"
+        },
+        {
+          "name": "贅沢主義者",
+          "description": "プレミアムなサービスと快適さをお楽しみください。"
+        }
+      ],
+      "title": "都市が見つかりません"
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "目的地に到着したら、次のことを行います。",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "一人で静かに探索してみよう",
+            "value": "I"
+          },
+          {
+            "text": "地元の人や他の旅行者とチャットする",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "旅程を計画するとき:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "有名スポットを中心に綿密なプランを用意",
+            "value": "S"
+          },
+          {
+            "text": "隠された宝石やユニークな体験に焦点を当てる",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "目的地を選択する基準:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "効率性とコストパフォーマンス",
+            "value": "T"
+          },
+          {
+            "text": "雰囲気も感触も",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "旅行の準備:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "必ず事前に予約して計画を立ててください",
+            "value": "J"
+          },
+          {
+            "text": "大まかな計画を立てて自発的に実行する",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "旅行中にお勧めのアクティビティ:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "美術館や遺跡を静かに訪れる",
+            "value": "I"
+          },
+          {
+            "text": "地元のお祭りや人との出会い",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "奇妙な食べ物に出会ったとき：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "検証済みの有名レストランに行く",
+            "value": "S"
+          },
+          {
+            "text": "ユニークで新しいことに挑戦してください",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "同行者と意見が異なる場合:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "客観的な基準に基づいて合理的に判断する",
+            "value": "T"
+          },
+          {
+            "text": "気持ちを考慮して調整する",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "何か予期せぬことが起こった場合:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "計画に戻ってみる",
+            "value": "J"
+          },
+          {
+            "text": "新たなチャンスとして受け入れよう",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "宿泊施設を選ぶ基準：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "静かで快適なプライベート空間",
+            "value": "I"
+          },
+          {
+            "text": "人と交流できる空間",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "旅行情報はどうやって入手しますか？",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "ガイドブックと検証済みの情報",
+            "value": "S"
+          },
+          {
+            "text": "ブログとユニークなレビュー",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "予算を超えた場合：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "計画を調整して支出を削減する",
+            "value": "T"
+          },
+          {
+            "text": "経験が重要なので柔軟に対応する",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "旅行の最終日:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "計画されたアクティビティをすべて完了する",
+            "value": "J"
+          },
+          {
+            "text": "残り時間を自由に楽しむ",
+            "value": "P"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "title": "都市が見つかりません",
+      "description": "あなたに合った都市を見つけましょう",
+      "keywords": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "hero": {
+      "badge": "Travel Psychology",
+      "title": "都市が見つかりません",
+      "description": "あなたに合った都市を見つけましょう",
+      "cta": "Start Test"
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "より良い旅行",
+          "description": "あなたにぴったりの目的地とスタイルを見つけてください。"
+        },
+        {
+          "title": "賢い予算編成",
+          "description": "大切な場所でお金を使う方法を学びましょう。"
+        },
+        {
+          "title": "もっと楽しむ",
+          "description": "旅行中のストレスを軽減し、満足度を最大化します。"
+        },
+        {
+          "title": "トラベルハーモニー",
+          "description": "旅行仲間との違いを理解しましょう。"
+        }
+      ],
+      "title": "都市が見つかりません"
+    },
+    "test": {
+      "title": "都市が見つかりません",
+      "subtitle": "ライフスタイルに合った都市を発見",
+      "progress": "進行状況: {現在}/{合計}",
+      "submit": "送信",
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "sections": {
+        "traits": "Travel Style",
+        "idealDestinations": "Ideal Destinations",
+        "travelTips": "Travel Tips",
+        "balance": "Travel Balance",
+        "strengths": "強み",
+        "challenges": "Challenges",
+        "breakdown": "Personality Breakdown"
+      },
+      "title": "都市が見つかりません",
+      "subtitle": "ライフスタイルに合った都市を発見",
+      "loading": "旅行スタイルを分析中...",
+      "exploreMore": "Explore More",
+      "exploreMoreDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "retakeTest": "Retake Test"
+    },
+    "cityGuide": {
+      "meta": {
+        "title": "都市が見つかりません",
+        "description": "あなたに合った都市を見つけましょう"
+      },
+      "hero": {
+        "title": "都市が見つかりません",
+        "subtitle": "ライフスタイルに合った都市を発見"
+      },
+      "noData": {
+        "title": "都市が見つかりません",
+        "desc": "条件を変更して再検索してください。",
+        "button": "再検索"
+      },
+      "filters": {
+        "climate": "気候",
+        "cost": "生活費",
+        "safety": "安全性",
+        "internet": "インターネット速度"
+      }
+    }
+  }
+}

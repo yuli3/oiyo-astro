@@ -1,0 +1,30 @@
+{
+  "tabs": {
+    "essence": "본질",
+    "destiny": "운명",
+    "biology": "생물학"
+  },
+  "essence": {
+    "title": "영혼의 정수",
+    "quote": "당신의 의식의 독특한 서명",
+    "soulFormula": "소울 포뮬러",
+    "humanDesign": "휴먼 디자인",
+    "authority": "권한",
+    "locked": "잠금을 해제하여 영혼의 본질을 드러내세요"
+  },
+  "destiny": {
+    "title": "운명의 길",
+    "lifePath": "생활 경로",
+    "seeker": "찾는 사람",
+    "animal": "수호 동물"
+  },
+  "biology": {
+    "title": "생물학적 리듬",
+    "chronotype": "크로노타입",
+    "constitution": "헌법"
+  },
+  "title": "아카식 레코드",
+  "subtitle": "당신의 영혼의 기록 보관소",
+  "close": "닫다",
+  "description": "전 생애에 걸친 영혼의 여정에 대한 시대를 초월한 기록을 탐색하세요."
+}

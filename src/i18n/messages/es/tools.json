@@ -1,0 +1,17 @@
+{
+  "handless": {
+    "title": "Selección de fecha imperial",
+    "subtitle": "Calcula los días de pureza para las grandes empresas.",
+    "legend": {
+      "good": "Día Auspicioso (Puro)",
+      "bad": "Presencia espiritual (evitar)"
+    },
+    "directions": {
+      "East": "Guardia Este",
+      "West": "Guardia Oeste",
+      "South": "Guardia Sur",
+      "North": "Guardia Norte"
+    },
+    "info": "La sabiduría antigua advierte sobre los espíritus errantes ('Hijo'). Los días que terminan en 9 o 0 están divinamente protegidos."
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "sort": "정렬 기준",
+  "category": "범주",
+  "mood": "분위기",
+  "timeRange": {
+    "label": "시간 범위"
+  }
+}

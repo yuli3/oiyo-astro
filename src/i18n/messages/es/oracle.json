@@ -1,0 +1,50 @@
+{
+  "title": "El Viajero Universal",
+  "archetypes": {
+    "radiant_catalyst": {
+      "title": "El Viajero Universal",
+      "keywords": "Equilibrio, Armonía, Unidad"
+    },
+    "deep_seer": {
+      "title": "El Viajero Universal",
+      "keywords": "Equilibrio, Armonía, Unidad"
+    },
+    "architect": {
+      "title": "El Viajero Universal",
+      "keywords": "Equilibrio, Armonía, Unidad"
+    },
+    "messenger": {
+      "title": "El Viajero Universal",
+      "keywords": "Equilibrio, Armonía, Unidad"
+    },
+    "growth_maker": {
+      "title": "El Viajero Universal",
+      "keywords": "Equilibrio, Armonía, Unidad"
+    },
+    "refiner": {
+      "title": "El Viajero Universal",
+      "keywords": "Equilibrio, Armonía, Unidad"
+    },
+    "spirit_walker": {
+      "title": "El Viajero Universal",
+      "keywords": "Equilibrio, Armonía, Unidad"
+    },
+    "universal_traveler": {
+      "title": "El Viajero Universal",
+      "keywords": "Equilibrio, Armonía, Unidad"
+    }
+  },
+  "narrative": {
+    "intro": "El Gran Archivo se abre para revelar el patrón de tu existencia. Eres {archetype}.",
+    "body": "Tu espíritu está forjado en {element}. {synergy}. Las estrellas occidentales te nombran {westernSign}, mientras que las cortes orientales te conocen como {easternSign}.",
+    "conclusion": "Camina tu sendero con la sabiduría de {element}, pues es tu mayor fortaleza."
+  },
+  "synergies": {
+    "convergence": "Una convergencia de {element} a través de los cielos occidentales y védicos",
+    "synthesis": "Una síntesis única liderada por {element}"
+  },
+  "suggestions": {
+    "balance": "Tu camino es fuerte, pero la energía de {missing} está silenciosa dentro de ti. Búscala en otros o en la naturaleza.",
+    "harmony": "Caminas en completa armonía elemental."
+  }
+}

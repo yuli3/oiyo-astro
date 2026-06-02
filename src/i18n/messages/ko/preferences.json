@@ -1,0 +1,90 @@
+{
+  "country": {
+    "meta": {
+      "keywords": "personality test, self-discovery, psychology, personal growth, MBTI",
+      "hero": {
+        "badge": "🌍 Affinity Precision Analysis",
+        "subtitle": "Deep analysis across 12 dimensions for integral country search",
+        "cta": "Start Country Exploration"
+      },
+      "features": {
+        "subtitle": "Deep analysis across 12 dimensions for integral country search"
+      },
+      "title": "My Perspectives",
+      "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+    },
+    "resultPage": {
+      "loadingTitle": "분석 데이터 조정 중...",
+      "loadingSubtitle": "당신에게 딱 맞는 목적지를 찾아보세요!",
+      "metaTitle": "관점 분석기",
+      "metaDescription": "심층적인 데이터와 직관이 결합된 독특한 보고서",
+      "test": {
+        "progress": "진전",
+        "next": "다음",
+        "previous": "이전의",
+        "submit": "결과 보기",
+        "loading": "분석 중",
+        "selectOption": "선택하기",
+        "insightBullets": ["당신의 진정한 자아의 별자리를 지도로 그려보세요."]
+      },
+      "result": {
+        "title": "My Perspectives",
+        "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+      },
+      "meta": {
+        "title": "My Perspectives",
+        "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles",
+        "keywords": "성격테스트, 자기발견, 심리학, 개인성장, MBTI"
+      }
+    },
+    "hero": {
+      "subtitle": "Deep analysis across 12 dimensions for integral country search",
+      "badge": "🌍 선호도 정밀 분석",
+      "cta": "국가 탐험 시작",
+      "features": [
+        "🧭 우선순위를 드러내는 절충 중심 질문",
+        "🎯 예산, 언어, 경력을 포함한 12가지 라이프스타일 차원",
+        "🌍 모든 대륙에 걸친 다양한 국가 매치",
+        "📊 즉시 공유할 수 있는 페르소나 지원 통찰력"
+      ],
+      "title": "나의 관점",
+      "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+    },
+    "features": {
+      "subtitle": "통합 국가 검색을 위한 12개 차원에 대한 심층 분석",
+      "items": [
+        {
+          "icon": "💸",
+          "title": "생활비 통찰력",
+          "description": "예산상의 편안함과 라이프스타일 기대치에 맞는 국가를 파악하세요."
+        },
+        {
+          "icon": "🗣️",
+          "title": "언어 및 커뮤니티 적합성",
+          "description": "현지 언어 지원과 커뮤니티 연결이 얼마나 필요한지 측정하세요."
+        },
+        {
+          "icon": "💼",
+          "title": "경력 및 성장 전망",
+          "description": "혁신 허브, 창의적인 현장, 지속 가능성 중심 경제를 비교해보세요."
+        },
+        {
+          "icon": "🌤️",
+          "title": "기후 및 지리",
+          "description": "계절, 해안선, 산, 야외 라이프스타일에 대한 사랑의 균형을 맞추세요."
+        }
+      ],
+      "title": "나의 관점"
+    },
+    "types": {
+      "nordic": "노르딕 수색자",
+      "mediterranean": "지중해의 연인",
+      "tropical": "열대 낙원 거주자",
+      "cosmopolitan": "글로벌 시민(코스모폴리탄)",
+      "mountainous": "산 탐험가",
+      "coastal": "바다 매니아",
+      "cultural": "유산 감사자",
+      "modern": "기술 개척자"
+    }
+  }
+}

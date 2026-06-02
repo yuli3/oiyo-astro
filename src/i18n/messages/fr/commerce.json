@@ -1,0 +1,48 @@
+{
+  "plans": {
+    "free": {
+      "features": {
+        "basic": "Accès aux coordonnées de sagesse de base (Saju, Zodiac, Celtic, etc.)"
+      },
+      "name": "The Keeper",
+      "description": "Open all channels of wisdom and embrace the era of sovereign insight."
+    },
+    "offering": {
+      "features": {
+        "ai_oracle": "AI Grand Oracle : Synthèse narrative de l'âme (1 session)"
+      },
+      "name": "The Keeper",
+      "description": "Open all channels of wisdom and embrace the era of sovereign insight."
+    },
+    "pro": {
+      "features": {
+        "unlimited_ai": "Synthèse Oracle IA illimitée et perspectives du Conseil",
+        "archive": "Archives du patrimoine personnel et soutien prioritaire"
+      },
+      "name": "Le Gardien",
+      "description": "Ouvrez tous les canaux de la sagesse et adoptez l’ère de la perspicacité souveraine."
+    }
+  },
+  "AccessGuard": {
+    "features": {
+      "grand_oracle": {
+        "lockTitle": "Une épiphanie cachée vous attend",
+        "lockDescription": "Les fragments de votre destin sont rassemblés. Le Grand Oracle est prêt à les intégrer dans un mythe personnel. Allez-vous réveiller la prophétie ?"
+      }
+    },
+    "actions": {
+      "offering": "Faire une offrande sacrée (1 $)",
+      "subscriber": "Devenez un gardien souverain"
+    }
+  },
+  "grandOracle": {
+    "resting": "L'Oracle baigne actuellement dans le silence éternel. Veuillez revenir lorsque l'alignement aura changé.",
+    "casting": "Lancer la synthèse",
+    "weaving": "Tisser des fragments de votre âme...",
+    "sovereignWisdom": "Sagesse souveraine",
+    "wisdomOfSovereign": "Le cadeau de l'Oracle sur votre chemin.",
+    "ready": "Votre destin est manifeste.",
+    "interrupted": "La synthèse a été interrompue. Veuillez réessayer."
+  },
+  "payment": "Options de Paiement"
+}

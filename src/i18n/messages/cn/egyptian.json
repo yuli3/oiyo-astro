@@ -1,0 +1,267 @@
+{
+  "title": "埃及占星术",
+  "description": "古代凯梅特众神与旬星的智慧。",
+  "systemName": "埃及占星术",
+  "narrative": "古代神祇与旬星",
+  "guardianDeity": "守护神",
+  "ariaLabel": "埃及神祇：{god}，拥有{attributes}。",
+  "deities": {
+    "thoth": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["知识分子", "交际性", "好奇的", "有创意"],
+      "strengths": ["解决问题", "写作", "教学", "记忆"],
+      "challenges": ["想太多", "紧张", "分离"],
+      "domain": ["智慧", "写作", "魔法", "Moon"]
+    },
+    "horus": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["勇敢", "雄心勃勃", "保护的", "魅力型"],
+      "strengths": ["领导", "战略", "正义", "决心"],
+      "challenges": ["冲动", "傲慢", "冲突"],
+      "domain": ["Sky", "War", "保护", "王权"]
+    },
+    "wadjet": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["保护的", "忠诚", "凶猛的", "Just"],
+      "strengths": ["直觉", "保护", "果断"],
+      "challenges": ["占有欲", "妒忌", "复仇心"],
+      "domain": ["保护", "版税", "正义", "自然"]
+    },
+    "sekhmet": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["凶猛的", "热情的", "保护的", "强大的"],
+      "strengths": ["勇气", "康复", "转型", "力量"],
+      "challenges": ["愤怒", "毁灭", "极端主义"],
+      "domain": ["War", "康复", "Sun", "毁灭"]
+    },
+    "bastet": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["培育", "俏皮", "独立的", "感性的"],
+      "strengths": ["优雅", "保护", "直觉", "魅力"],
+      "challenges": ["不可预测性", "虚荣", "独立"],
+      "domain": ["Home", "生育能力", "Cats", "Joy"]
+    },
+    "isis": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["培育", "Wise", "神奇", "决定"],
+      "strengths": ["康复", "魔法", "保护", "奉献精神"],
+      "challenges": ["过度保护", "操纵", "悲伤"],
+      "domain": ["魔法", "母性", "智慧", "自然"]
+    },
+    "osiris": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["Wise", "Just", "病人", "再生性"],
+      "strengths": ["判断", "更新", "稳定", "公平性"],
+      "challenges": ["被动性", "分离", "忧郁"],
+      "domain": ["地狱", "农业", "重生", "判断"]
+    },
+    "hathor": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["爱", "快乐", "艺术性", "培育"],
+      "strengths": ["创造力", "Love", "和谐", "乐趣"],
+      "challenges": ["放纵", "妒忌", "虚荣"],
+      "domain": ["Love", "美丽", "音乐", "Joy"]
+    },
+    "anubis": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["神秘", "保护的", "忠诚", "严肃的"],
+      "strengths": ["转型", "指导", "保护", "真相"],
+      "challenges": ["隔离", "痴迷", "黑暗"],
+      "domain": ["死亡", "木乃伊化", "来世", "保护"]
+    },
+    "seth": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["强大的", "混乱", "雄心勃勃", "不可预测"],
+      "strengths": ["力量", "勇气", "独立", "转型"],
+      "challenges": ["混乱", "暴力", "妒忌", "隔离"],
+      "domain": ["混乱", "沙漠", "风暴", "外国人"]
+    },
+    "geb": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["接地", "病人", "培育", "稳定的"],
+      "strengths": ["稳定", "生育能力", "耐心", "智慧"],
+      "challenges": ["固执", "占有欲", "惯性"],
+      "domain": ["地球", "生育能力", "矿物质", "蛇"]
+    },
+    "nut": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["空灵", "保护的", "宇宙", "产妇"],
+      "strengths": ["想象", "保护", "神秘", "无限"],
+      "challenges": ["距离", "不真实", "压倒"],
+      "domain": ["Sky", "星星", "宇宙", "出生"]
+    },
+    "ra": {
+      "name": "拉",
+      "symbol": "日盘",
+      "traits": ["强大的", "有创造力的", "光芒四射", "权威性"],
+      "strengths": ["领导", "活力", "照明", "真相"],
+      "challenges": ["自豪", "倦怠", "统治力"],
+      "domain": ["Sun", "创建", "Life", "命令"]
+    }
+  },
+  "resonance": {
+    "note": "档案馆在{domain}之神{deity}的庇护下观察您的灵魂。在古凯梅特，人们相信在这个时间出生的人携带{traits}能量。这不是命运，而是远古观察的回响。"
+  },
+  "elements": {
+    "Air": "风",
+    "Earth": "地",
+    "Fire": "火",
+    "Water": "水"
+  },
+  "colors": {
+    "Azure": "蔚蓝",
+    "Silver": "银色",
+    "White": "白色",
+    "Brown": "棕色",
+    "Green": "绿色",
+    "Amber": "琥珀色",
+    "Gold": "金色",
+    "Crimson": "深红",
+    "Orange": "橙色",
+    "Deep Blue": "深蓝",
+    "Turquoise": "绿松石色",
+    "Sea Green": "海绿"
+  },
+  "@/components/ontology/FactionCard": "",
+  "@/components/ontology/GenericFactionCard": "",
+  "": "",
+  "labels": {
+    "undiscovered": "未探索",
+    "meaning": "含义",
+    "element": "元素",
+    "nameVibration": "姓名振动",
+    "westernZodiac": "西方星座",
+    "sign": "星座",
+    "observation": "观察",
+    "easternZodiac": "东方生肖",
+    "animal": "生肖",
+    "dominion": "统辖",
+    "bureau": "天宫"
+  },
+  "returnToHome": "返回首页",
+  "contactSupport": "联系支持",
+  "syncingData": "正在同步您的数据...",
+  "guest": "访客",
+  "calibration": "校准",
+  "changeOrigin": "更改起源",
+  "todayInsight": {
+    "title": "今日洞察",
+    "soulOracle": "灵魂神谕",
+    "innerResonance": "内在共鸣",
+    "manifestMore": "显化更多"
+  },
+  "readingsLink": "查看解读",
+  "cards": {
+    "vitality": {
+      "title": "生命活力"
+    },
+    "resonance": {
+      "description": "您与他人的能量共鸣。",
+      "subtitle": "灵魂频率"
+    },
+    "foundation": {
+      "description": "您内心世界的支柱。",
+      "subtitle": "核心基础"
+    },
+    "elemental": {
+      "description": "塑造您本性的元素力量。",
+      "subtitle": "元素亲和力",
+      "title": "元素"
+    },
+    "onomancy": {
+      "description": "隐藏在您姓名中的奥秘含义。",
+      "subtitle": "姓名炼金"
+    },
+    "cognition": {
+      "description": "您独特的感知和处理世界的方式。",
+      "subtitle": "心智模式"
+    },
+    "vocation": {
+      "description": "您的灵魂天然擅长的道路。",
+      "subtitle": "灵魂召唤"
+    },
+    "destiny": {
+      "description": "您人生正在编织的宏大弧线。",
+      "subtitle": "命运之路"
+    }
+  },
+  "resonanceTitle": "共鸣",
+  "sections": {
+    "testArchitecture": {
+      "title": "测试架构",
+      "description": "评估的设计与结构。"
+    },
+    "emotionalResonance": {
+      "title": "情感共鸣",
+      "description": "情感如何流动并塑造您的道路。"
+    },
+    "grandArchives": {
+      "title": "大档案馆",
+      "description": "从您的结果中提炼出的智慧集合。"
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "元素"
+    },
+    "riasec": {
+      "description": "您的职业人格类型。"
+    },
+    "saju": {
+      "label": "四柱",
+      "description": "您命运的四根支柱。",
+      "polarity": "极性",
+      "element": "元素"
+    },
+    "archiveEntry": "进入档案",
+    "recordVerified": "记录已验证",
+    "tuning": {
+      "color": "幸运色",
+      "number": "幸运数字",
+      "direction": "吉祥方向",
+      "flower": "灵魂之花",
+      "gemstone": "守护宝石",
+      "luckyStar": "幸运星",
+      "title": "宇宙调频",
+      "favorableDays": "吉利日期",
+      "synergy": "协同"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "紫微斗数"
+  },
+  "_": "",
+  "mayan": {
+    "systemName": "玛雅星际曼陀罗",
+    "narrative": "玛雅叙事",
+    "solarSeal": "太阳印记",
+    "tone": "银河音调"
+  },
+  "celtic": {
+    "systemName": "凯尔特树木星座",
+    "narrative": "凯尔特叙事",
+    "treeSign": "树木星座",
+    "ogham": "欧甘字母"
+  },
+  "egyptianGuardian": "埃及守护神",
+  "celticTreeSign": "凯尔特树木星座",
+  "birthSymbols": "诞生象征",
+  "symbols": {
+    "Stone": "诞生石",
+    "Flower": "诞生花",
+    "Star": "幸运星"
+  }
+}

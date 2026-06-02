@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "keywords": "人生模拟器, 人生选择, 人生模拟, 职业模拟, 测试, 人生游戏, 未来预测, 人生路径",
+    "title": "人生模拟器",
+    "description": "人生模拟器测试与分析"
+  },
+  "hero": {
+    "subtitle": "做出选择，发现等待你的人生",
+    "cta": "开始"
+  },
+  "test": {
+    "progressTitle": "Life Progress",
+    "ageUnit": " years old",
+    "stageLabel": "Life Stage {stage}"
+  },
+  "stats": {
+    "career": "职业",
+    "wealth": "财富",
+    "relationship": "Relationship",
+    "happiness": "幸福",
+    "health": "Health"
+  },
+  "result": {
+    "rarity": {
+      "legendary": "Legendary",
+      "rare": "Rare",
+      "uncommon": "Uncommon",
+      "common": "Common"
+    },
+    "scoreLabel": "Total Score",
+    "rankingLabel": "Top Ranking",
+    "achievementsLabel": "Key Achievements",
+    "adviceLabel": "💡 Life Advice",
+    "finalStatsTitle": "Final Stats",
+    "journeyTitle": "Life Journey",
+    "ageAxis": "Age",
+    "share": "Share Result",
+    "retake": "Live Again"
+  },
+  "cta": {
+    "subtitle": "做出选择，发现等待你的人生",
+    "button": "开始"
+  }
+}

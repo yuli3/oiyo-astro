@@ -1,0 +1,408 @@
+{
+  "subtitle": "Ontology Dashboard deciphering your existence",
+  "title": "Library of Wisdom",
+  "sovereign": {
+    "sections": {
+      "hero": "Hero",
+      "oracle": "Oracle",
+      "ontology": "Ontology",
+      "vault": "Vault",
+      "growth": "Growth"
+    },
+    "labels": {
+      "ascend": "Ascend to Prophecy",
+      "celestialChart": "Celestial Chart",
+      "archives": "Imperial Archives",
+      "evolution": "Evolution in Progress",
+      "unlocked": "{count} Premium Shards",
+      "exploration": "Exploration Progress: {percent}%"
+    },
+    "growth": {
+      "full": "Complete Awakening",
+      "unfinished": "The Unfinished Journey",
+      "fullDesc": "You have manifested all primal shards of your sovereignty. The universe bows to your complete self-awareness.",
+      "unfinishedDesc": "There are shards of your ontology not yet manifested in the physical realm. Illuminate the remaining shadows to complete your awakening.",
+      "review": "Review All Truths",
+      "discover": "Discover Missing Shards"
+    }
+  },
+  "profile": {
+    "labels": {
+      "entity": "Sovereign Entity",
+      "title": "Your Sacred Record",
+      "description": "The compilation of every truth you have declared across the dimensions of OIYO.",
+      "scroll": "Scroll Life Shards",
+      "reflection": "Soul Reflection",
+      "timeline": "Truth Timeline",
+      "archive": "Manifestation Archive",
+      "ascension": "Ascension Status",
+      "ascensionDesc": "Every completed diagnosis is a layer of mist removed from your true self. You approach a complete state of ontological awakening.",
+      "shards": "Shards",
+      "tier": "Tier"
+    }
+  },
+  "recommendations": {
+    "createGoal": {
+      "title": "Start Achieving Goals",
+      "description": "Set your first goal and feel the satisfaction of achievement.",
+      "action": "Create Goal"
+    },
+    "takeTest": {
+      "title": "Discover More About Yourself",
+      "description": "Reveal your hidden potential with a new personality test.",
+      "action": "Discover True Self"
+    },
+    "checkCompatibility": {
+      "title": "Check Compatibility",
+      "description": "See how well you fit with your friends.",
+      "action": "Check Now"
+    }
+  },
+  "vault": {
+    "title": "The Sacred Treasury",
+    "description": "Your collection of digital artifacts and eternal scrolls.",
+    "securedCount": "{count} Secured",
+    "premiumArtifact": "Premium Artifact",
+    "view": "View",
+    "locked": "Sacred Lock Active",
+    "claim": "Claim Artifact →",
+    "empty": "\"The treasury remains veiled in silence. Begin your journey of self-discovery to populate these halls with eternal knowledge.\"",
+    "firstTrial": "Start First Trial"
+  },
+  "fragmentsTitle": "Scattered Fragments",
+  "fragmentsDesc": "Your soul's data is scattered across the stars. Gather them to see the full picture.",
+  "beginJourney": "Begin Journey",
+  "heroTitle": "Your Ontology Awaits",
+  "heroSubtitle": "Discover your cosmic blueprint through ancient wisdom and modern psychology. Your journey begins with your birth coordinates.",
+  "continue": "Continue Journey",
+  "revelation": "Universal Revelation",
+  "premiumTitle": "Premium Analysis",
+  "rootsTitle": "Primal Roots",
+  "branchesTitle": "Branching Growth",
+  "primalOrigin": "Primal Origin",
+  "destinyCoordinates": "Destiny Coordinates",
+  "unveilRoots": "Unveil your cosmic roots",
+  "socialCognition": "Social Cognition",
+  "socialDNA": "Social DNA",
+  "mapGrowth": "Map your social growth",
+  "viewReport": "View Report",
+  "unlockNow": "Unlock Now",
+  "history": "Recent Discovery History",
+  "noHistory": "No discovery history yet. Start a new exploration.",
+  "startDiscovery": "Start Discovery",
+  "lockedTitle": "Locked Wisdom",
+  "lockedDescription": "Data in this area is insufficient. Complete analysis to unlock.",
+  "viewAll": "View All",
+  "categories": {
+    "personality": "Personality & Temperament",
+    "destiny": "Destiny & Cycles",
+    "cognitive": "Cognition & Thinking",
+    "wisdom": "Classical Wisdom"
+  },
+  "resonanceLabels": {
+    "harmonic": "Harmonic Flow",
+    "balanced": "Balanced",
+    "friction": "High Friction"
+  },
+  "moonPhase": {
+    "New Moon": "New Moon",
+    "Waxing Crescent": "Waxing Crescent",
+    "First Quarter": "First Quarter",
+    "Waxing Gibbous": "Waxing Gibbous",
+    "Full Moon": "Full Moon",
+    "Waning Gibbous": "Waning Gibbous",
+    "Last Quarter": "Last Quarter",
+    "Waning Crescent": "Waning Crescent",
+    "Full": "Full Moon",
+    "New": "New Moon",
+    "Waxing": "Waxing",
+    "Waning": "Waning"
+  },
+  "guidanceTitle": "Pathfinder",
+  "guidanceSubtitle": "Your Imperial Decree for Career & Soul",
+  "recommendedCareers": "Recommended Vocational Paths",
+  "recommendedHobbies": "Recommended Pursuits of Joy",
+  "soulGuidance": "Soul Guidance",
+  "basedOn": "Based on {type}",
+  "labels": {
+    "undiscovered": "Undiscovered",
+    "meaning": "Meaning",
+    "element": "Element",
+    "nameVibration": "Name Vibration",
+    "westernZodiac": "Western Zodiac",
+    "sign": "Sign",
+    "observation": "Observation",
+    "easternZodiac": "Eastern Zodiac",
+    "animal": "Animal",
+    "dominion": "Dominion",
+    "bureau": "Bureau",
+    "alignment": "Alignment"
+  },
+  "humanDesign": {
+    "types": {
+      "Generator": "Generator",
+      "Projector": "Projector",
+      "Manifestor": "Manifestor",
+      "Reflector": "Reflector",
+      "Manifesting Generator": "Manifesting Generator"
+    }
+  },
+  "celticTrees": {
+    "birch": "Birch",
+    "rowan": "Rowan",
+    "ash": "Ash",
+    "alder": "Alder",
+    "willow": "Willow",
+    "hawthorn": "Hawthorn",
+    "oak": "Oak",
+    "holly": "Holly",
+    "hazel": "Hazel",
+    "vine": "Vine",
+    "ivy": "Ivy",
+    "reed": "Reed",
+    "elder": "Elder"
+  },
+  "common": {
+    "noGuidance": "No guidance available yet."
+  },
+  "mayanTones": {
+    "magnetic": "Magnetic",
+    "lunar": "Lunar",
+    "electric": "Electric",
+    "selfExisting": "Self-Existing",
+    "overtone": "Overtone",
+    "rhythmic": "Rhythmic",
+    "resonant": "Resonant",
+    "galactic": "Galactic",
+    "solar": "Solar",
+    "planetary": "Planetary",
+    "spectral": "Spectral",
+    "crystal": "Crystal",
+    "cosmic": "Cosmic"
+  },
+  "mayanSeals": {
+    "dragon": "Dragon",
+    "wind": "Wind",
+    "night": "Night",
+    "seed": "Seed",
+    "serpent": "Serpent",
+    "worldbridger": "Worldbridger",
+    "hand": "Hand",
+    "star": "Star",
+    "moon": "Moon",
+    "dog": "Dog",
+    "monkey": "Monkey",
+    "human": "Human",
+    "skywalker": "Skywalker",
+    "wizard": "Wizard",
+    "eagle": "Eagle",
+    "warrior": "Warrior",
+    "earth": "Earth",
+    "mirror": "Mirror",
+    "storm": "Storm",
+    "sun": "Sun"
+  },
+  "elements": {
+    "wood": "Wood",
+    "fire": "Fire",
+    "earth": "Earth",
+    "metal": "Metal",
+    "water": "Water",
+    "Wood": "Wood",
+    "Fire": "Fire",
+    "Earth": "Earth",
+    "Metal": "Metal",
+    "Water": "Water",
+    "Air": "Air"
+  },
+  "returnToHome": "Return Home",
+  "contactSupport": "Contact Support",
+  "syncingData": "Syncing your data...",
+  "guest": "Guest",
+  "calibration": "Calibration",
+  "changeOrigin": "Change Origin",
+  "todayInsight": {
+    "title": "Today's Insight",
+    "soulOracle": "Soul Oracle",
+    "innerResonance": "Inner Resonance",
+    "manifestMore": "Manifest More"
+  },
+  "readingsLink": "View All Readings",
+  "cards": {
+    "vitality": {
+      "title": "Vitality Index"
+    },
+    "resonance": {
+      "description": "Your compatibility with the cosmic current today.",
+      "subtitle": "Daily Resonance"
+    },
+    "foundation": {
+      "description": "The elemental forces shaping your destiny.",
+      "subtitle": "Elemental Foundation"
+    },
+    "elemental": {
+      "description": "Your elemental blueprint and its influence.",
+      "subtitle": "Elemental Profile",
+      "title": "Elements"
+    },
+    "onomancy": {
+      "description": "The vibrational frequency of your name.",
+      "subtitle": "Name Analysis"
+    },
+    "cognition": {
+      "description": "Your cognitive style and thinking patterns.",
+      "subtitle": "Cognitive Map"
+    },
+    "vocation": {
+      "description": "Career paths aligned with your soul blueprint.",
+      "subtitle": "Vocation Guide"
+    },
+    "destiny": {
+      "description": "The karmic threads woven into your life path.",
+      "subtitle": "Destiny Thread"
+    }
+  },
+  "resonanceTitle": "Resonance Hub",
+  "sections": {
+    "testArchitecture": {
+      "title": "Test Architecture",
+      "description": "Explore the systems used to decode your identity."
+    },
+    "emotionalResonance": {
+      "title": "Emotional Resonance",
+      "description": "Your emotional frequency and relational patterns."
+    },
+    "grandArchives": {
+      "title": "Grand Archives",
+      "description": "A complete record of your self-discovery journey."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "Elemental Analysis"
+    },
+    "riasec": {
+      "description": "Holland Code career aptitude profile."
+    },
+    "saju": {
+      "label": "Four Pillars",
+      "description": "Your Korean destiny coordinates.",
+      "polarity": "Polarity",
+      "element": "Element"
+    },
+    "archiveEntry": "Archive Entry",
+    "recordVerified": "Record Verified",
+    "tuning": {
+      "color": "Lucky Color",
+      "number": "Lucky Number",
+      "direction": "Lucky Direction",
+      "flower": "Lucky Flower",
+      "gemstone": "Lucky Gemstone",
+      "luckyStar": "Lucky Star",
+      "title": "Fortune Tuning",
+      "favorableDays": "Favorable Days",
+      "synergy": "Synergy Score"
+    }
+  },
+  "systems": {
+    "ziwei": "Zi Wei Dou Shu"
+  },
+  "dailyInsight": {
+    "cosmicEnergy": "Cosmic Energy",
+    "flowerOfDay": "Flower of the Day",
+    "crystalOfPower": "Crystal of Power",
+    "guidingStar": "Guiding Star"
+  },
+  "sajuForm": {
+    "title": "Enter Birth Details",
+    "description": "We use your birth coordinates to calculate your Four Pillars.",
+    "name": "Name",
+    "birthDate": "Birth Date",
+    "birthTime": "Birth Time",
+    "timeHint": "Leave blank if unknown",
+    "gender": "Gender",
+    "female": "Female",
+    "male": "Male"
+  },
+  "scope": {
+    "weekly": "Weekly Fortune",
+    "monthly": "Monthly Fortune",
+    "yearly": "Annual Fortune"
+  },
+  "rating": {
+    "critical": "Warning",
+    "low": "Low",
+    "moderate": "Moderate",
+    "good": "Good",
+    "excellent": "Excellent"
+  },
+  "card": {
+    "score": "Score: {score}/100",
+    "advice": "💡 Advice",
+    "luckyNumbers": "Lucky Numbers",
+    "luckyColors": "Lucky Colors",
+    "warnings": "⚠️ Warnings"
+  },
+  "no_results": "No artifacts found in your collection.",
+  "discover_btn": "Discover Your Path",
+  "result_label": "Synthesis Result",
+  "view_details": "View Detailed Wisdom",
+  "header": {
+    "title": "My Dashboard",
+    "description": "Welcome to your sacred space."
+  },
+  "modern": {
+    "economic": {
+      "title": "Economic School Analysis",
+      "subtitle": "Economic Orientation",
+      "factions": {
+        "ECON_CLASSICAL": {
+          "name": "Classical Economics",
+          "description": "Focuses on individual rational choices and market equilibrium. This approach values personal responsibility and the organic efficiency of balanced systems."
+        },
+        "ECON_KEYNESIAN": {
+          "name": "Keynesian Economics",
+          "description": "Emphasizes aggregate demand and proactive intervention. This perspective values collective stability and the wisdom of timely, supportive action."
+        },
+        "ECON_MONETARIST": {
+          "name": "Monetarism",
+          "description": "Focuses on money supply and long-term price stability. Values consistency, clear rules, and the predictability of fundamental systems."
+        },
+        "ECON_BEHAVIORAL": {
+          "name": "Behavioral Economics",
+          "description": "Applies psychological insights to explain economic decisions. Values human understanding, empathy, and the nuanced reality of everyday choices."
+        },
+        "ECON_AUSTRIAN": {
+          "name": "Austrian School",
+          "description": "Emphasizes entrepreneurial discovery and subjectivism. Values creative liberty, personal insight, and the unique value of individual perspectives."
+        }
+      }
+    },
+    "political": {
+      "title": "Political Orientation Analysis",
+      "subtitle": "Political Landscape",
+      "factions": {
+        "POL_CONSERVATISM": {
+          "name": "Conservatism",
+          "description": "Values tradition, stability, and gradual reform. This approach seeks to preserve hard-won wisdom while ensuring a secure and steady future."
+        },
+        "POL_LIBERALISM": {
+          "name": "Liberalism",
+          "description": "Emphasizes individual liberty, equality, and progress. Values the freedom to explore new possibilities and the inherent dignity of every person."
+        },
+        "POL_SOCIALISM": {
+          "name": "Socialism",
+          "description": "Focuses on social justice, equality, and community welfare. Values mutual support, collective well-being, and the strength found in solidarity."
+        },
+        "POL_LIBERTARIANISM": {
+          "name": "Libertarianism",
+          "description": "Prioritizes minimal intervention and maximum individual autonomy. Values self-determination and the protection of private space and initiative."
+        },
+        "POL_MODERATISM": {
+          "name": "Moderatism",
+          "description": "Seeks a balance between order and progress. Values pragmatic solutions, dialogue, and the finding of common ground for the greater good."
+        }
+      }
+    }
+  }
+}

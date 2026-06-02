@@ -1,0 +1,14 @@
+{
+  "welcome": {
+    "title": "Complet",
+    "description": "Setup finished."
+  },
+  "interests": {
+    "title": "Complet",
+    "description": "Setup finished."
+  },
+  "complete": {
+    "title": "Terminer",
+    "description": "Installation terminée."
+  }
+}

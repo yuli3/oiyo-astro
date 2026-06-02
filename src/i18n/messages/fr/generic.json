@@ -1,0 +1,700 @@
+{
+  "generic": {
+    "questions": [
+      {
+        "id": "EI_01",
+        "text": "Lorsque vous rencontrez de nouvelles personnes, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Approchez-les activement et démarrez des conversations",
+            "value": "E"
+          },
+          {
+            "text": "Attendez qu'ils vous approchent en premier",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_02",
+        "text": "Lorsque vous êtes stressé, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Rencontrez des amis et parlez pour vous sentir mieux",
+            "value": "E"
+          },
+          {
+            "text": "Passez du temps seul pour organiser vos pensées",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_03",
+        "text": "Lors de fêtes ou de rassemblements, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Parlez activement avec de nombreuses personnes différentes",
+            "value": "E"
+          },
+          {
+            "text": "Ayez des conversations approfondies avec quelques personnes proches",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_04",
+        "text": "Lorsque vous résolvez des problèmes, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Discutez avec les autres pour avoir des idées",
+            "value": "E"
+          },
+          {
+            "text": "Réfléchissez profondément seul avant de tirer des conclusions",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_05",
+        "text": "Concernant les appels téléphoniques, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Profitez de longs appels et appelez fréquemment les autres",
+            "value": "E"
+          },
+          {
+            "text": "Passez des appels courts uniquement lorsque cela est nécessaire",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_06",
+        "text": "La façon idéale de passer votre week-end est :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Être actif dehors avec des amis",
+            "value": "E"
+          },
+          {
+            "text": "Profiter de ses loisirs seul à la maison",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_07",
+        "text": "Lors de réunions ou de discussions, vous :",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Partagez immédiatement vos opinions et participez activement",
+            "value": "E"
+          },
+          {
+            "text": "Réfléchissez bien avant de parler avec prudence",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "SN_01",
+        "text": "Lorsque vous démarrez un nouveau projet :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Commencez par des plans et des détails spécifiques",
+            "value": "S"
+          },
+          {
+            "text": "Imaginez d’abord la vision globale et les possibilités",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_02",
+        "text": "Lorsque vous recevez des informations, vous :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Concentrez-vous sur des faits et des données concrets",
+            "value": "S"
+          },
+          {
+            "text": "Recherchez des significations et des possibilités cachées",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_03",
+        "text": "Entre passé et futur :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Valoriser les expériences et les traditions passées",
+            "value": "S"
+          },
+          {
+            "text": "Sont intéressés par les possibilités et les changements futurs",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_04",
+        "text": "Lors de votre apprentissage, vous :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Apprendre étape par étape avec méthode",
+            "value": "S"
+          },
+          {
+            "text": "Comprendre le contexte global avant d’apprendre les détails",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_05",
+        "text": "Dans la vie quotidienne, vous :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Poursuivre des choses réalistes et pratiques",
+            "value": "S"
+          },
+          {
+            "text": "Comme les nouvelles idées et les innovations",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_06",
+        "text": "Lorsque vous examinez des problèmes, vous :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Focus sur des solutions spécifiques",
+            "value": "S"
+          },
+          {
+            "text": "Explorez diverses perspectives et de nouvelles approches",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_07",
+        "text": "Lorsque vous rencontrez l’art ou la littérature :",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Préfère les expressions réalistes et claires",
+            "value": "S"
+          },
+          {
+            "text": "Sont attirés par les expressions symboliques et abstraites",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "TF_01",
+        "text": "Lorsque vous prenez des décisions, vous :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Prioriser l’analyse logique et les critères objectifs",
+            "value": "T"
+          },
+          {
+            "text": "Tenez compte des valeurs personnelles et de l’impact émotionnel",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_02",
+        "text": "Dans les situations de conflit, vous :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Essayez de résoudre sur la base de faits et de principes",
+            "value": "T"
+          },
+          {
+            "text": "Prioriser les émotions et les relations des personnes impliquées",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_03",
+        "text": "Lorsque vous recevez des critiques, vous :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Analyser objectivement pour trouver des axes d'amélioration",
+            "value": "T"
+          },
+          {
+            "text": "Sentez-vous blessé mais essayez de comprendre leurs intentions",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_04",
+        "text": "Lorsque vous évaluez les autres :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Juger en fonction de ses capacités et de ses performances",
+            "value": "T"
+          },
+          {
+            "text": "Valoriser le caractère et l’effort",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_05",
+        "text": "Lorsque vous travaillez en équipe, vous :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Prioriser l’efficacité et les résultats",
+            "value": "T"
+          },
+          {
+            "text": "Valoriser l'harmonie et l'ambiance de l'équipe",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_06",
+        "text": "Lorsqu'un ami demande conseil :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Apporter des solutions au problème",
+            "value": "T"
+          },
+          {
+            "text": "Faites preuve d'empathie avec leurs émotions et réconfortez-les",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_07",
+        "text": "Dans les règles et situations exceptionnelles :",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Je pense que les principes doivent être appliqués de manière cohérente",
+            "value": "T"
+          },
+          {
+            "text": "Pensez que la flexibilité doit être démontrée en fonction de la situation",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "JP_01",
+        "text": "Dans la vie quotidienne, vous :",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Faites des plans et suivez-les",
+            "value": "J"
+          },
+          {
+            "text": "Agir avec flexibilité en fonction de chaque situation",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_02",
+        "text": "Lorsque vous travaillez sur des tâches avec des délais :",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Travaillez dessus régulièrement à l'avance",
+            "value": "J"
+          },
+          {
+            "text": "Travailler intensément à l’approche de l’échéance",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_03",
+        "text": "Lorsque vous partez en voyage, vous :",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Préparez les horaires détaillés et les réservations à l’avance",
+            "value": "J"
+          },
+          {
+            "text": "Faites des projets approximatifs et profitez spontanément",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_04",
+        "text": "À propos de l'organisation de votre chambre ou de votre bureau :",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Il doit toujours être propre et organisé",
+            "value": "J"
+          },
+          {
+            "text": "Un peu de désordre, c'est bien tant que vous pouvez trouver ce dont vous avez besoin",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_05",
+        "text": "Lorsque de nouvelles opportunités se présentent :",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Réfléchissez bien avant de décider",
+            "value": "J"
+          },
+          {
+            "text": "Essayez-le d'abord et ajustez plus tard",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_06",
+        "text": "Lorsque vous magasinez, vous :",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Décidez à l’avance de ce dont vous avez besoin et achetez-le",
+            "value": "J"
+          },
+          {
+            "text": "Parcourez et achetez sur place ce qui attire votre attention",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_07",
+        "text": "Quand vous devez prendre une décision :",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Décidez vite et mettez-le en action",
+            "value": "J"
+          },
+          {
+            "text": "Gardez plusieurs options ouvertes et décidez lentement",
+            "value": "P"
+          }
+        ]
+      }
+    ],
+    "types": {
+      "ISTJ": {
+        "strengths": [
+          "Forte responsabilité",
+          "Attention précise aux détails",
+          "Concentration intense",
+          "Honnêteté"
+        ],
+        "challenges": [
+          "Résistance au changement",
+          "Rigidité",
+          "Insensibilité aux sentiments des autres"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ISFJ": {
+        "strengths": [
+          "Des soins méticuleux",
+          "Diligence",
+          "Fort instinct de protection",
+          "Exécution pratique"
+        ],
+        "challenges": [
+          "Sacrifice de soi excessif",
+          "Sensibilité à la critique",
+          "Difficulté à exprimer ses propres émotions"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "INFJ": {
+        "strengths": [
+          "Aperçu approfondi",
+          "Esprit de décision et volonté",
+          "Empathie",
+          "Résolution créative de problèmes"
+        ],
+        "challenges": [
+          "Perfectionnisme excessif",
+          "Vulnérabilité au burn-out",
+          "Difficulté à révéler son vrai soi"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "INTJ": {
+        "strengths": [
+          "Pensée stratégique",
+          "Condamnation indépendante",
+          "Curiosité intellectuelle",
+          "Efficacité"
+        ],
+        "challenges": [
+          "Attitude cynique",
+          "Directivité dans la communication",
+          "Scepticisme des règles sociales"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ISTP": {
+        "strengths": [
+          "Gestion de crise sereine",
+          "Maniabilité pratique",
+          "Jugement objectif",
+          "Adaptabilité flexible"
+        ],
+        "challenges": [
+          "Manque de considération pour les sentiments des autres",
+          "Facilement ennuyé",
+          "Difficulté à suivre les plans"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ISFP": {
+        "strengths": [
+          "Sensibilité artistique",
+          "Forte empathie",
+          "Immersion dans le présent",
+          "Modestie"
+        ],
+        "challenges": [
+          "Indécision",
+          "Difficulté à planifier l’avenir",
+          "Besoin de passer du temps seul fréquemment"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "INFP": {
+        "strengths": [
+          "Imagination vive",
+          "Altruisme fort",
+          "Ouverture d'esprit",
+          "À la recherche de l'authenticité"
+        ],
+        "challenges": [
+          "Trop idéaliste",
+          "Prendre les critiques personnellement",
+          "Négliger les détails pratiques"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "INTP": {
+        "strengths": [
+          "Analyse logique",
+          "Idées originales",
+          "Perspective objective",
+          "Compréhension intellectuelle rapide"
+        ],
+        "challenges": [
+          "Manque de mise en œuvre",
+          "Attitude trop analytique",
+          "Difficulté dans les situations sociales"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ESTP": {
+        "strengths": [
+          "Action audacieuse",
+          "Charme social",
+          "Excellent jugement situationnel",
+          "Sens pratique"
+        ],
+        "challenges": [
+          "Comportement impulsif",
+          "Manque de planification approfondie",
+          "Résistance aux règles et à la discipline"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ESFP": {
+        "strengths": [
+          "Capacité à procurer de la joie",
+          "Affinité sociale",
+          "Aide pratique",
+          "Observation"
+        ],
+        "challenges": [
+          "Manque de concentration",
+          "Évitement des conflits",
+          "Enjouement excessif ou recherche de stimulation"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ENFP": {
+        "strengths": [
+          "Imagination vive",
+          "Forte affinité",
+          "Attitude optimiste",
+          "Compétences en communication"
+        ],
+        "challenges": [
+          "Mise en œuvre dispersée et manquante",
+          "Vulnérabilité au stress émotionnel",
+          "Difficulté avec les tâches répétitives"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ENTP": {
+        "strengths": [
+          "Pensée originale",
+          "Esprit vif",
+          "Compétences en débat logique",
+          "Ouverture"
+        ],
+        "challenges": [
+          "Peut être mal compris en raison d'un débat amoureux",
+          "Manque d'achèvement des détails",
+          "Tendance à ignorer les sentiments des autres"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ESTJ": {
+        "strengths": [
+          "Forte motivation",
+          "Compétences en organisation et en gestion",
+          "Autogestion diligente",
+          "Jugement pratique"
+        ],
+        "challenges": [
+          "Peut être trop strict",
+          "Manque d'empathie",
+          "Résistance aux nouvelles méthodes"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ESFJ": {
+        "strengths": [
+          "Inclusivité chaleureuse",
+          "Forte responsabilité",
+          "Collaboration exceptionnelle",
+          "Altruisme pratique"
+        ],
+        "challenges": [
+          "Trop conscient des opinions des autres",
+          "Facilement blessé par les critiques",
+          "Difficulté à dire non"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ENFJ": {
+        "strengths": [
+          "Leadership charismatique",
+          "Forte empathie",
+          "Capacité à encourager les autres",
+          "Responsabilité"
+        ],
+        "challenges": [
+          "Idéalisme excessif",
+          "Implication excessive dans les problèmes des autres",
+          "Autocritique sévère"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      },
+      "ENTJ": {
+        "strengths": [
+          "Planification stratégique",
+          "Un leadership fort",
+          "Jugement logique",
+          "Maximiser l'efficacité"
+        ],
+        "challenges": [
+          "Une froideur qui peut paraître impersonnelle",
+          "Manque de patience",
+          "Peut dominer les opinions des autres"
+        ],
+        "name": "Commandant",
+        "emoji": "👔",
+        "description": "Leaders audacieux, imaginatifs et dotés d'une forte volonté, qui trouvent toujours un moyen.",
+        "detailedDescription": "Stratège né, vous voyez la vie comme une série de défis à relever. Votre volonté de fer et votre rationalité vous permettent de mener à bien des projets complexes. Vous appréciez l'efficacité et n'hésitez pas à prendre l'initiative pour diriger les autres vers le succès."
+      }
+    }
+  }
+}

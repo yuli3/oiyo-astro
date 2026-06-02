@@ -1,0 +1,26 @@
+{
+  "hair": "Hair",
+  "eyewear": "Eyewear",
+  "palette": "Palette",
+  "overview": {
+    "content": "Overview content."
+  },
+  "usage": {
+    "content": "Usage content."
+  },
+  "rights": {
+    "content": "Rights content."
+  },
+  "conduct": {
+    "content": "Conduct content."
+  },
+  "ip": {
+    "content": "IP content."
+  },
+  "users": "Users",
+  "performance": "Performance",
+  "pricing": "Pricing",
+  "features": "Features",
+  "faq": "FAQ",
+  "trust": "Trust & Safety"
+}

@@ -1,0 +1,336 @@
+{
+  "chineseZodiac": {
+    "title": "Chinese Zodiac",
+    "description": "12 Animals",
+    "accuracy": "High",
+    "duration": "Quick"
+  },
+  "numerology": {
+    "title": "Numerology",
+    "description": "Life path",
+    "accuracy": "High",
+    "duration": "Quick"
+  },
+  "primal-origin": {
+    "landing": {
+      "badge": "The Ultimate Revelation",
+      "title": "Discover Your Primal Origin",
+      "subtitle": "Unlock the digital seal of your destiny. A single key—your birth—opens all doors: Saju, Zodiacs, Numerology, and Blood Type combined.",
+      "cta": "Unveil My Origin",
+      "features": {
+        "triple": {
+          "title": "Triple Ontology",
+          "desc": "Saju, Numerology, and Western Astrology woven into a single narrative."
+        },
+        "celestial": {
+          "title": "Celestial Mapping",
+          "desc": "Precise analysis of your Four Pillars and your life path trajectory."
+        },
+        "genetic": {
+          "title": "Genetic Blueprint",
+          "desc": "How your blood type influences your cosmic traits and personality."
+        }
+      }
+    },
+    "input": {
+      "title": "The Primal Origin",
+      "subtitle": "Unlock your digital seal and reveal your destiny",
+      "nameLabel": "Name (Optional)",
+      "namePlaceholder": "Your full name",
+      "genderLabel": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "birthDateLabel": "Birth Date",
+      "birthTimeLabel": "Birth Time",
+      "bloodTypeLabel": "Blood Type",
+      "submitButton": "Unveil My Origin",
+      "decrypting": "Decrypting Origin..."
+    }
+  },
+  "T": "T",
+  "dailyLucky": {
+    "back": "Back",
+    "colors": {
+      "beige": "Beige",
+      "black": "Black",
+      "gold": "Gold",
+      "green": "Green",
+      "mint": "Mint",
+      "navy": "Navy",
+      "pink": "Pink",
+      "purple": "Purple",
+      "red": "Red",
+      "sky": "Sky Blue",
+      "white": "White"
+    },
+    "directions": {
+      "east": "East",
+      "north": "North",
+      "northeast": "Northeast",
+      "northwest": "Northwest",
+      "south": "South",
+      "southeast": "Southeast",
+      "southwest": "Southwest",
+      "west": "West"
+    },
+    "footer": "Daily Guidance",
+    "items": {
+      "book": "Book",
+      "cap": "Cap",
+      "coffee": "Coffee",
+      "coin": "Coin",
+      "earring": "Earring",
+      "glasses": "Glasses",
+      "headphones": "Headphones",
+      "key": "Key",
+      "mirror": "Mirror",
+      "pen": "Pen",
+      "perfume": "Perfume",
+      "phone": "Phone",
+      "plant": "Plant",
+      "ring": "Ring",
+      "sneakers": "Sneakers",
+      "umbrella": "Umbrella",
+      "watch": "Watch"
+    },
+    "keyword": "Daily Keyword",
+    "keywords": {
+      "cleaning": "Cleaning",
+      "connection": "Connection",
+      "courage": "Courage",
+      "creativity": "Creativity",
+      "focus": "Focus",
+      "kindness": "Kindness",
+      "patience": "Patience",
+      "rest": "Rest",
+      "savings": "Savings",
+      "silence": "Silence"
+    },
+    "meta": {
+      "description": "Your daily lucky items and colors",
+      "keywords": "lucky, fortune",
+      "title": "Daily Lucky"
+    },
+    "result": {
+      "description": "Your Luck",
+      "title": "Result"
+    },
+    "sharePersonalizedPrefix": "My Luck",
+    "shareTemplate": "Check this out",
+    "subtitle": "Boost your luck today",
+    "test": {
+      "insightBullets": ["Profound Insight"],
+      "loading": "Loading...",
+      "next": "Next",
+      "previous": "Previous",
+      "progress": "Progress",
+      "selectOption": "Select",
+      "submit": "Submit"
+    },
+    "title": "Daily Lucky",
+    "yourLucky": "Your Lucky Items",
+    "zodiac": {
+      "aquarius": "Aquarius",
+      "aries": "Aries",
+      "cancer": "Cancer",
+      "capricorn": "Capricorn",
+      "gemini": "Gemini",
+      "leo": "Leo",
+      "libra": "Libra",
+      "pisces": "Pisces",
+      "sagittarius": "Sagittarius",
+      "scorpio": "Scorpio",
+      "taurus": "Taurus",
+      "virgo": "Virgo"
+    }
+  },
+  "dailyOracle": {
+    "hub": {
+      "luckyDesc": "Check your luck",
+      "luckyTitle": "Lucky Items",
+      "personaDesc": "Your daily persona",
+      "personaTitle": "Persona",
+      "subtitle": "Hub",
+      "tabs": {
+        "lucky": "Lucky",
+        "oracle": "Oracle",
+        "personality": "Personality"
+      },
+      "title": "Oracle Hub"
+    },
+    "identify": {
+      "button": "Start",
+      "description": "Identify your fate",
+      "title": "Identify"
+    },
+    "loading": "Consulting the Oracle...",
+    "share": "Share",
+    "subtitle": "Daily Wisdom",
+    "title": "Daily Oracle"
+  },
+  "dailyReading": {
+    "cards": {
+      "refresh": "Refresh",
+      "reminder": "Remember",
+      "subtitle": "Cards"
+    },
+    "hero": {
+      "cta": "Read Now",
+      "eyebrow": "Today",
+      "subtitle": "Reading"
+    },
+    "meta": {
+      "description": "Daily Card Reading",
+      "keywords": "tarot, oracle",
+      "title": "Card Reading"
+    },
+    "summary": {
+      "energy": "Energy",
+      "focus": "Focus",
+      "luckyColor": "Color"
+    }
+  },
+  "days": "Days",
+  "description": "Your Fortune",
+  "energyScore": "Energy Score",
+  "feature1Desc": "Feature 1",
+  "feature1Title": "Title 1",
+  "feature2Desc": "Feature 2",
+  "feature2Title": "Title 2",
+  "feature3Desc": "Feature 3",
+  "feature3Title": "Title 3",
+  "historySubtitle": "Past Readings",
+  "historyTitle": "History",
+  "hub": {
+    "cta": "Enter",
+    "description": "Main Hub",
+    "subtitle": "Welcome",
+    "title": "Hub"
+  },
+  "longestStreak": "Longest Streak",
+  "meta": {
+    "description": "Fortune Telling",
+    "keywords": "fortune",
+    "subtitle": "Subtitle",
+    "title": "Fortune"
+  },
+  "mostCommon": "Most Common",
+  "noData": "No Data",
+  "question": "Question",
+  "questions": {
+    "q1": {
+      "options": {
+        "o1": "Option 1",
+        "o2": "Option 2",
+        "o3": "Option 3",
+        "o4": "Option 4"
+      },
+      "text": "Question 1"
+    },
+    "q2": {
+      "options": {
+        "o1": "Option 1",
+        "o2": "Option 2",
+        "o3": "Option 3",
+        "o4": "Option 4"
+      },
+      "text": "Question 2"
+    },
+    "q3": {
+      "options": {
+        "o1": "Option 1",
+        "o2": "Option 2",
+        "o3": "Option 3",
+        "o4": "Option 4"
+      },
+      "text": "Question 3"
+    },
+    "q4": {
+      "options": {
+        "o1": "Option 1",
+        "o2": "Option 2",
+        "o3": "Option 3",
+        "o4": "Option 4"
+      },
+      "text": "Question 4"
+    },
+    "q5": {
+      "options": {
+        "o1": "Option 1",
+        "o2": "Option 2",
+        "o3": "Option 3",
+        "o4": "Option 4"
+      },
+      "text": "Question 5"
+    }
+  },
+  "reminder": "Reminder",
+  "reminderText": "Don't forget",
+  "result": {
+    "description": "Outcome",
+    "title": "Result"
+  },
+  "results": {
+    "balanced": {
+      "advice": "Stay centered",
+      "description": "You are balanced",
+      "traits": {
+        "0": "Calm",
+        "1": "Steady",
+        "2": "Fair"
+      },
+      "type": "Balanced"
+    },
+    "energetic": {
+      "advice": "Use your energy wisely",
+      "description": "You are full of life",
+      "traits": {
+        "0": "Active",
+        "1": "Dynamic",
+        "2": "Bold"
+      },
+      "type": "Energetic"
+    },
+    "reflective": {
+      "advice": "Look inward",
+      "description": "You are thoughtful",
+      "traits": {
+        "0": "Deep",
+        "1": "Quiet",
+        "2": "Observant"
+      },
+      "type": "Reflective"
+    },
+    "restful": {
+      "advice": "Take a break",
+      "description": "You need rest",
+      "traits": {
+        "0": "Peaceful",
+        "1": "Relaxed",
+        "2": "Slow"
+      },
+      "type": "Restful"
+    }
+  },
+  "shareResult": "Share Result",
+  "shareTitle": "Share",
+  "startDaily": "Start Daily",
+  "subtitle": "Fortune Subtitle",
+  "takeOtherTests": "Take Other Tests",
+  "test": {
+    "insightBullets": ["Profound Insight"],
+    "loading": "Loading...",
+    "next": "Next",
+    "previous": "Previous",
+    "progress": "Progress",
+    "selectOption": "Select",
+    "submit": "Submit"
+  },
+  "title": "Fortune",
+  "todayAdvice": "Today's Advice",
+  "totalDays": "Total Days",
+  "trendChart": "Trend Chart",
+  "uniqueTypes": "Unique Types",
+  "viewHistory": "View History",
+  "welcomeTitle": "Welcome"
+}

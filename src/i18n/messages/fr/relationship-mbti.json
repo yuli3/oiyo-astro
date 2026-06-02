@@ -1,0 +1,212 @@
+{
+  "mbtiResult": {
+    "labels": {
+      "A": "Actif",
+      "P": "Passif",
+      "Q": "Rapide",
+      "S": "Posé",
+      "E": "Expressif",
+      "M": "Mystérieux",
+      "D": "Direct",
+      "I": "Indirecte"
+    },
+    "result": {
+      "dimensions": {
+        "approach": "Mode d'approche",
+        "attraction": "Expression de l'intérêt",
+        "flirting": "Style de séduction",
+        "defensiveness": "Mécanisme de défense"
+      },
+      "style": "Mon Style Amoureux",
+      "advice": "Conseils pour grandir",
+      "strengths": "Forces en amour",
+      "analysis": "Analyse détaillée du style",
+      "retake": "Refaire le test",
+      "home": "Accueil",
+      "sharePrompt": "Partagez votre style amoureux et découvrez vos affinités avec vos amis !"
+    }
+  },
+  "questions": [
+    {
+      "id": "q1",
+      "dimension": "approche",
+      "text": "Lorsque vous rencontrez quelqu’un qui remue votre âme, comment avez-vous tendance à bouger ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Je tends la main de manière proactive, créant la première étincelle dans le déroulement de notre histoire."
+        },
+        {
+          "id": "P",
+          "text": "J'attends que l'univers s'aligne, laissant l'autre personne initier notre connexion."
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "dimension": "attirance",
+      "text": "À quelle vitesse le feu de l’attraction s’allume-t-il habituellement en vous ?",
+      "options": [
+        {
+          "id": "Q",
+          "text": "C'est un coup de foudre soudain ; Je connais la profondeur de mon intérêt presque instantanément."
+        },
+        {
+          "id": "S",
+          "text": "C'est une douce aube ; mes sentiments grandissent régulièrement à mesure que j'apprends vraiment à connaître l'autre."
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "dimension": "flirt",
+      "text": "Comment signaler votre intérêt à ceux qui vous captivent ?",
+      "options": [
+        {
+          "id": "E",
+          "text": "Je suis un livre ouvert, affichant clairement mon admiration à travers des mots et des gestes vibrants."
+        },
+        {
+          "id": "M",
+          "text": "Je tisse une subtile toile de mystère, laissant mon intérêt se manifester à travers le silence et la nuance."
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "dimension": "attitude défensive",
+      "text": "Lorsque le conflit obscurcit le paysage émotionnel, quelle est votre réaction naturelle ?",
+      "options": [
+        {
+          "id": "D",
+          "text": "J’affronte la tempête de front, abordant le problème central avec une honnêteté immédiate."
+        },
+        {
+          "id": "I",
+          "text": "Je parcoure d’abord la périphérie, à la recherche d’un chemin plus doux et plus réfléchi vers la réconciliation."
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "dimension": "approche",
+      "text": "Si une réunion sociale présente un lien potentiel, quel est votre instinct ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Je me dirige vers eux avec intention, faisant sentir ma présence dès le début."
+        },
+        {
+          "id": "P",
+          "text": "Je reste dans mon propre espace, permettant aux autres de graviter vers moi en premier."
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "dimension": "attirance",
+      "text": "Quel est votre rythme habituel lorsque vous déroulez les chapitres d’une nouvelle romance ?",
+      "options": [
+        {
+          "id": "Q",
+          "text": "Je plonge très tôt dans les profondeurs, désireux d’explorer l’intensité de notre lien."
+        },
+        {
+          "id": "S",
+          "text": "Je savoure d’abord les eaux peu profondes, créant ainsi un sentiment de confiance et de familiarité au fil du temps."
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "dimension": "flirt",
+      "text": "Quelle est la langue principale de votre intérêt romantique ?",
+      "options": [
+        {
+          "id": "E",
+          "text": "Des compliments généreux et des déclarations claires et sincères de mes sentiments."
+        },
+        {
+          "id": "M",
+          "text": "Un contact visuel intense et de subtils changements d’énergie qui invitent à la curiosité."
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "dimension": "attitude défensive",
+      "text": "Comment protéger votre sanctuaire intérieur lorsque des tensions surgissent ?",
+      "options": [
+        {
+          "id": "D",
+          "text": "J'énonce mes limites clairement et avec force pour éviter tout malentendu."
+        },
+        {
+          "id": "I",
+          "text": "Je me retire légèrement pour traiter, permettant à l'atmosphère de se refroidir avant de me réengager."
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "dimension": "approche",
+      "text": "Dans la danse de la connexion, qui préférez-vous pour donner le rythme ?",
+      "options": [
+        {
+          "id": "A",
+          "text": "Je préfère prendre les devants, en veillant à ce que notre élan continue de se développer."
+        },
+        {
+          "id": "P",
+          "text": "Je préfère répondre à leur exemple, trouvant grâce dans le flux qu'ils initient."
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "dimension": "attirance",
+      "text": "Votre cœur décide-t-il généralement rapidement ou cela nécessite-t-il des preuves approfondies ?",
+      "options": [
+        {
+          "id": "Q",
+          "text": "Mon cœur est une rivière au courant rapide, facilement emportée par une connexion puissante."
+        },
+        {
+          "id": "S",
+          "text": "Mon cœur est une montagne stable, qui demande du temps et de la cohérence pour être déplacée."
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "dimension": "flirt",
+      "text": "Quelle part de votre intention romantique révélez-vous au départ ?",
+      "options": [
+        {
+          "id": "E",
+          "text": "J’expose clairement mes intentions, ne laissant aucun doute sur mon intérêt."
+        },
+        {
+          "id": "M",
+          "text": "Je cache mes intentions derrière un voile d’intrigue, les laissant deviner."
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "dimension": "attitude défensive",
+      "text": "Quelle est votre approche habituelle pour résoudre un désaccord houleux ?",
+      "options": [
+        {
+          "id": "D",
+          "text": "Ma priorité est de « le faire sortir » et de parvenir à une résolution le plus rapidement possible."
+        },
+        {
+          "id": "I",
+          "text": "Je donne la priorité au « calme » et à la gestion des conséquences émotionnelles avant les faits."
+        }
+      ]
+    }
+  ],
+  "title": "Test de Style Amoureux"
+}

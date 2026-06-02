@@ -1,0 +1,21 @@
+{
+  "intro": {
+    "badge": "심리회계",
+    "title": "소비 페르소나",
+    "quote": "돈을 쓰는 방식은 세상에 접근하는 방식이며, 삶을 사랑하는 방식입니다.",
+    "startButton": "진단 시작하기"
+  },
+  "questions": {
+    "signal": "소비 질문"
+  },
+  "results": {
+    "pattern": "소비 DNA",
+    "impact": "부의 흐름",
+    "guidance": "재정적 지혜",
+    "recalibrate": "다시 진단해 보세요"
+  },
+  "meta": {
+    "title": "소비성향 테스트 - OIYO",
+    "description": "합리성, 감성, 과시성 등 고객의 소비 심리를 분석합니다."
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "meta": {
+    "title": "Health & Wellness Diagnosis",
+    "description": "Receive personalized wellness insights and create sustainable health habits",
+    "keywords": "Medical checkup, wellness, lifestyle, health habits, fitness"
+  },
+  "hero": {
+    "badge": "🏃Health & Wellness",
+    "subtitle": "Receive a personalized guide to a healthier lifestyle",
+    "cta": "Getting Started with Health Checkup"
+  },
+  "aging": {
+    "result": {
+      "error": {
+        "message": "Results could not be retrieved. Please run the test again.",
+        "retakeButton": "restart test"
+      }
+    },
+    "meta": {
+      "title": "Active Aging Wellness Diagnosis",
+      "description": "Receive a customized wellness plan for healthy aging. We break down five key elements: exercise, social connection, mindfulness, purpose, and recovery.",
+      "keywords": "Active aging, senior wellness, healthy aging, exercise and mindfulness, care support, longevity design"
+    },
+    "hero": {
+      "badge": "🌿 Longevity Research Institute",
+      "title": "Active Aging Wellness Diagnosis",
+      "subtitle": "Let’s understand the rhythm of vitality, concentration, and resilience and find ways to age healthily.",
+      "description": "We analyze five key elements (exercise, social connection, mindfulness, purpose, and recovery) to provide your own wellness plan.",
+      "cta": "Getting Started with Diagnostics",
+      "secondaryCta": "Identify key elements, action plans, and support partners."
+    },
+    "benefits": {
+      "title": "What you can get from this diagnosis",
+      "subtitle": "Transform guesswork into confident, sustainable routines with clear insights."
+    },
+    "types": {
+      "movement": {
+        "name": "work out",
+        "emoji": "🚶",
+        "description": "Maintain physical health through regular exercise and activity."
+      },
+      "socialConnection": {
+        "name": "social connection",
+        "emoji": "🤗",
+        "description": "Maintain your emotional health through meaningful relationships with friends, family, and neighbors."
+      },
+      "mindfulness": {
+        "name": "Mindfulness",
+        "emoji": "🧘",
+        "description": "Protect and reset your nervous system through meditation, breathing, and sensory awareness."
+      },
+      "purpose": {
+        "name": "sense of purpose",
+        "emoji": "✨",
+        "description": "Maintain direction in life through meaningful activities and contributions."
+      },
+      "restoration": {
+        "name": "recovery",
+        "emoji": "😴",
+        "description": "Recharge your energy and restore your health with sufficient sleep and rest."
+      },
+      "title": "5 Essentials of Wellness",
+      "subtitle": "Most people mix 2-3 elements depending on the situation. Your own combination makes your plan unique."
+    },
+    "relationships": {
+      "title": "Partner with a support network",
+      "description": "A healthy old age is not something you can achieve alone. Collaborate with family, friends, and experts to create sustainable wellness."
+    },
+    "faq": {
+      "title": "Frequently Asked Questions"
+    }
+  },
+  "hub": {
+    "tabs": {
+      "sleep": "sleep",
+      "stress": "stress",
+      "fatigue": "Fatigue",
+      "aging": "aging",
+      "detox": "detox",
+      "emotion": "emotion",
+      "tools": "equipment"
+    },
+    "title": "health herbs",
+    "description": "Analyze and manage your health from various angles"
+  },
+  "sleepScore": {
+    "hero": {
+      "title": "Sleep Score Diagnosis",
+      "subtitle": "Analyze your sleep quality and receive solutions for better sleep",
+      "cta": "Getting Started with Diagnostics"
+    },
+    "benefits": {
+      "items": [
+        {
+          "emoji": "🌙",
+          "title": "Sleep Pattern Analysis",
+          "description": "Comprehensive analysis of sleep onset, maintenance, and wake state."
+        },
+        {
+          "emoji": "🔋",
+          "title": "Energy Recovery",
+          "description": "Understand how your sleep impacts next-day activities."
+        },
+        {
+          "emoji": "🧠",
+          "title": "Personalized Solutions",
+          "description": "Receive specific guidance for improving sleep hygiene."
+        }
+      ]
+    }
+  },
+  "detox": {
+    "hero": {
+      "title": "Diagnosing the need for digital detox",
+      "subtitle": "Get your healthy digital life back",
+      "cta": "Start diagnosis"
+    },
+    "benefits": {
+      "items": [
+        {
+          "emoji": "👀",
+          "title": "Eye Strain",
+          "description": "Reduce eye strain and vision fatigue from prolonged screen exposure."
+        },
+        {
+          "emoji": "🧠",
+          "title": "Better Focus",
+          "description": "Regain your deep focus and attention span through dopamine detox."
+        },
+        {
+          "emoji": "😌",
+          "title": "Anxiety Relief",
+          "description": "Find peace of mind by breaking free from FOMO and notification anxiety."
+        }
+      ]
+    }
+  },
+  "emotion": {
+    "hub": {
+      "moodTracker": {
+        "tabs": {
+          "journal": "diary",
+          "calendar": "calender",
+          "analytics": "analyze"
+        },
+        "title": "mood tracker",
+        "description": "Record your emotions and analyze patterns",
+        "analyticsTitle": "mood statistics",
+        "analyticsDescription": "Analyze mood weather data recorded in the calendar."
+      }
+    }
+  }
+}

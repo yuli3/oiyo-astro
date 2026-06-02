@@ -1,0 +1,20 @@
+{
+  "units": {
+    "hours": "時間",
+    "days": "日",
+    "years": "年",
+    "months": "ヶ月"
+  },
+  "labels": {
+    "hourlyWage": "時給",
+    "annualLeave": "年次有給休暇手当",
+    "severancePay": "退職金",
+    "dailyHours": "1日の勤務時間",
+    "remainingDays": "残りの年次休暇",
+    "servicePeriod": "在職期間",
+    "monthlyBase": "月額基本給",
+    "annualBonus": "年間ボーナス",
+    "totalAllowance": "年次有給休暇手当合計",
+    "standardMonthlyHours": "標準月間勤務時間"
+  }
+}

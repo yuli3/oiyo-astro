@@ -1,0 +1,15 @@
+{
+  "successTitle": "成功",
+  "successMessage": "提出されました。",
+  "errorTitle": "エラー",
+  "errorMessage": "失敗した。",
+  "subjectLabel": "主題",
+  "subjectPlaceholder": "件名を入力してください",
+  "categoryLabel": "カテゴリー",
+  "priorityLabel": "優先度",
+  "descriptionLabel": "説明",
+  "descriptionPlaceholder": "説明を入力してください",
+  "submitting": "送信中...",
+  "submitButton": "送信",
+  "title": "形状"
+}

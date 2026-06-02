@@ -1,0 +1,11 @@
+{
+  "title": "신성한 판테온",
+  "egyptianGuardian": "이집트 수호자",
+  "celticTreeSign": "켈트 나무 표시",
+  "birthSymbols": "출생 기호",
+  "symbols": {
+    "Stone": "결석",
+    "Flower": "꽃",
+    "Star": "별"
+  }
+}

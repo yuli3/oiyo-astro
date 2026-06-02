@@ -1,0 +1,22 @@
+{
+  "performance": {
+    "title": "性能优化",
+    "description": "快速访问。"
+  },
+  "offline": {
+    "title": "离线访问",
+    "description": "快速访问。"
+  },
+  "notifications": {
+    "title": "通知提醒",
+    "description": "快速访问。"
+  },
+  "homeScreen": {
+    "title": "主屏幕",
+    "description": "快速访问。"
+  },
+  "fortune": "运势",
+  "financial": "财务",
+  "content": "内容",
+  "expert": "专家"
+}

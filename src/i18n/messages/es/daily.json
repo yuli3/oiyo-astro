@@ -1,0 +1,40 @@
+{
+  "title": "[FALTA: título]",
+  "desc": "Tu guía diaria",
+  "status": {
+    "Gil": {
+      "title": "Un Día de Equilibrio",
+      "description": "Las energías están equilibradas, favoreciendo la introspección y el progreso constante sobre los cambios radicales."
+    },
+    "Hyung": {
+      "title": "Un Día de Equilibrio",
+      "description": "Las energías están equilibradas, favoreciendo la introspección y el progreso constante sobre los cambios radicales."
+    },
+    "Neutral": {
+      "title": "Un Día de Equilibrio",
+      "description": "Las energías están equilibradas, favoreciendo la introspección y el progreso constante sobre los cambios radicales."
+    }
+  },
+  "elements": {
+    "Wood": "La energía de expansión y creatividad fluye a través de ti.",
+    "Fire": "La energía de la pasión y el carisma brilla intensamente.",
+    "Earth": "La energía de estabilidad y nutrición proporciona una base firme.",
+    "Metal": "La energía de claridad y decisión corta a través de la confusión.",
+    "Water": "La energía de sabiduría e intuición fluye profunda y lejos."
+  },
+  "T": "[FALTA: T]",
+  "subtitle": "[FALTA: subtítulo]",
+  "oracle": {
+    "selectZodiac": "[FALTA: oracle.selectZodiac]",
+    "synchronize": "[FALTA: oracle.synchronize]",
+    "imperialDecree": "[FALTA: oracle.imperialDecree]",
+    "analysisBasis": "[FALTA: oracle.analysisBasis]",
+    "message": "[FALTA: mensaje.oracle]",
+    "actionRitual": "[FALTA: oracle.actionRitual]",
+    "fateVsWill": "[FALTA: oracle.fateVsWill]"
+  },
+  "dailyLucky": {
+    "title": "[FALTA: dailyLucky.title]"
+  },
+  "action": "[FALTA: acción]"
+}

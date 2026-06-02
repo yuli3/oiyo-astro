@@ -1,0 +1,269 @@
+{
+  "meta": {
+    "title": "Recomendación de regalo",
+    "description": "Descifrando los patrones geométricos de tu identidad...",
+    "keywords": "recomendación de regalos, buscador de regalos, regalos perfectos, regalos de cumpleaños"
+  },
+  "hero": {
+    "title": "Recomendación de regalo",
+    "subtitle": "Sincronizando los hilos de tu destino...",
+    "cta": "Comenzar cuestionario"
+  },
+  "features": {
+    "personalized": {
+      "title": "Recomendación de regalo",
+      "description": "Descifrando los patrones geométricos de tu identidad..."
+    },
+    "variety": {
+      "title": "Recomendación de regalo",
+      "description": "Descifrando los patrones geométricos de tu identidad..."
+    },
+    "shoppingLinks": {
+      "title": "Recomendación de regalo",
+      "description": "Descifrando los patrones geométricos de tu identidad..."
+    }
+  },
+  "howItWorks": {
+    "steps": {
+      "1": {
+        "title": "Recomendación de regalo",
+        "desc": "Top 5 recomendaciones"
+      },
+      "2": {
+        "title": "Recomendación de regalo",
+        "desc": "Top 5 recomendaciones"
+      },
+      "3": {
+        "title": "Recomendación de regalo",
+        "desc": "Top 5 recomendaciones"
+      },
+      "4": {
+        "title": "Recomendación de regalo",
+        "desc": "Top 5 recomendaciones"
+      }
+    },
+    "title": "Recomendación de regalo"
+  },
+  "cta": {
+    "button": "Empezar ahora →"
+  },
+  "landing": {
+    "subtitle": "Sincronizando los hilos de tu destino...",
+    "cta": "Comenzar cuestionario"
+  },
+  "ui": {
+    "selectOption": "Seleccionar una opción",
+    "progress": "Progreso",
+    "previous": "Anterior"
+  },
+  "result": {
+    "title": "Recomendación de regalo",
+    "subtitle": "Sincronizando los hilos de tu destino...",
+    "match": "Coincidencia",
+    "reasons": "💡 Por qué este regalo:",
+    "shopNow": "Comprar ahora",
+    "save": "Guardar",
+    "retake": "Obtener nuevas recomendaciones",
+    "share": "Compartir resultados",
+    "loading": "Cargando..."
+  },
+  "data": {
+    "questions": {
+      "age": {
+        "options": {
+          "10s": "Adolescente",
+          "20s": "20 años",
+          "30s": "30 años",
+          "40s": "40 años",
+          "50plus": "50 años o más"
+        },
+        "question": "¿Cuál es la ocasión?"
+      },
+      "personality": {
+        "options": {
+          "active": "Activo y Extrovertido",
+          "calm": "Tranquilo e Introvertido",
+          "creative": "Creativo y Artístico",
+          "practical": "Práctico y Lógico"
+        },
+        "question": "¿Cuál es la ocasión?"
+      },
+      "interests": {
+        "options": {
+          "tech": "Tecnología/Gadgets",
+          "fashion": "Moda/Belleza",
+          "food": "Comida/Cocina",
+          "sports": "Deportes/Fitness",
+          "art": "Arte y Diseño",
+          "home": "Hogar/Decoración"
+        },
+        "question": "¿Cuál es la ocasión?"
+      },
+      "budget": {
+        "options": {
+          "under20": "Menos de $20",
+          "20to50": "Entre $20 y $50",
+          "50to100": "Entre $50 y $100",
+          "over100": "Más de $100"
+        },
+        "question": "¿Cuál es la ocasión?"
+      },
+      "relationship": {
+        "options": {
+          "family": "Familia",
+          "friend": "Amigo",
+          "romantic": "Pareja romántica",
+          "colleague": "Colega"
+        },
+        "question": "¿Cuál es la ocasión?"
+      },
+      "occasion": {
+        "options": {
+          "birthday": "Cumpleaños",
+          "holiday": "Fiesta/Aniversario",
+          "thanks": "Gracias",
+          "just-because": "Solo porque sí"
+        },
+        "question": "¿Cuál es la ocasión?"
+      }
+    },
+    "products": {
+      "wireless-earbuds": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Perfecta para las amantes de la música.",
+          "regalo práctico",
+          "artículo de moda"
+        ]
+      },
+      "smart-watch": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Para aquellos interesados ​​en el cuidado de la salud.",
+          "última tecnología",
+          "Práctico y elegante"
+        ]
+      },
+      "perfume-set": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "regalo romantico",
+          "paquete de lujo",
+          "Perfecta para días especiales"
+        ]
+      },
+      "handbag": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Para aquellos interesados ​​en la moda.",
+          "Se puede utilizar durante mucho tiempo.",
+          "regalo especial"
+        ]
+      },
+      "gourmet-set": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Perfecta para las amantes de la cocina.",
+          "regalos únicos",
+          "práctica"
+        ]
+      },
+      "coffee-maker": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Para las amantes del café",
+          "Disponible para uso diario",
+          "regalo de lujo"
+        ]
+      },
+      "yoga-mat": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Para entusiastas del ejercicio",
+          "estilo de vida saludable",
+          "regalo práctico"
+        ]
+      },
+      "fitness-tracker": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Para aquellos interesados ​​en el cuidado de la salud.",
+          "La compañera perfecta para un estilo de vida saludable.",
+          "práctica"
+        ]
+      },
+      "diffuser": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Para los que pasan mucho tiempo en casa.",
+          "ambiente confortable",
+          "práctica"
+        ]
+      },
+      "luxury-blanket": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Cuando quieres regalar comodidad",
+          "Práctico y lujoso",
+          "Disponible en todas las estaciones."
+        ]
+      },
+      "art-book": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Para las amantes del arte",
+          "valor coleccionable",
+          "regalo inteligente"
+        ]
+      },
+      "concert-tickets": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": [
+          "Cuando quieres regalar una experiencia",
+          "haciendo recuerdos",
+          "Para las amantes de la cultura"
+        ]
+      },
+      "notebook-set": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": ["precio razonable", "práctica", "Sin carga para nadie"]
+      },
+      "candle-set": {
+        "name": "Set de velas",
+        "description": "Descifrando los patrones geométricos de tu identidad...",
+        "priceRange": "Entre $20 y $50",
+        "reasons": ["precio razonable", "un regalo atmosférico", "práctica"]
+      }
+    }
+  },
+  "title": "Recomendación de regalo",
+  "findGift": "Buscar regalo",
+  "occasion": "Ocasión Especial",
+  "budget": "Presupuesto"
+}

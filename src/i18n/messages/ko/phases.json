@@ -1,0 +1,17 @@
+{
+  "foundation": {
+    "title": "기반",
+    "description": "구축 단계.",
+    "period": "초기"
+  },
+  "prime": {
+    "title": "초기",
+    "description": "활동량이 가장 많습니다.",
+    "period": "중년"
+  },
+  "wisdom": {
+    "title": "지혜",
+    "description": "검토 및 반성.",
+    "period": "만년"
+  }
+}

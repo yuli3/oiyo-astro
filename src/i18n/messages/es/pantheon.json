@@ -1,0 +1,11 @@
+{
+  "title": "Panteón Divino",
+  "egyptianGuardian": "Guardián Egipcio",
+  "celticTreeSign": "Signo del Árbol Celta",
+  "birthSymbols": "Símbolos de Nacimiento",
+  "symbols": {
+    "Stone": "Piedra",
+    "Flower": "Flor",
+    "Star": "Estrella"
+  }
+}

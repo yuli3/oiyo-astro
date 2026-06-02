@@ -1,0 +1,480 @@
+{
+  "color": {
+    "meta": {
+      "keywords": "旅行性格, 旅行风格, 假期测试, 旅行计划",
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。"
+    },
+    "types": {
+      "subtitle": "分析结果",
+      "red": {
+        "name": "文化探究者 (Culture Seeker)",
+        "description": "理解与同行者的差异并进行协调。"
+      },
+      "blue": {
+        "name": "文化探究者 (Culture Seeker)",
+        "description": "理解与同行者的差异并进行协调。"
+      },
+      "green": {
+        "name": "文化探究者 (Culture Seeker)",
+        "description": "理解与同行者的差异并进行协调。"
+      },
+      "yellow": {
+        "name": "文化探究者 (Culture Seeker)",
+        "description": "理解与同行者的差异并进行协调。"
+      },
+      "title": "与同伴的和谐"
+    },
+    "hero": {
+      "subtitle": "分析结果",
+      "cta": "开始诊断",
+      "badge": "旅行心理学",
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。"
+    },
+    "benefits": {
+      "subtitle": "分析结果",
+      "items": {
+        "0": {
+          "title": "与同伴的和谐",
+          "description": "理解与同行者的差异并进行协调。"
+        },
+        "1": {
+          "title": "与同伴的和谐",
+          "description": "理解与同行者的差异并进行协调。"
+        },
+        "2": {
+          "title": "与同伴的和谐",
+          "description": "理解与同行者的差异并进行协调。"
+        },
+        "3": {
+          "title": "与同伴的和谐",
+          "description": "理解与同行者的差异并进行协调。"
+        }
+      },
+      "title": "与同伴的和谐"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "如何运用这个洞察？",
+          "answer": "通过将当前的任务调整至符合您自然的职业节奏，可以减少摩擦并提高成就感。"
+        },
+        "1": {
+          "question": "如何运用这个洞察？",
+          "answer": "通过将当前的任务调整至符合您自然的职业节奏，可以减少摩擦并提高成就感。"
+        },
+        "2": {
+          "question": "如何运用这个洞察？",
+          "answer": "通过将当前的任务调整至符合您自然的职业节奏，可以减少摩擦并提高成就感。"
+        },
+        "3": {
+          "question": "如何运用这个洞察？",
+          "answer": "通过将当前的任务调整至符合您自然的职业节奏，可以减少摩擦并提高成就感。"
+        }
+      },
+      "title": "与同伴的和谐"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "标志性强度",
+          "description": "全面分析和个性化见解",
+          "question": "是什么驱使你做出选择？",
+          "answer": "您的内在价值观指导您的日常行为。"
+        },
+        {
+          "icon": "🚀",
+          "title": "枢轴点",
+          "description": "数据驱动的建议以获得更好的结果",
+          "question": "是什么驱使你做出选择？",
+          "answer": "您的内在价值观指导您的日常行为。"
+        }
+      ]
+    },
+    "result": {
+      "sections": {
+        "breakdown": "性向分析表",
+        "strengths": "我的优势",
+        "growthAreas": "需补充点",
+        "colorPalette": "我的灵魂调色板",
+        "careerSuggestions": "推荐职业",
+        "relationshipTips": "关系指南"
+      },
+      "tabs": {
+        "traits": "主要特性",
+        "colors": "色彩能量",
+        "career": "工作/前途",
+        "relationships": "人际关系"
+      },
+      "retake": "再次省察",
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。"
+    },
+    "test": {
+      "title": "与同伴的和谐",
+      "finish": "完成",
+      "progress": "进度",
+      "submit": "公开我的命运",
+      "loading": "正在生成结果...",
+      "selectOption": "选择选项",
+      "insightBullets": ["绘制最真实自我的星座图。"],
+      "previous": "上一步",
+      "next": "下一步"
+    }
+  },
+  "bloodType": {
+    "meta": {
+      "keywords": "旅行性格, 旅行风格, 假期测试, 旅行计划",
+      "compatibilityTitle": "血型缘分分析 | 寻找完美匹配",
+      "compatibilityDescription": "通过血型了解两人微妙的能量流动。",
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。"
+    },
+    "hero": {
+      "subtitle": "分析结果",
+      "icon": "🧭"
+    },
+    "test": {
+      "selectBloodType": "选择血型",
+      "personality": {
+        "title": "与同伴的和谐",
+        "traits": "主要特性",
+        "positive": "优点与魅力",
+        "challenges": "注意事项",
+        "button": "查看缘分结果"
+      },
+      "compatibility": {
+        "button": "查看缘分结果",
+        "title": "与同伴的和谐",
+        "my": "我",
+        "partner": "对方",
+        "result": "缘分结果",
+        "score": "缘分分数"
+      },
+      "share": "分享",
+      "retake": "再次省察",
+      "progress": "进度",
+      "submit": "公开我的命运",
+      "loading": "正在生成结果...",
+      "selectOption": "选择选项",
+      "insightBullets": ["绘制最真实自我的星座图。"],
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "Copied to clipboard!": "链接已复制！",
+    "result": {
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。"
+    },
+    "Link copied to clipboard!": "链接复制完成！"
+  },
+  "animal": {
+    "meta": {
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。",
+      "keywords": "旅行性格, 旅行风格, 假期测试, 旅行计划"
+    },
+    "hero": {
+      "title": "与同伴的和谐",
+      "subtitle": "分析结果",
+      "cta": "开始诊断"
+    },
+    "title": "与同伴的和谐",
+    "description": "理解与同行者的差异并进行协调。",
+    "subtitle": "分析结果",
+    "introTitle": "如果我是动物？",
+    "feature1Title": "发现本能气质",
+    "feature1Desc": "将社会学习以前的天生气质比作动物的特性进行说明。",
+    "feature2Title": "详细的分析",
+    "feature2Desc": "超越单纯的娱乐，深入洞察您的行为模式。",
+    "feature3Title": "关系的生态界",
+    "feature3Desc": "告知您与哪种动物类型合得来，与哪种类型需要小心。",
+    "animalTypes": "多种动物类型",
+    "startTest": "开始旅程"
+  },
+  "futureSelf": {
+    "meta": {
+      "keywords": "旅行性格, 旅行风格, 假期测试, 旅行计划"
+    },
+    "hero": {
+      "eyebrow": "时间旅行研究所",
+      "subtitle": "分析结果",
+      "cta": "开始诊断"
+    }
+  },
+  "career": {
+    "meta": {
+      "keywords": "旅行性格, 旅行风格, 假期测试, 旅行计划",
+      "hero": {
+        "badge": "旅行心理学",
+        "subtitle": "分析结果"
+      },
+      "description": "理解与同行者的差异并进行协调。",
+      "title": "与同伴的和谐"
+    },
+    "types": {
+      "subtitle": "分析结果",
+      "realistic": {
+        "name": "文化探究者 (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "investigative": {
+        "name": "文化探究者 (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "artistic": {
+        "name": "文化探究者 (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "social": {
+        "name": "文化探究者 (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "enterprising": {
+        "name": "文化探究者 (Culture Seeker)",
+        "emoji": "📊"
+      },
+      "conventional": {
+        "name": "文化探究者 (Culture Seeker)",
+        "emoji": "📊"
+      }
+    },
+    "hero": {
+      "badge": "旅行心理学",
+      "subtitle": "分析结果",
+      "cta": "开始诊断",
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。"
+    },
+    "benefits": {
+      "subtitle": "分析结果",
+      "items": [
+        {
+          "title": "核心对齐",
+          "description": "发现与您最深层的价值观和技能自然产生共鸣的职业。"
+        },
+        {
+          "title": "环境和谐",
+          "description": "确定能让你真正蓬勃发展的工作文化和氛围。"
+        },
+        {
+          "title": "战略清晰度",
+          "description": "为您的职业发展和长期职业遗产获得清晰的地图。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "RIASEC框架的本质是什么？",
+          "answer": "它是一个揭示你的个性模式如何转化为职业环境的镜头。"
+        },
+        {
+          "question": "今天我该如何利用这些见解？",
+          "answer": "通过使您当前的任务与您的自然职业节奏保持一致，您可以减少摩擦并增加成就感。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "🎯",
+          "title": "原型识别",
+          "description": "根据六种核心职业类型精确映射您的性格。"
+        },
+        {
+          "icon": "🧭",
+          "title": "方向性见解",
+          "description": "选择能引起最高共鸣的路径的战略指导。"
+        }
+      ]
+    },
+    "title": "与同伴的和谐",
+    "description": "理解与同行者的差异并进行协调。",
+    "test": {
+      "scale": {
+        "1": "非常不符合",
+        "2": "不符合",
+        "3": "一般",
+        "4": "符合",
+        "5": "非常符合"
+      },
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。",
+      "subtitle": "分析结果",
+      "rateInstructions": "省察每个句子，选择与您的真实产生共鸣的程度。",
+      "progress": "进度",
+      "submit": "公开我的命运",
+      "selectOption": "选择选项",
+      "insightBullets": [
+        "追踪激情与纪律的界限。",
+        "倾听你职业命运的回声。",
+        "收集你职业身份的碎片。"
+      ],
+      "next": "下一步",
+      "previous": "上一步",
+      "loading": "正在生成结果..."
+    },
+    "result": {
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。",
+      "primaryType": "主导原型",
+      "allTypes": "全谱系",
+      "careers": "推荐路径",
+      "workEnvironment": "理想环境",
+      "secondaryType": "辅助原型",
+      "understanding": "原型的智慧",
+      "retake": "再次省察"
+    }
+  },
+  "testGrid": {
+    "searchPlaceholder": "搜索原型、命运或模式...",
+    "filterAll": "查看全部",
+    "categories": {
+      "personality": "本质与灵魂"
+    },
+    "sortBy": {
+      "popularity": "大众共鸣",
+      "newest": "新洞察",
+      "time": "所需时间",
+      "difficulty": "智力深度"
+    },
+    "startTest": "开始旅程",
+    "noResults": "找不到关于此搜索的回声。",
+    "clearFilters": "初始化筛选",
+    "sortPopular": "高共鸣顺序",
+    "sortAlpha": "字母顺序",
+    "new": "新的",
+    "trending": "热的",
+    "empty": {
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。",
+      "clearFilters": "初始化筛选"
+    },
+    "test": {
+      "progress": "进度",
+      "submit": "公开我的命运",
+      "loading": "正在生成结果...",
+      "selectOption": "选择选项",
+      "insightBullets": [
+        "追踪激情与纪律的界限。",
+        "聆听最真实自我的回声。",
+        "收集您个人身份的碎片。"
+      ],
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。"
+    },
+    "meta": {
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。",
+      "keywords": "旅行性格, 旅行风格, 假期测试, 旅行计划"
+    }
+  },
+  "learning": {
+    "meta": {
+      "description": "理解与同行者的差异并进行协调。",
+      "title": "与同伴的和谐",
+      "keywords": "旅行性格, 旅行风格, 假期测试, 旅行计划"
+    },
+    "hero": {
+      "title": "与同伴的和谐",
+      "subtitle": "分析结果",
+      "description": "理解与同行者的差异并进行协调。",
+      "badge": "旅行心理学"
+    }
+  },
+  "travel": {
+    "hero": {
+      "description": "理解与同行者的差异并进行协调。",
+      "badge": "旅行心理学",
+      "title": "与同伴的和谐",
+      "subtitle": "分析结果",
+      "cta": "开始诊断"
+    },
+    "test": {
+      "title": "与同伴的和谐",
+      "subtitle": "分析结果",
+      "progress": "进度",
+      "submit": "公开我的命运",
+      "loading": "正在生成结果...",
+      "selectOption": "选择选项",
+      "insightBullets": ["旅行方式", "理想的伴侣", "目的地提示"],
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "subtitle": "分析结果",
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。",
+      "loading": "正在生成结果...",
+      "sections": {
+        "traits": "主要特性",
+        "destinations": "推荐目的地",
+        "packing": "打包风格",
+        "planning": "计划风格"
+      },
+      "retakeTest": "重测"
+    },
+    "types": {
+      "items": [
+        {
+          "name": "冒险家",
+          "description": "寻求新的体验和刺激。"
+        },
+        {
+          "name": "规划师",
+          "description": "为一切做好了组织和准备。"
+        },
+        {
+          "name": "放松剂",
+          "description": "假期意味着什么都不做。"
+        },
+        {
+          "name": "摄影师",
+          "description": "捕捉每一个瞬间是首要任务。"
+        },
+        {
+          "name": "美食家",
+          "description": "美食体验定义了旅行。"
+        },
+        {
+          "name": "文化探索者",
+          "description": "沉浸在历史和当地传统中。"
+        }
+      ],
+      "title": "与同伴的和谐"
+    },
+    "meta": {
+      "title": "与同伴的和谐",
+      "description": "理解与同行者的差异并进行协调。",
+      "keywords": "旅行性格, 旅行风格, 假期测试, 旅行计划"
+    },
+    "benefits": {
+      "title": "与同伴的和谐",
+      "items": [
+        {
+          "title": "防故障行程",
+          "description": "寻找最适合您的目的地。"
+        },
+        {
+          "title": "智能预算",
+          "description": "把钱花在对你重要的事情上。"
+        },
+        {
+          "title": "更多享受",
+          "description": "减轻压力并提高满意度。"
+        },
+        {
+          "title": "更好的和谐",
+          "description": "了解与旅伴的差异。"
+        }
+      ]
+    }
+  }
+}

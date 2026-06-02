@@ -22,6 +22,9 @@ async function loadMessages(locale: Locale): Promise<Messages> {
     'header', 'hero', 'landing', 'legal', 'marketing',
     'nav', 'navigation', 'ontology', 'page', 'seo',
     'support', 'features',
+    // Ontology engine namespaces
+    'akashic', 'catalog', 'chosun', 'commerce', 'dashboard',
+    'egyptian', 'saju', 'ui', 'universal',
   ];
 
   const merged: Messages = {};

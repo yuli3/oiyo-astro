@@ -1,0 +1,59 @@
+{
+  "title": "TCI Assessment",
+  "subtitle": "Temperament and Character Inventory",
+  "dimensions": {
+    "C": {
+      "label": "Cooperativeness"
+    },
+    "HA": {
+      "label": "Harm Avoidance"
+    },
+    "NS": {
+      "label": "Novelty Seeking"
+    },
+    "P": {
+      "label": "Persistence"
+    },
+    "RD": {
+      "label": "Reward Dependence"
+    },
+    "SD": {
+      "label": "Self-Directedness"
+    },
+    "ST": {
+      "label": "Self-Transcendence"
+    }
+  },
+  "options": {
+    "1": "Strongly Disagree",
+    "2": "Disagree",
+    "3": "Neutral",
+    "4": "Agree",
+    "5": "Strongly Agree"
+  },
+  "questions": {
+    "tci_1": "My spirit is constantly drawn to the allure of the unknown and the new.",
+    "tci_2": "I find deep comfort in the rhythm of familiar routines.",
+    "tci_3": "Reflections on the shadows of the future often weigh heavy on my mind.",
+    "tci_4": "I walk with an innate optimism, trusting the light will guide me.",
+    "tci_5": "The warmth of recognition and praise feeds my heart.",
+    "tci_6": "I stand firm like a lone pine, indifferent to the winds of public opinion.",
+    "tci_7": "I endure the storms until my mission stands complete.",
+    "tci_8": "When the path becomes too thorny, I choose a new direction with ease.",
+    "tci_9": "I am the sovereign architect of my own destiny.",
+    "tci_10": "I often feel like a leaf drifting on the river of fate.",
+    "tci_11": "I see myself as a thread in the great tapestry of humanity.",
+    "tci_12": "In the garden of life, I tend to my own flowers first.",
+    "tci_13": "I sense a sacred resonance that binds all living things.",
+    "tci_14": "I trust only in the tangible world that I can touch and measure."
+  },
+  "badge": "Psychological Architecture",
+  "resultTitle": "Ontological Profile",
+  "paradoxLabel": "Soul Paradox",
+  "paradoxDesc": "The interplay of {key} within your resonance.",
+  "nature": "Primal Nature (Temperament)",
+  "nurture": "Manifested Character",
+  "balanced": "Balanced Harmony",
+  "restart": "Restart Assessment",
+  "neuroscienceGuide": "Neuroscience of Your Dimensions"
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Parcours de Croissance",
+  "description": "Votre chemin vers la conscience de soi et l'évolution personnelle.",
+  "levelUp": "Congratulations! You have reached level {emoji} \"{title}\"!",
+  "levelTitles": {
+    "beginner": "Débutante",
+    "explorer": "Exploratrice",
+    "seeker": "Chercheuse",
+    "discoverer": "Découvreuse",
+    "insightMaster": "Maître de la perspicacité",
+    "wisdomKeeper": "Gardien de la sagesse",
+    "selfAwareSage": "Sage conscient de soi",
+    "enlightenedOne": "L'Illuminé",
+    "personalityGuru": "Gourou de la personnalité",
+    "legendary": "Légendaire"
+  }
+}

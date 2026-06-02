@@ -1,0 +1,220 @@
+{
+  "meta": {
+    "hero": {
+      "badge": "沟通风格分析",
+      "subtitle": "您独特的连接方式。"
+    },
+    "cta": {
+      "button": "查看结果"
+    },
+    "sections": {
+      "strengths": "Key Strengths",
+      "traits": "Key Traits",
+      "challenges": "Challenges",
+      "workingWith": "Working With You"
+    },
+    "breakdown": {
+      "title": "沟通风格"
+    },
+    "additionalInsights": {
+      "title": "沟通风格"
+    },
+    "sharing": {
+      "testName": "Communication Style Test"
+    },
+    "keywords": "沟通, 风格, 测试, 结果",
+    "title": "沟通风格",
+    "description": "沟通风格分析。",
+    "scoreHeadline": "Primary Style",
+    "scoreDescription": "Your primary communication style is {primary}."
+  },
+  "hero": {
+    "subtitle": "您独特的连接方式。",
+    "cta": "开始测试",
+    "badge": "沟通风格分析",
+    "title": "沟通风格"
+  },
+  "cta": {
+    "button": "查看结果"
+  },
+  "matcher": {
+    "meta": {
+      "hero": {
+        "subtitle": "您独特的连接方式。"
+      },
+      "keywords": "沟通, 风格, 测试, 结果",
+      "title": "沟通风格",
+      "description": "沟通风格分析。"
+    },
+    "hero": {
+      "subtitle": "您独特的连接方式。",
+      "title": "沟通风格"
+    },
+    "selector": {
+      "subtitle": "您独特的连接方式。",
+      "person1": "第一人",
+      "person2": "第二人",
+      "selectType": "选择风格",
+      "analyze": "分析",
+      "title": "沟通风格"
+    },
+    "profile": {
+      "primaryStyle": "主要沟通风格",
+      "strengths": "Key Strengths",
+      "preferredChannels": "首选渠道",
+      "communicationStyle": "沟通风格"
+    },
+    "analysis": {
+      "excellent": "完美匹配",
+      "good": "良好匹配",
+      "fair": "普通匹配",
+      "challenging": "需要努力",
+      "strengths": "Key Strengths",
+      "challenges": "Challenges",
+      "noChallenges": "未发现显著挑战",
+      "improvementTips": "实用的改进建议",
+      "title": "沟通风格"
+    },
+    "actions": {
+      "tryAgain": "重试",
+      "share": "分享档案"
+    },
+    "sharing": {
+      "text": "在沟通中对您最重要的是什么？",
+      "copied": "已复制！",
+      "title": "沟通风格"
+    },
+    "benefits": {
+      "workplace": {
+        "title": "沟通风格",
+        "description": "沟通风格分析。"
+      },
+      "relationships": {
+        "title": "沟通风格",
+        "description": "沟通风格分析。"
+      },
+      "growth": {
+        "title": "沟通风格",
+        "description": "沟通风格分析。"
+      }
+    },
+    "faq": {
+      "title": "沟通风格",
+      "question1": "需要多长时间？",
+      "answer1": "大约需要 2 分钟，由 12 个直观的问题组成。",
+      "question2": "如何使用结果？",
+      "answer2": "用它们来了解您的习惯并改善您与他人的互动方式。",
+      "question3": "准吗？",
+      "answer3": "它基于建立的沟通模式，为您提供最佳视角。",
+      "question4": "我可以分享吗？",
+      "answer4": "当然可以！了解彼此的风格有助于避免冲突。"
+    },
+    "test": {
+      "progress": "观测进度",
+      "submit": "完成观测",
+      "selectOption": "请做出选择",
+      "insightBullets": [
+        "绘制对话的银线。",
+        "倾听你的意图在别人耳中的回响。",
+        "收集你富有表现力的灵魂的碎片。"
+      ],
+      "next": "继续",
+      "previous": "回溯",
+      "loading": "正在编织您的沟通画像..."
+    },
+    "result": {
+      "title": "沟通风格",
+      "description": "沟通风格分析。"
+    },
+    "title": "沟通风格",
+    "description": "沟通风格分析。",
+    "keywords": "沟通, 风格, 测试, 结果"
+  },
+  "benefits": {
+    "items": [
+      {
+        "title": "声音清晰度",
+        "description": "了解您所说的每句话背后的关键驱动因素。"
+      },
+      {
+        "title": "共情倾听",
+        "description": "培养倾听任何谈话中未说出口的愿望的耳朵。"
+      },
+      {
+        "title": "冲突的炼金术",
+        "description": "将对话中的摩擦转化为加深理解的火花。"
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "什么是“沟通原型”？",
+        "answer": "它是你在社交环境中处理、交流和接收信息的基本模式。"
+      },
+      {
+        "question": "我的原型定义了我的社交能力吗？",
+        "answer": "一点也不。 它定义了你的风格。 精通来自于了解自己的风格和学习他人的语言。"
+      }
+    ]
+  },
+  "test": {
+    "progress": "观测进度",
+    "next": "继续",
+    "previous": "回溯",
+    "submit": "完成观测",
+    "selectOption": "请做出选择",
+    "subtitle": "您独特的连接方式。",
+    "insightBullets": [
+      "追踪社会自我的架构。",
+      "照亮你独特的表达灵魂模式。",
+      "解码变速箱的微妙振动。"
+    ],
+    "title": "沟通风格",
+    "loading": "正在编织您的沟通画像..."
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "🗣️",
+        "title": "原型识别",
+        "description": "精确映射您的核心表达节奏。"
+      },
+      {
+        "icon": "👂",
+        "title": "共情意识",
+        "description": "每次谈话时倾听对方的艺术。"
+      }
+    ]
+  },
+  "result": {
+    "sections": {
+      "strengths": "Key Strengths",
+      "traits": "Key Traits",
+      "challenges": "Challenges",
+      "workingWith": "Working With You"
+    },
+    "breakdown": {
+      "title": "沟通风格"
+    },
+    "additionalInsights": {
+      "title": "沟通风格"
+    },
+    "sharing": {
+      "testName": "Communication Style Test"
+    },
+    "meta": {
+      "title": "沟通风格",
+      "description": "沟通风格分析。",
+      "keywords": "沟通, 风格, 测试, 结果"
+    },
+    "title": "沟通风格",
+    "description": "沟通风格分析。",
+    "subtitle": "您独特的连接方式。",
+    "scoreHeadline": "Primary Style",
+    "scoreDescription": "Your primary communication style is {primary}."
+  },
+  "title": "沟通风格",
+  "description": "沟通风格分析。",
+  "keywords": "沟通, 风格, 测试, 结果"
+}

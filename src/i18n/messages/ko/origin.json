@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "title": "나의 원초적 기원",
+    "description": "점성술, 바이오리듬, 수비학의 운명 트리오를 통해 진정한 자아를 발견하세요."
+  },
+  "hero": {
+    "title": "나의 원초적 기원",
+    "subtitle": "모든 것은 당신의 생년월일과 함께 공개됩니다. 단 한번의 입력으로 당신의 서부지, 동부지, 생활경로, 바이오리듬 에너지를 확인해보세요.",
+    "inputLabel": "생년월일을 입력하세요",
+    "analyze": "원산지 분석",
+    "analyzing": "별 정렬 중..."
+  },
+  "trinity": {
+    "western": "서부 황도대",
+    "eastern": "동부 황도대",
+    "numerology": "생활 경로",
+    "biorhythm": "바이오리듬",
+    "destiny": "운명"
+  },
+  "sections": {
+    "profile": "우주 프로필",
+    "insight": "일일 인사이트",
+    "analysisTitle": "우주적 자기 분석",
+    "westernEssence": "서부 황도대 에센스",
+    "easternAnalysis": "동부 에너지 분석",
+    "growthCouncil": "성장을 위한 조언",
+    "numerologicalDestiny": "수비학적 운명",
+    "vibrationNumber": "운명의 수"
+  },
+  "biorhythm": {
+    "title": "실시간 생체궤도",
+    "physical": "신체 지수",
+    "emotional": "감성지수",
+    "intellectual": "지적 색인"
+  },
+  "scroll": {
+    "cosmic": {
+      "title": "우주 프롤로그",
+      "orbitalVelocity": "지구 궤도 속도",
+      "galacticVelocity": "은하 궤도 속도",
+      "axialTilt": "축 기울기",
+      "distanceFromSun": "태양으로부터의 거리",
+      "locationTooltip": "당신이 머물렀던 곳"
+    },
+    "final": {
+      "premium": {
+        "title": "당신의 신화를 영원히 간직하세요.",
+        "description": "귀하만을 위해 제작된 고해상도 이미지와 수집 가능한 PDF 보고서가 준비되어 있습니다."
+      },
+      "free": {
+        "title": "이 모든 계시를 신성한 유물로 간직하고 싶습니까?",
+        "description": "보이지 않는 모든 진실을 풀어내고 영원한 디지털 유물을 획득하세요."
+      },
+      "download": "PDF 유물 다운로드",
+      "checkout": "성역의 모든 비밀을 풀어보세요 (₩9,900)",
+      "notice": "일회성 결제로 고해상도 PDF와 숨겨진 모든 신화적 레이어가 즉시 잠금 해제됩니다."
+    },
+    "oracleDisclosure": "신성한 계시",
+    "celestialAlignment": "천체 정렬",
+    "solarSign": "솔라 사인",
+    "lunarAnimal": "달의 수호자",
+    "lifePath": "생활 경로",
+    "geneticBlueprint": "유전적 청사진",
+    "bloodType": "혈액형"
+  },
+  "premium": {
+    "onomancy": {
+      "title": "Sound Weaving 잠금 해제(Onomancy)",
+      "description": "당신의 이름의 진동이 당신의 Saju를 어떻게 보완하는지 알아보세요.",
+      "price": "₩9,900"
+    },
+    "pantheon": {
+      "title": "신화의 전당 잠금 해제",
+      "description": "당신을 지켜주는 이집트의 수호신과 켈트의 나무를 확인해보세요.",
+      "price": "₩9,900"
+    }
+  },
+  "pantheon": {
+    "symbols": {
+      "Stone": "탄생석",
+      "Flower": "탄생화",
+      "Star": "탄생 별"
+    },
+    "title": "신화의 전당",
+    "egyptianGuardian": "이집트 수호자",
+    "celticTreeSign": "켈트 나무 표시",
+    "birthSymbols": "출생 기호"
+  },
+  "onomancy": {
+    "title": "소리의 조화",
+    "missingForce": "누락된 요소",
+    "none": "없음",
+    "vibrationFill": "진동 보완",
+    "circularText": "천체공명 • 유일성 분석 • 진동의 논리 •"
+  },
+  "synergy": {
+    "adjective": "특별한"
+  }
+}

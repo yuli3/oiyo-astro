@@ -1,0 +1,14 @@
+{
+  "faceShape": "얼굴 모양",
+  "personalColor": "퍼스널 컬러",
+  "achievements": "업적",
+  "totalAmount": "총액",
+  "supplyAmount": "공급량",
+  "salaryInput": "샐러리",
+  "salaryPlaceholder": "급여를 입력하세요",
+  "dependents": "부양가족",
+  "children": "어린이들",
+  "calculate": "계산하기",
+  "calculatePrompt": "계산할 내용을 입력하세요.",
+  "disclaimerText": "재정적인 조언이 아닙니다."
+}

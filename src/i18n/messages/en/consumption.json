@@ -1,0 +1,21 @@
+{
+  "intro": {
+    "badge": "Psychological Accounting",
+    "title": "Consumption Persona",
+    "quote": "How you spend money is how you approach the world and how you love life.",
+    "startButton": "Getting Started with Diagnostics"
+  },
+  "questions": {
+    "signal": "consumption questions"
+  },
+  "results": {
+    "pattern": "Consumption DNA",
+    "impact": "flow of wealth",
+    "guidance": "financial wisdom",
+    "recalibrate": "Diagnose again"
+  },
+  "meta": {
+    "title": "Consumption propensity test - OIYO",
+    "description": "We analyze your consumption psychology, including rationality, emotion, and conspicuousness."
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "roles": {
+    "guide": {
+      "name": "激励者",
+      "description": "人生旅途中帮助你的珍贵缘分。"
+    },
+    "supporter": {
+      "name": "激励者",
+      "description": "人生旅途中帮助你的珍贵缘分。"
+    },
+    "connector": {
+      "name": "激励者",
+      "description": "人生旅途中帮助你的珍贵缘分。"
+    },
+    "challenger": {
+      "name": "激励者",
+      "description": "人生旅途中帮助你的珍贵缘分。"
+    }
+  },
+  "title": "贵人",
+  "description": "人生旅途中帮助你的珍贵缘分。",
+  "intro": "独行快，众行远。",
+  "finding": "环顾四周。贵人或许已在你的身边。"
+}

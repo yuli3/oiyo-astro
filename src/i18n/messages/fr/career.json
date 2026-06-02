@@ -1,0 +1,494 @@
+{
+  "meta": {
+    "hero": {
+      "badge": "Boussole de Carrière",
+      "subtitle": "Découvrez des informations sur vous-même"
+    },
+    "keywords": "évaluation de carrière, test de personnalité, RIASEC, code Holland, conseil en carrière, satisfaction au travail, appariement de carrière, personnalité au travail",
+    "description": "Explorez les cheminements de carrière optimaux qui correspondent à votre type de personnalité et à vos aptitudes.",
+    "title": "OIYO Carrière - Trouvez Votre Sobriquet"
+  },
+  "types": {
+    "realistic": {
+      "name": "Réaliste (Praticiens)",
+      "emoji": "🔧"
+    },
+    "investigative": {
+      "name": "Investigateur (Penseurs)",
+      "emoji": "🔬"
+    },
+    "artistic": {
+      "name": "Artistique (Créateurs)",
+      "emoji": "🎨"
+    },
+    "social": {
+      "name": "Social (Aidants)",
+      "emoji": "👥"
+    },
+    "enterprising": {
+      "name": "Entreprenant (Persuadeurs)",
+      "emoji": "💼"
+    },
+    "conventional": {
+      "name": "Conventionnel (Organisateurs)",
+      "emoji": "📊"
+    },
+    "subtitle": "Quel type vous décrit le mieux ?"
+  },
+  "hero": {
+    "badge": "🎯 Basé sur la Science",
+    "subtitle": "Découvrez les parcours de carrière idéaux basés sur votre type de personnalité",
+    "cta": "Trouver Mon Match de Carrière",
+    "title": "Tableau de Bord",
+    "description": "Analyse de votre disposition unique"
+  },
+  "benefits": {
+    "subtitle": "Alignez votre carrière sur vos forces et intérêts naturels",
+    "items": [
+      {
+        "icon": "🎯",
+        "title": "Appariement de Carrière Parfait",
+        "description": "Trouvez des emplois qui correspondent à votre personnalité innée."
+      },
+      {
+        "icon": "😊",
+        "title": "Satisfaction au Travail",
+        "description": "Travaillez dans un environnement où vous pouvez briller."
+      },
+      {
+        "icon": "📈",
+        "title": "Croissance Professionnelle",
+        "description": "Évoluez plus rapidement en tirant parti de vos forces."
+      },
+      {
+        "icon": "⚖️",
+        "title": "Équilibre Vie Professionnelle-Vie Privée",
+        "description": "Choisissez une carrière qui correspond à vos valeurs de style de vie."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Quelle carrière me convient ?",
+        "description": "Basé sur le modèle RIASEC utilisé par les psychologues.",
+        "question": "Est-ce scientifique ?",
+        "answer": "C'est basé sur le modèle RIASEC utilisé par les psychologues."
+      },
+      {
+        "icon": "🚀",
+        "title": "Quel est le degré de précision des résultats ?",
+        "description": "Oui, cela aide pour les choix de spécialisation et de stage.",
+        "question": "Les étudiants peuvent-ils l'utiliser ?",
+        "answer": "Oui, cela aide pour les choix de spécialisation et de stage."
+      },
+      {
+        "icon": "💡",
+        "title": "Précision",
+        "description": "Affiche une très haute précision dans l'identification des intérêts fondamentaux.",
+        "question": "Est-ce précis ?",
+        "answer": "Affiche une très haute précision dans l'identification des intérêts fondamentaux."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "📊",
+        "title": "Analyse RIASEC",
+        "description": "Analyse détaillée de 6 domaines d'intérêt.",
+        "question": "Analyse RIASEC",
+        "answer": "Analyse détaillée de 6 domaines d'intérêt."
+      },
+      {
+        "icon": "📋",
+        "title": "Liste de Carrières",
+        "description": "Plus de 50 emplois recommandés sélectionnés pour vous.",
+        "question": "Liste de Carrières",
+        "answer": "Plus de 50 emplois recommandés sélectionnés pour vous."
+      },
+      {
+        "icon": "🚀",
+        "title": "Parcours de Croissance",
+        "description": "Conseils pratiques pour des industries spécifiques.",
+        "question": "Parcours de Croissance",
+        "answer": "Conseils pratiques pour des industries spécifiques."
+      }
+    ]
+  },
+  "test": {
+    "scale": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    },
+    "test": {
+      "progress": "Progression",
+      "submit": "Soumettre",
+      "loading": "Chargement",
+      "selectOption": "Sélectionner une Option",
+      "insightBullets": ["Aperçus"],
+      "next": "Suivant",
+      "previous": "Précédent"
+    },
+    "result": {
+      "title": "Rapport d'Analyse Détaillé",
+      "description": "Nous préparons des valeurs et des aperçus spécifiques que ce service vous offre."
+    },
+    "meta": {
+      "title": "Diagnostic Personnalisé",
+      "description": "Nous préparons des valeurs et des aperçus spécifiques que ce service vous offre.",
+      "keywords": "test d'aptitude, exploration de carrière, recommandation d'emploi"
+    },
+    "title": "Tableau de Bord",
+    "description": "Rapport approfondi basé sur les données",
+    "primaryType": "Type Principal",
+    "allTypes": "Tous les Types",
+    "careers": "Carrières",
+    "workEnvironment": "Environnement de Travail",
+    "secondaryType": "Type Secondaire",
+    "understanding": "Compréhension",
+    "retake": "Refaire",
+    "subtitle": "Détails",
+    "rateInstructions": "Instructions de Notation",
+    "progress": "Progression",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "loading": "Chargement",
+    "selectOption": "Sélectionner une Option",
+    "insightBullets": ["Aperçus"]
+  },
+  "result": {
+    "test": {
+      "progress": "Progression",
+      "submit": "Soumettre",
+      "loading": "Chargement",
+      "selectOption": "Sélectionner une Option",
+      "insightBullets": ["Aperçus"],
+      "next": "Suivant",
+      "previous": "Précédent"
+    },
+    "result": {
+      "title": "Rapport d'Analyse Détaillé",
+      "description": "Nous préparons des valeurs et des aperçus spécifiques que ce service vous offre."
+    },
+    "meta": {
+      "title": "Diagnostic Personnalisé",
+      "description": "Nous préparons des valeurs et des aperçus spécifiques que ce service vous offre.",
+      "keywords": "résultats du test, analyse de carrière, adéquation au poste"
+    },
+    "title": "Rapport d'Analyse Détaillé",
+    "description": "Nous préparons des valeurs et des aperçus spécifiques que ce service vous offre.",
+    "primaryType": "Type Principal",
+    "allTypes": "Tous les Types",
+    "careers": "Carrières",
+    "workEnvironment": "Environnement de Travail",
+    "secondaryType": "Type Secondaire",
+    "understanding": "Compréhension",
+    "retake": "Refaire"
+  },
+  "title": "Aperçus de Carrière",
+  "description": "Analyse de votre disposition unique",
+  "keywords": "Mots-clés",
+  "career": {
+    "types": {
+      "realistic": {
+        "traits": [
+          "Honnête et authentique",
+          "Pratique et réaliste",
+          "Habile avec les outils",
+          "Indépendante"
+        ],
+        "careerSuggestions": [
+          "Ingénieur Mécanique",
+          "Électricienne",
+          "Chef",
+          "Technicien automobile",
+          "Vétérinaire",
+          "Architecte paysagiste",
+          "Pilote"
+        ],
+        "name": "Conventionnel",
+        "alias": "L'Organisateur",
+        "description": "Vous préférez les environnements structurés et ordonnés.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "investigative": {
+        "traits": [
+          "Analytique et logique",
+          "Intellectuellement curieux",
+          "Précise",
+          "Penseur indépendant"
+        ],
+        "careerSuggestions": [
+          "Développeur de logiciels",
+          "Analyste de données",
+          "Chercheur scientifique",
+          "Médecin",
+          "Économiste",
+          "Psychologue",
+          "Pharmacienne"
+        ],
+        "name": "Conventionnel",
+        "alias": "L'Organisateur",
+        "description": "Vous préférez les environnements structurés et ordonnés.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "artistic": {
+        "traits": [
+          "Créatif et original",
+          "Esprit Libre",
+          "Expressive",
+          "Non conventionnel"
+        ],
+        "careerSuggestions": [
+          "Graphiste",
+          "Écrivaine",
+          "Marketing créatif",
+          "Architecte",
+          "Musicienne",
+          "Actrice",
+          "Couturier"
+        ],
+        "name": "Conventionnel",
+        "alias": "L'Organisateur",
+        "description": "Vous préférez les environnements structurés et ordonnés.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "social": {
+        "traits": ["Empathique", "Coopérative", "Amicale", "Bon communicateur"],
+        "careerSuggestions": [
+          "Professeure",
+          "Conseillère",
+          "Travailleur social",
+          "Infirmière",
+          "Spécialiste des ressources humaines",
+          "Coach/Formateur",
+          "Physiothérapeute"
+        ],
+        "name": "Conventionnel",
+        "alias": "L'Organisateur",
+        "description": "Vous préférez les environnements structurés et ordonnés.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "enterprising": {
+        "traits": ["Ambitieuse", "Confiante", "Persuasive", "Énergique"],
+        "careerSuggestions": [
+          "Directeur des ventes",
+          "Dirigeant d'entreprise",
+          "Avocate",
+          "Entrepreneuse",
+          "Responsable marketing",
+          "Agent immobilier",
+          "Chef de projet"
+        ],
+        "name": "Conventionnel",
+        "alias": "L'Organisateur",
+        "description": "Vous préférez les environnements structurés et ordonnés.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      },
+      "conventional": {
+        "traits": ["Souci du détail", "Organisée", "Responsable", "Efficace"],
+        "careerSuggestions": [
+          "Comptable",
+          "Saisie de données",
+          "adjointe administrative",
+          "Plaque de banc",
+          "Préparateur de déclarations de revenus",
+          "Bibliothécaire",
+          "Souscripteur d'assurance"
+        ],
+        "name": "Conventionnel",
+        "alias": "L'Organisateur",
+        "description": "Vous préférez les environnements structurés et ordonnés.",
+        "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
+      }
+    },
+    "questions": [
+      {
+        "id": "1",
+        "text": "J'aime travailler avec des outils et des machines",
+        "type": "réaliste",
+        "weight": 3
+      },
+      {
+        "id": "2",
+        "text": "Je préfère le travail pratique aux discussions théoriques",
+        "type": "réaliste",
+        "weight": 3
+      },
+      {
+        "id": "3",
+        "text": "J'aime voir des résultats tangibles de mon travail",
+        "type": "réaliste",
+        "weight": 2
+      },
+      {
+        "id": "4",
+        "text": "J'aime construire, réparer ou réparer des choses",
+        "type": "réaliste",
+        "weight": 3
+      },
+      {
+        "id": "5",
+        "text": "Je préfère travailler en extérieur ou en atelier",
+        "type": "réaliste",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "text": "J'aime résoudre des problèmes complexes par la recherche et l'analyse",
+        "type": "enquête",
+        "weight": 3
+      },
+      {
+        "id": "7",
+        "text": "J'aime comprendre comment les choses fonctionnent à un niveau profond",
+        "type": "enquête",
+        "weight": 3
+      },
+      {
+        "id": "8",
+        "text": "Je préfère travailler de manière indépendante sur des défis intellectuels",
+        "type": "enquête",
+        "weight": 2
+      },
+      {
+        "id": "9",
+        "text": "J'aime collecter et analyser des données",
+        "type": "enquête",
+        "weight": 3
+      },
+      {
+        "id": "10",
+        "text": "J'aime expérimenter et tester de nouvelles théories",
+        "type": "enquête",
+        "weight": 2
+      },
+      {
+        "id": "11",
+        "text": "J'aime m'exprimer de manière créative",
+        "type": "artistique",
+        "weight": 3
+      },
+      {
+        "id": "12",
+        "text": "Je préfère les environnements de travail flexibles sans règles strictes",
+        "type": "artistique",
+        "weight": 2
+      },
+      {
+        "id": "13",
+        "text": "J'aime travailler avec des couleurs, des designs ou des concepts créatifs",
+        "type": "artistique",
+        "weight": 3
+      },
+      {
+        "id": "14",
+        "text": "J'apprécie l'originalité et l'innovation dans mon travail",
+        "type": "artistique",
+        "weight": 3
+      },
+      {
+        "id": "15",
+        "text": "J'apprécie les projets qui permettent une interprétation créative",
+        "type": "artistique",
+        "weight": 2
+      },
+      {
+        "id": "16",
+        "text": "J'aime aider les autres à résoudre leurs problèmes",
+        "type": "sociale",
+        "weight": 3
+      },
+      {
+        "id": "17",
+        "text": "J'aime travailler en équipe et dans des environnements collaboratifs",
+        "type": "sociale",
+        "weight": 2
+      },
+      {
+        "id": "18",
+        "text": "Je m'épanouis en enseignant ou en encadrant les autres",
+        "type": "sociale",
+        "weight": 3
+      },
+      {
+        "id": "19",
+        "text": "Je préfère le travail axé sur les personnes au travail axé sur les tâches",
+        "type": "sociale",
+        "weight": 3
+      },
+      {
+        "id": "20",
+        "text": "J'aime avoir un impact positif sur les autres",
+        "type": "sociale",
+        "weight": 2
+      },
+      {
+        "id": "21",
+        "text": "J'aime diriger des projets et manager des équipes",
+        "type": "entreprenante",
+        "weight": 3
+      },
+      {
+        "id": "22",
+        "text": "J'aime les environnements compétitifs et axés sur les résultats",
+        "type": "entreprenante",
+        "weight": 2
+      },
+      {
+        "id": "23",
+        "text": "J'aime persuader les autres et influencer les décisions",
+        "type": "entreprenante",
+        "weight": 3
+      },
+      {
+        "id": "24",
+        "text": "J'aime prendre des risques calculés pour atteindre mes objectifs",
+        "type": "entreprenante",
+        "weight": 3
+      },
+      {
+        "id": "25",
+        "text": "Je préfère les environnements où je peux progresser rapidement",
+        "type": "entreprenante",
+        "weight": 2
+      },
+      {
+        "id": "26",
+        "text": "Je préfère les environnements de travail structurés et organisés",
+        "type": "conventionnelle",
+        "weight": 3
+      },
+      {
+        "id": "27",
+        "text": "J'aime travailler avec des données, des chiffres et des informations détaillées",
+        "type": "conventionnelle",
+        "weight": 2
+      },
+      {
+        "id": "28",
+        "text": "J'aime suivre les procédures et directives établies",
+        "type": "conventionnelle",
+        "weight": 3
+      },
+      {
+        "id": "29",
+        "text": "Je préfère les routines de travail prévisibles et les attentes claires",
+        "type": "conventionnelle",
+        "weight": 3
+      },
+      {
+        "id": "30",
+        "text": "J'excelle dans l'organisation et la gestion des tâches administratives",
+        "type": "conventionnelle",
+        "weight": 2
+      }
+    ]
+  }
+}

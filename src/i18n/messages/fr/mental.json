@@ -1,0 +1,36 @@
+{
+  "moodCalendar": {
+    "grid": {
+      "title": "calendrier d'humeur",
+      "noEntries": "Il n'y a pas encore d'enregistrements",
+      "addMood": "ajouter de l'émotion",
+      "daySun": "Jour",
+      "dayMon": "mois",
+      "dayTue": "fureur",
+      "dayWed": "nombre",
+      "dayThu": "cou",
+      "dayFri": "or",
+      "daySat": "Samedi",
+      "moodQuestion": "Comment vous êtes-vous senti ?",
+      "close": "fermer",
+      "saveFailed": "échec de la sauvegarde",
+      "saved": "enregistrée",
+      "saveAsImage": "Enregistrer sous image"
+    }
+  },
+  "moodAnalyzer": {
+    "moods": {
+      "happy": "bonheur",
+      "sad": "chagrin",
+      "anxious": "troubles",
+      "angry": "agressivité",
+      "calm": "tranquillité",
+      "excited": "excitée",
+      "sunny": "lucidité",
+      "cloudy": "se brouiller",
+      "rainy": "pluie",
+      "storm": "tempête",
+      "neutral": "neutralité"
+    }
+  }
+}

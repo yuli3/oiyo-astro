@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "keywords": "인생 시뮬레이터, 인생 선택, 인생 시뮬레이션, 진로 시뮬레이션, 성격 테스트, 인생 게임, 미래 예측, 인생 경로",
+    "title": "맞춤형 분석 결과",
+    "description": "lifeSimulator 테스트 및 분석"
+  },
+  "hero": {
+    "subtitle": "22세부터 42세까지 선택하여 자신의 인생 결말을 알아보세요.",
+    "cta": "인생을 시작하다"
+  },
+  "test": {
+    "progressTitle": "인생의 발전",
+    "ageUnit": "세다",
+    "stageLabel": "인생의 단계"
+  },
+  "stats": {
+    "career": "직업",
+    "wealth": "재산",
+    "relationship": "관계",
+    "happiness": "행복",
+    "health": "건강"
+  },
+  "result": {
+    "rarity": {
+      "legendary": "전설적인",
+      "rare": "희귀한",
+      "uncommon": "평범한",
+      "common": "흔한"
+    },
+    "scoreLabel": "총점",
+    "rankingLabel": "최고 순위",
+    "achievementsLabel": "주요 성과",
+    "adviceLabel": "💡생활 조언",
+    "finalStatsTitle": "최종 통계",
+    "journeyTitle": "인생 여행",
+    "ageAxis": "나이",
+    "share": "결과를 공유하세요",
+    "retake": "다시 살아"
+  },
+  "cta": {
+    "subtitle": "선택을 하고 어떤 삶이 당신을 기다리고 있는지 알아보세요",
+    "button": "여행을 시작하세요"
+  }
+}

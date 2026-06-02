@@ -1,0 +1,59 @@
+{
+  "title": "Évaluation TCI",
+  "subtitle": "Inventaire du Tempérament et du Caractère (TCI)",
+  "dimensions": {
+    "C": {
+      "label": "Coopération"
+    },
+    "HA": {
+      "label": "Évitement du Danger"
+    },
+    "NS": {
+      "label": "Recherche de Nouveauté"
+    },
+    "P": {
+      "label": "Persistance"
+    },
+    "RD": {
+      "label": "Dépendance à la Récompense"
+    },
+    "SD": {
+      "label": "Détermination"
+    },
+    "ST": {
+      "label": "Transcendance de Soi"
+    }
+  },
+  "options": {
+    "1": "Pas du tout d'accord",
+    "2": "Pas d'accord",
+    "3": "Neutre",
+    "4": "D'accord",
+    "5": "Tout à fait d'accord"
+  },
+  "questions": {
+    "tci_1": "Mon esprit est constamment attiré par l'attrait de l'inconnu et de la nouveauté.",
+    "tci_2": "Je trouve un profond réconfort dans le rythme des routines familières.",
+    "tci_3": "Les réflexions sur les ombres du futur pèsent souvent lourdement sur mon esprit.",
+    "tci_4": "Je marche avec un optimisme inné, confiant que la lumière me guidera.",
+    "tci_5": "La chaleur de la reconnaissance et des louanges nourrit mon cœur.",
+    "tci_6": "Je reste ferme comme un pin solitaire, indifférent aux vents de l'opinion publique.",
+    "tci_7": "J'endure les tempêtes jusqu'à ce que ma mission soit accomplie.",
+    "tci_8": "Quand le chemin devient trop épineux, je choisis une nouvelle direction avec aisance.",
+    "tci_9": "Je suis le souverain architecte de mon propre destin.",
+    "tci_10": "Je me sens souvent comme une feuille à la dérive sur la rivière du destin.",
+    "tci_11": "Je me vois comme un fil dans la grande tapisserie de l'humanité.",
+    "tci_12": "Dans le jardin de la vie, je m'occupe d'abord de mes propres fleurs.",
+    "tci_13": "Je ressens une résonance sacrée qui lie tous les êtres vivants.",
+    "tci_14": "Je ne fais confiance qu'au monde tangible que je peux toucher et mesurer."
+  },
+  "badge": "Architecture Psychologique",
+  "resultTitle": "Profil Ontologique",
+  "paradoxLabel": "Paradoxe de l'Âme",
+  "paradoxDesc": "L'interaction de {key} au sein de votre résonance.",
+  "nature": "Nature Primordiale (Tempérament)",
+  "nurture": "Caractère Manifesté",
+  "balanced": "Harmonie Équilibrée",
+  "restart": "Recommencer l'Évaluation",
+  "neuroscienceGuide": "Neurosciences de Vos Dimensions"
+}

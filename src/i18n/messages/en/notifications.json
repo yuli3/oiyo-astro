@@ -1,0 +1,54 @@
+{
+  "empty": "No notifications.",
+  "dailyInsight": {
+    "title": "OIYO - Daily Insight 🌟",
+    "body": "Your personalized daily insight is ready!",
+    "actions": {
+      "view": "View",
+      "later": "Later"
+    }
+  },
+  "aiHoroscope": {
+    "title": "🔮 AI Personality Horoscope",
+    "body": "Your personalized horoscope for {personality} personality is ready!",
+    "bodyNoPersonality": "Your personalized horoscope is ready!",
+    "actions": {
+      "view": "View Horoscope",
+      "later": "Later"
+    }
+  },
+  "testReminder": {
+    "title": "Complete Your Test! 🎯",
+    "body": "Finish your personality test and discover your results.",
+    "actions": {
+      "continue": "Continue",
+      "dismiss": "Dismiss"
+    }
+  },
+  "streak": {
+    "title": "🔥 {count} Day Streak!",
+    "body": "Amazing! You have used OIYO for {count} days in a row.",
+    "actions": {
+      "celebrate": "Celebrate",
+      "share": "Share"
+    }
+  },
+  "social": {
+    "twinMatch": {
+      "title": "🤝 Personality Twin Found!",
+      "body": "We found someone with a similar personality to yours."
+    },
+    "newFriend": {
+      "title": "👋 New Friend",
+      "body": "Someone is interested in your test results."
+    },
+    "testShared": {
+      "title": "📤 Test Shared",
+      "body": "A friend checked your test."
+    }
+  },
+  "actions": {
+    "view": "View",
+    "later": "Later"
+  }
+}

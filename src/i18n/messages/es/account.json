@@ -1,0 +1,767 @@
+{
+  "dashboard": {
+    "meta": {
+      "keywords": "flujo mensual, reporte integrado, resumen, guía PDF",
+      "hero": {
+        "guestTitle": "Bienvenido a tu Análisis Personalizado",
+        "subtitle": "Registra tu propia crónica mientras viajas por el universo."
+      },
+      "title": "Perspectivas Profundas",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+    },
+    "hero": {
+      "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+      "guestTitle": "Bienvenido a tu Análisis Personalizado"
+    },
+    "recentTests": {
+      "retake": "Repetir",
+      "share": "Compartir enlace del reporte",
+      "title": "Perspectivas Profundas",
+      "viewAll": "Ver todo",
+      "noTests": "Sin pruebas",
+      "startTesting": "Iniciar nueva exploración"
+    },
+    "emotionSummary": {
+      "currentStreak": "Racha de reflexión de {days} días",
+      "avgTemp": "Temp. Promedio: {temp}°C",
+      "title": "Vibraciones Internas",
+      "notLogged": "Sin registro",
+      "logNow": "Registrar ahora"
+    },
+    "stats": {
+      "thisWeek": "Esta semana",
+      "thisMonth": "Este mes",
+      "allTime": "Todo el tiempo"
+    },
+    "scope": {
+      "weekly": "Semanal",
+      "monthly": "mes",
+      "yearly": "Anual",
+      "daily": "Diario"
+    },
+    "card": {
+      "advice": "Consejo del día",
+      "luckyNumbers": "Números de sintonía",
+      "luckyColors": "Colores de inspiración",
+      "warnings": "Advertencias internas"
+    },
+    "title": "Perspectivas Profundas",
+    "description": "Ofrece una guía del alma que va más allá del análisis superficial.",
+    "keywords": "flujo mensual, reporte integrado, resumen, guía PDF",
+    "achievements": {
+      "emptyTitle": "Aún no se han establecido hitos.",
+      "emptyDescription": "Analizando los ecos profundos de tus elecciones...",
+      "emptyCta": "Dar el primer paso",
+      "title": "Perspectivas Profundas",
+      "labels": {
+        "level": "Nivel",
+        "points": "Fragmentos",
+        "achievements": "Logros"
+      },
+      "recentTitle": "Alcanzado recientemente",
+      "viewAll": "Ver todo",
+      "stats": {
+        "unlocked": "Revelado",
+        "completionRate": "Completo",
+        "remaining": "En progreso"
+      },
+      "badgeCollection": "Colección de insignias",
+      "nextTitle": "A alcanzar próximamente",
+      "notificationsTitle": "Notificaciones",
+      "notificationsEmpty": "Paz silenciosa",
+      "dismissAll": "Descartar todo",
+      "dismiss": "Cerrar",
+      "result": {
+        "title": "Perspectivas Profundas",
+        "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+      },
+      "meta": {
+        "title": "Perspectivas Profundas",
+        "description": "Ofrece una guía del alma que va más allá del análisis superficial.",
+        "keywords": "flujo mensual, reporte integrado, resumen, guía PDF"
+      },
+      "test": {
+        "progress": "Progreso de Navegación",
+        "next": "Siguiente",
+        "previous": "Anterior",
+        "submit": "Mapeo Completo",
+        "loading": "Explorando capas del inconsciente...",
+        "selectOption": "Elige la verdad que más resuene",
+        "insightBullets": ["Conocimiento"]
+      }
+    },
+    "testHistory": {
+      "title": "Perspectivas Profundas",
+      "noTests": "Sin pruebas",
+      "noTestsDescription": "Aún no has escrito tu historia.",
+      "takeFirstTest": "Abrir la primera puerta",
+      "viewResult": "Ver resultado",
+      "viewAll": "Ver todo"
+    },
+    "T": "Resumen",
+    "overview": {
+      "testsCompleted": "Pruebas completadas",
+      "totalPoints": "Puntos totales",
+      "currentStreak": "Racha de reflexión",
+      "achievementsUnlocked": "Logros desbloqueados"
+    },
+    "quickActions": {
+      "title": "Perspectivas Profundas",
+      "takeTest": "Enfrentar tu verdadero yo",
+      "viewAchievements": "Ver logros",
+      "checkEmotion": "Verificar vibración",
+      "findTwin": "Encontrar alma gemela",
+      "downloadPDF": "Descargar Reporte PDF"
+    },
+    "ontology": {
+      "twinFinder": {
+        "title": "Perspectivas Profundas",
+        "noMatches": "Aún no se ha descubierto tu pareja predestinada.",
+        "findNow": "Encontrar ahora"
+      }
+    },
+    "common": {
+      "recommendations": {
+        "title": "Perspectivas Profundas",
+        "error": "Diseñando un espejo que refleja tu verdadera esencia...",
+        "empty": "Sin registros",
+        "exploreAll": "Explorar todo",
+        "spotlightEyebrow": "Sugerencia Especial",
+        "loading": "Explorando capas del inconsciente...",
+        "trending": "Tendencia actual",
+        "new": "Nuevo descubrimiento",
+        "takeTest": "Enfrentar tu verdadero yo"
+      },
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "submit": "Mapeo Completo",
+      "start": "Iniciar Viaje",
+      "loading": "Explorando capas del inconsciente...",
+      "results": "Diagnóstico Final",
+      "dashboard": "Mi Panel",
+      "insights": "Perspectivas Clave"
+    },
+    "profile": {
+      "title": "Perspectivas Profundas",
+      "anonymous": "Busca-verdades anónimo",
+      "achievements": "Logros",
+      "badges": {
+        "newMember": "Primer Paso",
+        "explorer": "Pionero Interno"
+      },
+      "editProfile": "Editar Identidad",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+    },
+    "biorhythm": {
+      "title": "Perspectivas Profundas",
+      "physical": "Ritmo Físico",
+      "emotional": "Sintonía Emocional",
+      "intellectual": "Perspectiva Intelectual"
+    },
+    "fortune": {
+      "numerology": {
+        "title": "Perspectivas Profundas",
+        "lifePath": "Camino de Vida",
+        "personalYear": "Flujo del Año"
+      }
+    },
+    "saju": {
+      "title": "Perspectivas Profundas",
+      "dominant": "Elemento Dominante",
+      "lacking": "Equilibrio Necesario"
+    },
+    "test": {
+      "progress": "Progreso de Navegación",
+      "submit": "Mapeo Completo",
+      "loading": "Explorando capas del inconsciente...",
+      "selectOption": "Elige la verdad que más resuene",
+      "insightBullets": ["Mapeando la constelación de tu verdadero yo."],
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Perspectivas Profundas",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+    }
+  },
+  "achievements": {
+    "labels": {
+      "level": "Nivel",
+      "points": "Fragmentos"
+    },
+    "viewAll": "Ver todo",
+    "page": {
+      "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+      "title": "Perspectivas Profundas"
+    },
+    "loading": {
+      "message": "⏳✨ Reuniendo tus insignias y rastros de XP...",
+      "tip": "🥇 ¡Sigue explorando viajes de personalidad mientras organizamos tus recompensas!"
+    },
+    "filters": {
+      "all": "Todo",
+      "unlocked": "Revelado",
+      "locked": "Misterios Ocultos",
+      "testCompletion": "Finalización de prueba",
+      "social": "Actividad social",
+      "streak": "Participación consecutiva",
+      "throttling": "Sintonizando"
+    },
+    "stats": {
+      "level": "Nivel",
+      "points": "Fragmentos",
+      "currentLevel": "Nivel actual",
+      "totalPoints": "Puntos totales",
+      "achievementProgress": "Progreso de logros",
+      "badgeCollection": "Colección de insignias",
+      "unlockedAchievements": "Logros desbloqueados",
+      "completionRate": "Completo",
+      "remainingAchievements": "Misterios restantes",
+      "testsCompleted": "Pruebas completadas",
+      "totalScore": "Puntuación total",
+      "unlocked": "Revelado",
+      "remaining": "En progreso",
+      "title": "Perspectivas Profundas",
+      "achievements": "Logros",
+      "maxLevelMessage": "Has alcanzado el nivel de cúspide.",
+      "levelPrefix": "Nivel",
+      "levelTitle": "Resumen",
+      "totalPointsTitle": "Energía Acumulada",
+      "totalPointsSubtitle": "Todos los puntos hasta ahora",
+      "progressTitle": "Pasos de Avance",
+      "badgeTitle": "Insignia de Honor",
+      "badgeSubtitle": "Poder Otorgado",
+      "badgesUnlocked": "Huellas Ganadas",
+      "overallProgress": "Progreso Total",
+      "emptyCategory": "No hay huellas registradas en esta categoría todavía."
+    },
+    "cards": {
+      "locked": {
+        "cta": "Guardar como PDF"
+      },
+      "progress": {
+        "label": "{progress}% completado"
+      }
+    },
+    "notifications": {
+      "empty": "Sin registros",
+      "viewAll": "Ver todo",
+      "unlocked": "Revelado",
+      "earnedPoints": "¡Ganaste {points} fragmentos!",
+      "levelUp": "¡Resonancia acelerada! Has alcanzado el nivel {level}!",
+      "newBadge": "¡Nueva insignia ganada!"
+    },
+    "recent": {
+      "empty": "Sin registros",
+      "title": "Perspectivas Profundas"
+    },
+    "cta": {
+      "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+      "button": "Tomar pruebas →",
+      "title": "Perspectivas Profundas",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+    },
+    "firstTest": {
+      "cta": "Guardar como PDF",
+      "name": "Quien cruza fronteras",
+      "title": "Sello de comienzo",
+      "description": "Has completado con éxito tu primera reflexión interior."
+    },
+    "socialSharer": {
+      "cta": "Guardar como PDF",
+      "title": "Maestro de compartir",
+      "description": "Ha compartido sus conocimientos con otros y ha creado conexiones."
+    },
+    "categories": {
+      "testCompletion": "Finalización de prueba",
+      "social": "Actividad social",
+      "streak": "Participación consecutiva",
+      "exploration": "Explorador",
+      "sharing": "Maestro de compartir"
+    },
+    "rarity": {
+      "bronze": "{count} Bronce",
+      "silver": "{count} Plata",
+      "gold": "{count} Oro",
+      "platinum": "{count} Platino",
+      "legendary": "Mito Legendario"
+    },
+    "bloodTypeExplorer": {
+      "cta": "Guardar como PDF",
+      "title": "Explorador de tipo de sangre",
+      "description": "Has explorado los misterios de los tipos de sangre y sus significados."
+    },
+    "sajuExplorer": {
+      "cta": "Guardar como PDF",
+      "title": "Maestro Saju",
+      "description": "Has adquirido un profundo conocimiento de la interpretación metafísica del destino."
+    },
+    "tarotExplorer": {
+      "cta": "Guardar como PDF",
+      "title": "Explorador del tarot",
+      "description": "Has explorado los misterios de las cartas del Tarot."
+    },
+    "namingExplorer": {
+      "cta": "Guardar como PDF",
+      "title": "Maestro de nombres",
+      "description": "Has explorado el poder de los nombres."
+    },
+    "viralSharer": {
+      "cta": "Guardar como PDF",
+      "title": "Compartidor viral",
+      "description": "Sus acciones han resonado ampliamente."
+    },
+    "streakMaster": {
+      "cta": "Guardar como PDF",
+      "title": "Maestro de la racha",
+      "description": "Has mantenido una racha a largo plazo."
+    },
+    "insightSeeker": {
+      "cta": "Guardar como PDF",
+      "title": "Buscador de conocimientos",
+      "description": "Estás constantemente buscando un profundo conocimiento de ti mismo."
+    },
+    "communityPillar": {
+      "cta": "Guardar como PDF",
+      "title": "Pilar comunitario",
+      "description": "Compartes sabiduría e inspiras a otros en la comunidad."
+    },
+    "summary": {
+      "myAchievements": "Todos mis logros",
+      "viewAll": "Ver todo"
+    },
+    "weeklyStreak": {
+      "cta": "Guardar como PDF",
+      "title": "Maestro de racha semanal",
+      "description": "Hace tiempo que mantienes una reflexión semanal."
+    },
+    "meta": {
+      "keywords": "flujo mensual, reporte integrado, resumen, guía PDF",
+      "title": "Perspectivas Profundas",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+    },
+    "hero": {
+      "subtitle": "Registra tu propia crónica mientras viajas por el universo."
+    },
+    "badges": {
+      "bronze": "{count} Bronce",
+      "silver": "{count} Plata",
+      "gold": "{count} Oro",
+      "platinum": "{count} Platino"
+    },
+    "next": {
+      "empty": "Sin registros"
+    },
+    "empty": {
+      "subtitle": "Registra tu propia crónica mientras viajas por el universo."
+    },
+    "actions": {
+      "share": "Compartir enlace del reporte",
+      "retake": "Repetir",
+      "viewDetails": "Ver detalles"
+    },
+    "fiveTests": {
+      "name": "Quien cruza fronteras"
+    },
+    "tenTests": {
+      "name": "Quien cruza fronteras"
+    },
+    "explorer": {
+      "name": "Quien cruza fronteras"
+    },
+    "unlocked": "Revelado",
+    "demo": {
+      "simulate": "Simular",
+      "title": "Perspectivas Profundas",
+      "reset": "Restablecer"
+    },
+    "emptyTitle": "Aún no se han establecido hitos.",
+    "emptyDescription": "Analizando los ecos profundos de tus elecciones...",
+    "emptyCta": "Dar el primer paso",
+    "badgeCollection": "Colección de insignias",
+    "recentTitle": "Alcanzado recientemente",
+    "nextTitle": "A alcanzar próximamente",
+    "levelTitle": "Nivel {level}",
+    "pointsEarned": "{points} fragmentos ganados",
+    "achievements": {
+      "firstTest": {
+        "name": "Quien cruza fronteras",
+        "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+      },
+      "fiveTests": {
+        "name": "Quien cruza fronteras",
+        "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+      },
+      "tenTests": {
+        "name": "Quien cruza fronteras",
+        "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+      },
+      "explorer": {
+        "name": "Quien cruza fronteras",
+        "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+      },
+      "title": "Perspectivas Profundas",
+      "unlocked": "Revelado",
+      "socialSharer": {
+        "name": "Maestro Compartidor",
+        "description": "Ha compartido sus perspectivas con otros y creado conexiones."
+      },
+      "bloodTypeExplorer": {
+        "name": "Explorador Sanguíneo",
+        "description": "Ha explorado los misterios de los tipos sanguíneos y sus significados."
+      },
+      "sajuExplorer": {
+        "name": "Maestro Saju",
+        "description": "Ha obtenido comprensión profunda de la interpretación metafísica del destino."
+      },
+      "categoryExplorer": {
+        "name": "Explorador de Categorías",
+        "description": "Ha explorado varias categorías y ampliado su conocimiento."
+      },
+      "testVeteran": {
+        "name": "Veterano de Tests",
+        "description": "Ha completado numerosos tests y profundizado su autocomprensión."
+      },
+      "completionist": {
+        "name": "Perfeccionista",
+        "description": "Ha completado todos los tests disponibles."
+      },
+      "shareMaster": {
+        "name": "Maestro Compartidor",
+        "description": "Ha compartido resultados múltiples veces y contribuido a la comunidad."
+      },
+      "dailyVisitor": {
+        "name": "Visitante Diario",
+        "description": "Ha mantenido el hábito de reflexión diaria."
+      },
+      "rareCombination": {
+        "name": "Combinación Rara",
+        "description": "Ha descubierto una combinación de personalidad rara."
+      },
+      "perfectMatch": {
+        "name": "Coincidencia Perfecta",
+        "description": "Ha encontrado un resultado que coincide perfectamente con usted."
+      }
+    },
+    "emptyState": {
+      "title": "Perspectivas Profundas",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+    },
+    "dashboard": {
+      "emptyState": "Sin registros",
+      "title": "Perspectivas Profundas",
+      "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+      "summary": {
+        "unlocked": "Revelado",
+        "level": "Nivel",
+        "points": "Fragmentos",
+        "completion": "Logro"
+      },
+      "levelCard": {
+        "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+        "maxLevel": "Estado de Cúspide"
+      },
+      "recent": {
+        "title": "Perspectivas Profundas",
+        "empty": "Sin registros"
+      },
+      "categories": {
+        "title": "Perspectivas Profundas",
+        "progressLabel": "Tasa de Maestría"
+      },
+      "tier": {
+        "title": "Perspectivas Profundas"
+      }
+    },
+    "test": {
+      "progress": "Progreso de Navegación",
+      "submit": "Mapeo Completo",
+      "loading": "Explorando capas del inconsciente...",
+      "selectOption": "Elige la verdad que más resuene",
+      "insightBullets": ["Revela las capas ocultas de tu filosofía personal."],
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Perspectivas Profundas",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+    },
+    "categoryExplorer": {
+      "cta": "Explora varias categorías",
+      "title": "Explorador de categorías",
+      "description": "Ha explorado varias categorías y ha ampliado sus conocimientos."
+    },
+    "testVeteran": {
+      "title": "Veterano de prueba",
+      "description": "Ha completado numerosas pruebas y ha profundizado su autocomprensión."
+    },
+    "completionist": {
+      "title": "Completista",
+      "description": "Has completado todas las pruebas disponibles."
+    },
+    "shareMaster": {
+      "title": "Compartir Maestro",
+      "description": "Has compartido resultados varias veces y has contribuido a la comunidad."
+    },
+    "dailyVisitor": {
+      "title": "Visitante diaria",
+      "description": "Has mantenido el hábito de la reflexión diaria."
+    },
+    "rareCombination": {
+      "title": "Combinación rara",
+      "description": "Has descubierto una rara combinación de personalidad."
+    },
+    "perfectMatch": {
+      "title": "Combinación perfecta",
+      "description": "Has encontrado un resultado que se adapta perfectamente a ti."
+    }
+  },
+  "premium": {
+    "title": "Perspectivas Profundas",
+    "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+  },
+  "auth": {
+    "signIn": {
+      "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+      "title": "Perspectivas Profundas",
+      "description": "Encuentra la torre de sabiduría que construiste.",
+      "newUser": "¿Eres nuevo en el Santuario?",
+      "signUp": "Comienza tu viaje"
+    },
+    "signUp": {
+      "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+      "title": "Crear un Universo",
+      "existingUser": "¿Ya eres un explorador?",
+      "signIn": "Retomar tu Camino"
+    },
+    "profile": {
+      "editProfile": "Editar Identidad",
+      "accountSettings": "Ajustes de Espacio",
+      "testHistory": "Registro de Exploración",
+      "preferences": "Inspiración Preferida",
+      "welcome": "Bienvenido, viajero {name}."
+    },
+    "auth": {
+      "signUp": {
+        "title": "Perspectivas Profundas",
+        "description": "Ofrece una guía del alma que va más allá del análisis superficial.",
+        "subtitle": "Registra tu propia crónica mientras viajas por el universo."
+      },
+      "signIn": {
+        "title": "Perspectivas Profundas",
+        "description": "Ofrece una guía del alma que va más allá del análisis superficial.",
+        "subtitle": "Registra tu propia crónica mientras viajas por el universo."
+      }
+    }
+  },
+  "onboarding": {
+    "title": "Perspectivas Profundas",
+    "description": "Ofrece una guía del alma que va más allá del análisis superficial.",
+    "steps": ["Crear perfil", "Haga la primera prueba", "Explorar resultados"]
+  },
+  "analytics": {
+    "meta": {
+      "title": "Perspectivas Profundas",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial.",
+      "keywords": "flujo mensual, reporte integrado, resumen, guía PDF"
+    },
+    "advanced": {
+      "loading": "Explorando capas del inconsciente...",
+      "analyzingData": "Extrayendo significado",
+      "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+      "refresh": "Actualizar con nuevas vibraciones",
+      "totalInsights": "Total de sabiduría descubierta",
+      "highPriority": "Sugerencias principales",
+      "patterns": {
+        "frequency": "Frecuencia de aparición",
+        "strength": "Intensidad de energía",
+        "triggers": "Factores desencadenantes",
+        "outcomes": "Resultados manifestados",
+        "_text": "Análisis de Texto"
+      },
+      "avgConfidence": "Precisión promedio",
+      "tabs": {
+        "evolution": "Proceso de Evolución",
+        "patterns": "Patrones Repetitivos",
+        "predictions": "Desarrollo Esperado",
+        "insights": "Perspectivas Clave"
+      },
+      "filterBy": "Filtro de Punto de Vista",
+      "confidence": "Precisión",
+      "noInsights": "Sin perspectivas preparadas",
+      "evolution": {
+        "timeline": "Trayectoria del Tiempo",
+        "stability": "Estabilidad Mantenida",
+        "growth": "Crecimiento en Avance",
+        "volatility": "Rango de Variación",
+        "trend": "Tendencia de Flujo",
+        "prediction": "Proyección de Posibilidad"
+      },
+      "models": {
+        "accuracy": "Precisión de Inferencia",
+        "features": "Atributos Clave",
+        "predictions": "Desarrollo Esperado",
+        "lastTrained": "Última Actualización"
+      },
+      "title": "Perspectivas Profundas",
+      "recommendations": "Propuestas de Dirección"
+    },
+    "test": {
+      "progress": "Progreso de Navegación",
+      "submit": "Mapeo Completo",
+      "loading": "Explorando capas del inconsciente...",
+      "selectOption": "Elige la verdad que más resuene",
+      "insightBullets": [
+        "Explora la arquitectura profunda de tu paisaje interior."
+      ],
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "title": "Perspectivas Profundas",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+    }
+  },
+  "subscriptionManager": {
+    "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+    "addSubscription": {
+      "title": "Perspectivas Profundas",
+      "nameLabel": "Nombre del Objetivo",
+      "namePlaceholder": "Nombre del Servicio",
+      "priceLabel": "Costo de Energía (Precio)",
+      "pricePlaceholder": "Introducir Costo",
+      "usageLabel": "Frecuencia de Comunión",
+      "usageUnit": "Unidad",
+      "satisfactionLabel": "Satisfacción Interna",
+      "submit": "Mapeo Completo"
+    },
+    "summary": {
+      "monthlyTotal": "Energía mensual consumida",
+      "yearlyTotal": "Energía anual consumida",
+      "potentialSavings": "Energía recuperable"
+    },
+    "list": {
+      "monthly": "mes",
+      "used": "Consumo",
+      "timesPerMonth": "veces/mes",
+      "satisfaction": "¿Estás satisfecho con este vínculo?",
+      "valueScore": "Puntuación de Valor",
+      "keep": "Mantenimiento Recomendado",
+      "keepAction": "Vínculo Significativo",
+      "review": "Requiere Revisión",
+      "reviewAction": "Involucrarse más o considerar corte",
+      "cancel": "Corte Recomendado",
+      "cancelAction": "Vínculo de bajo valor por el costo"
+    },
+    "tips": {
+      "tip1": "Corta inmediatamente los vínculos sin significado.",
+      "tip2": "Comprueba si los planes a largo plazo son mejores que a corto plazo.",
+      "tip3": "Busca caminos que puedas compartir con otros.",
+      "title": "Perspectivas Profundas"
+    },
+    "serviceName": "Nombre del Vínculo",
+    "monthlyFee": "Costo Mensual",
+    "totalMonthly": "Total Mensual",
+    "title": "Perspectivas Profundas",
+    "empty": {
+      "title": "Perspectivas Profundas",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial."
+    }
+  },
+  "notifications": {
+    "aiHoroscope": {
+      "body": "¡Tu pronóstico galáctico para el tipo {personality} está listo!",
+      "bodyNoPersonality": "¡Tu pronóstico galáctico está listo!",
+      "actions": {
+        "view": "Ver pronóstico",
+        "later": "Más tarde"
+      }
+    },
+    "testReminder": {
+      "body": "Termina tu exploración interior en curso para ver los resultados.",
+      "actions": {
+        "continue": "Ir ahora",
+        "dismiss": "Cerrar"
+      }
+    },
+    "streak": {
+      "body": "¡Increíble! Has estado reflexionando sobre ti mismo durante {count} días.",
+      "actions": {
+        "celebrate": "Celebrar",
+        "share": "Brillar"
+      }
+    },
+    "social": {
+      "twinMatch": {
+        "body": "Descubrimos un alma espiritualmente similar a la tuya."
+      },
+      "newFriend": {
+        "body": "Alguien está mostrando gran interés en tus registros de conocimiento."
+      },
+      "testShared": {
+        "body": "Un amigo echó un vistazo a tus registros."
+      }
+    },
+    "actions": {
+      "view": "Ver",
+      "later": "Más tarde"
+    }
+  },
+  "progress": {
+    "meta": {
+      "title": "Perspectivas Profundas",
+      "description": "Ofrece una guía del alma que va más allá del análisis superficial.",
+      "keywords": "flujo mensual, reporte integrado, resumen, guía PDF"
+    },
+    "hero": {
+      "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+      "title": "Perspectivas Profundas"
+    },
+    "title": "Perspectivas Profundas",
+    "description": "Ofrece una guía del alma que va más allá del análisis superficial.",
+    "keywords": "flujo mensual, reporte integrado, resumen, guía PDF",
+    "marketing": {
+      "about": {
+        "title": "Perspectivas Profundas",
+        "tracking": {
+          "title": "Perspectivas Profundas",
+          "description": "Ofrece una guía del alma que va más allá del análisis superficial.",
+          "feature1": "Explora la estructura profunda de tu paisaje interno.",
+          "feature2": "Revela las capas de significado ocultas en tu filosofía personal.",
+          "feature3": "Explora la estructura profunda de tu paisaje interno."
+        },
+        "insights": {
+          "title": "Perspectivas Profundas",
+          "description": "Ofrece una guía del alma que va más allá del análisis superficial.",
+          "feature1": "Explora la estructura profunda de tu paisaje interno.",
+          "feature2": "Revela las capas de significado ocultas en tu filosofía personal.",
+          "feature3": "Explora la estructura profunda de tu paisaje interno."
+        }
+      }
+    }
+  },
+  "reports": {
+    "monthly": {
+      "meta": {
+        "keywords": "flujo mensual, reporte integrado, resumen, guía PDF"
+      },
+      "hero": {
+        "eyebrow": "Resumen de Perspectiva",
+        "subtitle": "Registra tu propia crónica mientras viajas por el universo.",
+        "cta": "Guardar como PDF"
+      },
+      "download": {
+        "cta": "Guardar como PDF",
+        "share": "Compartir enlace del reporte"
+      },
+      "sections": {
+        "career": "Motor de crecimiento al que aspirar",
+        "relationships": "Actitud y vínculos en las relaciones",
+        "wellness": "Nivel de energía y paz mental"
+      }
+    }
+  },
+  "hero": {
+    "subtitle": "Registra tu propia crónica mientras viajas por el universo."
+  }
+}

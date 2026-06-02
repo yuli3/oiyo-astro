@@ -1,0 +1,158 @@
+{
+  "test": {
+    "insightBullets": ["Force de signature", "Point pivot", "2"],
+    "progress": "Progrès",
+    "submit": "Envoyer",
+    "loading": "Chargement...",
+    "selectOption": "Choisir une Option",
+    "subtitle": "Informations détaillées"
+  },
+  "meta": {
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "🚀",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "💡",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "🎯",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      },
+      {
+        "icon": "🔥",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      },
+      {
+        "icon": "⭐",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "🚀",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "💡",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "🎯",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "🔥",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      },
+      {
+        "icon": "⭐",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "🚀",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "💡",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "🎯",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "🔥",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "⭐",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      }
+    ]
+  },
+  "result": {
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+  },
+  "title": "ton Profil Financier",
+  "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+}

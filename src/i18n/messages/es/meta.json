@@ -1,0 +1,21 @@
+{
+  "description": "Explora tu verdadero yo con nuestros análisis de personalidad premium.",
+  "keywords": "Descifrando los patrones geométricos de tu identidad...",
+  "title": "Centro de Descubrimiento ",
+  "test": {
+    "insightBullets": [
+      "Consultando el alineamiento de los Diez Tallos Celestiales.",
+      "Rastreando las raíces de las Doce Ramas Terrestres.",
+      "Calculando las interacciones alquímicas de tu alma."
+    ],
+    "progress": "Progreso",
+    "submit": "Descubrir Mi Destino",
+    "loading": "Calculando tu carta Saju en curso...",
+    "selectOption": "Por favor, introduce tus datos",
+    "next": "Siguiente",
+    "previous": "Anterior"
+  },
+  "hero": {
+    "subtitle": "Estamos interpretando tus respuestas para revelar tu esencia única."
+  }
+}

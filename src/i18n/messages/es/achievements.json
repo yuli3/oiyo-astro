@@ -1,0 +1,41 @@
+{
+  "filters": {
+    "all": "Todo",
+    "testCompletion": "Tests",
+    "social": "Social",
+    "streak": "Rachas"
+  },
+  "notifications": {
+    "empty": "No hay nuevas notificaciones."
+  },
+  "page": {
+    "title": "Mis Logros",
+    "subtitle": "Rastrea tu progreso y los hitos desbloqueados."
+  },
+  "badgesUnlocked": "Insignias Desbloqueadas",
+  "overallProgress": "Progreso General",
+  "viewAll": "Ver todo",
+  "emptyCategory": "Aún no hay logros en esta categoría.",
+  "labels": {
+    "level": "Nivel",
+    "points": "Puntos"
+  },
+  "title": "Logros",
+  "unlocked": "Desbloqueado",
+  "firstTest": {
+    "name": "Primer Test",
+    "description": "Primer test completado."
+  },
+  "fiveTests": {
+    "name": "High Five",
+    "description": "5 tests completados."
+  },
+  "tenTests": {
+    "name": "Perfecto 10",
+    "description": "10 tests completados."
+  },
+  "explorer": {
+    "name": "Explorador",
+    "description": "Exploró 3 categorías."
+  }
+}

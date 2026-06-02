@@ -1,0 +1,112 @@
+{
+  "habitAssistant": {
+    "meta": {
+      "hero": {
+        "subtitle": "Which approach works best for your personality?",
+        "badge": "🎯 Behavior Science"
+      },
+      "keywords": "keywords, tags, seo",
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "hero": {
+      "subtitle": "Which approach works best for your personality?",
+      "cta": "Encuentra mi estilo de hábito",
+      "badge": "🎯 Ciencias del comportamiento",
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🏆",
+          "title": "Mayor tasa de éxito",
+          "description": "Utilice estrategias que coincidan con sus tendencias naturales para obtener mejores resultados."
+        },
+        {
+          "icon": "⚡",
+          "title": "Progreso más rápido",
+          "description": "Evite el ensayo y error utilizando métodos que funcionen para su tipo de personalidad"
+        },
+        {
+          "icon": "💪",
+          "title": "Cambios sostenibles",
+          "description": "Desarrolle hábitos duraderos trabajando con sus patrones naturales, no en contra de ellos."
+        },
+        {
+          "icon": "🎯",
+          "title": "Estrategias personalizadas",
+          "description": "Obtenga técnicas, tiempos y métodos de motivación específicos para su tipo"
+        }
+      ],
+      "subtitle": "Which approach works best for your personality?"
+    },
+    "types": {
+      "methodical": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "social": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "flexible": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "reward_driven": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "intuitive": {
+        "name": "El integrador intuitivo",
+        "emoji": "💡"
+      },
+      "subtitle": "Which approach works best for your personality?"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "1": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "2": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "3": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "4": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        }
+      },
+      "title": "My Insights"
+    },
+    "frequency": {
+      "label": "Prio",
+      "daily": "A diario",
+      "weekly": "Semanalmente"
+    },
+    "priority": {
+      "label": "Prío",
+      "low": "Bajo",
+      "medium": "Con",
+      "high": "Alta"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights",
+    "keywords": "keywords, tags, seo",
+    "submit": "Entregar"
+  }
+}

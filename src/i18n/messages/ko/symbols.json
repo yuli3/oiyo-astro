@@ -1,0 +1,53 @@
+{
+  "flowers": {
+    "cranberry": {
+      "name": "크랜베리",
+      "language": "마음의 편안함"
+    },
+    "willow": {
+      "name": "솜틀",
+      "language": "슬픔, 유연성"
+    },
+    "carnation": {
+      "name": "카네이션",
+      "language": "자부심과 아름다움"
+    }
+  },
+  "stars": {
+    "alphecca": {
+      "name": "알페카",
+      "meaning": "예술적 재능과 성공"
+    },
+    "alcyone": {
+      "name": "물총새",
+      "meaning": "깊은 직관과 신비주의"
+    },
+    "vega": {
+      "name": "베가",
+      "meaning": "성공"
+    }
+  },
+  "stones": {
+    "garnet": {
+      "name": "석류석",
+      "meaning": "우정, 신뢰, 순수함"
+    },
+    "emerald": {
+      "name": "에메랄드",
+      "meaning": "행운, 행복, 환생"
+    }
+  },
+  "Stone": "결석",
+  "Flower": "꽃",
+  "Star": "별",
+  "title": "기호",
+  "subtitle": "꿈의 상징",
+  "searchPlaceholder": "기호 검색...",
+  "labels": {
+    "badge": "배지",
+    "general": "일반적인",
+    "psychological": "심리적",
+    "spiritual": "영적인",
+    "related": "관련된"
+  }
+}

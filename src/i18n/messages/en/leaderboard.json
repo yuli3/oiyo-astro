@@ -1,0 +1,30 @@
+{
+  "title": "Leaderboard",
+  "category": {
+    "points": "Points",
+    "streaks": "Streaks",
+    "referrals": "Referrals",
+    "tests": "Tests"
+  },
+  "period": {
+    "today": "Today",
+    "week": "Week",
+    "month": "Month",
+    "allTime": "All Time"
+  },
+  "stats": {
+    "yourRank": "Your Rank",
+    "yourScore": "Your Score",
+    "percentile": "Percentile",
+    "toNextRank": "To Next Rank"
+  },
+  "ui": {
+    "you": "You",
+    "hallOfFame": "Hall of Fame",
+    "showMore": "Show More ({count})",
+    "participants": "{count} participants",
+    "noData": "No data in the leaderboard yet.",
+    "noDataCta": "Complete tests to earn points and climb the ranks!",
+    "topPercentile": "Top {percentile}%"
+  }
+}

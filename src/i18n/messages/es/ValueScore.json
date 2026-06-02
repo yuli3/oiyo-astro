@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "Tu Perfil de Valores",
+    "description": "Descifrando los patrones geométricos de tu identidad...",
+    "keywords": "valores, valores personales, prioridades de vida, autodescubrimiento, evaluación"
+  },
+  "hero": {
+    "title": "Tu Perfil de Valores",
+    "subtitle": "Comprende qué impulsa tus decisiones y acciones",
+    "cta": "Descubrir Mis Valores",
+    "badge": "💎 Autodescubrimiento"
+  },
+  "test": {
+    "progress": "Progreso",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "loading": "Analizando tus valores...",
+    "selectOption": "Seleccionar",
+    "insightBullets": [
+      "Comprueba tus valores fundamentales",
+      "Entiendo las prioridades.",
+      "Alinea tu vida con lo importante"
+    ]
+  },
+  "result": {
+    "title": "Tu Perfil de Valores",
+    "description": "Descifrando los patrones geométricos de tu identidad..."
+  }
+}

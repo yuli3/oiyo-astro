@@ -1,0 +1,198 @@
+{
+  "labels": {
+    "monthlyIncome": "Revenu mensuel",
+    "total": "Totale"
+  },
+  "tags": {
+    "mustHave": "Doit avoir",
+    "niceToHave": "Agréable à avoir",
+    "future": "Avenir"
+  },
+  "categories": {
+    "needs": "Décryptage des motifs géométriques de ton identité...",
+    "wants": "Synchronisation des fils de ton destin...",
+    "savings": "Cartographie de l'architecture secrète de ta personnalité..."
+  },
+  "descriptions": {
+    "needs": "Décryptage des motifs géométriques de ton identité...",
+    "wants": "Synchronisation des fils de ton destin...",
+    "savings": "Cartographie de l'architecture secrète de ta personnalité..."
+  },
+  "loading": {
+    "title": "ton Profil Financier",
+    "step1": "Analyser le revenu mensuel",
+    "step2": "Calcul du partage 50/30/20",
+    "step3": "Optimisation de l'allocation",
+    "step4": "Finaliser le plan budgétaire"
+  },
+  "meta": {
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "disclaimer": "Analyse des échos profonds de tes choix...",
+    "keywords": "Cartographie de l'architecture secrète de ta personnalité...",
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+  },
+  "hero": {
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "badge": "Cartographie de la constellation de ton moi le plus vrai."
+  },
+  "test": {
+    "progress": "Progrès",
+    "submit": "Envoyer",
+    "loading": "Chargement...",
+    "selectOption": "Choisir une Option",
+    "subtitle": "Create the perfect financial portfolio with the 50/30/20 rule",
+    "insightBullets": ["Force de signature", "Point pivot", "2"]
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "🚀",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      },
+      {
+        "icon": "💡",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "🎯",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "🔥",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "⭐",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "🚀",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "💡",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "🎯",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "🔥",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "⭐",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "🚀",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "💡",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "🎯",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      },
+      {
+        "icon": "🔥",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "⭐",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      }
+    ]
+  },
+  "result": {
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+  },
+  "subtitle": "Créez le portefeuille financier parfait avec la règle 50/30/20",
+  "currency": "$",
+  "tip": "Analyse des échos profonds de tes choix...",
+  "calculate": "Calculer le forfait",
+  "reset": "Réinitialiser le plan",
+  "disclaimer": "Analyse des échos profonds de tes choix...",
+  "title": "ton Profil Financier",
+  "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie",
+  "ko-KR": "Ko-KR"
+}

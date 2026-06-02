@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "back": "回溯步骤",
+    "logout": "服务器链接（注销）"
+  },
+  "search": {
+    "placeholder": "搜索编年史..."
+  },
+  "actions": {
+    "export": "导出记录"
+  },
+  "alerts": {
+    "title": "系统共振"
+  },
+  "status": {
+    "healthy": "和谐",
+    "warning": "不稳定",
+    "critical": "骨折"
+  },
+  "metrics": {
+    "activeUsers": "活跃的灵魂",
+    "systemLoad": "以太负载",
+    "latency": "时间转变",
+    "errorRate": "裂谷频率"
+  }
+}

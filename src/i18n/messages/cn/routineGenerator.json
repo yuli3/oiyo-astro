@@ -1,0 +1,141 @@
+{
+  "routineGenerator": {
+    "meta": {
+      "resultTitle": "Result Title",
+      "resultDescription": "Your personalized analysis results and recommendations.",
+      "testTitle": "Routine Generator",
+      "testDescription": "Discover your personal insights with this in-depth analysis.",
+      "keywords": "productivity, work efficiency, time management, focus, work habits",
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "hero": {
+      "badge": "Life Optimization",
+      "subtitle": "Complete guide for your Productivity",
+      "cta": "Build My Routine",
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "benefits": {
+      "morning": {
+        "icon": "⚖️",
+        "description": "Comprehensive analysis and insights",
+        "title": "My Insights"
+      },
+      "night": {
+        "icon": "⚖️",
+        "description": "Comprehensive analysis and insights",
+        "title": "My Insights"
+      },
+      "personalized": {
+        "icon": "⚖️",
+        "description": "Comprehensive analysis and insights",
+        "title": "My Insights"
+      },
+      "items": [
+        {
+          "icon": "✨",
+          "title": "能源调整",
+          "description": "当你的注意力自然最敏锐时工作。",
+          "question": "为什么时机很重要？",
+          "answer": "将任务与您的生物能量峰值保持一致可以使您的效率成倍增加，而无需额外的努力。"
+        },
+        {
+          "icon": "🚀",
+          "title": "把握时机",
+          "description": "通过科学设计的触发器来建立一致性。",
+          "question": "习惯如何坚持？",
+          "answer": "通过将新行为锚定到现有惯例中，我们创建了一条实现一致性的无摩擦路径。"
+        }
+      ],
+      "title": "My Insights"
+    },
+    "cta": {
+      "subtitle": "Complete guide for your Productivity",
+      "button": "Start Building",
+      "title": "My Insights"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "严格的例行公事是否具有限制性？",
+          "answer": "真正的结构创造自由。 通过自动化基础知识，您可以解放思想，发挥创造力。"
+        },
+        {
+          "question": "如果我的日程安排发生变化怎么办？",
+          "answer": "我们的日常工作是模块化的。 您可以调整这些块以适应现实的流动性。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "认知负载平衡",
+          "description": "将困难的任务分配到思维最清晰的时间。"
+        },
+        {
+          "icon": "⚖️",
+          "title": "恢复间隔",
+          "description": "有策略地安排休息时间以保持高性能。"
+        }
+      ]
+    },
+    "result": {
+      "benefits": ["增加焦点", "更好的睡眠", "减少决策疲劳"],
+      "meta": {
+        "title": "My Insights",
+        "description": "Comprehensive analysis and insights",
+        "keywords": "productivity, work efficiency, time management, focus, work habits"
+      },
+      "shareTitle": "My Daily Routine",
+      "shareText": "Check out my personalized routine!",
+      "subtitle": "Complete guide for your Productivity",
+      "morning": "Morning Plan",
+      "night": "Night Plan",
+      "sunrise": "Sunrise Rhythm",
+      "starlight": "Starlight Rhythm",
+      "guide": "生活方式导航",
+      "saveImage": "Save Routine",
+      "generateNew": "Generate New",
+      "home": "Home",
+      "resultTitle": "Result Title",
+      "resultDescription": "Your personalized analysis results and recommendations."
+    },
+    "test": {
+      "intro": {
+        "title": "My Insights",
+        "description": "Comprehensive analysis and insights",
+        "start": "Start"
+      },
+      "loading": {
+        "title": "My Insights",
+        "description": "Comprehensive analysis and insights"
+      },
+      "navigation": {
+        "prev": "← Previous Step",
+        "complete": "Complete",
+        "start": "Start",
+        "finish": "Finish",
+        "next": "Next"
+      },
+      "guest": {
+        "welcome": "Welcome{name}!",
+        "saved": "Your result will be saved to your account.",
+        "guestMessage": "You are taking the test as a guest. The result will stay on this browser only."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Comprehensive analysis and insights",
+        "keywords": "productivity, work efficiency, time management, focus, work habits"
+      },
+      "progress": "Question {current} of {total}",
+      "testTitle": "Routine Generator",
+      "testDescription": "Discover your personal insights with this in-depth analysis.",
+      "title": "My Insights",
+      "subtitle": "Complete guide for your Productivity"
+    },
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights"
+  }
+}

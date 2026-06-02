@@ -1,0 +1,16 @@
+{
+  "title": "后续行动",
+  "tip": "提示",
+  "reflect": {
+    "title": "反思",
+    "description": "花一点时间反思。"
+  },
+  "plan": {
+    "title": "计划",
+    "description": "计划您的一天。"
+  },
+  "share": {
+    "title": "分享",
+    "description": "分享您的结果。"
+  }
+}

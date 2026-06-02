@@ -1,0 +1,30 @@
+{
+  "title": "리더보드",
+  "category": {
+    "points": "전철기",
+    "streaks": "줄무늬",
+    "referrals": "추천",
+    "tests": "테스트"
+  },
+  "period": {
+    "today": "오늘",
+    "week": "주",
+    "month": "월",
+    "allTime": "모든 시간"
+  },
+  "stats": {
+    "yourRank": "당신의 순위",
+    "yourScore": "당신의 점수",
+    "percentile": "백분위수",
+    "toNextRank": "다음 순위로"
+  },
+  "ui": {
+    "you": "너",
+    "hallOfFame": "명예의 전당",
+    "showMore": "더보기 ({count})",
+    "participants": "참가자 {count}명",
+    "noData": "아직 리더보드에 데이터가 없습니다.",
+    "noDataCta": "테스트를 완료하여 포인트를 획득하고 순위를 높이세요!",
+    "topPercentile": "상위 {백분위수}%"
+  }
+}

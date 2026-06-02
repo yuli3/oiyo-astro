@@ -1,0 +1,22 @@
+{
+  "description": "Calculez la Taxe sur la Valeur Ajoutée (TVA) instantanément.",
+  "title": "Calculateur de TVA",
+  "modes": {
+    "total": "À partir du Montant Total",
+    "supply": "À partir du Prix Hors Taxe"
+  },
+  "labels": {
+    "totalAmount": "Montant Total (Valeur + TVA)",
+    "supplyAmount": "Prix Hors Taxe (Valeur sans TVA)"
+  },
+  "results": {
+    "supplyPrice": "Prix Hors Taxe",
+    "vat": "Montant de la TVA",
+    "total": "Montant Total"
+  },
+  "tip": {
+    "title": "Qu'est-ce que la TVA ?",
+    "content": "La TVA est une taxe à la consommation ajoutée à la valeur des biens et services."
+  },
+  "disclaimer": "Cet outil est fourni à titre indicatif uniquement."
+}

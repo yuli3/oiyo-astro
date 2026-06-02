@@ -1,0 +1,118 @@
+{
+  "share": {
+    "button": "Comparte tus ideas",
+    "title": "Personality Resonance Analysis",
+    "progress": "Until Next Level",
+    "preview": "Vista previa de la tarjeta",
+    "kakao": "KakaoTalk",
+    "moreOptions": "Explorar opciones para compartir"
+  },
+  "referral": {
+    "stats": {
+      "total": "Total de invitaciones",
+      "points": "Puntos de esencia",
+      "premium": "Días de acceso profesional"
+    },
+    "tier": {
+      "progress": "Hasta el siguiente nivel",
+      "needed": "Aún se necesitan invitaciones",
+      "rewards": "Recompensas disponibles",
+      "premiumDays": "Días de acceso profesional"
+    },
+    "link": {
+      "title": "Personality Resonance Analysis",
+      "copy": "Copiar enlace",
+      "copied": "Enlace copiado!"
+    },
+    "rewards": {
+      "title": "Personality Resonance Analysis",
+      "friendSignup": "Al despertar del amigo",
+      "firstTest": "Tras su primera percepción",
+      "friendPremium": "Sobre su viaje profesional",
+      "active30": "Después de 30 días de presencia"
+    },
+    "title": "Personality Resonance Analysis",
+    "subtitle": "Compare your essence through a multitude of lenses."
+  },
+  "comparison": {
+    "quickActions": {
+      "friend": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "similar": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "celeb": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      }
+    },
+    "tabs": {
+      "similar": "Spirit",
+      "population": "Promedio mundial",
+      "celeb": "Icon",
+      "ideal": "Partner"
+    },
+    "sections": {
+      "similar": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "population": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "celeb": {
+        "title": "Personality Resonance Analysis",
+        "desc": "An exploration of the temperaments that most beautifully complement yours."
+      },
+      "ideal": {
+        "title": "Personality Resonance Analysis",
+        "desc": "Una exploración de los temperamentos que mejor complementan el tuyo."
+      }
+    },
+    "card": {
+      "viewDetails": "Explorar detalles",
+      "share": "Compartir tarjeta"
+    },
+    "metrics": {
+      "compatibility": "Compatibilidad armónica",
+      "similarity": "Similitud de resonancia",
+      "insights": "Perspectivas principales",
+      "strengths": "Fortalezas radiantes"
+    },
+    "modal": {
+      "close": "Confirmar",
+      "recommendations": "Caminos sugeridos:"
+    },
+    "levels": {
+      "high": "Pivotal Difference",
+      "mediumHigh": "Vibrante",
+      "medium": "Noteworthy Shift",
+      "low": "Gentle Variance"
+    },
+    "diffs": {
+      "high": "Diferencia fundamental",
+      "medium": "Cambio notable",
+      "low": "Variación suave"
+    },
+    "types": {
+      "friend": "Amiga",
+      "similar": "Espíritu",
+      "average": "Promedio",
+      "celeb": "Icono",
+      "ideal": "Pareja"
+    },
+    "status": {
+      "loading": "Analizando la resonancia...",
+      "similarLoading": "Buscando espíritus afines en el santuario...",
+      "avgLoading": "Mapeando su lugar en el tapiz global...",
+      "celebLoading": "Comprobando la resonancia con iconos globales...",
+      "idealLoading": "Diseñando tu complemento armónico..."
+    },
+    "title": "Análisis de resonancia de la personalidad",
+    "subtitle": "Compara tu esencia a través de multitud de lentes."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "benefits": {
+    "performance": {
+      "description": "기본 앱만큼 빠르게 로드됩니다.",
+      "title": "빠른 성능"
+    },
+    "offline": {
+      "description": "운명의 실타래를 동기화하는 중...",
+      "title": "오프라인 사용"
+    },
+    "notifications": {
+      "description": "당신의 진정한 본질을 반영하는 거울을 디자인합니다...",
+      "title": "알림 수신"
+    },
+    "homeScreen": {
+      "description": "한 번의 탭으로 빠른 액세스",
+      "title": "홈에 추가"
+    }
+  },
+  "title": "OIYO 앱 설치",
+  "subtitle": "더 나은 경험을 위해 홈 화면에 추가",
+  "close": "닫다",
+  "installing": "설치 중...",
+  "install": "설치하다",
+  "dismiss": "나중에",
+  "manualInstructions": "브라우저 메뉴에서 \"홈 화면에 추가\"를 선택하세요."
+}

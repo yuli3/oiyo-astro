@@ -1,0 +1,10 @@
+{
+  "personality": "性格",
+  "career": "事业",
+  "relationships": "人际关系",
+  "wellness": "身心健康",
+  "creativity": "创造力",
+  "lifestyle": "生活方式",
+  "prompt": "请至少选择一个兴趣。",
+  "selected": "已选 {count} 项"
+}

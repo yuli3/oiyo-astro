@@ -1,0 +1,34 @@
+{
+  "title": "Interaction of Celestial Energies",
+  "subtitle": "The harmony created as celestial forces meet and collide.",
+  "affected": "Affected Channels:",
+  "empty": "The cosmic energies are currently in a state of static equilibrium. No major conflicting factors have been detected.",
+  "hap": {
+    "title": "Hap (Unity)",
+    "desc": "Energies merge and transform into the {element} element."
+  },
+  "chung": {
+    "title": "Chung (Clash)",
+    "desc": "A dynamic tension that fosters and accelerates growth."
+  },
+  "samhap": {
+    "title": "Samhap (Triple Alliance)",
+    "desc": "A harmony where forces from different origins unite for a common purpose."
+  },
+  "banghap": {
+    "title": "Banghap (Directional Union)",
+    "desc": "A strong bond formed by forces sharing the same seasonal direction."
+  },
+  "hyung": {
+    "title": "Hyung (Punishment/Adjustment)",
+    "desc": "Inner friction that necessitates adjustment and discipline."
+  },
+  "pa": {
+    "title": "Pa (Destroy/Reform)",
+    "desc": "A force that breaks existing structures to bring about reform."
+  },
+  "hae": {
+    "title": "Hae (Harm/Interference)",
+    "desc": "Subtle interference occurring within cooperative relationships."
+  }
+}

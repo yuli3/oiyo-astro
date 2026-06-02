@@ -1,0 +1,13 @@
+{
+  "tips": {
+    "tip1": "ヒント1",
+    "tip2": "ヒント2",
+    "tip3": "ヒント3"
+  },
+  "heading": "見出し",
+  "subheading": "副見出し",
+  "description1": "説明1",
+  "description2": "説明2",
+  "cta": "ここをクリック",
+  "tipsTitle": "ヒント"
+}

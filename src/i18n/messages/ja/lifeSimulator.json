@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "keywords": "人生シミュレーター, 人生選択, 人生シミュレーション, キャリアシミュレーション, テスト, 人生ゲーム, 未来予測, 人生の道",
+    "title": "人生シミュレーター",
+    "description": "人生シミュレーターテストと分析"
+  },
+  "hero": {
+    "subtitle": "選択をして、どんな人生が待っているか発見しましょう",
+    "cta": "始める"
+  },
+  "test": {
+    "progressTitle": "Life Progress",
+    "ageUnit": " years old",
+    "stageLabel": "Life Stage {stage}"
+  },
+  "stats": {
+    "career": "キャリア",
+    "wealth": "財産",
+    "relationship": "Relationship",
+    "happiness": "幸福",
+    "health": "Health"
+  },
+  "result": {
+    "rarity": {
+      "legendary": "Legendary",
+      "rare": "Rare",
+      "uncommon": "Uncommon",
+      "common": "Common"
+    },
+    "scoreLabel": "Total Score",
+    "rankingLabel": "Top Ranking",
+    "achievementsLabel": "Key Achievements",
+    "adviceLabel": "💡 Life Advice",
+    "finalStatsTitle": "Final Stats",
+    "journeyTitle": "Life Journey",
+    "ageAxis": "Age",
+    "share": "Share Result",
+    "retake": "Live Again"
+  },
+  "cta": {
+    "subtitle": "選択をして、どんな人生が待っているか発見しましょう",
+    "button": "始める"
+  }
+}

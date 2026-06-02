@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Kindred Resonance",
+    "resultTitle": "{标题} - 启示录",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "keywords": "友谊共鸣、社会原型、灵魂几何、Oiyo"
+  },
+  "hero": {
+    "title": "同类共鸣",
+    "subtitle": "了解你建立和维持深情纽带的深刻节奏。",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "cta": "发起询价",
+    "badge": "Your Kindred Signature"
+  },
+  "test": {
+    "insightBullets": [
+      "发现定义您的道路的独特模式。",
+      "阐明你的社会哲学中不言而喻的层面。",
+      "通过自觉意识培养神圣的纽带。"
+    ],
+    "progress": "共振上升",
+    "next": "向前",
+    "previous": "反映",
+    "submit": "揭示综合",
+    "loading": "Distilling your social map...",
+    "selectOption": "标记真理之路"
+  },
+  "result": {
+    "ai": {
+      "title": "Kindred Resonance",
+      "premium": "定制炼金报告",
+      "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+      "processing": "综合动力学...",
+      "processingKo": "加工...",
+      "upgrade": "升级解锁炼金分析",
+      "generate": "生成炼金策略",
+      "complete": "神圣的社会分析完成"
+    },
+    "traits": {
+      "title": "Kindred Resonance"
+    },
+    "connections": {
+      "title": "Kindred Resonance",
+      "vibe": "您的签名与这些原型最为和谐：",
+      "proTip": "智慧提示：你的频率自然地补充了这些原型，促进即时信任和递归增长。"
+    },
+    "actions": {
+      "retake": "重新开始校准",
+      "returnHome": "返回枢纽"
+    },
+    "title": "Kindred Resonance",
+    "description": "Discover the unique colors and temperatures of the friendships that color your world.",
+    "loading": "提炼你的社交地图...",
+    "badge": "您亲属的签名"
+  },
+  "title": "同类共鸣",
+  "description": "发现友谊的独特色彩和温度，为您的世界增添色彩。"
+}

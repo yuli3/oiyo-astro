@@ -1,0 +1,625 @@
+{
+  "dating": {
+    "meta": {
+      "test": {
+        "insightBullets": [
+          "あなたの内なる風景の奥深い構造を探索してください。"
+        ],
+        "progress": "進行状況",
+        "submit": "送信",
+        "loading": "読み込み中...",
+        "selectOption": "オプションを選択",
+        "next": "次へ",
+        "previous": "前へ"
+      },
+      "result": {
+        "title": "個別分析結果",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "meta": {
+        "title": "個別分析結果",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "keywords": "MBTIデート, 分析, スコアリング, プロフェッショナル"
+      },
+      "resultTitle": "MBTIデート結果分析",
+      "resultDescription": "MBTIデート結果を深く分析します。",
+      "testTitle": "MBTIデート評価",
+      "testDescription": "今すぐMBTIデートスコアを計算しましょう。",
+      "keywords": "MBTIデート, 分析, スコアリング, プロフェッショナル",
+      "title": "個別分析結果",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "hero": {
+      "subtitle": "エネルギッシュで社交的な人々",
+      "badge": "新着",
+      "cta": "テスト開始",
+      "title": "個別分析結果",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "新しい人たちとのパーティーで、私は...",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "エネルギーを高めて会話をリードしましょう。",
+            "emoji": "🥳",
+            "scores": {
+              "E": 1
+            }
+          },
+          {
+            "text": "静かな場所で数人と深い会話をしましょう。",
+            "emoji": "🤔",
+            "scores": {
+              "I": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "誰かを好きになったとき…",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "私はまず彼らの現実的な強み（仕事、スタイルなど）に惹かれます。",
+            "emoji": "💼",
+            "scores": {
+              "S": 1
+            }
+          },
+          {
+            "text": "私はまず彼らと思い描く未来に惹かれます。",
+            "emoji": "💭",
+            "scores": {
+              "N": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "パートナーと喧嘩すると…",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "何が問題なのかを論理的に分析し、解決策を見つけようとします。",
+            "emoji": "🧐",
+            "scores": {
+              "T": 1
+            }
+          },
+          {
+            "text": "まずは相手の気持ちを確認し、共感をもって慰めてあげましょう。",
+            "emoji": "❤️",
+            "scores": {
+              "F": 1
+            }
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "デートの計画を立てるときに…",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "レストランからカフェ、ルートに至るまで、すべてを完璧に計画します。",
+            "emoji": "🗺️",
+            "scores": {
+              "J": 1
+            }
+          },
+          {
+            "text": "その日の気分で行き先を自然と決めてます。",
+            "emoji": "🎉",
+            "scores": {
+              "P": 1
+            }
+          }
+        ]
+      }
+    ],
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "mbti 1",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🚀",
+          "title": "mbti2",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "💡",
+          "title": "mbti 3",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🎯",
+          "title": "mbti 4",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🔥",
+          "title": "mbti 5",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "⭐",
+          "title": "MBTI 6",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        }
+      ],
+      "subtitle": "エネルギッシュで社交的な人々",
+      "title": "個別分析結果"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "mbti 1",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🚀",
+          "title": "mbti2",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "💡",
+          "title": "mbti 3",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "🎯",
+          "title": "mbti 4",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "🔥",
+          "title": "mbti 5",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "⭐",
+          "title": "MBTI 6",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        }
+      ],
+      "title": "個別分析結果"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "mbti 1",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "🚀",
+          "title": "mbti2",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "💡",
+          "title": "mbti 3",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🎯",
+          "title": "mbti 4",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🔥",
+          "title": "mbti 5",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "⭐",
+          "title": "MBTI 6",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": ["署名の強度", "ピボットポイント", "2"],
+      "progress": "進行状況",
+      "submit": "送信",
+      "loading": "読み込み中...",
+      "selectOption": "オプションを選択",
+      "subtitle": "エネルギッシュで社交的な人々",
+      "finish": "完了",
+      "next": "次へ",
+      "previous": "前へ"
+    },
+    "result": {
+      "title": "個別分析結果",
+      "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+      "traits": "Traits",
+      "share": "シェア",
+      "retake": "再テスト"
+    },
+    "types": {
+      "INTJ": {
+        "traits": ["戦略的", "独立した", "決定的", "完璧主義者"],
+        "strengths": ["長期計画", "論理的推論", "高い能力"],
+        "challenges": [
+          "傲慢に見えることがある",
+          "予測不可能なことを嫌います",
+          "感情表現に苦労する"
+        ],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INFP", "INFJ"],
+          "challenging": ["ISFP", "ESFP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "INTP": {
+        "traits": ["分析的", "好奇心旺盛", "抽象的な", "想像力豊かな"],
+        "strengths": ["問題解決", "理論的理解", "創造性"],
+        "challenges": [
+          "ぼんやりすることがある",
+          "厳格なルールを嫌う",
+          "実務的な問題で苦労するかもしれない"
+        ],
+        "compatibility": {
+          "best": ["ENTJ", "ESTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ENTJ": {
+        "traits": ["決定的", "自信を持って", "野心的な", "効率的"],
+        "strengths": [
+          "リーダーシップ",
+          "戦略的計画",
+          "ダイレクトコミュニケーション"
+        ],
+        "challenges": [
+          "せっかちになることがある",
+          "無神経に見えるかもしれない",
+          "コントロールに対する強い欲求"
+        ],
+        "compatibility": {
+          "best": ["INFP", "INTP"],
+          "good": ["ENTP", "ENFJ"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ENTP": {
+        "traits": ["機知に富んだ", "革新的", "フレキシブル", "元気いっぱい"],
+        "strengths": ["深く考える人", "活発な会話", "適応性"],
+        "challenges": [
+          "議論が激しくなる可能性がある",
+          "一貫性に問題がある可能性がある",
+          "停滞に耐えられない"
+        ],
+        "compatibility": {
+          "best": ["INFJ", "INTJ"],
+          "good": ["INFP", "ENFP"],
+          "challenging": ["ISFJ", "ESFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "INFJ": {
+        "traits": ["洞察力に富む", "原則的な", "クリエイティブ", "情熱的"],
+        "strengths": ["心の知能指数", "思いやり", "誠実さ"],
+        "challenges": [
+          "衝突を避ける",
+          "プライベートになりすぎる可能性があります",
+          "非常に高い基準"
+        ],
+        "compatibility": {
+          "best": ["ENFP", "ENTP"],
+          "good": ["INTJ", "INFP"],
+          "challenging": ["ESTP", "ESFP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "INFP": {
+        "traits": ["共感的", "理想主義者", "クリエイティブ", "優しい"],
+        "strengths": ["深い献身", "オープンマインド", "思いやり"],
+        "challenges": [
+          "過敏になりやすい",
+          "実用的な詳細は避けます",
+          "批判の難しさ"
+        ],
+        "compatibility": {
+          "best": ["ENFJ", "ENTJ"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ISTJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ENFJ": {
+        "traits": ["カリスマ性のある", "共感的", "責任者", "社交"],
+        "strengths": ["コミュニケーションスキル", "高い共感力", "忠誠心"],
+        "challenges": [
+          "自己犠牲が多すぎる可能性がある",
+          "過保護かも知れません",
+          "批判に敏感"
+        ],
+        "compatibility": {
+          "best": ["INFP", "ISFP"],
+          "good": ["INFJ", "ENFP"],
+          "challenging": ["ISTP", "ESTP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ENFP": {
+        "traits": ["熱狂的", "発信", "想像力豊かな", "自発的"],
+        "strengths": [
+          "優れたコミュニケーター",
+          "ポジティブなエネルギー",
+          "創造的な思想家"
+        ],
+        "challenges": [
+          "ルーティンが嫌い",
+          "過度に感情的になることがある",
+          "一つのことに集中するのが難しい"
+        ],
+        "compatibility": {
+          "best": ["INTJ", "INFJ"],
+          "good": ["INFP", "ENFJ"],
+          "challenging": ["ISTJ", "ESTJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "物理的な接触",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ISTJ": {
+        "traits": ["責任者", "信頼性のある", "実用的", "秩序ある"],
+        "strengths": ["忠誠心", "組織", "直接性"],
+        "challenges": [
+          "硬いこともある",
+          "変化との闘い",
+          "無神経に見えるかもしれない"
+        ],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISFJ", "ESTJ"],
+          "challenging": ["ENFP", "ENTP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ISFJ": {
+        "traits": ["協力的な", "信頼性のある", "謙虚な", "観察者"],
+        "strengths": ["思いやり", "実用性", "忠誠心"],
+        "challenges": [
+          "自己犠牲的",
+          "変化を避ける",
+          "物事を個人的に捉えることができる"
+        ],
+        "compatibility": {
+          "best": ["ESFP", "ESTP"],
+          "good": ["ISTJ", "ISFP"],
+          "challenging": ["ENTP", "ENFP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ESTJ": {
+        "traits": ["直接", "整頓された", "ひたむきな", "忠実な"],
+        "strengths": ["信頼性", "ダイレクトコミュニケーション", "伝統志向"],
+        "challenges": [
+          "偉そうなこともある",
+          "感情を表現するのに苦労する",
+          "変化に不快感を感じる"
+        ],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "物理的な接触",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ESFJ": {
+        "traits": ["社交的", "Warm", "忠実な", "調和のとれた"],
+        "strengths": ["つながりの構築", "自然を育む", "信頼性"],
+        "challenges": [
+          "批判に敏感",
+          "貧しいかもしれない",
+          "ステータスが気になる"
+        ],
+        "compatibility": {
+          "best": ["ISFP", "ISTP"],
+          "good": ["ISFJ", "ENFJ"],
+          "challenging": ["INTP", "INTJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "物理的な接触",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ISTP": {
+        "traits": ["実用的な", "クリエイティブ", "独立した", "自発的"],
+        "strengths": ["危機管理", "実用性", "適応性"],
+        "challenges": ["取り外し可能", "コミットメントを嫌う", "飽きやすい"],
+        "compatibility": {
+          "best": ["ESFJ", "ESTJ"],
+          "good": ["ISTJ", "ESTP"],
+          "challenging": ["ENFJ", "INFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "物理的な接触",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ISFP": {
+        "traits": ["魅力的", "センシティブ", "想像力豊かな", "自発的"],
+        "strengths": ["思いやり", "創造性", "柔軟性"],
+        "challenges": ["衝突を避ける", "予測不能", "ストレスを感じやすい"],
+        "compatibility": {
+          "best": ["ENFJ", "ESFJ", "ESTJ"],
+          "good": ["ISFJ", "INFP"],
+          "challenging": ["INTJ", "ENTJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "Physical touch",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ESTP": {
+        "traits": ["カリスマ性のある", "元気いっぱい", "実用的", "観察者"],
+        "strengths": [
+          "危機においては素晴らしい",
+          "楽しいことが大好き",
+          "説得力のある"
+        ],
+        "challenges": [
+          "リスクを伴いやすい",
+          "せっかち",
+          "全体像を見逃す可能性がある"
+        ],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESTP", "ESFP"],
+          "challenging": ["INFJ", "INFP"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "物理的な接触",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      },
+      "ESFP": {
+        "traits": ["楽しいことが大好き", "社交", "自発的", "美的"],
+        "strengths": ["優れた人材スキル", "前向きな見通し", "審美眼"],
+        "challenges": ["衝突を避ける", "飽きやすい", "不十分な長期計画"],
+        "compatibility": {
+          "best": ["ISFJ", "ISTJ"],
+          "good": ["ESFP", "ESTP"],
+          "challenging": ["INTJ", "INFJ"]
+        },
+        "name": "エンターテイナー",
+        "emoji": "🎉",
+        "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "subtitle": "エネルギッシュで社交的な人々",
+        "detailedDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+        "loveLanguage": "物理的な接触",
+        "idealDate": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+      }
+    },
+    "title": "個別分析結果",
+    "description": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。"
+  }
+}

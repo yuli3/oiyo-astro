@@ -1,0 +1,15 @@
+{
+  "successTitle": "Éxito",
+  "successMessage": "Enviada.",
+  "errorTitle": "Error",
+  "errorMessage": "Fallida.",
+  "subjectLabel": "Sujeta",
+  "subjectPlaceholder": "Ingrese el asunto",
+  "categoryLabel": "Categoría",
+  "priorityLabel": "Prioridad",
+  "descriptionLabel": "Descripción",
+  "descriptionPlaceholder": "Introduce la descripción",
+  "submitting": "Sumisión...",
+  "submitButton": "Enviar",
+  "title": "Forma"
+}

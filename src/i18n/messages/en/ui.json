@@ -1,0 +1,163 @@
+{
+  "test": {
+    "viewResults": "Explore Insights",
+    "swipeHintLong": "Swipe to unveil more",
+    "step": "Phase"
+  },
+  "actions": {
+    "next": "Onward",
+    "back": "Reflect",
+    "submit": "Submit Insights",
+    "cancel": "Cancel",
+    "confirm": "Accept",
+    "share": "Share Your Light",
+    "save": "Preserve",
+    "edit": "Refine",
+    "delete": "Release",
+    "close": "Close",
+    "previous": "Reflect",
+    "goHome": "Home",
+    "more": "More",
+    "report": "Analysis",
+    "export": "Export Wisdom",
+    "continue": "Step forward",
+    "calculate": "Synthesize Energy",
+    "startTest": "Begin Analysis",
+    "processing": "Synthesizing...",
+    "retry": "Try Again",
+    "start": "Begin",
+    "home": "Home",
+    "retake": "Revisit"
+  },
+  "navigation": {
+    "back": "Return",
+    "logout": "Release Session"
+  },
+  "status": {
+    "loading": "Gathering wisdom...",
+    "error": "A shadow has crossed our path",
+    "success": "Harmony restored",
+    "empty": "A quiet space",
+    "scrollForSynergy": "Scroll to Explore Harmony"
+  },
+  "modals": {
+    "confirmTitle": "Are you certain?",
+    "confirmDescription": "This movement cannot be retraced."
+  },
+  "you": "Your Spirit",
+  "hallOfFame": "Hall of Icons",
+  "noData": "Empty Archive",
+  "noDataCta": "Return when the stars align",
+  "minutes": "min",
+  "startTest": "Begin Journey",
+  "browseAll": "Explore All Gateways",
+  "title": "Sanctum UI",
+  "all": "All",
+  "unread": "New Wisdom",
+  "readAll": "Honor All",
+  "view": "Explore",
+  "markRead": "Mark as Witnessed",
+  "tagline": "Design the path that honors your true self.",
+  "product": "Gateways",
+  "company": "Sanctuary",
+  "support": "Guidance",
+  "allRightsReserved": "Within our cosmic care",
+  "wip": "Nurturing in progress",
+  "copyright": "© {year} Oiyo.net.",
+  "copyrightFull": "© {year} Oiyo.net. All rights reserved.",
+  "donate": "Support the Creator",
+  "koFi": "Ko-fi",
+  "payPal": "PayPal",
+  "daily": {
+    "title": "Daily Ritual",
+    "subtitle": "Synchronize with the current celestial flow.",
+    "oracle": {
+      "selectZodiac": "Select your Celestial Sign",
+      "synchronize": "Synchronize",
+      "imperialDecree": "Imperial Decree",
+      "analysisBasis": "Cosmic Analysis",
+      "message": "The stars have whispered a message for you.",
+      "actionRitual": "Recommended Ritual",
+      "fateVsWill": "Navigating the current"
+    }
+  },
+  "close": "Close",
+  "questionOf": "Inquiry",
+  "tryNow": "Begin your voyage",
+  "goHome": "Return Home",
+  "breadcrumbs": {
+    "ontology": "Ontology Sanctuary",
+    "social": "Social DNA",
+    "origin": "Primal Origins",
+    "fortune": "Cosmic Forecast",
+    "offline": "Quiet Moments",
+    "wellness": "Soul Wellness",
+    "sleep": "Nocturnal Rhythm",
+    "test": "Insight Analysis",
+    "insights": "Daily Wisdom"
+  },
+  "emergency": {
+    "title": "⚠️ A moment for care",
+    "description": "Your current rhythm suggests a deep need for rest. We gently encourage you to seek support from a professional guide for your well-being.",
+    "getHelp": "Heartfelt Support: 1393"
+  },
+  "step": "Phase",
+  "home": "Home",
+  "sharing": {
+    "kakaoShare": "KakaoTalk Share",
+    "instagram": "Instagram",
+    "moreApps": "More Apps",
+    "copied": "Copied!",
+    "copyLink": "Copy Link",
+    "creating": "Creating...",
+    "saveImage": "Save Image",
+    "twitter": "Twitter",
+    "facebook": "Facebook",
+    "keyTraits": "Key Traits",
+    "matchScore": "Match Score",
+    "shareResult": "Share Result",
+    "share": "Share"
+  },
+  "progress": {
+    "of": "of",
+    "progressLabel": "Progress",
+    "stepLabel": "Step",
+    "greatStart": "Great start! 🌟",
+    "almostThere": "Almost there! 💪"
+  },
+  "categories": {
+    "development": "Development",
+    "lifestyle": "Lifestyle",
+    "moreTests": "✨ More Tests",
+    "new": "New",
+    "personality": "Personality",
+    "popular": "Popular",
+    "popularTests": "🔥 Popular Tests",
+    "relatedTests": "🎯 Related Tests",
+    "relationships": "Relationships",
+    "takeTest": "Take Test",
+    "tools": "Tools",
+    "tryNext": "Try Next",
+    "wellness": "Wellness",
+    "viewAllTests": "View All Tests",
+    "discoverMore": "Discover more about yourself"
+  },
+  "goals": {
+    "myGoals": "Your Goals",
+    "subtitle": "Set goals for your self-development and track your progress.",
+    "progressSnapshot": "Progress snapshot for {userId}",
+    "completedGoals": "Completed Goals",
+    "completed": "Completed",
+    "noGoals": "No goals yet",
+    "noGoalsDesc": "Set a personal development goal to start tracking your progress.",
+    "createGoal": "Create Goal",
+    "progress": "Progress",
+    "details": "Details"
+  },
+  "ontology": {
+    "economicSchool": "My Economic School",
+    "economicSchoolSubtitle": "Macroeconomic School Analysis",
+    "realpolitik": "Realpolitik Tendency",
+    "politicalMatrix": "My Political Matrix"
+  }
+}

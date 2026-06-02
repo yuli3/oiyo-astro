@@ -1,0 +1,26 @@
+{
+  "about": {
+    "mission": "Notre Mission Sacrée",
+    "values": "Nos Valeurs Fondamentales",
+    "story": "La Chronique"
+  },
+  "legal": {
+    "privacy": {
+      "sanctity": "Sanctité des Données",
+      "sanctity_header": "Le Bouclier de l'Anonymat",
+      "insight": "Génération d'Insights",
+      "insight_header": "Sagesse Collective, Souveraineté Individuelle",
+      "sovereignty": "Souveraineté de l'Âme",
+      "sovereignty_header": "Le Droit de s'Effacer dans le Vide"
+    },
+    "terms": {
+      "pact": "Reconnaissance du Pacte",
+      "pact_header": "Reconnaissance de l'Alliance Numérique",
+      "duties": "Devoirs de l'Apôtre",
+      "duties_header": "Le Devoir de Découverte Véridique",
+      "knowledge": "Savoir Sacré",
+      "knowledge_header": "Propriété des Algorithmes Résonnants"
+    }
+  },
+  "marketing": {}
+}

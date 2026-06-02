@@ -1,0 +1,30 @@
+{
+  "meta": {
+    "title": "ton Profil de Valeurs",
+    "description": "Découvrez ce qui compte vraiment pour vous",
+    "keywords": "valeurs, valeurs personnelles, priorités de vie, découverte de soi, évaluation"
+  },
+  "hero": {
+    "title": "ton Profil de Valeurs",
+    "subtitle": "Comprenez ce qui motive tes décisions et actions",
+    "cta": "Découvrir Mes Valeurs",
+    "badge": "💎 Découverte de Soi"
+  },
+  "test": {
+    "progress": "Progrès",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Envoyer",
+    "loading": "Analyse de tes valeurs...",
+    "selectOption": "Sélectionner",
+    "insightBullets": [
+      "Vérifiez vos valeurs fondamentales",
+      "Je comprends les priorités.",
+      "Alignez votre vie avec ce qui est important"
+    ]
+  },
+  "result": {
+    "title": "ton Profil de Valeurs",
+    "description": "Découvrez ce qui compte vraiment pour vous"
+  }
+}

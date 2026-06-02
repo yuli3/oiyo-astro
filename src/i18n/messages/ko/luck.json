@@ -1,0 +1,455 @@
+{
+  "meta": {
+    "keywords": "재물운, 돈운세, 부자 성격, 투자 스타일 퀴즈"
+  },
+  "hero": {
+    "eyebrow": "돈의 모멘텀",
+    "subtitle": "사주식 출생 통찰력과 현대 금융 행동을 결합하여 현명하고 자신감 있는 자금 이동을 실현하세요.",
+    "cta": "내 돈 청사진 공개"
+  },
+  "colors": {
+    "green_blue": "블루 / 그린",
+    "red_purple": "레드 / 퍼플",
+    "yellow_brown": "노란색 / 갈색",
+    "white_gold": "화이트 / 골드 / 실버",
+    "black_navy": "블랙 / 네이비"
+  },
+  "directions": {
+    "east": "동쪽",
+    "south": "남쪽",
+    "center": "센터",
+    "west": "서쪽",
+    "north": "북쪽"
+  },
+  "items": {
+    "plants": "활기찬 식물",
+    "wooden_accessories": "목재 액세서리",
+    "books": "책과 글쓰기 도구",
+    "electronics": "전자 기기",
+    "candles": "양초와 향",
+    "glasses": "안경 및 선글라스",
+    "pottery": "도자기 및 도자기",
+    "stones": "자연석",
+    "square_objects": "정사각형 개체",
+    "metal_jewelry": "금속 보석",
+    "mirrors": "거울",
+    "fountain_pens": "만년필",
+    "fountains": "작은 분수",
+    "glassware": "투명한 유리 제품",
+    "paintings": "풍경화",
+    "hobby_painting": "그림",
+    "hobby_writing": "글쓰기",
+    "hobby_photography": "사진술",
+    "hobby_music": "음악",
+    "hobby_crafts": "공예",
+    "hobby_pottery": "도기류",
+    "hobby_dancing": "댄스",
+    "hobby_theater": "극장"
+  },
+  "stemSeasonItems": {
+    "GAP_Spring": ["우뚝 솟은 나무들", "녹색 직물"],
+    "GAP_Summer": ["조용한 그늘", "블루 액센트"],
+    "BYEONG_Winter": ["따뜻한 조명", "레드 액세서리"],
+    "SIN_Autumn": ["파인 주얼리", "날카로운 가위"]
+  },
+  "combinations": {
+    "Harmony": {
+      "title": "그랜드 하모니",
+      "advice": "모든 에너지가 완벽한 균형을 이루는 날입니다. 협업과 소통을 위한 최적의 시간입니다."
+    },
+    "Conflict": {
+      "title": "날카로운 마찰",
+      "advice": "숨겨진 긴장이 고조될 수 있습니다. 인내심을 유지하고 직접적인 대결을 피하십시오."
+    },
+    "Neutral": {
+      "title": "꾸준한 흐름",
+      "advice": "현재 경로를 유지하세요. 최소한의 이익이나 손실이 있는 원활한 하루가 예상됩니다."
+    }
+  },
+  "element": {
+    "wood": {
+      "item_desc": "나무 필기 도구 또는 작은 화분",
+      "direction_adv": "생명을 주는 동양의 에너지를 받아들이세요."
+    },
+    "fire": {
+      "item_desc": "레드 톤의 세련된 조명이나 액세서리",
+      "direction_adv": "남부의 열정적인 에너지를 활용해보세요."
+    },
+    "earth": {
+      "item_desc": "도자기 또는 황토색 물품",
+      "direction_adv": "센터의 안정적이고 견고한 에너지를 흡수하세요."
+    },
+    "metal": {
+      "item_desc": "금속 액세서리 또는 둥근 모양의 물체",
+      "direction_adv": "서양의 풍요롭고 맑은 에너지를 모아보세요."
+    },
+    "water": {
+      "item_desc": "투명한 유리 제품 또는 물 관련 액세서리",
+      "direction_adv": "북한의 유동적이고 현명한 에너지를 활용하세요."
+    }
+  },
+  "advice": {
+    "pillars": {
+      "gap_ja": {
+        "title": "갑자(九子)",
+        "advice": "지혜의 바다를 가로질러 물결치는 창의성의 파도. 당신의 직감을 믿으되 침체에 빠지지 않도록 주의하십시오.",
+        "direction": "북쪽",
+        "conflict": "남쪽"
+      },
+      "eul_chug": {
+        "title": "을축",
+        "advice": "겨울 흙을 뚫고 나온 푸른 새싹의 결의. 인내와 끈기는 결국 열매를 맺을 것입니다.",
+        "direction": "북동",
+        "conflict": "남서"
+      },
+      "byeong_in": {
+        "title": "병인",
+        "advice": "새벽을 깨우는 붉은 호랑이의 정신. 끝없는 열정으로 새로운 길을 개척하기에 좋은 날입니다.",
+        "direction": "북동",
+        "conflict": "남서"
+      },
+      "jeong_myo": {
+        "title": "정묘(丁卯)",
+        "advice": "달빛 아래 평화로운 숲의 지혜. 유연한 태도와 섬세한 소통이 갈등 해결의 열쇠다.",
+        "direction": "동쪽",
+        "conflict": "서쪽"
+      },
+      "mu_jin": {
+        "title": "Mu-Jin",
+        "advice": "구름을 가르며 날아오르는 황금용의 위엄. 이제는 야심 찬 목표를 향해 자랑스럽게 나아갈 때입니다.",
+        "direction": "남동",
+        "conflict": "북서"
+      },
+      "gi_sa": {
+        "title": "Gi-Sa (키토미)",
+        "advice": "비옥한 땅을 횡단하는 현명한 뱀의 통찰력. 적절한 순간을 기다리며 내면의 힘을 키우는 지혜가 필요합니다.",
+        "direction": "남동",
+        "conflict": "북서"
+      },
+      "gyeong_o": {
+        "title": "경오(경우)",
+        "advice": "태양 아래 질주하는 백마의 역동성. 신속한 실행은 행운을 불러오는 열쇠입니다.",
+        "direction": "남쪽",
+        "conflict": "북쪽"
+      },
+      "sin_mi": {
+        "title": "신미(辛未)",
+        "advice": "따뜻한 땅 위에 반짝이는 보석의 본질. 예리한 통찰력은 온화함을 통해 빛을 발합니다.",
+        "direction": "남서",
+        "conflict": "북동"
+      },
+      "im_sin": {
+        "title": "임신",
+        "advice": "바위 사이로 흐르는 맑은 샘물의 지혜. 유연성과 끈기로 예상치 못한 장애물을 극복하세요.",
+        "direction": "남서",
+        "conflict": "북동"
+      },
+      "gye_yu": {
+        "title": "Gye-Yu (왠지)",
+        "advice": "가을 새벽 맑은 이슬과 같은 영성. 순수한 마음으로 본질에 집중할 때 진실은 드러날 것입니다.",
+        "direction": "서쪽",
+        "conflict": "동쪽"
+      },
+      "gap_sul": {
+        "title": "갑술(가서)",
+        "advice": "산을 지키는 푸른 개의 충성심. 신뢰를 바탕으로 한 협업은 의미 있는 결과를 가져올 것입니다.",
+        "direction": "북서",
+        "conflict": "남동"
+      },
+      "eul_hae": {
+        "title": "을해",
+        "advice": "깊은 호수에 피어난 연꽃의 자비로움. 포용하는 마음이 주변의 차가운 기운을 녹여줄 것입니다.",
+        "direction": "북서",
+        "conflict": "남동"
+      },
+      "byeong_ja": {
+        "title": "병자(Bingzi)",
+        "advice": "한겨울 밤을 밝히는 등불의 온기. 내면의 열정을 유지하면서 차분하게 기회를 지켜보세요.",
+        "direction": "북쪽",
+        "conflict": "남쪽"
+      },
+      "jeong_chug": {
+        "title": "정축",
+        "advice": "땅 밑에 숨겨진 열. 표면적으로는 조용하지만 내면의 힘이 넘칩니다. 단계별로 준비하세요.",
+        "direction": "북동",
+        "conflict": "남서"
+      },
+      "mu_in": {
+        "title": "무인(無寅)",
+        "advice": "높은 산을 다스리는 호랑이의 용기. 확고한 신념과 리더십을 통해 목표를 달성하기 좋은 시기입니다.",
+        "direction": "북동",
+        "conflict": "남서"
+      },
+      "gi_myo": {
+        "title": "Gi-Myo (키후)",
+        "advice": "비옥한 들판에서 뛰노는 토끼의 분주함. 작은 일에도 헌신하면 풍성한 수확을 거둘 수 있습니다.",
+        "direction": "동쪽",
+        "conflict": "서쪽"
+      },
+      "gyeong_jin": {
+        "title": "경진",
+        "advice": "단단한 비늘을 지닌 백룡의 키. 결단력 있는 태도는 변화의 흐름을 주도할 수 있게 해줄 것입니다.",
+        "direction": "남동",
+        "conflict": "북서"
+      },
+      "sin_sa": {
+        "title": "신사(新巳)",
+        "advice": "불꽃으로 단련된 날카로운 칼날. 냉철한 판단과 비밀 유지가 성공의 열쇠입니다.",
+        "direction": "남동",
+        "conflict": "북서"
+      },
+      "im_o": {
+        "title": "임오(嬣武)",
+        "advice": "대지를 적시는 단비와 전설의 말의 만남. 주변 사람들의 도움으로 방해 없이 질주할 수 있는 행운.",
+        "direction": "남쪽",
+        "conflict": "북쪽"
+      },
+      "gye_mi": {
+        "title": "Gye-Mi (치미)",
+        "advice": "가뭄 끝에 내리는 가느다란 비. 창의적인 아이디어가 솟아나 메마른 삶에 활력을 불어넣을 것입니다.",
+        "direction": "남서",
+        "conflict": "북동"
+      },
+      "gap_sin": {
+        "title": "갑신",
+        "advice": "바위 틈 사이로 우뚝 솟은 소나무의 기운. 어려움 속에서도 창의적인 해결책을 찾아보세요.",
+        "direction": "남서",
+        "conflict": "북동"
+      },
+      "eul_yu": {
+        "title": "을유(光)",
+        "advice": "바위 위에 피어난 섬세한 야생화의 탄력. 섬세한 감각과 날카로운 판단력이 조화를 이루는 날.",
+        "direction": "서쪽",
+        "conflict": "동쪽"
+      },
+      "byeong_sul": {
+        "title": "병술(Bingxu)",
+        "advice": "해질녘 산을 내려가는 호랑이의 기운. 화려함 뒤에는 실익을 확보하는 지혜가 필요하다.",
+        "direction": "북서",
+        "conflict": "남동"
+      },
+      "jeong_hae": {
+        "title": "정해혜",
+        "advice": "밤바다를 비추는 부드러운 달빛. 보이지 않는 곳에서 행한 선행은 큰 축복으로 돌아올 것입니다.",
+        "direction": "북서",
+        "conflict": "남동"
+      },
+      "mu_ja": {
+        "title": "무자(五子)",
+        "advice": "산봉우리에서 바라보는 신비로운 호수의 기운. 높은 통찰력과 침착성은 주변 사람들의 신뢰를 얻게 될 것입니다.",
+        "direction": "북쪽",
+        "conflict": "남쪽"
+      },
+      "gi_chug": {
+        "title": "기축",
+        "advice": "씨앗을 뿌리기 위해 얼어붙은 땅을 경작하는 농부의 마음. 성실과 정직이 마침내 열매를 맺게 될 것입니다.",
+        "direction": "북동",
+        "conflict": "남서"
+      },
+      "gyeong_in": {
+        "title": "경인",
+        "advice": "숲 속 바위처럼 단단한 자태. 정직하고 올바른 태도는 불필요한 오해를 예방할 것입니다.",
+        "direction": "북동",
+        "conflict": "남서"
+      },
+      "sin_myo": {
+        "title": "신묘(新卯)",
+        "advice": "들판에 흩뿌려진 보석 같은 토끼의 재치. 오늘도 기발한 아이디어와 감각적인 표현이 돋보일 것입니다.",
+        "direction": "동쪽",
+        "conflict": "서쪽"
+      },
+      "im_jin": {
+        "title": "임진",
+        "advice": "큰 강을 거슬러 헤엄치는 흑룡의 위엄. 강력한 추진력은 불가능해 보이는 일을 성취하는 데 도움이 될 것입니다.",
+        "direction": "남동",
+        "conflict": "북서"
+      },
+      "gye_sa": {
+        "title": "Gye-Sa (왓가이)",
+        "advice": "안개 속을 흐르는 청류의 지혜. 유연한 자세로 주변을 관찰하고 실질적인 혜택을 확보하세요.",
+        "direction": "남동",
+        "conflict": "북서"
+      },
+      "gap_o": {
+        "title": "갑오(Jiawu)",
+        "advice": "태양 아래 우뚝 솟은 거대한 나무의 정령. 원대한 비전과 리더십으로 주변을 이끌어야 할 때입니다.",
+        "direction": "남쪽",
+        "conflict": "북쪽"
+      },
+      "eul_mi": {
+        "title": "을미(一伟)",
+        "advice": "따뜻한 들판에서 평화롭게 뛰어노는 양의 본성. 관계에서 관용을 발휘하면 큰 행운이 따를 것입니다.",
+        "direction": "남서",
+        "conflict": "북동"
+      },
+      "byeong_sin": {
+        "title": "병신(Bingshen)",
+        "advice": "바위산을 비추는 뜨거운 태양. 뛰어난 재능과 빠른 실행력이 오늘도 빛을 발할 것입니다.",
+        "direction": "남서",
+        "conflict": "북동"
+      },
+      "jeong_yu": {
+        "title": "정유(丁酉)",
+        "advice": "어둠을 깨우는 촛불과 황금닭의 울음소리. 날카로운 직관과 섬세한 감각으로 본질을 꿰뚫는다.",
+        "direction": "서쪽",
+        "conflict": "동쪽"
+      },
+      "mu_sul": {
+        "title": "무술(우쑤)",
+        "advice": "광활한 대지를 지키는 믿음직한 황금개의 자태. 변함없는 신뢰와 책임을 바탕으로 성과를 달성합니다.",
+        "direction": "북서",
+        "conflict": "남동"
+      },
+      "gi_hae": {
+        "title": "기해",
+        "advice": "비옥한 땅을 적시는 가을 호수의 풍요로움. 마음의 평화를 찾고 다른 사람들과 아낌없이 나누기 좋은 날입니다.",
+        "direction": "북서",
+        "conflict": "남동"
+      },
+      "gyeong_ja": {
+        "title": "경자(경지)",
+        "advice": "얼어붙은 샘 아래로 강한 의지가 흐릅니다. 조용히 기술을 쌓고 기회를 포착할 준비를 하십시오.",
+        "direction": "북쪽",
+        "conflict": "남쪽"
+      },
+      "sin_chug": {
+        "title": "신추(Xin Chou)",
+        "advice": "얼어붙은 대지 속에서 빛나는 보석의 가치. 내면의 힘과 정확한 계획으로 경쟁하세요.",
+        "direction": "북동",
+        "conflict": "남서"
+      },
+      "im_in": {
+        "title": "임인(renyin)",
+        "advice": "설원을 질주하는 흑호랑이의 위엄. 강력한 추진력과 남다른 규모로 주변을 압도할 수 있는 행운.",
+        "direction": "북동",
+        "conflict": "남서"
+      },
+      "gye_myo": {
+        "title": "Gye-Myo (癸卯)",
+        "advice": "봄비가 내리는 정원의 평화로운 토끼. 예술적 감각을 활용하여 내면의 아름다움을 표현해보세요.",
+        "direction": "동쪽",
+        "conflict": "서쪽"
+      },
+      "gap_jin": {
+        "title": "갑진 (Jiachen)",
+        "advice": "구름 위에서 비를 내리는 청룡의 위엄. 이제 원대한 계획을 실행에 옮겨 세상을 이롭게 할 때입니다.",
+        "direction": "남동",
+        "conflict": "북서"
+      },
+      "eul_sa": {
+        "title": "을사(即)",
+        "advice": "꽃밭을 누비는 현명한 뱀의 정신. 부드러운 말투와 유연한 사고를 통해 목표를 달성해보세요.",
+        "direction": "남동",
+        "conflict": "북서"
+      },
+      "byeong_o": {
+        "title": "병오 (Bingwu)",
+        "advice": "태양 아래 질주하는 붉은 말의 뜨거운 열정. 불굴의 도전정신이 승리의 문을 열어줄 것입니다.",
+        "direction": "남쪽",
+        "conflict": "북쪽"
+      },
+      "jeong_mi": {
+        "title": "정미(丁伟)",
+        "advice": "여름 들판을 비추는 부드러운 열기. 내면의 힘을 키우고 주변과 조화를 이루면 뜻밖의 행운이 찾아온다.",
+        "direction": "남서",
+        "conflict": "북동"
+      },
+      "mu_sin": {
+        "title": "무신",
+        "advice": "바위산을 지키는 황금원숭이의 지혜. 재치 있는 즉흥성과 신속한 판단이 위기를 기회로 바꿀 것입니다.",
+        "direction": "남서",
+        "conflict": "북동"
+      },
+      "gi_yu": {
+        "title": "기유(吉酉)",
+        "advice": "보석을 찾기 위해 비옥한 땅을 경작하는 농부의 열매. 성실의 가치가 입증되고 실질적인 이익이 실현되는 행운입니다.",
+        "direction": "서쪽",
+        "conflict": "동쪽"
+      },
+      "gyeong_sul": {
+        "title": "경술(庚戌)",
+        "advice": "산을 지키는 흰 개의 정직한 충성심. 확고한 신념을 유지하면서 더 큰 이익을 위해 행동하십시오.",
+        "direction": "북서",
+        "conflict": "남동"
+      },
+      "sin_hae": {
+        "title": "신혜",
+        "advice": "맑은 호수 아래 잠긴 보석의 영성. 조용한 명상을 통해 내면의 목소리에 귀를 기울여 보세요.",
+        "direction": "북서",
+        "conflict": "남동"
+      },
+      "im_ja": {
+        "title": "임자(人子)",
+        "advice": "깊은 바다를 헤엄치는 흑룡의 지혜. 큰 추세를 읽는 눈으로 장기적인 결과를 추구하기에 좋은 시기입니다.",
+        "direction": "북쪽",
+        "conflict": "남쪽"
+      },
+      "gye_chug": {
+        "title": "계축",
+        "advice": "얼어붙은 땅을 녹이는 겨울비의 인내. 조용히 실력을 쌓고 다가오는 봄을 준비하는 지혜가 필요합니다.",
+        "direction": "북동",
+        "conflict": "남서"
+      },
+      "gap_in": {
+        "title": "가인(Jiayin)",
+        "advice": "거대한 나무와 숲을 다스리는 호랑이의 만남. 강력한 에너지가 넘쳐, 과감하게 계획을 추진해 보세요.",
+        "direction": "북동",
+        "conflict": "남서"
+      },
+      "eul_myo": {
+        "title": "을묘(卯)",
+        "advice": "봄동산에 넘쳐나는 새싹들의 생명력. 주변 환경과 아름답게 조화를 이루기 위해 유연성과 적응력을 발휘하세요.",
+        "direction": "동쪽",
+        "conflict": "서쪽"
+      },
+      "byeong_jin": {
+        "title": "병진 (Bingchen)",
+        "advice": "불타는 용의 생명력이 하늘 높이 솟아오른다. 창조적 혁신을 통해 새로운 가치를 창출하기 좋은 날입니다.",
+        "direction": "남동",
+        "conflict": "북서"
+      },
+      "jeong_sa": {
+        "title": "정사(딩시)",
+        "advice": "한낮의 태양 아래 똬리를 틀고 있는 뱀의 통찰. 뜨거운 열정을 담아 냉정하게 기회를 포착하세요.",
+        "direction": "남동",
+        "conflict": "북서"
+      },
+      "mu_o": {
+        "title": "무오(五五)",
+        "advice": "광활한 대지를 횡단하는 암말의 역동성. 불굴의 실행력으로 목표를 향해 맹렬하게 질주하세요.",
+        "direction": "남쪽",
+        "conflict": "북쪽"
+      },
+      "gi_mi": {
+        "title": "기미(Jiwei)",
+        "advice": "모든 것이 성숙해지는 비옥한 땅의 풍요로움. 성숙한 태도로 갈등을 조정하고 실질적인 결과를 얻는 데 탁월합니다.",
+        "direction": "남서",
+        "conflict": "북동"
+      },
+      "gyeong_sin": {
+        "title": "경신",
+        "advice": "바위산을 지휘하는 철원숭이. 확고한 의지와 명확한 논리로 장애물을 돌파하세요.",
+        "direction": "남서",
+        "conflict": "북동"
+      },
+      "sin_yu": {
+        "title": "신유(心酉)",
+        "advice": "가을 들판을 가르는 차가운 칼날의 날카로움. 불필요한 것을 버리고 본질에 집중하여 명예를 높이십시오.",
+        "direction": "서쪽",
+        "conflict": "동쪽"
+      },
+      "im_sul": {
+        "title": "임술(런수)",
+        "advice": "깊은 산 속 호수를 지키는 검은 개의 영혼. 현명한 판단과 믿음을 지키는 태도는 큰 행운을 불러올 것입니다.",
+        "direction": "북서",
+        "conflict": "남동"
+      },
+      "gye_hae": {
+        "title": "Gye-Hae (짱亥)",
+        "advice": "모든 강이 모여 바다를 이루는 모습. 거대한 포괄성과 유연성으로 모든 것을 완성하고 다음을 준비하세요.",
+        "direction": "북서",
+        "conflict": "남동"
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Emotional Style Test",
+    "description": "Discover how you express your emotions and improve your communication skills"
+  },
+  "landing": {
+    "title": "Emotional Style Test",
+    "subtitle": "Discover your own way to express your emotions",
+    "cta": "Start testing"
+  },
+  "result": {
+    "loading": "Loading results..."
+  }
+}

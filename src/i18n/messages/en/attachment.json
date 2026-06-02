@@ -1,0 +1,562 @@
+{
+  "attachment": {
+    "meta": {
+      "hero": {
+        "badge": "Universal Wisdom",
+        "subtitle": "Unveiling the structure of invisible connections that bind you",
+        "cta": "Begin Exploration",
+        "secondaryCta": "Explore Blueprint"
+      },
+      "benefits": {
+        "subtitle": "A Journey Toward Relational Awakening"
+      },
+      "keywords": "attachment theory, emotional resonance, relationship patterns, nervous system stability, secure base, intimacy psychology",
+      "title": "The Weaver's Map: Resonance of Attachment",
+      "description": "A deep exploration of the frequencies of human connection and the art of preserving grace within the dance of intimacy."
+    },
+    "hero": {
+      "badge": "💞 Alchemy of Connection",
+      "subtitle": "Interpret the sacred signals sent by your nervous system as you navigate the delicate waves of intimacy.",
+      "cta": "Begin Attachment Scan",
+      "secondaryCta": "Descend into archetypes of affinity and rituals of healing.",
+      "title": "Geometry of Connection",
+      "description": "A comprehensive integration of your relational essence and inner security."
+    },
+    "benefits": {
+      "subtitle": "Sublimating reflexive instincts into the intentional art of relational care.",
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Sacred Stability",
+          "description": "Discovering an unchanging anchor amidst the ever-shifting storms of connection.",
+          "question": "How can I cultivate an inner sanctuary?",
+          "answer": "By honoring the body's longing to be witnessed and the soul's path toward peace."
+        },
+        {
+          "icon": "🚀",
+          "title": "Ancestral Echoes",
+          "description": "Decoding ancient whispers etched into your modern relationship patterns.",
+          "question": "What legacy is contained within my instincts?",
+          "answer": "Wisdom often arrives as a memory of what once protected us."
+        },
+        {
+          "icon": "💡",
+          "title": "Fluid Boundaries",
+          "description": "The refined skill of remaining open to love while guarding the sanctuary of the self.",
+          "question": "Where does my energy end and yours begin?",
+          "answer": "Clarity is the greatest mercy one can perform within any union."
+        },
+        {
+          "icon": "🎯",
+          "title": "Resonance Restoration",
+          "description": "Transforming the friction of discord into the brilliant gold of deeper intimacy.",
+          "question": "Can broken threads be woven more strongly?",
+          "answer": "The most resilient bonds belong to those who have learned the alchemy of apology."
+        },
+        {
+          "icon": "🔥",
+          "title": "Sovereign Autonomy",
+          "description": "Nurturing a wild, independent spirit while dwelling gracefully within the village of others.",
+          "question": "How can I remain close yet free?",
+          "answer": "True belonging requires the courage to remain oneself even in silence."
+        },
+        {
+          "icon": "⭐",
+          "title": "Dynamic Presence",
+          "description": "Mastering the 'here and now' frequency to dissolve the shadows of past abandonment fears.",
+          "question": "How can I release the ghosts of yesterday?",
+          "answer": "The present moment is the only place where true connection can be born."
+        }
+      ],
+      "title": "Pillars of Affinity"
+    },
+    "types": {
+      "secure": {
+        "name": "Harmonious Anchor",
+        "emoji": "🛟",
+        "description": "You navigate the abyss of intimacy with an unwavering heart, balanced boundaries, and the grace of clear communication."
+      },
+      "anxiousPreoccupied": {
+        "name": "Vigilant Seeker",
+        "emoji": "💗",
+        "description": "You carry a deep longing for union, often interpreting the silence of others as a call to draw closer."
+      },
+      "dismissiveAvoidant": {
+        "name": "Sovereign Solitary",
+        "emoji": "🧊",
+        "description": "Independence is your sanctuary. You move with self-reliance, discovering safety within the vast landscape of your inner world."
+      },
+      "fearfulAvoidant": {
+        "name": "Paradoxical Navigator",
+        "emoji": "⚡",
+        "description": "Your heart seeks the shores of connection while simultaneously bracing for the storms of betrayal."
+      },
+      "earnedSecure": {
+        "name": "Soul Alchemist",
+        "emoji": "🌈",
+        "description": "Through conscious evolution and rigorous self-witnessing, you have forged a foundation of safety within the fires of past wounds."
+      },
+      "subtitle": "Observe the multifaceted dance of your relational ego. Identify the dominant frequency and its silent guardians.",
+      "title": "Archetypes of Attachment"
+    },
+    "relationships": {
+      "highlights": [
+        "Illuminate your relational blueprint for others. It replaces the fog of projection with the clarity of true witnessing.",
+        "Create sacred rituals of return after the inevitable frictions of life. Ensure no wound remains untended.",
+        "Embody the archetype of the stable ancestor. Teach the next generation that repair is always possible."
+      ],
+      "title": "The Art of Union",
+      "description": "Refined strategies for weaving a tapestry of enduring connection."
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Somatic Whispers",
+          "description": "Learn to listen to the subtle signals the body sends before the rational mind chooses its words.",
+          "question": "How can I recognize my physical boundary signals?",
+          "answer": "Wisdom begins when you pause to witness a breath's tension or the gentle pulse of the heart."
+        },
+        {
+          "icon": "🚀",
+          "title": "Cosmic Resonance",
+          "description": "Explore how your unique relational frequency interacts with the constellations of others.",
+          "question": "Can different styles harmonize?",
+          "answer": "Every encounter is a unique symphony. The key lies in the conductor's awareness."
+        },
+        {
+          "icon": "💡",
+          "title": "Alchemy of Fear",
+          "description": "Sublimate the lead of old anxieties into the gold of conscious intimacy.",
+          "question": "What is the root of relational anxiety?",
+          "answer": "It is often the heart's way of yearning for a safety that was once denied."
+        },
+        {
+          "icon": "🎯",
+          "title": "Secure Base Protocols",
+          "description": "Design a stable foundation that allows both for exploration and return.",
+          "question": "How do I build a secure base for a partner?",
+          "answer": "By becoming a consistent harbor where truth can dock without fear of judgment."
+        },
+        {
+          "icon": "🔥",
+          "title": "Sovereign Witness",
+          "description": "Nurture an inner observer who watches the moment of a trigger without becoming submerged in it.",
+          "question": "How can I break the cycle of reactive loops?",
+          "answer": "The space between impulse and action is where the power of the soul resides."
+        },
+        {
+          "icon": "⭐",
+          "title": "Mastery of Interdependence",
+          "description": "Discover the sacred middle path between the void of isolation and the fog of fusion.",
+          "question": "What does healthy interdependence look like?",
+          "answer": "Two whole worlds maintaining their own horizons while choosing to share a single sky."
+        }
+      ],
+      "title": "Questions of the Oracle"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Neuro-Somatic Mapping",
+          "description": "Precisely track how your nervous system responds to the invitation of intimacy.",
+          "question": "How does my body record connection?",
+          "answer": "Through the resonance of safety and the echoes of past protection."
+        },
+        {
+          "icon": "🚀",
+          "title": "Fusion of Identity",
+          "description": "Discover how your core attachment archetypes influence your perception of self and others.",
+          "question": "Where does my identity meet connection?",
+          "answer": "We are mirrors reflecting each other's most hidden truths."
+        },
+        {
+          "icon": "💡",
+          "title": "Relational Blueprint",
+          "description": "Visualize the complex architecture of your bonds, from foundation to boundaries.",
+          "question": "What shape is my connection?",
+          "answer": "A tapestry woven with threads of fear and fibers of love."
+        },
+        {
+          "icon": "🎯",
+          "title": "Anchored Exploration",
+          "description": "Guided reflection to anchor you within your truest relational principles.",
+          "question": "How can I remain anchored in truth?",
+          "answer": "By returning to the stillness where the soul's compass always points home."
+        },
+        {
+          "icon": "🔥",
+          "title": "Lens of Repair",
+          "description": "Identify the specific tools needed to bridge gaps and strengthen trust.",
+          "question": "How do I heal the threads of connection?",
+          "answer": "Patience is the needle that mends the most delicate cracks of the heart."
+        },
+        {
+          "icon": "⭐",
+          "title": "Archetypal Resonance",
+          "description": "Understand which ancient patterns are guiding your journey toward modern belonging.",
+          "question": "Which archetype is leading me today?",
+          "answer": "The one who holds the key to open the door where you stand right now."
+        }
+      ]
+    },
+    "test": {
+      "test": {
+        "progress": "Resonance Progress",
+        "submit": "Reveal Report",
+        "loading": "Descending into the depths of your affinity...",
+        "selectOption": "Choose your resonance",
+        "insightBullets": [
+          "Mapping the celestial patterns of your truest connections."
+        ],
+        "next": "Ascend",
+        "previous": "Descend"
+      },
+      "result": {
+        "title": "Unveiled Blueprint",
+        "description": "A refined integration of your relational destiny and the architecture of care."
+      },
+      "meta": {
+        "title": "The Weaver's Report Index",
+        "description": "A profound record of your attachment journey and the chosen path.",
+        "keywords": "revelation, report, insight"
+      },
+      "progress": "Atmospheric Pressure",
+      "submit": "Unveil the Blueprint",
+      "loading": "Weaving the fibers of relational DNA...",
+      "selectOption": "Declare your truth",
+      "subtitle": "Inner Landscape",
+      "insightBullets": [
+        "Core frequency of your bonds",
+        "Geometry of your boundaries",
+        "Alchemy of your healing"
+      ],
+      "title": "Sacred Inquiry",
+      "instruction": "Listen to the whispers of your instinct.",
+      "helperText": "In the journey of self-discovery, no wrong path exists.",
+      "restart": "Reweave the Threads",
+      "next": "Forward",
+      "previous": "Retrospect"
+    },
+    "result": {
+      "title": "Your Attachment Style",
+      "subtitle": "Deep Analysis Report"
+    },
+    "title": "Custom Analysis Results",
+    "description": "Experience various identity analysis tools designed for deep self-discovery.",
+    "keywords": "personality diagnosis, soul vitamins, journey to find self, OIYO",
+    "answers": "Answers"
+  },
+  "attachmentStyle": {
+    "meta": {
+      "title": "The Weaver's Blueprint: Mapping Attachment Styles",
+      "description": "Unveil the sacred instincts that guide your relational dance. Provides grounded strategies for the profound art of communication, boundary design, and nervous system care.",
+      "keywords": "attachment mapping, alchemy of relations, secure base architecture, emotional resonance, intimacy repair"
+    },
+    "hero": {
+      "badge": "💞 Alchemy of Connection",
+      "title": "Attachment Style Mapping",
+      "subtitle": "Decode the subtle frequencies of your soul as it reaches for connection and protection.",
+      "description": "Begin the journey to understand the archetypal threads—the primary and secondary frequencies—that weave your requests, boundaries, and repair rituals into a secure and vibrant union.",
+      "cta": "Begin Attachment Scan",
+      "secondaryCta": "Descend to explore style profiles and healing rituals."
+    },
+    "benefits": {
+      "title": "Why Map the Geometry of Affinity?",
+      "subtitle": "Clarity sublimates chaotic reactions into intentional acts of care.",
+      "items": [
+        {
+          "icon": "🔍",
+          "title": "Decoding Patterns",
+          "description": "Translate defensive habits into a highly refined language of the heart, freed from the weight of shame."
+        },
+        {
+          "icon": "🤝",
+          "title": "Architect of Repair",
+          "description": "Utilize scripts and rituals specifically tuned to the unique resonance of your nervous system."
+        },
+        {
+          "icon": "🛡️",
+          "title": "Confident Guardianship",
+          "description": "Learn the art of shielding your sacred energy while remaining open to the light of intimacy."
+        },
+        {
+          "icon": "🌱",
+          "title": "Sublime Healing",
+          "description": "Combine somatic regulation with reflective communication to foster holistic evolution."
+        }
+      ]
+    },
+    "types": {
+      "secure": {
+        "name": "Anchored Heart",
+        "emoji": "🛟",
+        "description": "You believe that intimacy and autonomy are two wings of a single bird, enabling a voyage filled with mutual resilience."
+      },
+      "anxiousPreoccupied": {
+        "name": "Yearning Soul",
+        "emoji": "💗",
+        "description": "You possess a highly refined sense for the tides of connection and crave the quiet harbor of reassurance."
+      },
+      "dismissiveAvoidant": {
+        "name": "Sovereign Solitary",
+        "emoji": "🧊",
+        "description": "Independence is your sanctuary. You find tranquility within the vast embrace of self-reliance when the seas of emotion rise."
+      },
+      "fearfulAvoidant": {
+        "name": "Paradoxical Navigator",
+        "emoji": "⚡",
+        "description": "You navigate where longing and fear meet, weaving a complex rhythm of approach and retreat."
+      },
+      "earnedSecure": {
+        "name": "Affinity Alchemist",
+        "emoji": "🌈",
+        "description": "Through sacred acts of self-witnessing, you have sublimated past wounds into a brilliant capacity for intimacy."
+      },
+      "title": "Five Manifestations of the Relational Soul",
+      "subtitle": "Every seeker carries a constellation of archetypes. Identify your North Star and the stars that guard its side."
+    },
+    "relationships": {
+      "title": "Weaving Insight into Union",
+      "description": "Utilizing your attachment blueprint, orchestrate communication methods, boundary designs, and rituals that honor the neuro-somatic truth of all.",
+      "highlights": [
+        "Unveil your profile to loved ones to transmute the darkness of doubt into the light of empathy.",
+        "Co-design rituals for the 'Great Return' after conflict—gradual reconnection, shared reflection, or sacred silence.",
+        "Embody the archetype of the stable ancestor. Let the wisdom of repair become a living legacy."
+      ]
+    },
+    "test": {
+      "title": "The Weaver's Inquiry",
+      "subtitle": "Perform 8 scenario-based reflections to reveal your dominant and auxiliary frequencies.",
+      "instruction": "Select the resonance that reflects your true instinct in the 'here and now,' rather than an idealized projection.",
+      "progress": "Inquiry {current} / {total}",
+      "helperText": "Pause between reflections—true self-awareness is born in the space where the breath of mindfulness dwells.",
+      "previous": "Retreat",
+      "restart": "Reweave the Threads"
+    },
+    "result": {
+      "cta": {
+        "retake": "Reweave the Inquiry",
+        "explore": "Explore Other Relational Archetypes"
+      },
+      "overview": {
+        "lead": "Your primary resonance is {primary}, harmonized by the {secondary} frequency.",
+        "answerCount": "Integrated through {total} moments of self-witnessing.",
+        "paragraphs": [
+          "Your attachment blueprint is a living map for exploring the exquisite architecture of intimacy, autonomy, and security. This is not mere theory. It is the result of tracking the internal tides of your body—the subtle shifts in pulse, the unconscious contraction of breath, and the loops of thought that arise when connection feels vulnerable. By illuminating these patterns, we transform reactive instincts into a refined language for your most cherished bonds.",
+          "The fusion of your primary and secondary types shows that your relational soul is fluid, not fixed. Even if one pattern is the dominant guardian, within you lies a constellation of auxiliary instincts that can provide a steadier rhythm through the clarity of structure or the grace of gentle distancing. When you consciously orchestrate these diverse aspects of yourself, you can serve as a profound example to your partner of what it means to heal without the weight of blame.",
+          "This profile also serves as a gentle sentry, capturing the 'caution signals' of your nervous system: the shadow of anxiety that seeps in when a message goes unanswered, the mental walls built behind a whispered misunderstanding, or the numbness that masks a longing for deep recognition. By recognizing these moments early, you can apply sacred scripts and grounding rituals before old autopilots take command.",
+          "Reflect on how these essential strengths can adapt from the intense heat of romantic union to the vast landscapes of family, friendship, and the professional realm. A stable anchor allows you to accept love not as a debt to be repaid, but as a natural birthright, and an evolved instinct will become a safe laboratory for testing more vibrant ways of being.",
+          "This insight is an invitation to make a new covenant with your own body. By integrating nervous system regulation strategies, you remind your nervous system that it is safe to absorb care at a sustainable pace. True alchemy happens not when the head understands an abstract concept, but when the body experiences safety as a practical sensation.",
+          "Finally, remember that you do not walk this path alone. This blueprint is a tool for connection. Invite trusted counselors, mentors, or loved ones into your experiment of finding truth. Attachment patterns were born in the presence of others, and they can only be transformed and transcended within the sacred space of relationship."
+        ]
+      },
+      "primarySection": {
+        "scoreHeadline": "Dominant Frequency",
+        "scoreDescription": "The {primary} frequency is currently the main conductor leading your relational symphony.",
+        "strengthsTitle": "Radiance: Your Relational Strengths",
+        "growthTitle": "Horizons of Growth: The Path Toward Evolution",
+        "relationshipTitle": "Alchemical Strategies for Connection",
+        "regulationTitle": "Somatic Phrases for Inner Safety"
+      },
+      "secondarySection": {
+        "title": "Auxiliary Resonance of the {secondary} Frequency",
+        "highlightTitle": "How to Invite the Essence of {secondary}",
+        "paragraphs": [
+          "Your auxiliary type is like a quiet instrument adding depth to the melody. When the primary pattern feels the weight of stress, invite this resonance to provide a steadier rhythm through the clarity of structure or the grace of gentle distancing.",
+          "Discussing these archetypes with trusted companions dissolves the shadows of shame and guides you into the collaborative dance of repair."
+        ]
+      },
+      "scoreBreakdown": {
+        "title": "The Spectrum of Your Soul",
+        "description": "These percentages reflect the frequencies that resonated during your journey. All harmonies are sacred. Use them to personalize your path of healing."
+      },
+      "additionalInsights": {
+        "title": "Declarations of the Oracle",
+        "description": "Keep these refined truths by your side as you integrate your blueprint of affinity.",
+        "items": [
+          "Attempt new communication scripts first within your most trusted relationships. Success will provide the foundation for confidence.",
+          "Map your moments of activation and record which specific repair rituals truly calmed your nervous system.",
+          "Combine somatic regulation with mental reframing to support the holistic evolution of the self.",
+          "Speak to yourself with the gentleness of a sage: 'My body is merely seeking a sanctuary. I can honor this need with a choice of deep compassion.'",
+          "Take time each season for attachment reflection to check your boundaries, quality of presence, and habits of repair."
+        ]
+      },
+      "actionPlan": {
+        "title": "A Four-Week Ritual of Integration",
+        "description": "Move according to the rhythm your soul leads—repeat this cycle or invite a witness to join your evolution.",
+        "steps": [
+          {
+            "title": "Week 1 · The Scroll of Awareness",
+            "description": "Reflect on a recent friction. What did your attaching soul believe in that moment? What did it fear? Record specific boundaries or echoes of reassurance that would have served as a secure bridge."
+          },
+          {
+            "title": "Week 2 · The Laboratory of Resonance",
+            "description": "Utilize the alchemical structure: 'When X occurs, I feel Y. I seek the support of Z.' Practice first in low-stakes relationships before reaching out to loved ones."
+          },
+          {
+            "title": "Week 3 · Orchestration of the Nervous System",
+            "description": "Call to mind your most frequent trigger situations and practice tools of breath, tapping, or movement so your cells remember the sensation of safety."
+          },
+          {
+            "title": "Week 4 · The Ritual of Repair",
+            "description": "Following inevitable tension, begin repair by courageously naming the impact, humbly seeking feedback, and co-designing a more resonant path toward the future."
+          }
+        ]
+      },
+      "styles": {
+        "secure": {
+          "summary": "You embody the Archetype of the Anchor. You perceive intimacy and autonomy as two halves of a whole, expecting relationships to be collaborative, resilient, and based on fundamental honesty.",
+          "strengths": [
+            "Clearly express the subtle nuances of your inner world without exaggeration or minimization.",
+            "Possess an unwavering belief that disagreements can be resolved.",
+            "Offer reassurance abundantly and receive it with a graceful heart.",
+            "A master of 'rapid repair,' tending to flaws before they become wounds.",
+            "Communicate needs at dawn before they sink into the twilight of resentment."
+          ],
+          "growth": [
+            "Remember that even the most dedicated partner cannot read all your silences; continue to request specific support.",
+            "Assure that you are not over-functioning to avoid disappointing others at the expense of your own rest.",
+            "Cultivate the art of 'pure presence'—simply staying without the urge to design solutions.",
+            "Maintain gentle curiosity about how shadows of stress or sorrow act upon your calm waters."
+          ],
+          "relationship": [
+            "Act as a model of 'transparent validation' to provide a sanctuary for less stable companions.",
+            "Share the routines that anchor your soul, so others may borrow your tranquility amidst the storm.",
+            "Sacredly regard 'healthy interdependence,' remembering that being supported is a strength, not a weakness.",
+            "Utilize your anchored voice to propose collaborative boundary setting."
+          ],
+          "regulation": [
+            "When a conversation intensifies, slow your breath and precisely lengthen the duration of your exhale.",
+            "Name your physical sensations to stay integrated with the body's truth as it joins with the mind's logic.",
+            "Remind yourself: 'I can stay fully present here without surrendering my own sanctuary.'"
+          ]
+        },
+        "anxiousPreoccupied": {
+          "summary": "You are the Archetype of the Yearner. Your sensitivity to the tides of connection is profound, often interpreting others' silence as a call to navigate closer to the shores of reassurance.",
+          "strengths": [
+            "Possess a refined intuition that captures the inner shifts of those you love.",
+            "Dedicatedly guard the flame of connection, pouring immense energy into bridging any estrangement.",
+            "A source of fundamental affirmation and tireless exploration of others' inner worlds.",
+            "Cherish an immortal hope for the power of repair, no matter how long the night.",
+            "Deep capacity for intimacy that seeks to leave no one behind in the cold."
+          ],
+          "growth": [
+            "Practice a sacred pause when the urge to reach out arises. Breathe and ask what your soul truly seeks.",
+            "Practice the vulnerability of clearly requesting: 'I feel ~; I need ~,' rather than trying to read between the lines.",
+            "Collect a 'liturgy of evidence' regarding the loyalty of loved ones so your nervous system may rest in truth.",
+            "Remember that your profound capacity for yearning is a sacred gift, not a burden to be shed."
+          ],
+          "relationship": [
+            "Establish shared rhythms of connection to clear the fog of waiting and doubt.",
+            "Present your sensitivity as a rare treasure, so companions may regard its value as sacred.",
+            "Co-orchestrate plans for reunion after time apart."
+          ],
+          "regulation": [
+            "Invoke the 4-6 breath rhythm to lower the urgency of your pulse before speaking truth.",
+            "Reassure your physical self with a 'self-touch' ritual—placing a hand on your heart or gently cradling your cheek.",
+            "Repeat the mantra: 'Affection only pauses; it does not vanish. I am sustained even in silence.'"
+          ]
+        },
+        "dismissiveAvoidant": {
+          "summary": "You are the Archetype of the Sovereign. Independence is your sublime sanctuary. You find safety within your vast inner landscape when the emotional atmosphere becomes heavy.",
+          "strengths": [
+            "A flag-bearer who remains unfazed in moments of crisis, designing paths for practical progress.",
+            "Deep respect for the sanctity of personal space and the autonomy of the soul.",
+            "Move with graceful self-credit, or at least do not burden others with the weight of your needs.",
+            "Capable of refining complex inner tides into clear language once trust is established."
+          ],
+          "growth": [
+            "Observe moments when the 'shield of logic' is used to mask the vulnerability of sorrow or longing.",
+            "Experiment with 'gradual offering'—sharing a small, subtle piece of need before resolving issues in solitude.",
+            "Begin the practice of facing feedback rather than retreating when it arrives.",
+            "Allow yourself to seek comfort from chosen witnesses, even for a brief moment."
+          ],
+          "relationship": [
+            "Clearly explain your specific topography of intimacy so companions do not rely on guesswork.",
+            "Design connection rituals with a higher purpose—shared creation, pilgrimage, or a common vision.",
+            "Always provide a 'promise of return' when needing solitary time, stating the reason and when you will be back.",
+            "Offer gifts of spoken praise. Unexpressed gratitude is like a lamp that is never lit."
+          ],
+          "regulation": [
+            "Gently relax the armor in your shoulders and the tension in your jaw before engaging in difficult dialogue.",
+            "Anchor in truth: 'I can remain fully in the presence of others while maintaining the boundaries of my soul.'",
+            "Use 'bilateral stimulation'—alternately tapping your thighs—to stay present in the here and now."
+          ]
+        },
+        "fearfulAvoidant": {
+          "summary": "You are the Archetype of the Voyager. Your heart navigates a swirling sea where longing for union meets the harsh fear of betrayal, performing a complex and rhythmical dance of presence and retreat.",
+          "strengths": [
+            "Possess a crystalline intuition, sensing even the slightest shifts in the relational atmosphere.",
+            "Capable revealing very deep levels of vulnerability once safety is secured.",
+            "An alchemist dedicated to healing ancient patterns that no longer serve your evolution.",
+            "Capable of witnessing and honoring multifaceted truths simultaneously."
+          ],
+          "growth": [
+            "Track specific triggers that lead to sudden retreats and create recovery scripts to use in those moments.",
+            "Have the courage for 'proactive inquiry'—asking for confirmation from the other person before acting on fear.",
+            "Wisely distinguish between relationships safe for vulnerability and those requiring firmer boundaries.",
+            "Bless yourself for anchoring in a partner's presence even in situations filled with unease."
+          ],
+          "relationship": [
+            "Illuminate and explain the complex push-and-pull of emotions occurring within you for your partner.",
+            "Utilize shared calendars or unchanging routines as reliable anchors to build trust.",
+            "Establish a collective safety plan—timeouts during conflict, stabilization phrases, etc.",
+            "Seek professionals or communities who can witness and support your growth."
+          ],
+          "regulation": [
+            "Use stabilization techniques that combine breath, movement, and sensory input when anxiety surges.",
+            "Repeat the mantra: 'I am afraid, but I can stay here. I can leave for a moment and then return.'",
+            "Practice 'orienting toward truth' by finding and naming 5 objects around you to return to the present."
+          ]
+        },
+        "earnedSecure": {
+          "summary": "You are the Archetype of the Alchemist. Through rigorous self-witnessing, you have designed a foundation of safety from within. Ancient echoes are still heard, but you now hold the key to a new and vibrant resonance.",
+          "strengths": [
+            "Gently weave insights gained from reflection into the fabric of daily interactions.",
+            "Act as a compassionate mentor, guiding others through the landscape of vulnerability based on inherited wisdom.",
+            "Sacredly guard the boundaries of the self without severing the links of connection with others.",
+            "Maintain your needs as sacred while gracefully taking responsibility for your impact on others."
+          ],
+          "growth": [
+            "Keep updating your coping strategies as life circumstances change.",
+            "Fully celebrate the majestic achievements of your healing process rather than just focusing on the next goal.",
+            "Utilize not just crisis management but joy and play itself as profound attachment practices.",
+            "Be proud of and acknowledge your own growth."
+          ],
+          "relationship": [
+            "Co-design connection rituals to strengthen the secure base you are building.",
+            "Share the methods that transformed you—journaling, psychological terminology, recovery loops, etc.—with loved ones.",
+            "Grant yourself the same infinite mercy you bestow upon others."
+          ],
+          "regulation": [
+            "Harmonize body and mind by combining breath and movement.",
+            "Invoke the affirmation: 'I am creating safety for myself, and I deserve it.'",
+            "Honor your wholeness by taking regular time for nervous system care."
+          ]
+        }
+      },
+      "title": "The Weaver's Report: Your Attachment Blueprint",
+      "subtitle": "Sublimate the instincts of the nervous system into sacred scripts, rituals, and enduring relational covenants.",
+      "sharePrompt": "Invite companions to join this journey of self-discovery."
+    },
+    "faq": {
+      "title": "Final Musings of the Oracle",
+      "items": [
+        {
+          "question": "Can this inquiry replace the wisdom of healers?",
+          "answer": "No. This is a reflective tool designed to illuminate your journey alongside certified therapists or spiritual guides."
+        },
+        {
+          "question": "Is the geometry of my attachment fixed forever?",
+          "answer": "Not at all. Through intentional witnessing and consistent practice of repair, the soul's resonance anchors and becomes more secure over cycles of time."
+        },
+        {
+          "question": "How can I best leverage these revelations?",
+          "answer": "Begin with one ritual, one new script, or one subtle shift in the nervous system each week. Invite your community into your victories, so healing becomes a collective masterpiece."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "title": "Biorritmo",
+  "subtitle": "Tus ciclos físicos, emocionales e intelectuales.",
+  "physical": "Físico",
+  "emotional": "Emocional",
+  "intellectual": "Intelectual",
+  "test": {
+    "progress": "Progreso",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar",
+    "loading": "Cargando",
+    "selectOption": "Seleccionar",
+    "subtitle": "Comprueba la condición de hoy y planifica un día óptimo",
+    "insightBullets": [
+      "¿Cómo es tu ritmo corporal hoy?",
+      "Comprueba tu estado emocional",
+      "Encuentre el tiempo óptimo de actividad"
+    ]
+  },
+  "meta": {
+    "title": "Biorritmo",
+    "description": "Analiza mis ritmos físicos, emocionales e intelectuales para encontrar mi condición óptima",
+    "keywords": "biorritmo, ritmo biológico, condición, ritmo físico, ritmo emocional"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Análisis preciso del ritmo",
+        "description": "Análisis preciso basado en la teoría científica del biorritmo.",
+        "question": "¿Es preciso su biorritmo?",
+        "answer": "Cuenta con una alta precisión basada en la teoría del biorritmo que se ha demostrado durante décadas."
+      },
+      {
+        "icon": "🚀",
+        "title": "Conoce el momento óptimo",
+        "description": "Le diremos el momento óptimo a la hora de planificar eventos importantes.",
+        "question": "¿Cómo lo uso?",
+        "answer": "Podrás obtener mejores resultados si planificas reuniones importantes, ejercicio, estudio, etc. en los días en los que tu ritmo sea bueno."
+      },
+      {
+        "icon": "💡",
+        "title": "Gestión de condiciones",
+        "description": "Puede conocer y prepararse para los cambios en la condición diaria con anticipación.",
+        "question": "¿Necesito revisarlo todos los días?",
+        "answer": "Sí, su biorritmo cambia todos los días, por lo que es bueno controlarlo periódicamente."
+      },
+      {
+        "icon": "🎯",
+        "title": "3 tipos de análisis de ritmo",
+        "description": "Analizamos tus ritmos físicos, emocionales e intelectuales respectivamente.",
+        "question": "¿Qué ritmo puedes reconocer?",
+        "answer": "Podrás comprobar los tres ritmos de los ciclos físico (23 días), emocional (28 días) e intelectual (33 días)."
+      },
+      {
+        "icon": "🔥",
+        "title": "completamente gratis",
+        "description": "Todas las funciones están disponibles de forma gratuita.",
+        "question": "¿Cuesta algo?",
+        "answer": "Se proporciona de forma totalmente gratuita y puede utilizarlo de inmediato sin registrarse como miembro."
+      },
+      {
+        "icon": "⭐",
+        "title": "Fácil de usar",
+        "description": "Simplemente ingrese su fecha de nacimiento y podrá verificar los resultados de inmediato.",
+        "question": "¿Cuánto tiempo se tarda?",
+        "answer": "Puede consultar los resultados inmediatamente después de ingresar su fecha de nacimiento."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "¿Qué es el biorritmo?",
+        "description": "Es un ritmo biológico que representa cambios periódicos en el cuerpo, las emociones y el intelecto.",
+        "question": "¿Qué es el biorritmo?",
+        "answer": "Se refiere a un patrón de cambios en el cuerpo, las emociones y el intelecto que se repite en un ciclo determinado desde el día del nacimiento."
+      },
+      {
+        "icon": "🚀",
+        "title": "como usarlo",
+        "description": "Coloca horarios importantes en días con buen ritmo.",
+        "question": "¿Cómo lo uso?",
+        "answer": "Es mejor realizar trabajos importantes en los días de alto ritmo y descansar en los días de bajo ritmo."
+      },
+      {
+        "icon": "💡",
+        "title": "exactitud",
+        "description": "Se basa en una teoría científicamente probada.",
+        "question": "¿Qué tan preciso es?",
+        "answer": "Aunque puede haber diferencias individuales, se dice que coincide con el ritmo que muchas personas realmente experimentan."
+      },
+      {
+        "icon": "🎯",
+        "title": "Descripción del ciclo",
+        "description": "Cada ritmo tiene su propio ciclo.",
+        "question": "¿Qué es el ciclo?",
+        "answer": "Se repite en ciclos de 23 días para el cuerpo, 28 días para las emociones y 33 días para el intelecto."
+      },
+      {
+        "icon": "🔥",
+        "title": "servicio gratuito",
+        "description": "Todas las funciones se proporcionan de forma gratuita.",
+        "question": "¿Cuesta algo?",
+        "answer": "Es completamente gratis y no tiene publicidad."
+      },
+      {
+        "icon": "⭐",
+        "title": "función de compartir",
+        "description": "Puedes comparar tu biorritmo con el de tus amigos.",
+        "question": "¿Puedes compartir?",
+        "answer": "Sí, puedes compartirlo fácilmente con un enlace y compararlo con tus amigos."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Análisis en tiempo real",
+        "description": "Consulta el biorritmo de hoy en tiempo real",
+        "question": "¿Cuándo reviso?",
+        "answer": "Consultarlo todas las mañanas me ayuda a planificar mi día."
+      },
+      {
+        "icon": "🚀",
+        "title": "predicción futura",
+        "description": "Puede comprobar los futuros cambios de ritmo con antelación.",
+        "question": "¿Puedes ver el futuro?",
+        "answer": "Sí, puedes consultar tu biorritmo hasta con un mes de antelación."
+      },
+      {
+        "icon": "💡",
+        "title": "gráfico proporcionado",
+        "description": "Identifique cambios de ritmo de un vistazo con gráficos intuitivos",
+        "question": "¿Es fácil de ver?",
+        "answer": "Cualquiera puede entender fácilmente los coloridos gráficos."
+      },
+      {
+        "icon": "🎯",
+        "title": "asesoramiento personalizado",
+        "description": "Te recomendamos actividades que se ajusten a tu ritmo actual.",
+        "question": "¿Puedo recibir algún consejo?",
+        "answer": "Sí, le informaremos de las actividades y precauciones adecuadas para cada condición de ritmo."
+      },
+      {
+        "icon": "🔥",
+        "title": "Análisis de compatibilidad",
+        "description": "Comprueba tu compatibilidad biorritmica con un amigo o amante.",
+        "question": "¿Puedes ver también la compatibilidad?",
+        "answer": "Si introduces la fecha de nacimiento de dos personas, analizaremos tu compatibilidad biorritmica."
+      },
+      {
+        "icon": "⭐",
+        "title": "Función de notificación",
+        "description": "Te avisaremos con antelación de los cambios en el ritmo de los días importantes.",
+        "question": "¿Puedo recibir notificaciones?",
+        "answer": "Puede configurar una notificación de biorritmo para la fecha deseada."
+      }
+    ]
+  },
+  "result": {
+    "title": "Biorritmo",
+    "description": "Analiza mis ritmos físicos, emocionales e intelectuales para encontrar mi condición óptima"
+  },
+  "hero": {
+    "title": "Biorritmo",
+    "description": "Analiza mis ritmos físicos, emocionales e intelectuales para encontrar mi condición óptima",
+    "subtitle": "Comprueba la condición de hoy y planifica un día óptimo",
+    "badge": "Análisis de Biorritmo"
+  },
+  "advice": {
+    "physical": {
+      "high": "La claridad mental brilla más que nunca. Momento óptimo para resolver problemas complejos, tomar decisiones estratégicas o explorar nuevos campos profundamente.",
+      "medium": "Los pensamientos son claros y organizados. Buena energía para manejar tareas lógicas o comunicación clara y avanzar constantemente hacia las metas.",
+      "low": "El enfoque intelectual puede sentirse como en una suave niebla. En lugar de forzar el análisis, deja ir los pensamientos. A veces las mejores ideas llegan en silencio.",
+      "critical": "La energía intelectual es alta pero puede estar dispersa. En lugar de apresurarte a conclusiones, concéntrate en un pensamiento a la vez y juzga cuidadosamente."
+    },
+    "emotional": {
+      "high": "La claridad mental brilla más que nunca. Momento óptimo para resolver problemas complejos, tomar decisiones estratégicas o explorar nuevos campos profundamente.",
+      "medium": "Los pensamientos son claros y organizados. Buena energía para manejar tareas lógicas o comunicación clara y avanzar constantemente hacia las metas.",
+      "low": "El enfoque intelectual puede sentirse como en una suave niebla. En lugar de forzar el análisis, deja ir los pensamientos. A veces las mejores ideas llegan en silencio.",
+      "critical": "La energía intelectual es alta pero puede estar dispersa. En lugar de apresurarte a conclusiones, concéntrate en un pensamiento a la vez y juzga cuidadosamente."
+    },
+    "intellectual": {
+      "high": "La claridad mental brilla más que nunca. Momento óptimo para resolver problemas complejos, tomar decisiones estratégicas o explorar nuevos campos profundamente.",
+      "medium": "Los pensamientos son claros y organizados. Buena energía para manejar tareas lógicas o comunicación clara y avanzar constantemente hacia las metas.",
+      "low": "El enfoque intelectual puede sentirse como en una suave niebla. En lugar de forzar el análisis, deja ir los pensamientos. A veces las mejores ideas llegan en silencio.",
+      "critical": "La energía intelectual es alta pero puede estar dispersa. En lugar de apresurarte a conclusiones, concéntrate en un pensamiento a la vez y juzga cuidadosamente."
+    }
+  },
+  "description": "Analiza mis ritmos físicos, emocionales e intelectuales para encontrar mi condición óptima",
+  "keywords": "biorritmo, ritmo biológico, condición, ritmo físico, ritmo emocional",
+  "synthesis": {
+    "wood_metal": "Resonancia Madera/Metal: Enfoque en su resiliencia.",
+    "fire_water": "Resonancia Fuego/Agua: Enfoque en su sentido del equilibrio.",
+    "earth": "Resonancia Tierra: Enfoque en su estabilidad."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "ui": {
+    "title": "通知",
+    "all": "全部",
+    "unread": "未读",
+    "readAll": "全部标记为已读",
+    "markRead": "标记为已读",
+    "view": "看法",
+    "viewAll": "查看所有通知"
+  },
+  "empty": {
+    "noUnread": "没有未读通知",
+    "noNotifications": "还没有通知"
+  },
+  "time": {
+    "justNow": "现在",
+    "minutesAgo": "{分钟}分钟前",
+    "hoursAgo": "{小时}小时前",
+    "daysAgo": "{天}天前"
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "title": "Biorhythm",
+  "subtitle": "Your physical, emotional, and intellectual cycles.",
+  "physical": "Physical",
+  "emotional": "Emotional",
+  "intellectual": "Intellectual",
+  "test": {
+    "progress": "progress",
+    "next": "next",
+    "previous": "before",
+    "submit": "Submit",
+    "loading": "Loading",
+    "selectOption": "Choose",
+    "subtitle": "Find out my biorhythm",
+    "insightBullets": [
+      "How is your body rhythm today?",
+      "Check your emotional state",
+      "Find the optimal activity time"
+    ]
+  },
+  "meta": {
+    "title": "biorhythm test",
+    "description": "Analyze your body, emotions, and intellectual rhythm and find the optimal condition.",
+    "keywords": "Biological rhythm, biological rhythm, condition, physical rhythm, emotional rhythm"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Accurate Rhythm Analysis",
+        "description": "Accurate analysis based on scientific biorhythm theory",
+        "question": "Is your biorhythm accurate?",
+        "answer": "It boasts high accuracy based on biorhythm theory that has been proven for decades."
+      },
+      {
+        "icon": "🚀",
+        "title": "Know the optimal time",
+        "description": "We will tell you the optimal timing when planning important events.",
+        "question": "How do I use it?",
+        "answer": "You can get better results if you plan important meetings, exercise, study, etc. on days when your rhythm is good."
+      },
+      {
+        "icon": "💡",
+        "title": "Condition management",
+        "description": "You can know and prepare for changes in daily condition in advance.",
+        "question": "Do I need to check it every day?",
+        "answer": "Yes, your biorhythm changes every day, so it’s good to check it regularly."
+      },
+      {
+        "icon": "🎯",
+        "title": "3 types of rhythm analysis",
+        "description": "We analyze your physical, emotional, and intellectual rhythms respectively.",
+        "question": "What rhythm can you recognize?",
+        "answer": "You can check the three rhythms of the physical (23 days), emotional (28 days), and intellectual (33 days) cycles."
+      },
+      {
+        "icon": "🔥",
+        "title": "completely free",
+        "description": "All features are available for free",
+        "question": "Does it cost anything?",
+        "answer": "It is provided completely free of charge, and you can use it right away without registering as a member."
+      },
+      {
+        "icon": "⭐",
+        "title": "Easy to use",
+        "description": "Just enter your date of birth and you can check the results right away.",
+        "question": "How long does it take?",
+        "answer": "You can check the results immediately after entering your date of birth."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "What is biorhythm?",
+        "description": "It is a biological rhythm that represents periodic changes in the body, emotions, and intellect.",
+        "question": "What is biorhythm?",
+        "answer": "It refers to a pattern of changes in the body, emotions, and intellect that repeats in a certain cycle from the day of birth."
+      },
+      {
+        "icon": "🚀",
+        "title": "How to use it",
+        "description": "Place important schedules on days with good rhythm.",
+        "question": "How do I use it?",
+        "answer": "It is better to do important work on high rhythm days and rest on low rhythm days."
+      },
+      {
+        "icon": "💡",
+        "title": "accuracy",
+        "description": "It is based on scientifically proven theory.",
+        "question": "How accurate is it?",
+        "answer": "Although there may be individual differences, it is said to match the rhythm that many people actually experience."
+      },
+      {
+        "icon": "🎯",
+        "title": "Cycle Description",
+        "description": "Each rhythm has its own cycle",
+        "question": "What is the cycle?",
+        "answer": "It repeats in cycles of 23 days for the body, 28 days for emotions, and 33 days for intellect."
+      },
+      {
+        "icon": "🔥",
+        "title": "free service",
+        "description": "All features are provided for free",
+        "question": "Does it cost anything?",
+        "answer": "It's completely free and has no ads."
+      },
+      {
+        "icon": "⭐",
+        "title": "sharing function",
+        "description": "You can compare your biorhythm with your friends",
+        "question": "Can you share?",
+        "answer": "Yes, you can easily share it with a link and compare it with your friends."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Real-time analysis",
+        "description": "Check today’s biorhythm in real time",
+        "question": "When do I check?",
+        "answer": "Checking it every morning helps me plan my day."
+      },
+      {
+        "icon": "🚀",
+        "title": "future prediction",
+        "description": "You can check future rhythm changes in advance.",
+        "question": "Can you see the future?",
+        "answer": "Yes, you can check your biorhythm up to one month in advance."
+      },
+      {
+        "icon": "💡",
+        "title": "graph provided",
+        "description": "Identify rhythm changes at a glance with intuitive graphs",
+        "question": "Is it easy to see?",
+        "answer": "Anyone can easily understand the colorful graphs."
+      },
+      {
+        "icon": "🎯",
+        "title": "personalized advice",
+        "description": "We recommend activities that fit your current rhythm.",
+        "question": "Can I get some advice?",
+        "answer": "Yes, we will inform you of activities and precautions appropriate for each rhythm condition."
+      },
+      {
+        "icon": "🔥",
+        "title": "Compatibility analysis",
+        "description": "Check your biorhythm compatibility with a friend or lover.",
+        "question": "Can you also see compatibility?",
+        "answer": "If you enter the date of birth of two people, we will analyze your biorhythm compatibility."
+      },
+      {
+        "icon": "⭐",
+        "title": "Notification function",
+        "description": "We will notify you in advance of changes in the rhythm of important days.",
+        "question": "Can I get notifications?",
+        "answer": "You can set a biorhythm notification for the desired date."
+      }
+    ]
+  },
+  "result": {
+    "title": "Biorhythm analysis results",
+    "description": "Check my current biorhythm status"
+  },
+  "hero": {
+    "title": "biorhythm test",
+    "description": "Analyze my body, emotions, and intellectual rhythm",
+    "subtitle": "Check your condition today and plan the optimal day.",
+    "badge": "Biorhythm analysis"
+  },
+  "advice": {
+    "physical": {
+      "high": "Physical vitality is at its peak. With the energy of the stars supporting your activities, this is the perfect time to tackle that energy-intensive task or exercise you've been putting off.",
+      "medium": "Energy maintains a stable and harmonious flow. It is a peaceful time to maintain a regular routine and engage in moderate activity and movement.",
+      "low": "The universe invites you to pause, take care of yourself, and recharge. Today, listen to your body and relax. Excessive activity can cause you to tire more easily than usual.",
+      "critical": "You are at a turning point where your energy may be very powerful but somewhat unstable. It's a good idea to be careful with every move, be aware of your limits, and act consciously."
+    },
+    "emotional": {
+      "high": "It is a day when the doors of the heart are wide open and emotional light emanates strongly. It is a wonderful time for interaction with loved ones, creative expression, and fun gatherings.",
+      "medium": "Emotional waves remain calm and clear. It is a very appropriate state for having balanced relationships and communication with people around you with a peaceful mind.",
+      "low": "Today is a day when your mind can become somewhat delicate and sensitive. Find and stay in a comfortable environment that warms your emotions and gives you peace and comfort.",
+      "critical": "Emotional energy can swirl and be very intense. Be careful not to lose your balance, and even if sudden emotional changes come, face them calmly with deep breathing."
+    },
+    "intellectual": {
+      "high": "This is a moment when your mental clarity shines more than ever. It's the perfect time to solve complex problems, make important strategic decisions, or delve deeper into new areas of interest.",
+      "medium": "It is a time when thoughts become clear and organized. It's a good energy to handle tasks that require logical tasks or clear communication and to steadily move toward your goals.",
+      "low": "Your intellectual focus may feel like it's in a soft fog. Instead of trying to overanalyze, put your thoughts aside for a moment. Sometimes the best insights come in silence.",
+      "critical": "Intellectual energy is high but somewhat scattered. Rather than jumping to conclusions, it is a wise choice to focus on one thought at a time and make careful and careful decisions."
+    }
+  },
+  "description": "Analyze your body, emotions, and intellectual rhythm and find the optimal condition.",
+  "keywords": "Biological rhythm, biological rhythm, condition, physical rhythm, emotional rhythm",
+  "synthesis": {
+    "wood_metal": "Wood/Metal Resonance: Focus on resilience.",
+    "fire_water": "Fire/Water Resonance: Focus on your sense of balance.",
+    "earth": "Earth Resonance: Focus on stability."
+  }
+}

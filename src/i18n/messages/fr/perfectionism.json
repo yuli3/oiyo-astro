@@ -1,0 +1,14 @@
+{
+  "classifications": {
+    "Master Artisan": "Maître Artisan",
+    "Grinder": "Le Bourreau de travail",
+    "Tortured Critic": "Le Critique Tourmenté",
+    "Free Spirit": "Esprit Libre"
+  },
+  "title": "Type de Perfectionnisme",
+  "badge": "Perfectionnisme",
+  "adaptive": "Adaptatif",
+  "maladaptive": "Maladaptatif",
+  "restart": "Recommencer",
+  "save": "Enregistrer le résultat"
+}

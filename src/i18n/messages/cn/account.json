@@ -1,0 +1,765 @@
+{
+  "dashboard": {
+    "meta": {
+      "keywords": "月度趋势, 集成报告, 摘要, PDF 指南",
+      "hero": {
+        "guestTitle": "欢迎来到个人分析官",
+        "subtitle": "记录您在宇宙旅程中的个人传记。"
+      },
+      "title": "深层洞察",
+      "description": "提供超越表面分析的灵魂指南。"
+    },
+    "hero": {
+      "subtitle": "记录您在宇宙旅程中的个人传记。",
+      "guestTitle": "欢迎来到个人分析官"
+    },
+    "recentTests": {
+      "retake": "重测",
+      "share": "分享报告地址",
+      "title": "深层洞察",
+      "viewAll": "查看全部",
+      "noTests": "尚未记录旅程",
+      "startTesting": "开始新的探索"
+    },
+    "emotionSummary": {
+      "currentStreak": "{days} 连续反思天数",
+      "avgTemp": "平均情绪温度: {temp}°C",
+      "title": "深层洞察",
+      "notLogged": "未记录",
+      "logNow": "立即记录"
+    },
+    "stats": {
+      "thisWeek": "本周",
+      "thisMonth": "本月",
+      "allTime": "全时旅程"
+    },
+    "scope": {
+      "weekly": "周报",
+      "monthly": "月",
+      "yearly": "年报",
+      "daily": "日报"
+    },
+    "card": {
+      "advice": "每日建议",
+      "luckyNumbers": "幸运调律数",
+      "luckyColors": "灵感色彩",
+      "warnings": "内在告诫"
+    },
+    "title": "深层洞察",
+    "description": "提供超越表面分析的灵魂指南。",
+    "keywords": "月度趋势, 集成报告, 摘要, PDF 指南",
+    "achievements": {
+      "emptyTitle": "尚未建立里程碑。",
+      "emptyDescription": "开始探索以记录您的专属历史。",
+      "emptyCta": "迈出第一步",
+      "title": "深层洞察",
+      "labels": {
+        "level": "等级",
+        "points": "碎片",
+        "achievements": "成就列表"
+      },
+      "recentTitle": "最近到达之地",
+      "viewAll": "查看全部",
+      "stats": {
+        "unlocked": "已解明",
+        "completionRate": "完成率",
+        "remaining": "进行中"
+      },
+      "badgeCollection": "印章收藏",
+      "nextTitle": "下个目标地",
+      "notificationsTitle": "最新动态",
+      "notificationsEmpty": "宁静时刻",
+      "dismissAll": "全部清理",
+      "dismiss": "关闭",
+      "result": {
+        "title": "深层洞察",
+        "description": "提供超越表面分析的灵魂指南。"
+      },
+      "meta": {
+        "title": "深层洞察",
+        "description": "提供超越表面分析的灵魂指南。",
+        "keywords": "月度趋势, 集成报告, 摘要, PDF 指南"
+      },
+      "test": {
+        "progress": "航海进度",
+        "next": "下一步",
+        "previous": "上一步",
+        "submit": "映射完成",
+        "loading": "正在探索无意识层级...",
+        "selectOption": "请选择更共鸣的真相",
+        "insightBullets": ["洞察力"]
+      }
+    },
+    "testHistory": {
+      "title": "深层洞察",
+      "noTests": "尚未记录旅程",
+      "noTestsDescription": "您的故事尚未落笔。",
+      "takeFirstTest": "开启第一扇门",
+      "viewResult": "查看记录",
+      "viewAll": "查看全部"
+    },
+    "T": "个人分析官",
+    "overview": {
+      "testsCompleted": "完成的测试",
+      "totalPoints": "累积碎片",
+      "currentStreak": "连续省察天数",
+      "achievementsUnlocked": "已达成的里程碑"
+    },
+    "quickActions": {
+      "title": "深层洞察",
+      "takeTest": "面对真实的自我",
+      "viewAchievements": "查看成就历史",
+      "checkEmotion": "检查当前波动",
+      "findTwin": "寻找灵魂伴侣",
+      "downloadPDF": "保存分析报告"
+    },
+    "ontology": {
+      "twinFinder": {
+        "title": "深层洞察",
+        "noMatches": "尚未发现命定之人。",
+        "findNow": "立即探索"
+      }
+    },
+    "common": {
+      "recommendations": {
+        "title": "深层洞察",
+        "error": "流动暂时中断。",
+        "empty": "无记录",
+        "exploreAll": "探索所有道路",
+        "spotlightEyebrow": "特别建议",
+        "loading": "正在探索无意识层级...",
+        "trending": "当前的趋势流动",
+        "new": "新的发现",
+        "takeTest": "面对真实的自我"
+      },
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "映射完成",
+      "start": "开始旅程",
+      "loading": "正在探索无意识层级...",
+      "results": "最终诊断",
+      "dashboard": "我的分析官",
+      "insights": "核心洞察"
+    },
+    "profile": {
+      "title": "深层洞察",
+      "anonymous": "无名求道者",
+      "achievements": "成就列表",
+      "badges": {
+        "newMember": "第一步",
+        "explorer": "内在开拓者"
+      },
+      "editProfile": "修正身份",
+      "description": "提供超越表面分析的灵魂指南。"
+    },
+    "biorhythm": {
+      "title": "深层洞察",
+      "physical": "身体律动",
+      "emotional": "情感调律",
+      "intellectual": "智性洞察"
+    },
+    "fortune": {
+      "numerology": {
+        "title": "深层洞察",
+        "lifePath": "生命路径",
+        "personalYear": "今年流向"
+      }
+    },
+    "saju": {
+      "title": "深层洞察",
+      "dominant": "主导能量",
+      "lacking": "需要补充的匮乏"
+    },
+    "test": {
+      "progress": "航海进度",
+      "submit": "映射完成",
+      "loading": "正在探索无意识层级...",
+      "selectOption": "请选择更共鸣的真相",
+      "insightBullets": ["绘制最真实自我的星座图。"],
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "深层洞察",
+      "description": "提供超越表面分析的灵魂指南。"
+    }
+  },
+  "achievements": {
+    "labels": {
+      "level": "等级",
+      "points": "碎片"
+    },
+    "viewAll": "查看全部",
+    "page": {
+      "subtitle": "记录您在宇宙旅程中的个人传记。",
+      "title": "深层洞察"
+    },
+    "loading": {
+      "message": "⏳✨ 正在收集您的专属徽章与经验足迹...",
+      "tip": "🥇 在整理过程中，请继续探索其他性格旅程！"
+    },
+    "filters": {
+      "all": "全部",
+      "unlocked": "已解明",
+      "locked": "掩藏的神秘",
+      "testCompletion": "探索的完成",
+      "social": "社交交感",
+      "streak": "持续精进",
+      "throttling": "调律中"
+    },
+    "stats": {
+      "level": "等级",
+      "points": "碎片",
+      "currentLevel": "当前等级",
+      "totalPoints": "累积碎片",
+      "achievementProgress": "成就进度",
+      "badgeCollection": "印章收藏",
+      "unlockedAchievements": "达成的成就",
+      "completionRate": "完成率",
+      "remainingAchievements": "剩余的神通",
+      "testsCompleted": "完成的测试",
+      "totalScore": "综合评分",
+      "unlocked": "已解明",
+      "remaining": "进行中",
+      "title": "深层洞察",
+      "achievements": "成就列表",
+      "maxLevelMessage": "已达到巅峰等级。",
+      "levelPrefix": "Grade",
+      "levelTitle": "总结",
+      "totalPointsTitle": "累积能量",
+      "totalPointsSubtitle": "至今为止的所有积分",
+      "progressTitle": "挺进的步伐",
+      "badgeTitle": "荣誉印章",
+      "badgeSubtitle": "赋予的权限",
+      "badgesUnlocked": "获得的印章",
+      "overallProgress": "整体完成度",
+      "emptyCategory": "该类别下尚未记录任何印迹。"
+    },
+    "cards": {
+      "locked": {
+        "cta": "保存为 PDF"
+      },
+      "progress": {
+        "label": "已达成 {progress}%"
+      }
+    },
+    "notifications": {
+      "empty": "无记录",
+      "viewAll": "查看全部",
+      "unlocked": "已解明",
+      "earnedPoints": "获得 {points} 灵感碎片！",
+      "levelUp": "共鸣加速！已达到等级 {level}。",
+      "newBadge": "获得新的荣耀印章！"
+    },
+    "recent": {
+      "empty": "无记录",
+      "title": "深层洞察"
+    },
+    "cta": {
+      "subtitle": "记录您在宇宙旅程中的个人传记。",
+      "button": "开始探索 →",
+      "title": "深层洞察",
+      "description": "提供超越表面分析的灵魂指南。"
+    },
+    "firstTest": {
+      "cta": "保存为 PDF",
+      "name": "越境者",
+      "title": "初始之印",
+      "description": "你已成功完成第一次内心反思。"
+    },
+    "socialSharer": {
+      "cta": "保存为 PDF",
+      "title": "分享大师",
+      "description": "你与他人分享洞察，建立了联系。"
+    },
+    "categories": {
+      "testCompletion": "探索的完成",
+      "social": "社交交感",
+      "streak": "持续精进",
+      "exploration": "无尽探求",
+      "sharing": "智慧共享"
+    },
+    "rarity": {
+      "bronze": "{count}个青铜",
+      "silver": "{count}个白银",
+      "gold": "{count}个黄金",
+      "platinum": "{count}个白金",
+      "legendary": "惊世神话"
+    },
+    "bloodTypeExplorer": {
+      "cta": "保存为 PDF",
+      "title": "血型探索家",
+      "description": "你已探索血型的奥秘及其意义。"
+    },
+    "sajuExplorer": {
+      "cta": "保存为 PDF",
+      "title": "四柱推命大师",
+      "description": "你已深刻理解形而上学的命运解读。"
+    },
+    "tarotExplorer": {
+      "cta": "保存为 PDF",
+      "title": "塔罗占卜师",
+      "description": "你已探索塔罗牌的奥秘。"
+    },
+    "namingExplorer": {
+      "cta": "保存为 PDF",
+      "title": "起名大师",
+      "description": "你已探索姓名的力量。"
+    },
+    "viralSharer": {
+      "cta": "保存为 PDF",
+      "title": "传播大使",
+      "description": "你的分享引起了广泛共鸣。"
+    },
+    "streakMaster": {
+      "cta": "保存为 PDF",
+      "title": "连续反思者",
+      "description": "你已保持长时间的连续记录。"
+    },
+    "insightSeeker": {
+      "cta": "保存为 PDF",
+      "title": "真理追求者",
+      "description": "你不断追求深层的自我洞察。"
+    },
+    "communityPillar": {
+      "cta": "保存为 PDF",
+      "title": "精神领袖",
+      "description": "你在社区中分享智慧，启发他人。"
+    },
+    "summary": {
+      "myAchievements": "我的全部成就",
+      "viewAll": "查看全部"
+    },
+    "weeklyStreak": {
+      "cta": "保存为 PDF",
+      "title": "周度反思者",
+      "description": "你已保持每周至少一次的反思。 "
+    },
+    "meta": {
+      "keywords": "月度趋势, 集成报告, 摘要, PDF 指南",
+      "title": "深层洞察",
+      "description": "提供超越表面分析的灵魂指南。"
+    },
+    "hero": {
+      "subtitle": "记录您在宇宙旅程中的个人传记。"
+    },
+    "badges": {
+      "bronze": "{count}个青铜",
+      "silver": "{count}个白银",
+      "gold": "{count}个黄金",
+      "platinum": "{count}个白金"
+    },
+    "next": {
+      "empty": "无记录"
+    },
+    "empty": {
+      "subtitle": "记录您在宇宙旅程中的个人传记。"
+    },
+    "actions": {
+      "share": "分享报告地址",
+      "retake": "重测",
+      "viewDetails": "查看详情"
+    },
+    "fiveTests": {
+      "name": "越境者"
+    },
+    "tenTests": {
+      "name": "越境者"
+    },
+    "explorer": {
+      "name": "越境者"
+    },
+    "unlocked": "已解明",
+    "demo": {
+      "simulate": "仿真运作",
+      "title": "深层洞察",
+      "reset": "重置状态"
+    },
+    "emptyTitle": "尚未建立里程碑。",
+    "emptyDescription": "开始探索以记录您的专属历史。",
+    "emptyCta": "迈出第一步",
+    "badgeCollection": "印章收藏",
+    "recentTitle": "最近到达之地",
+    "nextTitle": "下个目标地",
+    "levelTitle": "Grade {level}",
+    "pointsEarned": "获得 {points} 碎片",
+    "achievements": {
+      "firstTest": {
+        "name": "越境者",
+        "description": "提供超越表面分析的灵魂指南。"
+      },
+      "fiveTests": {
+        "name": "越境者",
+        "description": "提供超越表面分析的灵魂指南。"
+      },
+      "tenTests": {
+        "name": "越境者",
+        "description": "提供超越表面分析的灵魂指南。"
+      },
+      "explorer": {
+        "name": "越境者",
+        "description": "提供超越表面分析的灵魂指南。"
+      },
+      "title": "深层洞察",
+      "unlocked": "已解明",
+      "socialSharer": {
+        "name": "分享大师",
+        "description": "你与他人分享洞察，建立了联系。"
+      },
+      "bloodTypeExplorer": {
+        "name": "血型探索家",
+        "description": "你已探索血型的奥秘及其意义。"
+      },
+      "sajuExplorer": {
+        "name": "四柱推命大师",
+        "description": "你已深刻理解形而上学的命运解读。"
+      },
+      "categoryExplorer": {
+        "name": "分类探索家",
+        "description": "你已探索各种分类，扩展了知识面。"
+      },
+      "testVeteran": {
+        "name": "测试老兵",
+        "description": "你已完成众多测试，加深了自我理解。"
+      },
+      "completionist": {
+        "name": "完美主义者",
+        "description": "你已完成所有可用测试。"
+      },
+      "shareMaster": {
+        "name": "分享大师",
+        "description": "你多次分享结果，为社区做出了贡献。"
+      },
+      "dailyVisitor": {
+        "name": "每日访问者",
+        "description": "你已保持每日反思的习惯。"
+      },
+      "rareCombination": {
+        "name": "稀有组合",
+        "description": "你发现了稀有的性格组合。"
+      },
+      "perfectMatch": {
+        "name": "完美匹配",
+        "description": "你找到了完全匹配自己的结果。"
+      }
+    },
+    "emptyState": {
+      "title": "深层洞察",
+      "description": "提供超越表面分析的灵魂指南。"
+    },
+    "dashboard": {
+      "emptyState": "无记录",
+      "title": "深层洞察",
+      "subtitle": "记录您在宇宙旅程中的个人传记。",
+      "summary": {
+        "unlocked": "已解明",
+        "level": "等级",
+        "points": "碎片",
+        "completion": "达成"
+      },
+      "levelCard": {
+        "subtitle": "记录您在宇宙旅程中的个人传记。",
+        "maxLevel": "巅峰状态"
+      },
+      "recent": {
+        "title": "深层洞察",
+        "empty": "无记录"
+      },
+      "categories": {
+        "title": "深层洞察",
+        "progressLabel": "熟练度"
+      },
+      "tier": {
+        "title": "深层洞察"
+      }
+    },
+    "test": {
+      "progress": "航海进度",
+      "submit": "映射完成",
+      "loading": "正在探索无意识层级...",
+      "selectOption": "请选择更共鸣的真相",
+      "insightBullets": ["揭开你个人哲学的隐藏层。"],
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "深层洞察",
+      "description": "提供超越表面分析的灵魂指南。"
+    },
+    "categoryExplorer": {
+      "cta": "分类探索",
+      "title": "分类探索家",
+      "description": "你已探索各种分类，扩展了知识面。"
+    },
+    "testVeteran": {
+      "title": "测试老兵",
+      "description": "你已完成众多测试，加深了自我理解。"
+    },
+    "completionist": {
+      "title": "完美主义者",
+      "description": "你已完成所有可用测试。"
+    },
+    "shareMaster": {
+      "title": "分享专家",
+      "description": "你多次分享结果，为社区做出了贡献。"
+    },
+    "dailyVisitor": {
+      "title": "每日访客",
+      "description": "你已保持每日反思的习惯。"
+    },
+    "rareCombination": {
+      "title": "稀有组合",
+      "description": "你发现了稀有的性格组合。"
+    },
+    "perfectMatch": {
+      "title": "完美匹配",
+      "description": "你找到了完全匹配自己的结果。"
+    }
+  },
+  "premium": {
+    "title": "深层洞察",
+    "description": "提供超越表面分析的灵魂指南。"
+  },
+  "auth": {
+    "signIn": {
+      "subtitle": "记录您在宇宙旅程中的个人传记。",
+      "title": "深层洞察",
+      "newUser": "是新灵魂吗？",
+      "signUp": "开始您的旅程",
+      "description": "找到你建造的智慧之塔。"
+    },
+    "signUp": {
+      "subtitle": "记录您在宇宙旅程中的个人传记。",
+      "title": "深度洞察",
+      "existingUser": "已经是探险家了？",
+      "signIn": "回到您的路径"
+    },
+    "profile": {
+      "editProfile": "修正身份",
+      "accountSettings": "空间设定",
+      "testHistory": "探索记录",
+      "preferences": "偏好灵感",
+      "welcome": "求道者 {name}，欢迎您。"
+    },
+    "auth": {
+      "signUp": {
+        "title": "深层洞察",
+        "description": "提供超越表面分析的灵魂指南。",
+        "subtitle": "记录您在宇宙旅程中的个人传记。"
+      },
+      "signIn": {
+        "title": "深层洞察",
+        "description": "提供超越表面分析的灵魂指南。",
+        "subtitle": "记录您在宇宙旅程中的个人传记。"
+      }
+    }
+  },
+  "onboarding": {
+    "title": "深层洞察",
+    "description": "提供超越表面分析的灵魂指南。",
+    "steps": ["创建个人资料", "参加第一次测试", "探索结果"]
+  },
+  "analytics": {
+    "meta": {
+      "title": "深层洞察",
+      "description": "提供超越表面分析的灵魂指南。",
+      "keywords": "月度趋势, 集成报告, 摘要, PDF 指南"
+    },
+    "advanced": {
+      "loading": "正在探索无意识层级...",
+      "analyzingData": "萃取意义中",
+      "subtitle": "记录您在宇宙旅程中的个人传记。",
+      "refresh": "以新波动刷新",
+      "totalInsights": "总发现智能",
+      "highPriority": "核心暗示",
+      "patterns": {
+        "frequency": "出现频率",
+        "strength": "能量强度",
+        "triggers": "触发因素",
+        "outcomes": "呈现结果",
+        "_text": "文本分析"
+      },
+      "avgConfidence": "平均精度",
+      "tabs": {
+        "evolution": "进化过程",
+        "patterns": "循环模式",
+        "predictions": "预期的展开",
+        "insights": "核心洞察"
+      },
+      "filterBy": "观点过滤器",
+      "confidence": "精准度",
+      "noInsights": "暂无洞察",
+      "evolution": {
+        "timeline": "时间轨迹",
+        "stability": "维持稳定",
+        "growth": "推进成长",
+        "volatility": "波动范围",
+        "trend": "趋势走向",
+        "prediction": "可能性投影"
+      },
+      "models": {
+        "accuracy": "推论精度",
+        "features": "核心属性",
+        "predictions": "预期的展开",
+        "lastTrained": "最后更新"
+      },
+      "title": "深层洞察",
+      "recommendations": "前行方向建议"
+    },
+    "test": {
+      "progress": "航海进度",
+      "submit": "映射完成",
+      "loading": "正在探索无意识层级...",
+      "selectOption": "请选择更共鸣的真相",
+      "insightBullets": ["探索你内心景观的深层架构。"],
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "深层洞察",
+      "description": "提供超越表面分析的灵魂指南。"
+    }
+  },
+  "subscriptionManager": {
+    "subtitle": "记录您在宇宙旅程中的个人传记。",
+    "addSubscription": {
+      "title": "深层洞察",
+      "nameLabel": "目标名称",
+      "namePlaceholder": "服务名称",
+      "priceLabel": "能量成本(价格)",
+      "pricePlaceholder": "输入成本",
+      "usageLabel": "交感频率",
+      "usageUnit": "单位",
+      "satisfactionLabel": "内在满意度",
+      "submit": "映射完成"
+    },
+    "summary": {
+      "monthlyTotal": "月消耗能量",
+      "yearlyTotal": "年消耗能量",
+      "potentialSavings": "可释放能量"
+    },
+    "list": {
+      "monthly": "月",
+      "used": "消耗量",
+      "timesPerMonth": "次/月",
+      "satisfaction": "您对该纽带满意吗？",
+      "valueScore": "价值评分",
+      "keep": "建议维持",
+      "keepAction": "具意义的连接",
+      "review": "需重新审视",
+      "reviewAction": "投入更多或考虑断绝",
+      "cancel": "建议断绝",
+      "cancelAction": "价值回报偏低的连接"
+    },
+    "tips": {
+      "tip1": "立即断绝无意义的纽带。",
+      "tip2": "确认长期计划是否比短期更有利。",
+      "tip3": "寻找可与他人同行的路径。",
+      "title": "深层洞察"
+    },
+    "serviceName": "连接名称",
+    "monthlyFee": "月费用",
+    "totalMonthly": "月合计",
+    "title": "深层洞察",
+    "empty": {
+      "title": "深层洞察",
+      "description": "提供超越表面分析的灵魂指南。"
+    }
+  },
+  "notifications": {
+    "aiHoroscope": {
+      "body": "为您 (类型 {personality}) 准备的星系预报已就绪！",
+      "bodyNoPersonality": "为您准备的星系预报已就绪！",
+      "actions": {
+        "view": "查看预报",
+        "later": "稍后"
+      }
+    },
+    "testReminder": {
+      "body": "完成您正在进行的内在探索以查看结果。",
+      "actions": {
+        "continue": "现在前往",
+        "dismiss": "关闭"
+      }
+    },
+    "streak": {
+      "body": "太棒了！您已经连续 {count} 天进行自我反思。",
+      "actions": {
+        "celebrate": "庆祝",
+        "share": "闪耀"
+      }
+    },
+    "social": {
+      "twinMatch": {
+        "body": "我们发现了一个在精神上与您相似的灵魂。"
+      },
+      "newFriend": {
+        "body": "有人对您的洞察记录表现出极大兴趣。"
+      },
+      "testShared": {
+        "body": "一位朋友查看了您的记录。"
+      }
+    },
+    "actions": {
+      "view": "查看",
+      "later": "稍后"
+    }
+  },
+  "progress": {
+    "meta": {
+      "title": "深层洞察",
+      "description": "提供超越表面分析的灵魂指南。",
+      "keywords": "月度趋势, 集成报告, 摘要, PDF 指南"
+    },
+    "hero": {
+      "subtitle": "记录您在宇宙旅程中的个人传记。",
+      "title": "深层洞察"
+    },
+    "title": "深层洞察",
+    "description": "提供超越表面分析的灵魂指南。",
+    "keywords": "月度趋势, 集成报告, 摘要, PDF 指南",
+    "marketing": {
+      "about": {
+        "title": "深层洞察",
+        "tracking": {
+          "title": "深层洞察",
+          "description": "提供超越表面分析的灵魂指南。",
+          "feature1": "探索内在风景的深层结构。",
+          "feature2": "挖掘个人哲学中隐藏的层层含义。",
+          "feature3": "探索内在风景的深层结构。"
+        },
+        "insights": {
+          "title": "深层洞察",
+          "description": "提供超越表面分析的灵魂指南。",
+          "feature1": "探索内在风景的深层结构。",
+          "feature2": "挖掘个人哲学中隐藏的层层含义。",
+          "feature3": "探索内在风景的深层结构。"
+        }
+      }
+    }
+  },
+  "reports": {
+    "monthly": {
+      "meta": {
+        "keywords": "月度趋势, 集成报告, 摘要, PDF 指南"
+      },
+      "hero": {
+        "eyebrow": "洞察摘要",
+        "subtitle": "记录您在宇宙旅程中的个人传记。",
+        "cta": "保存为 PDF"
+      },
+      "download": {
+        "cta": "保存为 PDF",
+        "share": "分享报告地址"
+      },
+      "sections": {
+        "career": "应志向的成长动力",
+        "relationships": "关系中的态度与纽带",
+        "wellness": "能量水平与内心宁静"
+      }
+    }
+  },
+  "hero": {
+    "subtitle": "记录您在宇宙旅程中的个人传记。"
+  }
+}

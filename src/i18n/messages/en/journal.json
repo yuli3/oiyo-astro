@@ -1,0 +1,33 @@
+{
+  "title": "Dream Journal Guide",
+  "subtitle": "Learn how to effectively record and analyze your dreams",
+  "gettingStarted": "Getting Started",
+  "steps": [
+    "Keep your journal by your bed",
+    "Write immediately upon waking",
+    "Include emotions and colors"
+  ],
+  "whatToRecord": {
+    "title": "What to Record",
+    "basic": {
+      "title": "Basics",
+      "items": ["Date and time", "Location", "People involved"]
+    },
+    "content": {
+      "title": "Content",
+      "items": ["Plot and events", "Emotions felt", "Colors and symbols"]
+    }
+  },
+  "interpretationTips": "Interpretation Tips",
+  "interpretationTipsItems": [
+    "Look for personal associations",
+    "Consider your current life context",
+    "Pay attention to recurring themes"
+  ],
+  "improveRecall": "Improve Dream Recall",
+  "improveRecallItems": [
+    "Set an intention before sleep",
+    "Wake up slowly",
+    "Record fragments immediately"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "sanctuary": {
+    "mental": {
+      "anxietyRelief": {
+        "title": "不安の軽減",
+        "description": "ガイド付きの呼吸エクササイズを通じて、平和と静けさを見つけてください。",
+        "breathingIn": "息を吸う",
+        "breathingOut": "息を吐き出す",
+        "hold": "所有",
+        "start": "始める",
+        "pause": "一時停止",
+        "reset": "リセット"
+      }
+    }
+  }
+}

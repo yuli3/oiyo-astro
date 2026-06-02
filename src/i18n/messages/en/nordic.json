@@ -1,0 +1,131 @@
+{
+  "runes": {
+    "fehu": {
+      "name": "Fehu",
+      "meaning": "Wealth",
+      "keyword": "Abundance"
+    },
+    "uruz": {
+      "name": "Uruz",
+      "meaning": "Strength",
+      "keyword": "Vitality"
+    },
+    "thurisaz": {
+      "name": "Thurisaz",
+      "meaning": "Gateway",
+      "keyword": "Defense"
+    },
+    "ansuz": {
+      "name": "Ansuz",
+      "meaning": "Signals",
+      "keyword": "Communication"
+    },
+    "raido": {
+      "name": "Raido",
+      "meaning": "Journey",
+      "keyword": "Travel"
+    },
+    "kenaz": {
+      "name": "Kenaz",
+      "meaning": "Opening",
+      "keyword": "Knowledge"
+    },
+    "gebo": {
+      "name": "Gebo",
+      "meaning": "Gift",
+      "keyword": "Partnership"
+    },
+    "wunjo": {
+      "name": "Wunjo",
+      "meaning": "Joy",
+      "keyword": "Harmony"
+    },
+    "hagalaz": {
+      "name": "Hagalaz",
+      "meaning": "Disruption",
+      "keyword": "Change"
+    },
+    "nauthiz": {
+      "name": "Nauthiz",
+      "meaning": "Constraint",
+      "keyword": "Necessity"
+    },
+    "isa": {
+      "name": "Isa",
+      "meaning": "Standstill",
+      "keyword": "Ice"
+    },
+    "jera": {
+      "name": "Jera",
+      "meaning": "Harvest",
+      "keyword": "Cycles"
+    },
+    "eihwaz": {
+      "name": "Eihwaz",
+      "meaning": "Defense",
+      "keyword": "Endurance"
+    },
+    "perthro": {
+      "name": "Perthro",
+      "meaning": "Mystery",
+      "keyword": "Fate"
+    },
+    "algiz": {
+      "name": "Algiz",
+      "meaning": "Protection",
+      "keyword": "Shield"
+    },
+    "sowilo": {
+      "name": "Sowilo",
+      "meaning": "Wholeness",
+      "keyword": "Sun"
+    },
+    "tiwaz": {
+      "name": "Tiwaz",
+      "meaning": "Warrior",
+      "keyword": "Justice"
+    },
+    "berkana": {
+      "name": "Berkana",
+      "meaning": "Growth",
+      "keyword": "Birch"
+    },
+    "ehwaz": {
+      "name": "Ehwaz",
+      "meaning": "Movement",
+      "keyword": "Horse"
+    },
+    "mannaz": {
+      "name": "Mannaz",
+      "meaning": "The Self",
+      "keyword": "Humanity"
+    },
+    "laguz": {
+      "name": "Laguz",
+      "meaning": "Flow",
+      "keyword": "Water"
+    },
+    "inguz": {
+      "name": "Inguz",
+      "meaning": "Fertility",
+      "keyword": "New Beginnings"
+    },
+    "dagaz": {
+      "name": "Dagaz",
+      "meaning": "Breakthrough",
+      "keyword": "Day"
+    },
+    "othala": {
+      "name": "Othala",
+      "meaning": "Heritage",
+      "keyword": "Ancestry"
+    }
+  },
+  "title": "Nordic Runes",
+  "description": "Ancient Viking wisdom from the Elder Futhark.",
+  "systemName": "Nordic Runes",
+  "narrative": "Whispers of Yggdrasil",
+  "rune": "Rune",
+  "reading": "Rune Reading",
+  "ariaLabel": "Rune: {name}, meaning {meaning}."
+}

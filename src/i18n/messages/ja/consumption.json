@@ -1,0 +1,21 @@
+{
+  "intro": {
+    "badge": "心理会計",
+    "title": "消費スタイル",
+    "quote": "How you spend money reflects how you treat the world and love your life.",
+    "startButton": "Start Diagnostic"
+  },
+  "questions": {
+    "signal": "Question"
+  },
+  "results": {
+    "pattern": "Spending DNA",
+    "impact": "Wealth Flow",
+    "guidance": "Financial Wisdom",
+    "recalibrate": "Retake Test"
+  },
+  "meta": {
+    "title": "消費スタイル",
+    "description": "消費スタイルテストと分析"
+  }
+}

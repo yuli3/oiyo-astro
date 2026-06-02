@@ -1,0 +1,36 @@
+{
+  "moodCalendar": {
+    "grid": {
+      "title": "calendario de humor",
+      "noEntries": "Aún no hay registros",
+      "addMood": "agregar emoción",
+      "daySun": "Día",
+      "dayMon": "mes",
+      "dayTue": "furia",
+      "dayWed": "número",
+      "dayThu": "cuello",
+      "dayFri": "oro",
+      "daySat": "sábado",
+      "moodQuestion": "¿Cómo te sentiste?",
+      "close": "cerca",
+      "saveFailed": "Guardar fallida",
+      "saved": "salvado",
+      "saveAsImage": "guardar como imagen"
+    }
+  },
+  "moodAnalyzer": {
+    "moods": {
+      "happy": "felicidad",
+      "sad": "pena",
+      "anxious": "disturbios",
+      "angry": "bronca",
+      "calm": "tranquilidad",
+      "excited": "Emocionada",
+      "sunny": "lucidez",
+      "cloudy": "difuminar",
+      "rainy": "lluvia",
+      "storm": "tormenta",
+      "neutral": "neutralidad"
+    }
+  }
+}

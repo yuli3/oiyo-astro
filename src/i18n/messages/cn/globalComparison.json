@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "cta": {
+      "button": "Take Tests Now"
+    },
+    "keywords": "keywords, tags, seo",
+    "badge": "Global Benchmarking",
+    "title": "我的深度分析",
+    "description": "全面分析与深度洞察"
+  },
+  "filters": {
+    "region": "🌏 选择区域",
+    "age": "👥 年龄段",
+    "gender": "⚧ 性别",
+    "test": "测试标题"
+  },
+  "tabs": {
+    "overview": "📈 概述",
+    "regional": "🗺️区域比较",
+    "demographics": "👥 人口统计",
+    "rankings": "🏆 排名"
+  },
+  "chart": {
+    "scoreDistribution": "📊 分数分布",
+    "personalityRankings": "🏆 性格类型排名",
+    "avgScore": "平均分",
+    "users": "用户",
+    "topRankText": "您在全球用户中排名前 {percent}% 🚀",
+    "allAges": "所有年龄段",
+    "all": "全部",
+    "male": "男性",
+    "female": "女性",
+    "global": "全球的",
+    "asia": "亚洲",
+    "europe": "欧洲",
+    "northAmerica": "北美",
+    "korea": "韩国",
+    "southAmerica": "南美洲",
+    "africa": "非洲",
+    "oceania": "大洋洲"
+  },
+  "demographics": {
+    "comingSoon": "📊 人口统计分析功能即将推出。"
+  },
+  "cta": {
+    "button": "立即参加测试",
+    "title": "我的深度分析",
+    "description": "全面分析与深度洞察"
+  },
+  "features": {
+    "benchmarking": {
+      "title": "我的深度分析",
+      "description": "全面分析与深度洞察"
+    },
+    "regional": {
+      "title": "我的深度分析",
+      "description": "全面分析与深度洞察"
+    }
+  },
+  "insights": {
+    "yourScore": "你的分数",
+    "globalAverage": "全球平均水平",
+    "percentile": "百分位数",
+    "topPerformers": "表现最佳者",
+    "aboveAverage": "高于平均水平",
+    "belowAverage": "低的",
+    "regions": "地区"
+  },
+  "test": {
+    "progress": "进度",
+    "submit": "提交",
+    "loading": "📊 Analyzing...",
+    "selectOption": "选择",
+    "insightBullets": ["揭开你个人哲学的隐藏层。"]
+  },
+  "result": {
+    "title": "我的深度分析",
+    "description": "全面分析与深度洞察"
+  },
+  "badge": "全球标杆管理",
+  "loading": "📊正在分析...",
+  "noData": "📋 没有数据可供分析。 请先完成性格测试。",
+  "title": "我的深度分析",
+  "description": "全面分析与深度洞察",
+  "keywords": "关键词、标签、seo"
+}

@@ -1,0 +1,33 @@
+{
+  "title": "Contenido",
+  "subtitle": "Aprenda a registrar y analizar eficazmente sus sueños.",
+  "gettingStarted": "Empezando",
+  "steps": [
+    "Mantén tu diario junto a tu cama",
+    "Escribe inmediatamente al despertar",
+    "Incluye emociones y colores."
+  ],
+  "whatToRecord": {
+    "title": "Contenido",
+    "basic": {
+      "title": "Contenido",
+      "items": ["Fecha y hora", "Ubicación", "Personas involucradas"]
+    },
+    "content": {
+      "title": "Contenido",
+      "items": ["Trama y eventos", "emociones sentidas", "Colores y símbolos"]
+    }
+  },
+  "interpretationTips": "Consejos de interpretación",
+  "interpretationTipsItems": [
+    "Busque asociaciones personales",
+    "Considere su contexto de vida actual",
+    "Presta atención a los temas recurrentes."
+  ],
+  "improveRecall": "Mejorar el recuerdo de los sueños",
+  "improveRecallItems": [
+    "Establece una intención antes de dormir",
+    "despierta lentamente",
+    "Grabar fragmentos inmediatamente"
+  ]
+}

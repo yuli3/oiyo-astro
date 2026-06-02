@@ -1,0 +1,106 @@
+{
+  "title": "The Cosmic Forecast",
+  "subtitle": "January 2026",
+  "description": "Select your sign to reveal the celestial guidance for this month. The stars have aligned to illuminate your path.",
+  "zodiac": {
+    "aries": {
+      "name": "Aries",
+      "element": "Fire Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "taurus": {
+      "name": "Taurus",
+      "element": "Earth Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "gemini": {
+      "name": "Gemini",
+      "element": "Air Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "cancer": {
+      "name": "Cancer",
+      "element": "Water Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "leo": {
+      "name": "Leo",
+      "element": "Fire Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "virgo": {
+      "name": "Virgo",
+      "element": "Earth Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "libra": {
+      "name": "Libra",
+      "element": "Air Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "scorpio": {
+      "name": "Scorpio",
+      "element": "Water Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "sagittarius": {
+      "name": "Sagittarius",
+      "element": "Fire Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "capricorn": {
+      "name": "Capricorn",
+      "element": "Earth Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "aquarius": {
+      "name": "Aquarius",
+      "element": "Air Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    },
+    "pisces": {
+      "name": "Pisces",
+      "element": "Water Element",
+      "luckyDay": "Lucky Day",
+      "luckyColor": "Lucky Color"
+    }
+  },
+  "meta": {
+    "title": "today's horoscope",
+    "description": "Receive personalized horoscopes and astrological insights for the day.",
+    "keywords": "Horoscope, astrology, horoscope, today's horoscope, zodiac sign"
+  },
+  "hero": {
+    "title": "today's horoscope",
+    "subtitle": "Check out the message the stars are sending me today",
+    "cta": "View my horoscope"
+  },
+  "test": {
+    "insightBullets": [
+      "Daily astrological guidance",
+      "Personalized zodiac insights",
+      "Cosmic energy forecast"
+    ],
+    "progress": "progress",
+    "next": "next",
+    "previous": "before",
+    "submit": "Submit",
+    "loading": "Loading",
+    "selectOption": "Choose"
+  },
+  "result": {
+    "title": "my fortune",
+    "description": "Today's constellation insights and guide"
+  }
+}

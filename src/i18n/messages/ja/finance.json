@@ -1,0 +1,141 @@
+{
+  "tax": {
+    "gift": {
+      "meta": {
+        "title": "豊かさの流れ：贈与税",
+        "description": "あなたの血統への豊かさの移転を計算してください。",
+        "keywords": "贈与税、税金計算機、相続"
+      },
+      "hero": {
+        "subtitle": "聖なる血統の守護",
+        "badge": "ファイナンス"
+      },
+      "rel": {
+        "child_adult": "大人の魂（子供）",
+        "child_minor": "マイナーソウル（子供）",
+        "spouse": "デュアルフレーム（配偶者）",
+        "parent": "祖先の魂（親）",
+        "other_relative": "近親者",
+        "other": "その他の接続",
+        "selectPlaceholder": "関係の選択"
+      },
+      "result": {
+        "title": "アバンダンス分析レポート",
+        "deduction": "神聖な推理",
+        "taxBase": "課税エッセンス",
+        "rate": "振動速度",
+        "selfReport": "自発的な表明",
+        "description": "あなたの経済的共鳴の層を探ってください。"
+      },
+      "tip": {
+        "title": "セージの洞察",
+        "desc": "贈与税控除は10年サイクルごとにリセットされます。 社会的摩擦を最小限に抑えるために、血統の譲渡を賢明に計画してください。"
+      },
+      "test": {
+        "insightBullets": ["富の共鳴", "血統の保護", "時間効率"],
+        "progress": "調整の進行状況",
+        "submit": "インテントの送信",
+        "loading": "天の税法について調べています...",
+        "selectOption": "パスの選択",
+        "next": "フォワード",
+        "previous": "リトレース"
+      },
+      "unit": {
+        "currency": "単位",
+        "tenYear": "10年サイクル",
+        "aggregation": "集計ターゲット"
+      },
+      "resultInfo": {
+        "selfReport": "※自主申告による3％減額を含みます。",
+        "consult": "* 正確な調整については、財務の賢明な専門家に相談してください。"
+      },
+      "title": "経済的な振り返り",
+      "description": "あなたの経済的現実を映し出す洗練された鏡。",
+      "subtitle": "富へのナビゲーターガイド",
+      "disclaimer": "予測のみであり、財務上の法令ではありません。",
+      "relationship": "関係",
+      "giftAmount": "御神賽の額",
+      "pastGiftAmount": "過去の転送額",
+      "calculateBtn": "流量の計算",
+      "placeholder": "金額を入力してください",
+      "labels": {
+        "inputParameters": "座標入力"
+      }
+    },
+    "vat": {
+      "modes": {
+        "total": "集約フロー",
+        "supply": "一次エッセンスの流れ"
+      },
+      "labels": {
+        "totalAmount": "トータルレゾナンス（消費税込み）",
+        "supplyAmount": "正味エッセンス（VATを除く）"
+      },
+      "results": {
+        "supplyPrice": "プライマリーエッセンス",
+        "vat": "フラグメント関税 (VAT)",
+        "total": "フルレゾナンス"
+      },
+      "tip": {
+        "content": "通常、フラグメントのデューティはエッセンスの 10% です。 総流量を 1.1 で割って、主要な本質を求めます。",
+        "title": "VAT の知恵"
+      },
+      "meta": {
+        "subtitle": "建築家の効率化",
+        "disclaimer": "システム免責事項",
+        "title": "VAT シンセサイザー",
+        "description": "ネットエッセンスとフルレゾナンスをシームレスに変換します。",
+        "keywords": "VAT、税金、請求書、ビジネス"
+      },
+      "test": {
+        "insightBullets": ["合成を待っています..."],
+        "progress": "合成の進行状況",
+        "next": "フォワード",
+        "previous": "リトレース",
+        "submit": "ファイナライズ",
+        "loading": "合成中...",
+        "selectOption": "レイヤーを選択"
+      },
+      "result": {
+        "title": "合成レポート",
+        "description": "ビジネスの共鳴レベルを確認します。"
+      },
+      "subtitle": "プライマリフローとフラグメントフローを正確に計算",
+      "currency": "単位",
+      "disclaimer": "This tool provides structural simulations; 実際の財政上の義務は異なる場合があります。",
+      "title": "時間的反射",
+      "description": "付加価値税の情報と税率"
+    }
+  },
+  "salaryCalculator": {
+    "title": "バイタリティコンバーター（給与）",
+    "description": "あなたの物質エネルギーが社会グリッドに変換されることを視覚化します。",
+    "labels": {
+      "inputParameters": "入力座標",
+      "salaryInput": "年間総エネルギー",
+      "salaryPlaceholder": "金額を入力 (例: 5,000,000)",
+      "dependents": "衛星の魂 (扶養家族)",
+      "children": "未来の火花 (子供)",
+      "calculate": "計算を実行",
+      "calculatePrompt": "内訳を表示するための座標を設定してください",
+      "disclaimerText": "この計算は投影であり、実際の調整とは異なる場合があります。"
+    },
+    "result": {
+      "title": "エネルギー分配",
+      "grossPay": "総エネルギー",
+      "netPay": "具現化された活力 (手取り)",
+      "nationalPension": "祖先の基金 (年金)",
+      "healthInsurance": "聖域の維持 (健康保険)",
+      "incomeTax": "主権の寄付 (税金)",
+      "harvestDescription": "基本エネルギーレベル",
+      "pensionRate": "長期的な安全の錨",
+      "healthRate": "活力の保存料",
+      "deductionDesc": "社会的グリッドへの貢献",
+      "rateDesc": "現在の振動率"
+    },
+    "advisor": {
+      "tip": "賢者の助言",
+      "content": "数字のグリッドの中であっても、あなたの共鳴があらゆる断片の価値を決定します。"
+    }
+  }
+}

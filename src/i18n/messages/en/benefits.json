@@ -1,0 +1,22 @@
+{
+  "performance": {
+    "title": "Performance",
+    "description": "Peak performance tracking."
+  },
+  "offline": {
+    "title": "Offline Mode",
+    "description": "Access anywhere."
+  },
+  "notifications": {
+    "title": "Notifications",
+    "description": "Stay updated."
+  },
+  "homeScreen": {
+    "title": "Home Screen",
+    "description": "Quick access."
+  },
+  "fortune": "Fortune",
+  "financial": "Financial",
+  "content": "Content",
+  "expert": "Expert"
+}

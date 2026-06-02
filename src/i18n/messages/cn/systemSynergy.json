@@ -1,0 +1,19 @@
+{
+  "title": "系统协同",
+  "saju": {
+    "title": "四柱推命",
+    "description": "四柱命理分析。"
+  },
+  "chineseZodiac": {
+    "title": "生肖",
+    "description": "十二生肖的影响。"
+  },
+  "tarot": {
+    "title": "塔罗",
+    "description": "塔罗牌的寓意。"
+  },
+  "numerology": {
+    "title": "生命灵数",
+    "description": "数字背后的含义。"
+  }
+}

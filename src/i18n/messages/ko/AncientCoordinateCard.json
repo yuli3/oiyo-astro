@@ -1,0 +1,14 @@
+{
+  "mayan": {
+    "systemName": "마야 달력",
+    "narrative": "마야 이야기",
+    "solarSeal": "솔라 씰",
+    "tone": "은하계 톤"
+  },
+  "celtic": {
+    "systemName": "켈트 나무 달력",
+    "narrative": "켈트 서사",
+    "treeSign": "나무 표시",
+    "ogham": "오검 기호"
+  }
+}

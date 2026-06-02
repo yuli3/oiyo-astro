@@ -1,0 +1,57 @@
+{
+  "steps": {
+    "welcome": {
+      "description": "Discover your cosmic blueprint through ancient wisdom and modern psychology.",
+      "title": "Welcome to Your Sanctuary"
+    },
+    "interests": {
+      "description": "Select what resonates with you — we'll personalize your journey.",
+      "title": "What Calls to You?"
+    },
+    "complete": {
+      "description": "Your sanctuary is ready. Begin your journey of self-discovery.",
+      "title": "Your Sanctuary Awaits"
+    }
+  },
+  "interests": {
+    "personality": "Personality",
+    "career": "Career",
+    "relationships": "Relationships",
+    "wellness": "Wellness",
+    "creativity": "Creativity",
+    "lifestyle": "Lifestyle",
+    "prompt": "Choose your areas of interest"
+  },
+  "welcome": {
+    "user": "Welcome, {name}",
+    "description": "You've joined a community of seekers exploring the architecture of the self."
+  },
+  "features": {
+    "tests": {
+      "title": "Personality Tests",
+      "description": "Over 30 scientifically-grounded assessments."
+    },
+    "history": {
+      "title": "Your History",
+      "description": "All your results saved and organized."
+    },
+    "recommendations": {
+      "title": "Personalized Insights",
+      "description": "Guidance tailored to your unique profile."
+    }
+  },
+  "complete": {
+    "success": "Onboarding Complete",
+    "message": "Your preferences have been saved. Welcome to the Sanctuary.",
+    "benefits": {
+      "dashboard": "Access your personal dashboard",
+      "recommendations": "Receive personalized recommendations"
+    }
+  },
+  "actions": {
+    "skip": "Skip",
+    "completing": "Entering Sanctuary...",
+    "getStarted": "Enter Sanctuary",
+    "next": "Next"
+  }
+}

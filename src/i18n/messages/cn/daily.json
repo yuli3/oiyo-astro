@@ -1,0 +1,40 @@
+{
+  "title": "[缺少：标题]",
+  "desc": "您的每日指南",
+  "status": {
+    "Gil": {
+      "title": "平衡之日",
+      "description": "能量是平衡的，有利于内省和稳步前进，而不是急剧变化。"
+    },
+    "Hyung": {
+      "title": "平衡之日",
+      "description": "能量是平衡的，有利于内省和稳步前进，而不是急剧变化。"
+    },
+    "Neutral": {
+      "title": "平衡之日",
+      "description": "能量是平衡的，有利于内省和稳步前进，而不是急剧变化。"
+    }
+  },
+  "elements": {
+    "Wood": "扩张与创造的能量通过您流动。",
+    "Fire": "激情与魅力的能量熊熊燃烧。",
+    "Earth": "稳定与养育的能量提供坚实的基础。",
+    "Metal": "清晰与果断的能量穿透混乱。",
+    "Water": "智慧与直觉的能量流向深远。"
+  },
+  "T": "[失踪：T]",
+  "subtitle": "[缺失：字幕]",
+  "oracle": {
+    "selectZodiac": "[缺失：oracle.selectZodiac]",
+    "synchronize": "[缺少：oracle.synchronize]",
+    "imperialDecree": "[缺失：oracle.imperialDecree]",
+    "analysisBasis": "[缺少：oracle.analysisBasis]",
+    "message": "[缺失：oracle.message]",
+    "actionRitual": "[缺失：oracle.actionRitual]",
+    "fateVsWill": "[缺失：oracle.fateVsWill]"
+  },
+  "dailyLucky": {
+    "title": "[缺失：dailyLucky.title]"
+  },
+  "action": "[缺失：行动]"
+}

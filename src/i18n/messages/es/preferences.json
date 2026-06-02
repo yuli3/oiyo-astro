@@ -1,0 +1,90 @@
+{
+  "country": {
+    "meta": {
+      "keywords": "personality test, self-discovery, psychology, personal growth, MBTI",
+      "hero": {
+        "badge": "🌍 Affinity Precision Analysis",
+        "subtitle": "Deep analysis across 12 dimensions for integral country search",
+        "cta": "Start Country Exploration"
+      },
+      "features": {
+        "subtitle": "Deep analysis across 12 dimensions for integral country search"
+      },
+      "title": "My Perspectives",
+      "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+    },
+    "resultPage": {
+      "loadingTitle": "Ajustando datos de análisis...",
+      "loadingSubtitle": "¡Buscando destinos perfectos para ti!",
+      "metaTitle": "Analizador de perspectiva",
+      "metaDescription": "Un informe único que combina datos profundos e intuición.",
+      "test": {
+        "progress": "Progreso",
+        "next": "Próxima",
+        "previous": "Previa",
+        "submit": "Ver resultados",
+        "loading": "analizando",
+        "selectOption": "Seleccionar",
+        "insightBullets": ["Mapeando la constelación de tu verdadero yo."]
+      },
+      "result": {
+        "title": "My Perspectives",
+        "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+      },
+      "meta": {
+        "title": "My Perspectives",
+        "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles",
+        "keywords": "test de personalidad, autodescubrimiento, psicología, crecimiento personal, MBTI"
+      }
+    },
+    "hero": {
+      "subtitle": "Deep analysis across 12 dimensions for integral country search",
+      "badge": "🌍 Análisis de precisión de afinidad",
+      "cta": "Iniciar la exploración del país",
+      "features": [
+        "🧭 Preguntas basadas en compensaciones que sacan a la luz sus prioridades",
+        "🎯 12 dimensiones de estilo de vida que incluyen presupuesto, idioma y carrera",
+        "🌍 Partidos de diversos países en todos los continentes",
+        "📊 Información personalizada que puedes compartir al instante"
+      ],
+      "title": "Mis perspectivas",
+      "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+    },
+    "features": {
+      "subtitle": "Análisis profundo en 12 dimensiones para una búsqueda integral de países",
+      "items": [
+        {
+          "icon": "💸",
+          "title": "Perspectivas sobre el costo de vida",
+          "description": "Comprenda qué países se ajustan a sus expectativas de estilo de vida y comodidad presupuestaria"
+        },
+        {
+          "icon": "🗣️",
+          "title": "Adaptación lingüística y comunitaria",
+          "description": "Calcule cuánto apoyo en el idioma local y conexión comunitaria necesita"
+        },
+        {
+          "icon": "💼",
+          "title": "Perspectivas de carrera y crecimiento",
+          "description": "Compare centros de innovación, escenas creativas y economías centradas en la sostenibilidad"
+        },
+        {
+          "icon": "🌤️",
+          "title": "Clima y geografía",
+          "description": "Equilibre su amor por las estaciones, las costas, las montañas y los estilos de vida al aire libre"
+        }
+      ],
+      "title": "Mis perspectivas"
+    },
+    "types": {
+      "nordic": "El buscador nórdico",
+      "mediterranean": "La amante mediterránea",
+      "tropical": "El habitante del paraíso tropical",
+      "cosmopolitan": "La ciudadana global (cosmopolita)",
+      "mountainous": "El explorador de montaña",
+      "coastal": "El entusiasta del océano",
+      "cultural": "El apreciador del patrimonio",
+      "modern": "El pionero de la tecnología"
+    }
+  }
+}

@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "keywords": "keywords, tags, seo",
+    "resultTitle": "お金の習慣の結果分析",
+    "resultDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "testTitle": "お金の習慣の評価",
+    "testDescription": "あなたの診断結果をもとに、温かみのある深い洞察を準備しています。",
+    "title": "あなたの資産プロフィール",
+    "description": "深い財務分析のために設計されたツールスイートを見てみましょう"
+  },
+  "hero": {
+    "subtitle": "詳細情報",
+    "cta": "テストの開始",
+    "badge": "お金習慣バッジ",
+    "title": "あなたの資産プロフィール"
+  },
+  "benefits": {
+    "items": {
+      "0": {
+        "emoji": "E",
+        "title": "あなたの資産プロフィール",
+        "description": "深い財務分析のために設計されたツールスイートを見てみましょう"
+      },
+      "1": {
+        "emoji": "E",
+        "title": "あなたの資産プロフィール",
+        "description": "深い財務分析のために設計されたツールスイートを見てみましょう"
+      },
+      "2": {
+        "emoji": "E",
+        "title": "あなたの資産プロフィール",
+        "description": "深い財務分析のために設計されたツールスイートを見てみましょう"
+      }
+    },
+    "title": "あなたの資産プロフィール"
+  },
+  "cta": {
+    "subtitle": "詳細情報",
+    "button": "始める",
+    "title": "あなたの資産プロフィール"
+  },
+  "faq": {
+    "items": {
+      "0": {
+        "question": "人生の流れをどうやって乗り越えるのですか？",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "1": {
+        "question": "How do you navigate life's currents?",
+        "answer": "内なる調和があなたの毎日の行動を導きます。"
+      },
+      "2": {
+        "question": "How do you navigate life's currents?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "3": {
+        "question": "How do you navigate life's currents?",
+        "answer": "内なる調和があなたの毎日の行動を導きます。"
+      }
+    },
+    "title": "あなたの資産プロフィール"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "プレミアムインサイト",
+        "description": "自分の道を定義するユニークなパターンを見つけてください。",
+        "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+        "answer": "内なる調和があなたの毎日の行動を導きます。"
+      },
+      {
+        "icon": "🚀",
+        "title": "プレミアムインサイト",
+        "description": "自分の道を定義するユニークなパターンを見つけてください。",
+        "question": "何があなたの内なる世界を動かしているのでしょうか？",
+        "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+      },
+      {
+        "icon": "💡",
+        "title": "プレミアムインサイト",
+        "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+        "question": "何があなたの内なる世界を動かしているのでしょうか？",
+        "answer": "内なる調和があなたの毎日の行動を導きます。"
+      },
+      {
+        "icon": "🎯",
+        "title": "プレミアムインサイト",
+        "description": "自分の道を定義するユニークなパターンを見つけてください。",
+        "question": "何があなたの内なる世界を動かしているのでしょうか？",
+        "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+      },
+      {
+        "icon": "🔥",
+        "title": "プレミアムインサイト",
+        "description": "あなたの内なる風景の奥深い構造を探索してください。",
+        "question": "あなた独自のコア周波数は何ですか?",
+        "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+      },
+      {
+        "icon": "⭐",
+        "title": "プレミアムインサイト",
+        "description": "あなたの内なる風景の奥深い構造を探索してください。",
+        "question": "人生の流れをどうやって乗り越えるのですか？",
+        "answer": "内なる調和があなたの毎日の行動を導きます。"
+      }
+    ]
+  },
+  "test": {
+    "insightBullets": ["署名の強度", "ピボットポイント", "2"],
+    "common": {
+      "progress": "進行状況"
+    },
+    "test": {
+      "insightBullets": ["あなたの内なる風景の奥深い構造を探索してください。"],
+      "progress": "進行状況",
+      "submit": "送信",
+      "loading": "読み込み中...",
+      "selectOption": "選択する"
+    },
+    "result": {
+      "title": "あなたの資産プロフィール",
+      "description": "深い財務分析のために設計されたツールスイートを見てみましょう"
+    },
+    "meta": {
+      "title": "あなたの資産プロフィール",
+      "description": "深い財務分析のために設計されたツールスイートを見てみましょう",
+      "keywords": "keywords, tags, seo"
+    },
+    "progress": "進行状況",
+    "submit": "送信",
+    "loading": "読み込み中...",
+    "selectOption": "選択する",
+    "subtitle": "詳細情報",
+    "title": "あなたの資産プロフィール",
+    "description": "深い財務分析のために設計されたツールスイートを見てみましょう",
+    "keywords": "キーワード、タグ、SEO",
+    "finish": "仕上げる",
+    "swipeHint": "スワイプヒント"
+  },
+  "result": {
+    "chart": {
+      "impulseControl": "インパルス制御",
+      "savingCapacity": "容量の節約",
+      "planningSkill": "企画力",
+      "emotionalControl": "感情のコントロール"
+    },
+    "test": {
+      "insightBullets": [
+        "自分の道を定義するユニークなパターンを見つけてください。"
+      ],
+      "progress": "進行状況",
+      "submit": "送信",
+      "loading": "読み込み中...",
+      "selectOption": "選択する"
+    },
+    "result": {
+      "title": "あなたの資産プロフィール",
+      "description": "深い財務分析のために設計されたツールスイートを見てみましょう"
+    },
+    "meta": {
+      "title": "あなたの資産プロフィール",
+      "description": "深い財務分析のために設計されたツールスイートを見てみましょう",
+      "keywords": "keywords, tags, seo"
+    },
+    "title": "あなたの資産プロフィール",
+    "description": "深い財務分析のために設計されたツールスイートを見てみましょう",
+    "keywords": "キーワード、タグ、SEO",
+    "loading": "読み込み中...",
+    "shareTitle": "ダッシュボード",
+    "copySuccess": "コピー成功",
+    "scoresTitle": "ダッシュボード",
+    "impulseRisk": "衝動のリスク",
+    "strengths": "強み",
+    "challenges": "課題",
+    "actionTips": "アクションのヒント",
+    "savingRecommendation": "保存の推奨事項",
+    "recommendedPercentage": "推奨される割合",
+    "share": "シェア",
+    "retake": "再テスト"
+  },
+  "title": "あなたの資産プロフィール",
+  "description": "深い財務分析のために設計されたツールスイートを見てみましょう",
+  "keywords": "キーワード、タグ、SEO"
+}

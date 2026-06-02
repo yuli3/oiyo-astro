@@ -1,0 +1,10 @@
+{
+  "actions": {
+    "refresh": "통찰력 새로 고침",
+    "like": "엄청난",
+    "share": "공유하기"
+  },
+  "loading": "오늘의 인사이트를 준비하고 있습니다.",
+  "focusArea": "오늘 집중할 영역: {area}",
+  "actionTip": "오늘의 실용팁"
+}

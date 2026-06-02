@@ -1,0 +1,183 @@
+{
+  "test": {
+    "progress": "Progrès",
+    "submit": "Envoyer",
+    "loading": "Chargement...",
+    "selectOption": "Choisir une Option",
+    "subtitle": "À quel âge n'aurez-vous plus d'argent ?",
+    "insightBullets": [
+      "Aperçu",
+      "analyse de la situation financière",
+      "l'évaluation des risques"
+    ],
+    "next": "Suivant",
+    "previous": "Précédent"
+  },
+  "meta": {
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie",
+    "keywords": "personnalité financière, gestion de l'argent, budget, habitudes de dépenses, bien-être financier"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "📉",
+        "title": "Quand épuiser ses actifs après la retraite",
+        "description": "Il prédit exactement à quel âge votre argent sera épuisé.",
+        "question": "Combien de temps durera mon argent ?",
+        "answer": "Calcul de la durée de vie des actifs"
+      },
+      {
+        "icon": "💸",
+        "title": "Reflet du taux d’inflation",
+        "description": "Plutôt que de simples calculs, il montre des valeurs futures réalistes prenant en compte l’inflation.",
+        "question": "1 million de won maintenant et dans le futur ?",
+        "answer": "Reflet de l’évolution du pouvoir d’achat"
+      },
+      {
+        "icon": "💡",
+        "title": "Gestion des risques",
+        "description": "Nous fournissons une analyse financière de niveau expert.",
+        "question": "Pouvez-vous partager ?",
+        "answer": "Cela prend environ 2-3 minutes."
+      },
+      {
+        "icon": "🎯",
+        "title": "préparer sa retraite",
+        "description": "Établir une stratégie d’investissement personnalisée.",
+        "question": "Pouvez-vous lui faire confiance ?",
+        "answer": "Basé sur des données vérifiées."
+      },
+      {
+        "icon": "🔥",
+        "title": "optimisation fiscale",
+        "description": "Minimisez les risques et maximisez les profits.",
+        "question": "Pouvez-vous partager ?",
+        "answer": "Oui, vous pouvez l'utiliser immédiatement."
+      },
+      {
+        "icon": "⭐",
+        "title": "Stratégie d'allocation d'actifs",
+        "description": "Minimisez les risques et maximisez les profits.",
+        "question": "Les résultats sont-ils exacts ?",
+        "answer": "Cela prend environ 2-3 minutes."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "📈",
+        "title": "Comment fixer le taux de rendement ?",
+        "description": "Il s'agit généralement des taux d'intérêt sur les dépôts ou du rendement moyen du S&P 500 (7 à 8 %).",
+        "question": "Quel est le taux de rendement approprié ?",
+        "answer": "Fixé en fonction de la tendance à l'investissement"
+      },
+      {
+        "icon": "🏥",
+        "title": "Les frais médicaux sont-ils inclus ?",
+        "description": "C'est une bonne idée de l'inclure dans vos frais de subsistance de base ou de mettre de l'argent de côté.",
+        "question": "Qu’en est-il des dépenses imprévues ?",
+        "answer": "Recommander de créer des fonds supplémentaires"
+      },
+      {
+        "icon": "💡",
+        "title": "Maximiser le retour sur investissement",
+        "description": "Établir une stratégie d’investissement personnalisée.",
+        "question": "Pouvez-vous partager ?",
+        "answer": "Vous pouvez partager à tout moment."
+      },
+      {
+        "icon": "🎯",
+        "title": "Stratégie d'allocation d'actifs",
+        "description": "Vous aider à atteindre vos objectifs financiers à long terme.",
+        "question": "Combien de temps cela prend-il?",
+        "answer": "Cela prend environ 2-3 minutes."
+      },
+      {
+        "icon": "🔥",
+        "title": "Gestion des risques",
+        "description": "Établir une stratégie d’investissement personnalisée.",
+        "question": "Comment puis-je l'utiliser ?",
+        "answer": "Oui, vous pouvez l'utiliser immédiatement."
+      },
+      {
+        "icon": "⭐",
+        "title": "Maximiser le retour sur investissement",
+        "description": "Vous aider à atteindre vos objectifs financiers à long terme.",
+        "question": "Pouvez-vous lui faire confiance ?",
+        "answer": "Oui, vous pouvez l'utiliser immédiatement."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "📊",
+        "title": "Graphique de fluctuation des actifs en temps réel",
+        "description": "Vérifiez les changements d’actifs par année avec un graphique intuitif.",
+        "question": "Fournir une visualisation ?",
+        "answer": "graphique interactif"
+      },
+      {
+        "icon": "📱",
+        "title": "optimisation mobile",
+        "description": "Vous pouvez facilement exécuter des simulations à tout moment et en tout lieu.",
+        "question": "Assistance mobile ?",
+        "answer": "Parfaitement compatible"
+      },
+      {
+        "icon": "💡",
+        "title": "optimisation fiscale",
+        "description": "Minimisez les risques et maximisez les profits.",
+        "question": "Combien de temps cela prend-il?",
+        "answer": "Basé sur des données vérifiées."
+      },
+      {
+        "icon": "🎯",
+        "title": "Renforcer la stabilité financière",
+        "description": "Minimisez les risques et maximisez les profits.",
+        "question": "Comment puis-je l'utiliser ?",
+        "answer": "Vous pouvez partager à tout moment."
+      },
+      {
+        "icon": "🔥",
+        "title": "Maximiser le retour sur investissement",
+        "description": "Obtenez des informations sur les investissements basées sur des données.",
+        "question": "Comment puis-je l'utiliser ?",
+        "answer": "Vous pouvez partager à tout moment."
+      },
+      {
+        "icon": "⭐",
+        "title": "Renforcer la stabilité financière",
+        "description": "Minimisez les risques et maximisez les profits.",
+        "question": "Pouvez-vous partager ?",
+        "answer": "Basé sur des données vérifiées."
+      }
+    ]
+  },
+  "result": {
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie",
+    "depletionTitle": "Tableau de Bord",
+    "warning": "Warning",
+    "safe": "Safe"
+  },
+  "subtitle": "À quel âge n'aurez-vous plus d'argent ?",
+  "currentAge": "Âge Actuel",
+  "retireAge": "Âge de Retraite",
+  "currentAsset": "Actifs Actuels",
+  "monthlySave": "Épargne Mensuelle",
+  "monthlySpend": "Dépense Mensuelle",
+  "returnRate": "Taux de Rendement",
+  "inflationRate": "Taux d'Inflation",
+  "age": "Âge",
+  "currencyUnit": "USD",
+  "unitSave": "(Pre-retirement, USD)",
+  "unitSpend": "(Post-retirement, PV)",
+  "chartRetire": "Retirement",
+  "chartAgeSuffix": "yrs",
+  "disclaimer": "Avertissement",
+  "title": "ton Profil Financier",
+  "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+}

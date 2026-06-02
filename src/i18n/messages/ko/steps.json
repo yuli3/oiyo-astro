@@ -1,0 +1,14 @@
+{
+  "welcome": {
+    "title": "Complete",
+    "description": "Setup finished."
+  },
+  "interests": {
+    "title": "Complete",
+    "description": "Setup finished."
+  },
+  "complete": {
+    "title": "완벽한",
+    "description": "설정이 완료되었습니다."
+  }
+}

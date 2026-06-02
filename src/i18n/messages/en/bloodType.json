@@ -1,0 +1,114 @@
+{
+  "A": {
+    "traits": {
+      "keywords": "Attentiveness, responsibility, perfectionism, consideration, prudence",
+      "strengths": "High sense of responsibility, meticulous personality, consideration for others, planned thinking, delicate emotions",
+      "weaknesses": "Excessive stress, perfectionism, indecision, timidity, and worry",
+      "personality": "With a calm and cautious personality, he pursues perfection in everything he does. They have an excellent ability to read and consider other people's emotions, and value order and rules.",
+      "communication": "I tend to speak in a roundabout way rather than express myself directly, and I try not to hurt the other person's feelings. There is a tendency to avoid conflict.",
+      "leadership": "Demonstrate democratic and considerate leadership. He listens well to the opinions of his members and is excellent at creating a harmonious atmosphere."
+    },
+    "relationships": {
+      "love": "They pursue true love and are devoted to the other person. They are romantic and attentive in their love, but can be very jealous.",
+      "friendship": "As a loyal friend, I value deep and long-lasting friendships. You worry about your friend's difficulties and help them as if it were your own.",
+      "work": "We value teamwork and seek harmony with colleagues. They have a strong sense of responsibility, carry out their duties faithfully, and are good at mediating conflicts."
+    },
+    "career": {
+      "workStyle": "We handle work in a planned and systematic manner. We never miss a detail and strive for perfect results.",
+      "advice": "Reduce the stress caused by perfectionism and learn to be satisfied with sometimes even 80% completion."
+    },
+    "health": {
+      "mentalHealth": "You are sensitive to stress and prone to anxiety. You need plenty of rest and a stable environment.",
+      "stressManagement": "Maintain a regular lifestyle and relieve stress through hobby activities. Meditation or yoga can help.",
+      "lifestyle": "Focus on eating healthy and getting enough sleep. It is best to avoid excessive drinking or smoking."
+    },
+    "name": "Type A",
+    "nickname": "perfectionist",
+    "description": "Type A, who is meticulous and responsible, values ​​order and harmony, and has a warm heart that is considerate of others.",
+    "element": "water"
+  },
+  "B": {
+    "traits": {
+      "keywords": "Free, creative, original, direct, emotional",
+      "strengths": "Outstanding creativity, strong personality, honest personality, adaptability, passionate",
+      "weaknesses": "Capriciousness, lack of concentration, disregard for rules, selfishness, mood swings",
+      "personality": "I have a free-spirited and creative personality and I hate being stuck in a rut. They express their emotions honestly and have a lot of curiosity about new things.",
+      "communication": "Express yourself directly and honestly. They do not hide their thoughts and tend to reveal their emotions as they are.",
+      "leadership": "Demonstrates charismatic and creative leadership. Present new ideas and energize the team."
+    },
+    "relationships": {
+      "love": "I pursue a passionate and free relationship. They express their feelings honestly to others and do not have a strong desire to be exclusive.",
+      "friendship": "He is a fun and active friend. I enjoy being around a variety of people and bring joy to my friends.",
+      "work": "I value autonomy and prefer creative work. Being in an environment with lots of rules or restrictions can be stressful."
+    },
+    "career": {
+      "workStyle": "I prefer a creative and free work style. We generate new ideas and pursue change.",
+      "advice": "Sometimes, recognize the importance of rules and plans, and develop the habit of performing tasks consistently."
+    },
+    "health": {
+      "mentalHealth": "Although they may have frequent mood swings, they are quick to recover from stress. Mental health improves in a free environment.",
+      "stressManagement": "Relieve stress through a variety of activities. Exercise, travel, or new hobbies can help.",
+      "lifestyle": "Maintain a free lifestyle, but don't neglect basic health care."
+    },
+    "name": "Type B",
+    "nickname": "free spirit",
+    "description": "Type B, who is free and creative, values ​​originality and individuality, and is an attractive personality who is honest about the emotions of the moment.",
+    "element": "fire"
+  },
+  "AB": {
+    "traits": {
+      "keywords": "Uniqueness, mystery, duality, rational, artistic",
+      "strengths": "Excellent intuition, original thinking, cool judgment, artistic sense, adaptability",
+      "weaknesses": "Dual personality, temperamental, difficult, cynical, unpredictable",
+      "personality": "It is a complex and unique personality that shows different appearances depending on the situation. They are rational yet emotional, cold yet warm.",
+      "communication": "Depending on the situation, I may be direct or I may speak indirectly. Adjust your communication style by understanding the other person and their mood.",
+      "leadership": "Demonstrate flexible leadership appropriate to the situation. He is a balanced leader who possesses both creativity and rationality."
+    },
+    "relationships": {
+      "love": "You attract others with your mysterious charm, but it takes time for them to open your heart. We are looking for someone who truly understands.",
+      "friendship": "Prefers to have a few true friends. You enjoy in-depth conversations and choose your friends carefully.",
+      "work": "Able to handle work creatively yet logically. We prefer to work independently and value professionalism."
+    },
+    "career": {
+      "workStyle": "Balances creativity and logic. This is a work style that combines original ideas and systematic execution.",
+      "advice": "Recognize your dual nature as a strength rather than a weakness, and use diverse perspectives to solve problems."
+    },
+    "health": {
+      "mentalHealth": "You may feel stressed due to your complex inner life. You need your own time and space.",
+      "stressManagement": "Relieve stress through art or creative activities. It is important to have enough alone time.",
+      "lifestyle": "Pursue a balanced lifestyle. It is better to pursue calmness rather than overstimulation."
+    },
+    "name": "Type AB",
+    "nickname": "dual charm",
+    "description": "The unique and mysterious type AB is a complex and attractive personality that possesses the characteristics of both type A and type B.",
+    "element": "air"
+  },
+  "O": {
+    "traits": {
+      "keywords": "Leadership, confident, active, realistic, sociable",
+      "strengths": "Strong leadership, drive, sociability, sense of reality, positive mindset",
+      "weaknesses": "Stubbornness, impatience, arrogance, competitiveness, simplicity",
+      "personality": "He has an active and outgoing personality and has excellent leadership skills. Live a realistic, practical, and goal-oriented life.",
+      "communication": "Prefer clear and direct communication. Expresses one's opinions with confidence and has excellent persuasive power.",
+      "leadership": "A natural leader, he shows strong drive and determination. Excellent ability to lead a team and achieve goals."
+    },
+    "relationships": {
+      "love": "I love actively and passionately. I like to lead, and I clearly express my affection for others.",
+      "friendship": "They are popular and play a central role among their friends. I have a wide network and take good care of my friends.",
+      "work": "Prefers to lead a team and excels in a competitive environment. Take proactive steps to achieve your goals."
+    },
+    "career": {
+      "workStyle": "Goal-oriented and results-oriented work style. Achieve results through quick decisions and execution.",
+      "advice": "Sometimes, cultivate caution and patience, and get into the habit of listening to other people's opinions."
+    },
+    "health": {
+      "mentalHealth": "Resistant to stress and quick to recover. Maintain your mental health by staying active.",
+      "stressManagement": "Relieve stress through exercise or sports activities. Competitive activities help.",
+      "lifestyle": "Maintain an active lifestyle. Regular exercise and a balanced diet are important."
+    },
+    "name": "Type O",
+    "nickname": "a natural leader",
+    "description": "Type O, who is active and leadership, achieves goals with confidence and drive, and has a sociable and positive personality.",
+    "element": "soil"
+  }
+}

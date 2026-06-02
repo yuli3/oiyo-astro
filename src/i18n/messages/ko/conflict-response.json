@@ -1,0 +1,531 @@
+{
+  "questions": [
+    {
+      "id": "cr_1",
+      "text": "누군가의 의견에 동의하지 않을 때 내 반응은 다음과 같습니다.",
+      "options": [
+        {
+          "id": "a",
+          "text": "내 요점을 이해하려면 논리적으로 누르세요.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "지금은 상황을 피하고 감정이 식을 때까지 기다리십시오.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "그들의 감정이 상하지 않도록 내 의견을 포기하십시오.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "둘 다 약간 타협할 수 있는 지점을 제안하십시오.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "두 가지를 모두 만족하는 대안을 찾는 데 시간을 투자하세요.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_2",
+      "text": "갈등 속에서 내가 가장 중요하게 생각하는 것은...",
+      "options": [
+        {
+          "id": "a",
+          "text": "문제를 정확하게 해결하고 승리하세요",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "정신적 에너지 소비 감소",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "상대방과의 관계를 유지하는 것",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "비효율적인 소비의 종식과 타협",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "서로의 요구를 깊이 이해하는 성장의 기회",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_3",
+      "text": "화가 나면 나는...",
+      "options": [
+        {
+          "id": "a",
+          "text": "내 의도를 확고하고 강력하게 표현하세요.",
+          "weights": {
+            "competing": 2,
+            "compromising": 1
+          }
+        },
+        {
+          "id": "b",
+          "text": "닥치고 그 자리를 떠나세요.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "그들의 분노를 진정시키기 위해 먼저 사과하십시오.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "어느 시점에서 대략적으로 끝내려고 노력하십시오.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "내가 왜 화가 났는지 이야기해 보세요.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_4",
+      "text": "팀 프로젝트에서 의견이 다를 때 나는...",
+      "options": [
+        {
+          "id": "a",
+          "text": "다른 사람들이 내 아이디어를 채택하도록 설득하세요.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "다수가 원하는 방향을 따르면 됩니다.",
+          "weights": {
+            "accommodating": 2,
+            "avoiding": 1
+          }
+        },
+        {
+          "id": "c",
+          "text": "내가 손해를 입더라도 팀 평화를 선택하세요.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "서로의 의견을 반반씩 섞을 것을 제안합니다.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "모두가 동의할 수 있는 제3의 방법을 찾아보자고 제안하세요.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_5",
+      "text": "갈등을 해결한 후 어떤 느낌이 드나요?",
+      "options": [
+        {
+          "id": "a",
+          "text": "일이 내 뜻대로 됐다는 승리감.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "빨리 끝나서 다행이었습니다.",
+          "weights": {
+            "avoiding": 2,
+            "compromising": 1
+          }
+        },
+        {
+          "id": "c",
+          "text": "상대방이 고마워하면 기쁘다.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "우리가 공정하게 일을 나눈 것 같아요.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "함께 문제를 해결하면서 더 가까워진 느낌.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_6",
+      "text": "누군가가 부당한 요구를 했을 때?",
+      "options": [
+        {
+          "id": "a",
+          "text": "단호히 거절하세요.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "들었지만 대답을 늦추고 피하세요.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "선을 위해 그것을 받아들이십시오.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "대신 다른 일을 제안해보세요.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "그러한 요청을 하는 근본적인 이유를 물어보십시오.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_7",
+      "text": "말다툼 중에 누군가 눈물을 흘린다면?",
+      "options": [
+        {
+          "id": "a",
+          "text": "계속해서 감정과 논리는 별개라고 말하세요.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "무엇을 해야할지 모르고 즉시 떠나십시오.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "즉시 사과하고 기분을 맞춰주세요.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "진정하고 내일 다시 이야기하라고 하세요.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "대화를 중단하고 그들의 슬픔에 공감하십시오.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_8",
+      "text": "중요한 가치관에 차이가 있을 때는?",
+      "options": [
+        {
+          "id": "a",
+          "text": "내가 옳다는 것을 끝까지 증명해 보세요.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "우리가 다르다면 무엇을 할 수 있는지에 대한 토론을 중단하십시오.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "그들의 가치를 존중하고 나 자신을 조정하십시오.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "상호 존중의 선을 긋고 동의하십시오.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "두 가치가 공존할 수 있는 더 큰 프레임워크를 만듭니다.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_9",
+      "text": "누군가의 실수를 발견했을 때?",
+      "options": [
+        {
+          "id": "a",
+          "text": "즉각 지적하고 정정을 요구합니다.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "갈등을 방지하기 위해 모르는 척 합니다.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "체면을 잃지 않도록 직접 고쳐주세요.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "이 부분은 내가 고칠테니 그 부분은 당신이 하라고 전해 주세요.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "실수 이면의 과정을 함께 확인하고 대안을 찾아보세요.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_10",
+      "text": "친구가 나를 비난할 때?",
+      "options": [
+        {
+          "id": "a",
+          "text": "자신의 잘못을 더욱 지적해 반격한다.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "연락을 끊거나 무시하세요.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "지금은 무조건 미안하다고 말하세요.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "실망을 안겨드려 죄송합니다. 하지만 제 나름대로의 이유가 있었습니다.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "비판 뒤에 숨겨진 진정한 감정을 물어보세요.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_11",
+      "text": "약속시간에 늦은 사람에게?",
+      "options": [
+        {
+          "id": "a",
+          "text": "시간 엄수의 중요성을 강력히 권고하십시오.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "기분은 나쁘지만 아무 말도 하지 않고 그냥 먹습니다.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "웃으면서 괜찮다고 하세요. 바빴나 봐요.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "나중에 기다릴 시간도 있어야 한다고 말하세요.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "왜 늦었는지 듣고 해결책을 함께 생각해 보세요.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_12",
+      "text": "결코 포기할 수 없는 가치가 도전받을 때?",
+      "options": [
+        {
+          "id": "a",
+          "text": "나의 가치보다는 관계를 포기하는 것을 선택하세요.",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "토론 자체를 피하고 내 생각을 숨기십시오.",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "그들의 가치를 받아들이고 내 생각을 바꾸려고 노력하십시오.",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "핵심만 남기고 나머지는 양보하세요.",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "나의 가치관과 그들의 가치관이 조화를 이루는 높은 수준의 합의점을 찾아보세요.",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    }
+  ],
+  "results": {
+    "accommodating": {
+      "title": "희생적 수용자",
+      "description": "자신의 필요보다 다른 사람의 필요를 우선시하여 조화를 추구합니다.",
+      "advice": "상처받은 마음도 보살펴야 할 소중한 자산입니다.",
+      "resonanceImpact": "다른 사람과 어울리도록 자신을 유연하게 변형시키는 부드러운 공명."
+    },
+    "avoiding": {
+      "title": "침묵의 평화주의자",
+      "description": "갈등 자체를 피하고 에너지를 보존하려는 경향이 있습니다.",
+      "advice": "때로는 솔직한 대화가 침묵보다 더 빨리 문제를 해결합니다.",
+      "resonanceImpact": "진동을 멈춰 갈등을 멈추지만, 해결되지 않은 원한은 남아있습니다."
+    },
+    "collaborating": {
+      "title": "공명하는 창조자",
+      "description": "모두가 Win-Win할 수 있는 제3의 대안을 만들어내는 스타일입니다.",
+      "advice": "모든 갈등에서 최선의 답을 찾으려는 노력은 때때로 당신을 지치게 할 수 있습니다.",
+      "resonanceImpact": "두 개의 서로 다른 진동을 병합하여 더 큰 조화를 이루는 공명을 증폭시킵니다."
+    },
+    "competing": {
+      "title": "확고한 경쟁자",
+      "description": "목표를 달성하기 위해 강한 추진력을 발휘하는 스타일.",
+      "advice": "승리가 항상 관계의 평화보다 더 중요한 것은 아니라는 점을 기억하십시오.",
+      "resonanceImpact": "강렬한 추진력을 주지만 상대방에게는 소외감을 줄 수도 있는 공명."
+    },
+    "compromising": {
+      "title": "실용적인 협상가",
+      "description": "각자 조금씩 양보하여 적절한 중간 지점을 찾는 데 능숙합니다.",
+      "advice": "일시적인 합의가 아닌 근본적인 해결책을 생각해 보세요.",
+      "resonanceImpact": "주파수를 조정하여 적절한 절충점을 찾는 안정적인 공진입니다."
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "title": "Soulagement de l'Anxiété",
+  "description": "Trouvez la paix et le calme grâce à des exercices de respiration guidés.",
+  "breathingIn": "Inspirer",
+  "breathingOut": "Expirer",
+  "hold": "Prise",
+  "start": "Commencer",
+  "pause": "Pause",
+  "reset": "Réinitialiser",
+  "subtitle": "Sanctuaire de respiration consciente",
+  "affirmations": {
+    "1": "Je suis en sécurité et ancré en ce moment.",
+    "2": "Mon souffle est mon ancre dans la tempête.",
+    "3": "Je libère ce que je ne peux pas contrôler.",
+    "4": "Chaque respiration apporte clarté et paix.",
+    "5": "Je suis plus fort que mes pensées anxieuses."
+  }
+}

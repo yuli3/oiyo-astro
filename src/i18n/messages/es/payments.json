@@ -1,0 +1,36 @@
+{
+  "success": {
+    "confirming": "Confirmando pago...",
+    "pleaseWait": "Espere un momento.",
+    "confirmFailed": "No se pudo confirmar el pago",
+    "title": "Payment Failed",
+    "activated": "Tus funciones premium han sido activadas. Ahora tienes acceso a todas las funciones premium.",
+    "nextSteps": "Próximos pasos:",
+    "step1": "Ver análisis avanzados en el panel",
+    "step2": "Obtenga información basada en IA",
+    "step3": "Descargar informes en PDF",
+    "goToDashboard": "Ir al panel",
+    "backToHome": "Volver a Inicio",
+    "tryAgain": "Intentar otra vez"
+  },
+  "fail": {
+    "title": "Pago fallido",
+    "errors": {
+      "USER_CANCEL": "El pago fue cancelado por la usuaria.",
+      "INVALID_CARD": "Información de tarjeta no válida.",
+      "INSUFFICIENT_FUNDS": "Fondos insuficientes.",
+      "PAYMENT_TIMEOUT": "Se agotó el tiempo de pago.",
+      "default": "Se produjo un error al procesar su pago."
+    },
+    "howToResolve": "Cómo resolver:",
+    "solutions": {
+      "verifyCard": "Verifica la información de tu tarjeta",
+      "checkFunds": "Comprueba si tienes fondos suficientes",
+      "tryDifferent": "Pruebe con un método de pago diferente",
+      "contactSupport": "Póngase en contacto con el soporte si el problema persiste"
+    },
+    "tryAgain": "Intentar otra vez",
+    "goToDashboard": "Ir al panel",
+    "backToHome": "Volver a Inicio"
+  }
+}

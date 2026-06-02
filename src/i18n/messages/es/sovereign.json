@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "hero": "Héroe",
+    "oracle": "Oráculo",
+    "ontology": "Ontología",
+    "vault": "Bóveda",
+    "growth": "Crecimiento"
+  },
+  "labels": {
+    "ascend": "Ascender",
+    "celestialChart": "Carta celeste",
+    "archives": "Archivo",
+    "evolution": "Evolución"
+  },
+  "growth": {
+    "full": "Crecimiento completo",
+    "unfinished": "Inconclusa",
+    "fullDesc": "Camino de crecimiento completo.",
+    "unfinishedDesc": "Camino en progreso.",
+    "review": "Revisar",
+    "discover": "Descubrir"
+  }
+}

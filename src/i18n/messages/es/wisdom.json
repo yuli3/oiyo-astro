@@ -1,0 +1,16 @@
+{
+  "sanctuary": {
+    "mental": {
+      "anxietyRelief": {
+        "title": "Alivio de la ansiedad",
+        "description": "Encuentre la paz y la calma a través de ejercicios de respiración guiados.",
+        "breathingIn": "Respirar",
+        "breathingOut": "Exhalar",
+        "hold": "Sostener",
+        "start": "Comenzar",
+        "pause": "Pausa",
+        "reset": "Reiniciar"
+      }
+    }
+  }
+}

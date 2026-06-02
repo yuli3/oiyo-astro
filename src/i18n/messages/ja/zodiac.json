@@ -1,0 +1,195 @@
+{
+  "aries": "牡羊座",
+  "taurus": "牡牛座",
+  "gemini": "双子座",
+  "cancer": "蟹座",
+  "leo": "獅子座",
+  "virgo": "乙女座",
+  "libra": "天秤座",
+  "scorpio": "蠍座",
+  "sagittarius": "射手座",
+  "capricorn": "山羊座",
+  "aquarius": "水瓶座",
+  "pisces": "魚座",
+  "meta": {
+    "title": "星座相性分析",
+    "description": "深い自己発見へのガイドとなります。",
+    "keywords": "星座, 占星術, ホロスコープ, 星座相性",
+    "resultTitle": "あなたの星座分析",
+    "resultDescription": "あなたの真実の本質を映し出す鏡を設計します...",
+    "resultKeywords": "星座分析, 性格特性, 占星術レポート"
+  },
+  "benefits": {
+    "love": {
+      "title": "星座相性分析",
+      "description": "深い自己発見へのガイドとなります。"
+    },
+    "career": {
+      "title": "星座相性分析",
+      "description": "深い自己発見へのガイドとなります。"
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "星座の核となる本質は何ですか？",
+        "answer": "それは、宇宙の無限の複雑性が濾過されて、独特の人間の共鳴を生み出す典型的なレンズです。"
+      },
+      {
+        "question": "私の星座が私の運命全体を決定づけるのでしょうか？",
+        "answer": "星は傾きますが、強制するものではありません。 彼らは天の青写真を提供しますが、あなた自身の目覚めの建築家はあなたです。"
+      }
+    ],
+    "title": "星座相性分析"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "原型的な共鳴",
+        "description": "あなたの主な星座の心理的およびスピリチュアルなモチーフを深く掘り下げます。"
+      },
+      {
+        "icon": "🧭",
+        "title": "アストラルナビゲーション",
+        "description": "日々の行動を季節の天の流れに合わせる方法に関する戦略的洞察。"
+      }
+    ]
+  },
+  "test": {
+    "title": "星座相性分析",
+    "subtitle": "二つの星座の間の調和を発見し、関係のダイナミクスを理解しましょう。",
+    "calculating": "あなたの星座を計算中..."
+  },
+  "title": "星座相性分析",
+  "description": "深い自己発見へのガイドとなります。",
+  "result": {
+    "title": "星座相性分析",
+    "description": "深い自己発見へのガイドとなります。"
+  },
+  "hero": {
+    "title": "星座相性分析",
+    "subtitle": "二つの星座の間の調和を発見し、関係のダイナミクスを理解しましょう。"
+  },
+  "preview": {
+    "title": "星座相性分析"
+  },
+  "cta": {
+    "title": "星座相性分析",
+    "subtitle": "二つの星座の間の調和を発見し、関係のダイナミクスを理解しましょう。",
+    "button": "性格を見る"
+  },
+  "T": "ページタイトル",
+  "info": {
+    "accurate": {
+      "title": "星座相性分析",
+      "description": "深い自己発見へのガイドとなります。"
+    },
+    "detailed": {
+      "title": "星座相性分析",
+      "description": "深い自己発見へのガイドとなります。"
+    }
+  },
+  "compatibility": {
+    "title": "星座相性分析",
+    "subtitle": "二つの星座の間の調和を発見し、関係のダイナミクスを理解しましょう。",
+    "selectionTitle": "星座を選択して分析",
+    "selectionDesc": "詳細な相性診断のために、二つの星座を選択してください。",
+    "mySign": "自分の星座",
+    "partnerSign": "相手の星座",
+    "placeholder": "星座を選択",
+    "analyzeBtn": "相性を分析する",
+    "analyzingBtn": "分析中...",
+    "levels": {
+      "excellent": "あらゆる面で優れた調和を保っています。宇宙のエネルギーがうまく整っています。",
+      "good": "全体的に良い相性です。小さな配慮が自然な流れをさらに良くします。",
+      "fair": "普通の相性",
+      "challenging": "困難ですが、やりがいのある道です。理解しようとする努力が絆を深めるでしょう。"
+    },
+    "categories": {
+      "love": "愛とロマンス",
+      "friendship": "友情",
+      "business": "仕事とビジネス",
+      "communication": "常にオープンで正直なコミュニケーションを心がけてください。"
+    },
+    "sections": {
+      "scorecard": "相性バランス",
+      "strengths": "自分の天賦の強みに集中してください",
+      "challenges": "成長のための課題",
+      "advice": "成長のための宇宙のアドバイス"
+    },
+    "actions": {
+      "share": "結果を共有",
+      "retake": "新しい分析",
+      "copySuccess": "クリップボードにコピーしました！"
+    },
+    "analysis": {
+      "strengths": {
+        "traitMatch": "{sign1}の{trait1}と{sign2}の{trait2}が調和した共鳴を生み出します。",
+        "sameElement": "両方の星座が同じエレメントを共有しており、自然な理解を育みます。",
+        "complementaryElement": "お互いのエレメントが補完し合い、バランスの取れた相乗効果を生み出します。",
+        "respect": "違いを成長の機会として尊重し、受け入れましょう。"
+      },
+      "challenges": {
+        "traitConflict": "{sign1}の{trait1}な性質が、時として{sign2}の{trait2}な傾向と衝突することがあります。",
+        "misunderstanding": "人生へのアプローチの違いが、初期の誤解を招く可能性があります。",
+        "communication": "常にオープンで正直なコミュニケーションを心がけてください。"
+      },
+      "tips": {
+        "respect": "違いを成長の機会として尊重し、受け入れましょう。",
+        "communication": "常にオープンで正直なコミュニケーションを心がけてください。",
+        "personalTime": "お互いのパーソナルスペースを大切にし、尊重しましょう。",
+        "sharedInterests": "一緒に楽しめる共通の関心事を探し、育んでください。",
+        "conflict": "対立が生じた時は、相手の視点を理解することを優先しましょう。",
+        "excellent": "あらゆる面で優れた調和を保っています。宇宙のエネルギーがうまく整っています。",
+        "challenging": "困難ですが、やりがいのある道です。理解しようとする努力が絆を深めるでしょう。"
+      }
+    }
+  },
+  "extended": {
+    "corePersonality": {
+      "leader": "独立心の強い天性のリーダー",
+      "innovator": "芸術的感性を持つ創造的なイノベーター",
+      "analyst": "現実的な知恵を持つ思慮深いアナリスト",
+      "balanced": "内面のバランスを追求する平和主義者"
+    },
+    "lifeTheme": "知恵、創造性、そして実践的な行動の調和のとれた統合",
+    "compatibilityAnalysis": {
+      "excellent": "あらゆる面で優れた調和を保っています。宇宙のエネルギーがうまく整っています。",
+      "good": "全体的に良い相性です。小さな配慮が自然な流れをさらに良くします。",
+      "moderate": "運命の糸を同期中...",
+      "diverse": "多様なエネルギーを持っていますが、意識と対話を通じて調和させることができます。"
+    },
+    "timeline": {
+      "currentTheme_spring": "新しい始まりと成長",
+      "currentTheme_summer": "エネルギーの絶頂と達成",
+      "currentTheme_autumn": "収穫と基盤固め",
+      "currentTheme_winter": "省察と計画",
+      "currentTheme_default": "成長と発展",
+      "advice": {
+        "strengths": "自分の天賦の強みに集中してください",
+        "intuition": "決断を下す時は直感を信じてください",
+        "balance": "人生のあらゆる領域でバランスを保つことが重要です"
+      },
+      "upcoming": {
+        "next3": "新しい繋がりや機会に恵まれ、着実に前進する時期",
+        "nextYear": "個人的、職業的に大きな成長を遂げる年",
+        "transitions": [
+          "キャリアアップの機会",
+          "大切な関係を深める",
+          "個人の精神的な成長"
+        ]
+      }
+    }
+  },
+  "subtitle": "あなたの占星術プロフィールを発見しましょう。",
+  "oracle": {
+    "selectZodiac": "星座を選択してください",
+    "synchronize": "星と同期する",
+    "imperialDecree": "皇帝の勅令",
+    "analysisBasis": "分析の根拠",
+    "message": "宇宙からのメッセージ",
+    "actionRitual": "推奨リチュアル",
+    "fateVsWill": "運命と意志"
+  }
+}

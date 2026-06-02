@@ -1,0 +1,110 @@
+{
+  "messages": {
+    "general": "正在编织您的生命故事...",
+    "stars": "正在将您的旅程与群星进行同步...",
+    "rainbow": "正在为您内心的彩虹播洒色彩...",
+    "flowers": "正在解析您人格中蕴含的几何律动...",
+    "fox": "正在勾勒您灵魂深处的秘密建筑图景...",
+    "stardust": "正在为您的人生蓝图对齐星象方位...",
+    "oracle": "正在聆听来自时间长河的神谕...",
+    "cards": "正在分析您每一次抉择留下的深层回响...",
+    "moon": "正在为您轻柔拂去月魄上的尘埃...",
+    "dreams": "正在编织您梦境中的纯真本质...",
+    "magic": "正在为您的这段旅程祈愿点滴奥秘...",
+    "whale": "正在聆听您潜意识深处的空灵鸣响...",
+    "trees": "千年古树正低语着唯有您能听懂的秘密...",
+    "roots": "正在向您生命起源的深邃根基传递讯息...",
+    "ontology": "正在解读您灵魂最本原的蓝图...",
+    "resonance": "正在协调您的心灵频率，使之与宇宙共振...",
+    "fortune": "正在星海中观察您运势的流转趋势...",
+    "finance": "正在为您未来的繁荣播下希望的种子...",
+    "cat_dog": "正在解读您天性中那份无声的灵性语言...",
+    "milky_way": "正在从银河系的尽头汲取生命灵感...",
+    "moonlight": "正在让您的侧影浸润于澄澈的清辉之中...",
+    "wave_secret": "正在聆听海浪对您命运所许下的温柔诺言...",
+    "saju": "正在调整您的宇宙万岁历能量布局...",
+    "relationship": "Analyzing relationship...",
+    "analyzing": "Analyzing data...",
+    "calculating": "计算宇宙坐标...",
+    "processing": "处理时态数据...",
+    "generating": "正在生成您独特的个人资料...",
+    "almostDone": "几乎明显...",
+    "personalityAnalysis": "解码认知模式...",
+    "responseAnalysis": "分析行为共振...",
+    "typeMatching": "寻找原型匹配...",
+    "preparingResults": "组装最终合成..."
+  },
+  "message": "加载中...",
+  "tip": "请稍等。",
+  "analyzing": "Analyzing data...",
+  "calculating": "计算宇宙坐标...",
+  "processing": "处理时态数据...",
+  "generating": "正在生成您独特的个人资料...",
+  "almostDone": "几乎明显...",
+  "personalityAnalysis": "解码认知模式...",
+  "responseAnalysis": "分析行为共振...",
+  "typeMatching": "寻找原型匹配...",
+  "preparingResults": "组装最终合成...",
+  "please_wait": "汇聚智慧。 请保持空间。",
+  "default": "正在同步您的命运丝线...",
+  "rootLoading": {
+    "subtitle": "您是否在漫长的旅途中迷失了方向？"
+  },
+  "localeLoading": {
+    "subtitle": "您是否在漫长的旅途中迷失了方向？",
+    "title": "内在评估",
+    "description": "借由 OIYO 的原型工具，解锁更深邃的自我理解。"
+  },
+  "globalError": {
+    "tryAgain": "重试",
+    "goHome": "返回圣所首页",
+    "helpText": "若这种能量失衡持续存在，请联系我们的向导。"
+  },
+  "notFound": {
+    "title": "内在评估",
+    "subtitle": "您是否在漫长的旅途中迷失了方向？",
+    "description": "借由 OIYO 的原型工具，解锁更深邃的自我理解。",
+    "goHome": "返回圣所首页",
+    "goBack": "回溯过往",
+    "suggestionsTitle": "您是否在寻找以下这些隐秘的通道？",
+    "popularTestsTitle": "备受推崇的分析",
+    "egentetoTest": "Egenteto 性格分析",
+    "mbtiAlternative": "MBTI 深度替代方案",
+    "allTests": "探索圣所全部分析",
+    "exploreTitle": "发现那些最触动灵魂的分析",
+    "categoryCore": "性格本质",
+    "categoryLifestyle": "生命风格",
+    "color": "色彩原型",
+    "travel": "旅途宿命",
+    "relationship": {
+      "communicationStyle": "对谈炼金术"
+    },
+    "test": {
+      "progress": "探索进度",
+      "next": "向后探寻",
+      "previous": "向前追溯",
+      "submit": "交付您的探索",
+      "loading": "精准校准中...",
+      "selectOption": "标记您的选择",
+      "insightBullets": ["深刻的发现"]
+    },
+    "result": {
+      "title": "内在评估",
+      "description": "借由 OIYO 的原型工具，解锁更深邃的自我理解。"
+    },
+    "meta": {
+      "title": "内在评估",
+      "description": "借由 OIYO 的原型工具，解锁更深邃的自我理解。",
+      "keywords": "性格测评, 洞察, OIYO, 个人成长"
+    }
+  },
+  "poetic": [
+    "聆听宇宙温柔的低语……",
+    "诠释你命运的无声语言……",
+    "利用恒星的辐射能...",
+    "耐心等待，一个精彩的故事正在为你展开……",
+    "在寂静的夜里记录月亮的秘密……",
+    "解码星座的发光信号......",
+    "沿着时间的河流漂流，寻找你的真相......"
+  ]
+}

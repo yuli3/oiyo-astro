@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "back": "ステップを戻る",
+    "logout": "サーバーリンク（ログアウト）"
+  },
+  "search": {
+    "placeholder": "年代記を検索してください..."
+  },
+  "actions": {
+    "export": "エクスポート記録"
+  },
+  "alerts": {
+    "title": "システムの共鳴"
+  },
+  "status": {
+    "healthy": "調和のとれた",
+    "warning": "不安定",
+    "critical": "骨折した"
+  },
+  "metrics": {
+    "activeUsers": "アクティブな魂",
+    "systemLoad": "エーテルロード",
+    "latency": "時間的変化",
+    "errorRate": "リフト周波数"
+  }
+}

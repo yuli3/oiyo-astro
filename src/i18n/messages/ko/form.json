@@ -1,0 +1,15 @@
+{
+  "successTitle": "성공",
+  "successMessage": "제출된.",
+  "errorTitle": "오류",
+  "errorMessage": "실패한.",
+  "subjectLabel": "주제",
+  "subjectPlaceholder": "제목을 입력하세요",
+  "categoryLabel": "범주",
+  "priorityLabel": "우선 사항",
+  "descriptionLabel": "설명",
+  "descriptionPlaceholder": "설명 입력",
+  "submitting": "제출 중...",
+  "submitButton": "제출하기",
+  "title": "형태"
+}

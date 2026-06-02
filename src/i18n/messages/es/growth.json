@@ -1,0 +1,17 @@
+{
+  "title": "Viaje de Crecimiento",
+  "description": "Tu camino hacia la autoconciencia y la evolución personal.",
+  "levelUp": "Congratulations! You have reached level {emoji} \"{title}\"!",
+  "levelTitles": {
+    "beginner": "Principiante",
+    "explorer": "Exploradora",
+    "seeker": "Buscadora",
+    "discoverer": "Descubridora",
+    "insightMaster": "Maestro de la percepción",
+    "wisdomKeeper": "Guardiana de la sabiduría",
+    "selfAwareSage": "Sabio consciente de sí mismo",
+    "enlightenedOne": "El Iluminado",
+    "personalityGuru": "Gurú de la personalidad",
+    "legendary": "Legendaria"
+  }
+}

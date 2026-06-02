@@ -1,0 +1,8 @@
+{
+  "title": "Fragments de Vie",
+  "description": "Les activités dans lesquelles vous vous immergez sont les trésors qui complètent votre destin.",
+  "placeholder": "Tapez un loisir et appuyez sur Entrée...",
+  "suggestion_title": "Résonance Suggérée pour Vous",
+  "toast_success": "Un nouveau fragment de lumière a été ajouté à votre univers.",
+  "missing_element_hint": "Nous recommandons des activités pour harmoniser votre énergie {element}."
+}

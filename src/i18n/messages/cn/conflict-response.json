@@ -1,0 +1,531 @@
+{
+  "questions": [
+    {
+      "id": "cr_1",
+      "text": "当我不同意某人的观点时，我的反应是...",
+      "options": [
+        {
+          "id": "a",
+          "text": "按逻辑来表达我的观点。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "暂时避免这种情况，等待情绪冷却。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "放弃我的意见，以免伤害他们的感情。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "建议双方可以稍微妥协的一点。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "花点时间寻找一个能够同时满足两者的替代方案。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_2",
+      "text": "在冲突中，我最看重的是...",
+      "options": [
+        {
+          "id": "a",
+          "text": "精准解决问题，致胜",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "减少精神能量消耗",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "维持与对方的关系",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "结束低效消费和妥协",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "深入了解彼此需求的成长机会",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_3",
+      "text": "当我感到愤怒时，我...",
+      "options": [
+        {
+          "id": "a",
+          "text": "坚定而强烈地表达我的意图。",
+          "weights": {
+            "competing": 2,
+            "compromising": 1
+          }
+        },
+        {
+          "id": "b",
+          "text": "闭嘴并离开这个地方。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "先道歉，平息他们的愤怒。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "尝试在某个时刻大致完成。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "尝试谈谈我为什么生气。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_4",
+      "text": "当团队项目中存在意见分歧时，我...",
+      "options": [
+        {
+          "id": "a",
+          "text": "说服别人采纳我的想法。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "只要遵循大多数人想要的方向即可。",
+          "weights": {
+            "accommodating": 2,
+            "avoiding": 1
+          }
+        },
+        {
+          "id": "c",
+          "text": "即使吃亏也要选择团队和平。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "建议将彼此的意见各半混合。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "建议寻找每个人都同意的第三种方式。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_5",
+      "text": "解决冲突后我的感受如何？",
+      "options": [
+        {
+          "id": "a",
+          "text": "一切顺利的胜利感。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "庆幸的是事情很快就结束了。",
+          "weights": {
+            "avoiding": 2,
+            "compromising": 1
+          }
+        },
+        {
+          "id": "c",
+          "text": "很高兴对方有感激之情。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "认为我们公平地分配了事情。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "通过共同解决问题，感觉更加亲密。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_6",
+      "text": "当有人提出无理要求时？",
+      "options": [
+        {
+          "id": "a",
+          "text": "断然说不。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "听到了但延迟回答并避免它。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "为了善良而接受它。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "建议改做其他事情。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "询问提出这样要求的根本原因。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_7",
+      "text": "如果有人在争吵时突然流泪？",
+      "options": [
+        {
+          "id": "a",
+          "text": "继续说情感和逻辑是分开的。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "不知道该怎么办，赶紧离开。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "立即道歉并迎合他们的情绪。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "让他们冷静下来，明天再谈。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "停止谈话并同情他们的悲伤。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_8",
+      "text": "重要价值观何时存在差异？",
+      "options": [
+        {
+          "id": "a",
+          "text": "努力证明我是对的，直到最后。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "停止讨论如果我们与众不同我们能做什么。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "尊重他们的价值观并调整自己。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "划出一条相互尊重的界限并达成一致。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "创建一个更大的框架，让两种价值观可以共存。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_9",
+      "text": "当发现别人的错误时？",
+      "options": [
+        {
+          "id": "a",
+          "text": "立即指出并要求改正。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "假装不知道，避免冲突。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "自己解决一下，免得他们丢脸。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "告诉他们我会修复这部分，所以你做那部分。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "一起检查错误背后的过程并寻找替代方案。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_10",
+      "text": "当朋友批评我时？",
+      "options": [
+        {
+          "id": "a",
+          "text": "反击，更多地指出他们的错误。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "切断联系或者不理睬他们。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "暂时无条件地说声抱歉。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "抱歉让您失望了，但我有自己的原因。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "询问隐藏在批评背后的真实感受。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_11",
+      "text": "对于约会迟到的人？",
+      "options": [
+        {
+          "id": "a",
+          "text": "强烈告诫他们守时的重要性。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "心情不好，但什么也没说，只是吃东西。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "微笑着说没关系，他们一定很忙。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "告诉他们稍后也应该有时间等待。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "听听他们迟到的原因并一起思考解决方案。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "cr_12",
+      "text": "当你永远无法放弃的价值观受到挑战时？",
+      "options": [
+        {
+          "id": "a",
+          "text": "选择放弃关系而不是我的价值观。",
+          "weights": {
+            "competing": 3
+          }
+        },
+        {
+          "id": "b",
+          "text": "避免讨论本身并隐藏我的想法。",
+          "weights": {
+            "avoiding": 3
+          }
+        },
+        {
+          "id": "c",
+          "text": "接受他们的价值观并尝试改变我的想法。",
+          "weights": {
+            "accommodating": 3
+          }
+        },
+        {
+          "id": "d",
+          "text": "只留下核心，让出其余的。",
+          "weights": {
+            "compromising": 3
+          }
+        },
+        {
+          "id": "e",
+          "text": "找到高层共识，使我的价值观与他们的价值观相一致。",
+          "weights": {
+            "collaborating": 3
+          }
+        }
+      ]
+    }
+  ],
+  "results": {
+    "accommodating": {
+      "title": "Practical Negotiator",
+      "description": "Skilled at finding an appropriate middle ground by each conceding a bit.",
+      "advice": "Think about fundamental solutions, not just temporary agreements.",
+      "resonanceImpact": "Stable resonance that finds an appropriate compromise by adjusting frequencies."
+    },
+    "avoiding": {
+      "title": "Practical Negotiator",
+      "description": "Skilled at finding an appropriate middle ground by each conceding a bit.",
+      "advice": "Think about fundamental solutions, not just temporary agreements.",
+      "resonanceImpact": "Stable resonance that finds an appropriate compromise by adjusting frequencies."
+    },
+    "collaborating": {
+      "title": "Practical Negotiator",
+      "description": "Skilled at finding an appropriate middle ground by each conceding a bit.",
+      "advice": "Think about fundamental solutions, not just temporary agreements.",
+      "resonanceImpact": "Stable resonance that finds an appropriate compromise by adjusting frequencies."
+    },
+    "competing": {
+      "title": "Practical Negotiator",
+      "description": "Skilled at finding an appropriate middle ground by each conceding a bit.",
+      "advice": "Think about fundamental solutions, not just temporary agreements.",
+      "resonanceImpact": "Stable resonance that finds an appropriate compromise by adjusting frequencies."
+    },
+    "compromising": {
+      "title": "实用谈判员",
+      "description": "善于通过各自让步来找到适当的中间立场。",
+      "advice": "考虑根本性的解决方案，而不仅仅是临时协议。",
+      "resonanceImpact": "通过调整频率找到适当折衷的稳定共振。"
+    }
+  }
+}

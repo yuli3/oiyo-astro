@@ -1,0 +1,155 @@
+{
+  "chart": {
+    "teto": "Teto-type",
+    "egen": "Egen-type"
+  },
+  "daily": {
+    "insights": {
+      "tetonam": [
+        {
+          "type": "motivation",
+          "icon": "💪",
+          "title": "Relever le défi",
+          "message": "Votre leadership naturel brille le plus face aux obstacles. Prenez les devants sur ce projet dès aujourd’hui !",
+          "action": "Donnez l’exemple lors de votre prochaine réunion"
+        },
+        {
+          "type": "relation",
+          "icon": "🤝",
+          "title": "Montrez votre côté doux",
+          "message": "Équilibrez force et vulnérabilité. Un proche a besoin de votre soutien émotionnel aujourd’hui.",
+          "action": "Demandez à votre proche ce qu'il ressent vraiment"
+        },
+        {
+          "type": "croissance",
+          "icon": "🎯",
+          "title": "Relever le défi",
+          "message": "Votre leadership naturel brille le plus face aux obstacles. Prenez les devants sur ce projet dès aujourd’hui !",
+          "action": "Donnez l’exemple lors de votre prochaine réunion"
+        }
+      ],
+      "egennam": [
+        {
+          "type": "créativité",
+          "icon": "🎨",
+          "title": "Exprimez votre côté artistique",
+          "message": "Votre sens esthétique est accru aujourd’hui. Créez quelque chose de beau ou admirez l’art qui vous entoure.",
+          "action": "Visitez une galerie ou créez quelque chose d'artistique"
+        },
+        {
+          "type": "relation",
+          "icon": "💕",
+          "title": "Une connexion profonde est importante",
+          "message": "Votre nature empathique peut aider quelqu’un à guérir aujourd’hui. S'il vous plaît, écoutez ceux qui en ont besoin.",
+          "action": "Ayez des conversations significatives avec des amis"
+        },
+        {
+          "type": "bien-être",
+          "icon": "🧘",
+          "title": "Appréciez votre subtilité",
+          "message": "Votre intelligence émotionnelle est un cadeau. Lorsque vous vous sentez dépassé, prenez le temps de prendre soin de vous.",
+          "action": "Pratiquez la pleine conscience ou la méditation"
+        }
+      ],
+      "tetonye": [
+        {
+          "type": "ambition",
+          "icon": "🔥",
+          "title": "trace ton propre chemin",
+          "message": "Votre esprit indépendant est votre super pouvoir. N’ayez pas peur d’emprunter un chemin non conventionnel aujourd’hui.",
+          "action": "Prenez la décision audacieuse que vous avez reportée"
+        },
+        {
+          "type": "confiance",
+          "icon": "⚡",
+          "title": "Possédez votre pouvoir",
+          "message": "Votre confiance inspire les autres. Partagez vos idées avec audace : le monde a besoin de votre point de vue unique.",
+          "action": "Exprimez-vous lorsque votre voix compte"
+        },
+        {
+          "type": "équilibre",
+          "icon": "⚖️",
+          "title": "la force dans la vulnérabilité",
+          "message": "Votre force ne signifie pas que vous devez tout faire seul. Aujourd’hui, acceptez l’aide gracieusement.",
+          "action": "Demander de l'aide pour les tâches difficiles"
+        }
+      ],
+      "egenteto": [
+        {
+          "type": "nourrir",
+          "icon": "🌸",
+          "title": "Vos soins guérissent",
+          "message": "Votre énergie nourricière est exactement ce dont quelqu’un a besoin aujourd’hui. Faites confiance à votre instinct pour tendre la main.",
+          "action": "Enregistrez-vous sur quelqu'un qui vous est cher"
+        },
+        {
+          "type": "intuition",
+          "icon": "✨",
+          "title": "Faites confiance à votre voix intérieure",
+          "message": "Votre intuition est particulièrement forte aujourd’hui. Faites attention à ces doux coups de coude et à ces intuitions.",
+          "action": "Prenez une décision basée sur votre intuition"
+        },
+        {
+          "type": "soins auto-administrés",
+          "icon": "🛁",
+          "title": "Remplissez votre propre tasse",
+          "message": "Vous donnez tellement aux autres. N'oubliez pas de prendre soin de vous aussi : vous méritez les mêmes soins que vous prodiguez.",
+          "action": "Faites quelque chose uniquement pour votre propre plaisir"
+        }
+      ]
+    },
+    "title": "Couple Compatibility Test",
+    "action": "Today's Action"
+  },
+  "compatibility": {
+    "levels": {
+      "perfect": "Perfect Match",
+      "great": "Great Match",
+      "good": "Good Match",
+      "challenging": "Challenging"
+    },
+    "title": "Couple Compatibility Test",
+    "description": "Discover your romantic compatibility with your partner's Egenteto type",
+    "selectPartner": "Select Your Partner's Type",
+    "selectDesc": "Choose your partner's Egenteto type to see your compatibility",
+    "scoreLabel": "{score}% Compatible",
+    "insights": "Relationship Insights",
+    "combination": "Your Combination:",
+    "loveLanguages": "Love Languages:",
+    "dateIdeas": "Perfect Date Ideas:",
+    "tryAnother": "Try Another Type",
+    "share": "Share Results"
+  },
+  "result": {
+    "title": "Votre Profil",
+    "traits": "Traits Clés",
+    "description": "Description Détaillée",
+    "compatibility": "Compatibilité",
+    "share": "Partager le Résultat",
+    "copied": "Copié dans le presse-papiers",
+    "copy": "Copier le Lien",
+    "retake": "Reprendre le Test"
+  },
+  "a": "A",
+  "saveResult": "Enregistrer le Résultat",
+  "saveError": "Échec de l'enregistrement du résultat.",
+  "personalityAnalysis": "Analyse de Personnalité",
+  "compatibilityChartTitle": "Tableau de Compatibilité",
+  "compatibilityLabel": "Compatibilité",
+  "insights": "Perspicacités",
+  "traitsGuide": "Guide des Traits",
+  "strengths": "Points Forts",
+  "growthAreas": "Axes d'Amélioration",
+  "match": "Correspondance",
+  "coupleTest": "Test de Couple",
+  "coupleTestDesc": "Testez la compatibilité avec votre partenaire.",
+  "loveLanguage": "Langage de l'Amour",
+  "loveLanguageDesc": "Comment vous exprimez et recevez l'amour.",
+  "idealDate": "Rendez-vous Idéal",
+  "awards": "Récompenses",
+  "growth": "Chemin de Croissance",
+  "growthComingSoon": "Chemin de Croissance à Venir",
+  "growthComingSoonDesc": "Des informations pour le développement personnel sont en route.",
+  "saveImage": "Enregistrer l'Image",
+  "backToHome": "Retour à l'Accueil"
+}

@@ -1,0 +1,45 @@
+{
+  "health": {
+    "sleepDream": {
+      "status": {
+        "no_data": {
+          "title": "Sin datos de sueño",
+          "desc": "Aún no hay registros de sueño. Registre su sueño hoy."
+        },
+        "critical_sleep": {
+          "title": "Cuidado con la falta de sueño",
+          "desc": "La calidad del sueño es mala. Se necesita recuperación."
+        },
+        "good_state": {
+          "title": "buenas condiciones para dormir",
+          "desc": "Parece que estás descansando lo suficiente. Excelente."
+        },
+        "neutral": {
+          "title": "estado de sueño normal",
+          "desc": "No está mal, pero se puede mejorar para dormir mejor."
+        }
+      },
+      "metrics": {
+        "sleepScore": "puntuación de sueño",
+        "lastDream": "último sueño",
+        "recorded": "registrada"
+      },
+      "prompts": {
+        "sleep": {
+          "title": "Sigue tu sueño",
+          "desc": "Registre la calidad de su sueño hoy y verifique su puntuación."
+        },
+        "dream": {
+          "title": "graba tus sueños",
+          "desc": "Registre cualquier sueño que recuerde e interprete su significado."
+        }
+      },
+      "prescription": {
+        "title": "prescripción personalizada",
+        "desc": "Parece que necesitas tranquilidad de cuerpo y mente. Pruebe el botón de pánico o los ejercicios de respiración.",
+        "button": "Usando herramientas de estabilidad"
+      },
+      "quote": "Dormir es la mejor meditación. - Dalái Lama"
+    }
+  }
+}

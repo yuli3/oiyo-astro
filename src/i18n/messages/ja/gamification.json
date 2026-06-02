@@ -1,0 +1,17 @@
+{
+  "level": {
+    "title": "Streak Stats",
+    "totalPoints": "合計ポイント",
+    "nextRewards": "次のレベルの報酬:",
+    "currentLevel": "現在のレベル",
+    "progress": "進捗"
+  },
+  "streak": {
+    "title": "連続統計",
+    "bonuses": "連続ボーナス:",
+    "day7": "7 日間: +50% ボーナス",
+    "day14": "14 日間: +100% ボーナス",
+    "day30": "30 日間: +150% ボーナス",
+    "day100": "100日: +300%ボーナス"
+  }
+}

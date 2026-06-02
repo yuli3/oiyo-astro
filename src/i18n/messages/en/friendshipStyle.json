@@ -1,0 +1,58 @@
+{
+  "meta": {
+    "title": "Kindred Resonance Profiler ",
+    "resultTitle": "{title} - Revelation",
+    "description": "Examine the shared frequencies and alchemical patterns of your kindred connections.",
+    "keywords": "friendship resonance, social archetypes, soul geometry, Oiyo"
+  },
+  "hero": {
+    "title": "Kindred Resonance",
+    "subtitle": "Understand the profound rhythm through which you build and sustain soulful bonds.",
+    "description": "Explore the alchemical nuances of your social interactions and deepen your relational architecture.",
+    "cta": "Initiate Inquiry",
+    "badge": "Kindred Spirits"
+  },
+  "test": {
+    "insightBullets": [
+      "Discover the unique patterns that define your path.",
+      "Illuminate the unspoken layers of your social philosophy.",
+      "Nurture the sacred bond through conscious awareness."
+    ],
+    "progress": "Resonance Ascent",
+    "next": "Forward",
+    "previous": "Reflect",
+    "submit": "Reveal the Synthesis",
+    "loading": "Calibrating social harmonics...",
+    "selectOption": "Mark the path of truth"
+  },
+  "result": {
+    "ai": {
+      "title": "Sages of Social Strategy",
+      "premium": "Bespoke Alchemical Report",
+      "description": "Unlock profound relational insights derived from your {title} signature. Master the art of connection and deepen your lifelong bonds.",
+      "processing": "Synthesizing Dynamics...",
+      "processingKo": "Processing...",
+      "upgrade": "Upgrade to Unlock Alchemical Analysis",
+      "generate": "Generate Alchemical Strategy",
+      "complete": "Sacred Social Analysis Complete"
+    },
+    "traits": {
+      "title": "Archetypal Traits"
+    },
+    "connections": {
+      "title": "Optimal Resonance",
+      "vibe": "Your signature aligns most harmoniously with these archetypes:",
+      "proTip": "Wisdom Note: Your frequency naturally complements these archetypes, facilitating immediate trust and recursive growth."
+    },
+    "actions": {
+      "retake": "Re-Initiate Calibration",
+      "returnHome": "Return to Nexus"
+    },
+    "title": "Revelation of Affinity",
+    "description": "A detailed synthesis of your unique archetypal frequency and its implications for connection.",
+    "loading": "Distilling your social map...",
+    "badge": "Your Kindred Signature"
+  },
+  "title": "Kindred Resonance",
+  "description": "Discover the unique colors and temperatures of the friendships that color your world."
+}

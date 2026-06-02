@@ -1,0 +1,700 @@
+{
+  "generic": {
+    "questions": [
+      {
+        "id": "EI_01",
+        "text": "When meeting new people, you:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Actively approach them and start conversations",
+            "value": "E"
+          },
+          {
+            "text": "Wait for them to approach you first",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_02",
+        "text": "When you are stressed, you:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Meet friends and talk to feel better",
+            "value": "E"
+          },
+          {
+            "text": "Spend time alone to organize your thoughts",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_03",
+        "text": "At parties or gatherings, you:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Actively talk with many different people",
+            "value": "E"
+          },
+          {
+            "text": "Have deep conversations with a few close people",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_04",
+        "text": "When solving problems, you:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Discuss with others to get ideas",
+            "value": "E"
+          },
+          {
+            "text": "Think deeply alone before reaching conclusions",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_05",
+        "text": "About phone calls, you:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Enjoy long calls and frequently call others",
+            "value": "E"
+          },
+          {
+            "text": "Make short calls only when necessary",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_06",
+        "text": "The ideal way to spend your weekend is:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Being active outside with friends",
+            "value": "E"
+          },
+          {
+            "text": "Enjoying hobbies alone at home",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "EI_07",
+        "text": "In meetings or discussions, you:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Share opinions immediately and participate actively",
+            "value": "E"
+          },
+          {
+            "text": "Think carefully before speaking cautiously",
+            "value": "I"
+          }
+        ]
+      },
+      {
+        "id": "SN_01",
+        "text": "When starting a new project:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Start with specific plans and details",
+            "value": "S"
+          },
+          {
+            "text": "Envision the overall vision and possibilities first",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_02",
+        "text": "When receiving information, you:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Focus on concrete facts and data",
+            "value": "S"
+          },
+          {
+            "text": "Look for hidden meanings and possibilities",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_03",
+        "text": "Between past and future:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Value past experiences and traditions",
+            "value": "S"
+          },
+          {
+            "text": "Are interested in future possibilities and changes",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_04",
+        "text": "When learning, you:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Learn step by step methodically",
+            "value": "S"
+          },
+          {
+            "text": "Understand the overall context before learning details",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_05",
+        "text": "In daily life, you:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Pursue realistic and practical things",
+            "value": "S"
+          },
+          {
+            "text": "Like new ideas and innovations",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_06",
+        "text": "When looking at problems, you:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Focus on specific solutions",
+            "value": "S"
+          },
+          {
+            "text": "Explore various perspectives and new approaches",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "SN_07",
+        "text": "When encountering art or literature:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Prefer realistic and clear expressions",
+            "value": "S"
+          },
+          {
+            "text": "Are drawn to symbolic and abstract expressions",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": "TF_01",
+        "text": "When making decisions, you:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Prioritize logical analysis and objective criteria",
+            "value": "T"
+          },
+          {
+            "text": "Consider personal values and emotional impact",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_02",
+        "text": "In conflict situations, you:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Try to resolve based on facts and principles",
+            "value": "T"
+          },
+          {
+            "text": "Prioritize the emotions and relationships of those involved",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_03",
+        "text": "When receiving criticism, you:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Analyze objectively to find areas for improvement",
+            "value": "T"
+          },
+          {
+            "text": "Feel hurt but try to understand their intentions",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_04",
+        "text": "When evaluating others:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Judge based on abilities and performance",
+            "value": "T"
+          },
+          {
+            "text": "Value character and effort",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_05",
+        "text": "When working in a team, you:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Prioritize efficiency and results",
+            "value": "T"
+          },
+          {
+            "text": "Value team harmony and atmosphere",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_06",
+        "text": "When a friend seeks advice:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Provide solutions to the problem",
+            "value": "T"
+          },
+          {
+            "text": "Empathize with their emotions and comfort them",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "TF_07",
+        "text": "In rules and exceptional situations:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Think principles should be applied consistently",
+            "value": "T"
+          },
+          {
+            "text": "Think flexibility should be shown depending on the situation",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": "JP_01",
+        "text": "In daily life, you:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Make plans and follow them",
+            "value": "J"
+          },
+          {
+            "text": "Act flexibly according to each situation",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_02",
+        "text": "When working on tasks with deadlines:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Work on it steadily in advance",
+            "value": "J"
+          },
+          {
+            "text": "Work intensively as the deadline approaches",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_03",
+        "text": "When going on a trip, you:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Prepare detailed schedules and reservations in advance",
+            "value": "J"
+          },
+          {
+            "text": "Make rough plans and enjoy spontaneously",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_04",
+        "text": "About organizing your room or desk:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "It should always be neat and organized",
+            "value": "J"
+          },
+          {
+            "text": "A little messy is fine as long as you can find what you need",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_05",
+        "text": "When new opportunities arise:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Consider carefully before deciding",
+            "value": "J"
+          },
+          {
+            "text": "Try it first and adjust later",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_06",
+        "text": "When shopping, you:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Decide what you need in advance and buy it",
+            "value": "J"
+          },
+          {
+            "text": "Browse around and buy what catches your eye on the spot",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": "JP_07",
+        "text": "When you need to make a decision:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Decide quickly and put it into action",
+            "value": "J"
+          },
+          {
+            "text": "Keep multiple options open and decide slowly",
+            "value": "P"
+          }
+        ]
+      }
+    ],
+    "types": {
+      "ISTJ": {
+        "strengths": [
+          "Strong Responsibility",
+          "Precise Attention to Detail",
+          "Intense Focus",
+          "Honesty"
+        ],
+        "challenges": [
+          "Resistance to Change",
+          "Inflexibility",
+          "Insensitivity to Others' Feelings"
+        ],
+        "name": "The Logistician",
+        "emoji": "📚",
+        "description": "Practical people who think based on facts and act rationally.",
+        "detailedDescription": "You have a strong sense of responsibility and prefer orderly environments. Diligence and perseverance are your greatest weapons, and you demonstrate the responsibility to see through what you start. While you may be conservative about change, your stability serves as a reliable pillar in organizations and families."
+      },
+      "ISFJ": {
+        "strengths": [
+          "Meticulous Care",
+          "Diligence",
+          "Strong Protective Instinct",
+          "Practical Execution"
+        ],
+        "challenges": [
+          "Excessive Self-Sacrifice",
+          "Sensitivity to Criticism",
+          "Difficulty Expressing Own Emotions"
+        ],
+        "name": "The Defender",
+        "emoji": "📖",
+        "description": "Dedicated people who pour their hearts into protecting those they care about.",
+        "detailedDescription": "You enjoy carefully attending to the needs of those around you and helping them. Humble and warm, you find great fulfillment not only in your own work but also in helping others. While you may sometimes put your own needs second, your dedication makes the world a warmer place."
+      },
+      "INFJ": {
+        "strengths": [
+          "Deep Insight",
+          "Decisiveness and Willpower",
+          "Empathy",
+          "Creative Problem Solving"
+        ],
+        "challenges": [
+          "Excessive Perfectionism",
+          "Vulnerability to Burnout",
+          "Difficulty Revealing True Self"
+        ],
+        "name": "The Advocate",
+        "emoji": "🌟",
+        "description": "Quiet, mystical idealists with tireless inspiration.",
+        "detailedDescription": "You appear quiet on the outside, but hide passionate fervor and deep insight within. You feel a calling to discover and help people's hidden potential, and have a vision to create a better world. Your warm insights resonate deeply with those around you."
+      },
+      "INTJ": {
+        "strengths": [
+          "Strategic Thinking",
+          "Independent Conviction",
+          "Intellectual Curiosity",
+          "Efficiency"
+        ],
+        "challenges": [
+          "Cynical Attitude",
+          "Directness in Communication",
+          "Skepticism of Social Rules"
+        ],
+        "name": "The Architect",
+        "emoji": "🎯",
+        "description": "Imaginative strategists who develop thorough plans.",
+        "detailedDescription": "You enjoy understanding and improving complex systems with keen observation and logical thinking. You have your own high standards and perform best when working independently. While you may seem cold at times, your strategic thinking finds a way through any difficulty."
+      },
+      "ISTP": {
+        "strengths": [
+          "Calm Crisis Management",
+          "Practical Handiness",
+          "Objective Judgment",
+          "Flexible Adaptability"
+        ],
+        "challenges": [
+          "Lack of Consideration for Others' Feelings",
+          "Easily Bored",
+          "Difficulty Following Through on Plans"
+        ],
+        "name": "The Virtuoso",
+        "emoji": "🔧",
+        "description": "Bold, practical experimenters skilled with all kinds of tools.",
+        "detailedDescription": "You have an exceptional ability to observe situations and find immediate solutions. Even without many words, you show natural talent in creating things with your hands or handling machinery. Calmly dealing with any crisis, you are a true practitioner."
+      },
+      "ISFP": {
+        "strengths": [
+          "Artistic Sensitivity",
+          "Strong Empathy",
+          "Immersion in the Present",
+          "Modesty"
+        ],
+        "challenges": [
+          "Indecisiveness",
+          "Difficulty Planning for the Future",
+          "Need for Frequent Alone Time"
+        ],
+        "name": "The Adventurer",
+        "emoji": "🎨",
+        "description": "Flexible, charming artists always ready to explore something new.",
+        "detailedDescription": "You cherish the present moment and express the world through your aesthetic sense. Charming and kind, you try to avoid conflict with others. Your unique artistic sensitivity gives fresh inspiration to those around you and softens the atmosphere."
+      },
+      "INFP": {
+        "strengths": [
+          "Vivid Imagination",
+          "Strong Altruism",
+          "Open-mindedness",
+          "Pursuit of Authenticity"
+        ],
+        "challenges": [
+          "Overly Idealistic",
+          "Taking Criticism Personally",
+          "Overlooking Practical Details"
+        ],
+        "name": "The Mediator",
+        "emoji": "✨",
+        "description": "Poetic, kind, and altruistic people who always want to help a good cause.",
+        "detailedDescription": "You are a romantic who lives by your own values and beliefs. You excel at discovering the goodness and potential hidden within people, and sometimes express your deep feelings through writing. Your warm empathy and consideration become a warm light in a cold world."
+      },
+      "INTP": {
+        "strengths": [
+          "Logical Analysis",
+          "Original Ideas",
+          "Objective Perspective",
+          "Quick Intellectual Grasp"
+        ],
+        "challenges": [
+          "Lack of Implementation",
+          "Overly Analytical Attitude",
+          "Difficulty in Social Situations"
+        ],
+        "name": "The Logician",
+        "emoji": "🔬",
+        "description": "Innovative inventors with an endless thirst for knowledge.",
+        "detailedDescription": "You enjoy delving into the world's principles and finding logical contradictions. You excel at connecting abstract ideas and concepts, constantly exploring to satisfy your intellectual curiosity. Your original way of thinking becomes the driving force for presenting new paradigms."
+      },
+      "ESTP": {
+        "strengths": [
+          "Bold Action",
+          "Social Charm",
+          "Excellent Situational Judgment",
+          "Practical Sense"
+        ],
+        "challenges": [
+          "Impulsive Behavior",
+          "Lack of Deep Planning",
+          "Resistance to Rules and Discipline"
+        ],
+        "name": "The Entrepreneur",
+        "emoji": "⚡",
+        "description": "Smart, energetic people with excellent insight who enjoy adventure.",
+        "detailedDescription": "You prefer immediate feedback and like to learn by experiencing things hands-on in the field. You lead the atmosphere around you with overflowing energy and have an exceptional sense for capturing practical opportunities. Your decisiveness and action change any stagnant situation."
+      },
+      "ESFP": {
+        "strengths": [
+          "Ability to Provide Joy",
+          "Social Affinity",
+          "Practical Help",
+          "Observation"
+        ],
+        "challenges": [
+          "Lack of Focus",
+          "Conflict Avoidance",
+          "Excessive Playfulness or Stimulation-Seeking"
+        ],
+        "name": "The Entertainer",
+        "emoji": "💃",
+        "description": "Spontaneous, energetic, and passionate people who delight those around them.",
+        "detailedDescription": "You are someone who enjoys the present moment to the fullest. Optimistic and sociable, you have a natural talent for making others happy. Your bright energy is contagious to those around you and brings vitality to the community."
+      },
+      "ENFP": {
+        "strengths": [
+          "Vivid Imagination",
+          "Strong Affinity",
+          "Optimistic Attitude",
+          "Communication Skills"
+        ],
+        "challenges": [
+          "Scattered and Lacking Implementation",
+          "Vulnerability to Emotional Stress",
+          "Difficulty with Repetitive Tasks"
+        ],
+        "name": "The Campaigner",
+        "emoji": "🎨",
+        "description": "Passionate, creative, and sociable free spirits who always find reasons to smile.",
+        "detailedDescription": "You enjoy emotionally connecting with people and have a very rich imagination. New ideas overflow with enthusiasm, and you excel at drawing out the potential in those around you. Your warm insight and energy give people new hope."
+      },
+      "ENTP": {
+        "strengths": [
+          "Original Thinking",
+          "Quick Wit",
+          "Logical Debate Skills",
+          "Openness"
+        ],
+        "challenges": [
+          "May Be Misunderstood Due to Loving Debate",
+          "Lack of Completion on Details",
+          "Tendency to Ignore Others' Feelings"
+        ],
+        "name": "The Debater",
+        "emoji": "💡",
+        "description": "Smart, curious thinkers who don't fear intellectual challenges.",
+        "detailedDescription": "You enjoy flipping existing ideas and exploring new possibilities. You lead intellectual discussions with witty remarks and logical arguments, and have the ability to view any problem from multiple angles. Your innovative perspective becomes the power to break conventions."
+      },
+      "ESTJ": {
+        "strengths": [
+          "Strong Drive",
+          "Organization and Management Skills",
+          "Diligent Self-Management",
+          "Practical Judgment"
+        ],
+        "challenges": [
+          "Can Be Overly Strict",
+          "Lack of Empathy",
+          "Resistance to New Methods"
+        ],
+        "name": "The Executive",
+        "emoji": "📊",
+        "description": "Excellent administrators with unparalleled skill in managing things and people.",
+        "detailedDescription": "You respect tradition and order and consider it important to establish and follow clear rules. You have excellent organizational skills that maximize efficiency and are a reliable leader who faithfully fulfills commitments. Your decisiveness brings stability to chaotic situations."
+      },
+      "ESFJ": {
+        "strengths": [
+          "Warm Inclusivity",
+          "Strong Responsibility",
+          "Exceptional Collaboration",
+          "Practical Altruism"
+        ],
+        "challenges": [
+          "Overly Conscious of Others' Opinions",
+          "Easily Hurt by Criticism",
+          "Difficulty Saying No"
+        ],
+        "name": "The Consul",
+        "emoji": "🤝",
+        "description": "Popular people who are attentive and sociable towards others and enthusiastic about helping them.",
+        "detailedDescription": "You value harmony and balance and carefully consider those around you. You cherish community rules and traditions and work diligently to meet the expectations of others. Your warm sociability plays a powerful role as an airbag that binds people together."
+      },
+      "ENFJ": {
+        "strengths": [
+          "Charismatic Leadership",
+          "Strong Empathy",
+          "Ability to Encourage Others",
+          "Responsibility"
+        ],
+        "challenges": [
+          "Excessive Idealism",
+          "Over-Involvement in Others' Problems",
+          "Severe Self-Criticism"
+        ],
+        "name": "The Protagonist",
+        "emoji": "👥",
+        "description": "Charismatic, inspiring leaders who captivate audiences.",
+        "detailedDescription": "You have a natural talent for helping people grow and leading them to a better future. You have excellent empathy and display powerful charisma that unites people for a common goal. Your leadership becomes a positive force that transforms those around you."
+      },
+      "ENTJ": {
+        "strengths": [
+          "Strategic Planning",
+          "Strong Leadership",
+          "Logical Judgment",
+          "Maximizing Efficiency"
+        ],
+        "challenges": [
+          "Coldness That May Seem Impersonal",
+          "Lack of Patience",
+          "Can Be Dominant Over Others' Opinions"
+        ],
+        "name": "The Commander",
+        "emoji": "👔",
+        "description": "Bold, imaginative leaders with powerful will who always find a way or make one.",
+        "detailedDescription": "You excel at formulating long-term visions and devising concrete strategies to realize them. You possess cold logic and strong drive, leading organizations efficiently to produce results. No matter what obstacles come your way, you break through head-on to claim victory."
+      }
+    }
+  }
+}

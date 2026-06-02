@@ -1,0 +1,35 @@
+{
+  "inputs": {
+    "birthdate": "Date de Naissance",
+    "analyze": "Analyser",
+    "dob": "Date de Naissance",
+    "check": "Vérifier"
+  },
+  "meta": {
+    "title": "Trouver Ma Fleur de Naissance",
+    "description": "Quelle fleur ressemble à votre âme ?",
+    "keywords": "Fleur de naissance, Langage des fleurs, Test de personnalité, Anniversaire, Fleurs"
+  },
+  "result": {
+    "stone": "Pierre de Naissance",
+    "flower": "Fleur de Naissance",
+    "color": "Couleur Protectrice",
+    "title": "Trouver Ma Fleur de Naissance",
+    "description": "Quelle fleur ressemble à votre âme ?"
+  },
+  "test": {
+    "progress": "Progrès",
+    "submit": "Soumettre",
+    "loading": "Chargement",
+    "selectOption": "Sélectionner",
+    "insightBullets": [
+      "Analyser la signification symbolique des fleurs...",
+      "Analyser les traits de personnalité...",
+      "Confirmation du sort de la fleur de naissance..."
+    ],
+    "next": "Suivant",
+    "previous": "Précédent"
+  },
+  "title": "Trouver Ma Fleur de Naissance",
+  "description": "Quelle fleur ressemble à votre âme ?"
+}

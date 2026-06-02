@@ -1,0 +1,26 @@
+{
+  "about": {
+    "mission": "Nuestra Misión Sagrada",
+    "values": "Nuestros Valores Fundamentales",
+    "story": "La Crónica"
+  },
+  "legal": {
+    "privacy": {
+      "sanctity": "Santidad de los Datos",
+      "sanctity_header": "El Escudo del Anonimato",
+      "insight": "Generación de Insights",
+      "insight_header": "Sabiduría Colectiva, Soberanía Individual",
+      "sovereignty": "Soberanía del Alma",
+      "sovereignty_header": "El Derecho a Desvanecerse en el Vacío"
+    },
+    "terms": {
+      "pact": "Reconocimiento del Pacto",
+      "pact_header": "Reconocimiento del Convenio Digital",
+      "duties": "Deberes del Apóstol",
+      "duties_header": "El Deber del Descubrimiento Veraz",
+      "knowledge": "Conocimiento Sagrado",
+      "knowledge_header": "Propiedad de los Algoritmos Resonantes"
+    }
+  },
+  "marketing": {}
+}

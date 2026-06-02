@@ -1,0 +1,21 @@
+{
+  "ui": {
+    "title": "Notifications",
+    "all": "All",
+    "unread": "Unread",
+    "readAll": "Mark all as read",
+    "markRead": "Mark as read",
+    "view": "View",
+    "viewAll": "View all notifications"
+  },
+  "empty": {
+    "noUnread": "No unread notifications",
+    "noNotifications": "No notifications yet"
+  },
+  "time": {
+    "justNow": "Just now",
+    "minutesAgo": "{minutes}m ago",
+    "hoursAgo": "{hours}h ago",
+    "daysAgo": "{days}d ago"
+  }
+}

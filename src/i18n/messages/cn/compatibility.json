@@ -1,0 +1,90 @@
+{
+  "types": {
+    "soulmate": {
+      "name": "成长之机",
+      "description": "分析彼此的能量如何共鸣。"
+    },
+    "complementary": {
+      "name": "成长之机",
+      "description": "分析彼此的能量如何共鸣。"
+    },
+    "mentor": {
+      "name": "成长之机",
+      "description": "分析彼此的能量如何共鸣。"
+    },
+    "challenging": {
+      "name": "成长之机",
+      "description": "分析彼此的能量如何共鸣。"
+    }
+  },
+  "scores": {
+    "high": "梦幻般的默契",
+    "medium": "舒适的调和",
+    "low": "需要努力的关系"
+  },
+  "title": "相生之泽",
+  "description": "分析关系与协同效应。",
+  "narrative": "二位的相遇如同一枚瑰宝，在互补中成就了彼此的圆满。",
+  "levels": {
+    "perfect": "天作之合",
+    "great": "默契十足",
+    "good": "潜力无限",
+    "challenging": "成长契机"
+  },
+  "selectPartner": "选择对象",
+  "selectDesc": "选择一个命运与你对比。",
+  "insights": "深度洞察",
+  "combination": "宇宙组合",
+  "loveLanguages": "爱之语言",
+  "dateIdeas": "约会创意",
+  "tryAnother": "尝试其他匹配",
+  "share": "分享结果",
+  "analysis": {
+    "excellent": "天作之合",
+    "veryGood": "琴瑟和鸣",
+    "good": "良缘相宜",
+    "average": "平淡且安",
+    "needsWork": "需待磨合",
+    "challenging": "疑有波折"
+  },
+  "subtitle": "推演两份宿命间的气韵合声",
+  "yourInfo": "汝之天机",
+  "partnerInfo": "彼之天机",
+  "result": {
+    "title": "相生之泽",
+    "elements": "五行",
+    "zodiac": "生肖",
+    "personality": "心性",
+    "strengths": "契合之光",
+    "challenges": "磨炼之所",
+    "retake": "重设天机"
+  },
+  "error": "❌ 秘法错误",
+  "calculate": "推演天命契合",
+  "traits": {
+    "controlling": {
+      "title": "相生之泽",
+      "description": "一方滋养，一方壮大，气机流转自然圆融，和谐无碍。"
+    },
+    "neutral": {
+      "title": "相生之泽",
+      "description": "一方滋养，一方壮大，气机流转自然圆融，和谐无碍。"
+    },
+    "same": {
+      "title": "相生之泽",
+      "description": "一方滋养，一方壮大，气机流转自然圆融，和谐无碍。"
+    },
+    "supporting": {
+      "title": "相生之泽",
+      "description": "一方滋养，一方壮大，气机流转自然圆融，和谐无碍。"
+    }
+  },
+  "reasons": {
+    "same": "同气连枝，如友如亲，相处自然惬意。",
+    "generates": "汝之气机滋养彼方，令其焕发勃勃生机。",
+    "generated_by": "彼方之泽润汝之命，得其温润与扶持。",
+    "controls": "相激生变，于挑战中砥砺前行，成就彼此。",
+    "controlled_by": "受彼方节制，于方圆间寻得秩序，共趋和谐。",
+    "neutral": "气韵淡然，互不惊扰，各自安然。"
+  }
+}

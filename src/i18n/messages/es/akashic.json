@@ -1,0 +1,30 @@
+{
+  "tabs": {
+    "essence": "Esencia",
+    "destiny": "Destino",
+    "biology": "Ritmo Biológico"
+  },
+  "essence": {
+    "title": "Registro Akáshico",
+    "quote": "La firma única de tu consciencia",
+    "soulFormula": "Fórmula del Alma",
+    "humanDesign": "Diseño Humano",
+    "authority": "Autoridad",
+    "locked": "Desbloquea para revelar tu esencia del alma"
+  },
+  "destiny": {
+    "title": "Registro Akáshico",
+    "lifePath": "Camino de Vida",
+    "seeker": "El Buscador",
+    "animal": "Animal Guardián"
+  },
+  "biology": {
+    "title": "Registro Akáshico",
+    "chronotype": "Cronotipo",
+    "constitution": "Constitución"
+  },
+  "title": "Registro Akáshico",
+  "subtitle": "Archivo del Alma",
+  "close": "Cerrar",
+  "description": "Explora los registros atemporales del viaje de tu alma a través de las vidas."
+}

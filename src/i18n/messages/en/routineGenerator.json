@@ -1,0 +1,145 @@
+{
+  "routineGenerator": {
+    "meta": {
+      "resultTitle": "your optimized routine",
+      "resultDescription": "A customized schedule that harmonizes with your unique rhythm.",
+      "testTitle": "routine architecture",
+      "testDescription": "Design your perfect day according to your natural energy flow.",
+      "keywords": "Routines, productivity flow, habit formation, daily rituals, efficiency",
+      "title": "architecture of vitality",
+      "description": "Discover the structure that maximizes your potential."
+    },
+    "hero": {
+      "badge": "optimization of life",
+      "subtitle": "We create sacred vessels to contain our daily existence.",
+      "cta": "planning my day",
+      "title": "routine synthesis",
+      "description": "A comprehensive design for your waking life."
+    },
+    "benefits": {
+      "morning": {
+        "icon": "🌤️",
+        "description": "Set the tone for your day with purpose and clarity.",
+        "title": "morning ritual"
+      },
+      "night": {
+        "icon": "🌙",
+        "description": "Prepare your mind for deep relaxation and tomorrow's success.",
+        "title": "End of the evening"
+      },
+      "personalized": {
+        "icon": "🎯",
+        "description": "It's a schedule that works with your unique tempo.",
+        "title": "custom rhythm"
+      },
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Energy Alignment",
+          "description": "Work when your focus is naturally sharpest.",
+          "question": "Why does timing matter?",
+          "answer": "Aligning tasks with your biological energy peaks multiplies your efficiency without extra effort."
+        },
+        {
+          "icon": "🚀",
+          "title": "Habit Momentum",
+          "description": "Build consistency through scientifically designed triggers.",
+          "question": "How do habits stick?",
+          "answer": "By anchoring new behaviors to existing routines, we create a frictionless path to consistency."
+        }
+      ],
+      "title": "Why should you plan your day?"
+    },
+    "cta": {
+      "subtitle": "Your new life begins with just one day of planning.",
+      "button": "Start building",
+      "title": "start the change"
+    },
+    "faq": {
+      "items": [
+        {
+          "question": "Is a rigid routine restrictive?",
+          "answer": "True structure creates freedom. By automating the basics, you liberate your mind for creativity."
+        },
+        {
+          "question": "What if my schedule changes?",
+          "answer": "Our routines are modular. You can adapt the blocks to fit the fluid nature of reality."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "Cognitive Load Balancing",
+          "description": "Distributes difficult tasks to times of peak mental clarity."
+        },
+        {
+          "icon": "⚖️",
+          "title": "Restorative Intervals",
+          "description": "Strategically placed breaks to maintain high performance."
+        }
+      ]
+    },
+    "result": {
+      "benefits": [
+        "Increased Focus",
+        "Better Sleep",
+        "Reduced Decision Fatigue"
+      ],
+      "meta": {
+        "title": "routine result",
+        "description": "Your custom optimized daily schedule.",
+        "keywords": "schedule, plan, daily routine"
+      },
+      "shareTitle": "my designed routine",
+      "shareText": "I optimized my day with OIYO. Check out my blueprint.",
+      "subtitle": "A schedule created to resonate uniquely with you",
+      "morning": "morning awakening",
+      "night": "evening descent",
+      "sunrise": "sunrise rhythm",
+      "starlight": "starlight rhythm",
+      "guide": "Lifestyle Navigator",
+      "saveImage": "Save blueprint",
+      "generateNew": "redesign",
+      "home": "sanctuary",
+      "resultTitle": "Your Routine Blueprint",
+      "resultDescription": "Your daily flow optimized for balance and achievement."
+    },
+    "test": {
+      "intro": {
+        "title": "AI routine architect",
+        "description": "We'll design a day that honors your energy and amplifies your impact.",
+        "start": "Start designing"
+      },
+      "loading": {
+        "title": "Building your day...",
+        "description": "Aligning tasks with your circadian rhythm..."
+      },
+      "navigation": {
+        "prev": "before",
+        "complete": "complete",
+        "start": "start",
+        "finish": "end",
+        "next": "next steps"
+      },
+      "guest": {
+        "welcome": "Welcome, seeker!",
+        "saved": "Your blueprints will be preserved.",
+        "guestMessage": "As a guest, your blueprint will remain for this session only."
+      },
+      "meta": {
+        "title": "routine designer",
+        "description": "Build a perfect daily routine.",
+        "keywords": "Routine builder, habit design"
+      },
+      "progress": "Design stage {current} / {total}",
+      "testTitle": "routine synthesis",
+      "testDescription": "Analyze your habits to build the perfect flow.",
+      "title": "architecture of vitality",
+      "subtitle": "We design the infrastructure for your success."
+    },
+    "title": "Routine optimization",
+    "description": "Refining the dynamics of everyday life."
+  }
+}

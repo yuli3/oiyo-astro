@@ -1,0 +1,20 @@
+{
+  "payment": "お支払いに関する問題",
+  "account": "アカウントのヘルプ",
+  "technical": "技術的なサポート",
+  "feature_request": "機能リクエスト",
+  "general": "一般的なお問い合わせ",
+  "ALL": "すべてのカテゴリー",
+  "title": "カテゴリー",
+  "progressLabel": "進捗",
+  "all": "全て",
+  "viral": "トレンド",
+  "finance": "貯蓄・財産",
+  "career": "キャリア・適性",
+  "mental": "メンタル・心理",
+  "love": "恋愛・相性",
+  "labor": "仕事・ワークスタイル",
+  "living": "ライフスタイル",
+  "fortune": "占い・未来",
+  "finance_tax": "税金"
+}

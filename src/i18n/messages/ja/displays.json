@@ -1,0 +1,41 @@
+{
+  "AncientCoordinateCard": {
+    "colors": {
+      "red": "レッド",
+      "white": "ホワイト",
+      "blue": "ブルー",
+      "yellow": "イエロー"
+    },
+    "mayan": {
+      "systemName": "エジプト・ネテル",
+      "narrative": "神聖な秩序",
+      "solarSeal": "太陽の紋章",
+      "tone": "銀河の音",
+      "toneOf": "{power}の音",
+      "kin": "キン {kin}",
+      "ariaLabel": "エジプトの守護神：あなたの守護者は{god}です。あなたは{attributes}の資質を備えています。"
+    },
+    "celtic": {
+      "systemName": "エジプト・ネテル",
+      "narrative": "神聖な秩序",
+      "treeSign": "樹木のサイン",
+      "ogham": "オガム文字",
+      "ariaLabel": "エジプトの守護神：あなたの守護者は{god}です。あなたは{attributes}の資質を備えています。"
+    },
+    "egyptian": {
+      "systemName": "エジプト・ネテル",
+      "narrative": "神聖な秩序",
+      "guardianDeity": "守護神",
+      "vedicSolar": "ヴェーダ太陽ナクシャトラ",
+      "symbol": "シンボル: {symbol}",
+      "deity": "神体: {deity}",
+      "decan": "エジプト・デカン",
+      "hellenisticSect": "ヘレニズム・セクト",
+      "sect": {
+        "day": "昼のセクト",
+        "night": "夜のセクト"
+      },
+      "ariaLabel": "エジプトの守護神：あなたの守護者は{god}です。あなたは{attributes}の資質を備えています。"
+    }
+  }
+}

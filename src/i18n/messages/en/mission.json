@@ -1,0 +1,38 @@
+{
+  "title": "Our Mission",
+  "description": "To help you find yourself.",
+  "counselor": {
+    "title": {
+      "ko": "soul counselor",
+      "en": "Soul Counselor",
+      "ja": "魂のカウンセラー",
+      "cn": "灵魂咨询师",
+      "fr": "Conseiller de l'âme",
+      "es": "Consejero del alma"
+    },
+    "blessing": "The blessing of your unique existence.",
+    "shadowWork": "Compassionate guidance for your inner shadows."
+  },
+  "coordinator": {
+    "title": {
+      "ko": "orchestrator of life",
+      "en": "Life Coordinator",
+      "ja": "人生のコーディネーター",
+      "cn": "生活协调员",
+      "fr": "Coordinateur de vie",
+      "es": "Coordinador de vida"
+    },
+    "ritual": "Practical rituals for your daily balance."
+  },
+  "curator": {
+    "title": {
+      "ko": "Curator of Wisdom",
+      "en": "Wisdom Curator",
+      "ja": "知恵のキュレーター",
+      "cn": "智慧策展人",
+      "fr": "Curateur de sagesse",
+      "es": "Curador de sabiduría"
+    },
+    "wisdom": "Timeless shards of insight curated for you."
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "questions": [
+    {
+      "id": "amor_1",
+      "pair": ["palabras", "time"],
+      "texts": {
+        "words": "Escuchar palabras de afirmación susurradas cura mi alma cansada.",
+        "time": "Compartir un momento de presencia indivisa crea un vínculo sagrado."
+      }
+    },
+    {
+      "id": "amor_2",
+      "pair": ["regalos", "acts"],
+      "texts": {
+        "gifts": "Una muestra reflexiva sirve como símbolo tangible de nuestra conexión.",
+        "acts": "Quitarme una carga de encima es la verdadera forma de cuidado."
+      }
+    },
+    {
+      "id": "amor_3",
+      "pair": ["tocar", "time"],
+      "texts": {
+        "touch": "Un suave abrazo habla más que mil palabras.",
+        "time": "Caminar juntos en silencio se siente más profundo que la soledad."
+      }
+    },
+    {
+      "id": "amor_4",
+      "pair": ["palabras", "tocar"],
+      "texts": {
+        "words": "Florezco cuando mis virtudes son reconocidas y expresadas en voz alta.",
+        "touch": "Tomarse de la mano me ancla en las corrientes caóticas de la vida."
+      }
+    },
+    {
+      "id": "amor_5",
+      "pair": ["acts", "time"],
+      "texts": {
+        "acts": "Me siento apreciado cuando se eliminan los obstáculos cotidianos.",
+        "time": "Aprecio las conversaciones largas e ininterrumpidas hasta bien entrada la noche."
+      }
+    },
+    {
+      "id": "amor_6",
+      "pair": ["regalos", "palabras"],
+      "texts": {
+        "gifts": "Atesoro los artefactos que llevan el recuerdo de nuestro vínculo.",
+        "words": "Atesoro las letras que inmortalizan en tinta nuestros sentimientos."
+      }
+    },
+    {
+      "id": "amor_7",
+      "pair": ["tocar", "regalos"],
+      "texts": {
+        "touch": "La cercanía física me asegura nuestra unidad tácita.",
+        "gifts": "Un regalo sorpresa me asegura que estoy constantemente en tus pensamientos."
+      }
+    },
+    {
+      "id": "amor_8",
+      "pair": ["acts", "palabras"],
+      "texts": {
+        "acts": "Confío en la devoción que se demuestra a través de un servicio dedicado.",
+        "words": "Confío en la devoción que se expresa mediante elogios alentadores."
+      }
+    },
+    {
+      "id": "amor_9",
+      "pair": ["time", "regalos"],
+      "texts": {
+        "time": "El mayor regalo es la generosidad de vuestra presencia.",
+        "gifts": "El mayor regalo es un objeto tangible elegido con profunda perspicacia."
+      }
+    },
+    {
+      "id": "amor_10",
+      "pair": ["tocar", "acts"],
+      "texts": {
+        "touch": "Sentarme juntos recarga mis reservas emocionales.",
+        "acts": "Ver una tarea completada por mí recarga mis reservas emocionales."
+      }
+    },
+    {
+      "id": "amor_11",
+      "pair": ["palabras", "regalos"],
+      "texts": {
+        "words": "Me siento más segura cuando verbalizas tu compromiso.",
+        "gifts": "Me siento más seguro cuando recuerdas ocasiones especiales con grandes gestos."
+      }
+    },
+    {
+      "id": "amor_12",
+      "pair": ["acts", "time"],
+      "texts": {
+        "acts": "Para mí, las acciones hablan el lenguaje del verdadero romance.",
+        "time": "Las experiencias compartidas me hablan el lenguaje del verdadero romance."
+      }
+    }
+  ]
+}

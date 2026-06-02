@@ -1,0 +1,17 @@
+{
+  "title": "Growth Journey",
+  "description": "Your path to self-awareness and personal evolution.",
+  "levelUp": "Congratulations! You have reached level {emoji} \"{title}\"!",
+  "levelTitles": {
+    "beginner": "Beginner",
+    "explorer": "Explorer",
+    "seeker": "Seeker",
+    "discoverer": "Discoverer",
+    "insightMaster": "Insight Master",
+    "wisdomKeeper": "Wisdom Keeper",
+    "selfAwareSage": "Self-Aware Sage",
+    "enlightenedOne": "Enlightened One",
+    "personalityGuru": "Personality Guru",
+    "legendary": "Legendary"
+  }
+}

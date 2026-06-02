@@ -1,0 +1,131 @@
+{
+  "runes": {
+    "fehu": {
+      "name": "질문",
+      "meaning": "재산",
+      "keyword": "풍부"
+    },
+    "uruz": {
+      "name": "우루즈",
+      "meaning": "힘",
+      "keyword": "활력"
+    },
+    "thurisaz": {
+      "name": "목요일",
+      "meaning": "게이트웨이",
+      "keyword": "방어"
+    },
+    "ansuz": {
+      "name": "안수즈",
+      "meaning": "신호",
+      "keyword": "의사소통"
+    },
+    "raido": {
+      "name": "라이도",
+      "meaning": "여행",
+      "keyword": "여행하다"
+    },
+    "kenaz": {
+      "name": "케나즈",
+      "meaning": "열기",
+      "keyword": "지식"
+    },
+    "gebo": {
+      "name": "게보",
+      "meaning": "선물",
+      "keyword": "공동"
+    },
+    "wunjo": {
+      "name": "운조",
+      "meaning": "기쁨",
+      "keyword": "조화"
+    },
+    "hagalaz": {
+      "name": "하갈라즈",
+      "meaning": "분열",
+      "keyword": "변화"
+    },
+    "nauthiz": {
+      "name": "나우티즈",
+      "meaning": "강제",
+      "keyword": "필요성"
+    },
+    "isa": {
+      "name": "이사",
+      "meaning": "정지",
+      "keyword": "얼음"
+    },
+    "jera": {
+      "name": "목록",
+      "meaning": "수확하다",
+      "keyword": "사이클"
+    },
+    "eihwaz": {
+      "name": "에와즈",
+      "meaning": "방어",
+      "keyword": "지구력"
+    },
+    "perthro": {
+      "name": "퍼스로",
+      "meaning": "신비",
+      "keyword": "운명"
+    },
+    "algiz": {
+      "name": "알기즈",
+      "meaning": "보호",
+      "keyword": "방패"
+    },
+    "sowilo": {
+      "name": "소빌로",
+      "meaning": "전체",
+      "keyword": "해"
+    },
+    "tiwaz": {
+      "name": "티와즈",
+      "meaning": "전사",
+      "keyword": "정당성"
+    },
+    "berkana": {
+      "name": "합리적인",
+      "meaning": "성장",
+      "keyword": "자작나무"
+    },
+    "ehwaz": {
+      "name": "에와즈",
+      "meaning": "움직임",
+      "keyword": "말"
+    },
+    "mannaz": {
+      "name": "만나즈",
+      "meaning": "자아",
+      "keyword": "인류"
+    },
+    "laguz": {
+      "name": "라구즈",
+      "meaning": "흐름",
+      "keyword": "물"
+    },
+    "inguz": {
+      "name": "입구",
+      "meaning": "비옥",
+      "keyword": "새로운 시작"
+    },
+    "dagaz": {
+      "name": "다가즈",
+      "meaning": "돌파구",
+      "keyword": "낮"
+    },
+    "othala": {
+      "name": "오탈라",
+      "meaning": "유산",
+      "keyword": "가계"
+    }
+  },
+  "title": "북유럽 룬",
+  "description": "Futhark 장로의 고대 바이킹 지혜.",
+  "systemName": "북유럽 룬",
+  "narrative": "이그드라실의 속삭임",
+  "rune": "룬 문자",
+  "reading": "룬 읽기",
+  "ariaLabel": "룬: {이름}, {의미}를 의미합니다."
+}

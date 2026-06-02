@@ -1,0 +1,199 @@
+{
+  "questions": {
+    "cp_1": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_2": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_3": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_4": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_5": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_6": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_7": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_8": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_9": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_10": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_11": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    },
+    "cp_12": {
+      "options": {
+        "a": "Estabilidad",
+        "b": "Pasión",
+        "c": "Innovación"
+      },
+      "text": "¿Cómo definirías tus valores en una sola palabra?"
+    }
+  },
+  "results": {
+    "blue": {
+      "traits": {
+        "0": "Altamente intuitivo y artístico.",
+        "1": "Vive en su propio mundo único."
+      },
+      "harmony": {
+        "reason": "Añade una sensación de estabilidad a tu mundo intuitivo."
+      },
+      "title": "Diagnóstico de Personalidad por Color",
+      "advice": "Consejos"
+    },
+    "green": {
+      "traits": {
+        "0": "Altamente intuitivo y artístico.",
+        "1": "Vive en su propio mundo único."
+      },
+      "harmony": {
+        "reason": "Añade una sensación de estabilidad a tu mundo intuitivo."
+      },
+      "title": "Diagnóstico de Personalidad por Color",
+      "advice": "Consejos"
+    },
+    "red": {
+      "traits": {
+        "0": "Altamente intuitivo y artístico.",
+        "1": "Vive en su propio mundo único."
+      },
+      "harmony": {
+        "reason": "Añade una sensación de estabilidad a tu mundo intuitivo."
+      },
+      "title": "Diagnóstico de Personalidad por Color",
+      "advice": "Consejos"
+    },
+    "yellow": {
+      "traits": {
+        "0": "Altamente intuitivo y artístico.",
+        "1": "Vive en su propio mundo único."
+      },
+      "harmony": {
+        "reason": "Añade una sensación de estabilidad a tu mundo intuitivo."
+      },
+      "title": "Diagnóstico de Personalidad por Color",
+      "advice": "Consejos"
+    },
+    "gray": {
+      "traits": {
+        "0": "Altamente intuitivo y artístico.",
+        "1": "Vive en su propio mundo único."
+      },
+      "harmony": {
+        "reason": "Añade una sensación de estabilidad a tu mundo intuitivo."
+      },
+      "title": "Diagnóstico de Personalidad por Color",
+      "advice": "Consejos"
+    },
+    "brown": {
+      "traits": {
+        "0": "Altamente intuitivo y artístico.",
+        "1": "Vive en su propio mundo único."
+      },
+      "harmony": {
+        "reason": "Añade una sensación de estabilidad a tu mundo intuitivo."
+      },
+      "title": "Diagnóstico de Personalidad por Color",
+      "advice": "Consejos"
+    },
+    "black": {
+      "traits": {
+        "0": "Altamente intuitivo y artístico.",
+        "1": "Vive en su propio mundo único."
+      },
+      "harmony": {
+        "reason": "Añade una sensación de estabilidad a tu mundo intuitivo."
+      },
+      "title": "Diagnóstico de Personalidad por Color",
+      "advice": "Consejos"
+    },
+    "violet": {
+      "traits": {
+        "0": "Altamente intuitivo y artístico.",
+        "1": "Vive en su propio mundo único."
+      },
+      "harmony": {
+        "reason": "Añade una sensación de estabilidad a tu mundo intuitivo."
+      },
+      "title": "Diagnóstico de Personalidad por Color",
+      "advice": "Consejos"
+    }
+  },
+  "title": "Diagnóstico de Personalidad por Color",
+  "badge": "Personalidad del color",
+  "intro": "¿Cuál es el color del alma que te representa?",
+  "analysis": "Análisis de Personalidad",
+  "traits": "Rasgos Clave",
+  "advice": "Consejos",
+  "harmony": "Armonía Relacional",
+  "restart": "Reiniciar",
+  "save": "Guardar Resultados"
+}

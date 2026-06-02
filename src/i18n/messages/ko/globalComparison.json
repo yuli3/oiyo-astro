@@ -1,0 +1,86 @@
+{
+  "meta": {
+    "cta": {
+      "button": "Take Tests Now"
+    },
+    "keywords": "keywords, tags, seo",
+    "badge": "Global Benchmarking",
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights"
+  },
+  "filters": {
+    "region": "🌏 지역 선택",
+    "age": "👥 연령층",
+    "gender": "⚧ 성별",
+    "test": "테스트 제목"
+  },
+  "tabs": {
+    "overview": "📈 개요",
+    "regional": "🗺️ 지역 비교",
+    "demographics": "👥 인구통계",
+    "rankings": "🏆 순위"
+  },
+  "chart": {
+    "scoreDistribution": "📊 점수 분포",
+    "personalityRankings": "🏆 성격 유형 순위",
+    "avgScore": "평균 점수",
+    "users": "사용자",
+    "topRankText": "귀하는 전 세계 사용자 중 상위 {percent}%에 속합니다 🚀",
+    "allAges": "모든 연령층",
+    "all": "모두",
+    "male": "남성",
+    "female": "여성",
+    "global": "글로벌",
+    "asia": "아시아",
+    "europe": "유럽",
+    "northAmerica": "북아메리카",
+    "korea": "한국",
+    "southAmerica": "남아메리카",
+    "africa": "아프리카",
+    "oceania": "오세아니아"
+  },
+  "demographics": {
+    "comingSoon": "📊 인구통계학적 분석 기능이 곧 제공될 예정입니다."
+  },
+  "cta": {
+    "button": "지금 테스트를 받아보세요",
+    "title": "내 통찰력",
+    "description": "종합적인 분석 및 통찰력"
+  },
+  "features": {
+    "benchmarking": {
+      "title": "내 통찰력",
+      "description": "종합적인 분석 및 통찰력"
+    },
+    "regional": {
+      "title": "내 통찰력",
+      "description": "종합적인 분석 및 통찰력"
+    }
+  },
+  "insights": {
+    "yourScore": "당신의 점수",
+    "globalAverage": "글로벌 평균",
+    "percentile": "백분위수",
+    "topPerformers": "최고 성과자",
+    "aboveAverage": "평균 이상",
+    "belowAverage": "낮은",
+    "regions": "지역"
+  },
+  "test": {
+    "progress": "진전",
+    "submit": "제출하기",
+    "loading": "📊 Analyzing...",
+    "selectOption": "선택하기",
+    "insightBullets": ["당신의 개인 철학의 숨겨진 레이어를 밝혀보세요."]
+  },
+  "result": {
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights"
+  },
+  "badge": "글로벌 벤치마킹",
+  "loading": "📊 분석 중...",
+  "noData": "📋 분석할 데이터가 없습니다. 먼저 성격 테스트를 완료해 보세요.",
+  "title": "내 통찰력",
+  "description": "종합적인 분석 및 통찰력",
+  "keywords": "키워드, 태그, SEO"
+}

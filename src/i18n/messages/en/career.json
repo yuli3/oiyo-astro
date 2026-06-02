@@ -1,0 +1,499 @@
+{
+  "meta": {
+    "hero": {
+      "badge": "Career Compass",
+      "subtitle": "Discover insights about yourself"
+    },
+    "keywords": "career assessment, personality test, RIASEC, Holland Code, career counseling, job satisfaction, career matching, work personality",
+    "description": "Explore the optimal career paths that match your personality type and aptitude.",
+    "title": "OIYO Career - Find Your Calling"
+  },
+  "types": {
+    "realistic": {
+      "name": "Realistic (Doers)",
+      "emoji": "🔧"
+    },
+    "investigative": {
+      "name": "Investigative (Thinkers)",
+      "emoji": "🔬"
+    },
+    "artistic": {
+      "name": "Artistic (Creators)",
+      "emoji": "🎨"
+    },
+    "social": {
+      "name": "Social (Helpers)",
+      "emoji": "👥"
+    },
+    "enterprising": {
+      "name": "Enterprising (Persuaders)",
+      "emoji": "💼"
+    },
+    "conventional": {
+      "name": "Conventional (Organizers)",
+      "emoji": "📊"
+    },
+    "subtitle": "Which type describes you best?"
+  },
+  "hero": {
+    "badge": "🎯 Science-Based",
+    "subtitle": "Discover ideal career paths based on your personality type",
+    "cta": "Find My Career Match",
+    "title": "Dashboard",
+    "description": "Analysis of your unique disposition"
+  },
+  "benefits": {
+    "subtitle": "Align your career with your natural strengths and interests",
+    "items": [
+      {
+        "icon": "🎯",
+        "title": "Perfect Career Matching",
+        "description": "Find jobs that fit your innate personality."
+      },
+      {
+        "icon": "😊",
+        "title": "Job Satisfaction",
+        "description": "Work in an environment where you can shine."
+      },
+      {
+        "icon": "📈",
+        "title": "Professional Growth",
+        "description": "Promote faster by leveraging your strengths."
+      },
+      {
+        "icon": "⚖️",
+        "title": "Work-Life Balance",
+        "description": "Choose a career that matches your lifestyle values."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Which career is right for me?",
+        "description": "Based on the RIASEC model used by psychologists.",
+        "question": "Is it scientific?",
+        "answer": "It is based on the RIASEC model used by psychologists."
+      },
+      {
+        "icon": "🚀",
+        "title": "How accurate are the results?",
+        "description": "Yes, it helps with major and internship choices.",
+        "question": "Can students use it?",
+        "answer": "Yes, it helps with major and internship choices."
+      },
+      {
+        "icon": "💡",
+        "title": "Accuracy",
+        "description": "Shows very high accuracy in identifying core interests.",
+        "question": "Is it accurate?",
+        "answer": "Shows very high accuracy in identifying core interests."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "📊",
+        "title": "RIASEC Analysis",
+        "description": "Detailed analysis of 6 interest areas.",
+        "question": "RIASEC Analysis",
+        "answer": "Detailed analysis of 6 interest areas."
+      },
+      {
+        "icon": "📋",
+        "title": "Career List",
+        "description": "Over 50 recommended jobs curated for you.",
+        "question": "Career List",
+        "answer": "Over 50 recommended jobs curated for you."
+      },
+      {
+        "icon": "🚀",
+        "title": "Growth Path",
+        "description": "Practical advice for specific industries.",
+        "question": "Growth Path",
+        "answer": "Practical advice for specific industries."
+      }
+    ]
+  },
+  "test": {
+    "scale": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5"
+    },
+    "test": {
+      "progress": "Progress",
+      "submit": "Submit",
+      "loading": "Loading",
+      "selectOption": "Select Option",
+      "insightBullets": ["Insights"],
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "result": {
+      "title": "Detailed Analysis Report",
+      "description": "We are preparing specific values and insights this service provides to you."
+    },
+    "meta": {
+      "title": "Customized Diagnosis",
+      "description": "We are preparing specific values and insights this service provides to you.",
+      "keywords": "aptitude test, career exploration, job recommendation"
+    },
+    "title": "Dashboard",
+    "description": "In-depth data-driven report",
+    "primaryType": "Primary Type",
+    "allTypes": "All Types",
+    "careers": "Careers",
+    "workEnvironment": "Work Environment",
+    "secondaryType": "Secondary Type",
+    "understanding": "Understanding",
+    "retake": "Retake",
+    "subtitle": "Details",
+    "rateInstructions": "Rating Instructions",
+    "progress": "Progress",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "loading": "Loading",
+    "selectOption": "Select Option",
+    "insightBullets": ["Insights"]
+  },
+  "result": {
+    "test": {
+      "progress": "Progress",
+      "submit": "Submit",
+      "loading": "Loading",
+      "selectOption": "Select Option",
+      "insightBullets": ["Insights"],
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "result": {
+      "title": "Detailed Analysis Report",
+      "description": "We are preparing specific values and insights this service provides to you."
+    },
+    "meta": {
+      "title": "Customized Diagnosis",
+      "description": "We are preparing specific values and insights this service provides to you.",
+      "keywords": "test results, career analysis, job fit"
+    },
+    "title": "Detailed Analysis Report",
+    "description": "We are preparing specific values and insights this service provides to you.",
+    "primaryType": "Primary Type",
+    "allTypes": "All Types",
+    "careers": "Careers",
+    "workEnvironment": "Work Environment",
+    "secondaryType": "Secondary Type",
+    "understanding": "Understanding",
+    "retake": "Retake"
+  },
+  "title": "Career Insights",
+  "description": "Analysis of your unique disposition",
+  "keywords": "Keywords",
+  "career": {
+    "types": {
+      "realistic": {
+        "traits": [
+          "Honest and Genuine",
+          "Practical and Realistic",
+          "Skilled with tools",
+          "Independent"
+        ],
+        "careerSuggestions": [
+          "Mechanical Engineer",
+          "Electrician",
+          "Chef",
+          "Automotive Technician",
+          "Veterinarian",
+          "Landscape Architect",
+          "Pilot"
+        ],
+        "name": "Realistic type",
+        "alias": "practitioner",
+        "description": "You prefer hands-on, practical work and use tools and machines.",
+        "workEnvironment": "Real-world, hands-on environments such as workshops, construction sites, laboratories or outdoors. We excel when we work with tools, machines, and tangible projects."
+      },
+      "investigative": {
+        "traits": [
+          "Analytical and Logical",
+          "Intellectually Curious",
+          "Precise",
+          "Independent Thinker"
+        ],
+        "careerSuggestions": [
+          "Software Developer",
+          "Data Analyst",
+          "Research Scientist",
+          "Physician",
+          "Economist",
+          "Psychologist",
+          "Pharmacist"
+        ],
+        "name": "Exploratory type",
+        "alias": "notionalist",
+        "description": "I enjoy analyzing and researching problems and working with ideas.",
+        "workEnvironment": "Research facility, laboratory, library or academic environment. I prefer an environment where I can engage in quiet, intellectual activities with minimal disruption."
+      },
+      "artistic": {
+        "traits": [
+          "Creative and Original",
+          "Free Spirit",
+          "Expressive",
+          "Unconventional"
+        ],
+        "careerSuggestions": [
+          "Graphic Designer",
+          "Writer",
+          "Marketing Creative",
+          "Architect",
+          "Musician",
+          "Actor",
+          "Fashion Designer"
+        ],
+        "name": "art type",
+        "alias": "creator",
+        "description": "You are creative, self-expressive, and enjoy working with ideas and language.",
+        "workEnvironment": "Creative studio, theatre, gallery or flexible workspace. You need the freedom to be creative at your own pace."
+      },
+      "social": {
+        "traits": [
+          "Empathetic",
+          "Cooperative",
+          "Friendly",
+          "Good Communicator"
+        ],
+        "careerSuggestions": [
+          "Teacher",
+          "Counselor",
+          "Social Worker",
+          "Nurse",
+          "Human Resources Specialist",
+          "Coach/Trainer",
+          "Physical Therapist"
+        ],
+        "name": "social type",
+        "alias": "aid",
+        "description": "I enjoy helping, teaching and working with people.",
+        "workEnvironment": "School, hospital, community center or counseling office. You excel in an environment where you can focus on helping and communicating with people."
+      },
+      "enterprising": {
+        "traits": ["Ambitious", "Confident", "Persuasive", "Energetic"],
+        "careerSuggestions": [
+          "Sales Manager",
+          "Business Executive",
+          "Lawyer",
+          "Entrepreneur",
+          "Marketing Manager",
+          "Real Estate Agent",
+          "Project Manager"
+        ],
+        "name": "Enterprising type",
+        "alias": "persuader",
+        "description": "I enjoy leading, persuading, and organizing others to achieve goals.",
+        "workEnvironment": "Business office, sales floor or leadership position. Stand out in a competitive, results-driven environment."
+      },
+      "conventional": {
+        "traits": ["Detail-Oriented", "Organized", "Responsible", "Efficient"],
+        "careerSuggestions": [
+          "Accountant",
+          "Data Entry",
+          "Administrative Assistant",
+          "Bank Teller",
+          "Tax Preparer",
+          "Librarian",
+          "Insurance Underwriter"
+        ],
+        "name": "customary type",
+        "alias": "organizer",
+        "description": "Prefer a structured, orderly environment with clear procedures.",
+        "workEnvironment": "Office, bank, government agency or organized organization. Prefer environments with clear hierarchies and predictability."
+      }
+    },
+    "questions": [
+      {
+        "id": "1",
+        "text": "I enjoy working with tools and machinery",
+        "type": "realistic",
+        "weight": 3
+      },
+      {
+        "id": "2",
+        "text": "I prefer practical, hands-on work over theoretical discussions",
+        "type": "realistic",
+        "weight": 3
+      },
+      {
+        "id": "3",
+        "text": "I like to see tangible results from my work",
+        "type": "realistic",
+        "weight": 2
+      },
+      {
+        "id": "4",
+        "text": "I enjoy building, fixing, or repairing things",
+        "type": "realistic",
+        "weight": 3
+      },
+      {
+        "id": "5",
+        "text": "I prefer working outdoors or in workshops",
+        "type": "realistic",
+        "weight": 2
+      },
+      {
+        "id": "6",
+        "text": "I enjoy solving complex problems through research and analysis",
+        "type": "investigative",
+        "weight": 3
+      },
+      {
+        "id": "7",
+        "text": "I like to understand how things work at a deep level",
+        "type": "investigative",
+        "weight": 3
+      },
+      {
+        "id": "8",
+        "text": "I prefer working independently on intellectual challenges",
+        "type": "investigative",
+        "weight": 2
+      },
+      {
+        "id": "9",
+        "text": "I enjoy collecting and analyzing data",
+        "type": "investigative",
+        "weight": 3
+      },
+      {
+        "id": "10",
+        "text": "I like to experiment and test new theories",
+        "type": "investigative",
+        "weight": 2
+      },
+      {
+        "id": "11",
+        "text": "I enjoy expressing myself creatively",
+        "type": "artistic",
+        "weight": 3
+      },
+      {
+        "id": "12",
+        "text": "I prefer flexible work environments without strict rules",
+        "type": "artistic",
+        "weight": 2
+      },
+      {
+        "id": "13",
+        "text": "I like to work with colors, designs, or creative concepts",
+        "type": "artistic",
+        "weight": 3
+      },
+      {
+        "id": "14",
+        "text": "I value originality and innovation in my work",
+        "type": "artistic",
+        "weight": 3
+      },
+      {
+        "id": "15",
+        "text": "I enjoy projects that allow for creative interpretation",
+        "type": "artistic",
+        "weight": 2
+      },
+      {
+        "id": "16",
+        "text": "I enjoy helping others solve their problems",
+        "type": "social",
+        "weight": 3
+      },
+      {
+        "id": "17",
+        "text": "I like working in teams and collaborative environments",
+        "type": "social",
+        "weight": 2
+      },
+      {
+        "id": "18",
+        "text": "I find fulfillment in teaching or mentoring others",
+        "type": "social",
+        "weight": 3
+      },
+      {
+        "id": "19",
+        "text": "I prefer people-focused work over task-focused work",
+        "type": "social",
+        "weight": 3
+      },
+      {
+        "id": "20",
+        "text": "I enjoy making a positive impact on others",
+        "type": "social",
+        "weight": 2
+      },
+      {
+        "id": "21",
+        "text": "I enjoy leading projects and managing teams",
+        "type": "enterprising",
+        "weight": 3
+      },
+      {
+        "id": "22",
+        "text": "I like competitive, results-oriented environments",
+        "type": "enterprising",
+        "weight": 2
+      },
+      {
+        "id": "23",
+        "text": "I enjoy persuading others and influencing decisions",
+        "type": "enterprising",
+        "weight": 3
+      },
+      {
+        "id": "24",
+        "text": "I like taking calculated risks to achieve goals",
+        "type": "enterprising",
+        "weight": 3
+      },
+      {
+        "id": "25",
+        "text": "I prefer environments where I can advance quickly",
+        "type": "enterprising",
+        "weight": 2
+      },
+      {
+        "id": "26",
+        "text": "I prefer structured, organized work environments",
+        "type": "conventional",
+        "weight": 3
+      },
+      {
+        "id": "27",
+        "text": "I enjoy working with data, numbers, and detailed information",
+        "type": "conventional",
+        "weight": 2
+      },
+      {
+        "id": "28",
+        "text": "I like following established procedures and guidelines",
+        "type": "conventional",
+        "weight": 3
+      },
+      {
+        "id": "29",
+        "text": "I prefer predictable work routines and clear expectations",
+        "type": "conventional",
+        "weight": 3
+      },
+      {
+        "id": "30",
+        "text": "I excel at organizing and managing administrative tasks",
+        "type": "conventional",
+        "weight": 2
+      }
+    ]
+  }
+}

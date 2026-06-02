@@ -1,0 +1,127 @@
+{
+  "visual": {
+    "label": "Aprendiz de Lectura/Escritura",
+    "description": "Aprendes mejor a través de la lectura y la escritura. Prefieres la información basada en texto, tomar notas y procesar la información a través de la palabra escrita.",
+    "environment": "Espacios tranquilos y cómodos con iluminación adecuada para leer y escribir. Prefieres entornos con acceso a libros, papel e instrumentos de escritura."
+  },
+  "auditory": {
+    "label": "Aprendiz de Lectura/Escritura",
+    "description": "Aprendes mejor a través de la lectura y la escritura. Prefieres la información basada en texto, tomar notas y procesar la información a través de la palabra escrita.",
+    "environment": "Espacios tranquilos y cómodos con iluminación adecuada para leer y escribir. Prefieres entornos con acceso a libros, papel e instrumentos de escritura."
+  },
+  "kinesthetic": {
+    "label": "Aprendiz de Lectura/Escritura",
+    "description": "Aprendes mejor a través de la lectura y la escritura. Prefieres la información basada en texto, tomar notas y procesar la información a través de la palabra escrita.",
+    "environment": "Espacios tranquilos y cómodos con iluminación adecuada para leer y escribir. Prefieres entornos con acceso a libros, papel e instrumentos de escritura."
+  },
+  "reading": {
+    "label": "Aprendiz de Lectura/Escritura",
+    "description": "Aprendes mejor a través de la lectura y la escritura. Prefieres la información basada en texto, tomar notas y procesar la información a través de la palabra escrita.",
+    "environment": "Espacios tranquilos y cómodos con iluminación adecuada para leer y escribir. Prefieres entornos con acceso a libros, papel e instrumentos de escritura."
+  },
+  "questions": {
+    "options": {
+      "q1": {
+        "a": "Ver un video tutorial",
+        "b": "Que alguien te explique los pasos",
+        "c": "Simplemente empezar a usarlo y aprender por ensayo y error",
+        "d": "Leer el manual o las instrucciones"
+      },
+      "q2": {
+        "a": "Ver un video tutorial",
+        "b": "Que alguien te explique los pasos",
+        "c": "Simplemente empezar a usarlo y aprender por ensayo y error",
+        "d": "Leer el manual o las instrucciones"
+      },
+      "q3": {
+        "a": "Ver un video tutorial",
+        "b": "Que alguien te explique los pasos",
+        "c": "Simplemente empezar a usarlo y aprender por ensayo y error",
+        "d": "Leer el manual o las instrucciones"
+      },
+      "q4": {
+        "a": "Ver un video tutorial",
+        "b": "Que alguien te explique los pasos",
+        "c": "Simplemente empezar a usarlo y aprender por ensayo y error",
+        "d": "Leer el manual o las instrucciones"
+      },
+      "q5": {
+        "a": "Ver un video tutorial",
+        "b": "Que alguien te explique los pasos",
+        "c": "Simplemente empezar a usarlo y aprender por ensayo y error",
+        "d": "Leer el manual o las instrucciones"
+      },
+      "q6": {
+        "a": "Ver un video tutorial",
+        "b": "Que alguien te explique los pasos",
+        "c": "Simplemente empezar a usarlo y aprender por ensayo y error",
+        "d": "Leer el manual o las instrucciones"
+      },
+      "q7": {
+        "a": "Ver un video tutorial",
+        "b": "Que alguien te explique los pasos",
+        "c": "Simplemente empezar a usarlo y aprender por ensayo y error",
+        "d": "Leer el manual o las instrucciones"
+      },
+      "q8": {
+        "a": "Ver un video tutorial",
+        "b": "Que alguien te explique los pasos",
+        "c": "Simplemente empezar a usarlo y aprender por ensayo y error",
+        "d": "Leer el manual o las instrucciones"
+      },
+      "q9": {
+        "a": "Ver un video tutorial",
+        "b": "Que alguien te explique los pasos",
+        "c": "Simplemente empezar a usarlo y aprender por ensayo y error",
+        "d": "Leer el manual o las instrucciones"
+      },
+      "q10": {
+        "a": "Ver un video tutorial",
+        "b": "Que alguien te explique los pasos",
+        "c": "Simplemente empezar a usarlo y aprender por ensayo y error",
+        "d": "Leer el manual o las instrucciones"
+      }
+    },
+    "q1": "Al aprender algo nuevo, prefieres:",
+    "q2": "Cuando necesitas recordar un número de teléfono, tú:",
+    "q3": "En una clase, aprendes mejor cuando el instructor:",
+    "q4": "Al estudiar para un examen, lo que más te ayuda es:",
+    "q5": "Al intentar resolver un problema, sueles:",
+    "q6": "Recuerdas mejor la información cuando está:",
+    "q7": "Al dar indicaciones a alguien, tú:",
+    "q8": "Tu entorno de estudio ideal es:",
+    "q9": "Al conocer gente nueva, recuerdas más claramente:",
+    "q10": "Al aprender un nuevo programa de software, prefieres:"
+  },
+  "tips": {
+    "visual": [
+      "Utilice mapas mentales y diagramas.",
+      "Resalte texto importante con colores",
+      "Ver videos educativos"
+    ],
+    "auditory": [
+      "Escuche conferencias grabadas",
+      "Participar en grupos de estudio.",
+      "leer notas en voz alta"
+    ],
+    "kinesthetic": [
+      "Muévete mientras estudias",
+      "Utilice actividades prácticas",
+      "Escribir notas a mano"
+    ],
+    "reading": [
+      "Tome notas escritas detalladas",
+      "Reescribe notas con tus propias palabras.",
+      "Utilice listas y esquemas"
+    ]
+  },
+  "title": "ADN Cognitivo",
+  "badge": "Modelo de Aprendizaje VARK",
+  "intro": "Descubre los secretos de tu cerebro. Identifica si aprendes más eficazmente a través de la visión, el sonido, el texto o la acción.",
+  "result": {
+    "title": "Resultado del Estilo de Aprendizaje",
+    "studyTips": "Consejos de Estudio",
+    "environment": "Entorno Óptimo",
+    "careerFit": "Carreras Recomendadas"
+  }
+}

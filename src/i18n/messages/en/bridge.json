@@ -1,0 +1,20 @@
+{
+  "catalyst": {
+    "title": "The Radiant Catalyst",
+    "description": "The explosive energy of Fire meets your High Novelty Seeking (NS) to create unprecedented change. The celestial influence grants your innovation a destiny-bound legitimacy.",
+    "friction": "Excessive expansion can deplete your fuel quickly; pacing is essential.",
+    "synergy": "Your inner passion resonates perfectly with external opportunities."
+  },
+  "bastion": {
+    "title": "The Obsidian Bastion",
+    "description": "The heavy stability of Earth combined with your caution builds an impregnable foundation for life. Under celestial protection, you possess the wisdom to wait for the perfect moment.",
+    "friction": "Static comfort zones may hinder growth.",
+    "synergy": "Unshakeable focus and risk management."
+  },
+  "traveler": {
+    "title": "The Harmonious Traveler",
+    "description": "You navigate life with a balanced alignment between your innate fate and modern psychology. Your journey is one of integration.",
+    "friction": "Lack of a singular, dominant drive.",
+    "synergy": "Versatility and adaptability."
+  }
+}

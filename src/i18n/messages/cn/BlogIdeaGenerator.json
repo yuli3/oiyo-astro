@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "您的博客灵感",
+    "description": "为您量身定制的新鲜内容创意",
+    "keywords": "博客灵感, 内容创作, 写作, 博客, 创意"
+  },
+  "hero": {
+    "title": "您的博客灵感",
+    "subtitle": "再也不用担心内容枯竭",
+    "cta": "生成灵感",
+    "badge": "✍️ 内容创作"
+  },
+  "categories": {
+    "lifestyle": "生活方式",
+    "technology": "科技",
+    "business": "商业",
+    "health": "健康与养生",
+    "travel": "旅行",
+    "food": "美食与烹饪"
+  },
+  "result": {
+    "title": "您的博客灵感",
+    "description": "为您量身定制的新鲜内容创意"
+  }
+}

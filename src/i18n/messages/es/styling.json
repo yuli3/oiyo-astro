@@ -1,0 +1,56 @@
+{
+  "scanner": {
+    "title": "AI Life Stylist",
+    "description": "Upload your photo. AI analyzes your face shape and personal color to recommend the perfect style.",
+    "action": {
+      "upload": "Click to Upload Photo",
+      "camera": "Cámara",
+      "analyze": "Analizar estilo"
+    },
+    "status": {
+      "analyzing": "Analyzing...",
+      "detecting": "Detectar la forma del rostro y el tono de la piel"
+    },
+    "error": {
+      "tooLarge": "Imagen demasiado grande (máximo 5 MB)",
+      "cameraAccess": "No se puede acceder a la cámara",
+      "failed": "El análisis falló. Pruebe con una foto más clara."
+    }
+  },
+  "dashboard": {
+    "title": "Estilista de vida de IA",
+    "description": "Sube tu foto. La IA analiza la forma de tu rostro y el color personal para recomendar el estilo perfecto.",
+    "upload": "Haga clic para subir foto",
+    "retry": "Prueba con otra foto",
+    "labels": {
+      "faceShape": "Forma de la cara",
+      "personalColor": "Análisis de color"
+    },
+    "status": {
+      "analyzing": "Analizando..."
+    }
+  },
+  "recommendation": {
+    "complete": "Análisis completo",
+    "analyzeAnother": "Analizar otra foto",
+    "sections": {
+      "hair": "mejores peinados",
+      "eyewear": "Partido de gafas",
+      "palette": "Tu paleta de poder"
+    },
+    "shapes": {
+      "oval": "Oval",
+      "round": "Redonda",
+      "square": "Cuadrada",
+      "heart": "Corazón",
+      "diamond": "Diamante",
+      "long": "Larga"
+    },
+    "colors": {
+      "spring_warm": "Primavera cálida",
+      "summer_cool": "verano fresco",
+      "autumn_warm": "Otoño cálido",
+      "winter_cool": "invierno fresco"
+    }
+  }
+}

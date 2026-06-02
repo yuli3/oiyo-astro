@@ -1,0 +1,56 @@
+{
+  "software-engineer": {
+    "title": {
+      "ko": "소프트웨어 엔지니어",
+      "en": "Software Engineer",
+      "ja": "ソフトウェアエンジニア",
+      "cn": "软件工程师",
+      "fr": "Ingénieur Logiciel",
+      "es": "Ingeniero de Software"
+    },
+    "description": {
+      "ko": "논리와 코드로 가상의 세계를 구축하는 디지털 건축가입니다.",
+      "en": "A digital architect who builds virtual worlds with logic and code.",
+      "ja": "論理とコードで仮想の世界を構築するデジタル建築家です。",
+      "cn": "用逻辑和代码构建虚拟世界的数字建筑师。",
+      "fr": "Un architecte numérique qui construit des mondes virtuels avec logique et code.",
+      "es": "Un arquitecto digital que construye mundos virtuales con lógica y código."
+    }
+  },
+  "architect": {
+    "title": {
+      "ko": "건축가",
+      "en": "Architect",
+      "ja": "建築家",
+      "cn": "建筑师",
+      "fr": "Architecte",
+      "es": "Arquitecto"
+    },
+    "description": {
+      "ko": "공간에 철학을 담아 인간의 삶을 담는 그릇을 설계합니다.",
+      "en": "Design vessels that hold human life by infusing space with philosophy.",
+      "ja": "空間に哲学を込め、人間の人生を包む器を設計します。",
+      "cn": "通过在空间中注入哲学，设计承载人类生活的器皿。",
+      "fr": "Concevez des vaisseaux qui contiennent la vie humaine en infusant l'espace de philosophie.",
+      "es": "Diseña vasijas que contienen la vida humana infundiendo espacio con filosofía."
+    }
+  },
+  "physician": {
+    "title": {
+      "ko": "의사",
+      "en": "Physician",
+      "ja": "医師",
+      "cn": "医生",
+      "fr": "Médecin",
+      "es": "Médico"
+    },
+    "description": {
+      "ko": "생명의 신비를 탐구하고 인류의 고통을 치유하는 성소의 수호자입니다.",
+      "en": "A guardian of the sanctuary who explores life's mysteries and heals suffering.",
+      "ja": "生命の神秘を探求し、人類の苦しみを癒す聖所の守護者です。",
+      "cn": "探索引导生命奥秘并治愈人类疾苦的避难所守护者。",
+      "fr": "Un gardien du sanctuaire qui explore les mystères de la vie et guérit la souffrance.",
+      "es": "Un guardián del santuario que explora los misterios de la vida y sana el sufrimiento."
+    }
+  }
+}

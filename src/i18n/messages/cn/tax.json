@@ -1,0 +1,1837 @@
+{
+  "gift": {
+    "meta": {
+      "keywords": "正在精心打磨映射您真实自我的明镜...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "正在为您编织命运的丝线...",
+      "badge": "正在为您编织命运的丝线..."
+    },
+    "rel": {
+      "child_adult": "50,000,000 Shield",
+      "child_minor": "20,000,000 Shield",
+      "spouse": "600,000,000 Shield",
+      "parent": "50,000,000 Shield",
+      "other_relative": "10,000,000 Shield",
+      "other": "No Shield"
+    },
+    "result": {
+      "title": "My Insights",
+      "deduction": "Deduction",
+      "taxBase": "Tax Base",
+      "rate": "正在精心打磨映射您真实自我的明镜...",
+      "selfReport": "* Includes 3% declaration harmony discount.",
+      "description": "Awaiting synthesis..."
+    },
+    "tip": {
+      "title": "My Insights",
+      "desc": "全面分析与深度洞察"
+    },
+    "test": {
+      "insightBullets": [
+        "Wealth Resonance",
+        "Lineage Protection",
+        "Temporal Efficiency"
+      ],
+      "progress": "正在为您编织命运的丝线...",
+      "submit": "开始计算",
+      "loading": "正在解读您决策背后的深层回响...",
+      "selectOption": "正在绘制您内心深处的思维图谱...",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "deduction": {
+      "child_adult": "50,000,000 Shield",
+      "child_minor": "20,000,000 Shield",
+      "spouse": "600,000,000 Shield",
+      "parent": "50,000,000 Shield",
+      "other_relative": "10,000,000 Shield",
+      "other": "No Shield"
+    },
+    "unit": {
+      "currency": "正在绘制您内心深处的思维图谱...",
+      "tenYear": "10-Year Cycle",
+      "aggregation": "Aggregate Basis"
+    },
+    "resultInfo": {
+      "selfReport": "* Includes 3% declaration harmony discount.",
+      "consult": "* Seek counsel from a dedicated wealth mystic for final decrees."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "subtitle": "正在为您编织命运的丝线...",
+    "disclaimer": "正在精心打磨映射您真实自我的明镜...",
+    "relationship": "Relationship",
+    "giftAmount": "Gift Amount",
+    "pastGiftAmount": "Past Gift Amount",
+    "calculateBtn": "Calculate Btn"
+  },
+  "freelancer": {
+    "meta": {
+      "title": "My Insights",
+      "keywords": "正在精心打磨映射您真实自我的明镜...",
+      "description": "Awaiting synthesis...",
+      "subtitle": "正在为您编织命运的丝线..."
+    },
+    "inputs": {
+      "jobType": "Awaiting synthesis...",
+      "revenue": "Awaiting synthesis...",
+      "expenseRate": "Awaiting synthesis...",
+      "dependents": "Awaiting synthesis...",
+      "calculate": "Calculate"
+    },
+    "jobs": {
+      "developer": "Awaiting synthesis...",
+      "creator": "Awaiting synthesis...",
+      "writer": "Awaiting synthesis...",
+      "designer": "Awaiting synthesis...",
+      "delivery": "Awaiting synthesis...",
+      "it": "Awaiting synthesis..."
+    },
+    "results": {
+      "refundTitle": "Awaiting synthesis...",
+      "paymentTitle": "Awaiting synthesis...",
+      "totalTax": "Total Tax",
+      "alreadyPaid": "Awaiting synthesis...",
+      "refundMsg": "Awaiting synthesis...",
+      "paymentMsg": "Awaiting synthesis...",
+      "calculated": "Awaiting synthesis...",
+      "withheld": "Awaiting synthesis..."
+    },
+    "tips": {
+      "content": "正在绘制您内心深处的思维图谱..."
+    },
+    "loading": {
+      "step1": "Awaiting synthesis...",
+      "step2": "Awaiting synthesis...",
+      "step3": "Awaiting synthesis...",
+      "step4": "Awaiting synthesis..."
+    },
+    "labels": {
+      "jobType": "Awaiting synthesis...",
+      "annualRevenue": "Awaiting synthesis..."
+    },
+    "tooltips": {
+      "simpleRate": "Awaiting synthesis...",
+      "beforeTax": "Awaiting synthesis..."
+    },
+    "formTitle": "Awaiting synthesis..."
+  },
+  "cardOptimization": {
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "正在精心打磨映射您真实自我的明镜..."
+    },
+    "inputs": {
+      "salary": "Awaiting synthesis...",
+      "creditCard": "Awaiting synthesis...",
+      "debitCard": "Awaiting synthesis...",
+      "calculate": "Calculate"
+    },
+    "loading": {
+      "title": "My Insights",
+      "step1": "Awaiting synthesis...",
+      "step2": "Awaiting synthesis...",
+      "step3": "Awaiting synthesis...",
+      "step4": "Awaiting synthesis..."
+    },
+    "tips": {
+      "content": "正在绘制您内心深处的思维图谱..."
+    },
+    "diagnosis": {
+      "strategies": {
+        "switchDebit": "Awaiting synthesis..."
+      },
+      "labels": {
+        "minThreshold": "Awaiting synthesis...",
+        "ccUsed": "Awaiting synthesis...",
+        "ccVsThreshold": "Awaiting synthesis..."
+      },
+      "title": "My Insights"
+    },
+    "test": {
+      "insightBullets": [
+        "Unveil the hidden layers of your personal philosophy."
+      ],
+      "progress": "正在为您编织命运的丝线...",
+      "submit": "开始计算",
+      "loading": "正在解读您决策背后的深层回响...",
+      "selectOption": "正在绘制您内心深处的思维图谱...",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "vat": {
+    "modes": {
+      "total": "Total Amount",
+      "supply": "From Supply"
+    },
+    "labels": {
+      "totalAmount": "Total Amount (Inc. VAT)",
+      "supplyAmount": "Supply Amount (Ex. VAT)"
+    },
+    "results": {
+      "supplyPrice": "Supply Value",
+      "vat": "VAT Amount",
+      "total": "Total Amount"
+    },
+    "tip": {
+      "content": "正在绘制您内心深处的思维图谱...",
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "正在为您编织命运的丝线...",
+      "disclaimer": "正在精心打磨映射您真实自我的明镜...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "正在精心打磨映射您真实自我的明镜..."
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "正在为您编织命运的丝线...",
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "开始计算",
+      "loading": "正在解读您决策背后的深层回响...",
+      "selectOption": "正在绘制您内心深处的思维图谱..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "subtitle": "正在为您编织命运的丝线...",
+    "currency": "正在绘制您内心深处的思维图谱...",
+    "disclaimer": "正在精心打磨映射您真实自我的明镜...",
+    "title": "My Insights",
+    "ko-KR": "正在精心打磨映射您真实自我的明镜..."
+  },
+  "test": {
+    "insightBullets": ["Discover the unique patterns that define your path."],
+    "progress": "正在为您编织命运的丝线...",
+    "submit": "开始计算",
+    "loading": "正在解读您决策背后的深层回响...",
+    "selectOption": "正在绘制您内心深处的思维图谱...",
+    "next": "下一步",
+    "previous": "上一步"
+  },
+  "tax": {
+    "freelancer": {
+      "meta": {
+        "title": "My Insights",
+        "keywords": "正在精心打磨映射您真实自我的明镜...",
+        "description": "Awaiting synthesis...",
+        "subtitle": "正在为您编织命运的丝线..."
+      },
+      "inputs": {
+        "jobType": "Awaiting synthesis...",
+        "revenue": "Awaiting synthesis...",
+        "expenseRate": "Awaiting synthesis...",
+        "dependents": "Awaiting synthesis...",
+        "calculate": "Calculate"
+      },
+      "tips": {
+        "content": "正在绘制您内心深处的思维图谱..."
+      },
+      "loading": {
+        "step1": "Awaiting synthesis...",
+        "step2": "Awaiting synthesis...",
+        "step3": "Awaiting synthesis...",
+        "step4": "Awaiting synthesis..."
+      },
+      "results": {
+        "refundTitle": "Awaiting synthesis...",
+        "paymentTitle": "Awaiting synthesis...",
+        "totalTax": "Total Tax",
+        "alreadyPaid": "Awaiting synthesis...",
+        "refundMsg": "Awaiting synthesis...",
+        "paymentMsg": "Awaiting synthesis...",
+        "calculated": "Awaiting synthesis...",
+        "withheld": "Awaiting synthesis..."
+      },
+      "labels": {
+        "jobType": "Awaiting synthesis...",
+        "annualRevenue": "Awaiting synthesis..."
+      },
+      "tooltips": {
+        "simpleRate": "Awaiting synthesis...",
+        "beforeTax": "Awaiting synthesis..."
+      },
+      "jobs": {
+        "developer": "Awaiting synthesis...",
+        "creator": "Awaiting synthesis...",
+        "writer": "Awaiting synthesis...",
+        "designer": "Awaiting synthesis...",
+        "delivery": "Awaiting synthesis...",
+        "it": "Awaiting synthesis..."
+      },
+      "formTitle": "Awaiting synthesis..."
+    },
+    "cardOptimization": {
+      "inputs": {
+        "salary": "Awaiting synthesis...",
+        "creditCard": "Awaiting synthesis...",
+        "debitCard": "Awaiting synthesis...",
+        "calculate": "Calculate"
+      },
+      "loading": {
+        "title": "My Insights",
+        "step1": "Awaiting synthesis...",
+        "step2": "Awaiting synthesis...",
+        "step3": "Awaiting synthesis...",
+        "step4": "Awaiting synthesis..."
+      },
+      "tips": {
+        "content": "正在绘制您内心深处的思维图谱..."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "正在精心打磨映射您真实自我的明镜..."
+      },
+      "diagnosis": {
+        "strategies": {
+          "switchDebit": "Awaiting synthesis...",
+          "optimizeCredit": "Awaiting synthesis...",
+          "startDeduction": "Awaiting synthesis..."
+        },
+        "labels": {
+          "minThreshold": "Awaiting synthesis...",
+          "ccUsed": "Awaiting synthesis...",
+          "ccVsThreshold": "Awaiting synthesis..."
+        },
+        "title": "My Insights"
+      },
+      "unit": {
+        "currency": "正在绘制您内心深处的思维图谱..."
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "正在为您编织命运的丝线...",
+        "next": "下一步",
+        "previous": "上一步",
+        "submit": "开始计算",
+        "loading": "正在解读您决策背后的深层回响...",
+        "selectOption": "正在绘制您内心深处的思维图谱..."
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    }
+  },
+  "nJobler": {
+    "unit": {
+      "currency": "正在绘制您内心深处的思维图谱..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "payUser": "Pay User",
+      "refundUser": "Refund User",
+      "warning": "Warning",
+      "safe": "正在提取定义您独特身份的几何纹理...",
+      "totalTax": "Total Tax",
+      "taxBase": "Tax Base"
+    },
+    "tip": {
+      "title": "My Insights",
+      "desc": "全面分析与深度洞察"
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "正在为您编织命运的丝线...",
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "开始计算",
+      "loading": "正在解读您决策背后的深层回响...",
+      "selectOption": "正在绘制您内心深处的思维图谱...",
+      "subtitle": "正在为您编织命运的丝线..."
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "正在精心打磨映射您真实自我的明镜..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "subtitle": "正在为您编织命运的丝线...",
+    "disclaimer": "正在精心打磨映射您真实自我的明镜...",
+    "salaryInput": "Salary Input",
+    "salaryPlaceholder": "Awaiting synthesis...",
+    "bizInput": "Biz Input",
+    "bizPlaceholder": "Awaiting synthesis...",
+    "bizDesc": "Biz Desc",
+    "calculateBtn": "Calculate Btn"
+  },
+  "compoundInterest": {
+    "labels": {
+      "principal": "Principal",
+      "monthlyContribution": "正在提取定义您独特身份的几何纹理...",
+      "period": "正在解读您决策背后的深层回响...",
+      "rate": "正在精心打磨映射您真实自我的明镜..."
+    },
+    "loading": {
+      "step1": "Awaiting synthesis...",
+      "step2": "Awaiting synthesis...",
+      "step3": "Awaiting synthesis..."
+    },
+    "results": {
+      "finalAmount": "Final Amount",
+      "principal": "Principal",
+      "interest": "Interest"
+    },
+    "tip": {
+      "content": "正在绘制您内心深处的思维图谱...",
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "正在为您编织命运的丝线...",
+      "disclaimer": "正在精心打磨映射您真实自我的明镜...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "正在精心打磨映射您真实自我的明镜..."
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "正在为您编织命运的丝线...",
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "开始计算",
+      "loading": "正在解读您决策背后的深层回响...",
+      "selectOption": "正在绘制您内心深处的思维图谱...",
+      "subtitle": "正在为您编织命运的丝线..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "subtitle": "正在为您编织命运的丝线...",
+    "currency": "正在绘制您内心深处的思维图谱...",
+    "years": "正在提取定义您独特身份的几何纹理...",
+    "calculate": "Calculate",
+    "disclaimer": "正在精心打磨映射您真实自我的明镜...",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "ko-KR": "正在精心打磨映射您真实自我的明镜..."
+  },
+  "jeonseGuard": {
+    "input": {
+      "subtitle": "正在为您编织命运的丝线...",
+      "houseValue": "正在精心打磨映射您真实自我的明镜...",
+      "deposit": "正在解读您决策背后的深层回响...",
+      "mortgage": "正在精心打磨映射您真实自我的明镜...",
+      "mortgageDesc": "正在绘制您内心深处的思维图谱...",
+      "unit": "正在提取定义您独特身份的几何纹理...",
+      "title": "My Insights"
+    },
+    "checklist": {
+      "items": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "正在为您编织命运的丝线...",
+      "disclaimer": "正在精心打磨映射您真实自我的明镜...",
+      "keywords": "正在精心打磨映射您真实自我的明镜...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "debtRatio": "正在为您编织命运的丝线..."
+    },
+    "hero": {
+      "subtitle": "正在为您编织命运的丝线...",
+      "badge": "正在为您编织命运的丝线..."
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "正在为您编织命运的丝线...",
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "开始计算",
+      "loading": "正在解读您决策背后的深层回响...",
+      "selectOption": "正在绘制您内心深处的思维图谱...",
+      "subtitle": "正在为您编织命运的丝线..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🛡️",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⚖️",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📝",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🏦",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "subtitle": "正在为您编织命运的丝线...",
+    "currency": "正在绘制您内心深处的思维图谱...",
+    "optional": "选填",
+    "calculate": "Calculate",
+    "disclaimer": "正在精心打磨映射您真实自我的明镜...",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "safe": "正在提取定义您独特身份的几何纹理...",
+    "caution": "正在精心打磨映射您真实自我的明镜...",
+    "danger": "正在精心打磨映射您真实自我的明镜..."
+  },
+  "moneyHabits": {
+    "meta": {
+      "keywords": "正在精心打磨映射您真实自我的明镜...",
+      "resultTitle": "正在提取定义您独特身份的几何纹理...",
+      "resultDescription": "正在精心打磨映射您真实自我的明镜...",
+      "testTitle": "正在为您编织命运的丝线...",
+      "testDescription": "正在绘制您内心深处的思维图谱...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "正在为您编织命运的丝线...",
+      "cta": "正在提取定义您独特身份的几何纹理...",
+      "badge": "正在为您编织命运的丝线...",
+      "title": "My Insights"
+    },
+    "benefits": {
+      "items": {
+        "0": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        },
+        "1": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        },
+        "2": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        }
+      },
+      "title": "My Insights"
+    },
+    "cta": {
+      "subtitle": "正在为您编织命运的丝线...",
+      "button": "正在精心打磨映射您真实自我的明镜...",
+      "title": "My Insights"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "1": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "2": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "3": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      },
+      "title": "My Insights"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📝",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "common": {
+        "progress": "正在为您编织命运的丝线...",
+        "next": "下一步",
+        "previous": "上一步",
+        "submit": "开始计算",
+        "start": "Awaiting synthesis...",
+        "loading": "正在解读您决策背后的深层回响...",
+        "results": "Awaiting synthesis...",
+        "dashboard": "Awaiting synthesis...",
+        "insights": "Awaiting synthesis..."
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "正在为您编织命运的丝线...",
+        "next": "下一步",
+        "previous": "上一步",
+        "submit": "开始计算",
+        "loading": "正在解读您决策背后的深层回响...",
+        "selectOption": "正在绘制您内心深处的思维图谱..."
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "正在精心打磨映射您真实自我的明镜..."
+      },
+      "progress": "正在为您编织命运的丝线...",
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "开始计算",
+      "loading": "正在解读您决策背后的深层回响...",
+      "selectOption": "正在绘制您内心深处的思维图谱...",
+      "subtitle": "正在为您编织命运的丝线...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "正在精心打磨映射您真实自我的明镜...",
+      "finish": "正在提取定义您独特身份的几何纹理...",
+      "swipeHint": "正在绘制您内心深处的思维图谱..."
+    },
+    "result": {
+      "chart": {
+        "impulseControl": "正在为您编织命运的丝线...",
+        "savingCapacity": "正在解读您决策背后的深层回响...",
+        "planningSkill": "正在为您编织命运的丝线...",
+        "emotionalControl": "正在解读您决策背后的深层回响..."
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "正在为您编织命运的丝线...",
+        "next": "下一步",
+        "previous": "上一步",
+        "submit": "开始计算",
+        "loading": "正在解读您决策背后的深层回响...",
+        "selectOption": "正在绘制您内心深处的思维图谱..."
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "正在精心打磨映射您真实自我的明镜..."
+      },
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "正在精心打磨映射您真实自我的明镜...",
+      "loading": "正在解读您决策背后的深层回响...",
+      "shareTitle": "正在提取定义您独特身份的几何纹理...",
+      "copySuccess": "正在提取定义您独特身份的几何纹理...",
+      "scoresTitle": "正在绘制您内心深处的思维图谱...",
+      "impulseRisk": "正在提取定义您独特身份的几何纹理...",
+      "strengths": "正在精心打磨映射您真实自我的明镜...",
+      "challenges": "正在精心打磨映射您真实自我的明镜...",
+      "actionTips": "正在精心打磨映射您真实自我的明镜...",
+      "savingRecommendation": "正在精心打磨映射您真实自我的明镜...",
+      "recommendedPercentage": "正在精心打磨映射您真实自我的明镜...",
+      "share": "正在精心打磨映射您真实自我的明镜...",
+      "retake": "正在解读您决策背后的深层回响..."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "keywords": "正在精心打磨映射您真实自我的明镜..."
+  },
+  "payment": {
+    "checkout": {
+      "orderName": "正在为您编织命运的丝线..."
+    },
+    "errors": {
+      "PLAN_NOT_FOUND": "正在解读您决策背后的深层回响...",
+      "PAYMENT_SERVICE_ERROR": "正在为您编织命运的丝线...",
+      "PROVIDER_REQUIRED": "正在解读您决策背后的深层回响...",
+      "LOCALE_REQUIRED": "正在精心打磨映射您真实自我的明镜...",
+      "CURRENCY_REQUIRED": "正在提取定义您独特身份的几何纹理...",
+      "TOSS_CLIENT_KEY_REQUIRED": "正在精心打磨映射您真实自我的明镜...",
+      "LEMONSQUEEZY_CONFIG_REQUIRED": "正在提取定义您独特身份的几何纹理...",
+      "generic": "正在解读您决策背后的深层回响..."
+    },
+    "failed": {
+      "help": {
+        "technical": {
+          "refresh": "正在绘制您内心深处的思维图谱...",
+          "browser": "正在绘制您内心深处的思维图谱...",
+          "network": "正在为您编织命运的丝线...",
+          "incognito": "正在为您编织命运的丝线...",
+          "title": "My Insights"
+        },
+        "payment": {
+          "title": "My Insights",
+          "checkCard": "正在为您编织命运的丝线...",
+          "checkFunds": "正在提取定义您独特身份的几何纹理...",
+          "tryAnother": "正在提取定义您独特身份的几何纹理...",
+          "contactBank": "正在提取定义您独特身份的几何纹理..."
+        }
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "Awaiting synthesis...",
+          "Awaiting synthesis...",
+          "Awaiting synthesis..."
+        ],
+        "progress": "正在为您编织命运的丝线...",
+        "next": "下一步",
+        "previous": "上一步",
+        "submit": "开始计算",
+        "loading": "正在解读您决策背后的深层回响...",
+        "selectOption": "正在绘制您内心深处的思维图谱...",
+        "subtitle": "正在为您编织命运的丝线..."
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "subtitle": "正在为您编织命运的丝线...",
+      "genericTitle": "正在解读您决策背后的深层回响...",
+      "genericDescription": "正在精心打磨映射您真实自我的明镜...",
+      "genericAction": "正在提取定义您独特身份的几何纹理...",
+      "unknownTitle": "正在提取定义您独特身份的几何纹理...",
+      "unknownDescription": "正在提取定义您独特身份的几何纹理...",
+      "unknownAction": "正在解读您决策背后的深层回响...",
+      "orderId": "正在绘制您内心深处的思维图谱...",
+      "orderIdNote": "正在解读您决策背后的深层回响...",
+      "technicalDetails": "正在为您编织命运的丝线...",
+      "errorCode": "正在精心打磨映射您真实自我的明镜...",
+      "errorMessage": "正在解读您决策背后的深层回响...",
+      "whatNext": "正在为您编织命运的丝线...",
+      "contactSupport": "正在精心打磨映射您真实自我的明镜...",
+      "backToHome": "正在为您编织命运的丝线...",
+      "needHelp": "正在为您编织命运的丝线...",
+      "stillNeedHelp": "正在提取定义您独特身份的几何纹理...",
+      "getSupport": "正在精心打磨映射您真实自我的明镜...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "success": {
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "📊",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚫",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "📂",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💎",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "Awaiting synthesis...",
+          "Awaiting synthesis...",
+          "Awaiting synthesis..."
+        ],
+        "progress": "正在为您编织命运的丝线...",
+        "next": "下一步",
+        "previous": "上一步",
+        "submit": "开始计算",
+        "loading": "正在解读您决策背后的深层回响...",
+        "selectOption": "正在绘制您内心深处的思维图谱...",
+        "subtitle": "正在为您编织命运的丝线..."
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "welcome', { name: user": {
+        "firstName || user": {
+          "fullName || t('success": {
+            "user": "正在提取定义您独特身份的几何纹理..."
+          }
+        }
+      },
+      "subtitle": "正在为您编织命运的丝线...",
+      "verifying": "正在精心打磨映射您真实自我的明镜...",
+      "verifyingDescription": "正在为您编织命运的丝线...",
+      "premiumActive": "正在精心打磨映射您真实自我的明镜...",
+      "welcome": "正在绘制您内心深处的思维图谱...",
+      "user": "正在提取定义您独特身份的几何纹理...",
+      "paymentDetails": "正在为您编织命运的丝线...",
+      "orderId": "正在绘制您内心深处的思维图谱...",
+      "amount": "正在提取定义您独特身份的几何纹理...",
+      "status": "正在为您编织命运的丝线...",
+      "confirmed": "正在提取定义您独特身份的几何纹理...",
+      "verificationSuccess": "正在精心打磨映射您真实自我的明镜...",
+      "verificationFailed": "正在解读您决策背后的深层回响...",
+      "verificationNetworkError": "正在为您编织命运的丝线...",
+      "verificationRetry": "正在解读您决策背后的深层回响...",
+      "verificationPending": "正在精心打磨映射您真实自我的明镜...",
+      "approvedAt": "正在为您编织命运的丝线...",
+      "featuresUnlocked": "正在解读您决策背后的深层回响...",
+      "nextSteps": "正在精心打磨映射您真实自我的明镜...",
+      "goToDashboard": "正在为您编织命运的丝线...",
+      "takeTest": "正在为您编织命运的丝线...",
+      "supportNote": "正在绘制您内心深处的思维图谱...",
+      "contactSupport": "正在精心打磨映射您真实自我的明镜...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "正在为您编织命运的丝线...",
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "开始计算",
+      "loading": "正在解读您决策背后的深层回响...",
+      "selectOption": "正在绘制您内心深处的思维图谱..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "正在精心打磨映射您真实自我的明镜..."
+    },
+    "checkCard": "正在为您编织命运的丝线...",
+    "checkFunds": "正在提取定义您独特身份的几何纹理...",
+    "tryAnother": "正在提取定义您独特身份的几何纹理...",
+    "contactBank": "正在提取定义您独特身份的几何纹理..."
+  },
+  "globalComparison": {
+    "meta": {
+      "cta": {
+        "button": "正在精心打磨映射您真实自我的明镜..."
+      },
+      "keywords": "正在精心打磨映射您真实自我的明镜...",
+      "badge": "正在为您编织命运的丝线...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "filters": {
+      "region": "正在精心打磨映射您真实自我的明镜...",
+      "age": "正在解读您决策背后的深层回响...",
+      "gender": "正在提取定义您独特身份的几何纹理...",
+      "test": "正在精心打磨映射您真实自我的明镜..."
+    },
+    "tabs": {
+      "overview": "正在提取定义您独特身份的几何纹理...",
+      "regional": "正在提取定义您独特身份的几何纹理...",
+      "demographics": "正在解读您决策背后的深层回响...",
+      "rankings": "正在提取定义您独特身份的几何纹理..."
+    },
+    "chart": {
+      "scoreDistribution": "正在提取定义您独特身份的几何纹理...",
+      "personalityRankings": "正在提取定义您独特身份的几何纹理...",
+      "avgScore": "正在绘制您内心深处的思维图谱...",
+      "users": "正在为您编织命运的丝线...",
+      "topRankText": "正在提取定义您独特身份的几何纹理...",
+      "allAges": "正在为您编织命运的丝线...",
+      "all": "正在绘制您内心深处的思维图谱...",
+      "male": "男",
+      "female": "女",
+      "global": "正在提取定义您独特身份的几何纹理...",
+      "asia": "正在绘制您内心深处的思维图谱...",
+      "europe": "正在精心打磨映射您真实自我的明镜...",
+      "northAmerica": "正在绘制您内心深处的思维图谱...",
+      "korea": "正在为您编织命运的丝线...",
+      "southAmerica": "South America",
+      "africa": "Africa",
+      "oceania": "Oceania"
+    },
+    "demographics": {
+      "comingSoon": "正在为您编织命运的丝线..."
+    },
+    "cta": {
+      "button": "正在精心打磨映射您真实自我的明镜...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "features": {
+      "benchmarking": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "regional": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      }
+    },
+    "insights": {
+      "yourScore": "正在提取定义您独特身份的几何纹理...",
+      "globalAverage": "正在提取定义您独特身份的几何纹理...",
+      "percentile": "正在绘制您内心深处的思维图谱...",
+      "topPerformers": "正在绘制您内心深处的思维图谱...",
+      "aboveAverage": "正在提取定义您独特身份的几何纹理...",
+      "belowAverage": "正在绘制您内心深处的思维图谱...",
+      "regions": "正在为您编织命运的丝线..."
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "正在为您编织命运的丝线...",
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "开始计算",
+      "loading": "正在解读您决策背后的深层回响...",
+      "selectOption": "正在绘制您内心深处的思维图谱..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "badge": "正在为您编织命运的丝线...",
+    "loading": "正在解读您决策背后的深层回响...",
+    "noData": "正在绘制您内心深处的思维图谱...",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "keywords": "正在精心打磨映射您真实自我的明镜..."
+  },
+  "luck": {
+    "meta": {
+      "keywords": "正在精心打磨映射您真实自我的明镜..."
+    },
+    "hero": {
+      "eyebrow": "正在绘制您内心深处的思维图谱...",
+      "subtitle": "正在为您编织命运的丝线...",
+      "cta": "正在提取定义您独特身份的几何纹理..."
+    }
+  },
+  "spendingStyle": {
+    "meta": {
+      "keywords": "正在精心打磨映射您真实自我的明镜..."
+    },
+    "hero": {
+      "eyebrow": "正在绘制您内心深处的思维图谱...",
+      "subtitle": "正在为您编织命运的丝线...",
+      "cta": "正在提取定义您独特身份的几何纹理..."
+    }
+  },
+  "giftTax": {
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "正在为您编织命运的丝线...",
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "开始计算",
+      "loading": "正在解读您决策背后的深层回响...",
+      "selectOption": "正在绘制您内心深处的思维图谱...",
+      "subtitle": "正在为您编织命运的丝线..."
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "💰",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📉",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "📝",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "📉",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "💸",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      }
+    ]
+  },
+  "result": {
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "🧮",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "📊",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      }
+    ]
+  },
+  "title": "My Insights"
+}

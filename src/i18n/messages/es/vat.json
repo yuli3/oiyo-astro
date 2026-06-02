@@ -1,0 +1,22 @@
+{
+  "description": "Calcula el Impuesto sobre el Valor Añadido (IVA) al instante.",
+  "title": "Calculadora de IVA",
+  "modes": {
+    "total": "Desde el Importe Total",
+    "supply": "Desde el Precio sin IVA"
+  },
+  "labels": {
+    "totalAmount": "Importe Total (Valor + IVA)",
+    "supplyAmount": "Precio sin IVA (Valor sin impuesto)"
+  },
+  "results": {
+    "supplyPrice": "Precio sin IVA",
+    "vat": "Importe del IVA",
+    "total": "Importe Total"
+  },
+  "tip": {
+    "title": "¿Qué es el IVA?",
+    "content": "El IVA es un impuesto al consumo añadido al valor de los bienes y servicios."
+  },
+  "disclaimer": "Esta herramienta es solo para uso indicativo."
+}

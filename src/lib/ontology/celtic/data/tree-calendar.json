@@ -1,0 +1,63 @@
+{
+  "tradition": "celtic",
+  "version": "1.0.0",
+  "shards": {
+    "trees": {
+      "birch": {
+        "name": "Birch",
+        "ogham": "Beith",
+        "symbol": "ᚁ",
+        "dates": "Dec 24 - Jan 20",
+        "meaning": "New Beginnings and Purification",
+        "lore": "The Birch is the Pioneer, the first tree to grow in burnt landscapes. It represents renewal, adaptability, and the courage to start anew.",
+        "medicinal": "Purification, diuretic qualities",
+        "animal": "White Stag"
+      },
+      "rowan": {
+        "name": "Rowan",
+        "ogham": "Luis",
+        "symbol": "ᚂ",
+        "dates": "Jan 21 - Feb 17",
+        "meaning": "Protection and Inspiration",
+        "lore": "The Rowan is the Tree of Life in many traditions. It is believed to protect against enchantment and evil spirits.",
+        "medicinal": "Cleansing, vision enhancement",
+        "animal": "Green Dragon"
+      },
+      "ash": {
+        "name": "Ash",
+        "ogham": "Nion",
+        "symbol": "NoStop",
+        "dates": "Feb 18 - Mar 17",
+        "meaning": "Connection and Transformation",
+        "lore": "The Ash connects the three worlds: Underworld, Earth, and Sky. It is the World Tree (Yggdrasil) in Norse mythology.",
+        "medicinal": "Anti-inflammatory, fever reduction",
+        "animal": "Adder/Snake"
+      },
+      "oak": {
+        "name": "Oak",
+        "ogham": "Duir",
+        "symbol": "𝐷",
+        "dates": "Jun 10 - Jul 7",
+        "meaning": "Strength and Stability",
+        "lore": "King of the Forest. The Oak holds the power of thunder and lightning. It represents endurance, triumph, and the doorway to mysteries.",
+        "medicinal": "Astringent, strength tonic",
+        "animal": "Wren/White Horse"
+      }
+    }
+  },
+  "l10n": {
+    "en": {},
+    "ko": {
+      "trees": {
+        "birch": {
+          "name": "자작나무",
+          "meaning": "새로운 시작과 정화"
+        },
+        "oak": {
+          "name": "참나무",
+          "meaning": "힘과 안정"
+        }
+      }
+    }
+  }
+}

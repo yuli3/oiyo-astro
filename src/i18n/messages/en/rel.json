@@ -1,0 +1,8 @@
+{
+  "child_adult": "Adult Child",
+  "child_minor": "Minor Child",
+  "spouse": "Spouse",
+  "parent": "Parent",
+  "other_relative": "Relative",
+  "other": "Other"
+}

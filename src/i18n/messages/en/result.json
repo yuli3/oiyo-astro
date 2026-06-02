@@ -1,0 +1,198 @@
+{
+  "solarLineage": "Solar Lineage",
+  "lunarLineage": "Lunar Lineage",
+  "compatibility": "Compatibility",
+  "title": "Result",
+  "description": "The map of your destiny revealed through traditional Myungri.",
+  "pillars": {
+    "title": "Four Pillars",
+    "interpretation": "Analysis",
+    "yearPillar": "Year Pillar (Early Years)",
+    "yearPillarDesc": "Symbolizes your ancestors, childhood, and your fundamental roots.",
+    "monthPillar": "Month Pillar (Youth)",
+    "monthPillarDesc": "Represents your social life, professional environment, and siblings.",
+    "dayPillar": "Day Pillar (Middle Years)",
+    "dayPillarDesc": "Represents yourself, your spouse, and your current environment.",
+    "hourPillar": "Hour Pillar (Later Years)",
+    "hourPillarDesc": "Reveals your children, the fortune of your later life, and future achievements."
+  },
+  "elements": {
+    "title": "Elemental Balance",
+    "chartLabel": "Elemental Balance"
+  },
+  "overview": {
+    "interpretation": "Overview",
+    "title": "Comprehensive Summary",
+    "mainTraits": "Core Traits",
+    "elementBalance": "Elemental Balance"
+  },
+  "analysis": "Analysis",
+  "tabs": {
+    "personality": "Personality",
+    "fortune": "Fortune",
+    "advice": "Guidance"
+  },
+  "personality": {
+    "strengths": "Strengths",
+    "weaknesses": "Areas for Growth"
+  },
+  "fortune": {
+    "flow": {
+      "title": "Life's Currents"
+    },
+    "title": "Fortune",
+    "status": "Analysis Complete"
+  },
+  "advice": "Advice",
+  "ai": {
+    "general_analysis": "AI Deep Analysis",
+    "career": "Career Fortune",
+    "wealth": "Wealth Fortune",
+    "love": "Love Fortune",
+    "health": "Health Fortune",
+    "error": "Unable to retrieve AI analysis data."
+  },
+  "meta": {
+    "test": {
+      "insightBullets": [
+        "Decoding the elemental frequencies within your date of birth.",
+        "Mapping the seasonal flow that governs your natural temperament.",
+        "Unveil the secret interactions of the Ten Gods within your chart."
+      ],
+      "progress": "Celestial Progress",
+      "submit": "Behold My Destiny",
+      "loading": "Accessing the Imperial Archives...",
+      "selectOption": "Enter your details",
+      "next": "Continue",
+      "previous": "Go Back"
+    },
+    "result": {
+      "title": "Fortune Analysis Results",
+      "description": "In-depth fortune readings and insights"
+    },
+    "title": "Saju Analysis Report",
+    "description": "Discover your Saju and destiny.",
+    "keywords": "Saju, analysis, fortune, destiny"
+  },
+  "modern": {
+    "title": "Modern Interpretation",
+    "mbtiSimilarity": "Similar MBTI",
+    "similarPersonality": "Personality Type",
+    "strengths": "My Strengths",
+    "challenges": "Challenges for Growth",
+    "careerSuggestions": "Recommended Careers",
+    "relationshipAdvice": "Interpersonal Guidance",
+    "economy": "Economic Tendencies",
+    "mbtiSalary": "Salary Trajectory",
+    "globalComparison": "Global Comparison"
+  },
+  "lifestyle": {
+    "title": "The Way of Essence (Life Path)",
+    "interpretation": "Alchemical Path: Hobbies and careers that harmonize with your essence."
+  },
+  "retake": "Retake",
+  "birthInfo": "Saju Information",
+  "birthDate": "Solar/Lunar Birthday",
+  "birthTime": "Time of Birth",
+  "mainAnalysis": "Primary Analysis",
+  "dominantElement": "Dominant Element",
+  "personalityType": "Personality Type",
+  "daily": {
+    "badge": "Daily Ontology",
+    "risingTitle": "The {branch} Rising",
+    "risingDesc": "Your energy today is characterized by a powerful upward momentum. The {element} element enhances your natural creativity.",
+    "flowTitle": "Financial Flow",
+    "flowDesc": "Strong potential for investment.",
+    "loveTitle": "Love Radar",
+    "loveDesc": "Open your heart to new dialogues.",
+    "colorTitle": "Power Color",
+    "colorDesc": "Wear this to amplify presence.",
+    "foodTitle": "Soul Food",
+    "foodDesc": "Restores your vitality.",
+    "unlockTitle": "Unlock Your Life Trajectory",
+    "unlockDesc": "Your fortune has increased by <span class='text-emerald-600 font-bold'>+{percent}%</span> compared to last week.",
+    "viewReport": "View Full Report"
+  },
+  "time": "Time",
+  "day": "Day",
+  "month": "Month",
+  "year": "Year",
+  "fiveElements": "Five Elements",
+  "traits": "Traits",
+  "copy": "Copy Result",
+  "style": "Style",
+  "home": "Home",
+  "primarySection": {
+    "scoreHeadline": "Your Score",
+    "bondingTitle": "Bonding",
+    "conversationTitle": "Conversation",
+    "caregiverTitle": "Caregiver Style"
+  },
+  "scoreBreakdown": {
+    "title": "Score Breakdown",
+    "description": "Details of your score."
+  },
+  "hybridIdeas": {
+    "title": "Hybrid Ideas"
+  },
+  "supportPartners": {
+    "title": "Support Partners"
+  },
+  "cta": {
+    "retake": "Retake Test",
+    "explore": "Explore More"
+  },
+  "characteristics": "Characteristics",
+  "dreamPatterns": "Dream Patterns",
+  "interpretationTips": "Interpretation Tips",
+  "commonSymbols": "Common Symbols",
+  "dreamTypeBreakdown": "Dream Breakdown",
+  "share": "Share",
+  "qualityOfLife": "Quality of Life",
+  "safetyScore": "Safety Score",
+  "costOfLiving": "Cost of Living",
+  "readyExplore": "Ready to Explore?",
+  "exploreDescription": "Find your next destination.",
+  "exploreTravel": "Explore Travel",
+  "connectExpats": "Connect with Expats",
+  "copied": "Copied Result",
+  "writingStyle": "Writing Style",
+  "strengths": "Strengths",
+  "growthAreas": "Growth Areas",
+  "favoriteGenres": "Favorite Genres",
+  "writingTips": "Writing Tips",
+  "personalizedPrompts": "Your Prompts",
+  "personalizedPromptsSubtitle": "Prompts for you.",
+  "exploreMore": "Explore More",
+  "studyTips": "Study Tips",
+  "environment": "Environment",
+  "sections": {
+    "dimensions_title": "Dimensions",
+    "strengths": "Strengths",
+    "traits": "Traits",
+    "challenges": "Challenges",
+    "idealSituations": "Ideal Situations",
+    "tips": "Tips",
+    "breakdown": "Breakdown"
+  },
+  "level": "Level",
+  "score": "Score",
+  "profile_title": "Profile",
+  "guidance_title": "Guidance",
+  "grossPay": "Gross Pay",
+  "nationalPension": "National Pension",
+  "healthInsurance": "Health Insurance",
+  "incomeTax": "Income Tax",
+  "netPay": "Net Pay",
+  "deduction": "Deduction",
+  "taxBase": "Tax Base",
+  "rate": "Tax Rate",
+  "selfReport": "Self Report",
+  "loading": {
+    "title": "Calculating...",
+    "description": "Please wait."
+  },
+  "retakeTest": "Retake Test",
+  "backHome": "Back to Home",
+  "sharePrompt": "Share your result."
+}

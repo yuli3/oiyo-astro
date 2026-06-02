@@ -1,0 +1,30 @@
+{
+  "title": "Tabla de clasificación",
+  "category": {
+    "points": "Agujas",
+    "streaks": "Manchas",
+    "referrals": "Referencias",
+    "tests": "Pruebas"
+  },
+  "period": {
+    "today": "Hoy",
+    "week": "Semana",
+    "month": "Mes",
+    "allTime": "Todo el tiempo"
+  },
+  "stats": {
+    "yourRank": "Tu rango",
+    "yourScore": "Tu puntuación",
+    "percentile": "percentil",
+    "toNextRank": "Al siguiente rango"
+  },
+  "ui": {
+    "you": "Tú",
+    "hallOfFame": "Salón de la Fama",
+    "showMore": "Mostrar más ({count})",
+    "participants": "{count} participantes",
+    "noData": "Aún no hay datos en la clasificación.",
+    "noDataCta": "¡Completa pruebas para ganar puntos y subir de rango!",
+    "topPercentile": "{percentil}% superior"
+  }
+}

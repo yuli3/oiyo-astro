@@ -1,0 +1,850 @@
+{
+  "travel": {
+    "types": {
+      "INTJ": {
+        "preferences": [
+          "Sitios culturales",
+          "Museos",
+          "Lugares historicos",
+          "Arquitectura"
+        ],
+        "avoidances": [
+          "Lugares concurridos",
+          "Planes espontáneos",
+          "Viajes en grupo",
+          "Ambiente de fiesta"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "Gyeongju",
+            "Aldea Hanok de Jeonju",
+            "andong",
+            "Jeju Oriental"
+          ],
+          "international": ["Kioto", "Rome", "Praga", "Estanbul"]
+        },
+        "activities": [
+          "Tours de historia",
+          "Ejecuciones de arquitectura",
+          "Lectura",
+          "Fotografía"
+        ],
+        "companionCompatibility": {
+          "best": ["ENFP", "ENTP", "INFP"],
+          "good": ["INTJ", "INTP", "ENTJ"],
+          "challenging": ["ESFP", "ESTP", "ESFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "INTP": {
+        "preferences": [
+          "Lugares únicos",
+          "Museos de ciencia",
+          "Gemas ocultas",
+          "Cultura local"
+        ],
+        "avoidances": [
+          "Horarios fijos",
+          "Trampas para turistas",
+          "Enfoque de compras",
+          "Lugares ruidosos"
+        ],
+        "idealDestinations": {
+          "domestic": ["juventud lanuda", "Gangneung", "Tongyeong", "Sokcho"],
+          "international": ["Islandia", "Nueva Zelanda", "Suiza", "Noruega"]
+        },
+        "activities": [
+          "Exploración de la naturaleza",
+          "Estudio de las estrellas",
+          "Contemplación",
+          "Cafés únicos"
+        ],
+        "companionCompatibility": {
+          "best": ["ENFJ", "ENTJ", "INFJ"],
+          "good": ["INTP", "INTJ", "ENTP"],
+          "challenging": ["ESTJ", "ESFJ", "ISFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENTJ": {
+        "preferences": [
+          "Puntos de referencia",
+          "Hoteles de negocios",
+          "buena comida",
+          "Actividades"
+        ],
+        "avoidances": [
+          "Viajes no planificados",
+          "ritmo lento",
+          "Estancias incómodas",
+          "perdiendo el tiempo"
+        ],
+        "idealDestinations": {
+          "domestic": ["Seúl", "Busán", "Jeju", "Inchon"],
+          "international": ["Nueva York", "Singapur", "Dubái", "Hong Kong"]
+        },
+        "activities": [
+          "Pasear",
+          "Golf",
+          "Rutas del vino",
+          "Reuniones de negocios"
+        ],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENTJ", "INTJ", "ENTP"],
+          "challenging": ["ISFJ", "ESFJ", "ISFP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENTP": {
+        "preferences": [
+          "Actividades de aventura",
+          "Mercados nocturnos",
+          "Interacción local",
+          "Viajes espontáneos"
+        ],
+        "avoidances": [
+          "Cursos estándar",
+          "tours de lujo",
+          "Descanso tranquilo",
+          "Horarios regulares"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "gangwon-do",
+            "Jeju occidental",
+            "Campo de Gyeongsang",
+            "De isla en isla"
+          ],
+          "international": [
+            "Sudeste Asiático",
+            "Sudamerica",
+            "Europa Oriental",
+            "Oriente Medio"
+          ]
+        },
+        "activities": ["Surf", "Paracaidismo", "senderismo", "Fiestas locales"],
+        "companionCompatibility": {
+          "best": ["INFJ", "INTJ", "ISFJ"],
+          "good": ["ENTP", "ENFP", "ESTP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "INFJ": {
+        "preferences": [
+          "Lugares espirituales",
+          "Naturaleza",
+          "Cafés tranquilos",
+          "Galerías de arte"
+        ],
+        "avoidances": [
+          "Cultura de fiesta",
+          "Lugares concurridos",
+          "Ruido",
+          "Experiencias superficiales"
+        ],
+        "idealDestinations": {
+          "domestic": ["Sendero Olle de Jeju", "boseong", "Namhae", "Damyang"],
+          "international": ["Bali", "Santorini", "Kioto", "Bután"]
+        },
+        "activities": ["Meditación", "Yoga", "Fotografía", "Llevar un diario"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ENFP", "INTP"],
+          "good": ["INFJ", "INFP", "ENFJ"],
+          "challenging": ["ESTP", "ESFP", "ESTJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "INFP": {
+        "preferences": [
+          "Lugares escondidos",
+          "Pueblos tranquilos",
+          "Librerías",
+          "Tiendas independientes"
+        ],
+        "avoidances": [
+          "Rutas turísticas",
+          "Lugares ruidosos",
+          "Horarios fijos",
+          "Actividades grupales"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "Pandilla de escalada en la playa",
+            "Tongyeong",
+            "Yosu",
+            "Yeonju"
+          ],
+          "international": ["París", "Ámsterdam", "Praga", "Edimburgo"]
+        },
+        "activities": ["Caminando", "Lectura", "Escribiendo", "Fotografía"],
+        "companionCompatibility": {
+          "best": ["ENTJ", "ENFJ", "INTJ"],
+          "good": ["INFP", "INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ESFJ", "ISTJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENFJ": {
+        "preferences": [
+          "Experiencias locales",
+          "clases de cocina",
+          "Visitas comunitarias",
+          "Voluntariado"
+        ],
+        "avoidances": [
+          "Soledad",
+          "Viajes tranquilos",
+          "Sólo para turistas",
+          "Experiencias superficiales"
+        ],
+        "idealDestinations": {
+          "domestic": ["Pueblos de Jeju", "Yeonju", "Busán", "Sokcho"],
+          "international": ["Italia", "España", "México", "Tailandia"]
+        },
+        "activities": [
+          "Conociendo gente local",
+          "clases de cocina",
+          "Intercambio cultural",
+          "viajes de voluntariado"
+        ],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENFJ", "ENFP", "ESFJ"],
+          "challenging": ["ISTP", "ISTJ", "INTP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENFP": {
+        "preferences": [
+          "festivales",
+          "Actuaciones",
+          "Mercados nocturnos",
+          "Eventos locales"
+        ],
+        "avoidances": [
+          "Horarios fijos",
+          "Viajes tranquilos",
+          "Sola",
+          "Rutinas"
+        ],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Busán", "Gangneung", "Yosu"],
+          "international": ["Barcelona", "Bangkok", "Río de Janeiro", "Bali"]
+        },
+        "activities": ["festivales", "Partes", "Surf", "conocer gente nueva"],
+        "companionCompatibility": {
+          "best": ["INTJ", "INFJ", "ISTJ"],
+          "good": ["ENFP", "ENTP", "ESFP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISTJ": {
+        "preferences": [
+          "Lugares famosos",
+          "Museos",
+          "Sitios históricos",
+          "Lugares seguros"
+        ],
+        "avoidances": [
+          "Viajes espontáneos",
+          "Lugares peligrosos",
+          "Cambios de planes",
+          "Estancias incómodas"
+        ],
+        "idealDestinations": {
+          "domestic": ["Gyeongju", "Yeonju", "andong", "Suwon"],
+          "international": ["Japona", "Alemania", "Suiza", "Canadá"]
+        },
+        "activities": [
+          "Pasear",
+          "Fotografía",
+          "Visitas al museo",
+          "Experiencias tradicionales"
+        ],
+        "companionCompatibility": {
+          "best": ["ESFP", "ESTP", "ENFP"],
+          "good": ["ISTJ", "ESTJ", "ISFJ"],
+          "challenging": ["ENTP", "ENFP", "ESFP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISFJ": {
+        "preferences": [
+          "Lugares tranquilos",
+          "Lugares familiares",
+          "Lugares seguros",
+          "Descanso confortable"
+        ],
+        "avoidances": ["Aventura", "Multitudes", "Malestar", "Peligro"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Sokcho", "Yosu", "Gyeongju"],
+          "international": ["Japona", "Taiwán", "Singapur", "Nueva Zelanda"]
+        },
+        "activities": [
+          "Cicatrización",
+          "Onsen",
+          "Tours gastronómicos",
+          "Compras"
+        ],
+        "companionCompatibility": {
+          "best": ["ENTP", "ESTP", "ESFP"],
+          "good": ["ISFJ", "ISTJ", "ESFJ"],
+          "challenging": ["ENTP", "ENFP", "ESTP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESTJ": {
+        "preferences": [
+          "Lugares famosos",
+          "Paquetes turísticos",
+          "Visitas guiadas",
+          "Comodidades"
+        ],
+        "avoidances": [
+          "Sin planes",
+          "Ineficacia",
+          "pérdida de tiempo",
+          "Malestar"
+        ],
+        "idealDestinations": {
+          "domestic": ["Seúl", "Busán", "Jeju", "Daejeon"],
+          "international": ["Singapur", "Hong Kong", "Tokio", "Pekín"]
+        },
+        "activities": [
+          "Pasear",
+          "Compras",
+          "Tours gastronómicos",
+          "Fotografía"
+        ],
+        "companionCompatibility": {
+          "best": ["ISFP", "ISTP", "INFP"],
+          "good": ["ESTJ", "ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP", "INTP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESFJ": {
+        "preferences": [
+          "viajes familiares",
+          "Viajes en grupo",
+          "Cafés famosos",
+          "Compras"
+        ],
+        "avoidances": [
+          "viajar en solitario",
+          "Lugares tranquilos",
+          "Actividades peligrosas",
+          "Malestar"
+        ],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Busán", "Inchon", "Yeonju"],
+          "international": ["Okinawa", "Guam", "Australia", "Hawai"]
+        },
+        "activities": ["Compras", "Food", "Fotografía", "Visitas a cafeterías"],
+        "companionCompatibility": {
+          "best": ["ISTP", "ISFP", "INFP"],
+          "good": ["ESFJ", "ENFJ", "ESTJ"],
+          "challenging": ["INTP", "INTJ", "ISTP"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISTP": {
+        "preferences": [
+          "actividades al aire libre",
+          "Deportes",
+          "Naturaleza",
+          "Aventura"
+        ],
+        "avoidances": [
+          "Horarios fijos",
+          "Museos",
+          "Compras",
+          "Rutas turísticas"
+        ],
+        "idealDestinations": {
+          "domestic": [
+            "gangwon-do",
+            "montañas de jeju",
+            "Costa de Gyeongsang",
+            "Zonas de montaña"
+          ],
+          "international": ["Nueva Zelanda", "Noruega", "Suiza", "Canadá"]
+        },
+        "activities": ["Senderismo", "Esquiar", "Buceo", "Ciclismo"],
+        "companionCompatibility": {
+          "best": ["ESFJ", "ESTJ", "ENFJ"],
+          "good": ["ISTP", "ESTP", "ISFP"],
+          "challenging": ["ENFJ", "ESFJ", "INFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISFP": {
+        "preferences": [
+          "Galerías de arte",
+          "Naturaleza",
+          "Cafés",
+          "Espacios atmosféricos"
+        ],
+        "avoidances": [
+          "Lugares ruidosos",
+          "Planes",
+          "corriendo",
+          "Actividades grupales"
+        ],
+        "idealDestinations": {
+          "domestic": ["Jeju", "Gangneung", "Tongyeong", "Yosu"],
+          "international": ["París", "Provenza", "Santorini", "Bali"]
+        },
+        "activities": ["Fotografía", "Dibujo", "Cafés", "Caminando"],
+        "companionCompatibility": {
+          "best": ["ESTJ", "ESFJ", "ENTJ"],
+          "good": ["ISFP", "INFP", "ESFP"],
+          "challenging": ["ESTJ", "ENTJ", "ISTJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESTP": {
+        "preferences": [
+          "Actividades",
+          "Partes",
+          "Vida nocturna",
+          "deportes extremos"
+        ],
+        "avoidances": ["Museos", "Tours tranquilos", "Planes", "ritmo lento"],
+        "idealDestinations": {
+          "domestic": ["Busán", "Gangneung", "Jeju occidental", "yangyang"],
+          "international": ["Phuket", "Bali", "Dubái", "Ibiza"]
+        },
+        "activities": [
+          "Surf",
+          "discotecas",
+          "deportes acuáticos",
+          "salto en bungee"
+        ],
+        "companionCompatibility": {
+          "best": ["ISFJ", "ISTJ", "INFJ"],
+          "good": ["ESTP", "ESFP", "ENTP"],
+          "challenging": ["INFJ", "INFP", "ISFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESFP": {
+        "preferences": ["festivales", "Partes", "Compras", "Gente"],
+        "avoidances": ["Planes", "Silencio", "Sola", "Aburrimiento"],
+        "idealDestinations": {
+          "domestic": ["Busán", "Jeju", "Hongdae", "Gangnam"],
+          "international": ["Las Vegas", "Ibiza", "Bangkok", "miami"]
+        },
+        "activities": ["Partes", "Compras", "Espectáculos", "Food"],
+        "companionCompatibility": {
+          "best": ["ISTJ", "ISFJ", "INTJ"],
+          "good": ["ESFP", "ESTP", "ENFP"],
+          "challenging": ["INTJ", "ISTJ", "INFJ"]
+        },
+        "name": "Animador",
+        "emoji": "🎉",
+        "description": "Animadores espontáneos, enérgicos y entusiastas.",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "items": [
+        {
+          "name": "La aventurera",
+          "description": "Buscando nuevas experiencias y emociones."
+        },
+        {
+          "name": "La planificadora",
+          "description": "Encontrar la paz en horarios perfectos."
+        },
+        {
+          "name": "El relajante",
+          "description": "Buscando verdadero descanso y curación."
+        },
+        {
+          "name": "La culturalista",
+          "description": "Profundización en la historia y las artes."
+        },
+        {
+          "name": "El presupuesto",
+          "description": "Consumidora inteligente maximizando valor."
+        },
+        {
+          "name": "La luxurista",
+          "description": "Disfrutando de un servicio y comodidad premium."
+        }
+      ],
+      "title": "Mapeando la arquitectura secreta de tu personalidad..."
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "Cuando llegue a su destino, usted:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Explora tranquilamente por tu cuenta",
+            "value": "I"
+          },
+          {
+            "text": "Chatea con lugareños u otros viajeros",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Al planificar su itinerario:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Céntrate en lugares famosos con planos detallados",
+            "value": "S"
+          },
+          {
+            "text": "Centrarse en gemas ocultas y experiencias únicas.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Criterios para elegir destino:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Eficiencia y relación calidad-precio",
+            "value": "T"
+          },
+          {
+            "text": "Atmósfera y sentimiento",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Preparando el viaje:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Reserve y planifique con estricta antelación",
+            "value": "J"
+          },
+          {
+            "text": "Planifique aproximadamente y vaya espontáneamente",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Actividad preferida durante el viaje:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Visitar tranquilamente museos o ruinas.",
+            "value": "I"
+          },
+          {
+            "text": "Fiestas locales o conocer gente.",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Al encontrar comida extraña:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Ir a restaurantes famosos verificados",
+            "value": "S"
+          },
+          {
+            "text": "Pruebe algo único y nuevo",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Al no estar de acuerdo con un compañero de viaje:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Decidir racionalmente basándose en criterios objetivos",
+            "value": "T"
+          },
+          {
+            "text": "Ajustar teniendo en cuenta los sentimientos",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "Si sucede algo inesperado:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Intenta volver al plan.",
+            "value": "J"
+          },
+          {
+            "text": "Acéptalo como una nueva oportunidad.",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "Criterios para elegir alojamiento:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "Espacio privado tranquilo y confortable.",
+            "value": "I"
+          },
+          {
+            "text": "Espacio donde puedo relacionarme con la gente.",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "¿Cómo se obtiene información de viaje?",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "Guías e información verificada.",
+            "value": "S"
+          },
+          {
+            "text": "Blogs y reseñas únicas.",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "Al exceder el presupuesto:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "Ajustar el plan y recortar el gasto",
+            "value": "T"
+          },
+          {
+            "text": "Sea flexible ya que la experiencia importa",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "El último día del viaje:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "Terminar todas las actividades planificadas.",
+            "value": "J"
+          },
+          {
+            "text": "Disfruta del tiempo restante libremente",
+            "value": "P"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "title": "Mapeando la arquitectura secreta de tu personalidad...",
+      "description": "Mapeando la arquitectura secreta de tu personalidad...",
+      "keywords": "Analizando los ecos profundos de tus elecciones..."
+    },
+    "hero": {
+      "badge": "Travel Psychology",
+      "title": "Mapeando la arquitectura secreta de tu personalidad...",
+      "description": "Mapeando la arquitectura secreta de tu personalidad...",
+      "cta": "Start Test"
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "Mejores viajes",
+          "description": "Encuentra destinos y estilos que se adapten perfectamente a ti."
+        },
+        {
+          "title": "Presupuesto inteligente",
+          "description": "Aprenda a gastar su dinero donde cuenta."
+        },
+        {
+          "title": "Más disfrute",
+          "description": "Reduce el estrés y maximiza la satisfacción durante tus viajes."
+        },
+        {
+          "title": "Armonía de viaje",
+          "description": "Entiende las diferencias con tus compañeros de viaje."
+        }
+      ],
+      "title": "Mapeando la arquitectura secreta de tu personalidad..."
+    },
+    "test": {
+      "title": "Mapeando la arquitectura secreta de tu personalidad...",
+      "subtitle": "Sincronizando los hilos de tu destino...",
+      "progress": "Progreso: {actual}/{total}",
+      "submit": "Enviar",
+      "next": "Siguiente",
+      "previous": "Anterior"
+    },
+    "result": {
+      "sections": {
+        "traits": "Travel Style",
+        "idealDestinations": "Ideal Destinations",
+        "travelTips": "Travel Tips",
+        "balance": "Travel Balance",
+        "strengths": "Fortalezas",
+        "challenges": "Challenges",
+        "breakdown": "Personality Breakdown"
+      },
+      "title": "Mapeando la arquitectura secreta de tu personalidad...",
+      "subtitle": "Sincronizando los hilos de tu destino...",
+      "loading": "Analizando el estilo de viaje...",
+      "exploreMore": "Explore More",
+      "exploreMoreDescription": "Descifrando los patrones geométricos de tu identidad...",
+      "retakeTest": "Retake Test"
+    },
+    "cityGuide": {
+      "meta": {
+        "title": "Mapeando la arquitectura secreta de tu personalidad...",
+        "description": "Mapeando la arquitectura secreta de tu personalidad..."
+      },
+      "hero": {
+        "title": "Mapeando la arquitectura secreta de tu personalidad...",
+        "subtitle": "Sincronizando los hilos de tu destino..."
+      },
+      "noData": {
+        "title": "Mapeando la arquitectura secreta de tu personalidad...",
+        "desc": "Analizando los ecos profundos de tus elecciones...",
+        "button": "Diseñando un espejo que refleja tu verdadera esencia..."
+      },
+      "filters": {
+        "climate": "Sincronizando los hilos de tu destino...",
+        "cost": "Analizando los ecos profundos de tus elecciones...",
+        "safety": "Sincronizando los hilos de tu destino...",
+        "internet": "Mapeando la arquitectura secreta de tu personalidad..."
+      }
+    }
+  }
+}

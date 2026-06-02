@@ -1,0 +1,49 @@
+{
+  "description": "Solve complex tax calculations at once, reflecting the latest rates for 2025.",
+  "title": "salary calculator",
+  "labels": {
+    "salaryInput": "Enter salary",
+    "salaryPlaceholder": "Please enter your salary",
+    "nonTaxable": "Tax-exempt meal allowance",
+    "nonTaxableHelp": "Enter meals, etc., that are not subject to tax among your monthly salary. (Basic 200,000 won)",
+    "dependents": "Number of dependents (including self)",
+    "children": "Number of children under 20 years of age",
+    "disclaimer": "⚖️ Legal Notice",
+    "disclaimerText": "This calculation result is an estimate based on 2025 tax rates and insurance rates, and the actual amount received may vary depending on company policy, deduction items, etc. Check your pay stub for exact details.",
+    "calculatePrompt": "Enter your annual salary and press the calculate button.",
+    "calculate": "Calculate",
+    "reset": "reset",
+    "inputParameters": "Input Parameters"
+  },
+  "result": {
+    "netPay": "Expected monthly salary",
+    "grossPay": "pre-tax salary",
+    "nationalPension": "national pension",
+    "healthInsurance": "health insurance",
+    "careInsurance": "long-term care",
+    "employmentInsurance": "employment insurance",
+    "incomeTax": "income tax",
+    "localTax": "local income tax",
+    "totalDeductions": "Total deduction",
+    "title": "📊 Detailed salary analysis",
+    "description": "This is the estimated actual income after deducting taxes and four major insurance policies.",
+    "harvestDescription": "Your estimated monthly harvest after cosmic deductions.",
+    "pensionRate": "National Pension Rate (4.5%)",
+    "healthRate": "Health Insurance Rate (3.545%)"
+  },
+  "advisor": {
+    "tip": "💡 Advice from a financial advisor",
+    "content": "Apply the 50/30/20 rule (essential expenses/leisure/savings) based on your expected actual income. If you carefully consider tax deduction items, you can receive a refund at year-end tax settlement."
+  },
+  "loading": {
+    "title": "Analyzing Salary Details...",
+    "step1": "Verifying annual income",
+    "step2": "Calculating deductions",
+    "step3": "Applying tax rates",
+    "step4": "Finalizing net pay"
+  },
+  "meta": {
+    "title": "salary calculator | Calculate actual salary",
+    "description": "This is a salary calculator with the latest tax and insurance rates for 2025. Accurately calculate your actual monthly receipt excluding national pension, health insurance, income tax, etc."
+  }
+}

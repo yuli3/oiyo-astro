@@ -1,0 +1,104 @@
+{
+  "labels": {
+    "mirror": "镜像"
+  },
+  "hiddenSelf": {
+    "title": "隐藏的自我",
+    "description": "揭开你内心无意识的层面。",
+    "ctaOrigin": "探索起源",
+    "ctaIdentity": "发现身份"
+  },
+  "status": {
+    "scrollForSynergy": "滚动查看协同分析"
+  },
+  "analysis": {
+    "detailed": "详细共鸣分析"
+  },
+  "iching": {
+    "title": "易经",
+    "revelation": "卦象启示"
+  },
+  "cta": {
+    "title": "你们共同的命运在等待",
+    "subtitle": "将这段缘分记录在档案中",
+    "share": "分享结果",
+    "download": "下载档案"
+  },
+  "title": "共鸣档案",
+  "subtitle": "您的宇宙对齐。",
+  "offeringTitle": "深度共鸣奉献",
+  "offeringDescription": "解锁最深层的洞察。",
+  "confidenceMeter": "置信度仪表",
+  "revealed": "已揭示特质",
+  "nameLabel": "姓名",
+  "namePlaceholder": "输入您的姓名",
+  "birthLabel": "出生信息",
+  "mbtiLabel": "MBTI 类型",
+  "mbtiPlaceholder": "输入您的 MBTI",
+  "bloodLabel": "血型",
+  "bloodPlaceholder": "输入您的血型",
+  "calculateButton": "计算协同",
+  "calculating": "计算中...",
+  "backButton": "返回庇护所",
+  "shareButton": "分享宇宙纽带",
+  "dimensionsTitle": "维度共鸣",
+  "oracleTitle": "神谕洞察",
+  "partialDataWarning": "命运之线尚不完整。",
+  "addMoreInfo": "提供更多灵魂数据",
+  "desc": "理解人际连接。",
+  "friendship": {
+    "intro": {
+      "badge": "共鸣分析",
+      "title": "友谊风格实验室",
+      "quote": "探索您之间各种纽带的隐藏结构。",
+      "startButton": "开始探索"
+    },
+    "questions": {
+      "bond": "纽带查询"
+    },
+    "results": {
+      "profile": "共鸣档案",
+      "vulnerability": "阴暗面",
+      "strategy": "和谐之路",
+      "restart": "重新回顾"
+    }
+  },
+  "grandOracle": {
+    "title": "大算命师",
+    "desc": "理解人际连接。"
+  },
+  "resonanceTitle": "共鸣档案馆",
+  "resonanceVitalitySection": "生命力流动",
+  "resonanceVitalitySubtitle": "您显化能量的脉动",
+  "conflict": {
+    "title": "冲突分析",
+    "description": "分析并理解人际关系中的冲突模式。",
+    "intro": {
+      "badge": "冲突分析",
+      "title": "冲突解决方式",
+      "quote": "了解你如何处理分歧可以很大程度上揭示你的人际关系。",
+      "startButton": "开始分析"
+    }
+  },
+  "loveCommunication": {
+    "title": "爱沟通",
+    "description": "了解浪漫关系中的沟通方式。",
+    "intro": {
+      "title": "爱情语言分析",
+      "description": "了解您如何在浪漫关系中表达和接受爱。"
+    }
+  },
+  "synergy": {
+    "title": "协同分析",
+    "description": "了解您性格的不同方面如何协同工作。",
+    "hero": {
+      "badge": "协同作用",
+      "titlePrefix": "伟大的",
+      "titleSuffix": "同步性",
+      "description": "了解您性格的不同方面如何协同工作。"
+    },
+    "status": {
+      "accessing": "访问协同数据..."
+    }
+  }
+}

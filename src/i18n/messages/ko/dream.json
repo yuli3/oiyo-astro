@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "꿈일지",
+    "description": "당신의 꿈을 기록하고 분석해보세요.",
+    "keywords": "꿈 일지, 꿈 분석, 꿈 해석"
+  },
+  "hero": {
+    "title": "꿈일지",
+    "badge": "인기 있는",
+    "subtitle": "당신의 꿈을 향한 최고의 가이드",
+    "description": "당신의 꿈에 대한 깊은 통찰력을 제공하는 다양한 도구를 찾아보세요."
+  },
+  "tabs": {
+    "analysis": "나의 꿈 유형",
+    "symbols": "기호 사전",
+    "journal": "저널링 팁"
+  },
+  "result": {
+    "title": "꿈 분석 결과",
+    "copied": "클립보드에 복사되었습니다!",
+    "characteristics": "당신의 꿈의 특징",
+    "dreamPatterns": "당신의 꿈 패턴",
+    "interpretationTips": "꿈 해석 팁",
+    "commonSymbols": "공통 기호",
+    "dreamTypeBreakdown": "꿈 유형 분석",
+    "share": "공유하기",
+    "shareText": "나는 {type} 몽상가입니다! 여기에서 확인하세요: {url}",
+    "retake": "재응시 시험"
+  },
+  "symbols": {
+    "title": "꿈의 상징 사전",
+    "subtitle": "자주 등장하는 기호의 의미를 알아보세요",
+    "searchPlaceholder": "기호 검색..."
+  },
+  "journal": {
+    "title": "꿈 일지 가이드",
+    "subtitle": "꿈을 효과적으로 기록하고 분석하는 방법을 알아보세요.",
+    "gettingStarted": "시작하기",
+    "whatToRecord": "녹음할 내용",
+    "interpretationTips": "통역 팁",
+    "improveRecall": "회상 개선"
+  },
+  "test": {
+    "progress": "질문 {현재} / {총}",
+    "selectOption": "옵션을 선택해주세요"
+  }
+}

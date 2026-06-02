@@ -1,0 +1,47 @@
+{
+  "meta": {
+    "title": "梦境日记指南",
+    "description": "探索我们专为深度梦境洞察设计的一系列工具。",
+    "keywords": "梦境日记, 梦境分析, 梦境解析"
+  },
+  "hero": {
+    "title": "梦境日记指南",
+    "badge": "热门",
+    "subtitle": "学习如何有效地记录和分析您的梦境",
+    "description": "探索我们专为深度梦境洞察设计的一系列工具。"
+  },
+  "tabs": {
+    "analysis": "您的梦境类型",
+    "symbols": "象征字典",
+    "journal": "记录技巧"
+  },
+  "result": {
+    "title": "梦境日记指南",
+    "copied": "已复制到剪贴板！",
+    "characteristics": "您的梦境特征",
+    "dreamPatterns": "您的梦境模式",
+    "interpretationTips": "解析技巧",
+    "commonSymbols": "您的常见梦境象征",
+    "dreamTypeBreakdown": "您的梦境类型分解",
+    "share": "分享",
+    "shareText": "我是一个 {type} 型梦境者！在这里查看您的梦境性格： {url}",
+    "retake": "重新测试"
+  },
+  "symbols": {
+    "title": "梦境日记指南",
+    "subtitle": "学习如何有效地记录和分析您的梦境",
+    "searchPlaceholder": "搜索象征..."
+  },
+  "journal": {
+    "title": "梦境日记指南",
+    "subtitle": "学习如何有效地记录和分析您的梦境",
+    "gettingStarted": "开始使用",
+    "whatToRecord": "记录内容",
+    "interpretationTips": "解析技巧",
+    "improveRecall": "提高梦境回忆"
+  },
+  "test": {
+    "progress": "问题 {current} / {total}",
+    "selectOption": "请选择一个选项"
+  }
+}

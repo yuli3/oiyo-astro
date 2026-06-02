@@ -1,0 +1,178 @@
+{
+  "title": "価格設定",
+  "hero": {
+    "title": "聖なる供物",
+    "subtitle": "聖域を支援し、あなたの運命の座標のすべての深さを解き放ちましょう。",
+    "featurePrompt": "旅を続けるために {feature} を解除してください。"
+  },
+  "sections": {
+    "pricing": "供物の選択",
+    "features": "詳細機能",
+    "faq": "よくある質問",
+    "trust": "品質保証"
+  },
+  "meta": {
+    "title": "聖なる供物 | Oiyo.net",
+    "description": "プレミアムプランであなたの運命の深さを解き放ちましょう。",
+    "keywords": "料金, プレミアム, 四柱推命, 占星術, MBTI",
+    "ogTitle": "神聖な供物",
+    "ogDescription": "聖域をサポートし、あなたの運命を解き放ちましょう。"
+  },
+  "@tosspayments/payment-sdk": "@tosspayments/payment-sdk",
+  "upgrade": {
+    "order_name": "プロ サブスクリプション (毎月)",
+    "title": "Pricing",
+    "subtitle": "当社の最も強力な分析ツールを使用して、あなたの魂のより深い層を明らかにします。",
+    "price_suffix": "/月",
+    "cancel_anytime": "いつでもキャンセル",
+    "processing": "星を揃えています...",
+    "button": "プロの旅を始めましょう",
+    "prices": {
+      "en": "$7.99",
+      "ko": "₩9,900",
+      "ja": "¥1,200",
+      "cn": "¥58",
+      "es": "€7.99",
+      "fr": "€7.99"
+    },
+    "secure_payment_toss": "Toss 支払いによる安全性",
+    "secure_payment_lemon": "Lemon Squeezy 経由で保護",
+    "comparison_title": "自分の道を選択してください"
+  },
+  "faq": {
+    "title": "Pricing",
+    "answer1": "はい、いつでもサブスクリプションを一時停止またはキャンセルできます。プロ機能は現在のサイクルが終了するまで引き続きご利用いただけます。",
+    "question1": "いつでも解約できますか？",
+    "answer2": "初回サブスクリプションから7日以内のリクエストには全額返金いたします。",
+    "question2": "返金はできますか？",
+    "answer3": "主要なクレジットカード、PayPal、Apple Payを世界中でご利用いただけます。韓国のユーザーの場合は、Toss、KakaoPay、現地銀行振込も利用できます。",
+    "question3": "どの支払い方法を利用できますか？",
+    "q1": {
+      "q": "Which payment methods do you accept?",
+      "a": "We accept major credit cards, PayPal, and Apple Pay globally. For our users in Korea, Toss, KakaoPay, and local bank transfers are also available."
+    },
+    "q2": {
+      "q": "Which payment methods do you accept?",
+      "a": "We accept major credit cards, PayPal, and Apple Pay globally. For our users in Korea, Toss, KakaoPay, and local bank transfers are also available."
+    },
+    "q3": {
+      "q": "どの支払い方法を利用できますか?",
+      "a": "主要なクレジット カード、PayPal、Apple Pay を世界中でご利用いただけます。 韓国のユーザーの場合は、Toss、KakaoPay、現地銀行振込も利用できます。"
+    }
+  },
+  "feature": "機能",
+  "trust": {
+    "secure": {
+      "title": "安全な決済",
+      "description": "お客様の取引は業界をリードする暗号化で保護されています。"
+    },
+    "instant": {
+      "title": "即時アクセス",
+      "description": "サブスクリプション後すぐにプレミアム機能をご利用いただけます。"
+    },
+    "satisfaction": {
+      "title": "ご満足の保証",
+      "description": "7日間の返金ポリシーでリスクなく探索できます。"
+    }
+  },
+  "comparison": {
+    "title": "Pricing",
+    "description": "Step into new features and beta tests before the world sees them."
+  },
+  "columns": {
+    "features": "特徴",
+    "free": "基本",
+    "premium": "プロ"
+  },
+  "plan": "プラン",
+  "billing": {
+    "monthly": "月払い",
+    "yearly": "年払い",
+    "saveUp": "最大節約",
+    "year": "/年",
+    "month": "/月",
+    "save": "節約"
+  },
+  "plans": {
+    "popular": "最も人気",
+    "free": "ベーシック",
+    "current": "現在のプラン",
+    "continueUsing": "引き続き利用する",
+    "getStarted": "はじめる",
+    "subscribe": "今すぐ購読",
+    "cancelAnytime": "いつでもキャンセル可能"
+  },
+  "info": {
+    "allPlansInclude": "すべてのプランに含まれるもの",
+    "securePayment": "安全な決済",
+    "instantAccess": "即時アクセス",
+    "customerSupport": "優先サポート"
+  },
+  "features": {
+    "basicTests": "無制限の基本テスト",
+    "saveResults": "インサイトジャーニーストレージ",
+    "basicSharing": "基本的な結果の共有",
+    "basicConsultation": "基本相談",
+    "deepAnalysis": "AIによる詳細な分析",
+    "pdfDownload": "PDF インサイト レポート",
+    "compatibility": "高度な調和解析",
+    "personalInsights": "カスタマイズされた毎週のガイダンス",
+    "prioritySupport": "サンクチュアリの優先サポート",
+    "dataExport": "個人データのポータビリティ"
+  },
+  "detailed_features": {
+    "advanced-analytics": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "ai-insights": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "pdf-export": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "data-export": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "priority-support": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "custom-themes": {
+      "name": "Pioneer Access",
+      "description": "Step into new features and beta tests before the world sees them."
+    },
+    "early-access": {
+      "name": "パイオニアアクセス",
+      "description": "世界中に公開される前に、新機能とベータ テストに足を踏み入れましょう。"
+    }
+  },
+  "planDetails": {
+    "free": {
+      "name": "Basic",
+      "description": "Begin your journey of self-discovery",
+      "features": {
+        "unlimitedTests": "Unlimited Basic Tests",
+        "resultStorage": "Insight Journey Storage",
+        "basicSharing": "Basic Result Sharing",
+        "communitySupport": "Community Support"
+      }
+    },
+    "premium": {
+      "name": "Pro",
+      "description": "Unlock the full depth of your destiny",
+      "features": {
+        "allFreeFeatures": "Everything in Basic",
+        "aiAnalysis": "AI Deep Analysis",
+        "pdfReports": "PDF Insight Reports",
+        "advancedCompatibility": "Advanced Harmony Analysis",
+        "personalizedInsights": "Tailored Weekly Guidance",
+        "prioritySupport": "Priority Sanctuary Support",
+        "customExport": "Personal Data Portability"
+      }
+    }
+  }
+}

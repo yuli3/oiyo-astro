@@ -1,0 +1,26 @@
+{
+  "navigation": {
+    "back": "Retrace Steps",
+    "logout": "Sever Link (Logout)"
+  },
+  "search": {
+    "placeholder": "Search the chronicles..."
+  },
+  "actions": {
+    "export": "Export Records"
+  },
+  "alerts": {
+    "title": "System Resonances"
+  },
+  "status": {
+    "healthy": "Harmonious",
+    "warning": "Unstable",
+    "critical": "Fractured"
+  },
+  "metrics": {
+    "activeUsers": "Active Souls",
+    "systemLoad": "Etheric Load",
+    "latency": "Temporal Shift",
+    "errorRate": "Rift Frequency"
+  }
+}

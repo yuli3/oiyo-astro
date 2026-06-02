@@ -1,0 +1,230 @@
+{
+  "systemName": "マヤ・ドリームスペル",
+  "narrative": "銀河との同期",
+  "solarSeal": "太陽の紋章",
+  "tone": "銀河の音",
+  "title": "マヤ暦",
+  "description": "ドリームスペル/ツォルキン暦による銀河の署名。",
+  "toneOf": "{power}の力",
+  "kin": "キン {キン}",
+  "ariaLabel": "マヤのKin: {tone}音の{essence}、{seal}。",
+  "affirmation": "私は{sealAction}ために{tonePower}。{sealEssence}の{sealOutput}を{toneEssence}の{toneName}音で封印する。",
+  "daily_wisdom": {
+    "intro": "マヤ暦によると、今日は{title}の日です。{keyword}に意識を向けましょう。"
+  },
+  "tones": {
+    "magnetic": {
+      "name": "磁気の",
+      "essence": "目的",
+      "power": "統一する",
+      "action": "引き寄せる"
+    },
+    "lunar": {
+      "name": "月の",
+      "essence": "挑戦",
+      "power": "二極化する",
+      "action": "安定させる"
+    },
+    "electric": {
+      "name": "電気の",
+      "essence": "奉仕",
+      "power": "活性化する",
+      "action": "結びつける"
+    },
+    "selfExisting": {
+      "name": "自己存在の",
+      "essence": "形",
+      "power": "定義する",
+      "action": "測る"
+    },
+    "overtone": {
+      "name": "倍音の",
+      "essence": "輝き",
+      "power": "力を与える",
+      "action": "命じる"
+    },
+    "rhythmic": {
+      "name": "律動の",
+      "essence": "平等",
+      "power": "組織する",
+      "action": "バランスをとる"
+    },
+    "resonant": {
+      "name": "共鳴の",
+      "essence": "調律",
+      "power": "チャネルする",
+      "action": "鼓舞する"
+    },
+    "galactic": {
+      "name": "銀河の",
+      "essence": "完全性",
+      "power": "調和させる",
+      "action": "模範となる"
+    },
+    "solar": {
+      "name": "太陽の",
+      "essence": "意図",
+      "power": "脈動する",
+      "action": "実現する"
+    },
+    "planetary": {
+      "name": "惑星の",
+      "essence": "現れ",
+      "power": "完成させる",
+      "action": "生み出す"
+    },
+    "spectral": {
+      "name": "スペクトルの",
+      "essence": "解放",
+      "power": "溶解する",
+      "action": "手放す"
+    },
+    "crystal": {
+      "name": "水晶の",
+      "essence": "協力",
+      "power": "捧げる",
+      "action": "普遍化する"
+    },
+    "cosmic": {
+      "name": "宇宙の",
+      "essence": "存在",
+      "power": "耐える",
+      "action": "超越する"
+    }
+  },
+  "seals": {
+    "dragon": {
+      "name": "竜",
+      "essence": "存在",
+      "power": "育む",
+      "action": "誕生"
+    },
+    "wind": {
+      "name": "風",
+      "essence": "スピリット",
+      "power": "伝える",
+      "action": "呼吸"
+    },
+    "night": {
+      "name": "夜",
+      "essence": "豊かさ",
+      "power": "夢見る",
+      "action": "直感"
+    },
+    "seed": {
+      "name": "種",
+      "essence": "開花",
+      "power": "狙いを定める",
+      "action": "気づき"
+    },
+    "serpent": {
+      "name": "蛇",
+      "essence": "生命力",
+      "power": "生き延びる",
+      "action": "本能"
+    },
+    "worldbridger": {
+      "name": "世界の橋渡し",
+      "essence": "機会",
+      "power": "等しくする",
+      "action": "死"
+    },
+    "hand": {
+      "name": "手",
+      "essence": "達成",
+      "power": "知る",
+      "action": "癒し"
+    },
+    "star": {
+      "name": "星",
+      "essence": "優雅さ",
+      "power": "美しくする",
+      "action": "芸術"
+    },
+    "moon": {
+      "name": "月",
+      "essence": "普遍的な水",
+      "power": "清める",
+      "action": "流れ"
+    },
+    "dog": {
+      "name": "犬",
+      "essence": "忠誠",
+      "power": "愛する",
+      "action": "心"
+    },
+    "monkey": {
+      "name": "猿",
+      "essence": "幻想",
+      "power": "遊ぶ",
+      "action": "魔法"
+    },
+    "human": {
+      "name": "人間",
+      "essence": "知恵",
+      "power": "影響する",
+      "action": "自由意志"
+    },
+    "skywalker": {
+      "name": "空歩く者",
+      "essence": "目覚め",
+      "power": "探検する",
+      "action": "空間"
+    },
+    "wizard": {
+      "name": "魔法使い",
+      "essence": "受容性",
+      "power": "魅了する",
+      "action": "永遠"
+    },
+    "eagle": {
+      "name": "鷲",
+      "essence": "心",
+      "power": "創造する",
+      "action": "ビジョン"
+    },
+    "warrior": {
+      "name": "戦士",
+      "essence": "大胆さ",
+      "power": "問う",
+      "action": "知性"
+    },
+    "earth": {
+      "name": "地球",
+      "essence": "シンクロニシティ",
+      "power": "進化する",
+      "action": "ナビゲーション"
+    },
+    "mirror": {
+      "name": "鏡",
+      "essence": "秩序",
+      "power": "映す",
+      "action": "無限"
+    },
+    "storm": {
+      "name": "嵐",
+      "essence": "自己発生",
+      "power": "触媒する",
+      "action": "エネルギー"
+    },
+    "sun": {
+      "name": "太陽",
+      "essence": "普遍的な火",
+      "power": "照らす",
+      "action": "生命"
+    }
+  },
+  "void": "この日は時を超えています。あなたは自分自身の宇宙の中心です。",
+  "mayan": {
+    "systemName": "マヤ・ドリームスペル",
+    "narrative": "銀河との同期",
+    "solarSeal": "太陽の紋章",
+    "tone": "銀河の音"
+  },
+  "celtic": {
+    "systemName": "ケルトの樹木星座",
+    "narrative": "樹木の知恵",
+    "treeSign": "樹木のサイン",
+    "ogham": "オガム"
+  }
+}

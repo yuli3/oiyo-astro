@@ -1,0 +1,10 @@
+{
+  "title": "캐릭터 선택",
+  "subtitle": "아바타를 선택하세요",
+  "traits": {
+    "empathy": "공감",
+    "optimism": "낙천주의"
+  },
+  "select": "선택하기",
+  "changeCharacter": "캐릭터 변경"
+}

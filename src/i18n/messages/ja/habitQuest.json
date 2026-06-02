@@ -1,0 +1,33 @@
+{
+  "habitQuest": {
+    "quests": {
+      "mood": "気分を記録する",
+      "mindfulness": "マインドフルネスを実践する",
+      "city": "シティガイドを探索する"
+    },
+    "meta": {
+      "keywords": "habits, gamification, rpg, self-improvement",
+      "subtitle": "Level up your life daily",
+      "disclaimer": "XP and Level are stored locally and will be reset if you clear app data.",
+      "description": "Comprehensive analysis and insights",
+      "title": "My Insights"
+    },
+    "hero": {
+      "subtitle": "Level up your life daily",
+      "badge": "Unveil the hidden layers of your personal philosophy."
+    },
+    "landing": {
+      "cta": "冒険を始めましょう"
+    },
+    "subtitle": "毎日の生活をレベルアップする",
+    "levelTitle": "レベル {level} 冒険者",
+    "levelName": "レベル {レベル}",
+    "streak": "{days} 日連続達成! 🔥",
+    "nextLevelMsg": "次のレベルには {xp} XP が必要です!",
+    "dailyQuests": "デイリークエスト",
+    "disclaimer": "XP and Level are stored locally and will be reset if you clear app data.",
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights",
+    "T": "Dashboard"
+  }
+}

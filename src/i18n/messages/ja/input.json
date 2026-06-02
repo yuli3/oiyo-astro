@@ -1,0 +1,62 @@
+{
+  "errors": {
+    "invalidDate": "有効な日付ではありません。",
+    "invalidTime": "有効な時刻ではありません。",
+    "unknown": "予期せぬエラーが発生しました。"
+  },
+  "formTitle": "誕生の情報を入力してください",
+  "privacyNote": "入力された情報は分析のみに使用され、永続的に保存されることはありません。",
+  "nameLabel": "お名前",
+  "namePlaceholder": "お名前を入力してください（任意）",
+  "birthDateLabel": "生年月日",
+  "birthTimeLabel": "出生時間",
+  "hourPlaceholder": "時",
+  "minutePlaceholder": "分",
+  "locationLabel": "出生地",
+  "locationPlaceholder": "都市を選択",
+  "trueSolarTime": "真太陽時",
+  "timeUnknownTitle": "時刻不明",
+  "timeUnknownDesc": "時刻が不明な場合は、年・月・日の三柱を中心に分析を行います。",
+  "genderLabel": "性別",
+  "genderPlaceholder": "選択",
+  "genderMale": "男性",
+  "genderFemale": "女性",
+  "calendarNoticeDesc": "陽暦・陰暦の変換は自動的に処理されます。",
+  "analyzing": "天空の運行を算出しています...",
+  "submitButton": "宿命を解読する",
+  "secureTransmission": "秘術による安全な伝送",
+  "birthDate": "生年月日",
+  "birthTime": "出生時間",
+  "location": "出生地",
+  "gender": "性別",
+  "dateLabel": "生年月日",
+  "timeLabel": "出生時刻",
+  "hourLabel": "時",
+  "minuteLabel": "分",
+  "calendarNoticeTitle": "暦システム",
+  "timeline": {
+    "origin": "根源",
+    "moment": "瞬間",
+    "seal": "封印"
+  },
+  "stage": {
+    "origin": {
+      "title": "封印された予言"
+    },
+    "moment": {
+      "title": "封印された予言",
+      "lockedTitle": "座標を固定しました",
+      "hint": "正確な分析のため、出生時刻を詳しく入力してください。"
+    },
+    "seal": {
+      "title": "封印された予言",
+      "description": "全ての時間軸が整いました。星々があなたの命を待っています。"
+    }
+  },
+  "optional": "任意",
+  "nextStep": "次の段階へ",
+  "lockCoordinates": "座標を固定する",
+  "unlock": "修正する",
+  "anonymous": "名もなき旅人",
+  "revealProphecy": "予言の封印を解く"
+}

@@ -1,0 +1,336 @@
+{
+  "chineseZodiac": {
+    "title": "Numerología",
+    "description": "Life path",
+    "accuracy": "Alto",
+    "duration": "Rápida"
+  },
+  "numerology": {
+    "title": "Numerología",
+    "description": "Camino de vida",
+    "accuracy": "Alto",
+    "duration": "Rápida"
+  },
+  "primal-origin": {
+    "landing": {
+      "badge": "La Revelación Definitiva",
+      "title": "El Origen Primordial",
+      "subtitle": "Desbloquea tu sello digital y revela tu destino",
+      "cta": "Revelar Mi Origen",
+      "features": {
+        "triple": {
+          "title": "El Origen Primordial",
+          "desc": "Cómo tu tipo de sangre influye en tus rasgos cósmicos y personalidad."
+        },
+        "celestial": {
+          "title": "El Origen Primordial",
+          "desc": "Cómo tu tipo de sangre influye en tus rasgos cósmicos y personalidad."
+        },
+        "genetic": {
+          "title": "El Origen Primordial",
+          "desc": "Cómo tu tipo de sangre influye en tus rasgos cósmicos y personalidad."
+        }
+      }
+    },
+    "input": {
+      "title": "El Origen Primordial",
+      "subtitle": "Desbloquea tu sello digital y revela tu destino",
+      "nameLabel": "Nombre (Opcional)",
+      "namePlaceholder": "Tu nombre completo",
+      "genderLabel": "Género",
+      "male": "Hombre",
+      "female": "Mujer",
+      "birthDateLabel": "Fecha de Nacimiento",
+      "birthTimeLabel": "Hora de Nacimiento",
+      "bloodTypeLabel": "Tipo de Sangre",
+      "submitButton": "Revelar Mi Origen",
+      "decrypting": "Descifrando Origen..."
+    }
+  },
+  "T": "T",
+  "dailyLucky": {
+    "back": "Volver",
+    "colors": {
+      "beige": "Beige",
+      "black": "Negro",
+      "gold": "Dorado",
+      "green": "Verde",
+      "mint": "Menta",
+      "navy": "Azul Marino",
+      "pink": "Rosa",
+      "purple": "Púrpura",
+      "red": "Rojo",
+      "sky": "Azul Cielo",
+      "white": "Blanco"
+    },
+    "directions": {
+      "east": "Este",
+      "north": "Norte",
+      "northeast": "Noreste",
+      "northwest": "Noroeste",
+      "south": "Sur",
+      "southeast": "Sureste",
+      "southwest": "Suroeste",
+      "west": "Oeste"
+    },
+    "footer": "Guía Diaria",
+    "items": {
+      "book": "Libro",
+      "cap": "Gorra",
+      "coffee": "Café",
+      "coin": "Moneda",
+      "earring": "Pendiente",
+      "glasses": "Gafas",
+      "headphones": "Auriculares",
+      "key": "Llave",
+      "mirror": "Espejo",
+      "pen": "Bolígrafo",
+      "perfume": "Perfume",
+      "phone": "Teléfono",
+      "plant": "Planta",
+      "ring": "Anillo",
+      "sneakers": "Zapatillas",
+      "umbrella": "Paraguas",
+      "watch": "Reloj"
+    },
+    "keyword": "Palabra Clave",
+    "keywords": {
+      "cleaning": "Limpieza",
+      "connection": "Conexión",
+      "courage": "Coraje",
+      "creativity": "Creatividad",
+      "focus": "Enfoque",
+      "kindness": "Bondad",
+      "patience": "Paciencia",
+      "rest": "Descanso",
+      "savings": "Ahorro",
+      "silence": "Silencio"
+    },
+    "meta": {
+      "description": "Necesitas descanso",
+      "keywords": "fortuna",
+      "title": "El Origen Primordial"
+    },
+    "result": {
+      "description": "Necesitas descanso",
+      "title": "El Origen Primordial"
+    },
+    "sharePersonalizedPrefix": "Mi Suerte",
+    "shareTemplate": "Mira esto",
+    "subtitle": "Desbloquea tu sello digital y revela tu destino",
+    "test": {
+      "insightBullets": ["Perspicacia profunda"],
+      "loading": "Cargando...",
+      "next": "Siguiente",
+      "previous": "Anterior",
+      "progress": "Progreso",
+      "selectOption": "Seleccionar",
+      "submit": "Enviar"
+    },
+    "title": "El Origen Primordial",
+    "yourLucky": "Tus Artículos de la Suerte",
+    "zodiac": {
+      "aquarius": "Acuario",
+      "aries": "Aries",
+      "cancer": "Cáncer",
+      "capricorn": "Capricornio",
+      "gemini": "Géminis",
+      "leo": "Leona",
+      "libra": "Libra",
+      "pisces": "Piscis",
+      "sagittarius": "Sagitario",
+      "scorpio": "Escorpio",
+      "taurus": "Tauro",
+      "virgo": "Virgo"
+    }
+  },
+  "dailyOracle": {
+    "hub": {
+      "luckyDesc": "Consulta tu suerte",
+      "luckyTitle": "Artículos de la Suerte",
+      "personaDesc": "Tu persona diaria",
+      "personaTitle": "Persona",
+      "subtitle": "Desbloquea tu sello digital y revela tu destino",
+      "tabs": {
+        "lucky": "Suerte",
+        "oracle": "Oráculo",
+        "personality": "Personalidad"
+      },
+      "title": "El Origen Primordial"
+    },
+    "identify": {
+      "button": "Comenzar",
+      "description": "Necesitas descanso",
+      "title": "El Origen Primordial"
+    },
+    "loading": "Cargando...",
+    "share": "Compartir",
+    "subtitle": "Desbloquea tu sello digital y revela tu destino",
+    "title": "El Origen Primordial"
+  },
+  "dailyReading": {
+    "cards": {
+      "refresh": "Actualizar",
+      "reminder": "Recordatorio",
+      "subtitle": "Desbloquea tu sello digital y revela tu destino"
+    },
+    "hero": {
+      "cta": "Revelar Mi Origen",
+      "eyebrow": "Hoy",
+      "subtitle": "Desbloquea tu sello digital y revela tu destino"
+    },
+    "meta": {
+      "description": "Necesitas descanso",
+      "keywords": "fortuna",
+      "title": "El Origen Primordial"
+    },
+    "summary": {
+      "energy": "Energía",
+      "focus": "Enfoque",
+      "luckyColor": "Color"
+    }
+  },
+  "days": "Días",
+  "description": "Necesitas descanso",
+  "energyScore": "Puntuación de Energía",
+  "feature1Desc": "Característica 1",
+  "feature1Title": "Título 1",
+  "feature2Desc": "Característica 2",
+  "feature2Title": "Título 2",
+  "feature3Desc": "Característica 3",
+  "feature3Title": "Título 3",
+  "historySubtitle": "Lecturas Pasadas",
+  "historyTitle": "Historial",
+  "hub": {
+    "cta": "Revelar Mi Origen",
+    "description": "Necesitas descanso",
+    "subtitle": "Desbloquea tu sello digital y revela tu destino",
+    "title": "El Origen Primordial"
+  },
+  "longestStreak": "Racha Más Larga",
+  "meta": {
+    "description": "Necesitas descanso",
+    "keywords": "fortuna",
+    "subtitle": "Desbloquea tu sello digital y revela tu destino",
+    "title": "El Origen Primordial"
+  },
+  "mostCommon": "Más Común",
+  "noData": "Sin Datos",
+  "question": "Pregunta",
+  "questions": {
+    "q1": {
+      "options": {
+        "o1": "Opción 1",
+        "o2": "Opción 2",
+        "o3": "Opción 3",
+        "o4": "Opción 4"
+      },
+      "text": "Pregunta 5"
+    },
+    "q2": {
+      "options": {
+        "o1": "Opción 1",
+        "o2": "Opción 2",
+        "o3": "Opción 3",
+        "o4": "Opción 4"
+      },
+      "text": "Pregunta 5"
+    },
+    "q3": {
+      "options": {
+        "o1": "Opción 1",
+        "o2": "Opción 2",
+        "o3": "Opción 3",
+        "o4": "Opción 4"
+      },
+      "text": "Pregunta 5"
+    },
+    "q4": {
+      "options": {
+        "o1": "Opción 1",
+        "o2": "Opción 2",
+        "o3": "Opción 3",
+        "o4": "Opción 4"
+      },
+      "text": "Pregunta 5"
+    },
+    "q5": {
+      "options": {
+        "o1": "Opción 1",
+        "o2": "Opción 2",
+        "o3": "Opción 3",
+        "o4": "Opción 4"
+      },
+      "text": "Pregunta 5"
+    }
+  },
+  "reminder": "Recordatorio",
+  "reminderText": "No olvides",
+  "result": {
+    "description": "Necesitas descanso",
+    "title": "El Origen Primordial"
+  },
+  "results": {
+    "balanced": {
+      "advice": "Tómate un descanso",
+      "description": "Necesitas descanso",
+      "traits": {
+        "0": "Pacífico",
+        "1": "Relajado",
+        "2": "Lento"
+      },
+      "type": "Relajado"
+    },
+    "energetic": {
+      "advice": "Tómate un descanso",
+      "description": "Necesitas descanso",
+      "traits": {
+        "0": "Pacífico",
+        "1": "Relajado",
+        "2": "Lento"
+      },
+      "type": "Relajado"
+    },
+    "reflective": {
+      "advice": "Tómate un descanso",
+      "description": "Necesitas descanso",
+      "traits": {
+        "0": "Pacífico",
+        "1": "Relajado",
+        "2": "Lento"
+      },
+      "type": "Relajado"
+    },
+    "restful": {
+      "advice": "Tómate un descanso",
+      "description": "Necesitas descanso",
+      "traits": {
+        "0": "Pacífico",
+        "1": "Relajado",
+        "2": "Lento"
+      },
+      "type": "Relajado"
+    }
+  },
+  "shareResult": "Compartir Resultado",
+  "shareTitle": "Compartir",
+  "startDaily": "Iniciar Diario",
+  "subtitle": "Desbloquea tu sello digital y revela tu destino",
+  "takeOtherTests": "Tomar otras pruebas",
+  "test": {
+    "insightBullets": ["Perspicacia profunda"],
+    "loading": "Cargando...",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "progress": "Progreso",
+    "selectOption": "Seleccionar",
+    "submit": "Enviar"
+  },
+  "title": "El Origen Primordial",
+  "todayAdvice": "Consejo de Hoy",
+  "totalDays": "Días Totales",
+  "trendChart": "Gráfico de Tendencia",
+  "uniqueTypes": "Tipos Únicos",
+  "viewHistory": "Ver Historial",
+  "welcomeTitle": "Bienvenido"
+}

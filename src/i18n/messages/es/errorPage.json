@@ -1,0 +1,25 @@
+{
+  "404": {
+    "title": "The flow of wisdom is veiled in mist.",
+    "description": "Even in the clearest Sanctuary, fog sometimes rises. We are refocusing the path for your journey, please wait a moment.",
+    "backHome": "Regreso a la Plaza Santuario"
+  },
+  "500": {
+    "title": "The flow of wisdom is veiled in mist.",
+    "description": "Even in the clearest Sanctuary, fog sometimes rises. We are refocusing the path for your journey, please wait a moment.",
+    "retry": "Intento de realineación"
+  },
+  "title": "El flujo de la sabiduría está velado por la niebla.",
+  "description": "Incluso en el Santuario más claro, a veces se levanta niebla. Estamos reenfocando el camino de tu viaje, espera un momento.",
+  "primaryAction": "Realinearse de nuevo",
+  "secondaryAction": "Descansa en la puerta de entrada",
+  "homeButton": "Regreso al Santuario",
+  "badgeLabel": "Suspendido momentáneamente",
+  "supportPrompt": "Si la niebla no se aclara, por favor pasa esta firma de resonancia a los Sabios.",
+  "referenceIdLabel": "Firma de resonancia",
+  "contactSupport": "buscar consejo",
+  "supportEmail": "sabios@oiyo.net",
+  "startTest": "Iniciación del viaje",
+  "badge": "Ecos del Santuario",
+  "fallbackMessage": "Una distorsión temporal que se encuentra en los hilos del cosmos."
+}

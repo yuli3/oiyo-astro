@@ -1,0 +1,267 @@
+{
+  "title": "Egyptian Astrology",
+  "description": "Ancient Kemetian wisdom of patron deities and decans.",
+  "systemName": "Egyptian Astrology",
+  "narrative": "Ancient Neteru & Decans",
+  "guardianDeity": "Guardian Deity",
+  "ariaLabel": "Egyptian Deity: {god}, possessing {attributes}.",
+  "deities": {
+    "thoth": {
+      "name": "Thoth",
+      "symbol": "Ibis",
+      "traits": ["Intellectual", "Communicative", "Curious", "Inventive"],
+      "strengths": ["Problem-solving", "Writing", "Teaching", "Memory"],
+      "challenges": ["Over-thinking", "Nervousness", "Detachment"],
+      "domain": ["Wisdom", "Writing", "Magic", "Moon"]
+    },
+    "horus": {
+      "name": "Horus",
+      "symbol": "Falcon",
+      "traits": ["Courageous", "Ambitious", "Protective", "Charismatic"],
+      "strengths": ["Leadership", "Strategy", "Justice", "Determination"],
+      "challenges": ["Impulsiveness", "Arrogance", "Conflict"],
+      "domain": ["Sky", "War", "Protection", "Kingship"]
+    },
+    "wadjet": {
+      "name": "Wadjet",
+      "symbol": "Cobra",
+      "traits": ["Protective", "Loyal", "Fierce", "Just"],
+      "strengths": ["Intuition", "Protection", "Decisiveness"],
+      "challenges": ["Possessiveness", "Jealousy", "Vengefulness"],
+      "domain": ["Protection", "Royalty", "Justice", "Nature"]
+    },
+    "sekhmet": {
+      "name": "Sekhmet",
+      "symbol": "Lioness",
+      "traits": ["Fierce", "Passionate", "Protective", "Powerful"],
+      "strengths": ["Courage", "Healing", "Transformation", "Strength"],
+      "challenges": ["Anger", "Destruction", "Extremism"],
+      "domain": ["War", "Healing", "Sun", "Destruction"]
+    },
+    "bastet": {
+      "name": "Bastet",
+      "symbol": "Cat",
+      "traits": ["Nurturing", "Playful", "Independent", "Sensual"],
+      "strengths": ["Grace", "Protection", "Intuition", "Charm"],
+      "challenges": ["Unpredictability", "Vanity", "Independence"],
+      "domain": ["Home", "Fertility", "Cats", "Joy"]
+    },
+    "isis": {
+      "name": "Isis",
+      "symbol": "Throne",
+      "traits": ["Nurturing", "Wise", "Magical", "Determined"],
+      "strengths": ["Healing", "Magic", "Protection", "Devotion"],
+      "challenges": ["Over-protection", "Manipulation", "Grief"],
+      "domain": ["Magic", "Motherhood", "Wisdom", "Nature"]
+    },
+    "osiris": {
+      "name": "Osiris",
+      "symbol": "Crook and Flail",
+      "traits": ["Wise", "Just", "Patient", "Regenerative"],
+      "strengths": ["Judgment", "Renewal", "Stability", "Fairness"],
+      "challenges": ["Passivity", "Detachment", "Melancholy"],
+      "domain": ["Underworld", "Agriculture", "Rebirth", "Judgment"]
+    },
+    "hathor": {
+      "name": "Hathor",
+      "symbol": "Cow",
+      "traits": ["Loving", "Joyful", "Artistic", "Nurturing"],
+      "strengths": ["Creativity", "Love", "Harmony", "Pleasure"],
+      "challenges": ["Indulgence", "Jealousy", "Vanity"],
+      "domain": ["Love", "Beauty", "Music", "Joy"]
+    },
+    "anubis": {
+      "name": "Anubis",
+      "symbol": "Jackal",
+      "traits": ["Mysterious", "Protective", "Loyal", "Serious"],
+      "strengths": ["Transformation", "Guidance", "Protection", "Truth"],
+      "challenges": ["Isolation", "Obsession", "Darkness"],
+      "domain": ["Death", "Mummification", "Afterlife", "Protection"]
+    },
+    "seth": {
+      "name": "Seth",
+      "symbol": "Seth Animal",
+      "traits": ["Powerful", "Chaotic", "Ambitious", "Unpredictable"],
+      "strengths": ["Strength", "Courage", "Independence", "Transformation"],
+      "challenges": ["Chaos", "Violence", "Jealousy", "Isolation"],
+      "domain": ["Chaos", "Desert", "Storms", "Foreigners"]
+    },
+    "geb": {
+      "name": "Geb",
+      "symbol": "Goose",
+      "traits": ["Grounded", "Patient", "Nurturing", "Stable"],
+      "strengths": ["Stability", "Fertility", "Patience", "Wisdom"],
+      "challenges": ["Stubbornness", "Possessiveness", "Inertia"],
+      "domain": ["Earth", "Fertility", "Minerals", "Snakes"]
+    },
+    "nut": {
+      "name": "Nut",
+      "symbol": "Starry Body",
+      "traits": ["Ethereal", "Protective", "Cosmic", "Maternal"],
+      "strengths": ["Vision", "Protection", "Mystery", "Infinity"],
+      "challenges": ["Distance", "Unreality", "Overwhelm"],
+      "domain": ["Sky", "Stars", "Cosmos", "Birth"]
+    },
+    "ra": {
+      "name": "Ra",
+      "symbol": "Sun Disk",
+      "traits": ["Powerful", "Creative", "Radiant", "Authoritative"],
+      "strengths": ["Leadership", "Vitality", "Illumination", "Truth"],
+      "challenges": ["Pride", "Burnout", "Dominance"],
+      "domain": ["Sun", "Creation", "Life", "Order"]
+    }
+  },
+  "resonance": {
+    "note": "The Archive observes your soul under the protection of {deity}, the {domain} deity. In ancient Kemet, those born in this time were believed to carry {traits} energies. This is not destiny—but the echo of an ancient observation."
+  },
+  "elements": {
+    "Air": "Air",
+    "Earth": "Earth",
+    "Fire": "Fire",
+    "Water": "Water"
+  },
+  "colors": {
+    "Azure": "Azure",
+    "Silver": "Silver",
+    "White": "White",
+    "Brown": "Brown",
+    "Green": "Green",
+    "Amber": "Amber",
+    "Gold": "Gold",
+    "Crimson": "Crimson",
+    "Orange": "Orange",
+    "Deep Blue": "Deep Blue",
+    "Turquoise": "Turquoise",
+    "Sea Green": "Sea Green"
+  },
+  "@/components/ontology/FactionCard": "Faction Card",
+  "@/components/ontology/GenericFactionCard": "Generic Faction Card",
+  "": "",
+  "labels": {
+    "undiscovered": "Undiscovered",
+    "meaning": "Meaning",
+    "element": "Element",
+    "nameVibration": "Name Vibration",
+    "westernZodiac": "Western Zodiac",
+    "sign": "Sign",
+    "observation": "Observation",
+    "easternZodiac": "Eastern Zodiac",
+    "animal": "Animal",
+    "dominion": "Dominion",
+    "bureau": "Bureau"
+  },
+  "returnToHome": "Return Home",
+  "contactSupport": "Contact Support",
+  "syncingData": "Syncing your data...",
+  "guest": "Guest",
+  "calibration": "Calibration",
+  "changeOrigin": "Change Origin",
+  "todayInsight": {
+    "title": "Today's Insight",
+    "soulOracle": "Soul Oracle",
+    "innerResonance": "Inner Resonance",
+    "manifestMore": "Manifest More"
+  },
+  "readingsLink": "View Readings",
+  "cards": {
+    "vitality": {
+      "title": "Vitality"
+    },
+    "resonance": {
+      "description": "Your energetic resonance with others.",
+      "subtitle": "Soul Frequency"
+    },
+    "foundation": {
+      "description": "The pillars of your inner world.",
+      "subtitle": "Core Foundation"
+    },
+    "elemental": {
+      "description": "The elemental forces that shape your nature.",
+      "subtitle": "Elemental Affinity",
+      "title": "Elements"
+    },
+    "onomancy": {
+      "description": "Hidden meanings encoded in your name.",
+      "subtitle": "Name Alchemy"
+    },
+    "cognition": {
+      "description": "Your unique way of perceiving and processing the world.",
+      "subtitle": "Mind Pattern"
+    },
+    "vocation": {
+      "description": "Paths where your soul naturally excels.",
+      "subtitle": "Soul Calling"
+    },
+    "destiny": {
+      "description": "The larger arc your life is weaving.",
+      "subtitle": "Destiny Path"
+    }
+  },
+  "resonanceTitle": "Resonance",
+  "sections": {
+    "testArchitecture": {
+      "title": "Test Architecture",
+      "description": "The design and structure behind your assessment."
+    },
+    "emotionalResonance": {
+      "title": "Emotional Resonance",
+      "description": "How emotions flow and shape your path."
+    },
+    "grandArchives": {
+      "title": "The Grand Archives",
+      "description": "A collection of wisdom distilled from your results."
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "Elements"
+    },
+    "riasec": {
+      "description": "Your vocational personality type."
+    },
+    "saju": {
+      "label": "Saju",
+      "description": "The four pillars of your destiny.",
+      "polarity": "Polarity",
+      "element": "Element"
+    },
+    "archiveEntry": "Archive Entry",
+    "recordVerified": "Record Verified",
+    "tuning": {
+      "color": "Lucky Color",
+      "number": "Lucky Number",
+      "direction": "Auspicious Direction",
+      "flower": "Soul Flower",
+      "gemstone": "Guardian Gemstone",
+      "luckyStar": "Lucky Star",
+      "title": "Cosmic Tuning",
+      "favorableDays": "Favorable Days",
+      "synergy": "Synergy"
+    }
+  },
+  " ": "",
+  "systems": {
+    "ziwei": "Zi Wei Dou Shu"
+  },
+  "_": "",
+  "mayan": {
+    "systemName": "Mayan Calendar",
+    "narrative": "Mayan Narrative",
+    "solarSeal": "Solar Seal",
+    "tone": "Galactic Tone"
+  },
+  "celtic": {
+    "systemName": "Celtic Tree Calendar",
+    "narrative": "Celtic Narrative",
+    "treeSign": "Tree Sign",
+    "ogham": "Ogham Symbol"
+  },
+  "egyptianGuardian": "Egyptian Guardian",
+  "celticTreeSign": "Celtic Tree Sign",
+  "birthSymbols": "Birth Symbols",
+  "symbols": {
+    "Stone": "Stone",
+    "Flower": "Flower",
+    "Star": "Star"
+  }
+}

@@ -1,0 +1,1837 @@
+{
+  "gift": {
+    "meta": {
+      "keywords": "Analyse des échos profonds de tes choix...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "badge": "Analyse des échos profonds de tes choix..."
+    },
+    "rel": {
+      "child_adult": "50,000,000 Shield",
+      "child_minor": "20,000,000 Shield",
+      "spouse": "600,000,000 Shield",
+      "parent": "50,000,000 Shield",
+      "other_relative": "10,000,000 Shield",
+      "other": "No Shield"
+    },
+    "result": {
+      "title": "My Insights",
+      "deduction": "Deduction",
+      "taxBase": "Tax Base",
+      "rate": "Décryptage des motifs géométriques de ton identité...",
+      "selfReport": "* Includes 3% declaration harmony discount.",
+      "description": "Awaiting synthesis..."
+    },
+    "tip": {
+      "title": "My Insights",
+      "desc": "Analyse complète et perspectives approfondies"
+    },
+    "test": {
+      "insightBullets": [
+        "Wealth Resonance",
+        "Lineage Protection",
+        "Temporal Efficiency"
+      ],
+      "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+      "submit": "Envoyer",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "selectOption": "Analyse des échos profonds de tes choix...",
+      "next": "Suivant",
+      "previous": "Précédent"
+    },
+    "deduction": {
+      "child_adult": "50,000,000 Shield",
+      "child_minor": "20,000,000 Shield",
+      "spouse": "600,000,000 Shield",
+      "parent": "50,000,000 Shield",
+      "other_relative": "10,000,000 Shield",
+      "other": "No Shield"
+    },
+    "unit": {
+      "currency": "Analyse des échos profonds de tes choix...",
+      "tenYear": "10-Year Cycle",
+      "aggregation": "Aggregate Basis"
+    },
+    "resultInfo": {
+      "selfReport": "* Includes 3% declaration harmony discount.",
+      "consult": "* Seek counsel from a dedicated wealth mystic for final decrees."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "subtitle": "Analyse des échos profonds de tes choix...",
+    "disclaimer": "Conception d'un miroir qui reflète ta véritable essence...",
+    "relationship": "Relationship",
+    "giftAmount": "Gift Amount",
+    "pastGiftAmount": "Past Gift Amount",
+    "calculateBtn": "Calculate Btn"
+  },
+  "freelancer": {
+    "meta": {
+      "title": "My Insights",
+      "keywords": "Analyse des échos profonds de tes choix...",
+      "description": "Awaiting synthesis...",
+      "subtitle": "Analyse des échos profonds de tes choix..."
+    },
+    "inputs": {
+      "jobType": "Awaiting synthesis...",
+      "revenue": "Awaiting synthesis...",
+      "expenseRate": "Awaiting synthesis...",
+      "dependents": "Awaiting synthesis...",
+      "calculate": "Calculate"
+    },
+    "jobs": {
+      "developer": "Awaiting synthesis...",
+      "creator": "Awaiting synthesis...",
+      "writer": "Awaiting synthesis...",
+      "designer": "Awaiting synthesis...",
+      "delivery": "Awaiting synthesis...",
+      "it": "Awaiting synthesis..."
+    },
+    "results": {
+      "refundTitle": "Awaiting synthesis...",
+      "paymentTitle": "Awaiting synthesis...",
+      "totalTax": "Total Tax",
+      "alreadyPaid": "Awaiting synthesis...",
+      "refundMsg": "Awaiting synthesis...",
+      "paymentMsg": "Awaiting synthesis...",
+      "calculated": "Awaiting synthesis...",
+      "withheld": "Awaiting synthesis..."
+    },
+    "tips": {
+      "content": "Conception d'un miroir qui reflète ta véritable essence..."
+    },
+    "loading": {
+      "step1": "Awaiting synthesis...",
+      "step2": "Awaiting synthesis...",
+      "step3": "Awaiting synthesis...",
+      "step4": "Awaiting synthesis..."
+    },
+    "labels": {
+      "jobType": "Awaiting synthesis...",
+      "annualRevenue": "Awaiting synthesis..."
+    },
+    "tooltips": {
+      "simpleRate": "Awaiting synthesis...",
+      "beforeTax": "Awaiting synthesis..."
+    },
+    "formTitle": "Awaiting synthesis..."
+  },
+  "cardOptimization": {
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "Analyse des échos profonds de tes choix..."
+    },
+    "inputs": {
+      "salary": "Awaiting synthesis...",
+      "creditCard": "Awaiting synthesis...",
+      "debitCard": "Awaiting synthesis...",
+      "calculate": "Calculate"
+    },
+    "loading": {
+      "title": "My Insights",
+      "step1": "Awaiting synthesis...",
+      "step2": "Awaiting synthesis...",
+      "step3": "Awaiting synthesis...",
+      "step4": "Awaiting synthesis..."
+    },
+    "tips": {
+      "content": "Conception d'un miroir qui reflète ta véritable essence..."
+    },
+    "diagnosis": {
+      "strategies": {
+        "switchDebit": "Awaiting synthesis..."
+      },
+      "labels": {
+        "minThreshold": "Awaiting synthesis...",
+        "ccUsed": "Awaiting synthesis...",
+        "ccVsThreshold": "Awaiting synthesis..."
+      },
+      "title": "My Insights"
+    },
+    "test": {
+      "insightBullets": [
+        "Unveil the hidden layers of your personal philosophy."
+      ],
+      "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+      "submit": "Envoyer",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "selectOption": "Analyse des échos profonds de tes choix...",
+      "next": "Suivant",
+      "previous": "Précédent"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "vat": {
+    "modes": {
+      "total": "Total Amount",
+      "supply": "From Supply"
+    },
+    "labels": {
+      "totalAmount": "Total Amount (Inc. VAT)",
+      "supplyAmount": "Supply Amount (Ex. VAT)"
+    },
+    "results": {
+      "supplyPrice": "Supply Value",
+      "vat": "VAT Amount",
+      "total": "Total Amount"
+    },
+    "tip": {
+      "content": "Conception d'un miroir qui reflète ta véritable essence...",
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "disclaimer": "Conception d'un miroir qui reflète ta véritable essence...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "Analyse des échos profonds de tes choix..."
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "submit": "Envoyer",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "selectOption": "Analyse des échos profonds de tes choix..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "subtitle": "Analyse des échos profonds de tes choix...",
+    "currency": "Analyse des échos profonds de tes choix...",
+    "disclaimer": "Conception d'un miroir qui reflète ta véritable essence...",
+    "title": "My Insights",
+    "ko-KR": "Conception d'un miroir qui reflète ta véritable essence..."
+  },
+  "test": {
+    "insightBullets": ["Discover the unique patterns that define your path."],
+    "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+    "submit": "Envoyer",
+    "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+    "selectOption": "Analyse des échos profonds de tes choix...",
+    "next": "Suivant",
+    "previous": "Précédent"
+  },
+  "tax": {
+    "freelancer": {
+      "meta": {
+        "title": "My Insights",
+        "keywords": "Analyse des échos profonds de tes choix...",
+        "description": "Awaiting synthesis...",
+        "subtitle": "Analyse des échos profonds de tes choix..."
+      },
+      "inputs": {
+        "jobType": "Awaiting synthesis...",
+        "revenue": "Awaiting synthesis...",
+        "expenseRate": "Awaiting synthesis...",
+        "dependents": "Awaiting synthesis...",
+        "calculate": "Calculate"
+      },
+      "tips": {
+        "content": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "loading": {
+        "step1": "Awaiting synthesis...",
+        "step2": "Awaiting synthesis...",
+        "step3": "Awaiting synthesis...",
+        "step4": "Awaiting synthesis..."
+      },
+      "results": {
+        "refundTitle": "Awaiting synthesis...",
+        "paymentTitle": "Awaiting synthesis...",
+        "totalTax": "Total Tax",
+        "alreadyPaid": "Awaiting synthesis...",
+        "refundMsg": "Awaiting synthesis...",
+        "paymentMsg": "Awaiting synthesis...",
+        "calculated": "Awaiting synthesis...",
+        "withheld": "Awaiting synthesis..."
+      },
+      "labels": {
+        "jobType": "Awaiting synthesis...",
+        "annualRevenue": "Awaiting synthesis..."
+      },
+      "tooltips": {
+        "simpleRate": "Awaiting synthesis...",
+        "beforeTax": "Awaiting synthesis..."
+      },
+      "jobs": {
+        "developer": "Awaiting synthesis...",
+        "creator": "Awaiting synthesis...",
+        "writer": "Awaiting synthesis...",
+        "designer": "Awaiting synthesis...",
+        "delivery": "Awaiting synthesis...",
+        "it": "Awaiting synthesis..."
+      },
+      "formTitle": "Awaiting synthesis..."
+    },
+    "cardOptimization": {
+      "inputs": {
+        "salary": "Awaiting synthesis...",
+        "creditCard": "Awaiting synthesis...",
+        "debitCard": "Awaiting synthesis...",
+        "calculate": "Calculate"
+      },
+      "loading": {
+        "title": "My Insights",
+        "step1": "Awaiting synthesis...",
+        "step2": "Awaiting synthesis...",
+        "step3": "Awaiting synthesis...",
+        "step4": "Awaiting synthesis..."
+      },
+      "tips": {
+        "content": "Conception d'un miroir qui reflète ta véritable essence..."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "Analyse des échos profonds de tes choix..."
+      },
+      "diagnosis": {
+        "strategies": {
+          "switchDebit": "Awaiting synthesis...",
+          "optimizeCredit": "Awaiting synthesis...",
+          "startDeduction": "Awaiting synthesis..."
+        },
+        "labels": {
+          "minThreshold": "Awaiting synthesis...",
+          "ccUsed": "Awaiting synthesis...",
+          "ccVsThreshold": "Awaiting synthesis..."
+        },
+        "title": "My Insights"
+      },
+      "unit": {
+        "currency": "Analyse des échos profonds de tes choix..."
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "submit": "Envoyer",
+        "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+        "selectOption": "Analyse des échos profonds de tes choix..."
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    }
+  },
+  "nJobler": {
+    "unit": {
+      "currency": "Analyse des échos profonds de tes choix..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "payUser": "Pay User",
+      "refundUser": "Refund User",
+      "warning": "Warning",
+      "safe": "Analyse des échos profonds de tes choix...",
+      "totalTax": "Total Tax",
+      "taxBase": "Tax Base"
+    },
+    "tip": {
+      "title": "My Insights",
+      "desc": "Analyse complète et perspectives approfondies"
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "submit": "Envoyer",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "selectOption": "Analyse des échos profonds de tes choix...",
+      "subtitle": "Analyse des échos profonds de tes choix..."
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "Analyse des échos profonds de tes choix..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "subtitle": "Analyse des échos profonds de tes choix...",
+    "disclaimer": "Conception d'un miroir qui reflète ta véritable essence...",
+    "salaryInput": "Salary Input",
+    "salaryPlaceholder": "Awaiting synthesis...",
+    "bizInput": "Biz Input",
+    "bizPlaceholder": "Awaiting synthesis...",
+    "bizDesc": "Biz Desc",
+    "calculateBtn": "Calculate Btn"
+  },
+  "compoundInterest": {
+    "labels": {
+      "principal": "Principal",
+      "monthlyContribution": "Analyse des échos profonds de tes choix...",
+      "period": "Conception d'un miroir qui reflète ta véritable essence...",
+      "rate": "Décryptage des motifs géométriques de ton identité..."
+    },
+    "loading": {
+      "step1": "Awaiting synthesis...",
+      "step2": "Awaiting synthesis...",
+      "step3": "Awaiting synthesis..."
+    },
+    "results": {
+      "finalAmount": "Final Amount",
+      "principal": "Principal",
+      "interest": "Interest"
+    },
+    "tip": {
+      "content": "Conception d'un miroir qui reflète ta véritable essence...",
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "disclaimer": "Conception d'un miroir qui reflète ta véritable essence...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "Analyse des échos profonds de tes choix..."
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "submit": "Envoyer",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "selectOption": "Analyse des échos profonds de tes choix...",
+      "subtitle": "Analyse des échos profonds de tes choix..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "subtitle": "Analyse des échos profonds de tes choix...",
+    "currency": "Analyse des échos profonds de tes choix...",
+    "years": "Décryptage des motifs géométriques de ton identité...",
+    "calculate": "Calculate",
+    "disclaimer": "Conception d'un miroir qui reflète ta véritable essence...",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "ko-KR": "Conception d'un miroir qui reflète ta véritable essence..."
+  },
+  "jeonseGuard": {
+    "input": {
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "houseValue": "Cartographie de l'architecture secrète de ta personnalité...",
+      "deposit": "Cartographie de l'architecture secrète de ta personnalité...",
+      "mortgage": "Conception d'un miroir qui reflète ta véritable essence...",
+      "mortgageDesc": "Cartographie de l'architecture secrète de ta personnalité...",
+      "unit": "Conception d'un miroir qui reflète ta véritable essence...",
+      "title": "My Insights"
+    },
+    "checklist": {
+      "items": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "disclaimer": "Conception d'un miroir qui reflète ta véritable essence...",
+      "keywords": "Analyse des échos profonds de tes choix...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "debtRatio": "Décryptage des motifs géométriques de ton identité..."
+    },
+    "hero": {
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "badge": "Analyse des échos profonds de tes choix..."
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "submit": "Envoyer",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "selectOption": "Analyse des échos profonds de tes choix...",
+      "subtitle": "Analyse des échos profonds de tes choix..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🛡️",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⚖️",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📝",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🏦",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "subtitle": "Analyse des échos profonds de tes choix...",
+    "currency": "Analyse des échos profonds de tes choix...",
+    "optional": "Optionnel",
+    "calculate": "Calculate",
+    "disclaimer": "Conception d'un miroir qui reflète ta véritable essence...",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "safe": "Analyse des échos profonds de tes choix...",
+    "caution": "Synchronisation des fils de ton destin...",
+    "danger": "Analyse des échos profonds de tes choix..."
+  },
+  "moneyHabits": {
+    "meta": {
+      "keywords": "Analyse des échos profonds de tes choix...",
+      "resultTitle": "Décryptage des motifs géométriques de ton identité...",
+      "resultDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+      "testTitle": "Décryptage des motifs géométriques de ton identité...",
+      "testDescription": "Synchronisation des fils de ton destin...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "cta": "Synchronisation des fils de ton destin...",
+      "badge": "Analyse des échos profonds de tes choix...",
+      "title": "My Insights"
+    },
+    "benefits": {
+      "items": {
+        "0": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        },
+        "1": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        },
+        "2": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        }
+      },
+      "title": "My Insights"
+    },
+    "cta": {
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "button": "Analyse des échos profonds de tes choix...",
+      "title": "My Insights"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "1": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "2": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "3": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      },
+      "title": "My Insights"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📝",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "common": {
+        "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "submit": "Envoyer",
+        "start": "Awaiting synthesis...",
+        "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+        "results": "Awaiting synthesis...",
+        "dashboard": "Awaiting synthesis...",
+        "insights": "Awaiting synthesis..."
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "submit": "Envoyer",
+        "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+        "selectOption": "Analyse des échos profonds de tes choix..."
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "Analyse des échos profonds de tes choix..."
+      },
+      "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "submit": "Envoyer",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "selectOption": "Analyse des échos profonds de tes choix...",
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "Analyse des échos profonds de tes choix...",
+      "finish": "Analyse des échos profonds de tes choix...",
+      "swipeHint": "Conception d'un miroir qui reflète ta véritable essence..."
+    },
+    "result": {
+      "chart": {
+        "impulseControl": "Analyse des échos profonds de tes choix...",
+        "savingCapacity": "Cartographie de l'architecture secrète de ta personnalité...",
+        "planningSkill": "Conception d'un miroir qui reflète ta véritable essence...",
+        "emotionalControl": "Analyse des échos profonds de tes choix..."
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "submit": "Envoyer",
+        "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+        "selectOption": "Analyse des échos profonds de tes choix..."
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "Analyse des échos profonds de tes choix..."
+      },
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "Analyse des échos profonds de tes choix...",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "shareTitle": "Décryptage des motifs géométriques de ton identité...",
+      "copySuccess": "Synchronisation des fils de ton destin...",
+      "scoresTitle": "Cartographie de l'architecture secrète de ta personnalité...",
+      "impulseRisk": "Conception d'un miroir qui reflète ta véritable essence...",
+      "strengths": "Décryptage des motifs géométriques de ton identité...",
+      "challenges": "Analyse des échos profonds de tes choix...",
+      "actionTips": "Analyse des échos profonds de tes choix...",
+      "savingRecommendation": "Décryptage des motifs géométriques de ton identité...",
+      "recommendedPercentage": "Cartographie de l'architecture secrète de ta personnalité...",
+      "share": "Conception d'un miroir qui reflète ta véritable essence...",
+      "retake": "Décryptage des motifs géométriques de ton identité..."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "keywords": "Analyse des échos profonds de tes choix..."
+  },
+  "payment": {
+    "checkout": {
+      "orderName": "Analyse des échos profonds de tes choix..."
+    },
+    "errors": {
+      "PLAN_NOT_FOUND": "Cartographie de l'architecture secrète de ta personnalité...",
+      "PAYMENT_SERVICE_ERROR": "Conception d'un miroir qui reflète ta véritable essence...",
+      "PROVIDER_REQUIRED": "Synchronisation des fils de ton destin...",
+      "LOCALE_REQUIRED": "Cartographie de l'architecture secrète de ta personnalité...",
+      "CURRENCY_REQUIRED": "Décryptage des motifs géométriques de ton identité...",
+      "TOSS_CLIENT_KEY_REQUIRED": "Analyse des échos profonds de tes choix...",
+      "LEMONSQUEEZY_CONFIG_REQUIRED": "Conception d'un miroir qui reflète ta véritable essence...",
+      "generic": "Conception d'un miroir qui reflète ta véritable essence..."
+    },
+    "failed": {
+      "help": {
+        "technical": {
+          "refresh": "Conception d'un miroir qui reflète ta véritable essence...",
+          "browser": "Analyse des échos profonds de tes choix...",
+          "network": "Cartographie de l'architecture secrète de ta personnalité...",
+          "incognito": "Décryptage des motifs géométriques de ton identité...",
+          "title": "My Insights"
+        },
+        "payment": {
+          "title": "My Insights",
+          "checkCard": "Synchronisation des fils de ton destin...",
+          "checkFunds": "Cartographie de l'architecture secrète de ta personnalité...",
+          "tryAnother": "Synchronisation des fils de ton destin...",
+          "contactBank": "Analyse des échos profonds de tes choix..."
+        }
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "Awaiting synthesis...",
+          "Awaiting synthesis...",
+          "Awaiting synthesis..."
+        ],
+        "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "submit": "Envoyer",
+        "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+        "selectOption": "Analyse des échos profonds de tes choix...",
+        "subtitle": "Analyse des échos profonds de tes choix..."
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "genericTitle": "Conception d'un miroir qui reflète ta véritable essence...",
+      "genericDescription": "Synchronisation des fils de ton destin...",
+      "genericAction": "Cartographie de l'architecture secrète de ta personnalité...",
+      "unknownTitle": "Analyse des échos profonds de tes choix...",
+      "unknownDescription": "Cartographie de l'architecture secrète de ta personnalité...",
+      "unknownAction": "Cartographie de l'architecture secrète de ta personnalité...",
+      "orderId": "Analyse des échos profonds de tes choix...",
+      "orderIdNote": "Synchronisation des fils de ton destin...",
+      "technicalDetails": "Conception d'un miroir qui reflète ta véritable essence...",
+      "errorCode": "Synchronisation des fils de ton destin...",
+      "errorMessage": "Cartographie de l'architecture secrète de ta personnalité...",
+      "whatNext": "Décryptage des motifs géométriques de ton identité...",
+      "contactSupport": "Synchronisation des fils de ton destin...",
+      "backToHome": "Décryptage des motifs géométriques de ton identité...",
+      "needHelp": "Décryptage des motifs géométriques de ton identité...",
+      "stillNeedHelp": "Décryptage des motifs géométriques de ton identité...",
+      "getSupport": "Synchronisation des fils de ton destin...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "success": {
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "📊",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚫",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "📂",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💎",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "Awaiting synthesis...",
+          "Awaiting synthesis...",
+          "Awaiting synthesis..."
+        ],
+        "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+        "next": "Suivant",
+        "previous": "Précédent",
+        "submit": "Envoyer",
+        "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+        "selectOption": "Analyse des échos profonds de tes choix...",
+        "subtitle": "Analyse des échos profonds de tes choix..."
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "welcome', { name: user": {
+        "firstName || user": {
+          "fullName || t('success": {
+            "user": "Analyse des échos profonds de tes choix..."
+          }
+        }
+      },
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "verifying": "Synchronisation des fils de ton destin...",
+      "verifyingDescription": "Conception d'un miroir qui reflète ta véritable essence...",
+      "premiumActive": "Conception d'un miroir qui reflète ta véritable essence...",
+      "welcome": "Analyse des échos profonds de tes choix...",
+      "user": "Analyse des échos profonds de tes choix...",
+      "paymentDetails": "Décryptage des motifs géométriques de ton identité...",
+      "orderId": "Analyse des échos profonds de tes choix...",
+      "amount": "Décryptage des motifs géométriques de ton identité...",
+      "status": "Décryptage des motifs géométriques de ton identité...",
+      "confirmed": "Synchronisation des fils de ton destin...",
+      "verificationSuccess": "Conception d'un miroir qui reflète ta véritable essence...",
+      "verificationFailed": "Cartographie de l'architecture secrète de ta personnalité...",
+      "verificationNetworkError": "Cartographie de l'architecture secrète de ta personnalité...",
+      "verificationRetry": "Décryptage des motifs géométriques de ton identité...",
+      "verificationPending": "Cartographie de l'architecture secrète de ta personnalité...",
+      "approvedAt": "Analyse des échos profonds de tes choix...",
+      "featuresUnlocked": "Analyse des échos profonds de tes choix...",
+      "nextSteps": "Conception d'un miroir qui reflète ta véritable essence...",
+      "goToDashboard": "Décryptage des motifs géométriques de ton identité...",
+      "takeTest": "Cartographie de l'architecture secrète de ta personnalité...",
+      "supportNote": "Cartographie de l'architecture secrète de ta personnalité...",
+      "contactSupport": "Synchronisation des fils de ton destin...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "submit": "Envoyer",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "selectOption": "Analyse des échos profonds de tes choix..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "Analyse des échos profonds de tes choix..."
+    },
+    "checkCard": "Synchronisation des fils de ton destin...",
+    "checkFunds": "Cartographie de l'architecture secrète de ta personnalité...",
+    "tryAnother": "Synchronisation des fils de ton destin...",
+    "contactBank": "Analyse des échos profonds de tes choix..."
+  },
+  "globalComparison": {
+    "meta": {
+      "cta": {
+        "button": "Analyse des échos profonds de tes choix..."
+      },
+      "keywords": "Analyse des échos profonds de tes choix...",
+      "badge": "Analyse des échos profonds de tes choix...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "filters": {
+      "region": "Décryptage des motifs géométriques de ton identité...",
+      "age": "Cartographie de l'architecture secrète de ta personnalité...",
+      "gender": "Décryptage des motifs géométriques de ton identité...",
+      "test": "Analyse des échos profonds de tes choix..."
+    },
+    "tabs": {
+      "overview": "Analyse des échos profonds de tes choix...",
+      "regional": "Conception d'un miroir qui reflète ta véritable essence...",
+      "demographics": "Analyse des échos profonds de tes choix...",
+      "rankings": "Analyse des échos profonds de tes choix..."
+    },
+    "chart": {
+      "scoreDistribution": "Synchronisation des fils de ton destin...",
+      "personalityRankings": "Synchronisation des fils de ton destin...",
+      "avgScore": "Conception d'un miroir qui reflète ta véritable essence...",
+      "users": "Analyse des échos profonds de tes choix...",
+      "topRankText": "Décryptage des motifs géométriques de ton identité...",
+      "allAges": "Décryptage des motifs géométriques de ton identité...",
+      "all": "Cartographie de l'architecture secrète de ta personnalité...",
+      "male": "Homme",
+      "female": "Femme",
+      "global": "Décryptage des motifs géométriques de ton identité...",
+      "asia": "Conception d'un miroir qui reflète ta véritable essence...",
+      "europe": "Analyse des échos profonds de tes choix...",
+      "northAmerica": "Conception d'un miroir qui reflète ta véritable essence...",
+      "korea": "Conception d'un miroir qui reflète ta véritable essence...",
+      "southAmerica": "South America",
+      "africa": "Africa",
+      "oceania": "Oceania"
+    },
+    "demographics": {
+      "comingSoon": "Décryptage des motifs géométriques de ton identité..."
+    },
+    "cta": {
+      "button": "Analyse des échos profonds de tes choix...",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "features": {
+      "benchmarking": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "regional": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      }
+    },
+    "insights": {
+      "yourScore": "Décryptage des motifs géométriques de ton identité...",
+      "globalAverage": "Décryptage des motifs géométriques de ton identité...",
+      "percentile": "Cartographie de l'architecture secrète de ta personnalité...",
+      "topPerformers": "Conception d'un miroir qui reflète ta véritable essence...",
+      "aboveAverage": "Décryptage des motifs géométriques de ton identité...",
+      "belowAverage": "Cartographie de l'architecture secrète de ta personnalité...",
+      "regions": "Décryptage des motifs géométriques de ton identité..."
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "submit": "Envoyer",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "selectOption": "Analyse des échos profonds de tes choix..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "badge": "Analyse des échos profonds de tes choix...",
+    "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+    "noData": "Synchronisation des fils de ton destin...",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "keywords": "Analyse des échos profonds de tes choix..."
+  },
+  "luck": {
+    "meta": {
+      "keywords": "Analyse des échos profonds de tes choix..."
+    },
+    "hero": {
+      "eyebrow": "Décryptage des motifs géométriques de ton identité...",
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "cta": "Synchronisation des fils de ton destin..."
+    }
+  },
+  "spendingStyle": {
+    "meta": {
+      "keywords": "Analyse des échos profonds de tes choix..."
+    },
+    "hero": {
+      "eyebrow": "Décryptage des motifs géométriques de ton identité...",
+      "subtitle": "Analyse des échos profonds de tes choix...",
+      "cta": "Synchronisation des fils de ton destin..."
+    }
+  },
+  "giftTax": {
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "Conception d'un miroir qui reflète ta véritable essence...",
+      "next": "Suivant",
+      "previous": "Précédent",
+      "submit": "Envoyer",
+      "loading": "Cartographie de l'architecture secrète de ta personnalité...",
+      "selectOption": "Analyse des échos profonds de tes choix...",
+      "subtitle": "Analyse des échos profonds de tes choix..."
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "💰",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📉",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "📝",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "📉",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "💸",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      }
+    ]
+  },
+  "result": {
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "🧮",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "📊",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      }
+    ]
+  },
+  "title": "My Insights"
+}

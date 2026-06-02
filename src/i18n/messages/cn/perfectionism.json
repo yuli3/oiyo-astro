@@ -1,0 +1,14 @@
+{
+  "classifications": {
+    "Master Artisan": "大师工匠",
+    "Grinder": "苦行者",
+    "Tortured Critic": "受难的审视者",
+    "Free Spirit": "超然之魂"
+  },
+  "title": "完美主义类型",
+  "badge": "完美主义",
+  "adaptive": "适应性完美主义",
+  "maladaptive": "适应不良型完美主义",
+  "restart": "重新开始",
+  "save": "记录此次波动"
+}

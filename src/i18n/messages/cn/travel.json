@@ -1,0 +1,645 @@
+{
+  "travel": {
+    "types": {
+      "INTJ": {
+        "preferences": ["文化遗址", "博物馆", "历史名胜", "建筑学"],
+        "avoidances": ["拥挤的地方", "自发计划", "团体旅游", "聚会气氛"],
+        "idealDestinations": {
+          "domestic": ["庆州", "全州韩屋村", "安东", "济州岛东部"],
+          "international": ["京都", "Rome", "布拉格", "伊斯坦布尔"]
+        },
+        "activities": ["历史之旅", "架构运行", "阅读", "摄影"],
+        "companionCompatibility": {
+          "best": ["ENFP", "ENTP", "INFP"],
+          "good": ["INTJ", "INTP", "ENTJ"],
+          "challenging": ["ESFP", "ESTP", "ESFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "INTP": {
+        "preferences": ["独特的地方", "科学博物馆", "隐藏的宝石", "当地文化"],
+        "avoidances": ["固定时间表", "旅游陷阱", "购物焦点", "吵闹的地方"],
+        "idealDestinations": {
+          "domestic": ["毛茸茸的青年", "江陵", "统营", "束草"],
+          "international": ["冰岛", "新西兰", "瑞士", "挪威"]
+        },
+        "activities": ["自然探索", "观星", "沉思", "独特的咖啡馆"],
+        "companionCompatibility": {
+          "best": ["ENFJ", "ENTJ", "INFJ"],
+          "good": ["INTP", "INTJ", "ENTP"],
+          "challenging": ["ESTJ", "ESFJ", "ISFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENTJ": {
+        "preferences": ["地标", "商务酒店", "精致餐饮", "活动"],
+        "avoidances": ["计划外的旅行", "缓慢的节奏", "住宿不舒服", "浪费时间"],
+        "idealDestinations": {
+          "domestic": ["汉城", "釜山", "Jeju", "仁川"],
+          "international": ["纽约", "新加坡", "迪拜", "香港"]
+        },
+        "activities": ["观光", "Golf", "葡萄酒之旅", "商务会议"],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENTJ", "INTJ", "ENTP"],
+          "challenging": ["ISFJ", "ESFJ", "ISFP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENTP": {
+        "preferences": ["探险活动", "夜市", "当地人互动", "自发旅行"],
+        "avoidances": ["标准课程", "豪华旅游", "安静休息", "定期时间表"],
+        "idealDestinations": {
+          "domestic": ["江原道", "济州岛西部", "庆尚乡村", "跳岛游"],
+          "international": ["东南亚", "南美洲", "东欧", "中东"]
+        },
+        "activities": ["冲浪", "跳伞", "徒步旅行", "当地派对"],
+        "companionCompatibility": {
+          "best": ["INFJ", "INTJ", "ISFJ"],
+          "good": ["ENTP", "ENFP", "ESTP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "INFJ": {
+        "preferences": ["精神场所", "自然", "安静的咖啡馆", "美术馆"],
+        "avoidances": ["党文化", "拥挤的地方", "噪音", "肤浅的经历"],
+        "idealDestinations": {
+          "domestic": ["济州偶来小路", "宝城", "南海", "潭阳"],
+          "international": ["Bali", "圣托里尼岛", "京都", "不丹"]
+        },
+        "activities": ["冥想", "Yoga", "摄影", "写日记"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ENFP", "INTP"],
+          "good": ["INFJ", "INFP", "ENFJ"],
+          "challenging": ["ESTP", "ESFP", "ESTJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "INFP": {
+        "preferences": ["隐藏点", "安静的村庄", "书店", "独立商店"],
+        "avoidances": ["旅游线路", "吵闹的地方", "固定时间表", "团体活动"],
+        "idealDestinations": {
+          "domestic": ["海滩攀岩帮", "统营", "丽水", "延州"],
+          "international": ["巴黎", "阿姆斯特丹", "布拉格", "爱丁堡"]
+        },
+        "activities": ["步行", "阅读", "写作", "摄影"],
+        "companionCompatibility": {
+          "best": ["ENTJ", "ENFJ", "INTJ"],
+          "good": ["INFP", "INFJ", "ENFP"],
+          "challenging": ["ESTJ", "ESFJ", "ISTJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENFJ": {
+        "preferences": ["当地体验", "烹饪课程", "社区参观", "志愿服务"],
+        "avoidances": ["孤独", "安静的旅行", "仅限游客", "肤浅的经历"],
+        "idealDestinations": {
+          "domestic": ["济州岛村庄", "延州", "釜山", "束草"],
+          "international": ["意大利", "西班牙", "墨西哥", "泰国"]
+        },
+        "activities": ["与当地人见面", "烹饪课程", "文化交流", "志愿者旅行"],
+        "companionCompatibility": {
+          "best": ["INFP", "INTP", "ISFP"],
+          "good": ["ENFJ", "ENFP", "ESFJ"],
+          "challenging": ["ISTP", "ISTJ", "INTP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ENFP": {
+        "preferences": ["节日", "演出", "夜市", "当地活动"],
+        "avoidances": ["固定时间表", "安静的旅行", "独自的", "例程"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "釜山", "江陵", "丽水"],
+          "international": ["巴塞罗那", "曼谷", "里约热内卢", "Bali"]
+        },
+        "activities": ["节日", "派对", "冲浪", "结识新朋友"],
+        "companionCompatibility": {
+          "best": ["INTJ", "INFJ", "ISTJ"],
+          "good": ["ENFP", "ENTP", "ESFP"],
+          "challenging": ["ISTJ", "ESTJ", "ISFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISTJ": {
+        "preferences": ["著名景点", "博物馆", "历史古迹", "安全的地方"],
+        "avoidances": ["自发旅行", "危险场所", "计划变更", "住宿不舒服"],
+        "idealDestinations": {
+          "domestic": ["庆州", "延州", "安东", "水原"],
+          "international": ["日本", "德国", "瑞士", "加拿大"]
+        },
+        "activities": ["观光", "摄影", "博物馆参观", "传统体验"],
+        "companionCompatibility": {
+          "best": ["ESFP", "ESTP", "ENFP"],
+          "good": ["ISTJ", "ESTJ", "ISFJ"],
+          "challenging": ["ENTP", "ENFP", "ESFP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISFJ": {
+        "preferences": ["宁静的地方", "家庭景点", "安全点", "舒适的休息"],
+        "avoidances": ["冒险", "人群", "不适", "危险"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "束草", "丽水", "庆州"],
+          "international": ["日本", "台湾", "新加坡", "新西兰"]
+        },
+        "activities": ["康复", "温泉", "美食之旅", "购物"],
+        "companionCompatibility": {
+          "best": ["ENTP", "ESTP", "ESFP"],
+          "good": ["ISFJ", "ISTJ", "ESFJ"],
+          "challenging": ["ENTP", "ENFP", "ESTP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESTJ": {
+        "preferences": ["著名景点", "跟团旅游", "导游服务", "便利设施"],
+        "avoidances": ["没有计划", "效率低下", "浪费时间", "不适"],
+        "idealDestinations": {
+          "domestic": ["汉城", "釜山", "Jeju", "大田"],
+          "international": ["新加坡", "香港", "东京", "北京"]
+        },
+        "activities": ["观光", "购物", "美食之旅", "摄影"],
+        "companionCompatibility": {
+          "best": ["ISFP", "ISTP", "INFP"],
+          "good": ["ESTJ", "ISTJ", "ESFJ"],
+          "challenging": ["INFP", "ENFP", "INTP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESFJ": {
+        "preferences": ["家庭旅行", "团体旅游", "著名咖啡馆", "购物"],
+        "avoidances": ["独自旅行", "安静的地方", "危险活动", "不适"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "釜山", "仁川", "延州"],
+          "international": ["冲绳", "Guam", "澳大利亚", "夏威夷"]
+        },
+        "activities": ["购物", "Food", "摄影", "咖啡馆之旅"],
+        "companionCompatibility": {
+          "best": ["ISTP", "ISFP", "INFP"],
+          "good": ["ESFJ", "ENFJ", "ESTJ"],
+          "challenging": ["INTP", "INTJ", "ISTP"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISTP": {
+        "preferences": ["户外活动", "运动的", "自然", "冒险"],
+        "avoidances": ["固定时间表", "博物馆", "购物", "旅游线路"],
+        "idealDestinations": {
+          "domestic": ["江原道", "济州山", "庆尚南道海岸", "山区"],
+          "international": ["新西兰", "挪威", "瑞士", "加拿大"]
+        },
+        "activities": ["远足", "滑雪", "潜水", "骑自行车"],
+        "companionCompatibility": {
+          "best": ["ESFJ", "ESTJ", "ENFJ"],
+          "good": ["ISTP", "ESTP", "ISFP"],
+          "challenging": ["ENFJ", "ESFJ", "INFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ISFP": {
+        "preferences": ["美术馆", "自然", "咖啡馆", "大气空间"],
+        "avoidances": ["吵闹的地方", "计划", "冲", "团体活动"],
+        "idealDestinations": {
+          "domestic": ["Jeju", "江陵", "统营", "丽水"],
+          "international": ["巴黎", "普罗旺斯", "圣托里尼岛", "Bali"]
+        },
+        "activities": ["摄影", "绘画", "咖啡馆", "步行"],
+        "companionCompatibility": {
+          "best": ["ESTJ", "ESFJ", "ENTJ"],
+          "good": ["ISFP", "INFP", "ESFP"],
+          "challenging": ["ESTJ", "ENTJ", "ISTJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESTP": {
+        "preferences": ["活动", "派对", "夜生活", "极限运动"],
+        "avoidances": ["博物馆", "安静的旅行", "计划", "缓慢的节奏"],
+        "idealDestinations": {
+          "domestic": ["釜山", "江陵", "济州岛西部", "阳阳"],
+          "international": ["普吉岛", "Bali", "迪拜", "伊维萨岛"]
+        },
+        "activities": ["冲浪", "泡吧", "水上运动", "蹦极"],
+        "companionCompatibility": {
+          "best": ["ISFJ", "ISTJ", "INFJ"],
+          "good": ["ESTP", "ESFP", "ENTP"],
+          "challenging": ["INFJ", "INFP", "ISFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "ESFP": {
+        "preferences": ["节日", "派对", "购物", "人们"],
+        "avoidances": ["计划", "沉默", "独自的", "无聊"],
+        "idealDestinations": {
+          "domestic": ["釜山", "Jeju", "弘大", "江南"],
+          "international": ["拉斯维加斯", "伊维萨岛", "曼谷", "迈阿密"]
+        },
+        "activities": ["派对", "购物", "演出", "Food"],
+        "companionCompatibility": {
+          "best": ["ISTJ", "ISFJ", "INTJ"],
+          "good": ["ESFP", "ESTP", "ENFP"],
+          "challenging": ["INTJ", "ISTJ", "INFJ"]
+        },
+        "name": "表演者",
+        "emoji": "🎉",
+        "description": "自发的、精力充沛且热情的表演者。",
+        "planningStyle": "Spontaneous and free",
+        "budgetApproach": "Generous spending on fun",
+        "accommodation": "Lively hotels in center",
+        "packingStyle": "Pack a lot and shop more",
+        "foodExploration": "Popular and hot restaurants"
+      },
+      "items": [
+        {
+          "name": "冒险家",
+          "description": "寻求新的体验和刺激。"
+        },
+        {
+          "name": "规划师",
+          "description": "在完美的日程中寻找平静。"
+        },
+        {
+          "name": "放松者",
+          "description": "寻求真正的休息和治愈。"
+        },
+        {
+          "name": "文化主义者",
+          "description": "深入研究历史和艺术。"
+        },
+        {
+          "name": "预算师",
+          "description": "聪明的消费者价值最大化。"
+        },
+        {
+          "name": "奢华主义者",
+          "description": "享受优质服务和舒适。"
+        }
+      ],
+      "title": "未找到城市"
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "当您到达目的地时，您：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "自己静静探索",
+            "value": "I"
+          },
+          {
+            "text": "与当地人或其他旅行者聊天",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "计划行程时：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "聚焦知名景点，详细规划",
+            "value": "S"
+          },
+          {
+            "text": "专注于隐藏的宝石和独特的体验",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "选择目的地的标准：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "效率和性价比",
+            "value": "T"
+          },
+          {
+            "text": "气氛和感觉",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "旅行准备：",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "严格提前预订和计划",
+            "value": "J"
+          },
+          {
+            "text": "大致计划并自发进行",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "旅行期间首选活动：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "安静地参观博物馆或遗址",
+            "value": "I"
+          },
+          {
+            "text": "当地节日或与人见面",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "遇到奇怪的食物时：",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "前往经过验证的知名餐厅",
+            "value": "S"
+          },
+          {
+            "text": "尝试一些独特和新鲜的东西",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "当与旅伴意见不一致时：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "根据客观标准理性决策",
+            "value": "T"
+          },
+          {
+            "text": "考虑感受进行调整",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "如果发生意外情况：",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "尝试回到计划",
+            "value": "J"
+          },
+          {
+            "text": "接受它作为一个新的机会",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "选择住宿的标准：",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "安静舒适的私人空间",
+            "value": "I"
+          },
+          {
+            "text": "我可以与人交往的空间",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "您如何获取旅行信息？",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "指南和经过验证的信息",
+            "value": "S"
+          },
+          {
+            "text": "博客和独特的评论",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "超出预算时：",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "调整计划、削减开支",
+            "value": "T"
+          },
+          {
+            "text": "经验很重要，所以要灵活",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "行程最后一天：",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "完成所有计划的活动",
+            "value": "J"
+          },
+          {
+            "text": "自由自在地享受剩余时间",
+            "value": "P"
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "title": "未找到城市",
+      "description": "找到适合您的城市",
+      "keywords": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。"
+    },
+    "hero": {
+      "badge": "Travel Psychology",
+      "title": "未找到城市",
+      "description": "找到适合您的城市",
+      "cta": "Start Test"
+    },
+    "benefits": {
+      "items": [
+        {
+          "title": "更好的旅行",
+          "description": "寻找最适合您的目的地和风格。"
+        },
+        {
+          "title": "智能预算",
+          "description": "了解如何将钱花在重要的地方。"
+        },
+        {
+          "title": "更多享受",
+          "description": "减轻旅行期间的压力并最大限度地提高满意度。"
+        },
+        {
+          "title": "和谐旅游",
+          "description": "了解与旅伴的差异。"
+        }
+      ],
+      "title": "未找到城市"
+    },
+    "test": {
+      "title": "未找到城市",
+      "subtitle": "发现符合您生活方式的城市",
+      "progress": "进度：{当前}/{总计}",
+      "submit": "提交",
+      "next": "下一步",
+      "previous": "上一步"
+    },
+    "result": {
+      "sections": {
+        "traits": "Travel Style",
+        "idealDestinations": "Ideal Destinations",
+        "travelTips": "Travel Tips",
+        "balance": "Travel Balance",
+        "strengths": "优势",
+        "challenges": "Challenges",
+        "breakdown": "Personality Breakdown"
+      },
+      "title": "未找到城市",
+      "subtitle": "发现符合您生活方式的城市",
+      "loading": "分析旅行方式...",
+      "exploreMore": "Explore More",
+      "exploreMoreDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+      "retakeTest": "Retake Test"
+    },
+    "cityGuide": {
+      "meta": {
+        "title": "未找到城市",
+        "description": "找到适合您的城市"
+      },
+      "hero": {
+        "title": "未找到城市",
+        "subtitle": "发现符合您生活方式的城市"
+      },
+      "noData": {
+        "title": "未找到城市",
+        "desc": "请修改条件重新搜索。",
+        "button": "重新搜索"
+      },
+      "filters": {
+        "climate": "气候",
+        "cost": "生活成本",
+        "safety": "安全",
+        "internet": "网速"
+      }
+    }
+  }
+}

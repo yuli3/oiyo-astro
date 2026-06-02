@@ -1,0 +1,11 @@
+{
+  "title": "Add Subscription",
+  "nameLabel": "Name",
+  "namePlaceholder": "Netflix, Spotify...",
+  "priceLabel": "Price",
+  "pricePlaceholder": "0.00",
+  "usageLabel": "Usage",
+  "usageUnit": "times/mo",
+  "satisfactionLabel": "Satisfaction",
+  "submit": "Add Subscription"
+}

@@ -1,0 +1,422 @@
+{
+  "day_01": {
+    "flower": {
+      "name": "아몬드",
+      "meaning": "진정한 사랑과 경계"
+    },
+    "stone": {
+      "name": "다이아몬드(투명)",
+      "meaning": "파괴할 수 없는 빛과 절대적인 진실"
+    },
+    "star": {
+      "name": "알페락",
+      "meaning": "자유와 빠른 움직임의 추구"
+    }
+  },
+  "day_02": {
+    "flower": {
+      "name": "아네모네",
+      "meaning": "기대와 악으로부터의 보호"
+    },
+    "stone": {
+      "name": "다이아몬드(결합)",
+      "meaning": "영원한 사랑과 영혼의 유대"
+    },
+    "star": {
+      "name": "기적적",
+      "meaning": "조화, 아름다움, 관계의 미덕"
+    }
+  },
+  "day_03": {
+    "flower": {
+      "name": "트럼펫 수선화",
+      "meaning": "자부심과 존중"
+    },
+    "stone": {
+      "name": "다이아몬드(탄인)",
+      "meaning": "역경을 이겨내는 승리와 내면의 힘"
+    },
+    "star": {
+      "name": "알마크",
+      "meaning": "예술적 다양성과 미적 탁월성"
+    }
+  },
+  "day_04": {
+    "flower": {
+      "name": "붉은 아네모네",
+      "meaning": "사랑해요"
+    },
+    "stone": {
+      "name": "쿼츠(순정)",
+      "meaning": "에너지의 증폭과 정신의 명확성"
+    },
+    "star": {
+      "name": "쉐라탄",
+      "meaning": "경계와 다가오는 새벽을 지켜보십시오"
+    }
+  },
+  "day_05": {
+    "flower": {
+      "name": "무화과",
+      "meaning": "풍요와 장수"
+    },
+    "stone": {
+      "name": "석영(파워)",
+      "meaning": "아우라 조화와 영적 집중"
+    },
+    "star": {
+      "name": "정육점 팀",
+      "meaning": "사회질서와 행정정의"
+    }
+  },
+  "day_06": {
+    "flower": {
+      "name": "아도니스",
+      "meaning": "영원한 행복과 아름다운 추억"
+    },
+    "stone": {
+      "name": "암석 크리스탈",
+      "meaning": "천상의 진동과 영혼의 순수함"
+    },
+    "star": {
+      "name": "문지기",
+      "meaning": "독립적인 리더십과 직접적인 권력"
+    }
+  },
+  "day_07": {
+    "flower": {
+      "name": "공작 고사리",
+      "meaning": "신중함과 자연스러운 우아함"
+    },
+    "stone": {
+      "name": "지르콘",
+      "meaning": "도덕적 행동과 사회적 존중"
+    },
+    "star": {
+      "name": "셰디르",
+      "meaning": "여성의 힘과 왕실의 영향력"
+    }
+  },
+  "day_08": {
+    "flower": {
+      "name": "갈조색의",
+      "meaning": "자선사업과 숨겨진 열정"
+    },
+    "stone": {
+      "name": "호랑이 눈",
+      "meaning": "극단적인 것과 실용적인 통찰력 사이의 균형"
+    },
+    "star": {
+      "name": "알데바란(필수오)",
+      "meaning": "진실과 동양의 수호자"
+    }
+  },
+  "day_09": {
+    "flower": {
+      "name": "벚꽃",
+      "meaning": "영적인 아름다움과 삶의 무상함"
+    },
+    "stone": {
+      "name": "황철석",
+      "meaning": "논리적 방패와 정신적 보호"
+    },
+    "star": {
+      "name": "멘카르",
+      "meaning": "집단의무와 무의식의 길"
+    }
+  },
+  "day_10": {
+    "flower": {
+      "name": "당신을 따라",
+      "meaning": "즐거운 추억"
+    },
+    "stone": {
+      "name": "청금석",
+      "meaning": "시각적 진실과 영적 고귀함"
+    },
+    "star": {
+      "name": "카펠라",
+      "meaning": "양육하는 보호와 신성한 은총"
+    }
+  },
+  "day_11": {
+    "flower": {
+      "name": "꽃 양치류",
+      "meaning": "꼭 와주세요"
+    },
+    "stone": {
+      "name": "남옥",
+      "meaning": "마음의 파도를 진정시키다"
+    },
+    "star": {
+      "name": "리겔",
+      "meaning": "기술적 숙련도와 혁신적인 안목"
+    }
+  },
+  "day_12": {
+    "flower": {
+      "name": "복숭아꽃",
+      "meaning": "사랑의 노예"
+    },
+    "stone": {
+      "name": "황옥",
+      "meaning": "햇빛의 결정체; 믿음과 희망"
+    },
+    "star": {
+      "name": "베텔게우스",
+      "meaning": "변화 후에 찾아오는 보편적인 성공"
+    }
+  },
+  "day_13": {
+    "flower": {
+      "name": "창백한 복숭아",
+      "meaning": "겸손한 사랑"
+    },
+    "stone": {
+      "name": "황수정",
+      "meaning": "풍요, 성공, 명확한 의도"
+    },
+    "star": {
+      "name": "시리우스(천상의 별)",
+      "meaning": "야망과 찬란한 명성"
+    }
+  },
+  "day_14": {
+    "flower": {
+      "name": "하얀 나팔꽃",
+      "meaning": "넘치는 기쁨"
+    },
+    "stone": {
+      "name": "태양석",
+      "meaning": "존재의 활력과 기쁨"
+    },
+    "star": {
+      "name": "비버",
+      "meaning": "지적 민첩성과 이중적 관점"
+    }
+  },
+  "day_15": {
+    "flower": {
+      "name": "바람 난초",
+      "meaning": "진정한 매력"
+    },
+    "stone": {
+      "name": "월장석",
+      "meaning": "직관과 신성한 여성성"
+    },
+    "star": {
+      "name": "폴룩스",
+      "meaning": "비판적 지혜와 보호력"
+    }
+  },
+  "day_16": {
+    "flower": {
+      "name": "튤립",
+      "meaning": "아름다운 눈과 명성"
+    },
+    "stone": {
+      "name": "어벤츄린",
+      "meaning": "도박꾼의 행운과 열린 마음"
+    },
+    "star": {
+      "name": "프로키온",
+      "meaning": "폭풍 전의 행동과 성공"
+    }
+  },
+  "day_17": {
+    "flower": {
+      "name": "독일 붓꽃",
+      "meaning": "좋은 소식"
+    },
+    "stone": {
+      "name": "옥",
+      "meaning": "영원한 선함과 물질적 행운"
+    },
+    "star": {
+      "name": "레굴루스(영천성)",
+      "meaning": "왕의 명예와 야망의 정점"
+    }
+  },
+  "day_18": {
+    "flower": {
+      "name": "자체 운영",
+      "meaning": "영감과 인내"
+    },
+    "stone": {
+      "name": "공작석",
+      "meaning": "긍정적인 변화와 성장"
+    },
+    "star": {
+      "name": "스피카(양손)",
+      "meaning": "예술적 성공과 고귀한 정신"
+    }
+  },
+  "day_19": {
+    "flower": {
+      "name": "델피늄",
+      "meaning": "명확하고 명확함"
+    },
+    "stone": {
+      "name": "자수정",
+      "meaning": "영적 평온과 내면의 평화"
+    },
+    "star": {
+      "name": "아크튜러스(가디언)",
+      "meaning": "길을 찾는 지혜와 명예"
+    }
+  },
+  "day_20": {
+    "flower": {
+      "name": "배나무",
+      "meaning": "부드러운 애정과 지속적인 우정"
+    },
+    "stone": {
+      "name": "에메랄드",
+      "meaning": "희망, 환생, 그리고 진정한 사랑"
+    },
+    "star": {
+      "name": "Antares (Shin Sui)",
+      "meaning": "전략적 승리, 그러나 갈등을 조심하라"
+    }
+  },
+  "day_21": {
+    "flower": {
+      "name": "수양버들",
+      "meaning": "내 슬픔과 사랑의 우아함"
+    },
+    "stone": {
+      "name": "사파이어",
+      "meaning": "신성한 통찰력과 영적 진리"
+    },
+    "star": {
+      "name": "알파드",
+      "meaning": "고독한 것; 독창적인 천재"
+    }
+  },
+  "day_22": {
+    "flower": {
+      "name": "과꽃",
+      "meaning": "신뢰할 수 있는 사랑과 다양성"
+    },
+    "stone": {
+      "name": "녹주석",
+      "meaning": "비전의 명확성과 정신 집중"
+    },
+    "star": {
+      "name": "알파카",
+      "meaning": "명예로운 성공과 정교함"
+    }
+  },
+  "day_23": {
+    "flower": {
+      "name": "풍선 꽃",
+      "meaning": "따뜻한 마음과 변함없는 사랑"
+    },
+    "stone": {
+      "name": "호박",
+      "meaning": "따뜻함, 치유, 그리고 고대의 지혜"
+    },
+    "star": {
+      "name": "베가(Vegas)",
+      "meaning": "감동적인 성공과 카리스마"
+    }
+  },
+  "day_24": {
+    "flower": {
+      "name": "제라늄",
+      "meaning": "단호하고 평화로운 마음"
+    },
+    "stone": {
+      "name": "벽옥",
+      "meaning": "접지 에너지 및 안정성"
+    },
+    "star": {
+      "name": "알테어(현우)",
+      "meaning": "두려움 없는 비행과 높은 야망"
+    }
+  },
+  "day_25": {
+    "flower": {
+      "name": "중간 백합",
+      "meaning": "존엄성과 권위"
+    },
+    "stone": {
+      "name": "적철광",
+      "meaning": "접지 및 영적 보호"
+    },
+    "star": {
+      "name": "데네브",
+      "meaning": "우아함, 위엄, 그리고 높은 지혜"
+    }
+  },
+  "day_26": {
+    "flower": {
+      "name": "논",
+      "meaning": "안정성과 유용성"
+    },
+    "stone": {
+      "name": "소달라이트",
+      "meaning": "객관성과 합리적인 선택"
+    },
+    "star": {
+      "name": "포말하우트",
+      "meaning": "영적인 성공과 명확한 통찰력"
+    }
+  },
+  "day_27": {
+    "flower": {
+      "name": "훈련",
+      "meaning": "말솜씨와 순수한 마음"
+    },
+    "stone": {
+      "name": "형석",
+      "meaning": "정신적 집중과 산만함"
+    },
+    "star": {
+      "name": "아케르나르",
+      "meaning": "철학적 성공과 높은 지위"
+    }
+  },
+  "day_28": {
+    "flower": {
+      "name": "붉은 앵초",
+      "meaning": "비교할 수 없는 성취"
+    },
+    "stone": {
+      "name": "혈석",
+      "meaning": "활력, 용기, 힘"
+    },
+    "star": {
+      "name": "카노푸스",
+      "meaning": "변화하는 흐름에서 고정점 찾기"
+    }
+  },
+  "day_29": {
+    "flower": {
+      "name": "동백나무",
+      "meaning": "아름다운 매력과 완벽함"
+    },
+    "stone": {
+      "name": "오닉스",
+      "meaning": "내면의 힘과 정신적 훈련"
+    },
+    "star": {
+      "name": "북극성(북극성)",
+      "meaning": "진북을 찾는 힘"
+    }
+  },
+  "day_30": {
+    "flower": {
+      "name": "황금사슬나무",
+      "meaning": "잠겨있는 아름다움과 매력"
+    },
+    "stone": {
+      "name": "크리소프레이즈",
+      "meaning": "마음의 치유와 새로운 기쁨"
+    },
+    "star": {
+      "name": "알골",
+      "meaning": "원초적인 힘과 강렬한 변신"
+    }
+  }
+}

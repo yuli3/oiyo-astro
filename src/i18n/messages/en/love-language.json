@@ -1,0 +1,100 @@
+{
+  "questions": [
+    {
+      "id": "love_1",
+      "pair": ["words", "time"],
+      "texts": {
+        "words": "Hearing whispered words of affirmation heals my weary soul.",
+        "time": "Sharing a moment of undivided presence creates a sacred bond."
+      }
+    },
+    {
+      "id": "love_2",
+      "pair": ["gifts", "acts"],
+      "texts": {
+        "gifts": "A thoughtful token serves as a tangible symbol of our connection.",
+        "acts": "A burden lifted from my shoulders is the truest form of care."
+      }
+    },
+    {
+      "id": "love_3",
+      "pair": ["touch", "time"],
+      "texts": {
+        "touch": "A gentle embrace speaks louder than a thousand words.",
+        "time": "Walking together in silence feels more profound than solitude."
+      }
+    },
+    {
+      "id": "love_4",
+      "pair": ["words", "touch"],
+      "texts": {
+        "words": "I bloom when my virtues are recognized and spoken aloud.",
+        "touch": "Holding hands anchors me in the chaotic currents of life."
+      }
+    },
+    {
+      "id": "love_5",
+      "pair": ["acts", "time"],
+      "texts": {
+        "acts": "I feel cherished when everyday obstacles are removed for me.",
+        "time": "I cherish long, uninterrupted conversations into the night."
+      }
+    },
+    {
+      "id": "love_6",
+      "pair": ["gifts", "words"],
+      "texts": {
+        "gifts": "I treasure artifacts that carry the memory of our bond.",
+        "words": "I treasure letters that immortalize our feelings in ink."
+      }
+    },
+    {
+      "id": "love_7",
+      "pair": ["touch", "gifts"],
+      "texts": {
+        "touch": "Physical closeness assures me of our unspoken unity.",
+        "gifts": "A surprise gift assures me that I am constantly in your thoughts."
+      }
+    },
+    {
+      "id": "love_8",
+      "pair": ["acts", "words"],
+      "texts": {
+        "acts": "I trust devotion that is demonstrated through dedicated service.",
+        "words": "I trust devotion that is articulated through encouraging praise."
+      }
+    },
+    {
+      "id": "love_9",
+      "pair": ["time", "gifts"],
+      "texts": {
+        "time": "The greatest gift is the generosity of your presence.",
+        "gifts": "The greatest gift is a tangible object chosen with deep insight."
+      }
+    },
+    {
+      "id": "love_10",
+      "pair": ["touch", "acts"],
+      "texts": {
+        "touch": "Sitting close together recharges my emotional reserves.",
+        "acts": "Seeing a task completed for me recharges my emotional reserves."
+      }
+    },
+    {
+      "id": "love_11",
+      "pair": ["words", "gifts"],
+      "texts": {
+        "words": "I feel most secure when you verbailize your commitment.",
+        "gifts": "I feel most secure when you remember special occasions with grand gestures."
+      }
+    },
+    {
+      "id": "love_12",
+      "pair": ["acts", "time"],
+      "texts": {
+        "acts": "Actions speak the language of true romance to me.",
+        "time": "Shared experiences speak the language of true romance to me."
+      }
+    }
+  ]
+}

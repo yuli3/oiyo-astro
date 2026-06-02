@@ -1,0 +1,44 @@
+{
+  "subtitle": "Tune the frequencies of your digital existence. Adjust how the sanctuary interacts with your soul.",
+  "title": "Sanctuary Configuration",
+  "subscription": {
+    "title": "Subscription Management",
+    "noActive": "No Active Subscription",
+    "noActiveDesc": "Unlock premium features today.",
+    "viewPlans": "View Plans",
+    "renewsOn": "Renews on {date}",
+    "expiresOn": "Expires on {date}",
+    "cancelSubscription": "Cancel Subscription",
+    "confirmCancel": "Are you sure?"
+  },
+  "sections": {
+    "access": {
+      "title": "Ontology & Access",
+      "security": {
+        "title": "Account Security",
+        "description": "Password, Email, 2FA"
+      },
+      "manage": "Manage",
+      "signout": {
+        "title": "Sign Out",
+        "description": "Disconnect from the sanctuary"
+      }
+    },
+    "preferences": {
+      "title": "Resonance Preferences",
+      "signals": {
+        "title": "Cosmic Signals",
+        "description": "Receive daily oracle insights"
+      },
+      "language": {
+        "title": "Language of Truth",
+        "description": "Current: {locale}"
+      },
+      "change": "Change",
+      "void": {
+        "title": "Void Mode",
+        "description": "High contrast dark theme enabled"
+      }
+    }
+  }
+}

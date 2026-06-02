@@ -1,0 +1,23 @@
+{
+  "title": "称号",
+  "anonymous": "旅人",
+  "achievements": "マイルストーン",
+  "badges": {
+    "newMember": "新しい魂",
+    "explorer": "探求者"
+  },
+  "editProfile": "プロフィール編集",
+  "labels": {
+    "entity": "実体",
+    "title": "称号",
+    "description": "説明",
+    "scroll": "スクロール",
+    "timeline": "タイムライン",
+    "archive": "アーカイブ",
+    "ascension": "アセンション",
+    "ascensionDesc": "あなたの成長の道。",
+    "shards": "欠片",
+    "tier": "会員ランク",
+    "reflection": "回顧"
+  }
+}

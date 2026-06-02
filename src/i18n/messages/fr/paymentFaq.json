@@ -1,0 +1,276 @@
+{
+  "general": [
+    {
+      "icon": "✨",
+      "title": "Aperçu Premium",
+      "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+      "question": "Quelle est votre fréquence centrale unique ?",
+      "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+    },
+    {
+      "icon": "🚀",
+      "title": "Aperçu Premium",
+      "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+      "question": "Comment naviguez-vous dans les courants de la vie ?",
+      "answer": "Votre perspective unique façonne votre réalité."
+    },
+    {
+      "icon": "💡",
+      "title": "Aperçu Premium",
+      "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+      "question": "Comment naviguez-vous dans les courants de la vie ?",
+      "answer": "Les petits choix s’accumulent pour former un grand destin."
+    },
+    {
+      "icon": "🎯",
+      "title": "Aperçu Premium",
+      "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+      "question": "Qu’est-ce qui anime votre monde intérieur ?",
+      "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+    },
+    {
+      "icon": "🔥",
+      "title": "Aperçu Premium",
+      "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+      "question": "Quelle est votre fréquence centrale unique ?",
+      "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+    },
+    {
+      "icon": "⭐",
+      "title": "Aperçu Premium",
+      "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+      "question": "Qu’est-ce qui anime votre monde intérieur ?",
+      "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+    }
+  ],
+  "billing": [
+    {
+      "question": "Comment fonctionne la facturation ?",
+      "answer": "Vous êtes facturé mensuellement le jour même de votre abonnement initial. Par exemple, si vous vous abonnez le 15, vous serez facturé le 15 de chaque mois. Vous recevrez un reçu par e-mail pour chaque paiement."
+    },
+    {
+      "question": "Puis-je annuler à tout moment ?",
+      "answer": "Absolument! Vous pouvez annuler votre abonnement à tout moment depuis votre tableau de bord. Vous continuerez à bénéficier d'un accès premium jusqu'à la fin de votre période de facturation en cours, puis vous ne serez plus facturé."
+    },
+    {
+      "question": "Que se passe-t-il lorsque j'annule ?",
+      "answer": "Lorsque vous annulez, vous conservez l’accès premium jusqu’à la fin de votre période payante. Après cela, votre compte revient au niveau gratuit. Toutes vos données sont préservées - vous ne perdrez aucun résultat de test ni aucune progression."
+    },
+    {
+      "question": "Puis-je obtenir un remboursement ?",
+      "answer": "Oui! Nous offrons une garantie de remboursement de 7 jours. Si vous demandez un remboursement dans les 7 jours suivant l'achat et que vous n'avez pas beaucoup utilisé le service, nous procéderons à un remboursement complet. Consultez notre politique de remboursement pour plus de détails."
+    },
+    {
+      "question": "Les prix vont-ils augmenter ?",
+      "answer": "Si jamais nous augmentons les prix, les abonnés existants seront informés au moins 30 jours à l'avance. Votre tarif restera le même pendant au moins un cycle de facturation supplémentaire après la notification."
+    },
+    {
+      "question": "Proposez-vous des abonnements annuels ?",
+      "answer": "Actuellement, nous proposons uniquement des abonnements mensuels. Des forfaits annuels avec réductions sont prévus pour le futur - nous l'annoncerons dès qu'ils seront disponibles !"
+    }
+  ],
+  "security": [
+    {
+      "question": "Mes informations de paiement sont-elles sécurisées ?",
+      "answer": "Oui! Nous ne stockons jamais les informations de votre carte de crédit. Les paiements sont traités par des fournisseurs conformes à la norme PCI-DSS (Toss Payments pour la Corée, LemonSqueezy à l'international). Toutes les transactions sont cryptées avec SSL/TLS, la norme du secteur."
+    },
+    {
+      "question": "Mes informations de paiement seront-elles partagées ?",
+      "answer": "Jamais! Vos informations de paiement restent auprès du processeur de paiement (Toss ou LemonSqueezy). Nous recevons uniquement la confirmation que le paiement a réussi – nous ne voyons jamais vos numéros de carte ou vos coordonnées bancaires réels."
+    },
+    {
+      "question": "Comment mes données sont-elles protégées ?",
+      "answer": "Toutes les données des tests de personnalité sont cryptées et stockées en toute sécurité. Nous sommes conformes au RGPD. Vous pouvez exporter ou supprimer vos données à tout moment. Les informations de paiement sont traitées par des processeurs de paiement certifiés et ne sont pas stockées par nous."
+    },
+    {
+      "question": "Vendez-vous des données utilisateur ?",
+      "answer": "Absolument pas. Nous ne vendons, louons ou partageons jamais vos informations personnelles ou vos résultats de tests avec des tiers. Votre vie privée est notre priorité absolue. Lisez notre politique de confidentialité pour plus de détails."
+    }
+  ],
+  "technical": [
+    {
+      "question": "Mon paiement a échoué. Que dois-je faire?",
+      "answer": "Vérifiez les détails de votre carte et assurez-vous que vous disposez de fonds suffisants. Si le problème persiste, essayez une autre carte ou contactez votre banque."
+    },
+    {
+      "question": "Je n'ai pas reçu mon reçu.",
+      "answer": "Les reçus sont envoyés automatiquement à votre adresse e-mail. Vérifiez votre dossier spam ou contactez l'assistance si vous ne le trouvez pas."
+    },
+    {
+      "question": "Je ne peux pas accéder aux fonctionnalités premium.",
+      "answer": "Essayez de vous déconnecter et de vous reconnecter. Si cela ne fonctionne pas, vérifiez l'état de votre abonnement dans votre tableau de bord. Vous rencontrez toujours des problèmes ? Contactez l'assistance !"
+    }
+  ],
+  "test": {
+    "insightBullets": ["Force de signature", "Point pivot", "2"],
+    "progress": "Progrès",
+    "submit": "Envoyer",
+    "loading": "Chargement...",
+    "selectOption": "Choisir une Option",
+    "subtitle": "Cartographie de l'architecture secrète de ta personnalité...",
+    "next": "Suivant",
+    "previous": "Précédent"
+  },
+  "meta": {
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "🚀",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "💡",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "🎯",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "🔥",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "⭐",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Comment naviguez-vous dans les courants de la vie ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "🚀",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "💡",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      },
+      {
+        "icon": "🎯",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      },
+      {
+        "icon": "🔥",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "⭐",
+        "title": "Aperçu Premium",
+        "description": "Découvrez les modèles uniques qui définissent votre chemin.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "Votre perspective unique façonne votre réalité."
+      }
+    ]
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "🚀",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "💡",
+        "title": "Aperçu Premium",
+        "description": "Explorez l’architecture profonde de votre paysage intérieur.",
+        "question": "Quelle est votre fréquence centrale unique ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      },
+      {
+        "icon": "🎯",
+        "title": "Aperçu Premium",
+        "description": "Cartographier la constellation de votre vrai moi.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "L'harmonie intérieure guide vos actions quotidiennes."
+      },
+      {
+        "icon": "🔥",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Comment votre âme réagit-elle à l’inconnu ?",
+        "answer": "Vous possédez une boussole intuitive qui pointe vers la croissance."
+      },
+      {
+        "icon": "⭐",
+        "title": "Aperçu Premium",
+        "description": "Dévoilez les couches cachées de votre philosophie personnelle.",
+        "question": "Qu’est-ce qui anime votre monde intérieur ?",
+        "answer": "Les petits choix s’accumulent pour former un grand destin."
+      }
+    ]
+  },
+  "result": {
+    "title": "ton Profil Financier",
+    "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+  },
+  "paymentMethods": {
+    "title": "ton Profil Financier"
+  },
+  "pricing": {
+    "title": "ton Profil Financier"
+  },
+  "subtitle": "Cartographie de l'architecture secrète de ta personnalité...",
+  "generalTitle": "Questions Générales",
+  "billingTitle": "Facturation et Abonnements",
+  "securityTitle": "Sécurité et Confidentialité",
+  "technicalTitle": "Problèmes Techniques",
+  "stillHaveQuestions": "Vous avez encore des questions ? Notre équipe d'assistance est là pour vous aider !",
+  "contactSupport": "Contacter l'Assistance",
+  "viewRefundPolicy": "Décryptage des motifs géométriques de ton identité...",
+  "title": "ton Profil Financier",
+  "description": "Explorez notre suite d'outils conçus pour une analyse financière approfondie"
+}

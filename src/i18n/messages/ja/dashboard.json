@@ -1,0 +1,408 @@
+{
+  "subtitle": "自分を知るための空間",
+  "title": "私の聖域",
+  "sovereign": {
+    "sections": {
+      "hero": "ヒーロー",
+      "oracle": "神託",
+      "ontology": "存在論",
+      "vault": "宝物庫",
+      "growth": "成長"
+    },
+    "labels": {
+      "ascend": "予言への昇格",
+      "celestialChart": "天体チャート",
+      "archives": "帝国記録保管所",
+      "evolution": "進化が進行中",
+      "unlocked": "{count}個のプレミアムシャード",
+      "exploration": "探索進捗: {percent}%"
+    },
+    "growth": {
+      "full": "完全な覚醒",
+      "unfinished": "未完の旅",
+      "fullDesc": "あなたは自らの主権に関する主要な断片をすべて現出させました。宇宙はあなたの完全な自己認識に敬意を表します。",
+      "unfinishedDesc": "物理的な領域にまだ現出していない存在論の断片があります。残っている影に光を当てて、あなたの覚醒を完成させましょう。",
+      "review": "すべての真実を確認",
+      "discover": "欠けている断片を発見"
+    }
+  },
+  "profile": {
+    "labels": {
+      "entity": "主権的実体",
+      "title": "あなたの神聖な記録",
+      "description": "OIYOの次元全体にわたってあなたが宣言したすべての真実の集成です。",
+      "scroll": "生命の断片をスクロール",
+      "reflection": "魂の反映",
+      "timeline": "真実のタイムライン",
+      "archive": "現出のアーカイブ",
+      "ascension": "昇格ステータス",
+      "ascensionDesc": "完了したすべての診断は、真実の自己を覆っていた霧を一層ずつ取り除きます。あなたは完全な存在論的覚醒の状態に近づいています。",
+      "shards": "シャード",
+      "tier": "ティア"
+    }
+  },
+  "recommendations": {
+    "createGoal": {
+      "title": "あなたの神聖な記録",
+      "description": "OIYOの次元全体にわたってあなたが宣言したすべての真実の集成です。",
+      "action": "今すぐチェック"
+    },
+    "takeTest": {
+      "title": "あなたの神聖な記録",
+      "description": "OIYOの次元全体にわたってあなたが宣言したすべての真実の集成です。",
+      "action": "今すぐチェック"
+    },
+    "checkCompatibility": {
+      "title": "あなたの神聖な記録",
+      "description": "OIYOの次元全体にわたってあなたが宣言したすべての真実の集成です。",
+      "action": "今すぐチェック"
+    }
+  },
+  "vault": {
+    "title": "あなたの神聖な記録",
+    "description": "OIYOの次元全体にわたってあなたが宣言したすべての真実の集成です。",
+    "securedCount": "{count}個確保済み",
+    "premiumArtifact": "プレミアム遺物",
+    "view": "表示",
+    "locked": "神聖なロックが作動中",
+    "claim": "遺物を獲得する →",
+    "empty": "「宝物庫はまだ沈黙に包まれています。自己発見の旅を始めて、この殿堂を永遠の知識で満たしましょう。」",
+    "firstTrial": "最初の試練を開始"
+  },
+  "fragmentsTitle": "散らばった欠片",
+  "fragmentsDesc": "あなたの魂のデータは星々に散らばっています。それらを集めて全体像を見てみましょう。",
+  "beginJourney": "旅を始める",
+  "heroTitle": "私の宇宙",
+  "heroSubtitle": "今日の空は あなたにどんな物語を語っているでしょうか？",
+  "continue": "旅を続ける",
+  "revelation": "宇宙の啓示",
+  "premiumTitle": "プレミアム分析",
+  "rootsTitle": "根源のルーツ",
+  "branchesTitle": "枝葉の成長",
+  "primalOrigin": "根源の起源",
+  "destinyCoordinates": "運命の座標",
+  "unveilRoots": "宇宙のルーツを解き明かす",
+  "socialCognition": "社会的認知",
+  "socialDNA": "社会性DNA",
+  "mapGrowth": "社会的成長をマッピングする",
+  "viewReport": "レポートを見る",
+  "unlockNow": "今すぐアンロック",
+  "history": "最近の発見履歴",
+  "noHistory": "あなたの旅は始まったばかりです。新しい探求を始めましょう。",
+  "startDiscovery": "発見を始める",
+  "lockedTitle": "封印された知恵",
+  "lockedDescription": "この領域のデータは発見を待っています。分析を完了してロックを解除してください。",
+  "viewAll": "すべて表示",
+  "categories": {
+    "personality": "性格と気質",
+    "destiny": "運命とサイクル",
+    "cognitive": "認知と思考",
+    "wisdom": "古典的な知恵"
+  },
+  "resonanceLabels": {
+    "harmonic": "調和の流れ",
+    "balanced": "バランス",
+    "friction": "高い摩擦"
+  },
+  "guidanceTitle": "パスファインダー",
+  "guidanceSubtitle": "キャリアと魂のためのあなたの勅令",
+  "recommendedCareers": "おすすめの職業パス",
+  "recommendedHobbies": "おすすめの趣味",
+  "soulGuidance": "ソウルガイダンス",
+  "basedOn": "{type}に基づく",
+  "labels": {
+    "undiscovered": "未発見",
+    "meaning": "意味",
+    "element": "元素",
+    "nameVibration": "名前の振動",
+    "westernZodiac": "西洋星座",
+    "sign": "サイン",
+    "observation": "観察",
+    "easternZodiac": "東洋星座",
+    "animal": "動物",
+    "dominion": "支配領域",
+    "bureau": "局",
+    "alignment": "アライメント"
+  },
+  "humanDesign": {
+    "types": {
+      "Generator": "ジェネレーター",
+      "Projector": "プロジェクター",
+      "Manifestor": "マニフェスター",
+      "Reflector": "リフレクター",
+      "Manifesting Generator": "マニフェスティング・ジェネレーター"
+    }
+  },
+  "common": {
+    "noGuidance": "ガイダンスはまだ提供されていません。"
+  },
+  "celticTrees": {
+    "birch": "白樺",
+    "rowan": "ミヤマナナカマド",
+    "ash": "セイヨウトネリコ",
+    "alder": "ハンノキ",
+    "willow": "ヤナギ",
+    "hawthorn": "サンザシ",
+    "oak": "オーク",
+    "holly": "セイヨウヒイラギ",
+    "hazel": "ハシバミ",
+    "vine": "ブドウ",
+    "ivy": "アイビー",
+    "reed": "葦",
+    "elder": "ニワトコ"
+  },
+  "mayanTones": {
+    "magnetic": "磁性 (Magnetic)",
+    "lunar": "月 (Lunar)",
+    "electric": "電気 (Electric)",
+    "selfExisting": "自己存在 (Self-Existing)",
+    "overtone": "倍音 (Overtone)",
+    "rhythmic": "リズム (Rhythmic)",
+    "resonant": "共鳴 (Resonant)",
+    "galactic": "銀河 (Galactic)",
+    "solar": "太陽 (Solar)",
+    "planetary": "惑星 (Planetary)",
+    "spectral": "分光 (Spectral)",
+    "crystal": "水晶 (Crystal)",
+    "cosmic": "宇宙 (Cosmic)"
+  },
+  "mayanSeals": {
+    "dragon": "龍 (Dragon)",
+    "wind": "風 (Wind)",
+    "night": "夜 (Night)",
+    "seed": "種 (Seed)",
+    "serpent": "蛇 (Serpent)",
+    "worldbridger": "世界の橋渡し (Worldbridger)",
+    "hand": "手 (Hand)",
+    "star": "星 (Star)",
+    "moon": "月 (Moon)",
+    "dog": "犬 (Dog)",
+    "monkey": "猿 (Monkey)",
+    "human": "人間 (Human)",
+    "skywalker": "空歩く者 (Skywalker)",
+    "wizard": "魔法使い (Wizard)",
+    "eagle": "鷲 (Eagle)",
+    "warrior": "戦士 (Warrior)",
+    "earth": "地球 (Earth)",
+    "mirror": "鏡 (Mirror)",
+    "storm": "嵐 (Storm)",
+    "sun": "太陽 (Sun)"
+  },
+  "elements": {
+    "wood": "木 (Wood)",
+    "fire": "火 (Fire)",
+    "earth": "土 (Earth)",
+    "metal": "金 (Metal)",
+    "water": "水 (Water)",
+    "Wood": "木 (Wood)",
+    "Fire": "火 (Fire)",
+    "Earth": "土 (Earth)",
+    "Metal": "金 (Metal)",
+    "Water": "水 (Water)",
+    "Air": "空気 (Air)"
+  },
+  "returnToHome": "ホームに戻る",
+  "contactSupport": "サポートに問い合わせる",
+  "syncingData": "データを同期中...",
+  "guest": "ゲスト",
+  "calibration": "キャリブレーション",
+  "changeOrigin": "起源を変更する",
+  "todayInsight": {
+    "title": "今日のインサイト",
+    "soulOracle": "ソウルオラクル",
+    "innerResonance": "内なる共鳴",
+    "manifestMore": "さらに顕現する"
+  },
+  "readingsLink": "すべてのリーディングを見る",
+  "cards": {
+    "vitality": {
+      "title": "生命力指数"
+    },
+    "resonance": {
+      "description": "今日の宇宙の流れとのあなたの相性。",
+      "subtitle": "日々の共鳴"
+    },
+    "foundation": {
+      "description": "あなたの運命を形作る元素の力。",
+      "subtitle": "元素の基盤"
+    },
+    "elemental": {
+      "description": "あなたの元素の設計図とその影響。",
+      "subtitle": "元素プロフィール",
+      "title": "元素"
+    },
+    "onomancy": {
+      "description": "あなたの名前の振動周波数。",
+      "subtitle": "名前の分析"
+    },
+    "cognition": {
+      "description": "あなたの認知スタイルと思考パターン。",
+      "subtitle": "認知マップ"
+    },
+    "vocation": {
+      "description": "あなたの魂の設計図に沿ったキャリアの道。",
+      "subtitle": "天職ガイド"
+    },
+    "destiny": {
+      "description": "あなたの人生の道に織り込まれたカルマの糸。",
+      "subtitle": "運命の糸"
+    }
+  },
+  "resonanceTitle": "共鳴ハブ",
+  "sections": {
+    "testArchitecture": {
+      "title": "テストの構造",
+      "description": "あなたのアイデンティティを解読するシステムを探ります。"
+    },
+    "emotionalResonance": {
+      "title": "感情的共鳴",
+      "description": "あなたの感情の周波数と関係のパターン。"
+    },
+    "grandArchives": {
+      "title": "大記録保管所",
+      "description": "あなたの自己発見の旅の完全な記録。"
+    }
+  },
+  "dialogs": {
+    "elements": {
+      "title": "元素分析"
+    },
+    "riasec": {
+      "description": "ホランドコードのキャリア適性プロフィール。"
+    },
+    "saju": {
+      "label": "四柱推命",
+      "description": "あなたの韓国の運命座標。",
+      "polarity": "極性",
+      "element": "元素"
+    },
+    "archiveEntry": "アーカイブエントリー",
+    "recordVerified": "記録確認済み",
+    "tuning": {
+      "color": "ラッキーカラー",
+      "number": "ラッキーナンバー",
+      "direction": "ラッキー方位",
+      "flower": "ラッキーフラワー",
+      "gemstone": "ラッキー宝石",
+      "luckyStar": "幸運の星",
+      "title": "運勢チューニング",
+      "favorableDays": "吉日",
+      "synergy": "シナジースコア"
+    }
+  },
+  "systems": {
+    "ziwei": "紫微斗数"
+  },
+  "dailyInsight": {
+    "cosmicEnergy": "宇宙のエネルギー",
+    "flowerOfDay": "今日の花",
+    "crystalOfPower": "力の水晶",
+    "guidingStar": "導く星"
+  },
+  "sajuForm": {
+    "title": "生年月日を入力してください",
+    "description": "生年月日を使って四柱推命を計算します。",
+    "name": "お名前",
+    "birthDate": "生年月日",
+    "birthTime": "出生時刻",
+    "timeHint": "不明な場合は空白のままにしてください",
+    "gender": "性別",
+    "female": "女性",
+    "male": "男性"
+  },
+  "scope": {
+    "weekly": "週刊運勢",
+    "monthly": "月間運勢",
+    "yearly": "年間運勢"
+  },
+  "rating": {
+    "critical": "警告",
+    "low": "低い",
+    "moderate": "普通",
+    "good": "良い",
+    "excellent": "非常に良い"
+  },
+  "card": {
+    "score": "スコア: {score}/100",
+    "advice": "💡 アドバイス",
+    "luckyNumbers": "ラッキーナンバー",
+    "luckyColors": "ラッキーカラー",
+    "warnings": "⚠️ 注意事項"
+  },
+  "no_results": "コレクション内にアーティファクトは見つかりませんでした。",
+  "discover_btn": "自分の道を発見する",
+  "result_label": "合成結果",
+  "view_details": "詳細な知恵を表示",
+  "header": {
+    "title": "私のダッシュボード",
+    "description": "あなたの神聖な空間へようこそ。"
+  },
+  "moonPhase": {
+    "Full": "満月",
+    "New": "新月",
+    "Waxing": "ワックスがけ",
+    "Waning": "衰退する",
+    "New Moon": "新月",
+    "Waxing Crescent": "三日月",
+    "First Quarter": "上弦の月",
+    "Waxing Gibbous": "十日夜の月",
+    "Full Moon": "満月",
+    "Waning Gibbous": "十六夜",
+    "Last Quarter": "下弦の月",
+    "Waning Crescent": "有明月"
+  },
+  "modern": {
+    "economic": {
+      "title": "経済学派の分析",
+      "subtitle": "経済志向",
+      "factions": {
+        "ECON_CLASSICAL": {
+          "name": "古典経済学",
+          "description": "個人の合理的な選択と市場の均衡に焦点を当てます。 このアプローチは、個人の責任とバランスの取れたシステムの有機的な効率を重視します。"
+        },
+        "ECON_KEYNESIAN": {
+          "name": "ケインズ経済学",
+          "description": "総需要と積極的な介入を強調します。 この視点は、集団の安定と、タイムリーで支援的な行動の知恵を重視します。"
+        },
+        "ECON_MONETARIST": {
+          "name": "マネタリズム",
+          "description": "マネーサプライと長期的な物価安定に焦点を当てています。 基本システムの一貫性、明確なルール、予測可能性を重視します。"
+        },
+        "ECON_BEHAVIORAL": {
+          "name": "行動経済学",
+          "description": "心理学的洞察を適用して経済的決定を説明します。 人間の理解、共感、日々の選択の微妙な現実を大切にします。"
+        },
+        "ECON_AUSTRIAN": {
+          "name": "オーストリアの学校",
+          "description": "起業家精神に基づく発見と主観主義を強調します。 創造的な自由、個人的な洞察力、個人の視点の独自の価値を尊重します。"
+        }
+      }
+    },
+    "political": {
+      "title": "政治的指向分析",
+      "subtitle": "政治的状況",
+      "factions": {
+        "POL_CONSERVATISM": {
+          "name": "保守主義",
+          "description": "伝統、安定、そして緩やかな改革を大切にします。 このアプローチは、安全で安定した未来を確保しながら、苦労して獲得した知恵を保存することを目指しています。"
+        },
+        "POL_LIBERALISM": {
+          "name": "リベラリズム",
+          "description": "個人の自由、平等、進歩を強調します。 新しい可能性を探求する自由とすべての人の固有の尊厳を大切にします。"
+        },
+        "POL_SOCIALISM": {
+          "name": "社会主義",
+          "description": "社会正義、平等、地域福祉に焦点を当てています。 相互支援、集団の幸福、連帯の強さを大切にします。"
+        },
+        "POL_LIBERTARIANISM": {
+          "name": "リバタリアニズム",
+          "description": "最小限の介入と最大限の個人の自主性を優先します。 自己決定、プライベートスペースの保護、自発性を大切にします。"
+        },
+        "POL_MODERATISM": {
+          "name": "穏健派",
+          "description": "秩序と進歩の間のバランスを模索します。 現実的な解決策、対話、より大きな利益のための共通点の発見を重視します。"
+        }
+      }
+    }
+  }
+}

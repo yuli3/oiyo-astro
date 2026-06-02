@@ -1,0 +1,455 @@
+{
+  "meta": {
+    "keywords": "Diseñando un espejo que refleja tu verdadera esencia..."
+  },
+  "hero": {
+    "eyebrow": "Impulso del dinero",
+    "subtitle": "Mapeando la arquitectura secreta de tu personalidad...",
+    "cta": "Revelar mi plan de dinero"
+  },
+  "colors": {
+    "green_blue": "Azul / Verde",
+    "red_purple": "Rojo / Morado",
+    "yellow_brown": "Amarilla / marrón",
+    "white_gold": "Blanco / Oro / Plata",
+    "black_navy": "Negro / Azul Marino"
+  },
+  "directions": {
+    "east": "Este",
+    "south": "Sur",
+    "center": "Centro",
+    "west": "Oeste",
+    "north": "Norte"
+  },
+  "items": {
+    "plants": "Plantas vibrantes",
+    "wooden_accessories": "Accesorios de madera",
+    "books": "Libros y herramientas de escritura",
+    "electronics": "Dispositivos electrónicos",
+    "candles": "Velas e Incienso",
+    "glasses": "Gafas y gafas de sol",
+    "pottery": "Alfarería y Cerámica",
+    "stones": "Piedras Naturales",
+    "square_objects": "Objetos cuadrados",
+    "metal_jewelry": "Joyas metálicas",
+    "mirrors": "espejos",
+    "fountain_pens": "Plumas estilográficas",
+    "fountains": "Pequeñas fuentes",
+    "glassware": "Cristalería transparente",
+    "paintings": "Pinturas de paisajes",
+    "hobby_painting": "Cuadro",
+    "hobby_writing": "Escribiendo",
+    "hobby_photography": "Fotografía",
+    "hobby_music": "Música",
+    "hobby_crafts": "Artesanía",
+    "hobby_pottery": "Cerámica",
+    "hobby_dancing": "Baile",
+    "hobby_theater": "Teatro"
+  },
+  "stemSeasonItems": {
+    "GAP_Spring": ["Árboles imponentes", "Telas verdes"],
+    "GAP_Summer": ["Sombra tranquila", "Acentos azules"],
+    "BYEONG_Winter": ["Iluminación cálida", "Accesorios rojos"],
+    "SIN_Autumn": ["joyería fina", "Tijeras afiladas"]
+  },
+  "combinations": {
+    "Harmony": {
+      "title": "Gran Armonía",
+      "advice": "Un día en el que todas las energías residen en perfecto equilibrio. Un momento óptimo para la colaboración y la comunicación."
+    },
+    "Conflict": {
+      "title": "Fricción aguda",
+      "advice": "Las tensiones ocultas pueden aumentar. Mantenga la paciencia y evite confrontaciones directas."
+    },
+    "Neutral": {
+      "title": "Flujo constante",
+      "advice": "Mantén tu camino actual. Se espera un día tranquilo con ganancias o pérdidas mínimas."
+    }
+  },
+  "element": {
+    "wood": {
+      "item_desc": "Herramientas de escritura de madera o una pequeña planta en maceta.",
+      "direction_adv": "Acepta la energía vivificante de Oriente."
+    },
+    "fire": {
+      "item_desc": "Iluminación sofisticada o accesorios en tonos rojos.",
+      "direction_adv": "Utilice la energía apasionada del Sur."
+    },
+    "earth": {
+      "item_desc": "Artículos de cerámica o de color ocre.",
+      "direction_adv": "Absorber la energía estable y sólida del Centro."
+    },
+    "metal": {
+      "item_desc": "Accesorios metálicos u objetos de forma redonda.",
+      "direction_adv": "Reúnan la energía fructífera y clara de Occidente."
+    },
+    "water": {
+      "item_desc": "Cristalería transparente o accesorios relacionados con el agua.",
+      "direction_adv": "Utiliza la energía fluida y sabia del Norte."
+    }
+  },
+  "advice": {
+    "pillars": {
+      "gap_ja": {
+        "title": "Gap-Ja (九子)",
+        "advice": "Una oleada de creatividad que se extiende a través de un mar de sabiduría. Confía en tu intuición, pero cuídate del estancamiento.",
+        "direction": "Norte",
+        "conflict": "Sur"
+      },
+      "eul_chug": {
+        "title": "Eul Chug",
+        "advice": "La resolución de un brote verde que atraviesa el suelo invernal. La paciencia y la perseverancia eventualmente darán frutos.",
+        "direction": "Nordeste",
+        "conflict": "Suroeste"
+      },
+      "byeong_in": {
+        "title": "Byeong-In",
+        "advice": "El espíritu de un tigre rojo despertando el amanecer. Un excelente día para forjar nuevos caminos con pasión desenfrenada.",
+        "direction": "Nordeste",
+        "conflict": "Suroeste"
+      },
+      "jeong_myo": {
+        "title": "Jeong-Myo (丁卯)",
+        "advice": "La sabiduría de un bosque pacífico bajo la luz de la luna. Una actitud flexible y una comunicación delicada son claves para resolver conflictos.",
+        "direction": "Este",
+        "conflict": "Oeste"
+      },
+      "mu_jin": {
+        "title": "Mu Jin (Boshin)",
+        "advice": "La dignidad de un dragón dorado surcando las nubes. Es hora de avanzar con orgullo hacia metas ambiciosas.",
+        "direction": "Sudeste",
+        "conflict": "Noroeste"
+      },
+      "gi_sa": {
+        "title": "Gi Sa (Kimi)",
+        "advice": "La visión de una serpiente sabia que atraviesa tierras fértiles. Se necesita sabiduría para desarrollar la fuerza interior mientras se espera el momento adecuado.",
+        "direction": "Sudeste",
+        "conflict": "Noroeste"
+      },
+      "gyeong_o": {
+        "title": "Gyeong-O (Gyeongwu)",
+        "advice": "El dinamismo de un caballo blanco al galope bajo el sol. La ejecución rápida es la clave para atraer la buena fortuna.",
+        "direction": "Sur",
+        "conflict": "Norte"
+      },
+      "sin_mi": {
+        "title": "Sin-Mi (辛未)",
+        "advice": "La naturaleza de una joya resplandeciente sobre la tierra cálida. La perspicacia brillará a través de la gentileza.",
+        "direction": "Suroeste",
+        "conflict": "Nordeste"
+      },
+      "im_sin": {
+        "title": "Im-pecado",
+        "advice": "La sabiduría del agua clara de manantial que fluye a través de las rocas. Supere obstáculos inesperados con flexibilidad y perseverancia.",
+        "direction": "Suroeste",
+        "conflict": "Nordeste"
+      },
+      "gye_yu": {
+        "title": "Gye Yu",
+        "advice": "La espiritualidad como el claro rocío en un amanecer de otoño. La verdad será revelada cuando te concentres en la esencia con un corazón puro.",
+        "direction": "Oeste",
+        "conflict": "Este"
+      },
+      "gap_sul": {
+        "title": "Gap-Sul (Jiaxu)",
+        "advice": "La lealtad de un perro azul que guarda la montaña. La colaboración basada en la confianza traerá resultados significativos.",
+        "direction": "Noroeste",
+        "conflict": "Sudeste"
+      },
+      "eul_hae": {
+        "title": "Eul-Hae",
+        "advice": "La benevolencia de un loto que florece en un lago profundo. Un corazón inclusivo derretirá la fría energía circundante.",
+        "direction": "Noroeste",
+        "conflict": "Sudeste"
+      },
+      "byeong_ja": {
+        "title": "Byeong-Ja (Bingzi)",
+        "advice": "La calidez de una lámpara que ilumina una noche de pleno invierno. Esté atento a las oportunidades con calma mientras mantiene su pasión interior.",
+        "direction": "Norte",
+        "conflict": "Sur"
+      },
+      "jeong_chug": {
+        "title": "Jeong Chug",
+        "advice": "Calor escondido bajo la tierra. Silencioso en la superficie pero lleno de fuerza interna: prepárese paso a paso.",
+        "direction": "Nordeste",
+        "conflict": "Suroeste"
+      },
+      "mu_in": {
+        "title": "Mu-In (武寅)",
+        "advice": "La valentía de un tigre al mando de una alta montaña. Un buen momento para alcanzar objetivos a través de una firme convicción y liderazgo.",
+        "direction": "Nordeste",
+        "conflict": "Suroeste"
+      },
+      "gi_myo": {
+        "title": "Gi Myo",
+        "advice": "El ajetreo de un conejo retozando en campos fértiles. La dedicación incluso a tareas pequeñas producirá una cosecha abundante.",
+        "direction": "Este",
+        "conflict": "Oeste"
+      },
+      "gyeong_jin": {
+        "title": "Gyeong-Jin",
+        "advice": "La estatura de un dragón blanco con escamas duras. Una actitud decidida te permitirá liderar el flujo del cambio.",
+        "direction": "Sudeste",
+        "conflict": "Noroeste"
+      },
+      "sin_sa": {
+        "title": "Sin-Sa (新巳)",
+        "advice": "Una hoja afilada templada en las llamas. El juicio frío y el secreto son las claves del éxito.",
+        "direction": "Sudeste",
+        "conflict": "Noroeste"
+      },
+      "im_o": {
+        "title": "Im-O (嬣武)",
+        "advice": "Un encuentro de dulce lluvia que empapa la tierra y un corcel legendario. Una fortuna donde podrás galopar sin obstáculos con la ayuda de quienes te rodean.",
+        "direction": "Sur",
+        "conflict": "Norte"
+      },
+      "gye_mi": {
+        "title": "Gye-Mi",
+        "advice": "La gracia de una ligera lluvia al final de una sequía. Surgirán ideas creativas que traerán vitalidad a una vida seca.",
+        "direction": "Suroeste",
+        "conflict": "Nordeste"
+      },
+      "gap_sin": {
+        "title": "brecha-pecado",
+        "advice": "El espíritu de un pino imponente que crece entre las rocas. Encuentre soluciones creativas incluso en las dificultades.",
+        "direction": "Suroeste",
+        "conflict": "Nordeste"
+      },
+      "eul_yu": {
+        "title": "Eul-Yu (光)",
+        "advice": "La resistencia de una delicada flor silvestre que florece sobre una roca. Un día donde se armonizan los sentidos delicados y el juicio agudo.",
+        "direction": "Oeste",
+        "conflict": "Este"
+      },
+      "byeong_sul": {
+        "title": "Byeong-Sul (Bingxu)",
+        "advice": "La energía de un tigre descendiendo de una montaña al atardecer. Se necesita sabiduría para asegurar ganancias prácticas detrás del esplendor.",
+        "direction": "Noroeste",
+        "conflict": "Sudeste"
+      },
+      "jeong_hae": {
+        "title": "Jeong-Hae",
+        "advice": "Suave luz de luna iluminando el mar nocturno. Las buenas acciones realizadas en lugares invisibles volverán como grandes bendiciones.",
+        "direction": "Noroeste",
+        "conflict": "Sudeste"
+      },
+      "mu_ja": {
+        "title": "Mu-Ja (五子)",
+        "advice": "La energía de un lago místico visto desde la cima de una montaña. La gran perspicacia y la compostura se ganarán la confianza de quienes le rodean.",
+        "direction": "Norte",
+        "conflict": "Sur"
+      },
+      "gi_chug": {
+        "title": "Gi Chug",
+        "advice": "El corazón de un granjero que labra tierra helada para sembrar semillas. La sinceridad y la honestidad finalmente darán sus frutos.",
+        "direction": "Nordeste",
+        "conflict": "Suroeste"
+      },
+      "gyeong_in": {
+        "title": "Gyeong-In",
+        "advice": "Estatura sólida como una roca en el bosque. Una actitud honesta y recta evitará malentendidos innecesarios.",
+        "direction": "Nordeste",
+        "conflict": "Suroeste"
+      },
+      "sin_myo": {
+        "title": "Sin-Myo (新卯)",
+        "advice": "El ingenio de un conejo, como joyas esparcidas en el campo. Hoy se destacarán ideas brillantes y expresiones sensoriales.",
+        "direction": "Este",
+        "conflict": "Oeste"
+      },
+      "im_jin": {
+        "title": "Im Jin",
+        "advice": "La dignidad de un dragón negro nadando contra un gran río. Un impulso poderoso te ayudará a lograr lo que parece imposible.",
+        "direction": "Sudeste",
+        "conflict": "Noroeste"
+      },
+      "gye_sa": {
+        "title": "Gye-Sa",
+        "advice": "La sabiduría de una corriente clara que fluye a través de la niebla. Observe su entorno con una actitud flexible y asegure beneficios prácticos.",
+        "direction": "Sudeste",
+        "conflict": "Noroeste"
+      },
+      "gap_o": {
+        "title": "Gap-O (Jiawu)",
+        "advice": "El espíritu de un árbol gigante que se eleva bajo el sol. Es hora de liderar a quienes te rodean con una gran visión y liderazgo.",
+        "direction": "Sur",
+        "conflict": "Norte"
+      },
+      "eul_mi": {
+        "title": "Eul-Mi (一伟)",
+        "advice": "La naturaleza de una oveja retozando pacíficamente en un campo cálido. Recibirás una gran fortuna si ejercitas la tolerancia en las relaciones.",
+        "direction": "Suroeste",
+        "conflict": "Nordeste"
+      },
+      "byeong_sin": {
+        "title": "Byeong-Sin (Bingshen)",
+        "advice": "El sol ardiente ilumina una montaña rocosa. Hoy brillarán un talento espléndido y una ejecución rápida.",
+        "direction": "Suroeste",
+        "conflict": "Nordeste"
+      },
+      "jeong_yu": {
+        "title": "Jeong-Yu (丁酉)",
+        "advice": "Una vela que despierta la oscuridad y el grito de un gallo dorado. Atraviesa la esencia con una intuición aguda y sentidos delicados.",
+        "direction": "Oeste",
+        "conflict": "Este"
+      },
+      "mu_sul": {
+        "title": "Mu-Sul (Wuxu)",
+        "advice": "La estatura de un perro dorado confiable que guarda la vasta tierra. Lograr resultados basados ​​en una confianza y responsabilidad inquebrantables.",
+        "direction": "Noroeste",
+        "conflict": "Sudeste"
+      },
+      "gi_hae": {
+        "title": "Gi Hae",
+        "advice": "La generosidad de un lago otoñal que empapa la tierra fértil. Un buen día para encontrar la tranquilidad y compartir generosamente con los demás.",
+        "direction": "Noroeste",
+        "conflict": "Sudeste"
+      },
+      "gyeong_ja": {
+        "title": "Gyeong-Ja (Gyeongzi)",
+        "advice": "Fuerte voluntad fluyendo bajo un manantial helado. Desarrolla tus habilidades en silencio y prepárate para aprovechar las oportunidades.",
+        "direction": "Norte",
+        "conflict": "Sur"
+      },
+      "sin_chug": {
+        "title": "Sin-Chug (Xin Chou)",
+        "advice": "El valor de una joya que brilla dentro de la tierra helada. Compite con fuerza interior y una planificación precisa.",
+        "direction": "Nordeste",
+        "conflict": "Suroeste"
+      },
+      "im_in": {
+        "title": "Im-In (renyin)",
+        "advice": "La dignidad de un tigre negro corriendo por un campo nevado. Una fortuna con la que puedes abrumar tu entorno con un impulso poderoso y una escala extraordinaria.",
+        "direction": "Nordeste",
+        "conflict": "Suroeste"
+      },
+      "gye_myo": {
+        "title": "Gye Myo",
+        "advice": "Un conejo tranquilo en un jardín con lluvia primaveral. Expresa tu belleza interior utilizando tus sentidos artísticos.",
+        "direction": "Este",
+        "conflict": "Oeste"
+      },
+      "gap_jin": {
+        "title": "Gap Jin (Jiachen)",
+        "advice": "La dignidad de un dragón azul que trae lluvia desde encima de las nubes. Es hora de beneficiar al mundo poniendo en práctica grandes planes.",
+        "direction": "Sudeste",
+        "conflict": "Noroeste"
+      },
+      "eul_sa": {
+        "title": "Eul-Sa (即)",
+        "advice": "El espíritu de una serpiente sabia atravesando un jardín de flores. Logre sus objetivos mediante un habla fluida y un pensamiento flexible.",
+        "direction": "Sudeste",
+        "conflict": "Noroeste"
+      },
+      "byeong_o": {
+        "title": "Byeong-O (Bingwu)",
+        "advice": "La pasión ardiente de un caballo rojo galopando bajo el sol. Un espíritu de desafío inquebrantable abrirá las puertas a la victoria.",
+        "direction": "Sur",
+        "conflict": "Norte"
+      },
+      "jeong_mi": {
+        "title": "Jeong-Mi (丁伟)",
+        "advice": "Calor suave iluminando un campo de verano. La fortuna inesperada llega cuando desarrollas fuerza interior y armonizas con tu entorno.",
+        "direction": "Suroeste",
+        "conflict": "Nordeste"
+      },
+      "mu_sin": {
+        "title": "mu-sin",
+        "advice": "La sabiduría de un mono dorado que guarda una montaña rocosa. La improvisación ingeniosa y el juicio rápido convertirán la crisis en oportunidad.",
+        "direction": "Suroeste",
+        "conflict": "Nordeste"
+      },
+      "gi_yu": {
+        "title": "Gi-Yu (吉酉)",
+        "advice": "El fruto de un granjero que labra tierra fértil para encontrar joyas. Una fortuna donde se demuestra el valor de la sinceridad y se logran beneficios prácticos.",
+        "direction": "Oeste",
+        "conflict": "Este"
+      },
+      "gyeong_sul": {
+        "title": "Gyeong-Sul (庚戌)",
+        "advice": "La íntegra lealtad de un perro blanco que guarda la montaña. Actuar por el bien común manteniendo convicciones firmes.",
+        "direction": "Noroeste",
+        "conflict": "Sudeste"
+      },
+      "sin_hae": {
+        "title": "Sin-Hae",
+        "advice": "La espiritualidad de una joya sumergida bajo un lago cristalino. Escuche su voz interior a través de una meditación tranquila.",
+        "direction": "Noroeste",
+        "conflict": "Sudeste"
+      },
+      "im_ja": {
+        "title": "Im-Ja (人子)",
+        "advice": "La sabiduría de un dragón negro nadando en las profundidades del mar. Un excelente momento para buscar resultados a largo plazo con ojo para leer las grandes tendencias.",
+        "direction": "Norte",
+        "conflict": "Sur"
+      },
+      "gye_chug": {
+        "title": "Gye Chug",
+        "advice": "La paciencia de la lluvia invernal que derrite la tierra helada. Se necesita sabiduría para desarrollar habilidades silenciosamente y prepararse para la próxima primavera.",
+        "direction": "Nordeste",
+        "conflict": "Suroeste"
+      },
+      "gap_in": {
+        "title": "Gap-In (Jiayin)",
+        "advice": "El encuentro de un árbol gigante y un tigre que domina el bosque. Con una poderosa energía desbordante, proceda con valentía con sus planes.",
+        "direction": "Nordeste",
+        "conflict": "Suroeste"
+      },
+      "eul_myo": {
+        "title": "Eul-Myo (卯)",
+        "advice": "La fuerza vital de los brotes que se desbordan en una colina primaveral. Ejercite flexibilidad y adaptabilidad para armonizar maravillosamente con su entorno.",
+        "direction": "Este",
+        "conflict": "Oeste"
+      },
+      "byeong_jin": {
+        "title": "Byeong-Jin (Bingchen)",
+        "advice": "La vitalidad de un dragón en llamas elevándose hacia el cielo. Un gran día para crear nuevo valor a través de la innovación creativa.",
+        "direction": "Sudeste",
+        "conflict": "Noroeste"
+      },
+      "jeong_sa": {
+        "title": "Jeong-Sa (Ding Si)",
+        "advice": "La percepción de una serpiente enroscada bajo el sol del mediodía. Guarde su pasión en su interior y capture oportunidades con fría precisión.",
+        "direction": "Sudeste",
+        "conflict": "Noroeste"
+      },
+      "mu_o": {
+        "title": "Mu-O (五五)",
+        "advice": "El dinamismo de un caballo bayo atravesando la vasta tierra. Galope ferozmente hacia sus objetivos con una ejecución inquebrantable.",
+        "direction": "Sur",
+        "conflict": "Norte"
+      },
+      "gi_mi": {
+        "title": "Gi Mi (Jiwei)",
+        "advice": "La generosidad del suelo fértil donde todas las cosas maduran. Excelente para mediar conflictos con una actitud madura y lograr resultados prácticos.",
+        "direction": "Suroeste",
+        "conflict": "Nordeste"
+      },
+      "gyeong_sin": {
+        "title": "Gyeong-Sin",
+        "advice": "El mono de hierro al mando de una montaña rocosa. Supera los obstáculos con firme determinación y lógica clara.",
+        "direction": "Suroeste",
+        "conflict": "Nordeste"
+      },
+      "sin_yu": {
+        "title": "Sin-Yu (心酉)",
+        "advice": "El filo de una hoja fría que atraviesa un campo otoñal. Deshazte de lo innecesario y concéntrate en la esencia para elevar tu honor.",
+        "direction": "Oeste",
+        "conflict": "Este"
+      },
+      "im_sul": {
+        "title": "Im-Sul (Renxu)",
+        "advice": "El espíritu de un perro negro que guarda un lago en lo profundo de las montañas. El juicio sabio y una actitud de mantener la fe invitarán a la gran fortuna.",
+        "direction": "Noroeste",
+        "conflict": "Sudeste"
+      },
+      "gye_hae": {
+        "title": "Gye-Hae",
+        "advice": "La forma de todos los ríos que se juntan para formar el océano. Complete todas las cosas con gran inclusión y flexibilidad, y prepárese para lo que viene después.",
+        "direction": "Noroeste",
+        "conflict": "Sudeste"
+      }
+    }
+  }
+}

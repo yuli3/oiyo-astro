@@ -1,0 +1,21 @@
+{
+  "intro": {
+    "badge": "Comptabilité psychologique",
+    "title": "Style de Consommation",
+    "quote": "How you spend money reflects how you treat the world and love your life.",
+    "startButton": "Start Diagnostic"
+  },
+  "questions": {
+    "signal": "Question"
+  },
+  "results": {
+    "pattern": "Spending DNA",
+    "impact": "Wealth Flow",
+    "guidance": "Financial Wisdom",
+    "recalibrate": "Retake Test"
+  },
+  "meta": {
+    "title": "Style de Consommation",
+    "description": "Cartographie de l'architecture secrète de ta personnalité..."
+  }
+}

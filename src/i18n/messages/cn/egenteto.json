@@ -1,0 +1,155 @@
+{
+  "chart": {
+    "teto": "Teto-type",
+    "egen": "Egen-type"
+  },
+  "daily": {
+    "insights": {
+      "tetonam": [
+        {
+          "type": "动机",
+          "icon": "💪",
+          "title": "克服挑战",
+          "message": "当你遇到障碍时，你天生的领导力就会闪闪发光。 今天就带头实施该项目！",
+          "action": "在下次会议上树立榜样"
+        },
+        {
+          "type": "关系",
+          "icon": "🤝",
+          "title": "展现你温柔的一面",
+          "message": "平衡力量和脆弱性。 今天，你身边的人需要你的情感支持。",
+          "action": "询问您所爱的人他们的真实感受"
+        },
+        {
+          "type": "生长",
+          "icon": "🎯",
+          "title": "克服挑战",
+          "message": "当你遇到障碍时，你天生的领导力就会闪闪发光。 今天就带头实施该项目！",
+          "action": "在下次会议上树立榜样"
+        }
+      ],
+      "egennam": [
+        {
+          "type": "创造力",
+          "icon": "🎨",
+          "title": "表达你艺术的一面",
+          "message": "今天你的审美意识增强了。 创造一些美丽的东西或欣赏你周围的艺术。",
+          "action": "参观画廊或创作一些艺术作品"
+        },
+        {
+          "type": "关系",
+          "icon": "💕",
+          "title": "深度连接很重要",
+          "message": "今天你的同理心天性可能会帮助某人康复。 请听听有需要的人的心声。",
+          "action": "与朋友进行有意义的对话"
+        },
+        {
+          "type": "健康",
+          "icon": "🧘",
+          "title": "欣赏你的细腻",
+          "message": "你的情商是一份礼物。 当您感到不知所措时，请花时间进行自我护理。",
+          "action": "练习正念或冥想"
+        }
+      ],
+      "tetonye": [
+        {
+          "type": "志向",
+          "icon": "🔥",
+          "title": "开辟自己的道路",
+          "message": "你的独立精神就是你的超能力。 今天不要害怕走一条非常规的道路。",
+          "action": "做出你一直推迟的大胆决定"
+        },
+        {
+          "type": "信心",
+          "icon": "⚡",
+          "title": "拥有你的力量",
+          "message": "你的自信会激励他人。 大胆分享你的想法——世界需要你独特的视角。",
+          "action": "当你的声音很重要时大声说出来"
+        },
+        {
+          "type": "平衡",
+          "icon": "⚖️",
+          "title": "脆弱中的力量",
+          "message": "你的力量并不意味着你必须独自完成所有事情。 今天，慷慨地接受帮助。",
+          "action": "遇到困难的任务时寻求帮助"
+        }
+      ],
+      "egenteto": [
+        {
+          "type": "养育",
+          "icon": "🌸",
+          "title": "你的关怀治愈",
+          "message": "您的培育能量正是某人今天所需要的。 相信你的直觉，伸出援手。",
+          "action": "关注您关心的人"
+        },
+        {
+          "type": "直觉",
+          "icon": "✨",
+          "title": "相信你内心的声音",
+          "message": "今天你的直觉特别强烈。 注意那些温和的推动和直觉。",
+          "action": "根据您的直觉做出决定"
+        },
+        {
+          "type": "自理",
+          "icon": "🛁",
+          "title": "倒满你自己的杯子",
+          "message": "你为别人付出了那么多。 记住也要养育自己——你应该得到同样的照顾。",
+          "action": "做一些纯粹为了自己快乐的事情"
+        }
+      ]
+    },
+    "title": "Couple Compatibility Test",
+    "action": "Today's Action"
+  },
+  "compatibility": {
+    "levels": {
+      "perfect": "Perfect Match",
+      "great": "Great Match",
+      "good": "Good Match",
+      "challenging": "Challenging"
+    },
+    "title": "Couple Compatibility Test",
+    "description": "Discover your romantic compatibility with your partner's Egenteto type",
+    "selectPartner": "Select Your Partner's Type",
+    "selectDesc": "Choose your partner's Egenteto type to see your compatibility",
+    "scoreLabel": "{score}% Compatible",
+    "insights": "Relationship Insights",
+    "combination": "Your Combination:",
+    "loveLanguages": "Love Languages:",
+    "dateIdeas": "Perfect Date Ideas:",
+    "tryAnother": "Try Another Type",
+    "share": "Share Results"
+  },
+  "result": {
+    "title": "你的档案",
+    "traits": "核心特质",
+    "description": "详细描述",
+    "compatibility": "契合度",
+    "share": "分享结果",
+    "copied": "已复制到剪贴板",
+    "copy": "复制链接",
+    "retake": "重新测试"
+  },
+  "a": "A",
+  "saveResult": "保存结果",
+  "saveError": "保存结果失败。",
+  "personalityAnalysis": "性格分析",
+  "compatibilityChartTitle": "契合度图表",
+  "compatibilityLabel": "契合度",
+  "insights": "洞察",
+  "traitsGuide": "特质指南",
+  "strengths": "优势",
+  "growthAreas": "成长领域",
+  "match": "匹配",
+  "coupleTest": "情侣测试",
+  "coupleTestDesc": "测试与伴侣的契合度。",
+  "loveLanguage": "爱之语言",
+  "loveLanguageDesc": "你如何表达和接受爱。",
+  "idealDate": "理想约会",
+  "awards": "奖励",
+  "growth": "成长路径",
+  "growthComingSoon": "成长路径即将推出",
+  "growthComingSoonDesc": "个人发展洞察即将到来。",
+  "saveImage": "保存图片",
+  "backToHome": "返回首页"
+}

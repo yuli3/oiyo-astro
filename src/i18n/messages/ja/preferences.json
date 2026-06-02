@@ -1,0 +1,90 @@
+{
+  "country": {
+    "meta": {
+      "keywords": "personality test, self-discovery, psychology, personal growth, MBTI",
+      "hero": {
+        "badge": "🌍 Affinity Precision Analysis",
+        "subtitle": "Deep analysis across 12 dimensions for integral country search",
+        "cta": "Start Country Exploration"
+      },
+      "features": {
+        "subtitle": "Deep analysis across 12 dimensions for integral country search"
+      },
+      "title": "My Perspectives",
+      "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+    },
+    "resultPage": {
+      "loadingTitle": "分析データを調整しています...",
+      "loadingSubtitle": "あなたにぴったりの目的地を探します!",
+      "metaTitle": "パースペクティブアナライザー",
+      "metaDescription": "深いデータと直感を組み合わせたユニークなレポート",
+      "test": {
+        "progress": "進捗",
+        "next": "次",
+        "previous": "前の",
+        "submit": "結果を見る",
+        "loading": "分析中",
+        "selectOption": "選択",
+        "insightBullets": ["本当の自分の星座をマッピングします。"]
+      },
+      "result": {
+        "title": "My Perspectives",
+        "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+      },
+      "meta": {
+        "title": "My Perspectives",
+        "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles",
+        "keywords": "性格テスト、自己発見、心理学、個人の成長、MBTI"
+      }
+    },
+    "hero": {
+      "subtitle": "Deep analysis across 12 dimensions for integral country search",
+      "badge": "🌍 アフィニティの精度分析",
+      "cta": "国の探索を始めましょう",
+      "features": [
+        "🧭 優先順位を明らかにするトレードオフ主導の質問",
+        "🎯 予算、言語、キャリアを含む 12 のライフスタイルの側面",
+        "🌍 各大陸にわたる多様な国の試合",
+        "📊 すぐに共有できるペルソナ対応の洞察"
+      ],
+      "title": "私の視点",
+      "description": "Balance your love for seasons, coastlines, mountains, and outdoor lifestyles"
+    },
+    "features": {
+      "subtitle": "統合的な国検索のための 12 次元にわたる詳細な分析",
+      "items": [
+        {
+          "icon": "💸",
+          "title": "生活費に関する洞察",
+          "description": "あなたの予算の快適さとライフスタイルの期待に合う国を理解する"
+        },
+        {
+          "icon": "🗣️",
+          "title": "言語とコミュニティの適合性",
+          "description": "どれだけの現地言語サポートとコミュニティとのつながりが必要かを判断する"
+        },
+        {
+          "icon": "💼",
+          "title": "キャリアと成長の見通し",
+          "description": "イノベーションハブ、クリエイティブシーン、持続可能性を重視した経済を比較する"
+        },
+        {
+          "icon": "🌤️",
+          "title": "気候と地理",
+          "description": "季節、海岸線、山、アウトドア ライフスタイルへの愛情のバランスを取りましょう"
+        }
+      ],
+      "title": "私の視点"
+    },
+    "types": {
+      "nordic": "北欧の探求者",
+      "mediterranean": "地中海の恋人",
+      "tropical": "熱帯の楽園の住人",
+      "cosmopolitan": "ザ・グローバル・シチズン (コスモポリタン)",
+      "mountainous": "山岳探検家",
+      "coastal": "海洋愛好家",
+      "cultural": "遺産の鑑賞者",
+      "modern": "テクノロジーの先駆者"
+    }
+  }
+}

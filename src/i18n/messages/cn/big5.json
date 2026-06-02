@@ -1,0 +1,14 @@
+{
+  "dimensions": {
+    "openness": "开放性 (灵感广度)",
+    "conscientiousness": "尽责性 (行为密度)",
+    "extraversion": "外向性 (能量方向)",
+    "agreeableness": "宜人性 (共振和谐)",
+    "neuroticism": "情绪波动性 (防御敏感)"
+  },
+  "title": "五大特质人格观测 (Big Five)",
+  "badge": "现代心理学基准: OCEAN",
+  "resultTitle": "五维生命波动图谱",
+  "restart": "重新观测",
+  "save": "记录此次波动"
+}

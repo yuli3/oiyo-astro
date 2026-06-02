@@ -1,0 +1,14 @@
+{
+  "welcome": {
+    "title": "Welcome",
+    "description": "Start your journey."
+  },
+  "interests": {
+    "title": "Interests",
+    "description": "Select your interests."
+  },
+  "complete": {
+    "title": "Complete",
+    "description": "Setup finished."
+  }
+}

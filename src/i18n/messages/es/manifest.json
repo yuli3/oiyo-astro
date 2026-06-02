@@ -1,0 +1,67 @@
+{
+  "manifest": {
+    "academy": {
+      "title": "Cognitive Learning DNA",
+      "description": "Discover your optimal learning strategy based on the VARK model.",
+      "h1": "Learning Profile",
+      "seoTitle": "Learning Style (VARK) Analysis",
+      "keywords": "Learning Style, VARK, Education, Strategy"
+    },
+    "big5": {
+      "title": "Cognitive Learning DNA",
+      "description": "Discover your optimal learning strategy based on the VARK model.",
+      "h1": "Learning Profile",
+      "seoTitle": "Learning Style (VARK) Analysis",
+      "keywords": "Learning Style, VARK, Education, Strategy"
+    },
+    "bias": {
+      "title": "Cognitive Learning DNA",
+      "description": "Discover your optimal learning strategy based on the VARK model.",
+      "h1": "Learning Profile",
+      "seoTitle": "Learning Style (VARK) Analysis",
+      "keywords": "Learning Style, VARK, Education, Strategy"
+    },
+    "consumption": {
+      "title": "Cognitive Learning DNA",
+      "description": "Discover your optimal learning strategy based on the VARK model.",
+      "h1": "Learning Profile",
+      "seoTitle": "Learning Style (VARK) Analysis",
+      "keywords": "Learning Style, VARK, Education, Strategy"
+    },
+    "country": {
+      "title": "Cognitive Learning DNA",
+      "description": "Discover your optimal learning strategy based on the VARK model.",
+      "h1": "Learning Profile",
+      "seoTitle": "Learning Style (VARK) Analysis",
+      "keywords": "Learning Style, VARK, Education, Strategy"
+    },
+    "mbti": {
+      "title": "Cognitive Learning DNA",
+      "description": "Discover your optimal learning strategy based on the VARK model.",
+      "h1": "Learning Profile",
+      "seoTitle": "Learning Style (VARK) Analysis",
+      "keywords": "Learning Style, VARK, Education, Strategy"
+    },
+    "tci": {
+      "title": "Cognitive Learning DNA",
+      "description": "Discover your optimal learning strategy based on the VARK model.",
+      "h1": "Learning Profile",
+      "seoTitle": "Learning Style (VARK) Analysis",
+      "keywords": "Learning Style, VARK, Education, Strategy"
+    },
+    "resilience": {
+      "title": "Cognitive Learning DNA",
+      "description": "Discover your optimal learning strategy based on the VARK model.",
+      "h1": "Learning Profile",
+      "seoTitle": "Learning Style (VARK) Analysis",
+      "keywords": "Learning Style, VARK, Education, Strategy"
+    },
+    "learning": {
+      "title": "ADN del aprendizaje cognitivo",
+      "description": "Descubra su estrategia de aprendizaje óptima basada en el modelo VARK.",
+      "h1": "Perfil de aprendizaje",
+      "seoTitle": "Análisis de estilos de aprendizaje (PIG)",
+      "keywords": "Estilo de Aprendizaje, VARK, Educación, Estrategia"
+    }
+  }
+}

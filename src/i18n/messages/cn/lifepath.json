@@ -1,0 +1,184 @@
+{
+  "hero": {
+    "backToHome": "返回首页",
+    "badge": "Introduction",
+    "cosmicSignature": "你的宇宙签名",
+    "description": "The Master Teacher",
+    "discover": "发现",
+    "highlight": "洞察力",
+    "mainTitle": "人生轨迹计算器",
+    "pageSubtitle": "古老的智慧",
+    "subtitle": "Reveal your path",
+    "title": "人生之路",
+    "your": "你的"
+  },
+  "input": {
+    "birthDate": "出生日期",
+    "birthDateError": "无效日期",
+    "calculating": "正在计算...",
+    "dateLabel": "出生日期",
+    "description": "The Master Teacher",
+    "fullName": "姓名",
+    "nameLabel": "姓名",
+    "namePlaceholder": "约翰·多伊",
+    "submit": "计算",
+    "title": "Life Path"
+  },
+  "intro": {
+    "badge": "介绍",
+    "button": "开始",
+    "description": "The Master Teacher",
+    "quote": "数字统治宇宙",
+    "title": "Life Path"
+  },
+  "meanings": {
+    "birthDay": "生日",
+    "destiny": "命运",
+    "lifePath": "人生之路",
+    "personality": "性格",
+    "soulUrge": "灵魂催动"
+  },
+  "meta": {
+    "description": "The Master Teacher",
+    "keywords": "命理、人生轨迹",
+    "title": "Life Path"
+  },
+  "result": {
+    "analyzeAnother": "分析另一个",
+    "anotherPerson": "检查另一个人",
+    "dashboard": {
+      "advice": "建议",
+      "career": "职业",
+      "challenges": "挑战",
+      "strengths": "优势",
+      "yearEnergy": "年能源"
+    },
+    "dashboardTitle": "您的仪表板",
+    "description": "The Master Teacher",
+    "lifeCoordination": "生活协调",
+    "readingTitle": "您的阅读内容",
+    "recommendedCities": "推荐城市",
+    "soulFoods": "灵魂食品"
+  },
+  "results": {
+    "expression": "表达",
+    "header": "结果标题",
+    "lifePath": "人生之路",
+    "personality": "性格",
+    "recalibrate": "重新校准",
+    "soulUrge": "灵魂催动",
+    "vibrationalResonance": "振动共振"
+  },
+  "subtitle": "揭示你的道路",
+  "title": "人生之路",
+  "numbers": {
+    "1": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "2": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "3": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "4": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "5": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "6": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "7": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "8": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "9": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "11": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "22": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "The Master Teacher",
+      "keywords": [],
+      "name": "The Master Teacher",
+      "strengths": [],
+      "traits": []
+    },
+    "33": {
+      "careerSuggestions": [],
+      "challenges": [],
+      "description": "名师",
+      "keywords": [],
+      "name": "名师",
+      "strengths": [],
+      "traits": []
+    }
+  }
+}

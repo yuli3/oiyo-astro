@@ -1,0 +1,22 @@
+{
+  "title": "Goals",
+  "new_goal": "새로운 목표",
+  "placeholder_title": "당신의 목표는 무엇입니까?",
+  "progress": "진전",
+  "no_goals": "아직 설정된 목표가 없습니다. 오늘 여행을 시작해보세요.",
+  "meta": {
+    "title": "목표",
+    "description": "인생 목표를 관리하세요.",
+    "keywords": "목표, 테스트, 분석, 성격"
+  },
+  "add_to_goals": "목표에 추가",
+  "add_goal_desc": "마감일을 설정하고 트래커에 추가하세요.",
+  "goal_title": "목표",
+  "goal_deadline": "목표 마감일",
+  "setGoal": "목표 설정",
+  "myGoals": "내 목표",
+  "completed": "완전한",
+  "inProgress": "진행 중",
+  "save": "저장하기",
+  "cancel": "취소"
+}

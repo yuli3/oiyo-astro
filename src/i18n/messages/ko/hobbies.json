@@ -1,0 +1,8 @@
+{
+  "title": "삶의 조각",
+  "description": "당신이 몰입하는 활동은 당신의 운명을 완성하는 보물입니다.",
+  "placeholder": "취미를 입력하고 Enter 키를 누르세요...",
+  "suggestion_title": "당신에게 제안하는 공명",
+  "toast_success": "당신의 우주에 새로운 빛의 조각이 추가되었습니다.",
+  "missing_element_hint": "귀하의 {element} 에너지를 조화시키는 활동을 권장합니다."
+}

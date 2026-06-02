@@ -1,0 +1,73 @@
+{
+  "yourScore": "マイエネルギースコア",
+  "globalAverage": "全体平均",
+  "percentile": "パーセンタイル",
+  "topPerformers": "上位グループ",
+  "aboveAverage": "平均以上",
+  "belowAverage": "平均以下",
+  "regions": "エネルギー分布",
+  "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself.",
+  "feature1": "強みの発見",
+  "feature2": "成長分野の分析",
+  "feature3": "パーソナライズされたアドバイス",
+  "title": "Ready for more discoveries?",
+  "sections": {
+    "0": {
+      "id": "コア",
+      "title": "コア共鳴解析",
+      "description": "あなたの本質を定義する基本的な振動の探求。"
+    },
+    "1": {
+      "id": "スペクトル",
+      "title": "スペクトルひずみと影",
+      "description": "光り輝くものから深いものまで、あなたの存在の多様な側面を照らします。"
+    },
+    "2": {
+      "id": "原型",
+      "title": "進化の原型",
+      "description": "自分の成長を導く時代を超越したパターンを特定します。"
+    },
+    "daily": "毎日の読書",
+    "advice": "宇宙のアドバイス"
+  },
+  "features": {
+    "growth": {
+      "title": "Ready for more discoveries?",
+      "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself."
+    },
+    "ai": {
+      "title": "Ready for more discoveries?",
+      "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself."
+    }
+  },
+  "cta": {
+    "title": "さらに発見する準備はできていますか?",
+    "description": "私たちの包括的な性格テストを調べて、自分自身についてのより深い理解を解き放ちます。",
+    "button": "テストの探索"
+  },
+  "test": {
+    "insightBullets": [
+      "選択したものの隠された周波数を解読します。",
+      "最近の進化の飛躍の星座をマッピングします。",
+      "あなた独自の共鳴を形成するパターンを照らします。"
+    ],
+    "progress": "進捗状況",
+    "next": "次へ",
+    "previous": "前へ",
+    "submit": "📤 分析を完了する",
+    "selectOption": "最も惹かれる選択肢を選んでください",
+    "loading": "✨ あなたの宇宙をデザイン中..."
+  },
+  "result": {
+    "title": "私の洞察",
+    "description": "自分自身への深く広い視点"
+  },
+  "meta": {
+    "title": "Ready for more discoveries?",
+    "description": "Explore our comprehensive personality tests to unlock a deeper understanding of yourself.",
+    "keywords": "日々の洞察、知恵、個性、導き、AI"
+  },
+  "keywords": "自己省察, 心理分析, 洞察, 成長",
+  "badge": "✨ 日々の知恵",
+  "subtitle": "今日の知恵"
+}

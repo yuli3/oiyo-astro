@@ -1,0 +1,325 @@
+{
+  "labor": {
+    "annualLeave": {
+      "labels": {
+        "monthlySalary": "Monthly Base Salary",
+        "preTax": "Pre-tax",
+        "remainingDays": "Remaining Days",
+        "dailyHours": "Daily Hours"
+      },
+      "results": {
+        "total": "Total Estimated Benefit",
+        "hourlyWage": "Hourly Wage",
+        "dailyWage": "Daily Wage"
+      },
+      "basis": {
+        "title": "Your Financial Profile",
+        "monthlyBase": "Monthly Base",
+        "standardHours": "Standard Monthly Hours",
+        "hourlyWage": "Hourly Wage",
+        "dailyHours": "Daily Hours",
+        "remainingDays": "Remaining Days",
+        "totalAllowance": "Total Allowance"
+      },
+      "legal": {
+        "title": "Your Financial Profile",
+        "note": "This calculator is for reference only; actual severance may vary.",
+        "item1": "Uses standard formulas based on labor laws.",
+        "item2": "Actual avg wage includes all wages (base, allowances, bonuses) over the last 3 months.",
+        "item3": "For complex cases, please consult a labor attorney."
+      },
+      "meta": {
+        "subtitle": "Calculate your estimated severance pay using your start date, resignation date, and 3-month salary.",
+        "disclaimer": "免责声明",
+        "title": "Your Financial Profile",
+        "description": "Explore our suite of tools designed for deep finance insights.",
+        "keywords": "Awaiting deep synthesis..."
+      },
+      "test": {
+        "insightBullets": ["绘制最真实自我的星座图。"],
+        "progress": "Progress",
+        "submit": "提交",
+        "loading": "Translating the silent language of your subconscious...",
+        "selectOption": "Select Option",
+        "next": "Next",
+        "previous": "Previous"
+      },
+      "result": {
+        "title": "Your Financial Profile",
+        "description": "Explore our suite of tools designed for deep finance insights."
+      },
+      "subtitle": "Calculate your estimated severance pay using your start date, resignation date, and 3-month salary.",
+      "currency": "USD",
+      "days": "days",
+      "hours": "hours",
+      "ko-KR": "Ko- K R",
+      "title": "Your Financial Profile",
+      "calculate": "计算"
+    },
+    "allowance": {
+      "inputs": {
+        "hourlyWage": "Hourly Wage",
+        "workingHours": "Daily Working Hours",
+        "overtimeHours": "Weekly Overtime Hours",
+        "nightHours": "Weekly Night Hours",
+        "holidayHours": "Weekly Holiday Hours",
+        "isWeeklyHoliday": "Include Weekly Holiday Pay",
+        "calculate": "Calculate"
+      },
+      "tips": {
+        "content": "Content"
+      },
+      "loading": {
+        "step1": "Checking employment history...",
+        "step2": "Calculating benefit amount...",
+        "step3": "Determining eligibility period...",
+        "step4": "Finalizing estimated benefits..."
+      },
+      "result": {
+        "overtime": "Overtime Allowance",
+        "night": "Night Work Allowance",
+        "holiday": "Holiday Work Allowance",
+        "base": "Base Pay",
+        "weekly": "Weekly Holiday Pay",
+        "total": "Total Estimated Benefit",
+        "monthly": "Est. Monthly Pay",
+        "title": "Your Financial Profile"
+      }
+    },
+    "unemployment": {
+      "inputs": {
+        "age": "年龄",
+        "period": "Benefit Duration",
+        "dailyWage": "每日工资",
+        "calculate": "计算"
+      },
+      "tips": {
+        "content": "内容"
+      },
+      "loading": {
+        "step1": "检查工作经历...",
+        "step2": "正在计算福利金额...",
+        "step3": "确定资格期限...",
+        "step4": "最终确定预计收益..."
+      },
+      "result": {
+        "total": "Total Estimated Benefit",
+        "daily": "Daily Benefit Amount",
+        "period": "Benefit Duration",
+        "title": "Your Financial Profile",
+        "description": "Explore our suite of tools designed for deep finance insights."
+      },
+      "meta": {
+        "title": "Your Financial Profile",
+        "description": "Explore our suite of tools designed for deep finance insights.",
+        "keywords": "Awaiting deep synthesis..."
+      },
+      "test": {
+        "insightBullets": ["洞察力"],
+        "progress": "Progress",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "提交",
+        "loading": "Translating the silent language of your subconscious...",
+        "selectOption": "Select Option"
+      },
+      "title": "Your Financial Profile",
+      "description": "Explore our suite of tools designed for deep finance insights."
+    },
+    "test": {
+      "insightBullets": ["标志性强度", "枢轴点", "2"],
+      "progress": "Progress",
+      "submit": "Submit",
+      "loading": "Translating the silent language of your subconscious...",
+      "selectOption": "Select Option",
+      "subtitle": "Calculate your estimated severance pay using your start date, resignation date, and 3-month salary."
+    },
+    "meta": {
+      "title": "Your Financial Profile",
+      "description": "Explore our suite of tools designed for deep finance insights."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        }
+      ]
+    },
+    "result": {
+      "title": "Your Financial Profile",
+      "description": "Explore our suite of tools designed for deep finance insights."
+    },
+    "severancePay": {
+      "labels": {
+        "hireDate": "Hire Date",
+        "resignationDate": "Resignation Date (or Estimated)",
+        "monthlySalary": "Monthly Base Salary",
+        "annualBonus": "Analyze",
+        "annualLeave": "Translating the silent language of your subconscious...",
+        "severancePay": "Estimated Severance Pay"
+      },
+      "results": {
+        "tenure": "Tenure Period",
+        "estimated": "This is your estimated severance pay."
+      },
+      "basis": {
+        "title": "Your Financial Profile",
+        "tenure": "Tenure Period",
+        "monthlyBase": "Monthly Base",
+        "annualBonus": "Analyze",
+        "annualLeave": "Translating the silent language of your subconscious...",
+        "threeMonthTotal": "3-Month Total Wages",
+        "avgDailyWage": "Average Daily Wage",
+        "formula": "* Formula: Avg Wage × 30 days × (Tenure ÷ 365)"
+      },
+      "legal": {
+        "title": "Your Financial Profile",
+        "note": "This calculator is for reference only; actual severance may vary.",
+        "item1": "Uses standard formulas based on labor laws.",
+        "item2": "Actual avg wage includes all wages (base, allowances, bonuses) over the last 3 months.",
+        "item3": "For complex cases, please consult a labor attorney.",
+        "item4": "Employees with less than 1 year of service are not eligible for severance."
+      },
+      "error": {
+        "lessThanYear": "Severance pay does not occur if the tenure period is less than 1 year."
+      },
+      "subtitle": "Calculate your estimated severance pay using your start date, resignation date, and 3-month salary.",
+      "optional": "Optional",
+      "currency": "USD",
+      "calculate": "计算"
+    },
+    "title": "Your Financial Profile",
+    "description": "Explore our suite of tools designed for deep finance insights."
+  }
+}

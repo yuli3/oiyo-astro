@@ -1,0 +1,82 @@
+{
+  "GAP": {
+    "characteristics": [
+      "soberanía",
+      "benevolencia",
+      "voluntad inflexible",
+      "crecimiento vertical"
+    ],
+    "name": "Agua Yin (Gui)",
+    "meaning": "El Rocío de la Mañana",
+    "description": "La niebla o la lluvia fina que impregna suavemente el mundo para nutrir la vida."
+  },
+  "EUL": {
+    "characteristics": [
+      "resiliencia",
+      "diplomacia",
+      "supervivencia",
+      "interconexión"
+    ],
+    "name": "Agua Yin (Gui)",
+    "meaning": "El Rocío de la Mañana",
+    "description": "La niebla o la lluvia fina que impregna suavemente el mundo para nutrir la vida."
+  },
+  "BYEONG": {
+    "characteristics": [
+      "resplandor",
+      "pasión",
+      "transparencia",
+      "influencia pública"
+    ],
+    "name": "Agua Yin (Gui)",
+    "meaning": "El Rocío de la Mañana",
+    "description": "La niebla o la lluvia fina que impregna suavemente el mundo para nutrir la vida."
+  },
+  "JEONG": {
+    "characteristics": ["devoción", "enfocar", "calor", "iluminación"],
+    "name": "Agua Yin (Gui)",
+    "meaning": "El Rocío de la Mañana",
+    "description": "La niebla o la lluvia fina que impregna suavemente el mundo para nutrir la vida."
+  },
+  "MU": {
+    "characteristics": ["confianza", "estabilidad", "neutralidad", "abrazando"],
+    "name": "Agua Yin (Gui)",
+    "meaning": "El Rocío de la Mañana",
+    "description": "La niebla o la lluvia fina que impregna suavemente el mundo para nutrir la vida."
+  },
+  "GI": {
+    "characteristics": ["nutrir", "cultivo", "maternidad", "pragmatismo"],
+    "name": "Agua Yin (Gui)",
+    "meaning": "El Rocío de la Mañana",
+    "description": "La niebla o la lluvia fina que impregna suavemente el mundo para nutrir la vida."
+  },
+  "GYEONG": {
+    "characteristics": ["revolución", "justicia", "decisión", "lealtad"],
+    "name": "Agua Yin (Gui)",
+    "meaning": "El Rocío de la Mañana",
+    "description": "La niebla o la lluvia fina que impregna suavemente el mundo para nutrir la vida."
+  },
+  "SIN": {
+    "characteristics": [
+      "perfeccionismo",
+      "precisión",
+      "sensibilidad",
+      "elegancia"
+    ],
+    "name": "Agua Yin (Gui)",
+    "meaning": "El Rocío de la Mañana",
+    "description": "La niebla o la lluvia fina que impregna suavemente el mundo para nutrir la vida."
+  },
+  "IM": {
+    "characteristics": ["sabiduría", "adaptabilidad", "dinamismo", "vastedad"],
+    "name": "Agua Yin (Gui)",
+    "meaning": "El Rocío de la Mañana",
+    "description": "La niebla o la lluvia fina que impregna suavemente el mundo para nutrir la vida."
+  },
+  "GYE": {
+    "characteristics": ["intuición", "infiltración", "dulzura", "estrategia"],
+    "name": "Agua Yin (Gui)",
+    "meaning": "El Rocío de la Mañana",
+    "description": "La niebla o la lluvia fina que impregna suavemente el mundo para nutrir la vida."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "sohn": {
+    "directions": {
+      "East": "Awaiting deep synthesis...",
+      "West": "Awaiting deep synthesis...",
+      "South": "Awaiting deep synthesis...",
+      "North": "Awaiting deep synthesis..."
+    },
+    "title": "Awaiting deep synthesis...",
+    "tooltip": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis...",
+    "lunar": "Awaiting deep synthesis...",
+    "safeDay": "Awaiting deep synthesis...",
+    "safeDesc": "Awaiting deep synthesis...",
+    "directionAlert": "Awaiting deep synthesis...",
+    "directionWarn": "Awaiting deep synthesis...",
+    "directionWarnGeneric": "Awaiting deep synthesis...",
+    "upcoming": "Awaiting deep synthesis..."
+  }
+}

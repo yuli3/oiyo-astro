@@ -1,0 +1,17 @@
+{
+  "title": "成長の旅",
+  "description": "自己認識と個人的な進化への道。",
+  "levelUp": "Congratulations! You have reached level {emoji} \\\"{title}\\\"!",
+  "levelTitles": {
+    "beginner": "初心者",
+    "explorer": "エクスプローラ",
+    "seeker": "シーカー",
+    "discoverer": "発見者",
+    "insightMaster": "インサイトマスター",
+    "wisdomKeeper": "知恵の番人",
+    "selfAwareSage": "自意識の高い賢者",
+    "enlightenedOne": "悟りを開いた者",
+    "personalityGuru": "パーソナリティの第一人者",
+    "legendary": "伝説の"
+  }
+}

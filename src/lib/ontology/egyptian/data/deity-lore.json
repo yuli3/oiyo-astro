@@ -1,0 +1,53 @@
+{
+  "tradition": "egyptian",
+  "version": "1.0.0",
+  "shards": {
+    "deities": {
+      "thoth": {
+        "id": "thoth",
+        "name": "Thoth",
+        "titles": ["Scribe of the Gods", "Lord of Time"],
+        "sacredAnimal": "Ibis / Baboon",
+        "amulet": "Eye of Horus (Wadjet Eye)",
+        "lore": "Thoth represents the mind of God. He is the measurer of time and the inventor of writing. Those under his wing are seekers of truth.",
+        "offerings": ["Ink", "Papyrus", "Blue stones"],
+        "powerWord": "HEKA (Magic)"
+      },
+      "horus": {
+        "id": "horus",
+        "name": "Horus",
+        "titles": ["The Distant One", "Avenger of His Father"],
+        "sacredAnimal": "Falcon",
+        "amulet": "Falcon Pectoral",
+        "lore": "Horus is the archetypal hero who restored order. He represents the triumph of light over chaos and the protection of the divine king.",
+        "offerings": ["Gold", "Weapons", "Feathers"],
+        "powerWord": "MA'AT (Order)"
+      },
+      "ra": {
+        "id": "ra",
+        "name": "Ra",
+        "titles": ["King of the Gods", "The Self-Created"],
+        "sacredAnimal": "Hawk / Ram",
+        "amulet": "Sun Disk",
+        "lore": "Ra is the life-giver. He sails the solar barque across the sky by day and through the underworld by night, constantly battling chaos.",
+        "offerings": ["Fire", "Sunlight", "Yellow flowers"],
+        "powerWord": "ANKH (Life)"
+      }
+    }
+  },
+  "l10n": {
+    "en": {},
+    "ko": {
+      "deities": {
+        "thoth": {
+          "name": "토트",
+          "titles": ["신들의 서기관", "시간의 주인"]
+        },
+        "ra": {
+          "name": "라",
+          "titles": ["신들의 왕", "스스로 태어난 자"]
+        }
+      }
+    }
+  }
+}

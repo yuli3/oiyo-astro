@@ -1,0 +1,90 @@
+{
+  "types": {
+    "soulmate": {
+      "name": "Âme Sœur",
+      "description": "Une harmonie parfaite qui n'a pas besoin d'explication."
+    },
+    "complementary": {
+      "name": "Complémentaire",
+      "description": "Une relation où les différences deviennent des charmes attrayants."
+    },
+    "mentor": {
+      "name": "Connexion Guidante",
+      "description": "Une relation de développement avec apprentissage mutuel."
+    },
+    "challenging": {
+      "name": "Stimulus de Croissance",
+      "description": "Une relation où reconnaître les différences amène une grande prise de conscience."
+    }
+  },
+  "scores": {
+    "high": "Alchimie Fantastique",
+    "medium": "Harmonie Confortable",
+    "low": "Effort Requis"
+  },
+  "title": "Compatibilité Amoureuse",
+  "description": "Analysez les relations et la synergie.",
+  "narrative": "Votre rencontre est comme une pierre précieuse, où chacun vient parfaire ce qui manque à l'autre.",
+  "levels": {
+    "perfect": "Harmonie Parfaite",
+    "great": "Grande Alchimie",
+    "good": "Bon Potentiel",
+    "challenging": "Opportunité de Croissance"
+  },
+  "selectPartner": "Sélectionner Partenaire",
+  "selectDesc": "Choisissez un destin à comparer au vôtre.",
+  "insights": "Perspectives Profondes",
+  "combination": "Combinaison Cosmique",
+  "loveLanguages": "Langages Amoureux",
+  "dateIdeas": "Idées de Rendez-vous",
+  "tryAnother": "Essayer un Autre",
+  "share": "Partager le Résultat",
+  "analysis": {
+    "excellent": "Âmes Sœurs",
+    "veryGood": "Très Bon",
+    "good": "Bonne Relation",
+    "average": "Moyen",
+    "needsWork": "Demande des Efforts",
+    "challenging": "Attention aux Conflits"
+  },
+  "subtitle": "Découvrez l'harmonie entre deux destins",
+  "yourInfo": "Vos Infos",
+  "partnerInfo": "Infos Partenaire",
+  "result": {
+    "title": "Résultats de Compatibilité",
+    "elements": "Éléments",
+    "zodiac": "Zodiaque",
+    "personality": "Personnalité",
+    "strengths": "Forces",
+    "challenges": "Points de croissance",
+    "retake": "Ré-curer"
+  },
+  "error": "❌ Erreur",
+  "calculate": "Calculer la Compatibilité",
+  "traits": {
+    "controlling": {
+      "title": "Dynamique Difficile",
+      "description": "Forces opposées qui peuvent mener à la croissance par la friction ou le conflit."
+    },
+    "neutral": {
+      "title": "Connexion Équilibrée",
+      "description": "Ni fortement favorable ni conflictuelle, permettant une connexion stable."
+    },
+    "same": {
+      "title": "Esprits Apparentés",
+      "description": "Des énergies similaires créant une compréhension profonde et une amitié."
+    },
+    "supporting": {
+      "title": "Relation de Soutien",
+      "description": "Une relation où l'un nourrit et soutient l'autre, créant une harmonie naturelle."
+    }
+  },
+  "reasons": {
+    "same": "Relation confortable comme des amis partageant le même élément.",
+    "generates": "Relation dynamique où vous donnez énergie et vitalité.",
+    "generated_by": "Relation de soutien où vous recevez chaleur et appui.",
+    "controls": "Relation active qui stimule l'accomplissement par le défi mutuel.",
+    "controlled_by": "Relation disciplinée qui trouve l'ordre par l'ajustement mutuel.",
+    "neutral": "Une relation neutre sans interaction spéciale."
+  }
+}

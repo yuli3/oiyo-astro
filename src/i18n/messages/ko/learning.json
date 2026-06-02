@@ -1,0 +1,616 @@
+{
+  "meta": {
+    "hero": {
+      "subtitle": "나에 대한 새로운 발견",
+      "badge": "인기"
+    },
+    "keywords": "학습 스타일, 교수법, 학습 전략, 학습 방법",
+    "description": "학습 테스트를 받아보세요.",
+    "title": "학습 테스트"
+  },
+  "hero": {
+    "subtitle": "자신의 학습 스타일을 찾아 효과적으로 공부하세요",
+    "cta": "당신의 학습 스타일을 찾아보세요",
+    "badge": "📚교육",
+    "title": "계기반",
+    "description": "당신의 독특한 성향 분석"
+  },
+  "result": {
+    "title": "상세 분석 보고서",
+    "studyTips": "학습 팁",
+    "environment": "환경",
+    "scores": "점수",
+    "share": "공유하기",
+    "retake": "다시 진단해 보세요",
+    "description": "우리는 이 서비스가 귀하에게 제공하는 구체적인 가치와 통찰력을 제공할 준비가 되어 있습니다."
+  },
+  "test": {
+    "insightBullets": ["귀하의 경로를 정의하는 고유한 패턴을 찾아보세요."],
+    "previous": "~ 전에",
+    "progress": "진전",
+    "next": "다음",
+    "submit": "제출하기",
+    "loading": "로드 중",
+    "selectOption": "선택하기"
+  },
+  "title": "계기반",
+  "description": "미래 성장을 위한 핵심 조언",
+  "keywords": "성격진단, 마음비타민, 나를 찾는 여행, OIYO",
+  "Copied to clipboard!": "클립보드에 복사되었습니다!",
+  "learning": {
+    "types": {
+      "INTJ": {
+        "strengths": [
+          "독립적인 연구",
+          "복잡한 개념",
+          "장기 계획",
+          "논리적 분석"
+        ],
+        "challenges": ["지루한 반복", "암기", "그룹 작업", "자발적인 작업"],
+        "studyMethods": [
+          "컨셉 매핑",
+          "독서와 연구",
+          "온라인 강좌",
+          "문제 해결 초점"
+        ],
+        "recommendedTools": ["개념", "흑요석", "Anki", "칸아카데미"],
+        "examStrategies": [
+          "과거 패턴 분석",
+          "개념을 연결하다",
+          "연습 문제 만들기"
+        ],
+        "motivationTips": [
+          "명확한 목표를 설정하세요",
+          "큰 그림을 이해하라",
+          "실용적인 응용 프로그램 찾기"
+        ],
+        "name": "건축가",
+        "emoji": "🎉",
+        "description": "모든 것에 대한 계획과 풍부한 상상력을 갖춘 전략가.",
+        "optimalEnvironment": "방해받지 않는 조용하고 프라이빗한 공간",
+        "timeManagement": "체계적이고 장기적인 계획 실행",
+        "idealGroupSize": "혼자 또는 1~2명",
+        "concentrationPeak": "저녁 시간"
+      },
+      "INTP": {
+        "strengths": [
+          "논리적 사고",
+          "창의적인 문제 해결",
+          "개념 이해",
+          "독립적인 연구"
+        ],
+        "challenges": ["회의 마감일", "다음 계획", "암기", "규칙적인 루틴"],
+        "studyMethods": ["이론 탐구", "실험", "온라인 토론", "소스 비교"],
+        "recommendedTools": ["위키피디아", "레딧", "스택 교환", "유튜브 강의"],
+        "examStrategies": [
+          "원리 이해",
+          "다양한 접근방식 연구",
+          "논리적 추론을 사용하라"
+        ],
+        "motivationTips": [
+          "흥미로운 주제 찾기",
+          "자유를 유지하다",
+          "창의성을 허용하라"
+        ],
+        "name": "논리학자",
+        "emoji": "🎉",
+        "description": "지식에 대한 끝없는 갈증을 지닌 혁신적인 발명가.",
+        "optimalEnvironment": "자유로운 분위기의 조용한 공간",
+        "timeManagement": "유연하지만 명확한 마감일",
+        "idealGroupSize": "혼자 배우는 것을 선호함",
+        "concentrationPeak": "심야시간"
+      },
+      "ENTJ": {
+        "strengths": ["빠른 학습", "지도", "목표 달성", "조직"],
+        "challenges": [
+          "완벽주의",
+          "세부정보 누락",
+          "감성 콘텐츠",
+          "느린 학습자"
+        ],
+        "studyMethods": [
+          "리드 스터디 그룹",
+          "핵심 내용을 요약하세요",
+          "효율적인 암기",
+          "프리젠테이션"
+        ],
+        "recommendedTools": ["개념", "트렐로", "에버노트", "파워포인트"],
+        "examStrategies": ["시간 관리", "필수 사항에 집중", "반복 연습"],
+        "motivationTips": ["명확한 목표", "경쟁", "리더십 역할"],
+        "name": "사령관",
+        "emoji": "🎉",
+        "description": "항상 길을 찾는 의지가 강한 리더.",
+        "optimalEnvironment": "깔끔하게 정리된 사무실 같은 공간",
+        "timeManagement": "철저한 시간계획과 우선순위 설정",
+        "idealGroupSize": "3~5명",
+        "concentrationPeak": "아침 시간"
+      },
+      "ENTP": {
+        "strengths": [
+          "창의적 사고",
+          "빠른 이해",
+          "토론 기술",
+          "새로운 방법을 시도하다"
+        ],
+        "challenges": ["일상적인 학습", "암기", "회의 마감일", "단순 반복"],
+        "studyMethods": [
+          "토론 및 토론",
+          "다양한 자원",
+          "프로젝트 기반",
+          "실험적 접근"
+        ],
+        "recommendedTools": [
+          "토론 플랫폼",
+          "TED 강연",
+          "코세라",
+          "마인드 매핑 도구"
+        ],
+        "examStrategies": [
+          "창의적인 답변",
+          "다양한 관점",
+          "마지막 순간의 집중"
+        ],
+        "motivationTips": ["새로운 도전", "토론 기회", "자유로운 학습 스타일"],
+        "name": "토론자",
+        "emoji": "🎉",
+        "description": "흥미로운 지적 도전에 저항할 수 없는 독창적인 사상가입니다.",
+        "optimalEnvironment": "자유롭고 활기찬 공간",
+        "timeManagement": "마감일이 가까워지면 집중력을 활용하세요",
+        "idealGroupSize": "3~4인 토론 그룹",
+        "concentrationPeak": "오후부터 저녁까지"
+      },
+      "INFJ": {
+        "strengths": ["깊은 이해", "패턴 인식", "창의적인 표현", "장기 기억"],
+        "challenges": [
+          "피상적 암기",
+          "시간적 압박",
+          "경쟁 환경",
+          "비판적 평가"
+        ],
+        "studyMethods": ["저널링", "개념 연결", "심상", "스토리텔링"],
+        "recommendedTools": ["개념", "메모 읽기", "헤드스페이스", "다이어리"],
+        "examStrategies": [
+          "큰 그림을 이해하라",
+          "의미 있는 연결",
+          "정서적 기억"
+        ],
+        "motivationTips": ["의미 찾기", "개인 목표에 연결", "영감을 주는 환경"],
+        "name": "옹호자",
+        "emoji": "🎉",
+        "description": "조용하지만 통찰력이 있는 이상주의자로 사람들에게 영감을 줍니다.",
+        "optimalEnvironment": "조용하고 감동적인 공간",
+        "timeManagement": "스트레스를 최소화하는 여유로운 계획",
+        "idealGroupSize": "혼자 또는 소수 선택",
+        "concentrationPeak": "이른 아침이나 늦은 저녁"
+      },
+      "INFP": {
+        "strengths": [
+          "창의적인 글쓰기",
+          "정서적 이해",
+          "독립적 학습",
+          "예술적 표현"
+        ],
+        "challenges": ["엄격한 규칙", "중요한 피드백", "빠른 마감일", "경쟁"],
+        "studyMethods": [
+          "자유 형식 메모",
+          "창의적인 프로젝트",
+          "독서",
+          "음악 반주"
+        ],
+        "recommendedTools": ["굿노트", "컬러펜", "스포티파이", "앱 읽기"],
+        "examStrategies": [
+          "독자적인 방법 개발",
+          "정서적 연결",
+          "편안한 사고방식"
+        ],
+        "motivationTips": ["개인적인 의미", "표현의 자유", "긍정적인 피드백"],
+        "name": "중재자",
+        "emoji": "🎉",
+        "description": "항상 좋은 일을 위해 헌신하는 열정적인 사람들.",
+        "optimalEnvironment": "편안하고 개인화된 영감을 주는 공간",
+        "timeManagement": "창의성을 방해하지 않는 유연한 계획",
+        "idealGroupSize": "혼자 배우는 것을 선호함",
+        "concentrationPeak": "유연하지만 몰입하면 집중됩니다."
+      },
+      "ENFJ": {
+        "strengths": [
+          "협업 학습",
+          "의사소통",
+          "다른 사람을 이해하기",
+          "동기 부여"
+        ],
+        "challenges": ["솔로 학습", "비인격적인 주제", "경쟁", "비판적 분석"],
+        "studyMethods": ["스터디 그룹", "동료 교육", "토론", "역할극"],
+        "recommendedTools": ["Zoom", "불화", "구글 문서", "협업 도구"],
+        "examStrategies": ["그룹스터디", "서로 가르치다", "정서적 기억"],
+        "motivationTips": [
+          "함께 배우세요",
+          "다른 사람들을 도와주세요",
+          "긍정적인 분위기"
+        ],
+        "name": "주인공",
+        "emoji": "🎉",
+        "description": "사람들을 격려하고 더 나은 세상을 만들고 싶어하는 열정적인 리더입니다.",
+        "optimalEnvironment": "따뜻하고 소통하는 공간",
+        "timeManagement": "그룹 일정에 맞춰 조화로운 계획",
+        "idealGroupSize": "4~6명 정도의 스터디 그룹",
+        "concentrationPeak": "오전부터 오후까지"
+      },
+      "ENFP": {
+        "strengths": ["창의성", "열광", "다양한 관심사", "빠른 연결"],
+        "challenges": ["집중력 유지", "세부", "루틴", "장기 프로젝트"],
+        "studyMethods": [
+          "다양한 소재",
+          "게임화된 학습",
+          "그룹 활동",
+          "실험적 접근"
+        ],
+        "recommendedTools": ["Quizlet", "카훗", "유튜브", "인스타그램 교육"],
+        "examStrategies": [
+          "흥미로운 연결 찾기",
+          "다양한 방법을 시도해 보세요",
+          "게임과 같은 접근 방식"
+        ],
+        "motivationTips": ["새로운 자극", "재미있는 방법", "칭찬과 격려"],
+        "name": "캠페인가",
+        "emoji": "🎉",
+        "description": "늘 즐거움을 추구하는 열정적이고 창의적인 자유로운 영혼.",
+        "optimalEnvironment": "활기차고 자극적인 공간",
+        "timeManagement": "여러 개의 짧은 집중 세션",
+        "idealGroupSize": "다양한 사람들과 함께",
+        "concentrationPeak": "기분에 따라 다름"
+      },
+      "ISTJ": {
+        "strengths": ["근민", "암기", "조직", "계획 실행"],
+        "challenges": [
+          "추상적 개념",
+          "즉흥 연주",
+          "창의적인 작업",
+          "불분명한 지침"
+        ],
+        "studyMethods": [
+          "교과서 읽기",
+          "반복 암기",
+          "체계적인 노트",
+          "지난 논문"
+        ],
+        "recommendedTools": [
+          "전통적인 음표",
+          "뛰어나다",
+          "PDF 교과서",
+          "앱 예약"
+        ],
+        "examStrategies": [
+          "철저한 준비",
+          "반복학습",
+          "시간 기록",
+          "확고한 이해"
+        ],
+        "motivationTips": ["명확한 목표", "체계적인 계획", "성취"],
+        "name": "물류 전문가",
+        "emoji": "🎉",
+        "description": "사실에 근거하여 생각하고, 신뢰할 수 있는 책임감 있는 사람.",
+        "optimalEnvironment": "조용하고 잘 정돈된 공간",
+        "timeManagement": "규칙적인 일정에 따라 학습",
+        "idealGroupSize": "혼자 또는 2명 정도",
+        "concentrationPeak": "아침 시간"
+      },
+      "ISFJ": {
+        "strengths": ["세부 사항에 대한 관심", "인내심", "메모리", "책임"],
+        "challenges": ["추상이론", "비판적 사고", "급속한 변화", "경쟁"],
+        "studyMethods": [
+          "주의 깊게 메모하기",
+          "반복 연습",
+          "실제 사례",
+          "단계별"
+        ],
+        "recommendedTools": ["컬러펜", "체크리스트", "기획자", "전통 교과서"],
+        "examStrategies": ["충분한 검토", "세부정보 확인", "안정성 유지"],
+        "motivationTips": ["안정적인 환경", "칭찬과 인정", "실용적인 가치"],
+        "name": "수비수",
+        "emoji": "🎉",
+        "description": "가까운 사람들을 보호하기 위해 최선을 다하는 헌신적인 사람들.",
+        "optimalEnvironment": "안정적이고 친숙하며 조용한 공간",
+        "timeManagement": "불안을 줄이는 편안한 계획",
+        "idealGroupSize": "친한 친구 한두 명",
+        "concentrationPeak": "아침 시간"
+      },
+      "ESTJ": {
+        "strengths": ["조직", "실행", "지도", "능률"],
+        "challenges": ["추상이론", "감성 콘텐츠", "느린 속도", "유연성"],
+        "studyMethods": ["요약", "플래시카드", "지난 논문", "주요 스터디 그룹"],
+        "recommendedTools": ["뛰어나다", "파워포인트", "기획자", "타이머"],
+        "examStrategies": ["엄격한 시간 관리", "필수 사항에 집중", "반복 연습"],
+        "motivationTips": ["명확한 목표", "눈에 보이는 결과", "리더십 역할"],
+        "name": "더 이그제큐티브",
+        "emoji": "🎉",
+        "description": "사물과 사람을 관리하는 능력이 뛰어난 수행자.",
+        "optimalEnvironment": "잘 나누어지고 체계적인 공간",
+        "timeManagement": "체계적인 기획과 철저한 실행",
+        "idealGroupSize": "약 3~4명의 효율적인 그룹",
+        "concentrationPeak": "아침 시간"
+      },
+      "ESFJ": {
+        "strengths": ["협력", "책임", "실용적인 사항", "의사소통"],
+        "challenges": ["솔로 학습", "추상이론", "비판", "경쟁"],
+        "studyMethods": [
+          "그룹스터디",
+          "서로 퀴즈를 낸다",
+          "실제 사례",
+          "역할극"
+        ],
+        "recommendedTools": ["채팅 스터디 그룹", "Zoom", "공유 노트", "컬러펜"],
+        "examStrategies": ["함께 공부하세요", "상호 격려", "실용적인 이해"],
+        "motivationTips": ["사회적 분위기", "다른 사람들을 도와주세요", "칭찬"],
+        "name": "영사",
+        "emoji": "🎉",
+        "description": "주변 사람들을 돕는 일에서 행복을 찾는 인기인.",
+        "optimalEnvironment": "따뜻하고 소통하는 공간",
+        "timeManagement": "주변 사람들과의 약속을 포함한 계획",
+        "idealGroupSize": "약 4~6명의 활기찬 그룹",
+        "concentrationPeak": "오전부터 오후까지"
+      },
+      "ISTP": {
+        "strengths": ["문제 해결", "논리적 사고", "실용적인 기술", "빠른 응답"],
+        "challenges": ["이론학습", "장기 계획", "암기", "감성 콘텐츠"],
+        "studyMethods": ["실습", "비디오 학습", "직접적인 경험", "문제 해결"],
+        "recommendedTools": [
+          "유튜브 연습",
+          "칸아카데미",
+          "시뮬레이션",
+          "실용적인 도구"
+        ],
+        "examStrategies": [
+          "실제적인 문제",
+          "논리적 접근",
+          "효율적인 시간 활용"
+        ],
+        "motivationTips": ["실용적인 가치", "무료 방법", "도전과제"],
+        "name": "거장",
+        "emoji": "🎉",
+        "description": "다양한 도구를 다루고 문제를 해결하는 데 능숙한 실무자입니다.",
+        "optimalEnvironment": "실습이 가능한 자유로운 공간",
+        "timeManagement": "필요에 따라 유연한 조정",
+        "idealGroupSize": "혼자 또는 소수",
+        "concentrationPeak": "오후부터 저녁까지"
+      },
+      "ISFP": {
+        "strengths": ["창의성", "감광도", "실용적인 기술", "유연성"],
+        "challenges": ["엄격한 규칙", "경쟁", "비판", "장기 계획"],
+        "studyMethods": ["시각적 학습", "관행", "음악과 함께", "자유형"],
+        "recommendedTools": ["iPad", "낳다", "핀터레스트", "유튜브"],
+        "examStrategies": ["편안한 마음가짐", "시각적 기억", "개인적인 방법"],
+        "motivationTips": ["자유로운 환경", "긍정적인 피드백", "창의적인 표현"],
+        "name": "모험가",
+        "emoji": "🎉",
+        "description": "늘 새로운 경험을 추구하며 현재를 즐기는 아티스트.",
+        "optimalEnvironment": "아름다움을 담은 편안한 공간",
+        "timeManagement": "자신의 상황에 맞는 유연한 계획",
+        "idealGroupSize": "혼자 배우는 것을 선호함",
+        "concentrationPeak": "편안한 개인시간"
+      },
+      "ESTP": {
+        "strengths": ["빠른 학습", "실용적인 기술", "적응성", "문제 해결"],
+        "challenges": ["이론학습", "암기", "긴 초점", "계획"],
+        "studyMethods": ["실습", "그룹 활동", "경쟁", "체험학습"],
+        "recommendedTools": [
+          "게임화된 앱",
+          "실용적인 도구",
+          "VR 학습",
+          "스포츠 비유"
+        ],
+        "examStrategies": ["실기 시험", "빠른 사고를 활용하라", "짧은 초점"],
+        "motivationTips": ["경쟁과 도전", "실용적인 가치", "즉각적인 피드백"],
+        "name": "기업가",
+        "emoji": "🎉",
+        "description": "위험을 두려워하지 않고 순간의 기회를 포착하는 활동가.",
+        "optimalEnvironment": "활동적이고 실천적인 공간",
+        "timeManagement": "마감 전 단기 집중 계획",
+        "idealGroupSize": "3~5명 정도의 활동그룹",
+        "concentrationPeak": "오전부터 오후까지"
+      },
+      "ESFP": {
+        "strengths": ["사교성", "열광", "실용적인 기술", "재미있는 분위기"],
+        "challenges": ["솔로 학습", "이론", "집중하다", "장기 계획"],
+        "studyMethods": ["그룹 활동", "계략", "역할극", "음악과 함께"],
+        "recommendedTools": [
+          "카훗",
+          "소셜 앱",
+          "틱톡 교육",
+          "친구들과 함께 공부하세요"
+        ],
+        "examStrategies": ["재미있는 접근", "그룹 검토", "긍정적인 사고방식"],
+        "motivationTips": ["재미있는 방법", "친구들과 함께", "칭찬과 보상"],
+        "name": "엔터테이너",
+        "emoji": "🎉",
+        "description": "다른 사람을 행복하게 하고 활력을 주는 연주자.",
+        "optimalEnvironment": "밝고 활기차고 자극적인 공간",
+        "timeManagement": "짧고 재미있는 여러 학습 세션",
+        "idealGroupSize": "4~8명 정도의 대규모 그룹",
+        "concentrationPeak": "낮"
+      }
+    },
+    "questions": [
+      {
+        "id": 1,
+        "text": "새로운 과목을 배울 때 당신은:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "혼자 조용히 교과서 들고 공부하기",
+            "value": "I"
+          },
+          {
+            "text": "친구들과 함께 토론하고 공부해보세요",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "text": "학습자료는 어떻게 기억하시나요?",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "구체적인 사실과 세부사항을 기억하세요.",
+            "value": "S"
+          },
+          {
+            "text": "전체적인 컨셉과 패턴을 파악하세요",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "text": "문제 해결을 위한 접근 방식:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "논리적 분석을 통해 답을 찾아보세요",
+            "value": "T"
+          },
+          {
+            "text": "직관과 느낌으로 접근하라",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "text": "시험 준비는 어떻게 하시나요?",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "체계적인 계획을 세우고 조기에 준비하라",
+            "value": "J"
+          },
+          {
+            "text": "유연성을 유지하고 필요할 때 집중하세요",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "text": "선호하는 수업 활동:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "개별 과제 또는 독립 프로젝트",
+            "value": "I"
+          },
+          {
+            "text": "그룹 토론 또는 팀 프로젝트",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "text": "복잡한 개념을 이해할 때:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "단계별 설명과 실제 사례가 필요합니다.",
+            "value": "S"
+          },
+          {
+            "text": "추상적인 이론과 큰 그림을 먼저 살펴보세요",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "text": "프로젝트 팀에서의 역할:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "객관적인 분석과 효율성 추구",
+            "value": "T"
+          },
+          {
+            "text": "팀의 화합과 모두의 의견을 소중히 여깁니다.",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 8,
+        "text": "과제 마감일이 다가올 때:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "계획대로 착실하게 진행",
+            "value": "J"
+          },
+          {
+            "text": "마감 시간의 압박으로 집중력이 향상됩니다.",
+            "value": "P"
+          }
+        ]
+      },
+      {
+        "id": 9,
+        "text": "선호하는 학습 환경:",
+        "dimension": "EI",
+        "options": [
+          {
+            "text": "조용한 도서관이나 개인 공간",
+            "value": "I"
+          },
+          {
+            "text": "카페나 스터디카페 등 활기 넘치는 곳",
+            "value": "E"
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "text": "선호하는 시험 문제 유형:",
+        "dimension": "SN",
+        "options": [
+          {
+            "text": "사실 기반 객관식 또는 단답형",
+            "value": "S"
+          },
+          {
+            "text": "창의적 사고가 필요한 에세이 문제",
+            "value": "N"
+          }
+        ]
+      },
+      {
+        "id": 11,
+        "text": "성적이 좋지 않을 때:",
+        "dimension": "TF",
+        "options": [
+          {
+            "text": "객관적으로 원인을 분석하고 개선합니다.",
+            "value": "T"
+          },
+          {
+            "text": "감정적으로 받아들이고 동기를 찾으세요",
+            "value": "F"
+          }
+        ]
+      },
+      {
+        "id": 12,
+        "text": "학습 계획을 세울 때:",
+        "dimension": "PJ",
+        "options": [
+          {
+            "text": "세부 일정과 목표를 명확하게 정의",
+            "value": "J"
+          },
+          {
+            "text": "대략적인 방향을 설정하고 유연하게 조정",
+            "value": "P"
+          }
+        ]
+      }
+    ]
+  }
+}

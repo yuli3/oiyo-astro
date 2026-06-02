@@ -1,0 +1,25 @@
+{
+  "title": "헬레니즘 점성술",
+  "description": "그리스와 로마 세계의 고대 기술.",
+  "principles": {
+    "sect": {
+      "term": "분파",
+      "description": "낮(일주) 차트와 밤(야행성) 차트를 구분하여 어떤 행성이 가장 효과적인지 결정합니다."
+    },
+    "essential_dignity": {
+      "term": "필수 존엄성",
+      "description": "황도 위치(Domicile, Exaltation, Triplicity, Term, Face)를 기반으로 한 행성의 강도입니다."
+    },
+    "lot_of_fortune": {
+      "term": "많은 행운",
+      "description": "육체적 번영과 건강을 상징하는 승천자, 태양, 달로 계산된 아랍어 부분입니다."
+    }
+  },
+  "resonance": {
+    "note": "아카이브는 {sect} 차트를 관찰합니다. 귀하의 운명은 {primary}(기본) 및 {secondary}(보조)에 의해 결정되며 {participating}이 지원을 제공합니다."
+  },
+  "sect": {
+    "Day": "낮",
+    "Night": "밤"
+  }
+}

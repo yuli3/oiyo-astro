@@ -1,0 +1,228 @@
+{
+  "mansions": [
+    {
+      "id": "jue",
+      "name": "角",
+      "enName": "Horn",
+      "start": 0.0,
+      "element": "Wood",
+      "animal": "Dragon"
+    },
+    {
+      "id": "kang",
+      "name": "亢",
+      "enName": "Neck",
+      "start": 12.1,
+      "element": "Metal",
+      "animal": "Dragon"
+    },
+    {
+      "id": "di",
+      "name": "氐",
+      "enName": "Root",
+      "start": 21.3,
+      "element": "Earth",
+      "animal": "Dragon"
+    },
+    {
+      "id": "fang",
+      "name": "房",
+      "enName": "Room",
+      "start": 36.5,
+      "element": "Sun",
+      "animal": "Dragon"
+    },
+    {
+      "id": "xin",
+      "name": "心",
+      "enName": "Heart",
+      "start": 41.5,
+      "element": "Moon",
+      "animal": "Dragon"
+    },
+    {
+      "id": "wei_tail",
+      "name": "尾",
+      "enName": "Tail",
+      "start": 48.0,
+      "element": "Fire",
+      "animal": "Dragon"
+    },
+    {
+      "id": "ji",
+      "name": "箕",
+      "enName": "Winnowing Basket",
+      "start": 63.2,
+      "element": "Water",
+      "animal": "Dragon"
+    },
+    {
+      "id": "dou",
+      "name": "斗",
+      "enName": "Dipper",
+      "start": 74.0,
+      "element": "Wood",
+      "animal": "Tortoise"
+    },
+    {
+      "id": "niu",
+      "name": "牛",
+      "enName": "Ox",
+      "start": 98.2,
+      "element": "Metal",
+      "animal": "Tortoise"
+    },
+    {
+      "id": "nv",
+      "name": "女",
+      "enName": "Girl",
+      "start": 105.2,
+      "element": "Earth",
+      "animal": "Tortoise"
+    },
+    {
+      "id": "xu",
+      "name": "虚",
+      "enName": "Emptiness",
+      "start": 116.3,
+      "element": "Sun",
+      "animal": "Tortoise"
+    },
+    {
+      "id": "wei_roof",
+      "name": "危",
+      "enName": "Rooftop",
+      "start": 125.3,
+      "element": "Moon",
+      "animal": "Tortoise"
+    },
+    {
+      "id": "shi",
+      "name": "室",
+      "enName": "Encampment",
+      "start": 141.0,
+      "element": "Fire",
+      "animal": "Tortoise"
+    },
+    {
+      "id": "bi_wall",
+      "name": "壁",
+      "enName": "Wall",
+      "start": 158.2,
+      "element": "Water",
+      "animal": "Tortoise"
+    },
+    {
+      "id": "kui",
+      "name": "奎",
+      "enName": "Legs",
+      "start": 167.3,
+      "element": "Wood",
+      "animal": "Tiger"
+    },
+    {
+      "id": "lou",
+      "name": "婁",
+      "enName": "Bond",
+      "start": 184.2,
+      "element": "Metal",
+      "animal": "Tiger"
+    },
+    {
+      "id": "wei_stomach",
+      "name": "胃",
+      "enName": "Stomach",
+      "start": 196.2,
+      "element": "Earth",
+      "animal": "Tiger"
+    },
+    {
+      "id": "mao",
+      "name": "昴",
+      "enName": "Hairy Head",
+      "start": 211.5,
+      "element": "Sun",
+      "animal": "Tiger"
+    },
+    {
+      "id": "bi_net",
+      "name": "畢",
+      "enName": "Net",
+      "start": 222.5,
+      "element": "Moon",
+      "animal": "Tiger"
+    },
+    {
+      "id": "zi",
+      "name": "嘴",
+      "enName": "Turtle Beak",
+      "start": 239.5,
+      "element": "Fire",
+      "animal": "Tiger"
+    },
+    {
+      "id": "shen",
+      "name": "參",
+      "enName": "Three Stars",
+      "start": 240.2,
+      "element": "Water",
+      "animal": "Tiger"
+    },
+    {
+      "id": "jing",
+      "name": "井",
+      "enName": "Well",
+      "start": 251.2,
+      "element": "Wood",
+      "animal": "Bird"
+    },
+    {
+      "id": "gui",
+      "name": "鬼",
+      "enName": "Ghost",
+      "start": 284.1,
+      "element": "Metal",
+      "animal": "Bird"
+    },
+    {
+      "id": "liu",
+      "name": "柳",
+      "enName": "Willow",
+      "start": 286.5,
+      "element": "Earth",
+      "animal": "Bird"
+    },
+    {
+      "id": "xing",
+      "name": "星",
+      "enName": "Star",
+      "start": 300.2,
+      "element": "Sun",
+      "animal": "Bird"
+    },
+    {
+      "id": "zhang",
+      "name": "張",
+      "enName": "Extended Net",
+      "start": 305.2,
+      "element": "Moon",
+      "animal": "Bird"
+    },
+    {
+      "id": "yi",
+      "name": "翼",
+      "enName": "Wings",
+      "start": 323.2,
+      "element": "Fire",
+      "animal": "Bird"
+    },
+    {
+      "id": "zhen",
+      "name": "軫",
+      "enName": "Chariot",
+      "start": 342.3,
+      "element": "Water",
+      "animal": "Bird"
+    }
+  ]
+}

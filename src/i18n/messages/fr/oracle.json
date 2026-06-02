@@ -1,0 +1,50 @@
+{
+  "title": "Le Voyageur Universel",
+  "archetypes": {
+    "radiant_catalyst": {
+      "title": "Le Voyageur Universel",
+      "keywords": "Équilibre, Harmonie, Unité"
+    },
+    "deep_seer": {
+      "title": "Le Voyageur Universel",
+      "keywords": "Équilibre, Harmonie, Unité"
+    },
+    "architect": {
+      "title": "Le Voyageur Universel",
+      "keywords": "Équilibre, Harmonie, Unité"
+    },
+    "messenger": {
+      "title": "Le Voyageur Universel",
+      "keywords": "Équilibre, Harmonie, Unité"
+    },
+    "growth_maker": {
+      "title": "Le Voyageur Universel",
+      "keywords": "Équilibre, Harmonie, Unité"
+    },
+    "refiner": {
+      "title": "Le Voyageur Universel",
+      "keywords": "Équilibre, Harmonie, Unité"
+    },
+    "spirit_walker": {
+      "title": "Le Voyageur Universel",
+      "keywords": "Équilibre, Harmonie, Unité"
+    },
+    "universal_traveler": {
+      "title": "Le Voyageur Universel",
+      "keywords": "Équilibre, Harmonie, Unité"
+    }
+  },
+  "narrative": {
+    "intro": "La Grande Archive s'ouvre pour révéler le modèle de votre existence. Vous êtes {archetype}.",
+    "body": "Votre esprit est forgé dans {element}. {synergy}. Les étoiles occidentales vous nomment {westernSign}, tandis que les cours orientales vous connaissent comme {easternSign}.",
+    "conclusion": "Marchez sur votre chemin avec la sagesse de {element}, car c'est votre plus grande force."
+  },
+  "synergies": {
+    "convergence": "Une convergence de {element} à travers les cieux occidentaux et védiques",
+    "synthesis": "Une synthèse unique menée par {element}"
+  },
+  "suggestions": {
+    "balance": "Votre chemin est fort, mais l'énergie de {missing} est silencieuse en vous. Cherchez-la chez les autres ou dans la nature.",
+    "harmony": "Vous marchez dans une harmonie élémentaire complète."
+  }
+}

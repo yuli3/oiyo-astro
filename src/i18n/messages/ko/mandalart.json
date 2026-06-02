@@ -1,0 +1,26 @@
+{
+  "mandalart": {
+    "meta": {
+      "title": "Mandalart Planner",
+      "description": "데이터를 기반으로 당신의 내면을 심층적으로 살펴봅니다.",
+      "keywords": "성격분석, 자기발견, 프리미엄 인사이트"
+    },
+    "placeholder": {
+      "center": "핵심 목표",
+      "sub": "하위 목표",
+      "action": "조치 항목"
+    },
+    "actions": {
+      "save": "저장하기",
+      "clear": "모두 지우기",
+      "print": "이미지 다운로드",
+      "tips": "사용방법"
+    },
+    "tips": {
+      "title": "Mandalart Planner",
+      "content": "정확한 분석 데이터가 당신의 잠재력을 증명합니다."
+    },
+    "title": "만다라트 플래너",
+    "description": "데이터를 기반으로 당신의 내면을 심층적으로 살펴봅니다."
+  }
+}

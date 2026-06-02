@@ -1,0 +1,194 @@
+{
+  "meta": {
+    "title": "The Prism of Perception: Cognitive Bias Analysis",
+    "description": "Explore the labyrinth of human cognition and reveal the subtle distortions that shape your reality.",
+    "keywords": "cognitive structure, mental heuristics, psychology of perception, wisdom diagnosis"
+  },
+  "types": {
+    "confirmation_bias": {
+      "name": "Confirmation Bias",
+      "subtitle": "The Echo Chamber of the Self",
+      "description": "A subconscious tendency to seek, interpret, and favor information that aligns with one's established sanctuary of belief, while excluding dissonant truths.",
+      "examples": [
+        "Selectively justifying data that mirrors your existing worldview.",
+        "Confining yourself within the circle of one-sided relationships that only echo your own voice."
+      ],
+      "overcome": [
+        "Intentionally inhabit the perspective of the 'Other.'",
+        "Meditate on the following question: 'What truth could render my current conviction false?'"
+      ]
+    },
+    "authority_bias": {
+      "name": "Authority Bias",
+      "subtitle": "Adoration of the Crown",
+      "description": "The tendency to grant excessive weight and accuracy to the declarations of perceived authorities, silencing one's own critical insights.",
+      "examples": [
+        "Accepting a specific doctrine simply because it was uttered by a renowned 'sage.'",
+        "Hesitating to question obvious errors originating from those draped in the robes of power."
+      ],
+      "overcome": [
+        "Look closely at the reality of the message itself, detached from the status of the messenger.",
+        "Remember that even those atop the highest altars are not immune to human imperfection."
+      ]
+    },
+    "availability_heuristic": {
+      "name": "Availability Heuristic",
+      "subtitle": "Tyranny of Immediacy",
+      "description": "The error of judging the probability of events based solely on examples that easily come to mind, often swayed by recent emotions rather than statistical reality.",
+      "examples": [
+        "Fearing rare, lightning-like shocks more than the quiet, persistent systemic risks that remain invisible.",
+        "Gauging the state of the world through the prism of sensationalist headlines."
+      ],
+      "overcome": [
+        "Face the cold and absolute geometry of statistics.",
+        "Do not allow a single intense story to overshadow the universal truth of countless existences."
+      ]
+    },
+    "anchoring_bias": {
+      "name": "Anchoring Bias",
+      "subtitle": "Gravity of First Impressions",
+      "description": "The tendency to remain tethered to the first fragment of information encountered, subordinating all subsequent revelations to that initial anchor.",
+      "examples": [
+        "Accepting a price as just simply because a more absurd price preceded it.",
+        "Allowing initial estimates to cast a shadow over all future calculations."
+      ],
+      "overcome": [
+        "Discard the first numbers presented as mere illusions of context.",
+        "Before the world drops its anchor upon you, establish your own independent baseline."
+      ]
+    },
+    "dunning_kruger": {
+      "name": "Dunning-Kruger Effect",
+      "subtitle": "Illusion of Early Mastery",
+      "description": "A state of cognitive dissonance where those with shallow depth in a field possess the greatest confidence, failing to recognize the vast ocean of complexity they have yet to navigate.",
+      "examples": [
+        "Mistaking the acquisition of basic terminology for the mastery of a discipline.",
+        "Dismissing a specific task as trivial before ever handling the mechanisms of its execution."
+      ],
+      "overcome": [
+        "Maintain a 'Beginner's Mind' even as you make progress.",
+        "Seek the critique of masters to map the true boundaries of your understanding."
+      ]
+    },
+    "survivorship_bias": {
+      "name": "Survivorship Bias",
+      "subtitle": "Silence of the Departed",
+      "description": "A logical fallacy of focusing only on those who successfully passed through a selection process, while overlooking the countless failures resting in invisible graves.",
+      "examples": [
+        "Studying only the footprints of giants while forgetting the many who vanished on the same path.",
+        "Attributing a result solely to willpower, though it was merely the outcome of fluctuations among the masses."
+      ],
+      "overcome": [
+        "Seek the stories of those who did not succeed to understand the true cost of the path.",
+        "Ask: 'What data is missing from this narrative of victory?'"
+      ]
+    }
+  },
+  "questions": {
+    "q1": "When diving deep into a new realm of knowledge, where does your gaze linger?",
+    "q2": "If a recognized master of a specific field delivers a declaration, you...",
+    "q3": "In your own estimation, where does your competence stand compared to the collective whole?",
+    "q4": "What impact does the first figure mentioned in a value exchange have upon your soul?",
+    "q5": "When meditating on those who live brilliant and successful lives, what do you notice?",
+    "q6": "When a new revelation arrives that shakes your existing convictions, you...",
+    "q7": "Which of the following concepts triggers a deeper, more primal vigilance within you?",
+    "q8": "To anchor a fact into the foundation of your reality, what do you trust?",
+    "q9": "When considering the safety of a journey, what moves you?",
+    "q10": "When faced with an 'unprecedented discount,' what thoughts does your inner observer harbor?",
+    "q11": "After finishing a book on a complex subject, what emotion do you feel?",
+    "q12": "When you encounter a rare case of achieving great feats without following tradition, you...",
+    "q13": "When a traveling merchant describes a companion as 'intelligent but cold,' how do you perceive them?",
+    "q14": "When your recollection of a past event differs from the archives or the testimony of others...",
+    "q15": "When selecting between two identical artifacts where one bears a prestigious seal and the other is plain..."
+  },
+  "options": {
+    "q1": {
+      "a": "Confirmations that justify your current path",
+      "b": "A symphony of diverse, conflicting perspectives",
+      "c": "Resonances of the most recent news"
+    },
+    "q2": {
+      "a": "Accept it as a truth of the world",
+      "b": "Carefully dissect the underlying grounds",
+      "c": "Reflect on similar declarations encountered in the past"
+    },
+    "q3": {
+      "a": "Transcendent (well above the median)",
+      "b": "In balance with the whole",
+      "c": "Still in the stage of a novice seeker"
+    },
+    "q4": {
+      "a": "It becomes a heavy anchor that binds all subsequent offers",
+      "b": "Consider it merely as a starting point for play",
+      "c": "Let it flow past without being affected at all"
+    },
+    "q5": {
+      "a": "Their unique willpower and inner flame",
+      "b": "The cosmic alignment and luck that favored them",
+      "c": "Visualized victories (excluding the unseen failures)"
+    },
+    "q6": {
+      "a": "Dismiss it as a flawed or deceptive sign",
+      "b": "Regard it as a catalyst for change and meditate deeply",
+      "c": "Feel the pain arising from inner dissonance"
+    },
+    "q7": {
+      "a": "Rare, sudden catastrophes (news-centric)",
+      "b": "Vitality that erodes slowly and irresistibly (statistical-centric)",
+      "c": "Primal fear of the ancient abyss"
+    },
+    "q8": {
+      "a": "An influencer with high contemporary status",
+      "b": "The collective weight of scientific consensus",
+      "c": "The intimate vibration of a friend's experience"
+    },
+    "q9": {
+      "a": "Vivid memories of recent tragedies",
+      "b": "The silent truth of historical probabilities",
+      "c": "Your own intuition regarding the path"
+    },
+    "q10": {
+      "a": "It is a rare gift presented by this moment",
+      "b": "What is the true value hidden behind this presentation?",
+      "c": "I must act before the window of opportunity closes"
+    },
+    "q11": {
+      "a": "Feel that I have grasped the core of the mystery",
+      "b": "Feel that I have barely grazed the surface of infinite truth",
+      "c": "The secret is much simpler than others claim"
+    },
+    "q12": {
+      "a": "Think that old traditions are no longer necessary",
+      "b": "It is but a single star in the dark sky of countless failures",
+      "c": "Greatness is not taught, but born"
+    },
+    "q13": {
+      "a": "Focus on the 'cold' attribute and keep your guard up",
+      "b": "Weight both 'intelligent' and 'cold' as equal parts of their essence",
+      "c": "Seek further resonance before passing judgment"
+    },
+    "q14": {
+      "a": "Maintain that your inner vision is the absolute truth",
+      "b": "Accept that the threads of memory can fray and shift over time",
+      "c": "Silence the dissonance and move forward"
+    },
+    "q15": {
+      "a": " gravitate towards the one with the prestigious seal",
+      "b": "Examine the inner mechanisms regardless of the outer seal",
+      "c": "Choose the path of least resistance"
+    }
+  },
+  "recommendations": {
+    "confirmation-bias": "Actively cultivate an 'Inner Devil's Advocate.'",
+    "authority-bias": "Remember that robes do not make a sage; question the source.",
+    "availability-heuristic": "Look beyond vivid images to the static truth told by data.",
+    "anchoring-bias": "Define your center before the world attempts to move you.",
+    "dunning-kruger": "The more you know, the more you realize the vastness of the unknown world.",
+    "survivorship_bias": "Walk through the graveyard of failures to see the true map of the world."
+  },
+  "title": "Shadows of Cognition",
+  "badge": "Psychological Architecture",
+  "intro": "Uncover the mental shortcuts and blind spots that govern your judgment. Discover the patterns hidden within your perception.",
+  "profile": "My Cognitive Metrics",
+  "remedy": "The Path Toward Clarity"
+}

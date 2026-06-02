@@ -1,0 +1,42 @@
+{
+  "title": "Analyse Saju Personnelle",
+  "description": "Découvrez vos piliers astrologiques.",
+  "inputs": {
+    "birthDate": "Date de Naissance",
+    "birthTime": "Heure de Naissance",
+    "calculate": "Calculer"
+  },
+  "result": {
+    "title": "ton Analyse du Destin",
+    "description": "Conception d'un miroir qui reflète ta véritable essence...",
+    "time": "Pilier de l'Heure",
+    "day": "Pilier du Jour",
+    "month": "Pilier du Mois",
+    "year": "Pilier de l'Année",
+    "fiveElements": "Analyse des Cinq Éléments"
+  },
+  "meta": {
+    "title": "ton Analyse du Destin",
+    "description": "Conception d'un miroir qui reflète ta véritable essence...",
+    "keywords": "saju, quatre piliers, destin, divination, astrologie coréenne"
+  },
+  "hero": {
+    "title": "ton Analyse du Destin",
+    "subtitle": "Comprenez ton chemin de vie grâce à la sagesse ancienne",
+    "cta": "Découvrir Mon Destin",
+    "badge": "🔮 Sagesse Traditionnelle"
+  },
+  "test": {
+    "insightBullets": [
+      "Comprendre le but de votre vie",
+      "Découvrez vos atouts",
+      "Apprenez-en davantage sur votre destin"
+    ],
+    "progress": "Progrès",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Envoyer",
+    "loading": "Analyse de ton destin...",
+    "selectOption": "Sélectionner"
+  }
+}

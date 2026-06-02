@@ -1,0 +1,112 @@
+{
+  "habitAssistant": {
+    "meta": {
+      "hero": {
+        "subtitle": "Which approach works best for your personality?",
+        "badge": "🎯 Behavior Science"
+      },
+      "keywords": "keywords, tags, seo",
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "hero": {
+      "subtitle": "Which approach works best for your personality?",
+      "cta": "自分の習慣スタイルを見つける",
+      "badge": "🎯 行動科学",
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🏆",
+          "title": "より高い成功率",
+          "description": "より良い結果を得るために、自分の自然な傾向に合った戦略を使用してください"
+        },
+        {
+          "icon": "⚡",
+          "title": "より速い進歩",
+          "description": "自分の性格タイプに適した方法を使用して、試行錯誤を避ける"
+        },
+        {
+          "icon": "💪",
+          "title": "持続可能な変化",
+          "description": "自然なパターンに逆らうのではなく、自然なパターンに合わせて取り組むことで、定着する習慣を築きましょう"
+        },
+        {
+          "icon": "🎯",
+          "title": "パーソナライズされた戦略",
+          "description": "自分のタイプに合った具体的なテクニック、タイミング、モチベーションの上げ方を知る"
+        }
+      ],
+      "subtitle": "Which approach works best for your personality?"
+    },
+    "types": {
+      "methodical": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "social": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "flexible": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "reward_driven": {
+        "name": "The Intuitive Integrator",
+        "emoji": "💡"
+      },
+      "intuitive": {
+        "name": "直感的なインテグレーター",
+        "emoji": "💡"
+      },
+      "subtitle": "Which approach works best for your personality?"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "1": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "2": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "3": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        },
+        "4": {
+          "question": "What is your unique core frequency?",
+          "answer": "Your unique perspective shapes your reality."
+        }
+      },
+      "title": "My Insights"
+    },
+    "frequency": {
+      "label": "Prio",
+      "daily": "毎日",
+      "weekly": "毎週"
+    },
+    "priority": {
+      "label": "プリオ",
+      "low": "低い",
+      "medium": "と",
+      "high": "高い"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Comprehensive analysis and insights"
+    },
+    "title": "My Insights",
+    "description": "Comprehensive analysis and insights",
+    "keywords": "keywords, tags, seo",
+    "submit": "提出する"
+  }
+}

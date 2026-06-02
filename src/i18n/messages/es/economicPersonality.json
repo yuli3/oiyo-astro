@@ -1,0 +1,591 @@
+{
+  "economicPersonality": {
+    "meta": {
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "keywords": "financial personality, money management, budgeting, spending habits, financial wellness"
+    },
+    "hero": {
+      "subtitle": "Discover your money personality",
+      "cta": "Start Test",
+      "badge": "💰 2025 Must-Take Finance Test",
+      "time": "⏱️ Takes 2 minutes",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "types": {
+      "spender": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "saver": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "investor": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "balanced": {
+        "name": "Perfect Harmony",
+        "tagline": "Virtue of moderation",
+        "emoji": "⚖️"
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🧠",
+          "title": "Patrones de comportamiento",
+          "description": "Comprenda la psicología detrás de los factores desencadenantes de sus gastos.",
+          "question": "¿Por qué compro?",
+          "answer": "A menudo es emotivo."
+        },
+        {
+          "icon": "💰",
+          "title": "Potencial de ahorro",
+          "description": "Identifique pequeñas fugas que agoten su presupuesto mensual.",
+          "question": "¿Dónde está mi dinero?",
+          "answer": "Los pequeños hábitos se acumulan."
+        },
+        {
+          "icon": "📈",
+          "title": "Estilo de inversión",
+          "description": "Descubra si usted es un tomador de riesgos o un buscador de seguridad.",
+          "question": "¿Empezar a invertir?",
+          "answer": "Conozca su tolerancia."
+        }
+      ],
+      "benefit1": "📊 Your scores across 4 economic tendencies",
+      "benefit2": "💰 Type-specific financial strategies",
+      "benefit3": "⚠️ Hábitos financieros a tener en cuenta",
+      "benefit4": "🎯 3 actionable implementation plans",
+      "benefit5": "🔄 Compatibilidad con otros tipos",
+      "title": "Awaiting deep synthesis..."
+    },
+    "cta": {
+      "button": "Start Free Test",
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis..."
+    },
+    "priority": {
+      "high": "High",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "category": {
+      "saving": "Saving",
+      "investing": "Investing",
+      "spending": "Spending",
+      "education": "Education",
+      "protection": "Risk"
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo navegas por las corrientes de la vida?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        }
+      ],
+      "title": "Awaiting deep synthesis...",
+      "question1": "How do you navigate life's currents?",
+      "answer1": "You possess an intuitive compass that points toward growth.",
+      "question2": "How do you navigate life's currents?",
+      "answer2": "Inner harmony guides your everyday actions.",
+      "question3": "What is your unique core frequency?",
+      "answer3": "Inner harmony guides your everyday actions.",
+      "question4": "How do you navigate life's currents?",
+      "answer4": "Your unique perspective shapes your reality."
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🚀",
+          "title": "Información premium",
+          "description": "Explora la arquitectura profunda de tu paisaje interior.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "La armonía interior guía tus acciones cotidianas."
+        },
+        {
+          "icon": "💡",
+          "title": "Información premium",
+          "description": "Descubre los patrones únicos que definen tu camino.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Tu perspectiva única da forma a tu realidad."
+        },
+        {
+          "icon": "🎯",
+          "title": "Información premium",
+          "description": "Revela las capas ocultas de tu filosofía personal.",
+          "question": "¿Cómo responde tu alma a lo desconocido?",
+          "answer": "Posees una brújula intuitiva que apunta hacia el crecimiento."
+        },
+        {
+          "icon": "🔥",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Qué impulsa tu mundo interior?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        },
+        {
+          "icon": "⭐",
+          "title": "Información premium",
+          "description": "Mapeando la constelación de tu verdadero yo.",
+          "question": "¿Cuál es su frecuencia central única?",
+          "answer": "Las pequeñas decisiones se acumulan hasta convertirse en un gran destino."
+        }
+      ],
+      "feature1": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "feature2": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "feature3": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "feature4": {
+        "title": "Awaiting deep synthesis...",
+        "description": "Awaiting deep synthesis..."
+      },
+      "title": "Awaiting deep synthesis..."
+    },
+    "test": {
+      "insightBullets": [
+        "Análisis del comportamiento financiero",
+        "Evaluación del apetito de riesgo",
+        "Estrategias de ahorro personalizadas"
+      ],
+      "questions": [
+        {
+          "id": "q1",
+          "question": "¿Qué haces primero cuando te pagan?",
+          "options": {
+            "a": "Primero transfiera una cantidad fija a una cuenta de ahorros",
+            "b": "Comprar algo que quería de inmediato",
+            "c": "Deposite en una cuenta de inversión y esté atento a las oportunidades",
+            "d": "Asignar a gastos de manutención, ahorros e inversiones según lo planeado."
+          }
+        },
+        {
+          "id": "q2",
+          "question": "¿Si de repente recibes 500.000 wones (unos 400 dólares)?",
+          "options": {
+            "a": "comprar algo que siempre quise",
+            "b": "Ponlo todo en el fondo de emergencia.",
+            "c": "Invertir en acciones o fondos",
+            "d": "Gasta algo, ahorra/invierte el resto"
+          }
+        },
+        {
+          "id": "q3",
+          "question": "¿Qué opinas sobre la gestión financiera?",
+          "options": {
+            "a": "¡El dinero está para gastarlo! YOLO",
+            "b": "Los depósitos bancarios seguros son los mejores",
+            "c": "Estudia e invierte: el dinero hace dinero",
+            "d": "Disfruta la vida, pero prepárate para el futuro."
+          }
+        },
+        {
+          "id": "q4",
+          "question": "El café diario cuesta 5.000 wones, ¡es decir, 150.000 wones al mes!",
+          "options": {
+            "a": "¡El café es mi felicidad! sigue bebiendo",
+            "b": "Pasa a hacer café en casa",
+            "c": "Invierte esos 150.000 wones mensuales",
+            "d": "Reducir a 2-3 veces por semana, guardar el resto"
+          }
+        },
+        {
+          "id": "q5",
+          "question": "¿Cuál es su objetivo financiero?",
+          "options": {
+            "a": "¡Disfruta el momento presente! El futuro viene después",
+            "b": "Ahorre al menos 100 millones de wones para tener una vida estable",
+            "c": "¡Logra la libertad financiera! hacer que el dinero funcione",
+            "d": "Ahorre moderadamente manteniendo la calidad de vida"
+          }
+        },
+        {
+          "id": "q6",
+          "question": "¿Qué opinas de las cuotas con tarjeta de crédito?",
+          "options": {
+            "a": "Úselo con frecuencia. Puedo comprar sin tener dinero ahora.",
+            "b": "Nunca lo use. El interés es un desperdicio",
+            "c": "Utilice únicamente cuotas con 0% de interés estratégicamente",
+            "d": "Utilice cuotas del 0% solo para compras grandes"
+          }
+        },
+        {
+          "id": "q7",
+          "question": "¿Cuál es su actitud hacia la educación financiera?",
+          "options": {
+            "a": "No interesado. Prefiero pasar tiempo divirtiéndose",
+            "b": "Solo verifique las tasas de interés de los depósitos",
+            "c": "Aprenda activamente a través de YouTube, libros y seminarios.",
+            "d": "Buscar lo que necesito y practicar"
+          }
+        },
+        {
+          "id": "q8",
+          "question": "¿Dinero de regalo de boda para una amiga?",
+          "options": {
+            "a": "¡Más de 100.000 ganados! es una vez en la vida",
+            "b": "¡Cantidad mínima! yo también estoy luchando",
+            "c": "Calcular basado en la relación, dar exactamente",
+            "d": "Siga la tasa general del mercado"
+          }
+        },
+        {
+          "id": "q9",
+          "question": "¿Cuál es su plan para ser propietario de una casa?",
+          "options": {
+            "a": "El alquiler mensual es cómodo. no quiero prestamos",
+            "b": "Ahorre lentamente y compre con efectivo",
+            "c": "Genere capital inicial a través de inversiones, utilice el apalancamiento",
+            "d": "Prepárate sistemáticamente con ahorro + inversión"
+          }
+        },
+        {
+          "id": "q10",
+          "question": "¿Si de repente necesitas una gran suma de dinero?",
+          "options": {
+            "a": "¡Pánico! No hay fondo de emergencia, es necesario pedir prestado",
+            "b": "Retirar del fondo de emergencia",
+            "c": "Vender parte de los activos de inversión.",
+            "d": "Resolver combinando fondo de emergencia y activos líquidos"
+          }
+        }
+      ],
+      "progress": "Question {current} of {total}",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Entregar",
+      "loading": "Analyzing your financial behavior pattern...",
+      "selectOption": "Select an option",
+      "subtitle": "Descubre tu personalidad monetaria"
+    },
+    "result": {
+      "recommendations": {
+        "spender": [
+          {
+            "category": "ahorro",
+            "priority": "high",
+            "title": "Iniciar ahorro forzado con transferencia automática",
+            "description": "Configure una transferencia automática a una cuenta de ahorros el día de pago para ahorrar antes de tener la oportunidad de gastar.",
+            "steps": [
+              "Configurar la transferencia automática del salario a la cuenta de ahorros",
+              "Comience con el 10% de sus ingresos mensuales",
+              "Aumentar al 15% después de 3 meses, 20% después de 6 meses"
+            ],
+            "benefit": "Lograr un ahorro de al menos el 15% del salario anual después de 1 año."
+          },
+          {
+            "category": "gasto",
+            "priority": "high",
+            "title": "Establecer prioridades de gasto",
+            "description": "Cree una regla de espera de 24 horas antes de cualquier compra no esencial para reducir las compras impulsivas.",
+            "steps": [
+              "Agregue artículos al carrito y espere 24 horas",
+              "Califica necesidad (1-10) y satisfacción (1-10)",
+              "Compre solo si la puntuación total es 15+"
+            ],
+            "benefit": "Reducción del 50% en compras impulsivas"
+          }
+        ],
+        "saver": [
+          {
+            "category": "invertir",
+            "priority": "high",
+            "title": "Comience con pequeñas inversiones",
+            "description": "Los ahorros por sí solos no pueden vencer a la inflación. Comience con productos de inversión de bajo riesgo para hacer crecer su patrimonio.",
+            "steps": [
+              "Invertir el 10% de los ahorros en fondos de bajo riesgo",
+              "Comience con ETF o fondos indexados",
+              "Incrementar el ratio de inversión en un 5% cada 3 meses."
+            ],
+            "benefit": "Espere un rendimiento anual del 4-6% a largo plazo"
+          },
+          {
+            "category": "gasto",
+            "priority": "medio",
+            "title": "Gasto para calidad de vida",
+            "description": "La frugalidad excesiva reduce la calidad de vida. Invierta en experiencias y autorrecompensa.",
+            "steps": [
+              "Destinar el 5% del presupuesto mensual a experiencias/hobbies",
+              "Sal a cenar con tus seres queridos trimestralmente",
+              "Presupuesto de viaje anual seguro"
+            ],
+            "benefit": "Mayor felicidad y prevención del agotamiento."
+          }
+        ],
+        "investor": [
+          {
+            "category": "protección",
+            "priority": "high",
+            "title": "Fondo de Emergencia Seguro",
+            "description": "Los activos de inversión por sí solos no pueden hacer frente a gastos repentinos. Mantener liquidez por seguridad.",
+            "steps": [
+              "Mantenga 6 meses de gastos de subsistencia en una cuenta accesible",
+              "Nunca inviertas tu fondo de emergencia",
+              "Reponer inmediatamente después de su uso"
+            ],
+            "benefit": "Respuesta estable ante situaciones inesperadas."
+          },
+          {
+            "category": "invertir",
+            "priority": "medio",
+            "title": "Fortalecer la gestión de riesgos",
+            "description": "Utilice principios de diversificación y limitación de pérdidas para proteger su cartera en crecimiento.",
+            "steps": [
+              "No invertir más del 10% en un activo",
+              "Stop-loss automático con pérdida del -20%",
+              "Reequilibre periódicamente su cartera"
+            ],
+            "benefit": "Prevención de pérdidas importantes y rentabilidad estable"
+          }
+        ],
+        "balanced": [
+          {
+            "category": "educación",
+            "priority": "medio",
+            "title": "Actualizar conocimientos financieros",
+            "description": "Mantener una cartera equilibrada requiere un aprendizaje continuo en un mercado cambiante.",
+            "steps": [
+              "Vea YouTube/podcasts sobre finanzas mensualmente",
+              "Revisar el estado financiero trimestralmente",
+              "Consultar a un experto anualmente"
+            ],
+            "benefit": "Manténgase actualizado con las tendencias y optimice los retornos"
+          }
+        ]
+      },
+      "habitData": {
+        "spender": [
+          {
+            "habit": "Compra nuevos productos inmediatamente",
+            "impact": "negativa",
+            "tip": "Reconsidera si todavía lo quieres después de una semana"
+          },
+          {
+            "habit": "Utilice activamente cupones de descuento",
+            "impact": "positiva",
+            "tip": "Instale aplicaciones de cupones y verifique antes de comprar"
+          }
+        ],
+        "saver": [
+          {
+            "habit": "Ahorre una cantidad fija mensual",
+            "impact": "positiva",
+            "tip": "Configurar la transferencia automática lo hace más seguro"
+          },
+          {
+            "habit": "Estrés por ahorrar incluso en las necesidades",
+            "impact": "negativa",
+            "tip": "Utilice el 5% del presupuesto mensual para autorecompensa"
+          }
+        ],
+        "investor": [
+          {
+            "habit": "Consulta diariamente las noticias económicas.",
+            "impact": "positiva",
+            "tip": "Suscríbase a boletines informativos para obtener información eficaz"
+          },
+          {
+            "habit": "Obsesionarse con las ganancias a corto plazo",
+            "impact": "negativa",
+            "tip": "Establecer y seguir principios de inversión a largo plazo."
+          }
+        ],
+        "balanced": [
+          {
+            "habit": "Revisar periódicamente los ingresos y gastos.",
+            "impact": "positiva",
+            "tip": "Usar una aplicación de presupuesto es más conveniente"
+          },
+          {
+            "habit": "Establecer objetivos pero bajo índice de consecución",
+            "impact": "neutral",
+            "tip": "Establecer objetivos específicos y medibles"
+          }
+        ]
+      },
+      "warningData": {
+        "extremeSpender": "La tendencia al gasto es muy alta. Recomendamos encarecidamente un plan de ahorro mínimo.",
+        "extremeSaver": "La tasa de ahorro es muy alta. Considere inversiones para protegerse contra la inflación.",
+        "extremeInvestor": "El ratio de inversión es muy alto. Por favor verifique su fondo de emergencia y gestión de riesgos.",
+        "underspending": "Disfrutar del presente también es importante. Considere un consumo adecuado."
+      },
+      "compatibility": {
+        "spender": {
+          "spender": {
+            "score": 60,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 70,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 65,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "saver": {
+          "spender": {
+            "score": 70,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 90,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 80,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "investor": {
+          "spender": {
+            "score": 65,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 80,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 75,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          }
+        },
+        "balanced": {
+          "spender": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "saver": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "investor": {
+            "score": 85,
+            "name": "Perfect Harmony",
+            "tip": "Achieve ideal management with mutual respect."
+          },
+          "balanced": {
+            "score": 95,
+            "name": "Armonía perfecta",
+            "tip": "Lograr una gestión ideal con respeto mutuo."
+          }
+        },
+        "scoreLabel": "Puntuación de compatibilidad"
+      },
+      "title": "Awaiting deep synthesis...",
+      "description": "Awaiting deep synthesis...",
+      "loading": "Analizando su patrón de comportamiento financiero...",
+      "scoreBreakdown": "Desglose de puntuación",
+      "yourScore": "Tu puntuación",
+      "strengths": "Fortalezas distintivas",
+      "weaknesses": "Oportunidades de crecimiento",
+      "actionSteps": "Pasos de acción",
+      "habits": "Hábitos financieros",
+      "warnings": "Advertencias del consejero",
+      "compatibilityTitle": "Armonía financiera",
+      "compatibilityDesc": "Cómo su personalidad financiera resuena con los demás.",
+      "downloadPDF": "Descargar Informe",
+      "share": "Compartir resultado",
+      "retake": "Volver a tomar la prueba",
+      "home": "Hogar",
+      "linkCopied": "¡Enlace copiado al portapapeles!",
+      "shareTitle": "Mi personalidad financiera: {tipo}",
+      "shareText": "¡Descubrí mi personalidad financiera! Consulta el tuyo aquí."
+    },
+    "Failed to download image": {
+      "Please try again": {
+        "": "panel"
+      }
+    },
+    "title": "Awaiting deep synthesis...",
+    "description": "Awaiting deep synthesis..."
+  }
+}

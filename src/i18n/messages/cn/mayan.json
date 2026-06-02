@@ -1,0 +1,230 @@
+{
+  "systemName": "玛雅梦语",
+  "narrative": "星系同步",
+  "solarSeal": "太阳图腾",
+  "tone": "银河调性",
+  "title": "玛雅历",
+  "description": "基于梦语历/卓尔金历的星系印记。",
+  "toneOf": "{power}之力",
+  "kin": "亲{亲}",
+  "ariaLabel": "玛雅Kin：{tone}调性的{essence}，{seal}。",
+  "affirmation": "我为了{sealAction}而{tonePower}。我以{toneEssence}的{toneName}调性封印{sealEssence}的{sealOutput}。",
+  "daily_wisdom": {
+    "intro": "根据玛雅历，今天是{title}的日子。请专注于{keyword}。"
+  },
+  "tones": {
+    "magnetic": {
+      "name": "磁性",
+      "essence": "目的",
+      "power": "统一",
+      "action": "吸引"
+    },
+    "lunar": {
+      "name": "月亮",
+      "essence": "挑战",
+      "power": "极化",
+      "action": "稳定"
+    },
+    "electric": {
+      "name": "电力",
+      "essence": "服务",
+      "power": "激活",
+      "action": "结合"
+    },
+    "selfExisting": {
+      "name": "自我存在",
+      "essence": "形式",
+      "power": "定义",
+      "action": "测量"
+    },
+    "overtone": {
+      "name": "泛音",
+      "essence": "光辉",
+      "power": "赋能",
+      "action": "指挥"
+    },
+    "rhythmic": {
+      "name": "韵律",
+      "essence": "平等",
+      "power": "组织",
+      "action": "平衡"
+    },
+    "resonant": {
+      "name": "共鸣",
+      "essence": "调谐",
+      "power": "通道",
+      "action": "启发"
+    },
+    "galactic": {
+      "name": "银河",
+      "essence": "完整性",
+      "power": "和谐",
+      "action": "示范"
+    },
+    "solar": {
+      "name": "太阳",
+      "essence": "意图",
+      "power": "脉动",
+      "action": "实现"
+    },
+    "planetary": {
+      "name": "行星",
+      "essence": "显化",
+      "power": "完美",
+      "action": "产生"
+    },
+    "spectral": {
+      "name": "光谱",
+      "essence": "解放",
+      "power": "溶解",
+      "action": "释放"
+    },
+    "crystal": {
+      "name": "水晶",
+      "essence": "合作",
+      "power": "奉献",
+      "action": "普遍化"
+    },
+    "cosmic": {
+      "name": "宇宙",
+      "essence": "临在",
+      "power": "坚持",
+      "action": "超越"
+    }
+  },
+  "seals": {
+    "dragon": {
+      "name": "龙",
+      "essence": "存在",
+      "power": "养育",
+      "action": "诞生"
+    },
+    "wind": {
+      "name": "风",
+      "essence": "灵魂",
+      "power": "传达",
+      "action": "呼吸"
+    },
+    "night": {
+      "name": "夜",
+      "essence": "丰盛",
+      "power": "梦想",
+      "action": "直觉"
+    },
+    "seed": {
+      "name": "种子",
+      "essence": "开花",
+      "power": "瞄准",
+      "action": "觉知"
+    },
+    "serpent": {
+      "name": "蛇",
+      "essence": "生命力",
+      "power": "生存",
+      "action": "本能"
+    },
+    "worldbridger": {
+      "name": "世界桥",
+      "essence": "机会",
+      "power": "平衡",
+      "action": "死亡"
+    },
+    "hand": {
+      "name": "手",
+      "essence": "成就",
+      "power": "知道",
+      "action": "疗愈"
+    },
+    "star": {
+      "name": "星",
+      "essence": "优雅",
+      "power": "美化",
+      "action": "艺术"
+    },
+    "moon": {
+      "name": "月",
+      "essence": "宇宙之水",
+      "power": "净化",
+      "action": "流动"
+    },
+    "dog": {
+      "name": "狗",
+      "essence": "忠诚",
+      "power": "爱",
+      "action": "心"
+    },
+    "monkey": {
+      "name": "猴",
+      "essence": "幻象",
+      "power": "玩耍",
+      "action": "魔法"
+    },
+    "human": {
+      "name": "人",
+      "essence": "智慧",
+      "power": "影响",
+      "action": "自由意志"
+    },
+    "skywalker": {
+      "name": "天行者",
+      "essence": "觉醒",
+      "power": "探索",
+      "action": "空间"
+    },
+    "wizard": {
+      "name": "巫师",
+      "essence": "接纳",
+      "power": "施法",
+      "action": "永恒"
+    },
+    "eagle": {
+      "name": "鹰",
+      "essence": "心智",
+      "power": "创造",
+      "action": "远见"
+    },
+    "warrior": {
+      "name": "战士",
+      "essence": "无畏",
+      "power": "质问",
+      "action": "智慧"
+    },
+    "earth": {
+      "name": "地球",
+      "essence": "共时性",
+      "power": "进化",
+      "action": "导航"
+    },
+    "mirror": {
+      "name": "镜",
+      "essence": "秩序",
+      "power": "反映",
+      "action": "无限"
+    },
+    "storm": {
+      "name": "风暴",
+      "essence": "自我生成",
+      "power": "催化",
+      "action": "能量"
+    },
+    "sun": {
+      "name": "太阳",
+      "essence": "宇宙之火",
+      "power": "开悟",
+      "action": "生命"
+    }
+  },
+  "void": "这一天是无时间的。你是你自己宇宙的中心。",
+  "mayan": {
+    "systemName": "玛雅星际曼陀罗",
+    "narrative": "银河同步",
+    "solarSeal": "太阳印记",
+    "tone": "银河音调"
+  },
+  "celtic": {
+    "systemName": "凯尔特树木星座",
+    "narrative": "树木的智慧",
+    "treeSign": "树木星座",
+    "ogham": "欧甘字母"
+  }
+}

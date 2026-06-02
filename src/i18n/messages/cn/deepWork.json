@@ -1,0 +1,207 @@
+{
+  "deepWork": {
+    "noData": {
+      "desc": "Detailed analysis and insights for your journey.",
+      "button": "Start Assessment",
+      "title": "Your Productivity Profile"
+    },
+    "modes": {
+      "work": "Work",
+      "break": "Break"
+    },
+    "timerComplete": {
+      "work": "Work",
+      "break": "Break"
+    },
+    "typeLabels": {
+      "structured_planner": "You thrive on structure. Stick to the standard {work}min focus / {break}min break routine.",
+      "deep_diver": "You have high stamina. Go deep for {work}mins, then completely disconnect for {break}mins.",
+      "rhythmic_sprinter": "Short and punchy! The {work}min sprint (Pomodoro) beats your procrastination.",
+      "creative_explorer": "Don't interrupt the flow. Explore for {work}mins, then let your mind wander for {break}mins.",
+      "flexible_adapter": "Stay flexible. {work}mins is your baseline, but switch to a {break}min break if you lose flow.",
+      "social_collaborator": "You thrive on connection. Focus for {work}mins with a body-double or co-working video, then chat for {break}mins."
+    },
+    "types": {
+      "structured_planner": "You thrive on structure. Stick to the standard {work}min focus / {break}min break routine.",
+      "deep_diver": "You have high stamina. Go deep for {work}mins, then completely disconnect for {break}mins.",
+      "rhythmic_sprinter": "Short and punchy! The {work}min sprint (Pomodoro) beats your procrastination.",
+      "creative_explorer": "Don't interrupt the flow. Explore for {work}mins, then let your mind wander for {break}mins.",
+      "flexible_adapter": "Stay flexible. {work}mins is your baseline, but switch to a {break}min break if you lose flow.",
+      "social_collaborator": "You thrive on connection. Focus for {work}mins with a body-double or co-working video, then chat for {break}mins."
+    },
+    "prescriptions": {
+      "structured_planner": "You thrive on structure. Stick to the standard {work}min focus / {break}min break routine.",
+      "deep_diver": "You have high stamina. Go deep for {work}mins, then completely disconnect for {break}mins.",
+      "rhythmic_sprinter": "Short and punchy! The {work}min sprint (Pomodoro) beats your procrastination.",
+      "creative_explorer": "Don't interrupt the flow. Explore for {work}mins, then let your mind wander for {break}mins.",
+      "flexible_adapter": "Stay flexible. {work}mins is your baseline, but switch to a {break}min break if you lose flow.",
+      "social_collaborator": "You thrive on connection. Focus for {work}mins with a body-double or co-working video, then chat for {break}mins."
+    },
+    "meta": {
+      "subtitle": "Timer optimized for your brain type",
+      "disclaimer": "Audio alerts may play. Adjust volume in quiet environments.",
+      "title": "Your Productivity Profile",
+      "description": "Explore our suite of tools designed for deep productivity insights.",
+      "keywords": "productivity, work efficiency, time management, focus, work habits"
+    },
+    "test": {
+      "insightBullets": ["标志性强度", "枢轴点", "2"],
+      "progress": "Progress",
+      "submit": "Submit",
+      "loading": "Polishing the lens on your personal perspective...",
+      "selectOption": "Select Option",
+      "subtitle": "Timer optimized for your brain type",
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "小小的选择累积成伟大的命运。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "小小的选择累积成伟大的命运。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "绘制最真实自我的星座图。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "🚀",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "内在的和谐指导着你的日常行动。"
+        },
+        {
+          "icon": "💡",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你独特的核心频率是多少？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        },
+        {
+          "icon": "🎯",
+          "title": "高级洞察力",
+          "description": "揭开你个人哲学的隐藏层。",
+          "question": "是什么驱动着你的内心世界？",
+          "answer": "内在的和谐指导着你的日常行为。"
+        },
+        {
+          "icon": "🔥",
+          "title": "高级洞察力",
+          "description": "发现定义您的道路的独特模式。",
+          "question": "你的灵魂对未知有何反应？",
+          "answer": "你独特的视角塑造了你的现实。"
+        },
+        {
+          "icon": "⭐",
+          "title": "高级洞察力",
+          "description": "探索你内心景观的深层架构。",
+          "question": "你如何驾驭生活的潮流？",
+          "answer": "你拥有一个指向成长的直觉指南针。"
+        }
+      ]
+    },
+    "result": {
+      "title": "Your Productivity Profile",
+      "description": "Explore our suite of tools designed for deep productivity insights."
+    },
+    "subtitle": "针对您的大脑类型优化的计时器",
+    "yourType": "Your Type",
+    "retest": "Retest",
+    "title": "Your Productivity Profile",
+    "prescriptionTitle": "Prescription Title",
+    "disclaimer": "Audio alerts may play. Adjust volume in quiet environments.",
+    "description": "Explore our suite of tools designed for deep productivity insights."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "classifications": {
+    "Master Artisan": "마스터 장인",
+    "Grinder": "분쇄기",
+    "Tortured Critic": "고문받는 비평가",
+    "Free Spirit": "자유로운 영혼"
+  },
+  "title": "완벽주의 유형",
+  "badge": "완벽주의",
+  "adaptive": "적응형",
+  "maladaptive": "부적응",
+  "restart": "다시 시작",
+  "save": "결과 저장"
+}

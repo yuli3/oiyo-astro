@@ -1,0 +1,207 @@
+{
+  "deepWork": {
+    "noData": {
+      "desc": "Detailed analysis and insights for your journey.",
+      "button": "Start Assessment",
+      "title": "Your Productivity Profile"
+    },
+    "modes": {
+      "work": "Work",
+      "break": "Break"
+    },
+    "timerComplete": {
+      "work": "Work",
+      "break": "Break"
+    },
+    "typeLabels": {
+      "structured_planner": "You thrive on structure. Stick to the standard {work}min focus / {break}min break routine.",
+      "deep_diver": "You have high stamina. Go deep for {work}mins, then completely disconnect for {break}mins.",
+      "rhythmic_sprinter": "Short and punchy! The {work}min sprint (Pomodoro) beats your procrastination.",
+      "creative_explorer": "Don't interrupt the flow. Explore for {work}mins, then let your mind wander for {break}mins.",
+      "flexible_adapter": "Stay flexible. {work}mins is your baseline, but switch to a {break}min break if you lose flow.",
+      "social_collaborator": "You thrive on connection. Focus for {work}mins with a body-double or co-working video, then chat for {break}mins."
+    },
+    "types": {
+      "structured_planner": "You thrive on structure. Stick to the standard {work}min focus / {break}min break routine.",
+      "deep_diver": "You have high stamina. Go deep for {work}mins, then completely disconnect for {break}mins.",
+      "rhythmic_sprinter": "Short and punchy! The {work}min sprint (Pomodoro) beats your procrastination.",
+      "creative_explorer": "Don't interrupt the flow. Explore for {work}mins, then let your mind wander for {break}mins.",
+      "flexible_adapter": "Stay flexible. {work}mins is your baseline, but switch to a {break}min break if you lose flow.",
+      "social_collaborator": "You thrive on connection. Focus for {work}mins with a body-double or co-working video, then chat for {break}mins."
+    },
+    "prescriptions": {
+      "structured_planner": "You thrive on structure. Stick to the standard {work}min focus / {break}min break routine.",
+      "deep_diver": "You have high stamina. Go deep for {work}mins, then completely disconnect for {break}mins.",
+      "rhythmic_sprinter": "Short and punchy! The {work}min sprint (Pomodoro) beats your procrastination.",
+      "creative_explorer": "Don't interrupt the flow. Explore for {work}mins, then let your mind wander for {break}mins.",
+      "flexible_adapter": "Stay flexible. {work}mins is your baseline, but switch to a {break}min break if you lose flow.",
+      "social_collaborator": "You thrive on connection. Focus for {work}mins with a body-double or co-working video, then chat for {break}mins."
+    },
+    "meta": {
+      "subtitle": "Timer optimized for your brain type",
+      "disclaimer": "Audio alerts may play. Adjust volume in quiet environments.",
+      "title": "Your Productivity Profile",
+      "description": "Explore our suite of tools designed for deep productivity insights.",
+      "keywords": "productivity, work efficiency, time management, focus, work habits"
+    },
+    "test": {
+      "insightBullets": ["署名の強度", "ピボットポイント", "2"],
+      "progress": "Progress",
+      "submit": "Submit",
+      "loading": "Polishing the lens on your personal perspective...",
+      "selectOption": "Select Option",
+      "subtitle": "Timer optimized for your brain type",
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "小さな選択が積み重なって、大きな運命が生まれる。"
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "本当の自分の星座をマッピングします。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "🚀",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "💡",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなた独自のコア周波数は何ですか?",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        },
+        {
+          "icon": "🎯",
+          "title": "プレミアムインサイト",
+          "description": "あなたの個人的な哲学の隠された層を明らかにします。",
+          "question": "何があなたの内なる世界を動かしているのでしょうか？",
+          "answer": "内なる調和があなたの毎日の行動を導きます。"
+        },
+        {
+          "icon": "🔥",
+          "title": "プレミアムインサイト",
+          "description": "自分の道を定義するユニークなパターンを見つけてください。",
+          "question": "あなたの魂は未知のものに対してどのように反応しますか？",
+          "answer": "あなたのユニークな視点があなたの現実を形作ります。"
+        },
+        {
+          "icon": "⭐",
+          "title": "プレミアムインサイト",
+          "description": "あなたの内なる風景の奥深い構造を探索してください。",
+          "question": "人生の流れをどうやって乗り越えるのですか？",
+          "answer": "あなたは成長を指し示す直観的な羅針盤を持っています。"
+        }
+      ]
+    },
+    "result": {
+      "title": "Your Productivity Profile",
+      "description": "Explore our suite of tools designed for deep productivity insights."
+    },
+    "subtitle": "脳のタイプに合わせて最適化されたタイマー",
+    "yourType": "Your Type",
+    "retest": "Retest",
+    "title": "Your Productivity Profile",
+    "prescriptionTitle": "Prescription Title",
+    "disclaimer": "Audio alerts may play. Adjust volume in quiet environments.",
+    "description": "Explore our suite of tools designed for deep productivity insights."
+  }
+}

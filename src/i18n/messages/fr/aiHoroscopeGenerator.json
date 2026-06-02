@@ -1,0 +1,26 @@
+{
+  "defaults": {
+    "luckyElement": "Une tasse de thé chaud",
+    "color": "Orange doux"
+  },
+  "fallback": {
+    "title": "Une journée précieuse, le début de liens chaleureux",
+    "prediction": "Aujourd'hui est un jour où tes sentiments sincères atteindront ceux qui vous entourent. Vous trouverez un réconfort et une force inattendus dans de petites conversations avec ton famille ou tes amis. Prenez un moment pour réfléchir sur vous-même au milieu de ton vie bien remplie.",
+    "advice": "Demandez d'abord comment vont ceux qui vous entourent. Un petit intérêt reviendra comme un grand bonheur.",
+    "luckyElement": "Une tasse de thé chaud",
+    "mood": "Douillet",
+    "color": "Orange doux"
+  },
+  "weatherTips": {
+    "sunny": "Essayez de passer du temps à sentir la chaleur du soleil. Rechargez ton énergie avec des étirements légers ou de l'air frais.",
+    "cloudy": "Une journée calme comme un nuage. Concentrez-vous calmement avec une boisson chaude.",
+    "rainy": "Conception d'un miroir qui reflète ta véritable essence...",
+    "snowy": "L'atmosphère enneigée appelle au confort. Habillez-vous chaudement et profitez de la journée à un rythme tranquille.",
+    "stormy": "Par jour de grand vent, la préparation est la stabilité. Restez vigilant et laissez de la place dans ton emploi du temps."
+  },
+  "shareOptional": {
+    "number": "🔢 Numéro Porte-bonheur : {number}",
+    "weatherTip": "☁️ Conseil Météo : {weatherTip}"
+  },
+  "shareTemplate": "{emoji} Horoscope de Personnalité du Jour {emoji}\\n\\n{title}\\n\\n{prediction}\\n\\n💡 Conseil : {advice}\\n\\n🍀 Élément Porte-bonheur : {luckyElement}\\n🎨 Couleur Porte-bonheur : {color}"
+}

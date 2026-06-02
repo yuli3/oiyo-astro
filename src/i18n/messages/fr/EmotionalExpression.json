@@ -1,0 +1,14 @@
+{
+  "meta": {
+    "title": "Style d'expression émotionnelle",
+    "description": "Découvrez ton style d'expression émotionnelle et améliorez ton communication"
+  },
+  "landing": {
+    "title": "Style d'expression émotionnelle",
+    "subtitle": "Découvrez ton façon unique d'exprimer tes sentiments",
+    "cta": "Commencer le test"
+  },
+  "result": {
+    "loading": "Chargement de tes résultats..."
+  }
+}

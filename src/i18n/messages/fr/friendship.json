@@ -1,0 +1,18 @@
+{
+  "intro": {
+    "badge": "Audit de résonance apparentée",
+    "title": "Alchimies de lien social",
+    "quote": "Débloquez le plan de vos connexions sociales. Utiliser des modèles de liens archétypaux pour cartographier la manière dont vous faites confiance, interagissez et résonnez.",
+    "startButton": "Lancer l'étalonnage"
+  },
+  "questions": {
+    "bond": "Champ de liaison"
+  },
+  "results": {
+    "profile": "Signature de liaison",
+    "vulnerability": "Noyau de sensibilité",
+    "strategy": "Directives d'intégration",
+    "restart": "Relancer l'étalonnage"
+  },
+  " ": ""
+}

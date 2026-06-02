@@ -1,0 +1,17 @@
+{
+  "foundation": {
+    "title": "基础",
+    "description": "建设阶段。",
+    "period": "早年"
+  },
+  "prime": {
+    "title": "全盛",
+    "description": "巅峰活动期。",
+    "period": "中年"
+  },
+  "wisdom": {
+    "title": "智慧",
+    "description": "回顾与反思。",
+    "period": "晚年"
+  }
+}

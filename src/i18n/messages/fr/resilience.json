@@ -1,0 +1,11 @@
+{
+  "badge": "Évaluation de la Résilience",
+  "intro": "Découvrez votre capacité à vous adapter et à rebondir.",
+  "result": {
+    "level": "Niveau de Résilience",
+    "score": "Score Actuel",
+    "profile_title": "Profil de Résilience",
+    "guidance_title": "Conseils pour la Croissance"
+  },
+  "title": "Score de Résilience"
+}

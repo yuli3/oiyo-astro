@@ -1,0 +1,61 @@
+{
+  "sephirot": {
+    "keter": {
+      "name": "玛尔库特",
+      "meaning": "王国",
+      "attribute": "行动"
+    },
+    "chokhmah": {
+      "name": "玛尔库特",
+      "meaning": "王国",
+      "attribute": "行动"
+    },
+    "binah": {
+      "name": "玛尔库特",
+      "meaning": "王国",
+      "attribute": "行动"
+    },
+    "chesed": {
+      "name": "玛尔库特",
+      "meaning": "王国",
+      "attribute": "行动"
+    },
+    "gevurah": {
+      "name": "玛尔库特",
+      "meaning": "王国",
+      "attribute": "行动"
+    },
+    "tiferet": {
+      "name": "玛尔库特",
+      "meaning": "王国",
+      "attribute": "行动"
+    },
+    "netzach": {
+      "name": "玛尔库特",
+      "meaning": "王国",
+      "attribute": "行动"
+    },
+    "hod": {
+      "name": "玛尔库特",
+      "meaning": "王国",
+      "attribute": "行动"
+    },
+    "yesod": {
+      "name": "玛尔库特",
+      "meaning": "王国",
+      "attribute": "行动"
+    },
+    "malkuth": {
+      "name": "玛尔库特",
+      "meaning": "王国",
+      "attribute": "行动"
+    }
+  },
+  "title": "卡巴拉生命之树",
+  "description": "十大质点的神秘路径。",
+  "systemName": "卡巴拉",
+  "narrative": "神圣流出",
+  "sephira": "质点",
+  "path": "路径",
+  "ariaLabel": "质点：{name}，代表{meaning}。"
+}

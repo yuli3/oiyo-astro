@@ -1,0 +1,33 @@
+{
+  "habitQuest": {
+    "quests": {
+      "mood": "Log Your Mood",
+      "mindfulness": "Practice Mindfulness",
+      "city": "Explore City Guide"
+    },
+    "meta": {
+      "keywords": "Personality analysis, self-discovery, premium insight",
+      "subtitle": "Details",
+      "disclaimer": "Disclaimer",
+      "description": "Key advice for future growth",
+      "title": "dashboard"
+    },
+    "hero": {
+      "subtitle": "Level Up Your Life",
+      "badge": "Explore the deep structures that make up your inner landscape."
+    },
+    "landing": {
+      "cta": "Begin Adventure"
+    },
+    "subtitle": "Level up your life daily",
+    "levelTitle": "Level {level} Adventurer",
+    "levelName": "Level {level}",
+    "streak": "{days} Day Streak! 🔥",
+    "nextLevelMsg": "{xp} XP needed for next level!",
+    "dailyQuests": "Daily Quests",
+    "disclaimer": "Precise analysis data proves your potential.",
+    "title": "dashboard",
+    "description": "Key advice for future growth",
+    "T": "dashboard"
+  }
+}

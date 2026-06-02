@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "title": "Blog Idea Generator",
+    "description": "Generate creative blog post ideas tailored to your interests and topics",
+    "keywords": "Blog ideas, content creation, writing, blogging, creativity"
+  },
+  "hero": {
+    "title": "Blog Idea Generator",
+    "subtitle": "Don’t worry about content ideas anymore",
+    "cta": "Generate ideas",
+    "badge": "✍️ Content creation"
+  },
+  "categories": {
+    "lifestyle": "lifestyle",
+    "technology": "technology",
+    "business": "business",
+    "health": "Health & Wellness",
+    "travel": "travel",
+    "food": "Food & Cooking"
+  },
+  "result": {
+    "title": "my blog idea",
+    "description": "Fresh content ideas tailored to your topic"
+  }
+}

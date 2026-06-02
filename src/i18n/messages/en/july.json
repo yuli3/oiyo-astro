@@ -1,0 +1,436 @@
+{
+  "day_01": {
+    "flower": {
+      "name": "fig tree",
+      "meaning": "Longevity and ancient stability"
+    },
+    "stone": {
+      "name": "emerald",
+      "meaning": "Happiness and rebirth of the soul"
+    },
+    "star": {
+      "name": "canopus",
+      "meaning": "A guide to finding a fixed point in a changing flow"
+    }
+  },
+  "day_02": {
+    "flower": {
+      "name": "snapdragon",
+      "meaning": "The inner strength that hides a burning ambition"
+    },
+    "stone": {
+      "name": "moonstone",
+      "meaning": "The mystery of feminine intuition that reflects the lunar cycle"
+    },
+    "star": {
+      "name": "Vega",
+      "meaning": "The brilliance of Jiknyeo Castle that arouses artistic desire"
+    }
+  },
+  "day_03": {
+    "flower": {
+      "name": "white poppy",
+      "meaning": "Quiet comfort of remembrance and peace"
+    },
+    "stone": {
+      "name": "Ruby (Passion)",
+      "meaning": "A pulsating flame of vitality"
+    },
+    "star": {
+      "name": "Altair",
+      "meaning": "Gyeonwooseong’s diligent ambition to soar without fear"
+    }
+  },
+  "day_04": {
+    "flower": {
+      "name": "delphinium",
+      "meaning": "A quick joy that lifts the heaviness of the soul"
+    },
+    "stone": {
+      "name": "pearl (pure)",
+      "meaning": "Wisdom gained through layers of experience"
+    },
+    "star": {
+      "name": "Deneb",
+      "meaning": "The grace of a swan sailing a heavenly river"
+    }
+  },
+  "day_05": {
+    "flower": {
+      "name": "lavender",
+      "meaning": "Silence of deep devotion and clarity"
+    },
+    "stone": {
+      "name": "alexandrite",
+      "meaning": "The Luck of Embracing Change and Duality"
+    },
+    "star": {
+      "name": "Regulus",
+      "meaning": "The King's Star, which awards the leader's crown"
+    }
+  },
+  "day_06": {
+    "flower": {
+      "name": "sunflower",
+      "meaning": "Bask in the warmth of creative energy"
+    },
+    "stone": {
+      "name": "Sad Onyx",
+      "meaning": "Enhanced Power to Protect Your Home"
+    },
+    "star": {
+      "name": "Antares",
+      "meaning": "The heart of a scorpion beats with strategic intensity"
+    }
+  },
+  "day_07": {
+    "flower": {
+      "name": "training",
+      "meaning": "A pure heart blooming in deep water"
+    },
+    "stone": {
+      "name": "onyx",
+      "meaning": "The quiet power of self-control and discipline"
+    },
+    "star": {
+      "name": "spica",
+      "meaning": "Ears of grain that promise abundance and harvest"
+    }
+  },
+  "day_08": {
+    "flower": {
+      "name": "bee yellow",
+      "meaning": "Seeking justice until balance is restored"
+    },
+    "stone": {
+      "name": "carnelian",
+      "meaning": "Creativity and courage to take bold action"
+    },
+    "star": {
+      "name": "Arcturus",
+      "meaning": "The bear keeper guides lost souls in the void."
+    }
+  },
+  "day_09": {
+    "flower": {
+      "name": "ivy geranium",
+      "meaning": "The undying bond of true friendship"
+    },
+    "stone": {
+      "name": "jade",
+      "meaning": "Eternal Wisdom and Harmony of Heaven and Earth"
+    },
+    "star": {
+      "name": "Fomalhaut",
+      "meaning": "The lonely sentinel guarding the gates of fate"
+    }
+  },
+  "day_10": {
+    "flower": {
+      "name": "Campanula",
+      "meaning": "A humble song of gratitude and loyalty"
+    },
+    "stone": {
+      "name": "tourmaline (tourmaline)",
+      "meaning": "The rainbow bridge that aligns the heart and mind"
+    },
+    "star": {
+      "name": "Rigel",
+      "meaning": "A hunter's feet strike with precision and skill."
+    }
+  },
+  "day_11": {
+    "flower": {
+      "name": "Alphodel",
+      "meaning": "Bittersweet memories that linger beyond time"
+    },
+    "stone": {
+      "name": "topaz",
+      "meaning": "Golden confidence like the midday sun"
+    },
+    "star": {
+      "name": "Dog star",
+      "meaning": "Dogstar burning with unrivaled glory and ambition"
+    }
+  },
+  "day_12": {
+    "flower": {
+      "name": "Solanum (Solanum)",
+      "meaning": "The veil of truth that hides enormous potential"
+    },
+    "stone": {
+      "name": "lapis lazuli",
+      "meaning": "Heavenly Truth and the Vision of the Inner Eye"
+    },
+    "star": {
+      "name": "Pollux",
+      "meaning": "Immortal twins who share wisdom and protection"
+    }
+  },
+  "day_13": {
+    "flower": {
+      "name": "watermelon grass",
+      "meaning": "Capturing the fleeting beauty of the present moment"
+    },
+    "stone": {
+      "name": "Chrysocolla",
+      "meaning": "A soothing voice that brings peace and strength"
+    },
+    "star": {
+      "name": "castor",
+      "meaning": "Mortal twins mastering intelligence and adaptability"
+    }
+  },
+  "day_14": {
+    "flower": {
+      "name": "phlox",
+      "meaning": "Two souls united in one purpose"
+    },
+    "stone": {
+      "name": "turquoise",
+      "meaning": "A heavenly stone that connects earth and divinity"
+    },
+    "star": {
+      "name": "bellatrix",
+      "meaning": "Amazon's Star Strikes Quickly for Victory"
+    }
+  },
+  "day_15": {
+    "flower": {
+      "name": "austrian briar roses",
+      "meaning": "Captivating simplicity that captivates"
+    },
+    "stone": {
+      "name": "jadeite",
+      "meaning": "Practical harmony of material fortune"
+    },
+    "star": {
+      "name": "Procyon",
+      "meaning": "A small dog that portends success before rising"
+    }
+  },
+  "day_16": {
+    "flower": {
+      "name": "Silk incense flower radish",
+      "meaning": "Beauty that lasts even in the fading light"
+    },
+    "stone": {
+      "name": "kunzite",
+      "meaning": "Gently unravels the knots in the heart"
+    },
+    "star": {
+      "name": "Betelgeuse",
+      "meaning": "Giant shoulders carrying the weight of cosmic change"
+    }
+  },
+  "day_17": {
+    "flower": {
+      "name": "white roses",
+      "meaning": "The sacred silence of secrets kept forever"
+    },
+    "stone": {
+      "name": "Aventurine",
+      "meaning": "The sparkle of opportunity shining amidst the green of coincidence"
+    },
+    "star": {
+      "name": "Capella",
+      "meaning": "The golden horn of a goat symbolizing divine protection"
+    }
+  },
+  "day_18": {
+    "flower": {
+      "name": "moss rose",
+      "meaning": "A confession of love whispered in the shadows"
+    },
+    "stone": {
+      "name": "Bloodstone (Bloodstone)",
+      "meaning": "A warrior's vitality flows through the veins of courage."
+    },
+    "star": {
+      "name": "dube",
+      "meaning": "The back of the Great Bear, the pillar of concentration"
+    }
+  },
+  "day_19": {
+    "flower": {
+      "name": "helmet flower",
+      "meaning": "Fatal beauty guarding the door"
+    },
+    "stone": {
+      "name": "Rhodonite",
+      "meaning": "Healing Past Wounds with Rose-Colored Grace"
+    },
+    "star": {
+      "name": "Merak",
+      "meaning": "The side of the bear that drives the desire for truth"
+    }
+  },
+  "day_20": {
+    "flower": {
+      "name": "eggplant flower",
+      "meaning": "Honesty that bears fruit without pretense"
+    },
+    "stone": {
+      "name": "Citrine (citrine)",
+      "meaning": "The condensed sunshine of optimism and wealth."
+    },
+    "star": {
+      "name": "peckda",
+      "meaning": "Bear's Thigh Preserving Ancient Knowledge"
+    }
+  },
+  "day_21": {
+    "flower": {
+      "name": "yellow roses",
+      "meaning": "The complex warmth of friendship mixed with jealousy"
+    },
+    "stone": {
+      "name": "amethyst",
+      "meaning": "Purple flame of mental clarity and transformation"
+    },
+    "star": {
+      "name": "Megrez",
+      "meaning": "The root of the tail connects wisdom to its source."
+    }
+  },
+  "day_22": {
+    "flower": {
+      "name": "gillyflower",
+      "meaning": "Refined talent blooming under the summer sun"
+    },
+    "stone": {
+      "name": "sunstone",
+      "meaning": "The Joy of Being Radiates from the Solar Plexus"
+    },
+    "star": {
+      "name": "Alios",
+      "meaning": "The black horse of intuition that guides the inner eye."
+    }
+  },
+  "day_23": {
+    "flower": {
+      "name": "solce flower",
+      "meaning": "A gloomy hope that persists even in sadness."
+    },
+    "stone": {
+      "name": "peridot",
+      "meaning": "The emerald of the evening that melts away the fears of the night"
+    },
+    "star": {
+      "name": "Mizar",
+      "meaning": "A test of eyesight to reveal your companion in the dark"
+    }
+  },
+  "day_24": {
+    "flower": {
+      "name": "Early age",
+      "meaning": "The patience of the forest waiting for the return of joy"
+    },
+    "stone": {
+      "name": "sapphire",
+      "meaning": "Heavenly Blue of Divine Order and Truth"
+    },
+    "star": {
+      "name": "Alkaid",
+      "meaning": "Leader of the mourners announcing the end of the journey"
+    }
+  },
+  "day_25": {
+    "flower": {
+      "name": "Elder",
+      "meaning": "Mercy from the Mother of Healing"
+    },
+    "stone": {
+      "name": "zircon",
+      "meaning": "The grounding brother of the diamond that fixes virtue"
+    },
+    "star": {
+      "name": "Alperac",
+      "meaning": "Head of a chained woman longing for freedom"
+    }
+  },
+  "day_26": {
+    "flower": {
+      "name": "Mugwort",
+      "meaning": "A bitter herb that brings peace of absence."
+    },
+    "stone": {
+      "name": "opal",
+      "meaning": "A fire burning in the waters of hope"
+    },
+    "star": {
+      "name": "Mirach",
+      "meaning": "A princess belt that balances beauty and acceptance."
+    }
+  },
+  "day_27": {
+    "flower": {
+      "name": "geranium",
+      "meaning": "Decisive action born of genuine love"
+    },
+    "stone": {
+      "name": "tanzanite",
+      "meaning": "High Vibration of Spiritual Transformation"
+    },
+    "star": {
+      "name": "Almark",
+      "meaning": "The princess's feet step with artistic mastery."
+    }
+  },
+  "day_28": {
+    "flower": {
+      "name": "asters",
+      "meaning": "Loyalty that embraces the diversity of life"
+    },
+    "stone": {
+      "name": "morganite",
+      "meaning": "Divine love that washes away the heart like pink water"
+    },
+    "star": {
+      "name": "Hamal",
+      "meaning": "sheep's head asserting independent power"
+    }
+  },
+  "day_29": {
+    "flower": {
+      "name": "cactus",
+      "meaning": "A heart of fire protected by thorns of patience"
+    },
+    "stone": {
+      "name": "Beryl (beryl)",
+      "meaning": "A crystalline gaze that sees through the chaos"
+    },
+    "star": {
+      "name": "Sheratan",
+      "meaning": "A sign marking the Guardian's vigilance."
+    }
+  },
+  "day_30": {
+    "flower": {
+      "name": "lime tree)",
+      "meaning": "The sacred union of souls under the cover of love"
+    },
+    "stone": {
+      "name": "obsidian",
+      "meaning": "The mirror of truth that reflects the shadow self"
+    },
+    "star": {
+      "name": "Mesazim",
+      "meaning": "The first star of sheep heralds fair order"
+    }
+  },
+  "day_31": {
+    "flower": {
+      "name": "pumpkin flower",
+      "meaning": "Great abundance ripening before harvest"
+    },
+    "stone": {
+      "name": "garnet",
+      "meaning": "The grain of truth that brightens the darkness"
+    },
+    "star": {
+      "name": "Shedir",
+      "meaning": "The queen's breasts radiate sovereignty"
+    }
+  }
+}

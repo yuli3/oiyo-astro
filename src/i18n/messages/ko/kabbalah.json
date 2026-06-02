@@ -1,0 +1,61 @@
+{
+  "sephirot": {
+    "keter": {
+      "name": "케테르",
+      "meaning": "왕관",
+      "attribute": "신성한 의지"
+    },
+    "chokhmah": {
+      "name": "초크마",
+      "meaning": "지혜",
+      "attribute": "시현"
+    },
+    "binah": {
+      "name": "비나",
+      "meaning": "이해",
+      "attribute": "추리"
+    },
+    "chesed": {
+      "name": "헤세드",
+      "meaning": "친절",
+      "attribute": "사랑"
+    },
+    "gevurah": {
+      "name": "게부라",
+      "meaning": "심각성",
+      "attribute": "심판"
+    },
+    "tiferet": {
+      "name": "티페레트",
+      "meaning": "아름다움",
+      "attribute": "동정심"
+    },
+    "netzach": {
+      "name": "네차흐",
+      "meaning": "영원",
+      "attribute": "지구력"
+    },
+    "hod": {
+      "name": "벽돌 상자",
+      "meaning": "영광",
+      "attribute": "겸손"
+    },
+    "yesod": {
+      "name": "예소드",
+      "meaning": "기반",
+      "attribute": "연결"
+    },
+    "malkuth": {
+      "name": "말쿠트",
+      "meaning": "왕권",
+      "attribute": "행동"
+    }
+  },
+  "title": "카발라 생명의 나무",
+  "description": "10개의 세피로트의 신비한 길.",
+  "systemName": "밀교",
+  "narrative": "신성한 발산",
+  "sephira": "세피라",
+  "path": "길",
+  "ariaLabel": "세피라: {이름}, {의미}를 나타냅니다."
+}

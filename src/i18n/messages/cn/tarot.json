@@ -1,0 +1,59 @@
+{
+  "meta": {
+    "title": "常见问题",
+    "description": "塔罗牌的每个花色都对应着古老的四大元素之一。",
+    "keywords": "塔罗牌, 塔罗阅读, 每日塔罗, 运势"
+  },
+  "hero": {
+    "title": "常见问题",
+    "subtitle": "发现牌组今天为您准备了什么。"
+  },
+  "benefits": {
+    "intuition": {
+      "title": "常见问题",
+      "description": "塔罗牌的每个花色都对应着古老的四大元素之一。"
+    },
+    "personality": {
+      "title": "常见问题",
+      "description": "塔罗牌的每个花色都对应着古老的四大元素之一。"
+    },
+    "guidance": {
+      "title": "常见问题",
+      "description": "塔罗牌的每个花色都对应着古老的四大元素之一。"
+    },
+    "title": "常见问题"
+  },
+  "marketing": {
+    "about": {
+      "history": {
+        "title": "常见问题",
+        "description": "塔罗牌的每个花色都对应着古老的四大元素之一。",
+        "point1": "起源于 15 世纪的欧洲",
+        "point2": "演变为神秘学的应用",
+        "point3": "现代心理学解读"
+      },
+      "elements": {
+        "title": "常见问题",
+        "description": "塔罗牌的每个花色都对应着古老的四大元素之一。",
+        "fire": "权杖（火）",
+        "water": "圣杯（水）",
+        "air": "宝剑（风）",
+        "earth": "星币（土）"
+      },
+      "title": "常见问题"
+    }
+  },
+  "faq": {
+    "title": "常见问题",
+    "question1": "AI 塔罗牌有多准？",
+    "answer1": "它基于传统含义和現代模式提供现代解读。",
+    "question2": "我可以帮别人算吗？",
+    "answer2": "可以，但建议首先先为自己占卜，以确保能量清晰。",
+    "question3": "我应该多久算一次？",
+    "answer3": "每当您觉得需要新的视角或指引时。",
+    "question4": "抽牌是随机的吗？",
+    "answer4": "算法确保每次抽牌的公正性和多样性。"
+  },
+  "accuracy": "神秘",
+  "duration": "时长：不限"
+}

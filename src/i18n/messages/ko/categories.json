@@ -1,0 +1,20 @@
+{
+  "payment": "결제 문제",
+  "account": "계정 도움말",
+  "technical": "기술지원",
+  "feature_request": "기능 요청",
+  "general": "일반문의",
+  "ALL": "모든 카테고리",
+  "title": "카테고리",
+  "progressLabel": "진전",
+  "all": "모두",
+  "viral": "🔥 바이럴",
+  "finance": "돈",
+  "career": "직업",
+  "mental": "정신",
+  "love": "사랑",
+  "labor": "일하다",
+  "living": "라이프스타일",
+  "fortune": "행운",
+  "finance_tax": "세"
+}

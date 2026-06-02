@@ -1,0 +1,367 @@
+{
+  "intro": {
+    "badge": "イントロ",
+    "button": "始める",
+    "description": "Result",
+    "quote": "数字が命",
+    "title": "Numerology"
+  },
+  "subtitle": "名前と誕生に宿る、霊的な数値の共鳴です。",
+  "title": "数秘術",
+  "input": {
+    "birthDate": "生年月日",
+    "birthDateError": "無効な日付",
+    "calculating": "計算中",
+    "dateLabel": "日付",
+    "description": "Result",
+    "fullName": "フルネーム",
+    "nameLabel": "名前",
+    "namePlaceholder": "名前",
+    "submit": "提出する",
+    "title": "Numerology"
+  },
+  "results": {
+    "expression": "Expression Number",
+    "header": "ヘッダ",
+    "lifePath": "Life Path Number",
+    "personality": "Personality Number",
+    "recalibrate": "再調整する",
+    "soulUrge": "Soul Urge Number",
+    "vibrationalResonance": "Vibrational Resonance"
+  },
+  "meta": {
+    "description": "Result",
+    "keywords": "数秘術",
+    "title": "数秘術"
+  },
+  "hero": {
+    "backToHome": "戻る",
+    "badge": "Intro",
+    "cosmicSignature": "コズミック・シグネチャー",
+    "description": "Result",
+    "discover": "発見する",
+    "highlight": "洞察力",
+    "mainTitle": "数秘術",
+    "pageSubtitle": "古代の知恵",
+    "subtitle": "Discover the hidden mathematical patterns of your life.",
+    "title": "Numerology",
+    "your": "あなたの"
+  },
+  "result": {
+    "analyzeAnother": "別の",
+    "anotherPerson": "別の人",
+    "dashboard": {
+      "advice": "アドバイス",
+      "career": "キャリア",
+      "challenges": "課題",
+      "strengths": "強み",
+      "yearEnergy": "年エネルギー"
+    },
+    "dashboardTitle": "ダッシュボード",
+    "description": "結果",
+    "lifeCoordination": "調整",
+    "readingTitle": "読む",
+    "recommendedCities": "都市",
+    "soulFoods": "食品"
+  },
+  "meanings": {
+    "birthDay": "誕生日",
+    "destiny": "運命",
+    "lifePath": "Life Path Number",
+    "personality": "Personality Number",
+    "soulUrge": "Soul Urge Number"
+  },
+  "data": {
+    "meanings": {
+      "1": {
+        "careerSuggestions": [
+          "CEO",
+          "起業家",
+          "政治家",
+          "軍の指導者",
+          "発明家"
+        ],
+        "challenges": ["頑固", "短気", "エゴ", "支配的"],
+        "description": "Result",
+        "keywords": ["独立", "指導力", "革新", "野心"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "リーダーシップスキル",
+          "自立心",
+          "革新性",
+          "決断力",
+          "勇気"
+        ],
+        "traits": [
+          "天性のリーダー",
+          "独立心が強い",
+          "野心的",
+          "創造的",
+          "決断力がある"
+        ]
+      },
+      "2": {
+        "careerSuggestions": [
+          "カウンセラー",
+          "外交官",
+          "教師",
+          "社会福祉士",
+          "仲裁人"
+        ],
+        "challenges": ["優柔不断", "過敏", "依存", "対立回避"],
+        "description": "Result",
+        "keywords": ["協力", "調和", "外交", "感受性"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "共感力",
+          "チームワーク",
+          "調停能力",
+          "忍耐強い",
+          "誠実さ"
+        ],
+        "traits": ["外交的", "協力的", "繊細", "直感的", "献身的"]
+      },
+      "3": {
+        "careerSuggestions": [
+          "アーティスト",
+          "作家",
+          "エンターテイナー",
+          "デザイナー",
+          "広報担当"
+        ],
+        "challenges": ["エネルギーの分散", "軽薄さ", "浪費", "誇張"],
+        "description": "Result",
+        "keywords": ["表現", "社交性", "創造性", "楽観主義"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "コミュニケーション能力",
+          "想像力",
+          "インスピレーション",
+          "ユーモア",
+          "芸術的才能"
+        ],
+        "traits": ["表現豊か", "社交的", "楽観的", "創造的", "カリスマ的"]
+      },
+      "4": {
+        "careerSuggestions": [
+          "エンジニア",
+          "建築家",
+          "会計士",
+          "マネージャー",
+          "研究者"
+        ],
+        "challenges": ["堅苦しさ", "偏屈", "真面目すぎる", "柔軟性の欠如"],
+        "description": "Result",
+        "keywords": ["安定", "規律", "秩序", "実用性"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "安定性",
+          "体系的",
+          "信頼できる",
+          "持続力",
+          "細部へのこだわり"
+        ],
+        "traits": ["まじめ", "実用的", "整理整頓", "忠実", "規律正しい"]
+      },
+      "5": {
+        "careerSuggestions": [
+          "ツアーガイド",
+          "営業専門職",
+          "マーケティング",
+          "ジャーナリスト",
+          "パイロット"
+        ],
+        "challenges": ["落ち着きのなさ", "衝動的", "一貫性の欠如", "無責任"],
+        "description": "Result",
+        "keywords": ["自由", "変化", "適応力", "好奇心"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "多才さ",
+          "機略",
+          "恐れを知らない",
+          "進歩的",
+          "社会的繋がり"
+        ],
+        "traits": [
+          "冒険的",
+          "適応力がある",
+          "好奇心旺盛",
+          "ダイナミック",
+          "多芸多才"
+        ]
+      },
+      "6": {
+        "careerSuggestions": [
+          "看護師",
+          "教師",
+          "カウンセラー",
+          "ソーシャルワーカー",
+          "料理人"
+        ],
+        "challenges": ["過保護", "過度の犠牲", "心配性", "干渉"],
+        "description": "Result",
+        "keywords": ["配慮", "家族", "奉仕", "慈愛"],
+        "name": "The Master Teacher",
+        "strengths": ["養育能力", "責任感", "癒しの力", "誠実さ", "奉仕精神"],
+        "traits": ["慈愛に満ちた", "責任感がある", "保護的", "寛大", "家庭中心"]
+      },
+      "7": {
+        "careerSuggestions": [
+          "研究者",
+          "科学者",
+          "哲学者",
+          "心理学者",
+          "精神的指導者"
+        ],
+        "challenges": ["孤立", "悲観主義", "秘密主義", "完璧主義"],
+        "description": "Result",
+        "keywords": ["精神性", "分析", "直感", "知恵"],
+        "name": "The Master Teacher",
+        "strengths": ["直感", "分析力", "知恵", "精神性", "調査能力"],
+        "traits": ["分析的", "精神的", "直感的", "神秘的", "内省的"]
+      },
+      "8": {
+        "careerSuggestions": [
+          "エグゼクティブ",
+          "銀行家",
+          "不動産",
+          "弁護士",
+          "起業家"
+        ],
+        "challenges": ["物質主義", "仕事中毒", "コントロール欲求", "短気"],
+        "description": "Result",
+        "keywords": ["成功", "物質的熟達", "ビジネス", "権威"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "ビジネス能力",
+          "リーダーシップ",
+          "組織力",
+          "決断力",
+          "物質的成功"
+        ],
+        "traits": ["野心的", "権威的", "ビジネス志向", "実利的な", "強力"]
+      },
+      "9": {
+        "careerSuggestions": [
+          "人道活動家",
+          "アーティスト",
+          "ヒーラー",
+          "教師",
+          "慈善家"
+        ],
+        "challenges": ["感情の極端さ", "憤慨", "気分の浮き沈み", "非現実的"],
+        "description": "Result",
+        "keywords": ["慈悲", "奉仕", "普遍的な愛", "知恵"],
+        "name": "The Master Teacher",
+        "strengths": ["共感", "寛大さ", "芸術的才能", "知恵", "人道主義"],
+        "traits": ["慈悲深い", "寛大", "人道的", "芸術的", "賢明"]
+      },
+      "11": {
+        "careerSuggestions": [
+          "精神的教師",
+          "カウンセラー",
+          "アーティスト",
+          "発明家",
+          "ヒーラー"
+        ],
+        "challenges": ["過敏", "神経質", "非現実的", "過激派"],
+        "description": "Result",
+        "keywords": ["直感", "インスピレーション", "啓蒙", "啓示"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "直感",
+          "インスピレーション",
+          "ビジョン",
+          "理想主義",
+          "精神的洞察"
+        ],
+        "traits": [
+          "非常に直感的",
+          "インスピレーションを与える",
+          "繊細",
+          "先見の明がある",
+          "精神的"
+        ]
+      },
+      "22": {
+        "careerSuggestions": [
+          "建築家",
+          "都市計画家",
+          "CEO",
+          "熟練の職人",
+          "大規模な組織者"
+        ],
+        "challenges": [
+          "圧倒される感覚",
+          "自己不信",
+          "完璧主義",
+          "プレッシャー"
+        ],
+        "description": "Result",
+        "keywords": ["熟達", "実用的な理想主義", "大規模なビジョン", "具現化"],
+        "name": "The Master Teacher",
+        "strengths": [
+          "実用的ビジョン",
+          "組織力",
+          "リーダーシップ",
+          "具現化",
+          "体系的アプローチ"
+        ],
+        "traits": [
+          "先見の明がある",
+          "実用的",
+          "マスター建設者",
+          "体系的",
+          "野心的"
+        ]
+      },
+      "33": {
+        "careerSuggestions": [
+          "精神的教師",
+          "ヒーラー",
+          "カウンセラー",
+          "人道的リーダー",
+          "グル"
+        ],
+        "challenges": [
+          "自己犠牲の過剰",
+          "感情的な圧倒",
+          "完璧主義",
+          "燃え尽き症候群"
+        ],
+        "description": "Result",
+        "keywords": ["慈しみ", "癒し", "教授", "普遍的な愛"],
+        "name": "マスターティーチャー",
+        "strengths": [
+          "無条件の愛",
+          "癒しの能力",
+          "教える才能",
+          "慈悲",
+          "精神的知恵"
+        ],
+        "traits": [
+          "慈愛に満ちた",
+          "癒しを与える",
+          "教える",
+          "育む",
+          "精神的に進化した"
+        ]
+      }
+    }
+  },
+  "benefits": {
+    "destinyNumber": {
+      "description": "Result",
+      "title": "Numerology"
+    },
+    "lifePathNumber": {
+      "description": "Result",
+      "title": "Numerology"
+    },
+    "soulNumber": {
+      "description": "Result",
+      "title": "Numerology"
+    },
+    "title": "Numerology"
+  }
+}

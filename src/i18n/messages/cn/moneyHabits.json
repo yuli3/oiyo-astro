@@ -1,0 +1,183 @@
+{
+  "meta": {
+    "keywords": "keywords, tags, seo",
+    "resultTitle": "金钱习惯结果分析",
+    "resultDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "testTitle": "金钱习惯评估",
+    "testDescription": "我们正根据您的评估结果，为您准备深入且温暖的解析报告。",
+    "title": "你的财务档案",
+    "description": "探索我们为深度财务分析设计的工具套件"
+  },
+  "hero": {
+    "subtitle": "详细信息",
+    "cta": "开始测试",
+    "badge": "金钱习惯徽章",
+    "title": "你的财务档案"
+  },
+  "benefits": {
+    "items": {
+      "0": {
+        "emoji": "乙",
+        "title": "你的财务档案",
+        "description": "探索我们为深度财务分析设计的工具套件"
+      },
+      "1": {
+        "emoji": "乙",
+        "title": "你的财务档案",
+        "description": "探索我们为深度财务分析设计的工具套件"
+      },
+      "2": {
+        "emoji": "乙",
+        "title": "你的财务档案",
+        "description": "探索我们为深度财务分析设计的工具套件"
+      }
+    },
+    "title": "你的财务档案"
+  },
+  "cta": {
+    "subtitle": "详细信息",
+    "button": "开始",
+    "title": "你的财务档案"
+  },
+  "faq": {
+    "items": {
+      "0": {
+        "question": "你如何驾驭生活的潮流？",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "1": {
+        "question": "How do you navigate life's currents?",
+        "answer": "内在的和谐指导着你的日常行动。"
+      },
+      "2": {
+        "question": "How do you navigate life's currents?",
+        "answer": "Inner harmony guides your everyday actions."
+      },
+      "3": {
+        "question": "How do you navigate life's currents?",
+        "answer": "内在的和谐指导着你的日常行动。"
+      }
+    },
+    "title": "你的财务档案"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "高级洞察力",
+        "description": "发现定义您的道路的独特模式。",
+        "question": "你的灵魂对未知有何反应？",
+        "answer": "内在的和谐指导着你的日常行动。"
+      },
+      {
+        "icon": "🚀",
+        "title": "高级洞察力",
+        "description": "发现定义您的道路的独特模式。",
+        "question": "是什么驱动着你的内心世界？",
+        "answer": "你独特的视角塑造了你的现实。"
+      },
+      {
+        "icon": "💡",
+        "title": "高级洞察力",
+        "description": "揭开你个人哲学的隐藏层。",
+        "question": "是什么驱动着你的内心世界？",
+        "answer": "内在的和谐指导着你的日常行为。"
+      },
+      {
+        "icon": "🎯",
+        "title": "高级洞察力",
+        "description": "发现定义您的道路的独特模式。",
+        "question": "是什么驱动着你的内心世界？",
+        "answer": "小小的选择累积成伟大的命运。"
+      },
+      {
+        "icon": "🔥",
+        "title": "高级洞察力",
+        "description": "探索你内心景观的深层架构。",
+        "question": "你独特的核心频率是多少？",
+        "answer": "你拥有一个指向成长的直觉指南针。"
+      },
+      {
+        "icon": "⭐",
+        "title": "高级洞察力",
+        "description": "探索你内心景观的深层架构。",
+        "question": "你如何驾驭生活的潮流？",
+        "answer": "内在的和谐指导着你的日常行动。"
+      }
+    ]
+  },
+  "test": {
+    "insightBullets": ["标志性强度", "枢轴点", "2"],
+    "common": {
+      "progress": "进度"
+    },
+    "test": {
+      "insightBullets": ["探索你内心景观的深层架构。"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中...",
+      "selectOption": "选择"
+    },
+    "result": {
+      "title": "你的财务档案",
+      "description": "探索我们为深度财务分析设计的工具套件"
+    },
+    "meta": {
+      "title": "你的财务档案",
+      "description": "探索我们为深度财务分析设计的工具套件",
+      "keywords": "keywords, tags, seo"
+    },
+    "progress": "进度",
+    "submit": "提交",
+    "loading": "加载中...",
+    "selectOption": "选择",
+    "subtitle": "详细信息",
+    "title": "你的财务档案",
+    "description": "探索我们为深度财务分析设计的工具套件",
+    "keywords": "关键词、标签、seo",
+    "finish": "结束",
+    "swipeHint": "滑动提示"
+  },
+  "result": {
+    "chart": {
+      "impulseControl": "脉冲控制",
+      "savingCapacity": "节省容量",
+      "planningSkill": "规划技巧",
+      "emotionalControl": "情绪控制"
+    },
+    "test": {
+      "insightBullets": ["发现定义您的道路的独特模式。"],
+      "progress": "进度",
+      "submit": "提交",
+      "loading": "加载中...",
+      "selectOption": "选择"
+    },
+    "result": {
+      "title": "你的财务档案",
+      "description": "探索我们为深度财务分析设计的工具套件"
+    },
+    "meta": {
+      "title": "你的财务档案",
+      "description": "探索我们为深度财务分析设计的工具套件",
+      "keywords": "keywords, tags, seo"
+    },
+    "title": "你的财务档案",
+    "description": "探索我们为深度财务分析设计的工具套件",
+    "keywords": "关键词、标签、seo",
+    "loading": "加载中...",
+    "shareTitle": "控制面板",
+    "copySuccess": "复制成功",
+    "scoresTitle": "控制面板",
+    "impulseRisk": "冲动风险",
+    "strengths": "优势",
+    "challenges": "挑战",
+    "actionTips": "行动建议",
+    "savingRecommendation": "保存建议",
+    "recommendedPercentage": "推荐百分比",
+    "share": "分享",
+    "retake": "重新测试"
+  },
+  "title": "你的财务档案",
+  "description": "探索我们为深度财务分析设计的工具套件",
+  "keywords": "关键词、标签、seo"
+}

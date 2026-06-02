@@ -1,0 +1,36 @@
+{
+  "title": "헥사코 성격 테스트",
+  "description": "HEXACO 모델을 기반으로 당신의 성격을 6차원으로 분석합니다.",
+  "questions": {
+    "q1": "나는 다른 사람을 대할 때 성실하려고 노력합니다.",
+    "q2": "나는 기분 변화가 자주 발생하지 않습니다."
+  },
+  "results": {
+    "honesty": "정직-겸손",
+    "emotionality": "감성",
+    "extraversion": "외향성",
+    "agreeableness": "친화성",
+    "conscientiousness": "성실성",
+    "openness": "경험에 대한 개방성"
+  },
+  "axis": "윤리축",
+  "labels": {
+    "high": "높은 공명",
+    "low": "낮은 공명",
+    "average": "균형 잡힌 공명"
+  },
+  "guardian": "진실의 수호자",
+  "guardianDesc": "높은 정직-겸손 점수는 귀하의 고귀한 성격을 보여줍니다.",
+  "restart": "다시 테스트",
+  "dimensions": {
+    "H": "정직 - 겸손",
+    "E": "감성",
+    "X": "외전",
+    "A": "우정",
+    "C": "성실",
+    "O": "개방 상태"
+  },
+  "honestyLevel": "정직성 수준: {level}",
+  "save": "결과 저장",
+  "uniqueDimension": "HEXACO 고유 차원"
+}

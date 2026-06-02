@@ -1,0 +1,150 @@
+{
+  "title": "Zi Wei Dou Shu",
+  "systemName": "Zi Wei Dou Shu",
+  "narrative": "Purple Star Astrology",
+  "resonance": {
+    "professionalChart": "Professional Chart: {bureau}. Life in {lifePalace}. {starCount} stars in Life Palace."
+  },
+  "stars": {
+    "zi_wei": {
+      "name": "Zi Wei",
+      "title": "The Emperor",
+      "keywords": "Leadership, Dignity, Responsibility"
+    },
+    "tian_ji": {
+      "name": "Tian Ji",
+      "title": "The Strategist",
+      "keywords": "Intelligence, Strategy, Calculation"
+    },
+    "tai_yang": {
+      "name": "Tai Yang",
+      "title": "The Sun",
+      "keywords": "Radiance, Generosity, Fame"
+    },
+    "wu_qu": {
+      "name": "Wu Qu",
+      "title": "The Finance Star",
+      "keywords": "Wealth, Action, Decisiveness"
+    },
+    "tian_tong": {
+      "name": "Tian Tong",
+      "title": "The Pleasure Star",
+      "keywords": "Contentment, Childlike, Harmony"
+    },
+    "lian_zhen": {
+      "name": "Lian Zhen",
+      "title": "The Complex Star",
+      "keywords": "Passion, Precision, Intensity"
+    },
+    "tian_fu": {
+      "name": "Tian Fu",
+      "title": "The Treasury",
+      "keywords": "Stability, Management, Caution"
+    },
+    "tai_yin": {
+      "name": "Tai Yin",
+      "title": "The Moon",
+      "keywords": "Intuition, Accumulation, Gentleness"
+    },
+    "tan_lang": {
+      "name": "Tan Lang",
+      "title": "The Wolf",
+      "keywords": "Desire, Socializing, Curiosity"
+    },
+    "ju_men": {
+      "name": "Ju Men",
+      "title": "The Orator",
+      "keywords": "Communication, Analysis, Skepticism"
+    },
+    "tian_xiang": {
+      "name": "Tian Xiang",
+      "title": "The General",
+      "keywords": "Loyalty, Service, Image"
+    },
+    "tian_liang": {
+      "name": "Tian Liang",
+      "title": "The Sage",
+      "keywords": "Wisdom, Protection, Longevity"
+    },
+    "qi_sha": {
+      "name": "Qi Sha",
+      "title": "The Power Star",
+      "keywords": "Action, Power, Risk-taking"
+    },
+    "po_jun": {
+      "name": "Po Jun",
+      "title": "The Pioneer",
+      "keywords": "Innovation, Destruction, Change"
+    },
+    "zuo_fu": {
+      "name": "Zuo Fu",
+      "title": "Left Assistant",
+      "keywords": "Support, Nobility"
+    },
+    "you_bi": {
+      "name": "You Bi",
+      "title": "Right Assistant",
+      "keywords": "Support, Romance"
+    },
+    "wen_chang": {
+      "name": "Wen Chang",
+      "title": "Intellect",
+      "keywords": "Arts, Eloquence"
+    },
+    "wen_qu": {
+      "name": "Wen Qu",
+      "title": "Mind",
+      "keywords": "Eloquence, Logic"
+    },
+    "tian_kui": {
+      "name": "Tian Kui",
+      "title": "Laureate",
+      "keywords": "Opportunity, Mentor"
+    },
+    "tian_yue": {
+      "name": "Tian Yue",
+      "title": "Academician",
+      "keywords": "Opportunity, Status"
+    },
+    "qing_yang": {
+      "name": "Qing Yang",
+      "title": "Destructive",
+      "keywords": "Aggression, Conflict"
+    },
+    "tuo_luo": {
+      "name": "Tuo Luo",
+      "title": "Obstacle",
+      "keywords": "Delay, Worry"
+    },
+    "huo_xing": {
+      "name": "Huo Xing",
+      "title": "Fiery",
+      "keywords": "Turbulence, Speed"
+    },
+    "ling_xing": {
+      "name": "Ling Xing",
+      "title": "Siren",
+      "keywords": "Hidden Danger"
+    },
+    "di_kong": {
+      "name": "Di Kong",
+      "title": "Void",
+      "keywords": "Loss, Spirituality"
+    },
+    "di_jie": {
+      "name": "Di Jie",
+      "title": "Robbery",
+      "keywords": "Loss, Spirituality"
+    },
+    "lu_cun": {
+      "name": "Lu Cun",
+      "title": "The Treasury",
+      "keywords": "Wealth, Safety"
+    },
+    "tian_ma": {
+      "name": "Tian Ma",
+      "title": "Pegasus",
+      "keywords": "Movement, Travel"
+    }
+  }
+}

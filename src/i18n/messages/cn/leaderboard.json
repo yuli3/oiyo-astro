@@ -1,0 +1,30 @@
+{
+  "title": "排行榜",
+  "category": {
+    "points": "积分",
+    "streaks": "条纹",
+    "referrals": "推荐人",
+    "tests": "测试"
+  },
+  "period": {
+    "today": "今天",
+    "week": "星期",
+    "month": "月",
+    "allTime": "所有时间"
+  },
+  "stats": {
+    "yourRank": "你的等级",
+    "yourScore": "你的分数",
+    "percentile": "百分位数",
+    "toNextRank": "到下一个排名"
+  },
+  "ui": {
+    "you": "你",
+    "hallOfFame": "名人堂",
+    "showMore": "显示更多 ({count})",
+    "participants": "{count} 名参与者",
+    "noData": "排行榜中还没有数据。",
+    "noDataCta": "完成测试以获得积分并提升排名！",
+    "topPercentile": "前 {percentile}%"
+  }
+}

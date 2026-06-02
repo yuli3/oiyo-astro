@@ -1,0 +1,195 @@
+{
+  "aries": "Aries",
+  "taurus": "Tauro",
+  "gemini": "Géminis",
+  "cancer": "Cáncer",
+  "leo": "Leona",
+  "virgo": "Virgo",
+  "libra": "Libra",
+  "scorpio": "Escorpio",
+  "sagittarius": "Sagitario",
+  "capricorn": "Capricornio",
+  "aquarius": "Acuario",
+  "pisces": "Piscis",
+  "meta": {
+    "title": "Análisis de Compatibilidad Zodiacal",
+    "description": "Una guía para un profundo descubrimiento de uno mismo.",
+    "keywords": "signos del zodiaco, astrología, horóscopo, compatibilidad zodiacal",
+    "resultTitle": "Tu Análisis del Zodiaco",
+    "resultDescription": "Diseñando un espejo que refleja tu verdadera esencia...",
+    "resultKeywords": "análisis zodiacal, rasgos de signo, informe de astrología"
+  },
+  "benefits": {
+    "love": {
+      "title": "Análisis de Compatibilidad Zodiacal",
+      "description": "Una guía para un profundo descubrimiento de uno mismo."
+    },
+    "career": {
+      "title": "Análisis de Compatibilidad Zodiacal",
+      "description": "Una guía para un profundo descubrimiento de uno mismo."
+    }
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "¿Cuál es la esencia central de un signo del zodíaco?",
+        "answer": "Es una lente arquetípica a través de la cual la infinita complejidad del universo se filtra en una resonancia humana única."
+      },
+      {
+        "question": "¿Mi signo dicta todo mi destino?",
+        "answer": "Las estrellas inclinan, pero no obligan; ellos proporcionan el modelo celestial, pero tú eres el arquitecto de tu propio despertar."
+      }
+    ],
+    "title": "Análisis de Compatibilidad Zodiacal"
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "✨",
+        "title": "Resonancia arquetípica",
+        "description": "Una inmersión profunda en los motivos psicológicos y espirituales de su signo principal."
+      },
+      {
+        "icon": "🧭",
+        "title": "Navegación Astral",
+        "description": "Ideas estratégicas sobre cómo alinear sus acciones diarias con el flujo celestial estacional."
+      }
+    ]
+  },
+  "test": {
+    "title": "Análisis de Compatibilidad Zodiacal",
+    "subtitle": "Descubre la armonía entre dos signos y comprende la dinámica de tu relación.",
+    "calculating": "Calculando tu signo..."
+  },
+  "title": "Análisis de Compatibilidad Zodiacal",
+  "description": "Una guía para un profundo descubrimiento de uno mismo.",
+  "result": {
+    "title": "Análisis de Compatibilidad Zodiacal",
+    "description": "Una guía para un profundo descubrimiento de uno mismo."
+  },
+  "hero": {
+    "title": "Análisis de Compatibilidad Zodiacal",
+    "subtitle": "Descubre la armonía entre dos signos y comprende la dinámica de tu relación."
+  },
+  "preview": {
+    "title": "Análisis de Compatibilidad Zodiacal"
+  },
+  "cta": {
+    "title": "Análisis de Compatibilidad Zodiacal",
+    "subtitle": "Descubre la armonía entre dos signos y comprende la dinámica de tu relación.",
+    "button": "Ver Personalidad"
+  },
+  "T": "Título de la Página",
+  "info": {
+    "accurate": {
+      "title": "Análisis de Compatibilidad Zodiacal",
+      "description": "Una guía para un profundo descubrimiento de uno mismo."
+    },
+    "detailed": {
+      "title": "Análisis de Compatibilidad Zodiacal",
+      "description": "Una guía para un profundo descubrimiento de uno mismo."
+    }
+  },
+  "compatibility": {
+    "title": "Análisis de Compatibilidad Zodiacal",
+    "subtitle": "Descubre la armonía entre dos signos y comprende la dinámica de tu relación.",
+    "selectionTitle": "Elige Signos para Analizar",
+    "selectionDesc": "Selecciona dos signos del zodiaco para un desglose detallado de compatibilidad.",
+    "mySign": "Mi Signo",
+    "partnerSign": "Signo de la Pareja",
+    "placeholder": "Selecciona un signo",
+    "analyzeBtn": "Analizar Compatibilidad",
+    "analyzingBtn": "Analizando...",
+    "levels": {
+      "excellent": "Exclente armonía en todos los sistemas. Vuestras energías cósmicas están muy bien alineadas.",
+      "good": "Buena compatibilidad general. Pequeños ajustes pueden mejorar vuestro flujo natural.",
+      "fair": "Pareja Regular",
+      "challenging": "Un camino desafiante pero gratificante. Vuestros esfuerzos por entenderos profundizarán vuestra conexión."
+    },
+    "categories": {
+      "love": "Amor y Romance",
+      "friendship": "Amistad",
+      "business": "Trabajo y Negocios",
+      "communication": "Mantén una comunicación abierta y honesta en todo momento."
+    },
+    "sections": {
+      "scorecard": "Desglose de Compatibilidad",
+      "strengths": "Enfócate en tus fortalezas naturales",
+      "challenges": "Desafíos de Crecimiento",
+      "advice": "Consejo Cósmico para Crecer"
+    },
+    "actions": {
+      "share": "Compartir Resultados",
+      "retake": "Nuevo Análisis",
+      "copySuccess": "¡Copiado al portapapeles!"
+    },
+    "analysis": {
+      "strengths": {
+        "traitMatch": "La {trait1} de {sign1} y la {trait2} de {sign2} crean una resonancia armoniosa.",
+        "sameElement": "Ambos signos comparten el mismo elemento, fomentando un entendimiento natural.",
+        "complementaryElement": "Vuestros elementos son complementarios, creando un vínculo equilibrado y sinérgico.",
+        "respect": "Respeta y abraza vuestras diferencias como oportunidades de crecimiento."
+      },
+      "challenges": {
+        "traitConflict": "La naturaleza {trait1} de {sign1} podría chocar ocasionalmente con la tendencia {trait2} de {sign2}.",
+        "misunderstanding": "Diferentes enfoques de la vida pueden llevar a malentendidos iniciales.",
+        "communication": "Mantén una comunicación abierta y honesta en todo momento."
+      },
+      "tips": {
+        "respect": "Respeta y abraza vuestras diferencias como oportunidades de crecimiento.",
+        "communication": "Mantén una comunicación abierta y honesta en todo momento.",
+        "personalTime": "Valora y respeta la necesidad de espacio personal del otro.",
+        "sharedInterests": "Explora y cultiva intereses comunes que podáis disfrutar juntos.",
+        "conflict": "Cuando surjan conflictos, prioriza entender la perspectiva del otro.",
+        "excellent": "Exclente armonía en todos los sistemas. Vuestras energías cósmicas están muy bien alineadas.",
+        "challenging": "Un camino desafiante pero gratificante. Vuestros esfuerzos por entenderos profundizarán vuestra conexión."
+      }
+    }
+  },
+  "extended": {
+    "corePersonality": {
+      "leader": "Líder natural con un fuerte espíritu independiente",
+      "innovator": "Innovador creativo con sensibilidades artísticas",
+      "analyst": "Analista reflexivo con sabiduría práctica",
+      "balanced": "Pacifista que busca el equilibrio interior"
+    },
+    "lifeTheme": "Integración armoniosa de sabiduría, creatividad y acción práctica",
+    "compatibilityAnalysis": {
+      "excellent": "Exclente armonía en todos los sistemas. Vuestras energías cósmicas están muy bien alineadas.",
+      "good": "Buena compatibilidad general. Pequeños ajustes pueden mejorar vuestro flujo natural.",
+      "moderate": "Sincronizando los hilos de tu destino...",
+      "diverse": "Energías diversas que pueden armonizarse a través de la conciencia y la práctica."
+    },
+    "timeline": {
+      "currentTheme_spring": "Nuevos Comienzos y Crecimiento",
+      "currentTheme_summer": "Pico de Energía y Logros",
+      "currentTheme_autumn": "Cosecha y Consolidación",
+      "currentTheme_winter": "Reflexión y Planificación",
+      "currentTheme_default": "Crecimiento y Desarrollo",
+      "advice": {
+        "strengths": "Enfócate en tus fortalezas naturales",
+        "intuition": "Confía en tu intuición al tomar decisiones",
+        "balance": "Mantén el equilibrio en todas las áreas de la vida"
+      },
+      "upcoming": {
+        "next3": "Un período de progreso constante con oportunidades para nuevas conexiones",
+        "nextYear": "Crecimiento significativo en las áreas personal y profesional",
+        "transitions": [
+          "Oportunidades de avance profesional",
+          "Profundización de relaciones importantes",
+          "Crecimiento espiritual personal"
+        ]
+      }
+    }
+  },
+  "subtitle": "Descubre tu perfil astrológico.",
+  "oracle": {
+    "selectZodiac": "Selecciona un Signo del Zodiaco",
+    "synchronize": "Sincronizar Estrellas",
+    "imperialDecree": "Decreto Imperial",
+    "analysisBasis": "Base del Análisis",
+    "message": "Mensaje Cósmico",
+    "actionRitual": "Ritual de Acción",
+    "fateVsWill": "Destino vs Voluntad"
+  }
+}

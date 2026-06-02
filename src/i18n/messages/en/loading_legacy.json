@@ -1,0 +1,89 @@
+{
+  "messages": {
+    "general": "Preparing your story...",
+    "stars": "Syncing the threads of your destiny...",
+    "rainbow": "Watering the rainbow...",
+    "flowers": "Deciphering the geometric patterns of your identity...",
+    "fox": "Mapping the secret architecture of your personality...",
+    "stardust": "Syncing the threads of your destiny...",
+    "oracle": "Receiving the oracle...",
+    "cards": "Analyzing the deep echoes of your choices...",
+    "moon": "Polishing the moon...",
+    "dreams": "Weaving dreams...",
+    "magic": "Making a little magic...",
+    "whale": "Analyzing the deep echoes of your choices...",
+    "trees": "Thousand-year-old trees holding a meeting...",
+    "roots": "Sending news to the underground world of roots...",
+    "ontology": "Reading the design of your soul...",
+    "resonance": "Harmonizing your spiritual frequencies...",
+    "fortune": "Gazing into the crystal ball...",
+    "finance": "Calculating your prosperity...",
+    "relationship": "Syncing the frequencies of two souls...",
+    "cat_dog": "Analyzing the deep echoes of your choices...",
+    "milky_way": "Bringing inspiration from beyond the Milky Way...",
+    "moonlight": "Deciphering the geometric patterns of your identity...",
+    "wave_secret": "Deciphering the geometric patterns of your identity...",
+    "saju": "Aligning the calendar of destiny..."
+  },
+  "default": "Syncing the threads of your destiny...",
+  "rootLoading": {
+    "subtitle": "Preparing your personality journey..."
+  },
+  "localeLoading": {
+    "subtitle": "Please wait.",
+    "title": "Changing language...",
+    "description": "Wait."
+  },
+  "globalError": {
+    "tryAgain": "Try Again",
+    "goHome": "Back to Home",
+    "helpText": "If the problem persists, contact support."
+  },
+  "notFound": {
+    "title": "Page Not Found",
+    "subtitle": "Are you lost?",
+    "description": "The requested page does not exist or has been moved.",
+    "goHome": "Home",
+    "goBack": "Go Back",
+    "suggestionsTitle": "Maybe you are looking for one of these pages?",
+    "popularTestsTitle": "Popular Tests",
+    "egentetoTest": "Egenteto Test",
+    "mbtiAlternative": "MBTI Alternative",
+    "allTests": "View All Tests",
+    "exploreTitle": "Explore Popular Discoveries",
+    "categoryCore": "Core Personality",
+    "categoryLifestyle": "Lifestyle",
+    "color": "Color",
+    "travel": "Travel",
+    "relationship": {
+      "communicationStyle": "Communication Style"
+    },
+    "test": {
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Submit",
+      "loading": "Loading",
+      "selectOption": "Select",
+      "insightBullets": ["Insight"]
+    },
+    "result": {
+      "title": "Detailed Analysis Report",
+      "description": "Explore related information."
+    },
+    "meta": {
+      "title": "Test",
+      "description": "Discover OIYO tools and revelations.",
+      "keywords": "test, revelations, OIYO"
+    }
+  },
+  "poetic": [
+    "Listening to the whispers of the stars...",
+    "Reading your destiny...",
+    "Gathering cosmic energy...",
+    "Please wait, a mysterious story is unfolding...",
+    "Writing down the stories told by the moon in the deep night...",
+    "Interpreting the signals sent by your constellation...",
+    "Crossing the river of time to find your answer..."
+  ]
+}

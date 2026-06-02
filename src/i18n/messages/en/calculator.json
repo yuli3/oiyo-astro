@@ -1,0 +1,20 @@
+{
+  "units": {
+    "hours": "hour",
+    "days": "Day",
+    "years": "year",
+    "months": "months"
+  },
+  "labels": {
+    "hourlyWage": "hourly rate",
+    "annualLeave": "annual leave allowance",
+    "severancePay": "severance pay",
+    "dailyHours": "daily working hours",
+    "remainingDays": "remaining annual leave",
+    "servicePeriod": "tenure",
+    "monthlyBase": "monthly basic salary",
+    "annualBonus": "annual bonus",
+    "totalAllowance": "total annual leave allowance",
+    "standardMonthlyHours": "Standard monthly working hours"
+  }
+}
