@@ -1,0 +1,157 @@
+{
+  "about": {
+    "title": "About OIYO",
+    "hero": {
+      "subtitle": "A Journey Towards Your True Self",
+      "title": "About OIYO",
+      "description": "We craft experiences that illuminate the intricate architecture of your personality and soul."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Empowering individuals to discover their innate potential through the harmonious blend of ancient wisdom and modern science."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "free": {
+        "title": "Universal Access",
+        "description": "High-quality self-discovery tools crafted for everyone, always."
+      },
+      "privacy": {
+        "title": "Sanctuary of Privacy",
+        "description": "Your data is sacred. We never store or share your personal results without your consent."
+      },
+      "science": {
+        "title": "Evidence-Based",
+        "description": "Our tools are rooted in rigorous psychological research and refined by user intuition."
+      },
+      "engaging": {
+        "title": "Enchanting Experiences",
+        "description": "Self-discovery should be as delightful and magical as it is insightful."
+      }
+    },
+    "story": {
+      "title": "Our Origin",
+      "description": "OIYO began with a simple vision: to make the profound journey of self-discovery accessible, beautiful, and deeply personal for all."
+    },
+    "meta": {
+      "title": "About OIYO | Personality Tests & Self-Discovery",
+      "description": "Explore the mission behind OIYO—helping you discover your true self through enchanting personality tests and psychological tools.",
+      "keywords": "about oiyo, personality test, self-discovery, mission, scientific mysticism"
+    },
+    "history": {
+      "title": "The Journey So Far",
+      "description": "Born from a passion for understanding the human spirit, we continue to evolve as your companion in uncovering life's hidden rhythms."
+    }
+  },
+  "home": {
+    "title": "自己と精神の合成",
+    "description": "OIYO聖域：古の東洋の知恵が、あなたのデジタルな魂を映し出す「生ける織物（タペストリー）」です。",
+    "keywords": "四柱推命, タロット, 共鳴, 存在論, 魂の地図",
+    "errorFallbackTitle": "虚空が深まっています",
+    "errorFallbackDescription": "宇宙の糸が一時的に絡まりました。調和が再び戻るまで、しばしお待ちください。",
+    "discovery": {
+      "badge": "旅路",
+      "title": "聖域の地図",
+      "description": "知恵の古の森を航海しましょう。全ての道は、あなたの真の自己への深い啓示へと続いています。"
+    },
+    "phase": "Phase 82: 聖なる証明",
+    "titlePrefix": "生けるデータの",
+    "titleSuffix": "聖域",
+    "enter": "聖域へと歩みを進める",
+    "explore": "方法論の帷を上げる",
+    "ontology": {
+      "title": "存在論",
+      "desc": "あなたの魂の壮大な建築学的設計図を解読します。"
+    },
+    "resonance": {
+      "title": "共鳴",
+      "desc": "あなたの魂と調和して振動する絆を見つけてください。"
+    },
+    "daily": {
+      "title": "日々の神託",
+      "desc": "あなたのタイムラインのためにキュレートされた、虚空からの直接の伝言です。"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing & Plans",
+      "description": "Unlock deeper insights into your personality and destiny with our flexible pricing plans.",
+      "keywords": "pricing, subscription, plans, personality test, premium insights, saju"
+    },
+    "hero": {
+      "title": "Simple, Transparent Plans",
+      "subtitle": "Unlock the full potential of your self-discovery journey with zero hidden costs."
+    },
+    "billing": {
+      "monthly": "Monthly",
+      "yearly": "Yearly",
+      "month": "mo"
+    },
+    "plans": {
+      "free": "Free",
+      "getStarted": "Get Started for Free",
+      "popular": "Most Popular",
+      "subscribe": "Begin Pro Journey",
+      "cancelAnytime": "Cancel anytime"
+    },
+    "planDetails": {
+      "free": {
+        "features": {
+          "unlimitedTests": "Unlimited basic personality & soul tests",
+          "resultStorage": "Store up to 3 recent insights",
+          "basicSharing": "Classic result sharing",
+          "communitySupport": "Community access"
+        },
+        "name": "Basic",
+        "description": "Begin your gentle voyage into self-discovery."
+      },
+      "premium": {
+        "features": {
+          "allFreeFeatures": "Everything in the Basic plan",
+          "aiAnalysis": "Deep AI-driven soul analysis & guidance",
+          "pdfReports": "Detailed PDF reports of your findings",
+          "advancedCompatibility": "Advanced relationship harmony tools",
+          "personalizedInsights": "Weekly tailored cosmic insights",
+          "prioritySupport": "Priority sanctuary support",
+          "customExport": "Full data portability"
+        },
+        "name": "Pro",
+        "description": "A comprehensive map for the true seeker."
+      }
+    },
+    "info": {
+      "allPlansInclude": "Every Pro plan includes:",
+      "securePayment": "Secured Transactions",
+      "instantAccess": "Instant Activation",
+      "customerSupport": "Dedicated Support"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "question1": "Can I cancel my subscription anytime?",
+      "answer1": "Absolutely. You can pause or cancel your journey at any time from your settings. No questions asked.",
+      "question2": "Is there a free trial?",
+      "answer2": "While we don't have a timed trial, our Basic plan offers a wealth of features for you to explore indefinitely.",
+      "question3": "Are my payments secure?",
+      "answer3": "Yes. We utilize industry-standard encryption to ensure your financial sanctuary remains private and safe."
+    },
+    "trust": {
+      "secure": {
+        "title": "Security First",
+        "description": "Your data is encrypted and protected with the utmost care."
+      },
+      "instant": {
+        "title": "Instant Insight",
+        "description": "Access all premium features the moment you begin your Pro journey."
+      },
+      "satisfaction": {
+        "title": "Sacred Promise",
+        "description": "We are committed to providing the most profound self-discovery experience possible."
+      }
+    },
+    "title": "Pricing",
+    "description": "Choose the path that best suits your journey.",
+    "free": "Free",
+    "pro": "Pro",
+    "enterprise": "Enterprise"
+  }
+}

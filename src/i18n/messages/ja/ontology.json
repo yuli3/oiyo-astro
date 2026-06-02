@@ -1,0 +1,780 @@
+{
+  "egenteto": {
+    "result": {
+      "title": "統合分析ラボ",
+      "traits": "音律記号",
+      "description": "存在分析レポート",
+      "compatibility": "調和のとれた相互作用",
+      "shareText": "私の分析結果: {type}。 ここで見る: {url}",
+      "share": "結果を共有する",
+      "copy": "リンクをコピー",
+      "copied": "コピーしました！",
+      "retake": "リフレッシュ分析",
+      "solarLineage": "昼のデータ",
+      "lunarLineage": "ナイトサイドデータ"
+    },
+    "saveResult": "データをアーカイブに記録しています...",
+    "saveError": "分析が曖昧になっている。 もう一度試してください。",
+    "personalityAnalysis": "分析的分解",
+    "compatibilityChartTitle": "ハーモニースペクトル",
+    "compatibilityLabel": "共鳴レベル",
+    "insights": "分析の概要",
+    "match": "収束点",
+    "awards": "主要な指標",
+    "growth": "成長の軌跡",
+    "traitsGuide": "音律の語彙",
+    "strengths": "原始資産",
+    "growthAreas": "改善すべき領域",
+    "coupleTest": "関係シナジー診断",
+    "coupleTestDesc": "2 人の個人間のデータの整合性を測定します。",
+    "loveLanguage": "コミュニケーションの方言",
+    "loveLanguageDesc": "自分の意図が他の人にどのように届くか。",
+    "idealDate": "最適なコミュニケーション",
+    "growthRoadmap": "成長ガイド",
+    "growthComingSoon": "詳細な追跡更新が予定されています",
+    "growthComingSoonDesc": "継続的な開発データは間もなく利用可能になります。",
+    "saveImage": "結果の保存",
+    "backToHome": "ダッシュボードに戻る",
+    "perfectMatch": "{name} との高い相乗効果に達しました!"
+  },
+  "akashic": {
+    "title": "アカシックレコード",
+    "subtitle": "永遠の図書館",
+    "description": "アカシックレコードは、過去、現在、未来に起こったすべての人間の出来事、思考、言葉、感情、意図の集大成です。",
+    "close": "レコードを閉じる",
+    "tabs": {
+      "essence": "エッセンス",
+      "destiny": "運命",
+      "biology": "生物学"
+    },
+    "essence": {
+      "title": "魂のエッセンス",
+      "quote": "魂はすべての生き物において同じですが、それぞれの体は異なります。",
+      "soulFormula": "魂の公式",
+      "humanDesign": "ヒューマンデザイン",
+      "authority": "権威",
+      "locked": "暗号化済み"
+    },
+    "destiny": {
+      "title": "運命の道",
+      "lifePath": "人生の道",
+      "seeker": "探求者",
+      "animal": "精霊動物"
+    },
+    "biology": {
+      "title": "生物的器",
+      "chronotype": "クロノタイプ",
+      "constitution": "体質"
+    }
+  },
+  "dashboard": {
+    "guest": "ゲストユーザー",
+    "labels": {
+      "undiscovered": "まだ見ていない項目",
+      "nameVibration": "名前の波動",
+      "noblePerson": "貴人",
+      "moonSign": "月星座",
+      "pada": "パダ（足印）",
+      "tithi": "ティティ（月齢）",
+      "dominion": "統治領域",
+      "observation": "観察点",
+      "sign": "星座",
+      "animal": "干支",
+      "ogham": "オガム文字",
+      "meaning": "根源的意味",
+      "patron": "守護神",
+      "bureau": "天界の局",
+      "branch": "地支",
+      "nakshatra": "月宿",
+      "element": "要素",
+      "stars": "星々",
+      "sephira": "セフィラ（生命の樹の段階）",
+      "deepInsight": "深層洞察",
+      "readFullStory": "全文を読む",
+      "westernZodiac": "西洋占星術",
+      "easternZodiac": "東洋十二支",
+      "syncingData": "宇宙データを同期中...",
+      "returnToHome": "聖域に戻る",
+      "contactSupport": "信託に問い合わせる",
+      "typeLabel": "タイプ {type}",
+      "wingLabel": "w{翼}",
+      "alignment": "環境との調和"
+    },
+    "beginJourney": "旅を始める",
+    "heroTitle": "あなたの運命を探求する",
+    "heroSubtitle": "東洋と西洋の占いと心理学の融合を通じて、真の自分を発見してください",
+    "primalOrigin": "原初の起源",
+    "calibration": "調整",
+    "changeOrigin": "起源を変更",
+    "close": "閉じる",
+    "recalculate": "もう一度占う",
+    "rootsTitle": "原初のルーツ",
+    "unveilRoots": "あなたの基盤的な構造を明らかにする",
+    "destinyCoordinates": "運命の座標",
+    "destinyCoordinatesSubtitle": "天界の格子におけるあなたの位置",
+    "todayInsight": {
+      "title": "今日の魂の洞察",
+      "soulOracle": "この瞬間の神託",
+      "innerResonance": "内なる共鳴",
+      "manifestMore": "真の意図を顕現させる",
+      "synergyPulse": "シナジーパルス"
+    },
+    "sajuForm": {
+      "title": "宇宙の設計図",
+      "description": "あなたの根源的なエネルギー署名を明らかにします。",
+      "name": "お名前",
+      "birthDate": "生年月日",
+      "birthTime": "出生時刻",
+      "timeHint": "（任意）",
+      "gender": "性別",
+      "female": "陰 / 女性",
+      "male": "陽 / 男性",
+      "initialize": "運命を解き放つ"
+    },
+    "cards": {
+      "foundation": {
+        "subtitle": "主要な原型",
+        "description": "あなたの核となる存在のテンプレート"
+      },
+      "elemental": {
+        "title": "五行のバランス",
+        "subtitle": "内なる調和",
+        "description": "エネルギーの分布"
+      },
+      "celtic": {
+        "subtitle": "樹木の叡智",
+        "description": "自然の原型"
+      },
+      "egyptian": {
+        "subtitle": "古代の守護神",
+        "description": "神の調和"
+      },
+      "sacredKin": {
+        "subtitle": "マヤの署名",
+        "description": "循環する時間"
+      },
+      "grandArchive": {
+        "subtitle": "星の記録",
+        "description": "天界のデータ"
+      },
+      "nakshatra": {
+        "subtitle": "月宿",
+        "description": "魂の共鳴"
+      },
+      "hellenistic": {
+        "subtitle": "環境的背景",
+        "description": "昼/夜の脈動"
+      },
+      "onomancy": {
+        "subtitle": "声の共鳴",
+        "description": "あなたの名前に宿る力"
+      },
+      "socialAlchemy": {
+        "subtitle": "つながりのマトリックス",
+        "description": "他者とどう結びつくか"
+      },
+      "kabbalah": {
+        "subtitle": "生命の樹",
+        "description": "セフィロトの調和"
+      },
+      "destiny": {
+        "subtitle": "宇宙の道",
+        "description": "あなたの旅の軌跡"
+      },
+      "hexagram": {
+        "subtitle": "易経の共鳴",
+        "description": "この瞬間の卦"
+      },
+      "grandSynthesis": {
+        "title": "大統合",
+        "description": "あなたの存在の統一された全体像"
+      },
+      "cognition": {
+        "subtitle": "精神プロセス",
+        "description": "虚空をどう知覚するか"
+      },
+      "psyche": {
+        "subtitle": "魂の深み",
+        "description": "自己の隠された層"
+      },
+      "strategy": {
+        "subtitle": "行動への意志",
+        "description": "意図をどう顕現させるか"
+      },
+      "vocation": {
+        "subtitle": "天命の道",
+        "description": "あなたの職業的な使命"
+      },
+      "vitality": {
+        "title": "生命力"
+      },
+      "resonance": {
+        "subtitle": "統一場",
+        "description": "あなたの宇宙的振動"
+      }
+    },
+    "sections": {
+      "testArchitecture": {
+        "title": "テスト構造",
+        "description": "ポータルの背後にあるロジック。"
+      },
+      "emotionalResonance": {
+        "title": "感情の共鳴",
+        "description": "あなたの心の周波数。"
+      },
+      "grandArchives": {
+        "title": "大記録庫",
+        "description": "記録された運命の全体。"
+      }
+    },
+    "systems": {
+      "ziwei": "紫微斗数",
+      "vedic": "ヴェーダ占星術",
+      "kabbalah": "カバラ"
+    },
+    "day": "昼の宗派",
+    "night": "夜の宗派",
+    "socialCognition": "社会的認知",
+    "mapGrowth": "成長の地図",
+    "resonanceVitalitySection": "共鳴と生命力",
+    "resonanceVitalitySubtitle": "調和的周波数の調整",
+    "resonanceTitle": "共鳴",
+    "dialogs": {
+      "archiveEntry": "記録庫にアクセス",
+      "recordVerified": "真実を検証済み",
+      "enneagram": {
+        "quote": "地図は領土ではない。"
+      },
+      "humanDesign": {
+        "description": "あなたの銀河の設計図を解読します。"
+      },
+      "mbti": {
+        "description": "あなたの認知構造。"
+      },
+      "numerology": {
+        "description": "あなたの存在の数学。"
+      },
+      "riasec": {
+        "description": "あなたの職業的原型。"
+      },
+      "saju": {
+        "label": "四柱推命分析",
+        "description": "あなたの五行プロフィール。",
+        "polarity": "極性",
+        "element": "主要五行"
+      },
+      "elements": {
+        "title": "五行のバランス"
+      },
+      "tuning": {
+        "title": "個人の共鳴調整",
+        "color": "色彩の親和性",
+        "number": "振動の暗号",
+        "direction": "基本的な流れ",
+        "flower": "植物のエッセンス",
+        "gemstone": "鉱物のアンカー",
+        "luckyStar": "星々の調和",
+        "favorableDays": "調和的な時間",
+        "synergy": "統一されたつながり"
+      }
+    },
+    "humanDesign": {
+      "title": "ヒューマンデザイン",
+      "types": {
+        "Generator": "ジェネレーター",
+        "Manifesting Generator": "マニフェスティング・ジェネレーター",
+        "Manifestor": "マニフェスター",
+        "Projector": "プロジェクター",
+        "Reflector": "リフレクター"
+      }
+    },
+    "akashic": {
+      "title": "アカシックレコード",
+      "description": "「アカシックレコードは、過去、現在、未来に起こったすべての人間の出来事、思考、言葉、感情、意図の集大成です。」",
+      "sections": {
+        "substance": "実体",
+        "alignment": "調和",
+        "vessel": "器",
+        "seal": "記録の印",
+        "sanctuary": "統合の聖域"
+      }
+    },
+    "action": {
+      "takeTest": "テストを受ける",
+      "pricing": "神聖な献呈を見る"
+    },
+    "dailyInsight": {
+      "title": "今日の魂の洞察",
+      "soulOracle": "瞬間の神託",
+      "innerResonance": "内なる共鳴",
+      "manifestMore": "真の意図を顕現させる",
+      "synergyPulse": "シナジーパルス",
+      "cosmicEnergy": "現在の宇宙エネルギー",
+      "flowerOfDay": "今日の花",
+      "crystalOfPower": "力のクリスタル",
+      "guidingStar": "導きの星"
+    },
+    "moonPhase": {
+      "New": "新月",
+      "Waxing Crescent": "三日月",
+      "First Quarter": "上弦の月",
+      "Waxing Gibbous": "十三夜",
+      "Full": "満月",
+      "Waning Gibbous": "寝待月",
+      "Last Quarter": "下弦の月",
+      "Waning Crescent": "有明月"
+    },
+    "modern": {
+      "economic": {
+        "title": "経済学派の分析",
+        "subtitle": "経済志向",
+        "factions": {
+          "ECON_CLASSICAL": {
+            "name": "古典派経済学",
+            "description": "個人の合理的選択と市場均衡を重視します。このアプローチは、個人の責任とバランスの取れたシステムの有機的な効率性を尊重します。"
+          },
+          "ECON_KEYNESIAN": {
+            "name": "ケインズ経済学",
+            "description": "有効需要と積極的な介入を強調します。この視点は、集団の安定とタイムリーで支援的な行動の知恵を尊重します。"
+          },
+          "ECON_MONETARIST": {
+            "name": "マネタリズム",
+            "description": "マネーサプライと長期的な価格安定を重視します。一貫性、明確なルール、および基本的なシステムの予測可能性を尊重します。"
+          },
+          "ECON_BEHAVIORAL": {
+            "name": "行動経済学",
+            "description": "心理学的洞察を応用して経済的決定を説明します。人間の理解、共感、および日常の選択の微妙な現実を尊重します。"
+          },
+          "ECON_AUSTRIAN": {
+            "name": "オーストリア学派",
+            "description": "起業家的な発見と主観主義を強調します。創造的な自由、個人の洞察、および個々の視点のユニークな価値を尊重します。"
+          }
+        }
+      },
+      "political": {
+        "title": "政治的指向分析",
+        "subtitle": "政治的状況",
+        "factions": {
+          "POL_CONSERVATISM": {
+            "name": "保守主義",
+            "description": "伝統、安定、および漸進的な改革を重んじます。このアプローチは、苦労して得た知恵を維持しつつ、安全で安定した未来を確保することを目指します。"
+          },
+          "POL_LIBERALISM": {
+            "name": "自由主義",
+            "description": "個人的な自由、平等、および進歩を強調します。新しい可能性を模索する自由と、すべての人が持つ固有の尊厳を尊重します。"
+          },
+          "POL_SOCIALISM": {
+            "name": "社会主義",
+            "description": "社会的公正、平等、およびコミュニティの福祉に焦点を当てます。相互のサポート、集団の幸福、および連帯に見出される力を尊重します。"
+          },
+          "POL_LIBERTARIANISM": {
+            "name": "リバタリアニズム",
+            "description": "最小限の介入と最大限の個人の自律性を優先します。自己決定とプライベートな空間およびイニシアチブの保護を尊重します。"
+          },
+          "POL_MODERATISM": {
+            "name": "穏健主義",
+            "description": "秩序と進歩のバランスを模索します。実用的な解決策、対話、および共通の利益のための共通の基盤を見つけることを重んじます。"
+          }
+        }
+      }
+    }
+  },
+  "biography": {
+    "stone": {
+      "label": "誕生石",
+      "garnet": {
+        "name": "ガーネット",
+        "meaning": "真実、友愛、忠実"
+      },
+      "amethyst": {
+        "name": "アメシスト",
+        "meaning": "心の平和、誠実、健康"
+      },
+      "aquamarine": {
+        "name": "アクアマリン",
+        "meaning": "聡明、沈着、勇気"
+      },
+      "diamond": {
+        "name": "ダイヤモンド",
+        "meaning": "永遠の絆、純潔、不屈"
+      },
+      "emerald": {
+        "name": "エメラルド",
+        "meaning": "幸運、幸福、愛"
+      },
+      "pearl": {
+        "name": "真珠",
+        "meaning": "健康、長寿、富"
+      },
+      "ruby": {
+        "name": "ルビー",
+        "meaning": "情熱、勇気、自由"
+      },
+      "peridot": {
+        "name": "ペリドット",
+        "meaning": "夫婦の幸福、和合"
+      },
+      "sapphire": {
+        "name": "サファイア",
+        "meaning": "慈愛、誠実、徳望"
+      },
+      "opal": {
+        "name": "オパール",
+        "meaning": "希望、純潔、歓喜"
+      },
+      "topaz": {
+        "name": "トパーズ",
+        "meaning": "希望、潔白、友情"
+      },
+      "turquoise": {
+        "name": "ターコイズ",
+        "meaning": "成功、繁栄、不屈"
+      }
+    },
+    "flower": {
+      "label": "誕生花",
+      "carnation": {
+        "name": "カーネーション",
+        "meaning": "無垢で深い愛"
+      },
+      "violet": {
+        "name": "スミレ",
+        "meaning": "謙虚、誠実"
+      },
+      "daffodil": {
+        "name": "水仙",
+        "meaning": "自己愛、神秘"
+      },
+      "daisy": {
+        "name": "デイジー",
+        "meaning": "希望、平和"
+      },
+      "lily_of_valley": {
+        "name": "スズラン",
+        "meaning": "再び幸せが訪れる"
+      },
+      "rose": {
+        "name": "バラ",
+        "meaning": "愛、美"
+      },
+      "larkspur": {
+        "name": "デルフィニウム",
+        "meaning": "清明、高貴"
+      },
+      "gladiolus": {
+        "name": "グラジオラス",
+        "meaning": "密会、用心"
+      },
+      "aster": {
+        "name": "アスター",
+        "meaning": "変化、追憶"
+      },
+      "marigold": {
+        "name": "マリーゴールド",
+        "meaning": "絶望、悲しみ"
+      },
+      "chrysanthemum": {
+        "name": "菊",
+        "meaning": "高潔、高貴"
+      },
+      "poinsettia": {
+        "name": "ポインセチア",
+        "meaning": "幸運を祈る、祝福"
+      }
+    }
+  },
+  "lifestyle": {
+    "hobby": {
+      "label": "おすすめの活動",
+      "HOBBY_GARDENING": {
+        "name": "園芸",
+        "desc": "自然と触れ合い、内なる平和を見つける"
+      },
+      "HOBBY_MEDITATION": {
+        "name": "瞑想",
+        "desc": "心をクリアにし、自分自身に集中する"
+      },
+      "HOBBY_HIKING": {
+        "name": "ハイキング",
+        "desc": "山に登り、立ち直る力を養う"
+      },
+      "HOBBY_COOKING": {
+        "name": "料理",
+        "desc": "調和を通じて新しい味を創造する"
+      },
+      "HOBBY_CODING": {
+        "name": "コーディング",
+        "desc": "論理を用いてシステムを設計する技術"
+      },
+      "HOBBY_PAINTING": {
+        "name": "絵画",
+        "desc": "色と筆致を通じて自分を表現する"
+      },
+      "HOBBY_WRITING": {
+        "name": "創作",
+        "desc": "物語を紡ぎ、思考を自由に流す"
+      },
+      "HOBBY_PHOTOGRAPHY": {
+        "name": "写真",
+        "desc": "瞬間を捉え、物語を記録する"
+      },
+      "HOBBY_POTTERY": {
+        "name": "陶芸",
+        "desc": "粘土を形作り、実用的な芸術品にする"
+      },
+      "HOBBY_DANCING": {
+        "name": "ダンス",
+        "desc": "動きを通じて感情を表現する"
+      },
+      "HOBBY_MUSIC": {
+        "name": "音楽",
+        "desc": "調和を作り出し、音を通じて視点を表現する"
+      },
+      "HOBBY_CRAFTS": {
+        "name": "手芸・工芸",
+        "desc": "創造性を持って手作りの宝物を作る"
+      },
+      "HOBBY_THEATER": {
+        "name": "演劇",
+        "desc": "パフォーマンスを通じて物語に命を吹き込む"
+      }
+    }
+  },
+  "mythos": {
+    "celtic": {
+      "title": "ケルトの樹木占星術"
+    },
+    "egyptian": {
+      "title": "エジプトの守護神"
+    },
+    "stone": {
+      "title": "守護の誕生石"
+    },
+    "flower": {
+      "title": "誕生花占星術"
+    },
+    "recalculate": "もう一度占う"
+  },
+  "astro": {
+    "sect": {
+      "day": "昼の宗派",
+      "night": "夜の宗派"
+    }
+  },
+  "resonance": {
+    "professionalChart": "専門チャート: {bureau}。命宮は{lifePalace}に位置します。命宮に{starCount}つの星があります。",
+    "note": "記録庫があなたの運命を見守っています。",
+    "nakshatra": "月宿"
+  },
+  "onThisPage": "目次",
+  "universal": {
+    "labels": {
+      "undiscovered": "未発見"
+    },
+    "explanation": {
+      "morning_lark": "朝型の人。午前中に最も活動的になります。",
+      "night_owl": "夜型の人。夜間に最も活動的になります。",
+      "dolphin": "眠りが浅いタイプ。不眠に陥りやすい傾向があります。",
+      "lion": "早起きタイプ。夕方にはエネルギーを使い果たします。",
+      "bear": "太陽の周期に従うタイプ。8時間の睡眠を必要とします。",
+      "wolf": "夜型志向。夕方から夜にかけて創造性が高まります。"
+    }
+  },
+  "action": {
+    "pricing": "神聖な献呈を見る"
+  },
+  "dialogs": {
+    "archiveEntry": "記録庫エントリーにアクセス",
+    "recordVerified": "真実を検証済み",
+    "enneagram": {
+      "quote": "地図は領土ではない。"
+    },
+    "humanDesign": {
+      "description": "あなたの銀河の設計図を解読します。"
+    },
+    "mbti": {
+      "description": "あなたの認知アーキテクチャ。"
+    },
+    "numerology": {
+      "description": "あなたの存在の数学。"
+    },
+    "riasec": {
+      "description": "あなたの職業的原型。"
+    },
+    "saju": {
+      "label": "四柱推命分析",
+      "description": "あなたの五行プロフィール。",
+      "polarity": "極性",
+      "element": "主要元素"
+    },
+    "elements": {
+      "title": "五行のバランス"
+    },
+    "tuning": {
+      "title": "個人の共鳴チューニング",
+      "color": "色彩の親和性",
+      "number": "振動の暗号",
+      "direction": "基本的な流れ",
+      "flower": "植物のエッセンス",
+      "gemstone": "鉱物のアンカー",
+      "luckyStar": "星々の調和",
+      "favorableDays": "調和的な窓",
+      "synergy": "統一されたつながり"
+    }
+  },
+  "chosun": {
+    "title": "歴史的派閥分析（朝鮮）",
+    "subtitle": "伝統的な価値観と社会的傾向の融合",
+    "description": "あなたの生来の性質と行動傾向を歴史的文脈から分析します。",
+    "labels": {
+      "innate": "生来の分析的性質 (内部)",
+      "behavioral": "外部実行パターン（アウター）",
+      "comparison": "アライメントスコア",
+      "faction": "一致する学者の派閥"
+    },
+    "factions": {
+      "dongin": {
+        "name": "東人 (Dong-in)",
+        "description": "学問的な純粋性と道徳的実践を重視し、理想的な社会の実現に情熱を注ぐ学者的な気質です。"
+      },
+      "seoin": {
+        "name": "西人 (Seo-in)",
+        "description": "実用的合理性と体系的な効率性を重視し、現実世界の問題解決と安定の確保に焦点を当てる実利的な気質です。"
+      },
+      "namin": {
+        "name": "南人 (Nam-in)",
+        "description": "学問的な深みと包容力のある穏健さを追求し、極端を避けて調和のとれたバランスを維持する温厚な気質です。"
+      },
+      "bukin": {
+        "name": "北人 (Buk-in)",
+        "description": "徹底した実践力と果敢な改革精神を持ち、信念に基づいた行動と成果を重視する学究的な実践家気質です。"
+      },
+      "noron": {
+        "name": "老論 (No-ron)",
+        "description": "伝統的な秩序と正統性を守り、強固な論理と組織力を通じて安定を図る、地に足の着いた気質です。"
+      },
+      "soron": {
+        "name": "少論 (So-ron)",
+        "description": "柔軟な思考と進歩的な開放性を持ち、多様な声を受け入れることで有意義な変化を導く実用的な気質です。"
+      },
+      "sipa": {
+        "name": "時派 (Si-pa)",
+        "description": "時宜にかなった柔軟性と実務的な感覚を重視し、変化する環境に最適な対応を示す現実主義的な気質です。"
+      },
+      "byeokpa": {
+        "name": "僻派 (Byeok-pa)",
+        "description": "強い信念と高潔な志を守り、どのような状況でも原則を曲げない、厳格で責任感のある気質です。"
+      }
+    },
+    "traits": {
+      "academic": "アカデミック",
+      "principled": "原則的な",
+      "idealistic": "理想主義者",
+      "practical": "実用的",
+      "efficient": "効率的",
+      "stable": "安定した",
+      "moderate": "適度",
+      "harmonious": "調和のとれた",
+      "balanced": "バランスの取れた",
+      "determined": "決定した",
+      "reformist": "改革派",
+      "bold": "大胆な",
+      "traditional": "伝統的",
+      "conservative": "保守的",
+      "rigorous": "厳格な",
+      "flexible": "フレキシブル",
+      "open": "開ける",
+      "inclusive": "包括的",
+      "adaptive": "アダプティブ",
+      "timely": "タイムリー",
+      "pragmatic": "実用的な",
+      "uncompromising": "妥協のない",
+      "integrity": "誠実さ",
+      "orthodox": "正統派"
+    }
+  },
+  "lucky": {
+    "color": {
+      "red": "赤",
+      "blue": "青",
+      "green": "緑",
+      "yellow": "黄色",
+      "black": "黒",
+      "white": "白"
+    },
+    "direction": {
+      "north": "北",
+      "south": "南",
+      "east": "東",
+      "west": "西",
+      "center": "中心"
+    },
+    "flower": {
+      "sunflower": "ひまわり",
+      "rose": "薔薇",
+      "lily": "リリー",
+      "lotus": "蓮",
+      "orchid": "蘭"
+    },
+    "gemstone": {
+      "topaz": "トパーズ",
+      "ruby": "ルビー",
+      "diamond": "ダイヤモンド",
+      "sapphire": "サファイア",
+      "emerald": "エメラルド"
+    }
+  },
+  "assessment": {
+    "resilience": {
+      "title": "レジリエンス",
+      "intro": "人生の課題から立ち直る能力を測定します。",
+      "badge": "診断",
+      "result": {
+        "level": "回復力レベル",
+        "score": "スコア",
+        "profile_title": "プロファイルの評価",
+        "guidance_title": "指導とアドバイス"
+      }
+    },
+    "start": "評価の開始"
+  },
+  "manifest": {
+    "big5": {
+      "title": "ビッグ 5 性格テスト",
+      "description": "5 つの主要な性格特性の科学的レンズを通して、本当の自分を発見してください。"
+    }
+  },
+  "catalog": {
+    "title": "オントロジーカタログ",
+    "description": "利用可能なすべてのオントロジー評価を参照する"
+  },
+  "cognitiveBias": {
+    "title": "認知バイアス",
+    "description": "自分の思考パターンと偏見を特定する"
+  },
+  "consumption": {
+    "title": "消費スタイル",
+    "description": "お金と価値との関係を分析する"
+  },
+  "learningStyle": {
+    "title": "学習スタイル",
+    "description": "最適な学習戦略を発見する"
+  },
+  "badge": "バッジ",
+  "resultTitle": "分析結果",
+  "restart": "再診断する",
+  "title": "タイトル",
+  "mayan": {
+    "systemName": "マヤ暦",
+    "narrative": "古代マヤの知恵があなたの魂のサイクルを解き明かします。",
+    "solarSeal": "太陽の紋章",
+    "tone": "銀河の音"
+  },
+  "celtic": {
+    "systemName": "ケルト樹木占星術",
+    "narrative": "ケルトの古代の木々があなたの内なる力を守護します。",
+    "treeSign": "守護樹",
+    "ogham": "オガム文字"
+  },
+  "Link copied to clipboard!": "リンクをクリップボードにコピーしました！"
+}

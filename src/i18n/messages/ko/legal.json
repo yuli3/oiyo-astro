@@ -1,0 +1,68 @@
+{
+  "terms": {
+    "sections": {
+      "overview": {
+        "content": "본 약관은 귀하의 OIYO Sanctuary 이용에 적용됩니다. 공허에 들어가면 이러한 계약에 동의하는 것입니다."
+      }
+    },
+    "test": {
+      "progress": "진전",
+      "next": "다음",
+      "previous": "이전의",
+      "submit": "동의하고 계속하세요",
+      "loading": "처리 중...",
+      "selectOption": "선택해주세요",
+      "insightBullets": ["핵심 규약"]
+    },
+    "result": {
+      "title": "봉인된 언약",
+      "description": "귀하는 약관에 동의했습니다."
+    },
+    "meta": {
+      "title": "서비스 약관",
+      "description": "Oiyo 서비스 약관을 검토하세요.",
+      "keywords": "약관, 정책"
+    },
+    "title": "서비스 약관",
+    "description": "성소 이용 약관.",
+    "keywords": "이용 약관, 정책, 서비스",
+    "lastUpdated": "2026년 1월 1일"
+  },
+  "privacy": {
+    "sections": {
+      "overview": {
+        "content": "OIYO는 귀하의 개인정보를 존중합니다. 우리는 귀하의 존재론적 청사진을 보호하기 위해 보편적인 데이터 보호법을 준수합니다."
+      }
+    },
+    "test": {
+      "progress": "진전",
+      "next": "다음",
+      "previous": "이전의",
+      "submit": "확인",
+      "loading": "로드 중",
+      "selectOption": "선택해주세요",
+      "insightBullets": ["개인정보 보호 핵심"]
+    },
+    "result": {
+      "title": "확인됨",
+      "description": "개인 정보 보호 정책을 검토했습니다."
+    },
+    "meta": {
+      "title": "개인 정보 보호 정책",
+      "description": "Oiyo 개인정보 보호정책을 검토하세요.",
+      "keywords": "개인 정보 보호, 보안"
+    },
+    "point1": "이름, 이메일 등의 개인정보는 암호화됩니다.",
+    "point2": "결과는 집단적 공명을 위해 익명으로 사용됩니다.",
+    "point3": "귀하는 언제든지 데이터 삭제를 요청할 수 있습니다.",
+    "title": "개인 정보 보호 정책",
+    "description": "우리는 당신의 영혼 데이터를 존경하는 마음으로 대합니다.",
+    "keywords": "개인 정보 보호, 보안, 데이터 보호",
+    "lastUpdated": "2026년 1월 1일"
+  },
+  "cookieTitle": "성스러운 계약",
+  "cookieTextEu": "귀하의 디지털 영혼의 성역을 보호하기 위해, 공명 추적을 위한 쿠키 사용 동의를 요청드립니다. 귀하의 데이터는 안전하게 보호됩니다.",
+  "cookieTextDefault": "당신의 궤적을 기록하고 지혜를 정교하게 다듬기 위한 우주적 계약에 서명하시겠습니까?",
+  "cookieDeny": "거부",
+  "cookieAccept": "계약 동의"
+}

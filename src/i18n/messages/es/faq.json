@@ -1,0 +1,75 @@
+{
+  "questions": {
+    "1": {
+      "q": "¿Cuánto dura el ritual de análisis?",
+      "a": "La concentración requiere sólo una breve alineación de dos a cinco minutos, dependiendo de la profundidad de tu intuición."
+    },
+    "2": {
+      "q": "¿Cómo debemos aplicar estas revelaciones?",
+      "a": "Úselo como una brújula espiritual para navegar los flujos de capital, las relaciones de parentesco y su yo interior."
+    },
+    "3": {
+      "q": "¿Los sabios brindan asesoramiento comercial directo?",
+      "a": "No garantizamos ningún tesoro específico. Más bien, ilumina estrategias para que puedas elegir tu propio camino."
+    },
+    "4": {
+      "q": "¿Puedo invitar a mis colegas a este santuario?",
+      "a": "Por supuesto. Compartir la luz del entendimiento con los demás fortalece la armonía del viaje compartido."
+    },
+    "5": {
+      "q": "¿Hay un diseño divino detrás de los resultados?",
+      "a": "Sí. Nuestra guía está tejida a partir de hilos de ciencias del comportamiento, psicología y sabiduría antigua."
+    },
+    "q1": {
+      "question": "¿OIYO es gratuito?",
+      "answer": "sí, OIYO ofrece un test de personalidad gratuito y funciones básicas. Si desea obtener información más profunda, puede utilizar funciones premium."
+    },
+    "q2": {
+      "question": "¿Qué métodos de pago puedo utilizar?",
+      "answer": "Admitimos todas las principales tarjetas de crédito, PayPal y varios métodos de pago locales según su región."
+    },
+    "q3": {
+      "question": "¿Puedo cancelar mi suscripción en cualquier momento?",
+      "answer": "¡Por supuesto! Puede cancelar su suscripción en cualquier momento en la configuración de su cuenta. Se procesa de inmediato sin más preguntas."
+    },
+    "q4": {
+      "question": "¿Es posible un reembolso?",
+      "answer": "Sí, ofrecemos una garantía de devolución de dinero de 30 días si no está satisfecho con las funciones premium."
+    }
+  },
+  "title": "Preguntas frecuentes sobre pagos",
+  "subtitle": "Todo lo que necesitas saber sobre pagos",
+  "stillHaveQuestions": "¿Aún necesitas claridad?",
+  "supportText": "Contacta con las Guardianas de Origen",
+  "answer1": "Esperando una integración profunda...",
+  "answer2": "Esperando una integración profunda...",
+  "answer3": "Esperando una integración profunda...",
+  "answer4": "Esperando una integración profunda...",
+  "answer5": "Esperando una integración profunda...",
+  "question1": "Esperando una integración profunda...",
+  "question2": "Esperando una integración profunda...",
+  "question3": "Esperando una integración profunda...",
+  "question4": "Esperando una integración profunda...",
+  "question5": "Esperando una integración profunda...",
+  "moreQuestions": "¿Tiene más preguntas en mente?",
+  "contact": "Conéctese con nosotros",
+  "meta": {
+    "title": "Preguntas frecuentes sobre pagos",
+    "description": "Preguntas frecuentes sobre pagos, suscripciones y facturación",
+    "keywords": "Pago, preguntas frecuentes, facturación, suscripciones, precios"
+  },
+  "items": [
+    {
+      "q": "¿Están seguros mis datos financieros?",
+      "a": "Sí, priorizamos la privacidad y no almacenamos credenciales bancarias confidenciales."
+    },
+    {
+      "q": "¿Qué tan preciso es el resultado?",
+      "a": "Se basa en modelos estándar de psicología financiera conductual."
+    },
+    {
+      "q": "¿Puedo volver a realizar la prueba?",
+      "a": "¡Absolutamente! Su mentalidad financiera puede evolucionar con el tiempo."
+    }
+  ]
+}

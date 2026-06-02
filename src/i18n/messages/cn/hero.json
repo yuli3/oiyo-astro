@@ -1,0 +1,51 @@
+{
+  "ctaStart": "开始分析",
+  "ctaLibrary": "探索图书馆",
+  "scrollLabel": "向下滚动",
+  "oracleText": "欢迎来到神谕",
+  "oracleTitle": "每日洞察",
+  "cta": {
+    "primary": "开始",
+    "secondary": "了解更多"
+  },
+  "features": {
+    "accurate": "精准",
+    "comprehensive": "全面",
+    "personalized": "个性化"
+  },
+  "subtitle": "关于您独特优势的权威指南。",
+  "title": "圣所地图",
+  "description": "在智慧的古老森林中航行。",
+  "titlePrefix": "设计您的",
+  "titleSuffix": "理想人生",
+  "keywords": "八字, 塔罗, 共鸣, 本体论, 灵魂地图",
+  "errorFallbackTitle": "虚空正在加深",
+  "errorFallbackDescription": "宇宙的丝线暂时纠缠在一起。请允许我们需要片刻来恢复和谐。",
+  "phase": "协议: 0.1.0",
+  "enter": "进入圣所",
+  "explore": "探索地图",
+  "status": "状态",
+  "active": "活跃",
+  "orbitalVelocity": "轨道速度",
+  "km": "公里",
+  "lunarPhase": "月相",
+  "waxing": "上弦",
+  "ontology": {
+    "title": "圣所地图",
+    "desc": "为您今日所需的指引。"
+  },
+  "resonance": {
+    "title": "圣所地图",
+    "desc": "为您今日所需的指引。"
+  },
+  "daily": {
+    "title": "圣所地图",
+    "desc": "为您今日所需的指引。"
+  },
+  "discovery": {
+    "badge": "发现",
+    "title": "圣所地图",
+    "description": "在智慧的古老森林中航行。",
+    "takeTest": "参加测试"
+  }
+}

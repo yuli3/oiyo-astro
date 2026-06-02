@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "Soutien sacré | Oiyo.net",
+    "description": "Cherchez des conseils et trouvez des solutions dans notre sanctuaire sacré."
+  },
+  "hero": {
+    "title": "Soutien sacré",
+    "subtitle": "Nos gardiens sont là pour vous guider à travers tous les défis de votre voyage spirituel."
+  },
+  "form": {
+    "subjectLabel": "Sujette",
+    "subjectPlaceholder": "De quoi s'agit-il ?",
+    "categoryLabel": "Catégorie",
+    "priorityLabel": "Priorité",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "Comment pouvons-nous vous aider ?",
+    "submitButton": "Envoyer un message",
+    "submitting": "Envoi...",
+    "successTitle": "Message reçu",
+    "successMessage": "Nous avons reçu votre demande et vous répondrons dans les 24 heures.",
+    "errorTitle": "Échec de la soumission",
+    "errorMessage": "Une ombre temporaire a croisé notre chemin. Veuillez réessayer plus tard.",
+    "title": "Soumettre un ticket d'assistance"
+  },
+  "contact": "Rechercher des conseils",
+  "faq": "Demandes courantes",
+  "ticket_status": "Statut du pacte",
+  "new_ticket": "Lancer une nouvelle enquête",
+  "my_tickets": "Mes demandes",
+  "categories": {
+    "payment": "Facturation et paiement",
+    "account": "Accès au compte",
+    "technical": "Problème technique",
+    "feature_request": "Demande de fonctionnalité",
+    "general": "Enquête générale"
+  },
+  "priority": {
+    "low": "Faible",
+    "normal": "Normale",
+    "high": "Haut",
+    "urgent": "Urgente"
+  }
+}

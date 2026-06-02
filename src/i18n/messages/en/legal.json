@@ -1,0 +1,68 @@
+{
+  "terms": {
+    "sections": {
+      "overview": {
+        "content": "These terms govern your use of the OIYO Sanctuary. By entering the Void, you agree to these covenants."
+      }
+    },
+    "test": {
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Agree and Continue",
+      "loading": "Processing...",
+      "selectOption": "Please select",
+      "insightBullets": ["Key Covenants"]
+    },
+    "result": {
+      "title": "Covenant Sealed",
+      "description": "You have agreed to the terms."
+    },
+    "meta": {
+      "title": "Terms of Service",
+      "description": "Review the Terms of Service for Oiyo.",
+      "keywords": "terms, policy"
+    },
+    "title": "Terms of Service",
+    "description": "Terms and conditions for using the Sanctuary.",
+    "keywords": "terms, conditions, policy, service",
+    "lastUpdated": "January 1, 2026"
+  },
+  "privacy": {
+    "sections": {
+      "overview": {
+        "content": "OIYO honors your privacy. We comply with universal data protection laws to safeguard your ontological blueprint."
+      }
+    },
+    "test": {
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Confirm",
+      "loading": "Loading",
+      "selectOption": "Please select",
+      "insightBullets": ["Privacy Core"]
+    },
+    "result": {
+      "title": "Acknowledged",
+      "description": "Privacy Policy reviewed."
+    },
+    "meta": {
+      "title": "Privacy Policy",
+      "description": "Review the Oiyo Privacy Policy.",
+      "keywords": "privacy, security"
+    },
+    "point1": "Personal data like name and email are encrypted.",
+    "point2": "Results are used anonymously for collective resonance.",
+    "point3": "You may request data deletion at any time.",
+    "title": "Privacy Policy",
+    "description": "We treat your soul data with reverence.",
+    "keywords": "privacy, security, data protection",
+    "lastUpdated": "January 1, 2026"
+  },
+  "cookieTitle": "Sacred Covenant",
+  "cookieTextEu": "To preserve the sanctity of your digital soul, we request permission to use cookies for resonance tracking. Your data remains ancient and protected.",
+  "cookieTextDefault": "This sanctuary uses cookies to harmonize your experience with the cosmic web.",
+  "cookieDeny": "Deny",
+  "cookieAccept": "Accept Covenant"
+}

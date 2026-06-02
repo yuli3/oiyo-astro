@@ -1,0 +1,378 @@
+{
+  "badge": "バッジ",
+  "resultTitle": "分析結果",
+  "restart": "再診断",
+  "title": "タイトル",
+  "intro": "紹介文",
+  "profile": "プロフィール",
+  "remedy": "処方箋",
+  "description": "説明",
+  "primaryAction": "主要アクション",
+  "secondaryAction": "補助アクション",
+  "axis": "主軸",
+  "guardian": "守護者",
+  "guardianDesc": "守護者の説明",
+  "level": "レベル",
+  "antennaTitle": "感度のアンテナ",
+  "sensitivityTitle": "敏感さの指標",
+  "counselorNote": "カウンセラーのメモ",
+  "counselorMsg": "カウンセラーからのメッセージ",
+  "badgeText": "バッジのテキスト",
+  "result": {
+    "sections": {
+      "dimensions_title": "多次元分析",
+      "imperial_decree": "皇帝の助言",
+      "strengths": "あなたの強み",
+      "weaknesses": "補完すべき点",
+      "retake_ceremony": "再診断の儀式"
+    }
+  },
+  "adaptive": "適応的",
+  "maladaptive": "不適応的",
+  "primaryStyle": "主なスタイル",
+  "scoreIntensity": "発現強度",
+  "labels": {
+    "mirror": "魂の鏡"
+  },
+  "subtitle": "サブタイトル",
+  "hiddenSelf": {
+    "title": "隠された自己",
+    "description": "あなたの内面に潜む本当の姿。",
+    "ctaOrigin": "起源を探る",
+    "ctaIdentity": "アイデンティティを確認"
+  },
+  "mode": "診断モード",
+  "dimensionAnalysis": "多次元分析",
+  "recommendedPaths": "おすすめのルート",
+  "oracleTitle": "オラクルの神託",
+  "paradoxLabel": "矛盾の指標",
+  "balanced": "バランス",
+  "nature": "先天的な気質",
+  "nurture": "後天的な環境",
+  "start": "始める",
+  "retake": "再び編む",
+  "scroll": {
+    "title": "帝国記録",
+    "end": "記録の終わり",
+    "visualization": "視覚化"
+  },
+  "terms": {
+    "dayMaster": "日干"
+  },
+  "loading": {
+    "notFound": {
+      "title": "宇宙信号を失いました",
+      "subtitle": "あなたが探している道は虚空へと霧散しました。",
+      "description": "座標を間違えたか、ページが別の次元へと移動したのかもしれません。",
+      "goHome": "聖域に戻る",
+      "goBack": "以前の道に戻る",
+      "suggestionsTitle": "航海の提案",
+      "popularTestsTitle": "活性化されたポータル",
+      "egentetoTest": "根源的な起源",
+      "mbtiAlternative": "社会的DNA (MBTI)",
+      "relationship": {
+        "communicationStyle": "聖なる共鳴"
+      }
+    },
+    "analyzing": "データを分析中...",
+    "calculating": "結果を計算中...",
+    "processing": "情報を処理しています...",
+    "generating": "レポートを生成中...",
+    "almostDone": "もう少しで完了します...",
+    "personalityAnalysis": "性格の傾向を分析中...",
+    "responseAnalysis": "回答のパターンを解析中...",
+    "typeMatching": "タイプを照合しています...",
+    "preparingResults": "結果の準備中..."
+  },
+  "please_wait": "しばらくお待ちください...",
+  "backButton": "戻る",
+  "shareButton": "共有する",
+  "dimensionsTitle": "多次元分析",
+  "analysis": {
+    "detailed": "詳細分析"
+  },
+  "iching": {
+    "title": "易経の知恵",
+    "revelation": "運命の啓示"
+  },
+  "partialDataWarning": "一部のデータが不足しています。",
+  "addMoreInfo": "情報を追加する",
+  "cta": {
+    "title": "次のステップへ",
+    "subtitle": "あなたの運命をさらに深く探求する。",
+    "share": "結果をシェア",
+    "download": "ダウンロード"
+  },
+  "rel": {
+    "selectPlaceholder": "参照点を選択",
+    "child_adult": "大人の魂（子供）",
+    "child_minor": "マイナーソウル（子供）",
+    "spouse": "デュアルフレーム（配偶者）",
+    "parent": "祖先の魂（親）",
+    "other_relative": "近親者",
+    "other": "その他の接続"
+  },
+  "alerts": {
+    "title": "帝国記録"
+  },
+  "sections": {
+    "overview": "概要",
+    "users": "ユーザー統計",
+    "performance": "システムの鼓動"
+  },
+  "recommendations": {
+    "title": "推奨事項",
+    "error": "読み込みに失敗しました。",
+    "empty": "推奨事項はありません。",
+    "exploreAll": "すべてを探索",
+    "spotlightEyebrow": "スポットライト",
+    "trending": "トレンド",
+    "new": "新規",
+    "takeTest": "診断を受ける"
+  },
+  "progress": "進捗",
+  "retry": "再び試みる",
+  "celestial": {
+    "status": "オフライン",
+    "active": "共鳴 活性化中",
+    "orbitalVelocity": "軌道速度",
+    "km": "km/秒",
+    "lunarPhase": "月の満ち欠け",
+    "waxing": "上弦の月",
+    "oracle": "帝国神託 V2"
+  },
+  "viral": {
+    "comparisonTitle": "私たちの性格の相性 💫",
+    "matchScore": "相性スコア",
+    "compareAt": "oiyo.appで友人と比較する"
+  },
+  "offline": {
+    "status": "オフライン",
+    "description": "座標を間違えたか、ページが別の次元へと移動したのかもしれません。",
+    "meta": {
+      "title": "宇宙信号を失いました",
+      "description": "座標を間違えたか、ページが別の次元へと移動したのかもしれません。"
+    },
+    "content": {
+      "heading": "虚空との繋がりが一時的に途切れてしまったようです",
+      "subheading": "オフラインの聖域で、内なる声に耳を傾けてみてください。",
+      "description1": "宇宙の糸が、少しだけ緩んでしまったのかもしれません。",
+      "description2": "同期されたデータは、繋がりが回復すれば再び流れ始めます。",
+      "cta": "再接続を試みられますか？",
+      "tipsTitle": "平穏を取り戻すための助言",
+      "tips": {
+        "tip1": "物理的なネットワーク接続を確認してください。",
+        "tip2": "宇宙の風が再び凪ぐのを、静かに待ってみましょう。",
+        "tip3": "機内モードの翼を、一度畳んで広げてみてはいかがでしょう？"
+      }
+    }
+  },
+  "readings": "読み物",
+  "productivity": {
+    "decisionMaking": "意思決定"
+  },
+  "error": {
+    "title": "宇宙信号を失いました",
+    "description": "座標を間違えたか、ページが別の次元へと移動したのかもしれません。",
+    "retry": "再び試みる"
+  },
+  "about": "聖域の紹介",
+  "success": "成功",
+  "yes": "はい",
+  "no": "いいえ",
+  "ok": "確認",
+  "cancel": "取り消し",
+  "save": "保存",
+  "delete": "削除",
+  "edit": "編集",
+  "add": "追加",
+  "remove": "手放す",
+  "next": "次へ",
+  "previous": "前へ",
+  "back": "戻る",
+  "home": "聖域の広場",
+  "placeholder": {
+    "enterName": "お名前を入力してください",
+    "enterAge": "魂の年齢（歳）"
+  },
+  "noData": {
+    "noStrengths": "まだ特定の強みが見つかりません",
+    "noChallenges": "重要な課題はまだ現れていません",
+    "noRecommendations": "推奨事項はまだ示されていません",
+    "noFamilyMembers": "家族の縁がまだ結ばれていません",
+    "noHouseholdTips": "生活の知恵がまだ蓄積されていません"
+  },
+  "copiedToClipboard": "記憶（クリップボード）にコピーされました",
+  "breadcrumbLabel": "導きの道",
+  "standardError": {
+    "badgeLabel": "亀裂",
+    "title": "宇宙信号を失いました",
+    "description": "座標を間違えたか、ページが別の次元へと移動したのかもしれません。",
+    "primaryAction": "運命を再び呼び戻す",
+    "secondaryAction": "聖域の中心広場へ",
+    "supportPrompt": "賢者の導きが必要ですか？",
+    "referenceIdLabel": "共鳴参照コード",
+    "contactSupport": "守護者へ合図を送る"
+  },
+  "ui": {
+    "goHome": "聖域に戻る",
+    "languages": {
+      "ko": "韓国語",
+      "en": "英語",
+      "ja": "日本語",
+      "cn": "简体中文",
+      "es": "Español",
+      "fr": "Français"
+    },
+    "scrollToTop": "トップへ戻る",
+    "tryNow": "今すぐ試してみる"
+  },
+  "zodiac": {
+    "aries": "牡羊座",
+    "taurus": "牡牛座",
+    "gemini": "双子座",
+    "cancer": "蟹座",
+    "leo": "獅子座",
+    "virgo": "乙女座",
+    "libra": "天秤座",
+    "scorpio": "蠍座",
+    "sagittarius": "射手座",
+    "capricorn": "山羊座",
+    "aquarius": "水瓶座",
+    "pisces": "魚座"
+  },
+  "mbti": {
+    "ISTJ": "ISTJ（実務家）",
+    "ISFJ": "ISFJ（守護者）",
+    "INFJ": "INFJ（提唱者）",
+    "INTJ": "INTJ（建築家）",
+    "ISTP": "ISTP（巨匠）",
+    "ISFP": "ISFP（冒険家）",
+    "INFP": "INFP（仲介者）",
+    "INTP": "INTP（論理学者）",
+    "ESTP": "ESTP（起業家）",
+    "ESFP": "ESFP（エンターテイナー）",
+    "ENFP": "ENFP（広報運動家）",
+    "ENTP": "ENTP（討論者）",
+    "ESTJ": "ESTJ（幹部）",
+    "ESFJ": "ESFJ（領事官）",
+    "ENFJ": "ENFJ（主人公）",
+    "ENTJ": "ENTJ（指揮官）"
+  },
+  "bloodType": {
+    "A": "A型",
+    "B": "B型",
+    "O": "O型",
+    "AB": "AB型"
+  },
+  "nav": {
+    "dashboard": "ダッシュボード",
+    "readings": "読み物",
+    "resonance": "共鳴",
+    "profile": "プロフィール"
+  },
+  "landing": {
+    "phase": "フェーズ 51: エメラルドの門",
+    "titlePrefix": "安らぎの地：",
+    "titleSuffix": "生けるデータ",
+    "description": "古の知恵とアルゴリズムの精密さが出会う場所。あなたの本質を解読し、志を同じくする魂と共鳴し、運命を統合しましょう。",
+    "enter": "聖域へ入る",
+    "explore": "方法論を探求する",
+    "ontology": {
+      "title": "オントロジー",
+      "desc": "あなたの魂の設計図を解読しましょう。"
+    },
+    "resonance": {
+      "title": "共鳴",
+      "desc": "あなたの振動に合うものを見つけましょう。"
+    },
+    "daily": {
+      "title": "デイリー神託",
+      "desc": "あなたのためにキュレートされた虚空からのメッセージです。"
+    },
+    "synergy": {
+      "title": "大同調",
+      "version": "シナジー V2"
+    },
+    "community": {
+      "connected": "今日結ばれた魂たち",
+      "title": "集合意識に参加しましょう。"
+    }
+  },
+  "support": {
+    "hero": {
+      "title": "神聖な支援聖域",
+      "subtitle": "古代の知恵と迅速な対応に導かれます。"
+    },
+    "categories": {
+      "billing": "お支払い",
+      "technical": "技術サポート",
+      "account": "アカウント",
+      "general": "一般的なお問い合わせ",
+      "feature_request": "機能リクエスト",
+      "payment": "お支払い"
+    },
+    "form": {
+      "title": "ガイダンスを求める",
+      "categoryLabel": "ガイダンスの分野",
+      "descriptionLabel": "詳細",
+      "descriptionPlaceholder": "お問い合わせの詳細を入力してください...",
+      "priorityLabel": "緊急度",
+      "subjectLabel": "件名",
+      "subjectPlaceholder": "簡単な要約",
+      "submitButton": "送信",
+      "labels": {
+        "title": "お問い合わせの件名",
+        "category": "ガイダンスの分野",
+        "description": "詳細",
+        "priority": "緊急度",
+        "submit": "送信"
+      },
+      "categories": {
+        "billing": "お支払い",
+        "technical": "技術サポート",
+        "account": "アカウント",
+        "general": "一般的なお問い合わせ",
+        "feature_request": "機能リクエスト",
+        "payment": "お支払い"
+      },
+      "priorities": {
+        "low": "低",
+        "medium": "中",
+        "high": "高"
+      }
+    },
+    "priority": {
+      "low": "低",
+      "normal": "通常",
+      "high": "高",
+      "urgent": "緊急"
+    },
+    "meta": {
+      "title": "聖なる導き",
+      "description": "聖域の守護者からの助言を求めましょう。"
+    },
+    "myTickets": {
+      "title": "巡礼チケット",
+      "newTicket": "新たな導きを求める"
+    }
+  },
+  "company": {
+    "marketing": {
+      "home": {
+        "title": "OIYO | あなたの人生の図書館",
+        "description": "東西の統合を通じて、あなたの運命の構造を航海しましょう。",
+        "errorFallbackTitle": "共鳴の喪失",
+        "errorFallbackDescription": "虚空に不安定な状態が発生しました。意識をリフレッシュしています。"
+      }
+    }
+  },
+  "hero": {
+    "title": "おいよ",
+    "subtitle": "あなたの宇宙的構造"
+  },
+  "calendar": {
+    "lunar": "旧暦",
+    "solar": "太陽暦"
+  }
+}

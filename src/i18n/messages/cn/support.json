@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "神圣的支持| 油友网",
+    "description": "在我们神圣的圣所寻求指导并找到解决方案。"
+  },
+  "hero": {
+    "title": "神圣的支持",
+    "subtitle": "我们的守护者在这里指导您应对精神之旅中的任何挑战。"
+  },
+  "form": {
+    "subjectLabel": "主题",
+    "subjectPlaceholder": "这是关于什么的？",
+    "categoryLabel": "类别",
+    "priorityLabel": "优先事项",
+    "descriptionLabel": "描述",
+    "descriptionPlaceholder": "我们能为您提供什么帮助？",
+    "submitButton": "发送消息",
+    "submitting": "正在发送...",
+    "successTitle": "已收到消息",
+    "successMessage": "我们已收到您的询问，并将在 24 小时内回复。",
+    "errorTitle": "提交失败",
+    "errorMessage": "暂时的阴影横亘在我们的路上。 请稍后重试。",
+    "title": "提交支持票"
+  },
+  "contact": "寻求指导",
+  "faq": "常见查询",
+  "ticket_status": "协议的现状",
+  "new_ticket": "发起新的询价",
+  "my_tickets": "我的询问",
+  "categories": {
+    "payment": "账单与付款",
+    "account": "账户访问",
+    "technical": "技术问题",
+    "feature_request": "功能请求",
+    "general": "一般查询"
+  },
+  "priority": {
+    "low": "低的",
+    "normal": "普通的",
+    "high": "高的",
+    "urgent": "紧迫的"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "Response Time",
+    "description": "We aim to respond as quickly as possible.",
+    "keywords": "contact, support, aide"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "💬",
+        "title": "Accompagnement personnalisé",
+        "description": "Si vous rencontrez des obstacles au cours de votre voyage, nous sommes là pour vous aider."
+      },
+      {
+        "icon": "🤝",
+        "title": "Partenariats créatifs",
+        "description": "Nous sommes toujours à la recherche d’âmes sœurs avec lesquelles grandir et innover."
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "Comment demander un remboursement ?",
+        "answer": "Vous pouvez demander un remboursement depuis votre page de paramètres."
+      },
+      {
+        "question": "Je veux supprimer mon compte.",
+        "answer": "Vous pouvez supprimer votre compte à partir des paramètres de profil."
+      }
+    ]
+  },
+  "test": {
+    "progress": "Progression du formulaire",
+    "next": "Continuer",
+    "previous": "Retourner",
+    "submit": "Envoyer un message",
+    "loading": "Partager avec les stars...",
+    "selectOption": "Veuillez sélectionner la nature de votre demande"
+  },
+  "title": "Response Time",
+  "subtitle": "Nous sommes là pour vous aider.",
+  "name": "Nom et prénom",
+  "email": {
+    "0": "E",
+    "1": "m",
+    "2": "une",
+    "3": "je",
+    "4": "je",
+    "5": " ",
+    "6": "UNE",
+    "7": "d",
+    "8": "d",
+    "9": "r",
+    "10": "e",
+    "11": "s",
+    "12": "s",
+    "title": "Response Time",
+    "button": "Envoyer un e-mail",
+    "description": "We aim to respond as quickly as possible."
+  },
+  "message": "Votre message",
+  "send": "Envoyer",
+  "success": "Votre message a été envoyé avec succès !",
+  "error": "Une erreur s'est produite lors de l'envoi de votre message. Veuillez réessayer.",
+  "response": {
+    "title": "Temps de réponse",
+    "time": "Dans les 24 heures",
+    "description": "Nous visons à répondre le plus rapidement possible."
+  },
+  "description": "We aim to respond as quickly as possible.",
+  "supportButton": "Contacter le support",
+  "emailSubject": "Demande d'assistance",
+  "emailButton": "Envoyez-nous un courriel"
+}

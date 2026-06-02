@@ -1,0 +1,75 @@
+{
+  "questions": {
+    "1": {
+      "q": "Combien de temps dure le rituel d’analyse ?",
+      "a": "La concentration ne nécessite qu’un court alignement de deux à cinq minutes, selon la profondeur de votre intuition."
+    },
+    "2": {
+      "q": "Comment appliquer ces révélations ?",
+      "a": "Utilisez-le comme une boussole spirituelle pour naviguer dans les flux de capitaux, les relations de parenté et votre moi intérieur."
+    },
+    "3": {
+      "q": "Les sages fournissent-ils des conseils commerciaux directs ?",
+      "a": "Nous ne garantissons aucun trésor spécifique. Au lieu de cela, il éclaire les stratégies afin que vous puissiez choisir votre propre chemin."
+    },
+    "4": {
+      "q": "Puis-je inviter mes collègues dans ce sanctuaire ?",
+      "a": "Bien sûr. Partager la lumière de la compréhension avec les autres renforce l’harmonie du voyage partagé."
+    },
+    "5": {
+      "q": "Y a-t-il un dessein divin derrière les résultats ?",
+      "a": "Oui. Nos conseils sont tissés à partir des fils de la science du comportement, de la psychologie et de la sagesse ancienne."
+    },
+    "q1": {
+      "question": "OIYO est-il gratuit ?",
+      "answer": "oui, OIYO propose un test de personnalité gratuit et des fonctionnalités de base. Si vous souhaitez des informations plus approfondies, vous pouvez utiliser des fonctionnalités premium."
+    },
+    "q2": {
+      "question": "Quels modes de paiement puis-je utiliser ?",
+      "answer": "Nous prenons en charge toutes les principales cartes de crédit, PayPal et diverses méthodes de paiement locales en fonction de votre région."
+    },
+    "q3": {
+      "question": "Puis-je annuler mon abonnement à tout moment ?",
+      "answer": "Bien sûr! Vous pouvez annuler votre abonnement à tout moment dans les paramètres de votre compte. Il est traité immédiatement, sans autre question."
+    },
+    "q4": {
+      "question": "Un remboursement est-il possible ?",
+      "answer": "Oui, nous offrons une garantie de remboursement de 30 jours si vous n'êtes pas satisfait des fonctionnalités premium."
+    }
+  },
+  "title": "FAQ sur le paiement",
+  "subtitle": "Tout ce que vous devez savoir sur les paiements",
+  "stillHaveQuestions": "Encore besoin de clarté ?",
+  "supportText": "Contactez les Gardiens de l'Origine",
+  "answer1": "En attendant une intégration profonde...",
+  "answer2": "En attendant une intégration profonde...",
+  "answer3": "En attendant une intégration profonde...",
+  "answer4": "En attendant une intégration profonde...",
+  "answer5": "En attendant une intégration profonde...",
+  "question1": "En attendant une intégration profonde...",
+  "question2": "En attendant une intégration profonde...",
+  "question3": "En attendant une intégration profonde...",
+  "question4": "En attendant une intégration profonde...",
+  "question5": "En attendant une intégration profonde...",
+  "moreQuestions": "Vous avez d'autres questions en tête ?",
+  "contact": "Connectez-vous avec nous",
+  "meta": {
+    "title": "FAQ sur le paiement",
+    "description": "Questions fréquemment posées sur les paiements, les abonnements et la facturation",
+    "keywords": "Paiement, FAQ, Facturation, Abonnements, Tarification"
+  },
+  "items": [
+    {
+      "q": "Mes données financières sont-elles en sécurité ?",
+      "a": "Oui, nous accordons la priorité à la confidentialité et ne stockons pas les informations d’identification bancaires sensibles."
+    },
+    {
+      "q": "Quelle est la précision du résultat ?",
+      "a": "Il est basé sur des modèles standards de psychologie de la finance comportementale."
+    },
+    {
+      "q": "Puis-je repasser le test ?",
+      "a": "Absolument ! Votre état d’esprit financier peut évoluer avec le temps."
+    }
+  ]
+}

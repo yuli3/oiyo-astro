@@ -1,0 +1,7 @@
+{
+  "generate": "Generation Failed",
+  "purchase": "Purchase Failed",
+  "tooLarge": "File too large.",
+  "cameraAccess": "Camera access denied.",
+  "failed": "Operation failed."
+}

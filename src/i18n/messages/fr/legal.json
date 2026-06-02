@@ -1,0 +1,68 @@
+{
+  "terms": {
+    "sections": {
+      "overview": {
+        "content": "Ces conditions régissent votre utilisation du sanctuaire OIYO. En entrant dans le Vide, vous acceptez ces alliances."
+      }
+    },
+    "test": {
+      "progress": "Progrès",
+      "next": "Suivante",
+      "previous": "Précédente",
+      "submit": "Accepter et continuer",
+      "loading": "Traitement...",
+      "selectOption": "Veuillez sélectionner",
+      "insightBullets": ["Alliances clés"]
+    },
+    "result": {
+      "title": "Alliance scellée",
+      "description": "Vous avez accepté les conditions."
+    },
+    "meta": {
+      "title": "Conditions d'utilisation",
+      "description": "Consultez les conditions d’utilisation d’Oiyo.",
+      "keywords": "conditions, politique"
+    },
+    "title": "Conditions d'utilisation",
+    "description": "Conditions générales d'utilisation du Sanctuaire.",
+    "keywords": "termes, conditions, politique, service",
+    "lastUpdated": "1 janvier 2026"
+  },
+  "privacy": {
+    "sections": {
+      "overview": {
+        "content": "OIYO respecte votre vie privée. Nous respectons les lois universelles sur la protection des données pour sauvegarder votre plan ontologique."
+      }
+    },
+    "test": {
+      "progress": "Progrès",
+      "next": "Suivante",
+      "previous": "Précédente",
+      "submit": "Confirmer",
+      "loading": "Chargement",
+      "selectOption": "Veuillez sélectionner",
+      "insightBullets": ["Noyau de confidentialité"]
+    },
+    "result": {
+      "title": "Reconnue",
+      "description": "Politique de confidentialité révisée."
+    },
+    "meta": {
+      "title": "politique de confidentialité",
+      "description": "Consultez la politique de confidentialité d'Oiyo.",
+      "keywords": "confidentialité, sécurité"
+    },
+    "point1": "Les données personnelles telles que le nom et l'adresse e-mail sont cryptées.",
+    "point2": "Les résultats sont utilisés de manière anonyme pour une résonance collective.",
+    "point3": "Vous pouvez demander la suppression des données à tout moment.",
+    "title": "politique de confidentialité",
+    "description": "Nous traitons les données de votre âme avec respect.",
+    "keywords": "confidentialité, sécurité, protection des données",
+    "lastUpdated": "1 janvier 2026"
+  },
+  "cookieTitle": "Sacred Covenant",
+  "cookieTextEu": "To preserve the sanctity of your digital soul, we request permission to use cookies for resonance tracking. Your data remains ancient and protected.",
+  "cookieTextDefault": "This sanctuary uses cookies to harmonize your experience with the cosmic web.",
+  "cookieDeny": "Deny",
+  "cookieAccept": "Accept Covenant"
+}

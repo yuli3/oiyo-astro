@@ -1,0 +1,68 @@
+{
+  "terms": {
+    "sections": {
+      "overview": {
+        "content": "OIYO 遵守数据保护法以保护用户权利。"
+      }
+    },
+    "test": {
+      "progress": "进度",
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "确认",
+      "loading": "加载中",
+      "selectOption": "请选择",
+      "insightBullets": ["核心公约"]
+    },
+    "result": {
+      "title": "服务条款",
+      "description": "OIYO 珍惜您的个人信息。"
+    },
+    "meta": {
+      "title": "服务条款",
+      "description": "OIYO 珍惜您的个人信息。",
+      "keywords": "条款, 规定, 服务"
+    },
+    "title": "服务条款",
+    "description": "OIYO 珍惜您的个人信息。",
+    "keywords": "条款, 规定, 服务",
+    "lastUpdated": "2024年1月1日"
+  },
+  "privacy": {
+    "sections": {
+      "overview": {
+        "content": "OIYO 遵守数据保护法以保护用户权利。"
+      }
+    },
+    "test": {
+      "progress": "进度",
+      "next": "下一步",
+      "previous": "上一步",
+      "submit": "确认",
+      "loading": "加载中",
+      "selectOption": "请选择",
+      "insightBullets": ["隐私核心"]
+    },
+    "result": {
+      "title": "隐私政策",
+      "description": "OIYO 珍惜您的个人信息。"
+    },
+    "meta": {
+      "title": "隐私政策",
+      "description": "OIYO 珍惜您的个人信息。",
+      "keywords": "隐私, 安全, 数据保护"
+    },
+    "point1": "姓名和电子邮件等个人数据将被加密。",
+    "point2": "结果将匿名使用。",
+    "point3": "您可以随时请求删除数据。",
+    "title": "隐私政策",
+    "description": "OIYO 珍惜您的个人信息。",
+    "keywords": "隐私, 安全, 数据保护",
+    "lastUpdated": "2024年1月1日"
+  },
+  "cookieTitle": "Sacred Covenant",
+  "cookieTextEu": "To preserve the sanctity of your digital soul, we request permission to use cookies for resonance tracking. Your data remains ancient and protected.",
+  "cookieTextDefault": "This sanctuary uses cookies to harmonize your experience with the cosmic web.",
+  "cookieDeny": "Deny",
+  "cookieAccept": "Accept Covenant"
+}

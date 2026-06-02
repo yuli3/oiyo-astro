@@ -1,0 +1,51 @@
+{
+  "ctaStart": "Commencer l'Analyse",
+  "ctaLibrary": "Explorer la Bibliothèque",
+  "scrollLabel": "Défiler vers le bas",
+  "oracleText": "Bienvenue à l'Oracle",
+  "oracleTitle": "Aperçu Quotidien",
+  "cta": {
+    "primary": "Commencer",
+    "secondary": "En savoir plus"
+  },
+  "features": {
+    "accurate": "Précis",
+    "comprehensive": "Complet",
+    "personalized": "Personnalisé"
+  },
+  "subtitle": "Un guide définitif sur vos atouts uniques.",
+  "title": "La Carte du Sanctuaire",
+  "description": "Naviguez à travers les forêts anciennes de la sagesse.",
+  "titlePrefix": "Concevez Votre",
+  "titleSuffix": "Vie Idéale",
+  "keywords": "Saju, Tarot, Résonance, Ontologie, Cartographie de l'Âme",
+  "errorFallbackTitle": "Le Vide s'approfondit",
+  "errorFallbackDescription": "Les fils cosmiques sont momentanément emmêlés. Accordez-nous un battement de cœur pour rétablir l'harmonie.",
+  "phase": "Protocole: 0.1.0",
+  "enter": "Entrer dans le Sanctuaire",
+  "explore": "Explorer la Carte",
+  "status": "STATUT",
+  "active": "Actif",
+  "orbitalVelocity": "VITESSE ORBITALE",
+  "km": "kilomètres",
+  "lunarPhase": "PHASE LUNAIRE",
+  "waxing": "Croissante",
+  "ontology": {
+    "title": "La Carte du Sanctuaire",
+    "desc": "Une transmission directe du vide, organisée pour votre ligne temporelle."
+  },
+  "resonance": {
+    "title": "La Carte du Sanctuaire",
+    "desc": "Une transmission directe du vide, organisée pour votre ligne temporelle."
+  },
+  "daily": {
+    "title": "La Carte du Sanctuaire",
+    "desc": "Une transmission directe du vide, organisée pour votre ligne temporelle."
+  },
+  "discovery": {
+    "badge": "Découverte",
+    "title": "La Carte du Sanctuaire",
+    "description": "Naviguez à travers les forêts anciennes de la sagesse.",
+    "takeTest": "Faites le test"
+  }
+}

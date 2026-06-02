@@ -1,0 +1,780 @@
+{
+  "egenteto": {
+    "result": {
+      "title": "Laboratorio de análisis integrado",
+      "traits": "Firma de temperamento",
+      "description": "Informe de análisis de existencia",
+      "compatibility": "Interacción armoniosa",
+      "shareText": "Resultado de mi análisis: {tipo}. Ver aquí: {url}",
+      "share": "Compartir resultados",
+      "copy": "Copiar enlace",
+      "copied": "¡Copiada!",
+      "retake": "Actualizar análisis",
+      "solarLineage": "Datos del día",
+      "lunarLineage": "Datos nocturnos"
+    },
+    "saveResult": "Grabando datos en el archivo...",
+    "saveError": "Análisis oscurecido. Por favor inténtalo de nuevo.",
+    "personalityAnalysis": "Deconstrucción analítica",
+    "compatibilityChartTitle": "Espectro de armonía",
+    "compatibilityLabel": "Nivel de resonancia",
+    "insights": "Resumen del análisis",
+    "match": "Punto de convergencia",
+    "awards": "Indicadores clave",
+    "growth": "Camino de crecimiento",
+    "traitsGuide": "Vocabulario de temperamento",
+    "strengths": "Activos primarios",
+    "growthAreas": "Áreas de refinamiento",
+    "coupleTest": "Diagnóstico de sinergia relacional",
+    "coupleTestDesc": "Mide la alineación de datos entre dos personas.",
+    "loveLanguage": "Dialectos de comunicación",
+    "loveLanguageDesc": "Cómo llega tu intención a las demás.",
+    "idealDate": "Comunicación óptima",
+    "growthRoadmap": "Guía de crecimiento",
+    "growthComingSoon": "Actualización de seguimiento detallada programada",
+    "growthComingSoonDesc": "Los datos de desarrollo continuo estarán disponibles pronto.",
+    "saveImage": "Guardar resultado",
+    "backToHome": "Volver al panel",
+    "perfectMatch": "¡Alta sinergia alcanzada con {nombre}!"
+  },
+  "akashic": {
+    "title": "Registros Akáshicos",
+    "subtitle": "LA BIBLIOTECA ETERNA",
+    "description": "Los Registros Akáshicos son un compendio de todos los eventos humanos, pensamientos, palabras, emociones e intenciones que han ocurrido en el pasado, presente o futuro.",
+    "close": "Cerrar Registro",
+    "tabs": {
+      "essence": "Esencia",
+      "destiny": "Destino",
+      "biology": "Biología"
+    },
+    "essence": {
+      "title": "Esencia del Alma",
+      "quote": "El alma es la misma en todas las criaturas vivientes, aunque el cuerpo de cada uno es diferente.",
+      "soulFormula": "Fórmula del Alma",
+      "humanDesign": "Diseño Humano",
+      "authority": "Autoridad",
+      "locked": "Encriptado"
+    },
+    "destiny": {
+      "title": "Camino del Destino",
+      "lifePath": "Camino de Vida",
+      "seeker": "El Buscador",
+      "animal": "Animal Espiritual"
+    },
+    "biology": {
+      "title": "Vehículo Biológico",
+      "chronotype": "Cronotipo",
+      "constitution": "Constitución"
+    }
+  },
+  "dashboard": {
+    "guest": "Invitado",
+    "labels": {
+      "undiscovered": "Sin descubrir",
+      "nameVibration": "Vibración del Nombre",
+      "noblePerson": "Persona Noble",
+      "moonSign": "Signo Lunar",
+      "pada": "Pada (División)",
+      "tithi": "Tithi (Día lunar)",
+      "dominion": "Dominio",
+      "observation": "Observación",
+      "sign": "Signo Zodiacal",
+      "animal": "Animal del Zodiaco",
+      "ogham": "Alfabeto Ogham",
+      "meaning": "Significado Primordial",
+      "patron": "Guardián Patrón",
+      "bureau": "Oficina Celestial",
+      "branch": "Rama Terrenal",
+      "nakshatra": "Mansión Lunar",
+      "element": "Elemento",
+      "stars": "Estrellas",
+      "sephira": "Sefirot",
+      "deepInsight": "Perspicacia Profunda",
+      "readFullStory": "Leer Artículo Completo",
+      "westernZodiac": "Zodíaco Occidental",
+      "easternZodiac": "Zodíaco Oriental",
+      "syncingData": "Sincronizando datos cósmicos...",
+      "returnToHome": "Regreso al Santuario",
+      "contactSupport": "Consulta con los Oráculos",
+      "typeLabel": "Escriba {tipo}",
+      "wingLabel": "w{ala}",
+      "alignment": "Alineación"
+    },
+    "beginJourney": "Iniciar Viaje",
+    "heroTitle": "Explora Tu Destino",
+    "heroSubtitle": "Descubre tu verdadero ser a través de la fusión de la adivinación oriental y occidental y la psicología",
+    "primalOrigin": "Origen Primordial",
+    "calibration": "Calibración",
+    "changeOrigin": "Cambiar Origen",
+    "close": "Cerrar",
+    "recalculate": "Recalcular",
+    "rootsTitle": "Raíces de lo Primordial",
+    "unveilRoots": "Revela tu arquitectura fundamental",
+    "destinyCoordinates": "Coordenadas del Destino",
+    "destinyCoordinatesSubtitle": "Tu posición en la cuadrícula celestial",
+    "todayInsight": {
+      "title": "Perspicacia del alma de hoy",
+      "soulOracle": "Oráculo del momento",
+      "innerResonance": "Resonancia interior",
+      "manifestMore": "Manifiesta tu verdadera intención",
+      "synergyPulse": "Pulso de sinergia"
+    },
+    "sajuForm": {
+      "title": "Blueprint Cósmico",
+      "description": "Revela tu firma de energía primordial.",
+      "name": "Nombre",
+      "birthDate": "Fecha de Ingreso a la Tierra",
+      "birthTime": "Hora Celestial",
+      "timeHint": "(Opcional)",
+      "gender": "Esencia Vibracional",
+      "female": "Yin / Femenino",
+      "male": "Yang / Masculino",
+      "initialize": "Desbloquear Destino"
+    },
+    "cards": {
+      "foundation": {
+        "subtitle": "Arquetipo Primario",
+        "description": "Tu plantilla existencial central"
+      },
+      "elemental": {
+        "title": "Flujo Elemental",
+        "subtitle": "Equilibrio Interior",
+        "description": "Distribución de energía"
+      },
+      "celtic": {
+        "subtitle": "Sabiduría Arbórea",
+        "description": "Arquetipo de la naturaleza"
+      },
+      "egyptian": {
+        "subtitle": "Guardián Antiguo",
+        "description": "Alineación de deidades"
+      },
+      "sacredKin": {
+        "subtitle": "Firma Maya",
+        "description": "Tiempo cíclico"
+      },
+      "grandArchive": {
+        "subtitle": "Registro Estelar",
+        "description": "Datos celestiales"
+      },
+      "nakshatra": {
+        "subtitle": "Mansión Lunar",
+        "description": "Resonancia del alma"
+      },
+      "hellenistic": {
+        "subtitle": "Dominio de la Secta",
+        "description": "Pulso Día/Noche"
+      },
+      "onomancy": {
+        "subtitle": "Resonancia Vocal",
+        "description": "El poder de tu nombre"
+      },
+      "socialAlchemy": {
+        "subtitle": "Matriz de Conexión",
+        "description": "Cómo te conectas con otros"
+      },
+      "kabbalah": {
+        "subtitle": "Árbol de la Vida",
+        "description": "Alineación sefirotica"
+      },
+      "destiny": {
+        "subtitle": "Camino Cósmico",
+        "description": "El arco de tu viaje"
+      },
+      "hexagram": {
+        "subtitle": "Resonancia I Ching",
+        "description": "El hexagrama de tu momento"
+      },
+      "grandSynthesis": {
+        "title": "Síntesis Grandiosa",
+        "description": "La visión unificada de tu ser"
+      },
+      "cognition": {
+        "subtitle": "Proceso Mental",
+        "description": "Cómo percibes el vacío"
+      },
+      "psyche": {
+        "subtitle": "Profundidad del Alma",
+        "description": "Las capas ocultas del yo"
+      },
+      "strategy": {
+        "subtitle": "Voluntad de Acción",
+        "description": "Cómo manifiestas la intención"
+      },
+      "vocation": {
+        "subtitle": "Camino Dharmico",
+        "description": "Tu llamada profesional"
+      },
+      "vitality": {
+        "title": "Vitalidad Vital"
+      },
+      "resonance": {
+        "subtitle": "Campo Unificado",
+        "description": "Tu vibración cósmica"
+      }
+    },
+    "sections": {
+      "testArchitecture": {
+        "title": "Arquitectura de Pruebas",
+        "description": "La lógica detrás del portal."
+      },
+      "emotionalResonance": {
+        "title": "Resonancia Emocional",
+        "description": "La frecuencia de tu corazón."
+      },
+      "grandArchives": {
+        "title": "Archivos Grandiosos",
+        "description": "La totalidad del destino registrado."
+      }
+    },
+    "systems": {
+      "ziwei": "Zi Wei Dou Shu",
+      "vedic": "Astrología Védica",
+      "kabbalah": "Cábala"
+    },
+    "day": "Secta Diurna",
+    "night": "Secta Nocturna",
+    "socialCognition": "Cognición Social",
+    "mapGrowth": "Mapa de Crecimiento",
+    "resonanceVitalitySection": "Resonancia y Vitalidad",
+    "resonanceVitalitySubtitle": "Alineación de Frecuencia Armónica",
+    "resonanceTitle": "Resonancia",
+    "dialogs": {
+      "archiveEntry": "Acceder a la Entrada del Archivo",
+      "recordVerified": "Verdad Verificada",
+      "enneagram": {
+        "quote": "El mapa no es el territorio."
+      },
+      "humanDesign": {
+        "description": "Decodifica tu blueprint galáctico."
+      },
+      "mbti": {
+        "description": "Tu arquitectura cognitiva."
+      },
+      "numerology": {
+        "description": "Las matemáticas de tu existencia."
+      },
+      "riasec": {
+        "description": "Tu arquetipo profesional."
+      },
+      "saju": {
+        "label": "Análisis BaZi",
+        "description": "Tu perfil elemental.",
+        "polarity": "Polaridad",
+        "element": "Elemento Dominante"
+      },
+      "elements": {
+        "title": "Balance Elemental"
+      },
+      "tuning": {
+        "title": "Ajuste de Resonancia Personal",
+        "color": "Afinidad Cromática",
+        "number": "Cifra Vibracional",
+        "direction": "Flujo Cardinal",
+        "flower": "Esencia Botánica",
+        "gemstone": "Ancla Mineral",
+        "luckyStar": "Alineación Estelar",
+        "favorableDays": "Ventanas Armónicas",
+        "synergy": "Conexión Unificada"
+      }
+    },
+    "humanDesign": {
+      "title": "Diseño Humano",
+      "types": {
+        "Generator": "Generador",
+        "Manifesting Generator": "Generador Manifiesto",
+        "Manifestor": "Manifiesto",
+        "Projector": "Proyector",
+        "Reflector": "Reflector"
+      }
+    },
+    "akashic": {
+      "title": "Registros Akáshicos",
+      "description": "\"Los Registros Akáshicos son un compendio de todos los eventos humanos, pensamientos, palabras, emociones e intenciones que han ocurrido en el pasado, presente o futuro.\"",
+      "sections": {
+        "substance": "Sustancia",
+        "alignment": "Alineación",
+        "vessel": "Recipiente",
+        "seal": "Sello del Registro",
+        "sanctuary": "Santuario de Síntesis"
+      }
+    },
+    "action": {
+      "takeTest": "Realizar Prueba",
+      "pricing": "Ver Ofertas Sagradas"
+    },
+    "dailyInsight": {
+      "title": "Perspicacia del Alma de Hoy",
+      "soulOracle": "Oráculo del Momento",
+      "innerResonance": "Resonancia Interior",
+      "manifestMore": "Manifiesta tu verdadera intención",
+      "synergyPulse": "Pulso Sinérgico",
+      "cosmicEnergy": "Energía Cósmica Actual",
+      "flowerOfDay": "Flor del Día",
+      "crystalOfPower": "Cristal de Poder",
+      "guidingStar": "Estrella Guía"
+    },
+    "moonPhase": {
+      "New": "Luna nueva",
+      "Waxing Crescent": "Luna creciente",
+      "First Quarter": "Cuarto creciente",
+      "Waxing Gibbous": "Luna gibosa creciente",
+      "Full": "Luna llena",
+      "Waning Gibbous": "Luna gibosa menguante",
+      "Last Quarter": "Cuarto menguante",
+      "Waning Crescent": "Luna menguante"
+    },
+    "modern": {
+      "economic": {
+        "title": "Análisis de la escuela económica",
+        "subtitle": "Orientación Económica",
+        "factions": {
+          "ECON_CLASSICAL": {
+            "name": "Economía Clásica",
+            "description": "Se centra en las elecciones racionales individuales y el equilibrio del mercado. Este enfoque valora la responsabilidad personal y la eficiencia orgánica de los sistemas equilibrados."
+          },
+          "ECON_KEYNESIAN": {
+            "name": "Economía Keynesiana",
+            "description": "Enfatiza la demanda agregada y la intervención proactiva. Esta perspectiva valora la estabilidad colectiva y la sabiduría de una acción oportuna y de apoyo."
+          },
+          "ECON_MONETARIST": {
+            "name": "Monetarismo",
+            "description": "Se centra en la oferta monetaria y la estabilidad de precios a largo plazo. Valora la coherencia, las reglas claras y la previsibilidad de los sistemas fundamentales."
+          },
+          "ECON_BEHAVIORAL": {
+            "name": "Economía Conductual",
+            "description": "Aplica conocimientos psicológicos para explicar las decisiones económicas. Valora la comprensión humana, la empatía y la realidad matizada de las elecciones cotidianas."
+          },
+          "ECON_AUSTRIAN": {
+            "name": "Escuela Austriaca",
+            "description": "Enfatiza el descubrimiento empresarial y el subjetivismo. Valora la libertad creativa, la visión personal y el valor único de las perspectivas individuales."
+          }
+        }
+      },
+      "political": {
+        "title": "Análisis de orientación política",
+        "subtitle": "Panorama político",
+        "factions": {
+          "POL_CONSERVATISM": {
+            "name": "Conservadurismo",
+            "description": "Valora la tradición, la estabilidad y la reforma gradual. Este enfoque busca preservar la sabiduría ganada con esfuerzo mientras asegura un futuro seguro y constante."
+          },
+          "POL_LIBERALISM": {
+            "name": "Liberalismo",
+            "description": "Enfatiza la libertad individual, la igualdad y el progreso. Valora la libertad para explorar nuevas posibilidades y la dignidad inherente de cada persona."
+          },
+          "POL_SOCIALISM": {
+            "name": "Socialismo",
+            "description": "Se centra en la justicia social, la igualdad y el bienestar de la comunidad. Valora el apoyo mutuo, el bienestar colectivo y la fuerza que se encuentra en la solidaridad."
+          },
+          "POL_LIBERTARIANISM": {
+            "name": "Libertarismo",
+            "description": "Prioriza la intervención mínima y la máxima autonomía individual. Valora la autodeterminación y la protección del espacio e iniciativa privados."
+          },
+          "POL_MODERATISM": {
+            "name": "Moderatismo",
+            "description": "Busca un equilibrio entre el orden y el progreso. Valora las soluciones pragmáticas, el diálogo y la búsqueda de un terreno común para el bien mayor."
+          }
+        }
+      }
+    }
+  },
+  "biography": {
+    "stone": {
+      "label": "Piedra natal",
+      "garnet": {
+        "name": "Granate",
+        "meaning": "Verdad, Amistad, Lealtad"
+      },
+      "amethyst": {
+        "name": "Amatista",
+        "meaning": "Paz, Sinceridad, Salud"
+      },
+      "aquamarine": {
+        "name": "Aguamarina",
+        "meaning": "Inteligencia, Calma, Coraje"
+      },
+      "diamond": {
+        "name": "Diamante",
+        "meaning": "Amor eterno, Inmortalidad"
+      },
+      "emerald": {
+        "name": "Esmeralda",
+        "meaning": "Felicidad, Suerte, Bondad"
+      },
+      "pearl": {
+        "name": "Perla",
+        "meaning": "Salud, Longevidad, Riqueza"
+      },
+      "ruby": {
+        "name": "Rubí",
+        "meaning": "Pasión, Coraje, Libertad"
+      },
+      "peridot": {
+        "name": "Peridoto",
+        "meaning": "Felicidad matrimonial, Armonía"
+      },
+      "sapphire": {
+        "name": "Zafiro",
+        "meaning": "Verdad, Constancia, Sabiduría"
+      },
+      "opal": {
+        "name": "Ópalo",
+        "meaning": "Esperanza, Pureza, Inocencia"
+      },
+      "topaz": {
+        "name": "Topacio",
+        "meaning": "Esperanza, Inocencia, Amistad"
+      },
+      "turquoise": {
+        "name": "Turquesa",
+        "meaning": "Éxito, Victoria, Sabiduría"
+      }
+    },
+    "flower": {
+      "label": "Flor natal",
+      "carnation": {
+        "name": "Clavel",
+        "meaning": "Orgullo, Belleza"
+      },
+      "violet": {
+        "name": "Violeta",
+        "meaning": "Modestia, Fidelidad"
+      },
+      "daffodil": {
+        "name": "Narciso",
+        "meaning": "Nuevo comienzo"
+      },
+      "daisy": {
+        "name": "Margarita",
+        "meaning": "Pureza, Inocencia"
+      },
+      "lily_of_valley": {
+        "name": "Lirio de los valles",
+        "meaning": "Humildad, Regreso de la felicidad"
+      },
+      "rose": {
+        "name": "Rosa",
+        "meaning": "Amor, Pasión"
+      },
+      "larkspur": {
+        "name": "Espuela de caballero",
+        "meaning": "Ligereza, Levedad"
+      },
+      "gladiolus": {
+        "name": "Gladiolo",
+        "meaning": "Fuerza, Integridad"
+      },
+      "aster": {
+        "name": "Áster",
+        "meaning": "Sabiduría, Fe"
+      },
+      "marigold": {
+        "name": "Caléndula",
+        "meaning": "Duelo, Desesperación"
+      },
+      "chrysanthemum": {
+        "name": "Crisantemo",
+        "meaning": "Fidelidad, Verdad"
+      },
+      "poinsettia": {
+        "name": "flor de pascua",
+        "meaning": "Celebración, Éxito"
+      }
+    }
+  },
+  "lifestyle": {
+    "hobby": {
+      "label": "Actividad recomendada",
+      "HOBBY_GARDENING": {
+        "name": "Jardinería",
+        "desc": "Conectar con la naturaleza para encontrar la paz interior"
+      },
+      "HOBBY_MEDITATION": {
+        "name": "Meditación",
+        "desc": "Despejar la mente y concentrarse en uno mismo"
+      },
+      "HOBBY_HIKING": {
+        "name": "Senderismo",
+        "desc": "Escalar montañas para fortalecer la resiliencia"
+      },
+      "HOBBY_COOKING": {
+        "name": "Cocina",
+        "desc": "Crear nuevos sabores a través de la armonía"
+      },
+      "HOBBY_CODING": {
+        "name": "Programación",
+        "desc": "El arte de diseñar sistemas con lógica"
+      },
+      "HOBBY_PAINTING": {
+        "name": "Pintura",
+        "desc": "Expresarse a través de los colores y las pinceladas"
+      },
+      "HOBBY_WRITING": {
+        "name": "Escritura creativa",
+        "desc": "Crear historias y dejar fluir los pensamientos"
+      },
+      "HOBBY_PHOTOGRAPHY": {
+        "name": "Fotografía",
+        "desc": "Capturar momentos y documentar historias"
+      },
+      "HOBBY_POTTERY": {
+        "name": "Alfarería",
+        "desc": "Dar forma a la arcilla como arte funcional"
+      },
+      "HOBBY_DANCING": {
+        "name": "Danza",
+        "desc": "Expresar emociones a través del movimiento"
+      },
+      "HOBBY_MUSIC": {
+        "name": "Música",
+        "desc": "Crear armonía y expresar puntos de vista a través del sonido"
+      },
+      "HOBBY_CRAFTS": {
+        "name": "Manualidades",
+        "desc": "Crear tesoros hechos a mano con creatividad"
+      },
+      "HOBBY_THEATER": {
+        "name": "Teatro",
+        "desc": "Dar vida a las historias a través de la interpretación"
+      }
+    }
+  },
+  "mythos": {
+    "celtic": {
+      "title": "Zodíaco del Árbol Celta"
+    },
+    "egyptian": {
+      "title": "Guardián Egipcio"
+    },
+    "stone": {
+      "title": "Piedra Natal Protectora"
+    },
+    "flower": {
+      "title": "Zodíaco de la Flor Natal"
+    },
+    "recalculate": "Recalcular"
+  },
+  "astro": {
+    "sect": {
+      "day": "Secta Diurna",
+      "night": "Secta Nocturna"
+    }
+  },
+  "resonance": {
+    "professionalChart": "Carta Profesional: {bureau}. Palacio de Vida ubicado en {lifePalace}. {starCount} estrellas en el Palacio de Vida.",
+    "note": "El archivo observa tu destino.",
+    "nakshatra": "Mansión Lunar"
+  },
+  "onThisPage": "En Esta Página",
+  "universal": {
+    "labels": {
+      "undiscovered": "Sin descubrir"
+    },
+    "explanation": {
+      "morning_lark": "Madrugador, más activo por la mañana.",
+      "night_owl": "Dormilón, más activo por la noche.",
+      "dolphin": "Dormidor ligero, propenso al insomnio.",
+      "lion": "Madrugador, agotado por la noche.",
+      "bear": "Sigue el sol, necesita 8 horas.",
+      "wolf": "Orientado a la noche, creativo por las noches."
+    }
+  },
+  "action": {
+    "pricing": "Ver Ofertas Sagradas"
+  },
+  "dialogs": {
+    "archiveEntry": "Acceder a la Entrada del Archivo",
+    "recordVerified": "Verdad Verificada",
+    "enneagram": {
+      "quote": "El mapa no es el territorio."
+    },
+    "humanDesign": {
+      "description": "Decodifica tu blueprint galáctico."
+    },
+    "mbti": {
+      "description": "Tu arquitectura cognitiva."
+    },
+    "numerology": {
+      "description": "Las matemáticas de tu existencia."
+    },
+    "riasec": {
+      "description": "Tu arquetipo profesional."
+    },
+    "saju": {
+      "label": "Análisis BaZi",
+      "description": "Tu perfil elemental.",
+      "polarity": "Polaridad",
+      "element": "Elemento Dominante"
+    },
+    "elements": {
+      "title": "Balance Elemental"
+    },
+    "tuning": {
+      "title": "Ajuste de Resonancia Personal",
+      "color": "Afinidad Cromática",
+      "number": "Cifra Vibracional",
+      "direction": "Flujo Cardinal",
+      "flower": "Esencia Botánica",
+      "gemstone": "Ancla Mineral",
+      "luckyStar": "Alineación Estelar",
+      "favorableDays": "Ventanas Armónicas",
+      "synergy": "Conexión Unificada"
+    }
+  },
+  "chosun": {
+    "title": "Análisis histórico de facciones (Chosun)",
+    "subtitle": "Fusión de valores tradicionales y tendencias sociales",
+    "description": "Analiza tu naturaleza innata y tus tendencias de comportamiento en un contexto histórico.",
+    "labels": {
+      "innate": "Naturaleza analítica innata (interna)",
+      "behavioral": "Patrón de ejecución externo (externo)",
+      "comparison": "Puntuación de alineación",
+      "faction": "Facción de eruditos emparejada"
+    },
+    "factions": {
+      "dongin": {
+        "name": "Dong-in (Idealistas)",
+        "description": "Un temperamento académico que valora la pureza erudita y la práctica moral, con una cálida pasión por realizar una sociedad ideal."
+      },
+      "seoin": {
+        "name": "Seo-in (Realistas)",
+        "description": "Un temperamento pragmático que valora la eficiencia racional y el orden sistemático, centrándose en resolver problemas del mundo real y garantizar la estabilidad."
+      },
+      "namin": {
+        "name": "Nam-in (Moderados)",
+        "description": "Un temperamento cálido que busca la profundidad académica y la moderación inclusiva, manteniendo un equilibrio armonioso evitando los extremos."
+      },
+      "bukin": {
+        "name": "Buk-in (Reformistas)",
+        "description": "Un temperamento de practicante académico con un fuerte sentido de la acción y un audaz espíritu reformista, valorando los resultados impulsados por las creencias."
+      },
+      "noron": {
+        "name": "No-ron (Tradicionalistas)",
+        "description": "Un temperamento firme que salvaguarda el orden tradicional y la legitimidad, buscando la estabilidad a través de una lógica sólida y una fuerza organizativa."
+      },
+      "soron": {
+        "name": "So-ron (Progresistas)",
+        "description": "Un temperamento práctico con un pensamiento flexible y una apertura progresiva, liderando un cambio significativo al adoptar diversas voces."
+      },
+      "sipa": {
+        "name": "Si-pa (Pragmáticos)",
+        "description": "Un temperamento realista que valora la flexibilidad oportuna y el sentido profesional, mostrando respuestas óptimas a un entorno cambiante."
+      },
+      "byeokpa": {
+        "name": "Byeok-pa (Línea dura)",
+        "description": "Un temperamento estricto y responsable que mantiene firmes creencias y una noble integridad, sin comprometer nunca los principios independientemente de la situación."
+      }
+    },
+    "traits": {
+      "academic": "Académica",
+      "principled": "De principios",
+      "idealistic": "Idealista",
+      "practical": "Práctica",
+      "efficient": "Eficiente",
+      "stable": "Estable",
+      "moderate": "Moderada",
+      "harmonious": "Armoniosa",
+      "balanced": "Equilibrada",
+      "determined": "Determinada",
+      "reformist": "Reformista",
+      "bold": "Negrita",
+      "traditional": "Tradicional",
+      "conservative": "Conservadora",
+      "rigorous": "Rigurosa",
+      "flexible": "Flexible",
+      "open": "Abierta",
+      "inclusive": "Inclusiva",
+      "adaptive": "Adaptada",
+      "timely": "Oportuna",
+      "pragmatic": "Pragmática",
+      "uncompromising": "Intransigente",
+      "integrity": "Integridad",
+      "orthodox": "Ortodoxa"
+    }
+  },
+  "lucky": {
+    "color": {
+      "red": "Roja",
+      "blue": "Azul",
+      "green": "Verde",
+      "yellow": "Amarilla",
+      "black": "Negra",
+      "white": "Blanca"
+    },
+    "direction": {
+      "north": "Norte",
+      "south": "Sur",
+      "east": "Este",
+      "west": "Oeste",
+      "center": "Centro"
+    },
+    "flower": {
+      "sunflower": "Girasol",
+      "rose": "Rosa",
+      "lily": "Lirio",
+      "lotus": "Loto",
+      "orchid": "Orquídea"
+    },
+    "gemstone": {
+      "topaz": "Topacio",
+      "ruby": "Rubí",
+      "diamond": "Diamante",
+      "sapphire": "Zafiro",
+      "emerald": "Esmeralda"
+    }
+  },
+  "assessment": {
+    "resilience": {
+      "title": "Resilience",
+      "intro": "Mida su capacidad para recuperarse de los desafíos de la vida.",
+      "badge": "Diagnóstica",
+      "result": {
+        "level": "Nivel de resiliencia",
+        "score": "Puntaje",
+        "profile_title": "Evaluación de perfil",
+        "guidance_title": "Orientación y asesoramiento"
+      }
+    },
+    "start": "Iniciar evaluación"
+  },
+  "manifest": {
+    "big5": {
+      "title": "Prueba de personalidad de los 5 grandes",
+      "description": "Descubra su verdadero yo a través de la lente científica de los cinco rasgos principales de la personalidad."
+    }
+  },
+  "catalog": {
+    "title": "Catálogo de ontologías",
+    "description": "Explore todas las evaluaciones de ontología disponibles"
+  },
+  "cognitiveBias": {
+    "title": "Sesgo cognitivo",
+    "description": "Identifique sus patrones de pensamiento y sesgos."
+  },
+  "consumption": {
+    "title": "Estilo de consumo",
+    "description": "Analiza tu relación con el dinero y el valor"
+  },
+  "learningStyle": {
+    "title": "Estilo de aprendizaje",
+    "description": "Descubra su estrategia de aprendizaje óptima"
+  },
+  "badge": "Ontología",
+  "resultTitle": "Resultado del Análisis",
+  "restart": "Reiniciar Análisis",
+  "title": "Marco Ontológico",
+  "mayan": {
+    "systemName": "Dreamspell Maya",
+    "narrative": "Sincronización Galáctica",
+    "solarSeal": "Sello Solar",
+    "tone": "Tono Galáctico"
+  },
+  "celtic": {
+    "systemName": "Zodíaco del Árbol Celta",
+    "narrative": "Sabiduría de los árboles",
+    "treeSign": "Signo del Árbol",
+    "ogham": "Ogham"
+  },
+  "Link copied to clipboard!": "¡Enlace copiado al portapapeles!"
+}

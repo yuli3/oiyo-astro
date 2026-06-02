@@ -1,0 +1,48 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, getTranslations } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const t = await getTranslations(locale);
+---
+
+<Layout
+  title={t('legal.privacy.title') || 'Privacy Policy'}
+  description={t('legal.privacy.description')}
+  locale={locale}
+>
+  <section class="bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
+    <div class="max-w-2xl mx-auto animate-fadeInUp">
+      <h1 class="text-4xl font-serif font-black text-green-950 mb-2">
+        {t('legal.privacy.title')}
+      </h1>
+    </div>
+  </section>
+
+  <section class="max-w-2xl mx-auto px-4 py-8">
+    <div class="bg-white rounded-2xl border border-green-50 p-8 space-y-6">
+      {(['point1', 'point2', 'point3'] as const).map((key) => {
+        const text = t(`legal.privacy.${key}`);
+        if (text.startsWith('legal.')) return null;
+        return (
+          <div>
+            <p class="text-sm text-green-700 leading-relaxed">{text}</p>
+            <hr class="border-green-50 mt-6" />
+          </div>
+        );
+      })}
+      <div>
+        <h2 class="text-lg font-bold text-green-950 mb-2">Overview</h2>
+        <p class="text-sm text-green-700 leading-relaxed">
+          {t('legal.privacy.sections.overview.content')}
+        </p>
+      </div>
+      <p class="text-xs text-green-500">{t('legal.privacy.description')}</p>
+    </div>
+  </section>
+</Layout>

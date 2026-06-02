@@ -1,0 +1,7 @@
+{
+  "generate": "生成失败",
+  "purchase": "购买失败",
+  "tooLarge": "文件过大。",
+  "cameraAccess": "相机访问被拒绝。",
+  "failed": "操作失败。"
+}

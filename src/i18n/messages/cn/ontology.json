@@ -1,0 +1,780 @@
+{
+  "egenteto": {
+    "result": {
+      "title": "综合分析实验室",
+      "traits": "气质签名",
+      "description": "存在分析报告",
+      "compatibility": "和谐互动",
+      "shareText": "我的分析结果：{type}。 在这里查看：{url}",
+      "share": "分享结果",
+      "copy": "复制链接",
+      "copied": "复制了！",
+      "retake": "刷新分析",
+      "solarLineage": "日内数据",
+      "lunarLineage": "夜间数据"
+    },
+    "saveResult": "正在将数据记录到存档中...",
+    "saveError": "分析模糊。 请再试一次。",
+    "personalityAnalysis": "分析解构",
+    "compatibilityChartTitle": "和谐谱",
+    "compatibilityLabel": "共振水平",
+    "insights": "分析总结",
+    "match": "收敛点",
+    "awards": "关键指标",
+    "growth": "成长之路",
+    "traitsGuide": "气质词汇",
+    "strengths": "原始资产",
+    "growthAreas": "需要改进的地方",
+    "coupleTest": "关系协同诊断",
+    "coupleTestDesc": "衡量两个人之间的数据一致性。",
+    "loveLanguage": "交流方言",
+    "loveLanguageDesc": "您的意图如何传达给他人。",
+    "idealDate": "最佳沟通",
+    "growthRoadmap": "成长指南",
+    "growthComingSoon": "详细追踪更新已安排",
+    "growthComingSoonDesc": "持续开发数据很快就会提供。",
+    "saveImage": "保存结果",
+    "backToHome": "返回仪表板",
+    "perfectMatch": "与{name}达成高度协同！"
+  },
+  "akashic": {
+    "title": "阿卡西记录",
+    "subtitle": "永恒的图书馆",
+    "description": "阿卡西记录是过去、现在和未来所有人类事件、思想、言语、情感和意图的汇总。",
+    "close": "关闭记录",
+    "tabs": {
+      "essence": "本质",
+      "destiny": "命运",
+      "biology": "生物"
+    },
+    "essence": {
+      "title": "灵魂本质",
+      "quote": "灵魂在所有生物中都是相同的，尽管每个生物的身体不同。",
+      "soulFormula": "灵魂公式",
+      "humanDesign": "人类设计",
+      "authority": "权威",
+      "locked": "已加密"
+    },
+    "destiny": {
+      "title": "命运之路",
+      "lifePath": "人生道路",
+      "seeker": "探索者",
+      "animal": "精神动物"
+    },
+    "biology": {
+      "title": "生物容器",
+      "chronotype": "睡眠类型",
+      "constitution": "体质"
+    }
+  },
+  "dashboard": {
+    "guest": "访客",
+    "labels": {
+      "undiscovered": "未探索",
+      "nameVibration": "姓名波动",
+      "noblePerson": "贵人",
+      "moonSign": "月亮星座",
+      "pada": "足印",
+      "tithi": "月龄",
+      "dominion": "统辖领域",
+      "observation": "观察点",
+      "sign": "星座",
+      "animal": "生肖",
+      "ogham": "欧甘字母",
+      "meaning": "原始含义",
+      "patron": "守护灵",
+      "bureau": "天宫",
+      "branch": "地支",
+      "nakshatra": "月宿",
+      "element": "元素",
+      "stars": "星曜",
+      "sephira": "生命之树",
+      "deepInsight": "深层洞察",
+      "readFullStory": "阅读全文",
+      "westernZodiac": "西方占星",
+      "easternZodiac": "东方十二生肖",
+      "syncingData": "同步宇宙数据...",
+      "returnToHome": "返回庇护所",
+      "contactSupport": "向 Oracle 询问",
+      "typeLabel": "类型{类型}",
+      "wingLabel": "w{翼}",
+      "alignment": "环境和谐"
+    },
+    "beginJourney": "开始旅程",
+    "heroTitle": "探索您的命运",
+    "heroSubtitle": "通过东西方占星术与心理学的融合，发现真实的自己",
+    "primalOrigin": "原始起源",
+    "calibration": "校准",
+    "changeOrigin": "更改起源",
+    "close": "关闭",
+    "recalculate": "重新计算",
+    "rootsTitle": "根源",
+    "unveilRoots": "揭示您的根基架构",
+    "destinyCoordinates": "命运坐标",
+    "destinyCoordinatesSubtitle": "您在苍穹网格中的位置",
+    "todayInsight": {
+      "title": "今日灵魂洞察",
+      "soulOracle": "当下神谕",
+      "innerResonance": "内在共鸣",
+      "manifestMore": "显化您的真实意图",
+      "synergyPulse": "协同脉动"
+    },
+    "sajuForm": {
+      "title": "宇宙蓝图",
+      "description": "揭示您的原始能量印记。",
+      "name": "姓名",
+      "birthDate": "出生日期",
+      "birthTime": "出生时辰",
+      "timeHint": "（选填）",
+      "gender": "阴阳属性",
+      "female": "阴 / 女性",
+      "male": "阳 / 男性",
+      "initialize": "解锁命运"
+    },
+    "cards": {
+      "foundation": {
+        "subtitle": "主要原型",
+        "description": "您核心的存在模板"
+      },
+      "elemental": {
+        "title": "元素流动",
+        "subtitle": "内在平衡",
+        "description": "能量分布"
+      },
+      "celtic": {
+        "subtitle": "树木智慧",
+        "description": "自然的原型"
+      },
+      "egyptian": {
+        "subtitle": "古老守护者",
+        "description": "神祇对齐"
+      },
+      "sacredKin": {
+        "subtitle": "玛雅印记",
+        "description": "循环时间"
+      },
+      "grandArchive": {
+        "subtitle": "星际记录",
+        "description": "天体数据"
+      },
+      "nakshatra": {
+        "subtitle": "月宿",
+        "description": "灵魂共鸣"
+      },
+      "hellenistic": {
+        "subtitle": "宫位统辖",
+        "description": "昼夜脉动"
+      },
+      "onomancy": {
+        "subtitle": "声音共振",
+        "description": "名字的力量"
+      },
+      "socialAlchemy": {
+        "subtitle": "连结矩阵",
+        "description": "您与他人的连结方式"
+      },
+      "kabbalah": {
+        "subtitle": "生命之树",
+        "description": "十质对应"
+      },
+      "destiny": {
+        "subtitle": "宇宙之路",
+        "description": "您旅程的轨迹"
+      },
+      "hexagram": {
+        "subtitle": "易经共振",
+        "description": "您当下的卦象"
+      },
+      "grandSynthesis": {
+        "title": "整体综合",
+        "description": "您存在的统一视角"
+      },
+      "cognition": {
+        "subtitle": "心智过程",
+        "description": "您感知虚无的方式"
+      },
+      "psyche": {
+        "subtitle": "灵魂深度",
+        "description": "自我隐藏的层面"
+      },
+      "strategy": {
+        "subtitle": "行动意志",
+        "description": "您如何显化意图"
+      },
+      "vocation": {
+        "subtitle": "使命之路",
+        "description": "您的职业召唤"
+      },
+      "vitality": {
+        "title": "生命活力"
+      },
+      "resonance": {
+        "subtitle": "统一场域",
+        "description": "您的宇宙振动"
+      }
+    },
+    "sections": {
+      "testArchitecture": {
+        "title": "测试架构",
+        "description": "门背后的逻辑"
+      },
+      "emotionalResonance": {
+        "title": "情感共振",
+        "description": "您心的频率"
+      },
+      "grandArchives": {
+        "title": "伟大档案馆",
+        "description": "命运记录的总和"
+      }
+    },
+    "systems": {
+      "ziwei": "紫微斗数",
+      "vedic": "吠陀占星",
+      "kabbalah": "卡巴拉"
+    },
+    "day": "日宫",
+    "night": "夜宫",
+    "socialCognition": "社会认知",
+    "mapGrowth": "成长地图",
+    "resonanceVitalitySection": "共振与活力",
+    "resonanceVitalitySubtitle": "和谐频率校准",
+    "resonanceTitle": "共振",
+    "dialogs": {
+      "archiveEntry": "进入档案",
+      "recordVerified": "真理已验证",
+      "enneagram": {
+        "quote": "地图不是疆域。"
+      },
+      "humanDesign": {
+        "description": "解码您的银河蓝图。"
+      },
+      "mbti": {
+        "description": "您的认知架构。"
+      },
+      "numerology": {
+        "description": "您存在的数学。"
+      },
+      "riasec": {
+        "description": "您的职业原型。"
+      },
+      "saju": {
+        "label": "八字分析",
+        "description": "您的五行属性。",
+        "polarity": "阴阳",
+        "element": "主导元素"
+      },
+      "elements": {
+        "title": "元素平衡"
+      },
+      "tuning": {
+        "title": "个人共振调频",
+        "color": "色彩亲和力",
+        "number": "振动密码",
+        "direction": "方位流动",
+        "flower": "植物精华",
+        "gemstone": "矿物锚定",
+        "luckyStar": "星体排列",
+        "favorableDays": "和谐时段",
+        "synergy": "统一连接"
+      }
+    },
+    "humanDesign": {
+      "title": "人类设计",
+      "types": {
+        "Generator": "生产者",
+        "Manifesting Generator": "显示生产者",
+        "Manifestor": "显示者",
+        "Projector": "投射者",
+        "Reflector": "反映者"
+      }
+    },
+    "akashic": {
+      "title": "阿卡西记录",
+      "description": "\"阿卡西记录是过去、现在和未来所有人类事件、思想、言语、情感和意图的汇总。\"",
+      "sections": {
+        "substance": "本质",
+        "alignment": "对齐",
+        "vessel": "容器",
+        "seal": "记录之印",
+        "sanctuary": "整合圣所"
+      }
+    },
+    "action": {
+      "takeTest": "开始测试",
+      "pricing": "查看神圣献礼"
+    },
+    "dailyInsight": {
+      "title": "今日灵魂洞察",
+      "soulOracle": "当下的神谕",
+      "innerResonance": "内在共鸣",
+      "manifestMore": "显化真正意图",
+      "synergyPulse": "协同脉动",
+      "cosmicEnergy": "当前宇宙能量",
+      "flowerOfDay": "今日之花",
+      "crystalOfPower": "力量水晶",
+      "guidingStar": "引导之星"
+    },
+    "moonPhase": {
+      "New": "新月",
+      "Waxing Crescent": "娥眉月",
+      "First Quarter": "上弦月",
+      "Waxing Gibbous": "盈凸月",
+      "Full": "满月",
+      "Waning Gibbous": "亏凸月",
+      "Last Quarter": "下弦月",
+      "Waning Crescent": "残月"
+    },
+    "modern": {
+      "economic": {
+        "title": "经济流派分析",
+        "subtitle": "经济导向",
+        "factions": {
+          "ECON_CLASSICAL": {
+            "name": "古典经济学",
+            "description": "侧重于个人理性选择和市场均衡。这种方法重视个人责任和平衡系统的有机效率。"
+          },
+          "ECON_KEYNESIAN": {
+            "name": "凯恩斯经济学",
+            "description": "强调总需求和积极干预。这种视角重视集体稳定以及及时、支持性行动的智慧。"
+          },
+          "ECON_MONETARIST": {
+            "name": "货币主义",
+            "description": "侧重于货币供应和长期价格稳定。重视一致性、明确的规则和基础系统的可预测性。"
+          },
+          "ECON_BEHAVIORAL": {
+            "name": "行为经济学",
+            "description": "应用心理学见解来解释经济决策。重视人类理解、共情以及日常选择的细微现实。"
+          },
+          "ECON_AUSTRIAN": {
+            "name": "奥地利学派",
+            "description": "强调创业发现和主观主义。重视创造性自由、个人见解以及个人观点的独特价值。"
+          }
+        }
+      },
+      "political": {
+        "title": "政治倾向分析",
+        "subtitle": "政治格局",
+        "factions": {
+          "POL_CONSERVATISM": {
+            "name": "保守主义",
+            "description": "重视传统、稳定和渐进式改革。这种方法旨在维护来之不易的智慧，同时确保一个安全稳定的未来。"
+          },
+          "POL_LIBERALISM": {
+            "name": "自由主义",
+            "description": "强调个人自由、平等和进步。重视探索新可能性的自由以及每个人固有的尊严。"
+          },
+          "POL_SOCIALISM": {
+            "name": "社会主义",
+            "description": "侧重于社会公正、平等和社区福利。重视相互支持、集体福祉以及在团结中找到的力量。"
+          },
+          "POL_LIBERTARIANISM": {
+            "name": "自由意志主义",
+            "description": "优先考虑最低限度的干预和最大限度的个人自主。重视自我决定以及对私人空间和主动权的保护。"
+          },
+          "POL_MODERATISM": {
+            "name": "温和主义",
+            "description": "寻求秩序与进步之间的平衡。重视切实可行的解决方案、对话以及为共同利益寻找共识。"
+          }
+        }
+      }
+    }
+  },
+  "biography": {
+    "stone": {
+      "label": "诞生石",
+      "garnet": {
+        "name": "石榴石",
+        "meaning": "真诚、友谊、忠诚"
+      },
+      "amethyst": {
+        "name": "紫水晶",
+        "meaning": "宁静、诚挚、健康"
+      },
+      "aquamarine": {
+        "name": "海蓝宝石",
+        "meaning": "聪明、沉着、勇敢"
+      },
+      "diamond": {
+        "name": "钻石",
+        "meaning": "永恒的爱、不朽"
+      },
+      "emerald": {
+        "name": "祖母绿",
+        "meaning": "幸福、幸运、善良"
+      },
+      "pearl": {
+        "name": "珍珠",
+        "meaning": "健康、长寿、富有"
+      },
+      "ruby": {
+        "name": "红宝石",
+        "meaning": "热情、勇敢、自由"
+      },
+      "peridot": {
+        "name": "橄榄石",
+        "meaning": "夫妻幸福、和谐"
+      },
+      "sapphire": {
+        "name": "蓝宝石",
+        "meaning": "真相、坚定、智慧"
+      },
+      "opal": {
+        "name": "欧泊",
+        "meaning": "希望、纯洁、无邪"
+      },
+      "topaz": {
+        "name": "托帕石",
+        "meaning": "希望、无邪、友谊"
+      },
+      "turquoise": {
+        "name": "绿松石",
+        "meaning": "成功、胜利、智慧"
+      }
+    },
+    "flower": {
+      "label": "生日花",
+      "carnation": {
+        "name": "康乃馨",
+        "meaning": "骄傲、美丽"
+      },
+      "violet": {
+        "name": "紫罗兰",
+        "meaning": "谦虚、忠诚"
+      },
+      "daffodil": {
+        "name": "水仙",
+        "meaning": "新的开始"
+      },
+      "daisy": {
+        "name": "雏菊",
+        "meaning": "纯洁、无邪"
+      },
+      "lily_of_valley": {
+        "name": "铃兰",
+        "meaning": "谦逊、幸福归来"
+      },
+      "rose": {
+        "name": "玫瑰",
+        "meaning": "爱情、热情"
+      },
+      "larkspur": {
+        "name": "翠雀花",
+        "meaning": "轻盈、轻快"
+      },
+      "gladiolus": {
+        "name": "唐菖蒲",
+        "meaning": "力量、诚实"
+      },
+      "aster": {
+        "name": "翠菊",
+        "meaning": "智慧、信念"
+      },
+      "marigold": {
+        "name": "万寿菊",
+        "meaning": "悲哀、绝望"
+      },
+      "chrysanthemum": {
+        "name": "菊花",
+        "meaning": "忠诚、真理"
+      },
+      "poinsettia": {
+        "name": "一品红",
+        "meaning": "庆祝、成功"
+      }
+    }
+  },
+  "lifestyle": {
+    "hobby": {
+      "label": "推荐活动",
+      "HOBBY_GARDENING": {
+        "name": "园艺",
+        "desc": "与大自然亲近，寻找内心的平静"
+      },
+      "HOBBY_MEDITATION": {
+        "name": "冥想",
+        "desc": "放空心灵，专注自我"
+      },
+      "HOBBY_HIKING": {
+        "name": "徒步",
+        "desc": "攀登高峰，锻炼韧性"
+      },
+      "HOBBY_COOKING": {
+        "name": "烹饪",
+        "desc": "通过调和创造新风味"
+      },
+      "HOBBY_CODING": {
+        "name": "编程",
+        "desc": "用逻辑设计系统的艺术"
+      },
+      "HOBBY_PAINTING": {
+        "name": "绘画",
+        "desc": "通过色彩和笔触表达自我"
+      },
+      "HOBBY_WRITING": {
+        "name": "创作",
+        "desc": "编织故事，让思想自由流淌"
+      },
+      "HOBBY_PHOTOGRAPHY": {
+        "name": "摄影",
+        "desc": "捕捉瞬间，记录故事"
+      },
+      "HOBBY_POTTERY": {
+        "name": "陶艺",
+        "desc": "将黏土塑造成实用的艺术品"
+      },
+      "HOBBY_DANCING": {
+        "name": "舞蹈",
+        "desc": "通过肢体动作表达情感"
+      },
+      "HOBBY_MUSIC": {
+        "name": "音乐",
+        "desc": "创造和谐，通过声音表达观点"
+      },
+      "HOBBY_CRAFTS": {
+        "name": "手工艺",
+        "desc": "用创意打造手工珍宝"
+      },
+      "HOBBY_THEATER": {
+        "name": "戏剧",
+        "desc": "通过表演赋予故事生命"
+      }
+    }
+  },
+  "mythos": {
+    "celtic": {
+      "title": "凯尔特树木占星术"
+    },
+    "egyptian": {
+      "title": "埃及守护神"
+    },
+    "stone": {
+      "title": "守护诞生石"
+    },
+    "flower": {
+      "title": "生日花占星术"
+    },
+    "recalculate": "重新计算"
+  },
+  "astro": {
+    "sect": {
+      "day": "日宫",
+      "night": "夜宫"
+    }
+  },
+  "resonance": {
+    "professionalChart": "专业命盘：{bureau}。命宫位于{lifePalace}。命宫有{starCount}颗星。",
+    "note": "档案馆守护着您的命运。",
+    "nakshatra": "月宿"
+  },
+  "onThisPage": "本页内容",
+  "universal": {
+    "labels": {
+      "undiscovered": "未探索"
+    },
+    "explanation": {
+      "morning_lark": "早起者，上午最活跃。",
+      "night_owl": "晚睡者，夜间最活跃。",
+      "dolphin": "浅眠者，容易失眠。",
+      "lion": "早起者，晚上会疲惫。",
+      "bear": "跟随太阳作息，需要8小时睡眠。",
+      "wolf": "夜间型，晚上更有创造力。"
+    }
+  },
+  "action": {
+    "pricing": "查看神圣献礼"
+  },
+  "dialogs": {
+    "archiveEntry": "进入档案",
+    "recordVerified": "真理已验证",
+    "enneagram": {
+      "quote": "地图不是疆域。"
+    },
+    "humanDesign": {
+      "description": "解码您的银河蓝图。"
+    },
+    "mbti": {
+      "description": "您的认知架构。"
+    },
+    "numerology": {
+      "description": "您存在的数学。"
+    },
+    "riasec": {
+      "description": "您的职业原型。"
+    },
+    "saju": {
+      "label": "八字分析",
+      "description": "您的五行属性。",
+      "polarity": "阴阳",
+      "element": "主导元素"
+    },
+    "elements": {
+      "title": "元素平衡"
+    },
+    "tuning": {
+      "title": "个人共振调频",
+      "color": "色彩亲和力",
+      "number": "振动密码",
+      "direction": "方位流动",
+      "flower": "植物精华",
+      "gemstone": "矿物锚定",
+      "luckyStar": "星体排列",
+      "favorableDays": "和谐时段",
+      "synergy": "统一连接"
+    }
+  },
+  "chosun": {
+    "title": "历史派系分析（朝鲜）",
+    "subtitle": "传统价值观与社会潮流的融合",
+    "description": "在历史背景下分析你的先天本性和行为倾向。",
+    "labels": {
+      "innate": "天生的分析本性（内在）",
+      "behavioral": "外部执行模式（外部）",
+      "comparison": "对齐分数",
+      "faction": "匹配的学术派别"
+    },
+    "factions": {
+      "dongin": {
+        "name": "东人 (Dong-in)",
+        "description": "重视学术纯洁性和道德实践，对实现理想社会充满热情的学者型气质。"
+      },
+      "seoin": {
+        "name": "西人 (Seo-in)",
+        "description": "重视实用合理性和系统效率，专注于解决现实世界问题并确保稳定的务实型气质。"
+      },
+      "namin": {
+        "name": "南人 (Nam-in)",
+        "description": "追求学术深度和包容性的温和，通过避开极端来维持和谐平衡的温厚气质。"
+      },
+      "bukin": {
+        "name": "北人 (Buk-in)",
+        "description": "具有透彻的实践能力和果敢的改革精神，重视基于信念的行动和成果的学术型实践者气质。"
+      },
+      "noron": {
+        "name": "老论 (No-ron)",
+        "description": "维护传统秩序和正统性，通过扎实的逻辑和组织力量寻求稳定的稳健型气质。"
+      },
+      "soron": {
+        "name": "少论 (So-ron)",
+        "description": "具有灵活的思维和进步的开放性，通过采纳多种声音引领有意义变化的实用型气质。"
+      },
+      "sipa": {
+        "name": "时派 (Si-pa)",
+        "description": "重视及时的灵活性和实务感，对不断变化的环境表现出最佳应对的现实主义气质。"
+      },
+      "byeokpa": {
+        "name": "僻派 (Byeok-pa)",
+        "description": "保持坚定的信念和高尚的节操，无论何种情况都不在原则上妥协的严谨且负责的气质。"
+      }
+    },
+    "traits": {
+      "academic": "学术的",
+      "principled": "有原则的",
+      "idealistic": "理想主义",
+      "practical": "实际的",
+      "efficient": "高效的",
+      "stable": "稳定的",
+      "moderate": "缓和",
+      "harmonious": "和谐",
+      "balanced": "均衡",
+      "determined": "决定",
+      "reformist": "改革派",
+      "bold": "大胆的",
+      "traditional": "传统的",
+      "conservative": "保守的",
+      "rigorous": "严格的",
+      "flexible": "灵活的",
+      "open": "打开",
+      "inclusive": "包容性",
+      "adaptive": "自适应",
+      "timely": "及时",
+      "pragmatic": "务实",
+      "uncompromising": "不妥协",
+      "integrity": "正直",
+      "orthodox": "正统"
+    }
+  },
+  "lucky": {
+    "color": {
+      "red": "红色的",
+      "blue": "蓝色的",
+      "green": "绿色的",
+      "yellow": "黄色的",
+      "black": "黑色的",
+      "white": "白色的"
+    },
+    "direction": {
+      "north": "北",
+      "south": "南",
+      "east": "东方",
+      "west": "西方",
+      "center": "中心"
+    },
+    "flower": {
+      "sunflower": "向日葵",
+      "rose": "玫瑰",
+      "lily": "百合",
+      "lotus": "莲花",
+      "orchid": "兰花"
+    },
+    "gemstone": {
+      "topaz": "黄玉",
+      "ruby": "红宝石",
+      "diamond": "钻石",
+      "sapphire": "蓝宝石",
+      "emerald": "翠"
+    }
+  },
+  "assessment": {
+    "resilience": {
+      "title": "适应力",
+      "intro": "衡量一下您从生活挑战中恢复过来的能力。",
+      "badge": "诊断",
+      "result": {
+        "level": "弹性水平",
+        "score": "分数",
+        "profile_title": "个人资料评估",
+        "guidance_title": "指导与建议"
+      }
+    },
+    "start": "开始评估"
+  },
+  "manifest": {
+    "big5": {
+      "title": "5大性格测试",
+      "description": "通过五种主要人格特质的科学视角发现真实的自我。"
+    }
+  },
+  "catalog": {
+    "title": "本体目录",
+    "description": "浏览所有可用的本体评估"
+  },
+  "cognitiveBias": {
+    "title": "认知偏差",
+    "description": "确定您的思维模式和偏见"
+  },
+  "consumption": {
+    "title": "消费方式",
+    "description": "分析你与金钱和价值的关系"
+  },
+  "learningStyle": {
+    "title": "学习方式",
+    "description": "发现您的最佳学习策略"
+  },
+  "badge": "本体论",
+  "resultTitle": "分析结果",
+  "restart": "重新分析",
+  "title": "本体论框架",
+  "mayan": {
+    "systemName": "玛雅星际曼陀罗",
+    "narrative": "银河同步",
+    "solarSeal": "太阳印记",
+    "tone": "银河音调"
+  },
+  "celtic": {
+    "systemName": "凯尔特树木星座",
+    "narrative": "树木的智慧",
+    "treeSign": "树木星座",
+    "ogham": "欧甘字母"
+  },
+  "Link copied to clipboard!": "链接已复制到剪贴板！"
+}

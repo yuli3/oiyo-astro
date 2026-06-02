@@ -1,0 +1,51 @@
+{
+  "ctaStart": "Comenzar Análisis",
+  "ctaLibrary": "Explorar Biblioteca",
+  "scrollLabel": "Desplazarse hacia abajo",
+  "oracleText": "Bienvenido al Oráculo",
+  "oracleTitle": "Perspectiva Diaria",
+  "cta": {
+    "primary": "Comenzar",
+    "secondary": "Saber más"
+  },
+  "features": {
+    "accurate": "Preciso",
+    "comprehensive": "Integral",
+    "personalized": "Personalizado"
+  },
+  "subtitle": "Una guía definitiva para sus fortalezas únicas.",
+  "title": "El Mapa del Santuario",
+  "description": "Navega a través de los antiguos bosques de la sabiduría.",
+  "titlePrefix": "Diseña Tu",
+  "titleSuffix": "Vida Ideal",
+  "keywords": "Saju, Tarot, Resonancia, Ontología, Mapeo del Alma",
+  "errorFallbackTitle": "El Vacío se profundiza",
+  "errorFallbackDescription": "Los hilos cósmicos están momentáneamente enredados. Danos un latido para restaurar la armonía.",
+  "phase": "Protocolo: 0.1.0",
+  "enter": "Entrar al Santuario",
+  "explore": "Explorar el Mapa",
+  "status": "ESTADO",
+  "active": "Activo",
+  "orbitalVelocity": "VELOCIDAD ORBITAL",
+  "km": "kilómetros",
+  "lunarPhase": "FASE LUNAR",
+  "waxing": "Creciente",
+  "ontology": {
+    "title": "El Mapa del Santuario",
+    "desc": "Tu guía para el día de hoy."
+  },
+  "resonance": {
+    "title": "El Mapa del Santuario",
+    "desc": "Tu guía para el día de hoy."
+  },
+  "daily": {
+    "title": "El Mapa del Santuario",
+    "desc": "Tu guía para el día de hoy."
+  },
+  "discovery": {
+    "badge": "Descubrimiento",
+    "title": "El Mapa del Santuario",
+    "description": "Navega a través de los antiguos bosques de la sabiduría.",
+    "takeTest": "Haz la prueba"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "title": "响应时间",
+    "description": "我们致力于尽快回复。",
+    "keywords": "联系, 支持, 帮助"
+  },
+  "benefits": {
+    "items": [
+      {
+        "icon": "💬",
+        "title": "个性化支持",
+        "description": "如果您在旅途中遇到任何障碍，我们随时为您提供帮助。"
+      },
+      {
+        "icon": "🤝",
+        "title": "创意合作伙伴",
+        "description": "我们一直在寻找志同道合的人一起成长和创新。"
+      }
+    ]
+  },
+  "faq": {
+    "items": [
+      {
+        "question": "如何申请退款？",
+        "answer": "您可以从设置页面申请退款。"
+      },
+      {
+        "question": "我想删除我的账户。",
+        "answer": "您可以从个人资料设置中删除您的账户。"
+      }
+    ]
+  },
+  "test": {
+    "progress": "表格进度",
+    "next": "继续",
+    "previous": "回去",
+    "submit": "发送消息",
+    "loading": "与明星分享...",
+    "selectOption": "请选择您的询问性质"
+  },
+  "title": "响应时间",
+  "subtitle": "我们在此为您提供帮助。",
+  "name": "姓名",
+  "email": {
+    "0": "乙",
+    "1": "米",
+    "2": "一个",
+    "3": "我",
+    "4": "我",
+    "5": " ",
+    "6": "一个",
+    "7": "d",
+    "8": "d",
+    "9": "r",
+    "10": "e",
+    "11": "s",
+    "12": "s",
+    "title": "响应时间",
+    "button": "发送邮件",
+    "description": "我们致力于尽快回复。"
+  },
+  "message": "您的留言",
+  "send": "发送",
+  "success": "您的消息已发送成功！",
+  "error": "发送您的消息时发生错误。 请再试一次。",
+  "response": {
+    "title": "响应时间",
+    "time": "24小时内",
+    "description": "我们致力于尽快回复。"
+  },
+  "description": "我们致力于尽快回复。",
+  "supportButton": "联系支持",
+  "emailSubject": "支持请求",
+  "emailButton": "给我们发邮件"
+}

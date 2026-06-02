@@ -1,0 +1,81 @@
+{
+  "benefitsTitle": "Why do visionaries seek clarity before their next great leap?",
+  "benefits": [
+    {
+      "icon": "🧭",
+      "title": "Translate Intuition to Impact",
+      "description": "Connect your innate working style with actual career language and hiring signals."
+    },
+    {
+      "icon": "🗂️",
+      "title": "Identify Energetic Leaks",
+      "description": "Uncover the friction points in your collaboration style before they hinder your momentum."
+    },
+    {
+      "icon": "🎯",
+      "title": "Design Confident Conversations",
+      "description": "Articulate exactly what you need to achieve your peak performance in interviews and negotiations."
+    }
+  ],
+  "metricsTitle": "Engineered for the Modern Career Transition",
+  "metrics": [
+    {
+      "label": "questions",
+      "value": "9 precision questions to unveil your core"
+    },
+    {
+      "label": "coachingNotes",
+      "value": "3 personalized coaching chapters included"
+    },
+    {
+      "label": "users",
+      "value": "Over 12,000 seekers have navigated their next step with us"
+    }
+  ],
+  "stepsTitle": "How Your Journey Unfolds",
+  "steps": [
+    {
+      "title": "Pattern Recognition",
+      "description": "Select the statements that resonate most truthfully with your current rhythm, not an idealized self."
+    },
+    {
+      "title": "Theme Resonance",
+      "description": "We analyze your primary and shadow energies to provide a detailed vocational blueprint."
+    },
+    {
+      "title": "Design Your Next Move",
+      "description": "Apply your insights immediately to interviews, leadership growth, or redefining your current role."
+    }
+  ],
+  "previewTitle": "A Glimpse into Your Report",
+  "previewDescription": "Every report is a curated collection of tailored coaching questions, vocational examples, and negotiation strategies. Your primary theme illuminates your core essence, while the secondary theme explores how you navigate crisis and pressure—giving those who guide you the map they need to unlock your full potential.",
+  "ctaSecondary": "Download Sample Insight PDF",
+  "faqTitle": "Career & Path FAQs",
+  "contentCallout": "Before your next performance review or career shift, use Job Match to align your efforts with the work that naturally nourishes your spirit.",
+  "badge": "Saju Analysis",
+  "hero": {
+    "subtitle": "Decode your destiny with the Four Pillars.",
+    "title": "Oriental Oracle",
+    "ctaStart": "Begin Reading",
+    "ctaLibrary": "Explore the Library of Wisdom",
+    "oracleTitle": "Saju Oracle",
+    "oracleText": "Where ancient wisdom meets modern data.",
+    "scrollLabel": "Scroll to Ascend"
+  },
+  "archives": {
+    "title": "Imperial Archive: The Destiny Vault",
+    "subtitle": "Explore our collection of ancient wisdom and modern cosmic datasets.",
+    "labels": {
+      "ancient": "Ancient Documents",
+      "charts": "Saju Charts",
+      "texts": "Secret Records"
+    },
+    "cta": "Enter the Archive"
+  },
+  "elements": {
+    "title": "Essence of the Five Elements",
+    "subtitle": "Face the primordial cosmic energies that compose your being.",
+    "strengths": "Temperamental Strengths",
+    "careers": "Resonant Careers"
+  }
+}

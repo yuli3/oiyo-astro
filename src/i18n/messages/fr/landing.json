@@ -1,0 +1,81 @@
+{
+  "benefitsTitle": "Pourquoi les visionnaires recherchent-ils la clarté avant leur prochain grand pas ?",
+  "benefits": [
+    {
+      "icon": "🧭",
+      "title": "Traduire l’intuition en impact",
+      "description": "Connectez votre style de travail inné au langage de carrière actuel et aux signaux d'embauche."
+    },
+    {
+      "icon": "🗂️",
+      "title": "Identifier les fuites énergétiques",
+      "description": "Découvrez les points de friction dans votre style de collaboration avant qu’ils n’entravent votre élan."
+    },
+    {
+      "icon": "🎯",
+      "title": "Concevoir des conversations en toute confiance",
+      "description": "Exprimez exactement ce dont vous avez besoin pour atteindre vos performances optimales lors des entretiens et des négociations."
+    }
+  ],
+  "metricsTitle": "Conçu pour la transition de carrière moderne",
+  "metrics": [
+    {
+      "label": "des questions",
+      "value": "9 questions de précision pour dévoiler votre cœur"
+    },
+    {
+      "label": "coachingNotes",
+      "value": "3 chapitres de coaching personnalisé inclus"
+    },
+    {
+      "label": "utilisatrices",
+      "value": "Plus de 12 000 chercheurs ont franchi leur prochaine étape avec nous"
+    }
+  ],
+  "stepsTitle": "Comment se déroule votre voyage",
+  "steps": [
+    {
+      "title": "Reconnaissance de formes",
+      "description": "Sélectionnez les déclarations qui correspondent le plus fidèlement à votre rythme actuel, et non à un moi idéalisé."
+    },
+    {
+      "title": "Résonance du thème",
+      "description": "Nous analysons vos énergies primaires et fantômes pour fournir un plan professionnel détaillé."
+    },
+    {
+      "title": "Concevez votre prochain déménagement",
+      "description": "Appliquez immédiatement vos connaissances aux entretiens, à l’évolution du leadership ou à la redéfinition de votre rôle actuel."
+    }
+  ],
+  "previewTitle": "Un aperçu de votre rapport",
+  "previewDescription": "Chaque rapport est une collection organisée de questions de coaching sur mesure, d'exemples professionnels et de stratégies de négociation. Votre thème principal met en lumière votre essence fondamentale, tandis que le thème secondaire explore la façon dont vous gérez les crises et les pressions, donnant à ceux qui vous guident la carte dont ils ont besoin pour libérer votre plein potentiel.",
+  "ctaSecondary": "Télécharger un exemple de PDF d'analyse",
+  "faqTitle": "FAQ sur les carrières et les parcours",
+  "contentCallout": "Avant votre prochaine évaluation de performance ou changement de carrière, utilisez Job Match pour aligner vos efforts sur le travail qui nourrit naturellement votre esprit.",
+  "badge": "Analyse Saju",
+  "hero": {
+    "subtitle": "Faites face aux énergies primordiales qui tressent la trame de votre être.",
+    "title": "L'Essence des Cinq Éléments",
+    "ctaStart": "Commencer la Lecture",
+    "ctaLibrary": "Explorer les Archives de Sagesse",
+    "oracleTitle": "Oracle du Saju",
+    "oracleText": "La convergence de la sagesse ancestrale et de la précision moderne.",
+    "scrollLabel": "Défiler pour l'Ascension"
+  },
+  "archives": {
+    "title": "L'Essence des Cinq Éléments",
+    "subtitle": "Faites face aux énergies primordiales qui tressent la trame de votre être.",
+    "labels": {
+      "ancient": "Documents Sacrés",
+      "charts": "Cartes de Saju",
+      "texts": "Secrets Hermétiques"
+    },
+    "cta": "Entrer dans les Archives"
+  },
+  "elements": {
+    "title": "L'Essence des Cinq Éléments",
+    "subtitle": "Faites face aux énergies primordiales qui tressent la trame de votre être.",
+    "strengths": "Forces de Tempérament",
+    "careers": "Vocations en Résonance"
+  }
+}

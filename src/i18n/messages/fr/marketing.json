@@ -1,0 +1,157 @@
+{
+  "about": {
+    "title": "About Us | OIYO",
+    "hero": {
+      "subtitle": "Unlock the full potential of your self-discovery journey with zero hidden costs.",
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "mission": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "values": {
+      "title": "Pricing",
+      "free": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "privacy": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "science": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "engaging": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "story": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "meta": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey.",
+      "keywords": "pricing, subscription, plans, personality test, premium insights, saju"
+    },
+    "history": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    }
+  },
+  "home": {
+    "title": "L'Oracle Quotidien",
+    "description": "Naviguez dans les forêts anciennes de la sagesse. Chaque sentier mène à une révélation plus profonde de votre être véritable.",
+    "keywords": "Saju, Tarot, Résonance, Ontologie, Cartographie de l'âme",
+    "errorFallbackTitle": "Le Vide se creuse",
+    "errorFallbackDescription": "Les fils du cosmos se sont momentanément emmêlés. Laissez-nous un battement de cœur pour restaurer l'harmonie.",
+    "discovery": {
+      "badge": "VOYAGE",
+      "title": "L'Oracle Quotidien",
+      "description": "Naviguez dans les forêts anciennes de la sagesse. Chaque sentier mène à une révélation plus profonde de votre être véritable."
+    },
+    "phase": "Phase 82 : La Preuve Sacrée",
+    "titlePrefix": "Sanctuaire de",
+    "titleSuffix": "Données Vivantes",
+    "enter": "Entrer dans le Sanctuaire",
+    "explore": "Dévoiler la Méthodologie",
+    "ontology": {
+      "title": "L'Oracle Quotidien",
+      "desc": "Une transmission directe du vide, organisée pour votre ligne temporelle spécifique."
+    },
+    "resonance": {
+      "title": "L'Oracle Quotidien",
+      "desc": "Une transmission directe du vide, organisée pour votre ligne temporelle spécifique."
+    },
+    "daily": {
+      "title": "L'Oracle Quotidien",
+      "desc": "Une transmission directe du vide, organisée pour votre ligne temporelle spécifique."
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey.",
+      "keywords": "tarification, abonnement, forfaits, test de personnalité, informations premium, saju"
+    },
+    "hero": {
+      "title": "Pricing",
+      "subtitle": "Libérez tout le potentiel de votre voyage de découverte de soi sans aucun coût caché."
+    },
+    "billing": {
+      "monthly": "Mensuelle",
+      "yearly": "Annuelle",
+      "month": "mo"
+    },
+    "plans": {
+      "free": "Gratuite",
+      "getStarted": "Commencez gratuitement",
+      "popular": "Les plus populaires",
+      "subscribe": "Commencez votre parcours professionnel",
+      "cancelAnytime": "Annuler à tout moment"
+    },
+    "planDetails": {
+      "free": {
+        "features": {
+          "unlimitedTests": "Tests de personnalité et d'âme de base illimités",
+          "resultStorage": "Stockez jusqu'à 3 informations récentes",
+          "basicSharing": "Partage des résultats classique",
+          "communitySupport": "Accès à la communauté"
+        },
+        "name": "Pro",
+        "description": "Choose the path that best suits your journey."
+      },
+      "premium": {
+        "features": {
+          "allFreeFeatures": "Tout dans le plan Basic",
+          "aiAnalysis": "Analyse et conseils approfondis de l'âme basés sur l'IA",
+          "pdfReports": "Rapports PDF détaillés de vos résultats",
+          "advancedCompatibility": "Outils avancés d’harmonie relationnelle",
+          "personalizedInsights": "Informations cosmiques hebdomadaires personnalisées",
+          "prioritySupport": "Soutien prioritaire au sanctuaire",
+          "customExport": "Portabilité totale des données"
+        },
+        "name": "Pro",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "info": {
+      "allPlansInclude": "Chaque forfait Pro comprend :",
+      "securePayment": "Transactions sécurisées",
+      "instantAccess": "Activation instantanée",
+      "customerSupport": "Assistance dédiée"
+    },
+    "faq": {
+      "title": "Pricing",
+      "question1": "Puis-je annuler mon abonnement à tout moment ?",
+      "answer1": "Absolument. Vous pouvez suspendre ou annuler votre voyage à tout moment depuis vos paramètres. Aucune question posée.",
+      "question2": "Existe-t-il un essai gratuit ?",
+      "answer2": "Même si nous ne proposons pas d'essai chronométré, notre forfait Basic offre une multitude de fonctionnalités que vous pouvez explorer indéfiniment.",
+      "question3": "Mes paiements sont-ils sécurisés ?",
+      "answer3": "Oui. Nous utilisons un cryptage conforme aux normes de l'industrie pour garantir que votre sanctuaire financier reste privé et sécurisé."
+    },
+    "trust": {
+      "secure": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "instant": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "satisfaction": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "title": "Tarifs",
+    "description": "Choisissez le chemin qui convient le mieux à votre voyage.",
+    "free": "Gratuite",
+    "pro": "Pro",
+    "enterprise": "Entreprise"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "terms": {
+    "sections": {
+      "overview": {
+        "content": "OIYOはユーザーの権利保護のためにデータ保護法を遵守します。"
+      }
+    },
+    "test": {
+      "progress": "進捗",
+      "next": "次へ",
+      "previous": "前へ",
+      "submit": "確認",
+      "loading": "読み込み中",
+      "selectOption": "選択してください",
+      "insightBullets": ["主要規約"]
+    },
+    "result": {
+      "title": "個人情報保護方針",
+      "description": "OIYOはあなたの個人情報を大切にします。"
+    },
+    "meta": {
+      "title": "個人情報保護方針",
+      "description": "OIYOはあなたの個人情報を大切にします。",
+      "keywords": "個人情報, セキュリティ, データ保護"
+    },
+    "title": "個人情報保護方針",
+    "description": "OIYOはあなたの個人情報を大切にします。",
+    "keywords": "個人情報, セキュリティ, データ保護",
+    "lastUpdated": "2024年1月1日"
+  },
+  "privacy": {
+    "sections": {
+      "overview": {
+        "content": "OIYOはユーザーの権利保護のためにデータ保護法を遵守します。"
+      }
+    },
+    "test": {
+      "progress": "進捗",
+      "next": "次へ",
+      "previous": "前へ",
+      "submit": "確認",
+      "loading": "読み込み中",
+      "selectOption": "選択してください",
+      "insightBullets": ["プライバシーの核"]
+    },
+    "result": {
+      "title": "個人情報保護方針",
+      "description": "OIYOはあなたの個人情報を大切にします。"
+    },
+    "meta": {
+      "title": "個人情報保護方針",
+      "description": "OIYOはあなたの個人情報を大切にします。",
+      "keywords": "個人情報, セキュリティ, データ保護"
+    },
+    "point1": "名前やメールアドレスなどの個人データは暗号化されます。",
+    "point2": "結果は匿名で使用されます。",
+    "point3": "あなたはいつでもデータの削除をリクエストできます。",
+    "title": "個人情報保護方針",
+    "description": "OIYOはあなたの個人情報を大切にします。",
+    "keywords": "個人情報, セキュリティ, データ保護",
+    "lastUpdated": "2026 年 1 月 1 日"
+  },
+  "cookieTitle": "Sacred Covenant",
+  "cookieTextEu": "To preserve the sanctity of your digital soul, we request permission to use cookies for resonance tracking. Your data remains ancient and protected.",
+  "cookieTextDefault": "This sanctuary uses cookies to harmonize your experience with the cosmic web.",
+  "cookieDeny": "Deny",
+  "cookieAccept": "Accept Covenant"
+}

@@ -1,0 +1,7 @@
+{
+  "generate": "생성 실패",
+  "purchase": "구매 실패",
+  "tooLarge": "파일이 너무 큽니다.",
+  "cameraAccess": "카메라 액세스가 거부되었습니다.",
+  "failed": "작업이 실패했습니다."
+}

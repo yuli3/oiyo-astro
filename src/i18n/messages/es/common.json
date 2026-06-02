@@ -1,0 +1,378 @@
+{
+  "badge": "Insignia",
+  "resultTitle": "Tu Resultado",
+  "restart": "Reiniciar",
+  "title": "Título",
+  "intro": "Introducción",
+  "profile": "Perfil",
+  "remedy": "Remedio",
+  "description": "Descripción",
+  "primaryAction": "Continuar",
+  "secondaryAction": "Volver",
+  "axis": "Eje",
+  "guardian": "Guardián",
+  "guardianDesc": "Tu espíritu guardián vigila tu camino.",
+  "level": "Nivel",
+  "antennaTitle": "Antena de Sensibilidad",
+  "sensitivityTitle": "Perfil de Sensibilidad",
+  "counselorNote": "Nota del Consejero",
+  "counselorMsg": "Tu guía interior tiene un mensaje para ti.",
+  "badgeText": "Insignia",
+  "result": {
+    "sections": {
+      "dimensions_title": "Análisis Dimensional",
+      "imperial_decree": "Decreto Imperial",
+      "strengths": "Fortalezas",
+      "weaknesses": "Desafíos",
+      "retake_ceremony": "Ceremonia de Repetición"
+    }
+  },
+  "adaptive": "Adaptativo",
+  "maladaptive": "Maladaptativo",
+  "primaryStyle": "Estilo Principal",
+  "scoreIntensity": "Intensidad de Puntuación",
+  "labels": {
+    "mirror": "Espejo"
+  },
+  "subtitle": "Subtítulo",
+  "hiddenSelf": {
+    "title": "El Yo Oculto",
+    "description": "Las capas invisibles de tu mundo interior.",
+    "ctaOrigin": "Explorar Tu Origen",
+    "ctaIdentity": "Descubrir Tu Identidad"
+  },
+  "mode": "Modo",
+  "dimensionAnalysis": "Análisis Dimensional",
+  "recommendedPaths": "Caminos Recomendados",
+  "oracleTitle": "Oráculo",
+  "paradoxLabel": "Paradoja",
+  "balanced": "Equilibrado",
+  "nature": "Naturaleza",
+  "nurture": "Crianza",
+  "start": "Comenzar",
+  "retake": "Repetir",
+  "scroll": {
+    "title": "Registros imperiales",
+    "end": "Fin de los registros",
+    "visualization": "Visualización"
+  },
+  "terms": {
+    "dayMaster": "Maestro del Día"
+  },
+  "loading": {
+    "notFound": {
+      "title": "Se ha perdido la señal cósmica",
+      "subtitle": "La ruta que buscas se ha disuelto en el vacío.",
+      "description": "Quizás las coordenadas fueran erróneas, o la página se ha desplazado a otra dimensión.",
+      "goHome": "Regresar al santuario",
+      "goBack": "Volver a la ruta anterior",
+      "suggestionsTitle": "Sugerencias de navegación",
+      "popularTestsTitle": "Portales activos",
+      "egentetoTest": "Origen primordial",
+      "mbtiAlternative": "DNA Social (MBTI)",
+      "relationship": {
+        "communicationStyle": "Resonancia sagrada"
+      }
+    },
+    "analyzing": "Analizando tu plano de alma...",
+    "calculating": "Calculando alineaciones cósmicas...",
+    "processing": "Procesando tu patrón único...",
+    "generating": "Generando tus perspectivas...",
+    "almostDone": "Casi listo...",
+    "personalityAnalysis": "Decodificando tu matriz de personalidad...",
+    "responseAnalysis": "Leyendo tus respuestas...",
+    "typeMatching": "Buscando tu tipo de resonancia...",
+    "preparingResults": "Preparando tus resultados..."
+  },
+  "please_wait": "Por favor espera un momento",
+  "backButton": "Volver",
+  "shareButton": "Compartir",
+  "dimensionsTitle": "Dimensiones",
+  "analysis": {
+    "detailed": "Análisis Detallado"
+  },
+  "iching": {
+    "title": "Lectura del I Ching",
+    "revelation": "Revelación Cósmica"
+  },
+  "partialDataWarning": "Cierta información puede estar incompleta.",
+  "addMoreInfo": "Añadir más detalles",
+  "cta": {
+    "title": "Tu Viaje te Espera",
+    "subtitle": "Comparte tu perfil cósmico con otros",
+    "share": "Compartir Resultados",
+    "download": "Descargar"
+  },
+  "rel": {
+    "selectPlaceholder": "Seleccionar punto de referencia",
+    "child_adult": "Alma adulta (niña)",
+    "child_minor": "Alma menor (niña)",
+    "spouse": "Llama dual (cónyuge)",
+    "parent": "Alma ancestral (madre)",
+    "other_relative": "Pariente afín",
+    "other": "Otra conexión"
+  },
+  "alerts": {
+    "title": "Registros Imperiales"
+  },
+  "sections": {
+    "overview": "Resumen",
+    "users": "Estadísticas de usuario",
+    "performance": "Latido del sistema"
+  },
+  "recommendations": {
+    "title": "Documentos recomendados",
+    "error": "Error al cargar.",
+    "empty": "No hay recomendaciones.",
+    "exploreAll": "Explorar todo",
+    "spotlightEyebrow": "En primer plano",
+    "trending": "Tendencias",
+    "new": "Nuevo",
+    "takeTest": "Realizar diagnóstico"
+  },
+  "progress": "Progreso",
+  "retry": "Intentar de nuevo",
+  "celestial": {
+    "status": "Desconectado",
+    "active": "Resonancia activa",
+    "orbitalVelocity": "Velocidad orbital",
+    "km": "km/s",
+    "lunarPhase": "Fase lunar",
+    "waxing": "Luna creciente",
+    "oracle": "Oráculo Imperial V2"
+  },
+  "viral": {
+    "comparisonTitle": "Nuestra afinidad de personalidad 💫",
+    "matchScore": "Puntuación de afinidad",
+    "compareAt": "Compara con amigos en oiyo.app"
+  },
+  "offline": {
+    "status": "Desconectado",
+    "description": "Quizás las coordenadas fueran erróneas, o la página se ha desplazado a otra dimensión.",
+    "meta": {
+      "title": "Se ha perdido la señal cósmica",
+      "description": "Quizás las coordenadas fueran erróneas, o la página se ha desplazado a otra dimensión."
+    },
+    "content": {
+      "heading": "La conexión con el Vacío se ha suspendido",
+      "subheading": "En la quietud del Santuario desconectado, presta atención a tu voz interior.",
+      "description1": "Los hilos del cosmos parecen haberse aflojado momentáneamente.",
+      "description2": "El flujo de datos se restaurará tan pronto como regrese la conexión.",
+      "cta": "¿Deseas intentar una nueva resonancia?",
+      "tipsTitle": "Sabiduría para hallar la paz",
+      "tips": {
+        "tip1": "Verifica el vínculo físico (tu conexión a la red).",
+        "tip2": "Aguarda un instante a que los vientos celestiales se calmen.",
+        "tip3": "¿Y si plegaras y desplegaras tus alas de Modo Avión por un momento?"
+      }
+    }
+  },
+  "readings": "Lecturas",
+  "productivity": {
+    "decisionMaking": "Toma de decisiones"
+  },
+  "error": {
+    "title": "Se ha perdido la señal cósmica",
+    "description": "Quizás las coordenadas fueran erróneas, o la página se ha desplazado a otra dimensión.",
+    "retry": "Intentar de nuevo"
+  },
+  "about": "Presentación del Santuario",
+  "success": "Éxito",
+  "yes": "Sí",
+  "no": "No",
+  "ok": "Confirmar",
+  "cancel": "Cancelar",
+  "save": "Guardar",
+  "delete": "Eliminar",
+  "edit": "Editar",
+  "add": "Añadir",
+  "remove": "Eliminar",
+  "next": "Siguiente",
+  "previous": "Anterior",
+  "back": "Atrás",
+  "home": "Inicio",
+  "placeholder": {
+    "enterName": "Escribe tu nombre",
+    "enterAge": "Edad"
+  },
+  "noData": {
+    "noStrengths": "No se han descubierto fortalezas todavía",
+    "noChallenges": "No se han identificado desafíos importantes todavía",
+    "noRecommendations": "No hay recomendaciones",
+    "noFamilyMembers": "No se han añadido miembros de la familia",
+    "noHouseholdTips": "No hay consejos domésticos disponibles"
+  },
+  "copiedToClipboard": "¡Copiado al portapapeles!",
+  "breadcrumbLabel": "Ruta",
+  "standardError": {
+    "badgeLabel": "Grieta",
+    "title": "Se ha perdido la señal cósmica",
+    "description": "Quizás las coordenadas fueran erróneas, o la página se ha desplazado a otra dimensión.",
+    "primaryAction": "Recuperar el destino",
+    "secondaryAction": "A la plaza central (Inicio)",
+    "supportPrompt": "¿Buscas el consejo de los sabios?",
+    "referenceIdLabel": "Código de resonancia",
+    "contactSupport": "Enviar señal al soporte"
+  },
+  "calendar": {
+    "lunar": "Calendario lunar",
+    "solar": "Calendario solar"
+  },
+  "ui": {
+    "goHome": "Regresar al santuario",
+    "tryNow": "Pruébalo ahora",
+    "languages": {
+      "ko": "Coreano",
+      "en": "Inglesa",
+      "ja": "日本語",
+      "cn": "简体中文",
+      "es": "Español",
+      "fr": "Français"
+    },
+    "scrollToTop": "Volver arriba"
+  },
+  "zodiac": {
+    "aries": "Aries",
+    "taurus": "Tauro",
+    "gemini": "Géminis",
+    "cancer": "Cáncer",
+    "leo": "Leona",
+    "virgo": "Virgo",
+    "libra": "Libra",
+    "scorpio": "Escorpio",
+    "sagittarius": "Sagitario",
+    "capricorn": "Capricornio",
+    "aquarius": "Acuario",
+    "pisces": "Piscis"
+  },
+  "mbti": {
+    "ISTJ": "ISTJ (Logista)",
+    "ISFJ": "ISFJ (Defensor)",
+    "INFJ": "INFJ (Abogado)",
+    "INTJ": "INTJ (Arquitecto)",
+    "ISTP": "ISTP (virtuoso)",
+    "ISFP": "ISFP (Aventurero)",
+    "INFP": "INFP (Mediador)",
+    "INTP": "INTP (Lógico)",
+    "ESTP": "ESTP (Emprendedor)",
+    "ESFP": "ESFP (Animador)",
+    "ENFP": "ENFP (Activista)",
+    "ENTP": "ENTP (Innovador)",
+    "ESTJ": "ESTJ (Ejecutivo)",
+    "ESFJ": "ESFJ (Cónsul)",
+    "ENFJ": "ENFJ (Protagonista)",
+    "ENTJ": "ENTJ (Comandante)"
+  },
+  "bloodType": {
+    "A": "Tipo A",
+    "B": "Tipo B",
+    "O": "Tipo O",
+    "AB": "Tipo AB"
+  },
+  "nav": {
+    "dashboard": "Panel",
+    "readings": "Lecturas",
+    "resonance": "Resonancia",
+    "profile": "Perfil"
+  },
+  "landing": {
+    "phase": "Fase 51: El Portal Esmeralda",
+    "titlePrefix": "Santuario de",
+    "titleSuffix": "Datos Vivos",
+    "description": "Donde la sabiduría ancestral se encuentra con la precisión algorítmica. Decodifica tu ontología, resuena con almas afines y sintetiza tu destino.",
+    "enter": "Entrar al Santuario",
+    "explore": "Explorar metodologías",
+    "ontology": {
+      "title": "Ontología",
+      "desc": "Decodifica el plano de tu alma."
+    },
+    "resonance": {
+      "title": "Resonancia",
+      "desc": "Encuentra tu afinidad vibratoria."
+    },
+    "daily": {
+      "title": "El Oráculo Diario",
+      "desc": "Un mensaje del vacío, curado especialmente para ti."
+    },
+    "synergy": {
+      "title": "La Gran Sincronía",
+      "version": "Sinergia V2"
+    },
+    "community": {
+      "connected": "Almas conectadas hoy",
+      "title": "Únete a la conciencia colectiva."
+    }
+  },
+  "support": {
+    "hero": {
+      "title": "Santuario de apoyo sagrado",
+      "subtitle": "Guiado por sabiduría antigua y respuestas rápidas."
+    },
+    "categories": {
+      "billing": "Pago",
+      "technical": "Soporte técnico",
+      "account": "Cuenta",
+      "general": "Consultas generales",
+      "feature_request": "Solicitud de función",
+      "payment": "Pago"
+    },
+    "form": {
+      "title": "Solicitar guía",
+      "categoryLabel": "Área de guía",
+      "descriptionLabel": "Detalles",
+      "descriptionPlaceholder": "Describe tu consulta en detalle...",
+      "priorityLabel": "Urgencia",
+      "subjectLabel": "Asunto",
+      "subjectPlaceholder": "Resumen breve",
+      "submitButton": "Enviar",
+      "labels": {
+        "title": "Asunto de la consulta",
+        "category": "Área de guía",
+        "description": "Detalles",
+        "priority": "Urgencia",
+        "submit": "Enviar"
+      },
+      "categories": {
+        "billing": "Pago",
+        "technical": "Soporte técnico",
+        "account": "Cuenta",
+        "general": "Consultas generales",
+        "feature_request": "Solicitud de función",
+        "payment": "Pago"
+      },
+      "priorities": {
+        "low": "Bajo",
+        "medium": "Medio",
+        "high": "Alto"
+      }
+    },
+    "priority": {
+      "low": "Bajo",
+      "normal": "Normal",
+      "high": "Alto",
+      "urgent": "Urgente"
+    },
+    "meta": {
+      "title": "Guía divina",
+      "description": "Busca el consejo de los guardianes del santuario."
+    },
+    "myTickets": {
+      "title": "Mis boletos de peregrinaje",
+      "newTicket": "Nueva consulta"
+    }
+  },
+  "company": {
+    "marketing": {
+      "home": {
+        "title": "OIYO | La biblioteca de tu vida",
+        "description": "Navega por la arquitectura de tu destino mediante una síntesis entre Oriente y Occidente.",
+        "errorFallbackTitle": "Pérdida de resonancia",
+        "errorFallbackDescription": "Hemos encontrado una inestabilidad en el vacío. Refrescando la conciencia."
+      }
+    }
+  },
+  "hero": {
+    "title": "Oiyo",
+    "subtitle": "Tu arquitectura cósmica"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "benefitsTitle": "¿Por qué los visionarios buscan claridad antes de su próximo gran salto?",
+  "benefits": [
+    {
+      "icon": "🧭",
+      "title": "Traducir la intuición en impacto",
+      "description": "Conecte su estilo de trabajo innato con el lenguaje profesional real y las señales de contratación."
+    },
+    {
+      "icon": "🗂️",
+      "title": "Identificar fugas energéticas",
+      "description": "Descubra los puntos de fricción en su estilo de colaboración antes de que obstaculicen su impulso."
+    },
+    {
+      "icon": "🎯",
+      "title": "Diseñe conversaciones seguras",
+      "description": "Articule exactamente lo que necesita para lograr su máximo rendimiento en entrevistas y negociaciones."
+    }
+  ],
+  "metricsTitle": "Diseñado para la transición profesional moderna",
+  "metrics": [
+    {
+      "label": "preguntas",
+      "value": "9 preguntas de precisión para revelar tu núcleo"
+    },
+    {
+      "label": "Notas de entrenamiento",
+      "value": "3 capítulos de coaching personalizados incluidos"
+    },
+    {
+      "label": "usuarias",
+      "value": "Más de 12.000 buscadores han dado su siguiente paso con nosotros"
+    }
+  ],
+  "stepsTitle": "Cómo se desarrolla tu viaje",
+  "steps": [
+    {
+      "title": "Reconocimiento de patrones",
+      "description": "Seleccione las declaraciones que resuenan más sinceramente con su ritmo actual, no con su yo idealizado."
+    },
+    {
+      "title": "Resonancia del tema",
+      "description": "Analizamos sus energías primarias y sombras para proporcionar un plan vocacional detallado."
+    },
+    {
+      "title": "Diseña tu próximo paso",
+      "description": "Aplique sus conocimientos de inmediato a entrevistas, crecimiento del liderazgo o redefinición de su función actual."
+    }
+  ],
+  "previewTitle": "Un vistazo a su informe",
+  "previewDescription": "Cada informe es una colección seleccionada de preguntas de coaching, ejemplos vocacionales y estrategias de negociación personalizados. Su tema principal ilumina su esencia central, mientras que el tema secundario explora cómo navega por la crisis y la presión, brindando a quienes lo guían el mapa que necesitan para desbloquear todo su potencial.",
+  "ctaSecondary": "Descargar PDF de información de muestra",
+  "faqTitle": "Preguntas frecuentes sobre carreras y trayectorias",
+  "contentCallout": "Antes de su próxima revisión de desempeño o cambio de carrera, utilice Job Match para alinear sus esfuerzos con el trabajo que nutre naturalmente su espíritu.",
+  "badge": "Análisis Saju",
+  "hero": {
+    "subtitle": "Enfréntate a las energías primordiales que tejen la trama de tu ser.",
+    "title": "La Esencia de los Cinco Elementos",
+    "ctaStart": "Comenzar Lectura",
+    "ctaLibrary": "Explorar los Archivos de Sabiduría",
+    "oracleTitle": "Oráculo del Saju",
+    "oracleText": "La convergencia de la sabiduría ancestral y la precisión moderna.",
+    "scrollLabel": "Deslizar para la Ascensión"
+  },
+  "archives": {
+    "title": "La Esencia de los Cinco Elementos",
+    "subtitle": "Enfréntate a las energías primordiales que tejen la trama de tu ser.",
+    "labels": {
+      "ancient": "Documentos Sagrados",
+      "charts": "Mapas de Saju",
+      "texts": "Secretos Herméticos"
+    },
+    "cta": "Entrar en los Archivos"
+  },
+  "elements": {
+    "title": "La Esencia de los Cinco Elementos",
+    "subtitle": "Enfréntate a las energías primordiales que tejen la trama de tu ser.",
+    "strengths": "Fortalezas de Temperamento",
+    "careers": "Vocaciones en Resonancia"
+  }
+}

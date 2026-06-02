@@ -1,0 +1,51 @@
+---
+import type { Locale } from '../i18n';
+import { getTranslations, localePath } from '../i18n';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const t = await getTranslations(locale);
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-green-950 text-green-200 mt-20">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+      <!-- Brand -->
+      <div>
+        <a href={localePath(locale, '/')} class="font-black text-xl text-white">OIYO</a>
+        <p class="mt-2 text-sm text-green-400 leading-relaxed max-w-xs">
+          {t('nav.tagline')}
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-widest text-green-400 mb-3">Navigation</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href={localePath(locale, '/ontology')} class="hover:text-white transition-colors">{t('nav.ontology')}</a></li>
+          <li><a href={localePath(locale, '/about')} class="hover:text-white transition-colors">{t('nav.about')}</a></li>
+          <li><a href={localePath(locale, '/faq')} class="hover:text-white transition-colors">FAQ</a></li>
+          <li><a href={localePath(locale, '/contact')} class="hover:text-white transition-colors">{t('nav.contact')}</a></li>
+          <li><a href={localePath(locale, '/support')} class="hover:text-white transition-colors">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Legal -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-widest text-green-400 mb-3">Legal</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href={localePath(locale, '/legal/privacy')} class="hover:text-white transition-colors">{t('nav.privacy')}</a></li>
+          <li><a href={localePath(locale, '/legal/terms')} class="hover:text-white transition-colors">{t('nav.terms')}</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="border-t border-green-800 pt-6 text-xs text-green-500 text-center">
+      © {year} OIYO. All rights reserved.
+    </div>
+  </div>
+</footer>

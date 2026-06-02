@@ -1,0 +1,157 @@
+{
+  "about": {
+    "title": "OIYOについて | OIYO",
+    "hero": {
+      "subtitle": "Unlock the full potential of your self-discovery journey with zero hidden costs.",
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "mission": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "values": {
+      "title": "Pricing",
+      "free": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "privacy": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "science": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "engaging": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "story": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "meta": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey.",
+      "keywords": "pricing, subscription, plans, personality test, premium insights, saju"
+    },
+    "history": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    }
+  },
+  "home": {
+    "title": "日々の神託",
+    "description": "知恵の古の森を航海しましょう。全ての道は、あなたの真の自己への深い啓示へと続いています。",
+    "keywords": "四柱推命, タロット, 共鳴, 存在論, 魂の地図",
+    "errorFallbackTitle": "虚空が深まっています",
+    "errorFallbackDescription": "宇宙の糸が一時的に絡まりました。調和が再び戻るまで、しばしお待ちください。",
+    "discovery": {
+      "badge": "旅路",
+      "title": "日々の神託",
+      "description": "知恵の古の森を航海しましょう。全ての道は、あなたの真の自己への深い啓示へと続いています。"
+    },
+    "phase": "Phase 82: 聖なる証明",
+    "titlePrefix": "生けるデータの",
+    "titleSuffix": "聖域",
+    "enter": "聖域へと歩みを進める",
+    "explore": "方法論の帷を上げる",
+    "ontology": {
+      "title": "日々の神託",
+      "desc": "あなたのタイムラインのためにキュレートされた、虚空からの直接の伝言です。"
+    },
+    "resonance": {
+      "title": "日々の神託",
+      "desc": "あなたのタイムラインのためにキュレートされた、虚空からの直接の伝言です。"
+    },
+    "daily": {
+      "title": "日々の神託",
+      "desc": "あなたのタイムラインのためにキュレートされた、虚空からの直接の伝言です。"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey.",
+      "keywords": "価格設定、サブスクリプション、プラン、性格テスト、プレミアム インサイト、サジュ"
+    },
+    "hero": {
+      "title": "Pricing",
+      "subtitle": "隠れたコストを一切かけずに、自分探しの旅の可能性を最大限に引き出します。"
+    },
+    "billing": {
+      "monthly": "毎月",
+      "yearly": "毎年",
+      "month": "も"
+    },
+    "plans": {
+      "free": "無料",
+      "getStarted": "無料で始めましょう",
+      "popular": "最も人気のある",
+      "subscribe": "プロの旅を始めましょう",
+      "cancelAnytime": "いつでもキャンセル可能"
+    },
+    "planDetails": {
+      "free": {
+        "features": {
+          "unlimitedTests": "無制限の基本的な性格と魂のテスト",
+          "resultStorage": "最近の分析情報を 3 つまで保存",
+          "basicSharing": "従来の結果共有",
+          "communitySupport": "コミュニティへのアクセス"
+        },
+        "name": "Pro",
+        "description": "Choose the path that best suits your journey."
+      },
+      "premium": {
+        "features": {
+          "allFreeFeatures": "ベーシックプランのすべて",
+          "aiAnalysis": "AIによる深い魂の分析とガイダンス",
+          "pdfReports": "調査結果の詳細な PDF レポート",
+          "advancedCompatibility": "高度な関係調和ツール",
+          "personalizedInsights": "毎週カスタマイズされた宇宙の洞察",
+          "prioritySupport": "優先保護区支援",
+          "customExport": "完全なデータポータビリティ"
+        },
+        "name": "プロ",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "info": {
+      "allPlansInclude": "すべての Pro プランには以下が含まれます:",
+      "securePayment": "安全なトランザクション",
+      "instantAccess": "インスタントアクティベーション",
+      "customerSupport": "専用のサポート"
+    },
+    "faq": {
+      "title": "Pricing",
+      "question1": "サブスクリプションはいつでもキャンセルできますか?",
+      "answer1": "絶対に。 設定からいつでも旅行を一時停止またはキャンセルできます。 質問はありません。",
+      "question2": "無料トライアルはありますか?",
+      "answer2": "期限付きトライアルはありませんが、ベーシック プランでは、無期限に探索できる豊富な機能が提供されます。",
+      "question3": "私の支払いは安全ですか?",
+      "answer3": "はい。 当社は業界標準の暗号化を利用して、お客様の金融聖域のプライバシーと安全性を確保します。"
+    },
+    "trust": {
+      "secure": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "instant": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "satisfaction": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "title": "価格設定",
+    "description": "自分の旅に最適な道を選択してください。",
+    "free": "無料",
+    "pro": "プロ",
+    "enterprise": "企業"
+  }
+}

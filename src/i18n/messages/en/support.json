@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "Sacred Support | Oiyo.net",
+    "description": "Seek guidance and find solutions in our sacred sanctuary."
+  },
+  "hero": {
+    "title": "Sacred Support",
+    "subtitle": "Our keepers are here to guide you through any challenges on your spiritual journey."
+  },
+  "form": {
+    "subjectLabel": "Subject",
+    "subjectPlaceholder": "What is this regarding?",
+    "categoryLabel": "Category",
+    "priorityLabel": "Priority",
+    "descriptionLabel": "Description",
+    "descriptionPlaceholder": "How can we help you?",
+    "submitButton": "Send Message",
+    "submitting": "Sending...",
+    "successTitle": "Message Received",
+    "successMessage": "We have received your inquiry and will respond within 24 hours.",
+    "errorTitle": "Submission Failed",
+    "errorMessage": "A temporary shadow has crossed our path. Please try again later.",
+    "title": "Submit a Support Ticket"
+  },
+  "contact": "Seek Guidance",
+  "faq": "Common Inquiries",
+  "ticket_status": "Status of the Pact",
+  "new_ticket": "Initiate New Inquiry",
+  "my_tickets": "My Inquiries",
+  "categories": {
+    "payment": "Billing & Payment",
+    "account": "Account Access",
+    "technical": "Technical Issue",
+    "feature_request": "Feature Request",
+    "general": "General Inquiry"
+  },
+  "priority": {
+    "low": "Low",
+    "normal": "Normal",
+    "high": "High",
+    "urgent": "Urgent"
+  }
+}

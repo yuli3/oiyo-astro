@@ -1,0 +1,51 @@
+{
+  "ctaStart": "Start Analysis",
+  "ctaLibrary": "Explore Library",
+  "scrollLabel": "Scroll Down",
+  "oracleText": "Welcome to the Oracle",
+  "oracleTitle": "Daily Insight",
+  "cta": {
+    "primary": "Get Started",
+    "secondary": "Learn More"
+  },
+  "features": {
+    "accurate": "Accurate",
+    "comprehensive": "Comprehensive",
+    "personalized": "Personalized"
+  },
+  "subtitle": "A definitive guide to your unique strengths.",
+  "title": "Design Your Ideal Life",
+  "description": "Welcome to the Oiyo Sanctuary, where ancient wisdom meets modern harmony.",
+  "titlePrefix": "Your",
+  "titleSuffix": "Ideal Life",
+  "keywords": "Saju, Tarot, Resonance, Ontology, Soul Map",
+  "errorFallbackTitle": "The Void Deepens",
+  "errorFallbackDescription": "The threads of the cosmos have momentarily tangled. Please allow us a moment to restore harmony.",
+  "phase": "Protocol: 0.1.0",
+  "enter": "Enter Sanctuary",
+  "explore": "Explore Map",
+  "status": "Status",
+  "active": "Active",
+  "orbitalVelocity": "Orbital Velocity",
+  "km": "km",
+  "lunarPhase": "Lunar Phase",
+  "waxing": "Waxing",
+  "ontology": {
+    "title": "Ontology",
+    "desc": "Discover your soul's blueprint."
+  },
+  "resonance": {
+    "title": "Resonance",
+    "desc": "Measure harmony between souls."
+  },
+  "daily": {
+    "title": "Daily Oracle",
+    "desc": "The wisdom you need today."
+  },
+  "discovery": {
+    "badge": "Discovery",
+    "title": "Sanctuary Map",
+    "description": "Begin your journey through the forest of wisdom.",
+    "takeTest": "Take the Test"
+  }
+}

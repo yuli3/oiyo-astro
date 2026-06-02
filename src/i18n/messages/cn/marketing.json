@@ -1,0 +1,157 @@
+{
+  "about": {
+    "title": "关于我们 | OIYO",
+    "hero": {
+      "subtitle": "Unlock the full potential of your self-discovery journey with zero hidden costs.",
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "mission": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "values": {
+      "title": "Pricing",
+      "free": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "privacy": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "science": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "engaging": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "story": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "meta": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey.",
+      "keywords": "pricing, subscription, plans, personality test, premium insights, saju"
+    },
+    "history": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    }
+  },
+  "home": {
+    "title": "每日神谕",
+    "description": "航行于真知之古林。此间经纬，皆通向真我之深层启示。",
+    "keywords": "四柱, 塔罗, 共鸣, 存在论, 灵魂图谱",
+    "errorFallbackTitle": "虚空正深不可测",
+    "errorFallbackDescription": "寰宇之丝弦偶有纠缠。请静候片刻，待万象回归和谐。",
+    "discovery": {
+      "badge": "求索",
+      "title": "每日神谕",
+      "description": "航行于真知之古林。此间经纬，皆通向真我之深层启示。"
+    },
+    "phase": "Phase 82: 神圣之证",
+    "titlePrefix": "呼吸之链",
+    "titleSuffix": "圣殿",
+    "enter": "步入圣殿",
+    "explore": "揭示真理之法",
+    "ontology": {
+      "title": "每日神谕",
+      "desc": "传自虚空之音，专为您的时空轨迹所采撷。"
+    },
+    "resonance": {
+      "title": "每日神谕",
+      "desc": "传自虚空之音，专为您的时空轨迹所采撷。"
+    },
+    "daily": {
+      "title": "每日神谕",
+      "desc": "传自虚空之音，专为您的时空轨迹所采撷。"
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey.",
+      "keywords": "定价、订阅、计划、性格测试、高级见解、saju"
+    },
+    "hero": {
+      "title": "Pricing",
+      "subtitle": "以零隐藏成本释放自我发现之旅的全部潜力。"
+    },
+    "billing": {
+      "monthly": "每月",
+      "yearly": "每年",
+      "month": "莫"
+    },
+    "plans": {
+      "free": "自由的",
+      "getStarted": "免费开始使用",
+      "popular": "最受欢迎",
+      "subscribe": "开始职业之旅",
+      "cancelAnytime": "随时取消"
+    },
+    "planDetails": {
+      "free": {
+        "features": {
+          "unlimitedTests": "无限制的基本性格和灵魂测试",
+          "resultStorage": "最多存储 3 个近期见解",
+          "basicSharing": "经典成果分享",
+          "communitySupport": "社区访问"
+        },
+        "name": "Pro",
+        "description": "Choose the path that best suits your journey."
+      },
+      "premium": {
+        "features": {
+          "allFreeFeatures": "基本计划中的一切",
+          "aiAnalysis": "深度人工智能驱动的灵魂分析和指导",
+          "pdfReports": "您的发现的详细 PDF 报告",
+          "advancedCompatibility": "高级关系和谐工具",
+          "personalizedInsights": "每周量身定制的宇宙见解",
+          "prioritySupport": "优先庇护所支持",
+          "customExport": "完整的数据可移植性"
+        },
+        "name": "专业版",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "info": {
+      "allPlansInclude": "每个 Pro 计划都包括：",
+      "securePayment": "担保交易",
+      "instantAccess": "即时激活",
+      "customerSupport": "专门的支持"
+    },
+    "faq": {
+      "title": "Pricing",
+      "question1": "我可以随时取消订阅吗？",
+      "answer1": "绝对地。 您可以随时通过设置暂停或取消您的旅程。 没有提出任何问题。",
+      "question2": "有免费试用吗？",
+      "answer2": "虽然我们没有定时试用，但我们的基本计划提供了丰富的功能供您无限期地探索。",
+      "question3": "我的付款安全吗？",
+      "answer3": "是的。 我们利用行业标准加密来确保您的财务庇护所保持私密和安全。"
+    },
+    "trust": {
+      "secure": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "instant": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "satisfaction": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "title": "定价",
+    "description": "选择最适合您旅程的路径。",
+    "free": "自由的",
+    "pro": "专业版",
+    "enterprise": "企业"
+  }
+}

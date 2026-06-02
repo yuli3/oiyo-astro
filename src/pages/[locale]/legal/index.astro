@@ -1,0 +1,39 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, getTranslations, localePath } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const t = await getTranslations(locale);
+---
+
+<Layout title="Legal" locale={locale}>
+  <section class="bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
+    <div class="max-w-2xl mx-auto animate-fadeInUp">
+      <h1 class="text-4xl font-serif font-black text-green-950 mb-3">Legal</h1>
+    </div>
+  </section>
+
+  <section class="max-w-xl mx-auto px-4 py-10">
+    <div class="grid gap-4">
+      <a href={localePath(locale, '/legal/terms')}
+         class="bg-white rounded-2xl border border-green-50 p-6 hover:border-green-200 hover:-translate-y-0.5 transition-all group">
+        <h2 class="font-bold text-green-950 group-hover:text-green-700 transition-colors mb-1">
+          {t('legal.terms.title')}
+        </h2>
+        <p class="text-sm text-green-600">{t('legal.terms.description')}</p>
+      </a>
+      <a href={localePath(locale, '/legal/privacy')}
+         class="bg-white rounded-2xl border border-green-50 p-6 hover:border-green-200 hover:-translate-y-0.5 transition-all group">
+        <h2 class="font-bold text-green-950 group-hover:text-green-700 transition-colors mb-1">
+          {t('legal.privacy.title')}
+        </h2>
+        <p class="text-sm text-green-600">{t('legal.privacy.description')}</p>
+      </a>
+    </div>
+  </section>
+</Layout>

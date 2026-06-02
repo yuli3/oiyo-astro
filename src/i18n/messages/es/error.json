@@ -1,0 +1,7 @@
+{
+  "generate": "Generación fallida",
+  "purchase": "Compra fallida",
+  "tooLarge": "Archivo demasiado grande.",
+  "cameraAccess": "Acceso a la cámara denegado.",
+  "failed": "La operación falló."
+}

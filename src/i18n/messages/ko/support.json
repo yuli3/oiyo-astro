@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "신성한 지원 | Oiyo.net",
+    "description": "우리의 신성한 성소에서 인도를 구하고 해결책을 찾으세요."
+  },
+  "hero": {
+    "title": "신성한 지원",
+    "subtitle": "우리의 수호자들은 여러분의 영적 여정에서 어떤 어려움이 있더라도 여러분을 안내하기 위해 여기 있습니다."
+  },
+  "form": {
+    "subjectLabel": "주제",
+    "subjectPlaceholder": "이것은 무엇에 관한 것입니까?",
+    "categoryLabel": "범주",
+    "priorityLabel": "우선 사항",
+    "descriptionLabel": "설명",
+    "descriptionPlaceholder": "어떻게 도와드릴까요?",
+    "submitButton": "메시지 보내기",
+    "submitting": "배상...",
+    "successTitle": "메시지 수신됨",
+    "successMessage": "귀하의 문의가 접수되었으며 24시간 이내에 답변을 드리겠습니다.",
+    "errorTitle": "제출 실패",
+    "errorMessage": "일시적인 그림자가 우리 앞을 가로막았습니다. 나중에 다시 시도해 주세요.",
+    "title": "지원 티켓 제출"
+  },
+  "contact": "지침을 구하세요",
+  "faq": "일반적인 문의사항",
+  "ticket_status": "조약현황",
+  "new_ticket": "새로운 문의 시작",
+  "my_tickets": "나의 문의사항",
+  "categories": {
+    "payment": "청구 및 결제",
+    "account": "계정 액세스",
+    "technical": "기술적인 문제",
+    "feature_request": "기능 요청",
+    "general": "일반문의"
+  },
+  "priority": {
+    "low": "낮은",
+    "normal": "정상",
+    "high": "높은",
+    "urgent": "긴급한"
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "badge": "Badge",
+  "resultTitle": "Your Result",
+  "restart": "Start Over",
+  "title": "Title",
+  "intro": "Introduction",
+  "profile": "Profile",
+  "remedy": "Remedy",
+  "description": "Description",
+  "primaryAction": "Continue",
+  "secondaryAction": "Go Back",
+  "axis": "Axis",
+  "guardian": "Guardian",
+  "guardianDesc": "Your guardian spirit watches over your path.",
+  "level": "Level",
+  "antennaTitle": "Sensitivity Antenna",
+  "sensitivityTitle": "Sensitivity Profile",
+  "counselorNote": "Counselor's Note",
+  "counselorMsg": "Your inner guide has a message for you.",
+  "badgeText": "Badge",
+  "result": {
+    "sections": {
+      "dimensions_title": "Dimensional Analysis",
+      "imperial_decree": "Imperial Decree",
+      "strengths": "Strengths",
+      "weaknesses": "Challenges",
+      "retake_ceremony": "Retake Ceremony"
+    }
+  },
+  "adaptive": "Adaptive",
+  "maladaptive": "Maladaptive",
+  "primaryStyle": "Primary Style",
+  "scoreIntensity": "Score Intensity",
+  "labels": {
+    "mirror": "Mirror"
+  },
+  "subtitle": "Subtitle",
+  "hiddenSelf": {
+    "title": "Hidden Self",
+    "description": "The unseen layers of your inner world.",
+    "ctaOrigin": "Explore Your Origin",
+    "ctaIdentity": "Discover Your Identity"
+  },
+  "mode": "Mode",
+  "dimensionAnalysis": "Dimension Analysis",
+  "recommendedPaths": "Recommended Paths",
+  "oracleTitle": "Oracle Insight",
+  "paradoxLabel": "Paradox",
+  "balanced": "Balanced",
+  "nature": "Nature",
+  "nurture": "Nurture",
+  "start": "Begin",
+  "retake": "Reweave",
+  "scroll": {
+    "title": "Imperial Records",
+    "end": "End of Records",
+    "visualization": "Visualization"
+  },
+  "terms": {
+    "dayMaster": "Day Master"
+  },
+  "loading": {
+    "notFound": {
+      "title": "Cosmic Signal Lost",
+      "subtitle": "The path you seek has dissolved into the void.",
+      "description": "Perhaps the coordinates were flawed, or the page has shifted to another dimension.",
+      "goHome": "Return to Sanctuary",
+      "goBack": "Retrace Previous Steps",
+      "suggestionsTitle": "Navigation Suggestions",
+      "popularTestsTitle": "Active Portals",
+      "egentetoTest": "Primordial Origin",
+      "mbtiAlternative": "Social DNA (MBTI)",
+      "relationship": {
+        "communicationStyle": "Sacred Resonance"
+      }
+    },
+    "analyzing": "Analyzing your soul blueprint...",
+    "calculating": "Calculating cosmic alignments...",
+    "processing": "Processing your unique pattern...",
+    "generating": "Generating your insights...",
+    "almostDone": "Almost there...",
+    "personalityAnalysis": "Decoding your personality matrix...",
+    "responseAnalysis": "Reading your responses...",
+    "typeMatching": "Finding your resonance type...",
+    "preparingResults": "Preparing your results..."
+  },
+  "please_wait": "Please wait a moment",
+  "backButton": "Back",
+  "shareButton": "Share",
+  "dimensionsTitle": "Dimensions",
+  "analysis": {
+    "detailed": "Detailed Analysis"
+  },
+  "iching": {
+    "title": "I Ching Reading",
+    "revelation": "Cosmic Revelation"
+  },
+  "partialDataWarning": "Some information may be incomplete.",
+  "addMoreInfo": "Add more details",
+  "cta": {
+    "title": "Your Journey Awaits",
+    "subtitle": "Share your cosmic profile with others",
+    "share": "Share Results",
+    "download": "Download"
+  },
+  "rel": {
+    "selectPlaceholder": "Select Reference Point",
+    "child_adult": "Adult Soul (Child)",
+    "child_minor": "Minor Soul (Child)",
+    "spouse": "Dual Flame (Spouse)",
+    "parent": "Ancestral Soul (Parent)",
+    "other_relative": "Kindred Relative",
+    "other": "Other Connection"
+  },
+  "support": {
+    "hero": {
+      "title": "Sacred Support Sanctuary",
+      "subtitle": "Guided by ancient wisdom and swift responses."
+    },
+    "categories": {
+      "billing": "Wealth Flow",
+      "technical": "Etheric Alignment",
+      "account": "Identity Bond",
+      "general": "General Inquiries",
+      "feature_request": "Feature Request",
+      "payment": "Payment"
+    },
+    "form": {
+      "title": "Invoke Guidance",
+      "categoryLabel": "Domain of Guidance",
+      "descriptionLabel": "Details of the Rift",
+      "descriptionPlaceholder": "Describe your inquiry in detail...",
+      "priorityLabel": "Urgency of Resonance",
+      "subjectLabel": "Essence of Inquiry",
+      "subjectPlaceholder": "Brief summary of your question",
+      "submitButton": "Submit Signal",
+      "labels": {
+        "title": "Essence of Inquiry",
+        "category": "Domain of Guidance",
+        "description": "Details of the Rift",
+        "priority": "Urgency of Resonance",
+        "submit": "Submit Signal"
+      },
+      "categories": {
+        "billing": "Wealth Flow",
+        "technical": "Etheric Alignment",
+        "account": "Identity Bond",
+        "general": "General Inquiries",
+        "feature_request": "Feature Request",
+        "payment": "Payment"
+      },
+      "priorities": {
+        "low": "Gentle Breeze",
+        "medium": "Steady Current",
+        "high": "Immediate Convergence"
+      }
+    },
+    "priority": {
+      "low": "Low",
+      "normal": "Normal",
+      "high": "High",
+      "urgent": "Urgent"
+    },
+    "meta": {
+      "title": "Divine Guidance",
+      "description": "Seek counsel from the guardians of the sanctuary."
+    },
+    "myTickets": {
+      "title": "My Pilgrimage Tickets",
+      "newTicket": "Invoke New Counsel"
+    }
+  },
+  "alerts": {
+    "title": "System Alert"
+  },
+  "sections": {
+    "overview": "Overview",
+    "users": "User Statistics",
+    "performance": "System Heartbeat"
+  },
+  "recommendations": {
+    "title": "Recommended",
+    "error": "Failed to load.",
+    "empty": "No recommendations.",
+    "exploreAll": "Explore All",
+    "spotlightEyebrow": "Spotlight",
+    "trending": "Trending",
+    "new": "New",
+    "takeTest": "Take Test"
+  },
+  "progress": "undefined",
+  "retry": "Retry",
+  "celestial": {
+    "status": "Celestial Status",
+    "active": "Active Resonance",
+    "orbitalVelocity": "Orbital Velocity",
+    "km": "km/s",
+    "lunarPhase": "Lunar Phase",
+    "waxing": "Waxing Moon",
+    "oracle": "Imperial Oracle V2"
+  },
+  "viral": {
+    "comparisonTitle": "Our Personality Chemistry 💫",
+    "matchScore": "Chemistry Score",
+    "compareAt": "Compare at oiyo.app"
+  },
+  "offline": {
+    "status": "Connection Faded",
+    "description": "You are currently outside the cosmic grid.",
+    "meta": {
+      "title": "Offline",
+      "description": "The link has been interrupted."
+    },
+    "content": {
+      "heading": "Connection with the Void has been suspended",
+      "subheading": "In the stillness of the disconnected Sanctuary, heed your inner voice.",
+      "description1": "The threads of the cosmos seem to have woven loosely.",
+      "description2": "Data flow will be restored as soon as harmony returns.",
+      "cta": "Do you wish to attempt a new resonance?",
+      "tipsTitle": "Wisdom to find peace",
+      "tips": {
+        "tip1": "Check the physical link (your network connection).",
+        "tip2": "Wait a moment for the celestial winds to calm.",
+        "tip3": "What if Airplane Mode folded and unfolded its wings for a moment?"
+      }
+    }
+  },
+  "readings": "Readings",
+  "productivity": {
+    "decisionMaking": "Decision Making"
+  },
+  "error": {
+    "title": "A momentary rift has appeared",
+    "description": "Wait a beat and try again.",
+    "retry": "Try Again"
+  },
+  "about": "About Sanctuary",
+  "success": "Success Manifested",
+  "yes": "Yes",
+  "no": "No",
+  "ok": "Confirm",
+  "cancel": "Cancel",
+  "save": "Save",
+  "delete": "Delete",
+  "edit": "Weave / Edit",
+  "add": "Add",
+  "remove": "Release",
+  "next": "Next",
+  "previous": "Previous",
+  "back": "Back",
+  "home": "Sanctuary Plaza",
+  "placeholder": {
+    "enterName": "Enter your name",
+    "enterAge": "Soul age (years)"
+  },
+  "noData": {
+    "noStrengths": "Specific strengths not yet discovered",
+    "noChallenges": "No significant challenges have emerged yet",
+    "noRecommendations": "No advice revealed at the moment",
+    "noFamilyMembers": "Family bonds not recorded",
+    "noHouseholdTips": "Household wisdom yet to bloom"
+  },
+  "copiedToClipboard": "Etched in memory (clipboard)",
+  "breadcrumbLabel": "Guiding Path",
+  "standardError": {
+    "badgeLabel": "Rift",
+    "title": "An unexpected tremor in the ether",
+    "description": "We found a temporal distortion while processing your path.",
+    "primaryAction": "Invoke Again",
+    "secondaryAction": "Return to Sanctuary Center",
+    "supportPrompt": "Seek counsel from the Sages?",
+    "referenceIdLabel": "Resonance Code",
+    "contactSupport": "Send signal to Guardian"
+  },
+  "calendar": {
+    "lunar": "Lunar Calendar",
+    "solar": "Solar Calendar"
+  },
+  "ui": {
+    "goHome": "Return to Sanctuary Plaza",
+    "tryNow": "Try Now",
+    "languages": {
+      "ko": "Awaiting deep synthesis...",
+      "en": "English",
+      "ja": "Japanese",
+      "cn": "Simplified Chinese",
+      "es": "Spanish",
+      "fr": "French"
+    },
+    "scrollToTop": "Scroll to top"
+  },
+  "zodiac": {
+    "aries": "Aries",
+    "taurus": "Taurus",
+    "gemini": "Gemini",
+    "cancer": "Cancer",
+    "leo": "Leo",
+    "virgo": "Virgo",
+    "libra": "Libra",
+    "scorpio": "Scorpio",
+    "sagittarius": "Sagittarius",
+    "capricorn": "Capricorn",
+    "aquarius": "Aquarius",
+    "pisces": "Pisces"
+  },
+  "mbti": {
+    "ISTJ": "ISTJ (Logistician)",
+    "ISFJ": "ISFJ (Defender)",
+    "INFJ": "INFJ (Advocate)",
+    "INTJ": "INTJ (Architect)",
+    "ISTP": "ISTP (Virtuoso)",
+    "ISFP": "ISFP (Adventurer)",
+    "INFP": "INFP (Mediator)",
+    "INTP": "INTP (Logician)",
+    "ESTP": "ESTP (Entrepreneur)",
+    "ESFP": "ESFP (Entertainer)",
+    "ENFP": "ENFP (Campaigner)",
+    "ENTP": "ENTP (Debater)",
+    "ESTJ": "ESTJ (Executive)",
+    "ESFJ": "ESFJ (Consul)",
+    "ENFJ": "ENFJ (Protagonist)",
+    "ENTJ": "ENTJ (Commander)"
+  },
+  "bloodType": {
+    "A": "Type A",
+    "B": "Type B",
+    "O": "Type O",
+    "AB": "Type AB"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "readings": "Readings",
+    "resonance": "Resonance",
+    "profile": "Profile"
+  },
+  "landing": {
+    "phase": "Phase 51: The Emerald Gate",
+    "titlePrefix": "Sanctuary of",
+    "titleSuffix": "Living Data",
+    "description": "Where ancient wisdom meets algorithmic precision. Decode your ontology, resonate with kindred souls, and synthesize your destiny.",
+    "enter": "Enter Sanctuary",
+    "explore": "Explore Methodology",
+    "ontology": {
+      "title": "Ontology",
+      "desc": "Decode your soul blueprint."
+    },
+    "resonance": {
+      "title": "Resonance",
+      "desc": "Find your vibrational match."
+    },
+    "daily": {
+      "title": "The Daily Oracle",
+      "desc": "A message from the void, curated for you."
+    },
+    "synergy": {
+      "title": "The Great Synchronism",
+      "version": "Synergy V2"
+    },
+    "community": {
+      "connected": "Souls connected today",
+      "title": "Join the collective consciousness."
+    }
+  },
+  "company": {
+    "marketing": {
+      "home": {
+        "title": "OIYO | The Library of Your Life",
+        "description": "Navigate the architecture of your destiny through East-West synthesis.",
+        "errorFallbackTitle": "Resonance Lost",
+        "errorFallbackDescription": "We encountered an instability in the void. Refreshing consciousness."
+      }
+    }
+  },
+  "hero": {
+    "title": "Oiyo",
+    "subtitle": "Your Cosmic Architecture"
+  }
+}

@@ -1,0 +1,378 @@
+{
+  "badge": "徽章",
+  "resultTitle": "你的结果",
+  "restart": "重新开始",
+  "title": "标题",
+  "intro": "简介",
+  "profile": "个人资料",
+  "remedy": "调整建议",
+  "description": "描述",
+  "primaryAction": "继续",
+  "secondaryAction": "返回",
+  "axis": "轴向",
+  "guardian": "守护者",
+  "guardianDesc": "您的守护灵正守望着您的道路。",
+  "level": "等级",
+  "antennaTitle": "敏感度天线",
+  "sensitivityTitle": "敏感度档案",
+  "counselorNote": "顾问笔记",
+  "counselorMsg": "您内心的引导者有话想对您说。",
+  "badgeText": "徽章",
+  "result": {
+    "sections": {
+      "dimensions_title": "维度分析",
+      "imperial_decree": "皇帝法令",
+      "strengths": "优势",
+      "weaknesses": "挑战",
+      "retake_ceremony": "重新测试"
+    }
+  },
+  "adaptive": "适应性",
+  "maladaptive": "适应不良",
+  "primaryStyle": "主要风格",
+  "scoreIntensity": "分数强度",
+  "labels": {
+    "mirror": "镜像"
+  },
+  "subtitle": "副标题",
+  "hiddenSelf": {
+    "title": "隐藏的自我",
+    "description": "揭开你内心世界的无意识层面。",
+    "ctaOrigin": "探索你的起源",
+    "ctaIdentity": "发现你的身份"
+  },
+  "mode": "模式",
+  "dimensionAnalysis": "维度分析",
+  "recommendedPaths": "推荐路径",
+  "oracleTitle": "神谕洞察",
+  "paradoxLabel": "悖论",
+  "balanced": "平衡",
+  "nature": "天性",
+  "nurture": "后天养育",
+  "start": "开始",
+  "retake": "重溯命运",
+  "scroll": {
+    "title": "帝国记录",
+    "end": "记录终点",
+    "visualization": "视觉化"
+  },
+  "terms": {
+    "dayMaster": "日主"
+  },
+  "loading": {
+    "notFound": {
+      "title": "失去宇宙信号",
+      "subtitle": "您寻找的路径已消失在虚空之中。",
+      "description": "坐标输入错误，或者页面可能已移至其他维度。",
+      "goHome": "返回圣殿",
+      "goBack": "回溯之前的路径",
+      "suggestionsTitle": "导航建议",
+      "popularTestsTitle": "活跃门户",
+      "egentetoTest": "根源起源",
+      "mbtiAlternative": "社会 DNA (MBTI)",
+      "relationship": {
+        "communicationStyle": "神圣共鸣"
+      }
+    },
+    "analyzing": "正在分析您的灵魂蓝图...",
+    "calculating": "正在计算宇宙排列...",
+    "processing": "正在处理您的独特模式...",
+    "generating": "正在生成您的洞察...",
+    "almostDone": "即将完成...",
+    "personalityAnalysis": "正在解码您的人格矩阵...",
+    "responseAnalysis": "正在解读您的回应...",
+    "typeMatching": "正在寻找您的共鸣类型...",
+    "preparingResults": "正在准备您的结果..."
+  },
+  "please_wait": "请稍等片刻",
+  "backButton": "返回",
+  "shareButton": "分享",
+  "dimensionsTitle": "维度",
+  "analysis": {
+    "detailed": "详细分析"
+  },
+  "iching": {
+    "title": "易经解读",
+    "revelation": "宇宙启示"
+  },
+  "partialDataWarning": "部分信息可能不完整。",
+  "addMoreInfo": "补充更多信息",
+  "cta": {
+    "title": "你的旅程在等待",
+    "subtitle": "与他人分享你的宇宙档案",
+    "share": "分享结果",
+    "download": "下载"
+  },
+  "rel": {
+    "selectPlaceholder": "选择参考点",
+    "child_adult": "成人灵魂（儿童）",
+    "child_minor": "小灵魂（儿童）",
+    "spouse": "双火焰（配偶）",
+    "parent": "祖先灵魂（父母）",
+    "other_relative": "近亲",
+    "other": "其他连接"
+  },
+  "alerts": {
+    "title": "帝国记录"
+  },
+  "sections": {
+    "overview": "概览",
+    "users": "用户统计",
+    "performance": "系统心跳"
+  },
+  "recommendations": {
+    "title": "推荐事项",
+    "error": "加载失败。",
+    "empty": "暂无推荐。",
+    "exploreAll": "探索全部",
+    "spotlightEyebrow": "聚光灯",
+    "trending": "趋势",
+    "new": "新增",
+    "takeTest": "进行测试"
+  },
+  "progress": "进度",
+  "retry": "重试",
+  "celestial": {
+    "status": "离线",
+    "active": "共鸣激活中",
+    "orbitalVelocity": "轨道速度",
+    "km": "公里/秒",
+    "lunarPhase": "月相",
+    "waxing": "上弦月",
+    "oracle": "帝国神谕 V2"
+  },
+  "viral": {
+    "comparisonTitle": "我们的性格契合度 💫",
+    "matchScore": "契合度得分",
+    "compareAt": "在 oiyo.net 与好友对比"
+  },
+  "offline": {
+    "status": "离线",
+    "description": "坐标输入错误，或者页面可能已移至其他维度。",
+    "meta": {
+      "title": "失去宇宙信号",
+      "description": "坐标输入错误，或者页面可能已移至其他维度。"
+    },
+    "content": {
+      "heading": "与虚空的连接暂时中断了",
+      "subheading": "在离线圣殿中，专注于内心的声音。",
+      "description1": "宇宙的丝线似乎暂时松动了。",
+      "description2": "一旦连接恢复，同步的数据将再次开始流动。",
+      "cta": "您想再次尝试连接吗？",
+      "tipsTitle": "寻求宁静的小建议",
+      "tips": {
+        "tip1": "请检查连接的物理纽带（网络）。",
+        "tip2": "静待宇宙之风再次平息。",
+        "tip3": "试着暂时关闭并重新打开飞行模式的翅膀如何？"
+      }
+    }
+  },
+  "readings": "阅卷",
+  "productivity": {
+    "decisionMaking": "决策事项"
+  },
+  "error": {
+    "title": "失去宇宙信号",
+    "description": "坐标输入错误，或者页面可能已移至其他维度。",
+    "retry": "重试"
+  },
+  "about": "圣殿介绍",
+  "success": "成功",
+  "yes": "是",
+  "no": "否",
+  "ok": "确认",
+  "cancel": "取消",
+  "save": "保存",
+  "delete": "删除",
+  "edit": "编辑",
+  "add": "增加",
+  "remove": "移除",
+  "next": "下一步",
+  "previous": "上一步",
+  "back": "返回",
+  "home": "首页",
+  "placeholder": {
+    "enterName": "请输入姓名",
+    "enterAge": "灵魂年龄（岁）"
+  },
+  "noData": {
+    "noStrengths": "尚未确认特定优势",
+    "noChallenges": "尚未确认重要挑战",
+    "noRecommendations": "暂无建议",
+    "noFamilyMembers": "未添加家庭成员",
+    "noHouseholdTips": "暂无生活窍门"
+  },
+  "copiedToClipboard": "已复制到剪贴板！",
+  "breadcrumbLabel": "路径",
+  "standardError": {
+    "badgeLabel": "罅隙",
+    "title": "失去宇宙信号",
+    "description": "坐标输入错误，或者页面可能已移至其他维度。",
+    "primaryAction": "重筑命运",
+    "secondaryAction": "返回圣殿中庭（首页）",
+    "supportPrompt": "需要先哲的指导吗？",
+    "referenceIdLabel": "共鸣参考码",
+    "contactSupport": "向守护者发送信号"
+  },
+  "ui": {
+    "goHome": "返回圣殿",
+    "languages": {
+      "ko": "韩语",
+      "en": "英语",
+      "ja": "日本語",
+      "cn": "简体中文",
+      "es": "Español",
+      "fr": "Français"
+    },
+    "scrollToTop": "回到顶部",
+    "tryNow": "立即尝试"
+  },
+  "zodiac": {
+    "aries": "白羊座",
+    "taurus": "金牛座",
+    "gemini": "双子座",
+    "cancer": "巨蟹座",
+    "leo": "狮子座",
+    "virgo": "处女座",
+    "libra": "天秤座",
+    "scorpio": "天蝎座",
+    "sagittarius": "射手座",
+    "capricorn": "摩羯座",
+    "aquarius": "水瓶座",
+    "pisces": "双鱼座"
+  },
+  "mbti": {
+    "ISTJ": "ISTJ (物流师)",
+    "ISFJ": "ISFJ (守卫者)",
+    "INFJ": "INFJ (提倡者)",
+    "INTJ": "INTJ (建筑师)",
+    "ISTP": "ISTP (鉴赏家)",
+    "ISFP": "ISFP (探险家)",
+    "INFP": "INFP (调停者)",
+    "INTP": "INTP (逻辑学家)",
+    "ESTP": "ESTP (企业家)",
+    "ESFP": "ESFP (表演者)",
+    "ENFP": "ENFP (竞选者)",
+    "ENTP": "ENTP (辩论家)",
+    "ESTJ": "ESTJ (执行官)",
+    "ESFJ": "ESFJ (执政官)",
+    "ENFJ": "ENFJ (主人公)",
+    "ENTJ": "ENTJ (指挥官)"
+  },
+  "bloodType": {
+    "A": "A型",
+    "B": "B型",
+    "O": "O型",
+    "AB": "AB型"
+  },
+  "nav": {
+    "dashboard": "仪表盘",
+    "readings": "阅卷",
+    "resonance": "共鸣",
+    "profile": "此身"
+  },
+  "landing": {
+    "phase": "阶段 51: 翡翠之门",
+    "titlePrefix": "憩所：",
+    "titleSuffix": "呼吸之链",
+    "description": "古老智慧与算法精准的交汇点。解码您的本体，与志同道合的灵魂共鸣，并合成您的命运。",
+    "enter": "步入圣殿",
+    "explore": "参悟方法",
+    "ontology": {
+      "title": "本体",
+      "desc": "解码您的灵魂蓝图。"
+    },
+    "resonance": {
+      "title": "共鸣",
+      "desc": "寻找您的频率契合点。"
+    },
+    "daily": {
+      "title": "每日神谕",
+      "desc": "采撷自虚空，专属于您的讯息。"
+    },
+    "synergy": {
+      "title": "大协同",
+      "version": "协同 V2"
+    },
+    "community": {
+      "connected": "今日同修之士",
+      "title": "加入集体意识。"
+    }
+  },
+  "support": {
+    "hero": {
+      "title": "神圣支持圣所",
+      "subtitle": "受古代智慧和快速响应的指导。"
+    },
+    "categories": {
+      "billing": "付款",
+      "technical": "技术支持",
+      "account": "账户",
+      "general": "一般咨询",
+      "feature_request": "功能请求",
+      "payment": "付款"
+    },
+    "form": {
+      "title": "寻求指导",
+      "categoryLabel": "指导领域",
+      "descriptionLabel": "详细信息",
+      "descriptionPlaceholder": "请详细描述您的问题...",
+      "priorityLabel": "紧急程度",
+      "subjectLabel": "主题",
+      "subjectPlaceholder": "简要总结",
+      "submitButton": "提交",
+      "labels": {
+        "title": "询问主题",
+        "category": "指导领域",
+        "description": "详细信息",
+        "priority": "紧急程度",
+        "submit": "提交"
+      },
+      "categories": {
+        "billing": "付款",
+        "technical": "技术支持",
+        "account": "账户",
+        "general": "一般咨询",
+        "feature_request": "功能请求",
+        "payment": "付款"
+      },
+      "priorities": {
+        "low": "低",
+        "medium": "中",
+        "high": "高"
+      }
+    },
+    "priority": {
+      "low": "低",
+      "normal": "普通",
+      "high": "高",
+      "urgent": "紧急"
+    },
+    "meta": {
+      "title": "神圣指引",
+      "description": "向圣殿守护者寻求指引。"
+    },
+    "myTickets": {
+      "title": "我的朝圣票据",
+      "newTicket": "新的咨询"
+    }
+  },
+  "company": {
+    "marketing": {
+      "home": {
+        "title": "OIYO | 您人生的图书馆",
+        "description": "通过东西方的融合，航行在您命运的架构中。",
+        "errorFallbackTitle": "失去共鸣",
+        "errorFallbackDescription": "我们在虚空中遇到了不稳定性。正在刷新意识。"
+      }
+    }
+  },
+  "hero": {
+    "title": "奥伊代",
+    "subtitle": "您的宇宙架构"
+  },
+  "calendar": {
+    "lunar": "农历",
+    "solar": "阳历"
+  }
+}

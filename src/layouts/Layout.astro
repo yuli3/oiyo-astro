@@ -1,0 +1,54 @@
+---
+import '../styles/global.css';
+import type { Locale } from '../i18n';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  locale: Locale;
+  ogImage?: string;
+}
+
+const { title, description = 'OIYO — 당신의 운명을 탐험하세요', locale, ogImage } = Astro.props;
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const isCjk = ['ko', 'ja', 'cn'].includes(locale);
+---
+
+<!doctype html>
+<html lang={locale} class={isCjk ? 'text-cjk' : ''}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- OG -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:type" content="website" />
+    {ogImage && <meta property="og:image" content={ogImage} />}
+
+    <!-- hreflang for all locales -->
+    <link rel="alternate" hreflang="en" href={new URL(`/en${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`, Astro.site)} />
+    <link rel="alternate" hreflang="ko" href={new URL(`/ko${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`, Astro.site)} />
+    <link rel="alternate" hreflang="ja" href={new URL(`/ja${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`, Astro.site)} />
+    <link rel="alternate" hreflang="zh" href={new URL(`/cn${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`, Astro.site)} />
+    <link rel="alternate" hreflang="fr" href={new URL(`/fr${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`, Astro.site)} />
+    <link rel="alternate" hreflang="es" href={new URL(`/es${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`, Astro.site)} />
+    <link rel="alternate" hreflang="x-default" href={new URL(`/ko${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`, Astro.site)} />
+
+    <title>{title} | OIYO</title>
+  </head>
+  <body>
+    <Header locale={locale} />
+    <main>
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>

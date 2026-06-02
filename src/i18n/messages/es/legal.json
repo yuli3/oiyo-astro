@@ -1,0 +1,68 @@
+{
+  "terms": {
+    "sections": {
+      "overview": {
+        "content": "Estos términos rigen su uso del Santuario OIYO. Al ingresar al Vacío, aceptas estos convenios."
+      }
+    },
+    "test": {
+      "progress": "Progreso",
+      "next": "Próxima",
+      "previous": "Previa",
+      "submit": "Aceptar y continuar",
+      "loading": "Tratamiento...",
+      "selectOption": "Por favor seleccione",
+      "insightBullets": ["Pactos clave"]
+    },
+    "result": {
+      "title": "Pacto sellado",
+      "description": "Has aceptado los términos."
+    },
+    "meta": {
+      "title": "Términos de servicio",
+      "description": "Revise los Términos de servicio de Oiyo.",
+      "keywords": "términos, política"
+    },
+    "title": "Términos de servicio",
+    "description": "Términos y condiciones de uso del Santuario.",
+    "keywords": "términos, condiciones, política, servicio",
+    "lastUpdated": "1 de enero de 2026"
+  },
+  "privacy": {
+    "sections": {
+      "overview": {
+        "content": "OIYO respeta su privacidad. Cumplimos con las leyes universales de protección de datos para salvaguardar su modelo ontológico."
+      }
+    },
+    "test": {
+      "progress": "Progreso",
+      "next": "Próxima",
+      "previous": "Previa",
+      "submit": "Confirmar",
+      "loading": "Cargando",
+      "selectOption": "Por favor seleccione",
+      "insightBullets": ["Núcleo de privacidad"]
+    },
+    "result": {
+      "title": "Admitida",
+      "description": "Política de privacidad revisada."
+    },
+    "meta": {
+      "title": "política de privacidad",
+      "description": "Revise la Política de Privacidad de Oiyo.",
+      "keywords": "privacidad, seguridad"
+    },
+    "point1": "Los datos personales como el nombre y el correo electrónico están cifrados.",
+    "point2": "Los resultados se utilizan de forma anónima para la resonancia colectiva.",
+    "point3": "Podrá solicitar la supresión de datos en cualquier momento.",
+    "title": "política de privacidad",
+    "description": "Tratamos los datos de su alma con reverencia.",
+    "keywords": "privacidad, seguridad, protección de datos",
+    "lastUpdated": "1 de enero de 2026"
+  },
+  "cookieTitle": "Sacred Covenant",
+  "cookieTextEu": "To preserve the sanctity of your digital soul, we request permission to use cookies for resonance tracking. Your data remains ancient and protected.",
+  "cookieTextDefault": "This sanctuary uses cookies to harmonize your experience with the cosmic web.",
+  "cookieDeny": "Deny",
+  "cookieAccept": "Accept Covenant"
+}

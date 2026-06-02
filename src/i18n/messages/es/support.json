@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "Apoyo Sagrado | Oiyo.net",
+    "description": "Busque orientación y encuentre soluciones en nuestro santuario sagrado."
+  },
+  "hero": {
+    "title": "Apoyo Sagrado",
+    "subtitle": "Nuestros guardianes están aquí para guiarlo a través de cualquier desafío en su viaje espiritual."
+  },
+  "form": {
+    "subjectLabel": "Sujeta",
+    "subjectPlaceholder": "¿A qué se refiere esto?",
+    "categoryLabel": "Categoría",
+    "priorityLabel": "Prioridad",
+    "descriptionLabel": "Descripción",
+    "descriptionPlaceholder": "¿Cómo podemos ayudarte?",
+    "submitButton": "Enviar mensaje",
+    "submitting": "Envío...",
+    "successTitle": "Mensaje recibido",
+    "successMessage": "Hemos recibido su consulta y le responderemos dentro de las 24 horas.",
+    "errorTitle": "Envío fallido",
+    "errorMessage": "Una sombra temporal se ha cruzado en nuestro camino. Inténtelo de nuevo más tarde.",
+    "title": "Enviar un ticket de soporte"
+  },
+  "contact": "buscar orientación",
+  "faq": "Consultas comunes",
+  "ticket_status": "Estado del Pacto",
+  "new_ticket": "Iniciar nueva consulta",
+  "my_tickets": "Mis consultas",
+  "categories": {
+    "payment": "Facturación y pago",
+    "account": "Acceso a la cuenta",
+    "technical": "Problema técnico",
+    "feature_request": "Solicitud de función",
+    "general": "Consulta general"
+  },
+  "priority": {
+    "low": "Bajo",
+    "normal": "Normal",
+    "high": "Alta",
+    "urgent": "Urgente"
+  }
+}

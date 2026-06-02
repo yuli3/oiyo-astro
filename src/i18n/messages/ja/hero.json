@@ -1,0 +1,51 @@
+{
+  "ctaStart": "分析を始める",
+  "ctaLibrary": "ライブラリを探索",
+  "scrollLabel": "スクロール",
+  "oracleText": "オラクルへようこそ",
+  "oracleTitle": "毎日の洞察",
+  "cta": {
+    "primary": "始める",
+    "secondary": "もっと詳しく"
+  },
+  "features": {
+    "accurate": "高精度",
+    "comprehensive": "包括的",
+    "personalized": "パーソナライズ"
+  },
+  "subtitle": "あなた独自の強みを知るための決定的なガイド。",
+  "title": "聖域の地図",
+  "description": "知恵の森を歩く旅を始めましょう。",
+  "titlePrefix": "あなたの",
+  "titleSuffix": "理想の人生を設計する",
+  "keywords": "四柱推命, タロット, 共鳴, オントロジー, 魂の地図",
+  "errorFallbackTitle": "虚空が深まっています",
+  "errorFallbackDescription": "宇宙の糸が一時的に絡まっています。調和を取り戻すまで、少々お待ちください。",
+  "phase": "プロトコル: 0.1.0",
+  "enter": "聖域に入る",
+  "explore": "地図を探索",
+  "status": "ステータス",
+  "active": "アクティブ",
+  "orbitalVelocity": "軌道速度",
+  "km": "km",
+  "lunarPhase": "月齢",
+  "waxing": "上弦",
+  "ontology": {
+    "title": "聖域の地図",
+    "desc": "今日、あなたに必要な知恵です。"
+  },
+  "resonance": {
+    "title": "聖域の地図",
+    "desc": "今日、あなたに必要な知恵です。"
+  },
+  "daily": {
+    "title": "聖域の地図",
+    "desc": "今日、あなたに必要な知恵です。"
+  },
+  "discovery": {
+    "badge": "発見",
+    "title": "聖域の地図",
+    "description": "知恵の森を歩く旅を始めましょう。",
+    "takeTest": "テストを受けてください"
+  }
+}

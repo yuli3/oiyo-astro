@@ -1,0 +1,780 @@
+{
+  "biography": {
+    "stone": {
+      "label": "탄생석",
+      "garnet": {
+        "name": "석류석",
+        "meaning": "진실, 우정, 충성"
+      },
+      "amethyst": {
+        "name": "자수정",
+        "meaning": "평화, 성실, 건강"
+      },
+      "aquamarine": {
+        "name": "남옥",
+        "meaning": "지능, 평온, 용기"
+      },
+      "diamond": {
+        "name": "다이아몬드",
+        "meaning": "영원한 사랑, 불멸"
+      },
+      "emerald": {
+        "name": "에메랄드",
+        "meaning": "행복, 행운, 친절"
+      },
+      "pearl": {
+        "name": "진주",
+        "meaning": "건강, 장수, 부"
+      },
+      "ruby": {
+        "name": "루비",
+        "meaning": "열정, 용기, 자유"
+      },
+      "peridot": {
+        "name": "감람석",
+        "meaning": "결혼의 행복, 화합"
+      },
+      "sapphire": {
+        "name": "사파이어",
+        "meaning": "진실, 불변성, 지혜"
+      },
+      "opal": {
+        "name": "오팔",
+        "meaning": "희망, 순수, 순수"
+      },
+      "topaz": {
+        "name": "황옥",
+        "meaning": "희망, 순수, 우정"
+      },
+      "turquoise": {
+        "name": "터키 옥",
+        "meaning": "성공, 승리, 지혜"
+      }
+    },
+    "flower": {
+      "label": "탄생화",
+      "carnation": {
+        "name": "카네이션",
+        "meaning": "자부심, 아름다움"
+      },
+      "violet": {
+        "name": "제비꽃",
+        "meaning": "겸손, 충실함"
+      },
+      "daffodil": {
+        "name": "수선화",
+        "meaning": "새로운 시작"
+      },
+      "daisy": {
+        "name": "데이지",
+        "meaning": "순수함, 순수함"
+      },
+      "lily_of_valley": {
+        "name": "은방울꽃",
+        "meaning": "겸손, 행복의 회복"
+      },
+      "rose": {
+        "name": "장미",
+        "meaning": "사랑, 열정"
+      },
+      "larkspur": {
+        "name": "락스퍼",
+        "meaning": "가벼움, 경쾌함"
+      },
+      "gladiolus": {
+        "name": "글라디올러스",
+        "meaning": "힘, 성실"
+      },
+      "aster": {
+        "name": "과",
+        "meaning": "지혜, 믿음"
+      },
+      "marigold": {
+        "name": "금잔화",
+        "meaning": "슬픔, 절망"
+      },
+      "chrysanthemum": {
+        "name": "국화",
+        "meaning": "충실도, 진실"
+      },
+      "poinsettia": {
+        "name": "포인세티아",
+        "meaning": "축하, 성공"
+      }
+    }
+  },
+  "lifestyle": {
+    "hobby": {
+      "label": "추천 활동",
+      "HOBBY_GARDENING": {
+        "name": "원예",
+        "desc": "내면의 평화를 찾기 위해 자연과 연결"
+      },
+      "HOBBY_MEDITATION": {
+        "name": "심사 숙고",
+        "desc": "마음을 비우고 자신에게 집중하세요"
+      },
+      "HOBBY_HIKING": {
+        "name": "하이킹",
+        "desc": "회복탄력성을 키우기 위해 산에 오르다"
+      },
+      "HOBBY_COOKING": {
+        "name": "요리",
+        "desc": "조화를 통해 새로운 맛을 창조하다"
+      },
+      "HOBBY_CODING": {
+        "name": "코딩",
+        "desc": "논리를 사용하여 시스템을 설계하는 기술"
+      },
+      "HOBBY_PAINTING": {
+        "name": "그림",
+        "desc": "색상과 붓놀림을 통해 자신을 표현하세요."
+      },
+      "HOBBY_WRITING": {
+        "name": "문예창작",
+        "desc": "이야기를 만들고 생각을 흐르게 하세요"
+      },
+      "HOBBY_PHOTOGRAPHY": {
+        "name": "사진술",
+        "desc": "순간을 포착하고 스토리를 문서화하세요"
+      },
+      "HOBBY_POTTERY": {
+        "name": "도기류",
+        "desc": "점토를 기능적 예술로 형상화하다"
+      },
+      "HOBBY_DANCING": {
+        "name": "댄스",
+        "desc": "움직임을 통해 감정을 표현하다"
+      },
+      "HOBBY_MUSIC": {
+        "name": "음악",
+        "desc": "소리를 통해 조화를 이루고 관점을 표현합니다."
+      },
+      "HOBBY_CRAFTS": {
+        "name": "공예",
+        "desc": "창의력으로 손수 만든 보물 만들기"
+      },
+      "HOBBY_THEATER": {
+        "name": "극장",
+        "desc": "공연을 통해 이야기에 생기를 불어넣다"
+      }
+    }
+  },
+  "mythos": {
+    "celtic": {
+      "title": "수목 지표(켈트족)"
+    },
+    "egyptian": {
+      "title": "가디언 가이드(이집트)"
+    },
+    "stone": {
+      "title": "지표 탄생석"
+    },
+    "flower": {
+      "title": "지시 꽃"
+    },
+    "recalculate": "재분석"
+  },
+  "astro": {
+    "sect": {
+      "day": "일별 상황",
+      "night": "야간 상황"
+    }
+  },
+  "resonance": {
+    "professionalChart": "종합 차트: {bureau}. {lifePalace}의 핵심 지표입니다. {starCount}개의 핵심 요소가 포함되어 있습니다.",
+    "note": "시스템이 귀하의 개인 데이터 아카이브를 분석하고 있습니다.",
+    "nakshatra": "루나 맨션"
+  },
+  "dashboard": {
+    "guest": "사용자",
+    "labels": {
+      "undiscovered": "분석되지 않음",
+      "nameVibration": "이름 특성",
+      "noblePerson": "파트너/가이드",
+      "moonSign": "달 표시기",
+      "pada": "~에",
+      "tithi": "티티",
+      "dominion": "주요 영향",
+      "observation": "관찰",
+      "sign": "조디악 로그인",
+      "animal": "조디악 동물",
+      "ogham": "오검 지표",
+      "meaning": "핵심 의미",
+      "patron": "가이드",
+      "bureau": "카테고리(국)",
+      "branch": "지상의 가지",
+      "nakshatra": "루나 맨션",
+      "element": "요소 / 기질",
+      "stars": "핵심 요소",
+      "sephira": "세피라",
+      "deepInsight": "심층 보고서",
+      "readFullStory": "전체 분석 읽기",
+      "westernZodiac": "서부 황도대",
+      "easternZodiac": "동부 황도대",
+      "syncingData": "우주 데이터 동기화 중...",
+      "returnToHome": "성역으로 돌아가기",
+      "contactSupport": "오라클에 문의하세요",
+      "typeLabel": "유형 {type}",
+      "wingLabel": "w{wing}",
+      "alignment": "환경 정렬"
+    },
+    "beginJourney": "분석 시작",
+    "heroTitle": "기질 및 성향 데이터베이스",
+    "heroSubtitle": "글로벌 프레임워크와 심리학의 융합을 통해 분석적인 자아를 발견하세요",
+    "primalOrigin": "원시 소스",
+    "calibration": "데이터 교정",
+    "changeOrigin": "정보 편집",
+    "close": "닫다",
+    "recalculate": "재분석",
+    "rootsTitle": "기초 데이터",
+    "unveilRoots": "고유한 특성 데이터를 확인하세요.",
+    "destinyCoordinates": "경향 좌표",
+    "destinyCoordinatesSubtitle": "분석 그리드에서의 귀하의 위치",
+    "todayInsight": {
+      "title": "오늘의 심층 분석",
+      "soulOracle": "현재 가이드",
+      "innerResonance": "내부 흐름",
+      "manifestMore": "적극적인 활동 계획",
+      "synergyPulse": "데이터 시너지"
+    },
+    "sajuForm": {
+      "title": "기질 분석 데이터",
+      "description": "기본 기질 데이터를 입력하세요.",
+      "name": "이름",
+      "birthDate": "생년월일",
+      "birthTime": "출생 시간",
+      "timeHint": "(선택 과목)",
+      "gender": "분석 유형",
+      "female": "여성 / 음",
+      "male": "남성 / 양",
+      "initialize": "분석 결과 보기"
+    },
+    "cards": {
+      "foundation": {
+        "subtitle": "기본 기질",
+        "description": "핵심 분석 템플릿"
+      },
+      "elemental": {
+        "title": "원소의 흐름",
+        "subtitle": "내부 균형",
+        "description": "에너지 분배"
+      },
+      "celtic": {
+        "subtitle": "수목 지표",
+        "description": "자연적 특성"
+      },
+      "egyptian": {
+        "subtitle": "전통 가이드",
+        "description": "고대 분류"
+      },
+      "sacredKin": {
+        "subtitle": "시간 표시기",
+        "description": "순환 패턴"
+      },
+      "grandArchive": {
+        "subtitle": "상세기록",
+        "description": "통계자료"
+      },
+      "nakshatra": {
+        "subtitle": "달의 주기",
+        "description": "정서적 특성"
+      },
+      "hellenistic": {
+        "subtitle": "환경적 맥락",
+        "description": "생활 패턴 분석"
+      },
+      "onomancy": {
+        "subtitle": "보컬 특성",
+        "description": "이름 음성학의 영향"
+      },
+      "socialAlchemy": {
+        "subtitle": "연결 매트릭스",
+        "description": "사회적으로 상호 작용하는 방법"
+      },
+      "kabbalah": {
+        "subtitle": "구조 분석",
+        "description": "체계적인 정렬"
+      },
+      "destiny": {
+        "subtitle": "경향 궤적",
+        "description": "잠재적인 성장 경로"
+      },
+      "hexagram": {
+        "subtitle": "적응성",
+        "description": "전류 흐름 분석"
+      },
+      "grandSynthesis": {
+        "title": "통합분석",
+        "description": "데이터에 대한 포괄적인 보기"
+      },
+      "cognition": {
+        "subtitle": "정신적 과정",
+        "description": "정보처리 스타일"
+      },
+      "psyche": {
+        "subtitle": "심리적 깊이",
+        "description": "자아의 숨겨진 층"
+      },
+      "strategy": {
+        "subtitle": "액션 전략",
+        "description": "목표를 실현하는 방법"
+      },
+      "vocation": {
+        "subtitle": "전문적인 길",
+        "description": "사회공헌 분야"
+      },
+      "vitality": {
+        "title": "활동 에너지"
+      },
+      "resonance": {
+        "subtitle": "통합 지표",
+        "description": "귀하의 종합적인 분석 결과"
+      }
+    },
+    "sections": {
+      "testArchitecture": {
+        "title": "분석 알고리즘",
+        "description": "시스템의 논리."
+      },
+      "emotionalResonance": {
+        "title": "감정적 패턴",
+        "description": "당신의 마음의 주파수."
+      },
+      "grandArchives": {
+        "title": "통합 아카이브",
+        "description": "기록된 데이터의 총체입니다."
+      }
+    },
+    "systems": {
+      "ziwei": "쯔웨이 분석",
+      "vedic": "베다 분석",
+      "kabbalah": "구조 분석"
+    },
+    "day": "일별 상황",
+    "night": "야간 상황",
+    "socialCognition": "사회적 인지",
+    "mapGrowth": "성장 로드맵",
+    "resonanceVitalitySection": "활력 및 기질 분석",
+    "resonanceVitalitySubtitle": "고조파 패턴 정렬",
+    "resonanceTitle": "통합 특성",
+    "dialogs": {
+      "archiveEntry": "아카이브 데이터에 액세스",
+      "recordVerified": "분석 확인됨",
+      "enneagram": {
+        "quote": "도구는 목적을 위한 수단입니다."
+      },
+      "humanDesign": {
+        "description": "실용적인 라이프 스타일 지침을 해독하십시오."
+      },
+      "mbti": {
+        "description": "인지 처리 아키텍처."
+      },
+      "numerology": {
+        "description": "수치 데이터 분석."
+      },
+      "riasec": {
+        "description": "직업 관심 프로필."
+      },
+      "saju": {
+        "label": "상세한 기질 분석",
+        "description": "귀하의 요소 데이터 프로필.",
+        "polarity": "음양 균형",
+        "element": "주요 경향"
+      },
+      "elements": {
+        "title": "원소 분포"
+      },
+      "tuning": {
+        "title": "맞춤형 가이드",
+        "color": "권장 색상",
+        "number": "실용코드",
+        "direction": "환경방향",
+        "flower": "식물 데이터",
+        "gemstone": "미네랄 표시기",
+        "luckyStar": "항성 표시기",
+        "favorableDays": "최적의 창",
+        "synergy": "통합가이드"
+      }
+    },
+    "humanDesign": {
+      "title": "라이프스타일 전략",
+      "types": {
+        "Generator": "발전기",
+        "Manifesting Generator": "매니페스트 생성기",
+        "Manifestor": "매니페스터",
+        "Projector": "영사기",
+        "Reflector": "반사기"
+      }
+    },
+    "akashic": {
+      "title": "통합생활아카이브",
+      "description": "통합라이프아카이브는 시간이 지남에 따라 기록된 개인 데이터, 성향, 특성을 체계적으로 정리한 것입니다.",
+      "sections": {
+        "substance": "핵심 기질",
+        "alignment": "환경 정렬",
+        "vessel": "행동 능력",
+        "seal": "데이터 확인",
+        "sanctuary": "통합분석 연구실"
+      }
+    },
+    "action": {
+      "takeTest": "분석 시작",
+      "pricing": "서비스 계획 보기"
+    },
+    "dailyInsight": {
+      "title": "오늘의 심층 분석",
+      "soulOracle": "현재 가이드",
+      "innerResonance": "내부 흐름",
+      "manifestMore": "적극적인 활동 계획",
+      "synergyPulse": "데이터 시너지",
+      "cosmicEnergy": "현재 에너지 표시기",
+      "flowerOfDay": "오늘의 데이터",
+      "crystalOfPower": "활성 표시기",
+      "guidingStar": "참조 인자"
+    },
+    "moonPhase": {
+      "New": "초승달",
+      "Waxing Crescent": "왁싱 초승달",
+      "First Quarter": "1분기",
+      "Waxing Gibbous": "왁싱",
+      "Full": "만월",
+      "Waning Gibbous": "쇠퇴하는 기버스",
+      "Last Quarter": "지난 분기",
+      "Waning Crescent": "쇠퇴하는 초승달"
+    },
+    "modern": {
+      "economic": {
+        "title": "경제 학파 분석",
+        "subtitle": "경제 지향",
+        "factions": {
+          "ECON_CLASSICAL": {
+            "name": "고전경제학",
+            "description": "개인의 합리적인 선택과 시장 균형에 중점을 둡니다. 이 접근 방식은 개인의 책임과 균형 잡힌 시스템의 유기적 효율성을 중요하게 생각합니다."
+          },
+          "ECON_KEYNESIAN": {
+            "name": "케인지안 경제학",
+            "description": "총수요와 적극적인 개입을 강조합니다. 이러한 관점은 집단적 안정성과 시기적절하고 지원적인 조치의 지혜를 중요하게 생각합니다."
+          },
+          "ECON_MONETARIST": {
+            "name": "화폐주의",
+            "description": "화폐 공급과 장기적인 물가 안정성에 중점을 둡니다. 일관성, 명확한 규칙, 기본 시스템의 예측 가능성을 중요하게 생각합니다."
+          },
+          "ECON_BEHAVIORAL": {
+            "name": "행동경제학",
+            "description": "경제적 결정을 설명하기 위해 심리적 통찰력을 적용합니다. 인간의 이해, 공감, 일상적인 선택의 미묘한 현실을 중요하게 생각합니다."
+          },
+          "ECON_AUSTRIAN": {
+            "name": "오스트리아 학교",
+            "description": "기업가적 발견과 주관성을 강조합니다. 창의적 자유, 개인적인 통찰력, 개인 관점의 고유한 가치를 중요하게 생각합니다."
+          }
+        }
+      },
+      "political": {
+        "title": "정치적 성향 분석",
+        "subtitle": "정치적 지형",
+        "factions": {
+          "POL_CONSERVATISM": {
+            "name": "보수주의",
+            "description": "전통, 안정, 점진적인 개혁을 중시합니다. 이러한 접근 방식은 힘들게 얻은 지혜를 보존하는 동시에 안전하고 안정적인 미래를 보장하는 것을 추구합니다."
+          },
+          "POL_LIBERALISM": {
+            "name": "자유",
+            "description": "개인의 자유, 평등, 진보를 강조합니다. 새로운 가능성을 탐구할 수 있는 자유와 모든 사람의 고유한 존엄성을 소중히 여깁니다."
+          },
+          "POL_SOCIALISM": {
+            "name": "사회주의",
+            "description": "사회 정의, 평등, 지역 사회 복지에 중점을 둡니다. 상호 지원, 집단 복지, 연대에서 발견되는 힘을 중요하게 생각합니다."
+          },
+          "POL_LIBERTARIANISM": {
+            "name": "자유주의",
+            "description": "최소한의 개입과 최대의 개인 자율성을 우선시합니다. 자기 결정과 개인 공간 및 주도권의 보호를 중요하게 생각합니다."
+          },
+          "POL_MODERATISM": {
+            "name": "온건주의",
+            "description": "질서와 진행 사이의 균형을 추구합니다. 실용적인 해결책, 대화, 더 큰 이익을 위한 공통점 찾기를 중요하게 생각합니다."
+          }
+        }
+      }
+    }
+  },
+  "onThisPage": "이 페이지에서",
+  "universal": {
+    "labels": {
+      "undiscovered": "분석되지 않음"
+    },
+    "explanation": {
+      "morning_lark": "일찍 일어나고 아침에 가장 활동적입니다.",
+      "night_owl": "늦게 자고 밤에 가장 활동적입니다.",
+      "dolphin": "소음에 민감한 가벼운 슬리퍼.",
+      "lion": "일찍 일어나서 저녁까지 휴식이 필요합니다.",
+      "bear": "태양 주기를 따르므로 꾸준한 휴식이 필요합니다.",
+      "wolf": "야간 지향적이며 어둠 속에서도 창의적입니다."
+    }
+  },
+  "akashic": {
+    "title": "통합생활아카이브",
+    "subtitle": "데이터 라이브러리",
+    "description": "개인 라이프사이클 데이터 및 성향 정보를 체계적으로 관리합니다.",
+    "close": "아카이브 닫기",
+    "tabs": {
+      "essence": "본질",
+      "destiny": "길",
+      "biology": "몸"
+    },
+    "essence": {
+      "title": "기질의 핵심",
+      "quote": "개인의 본질은 안정적이지만 그 표현은 환경에 적응합니다.",
+      "soulFormula": "핵심 포뮬러",
+      "humanDesign": "라이프스타일 전략",
+      "authority": "결정기준",
+      "locked": "보안 액세스 필요"
+    },
+    "destiny": {
+      "title": "성장 경로",
+      "lifePath": "생활 로드맵",
+      "seeker": "정보 탐구자",
+      "animal": "스피릿 인디케이터"
+    },
+    "biology": {
+      "title": "생물학적 맥락",
+      "chronotype": "활동주기",
+      "constitution": "육체적 기질"
+    }
+  },
+  "action": {
+    "pricing": "서비스 계획 보기"
+  },
+  "dialogs": {
+    "archiveEntry": "데이터 입력에 접근",
+    "recordVerified": "분석 확인됨",
+    "enneagram": {
+      "quote": "스키마는 이해를 위한 도구입니다."
+    },
+    "humanDesign": {
+      "description": "당신의 실용적인 라이프스타일 전략 데이터를 디코딩해보세요."
+    },
+    "mbti": {
+      "description": "인지 처리 아키텍처."
+    },
+    "numerology": {
+      "description": "분석적인 데이터 기반 통찰력."
+    },
+    "riasec": {
+      "description": "직업적 관심과 적성."
+    },
+    "saju": {
+      "label": "상세한 분석",
+      "description": "원소 프로필 데이터.",
+      "polarity": "균형",
+      "element": "주요 경향"
+    },
+    "elements": {
+      "title": "원소 분포"
+    },
+    "tuning": {
+      "title": "맞춤형 상세 가이드",
+      "color": "최적의 색상",
+      "number": "활성 코드",
+      "direction": "최적의 환경",
+      "flower": "식물 데이터",
+      "gemstone": "미네랄 표시기",
+      "luckyStar": "환경적 요인",
+      "favorableDays": "최적의 창",
+      "synergy": "통합 시너지"
+    }
+  },
+  "egenteto": {
+    "result": {
+      "title": "통합분석 연구실",
+      "traits": "기질 서명",
+      "description": "존재 분석 보고서",
+      "compatibility": "조화로운 상호작용",
+      "shareText": "내 분석 결과: {type}. 여기에서 확인하세요: {url}",
+      "share": "결과 공유",
+      "copy": "링크 복사",
+      "copied": "복사되었습니다!",
+      "retake": "분석 새로 고침",
+      "solarLineage": "당일 데이터",
+      "lunarLineage": "야간 데이터"
+    },
+    "saveResult": "아카이브에 데이터를 기록하는 중...",
+    "saveError": "분석이 모호함. 다시 시도해 주세요.",
+    "personalityAnalysis": "분석적 해체",
+    "compatibilityChartTitle": "하모니 스펙트럼",
+    "compatibilityLabel": "공명 수준",
+    "insights": "분석 요약",
+    "match": "컨버전스 포인트",
+    "awards": "주요 지표",
+    "growth": "성장 경로",
+    "traitsGuide": "기질의 어휘",
+    "strengths": "원시자산",
+    "growthAreas": "개선 분야",
+    "coupleTest": "관계형 시너지 진단",
+    "coupleTestDesc": "두 개인 간의 데이터 정렬을 측정합니다.",
+    "loveLanguage": "의사소통 방언",
+    "loveLanguageDesc": "당신의 의도가 다른 사람에게 어떻게 전달되는지.",
+    "idealDate": "최적의 커뮤니케이션",
+    "growthRoadmap": "성장 가이드",
+    "growthComingSoon": "자세한 추적 업데이트 예정",
+    "growthComingSoonDesc": "지속적인 개발 데이터는 곧 제공될 예정입니다.",
+    "saveImage": "결과 저장",
+    "backToHome": "대시보드로 돌아가기",
+    "perfectMatch": "{name}님과 높은 시너지 효과를 얻었습니다!"
+  },
+  "chosun": {
+    "title": "역사적 세력분석(조선)",
+    "subtitle": "전통적 가치와 사회적 경향의 융합",
+    "description": "당신의 타고난 본성과 행동 경향을 역사적 맥락에서 분석해보세요.",
+    "labels": {
+      "innate": "타고난 분석적 성격(내부)",
+      "behavioral": "외부 실행 패턴(외부)",
+      "comparison": "정렬 점수",
+      "faction": "일치하는 학자 세력"
+    },
+    "factions": {
+      "dongin": {
+        "name": "동인(이상주의자)",
+        "description": "학문의 순수성과 도덕적 실천을 중시하는 학자적 기질과 이상사회 실현을 위한 따뜻한 열정을 지닌 인재."
+      },
+      "seoin": {
+        "name": "서인(현실주의자)",
+        "description": "합리적인 효율성과 체계적 질서를 중시하며 현실 문제 해결과 안정성 확보에 중점을 두는 실용주의적 기질입니다."
+      },
+      "namin": {
+        "name": "남인(중간)",
+        "description": "학문적 깊이와 포용적 절제를 추구하며, 극단을 피하고 조화로운 균형을 유지하는 따뜻한 기질."
+      },
+      "bukin": {
+        "name": "북인(개혁주의자)",
+        "description": "강한 실천의식과 과감한 개혁정신을 지닌 학문적 실무자 기질로 신념에 기반한 결과를 중시합니다."
+      },
+      "noron": {
+        "name": "노론(전통주의자)",
+        "description": "전통적인 질서와 정당성을 수호하고 탄탄한 논리와 조직력을 통해 안정을 추구하는 근간 있는 기질."
+      },
+      "soron": {
+        "name": "소론(진보)",
+        "description": "유연한 사고와 진보적인 개방성을 갖춘 실용적인 기질로, 다양한 목소리를 수용하며 의미 있는 변화를 선도합니다."
+      },
+      "sipa": {
+        "name": "시파(실용주의자)",
+        "description": "시의적절한 유연성과 전문적인 감각을 중시하는 현실주의적 기질로 변화하는 환경에 최적의 대응력을 발휘합니다."
+      },
+      "byeokpa": {
+        "name": "벽파(강경파)",
+        "description": "어떤 상황에서도 원칙을 굽히지 않고 확고한 신념과 숭고한 성실성을 유지하는 엄격하고 책임감 있는 기질."
+      }
+    },
+    "traits": {
+      "academic": "학생",
+      "principled": "원칙을 지키는",
+      "idealistic": "이상주의적",
+      "practical": "현실적인",
+      "efficient": "효율적인",
+      "stable": "안정적인",
+      "moderate": "보통의",
+      "harmonious": "조화로운",
+      "balanced": "균형 잡힌",
+      "determined": "단호한",
+      "reformist": "개혁주의자",
+      "bold": "용감한",
+      "traditional": "전통적인",
+      "conservative": "보수적인",
+      "rigorous": "엄밀한",
+      "flexible": "유연한",
+      "open": "열려 있는",
+      "inclusive": "포함한",
+      "adaptive": "적응형",
+      "timely": "때마침",
+      "pragmatic": "바쁜",
+      "uncompromising": "단호한",
+      "integrity": "진실성",
+      "orthodox": "전통적인"
+    }
+  },
+  "lucky": {
+    "color": {
+      "red": "빨간색",
+      "blue": "파란색",
+      "green": "녹색",
+      "yellow": "노란색",
+      "black": "검은색",
+      "white": "하얀색"
+    },
+    "direction": {
+      "north": "북쪽",
+      "south": "남쪽",
+      "east": "동쪽",
+      "west": "서쪽",
+      "center": "센터"
+    },
+    "flower": {
+      "sunflower": "해바라기",
+      "rose": "장미",
+      "lily": "백합",
+      "lotus": "로터스",
+      "orchid": "난초"
+    },
+    "gemstone": {
+      "topaz": "황옥",
+      "ruby": "루비",
+      "diamond": "다이아몬드",
+      "sapphire": "사파이어",
+      "emerald": "에메랄드"
+    }
+  },
+  "assessment": {
+    "resilience": {
+      "title": "탄력성 평가",
+      "intro": "인생의 어려움에서 회복할 수 있는 능력을 측정하십시오.",
+      "badge": "특수 증상",
+      "result": {
+        "level": "탄력성 수준",
+        "score": "점수",
+        "profile_title": "프로필 평가",
+        "guidance_title": "지도 및 조언"
+      }
+    },
+    "start": "평가 시작"
+  },
+  "manifest": {
+    "big5": {
+      "title": "빅 5 성격 테스트",
+      "description": "다섯 가지 주요 성격 특성에 대한 과학적 렌즈를 통해 당신의 진정한 자아를 발견해보세요."
+    }
+  },
+  "catalog": {
+    "title": "온톨로지 카탈로그",
+    "description": "사용 가능한 모든 온톨로지 평가 찾아보기"
+  },
+  "cognitiveBias": {
+    "title": "인지 편향",
+    "description": "자신의 사고 패턴과 편견을 파악하세요"
+  },
+  "consumption": {
+    "title": "소비 스타일",
+    "description": "돈과 가치와의 관계를 분석해보세요"
+  },
+  "learningStyle": {
+    "title": "학습 스타일",
+    "description": "최적의 학습 전략을 찾아보세요"
+  },
+  "badge": "존재론",
+  "resultTitle": "분석결과",
+  "restart": "분석 다시 시작",
+  "title": "존재론적 프레임워크",
+  "mayan": {
+    "systemName": "마야 드림스펠",
+    "narrative": "은하계 동기화",
+    "solarSeal": "솔라 씰",
+    "tone": "은하계 톤"
+  },
+  "celtic": {
+    "systemName": "켈트 나무 조디악",
+    "narrative": "나무의 지혜",
+    "treeSign": "나무 표시",
+    "ogham": "오검 문자"
+  },
+  "Link copied to clipboard!": "링크가 클립보드에 복사되었습니다!"
+}

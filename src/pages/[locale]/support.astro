@@ -1,0 +1,56 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES, getTranslations, localePath } from '../../i18n';
+import type { Locale } from '../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const t = await getTranslations(locale);
+---
+
+<Layout
+  title={t('support.hero.title') || 'Support'}
+  description={t('support.hero.subtitle')}
+  locale={locale}
+>
+  <section class="relative bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
+    <div class="max-w-2xl mx-auto animate-fadeInUp">
+      <h1 class="text-4xl font-serif font-black text-green-950 mb-3">
+        {t('support.hero.title')}
+      </h1>
+      <p class="text-green-700">{t('support.hero.subtitle')}</p>
+    </div>
+  </section>
+
+  <section class="max-w-2xl mx-auto px-4 py-10">
+    <div class="grid gap-4 mb-8">
+      <!-- Categories -->
+      {(['technical', 'general', 'feature_request'] as const).map((cat) => (
+        <div class="bg-white rounded-2xl border border-green-50 p-5 flex items-start gap-4">
+          <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-lg shrink-0">
+            {cat === 'technical' ? '⚙️' : cat === 'feature_request' ? '💡' : '💬'}
+          </div>
+          <div>
+            <h3 class="font-semibold text-green-950 text-sm">
+              {t(`support.categories.${cat}`)}
+            </h3>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="bg-green-50 rounded-2xl p-8 text-center">
+      <p class="font-semibold text-green-950 mb-1">{t('support.contact')}</p>
+      <p class="text-sm text-green-600 mb-4">{t('support.form.descriptionPlaceholder')}</p>
+      <a
+        href={localePath(locale, '/contact')}
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-green-700 text-white text-sm font-semibold hover:bg-green-800 transition-colors"
+      >
+        {t('nav.contact')} →
+      </a>
+    </div>
+  </section>
+</Layout>

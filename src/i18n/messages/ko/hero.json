@@ -1,0 +1,51 @@
+{
+  "ctaStart": "분석 시작",
+  "ctaLibrary": "도서관 탐색",
+  "scrollLabel": "아래로 스크롤",
+  "oracleText": "오라클에 오신 것을 환영합니다",
+  "oracleTitle": "일일 인사이트",
+  "cta": {
+    "primary": "시작하기",
+    "secondary": "자세히 알아보기"
+  },
+  "features": {
+    "accurate": "정확한",
+    "comprehensive": "포괄적인",
+    "personalized": "맞춤형"
+  },
+  "subtitle": "귀하의 고유한 강점에 대한 확실한 가이드입니다.",
+  "title": "당신의 이상적인 삶을 디자인하세요",
+  "description": "고대의 지혜와 현대의 조화가 만나는 오이요 성역에 오신 것을 환영합니다.",
+  "titlePrefix": "당신의",
+  "titleSuffix": "이상적인 삶",
+  "keywords": "사주, 타로, 공명, 온톨로지, 소울맵",
+  "errorFallbackTitle": "공허가 깊어진다",
+  "errorFallbackDescription": "우주의 실타래가 순간적으로 엉켰습니다. 조화를 회복할 수 있도록 잠시 시간을 주십시오.",
+  "phase": "프로토콜: 0.1.0",
+  "enter": "성소에 들어가세요",
+  "explore": "지도 탐색",
+  "status": "상태",
+  "active": "활동적인",
+  "orbitalVelocity": "궤도 속도",
+  "km": "킬로미터",
+  "lunarPhase": "달의 위상",
+  "waxing": "왁싱",
+  "ontology": {
+    "title": "존재론",
+    "desc": "당신의 영혼의 청사진을 발견하세요."
+  },
+  "resonance": {
+    "title": "공명",
+    "desc": "영혼 간의 조화를 측정합니다."
+  },
+  "daily": {
+    "title": "데일리 오라클",
+    "desc": "오늘날 당신에게 필요한 지혜."
+  },
+  "discovery": {
+    "badge": "발견",
+    "title": "생츄어리 지도",
+    "description": "지혜의 숲으로 여행을 시작해보세요.",
+    "takeTest": "테스트 받기"
+  }
+}

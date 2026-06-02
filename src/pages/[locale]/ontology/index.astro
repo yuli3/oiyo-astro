@@ -1,0 +1,112 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, getTranslations, localePath } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const t = await getTranslations(locale);
+
+const sections = [
+  {
+    id: 'encyclopedia',
+    icon: '📚',
+    titleKey: 'ontology.sections.encyclopedia.title',
+    descKey: 'ontology.sections.encyclopedia.description',
+    href: localePath(locale, '/ontology/encyclopedia'),
+    color: 'bg-violet-50 text-violet-700',
+    fallbackTitle: 'Encyclopedia',
+    fallbackDesc: 'Explore the knowledge base of personality and cosmic wisdom.',
+  },
+  {
+    id: 'birthstone',
+    icon: '💎',
+    titleKey: 'ontology.biography.stone.label',
+    descKey: '',
+    href: '#',
+    color: 'bg-blue-50 text-blue-700',
+    fallbackTitle: 'Birth Stone',
+    fallbackDesc: 'Discover your birthstone and its meaning.',
+  },
+  {
+    id: 'birthflower',
+    icon: '🌸',
+    titleKey: 'ontology.biography.flower.label',
+    descKey: '',
+    href: '#',
+    color: 'bg-pink-50 text-pink-700',
+    fallbackTitle: 'Birth Flower',
+    fallbackDesc: 'Find your birth flower and its symbolism.',
+  },
+];
+---
+
+<Layout
+  title={t('hero.ontology.title') || 'My Sanctuary'}
+  description={t('hero.ontology.desc')}
+  locale={locale}
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-violet-50/60 to-white pt-16 pb-12 px-4 text-center">
+    <div class="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
+      <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-violet-300 rounded-full blur-3xl" />
+    </div>
+    <div class="relative z-10 max-w-2xl mx-auto animate-fadeInUp">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-violet-100 text-violet-700 text-xs font-bold mb-4">
+        🏛️ {t('nav.ontology')}
+      </div>
+      <h1 class="text-4xl md:text-5xl font-serif font-black text-violet-950 mb-4 tracking-tight">
+        {t('hero.ontology.title')}
+      </h1>
+      <p class="text-violet-700 text-lg leading-relaxed">
+        {t('hero.ontology.desc')}
+      </p>
+    </div>
+  </section>
+
+  <!-- Sections grid -->
+  <section class="max-w-4xl mx-auto px-4 py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5">
+      {sections.map((sec) => {
+        const title = t(sec.titleKey);
+        const displayTitle = title.startsWith('ontology.') ? sec.fallbackTitle : title;
+        const desc = sec.descKey ? t(sec.descKey) : '';
+        const displayDesc = (!desc || desc.startsWith('ontology.')) ? sec.fallbackDesc : desc;
+
+        return (
+          <a
+            href={sec.href}
+            class="group bg-white rounded-2xl border border-gray-100 p-6 hover:border-violet-200 hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow-md"
+          >
+            <div class={`w-12 h-12 rounded-xl ${sec.color.split(' ')[0]} flex items-center justify-center text-2xl mb-4`}>
+              {sec.icon}
+            </div>
+            <h2 class="font-bold text-gray-900 mb-1 group-hover:text-violet-700 transition-colors">
+              {displayTitle}
+            </h2>
+            <p class="text-sm text-gray-500 leading-relaxed">
+              {displayDesc}
+            </p>
+          </a>
+        );
+      })}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-gradient-to-r from-violet-50 to-purple-50 py-12 px-4 text-center">
+    <div class="max-w-xl mx-auto">
+      <h2 class="text-xl font-bold text-violet-950 mb-2">{t('hero.enter')}</h2>
+      <p class="text-violet-600 text-sm mb-6">{t('hero.description')}</p>
+      <a
+        href={localePath(locale, '/')}
+        class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-violet-700 text-white font-semibold text-sm hover:bg-violet-800 transition-all"
+      >
+        {t('hero.explore')} →
+      </a>
+    </div>
+  </section>
+</Layout>

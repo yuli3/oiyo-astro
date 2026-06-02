@@ -1,0 +1,7 @@
+{
+  "generate": "Échec de la génération",
+  "purchase": "Échec de l'achat",
+  "tooLarge": "Fichier trop volumineux.",
+  "cameraAccess": "Accès à la caméra refusé.",
+  "failed": "L'opération a échoué."
+}

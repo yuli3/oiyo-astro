@@ -1,0 +1,378 @@
+{
+  "badge": "Insigne",
+  "resultTitle": "Votre Résultat",
+  "restart": "Recommencer",
+  "title": "Titre",
+  "intro": "Introduction",
+  "profile": "Profil",
+  "remedy": "Remède",
+  "description": "Description",
+  "primaryAction": "Continuer",
+  "secondaryAction": "Retour",
+  "axis": "Axe",
+  "guardian": "Gardien",
+  "guardianDesc": "Votre esprit gardien veille sur votre chemin.",
+  "level": "Niveau",
+  "antennaTitle": "Antenne de Sensibilité",
+  "sensitivityTitle": "Profil de Sensibilité",
+  "counselorNote": "Note du Conseiller",
+  "counselorMsg": "Votre guide intérieur a un message pour vous.",
+  "badgeText": "Insigne",
+  "result": {
+    "sections": {
+      "dimensions_title": "Analyse Dimensionnelle",
+      "imperial_decree": "Décret Impérial",
+      "strengths": "Points Forts",
+      "weaknesses": "Défis",
+      "retake_ceremony": "Cérémonie de Reprise"
+    }
+  },
+  "adaptive": "Adaptatif",
+  "maladaptive": "Maladaptatif",
+  "primaryStyle": "Style Principal",
+  "scoreIntensity": "Intensité du Score",
+  "labels": {
+    "mirror": "Miroir"
+  },
+  "subtitle": "Sous-titre",
+  "hiddenSelf": {
+    "title": "Le Moi Caché",
+    "description": "Les couches invisibles de votre monde intérieur.",
+    "ctaOrigin": "Explorer Votre Origine",
+    "ctaIdentity": "Découvrir Votre Identité"
+  },
+  "mode": "Mode",
+  "dimensionAnalysis": "Analyse Dimensionnelle",
+  "recommendedPaths": "Voies Recommandées",
+  "oracleTitle": "Oracle",
+  "paradoxLabel": "Paradoxe",
+  "balanced": "Équilibré",
+  "nature": "Nature",
+  "nurture": "Développement",
+  "start": "Commencer",
+  "retake": "Réessayer",
+  "scroll": {
+    "title": "Registres impériaux",
+    "end": "Fin des registres",
+    "visualization": "Visualisation"
+  },
+  "terms": {
+    "dayMaster": "Maître du Jour"
+  },
+  "loading": {
+    "notFound": {
+      "title": "Signal cosmique perdu",
+      "subtitle": "Le chemin que vous cherchez s'est dissous dans le vide.",
+      "description": "Peut-être les coordonnées ont-elles été mal saisies, ou la page a migré vers une autre dimension.",
+      "goHome": "Retourner au sanctuaire",
+      "goBack": "Revenir au chemin précédent",
+      "suggestionsTitle": "Suggestions de navigation",
+      "popularTestsTitle": "Portails actifs",
+      "egentetoTest": "Origine primordiale",
+      "mbtiAlternative": "DNA Social (MBTI)",
+      "relationship": {
+        "communicationStyle": "Résonance sacrée"
+      }
+    },
+    "analyzing": "Analyse de votre empreinte d'âme...",
+    "calculating": "Calcul des alignements cosmiques...",
+    "processing": "Traitement de votre schéma unique...",
+    "generating": "Génération de vos perspectives...",
+    "almostDone": "Presque terminé...",
+    "personalityAnalysis": "Décodage de votre matrice de personnalité...",
+    "responseAnalysis": "Lecture de vos réponses...",
+    "typeMatching": "Recherche de votre type de résonance...",
+    "preparingResults": "Préparation de vos résultats..."
+  },
+  "please_wait": "Veuillez patienter un instant",
+  "backButton": "Retour",
+  "shareButton": "Partager",
+  "dimensionsTitle": "Dimensions",
+  "analysis": {
+    "detailed": "Analyse Détaillée"
+  },
+  "iching": {
+    "title": "Lecture du Yi Jing",
+    "revelation": "Révélation Cosmique"
+  },
+  "partialDataWarning": "Certaines informations peuvent être incomplètes.",
+  "addMoreInfo": "Ajouter plus de détails",
+  "cta": {
+    "title": "Votre Voyage Vous Attend",
+    "subtitle": "Partagez votre profil cosmique avec les autres",
+    "share": "Partager les Résultats",
+    "download": "Télécharger"
+  },
+  "rel": {
+    "selectPlaceholder": "Sélectionner un point de référence",
+    "child_adult": "Âme adulte (enfant)",
+    "child_minor": "Âme mineure (enfant)",
+    "spouse": "Double Flamme (Conjoint)",
+    "parent": "Âme ancestrale (parent)",
+    "other_relative": "Parent apparenté",
+    "other": "Autre connexion"
+  },
+  "alerts": {
+    "title": "Registres Impériaux"
+  },
+  "sections": {
+    "overview": "Aperçu",
+    "users": "Statistiques utilisateur",
+    "performance": "Battement du système"
+  },
+  "recommendations": {
+    "title": "Articles recommandés",
+    "error": "Échec du chargement.",
+    "empty": "Aucune recommandation.",
+    "exploreAll": "Tout explorer",
+    "spotlightEyebrow": "À la une",
+    "trending": "Tendances",
+    "new": "Nouveau",
+    "takeTest": "Faire le test"
+  },
+  "progress": "Progression",
+  "retry": "Réessayer",
+  "celestial": {
+    "status": "Déconnecté",
+    "active": "Résonance active",
+    "orbitalVelocity": "Vitesse orbitale",
+    "km": "km/s",
+    "lunarPhase": "Phase lunaire",
+    "waxing": "Premier quartier",
+    "oracle": "Oracle Impérial V2"
+  },
+  "viral": {
+    "comparisonTitle": "Notre affinité de personnalité 💫",
+    "matchScore": "Score d'affinité",
+    "compareAt": "Comparer avec des amis sur oiyo.app"
+  },
+  "offline": {
+    "status": "Déconnecté",
+    "description": "Peut-être les coordonnées ont-elles été mal saisies, ou la page a migré vers une autre dimension.",
+    "meta": {
+      "title": "Signal cosmique perdu",
+      "description": "Peut-être les coordonnées ont-elles été mal saisies, ou la page a migré vers une autre dimension."
+    },
+    "content": {
+      "heading": "La connexion au Vide est suspendue",
+      "subheading": "Dans le calme du Sanctuaire déconnecté, écoutez votre voix intérieure.",
+      "description1": "Les fils du cosmos semblent s'être un peu desserrés.",
+      "description2": "Le flux de données reprendra dès que la connexion sera rétablie.",
+      "cta": "Souhaitez-vous tenter une nouvelle résonance ?",
+      "tipsTitle": "Sagesse pour retrouver la sérénité",
+      "tips": {
+        "tip1": "Vérifiez le lien physique (votre connexion réseau).",
+        "tip2": "Réservez un instant pour que les vents célestes s'apaisent.",
+        "tip3": "Et si vous repliiez et dépliiez vos ailes de Mode Avion un instant ?"
+      }
+    }
+  },
+  "readings": "Lectures",
+  "productivity": {
+    "decisionMaking": "Prise de décision"
+  },
+  "error": {
+    "title": "Signal cosmique perdu",
+    "description": "Peut-être les coordonnées ont-elles été mal saisies, ou la page a migré vers une autre dimension.",
+    "retry": "Réessayer"
+  },
+  "about": "Présentation du Sanctuaire",
+  "success": "Succès",
+  "yes": "Oui",
+  "no": "Non",
+  "ok": "Confirmer",
+  "cancel": "Annuler",
+  "save": "Enregistrer",
+  "delete": "Supprimer",
+  "edit": "Modifier",
+  "add": "Ajouter",
+  "remove": "Supprimer",
+  "next": "Suivant",
+  "previous": "Précédent",
+  "back": "Retour",
+  "home": "Accueil",
+  "placeholder": {
+    "enterName": "Inscrivez votre nom",
+    "enterAge": "Âge"
+  },
+  "noData": {
+    "noStrengths": "Aucune force n'a encore été révélée",
+    "noChallenges": "Aucun défi majeur n'a été identifié pour l'instant",
+    "noRecommendations": "Aucune recommandation",
+    "noFamilyMembers": "Aucun membre de la famille ajouté",
+    "noHouseholdTips": "Aucun conseil domestique disponible"
+  },
+  "copiedToClipboard": "Copié dans le presse-papiers !",
+  "breadcrumbLabel": "Chemin",
+  "standardError": {
+    "badgeLabel": "Faille",
+    "title": "Signal cosmique perdu",
+    "description": "Peut-être les coordonnées ont-elles été mal saisies, ou la page a migré vers une autre dimension.",
+    "primaryAction": "Récupérer le destin",
+    "secondaryAction": "Place centrale (Accueil)",
+    "supportPrompt": "Besoin de l'avis des sages ?",
+    "referenceIdLabel": "Code de résonance",
+    "contactSupport": "Envoyer un signal au support"
+  },
+  "calendar": {
+    "lunar": "Calendrier lunaire",
+    "solar": "Calendrier solaire"
+  },
+  "ui": {
+    "goHome": "Retourner au sanctuaire",
+    "tryNow": "Essayez maintenant",
+    "languages": {
+      "ko": "Coréen",
+      "en": "Anglaise",
+      "ja": "日本語",
+      "cn": "简体中文",
+      "es": "Español",
+      "fr": "Français"
+    },
+    "scrollToTop": "Retour en haut"
+  },
+  "zodiac": {
+    "aries": "Bélier",
+    "taurus": "Taureau",
+    "gemini": "Gémeaux",
+    "cancer": "Cancer",
+    "leo": "Lion",
+    "virgo": "Vierge",
+    "libra": "Balance",
+    "scorpio": "Scorpion",
+    "sagittarius": "Sagittaire",
+    "capricorn": "Capricorne",
+    "aquarius": "Verseau",
+    "pisces": "Poissons"
+  },
+  "mbti": {
+    "ISTJ": "ISTJ (Logisticien)",
+    "ISFJ": "ISFJ (Défenseur)",
+    "INFJ": "INFJ (Avocat)",
+    "INTJ": "INTJ (Architecte)",
+    "ISTP": "ISTP (Virtuose)",
+    "ISFP": "ISFP (Aventurier)",
+    "INFP": "INFP (Médiateur)",
+    "INTP": "INTP (Logicien)",
+    "ESTP": "ESTP (Entrepreneur)",
+    "ESFP": "ESFP (Amuseur)",
+    "ENFP": "ENFP (Inspirateur)",
+    "ENTP": "ENTP (Polémiste)",
+    "ESTJ": "ESTJ (Directeur)",
+    "ESFJ": "ESFJ (Consul)",
+    "ENFJ": "ENFJ (Protagoniste)",
+    "ENTJ": "ENTJ (Commandant)"
+  },
+  "bloodType": {
+    "A": "Type A",
+    "B": "Type B",
+    "O": "Type O",
+    "AB": "Type AB"
+  },
+  "nav": {
+    "dashboard": "Tableau de bord",
+    "readings": "Lectures",
+    "resonance": "Résonance",
+    "profile": "Profil"
+  },
+  "landing": {
+    "phase": "Phase 51: La Porte d'Émeraude",
+    "titlePrefix": "Sanctuaire de",
+    "titleSuffix": "Données Vivantes",
+    "description": "Où la sagesse ancestrale rencontre la précision algorithmique. Décodez votre ontologie, résonnez avec des âmes sœurs et synthétisez votre destin.",
+    "enter": "Entrer dans le Sanctuaire",
+    "explore": "Explorer les méthodologies",
+    "ontology": {
+      "title": "Ontologie",
+      "desc": "Décodez le plan de votre âme."
+    },
+    "resonance": {
+      "title": "Résonance",
+      "desc": "Trouvez votre affinité vibratoire."
+    },
+    "daily": {
+      "title": "L'Oracle Quotidien",
+      "desc": "Un message du vide, organisé spécialement pour vous."
+    },
+    "synergy": {
+      "title": "La Grande Synchronie",
+      "version": "Synergie V2"
+    },
+    "community": {
+      "connected": "Âmes connectées aujourd'hui",
+      "title": "Rejoignez la conscience collective."
+    }
+  },
+  "support": {
+    "hero": {
+      "title": "Sanctuaire de soutien sacré",
+      "subtitle": "Guidé par la sagesse ancienne et les réponses rapides."
+    },
+    "categories": {
+      "billing": "Paiement",
+      "technical": "Support technique",
+      "account": "Compte",
+      "general": "Questions générales",
+      "feature_request": "Demande de fonctionnalité",
+      "payment": "Paiement"
+    },
+    "form": {
+      "title": "Demander des conseils",
+      "categoryLabel": "Domaine de guidance",
+      "descriptionLabel": "Détails",
+      "descriptionPlaceholder": "Décrivez votre demande en détail...",
+      "priorityLabel": "Urgence",
+      "subjectLabel": "Sujet",
+      "subjectPlaceholder": "Résumé bref",
+      "submitButton": "Soumettre",
+      "labels": {
+        "title": "Sujet de la demande",
+        "category": "Domaine de guidance",
+        "description": "Détails",
+        "priority": "Urgence",
+        "submit": "Soumettre"
+      },
+      "categories": {
+        "billing": "Paiement",
+        "technical": "Support technique",
+        "account": "Compte",
+        "general": "Questions générales",
+        "feature_request": "Demande de fonctionnalité",
+        "payment": "Paiement"
+      },
+      "priorities": {
+        "low": "Faible",
+        "medium": "Moyen",
+        "high": "Élevé"
+      }
+    },
+    "priority": {
+      "low": "Faible",
+      "normal": "Normale",
+      "high": "Élevé",
+      "urgent": "Urgente"
+    },
+    "meta": {
+      "title": "Guidance divine",
+      "description": "Cherchez le conseil des gardiens du sanctuaire."
+    },
+    "myTickets": {
+      "title": "Mes tickets de pèlerinage",
+      "newTicket": "Nouvelle consultation"
+    }
+  },
+  "company": {
+    "marketing": {
+      "home": {
+        "title": "OIYO | La bibliothèque de votre vie",
+        "description": "Naviguez dans l'architecture de votre destin par une synthèse entre Orient et Occident.",
+        "errorFallbackTitle": "Perte de résonance",
+        "errorFallbackDescription": "Nous avons rencontré une instabilité dans le vide. Rafraîchissement de la conscience."
+      }
+    }
+  },
+  "hero": {
+    "title": "Oiyo",
+    "subtitle": "Votre architecture cosmique"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "title": "神聖なサポート | おいよネット",
+    "description": "私たちの神聖な聖域で導きを求め、解決策を見つけてください。"
+  },
+  "hero": {
+    "title": "神聖なサポート",
+    "subtitle": "私たちのキーパーは、あなたのスピリチュアルな旅におけるあらゆる課題を乗り越えるためにあなたを導くためにここにいます。"
+  },
+  "form": {
+    "subjectLabel": "主題",
+    "subjectPlaceholder": "これは何に関するものですか?",
+    "categoryLabel": "カテゴリ",
+    "priorityLabel": "優先度",
+    "descriptionLabel": "説明",
+    "descriptionPlaceholder": "どのようにお手伝いできるでしょうか?",
+    "submitButton": "メッセージを送信する",
+    "submitting": "送信中...",
+    "successTitle": "メッセージを受信しました",
+    "successMessage": "お問い合わせを受け付けましたので、24 時間以内にご返答いたします。",
+    "errorTitle": "送信に失敗しました",
+    "errorMessage": "一時的な影が私たちの前を横切りました。 後でもう一度試してください。",
+    "title": "サポートチケットを送信する"
+  },
+  "contact": "指導を求める",
+  "faq": "よくあるお問い合わせ",
+  "ticket_status": "協定の状況",
+  "new_ticket": "新しい問い合わせを開始する",
+  "my_tickets": "私の問い合わせ",
+  "categories": {
+    "payment": "請求と支払い",
+    "account": "アカウントアクセス",
+    "technical": "技術的な問題",
+    "feature_request": "機能リクエスト",
+    "general": "一般的なお問い合わせ"
+  },
+  "priority": {
+    "low": "低い",
+    "normal": "普通",
+    "high": "高い",
+    "urgent": "緊急"
+  }
+}

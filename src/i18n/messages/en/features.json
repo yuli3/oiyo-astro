@@ -1,0 +1,262 @@
+{
+  "tests": {
+    "title": "Tests",
+    "description": "Take assessments."
+  },
+  "history": {
+    "title": "History",
+    "description": "View past results."
+  },
+  "recommendations": {
+    "title": "Recommendations",
+    "description": "For you."
+  },
+  "detailed": "Detailed Analysis",
+  "insights": "Deep Insights",
+  "charts": "Visual Charts",
+  "professional": "Professional Report",
+  "feature1_title": "Feature 1",
+  "feature1_description": "Desc 1",
+  "feature2_title": "Feature 2",
+  "feature2_description": "Desc 2",
+  "feature3_title": "Feature 3",
+  "feature3_description": "Desc 3",
+  "feature4_title": "Feature 4",
+  "feature4_description": "Desc 4",
+  "growth": {
+    "title": "Growth",
+    "description": "Track growth."
+  },
+  "ai": {
+    "title": "AI Analysis",
+    "description": "Powered by AI."
+  },
+  "recommendations_title": "Recommendations",
+  "wisdom-library": {
+    "title": "Library of Wisdom",
+    "description": "Profound insights for a balanced life and a peaceful mind."
+  },
+  "style-consultant": {
+    "title": "AI Style Consultant",
+    "description": "Discover the aesthetic that resonates with your true essence."
+  },
+  "whole-self": {
+    "title": "Whole-Self Dashboard",
+    "description": "Your entire personality, beautifully mapped on a single card."
+  },
+  "worry-time": {
+    "title": "The Worry Jar",
+    "description": "Entrust your worries here and let your spirit breathe free."
+  },
+  "circle-control": {
+    "title": "Circle of Control",
+    "description": "Gently shift your focus to what you can truly influence."
+  },
+  "fear-setting": {
+    "title": "Fear-Setting",
+    "description": "Conquer the shadows of doubt and step into courageous action."
+  },
+  "daily-lucky": {
+    "title": "Today's Talisman",
+    "description": "Carry a touch of serendipity with you today."
+  },
+  "gift-tax": {
+    "title": "Gift Tax Calculator",
+    "description": "Clarify how much you can give freely and gracefully."
+  },
+  "n-jobler": {
+    "title": "N-Jobler Tax Simulator",
+    "description": "Effortlessly estimate taxes for your various creative pursuits."
+  },
+  "asset-map": {
+    "title": "Centennial Asset Map",
+    "description": "Visualize your lifelong financial journey with clarity."
+  },
+  "budget-planner": {
+    "title": "50/30/20 Budgeting",
+    "description": "A mindful approach to intuitive and simple financial planning."
+  },
+  "vat-calculator": {
+    "title": "VAT Calculator",
+    "description": "Calculate value-added tax with instant precision."
+  },
+  "compound-interest": {
+    "title": "Compound Interest",
+    "description": "Watch how consistency nurtures your growth over time."
+  },
+  "salary-calculator": {
+    "title": "Net Income Calculator",
+    "description": "Understand the true value of your hard work, simplified."
+  },
+  "freelancer-tax": {
+    "title": "Freelancer Tax Guide",
+    "description": "Navigate your tax returns with confidence and ease."
+  },
+  "mindfulness-coach": {
+    "title": "Mindfulness Coach",
+    "description": "Daily whispers of wisdom to nourish your inner sanctuary."
+  },
+  "panic-button": {
+    "title": "The Peace Button",
+    "description": "Take a deep breath and return to your calm center instantly."
+  },
+  "mood-analyzer": {
+    "title": "Mood Pattern Analyzer",
+    "description": "Discover the rhythmic ebb and flow of your emotions."
+  },
+  "sleep-dream": {
+    "title": "Sleep & Dream Insights",
+    "description": "Unveil the hidden messages within your nocturnal journeys."
+  },
+  "stress-converter": {
+    "title": "Worry Shredder",
+    "description": "Transform your anxieties into weightless ashes."
+  },
+  "cbt-distortion": {
+    "title": "Cognitive Distortion Detector",
+    "description": "Identify and gently reshape negative thought patterns."
+  },
+  "deep-work": {
+    "title": "Deep Work Manager",
+    "description": "A focus timer tailored to your unique cognitive rhythm."
+  },
+  "mbti-salary": {
+    "title": "Negotiation Atelier",
+    "description": "Master the art of negotiation using your natural personality strengths."
+  },
+  "severance-pay": {
+    "title": "Severance Pay Calculator",
+    "description": "Plan your next chapter with financial foresight."
+  },
+  "annual-leave": {
+    "title": "Annual Leave Value Calculator",
+    "description": "Instantly calculate the worth of your well-deserved rest."
+  },
+  "interview": {
+    "title": "AI Interview Scoring",
+    "description": "Refine your narrative with objective and insightful feedback."
+  },
+  "habit-quest": {
+    "title": "Habit Quest",
+    "description": "A graceful journey of small steps leading to grand transformations."
+  },
+  "life-beat": {
+    "title": "Weekly Life Analysis",
+    "description": "Reflect on the harmony and rhythm of your past week."
+  },
+  "jeonse-guard": {
+    "title": "Safe Housing Guide",
+    "description": "Ensure the security of your home and peace of mind."
+  },
+  "pet-counselor": {
+    "title": "Pet Companion Match",
+    "description": "Find the kindred spirit that perfectly complements your life."
+  },
+  "city-guide": {
+    "title": "Soul City Finder",
+    "description": "Find the place on Earth that truly feels like home."
+  },
+  "burnout-signal": {
+    "title": "Soul Battery Check",
+    "description": "Check in with yourself—is your inner light getting the rest it needs?"
+  },
+  "thought-laundry": {
+    "title": "Thought Laundry",
+    "description": "Wash away the clutter and reveal a clearer perspective."
+  },
+  "mandalart": {
+    "title": "Mandalart Goal Map",
+    "description": "Turn abstract dreams into a beautiful, actionable blueprint."
+  },
+  "dopamine-detox": {
+    "title": "Dopamine Detox",
+    "description": "Step away from the screen and rediscover the joy of the present moment."
+  },
+  "hobby-worldcup": {
+    "title": "Passion Project World Cup",
+    "description": "Curate the hobbies that bring the most light to your life."
+  },
+  "gratitude-jar": {
+    "title": "Daily Gratitude Jar",
+    "description": "Cherish the small moments that made you smile today."
+  },
+  "conflict-solver": {
+    "title": "Harmony Restorer",
+    "description": "Find a gentle path back to understanding and connection."
+  },
+  "mbti-dating": {
+    "title": "Dating Persona Test",
+    "description": "Discover the unique way you love and connect."
+  },
+  "daily-tarot": {
+    "title": "Daily Tarot",
+    "description": "Draw a card and listen to the wisdom of the day."
+  },
+  "saju": {
+    "title": "Primal Origin Analysis",
+    "description": "Explore the cosmic energy woven into the moment of your birth."
+  },
+  "allowance": {
+    "title": "Overtime Calculator",
+    "description": "Easily track and value your extra efforts."
+  },
+  "unemployment-benefit": {
+    "title": "Transition Support Estimator",
+    "description": "Estimate your support during your career transition."
+  },
+  "freelancer-tax-predictor": {
+    "title": "Tax Refund Predictor",
+    "description": "Forecast your potential tax returns with ease."
+  },
+  "tax-deduction-optimizer": {
+    "title": "Tax Deduction Optimizer",
+    "description": "Refine your spending strategy to maximize your benefits."
+  },
+  "hobby-cost": {
+    "title": "Leisure Cost Estimator",
+    "description": "Balance your passions with your financial goals."
+  },
+  "class-matcher": {
+    "title": "Style & Skill Matcher",
+    "description": "Find the learning experience that aligns with your aura."
+  },
+  "life-countdown": {
+    "title": "Life Canvas",
+    "description": "Visualize your journey, one week at a time."
+  },
+  "grounding-game": {
+    "title": "Grounding Exercise",
+    "description": "Quiet the noise with the 5-4-3-2-1 technique."
+  },
+  "birth-flower": {
+    "title": "Sacred Symbols",
+    "description": "Discover your birthstone, sacred flower, and lucky hue."
+  },
+  "horoscope": {
+    "title": "Celestial Guidance",
+    "description": "Daily whispers from the stars to guide your path."
+  },
+  "biorhythm": {
+    "title": "Biorhythm Analysis",
+    "description": "Tune into your innate physical, emotional, and mental cycles."
+  },
+  "numerology": {
+    "title": "Numerology Guide",
+    "description": "Unveil the hidden energy of numbers and find your auspicious days."
+  },
+  "title": "Feature Highlights",
+  "items": [
+    {
+      "title": "Budget Analysis",
+      "description": "See where your money goes."
+    },
+    {
+      "title": "Peer Comparison",
+      "description": "Compare with others in your age group."
+    },
+    {
+      "title": "Custom Roadmap",
+      "description": "Get a step-by-step plan to wealth."
+    }
+  ]
+}

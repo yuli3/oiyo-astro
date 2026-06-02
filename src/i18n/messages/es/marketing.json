@@ -1,0 +1,157 @@
+{
+  "about": {
+    "title": "About Us | OIYO",
+    "hero": {
+      "subtitle": "Unlock the full potential of your self-discovery journey with zero hidden costs.",
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "mission": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "values": {
+      "title": "Pricing",
+      "free": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "privacy": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "science": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "engaging": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "story": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    },
+    "meta": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey.",
+      "keywords": "pricing, subscription, plans, personality test, premium insights, saju"
+    },
+    "history": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey."
+    }
+  },
+  "home": {
+    "title": "El Oráculo Diario",
+    "description": "Navega los bosques antiguos de la sabiduría. Cada sendero conduce a una revelación más profunda de tu verdadero ser.",
+    "keywords": "Saju, Tarot, Resonancia, Ontología, Mapeo del Alma",
+    "errorFallbackTitle": "El Vacío se está profundizando",
+    "errorFallbackDescription": "Los hilos cósmicos se han enredado momentáneamente. Permítenos un latido para restaurar la armonía.",
+    "discovery": {
+      "badge": "VIAJE",
+      "title": "El Oráculo Diario",
+      "description": "Navega los bosques antiguos de la sabiduría. Cada sendero conduce a una revelación más profunda de tu verdadero ser."
+    },
+    "phase": "Fase 82: La Prueba Sagrada",
+    "titlePrefix": "Santuario de",
+    "titleSuffix": "Datos Vivos",
+    "enter": "Entrar al Santuario",
+    "explore": "Develar la Metodología",
+    "ontology": {
+      "title": "El Oráculo Diario",
+      "desc": "Una transmisión directa desde el vacío, curada para tu línea de tiempo específica."
+    },
+    "resonance": {
+      "title": "El Oráculo Diario",
+      "desc": "Una transmisión directa desde el vacío, curada para tu línea de tiempo específica."
+    },
+    "daily": {
+      "title": "El Oráculo Diario",
+      "desc": "Una transmisión directa desde el vacío, curada para tu línea de tiempo específica."
+    }
+  },
+  "pricing": {
+    "meta": {
+      "title": "Pricing",
+      "description": "Choose the path that best suits your journey.",
+      "keywords": "precios, suscripción, planes, prueba de personalidad, información premium, saju"
+    },
+    "hero": {
+      "title": "Pricing",
+      "subtitle": "Libere todo el potencial de su viaje de autodescubrimiento sin costos ocultos."
+    },
+    "billing": {
+      "monthly": "Mensual",
+      "yearly": "Anual",
+      "month": "mes"
+    },
+    "plans": {
+      "free": "Gratis",
+      "getStarted": "Comience gratis",
+      "popular": "Más Popular",
+      "subscribe": "Comience su viaje profesional",
+      "cancelAnytime": "Cancelar en cualquier momento"
+    },
+    "planDetails": {
+      "free": {
+        "features": {
+          "unlimitedTests": "Pruebas básicas ilimitadas de personalidad y alma.",
+          "resultStorage": "Almacene hasta 3 conocimientos recientes",
+          "basicSharing": "Intercambio de resultados clásico",
+          "communitySupport": "Acceso comunitario"
+        },
+        "name": "Pro",
+        "description": "Choose the path that best suits your journey."
+      },
+      "premium": {
+        "features": {
+          "allFreeFeatures": "Todo en el plan Básico",
+          "aiAnalysis": "Análisis y orientación profundos del alma impulsados ​​por IA",
+          "pdfReports": "Informes detallados en PDF de sus hallazgos",
+          "advancedCompatibility": "Herramientas avanzadas de armonía en las relaciones",
+          "personalizedInsights": "Perspectivas cósmicas personalizadas semanales",
+          "prioritySupport": "Apoyo prioritario al santuario",
+          "customExport": "Portabilidad total de datos"
+        },
+        "name": "Pro",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "info": {
+      "allPlansInclude": "Cada plan Pro incluye:",
+      "securePayment": "Transacciones aseguradas",
+      "instantAccess": "Activación instantánea",
+      "customerSupport": "Soporte dedicado"
+    },
+    "faq": {
+      "title": "Pricing",
+      "question1": "¿Puedo cancelar mi suscripción en cualquier momento?",
+      "answer1": "Absolutamente. Puedes pausar o cancelar tu viaje en cualquier momento desde tu configuración. No se hicieron preguntas.",
+      "question2": "¿Existe una prueba gratuita?",
+      "answer2": "Si bien no tenemos una prueba cronometrada, nuestro plan Básico ofrece una gran cantidad de funciones que puede explorar indefinidamente.",
+      "question3": "¿Están seguros mis pagos?",
+      "answer3": "Sí. Utilizamos cifrado estándar de la industria para garantizar que su santuario financiero permanezca privado y seguro."
+    },
+    "trust": {
+      "secure": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "instant": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      },
+      "satisfaction": {
+        "title": "Pricing",
+        "description": "Choose the path that best suits your journey."
+      }
+    },
+    "title": "Precios",
+    "description": "Elige el camino que mejor se adapta a tu viaje.",
+    "free": "Gratis",
+    "pro": "Pro",
+    "enterprise": "Empresa"
+  }
+}

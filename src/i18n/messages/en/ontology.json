@@ -1,0 +1,780 @@
+{
+  "biography": {
+    "stone": {
+      "label": "Birthstone",
+      "garnet": {
+        "name": "Garnet",
+        "meaning": "Truth, Friendship, Loyalty"
+      },
+      "amethyst": {
+        "name": "Amethyst",
+        "meaning": "Peace, Sincerity, Health"
+      },
+      "aquamarine": {
+        "name": "Aquamarine",
+        "meaning": "Intelligence, Calmness, Courage"
+      },
+      "diamond": {
+        "name": "Diamond",
+        "meaning": "Eternal Love, Immortality"
+      },
+      "emerald": {
+        "name": "Emerald",
+        "meaning": "Happiness, Luck, Kindness"
+      },
+      "pearl": {
+        "name": "Pearl",
+        "meaning": "Health, Longevity, Wealth"
+      },
+      "ruby": {
+        "name": "Ruby",
+        "meaning": "Passion, Courage, Freedom"
+      },
+      "peridot": {
+        "name": "Peridot",
+        "meaning": "Marital Happiness, Harmony"
+      },
+      "sapphire": {
+        "name": "Sapphire",
+        "meaning": "Truth, Constancy, Wisdom"
+      },
+      "opal": {
+        "name": "Opal",
+        "meaning": "Hope, Purity, Innocence"
+      },
+      "topaz": {
+        "name": "Topaz",
+        "meaning": "Hope, Innocence, Friendship"
+      },
+      "turquoise": {
+        "name": "Turquoise",
+        "meaning": "Success, Victory, Wisdom"
+      }
+    },
+    "flower": {
+      "label": "Birth Flower",
+      "carnation": {
+        "name": "Carnation",
+        "meaning": "Pride, Beauty"
+      },
+      "violet": {
+        "name": "Violet",
+        "meaning": "Modesty, Faithfulness"
+      },
+      "daffodil": {
+        "name": "Daffodil",
+        "meaning": "New Start"
+      },
+      "daisy": {
+        "name": "Daisy",
+        "meaning": "Purity, Innocence"
+      },
+      "lily_of_valley": {
+        "name": "Lily of the Valley",
+        "meaning": "Humility, Return of Happiness"
+      },
+      "rose": {
+        "name": "Rose",
+        "meaning": "Love, Passion"
+      },
+      "larkspur": {
+        "name": "Larkspur",
+        "meaning": "Lightness, Levity"
+      },
+      "gladiolus": {
+        "name": "Gladiolus",
+        "meaning": "Strength, Integrity"
+      },
+      "aster": {
+        "name": "Aster",
+        "meaning": "Wisdom, Faith"
+      },
+      "marigold": {
+        "name": "Marigold",
+        "meaning": "Grief, Despair"
+      },
+      "chrysanthemum": {
+        "name": "Chrysanthemum",
+        "meaning": "Fidelity, Truth"
+      },
+      "poinsettia": {
+        "name": "Poinsettia",
+        "meaning": "Celebration, Success"
+      }
+    }
+  },
+  "lifestyle": {
+    "hobby": {
+      "label": "Recommended Activity",
+      "HOBBY_GARDENING": {
+        "name": "Gardening",
+        "desc": "Connecting with nature to find inner peace"
+      },
+      "HOBBY_MEDITATION": {
+        "name": "Meditation",
+        "desc": "Clear your mind and focus on yourself"
+      },
+      "HOBBY_HIKING": {
+        "name": "Hiking",
+        "desc": "Climbing mountains to build resilience"
+      },
+      "HOBBY_COOKING": {
+        "name": "Cooking",
+        "desc": "Creating new flavors through harmony"
+      },
+      "HOBBY_CODING": {
+        "name": "Coding",
+        "desc": "The art of designing systems with logic"
+      },
+      "HOBBY_PAINTING": {
+        "name": "Painting",
+        "desc": "Express yourself through colors and brushstrokes"
+      },
+      "HOBBY_WRITING": {
+        "name": "Creative Writing",
+        "desc": "Craft stories and let your thoughts flow"
+      },
+      "HOBBY_PHOTOGRAPHY": {
+        "name": "Photography",
+        "desc": "Capture moments and document stories"
+      },
+      "HOBBY_POTTERY": {
+        "name": "Pottery",
+        "desc": "Shape clay into functional art"
+      },
+      "HOBBY_DANCING": {
+        "name": "Dancing",
+        "desc": "Express emotions through movement"
+      },
+      "HOBBY_MUSIC": {
+        "name": "Music",
+        "desc": "Create harmony and express views through sound"
+      },
+      "HOBBY_CRAFTS": {
+        "name": "Crafts",
+        "desc": "Create handmade treasures with creativity"
+      },
+      "HOBBY_THEATER": {
+        "name": "Theater",
+        "desc": "Bring stories to life through performance"
+      }
+    }
+  },
+  "mythos": {
+    "celtic": {
+      "title": "Arboreal Indicator (Celtic)"
+    },
+    "egyptian": {
+      "title": "Guardian Guide (Egyptian)"
+    },
+    "stone": {
+      "title": "Indicator Birthstone"
+    },
+    "flower": {
+      "title": "Indicator Flower"
+    },
+    "recalculate": "Re-analyze"
+  },
+  "astro": {
+    "sect": {
+      "day": "Day Context",
+      "night": "Night Context"
+    }
+  },
+  "resonance": {
+    "professionalChart": "Comprehensive Chart: {bureau}. Core indicator in {lifePalace}. {starCount} key elements within.",
+    "note": "The system is analyzing your personal data archive.",
+    "nakshatra": "Lunar Mansion"
+  },
+  "dashboard": {
+    "guest": "User",
+    "labels": {
+      "undiscovered": "Unanalyzed",
+      "nameVibration": "Name Characteristics",
+      "noblePerson": "Partner / Guide",
+      "moonSign": "Moon Indicator",
+      "pada": "Pada",
+      "tithi": "Tithi",
+      "dominion": "Main Influence",
+      "observation": "Observation",
+      "sign": "Zodiac Sign",
+      "animal": "Zodiac Animal",
+      "ogham": "Ogham Indicator",
+      "meaning": "Core Meaning",
+      "patron": "Guide",
+      "bureau": "Category (Bureau)",
+      "branch": "Earthly Branch",
+      "nakshatra": "Lunar Mansion",
+      "element": "Element / Temperament",
+      "stars": "Key Elements",
+      "sephira": "Sephira",
+      "deepInsight": "In-depth Report",
+      "readFullStory": "Read Full Analysis",
+      "westernZodiac": "Western Zodiac",
+      "easternZodiac": "Eastern Zodiac",
+      "syncingData": "Syncing Cosmic Data...",
+      "returnToHome": "Return to Sanctuary",
+      "contactSupport": "Inquire with Oracles",
+      "typeLabel": "Type {type}",
+      "wingLabel": "w{wing}",
+      "alignment": "Environmental Alignment"
+    },
+    "beginJourney": "Begin Analysis",
+    "heroTitle": "Temperament & Tendency Database",
+    "heroSubtitle": "Discover your analytical self through the fusion of global frameworks and psychology",
+    "primalOrigin": "Primal Source",
+    "calibration": "Data Calibration",
+    "changeOrigin": "Edit Info",
+    "close": "Close",
+    "recalculate": "Re-analyze",
+    "rootsTitle": "Foundational Data",
+    "unveilRoots": "Verify your unique characteristic data",
+    "destinyCoordinates": "Tendency Coordinates",
+    "destinyCoordinatesSubtitle": "Your position in the analytical grid",
+    "todayInsight": {
+      "title": "Today's Deep Analysis",
+      "soulOracle": "Current Guide",
+      "innerResonance": "Inner Flow",
+      "manifestMore": "Plan proactive activities",
+      "synergyPulse": "Data Synergy"
+    },
+    "sajuForm": {
+      "title": "Temperament Analysis Data",
+      "description": "Enter your foundational temperament data.",
+      "name": "Given Name",
+      "birthDate": "Birth Date",
+      "birthTime": "Birth Hour",
+      "timeHint": "(Optional)",
+      "gender": "Analysis Type",
+      "female": "Female / Yin",
+      "male": "Male / Yang",
+      "initialize": "View Analysis Results"
+    },
+    "cards": {
+      "foundation": {
+        "subtitle": "Primary Temperament",
+        "description": "Your core analytical template"
+      },
+      "elemental": {
+        "title": "Elemental Flow",
+        "subtitle": "Inner Balance",
+        "description": "Energy distribution"
+      },
+      "celtic": {
+        "subtitle": "Arboreal Indicator",
+        "description": "Natural characteristics"
+      },
+      "egyptian": {
+        "subtitle": "Traditional Guide",
+        "description": "Ancient classification"
+      },
+      "sacredKin": {
+        "subtitle": "Time Indicator",
+        "description": "Cyclic patterns"
+      },
+      "grandArchive": {
+        "subtitle": "Detailed Record",
+        "description": "Statistical data"
+      },
+      "nakshatra": {
+        "subtitle": "Lunar Cycle",
+        "description": "Emotional characteristics"
+      },
+      "hellenistic": {
+        "subtitle": "Environmental Context",
+        "description": "Lifestyle pattern analysis"
+      },
+      "onomancy": {
+        "subtitle": "Vocal Characteristics",
+        "description": "Influence of name phonetics"
+      },
+      "socialAlchemy": {
+        "subtitle": "Connection Matrix",
+        "description": "How you interact socially"
+      },
+      "kabbalah": {
+        "subtitle": "Structural Analysis",
+        "description": "Systematic alignment"
+      },
+      "destiny": {
+        "subtitle": "Tendency Trajectory",
+        "description": "Potential growth path"
+      },
+      "hexagram": {
+        "subtitle": "ADaptability",
+        "description": "Current flow analysis"
+      },
+      "grandSynthesis": {
+        "title": "Integrated Analysis",
+        "description": "A comprehensive view of your data"
+      },
+      "cognition": {
+        "subtitle": "Mental Process",
+        "description": "Information processing style"
+      },
+      "psyche": {
+        "subtitle": "Psychological Depth",
+        "description": "The hidden layers of self"
+      },
+      "strategy": {
+        "subtitle": "Action Strategy",
+        "description": "How you realize objectives"
+      },
+      "vocation": {
+        "subtitle": "Professional Path",
+        "description": "Areas for social contribution"
+      },
+      "vitality": {
+        "title": "Activity Energy"
+      },
+      "resonance": {
+        "subtitle": "Unified Indicator",
+        "description": "Your comprehensive analysis result"
+      }
+    },
+    "sections": {
+      "testArchitecture": {
+        "title": "Analysis Algorithm",
+        "description": "The logic behind the system."
+      },
+      "emotionalResonance": {
+        "title": "Emotional Patterns",
+        "description": "The frequency of your heart."
+      },
+      "grandArchives": {
+        "title": "Integrated Archive",
+        "description": "The totality of recorded data."
+      }
+    },
+    "systems": {
+      "ziwei": "Zi Wei Analysis",
+      "vedic": "Vedic Analysis",
+      "kabbalah": "Structural Analysis"
+    },
+    "day": "Day Context",
+    "night": "Night Context",
+    "socialCognition": "Social Cognition",
+    "mapGrowth": "Growth Roadmap",
+    "resonanceVitalitySection": "Vitality & Temperament Analysis",
+    "resonanceVitalitySubtitle": "Harmonic Pattern Alignment",
+    "resonanceTitle": "Integrated Characteristics",
+    "dialogs": {
+      "archiveEntry": "Access Archive Data",
+      "recordVerified": "Analysis Verified",
+      "enneagram": {
+        "quote": "Tools are means to an end."
+      },
+      "humanDesign": {
+        "description": "Decode your practical lifestyle guidelines."
+      },
+      "mbti": {
+        "description": "Cognitive processing architecture."
+      },
+      "numerology": {
+        "description": "Numerical data analysis."
+      },
+      "riasec": {
+        "description": "Vocational interest profile."
+      },
+      "saju": {
+        "label": "Detailed Temperament Analysis",
+        "description": "Your elemental data profile.",
+        "polarity": "Yin-Yang Balance",
+        "element": "Main Tendency"
+      },
+      "elements": {
+        "title": "Elemental Distribution"
+      },
+      "tuning": {
+        "title": "Personalized Guide",
+        "color": "Recommended Color",
+        "number": "Practical Code",
+        "direction": "Environmental Direction",
+        "flower": "Botanical Data",
+        "gemstone": "Mineral Indicator",
+        "luckyStar": "Stellar Indicator",
+        "favorableDays": "Optimal Windows",
+        "synergy": "Integrated Guide"
+      }
+    },
+    "humanDesign": {
+      "title": "Lifestyle Strategy",
+      "types": {
+        "Generator": "Generator",
+        "Manifesting Generator": "Manifesting Generator",
+        "Manifestor": "Manifestor",
+        "Projector": "Projector",
+        "Reflector": "Reflector"
+      }
+    },
+    "akashic": {
+      "title": "Integrated Life Archive",
+      "description": "The Integrated Life Archive is a systematic compendium of personal data, tendencies, and characteristics recorded over time.",
+      "sections": {
+        "substance": "Core Temperament",
+        "alignment": "Environmental Alignment",
+        "vessel": "Behavioral Capacity",
+        "seal": "Data Confirmation",
+        "sanctuary": "Integrated Analysis Lab"
+      }
+    },
+    "action": {
+      "takeTest": "Start Analysis",
+      "pricing": "View Service Plans"
+    },
+    "dailyInsight": {
+      "title": "Today's Deep Analysis",
+      "soulOracle": "Current Guide",
+      "innerResonance": "Inner Flow",
+      "manifestMore": "Plan proactive activities",
+      "synergyPulse": "Data Synergy",
+      "cosmicEnergy": "Current Energy Indicator",
+      "flowerOfDay": "Today's Data",
+      "crystalOfPower": "Active Indicator",
+      "guidingStar": "Reference Factor"
+    },
+    "moonPhase": {
+      "New": "New Moon",
+      "Waxing Crescent": "Waxing Crescent",
+      "First Quarter": "First Quarter",
+      "Waxing Gibbous": "Waxing Gibbous",
+      "Full": "Full Moon",
+      "Waning Gibbous": "Waning Gibbous",
+      "Last Quarter": "Last Quarter",
+      "Waning Crescent": "Waning Crescent"
+    },
+    "modern": {
+      "economic": {
+        "title": "Economic School Analysis",
+        "subtitle": "Economic Orientation",
+        "factions": {
+          "ECON_CLASSICAL": {
+            "name": "Classical Economics",
+            "description": "Focuses on individual rational choices and market equilibrium. This approach values personal responsibility and the organic efficiency of balanced systems."
+          },
+          "ECON_KEYNESIAN": {
+            "name": "Keynesian Economics",
+            "description": "Emphasizes aggregate demand and proactive intervention. This perspective values collective stability and the wisdom of timely, supportive action."
+          },
+          "ECON_MONETARIST": {
+            "name": "Monetarism",
+            "description": "Focuses on money supply and long-term price stability. Values consistency, clear rules, and the predictability of fundamental systems."
+          },
+          "ECON_BEHAVIORAL": {
+            "name": "Behavioral Economics",
+            "description": "Applies psychological insights to explain economic decisions. Values human understanding, empathy, and the nuanced reality of everyday choices."
+          },
+          "ECON_AUSTRIAN": {
+            "name": "Austrian School",
+            "description": "Emphasizes entrepreneurial discovery and subjectivism. Values creative liberty, personal insight, and the unique value of individual perspectives."
+          }
+        }
+      },
+      "political": {
+        "title": "Political Orientation Analysis",
+        "subtitle": "Political Landscape",
+        "factions": {
+          "POL_CONSERVATISM": {
+            "name": "Conservatism",
+            "description": "Values tradition, stability, and gradual reform. This approach seeks to preserve hard-won wisdom while ensuring a secure and steady future."
+          },
+          "POL_LIBERALISM": {
+            "name": "Liberalism",
+            "description": "Emphasizes individual liberty, equality, and progress. Values the freedom to explore new possibilities and the inherent dignity of every person."
+          },
+          "POL_SOCIALISM": {
+            "name": "Socialism",
+            "description": "Focuses on social justice, equality, and community welfare. Values mutual support, collective well-being, and the strength found in solidarity."
+          },
+          "POL_LIBERTARIANISM": {
+            "name": "Libertarianism",
+            "description": "Prioritizes minimal intervention and maximum individual autonomy. Values self-determination and the protection of private space and initiative."
+          },
+          "POL_MODERATISM": {
+            "name": "Moderatism",
+            "description": "Seeks a balance between order and progress. Values pragmatic solutions, dialogue, and the finding of common ground for the greater good."
+          }
+        }
+      }
+    }
+  },
+  "onThisPage": "On This Page",
+  "universal": {
+    "labels": {
+      "undiscovered": "Unanalyzed"
+    },
+    "explanation": {
+      "morning_lark": "Early riser, most active in the morning.",
+      "night_owl": "Late sleeper, most active at night.",
+      "dolphin": "Light sleeper, sensitive to noise.",
+      "lion": "Early riser, needs rest by evening.",
+      "bear": "Follows solar cycles, needs steady rest.",
+      "wolf": "Night oriented, creative in the dark."
+    }
+  },
+  "akashic": {
+    "title": "Integrated Life Archive",
+    "subtitle": "DATA LIBRARY",
+    "description": "A systematic management for personal lifecycle data and tendency information.",
+    "close": "Close Archive",
+    "tabs": {
+      "essence": "Essence",
+      "destiny": "Path",
+      "biology": "Body"
+    },
+    "essence": {
+      "title": "Core of Temperament",
+      "quote": "Personal essence is stable, but its expression adapts to the environment.",
+      "soulFormula": "Core Formula",
+      "humanDesign": "Lifestyle Strategy",
+      "authority": "Decision Standard",
+      "locked": "Secure Access Required"
+    },
+    "destiny": {
+      "title": "Growth Path",
+      "lifePath": "Life Roadmap",
+      "seeker": "Info Seeker",
+      "animal": "Spirit Indicator"
+    },
+    "biology": {
+      "title": "Biological Context",
+      "chronotype": "Activity Cycle",
+      "constitution": "Physical Temperament"
+    }
+  },
+  "action": {
+    "pricing": "View Service Plans"
+  },
+  "dialogs": {
+    "archiveEntry": "Access Data Entry",
+    "recordVerified": "Analysis Verified",
+    "enneagram": {
+      "quote": "Schemas are tools for understanding."
+    },
+    "humanDesign": {
+      "description": "Decode your practical lifestyle strategy data."
+    },
+    "mbti": {
+      "description": "Cognitive processing architecture."
+    },
+    "numerology": {
+      "description": "Analytical data-driven insights."
+    },
+    "riasec": {
+      "description": "Vocational interests and aptitude."
+    },
+    "saju": {
+      "label": "Detailed Analysis",
+      "description": "Elemental profile data.",
+      "polarity": "Balance",
+      "element": "Main Tendency"
+    },
+    "elements": {
+      "title": "Elemental Distribution"
+    },
+    "tuning": {
+      "title": "Personalized Detailed Guide",
+      "color": "Optimal Color",
+      "number": "Active Code",
+      "direction": "Optimal Environment",
+      "flower": "Botanical Data",
+      "gemstone": "Mineral Indicator",
+      "luckyStar": "Environmental Factor",
+      "favorableDays": "Optimal Windows",
+      "synergy": "Integrated Synergy"
+    }
+  },
+  "egenteto": {
+    "result": {
+      "title": "Integrated Analysis Lab",
+      "traits": "Temperament Signature",
+      "description": "Existence Analysis Report",
+      "compatibility": "Harmonious Interaction",
+      "shareText": "My analysis result: {type}. View here: {url}",
+      "share": "Share Results",
+      "copy": "Copy Link",
+      "copied": "Copied!",
+      "retake": "Refresh Analysis",
+      "solarLineage": "Day-side Data",
+      "lunarLineage": "Night-side Data"
+    },
+    "saveResult": "Recording data into the archive...",
+    "saveError": "Analysis obscured. Please try again.",
+    "personalityAnalysis": "Analytical Deconstruction",
+    "compatibilityChartTitle": "Harmony Spectrum",
+    "compatibilityLabel": "Resonance Level",
+    "insights": "Analysis Summary",
+    "match": "Convergence Point",
+    "awards": "Key Indicators",
+    "growth": "Growth Path",
+    "traitsGuide": "Vocabulary of Temperament",
+    "strengths": "Primal Assets",
+    "growthAreas": "Areas for Refinement",
+    "coupleTest": "Relational Synergy Diagnosis",
+    "coupleTestDesc": "Measures data alignment between two individuals.",
+    "loveLanguage": "Communication Dialects",
+    "loveLanguageDesc": "How your intent reaches others.",
+    "idealDate": "Optimal Communication",
+    "growthRoadmap": "Growth Guide",
+    "growthComingSoon": "Detailed Tracking Update Scheduled",
+    "growthComingSoonDesc": "Continuous development data will be available soon.",
+    "saveImage": "Save Result",
+    "backToHome": "Return to Dashboard",
+    "perfectMatch": "High synergy reached with {name}!"
+  },
+  "chosun": {
+    "title": "Historical Faction Analysis (Chosun)",
+    "subtitle": "Fusion of Traditional Values and Social Tendencies",
+    "description": "Analyze your innate nature and behavioral tendencies in a historical context.",
+    "labels": {
+      "innate": "Innate Analytical Nature (Inner)",
+      "behavioral": "External Execution Pattern (Outer)",
+      "comparison": "Alignment Score",
+      "faction": "Matched Scholarly Faction"
+    },
+    "factions": {
+      "dongin": {
+        "name": "Dong-in (Idealists)",
+        "description": "A scholarly temperament that values academic purity and moral practice, with a warm passion for realizing an ideal society."
+      },
+      "seoin": {
+        "name": "Seo-in (Realists)",
+        "description": "A pragmatic temperament that values rational efficiency and systematic order, focusing on solving real-world problems and ensuring stability."
+      },
+      "namin": {
+        "name": "Nam-in (Moderates)",
+        "description": "A warm temperament that seeks academic depth and inclusive moderation, maintaining a harmonious balance by avoiding extremes."
+      },
+      "bukin": {
+        "name": "Buk-in (Reformists)",
+        "description": "An academic practitioner temperament with a strong sense of action and a bold reformist spirit, valuing belief-driven results."
+      },
+      "noron": {
+        "name": "No-ron (Traditionalists)",
+        "description": "A grounded temperament that safeguards traditional order and legitimacy, seeking stability through solid logic and organizational strength."
+      },
+      "soron": {
+        "name": "So-ron (Progressives)",
+        "description": "A practical temperament with flexible thinking and progressive openness, leading meaningful change by embracing diverse voices."
+      },
+      "sipa": {
+        "name": "Si-pa (Pragmatists)",
+        "description": "A realist temperament that values timely flexibility and professional sense, showing optimal responses to a changing environment."
+      },
+      "byeokpa": {
+        "name": "Byeok-pa (Hardliners)",
+        "description": "A strict and responsible temperament that maintains firm beliefs and noble integrity, never compromising on principles regardless of the situation."
+      }
+    },
+    "traits": {
+      "academic": "Academic",
+      "principled": "Principled",
+      "idealistic": "Idealistic",
+      "practical": "Practical",
+      "efficient": "Efficient",
+      "stable": "Stable",
+      "moderate": "Moderate",
+      "harmonious": "Harmonious",
+      "balanced": "Balanced",
+      "determined": "Determined",
+      "reformist": "Reformist",
+      "bold": "Bold",
+      "traditional": "Traditional",
+      "conservative": "Conservative",
+      "rigorous": "Rigorous",
+      "flexible": "Flexible",
+      "open": "Open",
+      "inclusive": "Inclusive",
+      "adaptive": "Adaptive",
+      "timely": "Timely",
+      "pragmatic": "Pragmatic",
+      "uncompromising": "Uncompromising",
+      "integrity": "Integrity",
+      "orthodox": "Orthodox"
+    }
+  },
+  "lucky": {
+    "color": {
+      "red": "Red",
+      "blue": "Blue",
+      "green": "Green",
+      "yellow": "Yellow",
+      "black": "Black",
+      "white": "White"
+    },
+    "direction": {
+      "north": "North",
+      "south": "South",
+      "east": "East",
+      "west": "West",
+      "center": "Center"
+    },
+    "flower": {
+      "sunflower": "Sunflower",
+      "rose": "Rose",
+      "lily": "Lily",
+      "lotus": "Lotus",
+      "orchid": "Orchid"
+    },
+    "gemstone": {
+      "topaz": "Topaz",
+      "ruby": "Ruby",
+      "diamond": "Diamond",
+      "sapphire": "Sapphire",
+      "emerald": "Emerald"
+    }
+  },
+  "manifest": {
+    "big5": {
+      "title": "Big 5 Personality Test",
+      "description": "Discover your true self through the scientific lens of the five major personality traits."
+    }
+  },
+  "assessment": {
+    "start": "Start Assessment",
+    "resilience": {
+      "title": "Resilience Assessment",
+      "intro": "Measure your ability to bounce back from life's challenges.",
+      "badge": "Diagnostic",
+      "result": {
+        "level": "Resilience Level",
+        "score": "Score",
+        "profile_title": "Profile Assessment",
+        "guidance_title": "Guidance & Advice"
+      }
+    }
+  },
+  "catalog": {
+    "title": "Ontology Catalog",
+    "description": "Browse all available ontology assessments"
+  },
+  "cognitiveBias": {
+    "title": "Cognitive Bias",
+    "description": "Identify your thinking patterns and biases"
+  },
+  "consumption": {
+    "title": "Consumption Style",
+    "description": "Analyze your relationship with money and value"
+  },
+  "learningStyle": {
+    "title": "Learning Style",
+    "description": "Discover your optimal learning strategy"
+  },
+  "badge": "Ontology",
+  "resultTitle": "Analysis Result",
+  "restart": "Restart Analysis",
+  "title": "Ontological Framework",
+  "mayan": {
+    "systemName": "Mayan Dreamspell",
+    "narrative": "Galactic Synchronization",
+    "solarSeal": "Solar Seal",
+    "tone": "Galactic Tone"
+  },
+  "celtic": {
+    "systemName": "Celtic Tree Zodiac",
+    "narrative": "Wisdom of the trees",
+    "treeSign": "Tree Sign",
+    "ogham": "Ogham"
+  },
+  "Link copied to clipboard!": "Link copied to clipboard!"
+}
