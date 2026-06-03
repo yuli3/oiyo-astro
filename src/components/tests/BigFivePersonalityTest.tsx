@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import AnimatedNumber from '../ui/AnimatedNumber'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -391,7 +392,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
   const secondary = sorted[1]
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-6 animate-fadeInUp">
       <div className="text-center space-y-2">
         <p className="text-sm text-muted-foreground">{lb.yourProfile}</p>
         <h1 className="text-2xl font-bold">{lb.title}</h1>
@@ -403,14 +404,14 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
           <p className="font-bold text-lg" style={{ color: DIM_META[dominant][locale].color }}>
             {DIM_META[dominant][locale].label}
           </p>
-          <p className="text-xs text-muted-foreground">{scores[dominant]}%</p>
+          <p className="text-xs text-muted-foreground"><AnimatedNumber value={scores[dominant]} suffix="%" /></p>
         </div>
         <div className="rounded-xl border bg-card p-3 space-y-1">
           <p className="text-xs text-muted-foreground">{lb.secondaryTrait}</p>
           <p className="font-bold text-lg" style={{ color: DIM_META[secondary][locale].color }}>
             {DIM_META[secondary][locale].label}
           </p>
-          <p className="text-xs text-muted-foreground">{scores[secondary]}%</p>
+          <p className="text-xs text-muted-foreground"><AnimatedNumber value={scores[secondary]} suffix="%" /></p>
         </div>
       </div>
 
@@ -425,7 +426,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
             <div key={d} className="space-y-1">
               <div className="flex justify-between items-center text-sm">
                 <span className="font-medium" style={{ color: meta.color }}>{meta.label}</span>
-                <span className="text-muted-foreground text-xs">{levelLabel} {pct}%</span>
+                <span className="text-muted-foreground text-xs">{levelLabel} <AnimatedNumber value={pct} suffix="%" /></span>
               </div>
               <div
                 className="h-2 rounded-full bg-muted overflow-hidden"

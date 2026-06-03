@@ -13,7 +13,7 @@ const year = new Date().getFullYear();
 
 <footer class="bg-green-950 text-green-200 mt-20">
   <div class="max-w-6xl mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
       <!-- Brand -->
       <div>
         <a href={localePath(locale, '/')} class="font-black text-xl text-white">OIYO</a>
@@ -40,6 +40,31 @@ const year = new Date().getFullYear();
         <ul class="space-y-2 text-sm">
           <li><a href={localePath(locale, '/legal/privacy')} class="hover:text-white transition-colors">{t('nav.privacy')}</a></li>
           <li><a href={localePath(locale, '/legal/terms')} class="hover:text-white transition-colors">{t('nav.terms')}</a></li>
+        </ul>
+      </div>
+
+      <!-- Oiyo Family -->
+      <div>
+        <h3 class="text-xs font-bold uppercase tracking-widest text-green-400 mb-3">Explore More</h3>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <a href={`https://blog.oiyo.net/${locale}/?utm_source=oiyo&utm_medium=footer&utm_campaign=family_nav`}
+               target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+              OIYO Blog →
+            </a>
+          </li>
+          <li>
+            <a href={`https://wiki.oiyo.net/${locale}/?utm_source=oiyo&utm_medium=footer&utm_campaign=family_nav`}
+               target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+              OIYO Wiki →
+            </a>
+          </li>
+          <li>
+            <a href="https://ahoxy.com?utm_source=oiyo&utm_medium=footer&utm_campaign=family_nav"
+               target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+              AHOXY Tools →
+            </a>
+          </li>
         </ul>
       </div>
     </div>

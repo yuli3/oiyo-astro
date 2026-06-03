@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import AnimatedNumber from '../ui/AnimatedNumber'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -673,7 +674,7 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
                 <span className="font-medium" style={{ color: ENNEAGRAM_COLORS[t] }}>
                   {tr.emoji} {lb.typeLabel} {t} — {tr.name}
                 </span>
-                <span className="text-muted-foreground text-xs">{scores[t]}pt</span>
+                <span className="text-muted-foreground text-xs"><AnimatedNumber value={scores[t]} suffix="pt" /></span>
               </div>
               <div
                 className="h-2 rounded-full bg-muted overflow-hidden"

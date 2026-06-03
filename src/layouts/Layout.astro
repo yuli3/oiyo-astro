@@ -11,13 +11,28 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description = 'OIYO — 당신의 운명을 탐험하세요', locale, ogImage } = Astro.props;
+const BCP47: Record<string, string> = {
+  en: 'en', ko: 'ko', ja: 'ja', fr: 'fr', es: 'es',
+  zh: 'zh-CN', cn: 'zh-TW',
+};
+const descriptionDefaults: Record<string, string> = {
+  en: 'OIYO — Explore your personality, destiny, and self',
+  ko: 'OIYO — 당신의 운명을 탐험하세요',
+  ja: 'OIYO — 自分の個性と運命を探ろう',
+  fr: 'OIYO — Explorez votre personnalité et votre destin',
+  es: 'OIYO — Explora tu personalidad y tu destino',
+  zh: 'OIYO — 探索你的个性与命运',
+  cn: 'OIYO — 探索您的個性與命運',
+};
+const { title, description = descriptionDefaults[locale] ?? descriptionDefaults['en'], locale, ogImage } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const isCjk = ['ko', 'ja', 'cn'].includes(locale);
+const defaultOgImage = new URL('/og-image.png', Astro.site).toString();
+const resolvedOgImage = ogImage ?? defaultOgImage;
 ---
 
 <!doctype html>
-<html lang={locale} class={isCjk ? 'text-cjk' : ''}>
+<html lang={BCP47[locale] ?? locale} class={isCjk ? 'text-cjk' : ''}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -31,7 +46,41 @@ const isCjk = ['ko', 'ja', 'cn'].includes(locale);
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonicalUrl} />
     <meta property="og:type" content="website" />
-    {ogImage && <meta property="og:image" content={ogImage} />}
+    <meta property="og:site_name" content="OIYO" />
+    <meta property="og:locale" content={(BCP47[locale] ?? 'en').replace('-', '_')} />
+    <meta property="og:image" content={resolvedOgImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={resolvedOgImage} />
+    <!-- JSON-LD: WebSite + Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": `${Astro.site}#website`,
+          "url": Astro.site,
+          "name": "OIYO",
+          "description": descriptionDefaults['en'],
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": { "@type": "EntryPoint", "urlTemplate": `${Astro.site}${locale}/search?q={search_term_string}` },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": `${Astro.site}#organization`,
+          "name": "OIYO",
+          "url": Astro.site,
+          "logo": { "@type": "ImageObject", "url": `${Astro.site}favicon.svg` }
+        }
+      ]
+    })} />
 
     <!-- hreflang for all locales -->
     <link rel="alternate" hreflang="en" href={new URL(`/en${Astro.url.pathname.replace(/^\/[a-z]{2}/, '')}`, Astro.site)} />

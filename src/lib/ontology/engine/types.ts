@@ -74,7 +74,7 @@ export interface UniversalProfile {
   animalZodiac: AnimalZodiacSign;
 
   biorhythms?: BiorhythmData;
-  bloodTypeInfo: BloodTypePersonality;
+  bloodTypeInfo: BloodTypePersonality | null;
   // === ANALYTICS / SSOT ===
   consistencyScore?: number;
   cosmic?: CelestialCoordinates;

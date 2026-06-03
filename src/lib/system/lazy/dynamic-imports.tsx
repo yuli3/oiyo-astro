@@ -16,8 +16,8 @@ export const RechartsRadarChartLazy = dynamic(
   () => import("recharts").then((mod) => ({ default: mod.RadarChart })),
   {
     loading: () => (
-      <div className="w-full h-64 bg-green-50 dark:bg-green-800 rounded-lg animate-pulse flex items-center justify-center">
-        <span className="text-green-600 dark:text-green-600/60">
+      <div className="w-full h-64 bg-green-50 rounded-lg animate-pulse flex items-center justify-center">
+        <span className="text-green-600">
           Loading chart...
         </span>
       </div>

@@ -1,0 +1,49 @@
+# Cloudflare Workers cache & security headers
+# oiyo.net
+
+# ──────────────────────────────────────────
+# STATIC ASSETS — immutable long cache
+# ──────────────────────────────────────────
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+  X-Content-Type-Options: nosniff
+
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# ──────────────────────────────────────────
+# IMAGES & ICONS — 1 week CDN
+# ──────────────────────────────────────────
+/*.png
+  Cache-Control: public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400
+
+/*.ico
+  Cache-Control: public, max-age=604800, s-maxage=604800
+
+/*.svg
+  Cache-Control: public, max-age=604800, s-maxage=604800
+  X-Content-Type-Options: nosniff
+
+/img/*
+  Cache-Control: public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400
+
+# ──────────────────────────────────────────
+# SEO FILES — short revalidation
+# ──────────────────────────────────────────
+/robots.txt
+  Cache-Control: public, max-age=86400
+
+/sitemap*.xml
+  Cache-Control: public, max-age=3600, s-maxage=86400
+
+# ──────────────────────────────────────────
+# ALL PAGES — security headers
+# ──────────────────────────────────────────
+/*
+  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://pagead2.googlesyndication.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com; frame-src https://pagead2.googlesyndication.com; object-src 'none'; base-uri 'self';

@@ -92,4 +92,55 @@
     to { opacity: 1; transform: translateY(0); }
   }
   .animate-fadeInUp { animation: fadeInUp 0.5s ease-out; }
+
+  /* ── Text streaming animations (from Text Streaming design) ── */
+
+  /* word-fade: opacity reveal per word */
+  .stream-word { opacity: 0; transition: opacity 0.55s ease; }
+  .stream-word.revealed { opacity: 1; }
+
+  /* word-slide: overflow-clipped slide up */
+  .stream-slide-wrap {
+    display: inline-block;
+    overflow: hidden;
+    line-height: 1.45;
+    vertical-align: bottom;
+  }
+  .stream-slide {
+    display: inline-block;
+    transform: translateY(105%);
+    transition: transform 0.42s cubic-bezier(0.2, 0.7, 0.2, 1);
+  }
+  .stream-slide.revealed { transform: translateY(0); }
+
+  /* word-blur: blur → sharp reveal */
+  .stream-blur {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(7px);
+    transition: filter 0.55s ease, opacity 0.35s ease;
+  }
+  .stream-blur.revealed { opacity: 1; filter: blur(0); }
+
+  /* char-shimmer: per-character random-order fade */
+  .stream-char {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateY(2px);
+    transition: opacity 0.45s ease, filter 0.45s ease, transform 0.45s ease;
+  }
+  .stream-char.revealed { opacity: 1; filter: blur(0); transform: translateY(0); }
+
+  /* word-drop: drop-in with bounce */
+  .stream-drop-wrap { display: inline-block; }
+  .stream-drop {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      transform 0.52s cubic-bezier(0.34, 1.56, 0.5, 1),
+      opacity 0.26s ease;
+  }
+  .stream-drop.revealed { opacity: 1; transform: translateY(0); }
 }

@@ -186,7 +186,7 @@ export function OntologyClient() {
               minute: parseInt(profile.birthTime.split(":")[1]),
             }
           : undefined,
-        bloodType: (profile.bloodType as "A" | "AB" | "B" | "O") || "A",
+        bloodType: profile.bloodType as "A" | "AB" | "B" | "O" | undefined,
         fullName: profile.name || undefined,
         gender: profile.gender || "female",
       });

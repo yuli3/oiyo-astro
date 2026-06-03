@@ -39,10 +39,10 @@ export const ResultCard: React.FC<ResultCardProps> = ({
   };
 
   const textStyles = {
-    amber: "text-amber-600 dark:text-amber-400",
-    green: "text-green-600 dark:text-green-400",
-    orange: "text-orange-600 dark:text-orange-400",
-    teal: "text-teal-600 dark:text-teal-400",
+    amber: "text-amber-600",
+    green: "text-green-600",
+    orange: "text-orange-600",
+    teal: "text-teal-600",
   };
 
   return (

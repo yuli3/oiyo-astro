@@ -92,7 +92,7 @@ export function calculateBasicProfile(input: UniversalInput): any {
 
   // 5. Blood Type
   // Uses canonical data now (IDs/Keys)
-  const bloodTypeInfo = BLOOD_TYPE_DATA[input.bloodType || "A"];
+  const bloodTypeInfo = input.bloodType ? BLOOD_TYPE_DATA[input.bloodType] : null;
 
   return {
     animalZodiac,
