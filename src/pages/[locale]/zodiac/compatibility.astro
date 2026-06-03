@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import ZodiacCompatibilityCalculator from '../../../components/tools/ZodiacCompatibilityCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '별자리 궁합 계산기 — 두 별자리의 궁합을 알아보세요',
+    description: '두 사람의 별자리를 입력하면 연애, 우정, 가치관, 소통 궁합 점수를 분석해드립니다.',
+  },
+  en: {
+    title: 'Zodiac Compatibility Calculator — Check Your Star Sign Match',
+    description: 'Enter two zodiac signs to get love, friendship, values, and communication compatibility scores.',
+  },
+  ja: {
+    title: '星座相性計算機 — 二つの星座の相性を調べる',
+    description: '二人の星座を入力すると、恋愛・友情・価値観・コミュニケーションの相性スコアを分析します。',
+  },
+  cn: {
+    title: '星座配对计算器 — 测试两个星座的契合度',
+    description: '输入两个星座，分析恋爱、友情、价值观和沟通的配对分数。',
+  },
+  fr: {
+    title: 'Calculateur de Compatibilité Zodiacale — Vérifiez votre affinité',
+    description: 'Entrez deux signes du zodiaque pour obtenir des scores de compatibilité amoureuse, amicale, de valeurs et de communication.',
+  },
+  es: {
+    title: 'Calculadora de Compatibilidad Zodiacal — Comprueba tu afinidad',
+    description: 'Ingresa dos signos del zodiaco para obtener puntuaciones de compatibilidad amorosa, amistosa, de valores y comunicación.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <ZodiacCompatibilityCalculator client:load locale={locale} />
+  </main>
+</Layout>

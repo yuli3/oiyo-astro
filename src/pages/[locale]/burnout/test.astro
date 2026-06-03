@@ -1,0 +1,25 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import BurnoutTest from '../../../components/tests/BurnoutTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '번아웃 테스트 — 나는 번아웃인가?', description: '감정 소진·이인화·성취감 저하 3가지 차원으로 번아웃 위험도를 측정하고 회복 방법을 제시합니다.' },
+  en: { title: 'Burnout Test — Are You Burned Out?', description: 'Measure your burnout risk across emotional exhaustion, depersonalization, and personal accomplishment, with recovery tips.' },
+  ja: { title: 'バーンアウトテスト — 燃え尽き症候群チェック', description: '感情的消耗・離人化・達成感の低下の3次元でバーンアウトリスクを測定し、回復方法を提示します。' },
+  cn: { title: '职业倦怠测试 — 你倦怠了吗？', description: '从情绪耗竭、去人格化和个人成就感三个维度测量你的倦怠风险，并提供恢复建议。' },
+  fr: { title: "Test de Burnout — Êtes-vous épuisé(e)?", description: "Mesurez votre risque de burnout selon l'épuisement émotionnel, la dépersonnalisation et l'accomplissement personnel, avec des conseils de récupération." },
+  es: { title: 'Test de Burnout — ¿Estás agotado/a?', description: 'Mide tu riesgo de burnout en agotamiento emocional, despersonalización y logro personal, con consejos de recuperación.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <BurnoutTest client:load locale={locale} />
+  </main>
+</Layout>

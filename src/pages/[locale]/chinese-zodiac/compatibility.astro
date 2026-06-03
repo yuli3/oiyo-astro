@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import ChineseZodiacCompatibility from '../../../components/tools/ChineseZodiacCompatibility';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '띠 궁합 계산기 — 12띠 궁합 분석',
+    description: '두 사람의 태어난 해 띠를 입력하면 연애·결혼·직장 궁합 점수와 분석을 알려드립니다.',
+  },
+  en: {
+    title: 'Chinese Zodiac Compatibility — 12 Animal Sign Match',
+    description: 'Enter two birth years to get love, marriage, and work compatibility scores based on Chinese zodiac signs.',
+  },
+  ja: {
+    title: '干支相性計算機 — 12干支の相性分析',
+    description: '二人の生まれ年の干支を入力すると、恋愛・結婚・仕事の相性スコアを分析します。',
+  },
+  cn: {
+    title: '生肖配对计算器 — 十二生肖配对分析',
+    description: '输入两人的出生年份生肖，获取恋爱、婚姻和工作配对分数与分析。',
+  },
+  fr: {
+    title: 'Compatibilité Zodiaque Chinois — 12 Signes Animaux',
+    description: 'Entrez deux années de naissance pour obtenir des scores de compatibilité amoureuse, maritale et professionnelle.',
+  },
+  es: {
+    title: 'Compatibilidad Zodiaco Chino — 12 Signos Animales',
+    description: 'Ingresa dos años de nacimiento para obtener puntuaciones de compatibilidad amorosa, matrimonial y laboral.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <ChineseZodiacCompatibility client:load locale={locale} />
+  </main>
+</Layout>

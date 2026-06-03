@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import EnneagramTest from '../../../components/tests/EnneagramTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '에니어그램 테스트 — 나의 9가지 성격 유형 찾기',
+    description: '개혁가부터 평화주의자까지 — 27가지 문항으로 나의 핵심 동기와 두려움을 탐색하세요.',
+  },
+  en: {
+    title: 'Enneagram Test — Discover Your Personality Type',
+    description: 'From Reformer to Peacemaker — explore your core motivations and fears with 27 questions.',
+  },
+  ja: {
+    title: 'エニアグラムテスト — 9つの性格タイプを発見',
+    description: '改革者から平和主義者まで — 27問で自分の核心的な動機と恐怖を探求しましょう。',
+  },
+  cn: {
+    title: '九型人格测试 — 发现您的性格类型',
+    description: '从改革者到和平缔造者 — 通过27道题探索您的核心动机与恐惧。',
+  },
+  fr: {
+    title: 'Test Ennéagramme — Découvrez Votre Type de Personnalité',
+    description: "Du Réformateur au Pacificateur — explorez vos motivations et peurs fondamentales avec 27 questions.",
+  },
+  es: {
+    title: 'Test Eneagrama — Descubre Tu Tipo de Personalidad',
+    description: 'Del Reformador al Pacificador — explora tus motivaciones y miedos centrales con 27 preguntas.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <EnneagramTest client:load locale={locale} />
+  </main>
+</Layout>

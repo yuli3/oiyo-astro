@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import NumerologyCalculator from '../../../components/tools/NumerologyCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '수비학 계산기 — 생년월일로 알아보는 나의 숫자',
+    description: '생년월일과 이름으로 생명수, 운명수, 영혼수를 계산하고 수비학적 의미를 분석해보세요.',
+  },
+  en: {
+    title: 'Numerology Calculator — Discover Your Life Path Number',
+    description: 'Calculate your Life Path, Destiny, and Soul Urge numbers from your birth date and name.',
+  },
+  ja: {
+    title: '数秘術計算機 — 生年月日で自分の数字を知る',
+    description: '生年月日と名前からライフパスナンバー、運命数、魂の数字を計算して数秘術的意味を分析します。',
+  },
+  cn: {
+    title: '数字命理计算器 — 用生日了解你的数字',
+    description: '通过生日和姓名计算生命灵数、命运数和灵魂数，了解数字命理的意义。',
+  },
+  fr: {
+    title: 'Calculateur de Numérologie — Découvrez votre Nombre de Vie',
+    description: 'Calculez vos nombres de Chemin de Vie, Destin et Désir de l\'Âme à partir de votre date de naissance.',
+  },
+  es: {
+    title: 'Calculadora de Numerología — Descubre tu Número de Vida',
+    description: 'Calcula tus números de Camino de Vida, Destino y Deseo del Alma a partir de tu fecha de nacimiento.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <NumerologyCalculator client:load locale={locale} />
+  </main>
+</Layout>

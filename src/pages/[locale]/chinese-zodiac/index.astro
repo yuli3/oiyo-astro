@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import ChineseZodiac from '../../../components/tools/ChineseZodiac';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '띠 성격 분석 — 12띠별 성격, 운세, 궁합',
+    description: '태어난 해의 띠로 나의 성격, 강점, 약점, 띠궁합을 알아보세요.',
+  },
+  en: {
+    title: 'Chinese Zodiac — Personality by Animal Sign',
+    description: 'Discover your Chinese zodiac animal personality, strengths, weaknesses, and compatibility based on your birth year.',
+  },
+  ja: {
+    title: '十二支性格分析 — 干支別の性格・運勢・相性',
+    description: '生まれ年の干支で性格・強み・弱み・相性を分析します。',
+  },
+  cn: {
+    title: '十二生肖性格分析 — 生肖性格、运势与配对',
+    description: '根据出生年份的生肖，了解你的性格、优势、劣势和生肖配对。',
+  },
+  fr: {
+    title: 'Zodiaque Chinois — Personnalité par Signe Animal',
+    description: 'Découvrez la personnalité, les forces, faiblesses et compatibilité de votre signe du zodiaque chinois selon votre année de naissance.',
+  },
+  es: {
+    title: 'Zodiaco Chino — Personalidad por Signo Animal',
+    description: 'Descubre la personalidad, fortalezas, debilidades y compatibilidad de tu signo del zodiaco chino según tu año de nacimiento.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <ChineseZodiac client:load locale={locale} />
+  </main>
+</Layout>

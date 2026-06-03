@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import SajuCalculator from '../../../components/tools/SajuCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '사주 계산기 — 나의 사주팔자와 오행 분석',
+    description: '생년월일시를 입력하면 천간·지지·오행을 분석해 나의 사주팔자를 알려드립니다.',
+  },
+  en: {
+    title: 'Saju Calculator — Chinese Four Pillars of Destiny',
+    description: 'Enter your birth date and time to analyze your Heavenly Stems, Earthly Branches, and Five Elements.',
+  },
+  ja: {
+    title: '四柱計算機 — 生年月日時で四柱八字を分析',
+    description: '生年月日時を入力して、天干・地支・五行を分析し、あなたの四柱命式を表示します。',
+  },
+  cn: {
+    title: '四柱计算器 — 分析你的四柱八字和五行',
+    description: '输入生辰八字，分析天干、地支、五行，了解你的命理。',
+  },
+  fr: {
+    title: 'Calculateur Saju — Les Quatre Piliers du Destin',
+    description: 'Entrez votre date et heure de naissance pour analyser vos Tiges Célestes, Branches Terrestres et Cinq Éléments.',
+  },
+  es: {
+    title: 'Calculadora Saju — Los Cuatro Pilares del Destino',
+    description: 'Ingresa tu fecha y hora de nacimiento para analizar tus Tallos Celestiales, Ramas Terrestres y Cinco Elementos.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <SajuCalculator client:load locale={locale} />
+  </main>
+</Layout>

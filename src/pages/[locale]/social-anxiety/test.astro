@@ -1,0 +1,24 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import SocialAnxietyTest from '../../../components/tests/SocialAnxietyTest';
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '사회불안 테스트 — 대인관계 불안 자가진단', description: '사회적 상황에서의 불안·회피·자의식 수준을 측정하고 사회불안장애 위험도를 알아보세요.' },
+  en: { title: 'Social Anxiety Test — Interpersonal Anxiety Self-Assessment', description: 'Measure your anxiety, avoidance, and self-consciousness in social situations and assess your social anxiety risk.' },
+  ja: { title: '社交不安テスト — 対人関係不安自己診断', description: '社会的状況での不安・回避・自意識レベルを測定し、社交不安障害リスクを確認します。' },
+  cn: { title: '社交焦虑测试 — 人际关系焦虑自我评估', description: '测量你在社交场合的焦虑、回避和自我意识水平，评估社交焦虑障碍风险。' },
+  fr: { title: "Test d'Anxiété Sociale — Auto-évaluation des Relations Interpersonnelles", description: "Mesurez votre anxiété, évitement et conscience de soi dans les situations sociales et évaluez votre risque d'anxiété sociale." },
+  es: { title: 'Test de Ansiedad Social — Autoevaluación Interpersonal', description: 'Mide tu ansiedad, evitación y autoconciencia en situaciones sociales y evalúa tu riesgo de trastorno de ansiedad social.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <SocialAnxietyTest client:load locale={locale} />
+  </main>
+</Layout>

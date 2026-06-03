@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import ZodiacPersonality from '../../../components/tools/ZodiacPersonality';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '별자리 성격 분석 — 12별자리별 성격과 특징',
+    description: '생일을 입력하면 나의 별자리와 성격, 강점, 약점, 궁합을 분석해드립니다.',
+  },
+  en: {
+    title: 'Zodiac Personality — Traits & Characteristics by Sign',
+    description: 'Enter your birthday to discover your zodiac sign\'s personality, strengths, weaknesses, and compatibility.',
+  },
+  ja: {
+    title: '星座性格分析 — 12星座の性格と特徴',
+    description: '誕生日を入力すると、あなたの星座の性格、強み、弱み、相性を分析します。',
+  },
+  cn: {
+    title: '星座性格分析 — 12星座性格与特征',
+    description: '输入生日，了解你的星座性格、优势、劣势和星座配对。',
+  },
+  fr: {
+    title: 'Personnalité Zodiacale — Traits par Signe',
+    description: 'Entrez votre anniversaire pour découvrir la personnalité, les forces, faiblesses et compatibilité de votre signe.',
+  },
+  es: {
+    title: 'Personalidad Zodiacal — Rasgos por Signo',
+    description: 'Ingresa tu cumpleaños para descubrir la personalidad, fortalezas, debilidades y compatibilidad de tu signo.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <ZodiacPersonality client:load locale={locale} />
+  </main>
+</Layout>

@@ -1,0 +1,24 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import DepressionScreeningTest from '../../../components/tests/DepressionScreeningTest';
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '우울감 선별 테스트 — PHQ-9 기반 자가진단', description: 'PHQ-9 기반 9가지 문항으로 우울감 수준을 측정하고 전문가 도움이 필요한지 알아보세요.' },
+  en: { title: 'Depression Screening Test — PHQ-9 Self-Assessment', description: 'Measure your depression level with 9 PHQ-9 based questions and find out if professional help is needed.' },
+  ja: { title: 'うつ病スクリーニングテスト — PHQ-9自己診断', description: 'PHQ-9に基づく9つの質問でうつ病レベルを測定し、専門家の助けが必要かどうかを確認します。' },
+  cn: { title: '抑郁筛查测试 — 基于PHQ-9自我评估', description: '通过9道PHQ-9题目测量抑郁程度，了解是否需要专业帮助。' },
+  fr: { title: 'Test de Dépistage de la Dépression — Auto-évaluation PHQ-9', description: "Mesurez votre niveau de dépression avec 9 questions basées sur le PHQ-9 et déterminez si une aide professionnelle est nécessaire." },
+  es: { title: 'Test de Detección de Depresión — Autoevaluación PHQ-9', description: 'Mide tu nivel de depresión con 9 preguntas basadas en el PHQ-9 y descubre si necesitas ayuda profesional.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <DepressionScreeningTest client:load locale={locale} />
+  </main>
+</Layout>

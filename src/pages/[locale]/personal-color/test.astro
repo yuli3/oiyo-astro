@@ -1,0 +1,25 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import PersonalColorTest from '../../../components/tests/PersonalColorTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '퍼스널컬러 테스트 — 나에게 어울리는 색은?', description: '봄·여름·가을·겨울 4계절 유형과 웜톤·쿨톤을 진단해드립니다.' },
+  en: { title: 'Personal Color Test — Which Colors Suit You?', description: 'Discover your seasonal personal color type — Spring, Summer, Autumn, or Winter — and your warm or cool tone.' },
+  ja: { title: 'パーソナルカラーテスト — あなたに似合う色は？', description: '春・夏・秋・冬の4シーズンタイプとウォームトーン・クールトーンを診断します。' },
+  cn: { title: '个人色彩测试 — 什么颜色适合你？', description: '诊断你的四季个人色彩类型——春、夏、秋、冬——以及暖色调或冷色调。' },
+  fr: { title: 'Test de Couleur Personnelle — Quelles couleurs vous conviennent?', description: 'Découvrez votre type de couleur saisonnière — Printemps, Été, Automne ou Hiver — et votre tonalité chaude ou froide.' },
+  es: { title: 'Test de Color Personal — ¿Qué colores te favorecen?', description: 'Descubre tu tipo de color estacional — Primavera, Verano, Otoño o Invierno — y tu tono cálido o frío.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <PersonalColorTest client:load locale={locale} />
+  </main>
+</Layout>

@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import BigFivePersonalityTest from '../../../components/tests/BigFivePersonalityTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '빅파이브 성격 테스트 (OCEAN) — 나의 5가지 성격 차원',
+    description: '개방성, 성실성, 외향성, 친화성, 신경성 5가지 차원으로 나의 성격을 과학적으로 분석해보세요.',
+  },
+  en: {
+    title: 'Big Five Personality Test (OCEAN) — Discover Your 5 Traits',
+    description: 'Measure your personality across Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism.',
+  },
+  ja: {
+    title: 'ビッグファイブ性格テスト (OCEAN) — 5つの性格次元',
+    description: '開放性・誠実性・外向性・協調性・神経症的傾向の5次元で自分の性格を科学的に分析しましょう。',
+  },
+  cn: {
+    title: '大五人格测试 (OCEAN) — 了解你的5个性格维度',
+    description: '通过开放性、尽责性、外向性、宜人性、神经质5个维度科学分析你的性格。',
+  },
+  fr: {
+    title: 'Test des Big Five (OCEAN) — Vos 5 dimensions de personnalité',
+    description: 'Analysez votre personnalité selon les dimensions OCEAN: Ouverture, Conscienciosité, Extraversion, Agréabilité, Névrosisme.',
+  },
+  es: {
+    title: 'Test de los Big Five (OCEAN) — Tus 5 dimensiones de personalidad',
+    description: 'Mide tu personalidad en Apertura, Responsabilidad, Extraversión, Amabilidad y Neuroticismo.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <BigFivePersonalityTest client:load locale={locale} />
+  </main>
+</Layout>

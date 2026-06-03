@@ -1,0 +1,25 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import LoveLanguageTest from '../../../components/tests/LoveLanguageTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '사랑의 언어 테스트 — 나의 사랑 표현 방식은?', description: '5가지 사랑의 언어(인정의 말·함께하는 시간·선물·봉사·스킨십) 중 나의 주요 유형을 알아보세요.' },
+  en: { title: 'Love Language Test — How Do You Express Love?', description: 'Discover your primary love language from the 5 types: words of affirmation, quality time, gifts, acts of service, and touch.' },
+  ja: { title: '愛の言語テスト — あなたの愛の表現方法は？', description: '言葉・時間・贈り物・奉仕・スキンシップの5つの愛の言語から、あなたの主要タイプを発見しましょう。' },
+  cn: { title: '爱的语言测试 — 你如何表达爱？', description: '从5种爱的语言（肯定言辞、优质时光、礼物、服务行为、肢体接触）中了解你的主要类型。' },
+  fr: { title: "Test des Langages de l'Amour — Comment exprimez-vous l'amour?", description: "Découvrez votre langage amoureux principal parmi les 5 types : mots d'affirmation, temps de qualité, cadeaux, actes de service et toucher." },
+  es: { title: 'Test de los Lenguajes del Amor — ¿Cómo expresas el amor?', description: 'Descubre tu lenguaje del amor principal entre los 5 tipos: palabras de afirmación, tiempo de calidad, regalos, actos de servicio y toque físico.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <LoveLanguageTest client:load locale={locale} />
+  </main>
+</Layout>

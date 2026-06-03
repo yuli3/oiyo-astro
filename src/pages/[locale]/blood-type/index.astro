@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import BloodTypePersonality from '../../../components/tools/BloodTypePersonality';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '혈액형 성격 분석 — A·B·O·AB형별 성격과 특징',
+    description: '나의 혈액형으로 성격, 강점, 약점, 연애 스타일, 직업 적성을 알아보세요.',
+  },
+  en: {
+    title: 'Blood Type Personality — Traits by A, B, O, AB',
+    description: 'Discover personality traits, strengths, weaknesses, love style, and career fit based on your blood type.',
+  },
+  ja: {
+    title: '血液型性格分析 — A・B・O・AB型の性格と特徴',
+    description: '血液型から性格・強み・弱み・恋愛スタイル・職業適性を分析します。',
+  },
+  cn: {
+    title: '血型性格分析 — A·B·O·AB型性格与特征',
+    description: '根据你的血型了解性格、优势、劣势、恋爱风格和职业适性。',
+  },
+  fr: {
+    title: 'Personnalité selon le Groupe Sanguin — A, B, O, AB',
+    description: 'Découvrez les traits de personnalité, forces, faiblesses, style amoureux et aptitudes professionnelles selon votre groupe sanguin.',
+  },
+  es: {
+    title: 'Personalidad según Tipo de Sangre — A, B, O, AB',
+    description: 'Descubre rasgos de personalidad, fortalezas, debilidades, estilo amoroso y aptitudes según tu tipo de sangre.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <BloodTypePersonality client:load locale={locale} />
+  </main>
+</Layout>
