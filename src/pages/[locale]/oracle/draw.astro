@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import OracleCardDraw from '../../../components/tools/OracleCardDraw';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '오라클 카드 뽑기 — 그라시안의 지혜',
+    description: '발타자르 그라시안의 처세 철학에서 영감을 받은 22장의 오라클 카드. 오늘 나에게 필요한 지혜를 뽑아보세요.',
+  },
+  en: {
+    title: 'Oracle Card Reading — Wisdom of Gracián',
+    description: 'Draw from 22 oracle cards inspired by Baltasar Gracián\'s timeless philosophy. Discover the wisdom you need today.',
+  },
+  ja: {
+    title: 'オラクルカードリーディング — グラシアンの知恵',
+    description: 'バルタサル・グラシアンの哲学から着想を得た22枚のオラクルカード。今日あなたに必要な知恵を引いてみましょう。',
+  },
+  cn: {
+    title: '神谕牌占卜 — 格拉西安的智慧',
+    description: '从巴尔塔萨·格拉西安永恒哲学中汲取灵感的22张神谕牌。发现您今天需要的智慧。',
+  },
+  fr: {
+    title: 'Tirage Oracle — Sagesse de Gracián',
+    description: 'Tirez parmi 22 cartes oracle inspirées de la philosophie intemporelle de Baltasar Gracián. Découvrez la sagesse dont vous avez besoin aujourd\'hui.',
+  },
+  es: {
+    title: 'Lectura Oracle — Sabiduría de Gracián',
+    description: 'Saca de 22 cartas oráculo inspiradas en la filosofía atemporal de Baltasar Gracián. Descubre la sabiduría que necesitas hoy.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="mx-auto max-w-5xl px-4 py-8">
+    <OracleCardDraw client:load locale={locale} />
+  </div>
+</Layout>
