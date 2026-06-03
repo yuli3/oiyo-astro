@@ -1,0 +1,24 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import CommuteMentalTest from '../../../components/tests/CommuteMentalTest';
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '출퇴근 멘탈 테스트: 나의 직장인 멘탈 상태는?', description: '10개의 질문으로 출퇴근길 나의 멘탈 상태를 알아보세요. 가벼운 발걸음, 저항, 무기력, 도피 중 어떤 유형인가요?' },
+  en: { title: 'Commute Mental Test: What\'s Your Workday Mindset?', description: 'Discover your commute mindset with 10 questions. Are you Lightfoot, Resistant, Lethargic, or Escapist?' },
+  ja: { title: '通勤メンタルテスト：あなたの職場人メンタル状態は？', description: '10の質問で通勤時のメンタル状態を診断。軽い足取り、抵抗感、無気力、逃避の4タイプ。' },
+  cn: { title: '通勤心态测试：你的职场心理状态如何？', description: '通过10个问题了解你的通勤心态。你是轻盈型、抵抗型、倦怠型还是逃避型？' },
+  fr: { title: 'Test Mental Trajet : Quel est votre état d\'esprit au travail?', description: "Découvrez votre état d'esprit lors du trajet avec 10 questions. Êtes-vous Léger, Résistant, Léthargique ou Fugitif?" },
+  es: { title: 'Test Mental del Trayecto: ¿Cuál es tu mentalidad laboral?', description: 'Descubre tu mentalidad en el trayecto con 10 preguntas. ¿Eres Ligero, Resistente, Letárgico o Escapista?' },
+};
+const m = meta[locale] ?? meta.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <CommuteMentalTest client:load locale={locale} />
+  </main>
+</Layout>

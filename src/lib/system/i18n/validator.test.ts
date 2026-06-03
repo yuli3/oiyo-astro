@@ -4,7 +4,7 @@ import { describe, expect, it } from "vitest";
 
 const locales = ["en", "ja", "cn", "es", "fr"];
 const sourceLocale = "en";
-const messagesDir = path.resolve(process.cwd(), "src/messages");
+const messagesDir = path.resolve(process.cwd(), "src/i18n/messages");
 
 /**
  * Recursively gets all keys from an object in dot notation

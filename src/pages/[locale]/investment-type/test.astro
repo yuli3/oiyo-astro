@@ -1,0 +1,24 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import CrossroadsInvestorTest from '../../../components/tests/CrossroadsInvestorTest';
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '갈림길 경제 투자 성향 퀴즈 — 나의 투자자 유형은?', description: '지정학·K자 경제·AI·달러 투자 관점으로 보는 나의 투자 성향. 지정학 리더형·거시분석형·AI혁신형·달러분산형·균형형 중 어떤 유형인가요?' },
+  en: { title: 'Crossroads Economy Investor Quiz — What Type of Investor Are You?', description: 'Discover your investor type through geopolitical, K-economy, AI, and dollar investment perspectives. Which are you: Geopolitical Leader, Macro Analyst, AI Innovator, Dollar Diversifier, or Balanced?' },
+  ja: { title: '岐路経済投資傾向クイズ — 私はどの投資家タイプ？', description: '地政学・K字経済・AI・ドル投資の視点で見る私の投資傾向。地政学リーダー型・マクロ分析型・AI革新型・ドル分散型・バランス型のどれですか？' },
+  cn: { title: '岔路经济投资风格测试 — 你是哪种投资者？', description: '从地缘政治、K形经济、AI和美元投资角度了解你的投资风格。地缘政治领导型、宏观分析型、AI创新型、美元分散型还是均衡型？' },
+  fr: { title: 'Quiz Investisseur Économie Carrefour — Quel Type Êtes-Vous?', description: 'Découvrez votre type d\'investisseur à travers les perspectives géopolitique, économie K, IA et dollar. Géopolitique, Macro, IA, Dollar ou Équilibré?' },
+  es: { title: 'Quiz Inversor Economía Encrucijada — ¿Qué Tipo Eres?', description: 'Descubre tu tipo de inversor a través de perspectivas geopolíticas, economía K, IA y dólar. ¿Geopolítico, Macro, IA, Dólar o Equilibrado?' },
+};
+const m = meta[locale] ?? meta.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <CrossroadsInvestorTest client:load locale={locale} />
+  </main>
+</Layout>

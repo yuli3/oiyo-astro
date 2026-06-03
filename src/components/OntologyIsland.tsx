@@ -45,6 +45,14 @@ function buildMessageTree(flat: Record<string, unknown>): Record<string, unknown
     cur[parts[parts.length - 1]] = flat[sourceKey];
   }
 
+  // Merge ontology.lucky into ontology.dashboard so t('lucky.*') resolves
+  // within the useNamespacedFallback('ontology.dashboard', 'dashboard') context.
+  const ontObj = flat['ontology'] as Record<string, unknown> | undefined;
+  const ontTree = tree['ontology'] as Record<string, unknown> | undefined;
+  if (ontObj?.['lucky'] && ontTree?.['dashboard']) {
+    (ontTree['dashboard'] as Record<string, unknown>)['lucky'] = ontObj['lucky'];
+  }
+
   return tree;
 }
 

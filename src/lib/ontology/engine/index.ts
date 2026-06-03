@@ -40,16 +40,17 @@ export async function aggregateOntology(
   history: any[],
   locale: string = "en",
 ): Promise<OntologyProfile> {
-  const findResult = (id: string) => history.find((h) => h.test_id === id);
+  const findResult = (id: string) => history.find((h) => h.subtype === id);
 
   // 1. Extract Roots (Universal Origin)
-  const universalData = findResult("primal-origin"); // Keep ID for legacy data compatibility
+  const universalData = findResult("primal-origin");
   const roots: OntologyRoots = {
     isComplete: !!universalData,
     universal: universalData?.result_data,
   };
 
-  // 3. Branches (Psychology & Vocation)
+  // 2. Branches (Psychology & Vocation)
+  const mbti = findResult("mbti");
   const tci = findResult("tci");
   const hexaco = findResult("hexaco");
   const hsp = findResult("hsp");
@@ -60,6 +61,7 @@ export async function aggregateOntology(
   const branches: OntologyBranches = {
     enneagram: enneagram?.result_data,
     isComplete: !!(tci && hexaco && enneagram && riasec),
+    mbti: mbti?.result_data,
     psychology: {
       hexaco: hexaco?.result_data,
       hsp: hsp?.result_data,
