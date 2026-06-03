@@ -11,31 +11,21 @@ export async function getStaticPaths() {
 const { locale } = Astro.params as { locale: Locale };
 const t = await getTranslations(locale);
 
-// Load all messages needed by OntologyClient at build time and pass as props
-// so the client island has them available without async loading
-import enMessages from '../../../i18n/messages/en/dashboard.json';
-import koMessages from '../../../i18n/messages/ko/dashboard.json';
-
-// Dynamically import messages for current locale (static paths know locale at build time)
-const msgFiles = [
-  'akashic', 'catalog', 'chosun', 'commerce', 'dashboard',
-  'egyptian', 'nav', 'ontology', 'saju', 'ui', 'universal',
-  'common', 'hero',
+// All namespaces needed by OntologyClient and its component tree
+const namespaces = [
+  'akashic', 'catalog', 'chosun', 'colorPersonality', 'commerce',
+  'dashboard', 'egyptian', 'fortune', 'hobby', 'lifestyle',
+  'mbti', 'nav', 'numerology', 'ontology', 'saju', 'tci', 'ui',
+  'universal', 'common', 'hero',
 ];
 
-// We pass a flat merged messages object keyed by namespace
-// Each file's content becomes messages[filename]
 const messages: Record<string, unknown> = {};
-for (const file of msgFiles) {
+for (const ns of namespaces) {
   try {
-    // Astro static imports must be resolvable at build time — use dynamic approach
-    const mod = await import(`../../../i18n/messages/${locale}/${file}.json`).catch(
-      () => import(`../../../i18n/messages/en/${file}.json`)
-    );
-    messages[file] = mod.default ?? mod;
-  } catch {
-    // ignore missing files
-  }
+    const mod = await import(`../../../i18n/messages/${locale}/${ns}.json`)
+      .catch(() => import(`../../../i18n/messages/en/${ns}.json`));
+    messages[ns] = mod.default ?? mod;
+  } catch { /* skip missing */ }
 }
 ---
 
@@ -44,7 +34,7 @@ for (const file of msgFiles) {
   description={t('hero.ontology.desc')}
   locale={locale}
 >
-  <!-- Hero strip (server-rendered for SEO) -->
+  <!-- SEO hero strip (server-rendered) -->
   <section class="relative overflow-hidden bg-gradient-to-b from-violet-50/60 to-white pt-16 pb-8 px-4 text-center">
     <div class="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
       <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[500px] h-[300px] bg-violet-300 rounded-full blur-3xl" />
@@ -62,7 +52,7 @@ for (const file of msgFiles) {
     </div>
   </section>
 
-  <!-- Full OntologyClient as React island — all 12 engines live here -->
+  <!-- Full OntologyClient with all 12 engines as React island -->
   <OntologyIsland
     locale={locale}
     messages={messages}

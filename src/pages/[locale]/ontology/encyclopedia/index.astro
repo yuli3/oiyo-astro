@@ -1,0 +1,39 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+import { LOCALES, getTranslations } from '../../../../i18n';
+import type { Locale } from '../../../../i18n';
+import { IntlProvider } from '../../../../lib/shims/next-intl';
+import EncyclopediaIsland from '../../../../components/EncyclopediaIsland';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const t = await getTranslations(locale);
+
+const namespaces = ['saju', 'ontology', 'common', 'nav', 'ui'];
+const messages: Record<string, unknown> = {};
+for (const ns of namespaces) {
+  try {
+    const mod = await import(`../../../../i18n/messages/${locale}/${ns}.json`)
+      .catch(() => import(`../../../../i18n/messages/en/${ns}.json`));
+    messages[ns] = mod.default ?? mod;
+  } catch { /* skip */ }
+}
+---
+
+<Layout
+  title="Encyclopedia"
+  description="The Saju Stem & Branch Encyclopedia"
+  locale={locale}
+>
+  <section class="bg-gradient-to-b from-violet-50/50 to-white pt-16 pb-8 px-4 text-center">
+    <div class="max-w-2xl mx-auto animate-fadeInUp">
+      <h1 class="text-4xl font-serif font-black text-violet-950 mb-2">📚 Encyclopedia</h1>
+      <p class="text-violet-600">Saju Stems & Branches</p>
+    </div>
+  </section>
+
+  <EncyclopediaIsland locale={locale} messages={messages} client:load />
+</Layout>

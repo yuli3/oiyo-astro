@@ -1,10 +1,9 @@
 "use client";
 
-import React, { Suspense } from 'react';
+import React, { Suspense, useMemo } from 'react';
 import { IntlProvider } from '@/lib/shims/next-intl';
 import { UserProvider } from '@/lib/user/context/UserContext';
 
-// Lazy-load the heavy OntologyClient to keep initial bundle lean
 const OntologyClient = React.lazy(() =>
   import('@/components/ontology/OntologyClient').then((m) => ({
     default: m.OntologyClient,
@@ -16,13 +15,48 @@ interface OntologyIslandProps {
   messages: Record<string, unknown>;
 }
 
+/**
+ * Pre-process messages to build the nested namespace tree that next-intl expects.
+ * e.g. useTranslations("ontology.dashboard") navigates messages["ontology"]["dashboard"]
+ *      useTranslations("ontology.lifestyle.hobby") navigates messages["ontology"]["lifestyle"]["hobby"]
+ */
+function buildMessageTree(flat: Record<string, unknown>): Record<string, unknown> {
+  const tree: Record<string, unknown> = { ...flat };
+
+  // Build nested paths for dotted namespaces used by OntologyClient
+  // "ontology.dashboard" → tree["ontology"]["dashboard"]
+  // "ontology.lifestyle.hobby" → tree["ontology"]["lifestyle"]["hobby"]
+  const dotPaths: Array<[string, string]> = [
+    ['ontology.dashboard', 'dashboard'],
+    ['ontology.lifestyle.hobby', 'hobby'],
+    ['fortune.selfSaju', 'saju'],
+  ];
+
+  for (const [dotPath, sourceKey] of dotPaths) {
+    if (!flat[sourceKey]) continue;
+    const parts = dotPath.split('.');
+    let cur = tree as Record<string, unknown>;
+    for (let i = 0; i < parts.length - 1; i++) {
+      if (!cur[parts[i]] || typeof cur[parts[i]] !== 'object') {
+        cur[parts[i]] = {};
+      }
+      cur = cur[parts[i]] as Record<string, unknown>;
+    }
+    cur[parts[parts.length - 1]] = flat[sourceKey];
+  }
+
+  return tree;
+}
+
 export default function OntologyIsland({ locale, messages }: OntologyIslandProps) {
+  const tree = useMemo(() => buildMessageTree(messages), [messages]);
+
   return (
-    <IntlProvider locale={locale} messages={messages}>
+    <IntlProvider locale={locale} messages={tree}>
       <UserProvider>
         <Suspense
           fallback={
-            <div className="min-h-screen flex items-center justify-center">
+            <div className="min-h-[60vh] flex items-center justify-center">
               <div className="text-center">
                 <div className="w-10 h-10 rounded-full border-2 border-green-400 border-t-transparent animate-spin mx-auto mb-3" />
                 <p className="text-sm text-green-600">Loading sanctuary…</p>
