@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback } from 'react'
-import type { Locale } from '../../lib/i18n'
+import type { Locale } from '../../i18n'
 
-type L = Locale
+type L = Locale | 'cn'
 
 /* ─── ORACLE CARDS ─────────────────────────────────────────── */
 interface OracleCard {
@@ -793,8 +793,12 @@ interface Props { locale: Locale }
 
 interface DrawnCard { card: OracleCard; role: string; flipped: boolean }
 
+function getDeckLocale(locale: Locale): L {
+  return locale === 'zh' ? 'cn' : locale
+}
+
 export default function OracleCardDraw({ locale }: Props) {
-  const l = locale as L
+  const l = getDeckLocale(locale)
   const ui = UI[l]
   const [spread, setSpread] = useState<SpreadKey>('past-present-future')
   const [drawn, setDrawn] = useState<DrawnCard[]>([])
@@ -945,7 +949,7 @@ export default function OracleCardDraw({ locale }: Props) {
                 <p style={{ margin: 0, fontFamily: 'serif', fontStyle: 'italic', fontSize: 16, lineHeight: 1.6, maxWidth: 280 }}>
                   {l === 'ko' ? '배열을 선택하고 카드를 뽑아보세요.' :
                    l === 'ja' ? '配置を選んでカードを引いてください。' :
-                   l === 'zh' ? '选择阵型并抽取卡片。' :
+                   l === 'cn' ? '选择阵型并抽取卡片。' :
                    l === 'fr' ? 'Choisissez une disposition et tirez les cartes.' :
                    l === 'es' ? 'Elige una tirada y saca las cartas.' :
                    'Choose a spread and draw your cards.'}
@@ -968,7 +972,7 @@ export default function OracleCardDraw({ locale }: Props) {
 
               <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(239,233,218,0.12)', paddingBottom: 12, marginBottom: 16 }}>
                 <h3 style={{ margin: 0, fontFamily: 'serif', fontSize: 12, fontWeight: 500, letterSpacing: '0.32em', textTransform: 'uppercase', color: '#efe9da' }}>
-                  {l === 'ko' ? '해석' : l === 'ja' ? '解釈' : l === 'zh' ? '解读' : l === 'fr' ? 'Interprétation' : l === 'es' ? 'Interpretación' : 'Reading'}
+                  {l === 'ko' ? '해석' : l === 'ja' ? '解釈' : l === 'cn' ? '解读' : l === 'fr' ? 'Interprétation' : l === 'es' ? 'Interpretación' : 'Reading'}
                 </h3>
                 <div style={{ fontFamily: 'ui-monospace', fontSize: 10, letterSpacing: '0.2em', color: 'rgba(239,233,218,0.45)', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: 7 }}>
                   <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#c9a55c', boxShadow: '0 0 8px #c9a55c', display: 'inline-block' }} />

@@ -2,10 +2,8 @@
 	"compatibility_date": "2026-06-02",
 	"compatibility_flags": ["global_fetch_strictly_public"],
 	"name": "oiyo-astro",
-	"main": "@astrojs/cloudflare/entrypoints/server",
 	"assets": {
-		"directory": "./dist",
-		"binding": "ASSETS"
+		"directory": "./dist"
 	},
 	"workers_dev": false,
 	"observability": {

@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import cloudflare from '@astrojs/cloudflare';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
@@ -10,7 +9,7 @@ import path from 'path';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const LOCALES = ['ko', 'en', 'ja', 'cn', 'fr', 'es'];
+const LOCALES = ['ko', 'en', 'ja', 'zh', 'fr', 'es'];
 
 export default defineConfig({
   site: 'https://oiyo.net',
@@ -28,10 +27,10 @@ export default defineConfig({
       serialize: (item) => {
         const p = new URL(item.url).pathname;
         const isKo = p.startsWith('/ko/') || p === '/ko';
-        if (/^\/(ko|en|ja|cn|fr|es)\/?$/.test(p)) {
+        if (/^\/(ko|en|ja|zh|fr|es)\/?$/.test(p)) {
           return { ...item, priority: isKo ? 1.0 : 0.8, changefreq: 'weekly' };
         }
-        if (/\/(ko|en|ja|cn|fr|es)\/tests\/?$/.test(p)) {
+        if (/\/(ko|en|ja|zh|fr|es)\/tests\/?$/.test(p)) {
           return { ...item, priority: isKo ? 0.9 : 0.7, changefreq: 'weekly' };
         }
         if (/\/(mbti|enneagram)\//.test(p)) {
@@ -45,7 +44,6 @@ export default defineConfig({
     }),
     robotsTxt(),
   ],
-  adapter: cloudflare(),
   vite: {
     plugins: [tailwindcss()],
     resolve: {
@@ -66,7 +64,7 @@ export default defineConfig({
   },
   i18n: {
     defaultLocale: 'ko',
-    locales: ['en', 'ko', 'ja', 'cn', 'fr', 'es'],
+    locales: ['en', 'ko', 'ja', 'zh', 'fr', 'es'],
     routing: {
       prefixDefaultLocale: true,
     },
