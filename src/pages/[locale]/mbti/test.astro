@@ -38,10 +38,167 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+const content: Record<Locale, {
+  introTitle: string;
+  introBody: string;
+  howTitle: string;
+  howItems: string[];
+  linksTitle: string;
+  blogLabel: string;
+  blogText: string;
+  wikiLabel: string;
+  wikiText: string;
+  note: string;
+}> = {
+  ko: {
+    introTitle: '직업 선택을 위한 MBTI 성향 테스트',
+    introBody: '이 페이지는 긴 MBTI 해설 글이 아니라, 실제 업무 장면에서 내가 어떤 방식으로 판단하고 협업하는지 빠르게 확인하는 실행형 테스트입니다. 결과는 직업을 단정하기보다 나에게 편한 업무 환경과 에너지 사용 방식을 이해하는 참고 자료로 활용해 주세요.',
+    howTitle: '이렇게 활용해 보세요',
+    howItems: [
+      '현재 직무가 나와 맞지 않는다고 느낄 때, 어떤 지점에서 에너지가 소모되는지 확인합니다.',
+      '추천 직업 목록은 정답이 아니라 탐색 후보로 보고, 흥미·역량·현실 조건과 함께 비교합니다.',
+      '결과를 읽은 뒤에는 Big Five나 에니어그램 테스트로 다른 관점의 자기이해를 보완합니다.',
+    ],
+    linksTitle: '더 깊이 읽기',
+    blogLabel: 'blog-oiyo',
+    blogText: 'MBTI 직업·관계·인지기능을 긴 글로 읽고 싶다면 블로그 해설을 참고하세요.',
+    wikiLabel: 'wiki-oiyo',
+    wikiText: 'MBTI 개념이나 각 유형의 짧은 정의가 필요하다면 위키 사전을 확인하세요.',
+    note: 'OIYO의 MBTI 기반 테스트는 자기이해와 진로 탐색을 위한 참고 도구이며, 공식 MBTI 진단이나 심리 평가를 대체하지 않습니다.',
+  },
+  en: {
+    introTitle: 'A work-focused MBTI-style preference test',
+    introBody: 'This page is an interactive test, not a long MBTI article. It helps you notice how you make decisions, collaborate, and spend energy in work situations. Treat the result as a starting point for reflection, not a fixed career verdict.',
+    howTitle: 'How to use your result',
+    howItems: [
+      'Notice which work situations drain or energize you.',
+      'Use recommended careers as exploration prompts, then compare them with your interests, skills, and constraints.',
+      'Pair the result with Big Five or Enneagram tests for a broader self-understanding.',
+    ],
+    linksTitle: 'Read deeper',
+    blogLabel: 'blog-oiyo',
+    blogText: 'For long-form MBTI career and relationship essays, continue with the blog guides.',
+    wikiLabel: 'wiki-oiyo',
+    wikiText: 'For concise definitions and type references, use the wiki entries.',
+    note: 'This MBTI-style test is for self-reflection and career exploration. It is not an official MBTI assessment or a clinical evaluation.',
+  },
+  ja: {
+    introTitle: '仕事選びのためのMBTI傾向テスト',
+    introBody: 'このページは長いMBTI解説記事ではなく、職場での判断や協働の傾向をすばやく確認するための実行型テストです。結果は職業を決めつけるものではなく、働きやすい環境を考える手がかりとしてお使いください。',
+    howTitle: '結果の使い方',
+    howItems: [
+      '今の仕事で疲れやすい場面や力を発揮しやすい場面を見つけます。',
+      'おすすめ職業は正解ではなく、検討候補として興味や能力、現実条件と照らし合わせます。',
+      'Big Fiveやエニアグラムも合わせて受けると、別の角度から自分を見直せます。',
+    ],
+    linksTitle: 'さらに読む',
+    blogLabel: 'blog-oiyo',
+    blogText: 'MBTIの仕事・関係・認知機能をじっくり読みたい場合はブログ解説へ。',
+    wikiLabel: 'wiki-oiyo',
+    wikiText: 'MBTIの用語やタイプ定義を短く確認したい場合はWikiへ。',
+    note: 'このMBTI傾向テストは自己理解と進路探索のための参考ツールであり、公式診断や臨床的評価ではありません。',
+  },
+  zh: {
+    introTitle: '用于职业探索的 MBTI 倾向测试',
+    introBody: '这个页面是一个可直接使用的测试，而不是长篇 MBTI 文章。它帮助你快速观察自己在工作情境中的判断方式、协作方式和精力消耗模式。结果适合作为自我理解的起点，而不是固定的职业结论。',
+    howTitle: '如何使用结果',
+    howItems: [
+      '看看哪些工作情境会让你消耗精力，哪些情境会让你更有动力。',
+      '把推荐职业当作探索候选，而不是唯一答案。',
+      '再结合 Big Five 或九型人格测试，从不同角度理解自己。',
+    ],
+    linksTitle: '继续阅读',
+    blogLabel: 'blog-oiyo',
+    blogText: '想阅读 MBTI 职业、关系与认知功能的长篇解析，请查看博客。',
+    wikiLabel: 'wiki-oiyo',
+    wikiText: '想快速了解 MBTI 概念或类型定义，请查看 Wiki 词条。',
+    note: '本测试用于自我理解和职业探索，并非官方 MBTI 测评，也不能替代专业心理评估。',
+  },
+  fr: {
+    introTitle: 'Un test de préférences MBTI orienté travail',
+    introBody: 'Cette page est un test interactif, pas un long article sur le MBTI. Elle vous aide à observer votre manière de décider, de collaborer et d’utiliser votre énergie au travail.',
+    howTitle: 'Comment utiliser le résultat',
+    howItems: [
+      'Repérez les situations professionnelles qui vous fatiguent ou vous donnent de l’élan.',
+      'Considérez les métiers suggérés comme des pistes, pas comme une réponse définitive.',
+      'Complétez avec Big Five ou Ennéagramme pour une lecture plus large.',
+    ],
+    linksTitle: 'Approfondir',
+    blogLabel: 'blog-oiyo',
+    blogText: 'Pour des essais plus longs sur carrière, relations et fonctions cognitives MBTI, consultez le blog.',
+    wikiLabel: 'wiki-oiyo',
+    wikiText: 'Pour des définitions courtes et des fiches de types, utilisez le wiki.',
+    note: 'Ce test inspiré du MBTI sert à la réflexion personnelle et à l’exploration professionnelle. Il ne remplace pas une évaluation officielle ou clinique.',
+  },
+  es: {
+    introTitle: 'Un test de preferencias MBTI enfocado en el trabajo',
+    introBody: 'Esta página es una prueba interactiva, no un artículo largo sobre MBTI. Te ayuda a observar cómo decides, colaboras y usas tu energía en situaciones laborales.',
+    howTitle: 'Cómo usar tu resultado',
+    howItems: [
+      'Detecta qué situaciones laborales te agotan o te activan.',
+      'Toma las carreras sugeridas como pistas de exploración, no como una respuesta cerrada.',
+      'Combina el resultado con Big Five o Eneagrama para ampliar la mirada.',
+    ],
+    linksTitle: 'Leer más',
+    blogLabel: 'blog-oiyo',
+    blogText: 'Para ensayos más largos sobre carrera, relaciones y funciones cognitivas MBTI, sigue en el blog.',
+    wikiLabel: 'wiki-oiyo',
+    wikiText: 'Para definiciones breves y referencias por tipo, consulta el wiki.',
+    note: 'Esta prueba inspirada en MBTI es para autoconocimiento y exploración profesional. No sustituye una evaluación oficial ni clínica.',
+  },
+};
+const c = content[locale] ?? content.en;
+const blogTargets: Record<Locale, string> = {
+  ko: 'https://blog.oiyo.net/ko/mbti-career-test',
+  en: 'https://blog.oiyo.net/en/magazine-mbti-career-psychology',
+  ja: 'https://blog.oiyo.net/ja/magazine-mbti-compass-test',
+  zh: 'https://blog.oiyo.net/zh/meaning-of-mbti',
+  fr: 'https://blog.oiyo.net/fr/',
+  es: 'https://blog.oiyo.net/es/',
+};
+const wikiTargets: Record<Locale, string> = {
+  ko: 'https://wiki.oiyo.net/ko/meaning-of-mbti',
+  en: 'https://wiki.oiyo.net/en/meaning-of-mbti',
+  ja: 'https://wiki.oiyo.net/ja/meaning-of-mbti',
+  zh: 'https://wiki.oiyo.net/ko/meaning-of-mbti',
+  fr: 'https://wiki.oiyo.net/en/meaning-of-mbti',
+  es: 'https://wiki.oiyo.net/en/meaning-of-mbti',
+};
+const tracking = 'utm_source=oiyo&utm_medium=test_page&utm_campaign=mbti_content_graph';
+const blogUrl = `${blogTargets[locale] ?? blogTargets.en}?${tracking}`;
+const wikiUrl = `${wikiTargets[locale] ?? wikiTargets.en}?${tracking}`;
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <main class="mx-auto max-w-2xl px-4 py-10">
     <MbtiCareerTest client:load locale={locale} />
+    <section class="mt-12 rounded-lg border border-green-100 bg-white p-6 shadow-sm">
+      <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
+      <p class="mt-4 text-sm leading-7 text-slate-700">{c.introBody}</p>
+
+      <h3 class="mt-8 text-lg font-semibold text-green-900">{c.howTitle}</h3>
+      <ul class="mt-3 space-y-2 text-sm leading-7 text-slate-700">
+        {c.howItems.map((item) => (
+          <li class="flex gap-2">
+            <span class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-green-500"></span>
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+
+      <h3 class="mt-8 text-lg font-semibold text-green-900">{c.linksTitle}</h3>
+      <div class="mt-3 grid gap-3 sm:grid-cols-2">
+        <a href={blogUrl} class="rounded-lg border border-green-100 bg-green-50/60 p-4 transition hover:border-green-300 hover:bg-green-50">
+          <span class="text-xs font-semibold uppercase tracking-wide text-green-700">{c.blogLabel}</span>
+          <p class="mt-2 text-sm leading-6 text-slate-700">{c.blogText}</p>
+        </a>
+        <a href={wikiUrl} class="rounded-lg border border-green-100 bg-slate-50 p-4 transition hover:border-green-300 hover:bg-green-50">
+          <span class="text-xs font-semibold uppercase tracking-wide text-green-700">{c.wikiLabel}</span>
+          <p class="mt-2 text-sm leading-6 text-slate-700">{c.wikiText}</p>
+        </a>
+      </div>
+
+      <p class="mt-6 rounded-lg bg-slate-50 p-4 text-xs leading-6 text-slate-600">{c.note}</p>
+    </section>
   </main>
 </Layout>

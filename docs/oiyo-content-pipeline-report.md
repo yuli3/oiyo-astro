@@ -76,24 +76,25 @@ Next.js + Vercel로 다시 갈 때 붙일 기능:
 
 즉, 지금은 “결제 없는 무료 진단/읽을거리 제품”을 만들고, 나중에는 “개인화 리포트 SaaS/콘텐츠 상품”으로 확장합니다.
 
-### 3.2 wiki.oiyo.net 콘텐츠는 oiyo.net 안으로 흡수
+### 3.2 wiki.oiyo.net 콘텐츠는 oiyo.net과 역할 분리
 
-MBTI와 애니어그램처럼 테스트와 직접 연결되는 지식 콘텐츠는 `wiki.oiyo.net`에 계속 두기보다 `oiyo.net`의 하위 경로로 옮기는 것이 좋습니다.
+MBTI와 애니어그램처럼 테스트와 직접 연결되는 주제라도, `wiki.oiyo.net`의 사전 문서를 그대로 `oiyo.net`으로 흡수하지 않습니다. `oiyo.net`은 테스트 실행과 결과 해석에 필요한 짧은 안내를 담당하고, `wiki.oiyo.net`은 정의와 유형 사전을 유지합니다.
 
 권장 이유:
 
-- 테스트 페이지와 문서 페이지가 같은 도메인 권위를 공유합니다.
-- 사용자가 문서를 읽다가 바로 테스트를 실행할 수 있습니다.
-- 향후 결제/회원 기능이 붙을 때 이전된 문서가 본진의 SEO 자산이 됩니다.
-- Cloudflare Pages에서 정적 문서 대량 생성이 쉽습니다.
+- `oiyo.net`은 사용자가 즉시 행동하는 제품 경험이어야 합니다.
+- `blog.oiyo.net`의 장문 글과 `wiki.oiyo.net`의 사전 글을 복제하면 색인 품질과 내부 역할이 흐려집니다.
+- 테스트 페이지에는 짧은 안내, FAQ, 안전 문구, 관련 링크 정도가 적합합니다.
+- 유형별 깊은 설명은 blog 또는 wiki로 연결합니다.
 
 권장 처리:
 
-- `wiki.oiyo.net/mbti...`는 `oiyo.net/ko/mbti...`로 301 리다이렉트.
-- `wiki.oiyo.net/enneagram...`는 `oiyo.net/ko/enneagram...`로 301 리다이렉트.
-- `wiki.oiyo.net`은 한동안 유지하되, 새 글은 `oiyo.net` 중심으로 작성.
+- `oiyo.net`: `/ko/mbti/test`, `/ko/enneagram/test` 등 실행 페이지 강화.
+- `blog.oiyo.net`: 장문 해설과 실전 적용 글 유지.
+- `wiki.oiyo.net`: `meaning-of-*`, `*-dict-*` 사전 문서 유지.
+- 각 `oiyo.net` 테스트 페이지 하단에는 관련 blog/wiki 링크를 선별 노출합니다.
 
-단, 위키에 다른 주제의 독립 지식 콘텐츠가 많다면 전부 즉시 흡수하지 말고 “테스트와 연결되는 주제”만 먼저 옮깁니다.
+단, 향후 특정 wiki 문서가 품질이 낮거나 중복 색인 문제가 생기면 별도 결정으로 정리합니다.
 
 ## 4. 콘텐츠 구조 제안
 
