@@ -388,7 +388,7 @@ export default function BloodTypePersonality({ locale }: Props) {
             {locale === "fr" && "La théorie de personnalité par groupe sanguin n'est pas scientifiquement validée. À titre de divertissement."}
             {locale === "es" && "La teoría de personalidad por tipo de sangre no está validada científicamente. Solo para entretenimiento."}
             {locale === "zh" && "血型性格理論是大眾文化，並非科學驗證。僅供娛樂參考。"}
-            {locale === "cn" && "血型性格理论是大众文化，并非科学验证。仅供娱乐参考。"}
+            {locale === "zh" && "血型性格理论是大众文化，并非科学验证。仅供娱乐参考。"}
           </p>
         </div>
       </div>

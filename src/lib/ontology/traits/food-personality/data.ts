@@ -1357,7 +1357,7 @@ export const FOOD_PERSONALITY_QUESTIONS: Record<
 };
 
 // Map missing locales to English for questions
-["ja", "cn", "es", "fr"].forEach((loc) => {
+["ja", "zh", "es", "fr"].forEach((loc) => {
   (FOOD_PERSONALITY_QUESTIONS as any)[loc] = FOOD_PERSONALITY_QUESTIONS.en;
 });
 

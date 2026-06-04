@@ -23,7 +23,7 @@ describe("locale-helper", () => {
       expect(getLocalizedText(testContent, "ko")).toBe("한국어");
       expect(getLocalizedText(testContent, "en")).toBe("English");
       expect(getLocalizedText(testContent, "ja")).toBe("日本語");
-      expect(getLocalizedText(testContent, "cn")).toBe("中文");
+      expect(getLocalizedText(testContent, "zh")).toBe("中文");
       expect(getLocalizedText(testContent, "es")).toBe("Español");
       expect(getLocalizedText(testContent, "fr")).toBe("Français");
     });

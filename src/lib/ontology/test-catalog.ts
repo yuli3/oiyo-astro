@@ -35,7 +35,7 @@ export const testCatalog: Record<string, TestItem[]> = {
 
 // Helper function to convert feature registry to test catalog format
 export function buildTestCatalogFromFeatures(): Record<string, TestItem[]> {
-  const locales = ["en", "ko", "ja", "cn", "es", "fr"];
+  const locales = ["en", "ko", "ja", "zh", "es", "fr"];
 
   return locales.reduce(
     (acc, locale) => {

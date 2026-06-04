@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import BloodTypeFortune from '../../../components/tools/BloodTypeFortune';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '혈액형 오늘의 운세 — A·B·O·AB형 오늘 운세',
+    description: '오늘 나의 혈액형 운세를 확인하세요. 전체운·애정운·재물운·건강운을 매일 새롭게 제공합니다.',
+  },
+  en: {
+    title: 'Blood Type Daily Fortune — Today\'s Reading for A, B, O, AB',
+    description: 'Check your blood type\'s daily fortune. Overall, love, money and health updated every day.',
+  },
+  ja: {
+    title: '血液型今日の運勢 — A・B・O・AB型の運勢',
+    description: '血液型の今日の運勢を確認しましょう。全体運・恋愛運・金運・健康運を毎日更新。',
+  },
+  zh: {
+    title: '血型今日运势 — A·B·O·AB型运程',
+    description: '查看你的血型今日运势。全面运势、爱情运、财运、健康运每天更新。',
+  },
+  fr: {
+    title: 'Fortune Quotidienne par Groupe Sanguin',
+    description: 'Consultez votre fortune quotidienne selon votre groupe sanguin. Mise à jour chaque jour.',
+  },
+  es: {
+    title: 'Fortuna Diaria por Tipo de Sangre',
+    description: 'Consulta tu fortuna diaria según tu tipo de sangre. Actualizado cada día.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <BloodTypeFortune client:load locale={locale} />
+  </main>
+</Layout>

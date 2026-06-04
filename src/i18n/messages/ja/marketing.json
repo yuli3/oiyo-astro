@@ -1,46 +1,46 @@
 {
   "about": {
-    "title": "OIYOについて | OIYO",
+    "title": "OIYOについて",
     "hero": {
-      "subtitle": "Unlock the full potential of your self-discovery journey with zero hidden costs.",
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "subtitle": "本当の自分への旅",
+      "title": "OIYOについて",
+      "description": "性格と魂の複雑な構造を照らし出す体験を提供します。"
     },
     "mission": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "title": "私たちのミッション",
+      "description": "古来の知恵と現代科学の融合を通じて、個人が生まれ持つ可能性を発見できるよう支援します。"
     },
     "values": {
-      "title": "Pricing",
+      "title": "私たちの核心的価値",
       "free": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "誰でも無料",
+        "description": "高品質な自己探索ツールをすべての人に無料で提供します。"
       },
       "privacy": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "プライバシーの聖域",
+        "description": "あなたのデータは神聖です。同意なく個人の結果を保存・共有することはありません。"
       },
       "science": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "科学的根拠",
+        "description": "厳密な心理学研究に基づき、ユーザーの直感で洗練されたツールを提供します。"
       },
       "engaging": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "魅力的な体験",
+        "description": "自己発見は洞察と同じくらい楽しく魔法のようであるべきです。"
       }
     },
     "story": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "title": "OIYOの始まり",
+      "description": "OIYOはシンプルなビジョンから始まりました：すべての人に自己発見の深い旅を、美しく、個人的なものにすること。"
     },
     "meta": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey.",
-      "keywords": "pricing, subscription, plans, personality test, premium insights, saju"
+      "title": "OIYOについて | 性格テスト & 自己発見",
+      "description": "OIYO のミッションを探求しましょう — 魅力的な性格テストと心理ツールで真の自分を発見。",
+      "keywords": "oiyo, 性格テスト, 自己発見, ミッション, 科学的神秘主義"
     },
     "history": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "title": "これまでの歩み",
+      "description": "人間の精神への情熱から生まれ、人生の隠されたリズムを解き明かす旅の仲間として進化し続けています。"
     }
   },
   "home": {

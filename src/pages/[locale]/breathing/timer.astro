@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import BreathingTimer from '../../../components/tools/BreathingTimer';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '쉼 호흡 타이머 — 불안·스트레스를 즉각 완화하는 과학적 호흡법',
+    description: '4-7-8, 박스 호흡 등 과학적으로 검증된 호흡 패턴으로 불안과 스트레스를 즉각 완화하세요. 원형 애니메이션으로 호흡 사이클을 시각적으로 안내합니다.',
+  },
+  en: {
+    title: 'Breathing Timer — Calm Anxiety & Stress with Science-Based Breathing',
+    description: 'Relieve anxiety and stress instantly with science-backed breathing patterns like 4-7-8 and box breathing. Visual circle animation guides you through each breath cycle.',
+  },
+  ja: {
+    title: '呼吸タイマー — 不安・ストレスを即座に和らげる科学的呼吸法',
+    description: '4-7-8やボックス呼吸など科学的に検証された呼吸パターンで、不安やストレスを即座に和らげます。円形アニメーションが呼吸サイクルを視覚的にガイドします。',
+  },
+  zh: {
+    title: '呼吸计时器 — 用科学呼吸法立即缓解焦虑与压力',
+    description: '通过4-7-8呼吸、盒式呼吸等经科学验证的呼吸模式立即缓解焦虑和压力。圆形动画直观引导您完成每个呼吸周期。',
+  },
+  fr: {
+    title: 'Minuteur de Respiration — Soulagez l\'Anxiété avec des Techniques Scientifiques',
+    description: 'Soulagez instantanément l\'anxiété et le stress avec des techniques de respiration scientifiquement validées comme le 4-7-8 et la respiration en boîte.',
+  },
+  es: {
+    title: 'Temporizador de Respiración — Alivie la Ansiedad con Técnicas Científicas',
+    description: 'Alivie instantáneamente la ansiedad y el estrés con técnicas de respiración científicamente validadas como 4-7-8 y respiración en caja.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-2xl">
+    <BreathingTimer locale={locale} client:load />
+  </main>
+</Layout>

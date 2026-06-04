@@ -1,46 +1,46 @@
 {
   "about": {
-    "title": "关于我们 | OIYO",
+    "title": "关于 OIYO",
     "hero": {
-      "subtitle": "Unlock the full potential of your self-discovery journey with zero hidden costs.",
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "subtitle": "通往真实自我的旅程",
+      "title": "关于 OIYO",
+      "description": "我们打造揭示您性格与灵魂深层架构的体验。"
     },
     "mission": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "title": "我们的使命",
+      "description": "通过古代智慧与现代科学的和谐融合，帮助个人发掘内在潜力。"
     },
     "values": {
-      "title": "Pricing",
+      "title": "我们的核心价值观",
       "free": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "全民免费",
+        "description": "为所有人精心打造的高品质自我探索工具，始终免费。"
       },
       "privacy": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "隐私圣地",
+        "description": "您的数据是神圣的。未经您同意，我们绝不存储或分享您的个人结果。"
       },
       "science": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "科学依据",
+        "description": "我们的工具根植于严谨的心理学研究，并经用户直觉精炼。"
       },
       "engaging": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "魅力体验",
+        "description": "自我探索应该既富有洞察力，又令人愉悦和神奇。"
       }
     },
     "story": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "title": "OIYO 的起源",
+      "description": "OIYO 始于一个简单的愿景：让深刻的自我探索之旅对所有人都变得易于获取、美丽且个性化。"
     },
     "meta": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey.",
-      "keywords": "pricing, subscription, plans, personality test, premium insights, saju"
+      "title": "关于 OIYO | 性格测试与自我发现",
+      "description": "探索 OIYO 背后的使命——通过迷人的性格测试和心理工具帮助您发现真实的自己。",
+      "keywords": "oiyo, 性格测试, 自我发现, 使命, 科学神秘主义"
     },
     "history": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "title": "迄今为止的旅程",
+      "description": "源于对理解人类精神的热情，我们继续作为您揭示生命隐藏节奏的旅行伴侣不断进化。"
     }
   },
   "home": {

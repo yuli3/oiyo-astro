@@ -1,0 +1,781 @@
+2026-06-03T00:47:36.253Z	Initializing build environment...
+2026-06-03T00:47:48.617Z	Success: Finished initializing build environment
+2026-06-03T00:47:52.198Z	Cloning repository...
+2026-06-03T00:47:54.777Z	Detected the following tools from environment: npm@10.9.2, nodejs@22.16.0
+2026-06-03T00:47:54.779Z	Restoring from dependencies cache
+2026-06-03T00:47:54.780Z	Restoring from build output cache
+2026-06-03T00:47:54.910Z	Installing project dependencies: npm clean-install --progress=false
+2026-06-03T00:48:09.574Z	
+2026-06-03T00:48:09.574Z	added 451 packages, and audited 452 packages in 14s
+2026-06-03T00:48:09.574Z	
+2026-06-03T00:48:09.574Z	157 packages are looking for funding
+2026-06-03T00:48:09.574Z	  run `npm fund` for details
+2026-06-03T00:48:09.574Z	
+2026-06-03T00:48:09.575Z	found 0 vulnerabilities
+2026-06-03T00:48:09.574Z	
+2026-06-03T00:48:09.574Z	added 451 packages, and audited 452 packages in 14s
+2026-06-03T00:48:09.574Z	
+2026-06-03T00:48:09.574Z	157 packages are looking for funding
+2026-06-03T00:48:09.574Z	  run `npm fund` for details
+2026-06-03T00:48:09.574Z	
+2026-06-03T00:48:09.575Z	found 0 vulnerabilities
+2026-06-03T00:48:12.882Z	Executing user build command: npm run build
+2026-06-03T00:48:13.204Z	
+2026-06-03T00:48:13.205Z	> oiyo-astro@0.0.1 build
+2026-06-03T00:48:13.205Z	> astro build
+2026-06-03T00:48:13.208Z	
+2026-06-03T00:48:17.047Z	00:48:17 [@astrojs/cloudflare] Enabling image processing with Cloudflare Images for production with the "IMAGES" Images binding.
+2026-06-03T00:48:17.048Z	00:48:17 [@astrojs/cloudflare] Enabling sessions with Cloudflare KV with the "SESSION" KV binding.
+2026-06-03T00:48:18.932Z	00:48:18 [ERROR] [vite] (!) Failed to run dependency scan. Skipping dependency pre-bundling. Error: The following dependencies are imported but could not be resolved:
+2026-06-03T00:48:18.933Z	
+2026-06-03T00:48:18.933Z	  html2canvas (imported by /opt/buildhome/repo/src/lib/ontology/primal-origin/export-engine.ts)
+2026-06-03T00:48:18.933Z	  @radix-ui/react-progress (imported by /opt/buildhome/repo/src/components/ui/progress.tsx)
+2026-06-03T00:48:18.934Z	  @radix-ui/react-slider (imported by /opt/buildhome/repo/src/components/ui/slider.tsx)
+2026-06-03T00:48:18.934Z	  @radix-ui/react-accordion (imported by /opt/buildhome/repo/src/components/ui/accordion.tsx)
+2026-06-03T00:48:18.934Z	  @radix-ui/react-switch (imported by /opt/buildhome/repo/src/components/ui/switch.tsx)
+2026-06-03T00:48:18.934Z	  @radix-ui/react-avatar (imported by /opt/buildhome/repo/src/components/ui/avatar.tsx)
+2026-06-03T00:48:18.934Z	  @radix-ui/react-toggle-group (imported by /opt/buildhome/repo/src/components/ui/toggle-group.tsx)
+2026-06-03T00:48:18.935Z	  @radix-ui/react-toggle (imported by /opt/buildhome/repo/src/components/ui/toggle.tsx)
+2026-06-03T00:48:18.935Z	  @radix-ui/react-tooltip (imported by /opt/buildhome/repo/src/components/ui/tooltip.tsx)
+2026-06-03T00:48:18.935Z	  fuse.js (imported by /opt/buildhome/repo/src/components/ui/GlobalSearch.tsx)
+2026-06-03T00:48:18.935Z	  next/image (imported by /opt/buildhome/repo/src/components/ui/enhanced-result-sharing.tsx)
+2026-06-03T00:48:18.935Z	  web-vitals (imported by /opt/buildhome/repo/src/lib/system/performance-monitor.ts)
+2026-06-03T00:48:18.935Z	  @supabase/supabase-js (imported by /opt/buildhome/repo/src/lib/system/supabase.ts)
+2026-06-03T00:48:18.935Z	  @google/generative-ai (imported by /opt/buildhome/repo/src/lib/engines/ai/oracle-voice.ts)
+2026-06-03T00:48:18.935Z	  jspdf (imported by /opt/buildhome/repo/src/lib/ontology/primal-origin/export-engine.ts)
+2026-06-03T00:48:18.935Z	
+2026-06-03T00:48:18.936Z	Are they installed?
+2026-06-03T00:48:18.936Z	    at file:///opt/buildhome/repo/node_modules/vite/dist/node/chunks/config.js:31983:33
+2026-06-03T00:48:18.936Z	    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-06-03T00:48:18.936Z	    at async file:///opt/buildhome/repo/node_modules/vite/dist/node/chunks/config.js:34191:15
+2026-06-03T00:48:18.932Z	00:48:18 [ERROR] [vite] (!) Failed to run dependency scan. Skipping dependency pre-bundling. Error: The following dependencies are imported but could not be resolved:
+2026-06-03T00:48:18.933Z	
+2026-06-03T00:48:18.933Z	  html2canvas (imported by /opt/buildhome/repo/src/lib/ontology/primal-origin/export-engine.ts)
+2026-06-03T00:48:18.933Z	  @radix-ui/react-progress (imported by /opt/buildhome/repo/src/components/ui/progress.tsx)
+2026-06-03T00:48:18.934Z	  @radix-ui/react-slider (imported by /opt/buildhome/repo/src/components/ui/slider.tsx)
+2026-06-03T00:48:18.934Z	  @radix-ui/react-accordion (imported by /opt/buildhome/repo/src/components/ui/accordion.tsx)
+2026-06-03T00:48:18.934Z	  @radix-ui/react-switch (imported by /opt/buildhome/repo/src/components/ui/switch.tsx)
+2026-06-03T00:48:18.934Z	  @radix-ui/react-avatar (imported by /opt/buildhome/repo/src/components/ui/avatar.tsx)
+2026-06-03T00:48:18.934Z	  @radix-ui/react-toggle-group (imported by /opt/buildhome/repo/src/components/ui/toggle-group.tsx)
+2026-06-03T00:48:18.935Z	  @radix-ui/react-toggle (imported by /opt/buildhome/repo/src/components/ui/toggle.tsx)
+2026-06-03T00:48:18.935Z	  @radix-ui/react-tooltip (imported by /opt/buildhome/repo/src/components/ui/tooltip.tsx)
+2026-06-03T00:48:18.935Z	  fuse.js (imported by /opt/buildhome/repo/src/components/ui/GlobalSearch.tsx)
+2026-06-03T00:48:18.935Z	  next/image (imported by /opt/buildhome/repo/src/components/ui/enhanced-result-sharing.tsx)
+2026-06-03T00:48:18.935Z	  web-vitals (imported by /opt/buildhome/repo/src/lib/system/performance-monitor.ts)
+2026-06-03T00:48:18.935Z	  @supabase/supabase-js (imported by /opt/buildhome/repo/src/lib/system/supabase.ts)
+2026-06-03T00:48:18.935Z	  @google/generative-ai (imported by /opt/buildhome/repo/src/lib/engines/ai/oracle-voice.ts)
+2026-06-03T00:48:18.935Z	  jspdf (imported by /opt/buildhome/repo/src/lib/ontology/primal-origin/export-engine.ts)
+2026-06-03T00:48:18.935Z	
+2026-06-03T00:48:18.936Z	Are they installed?
+2026-06-03T00:48:18.936Z	    at file:///opt/buildhome/repo/node_modules/vite/dist/node/chunks/config.js:31983:33
+2026-06-03T00:48:18.936Z	    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+2026-06-03T00:48:18.936Z	    at async file:///opt/buildhome/repo/node_modules/vite/dist/node/chunks/config.js:34191:15
+2026-06-03T00:48:23.306Z	00:48:23 [types] Generated 6.22s
+2026-06-03T00:48:23.308Z	00:48:23 [build] output: "static"
+2026-06-03T00:48:23.308Z	00:48:23 [build] mode: "static"
+2026-06-03T00:48:23.308Z	00:48:23 [build] directory: /opt/buildhome/repo/dist/
+2026-06-03T00:48:23.308Z	00:48:23 [build] adapter: @astrojs/cloudflare
+2026-06-03T00:48:23.309Z	00:48:23 [build] Collecting build info...
+2026-06-03T00:48:23.309Z	00:48:23 [build] ✓ Completed in 6.26s.
+2026-06-03T00:48:23.309Z	00:48:23 [build] Building static entrypoints...
+2026-06-03T00:48:33.580Z	00:48:33 [WARN] [vite] src/types/manifest.ts (1:9): "LucideIcon" is not exported by "node_modules/lucide-react/dist/esm/lucide-react.mjs", imported by "src/types/manifest.ts".
+2026-06-03T00:48:33.580Z	00:48:33 [WARN] [vite] src/types/manifest.ts (4:9): "CategoryId" is not exported by "src/config/categories.ts", imported by "src/types/manifest.ts".
+2026-06-03T00:48:33.584Z	00:48:33 [WARN] [vite] src/types/manifest.ts (5:9): "Locale" is not exported by "src/i18n/index.ts", imported by "src/types/manifest.ts".
+2026-06-03T00:48:33.591Z	00:48:33 [WARN] [vite] src/lib/data-layer/shards/fate-symbols.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/data-layer/shards/fate-symbols.ts".
+2026-06-03T00:48:33.592Z	00:48:33 [WARN] [vite] src/lib/ontology/numerology/types.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/numerology/types.ts".
+2026-06-03T00:48:33.592Z	00:48:33 [WARN] [vite] src/lib/ontology/onomancy/analysis.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/onomancy/analysis.ts".
+2026-06-03T00:48:33.592Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/types.ts (1:9): "LocalizedStringArray" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/saju/types.ts".
+2026-06-03T00:48:33.592Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/types.ts (1:31): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/saju/types.ts".
+2026-06-03T00:48:33.593Z	00:48:33 [WARN] [vite] src/lib/data-layer/shards/fate-cosmic.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/data-layer/shards/fate-cosmic.ts".
+2026-06-03T00:48:33.593Z	00:48:33 [WARN] [vite] src/lib/ontology/western/calculator.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/western/calculator.ts".
+2026-06-03T00:48:33.593Z	00:48:33 [WARN] [vite] src/lib/ontology/hellenistic/types.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/hellenistic/types.ts".
+2026-06-03T00:48:33.593Z	00:48:33 [WARN] [vite] src/lib/ontology/mayan/types.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/mayan/types.ts".
+2026-06-03T00:48:33.593Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (1:9): "BirthSymbol" is not exported by "src/lib/data-layer/shards/fate-symbols.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.594Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (2:9): "CelticTreeSign" is not exported by "src/lib/ontology/celtic/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.594Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (3:9): "EgyptianCoordinates" is not exported by "src/lib/ontology/egyptian/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.594Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (4:9): "NumerologyResult" is not exported by "src/lib/ontology/numerology/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.594Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (5:9): "NameAnalysisResult" is not exported by "src/lib/ontology/onomancy/analysis.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.595Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (7:2): "LuckyAttributes" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.604Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (8:2): "SajuAnalysis" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.604Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (9:2): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.605Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (11:9): "BloodTypePersonality" is not exported by "src/lib/ontology/traits/blood-type/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.605Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (12:9): "CelestialCoordinates" is not exported by "src/lib/ontology/western/calculator.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.606Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (13:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.607Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (15:9): "HellenisticCoordinates" is not exported by "src/lib/ontology/hellenistic/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.607Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (16:9): "KabbalahCoordinates" is not exported by "src/lib/ontology/kabbalah/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.607Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (17:9): "MayanKin" is not exported by "src/lib/ontology/mayan/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.607Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (18:9): "Rune" is not exported by "src/lib/ontology/nordic/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.609Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (19:9): "VedicCoordinates" is not exported by "src/lib/ontology/vedic/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.609Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/types.ts (20:9): "ZiWeiCoordinates" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:33.609Z	00:48:33 [WARN] [vite] src/lib/ontology/akashic/logic.ts (1:9): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/akashic/logic.ts".
+2026-06-03T00:48:33.609Z	00:48:33 [WARN] [vite] src/components/ontology/AkashicRecord.tsx (9:9): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/components/ontology/AkashicRecord.tsx".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/data-layer/shards/careers.ts (1:9): "Career" is not exported by "src/lib/data-layer/types.ts", imported by "src/lib/data-layer/shards/careers.ts".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/ontology/riasec/types.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/riasec/types.ts".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/ontology/riasec/types.ts (32:9): "Career" is not exported by "src/lib/data-layer/types.ts", imported by "src/lib/ontology/riasec/types.ts".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/big5/types.ts (1:9): "LikertScoreResult" is not exported by "src/lib/engines/likert-score.ts", imported by "src/lib/big5/types.ts".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/big5/types.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/big5/types.ts".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/ontology/hsp/types.ts (1:9): "LikertScoreResult" is not exported by "src/lib/engines/likert-score.ts", imported by "src/lib/ontology/hsp/types.ts".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/ontology/hsp/types.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/hsp/types.ts".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/ontology/perfectionism/types.ts (1:9): "LikertScoreResult" is not exported by "src/lib/engines/likert-score.ts", imported by "src/lib/ontology/perfectionism/types.ts".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/ontology/perfectionism/types.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/perfectionism/types.ts".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/ontology/hexaco/types.ts (1:9): "LikertScoreResult" is not exported by "src/lib/engines/likert-score.ts", imported by "src/lib/ontology/hexaco/types.ts".
+2026-06-03T00:48:33.668Z	00:48:33 [WARN] [vite] src/lib/ontology/hexaco/types.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/hexaco/types.ts".
+2026-06-03T00:48:33.669Z	00:48:33 [WARN] [vite] src/lib/data-layer/shards/personality-enneagram.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/data-layer/shards/personality-enneagram.ts".
+2026-06-03T00:48:33.669Z	00:48:33 [WARN] [vite] src/lib/ontology/enneagram-core/engine.ts (3:2): "EnneagramType" is not exported by "src/lib/data-layer/shards/personality-enneagram.ts", imported by "src/lib/ontology/enneagram-core/engine.ts".
+2026-06-03T00:48:33.669Z	00:48:33 [WARN] [vite] src/lib/ontology/enneagram-core/engine.ts (4:2): "EnneagramTypeDetail" is not exported by "src/lib/data-layer/shards/personality-enneagram.ts", imported by "src/lib/ontology/enneagram-core/engine.ts".
+2026-06-03T00:48:33.688Z	00:48:33 [WARN] [vite] src/lib/ontology/types.ts (1:9): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:33.688Z	00:48:33 [WARN] [vite] src/lib/ontology/types.ts (2:9): "Locale" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/types.ts (12:9): "Big5Result" is not exported by "src/lib/big5/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/types.ts (13:9): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/types.ts (14:9): "TCIResult" is not exported by "src/lib/tci/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/types.ts (41:9): "HSPResult" is not exported by "src/lib/ontology/hsp/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/types.ts (42:9): "PerfectionismResult" is not exported by "src/lib/ontology/perfectionism/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/types.ts (64:9): "HEXACOResult" is not exported by "src/lib/ontology/hexaco/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/types.ts (99:9): "EnneagramResult" is not exported by "src/lib/ontology/enneagram-core/engine.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/types.ts (100:9): "RiasecResult" is not exported by "src/lib/ontology/riasec/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/bridge/universal-matrix.ts (10:9): "RiasecType" is not exported by "src/lib/ontology/riasec/types.ts", imported by "src/lib/ontology/bridge/universal-matrix.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (2:9): "Career" is not exported by "src/lib/data-layer/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (3:9): "RiasecType" is not exported by "src/lib/ontology/riasec/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (5:2): "MBTIType" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (6:2): "OntologyBranches" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (7:2): "OntologyContextState" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:33.689Z	00:48:33 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (8:2): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:33.690Z	00:48:33 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (9:2): "Recommendation" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:33.690Z	00:48:33 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (10:2): "RelevanceScore" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:33.690Z	00:48:33 [WARN] [vite] src/components/ontology/GuidanceSection.tsx (9:9): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/components/ontology/GuidanceSection.tsx".
+2026-06-03T00:48:33.691Z	00:48:33 [WARN] [vite] src/registry/routes.ts (1:9): "Locale" is not exported by "src/i18n/index.ts", imported by "src/registry/routes.ts".
+2026-06-03T00:48:33.691Z	00:48:33 [WARN] [vite] src/components/ontology/OntologyCard.tsx (19:9): "Locale" is not exported by "src/i18n/index.ts", imported by "src/components/ontology/OntologyCard.tsx".
+2026-06-03T00:48:33.691Z	00:48:33 [WARN] [vite] src/components/ontology/SmartLink.tsx (10:9): "SmartLinkProps" is not exported by "src/lib/ontology/types.ts", imported by "src/components/ontology/SmartLink.tsx".
+2026-06-03T00:48:33.695Z	00:48:33 [WARN] [vite] src/components/ontology/widgets/BiorhythmChart.tsx (15:9): "BiorhythmData" is not exported by "src/lib/engines/biorhythm-engine.ts", imported by "src/components/ontology/widgets/BiorhythmChart.tsx".
+2026-06-03T00:48:33.700Z	00:48:33 [WARN] [vite] src/app/[locale]/daily/manifest.ts (1:9): "FeatureManifest" is not exported by "src/types/manifest.ts", imported by "src/app/[locale]/daily/manifest.ts".
+2026-06-03T00:48:33.700Z	00:48:33 [WARN] [vite] src/app/[locale]/ontology/manifest.ts (2:9): "FeatureManifest" is not exported by "src/types/manifest.ts", imported by "src/app/[locale]/ontology/manifest.ts".
+2026-06-03T00:48:33.700Z	00:48:33 [WARN] [vite] src/registry/index.ts (3:9): "FeatureManifest" is not exported by "src/types/manifest.ts", imported by "src/registry/index.ts".
+2026-06-03T00:48:33.700Z	00:48:33 [WARN] [vite] src/config/routes.ts (2:9): "FeatureManifest" is not exported by "src/types/manifest.ts", imported by "src/config/routes.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/hooks/useOntologySelectors.ts (4:9): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/hooks/useOntologySelectors.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/manifest/ontology/core/schemas.ts (1:9): "Static" is not exported by "node_modules/@sinclair/typebox/build/esm/index.mjs", imported by "src/manifest/ontology/core/schemas.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/manifest/ontology/shards/lifestyle/factions.ts (1:9): "Static" is not exported by "node_modules/@sinclair/typebox/build/esm/index.mjs", imported by "src/manifest/ontology/shards/lifestyle/factions.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/lib/ontology/chosun-faction/logic.ts (1:9): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/chosun-faction/logic.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/lib/ontology/chosun-faction/logic.ts (2:9): "SajuAnalysis" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/chosun-faction/logic.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/factions.ts (1:9): "Faction" is not exported by "src/manifest/ontology/shards/lifestyle/factions.ts", imported by "src/lib/ontology/engine/factions.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/factions.ts (2:9): "ChosunFaction" is not exported by "src/lib/ontology/chosun-faction/logic.ts", imported by "src/lib/ontology/engine/factions.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/manifest/ontology/loader.ts (1:9): "Birthflower" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/loader.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/manifest/ontology/loader.ts (1:22): "Birthstone" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/loader.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/manifest/ontology/loader.ts (1:34): "Hobby" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/loader.ts".
+2026-06-03T00:48:33.701Z	00:48:33 [WARN] [vite] src/manifest/ontology/loader.ts (2:9): "Faction" is not exported by "src/manifest/ontology/shards/lifestyle/factions.ts", imported by "src/manifest/ontology/loader.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/hooks/useOntologySynthesis.ts (5:2): "GenericFactionAnalysis" is not exported by "src/lib/ontology/engine/factions.ts", imported by "src/hooks/useOntologySynthesis.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/hooks/useOntologySynthesis.ts (8:2): "Birthflower" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/hooks/useOntologySynthesis.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/hooks/useOntologySynthesis.ts (9:2): "Birthstone" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/hooks/useOntologySynthesis.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/hooks/useOntologySynthesis.ts (10:2): "Hobby" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/hooks/useOntologySynthesis.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/hooks/useOntologySynthesis.ts (12:28): "ShardData" is not exported by "src/manifest/ontology/loader.ts", imported by "src/hooks/useOntologySynthesis.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/types/data-schema.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/types/data-schema.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/lib/user/history.ts (1:9): "UserHistory" is not exported by "src/types/data-schema.ts", imported by "src/lib/user/history.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/lib/user/history.ts (1:22): "UserResult" is not exported by "src/types/data-schema.ts", imported by "src/lib/user/history.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/hooks/useUserHistory.ts (8:9): "UserResult" is not exported by "src/types/data-schema.ts", imported by "src/hooks/useUserHistory.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/data.ts (10:2): "EarthlyBranchRegistryEntry" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/data.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/data.ts (13:2): "HeavenlyStemRegistryEntry" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/data.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/lib/ontology/saju-core/advanced-logic.ts (4:2): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju-core/advanced-logic.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/manifest/data/saju/branches.ts (7:9): "ElementId" is not exported by "src/manifest/data/saju/elements.ts", imported by "src/manifest/data/saju/branches.ts".
+2026-06-03T00:48:33.702Z	00:48:33 [WARN] [vite] src/manifest/data/saju/stems.ts (7:9): "ElementId" is not exported by "src/manifest/data/saju/elements.ts", imported by "src/manifest/data/saju/stems.ts".
+2026-06-03T00:48:33.703Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/logic.ts (9:2): "ElementCompatibilityResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/logic.ts".
+2026-06-03T00:48:33.703Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/logic.ts (13:2): "SajuAnalysis" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/logic.ts".
+2026-06-03T00:48:33.703Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/logic.ts (14:2): "SajuPillar" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/logic.ts".
+2026-06-03T00:48:33.703Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/logic.ts (15:2): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/logic.ts".
+2026-06-03T00:48:33.703Z	00:48:33 [WARN] [vite] src/lib/engines/visual-resonance/types.ts (1:9): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/engines/visual-resonance/types.ts".
+2026-06-03T00:48:33.703Z	00:48:33 [WARN] [vite] src/lib/engines/visual-resonance/types.ts (2:9): "TCIResult" is not exported by "src/lib/tci/types.ts", imported by "src/lib/engines/visual-resonance/types.ts".
+2026-06-03T00:48:33.703Z	00:48:33 [WARN] [vite] src/lib/engines/visual-resonance/engine.ts (4:22): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/engines/visual-resonance/engine.ts".
+2026-06-03T00:48:33.703Z	00:48:33 [WARN] [vite] src/lib/engines/visual-resonance/engine.ts (5:9): "TCIResult" is not exported by "src/lib/tci/types.ts", imported by "src/lib/engines/visual-resonance/engine.ts".
+2026-06-03T00:48:33.703Z	00:48:33 [WARN] [vite] src/lib/engines/visual-resonance/engine.ts (6:9): "ResonanceAura" is not exported by "src/lib/engines/visual-resonance/types.ts", imported by "src/lib/engines/visual-resonance/engine.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/visual-resonance/engine.ts (6:24): "VisualResonanceState" is not exported by "src/lib/engines/visual-resonance/types.ts", imported by "src/lib/engines/visual-resonance/engine.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/glossary.ts (9:9): "GlossaryHint" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/glossary.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/glossary.ts (9:23): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/glossary.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/shards/mbti-deep-shards.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/shards/mbti-deep-shards.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/engines/mbti-deep.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/engines/mbti-deep.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/shards/tci-deep-shards.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/shards/tci-deep-shards.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/engines/tci-deep.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/engines/tci-deep.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/engine.contract.ts (9:9): "LocalizedString" is not exported by "src/types/manifest.ts", imported by "src/lib/engines/interpretation/engine.contract.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/engine.contract.ts (11:9): "MBTIDeepInterpretation" is not exported by "src/lib/engines/interpretation/engines/mbti-deep.ts", imported by "src/lib/engines/interpretation/engine.contract.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/engine.contract.ts (12:9): "TCIDeepInterpretation" is not exported by "src/lib/engines/interpretation/engines/tci-deep.ts", imported by "src/lib/engines/interpretation/engine.contract.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/narrative-registry.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/narrative-registry.ts".
+2026-06-03T00:48:33.704Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/shards/archetype-narratives.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/archetype-narratives.ts".
+2026-06-03T00:48:33.705Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (1:9): "BirthSymbol" is not exported by "src/lib/data-layer/shards/fate-symbols.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:33.705Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (2:9): "CelticTreeSign" is not exported by "src/lib/ontology/celtic/types.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:33.705Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (3:9): "EgyptianCoordinates" is not exported by "src/lib/ontology/egyptian/types.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:33.705Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (4:9): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:33.708Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (5:9): "CelestialCoordinates" is not exported by "src/lib/ontology/western/calculator.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:33.708Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (6:9): "TCIResult" is not exported by "src/lib/tci/types.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:33.708Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (7:9): "VisualResonanceState" is not exported by "src/lib/engines/visual-resonance/types.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:33.708Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/weaver.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/engines/grand-oracle/weaver.ts".
+2026-06-03T00:48:33.708Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/weaver.ts (3:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/weaver.ts".
+2026-06-03T00:48:33.709Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/archetype-oracle.ts (9:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/archetype-oracle.ts".
+2026-06-03T00:48:33.710Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/archetype-oracle.ts (9:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/archetype-oracle.ts".
+2026-06-03T00:48:33.710Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/archetype-oracle.ts (9:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/archetype-oracle.ts".
+2026-06-03T00:48:33.710Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/shards/elemental-narratives.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/elemental-narratives.ts".
+2026-06-03T00:48:33.710Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/elemental-oracle.ts (11:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/elemental-oracle.ts".
+2026-06-03T00:48:33.710Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/elemental-oracle.ts (11:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/elemental-oracle.ts".
+2026-06-03T00:48:33.714Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/elemental-oracle.ts (11:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/elemental-oracle.ts".
+2026-06-03T00:48:33.714Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/time-engine.ts (2:9): "SajuPillar" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/time-engine.ts".
+2026-06-03T00:48:33.715Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/time-engine.ts (2:21): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/time-engine.ts".
+2026-06-03T00:48:33.715Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/shards/prophecy-narratives.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/prophecy-narratives.ts".
+2026-06-03T00:48:33.715Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/prophecy-oracle.ts (22:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/prophecy-oracle.ts".
+2026-06-03T00:48:33.715Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/prophecy-oracle.ts (22:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/prophecy-oracle.ts".
+2026-06-03T00:48:33.715Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/prophecy-oracle.ts (22:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/prophecy-oracle.ts".
+2026-06-03T00:48:33.715Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/shards/social-narratives.ts (3:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/social-narratives.ts".
+2026-06-03T00:48:33.715Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/social-oracle.ts (6:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/social-oracle.ts".
+2026-06-03T00:48:33.715Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/social-oracle.ts (6:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/social-oracle.ts".
+2026-06-03T00:48:33.715Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/social-oracle.ts (6:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/social-oracle.ts".
+2026-06-03T00:48:33.724Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/synthesis-oracle.ts (1:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/synthesis-oracle.ts".
+2026-06-03T00:48:33.724Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/synthesis-oracle.ts (1:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/synthesis-oracle.ts".
+2026-06-03T00:48:33.729Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/synthesis-oracle.ts (1:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/synthesis-oracle.ts".
+2026-06-03T00:48:33.729Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/visual-oracle.ts (3:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/visual-oracle.ts".
+2026-06-03T00:48:33.729Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/visual-oracle.ts (3:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/visual-oracle.ts".
+2026-06-03T00:48:33.730Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/visual-oracle.ts (3:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/visual-oracle.ts".
+2026-06-03T00:48:33.730Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/shards/vocation-narratives.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/vocation-narratives.ts".
+2026-06-03T00:48:33.730Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/vocation-oracle.ts (8:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/vocation-oracle.ts".
+2026-06-03T00:48:33.730Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/vocation-oracle.ts (8:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/vocation-oracle.ts".
+2026-06-03T00:48:33.730Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/modules/vocation-oracle.ts (8:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/vocation-oracle.ts".
+2026-06-03T00:48:33.730Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/shards/meta-narratives.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/meta-narratives.ts".
+2026-06-03T00:48:33.730Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/logic.ts (11:9): "GrandOracleInput" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/logic.ts".
+2026-06-03T00:48:33.731Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/logic.ts (11:27): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/logic.ts".
+2026-06-03T00:48:33.731Z	00:48:33 [WARN] [vite] src/lib/engines/grand-oracle/logic.ts (11:42): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/logic.ts".
+2026-06-03T00:48:33.731Z	00:48:33 [WARN] [vite] src/lib/data-layer/shards/fate-birth-attributes.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/data-layer/shards/fate-birth-attributes.ts".
+2026-06-03T00:48:33.731Z	00:48:33 [WARN] [vite] src/lib/ontology/numerology/data.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/numerology/data.ts".
+2026-06-03T00:48:33.731Z	00:48:33 [WARN] [vite] src/lib/ontology/numerology/data.ts (3:9): "NumerologyMeaning" is not exported by "src/lib/ontology/numerology/types.ts", imported by "src/lib/ontology/numerology/data.ts".
+2026-06-03T00:48:33.731Z	00:48:33 [WARN] [vite] src/lib/ontology/numerology/logic.ts (7:9): "NumerologyInput" is not exported by "src/lib/ontology/numerology/types.ts", imported by "src/lib/ontology/numerology/logic.ts".
+2026-06-03T00:48:33.732Z	00:48:33 [WARN] [vite] src/lib/ontology/numerology/logic.ts (7:26): "NumerologyReading" is not exported by "src/lib/ontology/numerology/types.ts", imported by "src/lib/ontology/numerology/logic.ts".
+2026-06-03T00:48:33.732Z	00:48:33 [WARN] [vite] src/lib/resonance/relationship/sacred-resonance/types.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/resonance/relationship/sacred-resonance/types.ts".
+2026-06-03T00:48:33.732Z	00:48:33 [WARN] [vite] src/lib/resonance/relationship/sacred-resonance/iching-logic.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/resonance/relationship/sacred-resonance/iching-logic.ts".
+2026-06-03T00:48:33.732Z	00:48:33 [WARN] [vite] src/lib/resonance/relationship/sacred-resonance/iching-logic.ts (3:9): "IChingOracle" is not exported by "src/lib/resonance/relationship/sacred-resonance/types.ts", imported by "src/lib/resonance/relationship/sacred-resonance/iching-logic.ts".
+2026-06-03T00:48:33.732Z	00:48:33 [WARN] [vite] src/lib/ontology/celtic/calculator.ts (1:23): "CelticTreeSign" is not exported by "src/lib/ontology/celtic/types.ts", imported by "src/lib/ontology/celtic/calculator.ts".
+2026-06-03T00:48:33.732Z	00:48:33 [WARN] [vite] src/lib/ontology/egyptian/calculator.ts (10:9): "EgyptianCoordinates" is not exported by "src/lib/ontology/egyptian/types.ts", imported by "src/lib/ontology/egyptian/calculator.ts".
+2026-06-03T00:48:33.733Z	00:48:33 [WARN] [vite] src/lib/ontology/egyptian/calculator.ts (10:30): "EgyptianDecan" is not exported by "src/lib/ontology/egyptian/types.ts", imported by "src/lib/ontology/egyptian/calculator.ts".
+2026-06-03T00:48:33.733Z	00:48:33 [WARN] [vite] src/lib/ontology/hellenistic/calculator.ts (2:9): "HellenisticCoordinates" is not exported by "src/lib/ontology/hellenistic/types.ts", imported by "src/lib/ontology/hellenistic/calculator.ts".
+2026-06-03T00:48:33.733Z	00:48:33 [WARN] [vite] src/lib/ontology/hellenistic/calculator.ts (2:33): "Sect" is not exported by "src/lib/ontology/hellenistic/types.ts", imported by "src/lib/ontology/hellenistic/calculator.ts".
+2026-06-03T00:48:33.734Z	00:48:33 [WARN] [vite] src/lib/ontology/hellenistic/calculator.ts (2:39): "TriplicityLords" is not exported by "src/lib/ontology/hellenistic/types.ts", imported by "src/lib/ontology/hellenistic/calculator.ts".
+2026-06-03T00:48:33.734Z	00:48:33 [WARN] [vite] src/lib/ontology/kabbalah/calculator.ts (11:9): "KabbalahCoordinates" is not exported by "src/lib/ontology/kabbalah/types.ts", imported by "src/lib/ontology/kabbalah/calculator.ts".
+2026-06-03T00:48:33.734Z	00:48:33 [WARN] [vite] src/lib/ontology/kabbalah/calculator.ts (11:30): "Sephira" is not exported by "src/lib/ontology/kabbalah/types.ts", imported by "src/lib/ontology/kabbalah/calculator.ts".
+2026-06-03T00:48:33.734Z	00:48:33 [WARN] [vite] src/lib/ontology/mayan/calculator.ts (1:25): "MayanKin" is not exported by "src/lib/ontology/mayan/types.ts", imported by "src/lib/ontology/mayan/calculator.ts".
+2026-06-03T00:48:33.734Z	00:48:33 [WARN] [vite] src/lib/ontology/nordic/calculator.ts (1:9): "Rune" is not exported by "src/lib/ontology/nordic/types.ts", imported by "src/lib/ontology/nordic/calculator.ts".
+2026-06-03T00:48:33.734Z	00:48:33 [WARN] [vite] src/lib/ontology/vedic/calculator.ts (13:9): "Pada" is not exported by "src/lib/ontology/vedic/types.ts", imported by "src/lib/ontology/vedic/calculator.ts".
+2026-06-03T00:48:33.734Z	00:48:33 [WARN] [vite] src/lib/ontology/vedic/calculator.ts (13:15): "VedicCoordinates" is not exported by "src/lib/ontology/vedic/types.ts", imported by "src/lib/ontology/vedic/calculator.ts".
+2026-06-03T00:48:33.734Z	00:48:33 [WARN] [vite] src/lib/ontology/calendar-systems/sexagenary.ts (16:38): "SajuPillar" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/calendar-systems/sexagenary.ts".
+2026-06-03T00:48:33.735Z	00:48:33 [WARN] [vite] src/lib/ontology/ziwei/data.ts (6:9): "Star" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/data.ts".
+2026-06-03T00:48:33.735Z	00:48:33 [WARN] [vite] src/lib/ontology/ziwei/data_stars.ts (6:9): "Element" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/data_stars.ts".
+2026-06-03T00:48:33.735Z	00:48:33 [WARN] [vite] src/lib/ontology/ziwei/data_stars.ts (6:18): "Polarity" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/data_stars.ts".
+2026-06-03T00:48:33.735Z	00:48:33 [WARN] [vite] src/lib/ontology/ziwei/data_stars.ts (6:28): "Star" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/data_stars.ts".
+2026-06-03T00:48:33.735Z	00:48:33 [WARN] [vite] src/lib/ontology/ziwei/data_stars.ts (6:34): "StarQuality" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/data_stars.ts".
+2026-06-03T00:48:33.736Z	00:48:33 [WARN] [vite] src/lib/ontology/ziwei/calculator.ts (17:9): "Element" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/calculator.ts".
+2026-06-03T00:48:33.736Z	00:48:33 [WARN] [vite] src/lib/ontology/ziwei/calculator.ts (17:18): "Palace" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/calculator.ts".
+2026-06-03T00:48:33.737Z	00:48:33 [WARN] [vite] src/lib/ontology/ziwei/calculator.ts (17:26): "PalaceKey" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/calculator.ts".
+2026-06-03T00:48:33.739Z	00:48:33 [WARN] [vite] src/lib/ontology/ziwei/calculator.ts (17:37): "Star" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/calculator.ts".
+2026-06-03T00:48:33.739Z	00:48:33 [WARN] [vite] src/lib/ontology/ziwei/calculator.ts (17:43): "ZiWeiCoordinates" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/calculator.ts".
+2026-06-03T00:48:33.739Z	00:48:33 [WARN] [vite] src/lib/ontology/chronos/resonance.ts (10:9): "Element" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/chronos/resonance.ts".
+2026-06-03T00:48:33.739Z	00:48:33 [WARN] [vite] src/lib/ontology/chronos/resonance.ts (11:9): "UniversalChronosCoordinates" is not exported by "src/lib/ontology/chronos/types.ts", imported by "src/lib/ontology/chronos/resonance.ts".
+2026-06-03T00:48:33.739Z	00:48:33 [WARN] [vite] src/lib/ontology/chronos/chronos-engine.ts (19:9): "CelticTreeSign" is not exported by "src/lib/ontology/celtic/types.ts", imported by "src/lib/ontology/chronos/chronos-engine.ts".
+2026-06-03T00:48:33.739Z	00:48:33 [WARN] [vite] src/lib/ontology/chronos/chronos-engine.ts (26:9): "MayanKin" is not exported by "src/lib/ontology/mayan/types.ts", imported by "src/lib/ontology/chronos/chronos-engine.ts".
+2026-06-03T00:48:33.739Z	00:48:33 [WARN] [vite] src/lib/ontology/traits/blood-type/data.ts (3:9): "BloodType" is not exported by "src/lib/ontology/traits/blood-type/types.ts", imported by "src/lib/ontology/traits/blood-type/data.ts".
+2026-06-03T00:48:33.741Z	00:48:33 [WARN] [vite] src/lib/ontology/traits/blood-type/data.ts (3:20): "BloodTypePersonality" is not exported by "src/lib/ontology/traits/blood-type/types.ts", imported by "src/lib/ontology/traits/blood-type/data.ts".
+2026-06-03T00:48:33.744Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/data.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/engine/data.ts".
+2026-06-03T00:48:33.744Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/data.ts (3:9): "WesternZodiacSign" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/data.ts".
+2026-06-03T00:48:33.745Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/logic.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:33.745Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/logic.ts (6:2): "BirthSymbol" is not exported by "src/lib/data-layer/shards/fate-symbols.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:33.745Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/logic.ts (16:28): "PrimalElement" is not exported by "src/lib/ontology/onomancy/analysis.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:33.745Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/logic.ts (24:9): "SocialAnalysis" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:33.745Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/logic.ts (24:25): "UniversalInput" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:33.745Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/logic.ts (24:41): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:33.745Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/index.ts (17:2): "OntologyBranches" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:33.745Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/index.ts (18:2): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:33.745Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/index.ts (19:2): "OntologyRoots" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:33.746Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/index.ts (20:2): "OntologySynthesis" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:33.746Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/index.ts (24:9): "SocialAnalysis" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:33.746Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/index.ts (24:25): "UniversalInput" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:33.746Z	00:48:33 [WARN] [vite] src/lib/ontology/engine/index.ts (24:41): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:33.747Z	00:48:33 [WARN] [vite] src/lib/almanac/engine.ts (1:9): "DaySymbols" is not exported by "src/hooks/useAlmanac.ts", imported by "src/lib/almanac/engine.ts".
+2026-06-03T00:48:33.747Z	00:48:33 [WARN] [vite] src/lib/almanac/engine.ts (4:39): "MoonPhaseData" is not exported by "src/lib/almanac/astro-lookup.ts", imported by "src/lib/almanac/engine.ts".
+2026-06-03T00:48:33.747Z	00:48:33 [WARN] [vite] src/lib/almanac/engine.ts (5:9): "DailyPillar" is not exported by "src/lib/almanac/saju-math.ts", imported by "src/lib/almanac/engine.ts".
+2026-06-03T00:48:33.752Z	00:48:33 [WARN] [vite] src/lib/almanac/engine.ts (5:22): "Element" is not exported by "src/lib/almanac/saju-math.ts", imported by "src/lib/almanac/engine.ts".
+2026-06-03T00:48:33.752Z	00:48:33 [WARN] [vite] src/lib/almanac/DailyInsightProvider.tsx (18:2): "DailyCosmicState" is not exported by "src/lib/almanac/engine.ts", imported by "src/lib/almanac/DailyInsightProvider.tsx".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/fortune/engine.ts (13:9): "LocalizedString" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/saju/fortune/engine.ts".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/lib/ontology/saju/fortune/engine.ts (25:2): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/fortune/engine.ts".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/InterpretationService.ts (2:2): "ComprehensiveSajuReading" is not exported by "src/lib/ontology/saju/fortune/engine.ts", imported by "src/lib/engines/interpretation/InterpretationService.ts".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/InterpretationService.ts (5:9): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/engines/interpretation/InterpretationService.ts".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/InterpretationService.ts (9:2): "InterpretationDefinition" is not exported by "src/lib/engines/interpretation/data/definitions.ts", imported by "src/lib/engines/interpretation/InterpretationService.ts".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/lib/engines/interpretation/shards/ziwei-shards.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/shards/ziwei-shards.ts".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/components/ontology/OntologyClient.tsx (106:9): "Locale" is not exported by "src/i18n/index.ts", imported by "src/components/ontology/OntologyClient.tsx".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/components/ontology/OntologyClient.tsx (120:2): "FactionAnalysis" is not exported by "src/lib/ontology/chosun-faction/logic.ts", imported by "src/components/ontology/OntologyClient.tsx".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/components/ontology/OntologyClient.tsx (124:9): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/components/ontology/OntologyClient.tsx".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/components/ontology/OntologyClient.tsx (126:9): "LuckyAttributes" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/components/ontology/OntologyClient.tsx".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/components/ontology/OntologyClient.tsx (127:9): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/components/ontology/OntologyClient.tsx".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/manifest/ontology/shards/biography/flowers.ts (1:9): "Birthflower" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/shards/biography/flowers.ts".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/manifest/ontology/shards/biography/stones.ts (1:9): "Birthstone" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/shards/biography/stones.ts".
+2026-06-03T00:48:33.753Z	00:48:33 [WARN] [vite] src/manifest/ontology/shards/lifestyle/hobbies.ts (1:9): "Hobby" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/shards/lifestyle/hobbies.ts".
+2026-06-03T00:48:33.754Z	00:48:33 [WARN] [vite] src/components/ontology/FactionCard.tsx (6:9): "FactionAnalysis" is not exported by "src/lib/ontology/chosun-faction/logic.ts", imported by "src/components/ontology/FactionCard.tsx".
+2026-06-03T00:48:33.754Z	00:48:33 [WARN] [vite] src/components/ontology/GenericFactionCard.tsx (6:9): "GenericFactionAnalysis" is not exported by "src/lib/ontology/engine/factions.ts", imported by "src/components/ontology/GenericFactionCard.tsx".
+2026-06-03T00:48:44.118Z	00:48:44 [WARN] [vite] [plugin vite:reporter] 
+2026-06-03T00:48:44.119Z	(!) /opt/buildhome/repo/src/manifest/ontology/shards/lifestyle/factions.ts is dynamically imported by /opt/buildhome/repo/src/manifest/ontology/loader.ts, /opt/buildhome/repo/src/manifest/ontology/loader.ts but also statically imported by /opt/buildhome/repo/src/lib/ontology/engine/factions.ts, /opt/buildhome/repo/src/manifest/ontology/loader.ts, dynamic import will not move module into another chunk.
+2026-06-03T00:48:44.119Z	
+2026-06-03T00:48:44.704Z	00:48:44 [vite] ✓ built in 21.32s
+2026-06-03T00:48:54.371Z	00:48:54 [WARN] [vite] src/types/manifest.ts (1:9): "LucideIcon" is not exported by "node_modules/lucide-react/dist/esm/lucide-react.mjs", imported by "src/types/manifest.ts".
+2026-06-03T00:48:54.371Z	00:48:54 [WARN] [vite] src/types/manifest.ts (4:9): "CategoryId" is not exported by "src/config/categories.ts", imported by "src/types/manifest.ts".
+2026-06-03T00:48:54.371Z	00:48:54 [WARN] [vite] src/types/manifest.ts (5:9): "Locale" is not exported by "src/i18n/index.ts", imported by "src/types/manifest.ts".
+2026-06-03T00:48:54.371Z	00:48:54 [WARN] [vite] src/lib/data-layer/shards/fate-symbols.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/data-layer/shards/fate-symbols.ts".
+2026-06-03T00:48:54.371Z	00:48:54 [WARN] [vite] src/lib/ontology/numerology/types.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/numerology/types.ts".
+2026-06-03T00:48:54.372Z	00:48:54 [WARN] [vite] src/lib/ontology/onomancy/analysis.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/onomancy/analysis.ts".
+2026-06-03T00:48:54.372Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/types.ts (1:9): "LocalizedStringArray" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/saju/types.ts".
+2026-06-03T00:48:54.372Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/types.ts (1:31): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/saju/types.ts".
+2026-06-03T00:48:54.376Z	00:48:54 [WARN] [vite] src/lib/data-layer/shards/fate-cosmic.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/data-layer/shards/fate-cosmic.ts".
+2026-06-03T00:48:54.376Z	00:48:54 [WARN] [vite] src/lib/ontology/western/calculator.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/western/calculator.ts".
+2026-06-03T00:48:54.377Z	00:48:54 [WARN] [vite] src/lib/ontology/hellenistic/types.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/hellenistic/types.ts".
+2026-06-03T00:48:54.377Z	00:48:54 [WARN] [vite] src/lib/ontology/mayan/types.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/mayan/types.ts".
+2026-06-03T00:48:54.377Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (1:9): "BirthSymbol" is not exported by "src/lib/data-layer/shards/fate-symbols.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.377Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (2:9): "CelticTreeSign" is not exported by "src/lib/ontology/celtic/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.377Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (3:9): "EgyptianCoordinates" is not exported by "src/lib/ontology/egyptian/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.377Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (4:9): "NumerologyResult" is not exported by "src/lib/ontology/numerology/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.377Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (5:9): "NameAnalysisResult" is not exported by "src/lib/ontology/onomancy/analysis.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.378Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (7:2): "LuckyAttributes" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.378Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (8:2): "SajuAnalysis" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.378Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (9:2): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.378Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (11:9): "BloodTypePersonality" is not exported by "src/lib/ontology/traits/blood-type/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.378Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (12:9): "CelestialCoordinates" is not exported by "src/lib/ontology/western/calculator.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.378Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (13:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.378Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (15:9): "HellenisticCoordinates" is not exported by "src/lib/ontology/hellenistic/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.379Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (16:9): "KabbalahCoordinates" is not exported by "src/lib/ontology/kabbalah/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.379Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (17:9): "MayanKin" is not exported by "src/lib/ontology/mayan/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.379Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (18:9): "Rune" is not exported by "src/lib/ontology/nordic/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.379Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (19:9): "VedicCoordinates" is not exported by "src/lib/ontology/vedic/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.379Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/types.ts (20:9): "ZiWeiCoordinates" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/engine/types.ts".
+2026-06-03T00:48:54.379Z	00:48:54 [WARN] [vite] src/lib/ontology/akashic/logic.ts (1:9): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/akashic/logic.ts".
+2026-06-03T00:48:54.379Z	00:48:54 [WARN] [vite] src/components/ontology/AkashicRecord.tsx (9:9): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/components/ontology/AkashicRecord.tsx".
+2026-06-03T00:48:54.431Z	00:48:54 [WARN] [vite] src/lib/data-layer/shards/careers.ts (1:9): "Career" is not exported by "src/lib/data-layer/types.ts", imported by "src/lib/data-layer/shards/careers.ts".
+2026-06-03T00:48:54.431Z	00:48:54 [WARN] [vite] src/lib/ontology/riasec/types.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/riasec/types.ts".
+2026-06-03T00:48:54.431Z	00:48:54 [WARN] [vite] src/lib/ontology/riasec/types.ts (32:9): "Career" is not exported by "src/lib/data-layer/types.ts", imported by "src/lib/ontology/riasec/types.ts".
+2026-06-03T00:48:54.431Z	00:48:54 [WARN] [vite] src/lib/big5/types.ts (1:9): "LikertScoreResult" is not exported by "src/lib/engines/likert-score.ts", imported by "src/lib/big5/types.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/big5/types.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/big5/types.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/ontology/hsp/types.ts (1:9): "LikertScoreResult" is not exported by "src/lib/engines/likert-score.ts", imported by "src/lib/ontology/hsp/types.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/ontology/hsp/types.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/hsp/types.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/ontology/perfectionism/types.ts (1:9): "LikertScoreResult" is not exported by "src/lib/engines/likert-score.ts", imported by "src/lib/ontology/perfectionism/types.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/ontology/perfectionism/types.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/perfectionism/types.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/ontology/hexaco/types.ts (1:9): "LikertScoreResult" is not exported by "src/lib/engines/likert-score.ts", imported by "src/lib/ontology/hexaco/types.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/ontology/hexaco/types.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/hexaco/types.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/data-layer/shards/personality-enneagram.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/data-layer/shards/personality-enneagram.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/ontology/enneagram-core/engine.ts (3:2): "EnneagramType" is not exported by "src/lib/data-layer/shards/personality-enneagram.ts", imported by "src/lib/ontology/enneagram-core/engine.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/ontology/enneagram-core/engine.ts (4:2): "EnneagramTypeDetail" is not exported by "src/lib/data-layer/shards/personality-enneagram.ts", imported by "src/lib/ontology/enneagram-core/engine.ts".
+2026-06-03T00:48:54.432Z	00:48:54 [WARN] [vite] src/lib/ontology/types.ts (1:9): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/types.ts (2:9): "Locale" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/types.ts (12:9): "Big5Result" is not exported by "src/lib/big5/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/types.ts (13:9): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/types.ts (14:9): "TCIResult" is not exported by "src/lib/tci/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/types.ts (41:9): "HSPResult" is not exported by "src/lib/ontology/hsp/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/types.ts (42:9): "PerfectionismResult" is not exported by "src/lib/ontology/perfectionism/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/types.ts (64:9): "HEXACOResult" is not exported by "src/lib/ontology/hexaco/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/types.ts (99:9): "EnneagramResult" is not exported by "src/lib/ontology/enneagram-core/engine.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/types.ts (100:9): "RiasecResult" is not exported by "src/lib/ontology/riasec/types.ts", imported by "src/lib/ontology/types.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/bridge/universal-matrix.ts (10:9): "RiasecType" is not exported by "src/lib/ontology/riasec/types.ts", imported by "src/lib/ontology/bridge/universal-matrix.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (2:9): "Career" is not exported by "src/lib/data-layer/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:54.433Z	00:48:54 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (3:9): "RiasecType" is not exported by "src/lib/ontology/riasec/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:54.434Z	00:48:54 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (5:2): "MBTIType" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:54.434Z	00:48:54 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (6:2): "OntologyBranches" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:54.434Z	00:48:54 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (7:2): "OntologyContextState" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:54.434Z	00:48:54 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (8:2): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:54.434Z	00:48:54 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (9:2): "Recommendation" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:54.434Z	00:48:54 [WARN] [vite] src/lib/ontology/bridge/recommendation-engine.ts (10:2): "RelevanceScore" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/bridge/recommendation-engine.ts".
+2026-06-03T00:48:54.434Z	00:48:54 [WARN] [vite] src/components/ontology/GuidanceSection.tsx (9:9): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/components/ontology/GuidanceSection.tsx".
+2026-06-03T00:48:54.434Z	00:48:54 [WARN] [vite] src/registry/routes.ts (1:9): "Locale" is not exported by "src/i18n/index.ts", imported by "src/registry/routes.ts".
+2026-06-03T00:48:54.434Z	00:48:54 [WARN] [vite] src/components/ontology/OntologyCard.tsx (19:9): "Locale" is not exported by "src/i18n/index.ts", imported by "src/components/ontology/OntologyCard.tsx".
+2026-06-03T00:48:54.434Z	00:48:54 [WARN] [vite] src/components/ontology/SmartLink.tsx (10:9): "SmartLinkProps" is not exported by "src/lib/ontology/types.ts", imported by "src/components/ontology/SmartLink.tsx".
+2026-06-03T00:48:54.439Z	00:48:54 [WARN] [vite] src/components/ontology/widgets/BiorhythmChart.tsx (15:9): "BiorhythmData" is not exported by "src/lib/engines/biorhythm-engine.ts", imported by "src/components/ontology/widgets/BiorhythmChart.tsx".
+2026-06-03T00:48:54.439Z	00:48:54 [WARN] [vite] src/app/[locale]/daily/manifest.ts (1:9): "FeatureManifest" is not exported by "src/types/manifest.ts", imported by "src/app/[locale]/daily/manifest.ts".
+2026-06-03T00:48:54.439Z	00:48:54 [WARN] [vite] src/app/[locale]/ontology/manifest.ts (2:9): "FeatureManifest" is not exported by "src/types/manifest.ts", imported by "src/app/[locale]/ontology/manifest.ts".
+2026-06-03T00:48:54.439Z	00:48:54 [WARN] [vite] src/registry/index.ts (3:9): "FeatureManifest" is not exported by "src/types/manifest.ts", imported by "src/registry/index.ts".
+2026-06-03T00:48:54.439Z	00:48:54 [WARN] [vite] src/config/routes.ts (2:9): "FeatureManifest" is not exported by "src/types/manifest.ts", imported by "src/config/routes.ts".
+2026-06-03T00:48:54.440Z	00:48:54 [WARN] [vite] src/hooks/useOntologySelectors.ts (4:9): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/hooks/useOntologySelectors.ts".
+2026-06-03T00:48:54.441Z	00:48:54 [WARN] [vite] src/manifest/ontology/core/schemas.ts (1:9): "Static" is not exported by "node_modules/@sinclair/typebox/build/esm/index.mjs", imported by "src/manifest/ontology/core/schemas.ts".
+2026-06-03T00:48:54.441Z	00:48:54 [WARN] [vite] src/manifest/ontology/shards/lifestyle/factions.ts (1:9): "Static" is not exported by "node_modules/@sinclair/typebox/build/esm/index.mjs", imported by "src/manifest/ontology/shards/lifestyle/factions.ts".
+2026-06-03T00:48:54.441Z	00:48:54 [WARN] [vite] src/lib/ontology/chosun-faction/logic.ts (1:9): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/chosun-faction/logic.ts".
+2026-06-03T00:48:54.441Z	00:48:54 [WARN] [vite] src/lib/ontology/chosun-faction/logic.ts (2:9): "SajuAnalysis" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/chosun-faction/logic.ts".
+2026-06-03T00:48:54.441Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/factions.ts (1:9): "Faction" is not exported by "src/manifest/ontology/shards/lifestyle/factions.ts", imported by "src/lib/ontology/engine/factions.ts".
+2026-06-03T00:48:54.442Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/factions.ts (2:9): "ChosunFaction" is not exported by "src/lib/ontology/chosun-faction/logic.ts", imported by "src/lib/ontology/engine/factions.ts".
+2026-06-03T00:48:54.442Z	00:48:54 [WARN] [vite] src/manifest/ontology/loader.ts (1:34): "Birthflower" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/loader.ts".
+2026-06-03T00:48:54.442Z	00:48:54 [WARN] [vite] src/manifest/ontology/loader.ts (1:34): "Birthstone" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/loader.ts".
+2026-06-03T00:48:54.442Z	00:48:54 [WARN] [vite] src/manifest/ontology/loader.ts (1:34): "Hobby" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/loader.ts".
+2026-06-03T00:48:54.442Z	00:48:54 [WARN] [vite] src/manifest/ontology/loader.ts (2:9): "Faction" is not exported by "src/manifest/ontology/shards/lifestyle/factions.ts", imported by "src/manifest/ontology/loader.ts".
+2026-06-03T00:48:54.442Z	00:48:54 [WARN] [vite] src/hooks/useOntologySynthesis.ts (5:2): "GenericFactionAnalysis" is not exported by "src/lib/ontology/engine/factions.ts", imported by "src/hooks/useOntologySynthesis.ts".
+2026-06-03T00:48:54.442Z	00:48:54 [WARN] [vite] src/hooks/useOntologySynthesis.ts (8:2): "Birthflower" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/hooks/useOntologySynthesis.ts".
+2026-06-03T00:48:54.443Z	00:48:54 [WARN] [vite] src/hooks/useOntologySynthesis.ts (9:2): "Birthstone" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/hooks/useOntologySynthesis.ts".
+2026-06-03T00:48:54.443Z	00:48:54 [WARN] [vite] src/hooks/useOntologySynthesis.ts (10:2): "Hobby" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/hooks/useOntologySynthesis.ts".
+2026-06-03T00:48:54.443Z	00:48:54 [WARN] [vite] src/hooks/useOntologySynthesis.ts (12:28): "ShardData" is not exported by "src/manifest/ontology/loader.ts", imported by "src/hooks/useOntologySynthesis.ts".
+2026-06-03T00:48:54.443Z	00:48:54 [WARN] [vite] src/types/data-schema.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/types/data-schema.ts".
+2026-06-03T00:48:54.443Z	00:48:54 [WARN] [vite] src/lib/user/history.ts (1:9): "UserHistory" is not exported by "src/types/data-schema.ts", imported by "src/lib/user/history.ts".
+2026-06-03T00:48:54.445Z	00:48:54 [WARN] [vite] src/lib/user/history.ts (1:22): "UserResult" is not exported by "src/types/data-schema.ts", imported by "src/lib/user/history.ts".
+2026-06-03T00:48:54.445Z	00:48:54 [WARN] [vite] src/hooks/useUserHistory.ts (8:9): "UserResult" is not exported by "src/types/data-schema.ts", imported by "src/hooks/useUserHistory.ts".
+2026-06-03T00:48:54.445Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/data.ts (10:2): "EarthlyBranchRegistryEntry" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/data.ts".
+2026-06-03T00:48:54.445Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/data.ts (13:2): "HeavenlyStemRegistryEntry" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/data.ts".
+2026-06-03T00:48:54.445Z	00:48:54 [WARN] [vite] src/lib/ontology/saju-core/advanced-logic.ts (4:2): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju-core/advanced-logic.ts".
+2026-06-03T00:48:54.445Z	00:48:54 [WARN] [vite] src/manifest/data/saju/branches.ts (7:9): "ElementId" is not exported by "src/manifest/data/saju/elements.ts", imported by "src/manifest/data/saju/branches.ts".
+2026-06-03T00:48:54.445Z	00:48:54 [WARN] [vite] src/manifest/data/saju/stems.ts (7:9): "ElementId" is not exported by "src/manifest/data/saju/elements.ts", imported by "src/manifest/data/saju/stems.ts".
+2026-06-03T00:48:54.445Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/logic.ts (9:2): "ElementCompatibilityResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/logic.ts".
+2026-06-03T00:48:54.446Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/logic.ts (13:2): "SajuAnalysis" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/logic.ts".
+2026-06-03T00:48:54.446Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/logic.ts (14:2): "SajuPillar" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/logic.ts".
+2026-06-03T00:48:54.446Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/logic.ts (15:2): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/logic.ts".
+2026-06-03T00:48:54.446Z	00:48:54 [WARN] [vite] src/lib/engines/visual-resonance/types.ts (1:9): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/engines/visual-resonance/types.ts".
+2026-06-03T00:48:54.446Z	00:48:54 [WARN] [vite] src/lib/engines/visual-resonance/types.ts (2:9): "TCIResult" is not exported by "src/lib/tci/types.ts", imported by "src/lib/engines/visual-resonance/types.ts".
+2026-06-03T00:48:54.446Z	00:48:54 [WARN] [vite] src/lib/engines/visual-resonance/engine.ts (4:22): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/engines/visual-resonance/engine.ts".
+2026-06-03T00:48:54.446Z	00:48:54 [WARN] [vite] src/lib/engines/visual-resonance/engine.ts (5:9): "TCIResult" is not exported by "src/lib/tci/types.ts", imported by "src/lib/engines/visual-resonance/engine.ts".
+2026-06-03T00:48:54.446Z	00:48:54 [WARN] [vite] src/lib/engines/visual-resonance/engine.ts (6:9): "ResonanceAura" is not exported by "src/lib/engines/visual-resonance/types.ts", imported by "src/lib/engines/visual-resonance/engine.ts".
+2026-06-03T00:48:54.447Z	00:48:54 [WARN] [vite] src/lib/engines/visual-resonance/engine.ts (6:24): "VisualResonanceState" is not exported by "src/lib/engines/visual-resonance/types.ts", imported by "src/lib/engines/visual-resonance/engine.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/glossary.ts (9:9): "GlossaryHint" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/glossary.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/glossary.ts (9:23): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/glossary.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/shards/mbti-deep-shards.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/shards/mbti-deep-shards.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/engines/mbti-deep.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/engines/mbti-deep.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/shards/tci-deep-shards.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/shards/tci-deep-shards.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/engines/tci-deep.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/engines/tci-deep.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/engine.contract.ts (9:9): "LocalizedString" is not exported by "src/types/manifest.ts", imported by "src/lib/engines/interpretation/engine.contract.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/engine.contract.ts (11:9): "MBTIDeepInterpretation" is not exported by "src/lib/engines/interpretation/engines/mbti-deep.ts", imported by "src/lib/engines/interpretation/engine.contract.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/engine.contract.ts (12:9): "TCIDeepInterpretation" is not exported by "src/lib/engines/interpretation/engines/tci-deep.ts", imported by "src/lib/engines/interpretation/engine.contract.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/narrative-registry.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/narrative-registry.ts".
+2026-06-03T00:48:54.448Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/shards/archetype-narratives.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/archetype-narratives.ts".
+2026-06-03T00:48:54.449Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (1:9): "BirthSymbol" is not exported by "src/lib/data-layer/shards/fate-symbols.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:54.449Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (2:9): "CelticTreeSign" is not exported by "src/lib/ontology/celtic/types.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:54.449Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (3:9): "EgyptianCoordinates" is not exported by "src/lib/ontology/egyptian/types.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:54.449Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (4:9): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:54.449Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (5:9): "CelestialCoordinates" is not exported by "src/lib/ontology/western/calculator.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:54.449Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (6:9): "TCIResult" is not exported by "src/lib/tci/types.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:54.449Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/types.ts (7:9): "VisualResonanceState" is not exported by "src/lib/engines/visual-resonance/types.ts", imported by "src/lib/engines/grand-oracle/types.ts".
+2026-06-03T00:48:54.449Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/weaver.ts (1:9): "LocalizedContent" is not exported by "src/types/manifest.ts", imported by "src/lib/engines/grand-oracle/weaver.ts".
+2026-06-03T00:48:54.450Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/weaver.ts (3:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/weaver.ts".
+2026-06-03T00:48:54.450Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/archetype-oracle.ts (9:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/archetype-oracle.ts".
+2026-06-03T00:48:54.450Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/archetype-oracle.ts (9:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/archetype-oracle.ts".
+2026-06-03T00:48:54.450Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/archetype-oracle.ts (9:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/archetype-oracle.ts".
+2026-06-03T00:48:54.450Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/shards/elemental-narratives.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/elemental-narratives.ts".
+2026-06-03T00:48:54.450Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/elemental-oracle.ts (11:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/elemental-oracle.ts".
+2026-06-03T00:48:54.450Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/elemental-oracle.ts (11:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/elemental-oracle.ts".
+2026-06-03T00:48:54.450Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/elemental-oracle.ts (11:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/elemental-oracle.ts".
+2026-06-03T00:48:54.450Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/time-engine.ts (2:9): "SajuPillar" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/time-engine.ts".
+2026-06-03T00:48:54.451Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/time-engine.ts (2:21): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/time-engine.ts".
+2026-06-03T00:48:54.451Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/shards/prophecy-narratives.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/prophecy-narratives.ts".
+2026-06-03T00:48:54.467Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/prophecy-oracle.ts (22:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/prophecy-oracle.ts".
+2026-06-03T00:48:54.472Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/prophecy-oracle.ts (22:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/prophecy-oracle.ts".
+2026-06-03T00:48:54.475Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/prophecy-oracle.ts (22:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/prophecy-oracle.ts".
+2026-06-03T00:48:54.475Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/shards/social-narratives.ts (3:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/social-narratives.ts".
+2026-06-03T00:48:54.480Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/social-oracle.ts (6:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/social-oracle.ts".
+2026-06-03T00:48:54.480Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/social-oracle.ts (6:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/social-oracle.ts".
+2026-06-03T00:48:54.481Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/social-oracle.ts (6:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/social-oracle.ts".
+2026-06-03T00:48:54.481Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/synthesis-oracle.ts (1:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/synthesis-oracle.ts".
+2026-06-03T00:48:54.481Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/synthesis-oracle.ts (1:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/synthesis-oracle.ts".
+2026-06-03T00:48:54.481Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/synthesis-oracle.ts (1:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/synthesis-oracle.ts".
+2026-06-03T00:48:54.481Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/visual-oracle.ts (3:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/visual-oracle.ts".
+2026-06-03T00:48:54.481Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/visual-oracle.ts (3:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/visual-oracle.ts".
+2026-06-03T00:48:54.481Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/visual-oracle.ts (3:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/visual-oracle.ts".
+2026-06-03T00:48:54.481Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/shards/vocation-narratives.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/vocation-narratives.ts".
+2026-06-03T00:48:54.482Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/vocation-oracle.ts (8:9): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/vocation-oracle.ts".
+2026-06-03T00:48:54.482Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/vocation-oracle.ts (8:24): "OracleModule" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/vocation-oracle.ts".
+2026-06-03T00:48:54.499Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/modules/vocation-oracle.ts (8:38): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/modules/vocation-oracle.ts".
+2026-06-03T00:48:54.499Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/shards/meta-narratives.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/grand-oracle/shards/meta-narratives.ts".
+2026-06-03T00:48:54.500Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/logic.ts (11:9): "GrandOracleInput" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/logic.ts".
+2026-06-03T00:48:54.500Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/logic.ts (11:27): "OracleContext" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/logic.ts".
+2026-06-03T00:48:54.500Z	00:48:54 [WARN] [vite] src/lib/engines/grand-oracle/logic.ts (11:42): "UnifiedFateReport" is not exported by "src/lib/engines/grand-oracle/types.ts", imported by "src/lib/engines/grand-oracle/logic.ts".
+2026-06-03T00:48:54.500Z	00:48:54 [WARN] [vite] src/lib/data-layer/shards/fate-birth-attributes.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/data-layer/shards/fate-birth-attributes.ts".
+2026-06-03T00:48:54.501Z	00:48:54 [WARN] [vite] src/lib/ontology/numerology/data.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/numerology/data.ts".
+2026-06-03T00:48:54.501Z	00:48:54 [WARN] [vite] src/lib/ontology/numerology/data.ts (3:9): "NumerologyMeaning" is not exported by "src/lib/ontology/numerology/types.ts", imported by "src/lib/ontology/numerology/data.ts".
+2026-06-03T00:48:54.501Z	00:48:54 [WARN] [vite] src/lib/ontology/numerology/logic.ts (7:9): "NumerologyInput" is not exported by "src/lib/ontology/numerology/types.ts", imported by "src/lib/ontology/numerology/logic.ts".
+2026-06-03T00:48:54.501Z	00:48:54 [WARN] [vite] src/lib/ontology/numerology/logic.ts (7:26): "NumerologyReading" is not exported by "src/lib/ontology/numerology/types.ts", imported by "src/lib/ontology/numerology/logic.ts".
+2026-06-03T00:48:54.501Z	00:48:54 [WARN] [vite] src/lib/resonance/relationship/sacred-resonance/types.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/resonance/relationship/sacred-resonance/types.ts".
+2026-06-03T00:48:54.501Z	00:48:54 [WARN] [vite] src/lib/resonance/relationship/sacred-resonance/iching-logic.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/resonance/relationship/sacred-resonance/iching-logic.ts".
+2026-06-03T00:48:54.501Z	00:48:54 [WARN] [vite] src/lib/resonance/relationship/sacred-resonance/iching-logic.ts (3:9): "IChingOracle" is not exported by "src/lib/resonance/relationship/sacred-resonance/types.ts", imported by "src/lib/resonance/relationship/sacred-resonance/iching-logic.ts".
+2026-06-03T00:48:54.502Z	00:48:54 [WARN] [vite] src/lib/ontology/celtic/calculator.ts (1:23): "CelticTreeSign" is not exported by "src/lib/ontology/celtic/types.ts", imported by "src/lib/ontology/celtic/calculator.ts".
+2026-06-03T00:48:54.502Z	00:48:54 [WARN] [vite] src/lib/ontology/egyptian/calculator.ts (10:9): "EgyptianCoordinates" is not exported by "src/lib/ontology/egyptian/types.ts", imported by "src/lib/ontology/egyptian/calculator.ts".
+2026-06-03T00:48:54.502Z	00:48:54 [WARN] [vite] src/lib/ontology/egyptian/calculator.ts (10:30): "EgyptianDecan" is not exported by "src/lib/ontology/egyptian/types.ts", imported by "src/lib/ontology/egyptian/calculator.ts".
+2026-06-03T00:48:54.502Z	00:48:54 [WARN] [vite] src/lib/ontology/hellenistic/calculator.ts (2:9): "HellenisticCoordinates" is not exported by "src/lib/ontology/hellenistic/types.ts", imported by "src/lib/ontology/hellenistic/calculator.ts".
+2026-06-03T00:48:54.502Z	00:48:54 [WARN] [vite] src/lib/ontology/hellenistic/calculator.ts (2:33): "Sect" is not exported by "src/lib/ontology/hellenistic/types.ts", imported by "src/lib/ontology/hellenistic/calculator.ts".
+2026-06-03T00:48:54.502Z	00:48:54 [WARN] [vite] src/lib/ontology/hellenistic/calculator.ts (2:39): "TriplicityLords" is not exported by "src/lib/ontology/hellenistic/types.ts", imported by "src/lib/ontology/hellenistic/calculator.ts".
+2026-06-03T00:48:54.502Z	00:48:54 [WARN] [vite] src/lib/ontology/kabbalah/calculator.ts (11:9): "KabbalahCoordinates" is not exported by "src/lib/ontology/kabbalah/types.ts", imported by "src/lib/ontology/kabbalah/calculator.ts".
+2026-06-03T00:48:54.504Z	00:48:54 [WARN] [vite] src/lib/ontology/kabbalah/calculator.ts (11:30): "Sephira" is not exported by "src/lib/ontology/kabbalah/types.ts", imported by "src/lib/ontology/kabbalah/calculator.ts".
+2026-06-03T00:48:54.504Z	00:48:54 [WARN] [vite] src/lib/ontology/mayan/calculator.ts (1:25): "MayanKin" is not exported by "src/lib/ontology/mayan/types.ts", imported by "src/lib/ontology/mayan/calculator.ts".
+2026-06-03T00:48:54.504Z	00:48:54 [WARN] [vite] src/lib/ontology/nordic/calculator.ts (1:9): "Rune" is not exported by "src/lib/ontology/nordic/types.ts", imported by "src/lib/ontology/nordic/calculator.ts".
+2026-06-03T00:48:54.504Z	00:48:54 [WARN] [vite] src/lib/ontology/vedic/calculator.ts (13:9): "Pada" is not exported by "src/lib/ontology/vedic/types.ts", imported by "src/lib/ontology/vedic/calculator.ts".
+2026-06-03T00:48:54.504Z	00:48:54 [WARN] [vite] src/lib/ontology/vedic/calculator.ts (13:15): "VedicCoordinates" is not exported by "src/lib/ontology/vedic/types.ts", imported by "src/lib/ontology/vedic/calculator.ts".
+2026-06-03T00:48:54.504Z	00:48:54 [WARN] [vite] src/lib/ontology/calendar-systems/sexagenary.ts (16:38): "SajuPillar" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/calendar-systems/sexagenary.ts".
+2026-06-03T00:48:54.504Z	00:48:54 [WARN] [vite] src/lib/ontology/ziwei/data.ts (6:9): "Star" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/data.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/ziwei/data_stars.ts (6:9): "Element" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/data_stars.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/ziwei/data_stars.ts (6:18): "Polarity" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/data_stars.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/ziwei/data_stars.ts (6:28): "Star" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/data_stars.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/ziwei/data_stars.ts (6:34): "StarQuality" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/data_stars.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/ziwei/calculator.ts (17:9): "Element" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/calculator.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/ziwei/calculator.ts (17:18): "Palace" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/calculator.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/ziwei/calculator.ts (17:26): "PalaceKey" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/calculator.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/ziwei/calculator.ts (17:37): "Star" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/calculator.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/ziwei/calculator.ts (17:43): "ZiWeiCoordinates" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/ziwei/calculator.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/chronos/resonance.ts (10:9): "Element" is not exported by "src/lib/ontology/ziwei/types.ts", imported by "src/lib/ontology/chronos/resonance.ts".
+2026-06-03T00:48:54.505Z	00:48:54 [WARN] [vite] src/lib/ontology/chronos/resonance.ts (11:9): "UniversalChronosCoordinates" is not exported by "src/lib/ontology/chronos/types.ts", imported by "src/lib/ontology/chronos/resonance.ts".
+2026-06-03T00:48:54.506Z	00:48:54 [WARN] [vite] src/lib/ontology/chronos/chronos-engine.ts (19:9): "CelticTreeSign" is not exported by "src/lib/ontology/celtic/types.ts", imported by "src/lib/ontology/chronos/chronos-engine.ts".
+2026-06-03T00:48:54.507Z	00:48:54 [WARN] [vite] src/lib/ontology/chronos/chronos-engine.ts (26:9): "MayanKin" is not exported by "src/lib/ontology/mayan/types.ts", imported by "src/lib/ontology/chronos/chronos-engine.ts".
+2026-06-03T00:48:54.507Z	00:48:54 [WARN] [vite] src/lib/ontology/traits/blood-type/data.ts (3:9): "BloodType" is not exported by "src/lib/ontology/traits/blood-type/types.ts", imported by "src/lib/ontology/traits/blood-type/data.ts".
+2026-06-03T00:48:54.507Z	00:48:54 [WARN] [vite] src/lib/ontology/traits/blood-type/data.ts (3:20): "BloodTypePersonality" is not exported by "src/lib/ontology/traits/blood-type/types.ts", imported by "src/lib/ontology/traits/blood-type/data.ts".
+2026-06-03T00:48:54.507Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/data.ts (1:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/engine/data.ts".
+2026-06-03T00:48:54.507Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/data.ts (3:9): "WesternZodiacSign" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/data.ts".
+2026-06-03T00:48:54.507Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/logic.ts (2:9): "LocalizedText" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:54.507Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/logic.ts (6:2): "BirthSymbol" is not exported by "src/lib/data-layer/shards/fate-symbols.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:54.507Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/logic.ts (16:28): "PrimalElement" is not exported by "src/lib/ontology/onomancy/analysis.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:54.507Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/logic.ts (24:9): "SocialAnalysis" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:54.507Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/logic.ts (24:25): "UniversalInput" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/logic.ts (24:41): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/logic.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/index.ts (17:2): "OntologyBranches" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/index.ts (18:2): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/index.ts (19:2): "OntologyRoots" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/index.ts (20:2): "OntologySynthesis" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/index.ts (24:9): "SocialAnalysis" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/index.ts (24:25): "UniversalInput" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/ontology/engine/index.ts (24:41): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/lib/ontology/engine/index.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/almanac/engine.ts (1:9): "DaySymbols" is not exported by "src/hooks/useAlmanac.ts", imported by "src/lib/almanac/engine.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/almanac/engine.ts (4:39): "MoonPhaseData" is not exported by "src/lib/almanac/astro-lookup.ts", imported by "src/lib/almanac/engine.ts".
+2026-06-03T00:48:54.508Z	00:48:54 [WARN] [vite] src/lib/almanac/engine.ts (5:9): "DailyPillar" is not exported by "src/lib/almanac/saju-math.ts", imported by "src/lib/almanac/engine.ts".
+2026-06-03T00:48:54.509Z	00:48:54 [WARN] [vite] src/lib/almanac/engine.ts (5:22): "Element" is not exported by "src/lib/almanac/saju-math.ts", imported by "src/lib/almanac/engine.ts".
+2026-06-03T00:48:54.509Z	00:48:54 [WARN] [vite] src/lib/almanac/DailyInsightProvider.tsx (18:2): "DailyCosmicState" is not exported by "src/lib/almanac/engine.ts", imported by "src/lib/almanac/DailyInsightProvider.tsx".
+2026-06-03T00:48:54.509Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/fortune/engine.ts (13:9): "LocalizedString" is not exported by "src/types/manifest.ts", imported by "src/lib/ontology/saju/fortune/engine.ts".
+2026-06-03T00:48:54.509Z	00:48:54 [WARN] [vite] src/lib/ontology/saju/fortune/engine.ts (25:2): "SajuResult" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/lib/ontology/saju/fortune/engine.ts".
+2026-06-03T00:48:54.509Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/InterpretationService.ts (2:2): "ComprehensiveSajuReading" is not exported by "src/lib/ontology/saju/fortune/engine.ts", imported by "src/lib/engines/interpretation/InterpretationService.ts".
+2026-06-03T00:48:54.509Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/InterpretationService.ts (5:9): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/lib/engines/interpretation/InterpretationService.ts".
+2026-06-03T00:48:54.510Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/InterpretationService.ts (9:2): "InterpretationDefinition" is not exported by "src/lib/engines/interpretation/data/definitions.ts", imported by "src/lib/engines/interpretation/InterpretationService.ts".
+2026-06-03T00:48:54.511Z	00:48:54 [WARN] [vite] src/lib/engines/interpretation/shards/ziwei-shards.ts (1:9): "SixLangString" is not exported by "src/lib/engines/interpretation/engine.contract.ts", imported by "src/lib/engines/interpretation/shards/ziwei-shards.ts".
+2026-06-03T00:48:54.511Z	00:48:54 [WARN] [vite] src/components/ontology/OntologyClient.tsx (106:9): "Locale" is not exported by "src/i18n/index.ts", imported by "src/components/ontology/OntologyClient.tsx".
+2026-06-03T00:48:54.511Z	00:48:54 [WARN] [vite] src/components/ontology/OntologyClient.tsx (120:2): "FactionAnalysis" is not exported by "src/lib/ontology/chosun-faction/logic.ts", imported by "src/components/ontology/OntologyClient.tsx".
+2026-06-03T00:48:54.512Z	00:48:54 [WARN] [vite] src/components/ontology/OntologyClient.tsx (124:9): "UniversalProfile" is not exported by "src/lib/ontology/engine/types.ts", imported by "src/components/ontology/OntologyClient.tsx".
+2026-06-03T00:48:54.512Z	00:48:54 [WARN] [vite] src/components/ontology/OntologyClient.tsx (126:9): "LuckyAttributes" is not exported by "src/lib/ontology/saju/types.ts", imported by "src/components/ontology/OntologyClient.tsx".
+2026-06-03T00:48:54.512Z	00:48:54 [WARN] [vite] src/components/ontology/OntologyClient.tsx (127:9): "OntologyProfile" is not exported by "src/lib/ontology/types.ts", imported by "src/components/ontology/OntologyClient.tsx".
+2026-06-03T00:48:54.516Z	00:48:54 [WARN] [vite] src/manifest/ontology/shards/biography/flowers.ts (1:9): "Birthflower" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/shards/biography/flowers.ts".
+2026-06-03T00:48:54.516Z	00:48:54 [WARN] [vite] src/manifest/ontology/shards/biography/stones.ts (1:9): "Birthstone" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/shards/biography/stones.ts".
+2026-06-03T00:48:54.516Z	00:48:54 [WARN] [vite] src/manifest/ontology/shards/lifestyle/hobbies.ts (1:9): "Hobby" is not exported by "src/manifest/ontology/core/schemas.ts", imported by "src/manifest/ontology/shards/lifestyle/hobbies.ts".
+2026-06-03T00:48:54.516Z	00:48:54 [WARN] [vite] src/components/ontology/FactionCard.tsx (6:9): "FactionAnalysis" is not exported by "src/lib/ontology/chosun-faction/logic.ts", imported by "src/components/ontology/FactionCard.tsx".
+2026-06-03T00:48:54.516Z	00:48:54 [WARN] [vite] src/components/ontology/GenericFactionCard.tsx (6:9): "GenericFactionAnalysis" is not exported by "src/lib/ontology/engine/factions.ts", imported by "src/components/ontology/GenericFactionCard.tsx".
+2026-06-03T00:48:59.758Z	00:48:59 [WARN] [vite] [plugin vite:reporter] 
+2026-06-03T00:48:59.758Z	(!) /opt/buildhome/repo/src/manifest/ontology/shards/lifestyle/factions.ts is dynamically imported by /opt/buildhome/repo/src/manifest/ontology/loader.ts, /opt/buildhome/repo/src/manifest/ontology/loader.ts but also statically imported by /opt/buildhome/repo/src/lib/ontology/engine/factions.ts, /opt/buildhome/repo/src/manifest/ontology/loader.ts, dynamic import will not move module into another chunk.
+2026-06-03T00:48:59.758Z	
+2026-06-03T00:48:59.853Z	00:48:59 [WARN] [vite] 
+2026-06-03T00:48:59.854Z	(!) Some chunks are larger than 500 kB after minification. Consider:
+2026-06-03T00:48:59.854Z	- Using dynamic import() to code-split the application
+2026-06-03T00:48:59.854Z	- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+2026-06-03T00:48:59.854Z	- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+2026-06-03T00:48:59.854Z	00:48:59 [vite] ✓ built in 15.14s
+2026-06-03T00:48:59.952Z	00:48:59 [build] Rearranging server assets...
+2026-06-03T00:48:59.987Z	Default inspector port 9229 not available, using 9230 instead
+2026-06-03T00:48:59.988Z	
+2026-06-03T00:49:00.082Z	
+2026-06-03T00:49:00.083Z	 generating static routes 
+2026-06-03T00:49:08.532Z	00:49:08   ├─ /en/about/index.html (+57ms) 
+2026-06-03T00:49:08.569Z	00:49:08   ├─ /ko/about/index.html (+40ms) 
+2026-06-03T00:49:08.601Z	00:49:08   ├─ /ja/about/index.html (+31ms) 
+2026-06-03T00:49:08.635Z	00:49:08   ├─ /cn/about/index.html (+34ms) 
+2026-06-03T00:49:08.669Z	00:49:08   ├─ /fr/about/index.html (+32ms) 
+2026-06-03T00:49:08.699Z	00:49:08   ├─ /es/about/index.html (+27ms) 
+2026-06-03T00:49:08.713Z	00:49:08   ├─ /en/contact/index.html (+17ms) 
+2026-06-03T00:49:08.732Z	00:49:08   ├─ /ko/contact/index.html (+19ms) 
+2026-06-03T00:49:08.751Z	00:49:08   ├─ /ja/contact/index.html (+18ms) 
+2026-06-03T00:49:08.770Z	00:49:08   ├─ /cn/contact/index.html (+18ms) 
+2026-06-03T00:49:08.791Z	00:49:08   ├─ /fr/contact/index.html (+21ms) 
+2026-06-03T00:49:08.805Z	00:49:08   ├─ /es/contact/index.html (+13ms) 
+2026-06-03T00:49:08.826Z	00:49:08   ├─ /en/faq/index.html (+22ms) 
+2026-06-03T00:49:08.842Z	00:49:08   ├─ /ko/faq/index.html (+16ms) 
+2026-06-03T00:49:08.862Z	00:49:08   ├─ /ja/faq/index.html (+19ms) 
+2026-06-03T00:49:08.880Z	00:49:08   ├─ /cn/faq/index.html (+18ms) 
+2026-06-03T00:49:08.899Z	00:49:08   ├─ /fr/faq/index.html (+19ms) 
+2026-06-03T00:49:08.915Z	00:49:08   ├─ /es/faq/index.html (+15ms) 
+2026-06-03T00:49:08.929Z	00:49:08   ├─ /en/legal/privacy/index.html (+15ms) 
+2026-06-03T00:49:08.956Z	00:49:08   ├─ /ko/legal/privacy/index.html (+26ms) 
+2026-06-03T00:49:08.973Z	00:49:08   ├─ /ja/legal/privacy/index.html (+18ms) 
+2026-06-03T00:49:08.987Z	00:49:08   ├─ /cn/legal/privacy/index.html (+14ms) 
+2026-06-03T00:49:09.003Z	00:49:08   ├─ /fr/legal/privacy/index.html (+16ms) 
+2026-06-03T00:49:09.023Z	00:49:09   ├─ /es/legal/privacy/index.html (+19ms) 
+2026-06-03T00:49:09.036Z	00:49:09   ├─ /en/legal/terms/index.html (+14ms) 
+2026-06-03T00:49:09.053Z	00:49:09   ├─ /ko/legal/terms/index.html (+17ms) 
+2026-06-03T00:49:09.072Z	00:49:09   ├─ /ja/legal/terms/index.html (+17ms) 
+2026-06-03T00:49:09.090Z	00:49:09   ├─ /cn/legal/terms/index.html (+19ms) 
+2026-06-03T00:49:09.104Z	00:49:09   ├─ /fr/legal/terms/index.html (+14ms) 
+2026-06-03T00:49:09.118Z	00:49:09   ├─ /es/legal/terms/index.html (+15ms) 
+2026-06-03T00:49:09.135Z	00:49:09   ├─ /en/legal/index.html (+17ms) 
+2026-06-03T00:49:09.157Z	00:49:09   ├─ /ko/legal/index.html (+22ms) 
+2026-06-03T00:49:09.175Z	00:49:09   ├─ /ja/legal/index.html (+17ms) 
+2026-06-03T00:49:09.192Z	00:49:09   ├─ /cn/legal/index.html (+17ms) 
+2026-06-03T00:49:09.206Z	00:49:09   ├─ /fr/legal/index.html (+14ms) 
+2026-06-03T00:49:09.234Z	00:49:09   ├─ /es/legal/index.html (+28ms) 
+2026-06-03T00:49:09.411Z	00:49:09   ├─ /en/ontology/index.html (+177ms) 
+2026-06-03T00:49:09.438Z	00:49:09   ├─ /ko/ontology/index.html (+27ms) 
+2026-06-03T00:49:09.468Z	00:49:09   ├─ /ja/ontology/index.html (+30ms) 
+2026-06-03T00:49:09.508Z	00:49:09   ├─ /cn/ontology/index.html (+37ms) 
+2026-06-03T00:49:09.531Z	00:49:09   ├─ /fr/ontology/index.html (+26ms) 
+2026-06-03T00:49:09.551Z	00:49:09   ├─ /es/ontology/index.html (+19ms) 
+2026-06-03T00:49:09.566Z	00:49:09   ├─ /en/support/index.html (+15ms) 
+2026-06-03T00:49:09.579Z	00:49:09   ├─ /ko/support/index.html (+13ms) 
+2026-06-03T00:49:09.593Z	00:49:09   ├─ /ja/support/index.html (+14ms) 
+2026-06-03T00:49:09.607Z	00:49:09   ├─ /cn/support/index.html (+14ms) 
+2026-06-03T00:49:09.623Z	00:49:09   ├─ /fr/support/index.html (+16ms) 
+2026-06-03T00:49:09.635Z	00:49:09   ├─ /es/support/index.html (+12ms) 
+2026-06-03T00:49:09.648Z	00:49:09   ├─ /en/index.html (+13ms) 
+2026-06-03T00:49:09.662Z	00:49:09   ├─ /ko/index.html (+14ms) 
+2026-06-03T00:49:09.678Z	00:49:09   ├─ /ja/index.html (+16ms) 
+2026-06-03T00:49:09.699Z	00:49:09   ├─ /cn/index.html (+20ms) 
+2026-06-03T00:49:09.717Z	00:49:09   ├─ /fr/index.html (+18ms) 
+2026-06-03T00:49:09.744Z	00:49:09   ├─ /es/index.html (+27ms) 
+2026-06-03T00:49:09.754Z	00:49:09   ├─ /index.html (+10ms) 
+2026-06-03T00:49:09.778Z	00:49:09 ✓ Completed in 9.82s.
+2026-06-03T00:49:09.778Z	
+2026-06-03T00:49:09.850Z	00:49:09 [build] ✓ Completed in 46.54s.
+2026-06-03T00:49:09.853Z	00:49:09 [build] 55 page(s) built in 52.81s
+2026-06-03T00:49:09.853Z	00:49:09 [build] Complete!
+2026-06-03T00:49:10.107Z	Success: Build command completed
+2026-06-03T00:49:11.413Z	Executing user deploy command: npx wrangler deploy
+2026-06-03T00:49:12.947Z	
+2026-06-03T00:49:12.947Z	 ⛅️ wrangler 4.97.0
+2026-06-03T00:49:12.947Z	───────────────────
+2026-06-03T00:49:12.961Z	Using redirected Wrangler configuration.
+2026-06-03T00:49:12.961Z	 - Configuration being used: "dist/client/wrangler.json"
+2026-06-03T00:49:12.961Z	 - Original user's configuration: "wrangler.jsonc"
+2026-06-03T00:49:12.961Z	 - Deploy configuration file: ".wrangler/deploy/config.json"
+2026-06-03T00:49:12.969Z	
+2026-06-03T00:49:12.969Z	Cloudflare collects anonymous telemetry about your usage of Wrangler. Learn more at https://github.com/cloudflare/workers-sdk/tree/main/packages/wrangler/telemetry.md
+2026-06-03T00:49:13.811Z	🌀 Building list of assets...
+2026-06-03T00:49:13.818Z	✨ Read 202 files from the assets directory /opt/buildhome/repo/dist/client
+2026-06-03T00:49:13.875Z	🌀 Starting asset upload...
+2026-06-03T00:49:15.809Z	🌀 Found 145 new or modified static assets to upload. Proceeding with upload...
+2026-06-03T00:49:15.809Z	+ /_astro/OntologyIsland.C6BJq4Qy.js
+2026-06-03T00:49:15.809Z	+ /favicon.ico
+2026-06-03T00:49:15.809Z	+ /_astro/ResonanceMandala.CzOJhTfo.js
+2026-06-03T00:49:15.810Z	+ /_astro/index.CDAk-KFT.js
+2026-06-03T00:49:15.810Z	+ /_astro/april.bqZFzlOp.js
+2026-06-03T00:49:15.810Z	+ /_astro/march.hUn3JW3m.js
+2026-06-03T00:49:15.810Z	+ /_astro/june.DCmrg6sW.js
+2026-06-03T00:49:15.810Z	+ /_astro/february.vftWYoxN.js
+2026-06-03T00:49:15.810Z	+ /_astro/november.DOxC51RU.js
+2026-06-03T00:49:15.811Z	+ /_astro/january.CqOFWZbJ.js
+2026-06-03T00:49:15.811Z	+ /_astro/april.D-oLq-P-.js
+2026-06-03T00:49:15.811Z	+ /_astro/january.A2Q49Tkl.js
+2026-06-03T00:49:15.811Z	+ /_astro/may.DBjMN4u6.js
+2026-06-03T00:49:15.811Z	+ /_astro/august.P5dYev1l.js
+2026-06-03T00:49:15.811Z	+ /_astro/march.CVrlq-oP.js
+2026-06-03T00:49:15.811Z	+ /en/legal/index.html
+2026-06-03T00:49:15.811Z	+ /_astro/january.BlIO1YaW.js
+2026-06-03T00:49:15.812Z	+ /_astro/march.DcTMHTWM.js
+2026-06-03T00:49:15.812Z	+ /es/legal/index.html
+2026-06-03T00:49:15.812Z	+ /fr/legal/index.html
+2026-06-03T00:49:15.812Z	+ /_astro/july.CvoJYNM_.js
+2026-06-03T00:49:15.812Z	+ /_astro/june.DD1UFEJL.js
+2026-06-03T00:49:15.812Z	+ /ja/legal/privacy/index.html
+2026-06-03T00:49:15.812Z	+ /_astro/november.mWY2OvzB.js
+2026-06-03T00:49:15.813Z	+ /_astro/july.aSDroViE.js
+2026-06-03T00:49:15.813Z	+ /_astro/january.Ck7o1_w2.js
+2026-06-03T00:49:15.813Z	+ /en/support/index.html
+2026-06-03T00:49:15.813Z	+ /_astro/december.CQq-YaeJ.js
+2026-06-03T00:49:15.814Z	+ /_astro/august.CkyiFKp9.js
+2026-06-03T00:49:15.814Z	+ /_astro/august.BK9L6dI6.js
+2026-06-03T00:49:15.814Z	+ /ko/support/index.html
+2026-06-03T00:49:15.814Z	+ /_astro/july.BEn7ETz3.js
+2026-06-03T00:49:15.814Z	+ /_astro/september.CNdk1pWk.js
+2026-06-03T00:49:15.814Z	+ /_astro/may.bPw7XzvC.js
+2026-06-03T00:49:15.814Z	+ /_astro/august.DUXMlv8b.js
+2026-06-03T00:49:15.814Z	+ /cn/about/index.html
+2026-06-03T00:49:15.815Z	+ /_astro/december.Dmr5wPpE.js
+2026-06-03T00:49:15.817Z	+ /en/index.html
+2026-06-03T00:49:15.817Z	+ /_astro/august.7ea7k_Xz.js
+2026-06-03T00:49:15.817Z	+ /_astro/october.XFicotOH.js
+2026-06-03T00:49:15.817Z	+ /_astro/october.DV7KfYtf.js
+2026-06-03T00:49:15.818Z	+ /en/about/index.html
+2026-06-03T00:49:15.818Z	+ /_astro/february.BwNTN4Ma.js
+2026-06-03T00:49:15.818Z	+ /en/faq/index.html
+2026-06-03T00:49:15.818Z	+ /fr/faq/index.html
+2026-06-03T00:49:15.818Z	+ /en/ontology/index.html
+2026-06-03T00:49:15.819Z	+ /_astro/index.DnyVoc0D.js
+2026-06-03T00:49:15.819Z	+ /_astro/Layout.BAqPlxpO.css
+2026-06-03T00:49:15.819Z	+ /_astro/OntologyClient.DqmTJ2vb.js
+2026-06-03T00:49:15.820Z	+ /index.html
+2026-06-03T00:49:15.820Z	+ /favicon.svg
+2026-06-03T00:49:15.820Z	+ /_astro/FactionCard.Dpd-Ny7n.js
+2026-06-03T00:49:15.820Z	+ /_astro/stones.4VpLWqUl.js
+2026-06-03T00:49:15.820Z	+ /_astro/june.YTT60W2Q.js
+2026-06-03T00:49:15.820Z	+ /_astro/may.B8KXnSAW.js
+2026-06-03T00:49:15.820Z	+ /_astro/april.BtWHVBgi.js
+2026-06-03T00:49:15.820Z	+ /_astro/april.CoHIRJIM.js
+2026-06-03T00:49:15.820Z	+ /_astro/may.jnRVBikF.js
+2026-06-03T00:49:15.820Z	+ /_astro/april.D0x2jW2g.js
+2026-06-03T00:49:15.821Z	+ /_astro/june.n5BExuOT.js
+2026-06-03T00:49:15.821Z	+ /cn/legal/terms/index.html
+2026-06-03T00:49:15.821Z	+ /_astro/may.BuBSL58_.js
+2026-06-03T00:49:15.821Z	+ /_astro/july.D454gWXy.js
+2026-06-03T00:49:15.821Z	+ /ko/legal/terms/index.html
+2026-06-03T00:49:15.821Z	+ /cn/legal/index.html
+2026-06-03T00:49:15.821Z	+ /_astro/january.DwnuDRTP.js
+2026-06-03T00:49:15.821Z	+ /_astro/february.DKdlYRGp.js
+2026-06-03T00:49:15.821Z	+ /ko/legal/index.html
+2026-06-03T00:49:15.821Z	+ /cn/legal/privacy/index.html
+2026-06-03T00:49:15.821Z	+ /_astro/june.CMSD0JR5.js
+2026-06-03T00:49:15.821Z	+ /_astro/OntologyIsland.M-GccXhz.js
+2026-06-03T00:49:15.821Z	+ /_astro/september.D2LO1wKB.js
+2026-06-03T00:49:15.821Z	+ /_astro/february.yDymfLtX.js
+2026-06-03T00:49:15.821Z	+ /_astro/index.CTb8aDIG.js
+2026-06-03T00:49:15.823Z	+ /_astro/march.Ufohk9Ch.js
+2026-06-03T00:49:15.824Z	+ /cn/support/index.html
+2026-06-03T00:49:15.824Z	+ /es/support/index.html
+2026-06-03T00:49:15.824Z	+ /en/contact/index.html
+2026-06-03T00:49:15.824Z	+ /_astro/november.BXxqKdD9.js
+2026-06-03T00:49:15.824Z	+ /es/contact/index.html
+2026-06-03T00:49:15.824Z	+ /_astro/october.QJdMs-D8.js
+2026-06-03T00:49:15.824Z	+ /_astro/september.DgGq6P6u.js
+2026-06-03T00:49:15.824Z	+ /ja/contact/index.html
+2026-06-03T00:49:15.824Z	+ /cn/index.html
+2026-06-03T00:49:15.824Z	+ /_astro/november.DOnU9qb1.js
+2026-06-03T00:49:15.824Z	+ /es/index.html
+2026-06-03T00:49:15.824Z	+ /fr/about/index.html
+2026-06-03T00:49:15.824Z	+ /ja/about/index.html
+2026-06-03T00:49:15.824Z	+ /_astro/january.DiwlD_TM.js
+2026-06-03T00:49:15.824Z	+ /ko/index.html
+2026-06-03T00:49:15.824Z	+ /_astro/december.Ay9i9hiZ.js
+2026-06-03T00:49:15.824Z	+ /ko/about/index.html
+2026-06-03T00:49:15.825Z	+ /es/faq/index.html
+2026-06-03T00:49:15.825Z	+ /ja/faq/index.html
+2026-06-03T00:49:15.825Z	+ /ko/ontology/index.html
+2026-06-03T00:49:15.825Z	+ /fr/ontology/index.html
+2026-06-03T00:49:15.825Z	+ /_astro/index.D6GzloIw.js
+2026-06-03T00:49:15.825Z	+ /_astro/landmark.BMMVe0lP.js
+2026-06-03T00:49:15.825Z	+ /_astro/GenericFactionCard.CSrnra1S.js
+2026-06-03T00:49:15.825Z	+ /_astro/hobbies.byj2gz-m.js
+2026-06-03T00:49:15.825Z	   (truncating changed assets log, set `WRANGLER_LOG=debug` environment variable to see full diff)
+2026-06-03T00:49:17.081Z	Uploaded 48 of 145 assets
+2026-06-03T00:49:17.606Z	Uploaded 96 of 145 assets
+2026-06-03T00:49:18.636Z	Uploaded 145 of 145 assets
+2026-06-03T00:49:18.637Z	✨ Success! Uploaded 145 files (2.82 sec)
+2026-06-03T00:49:18.637Z	
+2026-06-03T00:49:18.641Z	Total Upload: 0.31 KiB / gzip: 0.22 KiB
+2026-06-03T00:49:18.796Z	
+2026-06-03T00:49:18.796Z	Experimental: The following bindings need to be provisioned:
+2026-06-03T00:49:18.797Z	Binding             Resource          
+2026-06-03T00:49:18.797Z	env.SESSION         KV Namespace      
+2026-06-03T00:49:18.797Z	
+2026-06-03T00:49:18.797Z	
+2026-06-03T00:49:19.099Z	Provisioning SESSION (KV Namespace)...
+2026-06-03T00:49:19.100Z	🌀 Creating new KV Namespace "oiyo-astro-session"...
+2026-06-03T00:49:19.394Z	✨ SESSION provisioned 🎉
+2026-06-03T00:49:19.394Z	
+2026-06-03T00:49:19.395Z	🎉 All resources provisioned, continuing with deployment...
+2026-06-03T00:49:19.395Z	
+2026-06-03T00:49:20.692Z	Your Worker has access to the following bindings:
+2026-06-03T00:49:20.692Z	Binding                                             Resource          
+2026-06-03T00:49:20.693Z	env.SESSION (faedf5dd31cf45c69f1b460eecbdbc3a)      KV Namespace      
+2026-06-03T00:49:20.693Z	env.IMAGES                                          Images            
+2026-06-03T00:49:20.693Z	
+2026-06-03T00:49:20.693Z	Uploaded oiyo-astro (7.02 sec)
+2026-06-03T00:49:21.258Z	▲ [WARNING] Because 'workers_dev' is not in your Wrangler file, it will be enabled for this deployment by default.
+2026-06-03T00:49:21.259Z	
+2026-06-03T00:49:21.259Z	  To override this setting, you can disable workers.dev by explicitly setting 'workers_dev = false' in your Wrangler file.
+2026-06-03T00:49:21.259Z	
+2026-06-03T00:49:21.259Z	
+2026-06-03T00:49:21.261Z	▲ [WARNING] Because your 'workers.dev' route is enabled and your 'preview_urls' setting is not in your Wrangler file, Preview URLs will be enabled for this deployment by default.
+2026-06-03T00:49:21.261Z	
+2026-06-03T00:49:21.261Z	  To override this setting, you can disable Preview URLs by explicitly setting 'preview_urls = false' in your Wrangler file.
+2026-06-03T00:49:21.261Z	
+2026-06-03T00:49:21.261Z	
+2026-06-03T00:49:21.261Z	Deployed oiyo-astro triggers (0.58 sec)
+2026-06-03T00:49:21.261Z	  https://oiyo-astro.861106.workers.dev
+2026-06-03T00:49:21.262Z	Current Version ID: 0c9c92b7-f947-49c0-89b4-17ed75ec4536
+2026-06-03T00:49:21.337Z	Success: Deploy command completed
+2026-06-03T00:49:21.340Z	Uploading to dependency cache
+2026-06-03T00:49:21.343Z	Uploading to build output cache
+2026-06-03T00:49:21.636Z	Success: Build output uploaded to build cache.
+2026-06-03T00:49:24.787Z	Success: Dependencies uploaded to build cache.
+2026-06-03T00:49:24.918Z	✨ Success! Build completed.

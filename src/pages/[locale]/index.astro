@@ -10,171 +10,276 @@ export async function getStaticPaths() {
 const { locale } = Astro.params as { locale: Locale };
 const t = await getTranslations(locale);
 
-const features = [
+type L = Locale
+
+const txt = (map: Record<L, string>) => map[locale] ?? map.en
+
+const heroTitle = txt({
+  ko: '나를 알아가는 가장 쉬운 방법',
+  en: 'Know Yourself, Deeply',
+  ja: '自分を深く知る、最も簡単な方法',
+  zh: '了解自己，最简单的方式',
+  fr: 'Connaissez-vous Vraiment',
+  es: 'Conócete Profundamente',
+})
+
+const heroSub = txt({
+  ko: 'MBTI부터 사주까지, 심리학과 동양 철학으로 나를 탐색하는 무료 도구 모음.',
+  en: 'From MBTI to Saju — free tools for self-exploration through psychology and Eastern wisdom.',
+  ja: 'MBTIから四柱推命まで — 心理学と東洋哲学で自分を探る無料ツール集。',
+  zh: '从MBTI到四柱推命 — 通过心理学与东方智慧免费探索自我。',
+  fr: 'Du MBTI au Saju — outils gratuits d\'exploration de soi par la psychologie et la sagesse orientale.',
+  es: 'Del MBTI al Saju — herramientas gratuitas de autoexploración a través de la psicología y la sabiduría oriental.',
+})
+
+const statsData = [
+  { value: '28+', label: txt({ ko: '자기 탐색 도구', en: 'Self-Discovery Tools', ja: '自己探索ツール', zh: '自我探索工具', fr: 'Outils d\'Exploration', es: 'Herramientas' }) },
+  { value: '6', label: txt({ ko: '지원 언어', en: 'Languages', ja: '対応言語', zh: '支持语言', fr: 'Langues', es: 'Idiomas' }) },
+  { value: '100%', label: txt({ ko: '완전 무료', en: 'Free Forever', ja: '完全無料', zh: '完全免费', fr: 'Totalement Gratuit', es: 'Totalmente Gratis' }) },
+  { value: '22', label: txt({ ko: '오라클 카드', en: 'Oracle Cards', ja: 'オラクルカード', zh: '神谕牌', fr: 'Cartes Oracle', es: 'Cartas Oráculo' }) },
+]
+
+const popularTests = [
   {
-    id: 'tests',
-    title: {
-      ko: '성격 & 운세 테스트',
-      en: 'Personality & Fortune Tests',
-      ja: '性格 & 占いテスト',
-      cn: '性格与运势测试',
-      fr: 'Tests de Personnalité',
-      es: 'Pruebas de Personalidad',
-    }[locale] ?? 'Personality & Fortune Tests',
-    description: {
-      ko: 'MBTI·에니어그램·빅파이브·사주·수비학·별자리 등 8가지 테스트를 한 곳에서.',
-      en: 'MBTI, Enneagram, Big Five, Saju, Numerology, Zodiac & more — all in one place.',
-      ja: 'MBTI・エニアグラム・ビッグファイブ・四柱・数秘術・星座など8種のテストを一か所で。',
-      cn: 'MBTI、九型人格、大五人格、四柱、数字命理、星座等8种测试一站汇聚。',
-      fr: 'MBTI, Ennéagramme, Big Five, Saju, Numérologie, Zodiaque et plus — tout en un.',
-      es: 'MBTI, Eneagrama, Big Five, Saju, Numerología, Zodíaco y más — todo en un lugar.',
-    }[locale] ?? 'MBTI, Enneagram, Big Five, Saju, Numerology, Zodiac & more — all in one place.',
-    href: localePath(locale, '/tests'),
-    bg: 'bg-green-50',
-    icon: '✨',
-    badge: '8 tests',
-  },
-  {
-    id: 'ontology',
-    title: t('hero.ontology.title') || 'My Sanctuary',
-    description: t('hero.ontology.desc') || 'Discover your soul blueprint.',
-    href: localePath(locale, '/ontology'),
-    bg: 'bg-violet-50',
-    icon: '🏛️',
-    badge: '',
-  },
-  {
-    id: 'mbti',
-    title: {
-      ko: 'MBTI 직업 적성 테스트',
-      en: 'MBTI Career Test',
-      ja: 'MBTI 職業適性テスト',
-      cn: 'MBTI 职业测试',
-      fr: 'Test de Carrière MBTI',
-      es: 'Test de Carrera MBTI',
-    }[locale] ?? 'MBTI Career Test',
-    description: {
-      ko: '12가지 업무 상황으로 나에게 맞는 직업 유형을 찾아보세요.',
-      en: 'Find your career type through 12 work scenario questions.',
-      ja: '12の職場シナリオで最適な職業タイプを発見。',
-      cn: '通过12个情境发现你的职业类型。',
-      fr: '12 scénarios pour trouver votre type de carrière.',
-      es: '12 situaciones para encontrar tu tipo de carrera.',
-    }[locale] ?? 'Find your career type through 12 work scenario questions.',
+    icon: '🧠', badge: '16 types', bg: 'bg-blue-50', border: 'border-blue-100',
+    title: txt({ ko: 'MBTI 직업 적성', en: 'MBTI Career', ja: 'MBTI 職業適性', zh: 'MBTI职业', fr: 'MBTI Carrière', es: 'MBTI Carrera' }),
+    desc: txt({ ko: '나에게 맞는 직업 유형', en: 'Find your career type', ja: '最適な職業タイプを発見', zh: '找到适合你的职业类型', fr: 'Trouvez votre type de carrière', es: 'Encuentra tu tipo de carrera' }),
     href: localePath(locale, '/mbti/test'),
-    bg: 'bg-blue-50',
-    icon: '🧠',
-    badge: '16 types',
   },
   {
-    id: 'enneagram',
-    title: {
-      ko: '에니어그램 테스트',
-      en: 'Enneagram Test',
-      ja: 'エニアグラムテスト',
-      cn: '九型人格测试',
-      fr: 'Test Ennéagramme',
-      es: 'Test Eneagrama',
-    }[locale] ?? 'Enneagram Test',
-    description: {
-      ko: '27가지 문항으로 나의 핵심 동기와 두려움을 탐색하세요.',
-      en: 'Explore your core motivations and fears with 27 questions.',
-      ja: '27問で核心的な動機と恐怖を探求。',
-      cn: '27道题探索您的核心动机与恐惧。',
-      fr: '27 questions pour explorer vos motivations profondes.',
-      es: '27 preguntas para explorar tus motivaciones centrales.',
-    }[locale] ?? 'Explore your core motivations and fears with 27 questions.',
+    icon: '🔮', badge: '9 types', bg: 'bg-indigo-50', border: 'border-indigo-100',
+    title: txt({ ko: '에니어그램', en: 'Enneagram', ja: 'エニアグラム', zh: '九型人格', fr: 'Ennéagramme', es: 'Eneagrama' }),
+    desc: txt({ ko: '핵심 동기와 두려움 탐색', en: 'Core motivations & fears', ja: '核心的動機と恐怖を探求', zh: '探索核心动机与恐惧', fr: 'Motivations et peurs profondes', es: 'Motivaciones y miedos centrales' }),
     href: localePath(locale, '/enneagram/test'),
-    bg: 'bg-indigo-50',
-    icon: '🔮',
-    badge: '9 types',
   },
-];
+  {
+    icon: '🌊', badge: 'OCEAN', bg: 'bg-cyan-50', border: 'border-cyan-100',
+    title: txt({ ko: '빅파이브 성격', en: 'Big Five Personality', ja: 'ビッグファイブ', zh: '大五人格', fr: 'Big Five', es: 'Cinco Grandes' }),
+    desc: txt({ ko: '5가지 차원으로 성격 분석', en: '5-dimension personality profile', ja: '5次元の性格プロファイル', zh: '5维度性格分析', fr: 'Profil de personnalité 5 dimensions', es: 'Perfil de personalidad 5 dimensiones' }),
+    href: localePath(locale, '/big5/test'),
+  },
+  {
+    icon: '☯️', badge: txt({ ko: '명리학', en: 'BaZi', ja: '四柱推命', zh: '八字', fr: 'BaZi', es: 'BaZi' }), bg: 'bg-amber-50', border: 'border-amber-100',
+    title: txt({ ko: '사주 계산기', en: 'Saju Calculator', ja: '四柱推命', zh: '四柱八字', fr: 'Calculateur Saju', es: 'Calculadora Saju' }),
+    desc: txt({ ko: '생년월일로 사주팔자 분석', en: 'BaZi analysis from your birth date', ja: '生年月日で四柱推命を分析', zh: '根据出生日期分析八字', fr: 'Analyse BaZi selon votre date de naissance', es: 'Análisis BaZi con tu fecha de nacimiento' }),
+    href: localePath(locale, '/saju/calculator'),
+  },
+  {
+    icon: '💚', badge: txt({ ko: '애착', en: 'Attachment', ja: '愛着', zh: '依恋', fr: 'Attachement', es: 'Apego' }), bg: 'bg-green-50', border: 'border-green-100',
+    title: txt({ ko: '애착유형 테스트', en: 'Attachment Style Test', ja: '愛着スタイルテスト', zh: '依恋类型测试', fr: 'Test de Style d\'Attachement', es: 'Test de Estilo de Apego' }),
+    desc: txt({ ko: '나의 관계 방식 이해하기', en: 'Understand your relationship patterns', ja: '自分の関係スタイルを理解する', zh: '了解你的关系模式', fr: 'Comprendre vos modèles relationnels', es: 'Entiende tus patrones relacionales' }),
+    href: localePath(locale, '/attachment-style/test'),
+  },
+  {
+    icon: '🌸', badge: txt({ ko: '색채', en: 'Color', ja: '色彩', zh: '色彩', fr: 'Couleur', es: 'Color' }), bg: 'bg-rose-50', border: 'border-rose-100',
+    title: txt({ ko: '퍼스널컬러 테스트', en: 'Personal Color Test', ja: 'パーソナルカラーテスト', zh: '个人色彩测试', fr: 'Test de Couleur Personnelle', es: 'Test de Color Personal' }),
+    desc: txt({ ko: '나에게 어울리는 색상 찾기', en: 'Find your most flattering colors', ja: '自分に似合う色を発見', zh: '找到最适合你的颜色', fr: 'Trouvez vos couleurs les plus flatteuses', es: 'Encuentra tus colores más favorecedores' }),
+    href: localePath(locale, '/personal-color/test'),
+  },
+]
+
+const oracleSectionTitle = txt({
+  ko: '오라클 카드 뽑기',
+  en: 'Oracle Card Reading',
+  ja: 'オラクルカードリーディング',
+  zh: '神谕牌占卜',
+  fr: 'Tirage Oracle',
+  es: 'Lectura Oracle',
+})
+const oracleSectionDesc = txt({
+  ko: '발타자르 그라시안의 22개 지혜 카드. 오늘 나에게 필요한 메시지를 뽑아보세요.',
+  en: '22 wisdom cards from Baltasar Gracián. Draw the message you need today.',
+  ja: 'バルタサル・グラシアンの22枚の知恵カード。今日必要なメッセージを引いてみましょう。',
+  zh: '巴尔塔萨·格拉西安的22张智慧牌。抽取你今天需要的讯息。',
+  fr: '22 cartes de sagesse de Baltasar Gracián. Tirez le message dont vous avez besoin aujourd\'hui.',
+  es: '22 cartas de sabiduría de Baltasar Gracián. Saca el mensaje que necesitas hoy.',
+})
+
+const quickTests = [
+  { icon: '😰', title: txt({ ko: '번아웃 테스트', en: 'Burnout Test', ja: 'バーンアウトテスト', zh: '倦怠测试', fr: 'Test de Burnout', es: 'Test de Burnout' }), href: localePath(locale, '/burnout/test') },
+  { icon: '💤', title: txt({ ko: '수면 유형', en: 'Sleep Type', ja: '睡眠タイプ', zh: '睡眠类型', fr: 'Type de Sommeil', es: 'Tipo de Sueño' }), href: localePath(locale, '/sleep-type/test') },
+  { icon: '❤️‍🔥', title: txt({ ko: '사랑의 언어', en: 'Love Language', ja: '愛の言語', zh: '爱的语言', fr: 'Langage d\'Amour', es: 'Lenguaje del Amor' }), href: localePath(locale, '/love-language/test') },
+  { icon: '🌟', title: txt({ ko: '자존감 테스트', en: 'Self-Esteem', ja: '自尊心テスト', zh: '自尊测试', fr: 'Estime de Soi', es: 'Autoestima' }), href: localePath(locale, '/self-esteem/test') },
+  { icon: '🧩', title: txt({ ko: '에니어그램', en: 'Enneagram', ja: 'エニアグラム', zh: '九型人格', fr: 'Ennéagramme', es: 'Eneagrama' }), href: localePath(locale, '/enneagram/test') },
+  { icon: '🩸', title: txt({ ko: '혈액형 성격', en: 'Blood Type', ja: '血液型性格', zh: '血型性格', fr: 'Type Sanguin', es: 'Tipo Sanguíneo' }), href: localePath(locale, '/blood-type') },
+  { icon: '🐉', title: txt({ ko: '띠 성격', en: 'Chinese Zodiac', ja: '干支性格', zh: '生肖性格', fr: 'Zodiaque Chinois', es: 'Zodíaco Chino' }), href: localePath(locale, '/chinese-zodiac') },
+  { icon: '✨', title: txt({ ko: '수비학', en: 'Numerology', ja: '数秘術', zh: '数字命理', fr: 'Numérologie', es: 'Numerología' }), href: localePath(locale, '/numerology/calculator') },
+]
+
+const ctaStart = txt({ ko: '시작하기', en: 'Start', ja: '始める', zh: '开始', fr: 'Commencer', es: 'Comenzar' })
+const ctaAllTests = txt({ ko: '전체 테스트 보기', en: 'All Tests', ja: '全テスト', zh: '所有测试', fr: 'Tous les Tests', es: 'Todos los Tests' })
+const sectionPopular = txt({ ko: '인기 테스트', en: 'Popular Tests', ja: '人気テスト', zh: '热门测试', fr: 'Tests Populaires', es: 'Tests Populares' })
+const sectionMore = txt({ ko: '더 많은 도구', en: 'More Tools', ja: 'その他のツール', zh: '更多工具', fr: 'Plus d\'Outils', es: 'Más Herramientas' })
 ---
 
 <Layout
-  title={t('hero.title') || 'OIYO'}
-  description={t('hero.description')}
+  title={heroTitle + ' — OIYO'}
+  description={heroSub}
   locale={locale}
 >
   <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/70 to-white pt-20 pb-16 px-4">
-    <div class="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
-      <div class="absolute -top-32 -left-32 w-96 h-96 bg-green-300 rounded-full blur-3xl" />
-      <div class="absolute top-16 right-0 w-[500px] h-[500px] bg-teal-200 rounded-full blur-3xl" />
+  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/80 via-teal-50/30 to-white pt-20 pb-14 px-4">
+    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+      <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-green-200 rounded-full blur-3xl opacity-20" />
+      <div class="absolute top-10 right-0 w-[600px] h-[500px] bg-teal-200 rounded-full blur-3xl opacity-15" />
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-32 bg-white/80 blur-2xl" />
     </div>
 
     <div class="relative z-10 max-w-3xl mx-auto text-center animate-fadeInUp">
-      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/60 backdrop-blur-sm border border-green-100 text-green-700 text-xs font-bold mb-6">
-        ✨ OIYO
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-green-100 text-green-700 text-xs font-bold mb-6 shadow-sm">
+        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+        OIYO — {txt({ ko: '무료 자기 탐색', en: 'Free Self-Discovery', ja: '無料自己探索', zh: '免费自我探索', fr: 'Autodécouverte Gratuite', es: 'Autodescubrimiento Gratuito' })}
       </div>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-green-950 mb-4 tracking-tight leading-tight">
-        {t('hero.title')}
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-green-950 mb-5 tracking-tight leading-tight">
+        {heroTitle}
       </h1>
-      <p class="text-green-700 font-medium text-base md:text-lg max-w-lg mx-auto leading-relaxed opacity-90">
-        {t('hero.subtitle')}
+      <p class="text-green-700/90 font-medium text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+        {heroSub}
       </p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         <a
-          href={localePath(locale, '/mbti/test')}
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-green-700 text-white font-semibold text-sm shadow-lg shadow-green-200 hover:bg-green-800 transition-all hover:-translate-y-0.5"
+          href={localePath(locale, '/tests')}
+          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-green-700 text-white font-semibold text-sm shadow-lg shadow-green-200 hover:bg-green-800 transition-all hover:-translate-y-0.5"
         >
-          {t('hero.cta.primary')} →
+          {ctaAllTests} →
         </a>
         <a
-          href={localePath(locale, '/ontology')}
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-green-700 font-semibold text-sm border border-green-100 hover:bg-green-50 transition-all"
+          href={localePath(locale, '/oracle/draw')}
+          class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-green-800 font-semibold text-sm border border-green-200 hover:border-green-400 hover:bg-green-50 transition-all shadow-sm"
         >
-          {t('hero.cta.secondary')}
+          ✦ {txt({ ko: '오라클 뽑기', en: 'Oracle Draw', ja: 'オラクル引く', zh: '抽神谕牌', fr: 'Tirage Oracle', es: 'Tirada Oracle' })}
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Feature Cards -->
-  <section class="max-w-6xl mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-      {features.map((feat) => (
+  <!-- Stats strip -->
+  <div class="bg-green-700 py-4 px-4">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      {statsData.map(s => (
+        <div>
+          <div class="text-2xl font-black text-white">{s.value}</div>
+          <div class="text-green-200 text-xs font-medium mt-0.5">{s.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Popular Tests -->
+  <section class="max-w-6xl mx-auto px-4 pt-14 pb-10">
+    <div class="flex items-center justify-between mb-7">
+      <h2 class="text-xl font-bold text-green-950">{sectionPopular}</h2>
+      <a href={localePath(locale, '/tests')} class="text-sm font-semibold text-green-600 hover:text-green-800 transition-colors">
+        {ctaAllTests} →
+      </a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {popularTests.map(test => (
         <a
-          href={feat.href}
-          class="group block bg-white rounded-2xl border border-green-50 p-6 hover:border-green-200 hover:-translate-y-1 transition-all duration-200 shadow-sm hover:shadow-md"
+          href={test.href}
+          class={`group block bg-white rounded-2xl border ${test.border} p-5 hover:border-green-300 hover:-translate-y-0.5 transition-all duration-200 shadow-sm hover:shadow-md`}
         >
-          <div class="flex items-start justify-between mb-4">
-            <div class={`w-12 h-12 rounded-xl ${feat.bg} flex items-center justify-center text-2xl`}>
-              {feat.icon}
+          <div class="flex items-start justify-between mb-3">
+            <div class={`w-10 h-10 rounded-xl ${test.bg} flex items-center justify-center text-xl`}>
+              {test.icon}
             </div>
-            {feat.badge && (
-              <span class="text-xs font-semibold bg-green-50 text-green-600 px-2 py-1 rounded-full border border-green-100">
-                {feat.badge}
-              </span>
-            )}
+            <span class="text-xs font-semibold bg-green-50 text-green-600 px-2 py-0.5 rounded-full border border-green-100">
+              {test.badge}
+            </span>
           </div>
-          <h2 class="font-bold text-green-950 mb-1 group-hover:text-green-700 transition-colors">
-            {feat.title}
-          </h2>
-          <p class="text-sm text-green-600 leading-relaxed">
-            {feat.description}
-          </p>
-          <div class="mt-4 text-xs font-semibold text-green-500 group-hover:text-green-700 transition-colors">
-            Start →
+          <h3 class="font-bold text-green-950 mb-1 text-sm group-hover:text-green-700 transition-colors">
+            {test.title}
+          </h3>
+          <p class="text-xs text-green-600 leading-relaxed">{test.desc}</p>
+          <div class="mt-3 text-xs font-semibold text-green-500 group-hover:text-green-700 transition-colors">
+            {ctaStart} →
           </div>
         </a>
       ))}
     </div>
   </section>
 
-  <!-- About teaser -->
-  <section class="bg-green-50/50 py-16 px-4">
-    <div class="max-w-2xl mx-auto text-center">
-      <h2 class="text-2xl font-bold text-green-950 mb-3">
-        {t('marketing.about.hero.title')}
-      </h2>
-      <p class="text-green-700 leading-relaxed mb-6">
-        {t('marketing.about.hero.description')}
-      </p>
-      <a href={localePath(locale, '/about')} class="text-sm font-semibold text-green-600 hover:text-green-800 transition-colors">
-        {t('nav.about')} →
-      </a>
+  <!-- Oracle Card Teaser -->
+  <section class="relative overflow-hidden mx-4 md:mx-auto max-w-6xl rounded-3xl mb-10"
+    style="background: linear-gradient(135deg, #07050d 0%, #0a0716 50%, #07050d 100%);">
+    <div class="absolute inset-0 pointer-events-none opacity-50" aria-hidden="true"
+      style="background-image: radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,.6), transparent 60%), radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,.4), transparent 60%), radial-gradient(1px 1px at 65% 15%, rgba(255,255,255,.55), transparent 60%), radial-gradient(1px 1px at 80% 60%, rgba(255,255,255,.45), transparent 60%), radial-gradient(1px 1px at 25% 85%, rgba(255,255,255,.5), transparent 60%);"/>
+    </div>
+    <div class="relative z-10 px-8 py-12 md:px-16 flex flex-col md:flex-row items-center gap-8">
+      <!-- Card previews -->
+      <div class="flex gap-3 shrink-0">
+        {['✦', '⬡', '◯', '◈'].map((g, i) => (
+          <div
+            class="w-14 h-22 rounded-lg border border-white/20 flex items-center justify-center"
+            style={`background: linear-gradient(180deg, #0e0a1c 0%, #0a0716 100%); transform: rotate(${(i-1.5)*4}deg); height: 88px;`}
+          >
+            <span style="color: rgba(232,236,255,0.6); font-size: 20px;">{g}</span>
+          </div>
+        ))}
+      </div>
+      <div class="text-center md:text-left">
+        <div class="inline-block font-mono text-xs tracking-widest text-amber-400/70 uppercase mb-3">
+          ✦ {txt({ ko: '신규', en: 'New', ja: '新着', zh: '新功能', fr: 'Nouveau', es: 'Nuevo' })}
+        </div>
+        <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-100 mb-3">
+          {oracleSectionTitle}
+        </h2>
+        <p class="text-white/60 text-sm leading-relaxed max-w-md mb-6">
+          {oracleSectionDesc}
+        </p>
+        <a
+          href={localePath(locale, '/oracle/draw')}
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm text-amber-900"
+          style="background: #c9a55c;"
+        >
+          {txt({ ko: '카드 뽑기 →', en: 'Draw Cards →', ja: 'カードを引く →', zh: '抽牌 →', fr: 'Tirer les Cartes →', es: 'Sacar Cartas →' })}
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick test pills -->
+  <section class="max-w-6xl mx-auto px-4 pb-14">
+    <h2 class="text-xl font-bold text-green-950 mb-5">{sectionMore}</h2>
+    <div class="flex flex-wrap gap-2.5">
+      {quickTests.map(q => (
+        <a
+          href={q.href}
+          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-green-100 text-green-800 text-sm font-medium hover:bg-green-50 hover:border-green-300 transition-all shadow-sm"
+        >
+          <span>{q.icon}</span>
+          {q.title}
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Value props strip -->
+  <section class="bg-gradient-to-b from-green-50/50 to-white py-12 px-4 border-t border-green-50">
+    <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      {[
+        {
+          icon: '🔬',
+          title: txt({ ko: '심리학 기반', en: 'Psychology-Based', ja: '心理学ベース', zh: '基于心理学', fr: 'Basé sur la Psychologie', es: 'Basado en Psicología' }),
+          desc: txt({ ko: 'OCEAN·애착이론 등 검증된 연구 기반', en: 'OCEAN, attachment theory & validated research', ja: 'OCEAN・愛着理論などの検証済み研究に基づく', zh: '基于OCEAN、依恋理论等经验证的研究', fr: 'OCEAN, théorie de l\'attachement & recherche validée', es: 'OCEAN, teoría del apego e investigación validada' }),
+        },
+        {
+          icon: '☯️',
+          title: txt({ ko: '동양 철학', en: 'Eastern Wisdom', ja: '東洋哲学', zh: '东方智慧', fr: 'Sagesse Orientale', es: 'Sabiduría Oriental' }),
+          desc: txt({ ko: '사주·수비학·별자리 등 전통 지혜 통합', en: 'Saju, numerology, zodiac & traditional wisdom', ja: '四柱推命・数秘術・星座など伝統的知恵を統合', zh: '四柱推命、数字命理、星座等传统智慧整合', fr: 'Saju, numérologie, zodiaque & sagesse traditionnelle', es: 'Saju, numerología, zodíaco & sabiduría tradicional' }),
+        },
+        {
+          icon: '🔒',
+          title: txt({ ko: '개인정보 보호', en: 'Privacy First', ja: 'プライバシー優先', zh: '隐私优先', fr: 'Confidentialité d\'Abord', es: 'Privacidad Primero' }),
+          desc: txt({ ko: '결과는 기기에만 저장. 서버 전송 없음', en: 'Results stay on your device. No server uploads.', ja: '結果はデバイスのみに保存。サーバー送信なし', zh: '结果仅保存在您的设备上。不上传至服务器', fr: 'Les résultats restent sur votre appareil. Pas d\'envoi serveur.', es: 'Los resultados permanecen en tu dispositivo. Sin envíos al servidor.' }),
+        },
+      ].map(v => (
+        <div class="flex flex-col items-center gap-3">
+          <div class="text-3xl">{v.icon}</div>
+          <h3 class="font-bold text-green-950">{v.title}</h3>
+          <p class="text-sm text-green-600 leading-relaxed">{v.desc}</p>
+        </div>
+      ))}
     </div>
   </section>
 </Layout>

@@ -707,7 +707,7 @@ export interface GeneratedMessages {
           en: string;
           ko: string;
           ja: string;
-          cn: string;
+          zh: string;
           es: string;
           fr: string;
         };
@@ -17837,7 +17837,7 @@ export interface GeneratedMessages {
           ko: string;
           en: string;
           ja: string;
-          cn: string;
+          zh: string;
           fr: string;
           es: string;
         };
@@ -17849,7 +17849,7 @@ export interface GeneratedMessages {
           ko: string;
           en: string;
           ja: string;
-          cn: string;
+          zh: string;
           fr: string;
           es: string;
         };
@@ -17860,7 +17860,7 @@ export interface GeneratedMessages {
           ko: string;
           en: string;
           ja: string;
-          cn: string;
+          zh: string;
           fr: string;
           es: string;
         };
@@ -32613,7 +32613,7 @@ export interface GeneratedMessages {
         ko: string;
         en: string;
         ja: string;
-        cn: string;
+        zh: string;
         es: string;
         fr: string;
       };

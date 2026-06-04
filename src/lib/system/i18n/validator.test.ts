@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { describe, expect, it } from "vitest";
 
-const locales = ["en", "ja", "cn", "es", "fr"];
+const locales = ["en", "ja", "zh", "es", "fr"];
 const sourceLocale = "en";
 const messagesDir = path.resolve(process.cwd(), "src/i18n/messages");
 

@@ -345,7 +345,7 @@ export function EnhancedResultSharing({
                 ? "결과를 친구들과 공유해보세요!"
                 : locale === "ja"
                   ? "結果を友達と共有しましょう！"
-                  : locale === "cn"
+                  : locale === "zh"
                     ? "与朋友分享你的结果！"
                     : "Share Your Results!"}
             </h3>
@@ -354,7 +354,7 @@ export function EnhancedResultSharing({
                 ? "김*영님처럼 여러분의 특별한 성격 결과를 자랑해보세요 ✨"
                 : locale === "ja"
                   ? "あなたの特別な結果を共有しましょう ✨"
-                  : locale === "cn"
+                  : locale === "zh"
                     ? "分享你独特的性格测试结果 ✨"
                     : "Show off your unique personality results ✨"}
             </p>

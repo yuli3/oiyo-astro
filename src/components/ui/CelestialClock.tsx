@@ -129,7 +129,7 @@ export default function CelestialClock({ locale = 'ko' }: Props) {
     )
   }
 
-  const loc = (locale as string).slice(0, 2) as 'ko' | 'en' | 'ja' | 'cn'
+  const loc = (locale as string).slice(0, 2) as 'ko' | 'en' | 'ja' | 'zh'
   const solarLon = ((solar.lat >= 0) ? 1 : -1) * Math.abs(solar.lat)
 
   // Yang/Yin strength: Northern summer = yang peak, winter = yin peak

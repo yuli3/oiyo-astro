@@ -130,7 +130,7 @@ export const FOOD_PERSONALITY_DESCRIPTIONS: Record<
 };
 
 // Backfill missing locales for descriptions
-["ja", "cn", "es", "fr"].forEach((loc) => {
+["ja", "zh", "es", "fr"].forEach((loc) => {
   (FOOD_PERSONALITY_DESCRIPTIONS as any)[loc] =
     FOOD_PERSONALITY_DESCRIPTIONS.en;
 });
@@ -184,7 +184,7 @@ export const FOOD_PERSONALITY_TRAITS: Record<
 };
 
 // Backfill missing locales for traits
-["ja", "cn", "es", "fr"].forEach((loc) => {
+["ja", "zh", "es", "fr"].forEach((loc) => {
   (FOOD_PERSONALITY_TRAITS as any)[loc] = FOOD_PERSONALITY_TRAITS.en;
 });
 

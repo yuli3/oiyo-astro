@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import SajuCalculator from '../../../components/tools/SajuCalculator';
+import CelestialClock from '../../../components/ui/CelestialClock';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -23,7 +24,7 @@ const meta: Record<Locale, { title: string; description: string }> = {
     title: '四柱計算機 — 生年月日時で四柱八字を分析',
     description: '生年月日時を入力して、天干・地支・五行を分析し、あなたの四柱命式を表示します。',
   },
-  cn: {
+  zh: {
     title: '四柱计算器 — 分析你的四柱八字和五行',
     description: '输入生辰八字，分析天干、地支、五行，了解你的命理。',
   },
@@ -41,7 +42,8 @@ const m = meta[locale] ?? meta.en;
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
-  <main class="mx-auto max-w-2xl px-4 py-10">
+  <main class="mx-auto max-w-2xl px-4 py-10 space-y-6">
+    <CelestialClock client:load locale={locale} />
     <SajuCalculator client:load locale={locale} />
   </main>
 </Layout>

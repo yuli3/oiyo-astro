@@ -19,7 +19,7 @@ export interface OntologyContext {
 export interface OracleInput {
   context: Record<string, any>; // The raw data (saju, tci, etc)
   domain: "ontology" | "resonance" | "synergy";
-  locale: "cn" | "en" | "es" | "fr" | "ja" | "ko";
+  locale: "zh" | "en" | "es" | "fr" | "ja" | "ko";
   personaId: PersonaId;
 }
 

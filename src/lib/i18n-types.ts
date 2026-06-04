@@ -2,7 +2,7 @@ import { getRequestConfig } from "next-intl/server";
 
 import { i18nRegistry } from "./lib/i18n/registry";
 
-export const locales = ["en", "ko", "ja", "cn", "fr", "es"] as const;
+export const locales = ["en", "ko", "ja", "zh", "fr", "es"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale = "en";
 

@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import BiorhythmCalculator from '../../../components/tools/BiorhythmCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '바이오리듬 계산기 — 생년월일로 알아보는 오늘의 신체·감성·지성 리듬',
+    description: '생년월일을 입력하면 오늘의 신체(23일), 감성(28일), 지성(33일) 바이오리듬을 계산하고 그래프로 시각화합니다.',
+  },
+  en: {
+    title: 'Biorhythm Calculator — Physical, Emotional & Intellectual Cycles from Your Birthday',
+    description: 'Enter your birth date to calculate and visualize your physical (23-day), emotional (28-day), and intellectual (33-day) biorhythm cycles.',
+  },
+  ja: {
+    title: 'バイオリズム計算機 — 生年月日で今日の身体・感情・知性リズムを分析',
+    description: '生年月日を入力すると、今日の身体（23日）、感情（28日）、知性（33日）バイオリズムを計算してグラフで表示します。',
+  },
+  zh: {
+    title: '生物节律计算器 — 通过生日了解今日身体、情感与智力节律',
+    description: '输入生日即可计算并可视化今日身体（23天）、情感（28天）和智力（33天）生物节律周期。',
+  },
+  fr: {
+    title: 'Calculateur de Biorythmes — Analysez Vos Cycles Physique, Émotionnel et Intellectuel',
+    description: 'Entrez votre date de naissance pour calculer et visualiser vos cycles physique (23 jours), émotionnel (28 jours) et intellectuel (33 jours).',
+  },
+  es: {
+    title: 'Calculadora de Biorritmos — Analice Sus Ciclos Físico, Emocional e Intelectual',
+    description: 'Ingrese su fecha de nacimiento para calcular y visualizar sus ciclos físico (23 días), emocional (28 días) e intelectual (33 días).',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-2xl">
+    <BiorhythmCalculator locale={locale} client:load />
+  </main>
+</Layout>

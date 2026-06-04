@@ -20,7 +20,7 @@ interface SEOConfig {
   type?: "article" | "website";
 }
 
-const SUPPORTED_LOCALES = ["en", "ko", "ja", "cn", "fr", "es"] as const;
+const SUPPORTED_LOCALES = ["en", "ko", "ja", "zh", "fr", "es"] as const;
 
 const ensureLeadingSlash = (value: string) =>
   value.startsWith("/") ? value : `/${value}`;

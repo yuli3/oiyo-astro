@@ -1,46 +1,46 @@
 {
   "about": {
-    "title": "About Us | OIYO",
+    "title": "Acerca de OIYO",
     "hero": {
-      "subtitle": "Unlock the full potential of your self-discovery journey with zero hidden costs.",
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "subtitle": "Un Viaje Hacia Tu Verdadero Yo",
+      "title": "Acerca de OIYO",
+      "description": "Creamos experiencias que iluminan la intrincada arquitectura de tu personalidad y alma."
     },
     "mission": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "title": "Nuestra Misión",
+      "description": "Empoderar a las personas para descubrir su potencial innato a través de la fusión armoniosa de la sabiduría antigua y la ciencia moderna."
     },
     "values": {
-      "title": "Pricing",
+      "title": "Nuestros Valores Fundamentales",
       "free": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "Acceso Universal",
+        "description": "Herramientas de autodescubrimiento de alta calidad creadas para todos, siempre."
       },
       "privacy": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "Santuario de Privacidad",
+        "description": "Tus datos son sagrados. Nunca almacenamos ni compartimos tus resultados personales sin tu consentimiento."
       },
       "science": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "Basado en Evidencia",
+        "description": "Nuestras herramientas están arraigadas en investigación psicológica rigurosa y refinadas por la intuición del usuario."
       },
       "engaging": {
-        "title": "Pricing",
-        "description": "Choose the path that best suits your journey."
+        "title": "Experiencias Encantadoras",
+        "description": "El autodescubrimiento debe ser tan delicioso y mágico como perspicaz."
       }
     },
     "story": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "title": "Nuestro Origen",
+      "description": "OIYO comenzó con una visión simple: hacer que el profundo viaje del autodescubrimiento sea accesible, bello y profundamente personal para todos."
     },
     "meta": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey.",
-      "keywords": "pricing, subscription, plans, personality test, premium insights, saju"
+      "title": "Acerca de OIYO | Pruebas de Personalidad & Autodescubrimiento",
+      "description": "Explora la misión detrás de OIYO — ayudándote a descubrir tu verdadero yo a través de encantadoras pruebas de personalidad y herramientas psicológicas.",
+      "keywords": "oiyo, prueba de personalidad, autodescubrimiento, misión, misticismo científico"
     },
     "history": {
-      "title": "Pricing",
-      "description": "Choose the path that best suits your journey."
+      "title": "El Viaje Hasta Ahora",
+      "description": "Nacido de una pasión por entender el espíritu humano, continuamos evolucionando como tu compañero en descubrir los ritmos ocultos de la vida."
     }
   },
   "home": {

@@ -42,7 +42,7 @@ export function useLocale(): string {
   }
   if (typeof window !== 'undefined') {
     const [, maybeLocale] = window.location.pathname.split('/');
-    if (['en', 'ko', 'ja', 'cn', 'fr', 'es'].includes(maybeLocale)) {
+    if (['en', 'ko', 'ja', 'zh', 'fr', 'es'].includes(maybeLocale)) {
       return maybeLocale;
     }
   }

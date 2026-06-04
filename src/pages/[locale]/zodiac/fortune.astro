@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import DailyHoroscope from '../../../components/tools/DailyHoroscope';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '별자리 오늘의 운세 — 12별자리 오늘 운세 보기',
+    description: '오늘 나의 별자리 운세를 확인하세요. 전체운·애정운·재물운·건강운을 매일 새롭게 제공합니다.',
+  },
+  en: {
+    title: 'Daily Horoscope — Today\'s Fortune for All 12 Signs',
+    description: 'Check your zodiac sign\'s daily fortune. Overall, love, money and health readings updated every day.',
+  },
+  ja: {
+    title: '星座今日の運勢 — 12星座の今日の運勢',
+    description: '今日の星座運勢を確認しましょう。全体運・恋愛運・金運・健康運を毎日更新。',
+  },
+  zh: {
+    title: '星座今日运势 — 12星座每日运程',
+    description: '查看你的星座今日运势，全面运势、爱情运、财运、健康运每天更新。',
+  },
+  fr: {
+    title: 'Horoscope du Jour — Fortune Quotidienne pour les 12 Signes',
+    description: 'Consultez votre horoscope du jour. Chance générale, amour, argent et santé mis à jour chaque jour.',
+  },
+  es: {
+    title: 'Horóscopo de Hoy — Fortuna Diaria para los 12 Signos',
+    description: 'Consulta tu horóscopo diario. Suerte general, amor, dinero y salud actualizados cada día.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <DailyHoroscope client:load locale={locale} />
+  </main>
+</Layout>

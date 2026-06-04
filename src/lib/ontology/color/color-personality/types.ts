@@ -117,7 +117,7 @@ export const COLOR_PERSONALITY_DESCRIPTIONS: Record<
 };
 
 // Backfill missing locales for descriptions
-["ja", "cn", "es", "fr"].forEach((loc) => {
+["ja", "zh", "es", "fr"].forEach((loc) => {
   (COLOR_PERSONALITY_DESCRIPTIONS as any)[loc] =
     COLOR_PERSONALITY_DESCRIPTIONS.en;
 });
@@ -193,7 +193,7 @@ export const COLOR_PERSONALITY_TRAITS: Record<
 };
 
 // Backfill missing locales for traits
-["ja", "cn", "es", "fr"].forEach((loc) => {
+["ja", "zh", "es", "fr"].forEach((loc) => {
   (COLOR_PERSONALITY_TRAITS as any)[loc] = COLOR_PERSONALITY_TRAITS.en;
 });
 
@@ -268,7 +268,7 @@ export const COLOR_PERSONALITY_STRENGTHS: Record<
 };
 
 // Backfill missing locales for strengths
-["ja", "cn", "es", "fr"].forEach((loc) => {
+["ja", "zh", "es", "fr"].forEach((loc) => {
   (COLOR_PERSONALITY_STRENGTHS as any)[loc] = COLOR_PERSONALITY_STRENGTHS.en;
 });
 
@@ -343,7 +343,7 @@ export const COLOR_PERSONALITY_CHALLENGES: Record<
 };
 
 // Backfill missing locales for challenges
-["ja", "cn", "es", "fr"].forEach((loc) => {
+["ja", "zh", "es", "fr"].forEach((loc) => {
   (COLOR_PERSONALITY_CHALLENGES as any)[loc] = COLOR_PERSONALITY_CHALLENGES.en;
 });
 
@@ -418,7 +418,7 @@ export const COLOR_PERSONALITY_IDEAL_COLORS: Record<
 };
 
 // Backfill missing locales for ideal colors
-["ja", "cn", "es", "fr"].forEach((loc) => {
+["ja", "zh", "es", "fr"].forEach((loc) => {
   (COLOR_PERSONALITY_IDEAL_COLORS as any)[loc] =
     COLOR_PERSONALITY_IDEAL_COLORS.en;
 });
@@ -510,7 +510,7 @@ export const COLOR_PERSONALITY_CAREER_SUGGESTIONS: Record<
 };
 
 // Backfill missing locales for career suggestions
-["ja", "cn", "es", "fr"].forEach((loc) => {
+["ja", "zh", "es", "fr"].forEach((loc) => {
   (COLOR_PERSONALITY_CAREER_SUGGESTIONS as any)[loc] =
     COLOR_PERSONALITY_CAREER_SUGGESTIONS.en;
 });
@@ -586,7 +586,7 @@ export const COLOR_PERSONALITY_RELATIONSHIP_TIPS: Record<
 };
 
 // Backfill missing locales for relationship tips
-["ja", "cn", "es", "fr"].forEach((loc) => {
+["ja", "zh", "es", "fr"].forEach((loc) => {
   (COLOR_PERSONALITY_RELATIONSHIP_TIPS as any)[loc] =
     COLOR_PERSONALITY_RELATIONSHIP_TIPS.en;
 });

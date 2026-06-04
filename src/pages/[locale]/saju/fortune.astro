@@ -1,0 +1,47 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import SajuFortune from '../../../components/tools/SajuFortune';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '사주 오늘의 운세 — 생년으로 보는 오행 기반 오늘 운세',
+    description: '태어난 해를 입력하면 오행(목화토금수)에 기반한 오늘의 사주 운세를 확인할 수 있습니다. 전체운·애정운·재물운·건강운을 매일 새롭게 제공합니다.',
+  },
+  en: {
+    title: 'Saju Daily Fortune — Today\'s Five-Element Fortune by Birth Year',
+    description: 'Enter your birth year to discover your daily Saju fortune based on the Five Elements. Overall, love, money, and health readings updated every day.',
+  },
+  ja: {
+    title: '四柱今日の運勢 — 生まれ年の五行で見る今日の運勢',
+    description: '生まれ年を入力すると五行（木火土金水）に基づく今日の運勢がわかります。全体運・恋愛運・金運・健康運を毎日更新。',
+  },
+  zh: {
+    title: '四柱今日运势 — 根据出生年份五行推算运势',
+    description: '输入出生年份，即可获取基于五行（木火土金水）的今日运势。综合运势、爱情运、财运、健康运每天更新。',
+  },
+  fr: {
+    title: 'Saju Fortune du Jour — Fortune des Cinq Éléments par Année de Naissance',
+    description: 'Entrez votre année de naissance pour découvrir votre fortune Saju quotidienne selon les Cinq Éléments. Général, amour, argent et santé mis à jour chaque jour.',
+  },
+  es: {
+    title: 'Fortuna Saju del Día — Fortuna de los Cinco Elementos por Año de Nacimiento',
+    description: 'Ingresa tu año de nacimiento para descubrir tu fortuna Saju diaria según los Cinco Elementos. Suerte general, amor, dinero y salud actualizados cada día.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <SajuFortune client:load locale={locale} />
+  </main>
+</Layout>
