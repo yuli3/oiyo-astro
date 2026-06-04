@@ -22,7 +22,7 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}/, '') || '/';
     <nav class="hidden md:flex items-center gap-1" aria-label="Main navigation">
       <a href={localePath(locale, '/tests')}
          class="px-3 py-1.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50 transition-colors">
-        {{ ko: '테스트', en: 'Tests', ja: 'テスト', cn: '测试', fr: 'Tests', es: 'Tests' }[locale] ?? 'Tests'}
+        {{ ko: '테스트', en: 'Tests', ja: 'テスト', zh: '测试', fr: 'Tests', es: 'Tests' }[locale] ?? 'Tests'}
       </a>
       <a href={localePath(locale, '/ontology')}
          class="px-3 py-1.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50 transition-colors">
@@ -59,6 +59,7 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}/, '') || '/';
         {LOCALES.map((loc) => (
           <a
             href={localePath(loc, currentPath)}
+            data-locale={loc}
             class={`flex items-center gap-2 px-4 py-2 text-sm hover:bg-green-50 transition-colors ${loc === locale ? 'text-green-700 font-semibold' : 'text-gray-600'}`}
             role="option"
             aria-selected={loc === locale}
@@ -81,7 +82,7 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}/, '') || '/';
   <div id="mobile-nav" class="hidden md:hidden border-t border-green-50 bg-white">
     <nav class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-1">
       <a href={localePath(locale, '/tests')} class="px-3 py-2.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
-        {{ ko: '테스트', en: 'Tests', ja: 'テスト', cn: '测试', fr: 'Tests', es: 'Tests' }[locale] ?? 'Tests'}
+        {{ ko: '테스트', en: 'Tests', ja: 'テスト', zh: '测试', fr: 'Tests', es: 'Tests' }[locale] ?? 'Tests'}
       </a>
       <a href={localePath(locale, '/ontology')} class="px-3 py-2.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
         {t('nav.ontology')}
@@ -101,6 +102,7 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}/, '') || '/';
   const menu = document.getElementById('locale-menu');
   const mobileBtn = document.getElementById('mobile-menu-btn');
   const mobileNav = document.getElementById('mobile-nav');
+  const localeLinks = menu?.querySelectorAll<HTMLAnchorElement>('[data-locale]');
 
   btn?.addEventListener('click', () => {
     const open = menu?.classList.toggle('hidden') === false;
@@ -109,6 +111,16 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}/, '') || '/';
 
   mobileBtn?.addEventListener('click', () => {
     mobileNav?.classList.toggle('hidden');
+  });
+
+  localeLinks?.forEach((link) => {
+    link.addEventListener('click', () => {
+      try {
+        window.localStorage.setItem('oiyo:locale', link.dataset.locale ?? '');
+      } catch {
+        // Ignore storage failures in private or restricted browsing modes.
+      }
+    });
   });
 
   document.addEventListener('click', (e) => {

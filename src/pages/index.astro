@@ -1,4 +1,59 @@
 ---
-// Redirect to default locale
-return Astro.redirect('/ko', 302);
+const defaultLocale = 'ko';
 ---
+
+<!doctype html>
+<html lang={defaultLocale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://oiyo.net/ko/" />
+    <meta http-equiv="refresh" content="0; url=/ko/" />
+    <title>OIYO</title>
+    <script is:inline>
+      (() => {
+        const supported = ['ko', 'en', 'ja', 'zh', 'fr', 'es'];
+        const aliases = {
+          cn: 'zh',
+          'zh-cn': 'zh',
+          'zh-hans': 'zh',
+          'zh-hant': 'zh',
+          'zh-hk': 'zh',
+          'zh-mo': 'zh',
+          'zh-sg': 'zh',
+          'zh-tw': 'zh',
+        };
+
+        const normalize = (value) => {
+          if (!value || typeof value !== 'string') return null;
+          const language = value.toLowerCase();
+          return aliases[language] ?? aliases[language.split('-')[0]] ?? language.split('-')[0];
+        };
+
+        const storedLocale = (() => {
+          try {
+            return window.localStorage.getItem('oiyo:locale');
+          } catch {
+            return null;
+          }
+        })();
+        const candidates = [
+          storedLocale,
+          ...(navigator.languages || []),
+          navigator.language,
+        ];
+        const locale = candidates
+          .map(normalize)
+          .find((candidate) => supported.includes(candidate)) || 'ko';
+
+        window.location.replace(`/${locale}/`);
+      })();
+    </script>
+  </head>
+  <body>
+    <noscript>
+      <a href="/ko/">OIYO</a>
+    </noscript>
+  </body>
+</html>
