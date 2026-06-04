@@ -10,6 +10,7 @@ import path from 'path';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const LOCALES = ['ko', 'en', 'ja', 'zh', 'fr', 'es'];
+const SITEMAP_ENTRY_LIMIT = 100;
 
 export default defineConfig({
   site: 'https://oiyo.net',
@@ -17,6 +18,18 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
+      entryLimit: SITEMAP_ENTRY_LIMIT,
+      i18n: {
+        defaultLocale: 'ko',
+        locales: {
+          ko: 'ko',
+          en: 'en',
+          ja: 'ja',
+          zh: 'zh-CN',
+          fr: 'fr',
+          es: 'es',
+        },
+      },
       filter: (page) => {
         const path = new URL(page).pathname;
         if (path.split('/').some((seg) => seg.startsWith('_'))) return false;
