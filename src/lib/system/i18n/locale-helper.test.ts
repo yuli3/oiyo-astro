@@ -10,12 +10,12 @@ import {
 
 describe("locale-helper", () => {
   const testContent = {
-    cn: "中文",
     en: "English",
     es: "Español",
     fr: "Français",
     ja: "日本語",
     ko: "한국어",
+    zh: "中文",
   };
 
   describe("getLocalizedText", () => {
@@ -30,12 +30,12 @@ describe("locale-helper", () => {
 
     it("should work with complex objects", () => {
       const complexContent = {
-        cn: { description: "描述", title: "标题" },
         en: { description: "Description", title: "Title" },
         es: { description: "Descripción", title: "Título" },
         fr: { description: "Description", title: "Titre" },
         ja: { description: "説明", title: "タイトル" },
         ko: { description: "설명", title: "제목" },
+        zh: { description: "描述", title: "标题" },
       };
 
       const result = getLocalizedText(complexContent, "ko");
@@ -45,12 +45,12 @@ describe("locale-helper", () => {
 
     it("should work with arrays", () => {
       const arrayContent = {
-        cn: ["第一", "第二"],
         en: ["First", "Second"],
         es: ["Primero", "Segundo"],
         fr: ["Premier", "Deuxième"],
         ja: ["一番", "二番"],
         ko: ["첫째", "둘째"],
+        zh: ["第一", "第二"],
       };
 
       expect(getLocalizedText(arrayContent, "ko")).toEqual(["첫째", "둘째"]);

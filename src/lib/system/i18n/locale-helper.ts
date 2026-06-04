@@ -26,12 +26,12 @@ export function getBinaryLocaleText<T>(ko: T, en: T, locale: Locale): T {
  */
 export function getLanguageName(locale: Locale): string {
   const names: Record<Locale, string> = {
-    cn: "Chinese",
     en: "English",
     es: "Spanish",
     fr: "French",
     ja: "Japanese",
     ko: "Korean",
+    zh: "Chinese",
   };
   return names[locale] || "English";
 }

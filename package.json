@@ -59,5 +59,9 @@
   },
   "overrides": {
     "vite": "^7"
+  },
+  "devDependencies": {
+    "fast-check": "^4.8.0",
+    "vitest": "^4.1.8"
   }
 }
