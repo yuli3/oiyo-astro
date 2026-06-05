@@ -63,9 +63,17 @@ const categories = [
         icon: '🧠',
         bg: 'bg-blue-50',
         badge: '16 types',
+        title: { ko: 'MBTI 성격 테스트', en: 'MBTI Personality Test', ja: 'MBTI 性格テスト', zh: 'MBTI性格测试', fr: 'Test de Personnalité MBTI', es: 'Test de Personalidad MBTI' },
+        desc: { ko: '16가지 유형 중 나의 성격 선호를 알아보세요', en: 'Discover your personality preferences among the 16 types', ja: '16タイプから性格傾向を発見', zh: '在16种类型中了解你的性格偏好', fr: 'Découvrez vos préférences parmi les 16 types', es: 'Descubre tus preferencias entre los 16 tipos' },
+        href: localePath(locale, '/mbti/test'),
+      },
+      {
+        icon: '💼',
+        bg: 'bg-cyan-50',
+        badge: 'career',
         title: { ko: 'MBTI 직업 적성 테스트', en: 'MBTI Career Test', ja: 'MBTI 職業適性テスト', zh: 'MBTI职业测试', fr: 'Test MBTI Carrière', es: 'Test MBTI Carrera' },
         desc: { ko: '나의 MBTI 직업 유형과 추천 직업을 알아보세요', en: 'Discover your MBTI career type and recommended jobs', ja: 'MBTI職業タイプとおすすめ職業を発見', zh: '发现你的MBTI职业类型', fr: 'Découvrez votre type MBTI et les carrières recommandées', es: 'Descubre tu tipo MBTI y carreras recomendadas' },
-        href: localePath(locale, '/mbti/test'),
+        href: localePath(locale, '/mbti/career'),
       },
       {
         icon: '🔮',
