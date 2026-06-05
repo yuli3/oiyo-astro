@@ -38,10 +38,322 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  numberTitle: string;
+  numbers: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  relatedTitle: string;
+  related: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '숫자는 결론이 아니라 자기 이해의 언어입니다',
+    intro: '수비학은 생년월일과 이름을 숫자로 환산해 반복되는 성향, 동기, 표현 방식을 상징적으로 읽는 해석 체계입니다. 이 계산기는 생명수, 표현수, 영혼수, 성격수를 한 번에 비교해 나의 강점과 과제를 대화하듯 살펴보도록 돕습니다.',
+    numberTitle: '계산되는 핵심 숫자',
+    numbers: [
+      { title: '생명수', body: '생년월일에서 계산하며 삶의 큰 방향과 반복되는 테마를 상징합니다.' },
+      { title: '표현수', body: '이름 전체에서 계산하며 밖으로 드러나는 재능과 행동 방식을 봅니다.' },
+      { title: '영혼수', body: '모음에서 계산하며 마음속 욕구와 끌림을 읽는 데 사용합니다.' },
+    ],
+    useTitle: '이렇게 활용하세요',
+    useCases: [
+      { title: '자기소개 문장 만들기', body: '결과의 키워드를 골라 내가 자주 쓰는 에너지와 강점을 문장으로 정리합니다.' },
+      { title: '관계 대화 열기', body: '서로의 숫자를 비교해 판단보다 대화의 질문으로 사용합니다.' },
+      { title: '마스터 넘버 확인', body: '11, 22, 33은 줄이지 않고 별도 의미로 읽는 전통이 있습니다.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '수비학은 과학인가요?', answer: '아니요. 수비학은 상징 해석 체계이며 과학적 성격 진단이 아닙니다. 자기 성찰과 대화를 위한 참고 자료로 사용하세요.' },
+      { question: '영문 이름을 입력해야 하나요?', answer: '이 계산기는 피타고라스식 알파벳 매핑을 사용하므로 영문 이름 기준으로 계산합니다. 한국어 이름은 로마자 표기 하나를 정해 일관되게 사용하세요.' },
+      { question: '생명수와 표현수가 다르면 무엇을 봐야 하나요?', answer: '생명수는 큰 삶의 방향, 표현수는 외부로 드러나는 방식으로 보면 좋습니다. 서로 다르면 내적 동기와 사회적 표현의 차이를 관찰해보세요.' },
+    ],
+    readingTitle: '더 깊게 읽기',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/meaning-of-numerology/', label: '수비학의 의미', desc: '숫자 상징과 수비학의 기본 구조를 더 자세히 정리했습니다.' },
+      { href: 'https://blog.oiyo.net/ko/numerology-foundations-vibration/', label: '수비학 기초', desc: '생명수 계산과 숫자별 키워드를 실전형으로 읽어보세요.' },
+    ],
+    relatedTitle: '함께 쓰기 좋은 도구',
+    related: [
+      { href: '/saju/calculator', label: '사주 계산기', desc: '생년월일을 동양 명리 관점에서 함께 봅니다.' },
+      { href: '/zodiac/personality', label: '별자리 성격', desc: '서양 점성술의 상징 언어와 비교합니다.' },
+      { href: '/oracle/draw', label: '오라클 카드', desc: '오늘의 질문을 상징 카드로 정리합니다.' },
+    ],
+    disclaimer: '수비학 결과는 오락과 자기 성찰 목적입니다. 진로, 투자, 의료, 관계 결정을 대신하지 않습니다.',
+  },
+  en: {
+    introTitle: 'Numbers are a language for reflection, not a final verdict',
+    intro: 'Numerology translates your birth date and name into symbolic numbers that describe recurring themes, motives, and expression styles. This calculator compares Life Path, Expression, Soul Urge, and Personality numbers so you can explore strengths and challenges in one place.',
+    numberTitle: 'Core numbers calculated',
+    numbers: [
+      { title: 'Life Path', body: 'Calculated from your birth date; used for broad life themes and recurring direction.' },
+      { title: 'Expression', body: 'Calculated from the full name; used for visible talents and action style.' },
+      { title: 'Soul Urge', body: 'Calculated from vowels; used for inner wants, attraction, and motivation.' },
+    ],
+    useTitle: 'How to use it',
+    useCases: [
+      { title: 'Write a self-intro', body: 'Turn result keywords into a short sentence about your strengths and default energy.' },
+      { title: 'Open a relationship conversation', body: 'Compare numbers as prompts for questions, not as labels for people.' },
+      { title: 'Notice master numbers', body: '11, 22, and 33 are traditionally kept rather than reduced to a single digit.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: 'Is numerology scientific?', answer: 'No. Numerology is a symbolic interpretation system, not a scientific personality test. Use it for reflection and conversation.' },
+      { question: 'Do I need to enter an English name?', answer: 'This calculator uses the Pythagorean alphabet mapping, so it works with Latin letters. For non-Latin names, choose one romanization and use it consistently.' },
+      { question: 'What if my Life Path and Expression numbers differ?', answer: 'Read Life Path as broad direction and Expression as outward style. A difference can highlight the gap between inner theme and social expression.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://wiki.oiyo.net/en/meaning-of-numerology/', label: 'Meaning of Numerology', desc: 'A deeper guide to number symbolism and the structure of numerology.' },
+      { href: 'https://blog.oiyo.net/en/numerology-foundations-vibration/', label: 'Numerology Foundations', desc: 'A practical guide to Life Path calculation and number keywords.' },
+    ],
+    relatedTitle: 'Related tools',
+    related: [
+      { href: '/saju/calculator', label: 'Saju Calculator', desc: 'Compare your birth data through East Asian destiny symbolism.' },
+      { href: '/zodiac/personality', label: 'Zodiac Personality', desc: 'Compare numerology with Western astrological symbols.' },
+      { href: '/oracle/draw', label: 'Oracle Card Draw', desc: 'Frame today’s question through a symbolic card.' },
+    ],
+    disclaimer: 'Numerology results are for entertainment and self-reflection. They do not replace career, financial, medical, or relationship decisions.',
+  },
+  ja: {
+    introTitle: '数字は結論ではなく、自己理解のための言語です',
+    intro: '数秘術は生年月日と名前を数字に置き換え、繰り返されるテーマ、動機、表現スタイルを象徴的に読む体系です。この計算機ではライフパス、表現数、魂の数、個性数を一度に比較できます。',
+    numberTitle: '計算される主な数字',
+    numbers: [
+      { title: 'ライフパス', body: '生年月日から計算し、人生の大きな方向性やテーマを象徴します。' },
+      { title: '表現数', body: '名前全体から計算し、外に現れる才能や行動スタイルを見ます。' },
+      { title: '魂の数', body: '母音から計算し、内側の欲求や惹かれやすいものを読みます。' },
+    ],
+    useTitle: '使い方',
+    useCases: [
+      { title: '自己紹介を作る', body: '結果のキーワードを使って、自分の強みや基本エネルギーを短く整理します。' },
+      { title: '関係の会話に使う', body: '相手を決めつけず、質問のきっかけとして数字を比較します。' },
+      { title: 'マスターナンバーを見る', body: '11、22、33は一桁にせず特別な意味として読む伝統があります。' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '数秘術は科学ですか？', answer: 'いいえ。数秘術は象徴解釈の体系であり、科学的な性格診断ではありません。自己理解や会話の参考として使ってください。' },
+      { question: '英語名を入力する必要がありますか？', answer: 'この計算機はピタゴラス式のアルファベット対応を使うため、ローマ字表記で計算します。表記を一つ決めて一貫して使うのがおすすめです。' },
+      { question: 'ライフパスと表現数が違う時は？', answer: 'ライフパスは大きな方向性、表現数は外側に出るスタイルとして読みます。違いは内面と社会的表現の差を示すヒントになります。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ja/meaning-of-numerology/', label: '数秘術の意味', desc: '数字の象徴と数秘術の構造を詳しく解説しています。' },
+      { href: 'https://blog.oiyo.net/ja/numerology-foundations-vibration/', label: '数秘術の基礎', desc: 'ライフパス計算と数字別キーワードを実践的に読めます。' },
+    ],
+    relatedTitle: '関連ツール',
+    related: [
+      { href: '/saju/calculator', label: '四柱推命計算機', desc: '生年月日を東洋命理の視点から見ます。' },
+      { href: '/zodiac/personality', label: '星座性格', desc: '西洋占星術の象徴と比較します。' },
+      { href: '/oracle/draw', label: 'オラクルカード', desc: '今日の問いを象徴カードで整理します。' },
+    ],
+    disclaimer: '数秘術の結果は娯楽と自己省察のためのものです。進路、投資、医療、人間関係の決定を代替しません。',
+  },
+  zh: {
+    introTitle: '数字不是结论，而是理解自己的语言',
+    intro: '数字命理把出生日期和姓名转换为数字，用象征方式阅读反复出现的主题、动机和表达方式。本计算器可同时比较生命灵数、表达数、灵魂数和个性数。',
+    numberTitle: '核心数字',
+    numbers: [
+      { title: '生命灵数', body: '由出生日期计算，象征人生的大方向和重复主题。' },
+      { title: '表达数', body: '由完整姓名计算，观察外在才能和行动方式。' },
+      { title: '灵魂数', body: '由元音计算，用来阅读内在欲望、吸引和动机。' },
+    ],
+    useTitle: '如何使用',
+    useCases: [
+      { title: '整理自我介绍', body: '把结果关键词整理成一句关于优势和默认能量的描述。' },
+      { title: '开启关系对话', body: '把数字当作提问线索，而不是给别人贴标签。' },
+      { title: '注意大师数', body: '11、22、33传统上不再化简，而是作为特殊数字阅读。' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '数字命理是科学吗？', answer: '不是。数字命理是象征解释体系，不是科学人格测试。请用于自我反思和轻松对话。' },
+      { question: '必须输入英文名吗？', answer: '本计算器使用毕达哥拉斯字母映射，因此适用于拉丁字母。非拉丁姓名建议选择一种罗马化写法并保持一致。' },
+      { question: '生命灵数和表达数不同怎么办？', answer: '生命灵数可看作大方向，表达数可看作外在风格。差异能帮助你观察内在主题与社会表达的不同。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://blog.oiyo.net/zh/meaning-of-numerology/', label: '数字命理的意义', desc: '深入了解数字象征和数字命理结构。' },
+      { href: 'https://blog.oiyo.net/zh/tool-numerology-calculator/', label: '数字命理计算器指南', desc: '了解计算方式和使用注意事项。' },
+    ],
+    relatedTitle: '相关工具',
+    related: [
+      { href: '/saju/calculator', label: '四柱计算器', desc: '从东方命理视角查看出生信息。' },
+      { href: '/zodiac/personality', label: '星座性格', desc: '与西方占星符号进行比较。' },
+      { href: '/oracle/draw', label: '神谕卡抽取', desc: '用象征卡片整理今天的问题。' },
+    ],
+    disclaimer: '数字命理结果仅供娱乐和自我反思，不替代职业、财务、医疗或关系决策。',
+  },
+  fr: {
+    introTitle: 'Les nombres sont un langage de réflexion, pas un verdict',
+    intro: "La numérologie transforme votre date de naissance et votre nom en nombres symboliques pour explorer thèmes récurrents, motivations et styles d'expression. Ce calculateur compare chemin de vie, expression, âme et personnalité.",
+    numberTitle: 'Nombres principaux',
+    numbers: [
+      { title: 'Chemin de vie', body: 'Calculé depuis la date de naissance; il symbolise les grands thèmes de vie.' },
+      { title: 'Expression', body: "Calculé depuis le nom complet; il décrit les talents visibles et le style d'action." },
+      { title: "Nombre d'âme", body: 'Calculé depuis les voyelles; il explore désirs intérieurs et motivations.' },
+    ],
+    useTitle: "Comment l'utiliser",
+    useCases: [
+      { title: 'Écrire une présentation', body: 'Transformez les mots-clés du résultat en phrase courte sur vos forces.' },
+      { title: 'Ouvrir une conversation', body: 'Comparez les nombres comme questions, pas comme étiquettes.' },
+      { title: 'Repérer les nombres maîtres', body: '11, 22 et 33 sont traditionnellement conservés au lieu d’être réduits.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: 'La numérologie est-elle scientifique ?', answer: "Non. C'est un système symbolique, pas un test de personnalité scientifique. Utilisez-la pour la réflexion et la conversation." },
+      { question: 'Faut-il entrer un nom en lettres latines ?', answer: "Oui, ce calculateur utilise la correspondance alphabétique pythagoricienne. Pour les noms non latins, choisissez une romanisation cohérente." },
+      { question: 'Que faire si chemin de vie et expression diffèrent ?', answer: "Lisez le chemin de vie comme direction générale et l'expression comme style extérieur. La différence peut révéler un écart entre thème intérieur et expression sociale." },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://blog.oiyo.net/fr/meaning-of-numerology/', label: 'Signification de la numérologie', desc: 'Un guide plus profond des symboles numériques.' },
+      { href: 'https://blog.oiyo.net/fr/tool-numerology-calculator/', label: 'Guide du calculateur', desc: 'Méthode de calcul et conseils d’utilisation.' },
+    ],
+    relatedTitle: 'Outils liés',
+    related: [
+      { href: '/saju/calculator', label: 'Calculateur Saju', desc: 'Comparez vos données de naissance avec la symbolique est-asiatique.' },
+      { href: '/zodiac/personality', label: 'Personnalité zodiacale', desc: 'Comparez avec les symboles astrologiques occidentaux.' },
+      { href: '/oracle/draw', label: 'Tirage oracle', desc: 'Cadrez la question du jour avec une carte symbolique.' },
+    ],
+    disclaimer: 'Les résultats de numérologie servent au divertissement et à la réflexion. Ils ne remplacent pas les décisions professionnelles, financières, médicales ou relationnelles.',
+  },
+  es: {
+    introTitle: 'Los números son lenguaje de reflexión, no sentencia final',
+    intro: 'La numerología convierte fecha de nacimiento y nombre en números simbólicos para explorar temas repetidos, motivaciones y estilos de expresión. Esta calculadora compara Camino de Vida, Expresión, Deseo del Alma y Personalidad.',
+    numberTitle: 'Números principales',
+    numbers: [
+      { title: 'Camino de Vida', body: 'Calculado desde la fecha de nacimiento; simboliza temas amplios y dirección vital.' },
+      { title: 'Expresión', body: 'Calculado desde el nombre completo; describe talentos visibles y estilo de acción.' },
+      { title: 'Deseo del Alma', body: 'Calculado desde las vocales; explora deseos internos y motivación.' },
+    ],
+    useTitle: 'Cómo usarlo',
+    useCases: [
+      { title: 'Escribir una presentación', body: 'Convierte palabras clave del resultado en una frase sobre fortalezas.' },
+      { title: 'Abrir conversación', body: 'Compara números como preguntas, no como etiquetas para personas.' },
+      { title: 'Notar números maestros', body: '11, 22 y 33 se conservan tradicionalmente en lugar de reducirse.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '¿La numerología es científica?', answer: 'No. Es un sistema simbólico, no una prueba científica de personalidad. Úsala para reflexión y conversación.' },
+      { question: '¿Debo ingresar un nombre en letras latinas?', answer: 'Sí. Esta calculadora usa el mapa alfabético pitagórico. Para nombres no latinos, elige una romanización consistente.' },
+      { question: '¿Qué pasa si Camino de Vida y Expresión difieren?', answer: 'Lee Camino de Vida como dirección general y Expresión como estilo exterior. La diferencia puede mostrar el contraste entre tema interno y expresión social.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://blog.oiyo.net/es/meaning-of-numerology/', label: 'Significado de la numerología', desc: 'Una guía más profunda sobre símbolos numéricos.' },
+      { href: 'https://blog.oiyo.net/es/tool-numerology-calculator/', label: 'Guía de la calculadora', desc: 'Método de cálculo y consejos de uso.' },
+    ],
+    relatedTitle: 'Herramientas relacionadas',
+    related: [
+      { href: '/saju/calculator', label: 'Calculadora Saju', desc: 'Compara tus datos de nacimiento con símbolos del Este asiático.' },
+      { href: '/zodiac/personality', label: 'Personalidad zodiacal', desc: 'Compara con símbolos astrológicos occidentales.' },
+      { href: '/oracle/draw', label: 'Carta oráculo', desc: 'Enmarca la pregunta del día con una carta simbólica.' },
+    ],
+    disclaimer: 'Los resultados de numerología son para entretenimiento y reflexión. No reemplazan decisiones profesionales, financieras, médicas o relacionales.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({
+  ...item,
+  href: `/${locale}${item.href}`,
+}));
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
-  <main class="mx-auto max-w-2xl px-4 py-10">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <main class="mx-auto max-w-3xl px-4 py-10">
     <NumerologyCalculator client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.numberTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.numbers.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href}>
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
   </main>
 </Layout>
