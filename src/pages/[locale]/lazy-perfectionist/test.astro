@@ -4,6 +4,8 @@ import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import LazyPerfectionistTest from '../../../components/tests/LazyPerfectionistTest';
 import WisdomNotes from '../../../components/shared/WisdomNotes.astro';
+import TestContentBridge from '../../../components/shared/TestContentBridge.astro';
+import { getTestBridge } from '../../../data/test-content-bridges';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -19,11 +21,13 @@ const meta: Record<Locale, { title: string; description: string }> = {
   es: { title: 'Test del Perfeccionista Perezoso', description: 'Descubre si tu procrastinación viene del perfeccionismo, miedo al fracaso o exceso de planificación.' },
 };
 const m = meta[locale] ?? meta.en;
+const bridge = getTestBridge('lazy-perfectionist', locale);
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <main class="mx-auto max-w-2xl px-4 py-10">
     <LazyPerfectionistTest client:load locale={locale} />
     <WisdomNotes topic="lazy-perfectionist" locale={locale} />
+    <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
   </main>
 </Layout>

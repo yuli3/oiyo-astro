@@ -4,6 +4,8 @@ import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import HabitFormationAssistant from '../../../components/tools/HabitFormationAssistant';
 import WisdomNotes from '../../../components/shared/WisdomNotes.astro';
+import TestContentBridge from '../../../components/shared/TestContentBridge.astro';
+import { getTestBridge } from '../../../data/test-content-bridges';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -19,11 +21,13 @@ const meta: Record<Locale, { title: string; description: string }> = {
   es: { title: 'Ayudante de Hábitos de 30 Días', description: 'Una lista de 30 días para perfeccionismo, baja energía y acciones pequeñas.' },
 };
 const m = meta[locale] ?? meta.en;
+const bridge = getTestBridge('habit-builder', locale);
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <main class="mx-auto max-w-3xl px-4 py-10">
     <HabitFormationAssistant client:load locale={locale} />
     <WisdomNotes topic="habit-builder" locale={locale} />
+    <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
   </main>
 </Layout>
