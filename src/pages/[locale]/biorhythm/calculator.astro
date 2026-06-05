@@ -38,10 +38,316 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  cycleTitle: string;
+  cycles: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  relatedTitle: string;
+  related: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '오늘의 리듬을 결정이 아니라 관찰로 읽어보세요',
+    intro: '바이오리듬은 생년월일을 기준으로 신체 23일, 감성 28일, 지성 33일 주기를 사인파로 계산하는 자기 관찰 모델입니다. 과학적 진단이라기보다 컨디션을 기록하고 하루의 강약을 조절하는 참고 지도에 가깝습니다.',
+    cycleTitle: '세 가지 리듬',
+    cycles: [
+      { title: '신체 23일', body: '체력, 활동감, 회복감처럼 몸의 에너지 상태를 살펴봅니다.' },
+      { title: '감성 28일', body: '기분, 예민함, 창의성과 대인 감각의 흐름을 관찰합니다.' },
+      { title: '지성 33일', body: '집중, 판단, 기억, 문제 해결의 리듬을 참고합니다.' },
+    ],
+    useTitle: '이렇게 활용하세요',
+    useCases: [
+      { title: '고조기', body: '중요한 운동, 창작, 발표처럼 에너지를 쓰는 일을 배치해보세요.' },
+      { title: '저조기', body: '무리한 목표보다 회복, 정리, 반복 업무에 초점을 맞춥니다.' },
+      { title: '전환일', body: '0점 근처는 리듬이 바뀌는 구간입니다. 컨디션 변화를 조금 더 세심하게 봅니다.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '바이오리듬은 과학적으로 증명되었나요?', answer: '고전적인 바이오리듬 이론은 널리 알려져 있지만, 건강이나 사고를 정확히 예측하는 과학적 진단 도구로 보기는 어렵습니다. 자기 관찰과 일정 조절의 참고 자료로 사용하세요.' },
+      { question: '결과가 낮으면 중요한 일을 미뤄야 하나요?', answer: '반드시 그럴 필요는 없습니다. 낮은 리듬은 위험 신호라기보다 휴식, 준비, 체크리스트를 더 의식하라는 힌트로 보는 편이 좋습니다.' },
+      { question: '생년월일 외에 무엇이 영향을 주나요?', answer: '수면, 운동, 식사, 스트레스, 질병, 환경이 실제 컨디션에 훨씬 직접적인 영향을 줄 수 있습니다.' },
+    ],
+    readingTitle: '더 깊게 읽기',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/meaning-of-biorhythms/', label: '바이오리듬의 의미', desc: '기원과 세 주기, 전환일 개념을 자세히 정리했습니다.' },
+    ],
+    relatedTitle: '함께 쓰기 좋은 도구',
+    related: [
+      { href: '/sleep-type/test', label: '수면 유형 테스트', desc: '내 수면 리듬과 회복 패턴을 확인합니다.' },
+      { href: '/burnout/test', label: '번아웃 테스트', desc: '에너지 저하가 오래 지속되는지 점검합니다.' },
+      { href: '/breathing/timer', label: '호흡 타이머', desc: '리듬이 낮은 날 짧게 몸을 안정시킵니다.' },
+    ],
+    disclaimer: '바이오리듬 계산기는 의학적 판단, 안전 판단, 치료 결정을 대신하지 않습니다. 몸 상태가 좋지 않거나 증상이 지속되면 전문가에게 상담하세요.',
+  },
+  en: {
+    introTitle: 'Read today’s rhythm as observation, not destiny',
+    intro: 'Biorhythm uses your birth date to model three sine-wave cycles: physical 23 days, emotional 28 days, and intellectual 33 days. Treat it as a self-reflection map for planning your day, not as a medical or scientific prediction system.',
+    cycleTitle: 'The three cycles',
+    cycles: [
+      { title: 'Physical 23 days', body: 'A lens for energy, activity, stamina, and recovery.' },
+      { title: 'Emotional 28 days', body: 'A way to notice mood, sensitivity, creativity, and social tone.' },
+      { title: 'Intellectual 33 days', body: 'A reference for focus, judgment, memory, and problem solving.' },
+    ],
+    useTitle: 'How to use it',
+    useCases: [
+      { title: 'High phase', body: 'Place demanding tasks, workouts, creative work, or presentations here when possible.' },
+      { title: 'Low phase', body: 'Favor recovery, maintenance, review, and steady routines over overreach.' },
+      { title: 'Switching point', body: 'Near zero, the curve changes direction. Watch your condition a little more carefully.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: 'Is biorhythm scientifically proven?', answer: 'Classic biorhythm theory is well known, but it should not be treated as a validated diagnostic or prediction tool. Use it for self-observation and planning prompts.' },
+      { question: 'Should I postpone important work on a low day?', answer: 'Not automatically. A low rhythm is better read as a cue to rest, prepare, and use checklists, not as a rule that blocks action.' },
+      { question: 'What affects my real condition besides birth date?', answer: 'Sleep, exercise, food, stress, illness, and environment can affect your actual condition much more directly.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://wiki.oiyo.net/en/meaning-of-biorhythms/', label: 'Meaning of Biorhythms', desc: 'A deeper guide to the origin, three cycles, and switching points.' },
+    ],
+    relatedTitle: 'Related tools',
+    related: [
+      { href: '/sleep-type/test', label: 'Sleep Chronotype Test', desc: 'Understand your sleep rhythm and recovery pattern.' },
+      { href: '/burnout/test', label: 'Burnout Test', desc: 'Check whether low energy is becoming persistent.' },
+      { href: '/breathing/timer', label: 'Breathing Timer', desc: 'Settle the body on low-rhythm days.' },
+    ],
+    disclaimer: 'This calculator does not replace medical advice, safety judgment, or treatment decisions. If symptoms persist or you feel unwell, consult a professional.',
+  },
+  ja: {
+    introTitle: '今日のリズムは運命ではなく観察として読みましょう',
+    intro: 'バイオリズムは生年月日から身体23日、感情28日、知性33日の3つのサイン波を計算する自己観察モデルです。医学的な診断ではなく、1日の過ごし方を整えるための参考マップとして使うのが自然です。',
+    cycleTitle: '3つのリズム',
+    cycles: [
+      { title: '身体 23日', body: '体力、活動感、回復感など体のエネルギーを見る視点です。' },
+      { title: '感情 28日', body: '気分、敏感さ、創造性、対人感覚の流れを観察します。' },
+      { title: '知性 33日', body: '集中、判断、記憶、問題解決のリズムを参考にします。' },
+    ],
+    useTitle: '使い方',
+    useCases: [
+      { title: '高調期', body: '運動、創作、発表などエネルギーを使う予定を置きやすい時期です。' },
+      { title: '低調期', body: '無理な挑戦よりも休息、整理、復習、単純作業に向いています。' },
+      { title: '転換点', body: '0地点付近はリズムが切り替わる区間です。体調の変化を少し丁寧に見ましょう。' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: 'バイオリズムは科学的に証明されていますか？', answer: '古典的なバイオリズム理論は広く知られていますが、健康や事故を正確に予測する診断ツールではありません。自己観察の参考として使ってください。' },
+      { question: '低い日は大事な予定を延期すべきですか？', answer: '必ず延期する必要はありません。休息、準備、チェックリストを意識する合図として読むのがおすすめです。' },
+      { question: '実際のコンディションには何が影響しますか？', answer: '睡眠、運動、食事、ストレス、病気、環境の影響が非常に大きいです。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ja/meaning-of-biorhythms/', label: 'バイオリズムの意味', desc: '起源、3つの周期、転換点を詳しく解説しています。' },
+    ],
+    relatedTitle: '関連ツール',
+    related: [
+      { href: '/sleep-type/test', label: '睡眠タイプテスト', desc: '自分の睡眠リズムと回復パターンを知ります。' },
+      { href: '/burnout/test', label: 'バーンアウトテスト', desc: 'エネルギー低下が続いていないか確認します。' },
+      { href: '/breathing/timer', label: '呼吸タイマー', desc: '低調な日に体を短く整えます。' },
+    ],
+    disclaimer: 'この計算機は医学的判断、安全判断、治療の代わりにはなりません。体調不良や症状が続く場合は専門家に相談してください。',
+  },
+  zh: {
+    introTitle: '把今日节律当作观察，而不是命运',
+    intro: '生物节律根据出生日期计算身体23天、情感28天、智力33天三个正弦周期。它更适合作为自我观察和安排日程的参考，而不是医学诊断或科学预测。',
+    cycleTitle: '三种节律',
+    cycles: [
+      { title: '身体 23天', body: '观察体力、活动感、耐力和恢复状态。' },
+      { title: '情感 28天', body: '观察心情、敏感度、创造力和社交状态。' },
+      { title: '智力 33天', body: '参考专注、判断、记忆和问题解决的节奏。' },
+    ],
+    useTitle: '如何使用',
+    useCases: [
+      { title: '高峰期', body: '适合安排运动、创作、演讲或需要能量的任务。' },
+      { title: '低谷期', body: '更适合休息、整理、复盘和稳定的日常工作。' },
+      { title: '转换点', body: '接近零点时曲线方向改变，可以更细致地观察身体和情绪。' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '生物节律有科学证明吗？', answer: '经典生物节律理论广为人知，但不应被当作准确预测健康或事故的诊断工具。更适合作为自我观察参考。' },
+      { question: '低谷期要推迟重要事情吗？', answer: '不一定。低节律更像是提醒你休息、准备和使用检查清单，而不是禁止行动。' },
+      { question: '真实状态还受什么影响？', answer: '睡眠、运动、饮食、压力、疾病和环境对实际状态的影响往往更直接。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://blog.oiyo.net/zh/meaning-of-biorhythms/', label: '生物节律的意义', desc: '进一步了解起源、三种周期与转换点。' },
+    ],
+    relatedTitle: '相关工具',
+    related: [
+      { href: '/sleep-type/test', label: '睡眠类型测试', desc: '了解自己的睡眠节律与恢复方式。' },
+      { href: '/burnout/test', label: '职业倦怠测试', desc: '检查低能量是否正在持续。' },
+      { href: '/breathing/timer', label: '呼吸计时器', desc: '在低节律日快速稳定身体。' },
+    ],
+    disclaimer: '本计算器不能替代医学建议、安全判断或治疗决定。如身体不适或症状持续，请咨询专业人士。',
+  },
+  fr: {
+    introTitle: "Lisez le rythme du jour comme une observation, pas comme un destin",
+    intro: "Le biorythme modélise trois cycles à partir de la date de naissance: physique 23 jours, émotionnel 28 jours et intellectuel 33 jours. Utilisez-le comme une carte d'auto-observation, pas comme un outil médical ou prédictif.",
+    cycleTitle: 'Les trois cycles',
+    cycles: [
+      { title: 'Physique 23 jours', body: "Un repère pour l'énergie, l'activité, l'endurance et la récupération." },
+      { title: 'Émotionnel 28 jours', body: "Une façon d'observer humeur, sensibilité, créativité et ton social." },
+      { title: 'Intellectuel 33 jours', body: 'Une référence pour concentration, jugement, mémoire et résolution de problèmes.' },
+    ],
+    useTitle: "Comment l'utiliser",
+    useCases: [
+      { title: 'Phase haute', body: 'Placez si possible les tâches exigeantes, le sport, la création ou les présentations.' },
+      { title: 'Phase basse', body: 'Favorisez récupération, entretien, revue et routines stables.' },
+      { title: 'Point de bascule', body: 'Près de zéro, la courbe change de direction. Observez votre état avec plus de soin.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: 'Le biorythme est-il scientifiquement prouvé ?', answer: "La théorie classique est connue, mais elle ne doit pas être utilisée comme outil validé de diagnostic ou de prédiction. Servez-vous-en comme support d'observation." },
+      { question: 'Faut-il reporter une tâche importante un jour bas ?', answer: "Pas automatiquement. Un rythme bas est plutôt un signal pour se reposer, préparer et utiliser des listes de vérification." },
+      { question: 'Qu’est-ce qui influence réellement mon état ?', answer: "Sommeil, exercice, alimentation, stress, maladie et environnement ont souvent un effet beaucoup plus direct." },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://blog.oiyo.net/fr/meaning-of-biorhythms/', label: 'Signification des biorythmes', desc: "Origine, trois cycles et points de bascule expliqués en détail." },
+    ],
+    relatedTitle: 'Outils liés',
+    related: [
+      { href: '/sleep-type/test', label: 'Test de chronotype', desc: 'Comprenez votre rythme de sommeil et de récupération.' },
+      { href: '/burnout/test', label: 'Test de burnout', desc: "Vérifiez si la baisse d'énergie devient persistante." },
+      { href: '/breathing/timer', label: 'Minuteur de respiration', desc: 'Apaisez le corps les jours de rythme bas.' },
+    ],
+    disclaimer: 'Ce calculateur ne remplace pas un avis médical, un jugement de sécurité ou une décision de traitement. Consultez un professionnel si les symptômes persistent.',
+  },
+  es: {
+    introTitle: 'Lee el ritmo de hoy como observación, no como destino',
+    intro: 'El biorritmo modela tres ciclos desde la fecha de nacimiento: físico de 23 días, emocional de 28 días e intelectual de 33 días. Úsalo como mapa de autoobservación, no como sistema médico o predictivo.',
+    cycleTitle: 'Los tres ciclos',
+    cycles: [
+      { title: 'Físico 23 días', body: 'Una referencia para energía, actividad, resistencia y recuperación.' },
+      { title: 'Emocional 28 días', body: 'Una forma de observar ánimo, sensibilidad, creatividad y tono social.' },
+      { title: 'Intelectual 33 días', body: 'Una guía para enfoque, juicio, memoria y resolución de problemas.' },
+    ],
+    useTitle: 'Cómo usarlo',
+    useCases: [
+      { title: 'Fase alta', body: 'Coloca tareas exigentes, ejercicio, creación o presentaciones cuando sea posible.' },
+      { title: 'Fase baja', body: 'Prioriza recuperación, mantenimiento, revisión y rutinas estables.' },
+      { title: 'Punto de cambio', body: 'Cerca de cero, la curva cambia de dirección. Observa tu estado con más cuidado.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '¿El biorritmo está científicamente probado?', answer: 'La teoría clásica es conocida, pero no debe tratarse como una herramienta validada de diagnóstico o predicción. Úsala para autoobservación.' },
+      { question: '¿Debo posponer algo importante en un día bajo?', answer: 'No necesariamente. Un ritmo bajo es mejor como señal para descansar, preparar y usar listas de verificación.' },
+      { question: '¿Qué influye realmente en mi condición?', answer: 'Sueño, ejercicio, comida, estrés, enfermedad y ambiente pueden influir de forma mucho más directa.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://blog.oiyo.net/es/meaning-of-biorhythms/', label: 'Significado de los biorritmos', desc: 'Origen, tres ciclos y puntos de cambio explicados con más detalle.' },
+    ],
+    relatedTitle: 'Herramientas relacionadas',
+    related: [
+      { href: '/sleep-type/test', label: 'Test de cronotipo', desc: 'Comprende tu ritmo de sueño y recuperación.' },
+      { href: '/burnout/test', label: 'Test de burnout', desc: 'Comprueba si la baja energía se vuelve persistente.' },
+      { href: '/breathing/timer', label: 'Temporizador de respiración', desc: 'Calma el cuerpo en días de ritmo bajo.' },
+    ],
+    disclaimer: 'Esta calculadora no reemplaza consejo médico, juicio de seguridad ni decisiones de tratamiento. Consulta a un profesional si los síntomas persisten.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({
+  ...item,
+  href: `/${locale}${item.href}`,
+}));
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
-  <main class="container mx-auto px-4 py-8 max-w-2xl">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
     <BiorhythmCalculator locale={locale} client:load />
+
+    <section class="mt-10 border-t border-indigo-100 pt-8">
+      <h2 class="text-2xl font-bold text-indigo-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-indigo-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-indigo-950">{c.cycleTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.cycles.map((item) => (
+          <article class="rounded-xl border border-indigo-100 bg-white p-4">
+            <h3 class="font-semibold text-indigo-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-indigo-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-indigo-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-indigo-50 p-4">
+            <h3 class="font-semibold text-indigo-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-indigo-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-indigo-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-indigo-100 rounded-xl border border-indigo-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-indigo-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-indigo-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-indigo-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-indigo-100 bg-white p-4 transition-colors hover:border-indigo-300 hover:bg-indigo-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-indigo-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-indigo-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-indigo-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-indigo-100 bg-white p-4 transition-colors hover:border-indigo-300 hover:bg-indigo-50" href={item.href}>
+            <span class="font-semibold text-indigo-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-indigo-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
   </main>
 </Layout>

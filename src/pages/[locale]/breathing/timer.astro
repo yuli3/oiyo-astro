@@ -38,10 +38,275 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  funFactTitle: string;
+  funFacts: string[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  relatedTitle: string;
+  related: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '호흡은 가장 빠른 자율신경 스위치입니다',
+    intro: '불안하거나 집중이 흐트러질 때 몸은 먼저 호흡을 바꿉니다. 얕고 빠른 호흡은 긴장 신호를 강화하고, 길고 느린 날숨은 몸에게 안전하다는 신호를 보냅니다. 이 타이머는 4-7-8, 박스 호흡, 복식 호흡을 눈으로 따라 하기 쉽게 만든 짧은 회복 도구입니다.',
+    funFactTitle: 'Fun facts',
+    funFacts: [
+      '날숨을 들숨보다 길게 하면 부교감신경 반응을 유도하는 데 도움이 됩니다.',
+      '박스 호흡은 들숨, 멈춤, 날숨, 멈춤을 같은 길이로 맞춰 주의 집중을 회복하는 데 좋습니다.',
+      '호흡 연습은 긴 시간을 요구하지 않습니다. 60초만 해도 몸의 각성 수준을 알아차리는 데 충분합니다.',
+    ],
+    useTitle: '언제 쓰면 좋을까요?',
+    useCases: [
+      { title: '잠들기 전', body: '4-7-8 패턴으로 날숨을 길게 가져가며 몸의 속도를 낮춥니다.' },
+      { title: '회의나 발표 전', body: '박스 호흡으로 숨, 시선, 생각을 한 칸씩 정리합니다.' },
+      { title: '감정이 올라올 때', body: '복식 호흡으로 어깨와 가슴의 긴장을 낮추고 반응 전에 여백을 만듭니다.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '4-7-8 호흡은 몇 번 반복해야 하나요?', answer: '처음에는 3~4사이클이면 충분합니다. 어지럽거나 답답하면 멈추고 자연스러운 호흡으로 돌아오세요.' },
+      { question: '박스 호흡과 4-7-8 호흡은 무엇이 다른가요?', answer: '박스 호흡은 집중과 균형에, 4-7-8 호흡은 이완과 수면 준비에 더 잘 맞습니다.' },
+      { question: '불안장애 치료를 대신할 수 있나요?', answer: '아니요. 호흡 타이머는 자기 조절을 돕는 보조 도구입니다. 증상이 반복되거나 일상 기능을 방해하면 전문가와 상담하세요.' },
+    ],
+    relatedTitle: '함께 쓰기 좋은 도구',
+    related: [
+      { href: '/anxiety/test', label: '불안 자가 진단', desc: '불안 수준을 먼저 확인해보세요.' },
+      { href: '/sleep-type/test', label: '수면 유형 테스트', desc: '나에게 맞는 수면 리듬을 찾습니다.' },
+      { href: '/burnout/test', label: '번아웃 테스트', desc: '긴장이 오래 지속될 때 회복 신호를 점검합니다.' },
+    ],
+    disclaimer: '이 페이지는 의학적 진단이나 치료를 제공하지 않습니다. 호흡 곤란, 흉통, 공황 증상이 심하면 즉시 전문적인 도움을 받으세요.',
+  },
+  en: {
+    introTitle: 'Breathing is the fastest nervous-system switch you can reach',
+    intro: 'When anxiety rises or focus breaks, your body often changes breathing first. Shallow, fast breathing can reinforce threat signals; slower breathing with a longer exhale can tell the body that it is safe. This timer makes 4-7-8, box breathing, and diaphragmatic breathing easy to follow visually.',
+    funFactTitle: 'Fun facts',
+    funFacts: [
+      'A longer exhale than inhale can help nudge the body toward parasympathetic recovery.',
+      'Box breathing uses equal inhale, hold, exhale, and hold phases to rebuild attention.',
+      'Breath practice does not need to be long. Even 60 seconds can help you notice your arousal level.',
+    ],
+    useTitle: 'When to use it',
+    useCases: [
+      { title: 'Before sleep', body: 'Use 4-7-8 breathing to lengthen the exhale and slow the body down.' },
+      { title: 'Before a meeting', body: 'Use box breathing to organize breath, gaze, and attention.' },
+      { title: 'During emotional spikes', body: 'Use diaphragmatic breathing to lower chest tension before reacting.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: 'How many rounds of 4-7-8 breathing should I do?', answer: 'Start with 3 or 4 cycles. If you feel dizzy or uncomfortable, stop and return to natural breathing.' },
+      { question: 'What is the difference between box breathing and 4-7-8?', answer: 'Box breathing is best for focus and balance. 4-7-8 is better suited to relaxation and sleep preparation.' },
+      { question: 'Can this replace anxiety treatment?', answer: 'No. This timer is a self-regulation aid. If symptoms repeat or disrupt daily life, consider professional support.' },
+    ],
+    relatedTitle: 'Related tools',
+    related: [
+      { href: '/anxiety/test', label: 'Anxiety Screening', desc: 'Check your current anxiety level.' },
+      { href: '/sleep-type/test', label: 'Sleep Chronotype Test', desc: 'Find the sleep rhythm that fits you.' },
+      { href: '/burnout/test', label: 'Burnout Test', desc: 'Review recovery signals when stress lasts too long.' },
+    ],
+    disclaimer: 'This page does not provide medical diagnosis or treatment. Seek professional help immediately for severe shortness of breath, chest pain, or intense panic symptoms.',
+  },
+  ja: {
+    introTitle: '呼吸はすぐ使える自律神経のスイッチです',
+    intro: '不安や緊張が高まると、体はまず呼吸を変えます。浅く速い呼吸は緊張を強め、長くゆっくりした吐く息は安全のサインになります。このタイマーは4-7-8呼吸、ボックス呼吸、腹式呼吸を視覚的に練習できる短い回復ツールです。',
+    funFactTitle: 'Fun facts',
+    funFacts: [
+      '吐く息を吸う息より長くすると、リラックス反応を助けやすくなります。',
+      'ボックス呼吸は吸う、止める、吐く、止めるを同じ長さにそろえます。',
+      '呼吸練習は長時間でなくてもよく、60秒でも体の緊張に気づく助けになります。',
+    ],
+    useTitle: 'おすすめの使い方',
+    useCases: [
+      { title: '眠る前', body: '4-7-8呼吸で吐く息を長くし、体のスピードを落とします。' },
+      { title: '会議や発表の前', body: 'ボックス呼吸で呼吸、視線、思考を整えます。' },
+      { title: '感情が高ぶった時', body: '腹式呼吸で胸と肩の緊張を下げ、反応する前の余白を作ります。' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '4-7-8呼吸は何回行えばよいですか？', answer: '最初は3〜4サイクルで十分です。めまいや苦しさがあれば中止し、自然な呼吸に戻してください。' },
+      { question: 'ボックス呼吸と4-7-8呼吸の違いは？', answer: 'ボックス呼吸は集中と安定に、4-7-8呼吸はリラックスと睡眠準備に向いています。' },
+      { question: '不安症の治療の代わりになりますか？', answer: 'いいえ。これは自己調整を助ける補助ツールです。症状が続く場合は専門家に相談してください。' },
+    ],
+    relatedTitle: '関連ツール',
+    related: [
+      { href: '/anxiety/test', label: '不安セルフチェック', desc: '現在の不安レベルを確認します。' },
+      { href: '/sleep-type/test', label: '睡眠タイプテスト', desc: '自分に合う睡眠リズムを探します。' },
+      { href: '/burnout/test', label: 'バーンアウトテスト', desc: '疲労が続く時の回復サインを確認します。' },
+    ],
+    disclaimer: 'このページは医学的な診断や治療ではありません。強い息苦しさ、胸痛、激しいパニック症状がある場合は専門的な助けを受けてください。',
+  },
+  zh: {
+    introTitle: '呼吸是最容易触达的自主神经开关',
+    intro: '焦虑或注意力涣散时，身体常常先改变呼吸。浅而快的呼吸会强化紧张信号，较长的呼气则能向身体传递安全感。本计时器用视觉节奏引导4-7-8呼吸、盒式呼吸和腹式呼吸。',
+    funFactTitle: 'Fun facts',
+    funFacts: [
+      '让呼气比吸气更长，有助于身体进入放松恢复状态。',
+      '盒式呼吸把吸气、屏息、呼气、屏息设置为相同时长，适合恢复专注。',
+      '呼吸练习不一定要很久，60秒也足以帮助你觉察身体唤醒水平。',
+    ],
+    useTitle: '适合什么时候使用？',
+    useCases: [
+      { title: '睡前', body: '用4-7-8呼吸延长呼气，让身体慢下来。' },
+      { title: '会议或演讲前', body: '用盒式呼吸整理呼吸、视线和注意力。' },
+      { title: '情绪升高时', body: '用腹式呼吸降低胸肩紧张，在反应前留出空间。' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '4-7-8呼吸要重复几轮？', answer: '初学者3到4轮即可。如果感到头晕或不适，请停止并回到自然呼吸。' },
+      { question: '盒式呼吸和4-7-8呼吸有什么不同？', answer: '盒式呼吸更适合专注和平衡，4-7-8呼吸更适合放松和睡前准备。' },
+      { question: '它能替代焦虑治疗吗？', answer: '不能。它只是自我调节辅助工具。如果症状反复或影响生活，请寻求专业支持。' },
+    ],
+    relatedTitle: '相关工具',
+    related: [
+      { href: '/anxiety/test', label: '焦虑自测', desc: '先了解当前焦虑水平。' },
+      { href: '/sleep-type/test', label: '睡眠类型测试', desc: '找到更适合自己的睡眠节律。' },
+      { href: '/burnout/test', label: '职业倦怠测试', desc: '压力长期持续时检查恢复信号。' },
+    ],
+    disclaimer: '本页面不提供医学诊断或治疗。若出现严重呼吸困难、胸痛或强烈惊恐症状，请立即寻求专业帮助。',
+  },
+  fr: {
+    introTitle: 'La respiration est le levier le plus rapide du système nerveux',
+    intro: "Quand l'anxiété monte ou que l'attention se disperse, le corps change souvent la respiration en premier. Une respiration courte et rapide renforce le signal de menace; une expiration plus lente et plus longue aide le corps à retrouver un sentiment de sécurité.",
+    funFactTitle: 'Fun facts',
+    funFacts: [
+      "Une expiration plus longue que l'inspiration peut soutenir la récupération parasympathique.",
+      "La respiration en boîte utilise des phases égales pour reconstruire l'attention.",
+      'Une pratique de 60 secondes suffit parfois à remarquer le niveau de tension du corps.',
+    ],
+    useTitle: "Quand l'utiliser",
+    useCases: [
+      { title: 'Avant de dormir', body: "Utilisez le 4-7-8 pour allonger l'expiration et ralentir le corps." },
+      { title: 'Avant une réunion', body: 'Utilisez la respiration en boîte pour stabiliser souffle, regard et attention.' },
+      { title: "Quand l'émotion monte", body: 'Utilisez la respiration abdominale pour relâcher la poitrine avant de répondre.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: 'Combien de cycles de 4-7-8 faut-il faire ?', answer: 'Commencez par 3 ou 4 cycles. Si vous avez la tête qui tourne, arrêtez et revenez à une respiration naturelle.' },
+      { question: 'Quelle différence entre respiration en boîte et 4-7-8 ?', answer: 'La respiration en boîte convient mieux à la concentration. Le 4-7-8 convient mieux à la détente et au sommeil.' },
+      { question: "Cela remplace-t-il un traitement de l'anxiété ?", answer: "Non. Cet outil aide l'autorégulation. Si les symptômes se répètent ou gênent la vie quotidienne, consultez un professionnel." },
+    ],
+    relatedTitle: 'Outils liés',
+    related: [
+      { href: '/anxiety/test', label: "Test d'anxiété", desc: "Évaluez votre niveau actuel d'anxiété." },
+      { href: '/sleep-type/test', label: 'Test de chronotype', desc: 'Trouvez votre rythme de sommeil.' },
+      { href: '/burnout/test', label: 'Test de burnout', desc: 'Vérifiez vos signaux de récupération.' },
+    ],
+    disclaimer: 'Cette page ne fournit pas de diagnostic ni de traitement médical. Consultez rapidement en cas de gêne respiratoire sévère, douleur thoracique ou symptômes de panique intense.',
+  },
+  es: {
+    introTitle: 'La respiración es el interruptor más rápido del sistema nervioso',
+    intro: 'Cuando sube la ansiedad o se rompe la concentración, el cuerpo suele cambiar primero la respiración. Respirar rápido y superficialmente refuerza la señal de amenaza; una exhalación más larga ayuda al cuerpo a sentirse seguro.',
+    funFactTitle: 'Fun facts',
+    funFacts: [
+      'Exhalar más tiempo que inhalar puede favorecer la recuperación parasimpática.',
+      'La respiración en caja iguala inhalar, sostener, exhalar y sostener para reconstruir la atención.',
+      'La práctica no tiene que ser larga. Incluso 60 segundos ayudan a notar el nivel de activación.',
+    ],
+    useTitle: 'Cuándo usarlo',
+    useCases: [
+      { title: 'Antes de dormir', body: 'Usa 4-7-8 para alargar la exhalación y bajar el ritmo del cuerpo.' },
+      { title: 'Antes de una reunión', body: 'Usa respiración en caja para ordenar respiración, mirada y atención.' },
+      { title: 'Cuando sube la emoción', body: 'Usa respiración diafragmática para relajar pecho y hombros antes de responder.' },
+    ],
+    faqTitle: 'FAQ',
+    faqs: [
+      { question: '¿Cuántas rondas de 4-7-8 debo hacer?', answer: 'Empieza con 3 o 4 ciclos. Si sientes mareo o incomodidad, detente y vuelve a respirar naturalmente.' },
+      { question: '¿En qué se diferencia de la respiración en caja?', answer: 'La respiración en caja ayuda más al enfoque. 4-7-8 se adapta mejor a la relajación y al sueño.' },
+      { question: '¿Puede reemplazar el tratamiento de ansiedad?', answer: 'No. Es una ayuda de autorregulación. Si los síntomas se repiten o afectan tu vida diaria, busca apoyo profesional.' },
+    ],
+    relatedTitle: 'Herramientas relacionadas',
+    related: [
+      { href: '/anxiety/test', label: 'Test de ansiedad', desc: 'Revisa tu nivel actual de ansiedad.' },
+      { href: '/sleep-type/test', label: 'Test de cronotipo', desc: 'Encuentra tu ritmo de sueño.' },
+      { href: '/burnout/test', label: 'Test de burnout', desc: 'Revisa señales de recuperación.' },
+    ],
+    disclaimer: 'Esta página no ofrece diagnóstico ni tratamiento médico. Busca ayuda profesional ante falta de aire severa, dolor en el pecho o síntomas intensos de pánico.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({
+  ...item,
+  href: `/${locale}${item.href}`,
+}));
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
-  <main class="container mx-auto px-4 py-8 max-w-2xl">
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
     <BreathingTimer locale={locale} client:load />
+
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl border border-green-100 bg-white p-4">
+            <h3 class="font-semibold text-green-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-green-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.funFactTitle}</h2>
+      <ul class="mt-4 space-y-3">
+        {c.funFacts.map((fact) => (
+          <li class="rounded-xl bg-green-50 px-4 py-3 text-sm leading-6 text-green-800">{fact}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-green-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-green-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href}>
+            <span class="font-semibold text-green-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
   </main>
 </Layout>

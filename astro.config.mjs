@@ -55,7 +55,16 @@ export default defineConfig({
         return { ...item, priority: isKo ? 0.75 : 0.6, changefreq: 'weekly' };
       },
     }),
-    robotsTxt(),
+    robotsTxt({
+      host: true,
+      policy: [
+        {
+          userAgent: '*',
+          allow: '/',
+          disallow: ['*/search?*', '/search', '/api/'],
+        },
+      ],
+    }),
   ],
   vite: {
     plugins: [tailwindcss()],
