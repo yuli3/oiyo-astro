@@ -1,0 +1,27 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import HabitFormationAssistant from '../../../components/tools/HabitFormationAssistant';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '30일 습관형성 도우미 — 작은 행동 체크인', description: '게으른 완벽주의와 무기력 회복을 위한 30일 체크리스트. 매일 작은 행동을 기록하고 습관을 이어가세요.' },
+  en: { title: '30-Day Habit Formation Helper', description: 'A 30-day checklist for lazy perfectionism and low-energy recovery. Track tiny daily actions.' },
+  ja: { title: '30日習慣形成ヘルパー', description: '怠けた完璧主義と無気力回復のための30日チェックリストです。' },
+  zh: { title: '30天习惯养成助手', description: '用于完美主义拖延和无力感恢复的30天行动清单。' },
+  fr: { title: 'Assistant d’Habitude 30 Jours', description: 'Une checklist de 30 jours pour transformer le perfectionnisme et le manque d’énergie.' },
+  es: { title: 'Ayudante de Hábitos de 30 Días', description: 'Una lista de 30 días para perfeccionismo, baja energía y acciones pequeñas.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-3xl px-4 py-10">
+    <HabitFormationAssistant client:load locale={locale} />
+  </main>
+</Layout>

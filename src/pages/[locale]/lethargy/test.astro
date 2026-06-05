@@ -1,0 +1,27 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import LethargyRecoveryTest from '../../../components/tests/LethargyRecoveryTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '무기력증 테스트 — 회복 포인트 찾기', description: '에너지 저하, 행동 시동, 의미 상실, 연결 필요 신호를 점검하고 나에게 맞는 작은 회복 계획을 받아보세요.' },
+  en: { title: 'Lethargy Test — Find Your Recovery Focus', description: 'Check low energy, activation, meaning, and support signals, then get a small recovery plan.' },
+  ja: { title: '無気力テスト — 回復ポイントを探す', description: 'エネルギー低下、行動開始、意味の喪失、支援の必要性を確認します。' },
+  zh: { title: '无力感测试 — 找到恢复重点', description: '检查能量、行动启动、意义感和支持需求信号。' },
+  fr: { title: 'Test de Léthargie — Trouver le Point de Récupération', description: 'Vérifiez énergie, activation, sens et besoin de soutien avec un petit plan de récupération.' },
+  es: { title: 'Test de Apatía — Encuentra tu Foco de Recuperación', description: 'Evalúa energía, activación, sentido y necesidad de apoyo con un pequeño plan.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <LethargyRecoveryTest client:load locale={locale} />
+  </main>
+</Layout>
