@@ -1,0 +1,70 @@
+---
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const target = `/${locale}/lazy-perfectionist/test/`;
+
+const meta: Record<Locale, { title: string; description: string; label: string }> = {
+  ko: {
+    title: '완벽주의 테스트 — 게으른 완벽주의 테스트로 이동',
+    description: '완벽주의형 미루기, 실패 회피, 기준 과잉을 점검하는 게으른 완벽주의 테스트로 이동합니다.',
+    label: '게으른 완벽주의 테스트로 이동',
+  },
+  en: {
+    title: 'Perfectionism Test — Continue to Lazy Perfectionist Test',
+    description: 'Continue to the lazy perfectionist test for perfectionist procrastination, fear of failure, and overplanning.',
+    label: 'Continue to the lazy perfectionist test',
+  },
+  ja: {
+    title: '完璧主義テスト — 怠けた完璧主義者テストへ',
+    description: '完璧主義的な先延ばし、失敗回避、計画過多を確認するテストへ移動します。',
+    label: '怠けた完璧主義者テストへ',
+  },
+  zh: {
+    title: '完美主义测试 — 前往懒惰完美主义者测试',
+    description: '前往检查完美主义拖延、失败回避和过度计划的测试。',
+    label: '前往懒惰完美主义者测试',
+  },
+  fr: {
+    title: 'Test de Perfectionnisme — Continuer vers le test dédié',
+    description: 'Continuez vers le test du perfectionnisme paresseux pour explorer procrastination, peur de l’échec et sur-planification.',
+    label: 'Continuer vers le test dédié',
+  },
+  es: {
+    title: 'Test de Perfeccionismo — Continuar al test dedicado',
+    description: 'Continúa al test de perfeccionismo perezoso para revisar procrastinación, miedo al fracaso y sobreplanificación.',
+    label: 'Continuar al test dedicado',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{m.title} | OIYO</title>
+    <meta name="description" content={m.description} />
+  <meta http-equiv="refresh" content={`0; url=${target}`} />
+  <link rel="canonical" href={`https://oiyo.net${target}`} />
+    <style>
+      body { margin: 0; font-family: system-ui, sans-serif; color: #052e16; background: #f7fee7; }
+      main { max-width: 42rem; margin: 0 auto; padding: 4rem 1rem; text-align: center; }
+      a { display: inline-flex; margin-top: 1.5rem; border-radius: .5rem; background: #15803d; color: white; padding: .75rem 1rem; font-weight: 700; text-decoration: none; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>{m.title}</h1>
+      <p>{m.description}</p>
+      <a href={target}>{m.label}</a>
+    </main>
+  </body>
+</html>
