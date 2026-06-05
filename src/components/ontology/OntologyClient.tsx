@@ -455,7 +455,10 @@ export function OntologyClient() {
                     </DrawerDescription>
                   </DrawerHeader>
                   <div className="p-8 sm:p-12 pb-24 max-h-[85vh] overflow-y-auto w-full max-w-xl mx-auto hide-scrollbar">
-                    <SajuInputForm variant="drawer" />
+                    <SajuInputForm
+                      onSaved={() => setShowInput(false)}
+                      variant="drawer"
+                    />
                   </div>
                 </DrawerContent>
               </Drawer>

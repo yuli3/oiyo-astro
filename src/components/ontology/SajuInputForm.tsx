@@ -9,10 +9,14 @@ import { useUserProfile } from "@/lib/user/context/UserContext";
 import { cn } from "@/lib/utils";
 
 interface SajuInputFormProps {
+  onSaved?: () => void;
   variant?: "default" | "drawer";
 }
 
-export function SajuInputForm({ variant = "default" }: SajuInputFormProps) {
+export function SajuInputForm({
+  onSaved,
+  variant = "default",
+}: SajuInputFormProps) {
   const t = useNamespacedFallback("ontology.dashboard", "dashboard");
   const { profile, setProfileData } = useUserProfile();
   const isDrawer = variant === "drawer";
@@ -40,6 +44,7 @@ export function SajuInputForm({ variant = "default" }: SajuInputFormProps) {
     });
 
     setIsSubmitting(false);
+    onSaved?.();
   };
 
   const containerClasses = isDrawer

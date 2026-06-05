@@ -37,7 +37,7 @@ export function useOntologySynthesis(
     useState<GenericFactionAnalysis | null>(null);
 
   useEffect(() => {
-    const mounted = true;
+    let mounted = true;
 
     async function synthesize() {
       try {
@@ -66,7 +66,7 @@ export function useOntologySynthesis(
           myFlowers.find((f) => f.elementMapping === userElement) ||
           myFlowers[0];
 
-        // 2. Synergy Filtering (Cross-Onotology)
+        // 2. Synergy Filtering (Cross-Ontology)
         // Find hobbies that match User's Element OR MBTI
         const synergyHobbies = hobbyShard.filter((h) => {
           const elementMatch = h.tags.elements.includes(userElement as any);
@@ -107,6 +107,10 @@ export function useOntologySynthesis(
     if (userMonth && userElement) {
       synthesize();
     }
+
+    return () => {
+      mounted = false;
+    };
   }, [userMonth, userElement, userMbti]);
 
   return {
