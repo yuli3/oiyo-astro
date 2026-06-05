@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import LethargyRecoveryTest from '../../../components/tests/LethargyRecoveryTest';
+import WisdomNotes from '../../../components/shared/WisdomNotes.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -23,5 +24,6 @@ const m = meta[locale] ?? meta.en;
 <Layout title={m.title} description={m.description} locale={locale}>
   <main class="mx-auto max-w-2xl px-4 py-10">
     <LethargyRecoveryTest client:load locale={locale} />
+    <WisdomNotes topic="lethargy" locale={locale} />
   </main>
 </Layout>

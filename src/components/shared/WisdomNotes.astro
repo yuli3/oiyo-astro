@@ -1,0 +1,36 @@
+---
+import { getWisdomNotes, type WisdomTopic } from '../../data/wisdom-notes';
+import type { Locale } from '../../i18n';
+
+interface Props {
+  topic: WisdomTopic;
+  locale: Locale;
+}
+
+const { topic, locale } = Astro.props;
+const notes = getWisdomNotes(topic, locale);
+
+const title: Record<Locale, string> = {
+  ko: '오늘의 지혜와 궁금증',
+  en: 'Wisdom & Curious Notes',
+  ja: '今日の知恵と小さな発見',
+  zh: '今日智慧与好奇笔记',
+  fr: 'Sagesse et notes curieuses',
+  es: 'Sabiduría y notas curiosas',
+};
+---
+
+{notes.length > 0 && (
+  <section class="mt-8 rounded-2xl border border-green-100 bg-white p-5 shadow-sm">
+    <h2 class="text-sm font-black uppercase tracking-widest text-green-700">{title[locale] ?? title.en}</h2>
+    <div class="mt-4 grid gap-3">
+      {notes.map((note) => (
+        <article class="rounded-xl border border-green-100 bg-green-50/60 p-4">
+          <p class="text-xs font-bold text-green-700">{note.label}</p>
+          <p class="mt-2 text-sm leading-6 text-green-950">{note.text}</p>
+          {note.source && <p class="mt-2 text-xs text-green-700/80">{note.source}</p>}
+        </article>
+      ))}
+    </div>
+  </section>
+)}
