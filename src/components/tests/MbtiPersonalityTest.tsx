@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -204,6 +205,13 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           ))}
         </div>
         <p className="mt-6 rounded-xl bg-blue-50 p-4 text-sm leading-6 text-blue-950">{labels.note}</p>
+        <ShareResultButton
+          locale={l}
+          heading={labels.title}
+          resultTitle={title}
+          emoji={profile.emoji}
+          description={profile.desc[l]}
+        />
         <button
           type="button"
           onClick={() => { setAnswers({}); setShowResult(false) }}

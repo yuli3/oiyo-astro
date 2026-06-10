@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import ShareResultButton from '../shared/ShareResultButton';
 
 type SupportedLang = 'ko' | 'en' | 'ja';
 
@@ -221,6 +222,14 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
         </div>
 
         <p class="text-xs text-slate-400 text-center px-2">{ui.note}</p>
+
+        <ShareResultButton
+          locale={locale}
+          heading={ui.title}
+          resultTitle={`${level.label} · ${overall}/100`}
+          emoji="🧭"
+          description={level.desc}
+        />
 
         <button
           onClick={restart}

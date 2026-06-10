@@ -1,0 +1,56 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
+import TarotReading from '../../../components/tools/TarotReading';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '타로 카드 리딩 — 원카드·3카드·5카드 무료 타로점',
+    description:
+      '메이저 아르카나 22장으로 보는 무료 타로 리딩. 오늘의 메시지(1장), 과거-현재-미래(3장), 켈틱 스프레드(5장)에서 정·역방향 해석을 확인하세요.',
+  },
+  en: {
+    title: 'Tarot Card Reading — Free 1, 3 & 5-Card Spreads',
+    description:
+      'Free tarot reading with the 22 Major Arcana. Draw a single card, a past-present-future spread, or a five-card spread with upright and reversed meanings.',
+  },
+  ja: {
+    title: 'タロットカードリーディング — 1枚・3枚・5枚スプレッド無料占い',
+    description:
+      '大アルカナ22枚で占う無料タロットリーディング。今日のメッセージ(1枚)、過去・現在・未来(3枚)、5枚スプレッドで正位置・逆位置の解釈を確認できます。',
+  },
+  zh: {
+    title: '塔罗牌占卜 — 单张·三张·五张免费牌阵',
+    description: '用22张大阿卡纳进行免费塔罗占卜。抽取单张、过去-现在-未来三张或五张牌阵，查看正位与逆位解读。',
+  },
+  fr: {
+    title: 'Tirage de Tarot — Tirages gratuits à 1, 3 et 5 cartes',
+    description:
+      'Tirage de tarot gratuit avec les 22 arcanes majeurs. Une carte, passé-présent-futur ou tirage à cinq cartes, avec interprétations à l’endroit et renversées.',
+  },
+  es: {
+    title: 'Lectura de Tarot — Tiradas gratis de 1, 3 y 5 cartas',
+    description:
+      'Lectura de tarot gratuita con los 22 arcanos mayores. Saca una carta, una tirada pasado-presente-futuro o de cinco cartas, con significados al derecho y al revés.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-8">
+    <TarotReading client:load locale={locale} />
+    <MysticTrinity topic="tarot" locale={locale} />
+    <MentalBoost locale={locale} />
+  </main>
+</Layout>

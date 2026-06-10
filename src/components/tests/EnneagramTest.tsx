@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 import AnimatedNumber from '../ui/AnimatedNumber'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -695,6 +696,14 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+
+      <ShareResultButton
+        locale={lp}
+        heading={lb.title}
+        resultTitle={`${lb.typeLabel} ${dominant} — ${result.name}`}
+        emoji={result.emoji}
+        description={result.tagline}
+      />
 
       <div className="flex gap-3">
         <button

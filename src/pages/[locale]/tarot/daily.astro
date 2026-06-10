@@ -1,0 +1,55 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
+import TarotDailyCard from '../../../components/tools/TarotDailyCard';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '오늘의 타로 카드 — 하루 한 장 무료 타로 운세',
+    description:
+      '하루 한 장, 오늘의 타로 카드를 뽑아보세요. 메이저·마이너 아르카나에서 정·역방향 메시지와 키워드로 오늘의 방향을 안내합니다.',
+  },
+  en: {
+    title: 'Tarot Card of the Day — Free Daily Tarot Reading',
+    description:
+      'Draw one tarot card each day. Upright and reversed messages with keywords from the Major and Minor Arcana to guide your day.',
+  },
+  ja: {
+    title: '今日のタロットカード — 1日1枚の無料タロット占い',
+    description: '1日1枚、今日のタロットカードを引いてみましょう。正位置・逆位置のメッセージとキーワードで今日の方向を案内します。',
+  },
+  zh: {
+    title: '今日塔罗牌 — 每天一张免费塔罗运势',
+    description: '每天抽一张塔罗牌。通过大小阿卡纳的正逆位讯息与关键词，指引你今天的方向。',
+  },
+  fr: {
+    title: 'Carte de Tarot du Jour — Tirage quotidien gratuit',
+    description:
+      'Tirez une carte de tarot chaque jour. Messages à l’endroit et renversés avec mots-clés des arcanes majeurs et mineurs pour guider votre journée.',
+  },
+  es: {
+    title: 'Carta de Tarot del Día — Lectura diaria gratis',
+    description:
+      'Saca una carta de tarot cada día. Mensajes al derecho y al revés con palabras clave de los arcanos mayores y menores para guiar tu día.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-8">
+    <TarotDailyCard client:load locale={locale} />
+    <MysticTrinity topic="tarot" locale={locale} />
+    <MentalBoost locale={locale} />
+  </main>
+</Layout>
