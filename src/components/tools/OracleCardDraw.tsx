@@ -653,11 +653,11 @@ function IridescentCard({ card, role, index, flipped, onFlip, locale }: CardProp
           fontFamily: 'ui-monospace, monospace',
           fontSize: '10px',
           letterSpacing: '0.3em',
-          color: 'rgba(239,233,218,0.45)',
+          color: 'rgba(35,36,31,0.45)',
           textTransform: 'uppercase',
         }}
       >
-        <span style={{ border: '1px solid rgba(239,233,218,0.2)', borderRadius: '50%', width: 18, height: 18, display: 'inline-grid', placeItems: 'center', marginRight: 8, fontFamily: 'ui-monospace', fontSize: 9 }}>{index + 1}</span>
+        <span style={{ border: '1px solid rgba(35,36,31,0.2)', borderRadius: '50%', width: 18, height: 18, display: 'inline-grid', placeItems: 'center', marginRight: 8, fontFamily: 'ui-monospace', fontSize: 9 }}>{index + 1}</span>
         {role}
       </div>
 
@@ -683,24 +683,24 @@ function IridescentCard({ card, role, index, flipped, onFlip, locale }: CardProp
           <div style={{
             position: 'absolute', inset: 0, backfaceVisibility: 'hidden',
             borderRadius: 8, overflow: 'hidden',
-            background: 'linear-gradient(180deg, #0e0a1c 0%, #0a0716 60%, #07040e 100%)',
-            border: '1px solid rgba(232,236,255,0.14)',
-            boxShadow: '0 24px 48px -12px rgba(0,0,0,0.9), 0 8px 16px -4px rgba(0,0,0,0.7)',
+            background: 'linear-gradient(180deg, #0e2415 0%, #0a1a0e 60%, #06120a 100%)',
+            border: '1px solid rgba(214,240,220,0.14)',
+            boxShadow: '0 24px 48px -12px rgba(15,35,20,0.40), 0 8px 16px -4px rgba(15,35,20,0.25)',
           }}>
-            <div style={{ position: 'absolute', inset: 14, border: '1px solid rgba(232,236,255,0.22)', borderRadius: 3, display: 'grid', placeItems: 'center' }}>
-              <div style={{ position: 'absolute', inset: 24, border: '1px solid rgba(232,236,255,0.14)', borderRadius: 2 }} />
-              <div style={{ position: 'relative', width: '58%', aspectRatio: '1', border: '1px solid rgba(232,236,255,0.28)', borderRadius: '50%', display: 'grid', placeItems: 'center' }}>
-                <div style={{ position: 'absolute', inset: '14%', border: '1px solid rgba(232,236,255,0.18)', borderRadius: '50%' }} />
-                <div style={{ position: 'absolute', inset: '32%', border: '1px solid rgba(232,236,255,0.32)', borderRadius: '50%' }} />
-                <span style={{ fontFamily: 'serif', fontSize: 28, color: 'rgba(232,236,255,0.65)', position: 'absolute' }}>✦</span>
+            <div style={{ position: 'absolute', inset: 14, border: '1px solid rgba(214,240,220,0.22)', borderRadius: 3, display: 'grid', placeItems: 'center' }}>
+              <div style={{ position: 'absolute', inset: 24, border: '1px solid rgba(214,240,220,0.14)', borderRadius: 2 }} />
+              <div style={{ position: 'relative', width: '58%', aspectRatio: '1', border: '1px solid rgba(214,240,220,0.28)', borderRadius: '50%', display: 'grid', placeItems: 'center' }}>
+                <div style={{ position: 'absolute', inset: '14%', border: '1px solid rgba(214,240,220,0.18)', borderRadius: '50%' }} />
+                <div style={{ position: 'absolute', inset: '32%', border: '1px solid rgba(214,240,220,0.32)', borderRadius: '50%' }} />
+                <span style={{ fontFamily: 'serif', fontSize: 28, color: 'rgba(214,240,220,0.65)', position: 'absolute' }}>✦</span>
               </div>
-              <span style={{ position: 'absolute', top: 10, left: 0, right: 0, textAlign: 'center', fontFamily: 'ui-monospace', fontSize: 8, letterSpacing: '0.3em', color: 'rgba(232,236,255,0.4)', textTransform: 'uppercase' }}>· ORACLE ·</span>
-              <span style={{ position: 'absolute', bottom: 10, left: 0, right: 0, textAlign: 'center', fontFamily: 'ui-monospace', fontSize: 8, letterSpacing: '0.3em', color: 'rgba(232,236,255,0.4)', textTransform: 'uppercase' }}>· GRACIÁN ·</span>
+              <span style={{ position: 'absolute', top: 10, left: 0, right: 0, textAlign: 'center', fontFamily: 'ui-monospace', fontSize: 8, letterSpacing: '0.3em', color: 'rgba(214,240,220,0.4)', textTransform: 'uppercase' }}>· ORACLE ·</span>
+              <span style={{ position: 'absolute', bottom: 10, left: 0, right: 0, textAlign: 'center', fontFamily: 'ui-monospace', fontSize: 8, letterSpacing: '0.3em', color: 'rgba(214,240,220,0.4)', textTransform: 'uppercase' }}>· GRACIÁN ·</span>
             </div>
 
             {/* Iridescence on back */}
             <div ref={glowRef} style={{ ...glowBase, mixBlendMode: 'screen', opacity: 0.5,
-              background: 'conic-gradient(from var(--iri-angle, 220deg) at var(--mx, 50%) var(--my, 50%), #b8e8ff, #f4d4ff, #ffe4d0, #d0fff4, #e0d4ff, #b8e8ff)',
+              background: 'conic-gradient(from var(--iri-angle, 220deg) at var(--mx, 50%) var(--my, 50%), #b8f0c8, #e2f6c6, #eafad2, #d0fff4, #cdeed2, #b8f0c8)',
               filter: 'blur(14px) saturate(1.2)',
               // @ts-ignore
               '--mx': '50%', '--my': '50%', '--iri-angle': '220deg',
@@ -729,30 +729,30 @@ function IridescentCard({ card, role, index, flipped, onFlip, locale }: CardProp
               position: 'absolute', inset: 0, backfaceVisibility: 'hidden',
               transform: 'rotateY(180deg)',
               borderRadius: 8, overflow: 'hidden',
-              background: 'linear-gradient(180deg, #100a22 0%, #0a0716 60%, #08050f 100%)',
-              border: '1px solid rgba(232,236,255,0.22)',
-              boxShadow: '0 24px 48px -12px rgba(0,0,0,0.9)',
+              background: 'linear-gradient(180deg, #102617 0%, #0a1a0e 60%, #071408 100%)',
+              border: '1px solid rgba(214,240,220,0.22)',
+              boxShadow: '0 24px 48px -12px rgba(15,35,20,0.40)',
             }}>
-              <div style={{ position: 'absolute', inset: 14, border: '1px solid rgba(232,236,255,0.22)', borderRadius: 3, display: 'flex', flexDirection: 'column' }}>
+              <div style={{ position: 'absolute', inset: 14, border: '1px solid rgba(214,240,220,0.22)', borderRadius: 3, display: 'flex', flexDirection: 'column' }}>
                 {/* Header */}
-                <div style={{ padding: '8px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(232,236,255,0.14)' }}>
-                  <span style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.2em', color: 'rgba(232,236,255,0.45)' }}>
+                <div style={{ padding: '8px 12px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(214,240,220,0.14)' }}>
+                  <span style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.2em', color: 'rgba(214,240,220,0.45)' }}>
                     {String(card.id).padStart(2, '0')}
                   </span>
-                  <span style={{ fontFamily: 'serif', fontSize: 11, letterSpacing: '0.3em', color: 'rgba(232,236,255,0.7)', textTransform: 'uppercase' }}>
+                  <span style={{ fontFamily: 'serif', fontSize: 11, letterSpacing: '0.3em', color: 'rgba(214,240,220,0.7)', textTransform: 'uppercase' }}>
                     {card.title[locale]}
                   </span>
-                  <span style={{ fontFamily: 'ui-monospace', fontSize: 9, color: 'rgba(232,236,255,0.45)' }}>·</span>
+                  <span style={{ fontFamily: 'ui-monospace', fontSize: 9, color: 'rgba(214,240,220,0.45)' }}>·</span>
                 </div>
 
                 {/* Glyph center */}
                 <div style={{ flex: 1, display: 'grid', placeItems: 'center' }}>
-                  <span style={{ fontSize: 44, color: 'rgba(232,236,255,0.65)', fontFamily: 'serif', lineHeight: 1 }}>{card.glyph}</span>
+                  <span style={{ fontSize: 44, color: 'rgba(214,240,220,0.65)', fontFamily: 'serif', lineHeight: 1 }}>{card.glyph}</span>
                 </div>
 
                 {/* Footer */}
-                <div style={{ padding: '8px 12px', borderTop: '1px solid rgba(232,236,255,0.14)', textAlign: 'center' }}>
-                  <span style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.4em', color: 'rgba(232,236,255,0.45)', textTransform: 'uppercase' }}>
+                <div style={{ padding: '8px 12px', borderTop: '1px solid rgba(214,240,220,0.14)', textAlign: 'center' }}>
+                  <span style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.4em', color: 'rgba(214,240,220,0.45)', textTransform: 'uppercase' }}>
                     {role}
                   </span>
                 </div>
@@ -760,7 +760,7 @@ function IridescentCard({ card, role, index, flipped, onFlip, locale }: CardProp
 
               {/* Iridescence on front */}
               <div style={{ ...glowBase, mixBlendMode: 'screen', opacity: 0.45,
-                background: 'conic-gradient(from 200deg at 50% 50%, #b8e8ff, #f4d4ff, #ffe4d0, #d0fff4, #e0d4ff, #b8e8ff)',
+                background: 'conic-gradient(from 200deg at 50% 50%, #b8f0c8, #e2f6c6, #eafad2, #d0fff4, #cdeed2, #b8f0c8)',
                 filter: 'blur(12px) saturate(1.2)',
               }} />
               <div style={{ ...glowBase, mixBlendMode: 'overlay', opacity: 0.25,
@@ -779,7 +779,7 @@ function IridescentCard({ card, role, index, flipped, onFlip, locale }: CardProp
 
       <div style={{
         fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.3em',
-        color: flipped ? 'rgba(239,233,218,0.3)' : 'rgba(239,233,218,0.5)',
+        color: flipped ? 'rgba(35,36,31,0.3)' : 'rgba(35,36,31,0.5)',
         textTransform: 'uppercase',
       }}>
         {flipped ? `— ${ui.revealed} —` : ui.tapToReveal}
@@ -825,11 +825,11 @@ export default function OracleCardDraw({ locale }: Props) {
     <div style={{
       minHeight: '80vh',
       background: `
-        radial-gradient(1200px 800px at 75% -10%, rgba(86,52,140,0.20), transparent 60%),
-        radial-gradient(900px 700px at 10% 110%, rgba(28,80,110,0.20), transparent 60%),
-        linear-gradient(180deg, #07050d 0%, #05030a 100%)
+        radial-gradient(1200px 800px at 75% -10%, rgba(101,163,13,0.10), transparent 60%),
+        radial-gradient(900px 700px at 10% 110%, rgba(16,121,89,0.08), transparent 60%),
+        linear-gradient(180deg, #fbfbf6 0%, #f1f3e8 100%)
       `,
-      color: '#efe9da',
+      color: '#23241f',
       padding: '40px 24px 60px',
       borderRadius: 12,
       position: 'relative',
@@ -839,30 +839,30 @@ export default function OracleCardDraw({ locale }: Props) {
       <div style={{
         position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 0, opacity: 0.6,
         backgroundImage: [
-          'radial-gradient(1px 1px at 12% 18%, rgba(255,255,255,.6), transparent 60%)',
-          'radial-gradient(1px 1px at 28% 72%, rgba(255,255,255,.4), transparent 60%)',
-          'radial-gradient(1px 1px at 42% 28%, rgba(255,255,255,.5), transparent 60%)',
-          'radial-gradient(1px 1px at 65% 14%, rgba(255,255,255,.7), transparent 60%)',
-          'radial-gradient(1px 1px at 78% 56%, rgba(255,255,255,.4), transparent 60%)',
-          'radial-gradient(1px 1px at 88% 80%, rgba(255,255,255,.5), transparent 60%)',
-          'radial-gradient(1px 1px at 6% 50%, rgba(255,255,255,.4), transparent 60%)',
-          'radial-gradient(1px 1px at 50% 8%, rgba(255,255,255,.5), transparent 60%)',
+          'radial-gradient(1px 1px at 12% 18%, rgba(77,124,15,.30), transparent 60%)',
+          'radial-gradient(1px 1px at 28% 72%, rgba(77,124,15,.20), transparent 60%)',
+          'radial-gradient(1px 1px at 42% 28%, rgba(77,124,15,.25), transparent 60%)',
+          'radial-gradient(1px 1px at 65% 14%, rgba(77,124,15,.35), transparent 60%)',
+          'radial-gradient(1px 1px at 78% 56%, rgba(77,124,15,.20), transparent 60%)',
+          'radial-gradient(1px 1px at 88% 80%, rgba(77,124,15,.25), transparent 60%)',
+          'radial-gradient(1px 1px at 6% 50%, rgba(77,124,15,.20), transparent 60%)',
+          'radial-gradient(1px 1px at 50% 8%, rgba(77,124,15,.25), transparent 60%)',
         ].join(', '),
       }} />
 
       <div style={{ position: 'relative', zIndex: 1, maxWidth: 960, margin: '0 auto' }}>
         {/* Header */}
-        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 28, paddingBottom: 20, borderBottom: '1px solid rgba(239,233,218,0.12)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 28, paddingBottom: 20, borderBottom: '1px solid rgba(35,36,31,0.12)' }}>
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginBottom: 4 }}>
-              <div style={{ width: 28, height: 28, borderRadius: '50%', border: '1px solid rgba(239,233,218,0.28)', display: 'grid', placeItems: 'center' }}>
+              <div style={{ width: 28, height: 28, borderRadius: '50%', border: '1px solid rgba(35,36,31,0.28)', display: 'grid', placeItems: 'center' }}>
                 <span style={{ fontSize: 14 }}>✦</span>
               </div>
-              <h2 style={{ margin: 0, fontFamily: 'serif', fontSize: 18, fontWeight: 600, letterSpacing: '0.06em', color: '#efe9da' }}>
+              <h2 style={{ margin: 0, fontFamily: 'serif', fontSize: 18, fontWeight: 600, letterSpacing: '0.06em', color: '#23241f' }}>
                 {ui.title}
               </h2>
             </div>
-            <p style={{ margin: 0, fontFamily: 'ui-monospace', fontSize: 10, letterSpacing: '0.14em', color: 'rgba(239,233,218,0.45)', textTransform: 'uppercase' }}>
+            <p style={{ margin: 0, fontFamily: 'ui-monospace', fontSize: 10, letterSpacing: '0.14em', color: 'rgba(35,36,31,0.45)', textTransform: 'uppercase' }}>
               {ui.subtitle}
             </p>
           </div>
@@ -871,24 +871,24 @@ export default function OracleCardDraw({ locale }: Props) {
         {/* Spread selector + Actions */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 16, marginBottom: 40 }}>
           <div>
-            <div style={{ fontFamily: 'ui-monospace', fontSize: 10, letterSpacing: '0.18em', color: 'rgba(239,233,218,0.45)', textTransform: 'uppercase', marginBottom: 8 }}>
+            <div style={{ fontFamily: 'ui-monospace', fontSize: 10, letterSpacing: '0.18em', color: 'rgba(35,36,31,0.45)', textTransform: 'uppercase', marginBottom: 8 }}>
               {ui.chooseSpread}
             </div>
-            <div style={{ display: 'flex', gap: 6, border: '1px solid rgba(239,233,218,0.12)', padding: 4, borderRadius: 2, background: 'rgba(255,255,255,0.02)' }}>
+            <div style={{ display: 'flex', gap: 6, border: '1px solid rgba(35,36,31,0.12)', padding: 4, borderRadius: 2, background: 'rgba(77,124,15,0.04)' }}>
               {(Object.keys(SPREADS) as SpreadKey[]).map(key => (
                 <button
                   key={key}
                   onClick={() => { setSpread(key); setDrawn([]) }}
                   style={{
-                    background: spread === key ? 'rgba(239,233,218,0.07)' : 'transparent',
+                    background: spread === key ? 'rgba(77,124,15,0.10)' : 'transparent',
                     border: 'none', cursor: 'pointer',
-                    color: spread === key ? '#efe9da' : 'rgba(239,233,218,0.45)',
+                    color: spread === key ? '#23241f' : 'rgba(35,36,31,0.45)',
                     fontFamily: 'ui-monospace', fontSize: 11, letterSpacing: '0.06em',
                     padding: '8px 14px', borderRadius: 1, transition: 'all 0.25s',
                     textAlign: 'left',
                   }}
                 >
-                  <div style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.18em', color: spread === key ? '#c9a55c' : 'rgba(239,233,218,0.3)', textTransform: 'uppercase', marginBottom: 2 }}>
+                  <div style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.18em', color: spread === key ? '#4d7c0f' : 'rgba(35,36,31,0.3)', textTransform: 'uppercase', marginBottom: 2 }}>
                     {SPREADS[key].roles[l].length === 1 ? 'I' : key === 'past-present-future' ? 'II' : 'III'}
                   </div>
                   {SPREADS[key].label[l]}
@@ -902,8 +902,8 @@ export default function OracleCardDraw({ locale }: Props) {
               <button
                 onClick={reset}
                 style={{
-                  background: 'transparent', border: '1px solid rgba(239,233,218,0.28)',
-                  color: '#efe9da', fontFamily: 'ui-monospace', fontSize: 10,
+                  background: 'transparent', border: '1px solid rgba(35,36,31,0.28)',
+                  color: '#23241f', fontFamily: 'ui-monospace', fontSize: 10,
                   letterSpacing: '0.2em', textTransform: 'uppercase',
                   padding: '10px 16px', cursor: 'pointer', borderRadius: 2,
                 }}
@@ -914,8 +914,8 @@ export default function OracleCardDraw({ locale }: Props) {
             <button
               onClick={drawCards}
               style={{
-                background: 'linear-gradient(180deg, #1b1530, #0c0918)',
-                border: '1px solid #c9a55c', color: '#c9a55c',
+                background: 'linear-gradient(180deg, #1b3320, #0c1f12)',
+                border: '1px solid #4d7c0f', color: '#4d7c0f',
                 fontFamily: 'ui-monospace', fontSize: 10,
                 letterSpacing: '0.2em', textTransform: 'uppercase',
                 padding: '10px 20px', cursor: 'pointer', borderRadius: 2,
@@ -944,7 +944,7 @@ export default function OracleCardDraw({ locale }: Props) {
                 />
               ))
             ) : (
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, height: 380, color: 'rgba(239,233,218,0.35)', textAlign: 'center' }}>
+              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 16, height: 380, color: 'rgba(35,36,31,0.35)', textAlign: 'center' }}>
                 <span style={{ fontSize: 40, opacity: 0.4 }}>✦</span>
                 <p style={{ margin: 0, fontFamily: 'serif', fontStyle: 'italic', fontSize: 16, lineHeight: 1.6, maxWidth: 280 }}>
                   {l === 'ko' ? '배열을 선택하고 카드를 뽑아보세요.' :
@@ -961,57 +961,57 @@ export default function OracleCardDraw({ locale }: Props) {
           {/* Reading panel */}
           {anyDrawn && (
             <div style={{
-              border: '1px solid rgba(239,233,218,0.12)',
-              background: 'linear-gradient(180deg, rgba(20,16,36,0.55), rgba(8,6,16,0.55))',
+              border: '1px solid rgba(35,36,31,0.12)',
+              background: 'linear-gradient(180deg, rgba(255,255,255,0.65), rgba(243,244,236,0.65))',
               backdropFilter: 'blur(8px)',
               borderRadius: 3, padding: '22px 24px 24px',
               position: 'relative',
             }}>
               {/* Gold line top */}
-              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 1, background: 'linear-gradient(90deg, transparent, #c9a55c, transparent)', opacity: 0.45 }} />
+              <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: 1, background: 'linear-gradient(90deg, transparent, #4d7c0f, transparent)', opacity: 0.45 }} />
 
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(239,233,218,0.12)', paddingBottom: 12, marginBottom: 16 }}>
-                <h3 style={{ margin: 0, fontFamily: 'serif', fontSize: 12, fontWeight: 500, letterSpacing: '0.32em', textTransform: 'uppercase', color: '#efe9da' }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid rgba(35,36,31,0.12)', paddingBottom: 12, marginBottom: 16 }}>
+                <h3 style={{ margin: 0, fontFamily: 'serif', fontSize: 12, fontWeight: 500, letterSpacing: '0.32em', textTransform: 'uppercase', color: '#23241f' }}>
                   {l === 'ko' ? '해석' : l === 'ja' ? '解釈' : l === 'cn' ? '解读' : l === 'fr' ? 'Interprétation' : l === 'es' ? 'Interpretación' : 'Reading'}
                 </h3>
-                <div style={{ fontFamily: 'ui-monospace', fontSize: 10, letterSpacing: '0.2em', color: 'rgba(239,233,218,0.45)', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: 7 }}>
-                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#c9a55c', boxShadow: '0 0 8px #c9a55c', display: 'inline-block' }} />
+                <div style={{ fontFamily: 'ui-monospace', fontSize: 10, letterSpacing: '0.2em', color: 'rgba(35,36,31,0.45)', textTransform: 'uppercase', display: 'flex', alignItems: 'center', gap: 7 }}>
+                  <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#4d7c0f', boxShadow: '0 0 8px #4d7c0f', display: 'inline-block' }} />
                   {drawn.filter(d => d.flipped).length}/{drawn.length}
                 </div>
               </div>
 
               <div style={{ display: 'flex', flexDirection: 'column', gap: 18 }}>
                 {drawn.map((d, i) => (
-                  <div key={i} style={{ paddingBottom: 18, borderBottom: i < drawn.length - 1 ? '1px dashed rgba(239,233,218,0.1)' : 'none' }}>
-                    <div style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.28em', color: '#c9a55c', textTransform: 'uppercase', marginBottom: 5 }}>
+                  <div key={i} style={{ paddingBottom: 18, borderBottom: i < drawn.length - 1 ? '1px dashed rgba(35,36,31,0.1)' : 'none' }}>
+                    <div style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.28em', color: '#4d7c0f', textTransform: 'uppercase', marginBottom: 5 }}>
                       {String(i + 1).padStart(2, '0')} · {d.role}
                     </div>
 
                     {d.flipped && d.card ? (
                       <>
-                        <h4 style={{ margin: '0 0 10px', fontFamily: 'serif', fontSize: 18, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#efe9da', display: 'flex', alignItems: 'baseline', gap: 10 }}>
+                        <h4 style={{ margin: '0 0 10px', fontFamily: 'serif', fontSize: 18, fontWeight: 500, letterSpacing: '0.1em', textTransform: 'uppercase', color: '#23241f', display: 'flex', alignItems: 'baseline', gap: 10 }}>
                           {d.card.glyph} {d.card.title[l]}
                         </h4>
                         <div style={{ marginBottom: 8 }}>
-                          <div style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.25em', color: 'rgba(239,233,218,0.45)', textTransform: 'uppercase', marginBottom: 4 }}>
+                          <div style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.25em', color: 'rgba(35,36,31,0.45)', textTransform: 'uppercase', marginBottom: 4 }}>
                             {ui.meaning}
                           </div>
-                          <p style={{ margin: 0, fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: 14, lineHeight: 1.6, color: '#efe9da' }}>
+                          <p style={{ margin: 0, fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: 14, lineHeight: 1.6, color: '#23241f' }}>
                             {d.card.wisdom[l]}
                           </p>
                         </div>
                         <div>
-                          <div style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.25em', color: 'rgba(239,233,218,0.45)', textTransform: 'uppercase', marginBottom: 4 }}>
+                          <div style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.25em', color: 'rgba(35,36,31,0.45)', textTransform: 'uppercase', marginBottom: 4 }}>
                             {ui.reflect}
                           </div>
-                          <p style={{ margin: 0, fontFamily: 'Georgia, serif', fontSize: 13, lineHeight: 1.55, color: 'rgba(239,233,218,0.8)' }}>
+                          <p style={{ margin: 0, fontFamily: 'Georgia, serif', fontSize: 13, lineHeight: 1.55, color: 'rgba(35,36,31,0.8)' }}>
                             {d.card.reflection[l]}
                           </p>
                         </div>
                       </>
                     ) : (
                       <>
-                        <p style={{ margin: 0, fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: 13, color: 'rgba(239,233,218,0.4)' }}>
+                        <p style={{ margin: 0, fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: 13, color: 'rgba(35,36,31,0.4)' }}>
                           {ui.awaiting}…
                         </p>
                       </>
@@ -1021,11 +1021,11 @@ export default function OracleCardDraw({ locale }: Props) {
 
                 {/* Synthesis */}
                 {allFlipped && drawn.length > 1 && (
-                  <div style={{ marginTop: 4, padding: '14px 16px', border: '1px solid rgba(201,165,92,0.28)', borderRadius: 2, background: 'linear-gradient(180deg, rgba(201,165,92,0.06), rgba(201,165,92,0.02))' }}>
-                    <div style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.28em', color: '#c9a55c', textTransform: 'uppercase', marginBottom: 8 }}>
+                  <div style={{ marginTop: 4, padding: '14px 16px', border: '1px solid rgba(77,124,15,0.28)', borderRadius: 2, background: 'linear-gradient(180deg, rgba(77,124,15,0.06), rgba(77,124,15,0.02))' }}>
+                    <div style={{ fontFamily: 'ui-monospace', fontSize: 9, letterSpacing: '0.28em', color: '#4d7c0f', textTransform: 'uppercase', marginBottom: 8 }}>
                       {ui.synthesis}
                     </div>
-                    <p style={{ margin: 0, fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: 14, lineHeight: 1.6, color: '#f0e6c8' }}>
+                    <p style={{ margin: 0, fontFamily: 'Georgia, serif', fontStyle: 'italic', fontSize: 14, lineHeight: 1.6, color: '#1f2b14' }}>
                       {ui.synthText(drawn.map(d => d.role), drawn.map(d => d.card.title[l]))}
                     </p>
                   </div>

@@ -127,9 +127,11 @@ def submit_bing_webmaster(site_url: str, sitemap_url: str, api_key: Optional[str
     if dry_run:
         return {"status": "dry-run", "would_submit": sitemap_url, "to": "Bing Webmaster"}
 
-    endpoint = "https://ssl.bing.com/webmaster/api.svc/json/SubmitSitemap"
+    # Bing Webmaster JSON API: sitemap submission is the SubmitFeed method
+    # (SubmitSitemap does not exist and returns an HTML 404).
+    endpoint = "https://ssl.bing.com/webmaster/api.svc/json/SubmitFeed"
     try:
-        resp = requests.post(endpoint, params={"apikey": key}, json={"siteUrl": site_url, "sitemap": sitemap_url}, timeout=15)
+        resp = requests.post(endpoint, params={"apikey": key}, json={"siteUrl": site_url, "feedUrl": sitemap_url}, timeout=15)
         if resp.status_code == 200:
             return {"status": "ok", "submitted": sitemap_url}
         return {"status": "error", "http": resp.status_code, "body": resp.text[:200]}
