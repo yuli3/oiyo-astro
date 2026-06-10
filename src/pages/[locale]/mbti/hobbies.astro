@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 
@@ -148,5 +149,6 @@ const TYPES: MBTIEntry[] = [
         {txt({ ko: '무료 MBTI 테스트 하기', en: 'Take the Free MBTI Test', ja: '無料MBTIテストを受ける', zh: '参加免费MBTI测试', fr: 'Passer le test MBTI gratuit', es: 'Hacer el test MBTI gratis' })} →
       </a>
     </div>
+      <MentalBoost locale={locale} />
   </main>
 </Layout>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import OracleCardDraw from '../../../components/tools/OracleCardDraw';
@@ -43,5 +44,6 @@ const m = meta[locale] ?? meta.en;
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="mx-auto max-w-5xl px-4 py-8">
     <OracleCardDraw client:load locale={locale} />
+    <MentalBoost locale={locale} />
   </div>
 </Layout>

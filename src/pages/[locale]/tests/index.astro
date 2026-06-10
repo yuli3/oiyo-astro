@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import WisdomNotes from '../../../components/shared/WisdomNotes.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -412,6 +413,7 @@ const categories = [
     ))}
   </section>
   <section class="max-w-5xl mx-auto px-4 pb-12">
+    <MentalBoost locale={locale} />
     <WisdomNotes topic="test-hub" locale={locale} />
   </section>
 </Layout>

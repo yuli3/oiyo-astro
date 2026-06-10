@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 
@@ -96,5 +97,6 @@ const links = [
         ))}
       </div>
     </div>
+      <MentalBoost locale={locale} />
   </main>
 </Layout>

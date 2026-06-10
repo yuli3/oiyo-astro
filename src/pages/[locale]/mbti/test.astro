@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import MbtiPersonalityTest from '../../../components/tests/MbtiPersonalityTest';
@@ -47,5 +48,6 @@ const bridge = getTestBridge('mbti', locale);
   <main class="mx-auto max-w-2xl px-4 py-10">
     <MbtiPersonalityTest client:load locale={locale} />
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
+      <MentalBoost locale={locale} />
   </main>
 </Layout>

@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 
@@ -135,5 +136,6 @@ const labelAvoid = txt({ ko: '피하면 좋은 것', en: 'Better to Avoid', ja: 
         {txt({ ko: '내 MBTI 테스트하기', en: 'Take the MBTI Test', ja: 'MBTIテストを受ける', zh: '做MBTI测试', fr: 'Passer le test MBTI', es: 'Hacer el test MBTI' })} →
       </a>
     </div>
+      <MentalBoost locale={locale} />
   </main>
 </Layout>
