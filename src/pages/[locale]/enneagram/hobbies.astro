@@ -1,0 +1,205 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, localePath } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+type L = Locale;
+const txt = (map: Record<L, string>) => map[locale] ?? map.en;
+
+const meta = {
+  title: txt({ ko: '에니어그램 유형별 추천 취미·여가 활동', en: 'Enneagram Hobbies & Leisure by Type', ja: 'エニアグラムタイプ別おすすめ趣味・余暇活動', zh: '九型人格推荐兴趣与休闲活动', fr: 'Loisirs & Hobbies par Type Ennéagramme', es: 'Hobbies y Ocio por Tipo Eneagrama' }),
+  description: txt({ ko: '에니어그램 9가지 유형별로 진심으로 즐길 수 있는 취미와 여가 활동을 추천합니다. 핵심 동기에 맞는 활동을 찾아 진정한 휴식과 성장을 경험하세요.', en: 'Discover hobbies and leisure activities that align with each of the 9 Enneagram types — activities that resonate with your core motivations for true rest and growth.', ja: 'エニアグラム9タイプ別に心から楽しめる趣味と余暇活動をご紹介。核心的な動機に合う活動で真の休息と成長を体験しましょう。', zh: '为九型人格的9种类型推荐能真正享受的兴趣和休闲活动，找到符合核心动机的活动体验真正的休息与成长。', fr: 'Découvrez des hobbies et loisirs en accord avec chacun des 9 types Ennéagramme — des activités qui résonnent avec vos motivations profondes.', es: 'Descubre hobbies y actividades de ocio que se alinean con cada uno de los 9 tipos del Eneagrama — actividades que resuenan con tus motivaciones centrales.' }),
+};
+
+interface TypeEntry {
+  num: number;
+  name: Record<L, string>;
+  core: Record<L, string>;
+  color: string;
+  hobbies: Record<L, string>[];
+  leisure: Record<L, string>;
+  avoid: Record<L, string>;
+}
+
+const TYPES: TypeEntry[] = [
+  {
+    num: 1, name: { ko: '개혁가', en: 'The Reformer', ja: '改革者', zh: '改革者', fr: 'Le Réformateur', es: 'El Reformador' },
+    core: { ko: '더 나은 세상을 만들고 싶은 원칙주의자', en: 'The principled perfectionist who wants to make things better', ja: 'より良い世界を作りたい原則主義者', zh: '想要让世界变得更好的原则主义者', fr: "Le perfectionniste qui veut améliorer le monde", es: 'El perfeccionista que quiere mejorar el mundo' },
+    color: 'border-slate-300 bg-slate-50',
+    hobbies: [
+      { ko: '독서 — 윤리·철학·역사 논픽션', en: 'Reading — ethics, philosophy, history non-fiction', ja: '読書 — 倫理·哲学·歴史ノンフィクション', zh: '阅读 — 伦理、哲学、历史非虚构', fr: 'Lecture — essais d\'éthique, philosophie, histoire', es: 'Lectura — ensayos de ética, filosofía, historia' },
+      { ko: '가드닝·텃밭 — 정확한 계획과 질서 있는 성장', en: 'Gardening — planned, orderly growth with visible results', ja: 'ガーデニング·家庭菜園 — 計画的で秩序ある成長', zh: '园艺·菜园 — 有计划、有秩序的成长', fr: 'Jardinage — croissance ordonnée avec résultats visibles', es: 'Jardinería — crecimiento ordenado con resultados visibles' },
+      { ko: '칼리그라피·손글씨 — 완벽한 형태를 추구', en: 'Calligraphy / hand lettering — pursuit of perfect form', ja: 'カリグラフィー·手書き文字 — 完璧な形の追求', zh: '书法·手写体 — 追求完美形态', fr: 'Calligraphie — poursuite de la perfection formelle', es: 'Caligrafía — búsqueda de la forma perfecta' },
+      { ko: '자원봉사·사회 캠페인 참여', en: 'Volunteering and civic/social campaigns', ja: 'ボランティア·社会キャンペーン参加', zh: '志愿服务·社会活动参与', fr: 'Bénévolat et campagnes citoyennes', es: 'Voluntariado y campañas cívicas/sociales' },
+    ],
+    leisure: { ko: '기준과 결과가 명확한 활동이 가장 편안합니다. 계획표 작성, 정리 정돈, 오래된 물건 수리 등 "제대로 해냈다"는 만족감을 주는 활동을 즐기세요. 완벽함을 잠시 내려놓는 독서 카페, 조용한 자연 산책도 큰 휴식이 됩니다.', en: 'Activities with clear standards and outcomes feel most comfortable. Making plans, organizing spaces, fixing things, and activities that give a "done right" satisfaction. A quiet reading café or nature walk — where you can briefly let go of perfectionism — brings deep rest.', ja: '基準と結果が明確な活動が最も安心します。計画作成、整理整頓、古いものの修理など「ちゃんとできた」という満足感を与える活動を楽しんでください。完璧さをちょっと手放す読書カフェや自然散策も大きな休息になります。', zh: '有明确标准和结果的活动最令人舒适。制定计划、整理空间、修理旧物等带来"做好了"满足感的活动。偶尔放下完美主义的读书咖啡馆、安静的自然散步也是很好的休息。', fr: 'Les activités aux critères clairs sont les plus confortables. Planifier, organiser, réparer — tout ce qui donne la satisfaction d\'un "bien fait". Un café lecture ou une promenade en nature où vous pouvez temporairement laisser aller la perfection apporte un repos profond.', es: 'Las actividades con estándares y resultados claros son las más cómodas. Planificar, organizar, reparar — todo lo que da satisfacción de "bien hecho". Un café de lectura o un paseo por la naturaleza donde puedas soltar temporalmente el perfeccionismo trae descanso profundo.' },
+    avoid: { ko: '아무 기준 없이 즉흥적인 활동, 결과를 평가받는 경쟁', en: 'Purely spontaneous activities with no standards, high-stakes competitions', ja: '基準なしの即興活動、結果を評価される競争', zh: '没有任何标准的即兴活动，被评判结果的竞争', fr: 'Activités purement spontanées sans critères, compétitions à enjeux élevés', es: 'Actividades puramente espontáneas sin estándares, competencias con altas apuestas' },
+  },
+  {
+    num: 2, name: { ko: '조력가', en: 'The Helper', ja: '援助者', zh: '助人者', fr: "L'Aidant", es: 'El Ayudador' },
+    core: { ko: '사랑받고 싶어 다른 사람을 돕는 배려자', en: 'The caring person who helps others to feel loved and needed', ja: '愛されたくて他者を助ける思いやりある人', zh: '通过帮助他人获得爱与被需要感的关怀者', fr: "La personne attentionnée qui aide pour se sentir aimée", es: 'La persona cariñosa que ayuda a otros para sentirse amada y necesitada' },
+    color: 'border-rose-300 bg-rose-50',
+    hobbies: [
+      { ko: '요리·베이킹 — 사람들에게 나눠주기', en: 'Cooking / baking to share with others', ja: '料理·ベーキング — 人にふるまう', zh: '烹饪/烘焙 — 与他人分享', fr: 'Cuisine / pâtisserie à partager', es: 'Cocinar / hornear para compartir' },
+      { ko: '반려동물 돌보기 또는 동물 봉사', en: 'Pet care or animal volunteering', ja: 'ペット世話または動物ボランティア', zh: '照顾宠物或动物志愿服务', fr: 'Soins aux animaux ou bénévolat animalier', es: 'Cuidado de mascotas o voluntariado con animales' },
+      { ko: '꽃꽂이·홈 데코 — 공간을 따뜻하게 만들기', en: 'Flower arranging / home décor — making spaces warm and welcoming', ja: 'フラワーアレンジメント·ホームデコ — 温かい空間作り', zh: '插花·家居装饰 — 营造温馨空间', fr: 'Art floral / décoration intérieure — créer des espaces chaleureux', es: 'Arreglos florales / decoración del hogar — crear espacios cálidos' },
+      { ko: '감사 편지·일기 쓰기', en: 'Writing gratitude letters and journaling', ja: '感謝の手紙·日記を書く', zh: '写感谢信·日记', fr: 'Écriture de lettres de gratitude et journal intime', es: 'Escritura de cartas de gratitud y journaling' },
+    ],
+    leisure: { ko: '나누고 돌보는 활동에서 에너지를 얻습니다. 단, 자신을 위한 시간도 필수 — 아무도 의식하지 않고 혼자 목욕하거나, 마사지받거나, 좋아하는 드라마 보는 "나만을 위한 시간"을 의도적으로 만드세요. 타인의 시선 없이 자신을 채우는 경험이 2유형의 진정한 회복입니다.', en: 'You gain energy from sharing and nurturing. But solo self-care time is essential — intentionally create "just for me" time: a bath with no obligations, a massage, watching your favorite show. Replenishing yourself away from others\' gaze is the 2\'s true recovery.', ja: '分かち合い、世話することでエネルギーを得ます。ただし、自分のための時間も必須 — 誰も意識せず、一人でお風呂に入ったり、マッサージを受けたり、好きなドラマを見る「自分だけの時間」を意図的に作りましょう。他者の視線なしに自分を満たす経験が2タイプの真の回復です。', zh: '从分享和照顾中获取能量。但独处的自我关爱时间同样必不可少——有意识地创造"只为自己"的时间：没有义务的泡澡、按摩、看最喜欢的剧。在没有他人目光的情况下补充自己是2号的真正恢复。', fr: 'Vous puisez de l\'énergie dans le partage et le soin des autres. Mais le temps pour soi est essentiel — créez intentionnellement du temps "juste pour moi" : un bain sans obligations, un massage, regarder votre série préférée. Se ressourcer loin du regard des autres est la vraie récupération du 2.', es: 'Obtienes energía de compartir y cuidar. Pero el tiempo de autocuidado en solitario es esencial — crea intencionalmente tiempo "solo para mí": un baño sin obligaciones, un masaje, ver tu serie favorita. Reponerte alejado de las miradas de otros es la verdadera recuperación del 2.' },
+    avoid: { ko: '완전히 혼자서만 해야 하는 고독한 활동(장기), 타인에게 무관심한 환경', en: 'Prolonged isolated solo activities, environments where people are completely indifferent to each other', ja: '長期的に完全に一人でしなければならない孤独な活動、他者に無関心な環境', zh: '长期完全独自进行的孤独活动，人们对彼此完全漠不关心的环境', fr: 'Activités solitaires prolongées, environnements où les gens sont indifférents les uns aux autres', es: 'Actividades solitarias prolongadas, entornos donde las personas son completamente indiferentes entre sí' },
+  },
+  {
+    num: 3, name: { ko: '성취자', en: 'The Achiever', ja: '達成者', zh: '成就者', fr: "L'Achiever", es: 'El Triunfador' },
+    core: { ko: '성공과 인정을 추구하는 효율적 실행가', en: 'The efficient performer who seeks success and recognition', ja: '成功と認知を追求する効率的な実行者', zh: '追求成功与认可的高效执行者', fr: 'Le performer efficace qui cherche le succès et la reconnaissance', es: 'El ejecutor eficiente que busca éxito y reconocimiento' },
+    color: 'border-amber-300 bg-amber-50',
+    hobbies: [
+      { ko: '러닝·마라톤 — 기록 단축이라는 명확한 목표', en: 'Running / marathon — clear goal of beating your own record', ja: 'ランニング·マラソン — タイム短縮という明確な目標', zh: '跑步/马拉松 — 缩短个人记录的明确目标', fr: 'Course / marathon — objectif clair de battre son record', es: 'Correr / maratón — objetivo claro de superar tu propio récord' },
+      { ko: '비즈니스 도서 독서 + 적용', en: 'Business book reading + practical application', ja: 'ビジネス書読書＋実践', zh: '商业书籍阅读+实践', fr: 'Lecture de livres business + application pratique', es: 'Lectura de libros de negocios + aplicación práctica' },
+      { ko: '사진·영상 제작 — 포트폴리오 축적', en: 'Photography / video creation — building a portfolio', ja: '写真·動画制作 — ポートフォリオ蓄積', zh: '摄影/视频制作 — 积累作品集', fr: 'Photo / vidéo — constitution d\'un portfolio', es: 'Fotografía / creación de videos — construyendo un portafolio' },
+      { ko: '네트워킹 이벤트·컨퍼런스 참가', en: 'Networking events and conferences', ja: 'ネットワーキングイベント·カンファレンス参加', zh: '社交活动·会议参与', fr: 'Événements de networking et conférences', es: 'Eventos de networking y conferencias' },
+    ],
+    leisure: { ko: '목표가 있는 활동에서 가장 활기를 느낍니다. 단, 진정한 휴식을 위해 "결과 없는 시간"을 연습하는 것이 3유형에게는 성장입니다. 아무도 모르게 혼자 자연을 걸으며 성과를 내려놓는 경험, 목적 없이 음악 듣기 등 — 의도적인 무목적성이 진정한 회복으로 이어집니다.', en: 'You feel most alive in goal-oriented activities. But for true rest, 3s need to practice "time without outcomes" — a solo walk in nature with no performance tracking, listening to music without purpose. Intentional purposelessness leads to true recovery.', ja: '目標がある活動で最も生き生きとします。ただし、真の休息のために「結果のない時間」を練習することが3タイプの成長です。誰も知らずに一人で自然を歩き成果を手放す経験、目的なく音楽を聴くなど — 意図的な無目的性が真の回復につながります。', zh: '在有目标的活动中感到最有活力。但对于真正的休息，3号需要练习"没有结果的时间"——独自在自然中散步不追踪表现，无目的地听音乐等。有意识的无目的性带来真正的恢复。', fr: 'Vous vous sentez le plus vivant dans les activités orientées vers un but. Mais pour un vrai repos, les 3 doivent pratiquer le "temps sans résultats" — une marche solo en nature sans suivi de performance, écouter de la musique sans but. L\'intentionnel sans but mène à la vraie récupération.', es: 'Te sientes más vivo en actividades orientadas a objetivos. Pero para el descanso verdadero, los 3 necesitan practicar "tiempo sin resultados" — un paseo solo en la naturaleza sin seguimiento de rendimiento, escuchar música sin propósito. La intencionalidad sin propósito lleva a la recuperación real.' },
+    avoid: { ko: '아무 성과도 없어 보이는 반복적 활동, 경쟁 없는 무기력한 환경', en: 'Repetitive activities that seem to yield no results, demotivating environments with no competition', ja: '成果がないように見える繰り返し活動、競争のない無気力な環境', zh: '看似没有任何成果的重复活动，没有竞争的沉闷环境', fr: 'Activités répétitives sans résultats apparents, environnements démotivants sans compétition', es: 'Actividades repetitivas que no parecen producir resultados, entornos desmotivantes sin competencia' },
+  },
+  {
+    num: 4, name: { ko: '개인주의자', en: 'The Individualist', ja: '個人主義者', zh: '个人主义者', fr: "L'Individualiste", es: 'El Individualista' },
+    core: { ko: '독특한 정체성과 진정성을 갈망하는 낭만가', en: 'The romantic who craves unique identity and authenticity', ja: '独自のアイデンティティと真正性を渇望するロマンチスト', zh: '渴望独特身份和真实性的浪漫主义者', fr: 'Le romantique qui aspire à une identité unique et à l\'authenticité', es: 'El romántico que anhela identidad única y autenticidad' },
+    color: 'border-purple-300 bg-purple-50',
+    hobbies: [
+      { ko: '시 창작·감성 산문 쓰기', en: 'Poetry writing / lyrical prose', ja: '詩の創作·感性的な散文執筆', zh: '诗歌创作·情感散文写作', fr: 'Écriture poétique / prose lyrique', es: 'Escritura poética / prosa lírica' },
+      { ko: '그림·수채화·콜라주 아트', en: 'Painting, watercolor, collage art', ja: '絵画·水彩·コラージュアート', zh: '绘画、水彩、拼贴艺术', fr: 'Peinture, aquarelle, collage', es: 'Pintura, acuarela, arte de collage' },
+      { ko: '음악 감상 (장르 깊이 파기) + 플레이리스트 큐레이션', en: 'Deep-dive music listening + playlist curation', ja: '音楽鑑賞（ジャンルを深く掘り下げる）＋プレイリストキュレーション', zh: '深入欣赏音악（深入挖掘流派）+播放列表策划', fr: 'Écoute musicale approfondie + curation de playlists', es: 'Escucha profunda de música + curación de listas de reproducción' },
+      { ko: '빈티지 쇼핑·고유한 미학 탐구', en: 'Vintage shopping and exploring unique aesthetics', ja: 'ヴィンテージショッピング·独自の美学探求', zh: '复古购物·探索独特美学', fr: 'Shopping vintage et exploration d\'esthétiques uniques', es: 'Compras vintage y exploración de estéticas únicas' },
+    ],
+    leisure: { ko: '감정을 표현하고 의미를 탐색하는 활동에서 깊은 만족을 얻습니다. 영화·음악·미술에서 공명하는 순간을 찾아 일기에 기록하세요. 일상의 아름다움을 포착하는 사진 산책도 좋습니다. 단, 비교로 인한 자기비판을 주의 — 타인의 작품이 아닌 나만의 표현에 집중하는 것이 4유형의 진정한 여가입니다.', en: 'Deep satisfaction comes from expressing emotions and exploring meaning. Find resonant moments in film, music, and art — journal about them. Photo walks to capture everyday beauty work well too. Watch out for self-criticism through comparison — focusing on your own expression, not others\' work, is the true leisure of the 4.', ja: '感情を表現し、意味を探求する活動で深い満足を得ます。映画·音楽·美術で共鳴する瞬間を見つけて日記に書き留めましょう。日常の美しさを捉える写真散策も良いです。ただし、比較による自己批判に注意 — 他者の作品ではなく自分だけの表現に集中することが4タイプの真の余暇です。', zh: '从表达情感和探索意义的活动中获得深刻满足。在电影、音乐和艺术中找到共鸣的时刻并记录在日记中。捕捉日常之美的摄影散步也很好。注意通过比较产生的自我批评——专注于自己的表达而非他人的作品，才是4号真正的休闲。', fr: 'La satisfaction profonde vient de l\'expression émotionnelle et de l\'exploration du sens. Trouvez des moments de résonance dans le cinéma, la musique, l\'art — notez-les dans un journal. Les balades photo pour capturer la beauté quotidienne conviennent aussi. Méfiez-vous de l\'autocritique par comparaison — se concentrer sur sa propre expression est le vrai loisir du 4.', es: 'La satisfacción profunda viene de expresar emociones y explorar el significado. Encuentra momentos de resonancia en cine, música y arte — escríbelos en un diario. Los paseos fotográficos para capturar la belleza cotidiana también funcionan. Cuida la autocrítica por comparación — enfocarte en tu propia expresión, no en el trabajo de otros, es el verdadero ocio del 4.' },
+    avoid: { ko: '획일적인 집단 활동, 자신의 감정을 억제해야 하는 환경', en: 'Uniform group activities, environments that suppress personal emotion', ja: '画一的な集団活動、自分の感情を抑制しなければならない環境', zh: '千篇一律的集体活动，必须压抑个人情感的环境', fr: 'Activités de groupe uniformes, environnements qui répriment l\'émotion personnelle', es: 'Actividades grupales uniformes, entornos que suprimen la emoción personal' },
+  },
+  {
+    num: 5, name: { ko: '탐구자', en: 'The Investigator', ja: '調査者', zh: '调查者', fr: "L'Enquêteur", es: 'El Investigador' },
+    core: { ko: '지식과 이해를 통해 세상을 파악하려는 관찰자', en: 'The observer who grasps the world through knowledge and understanding', ja: '知識と理解を通じて世界を把握しようとする観察者', zh: '通过知识和理解来把握世界的观察者', fr: "L'observateur qui saisit le monde à travers la connaissance", es: 'El observador que comprende el mundo a través del conocimiento' },
+    color: 'border-sky-300 bg-sky-50',
+    hobbies: [
+      { ko: '특정 분야 깊이 파기 (역사·과학·철학·언어학)', en: 'Deep-diving a specific field (history, science, philosophy, linguistics)', ja: '特定分野を深く掘り下げる（歴史·科学·哲学·言語学）', zh: '深入钻研特定领域（历史、科学、哲学、语言学）', fr: 'Approfondissement d\'un domaine spécifique (histoire, science, philosophie)', es: 'Profundización en un campo específico (historia, ciencia, filosofía, lingüística)' },
+      { ko: '프로그래밍·논리 퍼즐·체스', en: 'Programming, logic puzzles, chess', ja: 'プログラミング·論理パズル·チェス', zh: '编程、逻辑谜题、国际象棋', fr: 'Programmation, puzzles logiques, échecs', es: 'Programación, rompecabezas lógicos, ajedrez' },
+      { ko: '다큐멘터리·강의 영상 시청', en: 'Watching documentaries and educational videos', ja: 'ドキュメンタリー·講義動画視聴', zh: '观看纪录片·教育视频', fr: 'Documentaires et vidéos éducatives', es: 'Ver documentales y videos educativos' },
+      { ko: '노트 필기 시스템 구축 (Zettelkasten, Obsidian)', en: 'Building a note-taking system (Zettelkasten, Obsidian)', ja: 'ノートテーキングシステム構築（ツェッテルカステン、Obsidian）', zh: '建立笔记系统（卡片盒、Obsidian）', fr: 'Construction d\'un système de notes (Zettelkasten, Obsidian)', es: 'Construcción de un sistema de notas (Zettelkasten, Obsidian)' },
+    ],
+    leisure: { ko: '지식 축적과 분석에서 에너지를 얻습니다. 혼자만의 공간에서 관심 주제를 탐구하는 것이 진정한 여가입니다. 단, 에너지 관리가 중요 — 사교적 활동 후 반드시 혼자 재충전하는 시간을 계획하세요. 자연 속 고독한 하이킹이나 독립 영화 감상도 훌륭한 선택입니다.', en: 'You gain energy from accumulating knowledge and analysis. Exploring topics of interest in a private space is your true leisure. Manage your energy carefully — always schedule recharge time after social activities. Solitary hiking in nature or watching indie films are excellent choices.', ja: '知識の蓄積と分析からエネルギーを得ます。一人だけの空間で関心テーマを探求することが真の余暇です。ただし、エネルギー管理が重要 — 社交的な活動の後は必ず一人で充電する時間を計画してください。自然の中での孤独なハイキングや独立系映画鑑賞も素晴らしい選択です。', zh: '从积累知识和分析中获取能量。在私人空间探索感兴趣的主题是真正的休闲。但要注意能量管理——社交活动后一定要计划独自充电的时间。在自然中独自徒步或观看独立电影也是很好的选择。', fr: 'Vous puisez de l\'énergie dans l\'accumulation de connaissances et l\'analyse. Explorer des sujets d\'intérêt dans un espace privé est votre vrai loisir. Gérez votre énergie avec soin — planifiez toujours un temps de recharge après les activités sociales. La randonnée solitaire en nature ou les films indépendants sont d\'excellents choix.', es: 'Obtienes energía acumulando conocimiento y análisis. Explorar temas de interés en un espacio privado es tu verdadero ocio. Gestiona tu energía con cuidado — siempre planifica tiempo de recarga después de actividades sociales. El senderismo solitario en la naturaleza o las películas independientes son excelentes opciones.' },
+    avoid: { ko: '과도한 자극, 프라이버시 없는 환경, 즉흥적 사교', en: 'Overstimulating environments, spaces with no privacy, spontaneous socializing', ja: '過度な刺激、プライバシーのない環境、即興の社交', zh: '过度刺激、没有隐私的环境、即兴社交', fr: 'Environnements sur-stimulants, espaces sans intimité, socialisation spontanée', es: 'Entornos sobreestimulantes, espacios sin privacidad, socialización espontánea' },
+  },
+  {
+    num: 6, name: { ko: '충성가', en: 'The Loyalist', ja: '忠実者', zh: '忠诚者', fr: 'Le Loyaliste', es: 'El Leal' },
+    core: { ko: '안전과 신뢰를 갈망하는 헌신적인 문제 해결자', en: 'The committed problem-solver who craves safety and trust', ja: '安全と信頼を渇望する献身的な問題解決者', zh: '渴望安全与信任的忠诚问题解决者', fr: 'Le résolveur de problèmes dévoué qui aspire à la sécurité et la confiance', es: 'El solucionador de problemas comprometido que anhela seguridad y confianza' },
+    color: 'border-yellow-300 bg-yellow-50',
+    hobbies: [
+      { ko: '커뮤니티 활동·동호회 정기 모임', en: 'Community activities and regular club meetings', ja: 'コミュニティ活動·同好会定期会合', zh: '社区活动·兴趣小组定期聚会', fr: 'Activités communautaires et réunions régulières de clubs', es: 'Actividades comunitarias y reuniones regulares de clubes' },
+      { ko: '재난 대비·응급 처치 교육', en: 'Disaster preparedness and first-aid training', ja: '災害対策·応急処置教育', zh: '防灾准备·急救培训', fr: 'Préparation aux urgences et formation aux premiers secours', es: 'Preparación para desastres y formación en primeros auxilios' },
+      { ko: '팀 보드게임·방탈출 카페', en: 'Team board games and escape rooms', ja: 'チームボードゲーム·謎解きカフェ', zh: '团队桌游·密室逃脱', fr: 'Jeux de société en équipe et escape rooms', es: 'Juegos de mesa en equipo y escape rooms' },
+      { ko: '홈 오거나이징·비상 준비물 점검', en: 'Home organizing and emergency preparedness check', ja: 'ホームオーガナイジング·非常用品の点検', zh: '家庭整理·应急物资检查', fr: 'Organisation du domicile et vérification des préparatifs d\'urgence', es: 'Organización del hogar y verificación de preparativos de emergencia' },
+    ],
+    leisure: { ko: '신뢰할 수 있는 사람들과 함께하는 활동이 가장 편안합니다. 오랜 친구·가족과의 정기적 만남, 단골 카페나 동네 루틴이 안정감을 줍니다. 불안을 줄이는 데는 몸을 쓰는 운동(달리기·수영)도 매우 효과적입니다. 새로운 것을 조금씩 경험하며 용기 근육을 키우는 것도 6유형의 성장입니다.', en: 'Activities with trusted people feel most comfortable. Regular gatherings with old friends and family, familiar cafés, and neighborhood routines provide stability. Physical exercise (running, swimming) is highly effective for reducing anxiety. Gradually experiencing new things to build your courage muscle is also 6\'s growth path.', ja: '信頼できる人々と一緒にする活動が最も安心します。旧友·家族との定期的な集まり、なじみのカフェや近所のルーティンが安定感をもたらします。不安を軽減するには体を使う運動（ランニング·水泳）も非常に効果的です。少しずつ新しいことを経験して勇気の筋肉を育てることも6タイプの成長です。', zh: '与信任的人一起参与的活动最令人舒适。与老朋友、家人定期聚会，熟悉的咖啡馆和邻里常规带来安全感。体育锻炼（跑步、游泳）对减轻焦虑非常有效。逐渐体验新事物来培养勇气也是6号的成长之路。', fr: 'Les activités avec des personnes de confiance sont les plus confortables. Les rassemblements réguliers avec amis et famille, les cafés habituels et routines de quartier apportent la stabilité. L\'exercice physique (course, natation) est très efficace pour réduire l\'anxiété. Expérimenter graduellement de nouvelles choses pour développer son courage est aussi la croissance du 6.', es: 'Las actividades con personas de confianza se sienten más cómodas. Los encuentros regulares con amigos y familia, los cafés habituales y las rutinas del vecindario brindan estabilidad. El ejercicio físico (correr, nadar) es muy efectivo para reducir la ansiedad. Experimentar gradualmente cosas nuevas para desarrollar el músculo del coraje también es el crecimiento del 6.' },
+    avoid: { ko: '예측 불가능하거나 위험해 보이는 익스트림 활동, 낯선 사람들과의 즉흥적 친밀감', en: 'Unpredictable extreme activities, spontaneous intimacy with strangers', ja: '予測不可能または危険に見えるエクストリーム活動、見知らぬ人との即興的な親密さ', zh: '不可预测或看似危险的极限活动，与陌生人即兴建立亲密关系', fr: 'Activités extrêmes imprévisibles, intimité spontanée avec des inconnus', es: 'Actividades extremas impredecibles, intimidad espontánea con extraños' },
+  },
+  {
+    num: 7, name: { ko: '열정가', en: 'The Enthusiast', ja: '熱狂者', zh: '热情者', fr: "L'Enthousiaste", es: 'El Entusiasta' },
+    core: { ko: '즐거움과 자유를 추구하며 고통을 피하는 모험가', en: 'The adventurer who seeks joy and freedom while avoiding pain', ja: '楽しさと自由を追求し、苦痛を避ける冒険家', zh: '追求快乐与自由、回避痛苦的冒险家', fr: "L'aventurier qui cherche la joie et la liberté en évitant la douleur", es: 'El aventurero que busca alegría y libertad mientras evita el dolor' },
+    color: 'border-orange-300 bg-orange-50',
+    hobbies: [
+      { ko: '여행 계획·버킷리스트 작성', en: 'Travel planning and bucket list creation', ja: '旅行計画·バケットリスト作成', zh: '旅行计划·愿望清单制作', fr: 'Planification de voyages et création de liste de vie', es: 'Planificación de viajes y creación de lista de deseos' },
+      { ko: '다양한 요리 장르 체험 (매달 새 나라 음식 만들기)', en: 'Exploring diverse cuisines (cooking a new country\'s food each month)', ja: '様々な料理ジャンル体験（毎月新しい国の料理を作る）', zh: '体验各种烹饪风格（每月做一个新国家的食物）', fr: 'Explorer diverses cuisines (cuisiner un nouveau pays chaque mois)', es: 'Explorar diversas cocinas (cocinar la comida de un nuevo país cada mes)' },
+      { ko: '즉흥 연주·잼 세션·오픈마이크', en: 'Improvised music, jam sessions, open mics', ja: '即興演奏·ジャムセッション·オープンマイク', zh: '即兴演奏·即兴演奏会·开放麦', fr: 'Musique improvisée, jam sessions, open mics', es: 'Música improvisada, jam sessions, open mics' },
+      { ko: '스탠드업 코미디·임프로브 연기', en: 'Stand-up comedy and improv acting', ja: 'スタンドアップコメディ·即興演技', zh: '脱口秀·即兴表演', fr: 'Stand-up comedy et improvisation théâtrale', es: 'Stand-up comedy y actuación de improv' },
+    ],
+    leisure: { ko: '다양하고 새로운 경험에서 에너지가 넘칩니다. 자극적인 여행·축제·모임을 즐기되, 하나에 깊이 머무는 연습도 7유형의 성장입니다. 명상이나 조용한 자연 체험처럼 지금 이 순간에 머무는 활동은 처음엔 불편하지만 진정한 만족감의 원천이 됩니다. 일기로 하루의 아름다운 순간들을 포착해보세요.', en: 'You overflow with energy from varied new experiences. Enjoy stimulating travel, festivals, and gatherings — but practicing staying deep in one thing is also 7\'s growth path. Activities that anchor you in the present moment (meditation, quiet nature) feel uncomfortable at first but become sources of true satisfaction. Try journaling beautiful moments of each day.', ja: '多様で新しい体験からエネルギーが溢れます。刺激的な旅行·祭り·集まりを楽しみつつも、一つのことに深く留まる練習も7タイプの成長です。瞑想や静かな自然体験のように今この瞬間に留まる活動は最初は不快ですが、真の満足感の源になります。日記で一日の美しい瞬間を捉えてみましょう。', zh: '从多样的新体验中获得满满的能量。享受刺激性的旅行、节日和聚会，但练习在一件事上深入停留也是7号的成长之路。冥想或安静的自然体验等让你停留在当下的活动起初不舒服，但会成为真正满足感的源泉。尝试在日记中捕捉每天美好的时刻。', fr: 'Vous débordez d\'énergie des expériences variées et nouvelles. Profitez des voyages stimulants, festivals et rassemblements — mais pratiquer de rester profondément dans une seule chose est aussi la croissance du 7. Les activités qui vous ancrent dans le présent (méditation, nature tranquille) semblent inconfortables au début mais deviennent des sources de vraie satisfaction.', es: 'Rebosas de energía con experiencias nuevas y variadas. Disfruta viajes estimulantes, festivales y reuniones — pero practicar quedarte profundamente en una sola cosa también es el crecimiento del 7. Las actividades que te anclan en el momento presente (meditación, naturaleza tranquila) se sienten incómodas al principio pero se convierten en fuentes de verdadera satisfacción.' },
+    avoid: { ko: '단일 반복 루틴, 선택지가 없는 환경, 오랜 의무감', en: 'Monotonous single routines, environments with no choices, prolonged obligations', ja: '単一反復ルーティン、選択肢のない環境、長い義務感', zh: '单一重复的套路，没有选择的环境，长期的义务感', fr: 'Routines monotones, environnements sans choix, obligations prolongées', es: 'Rutinas monótonas y únicas, entornos sin opciones, obligaciones prolongadas' },
+  },
+  {
+    num: 8, name: { ko: '도전자', en: 'The Challenger', ja: '挑戦者', zh: '挑战者', fr: 'Le Challenger', es: 'El Desafiador' },
+    core: { ko: '힘과 자율성으로 세상을 통제하려는 강력한 보호자', en: 'The powerful protector who seeks control through strength and autonomy', ja: '力と自律性で世界を制御しようとする強力な保護者', zh: '通过力量与自主权控制世界的强大保护者', fr: 'Le protecteur puissant qui cherche le contrôle par la force et l\'autonomie', es: 'El poderoso protector que busca control a través de la fuerza y autonomía' },
+    color: 'border-red-300 bg-red-50',
+    hobbies: [
+      { ko: '격투기·무술·복싱 — 강인함 단련', en: 'Martial arts, boxing — building physical power', ja: '格闘技·武術·ボクシング — 強さの鍛錬', zh: '格斗术·武术·拳击 — 锻炼强壮', fr: 'Arts martiaux, boxe — développer la puissance physique', es: 'Artes marciales, boxeo — desarrollar poder físico' },
+      { ko: '기업가 정신 프로젝트·자기 사업 구상', en: 'Entrepreneurial projects and business building', ja: '起業家精神プロジェクト·自分のビジネス構想', zh: '创业项目·自营业务构想', fr: 'Projets entrepreneuriaux et création d\'entreprise', es: 'Proyectos empresariales y construcción de negocios' },
+      { ko: '논쟁·토론·정치 칼럼 쓰기', en: 'Debate, political commentary writing', ja: '議論·討論·政治コラム執筆', zh: '辩论·政治评论写作', fr: 'Débat, rédaction de commentaires politiques', es: 'Debate, escritura de comentarios políticos' },
+      { ko: '야외 모험 (암벽등반·백패킹·서바이벌)', en: 'Outdoor adventures (rock climbing, backpacking, survival activities)', ja: '屋外冒険（岩登り·バックパッキング·サバイバル）', zh: '户外冒险（攀岩·背包徒步·生存活动）', fr: 'Aventures en plein air (escalade, randonnée, activités de survie)', es: 'Aventuras al aire libre (escalada, mochilero, actividades de supervivencia)' },
+    ],
+    leisure: { ko: '강렬하고 도전적인 활동에서 활기를 찾습니다. 신체적으로 강해지는 훈련, 무언가를 만들거나 지배하는 경험이 만족을 줍니다. 진정한 휴식을 위해서는 약함이나 취약성을 허용하는 연습이 필요합니다 — 가까운 사람들과 솔직한 감정을 나누거나, 조용히 자연 속에 앉아 있는 시간이 8유형에게는 가장 깊은 여가가 됩니다.', en: 'You find vitality in intense, challenging activities. Physical training to become stronger, building or mastering something gives satisfaction. For true rest, 8s need to practice allowing weakness and vulnerability — sharing honest emotions with close people or simply sitting quietly in nature becomes the deepest leisure for the 8.', ja: '強烈で挑戦的な活動から活気を見つけます。肉体的に強くなるトレーニング、何かを作ったり支配したりする経験が満足をもたらします。真の休息のためには弱さや脆弱性を許す練習が必要です — 親しい人々と正直な感情を分かち合ったり、静かに自然の中に座っている時間が8タイプにとって最も深い余暇となります。', zh: '在激烈、有挑战性的活动中找到活力。让身体变得更强壮的训练，建造或掌控某事带来满足感。为了真正的休息，8号需要练习允许软弱和脆弱——与亲近的人分享真实情感，或只是安静地坐在大自然中，这对8号来说是最深的休闲。', fr: 'Vous trouvez de la vitalité dans les activités intenses et challengeantes. L\'entraînement physique pour devenir plus fort, construire ou maîtriser quelque chose apporte de la satisfaction. Pour un vrai repos, les 8 doivent pratiquer l\'acceptation de la faiblesse — partager des émotions honnêtes avec des proches ou simplement s\'asseoir tranquillement dans la nature devient le loisir le plus profond du 8.', es: 'Encuentras vitalidad en actividades intensas y desafiantes. El entrenamiento físico para volverse más fuerte, construir o dominar algo da satisfacción. Para el descanso verdadero, los 8 necesitan practicar permitir la debilidad — compartir emociones honestas con personas cercanas o simplemente sentarse en silencio en la naturaleza se convierte en el ocio más profundo del 8.' },
+    avoid: { ko: '수동적 관람 활동, 힘을 쓸 수 없는 제약적 환경', en: 'Passive spectator activities, restrictive environments where no power or agency is exercised', ja: '受動的な観覧活動、力を発揮できない制約的な環境', zh: '被动观看活动，无法发挥力量的限制性环境', fr: 'Activités de spectateur passif, environnements restrictifs où aucun pouvoir ne s\'exerce', es: 'Actividades de espectador pasivo, entornos restrictivos donde no se ejerce poder ni agencia' },
+  },
+  {
+    num: 9, name: { ko: '평화주의자', en: 'The Peacemaker', ja: '平和主義者', zh: '和平缔造者', fr: 'Le Pacificateur', es: 'El Pacificador' },
+    core: { ko: '조화와 평화를 위해 자신을 지우는 중재자', en: 'The mediator who erases themselves for harmony and peace', ja: '調和と平和のために自分を消す仲介者', zh: '为了和谐与和平而消除自我的调解者', fr: "Le médiateur qui s'efface pour l'harmonie et la paix", es: 'El mediador que se borra a sí mismo por la armonía y la paz' },
+    color: 'border-green-300 bg-green-50',
+    hobbies: [
+      { ko: '명상·요가·기공 — 내면 평화 유지', en: 'Meditation, yoga, qi gong — maintaining inner peace', ja: '瞑想·ヨガ·気功 — 内なる平和の維持', zh: '冥想·瑜伽·气功 — 维持内在平静', fr: 'Méditation, yoga, qi gong — maintenir la paix intérieure', es: 'Meditación, yoga, qi gong — mantener la paz interior' },
+      { ko: '자연 산책·버드워칭·별 관측', en: 'Nature walks, birdwatching, stargazing', ja: '自然散策·バードウォッチング·星観測', zh: '自然散步·观鸟·观星', fr: 'Promenades en nature, observation des oiseaux, astronomie amateur', es: 'Paseos en la naturaleza, observación de aves, observación de estrellas' },
+      { ko: '음악 듣기·환경음 컬렉션 (비올 때 소리, 파도 소리)', en: 'Music listening, ambient sound collections (rain, waves)', ja: '音楽鑑賞·環境音コレクション（雨の音、波の音）', zh: '听音乐·收集环境音（雨声、海浪声）', fr: 'Écoute musicale, collections de sons ambiants (pluie, vagues)', es: 'Escucha musical, colecciones de sonido ambiental (lluvia, olas)' },
+      { ko: '퍼즐·뜨개질·모형 만들기 — 손을 바쁘게 하는 집중 활동', en: 'Puzzles, knitting, model building — hands-busy focus activities', ja: 'パズル·編み物·模型作り — 手を忙しくする集中活動', zh: '拼图·编织·制作模型 — 让双手忙碌的专注活动', fr: 'Puzzles, tricot, maquettes — activités occupant les mains', es: 'Rompecabezas, tejido, construcción de modelos — actividades de enfoque que mantienen las manos ocupadas' },
+    ],
+    leisure: { ko: '조화롭고 갈등 없는 환경에서 깊이 쉽니다. 자연, 음악, 조용한 활동이 최고의 여가입니다. 단, 9유형의 성장은 "내가 원하는 것"을 의식적으로 찾아 선택하는 것입니다 — 이번 여가에 정말 하고 싶은 것을 타인의 의견 없이 스스로 결정해보세요. 의견 표현 연습이 9유형의 가장 중요한 자기계발입니다.', en: 'You find deep rest in harmonious, conflict-free environments. Nature, music, and quiet activities are your ideal leisure. But the 9\'s growth is consciously finding and choosing "what I want" — decide this leisure activity entirely on your own without others\' input. Practicing expressing your own preferences is the most important self-development for the 9.', ja: '調和的で葛藤のない環境で深く休みます。自然、音楽、静かな活動が最高の余暇です。ただし、9タイプの成長は「自分が望むもの」を意識的に探して選ぶことです — この余暇に本当にやりたいことを他者の意見なしに自分で決めてみましょう。意見表現の練習が9タイプの最も重要な自己啓発です。', zh: '在和谐无冲突的环境中深度休息。自然、音乐和安静的活动是最佳休闲。但9号的成长是有意识地寻找和选择"我想要的"——这次休闲完全不依赖他人的意见自己做决定。练习表达自己的偏好是9号最重要的自我发展。', fr: 'Vous trouvez un repos profond dans des environnements harmonieux sans conflits. Nature, musique et activités calmes sont vos loisirs idéaux. Mais la croissance du 9 est de trouver et choisir consciemment "ce que je veux" — décidez de cette activité de loisir entièrement par vous-même, sans l\'avis des autres. Pratiquer l\'expression de vos préférences est le développement personnel le plus important pour le 9.', es: 'Encuentras descanso profundo en entornos armoniosos sin conflictos. La naturaleza, la música y las actividades tranquilas son tu ocio ideal. Pero el crecimiento del 9 es encontrar y elegir conscientemente "lo que yo quiero" — decide esta actividad de ocio completamente por ti mismo sin la opinión de otros. Practicar expresar tus propias preferencias es el autodesarrollo más importante para el 9.' },
+    avoid: { ko: '갈등·비교·공격적인 경쟁 환경, 자신의 의견을 강요받는 상황', en: 'Conflict-heavy, competitive environments, situations where you\'re forced to voice strong opinions', ja: '葛藤·比較·攻撃的な競争環境、自分の意見を強いられる状況', zh: '冲突、比较、激烈竞争的环境，被迫表达强烈意见的情况', fr: 'Environnements conflictuels et compétitifs, situations où on est forcé d\'exprimer des opinions fortes', es: 'Entornos con muchos conflictos y competencia agresiva, situaciones donde se te obliga a expresar opiniones fuertes' },
+  },
+];
+
+const labelHobbies = txt({ ko: '추천 취미', en: 'Recommended Hobbies', ja: 'おすすめ趣味', zh: '推荐兴趣', fr: 'Hobbies recommandés', es: 'Hobbies recomendados' });
+const labelLeisure = txt({ ko: '여가 스타일', en: 'Leisure Style', ja: '余暇スタイル', zh: '休闲风格', fr: 'Style de loisirs', es: 'Estilo de ocio' });
+const labelAvoid = txt({ ko: '피하면 좋은 것', en: 'Better to Avoid', ja: '避けたほうがいいこと', zh: '最好避免', fr: 'Mieux éviter', es: 'Mejor evitar' });
+---
+
+<Layout title={meta.title} description={meta.description} locale={locale}>
+  <main class="mx-auto max-w-3xl px-4 py-10">
+    <div class="mb-8 text-center">
+      <h1 class="text-3xl font-black text-slate-900">
+        {txt({ ko: '에니어그램 유형별 추천 취미·여가', en: 'Enneagram Hobbies & Leisure Guide', ja: 'エニアグラムタイプ別趣味·余暇', zh: '九型人格推荐兴趣与休闲', fr: 'Guide Loisirs & Hobbies Ennéagramme', es: 'Guía de Hobbies y Ocio por Eneagrama' })}
+      </h1>
+      <p class="mt-2 text-slate-500 max-w-xl mx-auto">
+        {txt({ ko: '핵심 동기에 맞는 취미를 선택하면 진정한 회복과 성장을 경험할 수 있습니다.', en: 'Choosing hobbies aligned with your core motivations enables genuine recovery and growth.', ja: '核心的な動機に合った趣味を選ぶと真の回復と成長を体験できます。', zh: '选择符合核心动机的兴趣，体验真正的恢复与成长。', fr: 'Choisir des hobbies alignés avec vos motivations profondes permet une vraie récupération et croissance.', es: 'Elegir hobbies alineados con tus motivaciones centrales permite la recuperación y el crecimiento genuinos.' })}
+      </p>
+    </div>
+
+    <div class="space-y-6">
+      {TYPES.map(({ num, name, core, color, hobbies, leisure, avoid }) => (
+        <div class={`rounded-2xl border-2 p-5 ${color}`}>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="rounded-xl bg-white/70 px-3 py-1 font-mono text-lg font-black text-slate-800">
+              {num}. {name[locale] ?? name.en}
+            </span>
+            <span class="text-xs text-slate-500">{core[locale] ?? core.en}</span>
+          </div>
+
+          <div class="mb-4">
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-2">✦ {labelHobbies}</p>
+            <ul class="space-y-1">
+              {hobbies.map((h) => (
+                <li class="flex items-start gap-2 text-sm text-slate-800">
+                  <span class="mt-0.5 text-slate-400">·</span>
+                  {h[locale] ?? h.en}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div class="mb-3 rounded-xl bg-white/60 p-3">
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">◉ {labelLeisure}</p>
+            <p class="text-sm leading-relaxed text-slate-700">{leisure[locale] ?? leisure.en}</p>
+          </div>
+
+          <div>
+            <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">✕ {labelAvoid}</p>
+            <p class="text-sm italic text-slate-500">{avoid[locale] ?? avoid.en}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href={localePath(locale, '/enneagram/test')} class="inline-flex items-center gap-2 rounded-xl border-2 border-indigo-700 bg-indigo-700 px-6 py-3 font-bold text-white transition hover:bg-indigo-800">
+        {txt({ ko: '내 에니어그램 유형 테스트하기', en: 'Take the Enneagram Test', ja: 'エニアグラムテストを受ける', zh: '做九型人格测试', fr: 'Passer le test Ennéagramme', es: 'Hacer el test Eneagrama' })} →
+      </a>
+    </div>
+  </main>
+</Layout>

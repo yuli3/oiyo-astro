@@ -1,0 +1,91 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, localePath } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+type L = Locale;
+const txt = (map: Record<L, string>) => map[locale] ?? map.en;
+
+const meta = {
+  title: txt({ ko: '시간 만들기 — 바쁜 일상에서 나만의 시간 탈환하는 법', en: 'Making Time — How to Reclaim Your Time in a Busy Life', ja: '時間の作り方 — 忙しい日常で自分だけの時間を取り戻す方法', zh: '创造时间 — 在忙碌生活中夺回属于自己的时间', fr: 'Créer du temps — Comment récupérer votre temps dans une vie bien remplie', es: 'Crear tiempo — Cómo recuperar tu tiempo en una vida ocupada' }),
+  description: txt({ ko: '"시간이 없다"는 말의 진짜 의미와 실질적인 시간 탈환 전략을 알려드립니다. 우선순위 재설정부터 시간 블로킹, 에너지 관리까지.', en: 'Learn what "I have no time" really means and practical time-reclaiming strategies — from priority resetting to time blocking and energy management.', ja: '「時間がない」という言葉の本当の意味と実質的な時間奪還戦略をお伝えします。優先順位の再設定から時間ブロッキング、エネルギー管理まで。', zh: '了解"没有时间"的真实含义以及实际的时间夺回策略——从优先级重设到时间块安排和能量管理。', fr: 'Apprenez ce que "je n\'ai pas le temps" signifie vraiment et les stratégies pratiques pour récupérer votre temps.', es: 'Aprende qué significa realmente "no tengo tiempo" y estrategias prácticas para recuperar tu tiempo.' }),
+};
+
+interface Step {
+  num: string;
+  title: Record<L, string>;
+  desc: Record<L, string>;
+}
+
+const steps: Step[] = [
+  {
+    num: '01',
+    title: { ko: '"시간이 없다"를 "우선순위가 아니다"로 바꾸기', en: 'Replace "I have no time" with "It\'s not a priority"', ja: '「時間がない」を「優先度が低い」に変える', zh: '将"没有时间"替换为"这不是优先事项"', fr: 'Remplacer "je n\'ai pas le temps" par "ce n\'est pas une priorité"', es: 'Reemplazar "no tengo tiempo" con "no es una prioridad"' },
+    desc: { ko: '시간은 발견하는 것이 아니라 만드는 것입니다. 시간이 없는 게 아니라 그것을 할 시간을 아직 배정하지 않은 것입니다. "운동할 시간이 없다" → "운동은 아직 내 우선순위에 없다." 이 사실을 인정하는 것이 첫 번째 단계입니다.', en: 'Time is not found — it\'s made. You don\'t lack time; you haven\'t yet allocated time for it. "I have no time to exercise" → "Exercise isn\'t yet a priority for me." Acknowledging this is step one.', ja: '時間は見つけるものではなく、作るものです。時間がないのではなく、それに時間をまだ割り当てていないのです。「運動する時間がない」→「運動はまだ私の優先事項ではない」。この事実を認めることが第一歩です。', zh: '时间不是被发现的，而是被创造的。不是没有时间，而是还没有为它分配时间。"没有时间锻炼"→"锻炼还不是我的优先事项"。承认这一事实是第一步。', fr: 'Le temps ne se trouve pas — il se crée. Vous ne manquez pas de temps; vous n\'avez pas encore alloué du temps pour cela. "Je n\'ai pas le temps de faire de l\'exercice" → "L\'exercice n\'est pas encore une priorité pour moi."', es: 'El tiempo no se encuentra — se hace. No te falta tiempo; simplemente no has asignado tiempo para ello. "No tengo tiempo para ejercicio" → "El ejercicio todavía no es una prioridad para mí."' },
+  },
+  {
+    num: '02',
+    title: { ko: '시간 감사(Time Audit) — 지금 시간이 어디 가는지 파악', en: 'Time Audit — Find Out Where Your Time Is Going', ja: '時間監査（Time Audit）— 今、時間がどこに行っているかを把握', zh: '时间审计 — 了解你的时间去了哪里', fr: 'Audit du temps — Savoir où va votre temps', es: 'Auditoría de tiempo — Descubrir adónde va tu tiempo' },
+    desc: { ko: '1주일 동안 모든 활동을 15분 단위로 기록해보세요. 대부분의 사람들은 유튜브·SNS·통화 등에 하루 2~4시간을 씁니다. 이 시간을 파악해야 어디서 시간을 회수할 수 있는지 알 수 있습니다. 도구: 구글 캘린더, Toggl Track, 손으로 쓴 시간 일지.', en: 'Track every activity in 15-minute blocks for one week. Most people spend 2–4 hours daily on YouTube, social media, and calls. Only by understanding where time goes can you know where to reclaim it. Tools: Google Calendar, Toggl Track, handwritten time log.', ja: '1週間、すべての活動を15分単位で記録してみてください。ほとんどの人はYouTube·SNS·通話などに1日2〜4時間を費やしています。この時間を把握してこそ、どこから時間を取り戻せるかがわかります。ツール：Googleカレンダー、Toggl Track、手書き時間日誌。', zh: '在一周内以15分钟为单位记录所有活动。大多数人每天在YouTube、社交媒体和通话上花费2-4小时。只有了解时间去了哪里，才能知道从哪里找回时间。工具：Google日历、Toggl Track、手写时间日志。', fr: 'Suivez chaque activité par tranches de 15 minutes pendant une semaine. La plupart des gens passent 2 à 4 heures par jour sur YouTube, les réseaux sociaux et les appels. Outils : Google Agenda, Toggl Track, journal de temps manuscrit.', es: 'Registra cada actividad en bloques de 15 minutos durante una semana. La mayoría de las personas pasan 2-4 horas diarias en YouTube, redes sociales y llamadas. Herramientas: Google Calendar, Toggl Track, registro de tiempo manuscrito.' },
+  },
+  {
+    num: '03',
+    title: { ko: '에너지 매핑 — 최고 상태일 때 중요한 일 배치', en: 'Energy Mapping — Schedule Important Work at Peak Energy', ja: 'エネルギーマッピング — 最高状態のときに重要な仕事を配置', zh: '能量图谱 — 在能量最高时安排重要工作', fr: 'Cartographie de l\'énergie — Planifier le travail important à l\'heure de pointe', es: 'Mapeo de energía — Programar trabajo importante en el pico de energía' },
+    desc: { ko: '하루 중 집중력이 가장 높은 2~3시간이 있습니다. 대부분의 사람들은 오전 9~11시 또는 기상 후 2~4시간이 피크입니다. 이 황금 시간에 가장 중요한 일(창작·학습·깊은 사고)을 배치하세요. 이메일·SNS·잡무는 에너지 저점(보통 점심 직후)에 처리합니다.', en: 'You have 2–3 hours of peak concentration during the day. For most people, this is 9–11 AM or 2–4 hours after waking. Schedule your most important work (creative, learning, deep thinking) in this golden window. Handle email, social media, and routine tasks during energy valleys (usually right after lunch).', ja: '1日の中で集中力が最も高い2〜3時間があります。ほとんどの人は午前9〜11時または起床後2〜4時間がピークです。この黄金時間に最も重要な仕事（創作·学習·深い思考）を配置してください。メール·SNS·雑務はエネルギーの低点（通常は昼食直後）に処理します。', zh: '一天中有2-3小时是你集中力最高的时候。大多数人的高峰是上午9-11点或起床后2-4小时。把最重要的工作（创作、学习、深度思考）安排在这个黄金时段。把邮件、社交媒体和杂务放在能量低谷（通常是午饭后）处理。', fr: 'Vous avez 2-3 heures de concentration maximale dans la journée. Pour la plupart, c\'est entre 9h et 11h ou 2-4h après le réveil. Planifiez votre travail le plus important pendant cette fenêtre dorée. Traitez les emails et tâches routinières pendant les creux d\'énergie.', es: 'Tienes 2-3 horas de concentración máxima durante el día. Para la mayoría, esto es entre las 9-11 AM o 2-4 horas después de despertar. Programa tu trabajo más importante durante esta ventana dorada. Maneja emails y tareas rutinarias durante los valles de energía.' },
+  },
+  {
+    num: '04',
+    title: { ko: '시간 블로킹 — 중요한 것을 먼저 달력에 넣기', en: 'Time Blocking — Put Important Things on the Calendar First', ja: 'タイムブロッキング — 重要なことを最初にカレンダーに入れる', zh: '时间块安排 — 先把重要的事情放进日历', fr: 'Blocage du temps — Mettre les choses importantes dans l\'agenda en premier', es: 'Bloqueo de tiempo — Poner las cosas importantes en el calendario primero' },
+    desc: { ko: '해야 할 일을 목록에 두면 언젠가 하게 됩니다. 하지만 달력에 넣으면 반드시 하게 됩니다. 중요한 프로젝트·운동·가족 시간을 먼저 달력에 배치하고, 나머지 일들은 그 주변에 채워넣으세요. "중요한 것은 급한 것의 노예가 되어서는 안 된다."', en: 'Tasks on a to-do list get done "someday." Tasks on a calendar get done on a specific day. Put important projects, exercise, and family time on the calendar FIRST, then fill in everything else around them. "The important must not become slave to the urgent."', ja: 'やるべきことをリストに入れておくと「いつか」やることになります。でもカレンダーに入れると必ずやることになります。重要なプロジェクト·運動·家族の時間を最初にカレンダーに配置し、残りの仕事はその周りに埋めていきましょう。「重要なことは急ぎのことの奴隷になってはならない。」', zh: '待办清单上的任务"某天"会完成。日历上的任务会在特定一天完成。先把重要项目、运动和家庭时间放进日历，然后把其他事情填在周围。"重要的事情不应该成为紧急事情的奴隶。"', fr: 'Les tâches sur une liste "to-do" sont faites "un jour." Les tâches sur un agenda sont faites un jour spécifique. Mettez d\'abord les projets importants, l\'exercice et le temps en famille dans l\'agenda, puis remplissez le reste autour.', es: 'Las tareas en una lista de pendientes se hacen "algún día." Las tareas en un calendario se hacen un día específico. Pon primero los proyectos importantes, el ejercicio y el tiempo familiar en el calendario, luego rellena todo lo demás alrededor.' },
+  },
+  {
+    num: '05',
+    title: { ko: '소비 시간 줄이기 — 무의식적 시간 낭비 차단', en: 'Cut Consumption Time — Block Unconscious Time Waste', ja: '消費時間の削減 — 無意識的な時間浪費をブロック', zh: '减少消耗时间 — 阻断无意识时间浪费', fr: 'Réduire le temps de consommation — Bloquer le gaspillage de temps inconscient', es: 'Reducir el tiempo de consumo — Bloquear el desperdicio de tiempo inconsciente' },
+    desc: { ko: '스마트폰 화면 사용 시간을 확인해보세요. 하루 4~6시간인 경우가 많습니다. 구체적인 전략:\n• SNS 앱 홈화면에서 제거 (찾아야 하므로 마찰 생김)\n• 유튜브·틱톡에 일일 사용 시간 제한 설정\n• "지루할 때 스마트폰" 습관을 "지루할 때 산책·독서"로 교체\n• 취침 30분 전 폰 다른 방에 두기', en: 'Check your smartphone screen time. For many, it\'s 4–6 hours daily. Concrete strategies:\n• Remove social media apps from your home screen (friction makes you think twice)\n• Set daily time limits for YouTube/TikTok\n• Replace "bored → phone" with "bored → walk or read"\n• Put your phone in another room 30 minutes before sleep', ja: 'スマートフォンのスクリーンタイムを確認してください。1日4〜6時間の場合が多いです。具体的な戦略：\n• SNSアプリをホーム画面から削除（探す手間が生まれる）\n• YouTube·TikTokに1日の使用時間制限を設定\n• 「暇なときスマートフォン」の習慣を「暇なとき散歩·読書」に変える\n• 就寝30分前に携帯を別の部屋に置く', zh: '查看你的手机屏幕使用时间。很多人每天4-6小时。具体策略：\n• 从主屏幕删除社交媒体应用（制造摩擦）\n• 为YouTube/抖音设置每日使用时间限制\n• 将"无聊→手机"替换为"无聊→散步或阅读"\n• 睡前30分钟把手机放在另一个房间', fr: 'Vérifiez le temps d\'écran de votre smartphone. Pour beaucoup, c\'est 4-6 heures par jour. Stratégies concrètes :\n• Supprimer les apps de réseaux sociaux de l\'écran d\'accueil\n• Définir des limites de temps quotidiennes pour YouTube/TikTok\n• Remplacer "ennui → téléphone" par "ennui → marche ou lecture"\n• Mettre le téléphone dans une autre pièce 30 min avant de dormir', es: 'Comprueba el tiempo de pantalla de tu smartphone. Para muchos, son 4-6 horas diarias. Estrategias concretas:\n• Eliminar apps de redes sociales de la pantalla de inicio\n• Establecer límites de tiempo diarios para YouTube/TikTok\n• Reemplazar "aburrido → teléfono" con "aburrido → caminar o leer"\n• Poner el teléfono en otra habitación 30 min antes de dormir' },
+  },
+];
+---
+
+<Layout title={meta.title} description={meta.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <div class="mb-8 text-center">
+      <h1 class="text-3xl font-black text-slate-900">{txt({ ko: '시간 만들기', en: 'Making Time', ja: '時間の作り方', zh: '创造时间', fr: 'Créer du Temps', es: 'Crear Tiempo' })}</h1>
+      <p class="mt-2 text-sm text-slate-500">{meta.description}</p>
+    </div>
+
+    <div class="space-y-5">
+      {steps.map(({ num, title, desc }) => (
+        <div class="rounded-2xl border-2 border-slate-200 bg-white p-6 hover:border-green-300 transition">
+          <div class="flex items-start gap-4">
+            <span class="flex-shrink-0 font-mono text-3xl font-black text-green-600 opacity-40">{num}</span>
+            <div>
+              <h2 class="text-base font-black text-slate-900 mb-2">{title[locale] ?? title.en}</h2>
+              <p class="whitespace-pre-line text-sm leading-relaxed text-slate-700">{desc[locale] ?? desc.en}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 grid gap-3 sm:grid-cols-2">
+      <a href={localePath(locale, '/routine/builder')} class="flex items-center gap-2 rounded-xl border-2 border-green-200 bg-green-50 p-4 transition hover:border-green-400">
+        <span class="text-2xl">📋</span>
+        <div>
+          <p class="font-bold text-green-800">{txt({ ko: '루틴 만들기 가이드', en: 'Routine Builder Guide', ja: 'ルーティン設計ガイド', zh: '例程设计指南', fr: 'Guide de construction de routine', es: 'Guía de construcción de rutina' })}</p>
+          <p class="text-xs text-green-600">{txt({ ko: '아침·저녁·주간 루틴 설계', en: 'Morning, evening & weekly design', ja: '朝·夜·週間ルーティン設計', zh: '晨间、晚间和每周例程设计', fr: 'Conception matin, soir & hebdomadaire', es: 'Diseño mañana, noche y semanal' })}</p>
+        </div>
+      </a>
+      <a href={localePath(locale, '/habit-builder/30-days')} class="flex items-center gap-2 rounded-xl border-2 border-slate-200 bg-white p-4 transition hover:border-green-300">
+        <span class="text-2xl">🌱</span>
+        <div>
+          <p class="font-bold text-slate-800">{txt({ ko: '30일 습관 챌린지', en: '30-Day Habit Challenge', ja: '30日習慣チャレンジ', zh: '30天习惯挑战', fr: 'Défi 30 jours', es: 'Desafío 30 días' })}</p>
+          <p class="text-xs text-slate-500">{txt({ ko: '과학적 습관 형성 프로그램', en: 'Science-backed habit formation', ja: '科学的習慣形成プログラム', zh: '科学习惯养成计划', fr: 'Programme de formation d\'habitudes scientifique', es: 'Programa de formación de hábitos científico' })}</p>
+        </div>
+      </a>
+    </div>
+  </main>
+</Layout>

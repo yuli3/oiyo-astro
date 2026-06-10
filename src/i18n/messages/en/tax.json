@@ -1,0 +1,1837 @@
+{
+  "gift": {
+    "meta": {
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "Gift Tax Calculator",
+      "badge": "Global Benchmarking"
+    },
+    "rel": {
+      "child_adult": "KRW 50M deduction",
+      "child_minor": "KRW 20M deduction",
+      "spouse": "KRW 600M deduction",
+      "parent": "KRW 50M deduction",
+      "other_relative": "KRW 10M deduction",
+      "other": "No deduction"
+    },
+    "result": {
+      "title": "My Insights",
+      "deduction": "Deduction",
+      "taxBase": "Tax Base",
+      "rate": "Annual Return Rate (%)",
+      "selfReport": "* Estimated tax with 3% deduction for self-reporting.",
+      "description": "Awaiting synthesis..."
+    },
+    "tip": {
+      "title": "My Insights",
+      "desc": "Analysis of your unique financial tendencies"
+    },
+    "test": {
+      "insightBullets": [
+        "Wealth Resonance",
+        "Lineage Protection",
+        "Temporal Efficiency"
+      ],
+      "progress": "Progress",
+      "submit": "Calculate",
+      "loading": "Calculating...",
+      "selectOption": "Please select",
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "deduction": {
+      "child_adult": "KRW 50M deduction",
+      "child_minor": "KRW 20M deduction",
+      "spouse": "KRW 600M deduction",
+      "parent": "KRW 50M deduction",
+      "other_relative": "KRW 10M deduction",
+      "other": "No deduction"
+    },
+    "unit": {
+      "currency": "KRW",
+      "tenYear": "Last 10 years",
+      "aggregation": "Subject to aggregated taxation"
+    },
+    "resultInfo": {
+      "selfReport": "* Estimated tax with 3% deduction for self-reporting.",
+      "consult": "* Actual tax requires consultation with a tax professional."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "subtitle": "Gift Tax Calculator",
+    "disclaimer": "This result is for reference only and has no legal effect. Please consult a professional for accurate rights analysis.",
+    "relationship": "Relationship",
+    "giftAmount": "Gift Amount",
+    "pastGiftAmount": "Past Gift Amount",
+    "calculateBtn": "Calculate"
+  },
+  "freelancer": {
+    "meta": {
+      "title": "My Insights",
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits",
+      "description": "Awaiting synthesis...",
+      "subtitle": "Freelancer Tax Calculator"
+    },
+    "inputs": {
+      "jobType": "Job Type",
+      "revenue": "Annual Revenue (before tax)",
+      "expenseRate": "Simple Expense Rate",
+      "dependents": "Number of Dependents",
+      "calculate": "Calculate"
+    },
+    "jobs": {
+      "developer": "Developer (940909)",
+      "creator": "Creator/BJ (940306)",
+      "writer": "Writer (940100)",
+      "designer": "Designer (940500)",
+      "delivery": "Delivery Rider (940911)",
+      "it": "IT Freelancer (940909)"
+    },
+    "results": {
+      "refundTitle": "Expected Refund",
+      "paymentTitle": "Expected Payment",
+      "totalTax": "Total Tax",
+      "alreadyPaid": "Withheld Tax (3.3%)",
+      "refundMsg": "You are likely to receive a refund when filing your comprehensive income tax in May.",
+      "paymentMsg": "Additional payment may be required when filing your comprehensive income tax in May.",
+      "calculated": "Calculated Tax",
+      "withheld": "Withheld Tax"
+    },
+    "tips": {
+      "content": "At the current return rate, it will take approximately {years} years for your assets to double."
+    },
+    "loading": {
+      "step1": "Checking initial capital...",
+      "step2": "Calculating compound returns...",
+      "step3": "Projecting final assets...",
+      "step4": "Generating optimal strategy"
+    },
+    "labels": {
+      "jobType": "Job Type",
+      "annualRevenue": "Annual Revenue"
+    },
+    "tooltips": {
+      "simpleRate": "Based on simple expense rate eligibility",
+      "beforeTax": "Total amount before 3.3% deduction"
+    },
+    "formTitle": "Freelancer Income Tax Calculator"
+  },
+  "cardOptimization": {
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+    },
+    "inputs": {
+      "salary": "Salary",
+      "creditCard": "Credit Card",
+      "debitCard": "Debit Card",
+      "calculate": "Calculate"
+    },
+    "loading": {
+      "title": "My Insights",
+      "step1": "Checking initial capital...",
+      "step2": "Calculating compound returns...",
+      "step3": "Projecting final assets...",
+      "step4": "Generating optimal strategy"
+    },
+    "tips": {
+      "content": "At the current return rate, it will take approximately {years} years for your assets to double."
+    },
+    "diagnosis": {
+      "strategies": {
+        "switchDebit": "You've exceeded 25% of your salary. Switch to debit card now. (30% deduction rate)"
+      },
+      "labels": {
+        "minThreshold": "Minimum Spending (25% of Salary)",
+        "ccUsed": "Current Credit Card Spending",
+        "ccVsThreshold": "Credit Card vs. Threshold"
+      },
+      "title": "My Insights"
+    },
+    "test": {
+      "insightBullets": [
+        "Unveil the hidden layers of your personal philosophy."
+      ],
+      "progress": "Progress",
+      "submit": "Calculate",
+      "loading": "Calculating...",
+      "selectOption": "Please select",
+      "next": "Next",
+      "previous": "Previous"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "vat": {
+    "modes": {
+      "total": "Total Amount",
+      "supply": "Supply Price Basis"
+    },
+    "labels": {
+      "totalAmount": "Total Amount (VAT included)",
+      "supplyAmount": "Supply Price (VAT excluded)"
+    },
+    "results": {
+      "supplyPrice": "Supply Price",
+      "vat": "VAT",
+      "total": "Total Amount"
+    },
+    "tip": {
+      "content": "At the current return rate, it will take approximately {years} years for your assets to double.",
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "VAT Calculator",
+      "disclaimer": "This result is for reference only and has no legal effect. Please consult a professional for accurate rights analysis.",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Calculate",
+      "loading": "Calculating...",
+      "selectOption": "Please select"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "subtitle": "VAT Calculator",
+    "currency": "KRW",
+    "disclaimer": "This result is for reference only and has no legal effect. Please consult a professional for accurate rights analysis.",
+    "title": "My Insights",
+    "ko-KR": "Korean"
+  },
+  "test": {
+    "insightBullets": ["Discover the unique patterns that define your path."],
+    "progress": "Progress",
+    "submit": "Calculate",
+    "loading": "Calculating...",
+    "selectOption": "Please select",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "tax": {
+    "freelancer": {
+      "meta": {
+        "title": "My Insights",
+        "keywords": "spending habits test, budget management, consumer psychology, financial habits",
+        "description": "Awaiting synthesis...",
+        "subtitle": "Freelancer Tax Calculator"
+      },
+      "inputs": {
+        "jobType": "Job Type",
+        "revenue": "Annual Revenue (before tax)",
+        "expenseRate": "Simple Expense Rate",
+        "dependents": "Number of Dependents",
+        "calculate": "Calculate"
+      },
+      "tips": {
+        "content": "At the current return rate, it will take approximately {years} years for your assets to double."
+      },
+      "loading": {
+        "step1": "Checking initial capital...",
+        "step2": "Calculating compound returns...",
+        "step3": "Projecting final assets...",
+        "step4": "Generating optimal strategy"
+      },
+      "results": {
+        "refundTitle": "Expected Refund",
+        "paymentTitle": "Expected Payment",
+        "totalTax": "Total Tax",
+        "alreadyPaid": "Withheld Tax (3.3%)",
+        "refundMsg": "You are likely to receive a refund when filing your comprehensive income tax in May.",
+        "paymentMsg": "Additional payment may be required when filing your comprehensive income tax in May.",
+        "calculated": "Calculated Tax",
+        "withheld": "Withheld Tax"
+      },
+      "labels": {
+        "jobType": "Job Type",
+        "annualRevenue": "Annual Revenue"
+      },
+      "tooltips": {
+        "simpleRate": "Based on simple expense rate eligibility",
+        "beforeTax": "Total amount before 3.3% deduction"
+      },
+      "jobs": {
+        "developer": "Developer (940909)",
+        "creator": "Creator/BJ (940306)",
+        "writer": "Writer (940100)",
+        "designer": "Designer (940500)",
+        "delivery": "Delivery Rider (940911)",
+        "it": "IT Freelancer (940909)"
+      },
+      "formTitle": "Freelancer Income Tax Calculator"
+    },
+    "cardOptimization": {
+      "inputs": {
+        "salary": "Salary",
+        "creditCard": "Credit Card",
+        "debitCard": "Debit Card",
+        "calculate": "Calculate"
+      },
+      "loading": {
+        "title": "My Insights",
+        "step1": "Checking initial capital...",
+        "step2": "Calculating compound returns...",
+        "step3": "Projecting final assets...",
+        "step4": "Generating optimal strategy"
+      },
+      "tips": {
+        "content": "At the current return rate, it will take approximately {years} years for your assets to double."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+      },
+      "diagnosis": {
+        "strategies": {
+          "switchDebit": "You've exceeded 25% of your salary. Switch to debit card now. (30% deduction rate)",
+          "optimizeCredit": "Don't miss out on credit card benefits. Add {amount} more.",
+          "startDeduction": "You're before the deduction threshold. Spend {amount} more to start earning deductions."
+        },
+        "labels": {
+          "minThreshold": "Minimum Spending (25% of Salary)",
+          "ccUsed": "Current Credit Card Spending",
+          "ccVsThreshold": "Credit Card vs. Threshold"
+        },
+        "title": "My Insights"
+      },
+      "unit": {
+        "currency": "KRW"
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "Progress",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "Calculate",
+        "loading": "Calculating...",
+        "selectOption": "Please select"
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    }
+  },
+  "nJobler": {
+    "unit": {
+      "currency": "KRW"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "payUser": "Pay User",
+      "refundUser": "Refund User",
+      "warning": "Warning",
+      "safe": "Safe (Recommended)",
+      "totalTax": "Total Tax",
+      "taxBase": "Tax Base"
+    },
+    "tip": {
+      "title": "My Insights",
+      "desc": "Analysis of your unique financial tendencies"
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Calculate",
+      "loading": "Calculating...",
+      "selectOption": "Please select",
+      "subtitle": "Tax Calculator"
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "subtitle": "Tax Calculator",
+    "disclaimer": "This result is for reference only and has no legal effect. Please consult a professional for accurate rights analysis.",
+    "salaryInput": "Salary Input",
+    "salaryPlaceholder": "e.g., 50000000",
+    "bizInput": "Biz Input",
+    "bizPlaceholder": "e.g., 10000000",
+    "bizDesc": "Biz Detailed Analysis Report",
+    "calculateBtn": "Calculate"
+  },
+  "compoundInterest": {
+    "labels": {
+      "principal": "Total Principal",
+      "monthlyContribution": "Monthly Contribution",
+      "period": "Period (years)",
+      "rate": "Annual Return Rate (%)"
+    },
+    "loading": {
+      "step1": "Checking initial capital...",
+      "step2": "Calculating compound returns...",
+      "step3": "Projecting final assets..."
+    },
+    "results": {
+      "finalAmount": "Estimated Final Amount",
+      "principal": "Total Principal",
+      "interest": "Total Compound Interest"
+    },
+    "tip": {
+      "content": "At the current return rate, it will take approximately {years} years for your assets to double.",
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "Compound Interest Calculator",
+      "disclaimer": "This result is for reference only and has no legal effect. Please consult a professional for accurate rights analysis.",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Calculate",
+      "loading": "Calculating...",
+      "selectOption": "Please select",
+      "subtitle": "Compound Interest Calculator"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "subtitle": "Compound Interest Calculator",
+    "currency": "KRW",
+    "years": "years",
+    "calculate": "Calculate",
+    "disclaimer": "This result is for reference only and has no legal effect. Please consult a professional for accurate rights analysis.",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "ko-KR": "Korean"
+  },
+  "jeonseGuard": {
+    "input": {
+      "subtitle": "Jeonse Safety Check",
+      "houseValue": "Market Price",
+      "deposit": "Jeonse Deposit",
+      "mortgage": "Prior Mortgage (Lien)",
+      "mortgageDesc": "Check the property registry and enter the maximum claim amount or actual loan amount.",
+      "unit": "KRW",
+      "title": "My Insights"
+    },
+    "checklist": {
+      "items": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "title": "My Insights"
+    },
+    "meta": {
+      "subtitle": "Jeonse Safety Check",
+      "disclaimer": "This result is for reference only and has no legal effect. Please consult a professional for accurate rights analysis.",
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "debtRatio": "Estimated Jeonse-to-Market Ratio"
+    },
+    "hero": {
+      "subtitle": "Jeonse Safety Check",
+      "badge": "Global Benchmarking"
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Calculate",
+      "loading": "Calculating...",
+      "selectOption": "Please select",
+      "subtitle": "Jeonse Safety Check"
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "🛡️",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⚖️",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📝",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🏦",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "subtitle": "Jeonse Safety Check",
+    "currency": "KRW",
+    "optional": "Optional",
+    "calculate": "Calculate",
+    "disclaimer": "This result is for reference only and has no legal effect. Please consult a professional for accurate rights analysis.",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "safe": "Safe (Recommended)",
+    "caution": "Caution (Verification Required)",
+    "danger": "Danger (Contract Risk)"
+  },
+  "moneyHabits": {
+    "meta": {
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits",
+      "resultTitle": "Money Habits Analysis Results",
+      "resultDescription": "An in-depth analysis of your spending psychology and financial behavior patterns.",
+      "testTitle": "Money Habits Diagnosis",
+      "testDescription": "Calculate your money management habit score.",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "hero": {
+      "subtitle": "Money Habits Check",
+      "cta": "Start Spending Diagnosis",
+      "badge": "Global Benchmarking",
+      "title": "My Insights"
+    },
+    "benefits": {
+      "items": {
+        "0": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        },
+        "1": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        },
+        "2": {
+          "emoji": "🛡️",
+          "title": "My Insights",
+          "description": "Awaiting synthesis..."
+        }
+      },
+      "title": "My Insights"
+    },
+    "cta": {
+      "subtitle": "Money Habits Check",
+      "button": "Go to Test",
+      "title": "My Insights"
+    },
+    "faq": {
+      "items": {
+        "0": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "1": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "2": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        "3": {
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      },
+      "title": "My Insights"
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📝",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "common": {
+        "progress": "Progress",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "Calculate",
+        "start": "Start",
+        "loading": "Calculating...",
+        "results": "Results",
+        "dashboard": "Dashboard",
+        "insights": "Personalized Insights"
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "Progress",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "Calculate",
+        "loading": "Calculating...",
+        "selectOption": "Please select"
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+      },
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Calculate",
+      "loading": "Calculating...",
+      "selectOption": "Please select",
+      "subtitle": "Money Habits Check",
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits",
+      "finish": "Finish",
+      "swipeHint": "Swipe left or right"
+    },
+    "result": {
+      "chart": {
+        "impulseControl": "Impulse Control",
+        "savingCapacity": "Saving Capacity",
+        "planningSkill": "Planning Skill",
+        "emotionalControl": "Emotional Control"
+      },
+      "test": {
+        "insightBullets": ["Awaiting synthesis..."],
+        "progress": "Progress",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "Calculate",
+        "loading": "Calculating...",
+        "selectOption": "Please select"
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis...",
+        "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+      },
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits",
+      "loading": "Calculating...",
+      "shareTitle": "Time for Reflection",
+      "copySuccess": "Copied",
+      "scoresTitle": "Time for Reflection",
+      "impulseRisk": "Impulse Purchase Risk",
+      "strengths": "My Strengths",
+      "challenges": "Areas for Improvement",
+      "actionTips": "Action Tips",
+      "savingRecommendation": "Recommended Saving Method",
+      "recommendedPercentage": "Recommended Saving Ratio",
+      "share": "Share Results",
+      "retake": "Retake Test"
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+  },
+  "payment": {
+    "checkout": {
+      "orderName": "Oiyo.net {planName} Subscription"
+    },
+    "errors": {
+      "PLAN_NOT_FOUND": "Subscription plan not found.",
+      "PAYMENT_SERVICE_ERROR": "An error occurred in the payment service. Please try again.",
+      "PROVIDER_REQUIRED": "Payment provider configuration is required.",
+      "LOCALE_REQUIRED": "Please verify the locale information required for payment.",
+      "CURRENCY_REQUIRED": "Payment currency information is required.",
+      "TOSS_CLIENT_KEY_REQUIRED": "Toss client key is not configured.",
+      "LEMONSQUEEZY_CONFIG_REQUIRED": "LemonSqueezy store or product ID is required.",
+      "generic": "Payment failed. Please try again."
+    },
+    "failed": {
+      "help": {
+        "technical": {
+          "refresh": "Refresh the page",
+          "browser": "Try a different browser",
+          "network": "Check your internet connection",
+          "incognito": "Try incognito/private browsing mode",
+          "title": "My Insights"
+        },
+        "payment": {
+          "title": "My Insights",
+          "checkCard": "Check your card information",
+          "checkFunds": "Check if you have sufficient funds",
+          "tryAnother": "Try a different payment method",
+          "contactBank": "Contact your card issuer"
+        }
+      },
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "Awaiting synthesis...",
+          "Awaiting synthesis...",
+          "Awaiting synthesis..."
+        ],
+        "progress": "Progress",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "Calculate",
+        "loading": "Calculating...",
+        "selectOption": "Please select",
+        "subtitle": "Payment"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "subtitle": "Payment",
+      "genericTitle": "Payment Error",
+      "genericDescription": "An error occurred during payment processing. Please try again.",
+      "genericAction": "Try Again",
+      "unknownTitle": "Unknown Error",
+      "unknownDescription": "An unexpected error occurred. Please contact customer support.",
+      "unknownAction": "Contact Support",
+      "orderId": "Order ID",
+      "orderIdNote": "Keep this order ID as reference when contacting support.",
+      "technicalDetails": "Technical Details",
+      "errorCode": "Error Code",
+      "errorMessage": "Error Message",
+      "whatNext": "What should I do?",
+      "contactSupport": "Contact Support",
+      "backToHome": "Back to Home",
+      "needHelp": "Need help?",
+      "stillNeedHelp": "Still having issues?",
+      "getSupport": "Get Support",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "success": {
+      "meta": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "benefits": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "📊",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚫",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "📂",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💎",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "faq": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "test": {
+        "insightBullets": [
+          "Awaiting synthesis...",
+          "Awaiting synthesis...",
+          "Awaiting synthesis..."
+        ],
+        "progress": "Progress",
+        "next": "Next",
+        "previous": "Previous",
+        "submit": "Calculate",
+        "loading": "Calculating...",
+        "selectOption": "Please select",
+        "subtitle": "Payment"
+      },
+      "features": {
+        "items": [
+          {
+            "icon": "✨",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🚀",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "💡",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🎯",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "🔥",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          },
+          {
+            "icon": "⭐",
+            "title": "Awaiting synthesis...",
+            "description": "Awaiting synthesis...",
+            "question": "Awaiting synthesis...",
+            "answer": "Awaiting synthesis..."
+          }
+        ]
+      },
+      "result": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "welcome', { name: user": {
+        "firstName || user": {
+          "fullName || t('success": {
+            "user": "User"
+          }
+        }
+      },
+      "subtitle": "Payment",
+      "verifying": "Verifying payment...",
+      "verifyingDescription": "Please wait while we verify your payment",
+      "premiumActive": "Premium Activated",
+      "welcome": "Welcome, {name}!",
+      "user": "User",
+      "paymentDetails": "Payment Details",
+      "orderId": "Order ID",
+      "amount": "Amount",
+      "status": "Status",
+      "confirmed": "Confirmed",
+      "verificationSuccess": "Payment has been confirmed. You can now use premium features.",
+      "verificationFailed": "Could not verify payment. Please try again.",
+      "verificationNetworkError": "Cannot connect to payment server. Please try again later.",
+      "verificationRetry": "Re-verify Payment",
+      "verificationPending": "Awaiting Confirmation",
+      "approvedAt": "Approved At",
+      "featuresUnlocked": "Premium features are now available",
+      "nextSteps": "What's next?",
+      "goToDashboard": "Go to Dashboard",
+      "takeTest": "Take a Test",
+      "supportNote": "Need help? Our premium support team is here for you.",
+      "contactSupport": "Contact Support",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Calculate",
+      "loading": "Calculating...",
+      "selectOption": "Please select"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis...",
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+    },
+    "checkCard": "Check your card information",
+    "checkFunds": "Check if you have sufficient funds",
+    "tryAnother": "Try a different payment method",
+    "contactBank": "Contact your card issuer"
+  },
+  "globalComparison": {
+    "meta": {
+      "cta": {
+        "button": "Go to Test"
+      },
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits",
+      "badge": "Global Benchmarking",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "filters": {
+      "region": "🌏 Select Region",
+      "age": "👥 Age Group",
+      "gender": "⚧ Gender",
+      "test": "Test Title"
+    },
+    "tabs": {
+      "overview": "📈 Overview",
+      "regional": "🗺️ Regional Comparison",
+      "demographics": "👥 Demographics",
+      "rankings": "🏆 Rankings"
+    },
+    "chart": {
+      "scoreDistribution": "📊 Score Distribution",
+      "personalityRankings": "🏆 Personality Type Rankings",
+      "avgScore": "Average Score",
+      "users": "Users",
+      "topRankText": "You are in the top {percent}% of global users 🚀",
+      "allAges": "All Ages",
+      "all": "All",
+      "male": "Male",
+      "female": "Female",
+      "global": "Global",
+      "asia": "Asia",
+      "europe": "Europe",
+      "northAmerica": "North America",
+      "korea": "Korea",
+      "southAmerica": "South America",
+      "africa": "Africa",
+      "oceania": "Oceania"
+    },
+    "demographics": {
+      "comingSoon": "📊 Demographic analysis feature coming soon."
+    },
+    "cta": {
+      "button": "Go to Test",
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "features": {
+      "benchmarking": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      },
+      "regional": {
+        "title": "My Insights",
+        "description": "Awaiting synthesis..."
+      }
+    },
+    "insights": {
+      "yourScore": "My Score",
+      "globalAverage": "Global Average",
+      "percentile": "Percentile",
+      "topPerformers": "Top Performers",
+      "aboveAverage": "Above Average",
+      "belowAverage": "Below Average",
+      "regions": "Regional Distribution"
+    },
+    "test": {
+      "insightBullets": ["Awaiting synthesis..."],
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Calculate",
+      "loading": "Calculating...",
+      "selectOption": "Please select"
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "badge": "Global Benchmarking",
+    "loading": "Calculating...",
+    "noData": "📋 No data to analyze. Please complete a personality test first.",
+    "title": "My Insights",
+    "description": "Awaiting synthesis...",
+    "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+  },
+  "luck": {
+    "meta": {
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+    },
+    "hero": {
+      "eyebrow": "Smart Wallet Lab",
+      "subtitle": "Financial Luck Check",
+      "cta": "Start Spending Diagnosis"
+    }
+  },
+  "spendingStyle": {
+    "meta": {
+      "keywords": "spending habits test, budget management, consumer psychology, financial habits"
+    },
+    "hero": {
+      "eyebrow": "Smart Wallet Lab",
+      "subtitle": "Spending Style Check",
+      "cta": "Start Spending Diagnosis"
+    }
+  },
+  "giftTax": {
+    "test": {
+      "insightBullets": [
+        "Awaiting synthesis...",
+        "Awaiting synthesis...",
+        "Awaiting synthesis..."
+      ],
+      "progress": "Progress",
+      "next": "Next",
+      "previous": "Previous",
+      "submit": "Calculate",
+      "loading": "Calculating...",
+      "selectOption": "Please select",
+      "subtitle": "Gift Tax Calculator"
+    },
+    "meta": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "benefits": {
+      "items": [
+        {
+          "icon": "💰",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📉",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "📊",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "faq": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "features": {
+      "items": [
+        {
+          "icon": "✨",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🚀",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "💡",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🎯",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "🔥",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        },
+        {
+          "icon": "⭐",
+          "title": "Awaiting synthesis...",
+          "description": "Awaiting synthesis...",
+          "question": "Awaiting synthesis...",
+          "answer": "Awaiting synthesis..."
+        }
+      ]
+    },
+    "result": {
+      "title": "My Insights",
+      "description": "Awaiting synthesis..."
+    },
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "faq": {
+    "items": [
+      {
+        "icon": "📝",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "📉",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "💸",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      }
+    ]
+  },
+  "result": {
+    "title": "My Insights",
+    "description": "Awaiting synthesis..."
+  },
+  "features": {
+    "items": [
+      {
+        "icon": "🧮",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      },
+      {
+        "icon": "📊",
+        "title": "Awaiting synthesis...",
+        "description": "Awaiting synthesis..."
+      }
+    ]
+  },
+  "title": "My Insights"
+}

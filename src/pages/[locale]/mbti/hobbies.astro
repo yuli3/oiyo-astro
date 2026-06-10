@@ -1,0 +1,152 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, localePath } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+type L = Locale;
+const txt = (map: Record<L, string>) => map[locale] ?? map.en;
+
+const meta = {
+  title: txt({
+    ko: 'MBTI별 추천 취미 — 나에게 맞는 취미 찾기',
+    en: 'MBTI Hobbies — Find Activities That Suit Your Type',
+    ja: 'MBTIタイプ別おすすめ趣味',
+    zh: 'MBTI类型推荐爱好',
+    fr: 'Loisirs MBTI — Trouvez des activités selon votre type',
+    es: 'Pasatiempos MBTI — Encuentra actividades para tu tipo',
+  }),
+  description: txt({
+    ko: 'MBTI 16가지 유형별로 에너지를 충전하고 몰입할 수 있는 취미를 추천합니다. 내향형과 외향형, 직관형과 감각형의 취향 차이를 반영한 취미 가이드.',
+    en: 'Discover hobbies matched to all 16 MBTI types. Activities designed to recharge your energy and spark deep engagement based on your personality preferences.',
+    ja: 'MBTI 16タイプ別に合ったおすすめ趣味を紹介。エネルギーを充電し、深く楽しめる活動をタイプごとにご提案。',
+    zh: '根据MBTI 16种类型推荐适合的爱好，帮助你充电和深度投入的活动。',
+    fr: 'Découvrez des loisirs adaptés aux 16 types MBTI. Activités pour recharger votre énergie selon vos préférences de personnalité.',
+    es: 'Descubre pasatiempos para los 16 tipos MBTI. Actividades para recargar energía según tus preferencias de personalidad.',
+  }),
+};
+
+const heading = txt({
+  ko: 'MBTI별 추천 취미',
+  en: 'Hobbies by MBTI Type',
+  ja: 'MBTIタイプ別おすすめ趣味',
+  zh: 'MBTI类型推荐爱好',
+  fr: 'Loisirs par Type MBTI',
+  es: 'Pasatiempos por Tipo MBTI',
+});
+
+const subheading = txt({
+  ko: '내 유형에 맞는 취미를 찾으면 억지로 즐기려 하지 않아도 자연스럽게 빠져듭니다.',
+  en: 'When you find a hobby that fits your type, you\'ll find yourself naturally drawn in — no forcing required.',
+  ja: '自分のタイプに合った趣味を見つけると、自然と深く楽しめるようになります。',
+  zh: '找到适合自己类型的爱好，就能自然地沉浸其中，无需强迫自己。',
+  fr: 'Quand vous trouvez un loisir adapté à votre type, vous vous y plongez naturellement.',
+  es: 'Cuando encuentras un pasatiempo que se adapta a tu tipo, te sumerges naturalmente.',
+});
+
+const labelHobbies = txt({ ko: '추천 취미', en: 'Recommended Hobbies', ja: 'おすすめ趣味', zh: '推荐爱好', fr: 'Loisirs recommandés', es: 'Pasatiempos recomendados' });
+const labelWhy = txt({ ko: '잘 맞는 이유', en: 'Why it fits', ja: 'なぜ合うのか', zh: '为什么适合', fr: 'Pourquoi ça convient', es: 'Por qué se adapta' });
+const labelTest = txt({ ko: '내 MBTI 알아보기', en: 'Find my MBTI', ja: 'MBTIを調べる', zh: '了解我的MBTI', fr: 'Trouver mon MBTI', es: 'Encontrar mi MBTI' });
+
+interface MBTIEntry {
+  type: string;
+  color: string;
+  hobbies: string;
+  why: Record<L, string>;
+}
+
+const TYPES: MBTIEntry[] = [
+  { type: 'INTJ', color: 'bg-violet-100 border-violet-300',
+    hobbies: txt({ ko: '체스·바둑, 코딩·프로그래밍, SF 소설, 전략 보드게임, 투자 분석, 철학 독서', en: 'Chess, coding, sci-fi novels, strategy board games, investment analysis, philosophy reading', ja: 'チェス·囲碁、コーディング、SF小説、戦略ボードゲーム、投資分析', zh: '国际象棋、编程、科幻小说、战略棋盘游戏、投资分析、哲学阅读', fr: 'Échecs, programmation, romans SF, jeux de stratégie, analyse d\'investissement', es: 'Ajedrez, programación, novelas de ciencia ficción, juegos de estrategia, análisis de inversión' }),
+    why: { ko: '장기적 패턴과 전략 설계를 즐기는 INTJ에게 최적', en: 'Perfect for INTJs who enjoy long-term pattern recognition and strategic planning', ja: '長期的パターンと戦略設計を楽しむINTJに最適', zh: '对于享受长期模式识别和战略规划的INTJ来说是最佳选择', fr: 'Parfait pour les INTJ qui apprécient la reconnaissance de patterns et la planification stratégique', es: 'Perfecto para INTJs que disfrutan el reconocimiento de patrones a largo plazo' } },
+  { type: 'INTP', color: 'bg-sky-100 border-sky-300',
+    hobbies: txt({ ko: '수학·물리 퍼즐, 오픈소스 프로젝트, 위키 편집, 언어 학습, 실험적 요리, 도미노 설계', en: 'Math/physics puzzles, open-source projects, wiki editing, language learning, experimental cooking, domino design', ja: '数学·物理パズル、オープンソース、言語学習、実験料理', zh: '数学物理谜题、开源项目、语言学习、实验烹饪', fr: 'Puzzles mathématiques, projets open-source, apprentissage des langues, cuisine expérimentale', es: 'Puzzles matemáticos, proyectos open-source, aprendizaje de idiomas, cocina experimental' }),
+    why: { ko: '논리 구조를 탐구하고 아이디어를 연결하는 것을 좋아하는 INTP에게 이상적', en: 'Ideal for INTPs who love exploring logical structures and connecting ideas', ja: '論理構造を探求しアイデアをつなぐことが好きなINTPに理想的', zh: '对于喜欢探索逻辑结构并连接想法的INTP来说是理想选择', fr: 'Idéal pour les INTP qui aiment explorer les structures logiques et connecter les idées', es: 'Ideal para INTPs que aman explorar estructuras lógicas y conectar ideas' } },
+  { type: 'ENTJ', color: 'bg-red-100 border-red-300',
+    hobbies: txt({ ko: '토론 클럽, 비즈니스 시뮬레이션, 마라톤·트라이애슬론, 독서 모임(리더십), 투자·주식', en: 'Debate clubs, business simulations, marathon/triathlon, leadership book clubs, investing', ja: 'ディベートクラブ、ビジネスシミュレーション、マラソン、投資', zh: '辩论俱乐部、商业模拟、马拉松、领导力读书会、投资', fr: 'Clubs de débat, simulations d\'affaires, marathon/triathlon, clubs de lecture leadership', es: 'Clubes de debate, simulaciones de negocios, maratón/triatlón, clubes de lectura de liderazgo' }),
+    why: { ko: '목표를 향해 추진하고 경쟁에서 에너지를 얻는 ENTJ의 성향과 맞음', en: 'Aligns with ENTJs\' drive to push toward goals and gain energy from competition', ja: '目標に向かって推進し競争からエネルギーを得るENTJの傾向と一致', zh: '与ENTJ追求目标、从竞争中获得能量的特质相符', fr: 'Correspond à la tendance ENTJ à poursuivre des objectifs et à gagner de l\'énergie de la compétition', es: 'Se alinea con la tendencia ENTJ de perseguir objetivos y ganar energía de la competencia' } },
+  { type: 'ENTP', color: 'bg-orange-100 border-orange-300',
+    hobbies: txt({ ko: '즉흥 연기·임프로브, 브레인스토밍 세션, 팟캐스트 제작, 스타트업 프로젝트, 과학 실험', en: 'Improv comedy, brainstorming sessions, podcast creation, startup projects, science experiments', ja: 'インプロバイゼーション、ブレインストーミング、ポッドキャスト制作、スタートアッププロジェクト', zh: '即兴表演、头脑风暴、播客制作、创业项目、科学实验', fr: 'Comédie improvisée, séances de brainstorming, création de podcasts, projets de startup', es: 'Comedia improvisada, sesiones de brainstorming, creación de podcasts, proyectos de startup' }),
+    why: { ko: '새로운 아이디어와 논쟁을 즐기는 ENTP에게 최적의 창의적 출구', en: 'Perfect creative outlet for ENTPs who enjoy new ideas and intellectual debate', ja: '新しいアイデアと議論を楽しむENTPに最適な創造的な出口', zh: '对于喜欢新想法和智识辩论的ENTP来说是完美的创意出口', fr: 'Exutoire créatif parfait pour les ENTP qui apprécient les nouvelles idées et les débats intellectuels', es: 'Salida creativa perfecta para ENTPs que disfrutan nuevas ideas y debates intelectuales' } },
+  { type: 'INFJ', color: 'bg-purple-100 border-purple-300',
+    hobbies: txt({ ko: '일기·에세이 쓰기, 심리학·철학 독서, 아트저널링, 명상, 자원봉사, 시 창작', en: 'Journaling/essay writing, psychology & philosophy reading, art journaling, meditation, volunteering, poetry', ja: '日記·エッセイ書き、心理学·哲学読書、アートジャーナリング、瞑想', zh: '日记写作、心理学哲学阅读、艺术日志、冥想、志愿服务、诗歌创作', fr: 'Journalisation/écriture d\'essais, lecture de psychologie et philosophie, journal artistique, méditation', es: 'Journaling/escritura de ensayos, lectura de psicología y filosofía, journal artístico, meditación' }),
+    why: { ko: '내면 세계를 탐구하고 의미를 찾는 INFJ에게 깊은 만족을 주는 활동', en: 'Activities that give INFJs deep satisfaction in exploring the inner world and finding meaning', ja: '内面世界を探求し意味を見つけるINFJに深い満足をもたらす活動', zh: '给喜欢探索内心世界和寻找意义的INFJ带来深度满足的活动', fr: 'Activités qui donnent aux INFJ une profonde satisfaction dans l\'exploration du monde intérieur', es: 'Actividades que dan a los INFJ satisfacción profunda en explorar el mundo interior' } },
+  { type: 'INFP', color: 'bg-pink-100 border-pink-300',
+    hobbies: txt({ ko: '소설·시 창작, 수채화·일러스트, 음악 작곡, 판타지 세계관 설계, 감성 여행', en: 'Novel/poetry writing, watercolor/illustration, music composition, world-building, soul travel', ja: '小説·詩創作、水彩画·イラスト、音楽作曲、ファンタジー世界観設計', zh: '小说诗歌创作、水彩画插画、音乐作曲、奇幻世界构建、感性旅行', fr: 'Écriture de romans/poésie, aquarelle/illustration, composition musicale, construction de monde', es: 'Escritura de novelas/poesía, acuarela/ilustración, composición musical, construcción de mundos' }),
+    why: { ko: '풍부한 감성과 상상력으로 내면의 세계를 표현하는 것을 좋아하는 INFP에게 딱 맞음', en: 'Perfect for INFPs who love expressing their inner world through rich emotion and imagination', ja: '豊かな感性と想像力で内なる世界を表現することが好きなINFPにぴったり', zh: '非常适合喜欢用丰富情感和想象力表达内心世界的INFP', fr: 'Parfait pour les INFP qui aiment exprimer leur monde intérieur avec une riche émotion', es: 'Perfecto para INFPs que aman expresar su mundo interior con rica emoción e imaginación' } },
+  { type: 'ENFJ', color: 'bg-green-100 border-green-300',
+    hobbies: txt({ ko: '그룹 코칭·멘토링, 연극·뮤지컬, 커뮤니티 행사 기획, 외국어 학습, 토스트마스터스', en: 'Group coaching/mentoring, theater/musicals, community event planning, language learning, Toastmasters', ja: 'グループコーチング·メンタリング、演劇·ミュージカル、コミュニティイベント企画', zh: '团体辅导指导、戏剧音乐剧、社区活动策划、外语学习', fr: 'Coaching/mentorat de groupe, théâtre/comédies musicales, planification d\'événements communautaires', es: 'Coaching/mentoría grupal, teatro/musicales, planificación de eventos comunitarios, aprendizaje de idiomas' }),
+    why: { ko: '사람들과 함께 성장하고 영감을 주는 것에서 에너지를 얻는 ENFJ에게 이상적', en: 'Ideal for ENFJs who gain energy from growing together with people and inspiring others', ja: '人々と共に成長し、インスピレーションを与えることでエネルギーを得るENFJに理想的', zh: '对于从与他人共同成长和激励他人中获得能量的ENFJ来说是理想选择', fr: 'Idéal pour les ENFJ qui gagnent de l\'énergie en grandissant avec les autres', es: 'Ideal para ENFJs que ganan energía creciendo juntos con las personas' } },
+  { type: 'ENFP', color: 'bg-yellow-100 border-yellow-300',
+    hobbies: txt({ ko: '즉흥 여행, 창작 글쓰기, SNS 콘텐츠 제작, 세계 음식 탐험, 댄스, 커뮤니티 서클', en: 'Spontaneous travel, creative writing, social media content creation, world food exploration, dance, community circles', ja: 'スポンテーニアスな旅行、創作文章、SNSコンテンツ制作、世界料理探訪、ダンス', zh: '即兴旅行、创意写作、社交媒体内容创作、世界美食探索、舞蹈、社区圈子', fr: 'Voyages spontanés, écriture créative, création de contenu sur les réseaux sociaux, exploration culinaire mondiale', es: 'Viajes espontáneos, escritura creativa, creación de contenido en redes sociales, exploración culinaria mundial' }),
+    why: { ko: '끊임없는 새로움과 가능성을 탐구하는 ENFP의 에너지를 살려줌', en: 'Nurtures the ENFP\'s energy for constantly exploring novelty and possibilities', ja: '絶え間ない新しさと可能性を探求するENFPのエネルギーを活かす', zh: '激发ENFP不断探索新事物和可能性的能量', fr: 'Nourrit l\'énergie des ENFP pour explorer constamment la nouveauté et les possibilités', es: 'Nutre la energía del ENFP para explorar constantemente la novedad y las posibilidades' } },
+  { type: 'ISTJ', color: 'bg-slate-100 border-slate-300',
+    hobbies: txt({ ko: '수집(우표·화폐·레코드), 역사 독서, 가드닝, 목공·DIY, 테이블탑 RPG(GM 역할), 뜨개질', en: 'Collecting (stamps/coins/records), history reading, gardening, woodworking/DIY, tabletop RPG (as GM), knitting', ja: 'コレクション(切手·貨幣·レコード)、歴史読書、ガーデニング、木工·DIY', zh: '收藏(邮票硬币唱片)、历史阅读、园艺、木工DIY、桌游RPG', fr: 'Collection (timbres/monnaies/disques), lecture d\'histoire, jardinage, bricolage/DIY, RPG de table', es: 'Coleccionismo (sellos/monedas/discos), lectura de historia, jardinería, carpintería/bricolaje' }),
+    why: { ko: '체계와 전통을 중시하고 꾸준히 발전하는 것을 좋아하는 ISTJ에게 적합', en: 'Suited for ISTJs who value structure and tradition and enjoy steady, incremental improvement', ja: '体系と伝統を重視し、着実に発展することが好きなISTJに適しています', zh: '适合重视体系和传统、喜欢稳步进步的ISTJ', fr: 'Convient aux ISTJ qui valorisent la structure et la tradition et aiment une amélioration constante', es: 'Adecuado para ISTJs que valoran la estructura y la tradición y disfrutan la mejora gradual' } },
+  { type: 'ISFJ', color: 'bg-teal-100 border-teal-300',
+    hobbies: txt({ ko: '베이킹·제과, 스크랩북·사진 정리, 봉사활동, 독서(힐링·에세이), 꽃꽂이, 홈 인테리어', en: 'Baking/pastry, scrapbooking/photo organizing, volunteering, reading (healing/essays), flower arranging, home decorating', ja: 'ベーキング·製菓、スクラップブック·写真整理、ボランティア、読書(ヒーリング)、生け花', zh: '烘焙制点、剪贴簿照片整理、志愿服务、阅读(治愈系)、插花、家居装饰', fr: 'Pâtisserie/boulangerie, scrapbooking, bénévolat, lecture (livres apaisants), arrangement floral', es: 'Repostería, scrapbooking/organización de fotos, voluntariado, lectura (libros sanadores), arreglo floral' }),
+    why: { ko: '주변을 돌보고 아름답게 만드는 것에서 보람을 느끼는 ISFJ에게 최적', en: 'Perfect for ISFJs who find fulfillment in caring for others and creating beautiful surroundings', ja: '周りを気にかけて美しくすることに充実感を感じるISFJに最適', zh: '对于从关爱他人和创造美丽环境中找到满足感的ISFJ来说是最佳选择', fr: 'Parfait pour les ISFJ qui trouvent épanouissement à prendre soin des autres et créer un environnement beau', es: 'Perfecto para ISFJs que encuentran satisfacción en cuidar a los demás y crear entornos hermosos' } },
+  { type: 'ESTJ', color: 'bg-amber-100 border-amber-300',
+    hobbies: txt({ ko: '스포츠 팀 코치, 지역 정치·봉사 활동, 부동산 투자 스터디, 자격증 취득, 마라톤', en: 'Sports team coaching, local politics/community service, real estate investment study groups, certifications, marathon', ja: 'スポーツチームコーチング、地域政治·奉仕活動、不動産投資スタディグループ、資格取得', zh: '体育队教练、地方政治社区服务、房地产投资学习小组、获得资格证、马拉松', fr: 'Entraînement d\'équipes sportives, politique locale, groupes d\'étude immobilière, certifications, marathon', es: 'Entrenamiento de equipos deportivos, política local, grupos de estudio inmobiliario, certificaciones, maratón' }),
+    why: { ko: '조직을 이끌고 결과를 만들어내는 것에서 성취감을 느끼는 ESTJ에 딱 맞음', en: 'Perfectly aligned with ESTJs\' sense of achievement from leading organizations and producing results', ja: '組織を率いて成果を生み出すことに達成感を感じるESTJにぴったり', zh: '与从领导组织和产生成果中获得成就感的ESTJ完美契合', fr: 'Parfaitement aligné avec le sentiment de réalisation des ESTJ dans le leadership et la production de résultats', es: 'Perfectamente alineado con el sentido de logro de los ESTJ al liderar organizaciones y producir resultados' } },
+  { type: 'ESFJ', color: 'bg-rose-100 border-rose-300',
+    hobbies: txt({ ko: '소셜 쿠킹 클래스, 이벤트 기획·웨딩 플래너, SNS 인플루언서 활동, 합창·밴드, 독서 모임', en: 'Social cooking classes, event/wedding planning, social media influencing, choir/band, book clubs', ja: 'ソーシャルクッキングクラス、イベント·ウェディングプランナー、SNSインフルエンサー活動、合唱·バンド', zh: '社交烹饪课、活动婚礼策划、社交媒体达人、合唱乐队、读书会', fr: 'Cours de cuisine sociaux, planification d\'événements/mariages, influence sur les réseaux sociaux, chorale/groupe', es: 'Clases de cocina social, planificación de eventos/bodas, influencia en redes sociales, coro/banda' }),
+    why: { ko: '사람들과 연결되고 조화를 만들어내는 것에서 에너지를 얻는 ESFJ에게 딱 맞음', en: 'Perfect for ESFJs who gain energy from connecting with people and creating harmony', ja: '人々とつながり調和を生み出すことからエネルギーを得るESFJにぴったり', zh: '对于从与人建立联系和创造和谐中获得能量的ESFJ来说是完美选择', fr: 'Parfait pour les ESFJ qui gagnent de l\'énergie en se connectant avec les gens et en créant l\'harmonie', es: 'Perfecto para ESFJs que ganan energía conectando con personas y creando armonía' } },
+  { type: 'ISTP', color: 'bg-zinc-100 border-zinc-300',
+    hobbies: txt({ ko: '오토바이·자동차 정비, 클라이밍·서핑, 목공·금속공예, 사진 촬영(다큐멘터리), 3D 프린팅', en: 'Motorcycle/car mechanics, rock climbing/surfing, woodworking/metalworking, documentary photography, 3D printing', ja: 'バイク·自動車整備、ロッククライミング·サーフィン、木工·金属加工、写真撮影(ドキュメンタリー)、3Dプリント', zh: '摩托车汽车维修、攀岩冲浪、木工金属工艺、纪录片摄影、3D打印', fr: 'Mécanique moto/auto, escalade/surf, menuiserie/métallurgie, photographie documentaire, impression 3D', es: 'Mecánica de motos/coches, escalada/surf, carpintería/metalurgia, fotografía documental, impresión 3D' }),
+    why: { ko: '손으로 만지고 분해하고 해결하는 과정에서 몰입하는 ISTP에게 최적', en: 'Optimal for ISTPs who find flow in hands-on work, disassembling, and solving problems', ja: '手で触れ、分解し、解決するプロセスに没頭するISTPに最適', zh: '对于在动手、拆解和解决问题过程中进入心流状态的ISTP来说是最佳选择', fr: 'Optimal pour les ISTP qui trouvent le flow dans le travail manuel, le démontage et la résolution de problèmes', es: 'Óptimo para ISTPs que encuentran el flow en el trabajo manual, el desmontaje y la resolución de problemas' } },
+  { type: 'ISFP', color: 'bg-lime-100 border-lime-300',
+    hobbies: txt({ ko: '수채화·아크릴화, 도예, 자연 사진, 요가·필라테스, 향수·캔들 만들기, 반려동물 돌봄', en: 'Watercolor/acrylic painting, ceramics/pottery, nature photography, yoga/pilates, perfume/candle making, pet care', ja: '水彩画·アクリル画、陶芸、自然写真、ヨガ·ピラティス、香水·キャンドル作り', zh: '水彩画丙烯画、陶艺、自然摄影、瑜伽普拉提、香水蜡烛制作、宠物照料', fr: 'Aquarelle/peinture acrylique, céramique/poterie, photographie nature, yoga/pilates, fabrication de parfum/bougies', es: 'Acuarela/pintura acrílica, cerámica/alfarería, fotografía de naturaleza, yoga/pilates, fabricación de perfumes/velas' }),
+    why: { ko: '감각적 아름다움과 현재 순간의 경험을 중시하는 ISFP에게 자연스러운 취미', en: 'Natural hobbies for ISFPs who value sensory beauty and present-moment experiences', ja: '感覚的な美しさと現在の瞬間の経験を大切にするISFPにとって自然な趣味', zh: '对于重视感官美和当下体验的ISFP来说自然而然的爱好', fr: 'Loisirs naturels pour les ISFP qui valorisent la beauté sensorielle et les expériences du moment présent', es: 'Pasatiempos naturales para ISFPs que valoran la belleza sensorial y las experiencias del momento presente' } },
+  { type: 'ESTP', color: 'bg-red-100 border-orange-300',
+    hobbies: txt({ ko: '격투기·스파링, 스케이트보드, 포커·도박 전략, 부동산·플리핑, 이벤트 MC, 자동차 레이싱', en: 'Martial arts/sparring, skateboarding, poker/strategy gambling, real estate flipping, event MCing, car racing', ja: '格闘技·スパーリング、スケートボード、ポーカー、不動産フリッピング、イベントMC', zh: '格斗武术、滑板、扑克策略、房产翻修、活动主持、赛车', fr: 'Arts martiaux/combat, skateboard, poker/jeux de stratégie, retournement immobilier, animation d\'événements', es: 'Artes marciales/sparring, skateboarding, póker/juegos de estrategia, flipping inmobiliario, animación de eventos' }),
+    why: { ko: '스릴과 즉각적인 행동, 현실적 결과에서 에너지를 얻는 ESTP에게 최적', en: 'Optimal for ESTPs who gain energy from thrill, immediate action, and tangible results', ja: 'スリルと即座の行動、現実的な結果からエネルギーを得るESTPに最適', zh: '对于从刺激、即时行动和实际结果中获得能量的ESTP来说是最佳选择', fr: 'Optimal pour les ESTP qui gagnent de l\'énergie du frisson, de l\'action immédiate et des résultats tangibles', es: 'Óptimo para ESTPs que ganan energía del emoción, la acción inmediata y los resultados tangibles' } },
+  { type: 'ESFP', color: 'bg-fuchsia-100 border-fuchsia-300',
+    hobbies: txt({ ko: '댄스·케이팝, 유튜브·틱톡 창작, 파티·이벤트 기획, 패션·스타일링, 노래(보컬 레슨)', en: 'Dance/K-pop, YouTube/TikTok creation, party/event organizing, fashion/styling, singing (vocal lessons)', ja: 'ダンス·K-POP、YouTube·TikTok創作、パーティー·イベント企画、ファッション·スタイリング', zh: '舞蹈K-pop、YouTube/TikTok创作、派对活动组织、时尚造型、唱歌声乐课', fr: 'Danse/K-pop, création YouTube/TikTok, organisation de fêtes/événements, mode/stylisme, chant', es: 'Baile/K-pop, creación YouTube/TikTok, organización de fiestas/eventos, moda/estilismo, canto' }),
+    why: { ko: '삶 자체를 즐기고 사람들을 즐겁게 하는 것에서 기쁨을 찾는 ESFP에게 완벽한 출구', en: 'Perfect outlet for ESFPs who find joy in enjoying life itself and making others happy', ja: '人生自体を楽しみ、人々を喜ばせることに喜びを見つけるESFPにとって完璧な出口', zh: '对于从享受生活本身和让他人快乐中找到喜悦的ESFP来说是完美的出口', fr: 'Exutoire parfait pour les ESFP qui trouvent de la joie dans l\'appréciation de la vie et la joie des autres', es: 'Salida perfecta para ESFPs que encuentran alegría en disfrutar la vida y hacer felices a los demás' } },
+];
+---
+
+<Layout title={meta.title} description={meta.description} locale={locale}>
+  <main class="mx-auto max-w-3xl px-4 py-10">
+    <div class="mb-8 text-center">
+      <h1 class="text-3xl font-black text-slate-900">{heading}</h1>
+      <p class="mt-2 text-slate-500">{subheading}</p>
+      <a
+        href={localePath(locale, '/mbti/test')}
+        class="mt-4 inline-flex items-center gap-2 rounded-full border-2 border-green-700 bg-green-700 px-5 py-2 text-sm font-bold text-white transition hover:bg-green-800"
+      >
+        {labelTest} →
+      </a>
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2">
+      {TYPES.map(({ type, color, hobbies, why }) => (
+        <div class={`rounded-2xl border-2 p-5 ${color}`}>
+          <div class="mb-3 flex items-center gap-2">
+            <span class="rounded-lg bg-white/70 px-3 py-1 font-mono text-lg font-black text-slate-800">{type}</span>
+          </div>
+          <p class="text-sm font-semibold text-slate-500 uppercase tracking-wider mb-1">{labelHobbies}</p>
+          <p class="text-sm leading-relaxed text-slate-800 mb-3">{hobbies}</p>
+          <p class="text-xs text-slate-500 italic border-t border-slate-200 pt-2">{why[locale] ?? why.en}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 rounded-2xl border-2 border-green-200 bg-green-50 p-6 text-center">
+      <p class="text-sm text-slate-600 mb-3">
+        {txt({ ko: '내 MBTI 유형이 아직 확실하지 않다면?', en: 'Not sure of your MBTI type yet?', ja: 'MBTIタイプがまだ分からない？', zh: '还不确定你的MBTI类型？', fr: 'Pas encore sûr de votre type MBTI ?', es: '¿Aún no estás seguro de tu tipo MBTI?' })}
+      </p>
+      <a
+        href={localePath(locale, '/mbti/test')}
+        class="inline-flex items-center gap-2 rounded-xl border-2 border-green-700 bg-white px-6 py-3 font-bold text-green-700 transition hover:bg-green-700 hover:text-white"
+      >
+        {txt({ ko: '무료 MBTI 테스트 하기', en: 'Take the Free MBTI Test', ja: '無料MBTIテストを受ける', zh: '参加免费MBTI测试', fr: 'Passer le test MBTI gratuit', es: 'Hacer el test MBTI gratis' })} →
+      </a>
+    </div>
+  </main>
+</Layout>

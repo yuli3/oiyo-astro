@@ -1,0 +1,108 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, localePath } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import AuthoritarianScaleTest from '../../../components/tests/AuthoritarianScaleTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '권위주의 성격 척도 테스트 — F-Scale 현대화 버전',
+    description: '권위 복종·공격 성향·관습 고수·체제 정당화 4차원으로 나의 권위주의 성향을 측정합니다. 자기 이해를 위한 심리 척도 테스트.',
+  },
+  en: {
+    title: 'Authoritarian Personality Scale Test — Modernized F-Scale',
+    description: 'Measure your authoritarian tendencies across 4 dimensions: Submission, Aggression, Conventionalism, and System Justification. A self-understanding psychological scale.',
+  },
+  ja: {
+    title: '権威主義的性格尺度テスト — Fスケール現代化版',
+    description: '権威服従·攻撃傾向·慣習固執·体制正当化の4次元で権威主義傾向を測定。自己理解のための心理尺度テスト。',
+  },
+  zh: {
+    title: '威权主义人格量表测试 — F量表现代化版本',
+    description: '从权威服从、权威攻击、传统主义、体制正当化4个维度测量你的威权主义倾向。用于自我理解的心理量表测试。',
+  },
+  fr: {
+    title: 'Test d\'échelle de personnalité autoritaire — F-Scale modernisé',
+    description: 'Mesurez vos tendances autoritaires sur 4 dimensions : soumission, agression, conventionnalisme et justification du système. Une échelle psychologique d\'auto-compréhension.',
+  },
+  es: {
+    title: 'Test de Escala de Personalidad Autoritaria — F-Scale modernizado',
+    description: 'Mide tus tendencias autoritarias en 4 dimensiones: sumisión, agresión, convencionalismo y justificación del sistema. Una escala psicológica de autocomprensión.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+
+const intro: Record<Locale, { heading: string; body: string; dims: string[] }> = {
+  ko: {
+    heading: '나는 얼마나 권위주의적인가?',
+    body: '1950년 아도르노의 F-Scale(파시즘 척도)을 현대화한 버전입니다. 정치적 판단이 아닌 순수한 자기 이해를 위한 심리 측정 도구입니다. 20문항, 4개 차원으로 측정합니다.',
+    dims: ['1. 권위 복종 — 권위자·제도를 비판 없이 따르는 경향', '2. 권위적 공격 — 규범 이탈자를 강하게 처벌하려는 경향', '3. 관습 고수 — 전통·관습에 강하게 의존하는 경향', '4. 체제 정당화 — 현 사회 질서가 공정하다고 믿는 경향'],
+  },
+  en: {
+    heading: 'How authoritarian am I?',
+    body: 'A modernized version of Adorno\'s 1950 F-Scale (Fascism Scale). This is a psychological measurement tool purely for self-understanding, not political judgment. 20 questions across 4 dimensions.',
+    dims: ['1. Authoritarian Submission — Uncritical deference to authority figures', '2. Authoritarian Aggression — Tendency to harshly punish norm-violators', '3. Conventionalism — Heavy reliance on tradition and social norms', '4. System Justification — Belief that the current social order is fair'],
+  },
+  ja: {
+    heading: '私はどれくらい権威主義的か？',
+    body: '1950年のアドルノのFスケール（ファシズム尺度）を現代化したバージョンです。政治的判断ではなく、純粋な自己理解のための心理測定ツールです。20問、4次元で測定します。',
+    dims: ['1. 権威服従 — 権威者·制度を批判なく従う傾向', '2. 権威的攻撃 — 規範逸脱者を強く処罰しようとする傾向', '3. 慣習固執 — 伝統·慣習に強く依存する傾向', '4. 体制正当化 — 現社会秩序が公正だと信じる傾向'],
+  },
+  zh: {
+    heading: '我有多威权主义？',
+    body: '这是阿多诺1950年F量表（法西斯主义量表）的现代化版本。这是一个纯粹用于自我理解的心理测量工具，不作政治判断。20道题，4个维度。',
+    dims: ['1. 权威服从 — 不加批判地服从权威人物的倾向', '2. 权威攻击 — 强烈惩罚违规者的倾向', '3. 传统主义 — 对传统和社会规范的强烈依赖', '4. 体制正当化 — 相信现有社会秩序公正的倾向'],
+  },
+  fr: {
+    heading: 'À quel point suis-je autoritaire ?',
+    body: 'Une version modernisée du F-Scale d\'Adorno de 1950 (échelle du Fascisme). C\'est un outil de mesure psychologique pour la compréhension de soi, non un jugement politique. 20 questions, 4 dimensions.',
+    dims: ['1. Soumission autoritaire — Déférence inconditionnelle aux figures d\'autorité', '2. Agression autoritaire — Tendance à punir sévèrement les déviants', '3. Conventionnalisme — Forte dépendance aux traditions et normes sociales', '4. Justification du système — Croyance en la légitimité de l\'ordre social'],
+  },
+  es: {
+    heading: '¿Cuánto soy autoritario?',
+    body: 'Una versión modernizada de la Escala F de Adorno de 1950 (Escala del Fascismo). Es una herramienta de medición psicológica para el autoconocimiento, no un juicio político. 20 preguntas, 4 dimensiones.',
+    dims: ['1. Sumisión autoritaria — Deferencia acrítica a figuras de autoridad', '2. Agresión autoritaria — Tendencia a castigar duramente a quienes violan normas', '3. Convencionalismo — Fuerte dependencia de tradiciones y normas sociales', '4. Justificación del sistema — Creencia en la legitimidad del orden social actual'],
+  },
+};
+
+const intro_ = intro[locale] ?? intro.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <div class="mb-8 rounded-2xl border-2 border-slate-200 bg-white p-6">
+      <h2 class="text-xl font-black text-slate-900 mb-2">{intro_.heading}</h2>
+      <p class="text-sm text-slate-600 leading-relaxed mb-4">{intro_.body}</p>
+      <ul class="space-y-1">
+        {intro_.dims.map((d) => (
+          <li class="text-xs text-slate-500">{d}</li>
+        ))}
+      </ul>
+    </div>
+
+    <AuthoritarianScaleTest client:load locale={locale} />
+
+    <div class="mt-8 rounded-2xl border-2 border-slate-100 bg-slate-50 p-5">
+      <p class="text-xs font-bold text-slate-500 mb-3">
+        {locale === 'ko' ? '관련 테스트' : locale === 'ja' ? '関連テスト' : locale === 'zh' ? '相关测试' : locale === 'fr' ? 'Tests connexes' : locale === 'es' ? 'Tests relacionados' : 'Related Tests'}
+      </p>
+      <div class="flex flex-wrap gap-2">
+        <a href={localePath(locale, '/political/test')} class="rounded-full border-2 border-slate-200 bg-white px-4 py-1.5 text-sm font-semibold text-slate-600 transition hover:border-slate-500 hover:text-slate-900">
+          {locale === 'ko' ? '정치 나침반 테스트' : locale === 'ja' ? '政治コンパステスト' : locale === 'zh' ? '政治指南针测试' : locale === 'fr' ? 'Test Boussole Politique' : locale === 'es' ? 'Test Brújula Política' : 'Political Compass Test'}
+        </a>
+        <a href={localePath(locale, '/inner-strength/test')} class="rounded-full border-2 border-slate-200 bg-white px-4 py-1.5 text-sm font-semibold text-slate-600 transition hover:border-slate-500 hover:text-slate-900">
+          {locale === 'ko' ? '내면 근력 테스트' : locale === 'ja' ? '内面強度テスト' : locale === 'zh' ? '内在力量测试' : locale === 'fr' ? 'Force Intérieure' : locale === 'es' ? 'Fortaleza Interior' : 'Inner Strength Test'}
+        </a>
+        <a href={localePath(locale, '/big5/test')} class="rounded-full border-2 border-slate-200 bg-white px-4 py-1.5 text-sm font-semibold text-slate-600 transition hover:border-slate-500 hover:text-slate-900">
+          {locale === 'ko' ? '빅파이브 테스트' : locale === 'ja' ? 'ビッグファイブテスト' : locale === 'zh' ? '大五人格测试' : locale === 'fr' ? 'Test Big Five' : locale === 'es' ? 'Test Big Five' : 'Big Five Test'}
+        </a>
+      </div>
+    </div>
+  </main>
+</Layout>

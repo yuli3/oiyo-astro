@@ -1,0 +1,122 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, localePath } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+type L = Locale;
+const txt = (map: Record<L, string>) => map[locale] ?? map.en;
+
+const meta = {
+  title: txt({ ko: '나만의 루틴 만들기 — 아침·저녁·주간 루틴 설계 가이드', en: 'Build Your Routine — Morning, Evening & Weekly Routine Design Guide', ja: '自分だけのルーティン作り — 朝·夜·週間ルーティン設計ガイド', zh: '打造专属例程 — 晨间、晚间和每周例程设计指南', fr: 'Construire votre Routine — Guide de conception de routine matin, soir et hebdomadaire', es: 'Construye tu Rutina — Guía de diseño de rutina matutina, nocturna y semanal' }),
+  description: txt({ ko: '나에게 맞는 아침·저녁·주간 루틴을 설계하는 방법을 알려드립니다. 과학적 근거와 실천 가능한 템플릿으로 지속 가능한 루틴을 만들어보세요.', en: 'Learn how to design morning, evening, and weekly routines that fit you. Build sustainable routines with scientific backing and actionable templates.', ja: '自分に合った朝·夜·週間ルーティンの設計方法をお教えします。科学的根拠と実践可能なテンプレートで持続可能なルーティンを作りましょう。', zh: '学习如何设计适合自己的晨间、晚间和每周例程。通过科学依据和可操作的模板建立可持续的例程。', fr: 'Apprenez à concevoir des routines matinales, nocturnes et hebdomadaires adaptées. Créez des routines durables avec des bases scientifiques.', es: 'Aprende a diseñar rutinas matutinas, nocturnas y semanales que se adapten a ti. Crea rutinas sostenibles con base científica.' }),
+};
+
+const sections = [
+  {
+    id: 'why',
+    title: txt({ ko: '왜 루틴이 필요한가', en: 'Why Routines Matter', ja: 'なぜルーティンが必要か', zh: '为什么需要例程', fr: 'Pourquoi les routines sont importantes', es: 'Por qué importan las rutinas' }),
+    icon: '🧠',
+    content: txt({
+      ko: '루틴은 의사결정 피로를 줄여줍니다. 인간의 뇌는 하루에 사용할 수 있는 의사결정 에너지가 제한되어 있습니다. 아침에 "오늘 뭐 먹지, 뭐 입지, 먼저 뭘 할지"를 매번 결정하는 것은 그 에너지를 빠르게 소진합니다. 루틴화하면 자동화되어 에너지를 창의적이고 중요한 일에 쓸 수 있습니다.',
+      en: 'Routines reduce decision fatigue. The human brain has a limited supply of decision-making energy each day. Deciding "what to eat, wear, or do first" every morning rapidly drains that energy. When tasks become routine, they\'re automated — freeing energy for creative and important work.',
+      ja: 'ルーティンは意思決定疲労を軽減します。人間の脳は1日に使える意思決定エネルギーが限られています。朝に「今日は何を食べる、何を着る、何から始める」を毎回決めることはそのエネルギーを素早く消耗します。ルーティン化すると自動化され、エネルギーを創造的で重要な仕事に使えます。',
+      zh: '例程减少决策疲劳。人类大脑每天可用的决策能量有限。每天早上都要决定"今天吃什么、穿什么、先做什么"会迅速耗尽这些能量。当任务变成例程，就会自动化——将能量释放用于创意和重要工作。',
+      fr: 'Les routines réduisent la fatigue décisionnelle. Le cerveau humain dispose d\'une énergie limitée pour prendre des décisions chaque jour. Décider "quoi manger, porter, ou faire en premier" chaque matin épuise rapidement cette énergie. Quand les tâches deviennent routinières, elles s\'automatisent.',
+      es: 'Las rutinas reducen la fatiga de decisión. El cerebro humano tiene una cantidad limitada de energía de toma de decisiones cada día. Decidir "qué comer, usar o hacer primero" cada mañana agota rápidamente esa energía. Cuando las tareas se vuelven rutinarias, se automatizan.',
+    }),
+  },
+  {
+    id: 'morning',
+    title: txt({ ko: '아침 루틴 설계 원칙', en: 'Morning Routine Design Principles', ja: '朝ルーティン設計の原則', zh: '晨间例程设计原则', fr: 'Principes de conception de routine matinale', es: 'Principios de diseño de rutina matutina' }),
+    icon: '🌅',
+    content: txt({
+      ko: '좋은 아침 루틴의 핵심은 "에너지 생성"입니다. 이상적인 아침 루틴은 60~90분이며 5가지 요소를 포함합니다:\n\n① 신체 활성화 (스트레칭·운동·산책 10~20분)\n② 수분 보충 (기상 즉시 물 한 컵)\n③ 의도 설정 (오늘의 목표·감사 3가지 작성)\n④ 정신 활성화 (독서·뉴스·명상 10~15분)\n⑤ 영양 섭취 (아침 식사 또는 가벼운 식사)\n\n핵심 원칙: 스마트폰은 루틴 마무리 후에 확인. 알람 후 SNS 바로 확인은 반응적 모드로 시작하게 만듦.',
+      en: 'The core of a good morning routine is "energy generation." An ideal morning routine is 60–90 minutes and includes 5 elements:\n\n① Physical activation (stretching/exercise/walk 10–20 min)\n② Hydration (one glass of water immediately upon waking)\n③ Intention setting (write today\'s goal + 3 gratitudes)\n④ Mental activation (reading/news/meditation 10–15 min)\n⑤ Nourishment (breakfast or light meal)\n\nKey principle: Check your phone AFTER completing the routine. Checking social media right after the alarm puts you in reactive mode.',
+      ja: '良い朝ルーティンの核心は「エネルギー生成」です。理想的な朝ルーティンは60〜90分で、5つの要素を含みます：\n\n①身体活性化（ストレッチ·運動·散歩10〜20分）\n②水分補給（起床直後にコップ一杯の水）\n③意図設定（今日の目標·感謝3つを書く）\n④精神活性化（読書·ニュース·瞑想10〜15分）\n⑤栄養摂取（朝食または軽食）\n\n核心原則：スマートフォンはルーティン終了後に確認。起床後すぐのSNS確認は反応的モードで始めることになる。',
+      zh: '好的晨间例程的核心是"能量生成"。理想的晨间例程为60-90分钟，包含5个要素：\n\n①身体激活（拉伸/运动/散步10-20分钟）\n②补水（起床后立即喝一杯水）\n③设定意图（写下今天的目标+3个感恩）\n④精神激活（阅读/新闻/冥想10-15分钟）\n⑤营养摄入（早餐或轻食）\n\n核心原则：完成例程后再看手机。闹钟后立即刷社交媒体会让你以反应模式开始一天。',
+      fr: 'Le cœur d\'une bonne routine matinale est la "génération d\'énergie." Une routine matinale idéale dure 60–90 minutes et inclut 5 éléments :\n\n① Activation physique (étirements/exercice/marche 10–20 min)\n② Hydratation (un verre d\'eau dès le réveil)\n③ Définition d\'intention (écrire l\'objectif du jour + 3 gratitudes)\n④ Activation mentale (lecture/actualités/méditation 10–15 min)\n⑤ Nutrition (petit-déjeuner ou repas léger)\n\nPrincipe clé : Vérifiez votre téléphone APRÈS avoir terminé la routine.',
+      es: 'El núcleo de una buena rutina matutina es la "generación de energía." Una rutina matutina ideal dura 60–90 minutos e incluye 5 elementos:\n\n① Activación física (estiramientos/ejercicio/caminata 10–20 min)\n② Hidratación (un vaso de agua al despertar)\n③ Establecimiento de intención (escribir el objetivo del día + 3 gratitudes)\n④ Activación mental (lectura/noticias/meditación 10–15 min)\n⑤ Nutrición (desayuno o comida ligera)\n\nPrincipio clave: Revisa tu teléfono DESPUÉS de completar la rutina.',
+    }),
+  },
+  {
+    id: 'evening',
+    title: txt({ ko: '저녁 루틴 설계 원칙', en: 'Evening Routine Design Principles', ja: '夜ルーティン設計の原則', zh: '晚间例程设计原则', fr: 'Principes de conception de routine nocturne', es: 'Principios de diseño de rutina nocturna' }),
+    icon: '🌙',
+    content: txt({
+      ko: '저녁 루틴의 목표는 "다운시프트"입니다. 하루를 닫고 수면 준비를 하는 과정입니다.\n\n① 하루 마감 리뷰 (10분: 잘한 것·남은 것 확인)\n② 내일 준비 (옷·가방·할 일 목록 미리 정리)\n③ 디지털 기기 종료 (취침 1시간 전)\n④ 이완 활동 (가벼운 스트레칭·독서·명상)\n⑤ 수면 환경 조성 (온도 18~20°C, 암막 커튼, 화면 빛 차단)\n\n수면 전 스마트폰 블루라이트는 멜라토닌 분비를 억제해 수면의 질을 낮춥니다.',
+      en: 'The goal of an evening routine is "downshifting" — closing the day and preparing for sleep.\n\n① End-of-day review (10 min: what went well, what remains)\n② Tomorrow preparation (lay out clothes, bag, and to-do list)\n③ Digital device shutdown (1 hour before sleep)\n④ Relaxing activities (light stretching, reading, meditation)\n⑤ Sleep environment setup (18–20°C, blackout curtains, light blocking)\n\nPre-sleep smartphone blue light suppresses melatonin secretion, reducing sleep quality.',
+      ja: '夜ルーティンの目標は「ダウンシフト」です。1日を閉じ、睡眠の準備をするプロセスです。\n\n①1日の締めくくりレビュー（10分：うまくいったこと·残ったこと確認）\n②明日の準備（服·バッグ·タスクリストを事前に整理）\n③デジタルデバイスのシャットダウン（就寝1時間前）\n④リラックス活動（軽いストレッチ·読書·瞑想）\n⑤睡眠環境整備（室温18〜20°C、遮光カーテン、光遮断）\n\n就寝前のスマートフォンのブルーライトはメラトニン分泌を抑制し、睡眠の質を下げます。',
+      zh: '晚间例程的目标是"减速"——关闭一天并准备睡眠。\n\n①每日收盘回顾（10分钟：确认做好的事和剩余的事）\n②明天准备（提前整理衣物、包和任务清单）\n③关闭数字设备（睡前1小时）\n④放松活动（轻松拉伸、阅读、冥想）\n⑤睡眠环境准备（温度18-20°C，遮光窗帘，阻挡屏幕光线）\n\n睡前手机蓝光会抑制褪黑素分泌，降低睡眠质量。',
+      fr: 'L\'objectif d\'une routine nocturne est le "ralentissement" — clore la journée et se préparer au sommeil.\n\n① Bilan de fin de journée (10 min)\n② Préparation du lendemain\n③ Arrêt des appareils numériques (1h avant le coucher)\n④ Activités relaxantes (étirements légers, lecture, méditation)\n⑤ Aménagement de l\'environnement de sommeil (18–20°C, rideaux occultants)',
+      es: 'El objetivo de una rutina nocturna es "desacelerar" — cerrar el día y prepararse para dormir.\n\n① Revisión de fin de día (10 min)\n② Preparación para mañana\n③ Apagado de dispositivos digitales (1 hora antes de dormir)\n④ Actividades relajantes (estiramientos ligeros, lectura, meditación)\n⑤ Preparación del entorno de sueño (18–20°C, cortinas opacas)',
+    }),
+  },
+  {
+    id: 'weekly',
+    title: txt({ ko: '주간 루틴 설계', en: 'Weekly Routine Design', ja: '週間ルーティン設計', zh: '每周例程设计', fr: 'Conception de routine hebdomadaire', es: 'Diseño de rutina semanal' }),
+    icon: '📅',
+    content: txt({
+      ko: '주간 루틴은 하루 루틴보다 더 큰 리듬입니다. 에너지 수준에 맞게 요일을 배정하는 것이 핵심입니다.\n\n월요일: 주간 계획·목표 설정 (에너지 높은 날, 중요 업무 배치)\n화·수요일: 깊은 집중 작업 (가장 창의적이고 중요한 업무)\n목요일: 협업·미팅·소통 집중\n금요일: 마무리·리뷰·다음 주 준비\n주말: 완전한 회복 또는 취미·사교\n\n핵심: 주말에 이메일·업무 확인 최소화. 회복 없이 생산성은 지속되지 않습니다.',
+      en: 'The weekly routine is a bigger rhythm than daily routines. The key is assigning days according to energy levels.\n\nMonday: Weekly planning and goal setting (high energy day, put important work here)\nTue/Wed: Deep focus work (most creative and important tasks)\nThursday: Collaboration, meetings, and communication\nFriday: Wrap-up, review, and next week preparation\nWeekend: Full recovery or hobbies and socializing\n\nKey: Minimize email/work checking on weekends. Productivity doesn\'t sustain without recovery.',
+      ja: '週間ルーティンは日次ルーティンより大きなリズムです。エネルギーレベルに合わせて曜日を割り当てることが核心です。\n\n月曜日：週次計画·目標設定（エネルギーが高い日、重要業務を配置）\n火·水曜日：深い集中作業（最も創造的で重要な業務）\n木曜日：協働·ミーティング·コミュニケーション集中\n金曜日：締めくくり·レビュー·翌週準備\n週末：完全な回復または趣味·社交\n\n核心：週末のメール·業務確認を最小化。回復なしに生産性は持続しません。',
+      zh: '每周例程是比每日例程更大的节律。关键是根据能量水平分配每天。\n\n周一：每周计划·目标设定（能量高的一天，安排重要工作）\n周二·三：深度专注工作（最具创意和重要的任务）\n周四：协作·会议·沟通集中\n周五：收尾·回顾·准备下周\n周末：完全恢复或爱好·社交\n\n关键：将周末查看邮件/工作降到最低。没有恢复，生产力无法持续。',
+      fr: 'La routine hebdomadaire est un rythme plus grand que les routines quotidiennes. La clé est d\'assigner des jours selon les niveaux d\'énergie.\n\nLundi : Planification hebdomadaire (journée haute énergie)\nMar/Mer : Travail de concentration profonde\nJeudi : Collaboration, réunions, communication\nVendredi : Clôture, révision, préparation de la semaine suivante\nWeek-end : Récupération complète ou hobbies',
+      es: 'La rutina semanal es un ritmo más grande que las rutinas diarias. La clave es asignar días según los niveles de energía.\n\nLunes: Planificación semanal y establecimiento de metas\nMar/Mié: Trabajo de concentración profunda\nJueves: Colaboración, reuniones y comunicación\nViernes: Cierre, revisión y preparación de la próxima semana\nFin de semana: Recuperación completa o hobbies y socialización',
+    }),
+  },
+  {
+    id: 'tips',
+    title: txt({ ko: '루틴을 지속시키는 5가지 원칙', en: '5 Principles to Sustain Your Routine', ja: 'ルーティンを持続させる5つの原則', zh: '持续例程的5个原则', fr: '5 principes pour maintenir votre routine', es: '5 principios para mantener tu rutina' }),
+    icon: '⚡',
+    content: txt({
+      ko: '① 작게 시작하기: 처음부터 완벽한 루틴을 만들려 하면 실패합니다. 단 하나의 습관부터.\n② 트리거 쌓기(Habit Stacking): 기존 습관 뒤에 새 습관 붙이기. "커피 마신 후 → 5분 독서"\n③ 환경 설계: 하고 싶은 것을 눈에 보이게, 하지 않을 것을 안 보이게.\n④ 2일 규칙: 하루 빠져도 OK. 단, 이틀 연속으로는 절대 빠지지 않기.\n⑤ 트래킹과 리뷰: 달성 표시는 진도를 시각화해 동기를 유지. 주 1회 리뷰로 조정.',
+      en: '① Start small: Trying to build a perfect routine from day 1 leads to failure. Start with just one habit.\n② Habit stacking: Attach a new habit after an existing one. "After coffee → 5 min reading"\n③ Environment design: Make what you want to do visible; make what you don\'t want to do invisible.\n④ The 2-day rule: Missing one day is OK. But never miss two days in a row.\n⑤ Tracking and review: Marking completions visualizes progress and sustains motivation. Weekly reviews for adjustments.',
+      ja: '①小さく始める：最初から完璧なルーティンを作ろうとすると失敗します。たった一つの習慣から。\n②習慣スタッキング：既存の習慣の後に新しい習慣を付け加える。「コーヒーを飲んだ後→5分読書」\n③環境設計：やりたいことを目に見えるように、やらないことを見えないように。\n④2日ルール：1日休んでもOK。ただし、2日連続では絶対に休まない。\n⑤トラッキングとレビュー：達成マークは進捗を視覚化してモチベーションを維持。週1回のレビューで調整。',
+      zh: '①小处着手：试图从第一天就建立完美例程会导致失败。从一个习惯开始。\n②习惯堆叠：在现有习惯后附加新习惯。"喝咖啡后→5分钟阅读"\n③环境设计：让想做的事可见，让不想做的事不可见。\n④两天规则：漏掉一天没关系。但绝不连续漏两天。\n⑤追踪和回顾：标记完成情况可视化进度，维持动力。每周回顾进行调整。',
+      fr: '① Commencer petit : Essayer de construire une routine parfaite dès le premier jour mène à l\'échec. Commencez par une seule habitude.\n② Empilement d\'habitudes : Attachez une nouvelle habitude après une existante. "Après le café → 5 min de lecture"\n③ Conception de l\'environnement : Rendez visible ce que vous voulez faire, invisible ce que vous ne voulez pas.\n④ La règle des 2 jours : Rater un jour, c\'est OK. Mais jamais deux jours de suite.\n⑤ Suivi et révision : Marquer les réussites visualise les progrès et maintient la motivation.',
+      es: '① Empezar pequeño: Intentar construir una rutina perfecta desde el día 1 lleva al fracaso. Comienza con un solo hábito.\n② Apilamiento de hábitos: Adjunta un nuevo hábito después de uno existente. "Después del café → 5 min de lectura"\n③ Diseño del entorno: Haz visible lo que quieres hacer; haz invisible lo que no quieres.\n④ La regla de los 2 días: Saltarse un día está bien. Pero nunca saltarse dos días seguidos.\n⑤ Seguimiento y revisión: Marcar logros visualiza el progreso y sostiene la motivación.',
+    }),
+  },
+];
+
+const links = [
+  { href: '/habit-builder/30-days', label: txt({ ko: '30일 습관 도전', en: '30-Day Habit Challenge', ja: '30日習慣チャレンジ', zh: '30天习惯挑战', fr: 'Défi habitude 30 jours', es: 'Desafío hábito 30 días' }) },
+  { href: '/routine/time-maker', label: txt({ ko: '시간 만드는 법', en: 'How to Make Time', ja: '時間の作り方', zh: '如何创造时间', fr: 'Comment créer du temps', es: 'Cómo crear tiempo' }) },
+  { href: '/sleep-type/test', label: txt({ ko: '수면 유형 테스트', en: 'Sleep Type Test', ja: '睡眠タイプテスト', zh: '睡眠类型测试', fr: 'Test de type de sommeil', es: 'Test de tipo de sueño' }) },
+];
+---
+
+<Layout title={meta.title} description={meta.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <div class="mb-8 text-center">
+      <h1 class="text-3xl font-black text-slate-900">{meta.title.split('—')[0].trim()}</h1>
+      <p class="mt-2 text-sm text-slate-500">{meta.description}</p>
+    </div>
+
+    <div class="space-y-6">
+      {sections.map(({ title, icon, content }) => (
+        <div class="rounded-2xl border-2 border-green-200 bg-white p-6">
+          <h2 class="mb-3 flex items-center gap-2 text-lg font-black text-slate-900">
+            <span class="text-2xl">{icon}</span>{title}
+          </h2>
+          <div class="whitespace-pre-line text-sm leading-relaxed text-slate-700">{content}</div>
+        </div>
+      ))}
+    </div>
+
+    <div class="mt-10 rounded-2xl border-2 border-green-100 bg-green-50 p-5">
+      <p class="mb-3 text-sm font-bold text-green-800">{txt({ ko: '관련 도구', en: 'Related Tools', ja: '関連ツール', zh: '相关工具', fr: 'Outils connexes', es: 'Herramientas relacionadas' })}</p>
+      <div class="flex flex-wrap gap-2">
+        {links.map(({ href, label }) => (
+          <a href={localePath(locale, href)} class="rounded-full border-2 border-green-300 bg-white px-4 py-1.5 text-sm font-semibold text-green-700 transition hover:bg-green-700 hover:text-white">
+            {label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </main>
+</Layout>
