@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import NumerologyCalculator from '../../../components/tools/NumerologyCalculator';
@@ -355,5 +356,6 @@ const faqJsonLd = {
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
       {c.disclaimer}
     </p>
+      <MysticTrinity topic="numerology" locale={locale} />
   </main>
 </Layout>

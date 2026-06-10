@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import SajuFortune from '../../../components/tools/SajuFortune';
@@ -43,5 +44,6 @@ const m = meta[locale] ?? meta.en;
 <Layout title={m.title} description={m.description} locale={locale}>
   <main class="mx-auto max-w-2xl px-4 py-10">
     <SajuFortune client:load locale={locale} />
+      <MysticTrinity topic="saju" locale={locale} />
   </main>
 </Layout>
