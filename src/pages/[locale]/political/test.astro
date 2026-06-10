@@ -1,0 +1,96 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import PoliticalCompassTest from '../../../components/tests/PoliticalCompassTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '정치 나침반 테스트 — 나의 가치관과 세계관 좌표',
+    description: '경제(평등↔시장), 사회(전통↔진보), 외교(민족↔국제), 국가(권위↔자유) 4개 축으로 나의 정치적 가치관 스펙트럼을 찾아보세요.',
+  },
+  en: {
+    title: 'Political Compass Test — Find Your Values & Worldview',
+    description: 'Discover your political value spectrum across 4 axes: Economics (Equality↔Market), Social (Traditional↔Progressive), Diplomacy (National↔Global), State (Authoritarian↔Libertarian).',
+  },
+  ja: {
+    title: '政治コンパステスト — 価値観と世界観の座標',
+    description: '経済(平等↔市場)、社会(伝統↔進歩)、外交(民族↔国際)、国家(権威↔自由)の4軸で、自分の政治的価値観スペクトラムを見つけましょう。',
+  },
+  zh: {
+    title: '政治指南针测试 — 探索你的价值观坐标',
+    description: '通过4个轴——经济(平等↔市场)、社会(传统↔进步)、外交(民族↔全球)、国家(威权↔自由)——找到你的政治价值观谱系。',
+  },
+  fr: {
+    title: 'Test Boussole Politique — Trouvez vos Valeurs',
+    description: 'Découvrez votre spectre de valeurs politiques sur 4 axes : Économie (Égalité↔Marché), Social (Traditionnel↔Progressiste), Diplomatie (Nationaliste↔Mondialiste), État (Autoritaire↔Libertaire).',
+  },
+  es: {
+    title: 'Test Brújula Política — Descubre tus Valores',
+    description: 'Descubre tu espectro de valores políticos en 4 ejes: Economía (Igualdad↔Mercado), Social (Tradicional↔Progresista), Diplomacia (Nacionalista↔Globalista), Estado (Autoritario↔Libertario).',
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+// 소개 텍스트
+const intro: Record<Locale, { heading: string; body: string; axes: string[] }> = {
+  ko: {
+    heading: '내 정치적 가치관의 좌표는?',
+    body: '41개 문항, 4단계로 나의 가치관과 세계관이 정치적 스펙트럼 어디에 위치하는지 확인해보세요. 특정 정당이나 이념을 지지하는 것이 아닌, 순수하게 자기 이해를 위한 도구입니다.',
+    axes: ['1. 경제관 — 평등주의 ↔ 시장주의','2. 사회관 — 전통주의 ↔ 진보주의','3. 세계관 — 민족주의 ↔ 국제주의','4. 국가관 — 권위주의 ↔ 자유주의'],
+  },
+  en: {
+    heading: 'Where do your values land on the political spectrum?',
+    body: '41 questions across 4 steps to discover where your values and worldview sit on the political spectrum. This is a self-understanding tool, not an endorsement of any political party.',
+    axes: ['1. Economics — Equality ↔ Market','2. Social — Traditional ↔ Progressive','3. Diplomacy — Nationalist ↔ Globalist','4. State Power — Authoritarian ↔ Libertarian'],
+  },
+  ja: {
+    heading: '自分の価値観は政治的スペクトラムのどこに？',
+    body: '41問、4ステップで、あなたの価値観と世界観が政治的スペクトラムのどこに位置するかを確認しましょう。特定の政党やイデオロギーを支持するものではありません。',
+    axes: ['1. 経済観 — 平等主義 ↔ 市場主義','2. 社会観 — 伝統主義 ↔ 進歩主義','3. 世界観 — 民族主義 ↔ 国際主義','4. 国家観 — 権威主義 ↔ 自由主義'],
+  },
+  zh: {
+    heading: '你的价值观在政治光谱中的位置',
+    body: '41个问题，分4步，帮你发现自己的价值观和世界观在政治光谱中的位置。这是一个自我理解的工具，不代表支持任何政党。',
+    axes: ['1. 经济观 — 平等主义 ↔ 市场主义','2. 社会观 — 传统主义 ↔ 进步主义','3. 外交观 — 民族主义 ↔ 国际主义','4. 国家观 — 威权主义 ↔ 自由主义'],
+  },
+  fr: {
+    heading: 'Où se situent vos valeurs sur le spectre politique ?',
+    body: '41 questions en 4 étapes pour découvrir où se situent vos valeurs sur le spectre politique. Cet outil est uniquement destiné à la compréhension de soi.',
+    axes: ['1. Économie — Égalitaire ↔ Libéral','2. Social — Traditionnel ↔ Progressiste','3. Diplomatie — Nationaliste ↔ Mondialiste','4. État — Autoritaire ↔ Libertaire'],
+  },
+  es: {
+    heading: '¿Dónde están tus valores en el espectro político?',
+    body: '41 preguntas en 4 pasos para descubrir dónde se sitúan tus valores en el espectro político. Esta herramienta es solo para la autocomprensión.',
+    axes: ['1. Economía — Igualitario ↔ Mercado','2. Social — Tradicional ↔ Progresista','3. Diplomacia — Nacionalista ↔ Globalista','4. Estado — Autoritario ↔ Libertario'],
+  },
+};
+const iv = intro[locale] ?? intro.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+
+    <!-- 소개 섹션 -->
+    <div class="mb-8 rounded-2xl border border-slate-200 bg-white p-6">
+      <h2 class="text-xl font-black text-slate-900">{iv.heading}</h2>
+      <p class="mt-2 text-sm leading-relaxed text-slate-600">{iv.body}</p>
+      <ul class="mt-4 space-y-1">
+        {iv.axes.map(a => (
+          <li class="flex items-start gap-2 text-sm text-slate-700">
+            <span class="mt-0.5 text-green-600">▸</span>{a}
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- 테스트 컴포넌트 -->
+    <PoliticalCompassTest client:load locale={locale} />
+
+  </main>
+</Layout>
