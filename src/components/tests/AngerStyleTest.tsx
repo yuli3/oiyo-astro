@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
 
 type SupportedLocale = "ko" | "en" | "ja";
@@ -267,6 +269,21 @@ export default function AngerStyleTest({ locale: localeProp }: Props) {
           </div>
         </div>
         <p className="text-xs text-gray-400 text-center">{t.note}</p>
+        <ShareResultButton
+          locale={locale}
+          heading={t.title}
+          resultTitle={d.name[locale]}
+          emoji={d.emoji}
+          description={d.description[locale]}
+        />
+        <ResultNextSteps
+          locale={locale}
+          links={[
+            { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+            { href: `/${locale}/eq/test`, label: locale === 'ko' ? '💛 감성 지능 테스트' : locale === 'ja' ? '💛 感情知性テスト' : '💛 Emotional intelligence test' },
+            { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+          ]}
+        />
         <div className="flex gap-3 justify-center">
           <button onClick={restart} className="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium text-sm">{t.restart}</button>
           <button onClick={share} className="px-5 py-2 text-white rounded-full font-medium text-sm" style={{ backgroundColor: d.color }}>{copied ? t.copied : t.share}</button>

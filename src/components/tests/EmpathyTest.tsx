@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
 
 type SupportedLocale = "ko" | "en" | "ja";
@@ -299,6 +301,21 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         </div>
 
         <p className="text-xs text-gray-400 text-center">{t.note}</p>
+        <ShareResultButton
+          locale={locale}
+          heading={t.title}
+          resultTitle={info.name[locale]}
+          emoji={result === 'cognitive' ? '🧠' : result === 'affective' ? '💗' : '🤝'}
+          description={info.description[locale]}
+        />
+        <ResultNextSteps
+          locale={locale}
+          links={[
+            { href: `/${locale}/eq/test`, label: locale === 'ko' ? '💛 감성 지능 테스트' : locale === 'ja' ? '💛 感情知性テスト' : '💛 Emotional intelligence test' },
+            { href: `/${locale}/attachment-style/test`, label: locale === 'ko' ? '🔗 애착 유형 테스트' : locale === 'ja' ? '🔗 愛着スタイルテスト' : '🔗 Attachment style test' },
+            { href: `/${locale}/ontology/personality`, label: locale === 'ko' ? '🧭 성격 온톨로지' : locale === 'ja' ? '🧭 性格オントロジー' : '🧭 Personality ontology' },
+          ]}
+        />
 
         <div className="flex gap-3 justify-center">
           <button onClick={restart}

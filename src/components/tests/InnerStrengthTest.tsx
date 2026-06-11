@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLang = 'ko' | 'en' | 'ja';
 
@@ -145,6 +147,7 @@ interface Props { locale?: string; }
 
 export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
   const L = lang(lp);
+  const locale = L;
   const lb = LABELS[L];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [current, setCurrent] = useState(0);
@@ -243,6 +246,21 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
         )}
 
         <p className="text-center text-xs text-slate-400 px-4">{lb.note}</p>
+        <ShareResultButton
+          locale={locale}
+          heading={lb.title}
+          resultTitle={`${lb.totalLabel}: ${totalScore}/10`}
+          emoji="🧠"
+          description={lb.subtitle}
+        />
+        <ResultNextSteps
+          locale={locale}
+          links={[
+            { href: `/${locale}/ontology/life-purpose`, label: locale === 'ko' ? '🧭 삶의 목적 온톨로지' : locale === 'ja' ? '🧭 人生の目的オントロジー' : '🧭 Life purpose ontology' },
+            { href: `/${locale}/self-esteem/test`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
+            { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+          ]}
+        />
 
         <button onClick={handleRestart} className="w-full py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors">
           {lb.restart}

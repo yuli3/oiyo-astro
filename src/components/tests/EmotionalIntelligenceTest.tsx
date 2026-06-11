@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 import {
   RadarChart,
   PolarGrid,
@@ -267,6 +269,21 @@ export default function EmotionalIntelligenceTest({ locale: localeProp }: Props)
         </div>
 
         <p className="text-xs text-gray-400 text-center">{t.note}</p>
+        <ShareResultButton
+          locale={locale}
+          heading={t.title}
+          resultTitle={ld.label[locale]}
+          emoji={result.level === 'high' ? '🌟' : result.level === 'medium' ? '🌱' : '🧩'}
+          description={ld.description[locale]}
+        />
+        <ResultNextSteps
+          locale={locale}
+          links={[
+            { href: `/${locale}/empathy/test`, label: locale === 'ko' ? '🤝 공감 능력 테스트' : locale === 'ja' ? '🤝 共感能力テスト' : '🤝 Empathy test' },
+            { href: `/${locale}/big5/test`, label: locale === 'ko' ? '🧬 Big5 성격 테스트' : locale === 'ja' ? '🧬 Big5性格テスト' : '🧬 Big Five personality test' },
+            { href: `/${locale}/ontology/personality`, label: locale === 'ko' ? '🧭 성격 온톨로지' : locale === 'ja' ? '🧭 性格オントロジー' : '🧭 Personality ontology' },
+          ]}
+        />
         <div className="flex gap-3 justify-center">
           <button onClick={restart} className="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium text-sm">{t.restart}</button>
           <button onClick={share} className="px-5 py-2 text-white rounded-full font-medium text-sm" style={{ backgroundColor: ld.color }}>{copied ? t.copied : t.share}</button>
