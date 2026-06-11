@@ -1,13 +1,22 @@
 ---
 import type { Locale } from '../../i18n';
 import type { JourneyContent } from '../../lib/ontology/journey/types';
+import JourneyCourse from '../shared/JourneyCourse';
 
 interface Props {
   locale: Locale;
   content: JourneyContent;
+  /** localStorage namespace for the course tracker (#33) */
+  journeyId: string;
 }
 
-const { content: c } = Astro.props;
+const { locale, content: c, journeyId } = Astro.props;
+
+const courseSteps = c.tools.items.map((t) => ({
+  id: t.href.replace(/^\/[a-z]{2}\//, ''),
+  href: t.href,
+  label: `${t.emoji ?? ''} ${t.label}`.trim(),
+}));
 
 const faqJsonLd = JSON.stringify({
   '@context': 'https://schema.org',
@@ -74,6 +83,7 @@ const faqJsonLd = JSON.stringify({
         </a>
       ))}
     </div>
+    <JourneyCourse client:visible locale={locale} journey={journeyId} steps={courseSteps} />
   </section>
 
   <!-- 4. How to interpret -->
