@@ -11,6 +11,93 @@ export async function getStaticPaths() {
 const { locale } = Astro.params as { locale: Locale };
 const t = await getTranslations(locale);
 
+// Server-rendered journey navigation: the SEO-readable spine of /ontology.
+// Each stop is a static landing page; the React island below stays the playground.
+const journeyText: Record<Locale, { heading: string; sub: string; steps: { title: string; desc: string }[] }> = {
+  ko: {
+    heading: '존재 탐구 여정',
+    sub: '대시보드를 채우기 전에, 네 갈래의 질문부터 시작해 보세요.',
+    steps: [
+      { title: '나의 존재 지도', desc: 'MBTI·빅파이브·에니어그램·사주를 겹쳐 읽기' },
+      { title: '내가 좋아하는 것', desc: '나를 살아나게 하는 활동·환경·색' },
+      { title: '나의 존재론적 목표', desc: '직업이 아니라 "삶의 문장" 만들기' },
+      { title: '행운을 가져다주는 것', desc: '상징 레이어 × 행동 레이어' },
+      { title: '오늘의 나', desc: '오늘의 일진·별자리·타로' },
+      { title: '존재의 백과사전', desc: '12가지 상징 체계 한눈에' },
+    ],
+  },
+  en: {
+    heading: 'The Self-Discovery Journey',
+    sub: 'Before filling the dashboard, start with four questions.',
+    steps: [
+      { title: 'My map of being', desc: 'Reading MBTI, Big Five, Enneagram & Saju in layers' },
+      { title: 'What I love', desc: 'Activities, environments & colors that revive me' },
+      { title: 'My existential purpose', desc: 'Forging a "life sentence," not a job title' },
+      { title: 'What brings me luck', desc: 'Symbolic layer × behavioral layer' },
+      { title: 'Me, today', desc: "Today's day pillar, sun sign & tarot" },
+      { title: 'Encyclopedia of being', desc: '12 symbolic systems at a glance' },
+    ],
+  },
+  ja: {
+    heading: '存在探求の旅',
+    sub: 'ダッシュボードを埋める前に、4つの問いから始めましょう。',
+    steps: [
+      { title: '私の存在地図', desc: 'MBTI・ビッグファイブ・エニアグラム・四柱を重ねて読む' },
+      { title: '私が好きなもの', desc: '自分を生き返らせる活動・環境・色' },
+      { title: '存在論的な目標', desc: '職業ではなく「人生の一文」をつくる' },
+      { title: '幸運をもたらすもの', desc: '象徴レイヤー × 行動レイヤー' },
+      { title: '今日の私', desc: '今日の日辰・星座・タロット' },
+      { title: '存在の百科事典', desc: '12の象徴体系をひと目で' },
+    ],
+  },
+  zh: {
+    heading: '存在探索之旅',
+    sub: '在填满仪表盘之前,先从四个问题开始。',
+    steps: [
+      { title: '我的存在地图', desc: '叠加解读 MBTI、大五、九型与八字' },
+      { title: '我喜欢的东西', desc: '让我活过来的活动、环境与颜色' },
+      { title: '我的存在目标', desc: '打造"人生一句话",而非职业头衔' },
+      { title: '带给我幸运的东西', desc: '象征层 × 行动层' },
+      { title: '今天的我', desc: '今天的日辰、星座与塔罗' },
+      { title: '存在百科全书', desc: '12种象征体系一目了然' },
+    ],
+  },
+  fr: {
+    heading: "Le voyage de l'exploration de soi",
+    sub: 'Avant de remplir le tableau de bord, commencez par quatre questions.',
+    steps: [
+      { title: "Ma carte de l'être", desc: 'Lire MBTI, Big Five, ennéagramme et Saju en couches' },
+      { title: "Ce que j'aime", desc: 'Activités, lieux et couleurs qui me font revivre' },
+      { title: 'Mon but existentiel', desc: 'Forger une « phrase de vie », pas un titre' },
+      { title: 'Ce qui me porte chance', desc: 'Couche symbolique × couche comportementale' },
+      { title: "Moi, aujourd'hui", desc: 'Pilier du jour, signe et tarot' },
+      { title: "Encyclopédie de l'être", desc: '12 systèmes symboliques en un regard' },
+    ],
+  },
+  es: {
+    heading: 'El viaje de exploración del ser',
+    sub: 'Antes de llenar el panel, empieza con cuatro preguntas.',
+    steps: [
+      { title: 'Mi mapa del ser', desc: 'Leer MBTI, Big Five, eneagrama y Saju en capas' },
+      { title: 'Lo que me gusta', desc: 'Actividades, entornos y colores que me reviven' },
+      { title: 'Mi propósito existencial', desc: 'Forjar una «frase de vida», no un título' },
+      { title: 'Lo que me da suerte', desc: 'Capa simbólica × capa conductual' },
+      { title: 'Yo, hoy', desc: 'Pilar del día, signo y tarot' },
+      { title: 'Enciclopedia del ser', desc: '12 sistemas simbólicos de un vistazo' },
+    ],
+  },
+};
+
+const jt = journeyText[locale] ?? journeyText.en;
+const journeyStops = [
+  { emoji: '🧭', href: `/${locale}/ontology/personality`, ...jt.steps[0] },
+  { emoji: '🎨', href: `/${locale}/ontology/hobbies`, ...jt.steps[1] },
+  { emoji: '🌟', href: `/${locale}/ontology/life-purpose`, ...jt.steps[2] },
+  { emoji: '🍀', href: `/${locale}/ontology/luck`, ...jt.steps[3] },
+  { emoji: '🌌', href: `/${locale}/today`, ...jt.steps[4] },
+  { emoji: '📚', href: `/${locale}/ontology/encyclopedia`, ...jt.steps[5] },
+];
+
 // All namespaces needed by OntologyClient and its component tree
 const namespaces = [
   'akashic', 'catalog', 'chosun', 'colorPersonality', 'commerce',
@@ -49,6 +136,27 @@ for (const ns of namespaces) {
       <p class="text-violet-700 text-lg leading-relaxed">
         {t('hero.ontology.desc')}
       </p>
+    </div>
+  </section>
+
+  <!-- Journey navigation (server-rendered, crawlable) -->
+  <section class="max-w-4xl mx-auto px-4 py-8">
+    <h2 class="text-xl font-black text-violet-950 text-center mb-1">{jt.heading}</h2>
+    <p class="text-sm text-violet-600 text-center mb-6">{jt.sub}</p>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {journeyStops.map((s, i) => (
+        <a
+          href={s.href}
+          class="group relative flex items-start gap-3 rounded-2xl border border-violet-200 bg-white p-4 transition-all hover:border-violet-400 hover:shadow-md"
+        >
+          <span class="absolute top-3 right-3 text-[10px] font-black text-violet-300" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+          <span class="text-2xl" aria-hidden="true">{s.emoji}</span>
+          <span>
+            <span class="block font-bold text-violet-950 group-hover:text-violet-700">{s.title}</span>
+            <span class="block text-xs text-gray-500 mt-0.5 leading-relaxed">{s.desc}</span>
+          </span>
+        </a>
+      ))}
     </div>
   </section>
 
