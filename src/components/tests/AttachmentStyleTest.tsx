@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
+import RelatedReading from '../shared/RelatedReading';
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type AttachmentType = 'secure' | 'anxious' | 'avoidant' | 'fearful'
@@ -786,6 +787,7 @@ export default function AttachmentStyleTest({ locale: lp = 'ko' }: Props) {
           { href: `https://blog.oiyo.net/${locale}/mbti-compatibility/`, label: locale === 'ko' ? '💞 유형 궁합 보기' : locale === 'ja' ? '💞 タイプ相性' : '💞 Type compatibility', external: true },
         ]}
       />
+      <RelatedReading locale={locale} topic="attachment" />
 
       <div className="flex gap-3">
         <button onClick={restart}

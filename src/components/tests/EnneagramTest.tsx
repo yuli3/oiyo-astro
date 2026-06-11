@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
+import RelatedReading from '../shared/RelatedReading';
 import AnimatedNumber from '../ui/AnimatedNumber'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -713,6 +714,7 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
           { href: `/${lp}/mbti/test`, label: lp === 'ko' ? '🧭 MBTI 테스트도 해보기' : '🧭 Try the MBTI test' },
         ]}
       />
+      <RelatedReading locale={lp} topic="enneagram" />
 
       <div className="flex gap-3">
         <button

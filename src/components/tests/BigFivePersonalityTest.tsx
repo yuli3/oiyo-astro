@@ -2,6 +2,7 @@ import { useState } from 'react'
 import AnimatedNumber from '../ui/AnimatedNumber'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
+import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -468,6 +469,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
           { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '💪 내면 강점 테스트' : locale === 'ja' ? '💪 内面の強みテスト' : '💪 Inner strength test' },
         ]}
       />
+      <RelatedReading locale={locale} topic="big5" />
 
       <div className="flex gap-3">
         <button

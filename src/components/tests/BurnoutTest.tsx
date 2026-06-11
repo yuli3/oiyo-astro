@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
+import RelatedReading from '../shared/RelatedReading';
 
 type Level = 'high' | 'medium' | 'low'
 type Locale = 'ko' | 'en' | 'ja'
@@ -292,6 +293,7 @@ export default function BurnoutTest({ locale: lp = 'ko' }: Props) {
           { href: `/${locale}/sleep-type/test`, label: locale === 'ko' ? '💤 수면 유형 테스트' : locale === 'ja' ? '💤 睡眠タイプテスト' : '💤 Sleep type test' },
         ]}
       />
+      <RelatedReading locale={locale} topic="burnout" />
       <div className="flex gap-3">
         <button onClick={restart} className="flex-1 rounded-lg border bg-card px-4 py-2 text-sm font-medium hover:bg-accent transition-colors">{lb.restart}</button>
         <button onClick={share} className="flex-1 rounded-lg bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity">{lb.share}</button>

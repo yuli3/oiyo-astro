@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
+import RelatedReading from '../shared/RelatedReading';
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip
 } from 'recharts'
@@ -1284,6 +1285,7 @@ export default function MbtiCareerTest({ locale: localeProp = 'ko' }: Props) {
           { href: `/${locale}/big5/test`, label: locale === 'ko' ? '🧬 Big5 성격 테스트' : locale === 'ja' ? '🧬 Big5性格テスト' : '🧬 Big Five personality test' },
         ]}
       />
+      <RelatedReading locale={locale} topic="mbti-career" />
 
       <div className="flex gap-3">
         <button

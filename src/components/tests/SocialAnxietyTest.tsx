@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
+import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLocale = "ko" | "en" | "ja";
 
@@ -320,6 +321,7 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
             { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
           ]}
         />
+        <RelatedReading locale={locale} topic="social-anxiety" />
 
         <div className="flex gap-3">
           <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">

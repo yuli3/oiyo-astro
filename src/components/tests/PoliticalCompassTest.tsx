@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
+import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLang = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh'
 function lang(locale: string): SupportedLang {
@@ -336,6 +337,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
             { href: `/${L}/ontology/personality`, label: L === 'ko' ? '🧭 성격 온톨로지' : L === 'ja' ? '🧭 性格オントロジー' : '🧭 Personality ontology' },
           ]}
         />
+        <RelatedReading locale={L} topic="political" />
 
         <button
           onClick={handleRestart}

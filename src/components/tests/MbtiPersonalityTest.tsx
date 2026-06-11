@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
+import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -221,6 +222,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
             { href: `https://blog.oiyo.net/${l}/mbti-compatibility/`, label: l === 'ko' ? '💞 유형 궁합 보기' : '💞 Type compatibility', external: true },
           ]}
         />
+        <RelatedReading locale={l} topic="mbti" />
         <button
           type="button"
           onClick={() => { setAnswers({}); setShowResult(false) }}

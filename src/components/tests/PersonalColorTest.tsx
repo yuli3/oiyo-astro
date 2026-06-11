@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
+import RelatedReading from '../shared/RelatedReading';
 import type { Locale } from "../../i18n";
 
 interface Props {
@@ -1297,6 +1298,7 @@ export default function PersonalColorTest({ locale }: Props) {
           { href: `/${locale}/mbti/test`, label: locale === 'ko' ? '🧩 MBTI 성격 테스트' : locale === 'ja' ? '🧩 MBTI性格テスト' : '🧩 MBTI personality test' },
         ]}
       />
+      <RelatedReading locale={locale} topic="personal-color" />
 
       {/* Retake */}
       <button
