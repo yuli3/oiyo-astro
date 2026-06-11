@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
+import ResultNextSteps from '../shared/ResultNextSteps'
 import AnimatedNumber from '../ui/AnimatedNumber'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -703,6 +704,14 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
         resultTitle={`${lb.typeLabel} ${dominant} — ${result.name}`}
         emoji={result.emoji}
         description={result.tagline}
+      />
+
+      <ResultNextSteps
+        locale={lp}
+        links={[
+          { href: `/${lp}/enneagram/hobbies`, label: lp === 'ko' ? '✨ 유형별 추천 취미·운동' : '✨ Hobbies for your type' },
+          { href: `/${lp}/mbti/test`, label: lp === 'ko' ? '🧭 MBTI 테스트도 해보기' : '🧭 Try the MBTI test' },
+        ]}
       />
 
       <div className="flex gap-3">

@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
+import ResultNextSteps from '../shared/ResultNextSteps'
 
 type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -211,6 +212,14 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           resultTitle={title}
           emoji={profile.emoji}
           description={profile.desc[l]}
+        />
+        <ResultNextSteps
+          locale={l}
+          links={[
+            { href: `https://wiki.oiyo.net/ko/mbti-dict-${mbtiType.toLowerCase()}/`, label: `📖 ${mbtiType} 유형 사전`, external: true, locales: ['ko'] },
+            { href: `/${l}/mbti/hobbies`, label: l === 'ko' ? `✨ ${mbtiType} 추천 취미` : `✨ ${mbtiType} hobbies` },
+            { href: `https://blog.oiyo.net/${l}/mbti-compatibility/`, label: l === 'ko' ? '💞 유형 궁합 보기' : '💞 Type compatibility', external: true },
+          ]}
         />
         <button
           type="button"

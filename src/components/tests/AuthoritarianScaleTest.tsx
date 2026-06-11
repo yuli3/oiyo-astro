@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLang = 'ko' | 'en' | 'ja';
 
@@ -229,6 +230,14 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
           resultTitle={`${level.label} · ${overall}/100`}
           emoji="🧭"
           description={level.desc}
+        />
+
+        <ResultNextSteps
+          locale={locale}
+          links={[
+            { href: `/${l}/political/test`, label: l === 'ko' ? '🗳️ 정치 나침반 테스트' : '🗳️ Political compass test' },
+            { href: `/${l}/big5/test`, label: l === 'ko' ? '🧪 빅파이브 성격 테스트' : '🧪 Big Five personality test' },
+          ]}
         />
 
         <button
