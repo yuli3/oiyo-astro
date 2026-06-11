@@ -101,6 +101,29 @@ const themeColor = '#65a30d';
     ))}
     <link rel="alternate" hreflang="x-default" href={xDefaultUrl} />
 
+    <!-- JSON-LD: BreadcrumbList (locale segment skipped, last crumb = page title) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": (() => {
+        const all = Astro.url.pathname.split('/').filter(Boolean);
+        const crumbs = all
+          .map((segment, index) => ({ segment, path: '/' + all.slice(0, index + 1).join('/') }))
+          .filter(({ segment }, index) => !(index === 0 && (LOCALES as readonly string[]).includes(segment)));
+        return [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+          ...crumbs.map(({ segment, path }, i) => ({
+            "@type": "ListItem",
+            "position": i + 2,
+            "name": i === crumbs.length - 1
+              ? title
+              : segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
+            "item": new URL(path, Astro.site),
+          })),
+        ];
+      })(),
+    })} />
+
     <title>{title} | OIYO</title>
 
     <!-- GA4 — same family property as blog/wiki (G-915L6V38X6), split by hostname -->
