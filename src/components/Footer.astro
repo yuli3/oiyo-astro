@@ -51,18 +51,21 @@ const year = new Date().getFullYear();
             <a href={`https://blog.oiyo.net/${locale}/?utm_source=oiyo&utm_medium=footer&utm_campaign=family_nav`}
                target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
               OIYO Blog →
+              <span class="block text-[10px] text-gray-500">{locale === 'ko' ? '깊이 읽는 곳 — 심화 가이드' : 'Read — in-depth guides'}</span>
             </a>
           </li>
           <li>
             <a href={`https://wiki.oiyo.net/${locale}/?utm_source=oiyo&utm_medium=footer&utm_campaign=family_nav`}
                target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
               OIYO Wiki →
+              <span class="block text-[10px] text-gray-500">{locale === 'ko' ? '찾아보는 곳 — 개념 사전' : 'Look up — concept dictionary'}</span>
             </a>
           </li>
           <li>
             <a href="https://ahoxy.com?utm_source=oiyo&utm_medium=footer&utm_campaign=family_nav"
                target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
               AHOXY →
+              <span class="block text-[10px] text-gray-500">{locale === 'ko' ? '이름·운세 도구' : 'Names & fortune tools'}</span>
             </a>
           </li>
         </ul>
