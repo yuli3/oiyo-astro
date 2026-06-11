@@ -134,7 +134,9 @@ function getDayStem(y: number, m: number, d: number): number {
 }
 function getDayBranch(y: number, m: number, d: number): number {
   const jd = julianDay(y, m, d);
-  return ((jd - DAY_EPOCH_JD) % 12 + 12) % 12;
+  // Epoch day 1900-01-01 is 甲戌: stem 0 but branch 10, so the branch cycle
+  // needs the +10 offset (verified: 2000-01-01 = 戊午, 2024-01-01 = 甲子).
+  return ((jd - DAY_EPOCH_JD + 10) % 12 + 12) % 12;
 }
 
 // Hour pillar: branches go in 2-hour segments starting at 23:00 (子)
