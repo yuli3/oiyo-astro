@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import AnimatedNumber from '../ui/AnimatedNumber'
+import ShareResultButton from '../shared/ShareResultButton'
+import ResultNextSteps from '../shared/ResultNextSteps'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -450,6 +452,22 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={`${DIM_META[dominant][locale].label} ${scores[dominant]}%`}
+        emoji="🌊"
+        description={`${lb.secondaryTrait}: ${DIM_META[secondary][locale].label} ${scores[secondary]}%`}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/mbti/test`, label: locale === 'ko' ? '🧠 MBTI 테스트' : locale === 'ja' ? '🧠 MBTIテスト' : '🧠 MBTI test' },
+          { href: `/${locale}/enneagram/test`, label: locale === 'ko' ? '🔮 에니어그램 테스트' : locale === 'ja' ? '🔮 エニアグラムテスト' : '🔮 Enneagram test' },
+          { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '💪 내면 강점 테스트' : locale === 'ja' ? '💪 内面の強みテスト' : '💪 Inner strength test' },
+        ]}
+      />
 
       <div className="flex gap-3">
         <button

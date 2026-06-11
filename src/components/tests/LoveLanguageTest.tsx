@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
+import ShareResultButton from '../shared/ShareResultButton'
+import ResultNextSteps from '../shared/ResultNextSteps'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Lang = 'words' | 'acts' | 'gifts' | 'time' | 'touch'
@@ -469,6 +471,22 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
         <h3 className="font-semibold text-sm text-primary">{lb.tip}</h3>
         <p className="text-sm">{r.tip}</p>
       </div>
+
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={r.title}
+        emoji={r.emoji}
+        description={r.description}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/attachment-style/test`, label: locale === 'ko' ? '💚 애착유형 테스트' : locale === 'ja' ? '💚 愛着スタイルテスト' : '💚 Attachment style test' },
+          { href: `https://blog.oiyo.net/${locale}/mbti-compatibility/`, label: locale === 'ko' ? '💞 유형 궁합 보기' : locale === 'ja' ? '💞 タイプ相性' : '💞 Type compatibility', external: true },
+          { href: `/${locale}/enneagram/test`, label: locale === 'ko' ? '🔮 에니어그램 테스트' : locale === 'ja' ? '🔮 エニアグラムテスト' : '🔮 Enneagram test' },
+        ]}
+      />
 
       <div className="flex gap-3">
         <button onClick={restart}

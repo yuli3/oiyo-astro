@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
+import ShareResultButton from '../shared/ShareResultButton'
+import ResultNextSteps from '../shared/ResultNextSteps'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type AttachmentType = 'secure' | 'anxious' | 'avoidant' | 'fearful'
@@ -768,6 +770,22 @@ export default function AttachmentStyleTest({ locale: lp = 'ko' }: Props) {
         <h3 className="font-semibold text-sm text-primary">{lb.advice}</h3>
         <p className="text-sm">{r.advice}</p>
       </div>
+
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={r.title}
+        emoji={{ secure: '🌳', anxious: '🌊', avoidant: '🏔️', fearful: '🌪️' }[result.type]}
+        description={r.subtitle}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/love-language/test`, label: locale === 'ko' ? '❤️ 사랑의 언어 테스트' : locale === 'ja' ? '❤️ 愛の言語テスト' : '❤️ Love Language test' },
+          { href: `/${locale}/self-esteem/test`, label: locale === 'ko' ? '🌟 자존감 테스트' : locale === 'ja' ? '🌟 自尊心テスト' : '🌟 Self-esteem test' },
+          { href: `https://blog.oiyo.net/${locale}/mbti-compatibility/`, label: locale === 'ko' ? '💞 유형 궁합 보기' : locale === 'ja' ? '💞 タイプ相性' : '💞 Type compatibility', external: true },
+        ]}
+      />
 
       <div className="flex gap-3">
         <button onClick={restart}

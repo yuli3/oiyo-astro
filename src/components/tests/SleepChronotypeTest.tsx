@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
+import ResultNextSteps from '../shared/ResultNextSteps'
 
 type Chronotype = 'lion' | 'bear' | 'wolf' | 'dolphin'
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -794,6 +796,22 @@ export default function SleepChronotypeTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={r.title}
+        emoji={{ lion: '🦁', bear: '🐻', wolf: '🐺', dolphin: '🐬' }[result]}
+        description={r.subtitle}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/routine/builder`, label: locale === 'ko' ? '📋 루틴 빌더' : locale === 'ja' ? '📋 ルーティンビルダー' : '📋 Routine builder' },
+          { href: `/${locale}/habit-builder/30-days`, label: locale === 'ko' ? '📅 30일 습관 만들기' : locale === 'ja' ? '📅 30日習慣づくり' : '📅 30-day habit builder' },
+          { href: `/${locale}/burnout/test`, label: locale === 'ko' ? '😰 번아웃 테스트' : locale === 'ja' ? '😰 バーンアウトテスト' : '😰 Burnout test' },
+        ]}
+      />
 
       <div className="flex gap-3">
         <button

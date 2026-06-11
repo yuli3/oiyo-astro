@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
+import ResultNextSteps from '../shared/ResultNextSteps'
 
 type Level = 'high' | 'medium' | 'low'
 type Locale = 'ko' | 'en' | 'ja'
@@ -275,6 +277,21 @@ export default function BurnoutTest({ locale: lp = 'ko' }: Props) {
         <p className="text-sm italic">"{r.affirmation}"</p>
       </div>
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={r.title}
+        emoji={result.level === 'high' ? '🔥' : result.level === 'medium' ? '🌡️' : '🍃'}
+        description={r.subtitle}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+          { href: `/${locale}/lethargy/test`, label: locale === 'ko' ? '🛌 무기력 회복 테스트' : locale === 'ja' ? '🛌 無気力回復テスト' : '🛌 Lethargy recovery test' },
+          { href: `/${locale}/sleep-type/test`, label: locale === 'ko' ? '💤 수면 유형 테스트' : locale === 'ja' ? '💤 睡眠タイプテスト' : '💤 Sleep type test' },
+        ]}
+      />
       <div className="flex gap-3">
         <button onClick={restart} className="flex-1 rounded-lg border bg-card px-4 py-2 text-sm font-medium hover:bg-accent transition-colors">{lb.restart}</button>
         <button onClick={share} className="flex-1 rounded-lg bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity">{lb.share}</button>

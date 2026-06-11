@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
+import ResultNextSteps from '../shared/ResultNextSteps'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Level = 'high' | 'medium' | 'low'
@@ -369,6 +371,22 @@ export default function SelfEsteemTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={r.title}
+        emoji={result.level === 'high' ? '🌟' : result.level === 'medium' ? '🌱' : '🌧️'}
+        description={r.subtitle}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '💪 내면 강점 테스트' : locale === 'ja' ? '💪 内面の強みテスト' : '💪 Inner strength test' },
+          { href: `/${locale}/burnout/test`, label: locale === 'ko' ? '😰 번아웃 테스트' : locale === 'ja' ? '😰 バーンアウトテスト' : '😰 Burnout test' },
+          { href: `/${locale}/today`, label: locale === 'ko' ? '🌌 오늘의 우주' : locale === 'ja' ? '🌌 今日の宇宙' : "🌌 Today's Universe" },
+        ]}
+      />
 
       <div className="flex gap-3">
         <button onClick={restart}
