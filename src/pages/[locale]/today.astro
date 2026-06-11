@@ -1,0 +1,55 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import MentalBoost from '../../components/shared/MentalBoost.astro';
+import DailyUniverse from '../../components/tools/DailyUniverse';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '오늘의 우주 — 오늘의 일진·별자리·타로 한눈에',
+    description:
+      '오늘의 사주 일진(60갑자), 태양이 지나는 별자리, 오늘의 타로 카드를 한 화면에 모았습니다. 매일 바뀌는 우주의 기운으로 하루를 시작해 보세요.',
+  },
+  en: {
+    title: "Today's Universe — Daily Saju, Stars & Tarot at a Glance",
+    description:
+      "Today's Saju day pillar (sexagenary cycle), the Sun's current zodiac sign, and your tarot card of the day — all on one screen. Start each day with the universe's changing energy.",
+  },
+  ja: {
+    title: '今日の宇宙 — 日辰・星座・タロットをひと目で',
+    description:
+      '今日の四柱推命の日辰（六十干支）、太陽が通る星座、今日のタロットカードを1画面に。毎日変わる宇宙の気で一日を始めましょう。',
+  },
+  zh: {
+    title: '今日宇宙 — 日辰、星座与塔罗一目了然',
+    description:
+      '今天的八字日辰（六十甲子）、太阳所在星座、今日塔罗牌 — 全部集中在一个页面。用每天变化的宇宙能量开启一天。',
+  },
+  fr: {
+    title: "L'Univers du Jour — Saju, étoiles et tarot en un coup d'œil",
+    description:
+      "Le pilier du jour Saju (cycle sexagésimal), le signe actuel du Soleil et votre carte de tarot du jour — sur un seul écran. Commencez chaque journée avec l'énergie changeante de l'univers.",
+  },
+  es: {
+    title: 'El Universo de Hoy — Saju, estrellas y tarot de un vistazo',
+    description:
+      'El pilar del día Saju (ciclo sexagenario), el signo actual del Sol y tu carta de tarot del día — todo en una pantalla. Empieza cada día con la energía cambiante del universo.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-4xl px-4 py-8">
+    <DailyUniverse client:load locale={locale} />
+    <MentalBoost locale={locale} />
+  </main>
+</Layout>

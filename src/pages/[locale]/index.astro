@@ -96,6 +96,7 @@ const oracleSectionDesc = txt({
 })
 
 const quickTests = [
+  { icon: '🌌', title: txt({ ko: '오늘의 우주', en: "Today's Universe", ja: '今日の宇宙', zh: '今日宇宙', fr: "L'Univers du Jour", es: 'El Universo de Hoy' }), href: localePath(locale, '/today') },
   { icon: '😰', title: txt({ ko: '번아웃 테스트', en: 'Burnout Test', ja: 'バーンアウトテスト', zh: '倦怠测试', fr: 'Test de Burnout', es: 'Test de Burnout' }), href: localePath(locale, '/burnout/test') },
   { icon: '💤', title: txt({ ko: '수면 유형', en: 'Sleep Type', ja: '睡眠タイプ', zh: '睡眠类型', fr: 'Type de Sommeil', es: 'Tipo de Sueño' }), href: localePath(locale, '/sleep-type/test') },
   { icon: '❤️‍🔥', title: txt({ ko: '사랑의 언어', en: 'Love Language', ja: '愛の言語', zh: '爱的语言', fr: 'Langage d\'Amour', es: 'Lenguaje del Amor' }), href: localePath(locale, '/love-language/test') },
@@ -148,6 +149,12 @@ const sectionMore = txt({ ko: '더 많은 도구', en: 'More Tools', ja: 'その
           class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-green-800 font-semibold text-sm border border-green-200 hover:border-green-400 hover:bg-green-50 transition-all shadow-sm"
         >
           ✦ {txt({ ko: '오라클 뽑기', en: 'Oracle Draw', ja: 'オラクル引く', zh: '抽神谕牌', fr: 'Tirage Oracle', es: 'Tirada Oracle' })}
+        </a>
+        <a
+          href={localePath(locale, '/today')}
+          class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-green-800 font-semibold text-sm border border-green-200 hover:border-green-400 hover:bg-green-50 transition-all shadow-sm"
+        >
+          🌌 {txt({ ko: '오늘의 우주', en: "Today's Universe", ja: '今日の宇宙', zh: '今日宇宙', fr: "L'Univers du Jour", es: 'El Universo de Hoy' })}
         </a>
       </div>
     </div>
