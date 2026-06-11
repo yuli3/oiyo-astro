@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from "react";
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 interface Props { locale?: string; }
 
@@ -169,6 +171,7 @@ const data = {
 
 export default function CommuteMentalTest({ locale: localeProp }: Props) {
   const lang = (localeProp === "en" ? "en" : "ko") as "ko" | "en";
+  const locale: string = lang;
   const t = data[lang];
   const [answers, setAnswers] = useState<Record<string, { lightness: number; resistance: number; lethargy: number; escape: number }>>({});
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
@@ -196,6 +199,21 @@ export default function CommuteMentalTest({ locale: localeProp }: Props) {
         <div className="p-6 bg-teal-50 rounded-2xl border border-teal-100">
           <p className="text-slate-700 text-base leading-relaxed">{r.desc}</p>
         </div>
+        <ShareResultButton
+          locale={locale}
+          heading={t.title}
+          resultTitle={r.title}
+          emoji={r.emoji}
+          description={r.desc}
+        />
+        <ResultNextSteps
+          locale={locale}
+          links={[
+            { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+            { href: `/${locale}/burnout/test`, label: locale === 'ko' ? '🔥 번아웃 테스트' : locale === 'ja' ? '🔥 バーンアウトテスト' : '🔥 Burnout test' },
+            { href: `/${locale}/lethargy/test`, label: locale === 'ko' ? '🛌 무기력 회복 테스트' : locale === 'ja' ? '🛌 無気力回復テスト' : '🛌 Lethargy recovery test' },
+          ]}
+        />
         <button onClick={() => { setAnswers({}); setPhase("quiz"); }} className="text-slate-400 text-sm hover:underline">{t.retake}</button>
       </div>
     );

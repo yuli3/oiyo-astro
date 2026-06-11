@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type Level = 'minimal' | 'mild' | 'moderate' | 'severe'
@@ -382,6 +384,21 @@ export default function DepressionScreeningTest({ locale: lp = 'ko' }: Props) {
         <p className="text-sm leading-relaxed">"{r.affirmation}"</p>
       </div>
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={r.title}
+        emoji={result.level === 'severe' ? '🚨' : result.level === 'moderate' ? '🌧️' : result.level === 'mild' ? '🌦️' : '🌱'}
+        description={r.description}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+          { href: `/${locale}/self-esteem/test`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
+          { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+        ]}
+      />
       <div className="flex gap-3">
         <button
           onClick={restart}

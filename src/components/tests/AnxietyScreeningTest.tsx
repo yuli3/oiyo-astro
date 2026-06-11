@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type Level = 'minimal' | 'mild' | 'moderate' | 'severe'
@@ -375,6 +377,21 @@ export default function AnxietyScreeningTest({ locale: lp = 'ko' }: Props) {
         <p className="text-sm leading-relaxed">"{r.affirmation}"</p>
       </div>
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={r.title}
+        emoji={result.level === 'severe' ? '🚨' : result.level === 'moderate' ? '🌧️' : result.level === 'mild' ? '🌤️' : '🍃'}
+        description={r.description}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+          { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+          { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+        ]}
+      />
       <div className="flex gap-3">
         <button onClick={restart} aria-label={lb.restart} className="flex-1 rounded-xl border bg-card px-4 py-2 text-sm font-bold hover:bg-accent transition-colors">{lb.restart}</button>
         <button onClick={share} aria-label={lb.share} className="flex-1 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity">{lb.share}</button>

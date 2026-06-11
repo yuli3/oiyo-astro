@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type ResultKey = 'rest' | 'activation' | 'meaning' | 'support'
@@ -177,6 +179,21 @@ export default function LethargyRecoveryTest({ locale: rawLocale = 'ko' }: Props
           </ul>
         </div>
         <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs leading-relaxed text-amber-800">{data.supportNote}</p>
+        <ShareResultButton
+          locale={locale}
+          heading={labels.title}
+          resultTitle={data.title}
+          emoji={result === 'rest' ? '🛌' : result === 'activation' ? '🚶' : result === 'meaning' ? '🧭' : '🤝'}
+          description={data.description}
+        />
+        <ResultNextSteps
+          locale={locale}
+          links={[
+            { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+            { href: `/${locale}/habit-builder/30-days`, label: locale === 'ko' ? '✅ 30일 습관 만들기' : locale === 'ja' ? '✅ 30日習慣づくり' : '✅ 30-day habit builder' },
+            { href: `/${locale}/sleep-type/test`, label: locale === 'ko' ? '💤 수면 유형 테스트' : locale === 'ja' ? '💤 睡眠タイプテスト' : '💤 Sleep type test' },
+          ]}
+        />
         <div className="flex gap-3">
           <button onClick={restart} className="flex-1 rounded-xl border bg-card px-4 py-3 text-sm font-bold hover:bg-accent">{labels.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl bg-primary px-4 py-3 text-sm font-bold text-primary-foreground hover:opacity-90">{labels.share}</button>

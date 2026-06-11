@@ -1,6 +1,8 @@
 'use client';
 
 import { useState } from 'react';
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLang = 'ko' | 'en' | 'ja';
 type InvestorType = 'geopolitical' | 'macro' | 'tech' | 'dollar' | 'balanced';
@@ -211,6 +213,7 @@ interface Props { locale?: string; }
 
 export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
   const L = lang(lp);
+  const locale = L;
   const lb = LABELS[L];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [current, setCurrent] = useState(0);
@@ -286,6 +289,21 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
         </div>
 
         <p className="text-center text-xs text-slate-400">{lb.note}</p>
+        <ShareResultButton
+          locale={locale}
+          heading={lb.title}
+          resultTitle={info.name[L]}
+          emoji={info.icon}
+          description={info.desc[L]}
+        />
+        <ResultNextSteps
+          locale={locale}
+          links={[
+            { href: `/${locale}/political/test`, label: locale === 'ko' ? '🧭 정치 나침반 테스트' : locale === 'ja' ? '🧭 政治コンパステスト' : '🧭 Political compass test' },
+            { href: `/${locale}/ontology/luck`, label: locale === 'ko' ? '🍀 운 온톨로지' : locale === 'ja' ? '🍀 運のオントロジー' : '🍀 Luck ontology' },
+            { href: `/${locale}/today`, label: locale === 'ko' ? '📅 오늘의 운세' : locale === 'ja' ? '📅 今日の運勢' : '📅 Today' },
+          ]}
+        />
 
         <button onClick={handleRestart} className="w-full py-3 rounded-xl bg-slate-800 text-white font-bold hover:bg-slate-900 transition-colors">
           {lb.restart}

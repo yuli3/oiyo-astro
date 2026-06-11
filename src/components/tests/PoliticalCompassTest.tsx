@@ -1,4 +1,6 @@
 import { useState, useMemo } from 'react'
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLang = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh'
 function lang(locale: string): SupportedLang {
@@ -319,6 +321,21 @@ export default function PoliticalCompassTest({ locale }: Props) {
         </div>
 
         <p class="rounded-lg bg-slate-100 p-3 text-center text-xs text-slate-500">{info.disclaimer}</p>
+        <ShareResultButton
+          locale={L}
+          heading={ui.title}
+          resultTitle={chars.slice(0, 4).join('')}
+          emoji="🧭"
+          description={info.resultSub}
+        />
+        <ResultNextSteps
+          locale={L}
+          links={[
+            { href: `/${L}/authoritarian/test`, label: L === 'ko' ? '⚖️ 권위주의 성향 테스트' : L === 'ja' ? '⚖️ 権威主義傾向テスト' : '⚖️ Authoritarian scale test' },
+            { href: `/${L}/big5/test`, label: L === 'ko' ? '🧬 Big5 성격 테스트' : L === 'ja' ? '🧬 Big5性格テスト' : '🧬 Big Five personality test' },
+            { href: `/${L}/ontology/personality`, label: L === 'ko' ? '🧭 성격 온톨로지' : L === 'ja' ? '🧭 性格オントロジー' : '🧭 Personality ontology' },
+          ]}
+        />
 
         <button
           onClick={handleRestart}

@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLocale = "ko" | "en" | "ja";
 
@@ -303,6 +305,21 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
         </div>
 
         <p className="text-center text-xs text-gray-400">{tx.disclaimer}</p>
+        <ShareResultButton
+          locale={locale}
+          heading={tx.title}
+          resultTitle={ld.title}
+          emoji={lv.emoji}
+          description={ld.description}
+        />
+        <ResultNextSteps
+          locale={locale}
+          links={[
+            { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+            { href: `/${locale}/self-esteem/test`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
+            { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+          ]}
+        />
 
         <div className="flex gap-3">
           <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">

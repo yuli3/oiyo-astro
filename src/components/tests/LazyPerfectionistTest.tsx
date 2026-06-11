@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type ResultKey = 'starter' | 'planner' | 'critic' | 'recovering'
@@ -177,6 +179,21 @@ export default function LazyPerfectionistTest({ locale: rawLocale = 'ko' }: Prop
             {data.actions.map((action) => <li className="text-sm text-green-900" key={action}>- {action}</li>)}
           </ul>
         </div>
+        <ShareResultButton
+          locale={locale}
+          heading={labels.title}
+          resultTitle={data.title}
+          emoji={result === 'starter' ? '🌱' : result === 'planner' ? '🗒️' : result === 'critic' ? '🔍' : '✨'}
+          description={data.description}
+        />
+        <ResultNextSteps
+          locale={locale}
+          links={[
+            { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+            { href: `/${locale}/routine/builder`, label: locale === 'ko' ? '🗓️ 루틴 빌더' : locale === 'ja' ? '🗓️ ルーティンビルダー' : '🗓️ Routine builder' },
+            { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+          ]}
+        />
         <div className="flex gap-3">
           <button onClick={restart} className="flex-1 rounded-xl border bg-card px-4 py-3 text-sm font-bold hover:bg-accent">{labels.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl bg-primary px-4 py-3 text-sm font-bold text-primary-foreground hover:opacity-90">{labels.share}</button>

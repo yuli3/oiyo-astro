@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip
 } from 'recharts'
@@ -1266,6 +1268,22 @@ export default function MbtiCareerTest({ locale: localeProp = 'ko' }: Props) {
           ))}
         </ul>
       </div>
+
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={`${result.type} - ${r.name}`}
+        emoji="💼"
+        description={r.careerDescription}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/mbti/test`, label: locale === 'ko' ? '🧩 MBTI 성격 테스트' : locale === 'ja' ? '🧩 MBTI性格テスト' : '🧩 MBTI personality test' },
+          { href: `/${locale}/ontology/life-purpose`, label: locale === 'ko' ? '🧭 삶의 목적 온톨로지' : locale === 'ja' ? '🧭 人生の目的オントロジー' : '🧭 Life purpose ontology' },
+          { href: `/${locale}/big5/test`, label: locale === 'ko' ? '🧬 Big5 성격 테스트' : locale === 'ja' ? '🧬 Big5性格テスト' : '🧬 Big Five personality test' },
+        ]}
+      />
 
       <div className="flex gap-3">
         <button

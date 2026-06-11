@@ -1,4 +1,6 @@
 import { useState } from "react";
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 import type { Locale } from "../../i18n";
 
 interface Props {
@@ -1280,6 +1282,21 @@ export default function PersonalColorTest({ locale }: Props) {
 
       {/* Disclaimer */}
       <p className="text-center text-xs text-gray-400">{ui.disclaimer}</p>
+      <ShareResultButton
+        locale={locale}
+        heading={ui.title}
+        resultTitle={sd.name[locale]}
+        emoji={sd.emoji}
+        description={sd.subtitle[locale]}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/ontology/hobbies`, label: locale === 'ko' ? '🎨 취미 온톨로지' : locale === 'ja' ? '🎨 趣味オントロジー' : '🎨 Hobbies ontology' },
+          { href: `/${locale}/ontology/luck`, label: locale === 'ko' ? '🍀 운 온톨로지' : locale === 'ja' ? '🍀 運のオントロジー' : '🍀 Luck ontology' },
+          { href: `/${locale}/mbti/test`, label: locale === 'ko' ? '🧩 MBTI 성격 테스트' : locale === 'ja' ? '🧩 MBTI性格テスト' : '🧩 MBTI personality test' },
+        ]}
+      />
 
       {/* Retake */}
       <button

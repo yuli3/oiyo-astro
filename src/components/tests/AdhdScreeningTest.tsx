@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type FlagLevel = 'normal' | 'some' | 'multiple' | 'strong'
@@ -305,6 +307,7 @@ interface Props { locale?: string }
 
 export default function AdhdScreeningTest({ locale: lp = 'ko' }: Props) {
   const l = lang(lp)
+  const locale = l
   const lb = LABELS[l]
   const questions = QUESTIONS[l]
 
@@ -453,6 +456,21 @@ export default function AdhdScreeningTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={r.title}
+        emoji={r.badge}
+        description={r.description}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+          { href: `/${locale}/self-esteem/test`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
+          { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+        ]}
+      />
 
       <div className="flex gap-3">
         <button

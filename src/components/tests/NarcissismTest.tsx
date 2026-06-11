@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton';
+import ResultNextSteps from '../shared/ResultNextSteps';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 
@@ -270,6 +272,7 @@ interface Props { locale?: string }
 
 export default function NarcissismTest({ locale: lp = 'ko' }: Props) {
   const l = lang(lp ?? 'ko')
+  const locale = l
   const lb = LABELS[l]
   const questions = QUESTIONS[l]
 
@@ -390,6 +393,21 @@ export default function NarcissismTest({ locale: lp = 'ko' }: Props) {
         <p className="text-sm">"{r.affirmation}"</p>
       </div>
       <p className="text-center text-xs text-muted-foreground">{lb.disclaimer}</p>
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={r.title}
+        emoji={key === 'high' ? '🪞' : key === 'confident' ? '✨' : key === 'balanced' ? '⚖️' : '🌿'}
+        description={r.description}
+      />
+      <ResultNextSteps
+        locale={locale}
+        links={[
+          { href: `/${locale}/self-esteem/test`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
+          { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+          { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+        ]}
+      />
       <div className="flex gap-3">
         <button onClick={restart} aria-label={lb.restart} className="flex-1 rounded-lg border bg-card px-4 py-2 text-sm font-medium hover:bg-accent transition-colors">{lb.restart}</button>
         <button onClick={share} aria-label={lb.share} className="flex-1 rounded-lg bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity">{lb.share}</button>
