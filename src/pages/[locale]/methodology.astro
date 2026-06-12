@@ -1,0 +1,127 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES, localePath } from '../../i18n';
+import type { Locale } from '../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+type L = Locale;
+const txt = (map: Partial<Record<L, string>>) => map[locale] ?? map.en ?? '';
+
+const meta = {
+  title: txt({
+    ko: '신뢰와 방법론 — OIYO 콘텐츠는 이렇게 만듭니다',
+    en: 'Trust & Methodology — How OIYO Content Is Made',
+    ja: '信頼と方法論 — OIYOコンテンツの作り方',
+    zh: '信任与方法论 — OIYO内容的制作方式',
+    fr: 'Confiance et méthodologie — Comment OIYO crée son contenu',
+    es: 'Confianza y metodología — Cómo se crea el contenido de OIYO',
+  }),
+  description: txt({
+    ko: 'OIYO의 심리 검사가 참조하는 검증 척도, 콘텐츠 제작·검수 원칙, 데이터 프라이버시, 한계 고지를 투명하게 공개합니다.',
+    en: 'The validated scales OIYO tests reference, our content and review principles, data privacy, and limitations — disclosed transparently.',
+    ja: 'OIYOの心理テストが参照する検証済み尺度、コンテンツ制作・検収の原則、データプライバシー、限界の告知を透明に公開します。',
+    zh: '公开OIYO心理测试参考的验证量表、内容制作与审核原则、数据隐私及局限性说明。',
+    fr: "Les échelles validées que référencent les tests OIYO, nos principes de création et de relecture, la confidentialité des données et les limites — en toute transparence.",
+    es: 'Las escalas validadas que referencian los tests de OIYO, nuestros principios de creación y revisión, la privacidad de datos y las limitaciones — con total transparencia.',
+  }),
+};
+
+const S = {
+  heroBadge: txt({ ko: '🔍 투명성 원칙', en: '🔍 Transparency', ja: '🔍 透明性の原則', zh: '🔍 透明原则', fr: '🔍 Transparence', es: '🔍 Transparencia' }),
+  intro: txt({
+    ko: 'OIYO는 "재미있지만 근거 없는" 콘텐츠와 "근거는 있지만 닿지 않는" 학술 자료 사이의 다리를 지향합니다. 이 페이지는 우리가 무엇을 참조하고, 무엇을 약속하며, 무엇을 약속하지 않는지를 밝힙니다.',
+    en: 'OIYO aims to bridge "fun but unfounded" content and "rigorous but unreachable" academic material. This page states what we reference, what we promise, and what we do not.',
+    ja: 'OIYOは「楽しいが根拠のない」コンテンツと「厳密だが届かない」学術資料の橋渡しを目指します。このページでは、私たちが何を参照し、何を約束し、何を約束しないかを明らかにします。',
+    zh: 'OIYO致力于在"有趣但无据"的内容与"严谨但难及"的学术资料之间架桥。本页说明我们参考什么、承诺什么、不承诺什么。',
+    fr: "OIYO veut faire le pont entre le contenu « amusant mais sans fondement » et la documentation « rigoureuse mais inaccessible ». Cette page précise ce que nous référençons, promettons, et ne promettons pas.",
+    es: 'OIYO busca tender un puente entre el contenido «divertido pero sin fundamento» y el material académico «riguroso pero inalcanzable». Esta página declara qué referenciamos, qué prometemos y qué no.',
+  }),
+  sections: [
+    {
+      icon: '📐',
+      title: txt({ ko: '심리 검사의 근거', en: 'What Our Tests Are Based On', ja: '心理テストの根拠', zh: '心理测试的依据', fr: 'Les fondements de nos tests', es: 'En qué se basan nuestros tests' }),
+      body: txt({
+        ko: '우울(PHQ-9), 불안(GAD-7), 자존감(로젠버그 척도), 번아웃(MBI 모델), 성인 ADHD(ASRS), 빅파이브(OCEAN 모델) 등 학계에서 검증된 공개 척도의 구조와 문항 설계를 참조해 만듭니다. 단, OIYO의 검사는 해당 척도의 공식 라이선스판이 아니라 자기 성찰을 돕기 위한 참조 구현이며, 결과 화면과 본문에 원 척도를 명시하는 것을 원칙으로 합니다. 사주·타로·점성술 등 상징 체계 콘텐츠는 "예측 도구"가 아닌 "자기 이해를 위한 상징 언어"로 일관되게 다룹니다.',
+        en: 'Our tests reference the structure and item design of validated, published scales — PHQ-9 (depression), GAD-7 (anxiety), the Rosenberg Self-Esteem Scale, the MBI burnout model, ASRS (adult ADHD), and the Big Five (OCEAN). OIYO tests are reference implementations for self-reflection, not licensed clinical editions, and we cite the original scale on result screens and articles. Symbolic systems (Saju, tarot, astrology) are consistently framed as symbolic languages for self-understanding, never as prediction tools.',
+        ja: '鬱(PHQ-9)、不安(GAD-7)、自尊感情(ローゼンバーグ尺度)、バーンアウト(MBIモデル)、成人ADHD(ASRS)、ビッグファイブ(OCEAN)など、学界で検証された公開尺度の構造と設問設計を参照しています。ただしOIYOのテストは公式ライセンス版ではなく自己省察のための参照実装であり、結果画面と本文に元の尺度を明記することを原則とします。四柱推命・タロット・占星術などは「予測ツール」ではなく「自己理解のための象徴言語」として一貫して扱います。',
+        zh: '我们的测试参考经学界验证的公开量表的结构与题目设计——PHQ-9(抑郁)、GAD-7(焦虑)、罗森伯格自尊量表、MBI倦怠模型、ASRS(成人ADHD)、大五人格(OCEAN)。OIYO测试是帮助自我反思的参考实现,并非官方授权临床版本;我们原则上在结果页与文章中注明原量表。八字、塔罗、占星等象征体系始终作为"自我理解的象征语言"而非"预测工具"。',
+        fr: "Nos tests s'appuient sur la structure d'échelles publiées et validées — PHQ-9 (dépression), GAD-7 (anxiété), échelle de Rosenberg, modèle MBI du burnout, ASRS (TDAH adulte), Big Five (OCEAN). Ce sont des implémentations de référence pour l'introspection, non des éditions cliniques licenciées ; l'échelle d'origine est citée sur les écrans de résultats. Les systèmes symboliques (Saju, tarot, astrologie) sont traités comme des langages symboliques, jamais comme des outils de prédiction.",
+        es: 'Nuestros tests referencian la estructura de escalas publicadas y validadas — PHQ-9 (depresión), GAD-7 (ansiedad), la escala de Rosenberg, el modelo MBI de burnout, ASRS (TDAH adulto) y el Big Five (OCEAN). Son implementaciones de referencia para la autorreflexión, no ediciones clínicas licenciadas; citamos la escala original en los resultados. Los sistemas simbólicos (Saju, tarot, astrología) se tratan siempre como lenguajes simbólicos, nunca como herramientas de predicción.',
+      }),
+    },
+    {
+      icon: '🛡️',
+      title: txt({ ko: '약속하지 않는 것 (한계 고지)', en: 'What We Do Not Promise', ja: '約束しないこと(限界の告知)', zh: '我们不承诺的事(局限说明)', fr: 'Ce que nous ne promettons pas', es: 'Lo que no prometemos' }),
+      body: txt({
+        ko: 'OIYO의 어떤 검사도 의학적 진단이 아닙니다. 우울·불안·ADHD 등 임상 주제의 검사 결과는 "전문가 상담을 고려할 신호"일 수는 있어도 진단을 대체할 수 없으며, 모든 해당 페이지에 면책 문구를 표기합니다. 운세·상징 콘텐츠는 미래를 단정하지 않으며, 투자·의료·법률 의사결정의 근거로 사용되어서는 안 됩니다.',
+        en: 'No OIYO test is a medical diagnosis. Results on clinical topics (depression, anxiety, ADHD) can be a signal to consider professional help, never a substitute for it — every such page carries a disclaimer. Fortune and symbolic content never asserts the future and must not ground medical, financial, or legal decisions.',
+        ja: 'OIYOのいかなるテストも医学的診断ではありません。鬱・不安・ADHDなど臨床的なテーマの結果は「専門家への相談を考えるシグナル」にはなり得ても診断の代わりにはならず、該当する全ページに免責文を表記します。占い・象徴コンテンツは未来を断定せず、投資・医療・法律の意思決定の根拠にしてはいけません。',
+        zh: 'OIYO的任何测试都不是医学诊断。抑郁、焦虑、ADHD等临床主题的结果可以是"考虑寻求专业帮助的信号",但绝不能替代诊断;所有相关页面均附免责声明。运势与象征内容不断言未来,不应作为医疗、投资或法律决策的依据。',
+        fr: "Aucun test OIYO n'est un diagnostic médical. Sur les sujets cliniques (dépression, anxiété, TDAH), un résultat peut signaler l'intérêt d'une consultation, jamais la remplacer — chaque page concernée porte un avertissement. Les contenus symboliques n'affirment jamais l'avenir et ne doivent fonder aucune décision médicale, financière ou juridique.",
+        es: 'Ningún test de OIYO es un diagnóstico médico. En temas clínicos (depresión, ansiedad, TDAH), un resultado puede ser una señal para considerar ayuda profesional, nunca un sustituto — cada página correspondiente lleva un descargo. El contenido simbólico nunca afirma el futuro ni debe fundamentar decisiones médicas, financieras o legales.',
+      }),
+    },
+    {
+      icon: '🔒',
+      title: txt({ ko: '데이터 프라이버시', en: 'Data Privacy', ja: 'データプライバシー', zh: '数据隐私', fr: 'Confidentialité des données', es: 'Privacidad de datos' }),
+      body: txt({
+        ko: '검사 응답과 결과는 서버로 전송되지 않습니다. 결과는 브라우저 안(화면·URL 파라미터·localStorage)에만 존재하며, 우리는 개인의 검사 결과를 수집·저장·판매하지 않습니다. 방문 통계는 Google Analytics의 집계 데이터만 사용합니다.',
+        en: 'Your answers and results are never sent to our servers. Results exist only in your browser (screen, URL parameters, localStorage). We do not collect, store, or sell individual test results. Visit statistics use only aggregated Google Analytics data.',
+        ja: '回答と結果はサーバーに送信されません。結果はブラウザ内(画面・URLパラメータ・localStorage)にのみ存在し、個人のテスト結果を収集・保存・販売することはありません。訪問統計はGoogle Analyticsの集計データのみを使用します。',
+        zh: '您的回答与结果不会发送到服务器。结果仅存在于浏览器中(屏幕、URL参数、localStorage)。我们不收集、存储或出售个人测试结果。访问统计仅使用Google Analytics的汇总数据。',
+        fr: "Vos réponses et résultats ne sont jamais envoyés à nos serveurs. Ils n'existent que dans votre navigateur (écran, paramètres d'URL, localStorage). Nous ne collectons, ne stockons ni ne vendons aucun résultat individuel. Les statistiques de visite utilisent uniquement des données agrégées de Google Analytics.",
+        es: 'Tus respuestas y resultados nunca se envían a nuestros servidores. Existen solo en tu navegador (pantalla, parámetros de URL, localStorage). No recopilamos, almacenamos ni vendemos resultados individuales. Las estadísticas de visitas usan solo datos agregados de Google Analytics.',
+      }),
+    },
+    {
+      icon: '✍️',
+      title: txt({ ko: '제작과 검수', en: 'Creation & Review', ja: '制作と検収', zh: '制作与审核', fr: 'Création et relecture', es: 'Creación y revisión' }),
+      body: txt({
+        ko: '콘텐츠는 OIYO 리서치 팀이 공개 문헌을 바탕으로 작성하고, 자동 검증(링크 무결성·구조·다국어 일관성)과 수동 검수를 거칩니다. 잘못된 내용을 발견하시면 문의 페이지로 알려주세요 — 확인 후 수정하고 수정일을 남깁니다. 위키(wiki.oiyo.net)의 개념 사전과 블로그(blog.oiyo.net)의 심화 아티클이 본 사이트 도구들의 이론적 배경을 보완합니다.',
+        en: 'Content is written by the OIYO research team from public literature, then passes automated checks (link integrity, structure, cross-language consistency) and manual review. If you find an error, tell us via the contact page — we verify, fix, and date the correction. The concept dictionary on wiki.oiyo.net and long-form articles on blog.oiyo.net provide the theoretical backbone for the tools here.',
+        ja: 'コンテンツはOIYOリサーチチームが公開文献に基づいて作成し、自動検証(リンク整合性・構造・多言語一貫性)と手動検収を経ます。誤りを見つけた場合はお問い合わせページからお知らせください — 確認のうえ修正し、修正日を記載します。wiki.oiyo.netの概念辞典とblog.oiyo.netの長文記事が、当サイトのツールの理論的背景を補完します。',
+        zh: '内容由OIYO研究团队基于公开文献撰写,并经过自动校验(链接完整性、结构、多语言一致性)与人工审核。如发现错误,请通过联系页面告知——我们核实、修正并标注修正日期。wiki.oiyo.net的概念词典与blog.oiyo.net的深度文章为本站工具提供理论支撑。',
+        fr: "Le contenu est rédigé par l'équipe de recherche OIYO à partir de littérature publique, puis passe des contrôles automatiques (intégrité des liens, structure, cohérence multilingue) et une relecture manuelle. Signalez toute erreur via la page contact — nous vérifions, corrigeons et datons la correction. Le dictionnaire de wiki.oiyo.net et les articles de blog.oiyo.net complètent le socle théorique des outils.",
+        es: 'El contenido lo escribe el equipo de investigación de OIYO a partir de literatura pública, y pasa controles automáticos (integridad de enlaces, estructura, coherencia multilingüe) y revisión manual. Si encuentras un error, avísanos por la página de contacto — verificamos, corregimos y fechamos la corrección. El diccionario de wiki.oiyo.net y los artículos de blog.oiyo.net complementan la base teórica de las herramientas.',
+      }),
+    },
+  ],
+  contact: txt({ ko: '오류 제보·문의하기', en: 'Report an error / Contact', ja: '誤りの報告・お問い合わせ', zh: '报告错误 / 联系我们', fr: 'Signaler une erreur / Contact', es: 'Reportar un error / Contacto' }),
+};
+---
+
+<Layout title={meta.title} description={meta.description} locale={locale}>
+  <section class="relative bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
+    <div class="max-w-2xl mx-auto">
+      <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold mb-4">
+        {S.heroBadge}
+      </div>
+      <h1 class="text-3xl md:text-4xl font-serif font-black text-green-950 mb-3">{meta.title.split('—')[0].trim()}</h1>
+      <p class="text-green-700 leading-relaxed">{S.intro}</p>
+    </div>
+  </section>
+
+  <section class="max-w-2xl mx-auto px-4 py-10 space-y-6">
+    {S.sections.map((sec) => (
+      <div class="rounded-2xl border-2 border-green-100 bg-white p-6">
+        <h2 class="mb-3 flex items-center gap-2 text-lg font-black text-green-950">
+          <span class="text-2xl" aria-hidden="true">{sec.icon}</span>{sec.title}
+        </h2>
+        <p class="text-sm leading-relaxed text-slate-700">{sec.body}</p>
+      </div>
+    ))}
+
+    <div class="text-center pt-4">
+      <a
+        href={localePath(locale, '/contact')}
+        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-green-700 text-white text-sm font-semibold hover:bg-green-800 transition-colors"
+      >
+        {S.contact} →
+      </a>
+    </div>
+  </section>
+</Layout>
