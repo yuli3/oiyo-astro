@@ -62,4 +62,16 @@ const faqs = ['1', '2', '3', '4', '5'].map((n) => ({
       </a>
     </div>
   </section>
+
+  {faqs.length > 0 && (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    })} />
+  )}
 </Layout>
