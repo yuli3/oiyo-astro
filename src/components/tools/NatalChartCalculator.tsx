@@ -31,6 +31,7 @@ const COPY: Record<NatalLocale, {
   saturn: string; saturnSub: string;
   ascNeedsTime: string;
   moonNote: string;
+  method: string;
   disclaimer: string;
   resultHeading: string;
   readMore: string;
@@ -54,6 +55,7 @@ const COPY: Record<NatalLocale, {
     saturn: '토성', saturnSub: '책임·한계·숙련의 과제',
     ascNeedsTime: '상승궁은 태어난 시각이 있어야 계산할 수 있어요.',
     moonNote: '시간을 모를 경우 달 별자리는 정오 기준 근사치이며, 별자리 경계 근처에서는 달라질 수 있습니다.',
+    method: '계산 방법: 행성 위치를 Meeus·Schlyter 천문 알고리즘으로 직접 계산하고 천체력과 대조 검증했습니다. (결과를 짐작하는 블랙박스가 아닙니다.)',
     disclaimer: '점성술은 자기 이해와 사색을 위한 상징 체계이며, 운명을 단정하는 도구가 아닙니다.',
     resultHeading: '나의 출생 차트',
     readMore: '점성술 사전에서 더 읽기 →',
@@ -77,6 +79,7 @@ const COPY: Record<NatalLocale, {
     saturn: 'Saturn', saturnSub: 'Responsibility, limits & mastery',
     ascNeedsTime: 'The Rising sign needs a birth time to be calculated.',
     moonNote: 'Without a birth time, the Moon sign is a noon-based approximation and may differ near sign boundaries.',
+    method: 'How it’s computed: planetary positions are calculated directly with Meeus/Schlyter astronomical algorithms and cross-checked against an ephemeris — not a black box.',
     disclaimer: 'Astrology is a symbolic language for self-reflection, not a tool that fixes your fate.',
     resultHeading: 'My natal chart',
     readMore: 'Read more in the astrology dictionary →',
@@ -100,6 +103,7 @@ const COPY: Record<NatalLocale, {
     saturn: '土星', saturnSub: '責任・限界・熟練の課題',
     ascNeedsTime: '上昇宮の計算には生まれた時刻が必要です。',
     moonNote: '時刻が不明な場合、月星座は正午基準の近似値で、星座の境界付近では変わることがあります。',
+    method: '計算方法: 惑星の位置をMeeus・Schlyterの天文アルゴリズムで直接計算し、天体暦と照合して検証しています（ブラックボックスではありません）。',
     disclaimer: '占星術は自己理解と内省のための象徴体系であり、運命を断定する道具ではありません。',
     resultHeading: '私の出生図',
     readMore: '占星術辞典でさらに読む →',
@@ -123,6 +127,7 @@ const COPY: Record<NatalLocale, {
     saturn: '土星', saturnSub: '责任·限制·磨砺课题',
     ascNeedsTime: '上升星座需要出生时间才能计算。',
     moonNote: '若不知出生时间，月亮星座为正午近似值，在星座边界附近可能不同。',
+    method: '计算方式：行星位置以 Meeus／Schlyter 天文算法直接计算，并与星历表交叉校验，并非黑箱。',
     disclaimer: '占星学是用于自我理解与省思的象征体系，并非断定命运的工具。',
     resultHeading: '我的出生星盘',
     readMore: '在占星辞典中阅读更多 →',
@@ -146,6 +151,7 @@ const COPY: Record<NatalLocale, {
     saturn: 'Saturne', saturnSub: 'Responsabilité, limites et maîtrise',
     ascNeedsTime: 'L’Ascendant nécessite une heure de naissance.',
     moonNote: 'Sans heure de naissance, le signe lunaire est une approximation à midi et peut varier près des limites de signe.',
+    method: 'Méthode : les positions planétaires sont calculées directement avec les algorithmes astronomiques de Meeus/Schlyter et vérifiées par éphéméride — pas une boîte noire.',
     disclaimer: 'L’astrologie est un langage symbolique de réflexion personnelle, non un outil qui fixe le destin.',
     resultHeading: 'Mon thème natal',
     readMore: 'En savoir plus dans le dictionnaire d’astrologie →',
@@ -169,6 +175,7 @@ const COPY: Record<NatalLocale, {
     saturn: 'Saturno', saturnSub: 'Responsabilidad, límites y maestría',
     ascNeedsTime: 'El Ascendente necesita una hora de nacimiento para calcularse.',
     moonNote: 'Sin hora de nacimiento, el signo lunar es una aproximación al mediodía y puede variar cerca de los límites de signo.',
+    method: 'Cómo se calcula: las posiciones planetarias se calculan directamente con algoritmos astronómicos de Meeus/Schlyter y se cotejan con una efeméride — no es una caja negra.',
     disclaimer: 'La astrología es un lenguaje simbólico para la reflexión personal, no una herramienta que fija el destino.',
     resultHeading: 'Mi carta natal',
     readMore: 'Leer más en el diccionario de astrología →',
@@ -311,7 +318,8 @@ export default function NatalChartCalculator({ locale }: Props) {
           <a href={`/${loc}/zodiac/personality`} className="font-semibold text-indigo-600 hover:underline">{t.zodiacLink}</a>
         </div>
 
-        <p className="mt-5 text-center text-xs text-slate-400">{t.disclaimer}</p>
+        <p className="mt-5 rounded-xl bg-slate-50 p-3 text-center text-xs text-slate-500">{t.method}</p>
+        <p className="mt-2 text-center text-xs text-slate-400">{t.disclaimer}</p>
 
         <button
           type="button"
