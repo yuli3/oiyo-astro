@@ -1,12 +1,15 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
+import CopyResultLink from '../shared/CopyResultLink';
+import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 
 type SupportedLang = 'ko' | 'en' | 'ja';
 type InvestorType = 'geopolitical' | 'macro' | 'tech' | 'dollar' | 'balanced';
+const INVESTOR_TYPES: InvestorType[] = ['geopolitical', 'macro', 'tech', 'dollar', 'balanced'];
 
 function lang(locale: string): SupportedLang {
   return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang)
@@ -220,6 +223,13 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0);
   const [done, setDone] = useState(false);
   const [selected, setSelected] = useState<number | null>(null);
+  // A shared/revisited result type read from the URL (?type=tech).
+  const [forcedType, setForcedType] = useState<InvestorType | null>(null);
+
+  useEffect(() => {
+    const code = readResultCode('type') as InvestorType | null;
+    if (code && INVESTOR_TYPES.includes(code)) { setForcedType(code); setDone(true); }
+  }, []);
 
   const q = QUESTIONS[current];
   const total = QUESTIONS.length;
@@ -245,7 +255,7 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
     if (current > 0) setCurrent(c => c - 1);
   };
 
-  const handleRestart = () => { setAnswers({}); setCurrent(0); setDone(false); setSelected(null); };
+  const handleRestart = () => { setAnswers({}); setCurrent(0); setDone(false); setSelected(null); setForcedType(null); clearResultCode('type'); };
 
   const computeResult = (): InvestorType => {
     const totals: Record<InvestorType, number> = { geopolitical: 0, macro: 0, tech: 0, dollar: 0, balanced: 0 };
@@ -259,8 +269,14 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
     return (Object.entries(totals) as [InvestorType, number][]).reduce((a, b) => b[1] > a[1] ? b : a)[0];
   };
 
+  // Keep the URL in sync with the result so it is shareable/revisitable.
+  useEffect(() => {
+    if (done) writeResultCode('type', forcedType ?? computeResult());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [done]);
+
   if (done) {
-    const type = computeResult();
+    const type = forcedType ?? computeResult();
     const info = TYPES[type];
     const colors = COLOR_MAP[info.color];
     return (
@@ -297,6 +313,7 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
           emoji={info.icon}
           description={info.desc[L]}
         />
+        <CopyResultLink locale={locale} />
         <ResultNextSteps
           locale={locale}
           links={[

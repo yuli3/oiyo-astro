@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
+import CopyResultLink from '../shared/CopyResultLink';
+import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type ResultKey = 'starter' | 'planner' | 'critic' | 'recovering'
@@ -132,9 +134,20 @@ export default function LazyPerfectionistTest({ locale: rawLocale = 'ko' }: Prop
   const locale = lang(rawLocale)
   const labels = LABELS[locale]
   const questions = QUESTIONS[locale]
+  // Restore a shared result directly from the URL (?type=critic).
+  const initResult = (): ResultKey | null => {
+    const c = readResultCode('type')
+    return c && (['starter', 'planner', 'critic', 'recovering'] as string[]).includes(c) ? (c as ResultKey) : null
+  }
+  const restored = initResult()
   const [current, setCurrent] = useState(0)
   const [scores, setScores] = useState<Record<ResultKey, number>>({ starter: 0, planner: 0, critic: 0, recovering: 0 })
-  const [result, setResult] = useState<ResultKey | null>(null)
+  const [result, setResult] = useState<ResultKey | null>(restored)
+
+  // Keep the URL in sync with the result so it is shareable/revisitable.
+  useEffect(() => {
+    if (result) writeResultCode('type', result)
+  }, [result])
 
   function pick(index: number) {
     const question = questions[current]
@@ -155,6 +168,7 @@ export default function LazyPerfectionistTest({ locale: rawLocale = 'ko' }: Prop
     setCurrent(0)
     setResult(null)
     setScores({ starter: 0, planner: 0, critic: 0, recovering: 0 })
+    clearResultCode('type')
   }
 
   function share() {
@@ -187,6 +201,7 @@ export default function LazyPerfectionistTest({ locale: rawLocale = 'ko' }: Prop
           emoji={result === 'starter' ? '🌱' : result === 'planner' ? '🗒️' : result === 'critic' ? '🔍' : '✨'}
           description={data.description}
         />
+        <CopyResultLink locale={locale} />
         <ResultNextSteps
           locale={locale}
           links={[
