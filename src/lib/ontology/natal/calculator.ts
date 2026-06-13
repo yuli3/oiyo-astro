@@ -17,6 +17,7 @@
 import { normalizeAngle } from '../kernel/math';
 import { getJulianCenturies, getJulianDay, J2000_EPOCH } from '../kernel/time';
 import { getSolarLongitude } from '../kernel/astronomy';
+import { getPlanetLongitude } from './planets';
 
 const D2R = Math.PI / 180;
 const R2D = 180 / Math.PI;
@@ -145,13 +146,19 @@ export interface NatalChart {
   sun: Placement;
   moon: Placement;
   ascendant: Placement;
+  mercury: Placement;
+  venus: Placement;
+  mars: Placement;
 }
 
-/** Compute the Big Three placements for a precise UTC birth instant + location. */
+/** Compute the Big Three + personal planets for a precise UTC birth instant + location. */
 export function computeNatalChart({ date, latitude, longitude }: NatalInput): NatalChart {
   return {
     sun: toPlacement(getSolarLongitude(date)),
     moon: toPlacement(getLunarLongitude(date)),
     ascendant: toPlacement(getAscendantLongitude(date, latitude, longitude)),
+    mercury: toPlacement(getPlanetLongitude('mercury', date)),
+    venus: toPlacement(getPlanetLongitude('venus', date)),
+    mars: toPlacement(getPlanetLongitude('mars', date)),
   };
 }
