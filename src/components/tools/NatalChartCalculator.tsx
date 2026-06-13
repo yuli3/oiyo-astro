@@ -27,6 +27,8 @@ const COPY: Record<NatalLocale, {
   mercury: string; mercurySub: string;
   venus: string; venusSub: string;
   mars: string; marsSub: string;
+  jupiter: string; jupiterSub: string;
+  saturn: string; saturnSub: string;
   ascNeedsTime: string;
   moonNote: string;
   disclaimer: string;
@@ -48,6 +50,8 @@ const COPY: Record<NatalLocale, {
     mercury: '수성', mercurySub: '사고·소통의 방식',
     venus: '금성', venusSub: '사랑·취향·끌림',
     mars: '화성', marsSub: '추진력·욕망·행동',
+    jupiter: '목성', jupiterSub: '확장·행운·성장의 방향',
+    saturn: '토성', saturnSub: '책임·한계·숙련의 과제',
     ascNeedsTime: '상승궁은 태어난 시각이 있어야 계산할 수 있어요.',
     moonNote: '시간을 모를 경우 달 별자리는 정오 기준 근사치이며, 별자리 경계 근처에서는 달라질 수 있습니다.',
     disclaimer: '점성술은 자기 이해와 사색을 위한 상징 체계이며, 운명을 단정하는 도구가 아닙니다.',
@@ -69,6 +73,8 @@ const COPY: Record<NatalLocale, {
     mercury: 'Mercury', mercurySub: 'How you think & communicate',
     venus: 'Venus', venusSub: 'Love, taste & attraction',
     mars: 'Mars', marsSub: 'Drive, desire & action',
+    jupiter: 'Jupiter', jupiterSub: 'Growth, luck & expansion',
+    saturn: 'Saturn', saturnSub: 'Responsibility, limits & mastery',
     ascNeedsTime: 'The Rising sign needs a birth time to be calculated.',
     moonNote: 'Without a birth time, the Moon sign is a noon-based approximation and may differ near sign boundaries.',
     disclaimer: 'Astrology is a symbolic language for self-reflection, not a tool that fixes your fate.',
@@ -90,6 +96,8 @@ const COPY: Record<NatalLocale, {
     mercury: '水星', mercurySub: '思考・コミュニケーションの仕方',
     venus: '金星', venusSub: '愛・好み・惹かれ方',
     mars: '火星', marsSub: '推進力・欲望・行動',
+    jupiter: '木星', jupiterSub: '拡大・幸運・成長の方向',
+    saturn: '土星', saturnSub: '責任・限界・熟練の課題',
     ascNeedsTime: '上昇宮の計算には生まれた時刻が必要です。',
     moonNote: '時刻が不明な場合、月星座は正午基準の近似値で、星座の境界付近では変わることがあります。',
     disclaimer: '占星術は自己理解と内省のための象徴体系であり、運命を断定する道具ではありません。',
@@ -111,6 +119,8 @@ const COPY: Record<NatalLocale, {
     mercury: '水星', mercurySub: '思维与沟通方式',
     venus: '金星', venusSub: '爱情·品味·吸引力',
     mars: '火星', marsSub: '动力·欲望·行动',
+    jupiter: '木星', jupiterSub: '扩展·幸运·成长方向',
+    saturn: '土星', saturnSub: '责任·限制·磨砺课题',
     ascNeedsTime: '上升星座需要出生时间才能计算。',
     moonNote: '若不知出生时间，月亮星座为正午近似值，在星座边界附近可能不同。',
     disclaimer: '占星学是用于自我理解与省思的象征体系，并非断定命运的工具。',
@@ -132,6 +142,8 @@ const COPY: Record<NatalLocale, {
     mercury: 'Mercure', mercurySub: 'Façon de penser et communiquer',
     venus: 'Vénus', venusSub: 'Amour, goûts et attirance',
     mars: 'Mars', marsSub: 'Élan, désir et action',
+    jupiter: 'Jupiter', jupiterSub: 'Croissance, chance et expansion',
+    saturn: 'Saturne', saturnSub: 'Responsabilité, limites et maîtrise',
     ascNeedsTime: 'L’Ascendant nécessite une heure de naissance.',
     moonNote: 'Sans heure de naissance, le signe lunaire est une approximation à midi et peut varier près des limites de signe.',
     disclaimer: 'L’astrologie est un langage symbolique de réflexion personnelle, non un outil qui fixe le destin.',
@@ -153,6 +165,8 @@ const COPY: Record<NatalLocale, {
     mercury: 'Mercurio', mercurySub: 'Cómo piensas y te comunicas',
     venus: 'Venus', venusSub: 'Amor, gustos y atracción',
     mars: 'Marte', marsSub: 'Impulso, deseo y acción',
+    jupiter: 'Júpiter', jupiterSub: 'Crecimiento, suerte y expansión',
+    saturn: 'Saturno', saturnSub: 'Responsabilidad, límites y maestría',
     ascNeedsTime: 'El Ascendente necesita una hora de nacimiento para calcularse.',
     moonNote: 'Sin hora de nacimiento, el signo lunar es una aproximación al mediodía y puede variar cerca de los límites de signo.',
     disclaimer: 'La astrología es un lenguaje simbólico para la reflexión personal, no una herramienta que fija el destino.',
@@ -243,6 +257,8 @@ export default function NatalChartCalculator({ locale }: Props) {
       { key: 'mercury', label: t.mercury, sub: t.mercurySub, signKey: chart.mercury.sign, deg: chart.mercury.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-mercury-in-${chart.mercury.sign}/` },
       { key: 'venus', label: t.venus, sub: t.venusSub, signKey: chart.venus.sign, deg: chart.venus.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-venus-in-${chart.venus.sign}/` },
       { key: 'mars', label: t.mars, sub: t.marsSub, signKey: chart.mars.sign, deg: chart.mars.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-mars-in-${chart.mars.sign}/` },
+      { key: 'jupiter', label: t.jupiter, sub: t.jupiterSub, signKey: chart.jupiter.sign, deg: chart.jupiter.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-jupiter-in-${chart.jupiter.sign}/` },
+      { key: 'saturn', label: t.saturn, sub: t.saturnSub, signKey: chart.saturn.sign, deg: chart.saturn.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-saturn-in-${chart.saturn.sign}/` },
     ];
     return (
       <section className="mx-auto w-full max-w-xl">

@@ -17,7 +17,7 @@ const D2R = Math.PI / 180;
 const R2D = 180 / Math.PI;
 const EPOCH_2000_JAN0 = 2451543.5;
 
-export type Planet = 'mercury' | 'venus' | 'mars';
+export type Planet = 'mercury' | 'venus' | 'mars' | 'jupiter' | 'saturn';
 
 interface Elements {
   N: number; // longitude of ascending node (deg)
@@ -59,7 +59,56 @@ const PLANET_ELEMENTS: Record<Planet, (d: number) => Elements> = {
     e: 0.093405 + 2.516e-9 * d,
     M: 18.6021 + 0.5240207766 * d,
   }),
+  jupiter: (d) => ({
+    N: 100.4542 + 2.76854e-5 * d,
+    i: 1.303 - 1.557e-7 * d,
+    w: 273.8777 + 1.64505e-5 * d,
+    a: 5.20256,
+    e: 0.048498 + 4.469e-9 * d,
+    M: 19.895 + 0.0830853001 * d,
+  }),
+  saturn: (d) => ({
+    N: 113.6634 + 2.3898e-5 * d,
+    i: 2.4886 - 1.081e-7 * d,
+    w: 339.3939 + 2.97661e-5 * d,
+    a: 9.55475,
+    e: 0.055546 - 9.499e-9 * d,
+    M: 316.967 + 0.0334442282 * d,
+  }),
 };
+
+// Mean anomalies of Jupiter/Saturn (deg) — arguments for mutual perturbations.
+function jupiterMeanAnomaly(d: number): number { return 19.895 + 0.0830853001 * d; }
+function saturnMeanAnomaly(d: number): number { return 316.967 + 0.0334442282 * d; }
+
+/**
+ * Schlyter perturbation correction to a planet's heliocentric ecliptic longitude
+ * (degrees). Significant only for Jupiter and Saturn (mutual perturbations).
+ */
+function longitudePerturbation(planet: Planet, d: number): number {
+  if (planet !== 'jupiter' && planet !== 'saturn') return 0;
+  const Mj = jupiterMeanAnomaly(d) * D2R;
+  const Ms = saturnMeanAnomaly(d) * D2R;
+  if (planet === 'jupiter') {
+    return (
+      -0.332 * Math.sin(2 * Mj - 5 * Ms - 67.6 * D2R)
+      - 0.056 * Math.sin(2 * Mj - 2 * Ms + 21 * D2R)
+      + 0.042 * Math.sin(3 * Mj - 5 * Ms + 21 * D2R)
+      - 0.036 * Math.sin(Mj - 2 * Ms)
+      + 0.022 * Math.cos(Mj - Ms)
+      + 0.023 * Math.sin(2 * Mj - 3 * Ms + 52 * D2R)
+      - 0.016 * Math.sin(Mj - 5 * Ms - 69 * D2R)
+    );
+  }
+  // saturn
+  return (
+    0.812 * Math.sin(2 * Mj - 5 * Ms - 67.6 * D2R)
+    - 0.229 * Math.cos(2 * Mj - 4 * Ms - 2 * D2R)
+    + 0.119 * Math.sin(Mj - 2 * Ms - 3 * D2R)
+    + 0.046 * Math.sin(2 * Mj - 6 * Ms - 69 * D2R)
+    + 0.014 * Math.sin(Mj - 3 * Ms + 32 * D2R)
+  );
+}
 
 /** Solve Kepler's equation; returns eccentric anomaly in radians. */
 function eccentricAnomaly(Mdeg: number, e: number): number {
@@ -111,7 +160,23 @@ export function getSchlyterSun(date: Date): { longitude: number; x: number; y: n
 /** Geocentric ecliptic longitude of a planet (deg, 0–360). */
 export function getPlanetLongitude(planet: Planet, date: Date): number {
   const d = daysSinceEpoch(date);
-  const helio = heliocentric(PLANET_ELEMENTS[planet](d));
+  let helio = heliocentric(PLANET_ELEMENTS[planet](d));
+
+  // Apply Jupiter/Saturn mutual perturbations to the heliocentric longitude.
+  const dLon = longitudePerturbation(planet, d);
+  if (dLon !== 0) {
+    const r = Math.sqrt(helio.x * helio.x + helio.y * helio.y + helio.z * helio.z);
+    const lon = Math.atan2(helio.y, helio.x) * R2D + dLon;
+    const lat = Math.atan2(helio.z, Math.sqrt(helio.x * helio.x + helio.y * helio.y)) * R2D;
+    const lonR = lon * D2R;
+    const latR = lat * D2R;
+    helio = {
+      x: r * Math.cos(lonR) * Math.cos(latR),
+      y: r * Math.sin(lonR) * Math.cos(latR),
+      z: r * Math.sin(latR),
+    };
+  }
+
   const sun = getSchlyterSun(date);
   const xg = helio.x + sun.x;
   const yg = helio.y + sun.y;

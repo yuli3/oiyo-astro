@@ -46,3 +46,29 @@ describe('personal planets — elongation invariants', () => {
     expect(norm(b - a)).toBeGreaterThan(0);
   });
 });
+
+describe('social planets — Jupiter & Saturn', () => {
+  // The 2020 Great Conjunction: on 2020-12-21 ~18:00 UT, Jupiter and Saturn met
+  // at ~0.3° Aquarius (~300.3° ecliptic longitude), within ~0.1° of each other.
+  // This is a precise, famous invariant for the perturbed Jupiter/Saturn theory.
+  it('reproduces the 2020 Great Conjunction', () => {
+    const t = new Date(Date.UTC(2020, 11, 21, 18, 0, 0));
+    const j = getPlanetLongitude('jupiter', t);
+    const s = getPlanetLongitude('saturn', t);
+    expect(sep(j, s)).toBeLessThan(0.4); // they are conjunct
+    expect(Math.floor(norm(j) / 30)).toBe(10); // Aquarius (index 10)
+    expect(Math.floor(norm(s) / 30)).toBe(10);
+    expect(sep(j, 300.3)).toBeLessThan(1.0); // ~0.3° Aquarius
+  });
+
+  it('matches ephemeris signs at known dates', () => {
+    // 2000-01-01: Jupiter in Aries, Saturn in Taurus.
+    const t2000 = new Date(Date.UTC(2000, 0, 1, 12, 0, 0));
+    expect(Math.floor(getPlanetLongitude('jupiter', t2000) / 30)).toBe(0); // Aries
+    expect(Math.floor(getPlanetLongitude('saturn', t2000) / 30)).toBe(1); // Taurus
+    // 2020-01-15: Jupiter & Saturn both in Capricorn.
+    const t2020 = new Date(Date.UTC(2020, 0, 15, 12, 0, 0));
+    expect(Math.floor(getPlanetLongitude('jupiter', t2020) / 30)).toBe(9); // Capricorn
+    expect(Math.floor(getPlanetLongitude('saturn', t2020) / 30)).toBe(9); // Capricorn
+  });
+});

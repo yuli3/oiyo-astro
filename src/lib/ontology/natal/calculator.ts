@@ -149,9 +149,11 @@ export interface NatalChart {
   mercury: Placement;
   venus: Placement;
   mars: Placement;
+  jupiter: Placement;
+  saturn: Placement;
 }
 
-/** Compute the Big Three + personal planets for a precise UTC birth instant + location. */
+/** Compute the Big Three + personal/social planets for a precise UTC birth instant + location. */
 export function computeNatalChart({ date, latitude, longitude }: NatalInput): NatalChart {
   return {
     sun: toPlacement(getSolarLongitude(date)),
@@ -160,5 +162,7 @@ export function computeNatalChart({ date, latitude, longitude }: NatalInput): Na
     mercury: toPlacement(getPlanetLongitude('mercury', date)),
     venus: toPlacement(getPlanetLongitude('venus', date)),
     mars: toPlacement(getPlanetLongitude('mars', date)),
+    jupiter: toPlacement(getPlanetLongitude('jupiter', date)),
+    saturn: toPlacement(getPlanetLongitude('saturn', date)),
   };
 }
