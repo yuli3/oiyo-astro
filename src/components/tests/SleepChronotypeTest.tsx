@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
 import RelatedReading from '../shared/RelatedReading';
+import CopyResultLink from '../shared/CopyResultLink';
+import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 
 type Chronotype = 'lion' | 'bear' | 'wolf' | 'dolphin'
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -637,9 +639,15 @@ export default function SleepChronotypeTest({ locale: lp = 'ko' }: Props) {
   const lb = LABELS[locale]
   const questions = QUESTIONS[locale]
 
-  const [current, setCurrent] = useState(0)
+  // Restore a shared result directly from the URL (?type=wolf).
+  const initType = (): Chronotype | null => {
+    const c = readResultCode('type')
+    return c && (['lion', 'bear', 'wolf', 'dolphin'] as string[]).includes(c) ? (c as Chronotype) : null
+  }
+  const restored = initType()
+  const [current, setCurrent] = useState(restored ? questions.length : 0)
   const [counts, setCounts] = useState<Record<Chronotype, number>>({ lion: 0, bear: 0, wolf: 0, dolphin: 0 })
-  const [result, setResult] = useState<Chronotype | null>(null)
+  const [result, setResult] = useState<Chronotype | null>(restored)
 
   function calcResult(c: Record<Chronotype, number>): Chronotype {
     const types: Chronotype[] = ['lion', 'bear', 'wolf', 'dolphin']
@@ -655,10 +663,16 @@ export default function SleepChronotypeTest({ locale: lp = 'ko' }: Props) {
     setCurrent(current + 1)
   }
 
+  // Keep the URL in sync with the result so it is shareable/revisitable.
+  useEffect(() => {
+    if (result) writeResultCode('type', result)
+  }, [result])
+
   function restart() {
     setCurrent(0)
     setCounts({ lion: 0, bear: 0, wolf: 0, dolphin: 0 })
     setResult(null)
+    clearResultCode('type')
   }
 
   function share() {
@@ -805,6 +819,7 @@ export default function SleepChronotypeTest({ locale: lp = 'ko' }: Props) {
         emoji={{ lion: '🦁', bear: '🐻', wolf: '🐺', dolphin: '🐬' }[result]}
         description={r.subtitle}
       />
+      <CopyResultLink locale={locale} />
       <ResultNextSteps
         locale={locale}
         links={[

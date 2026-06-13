@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
 import RelatedReading from '../shared/RelatedReading';
+import CopyResultLink from '../shared/CopyResultLink';
 import AnimatedNumber from '../ui/AnimatedNumber'
+import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -548,9 +550,20 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
   const lb = LABELS[locale]
   const questions = QUESTIONS[locale]
 
-  const [current, setCurrent] = useState(0)
+  // Restore a shared result directly from the URL (?type=3).
+  const initScores = (): ScoreMap | null => {
+    const code = readResultCode('type') as EnneaType | null
+    if (code && /^[1-9]$/.test(code)) {
+      const s: ScoreMap = { '1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0, '8': 0, '9': 0 }
+      s[code] = 15
+      return s
+    }
+    return null
+  }
+  const restored = initScores()
+  const [current, setCurrent] = useState(restored ? questions.length : 0)
   const [answers, setAnswers] = useState<number[]>([])
-  const [scores, setScores] = useState<ScoreMap | null>(null)
+  const [scores, setScores] = useState<ScoreMap | null>(restored)
 
   function pick(val: number) {
     const newAns = [...answers, val + 1]
@@ -561,10 +574,20 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
     setCurrent(current + 1)
   }
 
+  // Keep the URL in sync with the dominant type so the result is shareable/revisitable.
+  useEffect(() => {
+    if (scores) {
+      const keys = Object.keys(scores) as EnneaType[]
+      const dom = keys.reduce((a, b) => scores[a] >= scores[b] ? a : b)
+      writeResultCode('type', dom)
+    }
+  }, [scores])
+
   function restart() {
     setAnswers([])
     setCurrent(0)
     setScores(null)
+    clearResultCode('type')
   }
 
   function share() {
@@ -706,6 +729,7 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
         emoji={result.emoji}
         description={result.tagline}
       />
+      <CopyResultLink locale={lp} />
 
       <ResultNextSteps
         locale={lp}

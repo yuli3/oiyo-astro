@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
+import CopyResultLink from '../shared/CopyResultLink';
+import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import type { Locale } from "../../i18n";
 
 interface Props {
@@ -1063,12 +1065,23 @@ function calcResult(answers: (number | null)[]): Season {
 // ─── Main component ───────────────────────────────────────────────────────────
 
 export default function PersonalColorTest({ locale }: Props) {
-  const [phase, setPhase] = useState<"intro" | "test" | "result">("intro");
+  // Restore a shared result directly from the URL (?type=spring).
+  const initSeason = (): Season | null => {
+    const c = readResultCode('type');
+    return c && (["spring", "summer", "autumn", "winter"] as string[]).includes(c) ? (c as Season) : null;
+  };
+  const restored = initSeason();
+  const [phase, setPhase] = useState<"intro" | "test" | "result">(restored ? "result" : "intro");
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(QUESTIONS.length).fill(null));
-  const [result, setResult] = useState<Season | null>(null);
+  const [result, setResult] = useState<Season | null>(restored);
   const ui = UI[locale];
   const total = QUESTIONS.length;
+
+  // Keep the URL in sync with the result so it is shareable/revisitable.
+  useEffect(() => {
+    if (result) writeResultCode('type', result);
+  }, [result]);
 
   function selectAnswer(optIdx: number) {
     const next = [...answers];
@@ -1094,6 +1107,7 @@ export default function PersonalColorTest({ locale }: Props) {
     setCurrent(0);
     setResult(null);
     setPhase("intro");
+    clearResultCode('type');
   }
 
   const q = QUESTIONS[current];
@@ -1290,6 +1304,7 @@ export default function PersonalColorTest({ locale }: Props) {
         emoji={sd.emoji}
         description={sd.subtitle[locale]}
       />
+      <CopyResultLink locale={locale} />
       <ResultNextSteps
         locale={locale}
         links={[

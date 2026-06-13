@@ -1,0 +1,51 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import NatalChartCalculator from '../../../components/tools/NatalChartCalculator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '출생 차트 계산기 — 태양·달·상승궁 무료 계산',
+    description: '생년월일·태어난 시각·출생지를 입력하면 점성술의 핵심인 태양·달·상승궁 별자리를 정밀 계산합니다. 천문 계산 기반의 무료 출생 차트.',
+  },
+  en: {
+    title: 'Natal Chart Calculator — Sun, Moon & Rising (Free)',
+    description: 'Enter your birth date, time, and place to precisely compute your Sun, Moon, and Rising signs — the core of any astrology chart. Free, astronomy-based natal chart.',
+  },
+  ja: {
+    title: '出生図計算機 — 太陽・月・上昇宮を無料で',
+    description: '生年月日・生まれた時刻・出生地を入力すると、占星術の核となる太陽・月・上昇宮の星座を精密に計算します。天文計算に基づく無料の出生図。',
+  },
+  zh: {
+    title: '出生星盘计算器 — 免费计算太阳·月亮·上升',
+    description: '输入出生日期、时间与地点，精确计算占星核心的太阳、月亮与上升星座。基于天文计算的免费出生星盘。',
+  },
+  fr: {
+    title: 'Calculateur de thème natal — Soleil, Lune et Ascendant (gratuit)',
+    description: 'Saisissez date, heure et lieu de naissance pour calculer précisément vos signes Soleil, Lune et Ascendant, le cœur de tout thème astral. Gratuit, basé sur l’astronomie.',
+  },
+  es: {
+    title: 'Calculadora de carta natal — Sol, Luna y Ascendente (gratis)',
+    description: 'Introduce fecha, hora y lugar de nacimiento para calcular con precisión tus signos Sol, Luna y Ascendente, el núcleo de toda carta astral. Gratis, basada en astronomía.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-2xl px-4 py-10">
+    <NatalChartCalculator client:load locale={locale} />
+    <div class="mt-10">
+      <MysticTrinity topic="zodiac" locale={locale} />
+    </div>
+  </main>
+</Layout>

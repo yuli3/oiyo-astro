@@ -1,7 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
 import RelatedReading from '../shared/RelatedReading';
+import CopyResultLink from '../shared/CopyResultLink';
+import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 
 type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -175,21 +177,40 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
   const questions = QUESTIONS[l].length > 0 ? QUESTIONS[l] : QUESTIONS.en
   const [answers, setAnswers] = useState<Record<string, DimValue>>({})
   const [showResult, setShowResult] = useState(false)
+  // A shared/revisited result type read from the URL (?type=INTJ), independent of answers.
+  const [forcedType, setForcedType] = useState<MbtiType | null>(null)
+
+  // On mount, restore a shared result directly from the URL.
+  useEffect(() => {
+    const code = readResultCode('type')?.toUpperCase()
+    if (code && Object.prototype.hasOwnProperty.call(TYPE_PROFILES, code)) {
+      setForcedType(code as MbtiType)
+      setShowResult(true)
+    }
+  }, [])
 
   const answeredCount = Object.keys(answers).length
   const isComplete = answeredCount === questions.length
 
-  const mbtiType = (Object.entries(DIMENSIONS).map(([dim, values]) => {
+  const computedType = (Object.entries(DIMENSIONS).map(([dim, values]) => {
     const dimQuestions = questions.filter((q) => q.dim === dim)
     const first = dimQuestions.filter((q) => answers[q.id] === values[0]).length
     const second = dimQuestions.filter((q) => answers[q.id] === values[1]).length
     return first >= second ? values[0] : values[1]
   }).join('')) as MbtiType
+  const mbtiType = forcedType ?? computedType
 
   const profile = TYPE_PROFILES[mbtiType]
   const title = l === 'ko' ? `${mbtiType} - ${profile?.ko}` : `${mbtiType} - ${profile?.en}`
 
-  if (showResult && isComplete && profile) {
+  // Keep the URL in sync with the visible result so it is shareable/revisitable.
+  useEffect(() => {
+    if (showResult && (isComplete || forcedType) && profile) {
+      writeResultCode('type', mbtiType)
+    }
+  }, [showResult, isComplete, forcedType, mbtiType, profile])
+
+  if (showResult && (isComplete || forcedType) && profile) {
     return (
       <section className="not-prose rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
         <div className="text-center">
@@ -214,6 +235,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           emoji={profile.emoji}
           description={profile.desc[l]}
         />
+        <CopyResultLink locale={l} />
         <ResultNextSteps
           locale={l}
           links={[
@@ -225,7 +247,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
         <RelatedReading locale={l} topic="mbti" />
         <button
           type="button"
-          onClick={() => { setAnswers({}); setShowResult(false) }}
+          onClick={() => { setAnswers({}); setShowResult(false); setForcedType(null); clearResultCode('type') }}
           className="mt-6 w-full rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
         >
           {labels.retake}

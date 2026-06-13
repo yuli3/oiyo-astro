@@ -1,8 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import AnimatedNumber from '../ui/AnimatedNumber'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
 import RelatedReading from '../shared/RelatedReading';
+import CopyResultLink from '../shared/CopyResultLink';
+import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -310,9 +312,18 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
   const lb = LABELS[locale]
   const questions = QUESTIONS[locale]
 
-  const [current, setCurrent] = useState(0)
+  // Restore a shared full profile from the URL (?b=O-C-E-A-N, each 0–100).
+  const initScores = (): ScoreMap | null => {
+    const code = readResultCode('b')
+    if (!code) return null
+    const parts = code.split('-').map((n) => parseInt(n, 10))
+    if (parts.length !== 5 || parts.some((n) => Number.isNaN(n) || n < 0 || n > 100)) return null
+    return { O: parts[0], C: parts[1], E: parts[2], A: parts[3], N: parts[4] }
+  }
+  const restored = initScores()
+  const [current, setCurrent] = useState(restored ? questions.length : 0)
   const [answers, setAnswers] = useState<number[]>([])
-  const [scores, setScores] = useState<ScoreMap | null>(null)
+  const [scores, setScores] = useState<ScoreMap | null>(restored)
 
   function pick(val: number) {
     const newAns = [...answers, val + 1]
@@ -323,10 +334,18 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
     setCurrent(current + 1)
   }
 
+  // Keep the URL in sync with the full profile so it is shareable/revisitable.
+  useEffect(() => {
+    if (scores) {
+      writeResultCode('b', [scores.O, scores.C, scores.E, scores.A, scores.N].map((n) => Math.round(n)).join('-'))
+    }
+  }, [scores])
+
   function restart() {
     setAnswers([])
     setCurrent(0)
     setScores(null)
+    clearResultCode('b')
   }
 
   function share() {
@@ -461,6 +480,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
         emoji="🌊"
         description={`${lb.secondaryTrait}: ${DIM_META[secondary][locale].label} ${scores[secondary]}%`}
       />
+      <CopyResultLink locale={locale} />
       <ResultNextSteps
         locale={locale}
         links={[
