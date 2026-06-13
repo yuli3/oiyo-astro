@@ -1,0 +1,68 @@
+---
+import type { Locale } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+  /** Tool ids to show (current page's own id is safely ignored if included). */
+  tools: string[];
+  /** Optional id of the current page to exclude from the list. */
+  current?: string;
+}
+
+const { locale, tools, current } = Astro.props as Props;
+
+type Loc = Record<Locale, string>;
+interface Tool { icon: string; href: string; label: Loc }
+
+const TOOLS: Record<string, Tool> = {
+  natal: {
+    icon: '🌙', href: '/natal/chart',
+    label: { ko: '출생 차트', en: 'Natal Chart', ja: '出生図', zh: '出生星盘', fr: 'Thème natal', es: 'Carta natal' },
+  },
+  saju: {
+    icon: '☯️', href: '/saju/calculator',
+    label: { ko: '사주 계산기', en: 'Saju Calculator', ja: '四柱推命', zh: '四柱八字', fr: 'Calculateur Saju', es: 'Calculadora Saju' },
+  },
+  zodiac: {
+    icon: '⭐', href: '/zodiac/personality',
+    label: { ko: '별자리 성격', en: 'Zodiac Personality', ja: '星座性格', zh: '星座性格', fr: 'Personnalité zodiacale', es: 'Personalidad zodiacal' },
+  },
+  zodiacCompat: {
+    icon: '💞', href: '/zodiac/compatibility',
+    label: { ko: '별자리 궁합', en: 'Zodiac Compatibility', ja: '星座相性', zh: '星座配对', fr: 'Compatibilité zodiacale', es: 'Compatibilidad zodiacal' },
+  },
+  numerology: {
+    icon: '🔢', href: '/numerology/calculator',
+    label: { ko: '수비학 계산기', en: 'Numerology', ja: '数秘術', zh: '数字命理', fr: 'Numérologie', es: 'Numerología' },
+  },
+  palmistry: {
+    icon: '🖐️', href: '/palmistry/explore',
+    label: { ko: '손금 탐색기', en: 'Palm Explorer', ja: '手相', zh: '手相探索', fr: 'Chiromancie', es: 'Quiromancia' },
+  },
+};
+
+const HEADING: Record<Locale, string> = {
+  ko: '관련 도구', en: 'Related tools', ja: '関連ツール', zh: '相关工具', fr: 'Outils associés', es: 'Herramientas relacionadas',
+};
+
+const items = tools
+  .filter((id) => id !== current && TOOLS[id])
+  .map((id) => TOOLS[id]);
+---
+
+{items.length > 0 && (
+  <nav class="mx-auto mt-8 w-full max-w-2xl px-4" aria-label={HEADING[locale]}>
+    <p class="mb-2 text-center text-xs font-bold uppercase tracking-wider text-slate-400">{HEADING[locale]}</p>
+    <div class="flex flex-wrap justify-center gap-2">
+      {items.map((tool) => (
+        <a
+          href={`/${locale}${tool.href}`}
+          class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-indigo-300 hover:bg-indigo-50"
+        >
+          <span aria-hidden="true">{tool.icon}</span>
+          {tool.label[locale]}
+        </a>
+      ))}
+    </div>
+  </nav>
+)}
