@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import PalmistryExplorer from '../../../components/tools/PalmistryExplorer';
@@ -44,6 +45,7 @@ const m = meta[locale] ?? meta.en;
 <Layout title={m.title} description={m.description} locale={locale}>
   <main class="mx-auto max-w-3xl px-4 py-10">
     <PalmistryExplorer client:load locale={locale} />
+    <RelatedTools locale={locale} tools={['natal', 'zodiac', 'saju']} current="palmistry" />
     <div class="mt-10">
       <MysticTrinity topic="zodiac" locale={locale} />
     </div>
