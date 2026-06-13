@@ -1,0 +1,51 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import SagesCardDaily from '../../../components/tools/SagesCardDaily';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '오늘의 현인의 카드 — 동서양 지혜 451장 중 한 장',
+    description: '그라시안·스토아·손자병법·노자·한국 속담 451장에서 오늘 한 장을 펼칩니다. 매일 바뀌는 현인의 지혜로 하루를 시작해 보세요.',
+  },
+  en: {
+    title: "Today's Sage Card — One of 451 Wisdom Cards",
+    description: 'Draw one of 451 cards from Gracián, the Stoics, Sun Tzu, Laozi, and Korean proverbs. Start your day with a sage’s wisdom.',
+  },
+  ja: {
+    title: '今日の賢者カード — 東西の知恵451枚から一枚',
+    description: 'グラシアン・ストア・孫子・老子・韓国のことわざ451枚から、今日の一枚を。毎日変わる賢者の知恵で一日を始めましょう。',
+  },
+  zh: {
+    title: '今日贤者卡 — 东西方451张智慧卡之一',
+    description: '从格拉西安、斯多葛、孙子、老子与韩国谚语451张中翻开今天的一张。用每日变化的贤者智慧开启一天。',
+  },
+  fr: {
+    title: 'Carte du Sage du Jour — Une des 451 cartes de sagesse',
+    description: "Tirez une des 451 cartes de Gracián, des stoïciens, de Sun Tzu, de Laozi et des proverbes coréens. Commencez la journée avec la sagesse d'un sage.",
+  },
+  es: {
+    title: 'Carta del Sabio del Día — Una de 451 cartas de sabiduría',
+    description: 'Saca una de 451 cartas de Gracián, los estoicos, Sun Tzu, Laozi y refranes coreanos. Comienza el día con la sabiduría de un sabio.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="mx-auto w-full max-w-3xl px-4 py-12">
+    <SagesCardDaily locale={locale} client:load />
+    <div class="mt-10">
+      <MentalBoost locale={locale} />
+    </div>
+  </div>
+</Layout>
