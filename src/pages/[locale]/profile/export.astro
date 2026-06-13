@@ -1,0 +1,43 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import ProfileMarkdownExport from '../../../components/shared/ProfileMarkdownExport';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '내 프로필 Markdown 내보내기',
+    description: '생년월일, 혈액형, 별자리, MBTI, 좋아하는 키워드와 현재 성향을 Markdown 파일로 정리합니다.',
+  },
+  en: {
+    title: 'Export My Profile as Markdown',
+    description: 'Create a Markdown profile from birth data, blood type, zodiac, MBTI, favorite keywords, and current tendencies.',
+  },
+  ja: {
+    title: 'プロフィールをMarkdownでエクスポート',
+    description: '生年月日、血液型、星座、MBTI、好きなキーワード、現在の傾向をMarkdownに整理します。',
+  },
+  zh: {
+    title: '将我的资料导出为 Markdown',
+    description: '将出生信息、血型、星座、MBTI、喜欢的关键词和当前倾向整理为 Markdown。',
+  },
+  fr: {
+    title: 'Exporter mon profil en Markdown',
+    description: 'Créez un profil Markdown avec naissance, groupe sanguin, signe, MBTI, mots-clés favoris et tendances.',
+  },
+  es: {
+    title: 'Exportar mi perfil como Markdown',
+    description: 'Crea un perfil Markdown con nacimiento, grupo sanguíneo, signo, MBTI, palabras favoritas y tendencias.',
+  },
+};
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <ProfileMarkdownExport client:load locale={locale} />
+</Layout>

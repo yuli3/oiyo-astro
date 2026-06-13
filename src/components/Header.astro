@@ -28,6 +28,10 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}/, '') || '/';
          class="px-3 py-1.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50 transition-colors">
         {t('nav.ontology')}
       </a>
+      <a href={localePath(locale, '/profile/export')}
+         class="px-3 py-1.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50 transition-colors">
+        {{ ko: '프로필 내보내기', en: 'Profile Export', ja: 'プロフィール出力', zh: '导出资料', fr: 'Exporter profil', es: 'Exportar perfil' }[locale] ?? 'Profile Export'}
+      </a>
       <a href={localePath(locale, '/about')}
          class="px-3 py-1.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50 transition-colors">
         {t('nav.about')}
@@ -86,6 +90,9 @@ const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}/, '') || '/';
       </a>
       <a href={localePath(locale, '/ontology')} class="px-3 py-2.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
         {t('nav.ontology')}
+      </a>
+      <a href={localePath(locale, '/profile/export')} class="px-3 py-2.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
+        {{ ko: '프로필 내보내기', en: 'Profile Export', ja: 'プロフィール出力', zh: '导出资料', fr: 'Exporter profil', es: 'Exportar perfil' }[locale] ?? 'Profile Export'}
       </a>
       <a href={localePath(locale, '/about')} class="px-3 py-2.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
         {t('nav.about')}

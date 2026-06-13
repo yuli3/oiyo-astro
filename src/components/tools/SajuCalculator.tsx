@@ -44,8 +44,29 @@ const ELEMENT_COLORS: Record<string, { bg: string; text: string; border: string 
   Metal: { bg: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-300' },
   Water: { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200' },
 };
+const ELEMENT_BAR_COLORS: Record<string, string> = {
+  Wood: 'bg-green-500',
+  Fire: 'bg-red-500',
+  Earth: 'bg-yellow-500',
+  Metal: 'bg-gray-500',
+  Water: 'bg-blue-500',
+};
 const ELEMENT_EMOJIS: Record<string, string> = {
   Wood: '🌿', Fire: '🔥', Earth: '🌍', Metal: '⚙️', Water: '💧',
+};
+const GENERATES: Record<string, string> = {
+  Wood: 'Fire',
+  Fire: 'Earth',
+  Earth: 'Metal',
+  Metal: 'Water',
+  Water: 'Wood',
+};
+const CONTROLS: Record<string, string> = {
+  Wood: 'Earth',
+  Fire: 'Metal',
+  Earth: 'Water',
+  Metal: 'Wood',
+  Water: 'Fire',
 };
 
 // ─── Personality traits per element ───────────────────────────────────────────
@@ -297,9 +318,186 @@ const L: Record<Locale, {
 };
 
 const HOURS = Array.from({ length: 24 }, (_, i) => i);
+const ELEMENT_ORDER = ['Wood', 'Fire', 'Earth', 'Metal', 'Water'] as const;
+
+const READING_COPY: Record<Locale, {
+  readingMap: string;
+  readingMapDesc: string;
+  balanceTitle: string;
+  abundance: string;
+  scarcity: string;
+  missing: string;
+  noMissing: string;
+  profileChanges: string;
+  profileChangesDesc: string;
+  howToRead: string;
+  readSteps: string[];
+  relationTitle: string;
+  relationDesc: string;
+  generates: string;
+  controls: string;
+  balanceQuestions: string;
+  balanceQuestionItems: string[];
+}> = {
+  ko: {
+    readingMap: '사주 해석 지도',
+    readingMapDesc: '네 기둥은 한 줄의 결론보다 위치와 균형을 함께 볼 때 더 자연스럽게 읽힙니다.',
+    balanceTitle: '오행 균형',
+    abundance: '강하게 드러나는 오행',
+    scarcity: '보완하면 좋은 오행',
+    missing: '비어 있는 오행',
+    noMissing: '비어 있는 오행 없음',
+    profileChanges: '성향은 시간에 따라 바뀝니다',
+    profileChangesDesc: '사주는 태어난 순간의 상징 지도를 보여주지만, 실제 성향은 환경, 습관, 관계, 선택에 따라 계속 변합니다. 결과를 고정된 판정이 아니라 현재 나를 돌아보는 언어로 사용해 주세요.',
+    howToRead: '읽는 순서',
+    readSteps: ['일간으로 나의 중심을 봅니다.', '월주로 계절과 사회적 리듬을 봅니다.', '오행의 과다와 부족을 함께 봅니다.'],
+    relationTitle: '오행 생극 관계',
+    relationDesc: '가장 강한 오행이 무엇을 밀어주고 무엇을 조절하려는지 보면 해석의 방향이 선명해집니다.',
+    generates: '생하는 오행',
+    controls: '극하는 오행',
+    balanceQuestions: '보완 질문',
+    balanceQuestionItems: ['강한 오행이 생활에서 과하게 드러나는 장면은?', '부족한 오행을 행동·환경·관계로 보완할 방법은?', '최근 스트레스가 특정 오행의 약점처럼 나타나지는 않는가?'],
+  },
+  en: {
+    readingMap: 'Saju Reading Map',
+    readingMapDesc: 'The four pillars read best when position and balance are considered together.',
+    balanceTitle: 'Five Element Balance',
+    abundance: 'Strongly expressed element',
+    scarcity: 'Element to support',
+    missing: 'Missing element',
+    noMissing: 'No missing element',
+    profileChanges: 'Traits can change over time',
+    profileChangesDesc: 'Saju shows a symbolic map of birth, while real personality keeps changing through environment, habits, relationships, and choices.',
+    howToRead: 'Reading Order',
+    readSteps: ['Start from the day stem as the self point.', 'Use the month pillar for season and social rhythm.', 'Read abundance and scarcity together.'],
+    relationTitle: 'Element Generation and Control',
+    relationDesc: 'Read what the strongest element supports and what it regulates to find a clearer interpretation path.',
+    generates: 'Generates',
+    controls: 'Controls',
+    balanceQuestions: 'Balancing Questions',
+    balanceQuestionItems: ['Where does the strong element show up too intensely?', 'How can the weaker element be supported through habits, place, or relationships?', 'Does recent stress resemble the shadow side of one element?'],
+  },
+  ja: {
+    readingMap: '四柱の読み方マップ',
+    readingMapDesc: '四柱は結論だけでなく、位置と五行の均衡を合わせて見ると読みやすくなります。',
+    balanceTitle: '五行バランス',
+    abundance: '強く出る五行',
+    scarcity: '補うとよい五行',
+    missing: '不足している五行',
+    noMissing: '不足している五行なし',
+    profileChanges: '性向は時間とともに変化します',
+    profileChangesDesc: '四柱は出生時の象徴地図であり、実際の性向は環境、習慣、関係、選択によって変わり続けます。',
+    howToRead: '読む順序',
+    readSteps: ['日干を自分の中心として見ます。', '月柱で季節と社会的リズムを見ます。', '五行の多さと少なさを一緒に見ます。'],
+    relationTitle: '五行の相生・相剋',
+    relationDesc: '強い五行が何を生み、何を調整するかを見ると解釈の方向が見えます。',
+    generates: '生じる五行',
+    controls: '剋する五行',
+    balanceQuestions: 'バランスの問い',
+    balanceQuestionItems: ['強い五行が過剰に出る場面は？', '弱い五行を習慣・環境・関係で補う方法は？', '最近のストレスは特定の五行の影として出ていないか？'],
+  },
+  fr: {
+    readingMap: 'Carte de lecture Saju',
+    readingMapDesc: 'Les quatre piliers se lisent mieux en croisant position et équilibre.',
+    balanceTitle: 'Équilibre des cinq éléments',
+    abundance: 'Élément fortement exprimé',
+    scarcity: 'Élément à soutenir',
+    missing: 'Élément absent',
+    noMissing: 'Aucun élément absent',
+    profileChanges: 'Les tendances changent avec le temps',
+    profileChangesDesc: 'Le Saju est une carte symbolique de naissance; la personnalité réelle évolue avec le contexte, les habitudes, les relations et les choix.',
+    howToRead: 'Ordre de lecture',
+    readSteps: ['Commencez par la tige du jour.', 'Lisez le pilier du mois comme saison et rythme social.', 'Comparez abondance et manque.'],
+    relationTitle: 'Génération et contrôle des éléments',
+    relationDesc: "Observez ce que l'élément fort soutient et ce qu'il régule pour orienter la lecture.",
+    generates: 'Génère',
+    controls: 'Contrôle',
+    balanceQuestions: "Questions d'équilibre",
+    balanceQuestionItems: ["Où l'élément fort devient-il excessif ?", "Comment soutenir l'élément faible par les habitudes, le lieu ou les relations ?", 'Le stress récent ressemble-t-il à une ombre élémentaire ?'],
+  },
+  es: {
+    readingMap: 'Mapa de lectura Saju',
+    readingMapDesc: 'Los cuatro pilares se leen mejor al combinar posición y equilibrio.',
+    balanceTitle: 'Equilibrio de los cinco elementos',
+    abundance: 'Elemento más expresado',
+    scarcity: 'Elemento a reforzar',
+    missing: 'Elemento ausente',
+    noMissing: 'Sin elementos ausentes',
+    profileChanges: 'Las tendencias cambian con el tiempo',
+    profileChangesDesc: 'Saju muestra un mapa simbólico de nacimiento; la personalidad real cambia con ambiente, hábitos, relaciones y decisiones.',
+    howToRead: 'Orden de lectura',
+    readSteps: ['Empieza por el tronco del día.', 'Lee el pilar del mes como estación y ritmo social.', 'Observa abundancia y carencia juntas.'],
+    relationTitle: 'Generación y control de elementos',
+    relationDesc: 'Observa qué apoya el elemento fuerte y qué regula para aclarar la lectura.',
+    generates: 'Genera',
+    controls: 'Controla',
+    balanceQuestions: 'Preguntas de equilibrio',
+    balanceQuestionItems: ['¿Dónde aparece demasiado fuerte el elemento dominante?', '¿Cómo apoyar el elemento débil con hábitos, lugar o relaciones?', '¿El estrés reciente se parece al lado difícil de un elemento?'],
+  },
+  zh: {
+    readingMap: '四柱解讀地圖',
+    readingMapDesc: '四柱不只看單一結論，也要合看位置與五行平衡。',
+    balanceTitle: '五行平衡',
+    abundance: '較強的五行',
+    scarcity: '可補足的五行',
+    missing: '缺少的五行',
+    noMissing: '沒有缺少的五行',
+    profileChanges: '性向會隨時間改變',
+    profileChangesDesc: '四柱呈現出生時的象徵地圖；真實性格會因環境、習慣、關係與選擇而持續變化。',
+    howToRead: '解讀順序',
+    readSteps: ['先看日干作為自我中心。', '再看月柱代表季節與社會節奏。', '同時觀察五行的多與少。'],
+    relationTitle: '五行生剋關係',
+    relationDesc: '看最強五行生什麼、剋什麼，可以更清楚地找到解讀方向。',
+    generates: '相生',
+    controls: '相剋',
+    balanceQuestions: '平衡提問',
+    balanceQuestionItems: ['較強的五行在哪些生活場景中過度表現？', '較弱的五行能否透過習慣、環境或關係補足？', '最近的壓力是否像某個五行的陰影面？'],
+  },
+};
+
+const PILLAR_ROLES: Record<Locale, Record<string, string>> = {
+  ko: {
+    year: '가문, 초년기, 큰 배경',
+    month: '사회성, 직업 리듬, 계절감',
+    day: '나 자신과 관계의 중심',
+    hour: '후반기, 자녀, 잠재력',
+  },
+  en: {
+    year: 'Ancestry, early life, wider background',
+    month: 'Social style, work rhythm, season',
+    day: 'Self point and close relationships',
+    hour: 'Later life, children, latent potential',
+  },
+  ja: {
+    year: '家系、幼少期、大きな背景',
+    month: '社会性、仕事のリズム、季節感',
+    day: '自分自身と親密な関係',
+    hour: '晩年、子ども、潜在力',
+  },
+  fr: {
+    year: 'Origines, enfance, arrière-plan',
+    month: 'Style social, rythme de travail, saison',
+    day: 'Point du soi et relations proches',
+    hour: 'Vie tardive, enfants, potentiel latent',
+  },
+  es: {
+    year: 'Origen, primeros años, contexto amplio',
+    month: 'Estilo social, ritmo laboral, estación',
+    day: 'Centro personal y relaciones cercanas',
+    hour: 'Vida posterior, hijos, potencial latente',
+  },
+  zh: {
+    year: '家族、早年、大背景',
+    month: '社會性、工作節奏、季節感',
+    day: '自我中心與親密關係',
+    hour: '後半生、子女、潛能',
+  },
+};
 
 export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const t = L[locale] ?? L.ko;
+  const reading = READING_COPY[locale] ?? READING_COPY.ko;
+  const roles = PILLAR_ROLES[locale] ?? PILLAR_ROLES.ko;
 
   const [year, setYear] = useState(1990);
   const [month, setMonth] = useState(6);
@@ -318,10 +516,10 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     const hStem = hour !== null ? getHourStem(dStem, getHourBranch(hour)) : null;
 
     const pillars = [
-      { label: t.yearPillar, stem: yStem, branch: yBranch },
-      { label: t.monthPillar, stem: mStem, branch: mBranch },
-      { label: t.dayPillar, stem: dStem, branch: dBranch },
-      ...(hStem !== null && hBranch !== null ? [{ label: t.hourPillar, stem: hStem, branch: hBranch }] : []),
+      { key: 'year', label: t.yearPillar, stem: yStem, branch: yBranch },
+      { key: 'month', label: t.monthPillar, stem: mStem, branch: mBranch },
+      { key: 'day', label: t.dayPillar, stem: dStem, branch: dBranch },
+      ...(hStem !== null && hBranch !== null ? [{ key: 'hour', label: t.hourPillar, stem: hStem, branch: hBranch }] : []),
     ];
 
     // Dominant element: count stems + branches
@@ -331,8 +529,11 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
       elementCount[BRANCH_ELEMENT[p.branch]] = (elementCount[BRANCH_ELEMENT[p.branch]] || 0) + 1;
     });
     const dominant = Object.entries(elementCount).sort(([, a], [, b]) => b - a)[0][0];
+    const sortedElements = [...ELEMENT_ORDER].sort((a, b) => elementCount[b] - elementCount[a]);
+    const scarceElements = [...ELEMENT_ORDER].sort((a, b) => elementCount[a] - elementCount[b]);
+    const missingElements = ELEMENT_ORDER.filter(el => elementCount[el] === 0);
 
-    return { pillars, elementCount, dominant };
+    return { pillars, elementCount, dominant, sortedElements, scarceElements, missingElements };
   }, [year, month, day, hour, t.yearPillar, t.monthPillar, t.dayPillar, t.hourPillar]);
 
   const daysInMonth = new Date(year, month, 0).getDate();
@@ -343,7 +544,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     setDone(true);
   }
 
-  const PillarCard = ({ label, stemIdx, branchIdx }: { label: string; stemIdx: number; branchIdx: number }) => {
+  const PillarCard = ({ label, role, stemIdx, branchIdx }: { label: string; role: string; stemIdx: number; branchIdx: number }) => {
     const elem = STEM_ELEMENT[stemIdx];
     const c = ELEMENT_COLORS[elem];
     return (
@@ -356,6 +557,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
         <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${c.text} bg-white bg-opacity-60`}>
           {ELEMENTS[elem][locale]}
         </span>
+        <p className="mt-2 min-h-[2.25rem] text-[11px] leading-relaxed text-gray-600">{role}</p>
       </div>
     );
   };
@@ -438,18 +640,34 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           {/* Four Pillars */}
           <div>
             <h2 className="text-sm font-bold text-indigo-700 mb-3">{t.fourPillars}</h2>
-            <div className={`grid gap-3 ${result.pillars.length === 4 ? 'grid-cols-4' : 'grid-cols-3'}`}>
+            <div className={`grid gap-3 ${result.pillars.length === 4 ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-3'}`}>
               {result.pillars.map(p => (
-                <PillarCard key={p.label} label={p.label} stemIdx={p.stem} branchIdx={p.branch} />
+                <PillarCard key={p.label} label={p.label} role={roles[p.key] ?? ''} stemIdx={p.stem} branchIdx={p.branch} />
+              ))}
+            </div>
+          </div>
+
+          {/* Reading map */}
+          <div className="bg-white rounded-2xl border border-gray-200 p-4">
+            <div className="mb-4">
+              <h2 className="text-sm font-semibold text-gray-800">{reading.readingMap}</h2>
+              <p className="mt-1 text-xs leading-relaxed text-gray-500">{reading.readingMapDesc}</p>
+            </div>
+            <div className="grid gap-3 sm:grid-cols-3">
+              {reading.readSteps.map((step, index) => (
+                <div key={step} className="rounded-xl border border-gray-100 bg-gray-50 p-3">
+                  <p className="mb-1 text-[11px] font-bold text-indigo-600">0{index + 1}</p>
+                  <p className="text-xs leading-relaxed text-gray-700">{step}</p>
+                </div>
               ))}
             </div>
           </div>
 
           {/* Element balance */}
           <div className="bg-white rounded-2xl border border-gray-200 p-4">
-            <h2 className="text-sm font-semibold text-gray-700 mb-3">{t.dominantElement}</h2>
+            <h2 className="text-sm font-semibold text-gray-700 mb-3">{reading.balanceTitle}</h2>
             <div className="space-y-2">
-              {(['Wood', 'Fire', 'Earth', 'Metal', 'Water'] as const).map(el => {
+              {ELEMENT_ORDER.map(el => {
                 const c = ELEMENT_COLORS[el];
                 const count = result.elementCount[el] || 0;
                 const total = result.pillars.length * 2;
@@ -459,14 +677,78 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                     <span className="w-5 text-sm">{ELEMENT_EMOJIS[el]}</span>
                     <span className={`text-xs font-medium w-16 ${c.text}`}>{ELEMENTS[el][locale]}</span>
                     <div className="flex-1 h-2 bg-gray-100 rounded-full">
-                      <div className={`h-2 rounded-full ${c.bg.replace('bg-', 'bg-').replace('-50', '-400')}`} style={{ width: `${pct}%` }} />
+                      <div className={`h-2 rounded-full ${ELEMENT_BAR_COLORS[el]}`} style={{ width: `${pct}%` }} />
                     </div>
                     <span className="text-xs text-gray-500 w-8 text-right">{count}</span>
                   </div>
                 );
               })}
             </div>
+            <div className="mt-4 grid gap-2 sm:grid-cols-3">
+              <div className="rounded-xl border border-gray-100 bg-gray-50 p-3">
+                <p className="text-[11px] font-semibold text-gray-500">{reading.abundance}</p>
+                <p className="mt-1 text-sm font-bold text-gray-800">{ELEMENTS[result.sortedElements[0]][locale]}</p>
+              </div>
+              <div className="rounded-xl border border-gray-100 bg-gray-50 p-3">
+                <p className="text-[11px] font-semibold text-gray-500">{reading.scarcity}</p>
+                <p className="mt-1 text-sm font-bold text-gray-800">{ELEMENTS[result.scarceElements[0]][locale]}</p>
+              </div>
+              <div className="rounded-xl border border-gray-100 bg-gray-50 p-3">
+                <p className="text-[11px] font-semibold text-gray-500">{reading.missing}</p>
+                <p className="mt-1 text-sm font-bold text-gray-800">
+                  {result.missingElements.length > 0
+                    ? result.missingElements.map(el => ELEMENTS[el][locale]).join(', ')
+                    : reading.noMissing}
+                </p>
+              </div>
+            </div>
           </div>
+
+          {/* Element relations */}
+          {(() => {
+            const strong = result.sortedElements[0];
+            const support = GENERATES[strong];
+            const regulate = CONTROLS[strong];
+            const supportColor = ELEMENT_COLORS[support];
+            const regulateColor = ELEMENT_COLORS[regulate];
+            return (
+              <div className="bg-white rounded-2xl border border-gray-200 p-4">
+                <div className="mb-4">
+                  <h2 className="text-sm font-semibold text-gray-800">{reading.relationTitle}</h2>
+                  <p className="mt-1 text-xs leading-relaxed text-gray-500">{reading.relationDesc}</p>
+                </div>
+                <div className="grid gap-3 sm:grid-cols-2">
+                  <div className={`rounded-xl border p-4 ${supportColor.bg} ${supportColor.border}`}>
+                    <p className="text-[11px] font-semibold text-gray-500">{reading.generates}</p>
+                    <div className="mt-2 flex items-center justify-between gap-3">
+                      <span className="text-sm font-bold text-gray-800">{ELEMENTS[strong][locale]}</span>
+                      <span className="text-xs text-gray-400">→</span>
+                      <span className={`text-sm font-bold ${supportColor.text}`}>{ELEMENTS[support][locale]}</span>
+                    </div>
+                  </div>
+                  <div className={`rounded-xl border p-4 ${regulateColor.bg} ${regulateColor.border}`}>
+                    <p className="text-[11px] font-semibold text-gray-500">{reading.controls}</p>
+                    <div className="mt-2 flex items-center justify-between gap-3">
+                      <span className="text-sm font-bold text-gray-800">{ELEMENTS[strong][locale]}</span>
+                      <span className="text-xs text-gray-400">↘</span>
+                      <span className={`text-sm font-bold ${regulateColor.text}`}>{ELEMENTS[regulate][locale]}</span>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-4 rounded-xl border border-gray-100 bg-gray-50 p-4">
+                  <p className="text-xs font-semibold text-gray-700">{reading.balanceQuestions}</p>
+                  <ul className="mt-2 space-y-1">
+                    {reading.balanceQuestionItems.map((item) => (
+                      <li key={item} className="flex gap-2 text-xs leading-relaxed text-gray-600">
+                        <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-400" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            );
+          })()}
 
           {/* Dominant element profile */}
           {(() => {
@@ -528,6 +810,11 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
               </div>
             );
           })()}
+
+          <div className="rounded-2xl border border-indigo-100 bg-indigo-50 p-4">
+            <h2 className="text-sm font-semibold text-indigo-800">{reading.profileChanges}</h2>
+            <p className="mt-2 text-xs leading-relaxed text-indigo-900/75">{reading.profileChangesDesc}</p>
+          </div>
 
           <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
 
