@@ -1,0 +1,51 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import PalmistryExplorer from '../../../components/tools/PalmistryExplorer';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '손금 탐색기 — 생명선·감정선·두뇌선·운명선 인터랙티브',
+    description: '손 위의 4대 주요 선을 눌러 의미를 살펴보는 인터랙티브 손금 도구. 생명선·감정선·두뇌선·운명선의 특징과 해석을 한눈에.',
+  },
+  en: {
+    title: 'Palm Explorer — Interactive Life, Heart, Head & Fate Lines',
+    description: 'An interactive palmistry tool: tap the four major palm lines to explore their meanings. Heart, Head, Life, and Fate lines at a glance.',
+  },
+  ja: {
+    title: '手相エクスプローラー — 感情線・頭脳線・生命線・運命線インタラクティブ',
+    description: '手のひらの四大主要線をタップして意味を見るインタラクティブな手相ツール。感情線・頭脳線・生命線・運命線の特徴と解釈を一目で。',
+  },
+  zh: {
+    title: '手相探索器 — 感情线·智慧线·生命线·命运线互动',
+    description: '点按手掌四大主线即可了解含义的互动手相工具。一目了然地查看感情线、智慧线、生命线与命运线的特征与解读。',
+  },
+  fr: {
+    title: 'Explorateur de paume — Lignes de vie, cœur, tête et destin (interactif)',
+    description: 'Un outil de chiromancie interactif : touchez les quatre lignes principales de la paume pour explorer leur signification.',
+  },
+  es: {
+    title: 'Explorador de la palma — Líneas de vida, corazón, cabeza y destino (interactivo)',
+    description: 'Una herramienta de quiromancia interactiva: toca las cuatro líneas principales de la palma para explorar su significado.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="mx-auto max-w-3xl px-4 py-10">
+    <PalmistryExplorer client:load locale={locale} />
+    <div class="mt-10">
+      <MysticTrinity topic="zodiac" locale={locale} />
+    </div>
+  </main>
+</Layout>
