@@ -5,6 +5,7 @@ import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import MbtiPersonalityTest from '../../../components/tests/MbtiPersonalityTest';
 import TestContentBridge from '../../../components/shared/TestContentBridge.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { getTestBridge } from '../../../data/test-content-bridges';
 
 export async function getStaticPaths() {
@@ -48,6 +49,7 @@ const bridge = getTestBridge('mbti', locale);
   <main class="mx-auto max-w-2xl px-4 py-10">
     <MbtiPersonalityTest client:load locale={locale} />
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
+    <RelatedTools locale={locale} tools={['enneagram', 'big5', 'attachment', 'loveLanguage']} current="mbti" />
       <MentalBoost locale={locale} />
   </main>
 </Layout>
