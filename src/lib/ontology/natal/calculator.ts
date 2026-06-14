@@ -17,7 +17,7 @@
 import { normalizeAngle } from '../kernel/math';
 import { getJulianCenturies, getJulianDay, J2000_EPOCH } from '../kernel/time';
 import { getSolarLongitude } from '../kernel/astronomy';
-import { getPlanetLongitude } from './planets';
+import { getPlanetLongitude, isRetrograde, type Planet } from './planets';
 
 const D2R = Math.PI / 180;
 const R2D = 180 / Math.PI;
@@ -38,6 +38,8 @@ export interface Placement {
   sign: SignKey;
   /** Degrees within the sign, 0–30. */
   degreeInSign: number;
+  /** Apparent retrograde motion (planets only; undefined for Sun/Moon/Ascendant). */
+  retrograde?: boolean;
 }
 
 /** Map an ecliptic longitude to a sign placement. */
@@ -156,19 +158,24 @@ export interface NatalChart {
   pluto: Placement;
 }
 
+/** A planet placement, including apparent retrograde motion. */
+function planetPlacement(planet: Planet, date: Date): Placement {
+  return { ...toPlacement(getPlanetLongitude(planet, date)), retrograde: isRetrograde(planet, date) };
+}
+
 /** Compute the full ten-body chart (+ ascendant) for a precise UTC birth instant + location. */
 export function computeNatalChart({ date, latitude, longitude }: NatalInput): NatalChart {
   return {
     sun: toPlacement(getSolarLongitude(date)),
     moon: toPlacement(getLunarLongitude(date)),
     ascendant: toPlacement(getAscendantLongitude(date, latitude, longitude)),
-    mercury: toPlacement(getPlanetLongitude('mercury', date)),
-    venus: toPlacement(getPlanetLongitude('venus', date)),
-    mars: toPlacement(getPlanetLongitude('mars', date)),
-    jupiter: toPlacement(getPlanetLongitude('jupiter', date)),
-    saturn: toPlacement(getPlanetLongitude('saturn', date)),
-    uranus: toPlacement(getPlanetLongitude('uranus', date)),
-    neptune: toPlacement(getPlanetLongitude('neptune', date)),
-    pluto: toPlacement(getPlanetLongitude('pluto', date)),
+    mercury: planetPlacement('mercury', date),
+    venus: planetPlacement('venus', date),
+    mars: planetPlacement('mars', date),
+    jupiter: planetPlacement('jupiter', date),
+    saturn: planetPlacement('saturn', date),
+    uranus: planetPlacement('uranus', date),
+    neptune: planetPlacement('neptune', date),
+    pluto: planetPlacement('pluto', date),
   };
 }

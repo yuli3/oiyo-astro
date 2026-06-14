@@ -250,3 +250,15 @@ export function getPlanetLongitude(planet: Planet, date: Date): number {
   const yg = helio.y + sun.y;
   return normalizeAngle(Math.atan2(yg, xg) * R2D);
 }
+
+/**
+ * Whether a planet appears retrograde (apparent geocentric longitude decreasing)
+ * at the given instant. Determined from the sign of motion across a ±12h window.
+ */
+export function isRetrograde(planet: Planet, date: Date): boolean {
+  const dtMs = 12 * 3600 * 1000;
+  const before = getPlanetLongitude(planet, new Date(date.getTime() - dtMs));
+  const after = getPlanetLongitude(planet, new Date(date.getTime() + dtMs));
+  const motion = ((after - before + 540) % 360) - 180; // signed shortest arc
+  return motion < 0;
+}

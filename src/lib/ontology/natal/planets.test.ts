@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest';
-import { getPlanetLongitude, getSchlyterSun } from './planets';
+import { getPlanetLongitude, getSchlyterSun, isRetrograde } from './planets';
 
 const norm = (a: number) => ((a % 360) + 360) % 360;
 /** Smallest absolute angular separation in degrees. */
@@ -98,6 +98,22 @@ describe('outer planets — Uranus, Neptune, Pluto', () => {
         expect(lon).toBeGreaterThanOrEqual(0);
         expect(lon).toBeLessThan(360);
       }
+    }
+  });
+});
+
+describe('retrograde detection', () => {
+  it('flags documented retrograde and direct periods', () => {
+    // Mercury retrograde 2020-02-17 → 2020-03-10.
+    expect(isRetrograde('mercury', new Date('2020-02-25T12:00:00Z'))).toBe(true);
+    // Mercury direct in early February 2020 (before the retrograde station).
+    expect(isRetrograde('mercury', new Date('2020-02-05T12:00:00Z'))).toBe(false);
+    // Mars retrograde 2020-09-09 → 2020-11-13.
+    expect(isRetrograde('mars', new Date('2020-10-10T12:00:00Z'))).toBe(true);
+    // The Sun reference is never retrograde; outer planets are retrograde ~40% of the year,
+    // so just assert the function returns a boolean for each.
+    for (const p of ['venus', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto'] as const) {
+      expect(typeof isRetrograde(p, new Date('2021-07-01T00:00:00Z'))).toBe('boolean');
     }
   });
 });

@@ -34,6 +34,7 @@ const COPY: Record<NatalLocale, {
   pluto: string; plutoSub: string;
   ascNeedsTime: string;
   moonNote: string;
+  retro: string;
   method: string;
   disclaimer: string;
   resultHeading: string;
@@ -61,6 +62,7 @@ const COPY: Record<NatalLocale, {
     pluto: '명왕성', plutoSub: '변형·재생·심층의 힘 (세대)',
     ascNeedsTime: '상승궁은 태어난 시각이 있어야 계산할 수 있어요.',
     moonNote: '시간을 모를 경우 달 별자리는 정오 기준 근사치이며, 별자리 경계 근처에서는 달라질 수 있습니다.',
+    retro: '역행',
     method: '계산 방법: 행성 위치를 Meeus·Schlyter 천문 알고리즘으로 직접 계산하고 천체력과 대조 검증했습니다. (결과를 짐작하는 블랙박스가 아닙니다.)',
     disclaimer: '점성술은 자기 이해와 사색을 위한 상징 체계이며, 운명을 단정하는 도구가 아닙니다.',
     resultHeading: '나의 출생 차트',
@@ -88,6 +90,7 @@ const COPY: Record<NatalLocale, {
     pluto: 'Pluto', plutoSub: 'Transformation, rebirth & depth (generational)',
     ascNeedsTime: 'The Rising sign needs a birth time to be calculated.',
     moonNote: 'Without a birth time, the Moon sign is a noon-based approximation and may differ near sign boundaries.',
+    retro: 'Retrograde',
     method: 'How it’s computed: planetary positions are calculated directly with Meeus/Schlyter astronomical algorithms and cross-checked against an ephemeris — not a black box.',
     disclaimer: 'Astrology is a symbolic language for self-reflection, not a tool that fixes your fate.',
     resultHeading: 'My natal chart',
@@ -115,6 +118,7 @@ const COPY: Record<NatalLocale, {
     pluto: '冥王星', plutoSub: '変容・再生・深層の力（世代）',
     ascNeedsTime: '上昇宮の計算には生まれた時刻が必要です。',
     moonNote: '時刻が不明な場合、月星座は正午基準の近似値で、星座の境界付近では変わることがあります。',
+    retro: '逆行',
     method: '計算方法: 惑星の位置をMeeus・Schlyterの天文アルゴリズムで直接計算し、天体暦と照合して検証しています（ブラックボックスではありません）。',
     disclaimer: '占星術は自己理解と内省のための象徴体系であり、運命を断定する道具ではありません。',
     resultHeading: '私の出生図',
@@ -142,6 +146,7 @@ const COPY: Record<NatalLocale, {
     pluto: '冥王星', plutoSub: '蜕变·重生·深层力量（世代）',
     ascNeedsTime: '上升星座需要出生时间才能计算。',
     moonNote: '若不知出生时间，月亮星座为正午近似值，在星座边界附近可能不同。',
+    retro: '逆行',
     method: '计算方式：行星位置以 Meeus／Schlyter 天文算法直接计算，并与星历表交叉校验，并非黑箱。',
     disclaimer: '占星学是用于自我理解与省思的象征体系，并非断定命运的工具。',
     resultHeading: '我的出生星盘',
@@ -169,6 +174,7 @@ const COPY: Record<NatalLocale, {
     pluto: 'Pluton', plutoSub: 'Transformation, renaissance et profondeur (générationnel)',
     ascNeedsTime: 'L’Ascendant nécessite une heure de naissance.',
     moonNote: 'Sans heure de naissance, le signe lunaire est une approximation à midi et peut varier près des limites de signe.',
+    retro: 'Rétrograde',
     method: 'Méthode : les positions planétaires sont calculées directement avec les algorithmes astronomiques de Meeus/Schlyter et vérifiées par éphéméride — pas une boîte noire.',
     disclaimer: 'L’astrologie est un langage symbolique de réflexion personnelle, non un outil qui fixe le destin.',
     resultHeading: 'Mon thème natal',
@@ -196,6 +202,7 @@ const COPY: Record<NatalLocale, {
     pluto: 'Plutón', plutoSub: 'Transformación, renacimiento y profundidad (generacional)',
     ascNeedsTime: 'El Ascendente necesita una hora de nacimiento para calcularse.',
     moonNote: 'Sin hora de nacimiento, el signo lunar es una aproximación al mediodía y puede variar cerca de los límites de signo.',
+    retro: 'Retrógrado',
     method: 'Cómo se calcula: las posiciones planetarias se calculan directamente con algoritmos astronómicos de Meeus/Schlyter y se cotejan con una efeméride — no es una caja negra.',
     disclaimer: 'La astrología es un lenguaje simbólico para la reflexión personal, no una herramienta que fija el destino.',
     resultHeading: 'Mi carta natal',
@@ -278,18 +285,18 @@ export default function NatalChartCalculator({ locale }: Props) {
 
   if (result) {
     const { chart, hasTime } = result;
-    const rows: { key: string; label: string; sub: string; signKey: typeof chart.sun.sign; deg: number; show: boolean; wiki?: string }[] = [
+    const rows: { key: string; label: string; sub: string; signKey: typeof chart.sun.sign; deg: number; show: boolean; wiki?: string; retro?: boolean }[] = [
       { key: 'sun', label: t.sun, sub: t.sunSub, signKey: chart.sun.sign, deg: chart.sun.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-sun-in-${chart.sun.sign}/` },
       { key: 'moon', label: t.moon, sub: t.moonSub, signKey: chart.moon.sign, deg: chart.moon.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-moon-in-${chart.moon.sign}/` },
       { key: 'asc', label: t.asc, sub: t.ascSub, signKey: chart.ascendant.sign, deg: chart.ascendant.degreeInSign, show: hasTime },
-      { key: 'mercury', label: t.mercury, sub: t.mercurySub, signKey: chart.mercury.sign, deg: chart.mercury.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-mercury-in-${chart.mercury.sign}/` },
-      { key: 'venus', label: t.venus, sub: t.venusSub, signKey: chart.venus.sign, deg: chart.venus.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-venus-in-${chart.venus.sign}/` },
-      { key: 'mars', label: t.mars, sub: t.marsSub, signKey: chart.mars.sign, deg: chart.mars.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-mars-in-${chart.mars.sign}/` },
-      { key: 'jupiter', label: t.jupiter, sub: t.jupiterSub, signKey: chart.jupiter.sign, deg: chart.jupiter.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-jupiter-in-${chart.jupiter.sign}/` },
-      { key: 'saturn', label: t.saturn, sub: t.saturnSub, signKey: chart.saturn.sign, deg: chart.saturn.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-saturn-in-${chart.saturn.sign}/` },
-      { key: 'uranus', label: t.uranus, sub: t.uranusSub, signKey: chart.uranus.sign, deg: chart.uranus.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-uranus-in-${chart.uranus.sign}/` },
-      { key: 'neptune', label: t.neptune, sub: t.neptuneSub, signKey: chart.neptune.sign, deg: chart.neptune.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-neptune-in-${chart.neptune.sign}/` },
-      { key: 'pluto', label: t.pluto, sub: t.plutoSub, signKey: chart.pluto.sign, deg: chart.pluto.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-pluto-in-${chart.pluto.sign}/` },
+      { key: 'mercury', label: t.mercury, sub: t.mercurySub, signKey: chart.mercury.sign, deg: chart.mercury.degreeInSign, show: true, retro: chart.mercury.retrograde, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-mercury-in-${chart.mercury.sign}/` },
+      { key: 'venus', label: t.venus, sub: t.venusSub, signKey: chart.venus.sign, deg: chart.venus.degreeInSign, show: true, retro: chart.venus.retrograde, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-venus-in-${chart.venus.sign}/` },
+      { key: 'mars', label: t.mars, sub: t.marsSub, signKey: chart.mars.sign, deg: chart.mars.degreeInSign, show: true, retro: chart.mars.retrograde, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-mars-in-${chart.mars.sign}/` },
+      { key: 'jupiter', label: t.jupiter, sub: t.jupiterSub, signKey: chart.jupiter.sign, deg: chart.jupiter.degreeInSign, show: true, retro: chart.jupiter.retrograde, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-jupiter-in-${chart.jupiter.sign}/` },
+      { key: 'saturn', label: t.saturn, sub: t.saturnSub, signKey: chart.saturn.sign, deg: chart.saturn.degreeInSign, show: true, retro: chart.saturn.retrograde, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-saturn-in-${chart.saturn.sign}/` },
+      { key: 'uranus', label: t.uranus, sub: t.uranusSub, signKey: chart.uranus.sign, deg: chart.uranus.degreeInSign, show: true, retro: chart.uranus.retrograde, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-uranus-in-${chart.uranus.sign}/` },
+      { key: 'neptune', label: t.neptune, sub: t.neptuneSub, signKey: chart.neptune.sign, deg: chart.neptune.degreeInSign, show: true, retro: chart.neptune.retrograde, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-neptune-in-${chart.neptune.sign}/` },
+      { key: 'pluto', label: t.pluto, sub: t.plutoSub, signKey: chart.pluto.sign, deg: chart.pluto.degreeInSign, show: true, retro: chart.pluto.retrograde, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-pluto-in-${chart.pluto.sign}/` },
     ];
     return (
       <section className="mx-auto w-full max-w-xl">
@@ -315,7 +322,12 @@ export default function NatalChartCalculator({ locale }: Props) {
                   </div>
                   <span className="text-3xl" aria-hidden="true">{info.emoji}</span>
                 </div>
-                <p className="mt-2 text-2xl font-black text-slate-900">{t.degIn(r.deg.toFixed(1), info.name[loc])}</p>
+                <p className="mt-2 text-2xl font-black text-slate-900">
+                  {t.degIn(r.deg.toFixed(1), info.name[loc])}
+                  {r.retro && (
+                    <span className="ml-2 align-middle rounded bg-rose-100 px-1.5 py-0.5 text-xs font-bold text-rose-700" title={t.retro}>℞ {t.retro}</span>
+                  )}
+                </p>
                 <p className="mt-1 text-sm text-slate-600">{info.trait[loc]}</p>
                 {r.wiki && (
                   <a href={r.wiki} className="mt-2 inline-block text-xs font-bold text-indigo-700 hover:underline">{t.readMore}</a>
