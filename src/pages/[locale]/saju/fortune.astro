@@ -40,12 +40,480 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  "ko": {
+    "faqTitle": "자주 묻는 질문",
+    "readingTitle": "더 깊게 읽기",
+    "introTitle": "사주 운세는 좋은 날과 나쁜 날의 판결이 아니라 흐름을 읽는 참고 지도입니다",
+    "intro": "사주 운세는 타고난 네 기둥 위에 대운과 세운, 월운처럼 시간의 흐름이 더해질 때 어떤 기운이 강조되는지 살피는 방식입니다. 운세는 결정을 대신하는 예언이 아니라, 지금의 리듬을 돌아보는 참고 자료로 사용하세요.",
+    "conceptTitle": "운세 흐름의 핵심",
+    "concepts": [
+      {
+        "title": "대운",
+        "body": "10년 단위로 바뀌는 큰 흐름. 삶의 장기 리듬을 상징적으로 봅니다."
+      },
+      {
+        "title": "세운",
+        "body": "해마다 들어오는 기운. 그해에 강조되는 주제와 균형을 살핍니다."
+      },
+      {
+        "title": "일진과 월운",
+        "body": "짧은 주기의 흐름. 컨디션과 태도를 돌아보는 가벼운 참고로 적합합니다."
+      }
+    ],
+    "useTitle": "운세를 활용하는 법",
+    "useCases": [
+      {
+        "title": "한 해의 키워드 정리",
+        "body": "강조되는 오행을 보고 올해 집중할 태도와 조심할 과잉을 정리합니다."
+      },
+      {
+        "title": "결정 전 점검",
+        "body": "운세만으로 결정하지 말고 현실 정보와 함께 내 리듬을 확인하는 체크리스트로 씁니다."
+      },
+      {
+        "title": "사후 기록",
+        "body": "지나간 달과 실제 경험을 함께 기록하면 해석이 더 현실적으로 다듬어집니다."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "사주 운세는 과학인가요?",
+        "answer": "아니요. 사주 운세는 간지와 오행의 상징 해석이며 과학적 예측이 아닙니다. 자기 점검을 위한 참고로 사용하세요."
+      },
+      {
+        "question": "대운이 바뀌면 인생이 갑자기 달라지나요?",
+        "answer": "대운은 장기 흐름을 설명하는 상징입니다. 실제 변화는 선택, 환경, 준비와 함께 천천히 나타나는 경우가 많습니다."
+      },
+      {
+        "question": "나쁜 운이 나오면 피해야 하나요?",
+        "answer": "나쁜 운이라는 표현보다 긴장되는 기운으로 보는 편이 좋습니다. 무리한 결정은 점검하되 일상을 포기할 필요는 없습니다."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ko/meaning-of-palja/",
+        "label": "사주의 의미",
+        "desc": "사주팔자의 구조와 오행 해석의 기본을 정리했습니다."
+      },
+      {
+        "href": "https://blog.oiyo.net/ko/tool-saju-calculator/",
+        "label": "사주 계산기 가이드",
+        "desc": "사주를 처음 읽을 때 확인할 순서를 안내합니다."
+      }
+    ],
+    "disclaimer": "사주 운세는 오락과 자기 성찰 목적입니다. 진로, 투자, 의료, 법률 결정을 대신하지 않습니다."
+  },
+  "en": {
+    "faqTitle": "Frequently asked questions",
+    "readingTitle": "Read more",
+    "introTitle": "Saju fortune is a symbolic map of timing, not a verdict on good or bad days",
+    "intro": "Saju fortune looks at how time cycles such as 10-year luck, yearly luck, and shorter rhythms interact with your birth pillars. Use it as a reflective timing map, not as a prediction that replaces your judgment.",
+    "conceptTitle": "Core timing concepts",
+    "concepts": [
+      {
+        "title": "Ten-year luck",
+        "body": "A larger cycle that frames long-term themes and changes in emphasis."
+      },
+      {
+        "title": "Yearly luck",
+        "body": "The annual stem and branch show which elements and topics may feel louder this year."
+      },
+      {
+        "title": "Monthly and daily rhythm",
+        "body": "Shorter cycles are best used as gentle check-ins for timing, mood, and attention."
+      }
+    ],
+    "useTitle": "How to use the forecast",
+    "useCases": [
+      {
+        "title": "Set a yearly keyword",
+        "body": "Use the highlighted elements to name a focus and a possible excess to watch."
+      },
+      {
+        "title": "Check before decisions",
+        "body": "Let the forecast join practical information as a timing check, not as the deciding authority."
+      },
+      {
+        "title": "Record what happened",
+        "body": "Looking back at months and events helps keep interpretation grounded."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is saju fortune scientific?",
+        "answer": "No. It is a symbolic reading of stem-branch and Five Element cycles, not scientific prediction. Use it for reflection."
+      },
+      {
+        "question": "Does a new 10-year luck cycle suddenly change life?",
+        "answer": "It describes a long-term symbolic rhythm. Real change usually unfolds through choices, conditions, and preparation."
+      },
+      {
+        "question": "Should I avoid everything during difficult luck?",
+        "answer": "No. Treat difficult luck as a signal to slow down and check assumptions, not as a reason to stop living."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/en/meaning-of-palja/",
+        "label": "Meaning of Saju",
+        "desc": "The structure of the Four Pillars and Five Element basics."
+      },
+      {
+        "href": "https://blog.oiyo.net/en/tool-saju-calculator/",
+        "label": "Saju calculator guide",
+        "desc": "A first-reader guide to interpreting a saju chart."
+      }
+    ],
+    "disclaimer": "Saju fortune is for entertainment and self-reflection. It does not replace career, financial, medical, or legal decisions."
+  },
+  "ja": {
+    "faqTitle": "よくある質問",
+    "readingTitle": "詳しく読む",
+    "introTitle": "四柱推命の運勢は吉凶の判決ではなく、流れを読むための参考図です",
+    "intro": "四柱推命の運勢は、生まれ持った四柱に大運、年運、月運など時間の流れが重なるとき、どの気が強調されるかを見るものです。決定を代行する予言ではなく、今のリズムを振り返る参考にしてください。",
+    "conceptTitle": "運勢の主な流れ",
+    "concepts": [
+      {
+        "title": "大運",
+        "body": "十年単位の大きな流れ。長期的なテーマを象徴的に読みます。"
+      },
+      {
+        "title": "年運",
+        "body": "その年に入る気。強調されるテーマとバランスを見ます。"
+      },
+      {
+        "title": "月運・日運",
+        "body": "短い周期の流れ。体調や態度を軽く点検する参考になります。"
+      }
+    ],
+    "useTitle": "運勢の使い方",
+    "useCases": [
+      {
+        "title": "一年のキーワード",
+        "body": "強調される五行から、集中したい姿勢と注意したい過剰を整理します。"
+      },
+      {
+        "title": "決定前の点検",
+        "body": "運勢だけで決めず、現実の情報と合わせてリズムを確認します。"
+      },
+      {
+        "title": "後から記録する",
+        "body": "過ぎた月と経験を書き残すと、解釈が現実的になります。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "四柱推命の運勢は科学ですか？",
+        "answer": "いいえ。干支と五行の象徴解釈であり、科学的予測ではありません。自己点検の参考にしてください。"
+      },
+      {
+        "question": "大運が変わると人生は急に変わりますか？",
+        "answer": "大運は長期の象徴的な流れです。実際の変化は選択、環境、準備とともに徐々に現れることが多いです。"
+      },
+      {
+        "question": "悪い運なら避けるべきですか？",
+        "answer": "悪い運というより緊張しやすい気として見ましょう。無理な決定は点検しつつ、日常を止める必要はありません。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ja/meaning-of-palja/",
+        "label": "四柱推命の意味",
+        "desc": "四柱命式と五行解釈の基本です。"
+      },
+      {
+        "href": "https://blog.oiyo.net/ja/tool-saju-calculator/",
+        "label": "四柱推命計算ガイド",
+        "desc": "初めて命式を読むときの順序を案内します。"
+      }
+    ],
+    "disclaimer": "四柱推命の運勢は娯楽と自己省察のためのものです。進路、投資、医療、法律の判断を代替しません。"
+  },
+  "zh": {
+    "faqTitle": "常见问题",
+    "readingTitle": "延伸阅读",
+    "introTitle": "八字运势不是吉凶判决，而是阅读时间节奏的参考图",
+    "intro": "八字运势观察大运、流年、月运等时间之气如何与本命四柱互动。它不是替你决定的预言，而是帮助你回看当下节奏的参考。",
+    "conceptTitle": "运势流动的核心",
+    "concepts": [
+      {
+        "title": "大运",
+        "body": "十年一换的大节奏，象征长期主题与能量重点。"
+      },
+      {
+        "title": "流年",
+        "body": "每年进入的干支之气，提示这一年较突出的主题。"
+      },
+      {
+        "title": "月运与日运",
+        "body": "较短周期的参考，适合用来观察状态和注意力。"
+      }
+    ],
+    "useTitle": "如何使用运势",
+    "useCases": [
+      {
+        "title": "整理年度关键词",
+        "body": "从被强调的五行中找出今年的焦点和需要避免的过度。"
+      },
+      {
+        "title": "决策前检查",
+        "body": "不要只靠运势决定，把它作为现实信息之外的节奏提醒。"
+      },
+      {
+        "title": "事后记录",
+        "body": "把月份与实际经历一起记录，解读会更贴近生活。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "八字运势是科学吗？",
+        "answer": "不是。八字运势是干支与五行的象征解读，不是科学预测。请用于自我检查。"
+      },
+      {
+        "question": "换大运人生会突然改变吗？",
+        "answer": "大运描述长期象征节奏。真实变化通常与选择、环境和准备一起慢慢展开。"
+      },
+      {
+        "question": "遇到不顺的运就要什么都避开吗？",
+        "answer": "不必。把它看成需要放慢和检查假设的提醒，而不是停止生活的理由。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/zh/meaning-of-palja/",
+        "label": "四柱八字的意义",
+        "desc": "了解四柱结构与五行基础。"
+      },
+      {
+        "href": "https://blog.oiyo.net/zh/tool-saju-calculator/",
+        "label": "八字计算器指南",
+        "desc": "初学者阅读命盘的顺序。"
+      }
+    ],
+    "disclaimer": "八字运势仅供娱乐与自我反思，不替代职业、投资、医疗或法律决定。"
+  },
+  "fr": {
+    "faqTitle": "Questions fréquentes",
+    "readingTitle": "Lire plus",
+    "introTitle": "La fortune Saju est une carte symbolique du temps, pas un verdict de bons ou mauvais jours",
+    "intro": "La fortune Saju observe comment les cycles de dix ans, de l’année et des rythmes plus courts interagissent avec vos piliers de naissance. Utilisez-la comme carte de réflexion, non comme prédiction remplaçant votre jugement.",
+    "conceptTitle": "Concepts de rythme",
+    "concepts": [
+      {
+        "title": "Chance décennale",
+        "body": "Un grand cycle qui cadre les thèmes de long terme."
+      },
+      {
+        "title": "Chance annuelle",
+        "body": "La tige et la branche de l’année indiquent les éléments et sujets plus présents."
+      },
+      {
+        "title": "Rythmes mensuels et quotidiens",
+        "body": "Ces cycles courts servent surtout de check-in doux pour l’attention et le timing."
+      }
+    ],
+    "useTitle": "Comment utiliser la prévision",
+    "useCases": [
+      {
+        "title": "Définir un mot-clé annuel",
+        "body": "Utilisez les éléments mis en avant pour nommer un focus et un excès possible."
+      },
+      {
+        "title": "Vérifier avant de décider",
+        "body": "Ajoutez la prévision aux informations pratiques, sans lui donner l’autorité finale."
+      },
+      {
+        "title": "Tenir un journal",
+        "body": "Relire les mois et les événements garde l’interprétation ancrée."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "La fortune Saju est-elle scientifique ?",
+        "answer": "Non. C’est une lecture symbolique des cycles tige-branche et des Cinq Éléments, pas une prédiction scientifique."
+      },
+      {
+        "question": "Un nouveau cycle de dix ans change-t-il tout soudainement ?",
+        "answer": "Il décrit un rythme symbolique de long terme. Les changements réels passent par choix, contexte et préparation."
+      },
+      {
+        "question": "Faut-il tout éviter pendant une période difficile ?",
+        "answer": "Non. Prenez-la comme une invitation à ralentir et vérifier vos hypothèses, pas comme une raison d’arrêter de vivre."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/fr/meaning-of-palja/",
+        "label": "Signification du Saju",
+        "desc": "Structure des quatre piliers et bases des Cinq Éléments."
+      },
+      {
+        "href": "https://blog.oiyo.net/fr/tool-saju-calculator/",
+        "label": "Guide du calculateur Saju",
+        "desc": "Lire une carte Saju pour la première fois."
+      }
+    ],
+    "disclaimer": "La fortune Saju sert au divertissement et à la réflexion. Elle ne remplace pas les décisions professionnelles, financières, médicales ou juridiques."
+  },
+  "es": {
+    "faqTitle": "Preguntas frecuentes",
+    "readingTitle": "Leer más",
+    "introTitle": "La fortuna Saju es un mapa simbólico del tiempo, no un veredicto de días buenos o malos",
+    "intro": "La fortuna Saju observa cómo ciclos de diez años, anuales y más breves interactúan con tus pilares natales. Úsala como mapa reflexivo de ritmo, no como predicción que reemplace tu criterio.",
+    "conceptTitle": "Conceptos de ritmo",
+    "concepts": [
+      {
+        "title": "Suerte de diez años",
+        "body": "Un ciclo amplio que enmarca temas de largo plazo."
+      },
+      {
+        "title": "Suerte anual",
+        "body": "El tallo y la rama del año indican elementos y asuntos que pueden sonar más fuerte."
+      },
+      {
+        "title": "Ritmo mensual y diario",
+        "body": "Los ciclos cortos sirven como check-in suave de atención, ánimo y timing."
+      }
+    ],
+    "useTitle": "Cómo usar el pronóstico",
+    "useCases": [
+      {
+        "title": "Definir una palabra anual",
+        "body": "Usa los elementos destacados para nombrar un foco y un exceso a vigilar."
+      },
+      {
+        "title": "Revisar antes de decidir",
+        "body": "Suma el pronóstico a la información práctica, sin darle autoridad final."
+      },
+      {
+        "title": "Registrar lo vivido",
+        "body": "Volver a meses y eventos mantiene la interpretación con los pies en la tierra."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿La fortuna Saju es científica?",
+        "answer": "No. Es una lectura simbólica de ciclos tallo-rama y Cinco Elementos, no predicción científica. Úsala para reflexionar."
+      },
+      {
+        "question": "¿Un nuevo ciclo de diez años cambia todo de golpe?",
+        "answer": "Describe un ritmo simbólico de largo plazo. El cambio real suele pasar por decisiones, contexto y preparación."
+      },
+      {
+        "question": "¿Debo evitar todo en una etapa difícil?",
+        "answer": "No. Tómala como señal para bajar velocidad y revisar supuestos, no como razón para dejar de vivir."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/es/meaning-of-palja/",
+        "label": "Significado del Saju",
+        "desc": "Estructura de los cuatro pilares y bases de los Cinco Elementos."
+      },
+      {
+        "href": "https://blog.oiyo.net/es/tool-saju-calculator/",
+        "label": "Guía de calculadora Saju",
+        "desc": "Cómo leer una carta Saju por primera vez."
+      }
+    ],
+    "disclaimer": "La fortuna Saju es para entretenimiento y reflexión. No reemplaza decisiones profesionales, financieras, médicas o legales."
+  }
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <SajuFortune client:load locale={locale} />
     <RelatedTools locale={locale} tools={['saju', 'natal', 'zodiac']} current="" />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MysticTrinity topic="saju" locale={locale} />
   </main>
 </Layout>

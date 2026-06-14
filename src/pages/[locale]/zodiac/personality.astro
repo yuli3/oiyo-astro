@@ -40,12 +40,268 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '별자리는 사람을 12칸에 가두는 상자가 아니라 대화의 언어입니다',
+    intro: '별자리 성격은 태어난 날 태양이 머문 황도 12궁(태양 별자리)을 기준으로 성향의 결을 상징적으로 읽는 서양 점성술의 입문 도구입니다. 생일을 입력하면 나의 태양 별자리와 원소(불·흙·바람·물), 강점과 과제를 정리해 자기 이해의 출발점으로 삼도록 돕습니다.',
+    conceptTitle: '핵심 개념',
+    concepts: [
+      { title: '태양 별자리', body: '생일에 태양이 머문 별자리. 흔히 말하는 "내 별자리"가 이것입니다.' },
+      { title: '4원소', body: '불·흙·바람·물. 12별자리를 기질의 네 갈래로 묶어 성향을 읽습니다.' },
+      { title: '3특질', body: '활동·고정·변화. 에너지를 시작하는지, 유지하는지, 바꾸는지를 봅니다.' },
+    ],
+    useTitle: '이렇게 활용하세요',
+    useCases: [
+      { title: '강점·과제 정리', body: '결과의 키워드로 나의 강점과 보완하고 싶은 면을 문장으로 적어봅니다.' },
+      { title: '관계 대화 열기', body: '서로의 별자리를 판단이 아니라 질문으로 사용해 대화를 엽니다.' },
+      { title: '전체 차트로 확장', body: '태양 별자리는 시작일 뿐입니다. 출생차트로 달·상승궁까지 보면 더 입체적입니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '별자리 성격은 과학인가요?', answer: '아니요. 점성술은 상징 해석 체계이며 과학적 성격 진단이 아닙니다. 자기 성찰과 대화의 참고로 사용하세요.' },
+      { question: '태양 별자리만 보면 충분한가요?', answer: '태양 별자리는 입문일 뿐입니다. 같은 별자리라도 달·상승궁이 다르면 인상이 크게 달라집니다. 출생차트로 확장해보세요.' },
+      { question: '경계일(컵스)에 태어났어요.', answer: '별자리 경계는 해마다 시각이 조금씩 다릅니다. 경계일이면 출생차트 계산기로 태양의 정확한 위치를 확인하는 것이 좋습니다.' },
+    ],
+    readingTitle: '더 깊게 읽기',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/meaning-of-astrology/', label: '점성술의 의미', desc: '별자리와 점성술의 기본 개념을 정리했습니다.' },
+      { href: 'https://blog.oiyo.net/ko/western-astrology-vs-saju-comparison/', label: '점성술 vs 사주', desc: '서양 별자리와 동양 사주를 비교해 읽습니다.' },
+    ],
+    disclaimer: '별자리 결과는 오락과 자기 성찰 목적입니다. 진로, 투자, 의료, 관계 결정을 대신하지 않습니다.',
+  },
+  en: {
+    introTitle: 'Your zodiac sign is a language for conversation, not a box for 12 personalities',
+    intro: 'Zodiac personality reads the symbolic grain of your traits from the Sun sign — the constellation the Sun occupied on your birthday. Enter your birthday to see your Sun sign, its element (Fire, Earth, Air, Water), and your strengths and challenges as a starting point for self-understanding.',
+    conceptTitle: 'Core concepts',
+    concepts: [
+      { title: 'Sun sign', body: 'The sign the Sun was in on your birthday. This is the "star sign" most people mean.' },
+      { title: 'Four elements', body: 'Fire, Earth, Air, and Water group the 12 signs into four temperaments.' },
+      { title: 'Three modalities', body: 'Cardinal, Fixed, Mutable — whether you start, sustain, or change energy.' },
+    ],
+    useTitle: 'How to use it',
+    useCases: [
+      { title: 'Map strengths and challenges', body: 'Turn the result keywords into sentences about your strengths and what you want to grow.' },
+      { title: 'Open a conversation', body: 'Use each other\'s signs as questions, not labels, to start a dialogue.' },
+      { title: 'Expand to the full chart', body: 'The Sun sign is only the start. A natal chart adds Moon and Rising for a fuller picture.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Is zodiac personality scientific?', answer: 'No. Astrology is a symbolic interpretation system, not a scientific personality test. Use it for reflection and conversation.' },
+      { question: 'Is the Sun sign enough?', answer: 'The Sun sign is just an introduction. Two people of the same sign can feel very different once Moon and Rising differ — expand with a natal chart.' },
+      { question: 'I was born on a cusp.', answer: 'Sign boundaries shift slightly by year and time. If you were born on a cusp, use the natal chart calculator to confirm the Sun\'s exact position.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://wiki.oiyo.net/en/meaning-of-astrology/', label: 'Meaning of Astrology', desc: 'A guide to the zodiac signs and the basics of astrology.' },
+      { href: 'https://blog.oiyo.net/en/western-astrology-vs-saju-comparison/', label: 'Astrology vs Saju', desc: 'Compare Western signs with East Asian saju.' },
+    ],
+    disclaimer: 'Zodiac results are for entertainment and self-reflection. They do not replace career, financial, medical, or relationship decisions.',
+  },
+  ja: {
+    introTitle: '星座は人を12個の箱に閉じ込めるものではなく、対話の言語です',
+    intro: '星座性格は、生まれた日に太陽が位置した黄道十二宮（太陽星座）をもとに、性質の傾向を象徴的に読む西洋占星術の入門ツールです。誕生日を入力すると、太陽星座と元素（火・地・風・水）、強みと課題を整理し、自己理解の出発点にできます。',
+    conceptTitle: '主な概念',
+    concepts: [
+      { title: '太陽星座', body: '誕生日に太陽があった星座。一般に言う「自分の星座」がこれです。' },
+      { title: '四元素', body: '火・地・風・水。十二星座を気質の四つに分けて読みます。' },
+      { title: '三区分', body: '活動・固定・柔軟。エネルギーを始める・保つ・変えるかを見ます。' },
+    ],
+    useTitle: '使い方',
+    useCases: [
+      { title: '強みと課題を整理', body: '結果のキーワードで強みと伸ばしたい面を文章にします。' },
+      { title: '会話のきっかけに', body: 'お互いの星座を決めつけず、質問として使い対話を開きます。' },
+      { title: '全体図に広げる', body: '太陽星座は入口です。出生図で月・上昇宮まで見るとより立体的です。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: '星座性格は科学ですか？', answer: 'いいえ。占星術は象徴解釈の体系であり、科学的な性格診断ではありません。自己省察と会話の参考に使ってください。' },
+      { question: '太陽星座だけで十分ですか？', answer: '太陽星座は入門にすぎません。同じ星座でも月・上昇宮が違えば印象は大きく変わります。出生図で広げてみましょう。' },
+      { question: '境界日（カスプ）に生まれました。', answer: '星座の境界は年や時刻で少しずれます。境界日なら出生図計算機で太陽の正確な位置を確認しましょう。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ja/meaning-of-astrology/', label: '占星術の意味', desc: '星座と占星術の基本概念を解説しています。' },
+      { href: 'https://blog.oiyo.net/ja/western-astrology-vs-saju-comparison/', label: '占星術 vs 四柱推命', desc: '西洋の星座と東洋の四柱推命を比較します。' },
+    ],
+    disclaimer: '星座の結果は娯楽と自己省察のためのものです。進路、投資、医療、人間関係の決定を代替しません。',
+  },
+  zh: {
+    introTitle: '星座是对话的语言，而非把人关进12个盒子',
+    intro: '星座性格以出生当天太阳所在的黄道十二宫（太阳星座）为准，象征性地阅读性格倾向，是西方占星的入门工具。输入生日，即可了解你的太阳星座、元素（火·土·风·水）以及优势与课题，作为自我理解的起点。',
+    conceptTitle: '核心概念',
+    concepts: [
+      { title: '太阳星座', body: '生日当天太阳所在的星座，即一般所说的「我的星座」。' },
+      { title: '四元素', body: '火、土、风、水，把十二星座分为四种气质。' },
+      { title: '三模式', body: '基本、固定、变动——看你开启、维持还是改变能量。' },
+    ],
+    useTitle: '如何使用',
+    useCases: [
+      { title: '整理优势与课题', body: '用结果关键词写下你的优势与想成长的方面。' },
+      { title: '开启对话', body: '把彼此的星座当作提问而非标签，开启交流。' },
+      { title: '扩展到完整星盘', body: '太阳星座只是开始，用出生星盘加上月亮与上升会更立体。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '星座性格是科学吗？', answer: '不是。占星是象征解释体系，不是科学人格测试。请用于自我反思与对话。' },
+      { question: '只看太阳星座够吗？', answer: '太阳星座只是入门。同一星座的人，月亮与上升不同时感觉差别很大，建议用出生星盘扩展。' },
+      { question: '我出生在交界日（星座交替）。', answer: '星座边界每年时刻略有不同。若在交界日，建议用出生星盘计算器确认太阳的准确位置。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://wiki.oiyo.net/zh/meaning-of-astrology/', label: '占星的意义', desc: '了解星座与占星的基本概念。' },
+      { href: 'https://blog.oiyo.net/zh/western-astrology-vs-saju-comparison/', label: '占星 vs 四柱八字', desc: '比较西方星座与东方四柱八字。' },
+    ],
+    disclaimer: '星座结果仅供娱乐与自我反思，不替代职业、财务、医疗或关系决策。',
+  },
+  fr: {
+    introTitle: 'Votre signe est un langage de conversation, pas une boîte à 12 personnalités',
+    intro: 'La personnalité zodiacale lit la tonalité symbolique de vos traits à partir du signe solaire — la constellation où se trouvait le Soleil le jour de votre naissance. Saisissez votre anniversaire pour voir votre signe solaire, son élément (Feu, Terre, Air, Eau) et vos forces et défis.',
+    conceptTitle: 'Concepts clés',
+    concepts: [
+      { title: 'Signe solaire', body: 'Le signe où était le Soleil à votre naissance — le « signe » que la plupart des gens citent.' },
+      { title: 'Quatre éléments', body: 'Feu, Terre, Air et Eau regroupent les 12 signes en quatre tempéraments.' },
+      { title: 'Trois modes', body: 'Cardinal, Fixe, Mutable — démarrer, maintenir ou transformer l\'énergie.' },
+    ],
+    useTitle: 'Comment l\'utiliser',
+    useCases: [
+      { title: 'Cartographier forces et défis', body: 'Transformez les mots-clés du résultat en phrases sur vos forces et axes de progrès.' },
+      { title: 'Ouvrir une conversation', body: 'Utilisez vos signes comme des questions, pas des étiquettes, pour dialoguer.' },
+      { title: 'Élargir au thème complet', body: 'Le signe solaire n\'est qu\'un début. Un thème natal ajoute la Lune et l\'Ascendant.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'La personnalité zodiacale est-elle scientifique ?', answer: 'Non. L\'astrologie est un système symbolique, pas un test de personnalité scientifique. Utilisez-la pour la réflexion.' },
+      { question: 'Le signe solaire suffit-il ?', answer: 'Le signe solaire n\'est qu\'une introduction. Deux personnes du même signe diffèrent dès que Lune et Ascendant changent — élargissez avec un thème natal.' },
+      { question: 'Je suis né(e) à la cuspide.', answer: 'Les limites des signes varient légèrement selon l\'année et l\'heure. À la cuspide, utilisez le calculateur de thème natal pour confirmer la position du Soleil.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://wiki.oiyo.net/fr/meaning-of-astrology/', label: 'Signification de l\'astrologie', desc: 'Un guide des signes du zodiaque et des bases de l\'astrologie.' },
+    ],
+    disclaimer: 'Les résultats zodiacaux servent au divertissement et à la réflexion. Ils ne remplacent pas les décisions professionnelles, financières, médicales ou relationnelles.',
+  },
+  es: {
+    introTitle: 'Tu signo es un lenguaje de conversación, no una caja para 12 personalidades',
+    intro: 'La personalidad zodiacal lee el matiz simbólico de tus rasgos a partir del signo solar — la constelación donde estaba el Sol el día de tu nacimiento. Ingresa tu cumpleaños para ver tu signo solar, su elemento (Fuego, Tierra, Aire, Agua) y tus fortalezas y desafíos.',
+    conceptTitle: 'Conceptos clave',
+    concepts: [
+      { title: 'Signo solar', body: 'El signo donde estaba el Sol al nacer — el "signo" que casi todos mencionan.' },
+      { title: 'Cuatro elementos', body: 'Fuego, Tierra, Aire y Agua agrupan los 12 signos en cuatro temperamentos.' },
+      { title: 'Tres modalidades', body: 'Cardinal, Fijo, Mutable — iniciar, sostener o transformar la energía.' },
+    ],
+    useTitle: 'Cómo usarlo',
+    useCases: [
+      { title: 'Mapea fortalezas y desafíos', body: 'Convierte las palabras clave del resultado en frases sobre tus fortalezas y áreas de crecimiento.' },
+      { title: 'Abre una conversación', body: 'Usa los signos como preguntas, no como etiquetas, para dialogar.' },
+      { title: 'Amplía a la carta completa', body: 'El signo solar es solo el inicio. Una carta natal añade Luna y Ascendente.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿La personalidad zodiacal es científica?', answer: 'No. La astrología es un sistema simbólico, no una prueba científica de personalidad. Úsala para la reflexión.' },
+      { question: '¿Basta con el signo solar?', answer: 'El signo solar es solo una introducción. Dos personas del mismo signo difieren cuando cambian Luna y Ascendente — amplía con una carta natal.' },
+      { question: 'Nací en la cúspide.', answer: 'Los límites de los signos varían algo según el año y la hora. En la cúspide, usa la calculadora de carta natal para confirmar la posición del Sol.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://wiki.oiyo.net/es/meaning-of-astrology/', label: 'Significado de la astrología', desc: 'Una guía de los signos del zodiaco y las bases de la astrología.' },
+    ],
+    disclaimer: 'Los resultados zodiacales son para entretenimiento y reflexión. No reemplazan decisiones profesionales, financieras, médicas o relacionales.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <ZodiacPersonality client:load locale={locale} />
     <RelatedTools locale={locale} tools={['natal', 'zodiacCompat', 'saju']} current="zodiac" />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MysticTrinity topic="zodiac" locale={locale} />
   </main>
 </Layout>

@@ -40,12 +40,275 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '출생 차트는 태어난 순간 하늘을 천문 계산으로 되돌린 지도입니다',
+    intro: '출생 차트(네이탈 차트)는 생년월일·시각·출생지를 기준으로 그 순간 태양·달·행성이 어느 별자리에 있었는지를 계산한 점성술의 기본 지도입니다. 이 계산기는 천문 알고리즘으로 태양·달·상승궁을 비롯한 배치를 직접 산출해, 외부 데이터에 의존하지 않고 나만의 별자리 조합을 정리해 줍니다.',
+    conceptTitle: '계산되는 핵심 배치',
+    concepts: [
+      { title: '태양 별자리', body: '핵심 정체성과 의지를 상징합니다. 흔히 말하는 "별자리"가 바로 태양 별자리입니다.' },
+      { title: '달 별자리', body: '내면의 감정, 정서적 욕구, 본능적인 반응 방식을 봅니다.' },
+      { title: '상승궁(어센던트)', body: '태어난 시각에 동쪽 지평선에 떠오른 별자리. 첫인상과 겉으로 드러나는 태도를 상징합니다.' },
+    ],
+    useTitle: '이렇게 활용하세요',
+    useCases: [
+      { title: '빅3 함께 읽기', body: '태양·달·상승궁을 한 세트로 보면 의지·감정·표현의 결을 입체적으로 살필 수 있습니다.' },
+      { title: '출생 시각의 중요성', body: '상승궁은 시각에 따라 빠르게 바뀝니다. 정확한 시간을 넣을수록 어센던트가 정확해집니다.' },
+      { title: '사주와 짝지어 보기', body: '출생차트는 서양 출생 도구, 사주는 동양 출생 도구입니다. 같은 생일을 두 언어로 비교해보세요.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '점성술은 과학인가요?', answer: '별의 위치 계산은 천문학이지만, 그 위치에 성격·운명의 의미를 부여하는 점성술 해석은 과학이 아니라 상징 체계입니다. 자기 이해의 참고로 사용하세요.' },
+      { question: '출생 시각과 장소를 꼭 입력해야 하나요?', answer: '태양·달 별자리는 날짜만으로도 대체로 정해지지만, 상승궁은 출생 시각과 위도에 따라 계산되므로 정확한 시간·장소가 필요합니다.' },
+      { question: '태양·달·상승궁은 어떻게 다른가요?', answer: '태양은 핵심 자아, 달은 내면 감정, 상승궁은 첫인상으로 보면 좋습니다. 세 가지가 다를 때 그 차이가 곧 나의 입체적인 모습입니다.' },
+      { question: '이 계산기는 얼마나 정확한가요?', answer: '태양·달의 황경과 상승궁을 천문 공식으로 직접 계산하며, 신월·행성 위치 등 천문 기준값으로 자체 검증했습니다. 점성술 해석 자체는 상징적 참고임을 기억하세요.' },
+    ],
+    readingTitle: '더 깊게 읽기',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/meaning-of-astrology/', label: '점성술의 의미', desc: '별자리와 출생 차트의 기본 개념을 정리했습니다.' },
+      { href: 'https://blog.oiyo.net/ko/western-astrology-vs-saju-comparison/', label: '점성술 vs 사주', desc: '서양 출생 차트와 동양 사주를 비교해 읽습니다.' },
+    ],
+    disclaimer: '출생 차트 결과는 오락과 자기 성찰 목적입니다. 진로, 투자, 의료, 관계 결정을 대신하지 않습니다.',
+  },
+  en: {
+    introTitle: 'A natal chart is a map of the sky at your birth, rebuilt by astronomy',
+    intro: 'A natal (birth) chart maps where the Sun, Moon, and planets were among the zodiac signs at your exact birth moment, based on your date, time, and place. This calculator computes your Sun, Moon, Rising, and other placements directly with astronomical algorithms, so your chart is built from first principles rather than pulled from an external service.',
+    conceptTitle: 'Core placements calculated',
+    concepts: [
+      { title: 'Sun sign', body: 'Your core identity and will. The "star sign" most people know is the Sun sign.' },
+      { title: 'Moon sign', body: 'Your inner emotional world, needs, and instinctive reactions.' },
+      { title: 'Rising (Ascendant)', body: 'The sign rising on the eastern horizon at your birth time — your first impression and outward manner.' },
+    ],
+    useTitle: 'How to use it',
+    useCases: [
+      { title: 'Read your Big Three', body: 'Sun, Moon, and Rising together give a layered view of will, emotion, and expression.' },
+      { title: 'Why birth time matters', body: 'The Ascendant changes quickly through the day. The more exact your birth time, the more accurate your Rising sign.' },
+      { title: 'Pair it with saju', body: 'The natal chart is a Western birth tool; saju is its East Asian counterpart. Compare the same birthday in two languages.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Is astrology scientific?', answer: 'Computing the positions of the stars is astronomy, but assigning personality or fate to those positions is astrology — a symbolic system, not science. Use it for self-reflection.' },
+      { question: 'Do I need my exact birth time and place?', answer: 'Sun and Moon signs are mostly set by the date, but the Ascendant depends on your birth time and latitude, so an accurate time and place are needed for a correct Rising sign.' },
+      { question: 'How do Sun, Moon, and Rising differ?', answer: 'Read the Sun as your core self, the Moon as inner emotion, and the Rising as your first impression. When the three differ, that contrast is your layered self.' },
+      { question: 'How accurate is this calculator?', answer: 'It computes the ecliptic longitudes of the Sun and Moon and the Ascendant directly from astronomical formulas, self-validated against reference values like new-moon alignments and planetary positions. The astrological interpretation itself remains a symbolic reference.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://wiki.oiyo.net/en/meaning-of-astrology/', label: 'Meaning of Astrology', desc: 'A guide to zodiac signs and the basics of the natal chart.' },
+      { href: 'https://blog.oiyo.net/en/western-astrology-vs-saju-comparison/', label: 'Astrology vs Saju', desc: 'Compare the Western birth chart with East Asian saju.' },
+    ],
+    disclaimer: 'Natal chart results are for entertainment and self-reflection. They do not replace career, financial, medical, or relationship decisions.',
+  },
+  ja: {
+    introTitle: '出生図は、生まれた瞬間の空を天文計算で再現した地図です',
+    intro: '出生図（ネイタルチャート）は、生年月日・時刻・出生地をもとに、その瞬間に太陽・月・惑星がどの星座にあったかを計算した占星術の基本地図です。この計算機は天文アルゴリズムで太陽・月・上昇宮などの配置を直接算出し、外部データに頼らずあなただけの星座の組み合わせを整理します。',
+    conceptTitle: '計算される主な配置',
+    concepts: [
+      { title: '太陽星座', body: '核となる自我と意志を象徴します。一般に言う「星座」がこの太陽星座です。' },
+      { title: '月星座', body: '内面の感情、情緒的な欲求、本能的な反応を見ます。' },
+      { title: '上昇宮（アセンダント）', body: '生まれた時刻に東の地平線へ昇った星座。第一印象と外に出る態度を象徴します。' },
+    ],
+    useTitle: '使い方',
+    useCases: [
+      { title: 'ビッグスリーを一緒に読む', body: '太陽・月・上昇宮をセットで見ると、意志・感情・表現の層を立体的に捉えられます。' },
+      { title: '出生時刻の重要性', body: '上昇宮は時刻で速く変わります。正確な時間ほどアセンダントが正確になります。' },
+      { title: '四柱推命と組み合わせる', body: '出生図は西洋の出生ツール、四柱推命は東洋の出生ツールです。同じ誕生日を二つの言語で比較しましょう。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: '占星術は科学ですか？', answer: '星の位置を計算するのは天文学ですが、その位置に性格や運命の意味を与える占星術の解釈は科学ではなく象徴体系です。自己理解の参考に使ってください。' },
+      { question: '出生時刻と場所は必ず必要ですか？', answer: '太陽・月星座は日付でほぼ決まりますが、上昇宮は出生時刻と緯度で計算するため、正確な時間と場所が必要です。' },
+      { question: '太陽・月・上昇宮の違いは？', answer: '太陽は核となる自我、月は内面の感情、上昇宮は第一印象として読みます。三つが違う時、その差があなたの立体的な姿です。' },
+      { question: 'この計算機はどれくらい正確ですか？', answer: '太陽・月の黄経と上昇宮を天文公式で直接計算し、新月の整列や惑星位置などの基準値で自己検証しています。占星術の解釈自体は象徴的な参考である点はご留意ください。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ja/meaning-of-astrology/', label: '占星術の意味', desc: '星座と出生図の基本概念を解説しています。' },
+      { href: 'https://blog.oiyo.net/ja/western-astrology-vs-saju-comparison/', label: '占星術 vs 四柱推命', desc: '西洋の出生図と東洋の四柱推命を比較して読みます。' },
+    ],
+    disclaimer: '出生図の結果は娯楽と自己省察のためのものです。進路、投資、医療、人間関係の決定を代替しません。',
+  },
+  zh: {
+    introTitle: '出生星盘是用天文计算还原你出生那一刻天空的地图',
+    intro: '出生星盘（本命盘）以出生日期、时间与地点为准，计算那一刻太阳、月亮与行星各自落在哪个星座，是占星的基础地图。本计算器以天文算法直接推算太阳、月亮、上升等落点，不依赖外部数据，为你整理专属的星座组合。',
+    conceptTitle: '核心计算落点',
+    concepts: [
+      { title: '太阳星座', body: '象征核心自我与意志。一般所说的「星座」即太阳星座。' },
+      { title: '月亮星座', body: '观察内在情感、情绪需求与本能反应。' },
+      { title: '上升（上升点）', body: '出生时刻在东方地平线升起的星座，象征第一印象与外在态度。' },
+    ],
+    useTitle: '如何使用',
+    useCases: [
+      { title: '一起看你的三大', body: '太阳、月亮、上升一起看，可立体了解意志、情感与表达的层次。' },
+      { title: '出生时间的重要性', body: '上升随时间快速变化，出生时间越精确，上升星座越准确。' },
+      { title: '与四柱八字搭配', body: '出生星盘是西方出生工具，四柱八字是东方出生工具，可用两种语言比较同一个生日。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '占星是科学吗？', answer: '计算星体位置属于天文学，但赋予这些位置性格与命运含义的占星解释并非科学，而是象征体系。请用于自我理解的参考。' },
+      { question: '一定要输入出生时间与地点吗？', answer: '太阳与月亮星座大多由日期决定，但上升由出生时间与纬度计算，因此需要准确的时间与地点。' },
+      { question: '太阳、月亮、上升有何不同？', answer: '太阳可看作核心自我，月亮为内在情感，上升为第一印象。三者不同之处，正是你立体的样貌。' },
+      { question: '这个计算器有多准确？', answer: '它以天文公式直接计算太阳、月亮的黄经与上升点，并以新月对齐、行星位置等基准值自我验证。占星解释本身仍属象征性参考。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://wiki.oiyo.net/zh/meaning-of-astrology/', label: '占星的意义', desc: '了解星座与出生星盘的基本概念。' },
+      { href: 'https://blog.oiyo.net/zh/western-astrology-vs-saju-comparison/', label: '占星 vs 四柱八字', desc: '比较西方出生星盘与东方四柱八字。' },
+    ],
+    disclaimer: '出生星盘结果仅供娱乐与自我反思，不替代职业、财务、医疗或关系决策。',
+  },
+  fr: {
+    introTitle: 'Le thème natal est une carte du ciel à votre naissance, reconstruite par l\'astronomie',
+    intro: 'Un thème natal indique où se trouvaient le Soleil, la Lune et les planètes parmi les signes du zodiaque au moment exact de votre naissance, selon votre date, heure et lieu. Ce calculateur détermine vos positions Soleil, Lune et Ascendant directement par des algorithmes astronomiques, sans dépendre d\'un service externe.',
+    conceptTitle: 'Positions principales calculées',
+    concepts: [
+      { title: 'Signe solaire', body: 'Votre identité centrale et votre volonté. Le « signe » que tout le monde connaît est le signe solaire.' },
+      { title: 'Signe lunaire', body: 'Votre monde émotionnel intérieur, vos besoins et vos réactions instinctives.' },
+      { title: 'Ascendant', body: 'Le signe se levant à l\'horizon est à votre naissance — première impression et attitude extérieure.' },
+    ],
+    useTitle: 'Comment l\'utiliser',
+    useCases: [
+      { title: 'Lisez votre trio', body: 'Soleil, Lune et Ascendant ensemble offrent une vue en couches de la volonté, de l\'émotion et de l\'expression.' },
+      { title: 'L\'importance de l\'heure', body: 'L\'Ascendant change vite au fil de la journée. Plus l\'heure est exacte, plus l\'Ascendant est précis.' },
+      { title: 'Associez-le au saju', body: 'Le thème natal est un outil de naissance occidental; le saju est son équivalent est-asiatique. Comparez le même anniversaire.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'L\'astrologie est-elle scientifique ?', answer: 'Calculer la position des astres relève de l\'astronomie, mais attribuer un caractère ou un destin à ces positions relève de l\'astrologie — un système symbolique, pas une science. Utilisez-la pour la réflexion.' },
+      { question: 'Faut-il connaître l\'heure et le lieu exacts ?', answer: 'Les signes solaire et lunaire dépendent surtout de la date, mais l\'Ascendant dépend de l\'heure et de la latitude; une heure et un lieu exacts sont donc nécessaires.' },
+      { question: 'Quelle différence entre Soleil, Lune et Ascendant ?', answer: 'Lisez le Soleil comme le moi central, la Lune comme l\'émotion intérieure et l\'Ascendant comme la première impression. Leurs différences forment votre moi en couches.' },
+      { question: 'Quelle est la précision de ce calculateur ?', answer: 'Il calcule les longitudes écliptiques du Soleil et de la Lune et l\'Ascendant directement par des formules astronomiques, auto-validées par des valeurs de référence. L\'interprétation astrologique reste une référence symbolique.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://wiki.oiyo.net/fr/meaning-of-astrology/', label: 'Signification de l\'astrologie', desc: 'Un guide des signes du zodiaque et des bases du thème natal.' },
+    ],
+    disclaimer: 'Les résultats du thème natal servent au divertissement et à la réflexion. Ils ne remplacent pas les décisions professionnelles, financières, médicales ou relationnelles.',
+  },
+  es: {
+    introTitle: 'La carta natal es un mapa del cielo en tu nacimiento, reconstruido por la astronomía',
+    intro: 'Una carta natal muestra dónde estaban el Sol, la Luna y los planetas entre los signos del zodiaco en tu momento exacto de nacimiento, según tu fecha, hora y lugar. Esta calculadora computa tus posiciones de Sol, Luna y Ascendente directamente con algoritmos astronómicos, sin depender de un servicio externo.',
+    conceptTitle: 'Posiciones principales calculadas',
+    concepts: [
+      { title: 'Signo solar', body: 'Tu identidad central y voluntad. El "signo" que casi todos conocen es el signo solar.' },
+      { title: 'Signo lunar', body: 'Tu mundo emocional interior, necesidades y reacciones instintivas.' },
+      { title: 'Ascendente', body: 'El signo que ascendía por el horizonte este al nacer — primera impresión y actitud exterior.' },
+    ],
+    useTitle: 'Cómo usarlo',
+    useCases: [
+      { title: 'Lee tu trío', body: 'Sol, Luna y Ascendente juntos dan una vista en capas de voluntad, emoción y expresión.' },
+      { title: 'Por qué importa la hora', body: 'El Ascendente cambia rápido durante el día. Cuanto más exacta la hora, más preciso el Ascendente.' },
+      { title: 'Combínalo con el saju', body: 'La carta natal es una herramienta de nacimiento occidental; el saju es su contraparte del Este asiático. Compara el mismo cumpleaños.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿La astrología es científica?', answer: 'Calcular la posición de los astros es astronomía, pero atribuir carácter o destino a esas posiciones es astrología — un sistema simbólico, no ciencia. Úsala para la reflexión.' },
+      { question: '¿Necesito la hora y el lugar exactos?', answer: 'Los signos solar y lunar dependen sobre todo de la fecha, pero el Ascendente depende de la hora y la latitud, así que se necesita una hora y un lugar exactos.' },
+      { question: '¿En qué se diferencian Sol, Luna y Ascendente?', answer: 'Lee el Sol como el yo central, la Luna como la emoción interior y el Ascendente como la primera impresión. Sus diferencias forman tu yo en capas.' },
+      { question: '¿Qué precisión tiene esta calculadora?', answer: 'Computa las longitudes eclípticas del Sol y la Luna y el Ascendente directamente con fórmulas astronómicas, autovalidadas con valores de referencia. La interpretación astrológica sigue siendo una referencia simbólica.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://wiki.oiyo.net/es/meaning-of-astrology/', label: 'Significado de la astrología', desc: 'Una guía de los signos del zodiaco y las bases de la carta natal.' },
+    ],
+    disclaimer: 'Los resultados de la carta natal son para entretenimiento y reflexión. No reemplazan decisiones profesionales, financieras, médicas o relacionales.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <NatalChartCalculator client:load locale={locale} />
     <RelatedTools locale={locale} tools={['saju', 'zodiac', 'numerology', 'palmistry']} current="natal" />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
+
     <div class="mt-10">
       <MysticTrinity topic="zodiac" locale={locale} />
     </div>

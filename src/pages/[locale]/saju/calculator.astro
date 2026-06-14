@@ -41,13 +41,271 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '사주팔자는 운명의 선고가 아니라 나를 읽는 상징 언어입니다',
+    intro: '사주(四柱)는 태어난 연·월·일·시를 네 기둥으로 세우고, 각 기둥의 천간과 지지를 오행으로 풀어 반복되는 성향과 기운의 균형을 읽는 동양 명리 체계입니다. 이 계산기는 생년월일시를 입력하면 사주팔자, 일간(나를 상징하는 글자), 오행 분포를 한눈에 정리해 자기 이해의 출발점으로 삼도록 돕습니다.',
+    conceptTitle: '계산되는 핵심 요소',
+    concepts: [
+      { title: '사주(四柱)', body: '연주·월주·일주·시주 네 기둥. 생년월일시를 절기 기준으로 환산해 세웁니다.' },
+      { title: '간지(干支)', body: '10천간과 12지지의 조합. 각 기둥이 어떤 글자로 이루어지는지 봅니다.' },
+      { title: '오행(五行)', body: '목·화·토·금·수의 분포. 어떤 기운이 강하고 부족한지 균형을 읽습니다.' },
+    ],
+    useTitle: '이렇게 활용하세요',
+    useCases: [
+      { title: '일간으로 나를 보기', body: '일주의 천간(일간)은 사주에서 나 자신을 상징합니다. 일간의 오행으로 기본 성향을 살핍니다.' },
+      { title: '오행 균형 살피기', body: '강한 오행과 부족한 오행을 보고, 보완하고 싶은 기운을 대화의 질문으로 삼습니다.' },
+      { title: '동·서양 함께 보기', body: '사주는 동양 출생 도구, 출생차트는 서양 출생 도구입니다. 두 관점을 짝지어 비교해보세요.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '사주는 과학인가요?', answer: '아니요. 사주는 절기와 간지를 기반으로 한 상징 해석 체계이며 과학적 예측이 아닙니다. 자기 성찰과 대화를 위한 참고로 사용하세요.' },
+      { question: '태어난 시간을 꼭 알아야 하나요?', answer: '시주(시 기둥)는 출생 시각이 있어야 정확합니다. 시간을 모르면 연·월·일 세 기둥만으로도 일간과 오행 흐름을 볼 수 있습니다.' },
+      { question: '사주와 서양 점성술은 무엇이 다른가요?', answer: '사주는 연월일시를 간지·오행으로 푸는 동양 명리이고, 점성술은 행성과 별자리로 읽는 서양 체계입니다. 출생차트와 함께 보면 같은 생일을 두 언어로 비교할 수 있습니다.' },
+    ],
+    readingTitle: '더 깊게 읽기',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/meaning-of-palja/', label: '사주의 의미', desc: '사주팔자의 구조와 간지·오행의 기본을 정리했습니다.' },
+      { href: 'https://blog.oiyo.net/ko/tool-saju-calculator/', label: '사주 보는 법', desc: '사주를 처음 보는 사람을 위한 단계별 해설입니다.' },
+    ],
+    disclaimer: '사주 결과는 오락과 자기 성찰 목적입니다. 진로, 투자, 의료, 관계 결정을 대신하지 않습니다.',
+  },
+  en: {
+    introTitle: 'Saju is a symbolic language for reading yourself, not a fixed verdict',
+    intro: 'Saju (the Four Pillars of Destiny, 사주팔자) sets your birth year, month, day, and hour as four pillars, then reads each pillar\'s Heavenly Stem and Earthly Branch through the Five Elements to describe recurring tendencies and the balance of energies. This saju palja test takes your birth date and time and lays out your four pillars, your Day Master (the character that represents you), and your elemental balance as a starting point for self-understanding.',
+    conceptTitle: 'What gets calculated',
+    concepts: [
+      { title: 'Four Pillars', body: 'Year, Month, Day, and Hour pillars, derived from your birth date and time using solar-term boundaries.' },
+      { title: 'Stems & Branches', body: 'The pairing of 10 Heavenly Stems with 12 Earthly Branches that forms each pillar.' },
+      { title: 'Five Elements', body: 'The distribution of Wood, Fire, Earth, Metal, and Water — which energies are strong or missing.' },
+    ],
+    useTitle: 'How to use it',
+    useCases: [
+      { title: 'Read your Day Master', body: 'The Day pillar\'s stem (your Day Master) represents you in saju. Use its element to explore your core tendencies.' },
+      { title: 'Check elemental balance', body: 'Notice which elements are abundant or scarce, and treat the gaps as prompts for reflection rather than rules.' },
+      { title: 'Pair East and West', body: 'Saju is an East Asian birth tool; the natal chart is its Western counterpart. Compare the two readings side by side.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Is saju scientific?', answer: 'No. Saju is a symbolic interpretation system based on solar terms and the stem–branch cycle, not a scientific prediction. Use it for reflection and conversation.' },
+      { question: 'Do I need my exact birth time?', answer: 'The Hour pillar needs your birth time to be precise. Without it you can still see your Day Master and overall elemental flow from the year, month, and day pillars.' },
+      { question: 'How is saju different from Western astrology?', answer: 'Saju reads birth date and time through stems, branches, and the Five Elements (East Asian), while astrology reads planets and zodiac signs (Western). Viewed alongside a natal chart, the same birthday speaks in two languages.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://wiki.oiyo.net/en/meaning-of-palja/', label: 'Meaning of Saju', desc: 'A deeper guide to the four pillars and the stem–branch and Five Element basics.' },
+      { href: 'https://blog.oiyo.net/en/tool-saju-calculator/', label: 'How to read saju', desc: 'A step-by-step walkthrough for first-time saju readers.' },
+    ],
+    disclaimer: 'Saju results are for entertainment and self-reflection. They do not replace career, financial, medical, or relationship decisions.',
+  },
+  ja: {
+    introTitle: '四柱推命は運命の宣告ではなく、自分を読むための象徴言語です',
+    intro: '四柱推命（사주팔자）は生まれた年・月・日・時を四つの柱として立て、各柱の天干と地支を五行で読み解き、繰り返される傾向や気の balance を見る東洋の命理体系です。この計算機は生年月日時を入力すると、四柱命式、日干（自分を象徴する文字）、五行の分布を一度に整理し、自己理解の出発点にできます。',
+    conceptTitle: '計算される主な要素',
+    concepts: [
+      { title: '四柱', body: '年柱・月柱・日柱・時柱の四つの柱。生年月日時を節気基準で換算して立てます。' },
+      { title: '干支', body: '十天干と十二地支の組み合わせ。各柱がどの文字で構成されるかを見ます。' },
+      { title: '五行', body: '木・火・土・金・水の分布。どの気が強く、何が不足しているかの均衡を読みます。' },
+    ],
+    useTitle: '使い方',
+    useCases: [
+      { title: '日干で自分を見る', body: '日柱の天干（日干）は四柱推命で自分自身を象徴します。日干の五行で基本傾向を見ます。' },
+      { title: '五行の均衡を見る', body: '強い五行と不足する五行を見て、補いたい気を会話の問いとして使います。' },
+      { title: '東洋と西洋を一緒に', body: '四柱推命は東洋の出生ツール、出生図は西洋の出生ツールです。二つの視点を並べて比較しましょう。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: '四柱推命は科学ですか？', answer: 'いいえ。四柱推命は節気と干支に基づく象徴解釈の体系であり、科学的予測ではありません。自己省察と会話の参考に使ってください。' },
+      { question: '生まれた時間は必ず必要ですか？', answer: '時柱は出生時刻があると正確です。時間が分からなくても、年・月・日の三柱から日干と五行の流れを見ることができます。' },
+      { question: '四柱推命と西洋占星術の違いは？', answer: '四柱推命は生年月日時を干支・五行で読む東洋命理、占星術は惑星と星座で読む西洋体系です。出生図と一緒に見ると、同じ誕生日を二つの言語で比較できます。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ja/meaning-of-palja/', label: '四柱推命の意味', desc: '四柱命式の構造と干支・五行の基本を解説しています。' },
+      { href: 'https://blog.oiyo.net/ja/tool-saju-calculator/', label: '四柱推命の見方', desc: '初めての方のための段階的な解説です。' },
+    ],
+    disclaimer: '四柱推命の結果は娯楽と自己省察のためのものです。進路、投資、医療、人間関係の決定を代替しません。',
+  },
+  zh: {
+    introTitle: '四柱八字是读懂自己的象征语言，而非命运的判决',
+    intro: '四柱八字（사주팔자）将出生的年、月、日、时立为四柱，再以五行解读每柱的天干地支，观察反复出现的倾向与气的平衡，是东方命理体系。本计算器输入生辰后，会一并整理你的四柱命式、日主（代表自己的字）与五行分布，作为自我理解的起点。',
+    conceptTitle: '核心计算要素',
+    concepts: [
+      { title: '四柱', body: '年柱、月柱、日柱、时柱。以节气为准换算生辰而立。' },
+      { title: '干支', body: '十天干与十二地支的组合，构成每一柱。' },
+      { title: '五行', body: '木、火、土、金、水的分布，看哪种气强、哪种不足。' },
+    ],
+    useTitle: '如何使用',
+    useCases: [
+      { title: '以日主看自己', body: '日柱天干（日主）在八字中象征自己，可用其五行了解基本倾向。' },
+      { title: '观察五行平衡', body: '看强旺与不足的五行，把缺口当作反思的提问，而非规则。' },
+      { title: '东西方一起看', body: '四柱是东方出生工具，出生星盘是西方出生工具，可并排比较两种视角。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '四柱八字是科学吗？', answer: '不是。八字是基于节气与干支循环的象征解释体系，不是科学预测。请用于自我反思与轻松对话。' },
+      { question: '一定要知道出生时间吗？', answer: '时柱需要出生时间才准确。若不知道时间，仍可从年、月、日三柱看日主与五行走势。' },
+      { question: '四柱八字与西方占星有何不同？', answer: '八字以干支五行解读生辰（东方），占星以行星与星座解读（西方）。与出生星盘一起看，同一个生日可用两种语言比较。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://blog.oiyo.net/zh/meaning-of-palja/', label: '四柱八字的意义', desc: '深入了解八字结构与干支、五行基础。' },
+      { href: 'https://blog.oiyo.net/zh/tool-saju-calculator/', label: '如何看八字', desc: '为初学者准备的分步解读。' },
+    ],
+    disclaimer: '四柱八字结果仅供娱乐与自我反思，不替代职业、财务、医疗或关系决策。',
+  },
+  fr: {
+    introTitle: 'Le Saju est un langage symbolique pour se lire, pas un verdict figé',
+    intro: 'Le Saju (les Quatre Piliers du Destin, 사주팔자) établit votre année, mois, jour et heure de naissance comme quatre piliers, puis lit la Tige Céleste et la Branche Terrestre de chaque pilier à travers les Cinq Éléments pour décrire les tendances récurrentes et l\'équilibre des énergies. Ce calculateur prend votre date et heure de naissance et présente vos quatre piliers, votre Maître du Jour et votre équilibre élémentaire.',
+    conceptTitle: 'Ce qui est calculé',
+    concepts: [
+      { title: 'Quatre Piliers', body: 'Piliers de l\'année, du mois, du jour et de l\'heure, dérivés de votre naissance selon les termes solaires.' },
+      { title: 'Tiges & Branches', body: 'L\'association des 10 Tiges Célestes et des 12 Branches Terrestres qui forme chaque pilier.' },
+      { title: 'Cinq Éléments', body: 'La répartition de Bois, Feu, Terre, Métal et Eau — quelles énergies sont fortes ou absentes.' },
+    ],
+    useTitle: 'Comment l\'utiliser',
+    useCases: [
+      { title: 'Lire votre Maître du Jour', body: 'La tige du pilier du Jour vous représente dans le Saju. Son élément éclaire vos tendances de base.' },
+      { title: 'Vérifier l\'équilibre élémentaire', body: 'Repérez les éléments abondants ou rares et traitez les manques comme des questions, non des règles.' },
+      { title: 'Associer Est et Ouest', body: 'Le Saju est un outil de naissance est-asiatique; le thème natal est son équivalent occidental. Comparez les deux.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Le Saju est-il scientifique ?', answer: 'Non. Le Saju est un système d\'interprétation symbolique basé sur les termes solaires et le cycle tige–branche, pas une prédiction scientifique. Utilisez-le pour la réflexion.' },
+      { question: 'Faut-il connaître l\'heure exacte de naissance ?', answer: 'Le pilier de l\'Heure exige votre heure de naissance pour être précis. Sans elle, vous voyez tout de même le Maître du Jour et le flux élémentaire via les piliers année, mois et jour.' },
+      { question: 'Quelle différence avec l\'astrologie occidentale ?', answer: 'Le Saju lit la naissance par tiges, branches et Cinq Éléments (Est), l\'astrologie par planètes et signes (Ouest). Avec un thème natal, le même anniversaire parle deux langues.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://blog.oiyo.net/fr/meaning-of-palja/', label: 'Signification du Saju', desc: 'Un guide des quatre piliers et des bases tige–branche et Cinq Éléments.' },
+      { href: 'https://blog.oiyo.net/fr/tool-saju-calculator/', label: 'Comment lire le Saju', desc: 'Un guide pas à pas pour les débutants.' },
+    ],
+    disclaimer: 'Les résultats du Saju servent au divertissement et à la réflexion. Ils ne remplacent pas les décisions professionnelles, financières, médicales ou relationnelles.',
+  },
+  es: {
+    introTitle: 'El Saju es un lenguaje simbólico para leerte, no una sentencia fija',
+    intro: 'El Saju (los Cuatro Pilares del Destino, 사주팔자) establece tu año, mes, día y hora de nacimiento como cuatro pilares, y luego lee el Tallo Celestial y la Rama Terrestre de cada pilar a través de los Cinco Elementos para describir tendencias recurrentes y el equilibrio de energías. Esta calculadora toma tu fecha y hora de nacimiento y presenta tus cuatro pilares, tu Amo del Día y tu equilibrio elemental.',
+    conceptTitle: 'Qué se calcula',
+    concepts: [
+      { title: 'Cuatro Pilares', body: 'Pilares de año, mes, día y hora, derivados de tu nacimiento según los términos solares.' },
+      { title: 'Tallos y Ramas', body: 'La combinación de 10 Tallos Celestiales y 12 Ramas Terrestres que forma cada pilar.' },
+      { title: 'Cinco Elementos', body: 'La distribución de Madera, Fuego, Tierra, Metal y Agua — qué energías son fuertes o faltan.' },
+    ],
+    useTitle: 'Cómo usarlo',
+    useCases: [
+      { title: 'Lee tu Amo del Día', body: 'El tallo del pilar del Día (tu Amo del Día) te representa en el Saju. Usa su elemento para explorar tus tendencias.' },
+      { title: 'Revisa el equilibrio elemental', body: 'Observa qué elementos abundan o escasean y trata los vacíos como preguntas, no como reglas.' },
+      { title: 'Une Este y Oeste', body: 'El Saju es una herramienta de nacimiento del Este asiático; la carta natal es su contraparte occidental. Compara ambas.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿El Saju es científico?', answer: 'No. El Saju es un sistema de interpretación simbólica basado en los términos solares y el ciclo tallo–rama, no una predicción científica. Úsalo para la reflexión.' },
+      { question: '¿Necesito mi hora exacta de nacimiento?', answer: 'El pilar de la Hora necesita tu hora de nacimiento para ser preciso. Sin ella, aún ves tu Amo del Día y el flujo elemental con los pilares de año, mes y día.' },
+      { question: '¿En qué se diferencia de la astrología occidental?', answer: 'El Saju lee el nacimiento mediante tallos, ramas y Cinco Elementos (Este), y la astrología mediante planetas y signos (Oeste). Junto a una carta natal, el mismo cumpleaños habla dos idiomas.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://blog.oiyo.net/es/meaning-of-palja/', label: 'Significado del Saju', desc: 'Una guía de los cuatro pilares y las bases de tallo–rama y Cinco Elementos.' },
+      { href: 'https://blog.oiyo.net/es/tool-saju-calculator/', label: 'Cómo leer el Saju', desc: 'Una guía paso a paso para principiantes.' },
+    ],
+    disclaimer: 'Los resultados del Saju son para entretenimiento y reflexión. No reemplazan decisiones profesionales, financieras, médicas o relacionales.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10 space-y-6">
     <CelestialClock client:load locale={locale} />
     <SajuCalculator client:load locale={locale} />
     <RelatedTools locale={locale} tools={['natal', 'zodiac', 'numerology']} current="saju" />
+
+    <section class="mt-4 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MysticTrinity topic="saju" locale={locale} />
   </main>
 </Layout>

@@ -42,11 +42,73 @@ const meta: Record<Locale, { title: string; description: string }> = {
 
 const m = meta[locale] ?? meta.en;
 const bridge = getTestBridge('big5', locale);
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  disclaimer: string;
+}> = {
+  ko: { introTitle: '빅파이브는 사람을 단정하는 라벨이 아니라 다섯 가지 성격 차원을 보는 렌즈입니다', intro: '빅파이브 테스트는 개방성, 성실성, 외향성, 친화성, 신경성의 상대적 강도를 살펴보는 자기 이해 도구입니다. 결과는 우열이 아니라 지금의 사고, 관계, 일상 리듬을 설명하는 참고로 읽어 주세요.', conceptTitle: 'OCEAN을 읽는 세 가지 관점', concepts: [{ title: '다섯 차원', body: '각 특성은 높고 낮음의 우열이 아니라 서로 다른 적응 방식입니다.' }, { title: '상황별 표현', body: '같은 점수도 일, 관계, 휴식 장면에서 다르게 드러날 수 있습니다.' }, { title: '균형 읽기', body: '강점과 부담이 함께 있으므로 한 차원만 떼어 판단하지 않는 것이 좋습니다.' }], faqTitle: '자주 묻는 질문', faqs: [{ question: '빅파이브 결과는 얼마나 정확한가요?', answer: '현재 답변에 나타난 성향을 요약한 참고 자료입니다. 상황과 시기에 따라 달라질 수 있으니 절대적인 판정이 아니라 자기 이해의 단서로 보세요.' }, { question: '결과가 나중에 바뀔 수 있나요?', answer: '네. 역할, 관계, 스트레스, 경험이 달라지면 답변도 달라질 수 있습니다. 변화는 오류라기보다 지금의 맥락을 보여주는 정보입니다.' }, { question: '결과를 어떻게 활용하면 좋나요?', answer: '가장 강하게 나온 차원과 부담으로 느껴지는 차원을 함께 보세요. 나를 닫는 라벨보다 선택을 조정하는 질문으로 쓰는 편이 좋습니다.' }], disclaimer: '빅파이브 결과는 자기 이해와 대화를 위한 참고입니다. 진단, 채용, 관계의 단정적 판단 근거로 사용하지 마세요.' },
+  en: { introTitle: 'The Big Five is a lens for five trait dimensions, not a label that defines you', intro: 'The Big Five test looks at the relative strength of openness, conscientiousness, extraversion, agreeableness, and neuroticism. Read the result as a reference for your current habits and relationships, not as a rank or fixed verdict.', conceptTitle: 'Three ways to read OCEAN', concepts: [{ title: 'Five dimensions', body: 'High and low scores are not ranks; they describe different ways of adapting.' }, { title: 'Contextual expression', body: 'The same trait can show differently at work, in relationships, and during rest.' }, { title: 'Balanced reading', body: 'Each dimension carries both strengths and costs, so avoid judging by one score alone.' }], faqTitle: 'Frequently asked questions', faqs: [{ question: 'How accurate is the Big Five result?', answer: 'It summarizes the tendencies shown in your current answers. Context and timing can change your result, so use it as a clue for reflection rather than an absolute judgment.' }, { question: 'Can my result change later?', answer: 'Yes. Roles, relationships, stress, and experience can shift how you answer. A changed result is often information about your current context, not a failure of the test.' }, { question: 'How should I use the result?', answer: 'Look at both the strongest dimension and the one that feels costly. It works best as a question for adjusting choices, not as a sentence that closes your story.' }], disclaimer: 'Big Five results are for self-understanding and conversation. Do not use them as a basis for diagnosis, hiring, or definitive relationship judgments.' },
+  ja: { introTitle: 'ビッグファイブは人を決めつけるラベルではなく、五つの性格次元を見るレンズです', intro: 'ビッグファイブテストは開放性、誠実性、外向性、協調性、神経症的傾向の相対的な強さを見ます。結果は優劣ではなく、今の習慣や関係を理解する参考として読んでください。', conceptTitle: 'OCEANを読む三つの視点', concepts: [{ title: '五つの次元', body: '高低は優劣ではなく、異なる適応のしかたを表します。' }, { title: '場面ごとの出方', body: '同じ傾向でも仕事、関係、休息では違って表れます。' }, { title: 'バランスで読む', body: '強みと負担は一緒にあるため、一つの次元だけで判断しないことが大切です。' }], faqTitle: 'よくある質問', faqs: [{ question: 'ビッグファイブの結果はどれくらい正確ですか？', answer: '現在の回答に表れた傾向を要約した参考情報です。状況や時期で変わることがあるため、絶対的な判定ではなく自己理解の手がかりとして使ってください。' }, { question: '結果は後で変わることがありますか？', answer: 'あります。役割、関係、ストレス、経験が変わると回答も変わります。変化は誤りではなく、今の文脈を示す情報です。' }, { question: '結果はどう活用するとよいですか？', answer: '強く出た次元と負担に感じる次元を一緒に見てください。自分を閉じるラベルではなく、選択を整える質問として使うのがおすすめです。' }], disclaimer: 'ビッグファイブの結果は自己理解と対話のための参考です。診断、採用、人間関係の断定的な判断材料には使わないでください。' },
+  zh: { introTitle: '大五人格是观察五个性格维度的镜片，不是定义人的标签', intro: '大五人格测试观察开放性、尽责性、外向性、宜人性和神经质的相对强度。请把结果当作理解当前习惯与关系的参考，而不是排名或固定结论。', conceptTitle: '理解OCEAN的三个角度', concepts: [{ title: '五个维度', body: '高低分不是优劣，而是不同的适应方式。' }, { title: '情境表现', body: '同一特质在工作、关系和休息中可能呈现不同样子。' }, { title: '平衡解读', body: '每个维度都有优势和代价，不宜只凭一个分数判断自己。' }], faqTitle: '常见问题', faqs: [{ question: '大五人格结果有多准确？', answer: '它概括的是你当前回答中呈现的倾向。情境和时间会影响结果，因此更适合作为反思线索，而不是绝对判断。' }, { question: '结果以后会改变吗？', answer: '会。角色、关系、压力和经验变化时，回答也可能改变。结果变化通常是在提示你当前的处境，而不一定是测试出错。' }, { question: '应该如何使用结果？', answer: '可以同时看最明显的维度和让你感到负担的维度。它更适合用来调整选择，而不是给自己下最终定义。' }], disclaimer: '大五人格结果仅用于自我理解与对话，请勿作为诊断、招聘或关系定论的依据。' },
+  fr: { introTitle: 'Le Big Five est une lentille pour cinq dimensions, pas une étiquette qui vous définit', intro: 'Le test Big Five observe l’ouverture, la conscienciosité, l’extraversion, l’agréabilité et le névrosisme. Le résultat se lit comme une référence pour vos habitudes et relations actuelles, pas comme un rang ou un verdict fixe.', conceptTitle: 'Trois façons de lire OCEAN', concepts: [{ title: 'Cinq dimensions', body: 'Les scores hauts ou bas ne sont pas des rangs, mais des façons différentes de s’adapter.' }, { title: 'Expression selon le contexte', body: 'Un même trait peut apparaître autrement au travail, en relation ou au repos.' }, { title: 'Lecture équilibrée', body: 'Chaque dimension a des forces et des coûts; évitez de juger sur un seul score.' }], faqTitle: 'Questions fréquentes', faqs: [{ question: 'Le résultat du Big Five est-il fiable ?', answer: 'Il résume les tendances visibles dans vos réponses du moment. Le contexte et la période peuvent influencer le résultat; utilisez-le comme piste de réflexion, pas comme jugement absolu.' }, { question: 'Mon résultat peut-il changer ?', answer: 'Oui. Les rôles, les relations, le stress et l’expérience peuvent modifier vos réponses. Un changement indique souvent votre contexte actuel plutôt qu’une erreur.' }, { question: 'Comment utiliser le résultat ?', answer: 'Regardez la dimension la plus forte et celle qui semble coûteuse. Le résultat sert mieux à ajuster vos choix qu’à vous enfermer dans une phrase.' }], disclaimer: 'Les résultats du Big Five servent à la compréhension de soi et au dialogue. Ne les utilisez pas comme base de diagnostic, de recrutement ou de verdict relationnel.' },
+  es: { introTitle: 'El Big Five es una lente para cinco dimensiones, no una etiqueta que te define', intro: 'El test Big Five observa apertura, responsabilidad, extraversión, amabilidad y neuroticismo. Lee el resultado como referencia para tus hábitos y relaciones actuales, no como un rango ni un veredicto fijo.', conceptTitle: 'Tres formas de leer OCEAN', concepts: [{ title: 'Cinco dimensiones', body: 'Las puntuaciones altas o bajas no son rangos, sino formas distintas de adaptarse.' }, { title: 'Expresión por contexto', body: 'El mismo rasgo puede verse distinto en trabajo, relaciones y descanso.' }, { title: 'Lectura equilibrada', body: 'Cada dimensión trae fortalezas y costos; evita juzgarte por una sola puntuación.' }], faqTitle: 'Preguntas frecuentes', faqs: [{ question: '¿Qué tan preciso es el resultado del Big Five?', answer: 'Resume las tendencias que aparecen en tus respuestas actuales. El contexto y el momento pueden cambiar el resultado, así que úsalo como pista de reflexión, no como juicio absoluto.' }, { question: '¿Mi resultado puede cambiar?', answer: 'Sí. Los roles, relaciones, estrés y experiencias pueden cambiar tus respuestas. Un cambio suele mostrar tu contexto actual más que un error del test.' }, { question: '¿Cómo debería usar el resultado?', answer: 'Observa la dimensión más fuerte y la que se siente costosa. Funciona mejor para ajustar elecciones que para cerrar tu historia en una frase.' }], disclaimer: 'Los resultados del Big Five son para autoconocimiento y conversación. No los uses como base para diagnóstico, contratación o juicios definitivos sobre relaciones.' },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <BigFivePersonalityTest client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
     <RelatedTools locale={locale} tools={['mbti', 'enneagram', 'attachment', 'loveLanguage']} current="big5" />
   </main>

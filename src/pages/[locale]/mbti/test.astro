@@ -43,11 +43,169 @@ const meta: Record<Locale, { title: string; description: string }> = {
 
 const m = meta[locale] ?? meta.en;
 const bridge = getTestBridge('mbti', locale);
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: 'MBTI는 사람을 줄 세우는 등급이 아니라 선호를 보는 렌즈입니다',
+    intro: 'MBTI는 에너지 방향(외향/내향), 인식(감각/직관), 판단(사고/감정), 생활양식(판단/인식)의 네 가지 선호를 조합해 16가지 유형으로 정리하는 성격 선호 지표입니다. 이 테스트는 짧은 문항으로 나의 선호 경향을 살펴 자기 이해와 대화의 출발점으로 삼도록 돕습니다.',
+    conceptTitle: '네 가지 선호 지표',
+    concepts: [
+      { title: 'E / I — 에너지 방향', body: '바깥 활동과 사람에게서 힘을 얻는지, 안쪽 성찰에서 힘을 얻는지를 봅니다.' },
+      { title: 'S / N — 인식 방식', body: '구체적 사실과 경험에 주목하는지, 패턴과 가능성에 주목하는지를 봅니다.' },
+      { title: 'T / F — 판단 기준', body: '논리와 일관성으로 결정하는지, 가치와 관계 조화로 결정하는지를 봅니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: 'MBTI는 과학적으로 정확한가요?', answer: 'MBTI는 선호를 정리하는 틀이며 고정된 진단이 아닙니다. 결과는 상황과 시기에 따라 달라질 수 있으니 절대적 라벨이 아니라 자기 이해의 참고로 사용하세요.' },
+      { question: '결과가 매번 조금씩 달라요.', answer: '경계에 가까운 지표는 컨디션·맥락에 따라 바뀔 수 있습니다. 그 경계 자체가 당신의 유연한 면을 보여주는 정보입니다.' },
+      { question: '유형으로 사람을 판단해도 되나요?', answer: '아니요. 유형은 사람을 가두는 상자가 아니라 대화를 여는 질문입니다. 같은 유형도 경험과 성장에 따라 매우 다릅니다.' },
+    ],
+    disclaimer: 'MBTI 결과는 자기 이해와 대화 목적입니다. 채용, 진로, 관계의 단정적 판단 근거로 사용하지 마세요.',
+  },
+  en: {
+    introTitle: 'MBTI is a lens for preferences, not a ranking that sorts people',
+    intro: 'MBTI organizes personality into 16 types by combining four preferences: energy (Extraversion/Introversion), perception (Sensing/Intuition), judgment (Thinking/Feeling), and lifestyle (Judging/Perceiving). This quick test surveys your leanings as a starting point for self-understanding and conversation.',
+    conceptTitle: 'The four preference scales',
+    concepts: [
+      { title: 'E / I — Energy', body: 'Whether you gain energy from outer activity and people, or from inner reflection.' },
+      { title: 'S / N — Perception', body: 'Whether you focus on concrete facts and experience, or on patterns and possibilities.' },
+      { title: 'T / F — Judgment', body: 'Whether you decide by logic and consistency, or by values and relational harmony.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Is MBTI scientifically accurate?', answer: 'MBTI is a framework for organizing preferences, not a fixed diagnosis. Results can shift with context and time, so use them as a reference for self-understanding, not as an absolute label.' },
+      { question: 'My result changes a little each time.', answer: 'Scales near the middle can flip with mood and context. That borderline itself is information about your flexible side.' },
+      { question: 'Should I judge people by their type?', answer: 'No. A type is a question that opens a conversation, not a box that confines someone. People of the same type differ widely with experience and growth.' },
+    ],
+    disclaimer: 'MBTI results are for self-understanding and conversation. Do not use them as a definitive basis for hiring, career, or relationship decisions.',
+  },
+  ja: {
+    introTitle: 'MBTIは人を順位づける等級ではなく、好みを見るレンズです',
+    intro: 'MBTIはエネルギーの方向（外向/内向）、認識（感覚/直観）、判断（思考/感情）、生活様式（判断/知覚）の四つの好みを組み合わせ、16タイプに整理する性格指標です。このテストは短い質問で傾向を見て、自己理解と対話の出発点にできます。',
+    conceptTitle: '四つの指標',
+    concepts: [
+      { title: 'E / I — エネルギー', body: '外の活動や人から力を得るか、内側の内省から力を得るかを見ます。' },
+      { title: 'S / N — 認識', body: '具体的な事実や経験に注目するか、パターンや可能性に注目するかを見ます。' },
+      { title: 'T / F — 判断', body: '論理と一貫性で決めるか、価値と関係の調和で決めるかを見ます。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'MBTIは科学的に正確ですか？', answer: 'MBTIは好みを整理する枠組みであり、固定的な診断ではありません。結果は状況や時期で変わるため、絶対的なラベルではなく自己理解の参考に使ってください。' },
+      { question: '結果が毎回少し変わります。', answer: '境界に近い指標は体調や文脈で変わります。その境界こそ、あなたの柔軟な面を示す情報です。' },
+      { question: 'タイプで人を判断してよいですか？', answer: 'いいえ。タイプは人を閉じ込める箱ではなく、対話を開く質問です。同じタイプでも経験と成長で大きく異なります。' },
+    ],
+    disclaimer: 'MBTIの結果は自己理解と対話のためのものです。採用、進路、人間関係の断定的な判断材料には使わないでください。',
+  },
+  zh: {
+    introTitle: 'MBTI是观察偏好的镜片，而非给人排名的等级',
+    intro: 'MBTI通过组合四种偏好——能量方向（外向/内向）、认识（感觉/直觉）、判断（思考/情感）、生活方式（判断/感知）——把性格整理为16型。本测试以简短题目了解你的倾向，作为自我理解与对话的起点。',
+    conceptTitle: '四个偏好维度',
+    concepts: [
+      { title: 'E / I — 能量方向', body: '看你从外在活动与人际中获得能量，还是从内在反思中获得。' },
+      { title: 'S / N — 认识方式', body: '看你关注具体事实与经验，还是模式与可能性。' },
+      { title: 'T / F — 判断标准', body: '看你以逻辑一致性决定，还是以价值与关系和谐决定。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: 'MBTI在科学上准确吗？', answer: 'MBTI是整理偏好的框架，不是固定诊断。结果会随情境与时间改变，请作为自我理解的参考，而非绝对标签。' },
+      { question: '每次结果都略有不同。', answer: '接近中间的维度会随状态与情境变化，这个边界本身就是关于你灵活面的信息。' },
+      { question: '可以用类型评判他人吗？', answer: '不可以。类型是开启对话的提问，不是限制人的盒子。同一类型的人随经验与成长差异很大。' },
+    ],
+    disclaimer: 'MBTI结果用于自我理解与对话，请勿作为招聘、职业或关系的决定性判断依据。',
+  },
+  fr: {
+    introTitle: 'Le MBTI est une lentille pour les préférences, pas un classement des personnes',
+    intro: 'Le MBTI organise la personnalité en 16 types en combinant quatre préférences : énergie (Extraversion/Introversion), perception (Sensation/Intuition), jugement (Pensée/Sentiment) et style de vie (Jugement/Perception). Ce test rapide explore vos tendances comme point de départ.',
+    conceptTitle: 'Les quatre échelles',
+    concepts: [
+      { title: 'E / I — Énergie', body: 'Tirez-vous votre énergie de l\'activité extérieure et des gens, ou de la réflexion intérieure.' },
+      { title: 'S / N — Perception', body: 'Vous concentrez-vous sur les faits concrets, ou sur les schémas et possibilités.' },
+      { title: 'T / F — Jugement', body: 'Décidez-vous par la logique et la cohérence, ou par les valeurs et l\'harmonie.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Le MBTI est-il scientifiquement exact ?', answer: 'Le MBTI est un cadre d\'organisation des préférences, pas un diagnostic figé. Les résultats varient selon le contexte; utilisez-les comme référence, pas comme étiquette absolue.' },
+      { question: 'Mon résultat change un peu à chaque fois.', answer: 'Les échelles proches du milieu peuvent basculer selon l\'humeur et le contexte. Cette frontière révèle votre côté flexible.' },
+      { question: 'Puis-je juger les gens par leur type ?', answer: 'Non. Un type est une question qui ouvre le dialogue, pas une boîte. Deux personnes du même type diffèrent beaucoup selon l\'expérience.' },
+    ],
+    disclaimer: 'Les résultats MBTI servent à la compréhension de soi et au dialogue. Ne les utilisez pas comme base décisive pour le recrutement, la carrière ou les relations.',
+  },
+  es: {
+    introTitle: 'El MBTI es una lente para las preferencias, no un ranking que clasifica personas',
+    intro: 'El MBTI organiza la personalidad en 16 tipos combinando cuatro preferencias: energía (Extraversión/Introversión), percepción (Sensación/Intuición), juicio (Pensamiento/Sentimiento) y estilo de vida (Juicio/Percepción). Este test rápido explora tus inclinaciones como punto de partida.',
+    conceptTitle: 'Las cuatro escalas',
+    concepts: [
+      { title: 'E / I — Energía', body: 'Si obtienes energía de la actividad exterior y las personas, o de la reflexión interior.' },
+      { title: 'S / N — Percepción', body: 'Si te enfocas en hechos concretos y experiencia, o en patrones y posibilidades.' },
+      { title: 'T / F — Juicio', body: 'Si decides por lógica y coherencia, o por valores y armonía relacional.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿El MBTI es científicamente preciso?', answer: 'El MBTI es un marco para organizar preferencias, no un diagnóstico fijo. Los resultados cambian con el contexto; úsalos como referencia, no como etiqueta absoluta.' },
+      { question: 'Mi resultado cambia un poco cada vez.', answer: 'Las escalas cercanas al medio pueden alternar según el ánimo y el contexto. Ese límite revela tu lado flexible.' },
+      { question: '¿Puedo juzgar a las personas por su tipo?', answer: 'No. Un tipo es una pregunta que abre conversación, no una caja. Personas del mismo tipo difieren mucho según la experiencia.' },
+    ],
+    disclaimer: 'Los resultados del MBTI son para el autoconocimiento y la conversación. No los uses como base decisiva para contratación, carrera o relaciones.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <MbtiPersonalityTest client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
     <RelatedTools locale={locale} tools={['enneagram', 'big5', 'attachment', 'loveLanguage']} current="mbti" />
       <MentalBoost locale={locale} />

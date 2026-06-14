@@ -16,9 +16,172 @@ const meta: Record<Locale, { title: string; description: string }> = {
   es: { title: 'Autodetección TDAH Adulto — Verifica tus Patrones de Concentración', description: 'Evalúa los rasgos TDAH adulto con 6 preguntas basadas en WHO ASRS. Herramienta de referencia antes de consulta profesional.' },
 };
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: 'ASRS는 성인 ADHD를 진단하는 도구가 아니라 가능성을 살피는 선별 도구입니다',
+    intro: 'WHO ASRS(Adult ADHD Self-Report Scale)는 성인에서 나타날 수 있는 부주의, 과잉행동, 충동성 관련 경험을 짧게 점검하는 자가 선별 척도입니다. 이 테스트는 최근 생활에서 반복되는 집중·조절 패턴을 정리해 전문가 상담이 필요한지 가늠하도록 돕습니다. 높은 점수만으로 ADHD라고 말할 수 없으며, 진단은 발달력과 여러 정보원을 포함한 평가를 통해 면허 전문가가 합니다.',
+    conceptTitle: '무엇을 보나요',
+    concepts: [
+      { title: '부주의 패턴', body: '일을 끝내기 어려움, 정리의 어려움, 집중 유지, 실수, 잊어버림 같은 반복 경향을 봅니다.' },
+      { title: '과잉행동·충동성', body: '가만히 있기 어려움, 안절부절, 말을 끊거나 기다리기 어려운 양상이 성인 맥락에서 얼마나 나타나는지 살핍니다.' },
+      { title: '선별 ≠ 진단', body: '높은 점수는 평가를 고려해볼 신호일 뿐입니다. ADHD 진단에는 어린 시절부터의 발달력과 다면 평가가 필요합니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '이 결과로 ADHD를 진단할 수 있나요?', answer: '아니요. ASRS는 선별 도구이며 진단이 아닙니다. ADHD 진단과 치료는 정신건강의학과 의사나 임상 전문가가 면담, 발달력, 기능 손상, 다른 원인 가능성을 함께 평가해 결정합니다.' },
+      { question: '점수가 높으면 ADHD인가요?', answer: '아닙니다. 스트레스, 수면 부족, 불안, 우울, 생활 환경도 비슷한 어려움을 만들 수 있습니다. 높은 점수는 전문가 평가를 받아볼 수 있다는 신호로만 보세요.' },
+      { question: '성인도 ADHD 평가가 필요한가요?', answer: '가능합니다. 다만 성인 ADHD 평가는 현재 증상뿐 아니라 어린 시절부터의 지속성, 학교·직장·관계에서의 영향, 주변 정보까지 함께 살펴야 합니다.' },
+      { question: '입력한 답변이 저장되나요?', answer: '결과는 브라우저에서 계산되며 개인 식별 정보를 수집·저장하지 않습니다.' },
+    ],
+    disclaimer: '이 테스트는 교육·자기 점검 목적의 선별 도구이며 ADHD 진단이나 치료를 대신하지 않습니다. 높은 점수가 곧 ADHD라는 뜻은 아닙니다. 진단은 발달력, 기능 손상, 여러 정보원을 포함한 평가를 통해 면허 전문가가 해야 합니다.',
+  },
+  en: {
+    introTitle: 'ASRS screens for possible adult ADHD patterns — it does not diagnose ADHD',
+    intro: 'The WHO ASRS (Adult ADHD Self-Report Scale) is a brief self-screening scale for experiences related to inattention, hyperactivity, and impulsivity in adults. This test summarizes recurring focus and self-regulation patterns to help you decide whether a professional evaluation may be useful. A high score is not ADHD by itself; diagnosis requires developmental history and multi-source assessment by a licensed professional.',
+    conceptTitle: 'What it measures',
+    concepts: [
+      { title: 'Inattention patterns', body: 'Difficulty finishing tasks, organizing, sustaining attention, avoiding mistakes, and remembering obligations.' },
+      { title: 'Hyperactivity and impulsivity', body: 'Restlessness, feeling driven, interrupting, or finding it hard to wait, interpreted in an adult life context.' },
+      { title: 'Screening ≠ diagnosis', body: 'A higher score is a signal to consider evaluation, not a diagnosis. ADHD assessment needs developmental history and more than one source of information.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Can this result diagnose ADHD?', answer: 'No. ASRS is a screening tool, not a diagnosis. ADHD diagnosis and treatment decisions are made by a licensed clinician through interview, developmental history, impairment review, and evaluation of other possible causes.' },
+      { question: 'Does a high score mean I have ADHD?', answer: 'No. Stress, sleep loss, anxiety, depression, and environment can create similar difficulties. Treat a high score only as a reason to consider professional assessment.' },
+      { question: 'Can adults be evaluated for ADHD?', answer: 'Yes. Adult ADHD evaluation should look at current symptoms, whether patterns were present since childhood, and how they affect school, work, relationships, and daily functioning.' },
+      { question: 'Are my answers saved?', answer: 'Results are computed in your browser and no personally identifying information is collected or stored.' },
+    ],
+    disclaimer: 'This test is an educational self-check screening tool and does not replace ADHD diagnosis or treatment. A high score does not mean ADHD. Diagnosis requires developmental history, functional impairment review, and multi-source assessment by a licensed professional.',
+  },
+  ja: {
+    introTitle: 'ASRSは成人ADHDの可能性をみる選別ツールであり、診断ではありません',
+    intro: 'WHO ASRS（Adult ADHD Self-Report Scale）は、成人にみられる不注意・多動性・衝動性に関する経験を短く確認する自己選別スケールです。このテストは最近の生活でくり返される集中や自己調整のパターンを整理し、専門家への相談が役立つかを考える手がかりにします。高い点数だけでADHDとは言えず、診断には発達歴と複数の情報源を含む評価が必要です。',
+    conceptTitle: '何を見るか',
+    concepts: [
+      { title: '不注意のパターン', body: '作業を終えにくい、整理が苦手、注意を保ちにくい、ミスや忘れ物が多いといった傾向を見ます。' },
+      { title: '多動性・衝動性', body: '落ち着かなさ、じっとしていにくい感覚、割り込み、待つことの難しさを成人の生活文脈で確認します。' },
+      { title: '選別 ≠ 診断', body: '高い点数は評価を検討する合図であり、診断名ではありません。ADHD診断には幼少期からの発達歴と多面的な評価が必要です。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'この結果でADHDを診断できますか？', answer: 'いいえ。ASRSは選別ツールであり診断ではありません。ADHDの診断と治療は、資格を持つ専門家が面接、発達歴、生活上の支障、ほかの原因の可能性を評価して行います。' },
+      { question: '点数が高ければADHDですか？', answer: 'いいえ。ストレス、睡眠不足、不安、うつ、環境要因でも似た困難が起こります。高い点数は専門評価を考えるためのサインとして扱ってください。' },
+      { question: '成人でもADHD評価を受けられますか？', answer: '可能です。ただし成人ADHDの評価では、現在の症状だけでなく、幼少期からの持続性、学校・仕事・人間関係への影響、周囲からの情報も確認します。' },
+      { question: '回答は保存されますか？', answer: '結果はブラウザ内で計算され、個人を特定する情報は収集・保存しません。' },
+    ],
+    disclaimer: 'このテストは教育・自己点検のための選別ツールであり、ADHDの診断や治療を代替しません。高い点数がそのままADHDを意味するわけではありません。診断には発達歴、機能への影響、複数情報源を含む評価が必要です。',
+  },
+  zh: {
+    introTitle: 'ASRS用于筛查成人ADHD相关可能性，并不能作出诊断',
+    intro: 'WHO ASRS（成人ADHD自评量表）是一种简短的自我筛查量表，用来了解成人可能出现的注意困难、多动和冲动相关体验。本测试帮助整理近期生活中反复出现的专注与自我调节模式，作为是否考虑专业评估的参考。高分并不等于ADHD；诊断需要有资质的专业人员结合发育史和多来源信息评估。',
+    conceptTitle: '测量什么',
+    concepts: [
+      { title: '注意力困难', body: '难以完成任务、组织困难、维持注意困难、粗心失误、容易忘事等重复趋势。' },
+      { title: '多动与冲动', body: '坐立不安、很难安静等待、插话或打断他人等表现，需要放在成人生活情境中理解。' },
+      { title: '筛查 ≠ 诊断', body: '较高分数只是考虑评估的信号，不是诊断标签。ADHD诊断需要发育史和多方面资料。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '这个结果能诊断ADHD吗？', answer: '不能。ASRS是筛查工具，不是诊断。ADHD的诊断与治疗需要由有资质的临床专业人员通过访谈、发育史、功能受损程度以及其他可能原因来综合判断。' },
+      { question: '分数高就代表我有ADHD吗？', answer: '不代表。压力、睡眠不足、焦虑、抑郁和环境因素都可能造成类似困难。高分只说明可以考虑进一步专业评估。' },
+      { question: '成年人也可以做ADHD评估吗？', answer: '可以。但成人ADHD评估不只看当前症状，还要了解这些模式是否从童年持续存在，以及对学习、工作、人际关系和日常功能的影响。' },
+      { question: '我的回答会被保存吗？', answer: '结果在浏览器中计算，不收集或存储任何个人身份信息。' },
+    ],
+    disclaimer: '本测试是教育与自我检查用途的筛查工具，不能替代ADHD诊断或治疗。高分并不等于ADHD。诊断需要由有资质的专业人员结合发育史、功能受损和多来源信息进行评估。',
+  },
+  fr: {
+    introTitle: 'L’ASRS repère des tendances possibles de TDAH adulte, sans poser de diagnostic',
+    intro: 'L’ASRS de l’OMS (Adult ADHD Self-Report Scale) est une courte échelle d’auto-dépistage portant sur l’inattention, l’hyperactivité et l’impulsivité chez l’adulte. Ce test résume des schémas répétés de concentration et d’autorégulation pour estimer si une évaluation professionnelle pourrait être utile. Un score élevé ne signifie pas TDAH : le diagnostic exige l’histoire développementale et une évaluation multi-sources par un professionnel agréé.',
+    conceptTitle: 'Ce qu’il mesure',
+    concepts: [
+      { title: 'Inattention', body: 'Difficulté à terminer les tâches, à s’organiser, à maintenir l’attention, erreurs fréquentes ou oublis répétés.' },
+      { title: 'Hyperactivité et impulsivité', body: 'Agitation, impression d’être poussé à agir, interruptions ou difficulté à attendre, replacées dans le contexte adulte.' },
+      { title: 'Dépistage ≠ diagnostic', body: 'Un score plus élevé indique qu’une évaluation peut être pertinente, pas un diagnostic. Le TDAH requiert une histoire développementale et plusieurs sources d’information.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Ce résultat peut-il diagnostiquer un TDAH ?', answer: 'Non. L’ASRS est un outil de dépistage, pas un diagnostic. Le diagnostic et le traitement du TDAH relèvent d’un clinicien agréé après entretien, histoire développementale, retentissement fonctionnel et examen d’autres causes possibles.' },
+      { question: 'Un score élevé veut-il dire que j’ai un TDAH ?', answer: 'Non. Le stress, le manque de sommeil, l’anxiété, la dépression ou l’environnement peuvent produire des difficultés similaires. Un score élevé est seulement un signal pour envisager une évaluation.' },
+      { question: 'Un adulte peut-il être évalué pour un TDAH ?', answer: 'Oui. L’évaluation adulte doit examiner les symptômes actuels, leur présence depuis l’enfance et leur impact sur les études, le travail, les relations et la vie quotidienne.' },
+      { question: 'Mes réponses sont-elles enregistrées ?', answer: 'Les résultats sont calculés dans votre navigateur et aucune information personnelle identifiante n’est collectée ou stockée.' },
+    ],
+    disclaimer: 'Ce test est un outil de dépistage éducatif et ne remplace pas le diagnostic ou le traitement du TDAH. Un score élevé ne signifie pas TDAH. Le diagnostic exige l’histoire développementale, le retentissement fonctionnel et une évaluation multi-sources par un professionnel agréé.',
+  },
+  es: {
+    introTitle: 'El ASRS detecta posibles patrones de TDAH adulto, pero no diagnostica',
+    intro: 'El WHO ASRS (Adult ADHD Self-Report Scale) es una breve escala de autocribado sobre experiencias de inatención, hiperactividad e impulsividad en adultos. Este test resume patrones repetidos de concentración y autorregulación para ayudarte a valorar si una evaluación profesional podría ser útil. Una puntuación alta no equivale a TDAH; el diagnóstico requiere historia del desarrollo y evaluación con varias fuentes por un profesional acreditado.',
+    conceptTitle: 'Qué mide',
+    concepts: [
+      { title: 'Inatención', body: 'Dificultad para terminar tareas, organizarse, mantener la atención, evitar errores o recordar obligaciones.' },
+      { title: 'Hiperactividad e impulsividad', body: 'Inquietud, sensación de estar impulsado/a a moverse, interrupciones o dificultad para esperar, interpretadas en contexto adulto.' },
+      { title: 'Cribado ≠ diagnóstico', body: 'Una puntuación más alta es una señal para considerar evaluación, no una etiqueta diagnóstica. El TDAH requiere historia del desarrollo y varias fuentes de información.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Este resultado diagnostica TDAH?', answer: 'No. El ASRS es una herramienta de cribado, no un diagnóstico. El diagnóstico y el tratamiento del TDAH los decide un profesional acreditado mediante entrevista, historia del desarrollo, deterioro funcional y revisión de otras posibles causas.' },
+      { question: '¿Una puntuación alta significa que tengo TDAH?', answer: 'No. El estrés, la falta de sueño, la ansiedad, la depresión y el entorno pueden generar dificultades parecidas. Usa una puntuación alta solo como señal para considerar una evaluación profesional.' },
+      { question: '¿Los adultos pueden evaluarse por TDAH?', answer: 'Sí. La evaluación en adultos debe revisar síntomas actuales, si los patrones existen desde la infancia y cómo afectan estudios, trabajo, relaciones y vida diaria.' },
+      { question: '¿Se guardan mis respuestas?', answer: 'Los resultados se calculan en tu navegador y no se recopila ni almacena información de identificación personal.' },
+    ],
+    disclaimer: 'Este test es una herramienta de cribado educativa y no sustituye el diagnóstico ni el tratamiento del TDAH. Una puntuación alta no significa TDAH. El diagnóstico requiere historia del desarrollo, deterioro funcional y evaluación con varias fuentes por un profesional acreditado.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 ---
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <AdhdScreeningTest client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm leading-6 text-rose-900">{c.disclaimer}</p>
   </main>
 </Layout>

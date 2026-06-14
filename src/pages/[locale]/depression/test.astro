@@ -16,9 +16,172 @@ const meta: Record<Locale, { title: string; description: string }> = {
   es: { title: 'Test de Detección de Depresión — Autoevaluación PHQ-9', description: 'Mide tu nivel de depresión con 9 preguntas basadas en el PHQ-9 y descubre si necesitas ayuda profesional.' },
 };
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: 'PHQ-9는 진단이 아니라 지난 2주의 상태를 비추는 선별 도구입니다',
+    intro: 'PHQ-9(Patient Health Questionnaire-9)는 우울 증상을 9개 문항으로 묻는 널리 쓰이는 자가 선별 척도입니다. 이 테스트는 지난 2주 동안의 기분·흥미·수면·에너지 등을 점수로 정리해 전문가 상담이 필요한지 가늠하도록 돕습니다. 진단은 반드시 면허를 가진 전문가가 합니다.',
+    conceptTitle: '무엇을 보나요',
+    concepts: [
+      { title: '9개 영역', body: '흥미 저하, 우울감, 수면, 에너지, 식욕, 자기 비난, 집중, 정신운동, 자해 생각을 봅니다.' },
+      { title: '점수 구간', body: '합산 점수를 최소·경도·중등도·중증의 범위로 나눠 경향을 읽습니다(절대 기준 아님).' },
+      { title: '선별 ≠ 진단', body: '높은 점수는 "전문가를 만나보면 좋다"는 신호일 뿐, 진단명이 아닙니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '이 결과로 우울증을 진단할 수 있나요?', answer: '아니요. PHQ-9는 선별 도구이며 진단이 아닙니다. 진단과 치료는 정신건강의학과 의사나 임상심리 전문가가 면담·평가를 통해 합니다.' },
+      { question: '점수가 높게 나왔어요. 어떻게 하나요?', answer: '점수가 중등도 이상이거나 일상이 힘들다면 전문가 상담을 권합니다. 증상이 2주 이상 지속되거나 악화되면 미루지 마세요.' },
+      { question: '죽고 싶은 생각이 들어요.', answer: '지금 힘들다면 혼자 견디지 마세요. 한국은 자살예방상담전화 109, 정신건강상담 1577-0199, 위급 시 119로 도움을 받을 수 있습니다. 지역의 응급 서비스에 바로 연락하세요.' },
+      { question: '입력한 답변이 저장되나요?', answer: '결과는 브라우저에서 계산되며 개인 식별 정보를 수집·저장하지 않습니다.' },
+    ],
+    disclaimer: '이 테스트는 교육·자기 점검 목적의 선별 도구이며 의학적 진단·치료를 대신하지 않습니다. 어려움이 지속되면 반드시 전문가의 도움을 받으세요. 위급 시 119 또는 자살예방상담전화 109.',
+  },
+  en: {
+    introTitle: 'PHQ-9 is a screening tool that reflects your last two weeks — not a diagnosis',
+    intro: 'The PHQ-9 (Patient Health Questionnaire-9) is a widely used self-screening scale that asks about depressive symptoms across nine items. This test summarizes your mood, interest, sleep, and energy over the past two weeks into a score to help gauge whether professional support may help. Only a licensed professional can diagnose.',
+    conceptTitle: 'What it measures',
+    concepts: [
+      { title: 'Nine areas', body: 'Loss of interest, low mood, sleep, energy, appetite, self-blame, concentration, psychomotor changes, and thoughts of self-harm.' },
+      { title: 'Score bands', body: 'The total is grouped into minimal, mild, moderate, and severe ranges to read a trend — not an absolute cutoff.' },
+      { title: 'Screening ≠ diagnosis', body: 'A high score is a signal that "it may help to see a professional," not a diagnostic label.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Can this result diagnose depression?', answer: 'No. PHQ-9 is a screening tool, not a diagnosis. Diagnosis and treatment are made by a psychiatrist or clinical psychologist through assessment.' },
+      { question: 'My score is high. What should I do?', answer: 'If your score is moderate or higher, or daily life feels hard, consider talking to a professional. Do not wait if symptoms persist beyond two weeks or worsen.' },
+      { question: 'I have thoughts of dying.', answer: 'Please do not face this alone. If you are in the US, call or text 988 (Suicide & Crisis Lifeline). In Korea, call 109 or 1577-0199; in an emergency call your local emergency number. Reach out to local emergency services right now.' },
+      { question: 'Are my answers saved?', answer: 'Results are computed in your browser and no personally identifying information is collected or stored.' },
+    ],
+    disclaimer: 'This test is an educational self-check screening tool and does not replace medical diagnosis or treatment. If difficulties persist, please seek professional help. In a crisis, contact local emergency services (US: 988; KR: 109).',
+  },
+  ja: {
+    introTitle: 'PHQ-9は診断ではなく、過去2週間の状態を映す選別ツールです',
+    intro: 'PHQ-9（Patient Health Questionnaire-9）はうつ症状を9つの項目で尋ねる、広く使われる自己選別スケールです。このテストは過去2週間の気分・関心・睡眠・エネルギーを点数にまとめ、専門家への相談が役立つかを測る手がかりにします。診断は必ず資格を持つ専門家が行います。',
+    conceptTitle: '何を見るか',
+    concepts: [
+      { title: '9つの領域', body: '関心の低下、抑うつ、睡眠、エネルギー、食欲、自責、集中、精神運動、自傷の考えを見ます。' },
+      { title: '点数帯', body: '合計点を最小・軽度・中等度・重度の範囲に分けて傾向を読みます（絶対基準ではありません）。' },
+      { title: '選別 ≠ 診断', body: '高い点数は「専門家に会うとよい」という合図であり、診断名ではありません。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'この結果でうつ病を診断できますか？', answer: 'いいえ。PHQ-9は選別ツールであり診断ではありません。診断と治療は精神科医や臨床心理の専門家が評価を通じて行います。' },
+      { question: '点数が高く出ました。どうすれば？', answer: '中等度以上、または日常がつらいなら専門家への相談をおすすめします。症状が2週間以上続く・悪化する場合は先延ばしにしないでください。' },
+      { question: '死にたい気持ちがあります。', answer: '一人で抱えないでください。日本ではいのちの電話や「よりそいホットライン」0120-279-338、緊急時は119/110に連絡できます。今すぐ地域の緊急サービスに連絡してください。' },
+      { question: '回答は保存されますか？', answer: '結果はブラウザ内で計算され、個人を特定する情報は収集・保存しません。' },
+    ],
+    disclaimer: 'このテストは教育・自己点検のための選別ツールであり、医学的診断・治療を代替しません。つらさが続く場合は必ず専門家の助けを求めてください。緊急時は119、またはいのちの電話へ。',
+  },
+  zh: {
+    introTitle: 'PHQ-9是反映你近两周状态的筛查工具，而非诊断',
+    intro: 'PHQ-9（患者健康问卷-9）是广泛使用的自我筛查量表，用九个题目询问抑郁症状。本测试把你近两周的情绪、兴趣、睡眠与精力整理为分数，帮助判断是否需要寻求专业支持。诊断必须由有资质的专业人员做出。',
+    conceptTitle: '测量什么',
+    concepts: [
+      { title: '九个方面', body: '兴趣下降、情绪低落、睡眠、精力、食欲、自责、专注、精神运动、自伤念头。' },
+      { title: '分数区间', body: '将总分分为最小、轻度、中度、重度区间以读取趋势（并非绝对界限）。' },
+      { title: '筛查 ≠ 诊断', body: '高分只是「见专业人士或许有帮助」的信号，而非诊断标签。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '这个结果能诊断抑郁症吗？', answer: '不能。PHQ-9是筛查工具，不是诊断。诊断与治疗由精神科医生或临床心理专业人员通过评估完成。' },
+      { question: '分数偏高，该怎么办？', answer: '若达到中度以上或日常感到吃力，建议咨询专业人士。症状持续两周以上或加重时请勿拖延。' },
+      { question: '我有想死的念头。', answer: '请不要独自承受。如在中国大陆可拨打心理援助热线，紧急情况拨打120/110。请立即联系当地紧急服务。' },
+      { question: '我的回答会被保存吗？', answer: '结果在浏览器中计算，不收集或存储任何个人身份信息。' },
+    ],
+    disclaimer: '本测试是教育与自我检查的筛查工具，不替代医学诊断或治疗。若困扰持续，请务必寻求专业帮助。紧急情况请联系当地急救服务。',
+  },
+  fr: {
+    introTitle: 'Le PHQ-9 est un outil de dépistage de vos deux dernières semaines, pas un diagnostic',
+    intro: 'Le PHQ-9 (Patient Health Questionnaire-9) est une échelle d\'auto-dépistage largement utilisée qui interroge les symptômes dépressifs en neuf items. Ce test résume votre humeur, intérêt, sommeil et énergie des deux dernières semaines en un score pour estimer si un soutien professionnel pourrait aider. Seul un professionnel agréé peut diagnostiquer.',
+    conceptTitle: 'Ce qu\'il mesure',
+    concepts: [
+      { title: 'Neuf domaines', body: 'Perte d\'intérêt, humeur basse, sommeil, énergie, appétit, autocritique, concentration, ralentissement, pensées d\'automutilation.' },
+      { title: 'Tranches de score', body: 'Le total est réparti en minimal, léger, modéré et sévère pour lire une tendance — pas un seuil absolu.' },
+      { title: 'Dépistage ≠ diagnostic', body: 'Un score élevé signale qu\'« il pourrait être utile de consulter », ce n\'est pas une étiquette diagnostique.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Ce résultat peut-il diagnostiquer une dépression ?', answer: 'Non. Le PHQ-9 est un outil de dépistage, pas un diagnostic. Le diagnostic et le traitement relèvent d\'un psychiatre ou d\'un psychologue clinicien.' },
+      { question: 'Mon score est élevé. Que faire ?', answer: 'Si votre score est modéré ou plus, ou si le quotidien est difficile, envisagez de consulter un professionnel. N\'attendez pas si les symptômes durent plus de deux semaines ou s\'aggravent.' },
+      { question: 'J\'ai des pensées suicidaires.', answer: 'Ne restez pas seul(e). En France, appelez le 3114 (numéro national de prévention du suicide) ou le 15 en urgence. Contactez immédiatement les services d\'urgence locaux.' },
+      { question: 'Mes réponses sont-elles enregistrées ?', answer: 'Les résultats sont calculés dans votre navigateur et aucune information personnelle identifiante n\'est collectée ou stockée.' },
+    ],
+    disclaimer: 'Ce test est un outil de dépistage éducatif et ne remplace pas un diagnostic ou un traitement médical. Si les difficultés persistent, demandez de l\'aide professionnelle. En cas de crise, contactez les services d\'urgence (FR : 3114 / 15).',
+  },
+  es: {
+    introTitle: 'El PHQ-9 es una herramienta de cribado de tus dos últimas semanas, no un diagnóstico',
+    intro: 'El PHQ-9 (Cuestionario de Salud del Paciente-9) es una escala de autocribado muy usada que pregunta por síntomas depresivos en nueve ítems. Este test resume tu ánimo, interés, sueño y energía de las últimas dos semanas en una puntuación para estimar si el apoyo profesional podría ayudar. Solo un profesional acreditado puede diagnosticar.',
+    conceptTitle: 'Qué mide',
+    concepts: [
+      { title: 'Nueve áreas', body: 'Pérdida de interés, ánimo bajo, sueño, energía, apetito, autocrítica, concentración, cambios psicomotores y pensamientos de autolesión.' },
+      { title: 'Rangos de puntuación', body: 'El total se agrupa en mínimo, leve, moderado y grave para leer una tendencia, no un umbral absoluto.' },
+      { title: 'Cribado ≠ diagnóstico', body: 'Una puntuación alta es una señal de que "podría ayudar ver a un profesional", no una etiqueta diagnóstica.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Este resultado diagnostica depresión?', answer: 'No. El PHQ-9 es una herramienta de cribado, no un diagnóstico. El diagnóstico y el tratamiento los realiza un psiquiatra o psicólogo clínico mediante evaluación.' },
+      { question: 'Mi puntuación es alta. ¿Qué hago?', answer: 'Si tu puntuación es moderada o mayor, o el día a día se hace difícil, considera hablar con un profesional. No esperes si los síntomas duran más de dos semanas o empeoran.' },
+      { question: 'Tengo pensamientos de muerte.', answer: 'Por favor, no lo afrontes solo/a. En España llama al 024 (línea de atención a la conducta suicida) o al 112 en emergencias. Contacta de inmediato con los servicios de emergencia locales.' },
+      { question: '¿Se guardan mis respuestas?', answer: 'Los resultados se calculan en tu navegador y no se recopila ni almacena información de identificación personal.' },
+    ],
+    disclaimer: 'Este test es una herramienta de cribado educativa y no sustituye el diagnóstico ni el tratamiento médico. Si las dificultades persisten, busca ayuda profesional. En una crisis, contacta los servicios de emergencia (ES: 024 / 112).',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 ---
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <DepressionScreeningTest client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm leading-6 text-rose-900">{c.disclaimer}</p>
   </main>
 </Layout>

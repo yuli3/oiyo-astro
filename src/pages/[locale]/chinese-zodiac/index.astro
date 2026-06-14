@@ -40,12 +40,450 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  "ko": {
+    "faqTitle": "자주 묻는 질문",
+    "readingTitle": "더 깊게 읽기",
+    "introTitle": "띠는 태어난 해의 12지신을 통해 시간의 성향을 상징적으로 읽는 방식입니다",
+    "intro": "중국 띠는 출생 연도를 12동물의 순환으로 읽고, 여기에 오행의 색채가 더해지며 한 해의 기질을 상징적으로 설명합니다. 사람을 단정하는 라벨이 아니라 세대의 리듬과 성향을 가볍게 이해하는 입문 언어입니다.",
+    "conceptTitle": "중국 띠의 기본",
+    "concepts": [
+      {
+        "title": "12 animals",
+        "body": "Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, and Pig."
+      },
+      {
+        "title": "Year-based reading",
+        "body": "The zodiac is usually based on birth year, but Lunar New Year boundaries matter near January and February."
+      },
+      {
+        "title": "Element layer",
+        "body": "Wood, Fire, Earth, Metal, and Water modify the tone of each animal year."
+      }
+    ],
+    "useTitle": "이렇게 활용하세요",
+    "useCases": [
+      {
+        "title": "가볍게 비교하기",
+        "body": "다른 상징 체계와 함께 보며 공통점과 차이를 살핍니다."
+      },
+      {
+        "title": "편견 멈추기",
+        "body": "결과로 사람을 단정하거나 차별하지 않습니다."
+      },
+      {
+        "title": "질문으로 바꾸기",
+        "body": "맞고 틀림보다 내 관계와 태도를 돌아보는 질문으로 사용하세요."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "띠가 성격을 결정하나요?",
+        "answer": "아니요. 띠는 문화적 상징 언어일 뿐 성격을 결정하지 않습니다. 자기 이해와 대화를 위한 참고로 보세요."
+      },
+      {
+        "question": "출생 연도만으로 충분한가요?",
+        "answer": "띠는 연도 기반의 간단한 도구입니다. 더 자세히 보려면 사주처럼 월·일·시까지 포함하는 체계가 필요합니다."
+      },
+      {
+        "question": "어떻게 활용하면 좋나요?",
+        "answer": "관계나 진로를 단정하기보다 세대의 리듬과 상징을 이야기하는 가벼운 질문으로 사용하세요."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://blog.oiyo.net/ko/tool-chinese-zodiac/",
+        "label": "중국 띠 계산기 가이드",
+        "desc": "12지신과 출생 연도 기준을 쉽게 정리했습니다."
+      }
+    ],
+    "disclaimer": "중국 띠 결과는 오락과 자기 성찰 목적입니다. 성격, 관계, 진로를 단정하지 않습니다."
+  },
+  "en": {
+    "faqTitle": "Frequently asked questions",
+    "readingTitle": "Read more",
+    "introTitle": "The Chinese zodiac reads the symbolic quality of birth years through the 12 animals",
+    "intro": "The Chinese zodiac maps birth years to a 12-animal cycle, with the Five Elements adding another tone. It is not a label that defines a person, but an accessible way to understand generational rhythm and symbolic temperament.",
+    "conceptTitle": "Chinese zodiac basics",
+    "concepts": [
+      {
+        "title": "12 animals",
+        "body": "Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog, and Pig."
+      },
+      {
+        "title": "Year-based reading",
+        "body": "The zodiac is usually based on birth year, but Lunar New Year boundaries matter near January and February."
+      },
+      {
+        "title": "Element layer",
+        "body": "Wood, Fire, Earth, Metal, and Water modify the tone of each animal year."
+      }
+    ],
+    "useTitle": "How to use it",
+    "useCases": [
+      {
+        "title": "Compare lightly",
+        "body": "Read it alongside other symbolic systems and notice differences."
+      },
+      {
+        "title": "Avoid stereotypes",
+        "body": "Do not use the result to label or exclude people."
+      },
+      {
+        "title": "Turn it into a question",
+        "body": "Use it to ask about habits and relationships rather than right or wrong."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is this deterministic?",
+        "answer": "No. It is a cultural symbolic reading, not a rule about real people."
+      },
+      {
+        "question": "Is birth year enough?",
+        "answer": "It is a simple year-based tool. A fuller East Asian reading such as saju also considers month, day, and hour."
+      },
+      {
+        "question": "How should I use the result?",
+        "answer": "Use it as a conversation prompt, not as a decision-maker."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://blog.oiyo.net/en/tool-chinese-zodiac/",
+        "label": "Chinese zodiac calculator guide",
+        "desc": "A simple guide to the 12 animals and birth-year rules."
+      }
+    ],
+    "disclaimer": "Chinese zodiac results are for entertainment and self-reflection. They do not define personality, relationships, or career choices."
+  },
+  "ja": {
+    "faqTitle": "よくある質問",
+    "readingTitle": "詳しく読む",
+    "introTitle": "十二支は生まれ年の象徴を通して時間の性質を読む方法です",
+    "intro": "十二支は生まれ年を12の動物の循環で読み、五行の色合いを加えて年の気質を象徴的に説明します。人を決めつけるラベルではなく、世代のリズムを軽く理解する入口です。",
+    "conceptTitle": "十二支の基本",
+    "concepts": [
+      {
+        "title": "十二支",
+        "body": "子、丑、寅、卯、辰、巳、午、未、申、酉、戌、亥の循環です。"
+      },
+      {
+        "title": "年を基準に読む",
+        "body": "通常は生まれ年で見ますが、旧正月付近の誕生日は境界確認が必要です。"
+      },
+      {
+        "title": "五行の層",
+        "body": "木・火・土・金・水が加わり、同じ干支でも雰囲気が変わります。"
+      }
+    ],
+    "useTitle": "使い方",
+    "useCases": [
+      {
+        "title": "軽く比較する",
+        "body": "他の象徴体系と比べて違いを見ます。"
+      },
+      {
+        "title": "偏見を避ける",
+        "body": "結果で人を決めつけたり差別したりしません。"
+      },
+      {
+        "title": "質問に変える",
+        "body": "当たり外れより、自分の関係や態度を問う材料にします。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "干支が性格を決めますか？",
+        "answer": "いいえ。干支は文化的な象徴言語で、性格を決定しません。自己理解の参考です。"
+      },
+      {
+        "question": "生まれ年だけで十分ですか？",
+        "answer": "干支は年ベースの簡単な道具です。詳しく見るなら四柱推命のように月・日・時も含めます。"
+      },
+      {
+        "question": "どう使えばよいですか？",
+        "answer": "関係や進路を断定せず、世代のリズムや象徴を話す軽い問いとして使いましょう。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://blog.oiyo.net/ja/tool-chinese-zodiac/",
+        "label": "十二支計算ガイド",
+        "desc": "12の動物と生まれ年の見方を説明します。"
+      }
+    ],
+    "disclaimer": "十二支の結果は娯楽と自己省察のためのものです。性格、関係、進路を断定しません。"
+  },
+  "zh": {
+    "faqTitle": "常见问题",
+    "readingTitle": "延伸阅读",
+    "introTitle": "生肖通过出生年份的十二动物，象征性阅读时间气质",
+    "intro": "生肖把出生年份放入十二动物循环，并结合五行，为一年气质增添象征色彩。它不是定义人的标签，而是理解世代节奏与性格倾向的入门语言。",
+    "conceptTitle": "生肖基础",
+    "concepts": [
+      {
+        "title": "十二生肖",
+        "body": "鼠、牛、虎、兔、龙、蛇、马、羊、猴、鸡、狗、猪的循环。"
+      },
+      {
+        "title": "按年份阅读",
+        "body": "通常按出生年份判断，但农历新年前后出生需确认边界。"
+      },
+      {
+        "title": "五行结合",
+        "body": "木、火、土、金、水会与生肖结合，让同一生肖也有不同色彩。"
+      }
+    ],
+    "useTitle": "如何使用",
+    "useCases": [
+      {
+        "title": "轻松比较",
+        "body": "与其他象征体系并看，观察差异。"
+      },
+      {
+        "title": "停止刻板印象",
+        "body": "不要用结果给人贴标签或排斥他人。"
+      },
+      {
+        "title": "变成问题",
+        "body": "比起对错，更适合用来回看关系与态度。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "生肖决定性格吗？",
+        "answer": "不会。生肖是文化象征语言，不决定性格。请作为自我理解与对话参考。"
+      },
+      {
+        "question": "只看出生年份够吗？",
+        "answer": "生肖是年份基础的简单工具。若要更细致，可看包含月、日、时的八字。"
+      },
+      {
+        "question": "应该如何使用？",
+        "answer": "不要用它断定关系或职业，而是作为讨论世代节奏与象征的轻松问题。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://blog.oiyo.net/zh/tool-chinese-zodiac/",
+        "label": "生肖计算器指南",
+        "desc": "简单了解十二生肖与出生年份规则。"
+      }
+    ],
+    "disclaimer": "生肖结果仅供娱乐与自我反思，不用于断定性格、关系或职业。"
+  },
+  "fr": {
+    "faqTitle": "Questions fréquentes",
+    "readingTitle": "Lire plus",
+    "introTitle": "Le zodiaque chinois lit la qualité symbolique des années de naissance",
+    "intro": "Le zodiaque chinois associe les années de naissance à un cycle de 12 animaux, avec les Cinq Éléments comme couche supplémentaire. Ce n’est pas une étiquette qui définit une personne.",
+    "conceptTitle": "Bases du zodiaque chinois",
+    "concepts": [
+      {
+        "title": "12 animaux",
+        "body": "Rat, Bœuf, Tigre, Lapin, Dragon, Serpent, Cheval, Chèvre, Singe, Coq, Chien et Cochon."
+      },
+      {
+        "title": "Lecture par année",
+        "body": "Elle se base sur l’année de naissance, avec attention au Nouvel An lunaire en janvier-février."
+      },
+      {
+        "title": "Couche des éléments",
+        "body": "Bois, Feu, Terre, Métal et Eau modifient le ton de chaque année animale."
+      }
+    ],
+    "useTitle": "Comment l’utiliser",
+    "useCases": [
+      {
+        "title": "Comparer légèrement",
+        "body": "Lisez-le avec d’autres systèmes symboliques."
+      },
+      {
+        "title": "Éviter les stéréotypes",
+        "body": "N’utilisez pas le résultat pour étiqueter ou exclure."
+      },
+      {
+        "title": "Transformer en question",
+        "body": "Servez-vous-en pour questionner habitudes et relations."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Mon animal détermine-t-il ma personnalité ?",
+        "answer": "Non. C’est un langage culturel symbolique, pas un déterminant de personnalité."
+      },
+      {
+        "question": "L’année de naissance suffit-elle ?",
+        "answer": "C’est un outil simple basé sur l’année. Une lecture comme le Saju ajoute mois, jour et heure."
+      },
+      {
+        "question": "Comment l’utiliser ?",
+        "answer": "Comme question légère sur les rythmes générationnels, sans décider relations ni carrière."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://blog.oiyo.net/fr/tool-chinese-zodiac/",
+        "label": "Guide du zodiaque chinois",
+        "desc": "Les 12 animaux et les règles d’année de naissance."
+      }
+    ],
+    "disclaimer": "Les résultats du zodiaque chinois servent au divertissement et à la réflexion. Ils ne définissent pas personnalité, relations ni carrière."
+  },
+  "es": {
+    "faqTitle": "Preguntas frecuentes",
+    "readingTitle": "Leer más",
+    "introTitle": "El zodiaco chino lee la cualidad simbólica de los años de nacimiento",
+    "intro": "El zodiaco chino asigna los años de nacimiento a un ciclo de 12 animales, con los Cinco Elementos como capa adicional. No define a una persona.",
+    "conceptTitle": "Bases del zodiaco chino",
+    "concepts": [
+      {
+        "title": "12 animales",
+        "body": "Rata, Buey, Tigre, Conejo, Dragón, Serpiente, Caballo, Cabra, Mono, Gallo, Perro y Cerdo."
+      },
+      {
+        "title": "Lectura por año",
+        "body": "Suele basarse en el año de nacimiento, con atención al Año Nuevo Lunar en enero-febrero."
+      },
+      {
+        "title": "Capa elemental",
+        "body": "Madera, Fuego, Tierra, Metal y Agua modifican el tono de cada año animal."
+      }
+    ],
+    "useTitle": "Cómo usarlo",
+    "useCases": [
+      {
+        "title": "Compara ligeramente",
+        "body": "Léelo junto a otros sistemas simbólicos."
+      },
+      {
+        "title": "Evitar estereotipos",
+        "body": "No uses el resultado para etiquetar o excluir."
+      },
+      {
+        "title": "Convertir en pregunta",
+        "body": "Úsalo para preguntar por hábitos y relaciones."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Mi animal determina mi personalidad?",
+        "answer": "No. Es un lenguaje cultural simbólico, no un determinante de personalidad."
+      },
+      {
+        "question": "¿Basta el año de nacimiento?",
+        "answer": "Es una herramienta simple basada en el año. Una lectura como Saju añade mes, día y hora."
+      },
+      {
+        "question": "¿Cómo usarlo?",
+        "answer": "Como pregunta ligera sobre ritmos generacionales, sin decidir relaciones ni carrera."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://blog.oiyo.net/es/tool-chinese-zodiac/",
+        "label": "Guía del zodiaco chino",
+        "desc": "Los 12 animales y reglas por año de nacimiento."
+      }
+    ],
+    "disclaimer": "Los resultados del zodiaco chino son para entretenimiento y reflexión. No definen personalidad, relaciones ni carrera."
+  }
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <ChineseZodiac client:load locale={locale} />
     <RelatedTools locale={locale} tools={['saju', 'natal', 'zodiac']} current="chineseZodiac" />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MysticTrinity topic="chinese-zodiac" locale={locale} />
   </main>
 </Layout>

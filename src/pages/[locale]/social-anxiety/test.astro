@@ -16,9 +16,172 @@ const meta: Record<Locale, { title: string; description: string }> = {
   es: { title: 'Test de Ansiedad Social — Autoevaluación Interpersonal', description: 'Mide tu ansiedad, evitación y autoconciencia en situaciones sociales y evalúa tu riesgo de trastorno de ansiedad social.' },
 };
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '사회불안 테스트는 진단이 아니라 대인 상황의 불안 경향을 보는 선별 도구입니다',
+    intro: '이 사회불안 선별 테스트는 사람들 앞에서 말하기, 낯선 사람과의 상호작용, 평가받는 상황에서 나타나는 불안·회피·자의식의 경향을 점검합니다. 점수는 최근 생활에서 사회적 상황이 얼마나 부담되는지 참고 범위로 보여줄 뿐, 사회불안장애 진단을 의미하지 않습니다. 진단과 치료는 면허 전문가가 면담과 평가를 통해 합니다.',
+    conceptTitle: '무엇을 보나요',
+    concepts: [
+      { title: '사회적 상황의 불안', body: '말하기, 만남, 발표, 시선이나 평가를 받는 장면에서 긴장과 두려움이 얼마나 나타나는지 봅니다.' },
+      { title: '회피와 일상 영향', body: '불편한 상황을 피하거나 견디느라 학교, 직장, 관계, 일상 기능이 얼마나 흔들리는지 살핍니다.' },
+      { title: '자의식과 해석', body: '실수할 것 같다는 걱정, 부정적으로 보일 것 같다는 생각, 이후 반복 반추하는 경향을 참고합니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '이 결과로 사회불안장애를 진단할 수 있나요?', answer: '아니요. 이 테스트는 선별 도구이며 진단이 아닙니다. 진단과 치료는 정신건강의학과 의사나 임상 전문가가 증상, 지속 기간, 기능 영향, 다른 원인 가능성을 평가해 결정합니다.' },
+      { question: '점수가 높으면 어떻게 해야 하나요?', answer: '점수가 높고 사회적 상황을 피하느라 일상이 줄어든다면 전문가 상담을 고려하세요. 결과는 경향을 보여줄 뿐이며, 한 번의 점수로 상태를 단정하지 않습니다.' },
+      { question: '불안 때문에 안전이 걱정됩니다.', answer: '스스로를 해칠 위험이 있거나 지금 안전하지 않다면 즉시 도움을 요청하세요. 한국은 자살예방상담전화 109, 정신건강상담 1577-0199, 위급 시 119를 이용할 수 있습니다.' },
+      { question: '입력한 답변이 저장되나요?', answer: '결과는 브라우저에서 계산되며 개인 식별 정보를 수집·저장하지 않습니다.' },
+    ],
+    disclaimer: '이 테스트는 교육·자기 점검 목적의 선별 도구이며 의학적 진단·치료를 대신하지 않습니다. 사회불안장애 진단은 면허 전문가의 평가가 필요합니다. 위기 상황에서는 한국 109 / 1577-0199, 위급 시 119 또는 지역 응급 서비스에 즉시 연락하세요.',
+  },
+  en: {
+    introTitle: 'This social anxiety test screens for patterns in social situations — it is not a diagnosis',
+    intro: 'This social anxiety screening test looks at anxiety, avoidance, and self-consciousness in situations such as speaking in front of others, meeting unfamiliar people, or being evaluated. Your score gives a reference range for how burdensome social situations may feel in daily life; it does not diagnose social anxiety disorder. Diagnosis and treatment must be handled by a licensed professional.',
+    conceptTitle: 'What it measures',
+    concepts: [
+      { title: 'Anxiety in social situations', body: 'Tension or fear when speaking, meeting people, presenting, or feeling watched or evaluated.' },
+      { title: 'Avoidance and daily impact', body: 'How much avoiding or enduring social situations affects school, work, relationships, and everyday functioning.' },
+      { title: 'Self-conscious thoughts', body: 'Worry about making mistakes, being seen negatively, or replaying interactions afterward.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Can this result diagnose social anxiety?', answer: 'No. This is a screening tool, not a diagnosis. Diagnosis and treatment are made by a licensed clinician after evaluating symptoms, duration, impairment, context, and other possible causes.' },
+      { question: 'My score is high. What should I do?', answer: 'If your score is high and avoidance is shrinking your daily life, consider talking with a professional. The result shows a trend or range, not an absolute label.' },
+      { question: 'I feel unsafe because of anxiety.', answer: 'If you may hurt yourself or cannot stay safe, seek immediate help. In the US, call or text 988. In Korea, call 109 or 1577-0199. Elsewhere, contact local emergency services now.' },
+      { question: 'Are my answers saved?', answer: 'Results are computed in your browser and no personally identifying information is collected or stored.' },
+    ],
+    disclaimer: 'This test is an educational self-check screening tool and does not replace medical diagnosis or treatment. Social anxiety disorder can only be diagnosed by a licensed professional. In a crisis, contact local emergency services immediately (US: 988; KR: 109 / 1577-0199).',
+  },
+  ja: {
+    introTitle: '社交不安テストは診断ではなく、社会的場面での不安傾向をみる選別ツールです',
+    intro: 'この社交不安スクリーニングテストは、人前で話す、知らない人と関わる、評価される場面での不安・回避・自意識の傾向を確認します。点数は日常生活で社会的状況がどれほど負担になっているかの参考範囲を示すもので、社交不安障害の診断ではありません。診断と治療は資格を持つ専門家が評価を通じて行います。',
+    conceptTitle: '何を見るか',
+    concepts: [
+      { title: '社会的場面の不安', body: '会話、出会い、発表、見られる・評価される場面での緊張や恐怖を見ます。' },
+      { title: '回避と日常への影響', body: '苦手な場面を避けること、または耐えることで学校・仕事・人間関係・日常機能がどれほど影響を受けるかを確認します。' },
+      { title: '自意識と解釈', body: '失敗するのではないか、悪く見られるのではないか、あとで会話を何度も思い返す傾向を参考にします。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'この結果で社交不安障害を診断できますか？', answer: 'いいえ。このテストは選別ツールであり診断ではありません。診断と治療は資格を持つ専門家が症状、期間、生活への影響、ほかの原因の可能性を評価して行います。' },
+      { question: '点数が高く出ました。どうすれば？', answer: '点数が高く、回避によって生活の幅が狭くなっているなら専門家への相談を検討してください。結果は傾向や範囲であり、絶対的なラベルではありません。' },
+      { question: '不安で安全が心配です。', answer: '自分を傷つける恐れがある、または安全を保てない場合はすぐ助けを求めてください。日本では緊急時は119、相談先としていのちの電話など地域の支援窓口があります。' },
+      { question: '回答は保存されますか？', answer: '結果はブラウザ内で計算され、個人を特定する情報は収集・保存しません。' },
+    ],
+    disclaimer: 'このテストは教育・自己点検のための選別ツールであり、医学的診断・治療を代替しません。社交不安障害の診断には資格を持つ専門家の評価が必要です。危機時は日本では119、またはいのちの電話など地域の緊急・相談窓口へ連絡してください。',
+  },
+  zh: {
+    introTitle: '社交焦虑测试是筛查社交场景中的焦虑趋势，而不是诊断',
+    intro: '本社交焦虑筛查测试关注在公开发言、与陌生人互动、被评价等情境中的焦虑、回避和自我意识倾向。分数只提供社交情境在日常生活中造成负担的参考范围，并不诊断社交焦虑障碍。诊断与治疗必须由有资质的专业人员完成。',
+    conceptTitle: '测量什么',
+    concepts: [
+      { title: '社交情境中的焦虑', body: '说话、见人、演讲、被注视或被评价时出现的紧张和害怕。' },
+      { title: '回避与日常影响', body: '是否因为回避或强忍社交场景而影响学习、工作、人际关系和日常功能。' },
+      { title: '自我意识和解读', body: '担心出错、担心被负面评价，以及事后反复回想互动细节的倾向。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '这个结果能诊断社交焦虑障碍吗？', answer: '不能。本测试是筛查工具，不是诊断。诊断与治疗需要由有资质的临床专业人员评估症状、持续时间、功能影响、背景和其他可能原因。' },
+      { question: '分数偏高，该怎么办？', answer: '如果分数较高，且回避让你的日常生活范围变小，建议考虑咨询专业人士。结果只是趋势或范围，不是绝对标签。' },
+      { question: '焦虑让我担心自己的安全。', answer: '如果你可能伤害自己或无法保证安全，请立刻寻求帮助。请立即联系当地紧急服务，或前往最近的急诊/危机干预资源。' },
+      { question: '我的回答会被保存吗？', answer: '结果在浏览器中计算，不收集或存储任何个人身份信息。' },
+    ],
+    disclaimer: '本测试是教育与自我检查用途的筛查工具，不能替代医学诊断或治疗。社交焦虑障碍必须由有资质的专业人员评估诊断。危机情况请立即联系当地紧急服务。',
+  },
+  fr: {
+    introTitle: 'Ce test d’anxiété sociale dépiste des tendances en situation sociale, sans diagnostiquer',
+    intro: 'Ce test de dépistage de l’anxiété sociale examine l’anxiété, l’évitement et la conscience de soi dans des situations comme parler devant d’autres personnes, rencontrer des inconnus ou être évalué. Le score donne une plage de référence sur le poids de ces situations dans la vie quotidienne ; il ne diagnostique pas un trouble d’anxiété sociale. Le diagnostic et le traitement relèvent d’un professionnel agréé.',
+    conceptTitle: 'Ce qu’il mesure',
+    concepts: [
+      { title: 'Anxiété en situation sociale', body: 'Tension ou peur lors de conversations, rencontres, présentations, ou quand on se sent observé ou évalué.' },
+      { title: 'Évitement et impact quotidien', body: 'Dans quelle mesure l’évitement ou l’effort pour supporter ces situations affecte études, travail, relations et fonctionnement quotidien.' },
+      { title: 'Pensées centrées sur soi', body: 'Peur de faire une erreur, d’être jugé négativement, ou tendance à repasser les interactions après coup.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Ce résultat peut-il diagnostiquer une anxiété sociale ?', answer: 'Non. Ce test est un outil de dépistage, pas un diagnostic. Le diagnostic et le traitement sont établis par un clinicien agréé après évaluation des symptômes, de la durée, du retentissement, du contexte et d’autres causes possibles.' },
+      { question: 'Mon score est élevé. Que faire ?', answer: 'Si votre score est élevé et que l’évitement rétrécit votre vie quotidienne, envisagez de consulter un professionnel. Le résultat indique une tendance ou une plage, pas une étiquette absolue.' },
+      { question: 'Je ne me sens pas en sécurité à cause de l’anxiété.', answer: 'Si vous risquez de vous faire du mal ou ne pouvez pas rester en sécurité, demandez une aide immédiate. En France, appelez le 3114 ou le 15 en urgence.' },
+      { question: 'Mes réponses sont-elles enregistrées ?', answer: 'Les résultats sont calculés dans votre navigateur et aucune information personnelle identifiante n’est collectée ou stockée.' },
+    ],
+    disclaimer: 'Ce test est un outil de dépistage éducatif et ne remplace pas un diagnostic ou un traitement médical. Un trouble d’anxiété sociale ne peut être diagnostiqué que par un professionnel agréé. En cas de crise, contactez immédiatement les urgences locales (FR : 3114 / 15).',
+  },
+  es: {
+    introTitle: 'Este test de ansiedad social criba patrones en situaciones sociales, pero no diagnostica',
+    intro: 'Este test de cribado de ansiedad social observa ansiedad, evitación y autoconciencia en situaciones como hablar delante de otras personas, conocer gente nueva o ser evaluado/a. La puntuación ofrece un rango de referencia sobre cuánto pesan estas situaciones en la vida diaria; no diagnostica trastorno de ansiedad social. El diagnóstico y el tratamiento deben realizarlos profesionales acreditados.',
+    conceptTitle: 'Qué mide',
+    concepts: [
+      { title: 'Ansiedad en situaciones sociales', body: 'Tensión o miedo al hablar, conocer personas, presentar, o sentirse observado/a o evaluado/a.' },
+      { title: 'Evitación e impacto diario', body: 'Cuánto afecta evitar o soportar situaciones sociales a estudios, trabajo, relaciones y funcionamiento cotidiano.' },
+      { title: 'Pensamientos de autoconciencia', body: 'Preocupación por equivocarse, ser visto/a negativamente o repasar las interacciones después.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Este resultado diagnostica ansiedad social?', answer: 'No. Este test es una herramienta de cribado, no un diagnóstico. El diagnóstico y el tratamiento los realiza un profesional acreditado tras evaluar síntomas, duración, deterioro, contexto y otras posibles causas.' },
+      { question: 'Mi puntuación es alta. ¿Qué hago?', answer: 'Si tu puntuación es alta y la evitación está reduciendo tu vida diaria, considera hablar con un profesional. El resultado muestra una tendencia o rango, no una etiqueta absoluta.' },
+      { question: 'No me siento seguro/a por la ansiedad.', answer: 'Si puedes hacerte daño o no puedes mantenerte a salvo, busca ayuda inmediata. En España llama al 024 o al 112 en una emergencia.' },
+      { question: '¿Se guardan mis respuestas?', answer: 'Los resultados se calculan en tu navegador y no se recopila ni almacena información de identificación personal.' },
+    ],
+    disclaimer: 'Este test es una herramienta de cribado educativa y no sustituye el diagnóstico ni el tratamiento médico. El trastorno de ansiedad social solo puede diagnosticarlo un profesional acreditado. En una crisis, contacta de inmediato con emergencias locales (ES: 024 / 112).',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 ---
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <SocialAnxietyTest client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm leading-6 text-rose-900">{c.disclaimer}</p>
   </main>
 </Layout>

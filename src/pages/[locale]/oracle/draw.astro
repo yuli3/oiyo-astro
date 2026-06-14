@@ -39,11 +39,401 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  "ko": {
+    "faqTitle": "자주 묻는 질문",
+    "readingTitle": "더 깊게 읽기",
+    "introTitle": "오라클 카드는 정해진 체계보다 질문과 상징의 울림을 중요하게 봅니다",
+    "intro": "오라클 카드 뽑기는 덱마다 다른 이미지와 문장을 통해 현재의 질문을 비추는 도구입니다. 좋은 질문을 세우고 카드의 첫 인상을 기록하면, 결과는 예언이 아니라 자기 성찰의 단서가 됩니다.",
+    "conceptTitle": "오라클 리딩의 핵심",
+    "concepts": [
+      {
+        "title": "자유로운 상징",
+        "body": "오라클 덱은 고정 규칙보다 이미지와 문장의 직관적 울림을 중심으로 읽습니다."
+      },
+      {
+        "title": "질문 프레이밍",
+        "body": "닫힌 예언형 질문보다 “무엇을 돌봐야 할까?” 같은 열린 질문이 잘 맞습니다."
+      },
+      {
+        "title": "첫 인상",
+        "body": "카드를 보자마자 떠오른 단어와 감정이 해석의 중요한 출발점입니다."
+      }
+    ],
+    "useTitle": "오라클 카드를 활용하는 법",
+    "useCases": [
+      {
+        "title": "질문을 부드럽게",
+        "body": "결과를 강요하는 질문보다 내 태도와 선택을 돌아보는 질문이 좋습니다."
+      },
+      {
+        "title": "이미지 먼저 보기",
+        "body": "설명보다 그림에서 먼저 보이는 색, 사물, 표정을 적어보세요."
+      },
+      {
+        "title": "작은 행동으로 연결",
+        "body": "해석을 오늘 할 수 있는 작은 행동 하나로 바꾸면 더 유용합니다."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "오라클 카드는 타로와 무엇이 다른가요?",
+        "answer": "타로는 비교적 정해진 카드 구조가 있지만, 오라클은 덱마다 상징과 장수가 자유롭습니다."
+      },
+      {
+        "question": "어떤 질문이 좋나요?",
+        "answer": "“될까요?”보다 “지금 내가 살펴볼 관점은 무엇일까요?”처럼 열린 질문이 더 건강합니다."
+      },
+      {
+        "question": "카드가 불편하게 느껴지면 어떻게 하나요?",
+        "answer": "불편함도 단서일 수 있지만 억지로 받아들일 필요는 없습니다. 잠시 쉬고 현실의 감정과 상황을 먼저 돌보세요."
+      }
+    ],
+    "reading": [],
+    "disclaimer": "오라클 카드 결과는 오락과 자기 성찰 목적입니다. 의료, 법률, 투자, 관계 결정을 대신하지 않습니다."
+  },
+  "en": {
+    "faqTitle": "Frequently asked questions",
+    "readingTitle": "Read more",
+    "introTitle": "Oracle cards value the resonance of symbol and question more than a fixed system",
+    "intro": "Oracle card draws use each deck’s own images and phrases to reflect the question at hand. A clear question and a note on your first impression can turn the card into a prompt for reflection rather than prediction.",
+    "conceptTitle": "Core ideas of oracle reading",
+    "concepts": [
+      {
+        "title": "Open symbolism",
+        "body": "Oracle decks lean on intuitive images and words rather than one fixed card system."
+      },
+      {
+        "title": "Question framing",
+        "body": "Open questions such as “What should I care for?” work better than closed predictions."
+      },
+      {
+        "title": "First impression",
+        "body": "The word or feeling that appears immediately is an important starting point."
+      }
+    ],
+    "useTitle": "How to use oracle cards",
+    "useCases": [
+      {
+        "title": "Soften the question",
+        "body": "Ask about attitude, care, and choice rather than demanding an outcome."
+      },
+      {
+        "title": "Look at the image first",
+        "body": "Notice colors, objects, and expressions before reading any explanation."
+      },
+      {
+        "title": "Choose one small action",
+        "body": "Turn the reading into one practical thing you can do today."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How are oracle cards different from tarot?",
+        "answer": "Tarot has a relatively fixed structure, while oracle decks are freer in theme, imagery, and number of cards."
+      },
+      {
+        "question": "What question should I ask?",
+        "answer": "Try an open question such as “What perspective should I consider now?” instead of a yes/no outcome question."
+      },
+      {
+        "question": "What if a card feels uncomfortable?",
+        "answer": "Discomfort can be useful information, but you do not have to force the message. Pause and care for the real situation first."
+      }
+    ],
+    "reading": [],
+    "disclaimer": "Oracle card results are for entertainment and self-reflection. They do not replace medical, legal, financial, or relationship decisions."
+  },
+  "ja": {
+    "faqTitle": "よくある質問",
+    "readingTitle": "詳しく読む",
+    "introTitle": "オラクルカードは固定された体系より、問いと象徴の響きを大切にします",
+    "intro": "オラクルカードは、デッキごとの絵と言葉で今の問いを映します。良い問いを立て、第一印象を記録すると、予言ではなく自己省察の手がかりになります。",
+    "conceptTitle": "オラクルリーディングの要点",
+    "concepts": [
+      {
+        "title": "自由な象徴",
+        "body": "オラクルデッキは固定ルールより、絵と言葉の直感的な響きを読みます。"
+      },
+      {
+        "title": "問いの立て方",
+        "body": "閉じた予言型より「何を大切にすべき？」のような開いた問いが合います。"
+      },
+      {
+        "title": "第一印象",
+        "body": "見た瞬間に浮かぶ言葉や感情が、解釈の大切な入口です。"
+      }
+    ],
+    "useTitle": "オラクルカードの使い方",
+    "useCases": [
+      {
+        "title": "問いをやわらかく",
+        "body": "結果を迫るより、自分の姿勢や選択を見直す問いにします。"
+      },
+      {
+        "title": "絵を先に見る",
+        "body": "説明より先に、色、物、表情で目に入るものを書きます。"
+      },
+      {
+        "title": "小さな行動へ",
+        "body": "解釈を今日できる一つの小さな行動に変えると役立ちます。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "オラクルカードとタロットの違いは？",
+        "answer": "タロットには比較的決まった構造がありますが、オラクルはデッキごとに象徴や枚数が自由です。"
+      },
+      {
+        "question": "どんな質問が向いていますか？",
+        "answer": "「どうなりますか？」より「今見るべき視点は何ですか？」のような開いた問いが健全です。"
+      },
+      {
+        "question": "カードが不快に感じたら？",
+        "answer": "不快感も手がかりですが、無理に受け入れる必要はありません。休んで現実の感情と状況を先にケアしましょう。"
+      }
+    ],
+    "reading": [],
+    "disclaimer": "オラクルカードの結果は娯楽と自己省察のためのものです。医療、法律、投資、人間関係の判断を代替しません。"
+  },
+  "zh": {
+    "faqTitle": "常见问题",
+    "readingTitle": "延伸阅读",
+    "introTitle": "神谕卡重视问题与象征的回响，而非固定体系",
+    "intro": "神谕卡用每副牌自己的图像与文字映照当下问题。清晰提问并记录第一印象，结果就会成为反思线索，而非预言。",
+    "conceptTitle": "神谕解读核心",
+    "concepts": [
+      {
+        "title": "自由象征",
+        "body": "神谕牌更依靠图像与文字的直觉回响，而非固定规则。"
+      },
+      {
+        "title": "问题框架",
+        "body": "比起封闭预测，更适合问“我现在需要照顾什么”。"
+      },
+      {
+        "title": "第一印象",
+        "body": "看见卡牌瞬间出现的词语与感受，是解读的重要入口。"
+      }
+    ],
+    "useTitle": "如何使用神谕卡",
+    "useCases": [
+      {
+        "title": "柔化问题",
+        "body": "少问强求结果的问题，多问关于态度、照顾与选择的问题。"
+      },
+      {
+        "title": "先看图像",
+        "body": "阅读说明前，先记录颜色、物件和表情。"
+      },
+      {
+        "title": "连接小行动",
+        "body": "把解读转化成今天能做的一件小事，会更有帮助。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "神谕卡和塔罗有什么不同？",
+        "answer": "塔罗有相对固定的结构，神谕卡在主题、图像和张数上更自由。"
+      },
+      {
+        "question": "适合问什么问题？",
+        "answer": "可以问“我现在需要看见什么角度？”这类开放问题，而不是单纯的是非结果。"
+      },
+      {
+        "question": "如果卡牌让我不舒服怎么办？",
+        "answer": "不舒服也可能是线索，但不必强迫接受。先暂停，照顾现实情绪与处境。"
+      }
+    ],
+    "reading": [],
+    "disclaimer": "神谕卡结果仅供娱乐与自我反思，不替代医疗、法律、财务或关系决定。"
+  },
+  "fr": {
+    "faqTitle": "Questions fréquentes",
+    "readingTitle": "Lire plus",
+    "introTitle": "Les cartes oracle privilégient la résonance du symbole et de la question",
+    "intro": "Les cartes oracle utilisent leurs propres images et phrases pour refléter la question présente. Une question claire et une première impression transforment la carte en support de réflexion.",
+    "conceptTitle": "Idées clés de l’oracle",
+    "concepts": [
+      {
+        "title": "Symbolisme ouvert",
+        "body": "Les jeux oracle reposent sur images et mots intuitifs plutôt que sur un système unique."
+      },
+      {
+        "title": "Cadre de question",
+        "body": "Les questions ouvertes fonctionnent mieux que les prédictions fermées."
+      },
+      {
+        "title": "Première impression",
+        "body": "Le mot ou sentiment immédiat est un point de départ important."
+      }
+    ],
+    "useTitle": "Comment utiliser l’oracle",
+    "useCases": [
+      {
+        "title": "Adoucir la question",
+        "body": "Interrogez l’attitude, le soin et le choix plutôt que d’exiger un résultat."
+      },
+      {
+        "title": "Regarder l’image",
+        "body": "Notez couleurs, objets et expressions avant de lire l’explication."
+      },
+      {
+        "title": "Choisir une petite action",
+        "body": "Transformez la lecture en une chose concrète à faire aujourd’hui."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Quelle différence avec le tarot ?",
+        "answer": "Le tarot a une structure relativement fixe; les jeux oracle sont plus libres en thème, image et nombre de cartes."
+      },
+      {
+        "question": "Quelle question poser ?",
+        "answer": "Essayez “Quelle perspective considérer maintenant ?” plutôt qu’une question fermée oui/non."
+      },
+      {
+        "question": "Et si une carte me met mal à l’aise ?",
+        "answer": "Le malaise peut informer, mais vous n’avez pas à forcer le message. Faites une pause et prenez soin de la situation réelle."
+      }
+    ],
+    "reading": [],
+    "disclaimer": "Les cartes oracle servent au divertissement et à la réflexion. Elles ne remplacent pas les décisions médicales, juridiques, financières ou relationnelles."
+  },
+  "es": {
+    "faqTitle": "Preguntas frecuentes",
+    "readingTitle": "Leer más",
+    "introTitle": "Las cartas oráculo valoran la resonancia del símbolo y la pregunta",
+    "intro": "Las cartas oráculo usan imágenes y frases propias para reflejar la pregunta presente. Una pregunta clara y una primera impresión convierten la carta en reflexión, no predicción.",
+    "conceptTitle": "Ideas clave del oráculo",
+    "concepts": [
+      {
+        "title": "Simbolismo abierto",
+        "body": "Los mazos oráculo dependen de imágenes y palabras intuitivas, no de un sistema único."
+      },
+      {
+        "title": "Marco de pregunta",
+        "body": "Las preguntas abiertas funcionan mejor que predicciones cerradas."
+      },
+      {
+        "title": "Primera impresión",
+        "body": "La palabra o sensación inmediata es un punto de partida importante."
+      }
+    ],
+    "useTitle": "Cómo usar cartas oráculo",
+    "useCases": [
+      {
+        "title": "Suaviza la pregunta",
+        "body": "Pregunta por actitud, cuidado y elección en lugar de exigir un resultado."
+      },
+      {
+        "title": "Mira primero la imagen",
+        "body": "Nota colores, objetos y expresiones antes de leer explicaciones."
+      },
+      {
+        "title": "Elige una acción pequeña",
+        "body": "Convierte la lectura en algo concreto que puedas hacer hoy."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿En qué se diferencian del tarot?",
+        "answer": "El tarot tiene una estructura relativamente fija; los oráculos son más libres en tema, imagen y número de cartas."
+      },
+      {
+        "question": "¿Qué pregunta conviene hacer?",
+        "answer": "Prueba “¿Qué perspectiva necesito considerar ahora?” en lugar de una pregunta cerrada de sí/no."
+      },
+      {
+        "question": "¿Y si una carta me incomoda?",
+        "answer": "La incomodidad puede informar, pero no tienes que forzar el mensaje. Pausa y cuida primero la situación real."
+      }
+    ],
+    "reading": [],
+    "disclaimer": "Las cartas oráculo son para entretenimiento y reflexión. No reemplazan decisiones médicas, legales, financieras o relacionales."
+  }
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="mx-auto max-w-5xl px-4 py-8">
     <OracleCardDraw client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
     <MentalBoost locale={locale} />
   </div>
 </Layout>

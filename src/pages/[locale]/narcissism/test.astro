@@ -17,9 +17,172 @@ const meta: Record<Locale, { title: string; description: string }> = {
   es: { title: 'Test de Narcisismo — Evalúa tus rasgos narcisistas', description: 'Evalúa tendencias narcisistas: grandiosidad, derecho, falta de empatía y comportamiento explotador.' },
 };
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: 'NPI 계열 문항은 자기애 성향을 보는 연구 척도이며 인격장애 진단이 아닙니다',
+    intro: '이 테스트는 NPI(Narcissistic Personality Inventory) 계열 문항처럼 과대한 자기상, 인정 욕구, 특권 의식, 공감의 어려움과 같은 자기애적 성향을 자기 점검용으로 살펴봅니다. 자기애적 특성은 누구나 어느 정도 가진 스펙트럼이며, 점수는 경향과 범위를 보여줄 뿐 절대적 판정이 아닙니다. 이 결과는 자기애성 인격장애를 진단하지 않으며, 타인을 낙인찍거나 진단하는 데 사용해서는 안 됩니다.',
+    conceptTitle: '무엇을 보나요',
+    concepts: [
+      { title: '과대한 자기상', body: '자신의 능력, 매력, 영향력을 실제보다 크게 느끼거나 특별하게 인정받고 싶은 경향을 봅니다.' },
+      { title: '특권 의식과 관계', body: '특별 대우를 기대하거나 관계에서 자신의 욕구가 우선된다고 느끼는 패턴을 참고합니다.' },
+      { title: '공감과 취약성', body: '타인의 감정을 놓치기 쉬운 순간, 비판에 예민해지는 반응, 방어적 태도 등을 성격 특성의 범위로 살핍니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '이 결과로 자기애성 인격장애를 진단할 수 있나요?', answer: '아니요. NPI 계열 척도는 연구와 자기 점검에 쓰이는 성격 특성 척도이며, 자기애성 인격장애 진단 도구가 아닙니다. 진단과 치료는 면허 전문가가 면담과 평가를 통해 합니다.' },
+      { question: '점수가 높으면 문제가 있다는 뜻인가요?', answer: '반드시 그렇지 않습니다. 자기애적 특성은 누구나 어느 정도 가지고 있으며, 점수는 경향을 보여줄 뿐입니다. 실제 문제 여부는 관계, 기능, 고통, 반복 패턴을 함께 봐야 합니다.' },
+      { question: '다른 사람을 평가하거나 부르는 데 써도 되나요?', answer: '안 됩니다. 이 테스트는 타인을 진단하거나 낙인찍는 용도가 아닙니다. 누군가를 \\\"나르시시스트\\\"라고 단정하는 방식으로 사용하지 마세요.' },
+      { question: '입력한 답변이 저장되나요?', answer: '결과는 브라우저에서 계산되며 개인 식별 정보를 수집·저장하지 않습니다.' },
+    ],
+    disclaimer: '이 테스트는 교육·자기 점검 목적의 선별 도구이며 진단이나 치료를 대신하지 않습니다. NPI 계열 문항은 연구용 성격 특성 척도이지 자기애성 인격장애 진단이 아닙니다. 자기애적 특성은 스펙트럼이며 누구나 일부 가지고 있습니다. 이 결과를 타인에게 붙이는 낙인이나 진단으로 사용하지 마세요.',
+  },
+  en: {
+    introTitle: 'NPI-style items measure narcissistic traits for research and self-reflection — not NPD',
+    intro: 'This test uses NPI-style items to help you reflect on narcissistic traits such as grandiose self-image, desire for admiration, entitlement, and difficulty with empathy. Narcissistic traits exist on a spectrum and everyone has some degree of them; a score shows a trend or range, not an absolute judgment. This result does not diagnose Narcissistic Personality Disorder and must not be used to label or diagnose other people.',
+    conceptTitle: 'What it measures',
+    concepts: [
+      { title: 'Grandiose self-image', body: 'A tendency to see one’s ability, attractiveness, influence, or specialness as unusually high.' },
+      { title: 'Entitlement and relationships', body: 'Patterns of expecting special treatment or feeling that one’s needs should come first in relationships.' },
+      { title: 'Empathy and vulnerability', body: 'Moments when others’ feelings are missed, criticism feels especially threatening, or defensive reactions appear.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Can this result diagnose Narcissistic Personality Disorder?', answer: 'No. NPI-style scales are research and self-reflection measures of personality traits, not diagnostic tools for Narcissistic Personality Disorder. Diagnosis and treatment require assessment by a licensed professional.' },
+      { question: 'Does a high score mean something is wrong with me?', answer: 'Not necessarily. Narcissistic traits are a spectrum and everyone has some degree of them. The score shows a tendency; real-life concern depends on relationships, functioning, distress, and repeated patterns.' },
+      { question: 'Can I use this to evaluate someone else?', answer: 'No. This test must not be used to label, diagnose, or stigmatize other people. Do not use it to decide that someone is “a narcissist.”' },
+      { question: 'Are my answers saved?', answer: 'Results are computed in your browser and no personally identifying information is collected or stored.' },
+    ],
+    disclaimer: 'This test is an educational self-check screening tool and does not replace diagnosis or treatment. NPI-style items are research measures of personality traits, not a diagnosis of Narcissistic Personality Disorder. Narcissistic traits are a spectrum and everyone has some degree of them. Do not use this result to label or diagnose other people.',
+  },
+  ja: {
+    introTitle: 'NPI系の項目は自己愛傾向をみる研究尺度であり、人格障害の診断ではありません',
+    intro: 'このテストはNPI（Narcissistic Personality Inventory）系の項目にならい、誇大的な自己像、賞賛欲求、特権意識、共感の難しさなどの自己愛的特性を自己点検として見ます。自己愛的特性は誰にでもある程度存在するスペクトラムで、点数は傾向や範囲を示すだけで絶対的な判定ではありません。この結果は自己愛性パーソナリティ障害を診断せず、他人を決めつけたり診断したりするために使ってはいけません。',
+    conceptTitle: '何を見るか',
+    concepts: [
+      { title: '誇大的な自己像', body: '自分の能力、魅力、影響力、特別さを高く感じやすい傾向を見ます。' },
+      { title: '特権意識と関係', body: '特別扱いを期待する、自分の欲求が関係の中で優先されるべきだと感じるパターンを参考にします。' },
+      { title: '共感と傷つきやすさ', body: '他者の感情を見落としやすい場面、批判に敏感になる反応、防衛的な態度を性格特性の範囲で見ます。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'この結果で自己愛性パーソナリティ障害を診断できますか？', answer: 'いいえ。NPI系の尺度は研究や自己点検に使われる性格特性の尺度であり、自己愛性パーソナリティ障害の診断ツールではありません。診断と治療は資格を持つ専門家の評価が必要です。' },
+      { question: '点数が高いと問題があるという意味ですか？', answer: '必ずしもそうではありません。自己愛的特性はスペクトラムで、誰にでもある程度あります。点数は傾向を示すだけで、実際の問題は関係、機能、苦痛、反復パターンを合わせて考えます。' },
+      { question: '他の人を評価するために使えますか？', answer: '使えません。このテストは他人を診断したり、レッテルを貼ったり、偏見を強めたりする目的ではありません。誰かを「ナルシシスト」と断定するために使わないでください。' },
+      { question: '回答は保存されますか？', answer: '結果はブラウザ内で計算され、個人を特定する情報は収集・保存しません。' },
+    ],
+    disclaimer: 'このテストは教育・自己点検のための選別ツールであり、診断や治療を代替しません。NPI系の項目は研究用の性格特性尺度であり、自己愛性パーソナリティ障害の診断ではありません。自己愛的特性はスペクトラムで誰にでも一部あります。この結果を他人へのレッテルや診断として使わないでください。',
+  },
+  zh: {
+    introTitle: 'NPI类题目用于了解自恋特质，是研究量表，不是人格障碍诊断',
+    intro: '本测试参考NPI（自恋人格量表）类题目，帮助你自我了解夸大自我、渴望认可、特权感以及共情困难等自恋特质。自恋特质是一个连续谱，每个人都会在某种程度上拥有；分数只表示趋势或范围，不是绝对判断。本结果不能诊断自恋型人格障碍，也绝不能用于给他人贴标签或诊断他人。',
+    conceptTitle: '测量什么',
+    concepts: [
+      { title: '夸大的自我形象', body: '是否倾向于把自己的能力、吸引力、影响力或特殊性看得很高。' },
+      { title: '特权感与关系', body: '是否期待特殊对待，或在人际关系中觉得自己的需求应当优先。' },
+      { title: '共情与脆弱性', body: '是否容易忽略他人感受，对批评特别敏感，或出现防御性反应。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '这个结果能诊断自恋型人格障碍吗？', answer: '不能。NPI类量表是用于研究和自我反思的性格特质量表，不是自恋型人格障碍的诊断工具。诊断与治疗需要由有资质的专业人员评估。' },
+      { question: '分数高就说明我有问题吗？', answer: '不一定。自恋特质是连续谱，每个人都会有某些程度的表现。分数只显示倾向，是否造成问题还要看关系、功能、痛苦程度和反复模式。' },
+      { question: '可以用它来评价别人吗？', answer: '不可以。本测试绝不能用于给他人贴标签、诊断他人或制造污名。不要用它来断定某个人就是“自恋者”。' },
+      { question: '我的回答会被保存吗？', answer: '结果在浏览器中计算，不收集或存储任何个人身份信息。' },
+    ],
+    disclaimer: '本测试是教育与自我检查用途的筛查工具，不能替代诊断或治疗。NPI类题目是研究用性格特质量表，不是自恋型人格障碍诊断。自恋特质是连续谱，每个人都会在某种程度上拥有。不要用本结果给他人贴标签或诊断他人。',
+  },
+  fr: {
+    introTitle: 'Les items de type NPI mesurent des traits narcissiques de recherche, pas un trouble de la personnalité',
+    intro: 'Ce test utilise des items de type NPI (Narcissistic Personality Inventory) pour réfléchir à des traits narcissiques comme l’image grandiose de soi, le besoin d’admiration, le sentiment de droit et les difficultés d’empathie. Les traits narcissiques existent sur un spectre et chacun en possède à un certain degré ; le score indique une tendance ou une plage, pas un jugement absolu. Ce résultat ne diagnostique pas un trouble de la personnalité narcissique et ne doit pas servir à étiqueter ou diagnostiquer d’autres personnes.',
+    conceptTitle: 'Ce qu’il mesure',
+    concepts: [
+      { title: 'Image grandiose de soi', body: 'Tendance à percevoir ses capacités, son attractivité, son influence ou son caractère spécial comme très élevés.' },
+      { title: 'Sentiment de droit et relations', body: 'Attente d’un traitement particulier ou impression que ses besoins devraient passer en premier dans les relations.' },
+      { title: 'Empathie et vulnérabilité', body: 'Moments où les émotions d’autrui sont moins prises en compte, où la critique paraît menaçante, ou où des réactions défensives apparaissent.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Ce résultat peut-il diagnostiquer un trouble de la personnalité narcissique ?', answer: 'Non. Les échelles de type NPI sont des mesures de recherche et d’auto-réflexion sur des traits de personnalité, pas des outils diagnostiques du trouble de la personnalité narcissique. Le diagnostic et le traitement nécessitent une évaluation par un professionnel agréé.' },
+      { question: 'Un score élevé veut-il dire que quelque chose ne va pas chez moi ?', answer: 'Pas forcément. Les traits narcissiques forment un spectre et chacun en possède à un certain degré. Le score montre une tendance ; l’enjeu réel dépend des relations, du fonctionnement, de la souffrance et des schémas répétés.' },
+      { question: 'Puis-je utiliser ce test pour évaluer quelqu’un d’autre ?', answer: 'Non. Ce test ne doit pas servir à étiqueter, diagnostiquer ou stigmatiser d’autres personnes. Ne l’utilisez pas pour décider que quelqu’un est « narcissique ».' },
+      { question: 'Mes réponses sont-elles enregistrées ?', answer: 'Les résultats sont calculés dans votre navigateur et aucune information personnelle identifiante n’est collectée ou stockée.' },
+    ],
+    disclaimer: 'Ce test est un outil de dépistage éducatif et ne remplace pas un diagnostic ou un traitement. Les items de type NPI sont des mesures de recherche de traits de personnalité, pas un diagnostic de trouble de la personnalité narcissique. Les traits narcissiques forment un spectre et chacun en possède à un certain degré. N’utilisez pas ce résultat pour étiqueter ou diagnostiquer d’autres personnes.',
+  },
+  es: {
+    introTitle: 'Los ítems tipo NPI miden rasgos narcisistas para investigación, no un trastorno de personalidad',
+    intro: 'Este test usa ítems tipo NPI (Narcissistic Personality Inventory) para reflexionar sobre rasgos narcisistas como autoimagen grandiosa, deseo de admiración, sentido de derecho y dificultad con la empatía. Los rasgos narcisistas existen en un espectro y todas las personas los tienen en algún grado; la puntuación muestra una tendencia o rango, no un juicio absoluto. Este resultado no diagnostica trastorno narcisista de la personalidad y no debe usarse para etiquetar o diagnosticar a otras personas.',
+    conceptTitle: 'Qué mide',
+    concepts: [
+      { title: 'Autoimagen grandiosa', body: 'Tendencia a percibir la propia capacidad, atractivo, influencia o especialidad como inusualmente altos.' },
+      { title: 'Derecho y relaciones', body: 'Patrones de esperar trato especial o sentir que las propias necesidades deberían ir primero en las relaciones.' },
+      { title: 'Empatía y vulnerabilidad', body: 'Momentos en que se pasan por alto emociones ajenas, la crítica se siente especialmente amenazante o aparecen respuestas defensivas.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Este resultado diagnostica trastorno narcisista de la personalidad?', answer: 'No. Las escalas tipo NPI son medidas de investigación y autorreflexión sobre rasgos de personalidad, no herramientas diagnósticas del trastorno narcisista de la personalidad. El diagnóstico y el tratamiento requieren evaluación por un profesional acreditado.' },
+      { question: '¿Una puntuación alta significa que algo está mal conmigo?', answer: 'No necesariamente. Los rasgos narcisistas son un espectro y todas las personas los tienen en algún grado. La puntuación muestra una tendencia; la preocupación real depende de relaciones, funcionamiento, malestar y patrones repetidos.' },
+      { question: '¿Puedo usarlo para evaluar a otra persona?', answer: 'No. Este test no debe usarse para etiquetar, diagnosticar ni estigmatizar a otras personas. No lo uses para decidir que alguien es “narcisista”.' },
+      { question: '¿Se guardan mis respuestas?', answer: 'Los resultados se calculan en tu navegador y no se recopila ni almacena información de identificación personal.' },
+    ],
+    disclaimer: 'Este test es una herramienta de cribado educativa y no sustituye el diagnóstico ni el tratamiento. Los ítems tipo NPI son medidas de investigación de rasgos de personalidad, no un diagnóstico de trastorno narcisista de la personalidad. Los rasgos narcisistas son un espectro y todas las personas los tienen en algún grado. No uses este resultado para etiquetar o diagnosticar a otras personas.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 ---
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <NarcissismTest client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm leading-6 text-rose-900">{c.disclaimer}</p>
   </main>
 </Layout>

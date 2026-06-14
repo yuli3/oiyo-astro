@@ -42,11 +42,169 @@ const meta: Record<Locale, { title: string; description: string }> = {
 
 const m = meta[locale] ?? meta.en;
 const bridge = getTestBridge('enneagram', locale);
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '에니어그램은 사람을 단정하는 라벨이 아니라 핵심 동기와 두려움을 보는 렌즈입니다',
+    intro: '에니어그램 테스트는 아홉 가지 성격 유형을 통해 반복되는 동기, 방어 방식, 성장 방향을 살펴보는 자기 이해 도구입니다. 결과는 고정된 성격표가 아니라 지금의 선택과 관계 패턴을 더 잘 말해 보기 위한 출발점으로 읽어 주세요.',
+    conceptTitle: '에니어그램을 읽는 세 가지 관점',
+    concepts: [
+      { title: '핵심 동기', body: '겉으로 보이는 행동보다 왜 그렇게 반응하는지의 동기를 봅니다.' },
+      { title: '기본 두려움', body: '피하고 싶은 감정이나 상황을 알면 반복되는 방어 패턴을 이해하기 쉽습니다.' },
+      { title: '성장 방향', body: '유형은 고정된 상자가 아니라 더 유연하게 반응하는 길을 찾는 지도입니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '에니어그램 결과는 얼마나 정확한가요?', answer: '문항에 답한 현재의 경향을 요약한 참고 자료입니다. 상황과 시기에 따라 달라질 수 있으니 절대적인 판정이 아니라 자기 이해를 돕는 단서로 보세요.' },
+      { question: '결과가 나중에 바뀔 수 있나요?', answer: '네. 역할, 관계, 스트레스, 경험이 달라지면 답변도 달라질 수 있습니다. 변화는 오류라기보다 지금의 맥락을 보여주는 정보입니다.' },
+      { question: '결과를 어떻게 활용하면 좋나요?', answer: '가장 강하게 나온 부분과 의외였던 부분을 함께 보세요. 나를 설명하는 한 문장으로 닫기보다, 대화와 선택을 정리하는 질문으로 쓰는 편이 좋습니다.' },
+    ],
+    disclaimer: '에니어그램 결과는 자기 이해와 대화를 위한 참고입니다. 진단, 채용, 관계의 단정적 판단 근거로 사용하지 마세요.',
+  },
+  en: {
+    introTitle: 'The Enneagram is a lens for core motivation and fear, not a label that defines you',
+    intro: 'The Enneagram test uses nine personality types to explore recurring motivations, defenses, and growth directions. Treat the result as a starting point for self-understanding and conversation, not as a fixed personality verdict.',
+    conceptTitle: 'Three ways to read the Enneagram',
+    concepts: [
+      { title: 'Core motivation', body: 'It looks beneath visible behavior to the reason you tend to react that way.' },
+      { title: 'Basic fear', body: 'Naming what you avoid makes recurring defenses easier to understand.' },
+      { title: 'Growth direction', body: 'A type is not a box; it is a map for finding more flexible responses.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'How accurate is the Enneagram result?', answer: 'It summarizes the tendencies shown in your current answers. Context and timing can change your result, so use it as a clue for reflection rather than an absolute judgment.' },
+      { question: 'Can my result change later?', answer: 'Yes. Roles, relationships, stress, and experience can shift how you answer. A changed result is often information about your current context, not a failure of the test.' },
+      { question: 'How should I use the result?', answer: 'Look at both the strongest pattern and the part that surprised you. It works best as a question for conversation and choice, not as a sentence that closes your story.' },
+    ],
+    disclaimer: 'Enneagram results are for self-understanding and conversation. Do not use them as a basis for diagnosis, hiring, or definitive relationship judgments.',
+  },
+  ja: {
+    introTitle: 'エニアグラムは人を決めつけるラベルではなく、核心的な動機と恐れを見るレンズです',
+    intro: 'エニアグラムテストは九つのタイプを通じて、繰り返される動機、防衛、成長の方向を見つめる自己理解のためのツールです。結果は固定された性格表ではなく、今の選択や関係のパターンを言葉にする出発点として読んでください。',
+    conceptTitle: 'エニアグラムを読む三つの視点',
+    concepts: [
+      { title: '核心的な動機', body: '見えている行動よりも、なぜその反応をしやすいのかを見ます。' },
+      { title: '基本的な恐れ', body: '避けたい感情や状況を知ると、防衛パターンが理解しやすくなります。' },
+      { title: '成長の方向', body: 'タイプは固定された箱ではなく、より柔軟に反応する道を探す地図です。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'エニアグラムの結果はどれくらい正確ですか？', answer: '現在の回答に表れた傾向を要約した参考情報です。状況や時期で変わることがあるため、絶対的な判定ではなく自己理解の手がかりとして使ってください。' },
+      { question: '結果は後で変わることがありますか？', answer: 'あります。役割、関係、ストレス、経験が変わると回答も変わります。変化は誤りではなく、今の文脈を示す情報です。' },
+      { question: '結果はどう活用するとよいですか？', answer: '強く出た傾向と意外だった部分を一緒に見てください。自分を一言で閉じるより、対話や選択を整理する質問として使うのがおすすめです。' },
+    ],
+    disclaimer: 'エニアグラムの結果は自己理解と対話のための参考です。診断、採用、人間関係の断定的な判断材料には使わないでください。',
+  },
+  zh: {
+    introTitle: '九型人格是观察核心动机与恐惧的镜片，不是定义人的标签',
+    intro: '九型人格测试通过九种类型观察反复出现的动机、防御方式与成长方向。请把结果当作自我理解与对话的起点，而不是固定不变的人格结论。',
+    conceptTitle: '理解九型人格的三个角度',
+    concepts: [
+      { title: '核心动机', body: '比起表面行为，更关注你为什么容易这样反应。' },
+      { title: '基本恐惧', body: '了解自己想避开的感受或处境，有助于理解反复出现的防御模式。' },
+      { title: '成长方向', body: '类型不是固定盒子，而是寻找更灵活回应方式的地图。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '九型人格结果有多准确？', answer: '它概括的是你当前回答中呈现的倾向。情境和时间会影响结果，因此更适合作为反思线索，而不是绝对判断。' },
+      { question: '结果以后会改变吗？', answer: '会。角色、关系、压力和经验变化时，回答也可能改变。结果变化通常是在提示你当前的处境，而不一定是测试出错。' },
+      { question: '应该如何使用结果？', answer: '可以同时看最明显的模式和让你意外的部分。它更适合用来开启对话、整理选择，而不是给自己下最终定义。' },
+    ],
+    disclaimer: '九型人格结果仅用于自我理解与对话，请勿作为诊断、招聘或关系定论的依据。',
+  },
+  fr: {
+    introTitle: 'L’Ennéagramme est une lentille pour les motivations et peurs centrales, pas une étiquette qui vous définit',
+    intro: 'Le test Ennéagramme explore les motivations récurrentes, les défenses et les pistes de croissance à travers neuf types. Le résultat se lit comme un point de départ pour mieux se comprendre et dialoguer, pas comme un verdict fixe.',
+    conceptTitle: 'Trois façons de lire l’Ennéagramme',
+    concepts: [
+      { title: 'Motivation centrale', body: 'Le test regarde la raison de vos réactions, au-delà du comportement visible.' },
+      { title: 'Peur de base', body: 'Nommer ce que vous évitez aide à comprendre les défenses qui reviennent.' },
+      { title: 'Direction de croissance', body: 'Un type n’est pas une boîte, mais une carte vers des réponses plus souples.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Le résultat de l’Ennéagramme est-il fiable ?', answer: 'Il résume les tendances visibles dans vos réponses du moment. Le contexte et la période peuvent influencer le résultat; utilisez-le comme piste de réflexion, pas comme jugement absolu.' },
+      { question: 'Mon résultat peut-il changer ?', answer: 'Oui. Les rôles, les relations, le stress et l’expérience peuvent modifier vos réponses. Un changement indique souvent votre contexte actuel plutôt qu’une erreur.' },
+      { question: 'Comment utiliser le résultat ?', answer: 'Regardez à la fois le motif le plus fort et ce qui vous surprend. Le résultat sert mieux de question pour dialoguer et choisir que de phrase qui vous enferme.' },
+    ],
+    disclaimer: 'Les résultats de l’Ennéagramme servent à la compréhension de soi et au dialogue. Ne les utilisez pas comme base de diagnostic, de recrutement ou de verdict relationnel.',
+  },
+  es: {
+    introTitle: 'El Eneagrama es una lente para la motivación y el miedo centrales, no una etiqueta que te define',
+    intro: 'El test de Eneagrama explora motivaciones, defensas y direcciones de crecimiento a través de nueve tipos. Lee el resultado como punto de partida para el autoconocimiento y la conversación, no como un veredicto fijo.',
+    conceptTitle: 'Tres formas de leer el Eneagrama',
+    concepts: [
+      { title: 'Motivación central', body: 'Mira la razón de tus reacciones, más allá de la conducta visible.' },
+      { title: 'Miedo básico', body: 'Nombrar lo que evitas ayuda a entender defensas repetidas.' },
+      { title: 'Dirección de crecimiento', body: 'Un tipo no es una caja, sino un mapa hacia respuestas más flexibles.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Qué tan preciso es el resultado del Eneagrama?', answer: 'Resume las tendencias que aparecen en tus respuestas actuales. El contexto y el momento pueden cambiar el resultado, así que úsalo como pista de reflexión, no como juicio absoluto.' },
+      { question: '¿Mi resultado puede cambiar?', answer: 'Sí. Los roles, relaciones, estrés y experiencias pueden cambiar tus respuestas. Un cambio suele mostrar tu contexto actual más que un error del test.' },
+      { question: '¿Cómo debería usar el resultado?', answer: 'Observa tanto el patrón más fuerte como la parte que te sorprendió. Funciona mejor como pregunta para conversar y elegir, no como frase que cierra tu historia.' },
+    ],
+    disclaimer: 'Los resultados del Eneagrama son para autoconocimiento y conversación. No los uses como base para diagnóstico, contratación o juicios definitivos sobre relaciones.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <EnneagramTest client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
     <RelatedTools locale={locale} tools={['mbti', 'big5', 'attachment', 'loveLanguage']} current="enneagram" />
   </main>

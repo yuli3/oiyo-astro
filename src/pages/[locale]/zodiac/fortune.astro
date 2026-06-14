@@ -39,11 +39,469 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  "ko": {
+    "faqTitle": "자주 묻는 질문",
+    "readingTitle": "더 깊게 읽기",
+    "introTitle": "별자리 운세는 하루를 단정하지 않고 태양 별자리의 상징으로 마음가짐을 점검합니다",
+    "intro": "데일리 별자리 운세는 태양 별자리를 기준으로 오늘의 분위기와 주의할 태도를 상징적으로 제안합니다. 태양 별자리는 전체 출생차트의 일부일 뿐이므로, 결과를 확정된 예언보다 가벼운 자기 점검으로 받아들이는 것이 좋습니다.",
+    "conceptTitle": "오늘의 별자리 운세에서 보는 것",
+    "concepts": [
+      {
+        "title": "태양 별자리",
+        "body": "일반적으로 말하는 내 별자리. 오늘의 메시지는 이 기준에서 간단히 읽습니다."
+      },
+      {
+        "title": "행성 분위기",
+        "body": "점성술의 하루 흐름을 상징적으로 요약해 감정과 선택의 힌트로 씁니다."
+      },
+      {
+        "title": "해석의 한계",
+        "body": "같은 별자리라도 출생차트가 다르면 체감은 달라집니다."
+      }
+    ],
+    "useTitle": "운세를 활용하는 법",
+    "useCases": [
+      {
+        "title": "오늘의 키워드 고르기",
+        "body": "결과에서 마음에 걸리는 단어 하나를 골라 하루의 관찰 포인트로 삼습니다."
+      },
+      {
+        "title": "결정은 현실 정보로",
+        "body": "운세는 기분과 태도 점검에 쓰고, 중요한 결정은 사실과 조언을 함께 보세요."
+      },
+      {
+        "title": "반복해서 기록하기",
+        "body": "며칠간 기록하면 운세보다 내 반응의 패턴이 더 잘 보입니다."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "별자리 운세는 과학인가요?",
+        "answer": "아니요. 점성술은 상징 해석 체계이며 과학적 예측이 아닙니다. 오늘의 운세는 자기 성찰과 대화의 참고로만 사용하세요."
+      },
+      {
+        "question": "태양 별자리 운세만 보면 정확한가요?",
+        "answer": "태양 별자리는 전체 차트의 일부라서 개인차가 큽니다. 가벼운 분위기 읽기로 받아들이는 것이 좋습니다."
+      },
+      {
+        "question": "나쁜 운세가 나오면 중요한 일을 미뤄야 하나요?",
+        "answer": "운세만으로 미룰 필요는 없습니다. 다만 컨디션과 준비 상태를 점검하는 계기로 삼을 수 있습니다."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ko/meaning-of-astrology/",
+        "label": "점성술의 의미",
+        "desc": "별자리와 점성술의 기본 개념을 정리했습니다."
+      },
+      {
+        "href": "https://blog.oiyo.net/ko/western-astrology-vs-saju-comparison/",
+        "label": "점성술 vs 사주",
+        "desc": "서양 별자리와 동양 사주를 비교해 읽습니다."
+      }
+    ],
+    "disclaimer": "별자리 운세는 오락과 자기 성찰 목적입니다. 진로, 투자, 의료, 법률 결정을 대신하지 않습니다."
+  },
+  "en": {
+    "faqTitle": "Frequently asked questions",
+    "readingTitle": "Read more",
+    "introTitle": "Daily horoscope checks the mood through Sun-sign symbols; it does not decide your day",
+    "intro": "A daily horoscope offers a symbolic note for today’s mood and attitude based on your Sun sign. Because the Sun sign is only one part of a natal chart, read the result as a light self-check rather than a fixed prediction.",
+    "conceptTitle": "What a daily horoscope reads",
+    "concepts": [
+      {
+        "title": "Sun sign",
+        "body": "The familiar star sign. Daily horoscope messages usually begin from this simple layer."
+      },
+      {
+        "title": "Planetary weather",
+        "body": "A symbolic summary of the day’s astrological tone, used as a cue for attention."
+      },
+      {
+        "title": "Personal variation",
+        "body": "Two people of the same sign can experience the day differently because full charts differ."
+      }
+    ],
+    "useTitle": "How to use the forecast",
+    "useCases": [
+      {
+        "title": "Pick one keyword",
+        "body": "Choose one word from the result as today’s observation point."
+      },
+      {
+        "title": "Decide with facts",
+        "body": "Use the horoscope for mood and attitude; make important choices with evidence and advice."
+      },
+      {
+        "title": "Track your reactions",
+        "body": "After several days, your response patterns may be more useful than the forecast itself."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Are horoscopes scientific?",
+        "answer": "No. Astrology is a symbolic interpretation system, not scientific prediction. Use daily horoscopes for reflection and conversation."
+      },
+      {
+        "question": "Is a Sun-sign horoscope accurate for everyone?",
+        "answer": "Not exactly. The Sun sign is only one layer of the natal chart, so personal experience varies."
+      },
+      {
+        "question": "Should I postpone plans after a difficult horoscope?",
+        "answer": "Not because of the horoscope alone. Let it remind you to check energy, preparation, and assumptions."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/en/meaning-of-astrology/",
+        "label": "Meaning of Astrology",
+        "desc": "A guide to zodiac signs and astrology basics."
+      },
+      {
+        "href": "https://blog.oiyo.net/en/western-astrology-vs-saju-comparison/",
+        "label": "Astrology vs Saju",
+        "desc": "Compare Western signs with East Asian saju."
+      }
+    ],
+    "disclaimer": "Daily horoscopes are for entertainment and self-reflection. They do not replace career, financial, medical, or legal decisions."
+  },
+  "ja": {
+    "faqTitle": "よくある質問",
+    "readingTitle": "詳しく読む",
+    "introTitle": "今日の星占いは一日を決めるものではなく、太陽星座の象徴で姿勢を点検します",
+    "intro": "デイリー星占いは、太陽星座を基準に今日の雰囲気と意識したい姿勢を象徴的に提案します。確定した予言ではなく軽い自己点検として受け取りましょう。",
+    "conceptTitle": "相性の主な考え方",
+    "concepts": [
+      {
+        "title": "四元素",
+        "body": "火・地・風・水は関係の速度、安定感、会話、感情の流れを象徴します。"
+      },
+      {
+        "title": "三区分",
+        "body": "活動・固定・柔軟は始める、保つ、調整するリズムを示します。"
+      },
+      {
+        "title": "太陽星座の限界",
+        "body": "太陽星座の相性は入口です。月や上昇宮まで見ると立体的になります。"
+      }
+    ],
+    "useTitle": "関係での使い方",
+    "useCases": [
+      {
+        "title": "相手の言葉を聞く",
+        "body": "「なぜそうなの？」を「何が楽で何が重い？」に変えてみます。"
+      },
+      {
+        "title": "衝突をリズムとして見る",
+        "body": "速い人と遅い人の違いを欠点ではなくテンポの差として扱います。"
+      },
+      {
+        "title": "全体図へ広げる",
+        "body": "深く見るなら太陽星座だけでなく月、金星、火星、上昇宮も見ます。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "星座相性が悪いと関係は難しいですか？",
+        "answer": "そう断定はできません。星座相性は象徴的な対話ツールで、実際の関係は会話、尊重、状況で変わります。"
+      },
+      {
+        "question": "太陽星座だけで相性を見てもいいですか？",
+        "answer": "軽く見るには十分ですが完全ではありません。月、金星、火星、上昇宮を含めるとより細かくなります。"
+      },
+      {
+        "question": "元素相性とは何ですか？",
+        "answer": "火・地・風・水の組み合わせで速度や必要を読む方法です。特定の元素だけが正解という意味ではありません。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ja/meaning-of-astrology/",
+        "label": "占星術の意味",
+        "desc": "星座と占星術の基本概念を解説しています。"
+      },
+      {
+        "href": "https://blog.oiyo.net/ja/western-astrology-vs-saju-comparison/",
+        "label": "占星術 vs 四柱推命",
+        "desc": "西洋の星座と東洋の四柱推命を比較します。"
+      }
+    ],
+    "disclaimer": "星座相性は娯楽と自己省察のためのものです。関係の選択や重要な決定を代替しません。"
+  },
+  "zh": {
+    "faqTitle": "常见问题",
+    "readingTitle": "延伸阅读",
+    "introTitle": "每日星座运势不决定一天，只用太阳星座象征检查心态",
+    "intro": "每日星座运势以太阳星座为基础，象征性提示今天的氛围与需要留意的态度。它更适合作为轻松自检，而不是固定预言。",
+    "conceptTitle": "配对核心概念",
+    "concepts": [
+      {
+        "title": "四元素",
+        "body": "火、土、风、水象征关系中的速度、稳定、沟通与情绪流动。"
+      },
+      {
+        "title": "三模式",
+        "body": "基本、固定、变动显示启动、维持与调整能量的节奏。"
+      },
+      {
+        "title": "太阳星座限制",
+        "body": "太阳星座配对只是入门，加入月亮与上升会更立体。"
+      }
+    ],
+    "useTitle": "如何用于关系",
+    "useCases": [
+      {
+        "title": "询问彼此语言",
+        "body": "把“你为什么这样”换成“什么让你舒服或有压力”。"
+      },
+      {
+        "title": "把冲突看成节奏",
+        "body": "快慢差异不一定是缺点，也可能是需要协商的节奏。"
+      },
+      {
+        "title": "扩展到完整星盘",
+        "body": "认真看关系时，可加入月亮、金星、火星与上升。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "星座配对不好，关系就不行吗？",
+        "answer": "不能这样断定。星座配对是象征性的对话工具，真实关系取决于沟通、尊重、时机与行动。"
+      },
+      {
+        "question": "只看太阳星座够吗？",
+        "answer": "轻松参考可以，但不完整。月亮、金星、火星和上升会提供重要背景。"
+      },
+      {
+        "question": "什么是元素配对？",
+        "answer": "用火、土、风、水讨论彼此的速度和需求，并不代表某些元素一定正确或错误。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/zh/meaning-of-astrology/",
+        "label": "占星的意义",
+        "desc": "了解星座与占星的基础。"
+      },
+      {
+        "href": "https://blog.oiyo.net/zh/western-astrology-vs-saju-comparison/",
+        "label": "占星 vs 四柱八字",
+        "desc": "比较西方星座与东方四柱八字。"
+      }
+    ],
+    "disclaimer": "星座配对仅供娱乐与自我反思，不替代关系选择或重要决定。"
+  },
+  "fr": {
+    "faqTitle": "Questions fréquentes",
+    "readingTitle": "Lire plus",
+    "introTitle": "L’horoscope du jour lit une humeur symbolique; il ne décide pas votre journée",
+    "intro": "Un horoscope quotidien propose une note symbolique sur l’humeur et l’attitude du jour à partir du signe solaire. Lisez le résultat comme un léger check-in, pas une prédiction fixe.",
+    "conceptTitle": "Idées clés",
+    "concepts": [
+      {
+        "title": "Quatre éléments",
+        "body": "Feu, Terre, Air et Eau suggèrent rythme, stabilité, communication et flux émotionnel."
+      },
+      {
+        "title": "Trois modes",
+        "body": "Cardinal, Fixe et Mutable montrent comment chacun commence, maintient ou adapte l’énergie."
+      },
+      {
+        "title": "Limites du signe solaire",
+        "body": "La compatibilité solaire est une introduction; Lune et Ascendant ajoutent beaucoup de nuance."
+      }
+    ],
+    "useTitle": "Comment l’utiliser en relation",
+    "useCases": [
+      {
+        "title": "Interroger le langage",
+        "body": "Transformez “Pourquoi es-tu comme ça ?” en “Qu’est-ce qui te semble léger ou lourd ?”."
+      },
+      {
+        "title": "Lire le conflit comme rythme",
+        "body": "Un style rapide ou lent n’est pas un défaut, mais un tempo à négocier."
+      },
+      {
+        "title": "Aller au-delà du Soleil",
+        "body": "Pour une lecture sérieuse, incluez Lune, Vénus, Mars et Ascendant."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Une mauvaise compatibilité condamne-t-elle une relation ?",
+        "answer": "Non. C’est un outil symbolique de conversation. Les relations dépendent de la communication, du respect, du timing et des actes."
+      },
+      {
+        "question": "Le signe solaire suffit-il ?",
+        "answer": "Pour une lecture légère, oui. Pour plus de contexte, ajoutez Lune, Vénus, Mars et Ascendant."
+      },
+      {
+        "question": "Qu’est-ce que la compatibilité des éléments ?",
+        "answer": "Elle compare Feu, Terre, Air et Eau pour parler de rythme et de besoins, sans déclarer certains éléments bons ou mauvais."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/fr/meaning-of-astrology/",
+        "label": "Signification de l’astrologie",
+        "desc": "Un guide des signes et des bases astrologiques."
+      }
+    ],
+    "disclaimer": "La compatibilité zodiacale sert au divertissement et à la réflexion. Elle ne remplace pas les décisions relationnelles."
+  },
+  "es": {
+    "faqTitle": "Preguntas frecuentes",
+    "readingTitle": "Leer más",
+    "introTitle": "El horóscopo diario revisa un clima simbólico; no decide tu día",
+    "intro": "Un horóscopo diario ofrece una nota simbólica sobre el clima y la actitud del día desde tu signo solar. Lee el resultado como un chequeo ligero, no como predicción fija.",
+    "conceptTitle": "Ideas clave",
+    "concepts": [
+      {
+        "title": "Cuatro elementos",
+        "body": "Fuego, Tierra, Aire y Agua sugieren ritmo, estabilidad, comunicación y flujo emocional."
+      },
+      {
+        "title": "Tres modalidades",
+        "body": "Cardinal, Fijo y Mutable muestran cómo cada persona inicia, sostiene o adapta energía."
+      },
+      {
+        "title": "Límites del signo solar",
+        "body": "La compatibilidad solar es introductoria; Luna y Ascendente añaden mucho matiz."
+      }
+    ],
+    "useTitle": "Cómo usarlo en relaciones",
+    "useCases": [
+      {
+        "title": "Preguntar por el lenguaje",
+        "body": "Cambia “¿por qué eres así?” por “¿qué te resulta fácil o pesado?”."
+      },
+      {
+        "title": "Leer conflicto como ritmo",
+        "body": "Un estilo rápido o lento no es defecto; es un tempo a negociar."
+      },
+      {
+        "title": "Ir más allá del Sol",
+        "body": "Para una lectura seria, incluye Luna, Venus, Marte y Ascendente."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Mala compatibilidad condena una relación?",
+        "answer": "No. Es una herramienta simbólica de conversación. Las relaciones dependen de comunicación, respeto, timing y conducta."
+      },
+      {
+        "question": "¿Basta el signo solar?",
+        "answer": "Para una lectura ligera, sí. Para más contexto, añade Luna, Venus, Marte y Ascendente."
+      },
+      {
+        "question": "¿Qué es compatibilidad de elementos?",
+        "answer": "Compara Fuego, Tierra, Aire y Agua para hablar de ritmo y necesidades, sin declarar elementos buenos o malos."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/es/meaning-of-astrology/",
+        "label": "Significado de la astrología",
+        "desc": "Una guía de signos y bases astrológicas."
+      }
+    ],
+    "disclaimer": "La compatibilidad zodiacal es para entretenimiento y reflexión. No reemplaza decisiones relacionales."
+  }
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <DailyHoroscope client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MysticTrinity topic="zodiac" locale={locale} />
   </main>
 </Layout>

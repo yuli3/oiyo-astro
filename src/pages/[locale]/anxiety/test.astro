@@ -16,9 +16,172 @@ const meta: Record<Locale, { title: string; description: string }> = {
   es: { title: 'Test de Detección de Ansiedad — Autoevaluación GAD-7', description: 'Mide tu nivel de ansiedad con 7 preguntas basadas en el GAD-7 y aprende estrategias de manejo.' },
 };
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: 'GAD-7은 지난 2주의 불안 경향을 보는 선별 도구이며 진단이 아닙니다',
+    intro: 'GAD-7은 지난 2주 동안 과도한 걱정, 긴장, 안절부절, 조절하기 어려운 불안이 얼마나 자주 있었는지 7개 문항으로 묻는 자가 선별 척도입니다. 이 테스트는 불안의 강도와 일상 영향에 대한 참고 범위를 보여주며, 진단이나 치료 결정을 대신하지 않습니다. 진단과 치료는 면허를 가진 전문가가 면담과 평가를 통해 합니다.',
+    conceptTitle: '무엇을 보나요',
+    concepts: [
+      { title: '7개 문항', body: '초조함, 걱정 조절의 어려움, 여러 걱정, 이완 어려움, 안절부절, 예민함, 두려움을 봅니다.' },
+      { title: '지난 2주 기준', body: '최근 2주 동안의 빈도를 합산해 최소·경도·중등도·중증 범위의 경향으로 읽습니다.' },
+      { title: '선별 ≠ 진단', body: '높은 점수는 전문가 상담을 고려해볼 신호일 뿐이며, 불안장애 진단을 의미하지 않습니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '이 결과로 불안장애를 진단할 수 있나요?', answer: '아니요. GAD-7은 선별 도구이며 진단이 아닙니다. 진단과 치료는 정신건강의학과 의사나 임상 전문가가 면담, 기능 영향, 다른 원인 가능성을 평가해 결정합니다.' },
+      { question: '점수가 높으면 어떻게 해야 하나요?', answer: '점수가 중등도 이상이거나 걱정과 긴장 때문에 일상이 어렵다면 전문가 상담을 권합니다. 수면, 카페인, 스트레스, 신체 질환도 함께 살펴볼 수 있습니다.' },
+      { question: '불안이 너무 심하거나 위험하다고 느껴요.', answer: '지금 안전이 걱정되거나 스스로를 해칠 위험이 있다면 즉시 도움을 요청하세요. 한국은 자살예방상담전화 109, 정신건강상담 1577-0199, 위급 시 119를 이용할 수 있습니다.' },
+      { question: '입력한 답변이 저장되나요?', answer: '결과는 브라우저에서 계산되며 개인 식별 정보를 수집·저장하지 않습니다.' },
+    ],
+    disclaimer: '이 테스트는 교육·자기 점검 목적의 선별 도구이며 의학적 진단·치료를 대신하지 않습니다. 어려움이 지속되면 면허 전문가의 도움을 받으세요. 위기 상황에서는 한국 109 / 1577-0199, 위급 시 119 또는 지역 응급 서비스에 즉시 연락하세요.',
+  },
+  en: {
+    introTitle: 'GAD-7 screens your anxiety over the last two weeks — it is not a diagnosis',
+    intro: 'The GAD-7 is a seven-item self-screening scale that asks how often, over the past two weeks, you have experienced excessive worry, tension, restlessness, and anxiety that feels hard to control. This test gives a reference range for anxiety intensity and daily impact; it does not replace diagnosis or treatment decisions. Only a licensed professional can diagnose and treat anxiety disorders.',
+    conceptTitle: 'What it measures',
+    concepts: [
+      { title: 'Seven items', body: 'Nervousness, difficulty controlling worry, too many worries, trouble relaxing, restlessness, irritability, and fear.' },
+      { title: 'Two-week window', body: 'Responses are summed across the last two weeks and read as minimal, mild, moderate, or severe ranges, not absolute cutoffs.' },
+      { title: 'Screening ≠ diagnosis', body: 'A higher score is a reason to consider support, not proof that you have an anxiety disorder.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Can this result diagnose anxiety?', answer: 'No. GAD-7 is a screening tool, not a diagnosis. Diagnosis and treatment are made by a licensed clinician after assessing symptoms, impairment, context, and other possible causes.' },
+      { question: 'My score is high. What should I do?', answer: 'If your score is moderate or higher, or worry and tension are disrupting daily life, consider talking with a professional. Sleep, caffeine, stress, and physical health can also affect anxiety.' },
+      { question: 'My anxiety feels overwhelming or unsafe.', answer: 'If you may hurt yourself or cannot stay safe, seek immediate help. In the US, call or text 988. In Korea, call 109 or 1577-0199. Elsewhere, contact local emergency services now.' },
+      { question: 'Are my answers saved?', answer: 'Results are computed in your browser and no personally identifying information is collected or stored.' },
+    ],
+    disclaimer: 'This test is an educational self-check screening tool and does not replace medical diagnosis or treatment. If difficulties persist, seek help from a licensed professional. In a crisis, contact local emergency services immediately (US: 988; KR: 109 / 1577-0199).',
+  },
+  ja: {
+    introTitle: 'GAD-7は過去2週間の不安傾向をみる選別ツールであり、診断ではありません',
+    intro: 'GAD-7は、過去2週間に過度な心配、緊張、落ち着かなさ、コントロールしにくい不安がどれくらいあったかを7項目で尋ねる自己選別スケールです。このテストは不安の強さと日常への影響を参考範囲として示すもので、診断や治療判断を代替しません。診断と治療は資格を持つ専門家が評価を通じて行います。',
+    conceptTitle: '何を見るか',
+    concepts: [
+      { title: '7つの項目', body: '緊張、心配の制御困難、さまざまな心配、リラックス困難、落ち着かなさ、いらだち、怖さを見ます。' },
+      { title: '過去2週間', body: '最近2週間の頻度を合計し、最小・軽度・中等度・重度の範囲として傾向を読みます。絶対基準ではありません。' },
+      { title: '選別 ≠ 診断', body: '高い点数は支援を検討する合図であり、不安障害の診断を意味しません。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'この結果で不安障害を診断できますか？', answer: 'いいえ。GAD-7は選別ツールであり診断ではありません。診断と治療は資格を持つ専門家が症状、生活への影響、背景、ほかの原因を評価して行います。' },
+      { question: '点数が高く出ました。どうすれば？', answer: '中等度以上、または心配や緊張で日常がつらい場合は専門家への相談を検討してください。睡眠、カフェイン、ストレス、身体の状態も不安に影響します。' },
+      { question: '不安が強すぎて危険に感じます。', answer: '自分を傷つける恐れがある、または安全を保てない場合はすぐ助けを求めてください。日本では緊急時は119、相談先としていのちの電話など地域の支援窓口があります。' },
+      { question: '回答は保存されますか？', answer: '結果はブラウザ内で計算され、個人を特定する情報は収集・保存しません。' },
+    ],
+    disclaimer: 'このテストは教育・自己点検のための選別ツールであり、医学的診断・治療を代替しません。つらさが続く場合は資格を持つ専門家に相談してください。危機時は日本では119、またはいのちの電話など地域の緊急・相談窓口へ連絡してください。',
+  },
+  zh: {
+    introTitle: 'GAD-7用于筛查近两周的焦虑趋势，并不是诊断',
+    intro: 'GAD-7是一套7题自我筛查量表，询问你在过去两周中过度担心、紧张、坐立不安以及难以控制焦虑的频率。本测试提供焦虑强度和日常影响的参考范围，不替代诊断或治疗决定。焦虑障碍的诊断与治疗必须由有资质的专业人员完成。',
+    conceptTitle: '测量什么',
+    concepts: [
+      { title: '七个题目', body: '紧张、难以控制担心、担心过多、难以放松、坐立不安、易怒和害怕出事。' },
+      { title: '近两周范围', body: '按过去两周的频率计算总分，并以最小、轻度、中度、重度范围理解趋势，而非绝对界限。' },
+      { title: '筛查 ≠ 诊断', body: '较高分数只是提示可以考虑寻求支持，并不证明你患有焦虑障碍。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '这个结果能诊断焦虑障碍吗？', answer: '不能。GAD-7是筛查工具，不是诊断。诊断与治疗需要由有资质的临床专业人员评估症状、功能影响、背景和其他可能原因。' },
+      { question: '分数偏高，该怎么办？', answer: '如果分数达到中度以上，或担心和紧张影响日常生活，建议咨询专业人士。睡眠、咖啡因、压力和身体健康也可能影响焦虑。' },
+      { question: '焦虑强到让我觉得不安全。', answer: '如果你可能伤害自己或无法保证安全，请立刻寻求帮助。请立即联系当地紧急服务，或前往最近的急诊/危机干预资源。' },
+      { question: '我的回答会被保存吗？', answer: '结果在浏览器中计算，不收集或存储任何个人身份信息。' },
+    ],
+    disclaimer: '本测试是教育与自我检查用途的筛查工具，不能替代医学诊断或治疗。若困扰持续，请寻求有资质的专业帮助。危机情况请立即联系当地紧急服务。',
+  },
+  fr: {
+    introTitle: 'Le GAD-7 dépiste l’anxiété des deux dernières semaines, sans poser de diagnostic',
+    intro: 'Le GAD-7 est une échelle d’auto-dépistage en sept items qui interroge, sur les deux dernières semaines, l’inquiétude excessive, la tension, l’agitation et l’anxiété difficile à contrôler. Ce test donne une plage de référence pour l’intensité de l’anxiété et son impact quotidien ; il ne remplace pas un diagnostic ni une décision de traitement. Seul un professionnel agréé peut diagnostiquer et traiter un trouble anxieux.',
+    conceptTitle: 'Ce qu’il mesure',
+    concepts: [
+      { title: 'Sept items', body: 'Nervosité, difficulté à contrôler les inquiétudes, inquiétudes multiples, difficulté à se détendre, agitation, irritabilité et peur.' },
+      { title: 'Fenêtre de deux semaines', body: 'Les réponses des deux dernières semaines sont additionnées et lues en plages minimale, légère, modérée ou sévère, pas comme des seuils absolus.' },
+      { title: 'Dépistage ≠ diagnostic', body: 'Un score plus élevé invite à envisager un soutien, mais ne prouve pas un trouble anxieux.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Ce résultat peut-il diagnostiquer une anxiété ?', answer: 'Non. Le GAD-7 est un outil de dépistage, pas un diagnostic. Le diagnostic et le traitement sont établis par un clinicien agréé après évaluation des symptômes, du retentissement, du contexte et d’autres causes possibles.' },
+      { question: 'Mon score est élevé. Que faire ?', answer: 'Si votre score est modéré ou plus, ou si l’inquiétude et la tension perturbent le quotidien, envisagez de consulter un professionnel. Le sommeil, la caféine, le stress et la santé physique peuvent aussi jouer.' },
+      { question: 'Mon anxiété me semble dangereuse ou incontrôlable.', answer: 'Si vous risquez de vous faire du mal ou ne pouvez pas rester en sécurité, demandez une aide immédiate. En France, appelez le 3114 ou le 15 en urgence.' },
+      { question: 'Mes réponses sont-elles enregistrées ?', answer: 'Les résultats sont calculés dans votre navigateur et aucune information personnelle identifiante n’est collectée ou stockée.' },
+    ],
+    disclaimer: 'Ce test est un outil de dépistage éducatif et ne remplace pas un diagnostic ou un traitement médical. Si les difficultés persistent, consultez un professionnel agréé. En cas de crise, contactez immédiatement les urgences locales (FR : 3114 / 15).',
+  },
+  es: {
+    introTitle: 'El GAD-7 criba la ansiedad de las dos últimas semanas, pero no diagnostica',
+    intro: 'El GAD-7 es una escala de autocribado de siete ítems que pregunta con qué frecuencia, durante las últimas dos semanas, has tenido preocupación excesiva, tensión, inquietud y ansiedad difícil de controlar. Este test ofrece un rango de referencia sobre intensidad e impacto diario; no sustituye el diagnóstico ni las decisiones de tratamiento. Solo un profesional acreditado puede diagnosticar y tratar trastornos de ansiedad.',
+    conceptTitle: 'Qué mide',
+    concepts: [
+      { title: 'Siete ítems', body: 'Nerviosismo, dificultad para controlar la preocupación, muchas preocupaciones, dificultad para relajarse, inquietud, irritabilidad y miedo.' },
+      { title: 'Ventana de dos semanas', body: 'Las respuestas se suman según las últimas dos semanas y se leen como rangos mínimo, leve, moderado o grave, no como cortes absolutos.' },
+      { title: 'Cribado ≠ diagnóstico', body: 'Una puntuación más alta es una razón para considerar apoyo, no una prueba de trastorno de ansiedad.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Este resultado diagnostica ansiedad?', answer: 'No. El GAD-7 es una herramienta de cribado, no un diagnóstico. El diagnóstico y el tratamiento los realiza un profesional acreditado tras evaluar síntomas, deterioro, contexto y otras posibles causas.' },
+      { question: 'Mi puntuación es alta. ¿Qué hago?', answer: 'Si tu puntuación es moderada o mayor, o la preocupación y la tensión interfieren en tu día a día, considera hablar con un profesional. El sueño, la cafeína, el estrés y la salud física también influyen.' },
+      { question: 'La ansiedad se siente abrumadora o insegura.', answer: 'Si puedes hacerte daño o no puedes mantenerte a salvo, busca ayuda inmediata. En España llama al 024 o al 112 en una emergencia.' },
+      { question: '¿Se guardan mis respuestas?', answer: 'Los resultados se calculan en tu navegador y no se recopila ni almacena información de identificación personal.' },
+    ],
+    disclaimer: 'Este test es una herramienta de cribado educativa y no sustituye el diagnóstico ni el tratamiento médico. Si las dificultades persisten, busca ayuda de un profesional acreditado. En una crisis, contacta de inmediato con emergencias locales (ES: 024 / 112).',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
 ---
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <AnxietyScreeningTest client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm leading-6 text-rose-900">{c.disclaimer}</p>
   </main>
 </Layout>

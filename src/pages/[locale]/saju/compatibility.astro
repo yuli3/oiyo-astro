@@ -40,12 +40,480 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  "ko": {
+    "faqTitle": "자주 묻는 질문",
+    "readingTitle": "더 깊게 읽기",
+    "introTitle": "사주 궁합은 두 사람을 점수로 줄 세우기보다 오행의 상호작용을 보는 언어입니다",
+    "intro": "사주 궁합은 두 사람의 일간, 오행 분포, 간지의 관계를 함께 보며 서로 어떤 기운을 보태고 어디서 긴장이 생기는지 살피는 명리 해석입니다. 결과는 관계의 결론이 아니라 대화를 시작하는 상징적 질문으로 다루는 것이 좋습니다.",
+    "conceptTitle": "궁합에서 보는 요소",
+    "concepts": [
+      {
+        "title": "일간 관계",
+        "body": "각자의 일간이 어떤 오행인지 보고 기본적인 반응 방식과 보완점을 읽습니다."
+      },
+      {
+        "title": "오행 균형",
+        "body": "한쪽에게 많은 기운이 다른 쪽에게 부족한지, 또는 서로 과해지는지 살핍니다."
+      },
+      {
+        "title": "충·합의 상징",
+        "body": "지지의 합과 충은 끌림과 긴장의 패턴을 상징하며, 단순한 좋고 나쁨이 아닙니다."
+      }
+    ],
+    "useTitle": "관계에 활용하는 법",
+    "useCases": [
+      {
+        "title": "판단보다 대화",
+        "body": "궁합 점수보다 서로가 어떤 상황에서 편해지고 예민해지는지 묻는 데 쓰세요."
+      },
+      {
+        "title": "반복 패턴 보기",
+        "body": "갈등이 반복되는 지점을 오행의 언어로 정리하면 대화가 덜 공격적입니다."
+      },
+      {
+        "title": "차이를 역할로 바꾸기",
+        "body": "다른 기운을 문제로만 보지 말고 서로 보완할 수 있는 역할로 해석해보세요."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "사주 궁합이 낮으면 만나면 안 되나요?",
+        "answer": "아니요. 사주 궁합은 관계를 금지하거나 허락하는 판정표가 아닙니다. 차이와 반복 패턴을 이해하는 참고로 보세요."
+      },
+      {
+        "question": "한 사람의 생시를 몰라도 볼 수 있나요?",
+        "answer": "출생 시간이 없으면 시주는 빠지지만, 연·월·일의 일간과 오행 관계만으로도 기본 흐름은 참고할 수 있습니다."
+      },
+      {
+        "question": "궁합은 과학인가요?",
+        "answer": "아니요. 명리학의 상징 해석이며 과학적 관계 진단이 아닙니다. 실제 관계에서는 대화, 존중, 행동이 더 중요합니다."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ko/meaning-of-palja/",
+        "label": "사주의 의미",
+        "desc": "사주팔자의 구조와 오행 해석의 기본을 정리했습니다."
+      },
+      {
+        "href": "https://blog.oiyo.net/ko/tool-saju-calculator/",
+        "label": "사주 계산기 가이드",
+        "desc": "사주를 처음 읽을 때 확인할 순서를 안내합니다."
+      }
+    ],
+    "disclaimer": "사주 궁합은 오락과 자기 성찰 목적입니다. 관계의 지속, 결혼, 이별 같은 결정을 대신하지 않습니다."
+  },
+  "en": {
+    "faqTitle": "Frequently asked questions",
+    "readingTitle": "Read more",
+    "introTitle": "Saju compatibility reads elemental interaction, not a final score on a relationship",
+    "intro": "Saju compatibility compares two charts through Day Masters, Five Element balance, and stem-branch relationships. It can show where two people support, challenge, or amplify each other, but it should be treated as a conversation starter rather than a conclusion.",
+    "conceptTitle": "What compatibility looks at",
+    "concepts": [
+      {
+        "title": "Day Master relation",
+        "body": "Each person’s Day Master element shows a basic style of response and possible complement."
+      },
+      {
+        "title": "Element balance",
+        "body": "The reading notices whether one person’s strong element supports, drains, or intensifies the other."
+      },
+      {
+        "title": "Harmony and clash",
+        "body": "Branch combinations can symbolize attraction or tension, but they are not simple good-or-bad labels."
+      }
+    ],
+    "useTitle": "How to use it in relationships",
+    "useCases": [
+      {
+        "title": "Use it for dialogue",
+        "body": "Ask where each person feels supported or reactive instead of treating the result as a pass/fail score."
+      },
+      {
+        "title": "Name recurring patterns",
+        "body": "Element language can make repeated conflict easier to discuss without blame."
+      },
+      {
+        "title": "Turn differences into roles",
+        "body": "A different energy can be a complement when both people understand how it works."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does low saju compatibility mean a relationship should end?",
+        "answer": "No. It is not a permission slip or prohibition. It is a symbolic way to discuss differences and recurring patterns."
+      },
+      {
+        "question": "Can we compare charts without a birth time?",
+        "answer": "Yes, with limits. Without birth time the Hour pillar is missing, but Day Master and elemental relations can still offer a basic reference."
+      },
+      {
+        "question": "Is saju compatibility scientific?",
+        "answer": "No. It is a symbolic interpretation system, not a scientific relationship test. Real relationships depend on communication, respect, and behavior."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/en/meaning-of-palja/",
+        "label": "Meaning of Saju",
+        "desc": "The structure of the Four Pillars and Five Element basics."
+      },
+      {
+        "href": "https://blog.oiyo.net/en/tool-saju-calculator/",
+        "label": "Saju calculator guide",
+        "desc": "A first-reader guide to interpreting a saju chart."
+      }
+    ],
+    "disclaimer": "Saju compatibility is for entertainment and self-reflection. It does not decide dating, marriage, separation, or family choices."
+  },
+  "ja": {
+    "faqTitle": "よくある質問",
+    "readingTitle": "詳しく読む",
+    "introTitle": "四柱推命の相性は関係を点数化するものではなく、五行の相互作用を見る言葉です",
+    "intro": "四柱推命の相性は、二人の日干、五行の分布、干支の関係を合わせて見て、どこで支え合い、どこで緊張が生まれるかを読むものです。結果は結論ではなく、対話のための象徴的な問いとして扱いましょう。",
+    "conceptTitle": "相性で見る要素",
+    "concepts": [
+      {
+        "title": "日干の関係",
+        "body": "それぞれの日干の五行から、基本的な反応と補い合う点を見ます。"
+      },
+      {
+        "title": "五行バランス",
+        "body": "一方に多い気が相手を助けるのか、強めすぎるのかを確認します。"
+      },
+      {
+        "title": "合と冲の象徴",
+        "body": "支の合や冲は引き合いと緊張の型を示し、単純な良し悪しではありません。"
+      }
+    ],
+    "useTitle": "関係での使い方",
+    "useCases": [
+      {
+        "title": "判断より対話",
+        "body": "相性の点数より、互いがどんな場面で楽になり敏感になるかを聞く材料にします。"
+      },
+      {
+        "title": "繰り返す型を見る",
+        "body": "衝突の癖を五行の言葉で整理すると、責め合いになりにくくなります。"
+      },
+      {
+        "title": "違いを役割にする",
+        "body": "違う気を問題だけでなく、補い合う役割として見直します。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "相性が低いと付き合わないほうがいいですか？",
+        "answer": "いいえ。四柱推命の相性は関係を許可・禁止する表ではありません。違いやパターンを理解する参考です。"
+      },
+      {
+        "question": "出生時刻が分からなくても見られますか？",
+        "answer": "時柱は欠けますが、年・月・日の日干と五行関係から基本的な流れは参考にできます。"
+      },
+      {
+        "question": "相性は科学ですか？",
+        "answer": "いいえ。命理の象徴解釈であり、科学的な関係診断ではありません。実際の関係では対話、尊重、行動が重要です。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ja/meaning-of-palja/",
+        "label": "四柱推命の意味",
+        "desc": "四柱命式と五行解釈の基本です。"
+      },
+      {
+        "href": "https://blog.oiyo.net/ja/tool-saju-calculator/",
+        "label": "四柱推命計算ガイド",
+        "desc": "初めて命式を読むときの順序を案内します。"
+      }
+    ],
+    "disclaimer": "四柱推命の相性は娯楽と自己省察のためのものです。交際、結婚、別れなどの決定を代替しません。"
+  },
+  "zh": {
+    "faqTitle": "常见问题",
+    "readingTitle": "延伸阅读",
+    "introTitle": "八字合盘不是给关系打分，而是看五行如何互动",
+    "intro": "八字合盘会比较两个人的日主、五行分布与干支关系，观察彼此在哪里支持、哪里产生张力。结果不应作为关系结论，而适合作为开启对话的象征性问题。",
+    "conceptTitle": "合盘关注的要素",
+    "concepts": [
+      {
+        "title": "日主关系",
+        "body": "看双方日主属于何种五行，理解基本反应方式与互补点。"
+      },
+      {
+        "title": "五行平衡",
+        "body": "观察一方旺盛的元素是否补足、消耗或加强另一方。"
+      },
+      {
+        "title": "合冲象征",
+        "body": "地支的合与冲象征吸引和张力，并非简单的好坏标签。"
+      }
+    ],
+    "useTitle": "如何用于关系",
+    "useCases": [
+      {
+        "title": "用来对话",
+        "body": "比起分数，更适合讨论彼此在哪些情境中被支持或被触发。"
+      },
+      {
+        "title": "命名重复模式",
+        "body": "用五行语言整理反复冲突，能减少指责感。"
+      },
+      {
+        "title": "把差异变成角色",
+        "body": "不同的气不一定是问题，也可能成为互补的分工。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "八字合盘不好就不能在一起吗？",
+        "answer": "不是。合盘不是允许或禁止关系的表格，而是理解差异与重复模式的参考。"
+      },
+      {
+        "question": "不知道出生时间可以看吗？",
+        "answer": "可以，但会缺少时柱。仍可从年、月、日的日主与五行关系看基本方向。"
+      },
+      {
+        "question": "八字合盘是科学吗？",
+        "answer": "不是。它是命理中的象征解释，不是科学关系测试。真实关系更依赖沟通、尊重与行动。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/zh/meaning-of-palja/",
+        "label": "四柱八字的意义",
+        "desc": "了解四柱结构与五行基础。"
+      },
+      {
+        "href": "https://blog.oiyo.net/zh/tool-saju-calculator/",
+        "label": "八字计算器指南",
+        "desc": "初学者阅读命盘的顺序。"
+      }
+    ],
+    "disclaimer": "八字合盘仅供娱乐与自我反思，不替代交往、婚姻、分手或家庭决定。"
+  },
+  "fr": {
+    "faqTitle": "Questions fréquentes",
+    "readingTitle": "Lire plus",
+    "introTitle": "La compatibilité Saju lit les interactions élémentaires, pas un score définitif",
+    "intro": "La compatibilité Saju compare les Maîtres du Jour, l’équilibre des Cinq Éléments et les relations tige-branche de deux cartes. Elle peut montrer soutien, tension ou amplification, mais elle doit ouvrir une conversation plutôt que conclure.",
+    "conceptTitle": "Ce que regarde la compatibilité",
+    "concepts": [
+      {
+        "title": "Relation des Maîtres du Jour",
+        "body": "L’élément du Maître du Jour de chacun indique un style de réponse et de complément possible."
+      },
+      {
+        "title": "Équilibre élémentaire",
+        "body": "On observe si l’élément fort de l’un soutient, épuise ou intensifie l’autre."
+      },
+      {
+        "title": "Harmonie et conflit",
+        "body": "Les combinaisons de branches peuvent symboliser attraction ou tension, sans étiquette simple."
+      }
+    ],
+    "useTitle": "Comment l’utiliser en relation",
+    "useCases": [
+      {
+        "title": "Ouvrir le dialogue",
+        "body": "Demandez où chacun se sent soutenu ou réactif, au lieu de juger par un score."
+      },
+      {
+        "title": "Nommer les schémas",
+        "body": "Le langage des éléments peut rendre les conflits répétitifs moins accusateurs."
+      },
+      {
+        "title": "Transformer les différences",
+        "body": "Une énergie différente peut devenir complémentaire si elle est comprise."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Une faible compatibilité Saju signifie-t-elle qu’il faut rompre ?",
+        "answer": "Non. Ce n’est ni une permission ni une interdiction. C’est une manière symbolique de parler des différences et des schémas."
+      },
+      {
+        "question": "Peut-on comparer sans heure de naissance ?",
+        "answer": "Oui, avec des limites. Le pilier de l’heure manque, mais le Maître du Jour et les éléments restent consultables."
+      },
+      {
+        "question": "La compatibilité Saju est-elle scientifique ?",
+        "answer": "Non. C’est un système symbolique, pas un test relationnel scientifique. Les relations réelles dépendent de la communication, du respect et des actes."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/fr/meaning-of-palja/",
+        "label": "Signification du Saju",
+        "desc": "Structure des quatre piliers et bases des Cinq Éléments."
+      },
+      {
+        "href": "https://blog.oiyo.net/fr/tool-saju-calculator/",
+        "label": "Guide du calculateur Saju",
+        "desc": "Lire une carte Saju pour la première fois."
+      }
+    ],
+    "disclaimer": "La compatibilité Saju sert au divertissement et à la réflexion. Elle ne décide pas des rencontres, mariages, séparations ou choix familiaux."
+  },
+  "es": {
+    "faqTitle": "Preguntas frecuentes",
+    "readingTitle": "Leer más",
+    "introTitle": "La compatibilidad Saju lee interacciones elementales, no una puntuación final",
+    "intro": "La compatibilidad Saju compara Maestros del Día, equilibrio de Cinco Elementos y relaciones tallo-rama entre dos cartas. Puede mostrar apoyo, tensión o amplificación, pero debe abrir conversación, no cerrar conclusiones.",
+    "conceptTitle": "Qué mira la compatibilidad",
+    "concepts": [
+      {
+        "title": "Relación de Maestros del Día",
+        "body": "El elemento de cada Maestro del Día muestra estilo de respuesta y posible complemento."
+      },
+      {
+        "title": "Equilibrio elemental",
+        "body": "Se observa si el elemento fuerte de una persona apoya, agota o intensifica a la otra."
+      },
+      {
+        "title": "Armonía y choque",
+        "body": "Las ramas pueden simbolizar atracción o tensión, sin etiquetas simples de bueno o malo."
+      }
+    ],
+    "useTitle": "Cómo usarlo en relaciones",
+    "useCases": [
+      {
+        "title": "Usarlo para dialogar",
+        "body": "Pregunta dónde cada persona se siente apoyada o reactiva, no si el resultado aprueba la relación."
+      },
+      {
+        "title": "Nombrar patrones",
+        "body": "El lenguaje elemental puede hacer que un conflicto repetido se hable con menos culpa."
+      },
+      {
+        "title": "Convertir diferencias en roles",
+        "body": "Una energía distinta puede complementar si ambas personas entienden cómo funciona."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Baja compatibilidad Saju significa terminar?",
+        "answer": "No. No es permiso ni prohibición. Es una forma simbólica de hablar de diferencias y patrones."
+      },
+      {
+        "question": "¿Podemos comparar sin hora de nacimiento?",
+        "answer": "Sí, con límites. Falta el pilar de la hora, pero el Maestro del Día y las relaciones elementales siguen orientando."
+      },
+      {
+        "question": "¿La compatibilidad Saju es científica?",
+        "answer": "No. Es un sistema simbólico, no una prueba científica de relación. Las relaciones reales dependen de comunicación, respeto y conducta."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/es/meaning-of-palja/",
+        "label": "Significado del Saju",
+        "desc": "Estructura de los cuatro pilares y bases de los Cinco Elementos."
+      },
+      {
+        "href": "https://blog.oiyo.net/es/tool-saju-calculator/",
+        "label": "Guía de calculadora Saju",
+        "desc": "Cómo leer una carta Saju por primera vez."
+      }
+    ],
+    "disclaimer": "La compatibilidad Saju es para entretenimiento y reflexión. No decide citas, matrimonio, separación ni decisiones familiares."
+  }
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <SajuCompatibility client:load locale={locale} />
     <RelatedTools locale={locale} tools={['zodiacCompat', 'saju', 'natal']} current="" />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MysticTrinity topic="saju" locale={locale} />
   </main>
 </Layout>

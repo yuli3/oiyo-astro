@@ -45,11 +45,464 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  "ko": {
+    "faqTitle": "자주 묻는 질문",
+    "readingTitle": "더 깊게 읽기",
+    "introTitle": "타로는 미래를 단정하는 카드가 아니라 지금의 질문을 비추는 거울입니다",
+    "intro": "타로 리딩은 메이저 아르카나와 마이너 아르카나의 상징을 통해 현재 마음, 선택의 갈림길, 반복되는 패턴을 읽어보는 자기 성찰 도구입니다. 결과를 예언처럼 받아들이기보다 내가 어떤 질문을 붙잡고 있는지 살피는 방식으로 사용하세요.",
+    "conceptTitle": "타로 리딩의 기본 구조",
+    "concepts": [
+      {
+        "title": "메이저 아르카나",
+        "body": "바보부터 세계까지 이어지는 22장의 큰 상징. 삶의 전환점과 깊은 주제를 비춥니다."
+      },
+      {
+        "title": "마이너 아르카나",
+        "body": "완드·컵·소드·펜타클 네 슈트. 감정, 행동, 생각, 현실 문제의 세부 결을 봅니다."
+      },
+      {
+        "title": "스프레드",
+        "body": "카드를 놓는 자리의 의미. 과거·현재·가능성처럼 질문을 읽기 쉬운 구조로 나눕니다."
+      }
+    ],
+    "useTitle": "이렇게 활용하세요",
+    "useCases": [
+      {
+        "title": "질문을 선명하게",
+        "body": "“무슨 일이 생길까?”보다 “내가 지금 확인해야 할 관점은?”처럼 열린 질문이 좋습니다."
+      },
+      {
+        "title": "상징을 기록하기",
+        "body": "카드 이름보다 먼저 떠오른 이미지와 감정을 적으면 리딩이 내 언어로 바뀝니다."
+      },
+      {
+        "title": "결정은 내가 하기",
+        "body": "타로는 선택지를 대신 정하지 않습니다. 현실의 정보와 책임을 함께 보세요."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "타로는 미래를 맞히는 도구인가요?",
+        "answer": "타로는 확정된 미래를 예언하는 도구가 아닙니다. 카드의 상징을 통해 현재의 감정, 선택지, 무의식적 패턴을 돌아보는 참고 도구입니다."
+      },
+      {
+        "question": "같은 질문을 여러 번 해도 되나요?",
+        "answer": "가능하지만 짧은 시간에 반복하면 결과보다 불안만 커질 수 있습니다. 질문을 바꾸거나, 리딩에서 얻은 행동을 먼저 실천한 뒤 다시 보는 편이 좋습니다."
+      },
+      {
+        "question": "나쁜 카드가 나오면 안 좋은 일이 생기나요?",
+        "answer": "아니요. 탑, 죽음, 악마 같은 카드는 변화, 끊어내기, 집착의 인식 같은 상징을 담을 수 있습니다. 맥락과 질문을 함께 보세요."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ko/meaning-of-tarot-major-arcana/",
+        "label": "메이저 아르카나 의미",
+        "desc": "22장의 큰 상징과 타로 여정의 흐름을 정리했습니다."
+      },
+      {
+        "href": "https://blog.oiyo.net/ko/tool-tarot-daily-card/",
+        "label": "오늘의 타로 카드",
+        "desc": "하루 한 장 리딩을 자기 성찰 의례로 쓰는 방법입니다."
+      }
+    ],
+    "disclaimer": "타로 리딩은 오락과 자기 성찰 목적입니다. 의료, 법률, 투자, 관계 결정을 대신하지 않습니다."
+  },
+  "en": {
+    "faqTitle": "Frequently asked questions",
+    "readingTitle": "Read more",
+    "introTitle": "Tarot is not a fixed prophecy; it is a mirror for the question in front of you",
+    "intro": "A tarot reading uses the symbols of the Major and Minor Arcana to reflect your current feelings, choices, and recurring patterns. Read the spread as a prompt for self-inquiry, not as a verdict about what must happen next.",
+    "conceptTitle": "How a tarot reading is built",
+    "concepts": [
+      {
+        "title": "Major Arcana",
+        "body": "The 22 archetypal cards from The Fool to The World, often pointing to turning points and deeper themes."
+      },
+      {
+        "title": "Minor Arcana",
+        "body": "Wands, Cups, Swords, and Pentacles describe action, emotion, thought, and practical life."
+      },
+      {
+        "title": "Spread positions",
+        "body": "Each card position gives the reading shape, such as past, present, tension, advice, or possibility."
+      }
+    ],
+    "useTitle": "How to use it",
+    "useCases": [
+      {
+        "title": "Frame an open question",
+        "body": "Ask “What perspective should I consider?” rather than “What will definitely happen?”"
+      },
+      {
+        "title": "Journal the symbols",
+        "body": "Write down the image, color, or feeling that stands out before looking for a fixed meaning."
+      },
+      {
+        "title": "Keep agency with you",
+        "body": "Let the cards clarify options, but make decisions with real-world information and responsibility."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does tarot predict the future?",
+        "answer": "No. Tarot is best treated as a symbolic reflection tool. It can help you notice feelings, choices, and patterns, but it does not guarantee future events."
+      },
+      {
+        "question": "Can I ask the same question repeatedly?",
+        "answer": "You can, but repeating a question in a short time often feeds anxiety. Try refining the question or acting on the first insight before drawing again."
+      },
+      {
+        "question": "Are difficult cards bad?",
+        "answer": "Not automatically. Cards such as The Tower, Death, or The Devil often point to change, release, pressure, or attachment rather than literal disaster."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/en/meaning-of-tarot-major-arcana/",
+        "label": "Major Arcana meanings",
+        "desc": "A guide to the 22 archetypal cards and their journey."
+      },
+      {
+        "href": "https://blog.oiyo.net/en/tool-tarot-daily-card/",
+        "label": "Daily tarot card",
+        "desc": "How to use one daily card as a reflective ritual."
+      }
+    ],
+    "disclaimer": "Tarot readings are for entertainment and self-reflection. They do not replace medical, legal, financial, or relationship decisions."
+  },
+  "ja": {
+    "faqTitle": "よくある質問",
+    "readingTitle": "詳しく読む",
+    "introTitle": "タロットは未来を決める予言ではなく、今の問いを映す鏡です",
+    "intro": "タロットリーディングは、大アルカナと小アルカナの象徴を通して、今の気持ち、選択肢、繰り返しているパターンを見つめる自己省察の道具です。必ず起こることではなく、自分がどんな問いを抱えているかを読む手がかりとして使います。",
+    "conceptTitle": "タロットリーディングの基本",
+    "concepts": [
+      {
+        "title": "大アルカナ",
+        "body": "愚者から世界までの22枚。人生の転機や深いテーマを象徴します。"
+      },
+      {
+        "title": "小アルカナ",
+        "body": "ワンド・カップ・ソード・ペンタクル。行動、感情、思考、現実面の細部を読みます。"
+      },
+      {
+        "title": "スプレッド",
+        "body": "カードを置く位置の意味。過去、現在、助言、可能性など問いに形を与えます。"
+      }
+    ],
+    "useTitle": "使い方",
+    "useCases": [
+      {
+        "title": "問いを開く",
+        "body": "「何が起きる？」より「今どんな視点が必要？」のような問いが向いています。"
+      },
+      {
+        "title": "象徴を書き留める",
+        "body": "カード名より先に、目に入った絵柄や感情を書き出すと自分の言葉になります。"
+      },
+      {
+        "title": "決めるのは自分",
+        "body": "タロットは決定を代行しません。現実の情報と責任を合わせて判断しましょう。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "タロットは未来を当てるものですか？",
+        "answer": "いいえ。タロットは確定した未来を予言するものではなく、感情や選択肢、無意識のパターンを見直す象徴的な参考です。"
+      },
+      {
+        "question": "同じ質問を何度もしてもいいですか？",
+        "answer": "できますが、短時間に繰り返すと不安が強くなりがちです。問いを変えるか、最初の気づきを行動に移してから見直しましょう。"
+      },
+      {
+        "question": "怖いカードは悪い意味ですか？",
+        "answer": "必ずしもそうではありません。塔、死神、悪魔などは変化、手放し、執着への気づきを示すことがあります。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ja/meaning-of-tarot-major-arcana/",
+        "label": "大アルカナの意味",
+        "desc": "22枚の大きな象徴と旅の流れを解説しています。"
+      },
+      {
+        "href": "https://blog.oiyo.net/ja/tool-tarot-daily-card/",
+        "label": "今日のタロットカード",
+        "desc": "一日一枚を自己省察の習慣にする方法です。"
+      }
+    ],
+    "disclaimer": "タロットリーディングは娯楽と自己省察のためのものです。医療、法律、投資、人間関係の判断を代替しません。"
+  },
+  "zh": {
+    "faqTitle": "常见问题",
+    "readingTitle": "延伸阅读",
+    "introTitle": "塔罗不是固定的预言，而是映照当下问题的镜子",
+    "intro": "塔罗解读通过大阿尔卡那与小阿尔卡那的象征，观察此刻的情绪、选择与反复出现的模式。抽牌与牌阵不是命运判决，而是帮助你看清自己正在提问什么。",
+    "conceptTitle": "塔罗解读的基本结构",
+    "concepts": [
+      {
+        "title": "大阿尔卡那",
+        "body": "从愚者到世界的22张原型牌，常指向转折、成长与深层主题。"
+      },
+      {
+        "title": "小阿尔卡那",
+        "body": "权杖、圣杯、宝剑、星币四组，分别触及行动、情感、思维与现实事务。"
+      },
+      {
+        "title": "牌阵位置",
+        "body": "每个位置赋予牌义结构，如过去、现在、建议、阻力或可能性。"
+      }
+    ],
+    "useTitle": "如何使用",
+    "useCases": [
+      {
+        "title": "提出开放问题",
+        "body": "比起“会发生什么”，更适合问“我现在需要看见什么角度”。"
+      },
+      {
+        "title": "记录象征",
+        "body": "先写下画面、颜色或直觉感受，再对照牌义，解读会更贴近自己。"
+      },
+      {
+        "title": "保留自己的选择权",
+        "body": "塔罗可以澄清选项，但现实判断仍需要信息、责任与行动。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "塔罗能预测未来吗？",
+        "answer": "不能保证。塔罗更适合作为象征性的反思工具，帮助你看见情绪、选择与模式，而不是断定未来事件。"
+      },
+      {
+        "question": "同一个问题可以反复抽吗？",
+        "answer": "可以，但短时间反复抽牌容易放大焦虑。建议先调整问题，或实践第一次解读得到的行动提示。"
+      },
+      {
+        "question": "抽到可怕的牌就是坏事吗？",
+        "answer": "不是。高塔、死神、恶魔等牌常象征改变、放下、压力或执着，并不等于灾难。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://blog.oiyo.net/zh/tool-tarot-daily-card/",
+        "label": "每日塔罗牌",
+        "desc": "把每日一张牌作为反思仪式的方法。"
+      }
+    ],
+    "disclaimer": "塔罗解读仅供娱乐与自我反思，不替代医疗、法律、财务或关系决定。"
+  },
+  "fr": {
+    "faqTitle": "Questions fréquentes",
+    "readingTitle": "Lire plus",
+    "introTitle": "Le tarot n’est pas une prophétie fixe, mais un miroir pour votre question",
+    "intro": "Un tirage de tarot utilise les symboles des arcanes majeurs et mineurs pour éclairer vos émotions, vos choix et vos schémas actuels. Lisez les cartes comme une invitation à réfléchir, non comme un verdict sur ce qui doit arriver.",
+    "conceptTitle": "La structure d’un tirage",
+    "concepts": [
+      {
+        "title": "Arcanes majeurs",
+        "body": "Les 22 cartes de grands archétypes, du Mat au Monde, souvent liées aux passages et thèmes profonds."
+      },
+      {
+        "title": "Arcanes mineurs",
+        "body": "Bâtons, Coupes, Épées et Deniers décrivent l’action, l’émotion, la pensée et le concret."
+      },
+      {
+        "title": "Positions du tirage",
+        "body": "Chaque place donne une fonction à la carte : passé, présent, tension, conseil ou possibilité."
+      }
+    ],
+    "useTitle": "Comment l’utiliser",
+    "useCases": [
+      {
+        "title": "Formuler une question ouverte",
+        "body": "Préférez “Quelle perspective considérer ?” à “Que va-t-il forcément se passer ?”."
+      },
+      {
+        "title": "Noter les symboles",
+        "body": "Écrivez l’image, la couleur ou la sensation qui ressort avant de chercher un sens fixe."
+      },
+      {
+        "title": "Garder votre pouvoir de décision",
+        "body": "Les cartes clarifient des pistes; les décisions demandent aussi faits, responsabilité et action."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Le tarot prédit-il l’avenir ?",
+        "answer": "Non. Le tarot est plus utile comme outil symbolique de réflexion. Il aide à remarquer émotions, choix et schémas, sans garantir les événements."
+      },
+      {
+        "question": "Puis-je poser plusieurs fois la même question ?",
+        "answer": "Oui, mais le faire à répétition nourrit souvent l’anxiété. Affinez plutôt la question ou agissez sur la première intuition."
+      },
+      {
+        "question": "Les cartes sombres sont-elles mauvaises ?",
+        "answer": "Pas forcément. La Maison Dieu, la Mort ou le Diable peuvent parler de changement, de libération, de pression ou d’attachement."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://blog.oiyo.net/fr/tool-tarot-daily-card/",
+        "label": "Carte de tarot quotidienne",
+        "desc": "Utiliser une carte par jour comme rituel de réflexion."
+      }
+    ],
+    "disclaimer": "Les tirages de tarot servent au divertissement et à la réflexion. Ils ne remplacent pas les décisions médicales, juridiques, financières ou relationnelles."
+  },
+  "es": {
+    "faqTitle": "Preguntas frecuentes",
+    "readingTitle": "Leer más",
+    "introTitle": "El tarot no es una profecía fija, sino un espejo para tu pregunta",
+    "intro": "Una lectura de tarot usa los símbolos de los arcanos mayores y menores para observar emociones, opciones y patrones presentes. Lee la tirada como una invitación a reflexionar, no como una sentencia sobre lo que debe ocurrir.",
+    "conceptTitle": "Cómo se construye una lectura",
+    "concepts": [
+      {
+        "title": "Arcanos mayores",
+        "body": "Las 22 cartas arquetípicas, de El Loco a El Mundo, suelen señalar giros y temas profundos."
+      },
+      {
+        "title": "Arcanos menores",
+        "body": "Bastos, Copas, Espadas y Oros describen acción, emoción, pensamiento y vida práctica."
+      },
+      {
+        "title": "Posiciones de la tirada",
+        "body": "Cada lugar da forma a la lectura: pasado, presente, tensión, consejo o posibilidad."
+      }
+    ],
+    "useTitle": "Cómo usarlo",
+    "useCases": [
+      {
+        "title": "Formula una pregunta abierta",
+        "body": "Mejor “¿Qué perspectiva necesito considerar?” que “¿Qué pasará con seguridad?”."
+      },
+      {
+        "title": "Registra los símbolos",
+        "body": "Anota la imagen, color o sensación que aparece antes de buscar un significado cerrado."
+      },
+      {
+        "title": "Conserva tu agencia",
+        "body": "Las cartas aclaran opciones; las decisiones requieren información real y responsabilidad."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿El tarot predice el futuro?",
+        "answer": "No. El tarot funciona mejor como herramienta simbólica de reflexión. Puede ayudarte a notar emociones, elecciones y patrones, pero no garantiza eventos futuros."
+      },
+      {
+        "question": "¿Puedo repetir la misma pregunta?",
+        "answer": "Puedes, aunque hacerlo muchas veces en poco tiempo suele alimentar ansiedad. Ajusta la pregunta o actúa sobre la primera lectura antes de repetir."
+      },
+      {
+        "question": "¿Las cartas difíciles son malas?",
+        "answer": "No necesariamente. La Torre, la Muerte o el Diablo pueden hablar de cambio, liberación, presión o apego, no de desastre literal."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://blog.oiyo.net/es/tool-tarot-daily-card/",
+        "label": "Carta diaria de tarot",
+        "desc": "Cómo usar una carta al día como ritual reflexivo."
+      }
+    ],
+    "disclaimer": "Las lecturas de tarot son para entretenimiento y reflexión. No reemplazan decisiones médicas, legales, financieras o relacionales."
+  }
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-8">
     <TarotReading client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
     <MysticTrinity topic="tarot" locale={locale} />
     <MentalBoost locale={locale} />
   </main>

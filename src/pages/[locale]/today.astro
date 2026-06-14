@@ -45,11 +45,479 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  "ko": {
+    "faqTitle": "자주 묻는 질문",
+    "readingTitle": "더 깊게 읽기",
+    "introTitle": "오늘의 우주는 여러 상징 도구를 한 화면에 모아 하루의 리듬을 가볍게 점검합니다",
+    "intro": "오늘 페이지는 별자리, 사주 일진, 타로, 절기 같은 서로 다른 상징 체계를 한곳에 모아 오늘의 분위기를 다층적으로 살펴보는 데 도움을 줍니다. 하나의 결과를 정답으로 삼기보다 여러 언어가 공통으로 건네는 질문을 찾아보세요.",
+    "conceptTitle": "함께 보는 오늘의 신호",
+    "concepts": [
+      {
+        "title": "별자리 흐름",
+        "body": "태양 별자리와 점성술적 분위기를 통해 오늘의 정서와 태도를 가볍게 읽습니다."
+      },
+      {
+        "title": "사주 일진과 절기",
+        "body": "간지와 절기 감각으로 하루의 계절적·상징적 리듬을 살핍니다."
+      },
+      {
+        "title": "타로와 카드 메시지",
+        "body": "한 장의 상징을 통해 오늘 붙잡을 질문이나 작은 실천을 정리합니다."
+      }
+    ],
+    "useTitle": "이렇게 활용하세요",
+    "useCases": [
+      {
+        "title": "공통 키워드 찾기",
+        "body": "여러 도구에서 반복되는 단어가 있다면 오늘의 관찰 포인트로 삼아보세요."
+      },
+      {
+        "title": "아침과 밤에 나누어 보기",
+        "body": "아침에는 초점을 정하고, 밤에는 실제 하루와 비교하며 기록합니다."
+      },
+      {
+        "title": "중요 결정은 따로",
+        "body": "오늘의 상징은 마음 점검용입니다. 중요한 선택은 사실과 전문 조언을 함께 보세요."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "오늘의 우주는 무엇을 합쳐 보여주나요?",
+        "answer": "별자리, 사주 일진, 타로, 절기처럼 서로 다른 상징 체계를 한 화면에서 가볍게 비교할 수 있게 구성합니다."
+      },
+      {
+        "question": "결과가 서로 다르면 무엇을 믿어야 하나요?",
+        "answer": "하나를 맞고 틀린 것으로 고르기보다, 서로 다른 관점이 어떤 질문을 던지는지 보세요. 공통 키워드가 있으면 참고하기 좋습니다."
+      },
+      {
+        "question": "오늘의 운세는 과학적 예측인가요?",
+        "answer": "아니요. 이 페이지의 내용은 문화적·상징적 해석이며 과학적 예측이 아닙니다. 자기 성찰과 대화의 참고로 사용하세요."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ko/meaning-of-astrology/",
+        "label": "점성술의 의미",
+        "desc": "별자리와 점성술을 상징 언어로 이해하는 기본 안내입니다."
+      },
+      {
+        "href": "https://blog.oiyo.net/ko/tool-saju-calculator/",
+        "label": "사주 계산기 가이드",
+        "desc": "사주팔자와 오행 흐름을 처음 읽는 방법입니다."
+      }
+    ],
+    "disclaimer": "오늘의 우주 결과는 오락과 자기 성찰 목적입니다. 의료, 법률, 투자, 관계 결정을 대신하지 않습니다."
+  },
+  "en": {
+    "faqTitle": "Frequently asked questions",
+    "readingTitle": "Read more",
+    "introTitle": "Today gathers several symbolic tools so you can check the day’s rhythm lightly",
+    "intro": "The Today page brings zodiac, saju daily rhythm, tarot, and seasonal signals into one place. Instead of treating one result as the answer, look for the questions and keywords that several symbolic languages seem to share.",
+    "conceptTitle": "Signals shown together",
+    "concepts": [
+      {
+        "title": "Zodiac tone",
+        "body": "Sun-sign and astrological mood offer a light note on today’s emotion and attitude."
+      },
+      {
+        "title": "Saju day and season",
+        "body": "Stem-branch rhythm and seasonal terms add an East Asian sense of timing."
+      },
+      {
+        "title": "Tarot and card message",
+        "body": "One symbolic card can frame a question or small practice for the day."
+      }
+    ],
+    "useTitle": "How to use it",
+    "useCases": [
+      {
+        "title": "Find shared keywords",
+        "body": "If several tools repeat a word, use it as today’s observation point."
+      },
+      {
+        "title": "Split morning and night",
+        "body": "Use the morning to set focus and the night to compare with the actual day."
+      },
+      {
+        "title": "Keep decisions separate",
+        "body": "Use today’s symbols for reflection; make important choices with facts and professional advice."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does Today combine?",
+        "answer": "It gathers symbolic systems such as zodiac, saju daily rhythm, tarot, and seasonal cues so you can compare them in one place."
+      },
+      {
+        "question": "What if the results disagree?",
+        "answer": "Do not force one to be right. Notice what question each perspective raises, and pay attention to any shared keyword."
+      },
+      {
+        "question": "Is today’s fortune a scientific prediction?",
+        "answer": "No. The content is cultural and symbolic interpretation, not scientific prediction. Use it for reflection and conversation."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/en/meaning-of-astrology/",
+        "label": "Meaning of Astrology",
+        "desc": "Understanding astrology as symbolic language."
+      },
+      {
+        "href": "https://blog.oiyo.net/en/tool-saju-calculator/",
+        "label": "Saju calculator guide",
+        "desc": "How to begin reading Four Pillars and Five Elements."
+      }
+    ],
+    "disclaimer": "Today results are for entertainment and self-reflection. They do not replace medical, legal, financial, or relationship decisions."
+  },
+  "ja": {
+    "faqTitle": "よくある質問",
+    "readingTitle": "詳しく読む",
+    "introTitle": "今日の宇宙は複数の象徴ツールを一画面に集め、一日のリズムを軽く点検します",
+    "intro": "今日ページは、星座、四柱推命の日の流れ、タロット、節気など異なる象徴体系を一つにまとめ、今日の雰囲気を多面的に見るための場所です。",
+    "conceptTitle": "一緒に見る今日のサイン",
+    "concepts": [
+      {
+        "title": "星座の流れ",
+        "body": "太陽星座と占星術的な雰囲気から、今日の感情と姿勢を軽く読みます。"
+      },
+      {
+        "title": "四柱の日運と節気",
+        "body": "干支と季節感から、一日の象徴的なリズムを見ます。"
+      },
+      {
+        "title": "タロットとカード",
+        "body": "一枚の象徴から、今日持つ問いや小さな実践を整えます。"
+      }
+    ],
+    "useTitle": "使い方",
+    "useCases": [
+      {
+        "title": "共通キーワードを探す",
+        "body": "複数の道具で同じ言葉が出るなら、今日の観察点にします。"
+      },
+      {
+        "title": "朝と夜で分ける",
+        "body": "朝は焦点を決め、夜は実際の一日と比べて記録します。"
+      },
+      {
+        "title": "重要決定は別に",
+        "body": "今日の象徴は心の点検用です。大切な選択は事実と専門的助言も見ましょう。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "今日の宇宙は何をまとめていますか？",
+        "answer": "星座、四柱推命の日の流れ、タロット、節気などの象徴体系を一画面で比べられます。"
+      },
+      {
+        "question": "結果が違うときは何を信じますか？",
+        "answer": "どれが正しいかを決めるより、それぞれがどんな問いを投げるかを見ます。"
+      },
+      {
+        "question": "今日の運勢は科学的予測ですか？",
+        "answer": "いいえ。このページの内容は文化的・象徴的解釈であり、科学的予測ではありません。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ja/meaning-of-astrology/",
+        "label": "占星術の意味",
+        "desc": "占星術を象徴言語として理解する基本案内です。"
+      },
+      {
+        "href": "https://blog.oiyo.net/ja/tool-saju-calculator/",
+        "label": "四柱推命計算ガイド",
+        "desc": "四柱命式と五行の読み始め方です。"
+      }
+    ],
+    "disclaimer": "今日の宇宙の結果は娯楽と自己省察のためのものです。医療、法律、投資、人間関係の判断を代替しません。"
+  },
+  "zh": {
+    "faqTitle": "常见问题",
+    "readingTitle": "延伸阅读",
+    "introTitle": "今日宇宙把多种象征工具放在一页，轻松检查一天的节奏",
+    "intro": "今日页面汇集星座、八字日辰、塔罗与节气等不同象征体系，帮助你多角度观察今天的氛围。",
+    "conceptTitle": "一起看的今日信号",
+    "concepts": [
+      {
+        "title": "星座氛围",
+        "body": "从太阳星座与占星主题，轻松阅读今天的情绪与态度。"
+      },
+      {
+        "title": "八字日辰与节气",
+        "body": "用干支与季节感观察一天的东方象征节奏。"
+      },
+      {
+        "title": "塔罗与卡牌信息",
+        "body": "用一张象征卡整理今天可携带的问题或小行动。"
+      }
+    ],
+    "useTitle": "如何使用",
+    "useCases": [
+      {
+        "title": "寻找共同关键词",
+        "body": "如果多个工具重复同一个词，可把它作为今天的观察点。"
+      },
+      {
+        "title": "早晚分开看",
+        "body": "早上设定焦点，晚上与真实经历对照并记录。"
+      },
+      {
+        "title": "重要决定另行处理",
+        "body": "今日象征适合自我检查，重要选择仍需事实与专业建议。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "今日宇宙合并了什么？",
+        "answer": "它把星座、八字日辰、塔罗、节气等象征体系放在同一页面，方便轻松比较。"
+      },
+      {
+        "question": "结果彼此不同怎么办？",
+        "answer": "不要急着判断谁对谁错。看每个角度提出什么问题，并留意共同关键词。"
+      },
+      {
+        "question": "今日运势是科学预测吗？",
+        "answer": "不是。本页面内容是文化与象征解读，不是科学预测。请用于自我反思与对话。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/zh/meaning-of-astrology/",
+        "label": "占星的意义",
+        "desc": "把占星理解为象征语言的基础指南。"
+      },
+      {
+        "href": "https://blog.oiyo.net/zh/tool-saju-calculator/",
+        "label": "八字计算器指南",
+        "desc": "开始阅读四柱与五行的方法。"
+      }
+    ],
+    "disclaimer": "今日宇宙结果仅供娱乐与自我反思，不替代医疗、法律、投资或关系决定。"
+  },
+  "fr": {
+    "faqTitle": "Questions fréquentes",
+    "readingTitle": "Lire plus",
+    "introTitle": "Aujourd’hui rassemble plusieurs outils symboliques pour vérifier doucement le rythme du jour",
+    "intro": "La page Aujourd’hui réunit zodiaque, rythme quotidien Saju, tarot et signaux saisonniers pour lire le jour sous plusieurs angles.",
+    "conceptTitle": "Signaux réunis",
+    "concepts": [
+      {
+        "title": "Ton zodiacal",
+        "body": "Le signe solaire donne une note légère sur émotion et attitude."
+      },
+      {
+        "title": "Jour Saju et saison",
+        "body": "Le rythme tige-branche ajoute un sens est-asiatique du timing."
+      },
+      {
+        "title": "Tarot et message de carte",
+        "body": "Une carte symbolique peut cadrer une question du jour."
+      }
+    ],
+    "useTitle": "Comment l’utiliser",
+    "useCases": [
+      {
+        "title": "Trouver des mots communs",
+        "body": "Si plusieurs outils répètent un mot, utilisez-le comme point d’observation."
+      },
+      {
+        "title": "Matin et soir",
+        "body": "Le matin pose le focus; le soir compare avec la journée réelle."
+      },
+      {
+        "title": "Séparer les décisions",
+        "body": "Utilisez les symboles pour réfléchir; décidez avec faits et conseils professionnels."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Que combine Aujourd’hui ?",
+        "answer": "Des systèmes symboliques comme zodiaque, rythme Saju, tarot et indices saisonniers."
+      },
+      {
+        "question": "Et si les résultats se contredisent ?",
+        "answer": "Ne forcez pas un gagnant. Observez la question que chaque perspective pose."
+      },
+      {
+        "question": "La fortune du jour est-elle scientifique ?",
+        "answer": "Non. C’est une interprétation culturelle et symbolique, pas une prédiction scientifique."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/fr/meaning-of-astrology/",
+        "label": "Signification de l’astrologie",
+        "desc": "Comprendre l’astrologie comme langage symbolique."
+      },
+      {
+        "href": "https://blog.oiyo.net/fr/tool-saju-calculator/",
+        "label": "Guide du calculateur Saju",
+        "desc": "Commencer à lire les Quatre Piliers et Cinq Éléments."
+      }
+    ],
+    "disclaimer": "Les résultats d’Aujourd’hui servent au divertissement et à la réflexion. Ils ne remplacent pas les décisions médicales, juridiques, financières ou relationnelles."
+  },
+  "es": {
+    "faqTitle": "Preguntas frecuentes",
+    "readingTitle": "Leer más",
+    "introTitle": "Hoy reúne varias herramientas simbólicas para revisar suavemente el ritmo del día",
+    "intro": "La página Hoy reúne zodiaco, ritmo diario Saju, tarot y señales estacionales para mirar el día desde varios ángulos.",
+    "conceptTitle": "Señales reunidas",
+    "concepts": [
+      {
+        "title": "Tono zodiacal",
+        "body": "El signo solar ofrece una nota ligera sobre emoción y actitud."
+      },
+      {
+        "title": "Día Saju y estación",
+        "body": "El ritmo tallo-rama añade sentido oriental del tiempo."
+      },
+      {
+        "title": "Tarot y mensaje de carta",
+        "body": "Una carta simbólica puede enmarcar una pregunta diaria."
+      }
+    ],
+    "useTitle": "Cómo usarlo",
+    "useCases": [
+      {
+        "title": "Encuentra palabras compartidas",
+        "body": "Si varias herramientas repiten una palabra, úsala como punto de observación."
+      },
+      {
+        "title": "Mañana y noche",
+        "body": "Por la mañana fija foco; por la noche compara con el día real."
+      },
+      {
+        "title": "Separa decisiones",
+        "body": "Usa los símbolos para reflexionar; decide con hechos y consejo profesional."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Qué combina Hoy?",
+        "answer": "Sistemas simbólicos como zodiaco, ritmo Saju, tarot e indicios estacionales."
+      },
+      {
+        "question": "¿Y si los resultados no coinciden?",
+        "answer": "No fuerces un ganador. Observa qué pregunta plantea cada perspectiva."
+      },
+      {
+        "question": "¿La fortuna de hoy es científica?",
+        "answer": "No. Es interpretación cultural y simbólica, no predicción científica."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/es/meaning-of-astrology/",
+        "label": "Significado de la astrología",
+        "desc": "Entender la astrología como lenguaje simbólico."
+      },
+      {
+        "href": "https://blog.oiyo.net/es/tool-saju-calculator/",
+        "label": "Guía de calculadora Saju",
+        "desc": "Cómo empezar con Cuatro Pilares y Cinco Elementos."
+      }
+    ],
+    "disclaimer": "Los resultados de Hoy son para entretenimiento y reflexión. No reemplazan decisiones médicas, legales, financieras o relacionales."
+  }
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-4xl px-4 py-8">
     <DailyUniverse client:load locale={locale} />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
     <MentalBoost locale={locale} />
   </main>
 </Layout>

@@ -40,12 +40,470 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  "ko": {
+    "faqTitle": "자주 묻는 질문",
+    "readingTitle": "더 깊게 읽기",
+    "introTitle": "별자리 궁합은 라벨을 붙이는 대신 서로의 원소와 리듬을 대화로 풀어내는 도구입니다",
+    "intro": "별자리 궁합은 두 태양 별자리의 원소, 특질, 상징적 기질을 비교해 관계의 편안함과 긴장을 살펴봅니다. 좋은 궁합과 나쁜 궁합으로 사람을 나누기보다, 서로 어떤 언어로 가까워지고 멀어지는지 묻는 데 사용하세요.",
+    "conceptTitle": "궁합의 핵심 개념",
+    "concepts": [
+      {
+        "title": "4원소",
+        "body": "불·흙·바람·물은 관계의 속도, 안정감, 대화 방식, 감정 흐름을 상징합니다."
+      },
+      {
+        "title": "3특질",
+        "body": "활동·고정·변화의 특질은 시작, 유지, 조정의 리듬을 보여줍니다."
+      },
+      {
+        "title": "태양 별자리의 한계",
+        "body": "태양 별자리 궁합은 입문용입니다. 달과 상승궁까지 보면 관계가 더 입체적입니다."
+      }
+    ],
+    "useTitle": "관계에 활용하는 법",
+    "useCases": [
+      {
+        "title": "상대의 언어 묻기",
+        "body": "“너는 왜 그래?” 대신 “무엇이 편하고 무엇이 부담스러워?”라는 질문으로 바꿔보세요."
+      },
+      {
+        "title": "충돌을 리듬으로 보기",
+        "body": "빠른 사람과 느린 사람의 차이를 성격 결함이 아니라 속도의 차이로 읽습니다."
+      },
+      {
+        "title": "전체 차트로 확장",
+        "body": "진지한 관계 해석은 태양 별자리만이 아니라 달, 금성, 화성, 상승궁도 함께 봅니다."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "별자리 궁합이 안 좋으면 관계가 어렵나요?",
+        "answer": "그렇게 단정할 수 없습니다. 별자리 궁합은 상징적 대화 도구이며 실제 관계는 대화, 존중, 상황에 따라 달라집니다."
+      },
+      {
+        "question": "태양 별자리만으로 궁합을 봐도 되나요?",
+        "answer": "가볍게 보기에는 충분하지만 완전한 해석은 아닙니다. 달, 금성, 화성, 상승궁 등 전체 차트를 함께 보면 더 정교합니다."
+      },
+      {
+        "question": "원소 궁합은 무엇인가요?",
+        "answer": "불·흙·바람·물의 조합으로 서로의 속도와 필요를 읽는 방식입니다. 좋은 원소가 정답이고 다른 원소가 실패라는 뜻은 아닙니다."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ko/meaning-of-astrology/",
+        "label": "점성술의 의미",
+        "desc": "별자리와 점성술의 기본 개념을 정리했습니다."
+      },
+      {
+        "href": "https://blog.oiyo.net/ko/western-astrology-vs-saju-comparison/",
+        "label": "점성술 vs 사주",
+        "desc": "서양 별자리와 동양 사주를 비교해 읽습니다."
+      }
+    ],
+    "disclaimer": "별자리 궁합은 오락과 자기 성찰 목적입니다. 관계의 선택과 중요한 결정을 대신하지 않습니다."
+  },
+  "en": {
+    "faqTitle": "Frequently asked questions",
+    "readingTitle": "Read more",
+    "introTitle": "Zodiac compatibility is a language for elements and rhythm, not a label for relationships",
+    "intro": "Zodiac compatibility compares two Sun signs through elements, modalities, and symbolic temperament. Use it to ask how two people approach closeness, pace, conflict, and comfort rather than to sort relationships into good and bad.",
+    "conceptTitle": "Core compatibility ideas",
+    "concepts": [
+      {
+        "title": "Four elements",
+        "body": "Fire, Earth, Air, and Water suggest pace, steadiness, communication style, and emotional flow."
+      },
+      {
+        "title": "Three modalities",
+        "body": "Cardinal, Fixed, and Mutable signs show how each person starts, sustains, or adapts energy."
+      },
+      {
+        "title": "Sun-sign limits",
+        "body": "Sun-sign compatibility is introductory. Moon and Rising add much more nuance."
+      }
+    ],
+    "useTitle": "How to use it in relationships",
+    "useCases": [
+      {
+        "title": "Ask about language",
+        "body": "Turn “Why are you like that?” into “What feels easy or heavy for you?”"
+      },
+      {
+        "title": "Read conflict as rhythm",
+        "body": "Fast and slow styles are not flaws; they are different tempos to negotiate."
+      },
+      {
+        "title": "Expand beyond Sun signs",
+        "body": "For serious relationship reading, include Moon, Venus, Mars, and Rising signs."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Does poor zodiac compatibility mean a relationship is doomed?",
+        "answer": "No. Zodiac compatibility is a symbolic conversation tool. Real relationships depend on communication, respect, timing, and behavior."
+      },
+      {
+        "question": "Is Sun-sign compatibility enough?",
+        "answer": "It is fine for a light read, but not complete. Moon, Venus, Mars, and Rising signs add important context."
+      },
+      {
+        "question": "What is element compatibility?",
+        "answer": "It compares Fire, Earth, Air, and Water to talk about pace and needs. It does not mean some elements are automatically right or wrong."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/en/meaning-of-astrology/",
+        "label": "Meaning of Astrology",
+        "desc": "A guide to zodiac signs and astrology basics."
+      },
+      {
+        "href": "https://blog.oiyo.net/en/western-astrology-vs-saju-comparison/",
+        "label": "Astrology vs Saju",
+        "desc": "Compare Western signs with East Asian saju."
+      }
+    ],
+    "disclaimer": "Zodiac compatibility is for entertainment and self-reflection. It does not replace relationship decisions."
+  },
+  "ja": {
+    "faqTitle": "よくある質問",
+    "readingTitle": "詳しく読む",
+    "introTitle": "星座相性は関係にラベルを貼るものではなく、元素とリズムを対話にする道具です",
+    "intro": "星座相性は、二人の太陽星座の元素、三区分、象徴的な気質を比べ、心地よさや緊張の出方を見ます。良い・悪いで分けるのではなく、互いがどんな言葉で近づき離れるかを問うために使いましょう。",
+    "conceptTitle": "相性の主な考え方",
+    "concepts": [
+      {
+        "title": "四元素",
+        "body": "火・地・風・水は関係の速度、安定感、会話、感情の流れを象徴します。"
+      },
+      {
+        "title": "三区分",
+        "body": "活動・固定・柔軟は始める、保つ、調整するリズムを示します。"
+      },
+      {
+        "title": "太陽星座の限界",
+        "body": "太陽星座の相性は入口です。月や上昇宮まで見ると立体的になります。"
+      }
+    ],
+    "useTitle": "関係での使い方",
+    "useCases": [
+      {
+        "title": "相手の言葉を聞く",
+        "body": "「なぜそうなの？」を「何が楽で何が重い？」に変えてみます。"
+      },
+      {
+        "title": "衝突をリズムとして見る",
+        "body": "速い人と遅い人の違いを欠点ではなくテンポの差として扱います。"
+      },
+      {
+        "title": "全体図へ広げる",
+        "body": "深く見るなら太陽星座だけでなく月、金星、火星、上昇宮も見ます。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "星座相性が悪いと関係は難しいですか？",
+        "answer": "そう断定はできません。星座相性は象徴的な対話ツールで、実際の関係は会話、尊重、状況で変わります。"
+      },
+      {
+        "question": "太陽星座だけで相性を見てもいいですか？",
+        "answer": "軽く見るには十分ですが完全ではありません。月、金星、火星、上昇宮を含めるとより細かくなります。"
+      },
+      {
+        "question": "元素相性とは何ですか？",
+        "answer": "火・地・風・水の組み合わせで速度や必要を読む方法です。特定の元素だけが正解という意味ではありません。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/ja/meaning-of-astrology/",
+        "label": "占星術の意味",
+        "desc": "星座と占星術の基本概念を解説しています。"
+      },
+      {
+        "href": "https://blog.oiyo.net/ja/western-astrology-vs-saju-comparison/",
+        "label": "占星術 vs 四柱推命",
+        "desc": "西洋の星座と東洋の四柱推命を比較します。"
+      }
+    ],
+    "disclaimer": "星座相性は娯楽と自己省察のためのものです。関係の選択や重要な決定を代替しません。"
+  },
+  "zh": {
+    "faqTitle": "常见问题",
+    "readingTitle": "延伸阅读",
+    "introTitle": "星座配对不是给关系贴标签，而是用元素与节奏开启对话",
+    "intro": "星座配对会比较两个太阳星座的元素、模式与象征气质，观察关系中的舒适与张力。它不是把人分成好坏配对，而是帮助你询问彼此如何靠近、如何拉开距离。",
+    "conceptTitle": "配对核心概念",
+    "concepts": [
+      {
+        "title": "四元素",
+        "body": "火、土、风、水象征关系中的速度、稳定、沟通与情绪流动。"
+      },
+      {
+        "title": "三模式",
+        "body": "基本、固定、变动显示启动、维持与调整能量的节奏。"
+      },
+      {
+        "title": "太阳星座限制",
+        "body": "太阳星座配对只是入门，加入月亮与上升会更立体。"
+      }
+    ],
+    "useTitle": "如何用于关系",
+    "useCases": [
+      {
+        "title": "询问彼此语言",
+        "body": "把“你为什么这样”换成“什么让你舒服或有压力”。"
+      },
+      {
+        "title": "把冲突看成节奏",
+        "body": "快慢差异不一定是缺点，也可能是需要协商的节奏。"
+      },
+      {
+        "title": "扩展到完整星盘",
+        "body": "认真看关系时，可加入月亮、金星、火星与上升。"
+      }
+    ],
+    "faqs": [
+      {
+        "question": "星座配对不好，关系就不行吗？",
+        "answer": "不能这样断定。星座配对是象征性的对话工具，真实关系取决于沟通、尊重、时机与行动。"
+      },
+      {
+        "question": "只看太阳星座够吗？",
+        "answer": "轻松参考可以，但不完整。月亮、金星、火星和上升会提供重要背景。"
+      },
+      {
+        "question": "什么是元素配对？",
+        "answer": "用火、土、风、水讨论彼此的速度和需求，并不代表某些元素一定正确或错误。"
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/zh/meaning-of-astrology/",
+        "label": "占星的意义",
+        "desc": "了解星座与占星的基础。"
+      },
+      {
+        "href": "https://blog.oiyo.net/zh/western-astrology-vs-saju-comparison/",
+        "label": "占星 vs 四柱八字",
+        "desc": "比较西方星座与东方四柱八字。"
+      }
+    ],
+    "disclaimer": "星座配对仅供娱乐与自我反思，不替代关系选择或重要决定。"
+  },
+  "fr": {
+    "faqTitle": "Questions fréquentes",
+    "readingTitle": "Lire plus",
+    "introTitle": "La compatibilité zodiacale parle d’éléments et de rythme, pas d’étiquettes relationnelles",
+    "intro": "La compatibilité zodiacale compare deux signes solaires par éléments, modes et tempérament symbolique. Utilisez-la pour questionner la proximité, le rythme, le conflit et le confort, non pour classer les relations.",
+    "conceptTitle": "Idées clés",
+    "concepts": [
+      {
+        "title": "Quatre éléments",
+        "body": "Feu, Terre, Air et Eau suggèrent rythme, stabilité, communication et flux émotionnel."
+      },
+      {
+        "title": "Trois modes",
+        "body": "Cardinal, Fixe et Mutable montrent comment chacun commence, maintient ou adapte l’énergie."
+      },
+      {
+        "title": "Limites du signe solaire",
+        "body": "La compatibilité solaire est une introduction; Lune et Ascendant ajoutent beaucoup de nuance."
+      }
+    ],
+    "useTitle": "Comment l’utiliser en relation",
+    "useCases": [
+      {
+        "title": "Interroger le langage",
+        "body": "Transformez “Pourquoi es-tu comme ça ?” en “Qu’est-ce qui te semble léger ou lourd ?”."
+      },
+      {
+        "title": "Lire le conflit comme rythme",
+        "body": "Un style rapide ou lent n’est pas un défaut, mais un tempo à négocier."
+      },
+      {
+        "title": "Aller au-delà du Soleil",
+        "body": "Pour une lecture sérieuse, incluez Lune, Vénus, Mars et Ascendant."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Une mauvaise compatibilité condamne-t-elle une relation ?",
+        "answer": "Non. C’est un outil symbolique de conversation. Les relations dépendent de la communication, du respect, du timing et des actes."
+      },
+      {
+        "question": "Le signe solaire suffit-il ?",
+        "answer": "Pour une lecture légère, oui. Pour plus de contexte, ajoutez Lune, Vénus, Mars et Ascendant."
+      },
+      {
+        "question": "Qu’est-ce que la compatibilité des éléments ?",
+        "answer": "Elle compare Feu, Terre, Air et Eau pour parler de rythme et de besoins, sans déclarer certains éléments bons ou mauvais."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/fr/meaning-of-astrology/",
+        "label": "Signification de l’astrologie",
+        "desc": "Un guide des signes et des bases astrologiques."
+      }
+    ],
+    "disclaimer": "La compatibilité zodiacale sert au divertissement et à la réflexion. Elle ne remplace pas les décisions relationnelles."
+  },
+  "es": {
+    "faqTitle": "Preguntas frecuentes",
+    "readingTitle": "Leer más",
+    "introTitle": "La compatibilidad zodiacal habla de elementos y ritmos, no de etiquetas para relaciones",
+    "intro": "La compatibilidad zodiacal compara dos signos solares por elementos, modalidades y temperamento simbólico. Úsala para preguntar cómo dos personas viven cercanía, ritmo, conflicto y comodidad, no para clasificar relaciones.",
+    "conceptTitle": "Ideas clave",
+    "concepts": [
+      {
+        "title": "Cuatro elementos",
+        "body": "Fuego, Tierra, Aire y Agua sugieren ritmo, estabilidad, comunicación y flujo emocional."
+      },
+      {
+        "title": "Tres modalidades",
+        "body": "Cardinal, Fijo y Mutable muestran cómo cada persona inicia, sostiene o adapta energía."
+      },
+      {
+        "title": "Límites del signo solar",
+        "body": "La compatibilidad solar es introductoria; Luna y Ascendente añaden mucho matiz."
+      }
+    ],
+    "useTitle": "Cómo usarlo en relaciones",
+    "useCases": [
+      {
+        "title": "Preguntar por el lenguaje",
+        "body": "Cambia “¿por qué eres así?” por “¿qué te resulta fácil o pesado?”."
+      },
+      {
+        "title": "Leer conflicto como ritmo",
+        "body": "Un estilo rápido o lento no es defecto; es un tempo a negociar."
+      },
+      {
+        "title": "Ir más allá del Sol",
+        "body": "Para una lectura seria, incluye Luna, Venus, Marte y Ascendente."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Mala compatibilidad condena una relación?",
+        "answer": "No. Es una herramienta simbólica de conversación. Las relaciones dependen de comunicación, respeto, timing y conducta."
+      },
+      {
+        "question": "¿Basta el signo solar?",
+        "answer": "Para una lectura ligera, sí. Para más contexto, añade Luna, Venus, Marte y Ascendente."
+      },
+      {
+        "question": "¿Qué es compatibilidad de elementos?",
+        "answer": "Compara Fuego, Tierra, Aire y Agua para hablar de ritmo y necesidades, sin declarar elementos buenos o malos."
+      }
+    ],
+    "reading": [
+      {
+        "href": "https://wiki.oiyo.net/es/meaning-of-astrology/",
+        "label": "Significado de la astrología",
+        "desc": "Una guía de signos y bases astrológicas."
+      }
+    ],
+    "disclaimer": "La compatibilidad zodiacal es para entretenimiento y reflexión. No reemplaza decisiones relacionales."
+  }
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <ZodiacCompatibilityCalculator client:load locale={locale} />
     <RelatedTools locale={locale} tools={['zodiac', 'natal', 'saju']} current="zodiacCompat" />
+
+    <section class="mt-10 border-t border-violet-100 pt-8">
+      <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-violet-100 bg-white p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-violet-50 p-4">
+            <h3 class="font-semibold text-violet-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-violet-800">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-violet-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-violet-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-violet-100 bg-white p-4 transition-colors hover:border-violet-300 hover:bg-violet-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-violet-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-violet-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MysticTrinity topic="zodiac" locale={locale} />
   </main>
 </Layout>
