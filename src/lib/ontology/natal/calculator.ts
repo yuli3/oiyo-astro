@@ -151,9 +151,12 @@ export interface NatalChart {
   mars: Placement;
   jupiter: Placement;
   saturn: Placement;
+  uranus: Placement;
+  neptune: Placement;
+  pluto: Placement;
 }
 
-/** Compute the Big Three + personal/social planets for a precise UTC birth instant + location. */
+/** Compute the full ten-body chart (+ ascendant) for a precise UTC birth instant + location. */
 export function computeNatalChart({ date, latitude, longitude }: NatalInput): NatalChart {
   return {
     sun: toPlacement(getSolarLongitude(date)),
@@ -164,5 +167,8 @@ export function computeNatalChart({ date, latitude, longitude }: NatalInput): Na
     mars: toPlacement(getPlanetLongitude('mars', date)),
     jupiter: toPlacement(getPlanetLongitude('jupiter', date)),
     saturn: toPlacement(getPlanetLongitude('saturn', date)),
+    uranus: toPlacement(getPlanetLongitude('uranus', date)),
+    neptune: toPlacement(getPlanetLongitude('neptune', date)),
+    pluto: toPlacement(getPlanetLongitude('pluto', date)),
   };
 }

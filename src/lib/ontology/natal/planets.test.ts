@@ -72,3 +72,32 @@ describe('social planets — Jupiter & Saturn', () => {
     expect(Math.floor(getPlanetLongitude('saturn', t2020) / 30)).toBe(9); // Capricorn
   });
 });
+
+describe('outer planets — Uranus, Neptune, Pluto', () => {
+  // Outer planets move slowly, so their sign is stable for years — these dates are
+  // chosen well inside documented multi-year placements (avoiding cusp/retrograde edges).
+  it('matches ephemeris signs at known dates', () => {
+    const sign = (p: 'uranus' | 'neptune' | 'pluto', iso: string) =>
+      Math.floor(getPlanetLongitude(p, new Date(iso)) / 30);
+    // Uranus in Taurus (firmly 2019–2025).
+    expect(sign('uranus', '2021-06-01T12:00:00Z')).toBe(1); // Taurus
+    // Uranus in Aries (2011–2018).
+    expect(sign('uranus', '2014-06-01T12:00:00Z')).toBe(0); // Aries
+    // Neptune in Pisces (2012–2025).
+    expect(sign('neptune', '2018-06-01T12:00:00Z')).toBe(11); // Pisces
+    // Pluto in Capricorn (2008–2023).
+    expect(sign('pluto', '2015-06-01T12:00:00Z')).toBe(9); // Capricorn
+    // Pluto in Sagittarius (1995–2008).
+    expect(sign('pluto', '2000-06-01T12:00:00Z')).toBe(8); // Sagittarius
+  });
+
+  it('stays within 0–360 and moves slowly', () => {
+    for (const p of ['uranus', 'neptune', 'pluto'] as const) {
+      for (let i = 0; i < 120; i++) {
+        const lon = getPlanetLongitude(p, new Date(Date.UTC(1990, 0, 1) + i * 90 * 86400000));
+        expect(lon).toBeGreaterThanOrEqual(0);
+        expect(lon).toBeLessThan(360);
+      }
+    }
+  });
+});

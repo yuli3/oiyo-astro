@@ -17,7 +17,7 @@ const D2R = Math.PI / 180;
 const R2D = 180 / Math.PI;
 const EPOCH_2000_JAN0 = 2451543.5;
 
-export type Planet = 'mercury' | 'venus' | 'mars' | 'jupiter' | 'saturn';
+export type Planet = 'mercury' | 'venus' | 'mars' | 'jupiter' | 'saturn' | 'uranus' | 'neptune' | 'pluto';
 
 interface Elements {
   N: number; // longitude of ascending node (deg)
@@ -75,17 +75,85 @@ const PLANET_ELEMENTS: Record<Planet, (d: number) => Elements> = {
     e: 0.055546 - 9.499e-9 * d,
     M: 316.967 + 0.0334442282 * d,
   }),
+  uranus: (d) => ({
+    N: 74.0005 + 1.3978e-5 * d,
+    i: 0.7733 + 1.9e-8 * d,
+    w: 96.6612 + 3.0565e-5 * d,
+    a: 19.18171 - 1.55e-8 * d,
+    e: 0.047318 + 7.45e-9 * d,
+    M: 142.5905 + 0.011725806 * d,
+  }),
+  neptune: (d) => ({
+    N: 131.7806 + 3.0173e-5 * d,
+    i: 1.77 - 2.55e-7 * d,
+    w: 272.8461 - 6.027e-6 * d,
+    a: 30.05826 + 3.313e-8 * d,
+    e: 0.008606 + 2.15e-9 * d,
+    M: 260.2471 + 0.005995147 * d,
+  }),
+  // Pluto is handled by a dedicated periodic-term formula (plutoHeliocentric), not Keplerian elements.
+  pluto: () => ({ N: 0, i: 0, w: 0, a: 0, e: 0, M: 0 }),
 };
 
-// Mean anomalies of Jupiter/Saturn (deg) — arguments for mutual perturbations.
+// Mean anomalies (deg) — arguments for mutual perturbations.
 function jupiterMeanAnomaly(d: number): number { return 19.895 + 0.0830853001 * d; }
 function saturnMeanAnomaly(d: number): number { return 316.967 + 0.0334442282 * d; }
+function uranusMeanAnomaly(d: number): number { return 142.5905 + 0.011725806 * d; }
+
+/**
+ * Pluto's heliocentric ecliptic rectangular coordinates (AU) via Schlyter's special
+ * periodic-term series (valid ~1800–2050). Pluto's orbit is too eccentric/inclined
+ * for the simple Keplerian model, so it gets its own treatment.
+ */
+function plutoHeliocentric(d: number): { x: number; y: number; z: number } {
+  const S = (50.03 + 0.033459652 * d) * D2R;
+  const P = (238.95 + 0.003968789 * d) * D2R;
+
+  const lonecl = 238.9508 + 0.00400703 * d
+    - 19.799 * Math.sin(P) + 19.848 * Math.cos(P)
+    + 0.897 * Math.sin(2 * P) - 4.956 * Math.cos(2 * P)
+    + 0.610 * Math.sin(3 * P) + 1.211 * Math.cos(3 * P)
+    - 0.341 * Math.sin(4 * P) - 0.190 * Math.cos(4 * P)
+    + 0.128 * Math.sin(5 * P) - 0.034 * Math.cos(5 * P)
+    - 0.038 * Math.sin(6 * P) + 0.031 * Math.cos(6 * P)
+    + 0.020 * Math.sin(S - P) - 0.010 * Math.cos(S - P);
+  const latecl = -3.9082
+    - 5.453 * Math.sin(P) - 14.975 * Math.cos(P)
+    + 3.527 * Math.sin(2 * P) + 1.673 * Math.cos(2 * P)
+    - 1.051 * Math.sin(3 * P) + 0.328 * Math.cos(3 * P)
+    + 0.179 * Math.sin(4 * P) - 0.292 * Math.cos(4 * P)
+    + 0.019 * Math.sin(5 * P) + 0.100 * Math.cos(5 * P)
+    - 0.031 * Math.sin(6 * P) - 0.026 * Math.cos(6 * P)
+    + 0.011 * Math.cos(S - P);
+  const r = 40.72
+    + 6.68 * Math.sin(P) + 6.90 * Math.cos(P)
+    - 1.18 * Math.sin(2 * P) - 0.03 * Math.cos(2 * P)
+    + 0.15 * Math.sin(3 * P) - 0.14 * Math.cos(3 * P);
+
+  const lon = lonecl * D2R;
+  const lat = latecl * D2R;
+  return {
+    x: r * Math.cos(lon) * Math.cos(lat),
+    y: r * Math.sin(lon) * Math.cos(lat),
+    z: r * Math.sin(lat),
+  };
+}
 
 /**
  * Schlyter perturbation correction to a planet's heliocentric ecliptic longitude
  * (degrees). Significant only for Jupiter and Saturn (mutual perturbations).
  */
 function longitudePerturbation(planet: Planet, d: number): number {
+  if (planet === 'uranus') {
+    const Mj = jupiterMeanAnomaly(d) * D2R;
+    const Ms = saturnMeanAnomaly(d) * D2R;
+    const Mu = uranusMeanAnomaly(d) * D2R;
+    return (
+      0.040 * Math.sin(Ms - 2 * Mu + 6 * D2R)
+      + 0.035 * Math.sin(Ms - 3 * Mu + 33 * D2R)
+      - 0.015 * Math.sin(Mj - Mu + 20 * D2R)
+    );
+  }
   if (planet !== 'jupiter' && planet !== 'saturn') return 0;
   const Mj = jupiterMeanAnomaly(d) * D2R;
   const Ms = saturnMeanAnomaly(d) * D2R;
@@ -160,7 +228,7 @@ export function getSchlyterSun(date: Date): { longitude: number; x: number; y: n
 /** Geocentric ecliptic longitude of a planet (deg, 0–360). */
 export function getPlanetLongitude(planet: Planet, date: Date): number {
   const d = daysSinceEpoch(date);
-  let helio = heliocentric(PLANET_ELEMENTS[planet](d));
+  let helio = planet === 'pluto' ? plutoHeliocentric(d) : heliocentric(PLANET_ELEMENTS[planet](d));
 
   // Apply Jupiter/Saturn mutual perturbations to the heliocentric longitude.
   const dLon = longitudePerturbation(planet, d);

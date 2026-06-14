@@ -29,6 +29,9 @@ const COPY: Record<NatalLocale, {
   mars: string; marsSub: string;
   jupiter: string; jupiterSub: string;
   saturn: string; saturnSub: string;
+  uranus: string; uranusSub: string;
+  neptune: string; neptuneSub: string;
+  pluto: string; plutoSub: string;
   ascNeedsTime: string;
   moonNote: string;
   method: string;
@@ -53,6 +56,9 @@ const COPY: Record<NatalLocale, {
     mars: '화성', marsSub: '추진력·욕망·행동',
     jupiter: '목성', jupiterSub: '확장·행운·성장의 방향',
     saturn: '토성', saturnSub: '책임·한계·숙련의 과제',
+    uranus: '천왕성', uranusSub: '변화·독창성·자유 (세대)',
+    neptune: '해왕성', neptuneSub: '꿈·영성·상상 (세대)',
+    pluto: '명왕성', plutoSub: '변형·재생·심층의 힘 (세대)',
     ascNeedsTime: '상승궁은 태어난 시각이 있어야 계산할 수 있어요.',
     moonNote: '시간을 모를 경우 달 별자리는 정오 기준 근사치이며, 별자리 경계 근처에서는 달라질 수 있습니다.',
     method: '계산 방법: 행성 위치를 Meeus·Schlyter 천문 알고리즘으로 직접 계산하고 천체력과 대조 검증했습니다. (결과를 짐작하는 블랙박스가 아닙니다.)',
@@ -77,6 +83,9 @@ const COPY: Record<NatalLocale, {
     mars: 'Mars', marsSub: 'Drive, desire & action',
     jupiter: 'Jupiter', jupiterSub: 'Growth, luck & expansion',
     saturn: 'Saturn', saturnSub: 'Responsibility, limits & mastery',
+    uranus: 'Uranus', uranusSub: 'Change, originality & freedom (generational)',
+    neptune: 'Neptune', neptuneSub: 'Dreams, spirituality & imagination (generational)',
+    pluto: 'Pluto', plutoSub: 'Transformation, rebirth & depth (generational)',
     ascNeedsTime: 'The Rising sign needs a birth time to be calculated.',
     moonNote: 'Without a birth time, the Moon sign is a noon-based approximation and may differ near sign boundaries.',
     method: 'How it’s computed: planetary positions are calculated directly with Meeus/Schlyter astronomical algorithms and cross-checked against an ephemeris — not a black box.',
@@ -101,6 +110,9 @@ const COPY: Record<NatalLocale, {
     mars: '火星', marsSub: '推進力・欲望・行動',
     jupiter: '木星', jupiterSub: '拡大・幸運・成長の方向',
     saturn: '土星', saturnSub: '責任・限界・熟練の課題',
+    uranus: '天王星', uranusSub: '変化・独創性・自由（世代）',
+    neptune: '海王星', neptuneSub: '夢・霊性・想像（世代）',
+    pluto: '冥王星', plutoSub: '変容・再生・深層の力（世代）',
     ascNeedsTime: '上昇宮の計算には生まれた時刻が必要です。',
     moonNote: '時刻が不明な場合、月星座は正午基準の近似値で、星座の境界付近では変わることがあります。',
     method: '計算方法: 惑星の位置をMeeus・Schlyterの天文アルゴリズムで直接計算し、天体暦と照合して検証しています（ブラックボックスではありません）。',
@@ -125,6 +137,9 @@ const COPY: Record<NatalLocale, {
     mars: '火星', marsSub: '动力·欲望·行动',
     jupiter: '木星', jupiterSub: '扩展·幸运·成长方向',
     saturn: '土星', saturnSub: '责任·限制·磨砺课题',
+    uranus: '天王星', uranusSub: '变革·独创·自由（世代）',
+    neptune: '海王星', neptuneSub: '梦想·灵性·想象（世代）',
+    pluto: '冥王星', plutoSub: '蜕变·重生·深层力量（世代）',
     ascNeedsTime: '上升星座需要出生时间才能计算。',
     moonNote: '若不知出生时间，月亮星座为正午近似值，在星座边界附近可能不同。',
     method: '计算方式：行星位置以 Meeus／Schlyter 天文算法直接计算，并与星历表交叉校验，并非黑箱。',
@@ -149,6 +164,9 @@ const COPY: Record<NatalLocale, {
     mars: 'Mars', marsSub: 'Élan, désir et action',
     jupiter: 'Jupiter', jupiterSub: 'Croissance, chance et expansion',
     saturn: 'Saturne', saturnSub: 'Responsabilité, limites et maîtrise',
+    uranus: 'Uranus', uranusSub: 'Changement, originalité et liberté (générationnel)',
+    neptune: 'Neptune', neptuneSub: 'Rêves, spiritualité et imagination (générationnel)',
+    pluto: 'Pluton', plutoSub: 'Transformation, renaissance et profondeur (générationnel)',
     ascNeedsTime: 'L’Ascendant nécessite une heure de naissance.',
     moonNote: 'Sans heure de naissance, le signe lunaire est une approximation à midi et peut varier près des limites de signe.',
     method: 'Méthode : les positions planétaires sont calculées directement avec les algorithmes astronomiques de Meeus/Schlyter et vérifiées par éphéméride — pas une boîte noire.',
@@ -173,6 +191,9 @@ const COPY: Record<NatalLocale, {
     mars: 'Marte', marsSub: 'Impulso, deseo y acción',
     jupiter: 'Júpiter', jupiterSub: 'Crecimiento, suerte y expansión',
     saturn: 'Saturno', saturnSub: 'Responsabilidad, límites y maestría',
+    uranus: 'Urano', uranusSub: 'Cambio, originalidad y libertad (generacional)',
+    neptune: 'Neptuno', neptuneSub: 'Sueños, espiritualidad e imaginación (generacional)',
+    pluto: 'Plutón', plutoSub: 'Transformación, renacimiento y profundidad (generacional)',
     ascNeedsTime: 'El Ascendente necesita una hora de nacimiento para calcularse.',
     moonNote: 'Sin hora de nacimiento, el signo lunar es una aproximación al mediodía y puede variar cerca de los límites de signo.',
     method: 'Cómo se calcula: las posiciones planetarias se calculan directamente con algoritmos astronómicos de Meeus/Schlyter y se cotejan con una efeméride — no es una caja negra.',
@@ -266,6 +287,9 @@ export default function NatalChartCalculator({ locale }: Props) {
       { key: 'mars', label: t.mars, sub: t.marsSub, signKey: chart.mars.sign, deg: chart.mars.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-mars-in-${chart.mars.sign}/` },
       { key: 'jupiter', label: t.jupiter, sub: t.jupiterSub, signKey: chart.jupiter.sign, deg: chart.jupiter.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-jupiter-in-${chart.jupiter.sign}/` },
       { key: 'saturn', label: t.saturn, sub: t.saturnSub, signKey: chart.saturn.sign, deg: chart.saturn.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-saturn-in-${chart.saturn.sign}/` },
+      { key: 'uranus', label: t.uranus, sub: t.uranusSub, signKey: chart.uranus.sign, deg: chart.uranus.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-uranus-in-${chart.uranus.sign}/` },
+      { key: 'neptune', label: t.neptune, sub: t.neptuneSub, signKey: chart.neptune.sign, deg: chart.neptune.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-neptune-in-${chart.neptune.sign}/` },
+      { key: 'pluto', label: t.pluto, sub: t.plutoSub, signKey: chart.pluto.sign, deg: chart.pluto.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/ko/meaning-of-astro-pluto-in-${chart.pluto.sign}/` },
     ];
     return (
       <section className="mx-auto w-full max-w-xl">
