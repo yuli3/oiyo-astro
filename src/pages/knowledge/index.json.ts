@@ -33,6 +33,10 @@ export const GET: APIRoute = async () => {
     },
     network: {
       description: "Part of the Oiyo knowledge network (definitions · explanations · tools).",
+      conceptGraph: {
+        url: "https://wiki.oiyo.net/knowledge/relations.json",
+        description: "Canonical cross-site concept graph (hub ownership, relations, cross-locale links).",
+      },
       sites: [
         { role: "definition", name: "Oiyo Wiki", url: "https://wiki.oiyo.net", knowledge: "https://wiki.oiyo.net/knowledge/index.json" },
         { role: "explanation", name: "Oiyo Blog", url: "https://blog.oiyo.net", knowledge: "https://blog.oiyo.net/knowledge/index.json" },
