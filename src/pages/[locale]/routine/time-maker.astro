@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 
@@ -49,9 +50,214 @@ const steps: Step[] = [
     desc: { ko: '스마트폰 화면 사용 시간을 확인해보세요. 하루 4~6시간인 경우가 많습니다. 구체적인 전략:\n• SNS 앱 홈화면에서 제거 (찾아야 하므로 마찰 생김)\n• 유튜브·틱톡에 일일 사용 시간 제한 설정\n• "지루할 때 스마트폰" 습관을 "지루할 때 산책·독서"로 교체\n• 취침 30분 전 폰 다른 방에 두기', en: 'Check your smartphone screen time. For many, it\'s 4–6 hours daily. Concrete strategies:\n• Remove social media apps from your home screen (friction makes you think twice)\n• Set daily time limits for YouTube/TikTok\n• Replace "bored → phone" with "bored → walk or read"\n• Put your phone in another room 30 minutes before sleep', ja: 'スマートフォンのスクリーンタイムを確認してください。1日4〜6時間の場合が多いです。具体的な戦略：\n• SNSアプリをホーム画面から削除（探す手間が生まれる）\n• YouTube·TikTokに1日の使用時間制限を設定\n• 「暇なときスマートフォン」の習慣を「暇なとき散歩·読書」に変える\n• 就寝30分前に携帯を別の部屋に置く', zh: '查看你的手机屏幕使用时间。很多人每天4-6小时。具体策略：\n• 从主屏幕删除社交媒体应用（制造摩擦）\n• 为YouTube/抖音设置每日使用时间限制\n• 将"无聊→手机"替换为"无聊→散步或阅读"\n• 睡前30分钟把手机放在另一个房间', fr: 'Vérifiez le temps d\'écran de votre smartphone. Pour beaucoup, c\'est 4-6 heures par jour. Stratégies concrètes :\n• Supprimer les apps de réseaux sociaux de l\'écran d\'accueil\n• Définir des limites de temps quotidiennes pour YouTube/TikTok\n• Remplacer "ennui → téléphone" par "ennui → marche ou lecture"\n• Mettre le téléphone dans une autre pièce 30 min avant de dormir', es: 'Comprueba el tiempo de pantalla de tu smartphone. Para muchos, son 4-6 horas diarias. Estrategias concretas:\n• Eliminar apps de redes sociales de la pantalla de inicio\n• Establecer límites de tiempo diarios para YouTube/TikTok\n• Reemplazar "aburrido → teléfono" con "aburrido → caminar o leer"\n• Poner el teléfono en otra habitación 30 min antes de dormir' },
   },
 ];
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '시간 만들기는 빈틈을 찾는 일이 아니라 우선순위를 달력에 올리는 일입니다',
+    intro: '바쁜 일상에서 시간은 우연히 남지 않습니다. 시간 감사로 새는 곳을 보고, 에너지 높은 시간대를 보호하고, 중요한 일을 먼저 블록으로 잡으면 “언젠가”가 실제 일정으로 바뀝니다.',
+    conceptTitle: '시간을 되찾는 세 가지 축',
+    concepts: [
+      { title: '시간 감사', body: '일주일 단위로 활동을 기록해 실제로 어디에 시간이 쓰이는지 봅니다.' },
+      { title: '시간 블로킹', body: '중요한 일을 할 일 목록이 아니라 달력의 특정 시간에 배치합니다.' },
+      { title: '에너지 매칭', body: '깊은 집중은 고에너지 시간에, 잡무는 낮은 에너지 시간에 둡니다.' },
+    ],
+    useTitle: '이럴 때 도움이 됩니다',
+    useCases: [
+      { title: '개인 시간 회복', body: '운동, 독서, 취미처럼 계속 밀리는 시간을 먼저 예약합니다.' },
+      { title: '업무 집중 정리', body: '메일과 회의 사이에 사라지는 깊은 작업 시간을 보호합니다.' },
+      { title: '루틴 공간 만들기', body: '새 루틴을 넣기 전에 실제로 비울 수 있는 시간대를 찾습니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '시간 블로킹은 너무 답답하지 않나요?', answer: '모든 분을 채우라는 뜻이 아닙니다. 중요한 블록과 여유 블록을 함께 두면 오히려 덜 쫓깁니다.' },
+      { question: '시간 감사는 얼마나 해야 하나요?', answer: '처음에는 3일에서 1주일이면 충분합니다. 평일과 주말 패턴이 다르면 둘 다 포함하세요.' },
+      { question: '갑작스러운 일이 많으면 어떻게 하나요?', answer: '하루 일정의 20~30%를 버퍼로 두고, 절대 지킬 핵심 블록만 작게 잡는 편이 현실적입니다.' },
+    ],
+    readingTitle: '더 읽어보기',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: '루틴 설계 가이드', desc: '확보한 시간을 루틴으로 바꾸는 방법입니다.' },
+      { href: 'https://wiki.oiyo.net/ko/time-blocking/', label: '시간 블로킹', desc: '달력 기반 계획의 기본 개념을 정리합니다.' },
+      { href: 'https://oiyo.net/ko/routine/builder', label: '루틴 만들기', desc: '시간 블록을 실제 하루 흐름으로 연결합니다.' },
+    ],
+    disclaimer: '이 페이지는 시간을 쓰는 방식을 가볍게 돌아보는 생활 설계 콘텐츠입니다.',
+  },
+  en: {
+    introTitle: 'Making time means putting priorities on the calendar',
+    intro: 'Free time rarely appears by accident. A time audit shows where hours leak, time blocking protects what matters, and energy matching helps you put demanding work where your mind is actually available.',
+    conceptTitle: 'Three levers for reclaiming time',
+    concepts: [
+      { title: 'Time audit', body: 'Track a few days to see where your hours actually go.' },
+      { title: 'Time blocking', body: 'Move important work from a vague list into a specific calendar block.' },
+      { title: 'Energy matching', body: 'Reserve high-energy windows for deep work and low-energy windows for admin.' },
+    ],
+    useTitle: 'When to use this page',
+    useCases: [
+      { title: 'Recover personal time', body: 'Schedule exercise, reading, hobbies, or rest before the day fills itself.' },
+      { title: 'Protect focus work', body: 'Stop deep work from disappearing between messages and meetings.' },
+      { title: 'Make space for routines', body: 'Find the real time slot before adding a new habit or routine.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Is time blocking too rigid?', answer: 'It does not mean filling every minute. Good time blocking includes buffers and flexible blocks.' },
+      { question: 'How long should I run a time audit?', answer: 'Three days to one week is enough for a first pass. Include both weekdays and weekends if they differ.' },
+      { question: 'What if my schedule changes constantly?', answer: 'Keep 20–30% of the day as buffer and protect only a few small non-negotiable blocks.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: 'Routine design guide', desc: 'Turn reclaimed time into a usable routine.' },
+      { href: 'https://wiki.oiyo.net/ko/time-blocking/', label: 'Time blocking', desc: 'A reference guide to calendar-based planning.' },
+      { href: 'https://oiyo.net/en/routine/builder', label: 'Build a routine', desc: 'Connect your time blocks to a daily rhythm.' },
+    ],
+    disclaimer: 'This page is for lifestyle design and light self-reflection about how you spend time.',
+  },
+  ja: {
+    introTitle: '時間を作るとは、優先順位をカレンダーに置くことです',
+    intro: '自由な時間は自然には残りにくいものです。時間監査で漏れを見つけ、タイムブロックで大切なことを守り、エネルギーに合わせて配置すると「いつか」が予定になります。',
+    conceptTitle: '時間を取り戻す三つの軸',
+    concepts: [
+      { title: '時間監査', body: '数日から一週間、実際に時間がどこへ行くか記録します。' },
+      { title: 'タイムブロック', body: '重要なことをリストではなく、カレンダーの具体的な時間に置きます。' },
+      { title: 'エネルギー配置', body: '集中作業は高エネルギー時間に、雑務は低い時間に置きます。' },
+    ],
+    useTitle: '役立つ場面',
+    useCases: [
+      { title: '自分の時間を戻す', body: '運動、読書、趣味、休息を先に予定します。' },
+      { title: '集中時間を守る', body: 'メールや会議の間に深い作業が消えないようにします。' },
+      { title: 'ルーティンの場所を作る', body: '新しい習慣を入れる前に、現実の時間帯を見つけます。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'タイムブロックは窮屈では？', answer: 'すべての分を埋める必要はありません。余白ブロックを入れるほど現実的になります。' },
+      { question: '時間監査はどれくらい必要？', answer: '最初は3日から1週間で十分です。平日と週末が違うなら両方を含めます。' },
+      { question: '予定変更が多い場合は？', answer: '一日の20〜30%を余白にし、守るブロックを少数に絞ります。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: 'ルーティン設計ガイド', desc: '確保した時間をルーティンに変えます。' },
+      { href: 'https://wiki.oiyo.net/ko/time-blocking/', label: 'タイムブロッキング', desc: 'カレンダー計画の基本です。' },
+      { href: 'https://oiyo.net/ja/routine/builder', label: 'ルーティンを作る', desc: '時間ブロックを一日の流れにつなげます。' },
+    ],
+    disclaimer: 'このページは時間の使い方を軽く見直すための生活設計コンテンツです。',
+  },
+  zh: {
+    introTitle: '创造时间，就是把优先事项放进日历',
+    intro: '空闲时间很少自然出现。时间审计能看到时间流向，时间块能保护重要事项，能量匹配能让困难任务出现在你真正有精力的时候。',
+    conceptTitle: '夺回时间的三根杠杆',
+    concepts: [
+      { title: '时间审计', body: '记录几天到一周，看看时间实际去了哪里。' },
+      { title: '时间块', body: '把重要任务从模糊清单移到日历上的具体时间。' },
+      { title: '能量匹配', body: '高能量时做深度工作，低能量时处理杂务。' },
+    ],
+    useTitle: '适合的场景',
+    useCases: [
+      { title: '找回个人时间', body: '先预约运动、阅读、兴趣或休息，不等一天自动空出来。' },
+      { title: '保护专注工作', body: '避免深度工作被消息和会议切碎。' },
+      { title: '为例程留空间', body: '加入新习惯前，先找到真实可用的时间段。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '时间块会不会太僵硬？', answer: '不是把每分钟填满。好的时间块包含缓冲和可移动空间。' },
+      { question: '时间审计要做多久？', answer: '第一次3天到1周足够。如果工作日和周末不同，最好都包含。' },
+      { question: '日程经常变化怎么办？', answer: '保留20%到30%的缓冲，只保护少数最关键的小块。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: '例程设计指南', desc: '把找回的时间变成可执行例程。' },
+      { href: 'https://wiki.oiyo.net/ko/time-blocking/', label: '时间块', desc: '日历式计划的基本概念。' },
+      { href: 'https://oiyo.net/zh/routine/builder', label: '打造例程', desc: '把时间块连接到每日节奏。' },
+    ],
+    disclaimer: '本页用于轻松回看时间使用方式与生活设计。',
+  },
+  fr: {
+    introTitle: 'Créer du temps, c’est mettre les priorités dans l’agenda',
+    intro: 'Le temps libre apparaît rarement par hasard. Un audit montre les fuites, le time blocking protège l’essentiel et l’énergie guide le bon moment pour les tâches exigeantes.',
+    conceptTitle: 'Trois leviers',
+    concepts: [
+      { title: 'Audit du temps', body: 'Observer quelques jours pour voir où partent les heures.' },
+      { title: 'Blocs de temps', body: 'Transformer une intention vague en créneau précis.' },
+      { title: 'Énergie', body: 'Placer le travail profond aux moments les plus clairs.' },
+    ],
+    useTitle: 'Quand l’utiliser',
+    useCases: [
+      { title: 'Retrouver du temps personnel', body: 'Planifier sport, lecture, loisirs ou repos avant que la journée se remplisse.' },
+      { title: 'Protéger la concentration', body: 'Éviter que le travail profond disparaisse entre réunions et messages.' },
+      { title: 'Faire place aux routines', body: 'Trouver le vrai créneau avant d’ajouter une habitude.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Le time blocking est-il trop rigide ?', answer: 'Non si vous gardez des marges. Il protège l’essentiel sans remplir chaque minute.' },
+      { question: 'Combien de temps auditer ?', answer: 'Trois jours à une semaine suffisent pour commencer.' },
+      { question: 'Et si mon agenda change beaucoup ?', answer: 'Gardez 20 à 30% de marge et protégez seulement quelques blocs essentiels.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: 'Guide de routine', desc: 'Transformer le temps récupéré en routine.' },
+      { href: 'https://wiki.oiyo.net/ko/time-blocking/', label: 'Time blocking', desc: 'Les bases de la planification par agenda.' },
+      { href: 'https://oiyo.net/fr/routine/builder', label: 'Créer une routine', desc: 'Relier les blocs au rythme quotidien.' },
+    ],
+    disclaimer: 'Cette page sert à observer votre usage du temps avec une réflexion lifestyle légère.',
+  },
+  es: {
+    introTitle: 'Crear tiempo es poner prioridades en el calendario',
+    intro: 'El tiempo libre rara vez aparece solo. Una auditoría muestra fugas, los bloques protegen lo importante y el mapa de energía coloca tareas difíciles cuando tu mente está disponible.',
+    conceptTitle: 'Tres palancas',
+    concepts: [
+      { title: 'Auditoría de tiempo', body: 'Observar varios días para ver dónde van las horas.' },
+      { title: 'Bloques de tiempo', body: 'Pasar una intención vaga a un espacio concreto del calendario.' },
+      { title: 'Energía', body: 'Reservar horas claras para trabajo profundo y horas bajas para administración.' },
+    ],
+    useTitle: 'Cuándo usarlo',
+    useCases: [
+      { title: 'Recuperar tiempo personal', body: 'Programar ejercicio, lectura, hobbies o descanso antes de que el día se llene.' },
+      { title: 'Proteger enfoque', body: 'Evitar que el trabajo profundo desaparezca entre mensajes y reuniones.' },
+      { title: 'Hacer espacio para rutinas', body: 'Encontrar el horario real antes de sumar un hábito.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Bloquear tiempo es demasiado rígido?', answer: 'No si incluye márgenes. Protege lo importante sin llenar cada minuto.' },
+      { question: '¿Cuánto dura una auditoría?', answer: 'De tres días a una semana basta para empezar.' },
+      { question: '¿Y si mi agenda cambia mucho?', answer: 'Deja 20 a 30% de margen y protege solo unos pocos bloques esenciales.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: 'Guía de rutina', desc: 'Convertir tiempo recuperado en rutina.' },
+      { href: 'https://wiki.oiyo.net/ko/time-blocking/', label: 'Time blocking', desc: 'Bases de la planificación con calendario.' },
+      { href: 'https://oiyo.net/es/routine/builder', label: 'Construir rutina', desc: 'Conectar bloques con el ritmo diario.' },
+    ],
+    disclaimer: 'Esta página sirve para observar tu uso del tiempo con una reflexión lifestyle ligera.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={meta.title} description={meta.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <div class="mb-8 text-center">
       <h1 class="text-3xl font-black text-slate-900">{txt({ ko: '시간 만들기', en: 'Making Time', ja: '時間の作り方', zh: '创造时间', fr: 'Créer du Temps', es: 'Crear Tiempo' })}</h1>
@@ -88,6 +294,64 @@ const steps: Step[] = [
         </div>
       </a>
     </div>
+    <RelatedTools locale={locale} tools={['mbti', 'big5', 'attachment']} current="routine-time-maker" />
+
+    <section class="mt-8 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-green-100 bg-white p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-green-50 p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-slate-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MentalBoost locale={locale} />
   </main>
 </Layout>

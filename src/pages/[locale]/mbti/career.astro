@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import MbtiCareerTest from '../../../components/tests/MbtiCareerTest';
@@ -38,10 +39,279 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: 'MBTI 직업 적성은 직업명을 맞히는 것이 아니라 일하는 방식을 읽는 도구입니다',
+    intro: '같은 직업도 어떤 사람에게는 몰입이 되고, 어떤 사람에게는 소모가 됩니다. 이 테스트는 12가지 업무 상황을 통해 의사결정, 협업, 에너지 회복, 구조 선호를 살펴보고 내 성향과 잘 맞는 업무 환경을 찾도록 돕습니다.',
+    conceptTitle: '직업 적성을 볼 때 중요한 기준',
+    concepts: [
+      { title: '업무 에너지', body: '사람과의 상호작용에서 힘을 얻는지, 혼자 집중할 때 회복되는지 봅니다.' },
+      { title: '판단 방식', body: '논리와 효율을 우선하는지, 가치와 관계의 영향을 더 크게 보는지 살핍니다.' },
+      { title: '환경 구조', body: '명확한 규칙과 계획이 편한지, 변화와 자율성이 동기를 주는지 확인합니다.' },
+    ],
+    useTitle: '이렇게 활용하세요',
+    useCases: [
+      { title: '직무 탐색', body: '추천 직업명을 정답으로 보지 말고, 반복적으로 등장하는 업무 조건을 체크하세요.' },
+      { title: '면접 준비', body: '내가 잘 일하는 환경, 피하고 싶은 협업 방식, 강점이 드러나는 상황을 문장으로 정리합니다.' },
+      { title: '커리어 전환', body: '직업 자체보다 역할, 팀 문화, 의사결정 방식이 바뀌면 만족도가 달라질 수 있습니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: 'MBTI로 직업을 결정해도 되나요?', answer: '직업 선택의 참고로만 쓰는 것이 좋습니다. 실제 선택은 기술, 경험, 시장, 가치관, 생활 조건을 함께 봐야 합니다.' },
+      { question: '같은 MBTI면 같은 직업이 맞나요?', answer: '아닙니다. 같은 유형도 관심사와 경험에 따라 전혀 다른 일을 잘할 수 있습니다. 유형은 업무 선호를 읽는 한 가지 렌즈입니다.' },
+      { question: '결과가 현재 직업과 다르면 어떻게 보나요?', answer: '바로 바꿔야 한다는 뜻이 아닙니다. 현재 일에서 어떤 부분이 맞고 어떤 부분이 소모적인지 분리해보는 신호로 활용하세요.' },
+      { question: '학생도 사용할 수 있나요?', answer: '네. 전공, 동아리, 인턴십, 프로젝트를 고를 때 어떤 방식의 활동이 잘 맞는지 가볍게 탐색할 수 있습니다.' },
+    ],
+    readingTitle: '더 읽어보기',
+    reading: [
+      { href: 'https://oiyo.net/ko/mbti/test', label: 'MBTI 테스트', desc: '기본 유형을 먼저 확인하고 직업 결과와 비교해보세요.' },
+      { href: 'https://oiyo.net/ko/mbti/habits', label: 'MBTI별 습관', desc: '업무 루틴과 에너지 관리 방식까지 함께 봅니다.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTI 개념', desc: '네 선호 지표가 어떻게 유형을 만드는지 정리합니다.' },
+    ],
+    disclaimer: '이 결과는 커리어 대화를 돕는 엔터테인먼트형 자기 성찰 자료입니다.',
+  },
+  en: {
+    introTitle: 'MBTI career fit is about work style, not a fixed job destiny',
+    intro: 'The same job can feel energizing for one person and draining for another. This test uses 12 work scenarios to look at decision-making, collaboration, recovery, and structure preferences so you can name the environments where you tend to do your best work.',
+    conceptTitle: 'What career fit looks at',
+    concepts: [
+      { title: 'Work energy', body: 'Do you gain momentum through people and discussion, or through focused independent time?' },
+      { title: 'Decision style', body: 'Notice whether efficiency and logic or values and relationships carry more weight.' },
+      { title: 'Environment structure', body: 'Some people thrive on clear plans; others need autonomy, novelty, and room to adapt.' },
+    ],
+    useTitle: 'How to use it',
+    useCases: [
+      { title: 'Explore roles', body: 'Treat job suggestions as prompts. The repeated work conditions matter more than the exact titles.' },
+      { title: 'Prepare interviews', body: 'Turn your result into language about team fit, strengths, and the kind of environment where you work well.' },
+      { title: 'Rethink a career move', body: 'Sometimes satisfaction changes when role design, team culture, or decision-making style changes.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Should I choose a career based on MBTI?', answer: 'Use it as one reflection tool, not the deciding factor. Skills, experience, market conditions, values, and lifestyle all matter.' },
+      { question: 'Do people with the same MBTI fit the same jobs?', answer: 'No. People with the same type can thrive in very different fields. MBTI mainly points to work preferences.' },
+      { question: 'What if my result differs from my current job?', answer: 'It does not mean you must leave. Use it to separate which parts of your work fit and which parts drain you.' },
+      { question: 'Can students use this?', answer: 'Yes. It can help compare majors, clubs, internships, and project roles by the kind of work they require.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://oiyo.net/en/mbti/test', label: 'MBTI test', desc: 'Check your core type before comparing career patterns.' },
+      { href: 'https://oiyo.net/en/mbti/habits', label: 'MBTI habits', desc: 'Connect career fit with routines and energy management.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTI concept', desc: 'A reference overview of the four MBTI preference pairs.' },
+    ],
+    disclaimer: 'These results are entertainment-style self-reflection prompts for career conversations.',
+  },
+  ja: {
+    introTitle: 'MBTI職業適性は、職業名ではなく働き方を読むためのものです',
+    intro: '同じ仕事でも、ある人には没頭でき、別の人には消耗になることがあります。このテストは12の仕事シーンから、意思決定、協働、回復、構造の好みを見て、自分が力を出しやすい環境を言語化します。',
+    conceptTitle: '職業適性で見るポイント',
+    concepts: [
+      { title: '仕事のエネルギー', body: '人とのやり取りで勢いが出るか、一人で集中すると回復するかを見ます。' },
+      { title: '判断スタイル', body: '効率と論理を重視するか、価値観や関係性を重視するかを確認します。' },
+      { title: '環境の構造', body: '明確な計画が合う人もいれば、裁量や変化で動きやすい人もいます。' },
+    ],
+    useTitle: '使い方',
+    useCases: [
+      { title: '職種を探す', body: 'おすすめ職業名を正解にせず、くり返し出る仕事条件を見ます。' },
+      { title: '面接準備', body: '自分が働きやすい環境、強みが出る場面、避けたい協働を言葉にします。' },
+      { title: 'キャリア転換', body: '職業名よりも役割、チーム文化、意思決定の仕方で満足度が変わることがあります。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'MBTIで職業を決めてよいですか？', answer: '参考のひとつにしてください。実際の選択にはスキル、経験、市場、価値観、生活条件も関係します。' },
+      { question: '同じMBTIなら同じ仕事が合いますか？', answer: 'いいえ。同じタイプでも関心や経験で向く仕事は大きく変わります。MBTIは仕事の好みを見るレンズです。' },
+      { question: '結果が今の仕事と違う場合は？', answer: 'すぐ変える必要はありません。今の仕事のどこが合い、どこが疲れるのかを分けて見るヒントにしてください。' },
+      { question: '学生でも使えますか？', answer: 'はい。専攻、サークル、インターン、プロジェクトの選び方を軽く考える材料になります。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://oiyo.net/ja/mbti/test', label: 'MBTIテスト', desc: '基本タイプを確認して職業結果と比べます。' },
+      { href: 'https://oiyo.net/ja/mbti/habits', label: 'MBTI別習慣', desc: '仕事ルーティンとエネルギー管理も見てみましょう。' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTIの概念', desc: '4つの指標とタイプ構造を整理します。' },
+    ],
+    disclaimer: 'この結果はキャリアについて考えるためのエンタメ型自己省察資料です。',
+  },
+  zh: {
+    introTitle: 'MBTI 职业适配看的是工作方式，不是固定职业答案',
+    intro: '同一份工作可能让一个人投入，也可能让另一个人消耗。本测试通过12个工作情境观察决策、协作、恢复方式和结构偏好，帮助你找到更容易发挥的工作环境。',
+    conceptTitle: '职业适配的三个维度',
+    concepts: [
+      { title: '工作能量', body: '你是从交流合作中获得动力，还是在独立专注中恢复能量？' },
+      { title: '判断方式', body: '效率与逻辑更重要，还是价值、关系和影响更重要？' },
+      { title: '环境结构', body: '有人需要清晰计划，有人更需要自主性、变化和调整空间。' },
+    ],
+    useTitle: '如何使用',
+    useCases: [
+      { title: '探索职业', body: '把推荐职业当作提示，重点看反复出现的工作条件。' },
+      { title: '准备面试', body: '把结果转成适合自己的团队环境、优势场景和协作偏好。' },
+      { title: '考虑转型', body: '满意度有时不是由职业名决定，而是由角色设计、团队文化和决策方式决定。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '可以根据 MBTI 决定职业吗？', answer: '建议只作为参考。真正选择还需要结合技能、经验、市场、价值观和生活条件。' },
+      { question: '同一 MBTI 适合同样的工作吗？', answer: '不是。同类型的人也可能在完全不同的领域表现很好。MBTI 主要提示工作偏好。' },
+      { question: '结果和现在工作不同怎么办？', answer: '不代表必须立刻改变。可以用它拆分：当前工作哪些部分合适，哪些部分消耗你。' },
+      { question: '学生可以用吗？', answer: '可以。选择专业、社团、实习和项目角色时，可以参考活动方式是否合适。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://oiyo.net/zh/mbti/test', label: 'MBTI 测试', desc: '先确认基础类型，再比较职业模式。' },
+      { href: 'https://oiyo.net/zh/mbti/habits', label: 'MBTI 习惯', desc: '把职业适配与日常节奏连接起来。' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTI 概念', desc: '了解四组偏好如何形成类型。' },
+    ],
+    disclaimer: '这些结果是用于职业对话的娱乐型自我反思提示。',
+  },
+  fr: {
+    introTitle: 'L’adéquation carrière MBTI parle de style de travail, pas de destin professionnel',
+    intro: 'Le même métier peut nourrir une personne et en épuiser une autre. Ce test utilise 12 scénarios de travail pour observer décision, collaboration, récupération et besoin de structure afin de nommer les environnements où vous travaillez le mieux.',
+    conceptTitle: 'Ce que l’adéquation observe',
+    concepts: [
+      { title: 'Énergie au travail', body: 'L’élan vient-il des échanges ou du temps de concentration autonome ?' },
+      { title: 'Style de décision', body: 'Logique et efficacité pèsent-elles plus que valeurs, relations et impact ?' },
+      { title: 'Structure de l’environnement', body: 'Certaines personnes aiment les plans clairs, d’autres l’autonomie et la nouveauté.' },
+    ],
+    useTitle: 'Comment l’utiliser',
+    useCases: [
+      { title: 'Explorer des rôles', body: 'Prenez les métiers suggérés comme des pistes; les conditions de travail répétées comptent davantage.' },
+      { title: 'Préparer un entretien', body: 'Transformez le résultat en phrases sur vos forces, votre cadre idéal et votre manière de collaborer.' },
+      { title: 'Réfléchir à une transition', body: 'La satisfaction change parfois avec le rôle, la culture d’équipe ou le style de décision.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Faut-il choisir sa carrière selon le MBTI ?', answer: 'Utilisez-le comme outil de réflexion. Compétences, expérience, marché, valeurs et mode de vie comptent aussi.' },
+      { question: 'Le même MBTI convient-il aux mêmes métiers ?', answer: 'Non. Le même type peut réussir dans des domaines très différents. Le MBTI indique surtout des préférences de travail.' },
+      { question: 'Et si le résultat diffère de mon emploi actuel ?', answer: 'Cela ne signifie pas qu’il faut partir. Servez-vous-en pour distinguer ce qui vous convient et ce qui vous fatigue.' },
+      { question: 'Les étudiants peuvent-ils l’utiliser ?', answer: 'Oui, pour comparer études, stages, associations ou projets selon le type de travail demandé.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://oiyo.net/fr/mbti/test', label: 'Test MBTI', desc: 'Vérifiez votre type avant de comparer les pistes carrière.' },
+      { href: 'https://oiyo.net/fr/mbti/habits', label: 'Habitudes MBTI', desc: 'Relier carrière, routines et gestion d’énergie.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'Concept MBTI', desc: 'Vue d’ensemble des quatre paires de préférences.' },
+    ],
+    disclaimer: 'Ces résultats sont des pistes ludiques de réflexion pour parler de carrière.',
+  },
+  es: {
+    introTitle: 'La carrera según MBTI trata de estilo de trabajo, no de destino fijo',
+    intro: 'El mismo empleo puede dar energía a una persona y agotar a otra. Este test usa 12 situaciones laborales para observar decisión, colaboración, recuperación y estructura, y así nombrar los entornos donde sueles trabajar mejor.',
+    conceptTitle: 'Qué mira la compatibilidad laboral',
+    concepts: [
+      { title: 'Energía de trabajo', body: '¿Te activas con personas y conversación, o con tiempo independiente de concentración?' },
+      { title: 'Estilo de decisión', body: 'Observa si pesan más eficiencia y lógica, o valores, relaciones e impacto.' },
+      { title: 'Estructura del entorno', body: 'Algunas personas necesitan planes claros; otras autonomía, novedad y flexibilidad.' },
+    ],
+    useTitle: 'Cómo usarlo',
+    useCases: [
+      { title: 'Explorar roles', body: 'Toma las profesiones sugeridas como pistas; importan más las condiciones que se repiten.' },
+      { title: 'Preparar entrevistas', body: 'Convierte el resultado en frases sobre fortalezas, ajuste de equipo y ambiente ideal.' },
+      { title: 'Pensar una transición', body: 'La satisfacción puede cambiar con el rol, la cultura del equipo o el modo de decidir.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Debo elegir carrera por MBTI?', answer: 'Úsalo como una herramienta de reflexión. También importan habilidades, experiencia, mercado, valores y estilo de vida.' },
+      { question: '¿El mismo MBTI encaja en los mismos trabajos?', answer: 'No. Personas del mismo tipo pueden prosperar en campos distintos. MBTI señala preferencias de trabajo.' },
+      { question: '¿Y si el resultado no coincide con mi empleo actual?', answer: 'No significa que debas irte. Úsalo para separar qué partes encajan y cuáles te desgastan.' },
+      { question: '¿Sirve para estudiantes?', answer: 'Sí. Ayuda a comparar carreras, clubes, prácticas y proyectos por el tipo de trabajo que piden.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://oiyo.net/es/mbti/test', label: 'Test MBTI', desc: 'Comprueba tu tipo antes de comparar patrones de carrera.' },
+      { href: 'https://oiyo.net/es/mbti/habits', label: 'Hábitos MBTI', desc: 'Conecta carrera con rutinas y energía.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'Concepto MBTI', desc: 'Vista general de los cuatro pares de preferencias.' },
+    ],
+    disclaimer: 'Estos resultados son pistas lúdicas de auto-reflexión para conversaciones de carrera.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <MbtiCareerTest client:load locale={locale} />
+    <RelatedTools locale={locale} tools={['mbti', 'big5', 'enneagram', 'attachment']} current="mbti-career" />
+
+    <section class="mt-8 border-t border-indigo-100 pt-8">
+      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-indigo-100 bg-white p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-indigo-50 p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-indigo-100 rounded-xl border border-indigo-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-indigo-100 bg-white p-4 transition-colors hover:border-indigo-300 hover:bg-indigo-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-slate-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
   </main>
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 
@@ -61,9 +62,214 @@ const links = [
   { href: '/routine/builder', label: txt({ ko: '나만의 루틴 만들기', en: 'Build My Routine', ja: '自分だけのルーティン作り', zh: '打造我的例程', fr: 'Construire ma routine', es: 'Construir mi rutina' }) },
   { href: '/sleep-type/test', label: txt({ ko: '수면 유형 테스트', en: 'Sleep Type Test', ja: '睡眠タイプテスト', zh: '睡眠类型测试', fr: 'Test type de sommeil', es: 'Test tipo de sueño' }) },
 ];
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '습관 형성은 의지력보다 설계의 문제입니다',
+    intro: '이 가이드는 21일 신화보다 현실적인 반복 구조에 집중합니다. 행동을 작게 만들고, 이미 있는 단서에 붙이고, 즉각적인 보상을 설계하면 습관은 훨씬 덜 억지스럽게 이어집니다.',
+    conceptTitle: '먼저 이해할 세 가지',
+    concepts: [
+      { title: '단서', body: '언제 시작할지 알려주는 신호입니다. 시간, 장소, 이전 행동이 가장 안정적입니다.' },
+      { title: '행동', body: '실제 루틴은 작고 구체적일수록 좋습니다. “운동”보다 “운동복 입기”가 시작하기 쉽습니다.' },
+      { title: '보상', body: '반복하고 싶게 만드는 즉각적인 만족입니다. 체크 표시, 음악, 짧은 휴식도 보상이 됩니다.' },
+    ],
+    useTitle: '가이드를 적용하는 방법',
+    useCases: [
+      { title: '새 습관 설계', body: '원하는 결과를 가장 작은 행동으로 바꾸고, 기존 루틴 뒤에 붙입니다.' },
+      { title: '중단 원인 찾기', body: '의지가 부족하다고 결론내리기 전에 단서, 난이도, 보상이 맞는지 점검합니다.' },
+      { title: '30일 실험으로 검증', body: '가설처럼 습관을 세우고 30일 동안 기록해 실제 지속 가능성을 확인합니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '21일 법칙은 완전히 틀렸나요?', answer: '모든 습관이 21일에 만들어진다는 주장은 과도하게 단순합니다. 습관의 난이도와 환경에 따라 훨씬 오래 걸릴 수 있습니다.' },
+      { question: '의지력이 약하면 습관을 못 만드나요?', answer: '아닙니다. 좋은 습관 설계는 의지력 의존도를 줄입니다. 시작을 쉽게 만들고 보상을 가까이 두는 것이 핵심입니다.' },
+      { question: '습관 쌓기는 왜 효과적인가요?', answer: '이미 자동화된 행동 뒤에 새 행동을 붙이면 새 단서를 따로 만들 필요가 적어집니다.' },
+    ],
+    readingTitle: '더 읽어보기',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: '습관 정의', desc: '습관의 구조와 반복의 의미를 정리합니다.' },
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: '습관 도구 해설', desc: '습관 설계를 실제 도구와 연결해 설명합니다.' },
+      { href: 'https://oiyo.net/ko/habit-builder/30-days', label: '30일 습관 챌린지', desc: '가이드를 바로 실험으로 옮겨보세요.' },
+    ],
+    disclaimer: '이 페이지는 생활 습관을 가볍게 이해하고 실험해보는 자기 성찰 콘텐츠입니다.',
+  },
+  en: {
+    introTitle: 'Habit formation is mostly design, not moral effort',
+    intro: 'This guide focuses on repeatable structure rather than the popular 21-day myth. When the behavior is small, attached to an existing cue, and paired with a quick reward, consistency becomes far less forced.',
+    conceptTitle: 'Three ideas to understand first',
+    concepts: [
+      { title: 'Cue', body: 'The signal that tells you when to start. Time, place, and a previous action are the most stable cues.' },
+      { title: 'Behavior', body: 'The routine should be small and concrete. “Put on workout clothes” is easier to start than “exercise.”' },
+      { title: 'Reward', body: 'A quick sense of satisfaction teaches your brain that the loop is worth repeating.' },
+    ],
+    useTitle: 'How to apply the guide',
+    useCases: [
+      { title: 'Design a new habit', body: 'Turn the outcome you want into the smallest action and attach it after a routine you already do.' },
+      { title: 'Find the real friction', body: 'Before blaming willpower, check whether the cue, difficulty, and reward are matched.' },
+      { title: 'Test for 30 days', body: 'Treat the habit like a hypothesis and track whether it actually fits your life.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Is the 21-day rule wrong?', answer: 'The claim that every habit forms in 21 days is too simple. Timing depends on behavior complexity, environment, and repetition quality.' },
+      { question: 'Do weak willpower and bad habits always go together?', answer: 'No. Good habit design reduces the need for willpower by making the start easy and the reward close.' },
+      { question: 'Why does habit stacking help?', answer: 'A stable existing behavior already has a cue. Adding the new action after it saves you from inventing a cue from scratch.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: 'Habit definition', desc: 'A reference overview of habit structure and repetition.' },
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: 'Habit tool guide', desc: 'How habit design connects to OIYO’s practical tools.' },
+      { href: 'https://oiyo.net/en/habit-builder/30-days', label: '30-day challenge', desc: 'Turn the guide into a small experiment.' },
+    ],
+    disclaimer: 'This page is lifestyle self-reflection content for lightly exploring habit design.',
+  },
+  ja: {
+    introTitle: '習慣形成は意志力より設計の問題です',
+    intro: 'このガイドは21日神話ではなく、続けられる構造に注目します。行動を小さくし、既存の合図に結び、すぐ感じられる報酬を置くと、継続はずっと自然になります。',
+    conceptTitle: '先に知りたい三つの考え方',
+    concepts: [
+      { title: '合図', body: '始めるタイミングを知らせる信号です。時間、場所、前の行動が安定します。' },
+      { title: '行動', body: 'ルーティンは小さく具体的なほど続きます。「運動」より「運動着を着る」が始めやすいです。' },
+      { title: '報酬', body: 'また繰り返したくなる小さな満足です。チェック、音楽、短い休憩でも十分です。' },
+    ],
+    useTitle: 'ガイドの使い方',
+    useCases: [
+      { title: '新しい習慣を設計', body: '望む結果を最小行動に変え、すでにあるルーティンの後につけます。' },
+      { title: 'つまずきの原因を見る', body: '意志力のせいにする前に、合図、難易度、報酬が合っているか確認します。' },
+      { title: '30日で実験', body: '習慣を仮説として作り、30日記録して生活に合うか見ます。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: '21日の法則は間違いですか？', answer: 'すべての習慣が21日でできるという説明は単純すぎます。行動の難しさや環境によって大きく変わります。' },
+      { question: '意志力が弱いと習慣は作れませんか？', answer: 'いいえ。良い設計は意志力への依存を減らします。始めやすさと近い報酬が大切です。' },
+      { question: '習慣スタッキングはなぜ有効ですか？', answer: '既存の行動にはすでに合図があります。その後に新しい行動を置くと、合図を一から作る必要が減ります。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: '習慣の定義', desc: '習慣の構造と反復を整理します。' },
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: '習慣ツール解説', desc: '習慣設計を実用ツールにつなげます。' },
+      { href: 'https://oiyo.net/ja/habit-builder/30-days', label: '30日チャレンジ', desc: 'ガイドをすぐ実験に移します。' },
+    ],
+    disclaimer: 'このページは生活習慣を軽く理解し、試すための自己省察コンテンツです。',
+  },
+  zh: {
+    introTitle: '习惯养成更多是设计问题，不是意志力问题',
+    intro: '这份指南不围绕“21天神话”，而是关注可重复的结构。把行动变小，接在已有提示之后，再配上即时奖励，持续就不会那么费力。',
+    conceptTitle: '先理解三个要素',
+    concepts: [
+      { title: '提示', body: '告诉你何时开始的信号。时间、地点和前一个动作最稳定。' },
+      { title: '行为', body: '例行动作越小越具体越好。“穿上运动服”比“去运动”更容易启动。' },
+      { title: '奖励', body: '让大脑愿意重复的小满足。打勾、音乐或短暂休息都可以。' },
+    ],
+    useTitle: '如何应用',
+    useCases: [
+      { title: '设计新习惯', body: '把想要的结果变成最小行动，并接到已有例程后面。' },
+      { title: '找出真正阻力', body: '在责怪意志力前，检查提示、难度和奖励是否匹配。' },
+      { title: '用30天验证', body: '把习惯当作假设，记录30天看它是否真的适合生活。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '21天法则错了吗？', answer: '“所有习惯21天形成”过于简单。所需时间取决于行为复杂度、环境和重复质量。' },
+      { question: '意志力弱就无法养成习惯吗？', answer: '不是。好的习惯设计会减少对意志力的依赖，让开始更容易、奖励更靠近。' },
+      { question: '习惯堆叠为什么有效？', answer: '稳定的既有行为已经有提示，把新行为接在后面，就不用重新创造提示。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: '习惯定义', desc: '了解习惯结构与重复机制。' },
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: '习惯工具指南', desc: '把习惯设计连接到实际工具。' },
+      { href: 'https://oiyo.net/zh/habit-builder/30-days', label: '30天挑战', desc: '把指南转成小实验。' },
+    ],
+    disclaimer: '本页是用于轻松理解并尝试生活习惯设计的自我反思内容。',
+  },
+  fr: {
+    introTitle: 'Former une habitude relève surtout du design',
+    intro: 'Ce guide regarde au-delà du mythe des 21 jours. Quand l’action est petite, reliée à un signal existant et suivie d’une récompense rapide, la régularité devient moins forcée.',
+    conceptTitle: 'Trois bases à comprendre',
+    concepts: [
+      { title: 'Signal', body: 'Ce qui indique quand commencer: heure, lieu ou action précédente.' },
+      { title: 'Comportement', body: 'La routine doit être petite et concrète. “Mettre ses chaussures” démarre mieux que “faire du sport”.' },
+      { title: 'Récompense', body: 'Une satisfaction immédiate rend la boucle plus facile à répéter.' },
+    ],
+    useTitle: 'Comment appliquer le guide',
+    useCases: [
+      { title: 'Créer une habitude', body: 'Transformez le résultat souhaité en plus petite action possible.' },
+      { title: 'Identifier la friction', body: 'Avant d’accuser la volonté, vérifiez le signal, la difficulté et la récompense.' },
+      { title: 'Tester 30 jours', body: 'Traitez l’habitude comme une hypothèse et observez si elle tient dans votre vie.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'La règle des 21 jours est-elle fausse ?', answer: 'Elle est trop simplifiée. Le temps dépend de la complexité du comportement, de l’environnement et de la répétition.' },
+      { question: 'Faut-il beaucoup de volonté ?', answer: 'Pas forcément. Un bon design réduit la volonté nécessaire en rendant le départ facile.' },
+      { question: 'Pourquoi empiler les habitudes ?', answer: 'Une habitude existante fournit déjà un signal stable pour la nouvelle action.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: 'Définition de l’habitude', desc: 'Structure, signaux et répétition.' },
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: 'Guide outil habitudes', desc: 'Relier la théorie aux outils OIYO.' },
+      { href: 'https://oiyo.net/fr/habit-builder/30-days', label: 'Défi 30 jours', desc: 'Passer du guide à l’expérience.' },
+    ],
+    disclaimer: 'Cette page est un contenu de réflexion personnelle pour explorer le design des habitudes.',
+  },
+  es: {
+    introTitle: 'Formar hábitos es más diseño que fuerza de voluntad',
+    intro: 'Esta guía mira más allá del mito de los 21 días. Cuando la acción es pequeña, se engancha a una señal existente y tiene una recompensa rápida, la constancia se vuelve menos forzada.',
+    conceptTitle: 'Tres ideas clave',
+    concepts: [
+      { title: 'Señal', body: 'Indica cuándo empezar: hora, lugar o una acción anterior.' },
+      { title: 'Conducta', body: 'La rutina debe ser pequeña y concreta. “Ponerme la ropa deportiva” arranca mejor que “hacer ejercicio”.' },
+      { title: 'Recompensa', body: 'Una satisfacción inmediata enseña que vale la pena repetir el ciclo.' },
+    ],
+    useTitle: 'Cómo aplicarla',
+    useCases: [
+      { title: 'Diseñar un hábito', body: 'Convierte el resultado deseado en la acción más pequeña posible.' },
+      { title: 'Encontrar la fricción', body: 'Antes de culpar a la voluntad, revisa señal, dificultad y recompensa.' },
+      { title: 'Probar 30 días', body: 'Trata el hábito como hipótesis y observa si encaja con tu vida.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿La regla de 21 días es falsa?', answer: 'Es demasiado simple. El tiempo depende de la complejidad, el entorno y la calidad de repetición.' },
+      { question: '¿Necesito mucha fuerza de voluntad?', answer: 'No necesariamente. Un buen diseño reduce la voluntad necesaria al hacer fácil el inicio.' },
+      { question: '¿Por qué ayuda apilar hábitos?', answer: 'Un hábito existente ya tiene una señal estable para colocar una nueva acción.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: 'Definición de hábito', desc: 'Estructura, señales y repetición.' },
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: 'Guía de la herramienta', desc: 'Conecta teoría con herramientas OIYO.' },
+      { href: 'https://oiyo.net/es/habit-builder/30-days', label: 'Desafío 30 días', desc: 'Pasa de la guía al experimento.' },
+    ],
+    disclaimer: 'Esta página es contenido de auto-reflexión para explorar el diseño de hábitos.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={meta.title} description={meta.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <div class="mb-8 text-center">
       <div class="inline-flex items-center gap-1.5 rounded-full border border-green-200 bg-green-50 px-3 py-1 text-xs font-bold text-green-700 mb-4">
@@ -97,6 +303,65 @@ const links = [
         ))}
       </div>
     </div>
+
+    <RelatedTools locale={locale} tools={['mbti', 'big5', 'attachment']} current="habit-builder-guide" />
+
+    <section class="mt-8 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-green-100 bg-white p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-green-50 p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-slate-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MentalBoost locale={locale} />
   </main>
 </Layout>

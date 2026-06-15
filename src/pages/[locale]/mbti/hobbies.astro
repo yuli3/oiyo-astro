@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 
@@ -110,9 +111,214 @@ const TYPES: MBTIEntry[] = [
     hobbies: txt({ ko: '댄스·케이팝, 유튜브·틱톡 창작, 파티·이벤트 기획, 패션·스타일링, 노래(보컬 레슨)', en: 'Dance/K-pop, YouTube/TikTok creation, party/event organizing, fashion/styling, singing (vocal lessons)', ja: 'ダンス·K-POP、YouTube·TikTok創作、パーティー·イベント企画、ファッション·スタイリング', zh: '舞蹈K-pop、YouTube/TikTok创作、派对活动组织、时尚造型、唱歌声乐课', fr: 'Danse/K-pop, création YouTube/TikTok, organisation de fêtes/événements, mode/stylisme, chant', es: 'Baile/K-pop, creación YouTube/TikTok, organización de fiestas/eventos, moda/estilismo, canto' }),
     why: { ko: '삶 자체를 즐기고 사람들을 즐겁게 하는 것에서 기쁨을 찾는 ESFP에게 완벽한 출구', en: 'Perfect outlet for ESFPs who find joy in enjoying life itself and making others happy', ja: '人生自体を楽しみ、人々を喜ばせることに喜びを見つけるESFPにとって完璧な出口', zh: '对于从享受生活本身和让他人快乐中找到喜悦的ESFP来说是完美的出口', fr: 'Exutoire parfait pour les ESFP qui trouvent de la joie dans l\'appréciation de la vie et la joie des autres', es: 'Salida perfecta para ESFPs que encuentran alegría en disfrutar la vida y hacer felices a los demás' } },
 ];
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '좋은 취미는 남는 시간을 채우는 것이 아니라 에너지를 회복시키는 활동입니다',
+    intro: 'MBTI별 취미 추천은 “이 유형은 이것만 해야 한다”는 목록이 아닙니다. 내향/외향, 감각/직관, 사고/감정, 판단/인식의 차이를 바탕으로 어떤 활동에서 몰입, 회복, 즐거움이 생기는지 탐색하는 가이드입니다.',
+    conceptTitle: '취미를 고를 때 보는 기준',
+    concepts: [
+      { title: '회복 방식', body: '혼자 깊게 쉬어야 충전되는지, 사람들과 움직여야 살아나는지 봅니다.' },
+      { title: '몰입 재료', body: '전략, 감각, 표현, 관계, 탐구 중 어떤 요소가 오래 붙잡는지 확인합니다.' },
+      { title: '활동 리듬', body: '정기적인 루틴이 좋은지, 즉흥적 변화가 있어야 지루하지 않은지 살핍니다.' },
+    ],
+    useTitle: '이렇게 활용하세요',
+    useCases: [
+      { title: '새 취미 고르기', body: '유형별 추천에서 하나를 고르기보다 공통 조건을 보고 후보를 좁히세요.' },
+      { title: '번아웃 후 회복', body: '성과가 아니라 감각, 놀이, 관계처럼 에너지를 돌려주는 활동을 선택합니다.' },
+      { title: '친구와 여가 계획', body: '같은 취미라도 사람마다 원하는 강도와 분위기가 다르다는 점을 확인합니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: 'MBTI별 취미는 꼭 따라야 하나요?', answer: '아닙니다. 추천은 취향을 발견하기 위한 출발점입니다. 실제로 즐거운지 짧게 해보고 판단하세요.' },
+      { question: '내 유형 추천과 반대되는 취미가 좋으면 이상한가요?', answer: '전혀 아닙니다. 사람은 유형보다 넓고, 경험과 환경에 따라 취미 취향은 계속 달라집니다.' },
+      { question: '취미를 오래 유지하려면 무엇이 중요하나요?', answer: '처음부터 장비나 목표를 크게 잡기보다, 낮은 비용으로 반복할 수 있는 형태를 만드는 것이 좋습니다.' },
+    ],
+    readingTitle: '더 읽어보기',
+    reading: [
+      { href: 'https://oiyo.net/ko/mbti/test', label: 'MBTI 테스트', desc: '내 유형을 확인하고 취미 추천을 비교합니다.' },
+      { href: 'https://oiyo.net/ko/mbti/habits', label: 'MBTI별 습관', desc: '취미를 일상 루틴으로 이어가는 방법입니다.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTI 개념', desc: '유형별 선호의 기본 구조를 정리합니다.' },
+    ],
+    disclaimer: 'MBTI 취미 추천은 여가 탐색을 돕는 엔터테인먼트형 자기 성찰 콘텐츠입니다.',
+  },
+  en: {
+    introTitle: 'A good hobby restores energy instead of merely filling time',
+    intro: 'MBTI hobby suggestions are not rules for what each type must enjoy. They use the introversion/extraversion, sensing/intuition, thinking/feeling, and judging/perceiving preferences to explore where flow, rest, and enjoyment may come more naturally.',
+    conceptTitle: 'How to choose a hobby',
+    concepts: [
+      { title: 'Recovery style', body: 'Do you recharge through quiet depth, social movement, sensory calm, or playful novelty?' },
+      { title: 'Flow material', body: 'Strategy, expression, hands-on craft, relationships, and discovery hook different types.' },
+      { title: 'Activity rhythm', body: 'Some hobbies need routine; others stay alive through variation and surprise.' },
+    ],
+    useTitle: 'How to use it',
+    useCases: [
+      { title: 'Pick a new hobby', body: 'Look for repeated conditions, not just one exact activity name.' },
+      { title: 'Recover after burnout', body: 'Choose activities that return energy through play, senses, meaning, or connection.' },
+      { title: 'Plan with friends', body: 'Use the guide to compare preferred intensity, structure, and social level.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Do I have to follow my MBTI hobby list?', answer: 'No. Treat it as a starting point for discovering taste. Try lightly and keep what feels good.' },
+      { question: 'Is it odd if I like hobbies from another type?', answer: 'Not at all. People are wider than type labels, and hobbies shift with experience and context.' },
+      { question: 'What helps a hobby last?', answer: 'Keep the first version low-cost and easy to repeat before investing in big gear or goals.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://oiyo.net/en/mbti/test', label: 'MBTI test', desc: 'Check your type before comparing hobby patterns.' },
+      { href: 'https://oiyo.net/en/mbti/habits', label: 'MBTI habits', desc: 'Turn a hobby into a sustainable routine.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTI concept', desc: 'A reference guide to the preference pairs.' },
+    ],
+    disclaimer: 'MBTI hobby suggestions are entertainment-style self-reflection prompts for leisure exploration.',
+  },
+  ja: {
+    introTitle: '良い趣味は時間を埋めるだけでなく、エネルギーを回復させます',
+    intro: 'MBTI別の趣味推薦は「このタイプはこれだけ」というルールではありません。内向/外向、感覚/直観、思考/感情、判断/知覚の違いから、どんな活動で没入、回復、楽しさが生まれやすいかを見るガイドです。',
+    conceptTitle: '趣味を選ぶ基準',
+    concepts: [
+      { title: '回復スタイル', body: '静かな深さ、人との動き、感覚的な落ち着き、新しさのどれで充電するかを見ます。' },
+      { title: '没入の素材', body: '戦略、表現、手作業、関係、探究など、長く引き込む要素を確認します。' },
+      { title: '活動リズム', body: '定期的な習慣が合うか、変化がある方が続くかを見ます。' },
+    ],
+    useTitle: '使い方',
+    useCases: [
+      { title: '新しい趣味を選ぶ', body: 'ひとつの活動名より、共通する条件を見て候補を絞ります。' },
+      { title: '疲れた時の回復', body: '成果ではなく、遊び、感覚、意味、つながりを戻す活動を選びます。' },
+      { title: '友人と計画する', body: '同じ趣味でも強度、構造、社交度の好みが違うことを確認できます。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'MBTI別の趣味は必ず従うべきですか？', answer: 'いいえ。好みを見つける出発点です。短く試して、楽しいものを残しましょう。' },
+      { question: '別タイプの趣味が好きでも変ですか？', answer: 'まったく変ではありません。人はタイプより広く、経験や環境で趣味は変わります。' },
+      { question: '趣味を長続きさせるには？', answer: '最初から大きな道具や目標を持たず、低コストで繰り返せる形にします。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://oiyo.net/ja/mbti/test', label: 'MBTIテスト', desc: 'タイプを確認して趣味傾向と比べます。' },
+      { href: 'https://oiyo.net/ja/mbti/habits', label: 'MBTI別習慣', desc: '趣味を日常のリズムにつなげます。' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTIの概念', desc: '4つの指標を整理します。' },
+    ],
+    disclaimer: 'MBTI趣味推薦は余暇探索のためのエンタメ型自己省察コンテンツです。',
+  },
+  zh: {
+    introTitle: '好的爱好不是填满时间，而是恢复能量',
+    intro: 'MBTI 爱好推荐不是规定某个类型只能喜欢什么。它根据内外向、感觉直觉、思考情感、判断知觉的偏好，帮助你探索哪些活动更容易带来心流、休息和乐趣。',
+    conceptTitle: '选择爱好的标准',
+    concepts: [
+      { title: '恢复方式', body: '安静深入、社交活动、感官放松或新鲜变化，哪一种更能充电？' },
+      { title: '心流材料', body: '策略、表达、手作、关系和探索，会吸引不同类型。' },
+      { title: '活动节奏', body: '有些爱好需要固定节奏，有些则靠变化与惊喜保持生命力。' },
+    ],
+    useTitle: '如何使用',
+    useCases: [
+      { title: '选择新爱好', body: '不要只看一个活动名，重点看反复出现的条件。' },
+      { title: '疲惫后恢复', body: '选择能通过玩乐、感官、意义或连接带回能量的活动。' },
+      { title: '和朋友计划', body: '比较彼此偏好的强度、结构和社交程度。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '必须按 MBTI 爱好列表来吗？', answer: '不用。它只是发现偏好的起点，轻松试试，留下真的喜欢的。' },
+      { question: '喜欢其他类型的爱好奇怪吗？', answer: '完全不奇怪。人比类型标签更宽，爱好也会随着经验和环境变化。' },
+      { question: '怎样让爱好持续更久？', answer: '先做低成本、容易重复的版本，再考虑投入设备或设定大目标。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://oiyo.net/zh/mbti/test', label: 'MBTI 测试', desc: '先确认类型，再比较爱好模式。' },
+      { href: 'https://oiyo.net/zh/mbti/habits', label: 'MBTI 习惯', desc: '把爱好连接到可持续日常。' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTI 概念', desc: '了解四组偏好的基本结构。' },
+    ],
+    disclaimer: 'MBTI 爱好推荐是用于休闲探索的娱乐型自我反思内容。',
+  },
+  fr: {
+    introTitle: 'Un bon loisir restaure l’énergie, il ne remplit pas seulement le temps',
+    intro: 'Les loisirs MBTI ne sont pas des règles. Ils utilisent les préférences introversion/extraversion, sensation/intuition, pensée/sentiment et jugement/perception pour explorer où le flow, le repos et le plaisir apparaissent plus naturellement.',
+    conceptTitle: 'Comment choisir un loisir',
+    concepts: [
+      { title: 'Style de récupération', body: 'Rechargez-vous par profondeur calme, mouvement social, sensations ou nouveauté ?' },
+      { title: 'Matière du flow', body: 'Stratégie, expression, artisanat, relations et découverte accrochent différemment.' },
+      { title: 'Rythme d’activité', body: 'Certains loisirs aiment la routine, d’autres vivent par variation.' },
+    ],
+    useTitle: 'Comment l’utiliser',
+    useCases: [
+      { title: 'Choisir un nouveau loisir', body: 'Cherchez les conditions récurrentes plutôt qu’un seul nom d’activité.' },
+      { title: 'Récupérer après fatigue', body: 'Privilégiez jeu, sens, sensations ou lien plutôt que performance.' },
+      { title: 'Planifier entre amis', body: 'Comparez intensité, structure et niveau social souhaités.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Dois-je suivre la liste MBTI ?', answer: 'Non. C’est un point de départ pour découvrir vos goûts.' },
+      { question: 'Est-ce étrange d’aimer un loisir d’un autre type ?', answer: 'Non. Les personnes dépassent les étiquettes, et les goûts changent avec l’expérience.' },
+      { question: 'Qu’est-ce qui aide un loisir à durer ?', answer: 'Commencez par une version facile et peu coûteuse avant de viser grand.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://oiyo.net/fr/mbti/test', label: 'Test MBTI', desc: 'Vérifiez votre type avant de comparer les loisirs.' },
+      { href: 'https://oiyo.net/fr/mbti/habits', label: 'Habitudes MBTI', desc: 'Transformer un loisir en rythme durable.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'Concept MBTI', desc: 'Revoir les quatre préférences.' },
+    ],
+    disclaimer: 'Ces suggestions de loisirs MBTI sont des pistes ludiques de réflexion personnelle.',
+  },
+  es: {
+    introTitle: 'Un buen pasatiempo restaura energía, no solo llena tiempo',
+    intro: 'Los pasatiempos por MBTI no son reglas. Usan las preferencias introversión/extraversión, sensación/intuición, pensamiento/sentimiento y juicio/percepción para explorar dónde aparecen flow, descanso y disfrute.',
+    conceptTitle: 'Cómo elegir un pasatiempo',
+    concepts: [
+      { title: 'Estilo de recuperación', body: '¿Recargas con profundidad tranquila, movimiento social, calma sensorial o novedad?' },
+      { title: 'Material del flow', body: 'Estrategia, expresión, manualidades, relaciones y descubrimiento atraen de formas distintas.' },
+      { title: 'Ritmo de actividad', body: 'Algunos pasatiempos necesitan rutina; otros viven de variedad y sorpresa.' },
+    ],
+    useTitle: 'Cómo usarlo',
+    useCases: [
+      { title: 'Elegir algo nuevo', body: 'Busca condiciones repetidas, no solo un nombre exacto de actividad.' },
+      { title: 'Recuperar energía', body: 'Elige juego, sentidos, significado o conexión antes que rendimiento.' },
+      { title: 'Planear con amigos', body: 'Compara intensidad, estructura y nivel social preferido.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Debo seguir la lista MBTI?', answer: 'No. Es un punto de partida para descubrir gustos.' },
+      { question: '¿Es raro preferir hobbies de otro tipo?', answer: 'No. Las personas son más amplias que las etiquetas y los gustos cambian.' },
+      { question: '¿Qué ayuda a sostener un pasatiempo?', answer: 'Empieza con una versión fácil y de bajo costo antes de invertir mucho.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://oiyo.net/es/mbti/test', label: 'Test MBTI', desc: 'Comprueba tu tipo antes de comparar pasatiempos.' },
+      { href: 'https://oiyo.net/es/mbti/habits', label: 'Hábitos MBTI', desc: 'Convierte un hobby en ritmo sostenible.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'Concepto MBTI', desc: 'Revisa las cuatro preferencias.' },
+    ],
+    disclaimer: 'Estas sugerencias de pasatiempos MBTI son pistas lúdicas de auto-reflexión.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={meta.title} description={meta.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-3xl px-4 py-10">
     <div class="mb-8 text-center">
       <h1 class="text-3xl font-black text-slate-900">{heading}</h1>
@@ -149,6 +355,64 @@ const TYPES: MBTIEntry[] = [
         {txt({ ko: '무료 MBTI 테스트 하기', en: 'Take the Free MBTI Test', ja: '無料MBTIテストを受ける', zh: '参加免费MBTI测试', fr: 'Passer le test MBTI gratuit', es: 'Hacer el test MBTI gratis' })} →
       </a>
     </div>
+    <RelatedTools locale={locale} tools={['mbti', 'big5', 'enneagram', 'attachment']} current="mbti-hobbies" />
+
+    <section class="mt-8 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-green-100 bg-white p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-green-50 p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-slate-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MentalBoost locale={locale} />
   </main>
 </Layout>

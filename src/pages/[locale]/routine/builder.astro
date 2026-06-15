@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import RoutineChecklist from '../../../components/tools/RoutineChecklist';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
@@ -90,9 +91,214 @@ const links = [
   { href: '/routine/time-maker', label: txt({ ko: '시간 만드는 법', en: 'How to Make Time', ja: '時間の作り方', zh: '如何创造时间', fr: 'Comment créer du temps', es: 'Cómo crear tiempo' }) },
   { href: '/sleep-type/test', label: txt({ ko: '수면 유형 테스트', en: 'Sleep Type Test', ja: '睡眠タイプテスト', zh: '睡眠类型测试', fr: 'Test de type de sommeil', es: 'Test de tipo de sueño' }) },
 ];
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '좋은 루틴은 해야 할 일을 줄이고 시작을 자동화합니다',
+    intro: '루틴 빌더는 아침, 저녁, 주간 흐름을 한 번에 완벽하게 만드는 도구가 아닙니다. 반복되는 결정을 줄이고, 중요한 행동이 자연스럽게 나오는 순서를 찾도록 돕는 생활 설계 도구입니다.',
+    conceptTitle: '루틴 설계의 기준',
+    concepts: [
+      { title: '고정 앵커', body: '기상, 식사, 퇴근처럼 매일 반복되는 순간을 루틴의 기준점으로 삼습니다.' },
+      { title: '에너지 배치', body: '집중력이 높은 시간에는 중요한 일을, 낮은 시간에는 정리와 회복을 둡니다.' },
+      { title: '마찰 줄이기', body: '필요한 물건과 환경을 미리 준비해 시작 비용을 낮춥니다.' },
+    ],
+    useTitle: '추천 활용 장면',
+    useCases: [
+      { title: '아침 루틴 정리', body: '기상 후 첫 60분을 수분, 움직임, 계획처럼 에너지를 만드는 행동으로 구성합니다.' },
+      { title: '저녁 루틴 만들기', body: '하루를 닫고 다음 날 준비를 끝내는 다운시프트 흐름을 만듭니다.' },
+      { title: '주간 리듬 조정', body: '요일별 업무, 회복, 취미 시간을 배치해 한 주 전체의 균형을 봅니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '완벽한 루틴부터 만들어야 하나요?', answer: '아닙니다. 가장 자주 흔들리는 시간대 하나부터 정리하는 편이 지속하기 쉽습니다.' },
+      { question: '루틴이 너무 빡빡하면 어떻게 하나요?', answer: '완충 시간을 넣고 최소 버전을 정하세요. 피곤한 날에도 10분짜리 루틴으로 돌아올 수 있어야 합니다.' },
+      { question: '아침형 인간이 아니어도 되나요?', answer: '물론입니다. 핵심은 아침 시간이 아니라 내 에너지 피크에 중요한 행동을 배치하는 것입니다.' },
+    ],
+    readingTitle: '더 읽어보기',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: '루틴 설계 가이드', desc: '아침·저녁·주간 루틴을 생활에 맞추는 방법입니다.' },
+      { href: 'https://wiki.oiyo.net/ko/routine/', label: '루틴의 의미', desc: '루틴과 습관의 차이를 개념적으로 정리합니다.' },
+      { href: 'https://oiyo.net/ko/routine/time-maker', label: '시간 만들기', desc: '루틴을 넣을 시간을 확보하는 전략입니다.' },
+    ],
+    disclaimer: '이 루틴 가이드는 일상 설계를 가볍게 실험해보는 자기 성찰용 콘텐츠입니다.',
+  },
+  en: {
+    introTitle: 'A good routine reduces decisions and automates the start',
+    intro: 'The routine builder is not about creating a perfect morning, evening, or weekly schedule on day one. It helps you reduce repeated decisions and find an order where important actions happen with less friction.',
+    conceptTitle: 'Routine design principles',
+    concepts: [
+      { title: 'Stable anchor', body: 'Use repeated moments like waking, meals, or arriving home as anchors.' },
+      { title: 'Energy placement', body: 'Put demanding work in your high-energy window and cleanup or recovery in lower-energy time.' },
+      { title: 'Less friction', body: 'Prepare tools, clothes, and spaces ahead so starting costs less.' },
+    ],
+    useTitle: 'Best ways to use it',
+    useCases: [
+      { title: 'Morning routine', body: 'Shape the first hour around hydration, movement, and intention instead of reactive scrolling.' },
+      { title: 'Evening routine', body: 'Close the day, prepare tomorrow, and downshift into rest.' },
+      { title: 'Weekly rhythm', body: 'Balance work, recovery, hobbies, and relationship time across the week.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Do I need a perfect routine first?', answer: 'No. Start with the time of day that breaks down most often and make that part easier.' },
+      { question: 'What if my routine feels too rigid?', answer: 'Add buffer time and define a minimum version you can still do on tired days.' },
+      { question: 'Do I have to become a morning person?', answer: 'No. The key is matching important actions to your real energy peak, not forcing an early identity.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: 'Routine design guide', desc: 'How to adapt morning, evening, and weekly routines to real life.' },
+      { href: 'https://wiki.oiyo.net/ko/routine/', label: 'What routine means', desc: 'A reference on the difference between routines and habits.' },
+      { href: 'https://oiyo.net/en/routine/time-maker', label: 'Make time', desc: 'Create the calendar space your routine needs.' },
+    ],
+    disclaimer: 'This routine guide is for lifestyle design, experimentation, and self-reflection.',
+  },
+  ja: {
+    introTitle: '良いルーティンは決定を減らし、始まりを自動化します',
+    intro: 'ルーティンビルダーは初日から完璧な朝・夜・週間予定を作るものではありません。繰り返しの決定を減らし、大切な行動が自然に出る順番を探すための生活設計ツールです。',
+    conceptTitle: 'ルーティン設計の基準',
+    concepts: [
+      { title: '安定したアンカー', body: '起床、食事、帰宅など毎日くり返す瞬間を基準にします。' },
+      { title: 'エネルギー配置', body: '集中できる時間に重要な仕事を置き、低い時間に整理や回復を置きます。' },
+      { title: '摩擦を減らす', body: '道具や環境を先に準備し、始める負担を下げます。' },
+    ],
+    useTitle: 'おすすめの使い方',
+    useCases: [
+      { title: '朝ルーティン', body: '起床後の時間を水分、動き、意図設定で組み立てます。' },
+      { title: '夜ルーティン', body: '一日を閉じ、明日の準備をして休息へ移ります。' },
+      { title: '週間リズム', body: '仕事、回復、趣味、人との時間を一週間で配分します。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: '最初から完璧なルーティンが必要ですか？', answer: 'いいえ。最も崩れやすい時間帯ひとつから整える方が続きます。' },
+      { question: 'ルーティンが固すぎる時は？', answer: '余白を入れ、疲れた日でもできる最小版を決めておきます。' },
+      { question: '朝型になる必要がありますか？', answer: 'ありません。大切なのは自分のエネルギーが高い時間に重要な行動を置くことです。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: 'ルーティン設計ガイド', desc: '朝・夜・週間ルーティンを生活に合わせる方法です。' },
+      { href: 'https://wiki.oiyo.net/ko/routine/', label: 'ルーティンとは', desc: 'ルーティンと習慣の違いを整理します。' },
+      { href: 'https://oiyo.net/ja/routine/time-maker', label: '時間を作る', desc: 'ルーティンを入れる時間を確保します。' },
+    ],
+    disclaimer: 'このガイドは生活設計を軽く試すための自己省察コンテンツです。',
+  },
+  zh: {
+    introTitle: '好的例程会减少决策，并让开始自动化',
+    intro: '例程构建器不是让你第一天就拥有完美早晚计划，而是帮助你减少重复决策，找到重要行动更自然发生的顺序。',
+    conceptTitle: '例程设计原则',
+    concepts: [
+      { title: '稳定锚点', body: '把起床、吃饭、回家等重复时刻作为例程基准。' },
+      { title: '能量安排', body: '高能量时间放重要任务，低能量时间放整理和恢复。' },
+      { title: '降低摩擦', body: '提前准备工具、衣物和环境，让开始更容易。' },
+    ],
+    useTitle: '适合的使用场景',
+    useCases: [
+      { title: '晨间例程', body: '用补水、活动和意图设定来组织醒来后的第一段时间。' },
+      { title: '晚间例程', body: '结束一天，准备明天，并慢慢进入休息。' },
+      { title: '每周节奏', body: '在一周内平衡工作、恢复、兴趣和关系时间。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '需要先做出完美例程吗？', answer: '不需要。先整理最容易崩掉的一个时间段更容易坚持。' },
+      { question: '例程太僵硬怎么办？', answer: '加入缓冲时间，并设定疲惫时也能完成的最小版本。' },
+      { question: '必须变成晨型人吗？', answer: '不必。关键是把重要行动放到你真实的能量高峰。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: '例程设计指南', desc: '把晨间、晚间和每周例程调整到真实生活。' },
+      { href: 'https://wiki.oiyo.net/ko/routine/', label: '例程的含义', desc: '理解例程与习惯的区别。' },
+      { href: 'https://oiyo.net/zh/routine/time-maker', label: '创造时间', desc: '为例程腾出日历空间。' },
+    ],
+    disclaimer: '本指南用于轻松尝试生活设计与自我反思。',
+  },
+  fr: {
+    introTitle: 'Une bonne routine réduit les décisions et automatise le départ',
+    intro: 'Le constructeur de routine ne promet pas une journée parfaite dès le début. Il aide à réduire les décisions répétées et à placer les actions importantes dans un ordre plus naturel.',
+    conceptTitle: 'Principes de design',
+    concepts: [
+      { title: 'Ancre stable', body: 'Utilisez réveil, repas ou retour à la maison comme points d’ancrage.' },
+      { title: 'Énergie', body: 'Placez les tâches exigeantes dans vos moments de meilleure énergie.' },
+      { title: 'Moins de friction', body: 'Préparez objets et environnement pour faciliter le démarrage.' },
+    ],
+    useTitle: 'Quand l’utiliser',
+    useCases: [
+      { title: 'Routine matinale', body: 'Hydratation, mouvement et intention avant les réactions du téléphone.' },
+      { title: 'Routine du soir', body: 'Fermer la journée, préparer demain et ralentir.' },
+      { title: 'Rythme hebdomadaire', body: 'Équilibrer travail, récupération, loisirs et relations.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Faut-il une routine parfaite ?', answer: 'Non. Commencez par le moment de la journée qui se dérègle le plus.' },
+      { question: 'Et si c’est trop rigide ?', answer: 'Ajoutez des marges et une version minimale pour les jours fatigués.' },
+      { question: 'Dois-je devenir matinal ?', answer: 'Non. Placez surtout les actions importantes à votre vrai pic d’énergie.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: 'Guide de routine', desc: 'Adapter matin, soir et semaine à la vraie vie.' },
+      { href: 'https://wiki.oiyo.net/ko/routine/', label: 'Définition de routine', desc: 'Différence entre routine et habitude.' },
+      { href: 'https://oiyo.net/fr/routine/time-maker', label: 'Créer du temps', desc: 'Libérer l’espace nécessaire dans l’agenda.' },
+    ],
+    disclaimer: 'Ce guide sert à expérimenter le design de vie avec une réflexion personnelle légère.',
+  },
+  es: {
+    introTitle: 'Una buena rutina reduce decisiones y automatiza el inicio',
+    intro: 'El constructor de rutinas no busca una mañana o semana perfecta desde el primer día. Ayuda a reducir decisiones repetidas y ordenar acciones importantes con menos fricción.',
+    conceptTitle: 'Principios de diseño',
+    concepts: [
+      { title: 'Ancla estable', body: 'Usa despertar, comidas o llegada a casa como puntos fijos.' },
+      { title: 'Energía', body: 'Coloca tareas exigentes en tus horas de más energía.' },
+      { title: 'Menos fricción', body: 'Prepara objetos y entorno para que empezar sea más fácil.' },
+    ],
+    useTitle: 'Cuándo usarlo',
+    useCases: [
+      { title: 'Rutina matutina', body: 'Agua, movimiento e intención antes del modo reactivo.' },
+      { title: 'Rutina nocturna', body: 'Cerrar el día, preparar mañana y bajar el ritmo.' },
+      { title: 'Ritmo semanal', body: 'Equilibrar trabajo, recuperación, hobbies y relaciones.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Necesito una rutina perfecta?', answer: 'No. Empieza por el momento del día que más se desordena.' },
+      { question: '¿Y si se siente demasiado rígida?', answer: 'Añade margen y una versión mínima para días cansados.' },
+      { question: '¿Tengo que ser madrugador?', answer: 'No. Lo importante es poner acciones clave en tu verdadero pico de energía.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-routine-builder/', label: 'Guía de rutina', desc: 'Adaptar mañana, noche y semana a la vida real.' },
+      { href: 'https://wiki.oiyo.net/ko/routine/', label: 'Qué es una rutina', desc: 'Diferencia entre rutina y hábito.' },
+      { href: 'https://oiyo.net/es/routine/time-maker', label: 'Crear tiempo', desc: 'Abrir espacio en el calendario.' },
+    ],
+    disclaimer: 'Esta guía sirve para experimentar con el diseño de vida y la auto-reflexión.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={meta.title} description={meta.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-2xl px-4 py-10">
     <div class="mb-8 text-center">
       <h1 class="text-3xl font-black text-slate-900">{meta.title.split('—')[0].trim()}</h1>
@@ -122,6 +328,64 @@ const links = [
         ))}
       </div>
     </div>
+    <RelatedTools locale={locale} tools={['mbti', 'big5', 'attachment']} current="routine-builder" />
+
+    <section class="mt-8 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-green-100 bg-white p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-green-50 p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-slate-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MentalBoost locale={locale} />
   </main>
 </Layout>

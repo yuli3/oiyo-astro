@@ -1,5 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import ProfileMarkdownExport from '../../../components/shared/ProfileMarkdownExport';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
@@ -36,8 +37,273 @@ const meta: Record<Locale, { title: string; description: string }> = {
   },
 };
 const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '나를 설명하는 조각을 하나의 프로필로 정리하세요',
+    intro: '프로필 Markdown 내보내기는 생년월일, 별자리, 혈액형, MBTI, 좋아하는 키워드처럼 흩어져 있는 자기 소개 요소를 한 문서로 묶어줍니다. 결과를 복사해 블로그 소개, 커뮤니티 프로필, 개인 노트, 자기 탐색 기록에 바로 붙여 넣을 수 있습니다.',
+    conceptTitle: '프로필에 담기는 기준',
+    concepts: [
+      { title: '기본 정보', body: '생일, 별자리, 혈액형처럼 가볍게 나를 소개할 수 있는 항목을 정리합니다.' },
+      { title: '성향 키워드', body: 'MBTI와 선호 키워드를 함께 놓아 내 분위기와 관심사를 짧게 보여줍니다.' },
+      { title: 'Markdown 형식', body: '제목, 목록, 강조가 포함된 텍스트라 노션, 깃허브, 블로그에 옮기기 쉽습니다.' },
+    ],
+    useTitle: '이럴 때 유용합니다',
+    useCases: [
+      { title: '커뮤니티 자기소개', body: '긴 설명 대신 핵심 키워드와 성향을 정리한 소개문을 빠르게 만듭니다.' },
+      { title: '개인 기록 보관', body: '테스트 결과와 현재 관심사를 날짜별로 저장해 변화 과정을 볼 수 있습니다.' },
+      { title: '콘텐츠 초안 만들기', body: '블로그 프로필, 링크 페이지, 포트폴리오 소개의 첫 문단을 준비합니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: 'Markdown은 어디에 쓸 수 있나요?', answer: '노션, 깃허브, 옵시디언, 블로그 편집기처럼 Markdown을 지원하거나 일반 텍스트를 붙여 넣을 수 있는 곳에 활용할 수 있습니다.' },
+      { question: '개인정보가 저장되나요?', answer: '이 페이지는 프로필 문장을 만드는 도구입니다. 민감한 정보는 공개 프로필에 넣기 전에 직접 확인하고 조정하세요.' },
+      { question: 'MBTI나 별자리 결과가 꼭 정확해야 하나요?', answer: '가벼운 자기 표현용이므로 절대적인 정확성보다 내가 편하게 소개하고 싶은 표현을 고르는 것이 좋습니다.' },
+    ],
+    readingTitle: '더 읽어보기',
+    reading: [
+      { href: 'https://oiyo.net/ko/mbti/test', label: 'MBTI 테스트', desc: '프로필에 넣을 성격 유형을 먼저 확인해보세요.' },
+      { href: 'https://oiyo.net/ko/zodiac/personality', label: '별자리 성격', desc: '생일 기반의 가벼운 성향 키워드를 더할 수 있습니다.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTI란?', desc: 'MBTI 네 지표와 유형 구조를 개념적으로 살펴봅니다.' },
+    ],
+    disclaimer: '이 프로필은 자기 표현과 기록을 위한 엔터테인먼트형 템플릿입니다.',
+  },
+  en: {
+    introTitle: 'Turn scattered self-description into one reusable profile',
+    intro: 'The Markdown profile exporter gathers lightweight identity details such as birthday, zodiac sign, blood type, MBTI, favorite keywords, and current tendencies into one clean document. You can paste it into a blog bio, community profile, personal note, or self-reflection archive.',
+    conceptTitle: 'What the profile organizes',
+    concepts: [
+      { title: 'Basic signals', body: 'Birthday, zodiac, and blood type give you simple conversation-friendly profile details.' },
+      { title: 'Personality keywords', body: 'MBTI and favorite words make your tone, interests, and current vibe easier to scan.' },
+      { title: 'Markdown output', body: 'Headings, lists, and emphasis make it portable across Notion, GitHub, blogs, and notes.' },
+    ],
+    useTitle: 'Best uses',
+    useCases: [
+      { title: 'Community intros', body: 'Create a concise intro when you do not want to rewrite your profile from scratch.' },
+      { title: 'Personal archive', body: 'Save snapshots of test results and interests over time to notice how your self-image changes.' },
+      { title: 'Content drafting', body: 'Use it as a starting paragraph for a blog bio, links page, or portfolio profile.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Where can I use Markdown?', answer: 'Markdown works well in Notion, GitHub, Obsidian, many blog editors, and any place where formatted plain text is useful.' },
+      { question: 'Is my personal data stored?', answer: 'This page is a profile-writing tool. Review any sensitive detail before using it in a public profile.' },
+      { question: 'Do MBTI or zodiac details need to be exact?', answer: 'For a lightweight profile, choose the wording that feels useful for self-expression rather than treating any label as fixed.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://oiyo.net/en/mbti/test', label: 'MBTI test', desc: 'Find a type label to include in your profile.' },
+      { href: 'https://oiyo.net/en/zodiac/personality', label: 'Zodiac personality', desc: 'Add birthday-based personality keywords.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'What is MBTI?', desc: 'A concept overview of the four MBTI preference pairs.' },
+    ],
+    disclaimer: 'This profile is an entertainment-style template for self-expression and personal notes.',
+  },
+  ja: {
+    introTitle: '自分を表す要素を、使い回せるプロフィールにまとめます',
+    intro: 'プロフィールMarkdownエクスポートは、生年月日、星座、血液型、MBTI、好きなキーワード、今の傾向をひとつの文書に整理します。ブログの自己紹介、コミュニティプロフィール、個人ノート、自己理解の記録にそのまま使えます。',
+    conceptTitle: '整理できる内容',
+    concepts: [
+      { title: '基本情報', body: '誕生日、星座、血液型など、会話の入口になる軽いプロフィール項目です。' },
+      { title: '性格キーワード', body: 'MBTIと好きな言葉を並べて、雰囲気や関心を短く見せます。' },
+      { title: 'Markdown形式', body: '見出し、リスト、強調があるので、ノートやブログへ移しやすい形式です。' },
+    ],
+    useTitle: '便利な場面',
+    useCases: [
+      { title: 'コミュニティ紹介', body: '毎回書き直さず、短く読みやすい自己紹介を作れます。' },
+      { title: '個人アーカイブ', body: 'テスト結果や関心を時期ごとに残し、変化を見返せます。' },
+      { title: 'プロフィール草案', body: 'ブログ、リンクページ、ポートフォリオ紹介の下書きになります。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'Markdownはどこで使えますか？', answer: 'Notion、GitHub、Obsidian、ブログ編集画面など、Markdownやテキスト貼り付けに対応した場所で使えます。' },
+      { question: '個人情報は保存されますか？', answer: 'このページはプロフィール文を作るツールです。公開前に、入れたくない情報がないか自分で確認してください。' },
+      { question: 'MBTIや星座は正確でないといけませんか？', answer: '軽い自己表現用なので、固定ラベルとしてではなく、自分を紹介しやすい言葉として使うのがおすすめです。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://oiyo.net/ja/mbti/test', label: 'MBTIテスト', desc: 'プロフィールに入れるタイプを確認できます。' },
+      { href: 'https://oiyo.net/ja/zodiac/personality', label: '星座性格', desc: '誕生日ベースの性格キーワードを加えられます。' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTIとは', desc: 'MBTIの4つの指標とタイプ構造を整理します。' },
+    ],
+    disclaimer: 'このプロフィールは自己表現と記録のためのエンタメ型テンプレートです。',
+  },
+  zh: {
+    introTitle: '把分散的自我介绍整理成一份可复用资料',
+    intro: 'Markdown 资料导出会把生日、星座、血型、MBTI、喜欢的关键词和当前倾向整理成一份清爽文档。你可以把它放进博客简介、社群资料、个人笔记或自我探索记录。',
+    conceptTitle: '资料会整理什么',
+    concepts: [
+      { title: '基本信息', body: '生日、星座、血型等适合轻松介绍自己的项目。' },
+      { title: '性格关键词', body: '把 MBTI 和喜欢的词放在一起，让兴趣与气质更容易被看见。' },
+      { title: 'Markdown 格式', body: '包含标题、列表和强调，方便迁移到 Notion、GitHub、博客或笔记。' },
+    ],
+    useTitle: '适合的场景',
+    useCases: [
+      { title: '社群自我介绍', body: '不用每次重写，也能快速生成简洁的介绍。' },
+      { title: '个人记录', body: '按时间保存测试结果和兴趣变化，回看自我印象的更新。' },
+      { title: '内容草稿', body: '作为博客简介、链接页或作品集介绍的第一版。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: 'Markdown 可以用在哪里？', answer: 'Notion、GitHub、Obsidian、许多博客编辑器，以及任何适合粘贴格式化文本的地方都可以使用。' },
+      { question: '个人信息会被保存吗？', answer: '本页是资料文本生成工具。公开使用前，请自行检查并删除不想展示的细节。' },
+      { question: 'MBTI 或星座必须很准确吗？', answer: '用于轻松自我表达时，不必把标签当成固定结论，选择对介绍自己有帮助的说法即可。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://oiyo.net/zh/mbti/test', label: 'MBTI 测试', desc: '先确认可放入资料的类型标签。' },
+      { href: 'https://oiyo.net/zh/zodiac/personality', label: '星座性格', desc: '加入基于生日的轻量性格关键词。' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: '什么是 MBTI', desc: '了解四组偏好与类型结构。' },
+    ],
+    disclaimer: '这份资料是用于自我表达与个人记录的娱乐型模板。',
+  },
+  fr: {
+    introTitle: 'Rassemblez votre auto-description dans un profil réutilisable',
+    intro: 'L’export Markdown regroupe naissance, signe, groupe sanguin, MBTI, mots-clés favoris et tendances du moment dans un document propre. Vous pouvez l’utiliser pour une bio de blog, un profil communautaire, une note personnelle ou une archive de réflexion.',
+    conceptTitle: 'Ce que le profil organise',
+    concepts: [
+      { title: 'Repères simples', body: 'Anniversaire, signe et groupe sanguin donnent des détails légers pour se présenter.' },
+      { title: 'Mots-clés de personnalité', body: 'MBTI et mots favoris rendent votre ton, vos intérêts et votre humeur plus lisibles.' },
+      { title: 'Sortie Markdown', body: 'Titres, listes et emphase se déplacent facilement vers Notion, GitHub, blogs et notes.' },
+    ],
+    useTitle: 'Quand l’utiliser',
+    useCases: [
+      { title: 'Présentation de communauté', body: 'Créer une intro claire sans repartir de zéro à chaque fois.' },
+      { title: 'Archive personnelle', body: 'Garder des instantanés de vos résultats et intérêts pour voir les changements.' },
+      { title: 'Brouillon de contenu', body: 'Préparer la première version d’une bio, page de liens ou présentation de portfolio.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Où utiliser Markdown ?', answer: 'Notion, GitHub, Obsidian, de nombreux éditeurs de blog et tout espace où un texte structuré est utile.' },
+      { question: 'Mes données personnelles sont-elles stockées ?', answer: 'Cette page sert à rédiger un profil. Relisez les détails sensibles avant de les publier.' },
+      { question: 'Les détails MBTI ou zodiaque doivent-ils être exacts ?', answer: 'Pour un profil léger, choisissez surtout les mots qui vous aident à vous présenter.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://oiyo.net/fr/mbti/test', label: 'Test MBTI', desc: 'Trouver un type à inclure dans votre profil.' },
+      { href: 'https://oiyo.net/fr/zodiac/personality', label: 'Personnalité zodiacale', desc: 'Ajouter des mots-clés liés à votre anniversaire.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'Qu’est-ce que le MBTI ?', desc: 'Vue d’ensemble des quatre axes MBTI.' },
+    ],
+    disclaimer: 'Ce profil est un modèle ludique pour l’expression de soi et les notes personnelles.',
+  },
+  es: {
+    introTitle: 'Convierte datos dispersos en un perfil reutilizable',
+    intro: 'El exportador Markdown reúne nacimiento, signo, grupo sanguíneo, MBTI, palabras favoritas y tendencias actuales en un documento limpio. Puedes usarlo en una bio de blog, perfil de comunidad, nota personal o archivo de auto-reflexión.',
+    conceptTitle: 'Qué organiza el perfil',
+    concepts: [
+      { title: 'Señales simples', body: 'Cumpleaños, signo y grupo sanguíneo ofrecen detalles ligeros para presentarte.' },
+      { title: 'Palabras de personalidad', body: 'MBTI y keywords favoritas hacen más visibles tu tono, intereses y momento actual.' },
+      { title: 'Salida Markdown', body: 'Títulos, listas y énfasis se trasladan bien a Notion, GitHub, blogs y notas.' },
+    ],
+    useTitle: 'Cuándo usarlo',
+    useCases: [
+      { title: 'Presentación de comunidad', body: 'Crea una intro clara sin reescribirla desde cero cada vez.' },
+      { title: 'Archivo personal', body: 'Guarda instantáneas de resultados e intereses para notar cambios.' },
+      { title: 'Borrador de contenido', body: 'Prepara la primera versión de una bio, página de enlaces o perfil de portafolio.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Dónde puedo usar Markdown?', answer: 'Notion, GitHub, Obsidian, muchos editores de blog y cualquier lugar donde sirva texto estructurado.' },
+      { question: '¿Se guardan mis datos personales?', answer: 'Esta página ayuda a redactar un perfil. Revisa cualquier detalle sensible antes de publicarlo.' },
+      { question: '¿MBTI o zodiaco deben ser exactos?', answer: 'Para un perfil ligero, elige palabras que te ayuden a expresarte, sin tratar las etiquetas como definitivas.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://oiyo.net/es/mbti/test', label: 'Test MBTI', desc: 'Encuentra un tipo para incluir en tu perfil.' },
+      { href: 'https://oiyo.net/es/zodiac/personality', label: 'Personalidad zodiacal', desc: 'Añade palabras basadas en tu cumpleaños.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'Qué es MBTI', desc: 'Vista general de los cuatro ejes MBTI.' },
+    ],
+    disclaimer: 'Este perfil es una plantilla lúdica para expresión personal y notas propias.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
-  <ProfileMarkdownExport client:load locale={locale} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <main class="mx-auto max-w-3xl px-4 py-10">
+    <ProfileMarkdownExport client:load locale={locale} />
+    <RelatedTools locale={locale} tools={['mbti', 'zodiac', 'big5', 'attachment']} current="profile-export" />
+
+    <section class="mt-8 border-t border-indigo-100 pt-8">
+      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-indigo-100 bg-white p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-indigo-50 p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-indigo-100 rounded-xl border border-indigo-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-indigo-100 bg-white p-4 transition-colors hover:border-indigo-300 hover:bg-indigo-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-slate-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
+  </main>
 </Layout>

@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 
@@ -94,9 +95,214 @@ const TYPES: HabitEntry[] = [
 const labelHabits = txt({ ko: '추천 습관', en: 'Recommended Habits', ja: 'おすすめ習慣', zh: '推荐习惯', fr: 'Habitudes recommandées', es: 'Hábitos recomendados' });
 const labelExercise = txt({ ko: '맞는 운동', en: 'Exercise Fit', ja: '合う運動', zh: '适合运动', fr: 'Exercice adapté', es: 'Ejercicio adecuado' });
 const labelAvoid = txt({ ko: '피하면 좋은 것', en: 'Better to Avoid', ja: '避けたほうがいいこと', zh: '最好避免', fr: 'Mieux éviter', es: 'Mejor evitar' });
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: 'MBTI별 습관은 의지력이 아니라 지속 방식의 차이를 보여줍니다',
+    intro: '운동, 독서, 정리, 기록 같은 습관은 성격 유형에 따라 잘 붙는 방식이 다릅니다. 이 페이지는 16가지 MBTI 유형별로 시작하기 쉬운 습관, 어울리는 운동 스타일, 피로를 부르는 패턴을 함께 정리합니다.',
+    conceptTitle: '유형별 습관 설계 기준',
+    concepts: [
+      { title: '에너지 방향', body: '혼자 조용히 쌓아야 지속되는 유형과 사람과 함께해야 살아나는 유형을 구분합니다.' },
+      { title: '자극 수준', body: '반복의 안정감이 필요한지, 새로움과 변주가 필요한지에 따라 습관이 달라집니다.' },
+      { title: '보상 방식', body: '데이터, 성취, 의미, 즐거움, 관계 중 어떤 보상이 오래 가는지 봅니다.' },
+    ],
+    useTitle: '추천 활용법',
+    useCases: [
+      { title: '운동 고르기', body: '종목보다 혼자/함께, 경쟁/경험, 기록/감각 같은 조건을 먼저 고릅니다.' },
+      { title: '루틴 수정', body: '계속 실패한 습관은 의지 문제가 아니라 유형에 맞지 않는 설계일 수 있습니다.' },
+      { title: '친구와 함께하기', body: '서로 다른 유형의 지속 조건을 알면 같이 운동하거나 공부할 때 충돌이 줄어듭니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: 'MBTI별 습관 추천은 과학적으로 확정된 건가요?', answer: '아닙니다. 유형별 선호를 바탕으로 한 생활 설계 아이디어입니다. 실제로 맞는지는 작게 실험해보세요.' },
+      { question: '내 유형 추천이 마음에 들지 않으면요?', answer: '추천은 출발점입니다. 끌리지 않는 습관보다 실제로 반복하고 싶은 행동을 선택하는 것이 더 중요합니다.' },
+      { question: '운동도 MBTI에 맞춰야 하나요?', answer: '반드시 그럴 필요는 없습니다. 다만 운동 환경과 보상 방식이 맞으면 시작과 유지가 쉬워집니다.' },
+    ],
+    readingTitle: '더 읽어보기',
+    reading: [
+      { href: 'https://oiyo.net/ko/habit-builder/30-days', label: '30일 습관 챌린지', desc: '추천 습관을 30일 실험으로 옮겨보세요.' },
+      { href: 'https://oiyo.net/ko/routine/builder', label: '루틴 만들기', desc: '습관을 하루 흐름 안에 배치합니다.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTI 개념', desc: '유형별 선호 지표를 먼저 이해합니다.' },
+    ],
+    disclaimer: 'MBTI 습관 추천은 가벼운 자기 성찰과 생활 실험을 위한 콘텐츠입니다.',
+  },
+  en: {
+    introTitle: 'MBTI habit fit shows different ways of staying consistent',
+    intro: 'Exercise, reading, tidying, planning, and journaling stick differently depending on personality preferences. This page maps each MBTI type to habits, exercise styles, and patterns that may feel unnecessarily draining.',
+    conceptTitle: 'How the recommendations are framed',
+    concepts: [
+      { title: 'Energy direction', body: 'Some types sustain habits privately; others need people, visibility, or shared momentum.' },
+      { title: 'Stimulation level', body: 'A steady repeatable loop fits some people, while novelty and variation keep others engaged.' },
+      { title: 'Reward style', body: 'Data, achievement, meaning, fun, and connection motivate different types in different ways.' },
+    ],
+    useTitle: 'How to use the guide',
+    useCases: [
+      { title: 'Choose exercise', body: 'Start with conditions: solo or social, competitive or experiential, tracked or intuitive.' },
+      { title: 'Adjust routines', body: 'A habit that keeps failing may need redesign, not more pressure.' },
+      { title: 'Plan with others', body: 'Knowing each type’s consistency needs makes shared workouts or study routines smoother.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Are MBTI habit recommendations scientifically fixed?', answer: 'No. They are lifestyle design prompts based on preference patterns. Test them in small ways.' },
+      { question: 'What if I dislike my type’s suggestion?', answer: 'Use the suggestion as a starting point. A habit you actually want to repeat matters more than the label.' },
+      { question: 'Should exercise always match MBTI?', answer: 'No. But matching the environment and reward style can make starting and returning easier.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://oiyo.net/en/habit-builder/30-days', label: '30-day habit challenge', desc: 'Turn one recommended habit into a small experiment.' },
+      { href: 'https://oiyo.net/en/routine/builder', label: 'Build a routine', desc: 'Place the habit inside a realistic daily rhythm.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTI concept', desc: 'Review the preference pairs behind each type.' },
+    ],
+    disclaimer: 'MBTI habit suggestions are light self-reflection prompts for lifestyle experiments.',
+  },
+  ja: {
+    introTitle: 'MBTI別習慣は、続け方の違いを見せるガイドです',
+    intro: '運動、読書、片づけ、計画、記録は、性格の好みによって続きやすい形が変わります。このページでは16タイプごとに始めやすい習慣、合う運動スタイル、疲れやすいパターンを整理します。',
+    conceptTitle: '習慣を設計する基準',
+    concepts: [
+      { title: 'エネルギー方向', body: '一人で積み上げると続くタイプと、人と一緒だと動きやすいタイプを分けます。' },
+      { title: '刺激の量', body: '安定した反復が合うか、新しさや変化が必要かを見ます。' },
+      { title: '報酬の種類', body: 'データ、達成、意味、楽しさ、つながりのどれが続く力になるかを見ます。' },
+    ],
+    useTitle: '使い方',
+    useCases: [
+      { title: '運動を選ぶ', body: '種目名より、一人か一緒か、競争か経験か、記録か感覚かを先に見ます。' },
+      { title: 'ルーティンを直す', body: '続かない習慣は意志ではなく設計が合っていないだけかもしれません。' },
+      { title: '友人と続ける', body: 'お互いの続く条件が分かると、運動や勉強を一緒にしやすくなります。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'MBTI別の習慣は科学的に決まっていますか？', answer: 'いいえ。タイプの好みをもとにした生活設計のアイデアです。小さく試して確かめてください。' },
+      { question: '自分のタイプのおすすめが合わない場合は？', answer: 'おすすめは出発点です。ラベルより、自分が実際に繰り返したい行動を選びましょう。' },
+      { question: '運動もMBTIに合わせるべきですか？', answer: '必須ではありません。ただ環境と報酬が合うと始めやすく戻りやすくなります。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://oiyo.net/ja/habit-builder/30-days', label: '30日習慣チャレンジ', desc: 'おすすめ習慣を小さな実験にします。' },
+      { href: 'https://oiyo.net/ja/routine/builder', label: 'ルーティンを作る', desc: '習慣を一日の流れに置きます。' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTIの概念', desc: 'タイプを作る4指標を確認します。' },
+    ],
+    disclaimer: 'MBTI別習慣は生活実験のための軽い自己省察コンテンツです。',
+  },
+  zh: {
+    introTitle: 'MBTI 习惯推荐展示的是不同的坚持方式',
+    intro: '运动、阅读、整理、计划和记录，会因性格偏好而有不同的持续方式。本页按16种 MBTI 类型整理容易开始的习惯、适合的运动风格，以及可能带来疲惫的模式。',
+    conceptTitle: '类型习惯设计标准',
+    concepts: [
+      { title: '能量方向', body: '有人适合独自积累，有人需要伙伴、可见性或共同节奏。' },
+      { title: '刺激水平', body: '有人需要稳定重复，有人需要新鲜感和变化才能保持兴趣。' },
+      { title: '奖励方式', body: '数据、成就、意义、乐趣和连接，对不同类型的激励不同。' },
+    ],
+    useTitle: '如何使用',
+    useCases: [
+      { title: '选择运动', body: '先看条件：独自或社交、竞争或体验、记录或感受。' },
+      { title: '调整例程', body: '反复失败的习惯可能不是意志问题，而是设计不合适。' },
+      { title: '和朋友一起做', body: '了解彼此的坚持条件后，一起运动或学习会更顺畅。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: 'MBTI 习惯推荐是科学定论吗？', answer: '不是。它是基于偏好模式的生活设计提示，适合用小实验验证。' },
+      { question: '不喜欢自己类型的推荐怎么办？', answer: '推荐只是起点。比起标签，更重要的是选择你真的愿意重复的行动。' },
+      { question: '运动一定要配合 MBTI 吗？', answer: '不一定。但环境和奖励方式合适时，开始和回归都会更容易。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://oiyo.net/zh/habit-builder/30-days', label: '30天习惯挑战', desc: '把一个推荐习惯变成小实验。' },
+      { href: 'https://oiyo.net/zh/routine/builder', label: '打造例程', desc: '把习惯放进真实日常。' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'MBTI 概念', desc: '先理解四组偏好如何构成类型。' },
+    ],
+    disclaimer: 'MBTI 习惯推荐是用于生活实验的轻量自我反思内容。',
+  },
+  fr: {
+    introTitle: 'Les habitudes MBTI montrent différentes façons de rester régulier',
+    intro: 'Sport, lecture, rangement, planification et journal tiennent mieux quand la forme respecte vos préférences. Cette page relie chaque type MBTI à des habitudes, styles d’exercice et patterns qui peuvent fatiguer.',
+    conceptTitle: 'Logique des recommandations',
+    concepts: [
+      { title: 'Direction d’énergie', body: 'Certains types tiennent seuls; d’autres ont besoin de personnes ou d’élan partagé.' },
+      { title: 'Niveau de stimulation', body: 'Répétition stable pour certains, nouveauté et variation pour d’autres.' },
+      { title: 'Type de récompense', body: 'Données, réussite, sens, plaisir ou lien motivent selon les profils.' },
+    ],
+    useTitle: 'Comment l’utiliser',
+    useCases: [
+      { title: 'Choisir un sport', body: 'Regardez les conditions: solo ou social, compétitif ou expérientiel, mesuré ou intuitif.' },
+      { title: 'Ajuster une routine', body: 'Une habitude qui échoue souvent a peut-être besoin d’un meilleur design.' },
+      { title: 'S’organiser à plusieurs', body: 'Comprendre les besoins de régularité rend les routines partagées plus simples.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Les recommandations MBTI sont-elles fixes ?', answer: 'Non. Ce sont des pistes lifestyle basées sur des préférences. Testez petit.' },
+      { question: 'Et si je n’aime pas la suggestion ?', answer: 'La suggestion est un point de départ. Choisissez surtout une action que vous voulez répéter.' },
+      { question: 'Le sport doit-il suivre le MBTI ?', answer: 'Non. Mais un environnement et une récompense adaptés facilitent le retour.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://oiyo.net/fr/habit-builder/30-days', label: 'Défi 30 jours', desc: 'Transformer une habitude en petite expérience.' },
+      { href: 'https://oiyo.net/fr/routine/builder', label: 'Créer une routine', desc: 'Placer l’habitude dans un rythme réaliste.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'Concept MBTI', desc: 'Revoir les quatre paires de préférences.' },
+    ],
+    disclaimer: 'Ces suggestions MBTI sont des pistes légères de réflexion lifestyle.',
+  },
+  es: {
+    introTitle: 'Los hábitos por MBTI muestran distintas formas de ser constante',
+    intro: 'Ejercicio, lectura, orden, planificación y journaling se sostienen mejor cuando la forma encaja con tus preferencias. Esta página conecta cada tipo MBTI con hábitos, estilos de ejercicio y patrones que pueden agotar.',
+    conceptTitle: 'Cómo se enmarcan las recomendaciones',
+    concepts: [
+      { title: 'Dirección de energía', body: 'Algunos tipos sostienen hábitos a solas; otros necesitan personas o impulso compartido.' },
+      { title: 'Nivel de estímulo', body: 'Algunas personas prefieren repetición estable; otras necesitan variedad y novedad.' },
+      { title: 'Tipo de recompensa', body: 'Datos, logro, sentido, diversión o conexión motivan de formas distintas.' },
+    ],
+    useTitle: 'Cómo usar la guía',
+    useCases: [
+      { title: 'Elegir ejercicio', body: 'Mira condiciones: solo o social, competitivo o experiencial, medido o intuitivo.' },
+      { title: 'Ajustar rutinas', body: 'Un hábito que falla seguido quizá necesita rediseño, no más presión.' },
+      { title: 'Planear con otros', body: 'Entender necesidades de constancia ayuda en rutinas compartidas.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Las recomendaciones MBTI son fijas?', answer: 'No. Son pistas lifestyle basadas en preferencias. Pruébalas en pequeño.' },
+      { question: '¿Y si no me gusta la sugerencia?', answer: 'Es un punto de partida. Importa más elegir algo que realmente quieras repetir.' },
+      { question: '¿El ejercicio debe seguir el MBTI?', answer: 'No. Pero un entorno y una recompensa adecuados facilitan empezar y volver.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://oiyo.net/es/habit-builder/30-days', label: 'Desafío 30 días', desc: 'Convierte un hábito recomendado en experimento.' },
+      { href: 'https://oiyo.net/es/routine/builder', label: 'Construir rutina', desc: 'Pon el hábito dentro de un ritmo realista.' },
+      { href: 'https://wiki.oiyo.net/ko/mbti/', label: 'Concepto MBTI', desc: 'Revisa los cuatro pares de preferencias.' },
+    ],
+    disclaimer: 'Estas sugerencias MBTI son pistas ligeras de auto-reflexión lifestyle.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={meta.title} description={meta.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-3xl px-4 py-10">
     <div class="mb-8 text-center">
       <h1 class="text-3xl font-black text-slate-900">
@@ -136,6 +342,64 @@ const labelAvoid = txt({ ko: '피하면 좋은 것', en: 'Better to Avoid', ja: 
         {txt({ ko: '내 MBTI 테스트하기', en: 'Take the MBTI Test', ja: 'MBTIテストを受ける', zh: '做MBTI测试', fr: 'Passer le test MBTI', es: 'Hacer el test MBTI' })} →
       </a>
     </div>
+    <RelatedTools locale={locale} tools={['mbti', 'big5', 'enneagram', 'attachment']} current="mbti-habits" />
+
+    <section class="mt-8 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-green-100 bg-white p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-green-50 p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-slate-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MentalBoost locale={locale} />
   </main>
 </Layout>

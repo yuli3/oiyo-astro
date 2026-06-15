@@ -1,6 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import HabitFormationAssistant from '../../../components/tools/HabitFormationAssistant';
@@ -23,13 +24,284 @@ const meta: Record<Locale, { title: string; description: string }> = {
 };
 const m = meta[locale] ?? meta.en;
 const bridge = getTestBridge('habit-builder', locale);
+
+const content: Record<Locale, {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '30일은 완성이 아니라 시작을 가볍게 만드는 기간입니다',
+    intro: '30일 습관 챌린지는 인생을 한 번에 바꾸는 약속이 아니라, 매일 반복할 수 있는 작은 행동을 찾는 실험입니다. 목표를 작게 나누고 체크인을 남기면 의지력보다 환경과 리듬이 습관을 이어가게 합니다.',
+    conceptTitle: '30일 챌린지의 핵심',
+    concepts: [
+      { title: '작은 행동', body: '하루 2분 안에 시작할 수 있는 행동으로 설계해 실패 부담을 낮춥니다.' },
+      { title: '연속성', body: '완벽한 성공보다 다시 돌아오는 힘을 봅니다. 하루 빠져도 다음 날 이어가면 됩니다.' },
+      { title: '가시화', body: '체크 기록은 진행감을 보여주고, 내가 어떤 조건에서 잘 지속하는지 알려줍니다.' },
+    ],
+    useTitle: '이렇게 활용하세요',
+    useCases: [
+      { title: '첫 습관 만들기', body: '운동, 독서, 물 마시기처럼 쉬운 행동을 하나만 골라 30일 동안 관찰합니다.' },
+      { title: '무기력 회복', body: '큰 계획이 부담스러운 시기에는 최소 행동만 기록해 생활 리듬을 다시 세웁니다.' },
+      { title: '완벽주의 낮추기', body: '100점짜리 하루보다 계속하는 하루를 목표로 삼아 중단 패턴을 줄입니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '30일이면 습관이 완전히 생기나요?', answer: '항상 그렇지는 않습니다. 30일은 자동화의 보장이 아니라 시작 마찰을 낮추고 내 패턴을 파악하기 좋은 실험 기간입니다.' },
+      { question: '하루를 놓치면 실패인가요?', answer: '아닙니다. 놓친 날을 표시하고 다음 날 다시 시작하세요. 중요한 것은 완벽한 연속보다 회복 속도입니다.' },
+      { question: '어떤 습관부터 고르면 좋나요?', answer: '현재 생활에 붙이기 쉬운 행동이 좋습니다. 예를 들어 양치 후 스트레칭 1분, 점심 후 산책 5분처럼 이미 있는 루틴 뒤에 붙이세요.' },
+      { question: '여러 습관을 동시에 해도 되나요?', answer: '처음에는 하나만 추천합니다. 하나가 안정되면 두 번째 습관을 더하는 편이 지속률이 높습니다.' },
+    ],
+    readingTitle: '더 읽어보기',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: '습관 만들기 가이드', desc: '작은 행동과 반복 구조를 설계하는 방법을 더 자세히 봅니다.' },
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: '습관의 의미', desc: '습관을 행동 단서와 반복의 관점에서 정리합니다.' },
+      { href: 'https://oiyo.net/ko/routine/builder', label: '루틴 만들기', desc: '습관을 하루 루틴 안에 배치해 지속 가능하게 만듭니다.' },
+    ],
+    disclaimer: '이 도구는 생활 리듬을 가볍게 실험해보는 엔터테인먼트형 자기 성찰 가이드입니다.',
+  },
+  en: {
+    introTitle: 'Thirty days is a clean starting line, not a finish line',
+    intro: 'A 30-day habit challenge is less about transforming your life overnight and more about testing one small action you can repeat. By shrinking the behavior and checking in daily, you let rhythm, environment, and visible progress do more work than willpower.',
+    conceptTitle: 'What makes the challenge work',
+    concepts: [
+      { title: 'Tiny action', body: 'Choose a behavior that can start in under two minutes, so the first step stays easy.' },
+      { title: 'Recovery over perfection', body: 'A missed day is data, not failure. The real skill is returning quickly.' },
+      { title: 'Visible progress', body: 'Checkmarks reveal momentum and show which conditions help you stay consistent.' },
+    ],
+    useTitle: 'How to use it',
+    useCases: [
+      { title: 'Start one new habit', body: 'Pick one behavior such as reading, walking, stretching, or drinking water and track it for 30 days.' },
+      { title: 'Rebuild low-energy rhythm', body: 'When big plans feel heavy, use the smallest version of the action to restart daily structure.' },
+      { title: 'Soften perfectionism', body: 'Aim for continuation rather than a flawless streak, especially after imperfect days.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Does a habit fully form in 30 days?', answer: 'Not necessarily. Thirty days is a useful experiment for lowering start friction and learning your pattern, not a guarantee of automatic behavior.' },
+      { question: 'Did I fail if I miss a day?', answer: 'No. Mark it honestly and return the next day. Recovery speed matters more than a perfect streak.' },
+      { question: 'What habit should I choose first?', answer: 'Choose something that attaches to a routine you already have, such as stretching after brushing your teeth or walking after lunch.' },
+      { question: 'Can I track several habits at once?', answer: 'You can, but one habit is usually better at the beginning. Add another after the first feels stable.' },
+    ],
+    readingTitle: 'Read more',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: 'Habit-building guide', desc: 'A deeper guide to designing small actions and repeatable loops.' },
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: 'What a habit means', desc: 'A reference view of habits as cues, repetition, and behavior patterns.' },
+      { href: 'https://oiyo.net/en/routine/builder', label: 'Build a routine', desc: 'Place your habit inside a realistic daily routine.' },
+    ],
+    disclaimer: 'This tool is an entertainment-style self-reflection guide for experimenting with everyday rhythm.',
+  },
+  ja: {
+    introTitle: '30日は完成ではなく、始めやすくするための期間です',
+    intro: '30日習慣チャレンジは、人生を一気に変える約束ではなく、毎日くり返せる小さな行動を見つける実験です。行動を小さくし、毎日チェックインすると、意志力よりも環境とリズムが継続を支えてくれます。',
+    conceptTitle: '30日チャレンジの要点',
+    concepts: [
+      { title: '小さな行動', body: '2分以内に始められる行動にして、最初の負担を下げます。' },
+      { title: '完璧より復帰', body: '1日抜けても失敗ではありません。すぐ戻る力を育てます。' },
+      { title: '見える進捗', body: 'チェック記録が流れを見せ、続きやすい条件を教えてくれます。' },
+    ],
+    useTitle: '使い方',
+    useCases: [
+      { title: '最初の習慣づくり', body: '読書、散歩、ストレッチ、水を飲むなど、ひとつだけ選んで30日観察します。' },
+      { title: '低エネルギーの日の立て直し', body: '大きな計画が重い時は、最小版の行動だけで日々のリズムを戻します。' },
+      { title: '完璧主義をゆるめる', body: '完璧な連続記録より、途切れても続けることを目標にします。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: '30日で習慣は完全に定着しますか？', answer: '必ずしもそうではありません。30日は自動化の保証ではなく、始める摩擦を下げ、自分のパターンを知る実験期間です。' },
+      { question: '1日抜けたら失敗ですか？', answer: 'いいえ。抜けた日を記録し、翌日に戻れば大丈夫です。完璧な連続より復帰の速さが大切です。' },
+      { question: '最初に選ぶ習慣は？', answer: '今ある生活に付けやすい行動がおすすめです。歯みがき後のストレッチ1分、昼食後の散歩5分などです。' },
+      { question: '複数の習慣を同時にできますか？', answer: 'できますが、最初はひとつが安全です。安定してから次を足すと続きやすくなります。' },
+    ],
+    readingTitle: '詳しく読む',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: '習慣づくりガイド', desc: '小さな行動と反復の仕組みを詳しく見ます。' },
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: '習慣とは', desc: '習慣を合図と反復の視点で整理します。' },
+      { href: 'https://oiyo.net/ja/routine/builder', label: 'ルーティンを作る', desc: '習慣を一日の流れに配置します。' },
+    ],
+    disclaimer: 'このツールは生活リズムを軽く試すための、エンタメ型の自己省察ガイドです。',
+  },
+  zh: {
+    introTitle: '30天不是终点，而是让开始变轻的阶段',
+    intro: '30天习惯挑战不是一夜改变人生的承诺，而是测试一个可以每天重复的小行动。把目标拆小并留下打卡记录后，节奏、环境和可见进度会比意志力更可靠。',
+    conceptTitle: '30天挑战的核心',
+    concepts: [
+      { title: '微小行动', body: '选择两分钟内能开始的行为，降低第一步的压力。' },
+      { title: '恢复比完美重要', body: '漏掉一天不是失败，第二天回来才是关键。' },
+      { title: '看得见的进度', body: '打卡能显示动力，也能看出你在什么条件下更容易坚持。' },
+    ],
+    useTitle: '如何使用',
+    useCases: [
+      { title: '开始一个新习惯', body: '只选一个行为，比如阅读、散步、拉伸或喝水，连续观察30天。' },
+      { title: '重建低能量节奏', body: '当大计划太沉重时，用最小版本的行动恢复日常结构。' },
+      { title: '降低完美主义', body: '目标不是完美连胜，而是在不完美之后继续。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '30天就能完全养成习惯吗？', answer: '不一定。30天更像是降低启动阻力、了解自己模式的实验期，而不是自动化保证。' },
+      { question: '漏掉一天算失败吗？', answer: '不算。诚实标记，然后第二天继续。恢复速度比完美连续更重要。' },
+      { question: '先选什么习惯比较好？', answer: '选择容易接到现有生活上的行为，例如刷牙后拉伸1分钟，午饭后散步5分钟。' },
+      { question: '可以同时追踪多个习惯吗？', answer: '可以，但一开始建议只选一个。第一个稳定后再加入第二个。' },
+    ],
+    readingTitle: '延伸阅读',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: '习惯养成指南', desc: '进一步了解小行动与重复结构。' },
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: '习惯的含义', desc: '从提示和重复的角度理解习惯。' },
+      { href: 'https://oiyo.net/zh/routine/builder', label: '打造例程', desc: '把习惯放入现实的日常安排中。' },
+    ],
+    disclaimer: '本工具是用于轻松尝试生活节奏的娱乐型自我反思指南。',
+  },
+  fr: {
+    introTitle: 'Trente jours lancent une habitude; ils ne la terminent pas',
+    intro: 'Un défi de 30 jours sert surtout à tester une petite action répétable. En réduisant le geste et en notant vos check-ins, vous laissez le rythme, l’environnement et les progrès visibles soutenir la régularité.',
+    conceptTitle: 'Ce qui fait fonctionner le défi',
+    concepts: [
+      { title: 'Action minuscule', body: 'Choisissez un comportement qui peut commencer en moins de deux minutes.' },
+      { title: 'Retour plutôt que perfection', body: 'Un jour manqué est une information. L’important est de revenir vite.' },
+      { title: 'Progrès visible', body: 'Les coches rendent l’élan concret et révèlent les conditions qui vous aident.' },
+    ],
+    useTitle: 'Comment l’utiliser',
+    useCases: [
+      { title: 'Démarrer une habitude', body: 'Choisissez une seule action, comme lire, marcher, s’étirer ou boire de l’eau, et observez-la 30 jours.' },
+      { title: 'Retrouver un rythme', body: 'Quand l’énergie manque, la version minimale de l’action suffit à relancer la journée.' },
+      { title: 'Alléger le perfectionnisme', body: 'Visez la continuité après les jours imparfaits plutôt qu’une série parfaite.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Une habitude se forme-t-elle en 30 jours ?', answer: 'Pas toujours. Trente jours sont une bonne période d’essai pour réduire la friction et comprendre votre rythme, pas une garantie d’automatisme.' },
+      { question: 'Un jour manqué signifie-t-il l’échec ?', answer: 'Non. Notez-le simplement et reprenez le lendemain. La vitesse de retour compte plus que la série parfaite.' },
+      { question: 'Quelle habitude choisir d’abord ?', answer: 'Une action facile à accrocher à une routine existante, comme s’étirer après le brossage des dents ou marcher après le déjeuner.' },
+      { question: 'Puis-je suivre plusieurs habitudes ?', answer: 'Oui, mais une seule au départ est souvent plus durable. Ajoutez la suivante quand la première est stable.' },
+    ],
+    readingTitle: 'Lire plus',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: 'Guide des habitudes', desc: 'Concevoir de petites actions et des boucles répétables.' },
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: 'Définition de l’habitude', desc: 'Comprendre les habitudes par les signaux et la répétition.' },
+      { href: 'https://oiyo.net/fr/routine/builder', label: 'Créer une routine', desc: 'Placer l’habitude dans une journée réaliste.' },
+    ],
+    disclaimer: 'Cet outil est un guide de réflexion lifestyle, léger et ludique, pour tester un rythme quotidien.',
+  },
+  es: {
+    introTitle: 'Treinta días son un buen inicio, no una meta final',
+    intro: 'Un desafío de 30 días funciona mejor como experimento con una acción pequeña y repetible. Al reducir la conducta y registrar avances, el ritmo, el entorno y el progreso visible hacen más trabajo que la fuerza de voluntad.',
+    conceptTitle: 'Qué sostiene el desafío',
+    concepts: [
+      { title: 'Acción pequeña', body: 'Elige una conducta que puedas iniciar en menos de dos minutos.' },
+      { title: 'Volver antes que perfeccionar', body: 'Un día perdido no es fracaso. La habilidad real es regresar pronto.' },
+      { title: 'Progreso visible', body: 'Las marcas muestran impulso y revelan qué condiciones te ayudan a seguir.' },
+    ],
+    useTitle: 'Cómo usarlo',
+    useCases: [
+      { title: 'Empezar un hábito', body: 'Elige una sola acción, como leer, caminar, estirar o beber agua, y obsérvala durante 30 días.' },
+      { title: 'Recuperar ritmo', body: 'Cuando falta energía, la versión mínima de la acción puede reabrir la estructura del día.' },
+      { title: 'Bajar el perfeccionismo', body: 'Busca continuidad después de días imperfectos, no una racha impecable.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Un hábito se forma por completo en 30 días?', answer: 'No siempre. Treinta días sirven para reducir fricción y aprender tu patrón, no garantizan automatización.' },
+      { question: '¿Fallo si pierdo un día?', answer: 'No. Márcalo y vuelve al día siguiente. La velocidad de recuperación importa más que una racha perfecta.' },
+      { question: '¿Qué hábito conviene elegir primero?', answer: 'Uno que se conecte con una rutina existente, como estirar después de cepillarte los dientes o caminar después de comer.' },
+      { question: '¿Puedo seguir varios hábitos a la vez?', answer: 'Puedes, pero al inicio suele funcionar mejor uno solo. Añade otro cuando el primero esté estable.' },
+    ],
+    readingTitle: 'Leer más',
+    reading: [
+      { href: 'https://blog.oiyo.net/ko/tool-habit-builder/', label: 'Guía de hábitos', desc: 'Diseña acciones pequeñas y ciclos repetibles.' },
+      { href: 'https://wiki.oiyo.net/ko/habit/', label: 'Qué es un hábito', desc: 'Una mirada a señales, repetición y patrones de conducta.' },
+      { href: 'https://oiyo.net/es/routine/builder', label: 'Construir una rutina', desc: 'Coloca el hábito dentro de un día realista.' },
+    ],
+    disclaimer: 'Esta herramienta es una guía ligera de auto-reflexión para experimentar con el ritmo diario.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <main class="mx-auto max-w-3xl px-4 py-10">
     <HabitFormationAssistant client:load locale={locale} />
     <WisdomNotes topic="habit-builder" locale={locale} />
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
+    <RelatedTools locale={locale} tools={['mbti', 'big5', 'attachment']} current="habit-builder" />
+
+    <section class="mt-8 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-green-100 bg-white p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <article class="rounded-xl bg-green-50 p-4">
+            <h3 class="font-semibold text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-slate-950">
+              {faq.question}
+            </summary>
+            <p class="mt-3 text-sm leading-6 text-slate-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {c.reading.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+            <span class="font-semibold text-slate-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
       <MentalBoost locale={locale} />
   </main>
 </Layout>
