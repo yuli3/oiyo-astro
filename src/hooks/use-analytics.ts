@@ -25,6 +25,20 @@ export function useAnalytics() {
         options.referrer ||
         (typeof window !== "undefined" ? document.referrer : undefined);
 
+      // Mirror to GA4 (family property G-915L6V38X6) so events/conversions are
+      // visible alongside auto-captured utm_source=ahoxy funnel sessions.
+      if (
+        typeof window !== "undefined" &&
+        typeof (window as unknown as { gtag?: (...a: unknown[]) => void }).gtag ===
+          "function"
+      ) {
+        (window as unknown as { gtag: (...a: unknown[]) => void }).gtag(
+          "event",
+          options.eventType,
+          { ...(options.eventData ?? {}), page_location: pageUrl },
+        );
+      }
+
       await fetch("/api/analytics/track", {
         body: JSON.stringify({
           eventData: options.eventData,
