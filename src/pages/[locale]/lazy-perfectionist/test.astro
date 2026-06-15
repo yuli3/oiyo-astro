@@ -6,6 +6,7 @@ import LazyPerfectionistTest from '../../../components/tests/LazyPerfectionistTe
 import WisdomNotes from '../../../components/shared/WisdomNotes.astro';
 import TestContentBridge from '../../../components/shared/TestContentBridge.astro';
 import { getTestBridge } from '../../../data/test-content-bridges';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -46,5 +47,6 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
     <WisdomNotes topic="lazy-perfectionist" locale={locale} />
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
+    <RelatedTools locale={locale} tools={['perfectionism','selfEsteem','lethargy','eq']} current="lazyPerfectionist" />
   </main>
 </Layout>

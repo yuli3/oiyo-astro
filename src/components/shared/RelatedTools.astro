@@ -64,6 +64,90 @@ const TOOLS: Record<string, Tool> = {
     icon: '❤️‍🔥', href: '/love-language/test',
     label: { ko: '사랑의 언어', en: 'Love Language', ja: '愛の言語', zh: '爱的语言', fr: 'Langage de l’amour', es: 'Lenguaje del amor' },
   },
+  // Clinical / wellness cluster
+  depression: {
+    icon: '🌧️', href: '/depression/test',
+    label: { ko: '우울 자가검사', en: 'Depression Test', ja: 'うつ自己診断', zh: '抑郁自测', fr: 'Test de dépression', es: 'Test de depresión' },
+  },
+  anxiety: {
+    icon: '😰', href: '/anxiety/test',
+    label: { ko: '불안 자가검사', en: 'Anxiety Test', ja: '不安自己診断', zh: '焦虑自测', fr: 'Test d’anxiété', es: 'Test de ansiedad' },
+  },
+  socialAnxiety: {
+    icon: '🫥', href: '/social-anxiety/test',
+    label: { ko: '사회불안 검사', en: 'Social Anxiety Test', ja: '社交不安診断', zh: '社交焦虑测试', fr: 'Anxiété sociale', es: 'Ansiedad social' },
+  },
+  burnout: {
+    icon: '🔥', href: '/burnout/test',
+    label: { ko: '번아웃 검사', en: 'Burnout Test', ja: 'バーンアウト診断', zh: '倦怠测试', fr: 'Test de burnout', es: 'Test de burnout' },
+  },
+  adhd: {
+    icon: '🌀', href: '/adhd/test',
+    label: { ko: 'ADHD 자가검사', en: 'ADHD Test', ja: 'ADHD自己診断', zh: 'ADHD自测', fr: 'Test TDAH', es: 'Test TDAH' },
+  },
+  lethargy: {
+    icon: '🪫', href: '/lethargy/test',
+    label: { ko: '무기력 검사', en: 'Lethargy Test', ja: '無気力診断', zh: '无力感测试', fr: 'Test de léthargie', es: 'Test de letargo' },
+  },
+  commuteMental: {
+    icon: '🚇', href: '/commute-mental/test',
+    label: { ko: '출퇴근 멘탈', en: 'Commute Stress', ja: '通勤メンタル', zh: '通勤心理', fr: 'Stress des trajets', es: 'Estrés del trayecto' },
+  },
+  sleepType: {
+    icon: '😴', href: '/sleep-type/test',
+    label: { ko: '수면 유형', en: 'Sleep Type', ja: '睡眠タイプ', zh: '睡眠类型', fr: 'Type de sommeil', es: 'Tipo de sueño' },
+  },
+  // Self / emotional cluster
+  selfEsteem: {
+    icon: '🌱', href: '/self-esteem/test',
+    label: { ko: '자존감 검사', en: 'Self-Esteem Test', ja: '自尊心診断', zh: '自尊测试', fr: 'Estime de soi', es: 'Autoestima' },
+  },
+  innerStrength: {
+    icon: '🛡️', href: '/inner-strength/test',
+    label: { ko: '내면의 힘', en: 'Inner Strength', ja: '内なる強さ', zh: '内在力量', fr: 'Force intérieure', es: 'Fuerza interior' },
+  },
+  empathy: {
+    icon: '🤝', href: '/empathy/test',
+    label: { ko: '공감 능력', en: 'Empathy Test', ja: '共感力診断', zh: '共情测试', fr: 'Test d’empathie', es: 'Test de empatía' },
+  },
+  eq: {
+    icon: '💗', href: '/eq/test',
+    label: { ko: 'EQ 감성지능', en: 'EQ Test', ja: 'EQ診断', zh: 'EQ情商测试', fr: 'Test QE', es: 'Test de IE' },
+  },
+  angerStyle: {
+    icon: '🌋', href: '/anger-style/test',
+    label: { ko: '분노 유형', en: 'Anger Style', ja: '怒りのタイプ', zh: '愤怒类型', fr: 'Style de colère', es: 'Estilo de ira' },
+  },
+  perfectionism: {
+    icon: '🎯', href: '/perfectionism/test',
+    label: { ko: '완벽주의 검사', en: 'Perfectionism Test', ja: '完璧主義診断', zh: '完美主义测试', fr: 'Perfectionnisme', es: 'Perfeccionismo' },
+  },
+  lazyPerfectionist: {
+    icon: '🛋️', href: '/lazy-perfectionist/test',
+    label: { ko: '게으른 완벽주의', en: 'Lazy Perfectionist', ja: '怠け完璧主義', zh: '懒惰完美主义', fr: 'Perfectionniste paresseux', es: 'Perfeccionista perezoso' },
+  },
+  // Social / political cluster
+  narcissism: {
+    icon: '🪞', href: '/narcissism/test',
+    label: { ko: '나르시시즘 검사', en: 'Narcissism Test', ja: 'ナルシシズム診断', zh: '自恋测试', fr: 'Test de narcissisme', es: 'Test de narcisismo' },
+  },
+  authoritarian: {
+    icon: '⚖️', href: '/authoritarian/test',
+    label: { ko: '권위주의 척도', en: 'Authoritarian Scale', ja: '権威主義尺度', zh: '威权主义量表', fr: 'Échelle autoritaire', es: 'Escala autoritaria' },
+  },
+  political: {
+    icon: '🗳️', href: '/political/test',
+    label: { ko: '정치성향 검사', en: 'Political Compass', ja: '政治傾向診断', zh: '政治倾向测试', fr: 'Boussole politique', es: 'Brújula política' },
+  },
+  // Other
+  personalColor: {
+    icon: '🎨', href: '/personal-color/test',
+    label: { ko: '퍼스널 컬러', en: 'Personal Color', ja: 'パーソナルカラー', zh: '个人色彩', fr: 'Couleur personnelle', es: 'Color personal' },
+  },
+  investmentType: {
+    icon: '📈', href: '/investment-type/test',
+    label: { ko: '투자 성향', en: 'Investment Type', ja: '投資タイプ', zh: '投资类型', fr: 'Profil d’investisseur', es: 'Perfil inversor' },
+  },
 };
 
 const HEADING: Record<Locale, string> = {

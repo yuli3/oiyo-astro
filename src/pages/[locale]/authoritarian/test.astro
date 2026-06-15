@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import AuthoritarianScaleTest from '../../../components/tests/AuthoritarianScaleTest';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -122,5 +123,6 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
         </a>
       </div>
     </div>
+    <RelatedTools locale={locale} tools={['political','narcissism','mbti','empathy']} current="authoritarian" />
   </main>
 </Layout>
