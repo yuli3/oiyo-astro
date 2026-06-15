@@ -1,0 +1,64 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import FaqAccordion from "../../components/shared/_oiyo-shared/FaqAccordion.astro";
+import { LOCALES } from "../../i18n";
+
+const network = [
+  { role: "Definition", name: "Oiyo Wiki", url: "https://wiki.oiyo.net" },
+  { role: "Explanation", name: "Oiyo Blog", url: "https://blog.oiyo.net" },
+  { role: "Execution", name: "Oiyo", url: "https://oiyo.net" },
+];
+---
+
+<Layout
+  title="Knowledge Layer — Interactive Tools Data | OIYO"
+  description="The execution layer of the Oiyo knowledge network: interactive tools and tests, discoverable as machine-readable data."
+  locale="en"
+>
+  <article class="py-24 max-w-3xl mx-auto px-6">
+    <p class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Knowledge Layer · Execution</p>
+    <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
+      Interactive tools, as citable data
+    </h1>
+    <p class="text-lg text-muted-foreground leading-relaxed mb-10">
+      OIYO is the <strong>execution layer</strong> of the Oiyo knowledge network: tests, calculators and
+      readings (personality, saju, astrology, tarot, numerology). The canonical URL index of these tools
+      is the sitemap; a richer localized tools catalog is planned.
+    </p>
+
+    <h2 class="text-2xl font-bold tracking-tight mb-4">Open data catalogs</h2>
+    <ul class="space-y-4 mb-12">
+      <li class="border border-border rounded-lg p-5">
+        <a href="/knowledge/tools.json" class="text-primary font-bold font-mono">tools.json</a>
+        <p class="text-sm text-muted-foreground mt-1">ItemList of interactive tools/tests with category, languages and stable URL.</p>
+      </li>
+      <li class="border border-border rounded-lg p-5">
+        <a href="/knowledge/index.json" class="text-primary font-bold font-mono">index.json</a>
+        <p class="text-sm text-muted-foreground mt-1">Machine-readable discovery manifest for this site and the knowledge network.</p>
+      </li>
+      <li class="border border-border rounded-lg p-5">
+        <a href="/sitemap-index.xml" class="text-primary font-bold font-mono">sitemap-index.xml</a>
+        <p class="text-sm text-muted-foreground mt-1">Deterministic URL index across {LOCALES.length} languages.</p>
+      </li>
+    </ul>
+
+    <h2 class="text-2xl font-bold tracking-tight mb-4">The knowledge network</h2>
+    <ul class="space-y-3 mb-12">
+      {network.map((n) => (
+        <li class="flex items-baseline gap-3">
+          <span class="text-[10px] font-bold uppercase tracking-widest text-primary w-24 shrink-0">{n.role}</span>
+          <a href={n.url} class="font-medium hover:text-primary transition-colors">{n.name}</a>
+          <span class="text-xs text-muted-foreground">{n.url}</span>
+        </li>
+      ))}
+    </ul>
+
+    <FaqAccordion
+      heading="FAQ"
+      items={[
+        { q: "Can I reference these tools?", a: "Yes. Each tool has a stable URL (see <a href='/knowledge/tools.json'>tools.json</a>). Attribution: Oiyo (oiyo.net)." },
+        { q: "Is there a machine-readable catalog?", a: "Yes — <a href='/knowledge/tools.json'>tools.json</a> lists every tool with category and languages; <a href='/knowledge/index.json'>index.json</a> is the discovery manifest." },
+      ]}
+    />
+  </article>
+</Layout>
