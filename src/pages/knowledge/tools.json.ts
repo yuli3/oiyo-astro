@@ -56,7 +56,7 @@ export const GET: APIRoute = async () => {
       id: route,
       category: top,
       title: humanize(segments[segments.length - 1] === "test" ? top : segments[segments.length - 1]),
-      url: `${base}/en/${route}`,
+      url: `${base}/en/${route}/`,
       locales: [...LOCALES],
     });
   }
