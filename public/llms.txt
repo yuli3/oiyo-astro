@@ -1,0 +1,18 @@
+# Oiyo — Knowledge Layer (Execution)
+
+> Interactive tools and tests across personality, saju, astrology, tarot, numerology and wellness. The execution layer of the Oiyo knowledge network. Languages: en, ko, ja, fr, es, zh.
+
+## Machine-readable catalogs
+- [Tools catalog](https://oiyo.net/knowledge/tools.json): schema.org ItemList of interactive tools/tests — category, languages and a stable URL.
+- [Discovery manifest](https://oiyo.net/knowledge/index.json): resources, the canonical cross-site concept graph, and the Oiyo knowledge network.
+
+## Overview
+- [Knowledge hub](https://oiyo.net/knowledge/): human-readable overview.
+
+## Citation
+Cite individual tools by their stable URL (see tools.json `url`). Attribution: Oiyo (oiyo.net).
+
+## Network
+- Definition: https://wiki.oiyo.net
+- Explanation: https://blog.oiyo.net
+- Execution: https://oiyo.net
