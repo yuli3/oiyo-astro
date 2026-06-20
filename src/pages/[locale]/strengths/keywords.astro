@@ -1,0 +1,111 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import StrengthKeywordFinder from '../../../components/tools/StrengthKeywordFinder';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: '강점 키워드 찾기 — 나를 알아가는 영감 단어 도구',
+    description: '끌리는 동사·명사를 골라 나의 강점 키워드를 모아보는 자기 발견 도구. 정답 없는 영감형 — "나를 알기", "아직도 모르는 나"를 위한 단어 카드.',
+  },
+  en: {
+    title: 'Find Your Strength Keywords — Self-Discovery Word Tool',
+    description: 'Pick the verbs and nouns that pull at you and gather your strength keywords. A no-scoring, reflective self-discovery tool for knowing yourself.',
+  },
+  ja: {
+    title: '強みキーワード探し — 自分を知るインスピレーション単語ツール',
+    description: '惹かれる動詞・名詞を選んで自分の強みキーワードを集める自己発見ツール。正解のないインスピレーション型。',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  introTitle: string;
+  intro: string;
+  howTitle: string;
+  how: string[];
+  relatedTitle: string;
+  related: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '단어는 나를 비추는 거울입니다',
+    intro: '강점은 거창한 성취가 아니라, 자꾸 끌리는 행동(동사)과 소중히 여기는 가치(명사)에서 드러납니다. 점수도 유형도 없습니다. 그냥 마음이 가는 단어를 모아보면, 지금의 당신이 보입니다. "다른 단어 보기"로 미처 생각 못 한 단어까지 만나보세요.',
+    howTitle: '이렇게 써보세요',
+    how: [
+      '끌리는 동사와 명사를 자유롭게 누릅니다(여러 개 가능).',
+      '"다른 단어 보기"로 새 단어를 불러와 시야를 넓힙니다.',
+      '"나의 강점 키워드 보기"로 카드를 만들고, 아래 질문으로 한 걸음 더 들어갑니다.',
+    ],
+    relatedTitle: '함께 하면 좋은 것',
+    related: [
+      { href: '/inner-strength/test', label: '내면 강점 테스트', desc: '나의 강점을 더 깊이 살펴봅니다.' },
+      { href: '/self-esteem/test', label: '자존감 테스트', desc: '나를 대하는 태도를 점검합니다.' },
+      { href: '/today', label: '오늘의 우주', desc: '오늘의 나를 위한 한 장.' },
+    ],
+    disclaimer: '이 도구는 진단이 아니라 자기 성찰을 돕는 영감 도구입니다. 고른 단어에 정답·우열은 없습니다.',
+  },
+  en: {
+    introTitle: 'Words are a mirror for who you are',
+    intro: 'Strengths show up not in grand achievements but in the actions you keep gravitating to (verbs) and the values you hold dear (nouns). No score, no type — just gather the words that pull at you, and the present you appears. Use "show other words" to meet words you had not considered.',
+    howTitle: 'How to use it',
+    how: [
+      'Tap any verbs and nouns that resonate (multiple allowed).',
+      'Use "show other words" to widen your view with fresh words.',
+      'Reveal your strength keyword card, then go deeper with the questions below.',
+    ],
+    relatedTitle: 'Pairs well with',
+    related: [
+      { href: '/inner-strength/test', label: 'Inner Strength Test', desc: 'Explore your strengths more deeply.' },
+      { href: '/self-esteem/test', label: 'Self-Esteem Test', desc: 'Check how you treat yourself.' },
+      { href: '/today', label: 'Daily Universe', desc: 'A page for today’s you.' },
+    ],
+    disclaimer: 'This is a reflective inspiration tool, not a diagnosis. There is no right answer or ranking among the words.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <StrengthKeywordFinder locale={locale} client:load />
+
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.howTitle}</h2>
+      <ol class="mt-4 space-y-2 list-decimal pl-5 text-green-800 leading-7">
+        {c.how.map((step) => <li>{step}</li>)}
+      </ol>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href}>
+            <span class="font-semibold text-green-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
+  </main>
+</Layout>
