@@ -130,6 +130,30 @@ const intervalTimerManifest: FeatureManifest = {
   },
 };
 
+// Lotto Win Simulator — spend a jackpot, see your priorities (G10).
+const lottoSimManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "Coins",
+  id: "lotto-simulator",
+  path: "/lotto/simulator",
+  status: "production",
+  name: {
+    cn: "彩票中奖模拟器", en: "Lotto Win Simulator", es: "Simulador de lotería",
+    fr: "Simulateur de gain loto", ja: "宝くじ当選シミュレーター", ko: "로또 당첨 시뮬레이터",
+  },
+  description: {
+    cn: "选择奖金，自由花在房子车旅行上，余额实时变化。",
+    en: "Pick a jackpot and spend it on home/car/travel; balance updates live.",
+    es: "Elige un premio y gástalo; el saldo se actualiza en vivo.",
+    fr: "Choisissez un gain et dépensez-le ; le solde se met à jour.",
+    ja: "当選金を選んで自由に使う。残額がリアルタイム更新。",
+    ko: "당첨금을 골라 집·차·여행에 써보는 시뮬(잔액 실시간).",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -138,6 +162,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   menuRouletteManifest,
   emotionReleaseManifest,
   intervalTimerManifest,
+  lottoSimManifest,
 ];
 
 // Helper to get features easily

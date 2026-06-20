@@ -1,0 +1,88 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import LottoWinSimulator from '../../../components/tools/LottoWinSimulator';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: '로또 당첨 시뮬레이터 — 당첨되면 뭐하지? 당첨금 써보기',
+    description: '로또 1등 당첨금을 골라 집·차·여행·기부·저축에 마음껏 써보는 당첨 시뮬레이터. 잔액이 실시간으로 줄어들어요. 재미로 보는 무료 도구.',
+  },
+  en: {
+    title: 'Lotto Win Simulator — If You Won, What First?',
+    description: 'Pick a jackpot and spend it on a home, car, travel, giving, and savings — the balance updates live. A fun, free what-if simulator.',
+  },
+  ja: {
+    title: '宝くじ当選シミュレーター — 当たったら何する？当選金を使ってみよう',
+    description: '当選金を選んで家・車・旅行・寄付・貯蓄に自由に使う当選シミュレーター。残額がリアルタイムで減少。遊びで楽しむ無料ツール。',
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  introTitle: string;
+  intro: string;
+  relatedTitle: string;
+  related: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '상상은 무료, 계획은 진짜가 됩니다',
+    intro: '"당첨되면 뭐할까?"는 누구나 한 번쯤 해보는 즐거운 상상입니다. 직접 당첨금을 써보면, 의외로 내가 무엇을 가장 원하는지(집? 여행? 안정?)가 드러납니다. 재미로 즐기되, 끝의 사용 내역을 보면 진짜 우선순위가 보여요.',
+    relatedTitle: '함께 하면 좋은 것',
+    related: [
+      { href: '/strengths/keywords', label: '강점 키워드 찾기', desc: '내가 중요시하는 가치 찾기.' },
+      { href: '/menu/roulette', label: '월급날 메뉴 룰렛', desc: '오늘 한 끼는 룰렛에 맡기기.' },
+      { href: '/journal/today', label: '오늘의 저널', desc: '내가 진짜 원하는 것 적어보기.' },
+    ],
+    disclaimer: '재미를 위한 가상 시뮬레이터입니다. 실제 당첨금·세금·상품 가격과 다릅니다. 과도한 복권 구매는 권하지 않습니다.',
+  },
+  en: {
+    introTitle: 'Imagining is free; planning becomes real',
+    intro: '“What would I do if I won?” is a fun daydream everyone has. Actually spending the prize reveals what you truly want most — a home? travel? security? Enjoy it for fun, but the final breakdown shows your real priorities.',
+    relatedTitle: 'Pairs well with',
+    related: [
+      { href: '/strengths/keywords', label: 'Strength Keywords', desc: 'Find the values you hold dear.' },
+      { href: '/menu/roulette', label: 'Menu Roulette', desc: 'Let the roulette pick today’s meal.' },
+      { href: '/journal/today', label: "Today's Journal", desc: 'Write what you truly want.' },
+    ],
+    disclaimer: 'A for-fun hypothetical simulator. Actual prizes, taxes, and prices differ. We do not encourage excessive lottery spending.',
+  },
+};
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <LottoWinSimulator locale={locale} client:load />
+
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href}>
+            <span class="font-semibold text-green-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
+  </main>
+</Layout>
