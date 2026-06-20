@@ -1,0 +1,111 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import JournalingTool from '../../../components/tools/JournalingTool';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: '오늘의 저널 — 하루 한 질문 셀프 저널링(무료, 비공개)',
+    description: '매일 하나의 성찰 질문에 답하며 마음을 정리하는 셀프 저널링 도구. 기록은 브라우저에만 저장돼 완전 비공개. 감사·감정·자기이해 프롬프트.',
+  },
+  en: {
+    title: "Today's Journal — One-Question Daily Self-Journaling (Free, Private)",
+    description: 'A self-journaling tool: answer one reflective question a day to settle your mind. Entries are saved only in your browser — fully private. Gratitude, emotion, self-discovery prompts.',
+  },
+  ja: {
+    title: '今日のジャーナル — 1日1問のセルフジャーナリング（無料・非公開）',
+    description: '毎日ひとつの問いに答えて心を整えるセルフジャーナリングツール。記録はブラウザにのみ保存され完全非公開。',
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  introTitle: string;
+  intro: string;
+  whyTitle: string;
+  why: string[];
+  relatedTitle: string;
+  related: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '하루 한 줄이 마음을 정리합니다',
+    intro: '거창한 일기가 아니어도 됩니다. 하루 한 질문에 한두 줄만 답해도, 흩어진 생각과 감정이 정리됩니다. 매일 새 질문이 뜨고, "다른 질문"으로 마음에 드는 걸 고를 수 있어요. 기록은 이 브라우저에만 저장되니 솔직하게 적어도 안전합니다.',
+    whyTitle: '저널링이 좋은 이유',
+    why: [
+      '감정에 이름을 붙이면(라벨링) 강도가 누그러집니다.',
+      '생각을 밖으로 꺼내면 머릿속 반추(곱씹기)가 줄어듭니다.',
+      '꾸준한 기록은 나의 패턴·변화를 보여줍니다.',
+    ],
+    relatedTitle: '함께 하면 좋은 것',
+    related: [
+      { href: '/strengths/keywords', label: '강점 키워드 찾기', desc: '끌리는 단어로 나를 알아갑니다.' },
+      { href: '/breathing/timer', label: '호흡 타이머', desc: '쓰기 전에 마음을 가라앉힙니다.' },
+      { href: '/today', label: '오늘의 우주', desc: '오늘의 나를 위한 한 장.' },
+    ],
+    disclaimer: '이 도구는 자기 성찰을 돕는 보조 도구이며 의학적 치료가 아닙니다. 마음이 많이 힘들다면 전문가의 도움을 받으세요.',
+  },
+  en: {
+    introTitle: 'One line a day settles the mind',
+    intro: 'It does not have to be a grand diary. Even a line or two in answer to one daily question helps organize scattered thoughts and feelings. A new prompt appears each day, and you can pick one you like with "another question." Entries stay only in this browser, so you can write honestly.',
+    whyTitle: 'Why journaling helps',
+    why: [
+      'Naming an emotion (labeling) softens its intensity.',
+      'Getting thoughts out reduces rumination in your head.',
+      'Consistent entries reveal your patterns and changes.',
+    ],
+    relatedTitle: 'Pairs well with',
+    related: [
+      { href: '/strengths/keywords', label: 'Strength Keywords', desc: 'Know yourself through words that resonate.' },
+      { href: '/breathing/timer', label: 'Breathing Timer', desc: 'Calm down before you write.' },
+      { href: '/today', label: 'Daily Universe', desc: 'A page for today’s you.' },
+    ],
+    disclaimer: 'This is a self-reflection aid, not medical treatment. If you are struggling, please seek professional help.',
+  },
+};
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <JournalingTool locale={locale} client:load />
+
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.whyTitle}</h2>
+      <ul class="mt-4 space-y-3">
+        {c.why.map((w) => (
+          <li class="rounded-xl bg-green-50 px-4 py-3 text-sm leading-6 text-green-800">{w}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href}>
+            <span class="font-semibold text-green-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
+  </main>
+</Layout>

@@ -30,10 +30,39 @@ const strengthKeywordsManifest: FeatureManifest = {
   },
 };
 
+// Today's Journal — daily reflective prompt + private localStorage journal (G14).
+const journalManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "NotebookPen",
+  id: "journal-today",
+  path: "/journal/today",
+  status: "production",
+  name: {
+    cn: "今日日记",
+    en: "Today's Journal",
+    es: "Diario de hoy",
+    fr: "Journal du jour",
+    ja: "今日のジャーナル",
+    ko: "오늘의 저널",
+  },
+  description: {
+    cn: "每天回答一个反思问题，记录只保存在浏览器中。",
+    en: "Answer one reflective question a day; entries stay only in your browser.",
+    es: "Responde una pregunta reflexiva al día; las entradas quedan solo en tu navegador.",
+    fr: "Répondez à une question par jour ; les entrées restent dans votre navigateur.",
+    ja: "1日1問の問いに答える。記録はブラウザにのみ保存。",
+    ko: "하루 한 질문에 답하는 비공개 셀프 저널링(브라우저 저장).",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
   strengthKeywordsManifest,
+  journalManifest,
 ];
 
 // Helper to get features easily
