@@ -154,6 +154,30 @@ const lottoSimManifest: FeatureManifest = {
   },
 };
 
+// Money Parking Guide — which vehicle fits your goal (G16).
+const moneyParkingManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "PiggyBank",
+  id: "money-parking",
+  path: "/money/parking",
+  status: "production",
+  name: {
+    cn: "资金存放指南", en: "Money Parking Guide", es: "Guía de dónde poner el dinero",
+    fr: "Guide où placer son argent", ja: "資金の置き場ガイド", ko: "자금 보관처 가이드",
+  },
+  description: {
+    cn: "按目的推荐资金存放处（活期/CMA/定期/养老/ETF）。教育用途。",
+    en: "By goal, which vehicle fits — savings/CMA/deposit/retirement/ETF. Educational.",
+    es: "Por objetivo, qué vehículo encaja. Educativo, no es asesoría.",
+    fr: "Selon l'objectif, quel placement convient. Éducatif.",
+    ja: "目的別に資金の置き場を案内（預金/CMA/年金/ETF）。教育目的。",
+    ko: "목적별 자금 보관처 추천(파킹통장·CMA·예적금·IRP·ETF). 교육용.",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -163,6 +187,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   emotionReleaseManifest,
   intervalTimerManifest,
   lottoSimManifest,
+  moneyParkingManifest,
 ];
 
 // Helper to get features easily

@@ -1,0 +1,84 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import MoneyParkingGuide from '../../../components/tools/MoneyParkingGuide';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: '내 돈 어디에 둘까? — 파킹통장·CMA·IRP 자금 보관처 가이드',
+    description: '비상금·단기·노후 목적별로 파킹통장·CMA·예적금·IRP·ETF 중 어울리는 보관처를 알려주는 가이드. 유동성·위험·세제 비교. 교육용, 투자 권유 아님.',
+  },
+  en: {
+    title: 'Where Should Your Money Go? — Parking Guide (Savings, CMA, Retirement)',
+    description: 'By goal (emergency, short-term, retirement, investing), see which vehicle fits — high-yield savings, CMA, deposits, retirement accounts, ETFs. Educational, not advice.',
+  },
+  ja: {
+    title: 'お金はどこに置く？ — 普通預金・CMA・年金 資金の置き場ガイド',
+    description: '緊急資金・短期・老後など目的別に、置き場（高金利預金・CMA・定期・年金口座・ETF）を案内。流動性・リスク・税制を比較。教育目的。',
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  introTitle: string;
+  intro: string;
+  relatedTitle: string;
+  related: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '돈은 목적에 따라 자리가 다릅니다',
+    intro: '같은 돈이라도 비상금이라면 즉시 꺼낼 수 있어야 하고, 노후 자금이라면 세제 혜택과 장기 성장을 봐야 합니다. 목적(유동성·기간·위험)을 먼저 정하면 보관처가 자연스럽게 좁혀집니다. 이 가이드로 큰 그림을 잡고, 구체 상품은 공식 정보로 확인하세요.',
+    relatedTitle: '함께 보면 좋은 것',
+    related: [
+      { href: '/strengths/keywords', label: '강점 키워드 찾기', desc: '내 가치관 점검.' },
+      { href: '/lotto/simulator', label: '로또 당첨 시뮬', desc: '목돈이 생긴다면 우선순위는?' },
+      { href: '/journal/today', label: '오늘의 저널', desc: '돈에 대한 내 생각 적기.' },
+    ],
+    disclaimer: '교육용 일반 정보이며 투자·금융 권유가 아닙니다. 금리·세제·예금자보호 한도는 변동되니 각 금융사·공식 사이트(금융감독원·각 사)에서 반드시 확인하세요.',
+  },
+  en: {
+    introTitle: 'Money belongs in different places by purpose',
+    intro: 'The same money needs to be instantly accessible if it’s an emergency fund, but should seek tax benefits and long-term growth if it’s for retirement. Decide the purpose (liquidity, horizon, risk) first and the vehicle narrows naturally. Use this for the big picture, and confirm specific products with official sources.',
+    relatedTitle: 'Pairs well with',
+    related: [
+      { href: '/strengths/keywords', label: 'Strength Keywords', desc: 'Check your values.' },
+      { href: '/lotto/simulator', label: 'Lotto Win Simulator', desc: 'If a windfall came, your priorities?' },
+      { href: '/journal/today', label: "Today's Journal", desc: 'Write your thoughts on money.' },
+    ],
+    disclaimer: 'General educational info, not financial advice. Rates, tax rules, and insurance limits change — verify with each institution and official regulators.',
+  },
+};
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <MoneyParkingGuide locale={locale} client:load />
+
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href}>
+            <span class="font-semibold text-green-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>
