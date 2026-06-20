@@ -58,11 +58,36 @@ const journalManifest: FeatureManifest = {
   },
 };
 
+// Payday Menu Roulette — random meal picker + small treat idea (G11).
+const menuRouletteManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "Utensils",
+  id: "menu-roulette",
+  path: "/menu/roulette",
+  status: "production",
+  name: {
+    cn: "发薪日菜单轮盘", en: "Payday Menu Roulette", es: "Ruleta de menú",
+    fr: "Roulette du menu", ja: "給料日メニュールーレット", ko: "월급날 메뉴 룰렛",
+  },
+  description: {
+    cn: "不知道吃什么？转动轮盘随机推荐一餐。",
+    en: "Can't decide what to eat? Spin for a random meal by cuisine.",
+    es: "¿No sabes qué comer? Gira para una comida aleatoria.",
+    fr: "Indécis sur le repas ? Tournez pour un plat aléatoire.",
+    ja: "何食べるか迷ったら回す。料理別ランダム推薦。",
+    ko: "뭐 먹지 고민될 때 돌리는 메뉴 추천 룰렛(+월급날 작은 사치).",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
   strengthKeywordsManifest,
   journalManifest,
+  menuRouletteManifest,
 ];
 
 // Helper to get features easily
