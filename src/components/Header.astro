@@ -8,7 +8,11 @@ interface Props {
 
 const { locale } = Astro.props;
 const t = await getTranslations(locale);
-const currentPath = Astro.url.pathname.replace(/^\/[a-z]{2}/, '') || '/';
+// Strip only a real locale prefix (not e.g. "kn" in /knowledge/).
+const LOCALE_PREFIX = /^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/;
+const isLocalized = LOCALE_PREFIX.test(Astro.url.pathname);
+// Locale-less pages (e.g. /knowledge) have no per-locale equivalent → switch to locale home.
+const currentPath = isLocalized ? Astro.url.pathname.replace(LOCALE_PREFIX, '') || '/' : '/';
 ---
 
 <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-green-50">
