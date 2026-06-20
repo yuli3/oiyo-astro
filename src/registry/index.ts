@@ -82,12 +82,37 @@ const menuRouletteManifest: FeatureManifest = {
   },
 };
 
+// Emotion Release — name → breathe → sage line → release (G20).
+const emotionReleaseManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "Wind",
+  id: "emotion-release",
+  path: "/emotion/release",
+  status: "production",
+  name: {
+    cn: "释放情绪", en: "Let the Feeling Pass", es: "Deja pasar la emoción",
+    fr: "Laisser passer l'émotion", ja: "感情を流す", ko: "감정 흘려보내기",
+  },
+  description: {
+    cn: "为情绪命名、呼吸、收到一句箴言、放下。2分钟自我关怀。",
+    en: "Name the feeling, breathe, receive one sage line, set it down. A 2-min self-care ritual.",
+    es: "Nombra la emoción, respira, recibe una frase y suéltala. Ritual de autocuidado de 2 min.",
+    fr: "Nommez l'émotion, respirez, recevez une phrase, lâchez prise. Rituel de 2 min.",
+    ja: "感情に名前をつけ、呼吸し、一文を受け取り、手放す。2分のセルフケア。",
+    ko: "감정에 이름 붙이고 호흡하고 선현의 한 문장으로 내려놓는 2분 의식.",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
   strengthKeywordsManifest,
   journalManifest,
   menuRouletteManifest,
+  emotionReleaseManifest,
 ];
 
 // Helper to get features easily

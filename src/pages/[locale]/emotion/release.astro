@@ -1,0 +1,88 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import EmotionReleaseTool from '../../../components/tools/EmotionReleaseTool';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: '감정 흘려보내기 — 이름붙이고·호흡하고·내려놓는 2분 의식',
+    description: '불안·분노·슬픔 등 지금의 감정을 이름 붙이고, 호흡하고, 선현의 한 문장으로 마음을 내려놓는 2분 셀프 케어 도구. 무료·비공개.',
+  },
+  en: {
+    title: 'Let the Feeling Pass — Name, Breathe, Release (2-min ritual)',
+    description: 'A 2-minute self-care tool: name your feeling (anxiety, anger, sadness…), take a breath, receive one calming line, and set it down. Free, private.',
+  },
+  ja: {
+    title: '感情を流す — 名づけ・呼吸・手放す2分の儀式',
+    description: '不安・怒り・悲しみなど今の感情に名前をつけ、呼吸し、賢人の一文で心を手放す2分のセルフケアツール。無料・非公開。',
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  introTitle: string;
+  intro: string;
+  relatedTitle: string;
+  related: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '감정은 억누르는 게 아니라 흘려보내는 것',
+    intro: '감정은 막으면 더 커지고, 이름 붙여 인정하면 누그러집니다. 이 도구는 ① 감정에 이름 붙이기 ② 한 번 호흡하기 ③ 선현의 한 문장 받기 ④ 내려놓기의 짧은 의식입니다. 격해질 때, 잠들기 전, 마음이 무거울 때 써보세요.',
+    relatedTitle: '함께 하면 좋은 것',
+    related: [
+      { href: '/breathing/timer', label: '호흡 타이머', desc: '제대로 호흡을 이어가고 싶을 때.' },
+      { href: '/journal/today', label: '오늘의 저널', desc: '감정을 한 줄로 적어두기.' },
+      { href: '/strengths/keywords', label: '강점 키워드 찾기', desc: '나를 알아가는 단어 도구.' },
+    ],
+    disclaimer: '이 도구는 자기 돌봄을 돕는 보조 도구이며 의학적 치료가 아닙니다. 감정이 오래 지속되거나 일상을 방해하면 전문가의 도움을 받으세요.',
+  },
+  en: {
+    introTitle: 'Feelings are not suppressed — they are let pass',
+    intro: 'Block a feeling and it grows; name and acknowledge it and it softens. This tool is a short ritual: ① name the feeling ② take a breath ③ receive one sage line ④ set it down. Use it when emotions spike, before sleep, or when your heart feels heavy.',
+    relatedTitle: 'Pairs well with',
+    related: [
+      { href: '/breathing/timer', label: 'Breathing Timer', desc: 'When you want to keep breathing properly.' },
+      { href: '/journal/today', label: "Today's Journal", desc: 'Note the feeling in a line.' },
+      { href: '/strengths/keywords', label: 'Strength Keywords', desc: 'A word tool to know yourself.' },
+    ],
+    disclaimer: 'A self-care aid, not medical treatment. If feelings persist or disrupt daily life, please seek professional help.',
+  },
+};
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <EmotionReleaseTool locale={locale} client:load />
+
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href}>
+            <span class="font-semibold text-green-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
+  </main>
+</Layout>
