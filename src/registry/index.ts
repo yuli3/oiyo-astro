@@ -106,6 +106,30 @@ const emotionReleaseManifest: FeatureManifest = {
   },
 };
 
+// Interval Timer — custom HIIT/Tabata workout timer (G15).
+const intervalTimerManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "Timer",
+  id: "interval-timer",
+  path: "/interval/timer",
+  status: "production",
+  name: {
+    cn: "间歇运动计时器", en: "Interval Timer", es: "Temporizador de intervalos",
+    fr: "Minuteur d'intervalles", ja: "インターバルタイマー", ko: "인터벌 운동 타이머",
+  },
+  description: {
+    cn: "自定义运动/休息/组数的间歇计时器，适合塔巴塔与HIIT。",
+    en: "Custom work/rest/rounds interval timer for Tabata and HIIT.",
+    es: "Temporizador de intervalos personalizable para Tabata y HIIT.",
+    fr: "Minuteur d'intervalles personnalisable pour Tabata et HIIT.",
+    ja: "運動・休憩・セットを設定できるタバタ／HIIT用タイマー。",
+    ko: "운동·휴식·세트 커스텀 인터벌 타이머(타바타·HIIT·홈트).",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -113,6 +137,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   journalManifest,
   menuRouletteManifest,
   emotionReleaseManifest,
+  intervalTimerManifest,
 ];
 
 // Helper to get features easily
