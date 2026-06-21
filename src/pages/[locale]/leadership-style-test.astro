@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import LeadershipStyleTest from '../../components/tests/LeadershipStyleTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: { title: "리더십 스타일 테스트 — 나는 어떤 리더인가?", description: "7가지 상황 질문으로 변혁형·서번트·민주형·코칭형·지시형 중 나의 리더십 스타일을 발견하세요." },
+  en: { title: "Leadership Style Test — What Kind of Leader Are You?", description: "Discover your leadership style — Transformational, Servant, Democratic, Coaching, or Directive — through 7 scenario questions." },
+  ja: { title: "リーダーシップスタイルテスト — あなたはどんなリーダー？", description: "7つの状況質問で変革型・サーバント・民主型・コーチング型・指示型のどれかを発見しましょう。" },
+  fr: { title: "Test de Style de Leadership — Quel type de leader êtes-vous?", description: "Découvrez votre style de leadership à travers 7 questions de scénario." },
+  es: { title: "Test de Estilo de Liderazgo — ¿Qué tipo de líder eres?", description: "Descubre tu estilo de liderazgo a través de 7 preguntas de escenario." },
+  zh: { title: "领导力风格测试 — 你是什么样的领导者？", description: "通过7个情境问题发现你的领导力风格。" },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <LeadershipStyleTest locale={locale as any} client:load />
+  </main>
+</Layout>

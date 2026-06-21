@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import GratitudeStyleTest from '../../components/tests/GratitudeStyleTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "감사 성향 테스트 — 나는 얼마나 감사하며 사는가?",
+    description: "GQ-6와 McCullough 연구를 기반으로 강도, 빈도, 범위, 밀도 4가지 차원에서 나의 감사 성향을 알아보세요.",
+  },
+  en: {
+    title: "Gratitude Style Test — How Grateful Are You?",
+    description: "Based on GQ-6 and McCullough's research, explore your gratitude style across Intensity, Frequency, Span, and Density dimensions.",
+  },
+  ja: {
+    title: "感謝傾向テスト — 私はどのくらい感謝して生きているか？",
+    description: "GQ-6とMcCulloughの研究をもとに、強度・頻度・範囲・密度の4次元で自分の感謝傾向を探りましょう。",
+  },
+  fr: {
+    title: "Test de Style de Gratitude — À quel point êtes-vous reconnaissant?",
+    description: "Explorez votre style de gratitude selon les dimensions Intensité, Fréquence, Portée et Densité.",
+  },
+  es: {
+    title: "Test de Estilo de Gratitud — ¿Qué tan agradecido eres?",
+    description: "Explora tu estilo de gratitud a través de las dimensiones Intensidad, Frecuencia, Amplitud y Densidad.",
+  },
+  zh: {
+    title: "感恩风格测试 — 你有多感恩？",
+    description: "基于GQ-6和McCullough的研究，从强度、频率、广度和密度四个维度探索您的感恩风格。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <GratitudeStyleTest locale={locale as any} client:load />
+  </main>
+</Layout>

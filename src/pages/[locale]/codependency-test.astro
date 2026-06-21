@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import CodependencyTest from '../../components/tests/CodependencyTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "공동의존 성향 테스트 — 나는 관계에서 나를 잃고 있나요?",
+    description: "15가지 Likert 문항으로 나의 공동의존 성향을 진단해보세요. 독립형부터 강한 공동의존까지 4단계 분석과 회복 가이드를 제공합니다.",
+  },
+  en: {
+    title: "Codependency Test — Are You Losing Yourself in Relationships?",
+    description: "Assess your codependency tendencies with 15 Likert questions. Get a 4-level analysis from independent to strong codependency, with recovery guidance.",
+  },
+  ja: {
+    title: "共依存傾向テスト — 関係の中で自分を失っていますか？",
+    description: "15のリカート問題で共依存傾向を診断しましょう。自立型から強い共依存まで4段階の分析と回復ガイドを提供します。",
+  },
+  fr: {
+    title: "Test de codépendance — Vous perdez-vous dans vos relations?",
+    description: "Évaluez vos tendances codépendantes avec 15 questions. Analyse en 4 niveaux avec des conseils de rétablissement.",
+  },
+  es: {
+    title: "Test de codependencia — ¿Te pierdes en las relaciones?",
+    description: "Evalúa tus tendencias de codependencia con 15 preguntas. Análisis de 4 niveles con guía de recuperación.",
+  },
+  zh: {
+    title: "共依存倾向测试 — 你在关系中迷失自己了吗？",
+    description: "通过15道李克特量表题诊断你的共依存倾向，从独立型到强共依存，4段分析及恢复指南。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <CodependencyTest locale={locale as any} client:load />
+  </main>
+</Layout>

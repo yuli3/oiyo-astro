@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import EnglishLevelTest from '../../components/tests/EnglishLevelTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "영어 레벨 테스트 — CEFR 수준 무료 측정 (20문항)",
+    description: "20문항 선택형 테스트로 나의 영어 레벨을 CEFR A1~C2로 진단하세요. 문법·어휘·독해 혼합, 틀린 문제 해설 제공.",
+  },
+  en: {
+    title: "English Level Test — Free CEFR Assessment (20 Questions)",
+    description: "Take a 20-question multiple choice test to find your English level (CEFR A1–C2). Grammar, vocabulary, and reading — with answer explanations.",
+  },
+  ja: {
+    title: "英語レベルテスト — CEFR無料診断（20問）",
+    description: "20問の選択式テストで英語レベル（CEFR A1〜C2）を診断。文法・語彙・読解の混合問題、間違えた問題の解説付き。",
+  },
+  fr: {
+    title: "Test de Niveau en Anglais — Évaluation CECRL gratuite (20 questions)",
+    description: "Passez un test à 20 questions pour déterminer votre niveau d'anglais (CECRL A1–C2). Grammaire, vocabulaire, compréhension — avec explications.",
+  },
+  es: {
+    title: "Test de Nivel de Inglés — Evaluación MCERL gratuita (20 preguntas)",
+    description: "Realiza 20 preguntas de opción múltiple para determinar tu nivel de inglés (MCERL A1–C2). Gramática, vocabulario y comprensión, con explicaciones.",
+  },
+  zh: {
+    title: "英语水平测试 — 免费CEFR评估（20道题）",
+    description: "通过20道选择题测试你的英语水平（CEFR A1–C2）。语法、词汇、阅读混合题型，附错题解析。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <EnglishLevelTest locale={locale as any} client:load />
+  </main>
+</Layout>

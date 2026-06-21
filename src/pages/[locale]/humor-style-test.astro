@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import HumorStyleTest from '../../components/tests/HumorStyleTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "유머 스타일 테스트 — 나는 어떻게 웃음을 사용하는가?",
+    description: "Martin의 유머 스타일 이론 기반 16문항으로 나의 유머 유형을 알아보세요. 친화적·자기강화·공격적·자기비하 4가지 차원을 분석합니다.",
+  },
+  en: {
+    title: "Humor Style Test — How Do You Use Humor?",
+    description: "Discover your humor style with 16 questions based on Martin's Humor Styles theory. Analyzes 4 dimensions: affiliative, self-enhancing, aggressive, and self-defeating.",
+  },
+  ja: {
+    title: "ユーモアスタイルテスト — 私はどうやって笑いを使う？",
+    description: "Martinのユーモアスタイル理論に基づく16問でユーモアタイプを発見。親和的・自己強化・攻撃的・自己卑下の4次元を分析します。",
+  },
+  fr: {
+    title: "Test de style d'humour — Comment utilisez-vous l'humour?",
+    description: "Découvrez votre style d'humour avec 16 questions basées sur la théorie de Martin. Analyse de 4 dimensions d'humour.",
+  },
+  es: {
+    title: "Test de estilo de humor — ¿Cómo usas el humor?",
+    description: "Descubre tu estilo de humor con 16 preguntas basadas en la teoría de Martin. Analiza 4 dimensiones del humor.",
+  },
+  zh: {
+    title: "幽默风格测试 — 你如何使用幽默？",
+    description: "通过基于Martin幽默风格理论的16道题，发现你的幽默类型。分析亲和型、自我提升型、攻击型、自我贬低型4个维度。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <HumorStyleTest locale={locale as any} client:load />
+  </main>
+</Layout>

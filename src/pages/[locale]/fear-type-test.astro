@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import FearTypeTest from '../../components/tests/FearTypeTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "두려움 유형 테스트 — 나를 가장 두렵게 하는 것은?",
+    description: "거절·실패·상실·불확실성·평가 — 16가지 상황으로 나의 핵심 두려움 유형을 발견하세요.",
+  },
+  en: {
+    title: "Fear Type Test — What Scares You the Most?",
+    description: "Rejection, Failure, Loss, Unknown, Judgment — discover your core fear type with 16 scenarios.",
+  },
+  ja: {
+    title: "恐怖タイプテスト — あなたを最も怖がらせるものは何ですか？",
+    description: "拒絶・失敗・喪失・未知・評価 — 16のシナリオで自分のコア恐怖タイプを発見しましょう。",
+  },
+  fr: {
+    title: "Test du Type de Peur — Qu'est-ce qui vous effraie le plus ?",
+    description: "Rejet, Échec, Perte, Inconnu, Jugement — découvrez votre type de peur principal avec 16 scénarios.",
+  },
+  es: {
+    title: "Test de Tipo de Miedo — ¿Qué te asusta más?",
+    description: "Rechazo, Fracaso, Pérdida, Desconocido, Juicio — descubre tu miedo central con 16 escenarios.",
+  },
+  zh: {
+    title: "恐惧类型测试 — 什么让你最害怕？",
+    description: "拒绝、失败、失去、未知、评判 — 通过16个情景发现您的核心恐惧类型。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <FearTypeTest locale={locale as any} client:load />
+  </main>
+</Layout>

@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import LonelinessTest from '../../components/tests/LonelinessTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "외로움 자가 점검 — 나는 얼마나 고립되어 있는가?",
+    description: "UCLA 외로움 척도를 참고한 10가지 질문으로 나의 사회적 연결 상태를 점검해보세요. 연결감을 높이는 실용적인 조언과 따뜻한 메시지를 함께 제공합니다.",
+  },
+  en: {
+    title: "Loneliness Self-Assessment — How Connected Are You?",
+    description: "Check your social connection status through 10 questions based on the UCLA Loneliness Scale. Includes practical advice for building connection and a compassionate message.",
+  },
+  ja: {
+    title: "孤独感セルフチェック — 私はどれくらい孤立しているか？",
+    description: "UCLA孤独感尺度を参考にした10問で社会的つながりの状態を確認しましょう。つながりを高める実践的なアドバイスと温かいメッセージも提供します。",
+  },
+  fr: {
+    title: "Auto-évaluation de la Solitude — Êtes-vous connecté?",
+    description: "Vérifiez votre connexion sociale avec 10 questions basées sur l'échelle de solitude UCLA. Inclut des conseils pratiques et un message bienveillant.",
+  },
+  es: {
+    title: "Autoevaluación de Soledad — ¿Qué tan Conectado Estás?",
+    description: "Verifica tu conexión social con 10 preguntas basadas en la escala de soledad UCLA. Incluye consejos prácticos y un mensaje compasivo.",
+  },
+  zh: {
+    title: "孤独感自我评估 — 您有多大程度上与人联系？",
+    description: "通过基于UCLA孤独感量表的10个问题检查您的社交联系状态。包括建立联系的实用建议和充满关怀的讯息。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <LonelinessTest locale={locale as any} client:load />
+  </main>
+</Layout>

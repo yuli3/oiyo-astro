@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import CreativityTypeTest from '../../components/tests/CreativityTypeTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: { title: "창의성 유형 테스트 — 나의 창의성은 어떤 형태인가?", description: "6가지 질문으로 발산형·수렴형·내러티브형·시스템형·미적형 중 나의 창의성 유형을 발견하세요." },
+  en: { title: "Creativity Type Test — What Form Does Your Creativity Take?", description: "Discover your creativity type — Divergent, Convergent, Narrative, Systems, or Aesthetic — through 6 questions." },
+  ja: { title: "創造性タイプテスト — あなたの創造性はどんな形？", description: "6つの質問で発散型・収束型・ナラティブ型・システム型・美的型のどれかを発見しましょう。" },
+  fr: { title: "Test de Type de Créativité — Quelle forme prend votre créativité?", description: "Découvrez votre type de créativité à travers 6 questions." },
+  es: { title: "Test de Tipo de Creatividad — ¿Qué forma tiene tu creatividad?", description: "Descubre tu tipo de creatividad a través de 6 preguntas." },
+  zh: { title: "创造力类型测试 — 你的创造力是什么形式？", description: "通过6个问题发现你的创造力类型。" },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <CreativityTypeTest locale={locale as any} client:load />
+  </main>
+</Layout>

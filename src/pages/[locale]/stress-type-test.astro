@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import StressTypeTest from '../../components/tests/StressTypeTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "스트레스 유형 테스트 — 나는 어떻게 스트레스를 받나?",
+    description:
+      "전투형, 동결형, 회피형, 해결형 — 12가지 상황으로 나만의 스트레스 반응 패턴을 발견하세요.",
+  },
+  en: {
+    title: "Stress Response Type Test — How Do You Handle Stress?",
+    description:
+      "Fighter, Freezer, Fleer, or Fixer? Discover your stress response pattern with 12 scenarios.",
+  },
+  ja: {
+    title: "ストレスタイプテスト — あなたのストレス反応パターンは？",
+    description:
+      "戦闘型、凍結型、回避型、解決型。12のシナリオでストレス対処スタイルを発見。",
+  },
+  fr: {
+    title: "Test de type de stress — Comment gérez-vous le stress?",
+    description:
+      "Combattant, Gelé, Fuyant ou Réparateur? Découvrez votre mode de réponse au stress en 12 scénarios.",
+  },
+  es: {
+    title: "Test de tipo de estrés — ¿Cómo manejas el estrés?",
+    description:
+      "¿Luchador, Congelado, Evasivo o Solucionador? Descubre tu patrón de respuesta al estrés con 12 escenarios.",
+  },
+  zh: {
+    title: "压力类型测试 — 你如何应对压力？",
+    description:
+      "战斗型、冻结型、逃避型或解决型？透过12个情境发现你的压力反应模式。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <StressTypeTest locale={locale as any} client:load />
+  </main>
+</Layout>

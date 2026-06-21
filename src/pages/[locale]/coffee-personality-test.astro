@@ -1,0 +1,51 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import CoffeePersonalityTest from '../../components/tests/CoffeePersonalityTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "커피 성격 테스트 — 나는 어떤 커피 타입?",
+    description:
+      "에스프레소, 라떼, 콜드브루, 카푸치노, 아메리카노 — 8가지 질문으로 나의 커피 성격을 발견하세요!",
+  },
+  en: {
+    title: "Coffee Personality Test — Which Coffee Are You?",
+    description:
+      "Espresso, Latte, Cold Brew, Cappuccino, or Americano? Find your coffee personality with 8 fun questions.",
+  },
+  ja: {
+    title: "コーヒー性格テスト — あなたはどのコーヒータイプ？",
+    description:
+      "エスプレッソ、ラテ、コールドブリュー、カプチーノ、アメリカーノ。8つの質問であなたのコーヒー性格を発見。",
+  },
+  fr: {
+    title: "Test de personnalité café — Quel café êtes-vous ?",
+    description:
+      "Espresso, Latte, Cold Brew, Cappuccino ou Americano ? Découvrez votre personnalité café en 8 questions.",
+  },
+  es: {
+    title: "Test de personalidad del café — ¿Qué café eres tú?",
+    description:
+      "Espresso, Latte, Cold Brew, Cappuccino o Americano. Descubre tu personalidad cafetera con 8 preguntas.",
+  },
+  zh: {
+    title: "咖啡性格测验 — 你是哪种咖啡类型？",
+    description:
+      "义式浓缩、拿铁、冷萃、卡布奇诺还是美式咖啡？透过8个问题发现你的咖啡性格。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <CoffeePersonalityTest locale={locale as any} client:load />
+  </main>
+</Layout>

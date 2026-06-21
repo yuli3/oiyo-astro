@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import LeftBrainTest from '../../components/tests/LeftBrainTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "좌뇌 vs 우뇌 테스트 — 나는 어느 쪽 뇌를 주로 쓸까?",
+    description: "12문항으로 좌뇌(논리·분석)와 우뇌(직관·창의) 중 어느 쪽이 우세한지 알아보세요.",
+  },
+  en: {
+    title: "Left Brain vs Right Brain Test — Which Side Dominates?",
+    description: "12 questions to discover whether your left brain (logic/analysis) or right brain (intuition/creativity) is dominant.",
+  },
+  ja: {
+    title: "左脳vs右脳テスト — どちらが優位？",
+    description: "12問で、左脳（論理・分析）と右脳（直感・創造）のどちらが優位かを確認しましょう。",
+  },
+  fr: {
+    title: "Test Cerveau Gauche vs Droit — Quelle est votre dominance ?",
+    description: "12 questions pour découvrir si votre cerveau gauche (logique/analyse) ou droit (intuition/créativité) est dominant.",
+  },
+  es: {
+    title: "Test Cerebro Izquierdo vs Derecho — ¿Cuál domina?",
+    description: "12 preguntas para descubrir si tu hemisferio izquierdo (lógica/análisis) o derecho (intuición/creatividad) es dominante.",
+  },
+  zh: {
+    title: "左脑 vs 右脑测验 — 哪侧主导你的思维？",
+    description: "12道题目测试你是左脑（逻辑/分析）还是右脑（直觉/创意）主导型。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <LeftBrainTest locale={locale as any} client:load />
+  </main>
+</Layout>

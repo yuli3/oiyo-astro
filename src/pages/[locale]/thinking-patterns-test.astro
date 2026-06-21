@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import ThinkingPatternsTest from '../../components/tests/ThinkingPatternsTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: { title: "사고 패턴 테스트 — 나는 어떻게 생각하는가?", description: "분석형·창의형·직관형·체계형 중 나의 고유한 사고 방식과 정보 처리 패턴을 발견하세요." },
+  en: { title: "Thinking Patterns Test — How Do You Think?", description: "Discover your unique thinking style — Analytical, Creative, Intuitive, or Systematic — and how you process information." },
+  ja: { title: "思考パターンテスト — あなたはどのように考えますか？", description: "分析型・創造型・直感型・体系型の中から、あなた独自の思考スタイルと情報処理パターンを発見しましょう。" },
+  fr: { title: "Test de Patterns de Pensée — Comment pensez-vous?", description: "Découvrez votre style de pensée unique — Analytique, Créatif, Intuitif ou Systématique." },
+  es: { title: "Test de Patrones de Pensamiento — ¿Cómo piensas?", description: "Descubre tu estilo de pensamiento único — Analítico, Creativo, Intuitivo o Sistemático." },
+  zh: { title: "思维模式测试 — 你如何思考？", description: "发现你独特的思维风格：分析型、创意型、直觉型或系统型。" },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <ThinkingPatternsTest locale={locale as any} client:load />
+  </main>
+</Layout>

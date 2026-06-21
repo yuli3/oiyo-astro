@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import ToneAnalysisTest from '../../components/tests/ToneAnalysisTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: { title: "말투 분석 테스트: 나의 커뮤니케이션 스타일은?", description: "10개의 직장 내 상황 질문으로 나의 말투 유형을 분석하세요. 날카로운 직설형·회피형 완충형·친화적 관계형·중립적 분석형 중 나의 유형은?" },
+  en: { title: "Tone Analysis Test: What's Your Communication Style?", description: "Analyze your communication tone through 10 workplace scenario questions. Sharp Communicator, Conflict Avoider, Warm Connector, or Neutral Analyst?" },
+  ja: { title: "トーン分析テスト：あなたのコミュニケーションスタイルは？", description: "10の職場シナリオ質問でコミュニケーションのトーンタイプを分析しましょう。鋭い直球型・回避型・親和的関係型・中立的分析型のどれ？" },
+  fr: { title: "Test d'analyse de ton : Quel est votre style de communication ?", description: "Analysez votre style de communication à travers 10 scénarios professionnels. Communicateur Direct, Éviteur de Conflits, Connecteur Chaleureux ou Analyste Neutre ?" },
+  es: { title: "Test de Análisis de Tono: ¿Cuál es tu estilo de comunicación?", description: "Analiza tu estilo de comunicación a través de 10 escenarios laborales. ¿Comunicador Directo, Evitador de Conflictos, Conector Cálido o Analista Neutral?" },
+  zh: { title: "语气分析测试：你的沟通风格是什么？", description: "透过10个职场情境问题分析你的沟通语气类型。锐利直接型、回避缓冲型、亲和关系型还是中立分析型？" },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <ToneAnalysisTest locale={locale as any} client:load />
+  </main>
+</Layout>

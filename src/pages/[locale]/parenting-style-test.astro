@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import ParentingStyleTest from '../../components/tests/ParentingStyleTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "양육 방식 테스트 — 나는 어떤 부모 유형인가요?",
+    description: "Baumrind의 이론 기반 16가지 시나리오 문항으로 양육 스타일을 알아보세요. 권위있는·독재적·허용적·방임적 4가지 유형 분석. 부모가 아니어도 참여 가능합니다.",
+  },
+  en: {
+    title: "Parenting Style Test — What Type of Parent Are You?",
+    description: "Discover your parenting style with 16 scenario-based questions from Baumrind's theory. Analyzes authoritative, authoritarian, permissive, and uninvolved styles. Suitable for non-parents too.",
+  },
+  ja: {
+    title: "養育スタイルテスト — 私はどんな親のタイプ？",
+    description: "Baumrindの理論に基づく16のシナリオ問題で養育スタイルを発見。権威ある・権威主義的・許容的・放任的4つのタイプを分析。親でなくても参加可能です。",
+  },
+  fr: {
+    title: "Test de style parental — Quel type de parent êtes-vous?",
+    description: "Découvrez votre style parental avec 16 scénarios basés sur la théorie de Baumrind. Analyse de 4 styles parentaux. Convient aussi aux non-parents.",
+  },
+  es: {
+    title: "Test de estilo de crianza — ¿Qué tipo de padre eres?",
+    description: "Descubre tu estilo de crianza con 16 escenarios basados en la teoría de Baumrind. Analiza 4 estilos parentales. Apto para quienes no son padres.",
+  },
+  zh: {
+    title: "养育方式测试 — 我是哪种父母类型？",
+    description: "通过基于鲍姆林德理论的16个情境题发现你的养育风格。分析权威型、独裁型、放任型、忽视型4种类型。非父母也可以参加。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <ParentingStyleTest locale={locale as any} client:load />
+  </main>
+</Layout>

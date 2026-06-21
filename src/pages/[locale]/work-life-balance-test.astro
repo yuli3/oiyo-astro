@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import WorkLifeBalanceTest from '../../components/tests/WorkLifeBalanceTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "일·생활 균형 테스트 — 나의 워라밸 점수는?",
+    description: "업무부담·개인시간·회복·의미 4개 영역 16개 질문으로 워라밸 점수를 확인해보세요. 영역별 분석과 균형 개선 조언, 가장 주의가 필요한 영역도 파악할 수 있습니다.",
+  },
+  en: {
+    title: "Work-Life Balance Test — What's Your Balance Score?",
+    description: "Check your work-life balance score with 16 questions across 4 domains: work demand, personal time, recovery, and meaning. Includes domain analysis, guidance, and the area needing most attention.",
+  },
+  ja: {
+    title: "ワークライフバランステスト — 私のバランススコアは？",
+    description: "業務負担・個人時間・回復・意味の4領域16問でワークライフバランスを確認しましょう。領域別分析、改善アドバイス、最も注意が必要な領域も把握できます。",
+  },
+  fr: {
+    title: "Test d'Équilibre Travail-Vie — Quel est votre score d'équilibre?",
+    description: "Vérifiez votre équilibre travail-vie avec 16 questions dans 4 domaines. Inclut une analyse par domaine, des conseils d'amélioration et le domaine nécessitant le plus d'attention.",
+  },
+  es: {
+    title: "Test de Equilibrio Trabajo-Vida — ¿Cuál es tu Puntuación?",
+    description: "Verifica tu equilibrio trabajo-vida con 16 preguntas en 4 dominios. Incluye análisis por dominio, consejos de mejora y el área que necesita más atención.",
+  },
+  zh: {
+    title: "工作生活平衡测试 — 您的平衡分数是多少？",
+    description: "通过4个领域的16个问题检查工作生活平衡分数。包括领域分析、改善建议和最需要关注的领域。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <WorkLifeBalanceTest locale={locale as any} client:load />
+  </main>
+</Layout>

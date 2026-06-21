@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import ImposterSyndromeTest from '../../components/tests/ImposterSyndromeTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "가면 증후군 테스트 — 나는 얼마나 사기꾼처럼 느끼나?",
+    description: "15가지 문항으로 나의 가면 증후군 수준을 확인하고 현실적인 대처 전략을 알아보세요.",
+  },
+  en: {
+    title: "Imposter Syndrome Test — How Much Do You Feel Like a Fraud?",
+    description: "15 questions to measure your imposter syndrome level and discover practical coping strategies.",
+  },
+  ja: {
+    title: "インポスター症候群テスト — 詐欺師のように感じますか？",
+    description: "15の質問でインポスター症候群のレベルを確認し、実践的な対処法を見つけましょう。",
+  },
+  fr: {
+    title: "Test du Syndrome de l'Imposteur — Vous sentez-vous frauduleux?",
+    description: "15 questions pour mesurer votre niveau du syndrome de l'imposteur et découvrir des stratégies d'adaptation.",
+  },
+  es: {
+    title: "Test del Síndrome del Impostor — ¿Te sientes un fraude?",
+    description: "15 preguntas para medir tu nivel de síndrome del impostor y descubrir estrategias de afrontamiento prácticas.",
+  },
+  zh: {
+    title: "冒名顶替症候群测试 — 您有多常感觉自己是骗子？",
+    description: "通过15道题评估您的冒名顶替症候群程度，并发现实用的应对策略。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <ImposterSyndromeTest locale={locale as any} client:load />
+  </main>
+</Layout>

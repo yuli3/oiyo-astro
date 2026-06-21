@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import SensoryProcessingTest from '../../components/tests/SensoryProcessingTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "감각 예민도 테스트 (HSP) — 나는 고감각인인가?",
+    description: "Elaine Aron 박사의 HSP 연구에 기반한 15가지 질문으로 나의 감각 예민도를 측정해보세요. 고감각인(HSP)의 강점과 자기돌봄 방법을 알아봅니다.",
+  },
+  en: {
+    title: "Sensory Sensitivity Test (HSP) — Am I a Highly Sensitive Person?",
+    description: "Measure your sensory sensitivity with 15 questions based on Dr. Elaine Aron's HSP research. Discover the strengths of HSPs and self-care strategies.",
+  },
+  ja: {
+    title: "感覚敏感度テスト（HSP） — 私は繊細な人（HSP）？",
+    description: "Elaine Aron博士のHSP研究に基づく15の質問で感覚敏感度を測定します。HSPの強みとセルフケアの方法を調べましょう。",
+  },
+  fr: {
+    title: "Test de sensibilité sensorielle (HSP) — Suis-je une personne hypersensible ?",
+    description: "Mesurez votre sensibilité sensorielle avec 15 questions basées sur les recherches HSP du Dr Elaine Aron.",
+  },
+  es: {
+    title: "Test de sensibilidad sensorial (HSP) — ¿Soy una persona altamente sensible?",
+    description: "Mida su sensibilidad sensorial con 15 preguntas basadas en la investigación HSP de la Dra. Elaine Aron.",
+  },
+  zh: {
+    title: "感觉敏感度测试（HSP） — 我是高度敏感人士吗？",
+    description: "基于Elaine Aron博士的HSP研究，通过15个问题测量您的感觉敏感度。了解HSP的优势和自我护理方法。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <SensoryProcessingTest locale={locale as any} client:load />
+  </main>
+</Layout>

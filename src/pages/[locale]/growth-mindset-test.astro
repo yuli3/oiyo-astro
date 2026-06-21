@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import GrowthMindsetTest from '../../components/tests/GrowthMindsetTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: { title: "성장 마인드셋 테스트 — 고정형인가, 성장형인가?", description: "캐럴 드웩의 마인드셋 이론 기반 10가지 질문으로 나의 마인드셋을 진단하고, 더 나은 성장을 위한 방향을 찾아보세요." },
+  en: { title: "Growth Mindset Test — Fixed or Growth?", description: "Diagnose your mindset with 10 questions based on Carol Dweck's theory and find direction for greater growth." },
+  ja: { title: "成長マインドセットテスト — 固定型か成長型か？", description: "キャロル・ドゥエックの理論に基づく10の質問でマインドセットを診断し、より良い成長への方向を見つけましょう。" },
+  fr: { title: "Test de Mentalité de Croissance — Fixe ou de Croissance?", description: "Diagnostiquez votre mentalité avec 10 questions basées sur la théorie de Carol Dweck." },
+  es: { title: "Test de Mentalidad de Crecimiento — ¿Fija o de Crecimiento?", description: "Diagnostica tu mentalidad con 10 preguntas basadas en la teoría de Carol Dweck." },
+  zh: { title: "成长心态测试 — 固定型还是成长型？", description: "通过基于卡罗尔·德韦克理论的10个问题诊断你的心态。" },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <GrowthMindsetTest locale={locale as any} client:load />
+  </main>
+</Layout>

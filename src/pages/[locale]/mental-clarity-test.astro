@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import MindClearTest from '../../components/tests/MindClearTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: { title: "마음 명확도 테스트: 내 마음은 얼마나 맑은가?", description: "10개의 질문으로 현재 정신적 명확도와 인지 부하 수준을 측정합니다. 수정·집중·안개·과부하 4단계 중 나의 현재 상태는?" },
+  en: { title: "Mind Clear Test: How Clear Is Your Mind?", description: "Measure your current mental clarity and cognitive load with 10 questions. Are you Crystal Clear, Focused, Foggy, or Overloaded?" },
+  ja: { title: "マインドクリアテスト：あなたの心はどれくらい澄んでいますか？", description: "10の質問で現在の精神的明確度と認知負荷レベルを測定します。クリスタル・集中・霧・過負荷の4段階で診断。" },
+  fr: { title: "Test Mind Clear : À quel point votre esprit est-il clair?", description: "Mesurez votre clarté mentale actuelle et votre charge cognitive avec 10 questions. Êtes-vous Cristallin, Concentré, Brumeux ou Surchargé?" },
+  es: { title: "Test Mind Clear: ¿Qué tan clara está tu mente?", description: "Mide tu claridad mental actual y tu carga cognitiva con 10 preguntas. ¿Eres Cristalino, Concentrado, Nebuloso o Sobrecargado?" },
+  zh: { title: "心智清明度测试：你的心有多清晰？", description: "用10个问题测量你目前的心智清明度和认知负荷。水晶清明、专注、迷雾还是超载？" },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <MindClearTest locale={locale as any} client:load />
+  </main>
+</Layout>

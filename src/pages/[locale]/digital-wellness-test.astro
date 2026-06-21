@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import DigitalWellnessTest from '../../components/tests/DigitalWellnessTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "디지털 웰니스 테스트 — 나는 스마트폰에 얼마나 의존하나?",
+    description: "15가지 문항으로 나의 디지털 건강 수준을 확인하고 균형 잡힌 디지털 생활을 위한 팁을 알아보세요.",
+  },
+  en: {
+    title: "Digital Wellness Test — How Dependent Are You on Your Smartphone?",
+    description: "15 questions to assess your digital health and get practical tips for balanced screen time.",
+  },
+  ja: {
+    title: "デジタルウェルネステスト — スマートフォンにどのくらい依存していますか？",
+    description: "15の設問でデジタル健康レベルを確認し、バランスの取れたスクリーンタイムのための実践的ヒントを得ましょう。",
+  },
+  fr: {
+    title: "Test de Bien-être Numérique — Êtes-vous dépendant de votre smartphone ?",
+    description: "15 questions pour évaluer votre santé numérique et obtenir des conseils pratiques pour un temps d'écran équilibré.",
+  },
+  es: {
+    title: "Test de Bienestar Digital — ¿Cuánto dependes de tu smartphone?",
+    description: "15 preguntas para evaluar tu salud digital y obtener consejos prácticos para un uso equilibrado de las pantallas.",
+  },
+  zh: {
+    title: "数位健康测试 — 你对智慧型手机的依赖有多深？",
+    description: "15个问题评估你的数位健康水准，并获得均衡使用萤幕的实用建议。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <DigitalWellnessTest locale={locale as any} client:load />
+  </main>
+</Layout>

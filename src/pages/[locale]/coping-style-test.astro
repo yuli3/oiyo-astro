@@ -1,0 +1,27 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import CopingStyleTest from '../../components/tests/CopingStyleTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: { title: "스트레스 대처 방식 테스트 — 나는 어떻게 대처하는가?", description: "6가지 상황 질문으로 문제 중심·감정 중심·의미 창출·사회적 지지·회피 중 나의 주요 대처 방식을 파악하세요." },
+  en: { title: "Coping Style Test — How Do You Handle Stress?", description: "Identify your primary coping style — problem-focused, emotion-focused, meaning-making, social support, or avoidance — through 6 scenario questions." },
+  ja: { title: "ストレス対処スタイルテスト — あなたはどう対処する？", description: "6つの状況質問で問題焦点型・感情焦点型・意味創出型・社会的支援型・回避型のどれかを把握しましょう。" },
+  fr: { title: "Test de Style de Coping — Comment gérez-vous le stress?", description: "Identifiez votre style de coping principal à travers 6 questions de scénario." },
+  es: { title: "Test de Estilo de Afrontamiento — ¿Cómo manejas el estrés?", description: "Identifica tu estilo de afrontamiento principal a través de 6 preguntas de escenario." },
+  zh: { title: "压力应对方式测试 — 你如何应对压力？", description: "通过6个情境问题识别你的主要应对方式。" },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <CopingStyleTest locale={locale as any} client:load />
+  </main>
+</Layout>
