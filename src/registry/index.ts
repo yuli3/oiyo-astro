@@ -250,6 +250,30 @@ const foreignAccountManifest: FeatureManifest = {
   },
 };
 
+// 나에게 맞는 나라 — surfaces the country-archetype ontology engine.
+const countryMatchManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "Globe",
+  id: "country-match",
+  path: "/country/match",
+  status: "production",
+  name: {
+    cn: "找到适合你的国家", en: "Find Your Country Match", es: "Encuentra tu país ideal",
+    fr: "Trouvez votre pays idéal", ja: "自分に合う国を探す", ko: "나에게 맞는 나라 찾기",
+  },
+  description: {
+    cn: "用几个生活方式偏好，找出最适合你的国家。旅行·移居灵感。",
+    en: "A few lifestyle preferences reveal the countries that fit you best — travel & relocation inspiration.",
+    es: "Unas preferencias de estilo de vida revelan los países que mejor te encajan.",
+    fr: "Quelques préférences de style de vie révèlent les pays qui vous correspondent.",
+    ja: "いくつかのライフスタイルの好みから、あなたに合う国を見つけます。旅行・移住のヒントに。",
+    ko: "라이프스타일 취향 몇 가지로 당신과 가장 잘 맞는 나라를 찾아주는 테스트. 여행·이주 영감.",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -263,6 +287,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   guildManifest,
   pranayamaManifest,
   foreignAccountManifest,
+  countryMatchManifest,
 ];
 
 // Helper to get features easily
