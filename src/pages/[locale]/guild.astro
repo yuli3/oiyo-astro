@@ -1,0 +1,197 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import AdventurerGuild from '../../components/tools/AdventurerGuild';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: '모험가 길드 — 매일의 자기돌봄을 퀘스트로(무료, 비공개)',
+    description: '저널·감정 정리·호흡·운동 같은 작은 실천을 퀘스트로 만들어 경험치·레벨·연속일·배지로 동기부여하는 게임형 자기돌봄 허브. 기록은 브라우저에만 저장.',
+  },
+  en: {
+    title: "Adventurer's Guild — Turn Daily Self-Care into Quests (Free, Private)",
+    description: 'A playful self-care hub that turns small practices — journaling, releasing emotions, breathing, exercise — into quests with XP, levels, streaks and badges. Progress saved only in your browser.',
+  },
+  ja: {
+    title: '冒険者ギルド — 毎日のセルフケアをクエストに（無料・非公開）',
+    description: 'ジャーナル・感情の整理・呼吸・運動などの小さな実践をクエスト化し、経験値・レベル・連続日数・バッジで続けやすくするゲーム型セルフケアハブ。記録はブラウザにのみ保存。',
+  },
+  zh: {
+    title: '冒险者公会 — 把每日自我照护变成任务（免费、私密）',
+    description: '一个轻松的自我照护中心，把写日志、释放情绪、呼吸、运动等小练习变成任务，并用XP、等级、连续天数和徽章激励你坚持。进度只保存在你的浏览器中。',
+  },
+  fr: {
+    title: 'Guilde des aventuriers — Transformez le self-care quotidien en quêtes (gratuit, privé)',
+    description: 'Un hub de self-care ludique qui transforme de petites pratiques comme le journal, la libération des émotions, la respiration et l’exercice en quêtes avec XP, niveaux, séries et badges. Progression enregistrée uniquement dans votre navigateur.',
+  },
+  es: {
+    title: 'Gremio de aventureros — Convierte el autocuidado diario en misiones (gratis, privado)',
+    description: 'Un centro lúdico de autocuidado que convierte pequeñas prácticas como escribir un diario, soltar emociones, respirar y hacer ejercicio en misiones con XP, niveles, rachas e insignias. El progreso se guarda solo en tu navegador.',
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  introTitle: string;
+  intro: string;
+  howTitle: string;
+  how: string[];
+  relatedTitle: string;
+  related: { href: string; label: string; desc: string }[];
+  disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '꾸준함을 게임처럼',
+    intro: '작심삼일이 어려운 건 의지가 약해서가 아니라, 작은 실천에 보상이 안 보이기 때문입니다. 모험가 길드는 저널·감정 정리·호흡·운동 같은 자기돌봄을 "퀘스트"로 바꿔, 완료할 때마다 경험치와 배지를 줍니다. 매일 들러 일일 퀘스트를 깨고 연속일(스트릭)을 쌓아보세요. 모든 기록은 이 브라우저에만 저장됩니다.',
+    howTitle: '이렇게 쓰세요',
+    how: [
+      '퀘스트의 "바로가기"로 실제 도구를 열어 실천합니다.',
+      '진짜로 한 뒤 "도전" 버튼을 눌러 완료 처리(명예 시스템)합니다.',
+      '매일 들르면 연속일이 쌓이고, 끊기면 0으로 초기화됩니다.',
+      '경험치가 모이면 레벨과 칭호가 오르고 배지가 열립니다.',
+    ],
+    relatedTitle: '퀘스트로 연결되는 도구',
+    related: [
+      { href: '/journal/today', label: '오늘의 저널', desc: '하루 한 줄로 마음 정리.' },
+      { href: '/emotion/release', label: '감정 흘려보내기', desc: '감정에 이름 붙이고 내려놓기.' },
+      { href: '/interval/timer', label: '인터벌 타이머', desc: '짧고 굵은 운동 한 세트.' },
+    ],
+    disclaimer: '이 도구는 습관 형성을 돕는 보조 도구이며 의학적 치료가 아닙니다. 마음이 많이 힘들다면 전문가의 도움을 받으세요.',
+  },
+  en: {
+    introTitle: 'Make consistency feel like a game',
+    intro: 'Habits fail not because willpower is weak, but because small practices give no visible reward. The Adventurer\'s Guild turns self-care — journaling, releasing emotions, breathing, exercise — into "quests" that grant XP and badges each time you finish. Drop by daily, clear your quests, and build a streak. All progress is saved only in this browser.',
+    howTitle: 'How to use it',
+    how: [
+      'Tap "Open" on a quest to launch the real tool and actually do it.',
+      'After you truly do it, tap "Do it" to mark it complete (honor system).',
+      'Visit daily to grow your streak; miss a day and it resets to zero.',
+      'XP raises your level and title, and unlocks badges.',
+    ],
+    relatedTitle: 'Tools your quests link to',
+    related: [
+      { href: '/journal/today', label: "Today's Journal", desc: 'Settle your mind in one line.' },
+      { href: '/emotion/release', label: 'Let Emotions Pass', desc: 'Name a feeling and let it go.' },
+      { href: '/interval/timer', label: 'Interval Timer', desc: 'One short, focused workout set.' },
+    ],
+    disclaimer: 'This is a habit-building aid, not medical treatment. If you are struggling, please seek professional help.',
+  },
+  ja: {
+    introTitle: '継続をゲームのように',
+    intro: '習慣が続かないのは、意志が弱いからではなく、小さな実践に見える報酬がないからかもしれません。冒険者ギルドは、ジャーナル、感情の手放し、呼吸、運動などのセルフケアを「クエスト」に変え、完了するたびにXPとバッジを付与します。毎日訪れてクエストをクリアし、連続記録を伸ばしましょう。すべての記録はこのブラウザにのみ保存されます。',
+    howTitle: '使い方',
+    how: [
+      'クエストの「開く」をタップして実際のツールを起動し、本当に実践します。',
+      '実際に終えたら「挑戦」をタップして完了にします（名誉システム）。',
+      '毎日訪れると連続記録が伸び、1日逃すとゼロに戻ります。',
+      'XPでレベルと称号が上がり、バッジが開放されます。',
+    ],
+    relatedTitle: 'クエストにつながるツール',
+    related: [
+      { href: '/journal/today', label: '今日のジャーナル', desc: '一行で心を整える。' },
+      { href: '/emotion/release', label: '感情を手放す', desc: '感情に名前をつけて手放す。' },
+      { href: '/interval/timer', label: 'インターバルタイマー', desc: '短く集中した運動を1セット。' },
+    ],
+    disclaimer: 'これは習慣づくりを助ける補助ツールであり、医療行為ではありません。つらさが大きい場合は、専門家の助けを求めてください。',
+  },
+  zh: {
+    introTitle: '让坚持像游戏一样',
+    intro: '习惯失败并不一定是因为意志力薄弱，而是因为小练习没有可见的奖励。冒险者公会把自我照护，如写日志、释放情绪、呼吸和运动，变成“任务”，每次完成都会获得XP和徽章。每天来清任务，累积连续天数。所有进度只保存在此浏览器中。',
+    howTitle: '使用方法',
+    how: [
+      '点击任务上的“打开”，启动真实工具并实际完成它。',
+      '真正完成后，点击“去完成”标记为已完成（荣誉系统）。',
+      '每天访问会增加连续天数；漏掉一天会重置为零。',
+      'XP会提升你的等级和称号，并解锁徽章。',
+    ],
+    relatedTitle: '任务链接到的工具',
+    related: [
+      { href: '/journal/today', label: '今日日志', desc: '用一行文字整理心绪。' },
+      { href: '/emotion/release', label: '让情绪流过', desc: '命名一种感受，然后放下它。' },
+      { href: '/interval/timer', label: '间歇计时器', desc: '一组短而专注的运动。' },
+    ],
+    disclaimer: '这是一个帮助建立习惯的辅助工具，不是医疗治疗。如果你正在经历严重困扰，请寻求专业帮助。',
+  },
+  fr: {
+    introTitle: 'Rendre la régularité ludique',
+    intro: 'Les habitudes échouent souvent non parce que la volonté manque, mais parce que les petites pratiques n’offrent aucune récompense visible. La Guilde des aventuriers transforme le self-care — journal, libération des émotions, respiration, exercice — en « quêtes » qui accordent de l’XP et des badges à chaque fois que vous terminez. Passez chaque jour, accomplissez vos quêtes et construisez une série. Toute la progression est enregistrée uniquement dans ce navigateur.',
+    howTitle: 'Comment l’utiliser',
+    how: [
+      'Touchez « Ouvrir » sur une quête pour lancer le vrai outil et la faire réellement.',
+      'Après l’avoir vraiment faite, touchez « Faire » pour la marquer comme terminée (système d’honneur).',
+      'Revenez chaque jour pour augmenter votre série ; manquez un jour et elle repart à zéro.',
+      'L’XP augmente votre niveau et votre titre, et débloque des badges.',
+    ],
+    relatedTitle: 'Outils liés à vos quêtes',
+    related: [
+      { href: '/journal/today', label: 'Journal du jour', desc: 'Apaisez l’esprit en une ligne.' },
+      { href: '/emotion/release', label: 'Laisser passer les émotions', desc: 'Nommez une émotion et laissez-la partir.' },
+      { href: '/interval/timer', label: 'Minuteur d’intervalles', desc: 'Une séance courte et ciblée.' },
+    ],
+    disclaimer: 'Ceci est une aide à la construction d’habitudes, pas un traitement médical. Si vous traversez une période difficile, veuillez demander l’aide d’un professionnel.',
+  },
+  es: {
+    introTitle: 'Haz que la constancia se sienta como un juego',
+    intro: 'Los hábitos fallan no porque la fuerza de voluntad sea débil, sino porque las pequeñas prácticas no dan una recompensa visible. El Gremio de aventureros convierte el autocuidado — diario, soltar emociones, respiración, ejercicio — en “misiones” que otorgan XP e insignias cada vez que terminas. Entra a diario, completa tus misiones y construye una racha. Todo el progreso se guarda solo en este navegador.',
+    howTitle: 'Cómo usarlo',
+    how: [
+      'Toca “Abrir” en una misión para iniciar la herramienta real y hacerla de verdad.',
+      'Después de hacerla realmente, toca “Hacer” para marcarla como completa (sistema de honor).',
+      'Visita a diario para aumentar tu racha; si pierdes un día, vuelve a cero.',
+      'La XP sube tu nivel y título, y desbloquea insignias.',
+    ],
+    relatedTitle: 'Herramientas enlazadas a tus misiones',
+    related: [
+      { href: '/journal/today', label: 'Diario de hoy', desc: 'Aquieta tu mente en una línea.' },
+      { href: '/emotion/release', label: 'Dejar pasar emociones', desc: 'Nombra una emoción y déjala ir.' },
+      { href: '/interval/timer', label: 'Temporizador de intervalos', desc: 'Una serie corta y enfocada.' },
+    ],
+    disclaimer: 'Esta es una ayuda para crear hábitos, no un tratamiento médico. Si estás pasando por un momento difícil, busca ayuda profesional.',
+  },
+};
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <AdventurerGuild locale={locale} client:load />
+
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.howTitle}</h2>
+      <ul class="mt-4 space-y-3">
+        {c.how.map((w) => (
+          <li class="rounded-xl bg-green-50 px-4 py-3 text-sm leading-6 text-green-800">{w}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href}>
+            <span class="font-semibold text-green-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
+  </main>
+</Layout>

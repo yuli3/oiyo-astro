@@ -178,6 +178,54 @@ const moneyParkingManifest: FeatureManifest = {
   },
 };
 
+// Adventurer's Guild — gamified self-care quest hub (G13).
+const guildManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "Castle",
+  id: "adventurer-guild",
+  path: "/guild",
+  status: "production",
+  name: {
+    cn: "冒险者公会", en: "Adventurer's Guild", es: "Gremio de aventureros",
+    fr: "Guilde des aventuriers", ja: "冒険者ギルド", ko: "모험가 길드",
+  },
+  description: {
+    cn: "把日记/呼吸/运动等自我关怀变成任务，用经验值、等级、连续天数和徽章坚持下去。",
+    en: "Turn journaling/breathing/exercise self-care into quests with XP, levels, streaks and badges.",
+    es: "Convierte el autocuidado en misiones con XP, niveles, rachas e insignias.",
+    fr: "Transformez l'auto-soin en quêtes avec XP, niveaux, séries et badges.",
+    ja: "ジャーナル・呼吸・運動などのセルフケアをクエスト化。経験値・レベル・連続日数・バッジで継続。",
+    ko: "저널·호흡·운동 같은 자기돌봄을 퀘스트로. 경험치·레벨·연속일·배지로 꾸준함을 만드는 허브.",
+  },
+};
+
+// Pranayama (yoga breathing) guide — 8 traditional techniques with a guided pacer.
+const pranayamaManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "Wind",
+  id: "pranayama",
+  path: "/pranayama",
+  status: "production",
+  name: {
+    cn: "瑜伽呼吸（调息）指南", en: "Yoga Breathing (Pranayama)", es: "Respiración yóguica (Pranayama)",
+    fr: "Respiration yoga (Pranayama)", ja: "ヨガ呼吸（プラーナーヤーマ）", ko: "요가 호흡(프라나야마)",
+  },
+  description: {
+    cn: "交替鼻孔、乌加依、蜂鸣等8种经典瑜伽呼吸法，配动画节拍器与步骤、功效、注意事项。",
+    en: "8 classic pranayama techniques (alternate nostril, Ujjayi, Bhramari…) with an animated pacer, steps, benefits and cautions.",
+    es: "8 técnicas clásicas de pranayama con marcador animado, pasos, beneficios y precauciones.",
+    fr: "8 techniques classiques de pranayama avec rythmeur animé, étapes, bienfaits et précautions.",
+    ja: "片鼻呼吸・ウジャイ・ブラーマリーなど8種の調息法を、アニメーションのペーサーと手順・効果・注意で案内。",
+    ko: "교호 호흡·우자이·브라마리 등 요가 호흡 8종을 애니메이션 페이서와 단계·효과·주의로 안내.",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -188,6 +236,8 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   intervalTimerManifest,
   lottoSimManifest,
   moneyParkingManifest,
+  guildManifest,
+  pranayamaManifest,
 ];
 
 // Helper to get features easily
