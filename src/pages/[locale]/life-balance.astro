@@ -1,0 +1,77 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import BalanceWheel from '../../components/tools/BalanceWheel';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: '삶의 균형 진단 (Wheel of Life) — 8영역 밸런스 자가진단',
+    description: '건강·관계·커리어·재정·자기계발·환경·여가·기여 8개 영역의 만족도로 삶의 전체 균형과 보완할 영역을 진단. 무료, 비공개.',
+  },
+  en: {
+    title: 'Wheel of Life — 8-Area Life Balance Check',
+    description: 'Rate satisfaction across 8 life areas (health, relationships, career, finance, growth, environment, fun, contribution) to see your overall balance and where to focus. Free, private.',
+  },
+  ja: {
+    title: '人生のバランス診断 (Wheel of Life) — 8領域セルフチェック',
+    description: '健康・人間関係・キャリア・お金・自己成長・環境・余暇・貢献の8領域の満足度から、人生全体のバランスと改善点を診断。無料・非公開。',
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  introTitle: string; intro: string;
+  relatedTitle: string; related: { href: string; label: string; desc: string }[];
+}> = {
+  ko: {
+    introTitle: '바퀴가 고르게 굴러가고 있나요?',
+    intro: '삶을 8개 영역의 바퀴로 보면, 한 곳이 움푹 들어갈 때 전체가 덜컹거립니다. 각 영역의 만족도를 솔직히 답하면 전체 균형 점수와 가장 먼저 손볼 영역을 알려드립니다. 기록은 저장되지 않습니다.',
+    relatedTitle: '함께 하면 좋은 것',
+    related: [
+      { href: '/journal/today', label: '오늘의 저널', desc: '하루 한 줄로 마음 정리.' },
+      { href: '/guild', label: '모험가 길드', desc: '균형을 매일 퀘스트로.' },
+    ],
+  },
+  en: {
+    introTitle: 'Is your wheel rolling evenly?',
+    intro: 'See life as a wheel of 8 areas — when one caves in, the whole ride gets bumpy. Answer honestly and get an overall balance score plus the area to fix first. Nothing is saved.',
+    relatedTitle: 'Pairs well with',
+    related: [
+      { href: '/journal/today', label: "Today's Journal", desc: 'Settle your mind in one line.' },
+      { href: '/guild', label: "Adventurer's Guild", desc: 'Make balance a daily quest.' },
+    ],
+  },
+};
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <BalanceWheel locale={locale} client:load />
+
+    <section class="mt-10 border-t border-emerald-100 pt-8">
+      <h2 class="text-2xl font-bold text-emerald-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-emerald-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-emerald-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-emerald-100 bg-white p-4 transition-colors hover:border-emerald-300 hover:bg-emerald-50" href={item.href}>
+            <span class="font-semibold text-emerald-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-emerald-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>

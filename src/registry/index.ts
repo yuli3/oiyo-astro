@@ -274,6 +274,30 @@ const countryMatchManifest: FeatureManifest = {
   },
 };
 
+// 삶의 균형 진단 — surfaces the balance (Wheel of Life) ontology engine.
+const balanceWheelManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "CircleDashed",
+  id: "life-balance",
+  path: "/life-balance",
+  status: "production",
+  name: {
+    cn: "生活平衡测评", en: "Wheel of Life", es: "Rueda de la vida",
+    fr: "Roue de la vie", ja: "人生のバランス診断", ko: "삶의 균형 진단",
+  },
+  description: {
+    cn: "对健康·关系·事业等8个生活领域评分，了解整体平衡与需改善之处。",
+    en: "Rate 8 life areas to see your overall balance and where to focus first.",
+    es: "Evalúa 8 áreas de vida para ver tu equilibrio y dónde enfocarte.",
+    fr: "Évaluez 8 domaines de vie pour voir votre équilibre et vos priorités.",
+    ja: "健康・人間関係・キャリアなど8領域から人生全体のバランスと改善点を診断。",
+    ko: "건강·관계·커리어 등 8개 영역으로 삶의 전체 균형과 보완할 영역을 진단.",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -288,6 +312,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   pranayamaManifest,
   foreignAccountManifest,
   countryMatchManifest,
+  balanceWheelManifest,
 ];
 
 // Helper to get features easily
