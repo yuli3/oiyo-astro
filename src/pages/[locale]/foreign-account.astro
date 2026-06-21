@@ -1,0 +1,95 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import ForeignAccountReportChecker from '../../components/tools/ForeignAccountReportChecker';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: '해외금융계좌 신고 대상 자가진단 계산기 — 5억원 기준·RSU·가상자산',
+    description: '해외 예금·주식(RSU)·펀드·보험·가상자산 계좌의 원화 합계를 계산해 매월 말일 5억원 초과 여부와 신고 기준일을 자가진단. 입력값은 저장되지 않습니다.',
+  },
+  en: {
+    title: 'Korea Overseas Financial Account Reporting Checker (₩500M test)',
+    description: 'Add overseas deposit, stock (RSU), fund, insurance and crypto accounts, convert to KRW, and check whether any month-end total exceeds ₩500M and your reporting basis date. Nothing is saved.',
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  introTitle: string; intro: string;
+  whoTitle: string; who: string[];
+  relatedTitle: string; related: { href: string; label: string; desc: string }[];
+}> = {
+  ko: {
+    introTitle: '해외계좌, 신고 대상인지 1분 자가진단',
+    intro: '미국 증권계좌의 RSU·해외주식, 해외 은행 예금, 해외 거래소의 가상자산까지 — 거주자가 보유한 모든 해외금융계좌의 합계가 매월 말일 중 하루라도 5억원을 초과하면 다음 해 6월에 신고해야 합니다. 계좌를 입력하면 원화 합계와 신고 여부, 기준일을 알려드립니다.',
+    whoTitle: '이런 분이 꼭 확인하세요',
+    who: [
+      '미국 회사 RSU·스톡옵션을 해외 증권계좌(예: Fidelity, E*TRADE, Schwab)로 받는 분',
+      '해외 주식·ETF를 해외 브로커 계좌로 직접 보유한 분',
+      '해외 거래소(코인베이스 등)에 가상자산 계좌가 있는 분',
+      '해외 은행 예금·보험·펀드를 보유한 거주자·주재원',
+    ],
+    relatedTitle: '함께 보면 좋은 것',
+    related: [
+      { href: '/money/parking', label: '자금 보관처 가이드', desc: '목적별 자금 보관처(교육용).' },
+    ],
+  },
+  en: {
+    introTitle: 'Check your overseas-account reporting duty in a minute',
+    intro: 'From US-brokerage RSUs and foreign stocks to overseas bank deposits and crypto on foreign exchanges — Korean residents must report if the aggregate of all overseas financial accounts exceeds ₩500M on any month-end day. Enter your accounts to see the KRW total, obligation, and basis date.',
+    whoTitle: 'Especially relevant if you',
+    who: [
+      'Receive US-company RSUs/options in a foreign brokerage (Fidelity, E*TRADE, Schwab…)',
+      'Hold foreign stocks/ETFs directly in an overseas broker account',
+      'Have crypto on a foreign exchange (Coinbase, etc.)',
+      'Hold overseas bank deposits, insurance or funds as a resident/expat',
+    ],
+    relatedTitle: 'Related',
+    related: [
+      { href: '/money/parking', label: 'Money Parking Guide', desc: 'Where to park money by goal (educational).' },
+    ],
+  },
+};
+const c = content[locale] ?? content.en;
+const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <ForeignAccountReportChecker locale={locale} client:load />
+
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.whoTitle}</h2>
+      <ul class="mt-4 space-y-3">
+        {c.who.map((w) => (
+          <li class="rounded-xl bg-green-50 px-4 py-3 text-sm leading-6 text-green-800">{w}</li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-3">
+        {localizedRelated.map((item) => (
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href}>
+            <span class="font-semibold text-green-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>
