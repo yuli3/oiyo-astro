@@ -1,4 +1,10 @@
 import React, { useState, useMemo } from 'react';
+import { analyzeLifeCategories } from '../../lib/ontology/saju/categories';
+import { STEM_ORDER } from '../../manifest/data/saju/stems';
+import { BRANCH_ORDER } from '../../manifest/data/saju/branches';
+import type { SajuResult, HeavenlyStem, EarthlyBranch } from '../../lib/ontology/saju/types';
+import YongsinSection from './saju/YongsinSection';
+import LifeCategoriesSection from './saju/LifeCategoriesSection';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 
@@ -503,6 +509,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const [month, setMonth] = useState(6);
   const [day, setDay] = useState(15);
   const [hour, setHour] = useState<number | null>(null);
+  const [gender, setGender] = useState<'male' | 'female'>('male');
   const [done, setDone] = useState(false);
 
   const result = useMemo(() => {
@@ -535,6 +542,29 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
     return { pillars, elementCount, dominant, sortedElements, scarceElements, missingElements };
   }, [year, month, day, hour, t.yearPillar, t.monthPillar, t.dayPillar, t.hourPillar]);
+
+  // ── 용신/항목별 구조 분석 (bridge index pillars → SajuResult enum) ──
+  const analysis = useMemo(() => {
+    const yStem = getYearStem(year), yBranch = getYearBranch(year);
+    const mBranch = getMonthBranch(month), mStem = getMonthStem(yStem, month);
+    const dStem = getDayStem(year, month, day), dBranch = getDayBranch(year, month, day);
+    const hKnown = hour !== null;
+    const hB = getHourBranch(hKnown ? (hour as number) : 12);
+    const hS = getHourStem(dStem, hB);
+    const S = (i: number) => STEM_ORDER[i] as unknown as HeavenlyStem;
+    const B = (i: number) => BRANCH_ORDER[i] as unknown as EarthlyBranch;
+    const saju: SajuResult = {
+      birthDate: new Date(year, month - 1, day, hKnown ? (hour as number) : 12),
+      year: { heavenlyStem: S(yStem), earthlyBranch: B(yBranch) },
+      month: { heavenlyStem: S(mStem), earthlyBranch: B(mBranch) },
+      day: { heavenlyStem: S(dStem), earthlyBranch: B(dBranch) },
+      hour: { heavenlyStem: S(hS), earthlyBranch: B(hB) },
+      dayMaster: S(dStem),
+      gender,
+      isLunar: false,
+    };
+    return { data: analyzeLifeCategories(saju), hourKnown: hKnown };
+  }, [year, month, day, hour, gender]);
 
   const daysInMonth = new Date(year, month, 0).getDate();
 
@@ -626,6 +656,25 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           </select>
         </div>
 
+        {/* Gender (for spouse-star analysis) */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 mb-1">
+            {({ ko: '성별', en: 'Gender', ja: '性別', zh: '性别', fr: 'Sexe', es: 'Sexo' } as Record<Locale, string>)[locale]}
+          </label>
+          <div className="grid grid-cols-2 gap-2">
+            {(['male', 'female'] as const).map(g => (
+              <button
+                key={g}
+                type="button"
+                onClick={() => { setGender(g); setDone(false); }}
+                className={`rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${gender === g ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-gray-300 text-gray-600'}`}
+              >
+                {({ male: { ko: '남성', en: 'Male', ja: '男性', zh: '男', fr: 'Homme', es: 'Hombre' }, female: { ko: '여성', en: 'Female', ja: '女性', zh: '女', fr: 'Femme', es: 'Mujer' } } as Record<string, Record<Locale, string>>)[g][locale]}
+              </button>
+            ))}
+          </div>
+        </div>
+
         <button
           onClick={handleCalc}
           className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-colors"
@@ -646,6 +695,12 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
               ))}
             </div>
           </div>
+
+          {/* 용신/기신 — 이로운/해로운 기운 */}
+          <YongsinSection locale={locale} analysis={analysis.data} hourKnown={analysis.hourKnown} />
+
+          {/* 항목별 분석 — 재물/진로/연애/건강 */}
+          <LifeCategoriesSection locale={locale} analysis={analysis.data} />
 
           {/* Reading map */}
           <div className="bg-white rounded-2xl border border-gray-200 p-4">
