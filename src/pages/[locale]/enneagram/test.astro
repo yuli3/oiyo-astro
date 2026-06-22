@@ -171,7 +171,7 @@ const faqJsonLd = {
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
-  <main class="mx-auto max-w-2xl px-4 py-10">
+  <div class="mx-auto max-w-2xl px-4 py-10">
     <EnneagramTest client:load locale={locale} />
 
     <section class="mt-10 border-t border-violet-100 pt-8">
@@ -207,5 +207,5 @@ const faqJsonLd = {
 
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
     <RelatedTools locale={locale} tools={['mbti', 'big5', 'attachment', 'loveLanguage']} current="enneagram" />
-  </main>
+  </div>
 </Layout>

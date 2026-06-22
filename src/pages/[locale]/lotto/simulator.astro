@@ -61,7 +61,7 @@ const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
-  <main class="container mx-auto px-4 py-8 max-w-3xl">
+  <div class="container mx-auto px-4 py-8 max-w-3xl">
     <LottoWinSimulator locale={locale} client:load />
 
     <section class="mt-10 border-t border-green-100 pt-8">
@@ -84,5 +84,5 @@ const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
       {c.disclaimer}
     </p>
-  </main>
+  </div>
 </Layout>

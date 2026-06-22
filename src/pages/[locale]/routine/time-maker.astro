@@ -258,7 +258,7 @@ const faqJsonLd = {
 
 <Layout title={meta.title} description={meta.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
-  <main class="mx-auto max-w-2xl px-4 py-10">
+  <div class="mx-auto max-w-2xl px-4 py-10">
     <div class="mb-8 text-center">
       <h1 class="text-3xl font-black text-slate-900">{txt({ ko: '시간 만들기', en: 'Making Time', ja: '時間の作り方', zh: '创造时间', fr: 'Créer du Temps', es: 'Crear Tiempo' })}</h1>
       <p class="mt-2 text-sm text-slate-500">{meta.description}</p>
@@ -353,5 +353,5 @@ const faqJsonLd = {
       {c.disclaimer}
     </p>
       <MentalBoost locale={locale} />
-  </main>
+  </div>
 </Layout>

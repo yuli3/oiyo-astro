@@ -303,7 +303,7 @@ const faqJsonLd = {
 
 <Layout title={meta.title} description={meta.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
-  <main class="mx-auto max-w-3xl px-4 py-10">
+  <div class="mx-auto max-w-3xl px-4 py-10">
     <div class="mb-8 text-center">
       <h1 class="text-3xl font-black text-slate-900">
         {txt({ ko: 'MBTI별 추천 습관·운동', en: 'MBTI Habits & Exercise Guide', ja: 'MBTIタイプ別習慣·運動', zh: 'MBTI推荐习惯和运动', fr: 'Habitudes & Exercices par MBTI', es: 'Hábitos y Ejercicio por MBTI' })}
@@ -401,5 +401,5 @@ const faqJsonLd = {
       {c.disclaimer}
     </p>
       <MentalBoost locale={locale} />
-  </main>
+  </div>
 </Layout>

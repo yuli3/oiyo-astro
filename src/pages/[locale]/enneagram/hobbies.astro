@@ -358,7 +358,7 @@ const faqJsonLd = {
 
 <Layout title={meta.title} description={meta.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
-  <main class="mx-auto max-w-3xl px-4 py-10">
+  <div class="mx-auto max-w-3xl px-4 py-10">
     <div class="mb-8 text-center">
       <h1 class="text-3xl font-black text-slate-900">
         {txt({ ko: '에니어그램 유형별 추천 취미·여가', en: 'Enneagram Hobbies & Leisure Guide', ja: 'エニアグラムタイプ別趣味·余暇', zh: '九型人格推荐兴趣与休闲', fr: 'Guide Loisirs & Hobbies Ennéagramme', es: 'Guía de Hobbies y Ocio por Eneagrama' })}
@@ -467,5 +467,5 @@ const faqJsonLd = {
       {c.disclaimer}
     </p>
       <MentalBoost locale={locale} />
-  </main>
+  </div>
 </Layout>

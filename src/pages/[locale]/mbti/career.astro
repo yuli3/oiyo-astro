@@ -253,7 +253,7 @@ const faqJsonLd = {
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
-  <main class="mx-auto max-w-2xl px-4 py-10">
+  <div class="mx-auto max-w-2xl px-4 py-10">
     <MbtiCareerTest client:load locale={locale} />
     <RelatedTools locale={locale} tools={['mbti', 'big5', 'enneagram', 'attachment']} current="mbti-career" />
 
@@ -313,5 +313,5 @@ const faqJsonLd = {
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
       {c.disclaimer}
     </p>
-  </main>
+  </div>
 </Layout>

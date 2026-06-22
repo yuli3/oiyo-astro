@@ -270,7 +270,7 @@ const faqJsonLd = {
 
 <Layout title={meta.title} description={meta.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
-  <main class="mx-auto max-w-2xl px-4 py-10">
+  <div class="mx-auto max-w-2xl px-4 py-10">
     <div class="mb-8 text-center">
       <div class="inline-flex items-center gap-1.5 rounded-full border border-green-200 bg-green-50 px-3 py-1 text-xs font-bold text-green-700 mb-4">
         {txt({ ko: '행동과학 기반', en: 'Behavioral Science', ja: '行動科学ベース', zh: '行为科学基础', fr: 'Science comportementale', es: 'Ciencia del comportamiento' })}
@@ -363,5 +363,5 @@ const faqJsonLd = {
       {c.disclaimer}
     </p>
       <MentalBoost locale={locale} />
-  </main>
+  </div>
 </Layout>

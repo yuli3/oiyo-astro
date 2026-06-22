@@ -442,7 +442,7 @@ const faqJsonLd = {
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
-  <main class="mx-auto max-w-2xl px-4 py-8">
+  <div class="mx-auto max-w-2xl px-4 py-8">
     <TarotReading client:load locale={locale} />
 
     <section class="mt-10 border-t border-violet-100 pt-8">
@@ -505,5 +505,5 @@ const faqJsonLd = {
     </p>
     <MysticTrinity topic="tarot" locale={locale} />
     <MentalBoost locale={locale} />
-  </main>
+  </div>
 </Layout>
