@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import SelfConceptClarityTest from '../../components/tests/SelfConceptClarityTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "자기개념 명료성 테스트 — 나는 나를 얼마나 또렷이 아는가?",
+    description: "캠벨의 자기개념 명료성 척도(SCC) 기반 — 14문항으로 자기 일관성과 자기 확신을 측정해 나를 아는 정도를 확인하세요.",
+  },
+  en: {
+    title: "Self-Concept Clarity Test — How Clearly Do You Know Yourself?",
+    description: "Based on Campbell's Self-Concept Clarity Scale (SCC) — measure self-consistency and self-certainty with 14 questions to see how well you know yourself.",
+  },
+  ja: {
+    title: "自己概念明確性テスト — 自分をどれくらいはっきり知っているか？",
+    description: "キャンベルの自己概念明確性尺度（SCC）に基づく — 14の設問で自己一貫性と自己確信を測定し、自分を知る度合いを確認しましょう。",
+  },
+  fr: {
+    title: "Test de Clarté du Concept de Soi — À quel point vous connaissez-vous ?",
+    description: "Basé sur l'échelle de clarté du concept de soi (SCC) de Campbell — mesurez la cohérence et la certitude de soi en 14 questions.",
+  },
+  es: {
+    title: "Test de Claridad del Autoconcepto — ¿Cuán claramente te conoces?",
+    description: "Basado en la Escala de Claridad del Autoconcepto (SCC) de Campbell — mide la consistencia y la certeza sobre ti mismo con 14 preguntas.",
+  },
+  zh: {
+    title: "自我概念清晰度测试 — 你有多清楚地了解自己？",
+    description: "基于坎贝尔的自我概念清晰度量表（SCC）— 用14个问题测量自我一致性与自我确定性，了解你认识自己的程度。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <SelfConceptClarityTest locale={locale as any} client:load />
+  </main>
+</Layout>
