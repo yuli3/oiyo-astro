@@ -298,6 +298,30 @@ const balanceWheelManifest: FeatureManifest = {
   },
 };
 
+// Business Cashflow Explorer — how different industries make money (educational).
+const cashflowManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "TrendingUp",
+  id: "business-cashflow",
+  path: "/business-cashflow",
+  status: "production",
+  name: {
+    cn: "商业现金流", en: "How Businesses Make Money", es: "Cómo gana dinero un negocio",
+    fr: "Comment les entreprises gagnent", ja: "ビジネスの稼ぎ方", ko: "사업은 어떻게 돈을 버나",
+  },
+  description: {
+    cn: "租赁·补习班·银行·油管主等业种的收入·成本·净利现金流一图对比。",
+    en: "Compare how rentals, academies, banks, YouTubers and more make money — revenue, costs and net profit as a flow.",
+    es: "Compara cómo ganan dinero alquileres, academias, bancos, YouTubers y más.",
+    fr: "Comparez comment gagnent locations, écoles, banques, YouTubeurs, etc.",
+    ja: "賃貸・塾・銀行・YouTuberなど業種別に収益源・費用・純利益の流れを比較。",
+    ko: "렌트·학원·은행·유튜버 등 업종별 수익원·비용·순이익 현금흐름을 한눈에 비교.",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -313,6 +337,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   foreignAccountManifest,
   countryMatchManifest,
   balanceWheelManifest,
+  cashflowManifest,
 ];
 
 // Helper to get features easily
