@@ -19,15 +19,15 @@ function won(n: number): string {
 }
 
 const UI: Record<string, LStr> = {
-  intro: { ko: "각 계정과목을 올바른 손익계산서 줄로 분류하세요.", en: "Classify each account into the right income-statement line." },
-  classify: { ko: "어느 줄에 들어갈까요?", en: "Which line?" },
-  correct: { ko: "정답!", en: "Correct!" },
-  wrong: { ko: "다시 생각해보세요.", en: "Try again." },
-  score: { ko: "점수", en: "Score" },
-  done: { ko: "완성! 손익계산서가 만들어졌어요.", en: "Done! The income statement is complete." },
-  reset: { ko: "다시 하기", en: "Play again" },
-  statement: { ko: "손익계산서", en: "Income statement" },
-  firstTry: { ko: "한 번에 맞힌 개수", en: "First-try correct" },
+  intro: { ko: "각 계정과목을 올바른 손익계산서 줄로 분류하세요.", en: "Classify each account into the right income-statement line.", ja: "各勘定科目を正しい損益計算書の行に分類しましょう。", zh: "把每个会计科目分到正确的损益表行。", fr: "Classez chaque compte sur la bonne ligne du compte de résultat.", es: "Clasifica cada cuenta en la línea correcta del estado de resultados." },
+  classify: { ko: "어느 줄에 들어갈까요?", en: "Which line?", ja: "どの行に入る？", zh: "属于哪一行？", fr: "Sur quelle ligne ?", es: "¿En qué línea?" },
+  correct: { ko: "정답!", en: "Correct!", ja: "正解！", zh: "正确！", fr: "Correct !", es: "¡Correcto!" },
+  wrong: { ko: "다시 생각해보세요.", en: "Try again.", ja: "もう一度考えてみましょう。", zh: "再想想。", fr: "Réessayez.", es: "Inténtalo de nuevo." },
+  score: { ko: "점수", en: "Score", ja: "スコア", zh: "分数", fr: "Score", es: "Puntuación" },
+  done: { ko: "완성! 손익계산서가 만들어졌어요.", en: "Done! The income statement is complete.", ja: "完成！損益計算書ができました。", zh: "完成！损益表已生成。", fr: "Terminé ! Le compte de résultat est complet.", es: "¡Listo! El estado de resultados está completo." },
+  reset: { ko: "다시 하기", en: "Play again", ja: "もう一度", zh: "再玩一次", fr: "Rejouer", es: "Jugar de nuevo" },
+  statement: { ko: "손익계산서", en: "Income statement", ja: "損益計算書", zh: "损益表", fr: "Compte de résultat", es: "Estado de resultados" },
+  firstTry: { ko: "한 번에 맞힌 개수", en: "First-try correct", ja: "一発正解", zh: "一次答对", fr: "Réussites du 1er coup", es: "Aciertos al primer intento" },
 };
 
 function shuffle<T>(arr: T[]): T[] {

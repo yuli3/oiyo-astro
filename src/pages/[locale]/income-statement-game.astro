@@ -23,6 +23,18 @@ const meta: Record<string, { title: string; description: string }> = {
     title: "損益計算書づくりゲーム — 勘定分類で学ぶ財務諸表",
     description: "勘定科目を売上・売上原価・販管費・営業外・法人税に分類すると、売上総利益→営業利益→当期純利益が段階的に積み上がる無料ツール。",
   },
+  zh: {
+    title: "损益表制作游戏 — 用科目分类学习财务报表",
+    description: "把会计科目分到营业收入·成本·销售管理费用·营业外·所得税，毛利润→营业利润→净利润便逐步搭建起来的免费工具。",
+  },
+  fr: {
+    title: "Jeu du compte de résultat — apprendre les états financiers",
+    description: "Classez les comptes (CA, coût des ventes, SG&A, hors exploitation, impôt) et voyez se construire bénéfice brut → résultat d'exploitation → bénéfice net. Outil gratuit.",
+  },
+  es: {
+    title: "Juego del estado de resultados — aprende los estados financieros",
+    description: "Clasifica cuentas (ingresos, costo, SG&A, no operativo, impuesto) y observa cómo se forman beneficio bruto → operativo → neto. Herramienta gratuita.",
+  },
 };
 const m = meta[locale] ?? meta.en;
 
@@ -60,6 +72,54 @@ const content: Record<string, {
       { href: "https://blog.oiyo.net/en/academy-accounting-basics-ch1/", label: "Accounting basics", desc: "Financial statements from the ground up.", external: true },
       { href: "/business-cashflow", label: "Business cashflow tool", desc: "How industries make money." },
     ],
+  },
+  ja: {
+    lead: "財務諸表は暗記ではなく「流れ」で理解するもの。勘定科目を正しい行に置くと、売上から費用を一段ずつ引いて五つの利益がどう生まれるかが一目で分かります。",
+    faqTitle: "よくある質問",
+    faq: [
+      { q: "損益計算書の利益段階とは？", a: "売上高 − 売上原価 = 売上総利益、− 販管費 = 営業利益、± 営業外損益 = 税引前純利益、− 法人税 = 当期純利益。各段階で「どこで稼ぎ、どこで漏れるか」が分かります。" },
+      { q: "売上総利益と営業利益の違いは？", a: "売上総利益は「売ること自体」の収益性(売上 − 原価)、営業利益はそこから人件費・賃料・広告費などの運営費を引いた「本業の真の利益」です。" },
+      { q: "営業外損益とは？", a: "本業と無関係の損益です。受取利息、支払利息、為替差損益など。本業(営業利益)と分けて見ることで会社の実力が分かります。" },
+      { q: "もっと深く学ぶには？", a: "会計の基礎などの講義に続けます(下のリンク)。このゲームは構造を直感的に掴む出発点です。" },
+    ],
+    relatedTitle: "続けて学ぶ",
+    related: [{ href: "/business-cashflow", label: "ビジネスのキャッシュフロー", desc: "業種別の稼ぎ方。" }],
+  },
+  zh: {
+    lead: "财务报表要靠“流程”理解，而不是死记。把会计科目放到正确的行，就能一眼看清从营业收入逐步扣除费用、五层利润如何形成。",
+    faqTitle: "常见问题",
+    faq: [
+      { q: "损益表的利润层级是什么？", a: "营业收入 − 营业成本 = 毛利润，− 销售管理费用 = 营业利润，± 营业外损益 = 税前利润，− 所得税 = 净利润。每一层都显示在哪里赚钱、在哪里流失。" },
+      { q: "毛利润和营业利润有何不同？", a: "毛利润是“销售本身”的盈利能力(收入 − 成本)；营业利润再扣除薪资、租金、广告等运营费用，反映主营业务的真实利润。" },
+      { q: "营业外损益是什么？", a: "与主营业务无关的损益，如利息收入、利息支出、汇兑损益。与营业利润分开看，才能判断公司真正实力。" },
+      { q: "如何深入学习？", a: "可继续学习会计基础等课程(见下方链接)。本游戏是直观掌握结构的起点。" },
+    ],
+    relatedTitle: "继续学习",
+    related: [{ href: "/business-cashflow", label: "商业现金流工具", desc: "各行业如何赚钱。" }],
+  },
+  fr: {
+    lead: "Les états financiers se comprennent comme un flux, pas par cœur. En plaçant les comptes sur la bonne ligne, on voit cinq niveaux de profit émerger à mesure que les coûts sont soustraits du chiffre d'affaires.",
+    faqTitle: "Questions fréquentes",
+    faq: [
+      { q: "Quels sont les niveaux de profit ?", a: "CA − coût des ventes = bénéfice brut ; − SG&A = résultat d'exploitation ; ± hors exploitation = résultat avant impôt ; − impôt = bénéfice net. Chaque niveau montre où l'argent est gagné et où il fuit." },
+      { q: "Bénéfice brut vs résultat d'exploitation ?", a: "Le bénéfice brut est la rentabilité de la vente (CA − coût) ; le résultat d'exploitation retire les charges courantes (salaires, loyer, pub) pour révéler le vrai profit du cœur de métier." },
+      { q: "Qu'est-ce que le hors exploitation ?", a: "Produits/charges sans lien avec le cœur de métier — intérêts reçus/payés, gains/pertes de change. Les séparer révèle la vraie force de l'entreprise." },
+      { q: "Pour aller plus loin ?", a: "Poursuivez avec les bases de la comptabilité (liens ci-dessous). Ce jeu est le point de départ intuitif." },
+    ],
+    relatedTitle: "Continuer",
+    related: [{ href: "/business-cashflow", label: "Outil de cashflow", desc: "Comment les secteurs gagnent de l'argent." }],
+  },
+  es: {
+    lead: "Los estados financieros se entienden como un flujo, no de memoria. Al colocar las cuentas en la línea correcta, se ven surgir cinco niveles de beneficio al restar costos de los ingresos.",
+    faqTitle: "Preguntas frecuentes",
+    faq: [
+      { q: "¿Cuáles son los niveles de beneficio?", a: "Ingresos − costo = beneficio bruto; − SG&A = beneficio operativo; ± no operativo = beneficio antes de impuestos; − impuesto = beneficio neto. Cada nivel muestra dónde se gana y dónde se pierde." },
+      { q: "¿Bruto vs operativo?", a: "El bruto es la rentabilidad de vender (ingresos − costo); el operativo resta gastos corrientes (salarios, alquiler, publicidad) para revelar el beneficio real del negocio principal." },
+      { q: "¿Qué es lo no operativo?", a: "Ingresos/gastos ajenos al negocio principal — intereses, diferencias de cambio. Separarlos revela la verdadera fortaleza de la empresa." },
+      { q: "¿Cómo profundizar?", a: "Continúa con los fundamentos de contabilidad (enlaces abajo). Este juego es el punto de partida intuitivo." },
+    ],
+    relatedTitle: "Seguir aprendiendo",
+    related: [{ href: "/business-cashflow", label: "Herramienta de cashflow", desc: "Cómo ganan dinero los sectores." }],
   },
 };
 const c = content[locale] ?? content.en;
