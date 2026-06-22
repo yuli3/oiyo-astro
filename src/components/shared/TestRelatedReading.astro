@@ -1,0 +1,39 @@
+---
+import type { Locale } from "../../i18n";
+
+// Compact "read deeper" cross-link box for a test → blog guide + wiki definition.
+// Part of the DATA FOUNDATION: every test points to its concept (wiki) and guide (blog).
+interface Props {
+  locale: Locale;
+  blog?: string;
+  wiki?: string;
+}
+const { locale, blog, wiki } = Astro.props;
+
+const L: Record<string, { title: string; guide: string; def: string }> = {
+  ko: { title: "더 깊이 읽기", guide: "📖 가이드 읽기", def: "📚 개념 정의" },
+  en: { title: "Read deeper", guide: "📖 Read the guide", def: "📚 Concept definition" },
+  ja: { title: "さらに深く", guide: "📖 ガイドを読む", def: "📚 概念の定義" },
+  zh: { title: "深入了解", guide: "📖 阅读指南", def: "📚 概念定义" },
+  fr: { title: "Approfondir", guide: "📖 Lire le guide", def: "📚 Définition" },
+  es: { title: "Leer más", guide: "📖 Leer la guía", def: "📚 Definición" },
+};
+const t = L[locale] ?? L.en;
+---
+{(blog || wiki) && (
+  <aside class="mx-auto mt-8 max-w-3xl rounded-xl border border-border bg-card/60 px-5 py-4" aria-label="Read deeper">
+    <p class="mb-3 text-[11px] font-bold uppercase tracking-widest text-muted-foreground">{t.title}</p>
+    <div class="flex flex-wrap gap-2">
+      {blog && (
+        <a href={blog} rel="noopener" class="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary">
+          <span>{t.guide}</span><span class="text-[10px] uppercase tracking-wider text-muted-foreground">· blog.oiyo.net</span>
+        </a>
+      )}
+      {wiki && (
+        <a href={wiki} rel="noopener" class="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary">
+          <span>{t.def}</span><span class="text-[10px] uppercase tracking-wider text-muted-foreground">· wiki.oiyo.net</span>
+        </a>
+      )}
+    </div>
+  </aside>
+)}

@@ -5,6 +5,8 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import TestSourceNote from '../components/shared/TestSourceNote.astro';
 import { getTestSourceNote } from '../data/test-source-notes';
+import TestRelatedReading from '../components/shared/TestRelatedReading.astro';
+import { getRelatedReading } from '../data/test-related-reading';
 
 interface Props {
   title: string;
@@ -36,6 +38,7 @@ const routeWithoutLocale = Astro.url.pathname.replace(
   '',
 ) || '/';
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
+const relatedReading = getRelatedReading(routeWithoutLocale);
 const alternateLinks = LOCALES.map((alternateLocale) => ({
   hreflang: BCP47[alternateLocale] ?? alternateLocale,
   href: new URL(`/${alternateLocale}${routeWithoutLocale}`, Astro.site),
@@ -155,6 +158,7 @@ const themeColor = '#65a30d';
     <Header locale={locale} />
     <main id="main-content">
       <slot />
+      {relatedReading && <TestRelatedReading locale={locale} blog={relatedReading.blog} wiki={relatedReading.wiki} />}
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
     </main>
     <Footer locale={locale} />
