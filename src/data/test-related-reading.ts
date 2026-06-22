@@ -28,6 +28,17 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/self-compassion-test": { blog: `${BLOG}/magazine-self-compassion-psychology/`, wiki: `${WIKI}/meaning-of-self-compassion/` },
   "/learning-style-test": { blog: `${BLOG}/learning-styles-efficiency/`, wiki: `${WIKI}/meaning-of-learning-styles/` },
   "/emotion-regulation-test": { blog: `${BLOG}/magazine-emotion-regulation-psychology/`, wiki: `${WIKI}/meaning-of-emotion-regulation/` },
+  // 2026-06-23 새 테스트 → 새 매거진 가이드 (codex 생성)
+  "/workaholic-test": { blog: `${BLOG}/magazine-workaholism-psychology/` },
+  "/fomo-test": { blog: `${BLOG}/magazine-fomo-psychology/` },
+  "/money-anxiety-test": { blog: `${BLOG}/magazine-money-anxiety-psychology/` },
+  "/assertiveness-test": { blog: `${BLOG}/magazine-assertiveness-psychology/` },
+  "/relationship-boredom-test": { blog: `${BLOG}/magazine-relationship-boredom-psychology/` },
+  "/social-comparison-test": { blog: `${BLOG}/magazine-social-comparison-psychology/` },
+  // 기존 매거진 가이드와 매칭
+  "/shadow-self-test": { blog: `${BLOG}/jung-shadow-psychology/` },
+  "/self-efficacy-test": { blog: `${BLOG}/magazine-growth-mindset-psychology/` },
+  "/inner-child-test": { blog: `${BLOG}/trauma-healing-psychology/` },
 };
 
 export function getRelatedReading(routeWithoutLocale: string): RelatedReading | null {
