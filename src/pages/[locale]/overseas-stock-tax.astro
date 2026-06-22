@@ -1,0 +1,126 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import OverseasStockTaxCalculator from "../../components/tools/OverseasStockTaxCalculator";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const BASE = "https://oiyo.net";
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "해외주식 양도소득세·RSU 세금 계산기 — 22% 세액 바로 확인",
+    description: "해외 상장주식 양도차익과 미국 회사 RSU의 세금을 계산하는 무료 도구. 연 250만원 기본공제, 22% 세율, 손익통산, RSU 베스팅 근로소득까지 반영한 예상 세액.",
+  },
+  en: {
+    title: "Foreign Stock Capital-Gains & RSU Tax Calculator (Korea)",
+    description: "A free tool that estimates Korean capital-gains tax on foreign stocks and US-company RSUs — ₩2.5M annual deduction, 22% rate, loss offset, and the RSU vesting income step.",
+  },
+  ja: {
+    title: "海外株式 譲渡所得税・RSU 税金計算機 (韓国居住者)",
+    description: "海外上場株式の譲渡益と米国企業RSUの韓国での税金を試算する無料ツール。年250万ウォン控除・22%・損益通算・RSUベスティング所得を反映。",
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  lead: string;
+  faqTitle: string; faq: { q: string; a: string }[];
+  relatedTitle: string; related: { href: string; label: string; desc: string; external?: boolean }[];
+}> = {
+  ko: {
+    lead: "해외주식을 팔아 차익이 났거나 미국 회사에서 받은 RSU를 매도했다면 양도소득세 신고 대상입니다. 금액을 넣으면 양도차익 → 기본공제(연 250만) → 과세표준 → 예상 세액(22%)을 바로 계산합니다.",
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "해외주식 양도세는 어떻게 계산하나요?", a: "(매도가액 − 취득가액 − 필요경비)로 양도차익을 구하고, 같은 해 손실과 통산한 뒤 기본공제 연 250만원을 빼 과세표준을 만듭니다. 여기에 22%(양도세 20% + 지방소득세 2%)를 곱한 금액이 예상 세액입니다. 환율은 취득·매도 각 시점 기준으로 원화 환산해 입력하세요." },
+      { q: "RSU는 세금이 두 번 붙나요?", a: "네. ① 베스팅(귀속) 시점의 시가가 ‘근로소득’으로 과세되어 연말정산·종합소득에 반영되고, ② 이후 주식을 팔 때 베스팅 시 가치를 취득가로 보아 그보다 오른 차익에 22% 양도세가 붙습니다. 이 계산기는 ②를 계산하고 ①은 참고로 보여줍니다." },
+      { q: "신고는 언제 하나요?", a: "양도일이 속한 해의 다음 해 5월에 양도소득세 확정신고를 합니다(예: 2026년 매도 → 2027년 5월). 손실만 났어도 통산·이월을 위해 신고해두는 것이 유리할 수 있습니다." },
+      { q: "손실이 나면요?", a: "차익이 없으면 세금은 없습니다. 같은 해 다른 해외주식에서 난 손실은 이익과 통산할 수 있어, 전체 순이익 기준으로 과세됩니다." },
+      { q: "이 계산은 정확한가요?", a: "구조를 빠르게 가늠하기 위한 교육용 추정치입니다. 세율·공제·신고 규정은 개정될 수 있고, ETF·국내상장 해외ETF 등은 과세 방식이 다릅니다. 실제 신고는 국세청 홈택스와 세무 전문가를 통해 확인하세요." },
+    ],
+    relatedTitle: "함께 보면 좋은 것",
+    related: [
+      { href: "https://blog.oiyo.net/ko/magazine-rsu-foreign-stock-account-tax-guide/", label: "RSU·해외 주식 계좌 세금 가이드", desc: "베스팅·매도·해외금융계좌 신고 총정리.", external: true },
+      { href: "https://blog.oiyo.net/ko/magazine-overseas-stock-capital-gains-tax/", label: "해외주식 양도세 완전 가이드", desc: "250만 공제·22%·ETF 함정.", external: true },
+      { href: "/foreign-account", label: "해외금융계좌 신고 자가진단", desc: "5억원 기준 신고 대상 확인." },
+    ],
+  },
+  en: {
+    lead: "If you sold foreign stocks at a gain or sold RSUs from a US employer, you owe Korean capital-gains tax. Enter the amounts to compute gain → basic deduction (₩2.5M/yr) → taxable base → estimated tax (22%).",
+    faqTitle: "Frequently asked questions",
+    faq: [
+      { q: "How is foreign-stock capital-gains tax calculated?", a: "Gain = sale − cost − expenses; net it against same-year losses, subtract the ₩2.5M annual deduction for the taxable base, then apply 22% (20% + 2% local surtax). Convert each amount to KRW using the FX rate at the time of purchase and of sale." },
+      { q: "Is RSU taxed twice?", a: "Yes. ① The fair value at vesting is taxed as employment income; ② when you later sell, the gain above that vesting value is taxed at 22%. This tool computes ② and shows ① for reference." },
+      { q: "When do I file?", a: "File the final capital-gains return in May of the year after the sale (e.g., sold in 2026 → file May 2027). Filing even at a loss can help with offset/carryover." },
+      { q: "What if I have a loss?", a: "No gain means no tax. Same-year losses on other foreign stocks can offset gains, so tax applies to the net." },
+      { q: "Is this accurate?", a: "It's an educational estimate. Rates, deductions and rules can change, and some products (ETFs, Korea-listed foreign ETFs) are taxed differently. Verify via Korea's NTS Hometax and a tax professional." },
+    ],
+    relatedTitle: "Pairs well with",
+    related: [
+      { href: "https://blog.oiyo.net/en/magazine-rsu-foreign-stock-account-tax-guide/", label: "RSU & foreign account tax guide", desc: "Vesting, sale, foreign-account reporting.", external: true },
+      { href: "/foreign-account", label: "Foreign account reporting self-check", desc: "Check the ₩500M reporting threshold." },
+    ],
+  },
+};
+const c = content[locale] ?? content.en;
+const related = c.related.map((r) => ({ ...r, href: r.external ? r.href : `/${locale}${r.href}` }));
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+});
+const appJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: m.title,
+  url: `${BASE}/${locale}/overseas-stock-tax`,
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  inLanguage: locale,
+  description: m.description,
+});
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <script is:inline type="application/ld+json" set:html={faqJsonLd} />
+  <script is:inline type="application/ld+json" set:html={appJsonLd} />
+  <main class="container mx-auto max-w-3xl px-4 py-8">
+    <header class="mb-8">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{m.title}</h1>
+      <p class="mt-3 leading-relaxed text-muted-foreground">{c.lead}</p>
+    </header>
+
+    <OverseasStockTaxCalculator locale={locale} client:load />
+
+    <section class="mt-12">
+      <h2 class="mb-4 text-2xl font-bold">{c.faqTitle}</h2>
+      <div class="space-y-3">
+        {c.faq.map((f) => (
+          <details class="group rounded-xl border border-border bg-card p-4">
+            <summary class="cursor-pointer list-none font-semibold marker:content-none">
+              <span class="text-primary">Q.</span> {f.q}
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="mb-4 text-xl font-bold">{c.relatedTitle}</h2>
+      <div class="grid gap-3 md:grid-cols-3">
+        {related.map((r) => (
+          <a class="rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/40 hover:bg-primary/5" href={r.href} {...(r.external ? { rel: "noopener" } : {})}>
+            <span class="font-semibold">{r.label}</span>
+            <span class="mt-1 block text-sm text-muted-foreground">{r.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>

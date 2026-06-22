@@ -322,6 +322,30 @@ const cashflowManifest: FeatureManifest = {
   },
 };
 
+// Overseas Stock / RSU capital-gains tax estimator (Korea resident).
+const overseasStockTaxManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "Calculator",
+  id: "overseas-stock-tax",
+  path: "/overseas-stock-tax",
+  status: "production",
+  name: {
+    cn: "海外股票·RSU税金计算", en: "Foreign Stock & RSU Tax", es: "Impuesto acciones extranjeras y RSU",
+    fr: "Impôt actions étrangères & RSU", ja: "海外株式・RSU 税金計算", ko: "해외주식·RSU 양도세 계산기",
+  },
+  description: {
+    cn: "估算韩国居民海外股票及美企RSU的资本利得税(年250万韩元扣除·22%)。",
+    en: "Estimate Korean capital-gains tax on foreign stocks and US-company RSUs (₩2.5M deduction, 22%).",
+    es: "Estima el impuesto coreano sobre acciones extranjeras y RSU (deducción ₩2.5M, 22%).",
+    fr: "Estimez l'impôt coréen sur actions étrangères et RSU (déduction ₩2,5M, 22%).",
+    ja: "海外株式・米企業RSUの韓国譲渡所得税を試算(年250万ウォン控除・22%)。",
+    ko: "해외주식 양도차익과 미국 회사 RSU의 양도소득세를 계산(연 250만 공제·22%).",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -338,6 +362,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   countryMatchManifest,
   balanceWheelManifest,
   cashflowManifest,
+  overseasStockTaxManifest,
 ];
 
 // Helper to get features easily
