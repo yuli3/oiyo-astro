@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import InnerChildTest from '../../components/tests/InnerChildTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "내면아이 테스트 — 내 안의 어린 나는 어떤 마음일까?",
+    description: "내면아이(inner child) 개념 기반 — 14문항으로 정서적 결핍과 과잉적응을 측정해 마음속 어린 나를 만나보세요.",
+  },
+  en: {
+    title: "Inner Child Test — How Does the Little One Inside You Feel?",
+    description: "Based on the inner child concept — measure emotional unmet needs and over-adaptation with 14 questions to meet the child within.",
+  },
+  ja: {
+    title: "インナーチャイルドテスト — 心の中の幼い自分はどんな気持ち？",
+    description: "インナーチャイルドの概念に基づく — 14の設問で情緒的欠乏と過剰適応を測定し、心の中の幼い自分に出会いましょう。",
+  },
+  fr: {
+    title: "Test de l'Enfant Intérieur — Comment se sent l'enfant en vous ?",
+    description: "Basé sur le concept de l'enfant intérieur — mesurez les besoins émotionnels non comblés et la sur-adaptation en 14 questions.",
+  },
+  es: {
+    title: "Test del Niño Interior — ¿Cómo se siente el niño que llevas dentro?",
+    description: "Basado en el concepto del niño interior — mide las necesidades emocionales no satisfechas y la sobreadaptación con 14 preguntas.",
+  },
+  zh: {
+    title: "内在小孩测试 — 你心中的小小自己感觉如何？",
+    description: "基于内在小孩（inner child）概念 — 用14个问题测量情感缺失与过度适应，遇见你心中的小孩。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <InnerChildTest locale={locale as any} client:load />
+  </main>
+</Layout>

@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import JealousyTypeTest from '../../components/tests/JealousyTypeTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "질투 유형 테스트 — 나의 질투는 어떤 모양일까?",
+    description: "다차원 질투 척도 기반 — 14문항으로 인지적 질투(의심)와 행동적 질투(확인·통제)를 측정해 나의 질투 유형을 확인하세요.",
+  },
+  en: {
+    title: "Jealousy Type Test — What Shape Does Your Jealousy Take?",
+    description: "Based on the Multidimensional Jealousy Scale — measure cognitive jealousy (suspicion) and behavioral jealousy (checking) with 14 questions.",
+  },
+  ja: {
+    title: "嫉妬タイプテスト — あなたの嫉妬はどんな形？",
+    description: "多次元嫉妬尺度に基づく — 14の設問で認知的嫉妬（疑い）と行動的嫉妬（確認・統制）を測定し、嫉妬タイプを確認しましょう。",
+  },
+  fr: {
+    title: "Test de Type de Jalousie — Quelle forme prend votre jalousie ?",
+    description: "Basé sur l'échelle multidimensionnelle de jalousie — mesurez la jalousie cognitive (soupçon) et comportementale (vérification) en 14 questions.",
+  },
+  es: {
+    title: "Test de Tipo de Celos — ¿Qué forma toman tus celos?",
+    description: "Basado en la Escala Multidimensional de Celos — mide los celos cognitivos (sospecha) y conductuales (control) con 14 preguntas.",
+  },
+  zh: {
+    title: "嫉妒类型测试 — 你的嫉妒是什么形状？",
+    description: "基于多维嫉妒量表 — 用14个问题测量认知嫉妒（猜疑）与行为嫉妒（查看·控制），了解你的嫉妒类型。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <JealousyTypeTest locale={locale as any} client:load />
+  </main>
+</Layout>

@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import AssertivenessTest from '../../components/tests/AssertivenessTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "자기주장성 테스트 — 나는 내 생각과 경계를 얼마나 표현하는가?",
+    description: "Rathus 자기주장성 척도(RAS) 기반 — 14문항으로 의사 표현과 경계 설정 능력을 측정해 나의 자기주장성을 확인하세요.",
+  },
+  en: {
+    title: "Assertiveness Test — How Well Do You Express Your Thoughts and Boundaries?",
+    description: "Based on the Rathus Assertiveness Schedule (RAS) — measure self-expression and boundary-setting with 14 questions to find your assertiveness.",
+  },
+  ja: {
+    title: "アサーティブネス（自己主張）テスト — 自分の考えと境界をどれくらい表現できる？",
+    description: "Rathusアサーション尺度（RAS）に基づく — 14の設問で意思表現と境界設定の力を測定し、自己主張度を確認しましょう。",
+  },
+  fr: {
+    title: "Test d'Affirmation de Soi — À quel point exprimez-vous vos pensées et limites ?",
+    description: "Basé sur l'échelle d'affirmation de soi de Rathus (RAS) — mesurez l'expression de soi et la pose de limites en 14 questions.",
+  },
+  es: {
+    title: "Test de Asertividad — ¿Cuánto expresas tus pensamientos y límites?",
+    description: "Basado en la Escala de Asertividad de Rathus (RAS) — mide la autoexpresión y el establecimiento de límites con 14 preguntas.",
+  },
+  zh: {
+    title: "自我主张（果敢度）测试 — 你有多能表达想法与界限？",
+    description: "基于Rathus自我主张量表（RAS）— 用14个问题测量自我表达与界限设定能力，了解你的果敢度。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <AssertivenessTest locale={locale as any} client:load />
+  </main>
+</Layout>
