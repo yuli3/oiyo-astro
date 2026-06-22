@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import SocialComparisonTest from '../../components/tests/SocialComparisonTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "사회적 비교 성향 테스트 — 나는 남과 얼마나 비교하는가?",
+    description: "사회적 비교 지향 척도(INCOM) 기반 — 14문항으로 능력 비교와 의견 비교 성향을 측정해 나의 비교 지수를 확인하세요.",
+  },
+  en: {
+    title: "Social Comparison Test — How Much Do You Compare Yourself to Others?",
+    description: "Based on the INCOM scale — measure ability comparison and opinion comparison with 14 questions to find your social comparison score.",
+  },
+  ja: {
+    title: "社会的比較傾向テスト — 自分は他人とどれくらい比較するか？",
+    description: "社会的比較志向尺度（INCOM）に基づく — 14の設問で能力比較と意見比較の傾向を測定し、比較度を確認しましょう。",
+  },
+  fr: {
+    title: "Test de Comparaison Sociale — À quel point vous comparez-vous aux autres ?",
+    description: "Basé sur l'échelle INCOM — mesurez la comparaison de capacités et d'opinions en 14 questions pour connaître votre score de comparaison sociale.",
+  },
+  es: {
+    title: "Test de Comparación Social — ¿Cuánto te comparas con los demás?",
+    description: "Basado en la escala INCOM — mide la comparación de habilidades y de opiniones con 14 preguntas para conocer tu puntuación de comparación social.",
+  },
+  zh: {
+    title: "社会比较倾向测试 — 你有多常与他人比较？",
+    description: "基于社会比较取向量表（INCOM）— 用14个问题测量能力比较与意见比较倾向，了解你的社会比较指数。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <SocialComparisonTest locale={locale as any} client:load />
+  </main>
+</Layout>

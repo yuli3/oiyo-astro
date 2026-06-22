@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import SelfEfficacyTest from '../../components/tests/SelfEfficacyTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "자기효능감 테스트 — 나는 나를 얼마나 믿는가?",
+    description: "일반적 자기효능감 척도(GSE) 기반 — 14문항으로 도전 대처와 목표 달성에 대한 믿음을 측정하세요.",
+  },
+  en: {
+    title: "Self-Efficacy Test — How Much Do You Believe in Yourself?",
+    description: "Based on the General Self-Efficacy Scale (GSE) — measure your belief in coping with challenges and attaining goals with 14 questions.",
+  },
+  ja: {
+    title: "自己効力感テスト — 自分をどれくらい信じているか？",
+    description: "一般性セルフ・エフィカシー尺度（GSE）に基づく — 14の設問で挑戦への対処と目標達成への信頼を測定しましょう。",
+  },
+  fr: {
+    title: "Test d'Auto-Efficacité — À quel point croyez-vous en vous ?",
+    description: "Basé sur l'échelle d'auto-efficacité générale (GSE) — mesurez votre confiance à relever les défis et atteindre vos objectifs en 14 questions.",
+  },
+  es: {
+    title: "Test de Autoeficacia — ¿Cuánto crees en ti mismo?",
+    description: "Basado en la Escala de Autoeficacia General (GSE) — mide tu confianza para afrontar desafíos y alcanzar metas con 14 preguntas.",
+  },
+  zh: {
+    title: "自我效能感测试 — 你有多相信自己？",
+    description: "基于一般自我效能感量表（GSE）— 用14个问题测量你应对挑战和达成目标的信念。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <SelfEfficacyTest locale={locale as any} client:load />
+  </main>
+</Layout>

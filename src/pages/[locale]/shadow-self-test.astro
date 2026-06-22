@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import ShadowSelfTest from '../../components/tests/ShadowSelfTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "그림자 자아 테스트 — 내 안의 그림자는 얼마나 깊은가?",
+    description: "융의 그림자(shadow) 개념 기반 — 14문항으로 투사와 억압을 측정해 무의식 속 나의 그림자를 들여다보세요.",
+  },
+  en: {
+    title: "Shadow Self Test — How Deep Is the Shadow Within You?",
+    description: "Based on Jung's concept of the shadow — measure projection and repression with 14 questions to look into your unconscious shadow.",
+  },
+  ja: {
+    title: "シャドウ（影の自己）テスト — あなたの中の影はどれほど深いか？",
+    description: "ユングの影（シャドウ）概念に基づく — 14の設問で投影と抑圧を測定し、無意識の中の自分の影を見つめましょう。",
+  },
+  fr: {
+    title: "Test de l'Ombre (Shadow) — Quelle est la profondeur de votre ombre ?",
+    description: "Basé sur le concept d'ombre de Jung — mesurez la projection et le refoulement en 14 questions pour explorer votre ombre inconsciente.",
+  },
+  es: {
+    title: "Test de la Sombra (Shadow) — ¿Cuán profunda es tu sombra interior?",
+    description: "Basado en el concepto de sombra de Jung — mide la proyección y la represión con 14 preguntas para explorar tu sombra inconsciente.",
+  },
+  zh: {
+    title: "阴影自我测试 — 你内心的阴影有多深？",
+    description: "基于荣格的阴影（shadow）概念 — 用14个问题测量投射与压抑，探索你潜意识中的阴影。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <ShadowSelfTest locale={locale as any} client:load />
+  </main>
+</Layout>
