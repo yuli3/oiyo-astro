@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import WorkaholicTest from '../../components/tests/WorkaholicTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "워커홀릭(일중독) 자가진단 — 나의 일중독 지수는?",
+    description: "버겐 일중독 척도(BWAS) 기반 — 14문항으로 강박적 몰입과 일-삶 침범을 측정해 나의 일중독 지수를 확인하세요.",
+  },
+  en: {
+    title: "Workaholism Self-Test — How Addicted to Work Are You?",
+    description: "Based on the Bergen Work Addiction Scale (BWAS) — measure inner compulsion and work-life intrusion with 14 questions to find your workaholism score.",
+  },
+  ja: {
+    title: "ワーカホリック自己診断 — あなたの仕事依存度は？",
+    description: "バーゲン仕事依存尺度（BWAS）に基づく — 14の設問で強迫的な没頭と仕事の生活侵食を測定し、仕事依存度を確認しましょう。",
+  },
+  fr: {
+    title: "Test de Workaholisme — Êtes-vous accro au travail ?",
+    description: "Basé sur l'échelle de Bergen (BWAS) — mesurez la compulsion intérieure et l'intrusion travail-vie en 14 questions pour connaître votre score de workaholisme.",
+  },
+  es: {
+    title: "Test de Adicción al Trabajo — ¿Cuán adicto al trabajo eres?",
+    description: "Basado en la Escala de Bergen (BWAS) — mide la compulsión interior y la intrusión trabajo-vida con 14 preguntas para conocer tu puntuación de adicción al trabajo.",
+  },
+  zh: {
+    title: "工作狂自测 — 你的工作成瘾指数有多高？",
+    description: "基于卑尔根工作成瘾量表（BWAS）— 用14个问题测量内在强迫与工作对生活的侵占，了解你的工作成瘾指数。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <WorkaholicTest locale={locale as any} client:load />
+  </main>
+</Layout>

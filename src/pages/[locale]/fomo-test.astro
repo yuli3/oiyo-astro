@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import FomoTest from '../../components/tests/FomoTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "FOMO 척도 테스트 — 나의 소외 불안 지수는?",
+    description: "프시빌스키 FoMO 척도 기반 — 14문항으로 소외 불안과 연결 강박을 측정해 나의 FOMO 지수를 확인하세요.",
+  },
+  en: {
+    title: "FOMO Scale Test — How Strong Is Your Fear of Missing Out?",
+    description: "Based on Przybylski's FoMO Scale — measure fear of exclusion and the compulsion to connect with 14 questions to find your FOMO score.",
+  },
+  ja: {
+    title: "FOMO尺度テスト — あなたの取り残される不安は？",
+    description: "PrzybylskiのFoMO尺度に基づく — 14の設問で疎外不安と接続強迫を測定し、FOMO度を確認しましょう。",
+  },
+  fr: {
+    title: "Test FOMO — Quelle est votre peur de manquer quelque chose ?",
+    description: "Basé sur l'échelle FoMO de Przybylski — mesurez la peur de l'exclusion et la compulsion à se connecter en 14 questions.",
+  },
+  es: {
+    title: "Test de FOMO — ¿Cuán fuerte es tu miedo a perderte algo?",
+    description: "Basado en la escala FoMO de Przybylski — mide el miedo a la exclusión y la compulsión por conectarte con 14 preguntas.",
+  },
+  zh: {
+    title: "FOMO量表测试 — 你的错失恐惧有多强？",
+    description: "基于Przybylski的FoMO量表 — 用14个问题测量被排斥的恐惧与连接强迫，了解你的FOMO指数。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <FomoTest locale={locale as any} client:load />
+  </main>
+</Layout>

@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import MoneyAnxietyTest from '../../components/tests/MoneyAnxietyTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "돈 불안 척도 테스트 — 나의 금전 불안 지수는?",
+    description: "재정 불안(Financial Anxiety) 연구 기반 — 14문항으로 재정 걱정과 회피를 측정해 나의 금전 불안 지수를 확인하세요.",
+  },
+  en: {
+    title: "Money Anxiety Test — How High Is Your Financial Anxiety?",
+    description: "Based on financial anxiety research — measure financial worry and avoidance with 14 questions to find your money anxiety score.",
+  },
+  ja: {
+    title: "お金の不安尺度テスト — あなたの金銭不安度は？",
+    description: "金銭不安（Financial Anxiety）研究に基づく — 14の設問で財政的心配と回避を測定し、金銭不安度を確認しましょう。",
+  },
+  fr: {
+    title: "Test d'Anxiété Financière — Quel est votre niveau d'anxiété face à l'argent ?",
+    description: "Basé sur la recherche sur l'anxiété financière — mesurez l'inquiétude et l'évitement financiers en 14 questions.",
+  },
+  es: {
+    title: "Test de Ansiedad por el Dinero — ¿Cuán alta es tu ansiedad financiera?",
+    description: "Basado en la investigación sobre ansiedad financiera — mide la preocupación y la evitación financiera con 14 preguntas.",
+  },
+  zh: {
+    title: "金钱焦虑测试 — 你的财务焦虑指数有多高？",
+    description: "基于财务焦虑研究 — 用14个问题测量财务担忧与回避，了解你的金钱焦虑指数。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <MoneyAnxietyTest locale={locale as any} client:load />
+  </main>
+</Layout>
