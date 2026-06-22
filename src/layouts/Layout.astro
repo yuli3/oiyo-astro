@@ -146,8 +146,14 @@ const themeColor = '#65a30d';
     <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9541920090543312" crossorigin="anonymous"></script>
   </head>
   <body>
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-[100] rounded-lg bg-primary px-4 py-2 text-primary-foreground"
+    >
+      {locale === "ko" ? "본문 바로가기" : locale === "ja" ? "本文へスキップ" : locale === "zh" ? "跳至正文" : locale === "fr" ? "Aller au contenu" : locale === "es" ? "Saltar al contenido" : "Skip to content"}
+    </a>
     <Header locale={locale} />
-    <main>
+    <main id="main-content">
       <slot />
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
     </main>
