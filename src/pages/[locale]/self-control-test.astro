@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import SelfControlTest from '../../components/tests/SelfControlTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "자기통제력 테스트 — 나의 절제와 끈기는 얼마나 단단할까?",
+    description: "단축 자기통제 척도(BSCS) 기반 — 14문항으로 충동 절제와 끈기·집중을 측정해 나의 자기통제력을 확인하세요.",
+  },
+  en: {
+    title: "Self-Control Test — How Firm Is Your Restraint and Persistence?",
+    description: "Based on the Brief Self-Control Scale (BSCS) — measure impulse restraint and persistence with 14 questions to find your self-control.",
+  },
+  ja: {
+    title: "セルフコントロール（自己統制）テスト — あなたの抑制と粘り強さはどれほど強いか？",
+    description: "短縮セルフコントロール尺度（BSCS）に基づく — 14の設問で衝動の抑制と粘り強さ・集中を測定し、自己統制を確認しましょう。",
+  },
+  fr: {
+    title: "Test de Maîtrise de Soi — Quelle est la fermeté de votre retenue et persévérance ?",
+    description: "Basé sur l'échelle brève de maîtrise de soi (BSCS) — mesurez la retenue des impulsions et la persévérance en 14 questions.",
+  },
+  es: {
+    title: "Test de Autocontrol — ¿Cuán firme es tu contención y persistencia?",
+    description: "Basado en la Escala Breve de Autocontrol (BSCS) — mide la contención de impulsos y la persistencia con 14 preguntas.",
+  },
+  zh: {
+    title: "自我控制力测试 — 你的克制与坚持有多稳固？",
+    description: "基于简明自我控制量表（BSCS）— 用14个问题测量冲动克制与坚持专注，了解你的自我控制力。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <SelfControlTest locale={locale as any} client:load />
+  </main>
+</Layout>

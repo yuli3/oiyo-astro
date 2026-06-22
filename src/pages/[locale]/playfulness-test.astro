@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import PlayfulnessTest from '../../components/tests/PlayfulnessTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "놀이성 테스트 — 내 안의 장난기와 유쾌함은 얼마나 될까?",
+    description: "성인 놀이성(playfulness) 연구 기반 — 14문항으로 유쾌·즉흥성과 관계적 놀이성을 측정해 나의 놀이성을 확인하세요.",
+  },
+  en: {
+    title: "Playfulness Test — How Much Playfulness and Lightness Is in You?",
+    description: "Based on adult playfulness research — measure lightheartedness and social playfulness with 14 questions to find your playfulness.",
+  },
+  ja: {
+    title: "遊び心テスト — あなたの中の遊び心と陽気さはどれくらい？",
+    description: "成人の遊び心（playfulness）研究に基づく — 14の設問で陽気・即興性と関係的遊び心を測定し、遊び心を確認しましょう。",
+  },
+  fr: {
+    title: "Test d'Esprit Ludique — Combien d'espièglerie et de légèreté y a-t-il en vous ?",
+    description: "Basé sur la recherche sur l'esprit ludique adulte — mesurez la légèreté et l'espièglerie sociale en 14 questions.",
+  },
+  es: {
+    title: "Test de Jovialidad — ¿Cuánta picardía y ligereza hay en ti?",
+    description: "Basado en la investigación sobre la jovialidad adulta — mide la ligereza y la jovialidad social con 14 preguntas.",
+  },
+  zh: {
+    title: "玩心测试 — 你内在的童心与幽默有多少？",
+    description: "基于成人玩心（playfulness）研究 — 用14个问题测量轻松即兴与社交玩心，了解你的玩心。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <PlayfulnessTest locale={locale as any} client:load />
+  </main>
+</Layout>
