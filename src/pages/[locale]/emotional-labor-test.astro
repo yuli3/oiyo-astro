@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import EmotionalLaborTest from '../../components/tests/EmotionalLaborTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "감정노동 테스트 — 나는 얼마나 감정을 연기하며 일하는가?",
+    description: "혹실드의 감정노동 개념 기반 — 14문항으로 표면 연기와 감정 부조화를 측정해 나의 감정노동 강도를 확인하세요.",
+  },
+  en: {
+    title: "Emotional Labor Test — How Much Do You Act Out Emotions at Work?",
+    description: "Based on Hochschild's emotional labor concept — measure surface acting and emotional dissonance with 14 questions to find your emotional labor intensity.",
+  },
+  ja: {
+    title: "感情労働テスト — あなたはどれくらい感情を演じて働いているか？",
+    description: "Hochschildの感情労働概念に基づく — 14の設問で表面演技と感情の不協和を測定し、感情労働の強度を確認しましょう。",
+  },
+  fr: {
+    title: "Test de Travail Émotionnel — Combien jouez-vous vos émotions au travail ?",
+    description: "Basé sur le concept de travail émotionnel de Hochschild — mesurez le jeu de surface et la dissonance émotionnelle en 14 questions.",
+  },
+  es: {
+    title: "Test de Trabajo Emocional — ¿Cuánto actúas tus emociones en el trabajo?",
+    description: "Basado en el concepto de trabajo emocional de Hochschild — mide la actuación superficial y la disonancia emocional con 14 preguntas.",
+  },
+  zh: {
+    title: "情绪劳动测试 — 你工作时有多常表演情绪？",
+    description: "基于霍赫希尔德的情绪劳动概念 — 用14个问题测量表面表演与情绪失调，了解你的情绪劳动强度。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <EmotionalLaborTest locale={locale as any} client:load />
+  </main>
+</Layout>

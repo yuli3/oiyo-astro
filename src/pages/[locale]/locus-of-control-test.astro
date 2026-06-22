@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import LocusOfControlTest from '../../components/tests/LocusOfControlTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "통제 위치 테스트 — 내 삶의 운전대는 누가 쥐고 있을까?",
+    description: "로터의 통제 소재(Locus of Control) 기반 — 14문항으로 결과 통제감과 노력-보상 신념을 측정해 내적·외적 통제 성향을 확인하세요.",
+  },
+  en: {
+    title: "Locus of Control Test — Who Holds the Wheel of Your Life?",
+    description: "Based on Rotter's Locus of Control — measure your sense of control and effort-reward belief with 14 questions to find your internal vs external locus.",
+  },
+  ja: {
+    title: "統制の所在テスト — 人生のハンドルを握っているのは誰？",
+    description: "Rotterの統制の所在（Locus of Control）に基づく — 14の設問で結果の統制感と努力-報酬の信念を測定し、内的・外的統制傾向を確認しましょう。",
+  },
+  fr: {
+    title: "Test du Lieu de Contrôle — Qui tient le volant de votre vie ?",
+    description: "Basé sur le lieu de contrôle de Rotter — mesurez votre sentiment de contrôle et votre croyance effort-récompense en 14 questions.",
+  },
+  es: {
+    title: "Test de Locus de Control — ¿Quién lleva el volante de tu vida?",
+    description: "Basado en el locus de control de Rotter — mide tu sentido de control y tu creencia esfuerzo-recompensa con 14 preguntas.",
+  },
+  zh: {
+    title: "控制点测试 — 谁掌握着你人生的方向盘？",
+    description: "基于罗特的控制点（Locus of Control）— 用14个问题测量结果控制感与努力-回报信念，了解你的内控与外控倾向。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <LocusOfControlTest locale={locale as any} client:load />
+  </main>
+</Layout>

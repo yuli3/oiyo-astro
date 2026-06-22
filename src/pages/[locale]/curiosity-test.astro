@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import CuriosityTest from '../../components/tests/CuriosityTest';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "호기심 테스트 — 나의 탐구심은 얼마나 깊을까?",
+    description: "카쉬단의 호기심·탐구 척도(CEI-II) 기반 — 14문항으로 탐색 추구와 불확실성 수용을 측정해 나의 호기심을 확인하세요.",
+  },
+  en: {
+    title: "Curiosity Test — How Deep Does Your Curiosity Run?",
+    description: "Based on Kashdan's Curiosity and Exploration Inventory (CEI-II) — measure stretching and embracing uncertainty with 14 questions to find your curiosity.",
+  },
+  ja: {
+    title: "好奇心テスト — あなたの探究心はどれほど深いか？",
+    description: "Kashdanの好奇心・探究尺度（CEI-II）に基づく — 14の設問で探索追求と不確実性の受容を測定し、好奇心を確認しましょう。",
+  },
+  fr: {
+    title: "Test de Curiosité — Quelle est la profondeur de votre curiosité ?",
+    description: "Basé sur l'inventaire de curiosité et d'exploration de Kashdan (CEI-II) — mesurez la recherche et l'acceptation de l'incertitude en 14 questions.",
+  },
+  es: {
+    title: "Test de Curiosidad — ¿Cuán profunda es tu curiosidad?",
+    description: "Basado en el Inventario de Curiosidad y Exploración de Kashdan (CEI-II) — mide la búsqueda y la aceptación de la incertidumbre con 14 preguntas.",
+  },
+  zh: {
+    title: "好奇心测试 — 你的探究心有多深？",
+    description: "基于卡什丹的好奇心与探索量表（CEI-II）— 用14个问题测量探索追求与不确定性接纳，了解你的好奇心。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-3xl">
+    <CuriosityTest locale={locale as any} client:load />
+  </main>
+</Layout>
