@@ -346,6 +346,54 @@ const overseasStockTaxManifest: FeatureManifest = {
   },
 };
 
+// Income Statement Builder game — classify accounts, watch profit layers build.
+const incomeStatementGameManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "BarChart3",
+  id: "income-statement-game",
+  path: "/income-statement-game",
+  status: "production",
+  name: {
+    cn: "损益表制作游戏", en: "Income Statement Game", es: "Juego del estado de resultados",
+    fr: "Jeu du compte de résultat", ja: "損益計算書ゲーム", ko: "손익계산서 만들기 게임",
+  },
+  description: {
+    cn: "把账户分类到正确科目，逐步搭建毛利→营业利润→净利润。",
+    en: "Classify accounts into the right line and watch gross → operating → net profit build up.",
+    es: "Clasifica cuentas y observa cómo se forman las utilidades.",
+    fr: "Classez les comptes et voyez les niveaux de profit se construire.",
+    ja: "勘定を正しい行に分類し、利益が段階的に積み上がる様子を学ぶ。",
+    ko: "계정과목을 분류하며 매출총이익→영업이익→당기순이익을 단계별로 익히는 게임.",
+  },
+};
+
+// Income tax calculation flow visualizer/estimator (Korea comprehensive income tax).
+const incomeTaxFlowManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#16a34a",
+  domain: "ontology",
+  icon: "Receipt",
+  id: "income-tax-flow",
+  path: "/income-tax-flow",
+  status: "production",
+  name: {
+    cn: "综合所得税计算流程", en: "Income Tax Flow", es: "Flujo del impuesto sobre la renta",
+    fr: "Flux de l'impôt sur le revenu", ja: "所得税の計算フロー", ko: "종합소득세 계산 흐름",
+  },
+  description: {
+    cn: "从所得金额到课税标准·算出税额·应纳税额，分步演示并解释。",
+    en: "Walk income tax step by step: income → base → computed → payable, each term explained.",
+    es: "Recorre el impuesto paso a paso con cada término explicado.",
+    fr: "Parcourez l'impôt étape par étape, chaque terme expliqué.",
+    ja: "所得金額→課税標準→算出税額→納付税額を段階的に解説。",
+    ko: "소득금액→과세표준→산출세액→납부세액을 단계별로 설명하는 계산 흐름.",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -363,6 +411,8 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   balanceWheelManifest,
   cashflowManifest,
   overseasStockTaxManifest,
+  incomeStatementGameManifest,
+  incomeTaxFlowManifest,
 ];
 
 // Helper to get features easily

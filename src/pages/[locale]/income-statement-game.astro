@@ -1,0 +1,123 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import IncomeStatementGame from "../../components/tools/IncomeStatementGame";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const BASE = "https://oiyo.net";
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "손익계산서 만들기 게임 — 계정 분류로 배우는 재무제표",
+    description: "계정과목을 매출·매출원가·판관비·영업외·법인세로 분류하면 매출총이익→영업이익→당기순이익이 단계별로 쌓입니다. 게임으로 재무제표 구조를 익히는 무료 도구.",
+  },
+  en: {
+    title: "Income Statement Builder Game — Learn Financial Statements",
+    description: "Classify accounts into revenue, COGS, SG&A, non-operating and tax, and watch gross → operating → net profit build up. A free game to learn how an income statement works.",
+  },
+  ja: {
+    title: "損益計算書づくりゲーム — 勘定分類で学ぶ財務諸表",
+    description: "勘定科目を売上・売上原価・販管費・営業外・法人税に分類すると、売上総利益→営業利益→当期純利益が段階的に積み上がる無料ツール。",
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  lead: string; faqTitle: string; faq: { q: string; a: string }[];
+  relatedTitle: string; related: { href: string; label: string; desc: string; external?: boolean }[];
+}> = {
+  ko: {
+    lead: "재무제표는 외우는 게 아니라 ‘흐름’으로 이해해야 합니다. 계정과목을 올바른 줄에 넣어보면, 매출에서 비용을 한 단계씩 빼며 다섯 가지 이익이 어떻게 만들어지는지 한눈에 보입니다.",
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "손익계산서의 이익 단계는 무엇인가요?", a: "매출액에서 매출원가를 빼면 매출총이익, 거기서 판매비와관리비를 빼면 영업이익, 영업외수익·비용을 가감하면 법인세차감전순이익, 마지막으로 법인세를 빼면 당기순이익입니다. 각 단계는 ‘어디서 돈을 벌고 어디서 빠지는지’를 보여줍니다." },
+      { q: "매출총이익과 영업이익은 어떻게 다른가요?", a: "매출총이익은 ‘파는 것 자체’의 수익성(매출−원가)이고, 영업이익은 거기서 인건비·임차료·광고비 같은 운영비(판관비)까지 뺀 ‘본업의 진짜 이익’입니다. 본업이 건강한지는 영업이익으로 봅니다." },
+      { q: "영업외수익·비용은 무엇인가요?", a: "본업과 무관한 손익입니다. 예금 이자수익, 차입금 이자비용, 외환차손익 등이 해당합니다. 본업(영업이익)과 분리해서 봐야 회사의 실력을 정확히 판단할 수 있습니다." },
+      { q: "더 깊이 공부하려면?", a: "회계 기초·전산세무회계·원가회계 강의로 이어서 학습할 수 있습니다(아래 링크). 이 게임은 구조를 직관적으로 익히는 출발점입니다." },
+    ],
+    relatedTitle: "이어서 배우기",
+    related: [
+      { href: "https://blog.oiyo.net/ko/academy-accounting-basics-ch1/", label: "회계학 개론 강의", desc: "재무제표 기초부터 차근차근.", external: true },
+      { href: "https://blog.oiyo.net/ko/academy-cost-accounting-ch1/", label: "원가회계 강의", desc: "원가가 이익에 미치는 영향.", external: true },
+      { href: "/business-cashflow", label: "사업 캐시플로우 도구", desc: "업종별 돈 버는 구조." },
+    ],
+  },
+  en: {
+    lead: "Financial statements are best understood as a flow, not memorized. Placing accounts on the right line shows how five layers of profit emerge as costs are subtracted step by step from revenue.",
+    faqTitle: "Frequently asked questions",
+    faq: [
+      { q: "What are the profit layers of an income statement?", a: "Revenue − COGS = gross profit; − SG&A = operating profit; ± non-operating items = pre-tax profit; − tax = net profit. Each layer shows where money is earned and where it leaks out." },
+      { q: "Gross profit vs operating profit?", a: "Gross profit is the profitability of selling itself (revenue − cost); operating profit subtracts running costs (salaries, rent, ads) to reveal the real profit of the core business." },
+      { q: "What are non-operating items?", a: "Gains/losses unrelated to the core business — interest income, loan interest, FX gains/losses. Separating them from operating profit reveals the true strength of the business." },
+      { q: "How do I study deeper?", a: "Continue with accounting basics, computerized accounting and cost accounting lectures (links below). This game is the intuitive starting point." },
+    ],
+    relatedTitle: "Keep learning",
+    related: [
+      { href: "https://blog.oiyo.net/en/academy-accounting-basics-ch1/", label: "Accounting basics", desc: "Financial statements from the ground up.", external: true },
+      { href: "/business-cashflow", label: "Business cashflow tool", desc: "How industries make money." },
+    ],
+  },
+};
+const c = content[locale] ?? content.en;
+const related = c.related.map((r) => ({ ...r, href: r.external ? r.href : `/${locale}${r.href}` }));
+
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+});
+const appJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: m.title,
+  url: `${BASE}/${locale}/income-statement-game`,
+  applicationCategory: "EducationApplication",
+  operatingSystem: "Web",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+  inLanguage: locale,
+  description: m.description,
+});
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <script is:inline type="application/ld+json" set:html={faqJsonLd} />
+  <script is:inline type="application/ld+json" set:html={appJsonLd} />
+  <main class="container mx-auto max-w-4xl px-4 py-8">
+    <header class="mb-8">
+      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{m.title}</h1>
+      <p class="mt-3 leading-relaxed text-muted-foreground">{c.lead}</p>
+    </header>
+
+    <IncomeStatementGame locale={locale} client:load />
+
+    <section class="mt-12">
+      <h2 class="mb-4 text-2xl font-bold">{c.faqTitle}</h2>
+      <div class="space-y-3">
+        {c.faq.map((f) => (
+          <details class="group rounded-xl border border-border bg-card p-4">
+            <summary class="cursor-pointer list-none font-semibold marker:content-none">
+              <span class="text-primary">Q.</span> {f.q}
+            </summary>
+            <p class="mt-3 text-sm leading-relaxed text-muted-foreground">{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-12">
+      <h2 class="mb-4 text-xl font-bold">{c.relatedTitle}</h2>
+      <div class="grid gap-3 md:grid-cols-3">
+        {related.map((r) => (
+          <a class="rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/40 hover:bg-primary/5" href={r.href} {...(r.external ? { rel: "noopener" } : {})}>
+            <span class="font-semibold">{r.label}</span>
+            <span class="mt-1 block text-sm text-muted-foreground">{r.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+</Layout>
