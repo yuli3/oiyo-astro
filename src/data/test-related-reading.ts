@@ -7,6 +7,9 @@
 // 2026-06-24: locale-aware refactor — slug-only + blogLocales/wikiLocales whitelist.
 //   en/ja availability determined by fs check on blog/wiki repos at authoring time.
 //   미지정 = ko-only (기존 동작 유지, 회귀 0). ko 폴백 항상 안전망.
+// 2026-06-24: zh/fr/es 확장 — contentLocale pass-through + resolveLocale 폴백 체인.
+//   blog: dopamine-fasting-focus, five-love-languages-connection → zh/fr/es 모두.
+//   wiki: 25개 slug 전부 → zh/fr/es 모두. fs 직접 확인 결과 반영.
 
 type Locale = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es';
 
@@ -23,21 +26,35 @@ export interface RelatedReading {
 const BLOG_HOST = "https://blog.oiyo.net";
 const WIKI_HOST = "https://wiki.oiyo.net";
 
-/** blog/wiki 콘텐츠 로케일: ko→ko, ja→ja, 그 외(en/zh/fr/es)→en. lib/related-reading.ts 패턴과 동일. */
-function contentLocale(locale: Locale): 'ko' | 'en' | 'ja' {
-  return locale === 'ko' || locale === 'ja' ? locale : 'en';
+/**
+ * blog/wiki 콘텐츠 로케일 pass-through.
+ * 6개 지원 로케일(ko/en/ja/zh/fr/es) 모두 자기 자신 반환.
+ * 구버전: ko→ko, ja→ja, 나머지→en (zh/fr/es가 화이트리스트에 있어도 무시되던 버그).
+ */
+function contentLocale(locale: Locale): Locale {
+  return locale;
 }
 
-/** 타깃이 cl에 실존하면 cl, 아니면 ko 폴백. ko 타깃은 항상 존재(C2-A 200 검증됨). */
-function resolveLocale(cl: 'ko' | 'en' | 'ja', available: Locale[]): 'ko' | 'en' | 'ja' {
-  if (available.includes(cl)) return cl;
-  return 'ko';
+/**
+ * 폴백 체인: [locale, 'en', 'ko'] 순서로 화이트리스트에 있는 첫 로케일 반환.
+ * ko는 항상 타깃 존재(안전망). en/ja 기존 동작 무회귀:
+ *   - en 뷰어 + en 화이트리스트 → en (1순위 자기 자신)
+ *   - ja 뷰어 + ja 화이트리스트 → ja (1순위 자기 자신)
+ *   - zh 뷰어 + zh 화이트리스트 → zh (1순위 자기 자신)
+ *   - zh 뷰어 + zh 없음 + en 있음 → en (2순위)
+ *   - zh 뷰어 + zh/en 없음 → ko (3순위 최종 안전망)
+ */
+function resolveLocale(locale: Locale, available: Locale[]): Locale {
+  for (const candidate of [locale, 'en' as Locale, 'ko' as Locale]) {
+    if (available.includes(candidate)) return candidate;
+  }
+  return 'ko'; // 절대 도달 불가 (ko는 항상 기본값으로 존재)
 }
 
 // key = route without locale prefix (e.g. "/iq-test")
 export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/iq-test": { blog: "/iq-test-free/" },
-  "/hsp-test": { wiki: "/meaning-of-hsp/", wikiLocales: ['ko', 'en', 'ja'] },
+  "/hsp-test": { wiki: "/meaning-of-hsp/", wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
   "/procrastination-type-test": { blog: "/procrastination-type-test/" },
   // 긴급 5건 교체 2026-06-23: 기존 slug(404 위험) → 실존 slug
   "/communication-style-test": { blog: "/magazine-communication-style-psychology/", blogLocales: ['ko', 'en'] },
@@ -45,26 +62,26 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/stress-type-test": { blog: "/mbti-stress-type-test/" },
   "/resilience-test": { blog: "/resilience-test/" },
   "/grit-scale-test": { blog: "/resilience-science/", blogLocales: ['ko', 'en'] },
-  "/imposter-syndrome-test": { blog: "/imposter-syndrome-doubt/", blogLocales: ['ko', 'en', 'ja'] },
+  "/imposter-syndrome-test": { blog: "/imposter-syndrome-doubt/", blogLocales: ['ko', 'en', 'ja'] }, // zh/fr/es 없음(fs 확인)
   "/cognitive-bias-test": { blog: "/cognitive-bias-complete-guide/" },
   "/decision-making-test": { blog: "/magazine-decision-making-psychology/", blogLocales: ['ko', 'en'] },
   "/self-compassion-test": {
     blog: "/magazine-self-compassion-psychology/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-self-compassion/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/learning-style-test": {
     blog: "/learning-styles-efficiency/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-learning-styles/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/emotion-regulation-test": {
     blog: "/magazine-emotion-regulation-psychology/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-emotion-regulation/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   // 2026-06-23 새 테스트 → 새 매거진 가이드 (codex 생성)
   "/workaholic-test": { blog: "/magazine-workaholism-psychology/" },
@@ -79,7 +96,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
     blog: "/magazine-growth-mindset-psychology/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-self-efficacy/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/inner-child-test": { blog: "/trauma-healing-psychology/" },
   // 2026-06-23 기존 테스트 → 기존 매거진/가이드 매칭 (codex-free 확대)
@@ -88,12 +105,12 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
     blog: "/adult-adhd-survival-guide/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-adhd/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/anxiety/test": {
     blog: "/magazine-anxiety-insomnia-psychology/",
     wiki: "/meaning-of-anxiety/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/boundary-style-test": { blog: "/magazine-boundary-psychology/", blogLocales: ['ko', 'en'] },
   "/color-personality-test": { blog: "/color-psychology-complete-guide/" },
@@ -133,29 +150,29 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
     blog: "/magazine-burnout-psychology/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-burnout/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/attachment-style/test": {
     blog: "/magazine-attachment-test/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-attachment-theory/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/enneagram/test": {
     blog: "/enneagram-complete-types-guide/",
     wiki: "/meaning-of-enneagram/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/mbti/test": {
     blog: "/mbti-career-test/",
     wiki: "/meaning-of-mbti/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/sleep-type/test": {
     blog: "/chronotypes-sleep-biology-optimization/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
     wiki: "/meaning-of-chronotypes/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/loneliness-test": { blog: "/magazine-loneliness-guide/", blogLocales: ['ko', 'en'] },
   "/mindfulness-test": { blog: "/magazine-mindfulness-guide/", blogLocales: ['ko', 'en'] },
@@ -163,38 +180,38 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
     blog: "/magazine-perfectionism-psychology/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-perfectionism/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/riasec-career-test": {
     blog: "/riasec-career-complete-guide/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-riasec/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/eq/test": { blog: "/magazine-emotional-intelligence-psychology/", blogLocales: ['ko', 'en'] },
   "/toxic-relationship-test": { blog: "/gaslighting-manipulation/", blogLocales: ['ko', 'en', 'ja'] },
   "/dopamine-dependency-test": {
     blog: "/dopamine-fasting-focus/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-dopamine-loop/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/hormones-test": {
     blog: "/hormones-and-metabolic-regulators/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
     wiki: "/meaning-of-hormones/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/personal-color/test": {
     blog: "/personal-color-season-test/",
     wiki: "/meaning-of-color-psychology/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/lazy-perfectionist/test": {
     blog: "/lazy-perfectionism-lethargy-30-day-recovery/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
     wiki: "/meaning-of-lazy-perfectionism/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/career-values-test": { blog: "/psychology-career-values-test/", blogLocales: ['ko', 'en'] },
   "/spending-habits-test": { blog: "/latte-factor-spending-habits/", blogLocales: ['ko', 'en'] },
@@ -204,7 +221,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
     blog: "/magazine-focus-concentration-guide/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-executive-function/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/critical-thinking-test": { blog: "/critical-thinking-logic-guide/" },
   "/chimp-test": { blog: "/chimp-test-cognitive-memory/", blogLocales: ['ko', 'en'] },
@@ -215,43 +232,43 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
     blog: "/psychology-big-five-test/",
     blogLocales: ['ko', 'en'],
     wiki: "/meaning-of-big5/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/color-aura-test": {
     blog: "/color-psychology-complete-guide/",
-    // color-psychology-complete-guide: en=NO ja=NO (fs 확인) → ko-only
+    // color-psychology-complete-guide: en=NO ja=NO zh=NO fr=NO es=NO (fs 확인) → ko-only
     wiki: "/meaning-of-color-psychology/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/commute-mental/test": {
     blog: "/flow-state-happiness-psychology/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
     wiki: "/meaning-of-cognitive-load/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/inner-strength/test": {
     blog: "/viktor-frankl-purpose/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
     wiki: "/meaning-of-self-efficacy/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/lethargy/test": {
     blog: "/burnout-recovery-dopamine-reset/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
     wiki: "/meaning-of-learned-helplessness/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/love-profile-test": {
     blog: "/five-love-languages-connection/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-attachment-theory/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/political/test": {
     blog: "/abilene-paradox-groupthink/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
     wiki: "/meaning-of-cognitive-biases/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   // --- B등급 10종 (한쪽만) ---
   "/authoritarian/test": {
@@ -264,11 +281,11 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/compatibility-test": {
     wiki: "/meaning-of-attachment-theory/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/depression/test": {
     wiki: "/meaning-of-learned-helplessness/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/happiness-meter-test": {
     blog: "/flow-state-happiness-psychology/",
@@ -276,11 +293,11 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/hexaco-personality-test": {
     wiki: "/meaning-of-hexaco/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/mental-clarity-test": {
     wiki: "/meaning-of-cognitive-load/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/personal-boundaries-test": {
     blog: "/magazine-boundary-psychology/",
@@ -288,11 +305,11 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/sensory-processing-test": {
     wiki: "/meaning-of-hsp/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/tci-personality-test": {
     wiki: "/meaning-of-tci/",
-    wikiLocales: ['ko', 'en', 'ja'],
+    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
 };
 
@@ -315,3 +332,22 @@ export function getRelatedReading(
   }
   return (out.blog || out.wiki) ? out : null;
 }
+
+// ---------------------------------------------------------------------------
+// fs 검증 메모 (2026-06-24, authoring-time 기록 — 빌드타임 import 아님)
+// ---------------------------------------------------------------------------
+// blog: blog/src/content/blog/{zh,fr,es}/<slug>.mdx 직접 확인 결과
+//   zh/fr/es 모두 존재: dopamine-fasting-focus, five-love-languages-connection
+//   그 외 blog slug: zh/fr/es 없음 → 추가 안 함 (폴백 체인이 en/ko로 처리)
+//
+// wiki: wiki/src/content/blog/{zh,fr,es}/<slug>.mdx 직접 확인 결과
+//   zh/fr/es 모두 존재 (25개 전부):
+//   meaning-of-hsp, meaning-of-self-compassion, meaning-of-learning-styles,
+//   meaning-of-emotion-regulation, meaning-of-adhd, meaning-of-anxiety,
+//   meaning-of-burnout, meaning-of-attachment-theory, meaning-of-enneagram,
+//   meaning-of-mbti, meaning-of-chronotypes, meaning-of-perfectionism,
+//   meaning-of-riasec, meaning-of-self-efficacy, meaning-of-executive-function,
+//   meaning-of-dopamine-loop, meaning-of-hormones, meaning-of-color-psychology,
+//   meaning-of-lazy-perfectionism, meaning-of-big5, meaning-of-cognitive-load,
+//   meaning-of-learned-helplessness, meaning-of-cognitive-biases,
+//   meaning-of-hexaco, meaning-of-tci
