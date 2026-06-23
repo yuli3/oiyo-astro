@@ -66,6 +66,16 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/self-esteem/test": { blog: `${BLOG}/magazine-self-esteem-psychology/` },
   "/social-anxiety/test": { blog: `${BLOG}/magazine-social-anxiety-psychology/` },
   "/work-style-test": { blog: `${BLOG}/magazine-work-style-psychology/` },
+  // 2026-06-23 신규 테스트 9종 전용 가이드 (codex 생성) — 삼각 완성
+  "/entrepreneurial-aptitude-test": { blog: `${BLOG}/magazine-entrepreneurship-psychology/` },
+  "/self-concept-clarity-test": { blog: `${BLOG}/magazine-self-concept-clarity-psychology/` },
+  "/jealousy-type-test": { blog: `${BLOG}/magazine-jealousy-psychology/` },
+  "/curiosity-test": { blog: `${BLOG}/magazine-curiosity-psychology/` },
+  "/locus-of-control-test": { blog: `${BLOG}/magazine-locus-of-control-psychology/` },
+  "/emotional-labor-test": { blog: `${BLOG}/magazine-emotional-labor-psychology/` },
+  "/self-control-test": { blog: `${BLOG}/magazine-self-control-psychology/` },
+  "/playfulness-test": { blog: `${BLOG}/magazine-playfulness-psychology/` },
+  "/emotional-expressiveness-test": { blog: `${BLOG}/magazine-emotional-expressiveness-psychology/` },
 };
 
 export function getRelatedReading(routeWithoutLocale: string): RelatedReading | null {
