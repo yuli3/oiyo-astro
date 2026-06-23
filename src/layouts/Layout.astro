@@ -38,7 +38,7 @@ const routeWithoutLocale = Astro.url.pathname.replace(
   '',
 ) || '/';
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
-const relatedReading = getRelatedReading(routeWithoutLocale);
+const relatedReading = getRelatedReading(routeWithoutLocale, locale);
 const alternateLinks = LOCALES.map((alternateLocale) => ({
   hreflang: BCP47[alternateLocale] ?? alternateLocale,
   href: new URL(`/${alternateLocale}${routeWithoutLocale}`, Astro.site),
