@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ResultShareImage from '../shared/ResultShareImage'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type PlayLevel = 'serious' | 'balanced' | 'playful' | 'spirited'
@@ -454,6 +455,7 @@ export default function PlayfulnessTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+      <ResultShareImage title={lb.title} level={ld.title} score={overall} color={color} icon={ld.icon} locale={l} />
       <div className="flex gap-3">
         <button
           onClick={restart}
