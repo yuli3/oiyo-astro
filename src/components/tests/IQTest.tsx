@@ -257,7 +257,7 @@ const UI: Record<
 // Options are language-neutral where possible (numbers/symbols).
 // optionLabels overrides per-locale for verbal questions.
 
-const QUESTIONS: Question[] = [
+export const QUESTIONS: Question[] = [
   // 1 – number sequence
   {
     id: 1,

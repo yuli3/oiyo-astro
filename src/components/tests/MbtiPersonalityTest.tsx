@@ -5,7 +5,7 @@ import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 
-type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
+export type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
 type DimValue = 'E' | 'I' | 'S' | 'N' | 'T' | 'F' | 'J' | 'P'
 type MbtiType =
@@ -14,7 +14,7 @@ type MbtiType =
   'ISTJ' | 'ISFJ' | 'ESTJ' | 'ESFJ' |
   'ISTP' | 'ISFP' | 'ESTP' | 'ESFP'
 
-interface Question {
+export interface Question {
   id: string
   dim: DimKey
   text: string
@@ -97,7 +97,7 @@ const LABELS: Record<SupportedLang, Labels> = {
   },
 }
 
-const QUESTIONS: Record<SupportedLang, Question[]> = {
+export const QUESTIONS: Record<SupportedLang, Question[]> = {
   ko: [
     { id: 'q1', dim: 'EI', text: '에너지가 떨어졌을 때 나는 보통...', a: { text: '사람들과 만나 이야기하며 회복한다', value: 'E' }, b: { text: '혼자 조용히 쉬며 회복한다', value: 'I' } },
     { id: 'q2', dim: 'SN', text: '새로운 정보를 볼 때 먼저 끌리는 것은?', a: { text: '구체적인 사실과 실제 사례', value: 'S' }, b: { text: '패턴, 의미, 가능성', value: 'N' } },
@@ -145,7 +145,7 @@ QUESTIONS.zh = QUESTIONS.en
 QUESTIONS.fr = QUESTIONS.en
 QUESTIONS.es = QUESTIONS.en
 
-const TYPE_PROFILES: Record<MbtiType, { emoji: string; en: string; ko: string; desc: Record<SupportedLang, string> }> = {
+export const TYPE_PROFILES: Record<MbtiType, { emoji: string; en: string; ko: string; desc: Record<SupportedLang, string> }> = {
   INTJ: { emoji: '🏛️', en: 'Architect', ko: '전략가', desc: { ko: '독립적이고 장기적 관점이 강한 전략형입니다. 복잡한 구조를 읽고 체계적인 해법을 만드는 데 강합니다.', en: 'Independent, strategic, and long-range in perspective. You are strong at reading complex systems and building structured solutions.', ja: '独立心が強く、長期的な視点を持つ戦略型です。複雑な構造を読み、体系的な解決策を作ることが得意です。', zh: '独立、战略性强，擅长理解复杂系统并设计结构化方案。', fr: 'Indépendant et stratégique, vous excellez à lire des systèmes complexes et à construire des solutions structurées.', es: 'Independiente y estratégico, destacas al leer sistemas complejos y crear soluciones estructuradas.' } },
   INTP: { emoji: '🔬', en: 'Logician', ko: '논리술사', desc: { ko: '호기심이 많고 분석적인 탐구형입니다. 아이디어의 원리와 모순을 깊게 파고드는 편입니다.', en: 'Curious and analytical. You like to explore principles, inconsistencies, and abstract ideas deeply.', ja: '好奇心が強く分析的な探究型です。原理や矛盾、抽象的なアイデアを深く掘り下げます。', zh: '好奇且善于分析，喜欢深入探索原则、矛盾和抽象想法。', fr: 'Curieux et analytique, vous aimez explorer les principes, les incohérences et les idées abstraites.', es: 'Curioso y analítico, disfrutas explorar principios, contradicciones e ideas abstractas.' } },
   ENTJ: { emoji: '⚡', en: 'Commander', ko: '지휘관', desc: { ko: '목표 지향적이고 추진력이 강한 리더형입니다. 구조를 만들고 사람과 자원을 움직이는 데 능합니다.', en: 'Goal-oriented and forceful. You are skilled at creating structure and moving people and resources toward outcomes.', ja: '目標志向で推進力のあるリーダー型です。構造を作り、人や資源を成果へ動かすことが得意です。', zh: '目标导向、行动力强，擅长建立结构并推动人与资源达成结果。', fr: 'Orienté objectif, vous savez créer une structure et mobiliser personnes et ressources.', es: 'Orientado a objetivos, sabes crear estructura y movilizar personas y recursos.' } },

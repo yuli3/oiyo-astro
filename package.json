@@ -12,7 +12,10 @@
     "astro": "astro",
     "generate-types": "wrangler types",
     "test": "vitest",
-    "audit:mystic-seo": "python3 scripts/audit-mystic-seo.py"
+    "audit:mystic-seo": "python3 scripts/audit-mystic-seo.py",
+    "submit:indexing": "python3 ../docs/search-submit-all.py --site oiyo --new-only",
+    "submit:indexing:dry": "python3 ../docs/search-submit-all.py --site oiyo --new-only --dry-run",
+    "audit:test-quiz-schema": "python3 scripts/audit-test-quiz-schema.py"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.7",

@@ -3,10 +3,11 @@ import Layout from '../../../layouts/Layout.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
-import MbtiPersonalityTest from '../../../components/tests/MbtiPersonalityTest';
+import MbtiPersonalityTest, { QUESTIONS as MBTI_QUESTIONS, TYPE_PROFILES } from '../../../components/tests/MbtiPersonalityTest';
 import TestContentBridge from '../../../components/shared/TestContentBridge.astro';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { getTestBridge } from '../../../data/test-content-bridges';
+import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -168,10 +169,26 @@ const faqJsonLd = {
     acceptedAnswer: { '@type': 'Answer', text: faq.answer },
   })),
 };
+
+const quizQuestions = (MBTI_QUESTIONS[locale]?.length ? MBTI_QUESTIONS[locale] : MBTI_QUESTIONS.en).map((question) => ({
+  name: question.text,
+  suggestedAnswers: [question.a.text, question.b.text],
+}));
+
+const quizJsonLd = buildQuizJsonLd({
+  name: m.title,
+  description: m.description,
+  url: new URL(Astro.url.pathname, Astro.site).toString(),
+  inLanguage: locale,
+  questionCount: quizQuestions.length,
+  questions: quizQuestions,
+  outcomeNames: Object.keys(TYPE_PROFILES),
+});
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(quizJsonLd)} />
   <div class="mx-auto max-w-2xl px-4 py-10">
     <MbtiPersonalityTest client:load locale={locale} />
 
