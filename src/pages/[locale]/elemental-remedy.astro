@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import ElementalRemedyTool from '../../components/tools/ElementalRemedyTool';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "나의 보완 기운 — 부족한 기운을 채우는 색·방향·사람",
+    description: "사주 오행 분석으로 나에게 가장 부족한 기운을 찾고, 그것을 채워주는 보완 색·이로운 방향·행운 숫자·함께하면 좋은 사람·아이템을 처방받으세요.",
+  },
+  en: {
+    title: "My Complementary Energy — Colors, Directions & People That Fill What You Lack",
+    description: "Analyze your Five-Element (Saju) chart to find your most lacking energy, then get the complementary color, favorable direction, lucky number, and people that fill it.",
+  },
+  ja: {
+    title: "私の補完する気 — 足りない気を満たす色・方向・人",
+    description: "四柱五行の分析で最も足りない気を見つけ、それを満たす補完の色・吉方位・ラッキーナンバー・一緒にいると良い人・アイテムを処方します。",
+  },
+  fr: {
+    title: "Mon Énergie Complémentaire — Couleurs, directions et personnes qui comblent vos manques",
+    description: "Analysez votre thème des Cinq Éléments (Saju) pour trouver l'énergie qui vous manque le plus, et la couleur, direction et personnes qui la comblent.",
+  },
+  es: {
+    title: "Mi Energía Complementaria — Colores, direcciones y personas que llenan lo que te falta",
+    description: "Analiza tu carta de los Cinco Elementos (Saju) para encontrar la energía que más te falta, y el color, dirección y personas que la complementan.",
+  },
+  zh: {
+    title: "我的补充气场 — 填补所缺的颜色·方位·人",
+    description: "通过四柱五行分析找出你最缺乏的气场，并获得补充的颜色、有利方位、幸运数字与适合相处的人。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-2xl">
+    <ElementalRemedyTool locale={locale as any} client:load />
+  </main>
+</Layout>
