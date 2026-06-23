@@ -37,11 +37,12 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/social-comparison-test": { blog: `${BLOG}/magazine-social-comparison-psychology/` },
   // 기존 매거진 가이드와 매칭
   "/shadow-self-test": { blog: `${BLOG}/jung-shadow-psychology/` },
-  "/self-efficacy-test": { blog: `${BLOG}/magazine-growth-mindset-psychology/` },
+  "/self-efficacy-test": { blog: `${BLOG}/magazine-growth-mindset-psychology/`, wiki: `${WIKI}/meaning-of-self-efficacy/` },
   "/inner-child-test": { blog: `${BLOG}/trauma-healing-psychology/` },
   // 2026-06-23 기존 테스트 → 기존 매거진/가이드 매칭 (codex-free 확대)
   "/anger-style/test": { blog: `${BLOG}/magazine-anger-style-psychology/` },
-  "/anxiety/test": { blog: `${BLOG}/magazine-anxiety-insomnia-psychology/` },
+  "/adhd/test": { blog: `${BLOG}/adult-adhd-survival-guide/`, wiki: `${WIKI}/meaning-of-adhd/` },
+  "/anxiety/test": { blog: `${BLOG}/magazine-anxiety-insomnia-psychology/`, wiki: `${WIKI}/meaning-of-anxiety/` },
   "/boundary-style-test": { blog: `${BLOG}/magazine-boundary-psychology/` },
   "/color-personality-test": { blog: `${BLOG}/color-psychology-complete-guide/` },
   "/coping-style-test": { blog: `${BLOG}/magazine-coping-style-psychology/` },
