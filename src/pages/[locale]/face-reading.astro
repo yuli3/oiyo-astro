@@ -1,0 +1,45 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import GwansangReader from '../../components/tools/GwansangReader';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "관상 자가진단 — 얼굴로 보는 나의 기질과 운",
+    description: "얼굴형·이마·눈썹·눈·코·입을 골라 전통 관상(觀相)으로 나의 기질과 운의 흐름을 읽어보는 무료 관상 도구입니다.",
+  },
+  en: {
+    title: "Face Reading (Gwansang) — Your Temperament in Your Face",
+    description: "Pick your face shape, forehead, eyebrows, eyes, nose, and mouth to read your temperament through traditional Korean physiognomy (Gwansang).",
+  },
+  ja: {
+    title: "観相セルフ診断 — 顔で見る気質と運",
+    description: "顔の形・額・眉・目・鼻・口を選んで、伝統的な観相であなたの気質と運の流れを読む無料の観相ツールです。",
+  },
+  fr: {
+    title: "Lecture du Visage (Gwansang) — Votre tempérament dans votre visage",
+    description: "Choisissez la forme de votre visage, front, sourcils, yeux, nez et bouche pour lire votre tempérament via la physiognomonie coréenne (Gwansang).",
+  },
+  es: {
+    title: "Lectura del Rostro (Gwansang) — Tu temperamento en tu cara",
+    description: "Elige la forma de tu cara, frente, cejas, ojos, nariz y boca para leer tu temperamento mediante la fisiognomía coreana (Gwansang).",
+  },
+  zh: {
+    title: "面相自测 — 从脸看你的气质与运",
+    description: "选择脸型·额头·眉毛·眼睛·鼻子·嘴巴，用传统面相（观相）解读你的气质与运势走向的免费面相工具。",
+  },
+};
+const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <main class="container mx-auto px-4 py-8 max-w-2xl">
+    <GwansangReader locale={locale as any} client:load />
+  </main>
+</Layout>
