@@ -127,7 +127,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/love-language/test": { blog: "/magazine-love-language-psychology/", blogLocales: ['ko', 'en'] },
   "/mbti-love-test": { blog: "/magazine-mbti-love-psychology/", blogLocales: ['ko', 'en'] },
   "/meeting-style-test": { blog: "/magazine-meeting-cost-psychology/", blogLocales: ['ko', 'en'] },
-  "/money-personality-test": { blog: "/psychology-of-money/", blogLocales: ['ko', 'en', 'ja'] },
+  "/money-personality-test": { blog: "/psychology-of-money/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
   "/motivation-type-test": { blog: "/magazine-motivation-type-psychology/", blogLocales: ['ko', 'en'] },
   "/narcissism/test": { blog: "/narcissism-psychology-guide/" },
   "/optimism-test": { blog: "/magazine-optimism-psychology/", blogLocales: ['ko', 'en'] },
@@ -170,7 +170,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/sleep-type/test": {
     blog: "/chronotypes-sleep-biology-optimization/",
-    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'], // 2026-06-24 zh/fr/es 번역 추가
     wiki: "/meaning-of-chronotypes/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
