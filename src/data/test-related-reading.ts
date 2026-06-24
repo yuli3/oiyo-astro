@@ -215,7 +215,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/career-values-test": { blog: "/psychology-career-values-test/", blogLocales: ['ko', 'en'] },
   "/spending-habits-test": { blog: "/latte-factor-spending-habits/", blogLocales: ['ko', 'en'] },
-  "/trust-style-test": { blog: "/trust-and-betrayal/", blogLocales: ['ko', 'en', 'ja'] },
+  "/trust-style-test": { blog: "/trust-and-betrayal/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
   "/resilience-boost-test": { blog: "/magazine-resilience-psychology/", blogLocales: ['ko', 'en'] },
   "/focus-blocker-test": {
     blog: "/magazine-focus-concentration-guide/",
