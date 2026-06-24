@@ -307,6 +307,10 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
     wiki: "/meaning-of-hsp/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
+  // 2026-06-25 C등급 신규 wiki 정의(ko) 연결
+  "/codependency-test": { wiki: "/meaning-of-codependency/" },
+  "/emotional-eating-test": { wiki: "/meaning-of-emotional-eating/" },
+  "/work-life-balance-test": { wiki: "/meaning-of-work-life-balance/" },
   "/tci-personality-test": {
     wiki: "/meaning-of-tci/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
