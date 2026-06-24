@@ -62,7 +62,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/stress-type-test": { blog: "/mbti-stress-type-test/" },
   "/resilience-test": { blog: "/resilience-test/" },
   "/grit-scale-test": { blog: "/resilience-science/", blogLocales: ['ko', 'en'] },
-  "/imposter-syndrome-test": { blog: "/imposter-syndrome-doubt/", blogLocales: ['ko', 'en', 'ja'] }, // zh/fr/es 없음(fs 확인)
+  "/imposter-syndrome-test": { blog: "/imposter-syndrome-doubt/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
   "/cognitive-bias-test": { blog: "/cognitive-bias-complete-guide/" },
   "/decision-making-test": { blog: "/magazine-decision-making-psychology/", blogLocales: ['ko', 'en'] },
   "/self-compassion-test": {
@@ -189,7 +189,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/eq/test": { blog: "/magazine-emotional-intelligence-psychology/", blogLocales: ['ko', 'en'] },
-  "/toxic-relationship-test": { blog: "/gaslighting-manipulation/", blogLocales: ['ko', 'en', 'ja'] },
+  "/toxic-relationship-test": { blog: "/gaslighting-manipulation/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
   "/dopamine-dependency-test": {
     blog: "/dopamine-fasting-focus/",
     blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
@@ -254,7 +254,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/lethargy/test": {
     blog: "/burnout-recovery-dopamine-reset/",
-    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-learned-helplessness/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
