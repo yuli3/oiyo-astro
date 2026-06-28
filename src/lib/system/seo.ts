@@ -132,7 +132,7 @@ export function generateMetadata(config: SEOConfig): Metadata {
 
   // Build language alternates for all locales
   // Map internal locale codes to valid ISO 639-1 hreflang codes
-  const hreflangMap: Record<string, string> = { cn: "zh-CN" };
+  const hreflangMap: Record<string, string> = { zh: "zh-CN" };
   const languageAlternates: Record<string, string> = {};
 
   SUPPORTED_LOCALES.forEach((targetLocale) => {
@@ -144,8 +144,8 @@ export function generateMetadata(config: SEOConfig): Metadata {
     languageAlternates[hreflangCode] = `${baseUrl}${localizedPath}`;
   });
 
-  // Add x-default for international targeting (defaults to English)
-  const defaultLocalePath = buildLocalizedPath(localeAgnosticSegments, "en");
+  // Add x-default for international targeting (defaults to Korean, the site default)
+  const defaultLocalePath = buildLocalizedPath(localeAgnosticSegments, "ko");
   languageAlternates["x-default"] = `${baseUrl}${defaultLocalePath}`;
 
   const defaultImage = {

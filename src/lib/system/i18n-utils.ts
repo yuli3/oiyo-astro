@@ -3,7 +3,7 @@ import { StrictLocalized } from "@/lib/system/utils/localization";
 
 export const commonTranslations = {
   finish: {
-    cn: "完成",
+    zh: "完成",
     en: "Finish",
     es: "Finalizar",
     fr: "Terminer",
@@ -11,7 +11,7 @@ export const commonTranslations = {
     ko: "완료",
   },
   next: {
-    cn: "下一个",
+    zh: "下一个",
     en: "Next",
     es: "Siguiente",
     fr: "Suivant",
@@ -19,7 +19,7 @@ export const commonTranslations = {
     ko: "다음",
   },
   offlineMode: {
-    cn: "离线模式",
+    zh: "离线模式",
     en: "Offline Mode",
     es: "Modo fuera de línea",
     fr: "Mode hors ligne",
@@ -27,7 +27,7 @@ export const commonTranslations = {
     ko: "오프라인 모드",
   },
   offlineNotice: {
-    cn: "进度将自动保存，您可以在在线时继续。",
+    zh: "进度将自动保存，您可以在在线时继续。",
     en: "Your progress is automatically saved and you can continue when online.",
     es: "Su progreso se guarda automáticamente y puede continuar cuando esté en línea.",
     fr: "Votre progression est automatiquement enregistrée et vous pouvez continuer en ligne.",
@@ -35,7 +35,7 @@ export const commonTranslations = {
     ko: "진행 상황이 자동으로 저장되어 온라인 상태에서 계속할 수 있습니다.",
   },
   previous: {
-    cn: "上一个",
+    zh: "上一个",
     en: "Previous",
     es: "Anterior",
     fr: "Précédent",
@@ -43,7 +43,7 @@ export const commonTranslations = {
     ko: "이전",
   },
   processing: {
-    cn: "处理中...",
+    zh: "处理中...",
     en: "Processing...",
     es: "Procesando...",
     fr: "Traitement...",
@@ -51,7 +51,7 @@ export const commonTranslations = {
     ko: "처리 중...",
   },
   progress: {
-    cn: "进度",
+    zh: "进度",
     en: "Progress",
     es: "Progreso",
     fr: "Progression",
@@ -59,7 +59,7 @@ export const commonTranslations = {
     ko: "진행률",
   },
   questionOf: {
-    cn: (current: number, total: number) => `问题 ${current} / ${total}`,
+    zh: (current: number, total: number) => `问题 ${current} / ${total}`,
     en: (current: number, total: number) => `Question ${current} of ${total}`,
     es: (current: number, total: number) => `Pregunta ${current} de ${total}`,
     fr: (current: number, total: number) => `Question ${current} sur ${total}`,
@@ -67,7 +67,7 @@ export const commonTranslations = {
     ko: (current: number, total: number) => `질문 ${current} / ${total}`,
   },
   saved: {
-    cn: "已自动保存",
+    zh: "已自动保存",
     en: "Auto-saved",
     es: "Auto-guardado",
     fr: "Auto-enregistré",
@@ -75,7 +75,7 @@ export const commonTranslations = {
     ko: "자동 저장됨",
   },
   saving: {
-    cn: "保存中...",
+    zh: "保存中...",
     en: "Saving...",
     es: "Guardando...",
     fr: "Enregistrement...",
@@ -83,7 +83,7 @@ export const commonTranslations = {
     ko: "저장 중...",
   },
   seeResults: {
-    cn: "查看结果",
+    zh: "查看结果",
     en: "See Results",
     es: "Ver resultados",
     fr: "Voir les résultats",
@@ -91,7 +91,7 @@ export const commonTranslations = {
     ko: "결과 보기",
   },
   submit: {
-    cn: "提交",
+    zh: "提交",
     en: "Submit",
     es: "Enviar",
     fr: "Soumettre",
@@ -99,7 +99,7 @@ export const commonTranslations = {
     ko: "제출하기",
   },
   swipeToNavigate: {
-    cn: "← 滑动移动 →",
+    zh: "← 滑动移动 →",
     en: "← Swipe to navigate →",
     es: "← Deslizar para navegar →",
     fr: "← Balayer pour naviguer →",

@@ -4,7 +4,7 @@ import { i18nRegistry } from "./lib/i18n/registry";
 
 export const locales = ["en", "ko", "ja", "zh", "fr", "es"] as const;
 export type Locale = (typeof locales)[number];
-export const defaultLocale = "en";
+export const defaultLocale: Locale = "ko";
 
 function deepMerge(target: any, source: any) {
   if (!source) return target;
@@ -72,7 +72,7 @@ async function loadLocaleMessages(
 }
 
 export default getRequestConfig(async ({ requestLocale }) => {
-  const locale = (await requestLocale) || "en";
+  const locale = (await requestLocale) || defaultLocale;
   const messages: Record<string, any> = {};
 
   // Load English as base

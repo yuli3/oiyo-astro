@@ -166,7 +166,7 @@ export function MobileTestInterface({
 
     const texts = {
       questionOf: {
-        cn: "问题",
+        zh: "问题",
         en: "Question",
         es: "Pregunta",
         fr: "Question",
@@ -174,7 +174,7 @@ export function MobileTestInterface({
         ko: "문항",
       }[locale],
       selectOption: {
-        cn: "请选择一个答案",
+        zh: "请选择一个答案",
         en: "Please select an answer",
         es: "Por favor seleccione una respuesta",
         fr: "Veuillez sélectionner une réponse",
