@@ -70,7 +70,7 @@
   "dashboard": {
     "guest": "访客",
     "labels": {
-      "undiscovered": "未探索",
+      "undiscovered": "未访问",
       "nameVibration": "姓名波动",
       "noblePerson": "贵人",
       "moonSign": "月亮星座",
@@ -569,7 +569,7 @@
   "onThisPage": "本页内容",
   "universal": {
     "labels": {
-      "undiscovered": "未探索"
+      "undiscovered": "未访问"
     },
     "explanation": {
       "morning_lark": "早起者，上午最活跃。",

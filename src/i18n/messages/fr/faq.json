@@ -1,75 +1,75 @@
 {
-  "questions": {
-    "1": {
-      "q": "Combien de temps dure le rituel d’analyse ?",
-      "a": "La concentration ne nécessite qu’un court alignement de deux à cinq minutes, selon la profondeur de votre intuition."
-    },
-    "2": {
-      "q": "Comment appliquer ces révélations ?",
-      "a": "Utilisez-le comme une boussole spirituelle pour naviguer dans les flux de capitaux, les relations de parenté et votre moi intérieur."
-    },
-    "3": {
-      "q": "Les sages fournissent-ils des conseils commerciaux directs ?",
-      "a": "Nous ne garantissons aucun trésor spécifique. Au lieu de cela, il éclaire les stratégies afin que vous puissiez choisir votre propre chemin."
-    },
-    "4": {
-      "q": "Puis-je inviter mes collègues dans ce sanctuaire ?",
-      "a": "Bien sûr. Partager la lumière de la compréhension avec les autres renforce l’harmonie du voyage partagé."
-    },
-    "5": {
-      "q": "Y a-t-il un dessein divin derrière les résultats ?",
-      "a": "Oui. Nos conseils sont tissés à partir des fils de la science du comportement, de la psychologie et de la sagesse ancienne."
-    },
-    "q1": {
-      "question": "OIYO est-il gratuit ?",
-      "answer": "oui, OIYO propose un test de personnalité gratuit et des fonctionnalités de base. Si vous souhaitez des informations plus approfondies, vous pouvez utiliser des fonctionnalités premium."
-    },
-    "q2": {
-      "question": "Quels modes de paiement puis-je utiliser ?",
-      "answer": "Nous prenons en charge toutes les principales cartes de crédit, PayPal et diverses méthodes de paiement locales en fonction de votre région."
-    },
-    "q3": {
-      "question": "Puis-je annuler mon abonnement à tout moment ?",
-      "answer": "Bien sûr! Vous pouvez annuler votre abonnement à tout moment dans les paramètres de votre compte. Il est traité immédiatement, sans autre question."
-    },
-    "q4": {
-      "question": "Un remboursement est-il possible ?",
-      "answer": "Oui, nous offrons une garantie de remboursement de 30 jours si vous n'êtes pas satisfait des fonctionnalités premium."
-    }
+ "questions": {
+  "1": {
+   "q": "Les tests OIYO sont-ils gratuits ?",
+   "a": "Oui. Tous les tests de personnalité et de psychologie et les outils d'OIYO sont gratuits — aucun paiement ni abonnement."
   },
+  "2": {
+   "q": "Quelle est la fiabilité des résultats ?",
+   "a": "Chaque test s'appuie sur des échelles psychologiques publiées et des modèles académiques (MBTI, Big Five, RIASEC, etc.). Ce sont des outils de connaissance de soi qui ne remplacent pas un diagnostic médical ou professionnel."
+  },
+  "3": {
+   "q": "Combien de temps dure un test ?",
+   "a": "La plupart prennent 2 à 5 minutes, un peu plus selon le nombre de questions."
+  },
+  "4": {
+   "q": "Mes réponses et données personnelles sont-elles protégées ?",
+   "a": "Les résultats sont stockés principalement dans votre navigateur (en local). Nous ne demandons pas de données personnelles sensibles et ne les vendons à personne."
+  },
+  "5": {
+   "q": "Puis-je enregistrer ou partager mes résultats ?",
+   "a": "Oui. Vous pouvez enregistrer votre résultat en image ou le partager par lien, et regrouper plusieurs résultats dans la vue Ontologie."
+  },
+  "q1": {
+   "question": "OIYO est-il gratuit ?",
+   "answer": "oui, OIYO propose un test de personnalité gratuit et des fonctionnalités de base. Si vous souhaitez des informations plus approfondies, vous pouvez utiliser des fonctionnalités premium."
+  },
+  "q2": {
+   "question": "Quels modes de paiement puis-je utiliser ?",
+   "answer": "Nous prenons en charge toutes les principales cartes de crédit, PayPal et diverses méthodes de paiement locales en fonction de votre région."
+  },
+  "q3": {
+   "question": "Puis-je annuler mon abonnement à tout moment ?",
+   "answer": "Bien sûr! Vous pouvez annuler votre abonnement à tout moment dans les paramètres de votre compte. Il est traité immédiatement, sans autre question."
+  },
+  "q4": {
+   "question": "Un remboursement est-il possible ?",
+   "answer": "Oui, nous offrons une garantie de remboursement de 30 jours si vous n'êtes pas satisfait des fonctionnalités premium."
+  }
+ },
+ "title": "Questions fréquentes",
+ "subtitle": "Questions courantes sur l'utilisation d'OIYO",
+ "stillHaveQuestions": "D'autres questions ?",
+ "supportText": "N'hésitez pas à nous contacter à tout moment.",
+ "answer1": "En attendant une intégration profonde...",
+ "answer2": "En attendant une intégration profonde...",
+ "answer3": "En attendant une intégration profonde...",
+ "answer4": "En attendant une intégration profonde...",
+ "answer5": "En attendant une intégration profonde...",
+ "question1": "En attendant une intégration profonde...",
+ "question2": "En attendant une intégration profonde...",
+ "question3": "En attendant une intégration profonde...",
+ "question4": "En attendant une intégration profonde...",
+ "question5": "En attendant une intégration profonde...",
+ "moreQuestions": "Vous avez d'autres questions ?",
+ "contact": "Nous contacter",
+ "meta": {
   "title": "FAQ sur le paiement",
-  "subtitle": "Tout ce que vous devez savoir sur les paiements",
-  "stillHaveQuestions": "Encore besoin de clarté ?",
-  "supportText": "Contactez les Gardiens de l'Origine",
-  "answer1": "En attendant une intégration profonde...",
-  "answer2": "En attendant une intégration profonde...",
-  "answer3": "En attendant une intégration profonde...",
-  "answer4": "En attendant une intégration profonde...",
-  "answer5": "En attendant une intégration profonde...",
-  "question1": "En attendant une intégration profonde...",
-  "question2": "En attendant une intégration profonde...",
-  "question3": "En attendant une intégration profonde...",
-  "question4": "En attendant une intégration profonde...",
-  "question5": "En attendant une intégration profonde...",
-  "moreQuestions": "Vous avez d'autres questions en tête ?",
-  "contact": "Connectez-vous avec nous",
-  "meta": {
-    "title": "FAQ sur le paiement",
-    "description": "Questions fréquemment posées sur les paiements, les abonnements et la facturation",
-    "keywords": "Paiement, FAQ, Facturation, Abonnements, Tarification"
+  "description": "Questions fréquemment posées sur les paiements, les abonnements et la facturation",
+  "keywords": "Paiement, FAQ, Facturation, Abonnements, Tarification"
+ },
+ "items": [
+  {
+   "q": "Mes données financières sont-elles en sécurité ?",
+   "a": "Oui, nous accordons la priorité à la confidentialité et ne stockons pas les informations d’identification bancaires sensibles."
   },
-  "items": [
-    {
-      "q": "Mes données financières sont-elles en sécurité ?",
-      "a": "Oui, nous accordons la priorité à la confidentialité et ne stockons pas les informations d’identification bancaires sensibles."
-    },
-    {
-      "q": "Quelle est la précision du résultat ?",
-      "a": "Il est basé sur des modèles standards de psychologie de la finance comportementale."
-    },
-    {
-      "q": "Puis-je repasser le test ?",
-      "a": "Absolument ! Votre état d’esprit financier peut évoluer avec le temps."
-    }
-  ]
+  {
+   "q": "Quelle est la précision du résultat ?",
+   "a": "Il est basé sur des modèles standards de psychologie de la finance comportementale."
+  },
+  {
+   "q": "Puis-je repasser le test ?",
+   "a": "Absolument ! Votre état d’esprit financier peut évoluer avec le temps."
+  }
+ ]
 }

@@ -70,7 +70,7 @@
   "dashboard": {
     "guest": "Invité",
     "labels": {
-      "undiscovered": "Non découvert",
+      "undiscovered": "Non visité",
       "nameVibration": "Vibration du Nom",
       "noblePerson": "Personne Noble",
       "moonSign": "Signe Lunaire",
@@ -569,7 +569,7 @@
   "onThisPage": "Sur Cette Page",
   "universal": {
     "labels": {
-      "undiscovered": "Non découvert"
+      "undiscovered": "Non visité"
     },
     "explanation": {
       "morning_lark": "Personne matinale, plus active le matin.",

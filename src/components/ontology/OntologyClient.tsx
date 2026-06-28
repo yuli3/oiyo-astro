@@ -260,6 +260,9 @@ export function OntologyClient() {
     userElement.toUpperCase(),
     mbtiType !== t("labels.undiscovered") ? mbtiType : undefined,
   );
+  // 사용자가 출생정보(사주/월·오행의 근거)를 넣지 않으면 month=1·element=earth 같은
+  // 가짜 기본값으로 고전학파·보수주의가 강제로 산출된다. 실제 입력이 있을 때만 노출한다.
+  const hasOntologyInput = !!profile.birthDate;
 
   // --- REGISTRY-DRIVEN TESTS ---
   // Using the centralized FEATURE_REGISTRY to populate the test catalog
@@ -473,16 +476,16 @@ export function OntologyClient() {
 
           {/* --- BENTO GRID SECTIONS --- */}
           <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6 auto-rows-[minmax(180px,auto)] gap-4 relative z-10 px-0 md:px-0">
-            {/* 1. Chosun Dynasty Faction [New Feature] */}
-            {chosunAnalysis && (
+            {/* 1. Chosun Dynasty Faction [New Feature] — 출생정보 입력 시에만 */}
+            {hasOntologyInput && chosunAnalysis && (
               <FactionCard
                 analysis={chosunAnalysis}
                 className="md:col-span-2 lg:col-span-2 md:row-span-3 border-green-100 bg-green-50/10 shadow-green-900/5 group"
               />
             )}
 
-            {/* 1.5 Generic Factions */}
-            {economicSchool && (
+            {/* 1.5 Generic Factions — 가짜 기본값 방지: 입력 있을 때만 */}
+            {hasOntologyInput && economicSchool && (
               <GenericFactionCard
                 analysis={economicSchool}
                 className="md:col-span-2 lg:col-span-2 md:row-span-3 border-indigo-100 bg-indigo-50/10 shadow-indigo-900/5 group"
@@ -493,7 +496,7 @@ export function OntologyClient() {
               />
             )}
 
-            {politicalTendency && (
+            {hasOntologyInput && politicalTendency && (
               <GenericFactionCard
                 analysis={politicalTendency}
                 className="md:col-span-2 lg:col-span-2 md:row-span-3 border-rose-100 bg-rose-50/10 shadow-rose-900/5 group"
@@ -502,6 +505,18 @@ export function OntologyClient() {
                 title={tUi("ontology.politicalMatrix")}
                 type="political"
               />
+            )}
+
+            {/* 입력 전 — 해금 안내 (가짜 기본값 대신) */}
+            {!hasOntologyInput && (
+              <div className="md:col-span-4 lg:col-span-6 rounded-[28px] border border-dashed border-slate-300 bg-slate-50/60 p-8 text-center">
+                <p className="text-sm font-bold text-slate-700">🔒 {t("labels.undiscovered")}</p>
+                <p className="mt-1 text-xs text-slate-500">
+                  {locale === "ko"
+                    ? "출생 정보·성격 테스트를 입력하면 경제관·정치성향·역사 붕당 분석이 해금됩니다. (입력 전에는 기본값을 보여주지 않습니다)"
+                    : "Enter your birth info and personality tests to unlock economic, political, and faction analysis. No placeholder defaults are shown."}
+                </p>
+              </div>
             )}
 
             {/* 2. Today's Insight (Moved into Bento) */}

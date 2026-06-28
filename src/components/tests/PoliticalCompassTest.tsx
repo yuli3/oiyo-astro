@@ -23,7 +23,7 @@ const AXIS_INFO: Record<SupportedLang, {
     economic: { name: '경제',  left: '평등주의',  right: '시장주의' },
     social:   { name: '사회',  left: '전통주의',  right: '진보주의' },
     global:   { name: '외교',  left: '민족주의',  right: '국제주의' },
-    state:    { name: '국가',  left: '권위주의',  right: '자유주의' },
+    state:    { name: '국가',  left: '권위주의',  right: '자유지상주의' },
     resultTitle: '나의 정치적 가치관 스펙트럼',
     resultSub: '4가지 축에서 내 위치를 확인해보세요',
     disclaimer: '이 테스트는 자기 이해를 위한 참고 도구이며, 특정 정당이나 이념을 지지하지 않습니다.',
@@ -41,7 +41,7 @@ const AXIS_INFO: Record<SupportedLang, {
     economic: { name: '経済',  left: '平等主義',  right: '市場主義' },
     social:   { name: '社会',  left: '伝統主義',  right: '進歩主義' },
     global:   { name: '外交',  left: '民族主義',  right: '国際主義' },
-    state:    { name: '国家',  left: '権威主義',  right: '自由主義' },
+    state:    { name: '国家',  left: '権威主義',  right: '自由至上主義' },
     resultTitle: '私の政治的価値観スペクトラム',
     resultSub: '4つの軸での位置を確認しましょう',
     disclaimer: 'このテストは自己理解のための参考ツールであり、特定の政党やイデオロギーを支持するものではありません。',
@@ -68,10 +68,59 @@ const AXIS_INFO: Record<SupportedLang, {
     economic: { name: '经济',  left: '平等主义',  right: '市场主义' },
     social:   { name: '社会',  left: '传统主义',  right: '进步主义' },
     global:   { name: '外交',  left: '民族主义',  right: '国际主义' },
-    state:    { name: '国家',  left: '威权主义',  right: '自由主义' },
+    state:    { name: '国家',  left: '威权主义',  right: '自由意志主义' },
     resultTitle: '我的政治价值观谱系',
     resultSub: '查看您在4个轴上的位置',
     disclaimer: '本测试仅供自我了解使用，不支持任何政党或意识形态。',
+  },
+}
+
+// ── 각 극(pole)의 정확한 정의 — 오염된 용어 바로잡기 ──────────────────
+// axisIdx(0~3) × side(left|right). 한국 정치담론에서 자주 뒤섞이는 용어를
+// 학술적 정의로 분리해 보여준다. ko 미보유 로케일은 en으로 폴백.
+type PoleDefs = { left: string; right: string }[]
+const POLE_GLOSSARY: Partial<Record<SupportedLang, PoleDefs>> = {
+  ko: [
+    { left: '부와 자원의 격차를 공공이 나서서 줄여야 한다고 본다. 복지·누진세·공공서비스 확대를 지지.',
+      right: '자원 배분을 시장 경쟁과 개인 선택에 맡기고 정부 개입은 최소화한다. 감세·규제완화·민영화를 지지.' },
+    { left: '가족·종교·관습 등 기존 사회 질서와 가치를 보존하려는 태도. (경제 입장과는 별개의 축)',
+      right: '사회 규범과 제도를 시대 변화에 맞게 바꿔가야 한다는 태도. 한국에서 흔히 ‘진보’라 불리지만, 본래는 경제가 아니라 ‘사회 변화 수용’을 뜻한다.' },
+    { left: '자국의 주권·정체성·국익을 우선한다. 대외 개방보다 자립을 중시.',
+      right: '국가 간 협력·개방·보편 규범을 중시한다. 국제기구·자유무역·다자주의를 지지.' },
+    { left: '권력을 소수에 집중하고 이견과 반대를 억눌러 질서를 강제하는 통치 방식. ‘강한 리더십’이나 ‘엄격함’이 아니라, 견제받지 않는 권력과 자유 제한이 핵심이다.',
+      right: '개인의 자유와 자기결정권을 최대화하고 국가의 통제·간섭을 최소화한다. 한국어 ‘자유주의’와 혼동되지만, 여기서 핵심은 ‘개인 자유 우선’이다.' },
+  ],
+  en: [
+    { left: 'The public should actively reduce gaps in wealth and resources — supports welfare, progressive taxation, and public services.',
+      right: 'Leaves resource allocation to market competition and individual choice, minimizing government — supports tax cuts, deregulation, privatization.' },
+    { left: 'Preserves existing social order and values (family, religion, custom). A separate axis from economics.',
+      right: 'Society’s norms and institutions should evolve with the times. This is about accepting social change, not an economic position.' },
+    { left: 'Prioritizes national sovereignty, identity, and interests over openness.',
+      right: 'Values cooperation, openness, and universal norms — supports international institutions, free trade, multilateralism.' },
+    { left: 'Rule that concentrates power in a few and suppresses dissent to enforce order. Not “strong leadership” or “strictness” — the core is unchecked power and restricted freedom.',
+      right: 'Maximizes individual liberty and self-determination, minimizing state control. Often confused with “liberalism” — here the core is prioritizing individual freedom.' },
+  ],
+}
+
+// ── 정치 용어 바로 알기 (한국 담론 오염 교정) ──────────────────────────
+const TERM_CLARIFY: Partial<Record<SupportedLang, { title: string; items: string[] }>> = {
+  ko: {
+    title: '정치 용어 바로 알기',
+    items: [
+      '‘진보 / 보수’는 원래 ‘사회 변화에 대한 태도’(사회축)를 가리킨다. 한국에서는 경제·외교·안보 입장까지 한 덩어리로 뭉뚱그려 쓰여 혼란을 키운다 — 이 테스트는 그 축들을 분리해 본다.',
+      '‘자유’는 특정 정당의 소유물이 아니다. 경제적 자유(시장주의)와 개인적 자유(자유지상주의)는 서로 다른 축이며, 정반대 성향의 사람이 둘 다 ‘자유’를 말할 수 있다.',
+      '‘권위주의’는 강함·결단력·추진력이 아니라, 견제받지 않는 권력 집중과 이견 억압을 뜻한다. 진보·보수 어느 진영에서도 나타날 수 있다.',
+      '한 사람의 가치관은 좌/우 한 점이 아니라 여러 축의 조합이다. ‘우리 편 / 상대 편’의 이분법은 이 다차원성을 지운다.',
+    ],
+  },
+  en: {
+    title: 'Reading political terms correctly',
+    items: [
+      '“Progressive / conservative” originally describe attitudes toward social change (the social axis). Lumping in economic, diplomatic, and security stances breeds confusion — this test separates those axes.',
+      '“Freedom” is not owned by any party. Economic freedom (market) and personal freedom (libertarian) are different axes; people with opposite views can both invoke “freedom.”',
+      '“Authoritarianism” is not strength or decisiveness — it means concentrated, unchecked power and suppression of dissent. It can appear on either the left or the right.',
+      'A person’s values are a combination across several axes, not a single left/right point. The “us vs. them” binary erases that multidimensionality.',
+    ],
   },
 }
 
@@ -294,6 +343,8 @@ export default function PoliticalCompassTest({ locale }: Props) {
     const chars = result.replace(/[\s"]/g, '').split('')
     const axes = chars.slice(0, 4).map((c, i) => getAxisLabel(c, i, L))
     const info = AXIS_INFO[L]
+    const glossary = POLE_GLOSSARY[L] ?? POLE_GLOSSARY.en!
+    const clarify = TERM_CLARIFY[L] ?? TERM_CLARIFY.en!
 
     return (
       <div class="space-y-6">
@@ -317,8 +368,28 @@ export default function PoliticalCompassTest({ locale }: Props) {
                 </div>
                 <span class="text-xs text-slate-400">{ax.right}</span>
               </div>
+              {ax.side !== 'neutral' && glossary[i] && (
+                <p class="mt-3 border-t border-slate-200/70 pt-2 text-xs leading-relaxed text-slate-600">
+                  {glossary[i][ax.side as 'left' | 'right']}
+                </p>
+              )}
             </div>
           ))}
+        </div>
+
+        {/* 정치 용어 바로 알기 — 한국 담론 오염 교정 */}
+        <div class="rounded-xl border-2 border-green-200 bg-green-50/60 p-5">
+          <p class="mb-3 flex items-center gap-2 text-sm font-black text-green-900">
+            <span>📚</span>{clarify.title}
+          </p>
+          <ul class="space-y-2">
+            {clarify.items.map((it, i) => (
+              <li key={i} class="flex gap-2 text-xs leading-relaxed text-slate-700">
+                <span class="mt-0.5 font-black text-green-600">·</span>
+                <span>{it}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <p class="rounded-lg bg-slate-100 p-3 text-center text-xs text-slate-500">{info.disclaimer}</p>

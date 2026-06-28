@@ -189,7 +189,7 @@
   "dashboard": {
     "guest": "User",
     "labels": {
-      "undiscovered": "Unanalyzed",
+      "undiscovered": "Unvisited",
       "nameVibration": "Name Characteristics",
       "noblePerson": "Partner / Guide",
       "moonSign": "Moon Indicator",
@@ -501,7 +501,7 @@
   "onThisPage": "On This Page",
   "universal": {
     "labels": {
-      "undiscovered": "Unanalyzed"
+      "undiscovered": "Unvisited"
     },
     "explanation": {
       "morning_lark": "Early riser, most active in the morning.",

@@ -1,75 +1,75 @@
 {
-  "questions": {
-    "1": {
-      "q": "How long does the analysis ritual take?",
-      "a": "Concentration requires only a short alignment of two to five minutes, depending on the depth of your intuition."
-    },
-    "2": {
-      "q": "How should we apply these revelations?",
-      "a": "Use it as a spiritual compass to navigate capital flows, kinship relationships, and your inner self."
-    },
-    "3": {
-      "q": "Do wise men provide direct commercial advice?",
-      "a": "We do not guarantee any specific treasure. Instead, it illuminates strategies so you can choose your own path."
-    },
-    "4": {
-      "q": "May I invite my colleagues to this sanctuary?",
-      "a": "Of course. Sharing the light of understanding with others strengthens the harmony of the shared journey."
-    },
-    "5": {
-      "q": "Is there a divine design behind the results?",
-      "a": "Yes. Our guidance is woven from threads of behavioral science, psychology, and ancient wisdom."
-    },
-    "q1": {
-      "question": "Is OIYO free?",
-      "answer": "yes OIYO offers a free personality test and basic features. If you want deeper insights, you can use premium features."
-    },
-    "q2": {
-      "question": "What payment methods can I use?",
-      "answer": "We support all major credit cards, PayPal, and various local payment methods depending on your region."
-    },
-    "q3": {
-      "question": "Can I cancel my subscription at any time?",
-      "answer": "Of course! You can cancel your subscription at any time in your account settings. It is processed right away without any further questions."
-    },
-    "q4": {
-      "question": "Is a refund possible?",
-      "answer": "Yes, we offer a 30-day money-back guarantee if you are not satisfied with the premium features."
-    }
+ "questions": {
+  "1": {
+   "q": "Are OIYO tests free?",
+   "a": "Yes. All OIYO personality and psychology tests and tools are free — there is no payment or subscription."
   },
+  "2": {
+   "q": "How accurate are the results?",
+   "a": "Each test is built on published psychological scales and academic models (MBTI, Big Five, RIASEC, etc.). They are a tool for self-understanding and do not replace medical or professional diagnosis."
+  },
+  "3": {
+   "q": "How long does one test take?",
+   "a": "Most take 2–5 minutes. It may be slightly longer depending on the number of questions."
+  },
+  "4": {
+   "q": "Are my answers and personal data safe?",
+   "a": "Results are stored mainly in your browser (locally). We do not ask for sensitive personal data or sell it to anyone."
+  },
+  "5": {
+   "q": "Can I save or share my results?",
+   "a": "Yes. You can save your result as an image or share a link, and combine multiple test results in the Ontology view."
+  },
+  "q1": {
+   "question": "Is OIYO free?",
+   "answer": "yes OIYO offers a free personality test and basic features. If you want deeper insights, you can use premium features."
+  },
+  "q2": {
+   "question": "What payment methods can I use?",
+   "answer": "We support all major credit cards, PayPal, and various local payment methods depending on your region."
+  },
+  "q3": {
+   "question": "Can I cancel my subscription at any time?",
+   "answer": "Of course! You can cancel your subscription at any time in your account settings. It is processed right away without any further questions."
+  },
+  "q4": {
+   "question": "Is a refund possible?",
+   "answer": "Yes, we offer a 30-day money-back guarantee if you are not satisfied with the premium features."
+  }
+ },
+ "title": "Frequently Asked Questions",
+ "subtitle": "Common questions about using OIYO",
+ "stillHaveQuestions": "Still have questions?",
+ "supportText": "Feel free to reach out anytime.",
+ "answer1": "Waiting for deep integration...",
+ "answer2": "Waiting for deep integration...",
+ "answer3": "Waiting for deep integration...",
+ "answer4": "Waiting for deep integration...",
+ "answer5": "Waiting for deep integration...",
+ "question1": "Waiting for deep integration...",
+ "question2": "Waiting for deep integration...",
+ "question3": "Waiting for deep integration...",
+ "question4": "Waiting for deep integration...",
+ "question5": "Waiting for deep integration...",
+ "moreQuestions": "Have more questions?",
+ "contact": "Contact us",
+ "meta": {
   "title": "Payment FAQ",
-  "subtitle": "Everything you need to know about payments",
-  "stillHaveQuestions": "Still need clarity?",
-  "supportText": "Contact the Guardians of Origin",
-  "answer1": "Waiting for deep integration...",
-  "answer2": "Waiting for deep integration...",
-  "answer3": "Waiting for deep integration...",
-  "answer4": "Waiting for deep integration...",
-  "answer5": "Waiting for deep integration...",
-  "question1": "Waiting for deep integration...",
-  "question2": "Waiting for deep integration...",
-  "question3": "Waiting for deep integration...",
-  "question4": "Waiting for deep integration...",
-  "question5": "Waiting for deep integration...",
-  "moreQuestions": "Have more questions on your mind?",
-  "contact": "Connect with Us",
-  "meta": {
-    "title": "Payment FAQ",
-    "description": "Frequently asked questions about payments, subscriptions and billing",
-    "keywords": "Payment, FAQ, Billing, Subscriptions, Pricing"
+  "description": "Frequently asked questions about payments, subscriptions and billing",
+  "keywords": "Payment, FAQ, Billing, Subscriptions, Pricing"
+ },
+ "items": [
+  {
+   "q": "Is my financial data safe?",
+   "a": "Yes, we prioritize privacy and do not store sensitive banking credentials."
   },
-  "items": [
-    {
-      "q": "Is my financial data safe?",
-      "a": "Yes, we prioritize privacy and do not store sensitive banking credentials."
-    },
-    {
-      "q": "How accurate is the result?",
-      "a": "It is based on standard behavioral finance psychology models."
-    },
-    {
-      "q": "Can I retake the test?",
-      "a": "Absolultely! Your financial mindset can evolve over time."
-    }
-  ]
+  {
+   "q": "How accurate is the result?",
+   "a": "It is based on standard behavioral finance psychology models."
+  },
+  {
+   "q": "Can I retake the test?",
+   "a": "Absolultely! Your financial mindset can evolve over time."
+  }
+ ]
 }

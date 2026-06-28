@@ -189,7 +189,7 @@
   "dashboard": {
     "guest": "사용자",
     "labels": {
-      "undiscovered": "분석되지 않음",
+      "undiscovered": "방문 전",
       "nameVibration": "이름 특성",
       "noblePerson": "파트너/가이드",
       "moonSign": "달 표시기",
@@ -501,7 +501,7 @@
   "onThisPage": "이 페이지에서",
   "universal": {
     "labels": {
-      "undiscovered": "분석되지 않음"
+      "undiscovered": "방문 전"
     },
     "explanation": {
       "morning_lark": "일찍 일어나고 아침에 가장 활동적입니다.",

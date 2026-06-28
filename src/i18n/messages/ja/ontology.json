@@ -70,7 +70,7 @@
   "dashboard": {
     "guest": "ゲストユーザー",
     "labels": {
-      "undiscovered": "まだ見ていない項目",
+      "undiscovered": "未訪問",
       "nameVibration": "名前の波動",
       "noblePerson": "貴人",
       "moonSign": "月星座",
@@ -569,7 +569,7 @@
   "onThisPage": "目次",
   "universal": {
     "labels": {
-      "undiscovered": "未発見"
+      "undiscovered": "未訪問"
     },
     "explanation": {
       "morning_lark": "朝型の人。午前中に最も活動的になります。",
