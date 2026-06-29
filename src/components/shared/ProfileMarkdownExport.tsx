@@ -291,6 +291,7 @@ export default function ProfileMarkdownExport({ locale }: Props) {
   const [form, setForm] = useState<ProfileForm>(INITIAL);
   const [copied, setCopied] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  const [format, setFormat] = useState<'md' | 'json' | 'csv' | 'soul'>('md');
   // 실제 사용자 프로필(zustand, oiyo_user_state) — 테스트로 수집된 데이터
   const storeProfile = useUserStore((s) => s.profile);
 
@@ -425,22 +426,65 @@ ${listLines(form.nextExperiments)}
 `;
   }, [form, labels]);
 
+  // 멀티 포맷 export: md / json / csv / SOUL.md (AI 페르소나). 전부 로컬 생성·다운로드(서버 전송 없음).
+  const json = useMemo(() => JSON.stringify(
+    { exportedAt: new Date().toISOString(), source: 'OIYO', note: 'local-only snapshot', profile: form }, null, 2,
+  ), [form]);
+
+  const csv = useMemo(() => {
+    const esc = (v: string) => `"${String(v ?? '').replace(/"/g, '""')}"`;
+    const rows = (Object.keys(form) as (keyof ProfileForm)[]).map((k) => `${esc(labels[k] ?? k)},${esc(form[k])}`);
+    return ['field,value', ...rows].join('\n');
+  }, [form, labels]);
+
+  const soul = useMemo(() => {
+    const v = (s: string) => s.trim() || '-';
+    return `# SOUL.md — ${form.name.trim() || 'Me'}
+
+> AI 비서가 "나"를 이해하고 돕기 위한 페르소나 카드. OIYO에서 로컬 생성(${new Date().toISOString().slice(0, 10)}). 스냅샷이며 변할 수 있음.
+
+## 정체성
+- 이름/호칭: ${v(form.name)}
+- MBTI: ${v(form.mbtiType)} · 별자리: ${v(form.zodiacSign)} · 혈액형: ${v(form.bloodType)}
+- 생년월일: ${v(form.birthDate)} ${form.birthTime.trim() ? `(${form.birthTime})` : ''}
+
+## 나를 움직이는 것
+- 좋아하는 키워드: ${form.favoriteKeywords.trim().replace(/\n/g, ', ') || '-'}
+- 행복한 순간: ${form.happyThings.trim().replace(/\n/g, ', ') || '-'}
+- 감각적 위안: ${form.sensoryComforts.trim().replace(/\n/g, ', ') || '-'}
+
+## 지금의 나
+- 현재 성향: ${v(form.currentTendencies)}
+- 최근 변화: ${form.recentChanges.trim().replace(/\n/g, ', ') || '-'}
+- 안정적 특질: ${form.stableTraits.trim().replace(/\n/g, ', ') || '-'}
+- 다음 실험: ${form.nextExperiments.trim().replace(/\n/g, ', ') || '-'}
+
+## AI가 나를 도울 때 (지침)
+- 위 성향·위안을 고려해 제안한다.
+- 스냅샷임을 인지하고, 단정하지 말고 확인하며 돕는다.
+- 개인정보는 외부로 보내지 않는다(local-first).
+`;
+  }, [form]);
+
+  const FORMATS = { md: { content: markdown, ext: 'md', mime: 'text/markdown' }, json: { content: json, ext: 'json', mime: 'application/json' }, csv: { content: csv, ext: 'csv', mime: 'text/csv' }, soul: { content: soul, ext: 'md', mime: 'text/markdown' } } as const;
+  const active = FORMATS[format];
+
   function update(key: keyof ProfileForm, value: string) {
     setForm((current) => ({ ...current, [key]: value }));
   }
 
   async function copyMarkdown() {
-    await navigator.clipboard.writeText(markdown);
+    await navigator.clipboard.writeText(active.content);
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1400);
   }
 
   function downloadMarkdown() {
-    const blob = new Blob([markdown], { type: 'text/markdown;charset=utf-8' });
+    const blob = new Blob([active.content], { type: `${active.mime};charset=utf-8` });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = `${form.name.trim() || 'oiyo'}-profile.md`;
+    link.download = `${form.name.trim() || 'oiyo'}-profile${format === 'soul' ? '-SOUL' : ''}.${active.ext}`;
     link.click();
     URL.revokeObjectURL(url);
   }
@@ -579,7 +623,17 @@ ${listLines(form.nextExperiments)}
               </button>
             </div>
           </div>
-          <pre className="max-h-[760px] overflow-auto rounded-lg bg-slate-950 p-4 text-xs leading-6 text-slate-100">{markdown}</pre>
+          {/* 포맷 선택 — 전부 브라우저에서 로컬 생성·다운로드(서버 전송 없음) */}
+          <div className="mb-3 flex flex-wrap items-center gap-1.5">
+            {([['md', 'Markdown'], ['json', 'JSON'], ['csv', 'CSV'], ['soul', 'SOUL.md (AI)']] as const).map(([f, lbl]) => (
+              <button key={f} onClick={() => setFormat(f)}
+                className={`rounded-md px-2.5 py-1 text-xs font-bold transition-colors ${format === f ? 'bg-green-700 text-white' : 'border border-green-200 text-green-800 hover:bg-green-50'}`}>
+                {lbl}
+              </button>
+            ))}
+            <span className="ml-auto text-[11px] text-slate-400">🔒 {locale === 'ko' ? '로컬에서만 생성 · 서버 전송 없음' : 'generated locally · never uploaded'}</span>
+          </div>
+          <pre className="max-h-[720px] overflow-auto rounded-lg bg-slate-950 p-4 text-xs leading-6 text-slate-100">{active.content}</pre>
         </div>
       </div>
     </section>
