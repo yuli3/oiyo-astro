@@ -1,5 +1,30 @@
 ---
 const defaultLocale = 'ko';
+
+const rootJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': 'https://oiyo.net/#website',
+      url: 'https://oiyo.net/',
+      name: 'OIYO',
+      description: 'Interactive self-understanding tools, tests, calculators, and structured knowledge routes across the OIYO family.',
+      inLanguage: ['ko', 'en', 'ja', 'zh-CN', 'fr', 'es'],
+      publisher: { '@id': 'https://oiyo.net/#organization' },
+    },
+    {
+      '@type': 'Organization',
+      '@id': 'https://oiyo.net/#organization',
+      name: 'Oiyo',
+      url: 'https://oiyo.net/',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://oiyo.net/icon-512.png',
+      },
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -11,6 +36,7 @@ const defaultLocale = 'ko';
     <link rel="canonical" href="https://oiyo.net/ko/" />
     <meta http-equiv="refresh" content="0; url=/ko/" />
     <title>OIYO</title>
+    <script type="application/ld+json" set:html={JSON.stringify(rootJsonLd)} />
     <script is:inline>
       (() => {
         const supported = ['ko', 'en', 'ja', 'zh', 'fr', 'es'];

@@ -1,0 +1,51 @@
+{
+  "$schema": "https://oiyo.net/schemas/brand-facts.schema.json",
+  "brand": {
+    "name": "Oiyo",
+    "canonicalName": "OIYO",
+    "canonicalUrl": "https://oiyo.net/",
+    "organizationId": "https://oiyo.net/#organization",
+    "logo": "https://oiyo.net/icon-512.png",
+    "description": "Oiyo is a three-layer knowledge and tool ecosystem: wiki for definitions, blog for explanations, and oiyo.net for interactive execution."
+  },
+  "currentSite": {
+    "name": "OIYO",
+    "url": "https://oiyo.net/",
+    "role": "execution",
+    "contentRole": "Interactive tests, calculators, results, sharing, and repeatable workflows.",
+    "knowledgeManifest": "https://oiyo.net/knowledge/index.json",
+    "primaryCatalog": "https://oiyo.net/knowledge/tools.json",
+    "llms": "https://oiyo.net/llms.txt"
+  },
+  "network": [
+    {
+      "name": "Oiyo Wiki",
+      "url": "https://wiki.oiyo.net/",
+      "role": "definition",
+      "knowledgeManifest": "https://wiki.oiyo.net/knowledge/index.json"
+    },
+    {
+      "name": "Oiyo Blog",
+      "url": "https://blog.oiyo.net/",
+      "role": "explanation",
+      "knowledgeManifest": "https://blog.oiyo.net/knowledge/index.json"
+    },
+    {
+      "name": "OIYO",
+      "url": "https://oiyo.net/",
+      "role": "execution",
+      "knowledgeManifest": "https://oiyo.net/knowledge/index.json"
+    }
+  ],
+  "locales": ["ko", "en", "ja", "zh", "fr", "es"],
+  "retiredLocales": ["cn"],
+  "citation": {
+    "attribution": "Oiyo",
+    "preferredUrl": "https://oiyo.net/",
+    "machineReadableEntryPoints": [
+      "https://oiyo.net/llms.txt",
+      "https://oiyo.net/knowledge/index.json",
+      "https://oiyo.net/knowledge/tools.json"
+    ]
+  }
+}

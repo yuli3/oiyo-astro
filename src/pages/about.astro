@@ -1,0 +1,41 @@
+---
+const defaultTarget = '/ko/about/';
+---
+
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href="https://oiyo.net/ko/about/" />
+    <meta http-equiv="refresh" content={`0; url=${defaultTarget}`} />
+    <title>About OIYO</title>
+    <script is:inline>
+      (() => {
+        const supported = ['ko', 'en', 'ja', 'zh', 'fr', 'es'];
+        const aliases = {
+          cn: 'zh',
+          'zh-cn': 'zh',
+          'zh-hans': 'zh',
+          'zh-hant': 'zh',
+          'zh-hk': 'zh',
+          'zh-mo': 'zh',
+          'zh-sg': 'zh',
+          'zh-tw': 'zh',
+        };
+        const normalize = (value) => {
+          if (!value || typeof value !== 'string') return null;
+          const language = value.toLowerCase();
+          return aliases[language] ?? aliases[language.split('-')[0]] ?? language.split('-')[0];
+        };
+        const candidates = [...(navigator.languages || []), navigator.language];
+        const locale = candidates.map(normalize).find((candidate) => supported.includes(candidate)) || 'ko';
+        window.location.replace(`/${locale}/about/`);
+      })();
+    </script>
+  </head>
+  <body>
+    <a href={defaultTarget}>About OIYO</a>
+  </body>
+</html>

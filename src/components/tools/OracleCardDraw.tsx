@@ -850,7 +850,7 @@ export default function OracleCardDraw({ locale }: Props) {
         ].join(', '),
       }} />
 
-      <div style={{ position: 'relative', zIndex: 1, maxWidth: 960, margin: '0 auto' }}>
+      <div style={{ position: 'relative', zIndex: 1, width: '100%', margin: '0 auto' }}>
         {/* Header */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 28, paddingBottom: 20, borderBottom: '1px solid rgba(35,36,31,0.12)' }}>
           <div>
