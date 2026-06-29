@@ -221,10 +221,8 @@ export function generateMetadata(config: SEOConfig): Metadata {
     title,
     twitter: {
       card: "summary_large_image",
-      creator: "@oiyo_net",
       description,
       images: [ogImage.url],
-      site: "@oiyo_net",
       title,
     },
     verification: {
