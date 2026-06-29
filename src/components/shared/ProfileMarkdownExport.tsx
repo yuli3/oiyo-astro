@@ -1,5 +1,6 @@
-import { Copy, Download, FileText, RotateCcw } from 'lucide-react';
+import { Copy, Download, FileText, RotateCcw, Sparkles } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
+import { useUserStore } from '@/lib/user/store/user-store';
 
 type Locale = 'en' | 'ko' | 'ja' | 'zh' | 'fr' | 'es';
 
@@ -290,6 +291,8 @@ export default function ProfileMarkdownExport({ locale }: Props) {
   const [form, setForm] = useState<ProfileForm>(INITIAL);
   const [copied, setCopied] = useState(false);
   const [hydrated, setHydrated] = useState(false);
+  // 실제 사용자 프로필(zustand, oiyo_user_state) — 테스트로 수집된 데이터
+  const storeProfile = useUserStore((s) => s.profile);
 
   useEffect(() => {
     try {
@@ -303,6 +306,21 @@ export default function ProfileMarkdownExport({ locale }: Props) {
       setHydrated(true);
     }
   }, []);
+
+  // 자동 프리필: 비어있는 프로필 필드를 실제 수집 데이터로 채운다(수동 입력은 보존).
+  useEffect(() => {
+    if (!hydrated || !storeProfile) return;
+    const PREFILL: (keyof ProfileForm)[] = ['name', 'birthDate', 'birthTime', 'bloodType', 'zodiacSign', 'mbtiType'];
+    setForm((prev) => {
+      let changed = false;
+      const next = { ...prev };
+      for (const k of PREFILL) {
+        const v = (storeProfile as Record<string, unknown>)[k];
+        if (!prev[k] && v) { next[k] = String(v); changed = true; }
+      }
+      return changed ? next : prev;
+    });
+  }, [hydrated, storeProfile]);
 
   useEffect(() => {
     if (!hydrated) return;
@@ -462,7 +480,7 @@ ${listLines(form.nextExperiments)}
   ];
 
   return (
-    <section className="mx-auto max-w-5xl px-4 py-10">
+    <section className="mx-auto max-w-6xl px-4 py-10">
       <div className="mb-8">
         <p className="text-xs font-black uppercase tracking-widest text-green-700">Markdown Export</p>
         <h1 className="mt-2 text-3xl font-black text-green-950">{text.title}</h1>
@@ -473,7 +491,43 @@ ${listLines(form.nextExperiments)}
         <p className="mt-2 max-w-2xl text-xs leading-6 text-slate-500">{text.privacy}</p>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_1fr]">
+      {(() => {
+        const m = ({
+          ko: { title: '내 데이터 수집 현황', done: '수집됨', go: '테스트 하러가기', hint: '테스트를 하면 아래 항목이 자동으로 채워집니다.' },
+          en: { title: 'Your data collected', done: 'collected', go: 'Take the test', hint: 'Taking tests auto-fills the fields below.' },
+        } as Record<string, { title: string; done: string; go: string; hint: string }>)[L] ?? ({ title: 'Your data collected', done: 'collected', go: 'Take the test', hint: 'Taking tests auto-fills the fields below.' });
+        const items = [
+          { key: 'birthDate', label: L === 'ko' ? '생년월일·사주' : 'Birth · Saju', href: `/${L}/saju` },
+          { key: 'mbtiType', label: 'MBTI', href: `/${L}/mbti` },
+          { key: 'zodiacSign', label: L === 'ko' ? '별자리' : 'Zodiac', href: `/${L}/zodiac-fortune` },
+          { key: 'bloodType', label: L === 'ko' ? '혈액형' : 'Blood type', href: null as string | null },
+        ];
+        const filled = items.filter((it) => form[it.key as keyof ProfileForm]).length;
+        const pct = Math.round((filled / items.length) * 100);
+        return (
+          <div className="mb-6 rounded-xl border border-green-100 bg-green-50/50 p-4">
+            <div className="mb-2 flex items-center justify-between gap-3">
+              <span className="flex items-center gap-2 text-sm font-black text-green-950"><Sparkles className="h-4 w-4" /> {m.title}</span>
+              <span className="text-xs font-bold text-green-700">{filled}/{items.length} · {pct}%</span>
+            </div>
+            <div className="mb-3 h-2 overflow-hidden rounded-full bg-green-100">
+              <div className="h-full rounded-full bg-green-600 transition-all" style={{ width: `${pct}%` }} />
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {items.map((it) => {
+                const has = !!form[it.key as keyof ProfileForm];
+                if (has) return <span key={it.key} className="rounded-md bg-green-100 px-2 py-1 text-[11px] font-semibold text-green-800">✓ {it.label}</span>;
+                return it.href
+                  ? <a key={it.key} href={it.href} className="rounded-md border border-green-300 bg-white px-2 py-1 text-[11px] font-semibold text-green-700 hover:bg-green-50">{it.label} · {m.go} →</a>
+                  : <span key={it.key} className="rounded-md bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-400">{it.label}</span>;
+              })}
+            </div>
+            <p className="mt-2 text-[11px] text-slate-500">{m.hint}</p>
+          </div>
+        );
+      })()}
+
+      <div className="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
         <div className="space-y-5">
           <div className="rounded-lg border border-green-100 bg-white p-5 shadow-sm">
             <h2 className="mb-4 flex items-center gap-2 text-lg font-black text-green-950">

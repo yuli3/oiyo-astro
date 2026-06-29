@@ -927,8 +927,9 @@ export default function OracleCardDraw({ locale }: Props) {
           </div>
         </div>
 
-        {/* Card stage + Reading panel */}
-        <div style={{ display: 'grid', gridTemplateColumns: drawn.length > 0 ? '1fr 360px' : '1fr', gap: 48, alignItems: 'start' }}>
+        {/* Card stage + Reading panel — responsive: stacks on mobile, side-by-side on lg+
+            (inline grid-template-columns can't do media queries → caused 360px overflow on mobile) */}
+        <div className={`grid items-start ${drawn.length > 0 ? 'gap-8 lg:gap-12 lg:grid-cols-[1fr_360px]' : 'gap-8'}`}>
           {/* Cards */}
           <div style={{ display: 'flex', gap: 36, justifyContent: 'center', flexWrap: 'wrap', minHeight: 380 }}>
             {anyDrawn ? (
