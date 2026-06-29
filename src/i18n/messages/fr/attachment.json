@@ -384,24 +384,24 @@
         ]
       },
       "actionPlan": {
-        "title": "Les Dernières Méditations de l'Oracle",
-        "description": "Restaurez le lien. Après une déconnexion, soyez le premier à tendre le pont. Reconnaissez l'impact mutuel et offrez votre présence comme un espace de retrouvailles.",
+        "title": "Plan d'action sur 4 semaines",
+        "description": "Faites une étape par semaine, sans pression. Si vous en ratez une, ce n'est pas grave. L'essentiel est de commencer.",
         "steps": [
           {
-            "title": "Semaine 1 · Le Parchemin de Conscience",
-            "description": "Réfléchissez à une friction récente. Qu’a cru votre âme attachante à ce moment-là ? Que craignait-il ? Enregistrez des limites spécifiques ou des échos de réconfort qui auraient servi de pont sécurisé."
+            "title": "Semaine 1 · Identifiez vos schémas",
+            "description": "Pensez à un moment récent où vous étiez mal à l'aise dans une relation. Notez ce que vous avez pensé et ressenti. Comprendre vos réactions, c'est déjà la moitié du chemin."
           },
           {
-            "title": "Semaine 2 · Le Laboratoire de Résonance",
-            "description": "Utilisez la structure alchimique : « Quand X se produit, je ressens Y. Je recherche le soutien de Z. » Entraînez-vous d’abord dans des relations à faibles enjeux avant de tendre la main à vos proches."
+            "title": "Semaine 2 · Exprimez-vous directement",
+            "description": "Arrêtez de sous-entendre ou de subir. Essayez : 'Quand tu fais ça, je ressens X, j'aimerais que tu fasses Y'. Entraînez-vous avec quelqu'un de confiance, peu importe si la phrase n'est pas parfaite."
           },
           {
-            "title": "Semaine 3 · Orchestration du système nerveux",
-            "description": "Rappelez-vous vos situations déclencheurs les plus fréquentes et entraînez-vous à respirer, à tapoter ou à bouger afin que vos cellules se souviennent de la sensation de sécurité."
+            "title": "Semaine 3 · Apprenez à vous calmer",
+            "description": "Choisissez une méthode pour vous apaiser quand l'anxiété ou l'évitement montent (respiration, marche, relecture de notes). Répétez-la pour que votre corps apprenne à se sentir en sécurité."
           },
           {
-            "title": "Semaine 4 · Le Rituel de Réparation",
-            "description": "Après une tension inévitable, commencez la réparation en nommant courageusement l’impact, en recherchant humblement des commentaires et en co-concevant une voie plus résonnante vers l’avenir."
+            "title": "Semaine 4 · Réparer après un conflit",
+            "description": "Après une tension, ne fuyez pas. Tentez de renouer avec un simple 'J'ai réagi un peu vivement tout à l'heure'. Une relation solide ne se définit pas par l'absence de disputes, mais par la capacité à se reconnecter après."
           }
         ]
       },
@@ -416,10 +416,10 @@
             "Communiquez vos besoins dès l’aube avant qu’ils ne sombrent dans le crépuscule du ressentiment."
           ],
           "growth": [
-            "N'oubliez pas que même le partenaire le plus dévoué ne peut pas lire tous vos silences ; continuer à demander un soutien spécifique.",
-            "Assurez-vous de ne pas trop travailler pour éviter de décevoir les autres au détriment de votre propre repos.",
-            "Cultivez l'art de la « pure présence », en évitant simplement l'envie de concevoir des solutions.",
-            "Maintenez une douce curiosité quant à la manière dont les ombres du stress ou du chagrin agissent sur vos eaux calmes."
+            "Ce n'est pas parce que vous êtes stable que l'autre devine tout ce que vous ressentez. Exprimez clairement vos besoins en matière de soutien.",
+            "Vérifiez si vous ne portez pas tout sur vos épaules pour éviter de décevoir les autres. Dire 'je ne peux pas' est sain.",
+            "Avant de chercher à résoudre le problème, rappelez-vous que votre simple présence suffit souvent.",
+            "Plus une relation est confortable, plus on a tendance à négliger les marques d'affection. Dites merci et exprimez votre attachement régulièrement."
           ],
           "relationship": [
             "Agir comme un modèle de « validation transparente » pour fournir un sanctuaire aux compagnons moins stables.",
@@ -442,10 +442,10 @@
             "Chérissez un espoir immortel pour le pouvoir de réparation, quelle que soit la durée de la nuit."
           ],
           "growth": [
-            "Pratiquez une pause sacrée lorsque l’envie de tendre la main se fait sentir. Respirez et demandez ce que votre âme cherche vraiment.",
-            "Pratiquez la vulnérabilité en demandant clairement : « Je me sens ~ ; J'ai besoin de ~, plutôt que d'essayer de lire entre les lignes.",
-            "Rassemblez une « liturgie des preuves » concernant la loyauté des êtres chers afin que votre système nerveux puisse reposer sur la vérité.",
-            "N’oubliez pas que votre profonde capacité de désir est un don sacré et non un fardeau dont vous devez vous débarrasser."
+            "Avant d'imaginer le pire si on ne vous répond pas, notez 'il est sûrement occupé' et faites autre chose pendant 30 minutes. Ce n'est probablement rien.",
+            "Ne tournez pas autour du pot, demandez directement. 'Je suis anxieux, peux-tu me rassurer ?' — l'autre ne peut pas lire votre silence.",
+            "Faites une liste des preuves que l'autre tient à vous. Relisez-la quand l'anxiété monte pour calmer votre esprit.",
+            "Au lieu de tourner en rond, bougez. N'attendez pas le moment parfait ; envoyez ce message ou commencez cette tâche, cela coupera court à vos scénarios mentaux."
           ],
           "relationship": [
             "Établissez des rythmes de connexion partagés pour dissiper le brouillard de l’attente et du doute.",
@@ -467,10 +467,10 @@
             "Capable d’affiner des marées intérieures complexes en un langage clair une fois la confiance établie."
           ],
           "growth": [
-            "Observez les moments où le « bouclier de la logique » est utilisé pour masquer la vulnérabilité du chagrin ou du désir.",
-            "Expérimentez l'« offrande progressive » : partagez un petit besoin subtil avant de résoudre les problèmes dans la solitude.",
-            "Commencez à faire face aux commentaires plutôt que de battre en retraite lorsqu’ils arrivent.",
-            "Permettez-vous de chercher du réconfort auprès de témoins choisis, même pour un bref instant."
+            "Regardez si vous n'utilisez pas la logique pour masquer vos émotions. Avant de dire 'ça va', essayez un petit 'en fait, ça m'a blessé'.",
+            "Avant de tout gérer seul, entraînez-vous à demander de petites choses. Accepter de l'aide fait partie de la relation.",
+            "Si vous avez besoin de distance, ne disparaissez pas. Dites : 'J'ai besoin d'être seul pour réfléchir, on en reparle plus tard'.",
+            "Quand on vous fait un retour, ne vous braquez pas. Accueillez-le simplement en disant : 'Je vois ce que tu veux dire'."
           ],
           "relationship": [
             "Expliquez clairement votre topographie spécifique de l'intimité afin que les compagnons ne se fient pas à des suppositions.",
@@ -493,10 +493,10 @@
             "Capable d’être témoin et d’honorer simultanément des vérités à multiples facettes."
           ],
           "growth": [
-            "Suivez les déclencheurs spécifiques qui conduisent à des retraites soudaines et créez des scripts de récupération à utiliser dans ces moments-là.",
-            "Ayez le courage de procéder à une « enquête proactive » : demander confirmation à l'autre personne avant d'agir sous l'effet de la peur.",
-            "Faites la distinction judicieuse entre les relations sans danger pour la vulnérabilité et celles qui nécessitent des limites plus fermes.",
-            "Bénissez-vous de vous ancrer dans la présence d’un partenaire, même dans des situations remplies de malaise."
+            "Identifiez ce qui déclenche votre envie de fuir et préparez une phrase de 'pause' à vous dire à ce moment-là.",
+            "Avant de rompre par peur, vérifiez la réalité : 'J'ai peur, mais est-ce que ce que je crains est vraiment en train d'arriver ?'",
+            "Vous n'avez pas besoin de tout ouvrir à tout le monde. Apprenez d'abord à distinguer les personnes sûres de celles avec qui vous devez garder une distance.",
+            "N'attendez pas d'être parfaitement prêt pour vous rapprocher. Faites un pas, même maladroit, pour lancer la relation."
           ],
           "relationship": [
             "Illuminez et expliquez les émotions complexes qui se produisent en vous pour votre partenaire.",
@@ -519,10 +519,10 @@
             "Maintenez vos besoins comme sacrés tout en assumant gracieusement la responsabilité de votre impact sur les autres."
           ],
           "growth": [
-            "Continuez à mettre à jour vos stratégies d’adaptation à mesure que les circonstances de la vie changent.",
-            "Célébrez pleinement les réalisations majestueuses de votre processus de guérison plutôt que de vous concentrer uniquement sur le prochain objectif.",
-            "Utilisez non seulement la gestion de crise, mais aussi la joie et le jeu comme des pratiques d'attachement profondes.",
-            "Soyez fier de votre propre croissance et reconnaissez-la."
+            "Si la situation change, mettez à jour votre façon de réagir. Vos anciennes méthodes ne sont peut-être plus adaptées.",
+            "Ne regardez pas seulement le prochain objectif, félicitez-vous du chemin déjà parcouru.",
+            "Il n'y a pas que la gestion de crise dans la vie ; s'amuser est aussi un excellent exercice d'attachement.",
+            "Votre changement sert d'exemple à votre entourage. Partagez ce que vous avez appris sans complexe."
           ],
           "relationship": [
             "Co-concevez des rituels de connexion pour renforcer la base sécurisée que vous construisez.",
