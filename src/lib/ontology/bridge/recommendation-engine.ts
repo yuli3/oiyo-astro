@@ -120,8 +120,11 @@ export class RecommendationAggregationService {
   }
 
   public static getTopCode(scores: Record<RiasecType, number>): string {
-    return Object.entries(scores)
-      .sort(([, a], [, b]) => b - a)
+    const sorted = Object.entries(scores).sort(([, a], [, b]) => b - a);
+    // 신호가 전혀 없으면(최고점이 0) 코드 없음 → 추천도 없음.
+    // (전엔 0점이어도 첫 3글자를 반환해 미입력인데 '콘텐츠 크리에이터·건축가' 등 가짜 추천이 떴음)
+    if (!sorted.length || sorted[0][1] <= 0.001) return "";
+    return sorted
       .slice(0, 3)
       .map(([type]) => type[0])
       .join("");
