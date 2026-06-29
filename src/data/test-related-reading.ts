@@ -53,118 +53,118 @@ function resolveLocale(locale: Locale, available: Locale[]): Locale {
 
 // key = route without locale prefix (e.g. "/iq-test")
 export const TEST_RELATED_READING: Record<string, RelatedReading> = {
-  "/iq-test": { blog: "/iq-test-free/" },
+  "/iq-test": { blog: "/iq-test-free/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   "/hsp-test": { wiki: "/meaning-of-hsp/", wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
-  "/procrastination-type-test": { blog: "/procrastination-type-test/" },
+  "/procrastination-type-test": { blog: "/procrastination-type-test/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   // 긴급 5건 교체 2026-06-23: 기존 slug(404 위험) → 실존 slug
-  "/communication-style-test": { blog: "/magazine-communication-style-psychology/", blogLocales: ['ko', 'en'] },
-  "/conflict-style-test": { blog: "/magazine-conflict-style-psychology/", blogLocales: ['ko', 'en'] },
-  "/stress-type-test": { blog: "/mbti-stress-type-test/" },
-  "/resilience-test": { blog: "/resilience-test/" },
-  "/grit-scale-test": { blog: "/resilience-science/", blogLocales: ['ko', 'en'] },
+  "/communication-style-test": { blog: "/magazine-communication-style-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/conflict-style-test": { blog: "/magazine-conflict-style-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/stress-type-test": { blog: "/mbti-stress-type-test/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/resilience-test": { blog: "/resilience-test/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/grit-scale-test": { blog: "/resilience-science/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/imposter-syndrome-test": { blog: "/imposter-syndrome-doubt/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
-  "/cognitive-bias-test": { blog: "/cognitive-bias-complete-guide/" },
-  "/decision-making-test": { blog: "/magazine-decision-making-psychology/", blogLocales: ['ko', 'en'] },
+  "/cognitive-bias-test": { blog: "/cognitive-bias-complete-guide/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/decision-making-test": { blog: "/magazine-decision-making-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/self-compassion-test": {
     blog: "/magazine-self-compassion-psychology/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-self-compassion/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/learning-style-test": {
     blog: "/learning-styles-efficiency/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-learning-styles/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/emotion-regulation-test": {
     blog: "/magazine-emotion-regulation-psychology/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-emotion-regulation/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   // 2026-06-23 새 테스트 → 새 매거진 가이드 (codex 생성)
-  "/workaholic-test": { blog: "/magazine-workaholism-psychology/" },
-  "/fomo-test": { blog: "/magazine-fomo-psychology/" },
-  "/money-anxiety-test": { blog: "/magazine-money-anxiety-psychology/" },
-  "/assertiveness-test": { blog: "/magazine-assertiveness-psychology/" },
-  "/relationship-boredom-test": { blog: "/magazine-relationship-boredom-psychology/" },
-  "/social-comparison-test": { blog: "/magazine-social-comparison-psychology/" },
+  "/workaholic-test": { blog: "/magazine-workaholism-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/fomo-test": { blog: "/magazine-fomo-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/money-anxiety-test": { blog: "/magazine-money-anxiety-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/assertiveness-test": { blog: "/magazine-assertiveness-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/relationship-boredom-test": { blog: "/magazine-relationship-boredom-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/social-comparison-test": { blog: "/magazine-social-comparison-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   // 기존 매거진 가이드와 매칭
-  "/shadow-self-test": { blog: "/jung-shadow-psychology/", blogLocales: ['ko', 'en', 'ja'] },
+  "/shadow-self-test": { blog: "/jung-shadow-psychology/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
   "/self-efficacy-test": {
     blog: "/magazine-growth-mindset-psychology/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-self-efficacy/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
-  "/inner-child-test": { blog: "/trauma-healing-psychology/" },
+  "/inner-child-test": { blog: "/trauma-healing-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   // 2026-06-23 기존 테스트 → 기존 매거진/가이드 매칭 (codex-free 확대)
-  "/anger-style/test": { blog: "/magazine-anger-style-psychology/", blogLocales: ['ko', 'en'] },
+  "/anger-style/test": { blog: "/magazine-anger-style-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/adhd/test": {
     blog: "/adult-adhd-survival-guide/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-adhd/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/anxiety/test": {
-    blog: "/magazine-anxiety-insomnia-psychology/",
+    blog: "/magazine-anxiety-insomnia-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-anxiety/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
-  "/boundary-style-test": { blog: "/magazine-boundary-psychology/", blogLocales: ['ko', 'en'] },
-  "/color-personality-test": { blog: "/color-psychology-complete-guide/" },
-  "/coping-style-test": { blog: "/magazine-coping-style-psychology/", blogLocales: ['ko', 'en'] },
-  "/creativity-type-test": { blog: "/magazine-creativity-type-psychology/", blogLocales: ['ko', 'en'] },
-  "/disc-personality-test": { blog: "/magazine-disc-personality-psychology/", blogLocales: ['ko', 'en'] },
-  "/egogram-test": { blog: "/magazine-egogram-psychology/", blogLocales: ['ko', 'en'] },
-  "/empathy/test": { blog: "/magazine-empathy-psychology/", blogLocales: ['ko', 'en'] },
-  "/growth-mindset-test": { blog: "/magazine-growth-mindset-psychology/", blogLocales: ['ko', 'en'] },
-  "/introvert-extrovert-test": { blog: "/magazine-introvert-extrovert-psychology/", blogLocales: ['ko', 'en'] },
-  "/investment-type/test": { blog: "/magazine-investment-psychology-guide/", blogLocales: ['ko', 'en'] },
-  "/leadership-style-test": { blog: "/magazine-leadership-style-psychology/", blogLocales: ['ko', 'en'] },
-  "/life-values-test": { blog: "/magazine-life-values-psychology/", blogLocales: ['ko', 'en'] },
-  "/love-language/test": { blog: "/magazine-love-language-psychology/", blogLocales: ['ko', 'en'] },
-  "/mbti-love-test": { blog: "/magazine-mbti-love-psychology/", blogLocales: ['ko', 'en'] },
-  "/meeting-style-test": { blog: "/magazine-meeting-cost-psychology/", blogLocales: ['ko', 'en'] },
+  "/boundary-style-test": { blog: "/magazine-boundary-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/color-personality-test": { blog: "/color-psychology-complete-guide/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/coping-style-test": { blog: "/magazine-coping-style-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/creativity-type-test": { blog: "/magazine-creativity-type-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/disc-personality-test": { blog: "/magazine-disc-personality-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/egogram-test": { blog: "/magazine-egogram-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/empathy/test": { blog: "/magazine-empathy-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/growth-mindset-test": { blog: "/magazine-growth-mindset-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/introvert-extrovert-test": { blog: "/magazine-introvert-extrovert-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/investment-type/test": { blog: "/magazine-investment-psychology-guide/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/leadership-style-test": { blog: "/magazine-leadership-style-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/life-values-test": { blog: "/magazine-life-values-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/love-language/test": { blog: "/magazine-love-language-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/mbti-love-test": { blog: "/magazine-mbti-love-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/meeting-style-test": { blog: "/magazine-meeting-cost-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/money-personality-test": { blog: "/psychology-of-money/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
-  "/motivation-type-test": { blog: "/magazine-motivation-type-psychology/", blogLocales: ['ko', 'en'] },
-  "/narcissism/test": { blog: "/narcissism-psychology-guide/" },
-  "/optimism-test": { blog: "/magazine-optimism-psychology/", blogLocales: ['ko', 'en'] },
-  "/parenting-style-test": { blog: "/magazine-parenting-psychology-guide/", blogLocales: ['ko', 'en'] },
-  "/self-esteem/test": { blog: "/magazine-self-esteem-psychology/", blogLocales: ['ko', 'en'] },
-  "/social-anxiety/test": { blog: "/magazine-social-anxiety-psychology/", blogLocales: ['ko', 'en'] },
-  "/work-style-test": { blog: "/magazine-work-style-psychology/", blogLocales: ['ko', 'en'] },
+  "/motivation-type-test": { blog: "/magazine-motivation-type-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/narcissism/test": { blog: "/narcissism-psychology-guide/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/optimism-test": { blog: "/magazine-optimism-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/parenting-style-test": { blog: "/magazine-parenting-psychology-guide/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/self-esteem/test": { blog: "/magazine-self-esteem-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/social-anxiety/test": { blog: "/magazine-social-anxiety-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/work-style-test": { blog: "/magazine-work-style-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   // 2026-06-23 신규 테스트 9종 전용 가이드 (codex 생성) — 삼각 완성
-  "/entrepreneurial-aptitude-test": { blog: "/magazine-entrepreneurship-psychology/" },
-  "/self-concept-clarity-test": { blog: "/magazine-self-concept-clarity-psychology/" },
-  "/jealousy-type-test": { blog: "/magazine-jealousy-psychology/" },
-  "/curiosity-test": { blog: "/magazine-curiosity-psychology/" },
-  "/locus-of-control-test": { blog: "/magazine-locus-of-control-psychology/" },
-  "/emotional-labor-test": { blog: "/magazine-emotional-labor-psychology/" },
-  "/self-control-test": { blog: "/magazine-self-control-psychology/" },
-  "/playfulness-test": { blog: "/magazine-playfulness-psychology/" },
-  "/emotional-expressiveness-test": { blog: "/magazine-emotional-expressiveness-psychology/" },
+  "/entrepreneurial-aptitude-test": { blog: "/magazine-entrepreneurship-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/self-concept-clarity-test": { blog: "/magazine-self-concept-clarity-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/jealousy-type-test": { blog: "/magazine-jealousy-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/curiosity-test": { blog: "/magazine-curiosity-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/locus-of-control-test": { blog: "/magazine-locus-of-control-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/emotional-labor-test": { blog: "/magazine-emotional-labor-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/self-control-test": { blog: "/magazine-self-control-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/playfulness-test": { blog: "/magazine-playfulness-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/emotional-expressiveness-test": { blog: "/magazine-emotional-expressiveness-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   // A등급 22종 신규 브릿지 2026-06-23 (Apollo 실존 검증 매트릭스 기반, Hephaestus fs 재확인)
   "/burnout/test": {
     blog: "/magazine-burnout-psychology/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-burnout/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/attachment-style/test": {
     blog: "/magazine-attachment-test/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-attachment-theory/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/enneagram/test": {
-    blog: "/enneagram-complete-types-guide/",
+    blog: "/enneagram-complete-types-guide/", blogLocales: ['ko', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-enneagram/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/mbti/test": {
-    blog: "/mbti-career-test/",
+    blog: "/mbti-career-test/", blogLocales: ['ko', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-mbti/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
@@ -174,21 +174,21 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
     wiki: "/meaning-of-chronotypes/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
-  "/loneliness-test": { blog: "/magazine-loneliness-guide/", blogLocales: ['ko', 'en'] },
-  "/mindfulness-test": { blog: "/magazine-mindfulness-guide/", blogLocales: ['ko', 'en'] },
+  "/loneliness-test": { blog: "/magazine-loneliness-guide/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/mindfulness-test": { blog: "/magazine-mindfulness-guide/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/perfectionism/test": {
     blog: "/magazine-perfectionism-psychology/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-perfectionism/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/riasec-career-test": {
     blog: "/riasec-career-complete-guide/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-riasec/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
-  "/eq/test": { blog: "/magazine-emotional-intelligence-psychology/", blogLocales: ['ko', 'en'] },
+  "/eq/test": { blog: "/magazine-emotional-intelligence-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/toxic-relationship-test": { blog: "/gaslighting-manipulation/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
   "/dopamine-dependency-test": {
     blog: "/dopamine-fasting-focus/",
@@ -198,57 +198,56 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/hormones-test": {
     blog: "/hormones-and-metabolic-regulators/",
-    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-hormones/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/personal-color/test": {
-    blog: "/personal-color-season-test/",
+    blog: "/personal-color-season-test/", blogLocales: ['ko', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-color-psychology/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/lazy-perfectionist/test": {
     blog: "/lazy-perfectionism-lethargy-30-day-recovery/",
-    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-lazy-perfectionism/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
-  "/career-values-test": { blog: "/psychology-career-values-test/", blogLocales: ['ko', 'en'] },
-  "/spending-habits-test": { blog: "/latte-factor-spending-habits/", blogLocales: ['ko', 'en'] },
+  "/career-values-test": { blog: "/psychology-career-values-test/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/spending-habits-test": { blog: "/latte-factor-spending-habits/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/trust-style-test": { blog: "/trust-and-betrayal/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
-  "/resilience-boost-test": { blog: "/magazine-resilience-psychology/", blogLocales: ['ko', 'en'] },
+  "/resilience-boost-test": { blog: "/magazine-resilience-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/focus-blocker-test": {
     blog: "/magazine-focus-concentration-guide/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-executive-function/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
-  "/critical-thinking-test": { blog: "/critical-thinking-logic-guide/" },
-  "/chimp-test": { blog: "/chimp-test-cognitive-memory/", blogLocales: ['ko', 'en'] },
+  "/critical-thinking-test": { blog: "/critical-thinking-logic-guide/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/chimp-test": { blog: "/chimp-test-cognitive-memory/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   // C2-B 즉시 파트 2026-06-24 — A등급 7종 (blog+wiki 둘다) + B등급 10종 (한쪽만)
   // fs 검증 완료: ko=확인, en/ja 화이트리스트=실존 파일 기반
   // --- A등급 7종 ---
   "/big5/test": {
     blog: "/psychology-big-five-test/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-big5/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/color-aura-test": {
-    blog: "/color-psychology-complete-guide/",
-    // color-psychology-complete-guide: en=NO ja=NO zh=NO fr=NO es=NO (fs 확인) → ko-only
+    blog: "/color-psychology-complete-guide/", blogLocales: ['ko', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-color-psychology/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/commute-mental/test": {
     blog: "/flow-state-happiness-psychology/",
-    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-cognitive-load/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/inner-strength/test": {
     blog: "/viktor-frankl-purpose/",
-    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-self-efficacy/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
@@ -266,18 +265,18 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/political/test": {
     blog: "/abilene-paradox-groupthink/",
-    blogLocales: ['ko', 'en', 'ja'], // zh/fr/es 없음(fs 확인)
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-cognitive-biases/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   // --- B등급 10종 (한쪽만) ---
   "/authoritarian/test": {
     blog: "/dark-triad-human-nature-shadow/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/collab-risk-test": {
     blog: "/abilene-paradox-groupthink/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/compatibility-test": {
     wiki: "/meaning-of-attachment-theory/",
@@ -289,7 +288,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/happiness-meter-test": {
     blog: "/flow-state-happiness-psychology/",
-    blogLocales: ['ko', 'en', 'ja'],
+    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/hexaco-personality-test": {
     wiki: "/meaning-of-hexaco/",
@@ -301,7 +300,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/personal-boundaries-test": {
     blog: "/magazine-boundary-psychology/",
-    blogLocales: ['ko', 'en'],
+    blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
   },
   "/sensory-processing-test": {
     wiki: "/meaning-of-hsp/",
@@ -340,9 +339,9 @@ export function getRelatedReading(
 // ---------------------------------------------------------------------------
 // fs 검증 메모 (2026-06-24, authoring-time 기록 — 빌드타임 import 아님)
 // ---------------------------------------------------------------------------
-// blog: blog/src/content/blog/{zh,fr,es}/<slug>.mdx 직접 확인 결과
-//   zh/fr/es 모두 존재: dopamine-fasting-focus, five-love-languages-connection
-//   그 외 blog slug: zh/fr/es 없음 → 추가 안 함 (폴백 체인이 en/ko로 처리)
+// blog: blog/src/content/blog/{ko,en,ja,zh,fr,es}/<slug>.mdx 직접 확인 결과를
+//   위 RELATED_READING_ENTRIES의 blogLocales에 동기화한다.
+//   미존재 로케일은 resolveLocale 폴백 체인이 en/ko로 처리한다.
 //
 // wiki: wiki/src/content/blog/{zh,fr,es}/<slug>.mdx 직접 확인 결과
 //   zh/fr/es 모두 존재 (25개 전부):

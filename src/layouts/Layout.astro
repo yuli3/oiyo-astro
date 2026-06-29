@@ -90,14 +90,15 @@ const themeColor = '#65a30d';
           "url": Astro.site,
           "name": "OIYO",
           "description": descriptionDefaults['en'],
-          "inLanguage": BCP47[locale] ?? locale
+          "inLanguage": BCP47[locale] ?? locale,
+          "publisher": { "@id": "https://oiyo.net/#organization" }
         },
         {
           "@type": "Organization",
-          "@id": `${Astro.site}#organization`,
-          "name": "OIYO",
-          "url": siteUrl,
-          "logo": { "@type": "ImageObject", "url": faviconUrl }
+          "@id": "https://oiyo.net/#organization",
+          "name": "Oiyo",
+          "url": "https://oiyo.net",
+          "logo": { "@type": "ImageObject", "url": "https://oiyo.net/icon-512.png" }
         }
       ]
     })} />
