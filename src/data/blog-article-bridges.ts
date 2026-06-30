@@ -24,4 +24,11 @@ export const BLOG_ARTICLE_BRIDGES: Record<string, BlogArticleBridge> = {
   "relationship-boredom-test": { slug: "magazine-relationship-boredom-psychology", locales: ["es", "fr", "ko", "zh"] },
   "self-concept-clarity-test": { slug: "magazine-self-concept-clarity-psychology", locales: ["es", "fr", "ko", "zh"] },
   "social-comparison-test": { slug: "magazine-social-comparison-psychology", locales: ["es", "fr", "ko", "zh"] },
+  "happiness-meter-test": { slug: "flow-state-happiness-psychology", locales: ["en", "es", "fr", "ja", "ko", "zh"] },
+  "hormones-test": { slug: "hormones-and-metabolic-regulators", locales: ["en", "es", "fr", "ja", "ko", "zh"] },
+  "disc-personality-test": { slug: "disc-personality-workplace-guide", locales: ["en", "ko"] },
+  "introvert-extrovert-test": { slug: "introvert-extrovert-science", locales: ["en", "ko"] },
+  "life-values-test": { slug: "life-values-and-happiness", locales: ["en", "ko"] },
+  "love-profile-test": { slug: "psychology-love-profile-test", locales: ["en", "ko"] },
+  "riasec-career-test": { slug: "magazine-riasec-career-test", locales: ["en", "ko"] },
 };
