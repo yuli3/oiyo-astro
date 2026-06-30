@@ -211,6 +211,16 @@ const journeyUi: Record<Locale, { mapProgress: string; nextStep: string; mapComp
   es: { mapProgress: 'Progreso del mapa', nextStep: 'Siguiente paso', mapComplete: 'Tu mapa del ser está completo 🎉' },
 };
 const ju = journeyUi[locale] ?? journeyUi.en;
+// Recorded results summary (read-only aggregation of oiyo:test-results:v1).
+const recordsUi: Record<Locale, { label: string; empty: string }> = {
+  ko: { label: '나의 기록', empty: '아직 기록된 결과가 없어요. 위 좌표를 채워보세요.' },
+  en: { label: 'Your records', empty: 'No results recorded yet. Fill a coordinate above.' },
+  ja: { label: '私の記録', empty: 'まだ記録された結果がありません。上の座標を埋めてみましょう。' },
+  zh: { label: '我的记录', empty: '还没有记录的结果。先填上面的坐标吧。' },
+  fr: { label: 'Mes résultats', empty: 'Aucun résultat enregistré. Remplissez une coordonnée ci-dessus.' },
+  es: { label: 'Mis registros', empty: 'Aún no hay resultados. Completa una coordenada arriba.' },
+};
+const ru = recordsUi[locale] ?? recordsUi.en;
 // Guide stops = destinations unique to the legacy journey (not already a coordinate card).
 const guideStops = [journeyStops[2], journeyStops[4], journeyStops[5]];
 
@@ -291,6 +301,14 @@ for (const ns of namespaces) {
           <span aria-hidden="true">→</span>
           <span id="ontology-next-step-text">{ju.nextStep}: {coordinateCards[0].title}</span>
         </a>
+      </div>
+
+      <!-- Recorded results summary: shows real entries the user has saved. -->
+      <div class="mt-5">
+        <p class="text-[11px] font-black uppercase tracking-wider text-violet-400">{ru.label}</p>
+        <div id="ontology-results-list" data-empty={ru.empty} class="mt-2 flex flex-wrap gap-2">
+          <span class="text-sm text-violet-500">{ru.empty}</span>
+        </div>
       </div>
 
       <a href={`/${locale}/profile/export`} class="mt-4 flex flex-col gap-2 rounded-2xl border border-emerald-200 bg-emerald-50/70 p-4 text-emerald-950 transition hover:border-emerald-400 hover:bg-emerald-50 md:flex-row md:items-center md:justify-between">
@@ -438,6 +456,30 @@ for (const ns of namespaces) {
           : (birthEl.getAttribute('data-unset-label') || 'Not set');
         birthEl.classList.toggle('text-emerald-600', !!has);
         birthEl.classList.toggle('text-violet-900', !has);
+      }
+
+      // Recorded results as chips (real saved entries), or an empty hint.
+      const listEl = document.getElementById('ontology-results-list');
+      if (listEl) {
+        listEl.innerHTML = '';
+        const results = readJson(TESTS_KEY);
+        if (Array.isArray(results) && results.length) {
+          results.slice(0, 16).forEach((r) => {
+            const href = r && typeof r.sourcePath === 'string' ? r.sourcePath : '';
+            const el = document.createElement(href ? 'a' : 'span');
+            if (href) el.setAttribute('href', href);
+            el.className = 'inline-flex items-center gap-1 rounded-full border border-violet-200 bg-white px-3 py-1 text-xs font-bold text-violet-800 transition hover:border-violet-400';
+            const title = r && r.title ? String(r.title) : '';
+            const val = r && r.resultLabel ? String(r.resultLabel) : '';
+            el.textContent = val ? `${title} · ${val}` : title;
+            listEl.appendChild(el);
+          });
+        } else {
+          const span = document.createElement('span');
+          span.className = 'text-sm text-violet-500';
+          span.textContent = listEl.getAttribute('data-empty') || '';
+          listEl.appendChild(span);
+        }
       }
     };
     apply();
