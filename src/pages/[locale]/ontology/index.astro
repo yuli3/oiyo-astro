@@ -187,6 +187,23 @@ const cardMeta = [
 ];
 const coordinateCards = cardMeta.map((m, i) => ({ ...m, ...(ct[i] ?? cardText.en[i]), status: wt.open, cta: wt.try }));
 
+// 3-zone "second brain" copy: Zone1 your data / Zone2 coordinates / Zone3 guide / deep dive.
+const zoneText: Record<Locale, {
+  z1Title: string; z1Sub: string; birthLabel: string; birthSet: string; birthUnset: string;
+  testsLabel: string; coordsLabel: string; z2Title: string; z2Sub: string;
+  z3Title: string; z3Sub: string; deepTitle: string; deepSub: string; allTools: string;
+}> = {
+  ko: { z1Title: '나의 데이터', z1Sub: '당신에 대해 지금까지 기록된 것 — 모두 이 브라우저에만 저장됩니다.', birthLabel: '생년월일', birthSet: '기록됨', birthUnset: '미입력', testsLabel: '완료한 테스트', coordsLabel: '기록된 좌표', z2Title: '내 좌표 — 채운 것과 빈 것', z2Sub: '빈 좌표를 채울수록 당신의 존재 지도가 또렷해집니다.', z3Title: '다음 탐색 가이드', z3Sub: '기록을 바탕으로 추천하는 다음 단계와 깊이 더하기.', deepTitle: '심화 탐색 — 모든 좌표를 한 화면에서', deepSub: '사주·바이오리듬·자미두수 등 모든 엔진을 겹쳐 읽는 인터랙티브 작업대.', allTools: 'oiyo의 모든 도구 둘러보기' },
+  en: { z1Title: 'Your data', z1Sub: "What we've recorded about you so far — all kept in this browser only.", birthLabel: 'Birth date', birthSet: 'Recorded', birthUnset: 'Not set', testsLabel: 'Tests completed', coordsLabel: 'Coordinates recorded', z2Title: 'My coordinates — filled & empty', z2Sub: 'The more empty coordinates you fill, the sharper your map of being becomes.', z3Title: 'Where to go next', z3Sub: 'Recommended next steps and deeper layers, based on your records.', deepTitle: 'Deep dive — every coordinate on one canvas', deepSub: 'An interactive workbench layering Saju, biorhythm, Zi Wei and more.', allTools: 'Browse all oiyo tools' },
+  ja: { z1Title: 'あなたのデータ', z1Sub: 'これまでに記録されたあなたの情報 — すべてこのブラウザだけに保存。', birthLabel: '生年月日', birthSet: '記録済み', birthUnset: '未入力', testsLabel: '完了したテスト', coordsLabel: '記録した座標', z2Title: '私の座標 — 埋めた所と空白', z2Sub: '空白の座標を埋めるほど、存在地図がくっきりします。', z3Title: '次の探索ガイド', z3Sub: '記録に基づくおすすめの次のステップと深掘り。', deepTitle: '深掘り — すべての座標を一画面で', deepSub: '四柱・バイオリズム・紫微斗数などを重ねるインタラクティブ作業台。', allTools: 'oiyoのすべてのツールを見る' },
+  zh: { z1Title: '你的数据', z1Sub: '目前为止记录的关于你的信息 — 全部只保存在此浏览器。', birthLabel: '出生日期', birthSet: '已记录', birthUnset: '未填写', testsLabel: '已完成测验', coordsLabel: '已记录坐标', z2Title: '我的坐标 — 已填与空白', z2Sub: '填得越多，你的存在地图就越清晰。', z3Title: '下一步探索指南', z3Sub: '根据你的记录推荐的下一步与深入层。', deepTitle: '深入 — 所有坐标在一个画面', deepSub: '叠加八字、生物节律、紫微斗数等的交互工作台。', allTools: '浏览 oiyo 的所有工具' },
+  fr: { z1Title: 'Vos données', z1Sub: 'Ce qui a été enregistré sur vous — tout reste dans ce navigateur.', birthLabel: 'Date de naissance', birthSet: 'Enregistrée', birthUnset: 'Non renseignée', testsLabel: 'Tests réalisés', coordsLabel: 'Coordonnées enregistrées', z2Title: 'Mes coordonnées — remplies et vides', z2Sub: 'Plus vous remplissez de coordonnées, plus votre carte de l’être se précise.', z3Title: 'Où aller ensuite', z3Sub: 'Étapes suivantes et couches plus profondes, selon vos enregistrements.', deepTitle: 'Exploration approfondie — toutes les coordonnées sur une toile', deepSub: 'Un atelier interactif superposant Saju, biorythme, Zi Wei et plus.', allTools: 'Parcourir tous les outils oiyo' },
+  es: { z1Title: 'Tus datos', z1Sub: 'Lo que hemos registrado sobre ti — todo se guarda solo en este navegador.', birthLabel: 'Fecha de nacimiento', birthSet: 'Registrada', birthUnset: 'Sin definir', testsLabel: 'Tests completados', coordsLabel: 'Coordenadas registradas', z2Title: 'Mis coordenadas — llenas y vacías', z2Sub: 'Cuantas más coordenadas llenes, más nítido será tu mapa del ser.', z3Title: 'A dónde ir después', z3Sub: 'Próximos pasos y capas más profundas, según tus registros.', deepTitle: 'Exploración profunda — todas las coordenadas en un lienzo', deepSub: 'Un taller interactivo que superpone Saju, biorritmo, Zi Wei y más.', allTools: 'Explorar todas las herramientas de oiyo' },
+};
+const zt = zoneText[locale] ?? zoneText.en;
+// Guide stops = destinations unique to the legacy journey (not already a coordinate card).
+const guideStops = [journeyStops[2], journeyStops[4], journeyStops[5]];
+
 // All namespaces needed by OntologyClient and its component tree
 const namespaces = [
   'akashic', 'catalog', 'chosun', 'colorPersonality', 'commerce',
@@ -228,32 +245,27 @@ for (const ns of namespaces) {
     </div>
   </section>
 
-  <!-- Ontology map dashboard (server-rendered, crawlable) -->
-  <section class="max-w-5xl mx-auto px-4 py-8">
+  <!-- Zone 1 — Your data (입력됨): aggregated self-knowledge summary, populated client-side -->
+  <section class="max-w-5xl mx-auto px-4 pt-8">
     <div class="rounded-[2rem] border border-violet-200 bg-white p-5 md:p-7 shadow-sm">
-      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
-        <div>
-          <p class="text-xs font-black uppercase tracking-[0.25em] text-violet-500">{wt.eyebrow}</p>
-          <h2 class="mt-2 text-2xl md:text-3xl font-black text-violet-950">{wt.title}</h2>
-          <p class="mt-3 max-w-2xl text-sm leading-7 text-violet-700">{wt.body}</p>
-        </div>
-        <div id="ontology-progress-summary" data-template={wt.progress} class="rounded-2xl bg-violet-50 px-4 py-3 text-sm font-bold text-violet-800">
-          {wt.progress}
-        </div>
+      <div>
+        <p class="text-xs font-black uppercase tracking-[0.25em] text-violet-500">{wt.eyebrow}</p>
+        <h2 class="mt-1 text-2xl md:text-3xl font-black text-violet-950">{zt.z1Title}</h2>
+        <p class="mt-2 max-w-2xl text-sm leading-7 text-violet-700">{zt.z1Sub}</p>
       </div>
-      <div class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {coordinateCards.map((card) => (
-          <a href={card.href} data-coordinate-card={card.id} data-open-label={wt.open} data-recorded-label={wt.recorded} data-try-label={wt.try} data-revisit-label={wt.revisit} class="group flex h-full flex-col rounded-2xl border border-violet-100 bg-gradient-to-b from-white to-violet-50/40 p-4 transition-all hover:-translate-y-0.5 hover:border-violet-400 hover:shadow-md">
-            <div class="flex items-start justify-between gap-3">
-              <span class="text-3xl" aria-hidden="true">{card.emoji}</span>
-              <span data-coordinate-status class="rounded-full bg-white px-2.5 py-1 text-[11px] font-black text-violet-600 ring-1 ring-violet-100">{card.status}</span>
-            </div>
-            <p class="mt-3 text-[11px] font-black uppercase tracking-[0.18em] text-violet-400">{card.badge}</p>
-            <h3 class="mt-1 text-lg font-black text-violet-950 group-hover:text-violet-700">{card.title}</h3>
-            <p class="mt-2 flex-1 text-sm leading-6 text-slate-600">{card.desc}</p>
-            <span data-coordinate-cta class="mt-4 text-sm font-black text-violet-700">{card.cta} →</span>
-          </a>
-        ))}
+      <div class="mt-5 grid gap-3 sm:grid-cols-3">
+        <div class="rounded-2xl bg-violet-50 px-4 py-3">
+          <p class="text-[11px] font-black uppercase tracking-wider text-violet-400">{zt.birthLabel}</p>
+          <p id="ontology-stat-birth" data-set-label={zt.birthSet} data-unset-label={zt.birthUnset} class="mt-1 text-lg font-black text-violet-900">{zt.birthUnset}</p>
+        </div>
+        <div class="rounded-2xl bg-violet-50 px-4 py-3">
+          <p class="text-[11px] font-black uppercase tracking-wider text-violet-400">{zt.testsLabel}</p>
+          <p id="ontology-stat-tests" class="mt-1 text-lg font-black text-violet-900">0</p>
+        </div>
+        <div class="rounded-2xl bg-violet-50 px-4 py-3">
+          <p class="text-[11px] font-black uppercase tracking-wider text-violet-400">{zt.coordsLabel}</p>
+          <p id="ontology-progress-summary" class="mt-1 text-lg font-black text-violet-900">0 / 12</p>
+        </div>
       </div>
       <a href={`/${locale}/profile/export`} class="mt-4 flex flex-col gap-2 rounded-2xl border border-emerald-200 bg-emerald-50/70 p-4 text-emerald-950 transition hover:border-emerald-400 hover:bg-emerald-50 md:flex-row md:items-center md:justify-between">
         <span>
@@ -265,14 +277,37 @@ for (const ns of namespaces) {
     </div>
   </section>
 
-  <!-- Journey navigation (legacy crawlable spine) -->
-  <section class="max-w-4xl mx-auto px-4 pb-8">
-    <h2 class="text-xl font-black text-violet-950 text-center mb-1">{jt.heading}</h2>
-    <p class="text-sm text-violet-600 text-center mb-6">{jt.sub}</p>
+  <!-- Zone 2 — My coordinates (입력/미입력 구분, recommended next highlighted client-side) -->
+  <section class="max-w-5xl mx-auto px-4 pt-8">
+    <div class="mb-4">
+      <h2 class="text-xl md:text-2xl font-black text-violet-950">{zt.z2Title}</h2>
+      <p class="mt-1 text-sm text-violet-600">{zt.z2Sub}</p>
+    </div>
     <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-      {journeyStops.map((s, i) => (
-        <a href={s.href} class="group relative flex items-start gap-3 rounded-2xl border border-violet-100 bg-white p-4 transition-all hover:border-violet-300 hover:shadow-sm">
-          <span class="absolute top-3 right-3 text-[10px] font-black text-violet-300" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+      {coordinateCards.map((card) => (
+        <a href={card.href} data-coordinate-card={card.id} data-open-label={wt.open} data-recorded-label={wt.recorded} data-try-label={wt.try} data-revisit-label={wt.revisit} class="group relative flex h-full flex-col rounded-2xl border border-violet-100 bg-gradient-to-b from-white to-violet-50/40 p-4 transition-all hover:-translate-y-0.5 hover:border-violet-400 hover:shadow-md">
+          <div class="flex items-start justify-between gap-3">
+            <span class="text-3xl" aria-hidden="true">{card.emoji}</span>
+            <span data-coordinate-status class="rounded-full bg-white px-2.5 py-1 text-[11px] font-black text-violet-600 ring-1 ring-violet-100">{card.status}</span>
+          </div>
+          <p class="mt-3 text-[11px] font-black uppercase tracking-[0.18em] text-violet-400">{card.badge}</p>
+          <h3 class="mt-1 text-lg font-black text-violet-950 group-hover:text-violet-700">{card.title}</h3>
+          <p class="mt-2 flex-1 text-sm leading-6 text-slate-600">{card.desc}</p>
+          <span data-coordinate-cta class="mt-4 text-sm font-black text-violet-700">{card.cta} →</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- Zone 3 — Guide / recommendations (가이드: 다음 단계 + 서비스 안내) -->
+  <section class="max-w-5xl mx-auto px-4 pt-8 pb-4">
+    <div class="mb-4">
+      <h2 class="text-xl md:text-2xl font-black text-violet-950">{zt.z3Title}</h2>
+      <p class="mt-1 text-sm text-violet-600">{zt.z3Sub}</p>
+    </div>
+    <div class="grid gap-3 sm:grid-cols-3">
+      {guideStops.map((s) => (
+        <a href={s.href} class="group flex items-start gap-3 rounded-2xl border border-violet-100 bg-white p-4 transition-all hover:border-violet-300 hover:shadow-sm">
           <span class="text-2xl" aria-hidden="true">{s.emoji}</span>
           <span>
             <span class="block font-bold text-violet-950 group-hover:text-violet-700">{s.title}</span>
@@ -280,6 +315,15 @@ for (const ns of namespaces) {
           </span>
         </a>
       ))}
+    </div>
+    <a href={`/${locale}`} class="mt-3 inline-flex items-center gap-1 text-sm font-black text-violet-700 hover:text-violet-900">{zt.allTools} →</a>
+  </section>
+
+  <!-- Deep dive divider + full React island (12 engines) -->
+  <section class="max-w-5xl mx-auto px-4 pt-8">
+    <div class="border-t border-violet-100 pt-6">
+      <h2 class="text-xl md:text-2xl font-black text-violet-950">{zt.deepTitle}</h2>
+      <p class="mt-1 text-sm text-violet-600">{zt.deepSub}</p>
     </div>
   </section>
 
@@ -293,26 +337,25 @@ for (const ns of namespaces) {
 
 <script is:inline>
   (() => {
-    const KEY = 'oiyo:ontology:coordinates';
-    const readProgress = () => {
-      try {
-        const raw = window.localStorage.getItem(KEY);
-        const parsed = raw ? JSON.parse(raw) : {};
-        return parsed && typeof parsed === 'object' ? parsed : {};
-      } catch {
-        return {};
-      }
+    const COORD_KEY = 'oiyo:ontology:coordinates';
+    const TESTS_KEY = 'oiyo:test-results:v1';
+    const PROFILE_KEY = 'oiyo:profile-markdown-export:v2';
+    const readJson = (k) => {
+      try { const raw = window.localStorage.getItem(k); return raw ? JSON.parse(raw) : null; }
+      catch { return null; }
     };
-    const applyProgress = () => {
-      const progress = readProgress();
+    const apply = () => {
+      const progress = readJson(COORD_KEY) || {};
       const cards = Array.from(document.querySelectorAll('[data-coordinate-card]'));
       let recorded = 0;
+      let firstEmpty = null;
       cards.forEach((card) => {
         const id = card.getAttribute('data-coordinate-card');
-        const record = id ? progress[id] : null;
+        const record = (id && progress && typeof progress === 'object') ? progress[id] : null;
         const status = card.querySelector('[data-coordinate-status]');
         const cta = card.querySelector('[data-coordinate-cta]');
-        if (record?.status === 'recorded') {
+        card.classList.remove('ring-2', 'ring-violet-400');
+        if (record && record.status === 'recorded') {
           recorded += 1;
           if (status) status.textContent = card.getAttribute('data-recorded-label') || 'Recorded';
           if (cta) cta.textContent = `${card.getAttribute('data-revisit-label') || 'Explore again'} →`;
@@ -320,17 +363,34 @@ for (const ns of namespaces) {
         } else {
           if (status) status.textContent = card.getAttribute('data-open-label') || 'Not opened yet';
           if (cta) cta.textContent = `${card.getAttribute('data-try-label') || 'Try it'} →`;
+          if (!firstEmpty) firstEmpty = card;
         }
       });
-      const summary = document.getElementById('ontology-progress-summary');
-      if (summary) {
-        const current = summary.getAttribute('data-template') || summary.textContent || '';
-        summary.textContent = current.replace(/0\s*\/\s*12|0\s*\/\s*12/g, `${recorded} / 12`);
+      // Guide the user: highlight the first empty coordinate as the recommended next step.
+      if (firstEmpty) firstEmpty.classList.add('ring-2', 'ring-violet-400');
+
+      const coordsEl = document.getElementById('ontology-progress-summary');
+      if (coordsEl) coordsEl.textContent = `${recorded} / 12`;
+
+      const tests = readJson(TESTS_KEY);
+      const testsEl = document.getElementById('ontology-stat-tests');
+      if (testsEl) testsEl.textContent = String(Array.isArray(tests) ? tests.length : 0);
+
+      const profile = readJson(PROFILE_KEY);
+      const birthEl = document.getElementById('ontology-stat-birth');
+      if (birthEl) {
+        const has = profile && typeof profile === 'object' && typeof profile.birthDate === 'string' && profile.birthDate.trim().length > 0;
+        birthEl.textContent = has
+          ? (birthEl.getAttribute('data-set-label') || 'Recorded')
+          : (birthEl.getAttribute('data-unset-label') || 'Not set');
+        birthEl.classList.toggle('text-emerald-600', !!has);
+        birthEl.classList.toggle('text-violet-900', !has);
       }
     };
-    applyProgress();
-    window.addEventListener('storage', applyProgress);
-    window.addEventListener('oiyo:ontology-progress-updated', applyProgress);
+    apply();
+    window.addEventListener('storage', apply);
+    window.addEventListener('oiyo:ontology-progress-updated', apply);
+    window.addEventListener('oiyo:test-results-updated', apply);
   })();
 </script>
 </Layout>
