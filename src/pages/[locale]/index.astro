@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import MyOntologySummary from '../../components/shared/MyOntologySummary.astro';
 import { LOCALES, getTranslations, localePath } from '../../i18n';
 import type { Locale } from '../../i18n';
 
@@ -303,5 +304,10 @@ const sectionMore = txt({ ko: '더 많은 도구', en: 'More Tools', ja: 'その
         </div>
       ))}
     </div>
+  </section>
+
+  <!-- Returning-visitor continuity: their records -> ontology map (personalized) -->
+  <section class="max-w-4xl mx-auto px-4 pb-14">
+    <MyOntologySummary locale={locale} />
   </section>
 </Layout>
