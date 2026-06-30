@@ -1,0 +1,35 @@
+---
+// Hybrid content-graph bridge: oiyo tool -> REAL blog magazine article.
+// Renders ONLY when the article exists in the current locale (else nothing) so
+// it never links to a missing page. Targets are verified MDX articles, not the
+// OiyoCanonicalRedirect test-slug stubs.
+import type { Locale } from '../../i18n';
+import { BLOG_ARTICLE_BRIDGES } from '../../data/blog-article-bridges';
+
+interface Props { testId: string; locale: Locale; }
+const { testId, locale } = Astro.props;
+const bridge = BLOG_ARTICLE_BRIDGES[testId];
+const available = bridge && bridge.locales.includes(locale);
+const utm = 'utm_source=oiyo&utm_medium=tool_page&utm_campaign=hybrid_bridge';
+const url = available ? `https://blog.oiyo.net/${locale}/${bridge.slug}/?${utm}` : '';
+
+const copy: Record<string, { eyebrow: string; title: string; body: string; cta: string }> = {
+  ko: { eyebrow: '하이브리드 — 도구는 여기, 깊이는 블로그', title: '이 주제를 더 깊이 읽기', body: '검사를 마쳤다면, 블로그의 심층 해설(이론·FAQ·사례)에서 결과를 더 풍부하게 이해할 수 있습니다.', cta: '블로그에서 이어 읽기' },
+  en: { eyebrow: 'Hybrid — tool here, depth on the blog', title: 'Read deeper on this topic', body: 'Done with the test? Continue on the blog for the in-depth guide — theory, FAQ, and real cases.', cta: 'Continue on the blog' },
+  ja: { eyebrow: 'ハイブリッド — ツールはここ、深掘りはブログ', title: 'このテーマをさらに深く読む', body: '診断が終わったら、ブログの詳しい解説(理論・FAQ・事例)で結果をより深く理解できます。', cta: 'ブログで続きを読む' },
+  zh: { eyebrow: '混合 — 工具在此，深度在博客', title: '更深入地阅读这个主题', body: '完成测验后，可在博客的深度解读（理论、FAQ、案例）中更全面地理解结果。', cta: '在博客继续阅读' },
+  fr: { eyebrow: "Hybride — l'outil ici, l'analyse sur le blog", title: 'Approfondir ce sujet', body: 'Test terminé ? Poursuivez sur le blog pour le guide détaillé — théorie, FAQ et cas réels.', cta: 'Continuer sur le blog' },
+  es: { eyebrow: 'Híbrido — la herramienta aquí, la profundidad en el blog', title: 'Lee más sobre este tema', body: '¿Terminaste el test? Continúa en el blog para la guía detallada — teoría, FAQ y casos reales.', cta: 'Continuar en el blog' },
+};
+const c = copy[locale] ?? copy.en;
+---
+{available && (
+  <aside class="mx-auto mt-12 max-w-2xl rounded-2xl border border-green-100 bg-green-50/40 p-6">
+    <p class="text-xs font-bold uppercase tracking-wide text-green-700">{c.eyebrow}</p>
+    <h2 class="mt-2 text-xl font-bold text-green-950">{c.title}</h2>
+    <p class="mt-2 text-sm leading-7 text-slate-700">{c.body}</p>
+    <a href={url} class="mt-4 inline-flex items-center gap-2 rounded-lg bg-green-700 px-4 py-2 text-sm font-bold text-white transition hover:bg-green-800">
+      {c.cta} →
+    </a>
+  </aside>
+)}
