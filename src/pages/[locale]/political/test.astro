@@ -37,6 +37,15 @@ const meta: Record<Locale, { title: string; description: string }> = {
   },
 };
 const m = meta[locale] ?? meta.en;
+const ontologyContextMap = {
+  ko: { badge: '가치 지도', title: '정치성향은 정당 선택이 아니라, 가치 충돌에서 무엇을 먼저 보는지 알려주는 좌표입니다.', body: '이 결과는 OIYO Ontology 안에서 사회와 공동체를 바라보는 렌즈입니다. 경제관, 조선붕당, 삶의 가치와 함께 읽으면 나의 존재 지도가 더 선명해집니다.', status: '아직 열지 않음', time: '소요 시간 5분', count: '41문항' },
+  en: { badge: 'Values map', title: 'Political orientation is not a party choice; it is a coordinate for what you prioritize in value conflicts.', body: 'Inside OIYO Ontology, this result is a lens for how you read society and community. It becomes clearer with economic worldview, Joseon factions, and life values.', status: 'Not opened yet', time: '5 min', count: '41 questions' },
+  ja: { badge: '価値地図', title: '政治性向は政党選択ではなく、価値の衝突で何を先に見るかの座標です。', body: 'OIYO Ontologyでは、社会と共同体を見るレンズです。経済観、朝鮮派閥、人生価値と重ねると存在地図がより明確になります。', status: 'まだ開いていません', time: '5分', count: '41問' },
+  zh: { badge: '价值地图', title: '政治倾向不是政党选择，而是你在价值冲突中优先看见什么的坐标。', body: '在 OIYO Ontology 中，它是理解社会与共同体的镜片。与经济观、朝鲜派系和人生价值一起阅读会更清晰。', status: '尚未打开', time: '5分钟', count: '41题' },
+  fr: { badge: 'Carte des valeurs', title: 'L’orientation politique n’est pas un choix de parti, mais une coordonnée de vos priorités dans les conflits de valeurs.', body: 'Dans OIYO Ontology, c’est une lentille pour lire société et communauté. Elle se précise avec économie, factions Joseon et valeurs de vie.', status: 'Pas encore ouvert', time: '5 min', count: '41 questions' },
+  es: { badge: 'Mapa de valores', title: 'La orientación política no es elegir partido, sino una coordenada de lo que priorizas en conflictos de valor.', body: 'Dentro de OIYO Ontology, es una lente para leer sociedad y comunidad. Se aclara con economía, facciones Joseon y valores de vida.', status: 'Aún no abierto', time: '5 min', count: '41 preguntas' },
+} as const;
+const oc = ontologyContextMap[locale] ?? ontologyContextMap.en;
 
 // 소개 텍스트
 const intro: Record<Locale, { heading: string; body: string; axes: string[] }> = {
@@ -89,6 +98,20 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
 <Layout title={m.title} description={m.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="mx-auto max-w-2xl px-4 py-10">
+    <section class="mb-6 rounded-3xl border border-violet-200 bg-gradient-to-br from-violet-50 to-white p-5 shadow-sm">
+      <div class="flex flex-wrap items-center gap-2 text-xs font-black text-violet-600">
+        <a href={`/${locale}/ontology`} class="hover:text-violet-800">OIYO Ontology</a>
+        <span>›</span>
+        <span>{oc.badge}</span>
+        <span class="ml-auto rounded-full bg-white px-2.5 py-1 text-violet-700">{oc.status}</span>
+      </div>
+      <h1 class="mt-3 text-2xl font-black text-violet-950">{oc.title}</h1>
+      <p class="mt-3 text-sm leading-7 text-violet-700">{oc.body}</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs font-bold text-slate-600">
+        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-violet-100">{oc.time}</span>
+        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-violet-100">{oc.count}</span>
+      </div>
+    </section>
 
     <!-- 소개 섹션 -->
     <div class="mb-8 rounded-2xl border border-slate-200 bg-white p-6">

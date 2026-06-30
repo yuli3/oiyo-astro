@@ -1,4 +1,6 @@
-import { useState, useMemo } from 'react'
+import { useEffect, useState, useMemo } from 'react'
+import { markOntologyCoordinateRecorded } from '@/lib/ontology/progress'
+import { recordTestResult } from '@/lib/user/test-results'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -279,6 +281,22 @@ export default function PoliticalCompassTest({ locale }: Props) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [done, setDone] = useState(false)
+
+  useEffect(() => {
+    if (!done || !result) return
+    const code = result.replace(/[\s\"]/g, '').slice(0, 4)
+    markOntologyCoordinateRecorded('political', code)
+    recordTestResult({
+      kind: 'psychometric',
+      testId: 'political-compass',
+      title: L === 'ko' ? '정치성향' : 'Political compass',
+      resultLabel: code,
+      inputs: { answers },
+      result: { code },
+      locale: L,
+      sourcePath: `/${L}/political/test`,
+    })
+  }, [done, result])
 
   const currentKeys = STEP_KEYS[step] ?? []
 

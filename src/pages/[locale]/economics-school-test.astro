@@ -36,10 +36,42 @@ const meta: Record<string, { title: string; description: string }> = {
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+const coordinateIntroMap = {
+  ko: { badge: '경제 세계관', title: '경제관은 돈 문제가 아니라, 세상이 어떻게 움직인다고 믿는지에 대한 지도입니다.', body: '시장, 정부, 제도, 인간 행동을 바라보는 당신의 기본 관점을 확인하세요. 이 좌표는 정치성향의 경제축, 삶의 가치, 조선붕당의 현실 감각과 함께 읽으면 더 입체적입니다.', time: '소요 시간 3분', count: '12문항', cta: '경제관 해보기', status: '아직 열지 않음', next: '다음 좌표', links: ['정치 나침반으로 가치축 확장하기', '조선붕당으로 갈등 앞의 태도 보기', '프로필 내보내기로 내 지도 정리하기'] },
+  en: { badge: 'Economic worldview', title: 'Your economic view is a map of how you believe society works, not just money.', body: 'Explore how you read markets, government, institutions, and human behavior. This coordinate becomes richer with the political compass, life values, and historical-self lenses.', time: '3 min', count: '12 questions', cta: 'Try the economic view test', status: 'Not opened yet', next: 'Next coordinates', links: ['Expand with the political compass', 'See your conflict style through Joseon factions', 'Organize the map with profile export'] },
+  ja: { badge: '経済世界観', title: '経済観はお金の問題ではなく、社会がどう動くと信じるかの地図です。', body: '市場、政府、制度、人間行動をどう見るかを確認します。政治コンパス、価値観、歴史的自己と重ねると立体的になります。', time: '3分', count: '12問', cta: '経済観を試す', status: 'まだ開いていません', next: '次の座標', links: ['政治コンパスで価値軸を広げる', '朝鮮派閥で葛藤時の態度を見る', 'プロフィール出力で地図を整理する'] },
+  zh: { badge: '经济世界观', title: '经济观不是金钱问题，而是你相信社会如何运转的地图。', body: '看看你如何理解市场、政府、制度与人类行为。与政治指南针、人生价值、历史自我一起阅读会更立体。', time: '3分钟', count: '12题', cta: '试试经济观', status: '尚未打开', next: '下一个坐标', links: ['用政治指南针扩展价值轴', '用朝鲜派系看冲突态度', '用资料导出整理地图'] },
+  fr: { badge: 'Vision économique', title: 'Votre vision économique est une carte de votre croyance sur le fonctionnement du monde, pas seulement l’argent.', body: 'Explorez marchés, État, institutions et comportements humains. Cette coordonnée se lit mieux avec la boussole politique, les valeurs de vie et le soi historique.', time: '3 min', count: '12 questions', cta: 'Essayer', status: 'Pas encore ouvert', next: 'Coordonnées suivantes', links: ['Élargir avec la boussole politique', 'Voir l’attitude de conflit avec Joseon', 'Organiser avec l’export de profil'] },
+  es: { badge: 'Visión económica', title: 'Tu visión económica es un mapa de cómo crees que funciona el mundo, no solo dinero.', body: 'Explora mercados, gobierno, instituciones y conducta humana. Esta coordenada se entiende mejor con brújula política, valores de vida y yo histórico.', time: '3 min', count: '12 preguntas', cta: 'Probar', status: 'Aún no abierto', next: 'Siguientes coordenadas', links: ['Ampliar con brújula política', 'Ver actitud ante conflicto con Joseon', 'Organizar con exportar perfil'] },
+} as const;
+const ci = coordinateIntroMap[locale] ?? coordinateIntroMap.en;
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
+    <section class="mb-6 rounded-3xl border border-violet-200 bg-gradient-to-br from-violet-50 to-white p-5 shadow-sm">
+      <div class="flex flex-wrap items-center gap-2 text-xs font-black text-violet-600">
+        <a href={`/${locale}/ontology`} class="hover:text-violet-800">OIYO Ontology</a>
+        <span>›</span>
+        <span>{ci.badge}</span>
+        <span class="ml-auto rounded-full bg-white px-2.5 py-1 text-violet-700">{ci.status}</span>
+      </div>
+      <h1 class="mt-3 text-2xl font-black text-violet-950">{ci.title}</h1>
+      <p class="mt-3 text-sm leading-7 text-violet-700">{ci.body}</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs font-bold text-slate-600">
+        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-violet-100">{ci.time}</span>
+        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-violet-100">{ci.count}</span>
+        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-violet-100">{ci.cta}</span>
+      </div>
+    </section>
     <EconomicsSchoolTest locale={locale as any} client:load />
+    <section class="mt-8 rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5">
+      <h2 class="font-black text-emerald-950">{ci.next}</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-6 text-emerald-800">
+        <li><a class="font-bold hover:underline" href={`/${locale}/political/test`}>→ {ci.links[0]}</a></li>
+        <li><a class="font-bold hover:underline" href={`/${locale}/joseon-faction-test`}>→ {ci.links[1]}</a></li>
+        <li><a class="font-bold hover:underline" href={`/${locale}/profile/export`}>→ {ci.links[2]}</a></li>
+      </ul>
+    </section>
   </div>
 </Layout>

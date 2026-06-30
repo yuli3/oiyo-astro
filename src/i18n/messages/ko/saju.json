@@ -120,7 +120,7 @@
   "@/components/ontology/GenericFactionCard": "@/components/ontology/GenericFactionCard",
   "": "",
   "labels": {
-    "undiscovered": "발견되지 않은",
+    "undiscovered": "아직 기록 없음",
     "meaning": "의미",
     "element": "요소",
     "nameVibration": "이름 진동",
@@ -132,12 +132,12 @@
     "dominion": "지배",
     "bureau": "국"
   },
-  "returnToHome": "집으로 돌아가기",
+  "returnToHome": "홈으로 돌아가기",
   "contactSupport": "지원팀에 문의",
   "syncingData": "데이터 동기화 중",
   "guest": "손님",
-  "calibration": "구경 측정",
-  "changeOrigin": "원산지 변경",
+  "calibration": "좌표 보정",
+  "changeOrigin": "출생 정보 수정",
   "todayInsight": {
     "title": "오늘의 통찰",
     "soulOracle": "소울 오라클",
@@ -160,7 +160,7 @@
     "elemental": {
       "description": "당신의 원소 혼합.",
       "subtitle": "원소 친화력",
-      "title": "강요"
+      "title": "핵심 원소"
     },
     "onomancy": {
       "description": "당신의 이름 진동.",
@@ -196,7 +196,7 @@
   },
   "dialogs": {
     "elements": {
-      "title": "강요"
+      "title": "핵심 원소"
     },
     "riasec": {
       "description": "RIASEC 직업 유형"

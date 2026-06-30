@@ -36,10 +36,42 @@ const meta: Record<string, { title: string; description: string }> = {
   },
 };
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+const coordinateIntroMap = {
+  ko: { badge: '역사적 자아', title: '조선붕당은 역사 지식 테스트가 아니라, 갈등과 변화 앞에서 내가 어떤 태도를 취하는지 보는 은유입니다.', body: '원칙, 현실, 조화, 개혁, 안정, 유연성 사이에서 당신의 기본 기질을 확인하세요. 현대 정치 성향과 1:1로 대응하지 않고, 나의 선택 패턴을 읽는 역사적 렌즈입니다.', time: '소요 시간 2분', count: '8문항', cta: '나의 붕당 찾기', status: '아직 열지 않음', next: '다음 좌표', links: ['정치 나침반으로 현대 가치축 보기', '경제관으로 제도와 시장을 보는 관점 확인하기', '프로필 내보내기로 내 지도 정리하기'] },
+  en: { badge: 'Historical self', title: 'Joseon factions are not a history quiz; they are a metaphor for how you face conflict and change.', body: 'See whether you lean toward principle, realism, harmony, reform, stability, or flexibility. It does not map 1:1 to modern politics; it is a historical lens for your decision pattern.', time: '2 min', count: '8 questions', cta: 'Find my faction', status: 'Not opened yet', next: 'Next coordinates', links: ['Read modern value axes with the political compass', 'Check your view of markets and institutions', 'Organize the map with profile export'] },
+  ja: { badge: '歴史的自己', title: '朝鮮派閥は歴史知識テストではなく、葛藤と変化に向き合う態度を見る比喩です。', body: '原則、現実、調和、改革、安定、柔軟性のどこに寄るかを見ます。現代政治と一対一対応ではなく、選択パターンを読む歴史的レンズです。', time: '2分', count: '8問', cta: '自分の派閥を探す', status: 'まだ開いていません', next: '次の座標', links: ['政治コンパスで現代の価値軸を見る', '経済観で市場と制度を見る', 'プロフィール出力で地図を整理する'] },
+  zh: { badge: '历史自我', title: '朝鲜派系不是历史知识测试，而是观察你面对冲突与变化时态度的隐喻。', body: '看看你更靠近原则、现实、调和、改革、稳定还是灵活。它不与现代政治一一对应，而是阅读选择模式的历史镜片。', time: '2分钟', count: '8题', cta: '寻找我的派系', status: '尚未打开', next: '下一个坐标', links: ['用政治指南针看现代价值轴', '用经济观理解市场与制度', '用资料导出整理地图'] },
+  fr: { badge: 'Soi historique', title: 'Les factions Joseon ne sont pas un quiz d’histoire, mais une métaphore de votre attitude face au conflit et au changement.', body: 'Voyez votre inclination entre principe, réalisme, harmonie, réforme, stabilité et flexibilité. Ce n’est pas une correspondance politique moderne, mais une lentille historique.', time: '2 min', count: '8 questions', cta: 'Trouver ma faction', status: 'Pas encore ouvert', next: 'Coordonnées suivantes', links: ['Lire les axes modernes avec la boussole politique', 'Voir marchés et institutions avec l’économie', 'Organiser avec l’export de profil'] },
+  es: { badge: 'Yo histórico', title: 'Las facciones Joseon no son un quiz de historia, sino una metáfora de cómo enfrentas conflicto y cambio.', body: 'Observa si tiendes a principio, realismo, armonía, reforma, estabilidad o flexibilidad. No equivale a política moderna; es una lente histórica.', time: '2 min', count: '8 preguntas', cta: 'Encontrar mi facción', status: 'Aún no abierto', next: 'Siguientes coordenadas', links: ['Leer ejes modernos con brújula política', 'Ver mercados e instituciones con economía', 'Organizar con exportar perfil'] },
+} as const;
+const ci = coordinateIntroMap[locale] ?? coordinateIntroMap.en;
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
+    <section class="mb-6 rounded-3xl border border-violet-200 bg-gradient-to-br from-violet-50 to-white p-5 shadow-sm">
+      <div class="flex flex-wrap items-center gap-2 text-xs font-black text-violet-600">
+        <a href={`/${locale}/ontology`} class="hover:text-violet-800">OIYO Ontology</a>
+        <span>›</span>
+        <span>{ci.badge}</span>
+        <span class="ml-auto rounded-full bg-white px-2.5 py-1 text-violet-700">{ci.status}</span>
+      </div>
+      <h1 class="mt-3 text-2xl font-black text-violet-950">{ci.title}</h1>
+      <p class="mt-3 text-sm leading-7 text-violet-700">{ci.body}</p>
+      <div class="mt-4 flex flex-wrap gap-2 text-xs font-bold text-slate-600">
+        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-violet-100">{ci.time}</span>
+        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-violet-100">{ci.count}</span>
+        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-violet-100">{ci.cta}</span>
+      </div>
+    </section>
     <JoseonFactionTest locale={locale as any} client:load />
+    <section class="mt-8 rounded-2xl border border-emerald-100 bg-emerald-50/60 p-5">
+      <h2 class="font-black text-emerald-950">{ci.next}</h2>
+      <ul class="mt-3 space-y-2 text-sm leading-6 text-emerald-800">
+        <li><a class="font-bold hover:underline" href={`/${locale}/political/test`}>→ {ci.links[0]}</a></li>
+        <li><a class="font-bold hover:underline" href={`/${locale}/economics-school-test`}>→ {ci.links[1]}</a></li>
+        <li><a class="font-bold hover:underline" href={`/${locale}/profile/export`}>→ {ci.links[2]}</a></li>
+      </ul>
+    </section>
   </div>
 </Layout>

@@ -1,6 +1,8 @@
 import { Copy, Download, FileText, RotateCcw, Sparkles } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 import { useUserStore } from '@/lib/user/store/user-store';
+import { ONTOLOGY_PROGRESS_STORAGE_KEY, type OntologyCoordinateProgress, type OntologyCoordinateRecord } from '@/lib/ontology/progress';
+import { OIYO_TEST_RESULTS_STORAGE_KEY, OIYO_TEST_RESULTS_UPDATED_EVENT, type StoredTestResult } from '@/lib/user/test-results';
 
 type Locale = 'en' | 'ko' | 'ja' | 'zh' | 'fr' | 'es';
 
@@ -263,6 +265,14 @@ const FIELD_LABELS: Record<Locale, Record<keyof ProfileForm, string>> = {
 };
 
 const STORAGE_KEY = 'oiyo:profile-markdown-export:v2';
+const COORDINATE_LABELS: Record<Locale, Record<string, string>> = {
+  ko: { personality: '성격 좌표', political: '정치성향', economics: '경제관', joseon: '조선붕당', hobbies: '취향과 환경', luck: '행운과 오늘의 나' },
+  en: { personality: 'Personality coordinate', political: 'Political orientation', economics: 'Economic worldview', joseon: 'Joseon faction', hobbies: 'Taste and environment', luck: 'Luck and today' },
+  ja: { personality: '性格座標', political: '政治性向', economics: '経済観', joseon: '朝鮮派閥', hobbies: '好みと環境', luck: '幸運と今日の私' },
+  zh: { personality: '性格坐标', political: '政治倾向', economics: '经济观', joseon: '朝鲜派系', hobbies: '喜好与环境', luck: '幸运与今天的我' },
+  fr: { personality: 'Coordonnée de personnalité', political: 'Orientation politique', economics: 'Vision économique', joseon: 'Faction Joseon', hobbies: 'Goûts et environnement', luck: 'Chance et aujourd’hui' },
+  es: { personality: 'Coordenada de personalidad', political: 'Orientación política', economics: 'Visión económica', joseon: 'Facción Joseon', hobbies: 'Gustos y entorno', luck: 'Suerte y hoy' },
+};
 
 function listLines(value: string) {
   return value
@@ -292,6 +302,8 @@ export default function ProfileMarkdownExport({ locale }: Props) {
   const [copied, setCopied] = useState(false);
   const [hydrated, setHydrated] = useState(false);
   const [format, setFormat] = useState<'md' | 'json' | 'csv' | 'soul'>('md');
+  const [ontologyProgress, setOntologyProgress] = useState<OntologyCoordinateProgress>({});
+  const [testResults, setTestResults] = useState<StoredTestResult[]>([]);
   // 실제 사용자 프로필(zustand, oiyo_user_state) — 테스트로 수집된 데이터
   const storeProfile = useUserStore((s) => s.profile);
 
@@ -301,11 +313,52 @@ export default function ProfileMarkdownExport({ locale }: Props) {
       if (saved) {
         setForm({ ...INITIAL, ...JSON.parse(saved) });
       }
+      const ontologyRaw = window.localStorage.getItem(ONTOLOGY_PROGRESS_STORAGE_KEY);
+      if (ontologyRaw) {
+        const parsed = JSON.parse(ontologyRaw);
+        if (parsed && typeof parsed === 'object') setOntologyProgress(parsed as OntologyCoordinateProgress);
+      }
+      const testRaw = window.localStorage.getItem(OIYO_TEST_RESULTS_STORAGE_KEY);
+      if (testRaw) {
+        const parsed = JSON.parse(testRaw);
+        if (Array.isArray(parsed)) setTestResults(parsed as StoredTestResult[]);
+      }
     } catch {
       // Keep the default form if local storage is unavailable or malformed.
     } finally {
       setHydrated(true);
     }
+  }, []);
+
+  useEffect(() => {
+    const refreshTestResults = () => {
+      try {
+        const raw = window.localStorage.getItem(OIYO_TEST_RESULTS_STORAGE_KEY);
+        const parsed = raw ? JSON.parse(raw) : [];
+        setTestResults(Array.isArray(parsed) ? parsed as StoredTestResult[] : []);
+      } catch {
+        setTestResults([]);
+      }
+    };
+    const refreshOntologyProgress = () => {
+      try {
+        const raw = window.localStorage.getItem(ONTOLOGY_PROGRESS_STORAGE_KEY);
+        const parsed = raw ? JSON.parse(raw) : {};
+        setOntologyProgress(parsed && typeof parsed === 'object' ? parsed as OntologyCoordinateProgress : {});
+      } catch {
+        setOntologyProgress({});
+      }
+    };
+    window.addEventListener('storage', refreshOntologyProgress);
+    window.addEventListener('storage', refreshTestResults);
+    window.addEventListener('oiyo:ontology-progress-updated', refreshOntologyProgress);
+    window.addEventListener(OIYO_TEST_RESULTS_UPDATED_EVENT, refreshTestResults);
+    return () => {
+      window.removeEventListener('storage', refreshOntologyProgress);
+      window.removeEventListener('storage', refreshTestResults);
+      window.removeEventListener('oiyo:ontology-progress-updated', refreshOntologyProgress);
+      window.removeEventListener(OIYO_TEST_RESULTS_UPDATED_EVENT, refreshTestResults);
+    };
   }, []);
 
   // 자동 프리필: 비어있는 프로필 필드를 실제 수집 데이터로 채운다(수동 입력은 보존).
@@ -331,6 +384,23 @@ export default function ProfileMarkdownExport({ locale }: Props) {
       // Ignore private-mode or quota failures; export still works.
     }
   }, [form, hydrated]);
+
+  const ontologyRecords = useMemo(() => Object.values(ontologyProgress)
+    .filter((record): record is OntologyCoordinateRecord => Boolean(record))
+    .sort((a, b) => a.id.localeCompare(b.id)), [ontologyProgress]);
+
+  const ontologyRows = useMemo(() => {
+    const labelsForLocale = COORDINATE_LABELS[L] ?? COORDINATE_LABELS.en;
+    return ontologyRecords
+      .map((record) => `| ${labelsForLocale[record.id] ?? record.id} | ${record.resultLabel || 'recorded'} | ${record.updatedAt.slice(0, 10)} |`)
+      .join('\n') || '| - | - | - |';
+  }, [L, ontologyRecords]);
+
+  const ontologyJson = useMemo(() => ontologyRecords, [ontologyRecords]);
+
+  const recentTestRows = useMemo(() => testResults.slice(0, 20)
+    .map((record) => `| ${record.title} | ${record.resultLabel} | ${record.kind} | ${record.createdAt.slice(0, 10)} |`)
+    .join('\n') || '| - | - | - | - |', [testResults]);
 
   const markdown = useMemo(() => {
     const today = new Date().toISOString().slice(0, 10);
@@ -367,6 +437,18 @@ ${field(labels.mbtiType, form.mbtiType)}
 | Area | Items |
 |---|---:|
 ${summaryRows}
+
+## OIYO Ontology Coordinates
+
+| Coordinate | Result | Recorded |
+|---|---|---|
+${ontologyRows}
+
+## Recent Test Result History
+
+| Test | Result | Kind | Date |
+|---|---|---|---|
+${recentTestRows}
 
 ## Saju / Astrology / Tarot Notes
 
@@ -424,12 +506,12 @@ ${listLines(form.nextExperiments)}
 - What still feels true?
 - What do I want to fill tomorrow with?
 `;
-  }, [form, labels]);
+  }, [form, labels, ontologyRows, recentTestRows]);
 
   // 멀티 포맷 export: md / json / csv / SOUL.md (AI 페르소나). 전부 로컬 생성·다운로드(서버 전송 없음).
   const json = useMemo(() => JSON.stringify(
-    { exportedAt: new Date().toISOString(), source: 'OIYO', note: 'local-only snapshot', profile: form }, null, 2,
-  ), [form]);
+    { exportedAt: new Date().toISOString(), source: 'OIYO', note: 'local-only snapshot', profile: form, ontologyCoordinates: ontologyJson, testResults }, null, 2,
+  ), [form, ontologyJson, testResults]);
 
   const csv = useMemo(() => {
     const esc = (v: string) => `"${String(v ?? '').replace(/"/g, '""')}"`;
@@ -453,6 +535,12 @@ ${listLines(form.nextExperiments)}
 - 행복한 순간: ${form.happyThings.trim().replace(/\n/g, ', ') || '-'}
 - 감각적 위안: ${form.sensoryComforts.trim().replace(/\n/g, ', ') || '-'}
 
+## OIYO Ontology 좌표
+${ontologyRows}
+
+## 최근 테스트 기록
+${recentTestRows}
+
 ## 지금의 나
 - 현재 성향: ${v(form.currentTendencies)}
 - 최근 변화: ${form.recentChanges.trim().replace(/\n/g, ', ') || '-'}
@@ -464,7 +552,7 @@ ${listLines(form.nextExperiments)}
 - 스냅샷임을 인지하고, 단정하지 말고 확인하며 돕는다.
 - 개인정보는 외부로 보내지 않는다(local-first).
 `;
-  }, [form]);
+  }, [form, ontologyRows, recentTestRows]);
 
   const FORMATS = { md: { content: markdown, ext: 'md', mime: 'text/markdown' }, json: { content: json, ext: 'json', mime: 'application/json' }, csv: { content: csv, ext: 'csv', mime: 'text/csv' }, soul: { content: soul, ext: 'md', mime: 'text/markdown' } } as const;
   const active = FORMATS[format];
@@ -540,6 +628,8 @@ ${listLines(form.nextExperiments)}
           ko: { title: '내 데이터 수집 현황', done: '수집됨', go: '테스트 하러가기', hint: '테스트를 하면 아래 항목이 자동으로 채워집니다.' },
           en: { title: 'Your data collected', done: 'collected', go: 'Take the test', hint: 'Taking tests auto-fills the fields below.' },
         } as Record<string, { title: string; done: string; go: string; hint: string }>)[L] ?? ({ title: 'Your data collected', done: 'collected', go: 'Take the test', hint: 'Taking tests auto-fills the fields below.' });
+        const labelsForLocale = COORDINATE_LABELS[L] ?? COORDINATE_LABELS.en;
+        const ontologyItems = ontologyRecords;
         const items = [
           { key: 'birthDate', label: L === 'ko' ? '생년월일·사주' : 'Birth · Saju', href: `/${L}/saju` },
           { key: 'mbtiType', label: 'MBTI', href: `/${L}/mbti` },
@@ -566,6 +656,15 @@ ${listLines(form.nextExperiments)}
                   : <span key={it.key} className="rounded-md bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-400">{it.label}</span>;
               })}
             </div>
+            {ontologyItems.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-2 border-t border-green-100 pt-3">
+                {ontologyItems.map((record) => record && (
+                  <span key={record.id} className="rounded-md bg-emerald-100 px-2 py-1 text-[11px] font-semibold text-emerald-800">
+                    ✓ {labelsForLocale[record.id] ?? record.id}: {record.resultLabel || 'recorded'}
+                  </span>
+                ))}
+              </div>
+            )}
             <p className="mt-2 text-[11px] text-slate-500">{m.hint}</p>
           </div>
         );

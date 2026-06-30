@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { markOntologyCoordinateRecorded } from '@/lib/ontology/progress'
+import { recordTestResult } from '@/lib/user/test-results'
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
 
@@ -236,6 +238,21 @@ export default function JoseonFactionTest({ locale }: Props) {
   const isKo = locale === 'ko'
   const faction = result ? FACTIONS[result] : null
   const fd = faction ? (isKo ? faction.ko : faction.en) : null
+
+  useEffect(() => {
+    if (!result || !fd) return
+    markOntologyCoordinateRecorded('joseon', fd.name)
+    recordTestResult({
+      kind: 'psychometric',
+      testId: 'joseon-faction',
+      title: locale === 'ko' ? '조선붕당' : 'Joseon faction',
+      resultLabel: fd.name,
+      inputs: { scores },
+      result: { faction: result, scores },
+      locale,
+      sourcePath: `/${locale}/joseon-faction-test`,
+    })
+  }, [result, fd])
 
   if (!started) {
     return (

@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { markOntologyCoordinateRecorded } from '@/lib/ontology/progress'
+import { recordTestResult } from '@/lib/user/test-results'
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
 type School = 'keynesian' | 'classical' | 'behavioral' | 'austrian' | 'institutional'
@@ -205,6 +207,21 @@ export default function EconomicsSchoolTest({ locale }: Props) {
 
   const isKo = locale === 'ko'
   const schoolData = result ? (isKo ? SCHOOLS[result].ko : SCHOOLS[result].en) : null
+
+  useEffect(() => {
+    if (!result || !schoolData) return
+    markOntologyCoordinateRecorded('economics', schoolData.name)
+    recordTestResult({
+      kind: 'psychometric',
+      testId: 'economics-school',
+      title: locale === 'ko' ? '경제관' : 'Economic worldview',
+      resultLabel: schoolData.name,
+      inputs: { scores },
+      result: { school: result, scores },
+      locale,
+      sourcePath: `/${locale}/economics-school-test`,
+    })
+  }, [result, schoolData])
 
   if (current === -1) {
     return (
