@@ -201,6 +201,16 @@ const zoneText: Record<Locale, {
   es: { z1Title: 'Tus datos', z1Sub: 'Lo que hemos registrado sobre ti — todo se guarda solo en este navegador.', birthLabel: 'Fecha de nacimiento', birthSet: 'Registrada', birthUnset: 'Sin definir', testsLabel: 'Tests completados', coordsLabel: 'Coordenadas registradas', z2Title: 'Mis coordenadas — llenas y vacías', z2Sub: 'Cuantas más coordenadas llenes, más nítido será tu mapa del ser.', z3Title: 'A dónde ir después', z3Sub: 'Próximos pasos y capas más profundas, según tus registros.', deepTitle: 'Exploración profunda — todas las coordenadas en un lienzo', deepSub: 'Un taller interactivo que superpone Saju, biorritmo, Zi Wei y más.', allTools: 'Explorar todas las herramientas de oiyo' },
 };
 const zt = zoneText[locale] ?? zoneText.en;
+// Journey/map UI: makes the page feel like a map you fill in by interacting.
+const journeyUi: Record<Locale, { mapProgress: string; nextStep: string; mapComplete: string }> = {
+  ko: { mapProgress: '존재 지도 완성도', nextStep: '다음 한 걸음', mapComplete: '존재 지도를 모두 채웠어요 🎉' },
+  en: { mapProgress: 'Map completion', nextStep: 'Next step', mapComplete: 'Your map of being is complete 🎉' },
+  ja: { mapProgress: '存在地図の完成度', nextStep: '次の一歩', mapComplete: '存在地図がすべて埋まりました 🎉' },
+  zh: { mapProgress: '存在地图完成度', nextStep: '下一步', mapComplete: '你的存在地图已全部填满 🎉' },
+  fr: { mapProgress: 'Progression de la carte', nextStep: 'Prochaine étape', mapComplete: 'Votre carte de l’être est complète 🎉' },
+  es: { mapProgress: 'Progreso del mapa', nextStep: 'Siguiente paso', mapComplete: 'Tu mapa del ser está completo 🎉' },
+};
+const ju = journeyUi[locale] ?? journeyUi.en;
 // Guide stops = destinations unique to the legacy journey (not already a coordinate card).
 const guideStops = [journeyStops[2], journeyStops[4], journeyStops[5]];
 
@@ -264,9 +274,25 @@ for (const ns of namespaces) {
         </div>
         <div class="rounded-2xl bg-violet-50 px-4 py-3">
           <p class="text-[11px] font-black uppercase tracking-wider text-violet-400">{zt.coordsLabel}</p>
-          <p id="ontology-progress-summary" class="mt-1 text-lg font-black text-violet-900">0 / 12</p>
+          <p id="ontology-progress-summary" class="mt-1 text-lg font-black text-violet-900">0 / {coordinateCards.length}</p>
         </div>
       </div>
+
+      <!-- Journey meter: fills as the user records coordinates -->
+      <div class="mt-5">
+        <div class="flex items-center justify-between text-xs font-black text-violet-600">
+          <span>{ju.mapProgress}</span>
+          <span id="ontology-journey-pct">0%</span>
+        </div>
+        <div class="mt-1.5 h-2.5 w-full overflow-hidden rounded-full bg-violet-100">
+          <div id="ontology-journey-bar" class="h-full rounded-full bg-gradient-to-r from-violet-400 to-violet-600 transition-all duration-700 ease-out" style="width:0%"></div>
+        </div>
+        <a id="ontology-next-step" href={coordinateCards[0].href} data-prefix={ju.nextStep} data-complete={ju.mapComplete} class="mt-3 inline-flex items-center gap-2 rounded-full bg-violet-600 px-4 py-2 text-sm font-black text-white transition hover:bg-violet-700">
+          <span aria-hidden="true">→</span>
+          <span id="ontology-next-step-text">{ju.nextStep}: {coordinateCards[0].title}</span>
+        </a>
+      </div>
+
       <a href={`/${locale}/profile/export`} class="mt-4 flex flex-col gap-2 rounded-2xl border border-emerald-200 bg-emerald-50/70 p-4 text-emerald-950 transition hover:border-emerald-400 hover:bg-emerald-50 md:flex-row md:items-center md:justify-between">
         <span>
           <span class="block text-sm font-black">🧾 {wt.profileTitle}</span>
@@ -366,11 +392,38 @@ for (const ns of namespaces) {
           if (!firstEmpty) firstEmpty = card;
         }
       });
+      const total = cards.length || 1;
       // Guide the user: highlight the first empty coordinate as the recommended next step.
       if (firstEmpty) firstEmpty.classList.add('ring-2', 'ring-violet-400');
 
       const coordsEl = document.getElementById('ontology-progress-summary');
-      if (coordsEl) coordsEl.textContent = `${recorded} / 12`;
+      if (coordsEl) coordsEl.textContent = `${recorded} / ${total}`;
+
+      // Journey meter: fill the map as coordinates are recorded.
+      const pct = Math.round((recorded / total) * 100);
+      const bar = document.getElementById('ontology-journey-bar');
+      if (bar) bar.style.width = `${pct}%`;
+      const pctEl = document.getElementById('ontology-journey-pct');
+      if (pctEl) pctEl.textContent = `${pct}%`;
+
+      // Next step: point to the first empty coordinate, or celebrate when complete.
+      const nextEl = document.getElementById('ontology-next-step');
+      const nextText = document.getElementById('ontology-next-step-text');
+      if (nextEl && nextText) {
+        if (firstEmpty) {
+          const prefix = nextEl.getAttribute('data-prefix') || 'Next';
+          const title = firstEmpty.querySelector('h3');
+          const href = firstEmpty.getAttribute('href');
+          if (href) nextEl.setAttribute('href', href);
+          nextText.textContent = `${prefix}: ${title ? title.textContent : ''}`.trim();
+          nextEl.classList.remove('bg-emerald-600', 'hover:bg-emerald-700');
+          nextEl.classList.add('bg-violet-600', 'hover:bg-violet-700');
+        } else {
+          nextText.textContent = nextEl.getAttribute('data-complete') || 'Complete';
+          nextEl.classList.remove('bg-violet-600', 'hover:bg-violet-700');
+          nextEl.classList.add('bg-emerald-600', 'hover:bg-emerald-700');
+        }
+      }
 
       const tests = readJson(TESTS_KEY);
       const testsEl = document.getElementById('ontology-stat-tests');
