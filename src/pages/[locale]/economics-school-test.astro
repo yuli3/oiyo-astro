@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import EconomicsSchoolTest from '../../components/tests/EconomicsSchoolTest';
+import BlogDeepDive from '../../components/shared/BlogDeepDive.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -73,5 +74,6 @@ const ci = coordinateIntroMap[locale] ?? coordinateIntroMap.en;
         <li><a class="font-bold hover:underline" href={`/${locale}/profile/export`}>→ {ci.links[2]}</a></li>
       </ul>
     </section>
+    <BlogDeepDive slug="economics-school-test" locale={locale} />
   </div>
 </Layout>

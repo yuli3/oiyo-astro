@@ -1,0 +1,62 @@
+---
+// Reusable "my records → ontology map" summary. Drop on hub pages (today, etc.)
+// to surface a user's recorded results and route them back to the /ontology map.
+import type { Locale } from '../../i18n';
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+
+const copy: Record<string, { title: string; sub: string; cta: string; empty: string }> = {
+  ko: { title: '내 온톨로지', sub: '지금까지 기록한 나의 좌표', cta: '존재 지도 열기', empty: '아직 기록이 없어요. 테스트로 나를 채워보세요.' },
+  en: { title: 'My ontology', sub: 'The coordinates you have recorded so far', cta: 'Open your map', empty: 'No records yet. Take a test to fill yourself in.' },
+  ja: { title: '私のオントロジー', sub: 'これまでに記録した座標', cta: '存在地図を開く', empty: 'まだ記録がありません。テストで自分を埋めてみましょう。' },
+  zh: { title: '我的本体', sub: '你目前记录的坐标', cta: '打开存在地图', empty: '还没有记录。做个测验来填充自己吧。' },
+  fr: { title: 'Mon ontologie', sub: 'Les coordonnées que vous avez enregistrées', cta: 'Ouvrir votre carte', empty: 'Aucun enregistrement. Faites un test pour vous compléter.' },
+  es: { title: 'Mi ontología', sub: 'Las coordenadas que has registrado', cta: 'Abre tu mapa', empty: 'Sin registros aún. Haz un test para completarte.' },
+};
+const c = copy[locale] ?? copy.en;
+---
+<section class="mt-10">
+  <div class="rounded-2xl border border-violet-200 bg-violet-50/50 p-5">
+    <div class="flex flex-wrap items-center justify-between gap-3">
+      <div>
+        <p class="text-sm font-black text-violet-950">{c.title}</p>
+        <p class="text-xs text-violet-600">{c.sub}</p>
+      </div>
+      <a href={`/${locale}/ontology`} class="shrink-0 rounded-full bg-violet-600 px-4 py-2 text-sm font-black text-white transition hover:bg-violet-700">{c.cta} →</a>
+    </div>
+    <div id="my-ontology-chips" data-empty={c.empty} class="mt-3 flex flex-wrap gap-2">
+      <span class="text-sm text-violet-500">{c.empty}</span>
+    </div>
+  </div>
+</section>
+<script is:inline>
+  (() => {
+    const read = (k) => { try { const r = localStorage.getItem(k); return r ? JSON.parse(r) : null; } catch { return null; } };
+    const list = document.getElementById('my-ontology-chips');
+    if (!list) return;
+    const render = () => {
+      const results = read('oiyo:test-results:v1');
+      list.innerHTML = '';
+      if (Array.isArray(results) && results.length) {
+        results.slice(0, 10).forEach((r) => {
+          const href = r && typeof r.sourcePath === 'string' ? r.sourcePath : '';
+          const el = document.createElement(href ? 'a' : 'span');
+          if (href) el.setAttribute('href', href);
+          el.className = 'inline-flex items-center rounded-full border border-violet-200 bg-white px-3 py-1 text-xs font-bold text-violet-800 transition hover:border-violet-400';
+          const t = r && r.title ? String(r.title) : '';
+          const v = r && r.resultLabel ? String(r.resultLabel) : '';
+          el.textContent = v ? `${t} · ${v}` : t;
+          list.appendChild(el);
+        });
+      } else {
+        const span = document.createElement('span');
+        span.className = 'text-sm text-violet-500';
+        span.textContent = list.getAttribute('data-empty') || '';
+        list.appendChild(span);
+      }
+    };
+    render();
+    window.addEventListener('oiyo:test-results-updated', render);
+  })();
+</script>

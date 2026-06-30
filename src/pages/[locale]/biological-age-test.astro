@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import BiologicalAgeTest from '../../components/tests/BiologicalAgeTest';
+import BlogDeepDive from '../../components/shared/BlogDeepDive.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -16,5 +17,6 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <BiologicalAgeTest locale={locale as any} client:load />
+    <BlogDeepDive slug="biological-age-test" locale={locale} />
   </div>
 </Layout>

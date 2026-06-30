@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import { LOCALES, getTranslations } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import OntologyIsland from '../../../components/OntologyIsland';
+import OntologyBirthIsland from '../../../components/OntologyBirthIsland';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -273,6 +274,12 @@ for (const ns of namespaces) {
         <h2 class="mt-1 text-2xl md:text-3xl font-black text-violet-950">{zt.z1Title}</h2>
         <p class="mt-2 max-w-2xl text-sm leading-7 text-violet-700">{zt.z1Sub}</p>
       </div>
+
+      <!-- Real input widget: enter birth date here, the deep dashboard syncs live. -->
+      <div class="mt-5">
+        <OntologyBirthIsland locale={locale} client:load />
+      </div>
+
       <div class="mt-5 grid gap-3 sm:grid-cols-3">
         <div class="rounded-2xl bg-violet-50 px-4 py-3">
           <p class="text-[11px] font-black uppercase tracking-wider text-violet-400">{zt.birthLabel}</p>
@@ -447,10 +454,13 @@ for (const ns of namespaces) {
       const testsEl = document.getElementById('ontology-stat-tests');
       if (testsEl) testsEl.textContent = String(Array.isArray(tests) ? tests.length : 0);
 
-      const profile = readJson(PROFILE_KEY);
+      const md = readJson(PROFILE_KEY);
+      const us = readJson('oiyo_user_state'); // Zustand store (canonical for the deep island)
+      const zBirth = us && us.state && us.state.profile ? us.state.profile.birthDate : null;
+      const mdBirth = md && typeof md.birthDate === 'string' ? md.birthDate : null;
       const birthEl = document.getElementById('ontology-stat-birth');
       if (birthEl) {
-        const has = profile && typeof profile === 'object' && typeof profile.birthDate === 'string' && profile.birthDate.trim().length > 0;
+        const has = !!((zBirth && String(zBirth).trim()) || (mdBirth && String(mdBirth).trim()));
         birthEl.textContent = has
           ? (birthEl.getAttribute('data-set-label') || 'Recorded')
           : (birthEl.getAttribute('data-unset-label') || 'Not set');
