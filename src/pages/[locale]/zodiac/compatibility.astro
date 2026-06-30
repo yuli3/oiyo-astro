@@ -426,6 +426,19 @@ const content: Record<Locale, {
 
 const c = content[locale] ?? content.en;
 
+const webApplicationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: m.title,
+  description: m.description,
+  url: new URL(Astro.url.pathname, Astro.site).toString(),
+  applicationCategory: 'LifestyleApplication',
+  operatingSystem: 'Any',
+  inLanguage: locale,
+  isAccessibleForFree: true,
+  publisher: { '@id': 'https://oiyo.net/#organization' },
+};
+
 const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
@@ -441,7 +454,7 @@ const faqJsonLd = {
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
-  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-2xl px-4 py-10">
     <ZodiacCompatibilityCalculator client:load locale={locale} />
     <RelatedTools locale={locale} tools={['zodiac', 'natal', 'saju']} current="zodiacCompat" />

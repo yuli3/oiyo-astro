@@ -42,22 +42,44 @@ const blocks = [
   { n: '04', title: txt({ ko: '용어·프레임 노트', en: 'Terms and framing notes', ja: '用語・フレームノート', zh: '术语与框架说明', fr: 'Notes de termes et cadrage', es: 'Notas de términos y marco' }), body: txt({ ko: '같은 사실을 다르게 보이게 만드는 용어, 누락된 비교 기준, 감정적 표현을 표시합니다.', en: 'Flag terms, missing baselines, and emotional wording that change how the same facts feel.', ja: '同じ事実の見え方を変える用語・欠けた基準・感情的表現を示します。', zh: '标出会改变同一事实感受的术语、缺失基准与情绪化表达。', fr: 'Signaler termes, bases de comparaison absentes et formulations émotionnelles.', es: 'Marca términos, bases ausentes y lenguaje emocional que cambian la percepción.' }) },
 ];
 
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebApplication',
-  name: title,
-  description,
-  url: new URL(Astro.url.pathname, Astro.site).toString(),
-  applicationCategory: 'EducationalApplication',
-  operatingSystem: 'Any',
-  inLanguage: locale,
-  isAccessibleForFree: true,
-  publisher: { '@id': 'https://oiyo.net/#organization' },
-};
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: title,
+    description,
+    url: new URL(Astro.url.pathname, Astro.site).toString(),
+    applicationCategory: 'EducationalApplication',
+    operatingSystem: 'Any',
+    inLanguage: locale,
+    isAccessibleForFree: true,
+    publisher: { '@id': 'https://oiyo.net/#organization' },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name: txt({
+      ko: '정보 위생 점검표를 쓰는 순서',
+      en: 'How to use the information hygiene checklist',
+      ja: '情報衛生チェックリストの使い方',
+      zh: '如何使用信息卫生检查表',
+      fr: 'Comment utiliser la checklist d’hygiène informationnelle',
+      es: 'Cómo usar la lista de higiene informativa',
+    }),
+    description,
+    inLanguage: locale,
+    step: blocks.map((block, index) => ({
+      '@type': 'HowToStep',
+      position: index + 1,
+      name: block.title,
+      text: block.body,
+    })),
+  },
+];
 ---
 
 <Layout title={title} description={description} locale={locale}>
-  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
   <section class="bg-slate-950 text-white px-4 py-16">
     <div class="mx-auto max-w-5xl">
       <p class="mb-3 text-sm font-bold uppercase tracking-[0.24em] text-emerald-300">OIYO · Information Hygiene</p>

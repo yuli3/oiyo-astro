@@ -124,14 +124,68 @@ const worldviewText: Record<Locale, {
   es: { eyebrow: 'Encontrarte', title: 'Un mapa del ser que superpone coordenadas sin reducirte a un solo tipo', body: 'OIYO Ontology reúne personalidad, valores, gustos, símbolos y estado de hoy en un mapa de autodescubrimiento.', progress: 'Mapa actual: 0 / 12 coordenadas registradas', open: 'Aún no abierto', try: 'Probar', recorded: 'Registrado', revisit: 'Explorar de nuevo', profileTitle: 'Exportar perfil', profileBody: 'Convierte tus tests y coordenadas simbólicas en un perfil Markdown. La exportación vive dentro de Ontology, no en el menú superior.', profileCta: 'Organizar mi perfil' },
 };
 const wt = worldviewText[locale] ?? worldviewText.en;
-const coordinateCards = [
-  { id: 'personality', emoji: '🧠', badge: '성격 지도', title: '성격 좌표', desc: 'MBTI·Big Five·에니어그램으로 나의 기본 패턴 보기', href: `/${locale}/ontology/personality`, status: wt.open, cta: wt.try },
-  { id: 'political', emoji: '🧭', badge: '가치 지도', title: '정치성향', desc: '사회·경제·국가·세계관에서 내가 우선하는 가치 보기', href: `/${locale}/political/test`, status: wt.open, cta: wt.try },
-  { id: 'economics', emoji: '📊', badge: '경제 세계관', title: '경제관', desc: '시장·정부·제도·인간 행동을 바라보는 관점 보기', href: `/${locale}/economics-school-test`, status: wt.open, cta: wt.try },
-  { id: 'joseon', emoji: '🏯', badge: '역사적 자아', title: '조선붕당', desc: '원칙·현실·개혁·안정 사이에서 나의 역사적 기질 보기', href: `/${locale}/joseon-faction-test`, status: wt.open, cta: wt.try },
-  { id: 'hobbies', emoji: '🎨', badge: '취향 지도', title: '취향과 환경', desc: '나를 살아나게 하는 활동·색·공간의 단서 보기', href: `/${locale}/ontology/hobbies`, status: wt.open, cta: wt.try },
-  { id: 'luck', emoji: '✨', badge: '상징 지도', title: '행운과 오늘의 나', desc: '상징 레이어와 오늘의 상태를 연결해 보기', href: `/${locale}/ontology/luck`, status: wt.open, cta: wt.try },
+
+// Localized copy for the 6 coordinate cards (previously hardcoded Korean → showed KO on every locale).
+const cardText: Record<Locale, { badge: string; title: string; desc: string }[]> = {
+  ko: [
+    { badge: '성격 지도', title: '성격 좌표', desc: 'MBTI·Big Five·에니어그램으로 나의 기본 패턴 보기' },
+    { badge: '가치 지도', title: '정치성향', desc: '사회·경제·국가·세계관에서 내가 우선하는 가치 보기' },
+    { badge: '경제 세계관', title: '경제관', desc: '시장·정부·제도·인간 행동을 바라보는 관점 보기' },
+    { badge: '역사적 자아', title: '조선붕당', desc: '원칙·현실·개혁·안정 사이에서 나의 역사적 기질 보기' },
+    { badge: '취향 지도', title: '취향과 환경', desc: '나를 살아나게 하는 활동·색·공간의 단서 보기' },
+    { badge: '상징 지도', title: '행운과 오늘의 나', desc: '상징 레이어와 오늘의 상태를 연결해 보기' },
+  ],
+  en: [
+    { badge: 'Personality map', title: 'Personality', desc: 'See your core patterns through MBTI, Big Five & Enneagram' },
+    { badge: 'Values map', title: 'Political values', desc: 'See the values you prioritize across society, economy, nation & worldview' },
+    { badge: 'Economic worldview', title: 'Economic view', desc: 'See how you read markets, government, institutions & human behavior' },
+    { badge: 'Historical self', title: 'Joseon factions', desc: 'See your historical temperament between principle, pragmatism, reform & stability' },
+    { badge: 'Taste map', title: 'Taste & environment', desc: 'See clues to the activities, colors & spaces that revive you' },
+    { badge: 'Symbol map', title: 'Luck & today', desc: 'Connect your symbolic layer with today’s state' },
+  ],
+  ja: [
+    { badge: '性格マップ', title: '性格', desc: 'MBTI・ビッグファイブ・エニアグラムで基本パターンを見る' },
+    { badge: '価値マップ', title: '政治的傾向', desc: '社会・経済・国家・世界観で優先する価値を見る' },
+    { badge: '経済的世界観', title: '経済観', desc: '市場・政府・制度・人間行動の捉え方を見る' },
+    { badge: '歴史的自己', title: '朝鮮の党派', desc: '原則・現実・改革・安定の間で歴史的気質を見る' },
+    { badge: '好みマップ', title: '好みと環境', desc: '自分を生き返らせる活動・色・空間の手がかりを見る' },
+    { badge: '象徴マップ', title: '幸運と今日の私', desc: '象徴レイヤーと今日の状態をつなぐ' },
+  ],
+  zh: [
+    { badge: '性格地图', title: '性格', desc: '通过 MBTI、大五与九型看你的基本模式' },
+    { badge: '价值地图', title: '政治倾向', desc: '看你在社会、经济、国家与世界观中优先的价值' },
+    { badge: '经济世界观', title: '经济观', desc: '看你如何看待市场、政府、制度与人类行为' },
+    { badge: '历史自我', title: '朝鲜党派', desc: '在原则、现实、改革与稳定之间看你的历史气质' },
+    { badge: '品味地图', title: '品味与环境', desc: '看让你活过来的活动、颜色与空间线索' },
+    { badge: '象征地图', title: '幸运与今天的我', desc: '把象征层与今天的状态连起来' },
+  ],
+  fr: [
+    { badge: 'Carte de personnalité', title: 'Personnalité', desc: 'Voir vos schémas de base via MBTI, Big Five et ennéagramme' },
+    { badge: 'Carte des valeurs', title: 'Tendances politiques', desc: 'Voir les valeurs que vous priorisez : société, économie, nation, vision du monde' },
+    { badge: 'Vision économique', title: 'Vision économique', desc: 'Voir comment vous lisez marchés, État, institutions et comportements' },
+    { badge: 'Soi historique', title: 'Factions Joseon', desc: 'Voir votre tempérament historique entre principe, pragmatisme, réforme et stabilité' },
+    { badge: 'Carte des goûts', title: 'Goûts et environnement', desc: 'Voir les indices d’activités, couleurs et espaces qui vous font revivre' },
+    { badge: 'Carte symbolique', title: 'Chance et aujourd’hui', desc: 'Relier votre couche symbolique à l’état du jour' },
+  ],
+  es: [
+    { badge: 'Mapa de personalidad', title: 'Personalidad', desc: 'Ve tus patrones básicos con MBTI, Big Five y eneagrama' },
+    { badge: 'Mapa de valores', title: 'Tendencia política', desc: 'Ve los valores que priorizas en sociedad, economía, nación y cosmovisión' },
+    { badge: 'Cosmovisión económica', title: 'Visión económica', desc: 'Ve cómo interpretas mercados, gobierno, instituciones y conducta humana' },
+    { badge: 'Yo histórico', title: 'Facciones Joseon', desc: 'Ve tu temperamento histórico entre principio, pragmatismo, reforma y estabilidad' },
+    { badge: 'Mapa de gustos', title: 'Gustos y entorno', desc: 'Ve pistas de actividades, colores y espacios que te reviven' },
+    { badge: 'Mapa simbólico', title: 'Suerte y hoy', desc: 'Conecta tu capa simbólica con el estado de hoy' },
+  ],
+};
+const ct = cardText[locale] ?? cardText.en;
+const cardMeta = [
+  { id: 'personality', emoji: '🧠', href: `/${locale}/ontology/personality` },
+  { id: 'political', emoji: '🧭', href: `/${locale}/political/test` },
+  { id: 'economics', emoji: '📊', href: `/${locale}/economics-school-test` },
+  { id: 'joseon', emoji: '🏯', href: `/${locale}/joseon-faction-test` },
+  { id: 'hobbies', emoji: '🎨', href: `/${locale}/ontology/hobbies` },
+  { id: 'luck', emoji: '✨', href: `/${locale}/ontology/luck` },
 ];
+const coordinateCards = cardMeta.map((m, i) => ({ ...m, ...(ct[i] ?? cardText.en[i]), status: wt.open, cta: wt.try }));
 
 // All namespaces needed by OntologyClient and its component tree
 const namespaces = [
