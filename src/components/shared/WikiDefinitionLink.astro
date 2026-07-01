@@ -1,0 +1,26 @@
+---
+// Explanation bridge: ontology coordinate → wiki `meaning-of-*` definition.
+// Renders ONLY when the definition exists in the current locale (404-safe).
+// This both fills the ontology "근거" lane and distributes internal-link
+// authority to the wiki definition corpus (Lever 4).
+import type { Locale } from '../../i18n';
+import { wikiDefUrl } from '../../data/ontology-wiki-bridges';
+
+interface Props { slug: string; locale: Locale; label?: string; compact?: boolean; }
+const { slug, locale, label, compact } = Astro.props;
+const url = wikiDefUrl(slug, locale);
+
+const cta: Record<string, string> = {
+  ko: '정의·근거 보기', en: 'Definition & sources', ja: '定義・根拠', zh: '定义与依据', fr: 'Définition et sources', es: 'Definición y fuentes',
+};
+const c = cta[locale] ?? cta.en;
+---
+{url && (compact ? (
+  <a href={url} class="inline-flex items-center gap-1 text-xs font-bold text-green-700 hover:text-green-900">
+    📖 {label ?? c} →
+  </a>
+) : (
+  <a href={url} class="mt-2 inline-flex items-center gap-2 rounded-lg border border-green-100 bg-green-50/60 px-3 py-2 text-xs font-bold text-green-800 transition hover:border-green-300 hover:bg-green-50">
+    <span aria-hidden="true">📖</span>{label ?? c}<span aria-hidden="true">→</span>
+  </a>
+))}

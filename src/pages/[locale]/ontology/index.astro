@@ -1,8 +1,12 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
+import OntologyIsland from '../../../components/OntologyIsland';
+import OntologyBirthIsland from '../../../components/OntologyBirthIsland';
+import { ProfileMindmap } from '../../../components/ontology/ProfileMindmap';
+import WikiDefinitionLink from '../../../components/shared/WikiDefinitionLink.astro';
+import { laneOf, LANE_META } from '../../../lib/ontology/registry/ontology-systems';
 import { LOCALES, getTranslations } from '../../../i18n';
 import type { Locale } from '../../../i18n';
-import OntologyIsland from '../../../components/OntologyIsland';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -11,14 +15,31 @@ export async function getStaticPaths() {
 const { locale } = Astro.params as { locale: Locale };
 const t = await getTranslations(locale);
 
-// All namespaces needed by OntologyClient and its component tree
+// Shell copy (mobile-only green "존재론" dashboard).
+const ui: Record<Locale, {
+  eyebrow: string; title: string; sub: string; cta: string; ctaSub: string;
+  progress: string; nextStep: string; deepTitle: string; deepSub: string;
+  recorded: string; open: string; locked: string; allTools: string;
+}> = {
+  ko: { eyebrow: '존재론 · 나의 지도', title: '나를 하나로 줄이지 않는 존재 지도', sub: '타고난 것 · 테스트로 드러난 것 · 내가 고른 것을 한곳에서. 모든 기록은 이 브라우저에만 저장됩니다.', cta: '내 프로필 정리하기', ctaSub: '생년월일부터 시작해 좌표를 채워가세요', progress: '완성도', nextStep: '다음 한 걸음', deepTitle: '심화 탐색 — 모든 좌표를 한 화면에서', deepSub: '사주·자미두수·바이오리듬 등 모든 엔진을 겹쳐 읽는 작업대', recorded: '기록됨', open: '해보기', locked: '입력 필요', allTools: 'oiyo의 모든 도구' },
+  en: { eyebrow: 'Ontology · your map', title: 'A map of being that never reduces you to one type', sub: 'What you were born with · what tests reveal · what you choose — in one place. Everything stays in this browser only.', cta: 'Organize my profile', ctaSub: 'Start with your birth date and fill in your coordinates', progress: 'Completion', nextStep: 'Next step', deepTitle: 'Deep dive — every coordinate on one canvas', deepSub: 'A workbench layering Saju, Zi Wei, biorhythm and more', recorded: 'Recorded', open: 'Try it', locked: 'Input needed', allTools: 'All oiyo tools' },
+  ja: { eyebrow: '存在論 · 私の地図', title: '一つのタイプに縮めない存在地図', sub: '生まれ持ったもの・テストで分かるもの・自分で選ぶものを一つに。すべてこのブラウザだけに保存。', cta: 'プロフィールを整理', ctaSub: '生年月日から座標を埋めていく', progress: '完成度', nextStep: '次の一歩', deepTitle: '深掘り — すべての座標を一画面で', deepSub: '四柱・紫微・バイオリズムなどを重ねる作業台', recorded: '記録済み', open: '試す', locked: '入力必要', allTools: 'oiyoの全ツール' },
+  zh: { eyebrow: '存在论 · 我的地图', title: '不把你缩成单一类型的存在地图', sub: '与生俱来 · 测验揭示 · 你的选择，集于一处。全部只保存在此浏览器。', cta: '整理我的资料', ctaSub: '从出生日期开始填充坐标', progress: '完成度', nextStep: '下一步', deepTitle: '深入 — 所有坐标在一个画面', deepSub: '叠加八字、紫微、生物节律等的工作台', recorded: '已记录', open: '试试', locked: '需输入', allTools: 'oiyo 所有工具' },
+  fr: { eyebrow: 'Ontologie · votre carte', title: 'Une carte de l’être qui ne vous réduit jamais', sub: 'L’inné · ce que révèlent les tests · ce que vous choisissez — en un lieu. Tout reste dans ce navigateur.', cta: 'Organiser mon profil', ctaSub: 'Commencez par votre date de naissance', progress: 'Progression', nextStep: 'Étape suivante', deepTitle: 'Exploration — toutes les coordonnées sur une toile', deepSub: 'Un atelier superposant Saju, Zi Wei, biorythme et plus', recorded: 'Enregistré', open: 'Essayer', locked: 'Saisie requise', allTools: 'Tous les outils oiyo' },
+  es: { eyebrow: 'Ontología · tu mapa', title: 'Un mapa del ser que nunca te reduce', sub: 'Lo innato · lo que revelan los tests · lo que eliges — en un lugar. Todo queda en este navegador.', cta: 'Organizar mi perfil', ctaSub: 'Empieza con tu fecha de nacimiento', progress: 'Progreso', nextStep: 'Siguiente paso', deepTitle: 'Exploración — todas las coordenadas en un lienzo', deepSub: 'Un taller que superpone Saju, Zi Wei, biorritmo y más', recorded: 'Registrado', open: 'Probar', locked: 'Falta dato', allTools: 'Todas las herramientas oiyo' },
+};
+const u = ui[locale] ?? ui.en;
+const innate = laneOf('innate');
+const tests = laneOf('test');
+const lm = LANE_META;
+
+// Namespaces for the deep OntologyIsland (unchanged from prior version).
 const namespaces = [
   'akashic', 'catalog', 'chosun', 'colorPersonality', 'commerce',
   'dashboard', 'egyptian', 'fortune', 'hobby', 'lifestyle',
   'mbti', 'nav', 'numerology', 'ontology', 'saju', 'tci', 'ui',
   'universal', 'common', 'hero',
 ];
-
 const messages: Record<string, unknown> = {};
 for (const ns of namespaces) {
   try {
@@ -29,15 +50,139 @@ for (const ns of namespaces) {
 }
 ---
 
-<Layout
-  title={t('hero.ontology.title') || 'My Sanctuary'}
-  description={t('hero.ontology.desc')}
-  locale={locale}
->
-  <!-- Full ontology library, starting at the Wisdom Library island. -->
-  <OntologyIsland
-    locale={locale}
-    messages={messages}
-    client:load
-  />
+<Layout title={t('hero.ontology.title') || u.title} description={u.sub} locale={locale}>
+  <div class="mx-auto max-w-md px-4 pb-16 pt-6 md:max-w-2xl">
+    <!-- Hero -->
+    <header class="text-center">
+      <p class="text-[11px] font-black uppercase tracking-[0.2em] text-green-600">{u.eyebrow}</p>
+      <h1 class="mt-2 text-2xl font-black leading-tight text-green-950 md:text-3xl">{u.title}</h1>
+      <p class="mx-auto mt-2 max-w-md text-sm leading-6 text-green-700/90">{u.sub}</p>
+    </header>
+
+    <!-- Primary CTA + completion (sticky spirit) -->
+    <section class="mt-5 rounded-[28px] border border-green-200 bg-gradient-to-b from-green-50 to-white p-4 shadow-sm">
+      <a href="#profile-builder" class="flex items-center justify-between rounded-2xl bg-green-700 px-4 py-3 text-white transition hover:bg-green-800">
+        <span>
+          <span class="block text-sm font-black">🧭 {u.cta}</span>
+          <span class="block text-[11px] text-green-100">{u.ctaSub}</span>
+        </span>
+        <span aria-hidden="true">→</span>
+      </a>
+      <div class="mt-3">
+        <div class="flex items-center justify-between text-xs font-black text-green-600">
+          <span>{u.progress}</span><span id="ont-pct">0%</span>
+        </div>
+        <div class="mt-1.5 h-2.5 w-full overflow-hidden rounded-full bg-green-100">
+          <div id="ont-bar" class="h-full rounded-full bg-gradient-to-r from-green-400 to-green-700 transition-all duration-700" style="width:0%"></div>
+        </div>
+        <p id="ont-next" class="mt-2 text-xs font-bold text-green-700"></p>
+      </div>
+      <div class="mt-3">
+        <OntologyBirthIsland locale={locale} client:load />
+      </div>
+    </section>
+
+    <!-- Lane 1: 타고난 것 / Lane 2: 테스트 -->
+    {[{ lane: 'innate', items: innate }, { lane: 'test', items: tests }].map((group) => (
+      <section class="mt-8">
+        <div class="mb-3">
+          <h2 class="flex items-center gap-2 text-lg font-black text-green-950">
+            <span aria-hidden="true">{lm[group.lane].emoji}</span>{lm[group.lane].name[locale]}
+          </h2>
+          <p class="text-xs text-green-600">{lm[group.lane].sub[locale]}</p>
+        </div>
+        <div class="grid grid-cols-2 gap-2.5">
+          {group.items.map((s) => (
+            <a href={s.href(locale)} data-sys={s.id} data-req={s.requires} data-testid={s.testId ?? ''}
+               data-open={u.open} data-recorded={u.recorded} data-locked={u.locked}
+               class="group flex h-full flex-col rounded-2xl border border-green-100 bg-white p-3 transition-all hover:-translate-y-0.5 hover:border-green-400 hover:shadow-sm">
+              <div class="flex items-start justify-between">
+                <span class="text-2xl" aria-hidden="true">{s.emoji}</span>
+                <span data-status class="rounded-full bg-green-50 px-2 py-0.5 text-[10px] font-black text-green-600">{u.open}</span>
+              </div>
+              <h3 class="mt-2 text-sm font-black text-green-950 group-hover:text-green-700">{s.name[locale]}</h3>
+              {s.wikiSlug && <WikiDefinitionLink slug={s.wikiSlug} locale={locale} compact />}
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    <!-- Lane 3: 실제 나의 것 (mindmap builder) -->
+    <section id="profile-builder" class="mt-8 scroll-mt-4">
+      <div class="mb-3">
+        <h2 class="flex items-center gap-2 text-lg font-black text-green-950">
+          <span aria-hidden="true">{lm.chosen.emoji}</span>{lm.chosen.name[locale]}
+        </h2>
+        <p class="text-xs text-green-600">{lm.chosen.sub[locale]}</p>
+      </div>
+      <ProfileMindmap locale={locale} client:visible />
+    </section>
+
+    <!-- Deep dive: opt-in disclosure so the full-screen engine island doesn't
+         duplicate the dashboard hero; only rendered when the user opens it. -->
+    <details class="mt-10 border-t border-green-100 pt-6 [&[open]>summary_.chev]:rotate-90">
+      <summary class="flex cursor-pointer list-none items-center justify-between rounded-2xl bg-green-50 px-4 py-3">
+        <span>
+          <span class="block text-lg font-black text-green-950">{u.deepTitle}</span>
+          <span class="block text-xs text-green-600">{u.deepSub}</span>
+        </span>
+        <span class="chev shrink-0 text-green-700 transition-transform" aria-hidden="true">▸</span>
+      </summary>
+      <div class="mt-4 overflow-hidden rounded-2xl">
+        <OntologyIsland locale={locale} messages={messages} client:visible />
+      </div>
+    </details>
+
+    <a href={`/${locale}`} class="mt-6 inline-flex items-center gap-1 text-sm font-black text-green-700 hover:text-green-900">{u.allTools} →</a>
+  </div>
+
+  <script is:inline>
+    (() => {
+      const read = (k) => { try { const r = localStorage.getItem(k); return r ? JSON.parse(r) : null; } catch { return null; } };
+      const apply = () => {
+        const us = read('oiyo_user_state');
+        const p = (us && us.state && us.state.profile) ? us.state.profile : {};
+        const has = { birthDate: !!(p.birthDate && String(p.birthDate).trim()), birthTime: !!(p.birthTime), name: !!(p.name && String(p.name).trim()), bloodType: !!(p.bloodType) };
+        const results = read('oiyo:test-results:v1');
+        const doneTests = new Set(Array.isArray(results) ? results.map((r) => r && (r.testId || r.kind)).filter(Boolean) : []);
+        const cards = Array.from(document.querySelectorAll('[data-sys]'));
+        let recorded = 0, firstOpen = null;
+        cards.forEach((card) => {
+          const req = card.getAttribute('data-req');
+          const testId = card.getAttribute('data-testid');
+          const status = card.querySelector('[data-status]');
+          let state = 'open';
+          if (req === 'testResult') state = (testId && doneTests.has(testId)) ? 'recorded' : 'open';
+          else if (req === 'none') state = 'open';
+          else state = has[req] ? 'recorded' : 'locked';
+          card.classList.remove('ring-2', 'ring-green-400', 'border-emerald-300', 'bg-emerald-50', 'opacity-70');
+          if (status) {
+            if (state === 'recorded') { status.textContent = card.getAttribute('data-recorded'); recorded++; card.classList.add('border-emerald-300', 'bg-emerald-50'); }
+            else if (state === 'locked') { status.textContent = card.getAttribute('data-locked'); card.classList.add('opacity-70'); if (!firstOpen) firstOpen = card; }
+            else { status.textContent = card.getAttribute('data-open'); if (!firstOpen) firstOpen = card; }
+          }
+        });
+        if (firstOpen) firstOpen.classList.add('ring-2', 'ring-green-400');
+        // Lane 3 (실제 나의 것): count the mindmap as one recorded coordinate when
+        // the user has chosen any keyword — so the builder feeds completion too.
+        const profile = read('oiyo:profile:v1');
+        const chosenCount = profile && profile.chosen
+          ? Object.values(profile.chosen).reduce((a, c) => a + (Array.isArray(c) ? c.length : 0), 0) : 0;
+        const chosenRecorded = chosenCount > 0 ? 1 : 0;
+        const total = (cards.length || 1) + 1; // +1 for the mindmap lane
+        const pct = Math.round(((recorded + chosenRecorded) / total) * 100);
+        const bar = document.getElementById('ont-bar'); if (bar) bar.style.width = pct + '%';
+        const pe = document.getElementById('ont-pct'); if (pe) pe.textContent = pct + '%';
+        const nx = document.getElementById('ont-next');
+        if (nx && firstOpen) { const h = firstOpen.querySelector('h3'); nx.textContent = '→ ' + (h ? h.textContent : ''); }
+        else if (nx) nx.textContent = '';
+      };
+      apply();
+      window.addEventListener('storage', apply);
+      window.addEventListener('oiyo:ontology-progress-updated', apply);
+      window.addEventListener('oiyo:test-results-updated', apply);
+      window.addEventListener('oiyo:profile-updated', apply);
+    })();
+  </script>
 </Layout>
