@@ -33,6 +33,7 @@ export default defineConfig({
       filter: (page) => {
         const path = new URL(page).pathname;
         if (path.split('/').some((seg) => seg.startsWith('_'))) return false;
+        if (/\/ontology\/template\//.test(path)) return false;
         if (path.endsWith('/index/') || path === '/index') return false;
         return true;
       },
@@ -61,7 +62,7 @@ export default defineConfig({
         {
           userAgent: '*',
           allow: '/',
-          disallow: ['*/search?*', '/search', '/api/'],
+          disallow: ['*/search?*', '/search', '/api/', '*/ontology/template/*'],
         },
       ],
     }),

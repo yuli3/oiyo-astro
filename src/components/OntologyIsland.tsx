@@ -1,14 +1,9 @@
 "use client";
 
-import React, { Suspense, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { IntlProvider } from '@/lib/shims/next-intl';
+import { OntologyClient } from '@/components/ontology/OntologyClient';
 import { UserProvider } from '@/lib/user/context/UserContext';
-
-const OntologyClient = React.lazy(() =>
-  import('@/components/ontology/OntologyClient').then((m) => ({
-    default: m.OntologyClient,
-  })),
-);
 
 interface OntologyIslandProps {
   locale: string;
@@ -62,18 +57,7 @@ export default function OntologyIsland({ locale, messages }: OntologyIslandProps
   return (
     <IntlProvider locale={locale} messages={tree}>
       <UserProvider>
-        <Suspense
-          fallback={
-            <div className="min-h-[60vh] flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-10 h-10 rounded-full border-2 border-green-400 border-t-transparent animate-spin mx-auto mb-3" />
-                <p className="text-sm text-green-600">Loading sanctuary…</p>
-              </div>
-            </div>
-          }
-        >
-          <OntologyClient />
-        </Suspense>
+        <OntologyClient />
       </UserProvider>
     </IntlProvider>
   );

@@ -85,6 +85,7 @@ const GenericFactionCard = dynamic(
   },
 );
 import { GuidanceSection } from "@/components/ontology/GuidanceSection";
+import { OntologyBirthInput } from "@/components/ontology/OntologyBirthInput";
 import { OntologyCard } from "@/components/ontology/OntologyCard";
 import { SajuInputForm } from "@/components/ontology/SajuInputForm";
 import { TestSelection } from "@/components/ontology/TestSelection";
@@ -141,14 +142,8 @@ export function OntologyClient() {
   const tUi = useTranslations("ui");
   const locale = useLocale() as Locale;
   const router = useRouter();
-  const [isMounted, setIsMounted] = useState(false);
   const [showInput, setShowInput] = useState(false);
   const [isStable, setIsStable] = useState(true);
-
-  useEffect(() => {
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setIsMounted(true);
-  }, [setIsMounted]);
 
   const [aggregatedProfile, setAggregatedProfile] =
     useState<null | OntologyProfile>(null);
@@ -335,8 +330,6 @@ export function OntologyClient() {
 
   // Readings removed in Phase 4
 
-  if (!isMounted) return null;
-
   if (!isStable) {
     return (
       <div className="min-h-screen bg-[#f0f9f1] flex items-center justify-center p-6 relative overflow-hidden">
@@ -432,6 +425,10 @@ export function OntologyClient() {
               {profile.birthDate || t("labels.undiscovered")}
             </p>
           </header>
+
+          <div className="mb-6 relative z-30">
+            <OntologyBirthInput locale={locale} />
+          </div>
 
           {/* --- TOP SECTION: CALIBRATION (Mobile First Drawer) --- */}
           <div className="mb-16 relative z-30 flex justify-center">

@@ -12,6 +12,7 @@ interface Props {
   title: string;
   description?: string;
   locale: Locale;
+  noindex?: boolean;
   ogImage?: string;
 }
 
@@ -27,7 +28,7 @@ const descriptionDefaults: Record<string, string> = {
   es: 'OIYO — Explora tu personalidad y tu destino',
   zh: 'OIYO — 探索你的个性与命运',
 };
-const { title, locale, ogImage } = Astro.props;
+const { title, locale, noindex = false, ogImage } = Astro.props;
 const description = Astro.props.description ?? descriptionDefaults[locale] ?? descriptionDefaults['en'];
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 const isCjk = ['ko', 'ja', 'zh'].includes(locale);
@@ -55,6 +56,7 @@ const themeColor = '#65a30d';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />

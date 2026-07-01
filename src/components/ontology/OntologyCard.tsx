@@ -4,7 +4,7 @@ import { m } from "framer-motion";
 import { ArrowUpRight, BookOpen, Compass, Heart, Lock, X } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
-import React, { ReactNode } from "react";
+import React, { type ReactNode } from "react";
 import { useState } from "react";
 
 import {
