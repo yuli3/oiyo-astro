@@ -91,20 +91,26 @@ for (const ns of namespaces) {
           </h2>
           <p class="text-xs text-green-600">{lm[group.lane].sub[locale]}</p>
         </div>
-        <div class="grid grid-cols-2 gap-2.5">
+        <!-- Row layout: left = system (name + status), right = definition link.
+             Consistent left/right matching so definitions never scatter the grid. -->
+        <ul class="divide-y divide-green-50 overflow-hidden rounded-2xl border border-green-100 bg-white">
           {group.items.map((s) => (
-            <a href={s.href(locale)} data-sys={s.id} data-req={s.requires} data-testid={s.testId ?? ''}
-               data-open={u.open} data-recorded={u.recorded} data-locked={u.locked}
-               class="group flex h-full flex-col rounded-2xl border border-green-100 bg-white p-3 transition-all hover:-translate-y-0.5 hover:border-green-400 hover:shadow-sm">
-              <div class="flex items-start justify-between">
-                <span class="text-2xl" aria-hidden="true">{s.emoji}</span>
-                <span data-status class="rounded-full bg-green-50 px-2 py-0.5 text-[10px] font-black text-green-600">{u.open}</span>
-              </div>
-              <h3 class="mt-2 text-sm font-black text-green-950 group-hover:text-green-700">{s.name[locale]}</h3>
-              {s.wikiSlug && <WikiDefinitionLink slug={s.wikiSlug} locale={locale} compact />}
-            </a>
+            <li data-sys={s.id} data-req={s.requires} data-testid={s.testId ?? ''}
+                data-open={u.open} data-recorded={u.recorded} data-locked={u.locked}
+                class="flex items-center gap-3 px-3 py-2.5 transition-colors hover:bg-green-50/50">
+              <a href={s.href(locale)} class="group flex min-w-0 flex-1 items-center gap-3">
+                <span class="text-xl" aria-hidden="true">{s.emoji}</span>
+                <span class="min-w-0">
+                  <span class="block truncate text-sm font-black text-green-950 group-hover:text-green-700">{s.name[locale]}</span>
+                  <span data-status class="text-[10px] font-black text-green-500">{u.open}</span>
+                </span>
+              </a>
+              <span class="shrink-0">
+                {s.wikiSlug ? <WikiDefinitionLink slug={s.wikiSlug} locale={locale} compact /> : <span class="text-green-300" aria-hidden="true">›</span>}
+              </span>
+            </li>
           ))}
-        </div>
+        </ul>
       </section>
     ))}
 
@@ -156,14 +162,16 @@ for (const ns of namespaces) {
           if (req === 'testResult') state = (testId && doneTests.has(testId)) ? 'recorded' : 'open';
           else if (req === 'none') state = 'open';
           else state = has[req] ? 'recorded' : 'locked';
-          card.classList.remove('ring-2', 'ring-green-400', 'border-emerald-300', 'bg-emerald-50', 'opacity-70');
+          card.classList.remove('bg-emerald-50/60', 'bg-amber-50/40', 'opacity-60');
           if (status) {
-            if (state === 'recorded') { status.textContent = card.getAttribute('data-recorded'); recorded++; card.classList.add('border-emerald-300', 'bg-emerald-50'); }
-            else if (state === 'locked') { status.textContent = card.getAttribute('data-locked'); card.classList.add('opacity-70'); if (!firstOpen) firstOpen = card; }
+            status.classList.remove('text-green-500', 'text-emerald-600', 'text-amber-600');
+            if (state === 'recorded') { status.textContent = card.getAttribute('data-recorded'); status.classList.add('text-emerald-600'); recorded++; card.classList.add('bg-emerald-50/60'); }
+            else if (state === 'locked') { status.textContent = card.getAttribute('data-locked'); status.classList.add('text-amber-600'); card.classList.add('opacity-60'); if (!firstOpen) firstOpen = card; }
             else { status.textContent = card.getAttribute('data-open'); if (!firstOpen) firstOpen = card; }
           }
         });
-        if (firstOpen) firstOpen.classList.add('ring-2', 'ring-green-400');
+        cards.forEach((c) => c.classList.remove('bg-green-50', 'ring-1', 'ring-inset', 'ring-green-300'));
+        if (firstOpen) firstOpen.classList.add('bg-green-50', 'ring-1', 'ring-inset', 'ring-green-300');
         // Lane 3 (실제 나의 것): count the mindmap as one recorded coordinate when
         // the user has chosen any keyword — so the builder feeds completion too.
         const profile = read('oiyo:profile:v1');
