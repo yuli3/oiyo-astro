@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type GritLevel = 'starter' | 'growing' | 'mature' | 'expert'
@@ -451,6 +452,13 @@ export default function GritScaleTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+      <ShareResultButton
+        locale={lp}
+        heading={lb.gritScore}
+        emoji={ld.icon}
+        resultTitle={`${ld.title} — ${overall.toFixed(1)}/5`}
+        description={`${lb.perseveranceLabel} ${pScore.toFixed(1)} · ${lb.consistencyLabel} ${cScore.toFixed(1)}`}
+      />
       <div className="flex gap-3">
         <button
           onClick={restart}

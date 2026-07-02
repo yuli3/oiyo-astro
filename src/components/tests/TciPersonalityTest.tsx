@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ShareResultButton from '../shared/ShareResultButton';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 
@@ -358,6 +359,14 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
         </div>
 
         <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
+
+        <ShareResultButton
+          locale={locale}
+          heading={t.title}
+          emoji={DIMENSIONS[(Object.keys(DIMENSIONS) as DimensionKey[]).sort((a, b) => scores[b] - scores[a])[0]].emoji}
+          resultTitle={(() => { const top = (Object.keys(DIMENSIONS) as DimensionKey[]).sort((a, b) => scores[b] - scores[a])[0]; return `${DIMENSIONS[top].label[locale]} ${scores[top]}%`; })()}
+          description={(Object.keys(DIMENSIONS) as DimensionKey[]).sort((a, b) => scores[b] - scores[a]).slice(1, 3).map(d => `${DIMENSIONS[d].label[locale]} ${scores[d]}%`).join(' · ')}
+        />
 
         <button onClick={restart}
           className="w-full py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold rounded-xl transition-colors">

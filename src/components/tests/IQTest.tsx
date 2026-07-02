@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import type { Locale } from "../../i18n";
+import ShareResultButton from "../shared/ShareResultButton";
 
 interface Props {
   locale: Locale;
@@ -1002,6 +1003,14 @@ export default function IQTest({ locale }: Props) {
             </div>
           </div>
         </div>
+
+        <ShareResultButton
+          locale={locale}
+          heading={t.estimatedIQ}
+          emoji="🧠"
+          resultTitle={`IQ ${iq} — ${band.label}`}
+          description={`${t.percentile} ${pct} · ${t.correct} ${correctCount}/${QUESTIONS.length}`}
+        />
 
         {/* Actions */}
         <div className="flex gap-3">

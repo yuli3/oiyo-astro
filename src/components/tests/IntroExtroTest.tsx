@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from "../shared/ShareResultButton";
 
 type SupportedLocale = "ko" | "en" | "ja";
 interface Props { locale?: string; }
@@ -333,6 +334,13 @@ export default function IntroExtroTest({ locale: localeProp }: Props) {
         </div>
 
         <p className="text-xs text-gray-400 text-center">{t.note}</p>
+        <ShareResultButton
+          locale={locale}
+          heading={t.resultTitle}
+          emoji={d.emoji}
+          resultTitle={d.label[locale]}
+          description={`${t.score}: ${result.score} / ${maxScore}`}
+        />
         <div className="flex gap-3 justify-center">
           <button onClick={restart} className="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium text-sm">{t.restart}</button>
           <button onClick={share} className="px-5 py-2 text-white rounded-full font-medium text-sm" style={{ backgroundColor: d.color }}>{copied ? t.copied : t.share}</button>

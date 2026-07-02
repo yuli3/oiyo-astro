@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type MoneyType = 'saver' | 'spender' | 'investor' | 'minimalist'
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -417,6 +418,14 @@ export default function MoneyPersonalityTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+
+      <ShareResultButton
+        locale={lp}
+        heading={lb.yourType}
+        emoji={r.emoji}
+        resultTitle={r.title}
+        description={moneyTypes.map(type => `${RESULTS[type][l].emoji} ${averages[type].toFixed(1)}`).join(' · ')}
+      />
 
       <div className="flex gap-3">
         <button

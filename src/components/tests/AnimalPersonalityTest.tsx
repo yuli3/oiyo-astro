@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type AnimalType = 'eagle' | 'wolf' | 'fox' | 'bear' | 'dolphin' | 'owl' | 'tiger' | 'rabbit'
@@ -258,6 +259,13 @@ export default function AnimalPersonalityTest({ locale: lp = 'ko' }: Props) {
         <ul className="space-y-1">{r.compatible.map(c => <li key={c} className="text-sm text-muted-foreground flex gap-2"><span className="text-primary flex-none">•</span>{c}</li>)}</ul>
       </div>
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+      <ShareResultButton
+        locale={lp}
+        heading={lb.yourAnimal}
+        emoji={r.emoji}
+        resultTitle={r.name}
+        description={r.tagline}
+      />
       <div className="flex gap-3">
         <button onClick={restart} aria-label={lb.restart} className="flex-1 rounded-xl border bg-card px-4 py-2 text-sm font-bold hover:bg-accent transition-colors">{lb.restart}</button>
         <button onClick={share} aria-label={lb.share} className="flex-1 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity">{lb.share}</button>

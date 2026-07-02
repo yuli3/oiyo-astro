@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import ShareResultButton from "../shared/ShareResultButton";
 
 type SupportedLocale = "ko" | "en" | "ja";
 
@@ -321,6 +322,13 @@ export default function GrowthMindsetTest({ locale: localeProp }: Props) {
           <p className="mt-1 text-sm text-gray-700">{td.tip}</p>
         </div>
 
+        <ShareResultButton
+          locale={locale}
+          heading={tx.resultTitle}
+          emoji={tp.emoji}
+          resultTitle={td.title}
+          description={`${tx.yourScore}: ${result.score} / ${maxScore}`}
+        />
         <div className="flex gap-3">
           <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">
             {tx.restart}

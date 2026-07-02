@@ -7,6 +7,7 @@ import {
   ResponsiveContainer,
   Tooltip,
 } from "recharts";
+import ShareResultButton from "../shared/ShareResultButton";
 
 type SupportedLocale = "ko" | "en" | "ja";
 
@@ -470,6 +471,14 @@ export default function EgogramTest({ locale: localeProp }: Props) {
         </div>
 
         <p className="text-xs text-gray-400 text-center">{t.note}</p>
+
+        <ShareResultButton
+          locale={locale}
+          heading={t.resultTitle}
+          emoji="🎭"
+          resultTitle={p.title[locale]}
+          description={radarData.map(d => `${d.subject} ${d.value}/8`).join(' · ')}
+        />
 
         <div className="flex gap-3 justify-center">
           <button onClick={restart}

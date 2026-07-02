@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type HumorDim = 'affiliative' | 'selfEnhancing' | 'aggressive' | 'selfDefeating'
@@ -392,6 +393,13 @@ export default function HumorStyleTest({ locale: lp = 'ko' }: Props) {
         <p className="text-sm text-amber-700">{domResult.watchout}</p>
       </div>
       <p className="text-center text-xs text-muted-foreground">{lb.disclaimer}</p>
+      <ShareResultButton
+        locale={lp}
+        heading={lb.yourStyle}
+        emoji="😄"
+        resultTitle={lb.dimNames[dom]}
+        description={dims.map(d => `${lb.dimNames[d]} ${scores[d]}/${maxScore}`).join(' · ')}
+      />
       <div className="flex gap-3">
         <button
           onClick={restart}

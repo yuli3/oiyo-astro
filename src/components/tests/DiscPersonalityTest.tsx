@@ -2,6 +2,7 @@ import { useState } from 'react'
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip
 } from 'recharts'
+import ShareResultButton from '../shared/ShareResultButton'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type DiscType = 'D' | 'I' | 'S' | 'C'
@@ -781,6 +782,13 @@ export default function DiscPersonalityTest({ locale: lp = 'ko' }: Props) {
         <h3 className="font-semibold text-sm text-primary">{lb.tip}</h3>
         <p className="text-sm">{r.tip}</p>
       </div>
+
+      <ShareResultButton
+        locale={locale}
+        heading={lb.title}
+        resultTitle={`${result.type} — ${r.title}`}
+        description={chartData.map(d => `${d.subject} ${d.value}%`).join(' · ')}
+      />
 
       <div className="flex gap-3">
         <button onClick={restart}

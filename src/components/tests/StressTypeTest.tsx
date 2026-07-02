@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type StressType = 'fighter' | 'freezer' | 'fleeer' | 'fixer'
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -707,6 +708,13 @@ export default function StressTypeTest({ locale: lp = 'ko' }: Props) {
         <p className="text-sm text-muted-foreground">{r.tip}</p>
       </div>
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+      <ShareResultButton
+        locale={lp}
+        heading={lb.yourType}
+        emoji={r.icon}
+        resultTitle={r.title}
+        description={r.subtitle}
+      />
       <div className="flex gap-3">
         <button
           onClick={restart}

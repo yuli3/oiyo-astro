@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -379,6 +380,14 @@ export default function ImposterSyndromeTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+
+      <ShareResultButton
+        locale={lp}
+        heading={lb.yourLevel}
+        emoji="🎭"
+        resultTitle={`${levelData.badge} — ${levelData.title}`}
+        description={`${lb.scoreLabel} ${result.score} ${lb.outOf}`}
+      />
 
       <div className="flex gap-3">
         <button

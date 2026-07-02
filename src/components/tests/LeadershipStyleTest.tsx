@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from "../shared/ShareResultButton";
 import {
   RadarChart,
   Radar,
@@ -431,6 +432,13 @@ export default function LeadershipStyleTest({ locale: localeProp }: Props) {
           </ResponsiveContainer>
         </div>
 
+        <ShareResultButton
+          locale={locale}
+          heading={tx.resultTitle}
+          emoji={r.emoji}
+          resultTitle={rd.title}
+          description={`${tx.famousLabel}: ${r.famous}`}
+        />
         <div className="flex gap-3">
           <button
             onClick={restart}

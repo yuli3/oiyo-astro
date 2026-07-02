@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type BiasDim = 'confirmation' | 'dunningKruger' | 'availability' | 'lossAversion' | 'attribution'
@@ -434,6 +435,13 @@ export default function CognitiveBiasTest({ locale: lp = 'ko' }: Props) {
         )
       })}
       <p className="text-center text-xs text-muted-foreground">{lb.disclaimer}</p>
+      <ShareResultButton
+        locale={lp}
+        heading={lb.yourBiases}
+        emoji="🧠"
+        resultTitle={BIAS_RESULTS[top1][l].title}
+        description={`${BIAS_RESULTS[top2][l].title}`}
+      />
       <div className="flex gap-3">
         <button
           onClick={restart}

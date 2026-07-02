@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { markOntologyCoordinateRecorded } from '@/lib/ontology/progress'
 import { recordTestResult } from '@/lib/user/test-results'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
 
@@ -302,6 +303,13 @@ export default function JoseonFactionTest({ locale }: Props) {
           </div>
         </div>
         <p className="text-xs text-muted-foreground text-center border-t pt-4">{l.note}</p>
+        <ShareResultButton
+          locale={locale}
+          heading={l.title}
+          emoji={f.emoji}
+          resultTitle={f.name}
+          description={fd.traits.join(' · ')}
+        />
         <button onClick={restart} className="w-full py-3 border rounded-xl text-sm font-medium hover:bg-accent transition-colors">
           {l.restart}
         </button>

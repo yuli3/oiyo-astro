@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type RiasecType = 'R' | 'I' | 'A' | 'S' | 'E' | 'C'
@@ -292,6 +293,13 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
         </div>
       ))}
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
+      <ShareResultButton
+        locale={locale}
+        heading={lb.yourCode}
+        emoji="🧭"
+        resultTitle={topCode}
+        description={sorted.slice(0, 3).map(t => `${lb.typeNames[t]} ${scores[t]}/${maxScore}`).join(' · ')}
+      />
       <div className="flex gap-3">
         <button onClick={restart} aria-label={lb.restart} className="flex-1 rounded-xl border bg-card px-4 py-2 text-sm font-bold hover:bg-accent transition-colors">{lb.restart}</button>
         <button onClick={share} aria-label={lb.share} className="flex-1 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity">{lb.share}</button>

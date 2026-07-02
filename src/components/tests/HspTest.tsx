@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ShareResultButton from '../shared/ShareResultButton';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 
@@ -280,6 +281,14 @@ export default function HspTest({ locale = 'en' }: { locale?: Locale }) {
 
           {/* Note */}
           <p className="text-[10px] text-muted-foreground text-center px-4">{t.note}</p>
+
+          <ShareResultButton
+            locale={locale}
+            heading={t.title}
+            emoji="🌿"
+            resultTitle={`${t.resultTitle[level]} ${pct}%`}
+            description={dimScores.map(d => `${d.dim} ${d.score}/${d.max}`).join(' · ')}
+          />
 
           <button
             onClick={() => { setAnswers({}); setShowResult(false); }}

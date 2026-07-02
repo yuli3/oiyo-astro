@@ -2,6 +2,7 @@ import { useState } from 'react'
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip
 } from 'recharts'
+import ShareResultButton from '../shared/ShareResultButton'
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 type Dim = 'E' | 'I' | 'S' | 'N' | 'T' | 'F' | 'J' | 'P'
@@ -1096,6 +1097,14 @@ export default function MbtiLoveTest({ locale = 'ko' }: Props) {
             ))}
           </ul>
         </div>
+
+        <ShareResultButton
+          locale={lang}
+          heading={t.resultTitle}
+          emoji="💘"
+          resultTitle={`${result.type} — ${data.name}`}
+          description={chartData.map(d => d.label).join(' · ')}
+        />
 
         {/* Actions */}
         <div className="flex gap-3">
