@@ -15,7 +15,7 @@ export const mayanData: MayanShard = {
   signs: [
     {
       description: {
-        cn: "象征着诞生和滋养。拥有原始的能量和创造力。",
+        zh: "象征着诞生和滋养。拥有原始的能量和创造力。",
         en: "Symbolizes birth and nourishment. Possesses primal energy and creative power.",
         es: "Simboliza el nacimiento y la nutrición. Posee energía primitiva y poder creativo.",
         fr: "Symbolise la naissance et la nourriture. Possède une énergie primordiale et un pouvoir créatif.",
@@ -27,7 +27,7 @@ export const mayanData: MayanShard = {
       id: "imix",
       keywords: [
         {
-          cn: "诞生",
+          zh: "诞生",
           en: "Birth",
           es: "Nacimiento",
           fr: "Naissance",
@@ -35,7 +35,7 @@ export const mayanData: MayanShard = {
           ko: "탄생",
         },
         {
-          cn: "滋养",
+          zh: "滋养",
           en: "Nurturing",
           es: "Crianza",
           fr: "Éducation",
@@ -44,7 +44,7 @@ export const mayanData: MayanShard = {
         },
       ],
       name: {
-        cn: "红龙 (Imix)",
+        zh: "红龙 (Imix)",
         en: "Red Dragon",
         es: "Dragón Rojo (Imix)",
         fr: "Dragon Rouge (Imix)",
@@ -54,7 +54,7 @@ export const mayanData: MayanShard = {
     },
     {
       description: {
-        cn: "象征沟通和灵感。代表精神能量和思想的传递。",
+        zh: "象征沟通和灵感。代表精神能量和思想的传递。",
         en: "Symbolizes communication and inspiration. Represents mental energy and transmission of thoughts.",
         es: "Simboliza la comunicación y la inspiración. Representa la energía mental y la transmisión de pensamientos.",
         fr: "Symbolise la communication et l'inspiration. Représente l'énergie mentale et la transmission des pensées.",
@@ -66,7 +66,7 @@ export const mayanData: MayanShard = {
       id: "ik",
       keywords: [
         {
-          cn: "呼吸",
+          zh: "呼吸",
           en: "Breath",
           es: "Aliento",
           fr: "Souffle",
@@ -74,7 +74,7 @@ export const mayanData: MayanShard = {
           ko: "숨결",
         },
         {
-          cn: "沟通",
+          zh: "沟通",
           en: "Communication",
           es: "Comunicación",
           fr: "Communication",
@@ -83,7 +83,7 @@ export const mayanData: MayanShard = {
         },
       ],
       name: {
-        cn: "白风 (Ik)",
+        zh: "白风 (Ik)",
         en: "White Wind",
         es: "Viento Blanco (Ik)",
         fr: "Vent Blanc (Ik)",
@@ -93,7 +93,7 @@ export const mayanData: MayanShard = {
     },
     {
       description: {
-        cn: "象征梦想和潜意识。代表内在的丰富和直觉。",
+        zh: "象征梦想和潜意识。代表内在的丰富和直觉。",
         en: "Symbolizes dreams and the unconscious. Represents inner abundance and intuition.",
         es: "Simboliza los sueños y el inconsciente. Representa la abundancia interior y la intuición.",
         fr: "Symbolise les rêves et l'inconscient. Représente l'abundancia intérieure et l'intuition.",
@@ -105,7 +105,7 @@ export const mayanData: MayanShard = {
       id: "akbal",
       keywords: [
         {
-          cn: "梦想",
+          zh: "梦想",
           en: "Dream",
           es: "Sueño",
           fr: "Rêve",
@@ -113,7 +113,7 @@ export const mayanData: MayanShard = {
           ko: "꿈",
         },
         {
-          cn: "直觉",
+          zh: "直觉",
           en: "Intuition",
           es: "Intuición",
           fr: "Intuition",
@@ -122,7 +122,7 @@ export const mayanData: MayanShard = {
         },
       ],
       name: {
-        cn: "蓝夜 (Akbal)",
+        zh: "蓝夜 (Akbal)",
         en: "Blue Night",
         es: "Noche Azul (Akbal)",
         fr: "Nuit Bleue (Akbal)",
@@ -132,7 +132,7 @@ export const mayanData: MayanShard = {
     },
     {
       description: {
-        cn: "象征潜力和目标设定。代表成长的意图和专注。",
+        zh: "象征潜力和目标设定。代表成长的意图和专注。",
         en: "Symbolizes potential and targeting. Represents intention and focus for growth.",
         es: "Simboliza el potencial y la focalización. Representa la intención y el enfoque para el crecimiento.",
         fr: "Symbolise le potentiel et le ciblage. Représente l'intention et la concentration pour la croissance.",
@@ -144,7 +144,7 @@ export const mayanData: MayanShard = {
       id: "kan",
       keywords: [
         {
-          cn: "觉知",
+          zh: "觉知",
           en: "Awareness",
           es: "Conciencia",
           fr: "Conscience",
@@ -152,7 +152,7 @@ export const mayanData: MayanShard = {
           ko: "자각",
         },
         {
-          cn: "目标",
+          zh: "目标",
           en: "Targeting",
           es: "Objetivo",
           fr: "Ciblage",
@@ -161,7 +161,7 @@ export const mayanData: MayanShard = {
         },
       ],
       name: {
-        cn: "黄种子 (Kan)",
+        zh: "黄种子 (Kan)",
         en: "Yellow Seed",
         es: "Semilla Amarilla (Kan)",
         fr: "Graine Jaune (Kan)",
@@ -171,7 +171,7 @@ export const mayanData: MayanShard = {
     },
     {
       description: {
-        cn: "象征生命力和本能。代表身体能量和激情。",
+        zh: "象征生命力和本能。代表身体能量和激情。",
         en: "Symbolizes life force and instinct. Represents physical energy and passion.",
         es: "Simboliza la fuerza vital y el instinto. Representa la energía física y la pasión.",
         fr: "Symbolise la force vitale et l'instinct. Représente l'énergie physique et la passion.",
@@ -183,7 +183,7 @@ export const mayanData: MayanShard = {
       id: "chicchan",
       keywords: [
         {
-          cn: "本能",
+          zh: "本能",
           en: "Instinct",
           es: "Instinto",
           fr: "Instinct",
@@ -191,7 +191,7 @@ export const mayanData: MayanShard = {
           ko: "본능",
         },
         {
-          cn: "生命力",
+          zh: "生命力",
           en: "Life Force",
           es: "Fuerza Vital",
           fr: "Force Vitale",
@@ -200,7 +200,7 @@ export const mayanData: MayanShard = {
         },
       ],
       name: {
-        cn: "红蛇 (Chicchan)",
+        zh: "红蛇 (Chicchan)",
         en: "Red Serpent",
         es: "Serpiente Roja (Chicchan)",
         fr: "Serpent Rouge (Chicchan)",

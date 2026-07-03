@@ -14,7 +14,7 @@ export interface Element {
   order: number;
   season?: string;
   short: {
-    cn: string;
+    zh: string;
     en: string;
     ko: string;
   };
@@ -37,7 +37,7 @@ export const ELEMENTS: Record<ElementId, Element> = {
     id: "earth",
     order: 3,
     season: "TRANSITION",
-    short: { cn: "土", en: "Earth", ko: "토" },
+    short: { zh: "土", en: "Earth", ko: "토" },
     yinYang: "YIN",
   },
   fire: {
@@ -47,7 +47,7 @@ export const ELEMENTS: Record<ElementId, Element> = {
     id: "fire",
     order: 2,
     season: "SUMMER",
-    short: { cn: "火", en: "Fire", ko: "화" },
+    short: { zh: "火", en: "Fire", ko: "화" },
     yinYang: "YANG",
   },
   metal: {
@@ -57,7 +57,7 @@ export const ELEMENTS: Record<ElementId, Element> = {
     id: "metal",
     order: 4,
     season: "AUTUMN",
-    short: { cn: "金", en: "Metal", ko: "금" },
+    short: { zh: "金", en: "Metal", ko: "금" },
     yinYang: "YIN",
   },
   water: {
@@ -67,7 +67,7 @@ export const ELEMENTS: Record<ElementId, Element> = {
     id: "water",
     order: 5,
     season: "WINTER",
-    short: { cn: "水", en: "Water", ko: "수" },
+    short: { zh: "水", en: "Water", ko: "수" },
     yinYang: "YIN",
   },
   wood: {
@@ -77,7 +77,7 @@ export const ELEMENTS: Record<ElementId, Element> = {
     id: "wood",
     order: 1,
     season: "SPRING",
-    short: { cn: "木", en: "Wood", ko: "목" },
+    short: { zh: "木", en: "Wood", ko: "목" },
     yinYang: "YANG",
   },
 };

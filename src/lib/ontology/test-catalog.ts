@@ -25,7 +25,7 @@ export interface TestItem {
 }
 
 export const testCatalog: Record<string, TestItem[]> = {
-  cn: [],
+  zh: [],
   en: [],
   es: [],
   fr: [],

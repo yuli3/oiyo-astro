@@ -6,7 +6,7 @@ export const FOOD_PERSONALITY_QUESTIONS: Record<
   Locale,
   FoodPersonalityQuestion[]
 > = {
-  cn: [],
+  zh: [],
   en: [
     {
       emoji: "🍽️",

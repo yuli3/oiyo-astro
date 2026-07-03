@@ -57,7 +57,7 @@ export class LifestyleEngine {
     // Imperial & Poetic Tone Rationales
     const elementMap: Record<string, Record<string, string>> = {
       earth: {
-        cn: "土(土)的稳定",
+        zh: "土(土)的稳定",
         en: "stability of Earth",
         es: "estabilidad de la Tierra",
         fr: "stabilité de la Terre",
@@ -65,7 +65,7 @@ export class LifestyleEngine {
         ko: "토(土)의 안정",
       },
       fire: {
-        cn: "火(火)的热情",
+        zh: "火(火)的热情",
         en: "passion of Fire",
         es: "pasión del Fuego",
         fr: "passion du Feu",
@@ -73,7 +73,7 @@ export class LifestyleEngine {
         ko: "화(火)의 열정",
       },
       metal: {
-        cn: "金(金)的决断",
+        zh: "金(金)的决断",
         en: "decisiveness of Metal",
         es: "decisividad del Metal",
         fr: "décisivité du Métal",
@@ -81,7 +81,7 @@ export class LifestyleEngine {
         ko: "금(金)의 결단",
       },
       water: {
-        cn: "水(水)的智慧",
+        zh: "水(水)的智慧",
         en: "wisdom of Water",
         es: "sabiduría del Agua",
         fr: "sagesse de l'Eau",
@@ -89,7 +89,7 @@ export class LifestyleEngine {
         ko: "수(水)의 지혜",
       },
       wood: {
-        cn: "木(木)的生命力",
+        zh: "木(木)的生命力",
         en: "vitality of Wood",
         es: "vitalidad de la Madera",
         fr: "vitalité du Bois",
@@ -101,7 +101,7 @@ export class LifestyleEngine {
     const e = elementMap[weakestElement] || elementMap["wood"];
 
     return {
-      cn: `这项活动将通过填补你命中缺失的${e.cn}，来完善你存在的平衡。`,
+      zh: `这项活动将通过填补你命中缺失的${e.cn}，来完善你存在的平衡。`,
       en: `An activity to complete your balance by filling the ${e.en} missing in your destiny.`,
       es: `Una actividad para completar su equilibrio llenando la ${e.es} que falta en su destino.`,
       fr: `Une activité pour compléter votre équilibre en comblant la ${e.fr} manquante dans votre destin.`,

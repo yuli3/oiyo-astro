@@ -8,7 +8,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "dog",
         emoji: "🎉",
         text: {
-          cn: "和朋友们的快乐聚会",
+          zh: "和朋友们的快乐聚会",
           en: "Fun gathering with friends",
           es: "Reunión divertida con amigos",
           fr: "Réunion amusante avec des amis",
@@ -20,7 +20,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "cat",
         emoji: "📚",
         text: {
-          cn: "独自在家看书或电影",
+          zh: "独自在家看书或电影",
           en: "Stay home alone with books or movies",
           es: "Quedarse en casa solo con libros o películas",
           fr: "Rester seul à la maison avec des livres ou des films",
@@ -32,7 +32,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "fox",
         emoji: "🗺️",
         text: {
-          cn: "探索新地方",
+          zh: "探索新地方",
           en: "Explore new places",
           es: "Explorar lugares nuevos",
           fr: "Explorer de nouveaux endroits",
@@ -44,7 +44,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "tiger",
         emoji: "⛰️",
         text: {
-          cn: "户外运动或活动",
+          zh: "户外运动或活动",
           en: "Outdoor sports or activities",
           es: "Deportes o actividades al aire libre",
           fr: "Sports ou activités de plein air",
@@ -54,7 +54,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
       },
     ],
     question: {
-      cn: "周末下午，你最想做什么活动？",
+      zh: "周末下午，你最想做什么活动？",
       en: "Weekend afternoon, what activity do you want to do most?",
       es: "Tarde de fin de semana, ¿qué actividad te gustaría hacer más?",
       fr: "Un après-midi de week-end, quelle activité aimeriez-vous faire le plus ?",
@@ -69,7 +69,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "lion",
         emoji: "👑",
         text: {
-          cn: "作为领导者带领团队",
+          zh: "作为领导者带领团队",
           en: "Lead the team as a leader",
           es: "Dirigir el equipo como líder",
           fr: "Diriger l'équipe en tant que leader",
@@ -81,7 +81,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "dolphin",
         emoji: "😄",
         text: {
-          cn: "活跃气氛",
+          zh: "活跃气氛",
           en: "Brighten the atmosphere",
           es: "Alegrar el ambiente",
           fr: "Égayer l'atmosphère",
@@ -93,7 +93,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "owl",
         emoji: "🎯",
         text: {
-          cn: "独自完美完成分配给我的部分",
+          zh: "独自完美完成分配给我的部分",
           en: "Perfect my assigned part alone",
           es: "Perfeccionar mi parte asignada solo",
           fr: "Perfectionner ma part assignée seul",
@@ -105,7 +105,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "bear",
         emoji: "🤝",
         text: {
-          cn: "帮助团队成员并合作",
+          zh: "帮助团队成员并合作",
           en: "Help team members and cooperate",
           es: "Ayudar a los miembros del equipo y cooperar",
           fr: "Aider les membres de l'équipe et coopérer",
@@ -115,7 +115,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
       },
     ],
     question: {
-      cn: "你在团队项目中的角色是？",
+      zh: "你在团队项目中的角色是？",
       en: "Your role in a team project?",
       es: "¿Tu papel en un proyecto de equipo?",
       fr: "Votre rôle dans un projet d'équipe ?",
@@ -130,7 +130,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "dog",
         emoji: "💬",
         text: {
-          cn: "见朋友聊天",
+          zh: "见朋友聊天",
           en: "Meet friends and chat",
           es: "Reunirse con amigos y charlar",
           fr: "Rencontrer des amis et discuter",
@@ -142,7 +142,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "panda",
         emoji: "🧘",
         text: {
-          cn: "独自度过安静时光",
+          zh: "独自度过安静时光",
           en: "Spend quiet time alone",
           es: "Pasar tiempo tranquilo a solas",
           fr: "Passer du temps calme seul",
@@ -154,7 +154,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "eagle",
         emoji: "🏃",
         text: {
-          cn: "通过运动释放",
+          zh: "通过运动释放",
           en: "Release through exercise",
           es: "Liberar a través del ejercicio",
           fr: "Se défouler par l'exercice",
@@ -166,7 +166,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "fox",
         emoji: "💡",
         text: {
-          cn: "寻找解决问题的方法",
+          zh: "寻找解决问题的方法",
           en: "Find problem-solving methods",
           es: "Encontrar métodos de resolución de problemas",
           fr: "Trouver des méthodes de résolution de problèmes",
@@ -176,7 +176,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
       },
     ],
     question: {
-      cn: "你如何应对压力？",
+      zh: "你如何应对压力？",
       en: "How do you cope with stress?",
       es: "¿Cómo afrontas el estrés?",
       fr: "Comment gérez-vous le stress ?",
@@ -191,7 +191,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "dolphin",
         emoji: "👋",
         text: {
-          cn: "以友好的方式首先接近",
+          zh: "以友好的方式首先接近",
           en: "Approach first in a friendly manner",
           es: "Acercarse primero de manera amistosa",
           fr: "Aborder en premier de manière amicale",
@@ -203,7 +203,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "owl",
         emoji: "👀",
         text: {
-          cn: "观察并慢慢接近",
+          zh: "观察并慢慢接近",
           en: "Observe and approach slowly",
           es: "Observar y acercarse lentamente",
           fr: "Observer et approcher lentement",
@@ -215,7 +215,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "lion",
         emoji: "💪",
         text: {
-          cn: "自信地主导谈话",
+          zh: "自信地主导谈话",
           en: "Confidently lead conversations",
           es: "Dirigir conversaciones con confianza",
           fr: "Mener les conversations avec confiance",
@@ -227,7 +227,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "fox",
         emoji: "🎭",
         text: {
-          cn: "灵活适应情况",
+          zh: "灵活适应情况",
           en: "Flexibly adapt to situations",
           es: "Adaptarse flexiblemente a las situaciones",
           fr: "S'adapter avec souplesse aux situations",
@@ -237,7 +237,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
       },
     ],
     question: {
-      cn: "遇到新朋友时，你会：",
+      zh: "遇到新朋友时，你会：",
       en: "When meeting new people, you:",
       es: "Al conocer gente nueva, tú:",
       fr: "Lorsque vous rencontrez de nouvelles personnes, vous :",
@@ -252,7 +252,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "cat",
         emoji: "🏡",
         text: {
-          cn: "独自专注的空间",
+          zh: "独自专注的空间",
           en: "Space to focus alone",
           es: "Espacio para concentrarse solo",
           fr: "Espace pour se concentrer seul",
@@ -264,7 +264,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "dog",
         emoji: "🏢",
         text: {
-          cn: "拥有充满活力的团队的办公室",
+          zh: "拥有充满活力的团队的办公室",
           en: "Office with energetic team",
           es: "Oficina con un equipo enérgico",
           fr: "Bureau avec une équipe dynamique",
@@ -276,7 +276,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "wolf",
         emoji: "🌄",
         text: {
-          cn: "独立工作的自由",
+          zh: "独立工作的自由",
           en: "Freedom to work independently",
           es: "Libertad para trabajar de forma independiente",
           fr: "Liberté de travailler de manière indépendante",
@@ -288,7 +288,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "bear",
         emoji: "🏛️",
         text: {
-          cn: "稳定且有系统的地方",
+          zh: "稳定且有系统的地方",
           en: "Stable and systematic place",
           es: "Lugar estable y sistemático",
           fr: "Lieu stable et systématique",
@@ -298,7 +298,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
       },
     ],
     question: {
-      cn: "你理想的工作环境？",
+      zh: "你理想的工作环境？",
       en: "Your ideal work environment?",
       es: "¿Tu ambiente de trabajo ideal?",
       fr: "Votre environnement de travail idéal ?",
@@ -313,7 +313,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "rabbit",
         emoji: "💝",
         text: {
-          cn: "同情并安慰",
+          zh: "同情并安慰",
           en: "Empathize and comfort",
           es: "Empatizar y consolar",
           fr: "Compatir et réconforter",
@@ -325,7 +325,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "owl",
         emoji: "💭",
         text: {
-          cn: "提出解决方案",
+          zh: "提出解决方案",
           en: "Suggest solutions",
           es: "Sugerir soluciones",
           fr: "Suggérer des solutions",
@@ -337,7 +337,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "dolphin",
         emoji: "🎈",
         text: {
-          cn: "一起做些有趣的事",
+          zh: "一起做些有趣的事",
           en: "Do something fun together",
           es: "Hacer algo divertido juntos",
           fr: "Faire quelque chose d'amusant ensemble",
@@ -349,7 +349,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "tiger",
         emoji: "⚡",
         text: {
-          cn: "给出直接的建议",
+          zh: "给出直接的建议",
           en: "Give straightforward advice",
           es: "Dar consejos directos",
           fr: "Donner des conseils directs",
@@ -359,7 +359,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
       },
     ],
     question: {
-      cn: "如果朋友需要建议？",
+      zh: "如果朋友需要建议？",
       en: "If a friend needs advice?",
       es: "¿Si un amigo necesita consejo?",
       fr: "Si un ami a besoin de conseils ?",
@@ -374,7 +374,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "fox",
         emoji: "🔄",
         text: {
-          cn: "灵活适应",
+          zh: "灵活适应",
           en: "Adapt flexibly",
           es: "Adaptarse flexiblemente",
           fr: "S'adapter avec souplesse",
@@ -386,7 +386,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "rabbit",
         emoji: "😅",
         text: {
-          cn: "慌乱但顺从",
+          zh: "慌乱但顺从",
           en: "Flustered but go along",
           es: "Nervioso pero sigue adelante",
           fr: "Perturbé mais suit le mouvement",
@@ -398,7 +398,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "panda",
         emoji: "😌",
         text: {
-          cn: "无论如何都享受",
+          zh: "无论如何都享受",
           en: "Enjoy it regardless",
           es: "Disfrutarlo de todos modos",
           fr: "En profiter malgré tout",
@@ -410,7 +410,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "eagle",
         emoji: "🎯",
         text: {
-          cn: "快速寻找替代方案",
+          zh: "快速寻找替代方案",
           en: "Quickly find alternatives",
           es: "Encontrar alternativas rápidamente",
           fr: "Trouver rapidement des alternatives",
@@ -420,7 +420,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
       },
     ],
     question: {
-      cn: "突然的计划变更？",
+      zh: "突然的计划变更？",
       en: "Sudden plan changes?",
       es: "¿Cambios repentinos de planes?",
       fr: "Changements de plan soudains ?",
@@ -435,7 +435,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "wolf",
         emoji: "🦅",
         text: {
-          cn: "自由与独立",
+          zh: "自由与独立",
           en: "Freedom and independence",
           es: "Libertad e independencia",
           fr: "Liberté et indépendance",
@@ -447,7 +447,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "dog",
         emoji: "❤️",
         text: {
-          cn: "关系与归属感",
+          zh: "关系与归属感",
           en: "Relationships and belonging",
           es: "Relaciones y pertenencia",
           fr: "Relations et appartenance",
@@ -459,7 +459,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "lion",
         emoji: "🏆",
         text: {
-          cn: "成就与成功",
+          zh: "成就与成功",
           en: "Achievement and success",
           es: "Logro y éxito",
           fr: "Réussite et succès",
@@ -471,7 +471,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
         animal: "panda",
         emoji: "☮️",
         text: {
-          cn: "和平与稳定",
+          zh: "和平与稳定",
           en: "Peace and stability",
           es: "Paz y estabilidad",
           fr: "Paix et stabilité",
@@ -481,7 +481,7 @@ export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
       },
     ],
     question: {
-      cn: "你认为最重要的价值观？",
+      zh: "你认为最重要的价值观？",
       en: "The value you consider most important?",
       es: "¿El valor que consideras más importante?",
       fr: "La valeur que vous considérez comme la plus importante ?",

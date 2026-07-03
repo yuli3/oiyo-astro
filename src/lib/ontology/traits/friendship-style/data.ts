@@ -8,7 +8,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "仔细倾听并提供情感支持",
+          zh: "仔细倾听并提供情感支持",
           en: "Listen carefully and offer emotional support",
           es: "Escuchar atentamente y ofrecer apoyo emocional",
           fr: "L'écouter attentivement et lui offrir un soutien émotionnel",
@@ -21,7 +21,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "建议一次冒险或活动来让他们振作起来",
+          zh: "建议一次冒险或活动来让他们振作起来",
           en: "Suggest an adventure or activity to cheer them up",
           es: "Sugerir una aventura o actividad para animarlos",
           fr: "Lui suggérer une aventure ou une activité pour lui remonter le moral",
@@ -34,7 +34,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "就他们的处境进行深入交流",
+          zh: "就他们的处境进行深入交流",
           en: "Have a deep conversation about their situation",
           es: "Tener una conversación profunda sobre su situación",
           fr: "Avoir une conversation profonde sur sa situation",
@@ -47,7 +47,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "试着逗他们笑，让他们打起精神来",
+          zh: "试着逗他们笑，让他们打起精神来",
           en: "Try to make them laugh and lift their spirits",
           es: "Intentar hacerlos reír y levantarles el ánimo",
           fr: "Essayer de le faire rire et de lui remonter le moral",
@@ -60,7 +60,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "组织实际帮助或协调他人的支持",
+          zh: "组织实际帮助或协调他人的支持",
           en: "Organize practical help or coordinate support from others",
           es: "Organizar ayuda práctica o coordinar el apoyo de otros",
           fr: "Organiser une aide pratique ou coordonner le soutien des autres",
@@ -71,7 +71,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "当朋友度过艰难时期时，你通常会：",
+      zh: "当朋友度过艰难时期时，你通常会：",
       en: "When a friend is going through a difficult time, you typically:",
       es: "Cuando un amigo está pasando por un momento difícil, normalmente:",
       fr: "Lorsqu'un ami traverse une période difficile, vous avez l'habitude de :",
@@ -86,7 +86,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "进行有意义的一对一交流",
+          zh: "进行有意义的一对一交流",
           en: "Having meaningful one-on-one conversations",
           es: "Tener conversaciones profundas uno a uno",
           fr: "Avoir des conversations individuelles constructives",
@@ -99,7 +99,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "进行一次自发的冒险或尝试新事物",
+          zh: "进行一次自发的冒险或尝试新事物",
           en: "Going on a spontaneous adventure or trying something new",
           es: "Ir a una aventura espontánea o probar algo nuevo",
           fr: "Partir pour une aventure spontanée ou essayer quelque chose de nouveau",
@@ -112,7 +112,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "讨论有趣的话题或分享想法",
+          zh: "讨论有趣的话题或分享想法",
           en: "Discussing interesting topics or sharing ideas",
           es: "Discutir temas interesantes o compartir ideas",
           fr: "Discuter de sujets intéressants ou partager des idées",
@@ -125,7 +125,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "举办或参加有趣的社交聚会",
+          zh: "举办或参加有趣的社交聚会",
           en: "Hosting or attending a fun social gathering",
           es: "Organizar o asistir a una reunión social divertida",
           fr: "Organiser ou assister à un rassemblement social amusant",
@@ -138,7 +138,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "按照计划的小组活动进行",
+          zh: "按照计划的小组活动进行",
           en: "Following through with planned group activities",
           es: "Seguir con las actividades grupales planeadas",
           fr: "Réaliser les activités de groupe prévues",
@@ -149,7 +149,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "你与朋友理想的周末包括：",
+      zh: "你与朋友理想的周末包括：",
       en: "Your ideal weekend with friends involves:",
       es: "Tu fin de semana ideal con amigos implica:",
       fr: "Votre week-end idéal entre amis comprend :",
@@ -164,7 +164,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "关心每一个人，确保大家都有参与感",
+          zh: "关心每一个人，确保大家都有参与感",
           en: "Check in on individuals and make sure everyone feels included",
           es: "Consultar a las personas y asegurarse de que todos se sientan incluidos",
           fr: "Prendre des nouvelles des individus et s'assurer que tout le monde se sent inclus",
@@ -177,7 +177,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "建议新的活动或更改计划",
+          zh: "建议新的活动或更改计划",
           en: "Suggest new activities or changes to the plan",
           es: "Sugerir nuevas actividades o cambios en el plan",
           fr: "Suggérer de nouvelles activités ou des modifications au plan",
@@ -190,7 +190,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "在交流中贡献深刻的见解",
+          zh: "在交流中贡献深刻的见解",
           en: "Contribute thoughtful insights to conversations",
           es: "Aportar ideas reflexivas a las conversaciones",
           fr: "Apporter des réflexions approfondies aux conversations",
@@ -203,7 +203,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "保持活力，确保每个人都玩得开心",
+          zh: "保持活力，确保每个人都玩得开心",
           en: "Keep the energy up and make sure everyone's having fun",
           es: "Mantener la energía y asegurarse de que todos se diviertan",
           fr: "Maintenir l'énergie et s'assurer que tout le monde s'amuse",
@@ -216,7 +216,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "帮助协调后勤并确保每个人都按部就班",
+          zh: "帮助协调后勤并确保每个人都按部就班",
           en: "Help coordinate logistics and keep everyone on track",
           es: "Ayudar a coordinar la logística y mantener a todos en el camino",
           fr: "Aider à coordonner la logistique et s'assurer que tout le monde suit",
@@ -227,7 +227,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "在集体场合下，你通常会：",
+      zh: "在集体场合下，你通常会：",
       en: "In group settings, you usually:",
       es: "En entornos grupales, normalmente:",
       fr: "Dans un groupe, vous avez l'habitude de :",
@@ -242,7 +242,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "确保考虑到每个人的舒适度和需求",
+          zh: "确保考虑到每个人的舒适度和需求",
           en: "Make sure everyone's comfort and needs are considered",
           es: "Asegurarse de que se consideren la comodidad y las necesidades de todos",
           fr: "Veiller à ce que le confort et les besoins de chacun soient pris en compte",
@@ -255,7 +255,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "研究令人兴奋的活动和待探索的隐藏宝藏",
+          zh: "研究令人兴奋的活动和待探索的隐藏宝藏",
           en: "Research exciting activities and hidden gems to explore",
           es: "Investigar actividades emocionantes y gemas ocultas para explorar",
           fr: "Rechercher des activités passionnantes et des pépites cachées à explorer",
@@ -268,7 +268,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "寻找有趣的文化或教育体验",
+          zh: "寻找有趣的文化或教育体验",
           en: "Find interesting cultural or educational experiences",
           es: "Encontrar experiencias culturales o educativas interesantes",
           fr: "Trouver des expériences culturelles ou éducatives intéressantes",
@@ -281,7 +281,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "规划有趣的集体活动和社交体验",
+          zh: "规划有趣的集体活动和社交体验",
           en: "Plan fun group activities and social experiences",
           es: "Planificar actividades grupales divertidas y experiencias sociales",
           fr: "Planifier des activités de groupe amusantes et des expériences sociales",
@@ -294,7 +294,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "处理后勤、预订和详细行程",
+          zh: "处理后勤、预订和详细行程",
           en: "Handle the logistics, bookings, and detailed itinerary",
           es: "Encargarse de la logística, las reservas y el itinerario detallado",
           fr: "S'occuper de la logistique, des réservations et de l'itinéraire détaillé",
@@ -305,7 +305,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "在规划集体旅行时，你最有可能：",
+      zh: "在规划集体旅行时，你最有可能：",
       en: "When planning a group trip, you're most likely to:",
       es: "Al planificar un viaje grupal, es más probable que:",
       fr: "Lors de la planification d'un voyage en groupe, vous avez tendance à :",
@@ -320,7 +320,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "倾诉他们的问题并获得情感支持时",
+          zh: "倾诉他们的问题并获得情感支持时",
           en: "Talk through their problems and get emotional support",
           es: "Hablar de sus problemas y obtener apoyo emocional",
           fr: "Parler de leurs problèmes et obtenir un soutien émotionnel",
@@ -333,7 +333,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "做一些令人兴奋的事情并跳出常规时",
+          zh: "做一些令人兴奋的事情并跳出常规时",
           en: "Do something exciting and break out of their routine",
           es: "Hacer algo emocionante y salir de su rutina",
           fr: "Faire quelque chose de passionnant et sortir de leur routine",
@@ -346,7 +346,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "就生活和想法进行有意义的交流时",
+          zh: "就生活和想法进行有意义的交流时",
           en: "Have a meaningful conversation about life and ideas",
           es: "Tener una conversación significativa sobre la vida y las ideas",
           fr: "Avoir une conversation constructive sur la vie et les idées",
@@ -359,7 +359,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "快活、欢笑并忘却烦恼时",
+          zh: "快活、欢笑并忘却烦恼时",
           en: "Have fun, laugh, and forget their worries",
           es: "Divertirse, reír y olvidar sus preocupaciones",
           fr: "S'amuser, rire et oublier leurs soucis",
@@ -372,7 +372,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "在整理生活或规划某事需要帮助时",
+          zh: "在整理生活或规划某事需要帮助时",
           en: "Get help organizing their life or planning something",
           es: "Obtener ayuda para organizar su vida o planificar algo",
           fr: "Obtenir de l'aide pour organiser leur vie ou planifier quelque chose",
@@ -383,7 +383,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "你的朋友在以下情况下会来找你：",
+      zh: "你的朋友在以下情况下会来找你：",
       en: "Your friends come to you when they want to:",
       es: "Tus amigos acuden a ti cuando quieren:",
       fr: "Vos amis viennent vous voir lorsqu'ils souhaitent :",
@@ -398,7 +398,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "与亲密朋友进行深度、私人性质的交流时",
+          zh: "与亲密朋友进行深度、私人性质的交流时",
           en: "Having deep, personal conversations with close friends",
           es: "Tener conversaciones profundas y personales con amigos cercanos",
           fr: "Avoir des conversations personnelles et profondes avec des amis proches",
@@ -411,7 +411,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "结识新朋友并听闻他们的经历时",
+          zh: "结识新朋友并听闻他们的经历时",
           en: "Meeting new people and hearing about their experiences",
           es: "Conocer gente nueva y escuchar sobre sus experiencias",
           fr: "Rencontrer de nouvelles personnes et découvrir leur parcours",
@@ -424,7 +424,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "就想法或话题参与有趣的讨论时",
+          zh: "就想法或话题参与有趣的讨论时",
           en: "Engaging in interesting discussions about ideas or topics",
           es: "Participar en discusiones interesantes sobre ideas o temas",
           fr: "Participer à des discussions intéressantes sur des idées ou des sujets",
@@ -437,7 +437,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "成为焦点并款待他人时",
+          zh: "成为焦点并款待他人时",
           en: "Being the center of attention and entertaining others",
           es: "Ser el centro de atención y entretener a los demás",
           fr: "Être le centre de l'attention et divertir les autres",
@@ -450,7 +450,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "看到一个组织良好的活动顺利进行时",
+          zh: "看到一个组织良好的活动顺利进行时",
           en: "Seeing a well-organized event come together smoothly",
           es: "Ver que un evento bien organizado se desarrolla sin problemas",
           fr: "Voir un événement bien organisé se dérouler sans accroc",
@@ -461,7 +461,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "在社交活动中，你什么时候感到最有活力：",
+      zh: "在社交活动中，你什么时候感到最有活力：",
       en: "At social events, you feel most energized when:",
       es: "En los eventos sociales, te sientes más con energía cuando:",
       fr: "Lors d'événements sociaux, vous vous sentez le plus énergique lorsque :",
@@ -476,7 +476,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "温暖、富有同情心且能提供情感支持",
+          zh: "温暖、富有同情心且能提供情感支持",
           en: "Warm, empathetic, and emotionally supportive",
           es: "Cálido, empático y de apoyo emocional",
           fr: "Chaleureux, empathique et un soutien émotionnel",
@@ -489,7 +489,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "充满热情、随性且满怀故事",
+          zh: "充满热情、随性且满怀故事",
           en: "Enthusiastic, spontaneous, and full of stories",
           es: "Entusiasta, espontáneo y lleno de historias",
           fr: "Enthousiaste, spontané et plein d'histoires",
@@ -502,7 +502,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "体贴、善于反思且求知欲强",
+          zh: "体贴、善于反思且求知欲强",
           en: "Thoughtful, reflective, and intellectually curious",
           es: "Reflexivo, meditativo y con curiosidad intelectual",
           fr: "Réfléchi, méditatif et intellectuellement curieux",
@@ -515,7 +515,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "幽默、开朗且擅长社交",
+          zh: "幽默、开朗且擅长社交",
           en: "Humorous, upbeat, and socially engaging",
           es: "Humorístico, optimista y socialmente atractivo",
           fr: "Humoristique, optimiste et socialement engageant",
@@ -528,7 +528,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "实用、信息丰富且组织良好",
+          zh: "实用、信息丰富且组织良好",
           en: "Practical, informative, and well-organized",
           es: "Práctico, informativo y bien organizado",
           fr: "Pratique, informatif et bien organisé",
@@ -539,7 +539,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "你与朋友的交流风格通常是：",
+      zh: "你与朋友的交流风格通常是：",
       en: "Your communication style with friends is typically:",
       es: "Tu estilo de comunicación con los amigos suele ser:",
       fr: "Votre style de communication avec vos amis est généralement :",
@@ -554,7 +554,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "调解并帮助每个人理解彼此的感受",
+          zh: "调解并帮助每个人理解彼此的感受",
           en: "Mediate and help everyone understand each other's feelings",
           es: "Mediar y ayudar a que todos entiendan los sentimientos de los demás",
           fr: "Médiatiser et aider chacun à comprendre les sentiments des autres",
@@ -567,7 +567,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "建议一起做些有趣的事情来度过难关",
+          zh: "建议一起做些有趣的事情来度过难关",
           en: "Suggest doing something fun together to move past it",
           es: "Sugerir hacer algo divertido juntos para superarlo",
           fr: "Suggérer de faire quelque chose d'amusant ensemble pour passer à autre chose",
@@ -580,7 +580,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "试着理解根本原因并寻找逻辑解决方案",
+          zh: "试着理解根本原因并寻找逻辑解决方案",
           en: "Try to understand the root cause and find logical solutions",
           es: "Tratar de entender la causa raíz y encontrar soluciones lógicas",
           fr: "Essayer de comprendre la cause profonde et trouver des solutions logiques",
@@ -593,7 +593,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "利用幽默来缓解紧张气氛，让心情好起来",
+          zh: "利用幽默来缓解紧张气氛，让心情好起来",
           en: "Use humor to defuse tension and lighten the mood",
           es: "Usar el humor para calmar la tensión y aligerar el ambiente",
           fr: "Utiliser l'humour pour désamorcer la tension et détendre l'atmosphère",
@@ -606,7 +606,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "负责并组织一个结构化的解决方案流程",
+          zh: "负责并组织一个结构化的解决方案流程",
           en: "Take charge and organize a structured resolution process",
           es: "Hacerse cargo y organizar un proceso de resolución estructurado",
           fr: "Prendre les choses en main et organiser un processus de résolution structuré",
@@ -617,7 +617,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "当你的朋友圈出现冲突时，你倾向于：",
+      zh: "当你的朋友圈出现冲突时，你倾向于：",
       en: "When conflicts arise in your friend group, you tend to:",
       es: "Cuando surgen conflictos en tu grupo de amigos, sueles:",
       fr: "Lorsque des conflits surgissent dans votre groupe d'amis, vous avez tendance à :",
@@ -632,7 +632,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "陪伴朋友并对他们的生活产生积极影响时",
+          zh: "陪伴朋友并对他们的生活产生积极影响时",
           en: "Be there for friends and make a positive impact on their lives",
           es: "Estar presente para los amigos y tener un impacto positivo en sus vidas",
           fr: "Être présent pour ses amis et avoir un impact positif sur leur vie",
@@ -645,7 +645,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "分享令人兴奋的经历并创造持久的回忆时",
+          zh: "分享令人兴奋的经历并创造持久的回忆时",
           en: "Share exciting experiences and create lasting memories",
           es: "Compartir experiencias emocionantes y crear recuerdos duraderos",
           fr: "Partager des expériences passionnantes et créer des souvenirs durables",
@@ -658,7 +658,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "在深度智力和情感层面上建立联系时",
+          zh: "在深度智力和情感层面上建立联系时",
           en: "Connect on a deep intellectual and emotional level",
           es: "Conectar a un nivel intelectual y emocional profundo",
           fr: "Établir un lien à un niveau intellectuel et émotionnel profond",
@@ -671,7 +671,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "为他人的生活带来欢乐和笑声时",
+          zh: "为他人的生活带来欢乐和笑声时",
           en: "Bring joy and laughter to others' lives",
           es: "Brindar alegría y risas a la vida de los demás",
           fr: "Apporter de la joie et des rires dans la vie des autres",
@@ -684,7 +684,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "保持大家联系并维持强大的集体动力时",
+          zh: "保持大家联系并维持强大的集体动力时",
           en: "Keep everyone connected and maintain strong group dynamics",
           es: "Mantener a todos conectados y mantener una sólida dinámica de grupo",
           fr: "Maintenir tout le monde connecté et entretenir une dynamique de groupe forte",
@@ -695,7 +695,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "在友谊中，你什么时候感到最充实：",
+      zh: "在友谊中，你什么时候感到最充实：",
       en: "You feel most fulfilled in friendships when you can:",
       es: "Te sientes más realizado en tus amistades cuando puedes:",
       fr: "Vous vous sentez le plus épanoui dans vos amitiés lorsque vous pouvez :",
@@ -710,7 +710,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "定期关心并提供持续的情感支持",
+          zh: "定期关心并提供持续的情感支持",
           en: "Regularly check in and provide ongoing emotional support",
           es: "Consultar regularmente y brindar apoyo emocional continuo",
           fr: "Prendre régulièrement des nouvelles et fournir un soutien émotionnel continu",
@@ -723,7 +723,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "在能见面时计划探访和冒险",
+          zh: "在能见面时计划探访和冒险",
           en: "Plan visits and adventures when you can meet up",
           es: "Planificar visitas y aventuras cuando puedan reunirse",
           fr: "Planifier des visites et des aventures lorsque vous pouvez vous retrouver",
@@ -736,7 +736,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "在联系时进行有意义的交流",
+          zh: "在联系时进行有意义的交流",
           en: "Have a meaningful conversation when you do connect",
           es: "Tener una conversación significativa cuando se conectan",
           fr: "Avoir une conversation constructive lorsque vous vous contactez",
@@ -749,7 +749,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "利用幽默和积极性在虚拟空间保持联系",
+          zh: "利用幽默和积极性在虚拟空间保持联系",
           en: "Use humor and positivity to stay connected virtually",
           es: "Usar el humor y la positividad para mantenerse conectados virtualmente",
           fr: "Utiliser l'humour et la positivité pour rester connecté virtuellement",
@@ -762,7 +762,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "安排定期的通话并关注重要的近况",
+          zh: "安排定期的通话并关注重要的近况",
           en: "Schedule regular calls and keep track of important updates",
           es: "Programar llamadas regulares y estar al tanto de las actualizaciones importantes",
           fr: "Programmer des appels réguliers et se tenir au courant des nouvelles importantes",
@@ -773,7 +773,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "你维持远距离友谊的方法是：",
+      zh: "你维持远距离友谊的方法是：",
       en: "Your approach to maintaining long-distance friendships is to:",
       es: "Tu enfoque para mantener amistades a larga distancia es:",
       fr: "Votre approche pour entretenir des amitiés à longue distance consiste à :",
@@ -788,7 +788,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "Something sentimental that shows I care",
+          zh: "Something sentimental that shows I care",
           en: "Something sentimental that shows I care",
           es: "Something sentimental that shows I care",
           fr: "Something sentimental that shows I care",
@@ -801,7 +801,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "An experience or something fun to do together",
+          zh: "An experience or something fun to do together",
           en: "An experience or something fun to do together",
           es: "An experience or something fun to do together",
           fr: "An experience or something fun to do together",
@@ -814,7 +814,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "A book or item related to their intellectual interests",
+          zh: "A book or item related to their intellectual interests",
           en: "A book or item related to their intellectual interests",
           es: "A book or item related to their intellectual interests",
           fr: "A book or item related to their intellectual interests",
@@ -827,7 +827,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "Something funny or entertaining",
+          zh: "Something funny or entertaining",
           en: "Something funny or entertaining",
           es: "Something funny or entertaining",
           fr: "Something funny or entertaining",
@@ -840,7 +840,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "Something useful that they practically need",
+          zh: "Something useful that they practically need",
           en: "Something useful that they practically need",
           es: "Something useful that they practically need",
           fr: "Something useful that they practically need",
@@ -851,7 +851,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "When giving a gift to a friend, you usually focus on:",
+      zh: "When giving a gift to a friend, you usually focus on:",
       en: "When giving a gift to a friend, you usually focus on:",
       es: "When giving a gift to a friend, you usually focus on:",
       fr: "When giving a gift to a friend, you usually focus on:",
@@ -866,7 +866,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "a",
         style: "supporter",
         text: {
-          cn: "Ensure everyone feels comfortable and safe",
+          zh: "Ensure everyone feels comfortable and safe",
           en: "Ensure everyone feels comfortable and safe",
           es: "Ensure everyone feels comfortable and safe",
           fr: "Ensure everyone feels comfortable and safe",
@@ -879,7 +879,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "b",
         style: "adventurer",
         text: {
-          cn: "Suggest a fun activity to break the ice",
+          zh: "Suggest a fun activity to break the ice",
           en: "Suggest a fun activity to break the ice",
           es: "Suggest a fun activity to break the ice",
           fr: "Suggest a fun activity to break the ice",
@@ -892,7 +892,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "c",
         style: "thinker",
         text: {
-          cn: "Find common topics they can discuss deeply",
+          zh: "Find common topics they can discuss deeply",
           en: "Find common topics they can discuss deeply",
           es: "Find common topics they can discuss deeply",
           fr: "Find common topics they can discuss deeply",
@@ -905,7 +905,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "d",
         style: "entertainer",
         text: {
-          cn: "Tell jokes and keep the energy high",
+          zh: "Tell jokes and keep the energy high",
           en: "Tell jokes and keep the energy high",
           es: "Tell jokes and keep the energy high",
           fr: "Tell jokes and keep the energy high",
@@ -918,7 +918,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
         id: "e",
         style: "organizer",
         text: {
-          cn: "Plan the logistics so the meeting runs smoothly",
+          zh: "Plan the logistics so the meeting runs smoothly",
           en: "Plan the logistics so the meeting runs smoothly",
           es: "Plan the logistics so the meeting runs smoothly",
           fr: "Plan the logistics so the meeting runs smoothly",
@@ -929,7 +929,7 @@ export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
       },
     ],
     scenario: {
-      cn: "When introducing two different friend groups, you:",
+      zh: "When introducing two different friend groups, you:",
       en: "When introducing two different friend groups, you:",
       es: "When introducing two different friend groups, you:",
       fr: "When introducing two different friend groups, you:",

@@ -45,7 +45,7 @@ export const DIMENSION_METADATA: Record<
     category: "Biological",
     id: "blood_type",
     label: {
-      cn: "血型",
+      zh: "血型",
       en: "Blood Type",
       es: "Grupo Sanguíneo",
       fr: "Groupe Sanguin",
@@ -57,7 +57,7 @@ export const DIMENSION_METADATA: Record<
     category: "Fate",
     id: "celtic",
     label: {
-      cn: "凯尔特树",
+      zh: "凯尔特树",
       en: "Celtic Tree",
       es: "Árbol Celta",
       fr: "Arbre Celtique",
@@ -69,7 +69,7 @@ export const DIMENSION_METADATA: Record<
     category: "Fate",
     id: "cosmic",
     label: {
-      cn: "宇宙同步",
+      zh: "宇宙同步",
       en: "Cosmic Sync",
       es: "Sincronía Cósmica",
       fr: "Sync Cosmique",
@@ -81,7 +81,7 @@ export const DIMENSION_METADATA: Record<
     category: "Fate",
     id: "egyptian",
     label: {
-      cn: "埃及守护神",
+      zh: "埃及守护神",
       en: "Egyptian Fate",
       es: "Destino Egipcio",
       fr: "Destin Égyptien",
@@ -93,7 +93,7 @@ export const DIMENSION_METADATA: Record<
     category: "Personality",
     id: "enneagram",
     label: {
-      cn: "九型人格",
+      zh: "九型人格",
       en: "Enneagram",
       es: "Eneagrama",
       fr: "Ennéagramme",
@@ -105,7 +105,7 @@ export const DIMENSION_METADATA: Record<
     category: "Spirit",
     id: "iching",
     label: {
-      cn: "周易占卜",
+      zh: "周易占卜",
       en: "I-Ching Oracle",
       es: "Oráculo I-Ching",
       fr: "Oracle Yi Jing",
@@ -117,7 +117,7 @@ export const DIMENSION_METADATA: Record<
     category: "Personality",
     id: "love_language",
     label: {
-      cn: "爱的语言",
+      zh: "爱的语言",
       en: "Love Language",
       es: "Lenguaje del Amor",
       fr: "Langage de l Amour",
@@ -129,7 +129,7 @@ export const DIMENSION_METADATA: Record<
     category: "Fate",
     id: "mayan",
     label: {
-      cn: "玛雅守护神",
+      zh: "玛雅守护神",
       en: "Mayan Glyph",
       es: "Glifo Maya",
       fr: "Glyphe Maya",
@@ -141,7 +141,7 @@ export const DIMENSION_METADATA: Record<
     category: "Personality",
     id: "mbti",
     label: {
-      cn: "MBTI性格",
+      zh: "MBTI性格",
       en: "MBTI",
       es: "MBTI",
       fr: "MBTI",
@@ -153,7 +153,7 @@ export const DIMENSION_METADATA: Record<
     category: "Fate",
     id: "numerology",
     label: {
-      cn: "数秘术",
+      zh: "数秘术",
       en: "Numerology",
       es: "Numerología",
       fr: "Numérologie",
@@ -165,7 +165,7 @@ export const DIMENSION_METADATA: Record<
     category: "Spirit",
     id: "onomancy",
     label: {
-      cn: "姓名学和谐",
+      zh: "姓名学和谐",
       en: "Sonic Harmony",
       es: "Armonía Sonora",
       fr: "Harmonie Sonore",
@@ -177,7 +177,7 @@ export const DIMENSION_METADATA: Record<
     category: "Fate",
     id: "saju",
     label: {
-      cn: "四柱命运",
+      zh: "四柱命运",
       en: "Saju Fate",
       es: "Destino Saju",
       fr: "Destin Saju",
@@ -189,7 +189,7 @@ export const DIMENSION_METADATA: Record<
     category: "Fate",
     id: "zodiac",
     label: {
-      cn: "星座",
+      zh: "星座",
       en: "Zodiac",
       es: "Zodiaco",
       fr: "Zodiaque",

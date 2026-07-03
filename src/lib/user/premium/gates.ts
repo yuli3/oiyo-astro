@@ -44,7 +44,7 @@ export class PremiumGates {
       {
         feature: "aiAnalysis",
         limitation: getLocalizedContent(locale, {
-          cn: "无法使用AI深度分析",
+          zh: "无法使用AI深度分析",
           en: "AI Deep Analysis is not available",
           es: "El análisis profundo de IA no está disponible",
           fr: "L'analyse approfondie de l'IA n'est pas disponible",
@@ -52,7 +52,7 @@ export class PremiumGates {
           ko: "AI 심화 분석을 사용할 수 없습니다",
         })!,
         upgradeMessage: getLocalizedContent(locale, {
-          cn: "升级到高级版以获取基于AI的性格分析",
+          zh: "升级到高级版以获取基于AI的性格分析",
           en: "Upgrade to Premium to get AI-based personality analysis",
           es: "Actualiza a Premium para obtener un análisis de personalidad basado en IA",
           fr: "Passez au mode Premium pour obtenir une analyse de personnalité basée sur l'IA",
@@ -63,7 +63,7 @@ export class PremiumGates {
       {
         feature: "pdfExport",
         limitation: getLocalizedContent(locale, {
-          cn: "无法下载PDF报告",
+          zh: "无法下载PDF报告",
           en: "Cannot download PDF reports",
           es: "No se pueden descargar los informes PDF",
           fr: "Impossible de télécharger les rapports PDF",
@@ -71,7 +71,7 @@ export class PremiumGates {
           ko: "PDF 리포트를 다운로드할 수 없습니다",
         })!,
         upgradeMessage: getLocalizedContent(locale, {
-          cn: "升级到高级版以将结果保存为PDF",
+          zh: "升级到高级版以将结果保存为PDF",
           en: "Upgrade to Premium to save results as PDF",
           es: "Actualiza a Premium para guardar los resultados como PDF",
           fr: "Passez au mode Premium pour enregistrer les résultats en PDF",
@@ -82,7 +82,7 @@ export class PremiumGates {
       {
         feature: "advancedInsights",
         limitation: getLocalizedContent(locale, {
-          cn: "无法查看高级洞察",
+          zh: "无法查看高级洞察",
           en: "Cannot view advanced insights",
           es: "No se pueden ver los informes avanzados",
           fr: "Impossible de voir les insights avancés",
@@ -90,7 +90,7 @@ export class PremiumGates {
           ko: "고급 인사이트를 볼 수 없습니다",
         })!,
         upgradeMessage: getLocalizedContent(locale, {
-          cn: "升级到高级版以获取个性化洞察",
+          zh: "升级到高级版以获取个性化洞察",
           en: "Upgrade to Premium to get personalized insights",
           es: "Actualiza a Premium para obtener informes personalizados",
           fr: "Passez au mode Premium pour obtenir des insights personnalisés",
@@ -101,7 +101,7 @@ export class PremiumGates {
       {
         feature: "customReports",
         limitation: getLocalizedContent(locale, {
-          cn: "无法创建自定义报告",
+          zh: "无法创建自定义报告",
           en: "Cannot create custom reports",
           es: "No se pueden crear informes personalizados",
           fr: "Impossible de créer des rapports personnalisés",
@@ -109,7 +109,7 @@ export class PremiumGates {
           ko: "맞춤형 리포트를 생성할 수 없습니다",
         })!,
         upgradeMessage: getLocalizedContent(locale, {
-          cn: "升级到高级版以使用自定义数据分析",
+          zh: "升级到高级版以使用自定义数据分析",
           en: "Upgrade to Premium to use custom data analysis",
           es: "Actualiza a Premium para utilizar el análisis de datos personalizado",
           fr: "Passez au mode Premium pour utiliser l'analyse de données personnalisée",
@@ -132,7 +132,7 @@ export class PremiumGates {
     const ctaMap = {
       advancedInsights: {
         buttonText: getLocalizedContent(locale, {
-          cn: "现在升级",
+          zh: "现在升级",
           en: "Upgrade Now",
           es: "Actualizar ahora",
           fr: "Mettre à niveau maintenant",
@@ -140,7 +140,7 @@ export class PremiumGates {
           ko: "지금 업그레이드",
         })!,
         description: getLocalizedContent(locale, {
-          cn: "获取更深入的性格分析和个性化建议",
+          zh: "获取更深入的性格分析和个性化建议",
           en: "Get deeper personality analysis and personalized advice",
           es: "Obtén un análisis de personalidad más profundo y consejos personalizados",
           fr: "Obtenez une analyse de personnalité plus approfondie et des conseils personnalisés",
@@ -148,7 +148,7 @@ export class PremiumGates {
           ko: "더 깊이 있는 성격 분석과 개인 맞춤 조언을 받아보세요",
         })!,
         title: getLocalizedContent(locale, {
-          cn: "访问高级洞察",
+          zh: "访问高级洞察",
           en: "Access Advanced Insights",
           es: "Acceder a informes avanzados",
           fr: "Accéder aux insights avancés",
@@ -158,7 +158,7 @@ export class PremiumGates {
       },
       aiAnalysis: {
         buttonText: getLocalizedContent(locale, {
-          cn: "升级到高级版",
+          zh: "升级到高级版",
           en: "Upgrade to Premium",
           es: "Actualizar a Premium",
           fr: "Passer au mode Premium",
@@ -166,7 +166,7 @@ export class PremiumGates {
           ko: "프리미엄으로 업그레이드",
         })!,
         description: getLocalizedContent(locale, {
-          cn: "利用先进AI技术获取更准确、更个性化的性格分析",
+          zh: "利用先进AI技术获取更准确、更个性化的性格分析",
           en: "Get more accurate and personalized personality analysis with advanced AI technology",
           es: "Obtén un análisis de personalidad más preciso y personalizado con tecnología de IA avanzada",
           fr: "Obtenez une analyse de personnalité plus précise et personnalisée grâce à la technologie IA avancée",
@@ -174,7 +174,7 @@ export class PremiumGates {
           ko: "고급 AI 기술로 더 정확하고 개인화된 성격 분석을 받아보세요",
         })!,
         title: getLocalizedContent(locale, {
-          cn: "解锁AI深度分析",
+          zh: "解锁AI深度分析",
           en: "Unlock AI Deep Analysis",
           es: "Desbloquear el análisis profundo de IA",
           fr: "Débloquer l'analyse approfondie de l'IA",
@@ -184,7 +184,7 @@ export class PremiumGates {
       },
       customReports: {
         buttonText: getLocalizedContent(locale, {
-          cn: "试用高级版",
+          zh: "试用高级版",
           en: "Try Premium",
           es: "Probar Premium",
           fr: "Essayer le mode Premium",
@@ -192,7 +192,7 @@ export class PremiumGates {
           ko: "프리미엄 체험하기",
         })!,
         description: getLocalizedContent(locale, {
-          cn: "生成您自己的数据分析和自定义报告",
+          zh: "生成您自己的数据分析和自定义报告",
           en: "Generate your own data analysis and custom reports",
           es: "Genera tu propio análisis de datos e informes personalizados",
           fr: "Générez votre propre analyse de données et vos rapports personnalisés",
@@ -200,7 +200,7 @@ export class PremiumGates {
           ko: "나만의 데이터 분석과 맞춤형 리포트를 생성하세요",
         })!,
         title: getLocalizedContent(locale, {
-          cn: "创建自定义报告",
+          zh: "创建自定义报告",
           en: "Create Custom Reports",
           es: "Crear informes personalizados",
           fr: "Créer des rapports personnalisés",
@@ -210,7 +210,7 @@ export class PremiumGates {
       },
       pdfExport: {
         buttonText: getLocalizedContent(locale, {
-          cn: "开始使用高级版",
+          zh: "开始使用高级版",
           en: "Start Premium",
           es: "Iniciar Premium",
           fr: "Démarrer le mode Premium",
@@ -218,7 +218,7 @@ export class PremiumGates {
           ko: "프리미엄 시작하기",
         })!,
         description: getLocalizedContent(locale, {
-          cn: "以精美的PDF格式保存和分享您的结果",
+          zh: "以精美的PDF格式保存和分享您的结果",
           en: "Save and share your results in beautiful PDF format",
           es: "Guarda y comparte tus resultados en un hermoso formato PDF",
           fr: "Enregistrez et partagez vos résultats dans un superbe format PDF",
@@ -226,7 +226,7 @@ export class PremiumGates {
           ko: "결과를 아름다운 PDF 형태로 저장하고 공유하세요",
         })!,
         title: getLocalizedContent(locale, {
-          cn: "下载PDF报告",
+          zh: "下载PDF报告",
           en: "Download PDF Reports",
           es: "Descargar informes PDF",
           fr: "Télécharger les rapports PDF",
@@ -236,7 +236,7 @@ export class PremiumGates {
       },
       prioritySupport: {
         buttonText: getLocalizedContent(locale, {
-          cn: "加入高级版",
+          zh: "加入高级版",
           en: "Join Premium",
           es: "Unirse a Premium",
           fr: "Rejoindre le mode Premium",
@@ -244,7 +244,7 @@ export class PremiumGates {
           ko: "프리미엄 가입",
         })!,
         description: getLocalizedContent(locale, {
-          cn: "获取更快速、更专业的客户支持",
+          zh: "获取更快速、更专业的客户支持",
           en: "Get faster and more professional customer support",
           es: "Obtén un soporte al cliente más rápido y profesional",
           fr: "Obtenez un support client plus rapide et plus professionnel",
@@ -252,7 +252,7 @@ export class PremiumGates {
           ko: "더 빠르고 전문적인 고객 지원을 받아보세요",
         })!,
         title: getLocalizedContent(locale, {
-          cn: "优先客户支持",
+          zh: "优先客户支持",
           en: "Priority Customer Support",
           es: "Atención al cliente prioritaria",
           fr: "Support client prioritaire",
@@ -262,7 +262,7 @@ export class PremiumGates {
       },
       testHistory: {
         buttonText: getLocalizedContent(locale, {
-          cn: "免费注册",
+          zh: "免费注册",
           en: "Sign Up Free",
           es: "Registrarse gratis",
           fr: "S'inscrire gratuitement",
@@ -270,7 +270,7 @@ export class PremiumGates {
           ko: "무료 회원가입",
         })!,
         description: getLocalizedContent(locale, {
-          cn: "保存您的所有测试结果并跟踪随时间的变化",
+          zh: "保存您的所有测试结果并跟踪随时间的变化",
           en: "Save all your test results and track changes over time",
           es: "Guarda todos los resultados de tus pruebas y realiza un seguimiento de los cambios a lo largo del tiempo",
           fr: "Enregistrez tous vos résultats de tests et suivez les changements au fil du temps",
@@ -278,7 +278,7 @@ export class PremiumGates {
           ko: "모든 테스트 결과를 저장하고 시간에 따른 변화를 추적하세요",
         })!,
         title: getLocalizedContent(locale, {
-          cn: "保存测试历史",
+          zh: "保存测试历史",
           en: "Save Test History",
           es: "Guardar historial de pruebas",
           fr: "Enregistrer l'historique des tests",
@@ -288,7 +288,7 @@ export class PremiumGates {
       },
       unlimitedTests: {
         buttonText: getLocalizedContent(locale, {
-          cn: "继续免费使用",
+          zh: "继续免费使用",
           en: "Continue Free",
           es: "Continuar gratis",
           fr: "Continuer gratuitement",
@@ -296,7 +296,7 @@ export class PremiumGates {
           ko: "계속 무료로 이용",
         })!,
         description: getLocalizedContent(locale, {
-          cn: "进行无限次的性格测试",
+          zh: "进行无限次的性格测试",
           en: "Take unlimited personality tests",
           es: "Realiza pruebas de personalidad ilimitadas",
           fr: "Passez des tests de personnalité illimités",
@@ -304,7 +304,7 @@ export class PremiumGates {
           ko: "모든 성격 테스트를 무제한으로 이용하세요",
         })!,
         title: getLocalizedContent(locale, {
-          cn: "无限测试",
+          zh: "无限测试",
           en: "Unlimited Tests",
           es: "Pruebas ilimitadas",
           fr: "Tests illimités",

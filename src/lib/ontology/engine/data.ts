@@ -8,7 +8,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "air",
     id: "aquarius",
     name: {
-      cn: "水瓶座",
+      zh: "水瓶座",
       en: "Aquarius",
       es: "Acuario",
       fr: "Verseau",
@@ -17,7 +17,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "有创意",
+        zh: "有创意",
         en: "Original",
         es: "Original",
         fr: "Original",
@@ -25,7 +25,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "독창적임",
       },
       {
-        cn: "独立",
+        zh: "独立",
         en: "Independent",
         es: "Independiente",
         fr: "Indépendant",
@@ -39,7 +39,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "fire",
     id: "aries",
     name: {
-      cn: "白羊座",
+      zh: "白羊座",
       en: "Aries",
       es: "Aries",
       fr: "Bélier",
@@ -48,7 +48,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "勇敢",
+        zh: "勇敢",
         en: "Courageous",
         es: "Valiente",
         fr: "Courageux",
@@ -56,7 +56,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "용감함",
       },
       {
-        cn: "坚定",
+        zh: "坚定",
         en: "Determined",
         es: "Determinado",
         fr: "Déterminé",
@@ -70,7 +70,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "water",
     id: "cancer",
     name: {
-      cn: "巨蟹座",
+      zh: "巨蟹座",
       en: "Cancer",
       es: "Cáncer",
       fr: "Cancer",
@@ -79,7 +79,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "有直觉",
+        zh: "有直觉",
         en: "Intuitive",
         es: "Intuitivo",
         fr: "Intuitif",
@@ -87,7 +87,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "직관적임",
       },
       {
-        cn: "有保护欲",
+        zh: "有保护欲",
         en: "Protective",
         es: "Protector",
         fr: "Protecteur",
@@ -101,7 +101,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "earth",
     id: "capricorn",
     name: {
-      cn: "摩羯座",
+      zh: "摩羯座",
       en: "Capricorn",
       es: "Capricornio",
       fr: "Capricorne",
@@ -110,7 +110,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "负责任",
+        zh: "负责任",
         en: "Responsible",
         es: "Responsable",
         fr: "Responsable",
@@ -118,7 +118,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "책임감 있음",
       },
       {
-        cn: "自律",
+        zh: "自律",
         en: "Disciplined",
         es: "Disciplinado",
         fr: "Discipliné",
@@ -132,7 +132,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "air",
     id: "gemini",
     name: {
-      cn: "双子座",
+      zh: "双子座",
       en: "Gemini",
       es: "Géminis",
       fr: "Gémeaux",
@@ -141,7 +141,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "有表现力",
+        zh: "有表现力",
         en: "Expressive",
         es: "Expresivo",
         fr: "Expressif",
@@ -149,7 +149,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "표현력이 풍부함",
       },
       {
-        cn: "多才多艺",
+        zh: "多才多艺",
         en: "Versatile",
         es: "Versátil",
         fr: "Polyvalent",
@@ -163,7 +163,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "fire",
     id: "leo",
     name: {
-      cn: "狮子座",
+      zh: "狮子座",
       en: "Leo",
       es: "Leo",
       fr: "Lion",
@@ -172,7 +172,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "有创造力",
+        zh: "有创造力",
         en: "Creative",
         es: "Creativo",
         fr: "Créatif",
@@ -180,7 +180,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "창의적임",
       },
       {
-        cn: "热情",
+        zh: "热情",
         en: "Passionate",
         es: "Apasionado",
         fr: "Passionné",
@@ -194,7 +194,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "air",
     id: "libra",
     name: {
-      cn: "天秤座",
+      zh: "天秤座",
       en: "Libra",
       es: "Libra",
       fr: "Balance",
@@ -203,7 +203,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "有外交手腕",
+        zh: "有外交手腕",
         en: "Diplomatic",
         es: "Diplomático",
         fr: "Diplomate",
@@ -211,7 +211,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "외교적임",
       },
       {
-        cn: "大方",
+        zh: "大方",
         en: "Gracious",
         es: "Gracioso",
         fr: "Gracieux",
@@ -225,7 +225,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "water",
     id: "pisces",
     name: {
-      cn: "双鱼座",
+      zh: "双鱼座",
       en: "Pisces",
       es: "Piscis",
       fr: "Poissons",
@@ -234,7 +234,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "有同情心",
+        zh: "有同情心",
         en: "Compassionate",
         es: "Compasivo",
         fr: "Compatissant",
@@ -242,7 +242,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "동정심이 많음",
       },
       {
-        cn: "有艺术气息",
+        zh: "有艺术气息",
         en: "Artistic",
         es: "Artístico",
         fr: "Artistique",
@@ -256,7 +256,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "fire",
     id: "sagittarius",
     name: {
-      cn: "射手座",
+      zh: "射手座",
       en: "Sagittarius",
       es: "Sagitario",
       fr: "Sagittaire",
@@ -265,7 +265,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "大方",
+        zh: "大方",
         en: "Generous",
         es: "Generoso",
         fr: "Généreux",
@@ -273,7 +273,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "관대함",
       },
       {
-        cn: "理想主义",
+        zh: "理想主义",
         en: "Idealistic",
         es: "Idealista",
         fr: "Idéaliste",
@@ -287,7 +287,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "water",
     id: "scorpio",
     name: {
-      cn: "天蝎座",
+      zh: "天蝎座",
       en: "Scorpio",
       es: "Escorpio",
       fr: "Scorpion",
@@ -296,7 +296,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "勇敢",
+        zh: "勇敢",
         en: "Brave",
         es: "Valiente",
         fr: "Courageux",
@@ -304,7 +304,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "용감함",
       },
       {
-        cn: "热情",
+        zh: "热情",
         en: "Passionate",
         es: "Apasionado",
         fr: "Passionné",
@@ -318,7 +318,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "earth",
     id: "taurus",
     name: {
-      cn: "金牛座",
+      zh: "金牛座",
       en: "Taurus",
       es: "Tauro",
       fr: "Taureau",
@@ -327,7 +327,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "可靠",
+        zh: "可靠",
         en: "Reliable",
         es: "Confiable",
         fr: "Fiable",
@@ -335,7 +335,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "신뢰할 수 있음",
       },
       {
-        cn: "耐心",
+        zh: "耐心",
         en: "Patient",
         es: "Paciente",
         fr: "Patient",
@@ -349,7 +349,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     element: "earth",
     id: "virgo",
     name: {
-      cn: "处女座",
+      zh: "处女座",
       en: "Virgo",
       es: "Virgo",
       fr: "Vierge",
@@ -358,7 +358,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
     },
     traits: [
       {
-        cn: "忠诚",
+        zh: "忠诚",
         en: "Loyal",
         es: "Leal",
         fr: "Loyal",
@@ -366,7 +366,7 @@ export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
         ko: "충실함",
       },
       {
-        cn: "善于分析",
+        zh: "善于分析",
         en: "Analytical",
         es: "Analítico",
         fr: "Analytique",
@@ -383,7 +383,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
 > = {
   dog: {
     animal: {
-      cn: "狗",
+      zh: "狗",
       en: "Dog",
       es: "Perro",
       fr: "Chien",
@@ -391,7 +391,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
       ko: "개",
     },
     name: {
-      cn: "狗年",
+      zh: "狗年",
       en: "Year of the Dog",
       es: "Año del Perro",
       fr: "Année du Chien",
@@ -400,7 +400,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "忠诚",
+        zh: "忠诚",
         en: "Loyal",
         es: "Leal",
         fr: "Loyal",
@@ -408,7 +408,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "충성스러운",
       },
       {
-        cn: "诚实",
+        zh: "诚实",
         en: "Honest",
         es: "Honesto",
         fr: "Honnête",
@@ -419,7 +419,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
   },
   dragon: {
     animal: {
-      cn: "龙",
+      zh: "龙",
       en: "Dragon",
       es: "Dragón",
       fr: "Dragon",
@@ -427,7 +427,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
       ko: "용",
     },
     name: {
-      cn: "龙年",
+      zh: "龙年",
       en: "Year of the Dragon",
       es: "Año del Dragón",
       fr: "Année du Dragon",
@@ -436,7 +436,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "强大",
+        zh: "强大",
         en: "Powerful",
         es: "Poderoso",
         fr: "Puissant",
@@ -444,7 +444,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "강렬한",
       },
       {
-        cn: "有魅力",
+        zh: "有魅力",
         en: "Charismatic",
         es: "Carismático",
         fr: "Charismatique",
@@ -455,7 +455,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
   },
   goat: {
     animal: {
-      cn: "羊",
+      zh: "羊",
       en: "Goat",
       es: "Cabra",
       fr: "Chèvre",
@@ -463,7 +463,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
       ko: "양",
     },
     name: {
-      cn: "羊年",
+      zh: "羊年",
       en: "Year of the Goat",
       es: "Año del Cabra",
       fr: "Année de la Chèvre",
@@ -472,7 +472,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "温和",
+        zh: "温和",
         en: "Mild",
         es: "Afable",
         fr: "Doux",
@@ -480,7 +480,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "온화한",
       },
       {
-        cn: "有艺术感",
+        zh: "有艺术感",
         en: "Artistic",
         es: "Artístico",
         fr: "Artistique",
@@ -491,7 +491,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
   },
   horse: {
     animal: {
-      cn: "马",
+      zh: "马",
       en: "Horse",
       es: "Caballo",
       fr: "Cheval",
@@ -499,7 +499,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
       ko: "말",
     },
     name: {
-      cn: "马年",
+      zh: "马年",
       en: "Year of the Horse",
       es: "Año del Caballo",
       fr: "Année du Cheval",
@@ -508,7 +508,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "充满活力",
+        zh: "充满活力",
         en: "Energetic",
         es: "Enérgico",
         fr: "Énergique",
@@ -516,7 +516,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "정열적인",
       },
       {
-        cn: "爱好自由",
+        zh: "爱好自由",
         en: "Freedom-loving",
         es: "Amante de la libertad",
         fr: "Aimant la liberté",
@@ -527,7 +527,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
   },
   monkey: {
     animal: {
-      cn: "猴",
+      zh: "猴",
       en: "Monkey",
       es: "Mono",
       fr: "Singe",
@@ -535,7 +535,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
       ko: "원숭이",
     },
     name: {
-      cn: "猴年",
+      zh: "猴年",
       en: "Year of the Monkey",
       es: "Año del Mono",
       fr: "Année du Singe",
@@ -544,7 +544,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "聪明",
+        zh: "聪明",
         en: "Clever",
         es: "Astuto",
         fr: "Malin",
@@ -552,7 +552,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "영리한",
       },
       {
-        cn: "活泼",
+        zh: "活泼",
         en: "Sprightly",
         es: "Vivaz",
         fr: "Vif",
@@ -562,9 +562,9 @@ export const ANIMAL_ZODIAC_DATA: Record<
     ],
   },
   ox: {
-    animal: { cn: "牛", en: "Ox", es: "Buey", fr: "Bœuf", ja: "牛", ko: "소" },
+    animal: { zh: "牛", en: "Ox", es: "Buey", fr: "Bœuf", ja: "牛", ko: "소" },
     name: {
-      cn: "牛年",
+      zh: "牛年",
       en: "Year of the Ox",
       es: "Año del Buey",
       fr: "Année du Bœuf",
@@ -573,7 +573,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "勤奋",
+        zh: "勤奋",
         en: "Diligent",
         es: "Diligente",
         fr: "Diligent",
@@ -581,7 +581,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "성실한",
       },
       {
-        cn: "可靠",
+        zh: "可靠",
         en: "Dependable",
         es: "Fiable",
         fr: "Fiable",
@@ -592,7 +592,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
   },
   pig: {
     animal: {
-      cn: "猪",
+      zh: "猪",
       en: "Pig",
       es: "Cerdo",
       fr: "Cochon",
@@ -600,7 +600,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
       ko: "돼지",
     },
     name: {
-      cn: "猪年",
+      zh: "猪年",
       en: "Year of the Pig",
       es: "Año del Cerdo",
       fr: "Année du Cochon",
@@ -609,7 +609,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "慷慨",
+        zh: "慷慨",
         en: "Generous",
         es: "Generoso",
         fr: "Généreux",
@@ -617,7 +617,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "너그러운",
       },
       {
-        cn: "乐观",
+        zh: "乐观",
         en: "Optimistic",
         es: "Optimista",
         fr: "Optimiste",
@@ -628,7 +628,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
   },
   rabbit: {
     animal: {
-      cn: "兔",
+      zh: "兔",
       en: "Rabbit",
       es: "Conejo",
       fr: "Lapin",
@@ -636,7 +636,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
       ko: "토끼",
     },
     name: {
-      cn: "兔年",
+      zh: "兔年",
       en: "Year of the Rabbit",
       es: "Año del Conejo",
       fr: "Année du Lapin",
@@ -645,7 +645,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "温柔",
+        zh: "温柔",
         en: "Gentle",
         es: "Gentil",
         fr: "Gentil",
@@ -653,7 +653,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "상냥한",
       },
       {
-        cn: "谨慎",
+        zh: "谨慎",
         en: "Prudent",
         es: "Prudente",
         fr: "Prudent",
@@ -663,9 +663,9 @@ export const ANIMAL_ZODIAC_DATA: Record<
     ],
   },
   rat: {
-    animal: { cn: "鼠", en: "Rat", es: "Rata", fr: "Rat", ja: "鼠", ko: "쥐" },
+    animal: { zh: "鼠", en: "Rat", es: "Rata", fr: "Rat", ja: "鼠", ko: "쥐" },
     name: {
-      cn: "鼠年",
+      zh: "鼠年",
       en: "Year of the Rat",
       es: "Año del Rata",
       fr: "Année du Rat",
@@ -674,7 +674,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "机敏",
+        zh: "机敏",
         en: "Witty",
         es: "Ingenioso",
         fr: "Spirituel",
@@ -682,7 +682,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "재치 있는",
       },
       {
-        cn: "适应力强",
+        zh: "适应力强",
         en: "Adaptable",
         es: "Adaptable",
         fr: "Adaptable",
@@ -693,7 +693,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
   },
   rooster: {
     animal: {
-      cn: "鸡",
+      zh: "鸡",
       en: "Rooster",
       es: "Gallo",
       fr: "Coq",
@@ -701,7 +701,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
       ko: "닭",
     },
     name: {
-      cn: "鸡年",
+      zh: "鸡年",
       en: "Year of the Rooster",
       es: "Año del Gallo",
       fr: "Année du Coq",
@@ -710,7 +710,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "勤劳",
+        zh: "勤劳",
         en: "Hard-working",
         es: "Trabajador",
         fr: "Travailleur",
@@ -718,7 +718,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "부지런한",
       },
       {
-        cn: "准确",
+        zh: "准确",
         en: "Accurate",
         es: "Preciso",
         fr: "Précis",
@@ -729,7 +729,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
   },
   snake: {
     animal: {
-      cn: "蛇",
+      zh: "蛇",
       en: "Snake",
       es: "Serpiente",
       fr: "Serpent",
@@ -737,7 +737,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
       ko: "뱀",
     },
     name: {
-      cn: "蛇年",
+      zh: "蛇年",
       en: "Year of the Snake",
       es: "Año del Serpiente",
       fr: "Année du Serpent",
@@ -746,7 +746,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "睿智",
+        zh: "睿智",
         en: "Wise",
         es: "Sabio",
         fr: "Sage",
@@ -754,7 +754,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "지혜로운",
       },
       {
-        cn: "神秘",
+        zh: "神秘",
         en: "Mysterious",
         es: "Misterioso",
         fr: "Mystérieux",
@@ -765,7 +765,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
   },
   tiger: {
     animal: {
-      cn: "虎",
+      zh: "虎",
       en: "Tiger",
       es: "Tigre",
       fr: "Tigre",
@@ -773,7 +773,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
       ko: "호랑이",
     },
     name: {
-      cn: "虎年",
+      zh: "虎年",
       en: "Year of the Tiger",
       es: "Año del Tigre",
       fr: "Année du Tigre",
@@ -782,7 +782,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
     },
     traits: [
       {
-        cn: "勇敢",
+        zh: "勇敢",
         en: "Brave",
         es: "Valiente",
         fr: "Brave",
@@ -790,7 +790,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         ko: "용맹한",
       },
       {
-        cn: "自信",
+        zh: "自信",
         en: "Confident",
         es: "Confiado",
         fr: "Confiant",
@@ -803,7 +803,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
 
 export const SYNERGY_TEMPLATES: Record<string, LocalizedText> = {
   description: {
-    cn: "作为生于{animal}年、拥有{sajuElement}能量的{westernSign}座，结合你的{bloodType}型血特质，你散发出{adjective}的魅力。",
+    zh: "作为生于{animal}年、拥有{sajuElement}能量的{westernSign}座，结合你的{bloodType}型血特质，你散发出{adjective}的魅力。",
     en: "As a {westernSign} born in the Year of the {animal} with {sajuElement} energy, you radiate a {adjective} charm combined with your Type {bloodType} traits.",
     es: "Como un {westernSign} nacido en el año del {animal} con energía {sajuElement}, irradias un encanto {adjective} combinado con tus rasgos de Tipo {bloodType}.",
     fr: "En tant que {westernSign} né l'année du {animal} avec l'énergie {sajuElement}, vous rayonnez d'un charme {adjective} combiné à vos traits de Type {bloodType}.",
@@ -811,7 +811,7 @@ export const SYNERGY_TEMPLATES: Record<string, LocalizedText> = {
     ko: "{sajuElement}의 기운을 타고난 {animal}띠 {westernSign}인 당신은, {bloodType}형의 특성이 결합되어 {adjective}한 매력을 발산합니다.",
   },
   title: {
-    cn: "命运的和弦：你的身份",
+    zh: "命运的和弦：你的身份",
     en: "Harmony of Destiny: Your Ontology",
     es: "Armonía del Destino: Tu Identidad",
     fr: "Harmonie du Destin : Votre Identité",

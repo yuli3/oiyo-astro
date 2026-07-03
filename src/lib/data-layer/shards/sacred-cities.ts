@@ -10,7 +10,7 @@ export const SACRED_CITIES: SacredCity[] = [
     id: "seoul",
     longitude: 126.978,
     name: {
-      cn: "首尔",
+      zh: "首尔",
       en: "Seoul",
       es: "Seúl",
       fr: "Séoul",
@@ -23,7 +23,7 @@ export const SACRED_CITIES: SacredCity[] = [
     id: "tokyo",
     longitude: 139.6917,
     name: {
-      cn: "东京",
+      zh: "东京",
       en: "Tokyo",
       es: "Tokio",
       fr: "Tokyo",
@@ -36,7 +36,7 @@ export const SACRED_CITIES: SacredCity[] = [
     id: "beijing",
     longitude: 116.4074,
     name: {
-      cn: "北京",
+      zh: "北京",
       en: "Beijing",
       es: "Pekín",
       fr: "Pékin",
@@ -49,7 +49,7 @@ export const SACRED_CITIES: SacredCity[] = [
     id: "new_york",
     longitude: -74.006,
     name: {
-      cn: "纽约",
+      zh: "纽约",
       en: "New York",
       es: "Nueva York",
       fr: "New York",
@@ -62,7 +62,7 @@ export const SACRED_CITIES: SacredCity[] = [
     id: "london",
     longitude: -0.1278,
     name: {
-      cn: "伦敦",
+      zh: "伦敦",
       en: "London",
       es: "Londres",
       fr: "Londres",
@@ -75,7 +75,7 @@ export const SACRED_CITIES: SacredCity[] = [
     id: "paris",
     longitude: 2.3522,
     name: {
-      cn: "巴黎",
+      zh: "巴黎",
       en: "Paris",
       es: "París",
       fr: "Paris",
@@ -88,7 +88,7 @@ export const SACRED_CITIES: SacredCity[] = [
     id: "los_angeles",
     longitude: -118.2437,
     name: {
-      cn: "洛杉矶",
+      zh: "洛杉矶",
       en: "Los Angeles",
       es: "Los Ángeles",
       fr: "Los Angeles",
@@ -101,7 +101,7 @@ export const SACRED_CITIES: SacredCity[] = [
     id: "sydney",
     longitude: 151.2093,
     name: {
-      cn: "悉尼",
+      zh: "悉尼",
       en: "Sydney",
       es: "Sídney",
       fr: "Sydney",

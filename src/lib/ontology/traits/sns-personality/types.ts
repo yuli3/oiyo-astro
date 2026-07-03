@@ -24,7 +24,7 @@ export type SNSPersonalityType =
 
 export const SNS_LABELS: Record<SNSPersonalityType, Record<string, string>> = {
   instagrammer: {
-    cn: "Instagrammer 📸",
+    zh: "Instagrammer 📸",
     en: "Instagrammer 📸",
     es: "Instagrammer 📸",
     fr: "Instagrammer 📸",
@@ -32,7 +32,7 @@ export const SNS_LABELS: Record<SNSPersonalityType, Record<string, string>> = {
     ko: "인스타그래머 📸",
   },
   lurker: {
-    cn: "The Lurker 👀",
+    zh: "The Lurker 👀",
     en: "The Lurker 👀",
     es: "The Lurker 👀",
     fr: "The Lurker 👀",
@@ -40,7 +40,7 @@ export const SNS_LABELS: Record<SNSPersonalityType, Record<string, string>> = {
     ko: "관전러 👀",
   },
   multi: {
-    cn: "Multi-Platform Master 🌐",
+    zh: "Multi-Platform Master 🌐",
     en: "Multi-Platform Master 🌐",
     es: "Multi-Platform Master 🌐",
     fr: "Multi-Platform Master 🌐",
@@ -48,7 +48,7 @@ export const SNS_LABELS: Record<SNSPersonalityType, Record<string, string>> = {
     ko: "멀티플랫포머 🌐",
   },
   tiktoker: {
-    cn: "TikToker 🎵",
+    zh: "TikToker 🎵",
     en: "TikToker 🎵",
     es: "TikToker 🎵",
     fr: "TikToker 🎵",
@@ -56,7 +56,7 @@ export const SNS_LABELS: Record<SNSPersonalityType, Record<string, string>> = {
     ko: "틱톡커 🎵",
   },
   tweeter: {
-    cn: "Tweeter 🐦",
+    zh: "Tweeter 🐦",
     en: "Tweeter 🐦",
     es: "Tweeter 🐦",
     fr: "Tweeter 🐦",
@@ -64,7 +64,7 @@ export const SNS_LABELS: Record<SNSPersonalityType, Record<string, string>> = {
     ko: "트위터리안 🐦",
   },
   youtuber: {
-    cn: "YouTuber 🎥",
+    zh: "YouTuber 🎥",
     en: "YouTuber 🎥",
     es: "YouTuber 🎥",
     fr: "YouTuber 🎥",

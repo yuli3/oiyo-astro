@@ -154,13 +154,13 @@ export function OntologyClient() {
       setAggregatedProfile((prev) => (prev ? null : prev));
       return;
     }
-    aggregateOntology(history)
+    aggregateOntology(history, locale)
       .then((profile) => setAggregatedProfile(profile))
       .catch((err) => {
         console.error("Ontology Aggregation Error", err);
         setIsStable(false);
       });
-  }, [history, loading, setAggregatedProfile]);
+  }, [history, loading, locale, setAggregatedProfile]);
 
   const sajuAnalysis = useMemo(() => {
     if (!profile.birthDate) return null;

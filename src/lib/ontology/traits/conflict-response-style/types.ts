@@ -36,7 +36,7 @@ export const CONFLICT_RESPONSE_LABELS: Record<
   Locale,
   Record<ConflictResponseType, string>
 > = {
-  cn: {
+  zh: {
     analytical: "The Analyst",
     avoidant: "The Avoider",
     confrontational: "The Confronter",
@@ -78,7 +78,7 @@ export const CONFLICT_RESPONSE_DESCRIPTIONS: Record<
   Locale,
   Record<ConflictResponseType, string>
 > = {
-  cn: {
+  zh: {
     analytical: "You approach conflicts with logic and objectivity.",
     avoidant: "You tend to avoid confrontation.",
     confrontational: "You face conflicts head-on.",
@@ -126,7 +126,7 @@ export const CONFLICT_RESPONSE_TRAITS: Record<
   Locale,
   Record<ConflictResponseType, string[]>
 > = {
-  cn: {
+  zh: {
     analytical: ["Logic focused"],
     avoidant: ["Prefers peace"],
     confrontational: ["Addresses issues immediately"],
@@ -168,7 +168,7 @@ export const CONFLICT_RESPONSE_STRENGTHS: Record<
   Locale,
   Record<ConflictResponseType, string[]>
 > = {
-  cn: {
+  zh: {
     analytical: ["Objective decisions"],
     avoidant: ["Peaceful environments"],
     confrontational: ["Quick resolution"],

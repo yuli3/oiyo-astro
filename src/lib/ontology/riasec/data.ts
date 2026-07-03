@@ -8,7 +8,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "组装家具或修理机器。",
+          zh: "组装家具或修理机器。",
           en: "Assemble furniture or repair machines.",
           es: "Montar muebles o reparar máquinas.",
           fr: "Assembler des meubles ou réparer des machines.",
@@ -20,7 +20,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "和朋友聚会聊天。",
+          zh: "和朋友聚会聊天。",
           en: "Gather with friends and talk.",
           es: "Reunirse con amigos y hablar.",
           fr: "Se réunir avec des amis et discuter.",
@@ -31,7 +31,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "周末你会怎么度过？",
+      zh: "周末你会怎么度过？",
       en: "How would you spend your time on a weekend?",
       es: "¿Cómo pasarías tu tiempo un fin de semana?",
       fr: "Comment passeriez-vous votre temps un week-end ?",
@@ -46,7 +46,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "分析和研究相关资料。",
+          zh: "分析和研究相关资料。",
           en: "Analyze and research relevant data.",
           es: "Analizar e investigar datos relevantes.",
           fr: "Analyser et rechercher des données pertinentes.",
@@ -58,7 +58,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "带领团队并设定目标。",
+          zh: "带领团队并设定目标。",
           en: "Lead the team and set goals.",
           es: "Liderar el equipo y establecer metas.",
           fr: "Diriger l'équipe et fixer des objectifs.",
@@ -69,7 +69,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "开始新项目时你的角色是？",
+      zh: "开始新项目时你的角色是？",
       en: "What is your role when starting a new project?",
       es: "¿Cuál es tu papel al iniciar un nuevo proyecto?",
       fr: "Quel est votre rôle lors du démarrage d'un nouveau projet ?",
@@ -84,7 +84,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "自由且允许表达的空间",
+          zh: "自由且允许表达的空间",
           en: "A space that allows freedom and expression.",
           es: "Un espacio que permite la libertad y la expresión.",
           fr: "Un espace qui permet la liberté et l'expression.",
@@ -96,7 +96,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "系统且整洁的办公室",
+          zh: "系统且整洁的办公室",
           en: "Systematic and organized office.",
           es: "Oficina sistemática y organizada.",
           fr: "Bureau systématique et organisé.",
@@ -107,7 +107,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "你喜欢什么样的工作环境？",
+      zh: "你喜欢什么样的工作环境？",
       en: "What work environment do you prefer?",
       es: "¿Qué entorno de trabajo prefieres?",
       fr: "Quel environnement de travail préférez-vous ?",
@@ -122,7 +122,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "动手直接修理。",
+          zh: "动手直接修理。",
           en: "Fix it by moving your body directly.",
           es: "Arreglarlo moviendo tu cuerpo directamente.",
           fr: "Le réparer en bougeant directement votre corps.",
@@ -134,7 +134,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "逻辑性地找出原因。",
+          zh: "逻辑性地找出原因。",
           en: "Logically identify the cause.",
           es: "Identificar lógicamente la causa.",
           fr: "Identifier logiquement la cause.",
@@ -145,7 +145,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "发生问题时你的解决方式是？",
+      zh: "发生问题时你的解决方式是？",
       en: "What is your problem-solving style?",
       es: "¿Cuál es tu estilo de resolución de problemas?",
       fr: "Quel est votre style de résolution de problèmes ?",
@@ -160,7 +160,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "通过作品感动他人",
+          zh: "通过作品感动他人",
           en: "Inspiring others through creations.",
           es: "Inspirar a otros a través de creaciones.",
           fr: "Inspirer les autres à travers des créations.",
@@ -172,7 +172,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "直接帮助和教导他人",
+          zh: "直接帮助和教导他人",
           en: "Helping and teaching people directly.",
           es: "Ayudar y enseñar a la gente directamente.",
           fr: "Aider et enseigner directement aux gens.",
@@ -183,7 +183,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "对你来说更有意义的是？",
+      zh: "对你来说更有意义的是？",
       en: "What is more rewarding for you?",
       es: "¿Qué es más gratificante para ti?",
       fr: "Qu'est-ce qui est le plus gratifiant pour vous ?",
@@ -198,7 +198,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "冒险且果断的决策",
+          zh: "冒险且果断的决策",
           en: "Adventurous and bold decisions.",
           es: "Decisiones aventureras y audaces.",
           fr: "Décisions aventureuses et audacieuses.",
@@ -210,7 +210,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "稳定且遵守规则的管理",
+          zh: "稳定且遵守规则的管理",
           en: "Stable and rule-abiding management.",
           es: "Gestión estable y respetuosa de las normas.",
           fr: "Gestion stable et respectueuse des règles.",
@@ -221,7 +221,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "喜欢的领导风格是？",
+      zh: "喜欢的领导风格是？",
       en: "Preferred leadership style?",
       es: "¿Estilo de liderazgo preferido?",
       fr: "Style de leadership préféré ?",
@@ -236,7 +236,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "木工或登山",
+          zh: "木工或登山",
           en: "Woodworking or hiking.",
           es: "Carpintería o senderismo.",
           fr: "Menuiserie ou randonnée.",
@@ -248,7 +248,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "集邮或整理数据",
+          zh: "集邮或整理数据",
           en: "Stamp collecting or data organizing.",
           es: "Coleccionar sellos u organizar datos.",
           fr: "Collection de timbres ou organisation de données.",
@@ -259,7 +259,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "如果要选一个爱好？",
+      zh: "如果要选一个爱好？",
       en: "If you choose one hobby?",
       es: "¿Si eliges un pasatiempo?",
       fr: "Si vous choisissez un passe-temps ?",
@@ -274,7 +274,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "追求知识与真理",
+          zh: "追求知识与真理",
           en: "Pursuit of knowledge and truth.",
           es: "Búsqueda del conocimiento y la verdad.",
           fr: "Poursuite de la connaissance et de la vérité.",
@@ -286,7 +286,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "美感与独创性",
+          zh: "美感与独创性",
           en: "Aesthetic sense and originality.",
           es: "Sentido estético y originalidad.",
           fr: "Sens esthétique et originalité.",
@@ -297,7 +297,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "你认为更有价值的是？",
+      zh: "你认为更有价值的是？",
       en: "What value do you consider more important?",
       es: "¿Qué valor consideras más importante?",
       fr: "Quelle valeur considérez-vous comme plus importante ?",
@@ -312,7 +312,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "倾听并共情他人的故事。",
+          zh: "倾听并共情他人的故事。",
           en: "Listen and empathize with people.",
           es: "Escuchar y empatizar con la gente.",
           fr: "Écouter et faire preuve d'empathie envers les gens.",
@@ -324,7 +324,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "主导气氛并介绍他人。",
+          zh: "主导气氛并介绍他人。",
           en: "Lead the mood and introduce people.",
           es: "Dirigir el ambiente y presentar a la gente.",
           fr: "Diriger l'ambiance et présenter les gens.",
@@ -335,7 +335,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "聚会时的你是什么样子？",
+      zh: "聚会时的你是什么样子？",
       en: "Your appearance at a party?",
       es: "¿Tu apariencia en una fiesta?",
       fr: "Votre apparence à une fête ?",
@@ -350,7 +350,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "科学理论或哲学书籍",
+          zh: "科学理论或哲学书籍",
           en: "Science theory or philosophy books.",
           es: "Teoría científica o libros de filosofía.",
           fr: "Théorie scientifique ou livres de philosophie.",
@@ -362,7 +362,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "会计原理或实用指南",
+          zh: "会计原理或实用指南",
           en: "Accounting principles or practical guides.",
           es: "Principios contables o guías prácticas.",
           fr: "Principes comptables ou guides pratiques.",
@@ -373,7 +373,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "如果在图书馆选书？",
+      zh: "如果在图书馆选书？",
       en: "If you pick a book at the library?",
       es: "¿Si eliges un libro en la biblioteca?",
       fr: "Si vous choisissez un livre à la bibliothèque ?",
@@ -388,7 +388,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "销售手工制作的工艺品",
+          zh: "销售手工制作的工艺品",
           en: "Selling handmade crafts.",
           es: "Venta de artesanías hechas a mano.",
           fr: "Vente d'artisanat fait main.",
@@ -400,7 +400,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "建立分销网络和营销代理",
+          zh: "建立分销网络和营销代理",
           en: "Building distribution networks and marketing.",
           es: "Creación de redes de distribución y marketing.",
           fr: "Création de réseaux de distribution et marketing.",
@@ -411,7 +411,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "如果创业，会选什么项目？",
+      zh: "如果创业，会选什么项目？",
       en: " If you start a business, what item?",
       es: "¿Si inicias un negocio, qué artículo?",
       fr: "Si vous démarrez une entreprise, quel article ?",
@@ -426,7 +426,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "a",
         text: {
-          cn: "博物馆和美术馆巡礼",
+          zh: "博物馆和美术馆巡礼",
           en: "Museum and art gallery tour.",
           es: "Visita a museos y galerías de arte.",
           fr: "Visite de musées et galeries d'art.",
@@ -438,7 +438,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       {
         id: "b",
         text: {
-          cn: "与当地人交流的志愿活动",
+          zh: "与当地人交流的志愿活动",
           en: "Volunteering with locals.",
           es: "Voluntariado con los lugareños.",
           fr: "Bénévolat avec les locaux.",
@@ -449,7 +449,7 @@ export const RIASEC_QUESTIONS: RiasecQuestion[] = [
       },
     ],
     text: {
-      cn: "理想的假期计划是？",
+      zh: "理想的假期计划是？",
       en: "Ideal vacation plan?",
       es: "¿Plan de vacaciones ideal?",
       fr: "Plan de vacances idéal ?",
@@ -463,7 +463,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
   Artistic: {
     careers: [
       {
-        cn: "设计师",
+        zh: "设计师",
         en: "Designer",
         es: "Diseñador",
         fr: "Designer",
@@ -471,7 +471,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "디자이너",
       },
       {
-        cn: "作家",
+        zh: "作家",
         en: "Writer",
         es: "Escritor",
         fr: "Écrivain",
@@ -479,7 +479,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "작가",
       },
       {
-        cn: "音乐家",
+        zh: "音乐家",
         en: "Musician",
         es: "Músico",
         fr: "Musicien",
@@ -488,7 +488,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       },
     ],
     description: {
-      cn: "想象力丰富且独创，喜欢自由的环境。讨厌墨守成规，情感表达丰富。",
+      zh: "想象力丰富且独创，喜欢自由的环境。讨厌墨守成规，情感表达丰富。",
       en: "Imaginative and original, prefers free environments. Dislikes routine and is emotionally expressive.",
       es: "Imaginativo y original, prefiere ambientes libres. Odia la rutina y es emocionalmente expresivo.",
       fr: "Imaginatif et original, préfère les environnements libres. Déteste la routine et est expressif émotionnellement.",
@@ -496,7 +496,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       ko: "상상력이 풍부하고 독창적이며, 자유로운 환경을 선호합니다. 틀에 박힌 것을 싫어하고 감정 표현이 풍부합니다.",
     },
     title: {
-      cn: "艺术型 (Artistic)",
+      zh: "艺术型 (Artistic)",
       en: "The Creator (Artistic)",
       es: "El Creador (Artistic)",
       fr: "Le Créateur (Artistic)",
@@ -507,7 +507,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
   Conventional: {
     careers: [
       {
-        cn: "会计师",
+        zh: "会计师",
         en: "Accountant",
         es: "Contador",
         fr: "Comptable",
@@ -515,7 +515,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "회계사",
       },
       {
-        cn: "职员",
+        zh: "职员",
         en: "Clerk",
         es: "Oficinista",
         fr: "Employé",
@@ -523,7 +523,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "사무원",
       },
       {
-        cn: "数据分析师",
+        zh: "数据分析师",
         en: "Data Analyst",
         es: "Analista de datos",
         fr: "Analyste de données",
@@ -532,7 +532,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       },
     ],
     description: {
-      cn: "准确系统，喜欢整理和记录数据。遵守规则，责任感强。",
+      zh: "准确系统，喜欢整理和记录数据。遵守规则，责任感强。",
       en: "Accurate and systematic, likes organizing and recording data. Follows rules and has a strong sense of responsibility.",
       es: "Preciso y sistemático, le gusta organizar y registrar datos. Sigue las reglas y tiene un fuerte sentido de la responsabilidad.",
       fr: "Précis et systématique, aime organiser et enregistrer des données. Respecte les règles et a un fort sens des responsabilités.",
@@ -540,7 +540,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       ko: "정확하고 체계적이며, 자료를 정리하고 기록하는 일을 좋아합니다. 규칙을 준수하고 책임감이 강합니다.",
     },
     title: {
-      cn: "常规型 (Conventional)",
+      zh: "常规型 (Conventional)",
       en: "The Organizer (Conventional)",
       es: "El Organizador (Conventional)",
       fr: "L'Organisateur (Conventional)",
@@ -551,7 +551,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
   Enterprising: {
     careers: [
       {
-        cn: "高管",
+        zh: "高管",
         en: "Executive",
         es: "Ejecutivo",
         fr: "Cadre",
@@ -559,7 +559,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "경영자",
       },
       {
-        cn: "律师",
+        zh: "律师",
         en: "Lawyer",
         es: "Abogado",
         fr: "Avocat",
@@ -567,7 +567,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "변호사",
       },
       {
-        cn: "销售专家",
+        zh: "销售专家",
         en: "Sales Expert",
         es: "Experto en ventas",
         fr: "Expert en vente",
@@ -576,7 +576,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       },
     ],
     description: {
-      cn: "有领导力和说服力，目标导向。重视经济成就和社会地位。",
+      zh: "有领导力和说服力，目标导向。重视经济成就和社会地位。",
       en: "Has leadership and persuasive skills, goal-oriented. Values economic achievement and social status.",
       es: "Tiene liderazgo y habilidades de persuasión, orientado a objetivos. Valora el logro económico y el estatus social.",
       fr: "A du leadership et des compétences de persuasion, axé sur les objectifs. Valorise la réussite économique et le statut social.",
@@ -584,7 +584,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       ko: "리더십이 있고 설득력이 있으며, 목표 지향적입니다. 경제적 성취와 사회적 지위를 중요하게 생각합니다.",
     },
     title: {
-      cn: "企业型 (Enterprising)",
+      zh: "企业型 (Enterprising)",
       en: "The Persuader (Enterprising)",
       es: "El Persuasor (Enterprising)",
       fr: "Le Persuadeur (Enterprising)",
@@ -595,7 +595,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
   Investigative: {
     careers: [
       {
-        cn: "科学家",
+        zh: "科学家",
         en: "Scientist",
         es: "Científico",
         fr: "Scientifique",
@@ -603,7 +603,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "과학자",
       },
       {
-        cn: "研究员",
+        zh: "研究员",
         en: "Researcher",
         es: "Investigador",
         fr: "Chercheur",
@@ -611,7 +611,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "연구원",
       },
       {
-        cn: "医生",
+        zh: "医生",
         en: "Doctor",
         es: "Médico",
         fr: "Médecin",
@@ -620,7 +620,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       },
     ],
     description: {
-      cn: "逻辑分析能力强，求知欲强。享受解决和理解复杂问题的过程。",
+      zh: "逻辑分析能力强，求知欲强。享受解决和理解复杂问题的过程。",
       en: "Logical and analytical, with strong intellectual curiosity. Enjoys the process of solving and understanding complex problems.",
       es: "Lógico y analítico, con gran curiosidad intelectual. Disfruta el proceso de resolver y comprender problemas complejos.",
       fr: "Logique et analytique, avec une forte curiosité intellectuelle. Apprécie le processus de résolution et de compréhension de problèmes complexes.",
@@ -628,7 +628,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       ko: "논리적이고 분석적이며, 지적 호기심이 강합니다. 복잡한 문제를 해결하고 이해하는 과정을 즐깁니다.",
     },
     title: {
-      cn: "研究型 (Investigative)",
+      zh: "研究型 (Investigative)",
       en: "The Thinker (Investigative)",
       es: "El Pensador (Investigative)",
       fr: "Le Penseur (Investigative)",
@@ -639,7 +639,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
   Realistic: {
     careers: [
       {
-        cn: "工程师",
+        zh: "工程师",
         en: "Engineer",
         es: "Ingeniero",
         fr: "Ingénieur",
@@ -647,7 +647,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "엔지니어",
       },
       {
-        cn: "建筑师",
+        zh: "建筑师",
         en: "Architect",
         es: "Arquitecto",
         fr: "Architecte",
@@ -655,7 +655,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "건축가",
       },
       {
-        cn: "农民",
+        zh: "农民",
         en: "Farmer",
         es: "Granjero",
         fr: "Agriculteur",
@@ -664,7 +664,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       },
     ],
     description: {
-      cn: "诚实真诚，喜欢与机器或工具打交道。喜欢用行动而不是言语来表达。",
+      zh: "诚实真诚，喜欢与机器或工具打交道。喜欢用行动而不是言语来表达。",
       en: "Honest and sincere, prefers working with machines or tools. Likes to show through action rather than words.",
       es: "Honesto y sincero, prefiere trabajar con máquinas o herramientas. Le gusta demostrar con hechos más que con palabras.",
       fr: "Honnête et sincère, préfère travailler avec des machines ou des outils. Aime montrer par l'action plutôt que par les mots.",
@@ -672,7 +672,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       ko: "솔직하고 성실하며, 기계나 도구를 다루는 일을 선호합니다. 말이 적고 행동으로 보여주는 것을 좋아합니다.",
     },
     title: {
-      cn: "现实型 (Realistic)",
+      zh: "现实型 (Realistic)",
       en: "The Doer (Realistic)",
       es: "El Hacedor (Realistic)",
       fr: "Le Pratiquant (Realistic)",
@@ -683,7 +683,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
   Social: {
     careers: [
       {
-        cn: "教师",
+        zh: "教师",
         en: "Teacher",
         es: "Maestro",
         fr: "Enseignant",
@@ -691,7 +691,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "교사",
       },
       {
-        cn: "咨询师",
+        zh: "咨询师",
         en: "Counselor",
         es: "Consejero",
         fr: "Conseiller",
@@ -699,7 +699,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
         ko: "상담사",
       },
       {
-        cn: "社工",
+        zh: "社工",
         en: "Social Worker",
         es: "Trabajador social",
         fr: "Travailleur social",
@@ -708,7 +708,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       },
     ],
     description: {
-      cn: "喜欢帮助和教导他人，善良且善解人意。人际交往能力出色。",
+      zh: "喜欢帮助和教导他人，善良且善解人意。人际交往能力出色。",
       en: "Likes helping and teaching people, kind and understanding. Excellent interpersonal skills.",
       es: "Le gusta ayudar y enseñar a la gente, amable y comprensivo. Excelentes habilidades interpersonales.",
       fr: "Aime aider et enseigner aux gens, gentil et compréhensif. Excellentes compétences interpersonnelles.",
@@ -716,7 +716,7 @@ export const RIASEC_RESULTS: Record<RiasecType, any> = {
       ko: "사람들을 돕고 가르치는 것을 좋아하며, 친절하고 이해심이 많습니다. 대인 관계 기술이 뛰어납니다.",
     },
     title: {
-      cn: "社会型 (Social)",
+      zh: "社会型 (Social)",
       en: "The Helper (Social)",
       es: "El Ayudador (Social)",
       fr: "L'Aidant (Social)",

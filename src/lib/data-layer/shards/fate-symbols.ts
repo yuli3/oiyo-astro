@@ -22,7 +22,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "奉献、爱和忠诚。",
+        zh: "奉献、爱和忠诚。",
         en: "Devotion, love, and loyalty.",
         es: "Devoción, amor y lealtad.",
         fr: "Dévouement, amour et loyauté.",
@@ -30,7 +30,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "헌신, 사랑, 충성.",
       },
       name: {
-        cn: "康乃馨",
+        zh: "康乃馨",
         en: "Carnation",
         es: "Clavel",
         fr: "Œillet",
@@ -41,7 +41,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 1,
     star: {
       constellation: {
-        cn: "大犬座",
+        zh: "大犬座",
         en: "Canis Major",
         es: "Canis Major",
         fr: "Grand Chien",
@@ -49,7 +49,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "큰개자리",
       },
       meaning: {
-        cn: "最亮的星，象征精神激情。",
+        zh: "最亮的星，象征精神激情。",
         en: "The brightest star, symbolizing spiritual passion.",
         es: "La estrella más brillante, que simboliza la pasión espiritual.",
         fr: "L'étoile la plus brillante, symbolisant la passion spirituelle.",
@@ -57,7 +57,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "가장 밝은 별, 영적인 열정을 상징.",
       },
       name: {
-        cn: "天狼星",
+        zh: "天狼星",
         en: "Sirius",
         es: "Sirio",
         fr: "Sirius",
@@ -67,7 +67,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "保护、友谊和信任。",
+        zh: "保护、友谊和信任。",
         en: "Protection, friendship, and trust.",
         es: "Protección, amistad y confianza.",
         fr: "Protection, amitié et confiance.",
@@ -75,7 +75,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "보호, 우정, 신뢰.",
       },
       name: {
-        cn: "石榴石",
+        zh: "石榴石",
         en: "Garnet",
         es: "Granate",
         fr: "Grenat",
@@ -87,7 +87,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "谦虚、忠诚和美德。",
+        zh: "谦虚、忠诚和美德。",
         en: "Modesty, faithfulness, and virtue.",
         es: "Modestia, fidelidad y virtud.",
         fr: "Modestie, fidélité et vertu.",
@@ -95,7 +95,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "겸손, 성실, 미덕.",
       },
       name: {
-        cn: "紫罗兰",
+        zh: "紫罗兰",
         en: "Violet",
         es: "Violeta",
         fr: "Violette",
@@ -106,7 +106,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 2,
     star: {
       constellation: {
-        cn: "船底座",
+        zh: "船底座",
         en: "Carina",
         es: "Carina",
         fr: "Carène",
@@ -114,7 +114,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "용골자리",
       },
       meaning: {
-        cn: "导航之星，象征指引。",
+        zh: "导航之星，象征指引。",
         en: "The navigator's star, symbolizing guidance.",
         es: "La estrella del navegante, que simboliza la guía.",
         fr: "L'étoile du navigateur, symbolisant le guide.",
@@ -122,7 +122,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "항해사의 별, 인도를 상징.",
       },
       name: {
-        cn: "老人星",
+        zh: "老人星",
         en: "Canopus",
         es: "Canopus",
         fr: "Canopus",
@@ -132,7 +132,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "智慧、治愈和清晰。",
+        zh: "智慧、治愈和清晰。",
         en: "Wisdom, healing, and clarity.",
         es: "Sabiduría, curación y claridad.",
         fr: "Sagesse, guérison et clarté.",
@@ -140,7 +140,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "지혜, 치유, 명료함.",
       },
       name: {
-        cn: "紫水晶",
+        zh: "紫水晶",
         en: "Amethyst",
         es: "Amatista",
         fr: "Améthyste",
@@ -152,7 +152,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "重生、新的开始和希望。",
+        zh: "重生、新的开始和希望。",
         en: "Rebirth, new beginnings, and hope.",
         es: "Renacimiento, nuevos comienzos y esperanza.",
         fr: "Renaissance, nouveaux départs et espoir.",
@@ -160,7 +160,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "부활, 새로운 시작, 희망.",
       },
       name: {
-        cn: "水仙",
+        zh: "水仙",
         en: "Daffodil",
         es: "Narciso",
         fr: "Jonquille",
@@ -171,7 +171,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 3,
     star: {
       constellation: {
-        cn: "牧夫座",
+        zh: "牧夫座",
         en: "Boötes",
         es: "Boyero",
         fr: "Bouvier",
@@ -179,7 +179,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "목동자리",
       },
       meaning: {
-        cn: "守护熊，象征保护。",
+        zh: "守护熊，象征保护。",
         en: "The guardian bear, symbolizing protection.",
         es: "El oso guardián, que simboliza la protección.",
         fr: "L'ours gardien, symbolisant la protection.",
@@ -187,7 +187,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "수호 곰, 보호를 상징.",
       },
       name: {
-        cn: "大角星",
+        zh: "大角星",
         en: "Arcturus",
         es: "Arturo",
         fr: "Arcturus",
@@ -197,7 +197,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "宁静、勇气和青春。",
+        zh: "宁静、勇气和青春。",
         en: "Serenity, courage, and youth.",
         es: "Serenidad, coraje y juventud.",
         fr: "Sérénité, courage et jeunesse.",
@@ -205,7 +205,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "평온, 용기, 젊음.",
       },
       name: {
-        cn: "海蓝宝",
+        zh: "海蓝宝",
         en: "Aquamarine",
         es: "Aguamarina",
         fr: "Aigue-marine",
@@ -217,7 +217,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "天真、纯洁和真爱。",
+        zh: "天真、纯洁和真爱。",
         en: "Innocence, purity, and true love.",
         es: "Inocencia, pureza y amor verdadero.",
         fr: "Innocence, pureté et véritable amour.",
@@ -225,7 +225,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "순수, 청결, 진정한 사랑.",
       },
       name: {
-        cn: "雏菊",
+        zh: "雏菊",
         en: "Daisy",
         es: "Margarita",
         fr: "Pâquerette",
@@ -236,7 +236,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 4,
     star: {
       constellation: {
-        cn: "金牛座",
+        zh: "金牛座",
         en: "Taurus",
         es: "Tauro",
         fr: "Taureau",
@@ -244,7 +244,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "황소자리",
       },
       meaning: {
-        cn: "公牛之眼，象征坚持。",
+        zh: "公牛之眼，象征坚持。",
         en: "The eye of the bull, symbolizing persistence.",
         es: "El ojo del toro, que simboliza la persistencia.",
         fr: "L'œil du taureau, symbolisant la persistance.",
@@ -252,7 +252,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "황소의 눈, 끈기를 상징.",
       },
       name: {
-        cn: "毕宿五",
+        zh: "毕宿五",
         en: "Aldebaran",
         es: "Aldebarán",
         fr: "Aldébaran",
@@ -262,7 +262,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "永恒的爱、力量和光辉。",
+        zh: "永恒的爱、力量和光辉。",
         en: "Eternal love, strength, and brilliance.",
         es: "Amor eterno, fuerza y brillo.",
         fr: "Amour éternel, force et éclat.",
@@ -270,7 +270,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "영원한 사랑, 힘, 광채.",
       },
       name: {
-        cn: "钻石",
+        zh: "钻石",
         en: "Diamond",
         es: "Diamante",
         fr: "Diamant",
@@ -282,7 +282,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "谦逊、甜蜜和幸福的回归。",
+        zh: "谦逊、甜蜜和幸福的回归。",
         en: "Humility, sweetness, and return of happiness.",
         es: "Humildad, dulzura y retorno de la felicidad.",
         fr: "Humilité, douceur et retour du bonheur.",
@@ -290,7 +290,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "겸손, 달콤함, 행복의 귀환.",
       },
       name: {
-        cn: "铃兰",
+        zh: "铃兰",
         en: "Lily of the Valley",
         es: "Lirio de los valles",
         fr: "Muguet",
@@ -301,7 +301,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 5,
     star: {
       constellation: {
-        cn: "御夫座",
+        zh: "御夫座",
         en: "Auriga",
         es: "Auriga",
         fr: "Cocher",
@@ -309,7 +309,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "마차부자리",
       },
       meaning: {
-        cn: "山羊星，象征滋养丰富。",
+        zh: "山羊星，象征滋养丰富。",
         en: "The goat star, symbolizing nurturing abundance.",
         es: "La estrella de la cabra, que simboliza la abundancia nutritiva.",
         fr: "L'étoile de la chèvre, symbolisant l'abondance nourricière.",
@@ -317,7 +317,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "염소 별,풍요로운 양육을 상징.",
       },
       name: {
-        cn: "五车二",
+        zh: "五车二",
         en: "Capella",
         es: "Capella",
         fr: "Capella",
@@ -327,7 +327,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "生育、重生和爱。",
+        zh: "生育、重生和爱。",
         en: "Fertility, rebirth, and love.",
         es: "Fertilidad, renacimiento y amor.",
         fr: "Fertilité, renaissance et amour.",
@@ -335,7 +335,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "다산, 부활, 사랑.",
       },
       name: {
-        cn: "祖母绿",
+        zh: "祖母绿",
         en: "Emerald",
         es: "Esmeralda",
         fr: "Émeraude",
@@ -347,7 +347,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "爱、激情和美。",
+        zh: "爱、激情和美。",
         en: "Love, passion, and beauty.",
         es: "Amor, pasión y belleza.",
         fr: "Amour, passion et beauté.",
@@ -355,7 +355,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "사랑, 열정, 아름다움.",
       },
       name: {
-        cn: "玫瑰",
+        zh: "玫瑰",
         en: "Rose",
         es: "Rosa",
         fr: "Rose",
@@ -366,7 +366,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 6,
     star: {
       constellation: {
-        cn: "猎户座",
+        zh: "猎户座",
         en: "Orion",
         es: "Orión",
         fr: "Orion",
@@ -374,7 +374,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "오리온자리",
       },
       meaning: {
-        cn: "巨人之手，象征力量。",
+        zh: "巨人之手，象征力量。",
         en: "The hand of the giant, symbolizing strength.",
         es: "La mano del gigante, que simboliza la fuerza.",
         fr: "La main du géant, symbolisant la force.",
@@ -382,7 +382,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "거인의 손, 힘을 상징.",
       },
       name: {
-        cn: "参宿四",
+        zh: "参宿四",
         en: "Betelgeuse",
         es: "Betelgeuse",
         fr: "Bételgeuse",
@@ -392,7 +392,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "纯洁、正直和通过经验获得的智慧。",
+        zh: "纯洁、正直和通过经验获得的智慧。",
         en: "Purity, integrity, and wisdom acquired through experience.",
         es: "Pureza, integridad y sabiduría adquirida a través de la experiencia.",
         fr: "Pureté, intégrité et sagesse acquise par l'expérience.",
@@ -400,7 +400,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "순수, 성실, 경험을 통해 얻은 지혜.",
       },
       name: {
-        cn: "珍珠",
+        zh: "珍珠",
         en: "Pearl",
         es: "Perla",
         fr: "Perle",
@@ -412,7 +412,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "轻盈、轻浮和爱的纽带。",
+        zh: "轻盈、轻浮和爱的纽带。",
         en: "Lightness, levity, and strong bond of love.",
         es: "Ligereza, frivolidad y fuerte lazo de amor.",
         fr: "Légèreté, frivolité et lien d'amour fort.",
@@ -420,7 +420,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "경쾌함, 경솔, 사랑의 강한 유대.",
       },
       name: {
-        cn: "飞燕草",
+        zh: "飞燕草",
         en: "Larkspur",
         es: "Espuela de caballero",
         fr: "Pied-d'alouette",
@@ -431,7 +431,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 7,
     star: {
       constellation: {
-        cn: "小犬座",
+        zh: "小犬座",
         en: "Canis Minor",
         es: "Canis Minor",
         fr: "Petit Chien",
@@ -439,7 +439,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "작은개자리",
       },
       meaning: {
-        cn: "犬前星，象征准备。",
+        zh: "犬前星，象征准备。",
         en: "Before the dog, symbolizing preparation.",
         es: "Antes del perro, que simboliza la preparación.",
         fr: "Avant le chien, symbolisant la préparation.",
@@ -447,7 +447,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "개의 앞, 준비를 상징.",
       },
       name: {
-        cn: "南河三",
+        zh: "南河三",
         en: "Procyon",
         es: "Procyon",
         fr: "Procyon",
@@ -457,7 +457,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "激情、保护和繁荣。",
+        zh: "激情、保护和繁荣。",
         en: "Passion, protection, and prosperity.",
         es: "Pasión, protección y prosperidad.",
         fr: "Passion, protection et prospérité.",
@@ -465,7 +465,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "열정, 보호, 번영.",
       },
       name: {
-        cn: "红宝石",
+        zh: "红宝石",
         en: "Ruby",
         es: "Rubí",
         fr: "Rubis",
@@ -477,7 +477,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "性格的力量、真诚和正直。",
+        zh: "性格的力量、真诚和正直。",
         en: "Strength of character, sincerity, and integrity.",
         es: "Fuerza de carácter, sinceridad e integridad.",
         fr: "Force de caractère, sincérité et intégrité.",
@@ -485,7 +485,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "성격의 강함, 성실, 정직.",
       },
       name: {
-        cn: "剑兰",
+        zh: "剑兰",
         en: "Gladiolus",
         es: "Gladiolo",
         fr: "Glaïeul",
@@ -496,7 +496,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 8,
     star: {
       constellation: {
-        cn: "狮子座",
+        zh: "狮子座",
         en: "Leo",
         es: "Leo",
         fr: "Lion",
@@ -504,7 +504,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "사자자리",
       },
       meaning: {
-        cn: "狮子之心，象征皇权。",
+        zh: "狮子之心，象征皇权。",
         en: "The heart of the lion, symbolizing royalty.",
         es: "El corazón del león, que simboliza la realeza.",
         fr: "Le cœur du lion, symbolisant la royauté.",
@@ -512,7 +512,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "사자의 심장, 왕권을 상징.",
       },
       name: {
-        cn: "轩辕十四",
+        zh: "轩辕十四",
         en: "Regulus",
         es: "Regulus",
         fr: "Régulus",
@@ -522,7 +522,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "力量、保护和治愈。",
+        zh: "力量、保护和治愈。",
         en: "Strength, protection, and healing.",
         es: "Fuerza, protección y curación.",
         fr: "Force, protection et guérison.",
@@ -530,7 +530,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "힘, 보호, 치유.",
       },
       name: {
-        cn: "橄榄石",
+        zh: "橄榄石",
         en: "Peridot",
         es: "Peridoto",
         fr: "Péridot",
@@ -542,7 +542,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "智慧、勇气和信仰。",
+        zh: "智慧、勇气和信仰。",
         en: "Wisdom, valor, and faith.",
         es: "Sabiduría, valor y fe.",
         fr: "Sagesse, vaillance et foi.",
@@ -550,7 +550,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "지혜, 용맹, 믿음.",
       },
       name: {
-        cn: "紫宛",
+        zh: "紫宛",
         en: "Aster",
         es: "Aster",
         fr: "Aster",
@@ -561,7 +561,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 9,
     star: {
       constellation: {
-        cn: "室女座",
+        zh: "室女座",
         en: "Virgo",
         es: "Virgo",
         fr: "Vierge",
@@ -569,7 +569,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "처녀자리",
       },
       meaning: {
-        cn: "谷穗，象征丰收。",
+        zh: "谷穗，象征丰收。",
         en: "The ear of grain, symbolizing harvest.",
         es: "La espiga de grano, que simboliza la cosecha.",
         fr: "L'épi de blé, symbolisant la moisson.",
@@ -577,7 +577,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "곡식의 이삭, 수확을 상징.",
       },
       name: {
-        cn: "角宿一",
+        zh: "角宿一",
         en: "Spica",
         es: "Espiga",
         fr: "Spica",
@@ -587,7 +587,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "智慧、美德和好运。",
+        zh: "智慧、美德和好运。",
         en: "Wisdom, virtue, and good fortune.",
         es: "Sabiduría, virtud y buena fortuna.",
         fr: "Sagesse, vertu et bonne fortune.",
@@ -595,7 +595,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "지혜, 미덕, 행운.",
       },
       name: {
-        cn: "蓝宝石",
+        zh: "蓝宝石",
         en: "Sapphire",
         es: "Zafiro",
         fr: "Saphir",
@@ -607,7 +607,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "激情、创造力和温暖。",
+        zh: "激情、创造力和温暖。",
         en: "Passion, creativity, and warmth.",
         es: "Pasión, creatividad y calidez.",
         fr: "Passion, créativité et chaleur.",
@@ -615,7 +615,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "열정, 창의성, 따뜻함.",
       },
       name: {
-        cn: "万寿菊",
+        zh: "万寿菊",
         en: "Marigold",
         es: "Caléndula",
         fr: "Souci",
@@ -626,7 +626,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 10,
     star: {
       constellation: {
-        cn: "天蝎座",
+        zh: "天蝎座",
         en: "Scorpius",
         es: "Escorpio",
         fr: "Scorpion",
@@ -634,7 +634,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "전갈자리",
       },
       meaning: {
-        cn: "火星的对手，象征强烈。",
+        zh: "火星的对手，象征强烈。",
         en: "The rival of Mars, symbolizing intensity.",
         es: "El rival de Marte, que simboliza la intensidad.",
         fr: "Le rival de Mars, symbolisant l'intensité.",
@@ -642,7 +642,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "화성의 라이벌, 강렬함을 상징.",
       },
       name: {
-        cn: "心宿二",
+        zh: "心宿二",
         en: "Antares",
         es: "Antares",
         fr: "Antarès",
@@ -652,7 +652,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "创造力、灵感和希望。",
+        zh: "创造力、灵感和希望。",
         en: "Creativity, inspiration, and hope.",
         es: "Creatividad, inspiración y esperanza.",
         fr: "Créativité, inspiration et espoir.",
@@ -660,7 +660,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "창의성, 영감, 희망.",
       },
       name: {
-        cn: "蛋白石",
+        zh: "蛋白石",
         en: "Opal",
         es: "Ópalo",
         fr: "Opale",
@@ -672,7 +672,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "忠诚、诚实和乐观。",
+        zh: "忠诚、诚实和乐观。",
         en: "Loyalty, honesty, and optimism.",
         es: "Lealtad, honestidad y optimismo.",
         fr: "Loyauté, honnêteté et optimisme.",
@@ -680,7 +680,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "충성, 정직, 낙관주의.",
       },
       name: {
-        cn: "菊花",
+        zh: "菊花",
         en: "Chrysanthemum",
         es: "Crisantemo",
         fr: "Chrysanthème",
@@ -691,7 +691,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 11,
     star: {
       constellation: {
-        cn: "南鱼座",
+        zh: "南鱼座",
         en: "Piscis Austrinus",
         es: "Piscis Austrinus",
         fr: "Poisson austral",
@@ -699,7 +699,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "남쪽물고기자리",
       },
       meaning: {
-        cn: "南方的观察者，象征魔法。",
+        zh: "南方的观察者，象征魔法。",
         en: " The watcher of the south, symbolizing magic.",
         es: "El vigilante del sur, que simboliza la magia.",
         fr: "Le gardien du sud, symbolisant la magie.",
@@ -707,7 +707,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "남쪽의 감시자, 마법을 상징.",
       },
       name: {
-        cn: "北落师门",
+        zh: "北落师门",
         en: "Fomalhaut",
         es: "Fomalhaut",
         fr: "Fomalhaut",
@@ -717,7 +717,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "爱、亲情和好运。",
+        zh: "爱、亲情和好运。",
         en: "Love, affection, and good luck.",
         es: "Amor, afecto y buena suerte.",
         fr: "Amour, affection et bonne chance.",
@@ -725,7 +725,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "사랑, 애정, 행운.",
       },
       name: {
-        cn: "黄玉",
+        zh: "黄玉",
         en: "Topaz",
         es: "Topacio",
         fr: "Topaze",
@@ -737,7 +737,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
   {
     flower: {
       meaning: {
-        cn: "尊重、谦虚和忠诚。",
+        zh: "尊重、谦虚和忠诚。",
         en: "Respect, modesty, and faithfulness.",
         es: "Respeto, modestia y fidelidad.",
         fr: "Respect, modestie et fidélité.",
@@ -745,7 +745,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "존경, 겸손, 성실.",
       },
       name: {
-        cn: "水仙",
+        zh: "水仙",
         en: "Narcissus",
         es: "Narciso",
         fr: "Narcisse",
@@ -756,7 +756,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     month: 12,
     star: {
       constellation: {
-        cn: "天琴座",
+        zh: "天琴座",
         en: "Lyra",
         es: "Lyra",
         fr: "Lyre",
@@ -764,7 +764,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "거문고자리",
       },
       meaning: {
-        cn: "坠落的鹰，象征艺术天赋。",
+        zh: "坠落的鹰，象征艺术天赋。",
         en: "The falling eagle, symbolizing artistic talent.",
         es: "El águila que cae, que simboliza el talento artístico.",
         fr: "L'aigle tombant, symbolisant le talent artistique.",
@@ -772,7 +772,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "떨어지는 독수리, 예술적 재능을 상징.",
       },
       name: {
-        cn: "织女星",
+        zh: "织女星",
         en: "Vega",
         es: "Vega",
         fr: "Véga",
@@ -782,7 +782,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
     },
     stone: {
       meaning: {
-        cn: "智慧、宁静和保护。",
+        zh: "智慧、宁静和保护。",
         en: "Wisdom, tranquility, and protection.",
         es: "Sabiduría, tranquilidad y protección.",
         fr: "Sagesse, tranquillité et protection.",
@@ -790,7 +790,7 @@ export const FATE_SYMBOLS_DATA: BirthSymbol[] = [
         ko: "지혜, 평온, 보호.",
       },
       name: {
-        cn: "绿松石",
+        zh: "绿松石",
         en: "Turquoise",
         es: "Turquesa",
         fr: "Turquoise",

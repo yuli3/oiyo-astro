@@ -70,7 +70,7 @@ export interface Hobby {
 
 export type LocalizedString = {
   [key: string]: string | undefined;
-  cn?: string;
+  zh?: string;
   en?: string;
   es?: string;
   fr?: string;
@@ -80,7 +80,7 @@ export type LocalizedString = {
 
 export type LocalizedStringArray = {
   [key: string]: string[] | undefined;
-  cn?: string[];
+  zh?: string[];
   en?: string[];
   es?: string[];
   fr?: string[];

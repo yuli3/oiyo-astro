@@ -98,7 +98,7 @@ function generateSynthesis(
   if (score >= 90) {
     return {
       counselorAdvice: {
-        cn: "珍惜这段缘分；这是命运的馈赠。",
+        zh: "珍惜这段缘分；这是命运的馈赠。",
         en: "Nurture this connection; it is a gift of fate.",
         es: "Nutre esta conexión; es un regalo del destino.",
         fr: "Cultivez cette connexion ; c'est un cadeau du destin.",
@@ -106,7 +106,7 @@ function generateSynthesis(
         ko: "이 인연을 소중히 여기세요. 운명이 준 선물입니다.",
       },
       description: {
-        cn: "在所有维度上都发现了罕见且强大的共鸣。",
+        zh: "在所有维度上都发现了罕见且强大的共鸣。",
         en: "A rare and powerful resonance across all dimensions.",
         es: "Una resonancia rara y poderosa en todas las dimensiones.",
         fr: "Une résonance rare et puissante à travers toutes les dimensions.",
@@ -114,7 +114,7 @@ function generateSynthesis(
         ko: "모든 차원에서 드물고 강력한 공명이 발견되었습니다.",
       },
       title: {
-        cn: "神圣灵魂伴侣",
+        zh: "神圣灵魂伴侣",
         en: "Sacred Soulmates",
         es: "Almas Gemelas Sagradas",
         fr: "Âmes Sœurs Sacrées",
@@ -127,7 +127,7 @@ function generateSynthesis(
   // Neutral fallback
   return {
     counselorAdvice: {
-      cn: "沟通是加深这段纽带的关键。",
+      zh: "沟通是加深这段纽带的关键。",
       en: "Communication is the key to deepening this bond.",
       es: "La comunicación es la clave para profundizar este vínculo.",
       fr: "La communication est la clé pour approfondir ce lien.",
@@ -135,7 +135,7 @@ function generateSynthesis(
       ko: "소통이 이 유대감을 깊게 만드는 열쇠입니다.",
     },
     description: {
-      cn: "一段稳定且有成长空间的关系。",
+      zh: "一段稳定且有成长空间的关系。",
       en: "A stable connection with room for growth.",
       es: "Una conexión estable con espacio para el crecimiento.",
       fr: "Une connexion stable avec un potentiel de croissance.",
@@ -143,7 +143,7 @@ function generateSynthesis(
       ko: "성장의 여지가 있는 안정적인 관계입니다.",
     },
     title: {
-      cn: "和谐共鸣",
+      zh: "和谐共鸣",
       en: "Harmonious Resonance",
       es: "Resonancia Armoniosa",
       fr: "Résonance Harmonieuse",

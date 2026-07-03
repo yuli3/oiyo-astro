@@ -20,7 +20,7 @@ export const celticData: CelticShard = {
   signs: [
     {
       animal: {
-        cn: "白鹿",
+        zh: "白鹿",
         en: "White Stag",
         es: "Ciervo Blanco",
         fr: "Cerf Blanc",
@@ -29,7 +29,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 20, endMonth: 1, startDay: 24, startMonth: 12 },
       description: {
-        cn: "成就者。雄心勃勃，充满动力，拥有天生的领导才能。",
+        zh: "成就者。雄心勃勃，充满动力，拥有天生的领导才能。",
         en: "The Achiever. Ambitious and driven, possessing natural leadership qualities.",
         es: "El Logrador. Ambicioso y motivado, posee cualidades de liderazgo naturales.",
         fr: "L'Accomplisseur. Ambitieux et déterminé, possédant des qualités naturelles de leader.",
@@ -38,7 +38,7 @@ export const celticData: CelticShard = {
       },
       id: "birch",
       name: {
-        cn: "白桦 (Beth)",
+        zh: "白桦 (Beth)",
         en: "Beth",
         es: "Beth",
         fr: "Beth",
@@ -46,7 +46,7 @@ export const celticData: CelticShard = {
         ko: "베스 (Beth)",
       },
       tree: {
-        cn: "桦树",
+        zh: "桦树",
         en: "Birch",
         es: "Abedul",
         fr: "Bouleau",
@@ -56,7 +56,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "龙",
+        zh: "龙",
         en: "Dragon",
         es: "Dragón",
         fr: "Dragon",
@@ -65,7 +65,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 17, endMonth: 2, startDay: 21, startMonth: 1 },
       description: {
-        cn: "思想者。哲学且理想主义，拥有改变世界的热情。",
+        zh: "思想者。哲学且理想主义，拥有改变世界的热情。",
         en: "The Thinker. Philosophical and idealistic, with a passion for changing the world.",
         es: "El Pensador. Filosófico e idealista, con pasión por cambiar el mundo.",
         fr: "Le Penseur. Philosophique et idéaliste, avec une passion pour changer le monde.",
@@ -74,7 +74,7 @@ export const celticData: CelticShard = {
       },
       id: "rowan",
       name: {
-        cn: "花楸 (Luis)",
+        zh: "花楸 (Luis)",
         en: "Luis",
         es: "Luis",
         fr: "Luis",
@@ -82,7 +82,7 @@ export const celticData: CelticShard = {
         ko: "루이스 (Luis)",
       },
       tree: {
-        cn: "花楸",
+        zh: "花楸",
         en: "Rowan",
         es: "Serbal",
         fr: "Sorbier",
@@ -92,7 +92,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "海马",
+        zh: "海马",
         en: "Seahorse",
         es: "Caballito de mar",
         fr: "Hippocampe",
@@ -101,7 +101,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 17, endMonth: 3, startDay: 18, startMonth: 2 },
       description: {
-        cn: "魔法师。具有艺术气息和直觉，与自然有着深厚的联系。",
+        zh: "魔法师。具有艺术气息和直觉，与自然有着深厚的联系。",
         en: "The Enchanter. Artistic and intuitive, with a deep connection to nature.",
         es: "El Encantador. Artístico e intuitivo, con una profunda conexión con la naturaleza.",
         fr: "L'Enchanteur. Artistique et intuitif, avec une connexion profonde à la nature.",
@@ -110,7 +110,7 @@ export const celticData: CelticShard = {
       },
       id: "ash",
       name: {
-        cn: "白蜡 (Nion)",
+        zh: "白蜡 (Nion)",
         en: "Nion",
         es: "Nion",
         fr: "Nion",
@@ -118,7 +118,7 @@ export const celticData: CelticShard = {
         ko: "니온 (Nion)",
       },
       tree: {
-        cn: "白蜡树",
+        zh: "白蜡树",
         en: "Ash",
         es: "Fresno",
         fr: "Frêne",
@@ -128,7 +128,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "狐狸",
+        zh: "狐狸",
         en: "Fox",
         es: "Zorro",
         fr: "Renard",
@@ -137,7 +137,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 14, endMonth: 4, startDay: 18, startMonth: 3 },
       description: {
-        cn: "开拓者。富有冒险精神和激情，具有领导众人的魅力。",
+        zh: "开拓者。富有冒险精神和激情，具有领导众人的魅力。",
         en: "The Trailblazer. Adventurous and passionate, with a charm that leads people.",
         es: "El Pionero. Aventurero y apasionado, con un encanto que guía a las personas.",
         fr: "Le Pionnier. Aventureux et passionné, avec un charme qui mène les gens.",
@@ -146,7 +146,7 @@ export const celticData: CelticShard = {
       },
       id: "alder",
       name: {
-        cn: "桤木 (Fern)",
+        zh: "桤木 (Fern)",
         en: "Fern",
         es: "Fern",
         fr: "Fern",
@@ -154,7 +154,7 @@ export const celticData: CelticShard = {
         ko: "페른 (Fern)",
       },
       tree: {
-        cn: "桤木",
+        zh: "桤木",
         en: "Alder",
         es: "Aliso",
         fr: "Aulne",
@@ -164,7 +164,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "野兔",
+        zh: "野兔",
         en: "Hare",
         es: "Liebre",
         fr: "Lièvre",
@@ -173,7 +173,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 12, endMonth: 5, startDay: 15, startMonth: 4 },
       description: {
-        cn: "观察者。耐心且聪明，拥有极好的记忆力。",
+        zh: "观察者。耐心且聪明，拥有极好的记忆力。",
         en: "The Observer. Patient and intelligent, with an excellent memory.",
         es: "El Observador. Paciente e inteligente, con una excelente memoria.",
         fr: "L'Observateur. Patient et intelligent, avec une excellente mémoire.",
@@ -182,7 +182,7 @@ export const celticData: CelticShard = {
       },
       id: "willow",
       name: {
-        cn: "柳树 (Saille)",
+        zh: "柳树 (Saille)",
         en: "Saille",
         es: "Saille",
         fr: "Saille",
@@ -190,7 +190,7 @@ export const celticData: CelticShard = {
         ko: "세일 (Saille)",
       },
       tree: {
-        cn: "柳树",
+        zh: "柳树",
         en: "Willow",
         es: "Sauce",
         fr: "Saule",
@@ -200,7 +200,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "猫头鹰",
+        zh: "猫头鹰",
         en: "Owl",
         es: "Búho",
         fr: "Hibou",
@@ -209,7 +209,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 9, endMonth: 6, startDay: 13, startMonth: 5 },
       description: {
-        cn: "幻术师。外表与内心不同；富有创造力和好奇心。",
+        zh: "幻术师。外表与内心不同；富有创造力和好奇心。",
         en: "The Illusionist. External appearance differs from inner self; creative and curious.",
         es: "El Ilusionista. La apariencia externa difiere del ser interior; creativo y curioso.",
         fr: "L'Illusionniste. L'apparence extérieure diffère du moi intérieur ; créatif et curieux.",
@@ -218,7 +218,7 @@ export const celticData: CelticShard = {
       },
       id: "hawthorn",
       name: {
-        cn: "山楂 (Huath)",
+        zh: "山楂 (Huath)",
         en: "Huath",
         es: "Huath",
         fr: "Huath",
@@ -226,7 +226,7 @@ export const celticData: CelticShard = {
         ko: "후아 (Huath)",
       },
       tree: {
-        cn: "山楂",
+        zh: "山楂",
         en: "Hawthorn",
         es: "Espino",
         fr: "Aubépine",
@@ -236,7 +236,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "马",
+        zh: "马",
         en: "Horse",
         es: "Caballo",
         fr: "Cheval",
@@ -245,7 +245,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 7, endMonth: 7, startDay: 10, startMonth: 6 },
       description: {
-        cn: "稳定者。坚强且具有保护性，是他人的支柱。",
+        zh: "稳定者。坚强且具有保护性，是他人的支柱。",
         en: "The Stabilizer. Strong and protective, a pillar of support for others.",
         es: "El Estabilizador. Fuerte y protector, un pilar de apoyo para los demás.",
         fr: "Le Stabilisateur. Fort et protecteur, un pilier de soutien pour les autres.",
@@ -254,7 +254,7 @@ export const celticData: CelticShard = {
       },
       id: "oak",
       name: {
-        cn: "橡树 (Duir)",
+        zh: "橡树 (Duir)",
         en: "Duir",
         es: "Duir",
         fr: "Duir",
@@ -262,7 +262,7 @@ export const celticData: CelticShard = {
         ko: "두이르 (Duir)",
       },
       tree: {
-        cn: "橡树",
+        zh: "橡树",
         en: "Oak",
         es: "Roble",
         fr: "Chêne",
@@ -272,7 +272,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "独角兽",
+        zh: "独角兽",
         en: "Unicorn",
         es: "Unicornio",
         fr: "Licorne",
@@ -281,7 +281,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 4, endMonth: 8, startDay: 8, startMonth: 7 },
       description: {
-        cn: "统治者。高贵且自信，拥有克服任何困难的力量。",
+        zh: "统治者。高贵且自信，拥有克服任何困难的力量。",
         en: "The Ruler. Noble and confident, possessing the strength to overcome any difficulty.",
         es: "El Gobernante. Noble y seguro, posee la fuerza para superar cualquier dificultad.",
         fr: "Le Souverain. Noble et confiant, possédant la force de surmonter toute difficulté.",
@@ -290,7 +290,7 @@ export const celticData: CelticShard = {
       },
       id: "holly",
       name: {
-        cn: "冬青 (Tinne)",
+        zh: "冬青 (Tinne)",
         en: "Tinne",
         es: "Tinne",
         fr: "Tinne",
@@ -298,7 +298,7 @@ export const celticData: CelticShard = {
         ko: "틴 (Tinne)",
       },
       tree: {
-        cn: "冬青",
+        zh: "冬青",
         en: "Holly",
         es: "Acebo",
         fr: "Houx",
@@ -308,7 +308,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "鲑鱼",
+        zh: "鲑鱼",
         en: "Salmon",
         es: "Salmón",
         fr: "Saumon",
@@ -317,7 +317,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 1, endMonth: 9, startDay: 5, startMonth: 8 },
       description: {
-        cn: "智者。聪明、善于分析且注重细节。",
+        zh: "智者。聪明、善于分析且注重细节。",
         en: "The Knower. Intelligent, analytical, and detail-oriented.",
         es: "El Conocedor. Inteligente, analítico y detallista.",
         fr: "Le Savant. Intelligent, analytique et soucieux du détail.",
@@ -326,7 +326,7 @@ export const celticData: CelticShard = {
       },
       id: "hazel",
       name: {
-        cn: "榛树 (Coll)",
+        zh: "榛树 (Coll)",
         en: "Coll",
         es: "Coll",
         fr: "Coll",
@@ -334,7 +334,7 @@ export const celticData: CelticShard = {
         ko: "콜 (Coll)",
       },
       tree: {
-        cn: "榛树",
+        zh: "榛树",
         en: "Hazel",
         es: "Avellano",
         fr: "Noisetier",
@@ -344,7 +344,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "天鹅",
+        zh: "天鹅",
         en: "Swan",
         es: "Cisne",
         fr: "Cygne",
@@ -353,7 +353,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 29, endMonth: 9, startDay: 2, startMonth: 9 },
       description: {
-        cn: "平衡者。优雅迷人，拥有极高的审美标准。",
+        zh: "平衡者。优雅迷人，拥有极高的审美标准。",
         en: "The Equalizer. Elegant and charming, with high aesthetic standards.",
         es: "El Equilibrador. Elegante y encantador, con altos estándares estéticos.",
         fr: "L'Égalisateur. Élégant et charmant, avec des standards esthétiques élevés.",
@@ -362,7 +362,7 @@ export const celticData: CelticShard = {
       },
       id: "vine",
       name: {
-        cn: "葡萄藤 (Muin)",
+        zh: "葡萄藤 (Muin)",
         en: "Muin",
         es: "Muin",
         fr: "Muin",
@@ -370,7 +370,7 @@ export const celticData: CelticShard = {
         ko: "무인 (Muin)",
       },
       tree: {
-        cn: "葡萄藤",
+        zh: "葡萄藤",
         en: "Vine",
         es: "Vid",
         fr: "Vigne",
@@ -380,7 +380,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "蝴蝶",
+        zh: "蝴蝶",
         en: "Butterfly",
         es: "Mariposa",
         fr: "Papillon",
@@ -389,7 +389,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 27, endMonth: 10, startDay: 30, startMonth: 9 },
       description: {
-        cn: "幸存者。坚持且忠诚，能够适应任何环境。",
+        zh: "幸存者。坚持且忠诚，能够适应任何环境。",
         en: "The Survivor. Persistent and loyal, capable of adapting to any environment.",
         es: "El Superviviente. Persistente y leal, capaz de adaptarse a cualquier entorno.",
         fr: "Le Survivant. Persévérant et loyal, capable de s'adapter à tout environnement.",
@@ -398,7 +398,7 @@ export const celticData: CelticShard = {
       },
       id: "ivy",
       name: {
-        cn: "常春藤 (Gort)",
+        zh: "常春藤 (Gort)",
         en: "Gort",
         es: "Gort",
         fr: "Gort",
@@ -406,7 +406,7 @@ export const celticData: CelticShard = {
         ko: "고트 (Gort)",
       },
       tree: {
-        cn: "常春藤",
+        zh: "常春藤",
         en: "Ivy",
         es: "Hiedra",
         fr: "Lierre",
@@ -416,7 +416,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "狼",
+        zh: "狼",
         en: "Wolf",
         es: "Lobo",
         fr: "Loup",
@@ -425,7 +425,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 24, endMonth: 11, startDay: 28, startMonth: 10 },
       description: {
-        cn: "探究者。喜欢揭开秘密，拥有深刻的洞察力和坚强的意志。",
+        zh: "探究者。喜欢揭开秘密，拥有深刻的洞察力和坚强的意志。",
         en: "The Inquisitor. Loves uncovering secrets, possesses deep insight and strong will.",
         es: "El Inquisidor. Ama descubrir secretos, posee una profunda perspicacia y una fuerte voluntad.",
         fr: "L'Inquisiteur. Aime découvrir les secrets, possède une profonde perspicacité et une volonté forte.",
@@ -434,7 +434,7 @@ export const celticData: CelticShard = {
       },
       id: "reed",
       name: {
-        cn: "芦苇 (Ngetal)",
+        zh: "芦苇 (Ngetal)",
         en: "Ngetal",
         es: "Ngetal",
         fr: "Ngetal",
@@ -442,7 +442,7 @@ export const celticData: CelticShard = {
         ko: "은게탈 (Ngetal)",
       },
       tree: {
-        cn: "芦苇",
+        zh: "芦苇",
         en: "Reed",
         es: "Caña",
         fr: "Roseau",
@@ -452,7 +452,7 @@ export const celticData: CelticShard = {
     },
     {
       animal: {
-        cn: "猎鹰",
+        zh: "猎鹰",
         en: "Falcon",
         es: "Halcón",
         fr: "Faucon",
@@ -461,7 +461,7 @@ export const celticData: CelticShard = {
       },
       dates: { endDay: 23, endMonth: 12, startDay: 25, startMonth: 11 },
       description: {
-        cn: "寻觅者。追求自由，具有寻求生命深层意义的哲学天性.",
+        zh: "寻觅者。追求自由，具有寻求生命深层意义的哲学天性.",
         en: "The Seeker. Pursues freedom and possesses a philosophical nature seeking deep meaning in life.",
         es: "El Buscador. Persigue la libertad y posee una naturaleza filosófica que busca un significado profundo en la vida.",
         fr: "Le Chercheur. Poursuit la liberté et possède une nature philosophique cherchant un sens profond à la vie.",
@@ -470,7 +470,7 @@ export const celticData: CelticShard = {
       },
       id: "elder",
       name: {
-        cn: "接骨木 (Ruis)",
+        zh: "接骨木 (Ruis)",
         en: "Ruis",
         es: "Ruis",
         fr: "Ruis",
@@ -478,7 +478,7 @@ export const celticData: CelticShard = {
         ko: "루이스 (Ruis)",
       },
       tree: {
-        cn: "接骨木",
+        zh: "接骨木",
         en: "Elder",
         es: "Saúco",
         fr: "Sureau",

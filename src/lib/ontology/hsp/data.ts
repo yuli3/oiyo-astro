@@ -7,7 +7,7 @@ const HSP_OPTIONS = [
     color: "bg-red-500",
     id: "1",
     text: {
-      cn: "一点也不",
+      zh: "一点也不",
       en: "Not at all",
       es: "Para nada",
       fr: "Pas du tout",
@@ -20,7 +20,7 @@ const HSP_OPTIONS = [
     color: "bg-orange-400",
     id: "2",
     text: {
-      cn: "稍微有点",
+      zh: "稍微有点",
       en: "Slightly",
       es: "Ligeramente",
       fr: "Légèrement",
@@ -33,7 +33,7 @@ const HSP_OPTIONS = [
     color: "bg-green-600/60",
     id: "3",
     text: {
-      cn: "适中",
+      zh: "适中",
       en: "Moderately",
       es: "Moderadamente",
       fr: "Modérément",
@@ -46,7 +46,7 @@ const HSP_OPTIONS = [
     color: "bg-green-400",
     id: "4",
     text: {
-      cn: "非常",
+      zh: "非常",
       en: "Very",
       es: "Mucho",
       fr: "Très",
@@ -59,7 +59,7 @@ const HSP_OPTIONS = [
     color: "bg-teal-500",
     id: "5",
     text: {
-      cn: "极其",
+      zh: "极其",
       en: "Extremely",
       es: "Extremadamente",
       fr: "Extrêmement",
@@ -77,7 +77,7 @@ export const HSP_QUESTIONS: HSPQuestion[] = [
     id: "hsp_1",
     options: HSP_OPTIONS,
     text: {
-      cn: "我有丰富而复杂的内心世界。",
+      zh: "我有丰富而复杂的内心世界。",
       en: "I have a rich, complex inner life.",
       es: "Tengo una vida interior rica y compleja.",
       fr: "J'ai une vie intérieure riche et complexe.",
@@ -90,7 +90,7 @@ export const HSP_QUESTIONS: HSPQuestion[] = [
     id: "hsp_2",
     options: HSP_OPTIONS,
     text: {
-      cn: "我深受艺术或音乐的感动。",
+      zh: "我深受艺术或音乐的感动。",
       en: "I am deeply moved by the arts or music.",
       es: "Me conmueven profundamente las artes o la música.",
       fr: "Je suis profondément ému par les arts ou la musique.",
@@ -105,7 +105,7 @@ export const HSP_QUESTIONS: HSPQuestion[] = [
     id: "hsp_3",
     options: HSP_OPTIONS,
     text: {
-      cn: "我容易被强烈的感官输入所淹没。",
+      zh: "我容易被强烈的感官输入所淹没。",
       en: "I am easily overwhelmed by strong sensory input.",
       es: "Me siento fácilmente abrumado por estímulos sensoriales fuertes.",
       fr: "Je suis facilement submergé par des stimuli sensoriels forts.",
@@ -118,7 +118,7 @@ export const HSP_QUESTIONS: HSPQuestion[] = [
     id: "hsp_4",
     options: HSP_OPTIONS,
     text: {
-      cn: "当别人让我一次做太多事情时，我会很恼火。",
+      zh: "当别人让我一次做太多事情时，我会很恼火。",
       en: "I am annoyed when people try to get me to do too many things at once.",
       es: "Me molesta cuando la gente intenta que haga demasiadas cosas a la vez.",
       fr: "Je suis agacé quand les gens essaient de me faire faire trop de choses à la fois.",
@@ -135,7 +135,7 @@ export const HSP_QUESTIONS: HSPQuestion[] = [
     // Let's use S for this.
     options: HSP_OPTIONS,
     text: {
-      cn: "我能注意到周围环境的细微变化。",
+      zh: "我能注意到周围环境的细微变化。",
       en: "I notice subtleties in my environment.",
       es: "Noto las sutilezas en mi entorno.",
       fr: "Je remarque les subtilités de mon environnement.",
@@ -150,7 +150,7 @@ export const HSP_QUESTIONS: HSPQuestion[] = [
     id: "hsp_6",
     options: HSP_OPTIONS,
     text: {
-      cn: "我能注意到周围环境的细微变化。",
+      zh: "我能注意到周围环境的细微变化。",
       en: "I notice subtleties in my environment.",
       es: "Noto las sutilezas en mi entorno.",
       fr: "Je remarque les subtilités de mon environnement.",
@@ -163,7 +163,7 @@ export const HSP_QUESTIONS: HSPQuestion[] = [
     id: "hsp_7",
     options: HSP_OPTIONS,
     text: {
-      cn: "我容易受别人情绪的影响。",
+      zh: "我容易受别人情绪的影响。",
       en: "I am affected by other people's moods.",
       es: "Me afectan los estados de ánimo de otras personas.",
       fr: "Je suis affecté par l'humeur des autres.",
@@ -175,7 +175,7 @@ export const HSP_QUESTIONS: HSPQuestion[] = [
 
 export const HSP_INSIGHTS = {
   heavenlyAntenna: {
-    cn: "你拥有“天之触角”。你的敏感是一种罕见的天赋，让你能感知世间神圣的细微之处。",
+    zh: "你拥有“天之触角”。你的敏感是一种罕见的天赋，让你能感知世间神圣的细微之处。",
     en: "You possess the 'Heavenly Antenna'. Your sensitivity is a rare gift that allows you to perceive the divine subtleties of the world.",
     es: "Posees la 'Antena Celestial'. Tu sensibilidad es un don raro que te permite percibir las sutilezas divinas del mundo.",
     fr: "Vous possédez « l'Antenne Céleste ». Votre sensibilité est un don rare qui vous permet de percevoir les subtilités divines du monde.",
@@ -183,7 +183,7 @@ export const HSP_INSIGHTS = {
     ko: "당신은 '천상의 안테나'를 지녔습니다. 당신의 섬세함은 세상의 신성한 결을 읽어내는 희귀한 축복입니다.",
   },
   high: {
-    cn: "你具有高度的敏感性。你感受深刻，看到别人错过的东西，但也可能需要更多的休息。",
+    zh: "你具有高度的敏感性。你感受深刻，看到别人错过的东西，但也可能需要更多的休息。",
     en: "You operate with high sensitivity. You feel deeply and see what others miss, but may need more rest.",
     es: "Operas con alta sensibilidad. Sientes profundamente y ves lo que otros pierden, pero puedes necesitar más descanso.",
     fr: "Vous fonctionnez avec une grande sensibilité. Vous ressentez profondément et voyez ce que les autres manquent, mais vous pouvez avoir besoin de plus de repos.",
@@ -191,7 +191,7 @@ export const HSP_INSIGHTS = {
     ko: "당신은 높은 민감성을 가지고 살아갑니다. 남들이 놓치는 것을 보고 깊이 느끼지만, 그만큼 휴식이 필요합니다.",
   },
   low: {
-    cn: "你很有韧性，很坚强。小干扰很少打扰你，让你能勇往直前。",
+    zh: "你很有韧性，很坚强。小干扰很少打扰你，让你能勇往直前。",
     en: "You are resilient and tough. Small disturbances rarely bother you, allowing you to push forward.",
     es: "Eres resistente y duro. Las pequeñas perturbaciones rara vez te molestan, permitiéndote seguir adelante.",
     fr: "Vous êtes résilient et dur. Les petites perturbations vous dérangent rarement, vous permettant d'avancer.",
@@ -199,7 +199,7 @@ export const HSP_INSIGHTS = {
     ko: "당신은 무던하고 강인합니다. 웬만해서는 동요하지 않으며 앞으로 나아가는 힘이 있습니다.",
   },
   medium: {
-    cn: "你的敏感度适中。你可以欣赏清晰的细节，而不会轻易感到不知所措。",
+    zh: "你的敏感度适中。你可以欣赏清晰的细节，而不会轻易感到不知所措。",
     en: "You have a balanced level of sensitivity. You can appreciate clear details without being easily overwhelmed.",
     es: "Tienes un nivel equilibrado de sensibilidad. Puedes apreciar detalles claros sin sentirte abrumado fácilmente.",
     fr: "Vous avez un niveau de sensibilité équilibré. Vous pouvez apprécier des détails clairs sans être facilement submergé.",

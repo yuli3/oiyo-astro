@@ -126,7 +126,7 @@ function generateInsights(
     challenges: [],
     strengths: [],
     summary: {
-      cn: `${t1}与${t2}之间的${score}%共鸣。`,
+      zh: `${t1}与${t2}之间的${score}%共鸣。`,
       en: `A resonance of ${score}% between ${t1} and ${t2}.`,
       es: `Una resonancia del ${score}% entre ${t1} y ${t2}.`,
       fr: `Une résonance de ${score}% entre ${t1} et ${t2}.`,
@@ -134,7 +134,7 @@ function generateInsights(
       ko: `${t1}와 ${t2} 사이의 ${score}% 공명입니다.`,
     },
     title: {
-      cn: relType === "golden" ? "神圣纽带" : "和谐连接",
+      zh: relType === "golden" ? "神圣纽带" : "和谐连接",
       en: relType === "golden" ? "Sacred Bond" : "Harmonious Connection",
       es: relType === "golden" ? "Vínculo Sagrado" : "Conexión Armoniosa",
       fr: relType === "golden" ? "Lien Sacré" : "Connexion Harmonieuse",

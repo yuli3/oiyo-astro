@@ -4,7 +4,7 @@ export const COLOR_PERSONALITY_LABELS: Record<
   Locale,
   Record<string, string>
 > = {
-  cn: {
+  zh: {
     blue: "蓝色 (分析)",
     green: "绿色 (稳定)",
     red: "红色 (领导力)",
@@ -43,7 +43,7 @@ export const COLOR_PERSONALITY_LABELS: Record<
 };
 
 export const COMM_STYLE_LABELS: Record<Locale, Record<string, string>> = {
-  cn: {
+  zh: {
     analytical: "分析",
     diplomatic: "外交",
     direct: "直接",
@@ -115,7 +115,7 @@ export const TWIN_MATCH_STRINGS: Record<
     };
   }
 > = {
-  cn: {
+  zh: {
     differences: {
       colorDiff: {
         description: (c1, c2) => `${c1} vs ${c2} 风格`,

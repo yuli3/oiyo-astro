@@ -8,6 +8,8 @@ import React, {
   useState,
 } from "react";
 
+import { useLocale } from "next-intl";
+
 import { useAlmanac } from "@/hooks/useAlmanac";
 import { useUserHistory } from "@/hooks/useUserHistory";
 import { aggregateOntology } from "@/lib/ontology/engine";
@@ -42,15 +44,16 @@ export function DailyInsightProvider({
   const loading = isAlmanacLoading || isUserLoading;
 
   const [profile, setProfile] = useState<any>(null);
+  const locale = useLocale();
 
   useEffect(() => {
     if (loading || !history || history.length === 0) return;
     const fetchProfile = async () => {
-      const result = await aggregateOntology(history);
+      const result = await aggregateOntology(history, locale);
       setProfile(result);
     };
     fetchProfile();
-  }, [history, loading]);
+  }, [history, loading, locale]);
 
   const data = useMemo(() => {
     if (loading) return null;

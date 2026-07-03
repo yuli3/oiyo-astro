@@ -13,7 +13,7 @@ export const ACHIEVEMENT_CATEGORIES: AchievementCategory[] = [
     achievements: ["first_test", "social_sharer", "welcome_explorer"],
     color: "green",
     description: {
-      cn: "Commemorating your first steps in personality exploration",
+      zh: "Commemorating your first steps in personality exploration",
       en: "Commemorating your first steps in personality exploration",
       es: "Commemorating your first steps in personality exploration",
       fr: "Commemorating your first steps in personality exploration",
@@ -23,7 +23,7 @@ export const ACHIEVEMENT_CATEGORIES: AchievementCategory[] = [
     icon: "Footprints",
     id: "first_steps",
     name: {
-      cn: "First Steps",
+      zh: "First Steps",
       en: "First Steps",
       es: "First Steps",
       fr: "First Steps",
@@ -35,7 +35,7 @@ export const ACHIEVEMENT_CATEGORIES: AchievementCategory[] = [
     achievements: ["category_explorer", "test_veteran", "completionist"],
     color: "teal",
     description: {
-      cn: "Adventurous souls exploring different personality tests",
+      zh: "Adventurous souls exploring different personality tests",
       en: "Adventurous souls exploring different personality tests",
       es: "Adventurous souls exploring different personality tests",
       fr: "Adventurous souls exploring different personality tests",
@@ -45,7 +45,7 @@ export const ACHIEVEMENT_CATEGORIES: AchievementCategory[] = [
     icon: "Compass",
     id: "explorer",
     name: {
-      cn: "Explorer",
+      zh: "Explorer",
       en: "Explorer",
       es: "Explorer",
       fr: "Explorer",
@@ -57,7 +57,7 @@ export const ACHIEVEMENT_CATEGORIES: AchievementCategory[] = [
     achievements: ["share_master", "viral_result", "community_builder"],
     color: "amber",
     description: {
-      cn: "Sharing results and connecting with others",
+      zh: "Sharing results and connecting with others",
       en: "Sharing results and connecting with others",
       es: "Sharing results and connecting with others",
       fr: "Sharing results and connecting with others",
@@ -67,7 +67,7 @@ export const ACHIEVEMENT_CATEGORIES: AchievementCategory[] = [
     icon: "Users",
     id: "social",
     name: {
-      cn: "Social Connector",
+      zh: "Social Connector",
       en: "Social Connector",
       es: "Social Connector",
       fr: "Social Connector",
@@ -79,7 +79,7 @@ export const ACHIEVEMENT_CATEGORIES: AchievementCategory[] = [
     achievements: ["daily_visitor", "week_warrior", "month_champion"],
     color: "orange",
     description: {
-      cn: "Achievements for consistent activity and dedication",
+      zh: "Achievements for consistent activity and dedication",
       en: "Achievements for consistent activity and dedication",
       es: "Achievements for consistent activity and dedication",
       fr: "Achievements for consistent activity and dedication",
@@ -89,7 +89,7 @@ export const ACHIEVEMENT_CATEGORIES: AchievementCategory[] = [
     icon: "Target",
     id: "dedication",
     name: {
-      cn: "Dedication",
+      zh: "Dedication",
       en: "Dedication",
       es: "Dedication",
       fr: "Dedication",
@@ -101,7 +101,7 @@ export const ACHIEVEMENT_CATEGORIES: AchievementCategory[] = [
     achievements: ["rare_combination", "perfect_match", "fortune_teller"],
     color: "gold",
     description: {
-      cn: "Discovering rare results and special combinations",
+      zh: "Discovering rare results and special combinations",
       en: "Discovering rare results and special combinations",
       es: "Discovering rare results and special combinations",
       fr: "Discovering rare results and special combinations",
@@ -111,7 +111,7 @@ export const ACHIEVEMENT_CATEGORIES: AchievementCategory[] = [
     icon: "Star",
     id: "special",
     name: {
-      cn: "Special Moments",
+      zh: "Special Moments",
       en: "Special Moments",
       es: "Special Moments",
       fr: "Special Moments",
@@ -127,7 +127,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "first_steps",
     description: {
-      cn: "Completed your first personality test! Your journey of self-discovery begins.",
+      zh: "Completed your first personality test! Your journey of self-discovery begins.",
       en: "Completed your first personality test! Your journey of self-discovery begins.",
       es: "Completed your first personality test! Your journey of self-discovery begins.",
       fr: "Completed your first personality test! Your journey of self-discovery begins.",
@@ -148,7 +148,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.BRONZE,
     title: {
-      cn: "First Test",
+      zh: "First Test",
       en: "First Test",
       es: "First Test",
       fr: "First Test",
@@ -160,7 +160,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "first_steps",
     description: {
-      cn: "Share your results at least three times this week to earn the social badge.",
+      zh: "Share your results at least three times this week to earn the social badge.",
       en: "Share your results at least three times this week to earn the social badge.",
       es: "Share your results at least three times this week to earn the social badge.",
       fr: "Share your results at least three times this week to earn the social badge.",
@@ -181,7 +181,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.SILVER,
     title: {
-      cn: "Social Sharer",
+      zh: "Social Sharer",
       en: "Social Sharer",
       es: "Social Sharer",
       fr: "Social Sharer",
@@ -193,7 +193,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "first_steps",
     description: {
-      cn: "Completed your first blood type personality test",
+      zh: "Completed your first blood type personality test",
       en: "Completed your first blood type personality test",
       es: "Completed your first blood type personality test",
       fr: "Completed your first blood type personality test",
@@ -214,7 +214,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.BRONZE,
     title: {
-      cn: "Blood Type Explorer",
+      zh: "Blood Type Explorer",
       en: "Blood Type Explorer",
       es: "Blood Type Explorer",
       fr: "Blood Type Explorer",
@@ -226,7 +226,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "first_steps",
     description: {
-      cn: "Completed your first Saju analysis. Beginning to meet traditional wisdom!",
+      zh: "Completed your first Saju analysis. Beginning to meet traditional wisdom!",
       en: "Completed your first Saju analysis. Beginning to meet traditional wisdom!",
       es: "Completed your first Saju analysis. Beginning to meet traditional wisdom!",
       fr: "Completed your first Saju analysis. Beginning to meet traditional wisdom!",
@@ -247,7 +247,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.BRONZE,
     title: {
-      cn: "Saju Explorer",
+      zh: "Saju Explorer",
       en: "Saju Explorer",
       es: "Saju Explorer",
       fr: "Saju Explorer",
@@ -261,7 +261,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "explorer",
     description: {
-      cn: "Completed tests from 5 different categories. True versatility!",
+      zh: "Completed tests from 5 different categories. True versatility!",
       en: "Completed tests from 5 different categories. True versatility!",
       es: "Completed tests from 5 different categories. True versatility!",
       fr: "Completed tests from 5 different categories. True versatility!",
@@ -283,7 +283,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.SILVER,
     title: {
-      cn: "Category Explorer",
+      zh: "Category Explorer",
       en: "Category Explorer",
       es: "Category Explorer",
       fr: "Category Explorer",
@@ -295,7 +295,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "explorer",
     description: {
-      cn: "Completed 10 tests in total. You are now a true veteran!",
+      zh: "Completed 10 tests in total. You are now a true veteran!",
       en: "Completed 10 tests in total. You are now a true veteran!",
       es: "Completed 10 tests in total. You are now a true veteran!",
       fr: "Completed 10 tests in total. You are now a true veteran!",
@@ -316,7 +316,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.SILVER,
     title: {
-      cn: "Test Veteran",
+      zh: "Test Veteran",
       en: "Test Veteran",
       es: "Test Veteran",
       fr: "Test Veteran",
@@ -328,7 +328,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "explorer",
     description: {
-      cn: "Completed 25 tests. Your self-understanding is now at expert level!",
+      zh: "Completed 25 tests. Your self-understanding is now at expert level!",
       en: "Completed 25 tests. Your self-understanding is now at expert level!",
       es: "Completed 25 tests. Your self-understanding is now at expert level!",
       fr: "Completed 25 tests. Your self-understanding is now at expert level!",
@@ -350,7 +350,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.GOLD,
     title: {
-      cn: "Completionist",
+      zh: "Completionist",
       en: "Completionist",
       es: "Completionist",
       fr: "Completionist",
@@ -364,7 +364,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "social",
     description: {
-      cn: "Shared 5 results. Your open mind inspires others!",
+      zh: "Shared 5 results. Your open mind inspires others!",
       en: "Shared 5 results. Your open mind inspires others!",
       es: "Shared 5 results. Your open mind inspires others!",
       fr: "Shared 5 results. Your open mind inspires others!",
@@ -385,7 +385,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.SILVER,
     title: {
-      cn: "Share Master",
+      zh: "Share Master",
       en: "Share Master",
       es: "Share Master",
       fr: "Share Master",
@@ -399,7 +399,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "dedication",
     description: {
-      cn: "Visited for 3 consecutive days. Consistent interest builds good habits!",
+      zh: "Visited for 3 consecutive days. Consistent interest builds good habits!",
       en: "Visited for 3 consecutive days. Consistent interest builds good habits!",
       es: "Visited for 3 consecutive days. Consistent interest builds good habits!",
       fr: "Visited for 3 consecutive days. Consistent interest builds good habits!",
@@ -420,7 +420,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.BRONZE,
     title: {
-      cn: "Daily Visitor",
+      zh: "Daily Visitor",
       en: "Daily Visitor",
       es: "Daily Visitor",
       fr: "Daily Visitor",
@@ -434,7 +434,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "special",
     description: {
-      cn: "Discovered a very rare personality combination. You are truly special!",
+      zh: "Discovered a very rare personality combination. You are truly special!",
       en: "Discovered a very rare personality combination. You are truly special!",
       es: "Discovered a very rare personality combination. You are truly special!",
       fr: "Discovered a very rare personality combination. You are truly special!",
@@ -456,7 +456,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.GOLD,
     title: {
-      cn: "Rare Combination",
+      zh: "Rare Combination",
       en: "Rare Combination",
       es: "Rare Combination",
       fr: "Rare Combination",
@@ -468,7 +468,7 @@ export const ACHIEVEMENTS: Achievement[] = [
   {
     category: "special",
     description: {
-      cn: "Discovered a perfect match between blood type and saju elements!",
+      zh: "Discovered a perfect match between blood type and saju elements!",
       en: "Discovered a perfect match between blood type and saju elements!",
       es: "Discovered a perfect match between blood type and saju elements!",
       fr: "Discovered a perfect match between blood type and saju elements!",
@@ -490,7 +490,7 @@ export const ACHIEVEMENTS: Achievement[] = [
     },
     tier: BadgeTier.PLATINUM,
     title: {
-      cn: "Perfect Match",
+      zh: "Perfect Match",
       en: "Perfect Match",
       es: "Perfect Match",
       fr: "Perfect Match",
@@ -509,7 +509,7 @@ export const BADGE_TIER_CONFIG = {
     color: "amber-600",
     glowColor: "amber-400",
     name: {
-      cn: "Bronze",
+      zh: "Bronze",
       en: "Bronze",
       es: "Bronze",
       fr: "Bronze",
@@ -523,7 +523,7 @@ export const BADGE_TIER_CONFIG = {
     color: "yellow-600",
     glowColor: "yellow-400",
     name: {
-      cn: "Gold",
+      zh: "Gold",
       en: "Gold",
       es: "Gold",
       fr: "Gold",
@@ -537,7 +537,7 @@ export const BADGE_TIER_CONFIG = {
     color: "amber-600",
     glowColor: "amber-400",
     name: {
-      cn: "Platinum",
+      zh: "Platinum",
       en: "Platinum",
       es: "Platinum",
       fr: "Platinum",
@@ -551,7 +551,7 @@ export const BADGE_TIER_CONFIG = {
     color: "green-700",
     glowColor: "green-600/60",
     name: {
-      cn: "Silver",
+      zh: "Silver",
       en: "Silver",
       es: "Silver",
       fr: "Silver",

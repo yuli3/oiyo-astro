@@ -78,7 +78,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Colleague takes credit:",
+      zh: "Colleague takes credit:",
       en: "Your colleague takes credit for your idea in a meeting. Your reaction?",
       es: "Colleague takes credit:",
       fr: "Colleague takes credit:",
@@ -149,7 +149,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Unfair criticism:",
+      zh: "Unfair criticism:",
       en: "Boss criticizes you unfairly in public. You:",
       es: "Unfair criticism:",
       fr: "Unfair criticism:",
@@ -220,7 +220,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Flaky friend:",
+      zh: "Flaky friend:",
       en: "Friend cancels last minute for the 3rd time. You:",
       es: "Flaky friend:",
       fr: "Flaky friend:",
@@ -291,7 +291,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Disagreement:",
+      zh: "Disagreement:",
       en: "Strongly disagree with a decision in a meeting. You:",
       es: "Disagreement:",
       fr: "Disagreement:",
@@ -362,7 +362,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Line cutter:",
+      zh: "Line cutter:",
       en: "Someone cuts in line. You:",
       es: "Line cutter:",
       fr: "Line cutter:",
@@ -430,7 +430,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Partner hurt:",
+      zh: "Partner hurt:",
       en: "Partner hurts your feelings. You:",
       es: "Partner hurt:",
       fr: "Partner hurt:",
@@ -495,7 +495,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Passive aggressive:",
+      zh: "Passive aggressive:",
       en: "Family member makes passive-aggressive comment. You:",
       es: "Passive aggressive:",
       fr: "Passive aggressive:",
@@ -557,7 +557,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Past enemy:",
+      zh: "Past enemy:",
       en: "Assigned to work with past enemy. You:",
       es: "Past enemy:",
       fr: "Past enemy:",
@@ -622,7 +622,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Rumors:",
+      zh: "Rumors:",
       en: "Someone spreading rumors about you. You:",
       es: "Rumors:",
       fr: "Rumors:",
@@ -684,7 +684,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Wrong:",
+      zh: "Wrong:",
       en: "You realize you were wrong in argument. You:",
       es: "Wrong:",
       fr: "Wrong:",
@@ -749,7 +749,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Slacker:",
+      zh: "Slacker:",
       en: "Team member contributes nothing. You:",
       es: "Slacker:",
       fr: "Slacker:",
@@ -814,7 +814,7 @@ export const CONFLICT_RESPONSE_QUESTIONS: ConflictResponseQuestion[] = [
       },
     ],
     text: {
-      cn: "Debt:",
+      zh: "Debt:",
       en: "Someone borrows money and forgets to pay back. You:",
       es: "Debt:",
       fr: "Debt:",

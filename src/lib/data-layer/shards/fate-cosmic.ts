@@ -21,7 +21,7 @@ export const COSMIC_FACTS: CosmicFact[] = [
   {
     id: "earth-speed",
     label: {
-      cn: "地球公转速度",
+      zh: "地球公转速度",
       en: "Earth's Orbital Speed",
       es: "Velocidad orbital de la Tierra",
       fr: "Vitesse orbitale de la Terre",
@@ -29,7 +29,7 @@ export const COSMIC_FACTS: CosmicFact[] = [
       ko: "지구의 공전 속도",
     },
     narrative: {
-      cn: "在你出生的那一刻，地球正以大约每秒29.78公里的速度绕着太阳飞驰。",
+      zh: "在你出生的那一刻，地球正以大约每秒29.78公里的速度绕着太阳飞驰。",
       en: "At the moment of your birth, Earth was rushing through space around the Sun at approximately 29.78 km/s.",
       es: "En el momento de tu nacimiento, la Tierra corría por el espacio alrededor del Sol a aproximadamente 29,78 km/s.",
       fr: "Au moment de votre naissance, la Terre fonçait dans l'espace autour du Soleil à environ 29,78 km/s.",
@@ -42,7 +42,7 @@ export const COSMIC_FACTS: CosmicFact[] = [
   {
     id: "galactic-journey",
     label: {
-      cn: "太阳系银河公转速度",
+      zh: "太阳系银河公转速度",
       en: "Solar System's Galactic Speed",
       es: "Velocidad galáctica del sistema solar",
       fr: "Vitesse galactique du système solaire",
@@ -50,7 +50,7 @@ export const COSMIC_FACTS: CosmicFact[] = [
       ko: "태양계의 은하 공전 속도",
     },
     narrative: {
-      cn: "整个太阳系载着你，以惊人的每秒230公里的速度绕着银河系中心公转。",
+      zh: "整个太阳系载着你，以惊人的每秒230公里的速度绕着银河系中心公转。",
       en: "The entire Solar System, carrying you, was orbiting the center of the Milky Way at a breathtaking 230 km/s.",
       es: "Todo el Sistema Solar, llevándote, orbitaba el centro de la Vía Láctea a una vertiginosa velocidad de 230 km/s.",
       fr: "Le système solaire tout entier, vous transportant, orbitait autour du centre de la Voie lactée à une vitesse époustouflante de 230 km/s.",
@@ -63,7 +63,7 @@ export const COSMIC_FACTS: CosmicFact[] = [
   {
     id: "axial-tilt",
     label: {
-      cn: "地轴倾角",
+      zh: "地轴倾角",
       en: "Axial Tilt",
       es: "Inclinación axial",
       fr: "Inclinaison axiale",
@@ -71,7 +71,7 @@ export const COSMIC_FACTS: CosmicFact[] = [
       ko: "지축의 기울기",
     },
     narrative: {
-      cn: "地球23.5度的倾斜创造了你出生的特定季节，塑造了你第一次呼吸时的气候。",
+      zh: "地球23.5度的倾斜创造了你出生的特定季节，塑造了你第一次呼吸时的气候。",
       en: "Earth's 23.5-degree tilt created the specific season of your birth, shaping the very climate you took your first breath in.",
       es: "La inclinación de 23,5 grados de la Tierra creó la estación específica de tu nacimiento, dando forma al clima en el que tomaste tu primer aliento.",
       fr: "L'inclinaison de 23,5 degrés de la Terre a créé la saison spécifique de votre naissance, façonnant le climat même dans lequel vous avez pris votre première respiration.",

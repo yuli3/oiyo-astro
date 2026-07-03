@@ -27,7 +27,7 @@ function getHexagramData(num: number): IChingOracle {
   const data: Record<number, IChingOracle> = {
     1: {
       hexagramName: {
-        cn: "乾",
+        zh: "乾",
         en: "The Creative",
         es: "Lo Creativo",
         fr: "Le Créateur",
@@ -36,7 +36,7 @@ function getHexagramData(num: number): IChingOracle {
       },
       hexagramNumber: 1,
       image: {
-        cn: "龙飞在天",
+        zh: "龙飞在天",
         en: "A dragon flying in the heavens",
         es: "Un dragón volando en los cielos",
         fr: "Un dragon volant dans les cieux",
@@ -44,7 +44,7 @@ function getHexagramData(num: number): IChingOracle {
         ko: "용이 하늘을 나는 형상",
       },
       judgment: {
-        cn: "天之气充满，两人的开始是宏大的。",
+        zh: "天之气充满，两人的开始是宏大的。",
         en: "The power of heaven is full; the beginning for you two is grand.",
         es: "El poder del cielo es pleno; el comienzo para ustedes dos es grandioso.",
         fr: "Le pouvoir du ciel est total ; votre début à deux est grandiose.",
@@ -54,7 +54,7 @@ function getHexagramData(num: number): IChingOracle {
     },
     2: {
       hexagramName: {
-        cn: "坤",
+        zh: "坤",
         en: "The Receptive",
         es: "Lo Receptivo",
         fr: "Le Réceptif",
@@ -63,7 +63,7 @@ function getHexagramData(num: number): IChingOracle {
       },
       hexagramNumber: 2,
       image: {
-        cn: "大地包容万物",
+        zh: "大地包容万物",
         en: "The earth embracing all things",
         es: "La tierra abrazando todas las cosas",
         fr: "La terre embrassant toutes choses",
@@ -71,7 +71,7 @@ function getHexagramData(num: number): IChingOracle {
         ko: "대지가 만물을 품는 형상",
       },
       judgment: {
-        cn: "互相包容忍耐时，会结出最大的果实。",
+        zh: "互相包容忍耐时，会结出最大的果实。",
         en: "Greatest fruits are born when you embrace and endure each other.",
         es: "Los mejores frutos nacen cuando se aceptan y se apoyan mutuamente.",
         fr: "Les plus grands fruits naissent lorsque vous vous acceptez et vous soutenez.",
@@ -85,7 +85,7 @@ function getHexagramData(num: number): IChingOracle {
 
   return {
     hexagramName: {
-      cn: `卦 ${num}`,
+      zh: `卦 ${num}`,
       en: `Hexagram ${num}`,
       es: `Hexagrama ${num}`,
       fr: `Hexagramme ${num}`,
@@ -94,7 +94,7 @@ function getHexagramData(num: number): IChingOracle {
     },
     hexagramNumber: num,
     image: {
-      cn: "困难中萌芽",
+      zh: "困难中萌芽",
       en: "Sprouts emerging from difficulties",
       es: "Brotes emergiendo de las dificultades",
       fr: "Des pousses émergeant des difficultés",
@@ -102,7 +102,7 @@ function getHexagramData(num: number): IChingOracle {
       ko: "어려움 속에서 싹이 트는 형상",
     },
     judgment: {
-      cn: "新的相遇伴随着成长的痛苦，但光明即将到来。",
+      zh: "新的相遇伴随着成长的痛苦，但光明即将到来。",
       en: "New encounters come with growing pains, but light will follow.",
       es: "Los nuevos encuentros vienen con dolores de crecimiento, pero la luz seguirá.",
       fr: "Les nouvelles rencontres s'accompagnent de douleurs de croissance，mais la lumière suivra。",

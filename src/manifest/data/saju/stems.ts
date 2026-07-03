@@ -23,7 +23,7 @@ export interface HeavenlyStem {
   id: StemId;
   order: number;
   short: {
-    cn: string;
+    zh: string;
     en: string;
     es: string;
     fr: string;
@@ -44,7 +44,7 @@ export const STEMS: Record<StemId, HeavenlyStem> = {
     id: "BYEONG",
     order: 3,
     short: {
-      cn: "丙",
+      zh: "丙",
       en: "Byeong",
       es: "Byeong",
       fr: "Byeong",
@@ -57,28 +57,28 @@ export const STEMS: Record<StemId, HeavenlyStem> = {
     element: "wood",
     id: "EUL",
     order: 2,
-    short: { cn: "乙", en: "Eul", es: "Eul", fr: "Eul", ja: "乙", ko: "을" },
+    short: { zh: "乙", en: "Eul", es: "Eul", fr: "Eul", ja: "乙", ko: "을" },
     yinYang: "YIN",
   },
   GAP: {
     element: "wood",
     id: "GAP",
     order: 1,
-    short: { cn: "甲", en: "Gap", es: "Gap", fr: "Gap", ja: "甲", ko: "갑" },
+    short: { zh: "甲", en: "Gap", es: "Gap", fr: "Gap", ja: "甲", ko: "갑" },
     yinYang: "YANG",
   },
   GI: {
     element: "earth",
     id: "GI",
     order: 6,
-    short: { cn: "己", en: "Gi", es: "Gi", fr: "Gi", ja: "己", ko: "기" },
+    short: { zh: "己", en: "Gi", es: "Gi", fr: "Gi", ja: "己", ko: "기" },
     yinYang: "YIN",
   },
   GYE: {
     element: "water",
     id: "GYE",
     order: 10,
-    short: { cn: "癸", en: "Gye", es: "Gye", fr: "Gye", ja: "癸", ko: "계" },
+    short: { zh: "癸", en: "Gye", es: "Gye", fr: "Gye", ja: "癸", ko: "계" },
     yinYang: "YIN",
   },
   GYEONG: {
@@ -86,7 +86,7 @@ export const STEMS: Record<StemId, HeavenlyStem> = {
     id: "GYEONG",
     order: 7,
     short: {
-      cn: "庚",
+      zh: "庚",
       en: "Gyeong",
       es: "Gyeong",
       fr: "Gyeong",
@@ -99,7 +99,7 @@ export const STEMS: Record<StemId, HeavenlyStem> = {
     element: "water",
     id: "IM",
     order: 9,
-    short: { cn: "壬", en: "Im", es: "Im", fr: "Im", ja: "壬", ko: "임" },
+    short: { zh: "壬", en: "Im", es: "Im", fr: "Im", ja: "壬", ko: "임" },
     yinYang: "YANG",
   },
   JEONG: {
@@ -107,7 +107,7 @@ export const STEMS: Record<StemId, HeavenlyStem> = {
     id: "JEONG",
     order: 4,
     short: {
-      cn: "丁",
+      zh: "丁",
       en: "Jeong",
       es: "Jeong",
       fr: "Jeong",
@@ -120,14 +120,14 @@ export const STEMS: Record<StemId, HeavenlyStem> = {
     element: "earth",
     id: "MU",
     order: 5,
-    short: { cn: "戊", en: "Mu", es: "Mu", fr: "Mu", ja: "戊", ko: "무" },
+    short: { zh: "戊", en: "Mu", es: "Mu", fr: "Mu", ja: "戊", ko: "무" },
     yinYang: "YANG",
   },
   SIN: {
     element: "metal",
     id: "SIN",
     order: 8,
-    short: { cn: "辛", en: "Sin", es: "Sin", fr: "Sin", ja: "辛", ko: "신" },
+    short: { zh: "辛", en: "Sin", es: "Sin", fr: "Sin", ja: "辛", ko: "신" },
     yinYang: "YIN",
   },
 };

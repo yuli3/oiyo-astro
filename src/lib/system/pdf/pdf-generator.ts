@@ -217,7 +217,7 @@ export async function generatePremiumReportPDF(
   pdf.setFont("helvetica", "bold");
   pdf.text(
     getLocalizedContent(data.locale, {
-      cn: "分析对象",
+      zh: "分析对象",
       en: "Analyzed For",
       es: "Analizado para",
       fr: "Analysé pour",
@@ -233,7 +233,7 @@ export async function generatePremiumReportPDF(
   pdf.text(data.userName, margin + 10, yPosition + 25);
   pdf.text(
     `${getLocalizedContent(data.locale, {
-      cn: "日期",
+      zh: "日期",
       en: "Date",
       es: "Fecha",
       fr: "Date",
@@ -263,7 +263,7 @@ export async function generatePremiumReportPDF(
   pdf.setFont("helvetica", "bold");
   pdf.text(
     `${getLocalizedContent(data.locale, {
-      cn: "分数",
+      zh: "分数",
       en: "Score",
       es: "Puntuación",
       fr: "Score",
@@ -284,7 +284,7 @@ export async function generatePremiumReportPDF(
   pdf.setFont("helvetica", "bold");
   pdf.text(
     getLocalizedContent(data.locale, {
-      cn: "目录",
+      zh: "目录",
       en: "Table of Contents",
       es: "Índice",
       fr: "Table des matières",
@@ -301,7 +301,7 @@ export async function generatePremiumReportPDF(
 
   const tocItems = [
     getLocalizedContent(data.locale, {
-      cn: "1. 概览",
+      zh: "1. 概览",
       en: "1. Overview",
       es: "1. Resumen",
       fr: "1. Aperçu",
@@ -309,7 +309,7 @@ export async function generatePremiumReportPDF(
       ko: "1. 개요",
     })!,
     getLocalizedContent(data.locale, {
-      cn: "2. 详细分析",
+      zh: "2. 详细分析",
       en: "2. Detailed Analysis",
       es: "2. Análisis detallado",
       fr: "2. Analyse détaillée",
@@ -317,7 +317,7 @@ export async function generatePremiumReportPDF(
       ko: "2. 세부 분석",
     })!,
     getLocalizedContent(data.locale, {
-      cn: "3. 优势",
+      zh: "3. 优势",
       en: "3. Strengths",
       es: "3. Fortalezas",
       fr: "3. Forces",
@@ -325,7 +325,7 @@ export async function generatePremiumReportPDF(
       ko: "3. 강점",
     })!,
     getLocalizedContent(data.locale, {
-      cn: "4. 待改进领域",
+      zh: "4. 待改进领域",
       en: "4. Areas for Improvement",
       es: "4. Áreas de mejora",
       fr: "4. Points à améliorer",
@@ -333,7 +333,7 @@ export async function generatePremiumReportPDF(
       ko: "4. 개선 영역",
     })!,
     getLocalizedContent(data.locale, {
-      cn: "5. 洞察",
+      zh: "5. 洞察",
       en: "5. Insights",
       es: "5. Informes",
       fr: "5. Insights",
@@ -341,7 +341,7 @@ export async function generatePremiumReportPDF(
       ko: "5. 통찰",
     })!,
     getLocalizedContent(data.locale, {
-      cn: "6. 建议",
+      zh: "6. 建议",
       en: "6. Recommendations",
       es: "6. Recomendaciones",
       fr: "6. Recommandations",
@@ -367,7 +367,7 @@ export async function generatePremiumReportPDF(
   pdf.rect(margin, yPosition - 5, 5, 10, "F");
   pdf.text(
     getLocalizedContent(data.locale, {
-      cn: "1. 概览",
+      zh: "1. 概览",
       en: "1. Overview",
       es: "1. Resumen",
       fr: "1. Aperçu",
@@ -383,7 +383,7 @@ export async function generatePremiumReportPDF(
   pdf.setFont("helvetica", "normal");
   addText(
     getLocalizedContent(data.locale, {
-      cn: `本报告基于${data.testName}测试的结果。您的性格类型被分析为“${data.resultType}”，基于${data.score}分的总分。`,
+      zh: `本报告基于${data.testName}测试的结果。您的性格类型被分析为“${data.resultType}”，基于${data.score}分的总分。`,
       en: `This report is based on the results of the ${data.testName} test. Your personality type has been analyzed as "${data.resultType}", based on an overall score of ${data.score} points.`,
       es: `Este informe se basa en los resultados de la prueba ${data.testName}. Tu tipo de personalidad se ha analizado como "${data.resultType}", basándose en una puntuación total de ${data.score} puntos.`,
       fr: `Ce rapport est basé sur les résultats du test ${data.testName}. Votre type de personnalité a été analysé comme "${data.resultType}", sur la base d'un score global de ${data.score} points.`,
@@ -401,7 +401,7 @@ export async function generatePremiumReportPDF(
   pdf.rect(margin, yPosition - 5, 5, 10, "F");
   pdf.text(
     getLocalizedContent(data.locale, {
-      cn: "2. 详细分析",
+      zh: "2. 详细分析",
       en: "2. Detailed Analysis",
       es: "2. Análisis detallado",
       fr: "2. Analyse détaillée",
@@ -436,7 +436,7 @@ export async function generatePremiumReportPDF(
   pdf.rect(margin, yPosition - 5, 5, 10, "F");
   pdf.text(
     getLocalizedContent(data.locale, {
-      cn: "3. 优势",
+      zh: "3. 优势",
       en: "3. Strengths",
       es: "3. Fortalezas",
       fr: "3. Forces",
@@ -466,7 +466,7 @@ export async function generatePremiumReportPDF(
   pdf.rect(margin, yPosition - 5, 5, 10, "F");
   pdf.text(
     getLocalizedContent(data.locale, {
-      cn: "4. 待改进领域",
+      zh: "4. 待改进领域",
       en: "4. Areas for Improvement",
       es: "4. Áreas de mejora",
       fr: "4. Points à améliorer",
@@ -496,7 +496,7 @@ export async function generatePremiumReportPDF(
   pdf.rect(margin, yPosition - 5, 5, 10, "F");
   pdf.text(
     getLocalizedContent(data.locale, {
-      cn: "5. 洞察",
+      zh: "5. 洞察",
       en: "5. Insights",
       es: "5. Informes",
       fr: "5. Insights",
@@ -513,7 +513,7 @@ export async function generatePremiumReportPDF(
     pdf.setFontSize(12);
     pdf.setFont("helvetica", "bold");
     pdf.text(
-      `💡 ${getLocalizedContent(data.locale, { cn: "洞察", en: "Insight", es: "Informe", fr: "Insight", ja: "インサイト", ko: "통찰" })} ${_index + 1}`,
+      `💡 ${getLocalizedContent(data.locale, { zh: "洞察", en: "Insight", es: "Informe", fr: "Insight", ja: "インサイト", ko: "통찰" })} ${_index + 1}`,
       margin,
       yPosition,
     );
@@ -531,7 +531,7 @@ export async function generatePremiumReportPDF(
   pdf.rect(margin, yPosition - 5, 5, 10, "F");
   pdf.text(
     getLocalizedContent(data.locale, {
-      cn: "6. 建议",
+      zh: "6. 建议",
       en: "6. Recommendations",
       es: "6. Recomendaciones",
       fr: "6. Recommandations",
@@ -548,7 +548,7 @@ export async function generatePremiumReportPDF(
     pdf.setFontSize(12);
     pdf.setFont("helvetica", "bold");
     pdf.text(
-      `📌 ${getLocalizedContent(data.locale, { cn: "建议", en: "Recommendation", es: "Recomendación", fr: "Recommandation", ja: "推奨事項", ko: "권장" })} ${_index + 1}`,
+      `📌 ${getLocalizedContent(data.locale, { zh: "建议", en: "Recommendation", es: "Recomendación", fr: "Recommandation", ja: "推奨事項", ko: "권장" })} ${_index + 1}`,
       margin,
       yPosition,
     );

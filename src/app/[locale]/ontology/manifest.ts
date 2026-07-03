@@ -5,7 +5,7 @@ export const ontologyManifest: FeatureManifest = {
   category: ["ontology"],
   color: "#8b5cf6",
   description: {
-    cn: "命运与身份的最终融合。宏大的统一报告。",
+    zh: "命运与身份的最终融合。宏大的统一报告。",
     en: "The ultimate synthesis of your destiny and ontology. A grand unified report.",
     es: "La síntesis definitiva de tu destino e identidad. Un gran informe unificado.",
     fr: "La synthèse ultime de votre destin et de votre identité. Un grand rapport unifié.",
@@ -16,7 +16,7 @@ export const ontologyManifest: FeatureManifest = {
   icon: "Shield",
   id: "ontology",
   name: {
-    cn: "神圣金库",
+    zh: "神圣金库",
     en: "My Sanctuary",
     es: "Mi Santuario",
     fr: "Mon Sanctuaire",

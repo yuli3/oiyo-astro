@@ -10,7 +10,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "cold_crisp",
         scores: { modern: 1, mountainous: 2, nordic: 3 },
         text: {
-          cn: "寒冷清爽的冬天和温和的夏天",
+          zh: "寒冷清爽的冬天和温和的夏天",
           en: "Cold, crisp winters with mild summers",
           es: "Inviernos fríos y frescos con veranos suaves",
           fr: "Des hivers froids et vivifiants avec des étés doux",
@@ -23,7 +23,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "warm_sunny",
         scores: { coastal: 2, mediterranean: 3, tropical: 2 },
         text: {
-          cn: "一年中大部分时间温暖晴朗",
+          zh: "一年中大部分时间温暖晴朗",
           en: "Warm, sunny weather most of the year",
           es: "Clima cálido y soleado la mayor parte del año",
           fr: "Un temps chaud et ensoleillé presque toute l'année",
@@ -36,7 +36,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "hot_humid",
         scores: { coastal: 1, tropical: 3 },
         text: {
-          cn: "炎热潮湿，绿意盎然",
+          zh: "炎热潮湿，绿意盎然",
           en: "Hot and humid with lush greenery",
           es: "Caluroso y húmedo, con vegetación exuberante",
           fr: "Chaud et humide, avec une végétation luxuriante",
@@ -49,7 +49,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "four_seasons",
         scores: { cosmopolitan: 1, cultural: 2, modern: 2 },
         text: {
-          cn: "四季分明，变化丰富",
+          zh: "四季分明，变化丰富",
           en: "Four distinct seasons with variety",
           es: "Cuatro estaciones bien diferenciadas y variadas",
           fr: "Quatre saisons bien distinctes et variées",
@@ -59,7 +59,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "哪种气候最适合你生活？",
+      zh: "哪种气候最适合你生活？",
       en: "What type of climate do you thrive in?",
       es: "¿En qué tipo de clima te sientes mejor?",
       fr: "Dans quel type de climat vous épanouissez-vous le mieux ?",
@@ -76,7 +76,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "slow_mindful",
         scores: { mediterranean: 2, mountainous: 2, nordic: 3, tropical: 2 },
         text: {
-          cn: "慢节奏、有觉察的生活，工作与生活平衡良好",
+          zh: "慢节奏、有觉察的生活，工作与生活平衡良好",
           en: "Slow, mindful living with strong work-life balance",
           es: "Vida lenta y consciente con buen equilibrio entre trabajo y vida personal",
           fr: "Une vie lente et consciente, avec un bon équilibre entre travail et vie personnelle",
@@ -89,7 +89,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "fast_dynamic",
         scores: { cosmopolitan: 3, modern: 3 },
         text: {
-          cn: "快节奏、充满活力的都市能量",
+          zh: "快节奏、充满活力的都市能量",
           en: "Fast-paced, dynamic urban energy",
           es: "Energía urbana rápida y dinámica",
           fr: "Une énergie urbaine rapide et dynamique",
@@ -102,7 +102,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "community_social",
         scores: { cultural: 3, mediterranean: 3, tropical: 1 },
         text: {
-          cn: "重视社区，拥有紧密的社会联系",
+          zh: "重视社区，拥有紧密的社会联系",
           en: "Community-focused with strong social bonds",
           es: "Centrado en la comunidad, con vínculos sociales fuertes",
           fr: "Axé sur la communauté, avec des liens sociaux forts",
@@ -115,7 +115,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "independent_flexible",
         scores: { cosmopolitan: 2, modern: 2, mountainous: 1 },
         text: {
-          cn: "独立自主，日程灵活，可远程工作",
+          zh: "独立自主，日程灵活，可远程工作",
           en: "Independent with flexible routines and remote work",
           es: "Independiente, con rutinas flexibles y trabajo remoto",
           fr: "Indépendant, avec des routines flexibles et du télétravail",
@@ -125,7 +125,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "哪种生活节奏最吸引你？",
+      zh: "哪种生活节奏最吸引你？",
       en: "What lifestyle pace appeals to you most?",
       es: "¿Qué ritmo de vida te atrae más?",
       fr: "Quel rythme de vie vous attire le plus ?",
@@ -142,7 +142,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "mountains_forests",
         scores: { mountainous: 3, nordic: 2 },
         text: {
-          cn: "壮丽的群山和原始森林",
+          zh: "壮丽的群山和原始森林",
           en: "Majestic mountains and pristine forests",
           es: "Montañas majestuosas y bosques vírgenes",
           fr: "Des montagnes majestueuses et des forêts préservées",
@@ -155,7 +155,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "coastline_beaches",
         scores: { coastal: 3, mediterranean: 2, tropical: 2 },
         text: {
-          cn: "美丽的海岸线和纯净海滩",
+          zh: "美丽的海岸线和纯净海滩",
           en: "Beautiful coastlines and pristine beaches",
           es: "Hermosas costas y playas vírgenes",
           fr: "De magnifiques littoraux et des plages préservées",
@@ -168,7 +168,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "urban_skylines",
         scores: { cosmopolitan: 3, modern: 3 },
         text: {
-          cn: "令人印象深刻的天际线和城市景观",
+          zh: "令人印象深刻的天际线和城市景观",
           en: "Impressive skylines and urban landscapes",
           es: "Horizontes urbanos impresionantes y paisajes de ciudad",
           fr: "Des skylines impressionnantes et des paysages urbains",
@@ -181,7 +181,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "rolling_countryside",
         scores: { cultural: 3, mediterranean: 1 },
         text: {
-          cn: "起伏的丘陵和宁静的乡村",
+          zh: "起伏的丘陵和宁静的乡村",
           en: "Rolling hills and peaceful countryside",
           es: "Colinas onduladas y campo tranquilo",
           fr: "Des collines vallonnées et une campagne paisible",
@@ -191,7 +191,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "哪种地理特征最吸引你？",
+      zh: "哪种地理特征最吸引你？",
       en: "Which geographical feature draws you most?",
       es: "¿Qué rasgo geográfico te atrae más?",
       fr: "Quelle caractéristique géographique vous attire le plus ?",
@@ -208,7 +208,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "innovation_progress",
         scores: { cosmopolitan: 2, modern: 3, nordic: 1 },
         text: {
-          cn: "创新、科技与进步",
+          zh: "创新、科技与进步",
           en: "Innovation, technology, and progress",
           es: "Innovación, tecnología y progreso",
           fr: "Innovation, technologie et progrès",
@@ -221,7 +221,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "tradition_heritage",
         scores: { cultural: 3, mediterranean: 2 },
         text: {
-          cn: "深厚的传统与文化遗产",
+          zh: "深厚的传统与文化遗产",
           en: "Rich traditions and cultural heritage",
           es: "Ricas tradiciones y patrimonio cultural",
           fr: "Des traditions riches et un patrimoine culturel fort",
@@ -234,7 +234,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "equality_welfare",
         scores: { cosmopolitan: 1, nordic: 3 },
         text: {
-          cn: "社会平等与完善的福利体系",
+          zh: "社会平等与完善的福利体系",
           en: "Social equality and strong welfare systems",
           es: "Igualdad social y sistemas de bienestar sólidos",
           fr: "Égalité sociale et systèmes de protection sociale solides",
@@ -247,7 +247,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "diversity_fusion",
         scores: { cosmopolitan: 3, modern: 1, tropical: 1 },
         text: {
-          cn: "文化多样性与思想交融",
+          zh: "文化多样性与思想交融",
           en: "Cultural diversity and a melting pot of ideas",
           es: "Diversidad cultural y un crisol de ideas",
           fr: "Diversité culturelle et brassage d'idées",
@@ -257,7 +257,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "你最看重哪种文化层面？",
+      zh: "你最看重哪种文化层面？",
       en: "What cultural aspect is most important to you?",
       es: "¿Qué aspecto cultural es más importante para ti?",
       fr: "Quel aspect culturel est le plus important pour vous ?",
@@ -274,7 +274,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "simple_fresh",
         scores: { coastal: 2, mediterranean: 1, nordic: 2 },
         text: {
-          cn: "简单、新鲜、高品质的食材",
+          zh: "简单、新鲜、高品质的食材",
           en: "Simple, fresh, high-quality ingredients",
           es: "Ingredientes sencillos, frescos y de alta calidad",
           fr: "Des ingrédients simples, frais et de grande qualité",
@@ -287,7 +287,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "complex_flavorful",
         scores: { cultural: 3, mediterranean: 2 },
         text: {
-          cn: "复杂的风味和丰富的饮食传统",
+          zh: "复杂的风味和丰富的饮食传统",
           en: "Complex flavors and rich culinary traditions",
           es: "Sabores complejos y ricas tradiciones culinarias",
           fr: "Des saveurs complexes et de riches traditions culinaires",
@@ -300,7 +300,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "fusion_international",
         scores: { cosmopolitan: 3, modern: 1, tropical: 1 },
         text: {
-          cn: "国际融合料理和多样的街头小吃",
+          zh: "国际融合料理和多样的街头小吃",
           en: "International fusion and diverse street food",
           es: "Fusión internacional y comida callejera diversa",
           fr: "Cuisine fusion internationale et street food variée",
@@ -313,7 +313,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "organic_sustainable",
         scores: { mountainous: 1, nordic: 2 },
         text: {
-          cn: "有机、可持续、本地采购",
+          zh: "有机、可持续、本地采购",
           en: "Organic, sustainable, and locally sourced",
           es: "Orgánico, sostenible y de origen local",
           fr: "Bio, durable et issu de producteurs locaux",
@@ -323,7 +323,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "哪种料理最让你心动？",
+      zh: "哪种料理最让你心动？",
       en: "What type of cuisine excites you most?",
       es: "¿Qué tipo de cocina te entusiasma más?",
       fr: "Quel type de cuisine vous enthousiasme le plus ?",
@@ -340,7 +340,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "universal_healthcare",
         scores: { cultural: 1, nordic: 3 },
         text: {
-          cn: "全民医疗和强大的公共服务",
+          zh: "全民医疗和强大的公共服务",
           en: "Universal healthcare and strong public services",
           es: "Sanidad universal y servicios públicos sólidos",
           fr: "Soins de santé universels et services publics solides",
@@ -353,7 +353,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "entrepreneurial_freedom",
         scores: { cosmopolitan: 3, modern: 2 },
         text: {
-          cn: "创业自由和经济机会",
+          zh: "创业自由和经济机会",
           en: "Entrepreneurial freedom and economic opportunities",
           es: "Libertad emprendedora y oportunidades económicas",
           fr: "Liberté d'entreprendre et opportunités économiques",
@@ -366,7 +366,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "family_community",
         scores: { cultural: 2, mediterranean: 3 },
         text: {
-          cn: "牢固的家庭纽带和紧密的社区支持",
+          zh: "牢固的家庭纽带和紧密的社区支持",
           en: "Strong family ties and tight-knit community support",
           es: "Fuertes lazos familiares y apoyo comunitario estrecho",
           fr: "Des liens familiaux forts et un soutien communautaire soudé",
@@ -379,7 +379,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "environmental_protection",
         scores: { mountainous: 2, nordic: 3, tropical: 1 },
         text: {
-          cn: "严格的环境保护和对可持续性的重视",
+          zh: "严格的环境保护和对可持续性的重视",
           en: "Strict environmental protection and sustainability focus",
           es: "Protección ambiental estricta y enfoque en la sostenibilidad",
           fr: "Protection stricte de l'environnement et priorité à la durabilité",
@@ -389,7 +389,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "你最重视哪种社会制度？",
+      zh: "你最重视哪种社会制度？",
       en: "What social system do you value most?",
       es: "¿Qué sistema social valoras más?",
       fr: "Quel système social valorisez-vous le plus ?",
@@ -406,7 +406,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "minimalist_functional",
         scores: { modern: 2, nordic: 3 },
         text: {
-          cn: "极简、实用且设计精良（例如：斯堪的纳维亚风格）",
+          zh: "极简、实用且设计精良（例如：斯堪的纳维亚风格）",
           en: "Minimalist, functional, and well-designed (e.g., Scandinavian)",
           es: "Minimalista, funcional y bien diseñado (por ejemplo, escandinavo)",
           fr: "Minimaliste, fonctionnel et bien conçu (par exemple, scandinave)",
@@ -419,7 +419,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "charming_historical",
         scores: { cultural: 3, mediterranean: 2 },
         text: {
-          cn: "富有个性的迷人历史建筑",
+          zh: "富有个性的迷人历史建筑",
           en: "Charming historical buildings with character",
           es: "Edificios históricos con encanto y personalidad",
           fr: "Des bâtiments historiques charmants et pleins de caractère",
@@ -432,7 +432,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "nature_integrated",
         scores: { coastal: 2, mountainous: 3, tropical: 2 },
         text: {
-          cn: "与自然环境融为一体（例如：小木屋、海滨住宅）",
+          zh: "与自然环境融为一体（例如：小木屋、海滨住宅）",
           en: "Integrated with natural surroundings (e.g., cabin, beach house)",
           es: "Integrado con el entorno natural (por ejemplo, cabaña o casa de playa)",
           fr: "Intégré à l'environnement naturel (par exemple, chalet ou maison de plage)",
@@ -445,7 +445,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "high_tech_modern",
         scores: { cosmopolitan: 2, modern: 3 },
         text: {
-          cn: "配备超现代设施的高科技智能住宅",
+          zh: "配备超现代设施的高科技智能住宅",
           en: "High-tech smart homes with ultra-modern amenities",
           es: "Casas inteligentes de alta tecnología con comodidades ultramodernas",
           fr: "Maisons intelligentes high-tech avec équipements ultramodernes",
@@ -455,7 +455,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "哪种居住环境最吸引你？",
+      zh: "哪种居住环境最吸引你？",
       en: "What type of living environment appeals to you?",
       es: "¿Qué tipo de entorno de vivienda te atrae más?",
       fr: "Quel type d'environnement de vie vous attire le plus ?",
@@ -472,7 +472,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "cycling_walking",
         scores: { coastal: 1, nordic: 3 },
         text: {
-          cn: "在自行车友好型城市骑行和步行",
+          zh: "在自行车友好型城市骑行和步行",
           en: "Cycling and walking in bike-friendly cities",
           es: "Moverse en bicicleta y caminar en ciudades aptas para ciclistas",
           fr: "Faire du vélo et marcher dans des villes adaptées aux cyclistes",
@@ -485,7 +485,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "public_transport",
         scores: { cosmopolitan: 2, cultural: 1, modern: 3 },
         text: {
-          cn: "高效、清洁、现代化的公共交通",
+          zh: "高效、清洁、现代化的公共交通",
           en: "Efficient, clean, and modern public transportation",
           es: "Transporte público eficiente, limpio y moderno",
           fr: "Des transports publics efficaces, propres et modernes",
@@ -498,7 +498,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "car_flexibility",
         scores: { cosmopolitan: 1, mountainous: 2 },
         text: {
-          cn: "用私家车获得最大灵活性并进行公路旅行",
+          zh: "用私家车获得最大灵活性并进行公路旅行",
           en: "Personal car for maximum flexibility and road trips",
           es: "Coche propio para máxima flexibilidad y viajes por carretera",
           fr: "Voiture personnelle pour un maximum de flexibilité et des road trips",
@@ -511,7 +511,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "boat_water",
         scores: { coastal: 3, mediterranean: 1, tropical: 1 },
         text: {
-          cn: "船、渡轮和水上交通",
+          zh: "船、渡轮和水上交通",
           en: "Boats, ferries, and water-based transportation",
           es: "Barcos, ferris y transporte por agua",
           fr: "Bateaux, ferries et transports sur l'eau",
@@ -521,7 +521,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "你更喜欢怎样出行？",
+      zh: "你更喜欢怎样出行？",
       en: "How do you prefer to get around?",
       es: "¿Cómo prefieres desplazarte?",
       fr: "Comment préférez-vous vous déplacer ?",
@@ -538,7 +538,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "budget_guardian",
         scores: { mediterranean: 1, tropical: 3 },
         text: {
-          cn: "即使设施简单，也要把开销降到最低",
+          zh: "即使设施简单，也要把开销降到最低",
           en: "Keep expenses minimal, even if amenities are simple",
           es: "Mantener los gastos al mínimo, aunque las comodidades sean sencillas",
           fr: "Limiter les dépenses au minimum, même si les équipements sont simples",
@@ -551,7 +551,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "balanced_value",
         scores: { coastal: 1, cultural: 2 },
         text: {
-          cn: "成本适中，同时有可靠的公共服务和高性价比",
+          zh: "成本适中，同时有可靠的公共服务和高性价比",
           en: "Balanced costs with reliable public services and good value",
           es: "Costes equilibrados, servicios públicos fiables y buena relación calidad-precio",
           fr: "Des coûts équilibrés, des services publics fiables et un bon rapport qualité-prix",
@@ -564,7 +564,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "premium_quality",
         scores: { cosmopolitan: 1, modern: 2, nordic: 3 },
         text: {
-          cn: "愿意为世界级基础设施和生活品质投入更多",
+          zh: "愿意为世界级基础设施和生活品质投入更多",
           en: "Invest more for world-class infrastructure and quality of life",
           es: "Invertir más en infraestructura de primer nivel y calidad de vida",
           fr: "Investir davantage pour des infrastructures de classe mondiale et une meilleure qualité de vie",
@@ -577,7 +577,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "growth_hub",
         scores: { cosmopolitan: 3, modern: 2 },
         text: {
-          cn: "如果职业和成长机会充足，较高成本也可以接受",
+          zh: "如果职业和成长机会充足，较高成本也可以接受",
           en: "Higher costs are fine if career and growth opportunities are abundant",
           es: "Los costes más altos están bien si abundan las oportunidades profesionales y de crecimiento",
           fr: "Des coûts plus élevés me conviennent si les opportunités de carrière et de croissance sont nombreuses",
@@ -587,7 +587,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "哪种生活成本取舍最适合你？",
+      zh: "哪种生活成本取舍最适合你？",
       en: "Which cost of living trade-off feels right for you?",
       es: "¿Qué equilibrio de coste de vida te parece más adecuado?",
       fr: "Quel compromis sur le coût de la vie vous semble le plus juste ?",
@@ -604,7 +604,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "english_primary",
         scores: { cosmopolitan: 3, modern: 2 },
         text: {
-          cn: "我需要各处都有完善的英语支持",
+          zh: "我需要各处都有完善的英语支持",
           en: "I need strong English support everywhere",
           es: "Necesito buen apoyo en inglés en todas partes",
           fr: "J'ai besoin d'un bon accompagnement en anglais partout",
@@ -617,7 +617,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "multilingual_mix",
         scores: { cosmopolitan: 2, cultural: 1 },
         text: {
-          cn: "喜欢多种语言并存的全球枢纽",
+          zh: "喜欢多种语言并存的全球枢纽",
           en: "Happy in global hubs with multiple languages spoken",
           es: "Me siento a gusto en centros globales donde se hablan varios idiomas",
           fr: "Je me sens bien dans des hubs mondiaux où l'on parle plusieurs langues",
@@ -630,7 +630,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "local_immersion",
         scores: { cultural: 3, mediterranean: 2 },
         text: {
-          cn: "我想深入学习当地语言",
+          zh: "我想深入学习当地语言",
           en: "I want to dive deep into the local language",
           es: "Quiero sumergirme a fondo en el idioma local",
           fr: "Je veux m'immerger profondément dans la langue locale",
@@ -643,7 +643,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "language_challenge",
         scores: { mountainous: 1, nordic: 1 },
         text: {
-          cn: "我喜欢语言方面的挑战",
+          zh: "我喜欢语言方面的挑战",
           en: "I enjoy a language challenge",
           es: "Disfruto los retos lingüísticos",
           fr: "J'aime les défis linguistiques",
@@ -653,7 +653,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "你日常需要多少当地语言支持？",
+      zh: "你日常需要多少当地语言支持？",
       en: "How much local language support do you need day to day?",
       es: "¿Cuánto apoyo con el idioma local necesitas en el día a día?",
       fr: "De quel niveau d'aide avec la langue locale avez-vous besoin au quotidien ?",
@@ -670,7 +670,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "family_roots",
         scores: { cultural: 2, mediterranean: 3 },
         text: {
-          cn: "在深厚的社区和家庭根基中安定下来",
+          zh: "在深厚的社区和家庭根基中安定下来",
           en: "Settling down with deep community and family roots",
           es: "Establecerme con raíces profundas en la comunidad y la familia",
           fr: "M'installer avec de solides racines communautaires et familiales",
@@ -683,7 +683,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "career_acceleration",
         scores: { cosmopolitan: 3, modern: 2 },
         text: {
-          cn: "快速推进职业发展并建立全球人脉",
+          zh: "快速推进职业发展并建立全球人脉",
           en: "Fast-tracking my career and building a global network",
           es: "Acelerar mi carrera y construir una red global",
           fr: "Accélérer ma carrière et bâtir un réseau mondial",
@@ -696,7 +696,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "slow_living",
         scores: { mountainous: 2, nordic: 2, tropical: 1 },
         text: {
-          cn: "设计一种更慢、更注重健康、亲近自然的生活",
+          zh: "设计一种更慢、更注重健康、亲近自然的生活",
           en: "Designing a slower, wellness-focused life close to nature",
           es: "Diseñar una vida más lenta, centrada en el bienestar y cerca de la naturaleza",
           fr: "Créer une vie plus lente, axée sur le bien-être et proche de la nature",
@@ -709,7 +709,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "global_nomad",
         scores: { coastal: 2, modern: 1 },
         text: {
-          cn: "作为数字游民保持流动生活",
+          zh: "作为数字游民保持流动生活",
           en: "Staying mobile as a digital nomad",
           es: "Mantenerme en movimiento como nómada digital",
           fr: "Rester mobile en tant que nomade numérique",
@@ -719,7 +719,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "你正在规划怎样的未来愿景？",
+      zh: "你正在规划怎样的未来愿景？",
       en: "What future vision are you planning toward?",
       es: "¿Hacia qué visión de futuro estás planificando?",
       fr: "Vers quelle vision d'avenir vous projetez-vous ?",
@@ -736,7 +736,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "vibrant_nightlife",
         scores: { cosmopolitan: 3, mediterranean: 1 },
         text: {
-          cn: "探索充满活力的夜生活、酒吧和活动",
+          zh: "探索充满活力的夜生活、酒吧和活动",
           en: "Exploring vibrant nightlife, bars, and events",
           es: "Explorar una vida nocturna vibrante, bares y eventos",
           fr: "Explorer une vie nocturne animée, des bars et des événements",
@@ -749,7 +749,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "cozy_gatherings",
         scores: { cultural: 2, nordic: 3 },
         text: {
-          cn: "与亲密朋友的小型温馨聚会",
+          zh: "与亲密朋友的小型温馨聚会",
           en: "Cozy gatherings with close friends",
           es: "Reuniones acogedoras con amigos cercanos",
           fr: "Des moments chaleureux avec des amis proches",
@@ -762,7 +762,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "cultural_events",
         scores: { cultural: 3, modern: 1 },
         text: {
-          cn: "参加音乐会、戏剧或画廊开幕活动",
+          zh: "参加音乐会、戏剧或画廊开幕活动",
           en: "Attending concerts, theater, or gallery openings",
           es: "Asistir a conciertos, teatro o inauguraciones de galerías",
           fr: "Assister à des concerts, au théâtre ou à des vernissages",
@@ -775,7 +775,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
         id: "outdoor_evenings",
         scores: { coastal: 3, mountainous: 1, tropical: 2 },
         text: {
-          cn: "在户外度过放松的夜晚，比如篝火或野餐",
+          zh: "在户外度过放松的夜晚，比如篝火或野餐",
           en: "Relaxed evenings outdoors, bonfires or picnics",
           es: "Noches relajadas al aire libre, con fogatas o picnics",
           fr: "Des soirées détendues en plein air, autour d'un feu ou d'un pique-nique",
@@ -785,7 +785,7 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
       },
     ],
     text: {
-      cn: "你理想中的社交夜晚是什么样的？",
+      zh: "你理想中的社交夜晚是什么样的？",
       en: "What is your ideal social evening?",
       es: "¿Cómo sería tu noche social ideal?",
       fr: "À quoi ressemble votre soirée sociale idéale ?",
@@ -802,7 +802,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Nature Lovers", ko: "자연 애호가" },
     ],
     climate: {
-      cn: "寒冷的冬天",
+      zh: "寒冷的冬天",
       en: "Cold winters",
       es: "Inviernos fríos",
       fr: "Hivers froids",
@@ -825,7 +825,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       safety: 9.0,
     },
     name: {
-      cn: "加拿大",
+      zh: "加拿大",
       en: "Canada",
       es: "Canadá",
       fr: "Canada",
@@ -838,7 +838,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Nature", ko: "대자연" },
     ],
     vibe: {
-      cn: "多元文化、辽阔、礼貌",
+      zh: "多元文化、辽阔、礼貌",
       en: "Multicultural, vast, polite",
       es: "Multicultural, vasto y cortés",
       fr: "Multiculturel, vaste et poli",
@@ -852,7 +852,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Artists", ko: "예술가" },
     ],
     climate: {
-      cn: "地中海气候",
+      zh: "地中海气候",
       en: "Mediterranean",
       es: "Mediterráneo",
       fr: "Méditerranéen",
@@ -875,7 +875,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       safety: 8.0,
     },
     name: {
-      cn: "意大利",
+      zh: "意大利",
       en: "Italy",
       es: "Italia",
       fr: "Italie",
@@ -888,7 +888,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Incomparable art & history", ko: "예술과 역사" },
     ],
     vibe: {
-      cn: "历史悠久、热情、美味",
+      zh: "历史悠久、热情、美味",
       en: "Historic, passionate, and delicious",
       es: "Histórico, apasionado y delicioso",
       fr: "Historique, passionné et délicieux",
@@ -902,7 +902,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Tech Lovers", ko: "기술 애호가" },
     ],
     climate: {
-      cn: "四季分明",
+      zh: "四季分明",
       en: "Four seasons",
       es: "Cuatro estaciones",
       fr: "Quatre saisons",
@@ -925,7 +925,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       safety: 9.7,
     },
     name: {
-      cn: "日本",
+      zh: "日本",
       en: "Japan",
       es: "Japón",
       fr: "Japon",
@@ -938,7 +938,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Food & Culture", ko: "음식과 문화" },
     ],
     vibe: {
-      cn: "传统、现代、有序",
+      zh: "传统、现代、有序",
       en: "Traditional, modern, orderly",
       es: "Tradicional, moderno y ordenado",
       fr: "Traditionnel, moderne et ordonné",
@@ -952,7 +952,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Families", ko: "가족" },
     ],
     climate: {
-      cn: "寒冷的冬天，温和的夏天",
+      zh: "寒冷的冬天，温和的夏天",
       en: "Cold winters, mild summers",
       es: "Inviernos fríos y veranos suaves",
       fr: "Hivers froids, étés doux",
@@ -975,7 +975,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       safety: 9.8,
     },
     name: {
-      cn: "挪威",
+      zh: "挪威",
       en: "Norway",
       es: "Noruega",
       fr: "Norvège",
@@ -988,7 +988,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Stunning natural beauty", ko: "멋진 자연 경관" },
     ],
     vibe: {
-      cn: "宁静、壮丽、物价高",
+      zh: "宁静、壮丽、物价高",
       en: "Peaceful, majestic, and expensive",
       es: "Pacífico, majestuoso y caro",
       fr: "Paisible, majestueux et cher",
@@ -1002,7 +1002,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Families", ko: "가족" },
     ],
     climate: {
-      cn: "热带",
+      zh: "热带",
       en: "Tropical",
       es: "tropical",
       fr: "tropical",
@@ -1025,7 +1025,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       safety: 9.8,
     },
     name: {
-      cn: "新加坡",
+      zh: "新加坡",
       en: "Singapore",
       es: "Singapur",
       fr: "Singapour",
@@ -1038,7 +1038,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Global Hub", ko: "글로벌 허브" },
     ],
     vibe: {
-      cn: "现代、高效、多元文化",
+      zh: "现代、高效、多元文化",
       en: "Modern, efficient, multicultural",
       es: "Moderno, eficiente y multicultural",
       fr: "Moderne, efficace et multiculturel",
@@ -1052,7 +1052,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Designers", ko: "디자이너" },
     ],
     climate: {
-      cn: "寒冷的冬天，宜人的夏天",
+      zh: "寒冷的冬天，宜人的夏天",
       en: "Cold winters, pleasant summers",
       es: "Inviernos fríos y veranos agradables",
       fr: "Hivers froids, étés agréables",
@@ -1075,7 +1075,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       safety: 9.5,
     },
     name: {
-      cn: "瑞典",
+      zh: "瑞典",
       en: "Sweden",
       es: "Suecia",
       fr: "Suède",
@@ -1088,7 +1088,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Strong social benefits", ko: "강력한 사회 보장" },
     ],
     vibe: {
-      cn: "创新、有格调、内敛",
+      zh: "创新、有格调、内敛",
       en: "Innovative, stylish, and reserved",
       es: "Innovador, elegante y reservado",
       fr: "Innovant, élégant et réservé",
@@ -1102,7 +1102,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Budget Travelers", ko: "저예산 여행자" },
     ],
     climate: {
-      cn: "热带",
+      zh: "热带",
       en: "Tropical",
       es: "tropical",
       fr: "tropical",
@@ -1125,7 +1125,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       safety: 7.6,
     },
     name: {
-      cn: "泰国",
+      zh: "泰国",
       en: "Thailand",
       es: "Tailandia",
       fr: "Thaïlande",
@@ -1138,7 +1138,7 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       { en: "Delicious food", ko: "맛있는 음식" },
     ],
     vibe: {
-      cn: "充满活力、富有灵性、适合预算有限的人",
+      zh: "充满活力、富有灵性、适合预算有限的人",
       en: "Vibrant, spiritual, budget-friendly",
       es: "Vibrante, espiritual y económica",
       fr: "Vibrante, spirituelle et abordable",

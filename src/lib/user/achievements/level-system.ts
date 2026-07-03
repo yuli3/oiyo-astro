@@ -76,7 +76,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   // Levels 1-10: 입문자 (Beginner)
   {
     description: {
-      cn: "踏入性格世界第一步的探险家",
+      zh: "踏入性格世界第一步的探险家",
       en: "A newcomer taking first steps into the world of personality",
       es: "Un recién llegado que da sus primeros pasos en el mundo de la personalidad",
       fr: "Un nouveau venu faisant ses premiers pas dans le monde de la personnalité",
@@ -84,7 +84,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "성격의 세계에 첫 발을 내딛은 탐험가",
     },
     name: {
-      cn: "性格探险家",
+      zh: "性格探险家",
       en: "Personality Explorer",
       es: "Explorador de Personalidad",
       fr: "Explorateur de Personnalité",
@@ -94,7 +94,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "开启寻找自我之旅的人",
+      zh: "开启寻找自我之旅的人",
       en: "One who has begun the journey of self-discovery",
       es: "Alguien que ha comenzado el viaje del autodescubrimiento",
       fr: "Quelqu'un qui a commencé le voyage de la découverte de soi",
@@ -102,7 +102,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "자신의 모습을 찾아가는 여정을 시작한 사람",
     },
     name: {
-      cn: "自我发现者",
+      zh: "自我发现者",
       en: "Self Discoverer",
       es: "Descubridor de Sí Mismo",
       fr: "Découvreur de Soi",
@@ -112,7 +112,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "开始阅读心灵语言的初学者",
+      zh: "开始阅读心灵语言的初学者",
       en: "A beginner who starts to read the language of the mind",
       es: "Un principiante que comienza a leer el lenguaje de la mente",
       fr: "Un débutant qui commence à lire le langage de l'esprit",
@@ -120,7 +120,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "마음의 언어를 읽기 시작한 초심자",
     },
     name: {
-      cn: "心灵读者",
+      zh: "心灵读者",
       en: "Mind Reader",
       es: "Lector de Mentes",
       fr: "Lecteur d'Esprit",
@@ -134,7 +134,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       reference: "서당 학동",
     },
     description: {
-      cn: "积极学习性格理论的学生",
+      zh: "积极学习性格理论的学生",
       en: "An eager student learning personality theories",
       es: "Un estudiante entusiasta que aprende teorías de personalidad",
       fr: "Un étudiant enthousiaste apprenant les théories de la personnalité",
@@ -142,7 +142,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "성격 이론을 배워가는 열성적인 학생",
     },
     name: {
-      cn: "性格学子",
+      zh: "性格学子",
       en: "Personality Student",
       es: "Estudiante de Personalidad",
       fr: "Étudiant en Personnalité",
@@ -152,7 +152,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "正在打好心理学基础的学徒",
+      zh: "正在打好心理学基础的学徒",
       en: "An apprentice building foundations in psychology",
       es: "Un aprendiz que construye las bases de la psicología",
       fr: "Un apprenti établissant les bases de la psychologie",
@@ -160,7 +160,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "심리학의 기초를 닦아가는 견습생",
     },
     name: {
-      cn: "心理学徒",
+      zh: "心理学徒",
       en: "Psychology Apprentice",
       es: "Aprendiz de Psicología",
       fr: "Apprenti en Psychologie",
@@ -172,7 +172,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   // Levels 5-15: 중급자 (Intermediate)
   {
     description: {
-      cn: "能够分析性格模式的中级者",
+      zh: "能够分析性格模式的中级者",
       en: "An intermediate who can analyze personality patterns",
       es: "Un intermedio que puede analizar patrones de personalidad",
       fr: "Un intermédiaire capable d'analyser les schémas de personnalité",
@@ -180,7 +180,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "성격의 패턴을 분석할 수 있는 중급자",
     },
     name: {
-      cn: "性格分析师",
+      zh: "性格分析师",
       en: "Personality Analyst",
       es: "Analista de Personalidad",
       fr: "Analyste de Personnalité",
@@ -190,7 +190,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "能够解释复杂心理结构的人",
+      zh: "能够解释复杂心理结构的人",
       en: "One capable of interpreting complex mind structures",
       es: "Alguien capaz de interpretar estructuras mentales complejas",
       fr: "Quelqu'un capable d'interpréter des structures mentales complexes",
@@ -198,7 +198,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "복잡한 마음의 구조를 해석하는 능력자",
     },
     name: {
-      cn: "心灵解释者",
+      zh: "心灵解释者",
       en: "Mind Interpreter",
       es: "Intérprete de Mentes",
       fr: "Interprète d'Esprit",
@@ -208,7 +208,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "系统研究人格和性格的专家",
+      zh: "系统研究人格和性格的专家",
       en: "A specialist systematically studying character and personality",
       es: "Un especialista que estudia sistemáticamente el carácter y la personalidad",
       fr: "Un spécialiste étudiant systématiquement le caractère et la personnalité",
@@ -216,7 +216,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "인성과 성격을 체계적으로 연구하는 전문가",
     },
     name: {
-      cn: "人格研究员",
+      zh: "人格研究员",
       en: "Character Researcher",
       es: "Investigador de Carácter",
       fr: "Chercheur en Caractère",
@@ -230,7 +230,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       reference: "조선 선비",
     },
     description: {
-      cn: "了解他人心性并提供建议的咨询师",
+      zh: "了解他人心性并提供建议的咨询师",
       en: "A counselor who understands and advises on others' personalities",
       es: "Un consejero que entiende y aconseja sobre las personalidades de los demás",
       fr: "Un conseiller qui comprend et conseille sur les personnalités des autres",
@@ -238,7 +238,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "다른 사람의 심성을 이해하고 조언하는 상담사",
     },
     name: {
-      cn: "心性咨询师",
+      zh: "心性咨询师",
       en: "Personality Counselor",
       es: "Consejero de Personalidad",
       fr: "Conseiller en Personnalité",
@@ -248,7 +248,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "在性格研究领域具有专业知识 walls 的专家",
+      zh: "在性格研究领域具有专业知识 walls 的专家",
       en: "A specialist with professional knowledge in personality studies",
       es: "Un especialista con conocimientos profesionales en estudios de personalidad",
       fr: "Un spécialiste ayant des connaissances professionnelles en études de la personnalité",
@@ -256,7 +256,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "성격 분야의 전문적 지식을 갖춘 전문가",
     },
     name: {
-      cn: "性格专家",
+      zh: "性格专家",
       en: "Personality Specialist",
       es: "Especialista en Personalidad",
       fr: "Spécialiste en Personnalité",
@@ -268,7 +268,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   // Levels 15-25: 고급자 (Advanced)
   {
     description: {
-      cn: "达到心理学深厚境界的高手",
+      zh: "达到心理学深厚境界的高手",
       en: "A master who has reached deep levels of psychological understanding",
       es: "Un maestro que ha alcanzado niveles profundos de comprensión psicológica",
       fr: "Un maître qui a atteint des niveaux profonds de compréhension psychologique",
@@ -276,7 +276,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "심리학의 깊은 경지에 이른 고수",
     },
     name: {
-      cn: "心理高手",
+      zh: "心理高手",
       en: "Psychology Master",
       es: "Maestro de la Psicología",
       fr: "Maître en Psychologie",
@@ -290,7 +290,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       reference: "조선 대학자",
     },
     description: {
-      cn: "深入了解人性本持的贤者",
+      zh: "深入了解人性本持的贤者",
       en: "A sage with deep understanding of human nature",
       es: "Un sabio con una profunda comprensión de la naturaleza humana",
       fr: "Un sage ayant une profonde compréhension de la nature humaine",
@@ -298,7 +298,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "인간 본성을 깊이 이해하는 현자",
     },
     name: {
-      cn: "人类理解贤者",
+      zh: "人类理解贤者",
       en: "Human Understanding Sage",
       es: "Sabio de la Comprensión Humana",
       fr: "Sage de la Compréhension Humaine",
@@ -308,7 +308,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "洞察性格方方面面的贤者",
+      zh: "洞察性格方方面面的贤者",
       en: "A sage who sees through all aspects of personality",
       es: "Un sabio que ve a través de todos los aspectos de la personalidad",
       fr: "Un sage qui voit à travers tous les aspects de la personnalité",
@@ -316,7 +316,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "성격의 모든 면을 꿰뚫어 보는 현자",
     },
     name: {
-      cn: "性格贤者",
+      zh: "性格贤者",
       en: "Personality Sage",
       es: "Sabio de la Personalidad",
       fr: "Sage de la Personnalité",
@@ -326,7 +326,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "向他人传授心灵智慧的导师",
+      zh: "向他人传授心灵智慧的导师",
       en: "A teacher who imparts wisdom of the mind to others",
       es: "Un maestro que imparte sabiduría de la mente a los demás",
       fr: "Un maître qui transmet la sagesse de l'esprit aux autres",
@@ -334,7 +334,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "다른 이들에게 마음의 지혜를 전하는 스승",
     },
     name: {
-      cn: "心灵导师",
+      zh: "心灵导师",
       en: "Mind Teacher",
       es: "Maestro de la Mente",
       fr: "Maître de l'Esprit",
@@ -344,7 +344,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "在心理学领域被公认为大师的人物",
+      zh: "在心理学领域被公认为大师的人物",
       en: "A recognized grandmaster in the field of psychology",
       es: "Un gran maestro reconocido en el campo de la psicología",
       fr: "Un grand maître reconnu dans le domaine de la psychologie",
@@ -352,7 +352,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "심리학 분야의 대가로 인정받는 인물",
     },
     name: {
-      cn: "心理大家",
+      zh: "心理大家",
       en: "Psychology Grandmaster",
       es: "Gran Maestro de la Psicología",
       fr: "Grand Maître en Psychologie",
@@ -362,7 +362,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "对人格有深刻哲学洞察的思想家",
+      zh: "对人格有深刻哲学洞察的思想家",
       en: "A philosopher with deep insights into human character",
       es: "Un filósofo con profundos conocimientos sobre el carácter humano",
       fr: "Un philosophe ayant des connaissances approfondies sur le caractère humain",
@@ -370,7 +370,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "인성에 대한 철학적 통찰을 가진 사상가",
     },
     name: {
-      cn: "人格哲学家",
+      zh: "人格哲学家",
       en: "Character Philosopher",
       es: "Filósofo del Carácter",
       fr: "Philosophe du Caractère",
@@ -384,7 +384,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       reference: "조선 정사편찬관",
     },
     description: {
-      cn: "了解性格类型历史和演变的历史学家",
+      zh: "了解性格类型历史和演变的历史学家",
       en: "A historian who knows the history and evolution of personality types",
       es: "Un historiador que conoce la historia y la evolución de los tipos de personalidad",
       fr: "Un historien qui connaît l'histoire et l'évolution des types de personnalité",
@@ -392,7 +392,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "성격 유형의 역사와 변천을 아는 정서사",
     },
     name: {
-      cn: "性格历史学家",
+      zh: "性格历史学家",
       en: "Personality Historian",
       es: "Historiador de la Personalidad",
       fr: "Historien de la Personnalité",
@@ -402,7 +402,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "洞悉心灵奥秘的道士境界",
+      zh: "洞悉心灵奥秘的道士境界",
       en: "A sage who penetrates the mysteries of the mind",
       es: "Un sabio que penetra los misterios de la mente",
       fr: "Un sage qui pénètre les mystères de l'esprit",
@@ -410,7 +410,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "마음의 신비를 꿰뚫는 도인의 경지",
     },
     name: {
-      cn: "心性道士",
+      zh: "心性道士",
       en: "Mind Sage",
       es: "Sabio de la Mente",
       fr: "Sage de l'Esprit",
@@ -420,7 +420,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "对人性具有完全洞察力的大师",
+      zh: "对人性具有完全洞察力的大师",
       en: "A master with complete insight into human nature",
       es: "Un maestro con una visión completa de la naturaleza humana",
       fr: "Un maître ayant une vision complète de la nature humaine",
@@ -428,7 +428,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "인간 본성에 대한 완전한 통찰력을 가진 대가",
     },
     name: {
-      cn: "人类洞察大师",
+      zh: "人类洞察大师",
       en: "Human Insight Master",
       es: "Maestro de la Perspicacia Humana",
       fr: "Maître de l'Intuition Humaine",
@@ -438,7 +438,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "达到性格领域最高境界的宗师",
+      zh: "达到性格领域最高境界的宗师",
       en: "A grandmaster who has reached the highest level in personality studies",
       es: "Un gran maestro que ha alcanzado el nivel más alto en estudios de personalidad",
       fr: "Un grand maître ayant atteint le plus haut niveau dans les études de la personnalité",
@@ -446,7 +446,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "성격 분야의 최고 경지에 이른 종사",
     },
     name: {
-      cn: "性格宗师",
+      zh: "性格宗师",
       en: "Personality Grandmaster",
       es: "Gran Maestro de la Personalidad",
       fr: "Grand Maître de la Personnalité",
@@ -460,7 +460,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       reference: "도교 선인",
     },
     description: {
-      cn: "体悟心理学真理的仙人",
+      zh: "体悟心理学真理的仙人",
       en: "An immortal sage who has embodied the truth of psychology",
       es: "Un sabio inmortal que ha encarnado la verdad de la psicología",
       fr: "Un sage immortel qui a incarné la vérité de la psychologie",
@@ -468,7 +468,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "심리학의 진리를 체득한 선인",
     },
     name: {
-      cn: "心理仙人",
+      zh: "心理仙人",
       en: "Psychology Sage Immortal",
       es: "Inmortal Sabio de la Psicología",
       fr: "Sage Immortel de la Psychologie",
@@ -478,7 +478,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "达到人格完美的圣人",
+      zh: "达到人格完美的圣人",
       en: "A saint who has achieved perfection in character understanding",
       es: "Un santo que ha alcanzado la perfección en la comprensión del carácter",
       fr: "Un saint ayant atteint la perfection dans la compréhension du caractère",
@@ -486,7 +486,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "인성의 완전함에 이른 성인",
     },
     name: {
-      cn: "人格圣人",
+      zh: "人格圣人",
       en: "Character Saint",
       es: "Santo del Carácter",
       fr: "Saint du Caractère",
@@ -496,7 +496,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "悟透心灵所有秘密的道人",
+      zh: "悟透心灵所有秘密的道人",
       en: "An enlightened one who has realized all secrets of the mind",
       es: "Un iluminado que ha realizado todos los secretos de la mente",
       fr: "Un éveillé qui a réalisé tous les secrets de l'esprit",
@@ -504,7 +504,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "마음의 모든 비밀을 깨달은 도인",
     },
     name: {
-      cn: "心灵道人",
+      zh: "心灵道人",
       en: "Mind Enlightened One",
       es: "Iluminado de la Mente",
       fr: "Éveillé de l'Esprit",
@@ -514,7 +514,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "成为性格领域传说的永恒存在",
+      zh: "成为性格领域传说的永恒存在",
       en: "An immortal being who has become a legend in personality studies",
       es: "Un ser inmortal que se ha convertido en leyenda en los estudios de personalidad",
       fr: "Un être immortel devenu une légende dans les études de la personnalité",
@@ -522,7 +522,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "성격 분야의 전설이 된 불멸의 존재",
     },
     name: {
-      cn: "性格传说",
+      zh: "性格传说",
       en: "Personality Legend",
       es: "Leyenda de la Personalidad",
       fr: "Légende de la Personnalité",
@@ -532,7 +532,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
   },
   {
     description: {
-      cn: "在宇宙层面理解心理的终极存在",
+      zh: "在宇宙层面理解心理的终极存在",
       en: "The ultimate being who understands psychology on a cosmic scale",
       es: "El ser definitivo que entiende la psicología a escala cósmica",
       fr: "L'être ultime qui comprend la psychologie à l'échelle cosmique",
@@ -540,7 +540,7 @@ export const LEVEL_TITLES: LevelTitle[] = [
       ko: "우주적 차원에서 심리를 이해하는 궁극의 존재",
     },
     name: {
-      cn: "宇宙心理师",
+      zh: "宇宙心理师",
       en: "Cosmic Psychologist",
       es: "Psicólogo Cósmico",
       fr: "Psychologue Cosmique",
@@ -555,7 +555,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
   2: [
     {
       description: {
-        cn: "分享结果时获得额外XP",
+        zh: "分享结果时获得额外XP",
         en: "Gain bonus XP when sharing results",
         es: "Gana XP de bonificación al compartir resultados",
         fr: "Gagnez des XP bonus lors du partage des résultats",
@@ -564,7 +564,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
       },
       id: "share_bonus",
       name: {
-        cn: "分享奖金",
+        zh: "分享奖金",
         en: "Share Bonus",
         es: "Bono por Compartir",
         fr: "Bonus de Partage",
@@ -579,7 +579,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
   5: [
     {
       description: {
-        cn: "提供更详细的性格分析结果",
+        zh: "提供更详细的性格分析结果",
         en: "Access to more detailed personality analysis",
         es: "Acceso a un análisis de personalidad más detallado",
         fr: "Accès à une analyse de personnalité plus détaillée",
@@ -588,7 +588,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
       },
       id: "detailed_analysis",
       name: {
-        cn: "详细分析",
+        zh: "详细分析",
         en: "Detailed Analysis",
         es: "Análisis Detallado",
         fr: "Analyse Détaillée",
@@ -602,7 +602,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
   10: [
     {
       description: {
-        cn: "与他人的性格比较功能",
+        zh: "与他人的性格比较功能",
         en: "Personality comparison tool with others",
         es: "Herramienta de comparación de personalidad con otros",
         fr: "Outil de comparaison de personnalité avec d'autres",
@@ -611,7 +611,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
       },
       id: "comparison_tool",
       name: {
-        cn: "比较工具",
+        zh: "比较工具",
         en: "Comparison Tool",
         es: "Herramienta de Comparación",
         fr: "Outil de Comparaison",
@@ -625,7 +625,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
   15: [
     {
       description: {
-        cn: "获取性格趋势和统计信息",
+        zh: "获取性格趋势和统计信息",
         en: "Access to personality trends and statistics",
         es: "Acceso a tendencias y estadísticas de personalidad",
         fr: "Accès aux tendances et statistiques de personnalité",
@@ -634,7 +634,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
       },
       id: "trend_insights",
       name: {
-        cn: "趋势洞察",
+        zh: "趋势洞察",
         en: "Trend Insights",
         es: "Perspectivas de Tendencia",
         fr: "Aperçus des Tendances",
@@ -648,7 +648,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
   20: [
     {
       description: {
-        cn: "设置个性化徽章和标题",
+        zh: "设置个性化徽章和标题",
         en: "Customize personal badges and titles",
         es: "Personalizar insignias y títulos personales",
         fr: "Personnaliser les badges et titres personnels",
@@ -657,7 +657,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
       },
       id: "custom_badges",
       name: {
-        cn: "自定义徽章",
+        zh: "自定义徽章",
         en: "Custom Badges",
         es: "Insignias Personalizadas",
         fr: "Badges Personnalisés",
@@ -671,7 +671,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
   25: [
     {
       description: {
-        cn: "能够向其他用户提供建议",
+        zh: "能够向其他用户提供建议",
         en: "Ability to provide advice to other users",
         es: "Capacidad de brindar consejos a otros usuarios",
         fr: "Capacité à fournir des conseils aux autres utilisateurs",
@@ -680,7 +680,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
       },
       id: "mentor_status",
       name: {
-        cn: "导师资格",
+        zh: "导师资格",
         en: "Mentor Status",
         es: "Estado de Mentor",
         fr: "Statut de Mentor",
@@ -694,7 +694,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
   30: [
     {
       description: {
-        cn: "基于AI的个性化分析服务",
+        zh: "基于AI的个性化分析服务",
         en: "AI-powered personalized analysis service",
         es: "Servicio de análisis personalizado basado en IA",
         fr: "Service d'analyse personnalisée alimenté par l'IA",
@@ -703,7 +703,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
       },
       id: "advanced_ai",
       name: {
-        cn: "高级AI分析",
+        zh: "高级AI分析",
         en: "Advanced AI Analysis",
         es: "Análisis de IA Avanzado",
         fr: "Analyse IA Avancée",
@@ -717,7 +717,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
   35: [
     {
       description: {
-        cn: "在社区中获得传奇地位",
+        zh: "在社区中获得传奇地位",
         en: "Achieve legendary status in the community",
         es: "Lograr el estado de leyenda en la comunidad",
         fr: "Atteindre un statut légendaire dans la communauté",
@@ -726,7 +726,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
       },
       id: "legend_status",
       name: {
-        cn: "传奇地位",
+        zh: "传奇地位",
         en: "Legend Status",
         es: "Estado de Leyenda",
         fr: "Statut de Légende",
@@ -740,7 +740,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
   40: [
     {
       description: {
-        cn: "访问最深层性格分析",
+        zh: "访问最深层性格分析",
         en: "Access to the deepest level of personality analysis",
         es: "Acceso al nivel más profundo de análisis de personalidad",
         fr: "Accès au niveau le plus profond de l'analyse de la personnalité",
@@ -749,7 +749,7 @@ export const LEVEL_PERKS: Record<number, LevelPerk[]> = {
       },
       id: "cosmic_insights",
       name: {
-        cn: "宇宙洞察",
+        zh: "宇宙洞察",
         en: "Cosmic Insights",
         es: "Perspicacia Cósmica",
         fr: "Intuition Cosmique",
@@ -766,7 +766,7 @@ export const XP_SOURCES: Record<string, XPSource> = {
   community_post: {
     baseXP: 30,
     description: {
-      cn: "发布社区文章",
+      zh: "发布社区文章",
       en: "Create community post",
       es: "Crear publicación en la comunidad",
       fr: "Créer une publication dans la communauté",
@@ -780,7 +780,7 @@ export const XP_SOURCES: Record<string, XPSource> = {
   cultural_test: {
     baseXP: 75,
     description: {
-      cn: "韩国传统测试（四柱命理，血型）",
+      zh: "韩国传统测试（四柱命理，血型）",
       en: "Korean traditional tests (Saju, Blood type)",
       es: "Pruebas tradicionales coreanas (Saju, tipo de sangre)",
       fr: "Tests traditionnels coréens (Saju, groupe sanguin)",
@@ -794,7 +794,7 @@ export const XP_SOURCES: Record<string, XPSource> = {
   daily_visit: {
     baseXP: 15,
     description: {
-      cn: "每日访问",
+      zh: "每日访问",
       en: "Daily visit",
       es: "Visita diaria",
       fr: "Visite quotidienne",
@@ -808,7 +808,7 @@ export const XP_SOURCES: Record<string, XPSource> = {
   helping_others: {
     baseXP: 40,
     description: {
-      cn: "帮助其他用户",
+      zh: "帮助其他用户",
       en: "Help other users",
       es: "Ayudar a otros usuarios",
       fr: "Aider d'autres utilisateurs",
@@ -821,7 +821,7 @@ export const XP_SOURCES: Record<string, XPSource> = {
   perfect_score: {
     baseXP: 100,
     description: {
-      cn: "完美的测试分数",
+      zh: "完美的测试分数",
       en: "Perfect test score",
       es: "Puntaje de prueba perfecto",
       fr: "Score de test parfait",
@@ -834,7 +834,7 @@ export const XP_SOURCES: Record<string, XPSource> = {
   result_sharing: {
     baseXP: 25,
     description: {
-      cn: "分享测试结果",
+      zh: "分享测试结果",
       en: "Share test results",
       es: "Compartir resultados de la prueba",
       fr: "Partager les résultats du test",
@@ -848,7 +848,7 @@ export const XP_SOURCES: Record<string, XPSource> = {
   streak_bonus: {
     baseXP: 20,
     description: {
-      cn: "连续活动奖金",
+      zh: "连续活动奖金",
       en: "Activity streak bonus",
       es: "Bono por racha de actividad",
       fr: "Bonus de série d'activité",
@@ -862,7 +862,7 @@ export const XP_SOURCES: Record<string, XPSource> = {
   test_completion: {
     baseXP: 50,
     description: {
-      cn: "完成性格测试",
+      zh: "完成性格测试",
       en: "Complete personality test",
       es: "Prueba de personalidad completada",
       fr: "Test de personnalité terminé",

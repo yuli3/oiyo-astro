@@ -108,7 +108,7 @@ export function EnhancedResultSharing({
     const testUrl = `${baseUrl}/${locale}/${testName}`;
 
     const shareTexts = {
-      cn: {
+      zh: {
         default: `${result.emoji} ${result.title}\n\n${result.description}\n\n✨ ${result.traits.slice(0, 2).join(", ")}\n\n快来测试一下吧！ 👉 oiyo.net\n\n#性格测试 #OIYO`,
         facebook: `朋友们，刚做了 ${testName}，结果太棒了！ 🤯\n\n✨ 我的类型: ${result.title} ${result.emoji}\n\n${result.description}\n\n主要特征: ${result.traits.slice(0, 3).join(", ")}\n\n你也应该尝试一下！`,
         instagram: `${result.emoji} ${result.title}\n\n刚做了 ${testName}，哇...出奇地准！ 😅\n\n✨ 主要特征: ${result.traits.slice(0, 2).join(", ")}\n\n#性格测试 #${testName.replace(/\s+/g, "")} #OIYO #自我发现 #心理学`,

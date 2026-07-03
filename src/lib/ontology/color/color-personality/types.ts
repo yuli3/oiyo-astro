@@ -36,7 +36,7 @@ export const COLOR_PERSONALITY_LABELS: Record<
   Locale,
   Record<string, string>
 > = {
-  cn: {
+  zh: {
     blue: "深思熟虑的分析师",
     green: "和谐的支持者",
     red: "充满活力的领导者",
@@ -78,7 +78,7 @@ export const COLOR_PERSONALITY_DESCRIPTIONS: Record<
   Locale,
   Record<string, string>
 > = {
-  cn: {
+  zh: {
     blue: "你善于分析、可靠且注重细节。",
     green: "你富有同情心、稳定且注重和谐。",
     red: "你充满动力、志向远大，是天生的领导者。",
@@ -126,7 +126,7 @@ export const COLOR_PERSONALITY_TRAITS: Record<
   Locale,
   Record<string, string[]>
 > = {
-  cn: {} as any,
+  zh: {} as any,
   en: {
     blue: [
       "Analytical and logical",
@@ -201,7 +201,7 @@ export const COLOR_PERSONALITY_STRENGTHS: Record<
   Locale,
   Record<string, string[]>
 > = {
-  cn: {} as any,
+  zh: {} as any,
   en: {
     blue: [
       "Excellent problem-solving skills",
@@ -276,7 +276,7 @@ export const COLOR_PERSONALITY_CHALLENGES: Record<
   Locale,
   Record<string, string[]>
 > = {
-  cn: {} as any,
+  zh: {} as any,
   en: {
     blue: [
       "Can be overly critical or perfectionist",
@@ -351,7 +351,7 @@ export const COLOR_PERSONALITY_IDEAL_COLORS: Record<
   Locale,
   Record<string, string[]>
 > = {
-  cn: {} as any,
+  zh: {} as any,
   en: {
     blue: [
       "Calm blues and navy",
@@ -427,7 +427,7 @@ export const COLOR_PERSONALITY_CAREER_SUGGESTIONS: Record<
   Locale,
   Record<string, string[]>
 > = {
-  cn: {} as any,
+  zh: {} as any,
   en: {
     blue: [
       "Data analyst or scientist",
@@ -519,7 +519,7 @@ export const COLOR_PERSONALITY_RELATIONSHIP_TIPS: Record<
   Locale,
   Record<string, string[]>
 > = {
-  cn: {} as any,
+  zh: {} as any,
   en: {
     blue: [
       "Express emotions more openly",

@@ -1,7 +1,6 @@
 // Locale coverage for wiki `meaning-of-*` definition pages that ontology links to.
-// Verified live 2026-07-01. Render a link only where the page exists (404-safe).
-// saju is being localized to all 6 by the wiki translation campaign — update its
-// locale list as translations land (currently ko + en pilot).
+// Verified live 2026-07-01; saju 6-locale verified 2026-07-03 (wiki 0f2c80b deploy).
+// Render a link only where the page exists (404-safe).
 export const WIKI_DEF_LOCALES: Record<string, string[]> = {
   'meaning-of-astrology': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
   'meaning-of-mbti': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
@@ -12,7 +11,7 @@ export const WIKI_DEF_LOCALES: Record<string, string[]> = {
   'meaning-of-palmistry': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
   'meaning-of-blood-type-a': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
   'meaning-of-chinese-zodiac-dragon': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
-  'meaning-of-saju-60gapja': ['ko', 'en'],
+  'meaning-of-saju-60gapja': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
 };
 
 export function wikiDefUrl(slug: string, locale: string): string | null {

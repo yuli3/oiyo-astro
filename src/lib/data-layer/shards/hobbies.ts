@@ -9,7 +9,7 @@ export const HOBBIES: Hobby[] = [
   // Creative Hobbies
   {
     benefits: {
-      cn: [
+      zh: [
         "Reduces stress",
         "Improves focus",
         "Boosts creativity",
@@ -45,7 +45,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["creative", "relaxing", "indoor", "solo"],
     description: {
-      cn: "Express yourself through colors and brushstrokes. From watercolors to acrylics, discover your artistic voice.",
+      zh: "Express yourself through colors and brushstrokes. From watercolors to acrylics, discover your artistic voice.",
       en: "Express yourself through colors and brushstrokes. From watercolors to acrylics, discover your artistic voice.",
       es: "Express yourself through colors and brushstrokes. From watercolors to acrylics, discover your artistic voice.",
       fr: "Express yourself through colors and brushstrokes. From watercolors to acrylics, discover your artistic voice.",
@@ -54,7 +54,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Get basic supplies: canvas, brushes, and paints",
         "Watch beginner tutorials on YouTube",
         "Start with simple subjects like fruits or landscapes",
@@ -94,7 +94,7 @@ export const HOBBIES: Hobby[] = [
     id: "painting",
     imageEmoji: "🎨",
     materials: {
-      cn: [
+      zh: [
         "Canvas or paper",
         "Brushes (various sizes)",
         "Acrylic or watercolor paints",
@@ -160,7 +160,7 @@ export const HOBBIES: Hobby[] = [
       tired: 60,
     },
     name: {
-      cn: "Painting",
+      zh: "Painting",
       en: "Painting",
       es: "Painting",
       fr: "Painting",
@@ -172,7 +172,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Improves communication",
         "Processes emotions",
         "Enhances creativity",
@@ -208,7 +208,7 @@ export const HOBBIES: Hobby[] = [
     budget: "free",
     category: ["creative", "intellectual", "relaxing", "indoor", "solo"],
     description: {
-      cn: "Craft stories, poems, or journal entries. Let your imagination flow onto the page.",
+      zh: "Craft stories, poems, or journal entries. Let your imagination flow onto the page.",
       en: "Craft stories, poems, or journal entries. Let your imagination flow onto the page.",
       es: "Craft stories, poems, or journal entries. Let your imagination flow onto the page.",
       fr: "Craft stories, poems, or journal entries. Let your imagination flow onto the page.",
@@ -217,7 +217,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Start with free writing for 10 minutes daily",
         "Join online writing communities",
         "Read widely in your preferred genre",
@@ -257,7 +257,7 @@ export const HOBBIES: Hobby[] = [
     id: "writing",
     imageEmoji: "✍️",
     materials: {
-      cn: [
+      zh: [
         "Notebook or computer",
         "Writing app (optional)",
         "Comfortable space",
@@ -305,7 +305,7 @@ export const HOBBIES: Hobby[] = [
       sad: 85,
     },
     name: {
-      cn: "Creative Writing",
+      zh: "Creative Writing",
       en: "Creative Writing",
       es: "Creative Writing",
       fr: "Creative Writing",
@@ -324,7 +324,7 @@ export const HOBBIES: Hobby[] = [
   // Physical Hobbies
   {
     benefits: {
-      cn: [
+      zh: [
         "Increases flexibility",
         "Reduces stress",
         "Improves posture",
@@ -360,7 +360,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["physical", "relaxing", "indoor", "solo"],
     description: {
-      cn: "Connect mind and body through flowing movements and breathwork. Find balance and flexibility.",
+      zh: "Connect mind and body through flowing movements and breathwork. Find balance and flexibility.",
       en: "Connect mind and body through flowing movements and breathwork. Find balance and flexibility.",
       es: "Connect mind and body through flowing movements and breathwork. Find balance and flexibility.",
       fr: "Connect mind and body through flowing movements and breathwork. Find balance and flexibility.",
@@ -369,7 +369,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Follow beginner yoga videos on YouTube",
         "Start with 10-15 minute sessions",
         "Get a yoga mat for comfort",
@@ -409,7 +409,7 @@ export const HOBBIES: Hobby[] = [
     id: "yoga",
     imageEmoji: "🧘",
     materials: {
-      cn: [
+      zh: [
         "Yoga mat",
         "Comfortable clothing",
         "Quiet space",
@@ -461,7 +461,7 @@ export const HOBBIES: Hobby[] = [
       tired: 90,
     },
     name: {
-      cn: "Yoga",
+      zh: "Yoga",
       en: "Yoga",
       es: "Yoga",
       fr: "Yoga",
@@ -473,7 +473,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Improves cardiovascular health",
         "Boosts mood",
         "Burns calories",
@@ -509,7 +509,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["physical", "outdoor", "solo"],
     description: {
-      cn: "Experience the runner's high. Build endurance and clear your mind.",
+      zh: "Experience the runner's high. Build endurance and clear your mind.",
       en: "Experience the runner's high. Build endurance and clear your mind.",
       es: "Experience the runner's high. Build endurance and clear your mind.",
       fr: "Experience the runner's high. Build endurance and clear your mind.",
@@ -518,7 +518,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Start with walk-run intervals",
         "Get proper running shoes",
         "Run 3 times per week",
@@ -558,7 +558,7 @@ export const HOBBIES: Hobby[] = [
     id: "running",
     imageEmoji: "🏃",
     materials: {
-      cn: [
+      zh: [
         "Running shoes",
         "Comfortable athletic wear",
         "Optional: fitness tracker",
@@ -605,7 +605,7 @@ export const HOBBIES: Hobby[] = [
       tired: 85,
     },
     name: {
-      cn: "Running",
+      zh: "Running",
       en: "Running",
       es: "Running",
       fr: "Running",
@@ -624,7 +624,7 @@ export const HOBBIES: Hobby[] = [
   // Social Hobbies
   {
     benefits: {
-      cn: [
+      zh: [
         "Improves social skills",
         "Enhances strategic thinking",
         "Builds friendships",
@@ -665,7 +665,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["social", "intellectual", "indoor", "group"],
     description: {
-      cn: "Enjoy strategic fun with friends. From party games to complex strategy.",
+      zh: "Enjoy strategic fun with friends. From party games to complex strategy.",
       en: "Enjoy strategic fun with friends. From party games to complex strategy.",
       es: "Enjoy strategic fun with friends. From party games to complex strategy.",
       fr: "Enjoy strategic fun with friends. From party games to complex strategy.",
@@ -674,7 +674,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Try popular gateway games like Ticket to Ride or Catan",
         "Visit local board game cafes",
         "Join board game meetup groups",
@@ -714,7 +714,7 @@ export const HOBBIES: Hobby[] = [
     id: "board-games",
     imageEmoji: "🎲",
     materials: {
-      cn: [
+      zh: [
         "Board games (start with 2-3)",
         "Table space",
         "Friends or family",
@@ -758,7 +758,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { calm: 75, excited: 95, grateful: 85, happy: 95, neutral: 80 },
     name: {
-      cn: "Board Games",
+      zh: "Board Games",
       en: "Board Games",
       es: "Board Games",
       fr: "Board Games",
@@ -777,7 +777,7 @@ export const HOBBIES: Hobby[] = [
   // Intellectual Hobbies
   {
     benefits: {
-      cn: [
+      zh: [
         "Improves cognitive function",
         "Enhances career opportunities",
         "Connects cultures",
@@ -813,7 +813,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["intellectual", "solo", "indoor"],
     description: {
-      cn: "Open doors to new cultures and people. Master a new language step by step.",
+      zh: "Open doors to new cultures and people. Master a new language step by step.",
       en: "Open doors to new cultures and people. Master a new language step by step.",
       es: "Open doors to new cultures and people. Master a new language step by step.",
       fr: "Open doors to new cultures and people. Master a new language step by step.",
@@ -822,7 +822,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "intermediate",
     howToStart: {
-      cn: [
+      zh: [
         "Use apps like Duolingo or Babbel for 15 min daily",
         "Watch shows in target language with subtitles",
         "Find language exchange partners",
@@ -862,7 +862,7 @@ export const HOBBIES: Hobby[] = [
     id: "learning-language",
     imageEmoji: "🗣️",
     materials: {
-      cn: [
+      zh: [
         "Language learning app",
         "Notebook",
         "Textbook (optional)",
@@ -906,7 +906,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { calm: 90, excited: 75, grateful: 85, happy: 80, neutral: 85 },
     name: {
-      cn: "Language Learning",
+      zh: "Language Learning",
       en: "Language Learning",
       es: "Language Learning",
       fr: "Language Learning",
@@ -924,7 +924,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Saves money",
         "Healthier eating",
         "Creative expression",
@@ -960,7 +960,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["creative", "indoor", "solo"],
     description: {
-      cn: "Create delicious meals and explore flavors. Turn your kitchen into a creative lab.",
+      zh: "Create delicious meals and explore flavors. Turn your kitchen into a creative lab.",
       en: "Create delicious meals and explore flavors. Turn your kitchen into a creative lab.",
       es: "Create delicious meals and explore flavors. Turn your kitchen into a creative lab.",
       fr: "Create delicious meals and explore flavors. Turn your kitchen into a creative lab.",
@@ -969,7 +969,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Start with simple recipes (pasta, stir-fry)",
         "Watch cooking videos for techniques",
         "Invest in basic kitchen tools",
@@ -1009,7 +1009,7 @@ export const HOBBIES: Hobby[] = [
     id: "cooking",
     imageEmoji: "🍳",
     materials: {
-      cn: [
+      zh: [
         "Basic knife",
         "Cutting board",
         "Pots and pans",
@@ -1053,7 +1053,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { calm: 90, excited: 75, grateful: 85, happy: 90, neutral: 80 },
     name: {
-      cn: "Cooking",
+      zh: "Cooking",
       en: "Cooking",
       es: "Cooking",
       fr: "Cooking",
@@ -1072,7 +1072,7 @@ export const HOBBIES: Hobby[] = [
   // Relaxing Hobbies
   {
     benefits: {
-      cn: [
+      zh: [
         "Reduces stress",
         "Provides fresh produce",
         "Improves mood",
@@ -1108,7 +1108,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["relaxing", "outdoor", "solo", "physical"],
     description: {
-      cn: "Nurture plants and watch them grow. Connect with nature and create your own green space.",
+      zh: "Nurture plants and watch them grow. Connect with nature and create your own green space.",
       en: "Nurture plants and watch them grow. Connect with nature and create your own green space.",
       es: "Nurture plants and watch them grow. Connect with nature and create your own green space.",
       fr: "Nurture plants and watch them grow. Connect with nature and create your own green space.",
@@ -1117,7 +1117,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Start with easy plants like herbs or succulents",
         "Get basic gardening tools",
         "Learn about your climate zone",
@@ -1157,7 +1157,7 @@ export const HOBBIES: Hobby[] = [
     id: "gardening",
     imageEmoji: "🌱",
     materials: {
-      cn: [
+      zh: [
         "Pots or garden bed",
         "Soil",
         "Seeds or seedlings",
@@ -1212,7 +1212,7 @@ export const HOBBIES: Hobby[] = [
       tired: 80,
     },
     name: {
-      cn: "Gardening",
+      zh: "Gardening",
       en: "Gardening",
       es: "Gardening",
       fr: "Gardening",
@@ -1230,7 +1230,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Preserves memories",
         "Enhances observation skills",
         "Creative outlet",
@@ -1266,7 +1266,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["creative", "outdoor", "solo"],
     description: {
-      cn: "Capture moments and see the world through a lens. Express your unique perspective.",
+      zh: "Capture moments and see the world through a lens. Express your unique perspective.",
       en: "Capture moments and see the world through a lens. Express your unique perspective.",
       es: "Capture moments and see the world through a lens. Express your unique perspective.",
       fr: "Capture moments and see the world through a lens. Express your unique perspective.",
@@ -1275,7 +1275,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Start with your smartphone camera",
         "Learn composition basics (rule of thirds)",
         "Take photos daily",
@@ -1315,7 +1315,7 @@ export const HOBBIES: Hobby[] = [
     id: "photography",
     imageEmoji: "📸",
     materials: {
-      cn: ["Camera or smartphone", "Photo editing app", "Tripod (optional)"],
+      zh: ["Camera or smartphone", "Photo editing app", "Tripod (optional)"],
       en: ["Camera or smartphone", "Photo editing app", "Tripod (optional)"],
       es: ["Camera or smartphone", "Photo editing app", "Tripod (optional)"],
       fr: ["Camera or smartphone", "Photo editing app", "Tripod (optional)"],
@@ -1333,7 +1333,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { calm: 90, excited: 85, grateful: 95, happy: 90, neutral: 75 },
     name: {
-      cn: "Photography",
+      zh: "Photography",
       en: "Photography",
       es: "Photography",
       fr: "Photography",
@@ -1352,7 +1352,7 @@ export const HOBBIES: Hobby[] = [
   // New Hobbies for Lifestyle Curator
   {
     benefits: {
-      cn: [
+      zh: [
         "Improves cardiovascular health",
         "Clears the mind",
         "Connects with nature",
@@ -1393,7 +1393,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["outdoor", "physical", "social", "group", "solo"],
     description: {
-      cn: "Conquer peaks and breathe fresh air. A perfect mix of exercise and nature.",
+      zh: "Conquer peaks and breathe fresh air. A perfect mix of exercise and nature.",
       en: "Conquer peaks and breathe fresh air. A perfect mix of exercise and nature.",
       es: "Conquer peaks and breathe fresh air. A perfect mix of exercise and nature.",
       fr: "Conquer peaks and breathe fresh air. A perfect mix of exercise and nature.",
@@ -1402,7 +1402,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Find a local trail for beginners",
         "Wear comfortable shoes",
         "Bring water and snacks",
@@ -1442,7 +1442,7 @@ export const HOBBIES: Hobby[] = [
     id: "hiking",
     imageEmoji: "⛰️",
     materials: {
-      cn: [
+      zh: [
         "Hiking boots/shoes",
         "Backpack",
         "Water bottle",
@@ -1492,7 +1492,7 @@ export const HOBBIES: Hobby[] = [
       tired: 85,
     },
     name: {
-      cn: "Hiking",
+      zh: "Hiking",
       en: "Hiking",
       es: "Hiking",
       fr: "Hiking",
@@ -1510,7 +1510,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Improves focus",
         "Tactile therapy",
         "Creative expression",
@@ -1546,7 +1546,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["creative", "relaxing", "indoor", "solo"],
     description: {
-      cn: "Shape clay into beautiful forms. A tactile and meditative experience.",
+      zh: "Shape clay into beautiful forms. A tactile and meditative experience.",
       en: "Shape clay into beautiful forms. A tactile and meditative experience.",
       es: "Shape clay into beautiful forms. A tactile and meditative experience.",
       fr: "Shape clay into beautiful forms. A tactile and meditative experience.",
@@ -1555,7 +1555,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Take a one-day class",
         "Learn hand-building techniques first",
         "Watch pottery throwing videos",
@@ -1595,7 +1595,7 @@ export const HOBBIES: Hobby[] = [
     id: "pottery",
     imageEmoji: "🏺",
     materials: {
-      cn: [
+      zh: [
         "Clay",
         "Pottery wheel (for throwing)",
         "Kiln access",
@@ -1638,7 +1638,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { anxious: 95, calm: 90, frustrated: 90, happy: 80, sad: 85 },
     name: {
-      cn: "Pottery",
+      zh: "Pottery",
       en: "Pottery",
       es: "Pottery",
       fr: "Pottery",
@@ -1656,7 +1656,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Enhances logical thinking",
         "Career skills",
         "Problem solving",
@@ -1692,7 +1692,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["intellectual", "creative", "indoor", "solo"],
     description: {
-      cn: "Build digital worlds with logic. Solve problems and create software.",
+      zh: "Build digital worlds with logic. Solve problems and create software.",
       en: "Build digital worlds with logic. Solve problems and create software.",
       es: "Build digital worlds with logic. Solve problems and create software.",
       fr: "Build digital worlds with logic. Solve problems and create software.",
@@ -1701,7 +1701,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "intermediate",
     howToStart: {
-      cn: [
+      zh: [
         "Try free courses on Codecademy or freeCodeCamp",
         "Pick a simple project like a website",
         "Learn Python or JavaScript",
@@ -1741,7 +1741,7 @@ export const HOBBIES: Hobby[] = [
     id: "coding",
     imageEmoji: "💻",
     materials: {
-      cn: ["Computer", "Internet connection", "Code editor (VS Code)"],
+      zh: ["Computer", "Internet connection", "Code editor (VS Code)"],
       en: ["Computer", "Internet connection", "Code editor (VS Code)"],
       es: ["Computer", "Internet connection", "Code editor (VS Code)"],
       fr: ["Computer", "Internet connection", "Code editor (VS Code)"],
@@ -1760,7 +1760,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { calm: 90, frustrated: 50, happy: 80, neutral: 90, tired: 60 },
     name: {
-      cn: "Coding",
+      zh: "Coding",
       en: "Coding",
       es: "Coding",
       fr: "Coding",
@@ -1778,7 +1778,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Stress relief",
         "Share with others",
         "Precision and patience",
@@ -1814,7 +1814,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["creative", "indoor", "solo", "social"],
     description: {
-      cn: "The science of sweetness. Create delicious pastries and breads.",
+      zh: "The science of sweetness. Create delicious pastries and breads.",
       en: "The science of sweetness. Create delicious pastries and breads.",
       es: "The science of sweetness. Create delicious pastries and breads.",
       fr: "The science of sweetness. Create delicious pastries and breads.",
@@ -1823,7 +1823,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "intermediate",
     howToStart: {
-      cn: [
+      zh: [
         "Start with cookies or muffins",
         "Follow recipes exactly",
         "Get basic measuring tools",
@@ -1863,7 +1863,7 @@ export const HOBBIES: Hobby[] = [
     id: "baking",
     imageEmoji: "🧁",
     materials: {
-      cn: ["Oven", "Mixing bowls", "Measuring cups/spoons", "Baking pans"],
+      zh: ["Oven", "Mixing bowls", "Measuring cups/spoons", "Baking pans"],
       en: ["Oven", "Mixing bowls", "Measuring cups/spoons", "Baking pans"],
       es: ["Oven", "Mixing bowls", "Measuring cups/spoons", "Baking pans"],
       fr: ["Oven", "Mixing bowls", "Measuring cups/spoons", "Baking pans"],
@@ -1882,7 +1882,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { anxious: 90, grateful: 85, happy: 85, loving: 95, sad: 90 },
     name: {
-      cn: "Baking",
+      zh: "Baking",
       en: "Baking",
       es: "Baking",
       fr: "Baking",
@@ -1894,7 +1894,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Cardio exercise",
         "Boosts confidence",
         "Body coordination",
@@ -1930,7 +1930,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["physical", "creative", "social", "indoor", "group"],
     description: {
-      cn: "Move your body to the rhythm. Express yourself and get fit.",
+      zh: "Move your body to the rhythm. Express yourself and get fit.",
       en: "Move your body to the rhythm. Express yourself and get fit.",
       es: "Move your body to the rhythm. Express yourself and get fit.",
       fr: "Move your body to the rhythm. Express yourself and get fit.",
@@ -1939,7 +1939,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Follow YouTube dance workouts",
         "Join a beginner class",
         "Just move to music you love",
@@ -1979,7 +1979,7 @@ export const HOBBIES: Hobby[] = [
     id: "dancing",
     imageEmoji: "💃",
     materials: {
-      cn: [
+      zh: [
         "Comfortable clothes",
         "Music",
         "Space to move",
@@ -2029,7 +2029,7 @@ export const HOBBIES: Hobby[] = [
       sad: 80,
     },
     name: {
-      cn: "Dancing",
+      zh: "Dancing",
       en: "Dancing",
       es: "Dancing",
       fr: "Dancing",
@@ -2047,7 +2047,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Reduces anxiety",
         "Improves focus",
         "Emotional stability",
@@ -2083,7 +2083,7 @@ export const HOBBIES: Hobby[] = [
     budget: "free",
     category: ["relaxing", "intellectual", "indoor", "solo"],
     description: {
-      cn: "Find inner peace and clarity. Practice mindfulness in daily life.",
+      zh: "Find inner peace and clarity. Practice mindfulness in daily life.",
       en: "Find inner peace and clarity. Practice mindfulness in daily life.",
       es: "Find inner peace and clarity. Practice mindfulness in daily life.",
       fr: "Find inner peace and clarity. Practice mindfulness in daily life.",
@@ -2092,7 +2092,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Use apps like Headspace or Calm",
         "Start with 5 minutes a day",
         "Focus on your breath",
@@ -2132,7 +2132,7 @@ export const HOBBIES: Hobby[] = [
     id: "meditation",
     imageEmoji: "🧘‍♂️",
     materials: {
-      cn: ["Quiet space", "Cushion or chair", "Timer"],
+      zh: ["Quiet space", "Cushion or chair", "Timer"],
       en: ["Quiet space", "Cushion or chair", "Timer"],
       es: ["Quiet space", "Cushion or chair", "Timer"],
       fr: ["Quiet space", "Cushion or chair", "Timer"],
@@ -2151,7 +2151,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { anxious: 95, calm: 80, sad: 85, stressed: 95, tired: 90 },
     name: {
-      cn: "Meditation",
+      zh: "Meditation",
       en: "Meditation",
       es: "Meditation",
       fr: "Meditation",
@@ -2169,7 +2169,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Improves visual-spatial reasoning",
         "Meditative focus",
         "Satisfaction of completion",
@@ -2210,7 +2210,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["relaxing", "intellectual", "indoor", "solo", "group"],
     description: {
-      cn: "Piece together beautiful images. A calming activity for focus.",
+      zh: "Piece together beautiful images. A calming activity for focus.",
       en: "Piece together beautiful images. A calming activity for focus.",
       es: "Piece together beautiful images. A calming activity for focus.",
       fr: "Piece together beautiful images. A calming activity for focus.",
@@ -2219,7 +2219,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Start with 500-piece puzzles",
         "Sort pieces by edge and color",
         "Use a puzzle mat",
@@ -2259,7 +2259,7 @@ export const HOBBIES: Hobby[] = [
     id: "puzzle",
     imageEmoji: "🧩",
     materials: {
-      cn: ["Puzzle", "Large table", "Sorting trays", "Puzzle glue (optional)"],
+      zh: ["Puzzle", "Large table", "Sorting trays", "Puzzle glue (optional)"],
       en: ["Puzzle", "Large table", "Sorting trays", "Puzzle glue (optional)"],
       es: ["Puzzle", "Large table", "Sorting trays", "Puzzle glue (optional)"],
       fr: ["Puzzle", "Large table", "Sorting trays", "Puzzle glue (optional)"],
@@ -2278,7 +2278,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { anxious: 90, bored: 90, calm: 85, neutral: 80, tired: 80 },
     name: {
-      cn: "Jigsaw Puzzles",
+      zh: "Jigsaw Puzzles",
       en: "Jigsaw Puzzles",
       es: "Jigsaw Puzzles",
       fr: "Jigsaw Puzzles",
@@ -2296,7 +2296,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Improves fine motor skills",
         "Calming and meditative",
         "Create handmade gifts",
@@ -2332,7 +2332,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["creative", "relaxing", "indoor", "solo"],
     description: {
-      cn: "The art of beautiful writing. Create stunning cards and artwork.",
+      zh: "The art of beautiful writing. Create stunning cards and artwork.",
       en: "The art of beautiful writing. Create stunning cards and artwork.",
       es: "The art of beautiful writing. Create stunning cards and artwork.",
       fr: "The art of beautiful writing. Create stunning cards and artwork.",
@@ -2341,7 +2341,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Get a brush pen or calligraphy marker",
         "Practice basic strokes",
         "Copy alphabets/fonts",
@@ -2381,7 +2381,7 @@ export const HOBBIES: Hobby[] = [
     id: "calligraphy",
     imageEmoji: "✒️",
     materials: {
-      cn: ["Brush pens", "Smooth paper", "Practice sheets", "Ink (optional)"],
+      zh: ["Brush pens", "Smooth paper", "Practice sheets", "Ink (optional)"],
       en: ["Brush pens", "Smooth paper", "Practice sheets", "Ink (optional)"],
       es: ["Brush pens", "Smooth paper", "Practice sheets", "Ink (optional)"],
       fr: ["Brush pens", "Smooth paper", "Practice sheets", "Ink (optional)"],
@@ -2400,7 +2400,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { anxious: 85, calm: 95, grateful: 90, neutral: 85, sad: 80 },
     name: {
-      cn: "Calligraphy",
+      zh: "Calligraphy",
       en: "Calligraphy",
       es: "Calligraphy",
       fr: "Calligraphy",
@@ -2412,7 +2412,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: ["Digital detox", "Survival skills", "Fresh air", "Bonding time"],
+      zh: ["Digital detox", "Survival skills", "Fresh air", "Bonding time"],
       en: ["Digital detox", "Survival skills", "Fresh air", "Bonding time"],
       es: ["Digital detox", "Survival skills", "Fresh air", "Bonding time"],
       fr: ["Digital detox", "Survival skills", "Fresh air", "Bonding time"],
@@ -2423,7 +2423,7 @@ export const HOBBIES: Hobby[] = [
     budget: "high",
     category: ["outdoor", "relaxing", "social", "group", "solo"],
     description: {
-      cn: "Sleep under the stars. Disconnect from tech and reconnect with nature.",
+      zh: "Sleep under the stars. Disconnect from tech and reconnect with nature.",
       en: "Sleep under the stars. Disconnect from tech and reconnect with nature.",
       es: "Sleep under the stars. Disconnect from tech and reconnect with nature.",
       fr: "Sleep under the stars. Disconnect from tech and reconnect with nature.",
@@ -2432,7 +2432,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "intermediate",
     howToStart: {
-      cn: [
+      zh: [
         "Borrow or rent equipment first",
         "Go to a managed campsite",
         "Learn to pitch a tent",
@@ -2472,7 +2472,7 @@ export const HOBBIES: Hobby[] = [
     id: "camping",
     imageEmoji: "⛺",
     materials: {
-      cn: ["Tent", "Sleeping bag", "Cooking gear", "Lights/Headlamp"],
+      zh: ["Tent", "Sleeping bag", "Cooking gear", "Lights/Headlamp"],
       en: ["Tent", "Sleeping bag", "Cooking gear", "Lights/Headlamp"],
       es: ["Tent", "Sleeping bag", "Cooking gear", "Lights/Headlamp"],
       fr: ["Tent", "Sleeping bag", "Cooking gear", "Lights/Headlamp"],
@@ -2497,7 +2497,7 @@ export const HOBBIES: Hobby[] = [
       tired: 90,
     },
     name: {
-      cn: "Camping",
+      zh: "Camping",
       en: "Camping",
       es: "Camping",
       fr: "Camping",
@@ -2515,7 +2515,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Sense of purpose",
         "Community impact",
         "Meet like-minded people",
@@ -2556,7 +2556,7 @@ export const HOBBIES: Hobby[] = [
     budget: "free",
     category: ["social", "outdoor", "indoor", "group"],
     description: {
-      cn: "Give back to your community. Find purpose by helping others.",
+      zh: "Give back to your community. Find purpose by helping others.",
       en: "Give back to your community. Find purpose by helping others.",
       es: "Give back to your community. Find purpose by helping others.",
       fr: "Give back to your community. Find purpose by helping others.",
@@ -2565,7 +2565,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Find local charities or shelters",
         "Start with a one-time event",
         "Choose a cause you care about",
@@ -2605,7 +2605,7 @@ export const HOBBIES: Hobby[] = [
     id: "volunteering",
     imageEmoji: "🤝",
     materials: {
-      cn: ["Time", "Willingness to help", "Transportation"],
+      zh: ["Time", "Willingness to help", "Transportation"],
       en: ["Time", "Willingness to help", "Transportation"],
       es: ["Time", "Willingness to help", "Transportation"],
       fr: ["Time", "Willingness to help", "Transportation"],
@@ -2624,7 +2624,7 @@ export const HOBBIES: Hobby[] = [
     },
     moodMatch: { grateful: 95, happy: 85, lonely: 90, neutral: 80, sad: 85 },
     name: {
-      cn: "Volunteering",
+      zh: "Volunteering",
       en: "Volunteering",
       es: "Volunteering",
       fr: "Volunteering",
@@ -2637,7 +2637,7 @@ export const HOBBIES: Hobby[] = [
   // Additional Hobbies for Variety
   {
     benefits: {
-      cn: [
+      zh: [
         "Full body workout",
         "Mental focus",
         "Overcoming fear",
@@ -2673,7 +2673,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["physical", "social", "indoor", "solo"],
     description: {
-      cn: "Solve puzzles with your body. Build strength, endurance, and problem-solving skills.",
+      zh: "Solve puzzles with your body. Build strength, endurance, and problem-solving skills.",
       en: "Solve puzzles with your body. Build strength, endurance, and problem-solving skills.",
       es: "Solve puzzles with your body. Build strength, endurance, and problem-solving skills.",
       fr: "Solve puzzles with your body. Build strength, endurance, and problem-solving skills.",
@@ -2682,7 +2682,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "intermediate",
     howToStart: {
-      cn: [
+      zh: [
         "Visit a local gym for a day pass",
         "Rent shoes and chalk",
         "Take an introductory safety class",
@@ -2722,7 +2722,7 @@ export const HOBBIES: Hobby[] = [
     id: "rock-climbing",
     imageEmoji: "🧗",
     materials: {
-      cn: ["Climbing shoes", "Chalk bag", "Comfortable clothes"],
+      zh: ["Climbing shoes", "Chalk bag", "Comfortable clothes"],
       en: ["Climbing shoes", "Chalk bag", "Comfortable clothes"],
       es: ["Climbing shoes", "Chalk bag", "Comfortable clothes"],
       fr: ["Climbing shoes", "Chalk bag", "Comfortable clothes"],
@@ -2745,7 +2745,7 @@ export const HOBBIES: Hobby[] = [
       frustrated: 85,
     },
     name: {
-      cn: "Rock Climbing",
+      zh: "Rock Climbing",
       en: "Rock Climbing",
       es: "Rock Climbing",
       fr: "Rock Climbing",
@@ -2763,7 +2763,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Reduces stress",
         "Improves dexterity",
         "Productive fidgeting",
@@ -2799,7 +2799,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["creative", "relaxing", "indoor", "solo"],
     description: {
-      cn: "Turn yarn into warmth. A rhythmic, meditative craft that results in wearable art.",
+      zh: "Turn yarn into warmth. A rhythmic, meditative craft that results in wearable art.",
       en: "Turn yarn into warmth. A rhythmic, meditative craft that results in wearable art.",
       es: "Turn yarn into warmth. A rhythmic, meditative craft that results in wearable art.",
       fr: "Turn yarn into warmth. A rhythmic, meditative craft that results in wearable art.",
@@ -2808,7 +2808,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Buy one skein of chunky yarn",
         "Get large needles/hook",
         'Watch "casting on" tutorial',
@@ -2848,7 +2848,7 @@ export const HOBBIES: Hobby[] = [
     id: "knitting",
     imageEmoji: "🧶",
     materials: {
-      cn: [
+      zh: [
         "Yarn",
         "Knitting needles or crochet hook",
         "Scissors",
@@ -2883,7 +2883,7 @@ export const HOBBIES: Hobby[] = [
     mbtiMatch: { ESFJ: 90, INFJ: 90, INFP: 80, ISFJ: 95, ISFP: 85, ISTJ: 90 },
     moodMatch: { anxious: 95, bored: 90, calm: 85, tired: 80 },
     name: {
-      cn: "Knitting/Crochet",
+      zh: "Knitting/Crochet",
       en: "Knitting/Crochet",
       es: "Knitting/Crochet",
       fr: "Knitting/Crochet",
@@ -2901,7 +2901,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Improves memory",
         "Strategic thinking",
         "Patience",
@@ -2937,7 +2937,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["intellectual", "social", "indoor", "solo"],
     description: {
-      cn: "The ultimate game of strategy. Sharpen your mind and outwit your opponent.",
+      zh: "The ultimate game of strategy. Sharpen your mind and outwit your opponent.",
       en: "The ultimate game of strategy. Sharpen your mind and outwit your opponent.",
       es: "The ultimate game of strategy. Sharpen your mind and outwit your opponent.",
       fr: "The ultimate game of strategy. Sharpen your mind and outwit your opponent.",
@@ -2946,7 +2946,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "intermediate",
     howToStart: {
-      cn: [
+      zh: [
         "Learn the moves of each piece",
         "Play online at Lichess or Chess.com",
         "Solve daily puzzles",
@@ -2986,7 +2986,7 @@ export const HOBBIES: Hobby[] = [
     id: "chess",
     imageEmoji: "♟️",
     materials: {
-      cn: ["Chess board (physical or app)", "Opponent (human or AI)"],
+      zh: ["Chess board (physical or app)", "Opponent (human or AI)"],
       en: ["Chess board (physical or app)", "Opponent (human or AI)"],
       es: ["Chess board (physical or app)", "Opponent (human or AI)"],
       fr: ["Chess board (physical or app)", "Opponent (human or AI)"],
@@ -2996,7 +2996,7 @@ export const HOBBIES: Hobby[] = [
     mbtiMatch: { ENTJ: 90, ENTP: 90, ESTJ: 80, INTJ: 95, INTP: 95, ISTJ: 85 },
     moodMatch: { bored: 85, calm: 90, competitive: 95, neutral: 85 },
     name: {
-      cn: "Chess",
+      zh: "Chess",
       en: "Chess",
       es: "Chess",
       fr: "Chess",
@@ -3014,7 +3014,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Cardiovascular health",
         "Low joint impact",
         "Cools you down",
@@ -3050,7 +3050,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["physical", "solo", "indoor"],
     description: {
-      cn: "Full-body exercise with zero impact. meditative silence underwater.",
+      zh: "Full-body exercise with zero impact. meditative silence underwater.",
       en: "Full-body exercise with zero impact. meditative silence underwater.",
       es: "Full-body exercise with zero impact. meditative silence underwater.",
       fr: "Full-body exercise with zero impact. meditative silence underwater.",
@@ -3059,7 +3059,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Find a local pool",
         "Get comfortable goggles",
         "Take lessons if needed",
@@ -3099,7 +3099,7 @@ export const HOBBIES: Hobby[] = [
     id: "swimming",
     imageEmoji: "🏊",
     materials: {
-      cn: ["Swimsuit", "Goggles", "Swim cap", "Towel"],
+      zh: ["Swimsuit", "Goggles", "Swim cap", "Towel"],
       en: ["Swimsuit", "Goggles", "Swim cap", "Towel"],
       es: ["Swimsuit", "Goggles", "Swim cap", "Towel"],
       fr: ["Swimsuit", "Goggles", "Swim cap", "Towel"],
@@ -3109,7 +3109,7 @@ export const HOBBIES: Hobby[] = [
     mbtiMatch: { ESTP: 90, INFJ: 80, INTJ: 80, ISFP: 85, ISTP: 90 },
     moodMatch: { angry: 85, hot: 95, stressed: 95, tired: 90 },
     name: {
-      cn: "Swimming",
+      zh: "Swimming",
       en: "Swimming",
       es: "Swimming",
       fr: "Swimming",
@@ -3121,7 +3121,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Improves geometry skills",
         "Meditative focus",
         "Cheap materials",
@@ -3157,7 +3157,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["creative", "indoor", "solo", "relaxing"],
     description: {
-      cn: "Create art from a single sheet of paper. Focus and precision.",
+      zh: "Create art from a single sheet of paper. Focus and precision.",
       en: "Create art from a single sheet of paper. Focus and precision.",
       es: "Create art from a single sheet of paper. Focus and precision.",
       fr: "Create art from a single sheet of paper. Focus and precision.",
@@ -3166,7 +3166,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Buy origami paper pack",
         "Learn the crane (Orizuru)",
         "Watch slow tutorials",
@@ -3206,7 +3206,7 @@ export const HOBBIES: Hobby[] = [
     id: "origami",
     imageEmoji: "🦢",
     materials: {
-      cn: ["Origami paper", "Bone folder (optional)"],
+      zh: ["Origami paper", "Bone folder (optional)"],
       en: ["Origami paper", "Bone folder (optional)"],
       es: ["Origami paper", "Bone folder (optional)"],
       fr: ["Origami paper", "Bone folder (optional)"],
@@ -3216,7 +3216,7 @@ export const HOBBIES: Hobby[] = [
     mbtiMatch: { INFJ: 85, INTP: 90, ISFJ: 95, ISFP: 85, ISTJ: 95 },
     moodMatch: { anxious: 90, bored: 95, calm: 85, waiting: 90 },
     name: {
-      cn: "Origami",
+      zh: "Origami",
       en: "Origami",
       es: "Origami",
       fr: "Origami",
@@ -3228,7 +3228,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Scientific knowledge",
         "Perspective on life",
         "Peaceful nights",
@@ -3264,7 +3264,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["intellectual", "outdoor", "solo", "relaxing"],
     description: {
-      cn: "Explore the universe from your backyard. Humble yourself before the cosmos.",
+      zh: "Explore the universe from your backyard. Humble yourself before the cosmos.",
       en: "Explore the universe from your backyard. Humble yourself before the cosmos.",
       es: "Explore the universe from your backyard. Humble yourself before the cosmos.",
       fr: "Explore the universe from your backyard. Humble yourself before the cosmos.",
@@ -3273,7 +3273,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "intermediate",
     howToStart: {
-      cn: [
+      zh: [
         "Download a star map app",
         "Learn phases of the moon",
         "Buy binoculars first (not telescope)",
@@ -3313,7 +3313,7 @@ export const HOBBIES: Hobby[] = [
     id: "astronomy",
     imageEmoji: "🔭",
     materials: {
-      cn: ["Star map app", "Binoculars", "Warm clothes", "Red flashlight"],
+      zh: ["Star map app", "Binoculars", "Warm clothes", "Red flashlight"],
       en: ["Star map app", "Binoculars", "Warm clothes", "Red flashlight"],
       es: ["Star map app", "Binoculars", "Warm clothes", "Red flashlight"],
       fr: ["Star map app", "Binoculars", "Warm clothes", "Red flashlight"],
@@ -3323,7 +3323,7 @@ export const HOBBIES: Hobby[] = [
     mbtiMatch: { ENTP: 80, INFJ: 90, INTJ: 95, INTP: 95, ISTP: 85 },
     moodMatch: { calm: 95, curious: 95, lonely: 85, overwhelmed: 90 },
     name: {
-      cn: "Astronomy",
+      zh: "Astronomy",
       en: "Astronomy",
       es: "Astronomy",
       fr: "Astronomy",
@@ -3335,7 +3335,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Connection to nature",
         "Mindfulness",
         "Collection hobby",
@@ -3371,7 +3371,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["outdoor", "relaxing", "intellectual", "solo"],
     description: {
-      cn: "Notice the wildlife around you. A practice of patience and observation.",
+      zh: "Notice the wildlife around you. A practice of patience and observation.",
       en: "Notice the wildlife around you. A practice of patience and observation.",
       es: "Notice the wildlife around you. A practice of patience and observation.",
       fr: "Notice the wildlife around you. A practice of patience and observation.",
@@ -3380,7 +3380,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Get a local bird guide book",
         "Listen for calls",
         "Visit a local park in morning",
@@ -3420,7 +3420,7 @@ export const HOBBIES: Hobby[] = [
     id: "bird-watching",
     imageEmoji: "🦜",
     materials: {
-      cn: ["Binoculars", "Field guide", "Notebook"],
+      zh: ["Binoculars", "Field guide", "Notebook"],
       en: ["Binoculars", "Field guide", "Notebook"],
       es: ["Binoculars", "Field guide", "Notebook"],
       fr: ["Binoculars", "Field guide", "Notebook"],
@@ -3430,7 +3430,7 @@ export const HOBBIES: Hobby[] = [
     mbtiMatch: { INFJ: 85, INFP: 90, ISFJ: 95, ISTJ: 95, ISTP: 80 },
     moodMatch: { bored: 85, calm: 95, curious: 90, tired: 80 },
     name: {
-      cn: "Bird Watching",
+      zh: "Bird Watching",
       en: "Bird Watching",
       es: "Bird Watching",
       fr: "Bird Watching",
@@ -3442,7 +3442,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Tangible results",
         "Smell of wood",
         "Focus flow state",
@@ -3478,7 +3478,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["creative", "physical", "indoor", "solo"],
     description: {
-      cn: "Carve function and form from timber. Start small with spoon carving.",
+      zh: "Carve function and form from timber. Start small with spoon carving.",
       en: "Carve function and form from timber. Start small with spoon carving.",
       es: "Carve function and form from timber. Start small with spoon carving.",
       fr: "Carve function and form from timber. Start small with spoon carving.",
@@ -3487,7 +3487,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "intermediate",
     howToStart: {
-      cn: [
+      zh: [
         "Buy a whittling knife",
         "Get soft wood (basswood)",
         "Wear cut-resistant gloves",
@@ -3527,7 +3527,7 @@ export const HOBBIES: Hobby[] = [
     id: "woodworking",
     imageEmoji: "🪵",
     materials: {
-      cn: ["Knife", "Wood block", "Sandpaper", "Oil finish"],
+      zh: ["Knife", "Wood block", "Sandpaper", "Oil finish"],
       en: ["Knife", "Wood block", "Sandpaper", "Oil finish"],
       es: ["Knife", "Wood block", "Sandpaper", "Oil finish"],
       fr: ["Knife", "Wood block", "Sandpaper", "Oil finish"],
@@ -3537,7 +3537,7 @@ export const HOBBIES: Hobby[] = [
     mbtiMatch: { ESTP: 90, INTJ: 80, ISFP: 85, ISTJ: 90, ISTP: 95 },
     moodMatch: { angry: 90, calm: 80, energetic: 85, frustrated: 95 },
     name: {
-      cn: "Woodworking (Whittling)",
+      zh: "Woodworking (Whittling)",
       en: "Woodworking (Whittling)",
       es: "Woodworking (Whittling)",
       fr: "Woodworking (Whittling)",
@@ -3549,7 +3549,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Calms the nervous system",
         "Refined palate",
         "Daily ritual",
@@ -3585,7 +3585,7 @@ export const HOBBIES: Hobby[] = [
     budget: "medium",
     category: ["relaxing", "indoor", "solo", "social"],
     description: {
-      cn: "The art of brewing and drinking. Savouring the moment through taste and smell.",
+      zh: "The art of brewing and drinking. Savouring the moment through taste and smell.",
       en: "The art of brewing and drinking. Savouring the moment through taste and smell.",
       es: "The art of brewing and drinking. Savouring the moment through taste and smell.",
       fr: "The art of brewing and drinking. Savouring the moment through taste and smell.",
@@ -3594,7 +3594,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "beginner",
     howToStart: {
-      cn: [
+      zh: [
         "Buy loose leaf tea (start with Oolong or Green)",
         "Get a simple gaiwan or teapot",
         "Pay attention to water temp",
@@ -3634,7 +3634,7 @@ export const HOBBIES: Hobby[] = [
     id: "tea-ceremony",
     imageEmoji: "🍵",
     materials: {
-      cn: ["Tea leaves", "Teapot/Gaiwan", "Cups", "Kettle"],
+      zh: ["Tea leaves", "Teapot/Gaiwan", "Cups", "Kettle"],
       en: ["Tea leaves", "Teapot/Gaiwan", "Cups", "Kettle"],
       es: ["Tea leaves", "Teapot/Gaiwan", "Cups", "Kettle"],
       fr: ["Tea leaves", "Teapot/Gaiwan", "Cups", "Kettle"],
@@ -3644,7 +3644,7 @@ export const HOBBIES: Hobby[] = [
     mbtiMatch: { INFJ: 95, INFP: 90, INTJ: 80, ISFJ: 95, ISTJ: 85 },
     moodMatch: { anxious: 95, calm: 85, stressed: 95, tired: 90 },
     name: {
-      cn: "Tea Aesthetics",
+      zh: "Tea Aesthetics",
       en: "Tea Aesthetics",
       es: "Tea Aesthetics",
       fr: "Tea Aesthetics",
@@ -3656,7 +3656,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Core strength",
         "Better posture",
         "Injury prevention",
@@ -3692,7 +3692,7 @@ export const HOBBIES: Hobby[] = [
     budget: "high",
     category: ["physical", "indoor", "solo"],
     description: {
-      cn: "Core strength and alignment. Control your body with precision.",
+      zh: "Core strength and alignment. Control your body with precision.",
       en: "Core strength and alignment. Control your body with precision.",
       es: "Core strength and alignment. Control your body with precision.",
       fr: "Core strength and alignment. Control your body with precision.",
@@ -3701,7 +3701,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "intermediate",
     howToStart: {
-      cn: [
+      zh: [
         "Take a mat pilates class",
         'Focus on "powerhouse" (core)',
         "Watch breathing tutorials",
@@ -3741,7 +3741,7 @@ export const HOBBIES: Hobby[] = [
     id: "pilates",
     imageEmoji: "🤸",
     materials: {
-      cn: ["Mat", "Comfortable clothes", "Magic circle (optional)"],
+      zh: ["Mat", "Comfortable clothes", "Magic circle (optional)"],
       en: ["Mat", "Comfortable clothes", "Magic circle (optional)"],
       es: ["Mat", "Comfortable clothes", "Magic circle (optional)"],
       fr: ["Mat", "Comfortable clothes", "Magic circle (optional)"],
@@ -3751,7 +3751,7 @@ export const HOBBIES: Hobby[] = [
     mbtiMatch: { ENTJ: 95, ESFJ: 85, ESTJ: 95, INFJ: 80, ISTJ: 90 },
     moodMatch: { confident: 90, energetic: 90, lazy: 75, neutral: 85 },
     name: {
-      cn: "Pilates",
+      zh: "Pilates",
       en: "Pilates",
       es: "Pilates",
       fr: "Pilates",
@@ -3763,7 +3763,7 @@ export const HOBBIES: Hobby[] = [
   },
   {
     benefits: {
-      cn: [
+      zh: [
         "Public speaking skills",
         "Dexterity",
         "Entertain friends",
@@ -3799,7 +3799,7 @@ export const HOBBIES: Hobby[] = [
     budget: "low",
     category: ["creative", "social", "indoor", "solo"],
     description: {
-      cn: "Create wonder and mystery. Learn the art of illusion.",
+      zh: "Create wonder and mystery. Learn the art of illusion.",
       en: "Create wonder and mystery. Learn the art of illusion.",
       es: "Create wonder and mystery. Learn the art of illusion.",
       fr: "Create wonder and mystery. Learn the art of illusion.",
@@ -3808,7 +3808,7 @@ export const HOBBIES: Hobby[] = [
     },
     difficulty: "intermediate",
     howToStart: {
-      cn: [
+      zh: [
         "Learn one card force",
         "Practice in front of a mirror",
         "Master the French Drop",
@@ -3848,7 +3848,7 @@ export const HOBBIES: Hobby[] = [
     id: "magic",
     imageEmoji: "🎩",
     materials: {
-      cn: ["Deck of cards", "Coins", "Rubber bands", "Mirror"],
+      zh: ["Deck of cards", "Coins", "Rubber bands", "Mirror"],
       en: ["Deck of cards", "Coins", "Rubber bands", "Mirror"],
       es: ["Deck of cards", "Coins", "Rubber bands", "Mirror"],
       fr: ["Deck of cards", "Coins", "Rubber bands", "Mirror"],
@@ -3858,7 +3858,7 @@ export const HOBBIES: Hobby[] = [
     mbtiMatch: { ENFP: 90, ENTJ: 85, ENTP: 95, ESTP: 90, INTP: 80 },
     moodMatch: { bored: 95, confident: 90, excited: 90, playful: 95 },
     name: {
-      cn: "Magic Tricks",
+      zh: "Magic Tricks",
       en: "Magic Tricks",
       es: "Magic Tricks",
       fr: "Magic Tricks",

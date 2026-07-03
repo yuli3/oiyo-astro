@@ -9,7 +9,7 @@ import {
 } from "./types";
 
 export const colorPersonalityQuestions = {
-  cn: [
+  zh: [
     {
       id: 1,
       options: [

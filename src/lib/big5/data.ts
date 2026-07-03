@@ -7,7 +7,7 @@ const BIG5_OPTIONS = [
     color: "bg-red-500",
     id: "1",
     text: {
-      cn: "非常不同意",
+      zh: "非常不同意",
       en: "Strongly Disagree",
       es: "Totalmente en desacuerdo",
       fr: "Pas du tout d'accord",
@@ -20,7 +20,7 @@ const BIG5_OPTIONS = [
     color: "bg-orange-400",
     id: "2",
     text: {
-      cn: "不同意",
+      zh: "不同意",
       en: "Disagree",
       es: "En desacuerdo",
       fr: "Pas d'accord",
@@ -33,7 +33,7 @@ const BIG5_OPTIONS = [
     color: "bg-green-600/60",
     id: "3",
     text: {
-      cn: "中立",
+      zh: "中立",
       en: "Neutral",
       es: "Neutral",
       fr: "Neutre",
@@ -46,7 +46,7 @@ const BIG5_OPTIONS = [
     color: "bg-green-400",
     id: "4",
     text: {
-      cn: "同意",
+      zh: "同意",
       en: "Agree",
       es: "De acuerdo",
       fr: "D'accord",
@@ -59,7 +59,7 @@ const BIG5_OPTIONS = [
     color: "bg-teal-500",
     id: "5",
     text: {
-      cn: "非常同意",
+      zh: "非常同意",
       en: "Strongly Agree",
       es: "Totalmente de acuerdo",
       fr: "Tout à fait d'accord",
@@ -78,7 +78,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: false,
     options: BIG5_OPTIONS,
     text: {
-      cn: "我的想象力很丰富。",
+      zh: "我的想象力很丰富。",
       en: "I have a vivid imagination.",
       es: "Tengo una imaginación muy viva.",
       fr: "J'ai une imagination débordante.",
@@ -92,7 +92,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: true,
     options: BIG5_OPTIONS,
     text: {
-      cn: "我对抽象的想法不感兴趣。",
+      zh: "我对抽象的想法不感兴趣。",
       en: "I am not interested in abstract ideas.",
       es: "No me interesan las ideas abstractas.",
       fr: "Je ne suis pas intéressé par les idées abstraites.",
@@ -106,7 +106,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: false,
     options: BIG5_OPTIONS,
     text: {
-      cn: "I love to think up new ways of doing things.",
+      zh: "I love to think up new ways of doing things.",
       en: "I love to think up new ways of doing things.",
       es: "I love to think up new ways of doing things.",
       fr: "I love to think up new ways of doing things.",
@@ -122,7 +122,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: false,
     options: BIG5_OPTIONS,
     text: {
-      cn: "我会立即做家务。",
+      zh: "我会立即做家务。",
       en: "I get chores done right away.",
       es: "Hago las tareas de inmediato.",
       fr: "Je fais mes corvées tout de suite.",
@@ -136,7 +136,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: true,
     options: BIG5_OPTIONS,
     text: {
-      cn: "我经常忘记把东西放回原处。",
+      zh: "我经常忘记把东西放回原处。",
       en: "I often forget to put things back in their proper place.",
       es: "A menudo olvido poner las cosas en su lugar.",
       fr: "J'oublie souvent de remettre les choses à leur place.",
@@ -150,7 +150,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: false,
     options: BIG5_OPTIONS,
     text: {
-      cn: "I like order.",
+      zh: "I like order.",
       en: "I like order.",
       es: "I like order.",
       fr: "I like order.",
@@ -166,7 +166,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: false,
     options: BIG5_OPTIONS,
     text: {
-      cn: "我是聚会的核心人物。",
+      zh: "我是聚会的核心人物。",
       en: "I am the life of the party.",
       es: "Soy el alma de la fiesta.",
       fr: "Je suis l'âme de la fête.",
@@ -180,7 +180,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: true,
     options: BIG5_OPTIONS,
     text: {
-      cn: "我不怎么说话。",
+      zh: "我不怎么说话。",
       en: "I do not talk a lot.",
       es: "No hablo mucho.",
       fr: "Je ne parle pas beaucoup.",
@@ -194,7 +194,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: false,
     options: BIG5_OPTIONS,
     text: {
-      cn: "I feel comfortable around people.",
+      zh: "I feel comfortable around people.",
       en: "I feel comfortable around people.",
       es: "I feel comfortable around people.",
       fr: "I feel comfortable around people.",
@@ -210,7 +210,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: false,
     options: BIG5_OPTIONS,
     text: {
-      cn: "我同情别人的感受。",
+      zh: "我同情别人的感受。",
       en: "I sympathize with others' feelings.",
       es: "Simpatizo con los sentimientos de los demás.",
       fr: "Je sympathise avec les sentiments des autres.",
@@ -224,7 +224,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: true,
     options: BIG5_OPTIONS,
     text: {
-      cn: "我很少关心别人。",
+      zh: "我很少关心别人。",
       en: "I feel little concern for others.",
       es: "Siento poca preocupación por los demás.",
       fr: "Je me soucie peu des autres.",
@@ -238,7 +238,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: false,
     options: BIG5_OPTIONS,
     text: {
-      cn: "I take time out for others.",
+      zh: "I take time out for others.",
       en: "I take time out for others.",
       es: "I take time out for others.",
       fr: "I take time out for others.",
@@ -254,7 +254,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: false,
     options: BIG5_OPTIONS,
     text: {
-      cn: "我很容易感到压力。",
+      zh: "我很容易感到压力。",
       en: "I get stressed out easily.",
       es: "Me estreso fácilmente.",
       fr: "Je suis facilement stressé.",
@@ -268,7 +268,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: true,
     options: BIG5_OPTIONS,
     text: {
-      cn: "我大部分时间都很放松。",
+      zh: "我大部分时间都很放松。",
       en: "I am relaxed most of the time.",
       es: "Estoy relajado la mayor parte del tiempo.",
       fr: "Je suis détendu la plupart du temps.",
@@ -282,7 +282,7 @@ export const BIG5_QUESTIONS: Big5Question[] = [
     isReversed: false,
     options: BIG5_OPTIONS,
     text: {
-      cn: "I worry about things.",
+      zh: "I worry about things.",
       en: "I worry about things.",
       es: "I worry about things.",
       fr: "I worry about things.",
@@ -298,7 +298,7 @@ export const BIG5_INSIGHTS: Record<
 > = {
   agreeableness: {
     high: {
-      cn: "你的心是一扇敞开的门。你的仁慈是疲惫世界的治愈之香。",
+      zh: "你的心是一扇敞开的门。你的仁慈是疲惫世界的治愈之香。",
       en: "Your heart is an open door. Your kindness is a healing balm to a weary world.",
       es: "Tu corazón es una puerta abierta. Tu amabilidad es un bálsamo curativo para un mundo cansado.",
       fr: "Votre cœur est une porte ouverte. Votre gentillesse est un baume apaisant pour un monde fatigué.",
@@ -306,7 +306,7 @@ export const BIG5_INSIGHTS: Record<
       ko: "당신의 마음은 열린 문과 같습니다. 당신의 친절은 지친 세상에 치유의 연고가 됩니다.",
     } as LocalizedText,
     low: {
-      cn: "你拥有真理之剑。为了逻辑公正，你不怕孤军奋斗。",
+      zh: "你拥有真理之剑。为了逻辑公正，你不怕孤军奋斗。",
       en: "You possess the sword of truth. You are not afraid to stand alone for what is logical and just.",
       es: "Posees la espada de la verdad. No tienes miedo de estar solo por lo que es lógico y justo.",
       fr: "Vous possédez l'épée de la vérité. Vous n'avez pas peur de vous tenir seul pour ce qui est logique et juste.",
@@ -316,7 +316,7 @@ export const BIG5_INSIGHTS: Record<
   },
   conscientiousness: {
     high: {
-      cn: "你是命运的建筑师。你对细节的关注和自律铸就了伟大的事业。",
+      zh: "你是命运的建筑师。你对细节的关注和自律铸就了伟大的事业。",
       en: "You are the architect of your destiny. Your attention to detail and discipline builds great things.",
       es: "Eres el arquitecto de tu destino. Tu atención al detalle y tu disciplina construyen grandes cosas.",
       fr: "Vous êtes l'architecte de votre destin. Votre attention aux détails et votre discipline construisent de grandes choses.",
@@ -324,7 +324,7 @@ export const BIG5_INSIGHTS: Record<
       ko: "당신은 운명의 설계자입니다. 당신의 꼼꼼함과 규율이 위대한 것들을 만들어냅니다.",
     } as LocalizedText,
     low: {
-      cn: "你像水一样流动，自发且适应力强。你在别人看到混乱的地方发现令人喜悦的惊喜。",
+      zh: "你像水一样流动，自发且适应力强。你在别人看到混乱的地方发现令人喜悦的惊喜。",
       en: "You flow like water, spontaneous and adaptable. You find joyful surprises where others see disorder.",
       es: "Fluyes como el agua, espontáneo y adaptable. Encuentras sorpresas alegres donde otros ven desorden.",
       fr: "Vous coulez comme l'eau, spontané et adaptable. Vous trouvez des surprises joyeuses là où d'autres voient le désordre.",
@@ -334,7 +334,7 @@ export const BIG5_INSIGHTS: Record<
   },
   extraversion: {
     high: {
-      cn: "你像太阳一样发光，从连接中汲取能量。你的存在温暖了周围的人。",
+      zh: "你像太阳一样发光，从连接中汲取能量。你的存在温暖了周围的人。",
       en: "You shine like the sun, drawing energy from connection. Your presence warms those around you.",
       es: "Brillas como el sol, extrayendo energía de la conexión. Tu presencia calienta a quienes te rodean.",
       fr: "Vous brillez comme le soleil, puisant votre énergie dans les connexions. Votre présence réchauffe ceux qui vous entourent.",
@@ -342,7 +342,7 @@ export const BIG5_INSIGHTS: Record<
       ko: "당신은 태양처럼 빛나며 연결 속에서 에너지를 얻습니다. 당신의 존재는 주변 사람들을 따뜻하게 합니다.",
     } as LocalizedText,
     low: {
-      cn: "你就像深夜的月光，沉思而深邃。你的内心世界丰富而广阔。",
+      zh: "你就像深夜的月光，沉思而深邃。你的内心世界丰富而广阔。",
       en: "You are like the deep moonlit night, contemplative and profound. Your inner world is rich and vast.",
       es: "Eres como la profunda noche a la luz de la luna, contemplativo y profundo. Tu mundo interior es rico y vasto.",
       fr: "Vous êtes comme une nuit de pleine lune, contemplatif et profond. Votre monde intérieur est riche et vaste.",
@@ -352,7 +352,7 @@ export const BIG5_INSIGHTS: Record<
   },
   neuroticism: {
     high: {
-      cn: "你强烈地感受着世界。你的敏感让你能够感知到他人错过的深度。",
+      zh: "你强烈地感受着世界。你的敏感让你能够感知到他人错过的深度。",
       en: "You feel the world intensely. Your sensitivity allows you to perceive depths that others miss.",
       es: "Sientes el mundo intensamente. Tu sensibilidad te permite percibir profundidades que otros pasan por alto.",
       fr: "Vous ressentez le monde intensément. Votre sensibilité vous permet de percevoir des profondeurs qui échappent aux autres.",
@@ -360,7 +360,7 @@ export const BIG5_INSIGHTS: Record<
       ko: "당신은 세상을 강렬하게 느낍니다. 당신의 예민함은 남들이 놓치는 깊이를 감지하게 해줍니다.",
     } as LocalizedText,
     low: {
-      cn: "你是暴风雨中平静的中心。你不可动摇且宁静，给混乱带来和平。",
+      zh: "你是暴风雨中平静的中心。你不可动摇且宁静，给混乱带来和平。",
       en: "You are the calm eye of the storm. Unshakable and serene, you bring peace to chaos.",
       es: "Eres el ojo tranquilo de la tormenta. Inquebrantable y sereno, traes paz al caos.",
       fr: "Vous êtes le calme au centre de la tempête. Inébranlable et serein, vous apportez la paix au chaos.",
@@ -370,7 +370,7 @@ export const BIG5_INSIGHTS: Record<
   },
   openness: {
     high: {
-      cn: "你的思想是充满好奇的大海。你像在新鲜画布上作画的艺术家一样拥抱新体验。",
+      zh: "你的思想是充满好奇的大海。你像在新鲜画布上作画的艺术家一样拥抱新体验。",
       en: "Your mind is a vast ocean of curiosity. You embrace new experiences like an artist painting on a fresh canvas.",
       es: "Tu mente es un vasto océano de curiosidad. Abrazas nuevas experiencias como un artista pintando en un lienzo fresco.",
       fr: "Votre esprit est un vaste océan de curiosité. Vous accueillez les nouvelles expériences comme un artiste peignant sur une toile vierge.",
@@ -378,7 +378,7 @@ export const BIG5_INSIGHTS: Record<
       ko: "당신의 마음은 호기심의 넓은 바다와 같습니다. 새로운 경험을 캔버스 위의 화가처럼 받아들입니다.",
     } as LocalizedText,
     low: {
-      cn: "你重视传统和一致性。你是不断变化的世界中提供稳定性的基石。",
+      zh: "你重视传统和一致性。你是不断变化的世界中提供稳定性的基石。",
       en: "You value tradition and consistency. You are the rock that provides stability in a changing world.",
       es: " Valoras la tradición y la coherencia. Eres la roca que proporciona estabilidad en un mundo cambiante.",
       fr: "Vous valorisez la tradition et la cohérence. Vous êtes le rocher qui apporte la stabilité dans un monde en mouvement.",

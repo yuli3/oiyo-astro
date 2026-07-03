@@ -59,7 +59,7 @@ const DIMENSION_PROVIDERS: Partial<
       details: { partnerTrait: trait },
       id: "blood_type",
       insight: {
-        cn: trait.description,
+        zh: trait.description,
         en: trait.description,
         es: trait.description,
         fr: trait.description,
@@ -70,7 +70,7 @@ const DIMENSION_PROVIDERS: Partial<
       score: normalizeScore(score, "blood_type"),
       strength: 1.0,
       tags: {
-        cn: ["生物学", "气质"],
+        zh: ["生物学", "气质"],
         en: ["Biological", "Temperament"],
         es: ["Biológico", "Temperamento"],
         fr: ["Biologique", "Tempérament"],
@@ -99,7 +99,7 @@ const DIMENSION_PROVIDERS: Partial<
       score: 80, // Default for now
       strength: 1.0,
       tags: {
-        cn: ["自然", "灵魂"],
+        zh: ["自然", "灵魂"],
         en: ["Nature", "Soul"],
         es: ["Naturaleza", "Alma"],
         fr: ["Nature", "Âme"],
@@ -148,7 +148,7 @@ const DIMENSION_PROVIDERS: Partial<
       score,
       strength: 1.0,
       tags: {
-        cn: ["天文", "季节"],
+        zh: ["天文", "季节"],
         en: ["Astronomy", "Season"],
         es: ["Astronomía", "Estaciones"],
         fr: ["Astronomie", "Saisons"],
@@ -193,7 +193,7 @@ const DIMENSION_PROVIDERS: Partial<
       score,
       strength: 1.0,
       tags: {
-        cn: ["神话", "原型"],
+        zh: ["神话", "原型"],
         en: ["Mythology", "Archetype"],
         es: ["Mitología", "Arquetipo"],
         fr: ["Mythologie", "Archétype"],
@@ -239,7 +239,7 @@ const DIMENSION_PROVIDERS: Partial<
       score,
       strength: 1.0,
       tags: {
-        cn: ["情感", "表达"],
+        zh: ["情感", "表达"],
         en: ["Emotional", "Expression"],
         es: ["Emocional", "Expresión"],
         fr: ["Émotionnel", "Expression"],
@@ -268,7 +268,7 @@ const DIMENSION_PROVIDERS: Partial<
       details: { kin: partnerKin },
       id: "mayan",
       insight: {
-        cn: `Kin ${partnerKin.kin}`,
+        zh: `Kin ${partnerKin.kin}`,
         en: `Kin ${partnerKin.kin}`,
         es: `Kin ${partnerKin.kin}`,
         fr: `Kin ${partnerKin.kin}`,
@@ -279,7 +279,7 @@ const DIMENSION_PROVIDERS: Partial<
       score,
       strength: 1.0,
       tags: {
-        cn: ["宇宙", "时间"],
+        zh: ["宇宙", "时间"],
         en: ["Cosmic", "Time"],
         es: ["Cósmico", "Tiempo"],
         fr: ["Cosmique", "Temps"],
@@ -307,7 +307,7 @@ const DIMENSION_PROVIDERS: Partial<
       score: normalizeScore(mbtiResult.score, "mbti"),
       strength: 1.0,
       tags: {
-        cn: ["性格", "沟通"],
+        zh: ["性格", "沟通"],
         en: ["Personality", "Communication"],
         es: ["Personalidad", "Comunicación"],
         fr: ["Personnalité", "Communication"],
@@ -337,7 +337,7 @@ const DIMENSION_PROVIDERS: Partial<
       score,
       strength: 1.0,
       tags: {
-        cn: ["声音", "波动"],
+        zh: ["声音", "波动"],
         en: ["Sound", "Vibration"],
         es: ["Sonido", "Vibración"],
         fr: ["Son", "Vibration"],
@@ -381,7 +381,7 @@ const DIMENSION_PROVIDERS: Partial<
       score: normalizeScore(sajuResult.score, "saju"),
       strength: 1.0,
       tags: {
-        cn: ["命运", "五行"],
+        zh: ["命运", "五行"],
         en: ["Destiny", "Elements"],
         es: ["Destino", "Elementos"],
         fr: ["Destin", "Éléments"],
@@ -446,7 +446,7 @@ export async function calculateSacredResonanceAsync(
       locale,
     );
     result.resonanceNarrative = {
-      cn: narrative,
+      zh: narrative,
       en: narrative,
       es: narrative,
       fr: narrative,
@@ -469,7 +469,7 @@ function createSimulatedResult(
   return {
     id,
     insight: {
-      cn: insight.cn || "",
+      zh: insight.cn || "",
       en: insight.en || "",
       es: insight.es || "",
       fr: insight.fr || "",
@@ -480,7 +480,7 @@ function createSimulatedResult(
     score,
     strength,
     tags: {
-      cn: ["模拟"],
+      zh: ["模拟"],
       en: ["Simulated"],
       es: ["Simulado"],
       fr: ["Simulé"],

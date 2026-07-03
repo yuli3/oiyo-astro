@@ -20,7 +20,7 @@ export const bloodTypeData: BloodTypeShard = {
   advice: {
     challenging: {
       A: {
-        cn: "慢慢发展。",
+        zh: "慢慢发展。",
         en: "Develop slowly.",
         es: "Desarrollen lentamente.",
         fr: "Développez lentement.",
@@ -28,7 +28,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "천천히 발전시키세요.",
       },
       AB: {
-        cn: "需要时间。",
+        zh: "需要时间。",
         en: "Requires time.",
         es: "Requiere tiempo.",
         fr: "Nécessite du temps.",
@@ -36,7 +36,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "시간이 필요합니다.",
       },
       B: {
-        cn: "寻找妥协点。",
+        zh: "寻找妥协点。",
         en: "Find compromises.",
         es: "Encuentren compromisos.",
         fr: "Trouvez des compromis.",
@@ -44,7 +44,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "타협점을 찾으세요.",
       },
       O: {
-        cn: "专注于优势。",
+        zh: "专注于优势。",
         en: "Focus on strengths.",
         es: "Concéntrense en las fortalezas.",
         fr: "Concentrez-vous sur les forces.",
@@ -54,7 +54,7 @@ export const bloodTypeData: BloodTypeShard = {
     },
     good: {
       A: {
-        cn: "需要沟通努力。",
+        zh: "需要沟通努力。",
         en: "Effort to communicate.",
         es: "Esfuerzo de comunicación necesario.",
         fr: "Effort de communication nécessaire.",
@@ -62,7 +62,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "소통 노력이 필요합니다.",
       },
       AB: {
-        cn: "缩小距离感。",
+        zh: "缩小距离感。",
         en: "Reduce distance.",
         es: "Reduzcan la distancia.",
         fr: "Réduisez la distance.",
@@ -70,7 +70,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "거리감을 좁혀보세요.",
       },
       B: {
-        cn: "建立信任。",
+        zh: "建立信任。",
         en: "Build trust.",
         es: "Construyan confianza.",
         fr: "Bâtissez la confiance.",
@@ -78,7 +78,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "신뢰를 쌓아가세요.",
       },
       O: {
-        cn: "表现出体谅。",
+        zh: "表现出体谅。",
         en: "Show consideration.",
         es: "Muestren consideración.",
         fr: "Faites preuve de considération.",
@@ -88,7 +88,7 @@ export const bloodTypeData: BloodTypeShard = {
     },
     great: {
       A: {
-        cn: "承认差异。",
+        zh: "承认差异。",
         en: "Acknowledge differences.",
         es: "Reconozcan las diferencias.",
         fr: "Reconnaissez les différences.",
@@ -96,7 +96,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "차이점을 인정하세요.",
       },
       AB: {
-        cn: "敞开心扉。",
+        zh: "敞开心扉。",
         en: "Open your heart.",
         es: "Abran su corazón.",
         fr: "Ouvrez votre cœur.",
@@ -104,7 +104,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "마음을 열어보세요.",
       },
       B: {
-        cn: "平衡计划和创造力。",
+        zh: "平衡计划和创造力。",
         en: "Balance plans and creativity.",
         es: "Equilibren planes y creatividad.",
         fr: "Équilibrez plans et créativité.",
@@ -112,7 +112,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "계획과 창의의 균형을 맞추세요.",
       },
       O: {
-        cn: "配合彼此的步伐。",
+        zh: "配合彼此的步伐。",
         en: "Match your pace.",
         es: "Igualen su ritmo.",
         fr: "Adaptez votre rythme.",
@@ -122,7 +122,7 @@ export const bloodTypeData: BloodTypeShard = {
     },
     perfect: {
       A: {
-        cn: "尊重彼此的谨慎。",
+        zh: "尊重彼此的谨慎。",
         en: "Respect each other's caution.",
         es: "Respeten la precaución del otro.",
         fr: "Respectez la prudence de chacun.",
@@ -130,7 +130,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "서로의 신중함을 존중하세요.",
       },
       AB: {
-        cn: "建立深厚的共鸣。",
+        zh: "建立深厚的共鸣。",
         en: "Build deep rapport.",
         es: "Construyan un vínculo profundo.",
         fr: "Établissez un lien profond.",
@@ -138,7 +138,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "깊은 유대감을 형성하세요.",
       },
       B: {
-        cn: "分享创造力。",
+        zh: "分享创造力。",
         en: "Share creativity.",
         es: "Compartan la creatividad.",
         fr: "Partagez votre créativité.",
@@ -146,7 +146,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "창의성을 공유하세요.",
       },
       O: {
-        cn: "共同达成目标。",
+        zh: "共同达成目标。",
         en: "Achieve goals together.",
         es: "Logren metas juntos.",
         fr: "Atteignez vos objectifs ensemble.",
@@ -164,7 +164,7 @@ export const bloodTypeData: BloodTypeShard = {
   traits: {
     A: {
       description: {
-        cn: "完美主义者，谨慎且注重和谐的性格",
+        zh: "完美主义者，谨慎且注重和谐的性格",
         en: "Perfectionist, cautious, and harmony-oriented personality",
         es: "Personalidad perfeccionista, cautelosa y orientada a la armonía",
         fr: "Personnalité perfectionniste, prudente et axée sur l'harmonie",
@@ -172,7 +172,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "완벽주의자이며 신중하고 조화를 중시하는 성격",
       },
       name: {
-        cn: "A型",
+        zh: "A型",
         en: "Type A",
         es: "Tipo A",
         fr: "Type A",
@@ -181,7 +181,7 @@ export const bloodTypeData: BloodTypeShard = {
       },
       negatives: [
         {
-          cn: "焦虑",
+          zh: "焦虑",
           en: "Worrisome",
           es: "Preocupado",
           fr: "Inquiet",
@@ -189,7 +189,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "걱정이 많음",
         },
         {
-          cn: "优柔寡断",
+          zh: "优柔寡断",
           en: "Indecisive",
           es: "Indeciso",
           fr: "Indécis",
@@ -199,7 +199,7 @@ export const bloodTypeData: BloodTypeShard = {
       ],
       positives: [
         {
-          cn: "负责任",
+          zh: "负责任",
           en: "Responsible",
           es: "Responsable",
           fr: "Responsable",
@@ -207,7 +207,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "책임감",
         },
         {
-          cn: "完美主义",
+          zh: "完美主义",
           en: "Perfectionist",
           es: "Perfeccionista",
           fr: "Perfectionniste",
@@ -215,7 +215,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "완벽주의",
         },
         {
-          cn: "体贴",
+          zh: "体贴",
           en: "Considerate",
           es: "Considerado",
           fr: "Attentionné",
@@ -226,7 +226,7 @@ export const bloodTypeData: BloodTypeShard = {
     },
     AB: {
       description: {
-        cn: "双重性格，理性和独特的性格",
+        zh: "双重性格，理性和独特的性格",
         en: "Dual personality, rational and unique character",
         es: "Personalidad dual, carácter racional y único",
         fr: "Double personnalité, caractère rationnel et unique",
@@ -234,7 +234,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "이중적 성격을 가지고 있으며 합리적이고 독특한 성격",
       },
       name: {
-        cn: "AB型",
+        zh: "AB型",
         en: "Type AB",
         es: "Tipo AB",
         fr: "Type AB",
@@ -243,7 +243,7 @@ export const bloodTypeData: BloodTypeShard = {
       },
       negatives: [
         {
-          cn: "不可预测",
+          zh: "不可预测",
           en: "Unpredictable",
           es: "Impredecible",
           fr: "Imprévisible",
@@ -251,7 +251,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "예측불가",
         },
         {
-          cn: "疏远",
+          zh: "疏远",
           en: "Distant",
           es: "Distante",
           fr: "Distant",
@@ -261,7 +261,7 @@ export const bloodTypeData: BloodTypeShard = {
       ],
       positives: [
         {
-          cn: "理性",
+          zh: "理性",
           en: "Rational",
           es: "Racional",
           fr: "Rationnel",
@@ -269,7 +269,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "합리적",
         },
         {
-          cn: "多才多艺",
+          zh: "多才多艺",
           en: "Multitalented",
           es: "Multitalentoso",
           fr: "Multitalentueux",
@@ -277,7 +277,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "다재다능",
         },
         {
-          cn: "公平",
+          zh: "公平",
           en: "Fair",
           es: "Justo",
           fr: "Juste",
@@ -288,7 +288,7 @@ export const bloodTypeData: BloodTypeShard = {
     },
     B: {
       description: {
-        cn: "自由奔放、富有创造力和个性的性格",
+        zh: "自由奔放、富有创造力和个性的性格",
         en: "Free-spirited, creative, and individualistic personality",
         es: "Personalidad de espíritu libre, creativa e individualista",
         fr: "Personnalité libre d'esprit, créative et individualiste",
@@ -296,7 +296,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "자유롭고 창의적이며 개성이 강한 성격",
       },
       name: {
-        cn: "B型",
+        zh: "B型",
         en: "Type B",
         es: "Tipo B",
         fr: "Type B",
@@ -305,7 +305,7 @@ export const bloodTypeData: BloodTypeShard = {
       },
       negatives: [
         {
-          cn: "以自我为中心",
+          zh: "以自我为中心",
           en: "Self-centered",
           es: "Egocéntrico",
           fr: "Égocentrique",
@@ -313,7 +313,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "자기중심적",
         },
         {
-          cn: "无计划",
+          zh: "无计划",
           en: "Unplanned",
           es: "No planificado",
           fr: "Non planifié",
@@ -323,7 +323,7 @@ export const bloodTypeData: BloodTypeShard = {
       ],
       positives: [
         {
-          cn: "有创造力",
+          zh: "有创造力",
           en: "Creative",
           es: "Creativo",
           fr: "Créatif",
@@ -331,7 +331,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "창의적",
         },
         {
-          cn: "适应性强",
+          zh: "适应性强",
           en: "Adaptable",
           es: "Adaptable",
           fr: "Adaptable",
@@ -339,7 +339,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "적응력",
         },
         {
-          cn: "积极",
+          zh: "积极",
           en: "Positive",
           es: "Positivo",
           fr: "Positif",
@@ -350,7 +350,7 @@ export const bloodTypeData: BloodTypeShard = {
     },
     O: {
       description: {
-        cn: "领导力强、现实且雄心勃勃的性格",
+        zh: "领导力强、现实且雄心勃勃的性格",
         en: "Strong leadership, realistic and ambitious personality",
         es: "Fuerte liderazgo, personalidad realista y ambiciosa",
         fr: "Leadership fort, personnalité réaliste et ambitieuse",
@@ -358,7 +358,7 @@ export const bloodTypeData: BloodTypeShard = {
         ko: "리더십이 강하고 현실적이며 의욕적인 성격",
       },
       name: {
-        cn: "O型",
+        zh: "O型",
         en: "Type O",
         es: "Tipo O",
         fr: "Type O",
@@ -367,7 +367,7 @@ export const bloodTypeData: BloodTypeShard = {
       },
       negatives: [
         {
-          cn: "不耐烦",
+          zh: "不耐烦",
           en: "Impatient",
           es: "Impaciente",
           fr: "Impatient",
@@ -375,7 +375,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "성급함",
         },
         {
-          cn: "固执",
+          zh: "固执",
           en: "Stubborn",
           es: "Terco",
           fr: "Têtu",
@@ -385,7 +385,7 @@ export const bloodTypeData: BloodTypeShard = {
       ],
       positives: [
         {
-          cn: "领导力",
+          zh: "领导力",
           en: "Leadership",
           es: "Liderazgo",
           fr: "Leadership",
@@ -393,7 +393,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "리더십",
         },
         {
-          cn: "雄心勃勃",
+          zh: "雄心勃勃",
           en: "Ambitious",
           es: "Ambicioso",
           fr: "Ambitieux",
@@ -401,7 +401,7 @@ export const bloodTypeData: BloodTypeShard = {
           ko: "의욕적",
         },
         {
-          cn: "善于交际",
+          zh: "善于交际",
           en: "Sociable",
           es: "Sociable",
           fr: "Sociable",

@@ -10,7 +10,7 @@ export const HEXACO_DIMENSION_MAP: Record<
   A: {
     color: "#4ade80", // Green
     label: {
-      cn: "宜人性",
+      zh: "宜人性",
       en: "Agreeableness",
       es: "Cordialidad",
       fr: "Agréabilité",
@@ -22,7 +22,7 @@ export const HEXACO_DIMENSION_MAP: Record<
   C: {
     color: "#818cf8", // Indigo
     label: {
-      cn: "尽责性",
+      zh: "尽责性",
       en: "Conscientiousness",
       es: "Escrupulosidad",
       fr: "Conscience",
@@ -34,7 +34,7 @@ export const HEXACO_DIMENSION_MAP: Record<
   E: {
     color: "#f87171", // Red
     label: {
-      cn: "情绪性",
+      zh: "情绪性",
       en: "Emotionality",
       es: "Emocionalidad",
       fr: "Émotionnalité",
@@ -46,7 +46,7 @@ export const HEXACO_DIMENSION_MAP: Record<
   H: {
     color: "#fbbf24", // Amber
     label: {
-      cn: "诚实-谦逊",
+      zh: "诚实-谦逊",
       en: "Honesty-Humility",
       es: "Honestidad-Humildad",
       fr: "Honnêteté-Humilité",
@@ -58,7 +58,7 @@ export const HEXACO_DIMENSION_MAP: Record<
   O: {
     color: "#c084fc", // Purple
     label: {
-      cn: "开放性",
+      zh: "开放性",
       en: "Openness",
       es: "Apertura",
       fr: "Ouverture",
@@ -70,7 +70,7 @@ export const HEXACO_DIMENSION_MAP: Record<
   X: {
     color: "#60a5fa", // Blue
     label: {
-      cn: "外向性",
+      zh: "外向性",
       en: "Extraversion",
       es: "Extraversión",
       fr: "Extraversion",
@@ -86,7 +86,7 @@ const HEXACO_OPTIONS = [
     color: "bg-red-500",
     id: "1",
     text: {
-      cn: "非常不同意",
+      zh: "非常不同意",
       en: "Strongly Disagree",
       es: "Totalmente en desacuerdo",
       fr: "Pas du tout d'accord",
@@ -99,7 +99,7 @@ const HEXACO_OPTIONS = [
     color: "bg-orange-400",
     id: "2",
     text: {
-      cn: "不同意",
+      zh: "不同意",
       en: "Disagree",
       es: "En desacuerdo",
       fr: "Pas d'accord",
@@ -112,7 +112,7 @@ const HEXACO_OPTIONS = [
     color: "bg-green-600/60",
     id: "3",
     text: {
-      cn: "中立",
+      zh: "中立",
       en: "Neutral",
       es: "Neutral",
       fr: "Neutre",
@@ -125,7 +125,7 @@ const HEXACO_OPTIONS = [
     color: "bg-green-400",
     id: "4",
     text: {
-      cn: "同意",
+      zh: "同意",
       en: "Agree",
       es: "De acuerdo",
       fr: "D'accord",
@@ -138,7 +138,7 @@ const HEXACO_OPTIONS = [
     color: "bg-teal-500",
     id: "5",
     text: {
-      cn: "非常同意",
+      zh: "非常同意",
       en: "Strongly Agree",
       es: "Totalmente de acuerdo",
       fr: "Tout à fait d'accord",
@@ -158,7 +158,7 @@ export const HEXACO_QUESTIONS: HEXACOQuestion[] = [
     isReversed: false,
     options: HEXACO_OPTIONS,
     text: {
-      cn: "我不会为了加薪而阿谀奉承。",
+      zh: "我不会为了加薪而阿谀奉承。",
       en: "I wouldn't use flattery to get a raise.",
       es: "No usaría la adulación para conseguir un aumento.",
       fr: "Je n'utiliserais pas la flatterie pour obtenir une augmentation.",
@@ -173,7 +173,7 @@ export const HEXACO_QUESTIONS: HEXACOQuestion[] = [
     isReversed: true,
     options: HEXACO_OPTIONS,
     text: {
-      cn: "我想出名。",
+      zh: "我想出名。",
       en: "I want to be famous.",
       es: "Quiero ser famoso.",
       fr: "Je veux être célèbre.",
@@ -189,7 +189,7 @@ export const HEXACO_QUESTIONS: HEXACOQuestion[] = [
     isReversed: false,
     options: HEXACO_OPTIONS,
     text: {
-      cn: "我很容易焦虑。",
+      zh: "我很容易焦虑。",
       en: "I get anxious easily.",
       es: "Me pongo ansioso fácilmente.",
       fr: "Je deviens facilement anxieux.",
@@ -204,7 +204,7 @@ export const HEXACO_QUESTIONS: HEXACOQuestion[] = [
     isReversed: true,
     options: HEXACO_OPTIONS,
     text: {
-      cn: "我很少感到恐惧。",
+      zh: "我很少感到恐惧。",
       en: "I rarely feel fearful.",
       es: "Rara vez siento miedo.",
       fr: "Je ressens rarement de la peur.",
@@ -220,7 +220,7 @@ export const HEXACO_QUESTIONS: HEXACOQuestion[] = [
     isReversed: false,
     options: HEXACO_OPTIONS,
     text: {
-      cn: "我喜欢成为关注的焦点。",
+      zh: "我喜欢成为关注的焦点。",
       en: "I enjoy being the center of attention.",
       es: "Disfruto siendo el centro de atención.",
       fr: "J'aime être le centre de l'attention.",
@@ -235,7 +235,7 @@ export const HEXACO_QUESTIONS: HEXACOQuestion[] = [
     isReversed: true,
     options: HEXACO_OPTIONS,
     text: {
-      cn: "我更喜欢独自工作。",
+      zh: "我更喜欢独自工作。",
       en: "I prefer to work alone.",
       es: "Prefiero trabajar solo.",
       fr: "Je préfère travailler seul.",
@@ -251,7 +251,7 @@ export const HEXACO_QUESTIONS: HEXACOQuestion[] = [
     isReversed: false,
     options: HEXACO_OPTIONS,
     text: {
-      cn: "我倾向于轻易原谅别人。",
+      zh: "我倾向于轻易原谅别人。",
       en: "I tend to forgive people easily.",
       es: "Tiendo a perdonar a la gente fácilmente.",
       fr: "J'ai tendance à pardonner facilement aux gens.",
@@ -267,7 +267,7 @@ export const HEXACO_QUESTIONS: HEXACOQuestion[] = [
     isReversed: false,
     options: HEXACO_OPTIONS,
     text: {
-      cn: "我拥有丰富的想象力。",
+      zh: "我拥有丰富的想象力。",
       en: "I have a vivid imagination.",
       es: "Tengo una imaginación viva.",
       fr: "J'ai une imagination vive.",
@@ -279,7 +279,7 @@ export const HEXACO_QUESTIONS: HEXACOQuestion[] = [
 
 export const HEXACO_INSIGHTS = {
   highH: {
-    cn: "你把关系建立在真理的基础之上。你的正直是你最大的资产。",
+    zh: "你把关系建立在真理的基础之上。你的正直是你最大的资产。",
     en: "You build relationships on the bedrock of truth. Your integrity is your greatest asset.",
     es: "Construyes relaciones sobre la base de la verdad. Tu integridad es tu mayor activo.",
     fr: "Vous bâtissez vos relations sur le socle de la vérité. Votre intégrité est votre plus grand atout.",
@@ -287,7 +287,7 @@ export const HEXACO_INSIGHTS = {
     ko: "당신은 진실의 토대 위에 관계를 쌓습니다. 당신의 정직함은 가장 큰 자산입니다.",
   },
   lowH: {
-    cn: "你雄心勃勃，知道如何表现自己。你了解影响力的博弈。",
+    zh: "你雄心勃勃，知道如何表现自己。你了解影响力的博弈。",
     en: "You are ambitious and know how to present yourself. You understand the game of influence.",
     es: "Eres ambicioso y sabes cómo presentarte. Entiendes el juego de la influencia.",
     fr: "Vous êtes ambitieux et savez comment vous présenter. Vous comprenez le jeu de l'influence.",

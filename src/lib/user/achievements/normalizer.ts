@@ -42,7 +42,7 @@ export function buildUiAchievements({
     );
 
     const title: Record<Locale, string> = {
-      cn: base?.title?.cn ?? definition.slug,
+      zh: base?.title?.cn ?? definition.slug,
       en: base?.title?.en ?? definition.slug,
       es: base?.title?.es ?? definition.slug,
       fr: base?.title?.fr ?? definition.slug,
@@ -52,7 +52,7 @@ export function buildUiAchievements({
     };
 
     const description: Record<Locale, string> = {
-      cn: base?.description?.cn ?? "",
+      zh: base?.description?.cn ?? "",
       en: base?.description?.en ?? "",
       es: base?.description?.es ?? "",
       fr: base?.description?.fr ?? "",

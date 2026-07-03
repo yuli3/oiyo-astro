@@ -9,7 +9,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -21,7 +21,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -33,7 +33,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -45,7 +45,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -57,7 +57,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -67,7 +67,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "I tend to recover my composure quickly even after under severe stress.",
+      zh: "I tend to recover my composure quickly even after under severe stress.",
       en: "I tend to recover my composure quickly even after under severe stress.",
       es: "I tend to recover my composure quickly even after under severe stress.",
       fr: "I tend to recover my composure quickly even after under severe stress.",
@@ -83,7 +83,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -95,7 +95,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -107,7 +107,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -119,7 +119,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -131,7 +131,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -141,7 +141,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "I believe I can handle whatever comes my way.",
+      zh: "I believe I can handle whatever comes my way.",
       en: "I believe I can handle whatever comes my way.",
       es: "I believe I can handle whatever comes my way.",
       fr: "I believe I can handle whatever comes my way.",
@@ -157,7 +157,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -169,7 +169,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -181,7 +181,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -193,7 +193,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -205,7 +205,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -215,7 +215,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "Past successes give me confidence for new challenges.",
+      zh: "Past successes give me confidence for new challenges.",
       en: "Past successes give me confidence for new challenges.",
       es: "Past successes give me confidence for new challenges.",
       fr: "Past successes give me confidence for new challenges.",
@@ -231,7 +231,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -243,7 +243,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -255,7 +255,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -267,7 +267,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -279,7 +279,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -289,7 +289,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "I believe that difficulties in life make me stronger.",
+      zh: "I believe that difficulties in life make me stronger.",
       en: "I believe that difficulties in life make me stronger.",
       es: "I believe that difficulties in life make me stronger.",
       fr: "I believe that difficulties in life make me stronger.",
@@ -305,7 +305,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -317,7 +317,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -329,7 +329,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -341,7 +341,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -353,7 +353,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -363,7 +363,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "I trust myself and my instincts in difficult times.",
+      zh: "I trust myself and my instincts in difficult times.",
       en: "I trust myself and my instincts in difficult times.",
       es: "I trust myself and my instincts in difficult times.",
       fr: "I trust myself and my instincts in difficult times.",
@@ -379,7 +379,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -391,7 +391,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -403,7 +403,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -415,7 +415,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -427,7 +427,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -437,7 +437,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "I tend to bounce back quickly after illness, injury, or other hardships.",
+      zh: "I tend to bounce back quickly after illness, injury, or other hardships.",
       en: "I tend to bounce back quickly after illness, injury, or other hardships.",
       es: "I tend to bounce back quickly after illness, injury, or other hardships.",
       fr: "I tend to bounce back quickly after illness, injury, or other hardships.",
@@ -453,7 +453,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -465,7 +465,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -477,7 +477,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -489,7 +489,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -501,7 +501,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -511,7 +511,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "Under pressure, I focus and think clearly.",
+      zh: "Under pressure, I focus and think clearly.",
       en: "Under pressure, I focus and think clearly.",
       es: "Under pressure, I focus and think clearly.",
       fr: "Under pressure, I focus and think clearly.",
@@ -527,7 +527,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -539,7 +539,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -551,7 +551,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -563,7 +563,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -575,7 +575,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -585,7 +585,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "I work to attain my goals no matter what roadblocks I encounter.",
+      zh: "I work to attain my goals no matter what roadblocks I encounter.",
       en: "I work to attain my goals no matter what roadblocks I encounter.",
       es: "I work to attain my goals no matter what roadblocks I encounter.",
       fr: "I work to attain my goals no matter what roadblocks I encounter.",
@@ -601,7 +601,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -613,7 +613,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -625,7 +625,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -637,7 +637,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -649,7 +649,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -659,7 +659,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "I feel that my life has meaning.",
+      zh: "I feel that my life has meaning.",
       en: "I feel that my life has meaning.",
       es: "I feel that my life has meaning.",
       fr: "I feel that my life has meaning.",
@@ -675,7 +675,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -687,7 +687,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -699,7 +699,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -711,7 +711,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -723,7 +723,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -733,7 +733,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "I can find help when I need it.",
+      zh: "I can find help when I need it.",
       en: "I can find help when I need it.",
       es: "I can find help when I need it.",
       fr: "I can find help when I need it.",
@@ -749,7 +749,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -761,7 +761,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -773,7 +773,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -785,7 +785,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -797,7 +797,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -807,7 +807,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "I can adapt to change easily.",
+      zh: "I can adapt to change easily.",
       en: "I can adapt to change easily.",
       es: "I can adapt to change easily.",
       fr: "I can adapt to change easily.",
@@ -823,7 +823,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_1",
         score: 4,
         text: {
-          cn: "Strongly agree",
+          zh: "Strongly agree",
           en: "Strongly agree",
           es: "Strongly agree",
           fr: "Strongly agree",
@@ -835,7 +835,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_2",
         score: 3,
         text: {
-          cn: "Agree",
+          zh: "Agree",
           en: "Agree",
           es: "Agree",
           fr: "Agree",
@@ -847,7 +847,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_3",
         score: 2,
         text: {
-          cn: "Neutral",
+          zh: "Neutral",
           en: "Neutral",
           es: "Neutral",
           fr: "Neutral",
@@ -859,7 +859,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_4",
         score: 1,
         text: {
-          cn: "Disagree",
+          zh: "Disagree",
           en: "Disagree",
           es: "Disagree",
           fr: "Disagree",
@@ -871,7 +871,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
         id: "opt_5",
         score: 0,
         text: {
-          cn: "Strongly disagree",
+          zh: "Strongly disagree",
           en: "Strongly disagree",
           es: "Strongly disagree",
           fr: "Strongly disagree",
@@ -881,7 +881,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
       },
     ],
     text: {
-      cn: "I see challenges as opportunities for growth.",
+      zh: "I see challenges as opportunities for growth.",
       en: "I see challenges as opportunities for growth.",
       es: "I see challenges as opportunities for growth.",
       fr: "I see challenges as opportunities for growth.",
@@ -894,7 +894,7 @@ export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
 export const RESILIENCE_RESULTS = {
   high: {
     advice: {
-      cn: "Strength comes from flexibility. Be kinder to yourself sometimes.",
+      zh: "Strength comes from flexibility. Be kinder to yourself sometimes.",
       en: "Strength comes from flexibility. Be kinder to yourself sometimes.",
       es: "Strength comes from flexibility. Be kinder to yourself sometimes.",
       fr: "Strength comes from flexibility. Be kinder to yourself sometimes.",
@@ -902,7 +902,7 @@ export const RESILIENCE_RESULTS = {
       ko: "강함은 유연함에서 나옵니다. 때로는 자신에게 더 너그러워지세요.",
     },
     description: {
-      cn: "You are like a giant tree deeply rooted even in a storm.",
+      zh: "You are like a giant tree deeply rooted even in a storm.",
       en: "You are like a giant tree deeply rooted even in a storm.",
       es: "You are like a giant tree deeply rooted even in a storm.",
       fr: "You are like a giant tree deeply rooted even in a storm.",
@@ -910,7 +910,7 @@ export const RESILIENCE_RESULTS = {
       ko: "당신은 폭풍우 속에서도 뿌리를 깊이 내린 거목과 같습니다.",
     },
     oracleInsight: {
-      cn: "Destiny opens paths for those who endure. Your patience will become victory.",
+      zh: "Destiny opens paths for those who endure. Your patience will become victory.",
       en: "Destiny opens paths for those who endure. Your patience will become victory.",
       es: "Destiny opens paths for those who endure. Your patience will become victory.",
       fr: "Destiny opens paths for those who endure. Your patience will become victory.",
@@ -918,7 +918,7 @@ export const RESILIENCE_RESULTS = {
       ko: "천명은 견디는 자에게 길을 열어줍니다. 당신의 인내는 곧 승리가 될 것입니다.",
     },
     title: {
-      cn: "Unbreakable Steel Spirit",
+      zh: "Unbreakable Steel Spirit",
       en: "Unbreakable Steel Spirit",
       es: "Unbreakable Steel Spirit",
       fr: "Unbreakable Steel Spirit",
@@ -928,7 +928,7 @@ export const RESILIENCE_RESULTS = {
   },
   low: {
     advice: {
-      cn: "Resilience is a muscle. Start with small acts of courage.",
+      zh: "Resilience is a muscle. Start with small acts of courage.",
       en: "Resilience is a muscle. Start with small acts of courage.",
       es: "Resilience is a muscle. Start with small acts of courage.",
       fr: "Resilience is a muscle. Start with small acts of courage.",
@@ -936,7 +936,7 @@ export const RESILIENCE_RESULTS = {
       ko: "회복탄력성은 근육과 같습니다. 작은 용기로부터 시작하세요.",
     },
     description: {
-      cn: "You feel things deeply and may take longer to recover from setbacks.",
+      zh: "You feel things deeply and may take longer to recover from setbacks.",
       en: "You feel things deeply and may take longer to recover from setbacks.",
       es: "You feel things deeply and may take longer to recover from setbacks.",
       fr: "You feel things deeply and may take longer to recover from setbacks.",
@@ -944,7 +944,7 @@ export const RESILIENCE_RESULTS = {
       ko: "당신은 감정을 깊게 느끼며, 시련에서 회복하는 데 시간이 조금 더 걸릴 수 있습니다.",
     },
     oracleInsight: {
-      cn: "Even the mightiest oak began as a fragile seed. Your vulnerability is the soil of your growth.",
+      zh: "Even the mightiest oak began as a fragile seed. Your vulnerability is the soil of your growth.",
       en: "Even the mightiest oak began as a fragile seed. Your vulnerability is the soil of your growth.",
       es: "Even the mightiest oak began as a fragile seed. Your vulnerability is the soil of your growth.",
       fr: "Even the mightiest oak began as a fragile seed. Your vulnerability is the soil of your growth.",
@@ -952,7 +952,7 @@ export const RESILIENCE_RESULTS = {
       ko: "가장 거대한 참나무도 연약한 씨앗에서 시작했습니다. 당신의 여림은 성장의 토양입니다.",
     },
     title: {
-      cn: "The Gentle Sprout",
+      zh: "The Gentle Sprout",
       en: "The Gentle Sprout",
       es: "The Gentle Sprout",
       fr: "The Gentle Sprout",
@@ -962,7 +962,7 @@ export const RESILIENCE_RESULTS = {
   },
   moderate: {
     advice: {
-      cn: "Develop the habit of building confidence by recording small achievements.",
+      zh: "Develop the habit of building confidence by recording small achievements.",
       en: "Develop the habit of building confidence by recording small achievements.",
       es: "Develop the habit of building confidence by recording small achievements.",
       fr: "Develop the habit of building confidence by recording small achievements.",
@@ -970,7 +970,7 @@ export const RESILIENCE_RESULTS = {
       ko: "작은 성취를 기록하며 자신감을 쌓는 습관을 들여보세요.",
     },
     description: {
-      cn: "You possess a flexible resilience that bends in the wind but does not break.",
+      zh: "You possess a flexible resilience that bends in the wind but does not break.",
       en: "You possess a flexible resilience that bends in the wind but does not break.",
       es: "You possess a flexible resilience that bends in the wind but does not break.",
       fr: "You possess a flexible resilience that bends in the wind but does not break.",
@@ -978,7 +978,7 @@ export const RESILIENCE_RESULTS = {
       ko: "바람에 휘어지지만 꺾이지 않는 유연한 회복력을 지니고 있습니다.",
     },
     oracleInsight: {
-      cn: "Water flows and avoids obstacles. Flexibility is your greatest weapon.",
+      zh: "Water flows and avoids obstacles. Flexibility is your greatest weapon.",
       en: "Water flows and avoids obstacles. Flexibility is your greatest weapon.",
       es: "Water flows and avoids obstacles. Flexibility is your greatest weapon.",
       fr: "Water flows and avoids obstacles. Flexibility is your greatest weapon.",
@@ -986,7 +986,7 @@ export const RESILIENCE_RESULTS = {
       ko: "물은 흐르며 장애물을 피합니다. 유연함이 당신의 가장 큰 무기입니다.",
     },
     title: {
-      cn: "The Adaptive Reed",
+      zh: "The Adaptive Reed",
       en: "The Adaptive Reed",
       es: "The Adaptive Reed",
       fr: "The Adaptive Reed",

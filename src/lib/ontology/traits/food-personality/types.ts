@@ -35,7 +35,7 @@ export const FOOD_PERSONALITY_LABELS: Record<
   Locale,
   Record<FoodPersonalityType, string>
 > = {
-  cn: {
+  zh: {
     adventurer: "The Culinary Adventurer",
     minimalist: "The Simple Eater",
     perfectionist: "The Gourmet Perfectionist",
@@ -83,7 +83,7 @@ export const FOOD_PERSONALITY_DESCRIPTIONS: Record<
   Locale,
   Record<FoodPersonalityType, string>
 > = {
-  cn: {
+  zh: {
     adventurer: "",
     minimalist: "",
     perfectionist: "",
@@ -139,7 +139,7 @@ export const FOOD_PERSONALITY_TRAITS: Record<
   Locale,
   Record<FoodPersonalityType, string[]>
 > = {
-  cn: {
+  zh: {
     adventurer: [],
     minimalist: [],
     perfectionist: [],

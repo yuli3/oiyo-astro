@@ -37,7 +37,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   1: {
     archetype: "leader",
     description: {
-      cn: "领导者的数字，代表独立和创造力的核心本质。",
+      zh: "领导者的数字，代表独立和创造力的核心本质。",
       en: "The number of the leader, representing the core essence of this vibration.",
       es: "El número del líder, que representa la esencia central de esta vibración.",
       fr: "Le nombre du leader, représentant l'essence même de cette vibration.",
@@ -46,7 +46,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "fire",
     keywords: {
-      cn: "独立, 领导力, 创新, 抱负, 开拓",
+      zh: "独立, 领导力, 创新, 抱负, 开拓",
       en: "Independence, Leadership, Innovation, Ambition, Pioneering",
       es: "Independencia, Liderazgo, Innovación, Ambición, Pionero",
       fr: "Indépendance, Leadership, Innovation, Ambition, Pionnier",
@@ -54,7 +54,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "독립, 리더십, 혁신, 야망, 개척",
     },
     name: {
-      cn: "领导者",
+      zh: "领导者",
       en: "The Leader",
       es: "El Líder",
       fr: "Le Leader",
@@ -66,7 +66,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   2: {
     archetype: "healer",
     description: {
-      cn: "和平使者的数字，代表这种和谐与合作的的核心本质。",
+      zh: "和平使者的数字，代表这种和谐与合作的的核心本质。",
       en: "The number of the peacemaker, representing the core essence of this vibration.",
       es: "El número del mediador, que representa la esencia central de esta vibración.",
       fr: "Le nombre du pacificateur, représentant l'essence même de cette vibration.",
@@ -75,7 +75,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "water",
     keywords: {
-      cn: "合作, 和谐, 外交, 敏感, 伙伴关系",
+      zh: "合作, 和谐, 外交, 敏感, 伙伴关系",
       en: "Cooperation, Harmony, Diplomacy, Sensitivity, Partnership",
       es: "Cooperación, Armonía, Diplomacia, Sensibilidad, Asociación",
       fr: "Coopération, Harmonie, Diplomatie, Sensibilité, Partenariat",
@@ -83,7 +83,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "협력, 조화, 외교, 감수성, 동반자",
     },
     name: {
-      cn: "和平使者",
+      zh: "和平使者",
       en: "The Peacemaker",
       es: "El Mediador",
       fr: "Le Pacificateur",
@@ -95,7 +95,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   3: {
     archetype: "creator",
     description: {
-      cn: "创意沟通者的数字，代表自我表达和灵感的核心本质。",
+      zh: "创意沟通者的数字，代表自我表达和灵感的核心本质。",
       en: "The number of the creative communicator, representing the core essence of this vibration.",
       es: "El número del comunicador creativo, que representa la esencia central de esta vibración.",
       fr: "Le nombre du communicateur créatif, représentant l'essence même de cette vibration.",
@@ -104,7 +104,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "air",
     keywords: {
-      cn: "创造力, 沟通, 乐观主义, 自我表达, 灵感",
+      zh: "创造力, 沟通, 乐观主义, 自我表达, 灵感",
       en: "Creativity, Communication, Optimism, Self-expression, Inspiration",
       es: "Creatividad, Comunicación, Optimismo, Autoexpresión, Inspiración",
       fr: "Créativité, Communication, Optimisme, Expression de soi, Inspiration",
@@ -112,7 +112,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "창의성, 소통, 낙관주의, 자기표현, 영감",
     },
     name: {
-      cn: "创意沟通者",
+      zh: "创意沟通者",
       en: "The Creative Communicator",
       es: "El Comunicador Creativo",
       fr: "Le Communicateur Créatif",
@@ -124,7 +124,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   4: {
     archetype: "protector",
     description: {
-      cn: "务实建设者的数字，代表稳定和基础的核心本质。",
+      zh: "务实建设者的数字，代表稳定和基础的核心本质。",
       en: "The number of the practical builder, representing the core essence of this vibration.",
       es: "El número del constructor práctico, que representa la esencia central de esta vibración.",
       fr: "Le nombre du bâtisseur pratique, représentant l'essence même de cette vibration.",
@@ -133,7 +133,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "earth",
     keywords: {
-      cn: "稳定, 努力, 组织, 可靠性, 实用性",
+      zh: "稳定, 努力, 组织, 可靠性, 实用性",
       en: "Stability, Hard work, Organization, Reliability, Practicality",
       es: "Estabilidad, Trabajo duro, Organización, Fiabilidad, Practicidad",
       fr: "Stabilité, Travail acharné, Organisation, Fiabilité, Praticité",
@@ -141,7 +141,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "안정, 노력, 조직, 신뢰성, 실용성",
     },
     name: {
-      cn: "务实建设者",
+      zh: "务实建设者",
       en: "The Practical Builder",
       es: "El Constructor Práctico",
       fr: "Le Bâtisseur Pratique",
@@ -153,7 +153,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   5: {
     archetype: "explorer",
     description: {
-      cn: "自由追求者的数字，代表变化和冒险的核心本质。",
+      zh: "自由追求者的数字，代表变化和冒险的核心本质。",
       en: "The number of the freedom seeker, representing change and adventure.",
       es: "El número del buscador de libertad, que representa el cambio y la aventura.",
       fr: "Le nombre du chercheur de liberté, représentant le changement et l'aventure.",
@@ -162,7 +162,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "fire",
     keywords: {
-      cn: "自由, 冒险, 变化, 多才多艺, 好奇心",
+      zh: "自由, 冒险, 变化, 多才多艺, 好奇心",
       en: "Freedom, Adventure, Change, Versatility, Curiosity",
       es: "Libertad, Aventura, Cambio, Versatilidad, Curiosidad",
       fr: "Liberté, Aventure, Changement, Polyvalence, Curiosité",
@@ -170,7 +170,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "자유, 모험, 변화, 다재다능, 호기심",
     },
     name: {
-      cn: "自由追求者",
+      zh: "自由追求者",
       en: "The Freedom Seeker",
       es: "El Buscador de Libertad",
       fr: "Le Chercheur de Liberté",
@@ -182,7 +182,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   6: {
     archetype: "healer",
     description: {
-      cn: "养育者的数字，代表责任和关怀的核心本质。",
+      zh: "养育者的数字，代表责任和关怀的核心本质。",
       en: "The number of the nurturer, representing responsibility and care.",
       es: "El número del cuidador, que representa la responsabilidad y el cuidado.",
       fr: "Le nombre du nourricier, représentant la responsabilité et le soin.",
@@ -191,7 +191,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "earth",
     keywords: {
-      cn: "责任, 关怀, 家庭, 社区, 服务",
+      zh: "责任, 关怀, 家庭, 社区, 服务",
       en: "Responsibility, Care, Family, Community, Service",
       es: "Responsabilidad, Cuidado, Familia, Comunidad, Servicio",
       fr: "Responsabilité, Soin, Famille, Communauté, Service",
@@ -199,7 +199,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "책임, 보살핌, 가족, 공동체, 봉사",
     },
     name: {
-      cn: "养育者",
+      zh: "养育者",
       en: "The Nurturer",
       es: "El Cuidador",
       fr: "Le Nourricier",
@@ -211,7 +211,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   7: {
     archetype: "sage",
     description: {
-      cn: "真理寻求者的数字，代表精神觉醒和内在智慧。",
+      zh: "真理寻求者的数字，代表精神觉醒和内在智慧。",
       en: "The number of the seeker, representing spiritual awakening and inner wisdom.",
       es: "El número del buscador, que representa el despertar espiritual y la sabiduría interior.",
       fr: "Le nombre du chercheur, représentant l'éveil spirituel et la sagesse intérieure.",
@@ -220,7 +220,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "water",
     keywords: {
-      cn: "灵性, 智慧, 内省, 分析, 孤独",
+      zh: "灵性, 智慧, 内省, 分析, 孤独",
       en: "Spirituality, Wisdom, Introspection, Analysis, Solitude",
       es: "Espiritualidad, Sabiduría, Introspección, Análisis, Soledad",
       fr: "Spiritualité, Sagesse, Introspection, Analyse, Solitude",
@@ -228,7 +228,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "영성, 지혜, 성찰, 분석, 고독",
     },
     name: {
-      cn: "真理寻求者",
+      zh: "真理寻求者",
       en: "The Seeker",
       es: "El Buscador",
       fr: "Le Chercheur",
@@ -240,7 +240,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   8: {
     archetype: "ruler",
     description: {
-      cn: "成就者的数字，代表物质成功和权威。",
+      zh: "成就者的数字，代表物质成功和权威。",
       en: "The number of the achiever, representing material success and authority.",
       es: "El número del logrador, que representa el éxito material y la autoridad.",
       fr: "Le nombre du réalisateur, représentant le succès matériel et l'autorité.",
@@ -249,7 +249,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "earth",
     keywords: {
-      cn: "成功, 权力, 权威, 富足, 执行",
+      zh: "成功, 权力, 权威, 富足, 执行",
       en: "Success, Power, Authority, Abundance, Executive",
       es: "Éxito, Poder, Autoridad, Abundancia, Ejecutivo",
       fr: "Succès, Pouvoir, Autorité, Abondance, Exécutif",
@@ -257,7 +257,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "성공, 힘, 권위, 풍요, 경영",
     },
     name: {
-      cn: "成就者",
+      zh: "成就者",
       en: "The Achiever",
       es: "El Logrador",
       fr: "Le Réalisateur",
@@ -269,7 +269,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   9: {
     archetype: "sage",
     description: {
-      cn: "人道主义者的数字，代表完成和普遍的爱。",
+      zh: "人道主义者的数字，代表完成和普遍的爱。",
       en: "The number of the humanitarian, representing completion and universal love.",
       es: "El número del humanitario, que representa la finalización y el amor universal.",
       fr: "Le nombre de l'humanitaire, représentant l'achèvement et l'amour universel.",
@@ -278,7 +278,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "fire",
     keywords: {
-      cn: "人道主义, 同情, 完成, 无私, 宽容",
+      zh: "人道主义, 同情, 完成, 无私, 宽容",
       en: "Humanitarianism, Compassion, Completion, Selflessness, Tolerance",
       es: "Humanitarismo, Compasión, Finalización, Abnegación, Tolerancia",
       fr: "Humanitarisme, Compassion, Achèvement, Altruisme, Tolérance",
@@ -286,7 +286,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "인애, 연민, 완성, 이타심, 관용",
     },
     name: {
-      cn: "人道主义者",
+      zh: "人道主义者",
       en: "The Humanitarian",
       es: "El Humanitario",
       fr: "L'Humanitaire",
@@ -298,7 +298,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   11: {
     archetype: "magician",
     description: {
-      cn: "代表直觉、精神洞察和启蒙的大师数字。",
+      zh: "代表直觉、精神洞察和启蒙的大师数字。",
       en: "A master number representing intuition, spiritual insight, and illumination.",
       es: "Un número maestro que representa la intuición, la visión espiritual y la iluminación.",
       fr: "Un maître nombre représentant l'intuition, la perspicacité spirituelle et l'illumination.",
@@ -307,7 +307,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "air",
     keywords: {
-      cn: "直觉, 灵性, 启蒙, 灵感, 理想主义",
+      zh: "直觉, 灵性, 启蒙, 灵感, 理想主义",
       en: "Intuition, Spirituality, Enlightenment, Inspiration, Idealism",
       es: "Intuición, Espiritualidad, Iluminación, Inspiración, Idealismo",
       fr: "Intuition, Spiritualité, Illumination, Inspiration, Idéalisme",
@@ -315,7 +315,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "직관, 영성, 깨달음, 영감, 이상주의",
     },
     name: {
-      cn: "大师启蒙者",
+      zh: "大师启蒙者",
       en: "The Master Illuminator",
       es: "El Maestro Iluminador",
       fr: "Le Maître Illuminateur",
@@ -327,7 +327,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   22: {
     archetype: "creator",
     description: {
-      cn: "代表将梦想变为现实的能力的大师数字。",
+      zh: "代表将梦想变为现实的能力的大师数字。",
       en: "A master number representing the ability to turn dreams into reality.",
       es: "Un número maestro que representa la capacidad de convertir los sueños en realidad.",
       fr: "Un maître nombre représentant la capacité de transformer les rêves en réalité.",
@@ -336,7 +336,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "earth",
     keywords: {
-      cn: "精通, 建设, 实现, 力量, 愿景",
+      zh: "精通, 建设, 实现, 力量, 愿景",
       en: "Mastery, Construction, Realization, Power, Vision",
       es: "Maestría, Construcción, Realización, Poder, Visión",
       fr: "Maîtrise, Construction, Réalisation, Pouvoir, Vision",
@@ -344,7 +344,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "숙달, 건설, 실현, 힘, 비전",
     },
     name: {
-      cn: "大师建设者",
+      zh: "大师建设者",
       en: "The Master Builder",
       es: "El Maestro Constructor",
       fr: "Le Maître Bâtisseur",
@@ -356,7 +356,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
   33: {
     archetype: "guide",
     description: {
-      cn: "代表慈悲服务和精神教导的大师数字。",
+      zh: "代表慈悲服务和精神教导的大师数字。",
       en: "A master number representing compassionate service and spiritual teaching.",
       es: "Un número maestro que representa el servicio compasivo y la enseñanza espiritual.",
       fr: "Un maître nombre représentant le service compatissant et l'enseignement spirituel.",
@@ -365,7 +365,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
     },
     element: "water",
     keywords: {
-      cn: "同情, 教导, 疗愈, 指导, 祝福",
+      zh: "同情, 教导, 疗愈, 指导, 祝福",
       en: "Compassion, Teaching, Healing, Guidance, Blessing",
       es: "Compasión, Enseñanza, Curación, Guía, Bendición",
       fr: "Compassion, Enseignement, Guérison, Orientation, Bénédiction",
@@ -373,7 +373,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       ko: "연민, 가르침, 치유, 인도, 축복",
     },
     name: {
-      cn: "大师导师",
+      zh: "大师导师",
       en: "The Master Teacher",
       es: "El Maestro Maestro",
       fr: "Le Maître Enseignant",
@@ -390,7 +390,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
 > = {
   1: {
     description: {
-      cn: "为未来播种的时刻。",
+      zh: "为未来播种的时刻。",
       en: "A time to plant seeds for the future.",
       es: "Un momento para plantar semillas para el futuro.",
       fr: "Un moment pour planter les graines du futur.",
@@ -398,7 +398,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
       ko: "미래를 위해 씨앗을 뿌리는 시기입니다.",
     },
     theme: {
-      cn: "新的开始",
+      zh: "新的开始",
       en: "New Beginnings",
       es: "Nuevos comienzos",
       fr: "Nouveaux commencements",
@@ -408,7 +408,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
   },
   2: {
     description: {
-      cn: "关注关系并等待结果。",
+      zh: "关注关系并等待结果。",
       en: "Focus on relationships and waiting for results.",
       es: "Céntrate en las relaciones y espera los resultados.",
       fr: "Concentrez-vous sur les relations et attendez les résultats.",
@@ -416,7 +416,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
       ko: "관계에 집중하고 결과를 기다리는 시기입니다.",
     },
     theme: {
-      cn: "耐心与合作",
+      zh: "耐心与合作",
       en: "Patience and Partnership",
       es: "Paciencia y asociación",
       fr: "Patience et partenariat",
@@ -426,7 +426,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
   },
   3: {
     description: {
-      cn: "表现自己，享受生活。",
+      zh: "表现自己，享受生活。",
       en: "Express yourself and enjoy life.",
       es: "Exprésate y disfruta la vida.",
       fr: "Exprimez-vous et profitez de la vie.",
@@ -434,7 +434,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
       ko: "자신을 표현하고 삶을 즐기는 시기입니다.",
     },
     theme: {
-      cn: "创造力与快乐",
+      zh: "创造力与快乐",
       en: "Creativity and Joy",
       es: "Creatividad y alegría",
       fr: "Créativité et joie",
@@ -444,7 +444,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
   },
   4: {
     description: {
-      cn: "为你的目标建立坚实的基础。",
+      zh: "为你的目标建立坚实的基础。",
       en: "Build a solid foundation for your goals.",
       es: "Construye una base sólida para tus objetivos.",
       fr: "Construisez une fondation solide pour vos objectifs.",
@@ -452,7 +452,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
       ko: "목표를 위한 단단한 기반을 다지는 시기입니다.",
     },
     theme: {
-      cn: "努力与基础",
+      zh: "努力与基础",
       en: "Hard Work and Foundation",
       es: "Trabajo duro y base",
       fr: "Travail acharné et fondation",
@@ -462,7 +462,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
   },
   5: {
     description: {
-      cn: "接受变化并探索新的机遇。",
+      zh: "接受变化并探索新的机遇。",
       en: "Embrace change and explore new opportunities.",
       es: "Acepta el cambio y explora nuevas oportunidades.",
       fr: "Acceptez le changement et explorez de nouvelles opportunités.",
@@ -470,7 +470,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
       ko: "변화를 받아들이고 새로운 기회를 탐험하세요.",
     },
     theme: {
-      cn: "变化与自由",
+      zh: "变化与自由",
       en: "Change and Freedom",
       es: "Cambio y libertad",
       fr: "Changement et liberté",
@@ -480,7 +480,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
   },
   6: {
     description: {
-      cn: "关注家庭、家人和责任。",
+      zh: "关注家庭、家人和责任。",
       en: "Focus on home, family, and duty.",
       es: "Céntrate en el hogar, la familia y el deber.",
       fr: "Concentrez-vous sur le foyer, la famille et le devoir.",
@@ -488,7 +488,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
       ko: "가정, 가족, 의무에 집중하세요.",
     },
     theme: {
-      cn: "责任与家庭",
+      zh: "责任与家庭",
       en: "Responsibility and Family",
       es: "Responsabilidad y familia",
       fr: "Responsabilité et famille",
@@ -498,7 +498,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
   },
   7: {
     description: {
-      cn: "内心反省并发展你的灵性。",
+      zh: "内心反省并发展你的灵性。",
       en: "Look inward and develop your spirituality.",
       es: "Mira hacia adentro y desarrolla tu espiritualidad.",
       fr: "Regardez à l'intérieur et développez votre spiritualité.",
@@ -506,7 +506,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
       ko: "내면을 들여다보고 영성을 발전시키세요.",
     },
     theme: {
-      cn: "反思与成长",
+      zh: "反思与成长",
       en: "Reflection and Growth",
       es: "Reflexión y crecimiento",
       fr: "Réflexion et croissance",
@@ -516,7 +516,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
   },
   8: {
     description: {
-      cn: "收获回报并行使权力的时刻。",
+      zh: "收获回报并行使权力的时刻。",
       en: "A time to harvest rewards and exercise authority.",
       es: "Un momento para cosechar recompensas y ejercer autoridad.",
       fr: "Un moment pour récolter les récompenses et exercer l'autorité.",
@@ -524,7 +524,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
       ko: "보상을 수확하고 권위를 행사하는 시기입니다.",
     },
     theme: {
-      cn: "成功与权力",
+      zh: "成功与权力",
       en: "Success and Power",
       es: "Éxito y poder",
       fr: "Succès et pouvoir",
@@ -534,7 +534,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
   },
   9: {
     description: {
-      cn: "结束周期并为新事物做准备。",
+      zh: "结束周期并为新事物做准备。",
       en: "Finish cycles and prepare for the new.",
       es: "Termina ciclos y prepárate para lo nuevo.",
       fr: "Terminez les cycles et préparez le nouveau.",
@@ -542,7 +542,7 @@ export const PERSONAL_YEAR_MEANINGS: Record<
       ko: "주기를 마무리하고 새로운 것을 준비하세요.",
     },
     theme: {
-      cn: "完成与放手",
+      zh: "完成与放手",
       en: "Completion and Letting Go",
       es: "Finalización y soltar",
       fr: "Achèvement et lâcher-prise",

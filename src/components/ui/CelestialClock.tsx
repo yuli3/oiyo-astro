@@ -28,30 +28,30 @@ function getSolarPosition(date: Date): { lon: number; lat: number; jieqi: string
   const solarLon = ((lambda % 360) + 360) % 360
   const jieqiIndex = Math.floor(solarLon / 15) % 24
   const jieqiNames: Record<string, string>[] = [
-    { ko: '소한', en: 'Minor Cold', ja: '小寒', cn: '小寒' },
-    { ko: '대한', en: 'Major Cold', ja: '大寒', cn: '大寒' },
-    { ko: '입춘', en: 'Start of Spring', ja: '立春', cn: '立春' },
-    { ko: '우수', en: 'Rain Water', ja: '雨水', cn: '雨水' },
-    { ko: '경칩', en: 'Awakening of Insects', ja: '啓蟄', cn: '惊蛰' },
-    { ko: '춘분', en: 'Spring Equinox', ja: '春分', cn: '春分' },
-    { ko: '청명', en: 'Clear and Bright', ja: '清明', cn: '清明' },
-    { ko: '곡우', en: 'Grain Rain', ja: '穀雨', cn: '谷雨' },
-    { ko: '입하', en: 'Start of Summer', ja: '立夏', cn: '立夏' },
-    { ko: '소만', en: 'Grain Buds', ja: '小満', cn: '小满' },
-    { ko: '망종', en: 'Grain in Ear', ja: '芒種', cn: '芒种' },
-    { ko: '하지', en: 'Summer Solstice', ja: '夏至', cn: '夏至' },
-    { ko: '소서', en: 'Minor Heat', ja: '小暑', cn: '小暑' },
-    { ko: '대서', en: 'Major Heat', ja: '大暑', cn: '大暑' },
-    { ko: '입추', en: 'Start of Autumn', ja: '立秋', cn: '立秋' },
-    { ko: '처서', en: 'End of Heat', ja: '処暑', cn: '处暑' },
-    { ko: '백로', en: 'White Dew', ja: '白露', cn: '白露' },
-    { ko: '추분', en: 'Autumnal Equinox', ja: '秋分', cn: '秋分' },
-    { ko: '한로', en: 'Cold Dew', ja: '寒露', cn: '寒露' },
-    { ko: '상강', en: 'Frost\'s Descent', ja: '霜降', cn: '霜降' },
-    { ko: '입동', en: 'Start of Winter', ja: '立冬', cn: '立冬' },
-    { ko: '소설', en: 'Minor Snow', ja: '小雪', cn: '小雪' },
-    { ko: '대설', en: 'Major Snow', ja: '大雪', cn: '大雪' },
-    { ko: '동지', en: 'Winter Solstice', ja: '冬至', cn: '冬至' },
+    { ko: '소한', en: 'Minor Cold', ja: '小寒', zh: '小寒' },
+    { ko: '대한', en: 'Major Cold', ja: '大寒', zh: '大寒' },
+    { ko: '입춘', en: 'Start of Spring', ja: '立春', zh: '立春' },
+    { ko: '우수', en: 'Rain Water', ja: '雨水', zh: '雨水' },
+    { ko: '경칩', en: 'Awakening of Insects', ja: '啓蟄', zh: '惊蛰' },
+    { ko: '춘분', en: 'Spring Equinox', ja: '春分', zh: '春分' },
+    { ko: '청명', en: 'Clear and Bright', ja: '清明', zh: '清明' },
+    { ko: '곡우', en: 'Grain Rain', ja: '穀雨', zh: '谷雨' },
+    { ko: '입하', en: 'Start of Summer', ja: '立夏', zh: '立夏' },
+    { ko: '소만', en: 'Grain Buds', ja: '小満', zh: '小满' },
+    { ko: '망종', en: 'Grain in Ear', ja: '芒種', zh: '芒种' },
+    { ko: '하지', en: 'Summer Solstice', ja: '夏至', zh: '夏至' },
+    { ko: '소서', en: 'Minor Heat', ja: '小暑', zh: '小暑' },
+    { ko: '대서', en: 'Major Heat', ja: '大暑', zh: '大暑' },
+    { ko: '입추', en: 'Start of Autumn', ja: '立秋', zh: '立秋' },
+    { ko: '처서', en: 'End of Heat', ja: '処暑', zh: '处暑' },
+    { ko: '백로', en: 'White Dew', ja: '白露', zh: '白露' },
+    { ko: '추분', en: 'Autumnal Equinox', ja: '秋分', zh: '秋分' },
+    { ko: '한로', en: 'Cold Dew', ja: '寒露', zh: '寒露' },
+    { ko: '상강', en: 'Frost\'s Descent', ja: '霜降', zh: '霜降' },
+    { ko: '입동', en: 'Start of Winter', ja: '立冬', zh: '立冬' },
+    { ko: '소설', en: 'Minor Snow', ja: '小雪', zh: '小雪' },
+    { ko: '대설', en: 'Major Snow', ja: '大雪', zh: '大雪' },
+    { ko: '동지', en: 'Winter Solstice', ja: '冬至', zh: '冬至' },
   ]
 
   return {
@@ -71,15 +71,15 @@ function getLunarPhase(date: Date): { phase: number; emoji: string; name: Record
   const pct = phase / synodic
 
   const phases: Array<{ min: number; max: number; emoji: string; name: Record<string, string> }> = [
-    { min: 0,    max: 0.03, emoji: '🌑', name: { ko: '삭(신월)',  en: 'New Moon',       ja: '新月',   cn: '新月' } },
-    { min: 0.03, max: 0.22, emoji: '🌒', name: { ko: '초승달',    en: 'Waxing Crescent', ja: '三日月', cn: '峨眉月' } },
-    { min: 0.22, max: 0.28, emoji: '🌓', name: { ko: '상현달',    en: 'First Quarter',   ja: '上弦',   cn: '上弦月' } },
-    { min: 0.28, max: 0.47, emoji: '🌔', name: { ko: '보름 전',   en: 'Waxing Gibbous',  ja: '十三夜', cn: '盈凸月' } },
-    { min: 0.47, max: 0.53, emoji: '🌕', name: { ko: '망(보름)',  en: 'Full Moon',       ja: '満月',   cn: '满月' } },
-    { min: 0.53, max: 0.72, emoji: '🌖', name: { ko: '보름 후',   en: 'Waning Gibbous',  ja: '十六夜', cn: '亏凸月' } },
-    { min: 0.72, max: 0.78, emoji: '🌗', name: { ko: '하현달',    en: 'Last Quarter',    ja: '下弦',   cn: '下弦月' } },
-    { min: 0.78, max: 0.97, emoji: '🌘', name: { ko: '그믐 전',   en: 'Waning Crescent', ja: '有明月', cn: '残月' } },
-    { min: 0.97, max: 1.0,  emoji: '🌑', name: { ko: '그믐',      en: 'Dark Moon',       ja: '晦日',   cn: '晦月' } },
+    { min: 0,    max: 0.03, emoji: '🌑', name: { ko: '삭(신월)',  en: 'New Moon',       ja: '新月',   zh: '新月' } },
+    { min: 0.03, max: 0.22, emoji: '🌒', name: { ko: '초승달',    en: 'Waxing Crescent', ja: '三日月', zh: '峨眉月' } },
+    { min: 0.22, max: 0.28, emoji: '🌓', name: { ko: '상현달',    en: 'First Quarter',   ja: '上弦',   zh: '上弦月' } },
+    { min: 0.28, max: 0.47, emoji: '🌔', name: { ko: '보름 전',   en: 'Waxing Gibbous',  ja: '十三夜', zh: '盈凸月' } },
+    { min: 0.47, max: 0.53, emoji: '🌕', name: { ko: '망(보름)',  en: 'Full Moon',       ja: '満月',   zh: '满月' } },
+    { min: 0.53, max: 0.72, emoji: '🌖', name: { ko: '보름 후',   en: 'Waning Gibbous',  ja: '十六夜', zh: '亏凸月' } },
+    { min: 0.72, max: 0.78, emoji: '🌗', name: { ko: '하현달',    en: 'Last Quarter',    ja: '下弦',   zh: '下弦月' } },
+    { min: 0.78, max: 0.97, emoji: '🌘', name: { ko: '그믐 전',   en: 'Waning Crescent', ja: '有明月', zh: '残月' } },
+    { min: 0.97, max: 1.0,  emoji: '🌑', name: { ko: '그믐',      en: 'Dark Moon',       ja: '晦日',   zh: '晦月' } },
   ]
 
   const p = phases.find(p => pct >= p.min && pct < p.max) ?? phases[0]
@@ -88,16 +88,16 @@ function getLunarPhase(date: Date): { phase: number; emoji: string; name: Record
 
 /* ── UI strings ─────────────────────────────────────────────── */
 const LABELS: Record<string, Record<string, string>> = {
-  title: { ko: '천문 시각', en: 'Celestial Time', ja: '天文時刻', cn: '天文时刻' },
-  subtitle: { ko: '명리학의 근간인 절기와 천체 위치를 실시간으로 확인합니다', en: 'Real-time solar term and celestial position — the astronomical foundation of BaZi', ja: '四柱推命の基盤となる節気と天体位置をリアルタイムで確認', cn: '实时查看四柱命理基础的节气与天体位置' },
-  solarTerm: { ko: '현재 절기', en: 'Current Solar Term', ja: '現在の節気', cn: '当前节气' },
-  lunarPhase: { ko: '달의 위상', en: 'Lunar Phase', ja: '月の位相', cn: '月相' },
-  solarLon: { ko: '태양 황경', en: 'Solar Longitude', ja: '太陽黄経', cn: '太阳黄经' },
-  subLat: { ko: '태양 직하점 위도', en: 'Sub-solar Latitude', ja: '太陽直下点緯度', cn: '日下点纬度' },
-  note: { ko: '절기는 사주 해석의 기준이 됩니다. 새로운 절기가 시작되면 년주·월주가 바뀝니다.', en: 'Solar terms are the foundation of BaZi interpretation. A new term shifts the Year and Month Pillars.', ja: '節気は四柱推命の解釈基準です。新しい節気が始まると年柱・月柱が変わります。', cn: '节气是八字解读的基础。每逢节气交替，年柱和月柱随之改变。' },
-  yangPhase: { ko: '양기 고조', en: 'Yang Peak', ja: '陽気最盛', cn: '阳气最盛' },
-  yinPhase: { ko: '음기 고조', en: 'Yin Peak', ja: '陰気最盛', cn: '阴气最盛' },
-  qiBalance: { ko: '음양 균형', en: 'Yin-Yang Balance', ja: '陰陽バランス', cn: '阴阳平衡' },
+  title: { ko: '천문 시각', en: 'Celestial Time', ja: '天文時刻', zh: '天文时刻' },
+  subtitle: { ko: '명리학의 근간인 절기와 천체 위치를 실시간으로 확인합니다', en: 'Real-time solar term and celestial position — the astronomical foundation of BaZi', ja: '四柱推命の基盤となる節気と天体位置をリアルタイムで確認', zh: '实时查看四柱命理基础的节气与天体位置' },
+  solarTerm: { ko: '현재 절기', en: 'Current Solar Term', ja: '現在の節気', zh: '当前节气' },
+  lunarPhase: { ko: '달의 위상', en: 'Lunar Phase', ja: '月の位相', zh: '月相' },
+  solarLon: { ko: '태양 황경', en: 'Solar Longitude', ja: '太陽黄経', zh: '太阳黄经' },
+  subLat: { ko: '태양 직하점 위도', en: 'Sub-solar Latitude', ja: '太陽直下点緯度', zh: '日下点纬度' },
+  note: { ko: '절기는 사주 해석의 기준이 됩니다. 새로운 절기가 시작되면 년주·월주가 바뀝니다.', en: 'Solar terms are the foundation of BaZi interpretation. A new term shifts the Year and Month Pillars.', ja: '節気は四柱推命の解釈基準です。新しい節気が始まると年柱・月柱が変わります。', zh: '节气是八字解读的基础。每逢节气交替，年柱和月柱随之改变。' },
+  yangPhase: { ko: '양기 고조', en: 'Yang Peak', ja: '陽気最盛', zh: '阳气最盛' },
+  yinPhase: { ko: '음기 고조', en: 'Yin Peak', ja: '陰気最盛', zh: '阴气最盛' },
+  qiBalance: { ko: '음양 균형', en: 'Yin-Yang Balance', ja: '陰陽バランス', zh: '阴阳平衡' },
 }
 
 function L(key: string, locale: string): string {

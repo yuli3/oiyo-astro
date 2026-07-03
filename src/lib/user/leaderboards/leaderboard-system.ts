@@ -59,7 +59,7 @@ class LeaderboardEngine {
       case "referrals":
         return getLocalizedText(
           {
-            cn: `${score}人`,
+            zh: `${score}人`,
             en: `${score} friends`,
             es: `${score} amigos`,
             fr: `${score} amis`,
@@ -71,7 +71,7 @@ class LeaderboardEngine {
       case "streaks":
         return getLocalizedText(
           {
-            cn: `${score}天`,
+            zh: `${score}天`,
             en: `${score} days`,
             es: `${score} días`,
             fr: `${score} jours`,
@@ -83,7 +83,7 @@ class LeaderboardEngine {
       case "tests-completed":
         return getLocalizedText(
           {
-            cn: `${score}项`,
+            zh: `${score}项`,
             en: `${score} tests`,
             es: `${score} tests`,
             fr: `${score} tests`,
@@ -103,7 +103,7 @@ class LeaderboardEngine {
   getCategoryLabel(category: LeaderboardCategory, locale: Locale): string {
     const labels: Record<LeaderboardCategory, Record<Locale, string>> = {
       points: {
-        cn: "总积分",
+        zh: "总积分",
         en: "Total Points",
         es: "Puntos totales",
         fr: "Points totaux",
@@ -111,7 +111,7 @@ class LeaderboardEngine {
         ko: "총 포인트",
       },
       referrals: {
-        cn: "推荐人数",
+        zh: "推荐人数",
         en: "Referrals",
         es: "Recomendaciones",
         fr: "Parrainages",
@@ -119,7 +119,7 @@ class LeaderboardEngine {
         ko: "친구 초대",
       },
       streaks: {
-        cn: "持续天数",
+        zh: "持续天数",
         en: "Current Streak",
         es: "Racha actual",
         fr: "Série actuelle",
@@ -127,7 +127,7 @@ class LeaderboardEngine {
         ko: "현재 연속 기록",
       },
       "tests-completed": {
-        cn: "已完成测试",
+        zh: "已完成测试",
         en: "Tests Completed",
         es: "Tests completados",
         fr: "Tests terminés",
@@ -204,7 +204,7 @@ class LeaderboardEngine {
   getPeriodLabel(period: LeaderboardPeriod, locale: Locale): string {
     const labels: Record<LeaderboardPeriod, Record<Locale, string>> = {
       "all-time": {
-        cn: "所有时间",
+        zh: "所有时间",
         en: "All Time",
         es: "Todo el tiempo",
         fr: "Tout le temps",
@@ -212,7 +212,7 @@ class LeaderboardEngine {
         ko: "전체",
       },
       daily: {
-        cn: "今天",
+        zh: "今天",
         en: "Today",
         es: "Hoy",
         fr: "Aujourd'hui",
@@ -220,7 +220,7 @@ class LeaderboardEngine {
         ko: "오늘",
       },
       monthly: {
-        cn: "本月",
+        zh: "本月",
         en: "This Month",
         es: "Este mes",
         fr: "Ce mois-ci",
@@ -228,7 +228,7 @@ class LeaderboardEngine {
         ko: "이번 달",
       },
       weekly: {
-        cn: "本周",
+        zh: "本周",
         en: "This Week",
         es: "Esta semana",
         fr: "Cette semaine",

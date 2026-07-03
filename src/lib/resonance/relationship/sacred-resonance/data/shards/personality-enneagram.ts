@@ -37,7 +37,7 @@ export const enneagramData: EnneagramShard = {
         good: ["type3", "type5", "type6"],
       },
       coreMotivation: {
-        cn: "道徳上的完美。",
+        zh: "道徳上的完美。",
         en: "To be morally perfect.",
         es: "Ser moralmente perfecto.",
         fr: "Être moralement parfait.",
@@ -45,7 +45,7 @@ export const enneagramData: EnneagramShard = {
         ko: "도덕적으로 완벽하기를 원함.",
       },
       description: {
-        cn: "追求正义和道德。",
+        zh: "追求正义和道德。",
         en: "Pursues righteousness and morality.",
         es: "Busca la rectitud y la moralidad.",
         fr: "Poursuit la droiture et la moralité.",
@@ -53,7 +53,7 @@ export const enneagramData: EnneagramShard = {
         ko: "올바름과 도덕성을 추구합니다.",
       },
       subtitle: {
-        cn: "原则和理想主义",
+        zh: "原则和理想主义",
         en: "Principled and idealistic",
         es: "Idealista y con principios",
         fr: "Idéaliste et de principes",
@@ -61,7 +61,7 @@ export const enneagramData: EnneagramShard = {
         ko: "원칭적이고 이상주의적인",
       },
       title: {
-        cn: "完美主义者",
+        zh: "完美主义者",
         en: "The Reformer",
         es: "El Reformador",
         fr: "Le Réformateur",
@@ -76,7 +76,7 @@ export const enneagramData: EnneagramShard = {
         good: ["type1", "type3", "type7"],
       },
       coreMotivation: {
-        cn: "被爱和被需要。",
+        zh: "被爱和被需要。",
         en: "To be loved and needed.",
         es: "Ser amado y necesitado.",
         fr: "Être aimé et nécessaire.",
@@ -84,7 +84,7 @@ export const enneagramData: EnneagramShard = {
         ko: "사랑받고 필요한 존재가 되기를 원함.",
       },
       description: {
-        cn: "在帮助他人中找到快乐。",
+        zh: "在帮助他人中找到快乐。",
         en: "Finds joy in helping others.",
         es: "Encuentra alegría en ayudar a los demás.",
         fr: "Trouve de la joie à aider les autres.",
@@ -92,7 +92,7 @@ export const enneagramData: EnneagramShard = {
         ko: "다른 사람을 돕는 것에서 기쁨을 찾습니다.",
       },
       subtitle: {
-        cn: "热情和关心",
+        zh: "热情和关心",
         en: "Warm and caring",
         es: "Cálido y cariñoso",
         fr: "Chaleureux et attentionné",
@@ -100,7 +100,7 @@ export const enneagramData: EnneagramShard = {
         ko: "따뜻하고 배려심 많은",
       },
       title: {
-        cn: "助人者",
+        zh: "助人者",
         en: "The Helper",
         es: "El Ayudador",
         fr: "L'Altruiste",
@@ -115,7 +115,7 @@ export const enneagramData: EnneagramShard = {
         good: ["type1", "type2", "type7"],
       },
       coreMotivation: {
-        cn: "成功并获得价值。",
+        zh: "成功并获得价值。",
         en: "To succeed and be valued.",
         es: "Tener éxito y ser valorado.",
         fr: "Réussir et être valorisé.",
@@ -123,7 +123,7 @@ export const enneagramData: EnneagramShard = {
         ko: "성공하고 가치 있게 인정받기를 원함.",
       },
       description: {
-        cn: "追求成功和认可。",
+        zh: "追求成功和认可。",
         en: "Pursues success and recognition.",
         es: "Busca el éxito y el reconocimiento.",
         fr: "Poursuit le succès et la reconnaissance.",
@@ -131,7 +131,7 @@ export const enneagramData: EnneagramShard = {
         ko: "성공과 인정을 추구합니다.",
       },
       subtitle: {
-        cn: "目标导向和高效",
+        zh: "目标导向和高效",
         en: "Goal-oriented and efficient",
         es: "Orientado a objetivos y eficiente",
         fr: "Axé sur les objectifs et efficace",
@@ -139,7 +139,7 @@ export const enneagramData: EnneagramShard = {
         ko: "목표 지향적이고 효율적인",
       },
       title: {
-        cn: "成就者",
+        zh: "成就者",
         en: "The Achiever",
         es: "El Triunfador",
         fr: "Le Battant",
@@ -154,7 +154,7 @@ export const enneagramData: EnneagramShard = {
         good: ["type2", "type7", "type9"],
       },
       coreMotivation: {
-        cn: "发现真实的自我。",
+        zh: "发现真实的自我。",
         en: "To discover true self.",
         es: "Descubrir el verdadero yo.",
         fr: "Découvrir son vrai moi.",
@@ -162,7 +162,7 @@ export const enneagramData: EnneagramShard = {
         ko: "진정한 자신을 발견하기를 원함.",
       },
       description: {
-        cn: "重视真实性和独特身份。",
+        zh: "重视真实性和独特身份。",
         en: "Values authenticity and unique ontology.",
         es: "Valora la autenticidad y la identidad única.",
         fr: "Valorise l'authenticité et l'identité unique.",
@@ -170,7 +170,7 @@ export const enneagramData: EnneagramShard = {
         ko: "진정성과 독특한 정체성을 중요시합니다.",
       },
       subtitle: {
-        cn: "富有创造力和敏感性",
+        zh: "富有创造力和敏感性",
         en: "Creative and sensitive",
         es: "Creativo y sensible",
         fr: "Créatif et sensible",
@@ -178,7 +178,7 @@ export const enneagramData: EnneagramShard = {
         ko: "창의적이고 감성적인",
       },
       title: {
-        cn: "艺术型",
+        zh: "艺术型",
         en: "The Individualist",
         es: "El Individualista",
         fr: "L'Individualiste",
@@ -193,7 +193,7 @@ export const enneagramData: EnneagramShard = {
         good: ["type1", "type6", "type9"],
       },
       coreMotivation: {
-        cn: "有能力和博学。",
+        zh: "有能力和博学。",
         en: "To be capable and knowledgeable.",
         es: "Ser capaz y conocedor.",
         fr: "Être capable et savant.",
@@ -201,7 +201,7 @@ export const enneagramData: EnneagramShard = {
         ko: "능력 있고 지식이 풍부하기를 원함.",
       },
       description: {
-        cn: "追求知识和理解。",
+        zh: "追求知识和理解。",
         en: "Pursues knowledge and understanding.",
         es: "Busca el conocimiento y la comprensión.",
         fr: "Poursuit la connaissance et la compréhension.",
@@ -209,7 +209,7 @@ export const enneagramData: EnneagramShard = {
         ko: "지식과 이해를 추구합니다.",
       },
       subtitle: {
-        cn: "理智和敏锐",
+        zh: "理智和敏锐",
         en: "Intellectual and insightful",
         es: "Intelectual y perspicaz",
         fr: "Intellectuel et perspicace",
@@ -217,7 +217,7 @@ export const enneagramData: EnneagramShard = {
         ko: "지적이고 통찰력 있는",
       },
       title: {
-        cn: "理智型",
+        zh: "理智型",
         en: "The Investigator",
         es: "El Investigador",
         fr: "L'Observateur",
@@ -232,7 +232,7 @@ export const enneagramData: EnneagramShard = {
         good: ["type1", "type2", "type8"],
       },
       coreMotivation: {
-        cn: "获得安全和支持。",
+        zh: "获得安全和支持。",
         en: "To have security and support.",
         es: "Tener seguridad y apoyo.",
         fr: "Avoir de la sécurité et du soutien.",
@@ -240,7 +240,7 @@ export const enneagramData: EnneagramShard = {
         ko: "안전하고 지지받기를 원함.",
       },
       description: {
-        cn: "寻求安全和确定性。",
+        zh: "寻求安全和确定性。",
         en: "Seek safety and certainty.",
         es: "Busca seguridad y certeza.",
         fr: "Recherche la sécurité et la certitude.",
@@ -248,7 +248,7 @@ export const enneagramData: EnneagramShard = {
         ko: "안전과 확실성을 추구합니다.",
       },
       subtitle: {
-        cn: "负责和可靠",
+        zh: "负责和可靠",
         en: "Responsible and trustworthy",
         es: "Responsable y confiable",
         fr: "Responsable et digne de confiance",
@@ -256,7 +256,7 @@ export const enneagramData: EnneagramShard = {
         ko: "책임감 있고 신뢰할 수 있는",
       },
       title: {
-        cn: "忠诚型",
+        zh: "忠诚型",
         en: "The Loyalist",
         es: "El Leal",
         fr: "Le Loyaliste",
@@ -271,7 +271,7 @@ export const enneagramData: EnneagramShard = {
         good: ["type2", "type3", "type9"],
       },
       coreMotivation: {
-        cn: "快乐和满足。",
+        zh: "快乐和满足。",
         en: "To be happy and satisfied.",
         es: "Ser feliz y estar satisfecho.",
         fr: "Être heureux et satisfait.",
@@ -279,7 +279,7 @@ export const enneagramData: EnneagramShard = {
         ko: "행복하고 만족스럽기를 원함.",
       },
       description: {
-        cn: "追求新体验和快乐生活。",
+        zh: "追求新体验和快乐生活。",
         en: "Pursues new experiences and joyful life.",
         es: "Busca nuevas experiencias y una vida alegre.",
         fr: "Poursuit de nouvelles expériences et une vie joyeuse.",
@@ -287,7 +287,7 @@ export const enneagramData: EnneagramShard = {
         ko: "새로운 경험과 즐거운 삶을 추구합니다.",
       },
       subtitle: {
-        cn: "乐观和冒险",
+        zh: "乐观和冒险",
         en: "Optimistic and adventurous",
         es: "Optimista y aventurero",
         fr: "Optimiste et aventureux",
@@ -295,7 +295,7 @@ export const enneagramData: EnneagramShard = {
         ko: "낙관적이고 모험을 즐기는",
       },
       title: {
-        cn: "活跃型",
+        zh: "活跃型",
         en: "The Enthusiast",
         es: "El Entusiasta",
         fr: "L'Épicurien",
@@ -310,7 +310,7 @@ export const enneagramData: EnneagramShard = {
         good: ["type3", "type6", "type7"],
       },
       coreMotivation: {
-        cn: "强大和有影响力。",
+        zh: "强大和有影响力。",
         en: "To be strong and influential.",
         es: "Ser fuerte e influyente.",
         fr: "Être fort et influent.",
@@ -318,7 +318,7 @@ export const enneagramData: EnneagramShard = {
         ko: "강하고 영향력 있기를 원함.",
       },
       description: {
-        cn: "寻求控制和正义。",
+        zh: "寻求控制和正义。",
         en: "Seek control and justice.",
         es: "Busca control y justicia.",
         fr: "Recherche le contrôle et la justice.",
@@ -326,7 +326,7 @@ export const enneagramData: EnneagramShard = {
         ko: "통제와 정의를 추구합니다.",
       },
       subtitle: {
-        cn: "强大和自信",
+        zh: "强大和自信",
         en: "Powerful and confident",
         es: "Poderoso y seguro",
         fr: "Puissant et confiant",
@@ -334,7 +334,7 @@ export const enneagramData: EnneagramShard = {
         ko: "강력하고 자신감 있는",
       },
       title: {
-        cn: "领袖型",
+        zh: "领袖型",
         en: "The Challenger",
         es: "El Desafiador",
         fr: "Le Chef",
@@ -349,7 +349,7 @@ export const enneagramData: EnneagramShard = {
         good: ["type2", "type7", "type4"],
       },
       coreMotivation: {
-        cn: "拥有和平与和谐。",
+        zh: "拥有和平与和谐。",
         en: "To have peace and harmony.",
         es: "Tener paz y armonía.",
         fr: "Avoir la paix et l'harmonie.",
@@ -357,7 +357,7 @@ export const enneagramData: EnneagramShard = {
         ko: "평화롭고 조화롭기를 원함.",
       },
       description: {
-        cn: "避免冲突并寻求内在和平。",
+        zh: "避免冲突并寻求内在和平。",
         en: "Avoid conflict and seek inner peace.",
         es: "Evita el conflicto y busca la paz interior.",
         fr: "Évite les conflits et recherche la paix intérieure.",
@@ -365,7 +365,7 @@ export const enneagramData: EnneagramShard = {
         ko: "갈등을 회피하고 내적 평화를 추구합니다.",
       },
       subtitle: {
-        cn: "和平和和谐",
+        zh: "和平和和谐",
         en: "Peaceful and harmony-seeking",
         es: "Pacífico y en busca de armonía",
         fr: "Paisible et en quête d'harmonie",
@@ -373,7 +373,7 @@ export const enneagramData: EnneagramShard = {
         ko: "평화롭고 조화를 추구하는",
       },
       title: {
-        cn: "和平型",
+        zh: "和平型",
         en: "The Peacemaker",
         es: "El Pacificador",
         fr: "Le Médiateur",

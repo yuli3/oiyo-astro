@@ -61,7 +61,7 @@ export function formatLocaleCode(
     Locale,
     { dashLower: string; underscoreUpper: string }
   > = {
-    cn: { dashLower: "zh-cn", underscoreUpper: "zh_CN" },
+    zh: { dashLower: "zh-cn", underscoreUpper: "zh_CN" },
     en: { dashLower: "en-us", underscoreUpper: "en_US" },
     es: { dashLower: "es-es", underscoreUpper: "es_ES" },
     fr: { dashLower: "fr-fr", underscoreUpper: "fr_FR" },
@@ -81,7 +81,7 @@ export function getLocalizedContent<T = string>(
   content?:
     | null
     | Partial<Record<Locale, T>>
-    | { cn?: T; en?: T; es?: T; fr?: T; ja?: T; ko?: T },
+    | { zh?: T; en?: T; es?: T; fr?: T; ja?: T; ko?: T },
 ): T {
   // Guard for missing content
   if (!content) {

@@ -62,7 +62,7 @@ export class LifeMapService {
 
   private static getPrompt(input: LifeMapInput, locale: Locale): string {
     const langName = {
-      cn: "Simplified Chinese",
+      zh: "Simplified Chinese",
       en: "English",
       es: "Spanish",
       fr: "French",

@@ -32,7 +32,7 @@ const KO_LABELS: Record<ArtStyle, string> = {
 };
 
 export const ART_STYLE_LABELS: Record<Locale, Record<ArtStyle, string>> = {
-  cn: EN_LABELS,
+  zh: EN_LABELS,
   en: EN_LABELS,
   es: EN_LABELS,
   fr: EN_LABELS,
@@ -73,7 +73,7 @@ export const ART_STYLE_DESCRIPTIONS: Record<
   Locale,
   Record<ArtStyle, string>
 > = {
-  cn: EN_DESCRIPTIONS,
+  zh: EN_DESCRIPTIONS,
   en: EN_DESCRIPTIONS,
   es: EN_DESCRIPTIONS,
   fr: EN_DESCRIPTIONS,
@@ -111,7 +111,7 @@ export const ART_STYLE_ART_RECOMMENDATIONS: Record<
   Locale,
   Record<ArtStyle, string[]>
 > = {
-  cn: EN_RECOMMENDATIONS,
+  zh: EN_RECOMMENDATIONS,
   en: EN_RECOMMENDATIONS,
   es: EN_RECOMMENDATIONS,
   fr: EN_RECOMMENDATIONS,
@@ -141,7 +141,7 @@ export const ART_STYLE_MUSEUM_SUGGESTIONS: Record<
   Locale,
   Record<ArtStyle, string[]>
 > = {
-  cn: EN_MUSEUMS,
+  zh: EN_MUSEUMS,
   en: EN_MUSEUMS,
   es: EN_MUSEUMS,
   fr: EN_MUSEUMS,
@@ -171,7 +171,7 @@ export const ART_STYLE_CREATIVE_EXPRESSIONS: Record<
   Locale,
   Record<ArtStyle, string[]>
 > = {
-  cn: EN_EXPRESSIONS,
+  zh: EN_EXPRESSIONS,
   en: EN_EXPRESSIONS,
   es: EN_EXPRESSIONS,
   fr: EN_EXPRESSIONS,
@@ -201,7 +201,7 @@ export const ART_STYLE_FAMOUS_ARTISTS: Record<
   Locale,
   Record<ArtStyle, string[]>
 > = {
-  cn: EN_ARTISTS,
+  zh: EN_ARTISTS,
   en: EN_ARTISTS,
   es: EN_ARTISTS,
   fr: EN_ARTISTS,
@@ -330,7 +330,7 @@ const EN_TRAITS: Record<ArtStyle, string[]> = {
 };
 
 export const ART_STYLE_TRAITS: Record<Locale, Record<ArtStyle, string[]>> = {
-  cn: EN_TRAITS,
+  zh: EN_TRAITS,
   en: EN_TRAITS,
   es: EN_TRAITS,
   fr: EN_TRAITS,
@@ -766,7 +766,7 @@ const ART_STYLE_QUESTIONS_LEGACY: ArtStyleQuestion[] = [
 ];
 
 export const ART_STYLE_QUESTIONS: StrictLocalized<ArtStyleQuestion[]> = {
-  cn: ART_STYLE_QUESTIONS_LEGACY,
+  zh: ART_STYLE_QUESTIONS_LEGACY,
   // TODO : strict 6 locale support
   en: ART_STYLE_QUESTIONS_LEGACY,
   es: ART_STYLE_QUESTIONS_LEGACY,

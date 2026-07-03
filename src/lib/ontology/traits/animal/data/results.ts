@@ -4,7 +4,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   bear: {
     animal: "bear",
     careerPaths: {
-      cn: ["社会工作", "医疗", "烹饪", "建筑", "农业"],
+      zh: ["社会工作", "医疗", "烹饪", "建筑", "农业"],
       en: ["Social Work", "Medical", "Cooking", "Architecture", "Agriculture"],
       es: [
         "Trabajo Social",
@@ -30,7 +30,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["dog", "dolphin"],
     },
     description: {
-      cn: "温和且包容，你给周围的人带来稳定感。",
+      zh: "温和且包容，你给周围的人带来稳定感。",
       en: "Gentle and embracing, you provide stability to those around you.",
       es: "Amable y acogedor, brindas estabilidad a quienes te rodean.",
       fr: "Doux et accueillant, vous apportez de la stabilité à ceux qui vous entourent.",
@@ -39,7 +39,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🐻",
     idealDate: {
-      cn: "露营或在家做饭",
+      zh: "露营或在家做饭",
       en: "Camping or home cooking date",
       es: "Camping o cita de cocina casera",
       fr: "Camping ou rendez-vous cuisine maison",
@@ -47,7 +47,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "캠핑 또는 홈쿡 데이트",
     },
     loveStyle: {
-      cn: "温暖且稳定，寻求持久不变的爱。",
+      zh: "温暖且稳定，寻求持久不变的爱。",
       en: "Warm and stable, seeks lasting and unchanging love.",
       es: "Cálido y estable, busca un amor duradero e inmutable.",
       fr: "Chaleureux et stable, cherche un amour durable et immuable.",
@@ -55,7 +55,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "따뜻하고 안정적이며, 오래도록 변함없는 사랑을 추구합니다.",
     },
     name: {
-      cn: "可靠的熊",
+      zh: "可靠的熊",
       en: "Reliable Bear",
       es: "Oso Confiable",
       fr: "Ours Fiable",
@@ -63,7 +63,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "든든한 곰",
     },
     personality: {
-      cn: ["温和", "包容", "耐心", "保护性"],
+      zh: ["温和", "包容", "耐心", "保护性"],
       en: ["Gentle", "Embracing", "Patient", "Protective"],
       es: ["Amable", "Acogedor", "Paciente", "Protector"],
       fr: ["Doux", "Accueillant", "Patient", "Protecteur"],
@@ -71,7 +71,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["온화함", "포용력", "인내심", "보호본능"],
     },
     strengths: {
-      cn: ["稳定性", "可靠性", "耐心", "包容"],
+      zh: ["稳定性", "可靠性", "耐心", "包容"],
       en: ["Stability", "Reliability", "Patience", "Acceptance"],
       es: ["Estabilidad", "Fiabilidad", "Paciencia", "Aceptación"],
       fr: ["Stabilité", "Fiabilité", "Patience", "Acceptation"],
@@ -79,7 +79,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["안정성", "신뢰성", "인내심", "포용력"],
     },
     weaknesses: {
-      cn: ["改变缓慢", "被动", "固执"],
+      zh: ["改变缓慢", "被动", "固执"],
       en: ["Slow to change", "Passive", "Stubborn"],
       es: ["Lento para cambiar", "Pasivo", "Terco"],
       fr: ["Lent au changement", "Passif", "Têtu"],
@@ -87,7 +87,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["느린 변화", "수동적", "고집"],
     },
     workStyle: {
-      cn: "稳健且稳定，擅长长期项目",
+      zh: "稳健且稳定，擅长长期项目",
       en: "Steady and stable, strong in long-term projects",
       es: "Constante y estable, fuerte en proyectos a largo plazo",
       fr: "Constant et stable, fort dans les projets à long terme",
@@ -98,7 +98,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   cat: {
     animal: "cat",
     careerPaths: {
-      cn: ["设计", "作家", "自由职业", "研究", "艺术"],
+      zh: ["设计", "作家", "自由职业", "研究", "艺术"],
       en: ["Design", "Writer", "Freelancer", "Research", "Arts"],
       es: ["Diseño", "Escritor", "Freelance", "Investigación", "Artes"],
       fr: ["Design", "Écrivain", "Freelance", "Recherche", "Arts"],
@@ -112,7 +112,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["fox", "owl"],
     },
     description: {
-      cn: "自由且独立，你重视保持自己的节奏。",
+      zh: "自由且独立，你重视保持自己的节奏。",
       en: "Free and independent, you value maintaining your own pace.",
       es: "Libre e independiente, valoras mantener tu propio ritmo.",
       fr: "Libre et indépendant, vous tenez à conserver votre propre rythme.",
@@ -121,7 +121,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🐱",
     idealDate: {
-      cn: "在安静的咖啡馆读书或家庭聚会",
+      zh: "在安静的咖啡馆读书或家庭聚会",
       en: "Reading at quiet cafe or home party",
       es: "Leer en un café tranquilo o fiesta en casa",
       fr: "Lecture dans un café calme ou fête à la maison",
@@ -129,7 +129,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "조용한 카페에서 책 읽기 또는 홈파티",
     },
     loveStyle: {
-      cn: "在独立的同时寻求深厚的联系，重视自己的空间。",
+      zh: "在独立的同时寻求深厚的联系，重视自己的空间。",
       en: "Seeks deep bonds while being independent, values own space.",
       es: "Busca lazos profundos siendo independiente, valora su propio espacio.",
       fr: "Cherche des liens profonds tout en étant indépendant, apprécie son propre espace.",
@@ -137,7 +137,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "독립적이면서도 깊은 유대감을 추구하며, 자신의 공간을 중요시합니다.",
     },
     name: {
-      cn: "独立的猫",
+      zh: "独立的猫",
       en: "Independent Cat",
       es: "Gato Independiente",
       fr: "Chat Indépendant",
@@ -145,7 +145,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "독립적인 고양이",
     },
     personality: {
-      cn: ["独立", "谨慎", "善于观察", "优雅"],
+      zh: ["独立", "谨慎", "善于观察", "优雅"],
       en: ["Independent", "Cautious", "Observant", "Elegant"],
       es: ["Independiente", "Cauteloso", "Observador", "Elegante"],
       fr: ["Indépendant", "Prudent", "Observateur", "Élégant"],
@@ -153,7 +153,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["독립적", "신중함", "관찰력 좋음", "우아함"],
     },
     strengths: {
-      cn: ["自主性", "专注", "直觉", "细腻"],
+      zh: ["自主性", "专注", "直觉", "细腻"],
       en: ["Autonomy", "Focus", "Intuition", "Delicacy"],
       es: ["Autonomía", "Enfoque", "Intuición", "Delicadeza"],
       fr: ["Autonomie", "Concentration", "Intuition", "Délicatesse"],
@@ -161,7 +161,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["자율성", "집중력", "직관력", "섬세함"],
     },
     weaknesses: {
-      cn: ["固执", "不善于表达情感", "难以妥协"],
+      zh: ["固执", "不善于表达情感", "难以妥协"],
       en: [
         "Stubborn",
         "Poor at expressing emotions",
@@ -173,7 +173,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["고집이 셈", "감정 표현 서툼", "타협 어려움"],
     },
     workStyle: {
-      cn: "独自专注于工作时表现最佳",
+      zh: "独自专注于工作时表现最佳",
       en: "Best performance when working alone with focus",
       es: "Mejor rendimiento al trabajar solo y concentrado",
       fr: "Meilleure performance en travaillant seul avec concentration",
@@ -184,7 +184,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   dog: {
     animal: "dog",
     careerPaths: {
-      cn: ["教育", "服务", "护理", "咨询", "人力资源"],
+      zh: ["教育", "服务", "护理", "咨询", "人力资源"],
       en: ["Education", "Service", "Nursing", "Counseling", "HR"],
       es: ["Educación", "Servicio", "Enfermería", "Consejería", "RRHH"],
       fr: ["Éducation", "Service", "Soins infirmiers", "Conseil", "RH"],
@@ -198,7 +198,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["fox", "dolphin"],
     },
     description: {
-      cn: "友好且忠诚，你是周围人值得信赖的存在。",
+      zh: "友好且忠诚，你是周围人值得信赖的存在。",
       en: "Friendly and loyal, you are a trusted presence to those around you.",
       es: "Amigable y leal, eres una presencia de confianza para quienes te rodean.",
       fr: "Amical et fidèle, vous êtes une présence de confiance pour ceux qui vous entourent.",
@@ -207,7 +207,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🐶",
     idealDate: {
-      cn: "公园散步后去探索美食",
+      zh: "公园散步后去探索美食",
       en: "Park walk followed by food tour",
       es: "Paseo por el parque seguido de un recorrido gastronómico",
       fr: "Promenade au parc suivie d'une tournée gastronomique",
@@ -215,7 +215,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "공원 산책 후 맛집 탐방",
     },
     loveStyle: {
-      cn: "投入且温暖，把伴侣放在第一位。",
+      zh: "投入且温暖，把伴侣放在第一位。",
       en: "Devoted and warm, puts partner first.",
       es: "Devoto y cálido, pone a su pareja primero.",
       fr: "Dévoué et chaleureux, fait passer son partenaire en premier.",
@@ -223,7 +223,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "헌신적이고 따뜻하며, 상대방을 최우선으로 생각합니다.",
     },
     name: {
-      cn: "忠诚的狗",
+      zh: "忠诚的狗",
       en: "Loyal Dog",
       es: "Perro Leal",
       fr: "Chien Fidèle",
@@ -231,7 +231,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "충성스러운 강아지",
     },
     personality: {
-      cn: ["忠诚", "友好", "活跃", "积极"],
+      zh: ["忠诚", "友好", "活跃", "积极"],
       en: ["Loyal", "Friendly", "Active", "Positive"],
       es: ["Leal", "Amigable", "Activo", "Positivo"],
       fr: ["Fidèle", "Amical", "Actif", "Positif"],
@@ -239,7 +239,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["충성스러움", "친근함", "활발함", "긍정적"],
     },
     strengths: {
-      cn: ["团队合作", "可靠性", "活力", "社交能力"],
+      zh: ["团队合作", "可靠性", "活力", "社交能力"],
       en: ["Teamwork", "Reliability", "Energy", "Sociability"],
       es: ["Trabajo en equipo", "Fiabilidad", "Energía", "Sociabilidad"],
       fr: ["Travail d'équipe", "Fiabilité", "Énergie", "Sociabilité"],
@@ -247,7 +247,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["팀워크", "신뢰성", "에너지", "사교성"],
     },
     weaknesses: {
-      cn: ["依赖", "缺乏警惕", "过度投入"],
+      zh: ["依赖", "缺乏警惕", "过度投入"],
       en: ["Dependent", "Lack of caution", "Over-commitment"],
       es: ["Dependiente", "Falta de precaución", "Compromiso excesivo"],
       fr: ["Dépendant", "Manque de prudence", "Surengagement"],
@@ -255,7 +255,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["의존적", "경계심 부족", "과도한 헌신"],
     },
     workStyle: {
-      cn: "合作且忠诚，团队的气氛制造者",
+      zh: "合作且忠诚，团队的气氛制造者",
       en: "Cooperative and faithful, team mood maker",
       es: "Cooperativo y fiel, creador de ambiente en el equipo",
       fr: "Coopératif et fidèle, metteur d'ambiance dans l'équipe",
@@ -266,7 +266,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   dolphin: {
     animal: "dolphin",
     careerPaths: {
-      cn: ["娱乐", "活动", "营销", "公关", "旅游"],
+      zh: ["娱乐", "活动", "营销", "公关", "旅游"],
       en: ["Entertainment", "Events", "Marketing", "PR", "Travel"],
       es: ["Entretenimiento", "Eventos", "Marketing", "RP", "Viajes"],
       fr: ["Divertissement", "Événements", "Marketing", "RP", "Voyage"],
@@ -286,7 +286,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["bear", "panda"],
     },
     description: {
-      cn: "社交且积极，你有照亮周围人的能量。",
+      zh: "社交且积极，你有照亮周围人的能量。",
       en: "Social and positive, you have the energy to brighten those around you.",
       es: "Social y positivo, tienes la energía para alegrar a quienes te rodean.",
       fr: "Social et positif, vous avez l'énergie pour égayer ceux qui vous entourent.",
@@ -295,7 +295,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🐬",
     idealDate: {
-      cn: "水族馆或游乐园",
+      zh: "水族馆或游乐园",
       en: "Aquarium or amusement park",
       es: "Acuario o parque de atracciones",
       fr: "Aquarium ou parc d'attractions",
@@ -303,7 +303,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "수족관 또는 놀이공원",
     },
     loveStyle: {
-      cn: "寻求愉快和有趣的关系，珍惜一起欢笑的时刻。",
+      zh: "寻求愉快和有趣的关系，珍惜一起欢笑的时刻。",
       en: "Seeks cheerful and enjoyable relationships, cherishes moments of laughter together.",
       es: "Busca relaciones alegres y agradables, valora los momentos de risa juntos.",
       fr: "Cherche des relations joyeuses et agréables, chérit les moments de rire ensemble.",
@@ -311,7 +311,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "유쾌하고 즐거운 관계를 추구하며, 함께 웃는 순간을 소중히 여깁니다.",
     },
     name: {
-      cn: "聪明的海豚",
+      zh: "聪明的海豚",
       en: "Bright Dolphin",
       es: "Delfín Brillante",
       fr: "Dauphin Brillant",
@@ -319,7 +319,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "밝은 돌고래",
     },
     personality: {
-      cn: ["社交", "积极", "开朗", "合作"],
+      zh: ["社交", "积极", "开朗", "合作"],
       en: ["Social", "Positive", "Cheerful", "Cooperative"],
       es: ["Social", "Positivo", "Alegre", "Cooperativo"],
       fr: ["Social", "Positif", "Joyeux", "Coopératif"],
@@ -327,7 +327,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["사교적", "긍정적", "유쾌함", "협력적"],
     },
     strengths: {
-      cn: ["社交能力", "积极性", "同理心", "合作"],
+      zh: ["社交能力", "积极性", "同理心", "合作"],
       en: ["Sociability", "Positivity", "Empathy", "Cooperation"],
       es: ["Sociabilidad", "Positividad", "Empatía", "Cooperación"],
       fr: ["Sociabilité", "Positivité", "Empathie", "Coopération"],
@@ -335,7 +335,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["사교성", "긍정적", "공감능력", "협력"],
     },
     weaknesses: {
-      cn: ["注意力分散", "缺乏深度", "缺乏严肃"],
+      zh: ["注意力分散", "缺乏深度", "缺乏严肃"],
       en: ["Scattered", "Lack of depth", "Lack of seriousness"],
       es: ["Disperso", "Falta de profundidad", "Falta de seriedad"],
       fr: ["Dispersé", "Manque de profondeur", "Manque de sérieux"],
@@ -343,7 +343,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["산만함", "깊이 부족", "진지함 부족"],
     },
     workStyle: {
-      cn: "以出色的协作技巧活跃团队气氛",
+      zh: "以出色的协作技巧活跃团队气氛",
       en: "Brightens team atmosphere with excellent collaboration skills",
       es: "Ilumina el ambiente del equipo con excelentes habilidades de colaboración",
       fr: "Illumine l'atmosphère de l'équipe avec d'excellentes compétences de collaboration",
@@ -354,7 +354,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   eagle: {
     animal: "eagle",
     careerPaths: {
-      cn: ["飞行员", "CEO", "投资", "研究", "战略"],
+      zh: ["飞行员", "CEO", "投资", "研究", "战略"],
       en: ["Pilot", "CEO", "Investment", "Research", "Strategy"],
       es: ["Piloto", "CEO", "Inversión", "Investigación", "Estrategia"],
       fr: ["Pilote", "PDG", "Investissement", "Recherche", "Stratégie"],
@@ -368,7 +368,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["owl", "wolf"],
     },
     description: {
-      cn: "凭借远见卓识和专注力，你朝着目标展翅高飞。",
+      zh: "凭借远见卓识和专注力，你朝着目标展翅高飞。",
       en: "With far-sighted insight and focus, you soar towards your goals.",
       es: "Con perspicacia y enfoque de gran alcance, te elevas hacia tus metas.",
       fr: "Avec une perspicacité et une concentration à long terme, vous vous envolez vers vos objectifs.",
@@ -377,7 +377,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🦅",
     idealDate: {
-      cn: "山顶徒步或屋顶酒吧",
+      zh: "山顶徒步或屋顶酒吧",
       en: "Mountain peak trekking or rooftop bar",
       es: "Trekking en la cima de la montaña o bar en la azotea",
       fr: "Trekking au sommet d'une montagne ou bar sur le toit",
@@ -385,7 +385,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "산 정상 트레킹 또는 루프탑 바",
     },
     loveStyle: {
-      cn: "自由且独立，喜欢尊重彼此空间的关系。",
+      zh: "自由且独立，喜欢尊重彼此空间的关系。",
       en: "Free and independent, prefers relationships that respect each other's space.",
       es: "Libre e independiente, prefiere relaciones que respeten el espacio del otro.",
       fr: "Libre et indépendant, préfère les relations qui respectent l'espace de chacun.",
@@ -393,7 +393,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "자유롭고 독립적이며, 서로의 공간을 존중하는 관계를 선호합니다.",
     },
     name: {
-      cn: "敏锐的鹰",
+      zh: "敏锐的鹰",
       en: "Sharp Eagle",
       es: "Águila Aguda",
       fr: "Aigle Perçant",
@@ -401,7 +401,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "날카로운 독수리",
     },
     personality: {
-      cn: ["有洞察力", "专注", "自由", "独立"],
+      zh: ["有洞察力", "专注", "自由", "独立"],
       en: ["Insightful", "Focused", "Free", "Independent"],
       es: ["Perspicaz", "Enfocado", "Libre", "Independiente"],
       fr: ["Perspicace", "Concentré", "Libre", "Indépendant"],
@@ -409,7 +409,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["통찰력", "집중력", "자유로움", "독립적"],
     },
     strengths: {
-      cn: ["洞察力", "专注力", "果断", "自由"],
+      zh: ["洞察力", "专注力", "果断", "自由"],
       en: ["Insight", "Focus", "Decisiveness", "Freedom"],
       es: ["Perspicacia", "Enfoque", "Decisión", "Libertad"],
       fr: ["Perspicacité", "Concentration", "Décision", "Liberté"],
@@ -417,7 +417,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["통찰력", "집중력", "결단력", "자유로움"],
     },
     weaknesses: {
-      cn: ["孤独", "冷漠", "难以妥协"],
+      zh: ["孤独", "冷漠", "难以妥协"],
       en: ["Loneliness", "Cold", "Difficult to compromise"],
       es: ["Soledad", "Frío", "Difícil de comprometer"],
       fr: ["Solitude", "Froid", "Difficile à compromettre"],
@@ -425,7 +425,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["외로움", "냉정함", "타협 어려움"],
     },
     workStyle: {
-      cn: "具有大局观的战略方法",
+      zh: "具有大局观的战略方法",
       en: "Strategic approach with big picture thinking",
       es: "Enfoque estratégico con pensamiento global",
       fr: "Approche stratégique avec une vision globale",
@@ -436,7 +436,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   fox: {
     animal: "fox",
     careerPaths: {
-      cn: ["营销", "销售", "策划", "咨询", "广告"],
+      zh: ["营销", "销售", "策划", "咨询", "广告"],
       en: ["Marketing", "Sales", "Planning", "Consulting", "Advertising"],
       es: ["Marketing", "Ventas", "Planificación", "Consultoría", "Publicidad"],
       fr: ["Marketing", "Vente", "Planification", "Conseil", "Publicité"],
@@ -450,7 +450,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["cat", "dog"],
     },
     description: {
-      cn: "聪明机智，你有敏捷的判断力和出色的适应能力。",
+      zh: "聪明机智，你有敏捷的判断力和出色的适应能力。",
       en: "Smart and witty, you have quick judgment and excellent adaptability.",
       es: "Inteligente e ingenioso, tienes un juicio rápido y una excelente adaptabilidad.",
       fr: "Intelligent et plein d'esprit, vous avez un jugement rapide et une excellente adaptabilité.",
@@ -459,7 +459,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🦊",
     idealDate: {
-      cn: "参观美术馆后在酒吧聊天",
+      zh: "参观美术馆后在酒吧聊天",
       en: "Art gallery visit followed by wine bar conversation",
       es: "Visita a una galería de arte seguida de una conversación en un bar de vinos",
       fr: "Visite d'une galerie d'art suivie d'une conversation dans un bar à vin",
@@ -467,7 +467,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "미술관이나 전시회 관람 후 와인바에서 대화",
     },
     loveStyle: {
-      cn: "重视智力对话和乐趣，喜欢与伴侣进行心理游戏。",
+      zh: "重视智力对话和乐趣，喜欢与伴侣进行心理游戏。",
       en: "Values intellectual conversation and fun, enjoys psychological games with partner.",
       es: "Valora la conversación intelectual y la diversión, disfruta de los juegos psicológicos con su pareja.",
       fr: "Apprécie la conversation intellectuelle et le plaisir, aime les jeux psychologiques avec son partenaire.",
@@ -475,7 +475,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "지적인 대화와 재미를 중요시하며, 상대방과의 심리 게임을 즐깁니다.",
     },
     name: {
-      cn: "聪明的狐狸",
+      zh: "聪明的狐狸",
       en: "Clever Fox",
       es: "Zorro Astuto",
       fr: "Renard Rusé",
@@ -483,7 +483,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "영리한 여우",
     },
     personality: {
-      cn: ["聪明", "机智", "适应力强", "战略性"],
+      zh: ["聪明", "机智", "适应力强", "战略性"],
       en: ["Clever", "Witty", "Adaptable", "Strategic"],
       es: ["Astuto", "Ingenioso", "Adaptable", "Estratégico"],
       fr: ["Rusé", "Spirituel", "Adaptable", "Stratégique"],
@@ -491,7 +491,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["영리함", "재치있음", "적응력 좋음", "전략적"],
     },
     strengths: {
-      cn: ["快速决策", "解决问题", "善于交际", "灵活思维"],
+      zh: ["快速决策", "解决问题", "善于交际", "灵活思维"],
       en: [
         "Quick decision-making",
         "Problem-solving",
@@ -514,7 +514,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["빠른 판단력", "문제 해결 능력", "사교성", "유연한 사고"],
     },
     weaknesses: {
-      cn: ["有时算计", "缺乏谨慎", "冲动的决定"],
+      zh: ["有时算计", "缺乏谨慎", "冲动的决定"],
       en: ["Sometimes calculating", "Lack of caution", "Impulsive decisions"],
       es: [
         "A veces calculador",
@@ -526,7 +526,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["때로 계산적", "신중함 부족", "충동적 결정"],
     },
     workStyle: {
-      cn: "快速决策和创造性解决问题",
+      zh: "快速决策和创造性解决问题",
       en: "Quick decision-making and creative problem-solving",
       es: "Toma de decisiones rápida y resolución creativa de problemas",
       fr: "Prise de décision rapide et résolution créative de problèmes",
@@ -537,7 +537,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   lion: {
     animal: "lion",
     careerPaths: {
-      cn: ["高管", "政治", "法律", "金融", "娱乐"],
+      zh: ["高管", "政治", "法律", "金融", "娱乐"],
       en: ["Executive", "Politics", "Law", "Finance", "Entertainment"],
       es: ["Ejecutivo", "Política", "Derecho", "Finanzas", "Entretenimiento"],
       fr: ["Cadre", "Politique", "Droit", "Finance", "Divertissement"],
@@ -551,7 +551,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["fox", "wolf"],
     },
     description: {
-      cn: "自信且充满魅力，你是天生的领导者。",
+      zh: "自信且充满魅力，你是天生的领导者。",
       en: "Confident and charismatic, you are a natural-born leader.",
       es: "Seguro y carismático, eres un líder nato.",
       fr: "Confiant et charismatique, vous êtes un leader né.",
@@ -560,7 +560,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🦁",
     idealDate: {
-      cn: "高级餐饮或文化演出",
+      zh: "高级餐饮或文化演出",
       en: "Fine dining or cultural performance",
       es: "Cena elegante o espectáculo cultural",
       fr: "Dîner raffiné ou spectacle culturel",
@@ -568,7 +568,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "고급 레스토랑 또는 문화 공연 관람",
     },
     loveStyle: {
-      cn: "自信且从容，对伴侣慷慨且具有保护欲。",
+      zh: "自信且从容，对伴侣慷慨且具有保护欲。",
       en: "Confident and self-assured, generous and protective towards partner.",
       es: "Seguro y confiado, generoso y protector con su pareja.",
       fr: "Confiant et sûr de soi, généreux et protecteur envers son partenaire.",
@@ -576,7 +576,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "당당하고 자신감 넘치며, 상대방에게 관대하고 보호적입니다.",
     },
     name: {
-      cn: "威严的狮子",
+      zh: "威严的狮子",
       en: "Majestic Lion",
       es: "León Majestuoso",
       fr: "Lion Majestueux",
@@ -584,7 +584,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "위엄있는 사자",
     },
     personality: {
-      cn: ["有魅力", "自信", "慷慨", "领导力"],
+      zh: ["有魅力", "自信", "慷慨", "领导力"],
       en: ["Charismatic", "Confident", "Generous", "Leadership"],
       es: ["Carismático", "Seguro", "Generoso", "Liderazgo"],
       fr: ["Charismatique", "Confiant", "Généreux", "Leadership"],
@@ -592,7 +592,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["카리스마", "자신감", "관대함", "리더십"],
     },
     strengths: {
-      cn: ["领导力", "自信", "果断", "慷慨"],
+      zh: ["领导力", "自信", "果断", "慷慨"],
       en: ["Leadership", "Confidence", "Decisiveness", "Generosity"],
       es: ["Liderazgo", "Confianza", "Decisión", "Generosidad"],
       fr: ["Leadership", "Confiance", "Décision", "Générosité"],
@@ -600,7 +600,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["리더십", "자신감", "결단력", "관대함"],
     },
     weaknesses: {
-      cn: ["傲慢", "专制", "固执"],
+      zh: ["傲慢", "专制", "固执"],
       en: ["Arrogant", "Authoritarian", "Stubborn"],
       es: ["Arrogante", "Autoritario", "Terco"],
       fr: ["Arrogant", "Autoritaire", "Têtu"],
@@ -608,7 +608,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["오만함", "독단적", "고집"],
     },
     workStyle: {
-      cn: "强大的领导力和纵观全局的能力",
+      zh: "强大的领导力和纵观全局的能力",
       en: "Strong leadership and ability to see the big picture",
       es: "Fuerte liderazgo y capacidad para ver el panorama general",
       fr: "Fort leadership et capacité à voir l'ensemble",
@@ -619,7 +619,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   owl: {
     animal: "owl",
     careerPaths: {
-      cn: ["研究员", "学者", "作家", "分析师", "顾问"],
+      zh: ["研究员", "学者", "作家", "分析师", "顾问"],
       en: ["Researcher", "Scholar", "Writer", "Analyst", "Consultant"],
       es: ["Investigador", "Erudito", "Escritor", "Analista", "Consultor"],
       fr: ["Chercheur", "Érudit", "Écrivain", "Analyste", "Consultant"],
@@ -633,7 +633,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["cat", "eagle"],
     },
     description: {
-      cn: "谨慎且智慧，你是一位深思熟虑的思想家。",
+      zh: "谨慎且智慧，你是一位深思熟虑的思想家。",
       en: "Cautious and wise, you are a thinker with deep contemplation.",
       es: "Cauteloso y sabio, eres un pensador con profunda contemplación.",
       fr: "Prudent et sage, vous êtes un penseur avec une profonde contemplation.",
@@ -642,7 +642,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🦉",
     idealDate: {
-      cn: "图书馆或在安静的咖啡馆交谈",
+      zh: "图书馆或在安静的咖啡馆交谈",
       en: "Library or conversation at quiet cafe",
       es: "Biblioteca o conversación en un café tranquilo",
       fr: "Bibliothèque ou conversation dans un café calme",
@@ -650,7 +650,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "도서관 또는 조용한 카페에서 대화",
     },
     loveStyle: {
-      cn: "重视深度对话和精神联系，慢慢建立信任。",
+      zh: "重视深度对话和精神联系，慢慢建立信任。",
       en: "Values deep conversation and mental connection, builds trust slowly.",
       es: "Valora la conversación profunda y la conexión mental, construye confianza lentamente.",
       fr: "Apprécie la conversation profonde et la connexion mentale, construit la confiance lentement.",
@@ -658,7 +658,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "깊이 있는 대화와 정신적 교감을 중요시하며, 천천히 신뢰를 쌓습니다.",
     },
     name: {
-      cn: "智慧的猫头鹰",
+      zh: "智慧的猫头鹰",
       en: "Wise Owl",
       es: "Búho Sabio",
       fr: "Hibou Sage",
@@ -666,7 +666,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "지혜로운 부엉이",
     },
     personality: {
-      cn: ["智慧", "谨慎", "善于观察", "分析"],
+      zh: ["智慧", "谨慎", "善于观察", "分析"],
       en: ["Wise", "Cautious", "Observant", "Analytical"],
       es: ["Sabio", "Cauteloso", "Observador", "Analítico"],
       fr: ["Sage", "Prudent", "Observateur", "Analytique"],
@@ -674,7 +674,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["지혜로움", "신중함", "관찰력", "분석적"],
     },
     strengths: {
-      cn: ["分析", "洞察力", "谨慎", "智慧"],
+      zh: ["分析", "洞察力", "谨慎", "智慧"],
       en: ["Analysis", "Insight", "Caution", "Wisdom"],
       es: ["Análisis", "Perspicacia", "Precaución", "Sabiduría"],
       fr: ["Analyse", "Perspicacité", "Prudence", "Sagesse"],
@@ -682,7 +682,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["분석력", "통찰력", "신중함", "지혜"],
     },
     weaknesses: {
-      cn: ["过度思考", "完美主义", "缺乏社交"],
+      zh: ["过度思考", "完美主义", "缺乏社交"],
       en: ["Over-thinking", "Perfectionist", "Lack of sociability"],
       es: ["Pensar demasiado", "Perfeccionista", "Falta de sociabilidad"],
       fr: ["Trop réfléchir", "Perfectionniste", "Manque de sociabilité"],
@@ -690,7 +690,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["과도한 고민", "완벽주의", "사회성 부족"],
     },
     workStyle: {
-      cn: "通过彻底的分析和计划产生完美的结果",
+      zh: "通过彻底的分析和计划产生完美的结果",
       en: "Produces perfect results through thorough analysis and planning",
       es: "Produce resultados perfectos a través de un análisis y planificación exhaustivos",
       fr: "Produit des résultats parfaits grâce à une analyse et une planification minutieuses",
@@ -701,7 +701,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   panda: {
     animal: "panda",
     careerPaths: {
-      cn: ["瑜伽教练", "咨询", "设计", "艺术", "个体经营"],
+      zh: ["瑜伽教练", "咨询", "设计", "艺术", "个体经营"],
       en: ["Yoga Instructor", "Counseling", "Design", "Arts", "Self-employed"],
       es: ["Instructor de Yoga", "Consejería", "Diseño", "Artes", "Autónomo"],
       fr: ["Professeur de yoga", "Conseil", "Design", "Arts", "Indépendant"],
@@ -721,7 +721,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["rabbit", "tiger"],
     },
     description: {
-      cn: "轻松平和，你以自己的节奏享受生活。",
+      zh: "轻松平和，你以自己的节奏享受生活。",
       en: "Relaxed and peaceful, you enjoy life at your own tempo.",
       es: "Relajado y pacífico, disfrutas de la vida a tu propio ritmo.",
       fr: "Détendu et paisible, vous profitez de la vie à votre propre rythme.",
@@ -730,7 +730,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🐼",
     idealDate: {
-      cn: "在家看电影或泡温泉",
+      zh: "在家看电影或泡温泉",
       en: "Movie at home or hot springs",
       es: "Película en casa o aguas termales",
       fr: "Film à la maison ou sources chaudes",
@@ -738,7 +738,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "집에서 영화 보기 또는 온천",
     },
     loveStyle: {
-      cn: "寻求舒适放松的关系，慢慢加深而不匆忙。",
+      zh: "寻求舒适放松的关系，慢慢加深而不匆忙。",
       en: "Seeks comfortable and relaxed relationships, deepens slowly without rushing.",
       es: "Busca relaciones cómodas y relajadas, se profundiza lentamente sin prisas.",
       fr: "Cherche des relations confortables et détendues, s'approfondit lentement sans précipitation.",
@@ -746,7 +746,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "편안하고 여유로운 관계를 추구하며, 서두르지 않고 천천히 깊어집니다.",
     },
     name: {
-      cn: "和平的熊猫",
+      zh: "和平的熊猫",
       en: "Peaceful Panda",
       es: "Panda Pacífico",
       fr: "Panda Paisible",
@@ -754,7 +754,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "평화로운 판다",
     },
     personality: {
-      cn: ["和平", "放松", "温和", "自我节奏"],
+      zh: ["和平", "放松", "温和", "自我节奏"],
       en: ["Peaceful", "Relaxed", "Gentle", "Own pace"],
       es: ["Pacífico", "Relajado", "Amable", "A su ritmo"],
       fr: ["Paisible", "Détendu", "Doux", "À son rythme"],
@@ -762,7 +762,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["평화로움", "여유로움", "온화함", "마이페이스"],
     },
     strengths: {
-      cn: ["冷静", "耐心", "平衡", "包容"],
+      zh: ["冷静", "耐心", "平衡", "包容"],
       en: ["Calmness", "Patience", "Balance", "Acceptance"],
       es: ["Calma", "Paciencia", "Equilibrio", "Aceptación"],
       fr: ["Calme", "Patience", "Équilibre", "Acceptation"],
@@ -770,7 +770,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["평온함", "인내심", "균형감", "포용력"],
     },
     weaknesses: {
-      cn: ["缓慢", "被动", "懒惰"],
+      zh: ["缓慢", "被动", "懒惰"],
       en: ["Slow", "Passive", "Lazy"],
       es: ["Lento", "Pasivo", "Perezoso"],
       fr: ["Lent", "Passif", "Paresseux"],
@@ -778,7 +778,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["느림", "수동적", "게으름"],
     },
     workStyle: {
-      cn: "以自己的节奏稳步工作，压力管理出色",
+      zh: "以自己的节奏稳步工作，压力管理出色",
       en: "Works steadily at own pace with excellent stress management",
       es: "Trabaja constantemente a su propio ritmo con una excelente gestión del estrés",
       fr: "Travaille régulièrement à son propre rythme avec une excellente gestion du stress",
@@ -789,7 +789,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   rabbit: {
     animal: "rabbit",
     careerPaths: {
-      cn: ["咨询", "设计", "教育", "秘书", "艺术"],
+      zh: ["咨询", "设计", "教育", "秘书", "艺术"],
       en: ["Counseling", "Design", "Education", "Secretary", "Arts"],
       es: ["Consejería", "Diseño", "Educación", "Secretaría", "Artes"],
       fr: ["Conseil", "Design", "Éducation", "Secrétariat", "Arts"],
@@ -803,7 +803,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["tiger", "panda"],
     },
     description: {
-      cn: "善良且细腻，你对周围的人有着深深的关爱之心。",
+      zh: "善良且细腻，你对周围的人有着深深的关爱之心。",
       en: "Kind and delicate, you have a deep caring heart for those around you.",
       es: "Amable y delicado, tienes un corazón profundamente cariñoso con quienes te rodean.",
       fr: "Gentil et délicat, vous avez un cœur profondément attentionné pour ceux qui vous entourent.",
@@ -812,7 +812,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🐰",
     idealDate: {
-      cn: "鲜花咖啡馆或小画廊参观",
+      zh: "鲜花咖啡馆或小画廊参观",
       en: "Flower cafe or small gallery tour",
       es: "Café de flores o recorrido por pequeñas galerías",
       fr: "Café fleuriste ou visite de petite galerie",
@@ -820,7 +820,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "플라워 카페 또는 작은 갤러리 투어",
     },
     loveStyle: {
-      cn: "温柔且细腻，重视细微的关怀和浪漫时刻。",
+      zh: "温柔且细腻，重视细微的关怀和浪漫时刻。",
       en: "Soft and delicate, values small considerations and romantic moments.",
       es: "Suave y delicado, valora las pequeñas consideraciones y los momentos románticos.",
       fr: "Doux et délicat, apprécie les petites attentions et les moments romantiques.",
@@ -828,7 +828,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "부드럽고 섬세하며, 작은 배려와 로맨틱한 순간을 중요시합니다.",
     },
     name: {
-      cn: "可爱的兔子",
+      zh: "可爱的兔子",
       en: "Sweet Rabbit",
       es: "Dulce Conejo",
       fr: "Doux Lapin",
@@ -836,7 +836,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "사랑스러운 토끼",
     },
     personality: {
-      cn: ["善良", "细腻", "和平", "体贴"],
+      zh: ["善良", "细腻", "和平", "体贴"],
       en: ["Kind", "Delicate", "Peaceful", "Considerate"],
       es: ["Amable", "Delicado", "Pacífico", "Considerado"],
       fr: ["Gentil", "Délicat", "Pacifique", "Attentionné"],
@@ -844,7 +844,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["상냥함", "섬세함", "평화주의", "배려심"],
     },
     strengths: {
-      cn: ["同理心", "细腻", "善良", "适应力"],
+      zh: ["同理心", "细腻", "善良", "适应力"],
       en: ["Empathy", "Delicacy", "Kindness", "Adaptability"],
       es: ["Empatía", "Delicadeza", "Amabilidad", "Adaptabilidad"],
       fr: ["Empathie", "Délicatesse", "Gentillesse", "Adaptabilité"],
@@ -852,7 +852,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["공감능력", "섬세함", "친절", "적응력"],
     },
     weaknesses: {
-      cn: ["优柔寡断", "胆小", "回避"],
+      zh: ["优柔寡断", "胆小", "回避"],
       en: ["Indecisive", "Timid", "Avoidant"],
       es: ["Indeciso", "Tímido", "Evitativo"],
       fr: ["Indécis", "Timide", "Évitant"],
@@ -860,7 +860,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["우유부단함", "소심함", "회피 경향"],
     },
     workStyle: {
-      cn: "一丝不苟且小心，重视和谐",
+      zh: "一丝不苟且小心，重视和谐",
       en: "Meticulous and careful, values harmony",
       es: "Meticuloso y cuidadoso, valora la armonía",
       fr: "Méticuleux et prudent, valorise l'harmonie",
@@ -871,7 +871,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   tiger: {
     animal: "tiger",
     careerPaths: {
-      cn: ["管理", "CEO", "项目经理", "创业", "政治"],
+      zh: ["管理", "CEO", "项目经理", "创业", "政治"],
       en: ["Management", "CEO", "Project Manager", "Startup", "Politics"],
       es: ["Gestión", "CEO", "Gerente de Proyectos", "Startup", "Política"],
       fr: ["Gestion", "PDG", "Chef de projet", "Startup", "Politique"],
@@ -885,7 +885,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["lion", "eagle"],
     },
     description: {
-      cn: "自信且勇敢，你是一位无惧挑战的领导者。",
+      zh: "自信且勇敢，你是一位无惧挑战的领导者。",
       en: "Confident and brave, you are a leader who fears no challenge.",
       es: "Seguro y valiente, eres un líder que no teme ningún desafío.",
       fr: "Confiant et courageux, vous êtes un leader qui ne craint aucun défi.",
@@ -894,7 +894,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🐯",
     idealDate: {
-      cn: "冒险运动或高级餐厅",
+      zh: "冒险运动或高级餐厅",
       en: "Adventure sports or fine dining",
       es: "Deportes de aventura o cena elegante",
       fr: "Sports d'aventure ou dîner raffiné",
@@ -902,7 +902,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "어드벤처 스포츠 또는 고급 레스토랑",
     },
     loveStyle: {
-      cn: "热情且直率，喜欢主导关系。",
+      zh: "热情且直率，喜欢主导关系。",
       en: "Passionate and straightforward, likes to lead the relationship.",
       es: "Apasionado y directo, le gusta liderar la relación.",
       fr: "Passionné et direct, aime diriger la relation.",
@@ -910,7 +910,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "열정적이고 직선적이며, 상대방을 이끌어가는 것을 좋아합니다.",
     },
     name: {
-      cn: "勇敢的老虎",
+      zh: "勇敢的老虎",
       en: "Brave Tiger",
       es: "Tigre Valiente",
       fr: "Tigre Courageux",
@@ -918,7 +918,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "용맹한 호랑이",
     },
     personality: {
-      cn: ["勇敢", "有魅力", "自信", "独立"],
+      zh: ["勇敢", "有魅力", "自信", "独立"],
       en: ["Brave", "Charismatic", "Confident", "Independent"],
       es: ["Valiente", "Carismático", "Seguro", "Independiente"],
       fr: ["Courageux", "Charismatique", "Confiant", "Indépendant"],
@@ -926,7 +926,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["용감함", "카리스마", "자신감", "독립적"],
     },
     strengths: {
-      cn: ["领导力", "果断", "动力", "勇气"],
+      zh: ["领导力", "果断", "动力", "勇气"],
       en: ["Leadership", "Decisiveness", "Drive", "Courage"],
       es: ["Liderazgo", "Decisión", "Impulso", "Coraje"],
       fr: ["Leadership", "Décision", "Dynamisme", "Courage"],
@@ -934,7 +934,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["리더십", "결단력", "추진력", "용기"],
     },
     weaknesses: {
-      cn: ["固执", "专制", "完美主义"],
+      zh: ["固执", "专制", "完美主义"],
       en: ["Stubborn", "Authoritarian", "Perfectionist"],
       es: ["Terco", "Autoritario", "Perfeccionista"],
       fr: ["Têtu", "Autoritaire", "Perfectionniste"],
@@ -942,7 +942,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["고집이 셈", "독단적", "완벽주의"],
     },
     workStyle: {
-      cn: "以目标为导向，动力强劲",
+      zh: "以目标为导向，动力强劲",
       en: "Goal-oriented with strong drive",
       es: "Orientado a objetivos con fuerte impulso",
       fr: "Orienté vers les objectifs avec un fort dynamisme",
@@ -953,7 +953,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   wolf: {
     animal: "wolf",
     careerPaths: {
-      cn: ["企业家", "自由职业", "探险家", "作家", "艺术家"],
+      zh: ["企业家", "自由职业", "探险家", "作家", "艺术家"],
       en: ["Entrepreneur", "Freelancer", "Explorer", "Writer", "Artist"],
       es: ["Emprendedor", "Freelance", "Explorador", "Escritor", "Artista"],
       fr: ["Entrepreneur", "Freelance", "Explorateur", "Écrivain", "Artiste"],
@@ -967,7 +967,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       good: ["lion", "eagle"],
     },
     description: {
-      cn: "独立且坚韧，你开辟自己的道路。",
+      zh: "独立且坚韧，你开辟自己的道路。",
       en: "Independent and resilient, you forge your own path.",
       es: "Independiente y resistente, forjas tu propio camino.",
       fr: "Indépendant et résilient, vous tracez votre propre chemin.",
@@ -976,7 +976,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
     },
     emoji: "🐺",
     idealDate: {
-      cn: "户外徒步或在僻静的酒吧深入交谈",
+      zh: "户外徒步或在僻静的酒吧深入交谈",
       en: "Outdoor hiking or deep conversation at secluded bar",
       es: "Caminata al aire libre o conversación profunda en un bar apartado",
       fr: "Randonnée en plein air ou conversation profonde dans un bar isolé",
@@ -984,7 +984,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "야외 하이킹 또는 한적한 바에서 깊은 대화",
     },
     loveStyle: {
-      cn: "虽然独立，但一旦建立深厚纽带就非常忠诚。",
+      zh: "虽然独立，但一旦建立深厚纽带就非常忠诚。",
       en: "Independent but very loyal once deep bond is formed.",
       es: "Independiente pero muy leal una vez que se forma un vínculo profundo.",
       fr: "Indépendant mais très fidèle une fois qu'un lien profond est établi.",
@@ -992,7 +992,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "독립적이지만 깊은 유대감을 형성하면 매우 충성스럽습니다.",
     },
     name: {
-      cn: "独狼",
+      zh: "独狼",
       en: "Lone Wolf",
       es: "Lobo Solitario",
       fr: "Loup Solitaire",
@@ -1000,7 +1000,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: "고독한 늑대",
     },
     personality: {
-      cn: ["独立", "坚韧", "忠诚", "直觉"],
+      zh: ["独立", "坚韧", "忠诚", "直觉"],
       en: ["Independent", "Resilient", "Loyal", "Intuitive"],
       es: ["Independiente", "Resistente", "Leal", "Intuitivo"],
       fr: ["Indépendant", "Résilient", "Fidèle", "Intuitif"],
@@ -1008,7 +1008,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["독립적", "강인함", "충성심", "직관적"],
     },
     strengths: {
-      cn: ["独立性", "生存能力", "忠诚度", "直觉力"],
+      zh: ["独立性", "生存能力", "忠诚度", "直觉力"],
       en: ["Independence", "Survival", "Loyalty", "Intuition"],
       es: ["Independencia", "Supervivencia", "Lealtad", "Intuición"],
       fr: ["Indépendance", "Survie", "Loyauté", "Intuition"],
@@ -1016,7 +1016,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["독립성", "생존력", "충성심", "직관력"],
     },
     weaknesses: {
-      cn: ["孤独", "不信任", "封闭"],
+      zh: ["孤独", "不信任", "封闭"],
       en: ["Loneliness", "Distrust", "Closed-off"],
       es: ["Soledad", "Desconfianza", "Cerrado"],
       fr: ["Solitude", "Méfiance", "Renfermé"],
@@ -1024,7 +1024,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ko: ["외로움", "불신", "폐쇄적"],
     },
     workStyle: {
-      cn: "独自工作时效率最高，具有原创性",
+      zh: "独自工作时效率最高，具有原创性",
       en: "Best efficiency when working alone, original",
       es: "Mejor eficiencia al trabajar solo, original",
       fr: "Meilleure efficacité en travaillant seul, original",

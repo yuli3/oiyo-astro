@@ -1,5 +1,5 @@
 export const SNS_QUESTIONS: Record<string, any[]> = {
-  cn: [],
+  zh: [],
   en: [
     {
       emoji: "📱",

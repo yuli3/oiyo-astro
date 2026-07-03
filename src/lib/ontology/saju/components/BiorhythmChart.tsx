@@ -31,7 +31,7 @@ export function BiorhythmChart({ data }: BiorhythmChartProps) {
   }, []);
 
   const labels = {
-    cn: { emotional: "情感", intellectual: "智力", physical: "身体" },
+    zh: { emotional: "情感", intellectual: "智力", physical: "身体" },
     en: {
       emotional: "Emotional",
       intellectual: "Intellectual",

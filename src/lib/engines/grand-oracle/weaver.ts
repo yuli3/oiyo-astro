@@ -10,7 +10,7 @@ export type ConnectorKey =
   | "therefore";
 
 export const CONNECTORS: Record<string, Record<ConnectorKey, string>> = {
-  cn: {
+  zh: {
     and: "而且",
     consequently: "因此，",
     however: "然而，",

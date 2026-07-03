@@ -43,11 +43,11 @@ export function calculateCelestialPosition(date: Date): CelestialCoordinates {
 
   // Formatting the narrative dynamically
   const baseNarrative = COSMIC_FACTS.find((f) => f.id === "earth-speed")
-    ?.narrative || { cn: "", en: "", es: "", fr: "", ja: "", ko: "" };
+    ?.narrative || { zh: "", en: "", es: "", fr: "", ja: "", ko: "" };
   const speedStr = instantaneousVelocity.toFixed(2);
 
   const dynamicNarrative: LocalizedContent = {
-    cn: `在你出生的那一刻，受${Math.round(distance / 1000000)}00万公里日地距离的影响，地球正以每秒${speedStr}公里的速度飞驰。`,
+    zh: `在你出生的那一刻，受${Math.round(distance / 1000000)}00万公里日地距离的影响，地球正以每秒${speedStr}公里的速度飞驰。`,
     en: `At the moment of your birth, Earth was rushing through space at ${speedStr} km/s (relative to the Sun), influenced by its proximity of ${Math.round(distance / 1000000)}M km.`,
     es: `En el momento de tu nacimiento, la Tierra corría a ${speedStr} km/s, influenciada por su proximidad de ${Math.round(distance / 1000000)}M km con el Sol.`,
     fr: `Au moment de votre naissance, la Terre fonçait à ${speedStr} km/s, influencée par sa proximité de ${Math.round(distance / 1000000)}M km avec le Soleil.`,

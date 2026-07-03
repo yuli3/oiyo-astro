@@ -33,7 +33,7 @@ export const FRIENDSHIP_STYLE_LABELS: Record<
   Record<Locale, string>
 > = {
   adventurer: {
-    cn: "冒险家",
+    zh: "冒险家",
     en: "The Adventurer",
     es: "El Aventurero",
     fr: "L'Aventurier",
@@ -41,7 +41,7 @@ export const FRIENDSHIP_STYLE_LABELS: Record<
     ko: "모험가",
   },
   entertainer: {
-    cn: "表演者",
+    zh: "表演者",
     en: "The Entertainer",
     es: "El Animador",
     fr: "L'Animateur",
@@ -49,7 +49,7 @@ export const FRIENDSHIP_STYLE_LABELS: Record<
     ko: "엔터테이너",
   },
   organizer: {
-    cn: "组织者",
+    zh: "组织者",
     en: "The Organizer",
     es: "El Organizador",
     fr: "L'Organisateur",
@@ -57,7 +57,7 @@ export const FRIENDSHIP_STYLE_LABELS: Record<
     ko: "조직가",
   },
   supporter: {
-    cn: "支持者",
+    zh: "支持者",
     en: "The Supporter",
     es: "El Seguidor",
     fr: "Le Soutien",
@@ -65,7 +65,7 @@ export const FRIENDSHIP_STYLE_LABELS: Record<
     ko: "서포터",
   },
   thinker: {
-    cn: "深思者",
+    zh: "深思者",
     en: "The Thinker",
     es: "El Pensador",
     fr: "Le Penseur",
@@ -79,7 +79,7 @@ export const FRIENDSHIP_STYLE_DESCRIPTIONS: Record<
   Record<Locale, string>
 > = {
   adventurer: {
-    cn: "你是一位自发的、能带来兴奋和新体验的朋友。你喜欢和朋友们一起尝试新事物。",
+    zh: "你是一位自发的、能带来兴奋和新体验的朋友。你喜欢和朋友们一起尝试新事物。",
     en: "You are the spontaneous friend who brings excitement and new experiences. You love trying new things with your friends.",
     es: "Eres el amigo espontáneo que aporta emoción y nuevas experiencias. Te encanta probar cosas nuevas con tus amigos.",
     fr: "Vous êtes l'ami spontané qui apporte de l'excitation et de nouvelles expériences. Vous aimez essayer de nouvelles choses avec vos amis.",
@@ -87,7 +87,7 @@ export const FRIENDSHIP_STYLE_DESCRIPTIONS: Record<
     ko: "당신은 설렘과 새로운 경험을 가져다주는 즉흥적인 친구입니다. 친구들과 함께 새로운 시도를 하는 것을 좋아합니다.",
   },
   entertainer: {
-    cn: "你是社交达人，为每一次聚会带来欢乐和活力。你喜欢逗人发笑。",
+    zh: "你是社交达人，为每一次聚会带来欢乐和活力。你喜欢逗人发笑。",
     en: "You are the social butterfly who brings joy and energy to every gathering. You love making people laugh.",
     es: "Eres el alma de la fiesta que aporta alegría y energía a cada reunión. Te encanta hacer reír a la gente.",
     fr: "Vous êtes le boute-en-train qui apporte joie et énergie à chaque rassemblement. Vous adorez faire rire les gens.",
@@ -95,7 +95,7 @@ export const FRIENDSHIP_STYLE_DESCRIPTIONS: Record<
     ko: "당신은 모든 모임에 기쁨과 에너지를 가져다주는 소셜 버터플라이입니다. 사람들을 웃게 만드는 것을 좋아합니다.",
   },
   organizer: {
-    cn: "你是一位可靠的朋友，让大家保持联系并策划聚会。你喜欢协调小组活动。",
+    zh: "你是一位可靠的朋友，让大家保持联系并策划聚会。你喜欢协调小组活动。",
     en: "You are the reliable friend who keeps everyone connected and plans gatherings. You enjoy coordinating group activities.",
     es: "Eres el amigo fiable que mantiene a todos conectados y planifica las reuniones. Disfrutas coordinando actividades grupales.",
     fr: "Vous êtes l'ami fiable qui maintient tout le monde connecté et planifie les rassemblements. Vous aimez coordonner les activités de groupe.",
@@ -103,7 +103,7 @@ export const FRIENDSHIP_STYLE_DESCRIPTIONS: Record<
     ko: "당신은 모든 사람을 연결하고 모임을 계획하는 신뢰할 수 있는 친구입니다. 그룹 활동을 조정하는 것을 즐깁니다.",
   },
   supporter: {
-    cn: "你是一位充满爱心的朋友，总是倾向于倾听并提供情感支持。你重视深层次、有意义的联系。",
+    zh: "你是一位充满爱心的朋友，总是倾向于倾听并提供情感支持。你重视深层次、有意义的联系。",
     en: "You are the caring friend who always listens and provides emotional support. You value deep, meaningful connections.",
     es: "Eres el amigo cariñoso que siempre escucha y brinda apoyo emocional. Valoras las conexiones profundas y significativas.",
     fr: "Vous êtes l'ami attentionné qui écoute toujours et apporte un soutien émotionnel. Vous accordez de l'importance aux liens profonds et significatifs.",
@@ -111,7 +111,7 @@ export const FRIENDSHIP_STYLE_DESCRIPTIONS: Record<
     ko: "당신은 항상 경청하고 정서적 지지를 제공하는 배려심 깊은 친구입니다. 깊고 의미 있는 관계를 소중히 여깁니다.",
   },
   thinker: {
-    cn: "你是一位体贴的朋友，享受深度的对话和智力上的联系。你更喜欢质量而非数量。",
+    zh: "你是一位体贴的朋友，享受深度的对话和智力上的联系。你更喜欢质量而非数量。",
     en: "You are the thoughtful friend who enjoys deep conversations and intellectual connections. You prefer quality over quantity.",
     es: "Eres el amigo reflexivo que disfruta de las conversaciones profundas y las conexiones intelectuales. Prefieres la calidad a la cantidad.",
     fr: "Vous êtes l'ami réfléchi qui apprécie les conversations profondes et les connexions intellectuelles. Vous préférez la qualité à la quantité.",
@@ -125,7 +125,7 @@ export const FRIENDSHIP_STYLE_TRAITS: Record<
   Record<Locale, string[]>
 > = {
   adventurer: {
-    cn: ["自发的", "令人鼓舞的", "寻求难忘体验", "活力四射", "思想开放"],
+    zh: ["自发的", "令人鼓舞的", "寻求难忘体验", "活力四射", "思想开放"],
     en: [
       "Spontaneous",
       "Encouraging",
@@ -163,7 +163,7 @@ export const FRIENDSHIP_STYLE_TRAITS: Record<
     ],
   },
   entertainer: {
-    cn: ["快乐的", "打破僵局的人", "正能量", "幽默的", "充满活力的"],
+    zh: ["快乐的", "打破僵局的人", "正能量", "幽默的", "充满活力的"],
     en: ["Joyful", "Ice-breaker", "Positive energy", "Humorous", "Dynamic"],
     es: [
       "Alegre",
@@ -195,7 +195,7 @@ export const FRIENDSHIP_STYLE_TRAITS: Record<
     ],
   },
   organizer: {
-    cn: ["可靠的", "协调的", "面向计划", "包容性", "社交粘合剂"],
+    zh: ["可靠的", "协调的", "面向计划", "包容性", "社交粘合剂"],
     en: [
       "Reliable",
       "Coordinated",
@@ -221,7 +221,7 @@ export const FRIENDSHIP_STYLE_TRAITS: Record<
     ],
   },
   supporter: {
-    cn: ["优秀的倾听者", "富有同情心", "忠实的知己", "情感投入", "宝贵的顾问"],
+    zh: ["优秀的倾听者", "富有同情心", "忠实的知己", "情感投入", "宝贵的顾问"],
     en: [
       "Great listener",
       "Empathetic",
@@ -259,7 +259,7 @@ export const FRIENDSHIP_STYLE_TRAITS: Record<
     ],
   },
   thinker: {
-    cn: ["深思熟虑", "真实的", "反思的", "知识分子", "注重质量"],
+    zh: ["深思熟虑", "真实的", "反思的", "知识分子", "注重质量"],
     en: [
       "Deep thinker",
       "Authentic",

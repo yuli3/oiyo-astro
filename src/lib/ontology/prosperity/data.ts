@@ -13,7 +13,7 @@ const SCORES = {
 };
 
 export const CONSUMPTION_STYLE_QUESTIONS = {
-  cn: [
+  zh: [
     {
       emoji: "💰",
       id: "1",

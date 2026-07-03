@@ -99,7 +99,7 @@ export function analyzeNameEnergy(
   const elementsString = filled.join(", ");
 
   const narrative: LocalizedContent = {
-    cn:
+    zh:
       filled.length > 0
         ? `你名字的声音振动通过补充${elementsString}来增强这你的能量。`
         : "你的名字带有独特的宇宙振动。",
