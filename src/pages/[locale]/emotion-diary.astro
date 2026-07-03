@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import EmotionDiary from '../../components/tools/EmotionDiary';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string; h1: string; sub: string }> = {
+  ko: { title: '감정일기 — 사건·생각·감정·행동·결과 5단 기록', description: '하루 한 장면을 사건→생각→감정→행동→결과로 기록하고, 같은 사건을 다른 관점으로 바꿔보는 감정일기 도구. 모든 기록은 브라우저에만 저장됩니다.', h1: '감정일기', sub: '하루 한 장면이면 충분합니다 — 사건, 생각, 감정, 행동, 결과.' },
+  en: { title: 'Emotion Diary — 5-Step Event·Thought·Emotion·Action·Outcome Journal', description: 'Log one scene a day as event→thought→emotion→action→outcome, then try reframing the same event from a new angle. Everything stays in your browser.', h1: 'Emotion Diary', sub: 'One scene a day is enough — event, thought, emotion, action, outcome.' },
+  ja: { title: '感情日記 — 出来事・考え・感情・行動・結果の5段記録', description: '1日1場面を出来事→考え→感情→行動→結果で記録し、同じ出来事を別の視点で見直す感情日記ツール。記録はブラウザにのみ保存。', h1: '感情日記', sub: '1日1場面で十分 — 出来事、考え、感情、行動、結果。' },
+  zh: { title: '情绪日记 — 事件·想法·情绪·行动·结果五步记录', description: '每天记录一个场景：事件→想法→情绪→行动→结果，再尝试换个角度看同一件事。所有记录仅保存在浏览器中。', h1: '情绪日记', sub: '每天一个场景就够了 — 事件、想法、情绪、行动、结果。' },
+  fr: { title: 'Journal des émotions — 5 étapes : événement·pensée·émotion·action·résultat', description: "Consignez une scène par jour (événement→pensée→émotion→action→résultat), puis reformulez le même événement sous un autre angle. Tout reste dans votre navigateur.", h1: 'Journal des émotions', sub: "Une scène par jour suffit — événement, pensée, émotion, action, résultat." },
+  es: { title: 'Diario de emociones — 5 pasos: evento·pensamiento·emoción·acción·resultado', description: 'Registra una escena al día (evento→pensamiento→emoción→acción→resultado) y luego reformula el mismo evento desde otro ángulo. Todo queda en tu navegador.', h1: 'Diario de emociones', sub: 'Una escena al día basta: evento, pensamiento, emoción, acción, resultado.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="mx-auto max-w-xl px-4 py-10">
+    <div class="mb-8 text-center">
+      <h1 class="text-2xl font-bold">📓 {m.h1}</h1>
+      <p class="mt-2 text-sm text-muted-foreground">{m.sub}</p>
+    </div>
+    <EmotionDiary client:load locale={locale} />
+  </div>
+</Layout>

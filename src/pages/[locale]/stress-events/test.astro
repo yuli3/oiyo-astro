@@ -1,0 +1,57 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import HolmesRaheTest from '../../../components/tests/HolmesRaheTest';
+import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '홈즈-라헤 스트레스 테스트 — 생활사건 43항목 자가진단', description: '홈즈-라헤(1967) 사회재적응평정척도(SRRS) 43개 생활사건으로 최근 1년의 스트레스 부하(LCU)를 측정합니다. 150/300점 구간별 해석 제공.' },
+  en: { title: 'Holmes-Rahe Stress Test — 43 Life Events Self-Assessment', description: 'Measure your past-year stress load (LCU) with the 43-item Holmes-Rahe Social Readjustment Rating Scale (1967), with 150/300 range interpretation.' },
+  ja: { title: 'ホームズ・レイ ストレステスト — ライフイベント43項目', description: 'ホームズ・レイ(1967)社会的再適応評価尺度(SRRS)43項目で過去1年のストレス負荷(LCU)を測定。150/300点の区間別解釈つき。' },
+  zh: { title: '霍尔姆斯-拉赫压力测试 — 43项生活事件自测', description: '使用霍尔姆斯-拉赫(1967)社会再适应评定量表(SRRS)43项生活事件，测量过去一年的压力负荷(LCU)，附150/300分区间解读。' },
+  fr: { title: 'Test de stress Holmes-Rahe — 43 événements de vie', description: "Mesurez votre charge de stress (LCU) de l'année écoulée avec l'échelle SRRS de Holmes-Rahe (1967, 43 items), interprétation par paliers 150/300." },
+  es: { title: 'Test de estrés Holmes-Rahe — 43 eventos vitales', description: 'Mide tu carga de estrés (LCU) del último año con la escala SRRS de Holmes-Rahe (1967, 43 ítems), con interpretación por rangos 150/300.' },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, { introTitle: string; intro: string; faqs: { question: string; answer: string }[]; disclaimer: string; faqTitle: string }> = {
+  ko: { introTitle: '점수는 좋고 나쁨이 아니라 지난 1년의 변화량입니다', intro: '홈즈와 라헤는 1967년, 부정적 사건뿐 아니라 결혼·승진·휴가 같은 긍정적 변화도 적응 에너지를 요구한다는 것을 발견했습니다. 이 척도는 그 변화량을 생활변화단위(LCU)로 합산합니다. 점수가 높다면 자신을 탓할 일이 아니라 회복 시간을 더 확보해야 한다는 신호입니다.', faqTitle: '자주 묻는 질문', faqs: [{ question: '150점, 300점 기준은 무엇인가요?', answer: '원 연구에서 150~299점 구간은 건강 문제 발생 위험이 유의하게 높아지고, 300점 이상에서는 더 크게 높아지는 것으로 보고되었습니다. 확률적 경향이지 예언이 아닙니다.' }, { question: '좋은 일도 점수에 들어가나요?', answer: '네. 결혼(50점), 뛰어난 성취(28점), 휴가(13점)처럼 긍정적 사건도 적응을 요구하는 변화라서 포함됩니다.' }, { question: '이 결과가 진단인가요?', answer: '아니요. 1967년 연구 기반의 참고 도구입니다. 지속적인 불편감이 있다면 전문가와 상담하세요.' }], disclaimer: '이 테스트는 자기 이해를 위한 참고이며 의학적 진단을 대체하지 않습니다. 출처: Holmes TH, Rahe RH. J Psychosom Res. 1967;11(2):213-218.' },
+  en: { introTitle: 'The score is not good or bad — it is the amount of change in your year', intro: 'In 1967 Holmes and Rahe found that positive changes — marriage, promotion, vacation — demand adaptive energy just like negative ones. This scale sums that change as Life Change Units (LCU). A high score is not a fault; it is a signal to secure more recovery time.', faqTitle: 'Frequently asked questions', faqs: [{ question: 'What do the 150 and 300 thresholds mean?', answer: 'The original study reported meaningfully elevated risk of health problems in the 150–299 range, and higher above 300. It is a probabilistic tendency, not a prediction.' }, { question: 'Do positive events count?', answer: 'Yes. Marriage (50), outstanding achievement (28) and vacation (13) require adaptation too, so they are included.' }, { question: 'Is this a diagnosis?', answer: 'No. It is a reference tool based on 1967 research. If discomfort persists, consult a qualified professional.' }], disclaimer: 'This test is a self-understanding reference, not a medical diagnosis. Source: Holmes TH, Rahe RH. J Psychosom Res. 1967;11(2):213-218.' },
+  ja: { introTitle: 'スコアは良し悪しではなく、この1年の変化量です', intro: 'ホームズとレイは1967年、結婚・昇進・休暇のような肯定的変化も適応エネルギーを要することを見出しました。この尺度はその変化量を生活変化単位(LCU)として合算します。高得点は自分を責める理由ではなく、回復時間を確保すべきサインです。', faqTitle: 'よくある質問', faqs: [{ question: '150点・300点の基準は？', answer: '元の研究では150〜299点で健康問題のリスクが有意に高まり、300点以上でさらに高まると報告されています。確率的傾向であり予言ではありません。' }, { question: '良い出来事も点数に入りますか？', answer: 'はい。結婚(50点)、顕著な成功(28点)、休暇(13点)も適応を要する変化として含まれます。' }, { question: 'これは診断ですか？', answer: 'いいえ。1967年の研究に基づく参考ツールです。不調が続く場合は専門家に相談してください。' }], disclaimer: 'このテストは自己理解のための参考であり、医学的診断の代わりではありません。出典: Holmes TH, Rahe RH. J Psychosom Res. 1967;11(2):213-218.' },
+  zh: { introTitle: '分数无关好坏 — 它是你这一年的变化量', intro: '霍尔姆斯和拉赫在1967年发现，结婚、升职、休假等积极变化同样需要适应能量。该量表把这些变化合计为生活变化单位(LCU)。高分不是自责的理由，而是需要争取更多恢复时间的信号。', faqTitle: '常见问题', faqs: [{ question: '150分和300分的界限是什么意思？', answer: '原研究报告150~299分区间健康问题风险显著升高，300分以上更高。这是概率趋势，不是预言。' }, { question: '好事也计分吗？', answer: '是的。结婚(50分)、突出成就(28分)、休假(13分)同样需要适应，因此计入。' }, { question: '这是诊断吗？', answer: '不是。这是基于1967年研究的参考工具。如不适持续，请咨询专业人士。' }], disclaimer: '本测试仅供自我了解参考，不能替代医学诊断。来源: Holmes TH, Rahe RH. J Psychosom Res. 1967;11(2):213-218.' },
+  fr: { introTitle: "Le score n'est ni bon ni mauvais — c'est la quantité de changement de votre année", intro: "En 1967, Holmes et Rahe ont montré que les changements positifs — mariage, promotion, vacances — exigent aussi de l'énergie d'adaptation. Cette échelle additionne ce changement en unités (LCU). Un score élevé n'est pas une faute : c'est le signal qu'il faut plus de temps de récupération.", faqTitle: 'Questions fréquentes', faqs: [{ question: 'Que signifient les seuils 150 et 300 ?', answer: "L'étude originale rapporte un risque de santé nettement accru entre 150 et 299, et davantage au-delà de 300. C'est une tendance probabiliste, pas une prédiction." }, { question: 'Les événements positifs comptent-ils ?', answer: 'Oui. Mariage (50), réussite remarquable (28) et vacances (13) exigent aussi une adaptation.' }, { question: 'Est-ce un diagnostic ?', answer: "Non. C'est un outil de référence basé sur une recherche de 1967. Si l'inconfort persiste, consultez un professionnel." }], disclaimer: 'Ce test est une référence de connaissance de soi, pas un diagnostic médical. Source : Holmes TH, Rahe RH. J Psychosom Res. 1967;11(2):213-218.' },
+  es: { introTitle: 'La puntuación no es buena ni mala: es la cantidad de cambio de tu año', intro: 'En 1967, Holmes y Rahe descubrieron que los cambios positivos —matrimonio, ascenso, vacaciones— también exigen energía de adaptación. Esta escala suma ese cambio en unidades (LCU). Una puntuación alta no es una culpa: es la señal de asegurar más tiempo de recuperación.', faqTitle: 'Preguntas frecuentes', faqs: [{ question: '¿Qué significan los umbrales de 150 y 300?', answer: 'El estudio original reportó un riesgo de salud notablemente mayor entre 150 y 299, y aún mayor por encima de 300. Es una tendencia probabilística, no una predicción.' }, { question: '¿Cuentan los eventos positivos?', answer: 'Sí. El matrimonio (50), un logro destacado (28) y las vacaciones (13) también exigen adaptación.' }, { question: '¿Es un diagnóstico?', answer: 'No. Es una herramienta de referencia basada en una investigación de 1967. Si el malestar persiste, consulta a un profesional.' }], disclaimer: 'Este test es una referencia de autoconocimiento, no un diagnóstico médico. Fuente: Holmes TH, Rahe RH. J Psychosom Res. 1967;11(2):213-218.' },
+};
+const c = content[locale] ?? content.en;
+
+const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) };
+const quizJsonLd = buildQuizJsonLd({
+  name: m.title,
+  description: m.description,
+  url: new URL(Astro.url.pathname, Astro.site).toString(),
+  inLanguage: locale,
+  questionCount: 43,
+  questions: [],
+});
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(quizJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="mx-auto max-w-2xl px-4 py-10">
+    <div class="mb-8 text-center">
+      <h1 class="text-2xl font-bold">{m.title.split(' — ')[0]}</h1>
+      <p class="mt-2 text-sm text-muted-foreground">{m.description}</p>
+    </div>
+    <HolmesRaheTest client:load locale={locale} />
+    <section class="mt-10 border-t pt-8"><h2 class="text-2xl font-bold">{c.introTitle}</h2><p class="mt-4 leading-8 text-muted-foreground">{c.intro}</p></section>
+    <section class="mt-10"><h2 class="text-xl font-bold">{c.faqTitle}</h2><div class="mt-4 divide-y rounded-xl border bg-card">{c.faqs.map((faq) => (<details class="group p-4"><summary class="cursor-pointer list-none font-semibold">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-muted-foreground">{faq.answer}</p></details>))}</div></section>
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+  </div>
+</Layout>
