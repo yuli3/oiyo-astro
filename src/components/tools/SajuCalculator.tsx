@@ -28,7 +28,7 @@ const BRANCH_ANIMALS: Record<Locale, string[]> = {
   ja: ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'],
   fr: ['Rat', 'Bœuf', 'Tigre', 'Lapin', 'Dragon', 'Serpent', 'Cheval', 'Chèvre', 'Singe', 'Coq', 'Chien', 'Cochon'],
   es: ['Rata', 'Buey', 'Tigre', 'Conejo', 'Dragón', 'Serpiente', 'Caballo', 'Cabra', 'Mono', 'Gallo', 'Perro', 'Cerdo'],
-  zh: ['鼠', '牛', '虎', '兔', '龍', '蛇', '馬', '羊', '猴', '雞', '狗', '豬'],
+  zh: ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪'],
   cn: ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪'],
 };
 const BRANCH_EMOJIS = ['🐭', '🐄', '🐯', '🐰', '🐉', '🐍', '🐎', '🐑', '🐒', '🐓', '🐕', '🐷'];
@@ -83,7 +83,7 @@ const ELEMENT_TRAITS: Record<string, Record<Locale, { strengths: string[]; weakn
     ja: { strengths: ['成長志向', '創造的', '人道主義的', '柔軟'], weaknesses: ['優柔不断', '過度な理想主義', '頑固'], career: '教育、医療、環境、創作' },
     fr: { strengths: ['Orienté croissance', 'Créatif', 'Humaniste', 'Flexible'], weaknesses: ['Indécis', 'Trop idéaliste', 'Têtu'], career: 'Éducation, santé, environnement, arts' },
     es: { strengths: ['Orientado al crecimiento', 'Creativo', 'Humanitario', 'Flexible'], weaknesses: ['Indeciso', 'Demasiado idealista', 'Terco'], career: 'Educación, salud, medio ambiente, artes' },
-    zh: { strengths: ['成長導向', '創造力強', '人道主義', '靈活'], weaknesses: ['優柔寡斷', '過度理想化', '固執'], career: '教育、醫療、環境、創作' },
+    zh: { strengths: ['成长导向', '创造力强', '人道主义', '灵活'], weaknesses: ['优柔寡断', '过度理想化', '固执'], career: '教育、医疗、环境、创作' },
     cn: { strengths: ['成长导向', '创造力强', '人道主义', '灵活'], weaknesses: ['优柔寡断', '过度理想化', '固执'], career: '教育、医疗、环境、创作' },
   },
   Fire: {
@@ -92,7 +92,7 @@ const ELEMENT_TRAITS: Record<string, Record<Locale, { strengths: string[]; weakn
     ja: { strengths: ['情熱的', 'カリスマ', '直感力', 'リーダーシップ'], weaknesses: ['急ぎ過ぎ', '衝動的', '過信'], career: '芸能、マーケティング、政治、スポーツ' },
     fr: { strengths: ['Passionné(e)', 'Charismatique', 'Intuitif(ve)', 'Leadership'], weaknesses: ['Impatient(e)', 'Impulsif(ve)', 'Trop confiant(e)'], career: 'Divertissement, marketing, politique, sport' },
     es: { strengths: ['Apasionado/a', 'Carismático/a', 'Intuitivo/a', 'Liderazgo'], weaknesses: ['Impaciente', 'Impulsivo/a', 'Demasiado confiado/a'], career: 'Entretenimiento, marketing, política, deporte' },
-    zh: { strengths: ['熱情', '魅力', '直覺力', '領導力'], weaknesses: ['急躁', '衝動', '過度自信'], career: '娛樂、行銷、政治、體育' },
+    zh: { strengths: ['热情', '魅力', '直觉力', '领导力'], weaknesses: ['急躁', '冲动', '过度自信'], career: '娱乐、行销、政治、体育' },
     cn: { strengths: ['热情', '魅力', '直觉力', '领导力'], weaknesses: ['急躁', '冲动', '过度自信'], career: '娱乐、营销、政治、体育' },
   },
   Earth: {
@@ -101,7 +101,7 @@ const ELEMENT_TRAITS: Record<string, Record<Locale, { strengths: string[]; weakn
     ja: { strengths: ['安定的', '信頼できる', '実用的', '忍耐強い'], weaknesses: ['保守的', '変化への抵抗', '決断が遅い'], career: '不動産、金融、農業、行政' },
     fr: { strengths: ['Stable', 'Fiable', 'Pratique', 'Patient(e)'], weaknesses: ['Conservateur(trice)', 'Résistance au changement', 'Lent(e) à décider'], career: 'Immobilier, finance, agriculture, administration' },
     es: { strengths: ['Estable', 'Confiable', 'Práctico/a', 'Paciente'], weaknesses: ['Conservador/a', 'Resistente al cambio', 'Lento/a para decidir'], career: 'Inmobiliario, finanzas, agricultura, administración' },
-    zh: { strengths: ['穩定', '值得信賴', '務實', '有耐心'], weaknesses: ['保守', '抗拒變化', '決策緩慢'], career: '房地產、金融、農業、行政' },
+    zh: { strengths: ['稳定', '值得信赖', '务实', '有耐心'], weaknesses: ['保守', '抗拒变化', '决策缓慢'], career: '房地产、金融、农业、行政' },
     cn: { strengths: ['稳定', '值得信赖', '务实', '有耐心'], weaknesses: ['保守', '抗拒变化', '决策缓慢'], career: '房地产、金融、农业、行政' },
   },
   Metal: {
@@ -110,7 +110,7 @@ const ELEMENT_TRAITS: Record<string, Record<Locale, { strengths: string[]; weakn
     ja: { strengths: ['決断力', '正義感', '体系的', '強い意志'], weaknesses: ['頑固', '非妥協的', '過度な批判'], career: '法曹界、軍・警察、金融、エンジニアリング' },
     fr: { strengths: ['Décidé(e)', 'Sens de la justice', 'Systématique', 'Volonté forte'], weaknesses: ['Têtu(e)', 'Intransigeant(e)', 'Trop critique'], career: 'Droit, armée/police, finance, ingénierie' },
     es: { strengths: ['Decidido/a', 'Sentido de justicia', 'Sistemático/a', 'Voluntad fuerte'], weaknesses: ['Terco/a', 'Intransigente', 'Demasiado crítico/a'], career: 'Derecho, militar/policía, finanzas, ingeniería' },
-    zh: { strengths: ['果斷', '正義感強', '有條理', '意志堅定'], weaknesses: ['固執', '不妥協', '過度批評'], career: '法律、軍警、金融、工程' },
+    zh: { strengths: ['果断', '正义感强', '有条理', '意志坚定'], weaknesses: ['固执', '不妥协', '过度批评'], career: '法律、军警、金融、工程' },
     cn: { strengths: ['果断', '正义感强', '有条理', '意志坚定'], weaknesses: ['固执', '不妥协', '过度批评'], career: '法律、军警、金融、工程' },
   },
   Water: {
@@ -119,7 +119,7 @@ const ELEMENT_TRAITS: Record<string, Record<Locale, { strengths: string[]; weakn
     ja: { strengths: ['知恵がある', '適応力がある', '洞察力', '外交的'], weaknesses: ['優柔不断', '不安', '過度な思索'], career: '哲学、執筆、カウンセリング、外交' },
     fr: { strengths: ['Sage', 'Adaptable', 'Perspicace', 'Diplomatique'], weaknesses: ['Indécis(e)', 'Anxieux(se)', 'Trop contemplatif(ve)'], career: 'Philosophie, écriture, conseil, diplomatie' },
     es: { strengths: ['Sabio/a', 'Adaptable', 'Perspicaz', 'Diplomático/a'], weaknesses: ['Indeciso/a', 'Ansioso/a', 'Demasiado contemplativo/a'], career: 'Filosofía, escritura, asesoramiento, diplomacia' },
-    zh: { strengths: ['智慧', '適應力強', '洞察力', '外交手腕'], weaknesses: ['優柔寡斷', '焦慮', '過度沉思'], career: '哲學、寫作、諮詢、外交' },
+    zh: { strengths: ['智慧', '适应力强', '洞察力', '外交手腕'], weaknesses: ['优柔寡断', '焦虑', '过度沉思'], career: '哲学、写作、咨询、外交' },
     cn: { strengths: ['智慧', '适应力强', '洞察力', '外交手腕'], weaknesses: ['优柔寡断', '焦虑', '过度沉思'], career: '哲学、写作、咨询、外交' },
   },
 };
@@ -184,7 +184,7 @@ const LUCKY: Record<string, Record<Locale, { colors: string; numbers: string; di
     ja: { colors: '緑、青', numbers: '3、8', directions: '東' },
     fr: { colors: 'Vert, Bleu', numbers: '3, 8', directions: 'Est' },
     es: { colors: 'Verde, Azul', numbers: '3, 8', directions: 'Este' },
-    zh: { colors: '綠色、藍色', numbers: '3、8', directions: '東方' },
+    zh: { colors: '绿色、蓝色', numbers: '3、8', directions: '东方' },
     cn: { colors: '绿色、蓝色', numbers: '3、8', directions: '东方' },
   },
   Fire: {
@@ -193,7 +193,7 @@ const LUCKY: Record<string, Record<Locale, { colors: string; numbers: string; di
     ja: { colors: '赤、紫', numbers: '2、7', directions: '南' },
     fr: { colors: 'Rouge, Violet', numbers: '2, 7', directions: 'Sud' },
     es: { colors: 'Rojo, Morado', numbers: '2, 7', directions: 'Sur' },
-    zh: { colors: '紅色、紫色', numbers: '2、7', directions: '南方' },
+    zh: { colors: '红色、紫色', numbers: '2、7', directions: '南方' },
     cn: { colors: '红色、紫色', numbers: '2、7', directions: '南方' },
   },
   Earth: {
@@ -202,7 +202,7 @@ const LUCKY: Record<string, Record<Locale, { colors: string; numbers: string; di
     ja: { colors: '黄色、茶色', numbers: '5、10', directions: '中央' },
     fr: { colors: 'Jaune, Brun', numbers: '5, 10', directions: 'Centre' },
     es: { colors: 'Amarillo, Marrón', numbers: '5, 10', directions: 'Centro' },
-    zh: { colors: '黃色、棕色', numbers: '5、10', directions: '中央' },
+    zh: { colors: '黄色、棕色', numbers: '5、10', directions: '中央' },
     cn: { colors: '黄色、棕色', numbers: '5、10', directions: '中央' },
   },
   Metal: {
@@ -220,7 +220,7 @@ const LUCKY: Record<string, Record<Locale, { colors: string; numbers: string; di
     ja: { colors: '黒、青', numbers: '1、6', directions: '北' },
     fr: { colors: 'Noir, Bleu', numbers: '1, 6', directions: 'Nord' },
     es: { colors: 'Negro, Azul', numbers: '1, 6', directions: 'Norte' },
-    zh: { colors: '黑色、藍色', numbers: '1、6', directions: '北方' },
+    zh: { colors: '黑色、蓝色', numbers: '1、6', directions: '北方' },
     cn: { colors: '黑色、蓝色', numbers: '1、6', directions: '北方' },
   },
 };
@@ -298,15 +298,15 @@ const L: Record<Locale, {
     months: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
   },
   zh: {
-    title: '四柱推命計算機', subtitle: '依生年月日時分析四柱八字',
-    birthYear: '出生年', birthMonth: '出生月', birthDay: '出生日', birthHour: '出生時辰',
+    title: '四柱推命计算机', subtitle: '依生年月日时分析四柱八字',
+    birthYear: '出生年', birthMonth: '出生月', birthDay: '出生日', birthHour: '出生时辰',
     calcBtn: '查看我的四柱', resetBtn: '重置',
     unknownHour: '不知道',
-    fourPillars: '四柱 (사주)', yearPillar: '年柱', monthPillar: '月柱', dayPillar: '日柱', hourPillar: '時柱',
+    fourPillars: '四柱 (사주)', yearPillar: '年柱', monthPillar: '月柱', dayPillar: '日柱', hourPillar: '时柱',
     stem: '天干', branch: '地支', animal: '生肖', element: '五行',
-    dominantElement: '主要五行', strengths: '優點', weaknesses: '缺點', career: '適合職業',
-    luckyColors: '幸運顏色', luckyNumbers: '幸運數字', luckyDirections: '幸運方向',
-    disclaimer: '四柱推命是東亞傳統占術，沒有科學依據。請僅用於娛樂和自我認識。',
+    dominantElement: '主要五行', strengths: '优点', weaknesses: '缺点', career: '适合职业',
+    luckyColors: '幸运颜色', luckyNumbers: '幸运数字', luckyDirections: '幸运方向',
+    disclaimer: '四柱推命是东亚传统占术，没有科学依据。请仅用于娱乐和自我认识。',
     months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
   },
   cn: {
@@ -441,23 +441,23 @@ const READING_COPY: Record<Locale, {
     balanceQuestionItems: ['¿Dónde aparece demasiado fuerte el elemento dominante?', '¿Cómo apoyar el elemento débil con hábitos, lugar o relaciones?', '¿El estrés reciente se parece al lado difícil de un elemento?'],
   },
   zh: {
-    readingMap: '四柱解讀地圖',
-    readingMapDesc: '四柱不只看單一結論，也要合看位置與五行平衡。',
+    readingMap: '四柱解读地图',
+    readingMapDesc: '四柱不只看单一结论，也要合看位置与五行平衡。',
     balanceTitle: '五行平衡',
-    abundance: '較強的五行',
-    scarcity: '可補足的五行',
+    abundance: '较强的五行',
+    scarcity: '可补足的五行',
     missing: '缺少的五行',
-    noMissing: '沒有缺少的五行',
-    profileChanges: '性向會隨時間改變',
-    profileChangesDesc: '四柱呈現出生時的象徵地圖；真實性格會因環境、習慣、關係與選擇而持續變化。',
-    howToRead: '解讀順序',
-    readSteps: ['先看日干作為自我中心。', '再看月柱代表季節與社會節奏。', '同時觀察五行的多與少。'],
-    relationTitle: '五行生剋關係',
-    relationDesc: '看最強五行生什麼、剋什麼，可以更清楚地找到解讀方向。',
+    noMissing: '没有缺少的五行',
+    profileChanges: '性向会随时间改变',
+    profileChangesDesc: '四柱呈现出生时的象征地图；真实性格会因环境、习惯、关系与选择而持续变化。',
+    howToRead: '解读顺序',
+    readSteps: ['先看日干作为自我中心。', '再看月柱代表季节与社会节奏。', '同时观察五行的多与少。'],
+    relationTitle: '五行生克关系',
+    relationDesc: '看最强五行生什么、克什么，可以更清楚地找到解读方向。',
     generates: '相生',
-    controls: '相剋',
-    balanceQuestions: '平衡提問',
-    balanceQuestionItems: ['較強的五行在哪些生活場景中過度表現？', '較弱的五行能否透過習慣、環境或關係補足？', '最近的壓力是否像某個五行的陰影面？'],
+    controls: '相克',
+    balanceQuestions: '平衡提问',
+    balanceQuestionItems: ['较强的五行在哪些生活场景中过度表现？', '较弱的五行能否透过习惯、环境或关系补足？', '最近的压力是否像某个五行的阴影面？'],
   },
 };
 
@@ -494,9 +494,9 @@ const PILLAR_ROLES: Record<Locale, Record<string, string>> = {
   },
   zh: {
     year: '家族、早年、大背景',
-    month: '社會性、工作節奏、季節感',
-    day: '自我中心與親密關係',
-    hour: '後半生、子女、潛能',
+    month: '社会性、工作节奏、季节感',
+    day: '自我中心与亲密关系',
+    hour: '后半生、子女、潜能',
   },
 };
 
