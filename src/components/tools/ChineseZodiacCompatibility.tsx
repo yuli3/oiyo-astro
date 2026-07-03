@@ -208,7 +208,7 @@ const UI: Record<Locale, {
       neutral: "Una combinación neutra. Respetar las diferencias lleva a una buena relación.",
     },
   },
-  zh: {
+  cn: {
     title: "生肖配对",
     subtitle: "通过出生年份的生肖了解两人的配对",
     person1Year: "第一个人的出生年份",
@@ -240,7 +240,7 @@ const UI: Record<Locale, {
       neutral: "普通关系，理解和尊重彼此的差异可以形成良好关系。",
     },
   },
-  cn: {
+  zh: {
     title: "生肖配對",
     subtitle: "通過出生年份的生肖了解兩人的配對",
     person1Year: "第一個人的出生年份",
@@ -450,7 +450,7 @@ const ANIMAL_TRAITS: Record<Locale, Record<ZodiacAnimal, string>> = {
     dog: "leal y honesto",
     pig: "generoso y cálido",
   },
-  zh: {
+  cn: {
     rat: "聪明善交际",
     ox: "勤劳可靠",
     tiger: "勇敢有魅力",
@@ -464,7 +464,7 @@ const ANIMAL_TRAITS: Record<Locale, Record<ZodiacAnimal, string>> = {
     dog: "忠实诚实",
     pig: "慷慨温暖",
   },
-  cn: {
+  zh: {
     rat: "聰明善交際",
     ox: "勤勞可靠",
     tiger: "勇敢有魅力",
@@ -625,7 +625,7 @@ function buildDesc(a: ZodiacAnimal, b: ZodiacAnimal, locale: Locale): string[] {
         "Apreciar las diferencias del otro puede fortalecer este vínculo con el tiempo.",
       ],
     },
-    zh: {
+    cn: {
       triad: [
         `${ANIMAL_EMOJI[a]} ${aName}（${aTrait}）与${ANIMAL_EMOJI[b]} ${bName}（${bTrait}）是三合关系。`,
         "彼此的优势完美互补，形成强大而持久的联系。",
@@ -652,7 +652,7 @@ function buildDesc(a: ZodiacAnimal, b: ZodiacAnimal, locale: Locale): string[] {
         "欣赏彼此的不同，随着时间可以加深这段缘分。",
       ],
     },
-    cn: {
+    zh: {
       triad: [
         `${ANIMAL_EMOJI[a]} ${aName}（${aTrait}）與${ANIMAL_EMOJI[b]} ${bName}（${bTrait}）是三合關係。`,
         "彼此的優勢完美互補，形成強大而持久的聯繫。",

@@ -410,7 +410,7 @@ const UI: Record<Locale, UIData> = {
       C2: { label: "Dominio", desc: "Tienes fluidez y precisión casi nativas en inglés.", tips: ["Crea contenido en inglés en tu campo profesional", "Perfecciona habilidades de traducción", "Participa en redacción académica en inglés"] },
     },
   },
-  zh: {
+  cn: {
     title: "英语水平测试",
     subtitle: "用20道题检验你的英语水平（CEFR A1–C2）",
     startBtn: "开始测试",
@@ -434,7 +434,7 @@ const UI: Record<Locale, UIData> = {
       C2: { label: "精通 (Mastery)", desc: "具备接近母语者的流利度和准确性。", tips: ["在专业领域创作英语内容", "磨练翻译和口译技能", "参与英语学术写作"] },
     },
   },
-  cn: {
+  zh: {
     title: "英語水平測試",
     subtitle: "用20道題檢驗你的英語水平（CEFR A1–C2）",
     startBtn: "開始測試",

@@ -4,6 +4,7 @@ import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import SocialAnxietyTest from '../../../components/tests/SocialAnxietyTest';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
+import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
 }
@@ -148,8 +149,17 @@ const faqJsonLd = {
     acceptedAnswer: { '@type': 'Answer', text: faq.answer },
   })),
 };
+const quizJsonLd = buildQuizJsonLd({
+  name: m.title,
+  description: m.description,
+  url: new URL(Astro.url.pathname, Astro.site).toString(),
+  inLanguage: locale,
+  questions: [],
+});
+
 ---
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(quizJsonLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="mx-auto max-w-2xl px-4 py-10">
     <SocialAnxietyTest client:load locale={locale} />

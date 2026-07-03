@@ -36,8 +36,8 @@ const LABELS: Record<Locale, {
   ja: { title: '経済学派傾向テスト', subtitle: 'あなたはどの経済学派に属する？12の質問で分かる', start: '開始', restart: 'もう一度', yourSchool: 'あなたの経済学派', traitLabel: '核心的傾向', keyThinkers: '代表的学者', policyLabel: '政策的立場', note: 'このテストは教育的興味のためのものです。', progress: (c, t) => `${c} / ${t}` },
   fr: { title: 'Test d\'École de Pensée Économique', subtitle: 'À quelle école économique appartenez-vous ? 12 questions', start: 'Commencer', restart: 'Recommencer', yourSchool: 'Votre École Économique', traitLabel: 'Tendances fondamentales', keyThinkers: 'Penseurs clés', policyLabel: 'Position politique', note: 'Ce test est à des fins éducatives.', progress: (c, t) => `${c} / ${t}` },
   es: { title: 'Test de Escuela de Pensamiento Económico', subtitle: '¿A qué escuela económica perteneces? 12 preguntas', start: 'Comenzar', restart: 'Repetir', yourSchool: 'Tu Escuela Económica', traitLabel: 'Tendencias fundamentales', keyThinkers: 'Pensadores clave', policyLabel: 'Postura política', note: 'Este test es para interés educativo.', progress: (c, t) => `${c} / ${t}` },
-  zh: { title: '經濟學派傾向測試', subtitle: '你屬於哪個經濟學派？12個問題來了解', start: '開始', restart: '重新測試', yourSchool: '你的經濟學派', traitLabel: '核心傾向', keyThinkers: '代表學者', policyLabel: '政策立場', note: '此測試僅供教育興趣。', progress: (c, t) => `${c} / ${t}` },
-  cn: { title: '经济学派倾向测试', subtitle: '你属于哪个经济学派？12个问题来了解', start: '开始', restart: '重新测试', yourSchool: '你的经济学派', traitLabel: '核心倾向', keyThinkers: '代表学者', policyLabel: '政策立场', note: '此测试仅供教育兴趣。', progress: (c, t) => `${c} / ${t}` },
+  cn: { title: '經濟學派傾向測試', subtitle: '你屬於哪個經濟學派？12個問題來了解', start: '開始', restart: '重新測試', yourSchool: '你的經濟學派', traitLabel: '核心傾向', keyThinkers: '代表學者', policyLabel: '政策立場', note: '此測試僅供教育興趣。', progress: (c, t) => `${c} / ${t}` },
+  zh: { title: '经济学派倾向测试', subtitle: '你属于哪个经济学派？12个问题来了解', start: '开始', restart: '重新测试', yourSchool: '你的经济学派', traitLabel: '核心倾向', keyThinkers: '代表学者', policyLabel: '政策立场', note: '此测试仅供教育兴趣。', progress: (c, t) => `${c} / ${t}` },
 }
 
 interface SchoolData {
@@ -145,7 +145,7 @@ const QUESTIONS: Record<Locale, Question[]> = {
     { id: 'q11', text: '¿Tu posición sobre la deuda nacional?', options: [{ value: 'keynesian', label: 'En recesión, el endeudamiento está justificado para estimular la economía' }, { value: 'classical', label: 'Los presupuestos equilibrados a largo plazo mantienen la economía sana' }, { value: 'austrian', label: 'La deuda nacional transfiere cargas fiscales a las generaciones futuras' }, { value: 'institutional', label: 'El uso y la estructura de la deuda son tan importantes como su tamaño' }] },
     { id: 'q12', text: '¿Sobre la tecnología reemplazando empleos?', options: [{ value: 'classical', label: 'Surgen nuevas industrias y empleos, restaurando el equilibrio' }, { value: 'keynesian', label: 'El desempleo a corto plazo requiere reentrenamiento y apoyo social' }, { value: 'behavioral', label: 'La gente no siempre hace elecciones racionales en transiciones' }, { value: 'institutional', label: 'Se necesita reforma institucional para distribuir los beneficios tecnológicos' }] },
   ],
-  zh: [
+  cn: [
     { id: 'q1', text: '經濟衰退時，政府的角色是什麼？', options: [{ value: 'keynesian', label: '增加支出並積極刺激經濟' }, { value: 'classical', label: '最小化干預，讓市場自我修正' }, { value: 'austrian', label: '政府干預本身會使問題惡化；退出' }, { value: 'institutional', label: '改革制度和法規以解決結構性問題' }] },
     { id: 'q2', text: '人們如何做出經濟決策？', options: [{ value: 'classical', label: '在有足夠信息的情況下理性判斷' }, { value: 'behavioral', label: '因心理偏見和情緒而常常做出非理性選擇' }, { value: 'institutional', label: '受制度和社會規範的大力約束' }, { value: 'keynesian', label: '因未來不確定性而減少消費和投資' }] },
     { id: 'q3', text: '如何解決收入不平等問題？', options: [{ value: 'keynesian', label: '累進稅和擴大福利支出進行再分配' }, { value: 'classical', label: '自由市場和增長從長遠看能縮小不平等' }, { value: 'behavioral', label: '通過推動政策鼓勵低收入群體儲蓄和投資' }, { value: 'institutional', label: '解決教育和機會方面的制度性不平等' }] },
@@ -159,7 +159,7 @@ const QUESTIONS: Record<Locale, Question[]> = {
     { id: 'q11', text: '你對國家債務的立場？', options: [{ value: 'keynesian', label: '在衰退期間，借貸是刺激經濟的正當之舉' }, { value: 'classical', label: '長期平衡預算使經濟保持健康' }, { value: 'austrian', label: '國家債務將稅收負擔轉移給未來世代' }, { value: 'institutional', label: '債務的用途和結構與規模一樣重要' }] },
     { id: 'q12', text: '關於技術取代工作？', options: [{ value: 'classical', label: '長期內新產業和就業機會出現，恢復平衡' }, { value: 'keynesian', label: '短期失業需要再培訓和社會支持' }, { value: 'behavioral', label: '過渡期人們並不總是做出理性選擇；需要政策設計' }, { value: 'institutional', label: '需要制度改革來分配技術進步的好處' }] },
   ],
-  cn: [
+  zh: [
     { id: 'q1', text: '经济衰退时，政府的角色是什么？', options: [{ value: 'keynesian', label: '增加支出并积极刺激经济' }, { value: 'classical', label: '最小化干预，让市场自我修正' }, { value: 'austrian', label: '政府干预本身会使问题恶化；退出' }, { value: 'institutional', label: '改革制度和法规以解决结构性问题' }] },
     { id: 'q2', text: '人们如何做出经济决策？', options: [{ value: 'classical', label: '在有足够信息的情况下理性判断' }, { value: 'behavioral', label: '因心理偏见和情绪而常常做出非理性选择' }, { value: 'institutional', label: '受制度和社会规范的大力约束' }, { value: 'keynesian', label: '因未来不确定性而减少消费和投资' }] },
     { id: 'q3', text: '如何解决收入不平等问题？', options: [{ value: 'keynesian', label: '累进税和扩大福利支出进行再分配' }, { value: 'classical', label: '自由市场和增长从长远看能缩小不平等' }, { value: 'behavioral', label: '通过推动政策鼓励低收入群体储蓄和投资' }, { value: 'institutional', label: '解决教育和机会方面的制度性不平等' }] },

@@ -1,14 +1,16 @@
 "use client";
 
 /**
- * Utility for storing encrypted data in localStorage.
- * Uses a lightweight XOR-based stream cipher with deterministic key stream
- * derived from a secret plus runtime characteristics so that data can be
- * decrypted on subsequent visits while avoiding plain text storage.
+ * localStorage wrapper with light obfuscation — NOT encryption.
+ *
+ * The XOR keystream below uses a fixed, source-visible key: it only deters
+ * casual devtools shoulder-surfing, not any real adversary. localStorage is
+ * same-origin sandboxed by the browser; that is the actual security boundary.
+ * All data stays on the user's device and is never sent to a server.
+ * (Format kept as-is for backward compatibility with previously stored values.)
  */
 
-const STORAGE_SECRET =
-  process.env.NEXT_PUBLIC_STORAGE_SECRET || "oiyo-storage-secret";
+const STORAGE_SECRET = "oiyo-storage-secret";
 const ENCODE_PREFIX = "__enc__:";
 
 const encoder = new TextEncoder();

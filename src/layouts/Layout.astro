@@ -7,6 +7,7 @@ import TestSourceNote from '../components/shared/TestSourceNote.astro';
 import { getTestSourceNote } from '../data/test-source-notes';
 import TestRelatedReading from '../components/shared/TestRelatedReading.astro';
 import { getRelatedReading } from '../data/test-related-reading';
+import AhoxyWelcome from '../components/shared/AhoxyWelcome.astro';
 
 interface Props {
   title: string;
@@ -121,7 +122,7 @@ const themeColor = '#65a30d';
           .map((segment, index) => ({ segment, path: '/' + all.slice(0, index + 1).join('/') }))
           .filter(({ segment }, index) => !(index === 0 && (LOCALES as readonly string[]).includes(segment)));
         return [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
+          { "@type": "ListItem", "position": 1, "name": ({ ko: "홈", ja: "ホーム", zh: "首页", fr: "Accueil", es: "Inicio" } as Record<string, string>)[locale] ?? "Home", "item": siteUrl },
           ...crumbs.map(({ segment, path }, i) => ({
             "@type": "ListItem",
             "position": i + 2,
@@ -165,5 +166,6 @@ const themeColor = '#65a30d';
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
     </main>
     <Footer locale={locale} />
+    <AhoxyWelcome />
   </body>
 </html>
