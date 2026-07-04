@@ -37,7 +37,7 @@ export const APP_ROUTES = {
     FAQ: "/faq",
   },
   ONTOLOGY: {
-    DAILY_LUCKY: getPath("daily-lucky", "/ontology/daily"),
+    DAILY_LUCKY: getPath("daily-lucky", "/today"),
     MBTI: getPath("mbti", "/ontology/mbti"),
     ORIGIN: getPath("saju", "/ontology/saju"), // Saju is the Primal Origin
     ROOT: getPath("ontology", "/ontology"),

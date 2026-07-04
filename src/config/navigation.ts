@@ -62,7 +62,7 @@ export const MOBILE_NAV_ITEMS: MobileNavItem[] = [
   {
     color: getColor(dailyLucky?.color) || "#10B981",
     featureId: dailyLucky?.id,
-    href: dailyLucky?.path || "/daily",
+    href: dailyLucky?.path || "/today",
     icon: "Sparkles",
     id: "daily",
     labelEn: "Daily",

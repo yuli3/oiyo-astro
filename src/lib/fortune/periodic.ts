@@ -33,8 +33,8 @@ export function animalOf(year: number): number { return ((year - 4) % 12 + 12) %
 const STAR_SIGN = ['aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo', 'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces'] as const;
 export function signOf(month: number, day: number): number {
   const cut = [20, 19, 21, 20, 21, 21, 23, 23, 23, 23, 22, 22]; // 각 월의 전환일
-  const idx = day < cut[month - 1] ? (month - 2 + 12) % 12 : (month - 1);
-  return idx;
+  // 전환일 이후면 그 달에 시작하는 별자리(Aries=0), 이전이면 직전 별자리.
+  return day < cut[month - 1] ? (month + 8) % 12 : (month + 9) % 12;
 }
 
 export const FIVE_ELEMENTS = ['wood', 'fire', 'earth', 'metal', 'water'] as const;
