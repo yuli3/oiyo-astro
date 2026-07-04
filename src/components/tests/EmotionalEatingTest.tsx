@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type EatingLevel = 'low' | 'moderate' | 'high' | 'very_high'
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -469,6 +470,7 @@ export default function EmotionalEatingTest({ locale: lp = 'ko' }: Props) {
           {lb.share}
         </button>
       </div>
+      <ShareResultButton locale={locale} heading={lb.title} resultTitle={r.title} emoji={r.icon} />
     </div>
   )
 }

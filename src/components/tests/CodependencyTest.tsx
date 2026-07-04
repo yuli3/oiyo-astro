@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 
@@ -386,6 +387,7 @@ export default function CodependencyTest({ locale: lp = 'ko' }: Props) {
         <button onClick={restart} aria-label={lb.restart} className="flex-1 rounded-lg border bg-card px-4 py-2 text-sm font-medium hover:bg-accent transition-colors">{lb.restart}</button>
         <button onClick={share} aria-label={lb.share} className="flex-1 rounded-lg bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity">{lb.share}</button>
       </div>
+      <ShareResultButton locale={lp ?? 'ko'} heading={lb.title} resultTitle={r.title} description={r.description} />
     </div>
   )
 }

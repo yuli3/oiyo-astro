@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
 
 type Style = 'compete' | 'collaborate' | 'compromise' | 'avoid' | 'accommodate'
@@ -227,6 +228,7 @@ export default function ConflictStyleTest({ locale: lp = 'ko' }: Props) {
         <button onClick={restart} className="flex-1 rounded-lg border bg-card px-4 py-2 text-sm font-medium hover:bg-accent transition-colors">{lb.restart}</button>
         <button onClick={share} className="flex-1 rounded-lg bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity">{lb.share}</button>
       </div>
+      <ShareResultButton locale={locale} heading={lb.title} resultTitle={r.title} description={r.description} />
     </div>
   )
 }

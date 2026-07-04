@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type CoffeeType = 'espresso' | 'latte' | 'coldbrew' | 'cappuccino' | 'americano'
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -646,6 +647,7 @@ export default function CoffeePersonalityTest({ locale: lp = 'ko' }: Props) {
           {copied ? lb.copied : lb.share}
         </button>
       </div>
+      <ShareResultButton locale={lp} heading={lb.title} resultTitle={r.title} emoji={r.emoji} description={r.tagline} />
     </div>
   )
 }

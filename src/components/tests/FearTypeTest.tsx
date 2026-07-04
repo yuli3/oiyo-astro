@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type FearType = 'rejection' | 'failure' | 'loss' | 'unknown' | 'judgment'
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -838,6 +839,7 @@ export default function FearTypeTest({ locale: lp = 'ko' }: Props) {
           {lb.share}
         </button>
       </div>
+      <ShareResultButton locale={locale} heading={lb.title} resultTitle={r.title} />
     </div>
   )
 }

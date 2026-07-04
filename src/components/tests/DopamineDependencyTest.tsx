@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
 type Level = 'low' | 'medium' | 'high' | 'critical'
@@ -180,6 +181,7 @@ export default function DopamineDependencyTest({ locale }: Props) {
         </div>
         <p className="text-xs text-muted-foreground border-t pt-4">{l.note}</p>
         <button onClick={restart} className="w-full py-3 border rounded-xl text-sm font-medium hover:bg-accent transition-colors">{l.restart}</button>
+        <ShareResultButton locale={locale} heading={l.title} resultTitle={rd.title} />
       </div>
     )
   }
