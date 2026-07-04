@@ -14,7 +14,7 @@ export const dailyManifest: FeatureManifest = {
     en: "Daily Oracle",
     ko: "오늘의 신탁",
   },
-  path: "/daily",
+  path: "/today",
   seo: {
     description: {
       en: "Start your day with personalized fortune, biorhythm analysis, and lucky items.",

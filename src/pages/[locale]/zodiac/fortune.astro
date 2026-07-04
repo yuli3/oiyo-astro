@@ -4,6 +4,7 @@ import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import DailyHoroscope from '../../../components/tools/DailyHoroscope';
+import { PERIODS, periodName } from '../../../lib/fortune/periodic-page-content';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -424,6 +425,22 @@ const content: Record<Locale, {
 };
 
 const c = content[locale] ?? content.en;
+const periodHeading: Record<Locale, string> = {
+  ko: '주기별 별자리 운세',
+  en: 'Periodic zodiac readings',
+  ja: '周期別の星座占い',
+  zh: '周期星座运势',
+  fr: 'Horoscopes périodiques',
+  es: 'Horóscopos periódicos',
+};
+const periodDescription: Record<Locale, string> = {
+  ko: '오늘·이번 주·이번 달 단위로 다시 확인할 수 있는 별자리 체크인입니다.',
+  en: 'Return to zodiac check-ins for today, this week, and this month.',
+  ja: '今日・今週・今月の星座チェックインです。',
+  zh: '可按今日、本周、本月回访的星座检查。',
+  fr: 'Des points zodiaque à revoir aujourd’hui, cette semaine et ce mois.',
+  es: 'Chequeos zodiacales para hoy, esta semana y este mes.',
+};
 
 const webApplicationJsonLd = {
   '@context': 'https://schema.org',
@@ -456,6 +473,18 @@ const faqJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-2xl px-4 py-10">
     <DailyHoroscope client:load locale={locale} />
+
+    <section class="mt-8 rounded-xl border border-violet-100 bg-white p-4">
+      <h2 class="text-lg font-bold text-violet-950">{periodHeading[locale] ?? periodHeading.en}</h2>
+      <p class="mt-2 text-sm leading-6 text-violet-700">{periodDescription[locale] ?? periodDescription.en}</p>
+      <div class="mt-4 flex flex-wrap gap-2">
+        {PERIODS.map((p) => (
+          <a href={`/${locale}/zodiac/${p}/`} class="rounded-full border border-violet-100 px-4 py-2 text-sm font-bold text-violet-900 transition-colors hover:border-violet-300 hover:bg-violet-50">
+            {periodName(p, locale)}
+          </a>
+        ))}
+      </div>
+    </section>
 
     <section class="mt-10 border-t border-violet-100 pt-8">
       <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>

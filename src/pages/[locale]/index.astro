@@ -160,18 +160,23 @@ const sectionMore = txt({ ko: '더 많은 도구', en: 'More Tools', ja: 'その
         >
           {ctaAllTests} →
         </a>
-        <a
-          href={localePath(locale, '/oracle/draw')}
-          class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-green-800 font-semibold text-sm border border-green-200 hover:border-green-400 hover:bg-green-50 transition-all shadow-sm"
-        >
-          ✦ {txt({ ko: '오라클 뽑기', en: 'Oracle Draw', ja: 'オラクル引く', zh: '抽神谕牌', fr: 'Tirage Oracle', es: 'Tirada Oracle' })}
-        </a>
-        <a
-          href={localePath(locale, '/today')}
-          class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white text-green-800 font-semibold text-sm border border-green-200 hover:border-green-400 hover:bg-green-50 transition-all shadow-sm"
-        >
-          🌌 {txt({ ko: '오늘의 우주', en: "Today's Universe", ja: '今日の宇宙', zh: '今日宇宙', fr: "L'Univers du Jour", es: 'El Universo de Hoy' })}
-        </a>
+      </div>
+
+      <!-- 대표 자산 빠른 진입 (오라클·존재론·타로·주기형 운세) -->
+      <div class="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 max-w-2xl mx-auto">
+        {[
+          { href: '/oracle/draw', icon: '✦', label: txt({ ko: '오라클 뽑기', en: 'Oracle Draw', ja: 'オラクル', zh: '神谕牌', fr: 'Oracle', es: 'Oráculo' }) },
+          { href: '/tarot/reading', icon: '🃏', label: txt({ ko: '타로 리딩', en: 'Tarot Reading', ja: 'タロット', zh: '塔罗牌', fr: 'Tarot', es: 'Tarot' }) },
+          { href: '/ontology', icon: '🧭', label: txt({ ko: '존재론', en: 'Ontology', ja: '存在論', zh: '存在论', fr: 'Ontologie', es: 'Ontología' }) },
+          { href: '/fortune/today', icon: '☀️', label: txt({ ko: '오늘의 운세', en: "Today's Fortune", ja: '今日の運勢', zh: '今日运势', fr: 'Aujourd’hui', es: 'Hoy' }) },
+          { href: '/fortune/weekly', icon: '📅', label: txt({ ko: '이번주 운세', en: 'This Week', ja: '今週の運勢', zh: '本周运势', fr: 'Cette semaine', es: 'Esta semana' }) },
+          { href: '/fortune/monthly', icon: '🌙', label: txt({ ko: '이번달 운세', en: 'This Month', ja: '今月の運勢', zh: '本月运势', fr: 'Ce mois', es: 'Este mes' }) },
+        ].map((b) => (
+          <a href={localePath(locale, b.href)}
+             class="inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-2xl bg-white text-green-800 font-semibold text-sm border border-green-200 hover:border-green-400 hover:bg-green-50 transition-all shadow-sm">
+            <span>{b.icon}</span>{b.label}
+          </a>
+        ))}
       </div>
     </div>
   </section>

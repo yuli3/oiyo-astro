@@ -1,0 +1,424 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, type Locale } from '../../../i18n';
+import PeriodicFortune from '../../../components/tools/PeriodicFortune';
+
+const PERIODS = ['today', 'weekly', 'monthly'] as const;
+type Period = typeof PERIODS[number];
+
+export function getStaticPaths() {
+  return LOCALES.flatMap((locale) => ['today', 'weekly', 'monthly'].map((period) => ({ params: { locale, period } })));
+}
+const { locale, period } = Astro.params as { locale: Locale; period: Period };
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+
+const META: Record<Period, Record<Locale, { title: string; description: string; h1: string; sub: string }>> = {
+  today: {
+    ko: { title: '오늘의 운세 — 사주 오행·12지신·별자리 종합', description: '생년월일만으로 오늘의 운세를 사주 오행·12지신·별자리 세 관점에서 봅니다. AI 없이 방대한 전통 데이터로 매일 갱신.', h1: '오늘의 운세', sub: '사주 오행 · 12지신 · 별자리 — 세 관점을 한 번에' },
+    en: { title: "Today's Fortune — Saju, Chinese Zodiac & Star Sign", description: "See today's fortune from three angles — Saju five elements, Chinese zodiac, and star sign — from your birth date alone. Refreshed daily.", h1: "Today's Fortune", sub: 'Saju five elements · Chinese zodiac · star sign' },
+    ja: { title: '今日の運勢 — 四柱五行・十二支・星座', description: '生年月日だけで今日の運勢を四柱五行・十二支・星座の3視点で。毎日更新。', h1: '今日の運勢', sub: '四柱五行 · 十二支 · 星座' },
+    zh: { title: '今日运势 — 四柱五行·生肖·星座', description: '仅凭出生日期，从四柱五行、生肖、星座三个角度看今日运势。每日更新。', h1: '今日运势', sub: '四柱五行 · 生肖 · 星座' },
+    fr: { title: "Fortune du jour — Saju, zodiaque chinois & signe", description: "La fortune du jour sous trois angles à partir de votre date de naissance. Mis à jour chaque jour.", h1: 'Fortune du jour', sub: 'Cinq éléments · zodiaque chinois · signe' },
+    es: { title: 'Fortuna de hoy — Saju, zodiaco chino y signo', description: 'La fortuna de hoy desde tres ángulos con solo tu fecha de nacimiento. Actualizado a diario.', h1: 'Fortuna de hoy', sub: 'Cinco elementos · zodiaco chino · signo' },
+  },
+  weekly: {
+    ko: { title: '이번 주 운세 — 사주·12지신·별자리 주간', description: '이번 주 운세를 사주 오행·12지신·별자리로 종합. 주가 바뀌면 갱신되어 매주 새로 확인할 수 있습니다.', h1: '이번 주 운세', sub: '사주 오행 · 12지신 · 별자리 — 이번 주의 흐름' },
+    en: { title: 'This Week — Saju, Chinese Zodiac & Star Sign', description: "This week's fortune across Saju five elements, Chinese zodiac, and star sign. Refreshed every week.", h1: 'This Week', sub: 'Saju · Chinese zodiac · star sign' },
+    ja: { title: '今週の運勢 — 四柱・十二支・星座', description: '今週の運勢を四柱五行・十二支・星座で。毎週更新。', h1: '今週の運勢', sub: '四柱 · 十二支 · 星座' },
+    zh: { title: '本周运势 — 四柱·生肖·星座', description: '本周运势结合四柱五行、生肖与星座。每周更新。', h1: '本周运势', sub: '四柱 · 生肖 · 星座' },
+    fr: { title: 'Cette semaine — Saju, zodiaque & signe', description: 'La fortune de la semaine selon trois systèmes. Mis à jour chaque semaine.', h1: 'Cette semaine', sub: 'Saju · zodiaque chinois · signe' },
+    es: { title: 'Esta semana — Saju, zodiaco y signo', description: 'La fortuna de la semana según tres sistemas. Actualizado cada semana.', h1: 'Esta semana', sub: 'Saju · zodiaco chino · signo' },
+  },
+  monthly: {
+    ko: { title: '이번 달 운세 — 사주·12지신·별자리 월간', description: '이번 달 운세를 사주 오행·12지신·별자리로 종합. 달이 바뀌면 갱신됩니다.', h1: '이번 달 운세', sub: '사주 오행 · 12지신 · 별자리 — 이번 달의 큰 흐름' },
+    en: { title: 'This Month — Saju, Chinese Zodiac & Star Sign', description: "This month's fortune across three traditional systems. Refreshed monthly.", h1: 'This Month', sub: 'Saju · Chinese zodiac · star sign' },
+    ja: { title: '今月の運勢 — 四柱・十二支・星座', description: '今月の運勢を三つの伝統体系で。毎月更新。', h1: '今月の運勢', sub: '四柱 · 十二支 · 星座' },
+    zh: { title: '本月运势 — 四柱·生肖·星座', description: '本月运势结合三大传统体系。每月更新。', h1: '本月运势', sub: '四柱 · 生肖 · 星座' },
+    fr: { title: 'Ce mois — Saju, zodiaque & signe', description: 'La fortune du mois selon trois systèmes traditionnels. Mis à jour chaque mois.', h1: 'Ce mois', sub: 'Saju · zodiaque · signe' },
+    es: { title: 'Este mes — Saju, zodiaco y signo', description: 'La fortuna del mes según tres sistemas tradicionales. Actualizado cada mes.', h1: 'Este mes', sub: 'Saju · zodiaco · signo' },
+  },
+};
+const m = META[period][locale] ?? META[period].en;
+
+const PLABEL: Record<Period, Record<Locale, string>> = {
+  today: { ko: '오늘', en: 'Today', ja: '今日', zh: '今日', fr: "Aujourd'hui", es: 'Hoy' },
+  weekly: { ko: '이번 주', en: 'This Week', ja: '今週', zh: '本周', fr: 'Semaine', es: 'Semana' },
+  monthly: { ko: '이번 달', en: 'This Month', ja: '今月', zh: '本月', fr: 'Mois', es: 'Mes' },
+};
+
+type SeoContent = {
+  introTitle: string;
+  intro: string;
+  freshnessTitle: string;
+  freshness: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  useTitle: string;
+  useCases: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  readingTitle: string;
+  reading: { href: string; label: string; desc: string }[];
+  howToTitle: string;
+  howToSteps: string[];
+  disclaimer: string;
+};
+
+const content: Record<Locale, SeoContent> = {
+  ko: {
+    introTitle: '매일·매주·매월 다시 확인할 수 있는 운세 루프',
+    intro: '이 페이지는 생년월일을 기준으로 사주 오행, 12지신, 별자리 흐름을 한 화면에서 비교합니다. 같은 날·같은 주·같은 달에는 같은 결과가 유지되고, 주기가 바뀌면 새 해석으로 갱신되어 기록과 재방문에 적합합니다.',
+    freshnessTitle: '신선도 기준',
+    freshness: '오늘 운세는 매일, 이번 주 운세는 ISO 주차 기준 매주, 이번 달 운세는 월이 바뀔 때 갱신됩니다. 결과는 AI 생성이 아니라 결정론적 시드와 다국어 코퍼스로 조합됩니다.',
+    conceptTitle: '세 관점으로 읽는 이유',
+    concepts: [
+      { title: '사주 오행', body: '태어난 해의 오행 흐름을 바탕으로 지금 필요한 태도와 균형을 봅니다.' },
+      { title: '12지신', body: '띠의 상징을 통해 관계, 속도, 조심할 과잉을 가볍게 점검합니다.' },
+      { title: '별자리', body: '생일의 태양 별자리로 감정적 초점과 행동 키워드를 비교합니다.' },
+    ],
+    useTitle: '재방문하며 활용하는 법',
+    useCases: [
+      { title: '월요일 체크인', body: '이번 주 키워드를 정하고 무리할 일과 미룰 일을 나눕니다.' },
+      { title: '월말 회고', body: '이번 달 해석과 실제 사건을 비교해 다음 달의 행동 기준을 세웁니다.' },
+      { title: '결정 전 브레이크', body: '운세를 결론이 아니라 질문으로 읽고, 현실 정보와 함께 판단합니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '이번 주와 이번 달 운세는 언제 바뀌나요?', answer: '이번 주 운세는 ISO 주차가 바뀔 때, 이번 달 운세는 월이 바뀔 때 갱신됩니다. 오늘 운세는 매일 바뀝니다.' },
+      { question: '결과가 AI로 새로 생성되나요?', answer: '아니요. OIYO는 미리 작성한 6개국어 문장 코퍼스와 결정론적 시드를 조합해 같은 주기에는 같은 결과를 보여줍니다.' },
+      { question: '사주와 별자리 결과가 다르면 무엇을 믿어야 하나요?', answer: '둘 중 하나를 정답으로 고르기보다 공통 키워드와 서로 다른 질문을 비교해 보세요. 자기 점검용 참고 도구입니다.' },
+      { question: '중요한 결정을 이 운세로 내려도 되나요?', answer: '아니요. 진로, 투자, 의료, 법률 결정은 현실 정보와 전문가 조언을 기준으로 하고, 이 페이지는 성찰용 보조 자료로만 사용하세요.' },
+    ],
+    readingTitle: '관련 도구와 해설',
+    reading: [
+      { href: `/${locale}/saju/calculator`, label: '사주 계산기', desc: '내 사주팔자와 오행 분포를 더 자세히 봅니다.' },
+      { href: `/${locale}/zodiac/personality`, label: '별자리 성격', desc: '태양 별자리의 성향 키워드를 확인합니다.' },
+      { href: `/${locale}/biorhythm/calculator`, label: '바이오리듬', desc: '몸과 리듬 관점의 주기형 체크를 더합니다.' },
+      { href: 'https://wiki.oiyo.net/ko/meaning-of-palja/', label: '팔자란 무엇인가', desc: '사주팔자의 정의와 구조를 wiki에서 읽습니다.' },
+    ],
+    howToTitle: '사용 방법',
+    howToSteps: ['생년월일을 입력합니다.', '오늘·이번 주·이번 달 중 원하는 주기를 고릅니다.', '사주 오행, 12지신, 별자리 카드를 비교합니다.', '공통 키워드를 기록하고 다음 방문 때 실제 흐름과 대조합니다.'],
+    disclaimer: '운세는 오락과 자기 성찰 목적입니다. 결과는 미래를 보장하지 않으며 중요한 결정을 대신하지 않습니다.',
+  },
+  en: {
+    introTitle: 'A daily, weekly, and monthly return loop for symbolic reflection',
+    intro: 'This page compares Saju five elements, Chinese zodiac, and star sign timing from your birth date. Results stay stable within the same day, week, or month, then refresh with the next cycle so you can return and compare notes.',
+    freshnessTitle: 'Freshness rule',
+    freshness: 'Daily fortune refreshes every day, weekly fortune follows the ISO week, and monthly fortune refreshes when the month changes. The text is assembled from a curated multilingual corpus, not generated live by AI.',
+    conceptTitle: 'Why three lenses',
+    concepts: [
+      { title: 'Saju five elements', body: 'Shows which attitude and balance may be useful from the element linked to your birth year.' },
+      { title: 'Chinese zodiac', body: 'Uses animal symbolism to check relationship rhythm, pace, and possible excess.' },
+      { title: 'Star sign', body: 'Adds an emotional and behavioral keyword from your Sun sign.' },
+    ],
+    useTitle: 'How to make it useful',
+    useCases: [
+      { title: 'Monday check-in', body: 'Name one weekly keyword and decide what to push, pause, or simplify.' },
+      { title: 'Monthly review', body: 'Compare the month’s reading with what actually happened before setting the next focus.' },
+      { title: 'Decision pause', body: 'Read the result as a question, then check it against practical information.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'When do weekly and monthly fortunes change?', answer: 'Weekly fortune changes with the ISO week. Monthly fortune changes when the month changes. Today’s fortune refreshes daily.' },
+      { question: 'Are the results generated by AI?', answer: 'No. OIYO combines a prepared six-language text corpus with deterministic seeds, so the same cycle shows the same result.' },
+      { question: 'What if Saju and zodiac say different things?', answer: 'Do not treat one as the final answer. Compare shared keywords and different questions as a reflection prompt.' },
+      { question: 'Can I make major decisions from this fortune?', answer: 'No. Career, investment, medical, and legal decisions should rely on real information and qualified advice. This is a reflection aid.' },
+    ],
+    readingTitle: 'Related tools and explainers',
+    reading: [
+      { href: `/${locale}/saju/calculator`, label: 'Saju calculator', desc: 'Read your Four Pillars and element balance in more detail.' },
+      { href: `/${locale}/zodiac/personality`, label: 'Zodiac personality', desc: 'Check your Sun sign traits and keywords.' },
+      { href: `/${locale}/biorhythm/calculator`, label: 'Biorhythm calculator', desc: 'Add a body-rhythm based periodic check.' },
+      { href: 'https://wiki.oiyo.net/en/meaning-of-palja/', label: 'Meaning of Palja', desc: 'Read the definition and structure of the Four Pillars.' },
+    ],
+    howToTitle: 'How to use it',
+    howToSteps: ['Enter your birth date.', 'Choose today, this week, or this month.', 'Compare the Saju, Chinese zodiac, and star sign cards.', 'Record shared keywords and compare them on your next visit.'],
+    disclaimer: 'Fortune content is for entertainment and self-reflection. It does not guarantee the future or replace important decisions.',
+  },
+  ja: {
+    introTitle: '毎日・毎週・毎月戻って確認できる運勢ループ',
+    intro: '生年月日をもとに、四柱五行・十二支・星座の流れを一画面で比較します。同じ日・週・月では結果が安定し、周期が変わると新しい解釈に更新されます。',
+    freshnessTitle: '更新基準',
+    freshness: '今日の運勢は毎日、今週の運勢はISO週、今月の運勢は月替わりで更新されます。文章はAI生成ではなく、多言語コーパスと決定論的シードで構成されます。',
+    conceptTitle: '三つの視点で読む理由',
+    concepts: [
+      { title: '四柱五行', body: '生まれ年に紐づく五行から、今の態度とバランスを見ます。' },
+      { title: '十二支', body: '干支の象徴で、関係性や速度、過剰になりやすい点を確認します。' },
+      { title: '星座', body: '太陽星座から感情面の焦点と行動キーワードを加えます。' },
+    ],
+    useTitle: '再訪して活用する方法',
+    useCases: [
+      { title: '週初めの確認', body: '今週のキーワードを一つ決め、進めることと減らすことを分けます。' },
+      { title: '月末の振り返り', body: '今月の解釈と実際の出来事を比べ、次の焦点を決めます。' },
+      { title: '決断前の一呼吸', body: '運勢を答えではなく問いとして読み、現実情報と照らします。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: '今週・今月の運勢はいつ変わりますか？', answer: '今週の運勢はISO週が変わる時、今月の運勢は月が変わる時に更新されます。今日の運勢は毎日変わります。' },
+      { question: '結果はAIで生成されますか？', answer: 'いいえ。6言語の文章コーパスと決定論的シードを組み合わせ、同じ周期では同じ結果を表示します。' },
+      { question: '四柱と星座が違うことを言う場合は？', answer: 'どちらかを正解にせず、共通するキーワードと異なる問いを比較してください。' },
+      { question: '重要な決断に使えますか？', answer: 'いいえ。進路、投資、医療、法律の判断は現実情報と専門家の助言を優先してください。' },
+    ],
+    readingTitle: '関連ツールと解説',
+    reading: [
+      { href: `/${locale}/saju/calculator`, label: '四柱推命計算機', desc: '四柱と五行バランスを詳しく見ます。' },
+      { href: `/${locale}/zodiac/personality`, label: '星座性格', desc: '太陽星座の性格キーワードを確認します。' },
+      { href: `/${locale}/biorhythm/calculator`, label: 'バイオリズム', desc: '身体リズムの周期チェックを加えます。' },
+      { href: 'https://wiki.oiyo.net/ja/meaning-of-palja/', label: '四柱八字とは', desc: '四柱の定義と構造を読みます。' },
+    ],
+    howToTitle: '使い方',
+    howToSteps: ['生年月日を入力します。', '今日・今週・今月を選びます。', '四柱五行、十二支、星座カードを比較します。', '共通キーワードを記録し、次回の訪問で実際の流れと比べます。'],
+    disclaimer: '運勢は娯楽と自己省察のためのものです。未来を保証せず、重要な決断の代わりにはなりません。',
+  },
+  zh: {
+    introTitle: '每天、每周、每月都能回访的运势循环',
+    intro: '本页根据出生日期，把四柱五行、生肖、星座三个角度放在同一屏比较。同一天、同一周、同一月结果保持稳定，周期变化后更新。',
+    freshnessTitle: '更新规则',
+    freshness: '今日运势每天更新，本周运势按 ISO 周更新，本月运势在月份切换时更新。文本来自多语言语料与确定性种子组合，并非实时 AI 生成。',
+    conceptTitle: '为什么用三个视角',
+    concepts: [
+      { title: '四柱五行', body: '从出生年份对应的五行，看当前需要的态度与平衡。' },
+      { title: '生肖', body: '用生肖象征检查关系节奏、行动速度和可能的过度。' },
+      { title: '星座', body: '以太阳星座补充情绪焦点和行动关键词。' },
+    ],
+    useTitle: '如何回访使用',
+    useCases: [
+      { title: '周一检查', body: '确定本周关键词，区分要推进、暂停和简化的事情。' },
+      { title: '月末回顾', body: '把本月解读与实际事件对照，再设定下个月的重点。' },
+      { title: '决策前暂停', body: '把运势当成问题而非答案，再结合现实信息判断。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '本周和本月运势什么时候变化？', answer: '本周运势随 ISO 周变化，本月运势随月份变化，今日运势每天更新。' },
+      { question: '结果是 AI 生成的吗？', answer: '不是。OIYO 使用预先整理的六语言语料和确定性种子，同一周期会显示同一结果。' },
+      { question: '四柱和星座说法不同怎么办？', answer: '不要把某一个当作最终答案。比较共同关键词和不同问题，用作自我观察。' },
+      { question: '可以用它做重大决定吗？', answer: '不可以。职业、投资、医疗、法律决定应以现实信息和专业建议为准。' },
+    ],
+    readingTitle: '相关工具与说明',
+    reading: [
+      { href: `/${locale}/saju/calculator`, label: '四柱计算器', desc: '更详细查看四柱与五行分布。' },
+      { href: `/${locale}/zodiac/personality`, label: '星座性格', desc: '查看太阳星座关键词。' },
+      { href: `/${locale}/biorhythm/calculator`, label: '生物节律', desc: '加入身体节律的周期检查。' },
+      { href: 'https://wiki.oiyo.net/zh/meaning-of-palja/', label: '八字的含义', desc: '阅读四柱八字的定义和结构。' },
+    ],
+    howToTitle: '使用方法',
+    howToSteps: ['输入出生日期。', '选择今日、本周或本月。', '比较四柱五行、生肖、星座卡片。', '记录共同关键词，下次回访时与实际状态对照。'],
+    disclaimer: '运势内容用于娱乐和自我反思，不保证未来，也不能代替重要决定。',
+  },
+  fr: {
+    introTitle: 'Une boucle de retour quotidienne, hebdomadaire et mensuelle',
+    intro: 'Cette page compare les cinq éléments Saju, le zodiaque chinois et le signe astral à partir de votre date de naissance. Les résultats restent stables dans le même jour, la même semaine ou le même mois, puis changent au cycle suivant.',
+    freshnessTitle: 'Règle de fraîcheur',
+    freshness: 'La fortune du jour change chaque jour, la fortune hebdomadaire suit la semaine ISO, et la fortune mensuelle change avec le mois. Le texte vient d’un corpus multilingue préparé, pas d’une génération IA en direct.',
+    conceptTitle: 'Pourquoi trois regards',
+    concepts: [
+      { title: 'Cinq éléments Saju', body: 'Indique l’attitude et l’équilibre utiles à partir de l’élément lié à votre année de naissance.' },
+      { title: 'Zodiaque chinois', body: 'Utilise les symboles animaux pour observer relations, rythme et excès possibles.' },
+      { title: 'Signe astral', body: 'Ajoute un mot-clé émotionnel et comportemental issu du signe solaire.' },
+    ],
+    useTitle: 'Comment l’utiliser',
+    useCases: [
+      { title: 'Point du lundi', body: 'Choisissez un mot-clé de semaine et ce qu’il faut pousser, ralentir ou simplifier.' },
+      { title: 'Bilan mensuel', body: 'Comparez la lecture du mois avec les événements réels avant de choisir le prochain axe.' },
+      { title: 'Pause avant décision', body: 'Lisez la fortune comme une question, puis vérifiez-la avec des informations concrètes.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Quand changent les fortunes hebdomadaire et mensuelle ?', answer: 'La fortune hebdomadaire change avec la semaine ISO. La mensuelle change avec le mois. La quotidienne change chaque jour.' },
+      { question: 'Les résultats sont-ils générés par IA ?', answer: 'Non. OIYO combine un corpus en six langues avec des graines déterministes pour garder le même résultat dans le même cycle.' },
+      { question: 'Que faire si Saju et zodiaque divergent ?', answer: 'Ne choisissez pas un verdict. Comparez les mots-clés communs et les questions différentes comme support de réflexion.' },
+      { question: 'Puis-je prendre une décision majeure avec cette fortune ?', answer: 'Non. Les décisions de carrière, d’investissement, de santé ou juridiques doivent reposer sur des informations réelles et des conseils qualifiés.' },
+    ],
+    readingTitle: 'Outils et explications liés',
+    reading: [
+      { href: `/${locale}/saju/calculator`, label: 'Calculateur Saju', desc: 'Lire vos quatre piliers et l’équilibre des éléments.' },
+      { href: `/${locale}/zodiac/personality`, label: 'Personnalité zodiacale', desc: 'Voir les mots-clés de votre signe solaire.' },
+      { href: `/${locale}/biorhythm/calculator`, label: 'Biorythme', desc: 'Ajouter une vérification périodique du rythme corporel.' },
+      { href: 'https://wiki.oiyo.net/fr/meaning-of-palja/', label: 'Signification de Palja', desc: 'Lire la définition et la structure des quatre piliers.' },
+    ],
+    howToTitle: 'Mode d’emploi',
+    howToSteps: ['Entrez votre date de naissance.', 'Choisissez aujourd’hui, cette semaine ou ce mois.', 'Comparez les cartes Saju, zodiaque chinois et signe astral.', 'Notez les mots-clés communs et comparez-les à votre prochaine visite.'],
+    disclaimer: 'La fortune est destinée au divertissement et à la réflexion personnelle. Elle ne garantit pas l’avenir et ne remplace pas les décisions importantes.',
+  },
+  es: {
+    introTitle: 'Un ciclo de regreso diario, semanal y mensual',
+    intro: 'Esta página compara cinco elementos Saju, zodiaco chino y signo solar desde tu fecha de nacimiento. El resultado se mantiene durante el mismo día, semana o mes, y se actualiza al cambiar el ciclo.',
+    freshnessTitle: 'Regla de actualización',
+    freshness: 'La fortuna diaria cambia cada día, la semanal sigue la semana ISO y la mensual cambia con el mes. El texto se arma con un corpus multilingüe preparado, no con IA en vivo.',
+    conceptTitle: 'Por qué tres lentes',
+    concepts: [
+      { title: 'Cinco elementos Saju', body: 'Muestra qué actitud y equilibrio pueden ayudarte según el elemento de tu año de nacimiento.' },
+      { title: 'Zodiaco chino', body: 'Usa símbolos animales para revisar relaciones, ritmo y posibles excesos.' },
+      { title: 'Signo solar', body: 'Añade una palabra emocional y de acción desde tu signo.' },
+    ],
+    useTitle: 'Cómo aprovecharlo',
+    useCases: [
+      { title: 'Revisión del lunes', body: 'Elige una palabra de la semana y decide qué impulsar, pausar o simplificar.' },
+      { title: 'Cierre mensual', body: 'Compara la lectura del mes con lo ocurrido antes de fijar el próximo enfoque.' },
+      { title: 'Pausa antes de decidir', body: 'Lee la fortuna como pregunta y contrástala con información práctica.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Cuándo cambian la fortuna semanal y mensual?', answer: 'La semanal cambia con la semana ISO. La mensual cambia con el mes. La de hoy se actualiza cada día.' },
+      { question: '¿Los resultados los genera IA?', answer: 'No. OIYO combina un corpus en seis idiomas con semillas deterministas, así el mismo ciclo muestra el mismo resultado.' },
+      { question: '¿Qué hago si Saju y zodiaco dicen cosas distintas?', answer: 'No elijas uno como veredicto. Compara palabras comunes y preguntas distintas como reflexión.' },
+      { question: '¿Puedo tomar decisiones importantes con esta fortuna?', answer: 'No. Carrera, inversión, salud y asuntos legales requieren información real y asesoría cualificada.' },
+    ],
+    readingTitle: 'Herramientas y guías relacionadas',
+    reading: [
+      { href: `/${locale}/saju/calculator`, label: 'Calculadora Saju', desc: 'Lee tus cuatro pilares y el equilibrio de elementos.' },
+      { href: `/${locale}/zodiac/personality`, label: 'Personalidad zodiacal', desc: 'Consulta palabras clave de tu signo solar.' },
+      { href: `/${locale}/biorhythm/calculator`, label: 'Biorritmo', desc: 'Añade una revisión periódica del ritmo corporal.' },
+      { href: 'https://wiki.oiyo.net/es/meaning-of-palja/', label: 'Significado de Palja', desc: 'Lee la definición y estructura de los cuatro pilares.' },
+    ],
+    howToTitle: 'Cómo usarlo',
+    howToSteps: ['Introduce tu fecha de nacimiento.', 'Elige hoy, esta semana o este mes.', 'Compara las tarjetas de Saju, zodiaco chino y signo solar.', 'Registra palabras comunes y compáralas en tu próxima visita.'],
+    disclaimer: 'La fortuna es entretenimiento y autorreflexión. No garantiza el futuro ni reemplaza decisiones importantes.',
+  },
+};
+
+const c = content[locale] ?? content.en;
+const webAppJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: m.title,
+  description: m.description,
+  url: canonicalUrl,
+  inLanguage: locale,
+  applicationCategory: 'LifestyleApplication',
+  operatingSystem: 'Web',
+  isAccessibleForFree: true,
+};
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+const howToJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: c.howToTitle,
+  description: c.intro,
+  step: c.howToSteps.map((step, index) => ({
+    '@type': 'HowToStep',
+    position: index + 1,
+    text: step,
+  })),
+};
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'OIYO', item: new URL(`/${locale}/`, Astro.site).toString() },
+    { '@type': 'ListItem', position: 2, name: PLABEL[period][locale] ?? PLABEL[period].en, item: canonicalUrl },
+  ],
+};
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(webAppJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(howToJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <div class="mx-auto max-w-3xl px-4 py-10">
+    <div class="mb-6 text-center">
+      <p class="text-xs font-black uppercase tracking-[0.24em] text-green-700">Periodic Fortune</p>
+      <h1 class="mt-2 text-3xl font-black text-green-950">{m.h1}</h1>
+      <p class="mt-2 text-sm text-muted-foreground">{m.sub}</p>
+    </div>
+
+    <nav class="mb-6 flex justify-center gap-2">
+      {(['today', 'weekly', 'monthly'] as Period[]).map((p) => (
+        <a href={`/${locale}/fortune/${p}`}
+           class={`rounded-full px-4 py-1.5 text-sm font-bold ${p === period ? 'bg-primary text-primary-foreground' : 'border bg-card hover:bg-accent'}`}>
+          {PLABEL[p][locale] ?? PLABEL[p].en}
+        </a>
+      ))}
+    </nav>
+
+    <section class="rounded-3xl border border-green-100 bg-white p-5 shadow-sm">
+      <PeriodicFortune client:load locale={locale} period={period} />
+    </section>
+
+    <section class="mt-8 rounded-3xl border border-green-100 bg-green-50/60 p-5">
+      <h2 class="text-xl font-black text-green-950">{c.introTitle}</h2>
+      <p class="mt-3 text-sm leading-7 text-green-900/80">{c.intro}</p>
+      <div class="mt-4 rounded-2xl bg-white p-4 text-sm leading-7 text-green-900 shadow-sm">
+        <strong>{c.freshnessTitle}</strong>
+        <span class="ml-1">{c.freshness}</span>
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-black text-green-950">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <div class="rounded-2xl border border-green-100 bg-white p-4 shadow-sm">
+            <h3 class="text-sm font-black text-green-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-black text-green-950">{c.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.useCases.map((item) => (
+          <div class="rounded-2xl bg-slate-50 p-4">
+            <h3 class="text-sm font-black text-slate-950">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-black text-green-950">{c.howToTitle}</h2>
+      <ol class="mt-4 grid gap-3">
+        {c.howToSteps.map((step, index) => (
+          <li class="flex gap-3 rounded-2xl border border-green-100 bg-white p-4 text-sm leading-6 text-slate-700">
+            <span class="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-green-700 text-xs font-black text-white">{index + 1}</span>
+            <span>{step}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-black text-green-950">{c.faqTitle}</h2>
+      <div class="mt-4 space-y-3">
+        {c.faqs.map((faq) => (
+          <details class="rounded-2xl border border-green-100 bg-white p-4">
+            <summary class="cursor-pointer text-sm font-black text-green-950">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-7 text-slate-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-8">
+      <h2 class="text-xl font-black text-green-950">{c.readingTitle}</h2>
+      <div class="mt-4 grid gap-3 md:grid-cols-2">
+        {c.reading.map((item) => (
+          <a href={item.href} class="rounded-2xl border border-green-100 bg-white p-4 shadow-sm transition-colors hover:border-green-300 hover:bg-green-50">
+            <span class="text-sm font-black text-green-950">{item.label}</span>
+            <span class="mt-1 block text-sm leading-6 text-slate-700">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <div class="mt-8 flex flex-wrap justify-center gap-2 border-t pt-6 text-sm">
+      <a href={`/${locale}/tarot/reading`} class="rounded-full border bg-card px-4 py-2 font-semibold hover:bg-accent">🃏 {locale === 'ko' ? '타로 리딩' : 'Tarot'}</a>
+      <a href={`/${locale}/saju/calculator`} class="rounded-full border bg-card px-4 py-2 font-semibold hover:bg-accent">🔮 {locale === 'ko' ? '사주 계산기' : 'Saju'}</a>
+      <a href={`/${locale}/ontology`} class="rounded-full border bg-card px-4 py-2 font-semibold hover:bg-accent">🧭 {locale === 'ko' ? '존재론' : 'Ontology'}</a>
+    </div>
+
+    <p class="mt-5 text-center text-xs leading-6 text-slate-500">{c.disclaimer}</p>
+  </div>
+</Layout>

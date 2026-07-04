@@ -631,9 +631,9 @@ ${recentTestRows}
         const labelsForLocale = COORDINATE_LABELS[L] ?? COORDINATE_LABELS.en;
         const ontologyItems = ontologyRecords;
         const items = [
-          { key: 'birthDate', label: L === 'ko' ? '생년월일·사주' : 'Birth · Saju', href: `/${L}/saju` },
-          { key: 'mbtiType', label: 'MBTI', href: `/${L}/mbti` },
-          { key: 'zodiacSign', label: L === 'ko' ? '별자리' : 'Zodiac', href: `/${L}/zodiac-fortune` },
+          { key: 'birthDate', label: L === 'ko' ? '생년월일·사주' : 'Birth · Saju', href: `/${L}/saju/calculator` },
+          { key: 'mbtiType', label: 'MBTI', href: `/${L}/mbti/test` },
+          { key: 'zodiacSign', label: L === 'ko' ? '별자리' : 'Zodiac', href: `/${L}/zodiac/personality` },
           { key: 'bloodType', label: L === 'ko' ? '혈액형' : 'Blood type', href: null as string | null },
         ];
         const filled = items.filter((it) => form[it.key as keyof ProfileForm]).length;

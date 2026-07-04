@@ -248,7 +248,7 @@ export function OntologyProvider({ children }: { children: React.ReactNode }) {
       if (!insights.some((i) => i.type === "tip")) {
         insights.push({
           actionLabel: "View",
-          actionUrl: "/ontology/daily",
+          actionUrl: "/today",
           content: "Reflect on your personality traits today.",
           dismissible: true,
           id: "daily-tip",

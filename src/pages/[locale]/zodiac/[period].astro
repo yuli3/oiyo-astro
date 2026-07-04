@@ -1,0 +1,154 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES, type Locale } from '../../../i18n';
+import PeriodicFortune from '../../../components/tools/PeriodicFortune';
+import { PERIODS, appName, getPeriodicPageCopy, periodName } from '../../../lib/fortune/periodic-page-content';
+import type { Period } from '../../../lib/fortune/periodic';
+
+export function getStaticPaths() {
+  return LOCALES.flatMap((locale) => PERIODS.map((period) => ({ params: { locale, period } })));
+}
+
+const { locale, period } = Astro.params as { locale: Locale; period: Period };
+const copy = getPeriodicPageCopy('zodiac', period, locale);
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const routeBase = `/${locale}/zodiac`;
+const periodLinks = PERIODS.map((p) => ({
+  href: `${routeBase}/${p}/`,
+  label: periodName(p, locale),
+  active: p === period,
+}));
+
+const webAppJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: appName('zodiac', locale),
+  url: canonicalUrl,
+  applicationCategory: 'LifestyleApplication',
+  operatingSystem: 'Web',
+  inLanguage: locale,
+  description: copy.description,
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: copy.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+
+const howToJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: copy.howToTitle,
+  description: copy.description,
+  step: copy.howToSteps.map((step, index) => ({
+    '@type': 'HowToStep',
+    position: index + 1,
+    text: step,
+  })),
+};
+---
+
+<Layout title={copy.title} description={copy.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(webAppJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(howToJsonLd)} />
+
+  <section class="mx-auto max-w-3xl px-4 py-10">
+    <p class="text-xs font-black uppercase tracking-widest text-primary">{copy.eyebrow}</p>
+    <h1 class="mt-3 text-3xl font-black tracking-tight md:text-4xl">{copy.h1}</h1>
+    <p class="mt-3 text-base leading-relaxed text-muted-foreground md:text-lg">{copy.sub}</p>
+
+    <nav class="mt-6 flex flex-wrap gap-2" aria-label="Zodiac fortune periods">
+      {periodLinks.map((link) => (
+        <a
+          href={link.href}
+          class:list={[
+            'rounded-full border px-4 py-2 text-sm font-bold transition',
+            link.active ? 'border-primary bg-primary text-primary-foreground' : 'bg-card hover:border-primary',
+          ]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="mt-8 rounded-2xl border bg-card p-5 shadow-sm">
+      <PeriodicFortune client:load locale={locale} period={period} focus="zodiac" />
+    </div>
+
+    <div class="prose prose-neutral mt-10 max-w-none dark:prose-invert">
+      <h2>{copy.introTitle}</h2>
+      <p>{copy.intro}</p>
+      <h2>{copy.freshnessTitle}</h2>
+      <p>{copy.freshness}</p>
+    </div>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{copy.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {copy.concepts.map((item) => (
+          <article class="rounded-xl border bg-card p-4">
+            <h3 class="text-sm font-black">{item.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{copy.useTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {copy.useCases.map((item) => (
+          <article class="rounded-xl border bg-card p-4">
+            <h3 class="text-sm font-black">{item.title}</h3>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{copy.howToTitle}</h2>
+      <ol class="mt-4 space-y-3">
+        {copy.howToSteps.map((step, index) => (
+          <li class="flex gap-3 rounded-xl border bg-card p-4 text-sm leading-relaxed">
+            <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-primary text-xs font-black text-primary-foreground">{index + 1}</span>
+            <span>{step}</span>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{copy.faqTitle}</h2>
+      <div class="mt-4 divide-y rounded-xl border bg-card">
+        {copy.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer text-sm font-black">{faq.question}</summary>
+            <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-2xl font-black">{copy.relatedTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-2">
+        {copy.related.map((item) => (
+          <a href={item.href} class="rounded-xl border bg-card p-4 transition hover:border-primary">
+            <span class="text-sm font-black">{item.label}</span>
+            <span class="mt-1 block text-sm leading-relaxed text-muted-foreground">{item.desc}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <p class="mt-8 text-center text-xs leading-relaxed text-muted-foreground">{copy.disclaimer}</p>
+  </section>
+</Layout>
