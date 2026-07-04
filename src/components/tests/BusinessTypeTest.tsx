@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type Locale = 'ko' | 'en' | 'ja'
 type BizType = 'innovator' | 'builder' | 'connector' | 'analyst' | 'leader'
@@ -544,6 +545,7 @@ export default function BusinessTypeTest({ locale: lp = 'ko' }: Props) {
             {lb.share}
           </button>
         </div>
+        <ShareResultButton locale={lp} heading={lb.title} resultTitle={t.name} />
       </div>
     )
   }

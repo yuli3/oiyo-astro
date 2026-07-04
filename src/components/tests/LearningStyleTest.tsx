@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type StyleType = 'visual' | 'auditory' | 'reading' | 'kinesthetic'
@@ -824,6 +825,7 @@ export default function LearningStyleTest({ locale: lp = 'ko' }: Props) {
           {lb.share}
         </button>
       </div>
+      <ShareResultButton locale={lp} heading={lb.title} resultTitle={STYLE_RESULTS[dominant][l].title} emoji={STYLE_RESULTS[dominant][l].icon} />
     </div>
   )
 }
