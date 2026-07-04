@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLocale = "ko" | "en" | "ja";
 interface Props { locale?: string; }
@@ -137,6 +138,7 @@ export default function LifeValuesTest({ locale: localeProp }: Props) {
           <button onClick={restart} className="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium text-sm">{t.restart}</button>
           <button onClick={share} className="px-5 py-2 text-white rounded-full font-medium text-sm" style={{ backgroundColor: d.color }}>{copied ? t.copied : t.share}</button>
         </div>
+        <ShareResultButton locale={localeProp ?? 'ko'} heading={t.title} resultTitle={d.name[locale]} />
       </div>
     );
   }
