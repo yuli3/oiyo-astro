@@ -4,6 +4,7 @@ import CopyResultLink from '../shared/CopyResultLink';
 import { computeNatalChart, type NatalChart } from '../../lib/ontology/natal/calculator';
 import { SIGN_INFO, CITIES, type NatalLocale } from '../../lib/ontology/natal/signs';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
+import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 
 interface Props {
   locale: string;
@@ -235,6 +236,18 @@ export default function NatalChartCalculator({ locale }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<{ chart: NatalChart; hasTime: boolean } | null>(null);
 
+  // 온톨로지 프로필의 생년월일·시를 재사용(URL 복원이 없을 때만) — 재입력 제거.
+  const { parsed, saveBirth } = useProfilePrefill();
+  useEffect(() => {
+    if (!parsed) return;
+    setForm((f) => {
+      if (f.date || readResultCode('d')) return f; // URL 복원/기존 입력 우선
+      const date = `${parsed.year}-${String(parsed.month).padStart(2, '0')}-${String(parsed.day).padStart(2, '0')}`;
+      const hasHour = parsed.hour !== null;
+      return { ...f, date, time: hasHour ? `${String(parsed.hour).padStart(2, '0')}:${String(parsed.minute ?? 0).padStart(2, '0')}` : '', unknown: !hasHour };
+    });
+  }, [parsed]);
+
   // Restore a shared chart from the URL (?d=YYYY-MM-DD&t=HH:MM&c=cityId, t omitted = unknown time).
   useEffect(() => {
     const d = readResultCode('d');
@@ -263,6 +276,11 @@ export default function NatalChartCalculator({ locale }: Props) {
     if (!city) { setError(t.needCity); return; }
     const hasTime = !form.unknown && !!form.time;
     compute(form.date, form.time, form.unknown, city.lat, city.lon, city.tz, hasTime);
+    // 생년월일·시를 프로필에 저장 → 사주·별자리 등으로 전파.
+    if (/^\d{4}-\d{2}-\d{2}$/.test(form.date)) {
+      const [yy, mm, dd] = form.date.split('-').map(Number);
+      saveBirth({ year: yy, month: mm, day: dd, hour: hasTime ? Number(form.time.split(':')[0]) : null });
+    }
     writeResultCode('d', form.date);
     writeResultCode('c', form.city);
     if (hasTime) writeResultCode('t', form.time); else clearResultCode('t');

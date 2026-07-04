@@ -1,5 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Locale } from "../../i18n";
+import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
+import { signOf } from "../../lib/fortune/periodic";
 
 interface Props {
   locale: Locale;
@@ -834,6 +836,16 @@ export default function DailyHoroscope({ locale }: Props) {
   const names = SIGN_NAMES[locale] ?? SIGN_NAMES.en;
   const [selected, setSelected] = useState<SignKey | "">("");
   const [result, setResult] = useState<HoroscopeResult | null>(null);
+
+  // 온톨로지 프로필 생년월일로 태양 별자리 자동 선택 — 재선택 제거.
+  const { parsed } = useProfilePrefill();
+  useEffect(() => {
+    if (parsed && !selected) {
+      const sign = SIGNS[signOf(parsed.month, parsed.day)];
+      if (sign) handleSelect(sign);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [parsed]);
 
   function handleSelect(sign: SignKey) {
     setSelected(sign);

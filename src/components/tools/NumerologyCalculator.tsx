@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Locale } from "../../lib/i18n";
+import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
 
 interface Props {
   locale: Locale;
@@ -749,8 +750,21 @@ export default function NumerologyCalculator({ locale }: Props) {
   } | null>(null);
   const ui = UI[locale];
 
+  // 온톨로지 프로필의 이름·생년월일 재사용 — 재입력 제거.
+  const { profile, parsed, saveBirth, setProfile } = useProfilePrefill();
+  useEffect(() => {
+    if (parsed) setDate((d) => d || `${parsed.year}-${String(parsed.month).padStart(2, "0")}-${String(parsed.day).padStart(2, "0")}`);
+    if (profile.name) setName((n) => n || profile.name!);
+  }, [parsed, profile.name]);
+
   function calculate() {
     if (!date || !name.trim()) return;
+    // 이름·생년월일을 프로필에 저장 → 다른 도구로 전파.
+    if (/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+      const [yy, mm, dd] = date.split("-").map(Number);
+      saveBirth({ year: yy, month: mm, day: dd });
+    }
+    if (name.trim()) setProfile({ name: name.trim() });
     setResult({
       lifePath: calcLifePath(date),
       expression: calcExpression(name),

@@ -1,4 +1,5 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
+import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import type { Locale } from '../../lib/i18n';
 
 interface Props {
@@ -678,6 +679,12 @@ export default function BiorhythmCalculator({ locale }: Props) {
   const [birthDate, setBirthDate] = useState<string>('');
   const [scrollOffset, setScrollOffset] = useState(0);
   const [reducedMotion, setReducedMotion] = useState(false);
+
+  // 온톨로지 프로필 생년월일 재사용 — 재입력 제거.
+  const { parsed, saveBirth } = useProfilePrefill();
+  useEffect(() => {
+    if (parsed) setBirthDate((d) => d || `${parsed.year}-${String(parsed.month).padStart(2, '0')}-${String(parsed.day).padStart(2, '0')}`);
+  }, [parsed]);
   const rafRef = useRef<number | null>(null);
   const startTimeRef = useRef<number | null>(null);
 
@@ -815,7 +822,14 @@ export default function BiorhythmCalculator({ locale }: Props) {
               id="bio-birth-date"
               type="date"
               value={birthDate}
-              onChange={(e) => setBirthDate(e.target.value)}
+              onChange={(e) => {
+                const v = e.target.value;
+                setBirthDate(v);
+                if (/^\d{4}-\d{2}-\d{2}$/.test(v)) {
+                  const [yy, mm, dd] = v.split('-').map(Number);
+                  saveBirth({ year: yy, month: mm, day: dd });
+                }
+              }}
               min={minDate}
               max={maxDate}
               aria-label={t('birthDateLabel', locale)}

@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { analyzeLifeCategories } from '../../lib/ontology/saju/categories';
 import { STEM_ORDER } from '../../manifest/data/saju/stems';
 import { BRANCH_ORDER } from '../../manifest/data/saju/branches';
@@ -512,6 +513,19 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const [gender, setGender] = useState<'male' | 'female'>('male');
   const [done, setDone] = useState(false);
 
+  // 온톨로지에서 입력한 프로필(생년월일·시·성별)을 재사용 — 재입력 제거.
+  const { profile, parsed, saveBirth } = useProfilePrefill();
+  const [prefilled, setPrefilled] = useState(false);
+  useEffect(() => {
+    if (prefilled || !parsed) return;
+    setYear(parsed.year);
+    setMonth(parsed.month);
+    setDay(parsed.day);
+    if (parsed.hour !== null) setHour(parsed.hour);
+    if (profile.gender === 'male' || profile.gender === 'female') setGender(profile.gender);
+    setPrefilled(true);
+  }, [parsed, profile.gender, prefilled]);
+
   const result = useMemo(() => {
     const yStem = getYearStem(year);
     const yBranch = getYearBranch(year);
@@ -571,6 +585,8 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   function handleCalc() {
     const clampedDay = Math.min(day, daysInMonth);
     if (day !== clampedDay) setDay(clampedDay);
+    // 입력을 프로필에 저장 → 다른 도구(별자리·바이오리듬·주기형 운세)로 전파.
+    saveBirth({ year, month, day: clampedDay, hour, gender });
     setDone(true);
   }
 

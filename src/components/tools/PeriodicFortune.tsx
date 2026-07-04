@@ -1,5 +1,6 @@
 import { useMemo, useState, useEffect } from 'react';
 import { reading, periodKey, animalOf, signOf, elementOf, FIVE_ELEMENTS, type Locale, type Period } from '../../lib/fortune/periodic';
+import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 
 type Focus = 'trinity' | 'saju' | 'zodiac';
 
@@ -72,18 +73,18 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
   const [birth, setBirth] = useState<{ y: number; m: number; d: number } | null>(null);
   const [yy, setYy] = useState(''); const [mm, setMm] = useState(''); const [dd, setDd] = useState('');
 
-  // 저장된 프로필(생년월일)에서 자동 채움
+  // 온톨로지 프로필(생년월일)에서 자동 채움 — 재입력 제거.
+  const { parsed, saveBirth } = useProfilePrefill();
   useEffect(() => {
-    try {
-      const raw = localStorage.getItem('oiyo_user_state');
-      const bd = raw ? JSON.parse(raw)?.birthDate : null;
-      if (bd) { const d = new Date(bd); if (!isNaN(d.getTime())) setBirth({ y: d.getFullYear(), m: d.getMonth() + 1, d: d.getDate() }); }
-    } catch { /* ignore */ }
-  }, []);
+    if (parsed) setBirth({ y: parsed.year, m: parsed.month, d: parsed.day });
+  }, [parsed]);
 
   const submit = () => {
     const y = +yy, m = +mm, d = +dd;
-    if (y >= 1900 && y <= 2100 && m >= 1 && m <= 12 && d >= 1 && d <= 31) setBirth({ y, m, d });
+    if (y >= 1900 && y <= 2100 && m >= 1 && m <= 12 && d >= 1 && d <= 31) {
+      setBirth({ y, m, d });
+      saveBirth({ year: y, month: m, day: d }); // 다른 도구로 전파
+    }
   };
 
   const result = useMemo(() => {
