@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from "../shared/ShareResultButton";
 
 type SupportedLocale = "ko" | "en" | "ja";
 
@@ -321,6 +322,7 @@ export default function OptimismTest({ locale: localeProp }: Props) {
           </div>
         </div>
         <div className="flex gap-3">
+          <ShareResultButton locale={locale} heading={tx.resultTitle} emoji={lv.emoji} resultTitle={ld.title} description={`${tx.yourScore}: ${result.score} / ${maxScore}`} />
           <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">{tx.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-white transition" style={{ backgroundColor: lv.color }}>{copied ? tx.copied : tx.share}</button>
         </div>

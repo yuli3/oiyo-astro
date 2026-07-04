@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from "../shared/ShareResultButton";
 
 type SupportedLocale = "ko" | "en" | "ja";
 
@@ -312,6 +313,8 @@ export default function ResilienceTest({ locale: localeProp }: Props) {
         </div>
 
         <p className="text-xs text-gray-400 text-center">{t.note}</p>
+
+        <ShareResultButton locale={locale} heading={t.resultTitle} emoji="🌱" resultTitle={d.label[locale]} description={`${t.yourScore ?? ""} ${result.score}`.trim()} />
 
         <div className="flex gap-3 justify-center">
           <button onClick={restart}
