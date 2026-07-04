@@ -1,0 +1,37 @@
+---
+// 심화 탐색 아일랜드 보관용 (프로덕션 ontology 대시보드에서 제외, 여기서만 미리보기).
+// noindex — 사용자 요청(2026-07-04): "실제로 보여주지 않음, template에 저장".
+import Layout from '../../../../layouts/Layout.astro';
+import OntologyIsland from '../../../../components/OntologyIsland';
+import { LOCALES, type Locale } from '../../../../i18n';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+// 딥 아일랜드가 참조하는 i18n 네임스페이스 (프로덕션 페이지와 동일).
+const namespaces = [
+  'akashic', 'catalog', 'chosun', 'colorPersonality', 'commerce',
+  'dashboard', 'egyptian', 'fortune', 'hobby', 'lifestyle',
+  'mbti', 'nav', 'numerology', 'ontology', 'saju', 'tci', 'ui',
+  'universal', 'common', 'hero',
+];
+const messages: Record<string, unknown> = {};
+for (const ns of namespaces) {
+  try {
+    const mod = await import(`../../../../i18n/messages/${locale}/${ns}.json`)
+      .catch(() => import(`../../../../i18n/messages/en/${ns}.json`));
+    messages[ns] = mod.default ?? mod;
+  } catch { /* skip missing */ }
+}
+---
+
+<Layout title="Ontology Deep Dive (preview)" description="심화 탐색 아일랜드 보관 프리뷰. 프로덕션 미노출." locale={locale} noindex>
+  <div class="mx-auto max-w-3xl px-4 py-8">
+    <p class="mb-4 rounded-xl bg-amber-50 px-4 py-2 text-xs text-amber-800">
+      보관용 프리뷰 — 모든 좌표를 한 화면에서 겹쳐 읽는 작업대. 프로덕션 대시보드에는 노출되지 않습니다.
+    </p>
+    <OntologyIsland locale={locale} messages={messages} client:visible />
+  </div>
+</Layout>

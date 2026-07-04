@@ -1,6 +1,5 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import OntologyIsland from '../../../components/OntologyIsland';
 import OntologyBirthIsland from '../../../components/OntologyBirthIsland';
 import { ProfileMindmap } from '../../../components/ontology/ProfileMindmap';
 import WikiDefinitionLink from '../../../components/shared/WikiDefinitionLink.astro';
@@ -33,21 +32,6 @@ const innate = laneOf('innate');
 const tests = laneOf('test');
 const lm = LANE_META;
 
-// Namespaces for the deep OntologyIsland (unchanged from prior version).
-const namespaces = [
-  'akashic', 'catalog', 'chosun', 'colorPersonality', 'commerce',
-  'dashboard', 'egyptian', 'fortune', 'hobby', 'lifestyle',
-  'mbti', 'nav', 'numerology', 'ontology', 'saju', 'tci', 'ui',
-  'universal', 'common', 'hero',
-];
-const messages: Record<string, unknown> = {};
-for (const ns of namespaces) {
-  try {
-    const mod = await import(`../../../i18n/messages/${locale}/${ns}.json`)
-      .catch(() => import(`../../../i18n/messages/en/${ns}.json`));
-    messages[ns] = mod.default ?? mod;
-  } catch { /* skip missing */ }
-}
 ---
 
 <Layout title={t('hero.ontology.title') || u.title} description={u.sub} locale={locale}>
@@ -125,22 +109,9 @@ for (const ns of namespaces) {
       <ProfileMindmap locale={locale} client:visible />
     </section>
 
-    <!-- Deep dive: opt-in disclosure so the full-screen engine island doesn't
-         duplicate the dashboard hero; only rendered when the user opens it. -->
-    <details class="mt-10 border-t border-green-100 pt-6 [&[open]>summary_.chev]:rotate-90">
-      <summary class="flex cursor-pointer list-none items-center justify-between rounded-2xl bg-green-50 px-4 py-3">
-        <span>
-          <span class="block text-lg font-black text-green-950">{u.deepTitle}</span>
-          <span class="block text-xs text-green-600">{u.deepSub}</span>
-        </span>
-        <span class="chev shrink-0 text-green-700 transition-transform" aria-hidden="true">▸</span>
-      </summary>
-      <div class="mt-4 overflow-hidden rounded-2xl">
-        <OntologyIsland locale={locale} messages={messages} client:visible />
-      </div>
-    </details>
+    <!-- 심화 탐색 아일랜드는 프로덕션에서 제외(사용자 요청 2026-07-04) — 보관: /ontology/template/deep (noindex). -->
 
-    <a href={`/${locale}`} class="mt-6 inline-flex items-center gap-1 text-sm font-black text-green-700 hover:text-green-900">{u.allTools} →</a>
+    <a href={`/${locale}`} class="mt-10 inline-flex items-center gap-1 text-sm font-black text-green-700 hover:text-green-900">{u.allTools} →</a>
   </div>
 
   <script is:inline>
