@@ -19,6 +19,21 @@
   },
   "network": [
     {
+      "name": "OIYO Arcade",
+      "url": "https://game.oiyo.net/",
+      "role": "gaming"
+    },
+    {
+      "name": "OIYO News",
+      "url": "https://news.oiyo.net/",
+      "role": "curation"
+    },
+    {
+      "name": "OIYO AI",
+      "url": "https://ai.oiyo.net/",
+      "role": "ax-showcase"
+    },
+    {
       "name": "Oiyo Wiki",
       "url": "https://wiki.oiyo.net/",
       "role": "definition",
@@ -37,8 +52,17 @@
       "knowledgeManifest": "https://oiyo.net/knowledge/index.json"
     }
   ],
-  "locales": ["ko", "en", "ja", "zh", "fr", "es"],
-  "retiredLocales": ["cn"],
+  "locales": [
+    "ko",
+    "en",
+    "ja",
+    "zh",
+    "fr",
+    "es"
+  ],
+  "retiredLocales": [
+    "cn"
+  ],
   "citation": {
     "attribution": "Oiyo",
     "preferredUrl": "https://oiyo.net/",
