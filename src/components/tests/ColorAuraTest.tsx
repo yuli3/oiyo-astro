@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type Locale = 'ko' | 'en' | 'ja'
 type AuraColor = 'red' | 'orange' | 'yellow' | 'green' | 'blue' | 'indigo' | 'violet'
@@ -668,6 +669,7 @@ export default function ColorAuraTest({ locale: lp = 'ko' }: Props) {
           {lb.share}
         </button>
       </div>
+        <ShareResultButton locale={lp} heading={lb.title} resultTitle={aura.name} />
     </div>
   )
 }

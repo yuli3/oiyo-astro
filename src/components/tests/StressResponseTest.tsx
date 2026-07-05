@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type Locale = 'ko' | 'en' | 'ja'
 type ResponseType = 'fight' | 'flight' | 'freeze' | 'fawn'
@@ -565,6 +566,7 @@ export default function StressResponseTest({ locale: lp = 'ko' }: Props) {
             {lb.share}
           </button>
         </div>
+        <ShareResultButton locale={lp} heading={lb.title} resultTitle={t.name} />
       </div>
     )
   }

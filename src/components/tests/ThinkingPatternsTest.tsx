@@ -1,4 +1,5 @@
 'use client';
+import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
 
@@ -223,6 +224,7 @@ export default function ThinkingPatternsTest({ locale: localeProp }: Props) {
           <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">{tx.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-white transition" style={{ backgroundColor: r.color }}>{copied ? tx.copied : tx.share}</button>
         </div>
+        <ShareResultButton locale={localeProp ?? 'ko'} heading={tx.title} resultTitle={rd.title} emoji={r.emoji} />
       </div>
     );
   }
