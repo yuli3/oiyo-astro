@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type WellnessLevel = 'healthy' | 'caution' | 'improve' | 'dependent'
@@ -423,6 +424,7 @@ export default function DigitalWellnessTest({ locale: lp = 'ko' }: Props) {
           {lb.share}
         </button>
       </div>
+        <ShareResultButton locale={lp} heading={lb.title} resultTitle={ld.title} />
     </div>
   )
 }

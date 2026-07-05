@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 import ResultShareImage from '../shared/ResultShareImage'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -472,6 +473,7 @@ export default function JealousyTypeTest({ locale: lp = 'ko' }: Props) {
           {lb.share}
         </button>
       </div>
+        <ShareResultButton locale={lp} heading={lb.title} resultTitle={ld.title} />
     </div>
   )
 }
