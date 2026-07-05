@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type RiskLevel = 'conservative' | 'moderate' | 'balanced' | 'adventurous'
 type Subscale = 'financial' | 'life'
@@ -468,6 +469,7 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
           {lb.share}
         </button>
       </div>
+      <ShareResultButton locale={lp} heading={lb.title} resultTitle={r.title} />
     </div>
   )
 }

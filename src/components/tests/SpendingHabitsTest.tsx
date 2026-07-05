@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type SpendingType = 'planner' | 'impulsive' | 'experiential' | 'value'
@@ -746,6 +747,7 @@ export default function SpendingHabitsTest({ locale: lp = 'ko' }: Props) {
           {lb.share}
         </button>
       </div>
+      <ShareResultButton locale={lp} heading={lb.title} resultTitle={r.title} />
     </div>
   )
 }

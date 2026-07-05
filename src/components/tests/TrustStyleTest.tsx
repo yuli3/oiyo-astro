@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type StyleKey = 'quick' | 'earned' | 'cautious' | 'guarded'
@@ -381,6 +382,7 @@ export default function TrustStyleTest({ locale: lp = 'ko' }: Props) {
           style={{ backgroundColor: '#16a34a' }}
         >{lb.share}</button>
       </div>
+      <ShareResultButton locale={lp} heading={lb.title} resultTitle={r.title} />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type PersonalityType = 'creator' | 'performer' | 'lurker' | 'connector'
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -640,6 +641,7 @@ export default function SocialMediaPersonalityTest({ locale: lp = 'ko' }: Props)
           {lb.share}
         </button>
       </div>
+      <ShareResultButton locale={lp} heading={lb.title} resultTitle={r.title} />
     </div>
   )
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type Level = 'autopilot' | 'developing' | 'mindful' | 'deeply_present'
@@ -375,6 +376,7 @@ export default function MindfulnessTest({ locale: lp = 'ko' }: Props) {
           style={{ backgroundColor: '#16a34a' }}
         >{lb.share}</button>
       </div>
+      <ShareResultButton locale={lp} heading={lb.title} resultTitle={r.title} />
     </div>
   )
 }

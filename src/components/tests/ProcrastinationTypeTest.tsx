@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from '../shared/ShareResultButton'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
 type SupportedLocale = "ko" | "en" | "ja";
@@ -421,6 +422,7 @@ export default function ProcrastinationTypeTest({ locale: localeProp }: Props) {
             {copied ? tx.copied : tx.share}
           </button>
         </div>
+        <ShareResultButton locale={localeProp ?? 'ko'} heading={tx.title} resultTitle={rd.title} emoji={r.emoji} />
       </div>
     );
   }
