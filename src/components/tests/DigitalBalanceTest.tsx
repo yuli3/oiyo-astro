@@ -1,4 +1,5 @@
 import React, { useState, useMemo } from 'react';
+import ShareResultButton from '../shared/ShareResultButton'
 
 const questions = [
   { id: "q1", text: "잠들기 직전까지 스마트폰을 확인합니까?", options: ["안 함", "가끔", "자주", "매일", "항상"] },
@@ -105,6 +106,7 @@ const DigitalBalanceTest: React.FC = () => {
                     >
                         다시 테스트하기
                     </button>
+                    <ShareResultButton locale="ko" heading="나의 디지털 중독 지수" resultTitle={interpretation.title} />
                 </div>
             )}
         </div>

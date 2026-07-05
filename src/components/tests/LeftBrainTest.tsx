@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ShareResultButton from '../shared/ShareResultButton'
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 
@@ -626,6 +627,7 @@ const LeftBrainTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
         >
           {t.retake}
         </button>
+        <ShareResultButton locale={locale} heading={t.title} resultTitle={resultConfig.title} />
       </div>
     );
   }

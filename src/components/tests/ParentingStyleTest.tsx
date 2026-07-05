@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type ParentDim = 'authoritative' | 'authoritarian' | 'permissive' | 'uninvolved'
@@ -922,6 +923,7 @@ export default function ParentingStyleTest({ locale: lp = 'ko' }: Props) {
           {lb.share}
         </button>
       </div>
+        <ShareResultButton locale={lp} heading={lb.title} resultTitle={domResult.title} />
     </div>
   )
 }

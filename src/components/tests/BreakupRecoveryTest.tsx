@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import ShareResultButton from '../shared/ShareResultButton'
 import type { Locale } from "../../i18n";
 
 interface Props {
@@ -670,6 +671,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
             >
               {t.restartBtn}
             </button>
+            <ShareResultButton locale={locale} heading={t.title} resultTitle={result?.name?.[locale] ?? result?.name?.en ?? ''} />
           </div>
         )
       )}
