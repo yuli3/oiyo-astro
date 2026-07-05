@@ -1,4 +1,5 @@
 'use client';
+import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
 
@@ -269,6 +270,7 @@ export default function FocusBlockerTest({ locale: localeProp }: Props) {
           <button onClick={restart} className="flex-1 rounded-xl border border-gray-200 py-3 text-sm font-medium text-gray-700 transition hover:bg-gray-50">{tx.restart}</button>
           <button onClick={share} className="flex-1 rounded-xl py-3 text-sm font-medium text-white transition bg-orange-500 hover:bg-orange-600">{copied ? tx.copied : tx.share}</button>
         </div>
+        <ShareResultButton locale={localeProp ?? 'ko'} heading={tx.title} resultTitle={categoryInfo[sorted[0]][locale].title} />
       </div>
     );
   }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import ShareResultButton from '../shared/ShareResultButton'
 import {
   RadarChart,
   Radar,
@@ -345,6 +346,7 @@ export default function SelfCompassionTest({ locale: localeProp }: Props) {
             {copied ? tx.copied : tx.share}
           </button>
         </div>
+        <ShareResultButton locale={localeProp ?? 'ko'} heading={tx.title} resultTitle={ld.title} />
       </div>
     );
   }
