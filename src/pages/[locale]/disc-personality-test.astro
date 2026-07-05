@@ -4,6 +4,7 @@ import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import DiscPersonalityTest from '../../components/tests/DiscPersonalityTest';
 import BlogArticleLink from '../../components/shared/BlogArticleLink.astro';
+import WikiDefinitionLink from '../../components/shared/WikiDefinitionLink.astro';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -42,6 +43,9 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <DiscPersonalityTest locale={locale as any} client:load />
-    <BlogArticleLink testId="disc-personality-test" locale={locale} />
+    <div class="mt-4 flex flex-wrap items-center gap-3">
+      <BlogArticleLink testId="disc-personality-test" locale={locale} />
+      <WikiDefinitionLink slug="meaning-of-disc" locale={locale} compact />
+    </div>
   </div>
 </Layout>

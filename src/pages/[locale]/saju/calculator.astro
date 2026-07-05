@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
+import WikiDefinitionLink from '../../../components/shared/WikiDefinitionLink.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import SajuCalculator from '../../../components/tools/SajuCalculator';
@@ -264,6 +265,7 @@ const faqJsonLd = {
     <section class="mt-4 border-t border-violet-100 pt-8">
       <h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2>
       <p class="mt-4 leading-8 text-violet-800">{c.intro}</p>
+      <WikiDefinitionLink slug="meaning-of-ohaeng" locale={locale} />
     </section>
 
     <section class="mt-10">

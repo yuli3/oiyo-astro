@@ -12,6 +12,9 @@ export const WIKI_DEF_LOCALES: Record<string, string[]> = {
   'meaning-of-blood-type-a': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
   'meaning-of-chinese-zodiac-dragon': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
   'meaning-of-saju-60gapja': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
+  // Verified live 2026-07-05 (wiki 3b0269e deploy).
+  'meaning-of-ohaeng': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
+  'meaning-of-disc': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
 };
 
 export function wikiDefUrl(slug: string, locale: string): string | null {
