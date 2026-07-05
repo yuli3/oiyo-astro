@@ -1,4 +1,5 @@
 'use client';
+import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
 
@@ -93,6 +94,7 @@ export default function StrengthSageTest({ locale: localeProp }: Props) {
           <p className="text-slate-700 text-base leading-relaxed">{r.desc}</p>
         </div>
         <button onClick={() => { setAnswers({}); setPhase("quiz"); }} className="text-slate-400 text-sm hover:underline">{t.retake}</button>
+        <ShareResultButton locale={localeProp ?? 'ko'} heading={t.title} resultTitle={r.title} emoji={r.emoji} />
       </div>
     );
   }
