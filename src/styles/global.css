@@ -172,3 +172,7 @@
   }
   .stream-drop.revealed { opacity: 1; transform: translateY(0); }
 }
+
+/* Mobile overflow containment (FAANG audit 2026-07-05) — drawer-safe: no body overflow clipping */
+img, svg, video, canvas, iframe { max-width: 100%; }
+pre { max-width: 100%; overflow-x: auto; }
