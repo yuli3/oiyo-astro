@@ -1,4 +1,5 @@
 ---
+import { FAMILY_SITES, familySiteHref, familySiteTag } from '../config/navigation';
 import type { Locale } from '../i18n';
 import { getTranslations, localePath } from '../i18n';
 
@@ -9,13 +10,6 @@ interface Props {
 const { locale } = Astro.props;
 const t = await getTranslations(locale);
 
-const FAMILY: { host: string; name: string; tag: Record<string, string> }[] = [
-  { host: 'blog.oiyo.net', name: 'OIYO Blog', tag: { ko: '읽는 곳 — 강의·매거진', en: 'Read — guides & magazine', ja: '読む — 講座・マガジン', zh: '阅读 — 课程·杂志', fr: 'Lire — guides & magazine', es: 'Leer — guías y revista' } },
-  { host: 'wiki.oiyo.net', name: 'OIYO Wiki', tag: { ko: '찾는 곳 — 개념 사전', en: 'Look up — dictionary', ja: '調べる — 用語事典', zh: '查找 — 概念辞典', fr: 'Chercher — dictionnaire', es: 'Buscar — diccionario' } },
-  { host: 'game.oiyo.net', name: 'OIYO Arcade', tag: { ko: '노는 곳 — 게임', en: 'Play — games', ja: '遊ぶ — ゲーム', zh: '玩 — 游戏', fr: 'Jouer — jeux', es: 'Jugar — juegos' } },
-  { host: 'news.oiyo.net', name: 'OIYO News', tag: { ko: '보는 곳 — 데일리 큐레이션', en: 'Watch — daily curation', ja: '見る — デイリー', zh: '看 — 每日精选', fr: 'Voir — curation', es: 'Ver — curación diaria' } },
-  { host: 'ai.oiyo.net', name: 'OIYO AI', tag: { ko: 'AX — AI 운영 시스템', en: 'AX — AI-native OS', ja: 'AX — AI運用', zh: 'AX — AI 系统', fr: 'AX — OS IA-native', es: 'AX — OS con IA' } },
-];
 const year = new Date().getFullYear();
 ---
 
@@ -57,12 +51,12 @@ const year = new Date().getFullYear();
       <div>
         <h3 class="text-xs font-bold uppercase tracking-widest text-green-400 mb-3">Oiyo Family</h3>
         <ul class="space-y-2 text-sm">
-          {FAMILY.map((f) => (
+          {FAMILY_SITES.map((f) => (
             <li>
-              <a href={`https://${f.host}/${locale}/?utm_source=oiyo&utm_medium=footer&utm_campaign=family_nav`}
+              <a href={familySiteHref(f, locale, 'footer')}
                  target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
                 {f.name} →
-                <span class="block text-[10px] text-gray-500">{f.tag[locale] ?? f.tag.en}</span>
+                <span class="block text-[10px] text-gray-500">{familySiteTag(f, locale)}</span>
               </a>
             </li>
           ))}

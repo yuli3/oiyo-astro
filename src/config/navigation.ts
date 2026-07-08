@@ -1,5 +1,25 @@
 /* eslint-disable no-restricted-syntax */
+import { Locale } from "@/i18n";
 import { features } from "@/registry/features";
+
+// Sister sites for family nav (footer + mobile drawer). news/ai are
+// single-locale (ko) sites — they have no /{locale}/ routes, so appending
+// the locale path would land on their 404 page.
+export const FAMILY_SITES = [
+  { host: "blog.oiyo.net", localePath: true, name: "OIYO Blog", tag: { en: "Read — guides & magazine", es: "Leer — guías y revista", fr: "Lire — guides & magazine", ja: "読む — 講座・マガジン", ko: "읽는 곳 — 강의·매거진", zh: "阅读 — 课程·杂志" } },
+  { host: "wiki.oiyo.net", localePath: true, name: "OIYO Wiki", tag: { en: "Look up — dictionary", es: "Buscar — diccionario", fr: "Chercher — dictionnaire", ja: "調べる — 用語事典", ko: "찾아보는 곳 — 개념 사전", zh: "查找 — 概念辞典" } },
+  { host: "game.oiyo.net", localePath: true, name: "OIYO Arcade", tag: { en: "Play — games", es: "Jugar — juegos", fr: "Jouer — jeux", ja: "遊ぶ — ゲーム", ko: "노는 곳 — 게임", zh: "玩 — 游戏" } },
+  { host: "news.oiyo.net", localePath: false, name: "OIYO News", tag: { en: "Watch — daily curation", es: "Ver — curación diaria", fr: "Voir — curation", ja: "見る — デイリー", ko: "보는 곳 — 데일리 큐레이션", zh: "看 — 每日精选" } },
+  { host: "ai.oiyo.net", localePath: false, name: "OIYO AI", tag: { en: "AX — AI-native OS", es: "AX — OS con IA", fr: "AX — OS IA-native", ja: "AX — AI運用", ko: "AX — AI 운영 시스템", zh: "AX — AI 系统" } },
+] as const;
+
+export type FamilySite = (typeof FAMILY_SITES)[number];
+
+export const familySiteHref = (f: FamilySite, locale: Locale, medium: string) =>
+  `https://${f.host}/${f.localePath ? `${locale}/` : ""}?utm_source=oiyo&utm_medium=${medium}&utm_campaign=family_nav`;
+
+export const familySiteTag = (f: FamilySite, locale: Locale) =>
+  f.tag[locale as keyof typeof f.tag] ?? f.tag.en;
 
 export interface DesktopNavItem {
   className?: string;

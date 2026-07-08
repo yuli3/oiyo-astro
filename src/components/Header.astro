@@ -1,4 +1,5 @@
 ---
+import { FAMILY_SITES, familySiteHref, familySiteTag } from '../config/navigation';
 import type { Locale } from '../i18n';
 import { getTranslations, LOCALES, LOCALE_LABELS, localePath } from '../i18n';
 
@@ -97,6 +98,17 @@ const currentPath = isLocalized ? Astro.url.pathname.replace(LOCALE_PREFIX, '') 
       <a href={localePath(locale, '/faq')} class="px-3 py-2.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
         FAQ
       </a>
+      <div class="mt-2 pt-2 border-t border-green-50">
+        <p class="px-3 pt-1 pb-1 text-[10px] font-bold uppercase tracking-widest text-green-400">Oiyo Family</p>
+        {FAMILY_SITES.map((f) => (
+          <a href={familySiteHref(f, locale, 'menu')}
+             target="_blank" rel="noopener noreferrer"
+             class="flex flex-col px-3 py-2 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
+            <span>{f.name} ↗</span>
+            <span class="text-[11px] text-green-500">{familySiteTag(f, locale)}</span>
+          </a>
+        ))}
+      </div>
     </nav>
   </div>
 </header>
