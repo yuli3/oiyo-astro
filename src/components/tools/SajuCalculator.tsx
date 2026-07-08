@@ -6,8 +6,30 @@ import { BRANCH_ORDER } from '../../manifest/data/saju/branches';
 import type { SajuResult, HeavenlyStem, EarthlyBranch } from '../../lib/ontology/saju/types';
 import YongsinSection from './saju/YongsinSection';
 import LifeCategoriesSection from './saju/LifeCategoriesSection';
+import { decodeResult, writeResultHash } from '../../lib/result-permalink';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
+
+// T6/#32 permalink tool id — must stay stable, it is embedded in shared URLs.
+const PERMALINK_TOOL_ID = 'saju-calculator';
+// Birth date/time/gender fully determine the result (see `result`/`analysis`
+// useMemo below), so that is all the permalink needs to encode.
+interface PermalinkState {
+  year: number;
+  month: number;
+  day: number;
+  hour: number | null;
+  gender: 'male' | 'female';
+}
+
+const SHARE_LABELS: Record<Locale, { share: string; shareCopied: string; privacyNote: string }> = {
+  ko: { share: '결과 링크 공유', shareCopied: '링크를 복사했어요!', privacyNote: '이 링크에는 입력한 생년월일시 정보가 포함됩니다.' },
+  en: { share: 'Share result link', shareCopied: 'Link copied!', privacyNote: 'This link contains the birth date/time you entered.' },
+  ja: { share: '結果リンクを共有', shareCopied: 'リンクをコピーしました!', privacyNote: 'このリンクには入力した生年月日時の情報が含まれます。' },
+  fr: { share: 'Partager le lien du résultat', shareCopied: 'Lien copié !', privacyNote: 'Ce lien contient la date/heure de naissance saisie.' },
+  es: { share: 'Compartir enlace del resultado', shareCopied: '¡Enlace copiado!', privacyNote: 'Este enlace contiene la fecha/hora de nacimiento que ingresaste.' },
+  zh: { share: '分享结果链接', shareCopied: '链接已复制!', privacyNote: '此链接包含您输入的出生日期与时间信息。' },
+};
 
 // ─── Heavenly Stems (天干) ────────────────────────────────────────────────────
 const STEMS = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
@@ -512,6 +534,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const [hour, setHour] = useState<number | null>(null);
   const [gender, setGender] = useState<'male' | 'female'>('male');
   const [done, setDone] = useState(false);
+  const [shareCopied, setShareCopied] = useState(false);
 
   // 온톨로지에서 입력한 프로필(생년월일·시·성별)을 재사용 — 재입력 제거.
   const { profile, parsed, saveBirth } = useProfilePrefill();
@@ -525,6 +548,38 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     if (profile.gender === 'male' || profile.gender === 'female') setGender(profile.gender);
     setPrefilled(true);
   }, [parsed, profile.gender, prefilled]);
+
+  // T6/#32: entering via a shared #r= permalink restores the sender's exact
+  // birth inputs and jumps straight to the result view — skipping input and
+  // (deliberately) skipping saveBirth(), so a shared link never overwrites
+  // the viewer's own locally-saved profile. Runs after the profile-prefill
+  // effect above so a permalink always wins over the viewer's own saved data.
+  useEffect(() => {
+    const decoded = decodeResult<PermalinkState>(window.location.hash);
+    if (decoded?.toolId !== PERMALINK_TOOL_ID || !decoded.state) return;
+    const s = decoded.state;
+    if (typeof s.year !== 'number' || typeof s.month !== 'number' || typeof s.day !== 'number') return;
+    setYear(s.year);
+    setMonth(s.month);
+    setDay(s.day);
+    setHour(typeof s.hour === 'number' ? s.hour : null);
+    if (s.gender === 'male' || s.gender === 'female') setGender(s.gender);
+    setPrefilled(true); // block the profile-prefill effect above from overwriting this
+    setDone(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function share() {
+    const state: PermalinkState = { year, month, day, hour, gender };
+    const url = writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, state) ?? window.location.href;
+    if (navigator.share) {
+      navigator.share({ title: t.title, url });
+    } else {
+      navigator.clipboard.writeText(url);
+      setShareCopied(true);
+      setTimeout(() => setShareCopied(false), 2500);
+    }
+  }
 
   const result = useMemo(() => {
     const yStem = getYearStem(year);
@@ -888,6 +943,14 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           </div>
 
           <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
+
+          <button
+            onClick={share}
+            className="w-full py-2.5 rounded-xl border-2 border-indigo-300 bg-indigo-50 text-sm font-bold text-indigo-700 hover:bg-indigo-100 transition-colors"
+          >
+            {shareCopied ? `✅ ${(SHARE_LABELS[locale] ?? SHARE_LABELS.en).shareCopied}` : `🔗 ${(SHARE_LABELS[locale] ?? SHARE_LABELS.en).share}`}
+          </button>
+          <p className="text-xs text-amber-600 text-center">{(SHARE_LABELS[locale] ?? SHARE_LABELS.en).privacyNote}</p>
 
           <button
             onClick={() => setDone(false)}

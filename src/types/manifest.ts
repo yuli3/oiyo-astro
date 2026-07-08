@@ -57,6 +57,10 @@ export interface FeatureManifest {
 
   path: string; // Actual URL path (e.g. /ontology/saju)
 
+  // Opt-in: result view supports a stateless, shareable #r= permalink (T6/#32).
+  // See company-brain/AI-Sessions/wiki/decisions/oiyo-result-permalink-hash.md.
+  permalink?: boolean;
+
   searchKeywords?: Record<string, string[]> | string[]; // Legacy Support
   // Localized Metadata (replaces seo.config.ts)
   seo: {

@@ -1,6 +1,11 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultShareImage from '../shared/ResultShareImage'
+import { decodeResult, writeResultHash } from '../../lib/result-permalink'
+
+// T6/#32 permalink tool id — must stay stable, it is embedded in shared URLs.
+const PERMALINK_TOOL_ID = 'workaholic-test'
+interface PermalinkState { answers: number[] }
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type WorkLevel = 'balanced' | 'engaged' | 'driven' | 'workaholic'
@@ -284,6 +289,18 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
   const [answers, setAnswers] = useState<number[]>([])
   const [done, setDone] = useState(false)
 
+  // T6/#32: entering via a shared #r= permalink restores the result view
+  // directly, skipping the question flow. Safe no-op if there is no hash,
+  // the hash is for a different tool, or decoding fails.
+  useEffect(() => {
+    const decoded = decodeResult<PermalinkState>(window.location.hash)
+    if (decoded?.toolId === PERMALINK_TOOL_ID && Array.isArray(decoded.state?.answers)) {
+      setAnswers(decoded.state.answers)
+      setDone(true)
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   function pick(val: number) {
     const next = [...answers, val]
     if (current + 1 >= questions.length) {
@@ -295,7 +312,13 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
     }
   }
 
-  function restart() { setAnswers([]); setCurrent(0); setDone(false) }
+  function restart() {
+    setAnswers([]); setCurrent(0); setDone(false)
+    // Clear a stale #r= permalink from a previous shared result, if any.
+    if (typeof window !== 'undefined' && window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search)
+    }
+  }
 
   function calcScores(ans: number[]) {
     const adjusted = questions.map((q, i) => adjustScore(ans[i] ?? 1, q.reverse))
@@ -309,7 +332,9 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
 
   function share() {
     const { overall } = calcScores(answers)
-    const url = window.location.href
+    // T6/#32: prefer a permalink that reproduces this exact result; fall back
+    // to the plain page URL (prior behavior) if encoding fails or is too large.
+    const url = writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, { answers }) ?? window.location.href
     const level = calcLevel(overall)
     const text = `${lb.shareMsg} ${overall.toFixed(1)} ${lb.outOf} — ${LEVEL_DATA[level][l].title}`
     if (navigator.share) navigator.share({ title: lb.title, text, url })

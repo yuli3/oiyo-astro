@@ -1,7 +1,15 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { decodeResult, writeResultHash } from '../../lib/result-permalink';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 type Spread = 1 | 3 | 5;
+
+// T6/#32 permalink tool id — must stay stable, it is embedded in shared URLs.
+const PERMALINK_TOOL_ID = 'tarot-reading';
+interface PermalinkState {
+  spread: Spread;
+  drawn: { id: number; reversed: boolean }[];
+}
 
 interface TarotCard {
   id: number;
@@ -205,6 +213,7 @@ const L: Record<Locale, {
   uprightLabel: string; reversedLabel: string;
   disclaimer: string;
   spreads: Record<Spread, string>;
+  shareBtn: string; shareCopied: string;
 }> = {
   ko: {
     title: '타로 카드 리딩', subtitle: '오늘의 메시지를 카드에서 읽어보세요',
@@ -213,6 +222,7 @@ const L: Record<Locale, {
     uprightLabel: '정방향', reversedLabel: '역방향',
     disclaimer: '타로는 오락 및 자기 성찰 목적으로 제작되었으며 미래를 예측하지 않습니다.',
     spreads: { 1: '1장 — 오늘의 메시지', 3: '3장 — 과거·현재·미래', 5: '5장 — 켈틱 크로스' },
+    shareBtn: '결과 링크 공유', shareCopied: '링크를 복사했어요!',
   },
   en: {
     title: 'Tarot Card Reading', subtitle: 'Draw cards and receive your message',
@@ -221,6 +231,7 @@ const L: Record<Locale, {
     uprightLabel: 'Upright', reversedLabel: 'Reversed',
     disclaimer: 'Tarot is for entertainment and self-reflection only, and does not predict the future.',
     spreads: { 1: '1 Card — Daily Message', 3: '3 Cards — Past · Present · Future', 5: '5 Cards — Celtic Cross' },
+    shareBtn: 'Share this reading', shareCopied: 'Link copied!',
   },
   ja: {
     title: 'タロット占い', subtitle: 'カードから今日のメッセージを読み取りましょう',
@@ -229,6 +240,7 @@ const L: Record<Locale, {
     uprightLabel: '正位置', reversedLabel: '逆位置',
     disclaimer: 'タロットはエンターテインメントと自己内省を目的としており、未来を予言するものではありません。',
     spreads: { 1: '1枚 — 今日のメッセージ', 3: '3枚 — 過去・現在・未来', 5: '5枚 — ケルト十字' },
+    shareBtn: 'この結果を共有', shareCopied: 'リンクをコピーしました!',
   },
   fr: {
     title: 'Tirage de Tarot', subtitle: 'Tirez des cartes et recevez votre message',
@@ -237,6 +249,7 @@ const L: Record<Locale, {
     uprightLabel: 'Droit', reversedLabel: 'Renversé',
     disclaimer: "Le tarot est uniquement pour le divertissement et la réflexion personnelle, et ne prédit pas l'avenir.",
     spreads: { 1: '1 Carte — Message du jour', 3: '3 Cartes — Passé · Présent · Futur', 5: '5 Cartes — Croix celtique' },
+    shareBtn: 'Partager ce tirage', shareCopied: 'Lien copié !',
   },
   es: {
     title: 'Lectura de Tarot', subtitle: 'Saca cartas y recibe tu mensaje',
@@ -245,6 +258,7 @@ const L: Record<Locale, {
     uprightLabel: 'Derecha', reversedLabel: 'Invertida',
     disclaimer: 'El tarot es solo para entretenimiento y reflexión personal, y no predice el futuro.',
     spreads: { 1: '1 Carta — Mensaje del día', 3: '3 Cartas — Pasado · Presente · Futuro', 5: '5 Cartas — Cruz celta' },
+    shareBtn: 'Compartir esta lectura', shareCopied: '¡Enlace copiado!',
   },
   cn: {
     title: '塔羅牌占卜', subtitle: '抽牌並接收您的訊息',
@@ -253,6 +267,7 @@ const L: Record<Locale, {
     uprightLabel: '正位', reversedLabel: '逆位',
     disclaimer: '塔羅牌僅用於娛樂和自我反思，並不能預測未來。',
     spreads: { 1: '1張 — 今日訊息', 3: '3張 — 過去·現在·未來', 5: '5張 — 凱爾特十字' },
+    shareBtn: '分享這次占卜', shareCopied: '連結已複製!',
   },
   zh: {
     title: '塔罗牌占卜', subtitle: '抽牌并接收您的信息',
@@ -261,6 +276,7 @@ const L: Record<Locale, {
     uprightLabel: '正位', reversedLabel: '逆位',
     disclaimer: '塔罗牌仅用于娱乐和自我反思，并不能预测未来。',
     spreads: { 1: '1张 — 今日信息', 3: '3张 — 过去·现在·未来', 5: '5张 — 凯尔特十字' },
+    shareBtn: '分享这次占卜', shareCopied: '链接已复制!',
   },
 };
 
@@ -279,16 +295,58 @@ function drawCards(count: number, positionLabels: string[]): DrawnCard[] {
   }));
 }
 
+/** Reconstruct DrawnCard[] from a decoded permalink's {id, reversed}[] state. */
+function cardsFromIds(ids: PermalinkState['drawn'], positionLabels: string[]): DrawnCard[] {
+  return ids
+    .map((d, i) => {
+      const card = MAJOR_ARCANA.find(c => c.id === d.id);
+      return card ? { card, reversed: d.reversed, position: positionLabels[i] ?? '' } : null;
+    })
+    .filter((d): d is DrawnCard => d !== null);
+}
+
 export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
   const t = L[locale] ?? L.ko;
   const [spread, setSpread] = useState<Spread>(1);
   const [drawn, setDrawn] = useState<DrawnCard[] | null>(null);
   const [flipped, setFlipped] = useState<Set<number>>(new Set());
+  const [shareCopied, setShareCopied] = useState(false);
+
+  // T6/#32: entering via a shared #r= permalink restores the exact draw
+  // (same cards, same orientation) and reveals it immediately, skipping the
+  // draw step. Safe no-op if there is no hash or decoding fails.
+  useEffect(() => {
+    const decoded = decodeResult<PermalinkState>(window.location.hash);
+    if (decoded?.toolId === PERMALINK_TOOL_ID && Array.isArray(decoded.state?.drawn)) {
+      const restoredSpread = decoded.state.spread;
+      const labels = SPREAD_LABELS[restoredSpread]?.[locale] ?? SPREAD_LABELS[1][locale];
+      const cards = cardsFromIds(decoded.state.drawn, labels);
+      if (cards.length > 0) {
+        setSpread(restoredSpread);
+        setDrawn(cards);
+        setFlipped(new Set(cards.map((_, i) => i)));
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function handleDraw() {
     const labels = SPREAD_LABELS[spread][locale];
     setDrawn(drawCards(spread, labels));
     setFlipped(new Set());
+  }
+
+  function share() {
+    if (!drawn) return;
+    const state: PermalinkState = { spread, drawn: drawn.map(d => ({ id: d.card.id, reversed: d.reversed })) };
+    const url = writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, state) ?? window.location.href;
+    if (navigator.share) {
+      navigator.share({ title: t.title, url });
+    } else {
+      navigator.clipboard.writeText(url);
+      setShareCopied(true);
+      setTimeout(() => setShareCopied(false), 2500);
+    }
   }
 
   function flipCard(idx: number) {
@@ -392,6 +450,15 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
            locale === 'cn' ? '点击牌面翻开卡牌' :
            'Tap a card to reveal it'}
         </p>
+      )}
+
+      {drawn && flipped.size === drawn.length && (
+        <button
+          onClick={share}
+          className="w-full py-2.5 rounded-xl border-2 border-indigo-300 bg-indigo-50 text-sm font-bold text-indigo-700 hover:bg-indigo-100 transition-colors"
+        >
+          {shareCopied ? `✅ ${t.shareCopied}` : `🔗 ${t.shareBtn}`}
+        </button>
       )}
 
       <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>

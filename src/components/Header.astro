@@ -136,6 +136,13 @@ const currentPath = isLocalized ? Astro.url.pathname.replace(LOCALE_PREFIX, '') 
       } catch {
         // Ignore storage failures in private or restricted browsing modes.
       }
+      // T6/#32: preserve a result permalink hash (#r=...) across locale
+      // switches. Server-rendered hrefs never see the hash (browsers don't
+      // send fragments to the server), so it must be appended client-side,
+      // right before navigation, from whatever the hash is at click time.
+      if (window.location.hash.startsWith('#r=')) {
+        link.href = link.href.split('#')[0] + window.location.hash;
+      }
     });
   });
 
