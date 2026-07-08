@@ -3,12 +3,39 @@ import ShareResultButton from '../shared/ShareResultButton';
 import CopyResultLink from '../shared/CopyResultLink';
 import { computeNatalChart, type NatalChart } from '../../lib/ontology/natal/calculator';
 import { SIGN_INFO, CITIES, type NatalLocale } from '../../lib/ontology/natal/signs';
-import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
+// `readResultCode` is kept for one thing only: reading pre-T6 `?d=&c=&t=`
+// share links that may still be circulating, so they never 404. Natal no
+// longer *writes* the query-param scheme — see the hash migration effect
+// below and company-brain/AI-Sessions/wiki/decisions/oiyo-result-permalink-hash.md
+// (2026-07-09 addendum: birth date/place/time in a plaintext query string is
+// a PII surface for AI crawlers, which respect canonical less than search
+// engines do).
+import { readResultCode } from '../../lib/result-url';
+import { decodeResult, writeResultHash } from '../../lib/result-permalink';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 
 interface Props {
   locale: string;
 }
+
+// T6/#32 permalink tool id — must stay stable, it is embedded in shared URLs.
+const PERMALINK_TOOL_ID = 'natal-chart';
+// Birth date/time/place fully determine the chart (see `compute` below), so
+// that is all the permalink needs to encode. `time: null` means "unknown".
+interface PermalinkState {
+  date: string;
+  time: string | null;
+  city: string;
+}
+
+const PRIVACY_NOTE: Record<NatalLocale, string> = {
+  ko: '이 링크에는 입력한 생년월일·출생지·시각 정보가 포함됩니다.',
+  en: 'This link contains the birth date, place, and time you entered.',
+  ja: 'このリンクには入力した生年月日・出生地・時刻の情報が含まれます。',
+  zh: '此链接包含您输入的出生日期、地点与时间信息。',
+  fr: 'Ce lien contient la date, le lieu et l’heure de naissance que vous avez saisis.',
+  es: 'Este enlace contiene la fecha, el lugar y la hora de nacimiento que ingresaste.',
+};
 
 const COPY: Record<NatalLocale, {
   title: string;
@@ -241,15 +268,34 @@ export default function NatalChartCalculator({ locale }: Props) {
   useEffect(() => {
     if (!parsed) return;
     setForm((f) => {
-      if (f.date || readResultCode('d')) return f; // URL 복원/기존 입력 우선
+      if (f.date || window.location.hash.startsWith('#r=') || readResultCode('d')) return f; // URL 복원(해시/레거시 쿼리)·기존 입력 우선
       const date = `${parsed.year}-${String(parsed.month).padStart(2, '0')}-${String(parsed.day).padStart(2, '0')}`;
       const hasHour = parsed.hour !== null;
       return { ...f, date, time: hasHour ? `${String(parsed.hour).padStart(2, '0')}:${String(parsed.minute ?? 0).padStart(2, '0')}` : '', unknown: !hasHour };
     });
   }, [parsed]);
 
-  // Restore a shared chart from the URL (?d=YYYY-MM-DD&t=HH:MM&c=cityId, t omitted = unknown time).
+  // Restore a shared chart on mount. Two sources, tried in order:
+  // 1) `#r=` permalink hash (T6/#32) — the current scheme, never sent to the
+  //    server, so it carries no PII exposure.
+  // 2) Legacy `?d=YYYY-MM-DD&t=HH:MM&c=cityId` query params (pre-T6 links
+  //    that may still be shared around). If found, restore from them exactly
+  //    as before, then migrate the URL in place: write the same state into
+  //    the `#r=` hash and strip the plaintext query keys, so the address bar
+  //    never keeps showing birth date/time/place. See T6 addendum decision.
   useEffect(() => {
+    const decoded = decodeResult<PermalinkState>(window.location.hash);
+    if (decoded?.toolId === PERMALINK_TOOL_ID && decoded.state) {
+      const s = decoded.state;
+      const city = CITIES.find((x) => x.id === s.city);
+      if (city && /^\d{4}-\d{2}-\d{2}$/.test(s.date)) {
+        const hasTime = !!s.time && /^\d{2}:\d{2}$/.test(s.time);
+        setForm({ date: s.date, time: hasTime ? s.time! : '', unknown: !hasTime, city: s.city });
+        compute(s.date, hasTime ? s.time! : '', !hasTime, city.lat, city.lon, city.tz, hasTime);
+      }
+      return;
+    }
+
     const d = readResultCode('d');
     const c = readResultCode('c');
     if (!d || !c) return;
@@ -259,6 +305,13 @@ export default function NatalChartCalculator({ locale }: Props) {
     const hasTime = !!time && /^\d{2}:\d{2}$/.test(time);
     setForm({ date: d, time: hasTime ? time! : '', unknown: !hasTime, city: c });
     compute(d, hasTime ? time! : '', !hasTime, city.lat, city.lon, city.tz, hasTime);
+
+    writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, { date: d, time: hasTime ? time! : null, city: c });
+    const url = new URL(window.location.href);
+    url.searchParams.delete('d');
+    url.searchParams.delete('c');
+    url.searchParams.delete('t');
+    window.history.replaceState(null, '', url.toString());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -281,15 +334,12 @@ export default function NatalChartCalculator({ locale }: Props) {
       const [yy, mm, dd] = form.date.split('-').map(Number);
       saveBirth({ year: yy, month: mm, day: dd, hour: hasTime ? Number(form.time.split(':')[0]) : null });
     }
-    writeResultCode('d', form.date);
-    writeResultCode('c', form.city);
-    if (hasTime) writeResultCode('t', form.time); else clearResultCode('t');
+    writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, { date: form.date, time: hasTime ? form.time : null, city: form.city });
   }
 
   function reset() {
     setResult(null);
     setError(null);
-    clearResultCode('d'); clearResultCode('t'); clearResultCode('c');
   }
 
   const shareDesc = useMemo(() => {
@@ -370,6 +420,7 @@ export default function NatalChartCalculator({ locale }: Props) {
           description={shareDesc}
         />
         <CopyResultLink locale={loc} />
+        <p className="mt-1.5 text-center text-xs text-amber-600">{PRIVACY_NOTE[loc]}</p>
 
         <div className="mt-5 text-center text-sm">
           <a href={`/${loc}/zodiac/personality`} className="font-semibold text-indigo-600 hover:underline">{t.zodiacLink}</a>

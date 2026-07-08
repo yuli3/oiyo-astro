@@ -32,6 +32,23 @@ describe("result-permalink", () => {
     expect(decoded?.state).toEqual(state);
   });
 
+  it("round-trips a natal chart state (date/time/city, unknown time = null)", () => {
+    const toolId = "natal-chart";
+    const state = { date: "1990-06-15", time: "08:30", city: "seoul" };
+
+    const encoded = encodeResult(toolId, state);
+    expect(encoded).not.toBeNull();
+
+    const decoded = decodeResult<typeof state>(encoded);
+    expect(decoded).not.toBeNull();
+    expect(decoded?.toolId).toBe(toolId);
+    expect(decoded?.state).toEqual(state);
+
+    const unknownTimeState = { date: "1990-06-15", time: null, city: "seoul" };
+    const encodedUnknown = encodeResult(toolId, unknownTimeState);
+    expect(decodeResult<typeof unknownTimeState>(encodedUnknown)?.state).toEqual(unknownTimeState);
+  });
+
   it("decodes a value still prefixed with #r= or r=", () => {
     const encoded = encodeResult("t", { a: 1 });
     expect(decodeResult(`#r=${encoded}`)?.state).toEqual({ a: 1 });
