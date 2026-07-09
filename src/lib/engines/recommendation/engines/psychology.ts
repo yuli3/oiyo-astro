@@ -30,8 +30,9 @@ export class PsychologyEngine {
       });
     }
 
-    // TODO(Phase1 step2 통합 후): 그래프 인접 fallback — results가 비면
-    // graph/traverse.ts neighbors()로 관계 기반 추천을 채운다.
+    // No graph-adjacency fallback here: `graph/types.ts` `NodeKind` has no
+    // "psychology" kind, so there's nothing in the relationship graph to walk
+    // to for this category (see `../graph-fallback.ts`).
 
     return results.sort((a, b) => b.matchScore - a.matchScore);
   }

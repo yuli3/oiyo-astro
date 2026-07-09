@@ -43,5 +43,24 @@ describe("RecommendationService.generateRecommendations", () => {
     // sorted descending
     const scores = result.careers.map((r) => r.matchScore);
     expect(scores).toEqual([...scores].sort((a, b) => b - a));
+
+    // A direct signal match exists for every declared definition, so the
+    // graph-adjacency fallback (`../graph-fallback.ts`) must not kick in.
+    expect(result.careers.every((rec) => !rec.id.includes("-graph-"))).toBe(true);
+    expect(result.hobbies.every((rec) => !rec.id.includes("-graph-"))).toBe(true);
+  });
+
+  it("falls back to graph-adjacent hobbies/careers when signals exist but match no definition directly", () => {
+    // A lone zodiac signal: none of HOBBY_DEFINITIONS/CAREER_DEFINITIONS
+    // declare a `zodiac` scoring rule, so every definition scores 0 — but
+    // the graph (`@/lib/ontology/graph/edges.ts`) still connects "taurus" to
+    // "gardening" (hobby) and, two hops out, to "architect" (career).
+    const ctx: RecommendationContext = { interpretation: {}, signals: { zodiac: "Taurus" } };
+    const result = RecommendationService.generateRecommendations(ctx);
+
+    expect(result.hobbies.length).toBeGreaterThan(0);
+    expect(result.careers.length).toBeGreaterThan(0);
+    expect(result.hobbies.every((rec) => rec.id.includes("-graph-"))).toBe(true);
+    expect(result.careers.every((rec) => rec.id.includes("-graph-"))).toBe(true);
   });
 });

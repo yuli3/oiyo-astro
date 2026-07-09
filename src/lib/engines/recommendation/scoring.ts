@@ -179,6 +179,8 @@ export function computeMatchScore(def: RecommendationDefinition, ctx: Recommenda
   return Math.round((matchedWeight / totalWeight) * 100);
 }
 
-// TODO(Phase1 step2 통합 후): matchScore가 전 정의에 걸쳐 0(신호 없음)일 때
-// graph/traverse.ts의 neighbors()로 관계 기반 추천을 채우는 그래프 인접 fallback을 추가한다.
-// 2단계(관계 그래프, src/lib/ontology/graph/)가 아직 없어 이번 작업 범위에서는 보류.
+// Graph-adjacency fallback for when matchScore is 0 across every definition
+// in a category lives in `./graph-fallback.ts` (called from the `hobby`/
+// `career` engines, the only categories the relationship graph covers) —
+// not here, since this function scores one definition at a time and has no
+// visibility into whether the whole category came up empty.

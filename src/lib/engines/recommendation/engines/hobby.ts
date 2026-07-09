@@ -1,5 +1,6 @@
 import { Recommendation, RecommendationContext } from "../contracts";
 import { HOBBY_DEFINITIONS } from "../data/definitions";
+import { graphAdjacentRecommendations } from "../graph-fallback";
 import { computeMatchScore, MIN_DISPLAY_SCORE } from "../scoring";
 
 /**
@@ -30,8 +31,13 @@ export class HobbyEngine {
       });
     }
 
-    // TODO(Phase1 step2 통합 후): 그래프 인접 fallback — results가 비면
-    // graph/traverse.ts neighbors()로 관계 기반 추천을 채운다.
+    // No signal directly matched any definition — fall back to graph-adjacent
+    // hobbies so the user still sees a relationship-based suggestion instead
+    // of an empty list. See `../graph-fallback.ts` for why this can't just
+    // "boost" one of the definitions above.
+    if (results.length === 0) {
+      results.push(...graphAdjacentRecommendations("hobby", ctx));
+    }
 
     return results.sort((a, b) => b.matchScore - a.matchScore);
   }
