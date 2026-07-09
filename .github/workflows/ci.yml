@@ -56,7 +56,12 @@ jobs:
         # Produces dist/sitemap-index.xml + dist/sitemap-*.xml so IndexNow URL
         # collection can read them from disk instead of HTTP-fetching the live
         # site from CI (Cloudflare 403s that self-fetch — see gotcha #10).
+        # NODE_OPTIONS raises V8's old-space ceiling — the site's grown past
+        # Node's default limit on the 7GB GH-hosted runner (OOM'd at ~2GB on
+        # 2026-07-09, run 29054228016).
         run: npm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
 
       - name: Setup Python
         uses: actions/setup-python@v6
