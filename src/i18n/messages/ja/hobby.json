@@ -6,5 +6,27 @@
   "soulGuidance": "あなたの魂の天職はこれらの方向を指し示しています。",
   "common": {
     "noGuidance": "現在ガイダンスはありません。"
+  },
+  "nodes": {
+    "woodworking": {
+      "name": "木工",
+      "description": "木を通じて秩序と形を創造し、心の平安を得ます。"
+    },
+    "boxing-kickboxing": {
+      "name": "ボクシング＆キックボクシング",
+      "description": "内面の炎を放出し、ストレスを焼き尽くして強い自己を築きます。"
+    },
+    "tea-ceremony-meditation": {
+      "name": "茶道と瞑想",
+      "description": "洗練された動きと一杯の茶の静寂で、魂の不純物を洗い流します。"
+    },
+    "gardening": {
+      "name": "ガーデニング",
+      "description": "生命の循環を育みながら、自然のペースで自分を癒します。"
+    },
+    "astrophotography": {
+      "name": "天体写真",
+      "description": "広大な宇宙の瞬間を記録し、存在の驚이로움을目にします。"
+    }
   }
 }

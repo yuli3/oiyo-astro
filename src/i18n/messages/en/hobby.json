@@ -6,5 +6,27 @@
   "soulGuidance": "Your soul's calling points toward these directions.",
   "common": {
     "noGuidance": "No guidance available at this time."
+  },
+  "nodes": {
+    "woodworking": {
+      "name": "Woodworking",
+      "description": "Create order and form through wood, finding peace of mind."
+    },
+    "boxing-kickboxing": {
+      "name": "Boxing & Kickboxing",
+      "description": "Release your inner fire to burn away stress and build a strong self."
+    },
+    "tea-ceremony-meditation": {
+      "name": "Tea Ceremony & Meditation",
+      "description": "Wash away soul impurities with refined movements and the stillness of tea."
+    },
+    "gardening": {
+      "name": "Gardening",
+      "description": "Heal yourself at the pace of nature while nurturing the cycle of life."
+    },
+    "astrophotography": {
+      "name": "Astrophotography",
+      "description": "Encounter the wonder of existence by recording moments of the vast cosmos."
+    }
   }
 }

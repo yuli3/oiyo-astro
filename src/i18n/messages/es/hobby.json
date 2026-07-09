@@ -6,5 +6,27 @@
   "soulGuidance": "El llamado de tu alma apunta hacia estas direcciones.",
   "common": {
     "noGuidance": "No hay orientación disponible en este momento."
+  },
+  "nodes": {
+    "woodworking": {
+      "name": "Carpintería",
+      "description": "Crea orden y forma a través de la madera, encontrando la paz mental."
+    },
+    "boxing-kickboxing": {
+      "name": "Boxeo y Kickboxing",
+      "description": "Libera tu fuego interior para quemar el estrés y construir un yo fuerte."
+    },
+    "tea-ceremony-meditation": {
+      "name": "Ceremonia del té y Meditación",
+      "description": "Lava las impurezas del alma con movimientos refinados y la quietud del té."
+    },
+    "gardening": {
+      "name": "Jardinería",
+      "description": "Cúrese al ritmo de la naturaleza mientras nutre el ciclo de la vida."
+    },
+    "astrophotography": {
+      "name": "Astrofotografía",
+      "description": "Encuentra la maravilla de la existencia registrando momentos del vasto cosmos."
+    }
   }
 }

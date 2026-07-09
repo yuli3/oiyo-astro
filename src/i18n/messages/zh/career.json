@@ -130,7 +130,9 @@
       "submit": "提交",
       "loading": "加载中",
       "selectOption": "选择选项",
-      "insightBullets": ["见解"],
+      "insightBullets": [
+        "见解"
+      ],
       "next": "下一步",
       "previous": "上一步"
     },
@@ -160,7 +162,9 @@
     "submit": "提交",
     "loading": "加载中",
     "selectOption": "选择选项",
-    "insightBullets": ["见解"]
+    "insightBullets": [
+      "见解"
+    ]
   },
   "result": {
     "test": {
@@ -168,7 +172,9 @@
       "submit": "提交",
       "loading": "加载中",
       "selectOption": "选择选项",
-      "insightBullets": ["见解"],
+      "insightBullets": [
+        "见解"
+      ],
       "next": "下一步",
       "previous": "上一步"
     },
@@ -197,7 +203,12 @@
   "career": {
     "types": {
       "realistic": {
-        "traits": ["诚实和真诚", "实用、现实", "熟练使用工具", "独立的"],
+        "traits": [
+          "诚实和真诚",
+          "实用、现实",
+          "熟练使用工具",
+          "独立的"
+        ],
         "careerSuggestions": [
           "机械工程师",
           "电工",
@@ -213,7 +224,12 @@
         "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
       },
       "investigative": {
-        "traits": ["分析性和逻辑性", "求知欲强", "精确的", "独立思考者"],
+        "traits": [
+          "分析性和逻辑性",
+          "求知欲强",
+          "精确的",
+          "独立思考者"
+        ],
         "careerSuggestions": [
           "软件开发人员",
           "数据分析师",
@@ -229,7 +245,12 @@
         "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
       },
       "artistic": {
-        "traits": ["创意与原创", "自由精神", "富有表现力", "非常规"],
+        "traits": [
+          "创意与原创",
+          "自由精神",
+          "富有表现力",
+          "非常规"
+        ],
         "careerSuggestions": [
           "平面设计师",
           "作家",
@@ -245,7 +266,12 @@
         "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
       },
       "social": {
-        "traits": ["善解人意", "合作社", "友好的", "善于沟通"],
+        "traits": [
+          "善解人意",
+          "合作社",
+          "友好的",
+          "善于沟通"
+        ],
         "careerSuggestions": [
           "老师",
           "顾问",
@@ -261,7 +287,12 @@
         "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
       },
       "enterprising": {
-        "traits": ["雄心勃勃", "自信的", "有说服力", "精力充沛"],
+        "traits": [
+          "雄心勃勃",
+          "自信的",
+          "有说服力",
+          "精力充沛"
+        ],
         "careerSuggestions": [
           "销售经理",
           "业务主管",
@@ -277,7 +308,12 @@
         "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
       },
       "conventional": {
-        "traits": ["注重细节", "有组织", "负责任的", "高效的"],
+        "traits": [
+          "注重细节",
+          "有组织",
+          "负责任的",
+          "高效的"
+        ],
         "careerSuggestions": [
           "会计",
           "数据输入",
@@ -475,5 +511,19 @@
         "weight": 2
       }
     ]
+  },
+  "nodes": {
+    "software-engineer": {
+      "name": "软件工程师",
+      "description": "用逻辑和代码构建虚拟世界的数字建筑师。"
+    },
+    "architect": {
+      "name": "建筑师",
+      "description": "通过在空间中注入哲学，设计承载人类生活的器皿。"
+    },
+    "physician": {
+      "name": "医生",
+      "description": "探索引导生命奥秘并治愈人类疾苦的避难所守护者。"
+    }
   }
 }

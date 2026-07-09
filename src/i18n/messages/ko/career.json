@@ -130,7 +130,9 @@
       "submit": "제출하기",
       "loading": "로드 중",
       "selectOption": "옵션 선택",
-      "insightBullets": ["인사이트"],
+      "insightBullets": [
+        "인사이트"
+      ],
       "next": "다음",
       "previous": "이전의"
     },
@@ -160,7 +162,9 @@
     "submit": "제출하기",
     "loading": "로드 중",
     "selectOption": "옵션 선택",
-    "insightBullets": ["인사이트"]
+    "insightBullets": [
+      "인사이트"
+    ]
   },
   "result": {
     "test": {
@@ -168,7 +172,9 @@
       "submit": "제출하기",
       "loading": "로드 중",
       "selectOption": "옵션 선택",
-      "insightBullets": ["인사이트"],
+      "insightBullets": [
+        "인사이트"
+      ],
       "next": "다음",
       "previous": "이전의"
     },
@@ -260,7 +266,12 @@
         "workEnvironment": "창작 스튜디오, 극장, 갤러리 또는 유연한 작업 공간. 자신만의 속도로 창의력을 발휘하려면 자유가 필요합니다."
       },
       "social": {
-        "traits": ["공감", "협동조합", "친숙한", "좋은 의사소통자"],
+        "traits": [
+          "공감",
+          "협동조합",
+          "친숙한",
+          "좋은 의사소통자"
+        ],
         "careerSuggestions": [
           "선생님",
           "참사관",
@@ -276,7 +287,12 @@
         "workEnvironment": "학교, 병원, 주민센터 또는 상담실. 당신은 사람들을 돕고 소통하는 데 집중할 수 있는 환경에서 탁월합니다."
       },
       "enterprising": {
-        "traits": ["거창한", "자신감", "동기", "활력이 넘치는"],
+        "traits": [
+          "거창한",
+          "자신감",
+          "동기",
+          "활력이 넘치는"
+        ],
         "careerSuggestions": [
           "영업 관리자",
           "비즈니스 임원",
@@ -292,7 +308,12 @@
         "workEnvironment": "비즈니스 사무실, 매장 또는 리더십 위치. 경쟁적이고 결과 중심적인 환경에서 두각을 나타내십시오."
       },
       "conventional": {
-        "traits": ["세부 지향", "정리됨", "책임이 있는", "효율적인"],
+        "traits": [
+          "세부 지향",
+          "정리됨",
+          "책임이 있는",
+          "효율적인"
+        ],
         "careerSuggestions": [
           "회계사",
           "데이터 입력",
@@ -490,5 +511,19 @@
         "weight": 2
       }
     ]
+  },
+  "nodes": {
+    "software-engineer": {
+      "name": "소프트웨어 엔지니어",
+      "description": "논리와 코드로 가상의 세계를 구축하는 디지털 건축가입니다."
+    },
+    "architect": {
+      "name": "건축가",
+      "description": "공간에 철학을 담아 인간의 삶을 담는 그릇을 설계합니다."
+    },
+    "physician": {
+      "name": "의사",
+      "description": "생명의 신비를 탐구하고 인류의 고통을 치유하는 성소의 수호자입니다."
+    }
   }
 }

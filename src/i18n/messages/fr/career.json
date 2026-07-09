@@ -130,7 +130,9 @@
       "submit": "Soumettre",
       "loading": "Chargement",
       "selectOption": "Sélectionner une Option",
-      "insightBullets": ["Aperçus"],
+      "insightBullets": [
+        "Aperçus"
+      ],
       "next": "Suivant",
       "previous": "Précédent"
     },
@@ -160,7 +162,9 @@
     "submit": "Soumettre",
     "loading": "Chargement",
     "selectOption": "Sélectionner une Option",
-    "insightBullets": ["Aperçus"]
+    "insightBullets": [
+      "Aperçus"
+    ]
   },
   "result": {
     "test": {
@@ -168,7 +172,9 @@
       "submit": "Soumettre",
       "loading": "Chargement",
       "selectOption": "Sélectionner une Option",
-      "insightBullets": ["Aperçus"],
+      "insightBullets": [
+        "Aperçus"
+      ],
       "next": "Suivant",
       "previous": "Précédent"
     },
@@ -260,7 +266,12 @@
         "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
       },
       "social": {
-        "traits": ["Empathique", "Coopérative", "Amicale", "Bon communicateur"],
+        "traits": [
+          "Empathique",
+          "Coopérative",
+          "Amicale",
+          "Bon communicateur"
+        ],
         "careerSuggestions": [
           "Professeure",
           "Conseillère",
@@ -276,7 +287,12 @@
         "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
       },
       "enterprising": {
-        "traits": ["Ambitieuse", "Confiante", "Persuasive", "Énergique"],
+        "traits": [
+          "Ambitieuse",
+          "Confiante",
+          "Persuasive",
+          "Énergique"
+        ],
         "careerSuggestions": [
           "Directeur des ventes",
           "Dirigeant d'entreprise",
@@ -292,7 +308,12 @@
         "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
       },
       "conventional": {
-        "traits": ["Souci du détail", "Organisée", "Responsable", "Efficace"],
+        "traits": [
+          "Souci du détail",
+          "Organisée",
+          "Responsable",
+          "Efficace"
+        ],
         "careerSuggestions": [
           "Comptable",
           "Saisie de données",
@@ -490,5 +511,19 @@
         "weight": 2
       }
     ]
+  },
+  "nodes": {
+    "software-engineer": {
+      "name": "Ingénieur Logiciel",
+      "description": "Un architecte numérique qui construit des mondes virtuels avec logique et code."
+    },
+    "architect": {
+      "name": "Architecte",
+      "description": "Concevez des vaisseaux qui contiennent la vie humaine en infusant l'espace de philosophie."
+    },
+    "physician": {
+      "name": "Médecin",
+      "description": "Un gardien du sanctuaire qui explore les mystères de la vie et guérit la souffrance."
+    }
   }
 }

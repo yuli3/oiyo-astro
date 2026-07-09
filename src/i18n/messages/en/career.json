@@ -130,7 +130,9 @@
       "submit": "Submit",
       "loading": "Loading",
       "selectOption": "Select Option",
-      "insightBullets": ["Insights"],
+      "insightBullets": [
+        "Insights"
+      ],
       "next": "Next",
       "previous": "Previous"
     },
@@ -160,7 +162,9 @@
     "submit": "Submit",
     "loading": "Loading",
     "selectOption": "Select Option",
-    "insightBullets": ["Insights"]
+    "insightBullets": [
+      "Insights"
+    ]
   },
   "result": {
     "test": {
@@ -168,7 +172,9 @@
       "submit": "Submit",
       "loading": "Loading",
       "selectOption": "Select Option",
-      "insightBullets": ["Insights"],
+      "insightBullets": [
+        "Insights"
+      ],
       "next": "Next",
       "previous": "Previous"
     },
@@ -281,7 +287,12 @@
         "workEnvironment": "School, hospital, community center or counseling office. You excel in an environment where you can focus on helping and communicating with people."
       },
       "enterprising": {
-        "traits": ["Ambitious", "Confident", "Persuasive", "Energetic"],
+        "traits": [
+          "Ambitious",
+          "Confident",
+          "Persuasive",
+          "Energetic"
+        ],
         "careerSuggestions": [
           "Sales Manager",
           "Business Executive",
@@ -297,7 +308,12 @@
         "workEnvironment": "Business office, sales floor or leadership position. Stand out in a competitive, results-driven environment."
       },
       "conventional": {
-        "traits": ["Detail-Oriented", "Organized", "Responsible", "Efficient"],
+        "traits": [
+          "Detail-Oriented",
+          "Organized",
+          "Responsible",
+          "Efficient"
+        ],
         "careerSuggestions": [
           "Accountant",
           "Data Entry",
@@ -495,5 +511,19 @@
         "weight": 2
       }
     ]
+  },
+  "nodes": {
+    "software-engineer": {
+      "name": "Software Engineer",
+      "description": "A digital architect who builds virtual worlds with logic and code."
+    },
+    "architect": {
+      "name": "Architect",
+      "description": "Design vessels that hold human life by infusing space with philosophy."
+    },
+    "physician": {
+      "name": "Physician",
+      "description": "A guardian of the sanctuary who explores life's mysteries and heals suffering."
+    }
   }
 }

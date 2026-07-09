@@ -130,7 +130,9 @@
       "submit": "Enviar",
       "loading": "Cargando",
       "selectOption": "Seleccionar Opción",
-      "insightBullets": ["Perspectivas"],
+      "insightBullets": [
+        "Perspectivas"
+      ],
       "next": "Siguiente",
       "previous": "Anterior"
     },
@@ -160,7 +162,9 @@
     "submit": "Enviar",
     "loading": "Cargando",
     "selectOption": "Seleccionar Opción",
-    "insightBullets": ["Perspectivas"]
+    "insightBullets": [
+      "Perspectivas"
+    ]
   },
   "result": {
     "test": {
@@ -168,7 +172,9 @@
       "submit": "Enviar",
       "loading": "Cargando",
       "selectOption": "Seleccionar Opción",
-      "insightBullets": ["Perspectivas"],
+      "insightBullets": [
+        "Perspectivas"
+      ],
       "next": "Siguiente",
       "previous": "Anterior"
     },
@@ -260,7 +266,12 @@
         "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
       },
       "social": {
-        "traits": ["Empática", "Cooperativa", "Amistosa", "Buena comunicadora"],
+        "traits": [
+          "Empática",
+          "Cooperativa",
+          "Amistosa",
+          "Buena comunicadora"
+        ],
         "careerSuggestions": [
           "Maestra",
           "Consejera",
@@ -276,7 +287,12 @@
         "workEnvironment": "Offices, banks, government agencies, or structured organizations. Prefers predictable environments with clear hierarchies."
       },
       "enterprising": {
-        "traits": ["Ambiciosa", "Segura", "Persuasiva", "Energética"],
+        "traits": [
+          "Ambiciosa",
+          "Segura",
+          "Persuasiva",
+          "Energética"
+        ],
         "careerSuggestions": [
           "Gerente de ventas",
           "Ejecutiva de negocios",
@@ -495,5 +511,19 @@
         "weight": 2
       }
     ]
+  },
+  "nodes": {
+    "software-engineer": {
+      "name": "Ingeniero de Software",
+      "description": "Un arquitecto digital que construye mundos virtuales con lógica y código."
+    },
+    "architect": {
+      "name": "Arquitecto",
+      "description": "Diseña vasijas que contienen la vida humana infundiendo espacio con filosofía."
+    },
+    "physician": {
+      "name": "Médico",
+      "description": "Un guardián del santuario que explora los misterios de la vida y sana el sufrimiento."
+    }
   }
 }

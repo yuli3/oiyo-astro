@@ -6,5 +6,27 @@
   "soulGuidance": "당신의 영혼의 부르심은 이러한 방향을 향하고 있습니다.",
   "common": {
     "noGuidance": "현재로서는 안내가 없습니다."
+  },
+  "nodes": {
+    "woodworking": {
+      "name": "목공예",
+      "description": "나무 조각을 통해 질서와 형상을 창조하며 마음의 평온을 얻습니다."
+    },
+    "boxing-kickboxing": {
+      "name": "복싱 & 킥복싱",
+      "description": "내면의 불꽃을 발산하여 스트레스를 태우고 강인한 자아를 구축합니다."
+    },
+    "tea-ceremony-meditation": {
+      "name": "다도와 명상",
+      "description": "정제된 움직임과 차 한 잔의 고요함으로 영혼의 불순물을 씻어냅니다."
+    },
+    "gardening": {
+      "name": "가드닝 (원예)",
+      "description": "생명의 순환을 돌보며 자연의 속도에 맞춰 자신을 치유합니다."
+    },
+    "astrophotography": {
+      "name": "천체 사진",
+      "description": "광활한 우주의 찰나를 기록하며 존재의 경이로움을 마주합니다."
+    }
   }
 }
