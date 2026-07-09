@@ -1,5 +1,6 @@
 import { Recommendation, RecommendationContext } from "../contracts";
 import { SPIRITUALITY_DEFINITIONS } from "../data/definitions";
+import { computeMatchScore, MIN_DISPLAY_SCORE } from "../scoring";
 
 /**
  * Spirituality Recommendation Engine
@@ -10,29 +11,28 @@ export class SpiritualityEngine {
     const results: Recommendation[] = [];
 
     for (const def of SPIRITUALITY_DEFINITIONS) {
-      // Default high score for pilot
-      const score = 80;
+      const matchScore = computeMatchScore(def, ctx);
+      if (matchScore < MIN_DISPLAY_SCORE) continue;
 
-      if (score > 50) {
-        results.push({
-          category: "spirituality",
-          description: `recommendations.spirituality.${def.id}.description`,
-          icon: def.icon,
-          id: `spirituality-${def.id}`,
-          matchScore: score,
-          reasoning: {
-            explanation: `recommendations.spirituality.${def.id}.reasoning`,
-            // @ts-ignore
-            primarySource: def.reasoning.primarySource,
-            // @ts-ignore
-            secondarySource: def.reasoning.secondarySource,
-          },
-          tags: def.tags,
-          title: `recommendations.spirituality.${def.id}.title`,
-        });
-      }
+      results.push({
+        category: "spirituality",
+        description: `recommendations.spirituality.${def.id}.description`,
+        icon: def.icon,
+        id: `spirituality-${def.id}`,
+        matchScore,
+        reasoning: {
+          explanation: `recommendations.spirituality.${def.id}.reasoning`,
+          primarySource: def.reasoning.primarySource,
+          secondarySource: def.reasoning.secondarySource,
+        },
+        tags: def.tags,
+        title: `recommendations.spirituality.${def.id}.title`,
+      });
     }
 
-    return results;
+    // TODO(Phase1 step2 통합 후): 그래프 인접 fallback — results가 비면
+    // graph/traverse.ts neighbors()로 관계 기반 추천을 채운다.
+
+    return results.sort((a, b) => b.matchScore - a.matchScore);
   }
 }

@@ -1,3 +1,5 @@
+import { ProfileSignals } from "@/lib/ontology/signals";
+
 import { SixLangString } from "../interpretation/engine.contract";
 import { UniversalInterpretationResult } from "../interpretation/engine.contract";
 
@@ -46,6 +48,13 @@ export interface RecommendationContext {
     age?: number;
     gender?: string;
   };
+  /**
+   * Test/quiz + birth-derived signals that `interpretation` doesn't carry
+   * (big5, riasec, enneagram, zodiac). See `collectSignals()`
+   * (`@/lib/ontology/signals`). Optional so existing callers keep working;
+   * engines treat a missing/empty bag as "no signal" and score accordingly.
+   */
+  signals?: ProfileSignals;
 }
 
 /**

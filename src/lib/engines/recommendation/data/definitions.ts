@@ -11,11 +11,19 @@ export interface RecommendationDefinition {
   /**
    * Weights to apply to scoring.
    * If a profile matches these criteria, the score increases.
+   * See `../scoring.ts` (`computeMatchScore`) for how these are combined.
    */
   scoring: {
+    big5?: {
+      high?: Array<"A" | "C" | "E" | "N" | "O">; // dimensions expected to score high, e.g. ["O"]
+      low?: Array<"A" | "C" | "E" | "N" | "O">;
+    };
     mbti?: {
       traits?: string[]; // e.g. ["E", "N", "T", "J"]
       type?: string[]; // e.g. ["INTJ"]
+    };
+    riasec?: {
+      codes?: string[]; // Holland codes, e.g. ["E", "S"]
     };
     saju?: {
       dominantTenGod?: string[]; // e.g. ["Friend", "Rob Wealth"]
@@ -26,6 +34,9 @@ export interface RecommendationDefinition {
     };
     tci?: {
       highRequest?: string[]; // e.g. ["Novelty Seeking"]
+    };
+    zodiac?: {
+      signs?: string[]; // e.g. ["Aries", "Leo"]
     };
   };
   tags: string[];
@@ -41,8 +52,14 @@ export const CAREER_DEFINITIONS: RecommendationDefinition[] = [
       secondarySource: "mbti",
     },
     scoring: {
+      big5: {
+        high: ["E"],
+      },
       mbti: {
         traits: ["E", "J"],
+      },
+      riasec: {
+        codes: ["E", "S"],
       },
       saju: {
         dominantTenGod: ["Friend", "Rob Wealth", "Direct Officer", "7 Killing"],
@@ -59,8 +76,14 @@ export const CAREER_DEFINITIONS: RecommendationDefinition[] = [
       secondarySource: "saju",
     },
     scoring: {
+      big5: {
+        high: ["O", "C"],
+      },
       mbti: {
         traits: ["N", "T", "J"],
+      },
+      riasec: {
+        codes: ["I", "C"],
       },
       saju: {
         dominantTenGod: ["Direct Resource", "Indirect Resource", "Eating God"],
@@ -80,6 +103,9 @@ export const HOBBY_DEFINITIONS: RecommendationDefinition[] = [
       secondarySource: "tci",
     },
     scoring: {
+      big5: {
+        high: ["N"],
+      },
       saju: {
         elementBalance: {
           excess: ["Fire", "Wood"], // Too much excitement needs cooling
@@ -100,8 +126,14 @@ export const HOBBY_DEFINITIONS: RecommendationDefinition[] = [
       secondarySource: "saju",
     },
     scoring: {
+      big5: {
+        high: ["O"],
+      },
       mbti: {
         traits: ["S", "P"],
+      },
+      riasec: {
+        codes: ["R"],
       },
       saju: {
         elementBalance: {
@@ -123,6 +155,9 @@ export const PSYCHOLOGY_DEFINITIONS: RecommendationDefinition[] = [
       secondarySource: "mbti",
     },
     scoring: {
+      big5: {
+        high: ["N", "O"],
+      },
       mbti: {
         traits: ["I", "N", "F", "J"], // Example
       },
@@ -138,6 +173,9 @@ export const PSYCHOLOGY_DEFINITIONS: RecommendationDefinition[] = [
       secondarySource: "tci",
     },
     scoring: {
+      big5: {
+        high: ["N"],
+      },
       tci: {
         highRequest: ["Harm Avoidance"],
       },
@@ -159,6 +197,9 @@ export const MYTHOLOGY_DEFINITIONS: RecommendationDefinition[] = [
       saju: {
         dominantTenGod: ["7 Killing", "Direct Officer"],
       },
+      zodiac: {
+        signs: ["Aries", "Leo", "Sagittarius"], // Fire signs, heroic drive
+      },
     },
     tags: ["Campbell", "Archetype", "Purpose"],
   },
@@ -173,6 +214,9 @@ export const MYTHOLOGY_DEFINITIONS: RecommendationDefinition[] = [
     scoring: {
       mbti: {
         traits: ["E", "N", "T", "P"],
+      },
+      zodiac: {
+        signs: ["Gemini", "Sagittarius", "Aquarius"], // Chaotic, boundary-crossing signs
       },
     },
     tags: ["Chaos", "Innovation", "Change"],
@@ -189,6 +233,9 @@ export const SCIENCE_DEFINITIONS: RecommendationDefinition[] = [
       secondarySource: "tci",
     },
     scoring: {
+      riasec: {
+        codes: ["I"],
+      },
       tci: {
         highRequest: ["Novelty Seeking"],
       },
@@ -207,10 +254,16 @@ export const SPIRITUALITY_DEFINITIONS: RecommendationDefinition[] = [
       secondarySource: "saju",
     },
     scoring: {
+      big5: {
+        high: ["A"],
+      },
       saju: {
         elementBalance: {
           excess: ["Water"],
         },
+      },
+      zodiac: {
+        signs: ["Cancer", "Scorpio", "Pisces"], // Water signs, flow-aligned
       },
     },
     tags: ["Wu Wei", "Peace", "Balance"],
