@@ -126,5 +126,32 @@
     "minutes": "分钟",
     "startTest": "开始测试",
     "browseAll": "浏览所有测试"
+  },
+  "cards": {
+    "sectionTitle": "为你推荐",
+    "sectionSubtitle": "根据你目前的信号挑选",
+    "matchLabel": "匹配度",
+    "why": "为什么推荐这个？",
+    "explore": "继续探索",
+    "emptyTitle": "暂时还没有推荐",
+    "emptyDescription": "先告诉我们更多信息 — 试试八字或性格测试吧",
+    "categories": {
+      "career": "职业",
+      "hobby": "爱好",
+      "mythology": "神话",
+      "psychology": "心理",
+      "science": "科学",
+      "spirituality": "灵性"
+    },
+    "sources": {
+      "mbti": "MBTI",
+      "saju": "八字",
+      "big5": "大五人格",
+      "riasec": "RIASEC",
+      "zodiac": "星座",
+      "tci": "气质测验"
+    },
+    "reasonTemplate": "{signals}促成了这个推荐",
+    "reasonFallback": "与你现有的信号相关联"
   }
 }

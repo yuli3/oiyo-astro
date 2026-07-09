@@ -51,6 +51,20 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
     setHydrated(true);
   }, []);
 
+  // "다음 탐색" deep link from RecommendationCards (Phase 1 / Track A, step 4
+  // result cards): jump focus straight to the graph node behind whichever
+  // signal drove that card's match, resetting the breadcrumb to a fresh
+  // root->node path rather than appending onto wherever the user was
+  // exploring before.
+  useEffect(() => {
+    function handleFocusRequest(e: Event) {
+      const nodeId = (e as CustomEvent<{ nodeId?: string }>).detail?.nodeId;
+      if (nodeId && getNode(nodeId)) setBreadcrumb([null, nodeId]);
+    }
+    window.addEventListener("oiyo:orbit-focus", handleFocusRequest);
+    return () => window.removeEventListener("oiyo:orbit-focus", handleFocusRequest);
+  }, []);
+
   const focus = breadcrumb[breadcrumb.length - 1];
   const ring = useMemo(() => ringForFocus(focus, seedIds), [focus, seedIds]);
 
@@ -87,7 +101,7 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
   const showEmpty = hydrated && focus === null && seedIds.length === 0;
 
   return (
-    <div className="rounded-[28px] border border-green-100 bg-white p-4 shadow-sm sm:p-5">
+    <div id="relation-orbit" className="rounded-[28px] border border-green-100 bg-white p-4 shadow-sm sm:p-5">
       <div className="relative mx-auto" style={{ width: SIZE, height: SIZE }}>
         <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 text-center">
           <span className="flex h-16 w-16 items-center justify-center rounded-full bg-green-700 text-2xl text-white shadow-sm transition-all duration-300">

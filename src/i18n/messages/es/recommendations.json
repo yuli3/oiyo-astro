@@ -126,5 +126,32 @@
     "minutes": "mín.",
     "startTest": "Comenzar Test",
     "browseAll": "Ver Todos los Tests"
+  },
+  "cards": {
+    "sectionTitle": "Recomendado para ti",
+    "sectionSubtitle": "Elegido a partir de las señales que compartiste",
+    "matchLabel": "Coincidencia",
+    "why": "¿Por qué esta recomendación?",
+    "explore": "Explorar lo siguiente",
+    "emptyTitle": "Aún no hay recomendaciones",
+    "emptyDescription": "Cuéntanos un poco más primero — prueba una lectura Saju o un test de personalidad",
+    "categories": {
+      "career": "Carrera",
+      "hobby": "Afición",
+      "mythology": "Mitología",
+      "psychology": "Psicología",
+      "science": "Ciencia",
+      "spirituality": "Espiritualidad"
+    },
+    "sources": {
+      "mbti": "MBTI",
+      "saju": "Saju",
+      "big5": "Cinco Grandes",
+      "riasec": "RIASEC",
+      "zodiac": "Zodiaco",
+      "tci": "Temperamento"
+    },
+    "reasonTemplate": "{signals} impulsaron esta recomendación",
+    "reasonFallback": "Conectado con tus señales actuales"
   }
 }

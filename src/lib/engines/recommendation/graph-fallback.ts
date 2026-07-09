@@ -54,7 +54,8 @@ const HOP_LIMIT = 20;
 /** Mirrors `BIG5_HIGH_THRESHOLD` in `./scoring.ts` — a dimension only counts as a "signal" worth walking the graph from when it's clearly high. */
 const BIG5_HIGH_THRESHOLD = 60;
 
-const RIASEC_LETTER_TO_NODE_ID: Record<string, string> = {
+/** Exported so `./reasoning.ts` (`explainMatch`) can map a matched RIASEC letter onto the same graph trait node id, for the "다음 탐색" deep link. */
+export const RIASEC_LETTER_TO_NODE_ID: Record<string, string> = {
   A: "artistic",
   C: "conventional",
   E: "enterprising",

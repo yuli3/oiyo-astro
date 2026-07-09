@@ -26,7 +26,7 @@ import { RecommendationDefinition } from "./data/definitions";
 
 type ScoringRules = RecommendationDefinition["scoring"];
 
-interface ResolvedProfile {
+export interface ResolvedProfile {
   big5?: ProfileSignals["big5"];
   mbtiTraits: string[];
   mbtiType?: string;
@@ -37,11 +37,11 @@ interface ResolvedProfile {
   zodiac?: string;
 }
 
-const BIG5_HIGH_THRESHOLD = 60;
-const BIG5_LOW_THRESHOLD = 40;
+export const BIG5_HIGH_THRESHOLD = 60;
+export const BIG5_LOW_THRESHOLD = 40;
 
 /** Relative weight of each declared scoring category. Tuned so no single category dominates a match score. */
-const CATEGORY_WEIGHT = {
+export const CATEGORY_WEIGHT = {
   big5: 25,
   mbtiTraits: 30,
   mbtiType: 30,
@@ -56,7 +56,8 @@ const CATEGORY_WEIGHT = {
 /** Only surface recommendations with a meaningful signal match, not every definition at a near-zero score. */
 export const MIN_DISPLAY_SCORE = 20;
 
-function resolveProfile(ctx: RecommendationContext): ResolvedProfile {
+/** Exported so `./reasoning.ts` (`explainMatch`) can build its "why" signals from exactly the same resolved profile `computeMatchScore` scores against — no separate re-derivation that could drift out of sync. */
+export function resolveProfile(ctx: RecommendationContext): ResolvedProfile {
   const { interpretation, signals } = ctx;
 
   const mbtiType = interpretation.mbti?.code?.toUpperCase() ?? signals?.mbti?.type;

@@ -126,5 +126,32 @@
     "minutes": "분",
     "startTest": "테스트 시작",
     "browseAll": "모든 테스트 찾아보기"
+  },
+  "cards": {
+    "sectionTitle": "당신을 위한 추천",
+    "sectionSubtitle": "지금까지 모은 신호로 골라봤어요",
+    "matchLabel": "매칭도",
+    "why": "왜 이걸 추천했나요?",
+    "explore": "다음 탐색",
+    "emptyTitle": "아직 추천할 게 없어요",
+    "emptyDescription": "먼저 몇 가지를 알려주세요 — 사주나 성격 테스트를 하나 해보세요",
+    "categories": {
+      "career": "진로",
+      "hobby": "취미",
+      "mythology": "신화",
+      "psychology": "심리",
+      "science": "과학",
+      "spirituality": "영성"
+    },
+    "sources": {
+      "mbti": "MBTI",
+      "saju": "사주",
+      "big5": "성격 5요인",
+      "riasec": "RIASEC",
+      "zodiac": "별자리",
+      "tci": "기질검사"
+    },
+    "reasonTemplate": "{signals}가 이 추천을 이끌었어요",
+    "reasonFallback": "당신의 신호와 연결된 항목이에요"
   }
 }

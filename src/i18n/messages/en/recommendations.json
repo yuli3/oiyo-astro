@@ -126,5 +126,32 @@
     "minutes": "min",
     "startTest": "Start Test",
     "browseAll": "Browse All Tests"
+  },
+  "cards": {
+    "sectionTitle": "Recommended for you",
+    "sectionSubtitle": "Picked from the signals you've shared so far",
+    "matchLabel": "Match",
+    "why": "Why this recommendation?",
+    "explore": "Explore next",
+    "emptyTitle": "Nothing to recommend yet",
+    "emptyDescription": "Tell us a bit more first — try a Saju reading or a personality test",
+    "categories": {
+      "career": "Career",
+      "hobby": "Hobby",
+      "mythology": "Mythology",
+      "psychology": "Psychology",
+      "science": "Science",
+      "spirituality": "Spirituality"
+    },
+    "sources": {
+      "mbti": "MBTI",
+      "saju": "Saju",
+      "big5": "Big Five",
+      "riasec": "RIASEC",
+      "zodiac": "Zodiac",
+      "tci": "Temperament"
+    },
+    "reasonTemplate": "{signals} shaped this recommendation",
+    "reasonFallback": "Connected to your existing signals"
   }
 }

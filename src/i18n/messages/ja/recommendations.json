@@ -126,5 +126,32 @@
     "minutes": "分",
     "startTest": "テスト開始",
     "browseAll": "すべてのテストを見る"
+  },
+  "cards": {
+    "sectionTitle": "あなたへのおすすめ",
+    "sectionSubtitle": "これまでの信号から選びました",
+    "matchLabel": "マッチ度",
+    "why": "なぜこれがおすすめ？",
+    "explore": "次を探る",
+    "emptyTitle": "まだおすすめがありません",
+    "emptyDescription": "まずは少し教えてください — 四柱推命や性格テストを試してみましょう",
+    "categories": {
+      "career": "キャリア",
+      "hobby": "趣味",
+      "mythology": "神話",
+      "psychology": "心理",
+      "science": "科学",
+      "spirituality": "スピリチュアル"
+    },
+    "sources": {
+      "mbti": "MBTI",
+      "saju": "四柱推命",
+      "big5": "ビッグファイブ",
+      "riasec": "RIASEC",
+      "zodiac": "星座",
+      "tci": "気質検査"
+    },
+    "reasonTemplate": "{signals}がこの推薦を後押ししました",
+    "reasonFallback": "あなたの信号とつながっている項目です"
   }
 }
