@@ -5,6 +5,7 @@ import ResultNextSteps from '../shared/ResultNextSteps'
 import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
+import { recordTestResult } from '@/lib/user/test-results';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -339,6 +340,24 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
     if (scores) {
       writeResultCode('b', [scores.O, scores.C, scores.E, scores.A, scores.N].map((n) => Math.round(n)).join('-'))
     }
+  }, [scores])
+
+  // Record the result once, only for an actual completion (not a shared-link restore via `restored`).
+  useEffect(() => {
+    if (!scores || answers.length !== questions.length) return
+    const dimKeys: Dim[] = ['O', 'C', 'E', 'A', 'N']
+    const dominantDim = dimKeys.reduce((a, b) => scores[a] >= scores[b] ? a : b)
+    recordTestResult({
+      kind: 'psychometric',
+      testId: 'big5',
+      title: lb.title,
+      resultLabel: `${DIM_META[dominantDim][locale].label} ${scores[dominantDim]}%`,
+      inputs: { answers },
+      result: { O: scores.O, C: scores.C, E: scores.E, A: scores.A, N: scores.N },
+      locale,
+      sourcePath: `/${locale}/big5/test`,
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scores])
 
   function restart() {

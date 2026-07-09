@@ -5,6 +5,7 @@ import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import AnimatedNumber from '../ui/AnimatedNumber'
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
+import { recordTestResult } from '@/lib/user/test-results';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -581,6 +582,25 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
       const dom = keys.reduce((a, b) => scores[a] >= scores[b] ? a : b)
       writeResultCode('type', dom)
     }
+  }, [scores])
+
+  // Record the result once, only for an actual completion (not a shared-link restore via `restored`).
+  useEffect(() => {
+    if (!scores || answers.length !== questions.length) return
+    const typeKeys = Object.keys(scores) as EnneaType[]
+    const dominantType = typeKeys.reduce((a, b) => scores[a] >= scores[b] ? a : b)
+    const dominantResult = TYPE_RESULTS[dominantType][locale]
+    recordTestResult({
+      kind: 'psychometric',
+      testId: 'enneagram',
+      title: lb.title,
+      resultLabel: `${lb.typeLabel} ${dominantType} — ${dominantResult.name}`,
+      inputs: { answers },
+      result: { type: dominantType },
+      locale: lp,
+      sourcePath: `/${lp}/enneagram/test`,
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scores])
 
   function restart() {

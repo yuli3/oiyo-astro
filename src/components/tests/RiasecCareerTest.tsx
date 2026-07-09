@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
+import { recordTestResult } from '@/lib/user/test-results'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type RiasecType = 'R' | 'I' | 'A' | 'S' | 'E' | 'C'
@@ -208,6 +209,24 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
   }
 
   function restart() { setScores({ R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 }); setCurrent(0); setDone(false) }
+
+  // Record the result once, when the quiz is actually finished.
+  useEffect(() => {
+    if (!done) return
+    const sorted = (Object.keys(scores) as RiasecType[]).sort((a, b) => scores[b] - scores[a])
+    const code = sorted.slice(0, 3).join('')
+    recordTestResult({
+      kind: 'psychometric',
+      testId: 'riasec',
+      title: lb.title,
+      resultLabel: code,
+      inputs: { scores },
+      result: { code, scores },
+      locale,
+      sourcePath: `/${locale}/riasec-career-test`,
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [done])
 
   function share() {
     const sorted = (Object.keys(scores) as RiasecType[]).sort((a, b) => scores[b] - scores[a])

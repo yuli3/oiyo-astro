@@ -4,6 +4,7 @@ import ResultNextSteps from '../shared/ResultNextSteps'
 import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
+import { recordTestResult } from '@/lib/user/test-results';
 
 export type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -209,6 +210,22 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
       writeResultCode('type', mbtiType)
     }
   }, [showResult, isComplete, forcedType, mbtiType, profile])
+
+  // Record the result once, only for an actual completion (not a shared-link revisit via forcedType).
+  useEffect(() => {
+    if (!showResult || !isComplete || !profile) return
+    recordTestResult({
+      kind: 'psychometric',
+      testId: 'mbti',
+      title: labels.title,
+      resultLabel: title,
+      inputs: { answers },
+      result: { type: mbtiType },
+      locale: l,
+      sourcePath: `/${l}/mbti/test`,
+    })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [showResult, isComplete])
 
   if (showResult && (isComplete || forcedType) && profile) {
     return (
