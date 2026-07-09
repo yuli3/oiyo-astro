@@ -2,6 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import OntologyBirthIsland from '../../../components/OntologyBirthIsland';
 import { ProfileMindmap } from '../../../components/ontology/ProfileMindmap';
+import { OntologyRelationOrbit } from '../../../components/ontology/OntologyRelationOrbit';
 import WikiDefinitionLink from '../../../components/shared/WikiDefinitionLink.astro';
 import { laneOf, LANE_META } from '../../../lib/ontology/registry/ontology-systems';
 import { LOCALES, getTranslations } from '../../../i18n';
@@ -19,13 +20,14 @@ const ui: Record<Locale, {
   eyebrow: string; title: string; sub: string; cta: string; ctaSub: string;
   progress: string; nextStep: string; deepTitle: string; deepSub: string;
   recorded: string; open: string; locked: string; allTools: string;
+  orbitTitle: string; orbitSub: string;
 }> = {
-  ko: { eyebrow: '존재론 · 나의 지도', title: '나를 하나로 줄이지 않는 존재 지도', sub: '타고난 것 · 테스트로 드러난 것 · 내가 고른 것을 한곳에서. 모든 기록은 이 브라우저에만 저장됩니다.', cta: '내 프로필 정리하기', ctaSub: '생년월일부터 시작해 좌표를 채워가세요', progress: '완성도', nextStep: '다음 한 걸음', deepTitle: '심화 탐색 — 모든 좌표를 한 화면에서', deepSub: '사주·자미두수·바이오리듬 등 모든 엔진을 겹쳐 읽는 작업대', recorded: '기록됨', open: '해보기', locked: '입력 필요', allTools: 'oiyo의 모든 도구' },
-  en: { eyebrow: 'Ontology · your map', title: 'A map of being that never reduces you to one type', sub: 'What you were born with · what tests reveal · what you choose — in one place. Everything stays in this browser only.', cta: 'Organize my profile', ctaSub: 'Start with your birth date and fill in your coordinates', progress: 'Completion', nextStep: 'Next step', deepTitle: 'Deep dive — every coordinate on one canvas', deepSub: 'A workbench layering Saju, Zi Wei, biorhythm and more', recorded: 'Recorded', open: 'Try it', locked: 'Input needed', allTools: 'All oiyo tools' },
-  ja: { eyebrow: '存在論 · 私の地図', title: '一つのタイプに縮めない存在地図', sub: '生まれ持ったもの・テストで分かるもの・自分で選ぶものを一つに。すべてこのブラウザだけに保存。', cta: 'プロフィールを整理', ctaSub: '生年月日から座標を埋めていく', progress: '完成度', nextStep: '次の一歩', deepTitle: '深掘り — すべての座標を一画面で', deepSub: '四柱・紫微・バイオリズムなどを重ねる作業台', recorded: '記録済み', open: '試す', locked: '入力必要', allTools: 'oiyoの全ツール' },
-  zh: { eyebrow: '存在论 · 我的地图', title: '不把你缩成单一类型的存在地图', sub: '与生俱来 · 测验揭示 · 你的选择，集于一处。全部只保存在此浏览器。', cta: '整理我的资料', ctaSub: '从出生日期开始填充坐标', progress: '完成度', nextStep: '下一步', deepTitle: '深入 — 所有坐标在一个画面', deepSub: '叠加八字、紫微、生物节律等的工作台', recorded: '已记录', open: '试试', locked: '需输入', allTools: 'oiyo 所有工具' },
-  fr: { eyebrow: 'Ontologie · votre carte', title: 'Une carte de l’être qui ne vous réduit jamais', sub: 'L’inné · ce que révèlent les tests · ce que vous choisissez — en un lieu. Tout reste dans ce navigateur.', cta: 'Organiser mon profil', ctaSub: 'Commencez par votre date de naissance', progress: 'Progression', nextStep: 'Étape suivante', deepTitle: 'Exploration — toutes les coordonnées sur une toile', deepSub: 'Un atelier superposant Saju, Zi Wei, biorythme et plus', recorded: 'Enregistré', open: 'Essayer', locked: 'Saisie requise', allTools: 'Tous les outils oiyo' },
-  es: { eyebrow: 'Ontología · tu mapa', title: 'Un mapa del ser que nunca te reduce', sub: 'Lo innato · lo que revelan los tests · lo que eliges — en un lugar. Todo queda en este navegador.', cta: 'Organizar mi perfil', ctaSub: 'Empieza con tu fecha de nacimiento', progress: 'Progreso', nextStep: 'Siguiente paso', deepTitle: 'Exploración — todas las coordenadas en un lienzo', deepSub: 'Un taller que superpone Saju, Zi Wei, biorritmo y más', recorded: 'Registrado', open: 'Probar', locked: 'Falta dato', allTools: 'Todas las herramientas oiyo' },
+  ko: { eyebrow: '존재론 · 나의 지도', title: '나를 하나로 줄이지 않는 존재 지도', sub: '타고난 것 · 테스트로 드러난 것 · 내가 고른 것을 한곳에서. 모든 기록은 이 브라우저에만 저장됩니다.', cta: '내 프로필 정리하기', ctaSub: '생년월일부터 시작해 좌표를 채워가세요', progress: '완성도', nextStep: '다음 한 걸음', deepTitle: '심화 탐색 — 모든 좌표를 한 화면에서', deepSub: '사주·자미두수·바이오리듬 등 모든 엔진을 겹쳐 읽는 작업대', recorded: '기록됨', open: '해보기', locked: '입력 필요', allTools: 'oiyo의 모든 도구', orbitTitle: '관계 궤도 — 나에서 뻗어나가는 것들', orbitSub: '신호에서 시작해 한 걸음씩 관계를 따라가 보세요' },
+  en: { eyebrow: 'Ontology · your map', title: 'A map of being that never reduces you to one type', sub: 'What you were born with · what tests reveal · what you choose — in one place. Everything stays in this browser only.', cta: 'Organize my profile', ctaSub: 'Start with your birth date and fill in your coordinates', progress: 'Completion', nextStep: 'Next step', deepTitle: 'Deep dive — every coordinate on one canvas', deepSub: 'A workbench layering Saju, Zi Wei, biorhythm and more', recorded: 'Recorded', open: 'Try it', locked: 'Input needed', allTools: 'All oiyo tools', orbitTitle: 'Relation orbit — what radiates from you', orbitSub: 'Start from your signals and follow one connection at a time' },
+  ja: { eyebrow: '存在論 · 私の地図', title: '一つのタイプに縮めない存在地図', sub: '生まれ持ったもの・テストで分かるもの・自分で選ぶものを一つに。すべてこのブラウザだけに保存。', cta: 'プロフィールを整理', ctaSub: '生年月日から座標を埋めていく', progress: '完成度', nextStep: '次の一歩', deepTitle: '深掘り — すべての座標を一画面で', deepSub: '四柱・紫微・バイオリズムなどを重ねる作業台', recorded: '記録済み', open: '試す', locked: '入力必要', allTools: 'oiyoの全ツール', orbitTitle: '関係の軌道 — 私から広がるもの', orbitSub: 'シグナルから始めて、一歩ずつ関係をたどってみましょう' },
+  zh: { eyebrow: '存在论 · 我的地图', title: '不把你缩成单一类型的存在地图', sub: '与生俱来 · 测验揭示 · 你的选择，集于一处。全部只保存在此浏览器。', cta: '整理我的资料', ctaSub: '从出生日期开始填充坐标', progress: '完成度', nextStep: '下一步', deepTitle: '深入 — 所有坐标在一个画面', deepSub: '叠加八字、紫微、生物节律等的工作台', recorded: '已记录', open: '试试', locked: '需输入', allTools: 'oiyo 所有工具', orbitTitle: '关系轨道 — 从我延伸出去的一切', orbitSub: '从你的信号出发，一步步追踪关联' },
+  fr: { eyebrow: 'Ontologie · votre carte', title: 'Une carte de l’être qui ne vous réduit jamais', sub: 'L’inné · ce que révèlent les tests · ce que vous choisissez — en un lieu. Tout reste dans ce navigateur.', cta: 'Organiser mon profil', ctaSub: 'Commencez par votre date de naissance', progress: 'Progression', nextStep: 'Étape suivante', deepTitle: 'Exploration — toutes les coordonnées sur une toile', deepSub: 'Un atelier superposant Saju, Zi Wei, biorythme et plus', recorded: 'Enregistré', open: 'Essayer', locked: 'Saisie requise', allTools: 'Tous les outils oiyo', orbitTitle: 'Orbite relationnelle — ce qui rayonne de vous', orbitSub: 'Partez de vos signaux et suivez les liens un par un' },
+  es: { eyebrow: 'Ontología · tu mapa', title: 'Un mapa del ser que nunca te reduce', sub: 'Lo innato · lo que revelan los tests · lo que eliges — en un lugar. Todo queda en este navegador.', cta: 'Organizar mi perfil', ctaSub: 'Empieza con tu fecha de nacimiento', progress: 'Progreso', nextStep: 'Siguiente paso', deepTitle: 'Exploración — todas las coordenadas en un lienzo', deepSub: 'Un taller que superpone Saju, Zi Wei, biorritmo y más', recorded: 'Registrado', open: 'Probar', locked: 'Falta dato', allTools: 'Todas las herramientas oiyo', orbitTitle: 'Órbita de relaciones — lo que irradia de ti', orbitSub: 'Parte de tus señales y sigue las conexiones paso a paso' },
 };
 const u = ui[locale] ?? ui.en;
 const innate = laneOf('innate');
@@ -107,6 +109,17 @@ const lm = LANE_META;
         <p class="text-xs text-green-600">{lm.chosen.sub[locale]}</p>
       </div>
       <ProfileMindmap locale={locale} client:visible />
+    </section>
+
+    <!-- Lane 4: 관계 궤도 (Focus+Orbit radial explorer) -->
+    <section class="mt-8">
+      <div class="mb-3">
+        <h2 class="flex items-center gap-2 text-lg font-black text-green-950">
+          <span aria-hidden="true">🧭</span>{u.orbitTitle}
+        </h2>
+        <p class="text-xs text-green-600">{u.orbitSub}</p>
+      </div>
+      <OntologyRelationOrbit locale={locale} client:visible />
     </section>
 
     <!-- 심화 탐색 아일랜드는 프로덕션에서 제외(사용자 요청 2026-07-04) — 보관: /ontology/template/deep (noindex). -->

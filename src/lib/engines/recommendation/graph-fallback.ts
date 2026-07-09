@@ -67,8 +67,13 @@ const RIASEC_LETTER_TO_NODE_ID: Record<string, string> = {
  * Trait/element/zodiac graph node ids implied by the user's raw profile
  * signals. These are the only entry points into the graph — `interpretation`
  * data (mbti type, saju ten-gods, tci) has no corresponding `NodeKind`.
+ *
+ * Exported for reuse by the relation-orbit UI's seed ring
+ * (`@/lib/ontology/graph/orbit.ts`, Phase 1 step 4) — the "나" virtual
+ * center's first ring is exactly these ids, so it's imported rather than
+ * re-derived.
  */
-function signalNodeIds(signals: ProfileSignals | undefined): string[] {
+export function signalNodeIds(signals: ProfileSignals | undefined): string[] {
   if (!signals) return [];
   const ids: string[] = [];
 
