@@ -6,6 +6,7 @@ import CopyResultLink from '../shared/CopyResultLink';
 import AnimatedNumber from '../ui/AnimatedNumber'
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import { recordTestResult } from '@/lib/user/test-results';
+import { gaEvent } from '@/lib/analytics/ga-event';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -600,6 +601,7 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
       locale: lp,
       sourcePath: `/${lp}/enneagram/test`,
     })
+    gaEvent('test_completed', { test_id: 'enneagram' })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scores])
 
@@ -612,6 +614,7 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
 
   function share() {
     if (!scores) return
+    gaEvent('share_click', { test_id: 'enneagram' })
     const url = window.location.href
     const typeKeys = Object.keys(scores) as EnneaType[]
     const dominant = typeKeys.reduce((a, b) => scores[a] >= scores[b] ? a : b)

@@ -9,6 +9,10 @@ interface Props {
   resultTitle: string;
   emoji?: string;
   description?: string;
+  // Fired on click, before the (async) image work — lets callers with no
+  // local share()/writeResultHash of their own (MBTI, Natal chart) still
+  // measure a share-button click. Optional so other callers are unaffected.
+  onShareClick?: () => void;
 }
 
 const LABELS: Record<Locale, { share: string; working: string; downloaded: string; failed: string }> = {
@@ -20,12 +24,13 @@ const LABELS: Record<Locale, { share: string; working: string; downloaded: strin
   es: { share: 'Guardar y compartir imagen', working: 'Creando imagen…', downloaded: '¡Imagen guardada!', failed: 'No se pudo crear la imagen' },
 };
 
-export default function ShareResultButton({ locale, heading, resultTitle, emoji, description }: Props) {
+export default function ShareResultButton({ locale, heading, resultTitle, emoji, description, onShareClick }: Props) {
   const t = LABELS[(locale as Locale)] ?? LABELS.en;
   const [state, setState] = useState<'idle' | 'working' | 'done' | 'error'>('idle');
 
   const onShare = async () => {
     if (state === 'working') return;
+    onShareClick?.();
     setState('working');
     const payload: ShareCardPayload = {
       heading,

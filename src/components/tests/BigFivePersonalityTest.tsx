@@ -6,6 +6,7 @@ import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import { recordTestResult } from '@/lib/user/test-results';
+import { gaEvent } from '@/lib/analytics/ga-event';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -357,6 +358,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
       locale,
       sourcePath: `/${locale}/big5/test`,
     })
+    gaEvent('test_completed', { test_id: 'big5' })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scores])
 
@@ -369,6 +371,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
 
   function share() {
     if (!scores) return
+    gaEvent('share_click', { test_id: 'big5' })
     const url = window.location.href
     const dimKeys: Dim[] = ['O', 'C', 'E', 'A', 'N']
     const dominant = dimKeys.reduce((a, b) => scores[a] >= scores[b] ? a : b)

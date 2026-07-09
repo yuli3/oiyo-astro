@@ -20,6 +20,7 @@ import {
 } from "@/lib/ontology/export-serializers";
 import { resolveNodeLabel } from "@/lib/ontology/graph/label";
 import { writeResultHash } from "@/lib/result-permalink";
+import { gaEvent } from "@/lib/analytics/ga-event";
 
 // Track D (Phase 1, step 5, final): export the full ontology profile —
 // signals + full test history + every >= MIN_DISPLAY_SCORE recommendation +
@@ -216,12 +217,14 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
   const summaryLine = (key: string) => labels[key] ?? key;
 
   async function handleCopy() {
+    gaEvent("ontology_export", { format });
     await navigator.clipboard.writeText(content);
     setCopied(true);
     window.setTimeout(() => setCopied(false), 1400);
   }
 
   function handleDownload() {
+    gaEvent("ontology_export", { format });
     const filename = `oiyo-ontology${format === "soul" ? "-SOUL" : ""}.${FORMAT_EXT[format]}`;
     download(content, filename, FORMAT_MIME[format]);
   }
@@ -231,6 +234,7 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
   // `writeResultHash` returns null on the size guard or server-side call —
   // surfaced as a disabled/explained state, never a crash.
   function handleShare() {
+    gaEvent("ontology_export", { format: "permalink" });
     const state = collectResultPermalinkState();
     const url = writeResultHash(ONTOLOGY_EXPORT_PERMALINK_TOOL_ID, state);
     if (!url) {
@@ -247,6 +251,7 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
   }
 
   async function handleDownloadPng() {
+    gaEvent("ontology_export", { format: "png" });
     setPngState("busy");
     const blob = await captureExportPng("ontology-export-summary-card");
     if (!blob) {

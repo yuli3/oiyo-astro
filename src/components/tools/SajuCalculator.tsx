@@ -7,6 +7,7 @@ import type { SajuResult, HeavenlyStem, EarthlyBranch } from '../../lib/ontology
 import YongsinSection from './saju/YongsinSection';
 import LifeCategoriesSection from './saju/LifeCategoriesSection';
 import { decodeResult, writeResultHash } from '../../lib/result-permalink';
+import { gaEvent } from '../../lib/analytics/ga-event';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 
@@ -570,6 +571,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   }, []);
 
   function share() {
+    gaEvent('share_click', { test_id: 'saju' });
     const state: PermalinkState = { year, month, day, hour, gender };
     const url = writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, state) ?? window.location.href;
     if (navigator.share) {
@@ -643,6 +645,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     // 입력을 프로필에 저장 → 다른 도구(별자리·바이오리듬·주기형 운세)로 전파.
     saveBirth({ year, month, day: clampedDay, hour, gender });
     setDone(true);
+    gaEvent('test_completed', { test_id: 'saju' });
   }
 
   const PillarCard = ({ label, role, stemIdx, branchIdx }: { label: string; role: string; stemIdx: number; branchIdx: number }) => {

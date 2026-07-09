@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import { recordTestResult } from '@/lib/user/test-results'
+import { gaEvent } from '@/lib/analytics/ga-event'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 type RiasecType = 'R' | 'I' | 'A' | 'S' | 'E' | 'C'
@@ -225,10 +226,12 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
       locale,
       sourcePath: `/${locale}/riasec-career-test`,
     })
+    gaEvent('test_completed', { test_id: 'riasec' })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [done])
 
   function share() {
+    gaEvent('share_click', { test_id: 'riasec' })
     const sorted = (Object.keys(scores) as RiasecType[]).sort((a, b) => scores[b] - scores[a])
     const code = sorted.slice(0, 3).join('')
     const url = window.location.href

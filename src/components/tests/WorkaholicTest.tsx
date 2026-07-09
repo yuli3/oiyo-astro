@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultShareImage from '../shared/ResultShareImage'
 import { decodeResult, writeResultHash } from '../../lib/result-permalink'
+import { gaEvent } from '../../lib/analytics/ga-event'
 
 // T6/#32 permalink tool id — must stay stable, it is embedded in shared URLs.
 const PERMALINK_TOOL_ID = 'workaholic-test'
@@ -306,6 +307,7 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
     if (current + 1 >= questions.length) {
       setAnswers(next)
       setDone(true)
+      gaEvent('test_completed', { test_id: 'workaholic' })
     } else {
       setAnswers(next)
       setCurrent(current + 1)
@@ -331,6 +333,7 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
   }
 
   function share() {
+    gaEvent('share_click', { test_id: 'workaholic' })
     const { overall } = calcScores(answers)
     // T6/#32: prefer a permalink that reproduces this exact result; fall back
     // to the plain page URL (prior behavior) if encoding fails or is too large.

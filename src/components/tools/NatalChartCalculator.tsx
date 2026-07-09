@@ -13,6 +13,7 @@ import { SIGN_INFO, CITIES, type NatalLocale } from '../../lib/ontology/natal/si
 import { readResultCode } from '../../lib/result-url';
 import { decodeResult, writeResultHash } from '../../lib/result-permalink';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
+import { gaEvent } from '../../lib/analytics/ga-event';
 
 interface Props {
   locale: string;
@@ -335,6 +336,7 @@ export default function NatalChartCalculator({ locale }: Props) {
       saveBirth({ year: yy, month: mm, day: dd, hour: hasTime ? Number(form.time.split(':')[0]) : null });
     }
     writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, { date: form.date, time: hasTime ? form.time : null, city: form.city });
+    gaEvent('test_completed', { test_id: 'natal' });
   }
 
   function reset() {
@@ -418,8 +420,9 @@ export default function NatalChartCalculator({ locale }: Props) {
           resultTitle={`${SIGN_INFO[chart.sun.sign].name[loc]} ${t.sun}`}
           emoji={SIGN_INFO[chart.sun.sign].emoji}
           description={shareDesc}
+          onShareClick={() => gaEvent('share_click', { test_id: 'natal' })}
         />
-        <CopyResultLink locale={loc} />
+        <CopyResultLink locale={loc} onCopyClick={() => gaEvent('share_click', { test_id: 'natal' })} />
         <p className="mt-1.5 text-center text-xs text-amber-600">{PRIVACY_NOTE[loc]}</p>
 
         <div className="mt-5 text-center text-sm">

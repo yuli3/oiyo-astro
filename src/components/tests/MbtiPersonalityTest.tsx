@@ -5,6 +5,7 @@ import RelatedReading from '../shared/RelatedReading';
 import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import { recordTestResult } from '@/lib/user/test-results';
+import { gaEvent } from '@/lib/analytics/ga-event';
 
 export type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -224,6 +225,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
       locale: l,
       sourcePath: `/${l}/mbti/test`,
     })
+    gaEvent('test_completed', { test_id: 'mbti' })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showResult, isComplete])
 
@@ -251,8 +253,9 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           resultTitle={title}
           emoji={profile.emoji}
           description={profile.desc[l]}
+          onShareClick={() => gaEvent('share_click', { test_id: 'mbti' })}
         />
-        <CopyResultLink locale={l} />
+        <CopyResultLink locale={l} onCopyClick={() => gaEvent('share_click', { test_id: 'mbti' })} />
         <ResultNextSteps
           locale={l}
           links={[
