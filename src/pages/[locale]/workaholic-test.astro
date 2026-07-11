@@ -4,6 +4,7 @@ import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import WorkaholicTest from '../../components/tests/WorkaholicTest';
 import TestSourceNote from '../../components/shared/TestSourceNote.astro';
+import PrintReportButton from '../../components/shared/PrintReportButton.astro';
 import { TEST_SOURCE_NOTES } from '../../data/test-source-notes';
 
 export async function getStaticPaths() {
@@ -43,6 +44,7 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <WorkaholicTest locale={locale as any} client:load />
+  <PrintReportButton locale={locale} />
   <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['workaholic']} />
   </div>
 </Layout>

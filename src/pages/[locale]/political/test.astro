@@ -6,6 +6,7 @@ import PoliticalCompassTest from '../../../components/tests/PoliticalCompassTest
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
 import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import PrintReportButton from '../../../components/shared/PrintReportButton.astro';
 import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
@@ -147,6 +148,7 @@ const quizJsonLd = buildQuizJsonLd({
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
 
     <RelatedTools locale={locale} tools={['authoritarian','narcissism','mbti','enneagram']} current="political" />
+  <PrintReportButton locale={locale} />
   <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['political']} />
   </div>
 </Layout>

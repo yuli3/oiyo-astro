@@ -1,0 +1,42 @@
+/* Print/PDF report rules (Track C — instructor reports).
+   Kept separate from global.css so print concerns stay in one place.
+   Triggered by PrintReportButton.astro (window.print()); the browser's
+   "Save as PDF" in the print dialog is the PDF export path. */
+
+@media print {
+  /* Chrome/navigation and interactive elements have no place on paper. */
+  header,
+  footer,
+  nav,
+  button,
+  [role='button'],
+  .print-hide {
+    display: none !important;
+  }
+
+  /* Save ink: flatten decorative backgrounds/shadows, keep text legible. */
+  body {
+    background: #fff !important;
+    color: #000;
+  }
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Keep each result/citation card intact across page breaks. */
+  section,
+  article,
+  .rounded-2xl,
+  .rounded-xl,
+  .rounded-lg {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Sticky positioning leaves gaps on paper. */
+  .sticky,
+  [class*='sticky'] {
+    position: static !important;
+  }
+}

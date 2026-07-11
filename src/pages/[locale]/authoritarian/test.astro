@@ -6,6 +6,7 @@ import AuthoritarianScaleTest from '../../../components/tests/AuthoritarianScale
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
 import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import PrintReportButton from '../../../components/shared/PrintReportButton.astro';
 import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
@@ -136,6 +137,7 @@ const quizJsonLd = buildQuizJsonLd({
       </div>
     </div>
     <RelatedTools locale={locale} tools={['political','narcissism','mbti','empathy']} current="authoritarian" />
+  <PrintReportButton locale={locale} />
   <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['authoritarian']} />
   </div>
 </Layout>

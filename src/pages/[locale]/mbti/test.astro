@@ -9,6 +9,7 @@ import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { getTestBridge } from '../../../data/test-content-bridges';
 import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
 import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import PrintReportButton from '../../../components/shared/PrintReportButton.astro';
 import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
@@ -228,6 +229,7 @@ const quizJsonLd = buildQuizJsonLd({
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
     <RelatedTools locale={locale} tools={['enneagram', 'big5', 'attachment', 'loveLanguage']} current="mbti" />
       <MentalBoost locale={locale} />
+  <PrintReportButton locale={locale} />
   <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['mbti']} />
   </div>
 </Layout>

@@ -6,6 +6,7 @@ import AdhdScreeningTest from '../../../components/tests/AdhdScreeningTest';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
 import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import PrintReportButton from '../../../components/shared/PrintReportButton.astro';
 import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -197,6 +198,7 @@ const quizJsonLd = buildQuizJsonLd({
 
     <p class="mt-8 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm leading-6 text-rose-900">{c.disclaimer}</p>
     <RelatedTools locale={locale} tools={['anxiety','depression','perfectionism','selfEsteem']} current="adhd" />
+  <PrintReportButton locale={locale} />
   <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['adhd']} />
   </div>
 </Layout>

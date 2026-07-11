@@ -1,0 +1,39 @@
+---
+// Native-print "PDF report" trigger for instructor/reference use — no PDF
+// library, just window.print() + the @media print rules in print.css.
+// Mounted next to TestSourceNote on the same 30 test pages (Track C).
+import type { Locale } from '../../i18n';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+
+const T: Record<Locale, { label: string; generated: string }> = {
+  ko: { label: '🖨️ 인쇄 · PDF로 저장', generated: '생성일' },
+  en: { label: '🖨️ Print / Save as PDF', generated: 'Generated' },
+  ja: { label: '🖨️ 印刷・PDFで保存', generated: '生成日' },
+  zh: { label: '🖨️ 打印·保存为PDF', generated: '生成日期' },
+  fr: { label: '🖨️ Imprimer / Enregistrer en PDF', generated: 'Généré le' },
+  es: { label: '🖨️ Imprimir / Guardar como PDF', generated: 'Generado el' },
+};
+const copy = T[locale] ?? T.en;
+---
+
+<div class="print:hidden mx-auto mt-3 max-w-2xl px-4">
+  <button
+    type="button"
+    onclick="window.print()"
+    class="w-full rounded-xl border-2 border-slate-300 bg-white px-5 py-3 text-sm font-bold text-slate-700 transition hover:bg-slate-50"
+  >
+    {copy.label}
+  </button>
+</div>
+<!-- Date is set client-side: this is a static build, so a server-rendered
+     date would be the build date, not the day the visitor prints. -->
+<p class="hidden print:block print:mt-4 print:px-4 text-xs text-slate-500">{copy.generated}: <span data-print-date></span></p>
+<script>
+  document.querySelectorAll('[data-print-date]').forEach((el) => {
+    el.textContent = new Date().toISOString().slice(0, 10);
+  });
+</script>

@@ -8,6 +8,7 @@ import type { Locale } from '../../../i18n';
 import SajuCalculator from '../../../components/tools/SajuCalculator';
 import CelestialClock from '../../../components/ui/CelestialClock';
 import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import PrintReportButton from '../../../components/shared/PrintReportButton.astro';
 import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
@@ -324,6 +325,7 @@ const faqJsonLd = {
       {c.disclaimer}
     </p>
       <MysticTrinity topic="saju" locale={locale} />
+  <PrintReportButton locale={locale} />
   <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['saju']} />
   </div>
 </Layout>
