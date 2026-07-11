@@ -4,7 +4,10 @@ import { recordTestResult } from '@/lib/user/test-results'
 import { gaEvent } from '@/lib/analytics/ga-event'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
-type RiasecType = 'R' | 'I' | 'A' | 'S' | 'E' | 'C'
+// Exported so RiasecQuickTest.tsx (the 18-question /riasec-quick sibling) can
+// reuse the type-level shape and the shared color palette/type descriptions
+// below instead of duplicating them.
+export type RiasecType = 'R' | 'I' | 'A' | 'S' | 'E' | 'C'
 
 function lang(locale: string): SupportedLang {
   return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
@@ -12,7 +15,7 @@ function lang(locale: string): SupportedLang {
 
 interface Question { id: string; text: string; type: RiasecType }
 
-const RIASEC_COLORS: Record<RiasecType, string> = {
+export const RIASEC_COLORS: Record<RiasecType, string> = {
   R: '#f97316', I: '#3b82f6', A: '#a855f7', S: '#22c55e', E: '#ef4444', C: '#eab308'
 }
 
@@ -157,8 +160,10 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
   ],
 }
 
-interface TypeDetail { description: string; careers: string[] }
-const TYPE_DETAILS: Record<RiasecType, Record<SupportedLang, TypeDetail>> = {
+export interface TypeDetail { description: string; careers: string[] }
+// ko/en/ja only — RiasecQuickTest.tsx extends this with zh/fr/es entries
+// rather than duplicating these three locales' text.
+export const TYPE_DETAILS: Record<RiasecType, Record<SupportedLang, TypeDetail>> = {
   R: {
     ko: { description: '현실형은 구체적이고 실용적인 활동을 선호합니다. 도구와 기계를 다루거나 신체적 기술을 발휘하는 것을 즐기며, 만질 수 있는 결과물을 만들어내는 것에서 만족감을 느낍니다.', careers: ['엔지니어', '건축가', '의사/외과의', '농업 전문가', '운동선수', '조종사', '정비사', '소방관', '군인'] },
     en: { description: 'Realistic types prefer concrete and practical activities. They enjoy working with tools and machines or applying physical skills, finding satisfaction in creating tangible results.', careers: ['Engineer', 'Architect', 'Physician/Surgeon', 'Agricultural Specialist', 'Athlete', 'Pilot', 'Mechanic', 'Firefighter', 'Military'] },

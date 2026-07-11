@@ -68,6 +68,20 @@ describe("collectSignals", () => {
     });
   });
 
+  it("extracts a riasec signal recorded by RiasecQuickTest-shaped payloads (testId riasec-quick)", () => {
+    recordTestResult({
+      kind: "psychometric",
+      testId: "riasec-quick",
+      title: "RIASEC Quick",
+      resultLabel: "SEA",
+      result: { code: "SEA", scores: { S: 12, E: 10, A: 9, I: 5, R: 3, C: 2 } },
+    });
+    expect(collectSignals().riasec).toEqual({
+      code: "SEA",
+      scores: { S: 12, E: 10, A: 9, I: 5, R: 3, C: 2 },
+    });
+  });
+
   it("extracts an enneagram signal recorded by EnneagramTest-shaped payloads", () => {
     recordTestResult({
       kind: "psychometric",

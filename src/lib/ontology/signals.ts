@@ -95,6 +95,10 @@ export const signalAdapters: Record<string, (result: StoredTestResult) => Partia
   mbti: adaptMbti,
   big5: adaptBig5,
   riasec: adaptRiasec,
+  // RiasecQuickTest.tsx (/riasec-quick, 18Q) records under 'riasec-quick' so
+  // it never overwrites the 24-question test's history — same result shape
+  // ({ code, scores }), so it reuses adaptRiasec.
+  'riasec-quick': adaptRiasec,
   enneagram: adaptEnneagram,
 };
 
