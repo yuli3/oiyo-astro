@@ -4,6 +4,8 @@ import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import RiasecQuickTest from '../../components/tests/RiasecQuickTest';
 import BlogArticleLink from '../../components/shared/BlogArticleLink.astro';
+import TestSourceNote from '../../components/shared/TestSourceNote.astro';
+import { TEST_SOURCE_NOTES } from '../../data/test-source-notes';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -43,5 +45,6 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <RiasecQuickTest locale={locale as any} client:load />
     <BlogArticleLink testId="riasec-career-test" locale={locale} />
+  <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['riasec-quick']} />
   </div>
 </Layout>

@@ -5,6 +5,8 @@ import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import NatalChartCalculator from '../../../components/tools/NatalChartCalculator';
+import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -325,5 +327,6 @@ const faqJsonLd = {
     <div class="mt-10">
       <MysticTrinity topic="zodiac" locale={locale} />
     </div>
+  <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['natal']} />
   </div>
 </Layout>

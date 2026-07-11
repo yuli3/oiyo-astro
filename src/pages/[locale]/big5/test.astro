@@ -7,6 +7,8 @@ import TestContentBridge from '../../../components/shared/TestContentBridge.astr
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { getTestBridge } from '../../../data/test-content-bridges';
 import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
+import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -121,5 +123,6 @@ const quizJsonLd = buildQuizJsonLd({
 
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
     <RelatedTools locale={locale} tools={['mbti', 'enneagram', 'attachment', 'loveLanguage']} current="big5" />
+  <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['big5']} />
   </div>
 </Layout>

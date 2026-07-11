@@ -5,6 +5,8 @@ import type { Locale } from '../../../i18n';
 import EmotionalIntelligenceTest from '../../../components/tests/EmotionalIntelligenceTest';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
+import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -50,5 +52,6 @@ const quizJsonLd = buildQuizJsonLd({
     <section class="mt-10"><h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2><div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">{c.faqs.map((faq) => (<details class="group p-4"><summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p></details>))}</div></section>
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
     <RelatedTools locale={locale} tools={['empathy','angerStyle','innerStrength','selfEsteem']} current="eq" />
+  <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['eq']} />
   </div>
 </Layout>

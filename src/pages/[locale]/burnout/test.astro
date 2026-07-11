@@ -7,6 +7,8 @@ import TestContentBridge from '../../../components/shared/TestContentBridge.astr
 import { getTestBridge } from '../../../data/test-content-bridges';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
+import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -54,5 +56,6 @@ const quizJsonLd = buildQuizJsonLd({
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
     <TestContentBridge content={bridge.content} blogUrl={bridge.blogUrl} wikiUrl={bridge.wikiUrl} />
     <RelatedTools locale={locale} tools={['depression','anxiety','lethargy','commuteMental']} current="burnout" />
+  <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['burnout']} />
   </div>
 </Layout>

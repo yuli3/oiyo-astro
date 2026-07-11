@@ -5,6 +5,8 @@ import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
 import TarotReading from '../../../components/tools/TarotReading';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
+import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -518,5 +520,6 @@ const faqJsonLd = {
     </p>
     <MysticTrinity topic="tarot" locale={locale} />
     <MentalBoost locale={locale} />
+  <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['tarot']} />
   </div>
 </Layout>

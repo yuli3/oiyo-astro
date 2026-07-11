@@ -5,6 +5,8 @@ import type { Locale } from '../../../i18n';
 import AnxietyScreeningTest from '../../../components/tests/AnxietyScreeningTest';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
+import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
 }
@@ -195,5 +197,6 @@ const quizJsonLd = buildQuizJsonLd({
 
     <p class="mt-8 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm leading-6 text-rose-900">{c.disclaimer}</p>
     <RelatedTools locale={locale} tools={['depression','socialAnxiety','burnout','selfEsteem']} current="anxiety" />
+  <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['anxiety']} />
   </div>
 </Layout>

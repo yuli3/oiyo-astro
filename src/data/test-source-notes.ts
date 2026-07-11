@@ -106,6 +106,30 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     basis: ['Social Interaction Anxiety Scale concepts', 'Liebowitz Social Anxiety Scale concepts'],
     caution: 'clinical',
   },
+  riasec: {
+    basis: ['Holland Occupational Themes (RIASEC)', "John Holland's theory of vocational personality types"],
+    caution: 'reflection',
+  },
+  'riasec-quick': {
+    basis: ['Holland Occupational Themes (RIASEC)', "John Holland's theory of vocational personality types"],
+    caution: 'reflection',
+  },
+  saju: {
+    basis: ['Four Pillars of Destiny (BaZi/사주팔자)', 'Chinese Five Elements (Wuxing) theory'],
+    caution: 'symbolic',
+  },
+  natal: {
+    basis: ['Western tropical astrology', 'natal chart calculation from birth date/time/location (Sun/Moon/Rising signs)'],
+    caution: 'symbolic',
+  },
+  tarot: {
+    basis: ['Tarot card tradition (Rider-Waite-Smith deck structure)', 'divinatory/reflective interpretation practice'],
+    caution: 'symbolic',
+  },
+  workaholic: {
+    basis: ['Bergen Work Addiction Scale (BWAS)', 'Griffiths behavioral addiction component model'],
+    caution: 'reflection',
+  },
 };
 
 const CAUTION_TEXT: Record<TestSourceNote['caution'], Record<Locale, string>> = {

@@ -5,6 +5,8 @@ import type { Locale } from '../../../i18n';
 import AuthoritarianScaleTest from '../../../components/tests/AuthoritarianScaleTest';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
+import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
+import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -134,5 +136,6 @@ const quizJsonLd = buildQuizJsonLd({
       </div>
     </div>
     <RelatedTools locale={locale} tools={['political','narcissism','mbti','empathy']} current="authoritarian" />
+  <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['authoritarian']} />
   </div>
 </Layout>
