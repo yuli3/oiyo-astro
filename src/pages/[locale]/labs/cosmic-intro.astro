@@ -1,0 +1,29 @@
+---
+// 스크롤 드리븐 3D 소개 페이지 프로토타입 — DNA 나선 → 블랙홀 → 나선은하.
+// noindex, nav 미노출. 검토 후 괜찮으면 실제 소개 페이지로 승격 예정.
+import '../../../styles/global.css';
+import { LOCALES, type Locale } from '../../../i18n';
+import { CosmicIntroExperience } from '../../../components/labs/CosmicIntroExperience';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Cosmic Intro (labs preview) | OIYO</title>
+    <meta name="theme-color" content="#050014" />
+    <style>
+      html, body { background: #050014; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <CosmicIntroExperience client:only="react" />
+  </body>
+</html>
