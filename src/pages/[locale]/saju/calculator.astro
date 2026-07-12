@@ -261,8 +261,10 @@ const faqJsonLd = {
 <Layout title={m.title} description={m.description} locale={locale}>
   <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-2xl px-4 py-10 space-y-6">
-    <CelestialClock client:load locale={locale} />
-    <SajuCalculator client:load locale={locale} />
+    {/* Display-only widget (no interactive elements, self-updating clock) — defer hydration to viewport entry. */}
+    <CelestialClock client:visible locale={locale} />
+    {/* Above-the-fold input form — hydrate on main-thread idle instead of blocking initial load, without waiting on viewport visibility. */}
+    <SajuCalculator client:idle locale={locale} />
     <RelatedTools locale={locale} tools={['sajuPeriodic', 'natal', 'zodiac', 'numerology']} current="saju" />
 
     <section class="mt-4 border-t border-violet-100 pt-8">
