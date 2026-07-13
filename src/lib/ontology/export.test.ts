@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 import { decodeResult, encodeResult } from "@/lib/result-permalink";
 import { useUserStore } from "@/lib/user/store/user-store";
 import { recordTestResult } from "@/lib/user/test-results";
+import { bigFivePlugin, bigFiveResponsesFromAnswers, buildAssessmentResult, recordAssessmentResult } from "@/assessments";
 
 import {
   assembleOntologyExport,
@@ -51,10 +52,32 @@ describe("assembleOntologyExport", () => {
     const result = assembleOntologyExport();
     expect(result.signals).toEqual({});
     expect(result.testResults).toEqual([]);
+    expect(result.assessmentResults).toEqual([]);
     expect(result.recommendations).toEqual([]);
     expect(result.graphSnapshot).toEqual([]);
     expect(typeof result.exportedAt).toBe("string");
     expect(Number.isNaN(Date.parse(result.exportedAt))).toBe(false);
+  });
+
+  it("exports V2 assessment history with provenance and scores but without raw responses", () => {
+    const recorded = buildAssessmentResult(
+      bigFivePlugin,
+      bigFiveResponsesFromAnswers(Array(20).fill(3)),
+      { completedAt: "2026-07-14T00:00:00.000Z", resultId: "big5:v2-export" },
+    );
+    recordAssessmentResult(recorded);
+
+    const result = assembleOntologyExport();
+    expect(result.assessmentResults).toHaveLength(1);
+    expect(result.assessmentResults[0]).toMatchObject({
+      resultId: "big5:v2-export",
+      assessmentId: bigFivePlugin.id,
+      evidenceTier: bigFivePlugin.manifest.evidenceTier,
+      versions: recorded.versions,
+      quality: recorded.quality,
+      scores: recorded.scores,
+    });
+    expect(result.assessmentResults[0]).not.toHaveProperty("responses");
   });
 
   it("carries the full local test-result history, not just the most recent", () => {

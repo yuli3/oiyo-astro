@@ -81,6 +81,7 @@ export function serializeExportCsv(data: OntologyExport): string {
   }
   if (s.riasec) {
     rows.push(csvRow(["signal", "riasec.code", s.riasec.code]));
+    if (s.riasec.scoreScale) rows.push(csvRow(["signal", "riasec.scoreScale", s.riasec.scoreScale]));
     for (const [letter, score] of Object.entries(s.riasec.scores)) {
       rows.push(csvRow(["signal", `riasec.scores.${letter}`, score]));
     }
@@ -94,6 +95,13 @@ export function serializeExportCsv(data: OntologyExport): string {
 
   for (const result of data.testResults) {
     rows.push(csvRow(["testResult", result.id, `${result.testId}|${result.resultLabel}|${result.createdAt}`]));
+  }
+
+  for (const result of data.assessmentResults) {
+    rows.push(csvRow(["assessmentResult", result.resultId, `${result.assessmentId}|${result.evidenceTier}|${result.versions.instrument}|${result.versions.scoring}|${result.completedAt}`]));
+    for (const [dimension, score] of Object.entries(result.scores.normalized)) {
+      rows.push(csvRow(["assessmentScore", `${result.resultId}.${dimension}`, score]));
+    }
   }
 
   for (const rec of data.recommendations) {
@@ -135,6 +143,20 @@ function testHistoryTable(data: OntologyExport): string {
     .join("\n");
 }
 
+function assessmentHistoryTable(data: OntologyExport): string {
+  if (data.assessmentResults.length === 0) return "| - | - | - | - |";
+  return data.assessmentResults
+    .map((r) => `| ${r.assessmentId} | ${r.evidenceTier} | ${r.versions.instrument} | ${r.completedAt.slice(0, 10)} |`)
+    .join("\n");
+}
+
+function assessmentProvenance(data: OntologyExport): string {
+  if (data.assessmentResults.length === 0) return "- (no versioned assessment results yet)";
+  return data.assessmentResults
+    .map((r) => `- ${r.assessmentId}: evidence ${r.evidenceTier}; instrument ${r.versions.instrument}; scoring ${r.versions.scoring}; observed ${r.completedAt.slice(0, 10)}`)
+    .join("\n");
+}
+
 function recommendationsSection(data: OntologyExport, labels: ExportLabels | undefined): string {
   if (data.recommendations.length === 0) return "- (no recommendations yet — take a test or fill in your profile)";
   const byCategory = new Map<string, typeof data.recommendations>();
@@ -172,6 +194,14 @@ ${signalsTable(data, labels)}
 | Test | Result | Date |
 |---|---|---|
 ${testHistoryTable(data)}
+
+## Versioned Assessment Results
+
+Raw item responses are excluded from this export by default.
+
+| Assessment | Evidence | Instrument | Date |
+|---|---|---|---|
+${assessmentHistoryTable(data)}
 
 ## Recommendations
 
@@ -287,6 +317,12 @@ ${preferencesSection(data, labels)}
 ## How to treat me
 
 ${howToTreatMe(data)}
+
+## Assessment provenance
+
+Raw item responses are excluded from this file by default.
+
+${assessmentProvenance(data)}
 `;
 }
 

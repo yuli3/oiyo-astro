@@ -14,6 +14,7 @@ const EMPTY: OntologyExport = {
   exportedAt: "2026-07-09T00:00:00.000Z",
   signals: {},
   testResults: [],
+  assessmentResults: [],
   recommendations: [],
   graphSnapshot: [],
 };
@@ -31,6 +32,19 @@ const RICH: OntologyExport = {
   testResults: [
     { id: "riasec:1", kind: "psychometric", testId: "riasec", title: "RIASEC", resultLabel: "AIS", createdAt: "2026-07-08T00:00:00.000Z" },
   ],
+  assessmentResults: [{
+    assessmentId: "big5-ocean-20",
+    classifications: [],
+    completedAt: "2026-07-08T00:00:00.000Z",
+    evidenceTier: "research-inspired",
+    kind: "psychometric",
+    quality: { completionRate: 1, responseWarnings: [] },
+    resultId: "big5:v2:1",
+    schema: "oiyo.assessment-result",
+    schemaVersion: 2,
+    scores: { normalized: { O: 80, C: 40 }, raw: { O: 16, C: 8 } },
+    versions: { instrument: "big5-ocean-20-v1", interpretation: "big5-ocean-20-interpretation-v1", scoring: "big5-ocean-20-scoring-v1" },
+  }],
   recommendations: [
     { category: "hobby", description: "d", icon: "Compass", id: "hobby-1", matchScore: 72, reasoning: { explanation: "e", primarySource: "big5" }, tags: [], title: "recommendations.hobby.woodworking.title" },
     { category: "career", description: "d", icon: "Compass", id: "career-1", matchScore: 61, reasoning: { explanation: "e", primarySource: "mbti" }, tags: [], title: "recommendations.career.architect.title" },
@@ -64,7 +78,7 @@ describe("serializeExportCsv", () => {
       const cells = line.match(/"(?:[^"]|"")*"/g);
       expect(cells).not.toBeNull();
       expect(cells!.length).toBe(3);
-      expect(cells![0]).toMatch(/^"(signal|testResult|recommendation|graphSnapshot)"$/);
+      expect(cells![0]).toMatch(/^"(signal|testResult|assessmentResult|assessmentScore|recommendation|graphSnapshot)"$/);
     }
     expect(lines.length).toBeGreaterThan(1);
   });
@@ -79,6 +93,8 @@ describe("serializeExportMarkdown", () => {
     const md = serializeExportMarkdown(RICH);
     expect(md).toContain("## Identity Signals");
     expect(md).toContain("## Test History");
+    expect(md).toContain("## Versioned Assessment Results");
+    expect(md).toContain("big5-ocean-20-v1");
     expect(md).toContain("## Recommendations");
     expect(md).toContain("## Relationship Graph Snapshot");
     expect(md).toContain("ENTJ");
@@ -105,6 +121,8 @@ describe("serializeExportSoul", () => {
     expect(soul).toContain("## Identity signals");
     expect(soul).toContain("## Preferences");
     expect(soul).toContain("## How to treat me");
+    expect(soul).toContain("## Assessment provenance");
+    expect(soul).toContain("big5-ocean-20-v1");
   });
 
   it("generates reasonable tone hints from mbti/big5/enneagram/saju signals", () => {

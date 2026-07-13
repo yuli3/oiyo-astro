@@ -3,8 +3,9 @@ import { vi } from "vitest";
 
 import { useUserStore } from "@/lib/user/store/user-store";
 import { recordTestResult } from "@/lib/user/test-results";
+import { bigFivePlugin, bigFiveResponsesFromAnswers, buildAssessmentResult, buildMbtiResult, buildRiasecResult, recordAssessmentResult, riasecFullPlugin } from "@/assessments";
 
-import { collectSignals } from "./signals";
+import { collectSignals, mergeAssessmentSignals } from "./signals";
 
 function stubLocalStorage() {
   const store = new Map<string, string>();
@@ -131,5 +132,40 @@ describe("collectSignals", () => {
     useUserStore.getState().setProfile({ mbtiType: "entp" });
     recordTestResult({ kind: "psychometric", testId: "mbti", title: "MBTI", resultLabel: "INFJ", result: { type: "infj" } });
     expect(collectSignals().mbti?.type).toBe("INFJ");
+  });
+
+  it("overlays complete V2 Big Five, MBTI, and RIASEC signals on legacy values", () => {
+    recordTestResult({ kind: "psychometric", testId: "mbti", title: "MBTI", resultLabel: "ESTJ", result: { type: "ESTJ" } });
+
+    recordAssessmentResult(buildAssessmentResult(bigFivePlugin, bigFiveResponsesFromAnswers(Array(20).fill(3))));
+    recordAssessmentResult(buildMbtiResult(Object.fromEntries(
+      Array.from({ length: 16 }, (_, index) => [`q${index + 1}`, ["I", "N", "F", "P"][index % 4]]),
+    )));
+    recordAssessmentResult(buildRiasecResult(riasecFullPlugin, Object.fromEntries(
+      riasecFullPlugin.instrument.items.map((item, index) => [item.id, index < 4 ? 5 : 1]),
+    )));
+
+    const signals = collectSignals();
+    expect(signals.mbti?.type).toBe("INFP");
+    expect(signals.big5).toEqual({ O: 50, C: 50, E: 50, A: 50, N: 50 });
+    expect(signals.riasec?.code).toHaveLength(3);
+    expect(signals.riasec?.scoreScale).toBe("normalized-0-100");
+    expect(Object.keys(signals.riasec?.scores ?? {})).toEqual(["R", "I", "A", "S", "E", "C"]);
+  });
+
+  it("keeps an entire legacy domain when the V2 construct family is incomplete", () => {
+    const legacy = { big5: { O: 10, C: 20, E: 30, A: 40, N: 50 } };
+    const partial = [{
+      confidence: 0.6,
+      constructId: "psychology.big5.O",
+      evidenceTier: "research-inspired" as const,
+      id: "partial:O",
+      observedAt: "2026-07-14T00:00:00.000Z",
+      provenance: { instrumentVersion: "partial", resultId: "partial", scoringVersion: "partial" },
+      scale: { min: 0, max: 100 },
+      sourceAssessmentId: "big5",
+      value: 99,
+    }];
+    expect(mergeAssessmentSignals(legacy, partial).big5).toEqual(legacy.big5);
   });
 });

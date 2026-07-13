@@ -19,6 +19,7 @@
  */
 
 import { RecommendationService } from "@/lib/engines/recommendation/service";
+import { listAssessmentResults, type CanonicalAssessmentResult } from "@/assessments";
 import type { Recommendation, RecommendationContext } from "@/lib/engines/recommendation/contracts";
 import { signalNodeIds } from "@/lib/engines/recommendation/graph-fallback";
 import type { EdgeKind, NodeKind } from "@/lib/ontology/graph/types";
@@ -43,10 +44,19 @@ export interface OntologyExport {
   signals: ProfileSignals;
   /** Full local test history, newest-first (same order as `listStoredTestResults()`) — not just the most recent. */
   testResults: StoredTestResult[];
+  /** Versioned V2 assessment history with question-level responses removed. Provenance, scores, evidence, and quality remain available for interpretation. */
+  assessmentResults: ExportedAssessmentResult[];
   /** Every recommendation across every category that `RecommendationService` currently surfaces (each engine already filters to `>= MIN_DISPLAY_SCORE` or a graph-fallback item — see `scoring.ts`/`graph-fallback.ts`). */
   recommendations: Recommendation[];
   /** Deterministic 2-hop neighbor snapshot from the signal-seeded nodes. Bounded by `SNAPSHOT_HOP_LIMIT`/`SNAPSHOT_MAX_NODES`, never unbounded. */
   graphSnapshot: GraphSnapshotEntry[];
+}
+
+/** A privacy-conscious V2 result snapshot: useful interpretation metadata without raw item responses. */
+export type ExportedAssessmentResult = Omit<CanonicalAssessmentResult, "responses">;
+
+function collectExportedAssessmentResults(): ExportedAssessmentResult[] {
+  return listAssessmentResults().map(({ responses: _responses, ...result }) => result);
 }
 
 /** Neighbors pulled per node before dedup — kept small since this is a snapshot, not a full traversal. */
@@ -106,6 +116,7 @@ export function assembleOntologyExport(): OntologyExport {
     exportedAt: new Date().toISOString(),
     signals,
     testResults: listStoredTestResults(),
+    assessmentResults: collectExportedAssessmentResults(),
     recommendations: collectRecommendations(signals),
     graphSnapshot: buildGraphSnapshot(signals),
   };

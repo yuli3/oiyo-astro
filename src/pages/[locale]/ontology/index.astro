@@ -6,6 +6,7 @@ import { OntologyRelationOrbit } from '../../../components/ontology/OntologyRela
 import { RecommendationCards } from '../../../components/ontology/RecommendationCards';
 import { OntologyExportPopover } from '../../../components/ontology/OntologyExportPopover';
 import { OntologySharedProfileBanner } from '../../../components/ontology/OntologySharedProfileBanner';
+import { AssessmentSignalSummary } from '../../../components/ontology/AssessmentSignalSummary';
 import WikiDefinitionLink from '../../../components/shared/WikiDefinitionLink.astro';
 import { laneOf, LANE_META } from '../../../lib/ontology/registry/ontology-systems';
 import { LOCALES, getTranslations } from '../../../i18n';
@@ -110,6 +111,10 @@ const lm = LANE_META;
       </section>
     ))}
 
+    <!-- Canonical V2 assessment signals. Traits, preferences, and interests
+         remain separate and retain evidence/confidence/time provenance. -->
+    <AssessmentSignalSummary locale={locale} client:load />
+
     <!-- Lane 3: 실제 나의 것 (mindmap builder) -->
     <section id="profile-builder" class="mt-8 scroll-mt-4">
       <div class="mb-3">
@@ -171,7 +176,11 @@ const lm = LANE_META;
         const p = (us && us.state && us.state.profile) ? us.state.profile : {};
         const has = { birthDate: !!(p.birthDate && String(p.birthDate).trim()), birthTime: !!(p.birthTime), name: !!(p.name && String(p.name).trim()), bloodType: !!(p.bloodType) };
         const results = read('oiyo:test-results:v1');
-        const doneTests = new Set(Array.isArray(results) ? results.map((r) => r && (r.testId || r.kind)).filter(Boolean) : []);
+        const assessments = read('oiyo:assessment-results:v2');
+        const doneTests = new Set([
+          ...(Array.isArray(results) ? results.map((r) => r && (r.testId || r.kind)).filter(Boolean) : []),
+          ...(Array.isArray(assessments) ? assessments.map((r) => r && r.assessmentId).filter(Boolean) : []),
+        ]);
         const cards = Array.from(document.querySelectorAll('[data-sys]'));
         let recorded = 0, firstOpen = null;
         cards.forEach((card) => {
@@ -210,6 +219,7 @@ const lm = LANE_META;
       window.addEventListener('storage', apply);
       window.addEventListener('oiyo:ontology-progress-updated', apply);
       window.addEventListener('oiyo:test-results-updated', apply);
+      window.addEventListener('oiyo:assessment-results-updated', apply);
       window.addEventListener('oiyo:profile-updated', apply);
     })();
   </script>
