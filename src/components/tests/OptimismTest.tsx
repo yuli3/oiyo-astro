@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ShareResultButton from "../shared/ShareResultButton";
 
-type SupportedLocale = "ko" | "en" | "ja";
+type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 interface Props {
   locale?: string;
@@ -13,21 +13,24 @@ interface Question {
   ko: string;
   en: string;
   ja: string;
+  zh: string;
+  fr: string;
+  es: string;
   reverse?: boolean;
 }
 
 // Scheier & Carver LOT-R inspired (6 scored + 4 filler → simplified to 10 scored)
 const questions: Question[] = [
-  { ko: "불확실한 상황에서도 나는 보통 최선을 기대한다", en: "In uncertain times, I usually expect the best", ja: "不確かな状況でも、私はたいてい最善を期待する" },
-  { ko: "일이 내 방식대로 되지 않으면, 나는 쉽게 체념한다", en: "If things don't go my way, I give up easily", ja: "物事が思い通りにならないと、簡単に諦めてしまう", reverse: true },
-  { ko: "나는 항상 나의 미래에 대해 낙관적이다", en: "I'm always optimistic about my future", ja: "私は自分の将来について常に楽観的だ" },
-  { ko: "나는 내게 좋은 일이 일어날 것이라고 거의 기대하지 않는다", en: "I hardly ever expect good things to happen to me", ja: "私に良いことが起こるとはほとんど期待しない", reverse: true },
-  { ko: "전반적으로 나는 나쁜 일보다 좋은 일이 더 많이 일어날 것을 기대한다", en: "Overall, I expect more good things to happen than bad", ja: "全体的に、悪いことより良いことの方が多く起こると期待している" },
-  { ko: "나는 내게 잘못될 것들이 많다고 예상하는 편이다", en: "I expect a lot of things to go wrong for me", ja: "私には多くのことがうまくいかないと予想する方だ", reverse: true },
-  { ko: "힘든 상황에서도 나는 보통 긍정적인 면을 찾는다", en: "Even in difficult situations, I usually find the positive side", ja: "辛い状況でも、私はたいてい良い面を見つける" },
-  { ko: "새로운 도전을 시작할 때, 나는 실패할 것 같다는 생각이 자주 든다", en: "When starting a new challenge, I often think I'll fail", ja: "新しい挑戦を始めるとき、失敗しそうだという気持ちがよく生じる", reverse: true },
-  { ko: "문제가 생기면 나는 해결될 것이라고 생각한다", en: "When problems arise, I believe they will be resolved", ja: "問題が生じたとき、解決されると思う" },
-  { ko: "나는 대체로 일이 잘못될 것을 걱정하며 산다", en: "I generally live with worry that things will go wrong", ja: "私は一般的に物事がうまくいかないことを心配して生活している", reverse: true },
+  { ko: "불확실한 상황에서도 나는 보통 최선을 기대한다", en: "In uncertain times, I usually expect the best", ja: "不確かな状況でも、私はたいてい最善を期待する", zh: "即使在不确定的情况下，我通常也会期待最好的结果", fr: "Même dans l'incertitude, je m'attends généralement au meilleur", es: "Incluso en situaciones inciertas, suelo esperar lo mejor" },
+  { ko: "일이 내 방식대로 되지 않으면, 나는 쉽게 체념한다", en: "If things don't go my way, I give up easily", ja: "物事が思い通りにならないと、簡単に諦めてしまう", zh: "如果事情不按我的方式发展，我很容易放弃", fr: "Quand les choses ne se passent pas comme je veux, j'abandonne facilement", es: "Si las cosas no salen como quiero, me rindo con facilidad", reverse: true },
+  { ko: "나는 항상 나의 미래에 대해 낙관적이다", en: "I'm always optimistic about my future", ja: "私は自分の将来について常に楽観的だ", zh: "我总是对自己的未来保持乐观", fr: "Je suis toujours optimiste quant à mon avenir", es: "Siempre soy optimista sobre mi futuro" },
+  { ko: "나는 내게 좋은 일이 일어날 것이라고 거의 기대하지 않는다", en: "I hardly ever expect good things to happen to me", ja: "私に良いことが起こるとはほとんど期待しない", zh: "我几乎不期待好事会发生在我身上", fr: "Je m'attends rarement à ce que de bonnes choses m'arrivent", es: "Casi nunca espero que me pasen cosas buenas", reverse: true },
+  { ko: "전반적으로 나는 나쁜 일보다 좋은 일이 더 많이 일어날 것을 기대한다", en: "Overall, I expect more good things to happen than bad", ja: "全体的に、悪いことより良いことの方が多く起こると期待している", zh: "总体来说，我期待好事比坏事发生得更多", fr: "Dans l'ensemble, je m'attends à vivre plus de bonnes choses que de mauvaises", es: "En general, espero que ocurran más cosas buenas que malas" },
+  { ko: "나는 내게 잘못될 것들이 많다고 예상하는 편이다", en: "I expect a lot of things to go wrong for me", ja: "私には多くのことがうまくいかないと予想する方だ", zh: "我倾向于预想到很多事情会出错", fr: "J'ai tendance à penser que beaucoup de choses vont mal tourner pour moi", es: "Tiendo a esperar que muchas cosas me salgan mal", reverse: true },
+  { ko: "힘든 상황에서도 나는 보통 긍정적인 면을 찾는다", en: "Even in difficult situations, I usually find the positive side", ja: "辛い状況でも、私はたいてい良い面を見つける", zh: "即使在困难的处境中，我通常也能找到积极的一面", fr: "Même dans les situations difficiles, je trouve généralement le côté positif", es: "Incluso en situaciones difíciles, suelo encontrar el lado positivo" },
+  { ko: "새로운 도전을 시작할 때, 나는 실패할 것 같다는 생각이 자주 든다", en: "When starting a new challenge, I often think I'll fail", ja: "新しい挑戦を始めるとき、失敗しそうだという気持ちがよく生じる", zh: "开始新的挑战时，我常常会觉得自己可能会失败", fr: "Quand je commence un nouveau défi, je pense souvent que je vais échouer", es: "Al empezar un nuevo reto, a menudo pienso que voy a fracasar", reverse: true },
+  { ko: "문제가 생기면 나는 해결될 것이라고 생각한다", en: "When problems arise, I believe they will be resolved", ja: "問題が生じたとき、解決されると思う", zh: "当问题出现时，我相信它们会得到解决", fr: "Quand des problèmes surviennent, je crois qu'ils finiront par se résoudre", es: "Cuando surgen problemas, creo que se resolverán" },
+  { ko: "나는 대체로 일이 잘못될 것을 걱정하며 산다", en: "I generally live with worry that things will go wrong", ja: "私は一般的に物事がうまくいかないことを心配して生活している", zh: "我通常生活在对事情出错的担忧中", fr: "Je vis généralement avec la crainte que les choses tournent mal", es: "Por lo general vivo preocupado por que las cosas salgan mal", reverse: true },
 ];
 
 const LEVELS: Record<OptimismLevel, {
@@ -37,6 +40,9 @@ const LEVELS: Record<OptimismLevel, {
   ko: { title: string; description: string; strength: string; watch: string; tip: string };
   en: { title: string; description: string; strength: string; watch: string; tip: string };
   ja: { title: string; description: string; strength: string; watch: string; tip: string };
+  zh: { title: string; description: string; strength: string; watch: string; tip: string };
+  fr: { title: string; description: string; strength: string; watch: string; tip: string };
+  es: { title: string; description: string; strength: string; watch: string; tip: string };
 }> = {
   high_optimism: {
     emoji: "☀️",
@@ -62,6 +68,27 @@ const LEVELS: Record<OptimismLevel, {
       strength: "回復力、粘り強さ、心身の健康、強いモチベーション",
       watch: "過度な楽観が現実的なリスクを過小評価させる可能性がある。「ポジティブな幻想」が準備不足を招くことがある",
       tip: "楽観主義を維持しながら、時折「防御的悲観主義（defensive pessimism）」を活用しましょう。最悪のシナリオを事前に考えることが実際にはより良い結果をもたらすこともあります。",
+    },
+    zh: {
+      title: "强烈乐观主义者",
+      description: "你对未来抱有非常积极的期待。即使在困难时期，你也不轻易失去希望，并能找到光明的一面。研究显示，乐观主义与心理复原力、身体健康和寿命呈正相关。",
+      strength: "复原力、坚持力、身心健康、强烈动机",
+      watch: "过度乐观可能会低估现实风险；“积极错觉”可能导致准备不足",
+      tip: "在保持乐观的同时，也可以偶尔练习“防御性悲观主义(defensive pessimism)”。提前思考最坏情境，有时反而会带来更好的结果。",
+    },
+    fr: {
+      title: "Fort optimiste",
+      description: "Vous avez des attentes très positives pour l'avenir. Même dans les moments difficiles, vous ne perdez pas espoir et vous trouvez le bon côté des choses. Les recherches montrent que l'optimisme est positivement corrélé à la résilience psychologique, à la santé physique et à la longévité.",
+      strength: "Résilience, persévérance, santé mentale et physique, forte motivation",
+      watch: "Un optimisme excessif peut sous-estimer les risques réels ; les « illusions positives » peuvent conduire à une préparation insuffisante",
+      tip: "Tout en gardant votre optimisme, essayez parfois le « pessimisme défensif » (defensive pessimism) : envisager les pires scénarios peut en réalité aider à obtenir de meilleurs résultats.",
+    },
+    es: {
+      title: "Optimista fuerte",
+      description: "Tienes expectativas muy positivas sobre el futuro. No pierdes la esperanza en momentos difíciles y sueles encontrar el lado bueno. La investigación muestra que el optimismo se correlaciona positivamente con la resiliencia psicológica, la salud física y la longevidad.",
+      strength: "Resiliencia, perseverancia, salud mental y física, motivación fuerte",
+      watch: "El optimismo excesivo puede subestimar riesgos reales; las «ilusiones positivas» pueden llevar a una preparación insuficiente",
+      tip: "Sin dejar de cultivar el optimismo, prueba de vez en cuando el «pesimismo defensivo» (defensive pessimism): pensar en los peores escenarios puede llevar a mejores resultados.",
     },
   },
   moderate_optimism: {
@@ -89,6 +116,27 @@ const LEVELS: Record<OptimismLevel, {
       watch: "特別な注意事項なし — このバランスをうまく維持してください",
       tip: "このバランスは非常に貴重です。困難な時期にもこのバランスを意識的に維持する練習をしましょう。",
     },
+    zh: {
+      title: "温和乐观主义者",
+      description: "你总体上积极看待未来，同时也保有现实的视角。这是最具适应性的乐观水平：你能在不失去希望的同时制定现实的计划。",
+      strength: "平衡的期待、现实的计划、心理灵活性",
+      watch: "没有特别需要担心的地方——请好好保持这种平衡",
+      tip: "这种平衡非常珍贵。即使在困难时期，也可以有意识地练习维持它。",
+    },
+    fr: {
+      title: "Optimiste modéré",
+      description: "Vous envisagez globalement l'avenir de façon positive tout en gardant une perspective réaliste. C'est le niveau d'optimisme le plus adaptatif : vous pouvez faire des plans concrets sans perdre espoir.",
+      strength: "Attentes équilibrées, planification réaliste, flexibilité psychologique",
+      watch: "Pas de préoccupation particulière — continuez à bien maintenir cet équilibre",
+      tip: "Cet équilibre est très précieux. Entraînez-vous à le préserver consciemment, même dans les périodes difficiles.",
+    },
+    es: {
+      title: "Optimista moderado",
+      description: "En general ves el futuro de forma positiva, pero mantienes una perspectiva realista. Este es el nivel de optimismo más adaptativo: puedes hacer planes realistas sin perder la esperanza.",
+      strength: "Expectativas equilibradas, planificación realista, flexibilidad psicológica",
+      watch: "No hay preocupaciones especiales; mantén bien este equilibrio",
+      tip: "Este equilibrio es muy valioso. Practica mantenerlo de forma consciente incluso en momentos difíciles.",
+    },
   },
   realistic: {
     emoji: "⚖️",
@@ -114,6 +162,27 @@ const LEVELS: Record<OptimismLevel, {
       strength: "正確な状況評価、現実的な計画、失望リスクが低い",
       watch: "希望的思考がもたらす動機づけと回復力の恩恵を見逃す可能性がある",
       tip: "現実主義的思考は貴重ですが、意図的に「最善のケース」をより頻繁にイメージする練習も価値があります。楽観主義は習慣として培うことができます。",
+    },
+    zh: {
+      title: "现实主义者",
+      description: "你不会过度乐观或悲观，而是现实地评估情况。你的期待基于证据和现实，也能平衡地看见好事与坏事都有可能发生。",
+      strength: "准确评估情况、现实规划、较低的失望风险",
+      watch: "可能会错过希望性思维带来的动机和复原力益处",
+      tip: "现实主义思维很有价值，但有意识地更常想象“最好情况”也同样值得练习。乐观主义可以被培养成一种习惯。",
+    },
+    fr: {
+      title: "Réaliste",
+      description: "Vous évaluez les situations de façon réaliste, sans optimisme ni pessimisme excessif. Vos attentes s'appuient sur les faits et la réalité, avec une vision équilibrée qui reconnaît les possibilités positives comme négatives.",
+      strength: "Évaluation précise des situations, planification réaliste, faible risque de déception",
+      watch: "Peut passer à côté des bénéfices motivationnels et de résilience liés à une pensée pleine d'espoir",
+      tip: "La pensée réaliste est précieuse, mais il peut aussi être utile d'imaginer plus souvent, volontairement, le « meilleur scénario ». L'optimisme peut se cultiver comme une habitude.",
+    },
+    es: {
+      title: "Realista",
+      description: "Evalúas las situaciones de forma realista, sin optimismo ni pesimismo excesivos. Tus expectativas se basan en la evidencia y en la realidad, con una visión equilibrada que reconoce posibilidades buenas y malas.",
+      strength: "Evaluación precisa de la situación, planificación realista, bajo riesgo de decepción",
+      watch: "Puedes perder algunos beneficios motivacionales y de resiliencia que aporta el pensamiento esperanzado",
+      tip: "El pensamiento realista es valioso, pero también merece la pena imaginar intencionalmente el “mejor caso” con más frecuencia. El optimismo puede cultivarse como hábito.",
     },
   },
   moderate_pessimism: {
@@ -141,6 +210,27 @@ const LEVELS: Record<OptimismLevel, {
       watch: "慢性的な悲観がうつ感と低い自己効力感につながる可能性がある",
       tip: "マーティン・セリグマンの楽観主義の学習（Learned Optimism）技法を試してみましょう：悪いことを一時的（「今は」）・特定的（「この状況では」）・外部的（「この原因のため」）に説明する練習が役立ちます。",
     },
+    zh: {
+      title: "温和悲观主义者",
+      description: "你对未来的期待略低，并倾向于更多关注事情出错的可能性。这有时能作为防御性悲观主义，帮助你准备得更充分；但如果长期持续，可能会带来焦虑和动机下降。",
+      strength: "充分准备、风险管理、现实期待",
+      watch: "长期悲观可能与抑郁感和较低的自我效能感有关",
+      tip: "可以尝试马丁·塞利格曼的习得性乐观(Learned Optimism)技巧：练习把坏事解释为暂时的（“只是现在”）、特定的（“在这个情境中”）和外部的（“因为这个原因”）。",
+    },
+    fr: {
+      title: "Pessimiste modéré",
+      description: "Vos attentes pour l'avenir sont un peu basses, et vous avez tendance à vous concentrer davantage sur ce qui pourrait mal tourner. Cela peut parfois fonctionner comme un pessimisme défensif et améliorer votre préparation, mais si cela devient chronique, cela peut nourrir l'anxiété et réduire la motivation.",
+      strength: "Préparation approfondie, gestion des risques, attentes réalistes",
+      watch: "Un pessimisme chronique peut être lié à une humeur dépressive et à une faible auto-efficacité",
+      tip: "Essayez la méthode d'optimisme appris (Learned Optimism) de Martin Seligman : s'entraîner à expliquer les événements négatifs comme temporaires (« pour l'instant »), spécifiques (« dans cette situation ») et externes (« à cause de cette cause »).",
+    },
+    es: {
+      title: "Pesimista moderado",
+      description: "Tienes expectativas algo bajas sobre el futuro y tiendes a centrarte más en la posibilidad de que las cosas salgan mal. A veces esto funciona como pesimismo defensivo y ayuda a prepararte mejor, pero si se vuelve crónico puede llevar a ansiedad y menor motivación.",
+      strength: "Preparación minuciosa, gestión de riesgos, expectativas realistas",
+      watch: "El pesimismo crónico puede relacionarse con estado de ánimo depresivo y baja autoeficacia",
+      tip: "Prueba la técnica de optimismo aprendido (Learned Optimism) de Martin Seligman: explicar los eventos negativos como temporales (“por ahora”), específicos (“en esta situación”) y externos (“por esta causa”).",
+    },
   },
   high_pessimism: {
     emoji: "🌪️",
@@ -167,6 +257,27 @@ const LEVELS: Record<OptimismLevel, {
       watch: "うつ、不安、低い生活の質、慢性的なストレスと関連する可能性がある",
       tip: "認知行動療法（CBT）の認知再構成やマーティン・セリグマンの楽観主義の学習が効果的に役立ちます。専門家の支援も検討してみましょう。",
     },
+    zh: {
+      title: "强烈悲观主义者",
+      description: "你目前对未来的期待非常低，并强烈预想到负面结果。这并不只是性格特质，而是一种可以改变的思维模式。",
+      strength: "风险意识、防御性准备",
+      watch: "可能与抑郁、焦虑、较低生活质量和慢性压力有关",
+      tip: "认知行为疗法(CBT)中的认知重构，或马丁·塞利格曼的习得性乐观，都可能有效提供帮助。也可以考虑寻求专业支持。",
+    },
+    fr: {
+      title: "Fort pessimiste",
+      description: "Vous avez actuellement des attentes très basses pour l'avenir et vous anticipez fortement des résultats négatifs. Ce n'est pas seulement un trait de personnalité : c'est un schéma de pensée qui peut évoluer.",
+      strength: "Conscience des risques, préparation défensive",
+      watch: "Peut être associé à la dépression, à l'anxiété, à une faible qualité de vie et au stress chronique",
+      tip: "La restructuration cognitive issue de la TCC ou l'optimisme appris de Martin Seligman peuvent aider efficacement. Envisagez aussi de chercher un soutien professionnel.",
+    },
+    es: {
+      title: "Pesimista fuerte",
+      description: "Actualmente tienes expectativas muy bajas sobre el futuro y anticipas con fuerza resultados negativos. Esto no es solo un rasgo de personalidad: es un patrón de pensamiento que puede cambiar.",
+      strength: "Conciencia del riesgo, preparación defensiva",
+      watch: "Puede asociarse con depresión, ansiedad, baja calidad de vida y estrés crónico",
+      tip: "La reestructuración cognitiva de la TCC o el optimismo aprendido de Martin Seligman pueden ayudar de forma efectiva. También considera buscar apoyo profesional.",
+    },
   },
 };
 
@@ -182,6 +293,8 @@ const t = {
     strength: "강점",
     watch: "주의 사항",
     tip: "성장 팁",
+    pessimism: "비관",
+    optimism: "낙관",
     restart: "다시 하기",
     share: "결과 공유",
     copied: "복사됨!",
@@ -197,6 +310,8 @@ const t = {
     strength: "Strengths",
     watch: "Watch Out For",
     tip: "Growth Tip",
+    pessimism: "Pessimism",
+    optimism: "Optimism",
     restart: "Restart",
     share: "Share Result",
     copied: "Copied!",
@@ -212,9 +327,62 @@ const t = {
     strength: "強み",
     watch: "注意事項",
     tip: "成長のヒント",
+    pessimism: "悲観",
+    optimism: "楽観",
     restart: "もう一度",
     share: "結果をシェア",
     copied: "コピーされました！",
+  },
+  zh: {
+    title: "乐观主义-悲观主义测试",
+    subtitle: "你如何看待未来？",
+    instruction: "请选择每句话在多大程度上符合你",
+    a1: "完全不符合", a2: "很少符合", a3: "有时符合", a4: "经常符合", a5: "总是符合",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "乐观-悲观倾向结果",
+    yourScore: "分数",
+    strength: "优势",
+    watch: "注意事项",
+    tip: "成长建议",
+    pessimism: "悲观",
+    optimism: "乐观",
+    restart: "重新开始",
+    share: "分享结果",
+    copied: "已复制！",
+  },
+  fr: {
+    title: "Test optimisme-pessimisme",
+    subtitle: "Comment voyez-vous l'avenir ?",
+    instruction: "Choisissez dans quelle mesure chaque phrase vous correspond",
+    a1: "Pas du tout", a2: "Rarement", a3: "Parfois", a4: "Souvent", a5: "Toujours",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "Résultat optimisme-pessimisme",
+    yourScore: "Score",
+    strength: "Forces",
+    watch: "Points de vigilance",
+    tip: "Conseil de progression",
+    pessimism: "Pessimisme",
+    optimism: "Optimisme",
+    restart: "Recommencer",
+    share: "Partager le résultat",
+    copied: "Copié !",
+  },
+  es: {
+    title: "Test de optimismo-pesimismo",
+    subtitle: "¿Cómo ves el futuro?",
+    instruction: "Elige cuánto se aplica a ti cada afirmación",
+    a1: "Para nada", a2: "Rara vez", a3: "A veces", a4: "A menudo", a5: "Siempre",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "Resultado de optimismo-pesimismo",
+    yourScore: "Puntuación",
+    strength: "Fortalezas",
+    watch: "A tener en cuenta",
+    tip: "Consejo de crecimiento",
+    pessimism: "Pesimismo",
+    optimism: "Optimismo",
+    restart: "Reiniciar",
+    share: "Compartir resultado",
+    copied: "¡Copiado!",
   },
 };
 
@@ -228,7 +396,7 @@ function getLevel(score: number): OptimismLevel {
 
 export default function OptimismTest({ locale: localeProp }: Props) {
   const lp = (localeProp ?? "en").toLowerCase();
-  const locale: SupportedLocale = (["ko", "en", "ja"].includes(lp) ? lp : "en") as SupportedLocale;
+  const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
 
   const [idx, setIdx] = useState(0);
@@ -299,8 +467,8 @@ export default function OptimismTest({ locale: localeProp }: Props) {
               <div className="h-full rounded-full transition-all duration-700" style={{ width: `${pct}%`, backgroundColor: lv.color }} />
             </div>
             <div className="mt-1 flex justify-between text-xs text-gray-400">
-              <span>{locale === "ko" ? "비관" : locale === "ja" ? "悲観" : "Pessimism"}</span>
-              <span>{locale === "ko" ? "낙관" : locale === "ja" ? "楽観" : "Optimism"}</span>
+              <span>{tx.pessimism}</span>
+              <span>{tx.optimism}</span>
             </div>
           </div>
         </div>

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import ShareResultButton from "../shared/ShareResultButton";
 
-type SupportedLocale = "ko" | "en" | "ja";
+type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 interface Props {
   locale?: string;
@@ -14,6 +14,9 @@ interface Question {
   ko: string;
   en: string;
   ja: string;
+  zh: string;
+  fr: string;
+  es: string;
   reverse?: boolean; // fixed-mindset phrasing (agree = fixed)
 }
 
@@ -21,16 +24,16 @@ interface Question {
 // Normal: agree = growth (4 = growth)
 // Reverse: agree = fixed (4 = fixed → convert to 1 for growth score)
 const questions: Question[] = [
-  { ko: "나는 노력하면 내 지능이나 능력을 상당히 바꿀 수 있다고 생각한다", en: "I believe I can significantly change my intelligence and abilities through effort", ja: "努力すれば、自分の知能や能力をかなり変えられると思う" },
-  { ko: "사람의 재능은 태어날 때부터 거의 정해져 있다", en: "A person's talents are mostly determined at birth", ja: "人の才能は生まれたときからほぼ決まっている", reverse: true },
-  { ko: "실패는 나에 대해 배울 수 있는 기회라고 생각한다", en: "I believe failure is an opportunity to learn about myself", ja: "失敗は自分について学べる機会だと思う" },
-  { ko: "어떤 분야에서 내가 잘하지 못하면, 그것은 그냥 내 능력이 부족한 것이다", en: "If I'm not good at something, it just means I lack that ability", ja: "何かが得意でない場合、それは単に能力が不足しているだけだ", reverse: true },
-  { ko: "도전적인 문제가 쉬운 문제보다 더 흥미롭다", en: "Challenging problems are more interesting to me than easy ones", ja: "難しい問題の方が簡単な問題より面白い" },
-  { ko: "비판이나 피드백을 받으면 방어적이 되기보다 배울 점을 찾는다", en: "When I receive criticism or feedback, I look for what I can learn rather than becoming defensive", ja: "批判やフィードバックを受けると、防御的になるよりも学べることを探す" },
-  { ko: "내 능력은 이미 결정되어 있어서 크게 변하기 어렵다", en: "My abilities are already determined and hard to change significantly", ja: "自分の能力はすでに決まっていて、大きく変えることは難しい", reverse: true },
-  { ko: "다른 사람의 성공은 나에게 영감이 된다", en: "Other people's success inspires me", ja: "他人の成功は私へのインスピレーションになる" },
-  { ko: "어렵고 오래 걸리는 것보다 내가 잘하는 것을 하는 것이 더 좋다", en: "I prefer doing things I'm already good at rather than difficult long-term challenges", ja: "難しくて時間がかかることより、得意なことをする方が好きだ", reverse: true },
-  { ko: "꾸준한 노력이 선천적 재능보다 더 중요하다고 믿는다", en: "I believe consistent effort is more important than innate talent", ja: "継続的な努力が生まれ持った才能より重要だと信じる" },
+  { ko: "나는 노력하면 내 지능이나 능력을 상당히 바꿀 수 있다고 생각한다", en: "I believe I can significantly change my intelligence and abilities through effort", ja: "努力すれば、自分の知能や能力をかなり変えられると思う", zh: "我相信通过努力，我可以显著改变自己的智力和能力", fr: "Je crois pouvoir faire évoluer nettement mon intelligence et mes capacités par l'effort", es: "Creo que puedo cambiar de forma significativa mi inteligencia y mis capacidades mediante el esfuerzo" },
+  { ko: "사람의 재능은 태어날 때부터 거의 정해져 있다", en: "A person's talents are mostly determined at birth", ja: "人の才能は生まれたときからほぼ決まっている", zh: "一个人的才能基本上从出生时就已经决定了", fr: "Les talents d'une personne sont en grande partie déterminés à la naissance", es: "Los talentos de una persona están determinados en gran parte desde el nacimiento", reverse: true },
+  { ko: "실패는 나에 대해 배울 수 있는 기회라고 생각한다", en: "I believe failure is an opportunity to learn about myself", ja: "失敗は自分について学べる機会だと思う", zh: "我认为失败是了解自己的机会", fr: "Je considère l'échec comme une occasion d'en apprendre sur moi-même", es: "Creo que el fracaso es una oportunidad para aprender sobre mí" },
+  { ko: "어떤 분야에서 내가 잘하지 못하면, 그것은 그냥 내 능력이 부족한 것이다", en: "If I'm not good at something, it just means I lack that ability", ja: "何かが得意でない場合、それは単に能力が不足しているだけだ", zh: "如果我不擅长某个领域，那只是说明我缺少那方面的能力", fr: "Si je ne suis pas bon dans un domaine, cela veut simplement dire que je n'ai pas cette capacité", es: "Si no soy bueno en algo, simplemente significa que me falta esa capacidad", reverse: true },
+  { ko: "도전적인 문제가 쉬운 문제보다 더 흥미롭다", en: "Challenging problems are more interesting to me than easy ones", ja: "難しい問題の方が簡単な問題より面白い", zh: "对我来说，有挑战性的问题比简单的问题更有意思", fr: "Les problèmes stimulants m'intéressent plus que les problèmes faciles", es: "Los problemas desafiantes me resultan más interesantes que los fáciles" },
+  { ko: "비판이나 피드백을 받으면 방어적이 되기보다 배울 점을 찾는다", en: "When I receive criticism or feedback, I look for what I can learn rather than becoming defensive", ja: "批判やフィードバックを受けると、防御的になるよりも学べることを探す", zh: "收到批评或反馈时，我会寻找可以学习的地方，而不是变得防御", fr: "Quand je reçois une critique ou un retour, je cherche ce que je peux en apprendre plutôt que de me défendre", es: "Cuando recibo críticas o comentarios, busco qué puedo aprender en lugar de ponerme a la defensiva" },
+  { ko: "내 능력은 이미 결정되어 있어서 크게 변하기 어렵다", en: "My abilities are already determined and hard to change significantly", ja: "自分の能力はすでに決まっていて、大きく変えることは難しい", zh: "我的能力已经定型，很难发生大的改变", fr: "Mes capacités sont déjà définies et il est difficile de les changer vraiment", es: "Mis capacidades ya están definidas y es difícil cambiarlas de forma importante", reverse: true },
+  { ko: "다른 사람의 성공은 나에게 영감이 된다", en: "Other people's success inspires me", ja: "他人の成功は私へのインスピレーションになる", zh: "他人的成功会给我带来启发", fr: "La réussite des autres m'inspire", es: "El éxito de otras personas me inspira" },
+  { ko: "어렵고 오래 걸리는 것보다 내가 잘하는 것을 하는 것이 더 좋다", en: "I prefer doing things I'm already good at rather than difficult long-term challenges", ja: "難しくて時間がかかることより、得意なことをする方が好きだ", zh: "比起困难且需要长期投入的挑战，我更愿意做自己已经擅长的事", fr: "Je préfère faire ce que je sais déjà bien faire plutôt que relever des défis difficiles et longs", es: "Prefiero hacer cosas que ya se me dan bien antes que asumir desafíos difíciles y de largo plazo", reverse: true },
+  { ko: "꾸준한 노력이 선천적 재능보다 더 중요하다고 믿는다", en: "I believe consistent effort is more important than innate talent", ja: "継続的な努力が生まれ持った才能より重要だと信じる", zh: "我相信持续努力比天生才能更重要", fr: "Je crois que l'effort régulier compte plus que le talent inné", es: "Creo que el esfuerzo constante es más importante que el talento innato" },
 ];
 
 const TYPES: Record<MindsetType, {
@@ -40,6 +43,9 @@ const TYPES: Record<MindsetType, {
   ko: { title: string; description: string; traits: string[]; tip: string };
   en: { title: string; description: string; traits: string[]; tip: string };
   ja: { title: string; description: string; traits: string[]; tip: string };
+  zh: { title: string; description: string; traits: string[]; tip: string };
+  fr: { title: string; description: string; traits: string[]; tip: string };
+  es: { title: string; description: string; traits: string[]; tip: string };
 }> = {
   growth: {
     emoji: "🌱",
@@ -62,6 +68,24 @@ const TYPES: Record<MindsetType, {
       description: "能力と知能は努力によって発展できると強く信じています。挑戦を恐れず、失敗を学習の機会と見て、他者の成功からインスピレーションを得ます。これはキャロル・ドゥエックが示した理想的なマインドセットです。",
       traits: ["挑戦を楽しむ", "失敗から学ぶ", "努力を価値あるものとして見る", "批判を建設的に受け入れる", "他者の成功にインスピレーションを得る"],
       tip: "すでに成長マインドセットを持っています！これを周りの人と共有し、特に困難な時期にもこの視点を維持する練習をしましょう。",
+    },
+    zh: {
+      title: "成长型思维",
+      description: "你非常相信能力和智力可以通过努力发展。你愿意迎接挑战，把失败看作学习机会，也会从他人的成功中获得启发。这正是卡罗尔·德韦克所描述的理想思维模式。",
+      traits: ["乐于接受挑战", "从失败中学习", "重视努力", "建设性地接受批评", "从他人的成功中获得启发"],
+      tip: "你已经具备成长型思维！可以把这种视角分享给身边的人，并练习在困难时期也保持这种看法。",
+    },
+    fr: {
+      title: "Mentalité de croissance",
+      description: "Vous croyez fortement que les capacités et l'intelligence peuvent se développer grâce à l'effort. Vous accueillez les défis, voyez l'échec comme une occasion d'apprendre et trouvez de l'inspiration dans la réussite des autres. C'est la mentalité idéale décrite par Carol Dweck.",
+      traits: ["Accueille les défis", "Apprend de l'échec", "Valorise l'effort", "Reçoit les critiques de façon constructive", "S'inspire de la réussite des autres"],
+      tip: "Vous avez déjà une mentalité de croissance ! Partagez-la avec votre entourage et entraînez-vous à garder cette perspective, surtout dans les périodes difficiles.",
+    },
+    es: {
+      title: "Mentalidad de crecimiento",
+      description: "Crees firmemente que las capacidades y la inteligencia pueden desarrollarse mediante el esfuerzo. Aceptas los desafíos, ves el fracaso como una oportunidad de aprendizaje y encuentras inspiración en el éxito de los demás. Esta es la mentalidad ideal que describe Carol Dweck.",
+      traits: ["Acepta desafíos", "Aprende del fracaso", "Valora el esfuerzo", "Recibe críticas de forma constructiva", "Se inspira en el éxito de los demás"],
+      tip: "Ya tienes una mentalidad de crecimiento. Compártela con quienes te rodean y practica mantener esta perspectiva incluso en momentos difíciles.",
     },
   },
   mixed_growth: {
@@ -86,6 +110,24 @@ const TYPES: Record<MindsetType, {
       traits: ["ほとんどの場合挑戦を受け入れる", "努力を重要視する", "特定の状況で防御的になる", "失敗後の回復が可能"],
       tip: "「まだ」という視点を練習しましょう。「私にはできない」から「私にはまだできない」への小さな言葉の変化が大きな違いを生みます。",
     },
+    zh: {
+      title: "成长倾向混合型",
+      description: "你总体上具备成长型思维，但在某些领域或情境中也可能出现固定型思维。你相信自己的能力并愿意接受挑战，不过有时面对失败或批评会变得防御。",
+      traits: ["通常愿意接受挑战", "重视努力", "在特定情境中偶尔防御", "失败后能够恢复"],
+      tip: "练习“还不会”的视角。把“我做不到这个”改成“我还做不到这个”，这样小小的语言变化会带来很大不同。",
+    },
+    fr: {
+      title: "Mentalité surtout orientée croissance",
+      description: "Vous avez globalement une mentalité de croissance, mais une mentalité fixe peut apparaître dans certains domaines ou certaines situations. Vous faites confiance à vos capacités et acceptez les défis, même si l'échec ou la critique peut parfois vous rendre défensif.",
+      traits: ["Accepte généralement les défis", "Valorise l'effort", "Peut être défensif dans certaines situations", "Peut rebondir après un échec"],
+      tip: "Entraînez-vous à penser en termes de « pas encore ». Passer de « je ne sais pas faire ça » à « je ne sais pas encore faire ça » peut changer beaucoup de choses.",
+    },
+    es: {
+      title: "Mentalidad mayormente de crecimiento",
+      description: "En general tienes una mentalidad de crecimiento, aunque una mentalidad fija puede aparecer en ciertas áreas o situaciones. Confías en tus capacidades y aceptas desafíos, pero a veces puedes ponerte a la defensiva ante el fracaso o la crítica.",
+      traits: ["Suele aceptar desafíos", "Valora el esfuerzo", "A veces se defiende en ciertas situaciones", "Puede recuperarse después del fracaso"],
+      tip: "Practica la perspectiva del “todavía no”. Cambiar “no puedo hacer esto” por “todavía no puedo hacer esto” marca una diferencia importante.",
+    },
   },
   mixed_fixed: {
     emoji: "🌱",
@@ -109,6 +151,24 @@ const TYPES: Record<MindsetType, {
       traits: ["才能は生まれつきだと信じる傾向", "失敗時に自分を責める傾向", "快適な領域を好む", "批判にやや防御的"],
       tip: "小さなことから努力の効果を直接体験してみましょう。新しいスキルを習得する過程で「上手くなっている」と意識的に認識する練習が役立ちます。",
     },
+    zh: {
+      title: "固定倾向混合型",
+      description: "你有一些成长型思维的元素，但倾向于认为自己的能力和才能大体是固定的。面对挑战或失败时，可能会出现放弃或回避的模式。",
+      traits: ["倾向于相信才能是天生的", "失败时容易责怪自己", "偏好舒适区", "对批评有些防御"],
+      tip: "从小处开始亲身体验努力的效果。在学习新技能的过程中，有意识地注意“我正在变好”，会很有帮助。",
+    },
+    fr: {
+      title: "Mentalité surtout fixe",
+      description: "Vous avez certains éléments d'une mentalité de croissance, mais vous avez tendance à voir vos capacités et vos talents comme globalement fixes. Face aux défis ou à l'échec, vous pouvez avoir tendance à abandonner ou à éviter.",
+      traits: ["Tend à croire que le talent est inné", "A tendance à se blâmer en cas d'échec", "Préfère les zones de confort", "Peut être assez défensif face aux critiques"],
+      tip: "Faites directement l'expérience de l'effet de l'effort, en commençant petit. Pendant l'apprentissage d'une nouvelle compétence, remarquer consciemment « je progresse » peut beaucoup aider.",
+    },
+    es: {
+      title: "Mentalidad mayormente fija",
+      description: "Tienes algunos elementos de mentalidad de crecimiento, pero tiendes a ver tus capacidades y talentos como algo generalmente fijo. Ante los desafíos o el fracaso, pueden aparecer patrones de abandono o evitación.",
+      traits: ["Tiende a creer que el talento es innato", "Suele culparse cuando falla", "Prefiere las zonas de comodidad", "Algo defensivo ante la crítica"],
+      tip: "Experimenta de primera mano los efectos del esfuerzo, empezando por algo pequeño. Al adquirir una nueva habilidad, reconocer conscientemente “estoy mejorando” puede ayudarte.",
+    },
   },
   fixed: {
     emoji: "🪨",
@@ -131,6 +191,24 @@ const TYPES: Record<MindsetType, {
       description: "現在、人の能力と知能がおおむね固定されていると信じる傾向が強いです。これは悪いことではなく、より多くの成長の可能性を開ける別の視点があることを意味します。",
       traits: ["才能が固定的だと考える", "挑戦を回避する傾向", "失敗を能力不足として解釈する", "批判に防御的"],
       tip: "出発点は認識です。「今、固定マインドセットを見せているな」と気づくだけで変化が始まります。キャロル・ドゥエックの『マインドセット』を読むことを強くお勧めします。",
+    },
+    zh: {
+      title: "固定型思维",
+      description: "你目前很倾向于相信人的能力和智力大多是固定的。这并不代表不好，只是意味着还有另一种视角，可以打开更多成长的可能性。",
+      traits: ["认为才能是固定的", "倾向于回避挑战", "把失败解释为能力不足", "面对批评时防御"],
+      tip: "起点是觉察。只要注意到“我现在表现出了固定型思维”，改变就已经开始。强烈推荐阅读卡罗尔·德韦克的《终身成长》。",
+    },
+    fr: {
+      title: "Mentalité fixe",
+      description: "Vous avez actuellement une forte tendance à croire que les capacités et l'intelligence des personnes sont globalement fixes. Ce n'est pas mauvais en soi : cela signifie simplement qu'une autre perspective peut ouvrir davantage de possibilités de croissance.",
+      traits: ["Voit le talent comme fixe", "Tend à éviter les défis", "Interprète l'échec comme un manque de capacité", "Se défend face aux critiques"],
+      tip: "Le point de départ, c'est la prise de conscience. Remarquer simplement « j'adopte une mentalité fixe en ce moment » amorce déjà le changement. La lecture de Mindset de Carol Dweck est vivement recommandée.",
+    },
+    es: {
+      title: "Mentalidad fija",
+      description: "Actualmente tienes una fuerte tendencia a creer que las capacidades y la inteligencia de las personas son, en gran parte, fijas. Esto no es algo malo; simplemente significa que existe otra perspectiva que puede abrir más posibilidades de crecimiento.",
+      traits: ["Ve el talento como algo fijo", "Tiende a evitar desafíos", "Interpreta el fracaso como falta de capacidad", "Se pone a la defensiva ante críticas"],
+      tip: "El punto de partida es la conciencia. Solo notar “ahora estoy mostrando una mentalidad fija” ya inicia el cambio. Es muy recomendable leer Mindset, de Carol Dweck.",
     },
   },
 };
@@ -187,6 +265,57 @@ const t = {
     share: "結果をシェア",
     copied: "コピーされました！",
   },
+  zh: {
+    title: "成长型思维测试",
+    subtitle: "你的思维模式是固定型，还是成长型？",
+    instruction: "请选择你对每句话的同意程度",
+    disagree: "不同意",
+    slightly: "稍微同意",
+    mostly: "基本同意",
+    agree: "完全同意",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "思维模式评估结果",
+    yourScore: "成长分数",
+    traits: "特征",
+    tip: "成长建议",
+    restart: "重新开始",
+    share: "分享结果",
+    copied: "已复制！",
+  },
+  fr: {
+    title: "Test de mentalité de croissance",
+    subtitle: "Mentalité fixe ou de croissance : laquelle est la vôtre ?",
+    instruction: "Choisissez votre niveau d'accord avec chaque affirmation",
+    disagree: "Pas d'accord",
+    slightly: "Plutôt d'accord",
+    mostly: "D'accord",
+    agree: "Tout à fait d'accord",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "Résultat de l'évaluation",
+    yourScore: "Score de croissance",
+    traits: "Traits",
+    tip: "Conseil de croissance",
+    restart: "Recommencer",
+    share: "Partager le résultat",
+    copied: "Copié !",
+  },
+  es: {
+    title: "Test de mentalidad de crecimiento",
+    subtitle: "¿Tu mentalidad es fija o de crecimiento?",
+    instruction: "Elige cuánto estás de acuerdo con cada afirmación",
+    disagree: "En desacuerdo",
+    slightly: "Algo de acuerdo",
+    mostly: "Bastante de acuerdo",
+    agree: "Totalmente de acuerdo",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "Resultado de la evaluación",
+    yourScore: "Puntuación de crecimiento",
+    traits: "Rasgos",
+    tip: "Consejo de crecimiento",
+    restart: "Reiniciar",
+    share: "Compartir resultado",
+    copied: "¡Copiado!",
+  },
 };
 
 function getType(score: number): MindsetType {
@@ -198,7 +327,7 @@ function getType(score: number): MindsetType {
 
 export default function GrowthMindsetTest({ locale: localeProp }: Props) {
   const lp = (localeProp ?? "en").toLowerCase();
-  const locale: SupportedLocale = (["ko", "en", "ja"].includes(lp) ? lp : "en") as SupportedLocale;
+  const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
 
   const [idx, setIdx] = useState(0);
@@ -269,9 +398,17 @@ export default function GrowthMindsetTest({ locale: localeProp }: Props) {
     const tp = TYPES[result.type];
     const td = tp[locale];
     const pct = Math.round((result.score / maxScore) * 100);
+    const chartLabels: Record<SupportedLocale, { fixed: string; growth: string }> = {
+      ko: { fixed: "고정형", growth: "성장형" },
+      en: { fixed: "Fixed", growth: "Growth" },
+      ja: { fixed: "固定型", growth: "成長型" },
+      zh: { fixed: "固定型", growth: "成长型" },
+      fr: { fixed: "Fixe", growth: "Croissance" },
+      es: { fixed: "Fija", growth: "Crecimiento" },
+    };
     const chartData = [
-      { name: locale === "ko" ? "고정형" : locale === "ja" ? "固定型" : "Fixed", value: maxScore - result.score, fill: "#6b7280" },
-      { name: locale === "ko" ? "성장형" : locale === "ja" ? "成長型" : "Growth", value: result.score, fill: "#10b981" },
+      { name: chartLabels[locale].fixed, value: maxScore - result.score, fill: "#6b7280" },
+      { name: chartLabels[locale].growth, value: result.score, fill: "#10b981" },
     ];
 
     return (

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import ShareResultButton from "../shared/ShareResultButton";
 
-type SupportedLocale = "ko" | "en" | "ja";
+type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 interface Props {
   locale?: string;
@@ -13,25 +13,31 @@ interface Question {
   ko: string;
   en: string;
   ja: string;
+  zh: string;
+  fr: string;
+  es: string;
 }
 
 const questions: Question[] = [
-  { ko: "나는 어려운 상황에서도 결국 잘 해결될 것이라고 믿는다.", en: "Even in difficult situations, I believe things will eventually work out.", ja: "困難な状況でも、最終的にうまくいくと信じている。" },
-  { ko: "실패나 좌절을 경험해도 비교적 빠르게 회복하는 편이다.", en: "After failure or setbacks, I tend to recover relatively quickly.", ja: "失敗や挫折を経験しても、比較的早く回復する方だ。" },
-  { ko: "힘든 일을 겪을 때 주변에 도움을 요청하거나 지지를 구한다.", en: "When going through hard times, I reach out for help or support from others.", ja: "辛いことがある時、周りに助けを求めたりサポートを求める。" },
-  { ko: "나는 내가 통제할 수 없는 것에 지나치게 집착하지 않는다.", en: "I don't obsess over things I cannot control.", ja: "自分がコントロールできないことに過度に執着しない。" },
-  { ko: "스트레스를 해소하기 위한 나만의 방법(운동, 취미, 명상 등)이 있다.", en: "I have my own stress-relief methods (exercise, hobbies, meditation, etc.).", ja: "ストレスを解消するための自分だけの方法（運動、趣味、瞑想など）がある。" },
-  { ko: "삶에서 의미나 목적을 찾으려고 노력한다.", en: "I actively seek meaning or purpose in life.", ja: "人生において意味や目的を見つけようと努力する。" },
-  { ko: "나는 어려운 경험을 통해 오히려 더 강해지고 성장했다고 느낀다.", en: "I feel that difficult experiences have made me stronger and helped me grow.", ja: "困難な経験を通じて、むしろ強くなり成長したと感じる。" },
-  { ko: "문제가 생겼을 때 감정에 압도되기보다 해결책을 먼저 생각한다.", en: "When problems arise, I think of solutions first rather than being overwhelmed by emotions.", ja: "問題が生じた時、感情に圧倒されるより先に解決策を考える。" },
-  { ko: "나는 미래에 대해 대체로 낙관적인 편이다.", en: "I tend to be mostly optimistic about the future.", ja: "未来に対して概して楽観的な方だ。" },
-  { ko: "내 강점과 가치를 알고 어려운 순간에 이를 활용한다.", en: "I know my strengths and values and draw on them in difficult moments.", ja: "自分の強みと価値観を知っており、困難な瞬間にそれを活用する。" },
+  { ko: "나는 어려운 상황에서도 결국 잘 해결될 것이라고 믿는다.", en: "Even in difficult situations, I believe things will eventually work out.", ja: "困難な状況でも、最終的にうまくいくと信じている。", zh: "即使在困难的情况下，我也相信事情最终会得到解决。", fr: "Même dans les situations difficiles, je crois que les choses finiront par s'arranger.", es: "Incluso en situaciones difíciles, creo que las cosas terminarán saliendo bien." },
+  { ko: "실패나 좌절을 경험해도 비교적 빠르게 회복하는 편이다.", en: "After failure or setbacks, I tend to recover relatively quickly.", ja: "失敗や挫折を経験しても、比較的早く回復する方だ。", zh: "经历失败或挫折后，我通常能比较快地恢复过来。", fr: "Après un échec ou un revers, j'ai tendance à me remettre assez vite.", es: "Después de un fracaso o un revés, suelo recuperarme relativamente rápido." },
+  { ko: "힘든 일을 겪을 때 주변에 도움을 요청하거나 지지를 구한다.", en: "When going through hard times, I reach out for help or support from others.", ja: "辛いことがある時、周りに助けを求めたりサポートを求める。", zh: "遇到艰难时期时，我会向身边的人寻求帮助或支持。", fr: "Quand je traverse une période difficile, je demande de l'aide ou du soutien autour de moi.", es: "Cuando paso por momentos difíciles, pido ayuda o apoyo a las personas que me rodean." },
+  { ko: "나는 내가 통제할 수 없는 것에 지나치게 집착하지 않는다.", en: "I don't obsess over things I cannot control.", ja: "自分がコントロールできないことに過度に執着しない。", zh: "我不会过度执着于自己无法控制的事情。", fr: "Je ne m'acharne pas sur ce que je ne peux pas contrôler.", es: "No me obsesiono con las cosas que no puedo controlar." },
+  { ko: "스트레스를 해소하기 위한 나만의 방법(운동, 취미, 명상 등)이 있다.", en: "I have my own stress-relief methods (exercise, hobbies, meditation, etc.).", ja: "ストレスを解消するための自分だけの方法（運動、趣味、瞑想など）がある。", zh: "我有自己缓解压力的方法（运动、爱好、冥想等）。", fr: "J'ai mes propres façons d'évacuer le stress (sport, loisirs, méditation, etc.).", es: "Tengo mis propias formas de aliviar el estrés (ejercicio, aficiones, meditación, etc.)." },
+  { ko: "삶에서 의미나 목적을 찾으려고 노력한다.", en: "I actively seek meaning or purpose in life.", ja: "人生において意味や目的を見つけようと努力する。", zh: "我会主动在生活中寻找意义或目标。", fr: "Je cherche activement du sens ou un but dans ma vie.", es: "Busco activamente sentido o propósito en la vida." },
+  { ko: "나는 어려운 경험을 통해 오히려 더 강해지고 성장했다고 느낀다.", en: "I feel that difficult experiences have made me stronger and helped me grow.", ja: "困難な経験を通じて、むしろ強くなり成長したと感じる。", zh: "我觉得艰难的经历反而让我变得更强，也帮助我成长。", fr: "J'ai le sentiment que les expériences difficiles m'ont rendu plus fort et m'ont aidé à grandir.", es: "Siento que las experiencias difíciles me han hecho más fuerte y me han ayudado a crecer." },
+  { ko: "문제가 생겼을 때 감정에 압도되기보다 해결책을 먼저 생각한다.", en: "When problems arise, I think of solutions first rather than being overwhelmed by emotions.", ja: "問題が生じた時、感情に圧倒されるより先に解決策を考える。", zh: "出现问题时，我会先思考解决办法，而不是被情绪压倒。", fr: "Quand un problème survient, je pense d'abord aux solutions plutôt que de me laisser submerger par mes émotions.", es: "Cuando surge un problema, pienso primero en soluciones en lugar de dejarme abrumar por las emociones." },
+  { ko: "나는 미래에 대해 대체로 낙관적인 편이다.", en: "I tend to be mostly optimistic about the future.", ja: "未来に対して概して楽観的な方だ。", zh: "我对未来总体上比较乐观。", fr: "J'ai tendance à être plutôt optimiste quant à l'avenir.", es: "Tiendo a ser bastante optimista sobre el futuro." },
+  { ko: "내 강점과 가치를 알고 어려운 순간에 이를 활용한다.", en: "I know my strengths and values and draw on them in difficult moments.", ja: "自分の強みと価値観を知っており、困難な瞬間にそれを活用する。", zh: "我了解自己的优势和价值观，并会在困难时刻运用它们。", fr: "Je connais mes forces et mes valeurs, et je m'appuie sur elles dans les moments difficiles.", es: "Conozco mis fortalezas y valores, y recurro a ellos en los momentos difíciles." },
 ];
 
 const scaleLabels: Record<SupportedLocale, string[]> = {
   ko: ["전혀 아니다", "아니다", "보통", "그렇다", "매우 그렇다"],
   en: ["Not at all", "Rarely", "Neutral", "Often", "Very much so"],
   ja: ["全くない", "ほとんどない", "普通", "よくある", "とてもそうだ"],
+  zh: ["完全不是", "不太是", "一般", "比较符合", "非常符合"],
+  fr: ["Pas du tout", "Rarement", "Neutre", "Souvent", "Tout à fait"],
+  es: ["Para nada", "Rara vez", "Neutral", "A menudo", "Totalmente"],
 };
 
 interface LevelData {
@@ -47,7 +53,7 @@ interface LevelData {
 
 const levelData: Record<ResLevel, LevelData> = {
   high: {
-    label: { ko: "높은 회복탄력성", en: "High Resilience", ja: "高い回復力" },
+    label: { ko: "높은 회복탄력성", en: "High Resilience", ja: "高い回復力", zh: "高复原力", fr: "Résilience élevée", es: "Alta resiliencia" },
     color: "#10b981",
     bg: "bg-emerald-50",
     border: "border-emerald-200",
@@ -55,25 +61,37 @@ const levelData: Record<ResLevel, LevelData> = {
       ko: "당신은 삶의 역경 속에서도 회복하고 성장하는 능력이 뛰어납니다. 어려운 상황을 받아들이고, 지지 자원을 잘 활용하며, 긍정적인 시각을 유지합니다. 이 힘은 타고난 것이기도 하지만, 의식적인 노력과 경험을 통해 키워온 것이기도 합니다.",
       en: "You have strong ability to recover and grow amidst life's adversities. You accept difficult situations, make good use of support resources, and maintain a positive outlook. This strength may be partly innate, but it's also cultivated through conscious effort and experience.",
       ja: "あなたは人生の逆境の中でも回復し成長する能力が優れています。困難な状況を受け入れ、サポートリソースをうまく活用し、前向きな視点を維持します。この力は生まれつきのものでもありますが、意識的な努力と経験を通じて培ったものでもあります。",
+      zh: "你在面对人生逆境时，具备很强的恢复和成长能力。你能够接纳困难处境，善用支持资源，并保持积极视角。这种力量可能有一部分来自天生特质，但也来自你通过有意识的努力和经验逐步培养出的能力。",
+      fr: "Vous avez une forte capacité à vous rétablir et à grandir au milieu des épreuves de la vie. Vous acceptez les situations difficiles, utilisez bien vos ressources de soutien et gardez une vision positive. Cette force peut être en partie naturelle, mais elle s'est aussi construite par des efforts conscients et l'expérience.",
+      es: "Tienes una gran capacidad para recuperarte y crecer en medio de las adversidades de la vida. Aceptas las situaciones difíciles, aprovechas bien los recursos de apoyo y mantienes una mirada positiva. Esta fortaleza puede ser en parte innata, pero también se cultiva con esfuerzo consciente y experiencia.",
     },
     strengths: {
       ko: ["역경 후 빠른 회복", "변화에 대한 높은 적응력", "지지 네트워크 효과적 활용", "긍정적 자기 서사 유지"],
       en: ["Quick recovery after adversity", "High adaptability to change", "Effective use of support network", "Maintaining a positive self-narrative"],
       ja: ["逆境後の素早い回復", "変化への高い適応力", "サポートネットワークの効果的な活用", "前向きな自己物語の維持"],
+      zh: ["逆境后的快速恢复", "对变化的高度适应力", "有效运用支持网络", "保持积极的自我叙事"],
+      fr: ["Récupération rapide après l'adversité", "Grande capacité d'adaptation au changement", "Utilisation efficace du réseau de soutien", "Maintien d'un récit de soi positif"],
+      es: ["Recuperación rápida después de la adversidad", "Alta capacidad de adaptación al cambio", "Uso eficaz de la red de apoyo", "Mantenimiento de una narrativa personal positiva"],
     },
     strategies: {
       ko: ["현재의 습관과 전략을 지속적으로 유지하세요", "어려움을 겪는 주변 사람들을 멘토링해보세요", "자신의 회복 과정을 일기로 기록해보세요"],
       en: ["Maintain your current habits and strategies consistently", "Try mentoring those around you who are struggling", "Journal your recovery process"],
       ja: ["現在の習慣と戦略を継続的に維持してください", "困っている周りの人をメンタリングしてみてください", "自分の回復プロセスを日記に記録してみてください"],
+      zh: ["持续保持你现在的习惯和策略", "试着指导身边正在经历困难的人", "用日记记录自己的恢复过程"],
+      fr: ["Continuez à entretenir vos habitudes et stratégies actuelles", "Essayez de soutenir ou de guider les personnes en difficulté autour de vous", "Tenez un journal de votre processus de récupération"],
+      es: ["Mantén de forma constante tus hábitos y estrategias actuales", "Prueba a orientar a personas cercanas que estén atravesando dificultades", "Registra tu proceso de recuperación en un diario"],
     },
     affirmation: {
       ko: "나는 폭풍 속에서도 나의 중심을 잃지 않습니다.",
       en: "Even in the storm, I do not lose my center.",
       ja: "嵐の中でも、私は自分の中心を失いません。",
+      zh: "即使身处风暴之中，我也不会失去自己的中心。",
+      fr: "Même dans la tempête, je ne perds pas mon centre.",
+      es: "Incluso en la tormenta, no pierdo mi centro.",
     },
   },
   medium: {
-    label: { ko: "보통 수준의 회복탄력성", en: "Moderate Resilience", ja: "中程度の回復力" },
+    label: { ko: "보통 수준의 회복탄력성", en: "Moderate Resilience", ja: "中程度の回復力", zh: "中等复原力", fr: "Résilience modérée", es: "Resiliencia moderada" },
     color: "#f59e0b",
     bg: "bg-amber-50",
     border: "border-amber-200",
@@ -81,25 +99,37 @@ const levelData: Record<ResLevel, LevelData> = {
       ko: "당신은 대부분의 어려움을 잘 헤쳐나가지만, 특정 상황이나 유형의 스트레스에서는 회복이 더딜 수 있습니다. 이미 많은 강점을 가지고 있으며, 몇 가지 전략을 더하면 회복탄력성을 더욱 높일 수 있습니다.",
       en: "You navigate most difficulties well, but recovery may be slower in certain situations or types of stress. You already have many strengths, and a few more strategies can boost your resilience further.",
       ja: "ほとんどの困難をうまく乗り越えますが、特定の状況やタイプのストレスでは回復が遅くなることがあります。すでに多くの強みを持っており、いくつかの戦略を加えることで回復力をさらに高めることができます。",
+      zh: "你能较好地应对大多数困难，但在某些情境或特定类型的压力下，恢复速度可能会变慢。你已经拥有许多优势，再加入一些策略，就能进一步提升复原力。",
+      fr: "Vous traversez bien la plupart des difficultés, mais votre récupération peut être plus lente dans certaines situations ou face à certains types de stress. Vous avez déjà de nombreuses forces, et quelques stratégies supplémentaires peuvent encore renforcer votre résilience.",
+      es: "Afrontas bien la mayoría de las dificultades, pero tu recuperación puede ser más lenta en ciertas situaciones o ante determinados tipos de estrés. Ya cuentas con muchas fortalezas, y algunas estrategias más pueden fortalecer aún más tu resiliencia.",
     },
     strengths: {
       ko: ["어느 정도의 역경 대처 능력 보유", "지지 자원을 활용하려는 의지", "성장에 대한 동기 부여"],
       en: ["Possessing some degree of coping ability", "Willingness to use support resources", "Motivation for growth"],
       ja: ["ある程度の逆境への対処能力を持つ", "サポートリソースを活用しようとする意欲", "成長への動機付け"],
+      zh: ["具备一定程度的逆境应对能力", "愿意运用支持资源", "拥有成长动机"],
+      fr: ["Une certaine capacité à faire face à l'adversité", "Volonté d'utiliser les ressources de soutien", "Motivation à grandir"],
+      es: ["Cierta capacidad para afrontar la adversidad", "Disposición a usar recursos de apoyo", "Motivación para crecer"],
     },
     strategies: {
       ko: ["마음 챙김 명상이나 호흡법을 꾸준히 연습해보세요", "힘든 순간 연락할 수 있는 신뢰할 사람을 미리 정해두세요", "어려운 경험에서 배울 수 있는 '성장 일지'를 써보세요", "자신의 강점 목록을 작성해 눈에 보이는 곳에 두세요"],
       en: ["Practice mindfulness meditation or breathing exercises consistently", "Identify trusted people you can contact in difficult moments", "Write a 'growth journal' to learn from difficult experiences", "Create a list of your strengths and keep it somewhere visible"],
       ja: ["マインドフルネス瞑想や呼吸法を継続的に練習してみてください", "困難な瞬間に連絡できる信頼できる人を事前に決めておいてください", "困難な経験から学べる「成長日記」を書いてみてください", "自分の強みリストを作成して目につく場所に置いてください"],
+      zh: ["持续练习正念冥想或呼吸法", "提前确定在困难时刻可以联系的可信赖的人", "写一本可以从困难经历中学习的“成长日记”", "列出自己的优势，并放在看得见的地方"],
+      fr: ["Pratiquez régulièrement la méditation de pleine conscience ou des exercices de respiration", "Identifiez à l'avance les personnes de confiance à contacter dans les moments difficiles", "Tenez un « journal de croissance » pour apprendre des expériences difficiles", "Faites la liste de vos forces et gardez-la dans un endroit visible"],
+      es: ["Practica de forma constante meditación de atención plena o ejercicios de respiración", "Identifica de antemano a personas de confianza a quienes puedas contactar en momentos difíciles", "Escribe un “diario de crecimiento” para aprender de las experiencias difíciles", "Haz una lista de tus fortalezas y déjala en un lugar visible"],
     },
     affirmation: {
       ko: "나는 어제보다 오늘 더 강해지고 있습니다.",
       en: "I am growing stronger today than I was yesterday.",
       ja: "私は昨日より今日、より強くなっています。",
+      zh: "今天的我正在变得比昨天更强。",
+      fr: "Aujourd'hui, je deviens plus fort qu'hier.",
+      es: "Hoy me estoy volviendo más fuerte que ayer.",
     },
   },
   low: {
-    label: { ko: "회복탄력성 강화 필요", en: "Resilience Needs Strengthening", ja: "回復力の強化が必要" },
+    label: { ko: "회복탄력성 강화 필요", en: "Resilience Needs Strengthening", ja: "回復力の強化が必要", zh: "复原力需要加强", fr: "Résilience à renforcer", es: "La resiliencia necesita fortalecerse" },
     color: "#ef4444",
     bg: "bg-red-50",
     border: "border-red-200",
@@ -107,21 +137,33 @@ const levelData: Record<ResLevel, LevelData> = {
       ko: "현재 당신은 어려운 상황에서 회복하는 것이 버거울 수 있습니다. 이것은 약점이 아니라, 더 많은 지지와 전략이 필요한 신호입니다. 회복탄력성은 연습을 통해 키울 수 있으며, 작은 단계부터 시작하는 것이 중요합니다.",
       en: "You may currently find it difficult to recover from challenging situations. This isn't a weakness — it's a signal that you need more support and strategies. Resilience can be built through practice, and starting with small steps is what matters.",
       ja: "現在、困難な状況から回復することが辛いと感じることがあるかもしれません。これは弱点ではなく、より多くのサポートと戦略が必要なサインです。回復力は練習を通じて高めることができ、小さな一歩から始めることが重要です。",
+      zh: "现在，你可能会觉得从困难情境中恢复并不容易。这并不是弱点，而是一个提示：你需要更多支持和策略。复原力可以通过练习培养，重要的是从小步骤开始。",
+      fr: "Vous pouvez actuellement trouver difficile de vous remettre de situations éprouvantes. Ce n'est pas une faiblesse : c'est le signe que vous avez besoin de plus de soutien et de stratégies. La résilience se développe par la pratique, et l'important est de commencer par de petits pas.",
+      es: "Puede que ahora te resulte difícil recuperarte de situaciones exigentes. Esto no es una debilidad; es una señal de que necesitas más apoyo y estrategias. La resiliencia puede desarrollarse con práctica, y lo importante es empezar con pasos pequeños.",
     },
     strengths: {
       ko: ["어려움을 인식하고 도움을 찾는 용기", "자기 인식을 통한 성장 잠재력", "변화할 수 있는 가능성"],
       en: ["Courage to recognize difficulty and seek help", "Growth potential through self-awareness", "Capacity for change"],
       ja: ["困難を認識し助けを求める勇気", "自己認識を通じた成長の可能性", "変化できる可能性"],
+      zh: ["觉察困难并寻求帮助的勇气", "通过自我觉察成长的潜力", "改变的可能性"],
+      fr: ["Courage de reconnaître la difficulté et de demander de l'aide", "Potentiel de croissance grâce à la conscience de soi", "Capacité à changer"],
+      es: ["Valor para reconocer la dificultad y buscar ayuda", "Potencial de crecimiento mediante la autoconciencia", "Capacidad de cambio"],
     },
     strategies: {
       ko: ["전문 상담사나 심리치료사의 도움을 받아보세요", "하루 10분, 몸을 움직이는 것부터 시작해보세요", "오늘 한 가지 감사한 것을 찾아 기록해보세요", "신뢰할 수 있는 한 사람에게 지금의 마음을 솔직하게 털어놓아 보세요"],
       en: ["Seek help from a professional counselor or therapist", "Start with just 10 minutes of movement a day", "Find one thing to be grateful for today and write it down", "Honestly open up to one trusted person about how you're feeling now"],
       ja: ["専門のカウンセラーや心理療法士の助けを求めてください", "1日10分、体を動かすことから始めてみてください", "今日感謝できることを一つ見つけて記録してみてください", "信頼できる一人に今の気持ちを正直に打ち明けてみてください"],
+      zh: ["寻求专业咨询师或心理治疗师的帮助", "从每天活动身体10分钟开始", "今天找出一件值得感谢的事并记录下来", "向一个值得信赖的人坦诚说出你此刻的感受"],
+      fr: ["Demandez l'aide d'un conseiller professionnel ou d'un psychothérapeute", "Commencez par bouger votre corps 10 minutes par jour", "Trouvez aujourd'hui une chose pour laquelle vous êtes reconnaissant et notez-la", "Parlez honnêtement de ce que vous ressentez à une personne de confiance"],
+      es: ["Busca ayuda de un consejero profesional o terapeuta", "Empieza con solo 10 minutos de movimiento al día", "Encuentra hoy una cosa por la que puedas sentir gratitud y escríbela", "Ábrete con sinceridad a una persona de confianza sobre cómo te sientes ahora"],
     },
     affirmation: {
       ko: "지금 힘든 것은 일시적입니다. 나는 조금씩 나아지고 있습니다.",
       en: "What is hard now is temporary. I am getting better little by little.",
       ja: "今辛いことは一時的です。私は少しずつ良くなっています。",
+      zh: "现在的困难是暂时的。我正在一点一点变好。",
+      fr: "Ce qui est difficile maintenant est temporaire. Je vais mieux, petit à petit.",
+      es: "Lo que ahora es difícil es temporal. Estoy mejorando poco a poco.",
     },
   },
 };
@@ -190,6 +232,54 @@ const ui: Record<SupportedLocale, {
     warning: "回復力が低い状態が続くと、バーンアウトやうつにつながることがあります。専門的なカウンセリングを受けることを検討してください。",
     note: "このテストは回復力に関する心理学研究に基づいており、自己理解のための参考資料です。",
   },
+  zh: {
+    title: "复原力自我评估",
+    subtitle: "面对逆境时，你能多好地恢复过来？",
+    scale: "这句话在多大程度上符合你？",
+    progress: "问题",
+    resultTitle: "我的复原力水平",
+    score: "分数",
+    strengths: "我的优势",
+    strategies: "复原力提升策略",
+    affirmation: "今日肯定语",
+    restart: "重新测试",
+    share: "分享结果",
+    copied: "链接已复制！",
+    warning: "如果低复原力状态持续，可能会发展为倦怠或抑郁感。建议考虑寻求专业咨询。",
+    note: "本测试基于关于复原力的心理学研究，旨在作为自我理解的参考资料。",
+  },
+  fr: {
+    title: "Auto-évaluation de la résilience",
+    subtitle: "Comment rebondissez-vous face à l'adversité ?",
+    scale: "Dans quelle mesure cette phrase vous décrit-elle ?",
+    progress: "Question",
+    resultTitle: "Mon niveau de résilience",
+    score: "Score",
+    strengths: "Mes forces",
+    strategies: "Stratégies pour renforcer la résilience",
+    affirmation: "Affirmation du jour",
+    restart: "Refaire le test",
+    share: "Partager le résultat",
+    copied: "Lien copié !",
+    warning: "Si une faible résilience persiste, elle peut mener à l'épuisement ou à un état dépressif. Envisagez de consulter un professionnel.",
+    note: "Ce test s'appuie sur des recherches psychologiques sur la résilience et sert de repère pour mieux se comprendre.",
+  },
+  es: {
+    title: "Autoevaluación de resiliencia",
+    subtitle: "¿Qué tan bien te recuperas de la adversidad?",
+    scale: "¿Qué tanto te describe esta afirmación?",
+    progress: "Pregunta",
+    resultTitle: "Mi nivel de resiliencia",
+    score: "Puntuación",
+    strengths: "Mis fortalezas",
+    strategies: "Estrategias para fortalecer la resiliencia",
+    affirmation: "Afirmación de hoy",
+    restart: "Repetir test",
+    share: "Compartir resultado",
+    copied: "¡Enlace copiado!",
+    warning: "Si la baja resiliencia persiste, puede derivar en agotamiento o ánimo depresivo. Considera buscar orientación profesional.",
+    note: "Este test se basa en investigaciones psicológicas sobre la resiliencia y está pensado como una referencia para el autoconocimiento.",
+  },
 };
 
 function getLevel(score: number): ResLevel {
@@ -200,7 +290,7 @@ function getLevel(score: number): ResLevel {
 
 export default function ResilienceTest({ locale: localeProp }: Props) {
   const lp = (localeProp ?? "en").toLowerCase();
-  const locale: SupportedLocale = (["ko", "en", "ja"].includes(lp) ? lp : "en") as SupportedLocale;
+  const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const t = ui[locale];
 
   const [idx, setIdx] = useState(0);

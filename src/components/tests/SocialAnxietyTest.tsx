@@ -3,7 +3,7 @@ import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
 
-type SupportedLocale = "ko" | "en" | "ja";
+type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 interface Props {
   locale?: string;
@@ -15,21 +15,24 @@ interface Question {
   ko: string;
   en: string;
   ja: string;
+  zh: string;
+  fr: string;
+  es: string;
 }
 
 const questions: Question[] = [
-  { ko: "낯선 사람들이 많은 모임에 가는 것이 두렵다", en: "I feel afraid of attending gatherings with many strangers", ja: "見知らぬ人が多い集まりに行くことが怖い" },
-  { ko: "다른 사람들 앞에서 말하거나 발표할 때 극도로 긴장한다", en: "I get extremely nervous speaking or presenting in front of others", ja: "人前で話したり発表したりするとき極度に緊張する" },
-  { ko: "사람들이 나를 판단하거나 비판할까봐 걱정된다", en: "I worry that people will judge or criticize me", ja: "人が私を判断したり批判したりすることを心配する" },
-  { ko: "새로운 사람을 만날 때 어색함이나 불안을 느낀다", en: "I feel awkward or anxious when meeting new people", ja: "新しい人に会うとき、ぎこちなさや不安を感じる" },
-  { ko: "내가 무언가 창피한 행동을 할까봐 두렵다", en: "I fear I'll do something embarrassing", ja: "恥ずかしいことをしてしまうのではないかと怖い" },
-  { ko: "파티나 사교 모임을 피하는 경향이 있다", en: "I tend to avoid parties or social gatherings", ja: "パーティーや社交的な集まりを避ける傾向がある" },
-  { ko: "전화통화보다 문자나 이메일을 훨씬 선호한다", en: "I strongly prefer texting or email over phone calls", ja: "電話よりもテキストやメールをはるかに好む" },
-  { ko: "식당에서 주문하거나 점원과 말하는 것이 불편하다", en: "I feel uncomfortable ordering at a restaurant or talking to staff", ja: "レストランで注文したり店員と話したりするのが不快だ" },
-  { ko: "사람들이 있는 곳에서 식사하거나 글씨 쓰는 것이 불편하다", en: "I feel uncomfortable eating or writing with people watching", ja: "人がいる場所で食事したり字を書いたりするのが不快だ" },
-  { ko: "사회적 상황에서 홍조, 떨림, 발한 등 신체 증상이 나타난다", en: "I experience physical symptoms (blushing, trembling, sweating) in social situations", ja: "社会的状況で紅潮、震え、発汗などの身体症状が現れる" },
-  { ko: "대화 중 무슨 말을 해야 할지 몰라 침묵이 두렵다", en: "I fear silences in conversation because I don't know what to say", ja: "会話中に何を言えばいいかわからず、沈黙が怖い" },
-  { ko: "사교적 상황 전에 미리 걱정하거나 뒤에 반추하는 경향이 있다", en: "I tend to worry beforehand and ruminate after social situations", ja: "社会的状況の前に心配し、後に反芻する傾向がある" },
+  { ko: "낯선 사람들이 많은 모임에 가는 것이 두렵다", en: "I feel afraid of attending gatherings with many strangers", ja: "見知らぬ人が多い集まりに行くことが怖い", zh: "我害怕参加有很多陌生人的聚会", fr: "J'ai peur d'aller à des rassemblements où il y a beaucoup d'inconnus", es: "Me da miedo asistir a reuniones con muchas personas desconocidas" },
+  { ko: "다른 사람들 앞에서 말하거나 발표할 때 극도로 긴장한다", en: "I get extremely nervous speaking or presenting in front of others", ja: "人前で話したり発表したりするとき極度に緊張する", zh: "在别人面前说话或做展示时，我会极度紧张", fr: "Je deviens extrêmement nerveux quand je parle ou présente devant les autres", es: "Me pongo extremadamente nervioso al hablar o presentar frente a otras personas" },
+  { ko: "사람들이 나를 판단하거나 비판할까봐 걱정된다", en: "I worry that people will judge or criticize me", ja: "人が私を判断したり批判したりすることを心配する", zh: "我担心别人会评判或批评我", fr: "Je crains que les autres me jugent ou me critiquent", es: "Me preocupa que la gente me juzgue o me critique" },
+  { ko: "새로운 사람을 만날 때 어색함이나 불안을 느낀다", en: "I feel awkward or anxious when meeting new people", ja: "新しい人に会うとき、ぎこちなさや不安を感じる", zh: "认识新朋友时，我会感到尴尬或不安", fr: "Je me sens mal à l'aise ou anxieux quand je rencontre de nouvelles personnes", es: "Me siento incómodo o ansioso cuando conozco gente nueva" },
+  { ko: "내가 무언가 창피한 행동을 할까봐 두렵다", en: "I fear I'll do something embarrassing", ja: "恥ずかしいことをしてしまうのではないかと怖い", zh: "我害怕自己会做出尴尬的举动", fr: "J'ai peur de faire quelque chose d'embarrassant", es: "Temo hacer algo vergonzoso" },
+  { ko: "파티나 사교 모임을 피하는 경향이 있다", en: "I tend to avoid parties or social gatherings", ja: "パーティーや社交的な集まりを避ける傾向がある", zh: "我倾向于回避派对或社交聚会", fr: "J'ai tendance à éviter les fêtes ou les rencontres sociales", es: "Tiendo a evitar fiestas o reuniones sociales" },
+  { ko: "전화통화보다 문자나 이메일을 훨씬 선호한다", en: "I strongly prefer texting or email over phone calls", ja: "電話よりもテキストやメールをはるかに好む", zh: "相比打电话，我更强烈地偏好短信或电子邮件", fr: "Je préfère nettement les messages ou les e-mails aux appels téléphoniques", es: "Prefiero claramente los mensajes de texto o el correo electrónico a las llamadas telefónicas" },
+  { ko: "식당에서 주문하거나 점원과 말하는 것이 불편하다", en: "I feel uncomfortable ordering at a restaurant or talking to staff", ja: "レストランで注文したり店員と話したりするのが不快だ", zh: "在餐厅点餐或和店员说话时，我会感到不自在", fr: "Je me sens mal à l'aise quand je commande au restaurant ou parle au personnel", es: "Me siento incómodo al pedir en un restaurante o hablar con el personal" },
+  { ko: "사람들이 있는 곳에서 식사하거나 글씨 쓰는 것이 불편하다", en: "I feel uncomfortable eating or writing with people watching", ja: "人がいる場所で食事したり字を書いたりするのが不快だ", zh: "有人看着时吃饭或写字，我会感到不自在", fr: "Je me sens mal à l'aise de manger ou d'écrire quand des gens me regardent", es: "Me siento incómodo al comer o escribir cuando otras personas me miran" },
+  { ko: "사회적 상황에서 홍조, 떨림, 발한 등 신체 증상이 나타난다", en: "I experience physical symptoms (blushing, trembling, sweating) in social situations", ja: "社会的状況で紅潮、震え、発汗などの身体症状が現れる", zh: "在社交场合中，我会出现脸红、发抖、出汗等身体症状", fr: "Dans les situations sociales, j'ai des symptômes physiques comme rougir, trembler ou transpirer", es: "En situaciones sociales tengo síntomas físicos como rubor, temblores o sudoración" },
+  { ko: "대화 중 무슨 말을 해야 할지 몰라 침묵이 두렵다", en: "I fear silences in conversation because I don't know what to say", ja: "会話中に何を言えばいいかわからず、沈黙が怖い", zh: "谈话中因为不知道该说什么，我会害怕沉默", fr: "Je redoute les silences dans une conversation parce que je ne sais pas quoi dire", es: "Temo los silencios en una conversación porque no sé qué decir" },
+  { ko: "사교적 상황 전에 미리 걱정하거나 뒤에 반추하는 경향이 있다", en: "I tend to worry beforehand and ruminate after social situations", ja: "社会的状況の前に心配し、後に反芻する傾向がある", zh: "在社交场合前我会提前担心，事后也容易反复回想", fr: "J'ai tendance à m'inquiéter avant les situations sociales et à les ressasser ensuite", es: "Tiendo a preocuparme antes de las situaciones sociales y a darles vueltas después" },
 ];
 
 const LEVELS: Record<AnxietyLevel, {
@@ -39,6 +42,9 @@ const LEVELS: Record<AnxietyLevel, {
   ko: { title: string; description: string; impact: string; action: string };
   en: { title: string; description: string; impact: string; action: string };
   ja: { title: string; description: string; impact: string; action: string };
+  zh: { title: string; description: string; impact: string; action: string };
+  fr: { title: string; description: string; impact: string; action: string };
+  es: { title: string; description: string; impact: string; action: string };
 }> = {
   minimal: {
     emoji: "😌",
@@ -61,6 +67,24 @@ const LEVELS: Record<AnxietyLevel, {
       description: "社会的状況でほとんど不安を感じません。新しい人に会ったり、人前で話したりすることに大きな困難を感じません。",
       impact: "社交活動に大きな制約はなく、比較的自由に社会的関係を築けます。",
       action: "現状を維持しながら、マインドフルネスの練習で社会的快適さをさらに発展させましょう。",
+    },
+    zh: {
+      title: "最低水平（几乎没有）",
+      description: "你在社交场合中几乎不会感到焦虑。认识新朋友或公开发言通常不会带来明显困难。",
+      impact: "社交活动基本不受限制，你可以相对自由地建立人际关系。",
+      action: "保持当前状态，并可以通过正念练习进一步提升社交中的自在感。",
+    },
+    fr: {
+      title: "Minimal (peu ou pas)",
+      description: "Vous ressentez peu d'anxiété dans les situations sociales. Rencontrer de nouvelles personnes ou parler en public ne présente pas de difficulté importante.",
+      impact: "Vos activités sociales ne sont pas vraiment limitées, et vous pouvez nouer des relations assez librement.",
+      action: "Maintenez cet équilibre et envisagez des pratiques de pleine conscience pour renforcer encore votre aisance sociale.",
+    },
+    es: {
+      title: "Mínimo (poco o nada)",
+      description: "Experimentas poca ansiedad en situaciones sociales. Conocer gente nueva o hablar en público no supone una dificultad importante.",
+      impact: "No hay grandes restricciones en tus actividades sociales; puedes formar relaciones con relativa libertad.",
+      action: "Mantén tu estado actual y considera prácticas de atención plena para desarrollar aún más tu comodidad social.",
     },
   },
   mild: {
@@ -85,6 +109,24 @@ const LEVELS: Record<AnxietyLevel, {
       impact: "一部の社会的状況を避けたり不快感を感じることがありますが、機能的には対処できます。",
       action: "段階的な曝露練習（不安な状況に少しずつ慣れること）、社会的スキルの向上、自己への思いやりが役立ちます。",
     },
+    zh: {
+      title: "轻度水平",
+      description: "你在社交场合中偶尔会感到焦虑或不适，但通常不会明显影响日常生活。在某些情境中（如演讲、初次见面等）感受可能更强。",
+      impact: "你可能会回避部分社交场合或感到不自在，但整体功能上仍能应对。",
+      action: "循序渐进的暴露练习（逐步适应会引发焦虑的情境）、提升社交技能，以及对自己保持自我慈悲都会有帮助。",
+    },
+    fr: {
+      title: "Niveau léger",
+      description: "Vous ressentez parfois de l'anxiété ou de l'inconfort dans les situations sociales, sans que cela perturbe fortement votre vie quotidienne. Cela peut être plus marqué dans certaines situations, comme les présentations ou les premières rencontres.",
+      impact: "Vous pouvez éviter certaines situations sociales ou vous y sentir mal à l'aise, tout en restant capable de fonctionner.",
+      action: "L'exposition progressive aux situations anxiogènes, le développement des compétences sociales et l'autocompassion peuvent aider.",
+    },
+    es: {
+      title: "Nivel leve",
+      description: "A veces sientes ansiedad o incomodidad en situaciones sociales, pero no interfiere de forma importante con tu vida diaria. Puede sentirse más intenso en situaciones específicas, como presentaciones o primeros encuentros.",
+      impact: "Puedes evitar algunas situaciones sociales o sentir incomodidad, pero logras afrontarlas de manera funcional.",
+      action: "La exposición gradual a situaciones que provocan ansiedad, la mejora de habilidades sociales y la autocompasión pueden ayudarte.",
+    },
   },
   moderate: {
     emoji: "😟",
@@ -108,6 +150,24 @@ const LEVELS: Record<AnxietyLevel, {
       impact: "キャリア、友人関係、ロマンティックな関係、日常活動など複数の領域で制約を経験する可能性があります。",
       action: "認知行動療法（CBT）や曝露療法が高い効果を示します。専門のカウンセラーへの相談を検討してください。",
     },
+    zh: {
+      title: "中度水平",
+      description: "社交焦虑已经对你的日常生活产生明显影响。你可能会回避许多社交场合，或感到强烈不适，从而错过机会，或在人际关系建立上遇到困难。",
+      impact: "你可能在职业、友谊、亲密关系和日常活动等多个方面感到受限。",
+      action: "认知行为疗法（CBT）或暴露疗法通常具有较高效果。建议考虑咨询专业心理咨询师。",
+    },
+    fr: {
+      title: "Niveau modéré",
+      description: "L'anxiété sociale a un effet visible sur votre vie quotidienne. Vous pouvez éviter de nombreuses situations sociales ou y ressentir un inconfort intense, ce qui peut vous faire manquer des occasions et compliquer la création de liens.",
+      impact: "Vous pouvez rencontrer des limitations dans plusieurs domaines : carrière, amitiés, relations amoureuses et activités du quotidien.",
+      action: "La thérapie cognitivo-comportementale (TCC) ou la thérapie d'exposition montrent une bonne efficacité. Envisagez de consulter un professionnel.",
+    },
+    es: {
+      title: "Nivel moderado",
+      description: "La ansiedad social está teniendo un impacto notable en tu vida diaria. Puedes evitar muchas situaciones sociales o sentir una incomodidad intensa, lo que puede llevarte a perder oportunidades y dificultar la formación de relaciones.",
+      impact: "Puedes experimentar limitaciones en varias áreas: carrera, amistades, relaciones románticas y actividades cotidianas.",
+      action: "La terapia cognitivo-conductual (TCC) o la terapia de exposición suelen ser eficaces. Considera consultar con un profesional.",
+    },
   },
   severe: {
     emoji: "😰",
@@ -130,6 +190,24 @@ const LEVELS: Record<AnxietyLevel, {
       description: "社会不安が日常生活に深刻な影響を与えています。多くの状況を極度に回避したり、大きな苦痛を経験している可能性があります。",
       impact: "社会的孤立、キャリア制限、うつ感の増加など、全体的な生活の質に影響する可能性があります。",
       action: "専門の心理療法士の支援が強く推奨されます。CBT、曝露反応妨害法（ERP）、場合によっては薬物療法が効果的です。精神保健の専門家に相談してください。",
+    },
+    zh: {
+      title: "严重水平",
+      description: "社交焦虑正在严重影响你的日常生活。你可能在极力回避许多情境，或正在经历明显痛苦。",
+      impact: "这可能影响整体生活质量，例如社交孤立、职业受限、抑郁感增加等。",
+      action: "强烈建议寻求专业心理治疗师的帮助。CBT、暴露与反应预防（ERP），以及在某些情况下的药物治疗，都可能有效。请联系心理健康专业人士。",
+    },
+    fr: {
+      title: "Niveau sévère",
+      description: "L'anxiété sociale affecte fortement votre vie quotidienne. Vous pouvez éviter de nombreuses situations de manière extrême ou vivre une détresse importante.",
+      impact: "Elle peut toucher votre qualité de vie globale : isolement social, limites professionnelles, augmentation de l'humeur dépressive.",
+      action: "Un accompagnement par un psychothérapeute est fortement recommandé. La TCC, l'exposition avec prévention de la réponse (ERP) et, dans certains cas, un traitement médicamenteux peuvent être efficaces. Contactez un professionnel de santé mentale.",
+    },
+    es: {
+      title: "Nivel severo",
+      description: "La ansiedad social está afectando de forma significativa tu vida diaria. Puede que estés evitando muchas situaciones de manera extrema o experimentando un malestar importante.",
+      impact: "Puede afectar tu calidad de vida general: aislamiento social, limitaciones profesionales y aumento del ánimo depresivo.",
+      action: "Se recomienda firmemente buscar apoyo de un psicoterapeuta profesional. La TCC, la exposición con prevención de respuesta (EPR) y, en algunos casos, la medicación pueden ser eficaces. Ponte en contacto con un profesional de salud mental.",
     },
   },
 };
@@ -189,6 +267,97 @@ const t = {
     share: "結果をシェア",
     copied: "コピーされました！",
   },
+  zh: {
+    title: "社交焦虑自我评估",
+    subtitle: "测量你在社交场合中的焦虑水平",
+    instruction: "请根据过去2周的经历作答",
+    never: "从不",
+    rarely: "很少",
+    sometimes: "有时",
+    often: "经常",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "评估结果",
+    yourScore: "总分",
+    impact: "生活影响",
+    action: "建议行动",
+    disclaimer: "本测试不是临床诊断，不能替代专业评估。",
+    restart: "重新开始",
+    share: "分享结果",
+    copied: "已复制！",
+  },
+  fr: {
+    title: "Auto-évaluation de l'anxiété sociale",
+    subtitle: "Mesurez votre niveau d'anxiété sociale",
+    instruction: "Répondez d'après vos expériences des 2 dernières semaines",
+    never: "Jamais",
+    rarely: "Rarement",
+    sometimes: "Parfois",
+    often: "Souvent",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "Résultat de l'évaluation",
+    yourScore: "Score total",
+    impact: "Impact sur la vie",
+    action: "Action recommandée",
+    disclaimer: "Ce test n'est pas un diagnostic clinique et ne remplace pas une évaluation professionnelle.",
+    restart: "Recommencer",
+    share: "Partager le résultat",
+    copied: "Copié !",
+  },
+  es: {
+    title: "Autoevaluación de ansiedad social",
+    subtitle: "Mide tu nivel de ansiedad social",
+    instruction: "Responde según tus experiencias de las últimas 2 semanas",
+    never: "Nunca",
+    rarely: "Rara vez",
+    sometimes: "A veces",
+    often: "A menudo",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "Resultado de la evaluación",
+    yourScore: "Puntuación total",
+    impact: "Impacto en la vida",
+    action: "Acción recomendada",
+    disclaimer: "Este test no es un diagnóstico clínico y no sustituye una evaluación profesional.",
+    restart: "Reiniciar",
+    share: "Compartir resultado",
+    copied: "¡Copiado!",
+  },
+};
+
+const nextStepLabels: Record<SupportedLocale, {
+  breathing: string;
+  selfEsteem: string;
+  innerStrength: string;
+}> = {
+  ko: {
+    breathing: "🫁 호흡 타이머",
+    selfEsteem: "🌿 자존감 테스트",
+    innerStrength: "🧠 내면 강점 테스트",
+  },
+  en: {
+    breathing: "🫁 Breathing timer",
+    selfEsteem: "🌿 Self-esteem test",
+    innerStrength: "🧠 Inner strength test",
+  },
+  ja: {
+    breathing: "🫁 呼吸タイマー",
+    selfEsteem: "🌿 自尊感情テスト",
+    innerStrength: "🧠 内面の強さテスト",
+  },
+  zh: {
+    breathing: "🫁 呼吸计时器",
+    selfEsteem: "🌿 自尊测试",
+    innerStrength: "🧠 内在力量测试",
+  },
+  fr: {
+    breathing: "🫁 Minuteur de respiration",
+    selfEsteem: "🌿 Test d'estime de soi",
+    innerStrength: "🧠 Test de force intérieure",
+  },
+  es: {
+    breathing: "🫁 Temporizador de respiración",
+    selfEsteem: "🌿 Test de autoestima",
+    innerStrength: "🧠 Test de fortaleza interior",
+  },
 };
 
 function getLevel(score: number): AnxietyLevel {
@@ -200,7 +369,7 @@ function getLevel(score: number): AnxietyLevel {
 
 export default function SocialAnxietyTest({ locale: localeProp }: Props) {
   const lp = (localeProp ?? "en").toLowerCase();
-  const locale: SupportedLocale = (["ko", "en", "ja"].includes(lp) ? lp : "en") as SupportedLocale;
+  const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
 
   const [idx, setIdx] = useState(0);
@@ -267,6 +436,7 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
     const lv = LEVELS[result.level];
     const ld = lv[locale];
     const pct = Math.round((result.score / maxScore) * 100);
+    const nextLabels = nextStepLabels[locale];
 
     return (
       <div className="space-y-6">
@@ -316,9 +486,9 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
-            { href: `/${locale}/self-esteem/test`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
-            { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+            { href: `/${locale}/breathing/timer`, label: nextLabels.breathing },
+            { href: `/${locale}/self-esteem/test`, label: nextLabels.selfEsteem },
+            { href: `/${locale}/inner-strength/test`, label: nextLabels.innerStrength },
           ]}
         />
         <RelatedReading locale={locale} topic="social-anxiety" />

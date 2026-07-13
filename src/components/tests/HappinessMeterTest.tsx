@@ -3,7 +3,7 @@ import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
 
-type SupportedLocale = "ko" | "en" | "ja";
+type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 interface Props {
   locale?: string;
@@ -13,6 +13,9 @@ interface Question {
   ko: string;
   en: string;
   ja: string;
+  zh: string;
+  fr: string;
+  es: string;
   reversed?: boolean;
 }
 
@@ -21,24 +24,36 @@ const questions: Question[] = [
     ko: "일반적으로, 나는 스스로를 어떻게 생각하나요?",
     en: "In general, I consider myself:",
     ja: "一般的に、私は自分自身を：",
+    zh: "一般来说，我认为自己是：",
+    fr: "De manière générale, je me considère comme :",
+    es: "En general, me considero:",
     reversed: false,
   },
   {
     ko: "대부분의 또래와 비교했을 때, 나는 스스로를:",
     en: "Compared to most of my peers, I consider myself:",
     ja: "ほとんどの同年代と比べて、私は自分を：",
+    zh: "与大多数同龄人相比，我认为自己：",
+    fr: "Par rapport à la plupart des personnes de mon âge, je me considère comme :",
+    es: "En comparación con la mayoría de mis pares, me considero:",
     reversed: false,
   },
   {
     ko: "어떤 사람들은 일반적으로 매우 행복해요. 무슨 일이 있어도 삶을 즐기며 모든 것에서 기쁨을 얻어요. 이 특성이 당신을 얼마나 잘 설명하나요?",
     en: "Some people are generally very happy. They enjoy life regardless of what is happening and are always getting the most out of everything. To what extent does this characterization describe you?",
     ja: "とても幸せな人がいます。何があっても人生を楽しみすべてから最大限を得ます。この特徴はどの程度あなたを表していますか？",
+    zh: "有些人通常非常快乐。无论发生什么，他们都会享受生活，并总能从各种事情中获得乐趣。这个描述在多大程度上符合你？",
+    fr: "Certaines personnes sont généralement très heureuses. Elles profitent de la vie quoi qu'il arrive et tirent toujours le meilleur de chaque situation. Dans quelle mesure cette description vous correspond-elle ?",
+    es: "Algunas personas suelen ser muy felices. Disfrutan la vida sin importar lo que ocurra y siempre sacan lo mejor de todo. ¿En qué medida esta descripción se parece a ti?",
     reversed: false,
   },
   {
     ko: "어떤 사람들은 일반적으로 별로 행복하지 않아요. 우울하지는 않지만, 가능한 만큼 행복해 보이지 않아요. 이 특성이 당신을 얼마나 잘 설명하나요?",
     en: "Some people are generally not very happy. Although they are not depressed, they never seem as happy as they might be. To what extent does this characterization describe you?",
     ja: "あまり幸せでない人もいます。落ち込んではいませんが、なれるほど幸せではない。この特徴はどの程度あなたを表していますか？",
+    zh: "有些人通常并不怎么快乐。虽然他们并不抑郁，但似乎总没有达到自己可以拥有的快乐程度。这个描述在多大程度上符合你？",
+    fr: "Certaines personnes ne sont généralement pas très heureuses. Sans être déprimées, elles ne semblent jamais aussi heureuses qu'elles pourraient l'être. Dans quelle mesure cette description vous correspond-elle ?",
+    es: "Algunas personas, en general, no son muy felices. Aunque no están deprimidas, nunca parecen tan felices como podrían estarlo. ¿En qué medida esta descripción se parece a ti?",
     reversed: true,
   },
 ];
@@ -48,16 +63,25 @@ const scaleOptions = {
     ko: ["매우 불행한 사람", "다소 불행한 사람", "약간 불행한 사람", "보통인 사람", "약간 행복한 사람", "다소 행복한 사람", "매우 행복한 사람"],
     en: ["Very unhappy person", "Somewhat unhappy person", "Slightly unhappy person", "Neutral person", "Slightly happy person", "Somewhat happy person", "Very happy person"],
     ja: ["とても不幸な人", "やや不幸な人", "少し不幸な人", "普通の人", "少し幸せな人", "やや幸せな人", "とても幸せな人"],
+    zh: ["非常不快乐的人", "有些不快乐的人", "稍微不快乐的人", "普通的人", "稍微快乐的人", "比较快乐的人", "非常快乐的人"],
+    fr: ["Personne très malheureuse", "Personne plutôt malheureuse", "Personne légèrement malheureuse", "Personne neutre", "Personne légèrement heureuse", "Personne plutôt heureuse", "Personne très heureuse"],
+    es: ["Persona muy infeliz", "Persona algo infeliz", "Persona ligeramente infeliz", "Persona neutral", "Persona ligeramente feliz", "Persona bastante feliz", "Persona muy feliz"],
   },
   peer: {
     ko: ["훨씬 덜 행복함", "덜 행복함", "약간 덜 행복함", "비슷함", "약간 더 행복함", "더 행복함", "훨씬 더 행복함"],
     en: ["Much less happy", "Less happy", "Slightly less happy", "About the same", "Slightly happier", "Happier", "Much happier"],
     ja: ["ずっと不幸", "不幸", "少し不幸", "同じくらい", "少し幸せ", "幸せ", "ずっと幸せ"],
+    zh: ["快乐程度低很多", "快乐程度较低", "快乐程度稍低", "差不多", "稍微更快乐", "更快乐", "快乐程度高很多"],
+    fr: ["Beaucoup moins heureux", "Moins heureux", "Légèrement moins heureux", "À peu près pareil", "Légèrement plus heureux", "Plus heureux", "Beaucoup plus heureux"],
+    es: ["Mucho menos feliz", "Menos feliz", "Un poco menos feliz", "Más o menos igual", "Un poco más feliz", "Más feliz", "Mucho más feliz"],
   },
   degree: {
     ko: ["전혀 그렇지 않음", "매우 조금", "약간 조금", "보통", "어느 정도", "상당히", "매우 많이"],
     en: ["Not at all", "Very little", "A little", "Somewhat", "A fair amount", "Quite a bit", "Very much"],
     ja: ["全くそうでない", "ほんの少し", "少し", "ある程度", "かなり", "相当", "非常に"],
+    zh: ["完全不符合", "非常少", "有一点", "有些符合", "相当符合", "很符合", "非常符合"],
+    fr: ["Pas du tout", "Très peu", "Un peu", "Dans une certaine mesure", "Assez", "Beaucoup", "Énormément"],
+    es: ["Para nada", "Muy poco", "Un poco", "Algo", "Bastante", "Mucho", "Muchísimo"],
   },
 };
 
@@ -80,18 +104,42 @@ const resultLevels = {
     { min: 4, max: 5.5, emoji: "🙂", label: "高い幸福度", description: "幸せに暮らしています。このポジティブなエネルギーを周りと分かち合いましょう。", color: "#10b981" },
     { min: 5.5, max: 7, emoji: "😄", label: "非常に高い幸福度", description: "例外的に高い幸福度を示しています。優れた感情的回復力があります。", color: "#059669" },
   ],
+  zh: [
+    { min: 1, max: 2.5, emoji: "😔", label: "幸福感较低", description: "你可能正处在一段不容易的时期。可以先留意生活中细小的快乐时刻。", color: "#ef4444" },
+    { min: 2.5, max: 4, emoji: "😐", label: "幸福感中等", description: "你的积极情绪和消极情绪都有一些。试着更常安排能带来愉悦感的活动。", color: "#f59e0b" },
+    { min: 4, max: 5.5, emoji: "🙂", label: "幸福感较高", description: "你整体过得比较快乐。把这份积极能量也分享给身边的人吧。", color: "#10b981" },
+    { min: 5.5, max: 7, emoji: "😄", label: "幸福感非常高", description: "你展现出格外高的幸福感，也具备出色的情绪复原力。", color: "#059669" },
+  ],
+  fr: [
+    { min: 1, max: 2.5, emoji: "😔", label: "Bonheur faible", description: "Vous traversez peut-être une période difficile. Commencez par prêter attention aux petits moments de joie.", color: "#ef4444" },
+    { min: 2.5, max: 4, emoji: "😐", label: "Bonheur modéré", description: "Vos émotions positives et négatives se mélangent. Essayez de rechercher plus souvent les activités qui vous apportent de la joie.", color: "#f59e0b" },
+    { min: 4, max: 5.5, emoji: "🙂", label: "Bonheur élevé", description: "Vous vivez avec un bon niveau de bonheur. Partagez cette énergie positive avec votre entourage.", color: "#10b981" },
+    { min: 5.5, max: 7, emoji: "😄", label: "Bonheur très élevé", description: "Vous montrez un niveau de bonheur exceptionnellement élevé et une excellente résilience émotionnelle.", color: "#059669" },
+  ],
+  es: [
+    { min: 1, max: 2.5, emoji: "😔", label: "Felicidad baja", description: "Puede que estés pasando por un momento difícil. Empieza prestando atención a pequeños momentos de alegría.", color: "#ef4444" },
+    { min: 2.5, max: 4, emoji: "😐", label: "Felicidad moderada", description: "Tienes una mezcla de emociones positivas y negativas. Intenta buscar con más frecuencia actividades que te den alegría.", color: "#f59e0b" },
+    { min: 4, max: 5.5, emoji: "🙂", label: "Felicidad alta", description: "Estás viviendo con un buen nivel de felicidad. Comparte esta energía positiva con quienes te rodean.", color: "#10b981" },
+    { min: 5.5, max: 7, emoji: "😄", label: "Felicidad muy alta", description: "Muestras un nivel de felicidad excepcionalmente alto y una gran resiliencia emocional.", color: "#059669" },
+  ],
 };
 
 const tips = {
   ko: ["감사한 것을 매일 세 가지씩 적어보세요", "소셜 연결이 행복과 강하게 연관되어 있습니다", "타인을 돕는 것이 자신의 행복을 높입니다", "의미 있는 활동에 완전히 몰입해보세요"],
   en: ["Write three things you are grateful for every day", "Social connection is strongly linked to happiness", "Helping others increases your own happiness", "Fully immerse yourself in meaningful activities"],
   ja: ["毎日3つの感謝することを書きましょう", "社会的つながりは幸福と強く関連しています", "他人を助けることが自分の幸福を高めます", "意味のある活動に完全に没頭しましょう"],
+  zh: ["每天写下三件让你感恩的事", "社会连接与幸福感有很强的关联", "帮助他人也会提升自己的幸福感", "全身心投入有意义的活动"],
+  fr: ["Notez chaque jour trois choses pour lesquelles vous êtes reconnaissant", "Les liens sociaux sont fortement associés au bonheur", "Aider les autres augmente aussi votre propre bonheur", "Immergez-vous pleinement dans des activités qui ont du sens"],
+  es: ["Escribe cada día tres cosas por las que sientes gratitud", "La conexión social está muy relacionada con la felicidad", "Ayudar a los demás también aumenta tu propia felicidad", "Sumérgete por completo en actividades significativas"],
 };
 
 const tx = {
   ko: { title: "행복 지수 테스트", subtitle: "나의 행복 온도는?", progress: (c: number, t: number) => `${c} / ${t}`, resultTitle: "나의 행복 점수", score: "행복 점수", restart: "다시 하기", share: "결과 공유", copied: "복사됨!", tipsTitle: "행복 향상 팁", scale: "1(매우 낮음) ~ 7(매우 높음)" },
   en: { title: "Happiness Meter Test", subtitle: "What is my happiness temperature?", progress: (c: number, t: number) => `${c} / ${t}`, resultTitle: "My Happiness Score", score: "Happiness Score", restart: "Restart", share: "Share Result", copied: "Copied!", tipsTitle: "Happiness Tips", scale: "1 (very low) ~ 7 (very high)" },
   ja: { title: "幸福度テスト", subtitle: "私の幸福温度は？", progress: (c: number, t: number) => `${c} / ${t}`, resultTitle: "私の幸福スコア", score: "幸福スコア", restart: "もう一度", share: "結果をシェア", copied: "コピーされました！", tipsTitle: "幸福向上のヒント", scale: "1(非常に低い) ~ 7(非常に高い)" },
+  zh: { title: "幸福指数测试", subtitle: "我的幸福温度是多少？", progress: (c: number, t: number) => `${c} / ${t}`, resultTitle: "我的幸福得分", score: "幸福得分", restart: "重新开始", share: "分享结果", copied: "已复制！", tipsTitle: "提升幸福感的小建议", scale: "1（非常低）~ 7（非常高）" },
+  fr: { title: "Test du niveau de bonheur", subtitle: "Quelle est ma température de bonheur ?", progress: (c: number, t: number) => `${c} / ${t}`, resultTitle: "Mon score de bonheur", score: "Score de bonheur", restart: "Recommencer", share: "Partager le résultat", copied: "Copié !", tipsTitle: "Conseils pour cultiver le bonheur", scale: "1 (très bas) ~ 7 (très élevé)" },
+  es: { title: "Test de felicidad", subtitle: "¿Cuál es mi temperatura de felicidad?", progress: (c: number, t: number) => `${c} / ${t}`, resultTitle: "Mi puntuación de felicidad", score: "Puntuación de felicidad", restart: "Reiniciar", share: "Compartir resultado", copied: "¡Copiado!", tipsTitle: "Consejos para aumentar la felicidad", scale: "1 (muy bajo) ~ 7 (muy alto)" },
 };
 
 function getOptionSet(qIdx: number, locale: SupportedLocale) {
@@ -102,7 +150,7 @@ function getOptionSet(qIdx: number, locale: SupportedLocale) {
 
 export default function HappinessMeterTest({ locale: localeProp }: Props) {
   const lp = (localeProp ?? "en").toLowerCase();
-  const locale: SupportedLocale = (["ko", "en", "ja"].includes(lp) ? lp : "en") as SupportedLocale;
+  const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const ui = tx[locale];
 
   const [idx, setIdx] = useState(0);

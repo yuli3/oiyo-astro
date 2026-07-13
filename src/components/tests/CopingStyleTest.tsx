@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import ShareResultButton from '../shared/ShareResultButton'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 
-type SupportedLocale = "ko" | "en" | "ja";
+type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
 interface Props {
   locale?: string;
@@ -19,10 +19,16 @@ interface Question {
   ko: string;
   en: string;
   ja: string;
+  zh: string;
+  fr: string;
+  es: string;
   options: {
     ko: string;
     en: string;
     ja: string;
+    zh: string;
+    fr: string;
+    es: string;
     type: CopingStyle;
   }[];
 }
@@ -32,72 +38,90 @@ const questions: Question[] = [
     ko: "시험이나 중요한 발표를 앞두고 극도로 긴장할 때 당신은?",
     en: "When extremely nervous before an exam or important presentation, you:",
     ja: "試験や重要な発表を前に極度に緊張しているとき、あなたは？",
+    zh: "在考试或重要演讲前非常紧张时，你会？",
+    fr: "Quand vous êtes très nerveux avant un examen ou une présentation importante, vous :",
+    es: "Cuando estás muy nervioso antes de un examen o una presentación importante, tú:",
     options: [
-      { ko: "구체적인 준비 계획을 세우고 실행한다", en: "Make a concrete preparation plan and execute it", ja: "具体的な準備計画を立てて実行する", type: "problem_focused" },
-      { ko: "심호흡이나 음악을 들으며 마음을 가라앉힌다", en: "Calm down with deep breathing or music", ja: "深呼吸や音楽で気持ちを落ち着かせる", type: "emotion_focused" },
-      { ko: "이것이 성장의 기회라고 의미를 부여한다", en: "Find meaning in it as an opportunity for growth", ja: "これを成長の機会として意味を見出す", type: "meaning_making" },
-      { ko: "긴장된다고 친구에게 털어놓고 위로를 구한다", en: "Tell a friend I'm nervous and seek comfort", ja: "緊張していることを友人に打ち明け、慰めを求める", type: "social_support" },
-      { ko: "다른 것에 집중하며 생각을 피한다", en: "Focus on something else and avoid thinking about it", ja: "他のことに集中して考えを避ける", type: "avoidance" },
+      { ko: "구체적인 준비 계획을 세우고 실행한다", en: "Make a concrete preparation plan and execute it", ja: "具体的な準備計画を立てて実行する", zh: "制定具体的准备计划并执行", fr: "Établir un plan de préparation concret et le suivre", es: "Hacer un plan concreto de preparación y ejecutarlo", type: "problem_focused" },
+      { ko: "심호흡이나 음악을 들으며 마음을 가라앉힌다", en: "Calm down with deep breathing or music", ja: "深呼吸や音楽で気持ちを落ち着かせる", zh: "通过深呼吸或听音乐让自己平静下来", fr: "Me calmer avec la respiration profonde ou de la musique", es: "Calmarme con respiración profunda o música", type: "emotion_focused" },
+      { ko: "이것이 성장의 기회라고 의미를 부여한다", en: "Find meaning in it as an opportunity for growth", ja: "これを成長の機会として意味を見出す", zh: "把它看作成长的机会", fr: "Y voir une occasion de grandir", es: "Darle sentido como una oportunidad de crecimiento", type: "meaning_making" },
+      { ko: "긴장된다고 친구에게 털어놓고 위로를 구한다", en: "Tell a friend I'm nervous and seek comfort", ja: "緊張していることを友人に打ち明け、慰めを求める", zh: "告诉朋友我很紧张，并寻求安慰", fr: "Dire à un ami que je suis nerveux et chercher du réconfort", es: "Contarle a un amigo que estoy nervioso y buscar consuelo", type: "social_support" },
+      { ko: "다른 것에 집중하며 생각을 피한다", en: "Focus on something else and avoid thinking about it", ja: "他のことに集中して考えを避ける", zh: "专注于别的事情，避免去想它", fr: "Me concentrer sur autre chose pour éviter d'y penser", es: "Concentrarme en otra cosa y evitar pensarlo", type: "avoidance" },
     ],
   },
   {
     ko: "직장에서 대인관계 갈등이 생겼을 때 당신은?",
     en: "When there's an interpersonal conflict at work, you:",
     ja: "職場で対人関係の葛藤が生じたとき、あなたは？",
+    zh: "在职场中出现人际冲突时，你会？",
+    fr: "Quand un conflit relationnel survient au travail, vous :",
+    es: "Cuando surge un conflicto interpersonal en el trabajo, tú:",
     options: [
-      { ko: "문제의 원인을 파악하고 직접 대화해 해결한다", en: "Identify the cause and resolve through direct conversation", ja: "問題の原因を把握して直接対話で解決する", type: "problem_focused" },
-      { ko: "혼자 산책이나 운동으로 감정을 해소한다", en: "Release emotions through a solo walk or exercise", ja: "一人で散歩や運動で感情を発散する", type: "emotion_focused" },
-      { ko: "이 갈등이 더 나은 관계를 위한 기회라고 생각한다", en: "Think of this conflict as an opportunity for a better relationship", ja: "この葛藤をより良い関係への機会と考える", type: "meaning_making" },
-      { ko: "신뢰하는 동료나 친구에게 상황을 이야기하고 조언을 구한다", en: "Tell a trusted colleague or friend and seek advice", ja: "信頼できる同僚や友人に状況を話してアドバイスを求める", type: "social_support" },
-      { ko: "최대한 그 사람을 피하고 갈등을 무시한다", en: "Avoid that person as much as possible and ignore the conflict", ja: "できるだけその人を避け、葛藤を無視する", type: "avoidance" },
+      { ko: "문제의 원인을 파악하고 직접 대화해 해결한다", en: "Identify the cause and resolve through direct conversation", ja: "問題の原因を把握して直接対話で解決する", zh: "找出原因，并通过直接沟通解决", fr: "Identifier la cause et résoudre le problème par une discussion directe", es: "Identificar la causa y resolverlo con una conversación directa", type: "problem_focused" },
+      { ko: "혼자 산책이나 운동으로 감정을 해소한다", en: "Release emotions through a solo walk or exercise", ja: "一人で散歩や運動で感情を発散する", zh: "独自散步或运动来释放情绪", fr: "Évacuer mes émotions avec une marche ou du sport en solo", es: "Liberar emociones con un paseo a solas o ejercicio", type: "emotion_focused" },
+      { ko: "이 갈등이 더 나은 관계를 위한 기회라고 생각한다", en: "Think of this conflict as an opportunity for a better relationship", ja: "この葛藤をより良い関係への機会と考える", zh: "把这次冲突看作改善关系的机会", fr: "Voir ce conflit comme une occasion d'améliorer la relation", es: "Ver este conflicto como una oportunidad para mejorar la relación", type: "meaning_making" },
+      { ko: "신뢰하는 동료나 친구에게 상황을 이야기하고 조언을 구한다", en: "Tell a trusted colleague or friend and seek advice", ja: "信頼できる同僚や友人に状況を話してアドバイスを求める", zh: "向信任的同事或朋友说明情况并寻求建议", fr: "En parler à un collègue ou un ami de confiance et demander conseil", es: "Contárselo a un colega o amigo de confianza y pedir consejo", type: "social_support" },
+      { ko: "최대한 그 사람을 피하고 갈등을 무시한다", en: "Avoid that person as much as possible and ignore the conflict", ja: "できるだけその人を避け、葛藤を無視する", zh: "尽量避开那个人，并忽视这场冲突", fr: "Éviter cette personne autant que possible et ignorer le conflit", es: "Evitar a esa persona todo lo posible e ignorar el conflicto", type: "avoidance" },
     ],
   },
   {
     ko: "건강 문제나 몸의 이상으로 걱정될 때 당신은?",
     en: "When worried about a health issue or physical symptom, you:",
     ja: "健康問題や体の異常で心配なとき、あなたは？",
+    zh: "因健康问题或身体异常而担心时，你会？",
+    fr: "Quand un problème de santé ou un symptôme physique vous inquiète, vous :",
+    es: "Cuando te preocupa un problema de salud o un síntoma físico, tú:",
     options: [
-      { ko: "검색하고 의사를 예약하는 등 적극적으로 대처한다", en: "Research and book a doctor appointment — actively cope", ja: "調べたり医者の予約をするなど積極的に対処する", type: "problem_focused" },
-      { ko: "명상이나 이완 기법으로 불안을 다스린다", en: "Manage anxiety with meditation or relaxation techniques", ja: "瞑想やリラクゼーション技法で不安をコントロールする", type: "emotion_focused" },
-      { ko: "이 경험이 건강을 더 소중히 여기게 해준다고 생각한다", en: "Think this experience helps me value health more", ja: "この経験が健康をより大切にさせてくれると思う", type: "meaning_making" },
-      { ko: "가족이나 친구에게 걱정된다고 말하고 공감을 받는다", en: "Tell family or friends I'm worried and receive empathy", ja: "家族や友人に心配していると言い、共感を得る", type: "social_support" },
-      { ko: "생각하면 불안해지니까 일부러 신경 끄고 지낸다", en: "Purposely tune it out to avoid the anxiety of thinking about it", ja: "考えると不安になるので、わざと気にしないようにする", type: "avoidance" },
+      { ko: "검색하고 의사를 예약하는 등 적극적으로 대처한다", en: "Research and book a doctor appointment — actively cope", ja: "調べたり医者の予約をするなど積極的に対処する", zh: "查找资料、预约医生等，积极应对", fr: "Me renseigner, prendre rendez-vous chez le médecin et agir concrètement", es: "Investigar, pedir cita médica y afrontarlo de forma activa", type: "problem_focused" },
+      { ko: "명상이나 이완 기법으로 불안을 다스린다", en: "Manage anxiety with meditation or relaxation techniques", ja: "瞑想やリラクゼーション技法で不安をコントロールする", zh: "用冥想或放松技巧管理焦虑", fr: "Gérer l'anxiété avec la méditation ou des techniques de relaxation", es: "Manejar la ansiedad con meditación o técnicas de relajación", type: "emotion_focused" },
+      { ko: "이 경험이 건강을 더 소중히 여기게 해준다고 생각한다", en: "Think this experience helps me value health more", ja: "この経験が健康をより大切にさせてくれると思う", zh: "认为这段经历会让我更珍惜健康", fr: "Me dire que cette expérience m'aide à accorder plus de valeur à ma santé", es: "Pensar que esta experiencia me ayuda a valorar más la salud", type: "meaning_making" },
+      { ko: "가족이나 친구에게 걱정된다고 말하고 공감을 받는다", en: "Tell family or friends I'm worried and receive empathy", ja: "家族や友人に心配していると言い、共感を得る", zh: "告诉家人或朋友我很担心，并获得共情", fr: "Dire à ma famille ou à mes amis que je suis inquiet et recevoir de l'empathie", es: "Decirle a familiares o amigos que estoy preocupado y recibir empatía", type: "social_support" },
+      { ko: "생각하면 불안해지니까 일부러 신경 끄고 지낸다", en: "Purposely tune it out to avoid the anxiety of thinking about it", ja: "考えると不安になるので、わざと気にしないようにする", zh: "想到就会焦虑，所以故意不去在意", fr: "L'écarter volontairement pour éviter l'anxiété d'y penser", es: "Apartarlo a propósito para evitar la ansiedad de pensarlo", type: "avoidance" },
     ],
   },
   {
     ko: "중요한 관계가 끝나거나 실연을 경험했을 때 당신은?",
     en: "After an important relationship ends or experiencing heartbreak, you:",
     ja: "重要な関係が終わったり、失恋を経験したとき、あなたは？",
+    zh: "一段重要关系结束或经历失恋后，你会？",
+    fr: "Après la fin d'une relation importante ou un chagrin d'amour, vous :",
+    es: "Después de que termina una relación importante o de sufrir una ruptura, tú:",
     options: [
-      { ko: "무슨 일이 있었는지 분석하고 다음엔 어떻게 다르게 할지 생각한다", en: "Analyze what happened and think about what to do differently next time", ja: "何があったかを分析し、次はどう違うかを考える", type: "problem_focused" },
-      { ko: "울거나 일기를 쓰며 감정을 충분히 표현한다", en: "Cry or journal to fully express my emotions", ja: "泣いたり日記を書いたりして感情を十分に表現する", type: "emotion_focused" },
-      { ko: "이 이별이 나를 성장시키는 경험이라고 의미를 찾는다", en: "Find meaning — this breakup is an experience that's growing me", ja: "この別れは自分を成長させる経験だと意味を見出す", type: "meaning_making" },
-      { ko: "친한 친구에게 연락해 함께 시간을 보낸다", en: "Reach out to close friends and spend time with them", ja: "親しい友人に連絡して一緒に時間を過ごす", type: "social_support" },
-      { ko: "드라마, 게임, 쇼핑 등으로 생각을 잊으려 한다", en: "Try to forget by watching dramas, gaming, or shopping", ja: "ドラマ、ゲーム、ショッピングなどで考えを忘れようとする", type: "avoidance" },
+      { ko: "무슨 일이 있었는지 분석하고 다음엔 어떻게 다르게 할지 생각한다", en: "Analyze what happened and think about what to do differently next time", ja: "何があったかを分析し、次はどう違うかを考える", zh: "分析发生了什么，并思考下次如何做得不同", fr: "Analyser ce qui s'est passé et réfléchir à ce que je ferai autrement la prochaine fois", es: "Analizar qué pasó y pensar qué haría diferente la próxima vez", type: "problem_focused" },
+      { ko: "울거나 일기를 쓰며 감정을 충분히 표현한다", en: "Cry or journal to fully express my emotions", ja: "泣いたり日記を書いたりして感情を十分に表現する", zh: "通过哭泣或写日记充分表达情绪", fr: "Pleurer ou écrire dans un journal pour exprimer pleinement mes émotions", es: "Llorar o escribir un diario para expresar bien mis emociones", type: "emotion_focused" },
+      { ko: "이 이별이 나를 성장시키는 경험이라고 의미를 찾는다", en: "Find meaning — this breakup is an experience that's growing me", ja: "この別れは自分を成長させる経験だと意味を見出す", zh: "寻找意义，把这次分离看作让我成长的经历", fr: "Y trouver du sens : cette rupture est une expérience qui me fait grandir", es: "Encontrarle sentido: esta ruptura es una experiencia que me hace crecer", type: "meaning_making" },
+      { ko: "친한 친구에게 연락해 함께 시간을 보낸다", en: "Reach out to close friends and spend time with them", ja: "親しい友人に連絡して一緒に時間を過ごす", zh: "联系亲近的朋友并和他们共度时间", fr: "Contacter des amis proches et passer du temps avec eux", es: "Contactar a amigos cercanos y pasar tiempo con ellos", type: "social_support" },
+      { ko: "드라마, 게임, 쇼핑 등으로 생각을 잊으려 한다", en: "Try to forget by watching dramas, gaming, or shopping", ja: "ドラマ、ゲーム、ショッピングなどで考えを忘れようとする", zh: "通过看剧、游戏或购物来试着忘记", fr: "Essayer d'oublier avec des séries, des jeux ou du shopping", es: "Intentar olvidarlo viendo series, jugando o comprando", type: "avoidance" },
     ],
   },
   {
     ko: "경제적 어려움이나 재정 위기가 왔을 때 당신은?",
     en: "When facing financial difficulty or a money crisis, you:",
     ja: "経済的困難や財政危機が来たとき、あなたは？",
+    zh: "面对经济困难或财务危机时，你会？",
+    fr: "Face à une difficulté financière ou à une crise d'argent, vous :",
+    es: "Cuando enfrentas dificultades económicas o una crisis de dinero, tú:",
     options: [
-      { ko: "예산을 세우고 재정 계획을 구체적으로 만든다", en: "Create a budget and make a concrete financial plan", ja: "予算を立て、財務計画を具体的に作る", type: "problem_focused" },
-      { ko: "음악을 듣거나 자연 속에서 스트레스를 풀고 다시 마음을 정비한다", en: "Relieve stress through music or nature, then regroup", ja: "音楽を聴いたり自然の中でストレスを発散し、気持ちを整え直す", type: "emotion_focused" },
-      { ko: "이것이 돈에 대해 더 현명해질 수 있는 기회라고 생각한다", en: "Think of this as an opportunity to become wiser about money", ja: "これをお金についてより賢くなる機会と考える", type: "meaning_making" },
-      { ko: "가족이나 믿을 수 있는 친구와 상황을 공유한다", en: "Share the situation with family or a trusted friend", ja: "家族や信頼できる友人と状況を共有する", type: "social_support" },
-      { ko: "생각하면 답답해지니까 최대한 안 생각하려고 한다", en: "Try not to think about it because it just makes me feel stuck", ja: "考えると息詰まるので、できるだけ考えないようにする", type: "avoidance" },
+      { ko: "예산을 세우고 재정 계획을 구체적으로 만든다", en: "Create a budget and make a concrete financial plan", ja: "予算を立て、財務計画を具体的に作る", zh: "制定预算，并做出具体的财务计划", fr: "Établir un budget et construire un plan financier concret", es: "Crear un presupuesto y hacer un plan financiero concreto", type: "problem_focused" },
+      { ko: "음악을 듣거나 자연 속에서 스트레스를 풀고 다시 마음을 정비한다", en: "Relieve stress through music or nature, then regroup", ja: "音楽を聴いたり自然の中でストレスを発散し、気持ちを整え直す", zh: "通过音乐或亲近自然释放压力，再重新整理心情", fr: "Relâcher le stress avec de la musique ou la nature, puis me recentrer", es: "Aliviar el estrés con música o naturaleza y luego recomponerme", type: "emotion_focused" },
+      { ko: "이것이 돈에 대해 더 현명해질 수 있는 기회라고 생각한다", en: "Think of this as an opportunity to become wiser about money", ja: "これをお金についてより賢くなる機会と考える", zh: "把这看作让我更明智地对待金钱的机会", fr: "Voir cela comme une occasion de devenir plus avisé avec l'argent", es: "Verlo como una oportunidad para volverme más sensato con el dinero", type: "meaning_making" },
+      { ko: "가족이나 믿을 수 있는 친구와 상황을 공유한다", en: "Share the situation with family or a trusted friend", ja: "家族や信頼できる友人と状況を共有する", zh: "与家人或值得信任的朋友分享情况", fr: "Partager la situation avec ma famille ou un ami de confiance", es: "Compartir la situación con mi familia o con un amigo de confianza", type: "social_support" },
+      { ko: "생각하면 답답해지니까 최대한 안 생각하려고 한다", en: "Try not to think about it because it just makes me feel stuck", ja: "考えると息詰まるので、できるだけ考えないようにする", zh: "想到就觉得憋闷，所以尽量不去想", fr: "Essayer de ne pas y penser parce que cela me bloque encore plus", es: "Intentar no pensarlo porque solo me hace sentir atrapado", type: "avoidance" },
     ],
   },
   {
     ko: "일상에서 쌓인 작은 스트레스들이 폭발할 것 같을 때 당신은?",
     en: "When small daily stresses feel like they're about to boil over, you:",
     ja: "日常で溜まった小さなストレスが爆発しそうなとき、あなたは？",
+    zh: "日常积累的小压力快要爆发时，你会？",
+    fr: "Quand les petits stress du quotidien semblent prêts à déborder, vous :",
+    es: "Cuando los pequeños estreses diarios parecen a punto de desbordarse, tú:",
     options: [
-      { ko: "스트레스 목록을 작성하고 해결할 수 있는 것부터 처리한다", en: "Write a stress list and tackle the solvable ones first", ja: "ストレスのリストを作り、解決できるものから対処する", type: "problem_focused" },
-      { ko: "좋아하는 음식을 먹거나 목욕을 하며 기분을 전환한다", en: "Eat something I love or take a bath to shift my mood", ja: "好きな食べ物を食べたりお風呂に入って気分転換する", type: "emotion_focused" },
-      { ko: "이 과부하가 나의 한계를 알고 조정할 신호라고 생각한다", en: "See this overload as a signal to know my limits and readjust", ja: "この過負荷は自分の限界を知り調整するサインだと考える", type: "meaning_making" },
-      { ko: "가까운 사람에게 연락해 힘들다고 솔직히 말한다", en: "Contact someone close and honestly say I'm struggling", ja: "近くの人に連絡して辛いと率直に話す", type: "social_support" },
-      { ko: "유튜브, 넷플릭스 등으로 아무 생각 없이 쉰다", en: "Rest mindlessly on YouTube, Netflix, etc.", ja: "YouTubeやNetflixなどで何も考えずに休む", type: "avoidance" },
+      { ko: "스트레스 목록을 작성하고 해결할 수 있는 것부터 처리한다", en: "Write a stress list and tackle the solvable ones first", ja: "ストレスのリストを作り、解決できるものから対処する", zh: "列出压力清单，先处理能解决的部分", fr: "Lister mes sources de stress et traiter d'abord ce qui peut l'être", es: "Hacer una lista de estrés y abordar primero lo que se puede resolver", type: "problem_focused" },
+      { ko: "좋아하는 음식을 먹거나 목욕을 하며 기분을 전환한다", en: "Eat something I love or take a bath to shift my mood", ja: "好きな食べ物を食べたりお風呂に入って気分転換する", zh: "吃喜欢的东西或洗个澡来转换心情", fr: "Manger quelque chose que j'aime ou prendre un bain pour changer d'humeur", es: "Comer algo que me gusta o bañarme para cambiar de ánimo", type: "emotion_focused" },
+      { ko: "이 과부하가 나의 한계를 알고 조정할 신호라고 생각한다", en: "See this overload as a signal to know my limits and readjust", ja: "この過負荷は自分の限界を知り調整するサインだと考える", zh: "把这种过载看作了解极限并调整自己的信号", fr: "Voir cette surcharge comme un signal pour reconnaître mes limites et me réajuster", es: "Ver esta sobrecarga como una señal para reconocer mis límites y reajustarme", type: "meaning_making" },
+      { ko: "가까운 사람에게 연락해 힘들다고 솔직히 말한다", en: "Contact someone close and honestly say I'm struggling", ja: "近くの人に連絡して辛いと率直に話す", zh: "联系亲近的人，坦诚地说我很辛苦", fr: "Contacter une personne proche et dire honnêtement que je traverse un moment difficile", es: "Contactar a alguien cercano y decirle honestamente que lo estoy pasando mal", type: "social_support" },
+      { ko: "유튜브, 넷플릭스 등으로 아무 생각 없이 쉰다", en: "Rest mindlessly on YouTube, Netflix, etc.", ja: "YouTubeやNetflixなどで何も考えずに休む", zh: "看 YouTube、Netflix 等，让脑子放空休息", fr: "Me reposer sans réfléchir avec YouTube, Netflix, etc.", es: "Descansar sin pensar con YouTube, Netflix, etc.", type: "avoidance" },
     ],
   },
 ];
@@ -108,6 +132,9 @@ const results: Record<CopingStyle, {
   ko: { title: string; description: string; strength: string; watch: string; tip: string };
   en: { title: string; description: string; strength: string; watch: string; tip: string };
   ja: { title: string; description: string; strength: string; watch: string; tip: string };
+  zh: { title: string; description: string; strength: string; watch: string; tip: string };
+  fr: { title: string; description: string; strength: string; watch: string; tip: string };
+  es: { title: string; description: string; strength: string; watch: string; tip: string };
 }> = {
   problem_focused: {
     emoji: "🔧",
@@ -132,6 +159,27 @@ const results: Record<CopingStyle, {
       strength: "実質的な問題解決、低い無力感、高い自己効力感",
       watch: "コントロール不可能な状況での継続はバーンアウトリスク。感情処理を忘れる可能性あり",
       tip: "コントロールできることとできないことを区別しましょう。コントロールできないことには、意味づけや感情的対処を組み合わせましょう。",
+    },
+    zh: {
+      title: "问题中心应对",
+      description: "这种方式会直接处理压力来源，通过制定计划、搜集信息和采取行动来解决问题。在可控情境中最有效。",
+      strength: "实际解决问题、无力感较低、自我效能感较高",
+      watch: "若在不可控情境中持续使用，可能增加倦怠风险；也可能忽略情绪处理",
+      tip: "请区分哪些事可控、哪些事不可控。面对不可控的部分，可以结合意义建构或情绪中心应对。",
+    },
+    fr: {
+      title: "Coping centré sur le problème",
+      description: "Cette approche s'attaque directement à la source du stress par la planification, la recherche d'informations et l'action concrète. Elle est la plus efficace dans les situations contrôlables.",
+      strength: "Résolution concrète des problèmes, moindre impuissance, forte auto-efficacité",
+      watch: "Risque d'épuisement si elle se prolonge dans des situations incontrôlables ; le traitement émotionnel peut être négligé",
+      tip: "Distinguez ce qui est contrôlable de ce qui ne l'est pas. Pour ce qui ne l'est pas, associez cette approche à la recherche de sens ou au coping centré sur les émotions.",
+    },
+    es: {
+      title: "Afrontamiento centrado en el problema",
+      description: "Este enfoque aborda directamente la fuente del estrés mediante planificación, búsqueda de información y acción directa. Es más eficaz en situaciones controlables.",
+      strength: "Resolución práctica de problemas, menor indefensión, alta autoeficacia",
+      watch: "Puede aumentar el riesgo de agotamiento si se mantiene en situaciones incontrolables; también puede descuidar el procesamiento emocional",
+      tip: "Distingue entre lo que puedes controlar y lo que no. Para lo incontrolable, combínalo con búsqueda de sentido o afrontamiento centrado en la emoción.",
     },
   },
   emotion_focused: {
@@ -158,6 +206,27 @@ const results: Record<CopingStyle, {
       watch: "問題が解決可能なとき、感情的対処だけでは不十分な場合がある",
       tip: "感情的対処はエネルギーを回復するのに優れています。回復後に問題焦点型対処を加えるとさらに効果的です。",
     },
+    zh: {
+      title: "情绪中心应对",
+      description: "这种方式会调节和管理压力带来的情绪，常使用放松技巧、情绪表达和积极重构。在难以控制的情境中尤其有效。",
+      strength: "情绪调节能力、防止倦怠、提升复原力",
+      watch: "当问题本身可以解决时，只靠情绪应对可能还不够",
+      tip: "情绪中心应对很适合恢复能量。恢复之后再加入问题中心应对，会更有效。",
+    },
+    fr: {
+      title: "Coping centré sur les émotions",
+      description: "Cette approche régule et gère les émotions liées au stress grâce à la relaxation, à l'expression émotionnelle et au recadrage positif. Elle est particulièrement utile quand la situation est difficile à contrôler.",
+      strength: "Régulation émotionnelle, prévention de l'épuisement, meilleure résilience",
+      watch: "Quand le problème peut être résolu, le coping émotionnel seul peut ne pas suffire",
+      tip: "Le coping centré sur les émotions aide très bien à récupérer de l'énergie. Après récupération, ajouter une action centrée sur le problème le rend encore plus efficace.",
+    },
+    es: {
+      title: "Afrontamiento centrado en la emoción",
+      description: "Este enfoque regula y gestiona las emociones causadas por el estrés mediante técnicas de relajación, expresión emocional y reinterpretación positiva. Es especialmente útil cuando la situación es difícil de controlar.",
+      strength: "Regulación emocional, prevención del agotamiento, mayor resiliencia",
+      watch: "Cuando el problema se puede resolver, el afrontamiento emocional por sí solo puede no ser suficiente",
+      tip: "El afrontamiento centrado en la emoción es excelente para recuperar energía. Después de recuperarte, añadir afrontamiento centrado en el problema lo hace aún más eficaz.",
+    },
   },
   meaning_making: {
     emoji: "✨",
@@ -182,6 +251,27 @@ const results: Record<CopingStyle, {
       strength: "心理的回復力、長期的な幸福感、人生の意味感の維持",
       watch: "無理に意味を見つけようとすると感情抑圧になり得る。十分に感情を感じた後に意味を探すのが健全",
       tip: "痛みをすぐに意味に変換しようとしないでください。十分に傷つき、十分に悲しんだ後、そのときに意味を探しても遅くはありません。",
+    },
+    zh: {
+      title: "意义建构应对",
+      description: "这种方式会在困难中寻找意义、教训和成长机会。它与维克多·弗兰克尔的意义疗法(Logotherapy)一脉相承，也与创伤后成长(Post-Traumatic Growth)密切相关。",
+      strength: "心理复原力、长期幸福感、维持人生意义感",
+      watch: "强迫自己寻找意义可能变成情绪压抑。充分感受情绪之后再寻找意义，会更健康",
+      tip: "不要急着把痛苦立刻转化为意义。充分受伤、充分悲伤之后，再去寻找意义也不晚。",
+    },
+    fr: {
+      title: "Coping par recherche de sens",
+      description: "Cette approche cherche du sens, des leçons et des occasions de croissance dans les difficultés. Elle rejoint la logothérapie de Viktor Frankl et est étroitement liée à la croissance post-traumatique.",
+      strength: "Résilience psychologique, bien-être à long terme, maintien du sentiment de sens dans la vie",
+      watch: "Forcer la recherche de sens peut devenir une suppression émotionnelle. Il est plus sain de chercher du sens après avoir pleinement ressenti ses émotions",
+      tip: "N'essayez pas de transformer immédiatement la douleur en sens. Après avoir suffisamment souffert et pleuré, il n'est pas trop tard pour chercher ce sens.",
+    },
+    es: {
+      title: "Afrontamiento por búsqueda de sentido",
+      description: "Este enfoque encuentra sentido, aprendizajes y oportunidades de crecimiento en las dificultades. Se alinea con la logoterapia de Viktor Frankl y se relaciona profundamente con el crecimiento postraumático.",
+      strength: "Resiliencia psicológica, bienestar a largo plazo, mantener un sentido de vida",
+      watch: "Forzar la búsqueda de sentido puede convertirse en represión emocional. Es más saludable buscar sentido después de sentir plenamente las emociones",
+      tip: "No intentes convertir el dolor en sentido de inmediato. Después de dolerte y hacer duelo lo suficiente, todavía no es tarde para encontrar significado.",
     },
   },
   social_support: {
@@ -208,6 +298,27 @@ const results: Record<CopingStyle, {
       watch: "他者への過度な依存は自己効力感を低下させる可能性がある。支援者が疲弊しないようバランスが必要",
       tip: "サポートを受けることと同じくらい、与えることも重要です。互恵的な関係を構築するとサポートネットワークが持続します。",
     },
+    zh: {
+      title: "社会支持应对",
+      description: "这种方式会在困难时期与他人连接并寻求支持。研究表明，强有力的社会连接能够显著缓冲压力对身体的影响。",
+      strength: "减少孤独感、获得多元视角、情绪被确认、得到实际帮助",
+      watch: "过度依赖他人可能降低自我效能感；也需要保持平衡，避免支持者疲惫",
+      tip: "给予支持和接受支持同样重要。建立互惠关系，支持网络才更可持续。",
+    },
+    fr: {
+      title: "Coping par soutien social",
+      description: "Cette approche consiste à se relier aux autres et à chercher du soutien dans les périodes difficiles. Les recherches montrent qu'un lien social solide amortit fortement les effets physiques du stress.",
+      strength: "Réduction de la solitude, perspectives variées, validation émotionnelle, aide pratique",
+      watch: "Une dépendance excessive aux autres peut diminuer l'auto-efficacité ; un équilibre est nécessaire pour ne pas épuiser les personnes qui soutiennent",
+      tip: "Donner du soutien est aussi important qu'en recevoir. Les relations réciproques rendent le réseau de soutien durable.",
+    },
+    es: {
+      title: "Afrontamiento con apoyo social",
+      description: "Este enfoque conecta con otras personas y busca apoyo en momentos difíciles. La investigación muestra que una conexión social fuerte amortigua de forma potente los efectos físicos del estrés.",
+      strength: "Reduce la soledad, aporta perspectivas diversas, validación emocional, ayuda práctica",
+      watch: "Depender demasiado de los demás puede reducir la autoeficacia; hace falta equilibrio para no agotar a quienes apoyan",
+      tip: "Dar apoyo es tan importante como recibirlo. Construir relaciones recíprocas hace que la red de apoyo sea sostenible.",
+    },
   },
   avoidance: {
     emoji: "🌀",
@@ -232,6 +343,27 @@ const results: Record<CopingStyle, {
       strength: "短期的な緊張緩和、回復時間の提供、圧倒的な状況での一時的保護",
       watch: "長期的な回避は問題を悪化させる。不安やうつ感の増加、先延ばしパターンの形成",
       tip: "回避は完全に悪いものではありません。「今は休んで、いつ再び向き合うか」を自分で決める意識的回避（計画的回避）は役立ちます。無意識の回避が問題です。",
+    },
+    zh: {
+      title: "回避型应对",
+      description: "这种方式会暂时避开压力情境或相关情绪，或把注意力转移到别处。它能带来短期休息，但长期来看可能不解决问题，反而让问题扩大。",
+      strength: "短期缓解紧张、提供恢复时间、在压倒性情境中提供临时保护",
+      watch: "长期回避会恶化问题；可能增加焦虑和抑郁感，并形成拖延模式",
+      tip: "回避并不完全是坏事。有意识地决定“我现在先休息，什么时候再面对”的计划性回避(Planned Avoidance)是有帮助的。问题在于无意识回避。",
+    },
+    fr: {
+      title: "Coping par évitement",
+      description: "Cette approche évite temporairement les situations stressantes ou les émotions, ou détourne l'attention. Elle offre un repos à court terme, mais peut aggraver les problèmes à long terme au lieu de les résoudre.",
+      strength: "Soulagement bref de la tension, temps de récupération, protection temporaire dans les situations accablantes",
+      watch: "L'évitement prolongé aggrave les problèmes ; il peut augmenter l'anxiété et la dépression, et installer des schémas de procrastination",
+      tip: "L'évitement n'est pas entièrement mauvais. Un évitement planifié, où vous décidez consciemment de vous reposer maintenant puis de revenir au problème à un moment précis, peut aider. Le problème est l'évitement inconscient.",
+    },
+    es: {
+      title: "Afrontamiento evitativo",
+      description: "Este enfoque evita temporalmente las situaciones estresantes o las emociones, o desvía la atención hacia otra cosa. Da descanso a corto plazo, pero a largo plazo puede empeorar los problemas en lugar de resolverlos.",
+      strength: "Alivio breve de la tensión, tiempo de recuperación, protección temporal en situaciones abrumadoras",
+      watch: "La evitación a largo plazo empeora los problemas; aumenta la ansiedad y la tristeza, y crea patrones de procrastinación",
+      tip: "La evitación no es del todo mala. La evitación planificada, decidir conscientemente “ahora descanso y lo enfrentaré en tal momento”, puede ayudar. El problema es la evitación inconsciente.",
     },
   },
 };
@@ -276,11 +408,50 @@ const t = {
     share: "結果をシェア",
     copied: "コピーされました！",
   },
+  zh: {
+    title: "压力应对方式测试",
+    subtitle: "你如何面对困难？",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "你的应对风格",
+    strength: "优势",
+    watch: "需要留意",
+    tip: "成长提示",
+    scoreLabel: "各风格得分",
+    restart: "重新开始",
+    share: "分享结果",
+    copied: "已复制！",
+  },
+  fr: {
+    title: "Test de style de coping",
+    subtitle: "Comment faites-vous face aux difficultés ?",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "Votre style de coping",
+    strength: "Forces",
+    watch: "Points de vigilance",
+    tip: "Conseil de progression",
+    scoreLabel: "Score par style",
+    restart: "Recommencer",
+    share: "Partager le résultat",
+    copied: "Copié !",
+  },
+  es: {
+    title: "Test de estilo de afrontamiento",
+    subtitle: "¿Cómo afrontas las dificultades?",
+    progress: (cur: number, total: number) => `${cur} / ${total}`,
+    resultTitle: "Tu estilo de afrontamiento",
+    strength: "Fortalezas",
+    watch: "A tener en cuenta",
+    tip: "Consejo de crecimiento",
+    scoreLabel: "Puntuación por estilo",
+    restart: "Reiniciar",
+    share: "Compartir resultado",
+    copied: "¡Copiado!",
+  },
 };
 
 export default function CopingStyleTest({ locale: localeProp }: Props) {
   const lp = (localeProp ?? "en").toLowerCase();
-  const locale: SupportedLocale = (["ko", "en", "ja"].includes(lp) ? lp : "en") as SupportedLocale;
+  const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
 
   const [idx, setIdx] = useState(0);
@@ -339,11 +510,11 @@ export default function CopingStyleTest({ locale: localeProp }: Props) {
   }
 
   const typeLabels: Record<CopingStyle, string> = {
-    problem_focused: locale === "ko" ? "문제 중심" : locale === "ja" ? "問題焦点" : "Problem",
-    emotion_focused: locale === "ko" ? "감정 중심" : locale === "ja" ? "感情焦点" : "Emotion",
-    meaning_making: locale === "ko" ? "의미 창출" : locale === "ja" ? "意味創出" : "Meaning",
-    social_support: locale === "ko" ? "사회적 지지" : locale === "ja" ? "社会的支援" : "Social",
-    avoidance: locale === "ko" ? "회피" : locale === "ja" ? "回避" : "Avoidance",
+    problem_focused: locale === "ko" ? "문제 중심" : locale === "ja" ? "問題焦点" : locale === "zh" ? "问题中心" : locale === "fr" ? "Problème" : locale === "es" ? "Problema" : "Problem",
+    emotion_focused: locale === "ko" ? "감정 중심" : locale === "ja" ? "感情焦点" : locale === "zh" ? "情绪中心" : locale === "fr" ? "Émotion" : locale === "es" ? "Emoción" : "Emotion",
+    meaning_making: locale === "ko" ? "의미 창출" : locale === "ja" ? "意味創出" : locale === "zh" ? "意义建构" : locale === "fr" ? "Sens" : locale === "es" ? "Sentido" : "Meaning",
+    social_support: locale === "ko" ? "사회적 지지" : locale === "ja" ? "社会的支援" : locale === "zh" ? "社会支持" : locale === "fr" ? "Soutien" : locale === "es" ? "Apoyo" : "Social",
+    avoidance: locale === "ko" ? "회피" : locale === "ja" ? "回避" : locale === "zh" ? "回避" : locale === "fr" ? "Évitement" : locale === "es" ? "Evitación" : "Avoidance",
   };
 
   if (result) {
