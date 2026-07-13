@@ -7,6 +7,15 @@ import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import { recordTestResult } from '@/lib/user/test-results';
 import { gaEvent } from '@/lib/analytics/ga-event';
+import {
+  bigFiveClassifications,
+  bigFivePlugin,
+  bigFiveResponsesFromAnswers,
+  buildAssessmentResult,
+  recordAssessmentResult,
+  scoreLegacyBigFiveAnswers,
+  type BigFiveScoreMap,
+} from '@/assessments';
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -288,23 +297,10 @@ const DIM_DESCRIPTIONS: Record<Dim, Record<SupportedLang, Record<DimLevel, strin
   },
 }
 
-interface ScoreMap { O: number; C: number; E: number; A: number; N: number }
+type ScoreMap = BigFiveScoreMap
 
 function calcDimLevel(pct: number): DimLevel {
   return pct >= 65 ? 'high' : pct >= 35 ? 'medium' : 'low'
-}
-
-function computeScores(answers: number[]): ScoreMap {
-  const sums: ScoreMap = { O: 0, C: 0, E: 0, A: 0, N: 0 }
-  const dims: Dim[] = ['O', 'O', 'O', 'O', 'C', 'C', 'C', 'C', 'E', 'E', 'E', 'E', 'A', 'A', 'A', 'A', 'N', 'N', 'N', 'N']
-  answers.forEach((v, i) => { sums[dims[i]] += v })
-  // Each dim: min=4 (four 1s), max=20 (four 5s). Normalize to 0–100.
-  const scores: ScoreMap = { O: 0, C: 0, E: 0, A: 0, N: 0 }
-  const dimKeys: Dim[] = ['O', 'C', 'E', 'A', 'N']
-  dimKeys.forEach(d => {
-    scores[d] = Math.round(((sums[d] - 4) / 16) * 100)
-  })
-  return scores
 }
 
 interface Props { locale?: string }
@@ -330,7 +326,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
   function pick(val: number) {
     const newAns = [...answers, val + 1]
     if (current + 1 >= questions.length) {
-      setScores(computeScores(newAns))
+      setScores(scoreLegacyBigFiveAnswers(newAns))
     }
     setAnswers(newAns)
     setCurrent(current + 1)
@@ -358,6 +354,12 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
       locale,
       sourcePath: `/${locale}/big5/test`,
     })
+    const responses = bigFiveResponsesFromAnswers(answers)
+    recordAssessmentResult(buildAssessmentResult(bigFivePlugin, responses, {
+      classifications: bigFiveClassifications(scores),
+      locale,
+      sourcePath: `/${locale}/big5/test`,
+    }))
     gaEvent('test_completed', { test_id: 'big5' })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scores])

@@ -2,6 +2,13 @@ import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import { recordTestResult } from '@/lib/user/test-results'
 import { gaEvent } from '@/lib/analytics/ga-event'
+import {
+  buildRiasecResult,
+  recordAssessmentResult,
+  riasecFullPlugin,
+  type AssessmentLocale,
+  type AssessmentResponses,
+} from '@/assessments'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 // Exported so RiasecQuickTest.tsx (the 18-question /riasec-quick sibling) can
@@ -200,21 +207,26 @@ interface Props { locale?: string }
 
 export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
   const locale = lang(lp ?? 'ko')
+  const resultLocale = (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(lp as AssessmentLocale)
+    ? lp as AssessmentLocale
+    : 'en'
   const lb = LABELS[locale]
   const questions = QUESTIONS[locale]
 
   const [current, setCurrent] = useState(0)
   const [scores, setScores] = useState<Record<RiasecType, number>>({ R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 })
+  const [responses, setResponses] = useState<AssessmentResponses>({})
   const [done, setDone] = useState(false)
 
   function pick(val: number) {
     const q = questions[current]
     const newScores = { ...scores, [q.type]: scores[q.type] + val }
+    setResponses({ ...responses, [q.id]: val })
     if (current + 1 >= questions.length) { setScores(newScores); setDone(true) }
     else { setScores(newScores); setCurrent(current + 1) }
   }
 
-  function restart() { setScores({ R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 }); setCurrent(0); setDone(false) }
+  function restart() { setScores({ R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 }); setResponses({}); setCurrent(0); setDone(false) }
 
   // Record the result once, when the quiz is actually finished.
   useEffect(() => {
@@ -228,9 +240,13 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
       resultLabel: code,
       inputs: { scores },
       result: { code, scores },
-      locale,
-      sourcePath: `/${locale}/riasec-career-test`,
+      locale: resultLocale,
+      sourcePath: `/${resultLocale}/riasec-career-test`,
     })
+    recordAssessmentResult(buildRiasecResult(riasecFullPlugin, responses, {
+      locale: resultLocale,
+      sourcePath: `/${resultLocale}/riasec-career-test`,
+    }))
     gaEvent('test_completed', { test_id: 'riasec' })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [done])
