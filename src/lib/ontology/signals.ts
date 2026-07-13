@@ -13,20 +13,10 @@
  *     (`oiyo_user_state`, `@/lib/user/store/user-store`) — used for zodiac
  *     and saju (both require a birth date) and as an mbti fallback.
  *
- * ⚠️ Investigation note (2026-07-09, Hephaestus): at the time this file was
- * written, none of the big5/riasec/enneagram/mbti standalone test components
- * (`BigFivePersonalityTest.tsx`, `RiasecCareerTest.tsx`, `EnneagramTest.tsx`,
- * `MbtiPersonalityTest.tsx`) call `recordTestResult()`. They round-trip their
- * result through the URL only (`@/lib/result-url`) or (RIASEC) not at all.
- * Only `political-compass`, `holmes-rahe`, `joseon-faction` and
- * `economics-school` currently populate the store. The adapters below are
- * written against the shape each component computes internally
- * (`ScoreMap {O,C,E,A,N}` for big5, top RIASEC code + scores, a single
- * enneagram type digit, a 4-letter mbti type) wrapped the same way the four
- * already-wired tests wrap their `result` payload (`{ code }` / `{ score,
- * band }`), so signals start flowing the moment those tests are instrumented
- * — no signals.ts changes needed. Until then, `collectSignals()` simply
- * returns `{}` for these fields, which callers must treat as "not taken yet".
+ * Historical note: this collector began as the Phase 1 v1 compatibility
+ * layer. Big Five, RIASEC, and MBTI now dual-write versioned V2 assessment
+ * results while continuing to write the legacy shapes consumed here. Keep
+ * these adapters until the `/ontology` UI finishes its V2 signal migration.
  */
 
 import { calculateSaju, analyzeSaju } from "@/lib/ontology/saju/logic";

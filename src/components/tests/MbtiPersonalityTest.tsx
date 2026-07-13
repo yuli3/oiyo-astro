@@ -6,6 +6,12 @@ import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import { recordTestResult } from '@/lib/user/test-results';
 import { gaEvent } from '@/lib/analytics/ga-event';
+import {
+  buildMbtiResult,
+  mbtiPreferenceScores,
+  mbtiTypeFromResponses,
+  recordAssessmentResult,
+} from '@/assessments';
 
 export type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -194,13 +200,9 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
   const answeredCount = Object.keys(answers).length
   const isComplete = answeredCount === questions.length
 
-  const computedType = (Object.entries(DIMENSIONS).map(([dim, values]) => {
-    const dimQuestions = questions.filter((q) => q.dim === dim)
-    const first = dimQuestions.filter((q) => answers[q.id] === values[0]).length
-    const second = dimQuestions.filter((q) => answers[q.id] === values[1]).length
-    return first >= second ? values[0] : values[1]
-  }).join('')) as MbtiType
+  const computedType = (isComplete ? mbtiTypeFromResponses(answers) : 'ESTJ') as MbtiType
   const mbtiType = forcedType ?? computedType
+  const preferenceScores = isComplete ? mbtiPreferenceScores(answers) : null
 
   const profile = TYPE_PROFILES[mbtiType]
   const title = l === 'ko' ? `${mbtiType} - ${profile?.ko}` : `${mbtiType} - ${profile?.en}`
@@ -225,6 +227,10 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
       locale: l,
       sourcePath: `/${l}/mbti/test`,
     })
+    recordAssessmentResult(buildMbtiResult(answers, {
+      locale: l,
+      sourcePath: `/${l}/mbti/test`,
+    }))
     gaEvent('test_completed', { test_id: 'mbti' })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showResult, isComplete])
@@ -243,6 +249,16 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
             <div key={dim} className="rounded-xl bg-slate-50 p-4 text-center">
               <p className="text-xs font-semibold text-slate-500">{dim}</p>
               <p className="mt-1 text-2xl font-black text-slate-900">{mbtiType.includes(values[0]) ? values[0] : values[1]}</p>
+              {preferenceScores && (
+                <>
+                  <p className="mt-1 text-[11px] font-semibold text-slate-500">
+                    {values[0]} {preferenceScores[dim as DimKey]}% · {values[1]} {100 - preferenceScores[dim as DimKey]}%
+                  </p>
+                  <div className="mt-2 h-1.5 overflow-hidden rounded-full bg-slate-200" aria-hidden="true">
+                    <div className="h-full bg-blue-600" style={{ width: `${preferenceScores[dim as DimKey]}%` }} />
+                  </div>
+                </>
+              )}
             </div>
           ))}
         </div>

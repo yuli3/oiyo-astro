@@ -2,6 +2,7 @@ export type SourceKind =
   | "clinical-guideline"
   | "critique"
   | "norm-study"
+  | "official-framework"
   | "original-theory"
   | "translation-study"
   | "validation-study";
