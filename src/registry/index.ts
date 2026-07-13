@@ -417,6 +417,29 @@ const taxCalendarManifest: FeatureManifest = {
   },
 };
 
+const financialRatiosManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#2563eb",
+  domain: "ontology",
+  icon: "Calculator",
+  id: "financial-ratios",
+  path: "/financial-ratios",
+  status: "production",
+  name: {
+    zh: "财务比率探索器", en: "Financial Ratio Explorer", es: "Explorador de ratios financieros",
+    fr: "Explorateur de ratios financiers", ja: "財務比率エクスプローラー", ko: "재무비율 탐색기",
+  },
+  description: {
+    zh: "在示例财务报表中选择比率，分子分母以两色联动高亮，学习流动比率·ROE等。",
+    en: "Pick a ratio on sample statements; its numerator and denominator light up in two colors. Learn current ratio, ROE and more.",
+    es: "Elige un ratio en estados de ejemplo; numerador y denominador se iluminan en dos colores.",
+    fr: "Choisissez un ratio sur des états d'exemple ; numérateur et dénominateur s'illuminent en deux couleurs.",
+    ja: "サンプル財務諸表で比率を選ぶと分子・分母が2色で連動。流動比率・ROEなどを学ぶ。",
+    ko: "샘플 재무제표에서 비율을 고르면 분자·분모가 2색으로 연동. 유동비율·부채비율·ROE 등 학습.",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -437,6 +460,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   incomeStatementGameManifest,
   incomeTaxFlowManifest,
   taxCalendarManifest,
+  financialRatiosManifest,
 ];
 
 // Helper to get features easily
