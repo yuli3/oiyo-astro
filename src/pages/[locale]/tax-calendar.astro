@@ -1,0 +1,131 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { LOCALES } from "../../i18n";
+import type { Locale } from "../../i18n";
+import TaxCalendar from "../../components/tools/TaxCalendar";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const BASE = "https://oiyo.net";
+
+const meta: Record<string, { title: string; description: string }> = {
+  ko: {
+    title: "세금 신고 캘린더 — 부가세·종소세·법인세·재산세 일정 한눈에",
+    description: "국세(부가가치세 1·7월, 종합소득세 5월, 법인세 3월)와 지방세(자동차세·재산세)의 연간 신고·납부 일정을 대상자별로 확인하고 다음 마감까지 D-day를 보는 무료 세무 캘린더.",
+  },
+  en: {
+    title: "Korean Tax Calendar — VAT, Income & Property Tax Deadlines",
+    description: "A free calendar of Korea's national and local tax deadlines — VAT (Jan/Jul), income tax (May), corporate tax (Mar), vehicle & property tax — filterable by taxpayer with a live D-day to the next filing.",
+  },
+  ja: {
+    title: "韓国税務カレンダー — 付加価値税・所得税・法人税の日程",
+    description: "韓国の国税(付加価値税1・7月、総合所得税5月、法人税3月)と地方税(自動車税・財産税)の年間申告・納付日程を対象者別に確認できる無料ツール。",
+  },
+  zh: {
+    title: "韩国报税日历 — 增值税·所得税·法人税·财产税日程",
+    description: "一览韩国国税(增值税1·7月、综合所得税5月、法人税3月)与地方税(汽车税·财产税)的年度申报缴纳日程，可按纳税人筛选并显示下次截止的倒计时。",
+  },
+  fr: {
+    title: "Calendrier fiscal coréen — TVA, impôt sur le revenu et taxes",
+    description: "Un calendrier gratuit des échéances fiscales coréennes (TVA jan./juil., impôt sur le revenu mai, impôt sur les sociétés mars, taxes véhicule et foncière), filtrable par contribuable.",
+  },
+  es: {
+    title: "Calendario fiscal coreano — IVA, IRPF y otros impuestos",
+    description: "Un calendario gratuito de los plazos fiscales de Corea (IVA ene./jul., IRPF mayo, impuesto de sociedades marzo, impuestos de vehículo y bienes), filtrable por contribuyente.",
+  },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<string, {
+  lead: string; faqTitle: string; faq: { q: string; a: string }[];
+  relatedTitle: string; related: { href: string; label: string; desc: string; external?: boolean }[];
+}> = {
+  ko: {
+    lead: "세금은 '언제 내는지'만 알아도 절반은 해결됩니다. 국세와 지방세의 신고·납부 시기를 한 해 흐름으로 펼쳐 두면, 놓치기 쉬운 마감을 미리 챙길 수 있습니다. 대상자(개인·개인사업자·법인)를 골라 나에게 해당하는 일정만 볼 수 있습니다.",
+    faqTitle: "자주 묻는 질문",
+    faq: [
+      { q: "부가가치세는 언제 신고하나요?", a: "확정신고는 1월(2기, 7~12월분)과 7월(1기, 1~6월분)에 합니다. 법인은 그 사이 4월·10월에 예정신고가 있고, 간이과세자는 다음 해 1월에 연 1회 신고합니다." },
+      { q: "종합소득세와 법인세 신고 시기는?", a: "개인의 종합소득세는 5월 1일~31일입니다(성실신고 대상은 6월 30일). 법인세는 사업연도 종료 후 3개월 이내로, 12월 결산 법인은 3월 31일까지입니다." },
+      { q: "자동차세·재산세 같은 지방세는 언제 내나요?", a: "자동차세 정기분은 6월과 12월(1월에 연납 신청 시 할인)입니다. 재산세는 7월(주택 1기·건축물 등)과 9월(주택 2기·토지)에 납부합니다. 6월 1일 기준 소유자가 대상입니다." },
+      { q: "마감일이 주말이면 어떻게 되나요?", a: "기한 말일이 토요일·일요일·공휴일이면 그다음 영업일로 자동 순연됩니다. 정확한 일정과 세액은 홈택스(국세)와 위택스(지방세)에서 확인하세요." },
+    ],
+    relatedTitle: "이어서 보기",
+    related: [
+      { href: "/income-tax-flow", label: "소득세 흐름 도구", desc: "과세표준부터 결정세액까지." },
+      { href: "/income-statement-game", label: "손익계산서 게임", desc: "재무제표 구조를 게임으로." },
+      { href: "https://blog.oiyo.net/ko/magazine-vat-guide/", label: "부가세 가이드", desc: "신고 실무 자세히.", external: true },
+    ],
+  },
+  en: {
+    lead: "Half the battle with taxes is simply knowing when they are due. Laid out across the year, Korea's national and local filing dates are easy to plan around. Pick your taxpayer type to see only the deadlines that apply to you.",
+    faqTitle: "FAQ",
+    faq: [
+      { q: "When is VAT filed in Korea?", a: "Final returns are in January (2nd period, Jul–Dec) and July (1st period, Jan–Jun). Corporations also file preliminary returns in April and October; simplified-scheme filers file once a year in January." },
+      { q: "When are income tax and corporate tax due?", a: "Individual comprehensive income tax is May 1–31 (honest-reporting filers: June 30). Corporate tax is due within three months of fiscal year-end — March 31 for December-closing companies." },
+      { q: "When are local taxes like vehicle and property tax paid?", a: "Vehicle tax is billed in June and December (with a discount if prepaid in January). Property tax is paid in July (housing 1st half, buildings) and September (housing 2nd half, land), based on ownership as of June 1." },
+      { q: "What if a deadline falls on a weekend?", a: "If the last day is a Saturday, Sunday or public holiday, it moves to the next business day. Confirm exact dates and amounts on Hometax (national) and Wetax (local)." },
+    ],
+    relatedTitle: "See also",
+    related: [
+      { href: "/income-tax-flow", label: "Income tax flow", desc: "From tax base to final liability." },
+      { href: "/income-statement-game", label: "Income statement game", desc: "Learn financial statements by play." },
+    ],
+  },
+};
+const c = content[locale] ?? content.en;
+
+const url = `${BASE}/${locale}/tax-calendar`;
+const faqLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: c.faq.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+};
+const appLd = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: m.title.split(" — ")[0],
+  url,
+  applicationCategory: "FinanceApplication",
+  operatingSystem: "Web browser",
+  offers: { "@type": "Offer", price: "0", priceCurrency: "KRW" },
+  inLanguage: locale,
+  publisher: { "@id": "https://oiyo.net/#organization" },
+};
+---
+
+<Layout title={m.title} description={m.description}>
+  <main class="mx-auto max-w-2xl px-4 py-8">
+    <p class="mb-6 text-sm leading-relaxed text-gray-600">{c.lead}</p>
+
+    <TaxCalendar client:load locale={locale} />
+
+    <section class="mt-12 border-t border-gray-100 pt-8">
+      <h2 class="text-lg font-black text-gray-900">{c.faqTitle}</h2>
+      <div class="mt-4 space-y-4">
+        {c.faq.map((f) => (
+          <div>
+            <h3 class="text-sm font-bold text-gray-800">{f.q}</h3>
+            <p class="mt-1 text-sm leading-relaxed text-gray-600">{f.a}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-lg font-black text-gray-900">{c.relatedTitle}</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        {c.related.map((r) => (
+          <a href={r.href} class="rounded-xl border border-gray-200 p-3 transition-colors hover:border-emerald-300" {...(r.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+            <div class="text-sm font-bold text-gray-800">{r.label}</div>
+            <div class="mt-0.5 text-xs text-gray-500">{r.desc}</div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </main>
+
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)} />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(appLd)} />
+</Layout>

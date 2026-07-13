@@ -394,6 +394,29 @@ const incomeTaxFlowManifest: FeatureManifest = {
   },
 };
 
+const taxCalendarManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#059669",
+  domain: "ontology",
+  icon: "Timer",
+  id: "tax-calendar",
+  path: "/tax-calendar",
+  status: "production",
+  name: {
+    zh: "韩国报税日历", en: "Korean Tax Calendar", es: "Calendario fiscal coreano",
+    fr: "Calendrier fiscal coréen", ja: "韓国税務カレンダー", ko: "세금 신고 캘린더",
+  },
+  description: {
+    zh: "按纳税人查看韩国国税与地方税的年度申报缴纳日程及下次截止倒计时。",
+    en: "Korea's national & local tax deadlines by taxpayer, with a live D-day to the next filing.",
+    es: "Los plazos fiscales nacionales y locales de Corea por contribuyente, con cuenta atrás.",
+    fr: "Les échéances fiscales coréennes (national et local) par contribuable, avec compte à rebours.",
+    ja: "韓国の国税・地方税の年間申告・納付日程を対象者別に確認、次の締切までのD-day付き。",
+    ko: "부가세·종소세·법인세·재산세 등 국세·지방세 연간 신고·납부 일정을 대상자별로 보고 다음 마감 D-day 확인.",
+  },
+};
+
 export const FEATURE_REGISTRY: FeatureManifest[] = [
   ontologyManifest,
   dailyManifest,
@@ -413,6 +436,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   overseasStockTaxManifest,
   incomeStatementGameManifest,
   incomeTaxFlowManifest,
+  taxCalendarManifest,
 ];
 
 // Helper to get features easily
