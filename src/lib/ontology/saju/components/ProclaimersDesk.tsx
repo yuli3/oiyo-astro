@@ -16,6 +16,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { birthCivilToInstant } from "@/lib/ontology/kernel/time";
 import { earthlyBranches, heavenlyStems } from "@/lib/ontology/saju/data";
 import { analyzeSaju, calculateSaju } from "@/lib/ontology/saju/logic";
 import { SajuResult as SajuResultType } from "@/lib/ontology/saju/types";
@@ -41,8 +42,17 @@ export function ProclaimersDesk() {
     // Sync with global user context
     setGlobalBirthDate(birthDate);
 
-    const date = new Date(birthDate);
-    date.setHours(parseInt(birthTime), 0);
+    // birthDate is a "YYYY-MM-DD" wall-clock date at the birthplace; resolve it
+    // against the birthplace standard time, not the visitor's browser timezone.
+    const [y, m, d] = birthDate.split("-").map(Number);
+    if (!y || !m || !d) return;
+    const date = birthCivilToInstant({
+      day: d,
+      hour: parseInt(birthTime),
+      minute: 0,
+      month: m,
+      year: y,
+    });
 
     // Use standard ontology engine
     const saju = calculateSaju(date, false, "male");

@@ -3,34 +3,31 @@
 import { Calendar, Check, Pencil } from "lucide-react";
 import { useState } from "react";
 import { useUserProfile } from "@/lib/user/context/UserContext";
+import { createBirthRecord, resolveBirthRecord } from "@/lib/user/birth-record";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 type Copy = {
   cancel: string; edit: string; prompt: string; save: string; saved: string; title: string;
   date: string; time: string; timeHint: string; gender: string; male: string; female: string;
-  blood: string; unknown: string; opens: string; name: string; nameHint: string;
+  blood: string; unknown: string; opens: string; precision: string; name: string; nameHint: string;
 };
 const COPY: Record<Lang, Copy> = {
-  ko: { cancel: "취소", edit: "수정", prompt: "정보를 입력할수록 더 많은 좌표가 열립니다. 모두 이 브라우저에만 저장됩니다.", save: "저장", saved: "프로필이 기록되었습니다", title: "나의 출생 정보", date: "생년월일", time: "태어난 시각", timeHint: "모르면 비워두세요", gender: "성별", male: "남성", female: "여성", blood: "혈액형", unknown: "모름", opens: "사주·출생차트·오행·별자리 등에 사용됩니다", name: "이름", nameHint: "이름풀이·수비학에 사용" },
-  en: { cancel: "Cancel", edit: "Edit", prompt: "The more you enter, the more coordinates unlock. All stays in this browser.", save: "Save", saved: "Profile saved", title: "Your birth info", date: "Birth date", time: "Birth time", timeHint: "Leave blank if unknown", gender: "Gender", male: "Male", female: "Female", blood: "Blood type", unknown: "Unknown", opens: "Used for Saju, natal chart, Five Elements, zodiac & more", name: "Name", nameHint: "Used for name reading & numerology" },
-  ja: { cancel: "キャンセル", edit: "編集", prompt: "入力するほど多くの座標が開きます。すべてこのブラウザだけに保存。", save: "保存", saved: "プロフィールを記録しました", title: "出生情報", date: "生年月日", time: "出生時刻", timeHint: "不明なら空欄", gender: "性別", male: "男性", female: "女性", blood: "血液型", unknown: "不明", opens: "四柱・出生図・五行・星座などに使用", name: "名前", nameHint: "姓名判断・数秘術に使用" },
-  zh: { cancel: "取消", edit: "修改", prompt: "输入越多，解锁的坐标越多。全部只保存在此浏览器。", save: "保存", saved: "资料已记录", title: "出生信息", date: "出生日期", time: "出生时间", timeHint: "不知道可留空", gender: "性别", male: "男", female: "女", blood: "血型", unknown: "未知", opens: "用于八字、星盘、五行、星座等", name: "姓名", nameHint: "用于姓名学·数字命理" },
-  fr: { cancel: "Annuler", edit: "Modifier", prompt: "Plus vous saisissez, plus de coordonnées se débloquent. Tout reste dans ce navigateur.", save: "Enregistrer", saved: "Profil enregistré", title: "Vos infos de naissance", date: "Date de naissance", time: "Heure de naissance", timeHint: "Laissez vide si inconnu", gender: "Genre", male: "Homme", female: "Femme", blood: "Groupe sanguin", unknown: "Inconnu", opens: "Utilisé pour Saju, thème natal, Cinq Éléments, zodiaque…", name: "Prénom", nameHint: "Pour l'onomancie et la numérologie" },
-  es: { cancel: "Cancelar", edit: "Editar", prompt: "Cuanto más ingreses, más coordenadas se desbloquean. Todo queda en este navegador.", save: "Guardar", saved: "Perfil guardado", title: "Tus datos de nacimiento", date: "Fecha de nacimiento", time: "Hora de nacimiento", timeHint: "Déjalo vacío si no lo sabes", gender: "Género", male: "Hombre", female: "Mujer", blood: "Grupo sanguíneo", unknown: "Desconocido", opens: "Se usa para Saju, carta natal, Cinco Elementos, zodiaco…", name: "Nombre", nameHint: "Para onomancia y numerología" },
+  ko: { cancel: "취소", edit: "수정", prompt: "정보를 입력할수록 더 많은 좌표가 열립니다. 모두 이 브라우저에만 저장됩니다.", save: "저장", saved: "프로필이 기록되었습니다", title: "나의 출생 정보", date: "생년월일", time: "태어난 시각", timeHint: "모르면 비워두세요", gender: "성별", male: "남성", female: "여성", blood: "혈액형", unknown: "모름", opens: "사주·출생차트·오행·별자리 등에 사용됩니다", precision: "정밀 사주·천문 계산은 출생지 확인이 추가로 필요합니다.", name: "이름", nameHint: "이름풀이·수비학에 사용" },
+  en: { cancel: "Cancel", edit: "Edit", prompt: "The more you enter, the more coordinates unlock. All stays in this browser.", save: "Save", saved: "Profile saved", title: "Your birth info", date: "Birth date", time: "Birth time", timeHint: "Leave blank if unknown", gender: "Gender", male: "Male", female: "Female", blood: "Blood type", unknown: "Unknown", opens: "Used for Saju, natal chart, Five Elements, zodiac & more", precision: "Precise Saju and astronomy calculations also require a confirmed birthplace.", name: "Name", nameHint: "Used for name reading & numerology" },
+  ja: { cancel: "キャンセル", edit: "編集", prompt: "入力するほど多くの座標が開きます。すべてこのブラウザだけに保存。", save: "保存", saved: "プロフィールを記録しました", title: "出生情報", date: "生年月日", time: "出生時刻", timeHint: "不明なら空欄", gender: "性別", male: "男性", female: "女性", blood: "血液型", unknown: "不明", opens: "四柱・出生図・五行・星座などに使用", precision: "精密な四柱・天文計算には出生地の確認も必要です。", name: "名前", nameHint: "姓名判断・数秘術に使用" },
+  zh: { cancel: "取消", edit: "修改", prompt: "输入越多，解锁的坐标越多。全部只保存在此浏览器。", save: "保存", saved: "资料已记录", title: "出生信息", date: "出生日期", time: "出生时间", timeHint: "不知道可留空", gender: "性别", male: "男", female: "女", blood: "血型", unknown: "未知", opens: "用于八字、星盘、五行、星座等", precision: "精确的八字与天文计算还需要确认出生地。", name: "姓名", nameHint: "用于姓名学·数字命理" },
+  fr: { cancel: "Annuler", edit: "Modifier", prompt: "Plus vous saisissez, plus de coordonnées se débloquent. Tout reste dans ce navigateur.", save: "Enregistrer", saved: "Profil enregistré", title: "Vos infos de naissance", date: "Date de naissance", time: "Heure de naissance", timeHint: "Laissez vide si inconnu", gender: "Genre", male: "Homme", female: "Femme", blood: "Groupe sanguin", unknown: "Inconnu", opens: "Utilisé pour Saju, thème natal, Cinq Éléments, zodiaque…", precision: "Les calculs précis de Saju et d’astronomie exigent aussi un lieu de naissance confirmé.", name: "Prénom", nameHint: "Pour l'onomancie et la numérologie" },
+  es: { cancel: "Cancelar", edit: "Editar", prompt: "Cuanto más ingreses, más coordenadas se desbloquean. Todo queda en este navegador.", save: "Guardar", saved: "Perfil guardado", title: "Tus datos de nacimiento", date: "Fecha de nacimiento", time: "Hora de nacimiento", timeHint: "Déjalo vacío si no lo sabes", gender: "Género", male: "Hombre", female: "Mujer", blood: "Grupo sanguíneo", unknown: "Desconocido", opens: "Se usa para Saju, carta natal, Cinco Elementos, zodiaco…", precision: "Los cálculos precisos de Saju y astronomía también requieren confirmar el lugar de nacimiento.", name: "Nombre", nameHint: "Para onomancia y numerología" },
 };
 
-const toDateInput = (iso: string | null | undefined) => {
-  if (!iso) return "";
-  const d = new Date(iso);
-  return Number.isNaN(d.getTime()) ? "" : d.toISOString().slice(0, 10);
-};
 const BLOODS = ["A", "B", "O", "AB"] as const;
 
 export function OntologyBirthInput({ locale }: { locale: string }) {
-  const { profile, setProfileData } = useUserProfile();
+  const { profile, saveBirthRecord, setProfileData } = useUserProfile();
+  const birthRecord = resolveBirthRecord(profile);
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
   const c = COPY[lang];
-  const has = !!profile.birthDate;
+  const has = !!birthRecord;
   const [editing, setEditing] = useState(false);
   // Local form state, seeded from the store.
   const [date, setDate] = useState("");
@@ -40,19 +37,23 @@ export function OntologyBirthInput({ locale }: { locale: string }) {
   const [name, setName] = useState("");
 
   const seed = () => {
-    setDate(toDateInput(profile.birthDate));
-    setTime(profile.birthTime ?? "");
+    setDate(birthRecord?.civilDate ?? "");
+    setTime(birthRecord?.civilTime ?? "");
     setGender((profile.gender as "male" | "female") ?? "");
     setBlood(profile.bloodType ?? "");
     setName(profile.name ?? "");
   };
 
   const save = () => {
-    const d = date || toDateInput(profile.birthDate);
+    const d = date || birthRecord?.civilDate || "";
     if (!d) return;
+    saveBirthRecord(createBirthRecord({
+      civilDate: d,
+      civilTime: time || null,
+      needsConfirmation: true,
+      provenance: "user-confirmed-v2",
+    }));
     setProfileData({
-      birthDate: d,
-      birthTime: time || null,
       gender: gender || null,
       bloodType: (blood || null) as "A" | "B" | "O" | "AB" | null,
       name: name.trim() || null,
@@ -83,7 +84,7 @@ export function OntologyBirthInput({ locale }: { locale: string }) {
           <div>
             <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-date">{c.date}</label>
             <input id="ob-date" type="date" max={new Date().toISOString().slice(0, 10)}
-              value={date || toDateInput(profile.birthDate)} onChange={(e) => setDate(e.target.value)}
+              value={date || birthRecord?.civilDate || ""} onChange={(e) => setDate(e.target.value)}
               className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-base font-black text-slate-900 outline-none focus:border-green-500 focus:bg-white focus:ring-4 focus:ring-green-500/10" />
           </div>
           <div>
@@ -113,8 +114,9 @@ export function OntologyBirthInput({ locale }: { locale: string }) {
             </div>
           </div>
           <p className="text-[11px] leading-5 text-slate-400">{c.opens}</p>
+          <p className="text-[11px] leading-5 text-amber-700">{c.precision}</p>
           <div className="flex items-center gap-2">
-            <button onClick={save} disabled={!(date || profile.birthDate)}
+            <button onClick={save} disabled={!(date || birthRecord?.civilDate)}
               className="h-12 flex-1 rounded-2xl bg-green-700 text-sm font-black text-white transition hover:bg-green-800 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50">{c.save}</button>
             {has && (
               <button onClick={() => setEditing(false)} className="h-12 rounded-2xl px-4 text-xs font-bold text-slate-500 hover:bg-slate-50">{c.cancel}</button>
@@ -127,11 +129,12 @@ export function OntologyBirthInput({ locale }: { locale: string }) {
             <span className="flex items-center gap-1.5 font-black"><Check className="h-4 w-4 shrink-0" />{c.saved}</span>
             <span className="text-green-700">
               {profile.name ? `${profile.name} · ` : ""}
-              {toDateInput(profile.birthDate)}
-              {profile.birthTime ? ` · ${profile.birthTime}` : ""}
+              {birthRecord?.civilDate}
+              {birthRecord?.civilTime ? ` · ${birthRecord.civilTime}` : ""}
               {profile.gender ? ` · ${profile.gender === "male" ? c.male : c.female}` : ""}
               {profile.bloodType ? ` · ${profile.bloodType}` : ""}
             </span>
+            {birthRecord?.needsConfirmation && <span className="text-amber-700">{c.precision}</span>}
           </p>
           <button onClick={() => { seed(); setEditing(true); }}
             className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-green-200 bg-white px-3 py-2 text-xs font-bold text-green-800 hover:border-green-300">

@@ -2,11 +2,11 @@
  * Universal Profile Engine (UPE) - Main Entry Point
  *
  * This is THE ONLY function you need to call.
- * Input: { birthDate, fullName, gender, bloodType }
+ * Input: { civilDate, instant, fullName, gender, bloodType }
  * Output: Everything. All wisdom traditions. All lucky attributes. All social compatibility.
  *
  * Usage:
- *   const profile = createUniversalProfile({ birthDate: new Date('1990-05-15'), fullName: '홍길동' });
+ *   const profile = createUniversalProfile({ civilDate: '1990-05-15', instant: new Date('1990-05-15T01:00:00Z'), fullName: '홍길동' });
  *   console.log(profile.saju);           // Four Pillars
  *   console.log(profile.luckyColor);     // "Green"
  *   console.log(profile.noblePerson);    // "Water Element People"
@@ -24,11 +24,12 @@ import { calculateUniversalCorrelation } from "./logic";
 import { SocialAnalysis, UniversalInput, UniversalProfile } from "./types";
 
 export interface ProfileInput {
-  birthDate: Date;
+  civilDate: string;
   bloodType?: "A" | "AB" | "B" | "O";
   fullName?: string;
   gender?: "female" | "male";
   isLunarCalendar?: boolean;
+  instant: Date;
   longitude?: number;
 }
 
@@ -97,11 +98,12 @@ export type { SocialAnalysis, UniversalInput, UniversalProfile };
  */
 export function createUniversalProfile(input: ProfileInput): UniversalProfile {
   const universalInput: UniversalInput = {
-    birthDate: input.birthDate,
+    civilDate: input.civilDate,
     bloodType: input.bloodType,
     fullName: input.fullName,
     gender: input.gender,
     isLunarCalendar: input.isLunarCalendar,
+    instant: input.instant,
     longitude: input.longitude,
   };
 

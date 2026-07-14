@@ -227,16 +227,22 @@ export function computeYongsin(
 
   const yongsin = roles[role];
   const huisin = inverse(PRODUCTIVE, yongsin); // element that generates 용신
-  // 기신 = the role opposing the need.
+  // 기신 = the role opposing the need. Key this off the role we actually chose,
+  // not off st.category: a "balanced" chart with ratio < 0.5 takes 인성 as its
+  // 용신, and branching on category alone then also named 인성 the 기신 — the
+  // same element as both the favourable and the unfavourable one. The five roles
+  // map onto the five distinct elements, so opposing the chosen direction can
+  // never collide with 용신.
+  const strengthensDayMaster = role === "insung" || role === "bigyeop";
   let gisin: FiveElement;
-  if (st.category === "weak") {
-    // weak → draining elements are bad; pick strongest drain role's element
+  if (strengthensDayMaster) {
+    // 용신이 일간을 돕는다면, 힘을 빼는 오행 중 가장 강한 것이 기신
     const drainRole = (["jaesung", "gwansung", "siksang"] as const).sort(
       (a, b) => c[b] - c[a],
     )[0];
     gisin = roles[drainRole];
   } else {
-    // strong/balanced → strengthening elements are bad (인성 > 비겁 cause)
+    // 용신이 힘을 뺀다면, 일간을 더 강하게 만드는 오행이 기신
     gisin = c.insung >= c.bigyeop ? roles.insung : roles.bigyeop;
   }
   const gusin = inverse(PRODUCTIVE, gisin);

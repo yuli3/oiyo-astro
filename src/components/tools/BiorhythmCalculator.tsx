@@ -1,5 +1,7 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
+import { civilDateToLocalNoon } from '../../lib/user/birth-record';
+import { differenceInCivilDays } from '../../lib/ontology/kernel/civil-date';
 import type { Locale } from '../../lib/i18n';
 
 interface Props {
@@ -252,8 +254,7 @@ function calcBiorhythm(daysSinceBirth: number): {
 }
 
 function daysBetween(a: Date, b: Date): number {
-  const msPerDay = 1000 * 60 * 60 * 24;
-  return Math.floor((b.getTime() - a.getTime()) / msPerDay);
+  return differenceInCivilDays(b, a);
 }
 
 function toPercent(val: number): number {
@@ -703,7 +704,7 @@ export default function BiorhythmCalculator({ locale }: Props) {
     return d;
   }, []);
 
-  const todayStr = today.toISOString().split('T')[0];
+  const todayStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
   const maxDate = todayStr;
   const minDate = '1900-01-01';
 
@@ -728,8 +729,12 @@ export default function BiorhythmCalculator({ locale }: Props) {
 
   const chartData = useMemo(() => {
     if (!birthDate) return null;
-    const birth = new Date(birthDate);
-    if (isNaN(birth.getTime())) return null;
+    let birth: Date;
+    try {
+      birth = civilDateToLocalNoon(birthDate);
+    } catch {
+      return null;
+    }
 
     const physical: number[] = [];
     const emotional: number[] = [];

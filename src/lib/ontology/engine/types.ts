@@ -58,7 +58,10 @@ export interface SocialAnalysis {
 // INPUT TYPE
 // ============================================================================
 export interface UniversalInput {
-  birthDate: Date;
+  /** Birthplace calendar date (`YYYY-MM-DD`), independent of an instant. */
+  civilDate: string;
+  /** Resolved absolute birth instant. Exact-time systems must only use this. */
+  instant: Date;
   birthTime?: { hour: number; minute: number };
   bloodType?: "A" | "AB" | "B" | "O";
   fullName?: string;

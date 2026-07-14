@@ -1,5 +1,6 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 
+import { getSolarTermDate } from "../kernel/astronomy";
 import {
   calculateGreatFortune,
   calculateTrueSolarTime,
@@ -7,31 +8,121 @@ import {
 import { calculateSaju } from "./logic";
 import { EarthlyBranch, HeavenlyStem } from "./types";
 
+// The golden data below is cut in KST, but nothing in the engine may depend on the
+// runtime timezone — the "Timezone independence" block flips process.env.TZ to prove
+// it. Node re-reads TZ on assignment, so always restore it.
+const ORIGINAL_TZ = process.env.TZ;
+
 describe("Saju Logic Golden Suite", () => {
+  afterEach(() => {
+    process.env.TZ = ORIGINAL_TZ;
+  });
+
   describe("Layer 2.1: True Solar Time (TST) Correction", () => {
     // TC-03: Global Longitude Check
-    it("should calculate different pillars for same clock time at different longitudes", () => {
-      // Date: 2024-01-01 11:20:00 KST (GMT+9)
-      // At this time:
-      // Tokyo (135.0E): Solar Time ~11:20 -> Horse Hour (Ob-Si: 11:00-13:00)
-      // Seoul (127.0E): Solar Time ~10:48 (-32 mins) -> Snake Hour (Sa-Si: 09:00-11:00)
-
-      const birthDate = new Date("2024-01-01T11:20:00+09:00");
-
-      // We expect calculateSaju to accept longitude soon.
-      // For now, let's test the calculateTrueSolarTime function directly which exists.
+    it("should derive the solar clock from the birth longitude, not the runtime timezone", () => {
+      // Birth instant: 2024-01-01 11:40 KST (= 02:40 UTC).
+      // TST = UTC + longitude x 4min + EoT (EoT ~ -3.5min on Jan 1), and the TST
+      // wall clock is carried in the returned Date's UTC fields.
+      // Hour branches here run on the 30-minute-shifted convention (Sa = 09:30-11:29,
+      // O = 11:30-13:29), so this instant straddles the Sa/O boundary:
+      //   Tokyo (135.0E): 02:40 + 9h00m - 3.5m ~ 11:36 -> O (Horse)
+      //   Seoul (127.0E): 02:40 + 8h28m - 3.5m ~ 11:04 -> Sa (Snake)
+      const birthDate = new Date("2024-01-01T11:40:00+09:00");
 
       const tstTokyo = calculateTrueSolarTime(birthDate, 135.0);
       const tstSeoul = calculateTrueSolarTime(birthDate, 127.0);
 
-      // Use getUTCHours/Minutes to be timezone-independent in CI
-      // Tokyo (135.0E): Solar Time ~11:16 UTC (approx due to EoT)
-      expect(tstTokyo.getUTCHours()).toBe(2);
-      expect(tstTokyo.getUTCMinutes()).toBe(16);
+      expect(tstTokyo.getUTCHours()).toBe(11);
+      expect(tstTokyo.getUTCMinutes()).toBe(36);
 
-      // Seoul (127.0E): Solar Time ~10:44 UTC
-      expect(tstSeoul.getUTCHours()).toBe(1);
-      expect(tstSeoul.getUTCMinutes()).toBe(44);
+      expect(tstSeoul.getUTCHours()).toBe(11);
+      expect(tstSeoul.getUTCMinutes()).toBe(4);
+
+      // The 32-minute Seoul/Tokyo meridian gap must still move the hour pillar.
+      expect(calculateSaju(birthDate, false, "male", 135.0).hour.earthlyBranch).toBe(
+        EarthlyBranch.O, // Horse
+      );
+      expect(calculateSaju(birthDate, false, "male", 127.0).hour.earthlyBranch).toBe(
+        EarthlyBranch.SA, // Snake
+      );
+    });
+  });
+
+  describe("Layer 2.4: Timezone independence (regression guard)", () => {
+    // The engine used to derive the standard meridian from the *runtime* timezone
+    // (date.getTimezoneOffset()), so the same birth data produced different pillars
+    // for a visitor in Seoul and a visitor in New York. The pillars must depend on
+    // the birth instant and the birth longitude only.
+    const ZONES = ["Asia/Seoul", "UTC", "America/New_York", "Asia/Kolkata"];
+
+    const pillarsOf = (date: Date, longitude: number) => {
+      const r = calculateSaju(date, false, "male", longitude);
+      return [r.year, r.month, r.day, r.hour]
+        .map((p) => `${p.heavenlyStem}-${p.earthlyBranch}`)
+        .join(" ");
+    };
+
+    // Birth instants spread across hour-pillar boundaries, seasons and decades.
+    const BIRTHS = [
+      "1985-03-21T00:10:00+09:00",
+      "1990-06-15T14:30:00+09:00",
+      "2000-05-15T07:45:00+09:00",
+      "2012-11-07T13:00:00+09:00",
+      "2024-01-01T23:45:00+09:00",
+    ];
+
+    it.each(BIRTHS)("yields identical pillars in every timezone: %s", (iso) => {
+      const date = new Date(iso);
+
+      for (const longitude of [135.0, 127.0]) {
+        const offsets: number[] = [];
+        const results = ZONES.map((tz) => {
+          process.env.TZ = tz;
+          offsets.push(new Date(iso).getTimezoneOffset());
+          return pillarsOf(date, longitude);
+        });
+        process.env.TZ = ORIGINAL_TZ;
+
+        // Guard: if flipping process.env.TZ did not actually move the runtime clock,
+        // the equality below would pass vacuously and prove nothing.
+        expect(new Set(offsets).size).toBe(ZONES.length);
+
+        // Every zone must agree with Asia/Seoul, the frame the golden data was cut in.
+        expect(new Set(results).size).toBe(1);
+      }
+    });
+  });
+
+  describe("Layer 2.5: Year pillar correctness (absolute anchors)", () => {
+    // The suite above only proves every timezone agrees — it cannot catch an
+    // engine that is consistently wrong. It was: getSolarTermDate(y, 0) returned
+    // the *following* year's Ipchun, so `birthDate < ipchun` was always true and
+    // every year pillar came out one sexagenary year early. These anchors are
+    // external facts, not engine output.
+    const SEOUL = 126.98;
+    const pillarOf = (utcMs: number) => {
+      const r = calculateSaju(new Date(utcMs), false, "male", SEOUL);
+      return `${r.year.heavenlyStem}-${r.year.earthlyBranch}`;
+    };
+
+    it("pins known sexagenary years (well clear of the Ipchun cut)", () => {
+      // 1984 갑자 · 2000 경진 · 2024 갑진
+      expect(pillarOf(Date.UTC(1984, 5, 1, 3))).toBe("GAP-JA");
+      expect(pillarOf(Date.UTC(2000, 5, 1, 3))).toBe("GYEONG-JIN");
+      expect(pillarOf(Date.UTC(2024, 5, 1, 3))).toBe("GAP-JIN");
+    });
+
+    it("switches the year pillar at Ipchun, not at New Year", () => {
+      // Ipchun 2024 falls on Feb 4.
+      expect(pillarOf(Date.UTC(2024, 1, 1, 3))).toBe("GYE-MYO"); // before → 2023
+      expect(pillarOf(Date.UTC(2024, 1, 10, 3))).toBe("GAP-JIN"); // after → 2024
+    });
+
+    it("places Ipchun in the year it was asked for", () => {
+      const ipchun = getSolarTermDate(2024, 0);
+      expect(ipchun.getUTCFullYear()).toBe(2024);
+      expect(ipchun.getUTCMonth()).toBe(1); // February
     });
   });
 

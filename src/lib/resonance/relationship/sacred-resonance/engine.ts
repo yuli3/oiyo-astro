@@ -1,11 +1,11 @@
 import { Locale } from "@/i18n";
 import { generateResonanceNarrative } from "@/lib/engines/ai/oracle-voice";
-import { MBTIType } from "@/lib/mbti/types";
-import { calculateUniversalCorrelation } from "@/lib/ontology/engine/logic";
-import { UniversalInput } from "@/lib/ontology/engine/types";
+import { calculateEgyptianCoordinates } from "@/lib/ontology/egyptian/calculator";
 import { analyzeSaju, calculateSaju } from "@/lib/ontology/saju/logic";
+import { calculateCelestialPosition } from "@/lib/ontology/western/calculator";
 import { calculateMBTIResonance } from "@/lib/resonance/mbti-resonance/engine";
 import { calculateSajuResonance } from "@/lib/resonance/saju-resonance/engine";
+import { civilDateToLocalNoon } from "@/lib/user/birth-record";
 
 import * as shards from "./data/shards";
 import { calculateIching } from "./iching-logic";
@@ -22,6 +22,8 @@ import {
   TotalResonance,
 } from "./types";
 
+type MBTIType = string;
+
 type DimensionProvider = (
   self: UserProfile,
   partner: PartnerPartialProfile,
@@ -30,6 +32,8 @@ type DimensionProvider = (
 
 interface UserProfile {
   birthDate: string;
+  birthInstant?: Date;
+  birthLongitude?: number;
   birthTime?: { hour: number; minute: number };
   bloodType?: string;
   gender?: string;
@@ -86,7 +90,7 @@ const DIMENSION_PROVIDERS: Partial<
         ko: "신성한 나무가 안개에 가려져 있습니다.",
       });
     }
-    const signId = getCelticSignId(new Date(partner.birthDate));
+    const signId = getCelticSignId(civilDateToLocalNoon(partner.birthDate));
     const sign =
       shards.celticData.signs.find((s) => s.id === signId) ||
       shards.celticData.signs[0];
@@ -115,20 +119,12 @@ const DIMENSION_PROVIDERS: Partial<
         ko: "행성들의 배치가 아직 베일에 싸여 있습니다.",
       });
     }
-    const origin1 = calculateUniversalCorrelation({
-      birthDate: new Date(self.birthDate),
-      bloodType: (self.bloodType as any) || "O",
-      gender: (self.gender as any) || "male",
-    } as any);
-    const origin2 = calculateUniversalCorrelation({
-      birthDate: new Date(partner.birthDate),
-      bloodType: (partner.bloodType as any) || "O",
-      gender: (partner.gender as any) || "male",
-    } as any);
+    const origin1 = calculateCelestialPosition(civilDateToLocalNoon(self.birthDate));
+    const origin2 = calculateCelestialPosition(civilDateToLocalNoon(partner.birthDate));
 
     // Cosmic Sync logic: seasonal similarity or opposition
-    const s1 = origin1.cosmic?.season || "Eternal Season";
-    const s2 = origin2.cosmic?.season || "Eternal Season";
+    const s1 = origin1.season || "Eternal Season";
+    const s2 = origin2.season || "Eternal Season";
     let score = 75;
     if (s1 === s2)
       score = 95; // Same season soul
@@ -164,19 +160,11 @@ const DIMENSION_PROVIDERS: Partial<
         ko: "가려진 수호신.",
       });
 
-    const origin1 = calculateUniversalCorrelation({
-      birthDate: new Date(self.birthDate),
-      bloodType: "O",
-      gender: "male",
-    });
-    const origin2 = calculateUniversalCorrelation({
-      birthDate: new Date(partner.birthDate),
-      bloodType: "O",
-      gender: "male",
-    });
+    const origin1 = calculateEgyptianCoordinates(civilDateToLocalNoon(self.birthDate));
+    const origin2 = calculateEgyptianCoordinates(civilDateToLocalNoon(partner.birthDate));
 
-    const g1 = origin1.mythos?.egyptian.patronDeity.id;
-    const g2 = origin2.mythos?.egyptian.patronDeity.id;
+    const g1 = origin1.patronDeity.id;
+    const g2 = origin2.patronDeity.id;
 
     // Simplistic Egyptian match Logic
     const score = g1 === g2 ? 98 : 82;
@@ -187,8 +175,8 @@ const DIMENSION_PROVIDERS: Partial<
       insightKey: "ontology.egyptian.alliance_insight",
       isSimulated: false,
       params: {
-        god1: origin1.mythos?.egyptian.patronDeity.nameKey,
-        god2: origin2.mythos?.egyptian.patronDeity.nameKey,
+        god1: origin1.patronDeity.nameKey,
+        god2: origin2.patronDeity.nameKey,
       },
       score,
       strength: 1.0,
@@ -255,8 +243,8 @@ const DIMENSION_PROVIDERS: Partial<
         ko: "고대 수호신이 아직 침묵하고 있습니다.",
       });
     }
-    const selfKin = calculateMayanKin(new Date(self.birthDate));
-    const partnerKin = calculateMayanKin(new Date(partner.birthDate));
+    const selfKin = calculateMayanKin(civilDateToLocalNoon(self.birthDate));
+    const partnerKin = calculateMayanKin(civilDateToLocalNoon(partner.birthDate));
     const sign =
       shards.mayanData.signs.find((s) => s.id === partnerKin.seal.toString()) ||
       shards.mayanData.signs[0];
@@ -347,26 +335,33 @@ const DIMENSION_PROVIDERS: Partial<
     };
   },
   saju: (self, partner, locale) => {
-    if (!partner.birthDate) {
+    if (
+      !partner.birthDate
+      || !self.birthInstant
+      || !partner.birthInstant
+      || self.birthLongitude == null
+      || partner.birthLongitude == null
+    ) {
       return createSimulatedResult("saju", 60, 0.4, {
         en: "The stars are veiled in mist.",
         ko: "별의 자취가 안개 속에 가려져 있습니다.",
       });
     }
 
-    // Calculate Saju Elements for both
-    const date1 = new Date(self.birthDate);
-    if (self.birthTime)
-      date1.setHours(self.birthTime.hour, self.birthTime.minute);
-
-    const date2 = new Date(partner.birthDate);
-    if (partner.birthTime) {
-      const [h, m] = partner.birthTime.split(":").map(Number);
-      date2.setHours(h, m);
-    }
-
-    const saju1 = calculateSaju(date1, false, (self.gender || "male") as any);
-    const saju2 = calculateSaju(date2, false, partner.gender as any);
+    // Exact Saju is only available after each civil time has been resolved
+    // against its birthplace zone and longitude by the BirthRecord adapter.
+    const saju1 = calculateSaju(
+      self.birthInstant,
+      false,
+      (self.gender || "male") as any,
+      self.birthLongitude,
+    );
+    const saju2 = calculateSaju(
+      partner.birthInstant,
+      false,
+      partner.gender as any,
+      partner.birthLongitude,
+    );
 
     const element1 = analyzeSaju(saju1).dominantElement.toUpperCase();
     const element2 = analyzeSaju(saju2).dominantElement.toUpperCase();

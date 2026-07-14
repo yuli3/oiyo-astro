@@ -39,7 +39,12 @@ for (const [event, keys] of Object.entries(CAREER_VALUES_ANALYTICS_CONTRACT.even
   if (keys.length !== 2 || !keys.includes("test_id") || !keys.includes("instrument_version")) errors.push(`${event} must require exactly the two stable identifier keys`);
   if (!CAREER_VALUES_ANALYTICS_CONTRACT.semantics[event]) errors.push(`${event} is missing a metric semantics definition`);
 }
-if (CAREER_VALUES_ANALYTICS_CONTRACT.deployment.status === "not-deployed" && CAREER_VALUES_ANALYTICS_CONTRACT.deployment.instrumentedAt !== null) errors.push("not-deployed contract must not start an observation clock");
+const { status: deploymentStatus, instrumentedAt } = CAREER_VALUES_ANALYTICS_CONTRACT.deployment;
+if (deploymentStatus === "not-deployed" && instrumentedAt !== null) errors.push("not-deployed contract must not start an observation clock");
+if (deploymentStatus !== "not-deployed") {
+  if (typeof instrumentedAt !== "string" || Number.isNaN(Date.parse(instrumentedAt))) errors.push("deployed contract must have a valid instrumentedAt timestamp");
+  if (!deploymentStatus.includes("draft-noindex")) errors.push("Career Values must remain draft-noindex until human review is recorded");
+}
 if (CAREER_VALUES_ANALYTICS_CONTRACT.deployment.minimumFullObservationDays < 7) errors.push("observation window must be at least seven full days");
 if (CAREER_VALUES_ANALYTICS_CONTRACT.indexableDuringWarmup) errors.push("draft assessment must remain non-indexable during analytics warmup");
 
@@ -48,4 +53,7 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log(`assessment analytics contract audit: ${expectedEvents.length} events / stable identifiers only / observation clock not started`);
+const observationState = deploymentStatus === "not-deployed"
+  ? "observation clock not started"
+  : `observation clock started ${instrumentedAt}`;
+console.log(`assessment analytics contract audit: ${expectedEvents.length} events / stable identifiers only / ${observationState}`);

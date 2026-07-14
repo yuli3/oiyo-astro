@@ -13,6 +13,7 @@ import { SIGN_INFO, CITIES, type NatalLocale } from '../../lib/ontology/natal/si
 import { readResultCode } from '../../lib/result-url';
 import { decodeResult, writeResultHash } from '../../lib/result-permalink';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
+import { createBirthRecord, resolveZonedCivilTime } from '../../lib/user/birth-record';
 import { gaEvent } from '../../lib/analytics/ga-event';
 
 interface Props {
@@ -50,6 +51,7 @@ const COPY: Record<NatalLocale, {
   retake: string;
   needDate: string;
   needCity: string;
+  timeZoneIssue: string;
   sun: string; sunSub: string;
   moon: string; moonSub: string;
   asc: string; ascSub: string;
@@ -78,6 +80,7 @@ const COPY: Record<NatalLocale, {
     cityLabel: '출생지', cityPlaceholder: '도시 선택',
     submit: '내 차트 보기', retake: '다시 입력',
     needDate: '생년월일을 입력해 주세요.', needCity: '출생지를 선택해 주세요.',
+    timeZoneIssue: '이 시각은 출생지의 서머타임 전환과 겹칩니다. 시간을 모름으로 선택하거나 인접한 정확한 시각을 확인해 주세요.',
     sun: '태양', sunSub: '핵심 자아·정체성',
     moon: '달', moonSub: '감정·내면',
     asc: '상승궁', ascSub: '첫인상·겉으로 드러나는 태도',
@@ -106,6 +109,7 @@ const COPY: Record<NatalLocale, {
     cityLabel: 'Birthplace', cityPlaceholder: 'Select a city',
     submit: 'View my chart', retake: 'Start over',
     needDate: 'Please enter your birth date.', needCity: 'Please choose your birthplace.',
+    timeZoneIssue: 'This local time overlaps a daylight-saving transition. Choose unknown time or confirm a nearby unambiguous time.',
     sun: 'Sun', sunSub: 'Core self & identity',
     moon: 'Moon', moonSub: 'Emotions & inner world',
     asc: 'Rising', ascSub: 'Outer style & first impression',
@@ -134,6 +138,7 @@ const COPY: Record<NatalLocale, {
     cityLabel: '出生地', cityPlaceholder: '都市を選択',
     submit: '私のチャートを見る', retake: '入力し直す',
     needDate: '生年月日を入力してください。', needCity: '出生地を選択してください。',
+    timeZoneIssue: 'この時刻は出生地のサマータイム切替と重なります。「時刻不明」を選ぶか、曖昧でない時刻を確認してください。',
     sun: '太陽', sunSub: '核となる自己・アイデンティティ',
     moon: '月', moonSub: '感情・内面',
     asc: '上昇宮', ascSub: '第一印象・外に現れる態度',
@@ -162,6 +167,7 @@ const COPY: Record<NatalLocale, {
     cityLabel: '出生地', cityPlaceholder: '选择城市',
     submit: '查看我的星盘', retake: '重新输入',
     needDate: '请输入出生日期。', needCity: '请选择出生地。',
+    timeZoneIssue: '该当地时间与夏令时切换重叠。请选择时间未知，或确认一个无歧义的相邻时间。',
     sun: '太阳', sunSub: '核心自我·身份',
     moon: '月亮', moonSub: '情感·内在',
     asc: '上升', ascSub: '第一印象·外在态度',
@@ -190,6 +196,7 @@ const COPY: Record<NatalLocale, {
     cityLabel: 'Lieu de naissance', cityPlaceholder: 'Choisir une ville',
     submit: 'Voir mon thème', retake: 'Recommencer',
     needDate: 'Veuillez saisir votre date de naissance.', needCity: 'Veuillez choisir votre lieu de naissance.',
+    timeZoneIssue: 'Cette heure locale chevauche un changement d’heure. Choisissez heure inconnue ou confirmez une heure voisine non ambiguë.',
     sun: 'Soleil', sunSub: 'Identité et moi profond',
     moon: 'Lune', moonSub: 'Émotions et monde intérieur',
     asc: 'Ascendant', ascSub: 'Style extérieur et première impression',
@@ -218,6 +225,7 @@ const COPY: Record<NatalLocale, {
     cityLabel: 'Lugar de nacimiento', cityPlaceholder: 'Elige una ciudad',
     submit: 'Ver mi carta', retake: 'Empezar de nuevo',
     needDate: 'Introduce tu fecha de nacimiento.', needCity: 'Elige tu lugar de nacimiento.',
+    timeZoneIssue: 'Esta hora local coincide con un cambio de horario de verano. Elige hora desconocida o confirma una hora cercana no ambigua.',
     sun: 'Sol', sunSub: 'Identidad y yo esencial',
     moon: 'Luna', moonSub: 'Emociones y mundo interior',
     asc: 'Ascendente', ascSub: 'Estilo exterior y primera impresión',
@@ -248,12 +256,6 @@ const ELEMENT_BG: Record<string, string> = {
   water: 'bg-indigo-50 border-indigo-200',
 };
 
-function toUtc(dateStr: string, timeStr: string, tz: number): Date {
-  const [y, mo, da] = dateStr.split('-').map(Number);
-  const [hh, mm] = (timeStr || '12:00').split(':').map(Number);
-  return new Date(Date.UTC(y, mo - 1, da, hh, mm) - tz * 3600000);
-}
-
 interface FormState { date: string; time: string; unknown: boolean; city: string; }
 
 export default function NatalChartCalculator({ locale }: Props) {
@@ -265,7 +267,7 @@ export default function NatalChartCalculator({ locale }: Props) {
   const [result, setResult] = useState<{ chart: NatalChart; hasTime: boolean } | null>(null);
 
   // 온톨로지 프로필의 생년월일·시를 재사용(URL 복원이 없을 때만) — 재입력 제거.
-  const { parsed, saveBirth } = useProfilePrefill();
+  const { parsed, saveBirthRecord } = useProfilePrefill();
   useEffect(() => {
     if (!parsed) return;
     setForm((f) => {
@@ -292,7 +294,7 @@ export default function NatalChartCalculator({ locale }: Props) {
       if (city && /^\d{4}-\d{2}-\d{2}$/.test(s.date)) {
         const hasTime = !!s.time && /^\d{2}:\d{2}$/.test(s.time);
         setForm({ date: s.date, time: hasTime ? s.time! : '', unknown: !hasTime, city: s.city });
-        compute(s.date, hasTime ? s.time! : '', !hasTime, city.lat, city.lon, city.tz, hasTime);
+        compute(s.date, hasTime ? s.time! : '', city, hasTime);
       }
       return;
     }
@@ -305,7 +307,7 @@ export default function NatalChartCalculator({ locale }: Props) {
     const time = readResultCode('t');
     const hasTime = !!time && /^\d{2}:\d{2}$/.test(time);
     setForm({ date: d, time: hasTime ? time! : '', unknown: !hasTime, city: c });
-    compute(d, hasTime ? time! : '', !hasTime, city.lat, city.lon, city.tz, hasTime);
+    compute(d, hasTime ? time! : '', city, hasTime);
 
     writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, { date: d, time: hasTime ? time! : null, city: c });
     const url = new URL(window.location.href);
@@ -316,10 +318,19 @@ export default function NatalChartCalculator({ locale }: Props) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  function compute(date: string, time: string, unknown: boolean, lat: number, lon: number, tz: number, hasTime: boolean) {
-    const utc = toUtc(date, hasTime ? time : '12:00', tz);
-    const chart = computeNatalChart({ date: utc, latitude: lat, longitude: lon });
+  function compute(date: string, time: string, city: (typeof CITIES)[number], hasTime: boolean) {
+    const resolution = resolveZonedCivilTime({
+      civilDate: date,
+      civilTime: hasTime ? time : '12:00',
+      zoneId: city.zoneId,
+    });
+    if (resolution.status !== 'resolved') {
+      setError(t.timeZoneIssue);
+      return null;
+    }
+    const chart = computeNatalChart({ date: resolution.instant, latitude: city.lat, longitude: city.lon });
     setResult({ chart, hasTime });
+    return resolution;
   }
 
   function onSubmit() {
@@ -329,12 +340,18 @@ export default function NatalChartCalculator({ locale }: Props) {
     const city = CITIES.find((x) => x.id === form.city);
     if (!city) { setError(t.needCity); return; }
     const hasTime = !form.unknown && !!form.time;
-    compute(form.date, form.time, form.unknown, city.lat, city.lon, city.tz, hasTime);
-    // 생년월일·시를 프로필에 저장 → 사주·별자리 등으로 전파.
-    if (/^\d{4}-\d{2}-\d{2}$/.test(form.date)) {
-      const [yy, mm, dd] = form.date.split('-').map(Number);
-      saveBirth({ year: yy, month: mm, day: dd, hour: hasTime ? Number(form.time.split(':')[0]) : null });
-    }
+    const resolution = compute(form.date, form.time, city, hasTime);
+    if (!resolution) return;
+    // 민간시각·IANA 지역·당시 오프셋·경도를 하나의 원자적 기록으로 저장한다.
+    saveBirthRecord(createBirthRecord({
+      civilDate: form.date,
+      civilTime: hasTime ? form.time : null,
+      longitude: city.lon,
+      needsConfirmation: false,
+      provenance: 'user-confirmed-v2',
+      utcOffsetMinutesAtBirth: resolution.offsetMinutes,
+      zoneId: city.zoneId,
+    }));
     writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, { date: form.date, time: hasTime ? form.time : null, city: form.city });
     gaEvent('test_completed', { test_id: 'natal' });
   }

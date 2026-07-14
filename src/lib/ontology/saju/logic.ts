@@ -239,14 +239,17 @@ export function calculateSaju(
   longitude: number = 135.0, // Default to KST/JST standard meridian
 ): SajuResult {
   // 0. True Solar Time Correction
-  // Adjust the birth date to the local solar time before calculating pillars.
+  // Adjust the birth date to the solar time at the birth longitude before
+  // calculating pillars. The TST wall clock lives in the result's UTC fields
+  // (see getTrueSolarTime) — reading local fields here would let the visitor's
+  // browser timezone move the pillars.
   const trueBirthDate = calculateTrueSolarTime(birthDate, longitude);
 
-  const year = trueBirthDate.getFullYear();
-  const month = trueBirthDate.getMonth() + 1;
-  const day = trueBirthDate.getDate();
-  const hour = trueBirthDate.getHours();
-  const minute = trueBirthDate.getMinutes();
+  const year = trueBirthDate.getUTCFullYear();
+  const month = trueBirthDate.getUTCMonth() + 1;
+  const day = trueBirthDate.getUTCDate();
+  const hour = trueBirthDate.getUTCHours();
+  const minute = trueBirthDate.getUTCMinutes();
 
   // 1. Year Pillar (Lichun / Ipchun cutoff)
   // Use absolute birthDate (Mean Time) for Solar Term comparison,

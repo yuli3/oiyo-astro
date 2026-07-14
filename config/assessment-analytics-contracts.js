@@ -4,10 +4,10 @@ export const CAREER_VALUES_ANALYTICS_CONTRACT = Object.freeze({
   assessmentId: "career-values",
   instrumentVersion: "career-values-oiyo-18-v1",
   deployment: Object.freeze({
-    status: "not-deployed",
-    instrumentedAt: null,
+    status: "deployed-draft-noindex",
+    instrumentedAt: "2026-07-14T20:01:37+09:00",
     minimumFullObservationDays: 7,
-    note: "Start the observation clock from the first production deployment containing this contract, not from implementation or QA time.",
+    note: "Observation started when production CI confirmed the first deployment containing this event contract. Draft/noindex status is independent from analytics deployment.",
   }),
   events: Object.freeze({
     test_started: Object.freeze(["test_id", "instrument_version"]),

@@ -1,4 +1,4 @@
-import { differenceInDays } from "date-fns";
+import { differenceInCivilDays } from "@/lib/ontology/kernel/civil-date";
 
 export interface BiorhythmState {
   average: number;
@@ -18,7 +18,7 @@ export function calculateBiorhythm(
   const end = new Date(targetDate);
   end.setHours(0, 0, 0, 0);
 
-  const diff = differenceInDays(end, start);
+  const diff = differenceInCivilDays(end, start);
 
   const physical = Math.sin((2 * Math.PI * diff) / 23) * 100;
   const emotional = Math.sin((2 * Math.PI * diff) / 28) * 100;

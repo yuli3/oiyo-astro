@@ -1,30 +1,19 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useEffect } from "react";
+import type { BirthRecordV2 } from "../birth-record";
+import {
+  useUserStore,
+  type UserProfile,
+} from "../store/user-store";
 
-export interface UserProfile {
-  big5Type?: null | string;
-  birthDate: null | string; // e.g., "1990-01-01T15:30:00.000Z"
-  birthTime?: null | string; // "15:30"
-  bloodType?: "A" | "AB" | "B" | "O" | null;
-  gender?: "female" | "male" | null;
-  hobbies?: string[];
-
-  hspType?: null | string;
-  mbtiType: null | string; // e.g., "INTJ"
-  name?: null | string;
-  riasecCode: null | string; // e.g., "R-I-A"
-  tciType?: null | string;
-  tier?: UserTier;
-  zodiacSign: null | string; // e.g., "aries"
-}
-
-export type UserTier = "FREE" | "OFFERING" | "SUBSCRIBER";
+export type { UserProfile, UserTier } from "../store/user-store";
 
 interface UserContextType {
   clearProfile: () => void;
   isInitialized: boolean;
   profile: UserProfile;
+  saveBirthRecord: (record: BirthRecordV2) => void;
   setBirthDate: (date: string) => void;
   setMbtiType: (type: string) => void;
   // New setters
@@ -35,13 +24,12 @@ interface UserContextType {
 
 const UserContext = createContext<undefined | UserContextType>(undefined);
 
-import { useUserStore } from "../store/user-store";
-
 export function UserProvider({ children }: { children: React.ReactNode }) {
   const {
     clearProfile,
     isInitialized,
     profile,
+    saveBirthRecord,
     setBirthDate,
     setInitialized,
     setMbtiType,
@@ -64,6 +52,7 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
         clearProfile,
         isInitialized,
         profile,
+        saveBirthRecord,
         setBirthDate,
         setMbtiType,
         setProfileData: setProfile,
@@ -84,6 +73,7 @@ const GUEST_CONTEXT: UserContextType = {
   profile: {
     big5Type: null,
     birthDate: null,
+    birthRecord: null,
     birthTime: null,
     bloodType: null,
     gender: null,
@@ -95,6 +85,8 @@ const GUEST_CONTEXT: UserContextType = {
     tier: "FREE",
     zodiacSign: null,
   },
+  saveBirthRecord: () =>
+    console.warn("UserProvider missing: saveBirthRecord ignored"),
   setBirthDate: () =>
     console.warn("UserProvider missing: setBirthDate ignored"),
   setMbtiType: () => console.warn("UserProvider missing: setMbtiType ignored"),

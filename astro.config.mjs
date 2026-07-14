@@ -51,7 +51,8 @@ export default defineConfig({
         if (segs.length > 0 && DEINDEXED_LOCALES.has(segs[0])) return false;
         return true;
       },
-      lastmod: new Date(),
+      // Do not stamp every URL with the build time. A trustworthy per-route
+      // source date may be added later; an unknown date is omitted.
       serialize: (item) => {
         const p = new URL(item.url).pathname;
         const isKo = p.startsWith('/ko/') || p === '/ko';

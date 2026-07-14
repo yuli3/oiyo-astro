@@ -36,6 +36,11 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useMemo, useState } from "react";
+import {
+  birthRecordToCivilDate,
+  resolveBirthInstant,
+  resolveBirthRecord,
+} from "@/lib/user/birth-record";
 
 import { DailyOracleCard } from "@/components/almanac/DailyOracleCard";
 import { MoodCalendarGrid } from "@/components/mood-calendar/mood-calendar-grid";
@@ -144,6 +149,11 @@ export function OntologyClient() {
   const router = useRouter();
   const [showInput, setShowInput] = useState(false);
   const [isStable, setIsStable] = useState(true);
+  const birthRecord = useMemo(() => resolveBirthRecord(profile), [profile]);
+  const birthResolution = useMemo(
+    () => (birthRecord ? resolveBirthInstant(birthRecord) : null),
+    [birthRecord],
+  );
 
   const [aggregatedProfile, setAggregatedProfile] =
     useState<null | OntologyProfile>(null);
@@ -163,36 +173,42 @@ export function OntologyClient() {
   }, [history, loading, locale, setAggregatedProfile]);
 
   const sajuAnalysis = useMemo(() => {
-    if (!profile.birthDate) return null;
-    const birthDate = new Date(profile.birthDate);
+    if (!birthResolution || birthResolution.status !== "resolved") return null;
     const gender = profile.gender || "female";
-    const result = calculateSaju(birthDate, false, gender);
+    const result = calculateSaju(
+      birthResolution.instant,
+      false,
+      gender,
+      birthResolution.longitude,
+    );
     return analyzeSaju(result);
-  }, [profile.birthDate, profile.gender]);
+  }, [birthResolution, profile.gender]);
 
   const universalProfile: null | UniversalProfile = useMemo(() => {
-    if (!profile.birthDate) return null;
+    if (!birthRecord || !birthResolution || birthResolution.status !== "resolved") return null;
     try {
       return calculateUniversalCorrelation({
-        birthDate: new Date(profile.birthDate),
-        birthTime: profile.birthTime
+        civilDate: birthRecord.civilDate,
+        birthTime: birthRecord.civilTime
           ? {
-              hour: parseInt(profile.birthTime.split(":")[0]),
-              minute: parseInt(profile.birthTime.split(":")[1]),
+              hour: parseInt(birthRecord.civilTime.split(":")[0]),
+              minute: parseInt(birthRecord.civilTime.split(":")[1]),
             }
           : undefined,
         bloodType: profile.bloodType as "A" | "AB" | "B" | "O" | undefined,
         fullName: profile.name || undefined,
         gender: profile.gender || "female",
+        instant: birthResolution.instant,
+        longitude: birthResolution.longitude,
       });
     } catch (e) {
       return null;
     }
-  }, [profile]);
+  }, [birthRecord, birthResolution, profile]);
 
   // Derived Biorhythm Data: Yesterday (-1) to Today + 30
   const biorhythmData = useMemo(() => {
-    if (!profile.birthDate) return null;
+    if (!birthRecord) return null;
     const today = new Date();
     today.setHours(0, 0, 0, 0);
     const yesterday = new Date(today);
@@ -201,11 +217,11 @@ export function OntologyClient() {
     nextMonth.setDate(today.getDate() + 30);
 
     return calculateBiorhythmRange(
-      new Date(profile.birthDate),
+      birthRecordToCivilDate(birthRecord),
       yesterday,
       nextMonth,
     );
-  }, [profile.birthDate]);
+  }, [birthRecord]);
 
   // Derived Akashic Data
   const akashicData = useMemo(
@@ -245,8 +261,8 @@ export function OntologyClient() {
   }, [universalProfile, mbtiType]);
 
   // Generic Factions (Economic & Political)
-  const userMonth = profile.birthDate
-    ? new Date(profile.birthDate).getMonth() + 1
+  const userMonth = birthRecord
+    ? Number(birthRecord.civilDate.slice(5, 7))
     : 1;
   const userElement =
     universalProfile?.sajuAnalysis?.dominantElement || "earth";
@@ -257,7 +273,7 @@ export function OntologyClient() {
   );
   // 사용자가 출생정보(사주/월·오행의 근거)를 넣지 않으면 month=1·element=earth 같은
   // 가짜 기본값으로 고전학파·보수주의가 강제로 산출된다. 실제 입력이 있을 때만 노출한다.
-  const hasOntologyInput = !!profile.birthDate;
+  const hasOntologyInput = !!birthRecord;
 
   // --- REGISTRY-DRIVEN TESTS ---
   // Using the centralized FEATURE_REGISTRY to populate the test catalog
@@ -422,7 +438,7 @@ export function OntologyClient() {
             </h1>
             <p className="text-slate-600 font-mono text-xs uppercase tracking-widest">
               ID: {profile.name || t("guest")} •{" "}
-              {profile.birthDate || t("labels.undiscovered")}
+              {birthRecord?.civilDate || t("labels.undiscovered")}
             </p>
           </header>
 

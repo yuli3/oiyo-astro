@@ -1,6 +1,9 @@
 import { describe, expect, it } from "vitest";
 
-import { getChronosCoordinates } from "./chronos-engine";
+import {
+  getChronosCoordinates,
+  getUniversalChronosCoordinates,
+} from "./chronos-engine";
 
 describe("ChronosEngine Table-Driven Tests", () => {
   const testCases = [
@@ -49,5 +52,86 @@ describe("ChronosEngine Table-Driven Tests", () => {
       expect(coords.zodiac.sign).toBe(zodiac);
       expect(coords.celtic.id).toBe(celtic);
     });
+  });
+});
+
+describe("ChronosEngine civil date / instant boundary", () => {
+  const base = {
+    fullName: "Boundary Test",
+    gender: "female" as const,
+    longitude: 126.978,
+  };
+
+  it("keeps calendar systems on civilDate and exact systems on instant", () => {
+    const first = getUniversalChronosCoordinates({
+      ...base,
+      civilDate: "1990-05-15",
+      instant: new Date("1990-05-15T01:00:00.000Z"),
+    });
+    const changedInstant = getUniversalChronosCoordinates({
+      ...base,
+      civilDate: "1990-05-15",
+      instant: new Date("1990-05-15T13:00:00.000Z"),
+    });
+
+    expect(changedInstant.zodiac).toEqual(first.zodiac);
+    expect(changedInstant.celtic).toEqual(first.celtic);
+    expect(changedInstant.numerology).toEqual(first.numerology);
+    expect(changedInstant.julianDay).not.toBe(first.julianDay);
+
+    const changedCivilDate = getUniversalChronosCoordinates({
+      ...base,
+      civilDate: "1990-06-15",
+      instant: new Date("1990-05-15T01:00:00.000Z"),
+    });
+
+    expect(changedCivilDate.zodiac).not.toEqual(first.zodiac);
+    expect(changedCivilDate.julianDay).toBe(first.julianDay);
+    expect(changedCivilDate.saju).toEqual(first.saju);
+    expect(changedCivilDate.vedic).toEqual(first.vedic);
+    expect(changedCivilDate.ziwei).toEqual(first.ziwei);
+    expect(changedCivilDate.hellenistic.sect).toEqual(first.hellenistic.sect);
+    expect(changedCivilDate.hellenistic.triplicity.element).not.toEqual(first.hellenistic.triplicity.element);
+  });
+
+  it("keeps exact coordinates independent of the runtime timezone", () => {
+    const originalTz = process.env.TZ;
+    const snapshots = ["UTC", "Asia/Seoul", "America/New_York", "Asia/Kolkata"].map((tz) => {
+      process.env.TZ = tz;
+      const result = getUniversalChronosCoordinates({
+        ...base,
+        civilDate: "1990-05-15",
+        instant: new Date("1990-05-15T01:00:00.000Z"),
+      });
+      return {
+        hellenistic: result.hellenistic,
+        julianDay: result.julianDay,
+        saju: result.saju,
+        vedic: result.vedic,
+        ziwei: result.ziwei,
+      };
+    });
+    process.env.TZ = originalTz;
+
+    expect(snapshots.every((snapshot) => JSON.stringify(snapshot) === JSON.stringify(snapshots[0]))).toBe(true);
+  });
+
+  it("rejects malformed or impossible civil dates", () => {
+    const instant = new Date("1990-05-15T01:00:00.000Z");
+
+    expect(() =>
+      getUniversalChronosCoordinates({
+        ...base,
+        civilDate: "1990-02-30",
+        instant,
+      }),
+    ).toThrow(RangeError);
+    expect(() =>
+      getUniversalChronosCoordinates({
+        ...base,
+        civilDate: "05/15/1990",
+        instant,
+      }),
+    ).toThrow(RangeError);
   });
 });

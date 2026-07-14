@@ -67,7 +67,7 @@ export class FortuneEngine {
 
     // 3. Prepare Request
     const request: FortuneRequest = {
-      birthDate: profile.input.birthDate,
+      birthDate: profile.input.instant,
       category: "overall",
       context,
       locale,

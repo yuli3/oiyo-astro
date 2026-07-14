@@ -22,7 +22,10 @@ import type { Prophecy } from "./resonance";
 // FACTORY INPUT
 // ============================================================================
 export interface ChronosInput {
-  birthDate: Date;
+  /** Birthplace calendar date (`YYYY-MM-DD`) for calendar-only systems. */
+  civilDate: string;
+  /** Resolved absolute instant for astronomical and time-sensitive systems. */
+  instant: Date;
   birthTime?: { hour: number; minute: number };
   fullName?: string;
   gender?: "female" | "male";
@@ -35,13 +38,15 @@ export interface ChronosInput {
 // ============================================================================
 export interface UniversalChronosCoordinates {
   celtic: CelticTreeSign;
+  civilDate: string;
   // === ANCIENT SYSTEMS ===
   egyptian: EgyptianCoordinates;
 
-  // Core Time Reference
+  /** @deprecated Use `instant`; retained as a read-only compatibility alias. */
   gregorian: Date;
 
   hellenistic: HellenisticCoordinates;
+  instant: Date;
   julianDay: number;
 
   kabbalah: KabbalahCoordinates; // Tree of Life Mapping

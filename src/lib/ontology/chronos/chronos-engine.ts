@@ -21,6 +21,7 @@ import { calculateEgyptianCoordinates } from "../egyptian/calculator";
 import { calculateHellenisticCoordinates } from "../hellenistic/calculator";
 import { calculateKabbalahCoordinates } from "../kabbalah/calculator";
 import { normalizeAngle } from "../kernel/math";
+import { civilDateToLocalNoon } from "../kernel/civil-date";
 import { getJulianDay } from "../kernel/time";
 import { calculateMayanKin } from "../mayan/calculator";
 import { MayanKin } from "../mayan/types";
@@ -271,13 +272,22 @@ export class UniversalCorrelationEngine {
  * @deprecated Use getUniversalChronosCoordinates for full archive access
  */
 export function getChronosCoordinates(date: Date): ChronosCoordinates {
-  const mayan = calculateMayanKin(date);
-  const celtic = calculateCelticTree(date);
-  const zodiac = getWesternZodiac(date);
+  if (!(date instanceof Date) || Number.isNaN(date.getTime())) {
+    throw new RangeError("Chronos date must be valid");
+  }
+  const civilDate = [
+    String(date.getUTCFullYear()).padStart(4, "0"),
+    String(date.getUTCMonth() + 1).padStart(2, "0"),
+    String(date.getUTCDate()).padStart(2, "0"),
+  ].join("-");
+  const calendarDate = civilDateToLocalNoon(civilDate);
+  const mayan = calculateMayanKin(calendarDate);
+  const celtic = calculateCelticTree(calendarDate);
+  const zodiac = getWesternZodiac(calendarDate);
 
   return {
     celtic,
-    date,
+    date: calendarDate,
     mayan,
     zodiac: {
       element: zodiac.element,
@@ -302,39 +312,52 @@ export function getChronosCoordinates(date: Date): ChronosCoordinates {
 export function getUniversalChronosCoordinates(
   input: ChronosInput,
 ): UniversalChronosCoordinates {
-  const { birthDate } = input;
+  const { civilDate, instant } = input;
+  const calendarDate = civilDateToLocalNoon(civilDate);
+
+  if (!(instant instanceof Date) || Number.isNaN(instant.getTime())) {
+    throw new RangeError("ChronosInput.instant must be a valid Date");
+  }
 
   // Calculate all coordinate systems
-  const mayan = calculateMayanKin(birthDate);
-  const celtic = calculateCelticTree(birthDate);
-  const zodiac = getWesternZodiac(birthDate);
-  const vedic = calculateVedicCoordinates(birthDate);
-  const egyptian = calculateEgyptianCoordinates(birthDate);
+  const mayan = calculateMayanKin(calendarDate);
+  const celtic = calculateCelticTree(calendarDate);
+  const zodiac = getWesternZodiac(calendarDate);
+  const vedic = calculateVedicCoordinates(instant);
+  const egyptian = calculateEgyptianCoordinates(calendarDate);
   const hellenistic = calculateHellenisticCoordinates(
-    birthDate,
+    instant,
     zodiac.element,
+    input.longitude,
   );
-  const ziwei = calculateZiWeiCoordinates(birthDate);
-  const kabbalah = calculateKabbalahCoordinates(birthDate);
-  const julianDay = getJulianDay(birthDate);
+  const ziwei = calculateZiWeiCoordinates(instant, input.longitude);
+  const kabbalah = calculateKabbalahCoordinates(calendarDate);
+  const julianDay = getJulianDay(instant);
 
   // Conditionally calculate Name/Time dependent systems
   // Conditionally calculate Name/Time dependent systems
-  const saju = calculateSaju(birthDate, input.isLunarCalendar, input.gender);
+  const saju = calculateSaju(
+    instant,
+    input.isLunarCalendar,
+    input.gender,
+    input.longitude,
+  );
   const numerology = input.fullName
-    ? calculateNumerology({ birthDate, fullName: input.fullName })
+    ? calculateNumerology({ birthDate: calendarDate, fullName: input.fullName })
     : undefined;
 
   // Construct base coordinates (without prophecy first)
   const baseCoords = {
     celtic,
+    civilDate,
     egyptian,
-    gregorian: birthDate,
+    gregorian: instant,
     hellenistic,
+    instant,
     julianDay,
     kabbalah,
     mayan,
-    nordic: calculateNordicRune(birthDate),
+    nordic: calculateNordicRune(calendarDate),
     numerology,
     saju,
     vedic,

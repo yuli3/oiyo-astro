@@ -1,9 +1,14 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
+import {
+  migrateLegacyBirth,
+  type BirthRecordV2,
+} from "../birth-record";
 
 export interface UserProfile {
   big5Type?: null | string;
   birthDate: null | string;
+  birthRecord?: BirthRecordV2 | null;
   birthTime?: null | string;
   bloodType?: "A" | "AB" | "B" | "O" | null;
   gender?: "female" | "male" | null;
@@ -24,6 +29,7 @@ interface UserState {
   isInitialized: boolean;
 
   profile: UserProfile;
+  saveBirthRecord: (record: BirthRecordV2) => void;
   setBirthDate: (date: string) => void;
   setInitialized: (val: boolean) => void;
   setMbtiType: (type: string) => void;
@@ -42,6 +48,7 @@ export const useUserStore = create<UserState>()(
           profile: {
             big5Type: null,
             birthDate: null,
+            birthRecord: null,
             birthTime: null,
             bloodType: null,
             gender: null,
@@ -59,6 +66,7 @@ export const useUserStore = create<UserState>()(
       profile: {
         big5Type: null,
         birthDate: null,
+        birthRecord: null,
         birthTime: null,
         bloodType: null,
         gender: null,
@@ -71,9 +79,26 @@ export const useUserStore = create<UserState>()(
         zodiacSign: null,
       },
 
+      saveBirthRecord: (record) =>
+        set((state) => ({
+          profile: {
+            ...state.profile,
+            birthDate: record.civilDate,
+            birthRecord: record,
+            birthTime: record.civilTime,
+          },
+        })),
+
       setBirthDate: (date) =>
         set((state) => ({
-          profile: { ...state.profile, birthDate: date },
+          profile: {
+            ...state.profile,
+            birthDate: date,
+            birthRecord: migrateLegacyBirth({
+              birthDate: date,
+              birthTime: state.profile.birthTime,
+            }),
+          },
         })),
 
       setInitialized: (val) => set({ isInitialized: val }),
@@ -84,9 +109,27 @@ export const useUserStore = create<UserState>()(
         })),
 
       setProfile: (updates) =>
-        set((state) => ({
-          profile: { ...state.profile, ...updates },
-        })),
+        set((state) => {
+          const profile = { ...state.profile, ...updates };
+          if (
+            !Object.prototype.hasOwnProperty.call(updates, "birthDate")
+            && !Object.prototype.hasOwnProperty.call(updates, "birthTime")
+          ) {
+            return { profile };
+          }
+          return {
+            profile: {
+              ...profile,
+              // A legacy writer cannot safely retain exact V2 location data
+              // after changing the civil date/time. New code uses the atomic
+              // saveBirthRecord action; old code becomes confirmation-required.
+              birthRecord: migrateLegacyBirth({
+                birthDate: profile.birthDate,
+                birthTime: profile.birthTime,
+              }),
+            },
+          };
+        }),
 
       setRiasecCode: (code) =>
         set((state) => ({
@@ -105,6 +148,20 @@ export const useUserStore = create<UserState>()(
     }),
     {
       name: "oiyo_user_state", // Storage key
+      version: 2,
+      migrate: (persisted, version) => {
+        if (!persisted || typeof persisted !== "object") return persisted as UserState;
+        const state = persisted as UserState;
+        if (version >= 2 || !state.profile) return state;
+        const birthRecord = migrateLegacyBirth(state.profile);
+        return {
+          ...state,
+          profile: {
+            ...state.profile,
+            birthRecord,
+          },
+        };
+      },
     },
   ),
 );

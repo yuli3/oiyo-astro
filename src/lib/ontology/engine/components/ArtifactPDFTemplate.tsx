@@ -94,11 +94,13 @@ export const ArtifactPDFTemplate = forwardRef<
   ArtifactPDFTemplateProps
 >(({ locale, profile, prophecy }, ref) => {
   const getLoc = (obj: any) => obj?.[locale] || obj?.en || "";
-  const dateStr = profile.input.birthDate.toLocaleDateString(locale, {
+  const [year, month, day] = profile.input.civilDate.split("-").map(Number);
+  const dateStr = new Intl.DateTimeFormat(locale, {
     day: "numeric",
     month: "long",
+    timeZone: "UTC",
     year: "numeric",
-  });
+  }).format(new Date(Date.UTC(year, month - 1, day)));
 
   return (
     <div className="pdf-container" ref={ref} style={styles.page}>

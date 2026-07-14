@@ -14,6 +14,10 @@ import {
   getBiorhythmInterpretation,
 } from "@/lib/ontology/saju/biorhythm";
 import { useUserProfile } from "@/lib/user/context/UserContext";
+import {
+  civilDateToLocalNoon,
+  resolveBirthRecord,
+} from "@/lib/user/birth-record";
 
 export function BiorhythmSection() {
   const t = useTranslations("fortune"); // Falling back to shared key
@@ -22,18 +26,15 @@ export function BiorhythmSection() {
   const { profile } = useUserProfile();
   const [date, setDate] = useState<string>("");
 
-  const biorhythm = date ? calculateBiorhythm(new Date(date)) : null;
+  const biorhythm = date ? calculateBiorhythm(civilDateToLocalNoon(date)) : null;
 
   useEffect(() => {
-    if (profile.birthDate && !date) {
-      const d = new Date(profile.birthDate);
-      if (!isNaN(d.getTime())) {
-        const newDate = d.toISOString().split("T")[0];
-        // eslint-disable-next-line react-hooks/set-state-in-effect
-        if (newDate !== date) setDate(newDate);
-      }
+    const record = resolveBirthRecord(profile);
+    if (record && !date) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      if (record.civilDate !== date) setDate(record.civilDate);
     }
-  }, [profile.birthDate, date]);
+  }, [profile, date]);
 
   return (
     <div className="min-h-screen flex items-center justify-center p-4 relative bg-[#042f24] text-white overflow-hidden">

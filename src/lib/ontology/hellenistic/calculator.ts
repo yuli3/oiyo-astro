@@ -1,5 +1,6 @@
 import { TRIPLICITY_LORDS } from "./data";
 import { HellenisticCoordinates, Sect, TriplicityLords } from "./types";
+import { getTrueSolarTime } from "../kernel/astronomy";
 
 /**
  * Main Calculator
@@ -8,8 +9,9 @@ import { HellenisticCoordinates, Sect, TriplicityLords } from "./types";
 export function calculateHellenisticCoordinates(
   date: Date,
   zodiacElement: "Air" | "Earth" | "Fire" | "Water",
+  longitude: number = 135,
 ): HellenisticCoordinates {
-  const sect = calculateSect(date);
+  const sect = calculateSect(getTrueSolarTime(date, longitude));
   const triplicity = getTriplicityLords(sect, zodiacElement);
 
   return {
@@ -32,7 +34,9 @@ export function calculateHellenisticCoordinates(
  * Determine Sect based on time (Simplified)
  */
 function calculateSect(date: Date): Sect {
-  const hour = date.getHours();
+  // `getTrueSolarTime` carries the local solar clock in UTC fields so the
+  // result never depends on the visitor/runtime timezone.
+  const hour = date.getUTCHours();
   // Simple approximation for MVP: 6 AM to 6 PM is Day
   return hour >= 6 && hour < 18 ? "Day" : "Night";
 }

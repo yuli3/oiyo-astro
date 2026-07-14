@@ -11,6 +11,7 @@ import { calculateSaju } from "../../ontology/saju/logic";
 import { analyzeSaju } from "../../ontology/saju/logic";
 import { calculateIching } from "../../resonance/relationship/sacred-resonance/iching-logic";
 import { getUniversalChronosCoordinates } from "../chronos/chronos-engine";
+import { civilDateToLocalNoon } from "../kernel/civil-date";
 import { calculateHellenisticCoordinates } from "../hellenistic/calculator";
 import { calculateMayanKin } from "../mayan/calculator";
 import { analyzeNameEnergy, PrimalElement } from "../onomancy/analysis";
@@ -27,18 +28,25 @@ import { SocialAnalysis, UniversalInput, UniversalProfile } from "./types";
  * Basic Core Calculation (formerly Primal)
  */
 export function calculateBasicProfile(input: UniversalInput): any {
+  const calendarDate = civilDateToLocalNoon(input.civilDate);
+
   // 1. Saju
-  const saju = calculateSaju(input.birthDate, false, input.gender); // Corrected parameter order
+  const saju = calculateSaju(
+    input.instant,
+    input.isLunarCalendar,
+    input.gender,
+    input.longitude,
+  );
 
   // 2. Numerology
   const numerology = calculateNumerology({
-    birthDate: input.birthDate,
+    birthDate: calendarDate,
     fullName: input.fullName || "Seeker",
   });
 
   // 3. Western Zodiac
-  const month = input.birthDate.getMonth() + 1;
-  const day = input.birthDate.getDate();
+  const month = calendarDate.getMonth() + 1;
+  const day = calendarDate.getDate();
   let westernSign = "aries";
   if ((month === 3 && day >= 21) || (month === 4 && day <= 19))
     westernSign = "aries";
@@ -81,7 +89,7 @@ export function calculateBasicProfile(input: UniversalInput): any {
     "dog",
     "pig",
   ];
-  const yearBirth = input.birthDate.getFullYear();
+  const yearBirth = calendarDate.getFullYear();
   const animalIdx = (yearBirth - 4) % 12;
   const animalSign = animals[animalIdx];
   const animalData = ANIMAL_ZODIAC_DATA[animalSign];
@@ -118,11 +126,17 @@ import { calculateZiWeiCoordinates } from "../ziwei/calculator";
 export function calculateUniversalCorrelation(
   input: UniversalInput,
 ): UniversalProfile {
+  const calendarDate = civilDateToLocalNoon(input.civilDate);
+
   // 1. CHRONOS ENGINE: The Source of Truth (Time -> Coordinates)
   const chronos = getUniversalChronosCoordinates({
-    birthDate: input.birthDate,
+    civilDate: input.civilDate,
+    birthTime: input.birthTime,
     fullName: input.fullName,
     gender: input.gender,
+    instant: input.instant,
+    isLunarCalendar: input.isLunarCalendar,
+    longitude: input.longitude,
   });
 
   // 2. COSMIC & LEGACY DATA MAP
@@ -186,7 +200,7 @@ export function calculateUniversalCorrelation(
   };
 
   // 4. MYTHOS LAYER (Construct final object)
-  const birthAttributes = getBirthAttributes(input.birthDate);
+  const birthAttributes = getBirthAttributes(calendarDate);
   const mythos = {
     birthflower: birthAttributes.flower,
     birthstone: birthAttributes.stone,
@@ -194,16 +208,18 @@ export function calculateUniversalCorrelation(
     egyptian: chronos.egyptian,
     iching: calculateIching(
       input.fullName || "Seeker",
-      input.birthDate.getTime(),
+      calendarDate.getTime(),
     ),
     mayan: chronos.mayan!,
-    symbols: getBirthSymbols(input.birthDate.getMonth()),
+    symbols: getBirthSymbols(calendarDate.getMonth()),
   };
 
   return {
     ...legacy,
-    biorhythms: calculateBiorhythm(input.birthDate, new Date()),
-    cosmic: calculateCelestialPosition(input.birthDate),
+    biorhythms: calculateBiorhythm(calendarDate, new Date()),
+    // This legacy approximation only uses month/day and day-of-year; treating
+    // an instant with local getters would reintroduce visitor-TZ drift.
+    cosmic: calculateCelestialPosition(calendarDate),
     hellenistic: chronos.hellenistic,
     input,
     kabbalah: chronos.kabbalah,

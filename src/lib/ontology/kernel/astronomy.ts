@@ -64,16 +64,23 @@ export function getSolarLongitude(date: Date): number {
  * Precision: ~10-15 minutes.
  */
 export function getSolarTermDate(year: number, termIndex: number): Date {
-  // Rough estimate of the term date
-  const baseDate = new Date(year, 0, 1);
-  const daysOffset = (termIndex * 15 + 315) % 360; // 0 starts at 315 deg (Ipchun)
-  const estimatedDate = new Date(
-    baseDate.getTime() + (daysOffset + 30) * 24 * 60 * 60 * 1000,
-  );
-
-  // Refine using solar longitude (simplified iteration)
-  let refinedDate = estimatedDate;
   const targetLongitude = (termIndex * 15 + 315) % 360;
+
+  // Seed the iteration with the term's approximate day-of-year. Solar longitude
+  // 0 deg is the vernal equinox, which falls around day 79; the rest of the
+  // circle maps onto the year from there, wrapping through January.
+  //
+  // The previous seed used the longitude itself as a day offset, so Ipchun
+  // (315 deg, early February) was seeded at day 345 — mid-December — and the
+  // refinement below converged on the *following* year's term. Since
+  // saju/logic.ts decides the year pillar with `birthDate < ipchun`, every
+  // birth date compared against a next-year Ipchun and had its year pillar
+  // pushed back by one. Terms 0-2 (Ipchun, Usu, Gyeongchip) were affected.
+  const approxDayOfYear =
+    (79 + (targetLongitude / 360) * 365.2425) % 365.2425;
+  let refinedDate = new Date(
+    Date.UTC(year, 0, 1) + approxDayOfYear * 24 * 60 * 60 * 1000,
+  );
 
   for (let i = 0; i < 3; i++) {
     const currentLon = getSolarLongitude(refinedDate);
@@ -87,12 +94,17 @@ export function getSolarTermDate(year: number, termIndex: number): Date {
 }
 
 /**
- * Calculates True Solar Time (TST) based on Local Clock Time and Longitude.
+ * Calculates True Solar Time (TST) for an instant observed at a given longitude.
+ *
+ * TST = UTC + longitude x 4 minutes + Equation of Time. The birthplace longitude
+ * is the only geographic input; the timezone of the machine running this code
+ * must never take part in the calculation.
+ *
+ * The returned Date carries the solar wall clock in its **UTC** fields — read it
+ * with getUTCFullYear/getUTCHours/etc. Its local fields are meaningless.
  */
 export function getTrueSolarTime(date: Date, longitude: number): Date {
-  const timezoneOffsetMin = -date.getTimezoneOffset();
-  const standardMeridian = (timezoneOffsetMin / 60) * 15;
-  const longitudeCorrection = (longitude - standardMeridian) * 4;
+  const longitudeCorrection = longitude * 4;
   const eot = calculateEoT(date);
   const totalCorrectionMs = (longitudeCorrection + eot) * 60 * 1000;
 

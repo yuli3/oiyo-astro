@@ -48,10 +48,12 @@ export function getSexagenaryCycle(
   // Check library documentation or output.
   // Ideally, we calculate manually to ensure type safety with our Enums.
 
-  const y = date.getFullYear();
-  const m = date.getMonth() + 1;
-  const d = date.getDate();
-  const h = date.getHours();
+  // `date` carries its civil fields in UTC (True Solar Time frame, see
+  // getTrueSolarTime) — local getters would leak the runtime timezone in.
+  const y = date.getUTCFullYear();
+  const m = date.getUTCMonth() + 1;
+  const d = date.getUTCDate();
+  const h = date.getUTCHours();
 
   // 1. Lunar Data for Solar Terms
   const lunarData = solarlunar.solar2lunar(y, m, d) as any;

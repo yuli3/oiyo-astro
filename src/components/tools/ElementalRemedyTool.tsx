@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { birthCivilToInstant } from '../../lib/ontology/kernel/time'
 import { calculateSaju, analyzeSaju } from '../../lib/ontology/saju/logic'
 import { FiveElement } from '../../lib/ontology/saju/types'
 
@@ -139,7 +140,13 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
   let analysis: ReturnType<typeof analyzeSaju> | null = null
   if (done) {
     try {
-      const birth = new Date(year, month - 1, Math.min(day, daysInMonth), hour ?? 12)
+      const birth = birthCivilToInstant({
+        day: Math.min(day, daysInMonth),
+        hour: hour ?? 12,
+        minute: 0,
+        month,
+        year,
+      })
       const saju = calculateSaju(birth, false, gender, 135.0)
       analysis = analyzeSaju(saju)
     } catch {

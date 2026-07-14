@@ -74,37 +74,38 @@ export const SIGN_INFO: Record<SignKey, SignInfo> = {
   },
 };
 
-// Curated birthplaces: { label, latitude (N+), longitude (E+), standard UTC offset hours }.
-// Offset is the location's standard (non-DST) zone; users can fine-tune time if needed.
+// Curated birthplaces. `tz` remains a display/backward-compatibility fallback;
+// exact birth instants must resolve `zoneId` for the selected historical date.
 export interface City {
   id: string;
   label: Record<NatalLocale, string>;
   lat: number;
   lon: number;
   tz: number;
+  zoneId: string;
 }
 
 export const CITIES: City[] = [
-  { id: 'seoul', label: { ko: '서울', en: 'Seoul', ja: 'ソウル', zh: '首尔', fr: 'Séoul', es: 'Seúl' }, lat: 37.5665, lon: 126.978, tz: 9 },
-  { id: 'busan', label: { ko: '부산', en: 'Busan', ja: '釜山', zh: '釜山', fr: 'Busan', es: 'Busan' }, lat: 35.1796, lon: 129.0756, tz: 9 },
-  { id: 'tokyo', label: { ko: '도쿄', en: 'Tokyo', ja: '東京', zh: '东京', fr: 'Tokyo', es: 'Tokio' }, lat: 35.6762, lon: 139.6503, tz: 9 },
-  { id: 'osaka', label: { ko: '오사카', en: 'Osaka', ja: '大阪', zh: '大阪', fr: 'Osaka', es: 'Osaka' }, lat: 34.6937, lon: 135.5023, tz: 9 },
-  { id: 'beijing', label: { ko: '베이징', en: 'Beijing', ja: '北京', zh: '北京', fr: 'Pékin', es: 'Pekín' }, lat: 39.9042, lon: 116.4074, tz: 8 },
-  { id: 'shanghai', label: { ko: '상하이', en: 'Shanghai', ja: '上海', zh: '上海', fr: 'Shanghai', es: 'Shanghái' }, lat: 31.2304, lon: 121.4737, tz: 8 },
-  { id: 'taipei', label: { ko: '타이베이', en: 'Taipei', ja: '台北', zh: '台北', fr: 'Taipei', es: 'Taipéi' }, lat: 25.033, lon: 121.5654, tz: 8 },
-  { id: 'hongkong', label: { ko: '홍콩', en: 'Hong Kong', ja: '香港', zh: '香港', fr: 'Hong Kong', es: 'Hong Kong' }, lat: 22.3193, lon: 114.1694, tz: 8 },
-  { id: 'singapore', label: { ko: '싱가포르', en: 'Singapore', ja: 'シンガポール', zh: '新加坡', fr: 'Singapour', es: 'Singapur' }, lat: 1.3521, lon: 103.8198, tz: 8 },
-  { id: 'bangkok', label: { ko: '방콕', en: 'Bangkok', ja: 'バンコク', zh: '曼谷', fr: 'Bangkok', es: 'Bangkok' }, lat: 13.7563, lon: 100.5018, tz: 7 },
-  { id: 'delhi', label: { ko: '뉴델리', en: 'New Delhi', ja: 'ニューデリー', zh: '新德里', fr: 'New Delhi', es: 'Nueva Delhi' }, lat: 28.6139, lon: 77.209, tz: 5.5 },
-  { id: 'dubai', label: { ko: '두바이', en: 'Dubai', ja: 'ドバイ', zh: '迪拜', fr: 'Dubaï', es: 'Dubái' }, lat: 25.2048, lon: 55.2708, tz: 4 },
-  { id: 'london', label: { ko: '런던', en: 'London', ja: 'ロンドン', zh: '伦敦', fr: 'Londres', es: 'Londres' }, lat: 51.5074, lon: -0.1278, tz: 0 },
-  { id: 'paris', label: { ko: '파리', en: 'Paris', ja: 'パリ', zh: '巴黎', fr: 'Paris', es: 'París' }, lat: 48.8566, lon: 2.3522, tz: 1 },
-  { id: 'berlin', label: { ko: '베를린', en: 'Berlin', ja: 'ベルリン', zh: '柏林', fr: 'Berlin', es: 'Berlín' }, lat: 52.52, lon: 13.405, tz: 1 },
-  { id: 'madrid', label: { ko: '마드리드', en: 'Madrid', ja: 'マドリード', zh: '马德里', fr: 'Madrid', es: 'Madrid' }, lat: 40.4168, lon: -3.7038, tz: 1 },
-  { id: 'moscow', label: { ko: '모스크바', en: 'Moscow', ja: 'モスクワ', zh: '莫斯科', fr: 'Moscou', es: 'Moscú' }, lat: 55.7558, lon: 37.6173, tz: 3 },
-  { id: 'newyork', label: { ko: '뉴욕', en: 'New York', ja: 'ニューヨーク', zh: '纽约', fr: 'New York', es: 'Nueva York' }, lat: 40.7128, lon: -74.006, tz: -5 },
-  { id: 'losangeles', label: { ko: '로스앤젤레스', en: 'Los Angeles', ja: 'ロサンゼルス', zh: '洛杉矶', fr: 'Los Angeles', es: 'Los Ángeles' }, lat: 34.0522, lon: -118.2437, tz: -8 },
-  { id: 'sydney', label: { ko: '시드니', en: 'Sydney', ja: 'シドニー', zh: '悉尼', fr: 'Sydney', es: 'Sídney' }, lat: -33.8688, lon: 151.2093, tz: 10 },
-  { id: 'saopaulo', label: { ko: '상파울루', en: 'São Paulo', ja: 'サンパウロ', zh: '圣保罗', fr: 'São Paulo', es: 'São Paulo' }, lat: -23.5505, lon: -46.6333, tz: -3 },
-  { id: 'mexicocity', label: { ko: '멕시코시티', en: 'Mexico City', ja: 'メキシコシティ', zh: '墨西哥城', fr: 'Mexico', es: 'Ciudad de México' }, lat: 19.4326, lon: -99.1332, tz: -6 },
+  { id: 'seoul', label: { ko: '서울', en: 'Seoul', ja: 'ソウル', zh: '首尔', fr: 'Séoul', es: 'Seúl' }, lat: 37.5665, lon: 126.978, tz: 9, zoneId: 'Asia/Seoul' },
+  { id: 'busan', label: { ko: '부산', en: 'Busan', ja: '釜山', zh: '釜山', fr: 'Busan', es: 'Busan' }, lat: 35.1796, lon: 129.0756, tz: 9, zoneId: 'Asia/Seoul' },
+  { id: 'tokyo', label: { ko: '도쿄', en: 'Tokyo', ja: '東京', zh: '东京', fr: 'Tokyo', es: 'Tokio' }, lat: 35.6762, lon: 139.6503, tz: 9, zoneId: 'Asia/Tokyo' },
+  { id: 'osaka', label: { ko: '오사카', en: 'Osaka', ja: '大阪', zh: '大阪', fr: 'Osaka', es: 'Osaka' }, lat: 34.6937, lon: 135.5023, tz: 9, zoneId: 'Asia/Tokyo' },
+  { id: 'beijing', label: { ko: '베이징', en: 'Beijing', ja: '北京', zh: '北京', fr: 'Pékin', es: 'Pekín' }, lat: 39.9042, lon: 116.4074, tz: 8, zoneId: 'Asia/Shanghai' },
+  { id: 'shanghai', label: { ko: '상하이', en: 'Shanghai', ja: '上海', zh: '上海', fr: 'Shanghai', es: 'Shanghái' }, lat: 31.2304, lon: 121.4737, tz: 8, zoneId: 'Asia/Shanghai' },
+  { id: 'taipei', label: { ko: '타이베이', en: 'Taipei', ja: '台北', zh: '台北', fr: 'Taipei', es: 'Taipéi' }, lat: 25.033, lon: 121.5654, tz: 8, zoneId: 'Asia/Taipei' },
+  { id: 'hongkong', label: { ko: '홍콩', en: 'Hong Kong', ja: '香港', zh: '香港', fr: 'Hong Kong', es: 'Hong Kong' }, lat: 22.3193, lon: 114.1694, tz: 8, zoneId: 'Asia/Hong_Kong' },
+  { id: 'singapore', label: { ko: '싱가포르', en: 'Singapore', ja: 'シンガポール', zh: '新加坡', fr: 'Singapour', es: 'Singapur' }, lat: 1.3521, lon: 103.8198, tz: 8, zoneId: 'Asia/Singapore' },
+  { id: 'bangkok', label: { ko: '방콕', en: 'Bangkok', ja: 'バンコク', zh: '曼谷', fr: 'Bangkok', es: 'Bangkok' }, lat: 13.7563, lon: 100.5018, tz: 7, zoneId: 'Asia/Bangkok' },
+  { id: 'delhi', label: { ko: '뉴델리', en: 'New Delhi', ja: 'ニューデリー', zh: '新德里', fr: 'New Delhi', es: 'Nueva Delhi' }, lat: 28.6139, lon: 77.209, tz: 5.5, zoneId: 'Asia/Kolkata' },
+  { id: 'dubai', label: { ko: '두바이', en: 'Dubai', ja: 'ドバイ', zh: '迪拜', fr: 'Dubaï', es: 'Dubái' }, lat: 25.2048, lon: 55.2708, tz: 4, zoneId: 'Asia/Dubai' },
+  { id: 'london', label: { ko: '런던', en: 'London', ja: 'ロンドン', zh: '伦敦', fr: 'Londres', es: 'Londres' }, lat: 51.5074, lon: -0.1278, tz: 0, zoneId: 'Europe/London' },
+  { id: 'paris', label: { ko: '파리', en: 'Paris', ja: 'パリ', zh: '巴黎', fr: 'Paris', es: 'París' }, lat: 48.8566, lon: 2.3522, tz: 1, zoneId: 'Europe/Paris' },
+  { id: 'berlin', label: { ko: '베를린', en: 'Berlin', ja: 'ベルリン', zh: '柏林', fr: 'Berlin', es: 'Berlín' }, lat: 52.52, lon: 13.405, tz: 1, zoneId: 'Europe/Berlin' },
+  { id: 'madrid', label: { ko: '마드리드', en: 'Madrid', ja: 'マドリード', zh: '马德里', fr: 'Madrid', es: 'Madrid' }, lat: 40.4168, lon: -3.7038, tz: 1, zoneId: 'Europe/Madrid' },
+  { id: 'moscow', label: { ko: '모스크바', en: 'Moscow', ja: 'モスクワ', zh: '莫斯科', fr: 'Moscou', es: 'Moscú' }, lat: 55.7558, lon: 37.6173, tz: 3, zoneId: 'Europe/Moscow' },
+  { id: 'newyork', label: { ko: '뉴욕', en: 'New York', ja: 'ニューヨーク', zh: '纽约', fr: 'New York', es: 'Nueva York' }, lat: 40.7128, lon: -74.006, tz: -5, zoneId: 'America/New_York' },
+  { id: 'losangeles', label: { ko: '로스앤젤레스', en: 'Los Angeles', ja: 'ロサンゼルス', zh: '洛杉矶', fr: 'Los Angeles', es: 'Los Ángeles' }, lat: 34.0522, lon: -118.2437, tz: -8, zoneId: 'America/Los_Angeles' },
+  { id: 'sydney', label: { ko: '시드니', en: 'Sydney', ja: 'シドニー', zh: '悉尼', fr: 'Sydney', es: 'Sídney' }, lat: -33.8688, lon: 151.2093, tz: 10, zoneId: 'Australia/Sydney' },
+  { id: 'saopaulo', label: { ko: '상파울루', en: 'São Paulo', ja: 'サンパウロ', zh: '圣保罗', fr: 'São Paulo', es: 'São Paulo' }, lat: -23.5505, lon: -46.6333, tz: -3, zoneId: 'America/Sao_Paulo' },
+  { id: 'mexicocity', label: { ko: '멕시코시티', en: 'Mexico City', ja: 'メキシコシティ', zh: '墨西哥城', fr: 'Mexico', es: 'Ciudad de México' }, lat: 19.4326, lon: -99.1332, tz: -6, zoneId: 'America/Mexico_City' },
 ];

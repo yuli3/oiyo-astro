@@ -23,6 +23,8 @@ import { calculateSaju, analyzeSaju } from "@/lib/ontology/saju/logic";
 import { useUserStore } from "@/lib/user/store/user-store";
 import { listStoredTestResults, type StoredTestResult } from "@/lib/user/test-results";
 import { collectAssessmentSignals, type OntologySignal } from "@/assessments";
+import { resolveBirthInstant, resolveBirthRecord } from "@/lib/user/birth-record";
+import type { UserProfile } from "@/lib/user/store/user-store";
 
 export interface ProfileSignals {
   mbti?: { type: string; traits: string[] };
@@ -150,11 +152,18 @@ export function mergeAssessmentSignals(
 }
 
 /** `calculateSaju` + `analyzeSaju` (`@/lib/ontology/saju/logic`) → the light `{element, tenGods}` signal shape. */
-function computeSajuSignal(birthDate: string, gender: "female" | "male" | null | undefined): ProfileSignals["saju"] | null {
-  const date = new Date(birthDate);
-  if (Number.isNaN(date.getTime())) return null;
+function computeSajuSignal(profile: UserProfile): ProfileSignals["saju"] | null {
+  const record = resolveBirthRecord(profile);
+  if (!record) return null;
+  const resolution = resolveBirthInstant(record);
+  if (resolution.status !== "resolved") return null;
   try {
-    const saju = calculateSaju(date, false, gender === "female" ? "female" : "male");
+    const saju = calculateSaju(
+      resolution.instant,
+      false,
+      profile.gender === "female" ? "female" : "male",
+      resolution.longitude,
+    );
     const analysis = analyzeSaju(saju);
     const tenGods = Object.entries(analysis.tenGodCounts)
       .filter(([, count]) => count > 0)
@@ -201,8 +210,8 @@ export function collectSignals(): ProfileSignals {
   if (profile.zodiacSign) {
     signals.zodiac = profile.zodiacSign;
   }
-  if (profile.birthDate) {
-    const saju = computeSajuSignal(profile.birthDate, profile.gender);
+  if (profile.birthDate || profile.birthRecord) {
+    const saju = computeSajuSignal(profile);
     if (saju) signals.saju = saju;
   }
 

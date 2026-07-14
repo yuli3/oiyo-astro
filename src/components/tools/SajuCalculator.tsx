@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { analyzeLifeCategories } from '../../lib/ontology/saju/categories';
+import { birthCivilToInstant } from '../../lib/ontology/kernel/time';
 import { STEM_ORDER } from '../../manifest/data/saju/stems';
 import { BRANCH_ORDER } from '../../manifest/data/saju/branches';
 import type { SajuResult, HeavenlyStem, EarthlyBranch } from '../../lib/ontology/saju/types';
@@ -625,7 +626,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     const S = (i: number) => STEM_ORDER[i] as unknown as HeavenlyStem;
     const B = (i: number) => BRANCH_ORDER[i] as unknown as EarthlyBranch;
     const saju: SajuResult = {
-      birthDate: new Date(year, month - 1, day, hKnown ? (hour as number) : 12),
+      birthDate: birthCivilToInstant({ year, month, day, hour: hKnown ? (hour as number) : 12, minute: 0 }),
       year: { heavenlyStem: S(yStem), earthlyBranch: B(yBranch) },
       month: { heavenlyStem: S(mStem), earthlyBranch: B(mBranch) },
       day: { heavenlyStem: S(dStem), earthlyBranch: B(dBranch) },

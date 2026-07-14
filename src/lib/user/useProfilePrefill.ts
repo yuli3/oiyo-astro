@@ -1,4 +1,8 @@
 import { useEffect, useState } from "react";
+import {
+  createBirthRecord,
+  resolveBirthRecord,
+} from "./birth-record";
 import { useUserStore, type UserProfile } from "./store/user-store";
 
 export interface ParsedBirth {
@@ -9,23 +13,20 @@ export interface ParsedBirth {
   minute: number | null;
 }
 
-/** profile.birthDate(ISO)+birthTime("HH:mm") → {year,month,day,hour,minute} */
+/**
+ * profile.birthDate(ISO)+birthTime("HH:mm") → {year,month,day,hour,minute}
+ *
+ * 사용자가 입력한 값은 "출생지 벽시계"다. 저장된 instant는 출생지 표준시(기본 KST)
+ * 기준으로 되읽어야 한다 — 방문자 브라우저 TZ로 읽으면 해외 사용자의 생시가 밀린다.
+ */
 export function parseBirth(profile: UserProfile): ParsedBirth | null {
-  if (!profile.birthDate) return null;
-  const d = new Date(profile.birthDate);
-  if (isNaN(d.getTime())) return null;
-  let hour: number | null = null;
-  let minute: number | null = null;
-  if (profile.birthTime && /^\d{1,2}:\d{1,2}/.test(profile.birthTime)) {
-    const [h, m] = profile.birthTime.split(":");
-    hour = Number(h);
-    minute = Number(m);
-  } else if (d.getHours() !== 12 || d.getMinutes() !== 0) {
-    // birthDate가 시각까지 담고 있으면 사용(12:00은 "시간 모름" 관례라 제외)
-    hour = d.getHours();
-    minute = d.getMinutes();
-  }
-  return { year: d.getFullYear(), month: d.getMonth() + 1, day: d.getDate(), hour, minute };
+  const record = resolveBirthRecord(profile);
+  if (!record) return null;
+  const [year, month, day] = record.civilDate.split("-").map(Number);
+  const [hour, minute] = record.civilTime
+    ? record.civilTime.split(":").map(Number)
+    : [null, null];
+  return { year, month, day, hour, minute };
 }
 
 /**
@@ -36,6 +37,7 @@ export function parseBirth(profile: UserProfile): ParsedBirth | null {
 export function useProfilePrefill() {
   const profile = useUserStore((s) => s.profile);
   const setProfile = useUserStore((s) => s.setProfile);
+  const saveBirthRecord = useUserStore((s) => s.saveBirthRecord);
   const [hydrated, setHydrated] = useState(false);
 
   useEffect(() => setHydrated(true), []);
@@ -51,12 +53,16 @@ export function useProfilePrefill() {
   }) {
     const { year, month, day, hour, gender } = input;
     const hasHour = hour !== null && hour !== undefined;
-    const birthDate = new Date(year, month - 1, day, hasHour ? (hour as number) : 12).toISOString();
-    const updates: Partial<UserProfile> = { birthDate };
-    if (hasHour) updates.birthTime = `${String(hour).padStart(2, "0")}:00`;
-    if (gender) updates.gender = gender;
-    setProfile(updates);
+    const civilDate = `${String(year).padStart(4, "0")}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    const record = createBirthRecord({
+      civilDate,
+      civilTime: hasHour ? `${String(hour).padStart(2, "0")}:00` : null,
+      needsConfirmation: true,
+      provenance: "user-confirmed-v2",
+    });
+    saveBirthRecord(record);
+    if (gender) setProfile({ gender });
   }
 
-  return { hydrated, profile, parsed, saveBirth, setProfile };
+  return { hydrated, profile, parsed, saveBirth, saveBirthRecord, setProfile };
 }

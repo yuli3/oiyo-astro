@@ -1,3 +1,5 @@
+import { differenceInCivilDays } from "@/lib/ontology/kernel/civil-date";
+
 export interface BiorhythmAnalysis {
   isPositive: boolean;
   level: "critical" | "high" | "low" | "medium";
@@ -31,9 +33,7 @@ export function calculateBiorhythm(
   birthDate: Date,
   targetDate: Date,
 ): BiorhythmData {
-  const daysSinceBirth = Math.floor(
-    (targetDate.getTime() - birthDate.getTime()) / (1000 * 60 * 60 * 24),
-  );
+  const daysSinceBirth = differenceInCivilDays(targetDate, birthDate);
 
   // Biorhythm cycles (in days)
   const PHYSICAL_CYCLE = 23;

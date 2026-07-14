@@ -2,6 +2,7 @@ import { beforeEach, describe, expect, it } from "vitest";
 import { vi } from "vitest";
 
 import { useUserStore } from "@/lib/user/store/user-store";
+import { createBirthRecord } from "@/lib/user/birth-record";
 import { recordTestResult } from "@/lib/user/test-results";
 import { bigFivePlugin, bigFiveResponsesFromAnswers, buildAssessmentResult, buildMbtiResult, buildRiasecResult, recordAssessmentResult, riasecFullPlugin } from "@/assessments";
 
@@ -114,7 +115,7 @@ describe("collectSignals", () => {
     expect(collectSignals()).toEqual({});
   });
 
-  it("falls back to the profile store for mbti/zodiac and derives saju from birthDate", () => {
+  it("keeps profile fallbacks but blocks exact saju for an unconfirmed legacy instant", () => {
     useUserStore.getState().setProfile({
       mbtiType: "entp",
       zodiacSign: "Gemini",
@@ -124,6 +125,20 @@ describe("collectSignals", () => {
     const signals = collectSignals();
     expect(signals.mbti).toEqual({ type: "ENTP", traits: ["E", "N", "T", "P"] });
     expect(signals.zodiac).toBe("Gemini");
+    expect(signals.saju).toBeUndefined();
+  });
+
+  it("derives saju after birthplace and historical offset are confirmed", () => {
+    useUserStore.getState().setProfile({ gender: "male" });
+    useUserStore.getState().saveBirthRecord(createBirthRecord({
+      civilDate: "1990-05-15",
+      civilTime: "19:00",
+      longitude: 126.978,
+      needsConfirmation: false,
+      utcOffsetMinutesAtBirth: 540,
+      zoneId: "Asia/Seoul",
+    }));
+    const signals = collectSignals();
     expect(typeof signals.saju?.element).toBe("string");
     expect(signals.saju?.tenGods.length).toBeGreaterThan(0);
   });

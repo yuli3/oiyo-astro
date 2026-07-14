@@ -19,12 +19,14 @@ export interface LunarDate {
 
 /**
  * Converts a Gregorian Date to a Lunar Date.
- * Handles timezone offsets by normalizing to local date components before conversion.
+ * `date` must carry its civil fields in UTC — the True Solar Time frame produced
+ * by getTrueSolarTime. Reading local fields would make the result depend on the
+ * timezone of the machine running this code.
  */
 export function getLunarDate(date: Date): LunarDate {
-  const year = date.getFullYear();
-  const month = date.getMonth() + 1;
-  const day = date.getDate();
+  const year = date.getUTCFullYear();
+  const month = date.getUTCMonth() + 1;
+  const day = date.getUTCDate();
 
   // solarlunar inputs: year, month, day
   // returns: { lYear, lMonth, lDay, isLeap, ... }

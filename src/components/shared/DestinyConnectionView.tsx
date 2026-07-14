@@ -25,6 +25,7 @@ import {
 import { heavenlyStems } from "@/lib/ontology/saju/data";
 import { calculateSaju } from "@/lib/ontology/saju/logic";
 import { useUserProfile } from "@/lib/user/context/UserContext";
+import { resolveBirthInstant, resolveBirthRecord } from "@/lib/user/birth-record";
 import { ROUTES } from "@/registry/routes";
 
 interface DestinyConnectionViewProps {
@@ -43,13 +44,17 @@ export function DestinyConnectionView({
   const { profile } = useUserProfile();
 
   const sajuElement = useMemo(() => {
-    // 1. Try to get from profile directly if available (not in current Context but let's assume future)
-    // 2. Derive from birthDate
-    if (profile.birthDate) {
+    const record = resolveBirthRecord(profile);
+    if (record) {
       try {
-        const date = new Date(profile.birthDate);
-        if (!isNaN(date.getTime())) {
-          const result = calculateSaju(date);
+        const resolution = resolveBirthInstant(record);
+        if (resolution.status === "resolved") {
+          const result = calculateSaju(
+            resolution.instant,
+            false,
+            undefined,
+            resolution.longitude,
+          );
           const stem = heavenlyStems[result.dayMaster];
           return stem?.element; // wood, fire, earth, metal, water
         }
@@ -58,7 +63,7 @@ export function DestinyConnectionView({
       }
     }
     return null;
-  }, [profile.birthDate]);
+  }, [profile]);
 
   // Use props or profile for MBTI
   const mbti = currentMbti || profile.mbtiType;

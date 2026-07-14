@@ -7,6 +7,58 @@ export const MS_PER_DAY = 86400000;
 export const J2000_EPOCH = 2451545.0;
 
 /**
+ * Standard-time offset of the birthplace, in minutes east of UTC.
+ *
+ * Birth input is a wall clock reading at the birthplace ("I was born at 14:30"),
+ * so it can only be turned into an instant against the birthplace's standard
+ * time — never against the visitor's browser timezone. Default is KST (+9h),
+ * which pairs with the default birth longitude of 135E used across the engines.
+ */
+export const DEFAULT_BIRTH_UTC_OFFSET_MINUTES = 540;
+
+export interface CivilDateTime {
+  day: number;
+  hour: number;
+  minute: number;
+  month: number; // 1-12
+  year: number;
+}
+
+/**
+ * Birthplace wall clock -> absolute instant.
+ */
+export function birthCivilToInstant(
+  civil: CivilDateTime,
+  utcOffsetMinutes: number = DEFAULT_BIRTH_UTC_OFFSET_MINUTES,
+): Date {
+  const utcMs = Date.UTC(
+    civil.year,
+    civil.month - 1,
+    civil.day,
+    civil.hour,
+    civil.minute,
+  );
+  return new Date(utcMs - utcOffsetMinutes * 60 * 1000);
+}
+
+/**
+ * Absolute instant -> birthplace wall clock. Inverse of birthCivilToInstant.
+ */
+export function instantToBirthCivil(
+  date: Date,
+  utcOffsetMinutes: number = DEFAULT_BIRTH_UTC_OFFSET_MINUTES,
+): CivilDateTime {
+  const shifted = new Date(date.getTime() + utcOffsetMinutes * 60 * 1000);
+  return {
+    day: shifted.getUTCDate(),
+    hour: shifted.getUTCHours(),
+    minute: shifted.getUTCMinutes(),
+    month: shifted.getUTCMonth() + 1,
+    year: shifted.getUTCFullYear(),
+  };
+}
+
+/**
  * Calculates the day of the year (1-366).
  */
 export function getDayOfYear(date: Date): number {

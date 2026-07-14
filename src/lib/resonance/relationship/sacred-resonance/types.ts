@@ -8,7 +8,10 @@ export interface DimensionMetadata {
 }
 
 export interface PartnerPartialProfile {
-  birthDate?: string; // ISO string
+  birthDate?: string; // civil date, YYYY-MM-DD
+  /** Resolved UTC instant. Never derive this from birthDate/birthTime alone. */
+  birthInstant?: Date;
+  birthLongitude?: number;
   birthTime?: string; // HH:mm
   bloodType?: string;
   gender?: "female" | "male";
