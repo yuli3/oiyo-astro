@@ -1,0 +1,10 @@
+{
+  "assessmentId": "adult-attachment",
+  "instrumentVersion": "attachment-oiyo-anxiety-avoidance-12-v1",
+  "locale": "ko",
+  "promptRevision": "2026-07-14-r1",
+  "administeredFormHashSha256": "9892d117abb1d91b8c2145810b882a5783f2d48a80c054c38482884e73a10988",
+  "consentProtocolVersion": "synthetic-fixture-only",
+  "collectionStart": "2026-07-14",
+  "collectionEnd": "2026-07-14"
+}

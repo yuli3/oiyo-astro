@@ -4,26 +4,49 @@ import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import LifeValuesTest from '../../components/tests/LifeValuesTest';
 import BlogArticleLink from '../../components/shared/BlogArticleLink.astro';
+import { LIFE_VALUES_CARD_SORT_RELEASE_GATE } from '../../../config/assessment-release-gates.js';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
 }
 
 const { locale } = Astro.params as { locale: Locale };
-const meta: Record<string, { title: string; description: string }> = {
-  ko: { title: "삶의 가치관 테스트 — 나에게 가장 중요한 것은?", description: "10가지 강제 선택 질문으로 나의 핵심 가치관 상위 3가지를 알아보세요. 안정, 모험, 창의성, 가족, 성취, 자유, 기여, 성장, 영성, 부 중 무엇인가요?" },
-  en: { title: "Life Values Test — What Matters Most to You?", description: "Discover your top 3 core values through 10 forced-choice questions. Security, Adventure, Creativity, Family, Achievement, Freedom, Contribution, Growth, Spirituality, or Wealth?" },
-  ja: { title: "人生の価値観テスト — あなたにとって最も重要なことは？", description: "10の強制選択質問で核心的な価値観トップ3を発見。安定、冒険、創造性、家族、達成、自由、貢献、成長、霊性、富のどれですか？" },
-  fr: { title: "Test de Valeurs de Vie — Qu'est-ce qui compte le plus?", description: "Découvrez vos 3 valeurs fondamentales avec 10 questions à choix forcé." },
-  es: { title: "Test de Valores de Vida — ¿Qué es lo más importante para ti?", description: "Descubre tus 3 valores fundamentales con 10 preguntas de elección forzada." },
-  zh: { title: "人生价值观测试 — 对你最重要的是什么？", description: "通过10个强制选择问题发现你的前3个核心价值观。" },
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '삶·일 가치관 카드 정렬 — 지금 중요한 Top 5', description: '18장의 가치 카드를 직접 분류하고 지금의 삶과 일에서 가장 중요한 다섯 가지를 선택해 순서를 정하세요.' },
+  en: { title: 'Life & Work Values Card Sort — Choose Your Top 5', description: 'Sort 18 original value cards, choose the five that matter most in life and work now, and put them in your own order.' },
+  ja: { title: '人生・仕事の価値観カードソート — 今のTop 5', description: '18枚の価値カードを分類し、今の人生と仕事で最も大切な五つを選んで順番を決めます。' },
+  zh: { title: '生活与工作价值观卡片排序 — 选择当前前五项', description: '将18张原创价值卡分类，选出现在生活与工作中最重要的五项并亲自排序。' },
+  fr: { title: 'Tri de cartes des valeurs de vie et de travail — Votre Top 5', description: 'Classez 18 cartes originales, choisissez les cinq valeurs importantes aujourd’hui et ordonnez-les.' },
+  es: { title: 'Tarjetas de valores de vida y trabajo — Elige tu Top 5', description: 'Clasifica 18 tarjetas originales, elige los cinco valores más importantes ahora y ordénalos.' },
 };
-const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+const m = meta[locale] ?? meta.en;
+const isDraft = !LIFE_VALUES_CARD_SORT_RELEASE_GATE.indexable;
+
+const content: Record<Locale, {
+  introTitle: string; intro: string; methodTitle: string; methods: { title: string; body: string }[];
+  faqTitle: string; faqs: { question: string; answer: string }[]; disclaimer: string;
+}> = {
+  ko: { introTitle: '가치관은 점수보다 선택과 행동으로 살펴보는 편이 자연스럽습니다', intro: '이 활동은 무엇이 더 좋은 가치인지 판정하지 않습니다. 지금의 맥락에서 중요하게 느끼는 방향을 직접 고르고, 삶과 일의 작은 행동으로 연결하기 위한 정리 도구입니다.', methodTitle: '카드 정렬의 세 단계', methods: [{ title: '분류', body: '18장을 중요함·고민됨·지금은 아님으로 나눕니다.' }, { title: '우선순위', body: '중요 후보에서 다섯 장을 직접 고르고 순서를 정합니다.' }, { title: '행동 연결', body: '상위 가치가 살아 있었던 순간과 이번 주 작은 행동을 생각합니다.' }], faqTitle: '자주 묻는 질문', faqs: [{ question: '결과가 나중에 바뀌어도 되나요?', answer: '네. 역할, 책임, 생활 조건이 달라지면 현재의 우선순위도 달라질 수 있습니다.' }, { question: '낮게 둔 가치는 중요하지 않다는 뜻인가요?', answer: '아닙니다. 제한된 카드 안에서 지금 먼저 두는 방향을 고른 것이며 가치의 좋고 나쁨을 평가하지 않습니다.' }, { question: '직업 추천 점수로 사용할 수 있나요?', answer: '아닙니다. 직업 선택에는 역량, 경험, 기회, 생활 조건과 시장 정보를 함께 고려해야 합니다.' }], disclaimer: 'OIYO 자체 문구로 만든 자기성찰 활동입니다. 심리검사, 진단, 표준화된 가치 척도, 직업 적합도 판정이 아닙니다.' },
+  en: { introTitle: 'Values are often more useful as chosen directions than as scores', intro: 'This activity does not judge which values are better. It helps you choose what matters in your current context and connect those choices to small actions in life and work.', methodTitle: 'Three steps', methods: [{ title: 'Sort', body: 'Place 18 cards into Important, Unsure, or Not now.' }, { title: 'Prioritize', body: 'Choose five candidates and order them yourself.' }, { title: 'Act', body: 'Recall when a value felt alive and choose one small action for this week.' }], faqTitle: 'Frequently asked questions', faqs: [{ question: 'Can my result change later?', answer: 'Yes. Priorities can shift as roles, responsibilities, and circumstances change.' }, { question: 'Are lower cards bad or unimportant?', answer: 'No. You are choosing what comes first now within a limited set, not grading values as good or bad.' }, { question: 'Can this determine the right career?', answer: 'No. Career decisions also require skills, experience, opportunity, living conditions, and labor-market information.' }], disclaimer: 'An OIYO-authored reflection activity—not a psychological test, diagnosis, standardized values scale, or career-fit decision.' },
+  ja: { introTitle: '価値観は点数より、選ぶ方向と行動として見る方が自然です', intro: 'どの価値が優れているかを判定しません。今の状況で大切な方向を選び、人生と仕事の小さな行動につなげる整理ツールです。', methodTitle: '三つの段階', methods: [{ title: '分類', body: '18枚を「大切・迷う・今は違う」に分けます。' }, { title: '優先順位', body: '候補から五枚を選び、自分で順番を決めます。' }, { title: '行動', body: '価値が生きた瞬間と今週の小さな行動を考えます。' }], faqTitle: 'よくある質問', faqs: [{ question: '結果は変わってもよいですか？', answer: 'はい。役割、責任、生活条件が変われば優先順位も変わります。' }, { question: '低いカードは悪い価値ですか？', answer: 'いいえ。今何を先に置くかを選んだだけで、価値の良し悪しではありません。' }, { question: '職業を決められますか？', answer: 'いいえ。能力、経験、機会、生活条件、市場情報も必要です。' }], disclaimer: 'OIYO独自の自己省察活動であり、心理検査・診断・標準化尺度・職業適合判定ではありません。' },
+  zh: { introTitle: '价值观更适合作为选择的方向与行动，而不是分数', intro: '本活动不判断哪种价值更好，而是帮助你在当前情境中选择重要方向，并连接到生活与工作的微小行动。', methodTitle: '三个步骤', methods: [{ title: '分类', body: '把18张卡分为重要、犹豫、现在不重要。' }, { title: '排序', body: '从候选中选出五张并亲自排序。' }, { title: '行动', body: '回想价值曾经鲜活的时刻，并选择本周一个小行动。' }], faqTitle: '常见问题', faqs: [{ question: '结果以后可以改变吗？', answer: '可以。角色、责任和生活条件变化时，优先顺序也会变化。' }, { question: '排在后面的价值不好吗？', answer: '不是。这里只是在有限卡片中选择当前优先方向，不评价好坏。' }, { question: '可以用来决定职业吗？', answer: '不可以。职业选择还需要结合能力、经验、机会、生活条件和市场信息。' }], disclaimer: 'OIYO原创自我反思活动，不是心理测验、诊断、标准化价值量表或职业适配判断。' },
+  fr: { introTitle: 'Les valeurs sont plus utiles comme directions choisies que comme scores', intro: 'Cette activité ne juge pas les bonnes valeurs. Elle aide à choisir ce qui compte dans votre contexte actuel et à le relier à de petites actions.', methodTitle: 'Trois étapes', methods: [{ title: 'Classer', body: 'Répartissez 18 cartes entre Important, J’hésite et Pas maintenant.' }, { title: 'Prioriser', body: 'Choisissez cinq cartes et ordonnez-les vous-même.' }, { title: 'Agir', body: 'Repérez quand une valeur a été vivante et une petite action pour la semaine.' }], faqTitle: 'Questions fréquentes', faqs: [{ question: 'Mon résultat peut-il changer ?', answer: 'Oui. Les priorités évoluent avec les rôles, responsabilités et conditions de vie.' }, { question: 'Une carte basse est-elle une mauvaise valeur ?', answer: 'Non. Vous choisissez ce qui passe en premier aujourd’hui, sans juger le bien ou le mal.' }, { question: 'Cela peut-il choisir mon métier ?', answer: 'Non. Il faut aussi considérer compétences, expérience, possibilités, conditions de vie et marché.' }], disclaimer: 'Activité de réflexion originale OIYO, ni test psychologique, ni diagnostic, ni échelle standardisée, ni décision d’orientation.' },
+  es: { introTitle: 'Los valores son más útiles como direcciones elegidas que como puntuaciones', intro: 'Esta actividad no juzga qué valores son mejores. Ayuda a elegir lo importante en tu contexto actual y conectarlo con pequeñas acciones.', methodTitle: 'Tres pasos', methods: [{ title: 'Clasificar', body: 'Divide 18 tarjetas entre Importante, Tengo dudas y Ahora no.' }, { title: 'Priorizar', body: 'Elige cinco tarjetas y ordénalas tú mismo.' }, { title: 'Actuar', body: 'Recuerda cuándo viviste un valor y elige una pequeña acción semanal.' }], faqTitle: 'Preguntas frecuentes', faqs: [{ question: '¿Puede cambiar mi resultado?', answer: 'Sí. Las prioridades cambian con roles, responsabilidades y condiciones de vida.' }, { question: '¿Una tarjeta baja es un mal valor?', answer: 'No. Solo eliges qué va primero ahora; no calificas valores como buenos o malos.' }, { question: '¿Puede decidir mi profesión?', answer: 'No. También hay que considerar habilidades, experiencia, oportunidades, condiciones de vida y mercado.' }], disclaimer: 'Actividad de reflexión original de OIYO; no es test psicológico, diagnóstico, escala estandarizada ni decisión de ajuste profesional.' },
+};
+const c = content[locale] ?? content.en;
+const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) };
+const appJsonLd = { '@context': 'https://schema.org', '@type': 'WebApplication', name: m.title, description: m.description, url: new URL(Astro.url.pathname, Astro.site).toString(), inLanguage: locale, applicationCategory: 'LifestyleApplication', offers: { '@type': 'Offer', price: 0, priceCurrency: 'USD' } };
 ---
 
-<Layout title={m.title} description={m.description} locale={locale}>
-  <div class="container mx-auto px-4 py-8 max-w-3xl">
-    <LifeValuesTest locale={locale as any} client:load />
+<Layout title={m.title} description={m.description} locale={locale} noindex={isDraft}>
+  <script type="application/ld+json" set:html={JSON.stringify(appJsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="mx-auto max-w-4xl px-4 py-10">
+    <LifeValuesTest locale={locale} client:load />
+    <section class="mt-12 border-t border-emerald-100 pt-8"><h2 class="text-2xl font-bold text-emerald-950">{c.introTitle}</h2><p class="mt-4 leading-8 text-emerald-900">{c.intro}</p></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-emerald-950">{c.methodTitle}</h2><div class="mt-4 grid gap-4 md:grid-cols-3">{c.methods.map((item) => <article class="rounded-xl border border-emerald-100 bg-white p-4"><h3 class="font-semibold text-emerald-950">{item.title}</h3><p class="mt-2 text-sm leading-6 text-emerald-800">{item.body}</p></article>)}</div></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-emerald-950">{c.faqTitle}</h2><div class="mt-4 divide-y divide-emerald-100 rounded-xl border border-emerald-100 bg-white">{c.faqs.map((faq) => <details class="p-4"><summary class="cursor-pointer font-semibold text-emerald-950">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-emerald-800">{faq.answer}</p></details>)}</div></section>
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 p-4 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
     <BlogArticleLink testId="life-values-test" locale={locale} />
   </div>
 </Layout>

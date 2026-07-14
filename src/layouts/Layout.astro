@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import '../styles/print.css';
 import { LOCALES, type Locale } from '../i18n';
+import deindexedLocales from '../i18n/deindexed-locales.json';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import TestSourceNote from '../components/shared/TestSourceNote.astro';
@@ -15,6 +16,7 @@ interface Props {
   description?: string;
   locale: Locale;
   noindex?: boolean;
+  canonicalPath?: string;
   ogImage?: string;
 }
 
@@ -30,9 +32,14 @@ const descriptionDefaults: Record<string, string> = {
   es: 'OIYO — Explora tu personalidad y tu destino',
   zh: 'OIYO — 探索你的个性与命运',
 };
-const { title, locale, noindex = false, ogImage } = Astro.props;
+const { title, locale, noindex = false, canonicalPath, ogImage } = Astro.props;
+
+// Crawl-budget policy — see astro.config.mjs. Reachable for users, out of the
+// index, the sitemap, and the hreflang cluster.
+const DEINDEXED_LOCALES = new Set<string>(deindexedLocales);
+const isNoindex = noindex || DEINDEXED_LOCALES.has(locale);
 const description = Astro.props.description ?? descriptionDefaults[locale] ?? descriptionDefaults['en'];
-const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, Astro.site);
 const isCjk = ['ko', 'ja', 'zh'].includes(locale);
 const defaultOgImage = new URL('/og-image.png', Astro.site).toString();
 const resolvedOgImage = ogImage ?? defaultOgImage;
@@ -40,13 +47,18 @@ const routeWithoutLocale = Astro.url.pathname.replace(
   /^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/,
   '',
 ) || '/';
+const alternateRouteWithoutLocale = canonicalPath
+  ? canonicalPath.replace(/^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/, '') || '/'
+  : routeWithoutLocale;
 const testSourceNote = getTestSourceNote(routeWithoutLocale);
 const relatedReading = getRelatedReading(routeWithoutLocale, locale);
-const alternateLinks = LOCALES.map((alternateLocale) => ({
+// Deindexed locales are dropped from the hreflang cluster: Google discards
+// hreflang annotations pointing at noindex URLs.
+const alternateLinks = LOCALES.filter((l) => !DEINDEXED_LOCALES.has(l)).map((alternateLocale) => ({
   hreflang: BCP47[alternateLocale] ?? alternateLocale,
-  href: new URL(`/${alternateLocale}${routeWithoutLocale}`, Astro.site),
+  href: new URL(`/${alternateLocale}${alternateRouteWithoutLocale}`, Astro.site),
 }));
-const xDefaultUrl = new URL(`/ko${routeWithoutLocale}`, Astro.site);
+const xDefaultUrl = new URL(`/ko${alternateRouteWithoutLocale}`, Astro.site);
 const siteUrl = Astro.site?.toString() ?? 'https://oiyo.net';
 const faviconUrl = new URL('/favicon.svg', Astro.site).toString();
 const themeColor = '#65a30d';
@@ -58,7 +70,7 @@ const themeColor = '#65a30d';
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {isNoindex && <meta name="robots" content="noindex, follow" />}
     <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -168,5 +180,9 @@ const themeColor = '#65a30d';
     </main>
     <Footer locale={locale} />
     <AhoxyWelcome />
+    <script>
+      import { removeStoredTestInputs } from '../lib/user/test-results';
+      removeStoredTestInputs('political-compass');
+    </script>
   </body>
 </html>

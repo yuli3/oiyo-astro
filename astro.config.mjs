@@ -6,10 +6,20 @@ import sitemap from '@astrojs/sitemap';
 import robotsTxt from 'astro-robots-txt';
 import { fileURLToPath } from 'url';
 import path from 'path';
+import { readFileSync } from 'node:fs';
+import { isAssessmentRouteExcludedFromSitemap } from './config/assessment-release-gates.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const LOCALES = ['ko', 'en', 'ja', 'zh', 'fr', 'es'];
+
+// Crawl-budget policy: served to users, kept out of the index. Googlebot rations
+// crawling on low-authority domains, and these locales consumed ~half of oiyo's
+// submitted URLs while producing no clicks. Must stay in lockstep with
+// Layout.astro's robots meta — sitemap-listed but noindex is a contradictory signal.
+const DEINDEXED_LOCALES = new Set(
+  JSON.parse(readFileSync(new URL('./src/i18n/deindexed-locales.json', import.meta.url), 'utf8')),
+);
 const SITEMAP_ENTRY_LIMIT = 100;
 
 export default defineConfig({
@@ -34,7 +44,11 @@ export default defineConfig({
         const path = new URL(page).pathname;
         if (path.split('/').some((seg) => seg.startsWith('_'))) return false;
         if (/\/ontology\/template\//.test(path)) return false;
+        if (isAssessmentRouteExcludedFromSitemap(path)) return false;
         if (path.endsWith('/index/') || path === '/index') return false;
+        // Exclude deindexed locales (crawl budget).
+        const segs = path.split('/').filter(Boolean);
+        if (segs.length > 0 && DEINDEXED_LOCALES.has(segs[0])) return false;
         return true;
       },
       lastmod: new Date(),

@@ -57,6 +57,26 @@ export function recordTestResult(input: StoredTestResultInput): StoredTestResult
   }
 }
 
+export function removeStoredTestInputs(testId: string): number {
+  if (typeof window === 'undefined') return 0;
+  try {
+    const results = listStoredTestResults();
+    let removed = 0;
+    const next = results.map((entry) => {
+      if (entry.testId !== testId || !Object.prototype.hasOwnProperty.call(entry, 'inputs')) return entry;
+      const { inputs: _inputs, ...sanitized } = entry;
+      removed += 1;
+      return sanitized;
+    });
+    if (removed === 0) return 0;
+    window.localStorage.setItem(OIYO_TEST_RESULTS_STORAGE_KEY, JSON.stringify(next));
+    window.dispatchEvent(new CustomEvent(OIYO_TEST_RESULTS_UPDATED_EVENT));
+    return removed;
+  } catch {
+    return 0;
+  }
+}
+
 export function clearStoredTestResults() {
   if (typeof window === 'undefined') return;
   try {

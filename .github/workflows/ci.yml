@@ -32,6 +32,20 @@ jobs:
         # noise is expected (shim architecture) and does not block deployment.
         run: npx astro check --minimumSeverity error || true
 
+      - name: Test
+        run: npm run test -- --run
+
+      - name: Build
+        run: npm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
+
+      - name: Audit assessment release gates
+        run: npm run audit:assessment-release-gates
+
+      - name: Audit assessment analytics contracts
+        run: npm run audit:assessment-analytics
+
   sitemap-submit:
     name: Submit Sitemap (GSC + Bing + IndexNow)
     runs-on: ubuntu-latest
@@ -62,6 +76,9 @@ jobs:
         run: npm run build
         env:
           NODE_OPTIONS: --max-old-space-size=6144
+
+      - name: Audit assessment release gates
+        run: npm run audit:assessment-release-gates
 
       - name: Setup Python
         uses: actions/setup-python@v6

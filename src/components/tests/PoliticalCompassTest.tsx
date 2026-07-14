@@ -1,11 +1,14 @@
-import { useEffect, useState, useMemo } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { markOntologyCoordinateRecorded } from '@/lib/ontology/progress'
 import { recordTestResult } from '@/lib/user/test-results'
+import { gaEvent } from '@/lib/analytics/ga-event'
+import { POLITICAL_STEP_KEYS, scorePoliticalCompass } from '@/lib/engines/political-compass'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
 
 type SupportedLang = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh'
+const POLITICAL_INSTRUMENT_VERSION = 'political-compass-oiyo-41-v2'
 function lang(locale: string): SupportedLang {
   return (['ko','en','ja','fr','es','zh'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang) : 'en'
@@ -131,6 +134,7 @@ const UI: Record<SupportedLang, {
   axes: string; disagree: string; neutral: string; agree: string
   prev: string; next: string; submit: string; restart: string
   loading: string; error: string; unanswered: string
+  privacy: string
   step1: string; step2: string; step3: string; step4: string
 }> = {
   ko: {
@@ -139,7 +143,7 @@ const UI: Record<SupportedLang, {
     axes: '4가지 측정 축',
     disagree: '동의 안 함', neutral: '모름', agree: '동의함',
     prev: '이전', next: '다음', submit: '결과 보기', restart: '다시 하기',
-    loading: '분석 중...', error: '모든 문항에 답해주세요.', unanswered: '번이 아직 미답변입니다.',
+    loading: '분석 중...', error: '모든 문항에 답해주세요.', unanswered: '번이 아직 미답변입니다.', privacy: '응답은 이 기기에서만 채점되며 문항별 답변은 저장하거나 외부 서버로 보내지 않습니다. 완료하면 4축 요약 코드만 이 기기에 저장됩니다.',
     step1: '경제관', step2: '사회관', step3: '세계관', step4: '국가관',
   },
   en: {
@@ -148,7 +152,7 @@ const UI: Record<SupportedLang, {
     axes: '4 Measurement Axes',
     disagree: 'Disagree', neutral: 'Neutral', agree: 'Agree',
     prev: 'Previous', next: 'Next', submit: 'See Results', restart: 'Restart',
-    loading: 'Analyzing...', error: 'Please answer all questions.', unanswered: ' question(s) unanswered.',
+    loading: 'Analyzing...', error: 'Please answer all questions.', unanswered: ' question(s) unanswered.', privacy: 'Responses are scored on this device. Item-level answers are not stored or sent to an external server. After completion, only the four-axis summary code is stored on this device.',
     step1: 'Economics', step2: 'Social', step3: 'Diplomacy', step4: 'State Power',
   },
   ja: {
@@ -157,7 +161,7 @@ const UI: Record<SupportedLang, {
     axes: '4つの測定軸',
     disagree: '同意しない', neutral: 'わからない', agree: '同意する',
     prev: '前へ', next: '次へ', submit: '結果を見る', restart: 'やり直す',
-    loading: '分析中...', error: 'すべての質問に答えてください。', unanswered: '問が未回答です。',
+    loading: '分析中...', error: 'すべての質問に答えてください。', unanswered: '問が未回答です。', privacy: '回答はこの端末内で採点され、各設問の回答は保存も外部送信もされません。完了後は4軸の要約コードだけがこの端末に保存されます。',
     step1: '経済観', step2: '社会観', step3: '世界観', step4: '国家観',
   },
   fr: {
@@ -166,7 +170,7 @@ const UI: Record<SupportedLang, {
     axes: '4 Axes de Mesure',
     disagree: 'Pas d\'accord', neutral: 'Neutre', agree: 'D\'accord',
     prev: 'Précédent', next: 'Suivant', submit: 'Voir les résultats', restart: 'Recommencer',
-    loading: 'Analyse...', error: 'Veuillez répondre à toutes les questions.', unanswered: ' question(s) sans réponse.',
+    loading: 'Analyse...', error: 'Veuillez répondre à toutes les questions.', unanswered: ' question(s) sans réponse.', privacy: 'Les réponses sont calculées sur cet appareil. Les réponses détaillées ne sont ni stockées ni envoyées à un serveur externe. Après le test, seul le code récapitulatif des quatre axes est conservé sur cet appareil.',
     step1: 'Économique', step2: 'Social', step3: 'Diplomatique', step4: 'État',
   },
   es: {
@@ -175,7 +179,7 @@ const UI: Record<SupportedLang, {
     axes: '4 Ejes de Medición',
     disagree: 'No estoy de acuerdo', neutral: 'Neutral', agree: 'De acuerdo',
     prev: 'Anterior', next: 'Siguiente', submit: 'Ver resultados', restart: 'Reiniciar',
-    loading: 'Analizando...', error: 'Por favor responde todas las preguntas.', unanswered: ' pregunta(s) sin responder.',
+    loading: 'Analizando...', error: 'Por favor responde todas las preguntas.', unanswered: ' pregunta(s) sin responder.', privacy: 'Las respuestas se puntúan en este dispositivo. Las respuestas por pregunta no se guardan ni se envían a un servidor externo. Al terminar, solo se guarda en este dispositivo el código resumen de los cuatro ejes.',
     step1: 'Económico', step2: 'Social', step3: 'Diplomático', step4: 'Estado',
   },
   zh: {
@@ -184,7 +188,7 @@ const UI: Record<SupportedLang, {
     axes: '4个测量轴',
     disagree: '不同意', neutral: '不确定', agree: '同意',
     prev: '上一步', next: '下一步', submit: '查看结果', restart: '重新开始',
-    loading: '分析中...', error: '请回答所有问题。', unanswered: '个问题未回答。',
+    loading: '分析中...', error: '请回答所有问题。', unanswered: '个问题未回答。', privacy: '回答仅在此设备上评分；逐题答案不会保存，也不会发送到外部服务器。完成后，仅在此设备保存四轴摘要代码。',
     step1: '经济观', step2: '社会观', step3: '外交观', step4: '国家观',
   },
 }
@@ -234,21 +238,6 @@ const QUESTIONS: Record<string, Record<SupportedLang, string>> = {
   's4_11': { ko:'표현의 자유는 사회의 안정보다 중요하다.', en:'Freedom of expression is more important than social stability.', ja:'表現の自由は社会の安定より重要だ。', fr:"La liberté d'expression est plus importante que la stabilité sociale.", es:'La libertad de expresión es más importante que la estabilidad social.', zh:'言论自由比社会稳定更重要。' },
 }
 
-const STEP_KEYS = [
-  ['s1_1','s1_2','s1_3','s1_4','s1_5','s1_6','s1_7','s1_8','s1_9','s1_10'],
-  ['s2_1','s2_2','s2_3','s2_4','s2_5','s2_6','s2_7','s2_8','s2_9'],
-  ['s3_1','s3_2','s3_3','s3_4','s3_5','s3_6','s3_7','s3_8','s3_9','s3_10','s3_11'],
-  ['s4_1','s4_2','s4_3','s4_4','s4_5','s4_6','s4_7','s4_8','s4_9','s4_10','s4_11'],
-]
-
-// 역방향 문항 (동의 = 반대 성향)
-const REVERSED: Record<string, boolean> = {
-  s1_3:true, s1_5:true, s1_8:true, s1_9:true, s1_10:true,
-  s2_4:true, s2_6:true, s2_7:true, s2_9:true,
-  s3_6:true, s3_7:true, s3_8:true, s3_9:true, s3_10:true,
-  s4_1:true, s4_2:true, s4_3:true, s4_4:true,
-}
-
 // 결과 문자를 축으로 해석
 function parseResult(code: string): Array<{axis: string; left: string; right: string; position: 'left'|'right'|'neutral'}> {
   return []
@@ -281,26 +270,30 @@ export default function PoliticalCompassTest({ locale }: Props) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [done, setDone] = useState(false)
+  const started = useRef(false)
 
   useEffect(() => {
     if (!done || !result) return
     const code = result.replace(/[\s\"]/g, '').slice(0, 4)
     markOntologyCoordinateRecorded('political', code)
     recordTestResult({
-      kind: 'psychometric',
+      kind: 'preference',
       testId: 'political-compass',
       title: L === 'ko' ? '정치성향' : 'Political compass',
       resultLabel: code,
-      inputs: { answers },
-      result: { code },
+      result: { code, instrumentVersion: POLITICAL_INSTRUMENT_VERSION },
       locale: L,
       sourcePath: `/${L}/political/test`,
     })
   }, [done, result])
 
-  const currentKeys = STEP_KEYS[step] ?? []
+  const currentKeys = POLITICAL_STEP_KEYS[step] ?? []
 
   const setAnswer = (key: string, val: string) => {
+    if (!started.current) {
+      gaEvent('test_started', { test_id: 'political-compass', instrument_version: POLITICAL_INSTRUMENT_VERSION })
+      started.current = true
+    }
     setAnswers(prev => ({ ...prev, [key]: val }))
     setUnanswered(prev => prev.filter(k => k !== key))
   }
@@ -319,32 +312,15 @@ export default function PoliticalCompassTest({ locale }: Props) {
   const handleNext = () => { if (checkStep()) setStep(s => s + 1) }
   const handlePrev = () => setStep(s => Math.max(0, s - 1))
 
-  const handleSubmit = async () => {
+  const handleSubmit = () => {
     if (!checkStep()) return
     setLoading(true)
-    // Build payload matching the worker's expected format
-    const payload: Record<string, string> = {}
-    STEP_KEYS.forEach((keys, si) => {
-      keys.forEach((key, qi) => {
-        const raw = answers[key] ?? '2'
-        // Convert: REVERSED questions swap 1↔3 for correct scoring
-        const value = REVERSED[key]
-          ? raw === '1' ? '3' : raw === '3' ? '1' : '2'
-          : raw
-        payload[`q${si+1}_${qi+1}`] = value
-      })
-    })
     try {
-      const res = await fetch('https://worker-little-bread-123d.861106.workers.dev/hello', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      })
-      const data = await res.json()
-      setResult(typeof data === 'string' ? data : JSON.stringify(data))
+      setResult(scorePoliticalCompass(answers))
       setDone(true)
+      gaEvent('test_completed', { test_id: 'political-compass', instrument_version: POLITICAL_INSTRUMENT_VERSION })
     } catch {
-      setError('결과를 가져오는 중 오류가 발생했습니다.')
+      setError(ui.error)
       setTimeout(() => setError(null), 4000)
     } finally {
       setLoading(false)
@@ -354,6 +330,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
   const handleRestart = () => {
     setStep(0); setAnswers({}); setUnanswered([])
     setResult(null); setDone(false); setError(null)
+    started.current = false
   }
 
   // ── 결과 화면 ──
@@ -450,12 +427,15 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
       {/* 스텝 인디케이터 */}
       <div class="flex items-center gap-1">
-        {STEP_KEYS.map((_, i) => (
+        {POLITICAL_STEP_KEYS.map((_, i) => (
           <div key={i} class={`h-2 flex-1 rounded-full transition-all ${i < step ? 'bg-green-500' : i === step ? 'bg-green-700' : 'bg-slate-200'}`} />
         ))}
       </div>
       <p class="text-center text-sm font-semibold text-green-700">
         {ui.stepOf(step + 1, 4)} — {stepLabels[step]}
+      </p>
+      <p class="rounded-xl border border-green-100 bg-green-50 p-3 text-xs leading-5 text-green-900">
+        {ui.privacy}
       </p>
 
       {/* 오류 배너 */}

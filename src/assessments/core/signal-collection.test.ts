@@ -53,6 +53,31 @@ describe("ontologySignalsFromResults", () => {
     expect(ontologySignalsFromResults([result("one", "2026-01-01T00:00:00.000Z")], () => undefined)).toEqual([]);
   });
 
+  it("drops contextual signals after their explicit expiry", () => {
+    const value = result("expired", "2026-01-01T00:00:00.000Z");
+    const plugin = {
+      ontology: {
+        toSignals: () => [{
+          confidence: 0.5,
+          constructId: "relationship.contextual",
+          evidenceTier: "research-inspired",
+          expiresAt: "2026-04-01T00:00:00.000Z",
+          id: "signal:expired",
+          observedAt: value.completedAt,
+          provenance: { instrumentVersion: "i1", resultId: value.resultId, scoringVersion: "s1" },
+          sourceAssessmentId: "example",
+          value: 50,
+        }],
+      },
+    } as AssessmentPlugin;
+
+    expect(ontologySignalsFromResults(
+      [value],
+      () => plugin,
+      new Date("2026-04-02T00:00:00.000Z"),
+    )).toEqual([]);
+  });
+
   it("prefers the higher-confidence instrument for the same construct", () => {
     const quick = result("quick", "2026-03-01T00:00:00.000Z");
     quick.assessmentId = "quick";

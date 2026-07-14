@@ -1,27 +1,73 @@
 ---
+import { VALUE_COMPASS_BRIDGE_RELEASE_GATE } from '../../../config/assessment-release-gates.js';
 import Layout from '../../layouts/Layout.astro';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
-import ValueCompassTest from '../../components/tests/ValueCompassTest';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
 }
 
 const { locale } = Astro.params as { locale: Locale };
-const meta: Record<string, { title: string; description: string }> = {
-  ko: { title: "가치관 나침반 테스트 — 나를 이끄는 핵심 가치는?", description: "성취·관계·자유·안정·성장·기여 중 나의 삶을 움직이는 핵심 가치관을 발견하세요." },
-  en: { title: "Value Compass Test — What Core Values Guide You?", description: "Discover the core values driving your life — Achievement, Relationships, Freedom, Security, Growth, or Contribution." },
-  ja: { title: "価値観コンパステスト — あなたを導く核心的価値観は？", description: "達成・関係・自由・安定・成長・貢献の中から、あなたの人生を動かす核心的価値観を発見しましょう。" },
-  fr: { title: "Test de la Boussole des Valeurs — Quelles valeurs fondamentales vous guident?", description: "Découvrez les valeurs fondamentales qui guident votre vie : Réalisation, Relations, Liberté, Sécurité, Croissance ou Contribution." },
-  es: { title: "Test de la Brújula de Valores — ¿Qué valores fundamentales te guían?", description: "Descubre los valores fundamentales que impulsan tu vida: Logro, Relaciones, Libertad, Seguridad, Crecimiento o Contribución." },
-  zh: { title: "价值观罗盘测试 — 什么核心价值观引导你？", description: "发现驱动你生活的核心价值观：成就、关系、自由、安全感、成长还是贡献。" },
+const copy = {
+  ko: { title: '가치관 나침반 안내 — 어떤 가치를 찾고 있나요?', description: '정치·시민 가치 좌표와 삶·일의 Top 5 가치 우선순위 중 찾는 방향을 선택하세요.', eyebrow: '기존 가치관 나침반 경로 안내', heading: '“가치관”에는 서로 다른 두 가지 질문이 있습니다', body: '기존 페이지의 문항은 정부·재분배·사회 변화·국제 협력 같은 정치·시민 가치에 관한 것이었습니다. 삶에서 중요한 가치와 혼동되지 않도록 두 도구를 분리했습니다.', politicalTitle: '정치·시민 가치 좌표', politicalBody: '경제·사회·외교·국가 권력의 네 축에서 현재 입장을 살펴봅니다.', politicalCta: '정치 나침반으로 이동', lifeTitle: '삶·일 가치 Top 5', lifeBody: '18장의 카드를 분류하고 지금 중요한 다섯 가지를 직접 선택합니다.', lifeCta: '가치 카드 정렬로 이동', note: '이 안내 페이지는 검색 결과에 색인되지 않으며 새로운 검사 결과를 만들지 않습니다.' },
+  en: { title: 'Value Compass Guide — Which Kind of Values Are You Looking For?', description: 'Choose between political and civic value coordinates or your current Top 5 life and work priorities.', eyebrow: 'Guide for the former value compass route', heading: '“Values” can refer to two different questions', body: 'The former questions concerned government, redistribution, social change, and international cooperation. We separated that civic-political intent from personal life priorities.', politicalTitle: 'Political and civic coordinates', politicalBody: 'Reflect on four axes: economics, society, diplomacy, and state power.', politicalCta: 'Open the political compass', lifeTitle: 'Top 5 life and work values', lifeBody: 'Sort 18 cards and choose the five priorities that matter most right now.', lifeCta: 'Open the values card sort', note: 'This guide is not indexed and does not create a new assessment result.' },
+  ja: { title: '価値観コンパス案内 — どの価値を探していますか？', description: '政治・市民の価値座標と、人生・仕事のTop 5優先価値から選べます。', eyebrow: '旧価値観コンパス経路の案内', heading: '「価値観」には異なる二つの問いがあります', body: '旧ページの設問は政府、再分配、社会変化、国際協力など政治・市民価値に関するものでした。人生の優先価値と混同しないよう分離しました。', politicalTitle: '政治・市民の価値座標', politicalBody: '経済・社会・外交・国家権力の四つの軸で現在の立場を振り返ります。', politicalCta: '政治コンパスへ', lifeTitle: '人生・仕事のTop 5価値', lifeBody: '18枚を分類し、今大切な五つを自分で選びます。', lifeCta: '価値カード整理へ', note: 'この案内ページは検索に登録されず、新しい検査結果も作りません。' },
+  zh: { title: '价值观罗盘导航 — 你想探索哪类价值？', description: '在政治与公民价值坐标、生活与工作Top 5优先价值之间选择。', eyebrow: '原价值观罗盘路径导航', heading: '“价值观”可能指向两类不同问题', body: '原页面的问题涉及政府、再分配、社会变化和国际合作。为避免与个人生活优先价值混淆，我们将两类意图分开。', politicalTitle: '政治与公民价值坐标', politicalBody: '从经济、社会、外交和国家权力四个轴反思当前立场。', politicalCta: '前往政治罗盘', lifeTitle: '生活与工作Top 5价值', lifeBody: '分类18张卡片，并亲自选出此刻最重要的五项。', lifeCta: '前往价值卡片排序', note: '此导航页不参与搜索索引，也不会生成新的测评结果。' },
+  fr: { title: 'Guide de la boussole des valeurs — Quelles valeurs cherchez-vous ?', description: 'Choisissez entre les coordonnées politiques et civiques ou vos cinq priorités de vie et de travail.', eyebrow: 'Guide de l’ancienne route de la boussole', heading: 'Le mot « valeurs » recouvre deux questions différentes', body: 'Les anciennes questions portaient sur l’État, la redistribution, le changement social et la coopération internationale. Nous avons séparé cette intention civique des priorités de vie personnelles.', politicalTitle: 'Coordonnées politiques et civiques', politicalBody: 'Explorez quatre axes : économie, société, diplomatie et pouvoir de l’État.', politicalCta: 'Ouvrir la boussole politique', lifeTitle: 'Top 5 des valeurs de vie et de travail', lifeBody: 'Triez 18 cartes et choisissez les cinq priorités les plus importantes aujourd’hui.', lifeCta: 'Ouvrir le tri de cartes', note: 'Ce guide n’est pas indexé et ne crée aucun nouveau résultat.' },
+  es: { title: 'Guía de la brújula de valores — ¿Qué valores buscas?', description: 'Elige entre coordenadas políticas y cívicas o tus cinco prioridades actuales de vida y trabajo.', eyebrow: 'Guía de la antigua ruta de brújula', heading: '“Valores” puede referirse a dos preguntas distintas', body: 'Las preguntas anteriores trataban sobre gobierno, redistribución, cambio social y cooperación internacional. Separamos esa intención cívica de las prioridades personales.', politicalTitle: 'Coordenadas políticas y cívicas', politicalBody: 'Reflexiona sobre cuatro ejes: economía, sociedad, diplomacia y poder estatal.', politicalCta: 'Abrir la brújula política', lifeTitle: 'Top 5 de valores de vida y trabajo', lifeBody: 'Clasifica 18 tarjetas y elige las cinco prioridades más importantes ahora.', lifeCta: 'Abrir la clasificación de tarjetas', note: 'Esta guía no se indexa y no crea un nuevo resultado de evaluación.' },
+} satisfies Record<Locale, Record<string, string>>;
+const baseCopy = copy[locale] ?? copy.en;
+const threeWayCopy: Record<Locale, { description: string; heading: string; body: string }> = {
+  ko: { description: '정치·시민 가치, 삶의 Top 5, 직업·업무환경 가치 중 찾는 방향을 선택하세요.', heading: '“가치관”에는 서로 다른 세 가지 질문이 있습니다', body: '정치·시민 가치, 삶의 우선순위, 직업·업무환경 가치를 혼동하지 않도록 세 도구를 분리했습니다.' },
+  en: { description: 'Choose among civic-political coordinates, current life priorities, and career work-environment values.', heading: '“Values” can refer to three different questions', body: 'We separated civic-political positions, personal life priorities, and career work-environment preferences so each tool answers one clear question.' },
+  ja: { description: '政治・市民の価値、人生のTop 5、仕事・職場環境の価値から選べます。', heading: '「価値観」には異なる三つの問いがあります', body: '政治・市民の立場、人生の優先価値、仕事・職場環境の好みを混同しないよう三つに分けました。' },
+  zh: { description: '在政治与公民价值、生活Top 5和职业工作环境价值之间选择。', heading: '“价值观”可能指向三类不同问题', body: '我们将政治与公民立场、个人生活优先项和职业工作环境偏好分开，让每个工具回答一个清晰问题。' },
+  fr: { description: 'Choisissez entre valeurs civiques, priorités de vie et valeurs liées à l’environnement de travail.', heading: 'Le mot « valeurs » recouvre trois questions différentes', body: 'Nous séparons positions civiques, priorités de vie et préférences d’environnement professionnel afin que chaque outil réponde à une question claire.' },
+  es: { description: 'Elige entre valores cívicos, prioridades de vida y valores del entorno laboral.', heading: '“Valores” puede referirse a tres preguntas distintas', body: 'Separamos posiciones cívicas, prioridades personales y preferencias del entorno laboral para que cada herramienta responda una pregunta clara.' },
 };
-const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+const c = { ...baseCopy, ...threeWayCopy[locale] };
+const career = {
+  ko: { title: '직업·업무환경 가치관', body: '18문항으로 현재 중요하게 보는 6가지 업무환경 차원을 살펴봅니다.', cta: '직업 가치관 탐색으로 이동' },
+  en: { title: 'Career and work-environment values', body: 'Use 18 items to reflect on six work-environment dimensions that matter to you now.', cta: 'Open career values reflection' },
+  ja: { title: '仕事・職場環境の価値観', body: '18項目で、今大切な6つの職場環境の次元を振り返ります。', cta: '仕事の価値観へ' },
+  zh: { title: '职业与工作环境价值观', body: '通过18题反思你当前看重的六个工作环境维度。', cta: '前往职业价值观反思' },
+  fr: { title: 'Valeurs professionnelles', body: 'Réfléchissez en 18 items aux six dimensions de l’environnement de travail qui comptent aujourd’hui.', cta: 'Ouvrir la réflexion professionnelle' },
+  es: { title: 'Valores profesionales', body: 'Reflexiona con 18 ítems sobre seis dimensiones del entorno laboral importantes ahora.', cta: 'Abrir valores profesionales' },
+} satisfies Record<Locale, { title: string; body: string; cta: string }>;
+const cv = career[locale] ?? career.en;
+const politicalPath = `/${locale}/political/test/`;
+const lifeValuesPath = `/${locale}/life-values-test/`;
+const careerValuesPath = `/${locale}/career-values-test/`;
+const canonicalPath = VALUE_COMPASS_BRIDGE_RELEASE_GATE.canonicalPattern
+  .replace('https://oiyo.net', '')
+  .replace('{locale}', locale);
 ---
 
-<Layout title={m.title} description={m.description} locale={locale}>
-  <div class="container mx-auto px-4 py-8 max-w-3xl">
-    <ValueCompassTest locale={locale as any} client:load />
+<Layout title={c.title} description={c.description} locale={locale} noindex canonicalPath={canonicalPath}>
+  <div class="mx-auto max-w-3xl px-4 py-12">
+    <header class="rounded-3xl border border-violet-100 bg-gradient-to-br from-violet-50 via-white to-emerald-50 p-7 shadow-sm">
+      <p class="text-sm font-bold text-violet-700">{c.eyebrow}</p>
+      <h1 class="mt-3 text-3xl font-black text-slate-950">{c.heading}</h1>
+      <p class="mt-4 leading-8 text-slate-700">{c.body}</p>
+    </header>
+    <div class="mt-8 grid gap-5 md:grid-cols-3">
+      <section class="rounded-2xl border border-violet-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-bold text-violet-950">{c.politicalTitle}</h2>
+        <p class="mt-3 min-h-20 leading-7 text-slate-600">{c.politicalBody}</p>
+        <a class="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-violet-700 px-5 py-3 text-center font-bold text-white hover:bg-violet-800" href={politicalPath}>{c.politicalCta}</a>
+      </section>
+      <section class="rounded-2xl border border-emerald-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-bold text-emerald-950">{c.lifeTitle}</h2>
+        <p class="mt-3 min-h-20 leading-7 text-slate-600">{c.lifeBody}</p>
+        <a class="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-emerald-700 px-5 py-3 text-center font-bold text-white hover:bg-emerald-800" href={lifeValuesPath}>{c.lifeCta}</a>
+      </section>
+      <section class="rounded-2xl border border-amber-200 bg-white p-6 shadow-sm">
+        <h2 class="text-xl font-bold text-amber-950">{cv.title}</h2>
+        <p class="mt-3 min-h-20 leading-7 text-slate-600">{cv.body}</p>
+        <a class="mt-5 inline-flex min-h-11 w-full items-center justify-center rounded-xl bg-amber-700 px-5 py-3 text-center font-bold text-white hover:bg-amber-800" href={careerValuesPath}>{cv.cta}</a>
+      </section>
+    </div>
+    <p class="mt-8 rounded-xl bg-slate-100 p-4 text-sm leading-6 text-slate-600">{c.note}</p>
   </div>
 </Layout>

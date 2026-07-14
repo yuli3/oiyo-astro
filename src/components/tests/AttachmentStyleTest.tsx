@@ -1,804 +1,179 @@
-import { useState } from 'react'
-import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
-import ShareResultButton from '../shared/ShareResultButton'
-import ResultNextSteps from '../shared/ResultNextSteps'
-import RelatedReading from '../shared/RelatedReading';
+import { useEffect, useMemo, useState } from "react";
 
-// ─── Types ────────────────────────────────────────────────────────────────────
-type AttachmentType = 'secure' | 'anxious' | 'avoidant' | 'fearful'
-type Scores = Record<AttachmentType, number>
-type Locale = 'ko' | 'en' | 'ja'
+import {
+  ATTACHMENT_INSTRUMENT,
+  attachmentPlugin,
+  attachmentResponsesFromAnswers,
+  buildAttachmentResult,
+  listAssessmentResults,
+  recordAssessmentResult,
+  type AttachmentDimension,
+} from "@/assessments";
+import { gaEvent } from "@/lib/analytics/ga-event";
+import { recordTestResult } from "@/lib/user/test-results";
+import RelatedReading from "../shared/RelatedReading";
+import ResultNextSteps from "../shared/ResultNextSteps";
 
-interface Option { text: string; type: AttachmentType }
-interface Question { id: string; text: string; options: Option[] }
-interface ResultData {
-  title: string
-  subtitle: string
-  description: string
-  traits: string[]
-  strengths: string[]
-  challenges: string[]
-  advice: string
-  relationships: string
-}
+type Locale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
+const LOCALES: Locale[] = ["ko", "en", "ja", "zh", "fr", "es"];
 
-const TYPE_COLORS: Record<AttachmentType, string> = {
-  secure: '#22c55e',
-  anxious: '#f59e0b',
-  avoidant: '#3b82f6',
-  fearful: '#a855f7',
-}
-
-// ─── i18n Labels ──────────────────────────────────────────────────────────────
-const LABELS: Record<Locale, {
-  title: string
-  subtitle: string
-  questionOf: (c: number, t: number) => string
-  restart: string
-  share: string
-  shareMsg: string
-  yourType: string
-  traits: string
-  strengths: string
-  challenges: string
-  advice: string
-  relationships: string
-  chartTitle: string
-  types: Record<AttachmentType, string>
-}> = {
-  ko: {
-    title: '애착 유형 테스트',
-    subtitle: '나의 관계 패턴을 알아보세요',
-    questionOf: (c, t) => `${c} / ${t}`,
-    restart: '다시 하기',
-    share: '결과 공유',
-    shareMsg: '내 애착 유형은',
-    yourType: '나의 애착 유형',
-    traits: '주요 특징',
-    strengths: '강점',
-    challenges: '어려움',
-    advice: '성장 조언',
-    relationships: '관계 패턴',
-    chartTitle: '유형별 점수',
-    types: {
-      secure: '안정 애착',
-      anxious: '불안 애착',
-      avoidant: '회피 애착',
-      fearful: '두려움-회피 애착',
-    },
-  },
-  en: {
-    title: 'Attachment Style Test',
-    subtitle: 'Discover your relationship patterns',
-    questionOf: (c, t) => `${c} / ${t}`,
-    restart: 'Retake',
-    share: 'Share Result',
-    shareMsg: 'My attachment style is',
-    yourType: 'Your Attachment Style',
-    traits: 'Key Traits',
-    strengths: 'Strengths',
-    challenges: 'Challenges',
-    advice: 'Growth Advice',
-    relationships: 'Relationship Patterns',
-    chartTitle: 'Score Breakdown',
-    types: {
-      secure: 'Secure Attachment',
-      anxious: 'Anxious Attachment',
-      avoidant: 'Avoidant Attachment',
-      fearful: 'Fearful-Avoidant Attachment',
-    },
-  },
-  ja: {
-    title: '愛着スタイルテスト',
-    subtitle: '自分の関係パターンを知りましょう',
-    questionOf: (c, t) => `${c} / ${t}`,
-    restart: 'もう一度',
-    share: '結果を共有',
-    shareMsg: '私の愛着スタイルは',
-    yourType: '私の愛着スタイル',
-    traits: '主な特徴',
-    strengths: '強み',
-    challenges: '課題',
-    advice: '成長のアドバイス',
-    relationships: '関係パターン',
-    chartTitle: 'スコア内訳',
-    types: {
-      secure: '安定型愛着',
-      anxious: '不安型愛着',
-      avoidant: '回避型愛着',
-      fearful: '恐れ-回避型愛着',
-    },
-  },
-}
-
-// ─── Questions ────────────────────────────────────────────────────────────────
-const QUESTIONS: Record<Locale, Question[]> = {
+export const QUESTION_COPY: Record<Locale, string[]> = {
   ko: [
-    {
-      id: 'q1',
-      text: '연인에게 화가 났을 때 나는 주로...',
-      options: [
-        { text: '솔직하게 내 감정을 이야기하고 해결책을 찾는다', type: 'secure' },
-        { text: '상대방이 나를 떠날까 봐 걱정하며 계속 확인한다', type: 'anxious' },
-        { text: '혼자 있고 싶어서 연락을 끊고 거리를 둔다', type: 'avoidant' },
-        { text: '화내면 상처줄까 봐 속으로만 삭이고 혼자 힘들어한다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q2',
-      text: '연인이 연락이 잘 안 될 때 나는...',
-      options: [
-        { text: '바쁜가 보다 하고 기다린다', type: 'secure' },
-        { text: '무슨 일이 생긴 건 아닌지 불안해져 여러 번 연락한다', type: 'anxious' },
-        { text: '오히려 나만의 시간을 즐기며 크게 신경 쓰지 않는다', type: 'avoidant' },
-        { text: '화가 나지만 연락하면 집착으로 보일까 봐 참는다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q3',
-      text: '관계에서 나는 주로 어떻게 감정을 표현하나요?',
-      options: [
-        { text: '자연스럽게 감정을 나누고 취약한 면도 보여줄 수 있다', type: 'secure' },
-        { text: '감정이 과하게 표현되거나 감정 기복이 심한 편이다', type: 'anxious' },
-        { text: '감정 표현이 어렵고 이성적으로 처리하려 한다', type: 'avoidant' },
-        { text: '감정을 표현하고 싶지만 상처받을까 봐 조심한다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q4',
-      text: '연인이 나에 대한 불만을 표현할 때 나는...',
-      options: [
-        { text: '귀 기울여 듣고 함께 해결책을 찾으려 한다', type: 'secure' },
-        { text: '버림받을 것 같아 과도하게 사과하고 달래려 한다', type: 'anxious' },
-        { text: '방어적이 되거나 "그럼 헤어지자"는 생각이 든다', type: 'avoidant' },
-        { text: '분명 내가 문제라고 생각하며 자책하고 위축된다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q5',
-      text: '새로운 관계를 시작할 때 나는...',
-      options: [
-        { text: '설레지만 차근차근 신뢰를 쌓아가는 게 자연스럽다', type: 'secure' },
-        { text: '빠르게 깊이 빠져들고 상대방의 마음이 확인하고 싶다', type: 'anxious' },
-        { text: '좋지만 너무 가까워지는 게 부담스러워 속도를 늦춘다', type: 'avoidant' },
-        { text: '관계를 원하지만 또 상처받을까 봐 두렵다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q6',
-      text: '연인이 다른 이성과 친하게 지낼 때 나는...',
-      options: [
-        { text: '신뢰하기 때문에 크게 신경 쓰지 않는다', type: 'secure' },
-        { text: '심하게 질투하고 확인하려 든다', type: 'anxious' },
-        { text: '속은 불편하지만 티 내지 않고 무심한 척한다', type: 'avoidant' },
-        { text: '질투하지만 말하면 상대가 싫어할까 봐 혼자 참는다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q7',
-      text: '혼자 있는 시간에 대해 나는...',
-      options: [
-        { text: '혼자도 좋고 함께도 좋다. 균형을 잘 맞출 수 있다', type: 'secure' },
-        { text: '혼자 있으면 외로움과 불안함을 느껴 연락하게 된다', type: 'anxious' },
-        { text: '혼자 있는 시간이 오히려 편하고 충전이 된다', type: 'avoidant' },
-        { text: '혼자 있으면 부정적인 생각이 많아진다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q8',
-      text: '과거 관계에서 상처를 받았을 때 나는...',
-      options: [
-        { text: '힘들었지만 시간이 지나면서 회복하고 배움을 얻었다', type: 'secure' },
-        { text: '오래 집착하고 왜 그랬는지 반복해서 생각했다', type: 'anxious' },
-        { text: '빨리 잊으려 하고 바쁘게 지내거나 다른 것에 집중했다', type: 'avoidant' },
-        { text: '다시는 사랑에 빠지면 안 되겠다는 생각이 들었다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q9',
-      text: '연인이 내게 의지하고 싶어 할 때 나는...',
-      options: [
-        { text: '기꺼이 지지해주며 함께 감정을 나눈다', type: 'secure' },
-        { text: '내가 더 필요한 사람이 되어서 기쁘다', type: 'anxious' },
-        { text: '부담스럽고 내 공간이 침해받는 느낌이 든다', type: 'avoidant' },
-        { text: '돕고 싶지만 결국 내가 상처받을까 봐 조심스럽다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q10',
-      text: '연인과의 미래에 대해 나는...',
-      options: [
-        { text: '함께 꿈을 이야기하고 계획하는 것이 즐겁다', type: 'secure' },
-        { text: '상대가 진짜로 날 원하는지 자꾸 확인하고 싶다', type: 'anxious' },
-        { text: '미래 이야기 자체가 부담스럽고 현재에 집중하고 싶다', type: 'avoidant' },
-        { text: '원하지만 잘 될 거라고 믿기 어렵다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q11',
-      text: '친한 친구 관계에서도 나는...',
-      options: [
-        { text: '편안하게 서로 기대고 지지할 수 있다', type: 'secure' },
-        { text: '내가 충분히 중요한 사람인지 불안할 때가 있다', type: 'anxious' },
-        { text: '일정 거리를 두고 너무 깊이 들어오면 불편하다', type: 'avoidant' },
-        { text: '친해지고 싶지만 배신당할까 봐 쉽게 마음을 열지 못한다', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q12',
-      text: '내가 어린 시절 부모님과의 관계는...',
-      options: [
-        { text: '따뜻하고 일관된 지지를 받았다', type: 'secure' },
-        { text: '때로 따뜻하고 때로 차갑거나 예측 불가능했다', type: 'anxious' },
-        { text: '감정 표현보다 독립을 강조받았거나 거리가 있었다', type: 'avoidant' },
-        { text: '혼란스럽거나 두려운 경험이 있었다', type: 'fearful' },
-      ],
-    },
+    "가까운 사람과의 계획이 갑자기 바뀌면 그 의미를 찾으려고 대화를 되짚어본다.", "다툰 뒤 말이 없는 동안 멀어지는 신호가 있는지 자꾸 살핀다.", "관계가 어떤 상태인지 분명해질 때까지 다른 일에 집중하기 어렵다.", "상대의 말투가 조금 달라져도 그날 기분에 오래 영향을 받는다.", "연락이 늦을 때 한 가지 결론을 내리기 전에 여러 가능성을 생각할 수 있다.", "관계의 불확실함을 당장 해결하지 않아도 한동안 일상을 이어갈 수 있다.",
+    "감정적인 대화가 깊어지면 사실이나 일정 같은 실용적인 이야기로 옮기는 편이다.", "서운했던 일은 감정이 가라앉거나 때를 놓칠 때까지 말하기를 미룬다.", "돌봄을 받은 뒤에도 감정에 머무르기보다 곧 실용적인 일로 돌아가는 편이다.", "함께 조율하면 도움이 될 때도 내 일정과 결정을 따로 유지하려 한다.", "가까운 사람이 내 행동의 영향을 말할 때 자리를 피하지 않고 들을 수 있다.", "감정 대화에서 서둘러 해결하거나 끝내지 않고 서로의 말을 주고받을 수 있다.",
   ],
   en: [
-    {
-      id: 'q1',
-      text: 'When I\'m upset with my partner, I usually...',
-      options: [
-        { text: 'Honestly share my feelings and work toward a solution', type: 'secure' },
-        { text: 'Worry they might leave and keep checking in with them', type: 'anxious' },
-        { text: 'Want to be alone and pull away from contact', type: 'avoidant' },
-        { text: 'Bottle it up inside, afraid of hurting them', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q2',
-      text: 'When my partner is hard to reach, I...',
-      options: [
-        { text: 'Assume they\'re busy and wait patiently', type: 'secure' },
-        { text: 'Get anxious and reach out multiple times', type: 'anxious' },
-        { text: 'Enjoy my alone time and don\'t worry much', type: 'avoidant' },
-        { text: 'Feel upset but hold back from contacting them', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q3',
-      text: 'How do I usually express emotions in relationships?',
-      options: [
-        { text: 'Naturally share feelings and show vulnerability', type: 'secure' },
-        { text: 'My emotions tend to be intense or fluctuate a lot', type: 'anxious' },
-        { text: 'I find it hard to express feelings, preferring logic', type: 'avoidant' },
-        { text: 'I want to share but hold back fearing being hurt', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q4',
-      text: 'When my partner expresses dissatisfaction, I...',
-      options: [
-        { text: 'Listen carefully and try to find solutions together', type: 'secure' },
-        { text: 'Panic about being left and over-apologize', type: 'anxious' },
-        { text: 'Get defensive or think about breaking up', type: 'avoidant' },
-        { text: 'Immediately blame myself and feel terrible', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q5',
-      text: 'When starting a new relationship, I...',
-      options: [
-        { text: 'Feel excited and gradually build trust naturally', type: 'secure' },
-        { text: 'Fall deeply quickly and want constant reassurance', type: 'anxious' },
-        { text: 'Like the person but feel uneasy getting too close', type: 'avoidant' },
-        { text: 'Want the relationship but fear getting hurt again', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q6',
-      text: 'When my partner is close with someone of the opposite sex, I...',
-      options: [
-        { text: 'Trust them and don\'t worry much about it', type: 'secure' },
-        { text: 'Feel intensely jealous and want to check their phone', type: 'anxious' },
-        { text: 'Feel bothered inside but act indifferent', type: 'avoidant' },
-        { text: 'Feel jealous but stay quiet to avoid conflict', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q7',
-      text: 'When it comes to alone time, I...',
-      options: [
-        { text: 'Am equally comfortable alone or with others', type: 'secure' },
-        { text: 'Feel lonely and anxious alone, and reach out', type: 'anxious' },
-        { text: 'Prefer alone time — it recharges me', type: 'avoidant' },
-        { text: 'Get negative thoughts when I\'m alone', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q8',
-      text: 'After getting hurt in a past relationship, I...',
-      options: [
-        { text: 'Was hurt but healed over time and learned from it', type: 'secure' },
-        { text: 'Ruminated for a long time, unable to let go', type: 'anxious' },
-        { text: 'Tried to forget quickly by staying busy', type: 'avoidant' },
-        { text: 'Decided I shouldn\'t fall in love again', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q9',
-      text: 'When my partner wants to lean on me, I...',
-      options: [
-        { text: 'Gladly support them and share in the emotion', type: 'secure' },
-        { text: 'Feel happy to be needed more', type: 'anxious' },
-        { text: 'Feel burdened and like my space is invaded', type: 'avoidant' },
-        { text: 'Want to help but am cautious of getting hurt', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q10',
-      text: 'When thinking about the future with my partner, I...',
-      options: [
-        { text: 'Enjoy dreaming and planning together', type: 'secure' },
-        { text: 'Keep wanting reassurance that they truly want me', type: 'anxious' },
-        { text: 'Find future talk overwhelming and prefer the present', type: 'avoidant' },
-        { text: 'Want it but find it hard to believe it will work out', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q11',
-      text: 'In close friendships, I...',
-      options: [
-        { text: 'Comfortably lean on and support each other', type: 'secure' },
-        { text: 'Sometimes wonder if I matter enough to them', type: 'anxious' },
-        { text: 'Keep some distance and feel uneasy getting too close', type: 'avoidant' },
-        { text: 'Want closeness but can\'t easily open up for fear of betrayal', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q12',
-      text: 'My relationship with my parents growing up was...',
-      options: [
-        { text: 'Warm and consistently supportive', type: 'secure' },
-        { text: 'Sometimes warm, sometimes cold or unpredictable', type: 'anxious' },
-        { text: 'Distant, emphasizing independence over emotion', type: 'avoidant' },
-        { text: 'Confusing or sometimes frightening', type: 'fearful' },
-      ],
-    },
+    "When plans with someone close change unexpectedly, I replay the exchange to work out what it meant.", "During silence after a disagreement, my attention keeps returning to possible signs of distance.", "I find it hard to focus on other things until I know where the relationship stands.", "A small change in someone's tone can affect my mood for much of the day.", "When contact is delayed, I can consider several explanations before settling on one meaning.", "I can let relationship uncertainty remain unresolved for a while without it taking over my day.",
+    "When a conversation becomes emotionally intense, I tend to shift toward facts, plans, or logistics.", "I postpone talking about hurt until the feeling fades or the moment has passed.", "After receiving care, I tend to return quickly to practical matters rather than stay with the emotional exchange.", "I keep my routines and decisions separate even when coordinating might help.", "I can stay present when someone close explains how my actions affected them.", "I can make room for a two-way emotional conversation without rushing to solve or end it.",
   ],
   ja: [
-    {
-      id: 'q1',
-      text: 'パートナーに怒った時、私はたいてい...',
-      options: [
-        { text: '素直に気持ちを伝え、解決策を探す', type: 'secure' },
-        { text: '捨てられるかと不安で、何度も確認してしまう', type: 'anxious' },
-        { text: '一人でいたくて、連絡を断って距離を置く', type: 'avoidant' },
-        { text: '傷つけるのが怖くて、ひとりで我慢する', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q2',
-      text: 'パートナーから連絡がなかなか来ない時、私は...',
-      options: [
-        { text: '忙しいんだと思って待つ', type: 'secure' },
-        { text: '何かあったか不安で、何度も連絡してしまう', type: 'anxious' },
-        { text: '一人の時間を楽しんで、あまり気にしない', type: 'avoidant' },
-        { text: 'イライラするけど、しつこいと思われるのが怖くて我慢する', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q3',
-      text: '関係の中で感情をどのように表現しますか？',
-      options: [
-        { text: '自然に感情を共有し、脆い部分も見せられる', type: 'secure' },
-        { text: '感情が激しくなりがちで、感情の浮き沈みが大きい', type: 'anxious' },
-        { text: '感情表現が苦手で、論理的に処理しようとする', type: 'avoidant' },
-        { text: '表現したいが、傷つくのが怖くて慎重になる', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q4',
-      text: 'パートナーが不満を言ってきた時、私は...',
-      options: [
-        { text: 'しっかり耳を傾けて、一緒に解決策を探す', type: 'secure' },
-        { text: '捨てられそうで、過度に謝ったりご機嫌取りをする', type: 'anxious' },
-        { text: '防御的になったり、別れようという気持ちになる', type: 'avoidant' },
-        { text: '自分が悪いと思い込んで落ち込む', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q5',
-      text: '新しい関係が始まる時、私は...',
-      options: [
-        { text: 'ワクワクしつつ、自然に信頼を築いていける', type: 'secure' },
-        { text: 'すぐに深みにはまり、相手の気持ちを確認したくなる', type: 'anxious' },
-        { text: '好きだけど、近づきすぎると不安で速度を落とす', type: 'avoidant' },
-        { text: '関係は欲しいが、また傷つくのが怖い', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q6',
-      text: 'パートナーが異性と仲良くしている時、私は...',
-      options: [
-        { text: '信頼しているので、あまり気にならない', type: 'secure' },
-        { text: 'ひどく嫉妬して、確認したくなる', type: 'anxious' },
-        { text: '内心モヤモヤするが、何でもないふりをする', type: 'avoidant' },
-        { text: '嫉妬するが、言うと嫌われると思って我慢する', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q7',
-      text: '一人の時間については...',
-      options: [
-        { text: '一人でも一緒でもOK。バランスが取れる', type: 'secure' },
-        { text: '一人でいると寂しく不安で、連絡したくなる', type: 'anxious' },
-        { text: '一人の時間の方が気楽でリフレッシュできる', type: 'avoidant' },
-        { text: '一人でいるとネガティブな気持ちになりやすい', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q8',
-      text: '過去の関係で傷ついた後、私は...',
-        options: [
-        { text: '辛かったが、時間が経つにつれて回復して学べた', type: 'secure' },
-        { text: '長い間引きずり、なぜそうなったか繰り返し考えた', type: 'anxious' },
-        { text: '早く忘れようと、忙しく過ごしたり別のことに集中した', type: 'avoidant' },
-        { text: 'もう恋愛はしてはいけないと思った', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q9',
-      text: 'パートナーが私に頼りたがっている時、私は...',
-      options: [
-        { text: '喜んでサポートし、感情を共有する', type: 'secure' },
-        { text: 'より必要とされていることが嬉しい', type: 'anxious' },
-        { text: '負担に感じ、自分の空間が侵されるように思う', type: 'avoidant' },
-        { text: '助けたいが、自分が傷つくのが怖くて慎重になる', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q10',
-      text: 'パートナーとの将来について私は...',
-      options: [
-        { text: '一緒に夢を語り計画するのが楽しい', type: 'secure' },
-        { text: '本当に自分のことが好きなのか何度も確認したくなる', type: 'anxious' },
-        { text: '将来の話自体がプレッシャーで、今に集中したい', type: 'avoidant' },
-        { text: '望んでいるが、うまくいくとは信じにくい', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q11',
-      text: '親しい友人関係でも私は...',
-      options: [
-        { text: '自然に頼り合い、支え合える', type: 'secure' },
-        { text: '自分が大切な存在かどうか不安になることがある', type: 'anxious' },
-        { text: '適度な距離を置き、深入りされると不快に感じる', type: 'avoidant' },
-        { text: '仲良くなりたいが、裏切られるのが怖くて心を開けない', type: 'fearful' },
-      ],
-    },
-    {
-      id: 'q12',
-      text: '子供の頃、親との関係は...',
-      options: [
-        { text: '温かく、一貫したサポートがあった', type: 'secure' },
-        { text: '時に温かく、時に冷たいなど予測しにくかった', type: 'anxious' },
-        { text: '感情表現より自立を重んじる、距離感があった', type: 'avoidant' },
-        { text: '混乱したり怖かった経験がある', type: 'fearful' },
-      ],
-    },
+    "親しい人との予定が急に変わると、その意味を考えてやり取りを振り返る。", "意見の衝突後に沈黙が続くと、距離が生まれた兆しを探し続ける。", "関係の状態がはっきりするまで他のことに集中しにくい。", "相手の口調の小さな変化が、その日の気分に長く影響する。", "連絡が遅いとき、一つの意味に決める前に複数の可能性を考えられる。", "関係の不確かさをすぐ解決しなくても、しばらく日常を続けられる。",
+    "感情的な会話が深まると、事実や予定の話へ移りやすい。", "傷ついたことを話すのを、感情が薄れるか機会を逃すまで先延ばしにする。", "気遣いを受けても、感情のやり取りに留まらず実務的なことへ戻りやすい。", "調整が役立つ場面でも、予定や決定を別々に保とうとする。", "親しい人が自分の行動の影響を話すとき、その場に留まって聞ける。", "急いで解決したり終えたりせず、感情について互いに話す時間を持てる。",
   ],
-}
+  zh: [
+    "与亲近之人的计划突然改变时，我会反复回想交流，试图弄清含义。", "争执后的沉默期间，我的注意力会不断回到可能疏远的迹象。", "在关系状态明确之前，我很难专注于其他事情。", "对方语气的一点变化，可能影响我大半天的心情。", "联系延迟时，我能先考虑多种解释，而不是立刻下结论。", "关系中的不确定暂时没有答案时，我仍能继续日常生活。",
+    "谈话变得情绪强烈时，我往往转向事实、计划或事务。", "我会把受伤的感受推迟到情绪淡去或时机错过后再谈。", "得到关心后，我常很快回到实际事务，而不继续停留在情感交流中。", "即使协调会有帮助，我也倾向把自己的安排和决定分开。", "亲近的人说明我的行为如何影响他们时，我能留在当下倾听。", "我能进行双向的情感对话，而不急着解决或结束它。",
+  ],
+  fr: [
+    "Quand un projet avec un proche change soudainement, je repasse l’échange pour en comprendre le sens.", "Pendant le silence après un désaccord, mon attention revient aux signes possibles de distance.", "J’ai du mal à me concentrer ailleurs tant que la situation de la relation n’est pas claire.", "Un petit changement de ton peut influencer mon humeur pendant une grande partie de la journée.", "Quand un contact tarde, je peux envisager plusieurs explications avant de conclure.", "Je peux laisser une incertitude relationnelle sans réponse quelque temps sans qu’elle occupe toute ma journée.",
+    "Quand une conversation devient très émotionnelle, je me tourne vers les faits, les plans ou la logistique.", "Je reporte une discussion sur une blessure jusqu’à ce que l’émotion baisse ou que le moment passe.", "Après avoir reçu de l’attention, je reviens vite au pratique plutôt que de rester dans l’échange émotionnel.", "Je garde mes routines et décisions séparées même lorsqu’une coordination pourrait aider.", "Je peux rester présent·e lorsqu’un proche explique l’effet de mes actes sur lui ou elle.", "Je peux laisser place à un échange émotionnel réciproque sans chercher à le résoudre ou l’écourter.",
+  ],
+  es: [
+    "Cuando un plan con alguien cercano cambia de repente, repaso la conversación para entender qué significa.", "Durante el silencio tras un desacuerdo, mi atención vuelve a posibles señales de distancia.", "Me cuesta concentrarme en otras cosas hasta saber en qué punto está la relación.", "Un pequeño cambio de tono puede afectar mi ánimo durante buena parte del día.", "Si el contacto tarda, puedo considerar varias explicaciones antes de decidir qué significa.", "Puedo dejar una incertidumbre relacional sin resolver por un tiempo sin que ocupe todo mi día.",
+    "Cuando una conversación se vuelve muy emocional, tiendo a pasar a hechos, planes o asuntos prácticos.", "Pospongo hablar de algo que me dolió hasta que baja la emoción o pasa el momento.", "Después de recibir cuidado, vuelvo pronto a lo práctico en vez de quedarme en el intercambio emocional.", "Mantengo separadas mis rutinas y decisiones incluso cuando coordinarnos podría ayudar.", "Puedo permanecer presente cuando alguien cercano explica cómo le afectaron mis acciones.", "Puedo dar espacio a una conversación emocional de ida y vuelta sin apresurarme a resolverla o terminarla.",
+  ],
+};
 
-// ─── Results ──────────────────────────────────────────────────────────────────
-const RESULTS: Record<AttachmentType, Record<Locale, ResultData>> = {
-  secure: {
-    ko: {
-      title: '안정 애착',
-      subtitle: '건강하고 균형 잡힌 관계를 만들어가는 당신',
-      description: '안정 애착 유형은 친밀함과 독립성 사이의 균형을 자연스럽게 유지합니다. 타인을 신뢰하고, 감정을 개방적으로 나누며, 갈등도 건설적으로 해결합니다. 이는 모든 애착 유형 중 가장 건강한 형태로, 일관된 돌봄 경험에서 발달합니다.',
-      traits: ['친밀함과 독립성 모두 편안함', '감정을 솔직하게 표현', '갈등을 건설적으로 처리', '타인을 신뢰하며 의지할 수 있음'],
-      strengths: ['깊고 안정적인 관계 형성', '명확한 의사소통', '정서적 회복력', '건강한 경계 설정'],
-      challenges: ['때로 다른 유형의 불안감을 이해하기 어려울 수 있음'],
-      advice: '안정 애착을 가진 당신은 큰 강점을 지니고 있습니다. 불안정한 애착 유형의 파트너를 이해하고 인내심을 갖는 것이 관계를 더욱 깊게 만듭니다.',
-      relationships: '안정적이고 따뜻한 관계를 자연스럽게 형성합니다. 갈등에서도 빠르게 회복하며, 장기적인 관계에서 높은 만족도를 보입니다.',
-    },
-    en: {
-      title: 'Secure Attachment',
-      subtitle: 'You build healthy, balanced relationships',
-      description: 'Secure attachment naturally balances intimacy and independence. You trust others, share emotions openly, and resolve conflicts constructively. This is the healthiest attachment style, developed through consistent caregiving experiences.',
-      traits: ['Comfortable with both closeness and independence', 'Honest emotional expression', 'Constructive conflict resolution', 'Trust in others'],
-      strengths: ['Forming deep, stable relationships', 'Clear communication', 'Emotional resilience', 'Healthy boundary-setting'],
-      challenges: ['May sometimes find it hard to understand others\' anxiety'],
-      advice: 'Your secure attachment is a major strength. Practicing patience and understanding with partners who have insecure attachment styles will deepen your relationships.',
-      relationships: 'You naturally form stable, warm relationships. You recover quickly from conflicts and show high satisfaction in long-term relationships.',
-    },
-    ja: {
-      title: '安定型愛着',
-      subtitle: '健康的でバランスのとれた関係を築くあなた',
-      description: '安定型愛着は親密さと独立性のバランスを自然に保ちます。他者を信頼し、感情をオープンに共有し、葛藤も建設的に解決します。これは最も健康的な愛着スタイルで、一貫したケアの経験から発達します。',
-      traits: ['親密さと独立性の両方に安心感', '率直な感情表現', '建設的な葛藤解決', '他者への信頼'],
-      strengths: ['深く安定した関係の形成', '明確なコミュニケーション', '感情的回復力', '健全な境界設定'],
-      challenges: ['他者の不安を理解しにくい場合がある'],
-      advice: '安定型愛着は大きな強みです。不安定な愛着スタイルのパートナーを理解し、忍耐を持つことが関係をより深めます。',
-      relationships: '安定した温かい関係を自然に形成します。葛藤からも素早く回復し、長期的な関係で高い満足度を示します。',
-    },
-  },
-  anxious: {
-    ko: {
-      title: '불안 애착',
-      subtitle: '깊은 연결을 원하지만 불안함을 느끼는 당신',
-      description: '불안 애착 유형은 친밀함을 강하게 원하지만 버림받을까 봐 지속적으로 걱정합니다. 파트너의 반응에 매우 민감하며, 관계의 안정성을 계속 확인하려 합니다. 일관성 없는 양육 경험에서 주로 발달합니다.',
-      traits: ['강한 친밀감 욕구', '버림받음에 대한 두려움', '빈번한 확신 요구', '관계 역학에 매우 민감'],
-      strengths: ['깊고 열정적인 감정 표현', '파트너에 대한 헌신과 충성', '풍부한 감수성'],
-      challenges: ['감정 기복과 불안', '과도한 확인 요구', '독립적 활동에 어려움'],
-      advice: '당신의 감수성은 관계의 강점이 될 수 있습니다. 자기 자신을 달래는 방법을 연습하고, 파트너에게 명확하게 필요를 표현하는 연습을 해보세요. 개인 취미나 친구 관계에 투자하는 것도 도움이 됩니다.',
-      relationships: '파트너에게 깊이 헌신하지만, 불안함으로 인해 갈등이 생길 수 있습니다. 안정 애착 파트너와 함께할 때 가장 안정적인 관계를 경험합니다.',
-    },
-    en: {
-      title: 'Anxious Attachment',
-      subtitle: 'You crave deep connection but often feel worried',
-      description: 'Anxious attachment strongly desires intimacy but worries constantly about being abandoned. You\'re highly sensitive to your partner\'s reactions and constantly seek reassurance about relationship stability. It usually develops from inconsistent caregiving.',
-      traits: ['Strong desire for closeness', 'Fear of abandonment', 'Frequent need for reassurance', 'Highly sensitive to relationship dynamics'],
-      strengths: ['Deep, passionate emotional expression', 'Devotion and loyalty to partners', 'Rich emotional sensitivity'],
-      challenges: ['Emotional fluctuations and anxiety', 'Excessive reassurance-seeking', 'Difficulty with independent activities'],
-      advice: 'Your sensitivity can be a relationship strength. Practice self-soothing, clearly communicate your needs to your partner, and invest in personal hobbies and friendships to build your own security.',
-      relationships: 'You\'re deeply devoted to partners but anxiety can create conflict. You feel most stable in relationships with secure attachment partners.',
-    },
-    ja: {
-      title: '不安型愛着',
-      subtitle: '深い繋がりを求めるが不安を感じやすいあなた',
-      description: '不安型愛着は親密さを強く求めますが、捨てられることへの不安が絶えません。パートナーの反応に非常に敏感で、関係の安定性を常に確認しようとします。一貫性のないケアの経験から主に発達します。',
-      traits: ['強い親密さへの欲求', '見捨てられることへの恐れ', '頻繁な安心感の要求', '関係の動態への高い感受性'],
-      strengths: ['深く情熱的な感情表現', 'パートナーへの献身と忠誠', '豊かな感受性'],
-      challenges: ['感情の浮き沈みと不安', '過度な確認行動', '独立した活動への困難'],
-      advice: 'あなたの感受性は関係の強みになれます。自己を落ち着かせる方法を練習し、パートナーに明確にニーズを伝える練習をしましょう。個人の趣味や友人関係に投資することも助けになります。',
-      relationships: 'パートナーに深く献身しますが、不安から葛藤が生じることがあります。安定型愛着のパートナーとの関係で最も安定を感じます。',
-    },
-  },
-  avoidant: {
-    ko: {
-      title: '회피 애착',
-      subtitle: '독립성을 중시하며 거리를 두는 당신',
-      description: '회피 애착 유형은 독립성과 자립을 최우선으로 합니다. 정서적 친밀함에 불편함을 느끼고, 타인에게 의지하는 것을 꺼립니다. 감정적으로 거리를 두는 양육 환경에서 주로 발달합니다.',
-      traits: ['강한 독립성', '정서적 친밀함에 불편함', '혼자 문제 해결 선호', '감정 표현 최소화'],
-      strengths: ['강한 자립심과 독립성', '이성적이고 침착한 문제 해결', '개인 목표에 높은 집중력'],
-      challenges: ['깊은 정서적 연결 어려움', '파트너가 거부감을 느낄 수 있음', '갈등 회피로 문제 누적'],
-      advice: '독립심은 당신의 큰 강점이지만, 취약함을 조금씩 나누는 연습이 관계를 깊게 만듭니다. 파트너의 정서적 필요에 작은 반응을 보이는 것부터 시작해 보세요.',
-      relationships: '파트너가 너무 가까이 다가오면 물러나는 경향이 있어 관계에 긴장감을 줄 수 있습니다. 자신의 공간을 존중해주는 파트너와 더 안정적인 관계를 유지합니다.',
-    },
-    en: {
-      title: 'Avoidant Attachment',
-      subtitle: 'You value independence and tend to keep distance',
-      description: 'Avoidant attachment prioritizes independence and self-reliance above all. You feel uncomfortable with emotional intimacy and prefer to handle things alone. It usually develops from emotionally distant caregiving environments.',
-      traits: ['Strong independence', 'Discomfort with emotional intimacy', 'Prefers solving problems alone', 'Minimizes emotional expression'],
-      strengths: ['Strong self-reliance', 'Calm and rational problem-solving', 'High focus on personal goals'],
-      challenges: ['Difficulty forming deep emotional connections', 'Partners may feel rejected', 'Avoidance accumulates unresolved issues'],
-      advice: 'Independence is your great strength, but gradually practicing vulnerability will deepen your relationships. Start by offering small emotional responses to your partner\'s needs.',
-      relationships: 'You tend to pull back when partners get too close, which can create tension. You\'re more stable with partners who respect your need for space.',
-    },
-    ja: {
-      title: '回避型愛着',
-      subtitle: '独立を重視し、距離を置く傾向のあるあなた',
-      description: '回避型愛着は独立性と自立を最優先にします。感情的な親密さに不快感を覚え、他者に頼ることを避けます。感情的に距離を置く養育環境から主に発達します。',
-      traits: ['強い独立性', '感情的な親密さへの不快感', '一人で問題解決することを好む', '感情表現を最小化'],
-      strengths: ['強い自立心', '冷静で合理的な問題解決', '個人目標への高い集中力'],
-      challenges: ['深い感情的繋がりの困難', 'パートナーが拒絶されたと感じる可能性', '葛藤回避で問題が蓄積'],
-      advice: '独立心はあなたの大きな強みですが、少しずつ脆さを共有する練習が関係を深めます。パートナーの感情的なニーズに小さく応えることから始めましょう。',
-      relationships: 'パートナーが近づきすぎると引いてしまう傾向があり、関係に緊張感をもたらすことがあります。あなたの個人空間を尊重してくれるパートナーとより安定した関係を保てます。',
-    },
-  },
-  fearful: {
-    ko: {
-      title: '두려움-회피 애착',
-      subtitle: '연결을 원하지만 상처받을까 봐 두려운 당신',
-      description: '두려움-회피 애착 유형은 친밀한 관계를 깊이 원하지만 동시에 상처받을 것이 두렵습니다. 연결을 원하면서도 사람들을 밀어내는 상충된 감정을 경험합니다. 혼란스럽거나 트라우마를 주는 초기 경험에서 발달하는 경우가 많습니다.',
-      traits: ['친밀함에 대한 욕구와 두려움 공존', '신뢰 형성의 어려움', '극단적인 감정 기복', '자신과 타인에 대한 부정적 인식'],
-      strengths: ['깊은 공감 능력', '인간 관계의 복잡성 이해', '자기 인식 발달 가능성'],
-      challenges: ['관계에서 불안과 회피가 번갈아 나타남', '신뢰 구축의 어려움', '관계에서 극도의 취약감'],
-      advice: '당신의 여정은 쉽지 않지만, 전문 상담사의 도움을 받는 것이 매우 효과적입니다. 자신을 판단하지 말고, 작은 신뢰의 순간들을 소중히 여기세요. 당신은 건강한 관계를 가질 자격이 있습니다.',
-      relationships: '관계에서 친밀해지고 싶으면서도 밀어내는 패턴을 반복할 수 있습니다. 인내심 있고 일관된 파트너와 천천히 신뢰를 쌓아가는 것이 중요합니다.',
-    },
-    en: {
-      title: 'Fearful-Avoidant Attachment',
-      subtitle: 'You want connection but fear being hurt',
-      description: 'Fearful-avoidant attachment deeply wants intimate relationships but simultaneously fears being hurt. You experience conflicting feelings of wanting connection while pushing people away. It often develops from confusing or traumatic early experiences.',
-      traits: ['Coexisting desire and fear of intimacy', 'Difficulty building trust', 'Extreme emotional fluctuations', 'Negative perceptions of self and others'],
-      strengths: ['Deep empathy', 'Understanding of relationship complexity', 'Potential for profound self-awareness'],
-      challenges: ['Alternating between anxiety and avoidance in relationships', 'Difficulty building trust', 'Extreme vulnerability in relationships'],
-      advice: 'Your journey isn\'t easy, but professional counseling can be very effective. Don\'t judge yourself — cherish small moments of trust. You deserve healthy relationships.',
-      relationships: 'You may repeat a pattern of wanting closeness and then pushing others away. It\'s important to slowly build trust with patient, consistent partners.',
-    },
-    ja: {
-      title: '恐れ-回避型愛着',
-      subtitle: '繋がりを求めながら傷つくことを恐れるあなた',
-      description: '恐れ-回避型愛着は親密な関係を深く望む一方、傷つくことを同時に恐れます。繋がりを求めながら人々を遠ざける相反する感情を経験します。混乱した、またはトラウマを与える初期経験から多く発達します。',
-      traits: ['親密さへの欲求と恐れの共存', '信頼形成の困難', '激しい感情の浮き沈み', '自己・他者への否定的認識'],
-      strengths: ['深い共感能力', '人間関係の複雑さへの理解', '深い自己認識の発達可能性'],
-      challenges: ['不安と回避が交互に現れる', '信頼構築の困難', '関係における極度の脆弱感'],
-      advice: 'あなたの歩みは簡単ではありませんが、専門カウンセラーの助けが非常に効果的です。自分を責めず、小さな信頼の瞬間を大切にしてください。あなたには健全な関係を持つ権利があります。',
-      relationships: '親密になりたい一方で遠ざけてしまうパターンを繰り返すことがあります。忍耐強く一貫したパートナーとゆっくり信頼を築くことが大切です。',
-    },
-  },
-}
+export const COPY: Record<Locale, {
+  title: string; subtitle: string; context: string; safety: string; question: (n: number) => string;
+  scale: string[]; anxiety: string; avoidance: string; result: string; basis: string; observed: string;
+  level: Record<"low" | "medium" | "high", string>; descriptions: Record<AttachmentDimension, Record<"low" | "medium" | "high", string>>;
+  next: string; retake: string; restart: string; legacy: string; helpTitle: string; help: string; korea: string;
+}> = {
+  ko: { title: "성인 애착 경향 검사", subtitle: "불안과 회피를 두 개의 연속축으로 살펴봅니다", context: "최근의 중요한 가까운 관계를 떠올려 답해 주세요. 관계에 따라 결과가 달라질 수 있으며, 불편하면 언제든 중단할 수 있습니다.", safety: "자기이해용이며 임상 진단이 아닙니다. 관계의 안전성·학대 여부를 판별하지 않으며, 높은 점수는 누구의 잘못도 뜻하지 않습니다.", question: (n) => `${n} / 12`, scale: ["전혀 아니다", "아닌 편이다", "보통이다", "그런 편이다", "매우 그렇다"], anxiety: "애착 불안 경향", avoidance: "애착 회피 경향", result: "이번 응답에서 본 관계 경향", basis: "근거: 애착의 불안·회피 차원을 참고한 OIYO 자체 문항", observed: "백분위나 정확도가 아닌 응답척도상 위치", level: { low: "낮은 편", medium: "중간", high: "높은 편" }, descriptions: { anxiety: { low: "거리감이 생겨도 관계가 이어질 수 있다는 감각을 비교적 유지합니다.", medium: "상황에 따라 안심과 걱정이 함께 활성화될 수 있습니다.", high: "거리감이나 거절 가능성에 대한 걱정이 더 쉽게 활성화될 수 있습니다." }, avoidance: { low: "필요할 때 의지하거나 취약한 감정을 나누는 일이 비교적 편합니다.", medium: "가까움과 독립성 사이에서 상황에 따라 거리를 조절합니다.", high: "의존하거나 취약성을 나누는 상황에서 거리를 두려는 경향이 나타날 수 있습니다." } }, next: "상대가 안전하고 존중적인 경우에만, 감정을 가라앉힌 뒤 작은 요청과 경계를 말해 보세요.", retake: "즉시 반복하기보다 4–8주 뒤 또는 관계 맥락이 안정적으로 달라졌을 때 다시 살펴보세요.", restart: "다시 답하기", legacy: "이 링크는 과거 4유형 결과를 담고 있습니다. 현재 버전은 고정 유형 대신 불안·회피 두 축을 측정합니다.", helpTitle: "관계가 안전하지 않다면", help: "폭력·통제·위협은 애착 유형의 문제가 아닙니다. 안전을 우선하고 신뢰할 수 있는 사람이나 전문기관에 도움을 요청하세요.", korea: "한국: 즉각 위험 112·119 · 여성긴급전화 1366(24시간) · 자살예방상담 109" },
+  en: { title: "Adult Attachment Tendencies", subtitle: "Explore anxiety and avoidance as two continuous dimensions", context: "Think of a recent important close relationship. Results can differ by relationship, and you may stop whenever the questions feel uncomfortable.", safety: "For self-understanding, not clinical diagnosis. It does not assess relationship safety or abuse, and a higher score is not anyone’s fault.", question: (n) => `${n} / 12`, scale: ["Strongly disagree", "Disagree", "Neutral", "Agree", "Strongly agree"], anxiety: "Attachment anxiety tendency", avoidance: "Attachment avoidance tendency", result: "Relationship tendencies in this response", basis: "Evidence: OIYO-authored items informed by dimensional attachment research", observed: "Position on this response scale—not a percentile or accuracy score", level: { low: "lower", medium: "middle", high: "higher" }, descriptions: { anxiety: { low: "You can often retain a sense that the relationship continues through distance.", medium: "Reassurance and worry may both become active depending on context.", high: "Worry about distance or possible rejection may become active more easily." }, avoidance: { low: "Depending on someone and sharing vulnerability may feel relatively comfortable.", medium: "You adjust distance between closeness and independence depending on context.", high: "You may be more inclined to create distance around dependence or vulnerability." } }, next: "Only when the other person is safe and respectful, settle first and then express one small request or boundary.", retake: "Rather than repeating immediately, revisit in 4–8 weeks or after the relationship context has changed consistently.", restart: "Answer again", legacy: "This link contains a result from the former four-type version. The current version measures anxiety and avoidance dimensions instead of assigning a fixed type.", helpTitle: "If the relationship is not safe", help: "Violence, control, or threats are not attachment-style problems. Prioritize safety and contact a trusted person or local support service.", korea: "In Korea: immediate danger 112/119 · Women’s Emergency Hotline 1366 · Suicide Prevention Hotline 109. Elsewhere, use local emergency services." },
+  ja: { title: "成人の愛着傾向チェック", subtitle: "不安と回避を二つの連続軸で見ます", context: "最近の大切な親しい関係を思い浮かべてください。関係によって結果は変わり、不快ならいつでも中止できます。", safety: "自己理解のためのもので臨床診断ではありません。関係の安全性や虐待を判定せず、高い点数は誰かの責任を意味しません。", question: (n) => `${n} / 12`, scale: ["全く違う", "違う", "どちらでもない", "そう思う", "強くそう思う"], anxiety: "愛着不安の傾向", avoidance: "愛着回避の傾向", result: "今回の回答に見られる関係傾向", basis: "根拠：愛着の不安・回避次元を参考にしたOIYO独自項目", observed: "百分位や正確度ではなく回答尺度上の位置", level: { low: "低め", medium: "中間", high: "高め" }, descriptions: { anxiety: { low: "距離があっても関係が続く感覚を比較的保てます。", medium: "状況により安心と心配の両方が動くことがあります。", high: "距離や拒絶の可能性への心配が動きやすい傾向があります。" }, avoidance: { low: "必要なとき頼ったり弱さを共有したりすることが比較的楽です。", medium: "親密さと自立の間で状況に応じて距離を調整します。", high: "依存や弱さの共有で距離を置く傾向が出ることがあります。" } }, next: "相手が安全で尊重的な場合に限り、落ち着いてから小さな願いか境界を伝えてください。", retake: "すぐ繰り返さず、4〜8週間後か関係状況が安定して変わった時に見直してください。", restart: "もう一度答える", legacy: "このリンクは旧4タイプ版の結果です。現行版は固定タイプではなく不安・回避の二軸を測ります。", helpTitle: "関係が安全でないなら", help: "暴力・支配・脅迫は愛着タイプの問題ではありません。安全を優先し、信頼できる人や地域の支援窓口に連絡してください。", korea: "韓国：緊急112・119／女性緊急電話1366／自殺予防相談109。海外では地域の緊急窓口へ。" },
+  zh: { title: "成人依恋倾向测验", subtitle: "以焦虑和回避两个连续维度进行观察", context: "请想起近期一段重要的亲密关系。不同关系中的结果可能不同，如感到不适可随时停止。", safety: "仅用于自我理解，不是临床诊断。本测验不判断关系安全或虐待，较高分数也不代表任何人的过错。", question: (n) => `${n} / 12`, scale: ["完全不同意", "不同意", "一般", "同意", "非常同意"], anxiety: "依恋焦虑倾向", avoidance: "依恋回避倾向", result: "本次回答呈现的关系倾向", basis: "依据：参考依恋焦虑与回避维度的OIYO原创题目", observed: "这是回答量表上的位置，不是百分位或准确率", level: { low: "较低", medium: "中间", high: "较高" }, descriptions: { anxiety: { low: "即使出现距离，你通常也能保持关系仍会继续的感受。", medium: "安心与担忧可能会随情境同时出现。", high: "对距离或可能被拒绝的担忧可能更容易被激活。" }, avoidance: { low: "需要时依靠他人或分享脆弱感受相对较自在。", medium: "会根据情境在亲近和独立之间调节距离。", high: "在依赖或分享脆弱时，可能更倾向保持距离。" } }, next: "仅在对方安全且尊重你的情况下，先让自己平静，再表达一个小请求或界限。", retake: "不要立即反复测验，建议4–8周后或关系情境持续改变后再观察。", restart: "重新作答", legacy: "此链接包含旧版四类型结果。当前版本不固定分类，而是测量焦虑与回避两个维度。", helpTitle: "如果关系并不安全", help: "暴力、控制或威胁不是依恋类型问题。请优先确保安全，并联系可信赖的人或当地支持机构。", korea: "韩国：紧急危险112/119 · 女性紧急热线1366 · 自杀预防热线109。其他地区请联系当地紧急服务。" },
+  fr: { title: "Tendances d’attachement adulte", subtitle: "Explorez l’anxiété et l’évitement sur deux dimensions continues", context: "Pensez à une relation proche et importante récente. Le résultat peut varier selon la relation; vous pouvez arrêter à tout moment.", safety: "Pour la compréhension de soi, sans valeur diagnostique. Ce test n’évalue ni la sécurité ni la violence relationnelle; un score élevé n’est la faute de personne.", question: (n) => `${n} / 12`, scale: ["Pas du tout d’accord", "Pas d’accord", "Neutre", "D’accord", "Tout à fait d’accord"], anxiety: "Tendance à l’anxiété d’attachement", avoidance: "Tendance à l’évitement d’attachement", result: "Tendances relationnelles dans cette réponse", basis: "Base : items originaux OIYO inspirés du modèle dimensionnel", observed: "Position sur cette échelle, pas un percentile ni une précision", level: { low: "plus basse", medium: "intermédiaire", high: "plus élevée" }, descriptions: { anxiety: { low: "Vous gardez souvent le sentiment que le lien continue malgré la distance.", medium: "Réassurance et inquiétude peuvent s’activer selon le contexte.", high: "L’inquiétude face à la distance ou au rejet peut s’activer plus facilement." }, avoidance: { low: "Dépendre d’un proche et partager sa vulnérabilité peut être assez confortable.", medium: "Vous ajustez la distance entre proximité et indépendance selon le contexte.", high: "Vous pouvez davantage prendre de la distance face à la dépendance ou à la vulnérabilité." } }, next: "Seulement si l’autre est sûr et respectueux, apaisez-vous puis exprimez une petite demande ou limite.", retake: "Évitez de recommencer immédiatement; revenez dans 4–8 semaines ou après un changement relationnel stable.", restart: "Répondre à nouveau", legacy: "Ce lien contient un ancien résultat à quatre types. La version actuelle mesure deux dimensions sans attribuer de type fixe.", helpTitle: "Si la relation n’est pas sûre", help: "Violence, contrôle ou menaces ne sont pas des problèmes de style d’attachement. Priorisez votre sécurité et contactez une personne ou un service local de confiance.", korea: "En Corée : urgence 112/119 · ligne 1366 · prévention du suicide 109. Ailleurs, contactez les services locaux." },
+  es: { title: "Tendencias de apego adulto", subtitle: "Explora ansiedad y evitación en dos dimensiones continuas", context: "Piensa en una relación cercana e importante reciente. El resultado puede variar según la relación y puedes detenerte cuando quieras.", safety: "Para autoconocimiento, no como diagnóstico. No evalúa seguridad ni abuso, y una puntuación alta no es culpa de nadie.", question: (n) => `${n} / 12`, scale: ["Totalmente en desacuerdo", "En desacuerdo", "Neutral", "De acuerdo", "Totalmente de acuerdo"], anxiety: "Tendencia de ansiedad de apego", avoidance: "Tendencia de evitación de apego", result: "Tendencias relacionales en esta respuesta", basis: "Base: ítems originales de OIYO inspirados en el modelo dimensional", observed: "Posición en esta escala, no percentil ni precisión", level: { low: "más baja", medium: "intermedia", high: "más alta" }, descriptions: { anxiety: { low: "Sueles conservar la sensación de que el vínculo continúa pese a la distancia.", medium: "La calma y la preocupación pueden activarse según el contexto.", high: "La preocupación por la distancia o el rechazo puede activarse con mayor facilidad." }, avoidance: { low: "Apoyarte en alguien y compartir vulnerabilidad puede resultarte relativamente cómodo.", medium: "Ajustas la distancia entre cercanía e independencia según el contexto.", high: "Puedes tender a tomar distancia ante la dependencia o la vulnerabilidad." } }, next: "Solo si la otra persona es segura y respetuosa, cálmate primero y expresa una petición o límite pequeño.", retake: "No repitas de inmediato; vuelve en 4–8 semanas o tras un cambio estable del contexto relacional.", restart: "Responder de nuevo", legacy: "Este enlace contiene un resultado de la antigua versión de cuatro tipos. La versión actual mide dos dimensiones sin asignar un tipo fijo.", helpTitle: "Si la relación no es segura", help: "La violencia, el control o las amenazas no son problemas de estilo de apego. Prioriza tu seguridad y contacta a una persona o servicio local de confianza.", korea: "En Corea: peligro inmediato 112/119 · línea 1366 · prevención del suicidio 109. En otros países, usa servicios locales." },
+};
 
-// ─── Component ────────────────────────────────────────────────────────────────
+const DRAFT_BASIS: Record<Locale, string> = {
+  ko: "검토 전 OIYO 성찰 문항입니다. 정식 심리척도나 ECR 계열 검사가 아닙니다.",
+  en: "Draft OIYO reflection prompts; not a validated scale or ECR-family instrument.",
+  ja: "検討前のOIYO内省項目です。検証済み尺度やECR系検査ではありません。",
+  zh: "这是待审查的OIYO反思题目，不是经验证量表或ECR系列测验。",
+  fr: "Questions de réflexion OIYO à l’état de brouillon, non validées et distinctes des instruments ECR.",
+  es: "Preguntas de reflexión OIYO en borrador; no son una escala validada ni un instrumento ECR.",
+};
+
+const RESPONSE_POSITION: Record<Locale, string> = {
+  ko: "검토 전 문항의 평균 응답 위치이며 백분위·검증 경계·정확도가 아닙니다.",
+  en: "Mean response position on draft items—not a percentile, validated cutoff, or accuracy score.",
+  ja: "検討前項目の平均回答位置であり、百分位・検証済み境界・正確度ではありません。",
+  zh: "这是草案题目的平均作答位置，不是百分位、验证界限或准确率。",
+  fr: "Position moyenne sur des items provisoires, sans percentile, seuil validé ni score de précision.",
+  es: "Posición media en ítems provisionales; no es percentil, umbral validado ni puntuación de precisión.",
+};
+
 interface Props { locale?: string }
+interface ResultState { anxiety: number; avoidance: number; observedAt: string }
 
-export default function AttachmentStyleTest({ locale: lp = 'ko' }: Props) {
-  const locale: Locale = (['ko', 'en', 'ja'].includes(lp) ? lp : 'en') as Locale
-  const lb = LABELS[locale]
-  const questions = QUESTIONS[locale]
+export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props) {
+  const locale = (LOCALES.includes(rawLocale as Locale) ? rawLocale : "en") as Locale;
+  const t = COPY[locale];
+  const questions = QUESTION_COPY[locale];
+  const [answers, setAnswers] = useState<number[]>([]);
+  const [result, setResult] = useState<ResultState | null>(null);
+  const legacyType = useMemo(() => typeof window !== "undefined" && new URLSearchParams(window.location.search).has("type"), []);
 
-  const initResult = (): { type: AttachmentType; scores: Scores } | null => {
-    if (typeof window === 'undefined') return null
-    const p = new URLSearchParams(window.location.search)
-    const t = p.get('type') as AttachmentType | null
-    if (t && RESULTS[t]) return { type: t, scores: { secure: 0, anxious: 0, avoidant: 0, fearful: 0 } }
-    return null
-  }
+  useEffect(() => {
+    if (legacyType) window.history.replaceState({}, "", `${window.location.pathname}${window.location.hash}`);
+  }, [legacyType]);
 
-  const [current, setCurrent] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const p = new URLSearchParams(window.location.search)
-      if (p.get('type')) return questions.length
+  function answer(value: number) {
+    if (answers.length === 0) {
+      gaEvent("test_started", { test_id: "adult_attachment", instrument_version: ATTACHMENT_INSTRUMENT.version });
     }
-    return 0
-  })
-  const [selected, setSelected] = useState<number | null>(null)
-  const [answers, setAnswers] = useState<AttachmentType[]>([])
-  const [result, setResult] = useState<{ type: AttachmentType; scores: Scores } | null>(initResult)
+    const next = [...answers, value];
+    setAnswers(next);
+    if (next.length !== ATTACHMENT_INSTRUMENT.items.length) return;
 
-  function calcResult(ans: AttachmentType[]): { type: AttachmentType; scores: Scores } {
-    const scores: Scores = { secure: 0, anxious: 0, avoidant: 0, fearful: 0 }
-    for (const a of ans) scores[a]++
-    const type = (Object.keys(scores) as AttachmentType[]).reduce((a, b) => scores[a] >= scores[b] ? a : b)
-    return { type, scores }
-  }
-
-  function pick(idx: number) {
-    if (selected !== null) return
-    setSelected(idx)
-    const newAns = [...answers, questions[current].options[idx].type]
-    setTimeout(() => {
-      if (current + 1 >= questions.length) setResult(calcResult(newAns))
-      setAnswers(newAns)
-      setCurrent(current + 1)
-      setSelected(null)
-    }, 280)
+    const responses = attachmentResponsesFromAnswers(next);
+    const isRetake = listAssessmentResults().some((item) => item.assessmentId === attachmentPlugin.id);
+    const canonical = buildAttachmentResult(responses, { locale, sourcePath: `/${locale}/attachment-style/test` });
+    recordAssessmentResult({ ...canonical, responses: {} });
+    const scores = canonical.scores.normalized;
+    recordTestResult({
+      kind: "psychometric",
+      testId: "attachment",
+      title: t.title,
+      resultLabel: `${t.anxiety} / ${t.avoidance}`,
+      result: { anxiety: scores.anxiety, avoidance: scores.avoidance, scoreScale: "normalized-0-100" },
+      locale,
+      sourcePath: `/${locale}/attachment-style/test`,
+    });
+    gaEvent("test_completed", {
+      test_id: "adult_attachment",
+      instrument_version: ATTACHMENT_INSTRUMENT.version,
+      is_retake: String(isRetake),
+    });
+    setResult({ anxiety: scores.anxiety, avoidance: scores.avoidance, observedAt: canonical.completedAt });
   }
 
   function restart() {
-    setAnswers([]); setCurrent(0); setSelected(null); setResult(null)
-    if (typeof window !== 'undefined') window.history.replaceState({}, '', window.location.pathname)
+    setAnswers([]);
+    setResult(null);
   }
 
-  function share() {
-    if (!result) return
-    const url = `${window.location.origin}${window.location.pathname}?type=${result.type}`
-    const text = `${lb.shareMsg} ${lb.types[result.type]}`
-    if (navigator.share) navigator.share({ title: lb.title, text, url })
-    else navigator.clipboard.writeText(url)
+  if (!result) {
+    const current = answers.length;
+    return <div className="space-y-6">
+      <header className="space-y-2 text-center">
+        <h1 className="text-2xl font-bold">{t.title}</h1>
+        <p className="text-sm text-muted-foreground">{t.subtitle}</p>
+      </header>
+      {legacyType && <p className="rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm leading-6 text-blue-900">{t.legacy}</p>}
+      <p className="rounded-xl border bg-card p-4 text-sm leading-6 text-muted-foreground">{t.context}</p>
+      <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">{t.safety}</p>
+      <div className="space-y-1">
+        <div className="flex justify-between text-xs text-muted-foreground"><span>{t.question(current + 1)}</span><span>{Math.round((current / 12) * 100)}%</span></div>
+        <div className="h-2 overflow-hidden rounded-full bg-muted"><div className="h-full bg-violet-600 transition-all" style={{ width: `${(current / 12) * 100}%` }} /></div>
+      </div>
+      <div className="rounded-xl border bg-card p-6 text-center"><p className="text-lg font-medium">{questions[current]}</p></div>
+      <div className="grid gap-2 sm:grid-cols-5">
+        {t.scale.map((label, index) => <button key={label} onClick={() => answer(index + 1)} className="rounded-lg border bg-card px-3 py-3 text-sm transition-colors hover:border-violet-400 hover:bg-violet-50"><span className="block font-bold text-violet-700">{index + 1}</span><span className="mt-1 block text-xs text-muted-foreground">{label}</span></button>)}
+      </div>
+    </div>;
   }
 
-  const finished = current >= questions.length
-
-  if (!finished) {
-    const q = questions[current]
-    const progress = Math.round((current / questions.length) * 100)
-    return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div className="h-2 rounded-full bg-muted overflow-hidden">
-            <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <div className="rounded-xl border bg-card p-6 text-center">
-          <p className="text-lg font-medium">{q.text}</p>
-        </div>
-        <div className="grid gap-3">
-          {q.options.map((opt, i) => (
-            <button key={i} onClick={() => pick(i)} disabled={selected !== null}
-              className={['w-full rounded-lg border px-4 py-3 text-left text-sm transition-colors',
-                selected === i ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-card hover:bg-accent hover:border-primary/50',
-                selected !== null && selected !== i ? 'opacity-50' : ''].join(' ')}>
-              {opt.text}
-            </button>
-          ))}
-        </div>
-      </div>
-    )
-  }
-
-  if (!result) return null
-  const r = RESULTS[result.type][locale]
-  const chartData: { name: string; value: number; fill: string }[] = (Object.keys(result.scores) as AttachmentType[]).map(k => ({
-    name: lb.types[k],
-    value: result.scores[k],
-    fill: TYPE_COLORS[k],
-  }))
-
-  return (
-    <div className="space-y-6">
-      <div className="text-center space-y-2">
-        <p className="text-sm text-muted-foreground">{lb.yourType}</p>
-        <div className="inline-block rounded-full px-5 py-2 text-lg font-bold text-white"
-          style={{ backgroundColor: TYPE_COLORS[result.type] }}>{r.title}</div>
-        <p className="text-muted-foreground font-medium">{r.subtitle}</p>
-        <p className="text-sm text-muted-foreground leading-relaxed">{r.description}</p>
-      </div>
-
-      <div className="rounded-xl border bg-card p-4">
-        <p className="text-xs text-muted-foreground text-center mb-3">{lb.chartTitle}</p>
-        <ResponsiveContainer width="100%" height={160}>
-          <BarChart data={chartData} layout="vertical" margin={{ left: 8, right: 16 }}>
-            <XAxis type="number" domain={[0, questions.length]} tick={{ fontSize: 11 }} />
-            <YAxis type="category" dataKey="name" width={80} tick={{ fontSize: 11 }} />
-            <Tooltip formatter={((v: number) => `${v}점`) as any} />
-            <Bar dataKey="value" radius={4} />
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
-
-      <div className="rounded-xl border bg-card p-4 space-y-2">
-        <h3 className="font-semibold text-sm">{lb.traits}</h3>
-        <ul className="space-y-1">
-          {r.traits.map(t => <li key={t} className="text-sm text-muted-foreground flex gap-2"><span>•</span>{t}</li>)}
-        </ul>
-      </div>
-
-      <div className="grid grid-cols-2 gap-3">
-        <div className="rounded-xl border bg-card p-4 space-y-2">
-          <h3 className="font-semibold text-sm text-green-600">{lb.strengths}</h3>
-          <ul className="space-y-1">
-            {r.strengths.map(s => <li key={s} className="text-xs text-muted-foreground flex gap-1"><span className="text-green-500">+</span>{s}</li>)}
-          </ul>
-        </div>
-        <div className="rounded-xl border bg-card p-4 space-y-2">
-          <h3 className="font-semibold text-sm text-amber-600">{lb.challenges}</h3>
-          <ul className="space-y-1">
-            {r.challenges.map(c => <li key={c} className="text-xs text-muted-foreground flex gap-1"><span className="text-amber-500">△</span>{c}</li>)}
-          </ul>
-        </div>
-      </div>
-
-      <div className="rounded-xl border bg-card p-4 space-y-1">
-        <h3 className="font-semibold text-sm">{lb.relationships}</h3>
-        <p className="text-sm text-muted-foreground">{r.relationships}</p>
-      </div>
-
-      <div className="rounded-xl border border-primary/20 bg-primary/5 p-4 space-y-1">
-        <h3 className="font-semibold text-sm text-primary">{lb.advice}</h3>
-        <p className="text-sm">{r.advice}</p>
-      </div>
-
-      <ShareResultButton
-        locale={locale}
-        heading={lb.title}
-        resultTitle={r.title}
-        emoji={{ secure: '🌳', anxious: '🌊', avoidant: '🏔️', fearful: '🌪️' }[result.type]}
-        description={r.subtitle}
-      />
-      <ResultNextSteps
-        locale={locale}
-        links={[
-          { href: `/${locale}/love-language/test`, label: locale === 'ko' ? '❤️ 사랑의 언어 테스트' : locale === 'ja' ? '❤️ 愛の言語テスト' : '❤️ Love Language test' },
-          { href: `/${locale}/self-esteem/test`, label: locale === 'ko' ? '🌟 자존감 테스트' : locale === 'ja' ? '🌟 自尊心テスト' : '🌟 Self-esteem test' },
-          { href: `https://blog.oiyo.net/${locale}/mbti-compatibility/`, label: locale === 'ko' ? '💞 유형 궁합 보기' : locale === 'ja' ? '💞 タイプ相性' : '💞 Type compatibility', external: true },
-        ]}
-      />
-      <RelatedReading locale={locale} topic="attachment" />
-
-      <div className="flex gap-3">
-        <button onClick={restart}
-          className="flex-1 rounded-lg border bg-card px-4 py-2 text-sm font-medium hover:bg-accent transition-colors">
-          {lb.restart}
-        </button>
-        <button onClick={share}
-          className="flex-1 rounded-lg bg-primary text-primary-foreground px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity">
-          {lb.share}
-        </button>
-      </div>
+  const dimensions: { id: AttachmentDimension; label: string; value: number }[] = [
+    { id: "anxiety", label: t.anxiety, value: result.anxiety },
+    { id: "avoidance", label: t.avoidance, value: result.avoidance },
+  ];
+  return <div className="space-y-6">
+    <header className="space-y-2 text-center"><p className="text-sm text-muted-foreground">{t.result}</p><h1 className="text-2xl font-bold">{t.title}</h1></header>
+    <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">{t.safety}</p>
+    <div className="grid gap-4 md:grid-cols-2">
+      {dimensions.map(({ id, label, value }) => {
+        const responseMean = (1 + (value * 4) / 100).toFixed(1);
+        return <article key={id} className="rounded-2xl border bg-card p-5">
+          <h2 className="font-bold">{label}</h2>
+          <div className="mt-4 h-3 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-violet-600" style={{ width: `${value}%` }} /></div>
+          <p className="mt-2 text-right text-sm font-bold text-violet-800">{responseMean} / 5.0</p>
+          <p className="mt-3 text-sm leading-6 text-muted-foreground">{RESPONSE_POSITION[locale]}</p>
+        </article>;
+      })}
     </div>
-  )
+    <div className="rounded-xl border bg-card p-4 text-xs leading-6 text-muted-foreground"><p>{RESPONSE_POSITION[locale]}</p><p>{DRAFT_BASIS[locale]}</p><p>{new Intl.DateTimeFormat(locale, { dateStyle: "medium" }).format(new Date(result.observedAt))} · {ATTACHMENT_INSTRUMENT.version}</p></div>
+    <div className="rounded-xl border border-violet-100 bg-violet-50 p-4 text-sm leading-6 text-violet-950"><p>{t.next}</p><p className="mt-2">{t.retake}</p></div>
+    <p className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm font-semibold leading-6 text-rose-950">{t.korea}</p>
+    <details className="rounded-xl border border-rose-200 bg-rose-50 p-4"><summary className="cursor-pointer font-bold text-rose-950">{t.helpTitle}</summary><p className="mt-3 text-sm leading-6 text-rose-900">{t.help}</p></details>
+    <ResultNextSteps locale={locale} links={[
+      { href: `/${locale}/love-language/test`, label: locale === "ko" ? "사랑의 언어 살펴보기" : "Love language reflection" },
+      { href: `/${locale}/personal-boundaries-test`, label: locale === "ko" ? "관계 경계 살펴보기" : "Personal boundaries reflection" },
+    ]} />
+    <RelatedReading locale={locale} topic="attachment" />
+    <button onClick={restart} className="w-full rounded-lg border bg-card px-4 py-3 text-sm font-medium hover:bg-accent">{t.restart}</button>
+  </div>;
 }

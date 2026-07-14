@@ -362,11 +362,11 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
         howTitle: '결과를 다루는 태도',
         howItems: [
           '결과를 상대를 탓하는 근거로 쓰기보다, 내가 반복하는 요청과 회피 방식을 먼저 살펴봅니다.',
-          '안정형은 타고나는 자격이 아니라 관계 안에서 조금씩 배울 수 있는 방향으로 봅니다.',
+          '안정감은 고정된 유형이 아니라 관계 안에서 조금씩 배울 수 있는 방향으로 봅니다.',
           '강한 불안이나 회피가 일상을 해친다면, 신뢰할 수 있는 전문가와 상의하는 것이 좋습니다.',
         ],
         blogText: '성인 애착, 연애 패턴, 관계 회복에 관한 긴 해설은 블로그에서 이어서 읽을 수 있습니다.',
-        wikiText: '애착이론과 4가지 애착유형의 짧은 정의는 위키를 참고하세요.',
+        wikiText: '애착이론과 불안·회피 연속 차원의 짧은 정의는 위키를 참고하세요.',
         note: '이 테스트는 관계 성찰을 위한 참고 도구입니다. 트라우마, 우울, 불안 등 전문적 도움이 필요한 문제는 전문가와 상담해 주세요.',
       },
       en: {
@@ -376,11 +376,11 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
         howTitle: 'How to hold the result',
         howItems: [
           'Use the result to notice your own requests and withdrawals before blaming a partner.',
-          'See security as a learnable direction, not a status some people simply have.',
+          'See security as a learnable direction, not a fixed attachment category.',
           'If anxiety or avoidance is harming daily life, consider speaking with a trusted professional.',
         ],
         blogText: 'For adult attachment, dating patterns, and repair work, continue with the blog guides.',
-        wikiText: 'For concise definitions of attachment theory and the four styles, use the wiki.',
+        wikiText: 'For concise definitions of attachment theory and its anxiety/avoidance dimensions, use the wiki.',
         note: 'This test supports relationship reflection. For trauma, depression, anxiety, or safety concerns, please seek professional help.',
       },
       ja: {
@@ -390,11 +390,11 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
         howTitle: '結果との向き合い方',
         howItems: [
           '相手を責める材料にする前に、自分の求め方や避け方を見つめます。',
-          '安定型は固定された資格ではなく、関係の中で少しずつ学べる方向として考えます。',
+          '安心感は固定された資格ではなく、関係の中で少しずつ学べる方向として考えます。',
           '不安や回避が生活を苦しくしている場合は、信頼できる専門家に相談してください。',
         ],
         blogText: '成人愛着、恋愛パターン、関係の修復についてはブログで詳しく読めます。',
-        wikiText: '愛着理論と4つのタイプの短い定義はWikiで確認できます。',
+        wikiText: '愛着理論と不安・回避の連続次元の短い定義はWikiで確認できます。',
         note: 'このテストは関係を振り返るための参考です。トラウマ、抑うつ、不安などは専門家に相談してください。',
       },
       zh: {
@@ -408,7 +408,7 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
           '如果强烈焦虑或回避影响日常生活，建议寻求可信赖的专业帮助。',
         ],
         blogText: '关于成人依恋、恋爱模式和关系修复的长篇内容，请继续阅读博客。',
-        wikiText: '依恋理论和四种风格的简短定义可在 Wiki 中查看。',
+        wikiText: '依恋理论及焦虑、回避连续维度的简短定义可在 Wiki 中查看。',
         note: '本测试用于关系反思。涉及创伤、抑郁、焦虑或安全问题时，请寻求专业支持。',
       },
       fr: {
@@ -422,7 +422,7 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
           'Si l’anxiété ou l’évitement pèse sur votre vie quotidienne, parlez-en à un professionnel de confiance.',
         ],
         blogText: 'Pour l’attachement adulte, les relations amoureuses et la réparation, continuez sur le blog.',
-        wikiText: 'Pour des définitions courtes de la théorie de l’attachement et des quatre styles, consultez le wiki.',
+        wikiText: 'Pour des définitions courtes de la théorie de l’attachement et des dimensions anxiété/évitement, consultez le wiki.',
         note: 'Ce test soutient la réflexion relationnelle. Pour trauma, dépression, anxiété ou sécurité, cherchez un accompagnement professionnel.',
       },
       es: {
@@ -436,7 +436,7 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
           'Si la ansiedad o la evitación afectan tu vida diaria, habla con un profesional de confianza.',
         ],
         blogText: 'Para apego adulto, patrones de pareja y reparación relacional, continúa en el blog.',
-        wikiText: 'Para definiciones breves de la teoría del apego y los cuatro estilos, consulta el wiki.',
+        wikiText: 'Para definiciones breves de la teoría del apego y las dimensiones de ansiedad y evitación, consulta el wiki.',
         note: 'Este test apoya la reflexión sobre relaciones. Para trauma, depresión, ansiedad o seguridad, busca ayuda profesional.',
       },
     },

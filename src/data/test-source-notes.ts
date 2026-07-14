@@ -15,7 +15,7 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     caution: 'clinical',
   },
   'attachment-style': {
-    basis: ['Bowlby attachment theory', 'Ainsworth attachment patterns', 'Experiences in Close Relationships (ECR) model'],
+    basis: ['draft OIYO-authored 12-item reflection prompts', 'adult attachment anxiety/avoidance concepts (educational reference only)', 'not a validated or licensed ECR-family instrument'],
     caution: 'reflection',
   },
   'anger-style': {
@@ -72,6 +72,14 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
   },
   'love-language': {
     basis: ['five love languages framework', 'relationship communication research'],
+    caution: 'reflection',
+  },
+  'life-values-test': {
+    basis: ['18 original OIYO-authored value cards', 'Schwartz values theory (theory reference only)', 'Wilson & Murrell values work (practice reference only)', 'not a validated values scale'],
+    caution: 'reflection',
+  },
+  'career-values-test': {
+    basis: ['18 original OIYO-authored work-value prompts across six dimensions', 'O*NET Work Values and CareerOneStop Work Values Matcher (concept references only)', 'not the retired O*NET Work Importance Locator and not a validated scale'],
     caution: 'reflection',
   },
   mbti: {
@@ -177,8 +185,9 @@ const CAUTION_TEXT: Record<TestSourceNote['caution'], Record<Locale, string>> = 
 
 export function getTestSourceNote(pathWithoutLocale: string): TestSourceNote | undefined {
   const parts = pathWithoutLocale.split('/').filter(Boolean);
-  if (parts.at(-1) !== 'test') return undefined;
-  return TEST_SOURCE_NOTES[parts.slice(0, -1).join('/')];
+  if (parts.at(-1) === 'test') return TEST_SOURCE_NOTES[parts.slice(0, -1).join('/')];
+  const standaloneTest = parts.at(-1);
+  return standaloneTest?.endsWith('-test') ? TEST_SOURCE_NOTES[standaloneTest] : undefined;
 }
 
 export function getCautionText(caution: TestSourceNote['caution'], locale: Locale): string {

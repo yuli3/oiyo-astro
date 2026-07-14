@@ -4,6 +4,7 @@ import {
   OIYO_TEST_RESULTS_STORAGE_KEY,
   listStoredTestResults,
   recordTestResult,
+  removeStoredTestInputs,
 } from './test-results';
 
 describe('test result history storage', () => {
@@ -55,5 +56,31 @@ describe('test result history storage', () => {
     expect(results[1]).toMatchObject({ kind: 'psychometric', testId: 'political-compass', resultLabel: 'ETGL' });
     expect(results[0].createdAt).toMatch(/^\d{4}-\d{2}-\d{2}T/);
     expect(results[0].id).toContain('mayan-kin');
+  });
+
+  it('removes legacy inputs only from the requested test history', () => {
+    recordTestResult({
+      kind: 'preference',
+      testId: 'political-compass',
+      title: 'Political compass',
+      resultLabel: 'ETGL',
+      inputs: { answers: { s1_1: '3' } },
+      result: { code: 'ETGL' },
+    });
+    recordTestResult({
+      kind: 'mystic',
+      testId: 'mayan-kin',
+      title: 'Mayan kin',
+      resultLabel: 'KIN 42',
+      inputs: { birthDate: '1990-01-01' },
+    });
+
+    expect(removeStoredTestInputs('political-compass')).toBe(1);
+
+    const [mayan, political] = listStoredTestResults();
+    expect(mayan.inputs).toEqual({ birthDate: '1990-01-01' });
+    expect(political).not.toHaveProperty('inputs');
+    expect(political.result).toEqual({ code: 'ETGL' });
+    expect(removeStoredTestInputs('political-compass')).toBe(0);
   });
 });

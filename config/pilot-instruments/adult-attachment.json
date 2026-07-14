@@ -1,0 +1,29 @@
+{
+  "assessmentId": "adult-attachment",
+  "canonicalSourceLanguage": "en",
+  "instrumentVersion": "attachment-oiyo-anxiety-avoidance-12-v1",
+  "allowedLocales": ["ko", "en", "ja", "zh", "fr", "es"],
+  "localeVersions": {
+    "ko": { "translationStatus": "draft", "promptRevision": "2026-07-14-r1", "promptHashSha256": "3d5c84eaee10296152a78555fafe417d449ab90f0ccfd1fc8150ad6ada4461aa", "administeredFormHashSha256": "9892d117abb1d91b8c2145810b882a5783f2d48a80c054c38482884e73a10988" },
+    "en": { "translationStatus": "source-draft", "promptRevision": "2026-07-14-r1", "promptHashSha256": "ecf363dbcd8c04bfe265d595ced048f73b727aa601b5e63fba87fdd599de2ae4", "administeredFormHashSha256": "cefde09b6fb24012f96db39be73d3f9f5a64036c50e159bdffaf817ee27b960a" },
+    "ja": { "translationStatus": "draft", "promptRevision": "2026-07-14-r1", "promptHashSha256": "5452c6c19e8084c44ff09212b4b03b33c1b0848c367dff827bb42fdbc742ebfd", "administeredFormHashSha256": "1fdef97c8198a17a7f5298a99b4da60924d4f40527e754b3d9bdaeba29e8f291" },
+    "zh": { "translationStatus": "draft", "promptRevision": "2026-07-14-r1", "promptHashSha256": "5b0702970c5b800978e8115f4b66cea937eb3cc08375b40f743545d55eec2863", "administeredFormHashSha256": "4c6f7511e161fe559ed1b4783c878d274c44f11ebe611ea23d09324dec17cdd5" },
+    "fr": { "translationStatus": "draft", "promptRevision": "2026-07-14-r1", "promptHashSha256": "b58ae9cf1464c4db663a5095bb2c46240817e3cdffa7a5509d761b2c3a0128e9", "administeredFormHashSha256": "a1268cc799feb42c1e635f1718b0561629511f6aceeb14012b0750c05ac972e1" },
+    "es": { "translationStatus": "draft", "promptRevision": "2026-07-14-r1", "promptHashSha256": "45b5fc757d6f9864b8b873349abf6d6695e5065302926569efd9e491b981fa71", "administeredFormHashSha256": "d508f9a99522f2fbafc161e1b759ab4ca054c76fe0300624e66266e68125f6ac" }
+  },
+  "responseScale": { "min": 1, "max": 5 },
+  "items": [
+    { "id": "anxiety-1", "dimension": "anxiety", "reverse": false },
+    { "id": "anxiety-2", "dimension": "anxiety", "reverse": false },
+    { "id": "anxiety-3", "dimension": "anxiety", "reverse": false },
+    { "id": "anxiety-4", "dimension": "anxiety", "reverse": false },
+    { "id": "anxiety-5", "dimension": "anxiety", "reverse": true },
+    { "id": "anxiety-6", "dimension": "anxiety", "reverse": true },
+    { "id": "avoidance-1", "dimension": "avoidance", "reverse": false },
+    { "id": "avoidance-2", "dimension": "avoidance", "reverse": false },
+    { "id": "avoidance-3", "dimension": "avoidance", "reverse": false },
+    { "id": "avoidance-4", "dimension": "avoidance", "reverse": false },
+    { "id": "avoidance-5", "dimension": "avoidance", "reverse": true },
+    { "id": "avoidance-6", "dimension": "avoidance", "reverse": true }
+  ]
+}

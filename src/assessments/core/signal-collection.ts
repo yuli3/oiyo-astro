@@ -16,6 +16,7 @@ export type AssessmentPluginLookup = (id: string) => AssessmentPlugin | undefine
 export function ontologySignalsFromResults(
   results: readonly CanonicalAssessmentResult[],
   lookup: AssessmentPluginLookup = getAssessmentPlugin,
+  now: Date = new Date(),
 ): OntologySignal[] {
   const newestByAssessment = new Map<string, CanonicalAssessmentResult>();
 
@@ -34,7 +35,7 @@ export function ontologySignalsFromResults(
     } catch {
       return [];
     }
-  });
+  }).filter((signal) => !signal.expiresAt || signal.expiresAt > now.toISOString());
 
   // Multiple instruments can measure the same construct (for example a
   // detailed and a quick RIASEC form). Keep the higher-confidence signal;
