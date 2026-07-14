@@ -34,6 +34,14 @@ jobs:
 
       - name: Test
         run: npm run test -- --run
+        env:
+          # The saju true-solar-time engine derives the standard meridian from the
+          # *runtime* timezone (kernel/astronomy.ts getTrueSolarTime uses
+          # date.getTimezoneOffset()), so its golden suite only holds under KST.
+          # Pinning TZ keeps CI reproducible; it does NOT fix the underlying bug —
+          # in the browser the same birth data yields different pillars depending on
+          # the visitor's timezone. Tracked separately; do not treat this as closed.
+          TZ: Asia/Seoul
 
       - name: Build
         run: npm run build
