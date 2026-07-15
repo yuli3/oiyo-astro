@@ -50,6 +50,14 @@ def redirect_covers(sources: list[str], path: str) -> bool:
         if src.endswith("*"):
             if path.startswith(src[:-1].rstrip("/")):
                 return True
+        elif ":" in src:
+            # placeholder segments (e.g. /:lang/foo) match any single segment
+            s_seg = norm(src).split("/")
+            p_seg = path.split("/")
+            if len(s_seg) == len(p_seg) and all(
+                a.startswith(":") or a == b for a, b in zip(s_seg, p_seg)
+            ):
+                return True
         elif norm(src) == path:
             return True
     return False
@@ -84,7 +92,7 @@ def main() -> None:
     orphans = [
         k for k in pages
         if inbound[k] == 0
-        and re.match(r"^/(en|ko|ja|zh|cn|fr|es)/.+", k)
+        and re.match(r"^/(en|ko|ja|zh|fr|es)/.+", k)
         and not k.endswith(("/404",))
     ]
 

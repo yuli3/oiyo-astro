@@ -95,7 +95,7 @@ const appLd = {
 };
 ---
 
-<Layout title={m.title} description={m.description}>
+<Layout title={m.title} description={m.description} locale={locale}>
   <main class="mx-auto max-w-3xl px-4 py-8">
     <p class="mb-6 text-sm leading-relaxed text-gray-600">{c.lead}</p>
 
@@ -117,7 +117,7 @@ const appLd = {
       <h2 class="text-lg font-black text-gray-900">{c.relatedTitle}</h2>
       <div class="mt-4 grid gap-3 sm:grid-cols-2">
         {c.related.map((r) => (
-          <a href={r.href} class="rounded-xl border border-gray-200 p-3 transition-colors hover:border-emerald-300" {...(r.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+          <a href={r.external ? r.href : `/${locale}${r.href}`} class="rounded-xl border border-gray-200 p-3 transition-colors hover:border-emerald-300" {...(r.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
             <div class="text-sm font-bold text-gray-800">{r.label}</div>
             <div class="mt-0.5 text-xs text-gray-500">{r.desc}</div>
           </a>
