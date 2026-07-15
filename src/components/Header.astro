@@ -16,7 +16,7 @@ const isLocalized = LOCALE_PREFIX.test(Astro.url.pathname);
 const currentPath = isLocalized ? Astro.url.pathname.replace(LOCALE_PREFIX, '') || '/' : '/';
 ---
 
-<header class="sticky top-0 z-50 bg-white/80 backdrop-blur-xl border-b border-green-50">
+<header class="sticky top-0 z-50 bg-white border-b border-green-50">
   <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
     <!-- Logo -->
     <a href={localePath(locale, '/')} class="font-black text-xl text-green-800 tracking-tight hover:text-green-600 transition-colors">
