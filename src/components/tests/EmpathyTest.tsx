@@ -1,8 +1,15 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
+import { gaEvent } from '@/lib/analytics/ga-event';
+import {
+  buildEmpathyProfile,
+  EMPATHY_MAX_DIMENSION_SCORE,
+  scoreEmpathyAnswers,
+  type EmpathyDimension,
+} from '@/lib/empathy-profile';
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
@@ -10,7 +17,8 @@ interface Props {
   locale?: string;
 }
 
-type EmpathyType = "cognitive" | "affective" | "compassionate";
+type EmpathyType = EmpathyDimension;
+type EmpathyResult = EmpathyType | "balanced";
 
 interface Question {
   ko: string;
@@ -269,43 +277,127 @@ const ui: Record<SupportedLocale, {
   },
 };
 
+const resultUi: Record<SupportedLocale, {
+  strengths: string;
+  watchOut: string;
+  score: string;
+  outOf: string;
+  mixedTitle: string;
+  mixedBody: string;
+  sharedTitle: string;
+  sharedBody: string;
+  back: string;
+  progressLabel: string;
+  clearProfileNote: string;
+}> = {
+  ko: {
+    strengths: "강점", watchOut: "주의할 점", score: "점수", outOf: "16점 만점",
+    mixedTitle: "여러 공감 방식이 함께 두드러집니다",
+    mixedBody: "상위 경향들의 점수 차이가 {gap}점 이내입니다. 하나의 고정 유형보다 강조된 경향을 함께 읽어보세요. 이는 통계적 신뢰구간이 아니라 과도한 단정을 피하기 위한 해석 기준입니다.",
+    sharedTitle: "공유된 유형 요약",
+    sharedBody: "이 링크에는 원답변이나 세부 점수가 포함되지 않습니다. 아래 내용은 공유된 균형·혼합 프로필의 일반 요약이며, 정확한 점수표를 보려면 이 기기에서 테스트를 완료하세요.",
+    back: "이전 질문", progressLabel: "공감 테스트 진행률", clearProfileNote: "현재 답변에서는 이 경향이 상대적으로 더 두드러졌습니다. 상황에 따라 달라질 수 있는 자기보고 요약입니다.",
+  },
+  en: {
+    strengths: "Strengths", watchOut: "Watch out", score: "Score", outOf: "out of 16",
+    mixedTitle: "Multiple empathy styles stand out together",
+    mixedBody: "The leading scores are within {gap} points. Read the highlighted tendencies together rather than treating one as a fixed type. This is an interpretation guardrail, not a statistical confidence interval.",
+    sharedTitle: "Shared type summary",
+    sharedBody: "This link contains no item responses or detailed scores. The text below is a general summary of a shared balanced or mixed profile. Complete the test on this device to see a score profile.",
+    back: "Previous question", progressLabel: "Empathy test progress", clearProfileNote: "In your current answers, this tendency stood out relative to the others. It is a context-sensitive self-report summary.",
+  },
+  ja: {
+    strengths: "強み", watchOut: "注意点", score: "スコア", outOf: "16点満点",
+    mixedTitle: "複数の共感スタイルがともに目立ちます",
+    mixedBody: "上位傾向の差は{gap}点以内です。一つの固定タイプではなく、強調された傾向を合わせて読んでください。これは統計的信頼区間ではなく、断定を避けるための解釈基準です。",
+    sharedTitle: "共有されたタイプの要約",
+    sharedBody: "このリンクには回答や詳細スコアは含まれません。以下は共有されたバランス型・混合プロファイルの一般的な要約です。スコア表を見るには、この端末でテストを完了してください。",
+    back: "前の質問", progressLabel: "共感テストの進捗", clearProfileNote: "現在の回答では、この傾向が他より相対的に目立ちました。状況によって変わる自己報告の要約です。",
+  },
+  zh: {
+    strengths: "优势", watchOut: "注意点", score: "得分", outOf: "满分16分",
+    mixedTitle: "多种共情方式同时突出",
+    mixedBody: "领先倾向的分差在{gap}分以内。请同时理解突出倾向，而不要把其中一种当作固定类型。这只是避免过度断言的解释规则，并非统计置信区间。",
+    sharedTitle: "分享的类型摘要",
+    sharedBody: "此链接不包含原始回答或详细分数。以下内容只是对分享的均衡或混合特征的一般说明；如需查看分数概况，请在此设备上完成测试。",
+    back: "上一题", progressLabel: "共情测试进度", clearProfileNote: "在你当前的回答中，这种倾向相对更突出。这是一份会随情境变化的自我报告摘要。",
+  },
+  fr: {
+    strengths: "Points forts", watchOut: "Points de vigilance", score: "Score", outOf: "sur 16",
+    mixedTitle: "Plusieurs styles d’empathie ressortent ensemble",
+    mixedBody: "Les tendances principales se situent à {gap} points d’écart au maximum. Lisez-les ensemble plutôt que d’en faire un type fixe. Il s’agit d’un garde-fou d’interprétation, pas d’un intervalle de confiance statistique.",
+    sharedTitle: "Résumé du type partagé",
+    sharedBody: "Ce lien ne contient ni réponses ni scores détaillés. Le texte ci-dessous résume de façon générale un profil équilibré ou mixte partagé. Terminez le test sur cet appareil pour voir le profil chiffré.",
+    back: "Question précédente", progressLabel: "Progression du test d’empathie", clearProfileNote: "Dans vos réponses actuelles, cette tendance ressort relativement aux autres. Il s’agit d’un résumé auto-déclaré sensible au contexte.",
+  },
+  es: {
+    strengths: "Fortalezas", watchOut: "A tener en cuenta", score: "Puntuación", outOf: "de 16",
+    mixedTitle: "Varios estilos de empatía destacan juntos",
+    mixedBody: "Las tendencias principales están a un máximo de {gap} puntos. Léelas juntas en vez de tratar una como tipo fijo. Es una cautela interpretativa, no un intervalo de confianza estadístico.",
+    sharedTitle: "Resumen del tipo compartido",
+    sharedBody: "Este enlace no contiene respuestas ni puntuaciones detalladas. El texto siguiente resume de forma general un perfil equilibrado o mixto compartido. Completa el test en este dispositivo para ver el perfil de puntuaciones.",
+    back: "Pregunta anterior", progressLabel: "Progreso del test de empatía", clearProfileNote: "En tus respuestas actuales, esta tendencia destaca en relación con las demás. Es un resumen autoinformado que depende del contexto.",
+  },
+};
+
 export default function EmpathyTest({ locale: localeProp }: Props) {
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const t = ui[locale];
+  const rt = resultUi[locale];
 
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
-  const [result, setResult] = useState<EmpathyType | null>(null);
+  const [result, setResult] = useState<EmpathyResult | null>(null);
+  const [sharedSummary, setSharedSummary] = useState(false);
   const [copied, setCopied] = useState(false);
+  const questionRef = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    const em = params.get("em") as EmpathyType | null;
-    if (em && em in typeInfo) setResult(em);
+    const em = params.get("em") as EmpathyResult | null;
+    if (em === "balanced" || (em && em in typeInfo)) {
+      setResult(em);
+      setSharedSummary(true);
+    }
   }, []);
+
+  useEffect(() => {
+    if (answers.length > 0 && !result) questionRef.current?.focus();
+  }, [idx, answers.length, result]);
 
   function pick(score: number) {
     const next = [...answers, score];
     if (next.length < questions.length) {
       setAnswers(next);
-      setTimeout(() => setIdx(next.length), 280);
+      setIdx(next.length);
     } else {
-      const scores: Record<EmpathyType, number> = { cognitive: 0, affective: 0, compassionate: 0 };
-      questions.forEach((q, i) => { scores[q.type] += next[i]; });
-      const dominant = (Object.keys(scores) as EmpathyType[]).reduce((a, b) => scores[a] >= scores[b] ? a : b);
+      const scores = scoreEmpathyAnswers(next, questions.map((q) => q.type));
+      if (!scores) return;
+      const profile = buildEmpathyProfile(scores);
+      const shareResult: EmpathyResult = profile.isClose ? "balanced" : profile.primary;
       setAnswers(next);
-      setResult(dominant);
+      setResult(shareResult);
+      setSharedSummary(false);
+      gaEvent("test_completed", { test_id: "empathy", instrument_version: "empathy-oiyo-12-v1" });
       const url = new URL(window.location.href);
-      url.searchParams.set("em", dominant);
+      url.searchParams.set("em", shareResult);
       window.history.replaceState({}, "", url.toString());
     }
+  }
+
+  function goBack() {
+    if (idx === 0 || result) return;
+    const next = answers.slice(0, -1);
+    setAnswers(next);
+    setIdx(idx - 1);
   }
 
   function restart() {
     setIdx(0);
     setAnswers([]);
     setResult(null);
+    setSharedSummary(false);
     const url = new URL(window.location.href);
     url.searchParams.delete("em");
     window.history.replaceState({}, "", url.toString());
@@ -313,6 +405,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
 
   async function share() {
     const url = window.location.href;
+    gaEvent("share_click", { test_id: "empathy", instrument_version: "empathy-oiyo-12-v1" });
     if (navigator.share) {
       await navigator.share({ title: t.title, url });
     } else {
@@ -323,46 +416,81 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
   }
 
   if (result) {
-    const scores: Record<EmpathyType, number> = { cognitive: 0, affective: 0, compassionate: 0 };
-    questions.forEach((q, i) => { scores[q.type] += answers[i] ?? 0; });
-    const total = Object.values(scores).reduce((a, b) => a + b, 0) || 1;
-    const info = typeInfo[result];
-
-    const chartData = (["cognitive", "affective", "compassionate"] as EmpathyType[]).map((type) => ({
-      name: typeInfo[type].name[locale],
-      value: scores[type],
-      pct: Math.round((scores[type] / total) * 100),
-      color: typeInfo[type].color, fill: typeInfo[type].color,
-    })).sort((a, b) => b.value - a.value);
+    const scores = answers.length === questions.length
+      ? scoreEmpathyAnswers(answers, questions.map((q) => q.type))
+      : null;
+    const profile = scores ? buildEmpathyProfile(scores) : null;
+    const leadingDimension = profile?.isClose ? null : profile?.primary ?? (result === "balanced" ? null : result);
+    const info = leadingDimension ? typeInfo[leadingDimension] : null;
+    const chartData = profile?.ranked.map(({ dimension, score, percent }) => ({
+      dimension,
+      name: typeInfo[dimension].name[locale],
+      value: score,
+      percent,
+      fill: typeInfo[dimension].color,
+    })) ?? [];
+    const resultLabel = profile?.isClose
+      ? profile.closeDimensions.map((dimension) => typeInfo[dimension].name[locale]).join(" + ")
+      : info?.name[locale] ?? rt.mixedTitle;
 
     return (
       <div className="space-y-6">
         <div className="text-center space-y-2">
           <h1 className="text-2xl font-bold text-gray-900">{t.resultTitle}</h1>
-          <div className="inline-block px-4 py-2 rounded-full text-white font-semibold text-lg"
-            style={{ backgroundColor: info.color }}>
-            {info.name[locale]}
+          <div className="inline-flex max-w-full justify-center whitespace-normal px-4 py-2 rounded-2xl text-white font-semibold text-lg"
+            style={{ backgroundColor: info?.color ?? "#7c3aed" }}>
+            {resultLabel}
           </div>
         </div>
 
-        <div className="bg-gray-50 rounded-xl p-4">
-          <h2 className="font-semibold text-gray-700 mb-3 text-sm">{t.allTypes}</h2>
-          <ResponsiveContainer width="100%" height={140}>
-            <BarChart data={chartData} layout="vertical" margin={{ left: 16, right: 24 }}>
-              <XAxis type="number" hide />
-              <YAxis type="category" dataKey="name" width={110} tick={{ fontSize: 12 }} />
-              <Tooltip formatter={((v: number) => `${v}점`) as any} />
-              <Bar dataKey="value" radius={[0, 4, 4, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+        {sharedSummary && !profile && (
+          <div className="rounded-xl border border-sky-200 bg-sky-50 p-4" role="note">
+            <h2 className="font-semibold text-sky-950">{rt.sharedTitle}</h2>
+            <p className="mt-1 text-sm leading-6 text-sky-800">{rt.sharedBody}</p>
+          </div>
+        )}
 
+        {profile && (
+          <div className="bg-gray-50 rounded-xl p-4">
+            <h2 className="font-semibold text-gray-700 mb-3 text-sm">{t.allTypes}</h2>
+            <div className="h-36 w-full" aria-hidden="true">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={chartData} layout="vertical" margin={{ left: 4, right: 12 }}>
+                  <XAxis type="number" domain={[0, EMPATHY_MAX_DIMENSION_SCORE]} hide />
+                  <YAxis type="category" dataKey="name" width={104} tick={{ fontSize: 11 }} />
+                  <Tooltip formatter={((value: number) => [`${value} ${rt.outOf}`, rt.score]) as any} />
+                  <Bar dataKey="value" radius={[0, 4, 4, 0]} isAnimationActive={false} />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+            <dl className="mt-3 grid gap-2 sm:grid-cols-3">
+              {chartData.map((item) => (
+                <div key={item.dimension} className="rounded-lg border border-gray-200 bg-white px-3 py-2">
+                  <dt className="text-xs font-medium text-gray-600">{item.name}</dt>
+                  <dd className="mt-1 font-bold text-gray-900">
+                    {item.value} {rt.outOf} <span className="text-xs font-medium text-gray-500">({item.percent}%)</span>
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )}
+
+        {profile?.isClose && (
+          <div className="rounded-xl border border-violet-200 bg-violet-50 p-4" role="note">
+            <h2 className="font-semibold text-violet-950">{rt.mixedTitle}</h2>
+            <p className="mt-1 text-sm leading-6 text-violet-800">{rt.mixedBody.replace("{gap}", String(profile.closeGap))}</p>
+          </div>
+        )}
+
+        {info && !profile?.isClose && (
         <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
+          <p className="rounded-lg bg-slate-50 p-3 text-sm leading-6 text-slate-700">{rt.clearProfileNote}</p>
           <p className="text-gray-700 leading-relaxed">{info.description[locale]}</p>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="bg-green-50 rounded-lg p-4">
-              <h3 className="font-semibold text-green-800 mb-2">✓ Strengths</h3>
+              <h3 className="font-semibold text-green-800 mb-2">✓ {rt.strengths}</h3>
               <ul className="space-y-1">
                 {info.strengths[locale].map((s, i) => (
                   <li key={i} className="text-sm text-green-700">• {s}</li>
@@ -370,7 +498,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
               </ul>
             </div>
             <div className="bg-amber-50 rounded-lg p-4">
-              <h3 className="font-semibold text-amber-800 mb-2">⚠ Watch out</h3>
+              <h3 className="font-semibold text-amber-800 mb-2">⚠ {rt.watchOut}</h3>
               <ul className="space-y-1">
                 {info.risks[locale].map((r, i) => (
                   <li key={i} className="text-sm text-amber-700">• {r}</li>
@@ -384,14 +512,16 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
             <p className="text-sm text-blue-700">{info.growth[locale]}</p>
           </div>
         </div>
+        )}
 
         <p className="text-xs text-gray-400 text-center">{t.note}</p>
         <ShareResultButton
           locale={locale}
           heading={t.title}
-          resultTitle={info.name[locale]}
-          emoji={result === 'cognitive' ? '🧠' : result === 'affective' ? '💗' : '🤝'}
-          description={info.description[locale]}
+          resultTitle={resultLabel}
+          emoji={leadingDimension === 'cognitive' ? '🧠' : leadingDimension === 'affective' ? '💗' : leadingDimension === 'compassionate' ? '🤝' : '🧭'}
+          description={profile?.isClose ? rt.mixedBody.replace("{gap}", String(profile.closeGap)) : info?.description[locale] ?? rt.sharedBody}
+          onShareClick={() => gaEvent("share_click", { test_id: "empathy", instrument_version: "empathy-oiyo-12-v1" })}
         />
         <ResultNextSteps
           locale={locale}
@@ -403,13 +533,13 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         />
         <RelatedReading locale={locale} topic="empathy" />
 
-        <div className="flex gap-3 justify-center">
+        <div className="flex flex-col gap-3 sm:flex-row sm:justify-center">
           <button onClick={restart}
-            className="px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium transition-colors text-sm">
+            className="min-h-11 px-5 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-full font-medium transition-colors text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700">
             {t.restart}
           </button>
           <button onClick={share}
-            className="px-5 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-full font-medium transition-colors text-sm">
+            className="min-h-11 px-5 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-full font-medium transition-colors text-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-700">
             {copied ? t.copied : t.share}
           </button>
         </div>
@@ -426,21 +556,31 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         <p className="text-sm text-gray-500">{t.subtitle}</p>
       </div>
 
-      <div className="flex justify-between items-center text-sm text-gray-500">
-        <span>{t.progress} {idx + 1} / {questions.length}</span>
-        <div className="w-48 bg-gray-200 rounded-full h-1.5">
+      <div className="flex items-center gap-3 text-sm text-gray-500">
+        <span className="shrink-0">{t.progress} {idx + 1} / {questions.length}</span>
+        <div
+          className="h-1.5 min-w-0 flex-1 rounded-full bg-gray-200 sm:max-w-48"
+          role="progressbar"
+          aria-label={rt.progressLabel}
+          aria-valuemin={1}
+          aria-valuemax={questions.length}
+          aria-valuenow={idx + 1}
+          aria-valuetext={`${idx + 1} / ${questions.length}`}
+        >
           <div className="bg-pink-500 h-1.5 rounded-full transition-all"
             style={{ width: `${((idx + 1) / questions.length) * 100}%` }} />
         </div>
       </div>
 
       <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-5 shadow-sm">
-        <p className="text-base font-medium text-gray-800 leading-relaxed">{q[locale]}</p>
+        <div aria-live="polite" aria-atomic="true">
+          <p ref={questionRef} tabIndex={-1} className="text-base font-medium text-gray-800 leading-relaxed focus:outline-none">{q[locale]}</p>
+        </div>
         <p className="text-xs text-gray-400">{t.scale}</p>
         <div className="space-y-2">
           {scaleLabels[locale].map((label, i) => (
-            <button key={i} onClick={() => pick(i)}
-              className="w-full flex items-center gap-3 p-3 rounded-lg border border-gray-100 hover:border-pink-300 hover:bg-pink-50 transition-colors text-left">
+            <button key={i} type="button" onClick={() => pick(i)}
+              className="min-h-11 w-full flex items-center gap-3 p-3 rounded-lg border border-gray-100 hover:border-pink-300 hover:bg-pink-50 transition-colors text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">
               <div className="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center text-xs font-bold text-gray-500">
                 {i}
               </div>
@@ -449,6 +589,15 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
           ))}
         </div>
       </div>
+      {idx > 0 && (
+        <button
+          type="button"
+          onClick={goBack}
+          className="min-h-11 rounded-full px-4 py-2 text-sm font-medium text-gray-700 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700"
+        >
+          ← {rt.back}
+        </button>
+      )}
     </div>
   );
 }

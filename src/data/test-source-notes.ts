@@ -43,7 +43,7 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     caution: 'clinical',
   },
   empathy: {
-    basis: ['Interpersonal Reactivity Index (IRI)', 'empathy quotient concepts'],
+    basis: ['12 original OIYO-authored reflection prompts', 'cognitive, affective, and compassionate empathy concepts (theory reference only)', 'not the IRI, Empathy Quotient, or a validated scale'],
     caution: 'reflection',
   },
   enneagram: {

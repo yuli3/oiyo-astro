@@ -106,9 +106,9 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
     B('anger-management-psychology', { ko: '분노 관리의 심리학', en: 'The psychology of anger management', ja: '怒りの心理学' }, ['ko', 'en', 'zh', 'fr', 'es']),
   ],
   empathy: [
-    W('meaning-of-hsp', { ko: 'HSP — 매우 민감한 사람', en: 'HSP — the highly sensitive person', ja: 'HSP — とても敏感な人' }),
-    blogLookingGlass,
-    B('inner-child-wounded-self', { ko: '내면 아이 — 상처 입은 자기', en: 'The inner child', ja: 'インナーチャイルド' }),
+    B('magazine-empathy-types-and-test', { ko: '인지·정서·자비적 공감 이해하기', en: 'Cognitive, affective & compassionate empathy', ja: '認知・情動・思いやりの共感を理解する' }),
+    B('empathy-types-and-boundaries', { ko: '공감 유형과 건강한 경계', en: 'Empathy styles & healthy boundaries', ja: '' }, ['ko', 'en']),
+    wikiSelfCompassion,
   ],
   eq: [
     wikiEmotionReg,
