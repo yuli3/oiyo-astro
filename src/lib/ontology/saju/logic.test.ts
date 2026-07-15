@@ -126,6 +126,32 @@ describe("Saju Logic Golden Suite", () => {
     });
   });
 
+  describe("Layer 2.6: Month pillar correctness (절기 anchors)", () => {
+    // Month branch is set by the sun's longitude, not the calendar date. A prior
+    // fix moved 소한/대한 into January of the *same* Gregorian year, which made the
+    // old descending getSolarTermDate scan collapse every mid-year month pillar to
+    // 축월 (Ox). These are external 만세력 facts across all four seasons.
+    const full = (iso: string) => {
+      const r = calculateSaju(new Date(iso), false, "male", 135.0);
+      return `${r.year.heavenlyStem}-${r.year.earthlyBranch} ${r.month.heavenlyStem}-${r.month.earthlyBranch}`;
+    };
+
+    it("pins known year+month pillars across the seasons", () => {
+      expect(full("2000-05-15T11:00:00+09:00")).toBe("GYEONG-JIN SIN-SA"); // 입하~소만, 巳月
+      expect(full("2024-06-01T11:00:00+09:00")).toBe("GAP-JIN GI-SA"); //   소만~망종, 巳月
+      expect(full("2024-08-31T11:00:00+09:00")).toBe("GAP-JIN IM-SIN"); //  처서, 申月
+      expect(full("2024-12-25T11:00:00+09:00")).toBe("GAP-JIN BYEONG-JA"); // 동지, 子月
+      expect(full("2024-01-10T11:00:00+09:00")).toBe("GYE-MYO EUL-CHUK"); // 소한, 丑月 (前 입춘)
+    });
+
+    it("switches the month branch at the seasonal node, not the calendar month", () => {
+      // Ipchun (315 deg) opens 寅月; a birth on Ipchun evening is already In/Tiger.
+      expect(full("2024-02-04T18:00:00+09:00")).toBe("GAP-JIN BYEONG-IN");
+      // The day before is still the previous (丑/Ox) month — and the previous year.
+      expect(full("2024-02-03T18:00:00+09:00")).toBe("GYE-MYO EUL-CHUK");
+    });
+  });
+
   describe("Layer 2.2: Daewun Direction", () => {
     it("should determine correct forward/backward direction based on Gender x Year Stem", () => {
       // 2024 is Gap-Jin (Yang Wood Year) -> Yang Year

@@ -2,7 +2,7 @@ import { calculateTrueSolarTime } from "@/lib/ontology/saju-core/advanced-logic"
 import { BRANCH_ORDER } from "@/manifest/data/saju/branches";
 import { STEM_ORDER } from "@/manifest/data/saju/stems";
 
-import { getSolarTermDate } from "../kernel/astronomy";
+import { getSolarLongitude, getSolarTermDate } from "../kernel/astronomy";
 import { earthlyBranches, heavenlyStems, SIXTY_GANZHI } from "./data";
 import {
   EarthlyBranch,
@@ -265,24 +265,20 @@ export function calculateSaju(
   const adjustedYearIndex = yearIndex < 0 ? yearIndex + 60 : yearIndex;
   const yearGanzhi = SIXTY_GANZHI[adjustedYearIndex];
 
-  // 2. Month Pillar (24 Solar Terms precision)
-  // Use absolute birthDate for month-defining orbital transitions.
-  let currentTermIdx = -1;
-  for (let i = 23; i >= 0; i--) {
-    if (birthDate >= getSolarTermDate(year, i)) {
-      currentTermIdx = i;
-      break;
-    }
-  }
-
-  if (currentTermIdx === -1) {
-    currentTermIdx = 23;
-  }
-
-  const branchIdxMap = [
-    2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 0, 0, 1, 1,
-  ];
-  const monthBranchIndex = branchIdxMap[currentTermIdx];
+  // 2. Month Pillar
+  // The month branch is fixed by the sun's ecliptic longitude, not the calendar
+  // date: the twelve "seasonal nodes" (節) sit 30 deg apart, starting at Ipchun
+  // (315 deg = In / Tiger month), so the longitude alone selects the branch,
+  // independent of where the January solar terms land in the Gregorian year.
+  //
+  // The previous implementation scanned getSolarTermDate(year, 23..0). Once the
+  // Ipchun seed was corrected, 소한/대한 (terms 22-23) resolve to *January of the
+  // same year*, so that descending scan matched every mid-year birth against
+  // 대한 and collapsed every month pillar to 축월 (Ox). Deriving from longitude
+  // removes the calendar-year ambiguity entirely.
+  const solarLongitude = getSolarLongitude(birthDate);
+  const monthBranchIndex =
+    (Math.floor((((solarLongitude - 315) % 360) + 360) % 360 / 30) + 2) % 12;
 
   const monthBranch = BRANCH_ORDER[monthBranchIndex];
 
