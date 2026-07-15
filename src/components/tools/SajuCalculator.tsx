@@ -275,7 +275,7 @@ const L: Record<Locale, {
     months: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
   },
   en: {
-    title: 'Saju (사주) Calculator', subtitle: 'Four Pillars of Destiny — Birth chart analysis',
+    title: 'Saju Palja Calculator', subtitle: 'Free Korean Four Pillars birth chart reading',
     birthYear: 'Birth Year', birthMonth: 'Birth Month', birthDay: 'Birth Day', birthHour: 'Birth Hour',
     calcBtn: 'Read My Saju', resetBtn: 'Reset',
     unknownHour: 'Unknown',
