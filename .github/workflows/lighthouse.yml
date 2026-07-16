@@ -28,6 +28,10 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # Same ceiling as ci.yml — the site's page count OOMs the default heap
+          # (2026-07-13 scheduled run died with "Ineffective mark-compacts").
+          NODE_OPTIONS: --max-old-space-size=6144
 
       - name: Run Lighthouse CI
         # performance/seo are "error" assertions (fail the check); accessibility/

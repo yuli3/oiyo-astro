@@ -23,7 +23,7 @@ NS = (sys.argv[2].split(",") if len(sys.argv) > 2 else [
     "lifestyle", "mbti", "numerology", "tci", "colorPersonality",
 ])
 
-TAG_STRIP = re.compile(r"<script\b.*?</script>|<style\b.*?</style>|<[^>]+>", re.S)
+TAG_STRIP = re.compile(r"<script\b.*?</script>|<style\b.*?</style>|<pre\b.*?</pre>|<code\b.*?</code>|<[^>]+>", re.S)
 BRACKET_KEY = re.compile(r"\[(?:%s)\.[A-Za-z0-9_.]+\]" % "|".join(map(re.escape, NS)))
 RAW_KEY = re.compile(r"(?<![\w/.@-])(?:%s)\.[a-z][A-Za-z0-9_]*(?:\.[A-Za-z0-9_]+)+(?![\w/-])" % "|".join(map(re.escape, NS)))
 OBJ = re.compile(r"\[object Object\]")
@@ -37,7 +37,10 @@ def main() -> None:
         pages += 1
         text = TAG_STRIP.sub(" ", html.read_text(errors="ignore"))
         key = "/" + str(html.parent.relative_to(DIST))
+        is_en = key.startswith("/en")
         for pat, label in ((BRACKET_KEY, "bracket-key"), (RAW_KEY, "raw-key"), (OBJ, "object"), (UNDEF, "undef")):
+            if label == "undef" and is_en:
+                continue  # "undefined"/"NaN" are legitimate English prose / code talk
             for m in set(pat.findall(text)):
                 # domain-like tokens are not i18n keys
                 if m.split(".")[-1].lower() in {"net", "com", "org", "io", "dev", "kr", "app"}:
