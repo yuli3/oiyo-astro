@@ -1,0 +1,39 @@
+{
+  "schema": "oiyo.sample-report-contract",
+  "schemaVersion": 1,
+  "input": {
+    "canonical": "oiyo.personal-profile-export v2",
+    "rawResponsesAccepted": false
+  },
+  "lifecycle": {
+    "derived": true,
+    "storage": "none",
+    "regeneration": "recompute-from-export",
+    "deletion": "discard-file-only"
+  },
+  "privacy": {
+    "serverTransmission": "none",
+    "rawResponsesIncluded": false
+  },
+  "comparison": {
+    "requiresSameAssessmentId": true,
+    "requiresSameInstrumentVersion": true,
+    "requiresSameScoringVersion": true,
+    "interpretation": "difference between self-reports at two times, never proof of personality change"
+  },
+  "valueAdd": ["evidence-organization", "change-comparison", "user-authored-notes", "self-filled-action-plan"],
+  "document": {
+    "selfContained": true,
+    "scripts": false,
+    "externalRequests": false,
+    "lang": "ko",
+    "printable": true
+  },
+  "requiredSections": ["근거 정리", "변화 비교", "내 메모", "실행 계획 (직접 작성)", "보관·삭제 규칙"],
+  "forbiddenClaims": ["진단", "성공률", "적합 판정", "채용 평가", "치료"],
+  "humanGates": [
+    "public consumer route/UI",
+    "pricing or paywall of any report",
+    "6-locale human copy review before public exposure"
+  ]
+}
