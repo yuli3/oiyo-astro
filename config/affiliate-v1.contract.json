@@ -1,0 +1,29 @@
+{
+  "schema": "oiyo.affiliate-contract",
+  "schemaVersion": 1,
+  "pilot": {
+    "allowedCategories": ["books-courses", "hobby-tools"],
+    "blockedCategories": ["tax-legal-leads", "finance-products", "health-services"],
+    "principle": "first pilot must be easily reversible; YMYL lead categories stay blocked"
+  },
+  "disclosure": {
+    "placement": "adjacent-to-link",
+    "locales": ["en", "ko", "ja", "zh", "fr", "es"],
+    "linkRel": "sponsored nofollow",
+    "mustState": ["commission possibility", "price unchanged", "not personalized advice"]
+  },
+  "dueDiligence": {
+    "dataSharedWithPartner": "none",
+    "liveRequires": ["contractStatus approved-by-human", "pilot-allowed category"],
+    "requiredFields": ["partnerId", "legalName", "offering", "category", "exitPlan", "reviewedBy", "reviewedAt"]
+  },
+  "clickEvent": {
+    "fields": ["event", "pageKey", "partnerId", "position", "schemaVersion"],
+    "forbidden": ["userId", "email", "resultId", "score", "answers", "birth", "name"]
+  },
+  "humanGates": [
+    "real partner contract, commission terms, brand exposure",
+    "any transfer of personal data (forbidden by schema; renegotiation requires new schema version)",
+    "public wiring of AffiliateDisclosure and any affiliate link"
+  ]
+}
