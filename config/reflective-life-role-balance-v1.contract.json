@@ -1,0 +1,35 @@
+{
+  "schema": "oiyo.reflective-activity-contract",
+  "schemaVersion": 1,
+  "activityId": "life-role-balance",
+  "kind": "reflective-activity",
+  "notAnAssessment": true,
+  "authorship": {
+    "provenance": "user-authored-reflection",
+    "userEditable": true,
+    "suggestionsAreStartingPointOnly": true
+  },
+  "boundaries": {
+    "traitAggregation": "none",
+    "noteTextInference": "none",
+    "crisisOrDepressionScreening": "forbidden",
+    "scoring": "none"
+  },
+  "gapSemantics": "desired minus current share, shown as a difference, never as a problem or score",
+  "privacy": {
+    "storage": "caller-owned",
+    "serverTransmission": "none",
+    "rawUserTextIncluded": true
+  },
+  "limits": {
+    "maxRoles": 12,
+    "maxLabelLength": 40,
+    "maxNoteLength": 500,
+    "shareRange": [0, 100]
+  },
+  "humanGates": [
+    "public consumer route/UI",
+    "6-locale human copy review before public exposure",
+    "any persistence beyond the caller (e.g. localStorage wiring)"
+  ]
+}
