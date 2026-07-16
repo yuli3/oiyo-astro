@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import { recordTestResult } from '@/lib/user/test-results'
 import { gaEvent } from '@/lib/analytics/ga-event'
-import { RIASEC_COLORS, TYPE_DETAILS, type RiasecType, type TypeDetail } from './RiasecCareerTest'
+import { RIASEC_COLORS, TYPE_DETAILS, type TypeDetail } from './RiasecCareerTest'
+import { buildRiasecProfile, RIASEC_TYPES, type RiasecType } from '../../lib/riasec-profile'
 import {
   buildRiasecResult,
   recordAssessmentResult,
@@ -27,8 +28,10 @@ const LABELS: Record<QuickLang, {
   questionOf: (c: number, t: number) => string
   scaleLabels: [string, string, string, string, string]
   restart: string; share: string; shareMsg: string
-  yourCode: string; topTypes: string; careers: string
-  profile: string; note: string
+  yourCode: string; topTypes: string; environments: string
+  profile: string; note: string; mixedTitle: string; mixedBody: string
+  clearBody: string; lowFlatBody: string; rawRange: (min: number, max: number) => string
+  tryNext: string
   detailedCta: string; detailedSub: string
   typeNames: Record<RiasecType, string>
   typeFull: Record<RiasecType, string>
@@ -43,9 +46,13 @@ const LABELS: Record<QuickLang, {
     shareMsg: '나의 RIASEC 직업 흥미 유형',
     yourCode: '나의 Holland 코드',
     topTypes: '상위 유형 설명',
-    careers: '추천 직업 분야',
+    environments: '선호할 수 있는 업무환경 예시',
     profile: '6가지 흥미 프로필',
-    note: 'Holland 직업 흥미 이론(RIASEC)에 기반한 간단 검사입니다. 하나의 참고 도구로 활용하세요.',
+    note: '이 결과는 흥미를 돌아보는 비진단 참고 자료이며 직업 적합성이나 능력을 판정하지 않습니다.',
+    mixedTitle: '여러 흥미가 함께 나타난 혼합 프로필', mixedBody: '점수 차이가 작아 하나의 유형으로 단정하기 어렵습니다. 상위 흥미가 함께 쓰이는 환경을 비교해 보세요.',
+    clearBody: '현재 응답에서는 아래 흥미가 비교적 뚜렷합니다. 직업명보다 실제 업무와 환경을 기준으로 확인하세요.',
+    lowFlatBody: '전반적인 점수가 낮고 비슷합니다. 코드보다 작은 활동 실험부터 시작하세요.',
+    rawRange: (min, max) => `유형별 원점수 범위 ${min}–${max}점`, tryNext: '관심 가는 활동 하나를 20분 체험하고 에너지와 몰입도를 기록해 보세요.',
     detailedCta: '24문항 정밀 검사로 더 자세히 알아보기 →',
     detailedSub: '문항을 늘려 유형별 점수를 더 정교하게 확인할 수 있어요',
     typeNames: { R: '현실형', I: '탐구형', A: '예술형', S: '사회형', E: '진취형', C: '관습형' },
@@ -61,9 +68,13 @@ const LABELS: Record<QuickLang, {
     shareMsg: 'My RIASEC Holland Code',
     yourCode: 'My Holland Code',
     topTypes: 'Top Type Descriptions',
-    careers: 'Recommended Career Fields',
+    environments: 'Work-environment examples you may prefer',
     profile: '6-Dimension Interest Profile',
-    note: 'A short version of Holland\'s RIASEC career interest theory. Use as one reference among many.',
+    note: 'This is a non-diagnostic reflection on interests; it does not determine career fit or ability.',
+    mixedTitle: 'A blended interest profile', mixedBody: 'The gaps are too small for a single-type claim. Compare settings where your leading interests can work together.',
+    clearBody: 'These interests are relatively distinct here. Check real tasks and settings rather than treating job titles as prescriptions.',
+    lowFlatBody: 'Scores are low and similar overall. Start with a small activity experiment rather than a code.',
+    rawRange: (min, max) => `Raw score range per type: ${min}–${max}`, tryNext: 'Try one appealing activity for 20 minutes and note your energy and engagement.',
     detailedCta: 'Get a deeper read with the 24-question test →',
     detailedSub: 'More questions give a more precise score per type',
     typeNames: { R: 'Realistic', I: 'Investigative', A: 'Artistic', S: 'Social', E: 'Enterprising', C: 'Conventional' },
@@ -79,9 +90,13 @@ const LABELS: Record<QuickLang, {
     shareMsg: '私のRIASECホランドコード',
     yourCode: '私のホランドコード',
     topTypes: 'トップタイプの説明',
-    careers: 'おすすめ職業分野',
+    environments: '好む可能性のある仕事環境の例',
     profile: '6次元興味プロフィール',
-    note: 'ホランドのRIASEC職業興味理論に基づく簡易検査です。一つの参考ツールとしてご活用ください。',
+    note: 'この結果は興味を振り返る非診断的な参考資料であり、職業適性や能力を判定するものではありません。',
+    mixedTitle: '複数の興味が表れた混合プロフィール', mixedBody: '得点差が小さいため、一つのタイプに断定できません。上位の興味を組み合わせられる環境を比べましょう。',
+    clearBody: '今回の回答では次の興味が比較的明確です。職業名ではなく実際の作業と環境で確かめてください。',
+    lowFlatBody: '全体の得点が低く似ています。コードより小さな活動実験から始めましょう。',
+    rawRange: (min, max) => `タイプ別の素点範囲 ${min}–${max}点`, tryNext: '気になる活動を一つ20分試し、エネルギーと集中度を記録してみましょう。',
     detailedCta: '24問の精密検査でさらに詳しく →',
     detailedSub: '問題数を増やしてタイプ別スコアをより精密に確認できます',
     typeNames: { R: '現実型', I: '研究型', A: '芸術型', S: '社会型', E: '企業型', C: '慣習型' },
@@ -97,9 +112,13 @@ const LABELS: Record<QuickLang, {
     shareMsg: '我的RIASEC霍兰德代码',
     yourCode: '我的霍兰德代码',
     topTypes: '主要类型说明',
-    careers: '推荐职业领域',
+    environments: '你可能偏好的工作环境示例',
     profile: '6维度兴趣概况',
-    note: '基于霍兰德RIASEC职业兴趣理论的简版测试，请作为参考工具使用。',
+    note: '本结果仅用于非诊断性的兴趣反思，不判定职业适配度或能力。',
+    mixedTitle: '多种兴趣并存的混合画像', mixedBody: '分数差距较小，不宜断定为单一类型。请比较能结合主要兴趣的工作环境。',
+    clearBody: '本次回答中这些兴趣相对突出。请根据实际任务和环境探索，而不是把职业名称当作结论。',
+    lowFlatBody: '整体分数较低且接近。与其依赖代码，不如先做一个小型活动实验。',
+    rawRange: (min, max) => `各类型原始分范围：${min}–${max}`, tryNext: '选择一项感兴趣的活动体验20分钟，并记录精力和投入感。',
     detailedCta: '用24题精密测试深入了解 →',
     detailedSub: '题目更多，各类型得分也更精确',
     typeNames: { R: '现实型', I: '研究型', A: '艺术型', S: '社会型', E: '企业型', C: '传统型' },
@@ -115,9 +134,13 @@ const LABELS: Record<QuickLang, {
     shareMsg: 'Mon code Holland RIASEC',
     yourCode: 'Mon code Holland',
     topTypes: 'Description des types principaux',
-    careers: 'Domaines de carrière recommandés',
+    environments: 'Exemples d’environnements de travail possibles',
     profile: 'Profil d\'intérêt en 6 dimensions',
-    note: 'Une version courte de la théorie RIASEC de Holland. À utiliser comme un outil de référence parmi d\'autres.',
+    note: 'Ce résultat est une réflexion non diagnostique sur les intérêts; il ne détermine ni aptitude ni capacité.',
+    mixedTitle: 'Un profil d’intérêts mixte', mixedBody: 'Les écarts sont trop faibles pour conclure à un seul type. Comparez des contextes qui combinent vos intérêts principaux.',
+    clearBody: 'Ces intérêts ressortent relativement ici. Explorez les tâches et contextes réels plutôt que de prescrire un métier.',
+    lowFlatBody: 'Les scores sont globalement faibles et proches. Commencez par une petite expérience d’activité plutôt que par un code.',
+    rawRange: (min, max) => `Plage du score brut par type : ${min}–${max}`, tryNext: 'Essayez une activité attirante pendant 20 minutes et notez votre énergie et votre engagement.',
     detailedCta: 'Approfondir avec le test complet de 24 questions →',
     detailedSub: 'Plus de questions donnent un score plus précis par type',
     typeNames: { R: 'Réaliste', I: 'Investigateur', A: 'Artistique', S: 'Social', E: 'Entreprenant', C: 'Conventionnel' },
@@ -133,9 +156,13 @@ const LABELS: Record<QuickLang, {
     shareMsg: 'Mi código Holland RIASEC',
     yourCode: 'Mi código Holland',
     topTypes: 'Descripción de tipos principales',
-    careers: 'Campos profesionales recomendados',
+    environments: 'Ejemplos de entornos de trabajo que podrías preferir',
     profile: 'Perfil de interés en 6 dimensiones',
-    note: 'Una versión corta de la teoría RIASEC de Holland. Úsala como una referencia más.',
+    note: 'Este resultado es una reflexión no diagnóstica sobre intereses; no determina aptitud ni capacidad profesional.',
+    mixedTitle: 'Un perfil de intereses combinado', mixedBody: 'Las diferencias son demasiado pequeñas para afirmar un solo tipo. Compara entornos que combinen tus intereses principales.',
+    clearBody: 'Estos intereses destacan relativamente aquí. Explora tareas y entornos reales en vez de tomar títulos profesionales como prescripción.',
+    lowFlatBody: 'Las puntuaciones son bajas y similares en general. Empieza con un pequeño experimento de actividad en lugar de un código.',
+    rawRange: (min, max) => `Rango de puntuación bruta por tipo: ${min}–${max}`, tryNext: 'Prueba una actividad atractiva durante 20 minutos y anota tu energía e implicación.',
     detailedCta: 'Profundiza con el test completo de 24 preguntas →',
     detailedSub: 'Más preguntas dan una puntuación más precisa por tipo',
     typeNames: { R: 'Realista', I: 'Investigador', A: 'Artístico', S: 'Social', E: 'Emprendedor', C: 'Convencional' },
@@ -270,43 +297,42 @@ const QUESTIONS: Record<QuickLang, Question[]> = {
   ],
 }
 
-// zh/fr/es descriptions + careers, extending TYPE_DETAILS (ko/en/ja) from
+// zh/fr/es descriptions + work-environment examples, extending TYPE_DETAILS (ko/en/ja) from
 // RiasecCareerTest.tsx so the two components share one source for those
 // three locales instead of duplicating them.
 const TYPE_DETAILS_EXTRA: Record<RiasecType, Record<'zh' | 'fr' | 'es', TypeDetail>> = {
   R: {
-    zh: { description: '现实型偏爱具体而实用的活动。他们喜欢操作工具和机械，或发挥身体技能，从创造看得见的成果中获得满足感。', careers: ['工程师', '建筑师', '医生/外科医生', '农业专家', '运动员', '飞行员', '技工', '消防员', '军人'] },
-    fr: { description: 'Les types réalistes préfèrent les activités concrètes et pratiques. Ils aiment travailler avec des outils et des machines ou mettre en œuvre des compétences physiques, trouvant satisfaction à créer des résultats tangibles.', careers: ['Ingénieur', 'Architecte', 'Médecin/Chirurgien', 'Spécialiste agricole', 'Athlète', 'Pilote', 'Mécanicien', 'Pompier', 'Militaire'] },
-    es: { description: 'Los tipos realistas prefieren actividades concretas y prácticas. Disfrutan trabajando con herramientas y máquinas o aplicando habilidades físicas, y encuentran satisfacción al crear resultados tangibles.', careers: ['Ingeniero', 'Arquitecto', 'Médico/Cirujano', 'Especialista agrícola', 'Atleta', 'Piloto', 'Mecánico', 'Bombero', 'Militar'] },
+    zh: { description: '现实型兴趣可能更接近具体、实用的活动、工具使用和看得见的成果。', environments: ['动手制作和检查的现场', '使用工具或设备的实践环境', '直接解决具体问题的工作'] },
+    fr: { description: 'Les intérêts réalistes peuvent correspondre aux activités concrètes, à l’usage d’outils et aux résultats visibles.', environments: ['fabrication et contrôle pratiques', 'contextes avec outils ou équipements', 'travail qui résout directement des problèmes concrets'] },
+    es: { description: 'Los intereses realistas pueden relacionarse con actividades concretas, uso de herramientas y resultados visibles.', environments: ['fabricación e inspección práctica', 'entornos con herramientas o equipos', 'trabajo que resuelve problemas concretos directamente'] },
   },
   I: {
-    zh: { description: '研究型拥有强烈的求知欲，喜欢分析性思考。他们在理解复杂问题和发现新知识的过程中获得深深的满足感。', careers: ['研究员/科学家', '医生', '数据分析师', '心理学家', '哲学家', '经济学家', '统计学家', '程序员', '天文学家'] },
-    fr: { description: 'Les types investigateurs ont une forte curiosité intellectuelle et aiment la pensée analytique. Ils tirent une profonde satisfaction de la compréhension de problèmes complexes et de la découverte de nouvelles connaissances.', careers: ['Chercheur/Scientifique', 'Médecin', 'Analyste de données', 'Psychologue', 'Philosophe', 'Économiste', 'Statisticien', 'Programmeur', 'Astronome'] },
-    es: { description: 'Los tipos investigadores tienen una fuerte curiosidad intelectual y disfrutan del pensamiento analítico. Obtienen una profunda satisfacción al comprender problemas complejos y descubrir nuevos conocimientos.', careers: ['Investigador/Científico', 'Médico', 'Analista de datos', 'Psicólogo', 'Filósofo', 'Economista', 'Estadístico', 'Programador', 'Astrónomo'] },
+    zh: { description: '研究型兴趣可能更接近深入提问、分析证据和理解原理。', environments: ['有时间研究和检验假设', '以数据和证据判断的工作', '持续探索复杂问题的空间'] },
+    fr: { description: 'Les intérêts investigateurs peuvent correspondre aux questions approfondies, à l’analyse des preuves et à la compréhension des mécanismes.', environments: ['temps pour rechercher et tester des hypothèses', 'travail analytique fondé sur les preuves', 'espace pour explorer des problèmes complexes'] },
+    es: { description: 'Los intereses investigadores pueden relacionarse con preguntas profundas, análisis de evidencias y comprensión de principios.', environments: ['tiempo para investigar y probar hipótesis', 'trabajo analítico basado en evidencias', 'espacio para explorar problemas complejos'] },
   },
   A: {
-    zh: { description: '艺术型重视创造性的自我表达，在能够发挥独创性的环境中如鱼得水。他们对美和美感十分敏锐，在自由的创作活动中获得最大的满足。', careers: ['艺术家/设计师', '作家', '音乐家', '演员', '摄影师', '建筑设计师', 'UX设计师', '广告创意人员', '电影导演'] },
-    fr: { description: "Les types artistiques valorisent l'expression créative de soi et s'épanouissent dans des environnements où l'originalité peut s'exprimer. Sensibles à la beauté et à l'esthétique, ils trouvent leur plus grand épanouissement dans la création libre.", careers: ['Artiste/Designer', 'Écrivain', 'Musicien', 'Acteur', 'Photographe', 'Designer architectural', 'Designer UX', 'Créatif publicitaire', 'Réalisateur'] },
-    es: { description: 'Los tipos artísticos valoran la autoexpresión creativa y prosperan en entornos donde se ejerce la originalidad. Son sensibles a la belleza y la estética, y encuentran su mayor satisfacción en la creación libre.', careers: ['Artista/Diseñador', 'Escritor', 'Músico', 'Actor', 'Fotógrafo', 'Diseñador arquitectónico', 'Diseñador UX', 'Creativo publicitario', 'Director de cine'] },
+    zh: { description: '艺术型兴趣可能更接近原创表达，以及为开放性问题创造新答案。', environments: ['表达方式有自主空间的项目', '用文字、图像或声音塑造创意', '处理没有唯一答案的问题'] },
+    fr: { description: 'Les intérêts artistiques peuvent correspondre à l’expression originale et aux réponses nouvelles à des problèmes ouverts.', environments: ['projets laissant de la liberté d’expression', 'création d’idées par les mots, l’image ou le son', 'problèmes ouverts sans réponse unique'] },
+    es: { description: 'Los intereses artísticos pueden relacionarse con la expresión original y respuestas nuevas a problemas abiertos.', environments: ['proyectos con libertad expresiva', 'ideas creadas con palabras, imágenes o sonido', 'problemas abiertos sin una única respuesta'] },
   },
   S: {
-    zh: { description: '社会型从帮助、教导和支持他人中找到意义。他们富有同理心，善于合作，在以人为本的活动中获得最大的回报。', careers: ['教师/教授', '咨询师/治疗师', '社会工作者', '医疗专业人员', '教练', '人力资源专员', '非营利组织活动家', '护士', '社区经理'] },
-    fr: { description: "Les types sociaux trouvent un sens en aidant, enseignant et soutenant les autres. Dotés d'une forte empathie et d'un esprit de coopération, ils tirent leur plus grande récompense des activités centrées sur l'humain.", careers: ['Enseignant/Professeur', 'Conseiller/Thérapeute', 'Travailleur social', 'Professionnel de santé', 'Coach', 'Professionnel RH', 'Militant associatif', 'Infirmier', 'Community manager'] },
-    es: { description: 'Los tipos sociales encuentran sentido en ayudar, enseñar y apoyar a las personas. Tienen una fuerte empatía y tendencias cooperativas, y hallan su mayor recompensa en actividades centradas en las personas.', careers: ['Profesor/Docente', 'Consejero/Terapeuta', 'Trabajador social', 'Profesional de la salud', 'Entrenador/Coach', 'Profesional de RR.HH.', 'Activista sin fines de lucro', 'Enfermero', 'Gestor comunitario'] },
+    zh: { description: '社会型兴趣可能更接近帮助他人学习、理解并通过合作解决问题。', environments: ['重视讲解和反馈的团队', '支持他人成长过程的工作', '关系与合作重要的服务环境'] },
+    fr: { description: 'Les intérêts sociaux peuvent correspondre à aider les autres à apprendre, comprendre et résoudre ensemble des problèmes.', environments: ['équipes axées sur l’explication et le retour', 'travail qui soutient la progression d’autrui', 'services où relations et coopération comptent'] },
+    es: { description: 'Los intereses sociales pueden relacionarse con ayudar a aprender, comprender y resolver problemas en colaboración.', environments: ['equipos centrados en explicación y feedback', 'trabajo que apoya el progreso de otras personas', 'servicios donde importan relaciones y cooperación'] },
   },
   E: {
-    zh: { description: '进取型喜欢发挥领导力和影响力，从说服他人和达成目标中获得能量。他们富有竞争意识、雄心勃勃，非常注重结果。', careers: ['企业主/CEO', '销售专员', '市场营销人员', '律师', '政治家', '投资人', '项目经理', '房地产专业人员', '创业者'] },
-    fr: { description: 'Les types entreprenants aiment exercer le leadership et l\'influence, puisant leur énergie dans la persuasion et l\'atteinte d\'objectifs. Ils sont compétitifs, ambitieux et fortement orientés vers les résultats.', careers: ['Chef d\'entreprise/PDG', 'Commercial', 'Marketeur', 'Avocat', 'Homme/Femme politique', 'Investisseur', 'Chef de projet', 'Professionnel de l\'immobilier', 'Fondateur de startup'] },
-    es: { description: 'Los tipos emprendedores disfrutan ejerciendo liderazgo e influencia, y obtienen energía al persuadir a otros y alcanzar metas. Son competitivos, ambiciosos y muy orientados a los resultados.', careers: ['Empresario/CEO', 'Profesional de ventas', 'Especialista en marketing', 'Abogado', 'Político', 'Inversor', 'Gerente de proyectos', 'Profesional inmobiliario', 'Fundador de startup'] },
+    zh: { description: '进取型兴趣可能更接近设定方向、说服他人并组织资源执行。', environments: ['负责决策和推进的项目', '提出想法并建立共识的工作', '目标和反馈清晰的环境'] },
+    fr: { description: 'Les intérêts entreprenants peuvent correspondre à définir une direction, convaincre et organiser des ressources pour agir.', environments: ['projets avec responsabilité de décision', 'travail qui propose des idées et construit l’accord', 'contextes aux objectifs et retours clairs'] },
+    es: { description: 'Los intereses emprendedores pueden relacionarse con marcar dirección, persuadir y organizar recursos para actuar.', environments: ['proyectos con responsabilidad de decisión', 'trabajo que propone ideas y crea acuerdos', 'entornos con objetivos y feedback claros'] },
   },
   C: {
-    zh: { description: '常规型重视准确性、结构和秩序。他们乐于遵守规则并关注细节，在有条理的环境中产出可靠的成果。', careers: ['会计师/税务专员', '行政专员', '数据管理员', '质量管理员', '图书管理员', '银行职员', '保险专员', '审计师', '公共行政人员'] },
-    fr: { description: 'Les types conventionnels valorisent la précision, la structure et l\'ordre. Ils se sentent à l\'aise en suivant des règles et en portant attention aux détails, produisant des résultats fiables dans des environnements organisés.', careers: ['Comptable/Fiscaliste', 'Professionnel administratif', 'Gestionnaire de données', 'Contrôleur qualité', 'Bibliothécaire', 'Banquier', 'Professionnel de l\'assurance', 'Auditeur', 'Administrateur public'] },
-    es: { description: 'Los tipos convencionales valoran la precisión, la estructura y el orden. Se sienten cómodos siguiendo reglas y prestando atención a los detalles, y producen resultados fiables en entornos organizados.', careers: ['Contador/Especialista fiscal', 'Profesional administrativo', 'Gestor de datos', 'Controlador de calidad', 'Bibliotecario', 'Banquero', 'Profesional de seguros', 'Auditor', 'Administrador público'] },
+    zh: { description: '常规型兴趣可能更接近准确整理信息、改进流程并保持可靠运作。', environments: ['标准和角色清晰的运营环境', '分类资料并检查错误的工作', '提高重复流程准确性的项目'] },
+    fr: { description: 'Les intérêts conventionnels peuvent correspondre à organiser précisément l’information, améliorer les procédures et fiabiliser les opérations.', environments: ['opérations aux rôles et normes clairs', 'classement d’informations et contrôle d’erreurs', 'projets rendant les processus répétables plus précis'] },
+    es: { description: 'Los intereses convencionales pueden relacionarse con organizar información, mejorar procesos y mantener operaciones fiables.', environments: ['operaciones con roles y normas claros', 'clasificación de información y revisión de errores', 'proyectos que hacen más precisos los procesos repetibles'] },
   },
 }
 
-const RIASEC_TYPES: RiasecType[] = ['R', 'I', 'A', 'S', 'E', 'C']
 const QUICK_TYPE_DETAILS: Record<RiasecType, Record<QuickLang, TypeDetail>> = RIASEC_TYPES.reduce(
   (acc, type) => {
     acc[type] = { ...TYPE_DETAILS[type], ...TYPE_DETAILS_EXTRA[type] }
@@ -342,15 +368,14 @@ export default function RiasecQuickTest({ locale: lp = 'ko' }: Props) {
   // 24-question test's history in oiyo:test-results:v1.
   useEffect(() => {
     if (!done) return
-    const sorted = (Object.keys(scores) as RiasecType[]).sort((a, b) => scores[b] - scores[a])
-    const code = sorted.slice(0, 3).join('')
+    const profile = buildRiasecProfile(scores, { min: 3, max: 15 })
     recordTestResult({
       kind: 'psychometric',
       testId: 'riasec-quick',
       title: lb.title,
-      resultLabel: code,
+      resultLabel: profile.isMixed ? lb.mixedTitle : profile.code,
       inputs: { scores },
-      result: { code, scores },
+      result: { code: profile.code, scores, interpretation: profile.isMixed ? 'mixed' : 'clear' },
       locale,
       sourcePath: `/${locale}/riasec-quick`,
     })
@@ -364,10 +389,9 @@ export default function RiasecQuickTest({ locale: lp = 'ko' }: Props) {
 
   function share() {
     gaEvent('share_click', { test_id: 'riasec-quick' })
-    const sorted = (Object.keys(scores) as RiasecType[]).sort((a, b) => scores[b] - scores[a])
-    const code = sorted.slice(0, 3).join('')
-    const url = window.location.href
-    const text = `${lb.shareMsg}: ${code}`
+    const profile = buildRiasecProfile(scores, { min: 3, max: 15 })
+    const url = `${window.location.origin}${window.location.pathname}`
+    const text = `${lb.shareMsg}: ${profile.isMixed ? lb.mixedTitle : profile.code}`
     if (navigator.share) navigator.share({ title: lb.title, text, url })
     else navigator.clipboard.writeText(url)
   }
@@ -408,51 +432,61 @@ export default function RiasecQuickTest({ locale: lp = 'ko' }: Props) {
     )
   }
 
-  const sorted = (Object.keys(scores) as RiasecType[]).sort((a, b) => scores[b] - scores[a])
-  const topCode = sorted.slice(0, 3).join('')
+  const resultProfile = buildRiasecProfile(scores, { min: 3, max: 15 })
+  const sorted = resultProfile.ranked.map(({ type }) => type)
+  const topCode = resultProfile.code
+  const resultTitle = resultProfile.isMixed ? lb.mixedTitle : topCode
+  const resultBody = resultProfile.isLowFlat ? lb.lowFlatBody : resultProfile.isMixed ? lb.mixedBody : lb.clearBody
+  const interpretationTypes = resultProfile.interpretationTypes
+  const minScore = 3
   const maxScore = 15 // 3 questions/type * 5-point scale
 
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
-        <p className="text-sm text-muted-foreground">{lb.yourCode}</p>
-        <div className="text-4xl font-bold tracking-widest">{topCode.split('').map(c => (
+        <p className="text-sm text-muted-foreground">{resultProfile.isMixed ? lb.mixedTitle : lb.yourCode}</p>
+        {!resultProfile.isMixed && <div className="text-4xl font-bold tracking-widest">{topCode.split('').map(c => (
           <span key={c} style={{ color: RIASEC_COLORS[c as RiasecType] }}>{c}</span>
-        ))}</div>
-        <p className="text-sm text-muted-foreground">{sorted.slice(0, 3).map(t => lb.typeNames[t]).join(' · ')}</p>
+        ))}</div>}
+        <p className="text-sm text-muted-foreground">{resultBody}</p>
       </div>
       <div className="rounded-xl border bg-card p-4 space-y-3">
         <h3 className="font-bold text-sm">{lb.profile}</h3>
-        {sorted.map(type => {
-          const pct = Math.round((scores[type] / maxScore) * 100)
+        <p className="text-xs text-muted-foreground">{lb.rawRange(minScore, maxScore)}</p>
+        <dl className="space-y-3">
+        {resultProfile.ranked.map(({ type, score, percent }) => {
           return (
             <div key={type} className="space-y-1">
               <div className="flex justify-between text-xs">
-                <span className="font-bold" style={{ color: RIASEC_COLORS[type] }}>{type} — {lb.typeNames[type]}</span>
-                <span>{scores[type]}/{maxScore}</span>
+                <dt className="font-bold" style={{ color: RIASEC_COLORS[type] }}>{type} — {lb.typeNames[type]}</dt>
+                <dd>{score}/{maxScore} ({percent}%)</dd>
               </div>
-              <div className="h-2 rounded-full bg-muted overflow-hidden" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100} aria-label={lb.typeNames[type]}>
-                <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pct}%`, backgroundColor: RIASEC_COLORS[type] }} />
+              <div className="h-2 rounded-full bg-muted overflow-hidden" aria-hidden="true">
+                <div className="h-full rounded-full transition-all duration-500 motion-reduce:transition-none" style={{ width: `${percent}%`, backgroundColor: RIASEC_COLORS[type] }} />
               </div>
             </div>
           )
         })}
+        </dl>
       </div>
-      {sorted.slice(0, 2).map(type => (
+      {interpretationTypes.map(type => (
         <div key={type} className="rounded-xl border bg-card p-4 space-y-2">
           <h3 className="font-bold text-sm" style={{ color: RIASEC_COLORS[type] }}>{lb.typeNames[type]} ({lb.typeFull[type]})</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">{QUICK_TYPE_DETAILS[type][locale].description}</p>
-          <h4 className="font-bold text-xs text-muted-foreground mt-2">{lb.careers}</h4>
-          <p className="text-sm text-muted-foreground">{QUICK_TYPE_DETAILS[type][locale].careers.join(' · ')}</p>
+          <h4 className="font-bold text-xs text-muted-foreground mt-2">{lb.environments}</h4>
+          <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+            {QUICK_TYPE_DETAILS[type][locale].environments.map(environment => <li key={environment}>{environment}</li>)}
+          </ul>
         </div>
       ))}
+      <p className="rounded-xl border bg-muted/40 p-4 text-sm">{lb.tryNext}</p>
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
       <ShareResultButton
         locale={locale}
         heading={lb.yourCode}
         emoji="🧭"
-        resultTitle={topCode}
-        description={sorted.slice(0, 3).map(t => `${lb.typeNames[t]} ${scores[t]}/${maxScore}`).join(' · ')}
+        resultTitle={resultTitle}
+        description={resultProfile.isMixed ? lb.mixedBody : sorted.slice(0, 3).map(t => lb.typeNames[t]).join(' · ')}
       />
       <a
         href={`/${locale}/riasec-career-test`}
@@ -462,8 +496,8 @@ export default function RiasecQuickTest({ locale: lp = 'ko' }: Props) {
         <span className="block text-xs font-normal text-muted-foreground mt-1">{lb.detailedSub}</span>
       </a>
       <div className="flex gap-3">
-        <button onClick={restart} aria-label={lb.restart} className="flex-1 rounded-xl border bg-card px-4 py-2 text-sm font-bold hover:bg-accent transition-colors">{lb.restart}</button>
-        <button onClick={share} aria-label={lb.share} className="flex-1 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity">{lb.share}</button>
+        <button onClick={restart} aria-label={lb.restart} className="min-h-11 flex-1 rounded-xl border bg-card px-4 py-2 text-sm font-bold hover:bg-accent transition-colors">{lb.restart}</button>
+        <button onClick={share} aria-label={lb.share} className="min-h-11 flex-1 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity">{lb.share}</button>
       </div>
     </div>
   )

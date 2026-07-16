@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
 import { recordTestResult } from '@/lib/user/test-results'
 import { gaEvent } from '@/lib/analytics/ga-event'
+import { buildRiasecProfile, type RiasecType } from '../../lib/riasec-profile'
 import {
   buildRiasecResult,
   recordAssessmentResult,
@@ -14,7 +15,7 @@ type SupportedLang = 'ko' | 'en' | 'ja'
 // Exported so RiasecQuickTest.tsx (the 18-question /riasec-quick sibling) can
 // reuse the type-level shape and the shared color palette/type descriptions
 // below instead of duplicating them.
-export type RiasecType = 'R' | 'I' | 'A' | 'S' | 'E' | 'C'
+export type { RiasecType } from '../../lib/riasec-profile'
 
 function lang(locale: string): SupportedLang {
   return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
@@ -31,8 +32,10 @@ const LABELS: Record<SupportedLang, {
   questionOf: (c: number, t: number) => string
   scaleLabels: [string, string, string, string, string]
   restart: string; share: string; shareMsg: string
-  yourCode: string; topTypes: string; careers: string
-  profile: string; note: string
+  yourCode: string; topTypes: string; environments: string
+  profile: string; note: string; mixedTitle: string; mixedBody: string
+  clearBody: string; lowFlatBody: string; rawRange: (min: number, max: number) => string
+  tryNext: string
   typeNames: Record<RiasecType, string>
   typeFull: Record<RiasecType, string>
 }> = {
@@ -46,9 +49,15 @@ const LABELS: Record<SupportedLang, {
     shareMsg: '나의 RIASEC 직업 흥미 유형',
     yourCode: '나의 Holland 코드',
     topTypes: '상위 유형 설명',
-    careers: '추천 직업 분야',
+    environments: '선호할 수 있는 업무환경 예시',
     profile: '6가지 흥미 프로필',
-    note: 'Holland 직업 흥미 이론(RIASEC)에 기반한 검사입니다. 하나의 참고 도구로 활용하세요.',
+    note: '이 결과는 흥미를 돌아보는 비진단 참고 자료이며 직업 적합성이나 능력을 판정하지 않습니다.',
+    mixedTitle: '여러 흥미가 함께 나타난 혼합 프로필',
+    mixedBody: '점수 차이가 작아 하나의 유형으로 단정하기 어렵습니다. 상위 흥미가 함께 쓰이는 업무환경을 비교해 보세요.',
+    clearBody: '현재 응답에서는 아래 흥미가 비교적 뚜렷합니다. 직업명이 아니라 실제 업무환경과 활동을 기준으로 확인해 보세요.',
+    lowFlatBody: '전반적인 점수가 낮고 비슷합니다. 피로·경험 부족·문항 맥락의 영향일 수 있으므로 코드보다 작은 활동 실험부터 시작하세요.',
+    rawRange: (min, max) => `유형별 원점수 범위 ${min}–${max}점`,
+    tryNext: '다음 1주 동안 관심 가는 활동 하나를 20분 체험하고, 에너지와 몰입도를 기록해 보세요.',
     typeNames: { R: '현실형', I: '탐구형', A: '예술형', S: '사회형', E: '진취형', C: '관습형' },
     typeFull: { R: 'Realistic', I: 'Investigative', A: 'Artistic', S: 'Social', E: 'Enterprising', C: 'Conventional' },
   },
@@ -62,9 +71,15 @@ const LABELS: Record<SupportedLang, {
     shareMsg: 'My RIASEC Holland Code',
     yourCode: 'My Holland Code',
     topTypes: 'Top Type Descriptions',
-    careers: 'Recommended Career Fields',
+    environments: 'Work-environment examples you may prefer',
     profile: '6-Dimension Interest Profile',
-    note: 'Based on Holland\'s RIASEC career interest theory. Use as one reference among many.',
+    note: 'This is a non-diagnostic reflection on interests; it does not determine career fit or ability.',
+    mixedTitle: 'A blended interest profile',
+    mixedBody: 'The score gaps are too small for a single-type claim. Compare environments where your leading interests can work together.',
+    clearBody: 'These interests are relatively distinct in this response. Check real tasks and environments rather than treating job titles as prescriptions.',
+    lowFlatBody: 'Scores are low and similar overall. Fatigue, limited exposure, or item context may matter, so begin with a small activity experiment instead of a code.',
+    rawRange: (min, max) => `Raw score range per type: ${min}–${max}`,
+    tryNext: 'This week, try one appealing activity for 20 minutes and note your energy and engagement.',
     typeNames: { R: 'Realistic', I: 'Investigative', A: 'Artistic', S: 'Social', E: 'Enterprising', C: 'Conventional' },
     typeFull: { R: 'Realistic', I: 'Investigative', A: 'Artistic', S: 'Social', E: 'Enterprising', C: 'Conventional' },
   },
@@ -78,9 +93,15 @@ const LABELS: Record<SupportedLang, {
     shareMsg: '私のRIASECホランドコード',
     yourCode: '私のホランドコード',
     topTypes: 'トップタイプの説明',
-    careers: 'おすすめ職業分野',
+    environments: '好む可能性のある仕事環境の例',
     profile: '6次元興味プロフィール',
-    note: 'ホランドのRIASEC職業興味理論に基づいた検査です。一つの参考ツールとしてご活用ください。',
+    note: 'この結果は興味を振り返る非診断的な参考資料であり、職業適性や能力を判定するものではありません。',
+    mixedTitle: '複数の興味が表れた混合プロフィール',
+    mixedBody: '得点差が小さいため、一つのタイプに断定できません。上位の興味を組み合わせられる仕事環境を比べてみましょう。',
+    clearBody: '今回の回答では次の興味が比較的明確です。職業名ではなく、実際の作業や環境を基準に確かめてください。',
+    lowFlatBody: '全体の得点が低く似ています。疲労、経験不足、設問の文脈も影響し得るため、コードより小さな活動実験から始めましょう。',
+    rawRange: (min, max) => `タイプ別の素点範囲 ${min}–${max}点`,
+    tryNext: '今週、気になる活動を一つ20分試し、エネルギーと集中度を記録してみましょう。',
     typeNames: { R: '現実型', I: '研究型', A: '芸術型', S: '社会型', E: '企業型', C: '慣習型' },
     typeFull: { R: 'Realistic', I: 'Investigative', A: 'Artistic', S: 'Social', E: 'Enterprising', C: 'Conventional' },
   },
@@ -167,39 +188,39 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
   ],
 }
 
-export interface TypeDetail { description: string; careers: string[] }
+export interface TypeDetail { description: string; environments: string[] }
 // ko/en/ja only — RiasecQuickTest.tsx extends this with zh/fr/es entries
 // rather than duplicating these three locales' text.
 export const TYPE_DETAILS: Record<RiasecType, Record<SupportedLang, TypeDetail>> = {
   R: {
-    ko: { description: '현실형은 구체적이고 실용적인 활동을 선호합니다. 도구와 기계를 다루거나 신체적 기술을 발휘하는 것을 즐기며, 만질 수 있는 결과물을 만들어내는 것에서 만족감을 느낍니다.', careers: ['엔지니어', '건축가', '의사/외과의', '농업 전문가', '운동선수', '조종사', '정비사', '소방관', '군인'] },
-    en: { description: 'Realistic types prefer concrete and practical activities. They enjoy working with tools and machines or applying physical skills, finding satisfaction in creating tangible results.', careers: ['Engineer', 'Architect', 'Physician/Surgeon', 'Agricultural Specialist', 'Athlete', 'Pilot', 'Mechanic', 'Firefighter', 'Military'] },
-    ja: { description: '現実型は具体的で実践的な活動を好みます。道具や機械を扱ったり身体的技術を発揮したりすることを楽しみ、触れる成果物を作ることに満足感を感じます。', careers: ['エンジニア', '建築家', '医師・外科医', '農業専門家', 'アスリート', 'パイロット', '整備士', '消防士', '軍人'] },
+    ko: { description: '현실형 흥미는 구체적이고 실용적인 활동, 도구 사용, 눈에 보이는 결과물과 가까울 수 있습니다.', environments: ['손으로 만들고 점검하는 현장', '도구·장비를 다루는 실습 환경', '구체적인 문제를 바로 해결하는 업무'] },
+    en: { description: 'Realistic interests can align with concrete, practical activity, tool use, and visible outcomes.', environments: ['hands-on building and inspection', 'practical settings with tools or equipment', 'work that solves concrete problems directly'] },
+    ja: { description: '現実型の興味は、具体的で実践的な活動、道具の使用、目に見える成果と結びつくことがあります。', environments: ['手を動かして作り点検する現場', '道具や設備を扱う実習環境', '具体的な問題を直接解決する仕事'] },
   },
   I: {
-    ko: { description: '탐구형은 지적 호기심이 강하고 분석적 사고를 즐깁니다. 복잡한 문제를 이해하고 새로운 지식을 발견하는 데서 깊은 만족감을 얻으며, 과학적 탐구를 좋아합니다.', careers: ['연구원/과학자', '의사', '데이터 분석가', '심리학자', '철학자', '경제학자', '통계학자', '프로그래머', '천문학자'] },
-    en: { description: 'Investigative types have strong intellectual curiosity and enjoy analytical thinking. They gain deep satisfaction from understanding complex problems and discovering new knowledge.', careers: ['Researcher/Scientist', 'Physician', 'Data Analyst', 'Psychologist', 'Philosopher', 'Economist', 'Statistician', 'Programmer', 'Astronomer'] },
-    ja: { description: '研究型は知的好奇心が強く分析的思考を楽しみます。複雑な問題を理解し新しい知識を発見することに深い満足感を得て、科学的探求を好みます。', careers: ['研究者・科学者', '医師', 'データアナリスト', '心理学者', '哲学者', '経済学者', '統計学者', 'プログラマー', '天文学者'] },
+    ko: { description: '탐구형 흥미는 질문을 깊게 파고들고 자료를 분석하며 원리를 이해하는 활동과 가까울 수 있습니다.', environments: ['충분히 조사하고 가설을 검토하는 환경', '데이터와 근거로 판단하는 업무', '복잡한 문제를 혼자 깊게 탐색할 시간'] },
+    en: { description: 'Investigative interests can align with deep questions, evidence analysis, and understanding how things work.', environments: ['time to research and test hypotheses', 'evidence-led analytical work', 'space for sustained exploration of complex problems'] },
+    ja: { description: '研究型の興味は、問いを深く掘り下げ、資料を分析し、原理を理解する活動と結びつくことがあります。', environments: ['十分に調べ仮説を検討できる環境', 'データと根拠で判断する仕事', '複雑な問題を深く探究する時間'] },
   },
   A: {
-    ko: { description: '예술형은 창의적 자기표현을 중시하며 독창성을 발휘하는 환경에서 번성합니다. 아름다움과 미적 감각에 민감하며, 자유로운 창작 활동에서 가장 큰 충족감을 얻습니다.', careers: ['예술가/디자이너', '작가', '음악가', '배우', '사진작가', '건축 디자이너', 'UX 디자이너', '광고 크리에이티브', '영화 감독'] },
-    en: { description: 'Artistic types value creative self-expression and thrive in environments where originality is exercised. They are sensitive to beauty and aesthetics, finding the greatest fulfillment in free creative activity.', careers: ['Artist/Designer', 'Writer', 'Musician', 'Actor', 'Photographer', 'Architectural Designer', 'UX Designer', 'Ad Creative', 'Film Director'] },
-    ja: { description: '芸術型は創造的な自己表現を重視し、独創性を発揮できる環境で輝きます。美しさと美的感覚に敏感で、自由な創作活動に最大の充実感を得ます。', careers: ['アーティスト・デザイナー', '作家', 'ミュージシャン', '俳優', 'フォトグラファー', '建築デザイナー', 'UXデザイナー', '広告クリエイティブ', '映画監督'] },
+    ko: { description: '예술형 흥미는 새로운 방식으로 표현하고 모호한 문제에 독창적인 답을 만드는 활동과 가까울 수 있습니다.', environments: ['표현 방식에 재량이 있는 프로젝트', '글·이미지·소리로 아이디어를 만드는 환경', '정답이 하나가 아닌 문제를 다루는 업무'] },
+    en: { description: 'Artistic interests can align with original expression and creating fresh responses to open-ended problems.', environments: ['projects with freedom over expression', 'work that shapes ideas through words, images, or sound', 'open-ended problems without one fixed answer'] },
+    ja: { description: '芸術型の興味は、新しい方法で表現し、曖昧な課題に独自の答えを作る活動と結びつくことがあります。', environments: ['表現方法に裁量があるプロジェクト', '言葉・画像・音でアイデアを形にする環境', '正解が一つではない課題を扱う仕事'] },
   },
   S: {
-    ko: { description: '사회형은 사람들을 돕고 가르치고 지원하는 것을 통해 의미를 찾습니다. 강한 공감 능력과 협력적 성향을 가지고 있으며, 인간 중심의 활동에서 가장 큰 보람을 느낍니다.', careers: ['교사/교수', '상담사/치료사', '사회복지사', '의료 전문가', '코치', '인사담당자', '비영리 활동가', '간호사', '커뮤니티 매니저'] },
-    en: { description: 'Social types find meaning in helping, teaching, and supporting people. They have strong empathy and cooperative tendencies, finding the greatest reward in human-centered activities.', careers: ['Teacher/Professor', 'Counselor/Therapist', 'Social Worker', 'Healthcare Professional', 'Coach', 'HR Professional', 'Nonprofit Activist', 'Nurse', 'Community Manager'] },
-    ja: { description: '社会型は人々を助け、教え、支援することに意味を見出します。強い共感能力と協力的な傾向を持ち、人間中心の活動に最大のやりがいを感じます。', careers: ['教師・教授', 'カウンセラー・セラピスト', 'ソーシャルワーカー', '医療専門家', 'コーチ', '人事担当者', 'NPO活動家', '看護師', 'コミュニティマネージャー'] },
+    ko: { description: '사회형 흥미는 사람의 성장과 이해를 돕고 협력으로 문제를 푸는 활동과 가까울 수 있습니다.', environments: ['설명하고 피드백을 주고받는 팀', '사람의 변화 과정을 지원하는 업무', '관계와 협력이 중요한 서비스 환경'] },
+    en: { description: 'Social interests can align with helping people learn, understand, and solve problems collaboratively.', environments: ['teams built around explanation and feedback', 'work that supports another person’s progress', 'service settings where relationships and cooperation matter'] },
+    ja: { description: '社会型の興味は、人の成長や理解を助け、協力して問題を解く活動と結びつくことがあります。', environments: ['説明とフィードバックを交わすチーム', '人の変化の過程を支える仕事', '関係と協力が重要なサービス環境'] },
   },
   E: {
-    ko: { description: '진취형은 리더십과 영향력 발휘를 즐기며, 사람들을 설득하고 목표를 달성하는 과정에서 에너지를 얻습니다. 경쟁적이고 야심차며 결과 지향적인 특성이 강합니다.', careers: ['기업인/CEO', '영업 전문가', '마케터', '변호사', '정치인', '투자자', '프로젝트 매니저', '부동산 전문가', '스타트업 창업자'] },
-    en: { description: 'Enterprising types enjoy exercising leadership and influence, gaining energy from persuading people and achieving goals. They are competitive, ambitious, and strongly results-oriented.', careers: ['Business Owner/CEO', 'Sales Professional', 'Marketer', 'Lawyer', 'Politician', 'Investor', 'Project Manager', 'Real Estate Professional', 'Startup Founder'] },
-    ja: { description: '企業型はリーダーシップと影響力の発揮を楽しみ、人を説得し目標を達成するプロセスからエネルギーを得ます。競争的で野心的、結果志向の特性が強いです。', careers: ['起業家・CEO', '営業専門家', 'マーケター', '弁護士', '政治家', '投資家', 'プロジェクトマネージャー', '不動産専門家', 'スタートアップ創業者'] },
+    ko: { description: '진취형 흥미는 목표를 정하고 사람을 설득하며 자원을 모아 실행하는 활동과 가까울 수 있습니다.', environments: ['의사결정과 추진 책임이 있는 프로젝트', '아이디어를 제안하고 합의를 만드는 업무', '성과 목표와 피드백이 분명한 환경'] },
+    en: { description: 'Enterprising interests can align with setting direction, persuading others, and organizing resources for action.', environments: ['projects with ownership for decisions and momentum', 'work that pitches ideas and builds agreement', 'settings with clear goals and feedback'] },
+    ja: { description: '企業型の興味は、目標を定め、人を説得し、資源を集めて実行する活動と結びつくことがあります。', environments: ['意思決定と推進の責任があるプロジェクト', 'アイデアを提案し合意を作る仕事', '成果目標とフィードバックが明確な環境'] },
   },
   C: {
-    ko: { description: '관습형은 정확성, 체계, 질서를 중시합니다. 규칙을 따르고 세부사항에 주의를 기울이는 것을 편안하게 느끼며, 조직화된 환경에서 신뢰할 수 있는 결과를 만들어냅니다.', careers: ['회계사/세무사', '행정 전문가', '데이터 관리자', '품질 관리사', '사서', '뱅커', '보험 전문가', '감사관', '공공행정 관리'] },
-    en: { description: 'Conventional types value accuracy, structure, and order. They feel comfortable following rules and paying attention to details, producing reliable results in organized environments.', careers: ['Accountant/Tax Specialist', 'Administrative Professional', 'Data Manager', 'Quality Controller', 'Librarian', 'Banker', 'Insurance Professional', 'Auditor', 'Public Administrator'] },
-    ja: { description: '慣習型は正確さ、体系、秩序を重視します。ルールに従い細部に注意を払うことを快適に感じ、組織化された環境で信頼できる結果を生み出します。', careers: ['会計士・税理士', '行政専門家', 'データ管理者', '品質管理者', '司書', '銀行員', '保険専門家', '監査官', '公共行政管理'] },
+    ko: { description: '관습형 흥미는 정보를 정확히 정리하고 절차를 개선하며 안정적으로 운영하는 활동과 가까울 수 있습니다.', environments: ['기준과 역할이 명확한 운영 환경', '자료를 분류하고 오류를 점검하는 업무', '반복 과정을 더 정확하게 만드는 프로젝트'] },
+    en: { description: 'Conventional interests can align with organizing information accurately, improving procedures, and keeping operations reliable.', environments: ['operations with clear roles and standards', 'work that classifies information and checks errors', 'projects that make repeatable processes more accurate'] },
+    ja: { description: '慣習型の興味は、情報を正確に整理し、手順を改善し、安定して運用する活動と結びつくことがあります。', environments: ['基準と役割が明確な運用環境', '資料を分類し誤りを確認する仕事', '反復工程をより正確にするプロジェクト'] },
   },
 }
 
@@ -231,15 +252,14 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
   // Record the result once, when the quiz is actually finished.
   useEffect(() => {
     if (!done) return
-    const sorted = (Object.keys(scores) as RiasecType[]).sort((a, b) => scores[b] - scores[a])
-    const code = sorted.slice(0, 3).join('')
+    const profile = buildRiasecProfile(scores, { min: 4, max: 20 })
     recordTestResult({
       kind: 'psychometric',
       testId: 'riasec',
       title: lb.title,
-      resultLabel: code,
+      resultLabel: profile.isMixed ? lb.mixedTitle : profile.code,
       inputs: { scores },
-      result: { code, scores },
+      result: { code: profile.code, scores, interpretation: profile.isMixed ? 'mixed' : 'clear' },
       locale: resultLocale,
       sourcePath: `/${resultLocale}/riasec-career-test`,
     })
@@ -253,10 +273,9 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
 
   function share() {
     gaEvent('share_click', { test_id: 'riasec' })
-    const sorted = (Object.keys(scores) as RiasecType[]).sort((a, b) => scores[b] - scores[a])
-    const code = sorted.slice(0, 3).join('')
-    const url = window.location.href
-    const text = `${lb.shareMsg}: ${code}`
+    const profile = buildRiasecProfile(scores, { min: 4, max: 20 })
+    const url = `${window.location.origin}${window.location.pathname}`
+    const text = `${lb.shareMsg}: ${profile.isMixed ? lb.mixedTitle : profile.code}`
     if (navigator.share) navigator.share({ title: lb.title, text, url })
     else navigator.clipboard.writeText(url)
   }
@@ -297,55 +316,65 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
     )
   }
 
-  const sorted = (Object.keys(scores) as RiasecType[]).sort((a, b) => scores[b] - scores[a])
-  const topCode = sorted.slice(0, 3).join('')
+  const resultProfile = buildRiasecProfile(scores, { min: 4, max: 20 })
+  const sorted = resultProfile.ranked.map(({ type }) => type)
+  const topCode = resultProfile.code
+  const resultTitle = resultProfile.isMixed ? lb.mixedTitle : topCode
+  const resultBody = resultProfile.isLowFlat ? lb.lowFlatBody : resultProfile.isMixed ? lb.mixedBody : lb.clearBody
+  const interpretationTypes = resultProfile.interpretationTypes
+  const minScore = 4
   const maxScore = 20
 
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
-        <p className="text-sm text-muted-foreground">{lb.yourCode}</p>
-        <div className="text-4xl font-bold tracking-widest">{topCode.split('').map(c => (
+        <p className="text-sm text-muted-foreground">{resultProfile.isMixed ? lb.mixedTitle : lb.yourCode}</p>
+        {!resultProfile.isMixed && <div className="text-4xl font-bold tracking-widest">{topCode.split('').map(c => (
           <span key={c} style={{ color: RIASEC_COLORS[c as RiasecType] }}>{c}</span>
-        ))}</div>
-        <p className="text-sm text-muted-foreground">{sorted.slice(0, 3).map(t => lb.typeNames[t]).join(' · ')}</p>
+        ))}</div>}
+        <p className="text-sm text-muted-foreground">{resultBody}</p>
       </div>
       <div className="rounded-xl border bg-card p-4 space-y-3">
         <h3 className="font-bold text-sm">{lb.profile}</h3>
-        {sorted.map(type => {
-          const pct = Math.round((scores[type] / maxScore) * 100)
+        <p className="text-xs text-muted-foreground">{lb.rawRange(minScore, maxScore)}</p>
+        <dl className="space-y-3">
+        {resultProfile.ranked.map(({ type, score, percent }) => {
           return (
             <div key={type} className="space-y-1">
               <div className="flex justify-between text-xs">
-                <span className="font-bold" style={{ color: RIASEC_COLORS[type] }}>{type} — {lb.typeNames[type]}</span>
-                <span>{scores[type]}/{maxScore}</span>
+                <dt className="font-bold" style={{ color: RIASEC_COLORS[type] }}>{type} — {lb.typeNames[type]}</dt>
+                <dd>{score}/{maxScore} ({percent}%)</dd>
               </div>
-              <div className="h-2 rounded-full bg-muted overflow-hidden" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100} aria-label={lb.typeNames[type]}>
-                <div className="h-full rounded-full transition-all duration-500" style={{ width: `${pct}%`, backgroundColor: RIASEC_COLORS[type] }} />
+              <div className="h-2 rounded-full bg-muted overflow-hidden" aria-hidden="true">
+                <div className="h-full rounded-full transition-all duration-500 motion-reduce:transition-none" style={{ width: `${percent}%`, backgroundColor: RIASEC_COLORS[type] }} />
               </div>
             </div>
           )
         })}
+        </dl>
       </div>
-      {sorted.slice(0, 2).map(type => (
+      {interpretationTypes.map(type => (
         <div key={type} className="rounded-xl border bg-card p-4 space-y-2">
           <h3 className="font-bold text-sm" style={{ color: RIASEC_COLORS[type] }}>{lb.typeNames[type]} ({lb.typeFull[type]})</h3>
           <p className="text-sm text-muted-foreground leading-relaxed">{TYPE_DETAILS[type][locale].description}</p>
-          <h4 className="font-bold text-xs text-muted-foreground mt-2">{lb.careers}</h4>
-          <p className="text-sm text-muted-foreground">{TYPE_DETAILS[type][locale].careers.join(' · ')}</p>
+          <h4 className="font-bold text-xs text-muted-foreground mt-2">{lb.environments}</h4>
+          <ul className="list-disc space-y-1 pl-5 text-sm text-muted-foreground">
+            {TYPE_DETAILS[type][locale].environments.map(environment => <li key={environment}>{environment}</li>)}
+          </ul>
         </div>
       ))}
+      <p className="rounded-xl border bg-muted/40 p-4 text-sm">{lb.tryNext}</p>
       <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
       <ShareResultButton
         locale={locale}
         heading={lb.yourCode}
         emoji="🧭"
-        resultTitle={topCode}
-        description={sorted.slice(0, 3).map(t => `${lb.typeNames[t]} ${scores[t]}/${maxScore}`).join(' · ')}
+        resultTitle={resultTitle}
+        description={resultProfile.isMixed ? lb.mixedBody : sorted.slice(0, 3).map(t => lb.typeNames[t]).join(' · ')}
       />
       <div className="flex gap-3">
-        <button onClick={restart} aria-label={lb.restart} className="flex-1 rounded-xl border bg-card px-4 py-2 text-sm font-bold hover:bg-accent transition-colors">{lb.restart}</button>
-        <button onClick={share} aria-label={lb.share} className="flex-1 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity">{lb.share}</button>
+        <button onClick={restart} aria-label={lb.restart} className="min-h-11 flex-1 rounded-xl border bg-card px-4 py-2 text-sm font-bold hover:bg-accent transition-colors">{lb.restart}</button>
+        <button onClick={share} aria-label={lb.share} className="min-h-11 flex-1 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity">{lb.share}</button>
       </div>
     </div>
   )
