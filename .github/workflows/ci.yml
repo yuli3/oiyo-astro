@@ -50,6 +50,9 @@ jobs:
       - name: Audit assessment analytics contracts
         run: npm run audit:assessment-analytics
 
+      - name: Audit exploration recommender contracts and executable golden
+        run: npm run audit:exploration-recommender
+
   sitemap-submit:
     name: Submit Sitemap (GSC + Bing + IndexNow)
     runs-on: ubuntu-latest

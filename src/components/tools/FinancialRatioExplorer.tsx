@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import type { Locale } from '../../i18n';
+import { computeRatioPercent } from '../../lib/finance/financial-ratios';
 
 /* ────────────────────────────────────────────────────────────────────────────
  * FinancialRatioExplorer — a realistic sample Balance Sheet + Income Statement
@@ -94,7 +95,7 @@ export default function FinancialRatioExplorer({ locale }: Props) {
 
   const numVal = byId(ratio.num).value;
   const denVal = byId(ratio.den).value;
-  const pct = (numVal / denVal) * 100;
+  const pct = computeRatioPercent(numVal, denVal);
   const isGood = ratio.good(pct);
 
   const rowClass = (id: string) => {

@@ -16,6 +16,7 @@
     "audit:assessment-analytics": "node scripts/audit-assessment-analytics-contracts.mjs",
     "audit:profile-snapshot": "node scripts/audit-personal-profile-snapshot.mjs",
     "audit:profile-export": "node scripts/audit-personal-profile-export.mjs",
+    "audit:exploration-recommender": "node scripts/audit-exploration-recommender.mjs",
     "submit:indexing": "python3 ../docs/search-submit-all.py --site oiyo --new-only",
     "submit:indexing:dry": "python3 ../docs/search-submit-all.py --site oiyo --new-only --dry-run",
     "audit:test-quiz-schema": "python3 scripts/audit-test-quiz-schema.py"

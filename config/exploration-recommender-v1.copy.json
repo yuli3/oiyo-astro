@@ -1,0 +1,114 @@
+{
+  "schema": "oiyo.exploration-recommender-copy",
+  "schemaVersion": 1,
+  "locales": {
+    "ko": {
+      "candidates": {
+        "visual-idea-sketch": { "environment": "눈에 보이는 초안을 만들고 독창적인 접근을 시험할 수 있는 조용한 환경", "experiment": "일상 물건 하나를 골라 종이나 무료 드로잉 도구로 의도적으로 서로 다른 시안 세 개를 만드세요." },
+        "micro-coding-prototype": { "environment": "자율성, 명확한 피드백, 작게 검증할 수 있는 결과가 있는 집중형 문제 해결 환경", "experiment": "브라우저 실습장에서 작은 프로그램 하나를 바꾸고 결과를 예측한 뒤 실행하여 무엇이 달라졌는지 적으세요." },
+        "research-note": { "environment": "결론 전에 근거를 비교할 수 있는 차분한 탐구 환경", "experiment": "작은 질문 하나를 정해 출처 두 개를 비교하고 주장 하나, 불확실성 하나, 다음 질문 하나를 적으세요." },
+        "household-system-experiment": { "environment": "질서가 보이고 절차를 반복하며 조금씩 개선할 수 있는 예측 가능한 환경", "experiment": "서랍이나 반복 업무 하나를 골라 현재 절차를 그리고 되돌릴 수 있는 단순화 한 가지를 시험하세요." },
+        "recipe-prototype": { "environment": "실용적 단계, 창의적 변형, 관찰 가능한 결과를 결합하는 손으로 하는 환경", "experiment": "이미 있는 재료로 간단한 변형 하나를 만들거나 계획하고 무엇을 왜 바꿨는지 기록하세요." },
+        "repair-observation": { "environment": "원인과 결과가 보이고 꼼꼼한 품질 확인이 필요한 구체적인 손작업 환경", "experiment": "중요하지 않은 물건 하나를 살펴보고 부품 연결을 그린 뒤 분해하지 않고 할 수 있는 되돌릴 수 있는 관리 한 가지를 찾으세요." },
+        "nature-pattern-log": { "environment": "움직임과 변화하는 세부를 자기 속도로 관찰하는 야외 환경", "experiment": "안전한 한 장소에서 빛, 식물, 날씨, 소리, 움직임의 패턴 다섯 가지를 기록하세요." },
+        "low-impact-movement-sequence": { "environment": "몸의 피드백, 자기 속도 반복, 표현할 공간이 있는 유연한 연습 환경", "experiment": "앉거나 서서 할 수 있는 동작 세 개를 만들고 천천히 반복한 뒤 전후의 편안함과 에너지를 적으세요." },
+        "peer-explanation": { "environment": "듣기, 설명, 피드백으로 이해를 키우는 협력 환경", "experiment": "동의를 구한 뒤 익숙한 주제를 5분씩 번갈아 설명하고 피드백 전에는 확인 질문만 하세요." },
+        "tabletop-facilitation": { "environment": "명확한 규칙, 차례, 조율, 보이는 진척이 있는 구조화된 모임 환경", "experiment": "짧은 협동 퍼즐이나 카드 한 판을 진행하고 규칙을 설명한 뒤 참여를 쉽게 또는 어렵게 한 점을 물으세요." },
+        "community-needs-map": { "environment": "경청, 조율, 실용적인 공동체 기여를 결합하는 목적 중심 환경", "experiment": "아는 공동체에서 보이는 필요 세 가지를 적고 신뢰할 수 있는 지역 단체의 공개 요청으로 하나를 확인하세요." },
+        "decision-brief": { "environment": "경쟁하는 근거, 명시적 절충, 간결한 제안이 있는 의사결정 환경", "experiment": "되돌릴 수 있는 일상 결정을 골라 목표, 선택지 두 개, 각각의 근거 하나, 위험 하나, 다음 확인을 적으세요." },
+        "language-exchange-prompt": { "environment": "호기심, 상호 도움, 빠른 대화 피드백이 있는 문화 간 교류 환경", "experiment": "동의한 파트너와 유용한 표현 다섯 개씩 교환하고 어떤 교정 방식이 편했는지 확인하세요." },
+        "quiet-reflection-log": { "environment": "행동 전 패턴을 알아차릴 시간과 자율성이 있는 자극이 적은 개인 환경", "experiment": "최근 힘이 난 순간 하나, 지친 순간 하나, 이번 주 시험할 작은 환경 변화 하나를 적으세요." }
+      }
+    },
+    "en": {
+      "candidates": {
+        "visual-idea-sketch": { "environment": "A quiet setting with room to make visible drafts and try original approaches", "experiment": "Choose one everyday object and make three deliberately different visual drafts with paper or a free drawing tool." },
+        "micro-coding-prototype": { "environment": "A focused problem-solving setting with autonomy, clear feedback, and small testable outputs", "experiment": "Use a browser playground to change one tiny program, predict the result, run it, and note what changed." },
+        "research-note": { "environment": "A calm inquiry setting where evidence can be compared before reaching a conclusion", "experiment": "Pick one small question, compare two sources, and write one claim, one uncertainty, and one next question." },
+        "household-system-experiment": { "environment": "A predictable setting with visible order, repeatable steps, and incremental improvement", "experiment": "Choose one drawer or recurring task, map its current steps, and test one reversible simplification." },
+        "recipe-prototype": { "environment": "A hands-on setting that combines practical steps, creative variation, and an observable result", "experiment": "Using ingredients already available, make or plan one simple variation and record what you changed and why." },
+        "repair-observation": { "environment": "A concrete, hands-on setting with visible cause-and-effect and careful quality checks", "experiment": "Inspect one non-critical object, sketch how its parts connect, and identify one reversible maintenance step without dismantling it." },
+        "nature-pattern-log": { "environment": "An observational outdoor setting with movement, changing details, and self-directed pacing", "experiment": "Observe from one safe location and record five patterns in light, plants, weather, sound, or movement." },
+        "low-impact-movement-sequence": { "environment": "A flexible practice setting with body feedback, self-paced repetition, and room for expression", "experiment": "Create a three-movement seated or standing sequence, repeat it slowly, and note comfort and energy before and after." },
+        "peer-explanation": { "environment": "A collaborative setting where understanding grows through listening, explanation, and feedback", "experiment": "With consent, take turns explaining a familiar topic for five minutes and ask only clarifying questions before offering feedback." },
+        "tabletop-facilitation": { "environment": "A structured group setting with clear rules, turn-taking, coordination, and visible progress", "experiment": "Facilitate one short cooperative puzzle or card round, explain the rules, and ask what made participation easier or harder." },
+        "community-needs-map": { "environment": "A purpose-led setting that combines listening, coordination, and practical community impact", "experiment": "List three needs visible in a community you know, then verify one by reading a public request from a credible local organization." },
+        "decision-brief": { "environment": "A decision-oriented setting with competing evidence, explicit trade-offs, and a concise recommendation", "experiment": "Choose a reversible everyday decision and write the goal, two options, one argument for each, one risk, and a next check." },
+        "language-exchange-prompt": { "environment": "A cross-cultural social setting with curiosity, mutual help, and rapid conversational feedback", "experiment": "With a willing partner, exchange five useful phrases each and finish by checking which correction style felt comfortable." },
+        "quiet-reflection-log": { "environment": "A private, low-stimulation setting with autonomy and time to notice patterns before acting", "experiment": "Describe one recent energizing moment, one draining moment, and one small environmental change to test this week." }
+      }
+    },
+    "ja": {
+      "candidates": {
+        "visual-idea-sketch": { "environment": "目に見える下書きを作り、独自の方法を試せる静かな環境", "experiment": "身近な物を一つ選び、紙か無料の描画ツールで意図的に異なる案を三つ作ってください。" },
+        "micro-coding-prototype": { "environment": "自律性、明確な反応、小さく検証できる成果がある集中型の問題解決環境", "experiment": "ブラウザ実習環境で小さなプログラムを一つ変え、結果を予測して実行し、変化を記録してください。" },
+        "research-note": { "environment": "結論を出す前に根拠を比較できる落ち着いた探究環境", "experiment": "小さな問いを一つ決め、二つの情報源を比べ、主張、不確実な点、次の問いを一つずつ書いてください。" },
+        "household-system-experiment": { "environment": "秩序が見え、手順を繰り返し、少しずつ改善できる予測可能な環境", "experiment": "引き出しか反復作業を一つ選び、現在の手順を図にして、元に戻せる簡略化を一つ試してください。" },
+        "recipe-prototype": { "environment": "実用的な手順、創造的な変化、観察できる結果を組み合わせる実践環境", "experiment": "手元の材料で簡単な変化を一つ作るか計画し、何をなぜ変えたか記録してください。" },
+        "repair-observation": { "environment": "原因と結果が見え、丁寧な品質確認を行う具体的な手作業環境", "experiment": "重要でない物を一つ観察し、部品のつながりを描き、分解せずにできる可逆的な手入れを一つ探してください。" },
+        "nature-pattern-log": { "environment": "動きや変化する細部を自分のペースで観察する屋外環境", "experiment": "安全な一か所から、光、植物、天気、音、動きのパターンを五つ記録してください。" },
+        "low-impact-movement-sequence": { "environment": "身体の反応、自分のペースの反復、表現の余地がある柔軟な練習環境", "experiment": "座位または立位の動きを三つ作り、ゆっくり繰り返して前後の快適さと活力を記録してください。" },
+        "peer-explanation": { "environment": "傾聴、説明、フィードバックで理解を深める協働環境", "experiment": "同意を得て、身近な話題を5分ずつ交代で説明し、フィードバックの前は確認質問だけをしてください。" },
+        "tabletop-facilitation": { "environment": "明確な規則、順番、調整、見える進捗がある構造化された集団環境", "experiment": "短い協力パズルかカードを一回進行し、規則を説明して、参加しやすかった点と難しかった点を尋ねてください。" },
+        "community-needs-map": { "environment": "傾聴、調整、実際の地域貢献を組み合わせる目的志向の環境", "experiment": "知っている地域のニーズを三つ挙げ、信頼できる地域団体の公開要望を読んで一つ確認してください。" },
+        "decision-brief": { "environment": "競合する根拠、明示的なトレードオフ、簡潔な提案がある意思決定環境", "experiment": "元に戻せる日常の決定を選び、目的、二つの選択肢、各根拠、リスク、次の確認を書いてください。" },
+        "language-exchange-prompt": { "environment": "好奇心、相互支援、素早い会話反応がある異文化交流環境", "experiment": "同意した相手と便利な表現を五つずつ交換し、どの訂正方法が心地よかったか確認してください。" },
+        "quiet-reflection-log": { "environment": "行動前にパターンへ気づく時間と自律性がある刺激の少ない個人環境", "experiment": "最近元気が出た瞬間、消耗した瞬間、今週試す小さな環境変化を一つずつ書いてください。" }
+      }
+    },
+    "zh": {
+      "candidates": {
+        "visual-idea-sketch": { "environment": "能制作可见草稿并尝试原创方法的安静环境", "experiment": "选择一个日常物品，用纸或免费绘图工具有意制作三个不同的视觉草稿。" },
+        "micro-coding-prototype": { "environment": "具有自主性、清晰反馈和小型可测试成果的专注解题环境", "experiment": "在浏览器练习环境中修改一个小程序，预测结果后运行，并记录发生了什么变化。" },
+        "research-note": { "environment": "在得出结论前可以比较证据的平静探究环境", "experiment": "选择一个小问题，比较两个来源，并分别写下一项主张、不确定性和后续问题。" },
+        "household-system-experiment": { "environment": "秩序可见、步骤可重复并能逐步改进的可预测环境", "experiment": "选择一个抽屉或重复任务，画出当前步骤，并测试一项可恢复的简化。" },
+        "recipe-prototype": { "environment": "结合实际步骤、创意变化和可观察成果的动手环境", "experiment": "用已有食材制作或计划一种简单变化，并记录改变了什么以及原因。" },
+        "repair-observation": { "environment": "因果可见且需要仔细质量检查的具体动手环境", "experiment": "观察一个非关键物品，画出零件连接，并在不拆卸的情况下找出一项可恢复的维护步骤。" },
+        "nature-pattern-log": { "environment": "按自己的节奏观察运动和变化细节的户外环境", "experiment": "从一个安全地点观察并记录光线、植物、天气、声音或运动中的五种规律。" },
+        "low-impact-movement-sequence": { "environment": "有身体反馈、自主节奏重复和表达空间的灵活练习环境", "experiment": "设计三个坐姿或站姿动作，缓慢重复，并记录前后的舒适度和精力。" },
+        "peer-explanation": { "environment": "通过倾听、解释和反馈增进理解的协作环境", "experiment": "征得同意后轮流用五分钟解释熟悉主题，在提供反馈前只提出澄清问题。" },
+        "tabletop-facilitation": { "environment": "规则清晰、轮流参与、协调且进度可见的结构化小组环境", "experiment": "主持一次简短的合作拼图或纸牌回合，说明规则，并询问什么让参与更容易或更困难。" },
+        "community-needs-map": { "environment": "结合倾听、协调和实际社区影响的目标导向环境", "experiment": "列出熟悉社区中的三项需求，再通过可信本地机构的公开请求核实其中一项。" },
+        "decision-brief": { "environment": "包含相互竞争的证据、明确权衡和简洁建议的决策环境", "experiment": "选择一个可撤回的日常决定，写下目标、两个选项、各一条理由、一项风险和下一步核查。" },
+        "language-exchange-prompt": { "environment": "具有好奇心、互助和快速对话反馈的跨文化社交环境", "experiment": "与自愿伙伴各交换五个实用短语，最后确认哪种纠正方式更舒适。" },
+        "quiet-reflection-log": { "environment": "刺激较少、具有自主性并能在行动前觉察规律的私人环境", "experiment": "描述最近一次获得精力的时刻、一次消耗精力的时刻，以及本周要测试的一项小环境变化。" }
+      }
+    },
+    "fr": {
+      "candidates": {
+        "visual-idea-sketch": { "environment": "Un cadre calme où rendre les brouillons visibles et essayer des approches originales", "experiment": "Choisissez un objet quotidien et réalisez trois brouillons visuels volontairement différents sur papier ou avec un outil gratuit." },
+        "micro-coding-prototype": { "environment": "Un cadre de résolution concentrée avec autonomie, retour clair et petits résultats testables", "experiment": "Dans un bac à sable web, modifiez un petit programme, prévoyez le résultat, exécutez-le et notez le changement." },
+        "research-note": { "environment": "Un cadre d’enquête calme où comparer les preuves avant de conclure", "experiment": "Choisissez une petite question, comparez deux sources et notez une affirmation, une incertitude et une question suivante." },
+        "household-system-experiment": { "environment": "Un cadre prévisible avec ordre visible, étapes répétables et amélioration progressive", "experiment": "Choisissez un tiroir ou une tâche récurrente, cartographiez ses étapes et testez une simplification réversible." },
+        "recipe-prototype": { "environment": "Un cadre pratique combinant étapes concrètes, variation créative et résultat observable", "experiment": "Avec les ingrédients disponibles, réalisez ou planifiez une variation simple et notez ce que vous avez changé et pourquoi." },
+        "repair-observation": { "environment": "Un cadre manuel concret avec causalité visible et contrôles de qualité attentifs", "experiment": "Observez un objet non essentiel, dessinez les liens entre ses pièces et trouvez un entretien réversible sans le démonter." },
+        "nature-pattern-log": { "environment": "Un cadre extérieur d’observation avec mouvement, détails changeants et rythme autonome", "experiment": "Depuis un lieu sûr, relevez cinq motifs dans la lumière, les plantes, la météo, les sons ou les mouvements." },
+        "low-impact-movement-sequence": { "environment": "Un cadre souple avec retour corporel, répétition à son rythme et espace d’expression", "experiment": "Créez trois mouvements assis ou debout, répétez-les lentement et notez confort et énergie avant et après." },
+        "peer-explanation": { "environment": "Un cadre collaboratif où écoute, explication et retour font progresser la compréhension", "experiment": "Avec accord, expliquez à tour de rôle un sujet familier pendant cinq minutes et ne posez que des questions de clarification avant le retour." },
+        "tabletop-facilitation": { "environment": "Un cadre de groupe structuré avec règles claires, tours, coordination et progrès visible", "experiment": "Animez un court puzzle coopératif ou une manche de cartes, expliquez les règles et demandez ce qui a facilité ou freiné la participation." },
+        "community-needs-map": { "environment": "Un cadre guidé par un but, mêlant écoute, coordination et impact local concret", "experiment": "Listez trois besoins d’une communauté connue, puis vérifiez-en un dans une demande publique d’une organisation locale crédible." },
+        "decision-brief": { "environment": "Un cadre de décision avec preuves concurrentes, compromis explicites et recommandation concise", "experiment": "Choisissez une décision quotidienne réversible et notez le but, deux options, un argument chacune, un risque et la prochaine vérification." },
+        "language-exchange-prompt": { "environment": "Un cadre social interculturel avec curiosité, entraide et retour conversationnel rapide", "experiment": "Avec un partenaire volontaire, échangez cinq expressions utiles chacun et vérifiez quel style de correction était confortable." },
+        "quiet-reflection-log": { "environment": "Un cadre privé peu stimulant, autonome, laissant le temps de repérer les motifs avant d’agir", "experiment": "Décrivez un moment récent énergisant, un moment épuisant et un petit changement d’environnement à tester cette semaine." }
+      }
+    },
+    "es": {
+      "candidates": {
+        "visual-idea-sketch": { "environment": "Un entorno tranquilo para hacer borradores visibles y probar enfoques originales", "experiment": "Elige un objeto cotidiano y crea tres borradores visuales deliberadamente distintos en papel o con una herramienta gratuita." },
+        "micro-coding-prototype": { "environment": "Un entorno de resolución concentrada con autonomía, respuesta clara y pequeños resultados comprobables", "experiment": "En un entorno web de práctica, cambia un programa pequeño, predice el resultado, ejecútalo y anota qué cambió." },
+        "research-note": { "environment": "Un entorno sereno de investigación donde comparar pruebas antes de concluir", "experiment": "Elige una pregunta pequeña, compara dos fuentes y escribe una afirmación, una incertidumbre y una pregunta siguiente." },
+        "household-system-experiment": { "environment": "Un entorno predecible con orden visible, pasos repetibles y mejora gradual", "experiment": "Elige un cajón o tarea recurrente, dibuja sus pasos actuales y prueba una simplificación reversible." },
+        "recipe-prototype": { "environment": "Un entorno práctico que combina pasos concretos, variación creativa y un resultado observable", "experiment": "Con ingredientes disponibles, prepara o planea una variación sencilla y registra qué cambiaste y por qué." },
+        "repair-observation": { "environment": "Un entorno manual concreto con causa y efecto visibles y controles cuidadosos", "experiment": "Examina un objeto no crítico, dibuja cómo se conectan sus piezas e identifica un mantenimiento reversible sin desmontarlo." },
+        "nature-pattern-log": { "environment": "Un entorno exterior de observación con movimiento, detalles cambiantes y ritmo propio", "experiment": "Observa desde un lugar seguro y registra cinco patrones de luz, plantas, clima, sonido o movimiento." },
+        "low-impact-movement-sequence": { "environment": "Un entorno flexible de práctica con respuesta corporal, repetición al propio ritmo y expresión", "experiment": "Crea tres movimientos sentado o de pie, repítelos despacio y anota comodidad y energía antes y después." },
+        "peer-explanation": { "environment": "Un entorno colaborativo donde escuchar, explicar y recibir comentarios mejora la comprensión", "experiment": "Con consentimiento, expliquen por turnos un tema conocido durante cinco minutos y hagan solo preguntas aclaratorias antes de comentar." },
+        "tabletop-facilitation": { "environment": "Un entorno grupal estructurado con reglas claras, turnos, coordinación y progreso visible", "experiment": "Facilita un rompecabezas cooperativo o una ronda de cartas breve, explica las reglas y pregunta qué facilitó o dificultó participar." },
+        "community-needs-map": { "environment": "Un entorno con propósito que combina escucha, coordinación e impacto comunitario práctico", "experiment": "Enumera tres necesidades de una comunidad conocida y verifica una leyendo una solicitud pública de una organización local fiable." },
+        "decision-brief": { "environment": "Un entorno de decisión con pruebas contrapuestas, compensaciones explícitas y recomendación concisa", "experiment": "Elige una decisión cotidiana reversible y escribe el objetivo, dos opciones, un argumento por opción, un riesgo y la siguiente comprobación." },
+        "language-exchange-prompt": { "environment": "Un entorno social intercultural con curiosidad, ayuda mutua y respuesta conversacional rápida", "experiment": "Con una persona dispuesta, intercambien cinco frases útiles y comprueben qué estilo de corrección resultó cómodo." },
+        "quiet-reflection-log": { "environment": "Un entorno privado de baja estimulación con autonomía y tiempo para notar patrones antes de actuar", "experiment": "Describe un momento reciente que te dio energía, otro que te agotó y un pequeño cambio ambiental para probar esta semana." }
+      }
+    }
+  }
+}

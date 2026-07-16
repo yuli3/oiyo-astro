@@ -1,0 +1,1503 @@
+{
+  "schema": "oiyo.exploration-recommender-golden",
+  "schemaVersion": 1,
+  "profiles": {
+    "artistic": {
+      "interests": {
+        "R": 20,
+        "I": 35,
+        "A": 100,
+        "S": 35,
+        "E": 25,
+        "C": 20
+      },
+      "workEnvironment": {
+        "security": 30,
+        "achievement": 60,
+        "autonomy": 85,
+        "service": 35,
+        "creativity": 100,
+        "status": 25
+      }
+    },
+    "investigative": {
+      "interests": {
+        "R": 35,
+        "I": 100,
+        "A": 45,
+        "S": 20,
+        "E": 30,
+        "C": 70
+      },
+      "workEnvironment": {
+        "security": 60,
+        "achievement": 75,
+        "autonomy": 90,
+        "service": 30,
+        "creativity": 55,
+        "status": 25
+      }
+    },
+    "conventional": {
+      "interests": {
+        "R": 65,
+        "I": 35,
+        "A": 20,
+        "S": 25,
+        "E": 35,
+        "C": 100
+      },
+      "workEnvironment": {
+        "security": 100,
+        "achievement": 75,
+        "autonomy": 35,
+        "service": 50,
+        "creativity": 20,
+        "status": 45
+      }
+    },
+    "realistic": {
+      "interests": {
+        "R": 100,
+        "I": 55,
+        "A": 50,
+        "S": 25,
+        "E": 35,
+        "C": 60
+      },
+      "workEnvironment": {
+        "security": 75,
+        "achievement": 90,
+        "autonomy": 65,
+        "service": 40,
+        "creativity": 45,
+        "status": 40
+      }
+    },
+    "social": {
+      "interests": {
+        "R": 25,
+        "I": 35,
+        "A": 45,
+        "S": 100,
+        "E": 65,
+        "C": 40
+      },
+      "workEnvironment": {
+        "security": 55,
+        "achievement": 55,
+        "autonomy": 35,
+        "service": 100,
+        "creativity": 45,
+        "status": 50
+      }
+    },
+    "enterprising": {
+      "interests": {
+        "R": 30,
+        "I": 60,
+        "A": 35,
+        "S": 55,
+        "E": 100,
+        "C": 50
+      },
+      "workEnvironment": {
+        "security": 35,
+        "achievement": 100,
+        "autonomy": 75,
+        "service": 45,
+        "creativity": 50,
+        "status": 90
+      }
+    },
+    "balanced": {
+      "interests": {
+        "R": 50,
+        "I": 50,
+        "A": 50,
+        "S": 50,
+        "E": 50,
+        "C": 50
+      },
+      "workEnvironment": {
+        "security": 50,
+        "achievement": 50,
+        "autonomy": 50,
+        "service": 50,
+        "creativity": 50,
+        "status": 50
+      }
+    },
+    "autonomous": {
+      "interests": {
+        "R": 30,
+        "I": 75,
+        "A": 75,
+        "S": 25,
+        "E": 45,
+        "C": 40
+      },
+      "workEnvironment": {
+        "security": 35,
+        "achievement": 65,
+        "autonomy": 100,
+        "service": 35,
+        "creativity": 85,
+        "status": 30
+      }
+    },
+    "serviceCreative": {
+      "interests": {
+        "R": 30,
+        "I": 40,
+        "A": 85,
+        "S": 90,
+        "E": 55,
+        "C": 30
+      },
+      "workEnvironment": {
+        "security": 40,
+        "achievement": 55,
+        "autonomy": 45,
+        "service": 100,
+        "creativity": 90,
+        "status": 35
+      }
+    },
+    "handsOnCreative": {
+      "interests": {
+        "R": 90,
+        "I": 45,
+        "A": 90,
+        "S": 35,
+        "E": 50,
+        "C": 45
+      },
+      "workEnvironment": {
+        "security": 55,
+        "achievement": 90,
+        "autonomy": 65,
+        "service": 45,
+        "creativity": 95,
+        "status": 35
+      }
+    }
+  },
+  "contexts": {
+    "homeFreeSolo20": {
+      "accessibilityNeeds": [],
+      "budget": "free",
+      "maxRisk": "low",
+      "socialMode": "solo",
+      "space": "home-small",
+      "timeMinutes": 20
+    },
+    "homeLowTogether30": {
+      "accessibilityNeeds": [],
+      "budget": "low",
+      "maxRisk": "low",
+      "socialMode": "together",
+      "space": "home-small",
+      "timeMinutes": 30
+    },
+    "sharedFreeTogether45": {
+      "accessibilityNeeds": [],
+      "budget": "free",
+      "maxRisk": "low",
+      "socialMode": "together",
+      "space": "shared-indoor",
+      "timeMinutes": 45
+    },
+    "outdoorFreeSolo30": {
+      "accessibilityNeeds": [],
+      "budget": "free",
+      "maxRisk": "low",
+      "socialMode": "solo",
+      "space": "outdoor",
+      "timeMinutes": 30
+    },
+    "specializedLowSolo60": {
+      "accessibilityNeeds": [],
+      "budget": "low",
+      "maxRisk": "moderate",
+      "socialMode": "solo",
+      "space": "specialized",
+      "timeMinutes": 60
+    },
+    "accessibleRemoteQuiet30": {
+      "accessibilityNeeds": [
+        "seated",
+        "low-impact",
+        "quiet",
+        "remote"
+      ],
+      "budget": "free",
+      "maxRisk": "low",
+      "socialMode": "solo",
+      "space": "home-small",
+      "timeMinutes": 30
+    }
+  },
+  "cases": [
+    {
+      "profile": "artistic",
+      "context": "homeFreeSolo20",
+      "topId": "low-impact-movement-sequence",
+      "topScore": 90,
+      "top3Ids": [
+        "low-impact-movement-sequence",
+        "quiet-reflection-log",
+        "visual-idea-sketch"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "artistic",
+      "context": "homeLowTogether30",
+      "topId": "visual-idea-sketch",
+      "topScore": 93,
+      "top3Ids": [
+        "visual-idea-sketch",
+        "low-impact-movement-sequence",
+        "language-exchange-prompt"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "artistic",
+      "context": "sharedFreeTogether45",
+      "topId": "visual-idea-sketch",
+      "topScore": 93,
+      "top3Ids": [
+        "visual-idea-sketch",
+        "low-impact-movement-sequence",
+        "language-exchange-prompt"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "artistic",
+      "context": "outdoorFreeSolo30",
+      "topId": "visual-idea-sketch",
+      "topScore": 93,
+      "top3Ids": [
+        "visual-idea-sketch",
+        "low-impact-movement-sequence",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "artistic",
+      "context": "specializedLowSolo60",
+      "topId": "recipe-prototype",
+      "topScore": 87,
+      "top3Ids": [
+        "recipe-prototype",
+        "visual-idea-sketch",
+        "repair-observation"
+      ],
+      "excludedByGuardrail": 0,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "artistic",
+      "context": "accessibleRemoteQuiet30",
+      "topId": "quiet-reflection-log",
+      "topScore": 89,
+      "top3Ids": [
+        "quiet-reflection-log",
+        "research-note",
+        "decision-brief"
+      ],
+      "excludedByGuardrail": 9,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "investigative",
+      "context": "homeFreeSolo20",
+      "topId": "quiet-reflection-log",
+      "topScore": 92,
+      "top3Ids": [
+        "quiet-reflection-log",
+        "research-note",
+        "household-system-experiment"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "investigative",
+      "context": "homeLowTogether30",
+      "topId": "decision-brief",
+      "topScore": 89,
+      "top3Ids": [
+        "decision-brief",
+        "micro-coding-prototype",
+        "household-system-experiment"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "investigative",
+      "context": "sharedFreeTogether45",
+      "topId": "micro-coding-prototype",
+      "topScore": 93,
+      "top3Ids": [
+        "micro-coding-prototype",
+        "decision-brief",
+        "household-system-experiment"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "investigative",
+      "context": "outdoorFreeSolo30",
+      "topId": "quiet-reflection-log",
+      "topScore": 92,
+      "top3Ids": [
+        "quiet-reflection-log",
+        "nature-pattern-log",
+        "visual-idea-sketch"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "investigative",
+      "context": "specializedLowSolo60",
+      "topId": "repair-observation",
+      "topScore": 88,
+      "top3Ids": [
+        "repair-observation",
+        "recipe-prototype",
+        "micro-coding-prototype"
+      ],
+      "excludedByGuardrail": 0,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "investigative",
+      "context": "accessibleRemoteQuiet30",
+      "topId": "research-note",
+      "topScore": 93,
+      "top3Ids": [
+        "research-note",
+        "quiet-reflection-log",
+        "decision-brief"
+      ],
+      "excludedByGuardrail": 9,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "workEnvironment",
+        "interest"
+      ]
+    },
+    {
+      "profile": "conventional",
+      "context": "homeFreeSolo20",
+      "topId": "household-system-experiment",
+      "topScore": 94,
+      "top3Ids": [
+        "household-system-experiment",
+        "repair-observation",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "conventional",
+      "context": "homeLowTogether30",
+      "topId": "household-system-experiment",
+      "topScore": 94,
+      "top3Ids": [
+        "household-system-experiment",
+        "repair-observation",
+        "decision-brief"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "conventional",
+      "context": "sharedFreeTogether45",
+      "topId": "household-system-experiment",
+      "topScore": 94,
+      "top3Ids": [
+        "household-system-experiment",
+        "micro-coding-prototype",
+        "decision-brief"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "conventional",
+      "context": "outdoorFreeSolo30",
+      "topId": "community-needs-map",
+      "topScore": 83,
+      "top3Ids": [
+        "community-needs-map",
+        "nature-pattern-log",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "conventional",
+      "context": "specializedLowSolo60",
+      "topId": "repair-observation",
+      "topScore": 92,
+      "top3Ids": [
+        "repair-observation",
+        "recipe-prototype",
+        "household-system-experiment"
+      ],
+      "excludedByGuardrail": 0,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "conventional",
+      "context": "accessibleRemoteQuiet30",
+      "topId": "research-note",
+      "topScore": 86,
+      "top3Ids": [
+        "research-note",
+        "decision-brief",
+        "community-needs-map"
+      ],
+      "excludedByGuardrail": 9,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "realistic",
+      "context": "homeFreeSolo20",
+      "topId": "household-system-experiment",
+      "topScore": 91,
+      "top3Ids": [
+        "household-system-experiment",
+        "low-impact-movement-sequence",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "realistic",
+      "context": "homeLowTogether30",
+      "topId": "household-system-experiment",
+      "topScore": 91,
+      "top3Ids": [
+        "household-system-experiment",
+        "low-impact-movement-sequence",
+        "repair-observation"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "realistic",
+      "context": "sharedFreeTogether45",
+      "topId": "household-system-experiment",
+      "topScore": 91,
+      "top3Ids": [
+        "household-system-experiment",
+        "micro-coding-prototype",
+        "low-impact-movement-sequence"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "realistic",
+      "context": "outdoorFreeSolo30",
+      "topId": "nature-pattern-log",
+      "topScore": 89,
+      "top3Ids": [
+        "nature-pattern-log",
+        "low-impact-movement-sequence",
+        "visual-idea-sketch"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "workEnvironment",
+        "interest"
+      ]
+    },
+    {
+      "profile": "realistic",
+      "context": "specializedLowSolo60",
+      "topId": "repair-observation",
+      "topScore": 93,
+      "top3Ids": [
+        "repair-observation",
+        "recipe-prototype",
+        "household-system-experiment"
+      ],
+      "excludedByGuardrail": 0,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "realistic",
+      "context": "accessibleRemoteQuiet30",
+      "topId": "research-note",
+      "topScore": 88,
+      "top3Ids": [
+        "research-note",
+        "decision-brief",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 9,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "social",
+      "context": "homeFreeSolo20",
+      "topId": "community-needs-map",
+      "topScore": 88,
+      "top3Ids": [
+        "community-needs-map",
+        "household-system-experiment",
+        "low-impact-movement-sequence"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "budget",
+        "space",
+        "social"
+      ],
+      "topCounterFeatures": [
+        "time",
+        "interest"
+      ]
+    },
+    {
+      "profile": "social",
+      "context": "homeLowTogether30",
+      "topId": "peer-explanation",
+      "topScore": 94,
+      "top3Ids": [
+        "peer-explanation",
+        "community-needs-map",
+        "language-exchange-prompt"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "social",
+      "context": "sharedFreeTogether45",
+      "topId": "peer-explanation",
+      "topScore": 94,
+      "top3Ids": [
+        "peer-explanation",
+        "community-needs-map",
+        "language-exchange-prompt"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "social",
+      "context": "outdoorFreeSolo30",
+      "topId": "community-needs-map",
+      "topScore": 93,
+      "top3Ids": [
+        "community-needs-map",
+        "low-impact-movement-sequence",
+        "peer-explanation"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "social",
+      "context": "specializedLowSolo60",
+      "topId": "recipe-prototype",
+      "topScore": 83,
+      "top3Ids": [
+        "recipe-prototype",
+        "repair-observation",
+        "community-needs-map"
+      ],
+      "excludedByGuardrail": 0,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "social",
+      "context": "accessibleRemoteQuiet30",
+      "topId": "community-needs-map",
+      "topScore": 93,
+      "top3Ids": [
+        "community-needs-map",
+        "decision-brief",
+        "research-note"
+      ],
+      "excludedByGuardrail": 9,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "enterprising",
+      "context": "homeFreeSolo20",
+      "topId": "decision-brief",
+      "topScore": 89,
+      "top3Ids": [
+        "decision-brief",
+        "low-impact-movement-sequence",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "budget",
+        "space",
+        "social"
+      ],
+      "topCounterFeatures": [
+        "time",
+        "interest"
+      ]
+    },
+    {
+      "profile": "enterprising",
+      "context": "homeLowTogether30",
+      "topId": "decision-brief",
+      "topScore": 95,
+      "top3Ids": [
+        "decision-brief",
+        "community-needs-map",
+        "peer-explanation"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "enterprising",
+      "context": "sharedFreeTogether45",
+      "topId": "decision-brief",
+      "topScore": 95,
+      "top3Ids": [
+        "decision-brief",
+        "community-needs-map",
+        "micro-coding-prototype"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "enterprising",
+      "context": "outdoorFreeSolo30",
+      "topId": "community-needs-map",
+      "topScore": 89,
+      "top3Ids": [
+        "community-needs-map",
+        "low-impact-movement-sequence",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "workEnvironment",
+        "interest"
+      ]
+    },
+    {
+      "profile": "enterprising",
+      "context": "specializedLowSolo60",
+      "topId": "recipe-prototype",
+      "topScore": 85,
+      "top3Ids": [
+        "recipe-prototype",
+        "repair-observation",
+        "decision-brief"
+      ],
+      "excludedByGuardrail": 0,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "enterprising",
+      "context": "accessibleRemoteQuiet30",
+      "topId": "decision-brief",
+      "topScore": 95,
+      "top3Ids": [
+        "decision-brief",
+        "community-needs-map",
+        "research-note"
+      ],
+      "excludedByGuardrail": 9,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "balanced",
+      "context": "homeFreeSolo20",
+      "topId": "household-system-experiment",
+      "topScore": 83,
+      "top3Ids": [
+        "household-system-experiment",
+        "low-impact-movement-sequence",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "balanced",
+      "context": "homeLowTogether30",
+      "topId": "community-needs-map",
+      "topScore": 83,
+      "top3Ids": [
+        "community-needs-map",
+        "decision-brief",
+        "household-system-experiment"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "balanced",
+      "context": "sharedFreeTogether45",
+      "topId": "community-needs-map",
+      "topScore": 83,
+      "top3Ids": [
+        "community-needs-map",
+        "decision-brief",
+        "household-system-experiment"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "balanced",
+      "context": "outdoorFreeSolo30",
+      "topId": "community-needs-map",
+      "topScore": 83,
+      "top3Ids": [
+        "community-needs-map",
+        "low-impact-movement-sequence",
+        "nature-pattern-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "balanced",
+      "context": "specializedLowSolo60",
+      "topId": "recipe-prototype",
+      "topScore": 83,
+      "top3Ids": [
+        "recipe-prototype",
+        "repair-observation",
+        "community-needs-map"
+      ],
+      "excludedByGuardrail": 0,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "balanced",
+      "context": "accessibleRemoteQuiet30",
+      "topId": "community-needs-map",
+      "topScore": 83,
+      "top3Ids": [
+        "community-needs-map",
+        "decision-brief",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 9,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "autonomous",
+      "context": "homeFreeSolo20",
+      "topId": "quiet-reflection-log",
+      "topScore": 92,
+      "top3Ids": [
+        "quiet-reflection-log",
+        "low-impact-movement-sequence",
+        "visual-idea-sketch"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "autonomous",
+      "context": "homeLowTogether30",
+      "topId": "visual-idea-sketch",
+      "topScore": 92,
+      "top3Ids": [
+        "visual-idea-sketch",
+        "low-impact-movement-sequence",
+        "decision-brief"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "autonomous",
+      "context": "sharedFreeTogether45",
+      "topId": "visual-idea-sketch",
+      "topScore": 92,
+      "top3Ids": [
+        "visual-idea-sketch",
+        "low-impact-movement-sequence",
+        "micro-coding-prototype"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "autonomous",
+      "context": "outdoorFreeSolo30",
+      "topId": "quiet-reflection-log",
+      "topScore": 92,
+      "top3Ids": [
+        "quiet-reflection-log",
+        "visual-idea-sketch",
+        "nature-pattern-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "autonomous",
+      "context": "specializedLowSolo60",
+      "topId": "recipe-prototype",
+      "topScore": 86,
+      "top3Ids": [
+        "recipe-prototype",
+        "repair-observation",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 0,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "autonomous",
+      "context": "accessibleRemoteQuiet30",
+      "topId": "quiet-reflection-log",
+      "topScore": 92,
+      "top3Ids": [
+        "quiet-reflection-log",
+        "research-note",
+        "decision-brief"
+      ],
+      "excludedByGuardrail": 9,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "serviceCreative",
+      "context": "homeFreeSolo20",
+      "topId": "low-impact-movement-sequence",
+      "topScore": 88,
+      "top3Ids": [
+        "low-impact-movement-sequence",
+        "community-needs-map",
+        "quiet-reflection-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "serviceCreative",
+      "context": "homeLowTogether30",
+      "topId": "language-exchange-prompt",
+      "topScore": 95,
+      "top3Ids": [
+        "language-exchange-prompt",
+        "peer-explanation",
+        "community-needs-map"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "serviceCreative",
+      "context": "sharedFreeTogether45",
+      "topId": "language-exchange-prompt",
+      "topScore": 95,
+      "top3Ids": [
+        "language-exchange-prompt",
+        "peer-explanation",
+        "community-needs-map"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "serviceCreative",
+      "context": "outdoorFreeSolo30",
+      "topId": "community-needs-map",
+      "topScore": 91,
+      "top3Ids": [
+        "community-needs-map",
+        "visual-idea-sketch",
+        "low-impact-movement-sequence"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "serviceCreative",
+      "context": "specializedLowSolo60",
+      "topId": "recipe-prototype",
+      "topScore": 89,
+      "top3Ids": [
+        "recipe-prototype",
+        "repair-observation",
+        "community-needs-map"
+      ],
+      "excludedByGuardrail": 0,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "serviceCreative",
+      "context": "accessibleRemoteQuiet30",
+      "topId": "community-needs-map",
+      "topScore": 91,
+      "top3Ids": [
+        "community-needs-map",
+        "quiet-reflection-log",
+        "decision-brief"
+      ],
+      "excludedByGuardrail": 9,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "handsOnCreative",
+      "context": "homeFreeSolo20",
+      "topId": "low-impact-movement-sequence",
+      "topScore": 94,
+      "top3Ids": [
+        "low-impact-movement-sequence",
+        "quiet-reflection-log",
+        "visual-idea-sketch"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "handsOnCreative",
+      "context": "homeLowTogether30",
+      "topId": "low-impact-movement-sequence",
+      "topScore": 94,
+      "top3Ids": [
+        "low-impact-movement-sequence",
+        "visual-idea-sketch",
+        "language-exchange-prompt"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "handsOnCreative",
+      "context": "sharedFreeTogether45",
+      "topId": "low-impact-movement-sequence",
+      "topScore": 94,
+      "top3Ids": [
+        "low-impact-movement-sequence",
+        "visual-idea-sketch",
+        "language-exchange-prompt"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "handsOnCreative",
+      "context": "outdoorFreeSolo30",
+      "topId": "low-impact-movement-sequence",
+      "topScore": 94,
+      "top3Ids": [
+        "low-impact-movement-sequence",
+        "visual-idea-sketch",
+        "nature-pattern-log"
+      ],
+      "excludedByGuardrail": 1,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "handsOnCreative",
+      "context": "specializedLowSolo60",
+      "topId": "recipe-prototype",
+      "topScore": 94,
+      "top3Ids": [
+        "recipe-prototype",
+        "repair-observation",
+        "visual-idea-sketch"
+      ],
+      "excludedByGuardrail": 0,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    },
+    {
+      "profile": "handsOnCreative",
+      "context": "accessibleRemoteQuiet30",
+      "topId": "quiet-reflection-log",
+      "topScore": 89,
+      "top3Ids": [
+        "quiet-reflection-log",
+        "decision-brief",
+        "research-note"
+      ],
+      "excludedByGuardrail": 9,
+      "topSupportingFeatures": [
+        "time",
+        "budget",
+        "space"
+      ],
+      "topCounterFeatures": [
+        "interest",
+        "workEnvironment"
+      ]
+    }
+  ]
+}
