@@ -1,0 +1,60 @@
+{
+  "schema": "oiyo.personal-profile-export-compatibility",
+  "schemaVersion": 1,
+  "canonicalExportSchema": "oiyo.personal-profile-export",
+  "canonicalExportVersion": 2,
+  "existingSurfaces": [
+    {
+      "id": "ontology-export-track-d",
+      "currentContract": "unversioned OntologyExport with signals/history/recommendations/graph",
+      "decision": "keep unchanged; PersonalProfileExport v2 is a parallel assessment-evidence contract until a UI migration is reviewed"
+    },
+    {
+      "id": "profile-markdown-export",
+      "currentContract": "user-authored local Markdown form",
+      "decision": "keep separate; never relabel user-authored notes as assessment-derived evidence"
+    }
+  ],
+  "formats": [
+    {
+      "format": "json",
+      "filename": "oiyo-personal-profile-v2.json",
+      "mime": "application/json;charset=utf-8",
+      "role": "machine-readable canonical",
+      "roundTrip": "lossless",
+      "provenance": "full",
+      "rawResponsesIncluded": false,
+      "mobileFallback": "deliverPersonalProfileExport: UTF-8 Blob download, then copy fallback"
+    },
+    {
+      "format": "markdown",
+      "filename": "oiyo-personal-profile-v2.md",
+      "mime": "text/markdown;charset=utf-8",
+      "role": "human-readable summary",
+      "roundTrip": "lossy-by-design",
+      "provenance": "visible-summary",
+      "rawResponsesIncluded": false,
+      "mobileFallback": "deliverPersonalProfileExport: UTF-8 Blob download, then copy fallback"
+    },
+    {
+      "format": "soul",
+      "filename": "SOUL.md",
+      "mime": "text/markdown;charset=utf-8",
+      "role": "AI personalization evidence",
+      "roundTrip": "lossy-by-design",
+      "provenance": "visible-summary",
+      "rawResponsesIncluded": false,
+      "mobileFallback": "deliverPersonalProfileExport: UTF-8 Blob download, then copy fallback"
+    },
+    {
+      "format": "obsidian",
+      "filename": "oiyo-personal-profile-obsidian-v2",
+      "mime": "application/x-directory",
+      "role": "wikilink-friendly Markdown bundle",
+      "roundTrip": "lossless-via-_data/profile.json",
+      "provenance": "full",
+      "rawResponsesIncluded": false,
+      "mobileFallback": "deliverPersonalProfileExport: adapter multi-file save, then copy-index fallback"
+    }
+  ]
+}

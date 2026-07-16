@@ -1,0 +1,82 @@
+{
+  "exportedAt": "2026-07-16T09:00:00.000Z",
+  "originPolicy": {
+    "assessmentDerived": "measured-or-reflective-result",
+    "userAuthored": "none-in-v2"
+  },
+  "privacy": {
+    "rawResponsesIncluded": false,
+    "serverTransmission": "none"
+  },
+  "provenance": [
+    {
+      "assessmentId": "big5",
+      "instrumentVersion": "big5-ocean-20-v1",
+      "interpretationVersion": "big5-ocean-20-interpretation-v1",
+      "measuredAt": "2026-07-01T00:00:00.000Z",
+      "resultId": "fixture:big5:1",
+      "scoringVersion": "big5-ocean-20-scoring-v1"
+    }
+  ],
+  "schema": "oiyo.personal-profile-export",
+  "schemaVersion": 2,
+  "sections": {
+    "assessmentDerived": {
+      "generatedAt": "2026-07-16T00:00:00.000Z",
+      "instruments": [
+        {
+          "assessmentId": "big5",
+          "availability": "present",
+          "hasLowConfidence": false,
+          "hasStale": false,
+          "lane": "trait",
+          "measuredAt": "2026-07-01T00:00:00.000Z",
+          "projectionCount": 1
+        },
+        { "assessmentId": "mbti", "availability": "missing", "hasLowConfidence": false, "hasStale": false, "lane": "preference", "missingReason": "no-result", "projectionCount": 0 },
+        { "assessmentId": "riasec", "availability": "missing", "hasLowConfidence": false, "hasStale": false, "lane": "interest", "missingReason": "no-result", "projectionCount": 0 },
+        { "assessmentId": "career-values", "availability": "missing", "hasLowConfidence": false, "hasStale": false, "lane": "chosen-value", "missingReason": "no-result", "projectionCount": 0 },
+        { "assessmentId": "adult-attachment", "availability": "missing", "hasLowConfidence": false, "hasStale": false, "lane": "reflective-signal", "missingReason": "no-result", "projectionCount": 0 }
+      ],
+      "lanes": [
+        {
+          "id": "trait",
+          "projections": [
+            {
+              "confidence": 0.6,
+              "confidenceBand": "medium",
+              "constructId": "psychology.big5.O",
+              "evidenceTier": "research-inspired",
+              "freshness": "current",
+              "measuredAt": "2026-07-01T00:00:00.000Z",
+              "provenance": {
+                "assessmentId": "big5",
+                "assessmentResultSchema": "oiyo.assessment-result",
+                "assessmentResultSchemaVersion": 2,
+                "instrumentVersion": "big5-ocean-20-v1",
+                "interpretationVersion": "big5-ocean-20-interpretation-v1",
+                "resultId": "fixture:big5:1",
+                "scoringVersion": "big5-ocean-20-scoring-v1"
+              },
+              "scale": { "max": 100, "min": 0 },
+              "sourceAssessmentId": "big5",
+              "value": 80
+            }
+          ]
+        },
+        { "id": "preference", "projections": [] },
+        { "id": "interest", "projections": [] },
+        { "id": "chosen-value", "projections": [] },
+        { "id": "reflective-signal", "projections": [] }
+      ],
+      "schema": "oiyo.personal-profile-snapshot",
+      "schemaVersion": 1
+    },
+    "userAuthored": []
+  },
+  "source": {
+    "generatedAt": "2026-07-16T00:00:00.000Z",
+    "schema": "oiyo.personal-profile-snapshot",
+    "schemaVersion": 1
+  }
+}
