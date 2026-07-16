@@ -1,0 +1,37 @@
+{
+  "schema": "oiyo.personal-profile-snapshot-fixtures",
+  "schemaVersion": 1,
+  "instruments": [
+    {
+      "assessmentId": "big5",
+      "lane": "trait",
+      "measuredAt": "2026-07-01T00:00:00.000Z",
+      "expectedConstructs": ["psychology.big5.O", "psychology.big5.C", "psychology.big5.E", "psychology.big5.A", "psychology.big5.N"]
+    },
+    {
+      "assessmentId": "mbti",
+      "lane": "preference",
+      "measuredAt": "2026-07-02T00:00:00.000Z",
+      "expectedConstructs": ["personality.mbti.preference.EI", "personality.mbti.preference.SN", "personality.mbti.preference.TF", "personality.mbti.preference.JP"]
+    },
+    {
+      "assessmentId": "riasec",
+      "lane": "interest",
+      "measuredAt": "2026-07-03T00:00:00.000Z",
+      "expectedConstructs": ["vocation.riasec.R", "vocation.riasec.I", "vocation.riasec.A", "vocation.riasec.S", "vocation.riasec.E", "vocation.riasec.C"]
+    },
+    {
+      "assessmentId": "career-values",
+      "lane": "chosen-value",
+      "measuredAt": "2026-07-04T00:00:00.000Z",
+      "expectedConstructs": ["values.work.autonomy", "values.work.creativity"]
+    },
+    {
+      "assessmentId": "adult-attachment",
+      "lane": "reflective-signal",
+      "measuredAt": "2026-01-01T00:00:00.000Z",
+      "expectedConstructs": ["relationship.attachment.anxiety", "relationship.attachment.avoidance"],
+      "expectedFreshness": "stale"
+    }
+  ]
+}
