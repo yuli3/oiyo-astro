@@ -1,0 +1,54 @@
+{
+  "schema": "oiyo.relationship-comparison-contract",
+  "schemaVersion": 1,
+  "stage": "non-public-foundation",
+  "publicRoutes": [],
+  "a3Compatibility": {
+    "acceptedSchema": "oiyo.personal-profile-export",
+    "acceptedVersion": 2,
+    "parser": "parsePersonalProfileExportJson",
+    "rawResponsesIncluded": false,
+    "userAuthoredIncluded": false,
+    "sourceResultIdIncluded": false
+  },
+  "integrity": {
+    "artifact": "unsigned-self-asserted-local",
+    "authenticity": "not-provided",
+    "hashAlgorithm": "fnv1a-64",
+    "purpose": "integrity-and-error-detection-only",
+    "claim": "The canonical payload hash detects accidental or unrecomputed edits; it is not a signature, MAC, identity proof, or authenticity proof. A person who edits the payload can recompute it."
+  },
+  "runtime": {
+    "browserOnly": true,
+    "stateless": true,
+    "networkCalls": 0,
+    "analyticsEvents": 0,
+    "serverPersistence": false,
+    "browserPersistenceByEngine": false
+  },
+  "eligibility": {
+    "allowedContexts": ["couple", "family", "friend"],
+    "required": ["adult-confirmation", "explicit-owner-self-export", "bilateral-active-acknowledgement", "mutual-reflection-purpose", "active-revocation-set"],
+    "blocked": ["minor", "political-signal", "health-signal", "workplace-evaluation", "employment", "hiring"]
+  },
+  "comparison": {
+    "signalValuePolicy": "finite normalized numeric canonical signals from the exact allowlist only; no free text is compared",
+    "independencePolicy": "codeId and canonical profile payload fingerprint must both differ",
+    "allowedOutputs": ["shared-items", "different-items", "unmatched-items", "conversation-questions", "bilateral-origin", "bilateral-provenance"],
+    "forbiddenOutputs": ["aggregate-score", "compatibility-judgment", "success-rate", "ranking", "career-judgment", "job-judgment", "employment-judgment", "hiring-judgment"]
+  },
+  "lifecycle": {
+    "defaultExpiryDays": 7,
+    "maximumExpiryDays": 30,
+    "expiry": "comparison rejects a code at or after expiresAt",
+    "clock": "canonical UTC timestamps are checked against caller-supplied or current device time; no trusted server clock is claimed",
+    "withdraw": "withdrawal adds the codeId to the caller-maintained active revocation set; every later comparison must pass that set and rejects the code",
+    "delete": "the receipt marks deletion as caller-action-required because the stateless engine has no storage handle",
+    "exportedCopyLimit": "withdrawal cannot remotely revoke copies another person already exported or a caller that deliberately omits prior revocations"
+  },
+  "validation": {
+    "library": "ajv",
+    "artifacts": ["resultCode", "comparisonInput", "comparisonReport", "withdrawalReceipt"],
+    "mutationsRequired": ["additional-property", "wrong-const", "forbidden-construct", "missing-revocation-set", "forged-report-guardrail", "false-deletion-status"]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "oiyo.role-visual.v1",
+  "scenarios": [
+    {
+      "id": "clear",
+      "input": { "dataCoverage": 1, "dimensions": [{ "id": "explore", "score": 84, "confidence": 0.9 }, { "id": "focus", "score": 61, "confidence": 0.85 }, { "id": "connect", "score": 42, "confidence": 0.8 }] },
+      "expected": { "status": "clear", "roleAid": "neutral-pattern-01" }
+    },
+    {
+      "id": "mixed",
+      "input": { "dataCoverage": 1, "dimensions": [{ "id": "explore", "score": 78, "confidence": 0.9 }, { "id": "focus", "score": 69, "confidence": 0.85 }, { "id": "connect", "score": 47, "confidence": 0.8 }] },
+      "expected": { "status": "mixed", "roleAid": null }
+    },
+    {
+      "id": "tie",
+      "input": { "dataCoverage": 1, "dimensions": [{ "id": "explore", "score": 74, "confidence": 0.9 }, { "id": "focus", "score": 74, "confidence": 0.85 }, { "id": "connect", "score": 46, "confidence": 0.8 }] },
+      "expected": { "status": "tie", "roleAid": null }
+    },
+    {
+      "id": "low-flat",
+      "input": { "dataCoverage": 1, "dimensions": [{ "id": "explore", "score": 36, "confidence": 0.9 }, { "id": "focus", "score": 33, "confidence": 0.85 }, { "id": "connect", "score": 31, "confidence": 0.8 }] },
+      "expected": { "status": "low-flat", "roleAid": null }
+    },
+    {
+      "id": "uncertain",
+      "input": { "dataCoverage": 0.5, "dimensions": [{ "id": "explore", "score": 88, "confidence": 0.5 }, { "id": "focus", "score": 51, "confidence": 0.45 }, { "id": "connect", "score": 40, "confidence": 0.5 }] },
+      "expected": { "status": "uncertain", "roleAid": null }
+    }
+  ],
+  "interactionStates": ["idle", "saved", "shared"]
+}

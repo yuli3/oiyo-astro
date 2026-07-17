@@ -1,0 +1,56 @@
+{
+  "schema": "oiyo.personal-profile-history-contract",
+  "schemaVersion": 1,
+  "storageKey": "oiyo:personal-profile-history:v1",
+  "privacy": {
+    "storage": "browser-local-only",
+    "serverTransmission": "none",
+    "rawResponsesIncluded": false
+  },
+  "recording": {
+    "mode": "explicit-opt-in",
+    "automaticRecreationAfterDelete": false
+  },
+  "retention": {
+    "maxPerInstrumentVersion": 12,
+    "maxTotal": 100,
+    "freshDays": 365
+  },
+  "comparison": {
+    "requiresSameAssessmentId": true,
+    "requiresSameInstrumentVersion": true,
+    "requiresSameScoringVersion": true,
+    "interpretation": "point-in-time evidence only; never proof of personality change"
+  },
+  "uxStates": [
+    "ready",
+    "empty",
+    "storage-disabled",
+    "read-failed",
+    "corrupt",
+    "write-failed",
+    "delete-failed",
+    "export-failed"
+  ],
+  "requiredRegressionCases": [
+    "fixture-comparison",
+    "allowlist-export",
+    "same-instrument-version",
+    "same-scoring-version",
+    "v0-migration",
+    "corrupt-json",
+    "duplicate-result-id",
+    "duplicate-completion-time",
+    "clock-rollback",
+    "fresh-at-365-days",
+    "stale-after-365-days",
+    "individual-delete",
+    "clear-all",
+    "retention-cap",
+    "storage-disabled",
+    "storage-failure",
+    "classification-strict-exclusion",
+    "export-failure-retry-revoke",
+    "explicit-rerecord-only"
+  ]
+}

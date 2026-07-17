@@ -1,0 +1,30 @@
+{
+  "schema": "oiyo.relationship-comparison-fixture",
+  "schemaVersion": 1,
+  "a3Fixture": "config/personal-profile-export-v2.fixture.json",
+  "createdAt": "2026-07-16T10:00:00.000Z",
+  "compareAt": "2026-07-16T11:00:00.000Z",
+  "participantA": {
+    "codeId": "fixture_A_01",
+    "consentAcknowledgedAt": "2026-07-16T09:58:00.000Z",
+    "openness": 80,
+    "conscientiousness": 60
+  },
+  "participantB": {
+    "codeId": "fixture_B_01",
+    "consentAcknowledgedAt": "2026-07-16T09:59:00.000Z",
+    "openness": 55,
+    "conscientiousness": 60
+  },
+  "expected": {
+    "sharedConstructs": ["psychology.big5.C"],
+    "differentConstructs": ["psychology.big5.O"],
+    "questionCount": 2,
+    "unmatched": { "A": [], "B": [] },
+    "aggregateScorePresent": false,
+    "artifactAuthenticity": "not-provided",
+    "networkCalls": 0,
+    "analyticsEvents": 0,
+    "schemaValidatedArtifacts": ["resultCode", "comparisonInput", "comparisonReport", "withdrawalReceipt"]
+  }
+}

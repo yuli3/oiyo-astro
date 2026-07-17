@@ -16,6 +16,12 @@
     "audit:assessment-analytics": "node scripts/audit-assessment-analytics-contracts.mjs",
     "audit:profile-snapshot": "node scripts/audit-personal-profile-snapshot.mjs",
     "audit:profile-export": "node scripts/audit-personal-profile-export.mjs",
+    "audit:relationship-comparison": "node scripts/audit-relationship-comparison.mjs",
+    "audit:profile-history": "node scripts/audit-personal-profile-history.mjs",
+    "audit:role-visual": "node scripts/audit-role-visual-system.mjs",
+    "audit:sample-report": "node scripts/audit-sample-report.mjs",
+    "audit:reflective-life-role-balance": "node scripts/audit-reflective-life-role-balance.mjs",
+    "audit:affiliate": "node scripts/audit-affiliate.mjs",
     "audit:exploration-recommender": "node scripts/audit-exploration-recommender.mjs",
     "submit:indexing": "python3 ../docs/search-submit-all.py --site oiyo --new-only",
     "submit:indexing:dry": "python3 ../docs/search-submit-all.py --site oiyo --new-only --dry-run",
@@ -76,6 +82,7 @@
     "vite": "^7"
   },
   "devDependencies": {
+    "ajv": "^8.20.0",
     "fast-check": "^4.8.0",
     "vitest": "^4.1.8"
   }

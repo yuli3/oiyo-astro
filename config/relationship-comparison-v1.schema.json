@@ -1,0 +1,199 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oiyo.net/schemas/relationship-comparison-v1.json",
+  "title": "OIYO stateless relationship comparison contracts",
+  "$defs": {
+    "isoTimestamp": { "type": "string", "format": "date-time" },
+    "codeId": { "type": "string", "pattern": "^[A-Za-z0-9_-]{8,64}$" },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["assessmentId", "instrumentVersion", "interpretationVersion", "measuredAt", "scoringVersion"],
+      "properties": {
+        "assessmentId": { "enum": ["adult-attachment", "big5", "career-values", "mbti", "riasec"] },
+        "instrumentVersion": { "type": "string", "minLength": 1 },
+        "interpretationVersion": { "type": "string", "minLength": 1 },
+        "measuredAt": { "$ref": "#/$defs/isoTimestamp" },
+        "scoringVersion": { "type": "string", "minLength": 1 }
+      }
+    },
+    "signal": {
+      "type": "object", "additionalProperties": false,
+      "required": ["confidenceBand", "constructId", "evidenceTier", "freshness", "lane", "measuredAt", "sourceAssessmentId", "value"],
+      "properties": {
+        "confidenceBand": { "enum": ["low", "medium", "high"] },
+        "constructId": {
+          "enum": [
+            "relationship.attachment.anxiety", "relationship.attachment.avoidance",
+            "psychology.big5.O", "psychology.big5.C", "psychology.big5.E", "psychology.big5.A", "psychology.big5.N",
+            "values.work.security", "values.work.achievement", "values.work.autonomy", "values.work.service", "values.work.creativity", "values.work.status",
+            "personality.mbti.preference.EI", "personality.mbti.preference.SN", "personality.mbti.preference.TF", "personality.mbti.preference.JP",
+            "vocation.riasec.R", "vocation.riasec.I", "vocation.riasec.A", "vocation.riasec.S", "vocation.riasec.E", "vocation.riasec.C"
+          ]
+        },
+        "evidenceTier": { "enum": ["validated-scale", "research-inspired", "reflective-framework", "symbolic-tradition", "educational", "entertainment"] },
+        "freshness": { "enum": ["current", "stale"] },
+        "lane": { "enum": ["trait", "preference", "interest", "chosen-value", "reflective-signal"] },
+        "measuredAt": { "$ref": "#/$defs/isoTimestamp" },
+        "scale": {
+          "type": "object", "additionalProperties": false, "required": ["max", "min"],
+          "properties": { "max": { "type": "number" }, "min": { "type": "number" } }
+        },
+        "sourceAssessmentId": { "enum": ["adult-attachment", "big5", "career-values", "mbti", "riasec"] },
+        "value": { "type": "number" }
+      }
+    },
+    "integrity": {
+      "type": "object", "additionalProperties": false,
+      "required": ["artifact", "authenticity", "canonicalPayloadHash", "hashAlgorithm", "payloadFingerprint", "purpose"],
+      "properties": {
+        "artifact": { "const": "unsigned-self-asserted-local" },
+        "authenticity": { "const": "not-provided" },
+        "canonicalPayloadHash": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+        "hashAlgorithm": { "const": "fnv1a-64" },
+        "payloadFingerprint": { "type": "string", "pattern": "^[0-9a-f]{16}$" },
+        "purpose": { "const": "integrity-and-error-detection-only" }
+      }
+    },
+    "creationConsent": {
+      "type": "object", "additionalProperties": false,
+      "required": ["adultConfirmed", "acknowledgedAt", "ownerSelfExported", "reflectionOnly"],
+      "properties": {
+        "adultConfirmed": { "const": true },
+        "acknowledgedAt": { "$ref": "#/$defs/isoTimestamp" },
+        "ownerSelfExported": { "const": true },
+        "reflectionOnly": { "const": true }
+      }
+    },
+    "origin": {
+      "type": "object", "additionalProperties": false,
+      "required": ["exportSchema", "exportSchemaVersion", "exportedAt", "profileGeneratedAt"],
+      "properties": {
+        "exportSchema": { "const": "oiyo.personal-profile-export" },
+        "exportSchemaVersion": { "const": 2 },
+        "exportedAt": { "$ref": "#/$defs/isoTimestamp" },
+        "profileGeneratedAt": { "$ref": "#/$defs/isoTimestamp" }
+      }
+    },
+    "resultPrivacy": {
+      "type": "object", "additionalProperties": false,
+      "required": ["analyticsPayload", "rawResponsesIncluded", "resultIdIncluded", "serverTransmission"],
+      "properties": {
+        "analyticsPayload": { "const": "none" }, "rawResponsesIncluded": { "const": false },
+        "resultIdIncluded": { "const": false }, "serverTransmission": { "const": "none" }
+      }
+    },
+    "resultCode": {
+      "type": "object", "additionalProperties": false,
+      "required": ["codeId", "consent", "createdAt", "expiresAt", "integrity", "origin", "privacy", "provenance", "schema", "schemaVersion", "signals"],
+      "properties": {
+        "codeId": { "$ref": "#/$defs/codeId" }, "consent": { "$ref": "#/$defs/creationConsent" },
+        "createdAt": { "$ref": "#/$defs/isoTimestamp" }, "expiresAt": { "$ref": "#/$defs/isoTimestamp" },
+        "integrity": { "$ref": "#/$defs/integrity" }, "origin": { "$ref": "#/$defs/origin" },
+        "privacy": { "$ref": "#/$defs/resultPrivacy" },
+        "provenance": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/source" } },
+        "schema": { "const": "oiyo.relationship-result-code" }, "schemaVersion": { "const": 1 },
+        "signals": { "type": "array", "minItems": 1, "maxItems": 64, "uniqueItems": true, "items": { "$ref": "#/$defs/signal" } }
+      }
+    },
+    "acknowledgement": {
+      "type": "object", "additionalProperties": false,
+      "required": ["acknowledgedAt", "codeId", "mayWithdraw", "ownerPresent"],
+      "properties": {
+        "acknowledgedAt": { "$ref": "#/$defs/isoTimestamp" }, "codeId": { "$ref": "#/$defs/codeId" },
+        "mayWithdraw": { "const": true }, "ownerPresent": { "const": true }
+      }
+    },
+    "comparisonConsent": {
+      "type": "object", "additionalProperties": false,
+      "required": ["analyticsPayload", "localOnlyUnderstood", "participantA", "participantB", "purpose", "serverTransmission"],
+      "properties": {
+        "analyticsPayload": { "const": "none" }, "localOnlyUnderstood": { "const": true },
+        "participantA": { "$ref": "#/$defs/acknowledgement" }, "participantB": { "$ref": "#/$defs/acknowledgement" },
+        "purpose": { "const": "mutual-reflection" }, "serverTransmission": { "const": "none" }
+      }
+    },
+    "comparisonInput": {
+      "type": "object", "additionalProperties": false,
+      "required": ["consent", "context", "revokedCodeIds"],
+      "properties": {
+        "consent": { "$ref": "#/$defs/comparisonConsent" }, "context": { "enum": ["couple", "family", "friend"] },
+        "now": { "$ref": "#/$defs/isoTimestamp" },
+        "revokedCodeIds": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/codeId" } }
+      }
+    },
+    "comparisonItem": {
+      "type": "object", "additionalProperties": false,
+      "required": ["constructId", "kind", "lane", "participantAValue", "participantBValue"],
+      "properties": {
+        "constructId": { "$ref": "#/$defs/signal/properties/constructId" },
+        "kind": { "enum": ["different-scale", "different-value", "exact"] },
+        "lane": { "$ref": "#/$defs/signal/properties/lane" },
+        "participantAValue": { "type": "number" }, "participantBValue": { "type": "number" }
+      }
+    },
+    "participantSummary": {
+      "type": "object", "additionalProperties": false, "required": ["codeId", "origin", "provenance"],
+      "properties": {
+        "codeId": { "$ref": "#/$defs/codeId" }, "origin": { "$ref": "#/$defs/origin" },
+        "provenance": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/source" } }
+      }
+    },
+    "comparisonReport": {
+      "type": "object", "additionalProperties": false,
+      "required": ["comparedAt", "consent", "differences", "guardrails", "participants", "privacy", "questions", "schema", "schemaVersion", "shared", "unmatched"],
+      "properties": {
+        "comparedAt": { "$ref": "#/$defs/isoTimestamp" },
+        "consent": {
+          "type": "object", "additionalProperties": false,
+          "required": ["bothOwnersAcknowledged", "context", "purpose", "withdrawalEndsComparison"],
+          "properties": { "bothOwnersAcknowledged": { "const": true }, "context": { "enum": ["couple", "family", "friend"] }, "purpose": { "const": "mutual-reflection" }, "withdrawalEndsComparison": { "const": true } }
+        },
+        "differences": { "type": "array", "items": { "$ref": "#/$defs/comparisonItem" } },
+        "guardrails": {
+          "type": "object", "additionalProperties": false,
+          "required": ["artifactAuthenticity", "careerOrJobJudgment", "compatibilityJudgment", "employmentOrHiringUse", "healthOrPoliticalInference", "minorUse", "scoreAggregation", "successRate"],
+          "properties": {
+            "artifactAuthenticity": { "const": "not-provided" }, "careerOrJobJudgment": { "const": "prohibited" },
+            "compatibilityJudgment": { "const": "none" }, "employmentOrHiringUse": { "const": "prohibited" },
+            "healthOrPoliticalInference": { "const": "prohibited" }, "minorUse": { "const": "prohibited" },
+            "scoreAggregation": { "const": "none" }, "successRate": { "const": "none" }
+          }
+        },
+        "participants": {
+          "type": "object", "additionalProperties": false, "required": ["A", "B"],
+          "properties": { "A": { "$ref": "#/$defs/participantSummary" }, "B": { "$ref": "#/$defs/participantSummary" } }
+        },
+        "privacy": {
+          "type": "object", "additionalProperties": false,
+          "required": ["analyticsPayload", "persistedByEngine", "rawResponsesIncluded", "serverTransmission"],
+          "properties": { "analyticsPayload": { "const": "none" }, "persistedByEngine": { "const": false }, "rawResponsesIncluded": { "const": false }, "serverTransmission": { "const": "none" } }
+        },
+        "questions": {
+          "type": "array", "items": {
+            "type": "object", "additionalProperties": false, "required": ["constructId", "lane", "prompt", "promptId"],
+            "properties": { "constructId": { "$ref": "#/$defs/signal/properties/constructId" }, "lane": { "$ref": "#/$defs/signal/properties/lane" }, "prompt": { "type": "string", "minLength": 1 }, "promptId": { "type": "string", "minLength": 1 } }
+          }
+        },
+        "schema": { "const": "oiyo.relationship-comparison" }, "schemaVersion": { "const": 1 },
+        "shared": { "type": "array", "items": { "$ref": "#/$defs/comparisonItem" } },
+        "unmatched": {
+          "type": "object", "additionalProperties": false, "required": ["A", "B"],
+          "properties": { "A": { "type": "array", "items": { "type": "string" } }, "B": { "type": "array", "items": { "type": "string" } } }
+        }
+      }
+    },
+    "withdrawalReceipt": {
+      "type": "object", "additionalProperties": false,
+      "required": ["action", "codeId", "deletionStatus", "participant", "propagation", "remoteRevocation", "revokedCodeIds", "status", "withdrawnAt"],
+      "properties": {
+        "action": { "const": "revoke-for-active-session-and-delete-local-code-and-derived-report" },
+        "codeId": { "$ref": "#/$defs/codeId" }, "deletionStatus": { "const": "caller-action-required" },
+        "participant": { "enum": ["A", "B"] }, "propagation": { "const": "not-available-for-exported-copies" },
+        "remoteRevocation": { "const": "not-applicable-no-server-copy" },
+        "revokedCodeIds": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/codeId" } },
+        "status": { "const": "revoked-for-active-session" }, "withdrawnAt": { "$ref": "#/$defs/isoTimestamp" }
+      }
+    }
+  },
+  "$ref": "#/$defs/resultCode"
+}

@@ -1,0 +1,78 @@
+{
+  "entries": [
+    {
+      "assessmentId": "big5",
+      "historyId": "big5:big5-ocean-20-v1:fixture%3Abig5%3Anew",
+      "instrumentVersion": "big5-ocean-20-v1",
+      "interpretationVersion": "big5-ocean-20-interpretation-v1",
+      "lane": "trait",
+      "measuredAt": "2026-07-01T00:00:00.000Z",
+      "projections": [
+        {
+          "confidence": 0.6,
+          "confidenceBand": "medium",
+          "constructId": "psychology.big5.O",
+          "evidenceTier": "research-inspired",
+          "freshness": "current",
+          "measuredAt": "2026-07-01T00:00:00.000Z",
+          "provenance": {
+            "assessmentId": "big5",
+            "assessmentResultSchema": "oiyo.assessment-result",
+            "assessmentResultSchemaVersion": 2,
+            "instrumentVersion": "big5-ocean-20-v1",
+            "interpretationVersion": "big5-ocean-20-interpretation-v1",
+            "resultId": "fixture:big5:new",
+            "scoringVersion": "big5-ocean-20-scoring-v1"
+          },
+          "scale": { "max": 100, "min": 0 },
+          "sourceAssessmentId": "big5",
+          "value": 72
+        }
+      ],
+      "recordedAt": "2026-07-16T00:00:00.000Z",
+      "resultId": "fixture:big5:new",
+      "scoringVersion": "big5-ocean-20-scoring-v1"
+    },
+    {
+      "assessmentId": "big5",
+      "historyId": "big5:big5-ocean-20-v1:fixture%3Abig5%3Aold",
+      "instrumentVersion": "big5-ocean-20-v1",
+      "interpretationVersion": "big5-ocean-20-interpretation-v1",
+      "lane": "trait",
+      "measuredAt": "2026-01-01T00:00:00.000Z",
+      "projections": [
+        {
+          "confidence": 0.6,
+          "confidenceBand": "medium",
+          "constructId": "psychology.big5.O",
+          "evidenceTier": "research-inspired",
+          "freshness": "current",
+          "measuredAt": "2026-01-01T00:00:00.000Z",
+          "provenance": {
+            "assessmentId": "big5",
+            "assessmentResultSchema": "oiyo.assessment-result",
+            "assessmentResultSchemaVersion": 2,
+            "instrumentVersion": "big5-ocean-20-v1",
+            "interpretationVersion": "big5-ocean-20-interpretation-v1",
+            "resultId": "fixture:big5:old",
+            "scoringVersion": "big5-ocean-20-scoring-v1"
+          },
+          "scale": { "max": 100, "min": 0 },
+          "sourceAssessmentId": "big5",
+          "value": 48
+        }
+      ],
+      "recordedAt": "2026-01-01T00:00:00.000Z",
+      "resultId": "fixture:big5:old",
+      "scoringVersion": "big5-ocean-20-scoring-v1"
+    }
+  ],
+  "privacy": {
+    "rawResponsesIncluded": false,
+    "serverTransmission": "none",
+    "storage": "browser-local-only"
+  },
+  "savedAt": "2026-07-16T00:00:00.000Z",
+  "schema": "oiyo.personal-profile-history",
+  "schemaVersion": 1
+}

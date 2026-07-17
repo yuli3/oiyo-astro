@@ -4,6 +4,8 @@
 import Layout from '../../../../layouts/Layout.astro';
 import OntologyIsland from '../../../../components/OntologyIsland';
 import { ExplorationRecommenderPrototype } from '../../../../components/ontology/ExplorationRecommenderPrototype';
+import { PersonalProfileHistoryPreview } from '../../../../components/ontology/PersonalProfileHistoryPreview';
+import { RoleVisualSystemPrototype } from '../../../../components/ontology/RoleVisualSystemPrototype';
 import { LOCALES, type Locale } from '../../../../i18n';
 
 export function getStaticPaths() {
@@ -35,5 +37,7 @@ for (const ns of namespaces) {
     </p>
     <OntologyIsland locale={locale} messages={messages} client:visible />
     <ExplorationRecommenderPrototype locale={locale} client:visible />
+    <PersonalProfileHistoryPreview locale={locale} client:visible />
+    <RoleVisualSystemPrototype locale={locale} client:visible />
   </div>
 </Layout>

@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oiyo.net/schemas/role-visual-system-v1.schema.json",
+  "title": "OIYO Role Visual System v1 specimen fixture",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "scenarios", "interactionStates"],
+  "properties": {
+    "schemaVersion": { "const": "oiyo.role-visual.v1" },
+    "scenarios": {
+      "type": "array",
+      "minItems": 5,
+      "maxItems": 5,
+      "allOf": [
+        { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "clear" } } }, "minContains": 1, "maxContains": 1 },
+        { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "mixed" } } }, "minContains": 1, "maxContains": 1 },
+        { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "tie" } } }, "minContains": 1, "maxContains": 1 },
+        { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "low-flat" } } }, "minContains": 1, "maxContains": 1 },
+        { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "uncertain" } } }, "minContains": 1, "maxContains": 1 }
+      ],
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "input", "expected"],
+        "properties": {
+          "id": { "enum": ["clear", "mixed", "tie", "low-flat", "uncertain"] },
+          "input": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["dataCoverage", "dimensions"],
+            "properties": {
+              "dataCoverage": { "type": "number", "minimum": 0, "maximum": 1 },
+              "dimensions": {
+                "type": "array",
+                "minItems": 3,
+                "maxItems": 3,
+                "allOf": [
+                  { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "explore" } } }, "minContains": 1, "maxContains": 1 },
+                  { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "focus" } } }, "minContains": 1, "maxContains": 1 },
+                  { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "connect" } } }, "minContains": 1, "maxContains": 1 }
+                ],
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": ["id", "score", "confidence"],
+                  "properties": {
+                    "id": { "enum": ["explore", "focus", "connect"] },
+                    "score": { "type": "number", "minimum": 0, "maximum": 100 },
+                    "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                  }
+                }
+              }
+            }
+          },
+          "expected": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["status", "roleAid"],
+            "properties": {
+              "status": { "enum": ["uncertain", "low-flat", "tie", "mixed", "clear"] },
+              "roleAid": { "type": ["string", "null"], "enum": ["neutral-pattern-01", null] }
+            }
+          }
+        }
+      }
+    },
+    "interactionStates": {
+      "type": "array",
+      "items": { "enum": ["idle", "saved", "shared"] },
+      "minItems": 3,
+      "maxItems": 3,
+      "uniqueItems": true
+    }
+  }
+}

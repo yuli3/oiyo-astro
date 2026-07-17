@@ -53,6 +53,24 @@ jobs:
       - name: Audit exploration recommender contracts and executable golden
         run: npm run audit:exploration-recommender
 
+      - name: Audit role visual schema, direct locales, and accessibility contracts
+        run: npm run audit:role-visual
+
+      - name: Audit local personal-profile history privacy and regression contracts
+        run: npm run audit:profile-history
+
+      - name: Audit stateless relationship comparison privacy and consent contracts
+        run: npm run audit:relationship-comparison
+
+      - name: Audit sample-report derived-artifact and non-diagnostic contracts
+        run: npm run audit:sample-report
+
+      - name: Audit reflective life-role-balance boundaries
+        run: npm run audit:reflective-life-role-balance
+
+      - name: Audit affiliate category/disclosure/click-payload gates
+        run: npm run audit:affiliate
+
   sitemap-submit:
     name: Submit Sitemap (GSC + Bing + IndexNow)
     runs-on: ubuntu-latest

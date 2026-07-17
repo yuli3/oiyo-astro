@@ -1,0 +1,116 @@
+{
+  "ko": {
+    "title": "역할형 결과 시각화 실험",
+    "note": "역할 아이콘은 기억을 돕는 보조 표현입니다. 점수, 혼합 상태와 불확실성을 먼저 읽으세요.",
+    "scenarioLabel": "검증할 결과 상태",
+    "scenarios": { "clear": "뚜렷한 분포", "mixed": "혼합형", "tie": "동률", "low-flat": "낮고 평평함", "uncertain": "불확실" },
+    "dimensions": { "explore": "탐색", "focus": "집중", "connect": "연결" },
+    "statuses": {
+      "clear": { "label": "한 신호가 비교적 뚜렷함", "body": "탐색 점수가 다른 두 점수보다 높습니다. 역할 표시는 이 분포를 기억하기 위한 보조 수단입니다." },
+      "mixed": { "label": "서로 가까운 혼합 신호", "body": "상위 신호 차이가 작습니다. 하나의 유형으로 줄이지 말고 두 점수를 함께 읽으세요." },
+      "tie": { "label": "상위 신호 동률", "body": "상위 점수가 같거나 거의 같습니다. 우세 역할을 만들지 않습니다." },
+      "low-flat": { "label": "낮고 평평한 분포", "body": "현재 답변에서는 뚜렷한 신호가 적습니다. 역할명을 부여하지 않습니다." },
+      "uncertain": { "label": "해석할 근거가 아직 부족함", "body": "응답 범위 또는 신뢰도가 낮습니다. 점수 차이가 커 보여도 역할명을 부여하지 않습니다." }
+    },
+    "score": "점수", "confidence": "신뢰도", "coverage": "응답 범위", "roleAid": "기억 보조", "neutralPattern": "중립 패턴 01",
+    "strengthTitle": "활용할 강점", "strength": "현재 가장 높은 신호가 요구되는 작은 상황에서 먼저 시험해 보세요.",
+    "cautionTitle": "주의할 점", "caution": "한 번의 결과를 고정된 정체성이나 능력 판정으로 사용하지 마세요.",
+    "actionTitle": "작은 행동", "action": "이번 주에 20분짜리 실험 하나를 하고 실제 느낌을 한 문장으로 기록하세요.",
+    "save": "저장 상태 보기", "share": "공유 상태 보기", "saved": "이 화면에서 저장됨 상태를 확인 중입니다. 브라우저 저장은 하지 않았습니다.", "shared": "이 화면에서 공유됨 상태를 확인 중입니다. 외부 전송은 하지 않았습니다.", "idle": "저장·공유 전 상태입니다."
+  },
+  "en": {
+    "title": "Role-result visual experiment",
+    "note": "The role icon is only a memory aid. Read the scores, mixed state, and uncertainty first.",
+    "scenarioLabel": "Result state to verify",
+    "scenarios": { "clear": "Clear distribution", "mixed": "Mixed", "tie": "Tie", "low-flat": "Low and flat", "uncertain": "Uncertain" },
+    "dimensions": { "explore": "Explore", "focus": "Focus", "connect": "Connect" },
+    "statuses": {
+      "clear": { "label": "One signal is relatively clear", "body": "Explore is higher than the other two scores. The role aid only helps you remember this distribution." },
+      "mixed": { "label": "Closely mixed signals", "body": "The leading signals are close. Read both scores instead of reducing them to one type." },
+      "tie": { "label": "Leading signals are tied", "body": "The leading scores are equal or nearly equal. No dominant role is invented." },
+      "low-flat": { "label": "Low, flat distribution", "body": "The current answers contain little distinct signal. No role label is assigned." },
+      "uncertain": { "label": "Not enough evidence to interpret", "body": "Coverage or confidence is low. No role label is assigned even if the score gap looks large." }
+    },
+    "score": "Score", "confidence": "Confidence", "coverage": "Response coverage", "roleAid": "Memory aid", "neutralPattern": "Neutral pattern 01",
+    "strengthTitle": "Strength to use", "strength": "Try the strongest current signal first in one small situation that calls for it.",
+    "cautionTitle": "Caution", "caution": "Do not use one result as a fixed identity or ability judgment.",
+    "actionTitle": "Small action", "action": "Run one 20-minute experiment this week and write one sentence about how it felt.",
+    "save": "Preview saved state", "share": "Preview shared state", "saved": "Saved state is shown on this screen. Nothing was stored in the browser.", "shared": "Shared state is shown on this screen. Nothing was sent outside.", "idle": "Nothing has been saved or shared."
+  },
+  "ja": {
+    "title": "役割型結果ビジュアル実験",
+    "note": "役割アイコンは記憶を助ける補助表現です。点数、混合状態、不確実性を先に読んでください。",
+    "scenarioLabel": "確認する結果状態",
+    "scenarios": { "clear": "明確な分布", "mixed": "混合型", "tie": "同点", "low-flat": "低く平坦", "uncertain": "不確実" },
+    "dimensions": { "explore": "探索", "focus": "集中", "connect": "つながり" },
+    "statuses": {
+      "clear": { "label": "一つの信号が比較的明確", "body": "探索の点数が他の二つより高い状態です。役割表示はこの分布を覚えるための補助です。" },
+      "mixed": { "label": "近接した混合信号", "body": "上位信号の差が小さい状態です。一つの型に縮めず、二つの点数を一緒に読んでください。" },
+      "tie": { "label": "上位信号が同点", "body": "上位点数が同じか、ほぼ同じです。優勢な役割は作りません。" },
+      "low-flat": { "label": "低く平坦な分布", "body": "現在の回答には明確な信号が少ないため、役割名を付けません。" },
+      "uncertain": { "label": "解釈の根拠がまだ不足", "body": "回答範囲または信頼度が低いため、差が大きく見えても役割名を付けません。" }
+    },
+    "score": "点数", "confidence": "信頼度", "coverage": "回答範囲", "roleAid": "記憶補助", "neutralPattern": "中立パターン01",
+    "strengthTitle": "活かす強み", "strength": "今もっとも高い信号が必要な小さな場面で、まず試してください。",
+    "cautionTitle": "注意点", "caution": "一度の結果を固定した自己像や能力判断に使わないでください。",
+    "actionTitle": "小さな行動", "action": "今週20分の実験を一つ行い、実際の感触を一文で記録してください。",
+    "save": "保存状態を確認", "share": "共有状態を確認", "saved": "この画面で保存済み状態を表示しています。ブラウザには保存していません。", "shared": "この画面で共有済み状態を表示しています。外部には送信していません。", "idle": "保存・共有前の状態です。"
+  },
+  "zh": {
+    "title": "角色型结果视觉实验",
+    "note": "角色图标只是记忆辅助。请先阅读分数、混合状态和不确定性。",
+    "scenarioLabel": "要验证的结果状态",
+    "scenarios": { "clear": "清晰分布", "mixed": "混合型", "tie": "并列", "low-flat": "低而平坦", "uncertain": "不确定" },
+    "dimensions": { "explore": "探索", "focus": "专注", "connect": "连接" },
+    "statuses": {
+      "clear": { "label": "一个信号相对清晰", "body": "探索分数高于另外两项。角色标记只用于帮助记住这一分布。" },
+      "mixed": { "label": "相近的混合信号", "body": "领先信号差距较小。请同时阅读两个分数，不要缩减成单一类型。" },
+      "tie": { "label": "领先信号并列", "body": "领先分数相同或几乎相同，因此不会创造主导角色。" },
+      "low-flat": { "label": "低而平坦的分布", "body": "当前回答中的明显信号较少，因此不分配角色名称。" },
+      "uncertain": { "label": "解释依据仍不足", "body": "回答范围或可信度较低。即使分差看起来很大，也不分配角色名称。" }
+    },
+    "score": "分数", "confidence": "可信度", "coverage": "回答范围", "roleAid": "记忆辅助", "neutralPattern": "中立模式01",
+    "strengthTitle": "可运用的优势", "strength": "先在一个需要当前最高信号的小情境中尝试。",
+    "cautionTitle": "注意", "caution": "不要把一次结果当作固定身份或能力判断。",
+    "actionTitle": "小行动", "action": "本周做一次20分钟实验，并用一句话记录真实感受。",
+    "save": "查看已保存状态", "share": "查看已分享状态", "saved": "本页面正在显示已保存状态，但未写入浏览器。", "shared": "本页面正在显示已分享状态，但未向外部发送。", "idle": "尚未保存或分享。"
+  },
+  "fr": {
+    "title": "Expérience visuelle de résultat-rôle",
+    "note": "L’icône de rôle est seulement un aide-mémoire. Lisez d’abord les scores, le mélange et l’incertitude.",
+    "scenarioLabel": "État du résultat à vérifier",
+    "scenarios": { "clear": "Distribution nette", "mixed": "Mixte", "tie": "Égalité", "low-flat": "Faible et plate", "uncertain": "Incertain" },
+    "dimensions": { "explore": "Explorer", "focus": "Concentrer", "connect": "Relier" },
+    "statuses": {
+      "clear": { "label": "Un signal est relativement net", "body": "Le score Explorer dépasse les deux autres. Le rôle aide seulement à mémoriser cette distribution." },
+      "mixed": { "label": "Signaux proches et mixtes", "body": "Les premiers signaux sont proches. Lisez les deux scores sans les réduire à un seul type." },
+      "tie": { "label": "Signaux dominants à égalité", "body": "Les premiers scores sont égaux ou presque. Aucun rôle dominant n’est inventé." },
+      "low-flat": { "label": "Distribution faible et plate", "body": "Les réponses actuelles offrent peu de signal distinct. Aucun rôle n’est attribué." },
+      "uncertain": { "label": "Pas assez d’éléments pour interpréter", "body": "La couverture ou la confiance est faible. Aucun rôle n’est attribué, même si l’écart paraît grand." }
+    },
+    "score": "Note", "confidence": "Confiance", "coverage": "Couverture des réponses", "roleAid": "Aide-mémoire", "neutralPattern": "Motif neutre 01",
+    "strengthTitle": "Force à mobiliser", "strength": "Testez d’abord le signal actuel le plus fort dans une petite situation qui le demande.",
+    "cautionTitle": "Attention", "caution": "N’utilisez pas un résultat comme identité fixe ou jugement de capacité.",
+    "actionTitle": "Petite action", "action": "Faites une expérience de 20 minutes cette semaine et notez votre ressenti en une phrase.",
+    "save": "Voir l’état enregistré", "share": "Voir l’état partagé", "saved": "L’état enregistré est simulé sur cet écran. Rien n’a été stocké dans le navigateur.", "shared": "L’état partagé est simulé sur cet écran. Rien n’a été envoyé à l’extérieur.", "idle": "Rien n’a été enregistré ni partagé."
+  },
+  "es": {
+    "title": "Experimento visual de resultado-rol",
+    "note": "El icono de rol es solo una ayuda de memoria. Lee primero las puntuaciones, la mezcla y la incertidumbre.",
+    "scenarioLabel": "Estado del resultado que se verificará",
+    "scenarios": { "clear": "Distribución clara", "mixed": "Mixto", "tie": "Empate", "low-flat": "Bajo y plano", "uncertain": "Incierto" },
+    "dimensions": { "explore": "Explorar", "focus": "Enfocar", "connect": "Conectar" },
+    "statuses": {
+      "clear": { "label": "Una señal es relativamente clara", "body": "Explorar supera a las otras dos puntuaciones. El rol solo ayuda a recordar esta distribución." },
+      "mixed": { "label": "Señales cercanas y mixtas", "body": "Las señales principales están cerca. Lee ambas puntuaciones sin reducirlas a un solo tipo." },
+      "tie": { "label": "Señales principales empatadas", "body": "Las puntuaciones principales son iguales o casi iguales. No se inventa un rol dominante." },
+      "low-flat": { "label": "Distribución baja y plana", "body": "Las respuestas actuales contienen poca señal diferenciada. No se asigna un rol." },
+      "uncertain": { "label": "Aún no hay evidencia suficiente", "body": "La cobertura o la confianza es baja. No se asigna un rol aunque la diferencia parezca grande." }
+    },
+    "score": "Puntuación", "confidence": "Confianza", "coverage": "Cobertura de respuestas", "roleAid": "Ayuda de memoria", "neutralPattern": "Patrón neutro 01",
+    "strengthTitle": "Fortaleza que usar", "strength": "Prueba primero la señal actual más alta en una situación pequeña que la necesite.",
+    "cautionTitle": "Precaución", "caution": "No uses un resultado como identidad fija ni como juicio de capacidad.",
+    "actionTitle": "Acción pequeña", "action": "Haz un experimento de 20 minutos esta semana y escribe una frase sobre cómo se sintió.",
+    "save": "Ver estado guardado", "share": "Ver estado compartido", "saved": "El estado guardado se muestra en esta pantalla. No se almacenó nada en el navegador.", "shared": "El estado compartido se muestra en esta pantalla. No se envió nada fuera.", "idle": "No se ha guardado ni compartido nada."
+  }
+}
