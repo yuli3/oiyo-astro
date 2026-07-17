@@ -1,0 +1,243 @@
+{
+  "schema": "oiyo.type-advice-catalog",
+  "schemaVersion": 1,
+  "note": "Wave 0 = 12개 상한. 검증된 construct(big5·attachment·riasec·values)만. 확대는 GA4 확인률·재방문 측정 후(Wave 1).",
+  "reviewNote": "공개 노출 전 6로케일 문구 사람 검수 필요(사람 게이트). reviewedBy는 데이터 작성 책임자 표기이며 공개 승인과 다르다.",
+  "advices": [
+    {
+      "id": "start-messy",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "research-inspired",
+      "match": {
+        "any": [
+          { "constructId": "psychology.big5.C", "band": "low" },
+          { "constructId": "values.chosen.perfectionism", "band": "high" }
+        ],
+        "none": [{ "constructId": "wellness.burnout.total", "band": "high" }]
+      },
+      "action": { "minutes": 20, "cost": "none", "repeat": "once" },
+      "sources": ["https://psycnet.apa.org/record/2007-07130-005"],
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "엉망진창으로 시작해 보기", "body": "완성도를 먼저 생각하면 시작 자체가 늦어질 수 있습니다. 20분만 타이머를 켜고 '나중에 지울 초안'이라고 이름 붙인 뒤 아무렇게나 써 보세요. 시작을 쉽게 만드는 방법으로 자주 언급되는 접근입니다." },
+        "en": { "title": "Start on purpose messy", "body": "Aiming for polish first can delay starting at all. Set a 20-minute timer and make something you name \"draft to delete later.\" It is a commonly cited way to lower the cost of starting." },
+        "ja": { "title": "あえて雑に始めてみる", "body": "完成度から考えると、着手そのものが遅れることがあります。20分だけタイマーをかけ、「後で消す下書き」と名付けて書いてみてください。着手のハードルを下げる方法としてよく挙げられます。" },
+        "zh": { "title": "先随便开个头", "body": "先想着完成度，可能会让你迟迟无法开始。设置20分钟计时器，做一个命名为\"稍后删除的草稿\"的东西。这是常被提到的降低启动门槛的方法。" },
+        "fr": { "title": "Commencer volontairement en désordre", "body": "Viser la perfection d'abord peut retarder le simple fait de commencer. Réglez un minuteur de 20 minutes et créez quelque chose nommé « brouillon à supprimer ». C'est une approche souvent citée pour abaisser le coût du démarrage." },
+        "es": { "title": "Empezar a propósito desordenado", "body": "Buscar la perfección primero puede retrasar el hecho de empezar. Pon un temporizador de 20 minutos y crea algo llamado «borrador para borrar luego». Es un enfoque citado a menudo para reducir el coste de empezar." }
+      }
+    },
+    {
+      "id": "tiny-first-step",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "research-inspired",
+      "match": { "any": [{ "constructId": "psychology.big5.C", "band": "low" }] },
+      "action": { "minutes": 5, "cost": "none", "repeat": "daily" },
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/16045394/"],
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "5분짜리 첫 조각 정하기", "body": "할 일을 '5분 안에 끝나는 첫 조각'으로 쪼개 하나만 적어 두세요. 큰 계획보다 작은 실행 단위가 도움이 됐다는 보고가 많습니다." },
+        "en": { "title": "Define a five-minute first slice", "body": "Break the task into a first slice you can finish in five minutes, and write down only that one. Small execution units are often reported as more workable than big plans." },
+        "ja": { "title": "5分で終わる最初の一片を決める", "body": "やることを「5分で終わる最初の一片」に分け、それだけ書いておきましょう。大きな計画より小さな実行単位が役立ったという報告が多くあります。" },
+        "zh": { "title": "定一个五分钟能完成的第一步", "body": "把任务拆成五分钟内能完成的第一小块，只写下这一块。相比宏大计划，小的执行单元更常被认为有帮助。" },
+        "fr": { "title": "Définir une première tranche de cinq minutes", "body": "Découpez la tâche en une première tranche réalisable en cinq minutes et notez seulement celle-là. Les petites unités d'exécution sont souvent jugées plus praticables que les grands plans." },
+        "es": { "title": "Define un primer paso de cinco minutos", "body": "Divide la tarea en un primer trozo que puedas terminar en cinco minutos y anota solo ese. Las unidades pequeñas de ejecución suelen considerarse más viables que los grandes planes." }
+      }
+    },
+    {
+      "id": "worry-window",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "research-inspired",
+      "match": {
+        "any": [
+          { "constructId": "psychology.big5.N", "band": "high" },
+          { "constructId": "relationship.attachment.anxiety", "band": "high" }
+        ],
+        "none": [{ "constructId": "wellness.burnout.total", "band": "high" }]
+      },
+      "action": { "minutes": 15, "cost": "none", "repeat": "daily" },
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/6488011/"],
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "걱정 시간 정해 두기", "body": "하루 중 15분을 '걱정하는 시간'으로 정해 두고, 그 밖의 시간에 떠오른 걱정은 메모만 해 두었다가 그 시간에 몰아서 봅니다. 걱정을 없애는 게 아니라 자리를 정해 주는 방법으로 연구에서 자주 언급됩니다." },
+        "en": { "title": "Schedule a worry window", "body": "Pick one 15-minute slot as your worry time; outside it, just jot worries down and revisit them in that slot. Research often mentions this as giving worry a place rather than trying to remove it." },
+        "ja": { "title": "心配する時間を決めておく", "body": "1日15分を「心配する時間」と決め、それ以外に浮かんだ心配はメモだけしてその時間にまとめて見ます。心配をなくすのではなく居場所を決める方法として研究でよく挙げられます。" },
+        "zh": { "title": "设定一个担忧时段", "body": "每天留出15分钟作为\"担忧时间\"，其他时候只把担忧记下来，到那个时段再一起看。研究常提到这是给担忧安排位置，而不是消除它。" },
+        "fr": { "title": "Programmer une fenêtre à soucis", "body": "Choisissez un créneau de 15 minutes comme temps dédié aux soucis ; en dehors, notez-les simplement et relisez-les à ce moment. La recherche évoque souvent cela comme donner une place au souci plutôt que le supprimer." },
+        "es": { "title": "Programa una ventana de preocupación", "body": "Elige 15 minutos al día como tu tiempo de preocupación; fuera de él, solo anota las preocupaciones y revísalas en ese rato. La investigación lo menciona como darle un lugar a la preocupación en vez de eliminarla." }
+      }
+    },
+    {
+      "id": "name-the-need",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "research-inspired",
+      "match": { "any": [{ "constructId": "relationship.attachment.anxiety", "band": "high" }] },
+      "action": { "minutes": 10, "cost": "none", "repeat": "once" },
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/17576282/"],
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "필요를 문장으로 적어 보기", "body": "'연락이 없으면 불안하다'를 '나는 하루 한 번 짧은 연락이 있으면 안심된다'처럼 필요의 문장으로 바꿔 적어 보세요. 감정을 말로 옮기는 것이 강도를 낮추는 데 도움이 됐다는 연구가 있습니다." },
+        "en": { "title": "Put the need into words", "body": "Rewrite \"I feel anxious when there's no contact\" as a need: \"A short check-in once a day helps me feel settled.\" Studies suggest putting feelings into words can lower their intensity." },
+        "ja": { "title": "必要を文にしてみる", "body": "「連絡がないと不安」を「1日1回短い連絡があると安心する」のように必要の文へ書き換えてみましょう。感情を言葉にすることが強度を下げる助けになったという研究があります。" },
+        "zh": { "title": "把需要写成一句话", "body": "把\"没有联系我就焦虑\"改写成需要：\"每天一次简短的问候会让我安心。\"有研究表明把情绪转化为语言有助于降低其强度。" },
+        "fr": { "title": "Mettre le besoin en mots", "body": "Reformulez « je me sens anxieux sans nouvelles » en besoin : « un court message par jour m'aide à me sentir apaisé ». Des études suggèrent que mettre les émotions en mots peut en réduire l'intensité." },
+        "es": { "title": "Pon la necesidad en palabras", "body": "Reescribe «me siento ansioso sin contacto» como necesidad: «un mensaje breve al día me ayuda a sentirme tranquilo». Hay estudios que sugieren que poner las emociones en palabras reduce su intensidad." }
+      }
+    },
+    {
+      "id": "one-honest-ask",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "reflective-framework",
+      "match": { "any": [{ "constructId": "relationship.attachment.avoidance", "band": "high" }] },
+      "action": { "minutes": 10, "cost": "none", "repeat": "once" },
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "생각해 볼 질문: 거리와 안전", "body": "가까워질 때 물러서고 싶어지는 순간이 있다면, 그때 지키려는 것이 무엇인지 한 문장으로 적어 보세요. 답을 찾는 질문이 아니라 자기 기준을 확인하는 질문입니다." },
+        "en": { "title": "A question to sit with: distance and safety", "body": "If there are moments when closeness makes you want to step back, write one sentence about what you are protecting then. This is not a question with a right answer, but a way to see your own terms." },
+        "ja": { "title": "考えてみる問い：距離と安全", "body": "近づくと引きたくなる瞬間があるなら、そのとき守ろうとしているものを一文で書いてみてください。正解を探す問いではなく、自分の基準を確かめる問いです。" },
+        "zh": { "title": "值得思考的问题：距离与安全", "body": "如果亲近时你会想退开，试着用一句话写下那一刻你在保护什么。这不是要找标准答案，而是看清自己的标准。" },
+        "fr": { "title": "Une question à explorer : distance et sécurité", "body": "S'il y a des moments où la proximité vous donne envie de reculer, écrivez une phrase sur ce que vous protégez alors. Ce n'est pas une question à bonne réponse, mais une façon de voir vos propres repères." },
+        "es": { "title": "Una pregunta para explorar: distancia y seguridad", "body": "Si hay momentos en que la cercanía te da ganas de retroceder, escribe una frase sobre qué estás protegiendo entonces. No es una pregunta con respuesta correcta, sino una forma de ver tus propios términos." }
+      }
+    },
+    {
+      "id": "two-minute-social",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "research-inspired",
+      "match": { "any": [{ "constructId": "psychology.big5.E", "band": "low" }] },
+      "action": { "minutes": 2, "cost": "none", "repeat": "weekly" },
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/25019136/"],
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "2분짜리 가벼운 접촉 하나", "body": "이번 주에 2분이면 끝나는 연락 하나만 골라 보세요(안부 메시지 한 줄이면 충분합니다). 짧고 가벼운 교류도 기분에 도움이 됐다는 보고가 있습니다. 많이 만나야 한다는 뜻은 아닙니다." },
+        "en": { "title": "One two-minute light contact", "body": "Pick one contact this week that takes two minutes — a single line asking how someone is doing is enough. Brief, light interactions are reported to help mood. This is not a call to socialize more." },
+        "ja": { "title": "2分で終わる軽い接触をひとつ", "body": "今週、2分で終わる連絡をひとつだけ選んでみてください（一行の近況伺いで十分です）。短く軽い交流も気分の助けになったという報告があります。たくさん会うべきという意味ではありません。" },
+        "zh": { "title": "一次两分钟的轻接触", "body": "这周挑一个两分钟能完成的联系——一句问候就够。有报告显示简短轻松的交流也有助于情绪。这不是说你该多社交。" },
+        "fr": { "title": "Un contact léger de deux minutes", "body": "Choisissez cette semaine un contact qui prend deux minutes — une ligne pour prendre des nouvelles suffit. De brèves interactions légères sont rapportées comme aidant l'humeur. Ce n'est pas une invitation à socialiser davantage." },
+        "es": { "title": "Un contacto ligero de dos minutos", "body": "Elige esta semana un contacto que tome dos minutos — una línea preguntando cómo está alguien basta. Se reporta que las interacciones breves y ligeras ayudan al ánimo. No significa que debas socializar más." }
+      }
+    },
+    {
+      "id": "recovery-slot",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "research-inspired",
+      "match": { "any": [{ "constructId": "psychology.big5.E", "band": "high" }, { "constructId": "psychology.big5.N", "band": "high" }] },
+      "action": { "minutes": 30, "cost": "none", "repeat": "weekly" },
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/17638488/"],
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "회복 시간 미리 잡아 두기", "body": "일정이 채워지기 전에 30분을 '아무 일정 없음'으로 먼저 잡아 두세요. 회복 시간을 남는 시간이 아니라 예약으로 다루는 방식이 자주 권해집니다." },
+        "en": { "title": "Book recovery before the calendar fills", "body": "Block 30 minutes as \"nothing scheduled\" before the week fills up. Treating recovery as a booking rather than leftover time is a frequently suggested approach." },
+        "ja": { "title": "回復の時間を先に押さえる", "body": "予定が埋まる前に30分を「予定なし」として先に確保しましょう。回復時間を余りではなく予約として扱う方法がよく勧められます。" },
+        "zh": { "title": "先把恢复时间订下来", "body": "在日程被填满之前，先留出30分钟标为\"无安排\"。把恢复时间当作预约而非剩余时间，是常被建议的做法。" },
+        "fr": { "title": "Réserver la récupération avant que l'agenda se remplisse", "body": "Bloquez 30 minutes « sans rien de prévu » avant que la semaine se remplisse. Traiter la récupération comme une réservation plutôt qu'un reste est souvent suggéré." },
+        "es": { "title": "Reserva la recuperación antes de llenar la agenda", "body": "Bloquea 30 minutos como «sin nada agendado» antes de que la semana se llene. Tratar la recuperación como una reserva y no como tiempo sobrante es un enfoque muy sugerido." }
+      }
+    },
+    {
+      "id": "curiosity-sample",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "reflective-framework",
+      "match": { "any": [{ "constructId": "psychology.big5.O", "band": "high" }, { "constructId": "vocation.riasec.A", "band": "high" }] },
+      "action": { "minutes": 20, "cost": "none", "repeat": "weekly" },
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "관심 하나를 20분만 맛보기", "body": "궁금했던 것 하나를 골라 20분만 해 보고, 끝나면 '더 하고 싶은지'만 적어 두세요. 관심이 많을 때는 고르는 것보다 짧게 맛보는 편이 판단에 도움이 됩니다." },
+        "en": { "title": "Sample one curiosity for 20 minutes", "body": "Pick one thing you have been curious about, give it 20 minutes, and afterwards note only whether you want more. When curiosity is broad, short samples inform the choice better than deliberating." },
+        "ja": { "title": "気になることを20分だけ味見する", "body": "気になっていたことをひとつ選んで20分だけ試し、終わったら「もっとやりたいか」だけ書いておきましょう。興味が広いときは、選ぶより短く味見する方が判断に役立ちます。" },
+        "zh": { "title": "用20分钟浅尝一个好奇", "body": "挑一件你一直好奇的事，只做20分钟，结束后只记下\"还想不想继续\"。兴趣广泛时，短暂尝试比反复权衡更有助于判断。" },
+        "fr": { "title": "Goûter une curiosité pendant 20 minutes", "body": "Choisissez une chose qui vous intrigue, accordez-lui 20 minutes, puis notez seulement si vous en voulez davantage. Quand la curiosité est large, de courts essais éclairent mieux le choix." },
+        "es": { "title": "Prueba una curiosidad durante 20 minutos", "body": "Elige algo que te haya dado curiosidad, dedícale 20 minutos y luego anota solo si quieres más. Cuando la curiosidad es amplia, las pruebas cortas informan mejor que deliberar." }
+      }
+    },
+    {
+      "id": "one-clear-no",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "reflective-framework",
+      "match": { "any": [{ "constructId": "psychology.big5.A", "band": "high" }, { "constructId": "values.work.service", "band": "high" }] },
+      "action": { "minutes": 10, "cost": "none", "repeat": "weekly" },
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "생각해 볼 질문: 거절의 문장", "body": "부탁을 잘 들어주는 편이라면, 거절할 때 쓸 문장 하나를 미리 만들어 두면 어떨까요. 예: '이번 주는 어렵고, 다음 주라면 가능해요.' 거절을 연습하라는 뜻이 아니라 문장을 미리 갖고 있으면 선택이 쉬워진다는 뜻입니다." },
+        "en": { "title": "A question to sit with: your sentence for no", "body": "If you tend to say yes, what if you prepared one sentence for declining? For example: \"This week is hard; next week could work.\" The point is not to practice refusing, but that having the words ready makes the choice easier." },
+        "ja": { "title": "考えてみる問い：断る一文", "body": "頼まれると引き受けがちなら、断るときの一文を先に用意してみてはどうでしょう。例：「今週は難しく、来週なら可能です」。断る練習という意味ではなく、言葉を先に持っておくと選びやすくなるという話です。" },
+        "zh": { "title": "值得思考的问题：你拒绝时的那句话", "body": "如果你习惯答应别人，不妨先准备一句拒绝时用的话。例如：\"这周比较难，下周可以。\"重点不是练习拒绝，而是先备好措辞会让选择更容易。" },
+        "fr": { "title": "Une question à explorer : votre phrase pour refuser", "body": "Si vous avez tendance à accepter, et si vous prépariez une phrase pour décliner ? Par exemple : « Cette semaine est difficile ; la semaine prochaine serait possible. » Il ne s'agit pas de s'entraîner à refuser, mais d'avoir les mots prêts pour choisir plus facilement." },
+        "es": { "title": "Una pregunta para explorar: tu frase para decir no", "body": "Si sueles decir que sí, ¿y si preparas una frase para declinar? Por ejemplo: «Esta semana es difícil; la próxima podría funcionar». No se trata de practicar el rechazo, sino de que tener las palabras listas facilita la elección." }
+      }
+    },
+    {
+      "id": "environment-over-willpower",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "research-inspired",
+      "match": { "any": [{ "constructId": "psychology.big5.C", "band": "low" }, { "constructId": "values.chosen.perfectionism", "band": "high" }] },
+      "action": { "minutes": 10, "cost": "none", "repeat": "once" },
+      "sources": ["https://pubmed.ncbi.nlm.nih.gov/22773897/"],
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "의지 대신 환경 한 칸 바꾸기", "body": "하려는 일의 도구를 눈앞에 꺼내 두거나, 방해되는 것을 한 단계 멀리 두세요(앱 삭제까지 갈 필요 없이 로그아웃 정도). 의지보다 환경을 바꾸는 편이 지속에 도움이 됐다는 연구가 많습니다." },
+        "en": { "title": "Change one thing in the environment, not your willpower", "body": "Leave the tool you need in plain sight, or put the distraction one step further away (logging out is enough — no need to delete the app). Research often finds changing the environment sustains behavior better than relying on willpower." },
+        "ja": { "title": "意志ではなく環境を一段だけ変える", "body": "やりたいことの道具を目の前に出しておくか、邪魔なものを一段遠ざけましょう（アプリ削除まで行かずログアウト程度で十分）。意志より環境を変える方が継続に役立ったという研究が多くあります。" },
+        "zh": { "title": "改变环境的一格，而不是意志力", "body": "把需要的工具放在显眼处，或把干扰源挪远一步（退出登录就够，不必删除应用）。研究常发现改变环境比依赖意志力更能维持行为。" },
+        "fr": { "title": "Changer une chose dans l'environnement, pas votre volonté", "body": "Laissez l'outil nécessaire bien en vue, ou éloignez la distraction d'un cran (se déconnecter suffit, inutile de supprimer l'application). La recherche montre souvent que modifier l'environnement soutient mieux le comportement que la volonté." },
+        "es": { "title": "Cambia una cosa del entorno, no tu fuerza de voluntad", "body": "Deja a la vista la herramienta que necesitas, o aleja un paso la distracción (cerrar sesión basta, no hace falta borrar la app). La investigación suele encontrar que cambiar el entorno sostiene mejor la conducta que depender de la voluntad." }
+      }
+    },
+    {
+      "id": "compare-to-yesterday",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "reflective-framework",
+      "match": { "any": [{ "constructId": "values.chosen.perfectionism", "band": "high" }, { "constructId": "values.work.status", "band": "high" }] },
+      "action": { "minutes": 5, "cost": "none", "repeat": "weekly" },
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "생각해 볼 질문: 비교의 기준", "body": "이번 주에 나를 누구와 비교했는지, 그리고 그 비교가 도움이 됐는지 한 줄로 적어 보세요. 비교를 그만두라는 말이 아니라, 기준을 내가 고르고 있는지 확인해 보자는 질문입니다." },
+        "en": { "title": "A question to sit with: your yardstick", "body": "Write one line about whom you compared yourself to this week, and whether it helped. This is not about stopping comparison, but about checking whether you are choosing the yardstick." },
+        "ja": { "title": "考えてみる問い：比較の基準", "body": "今週、自分を誰と比べたか、その比較は役に立ったかを一行で書いてみてください。比較をやめようという話ではなく、基準を自分で選べているかを確かめる問いです。" },
+        "zh": { "title": "值得思考的问题：你的标尺", "body": "用一行写下这周你把自己和谁比较，以及那次比较有没有帮助。这不是要你停止比较，而是看看标尺是不是你自己选的。" },
+        "fr": { "title": "Une question à explorer : votre étalon", "body": "Écrivez une ligne sur la personne à qui vous vous êtes comparé cette semaine et si cela vous a aidé. Il ne s'agit pas d'arrêter de comparer, mais de vérifier si vous choisissez l'étalon." },
+        "es": { "title": "Una pregunta para explorar: tu vara de medir", "body": "Escribe una línea sobre con quién te comparaste esta semana y si te ayudó. No se trata de dejar de comparar, sino de comprobar si eres tú quien elige la vara." }
+      }
+    },
+    {
+      "id": "hands-on-reset",
+      "schema": "oiyo.type-advice",
+      "schemaVersion": 1,
+      "evidenceTier": "reflective-framework",
+      "match": { "any": [{ "constructId": "vocation.riasec.R", "band": "high" }, { "constructId": "psychology.big5.O", "band": "low" }] },
+      "action": { "minutes": 15, "cost": "none", "repeat": "weekly" },
+      "reviewedBy": "claude-fable",
+      "reviewedAt": "2026-07-17",
+      "copy": {
+        "ko": { "title": "손으로 끝나는 일 하나", "body": "15분 안에 눈에 보이는 결과가 남는 일을 하나 해 보세요(정리·수리·요리 등). 머리로 하는 일이 길어질 때 손으로 끝나는 일이 균형에 도움이 된다고 느끼는 사람들이 있습니다." },
+        "en": { "title": "One task your hands can finish", "body": "Do one thing that leaves a visible result within 15 minutes — tidying, fixing, cooking. When head-work stretches long, some people find hands-on tasks help restore balance." },
+        "ja": { "title": "手で終わる仕事をひとつ", "body": "15分で目に見える結果が残ることをひとつやってみましょう（片付け・修理・料理など）。頭を使う仕事が長引くとき、手で終わる仕事がバランスの助けになると感じる人がいます。" },
+        "zh": { "title": "一件用手就能完成的事", "body": "做一件15分钟内能留下可见成果的事——整理、修理、做饭。当脑力工作拖得很长时，有些人觉得动手的事有助于恢复平衡。" },
+        "fr": { "title": "Une tâche que vos mains peuvent finir", "body": "Faites une chose qui laisse un résultat visible en 15 minutes : ranger, réparer, cuisiner. Quand le travail intellectuel s'étire, certains trouvent que les tâches manuelles aident à retrouver l'équilibre." },
+        "es": { "title": "Una tarea que tus manos puedan terminar", "body": "Haz algo que deje un resultado visible en 15 minutos: ordenar, reparar, cocinar. Cuando el trabajo mental se alarga, hay quien encuentra que las tareas manuales ayudan a recuperar el equilibrio." }
+      }
+    }
+  ]
+}

@@ -65,6 +65,9 @@ jobs:
       - name: Audit sample-report derived-artifact and non-diagnostic contracts
         run: npm run audit:sample-report
 
+      - name: Audit type-advice epistemic lanes and abuse-avoidance contracts
+        run: npm run audit:type-advice
+
       - name: Audit reflective life-role-balance boundaries
         run: npm run audit:reflective-life-role-balance
 
