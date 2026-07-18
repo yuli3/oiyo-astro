@@ -12,7 +12,7 @@
     {
       "id": "profile-markdown-export",
       "currentContract": "user-authored local Markdown form",
-      "decision": "keep separate; never relabel user-authored notes as assessment-derived evidence"
+      "decision": "keep separate; public profile export route mounts a parallel v2 assessment-evidence panel and never relabels user-authored notes as assessment-derived evidence"
     }
   ],
   "formats": [
