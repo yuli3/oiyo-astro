@@ -31,10 +31,19 @@ jobs:
       - name: Install type checker
         run: npm i --no-save @astrojs/check typescript
 
-      - name: Type check
-        # Non-zero exit on actual errors; pre-existing WARN-level missing-export
-        # noise is expected (shim architecture) and does not block deployment.
-        run: npx astro check --minimumSeverity error || true
+      - name: Legacy type diagnostics (advisory)
+        id: legacy-typecheck
+        # The migrated legacy/shim tree still has a large explicit baseline.
+        # Preserve the real step outcome instead of masking it with `|| true`;
+        # release-blocking active contracts are covered by Vitest + audits below.
+        continue-on-error: true
+        run: npx astro check --minimumSeverity error
+        env:
+          NODE_OPTIONS: --max-old-space-size=6144
+
+      - name: Report legacy type debt honestly
+        if: steps.legacy-typecheck.outcome == 'failure'
+        run: echo '::warning::Legacy Astro type diagnostics failed. The failure is visible and remains tracked debt; tests, build, and contract audits still gate this release.'
 
       - name: Test
         run: npm run test -- --run

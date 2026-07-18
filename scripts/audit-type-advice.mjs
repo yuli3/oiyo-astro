@@ -47,7 +47,17 @@ for (const advice of catalog.advices) {
 }
 
 // --- 4) 구현 토큰 ---
-for (const token of ["CRISIS_CONSTRUCTS", "ADVICE_FORBIDDEN_PATTERNS", "TIER_EXPRESSION", "needsCrisisRouting", "state !== \"clear\""]) {
+for (const token of [
+  "CRISIS_CONSTRUCTS",
+  "ADVICE_FORBIDDEN_PATTERNS",
+  "TIER_EXPRESSION",
+  "needsCrisisRouting",
+  "isEligibleAdviceSignal",
+  "confidenceBand",
+  "freshness",
+  "CONSTRUCT_ASSESSMENT_BINDINGS",
+  "state !== \"clear\"",
+]) {
   if (!source.includes(token)) errors.push(`구현 토큰 누락: ${token}`);
 }
 if (/\bfetch\s*\(|localStorage|sessionStorage/.test(source)) errors.push("매칭 엔진은 네트워크·저장소를 쓰지 않는다");

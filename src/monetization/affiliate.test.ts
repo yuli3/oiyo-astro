@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
 import { LOCALES } from "../i18n";
+import { createAffiliateLink } from "../components/shared/AffiliateLink";
 import {
+  AFFILIATE_ACTIVATION_SCHEMA,
   AFFILIATE_CATEGORIES,
   AFFILIATE_DISCLOSURE_COPY,
   AFFILIATE_LINK_REL,
@@ -9,12 +13,16 @@ import {
   buildAffiliateClickEvent,
   findForbiddenClaims,
   isPartnerLive,
+  resolveAffiliateActivation,
+  validateAffiliateActivationRegistry,
+  validateAffiliateHref,
   validatePartnerDueDiligence,
   type PartnerDueDiligence,
 } from "./affiliate";
 
 function dueDiligence(overrides: Partial<PartnerDueDiligence> = {}): PartnerDueDiligence {
   return validatePartnerDueDiligence({
+    allowedHosts: ["partner.example"],
     category: "books-courses",
     contractStatus: "candidate",
     dataSharedWithPartner: "none",
@@ -29,6 +37,17 @@ function dueDiligence(overrides: Partial<PartnerDueDiligence> = {}): PartnerDueD
     schemaVersion: AFFILIATE_SCHEMA_VERSION,
     ...overrides,
   });
+}
+
+function activationRegistry(overrides: Record<string, unknown> = {}) {
+  return {
+    activationEnabled: true,
+    allowedPageKeys: ["page:oiyo.career-values.test"],
+    partners: [dueDiligence({ contractStatus: "approved-by-human" })],
+    schema: AFFILIATE_ACTIVATION_SCHEMA,
+    schemaVersion: 1,
+    ...overrides,
+  };
 }
 
 describe("affiliate foundation (C3 Wave 0)", () => {
@@ -54,6 +73,7 @@ describe("affiliate foundation (C3 Wave 0)", () => {
     expect(() => dueDiligence({ disclosurePlacement: "footer" as never })).toThrow(/링크 인접/);
     expect(() => dueDiligence({ exitPlan: " " })).toThrow(/exitPlan/);
     expect(() => dueDiligence({ reviewedAt: "yesterday" })).toThrow(/reviewedAt/);
+    expect(() => dueDiligence({ allowedHosts: [] })).toThrow(/allowedHosts/);
     expect(() => dueDiligence({ category: "unknown" as never })).toThrow(/알 수 없는/);
 
     // live = human approval AND pilot-allowed category, never either alone
@@ -65,20 +85,56 @@ describe("affiliate foundation (C3 Wave 0)", () => {
   });
 
   it("keeps the click event payload minimal and free of personal identifiers", () => {
-    expect(buildAffiliateClickEvent({ pageKey: "blog:/ko/height-converter", partnerId: "example-books", position: "result-footer" })).toEqual({
+    const registry = activationRegistry();
+    expect(buildAffiliateClickEvent({ pageKey: "page:oiyo.career-values.test", partnerId: "example-books", position: "result-footer" }, registry)).toEqual({
       event: "affiliate_click",
-      pageKey: "blog:/ko/height-converter",
+      pageKey: "page:oiyo.career-values.test",
       partnerId: "example-books",
       position: "result-footer",
       schemaVersion: 1,
     });
-    expect(() => buildAffiliateClickEvent({ pageKey: "", partnerId: "x", position: "y" })).toThrow(/pageKey/);
+    expect(() => buildAffiliateClickEvent({ pageKey: "", partnerId: "x", position: "y" }, registry)).toThrow(/pageKey/);
     expect(() =>
-      buildAffiliateClickEvent({ pageKey: "a", partnerId: "b", position: "c", userId: "u1" } as never),
+      buildAffiliateClickEvent({ pageKey: "a", partnerId: "b", position: "c", userId: "u1" } as never, registry),
     ).toThrow(/식별 필드/);
     expect(() =>
-      buildAffiliateClickEvent({ pageKey: "a", partnerId: "b", position: "c", resultScore: 88 } as never),
+      buildAffiliateClickEvent({ pageKey: "a", partnerId: "b", position: "c", resultScore: 88 } as never, registry),
     ).toThrow(/식별 필드/);
+  });
+
+  it("binds canonical C1 page keys and partner IDs to the approved activation registry", () => {
+    const registry = activationRegistry();
+    expect(validateAffiliateActivationRegistry(registry)).toMatchObject({ activationEnabled: true });
+    expect(resolveAffiliateActivation({ pageKey: "page:oiyo.career-values.test", partnerId: "example-books", position: "result-footer" }, registry).partner.legalName).toBe("Example Books Co.");
+    expect(() => resolveAffiliateActivation({ pageKey: "oiyo:/ko/test", partnerId: "example-books", position: "result-footer" }, registry)).toThrow(/C1 canonical allowlist/);
+    expect(() => resolveAffiliateActivation({ pageKey: "page:oiyo.unknown", partnerId: "example-books", position: "result-footer" }, registry)).toThrow(/allowlist/);
+    expect(() => validateAffiliateActivationRegistry(activationRegistry({ allowedPageKeys: ["page:oiyo.not-registered"] }))).toThrow(/manifest v1/);
+    expect(() => resolveAffiliateActivation({ pageKey: "page:oiyo.career-values.test", partnerId: "unknown", position: "result-footer" }, registry)).toThrow(/due-diligence registry/);
+    expect(() => validateAffiliateActivationRegistry(activationRegistry({ activationEnabled: false, partners: [dueDiligence()] }))).toThrow(/사람 승인/);
+    expect(() => resolveAffiliateActivation({ pageKey: "page:oiyo.career-values.test", partnerId: "example-books", position: "result-footer" }, { ...registry, activationEnabled: false })).toThrow(/비활성/);
+    expect(validateAffiliateHref("https://partner.example/book", dueDiligence())).toBe("https://partner.example/book");
+    expect(() => validateAffiliateHref("https://evil.example/book", dueDiligence())).toThrow(/partner host/);
+  });
+
+  it("renders the paid link and adjacent disclosure as one registry-bound component", () => {
+    const TestAffiliateLink = createAffiliateLink(activationRegistry());
+    const html = renderToStaticMarkup(createElement(TestAffiliateLink, {
+      href: "https://partner.example/book",
+      locale: "ko",
+      pageKey: "page:oiyo.career-values.test",
+      partnerId: "example-books",
+      position: "result-footer",
+      children: "심리학 입문 도서 보기",
+    }));
+    expect(html).toContain('data-affiliate-link="v1"');
+    expect(html).toContain('rel="sponsored nofollow"');
+    expect(html).toMatch(/<a[^>]+>심리학 입문 도서 보기<\/a><span role="note"/);
+    expect(html).toContain("수수료를 받을 수 있습니다");
+
+    expect(() => renderToStaticMarkup(createElement(TestAffiliateLink, {
+      href: "https://evil.example/book", locale: "ko", pageKey: "page:oiyo.career-values.test",
+      partnerId: "example-books", position: "result-footer", children: "도서 보기",
+    }))).toThrow(/partner host/);
   });
 
   it("ships disclosure copy for all six locales with sponsored link rel", () => {

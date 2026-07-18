@@ -20,6 +20,8 @@ if (!Array.isArray(contract.humanGates) || !contract.humanGates.some((gate) => /
 for (const token of [
   "SAMPLE_REPORT_FORBIDDEN_CLAIM_PATTERNS",
   "assertCanonicalExport",
+  "parsePersonalProfileExportJson",
+  "isIsoTimestamp",
   "containsForbiddenKey",
   "recompute-from-export",
   "discard-file-only",

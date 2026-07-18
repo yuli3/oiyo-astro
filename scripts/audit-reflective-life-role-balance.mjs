@@ -19,6 +19,8 @@ if (!Array.isArray(contract.humanGates) || !contract.humanGates.some((gate) => /
 
 for (const token of [
   "LIFE_ROLE_BALANCE_FORBIDDEN_FRAMING",
+  "sanitizeLifeRoleBalanceState",
+  "isIsoTimestamp",
   "user-authored-reflection",
   'aggregation: "none"',
   'inference: "none"',

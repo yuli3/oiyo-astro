@@ -76,6 +76,7 @@ export function findForbiddenClaims(categoryId: AffiliateCategoryId, copyText: s
 // --- Partner due diligence -------------------------------------------------
 
 export interface PartnerDueDiligence {
+  allowedHosts: string[];
   category: AffiliateCategoryId;
   contractStatus: 'candidate' | 'reviewing' | 'approved-by-human' | 'rejected';
   dataSharedWithPartner: 'none';
@@ -100,6 +101,10 @@ export function validatePartnerDueDiligence(value: unknown): PartnerDueDiligence
     if (typeof record[field] !== 'string' || !record[field]?.trim()) throw new TypeError(`${field}가 비었습니다`);
   }
   if (Number.isNaN(Date.parse(String(record.reviewedAt)))) throw new TypeError('reviewedAt이 올바른 시각이 아닙니다');
+  if (!Array.isArray(record.allowedHosts) || record.allowedHosts.length === 0 || record.allowedHosts.some((host) => typeof host !== 'string' || !/^[a-z0-9.-]+$/.test(host))) {
+    throw new TypeError('allowedHosts는 exact lowercase host allowlist여야 합니다');
+  }
+  if (new Set(record.allowedHosts).size !== record.allowedHosts.length) throw new TypeError('allowedHosts가 중복되었습니다');
   getAffiliateCategory(String(record.category));
   if (record.dataSharedWithPartner !== 'none') {
     throw new TypeError('개인정보 전달은 계약될 수 없습니다 — dataSharedWithPartner는 none 고정');
@@ -116,6 +121,82 @@ export function isPartnerLive(record: PartnerDueDiligence): boolean {
   return record.contractStatus === 'approved-by-human' && getAffiliateCategory(record.category).pilotAllowed;
 }
 
+// --- Activation registry ---------------------------------------------------
+
+export const AFFILIATE_ACTIVATION_SCHEMA = 'oiyo.affiliate-activation' as const;
+export const REVENUE_PAGE_KEY_PATTERN = /^page:[a-z0-9.-]+$/;
+// Generated from the root C1 revenue-page-key manifest v1 (2026-07-16).
+// Activation fails closed when a page has not yet been registered there.
+export const C1_REVENUE_PAGE_KEYS = new Set([
+  'page:oiyo.career-values.test',
+  'page:oiyo.saju.calculator',
+  'page:blog.height-converter',
+  'page:blog.career-values.guide',
+  'page:wiki.work-values.definition',
+]);
+
+export interface AffiliateActivationRegistry {
+  activationEnabled: boolean;
+  allowedPageKeys: string[];
+  partners: PartnerDueDiligence[];
+  schema: typeof AFFILIATE_ACTIVATION_SCHEMA;
+  schemaVersion: typeof AFFILIATE_SCHEMA_VERSION;
+}
+
+export interface ResolvedAffiliateActivation {
+  pageKey: string;
+  partner: PartnerDueDiligence;
+  position: string;
+}
+
+export function validateAffiliateActivationRegistry(value: unknown): AffiliateActivationRegistry {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) throw new TypeError('affiliate activation registry가 아닙니다');
+  const record = value as Partial<AffiliateActivationRegistry>;
+  if (record.schema !== AFFILIATE_ACTIVATION_SCHEMA || record.schemaVersion !== AFFILIATE_SCHEMA_VERSION) throw new TypeError('activation schema/version 불일치');
+  if (typeof record.activationEnabled !== 'boolean' || !Array.isArray(record.allowedPageKeys) || !Array.isArray(record.partners)) throw new TypeError('activation registry 필드가 유효하지 않습니다');
+  const allowedPageKeys = record.allowedPageKeys.map((key) => String(key));
+  if (allowedPageKeys.some((key) => !REVENUE_PAGE_KEY_PATTERN.test(key))) throw new TypeError('pageKey는 C1 canonical page-key 포맷이어야 합니다');
+  if (allowedPageKeys.some((key) => !C1_REVENUE_PAGE_KEYS.has(key))) throw new TypeError('pageKey가 C1 revenue-page-key manifest v1에 등록되지 않았습니다');
+  if (new Set(allowedPageKeys).size !== allowedPageKeys.length) throw new TypeError('pageKey allowlist가 중복되었습니다');
+  const partners = record.partners.map(validatePartnerDueDiligence);
+  if (new Set(partners.map((partner) => partner.partnerId)).size !== partners.length) throw new TypeError('partnerId registry가 중복되었습니다');
+  if (partners.some((partner) => !isPartnerLive(partner))) throw new TypeError('activation registry에는 사람 승인된 저위험 partner만 등록할 수 있습니다');
+  if (record.activationEnabled && (!allowedPageKeys.length || !partners.length)) throw new TypeError('activation에는 pageKey와 승인 partner가 모두 필요합니다');
+  return {
+    activationEnabled: record.activationEnabled,
+    allowedPageKeys: [...allowedPageKeys],
+    partners: partners.map((partner) => ({ ...partner, allowedHosts: [...partner.allowedHosts] })),
+    schema: AFFILIATE_ACTIVATION_SCHEMA,
+    schemaVersion: AFFILIATE_SCHEMA_VERSION,
+  };
+}
+
+export function resolveAffiliateActivation(
+  input: { pageKey: string; partnerId: string; position: string },
+  registry: unknown,
+): ResolvedAffiliateActivation {
+  const safe = validateAffiliateActivationRegistry(registry);
+  if (!safe.activationEnabled) throw new TypeError('affiliate activation은 사람 게이트 전 비활성입니다');
+  const pageKey = String(input.pageKey ?? '').trim();
+  if (!REVENUE_PAGE_KEY_PATTERN.test(pageKey) || !safe.allowedPageKeys.includes(pageKey)) throw new TypeError('pageKey가 C1 canonical allowlist에 없습니다');
+  const partner = safe.partners.find((candidate) => candidate.partnerId === String(input.partnerId ?? '').trim());
+  if (!partner) throw new TypeError('partnerId가 승인 due-diligence registry에 없습니다');
+  const position = String(input.position ?? '').trim();
+  if (!/^[a-z0-9][a-z0-9._-]*$/.test(position)) throw new TypeError('position이 유효하지 않습니다');
+  return { pageKey, partner, position };
+}
+
+export function validateAffiliateHref(href: string, partner: PartnerDueDiligence): string {
+  let url: URL;
+  try {
+    url = new URL(href);
+  } catch {
+    throw new TypeError('affiliate href가 유효한 URL이 아닙니다');
+  }
+  if (url.protocol !== 'https:' || !partner.allowedHosts.includes(url.hostname.toLowerCase())) throw new TypeError('affiliate href가 승인 partner host와 일치하지 않습니다');
+  return url.toString();
+}
+
 // --- Click event (minimal payload) ------------------------------------------
 
 const CLICK_EVENT_FORBIDDEN_KEYS = ['userId', 'email', 'resultId', 'score', 'answers', 'birth', 'name'] as const;
@@ -128,7 +209,10 @@ export interface AffiliateClickEvent {
   schemaVersion: typeof AFFILIATE_SCHEMA_VERSION;
 }
 
-export function buildAffiliateClickEvent(input: { pageKey: string; partnerId: string; position: string }): AffiliateClickEvent {
+export function buildAffiliateClickEvent(
+  input: { pageKey: string; partnerId: string; position: string },
+  registry: unknown,
+): AffiliateClickEvent {
   for (const field of ['pageKey', 'partnerId', 'position'] as const) {
     if (typeof input[field] !== 'string' || !input[field].trim()) throw new TypeError(`${field}가 비었습니다`);
   }
@@ -138,11 +222,12 @@ export function buildAffiliateClickEvent(input: { pageKey: string; partnerId: st
       throw new TypeError(`클릭 이벤트에 개인·결과 식별 필드는 담을 수 없습니다: ${key}`);
     }
   }
+  const activation = resolveAffiliateActivation(input, registry);
   return {
     event: 'affiliate_click',
-    pageKey: input.pageKey.trim(),
-    partnerId: input.partnerId.trim(),
-    position: input.position.trim(),
+    pageKey: activation.pageKey,
+    partnerId: activation.partner.partnerId,
+    position: activation.position,
     schemaVersion: AFFILIATE_SCHEMA_VERSION,
   };
 }

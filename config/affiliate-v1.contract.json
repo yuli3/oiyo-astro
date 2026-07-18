@@ -15,7 +15,20 @@
   "dueDiligence": {
     "dataSharedWithPartner": "none",
     "liveRequires": ["contractStatus approved-by-human", "pilot-allowed category"],
-    "requiredFields": ["partnerId", "legalName", "offering", "category", "exitPlan", "reviewedBy", "reviewedAt"]
+    "requiredFields": ["partnerId", "legalName", "offering", "category", "allowedHosts", "exitPlan", "reviewedBy", "reviewedAt"]
+  },
+  "activationRegistry": {
+    "canonicalFile": "config/affiliate-activation-v1.registry.json",
+    "pageKeyPattern": "^page:[a-z0-9.-]+$",
+    "pageKeyMembership": "exact allowlist derived from C1 revenue page-key manifest",
+    "partnerMembership": "approved-by-human low-risk due-diligence records only",
+    "default": "disabled-empty"
+  },
+  "linkSurface": {
+    "component": "AffiliateLink",
+    "linkAndDisclosure": "same wrapper, adjacent siblings",
+    "hrefHost": "exact partner allowedHosts",
+    "rel": "sponsored nofollow"
   },
   "clickEvent": {
     "fields": ["event", "pageKey", "partnerId", "position", "schemaVersion"],
@@ -24,6 +37,6 @@
   "humanGates": [
     "real partner contract, commission terms, brand exposure",
     "any transfer of personal data (forbidden by schema; renegotiation requires new schema version)",
-    "public wiring of AffiliateDisclosure and any affiliate link"
+    "public wiring of AffiliateLink and any affiliate link"
   ]
 }

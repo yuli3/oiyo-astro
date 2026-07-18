@@ -8,6 +8,7 @@ import {
   LIFE_ROLE_SUGGESTIONS,
   removeRole,
   roleGaps,
+  sanitizeLifeRoleBalanceState,
   updateRole,
 } from "./life-role-balance";
 
@@ -86,6 +87,17 @@ describe("life-role-balance reflective activity (B3 Wave 0)", () => {
     expect(JSON.stringify(exported)).not.toMatch(/flag|screening|risk|alert/i);
     expect(() => buildReflectionExport(createLifeRoleBalance(), FIXED_AT)).toThrow(/역할이 없습니다/);
     expect(() => buildReflectionExport(state, "not-a-date")).toThrow(/올바른 시각/);
+  });
+
+  it("내보내기 직전에 외부 변조 state를 재검증하고 정규화한다", () => {
+    const valid = addRole(createLifeRoleBalance(), { label: "  가족  ", currentShare: 20, desiredShare: 30 });
+    expect(sanitizeLifeRoleBalanceState(valid).roles[0].label).toBe("가족");
+
+    expect(() => buildReflectionExport({ ...valid, roles: [{ ...valid.roles[0], currentShare: 101 }] }, FIXED_AT)).toThrow(/0~100/);
+    expect(() => buildReflectionExport({ ...valid, roles: [{ ...valid.roles[0], id: " " }] }, FIXED_AT)).toThrow(/id가 비었습니다/);
+    expect(() => buildReflectionExport({ ...valid, roles: [valid.roles[0], { ...valid.roles[0] }] }, FIXED_AT)).toThrow(/id가 중복/);
+    expect(() => buildReflectionExport({ ...valid, roles: [valid.roles[0], { ...valid.roles[0], id: "other" }] }, FIXED_AT)).toThrow(/이름이 중복/);
+    expect(() => buildReflectionExport({ ...valid, roles: Array.from({ length: 13 }, (_, i) => ({ ...valid.roles[0], id: `role-${i}`, label: `역할 ${i}` })) }, FIXED_AT)).toThrow(/최대 12개/);
   });
 
   it("keeps module copy inside the non-diagnostic, non-crisis boundary", () => {

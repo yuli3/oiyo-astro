@@ -100,6 +100,38 @@ function normalizeRole(role: Partial<LifeRole> & { label: string }, existingId?:
   };
 }
 
+function isRecord(value: unknown): value is Record<string, unknown> {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
+function isIsoTimestamp(value: unknown): value is string {
+  if (typeof value !== "string") return false;
+  const parsed = Date.parse(value);
+  return Number.isFinite(parsed) && new Date(parsed).toISOString() === value;
+}
+
+export function sanitizeLifeRoleBalanceState(value: unknown): LifeRoleBalanceState {
+  if (!isRecord(value) || value.activityId !== LIFE_ROLE_BALANCE_ACTIVITY_ID || !Array.isArray(value.roles)) {
+    throw new TypeError("삶의 역할 균형 상태가 아닙니다");
+  }
+  if (value.roles.length > LIFE_ROLE_BALANCE_MAX_ROLES) throw new RangeError("역할은 최대 12개까지입니다");
+  const roles = value.roles.map((candidate) => {
+    if (!isRecord(candidate) || typeof candidate.id !== "string" || !candidate.id.trim()) {
+      throw new TypeError("역할 id가 비었습니다");
+    }
+    return normalizeRole({
+      currentShare: candidate.currentShare as number,
+      desiredShare: candidate.desiredShare as number,
+      label: candidate.label as string,
+      note: candidate.note as string,
+    }, candidate.id.trim());
+  });
+  if (new Set(roles.map((role) => role.id)).size !== roles.length) throw new TypeError("역할 id가 중복되었습니다");
+  const labels = roles.map((role) => role.label);
+  if (new Set(labels).size !== labels.length) throw new TypeError("역할 이름이 중복되었습니다");
+  return { activityId: LIFE_ROLE_BALANCE_ACTIVITY_ID, roles };
+}
+
 function assertNoDuplicateLabel(roles: readonly LifeRole[], label: string, exceptId?: string): void {
   if (roles.some((role) => role.id !== exceptId && role.label === label)) {
     throw new Error(`같은 이름의 역할이 이미 있습니다: ${label}`);
@@ -151,16 +183,16 @@ export function buildReflectionExport(
   state: LifeRoleBalanceState,
   completedAt = new Date().toISOString(),
 ): LifeRoleBalanceReflectionExport {
-  if (state.activityId !== LIFE_ROLE_BALANCE_ACTIVITY_ID) throw new TypeError("알 수 없는 활동입니다");
-  if (!state.roles.length) throw new RangeError("내보낼 역할이 없습니다");
-  if (Number.isNaN(Date.parse(completedAt))) throw new TypeError("completedAt이 올바른 시각이 아닙니다");
+  const safe = sanitizeLifeRoleBalanceState(state);
+  if (!safe.roles.length) throw new RangeError("내보낼 역할이 없습니다");
+  if (!isIsoTimestamp(completedAt)) throw new TypeError("completedAt이 올바른 시각(ISO)이 아닙니다");
   return {
     activityId: LIFE_ROLE_BALANCE_ACTIVITY_ID,
     completedAt,
     content: {
       aggregation: "none",
       inference: "none",
-      roles: state.roles.map((role) => ({ ...role })),
+      roles: safe.roles.map((role) => ({ ...role })),
       userEditable: true,
     },
     privacy: { rawUserTextIncluded: true, serverTransmission: "none" },

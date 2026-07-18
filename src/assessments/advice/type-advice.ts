@@ -78,8 +78,16 @@ export interface TypeAdvice {
 // 원점수를 조언 엔진에 흘리지 않기 위해서다.
 export interface AdviceSignal {
   band: AdviceBand;
+  confidenceBand: "low" | "medium" | "high";
   constructId: string;
+  freshness: "current" | "stale";
   measuredAt: string;
+  provenance: {
+    assessmentId: string;
+    instrumentVersion: string;
+    interpretationVersion: string;
+    scoringVersion: string;
+  };
   // tie/low-flat 상태에서는 조언을 내지 않는다(A4 역할 비주얼과 동일 규칙).
   state?: "clear" | "tie" | "low-flat";
 }
@@ -96,6 +104,41 @@ const TIER_ORDER: EvidenceTier[] = [
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return Boolean(value) && typeof value === "object" && !Array.isArray(value);
+}
+
+function isIsoTimestamp(value: unknown): value is string {
+  if (typeof value !== "string") return false;
+  const parsed = Date.parse(value);
+  return Number.isFinite(parsed) && new Date(parsed).toISOString() === value;
+}
+
+const CONSTRUCT_ASSESSMENT_BINDINGS: readonly [prefix: string, assessmentId: string][] = [
+  ["psychology.big5.", "big5"],
+  ["relationship.attachment.", "adult-attachment"],
+  ["vocation.riasec.", "riasec"],
+  ["values.work.", "career-values"],
+  ["values.chosen.perfectionism", "perfectionism"],
+  ["wellness.burnout.", "burnout"],
+];
+
+function expectedAssessmentId(constructId: string): string | undefined {
+  return CONSTRUCT_ASSESSMENT_BINDINGS.find(([prefix]) => constructId.startsWith(prefix))?.[1];
+}
+
+/** Only current, sufficiently confident, versioned canonical signals may drive advice. */
+export function isEligibleAdviceSignal(value: unknown): value is AdviceSignal {
+  if (!isRecord(value) || !isRecord(value.provenance)) return false;
+  const provenance = value.provenance;
+  if (!['low', 'mid', 'high'].includes(String(value.band))) return false;
+  if (!['low', 'medium', 'high'].includes(String(value.confidenceBand)) || value.confidenceBand === 'low') return false;
+  if (value.freshness !== 'current' || !isIsoTimestamp(value.measuredAt)) return false;
+  if (value.state !== undefined && !['clear', 'tie', 'low-flat'].includes(String(value.state))) return false;
+  if (typeof value.constructId !== 'string' || !value.constructId.trim()) return false;
+  const expected = expectedAssessmentId(value.constructId);
+  if (!expected || provenance.assessmentId !== expected) return false;
+  return ['instrumentVersion', 'interpretationVersion', 'scoringVersion'].every(
+    (field) => typeof provenance[field] === 'string' && String(provenance[field]).trim().length > 0,
+  );
 }
 
 export function validateAdvice(value: unknown, locales: readonly AssessmentLocale[]): TypeAdvice {
@@ -121,6 +164,18 @@ export function validateAdvice(value: unknown, locales: readonly AssessmentLocal
   if (rule.requiresSources && !advice.sources?.length) {
     throw new TypeError(`${advice.id}: ${advice.evidenceTier}는 출처가 필수입니다`);
   }
+  for (const source of advice.sources ?? []) {
+    try {
+      const url = new URL(source);
+      if (url.protocol !== "https:") throw new Error("https only");
+    } catch {
+      throw new TypeError(`${advice.id}: 출처는 검토 가능한 HTTPS 원문 URL이어야 합니다`);
+    }
+  }
+  if (
+    !advice.action || !Number.isInteger(advice.action.minutes) || advice.action.minutes < 1 || advice.action.minutes > 120 ||
+    !["none", "low"].includes(advice.action.cost) || !["once", "daily", "weekly"].includes(advice.action.repeat)
+  ) throw new TypeError(`${advice.id}: 행동 계약이 유효하지 않습니다`);
   // 6로케일 직접 작성 강제 — 폴백을 허용하면 한국어가 전 로케일에 노출된다.
   for (const locale of locales) {
     const copy = advice.copy?.[locale];
@@ -140,7 +195,9 @@ export function validateAdvice(value: unknown, locales: readonly AssessmentLocal
 }
 
 function signalOf(signals: readonly AdviceSignal[], constructId: string): AdviceSignal | undefined {
-  return signals.find((s) => s.constructId === constructId);
+  return signals
+    .filter((signal) => signal.constructId === constructId && isEligibleAdviceSignal(signal))
+    .sort((a, b) => b.measuredAt.localeCompare(a.measuredAt))[0];
 }
 
 function conditionMet(signals: readonly AdviceSignal[], condition: AdviceCondition): boolean {

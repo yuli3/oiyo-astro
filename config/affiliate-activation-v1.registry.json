@@ -1,0 +1,7 @@
+{
+  "schema": "oiyo.affiliate-activation",
+  "schemaVersion": 1,
+  "activationEnabled": false,
+  "allowedPageKeys": [],
+  "partners": []
+}

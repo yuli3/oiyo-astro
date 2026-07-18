@@ -6,8 +6,9 @@ import { fileURLToPath } from "node:url";
 
 const root = new URL("../", import.meta.url);
 const contract = JSON.parse(await readFile(new URL("config/affiliate-v1.contract.json", root), "utf8"));
+const registry = JSON.parse(await readFile(new URL("config/affiliate-activation-v1.registry.json", root), "utf8"));
 const source = await readFile(new URL("src/monetization/affiliate.ts", root), "utf8");
-const component = await readFile(new URL("src/components/shared/AffiliateDisclosure.tsx", root), "utf8");
+const component = await readFile(new URL("src/components/shared/AffiliateLink.tsx", root), "utf8");
 const errors = [];
 
 if (contract.schema !== "oiyo.affiliate-contract" || contract.schemaVersion !== 1) errors.push("contract schema/version mismatch");
@@ -17,6 +18,9 @@ if (contract.dueDiligence?.dataSharedWithPartner !== "none") errors.push("data s
 if (contract.disclosure?.placement !== "adjacent-to-link" || contract.disclosure?.linkRel !== "sponsored nofollow") errors.push("disclosure contract mismatch");
 if (contract.disclosure?.locales?.length !== 6) errors.push("disclosure must cover 6 locales");
 if (!Array.isArray(contract.humanGates) || contract.humanGates.length < 3) errors.push("human gates missing");
+if (contract.activationRegistry?.pageKeyPattern !== "^page:[a-z0-9.-]+$" || contract.activationRegistry?.default !== "disabled-empty") errors.push("C1 page-key activation contract mismatch");
+if (contract.linkSurface?.component !== "AffiliateLink" || contract.linkSurface?.linkAndDisclosure !== "same wrapper, adjacent siblings") errors.push("indivisible link/disclosure surface contract missing");
+if (registry.schema !== "oiyo.affiliate-activation" || registry.schemaVersion !== 1 || registry.activationEnabled !== false || registry.allowedPageKeys?.length !== 0 || registry.partners?.length !== 0) errors.push("canonical activation registry must remain disabled and empty before human gate");
 
 for (const token of [
   "isPartnerLive",
@@ -25,19 +29,25 @@ for (const token of [
   "adjacent-to-link",
   "CLICK_EVENT_FORBIDDEN_KEYS",
   "AFFILIATE_DISCLOSURE_COPY",
+  "validateAffiliateActivationRegistry",
+  "resolveAffiliateActivation",
+  "REVENUE_PAGE_KEY_PATTERN",
+  "C1_REVENUE_PAGE_KEYS",
+  "validateAffiliateHref",
   "sponsored nofollow",
 ]) {
   if (!source.includes(token)) errors.push(`implementation token missing: ${token}`);
 }
 if (/\bfetch\s*\(|XMLHttpRequest|sendBeacon|localStorage/.test(source)) errors.push("contracts module must not use network or storage");
-if (!component.includes("AFFILIATE_DISCLOSURE_COPY") || !component.includes('role="note"')) errors.push("disclosure component must render canonical copy as a note");
+if (!component.includes("AFFILIATE_DISCLOSURE_COPY") || !component.includes('role="note"') || !component.includes("AFFILIATE_LINK_REL") || !component.includes("resolveAffiliateActivation")) errors.push("AffiliateLink must bind canonical activation, paid link rel, and adjacent disclosure");
+if (!component.includes('<a href={safeHref} rel={AFFILIATE_LINK_REL}>{children}</a>')) errors.push("AffiliateLink paid anchor structure drifted");
 
 // The component must stay unwired until the human gate opens.
-const wiring = spawnSync("grep", ["-rl", "AffiliateDisclosure", "src/pages", "src/layouts"], {
+const wiring = spawnSync("grep", ["-rl", "AffiliateLink", "src/pages", "src/layouts"], {
   cwd: fileURLToPath(root),
   encoding: "utf8",
 });
-if (wiring.status === 0 && wiring.stdout.trim()) errors.push(`AffiliateDisclosure is wired into routes before the human gate:\n${wiring.stdout}`);
+if (wiring.status === 0 && wiring.stdout.trim()) errors.push(`AffiliateLink is wired into routes before the human gate:\n${wiring.stdout}`);
 
 // Behavioral gate: the named vitest suite must actually pass in this process.
 const vitest = fileURLToPath(new URL("node_modules/vitest/vitest.mjs", root));

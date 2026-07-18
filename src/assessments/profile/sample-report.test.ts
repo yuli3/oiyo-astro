@@ -22,6 +22,7 @@ function previousExport(mutate?: (data: PersonalProfileExportV2) => void): Perso
   projection.value = 65;
   projection.measuredAt = "2026-06-01T00:00:00.000Z";
   mutate?.(data);
+  data.sections.assessmentDerived.instruments[0].measuredAt = projection.measuredAt;
   return data;
 }
 
@@ -55,6 +56,17 @@ describe("sample-report v1 (C4 Wave 0)", () => {
     const withRaw = currentExport();
     (withRaw.sections.assessmentDerived.lanes[0].projections[0] as unknown as Record<string, unknown>).responses = [1];
     expect(() => buildSampleReport({ export: withRaw })).toThrow(/원응답/);
+
+    const malformedProjection = currentExport();
+    malformedProjection.sections.assessmentDerived.lanes[0].projections[0].confidence = 2;
+    expect(() => buildSampleReport({ export: malformedProjection })).toThrow(/정본 PersonalProfileExportV2/);
+
+    const malformedOrigin = currentExport();
+    malformedOrigin.originPolicy.userAuthored = "none-in-v2";
+    (malformedOrigin.originPolicy as { assessmentDerived: string }).assessmentDerived = "untrusted";
+    expect(() => buildSampleReport({ export: malformedOrigin })).toThrow(/정본 PersonalProfileExportV2/);
+
+    expect(() => buildSampleReport({ export: currentExport(), generatedAt: "yesterday" })).toThrow(/ISO timestamp/);
   });
 
   it("compares only the same assessment/instrument/scoring across different measurements", () => {

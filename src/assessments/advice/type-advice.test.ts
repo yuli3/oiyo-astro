@@ -4,6 +4,7 @@ import { ASSESSMENT_LOCALES } from "../core/common";
 import {
   ADVICE_FORBIDDEN_PATTERNS,
   CRISIS_CONSTRUCTS,
+  isEligibleAdviceSignal,
   matchAdvice,
   needsCrisisRouting,
   TIER_EXPRESSION,
@@ -18,7 +19,24 @@ const CATALOG = (catalogJson as { advices: unknown[] }).advices.map((a) =>
 
 const AT = "2026-07-17T00:00:00.000Z";
 const signal = (constructId: string, band: AdviceSignal["band"], extra: Partial<AdviceSignal> = {}): AdviceSignal => ({
-  constructId, band, measuredAt: AT, ...extra,
+  constructId,
+  band,
+  confidenceBand: "high",
+  freshness: "current",
+  measuredAt: AT,
+  provenance: {
+    assessmentId: constructId.startsWith("psychology.big5.") ? "big5"
+      : constructId.startsWith("relationship.attachment.") ? "adult-attachment"
+      : constructId.startsWith("vocation.riasec.") ? "riasec"
+      : constructId.startsWith("values.work.") ? "career-values"
+      : constructId.startsWith("values.chosen.perfectionism") ? "perfectionism"
+      : constructId.startsWith("wellness.burnout.") ? "burnout"
+      : "unknown",
+    instrumentVersion: "instrument-v1",
+    interpretationVersion: "interpretation-v1",
+    scoringVersion: "scoring-v1",
+  },
+  ...extra,
 });
 
 describe("type-advice v1 (#66 Wave 0)", () => {
@@ -66,6 +84,19 @@ describe("type-advice v1 (#66 Wave 0)", () => {
     expect(matchAdvice([signal("psychology.big5.C", "low", { state: "clear" })], CATALOG).length).toBeGreaterThan(0);
   });
 
+  it("정본 provenance·현재성·confidence를 통과한 신호만 조언에 사용한다", () => {
+    const valid = signal("psychology.big5.C", "low");
+    expect(isEligibleAdviceSignal(valid)).toBe(true);
+    expect(matchAdvice([{ ...valid, freshness: "stale" }], CATALOG)).toEqual([]);
+    expect(matchAdvice([{ ...valid, confidenceBand: "low" }], CATALOG)).toEqual([]);
+    expect(matchAdvice([{ ...valid, measuredAt: "yesterday" }], CATALOG)).toEqual([]);
+    expect(matchAdvice([{ ...valid, provenance: { ...valid.provenance, assessmentId: "riasec" } }], CATALOG)).toEqual([]);
+    expect(matchAdvice([{ ...valid, provenance: { ...valid.provenance, scoringVersion: "" } }], CATALOG)).toEqual([]);
+
+    const staleFirst = { ...valid, freshness: "stale" as const, measuredAt: "2026-07-18T00:00:00.000Z" };
+    expect(matchAdvice([staleFirst, valid], CATALOG).length).toBeGreaterThan(0);
+  });
+
   it("결정론: 같은 입력 → 같은 순서. 근거 높은 tier가 앞선다", () => {
     const signals = [signal("psychology.big5.O", "high"), signal("psychology.big5.N", "high")];
     const first = matchAdvice(signals, CATALOG).map((m) => m.advice.id);
@@ -82,6 +113,8 @@ describe("type-advice v1 (#66 Wave 0)", () => {
     }
     const noSources = { ...CATALOG[0], sources: undefined } as unknown;
     expect(() => validateAdvice(noSources, ASSESSMENT_LOCALES)).toThrow(/출처가 필수/);
+    expect(() => validateAdvice({ ...CATALOG[0], sources: ["not-a-url"] }, ASSESSMENT_LOCALES)).toThrow(/HTTPS 원문 URL/);
+    expect(() => validateAdvice({ ...CATALOG[0], action: { ...CATALOG[0].action, minutes: -1 } }, ASSESSMENT_LOCALES)).toThrow(/행동 계약/);
   });
 
   it("금지 표현·6로케일 폴백 금지를 강제한다", () => {
