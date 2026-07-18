@@ -23,8 +23,11 @@ if (!String(contract.comparison?.interpretation).includes("never proof")) errors
 if (fixture.schema !== "oiyo.personal-profile-history" || fixture.schemaVersion !== 1 || fixture.entries?.length !== 2) errors.push("two-point synthetic fixture mismatch");
 if (fixture.privacy?.serverTransmission !== "none" || fixture.privacy?.rawResponsesIncluded !== false || fixture.privacy?.storage !== "browser-local-only") errors.push("fixture privacy contract mismatch");
 if (fixture.entries?.some((entry) => entry.assessmentId !== "big5" || entry.instrumentVersion !== "big5-ocean-20-v1")) errors.push("fixture must compare one instrument/version");
-for (const token of ["PERSONAL_PROFILE_HISTORY_SERVER_TRANSMISSION", "browser-local-only", "containsForbiddenKey", "comparePersonalProfileHistory", "deletePersonalProfileHistoryPoint", "clearPersonalProfileHistory"]) {
+for (const token of ["PERSONAL_PROFILE_HISTORY_SERVER_TRANSMISSION", "browser-local-only", "containsForbiddenKey", "comparePersonalProfileHistory", "deletePersonalProfileHistoryPoint", "clearPersonalProfileHistory", "personalProfileHistoryFreshness"]) {
   if (!source.includes(token)) errors.push(`implementation token missing: ${token}`);
+}
+for (const token of ["personalProfileHistoryFreshness", "FRESHNESS_COPY", "365", "observedAt"]) {
+  if (!consumer.includes(token)) errors.push(`freshness consumer token missing: ${token}`);
 }
 if (/\bfetch\s*\(|XMLHttpRequest|sendBeacon|WebSocket|EventSource/.test(consumer)) errors.push("preview consumer must not contain a network transport");
 if (!consumer.includes("PersonalProfileHistoryPreview") || !previewRoute.includes("PersonalProfileHistoryPreview") || !previewRoute.includes("noindex")) errors.push("existing noindex preview consumer wiring missing");

@@ -8,6 +8,7 @@ import {
   deletePersonalProfileHistoryPoint,
   listAssessmentResults,
   loadPersonalProfileHistory,
+  personalProfileHistoryFreshness,
   projectPersonalProfileSnapshot,
   recordPersonalProfileSnapshot,
   serializePersonalProfileHistory,
@@ -42,6 +43,15 @@ const COPY: Record<Lang, {
   es: { title: "Historial de evaluaciones (vista local)", local: "Los datos del perfil permanecen en este navegador · no se envían al servidor", capture: "Guardar explícitamente los resultados actuales", captureHint: "El historial eliminado no se recrea automáticamente. Solo este botón vuelve a registrar los resultados actuales.", empty: "Aún no hay historial para comparar.", compare: "Dos momentos de la misma evaluación y versión", measured: "Medido", warning: "Las diferencias son señales autoinformadas puntuales, no prueban un cambio de personalidad.", export: "Exportar historial JSON", clear: "Borrar todo", delete: "Borrar", retry: "Reintentar", scoringMismatch: "La comparación numérica se detuvo porque las versiones de puntuación son distintas.", status: { ready: "El historial está disponible.", empty: "No hay historial guardado.", "storage-disabled": "El almacenamiento local no está disponible en este navegador.", "read-failed": "No se pudo leer el historial local.", corrupt: "El historial local está dañado y no se sobrescribió automáticamente.", "write-failed": "No se pudo guardar el historial local.", "delete-failed": "No se pudo borrar el historial local.", "export-failed": "No se pudo exportar el archivo JSON." } },
 };
 
+const FRESHNESS_COPY: Record<Lang, { current: string; stale: string; interval: (days: number) => string }> = {
+  ko: { current: "현재 신호", stale: "365일 초과 · 오래된 신호", interval: (days) => `${days}일 간격` },
+  en: { current: "Current signal", stale: "Over 365 days · stale signal", interval: (days) => `${days}-day interval` },
+  ja: { current: "現在のシグナル", stale: "365日超 · 古いシグナル", interval: (days) => `${days}日間隔` },
+  zh: { current: "当前信号", stale: "超过365天 · 旧信号", interval: (days) => `间隔${days}天` },
+  fr: { current: "Signal actuel", stale: "Plus de 365 jours · signal ancien", interval: (days) => `Intervalle de ${days} jours` },
+  es: { current: "Señal actual", stale: "Más de 365 días · señal antigua", interval: (days) => `Intervalo de ${days} días` },
+};
+
 export interface PersonalProfileHistoryDownloadEnvironment {
   createAnchor(): Pick<HTMLAnchorElement, "click" | "download" | "href" | "rel">;
   createObjectUrl(blob: Blob): string;
@@ -70,7 +80,9 @@ export function browserDownload(
 
 export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
   const t = COPY[locale];
+  const freshnessCopy = FRESHNESS_COPY[locale];
   const [result, setResult] = useState<PersonalProfileHistoryResult | null>(null);
+  const [observedAt] = useState(() => new Date());
 
   const sync = useCallback(() => {
     setResult(loadPersonalProfileHistory());
@@ -95,9 +107,9 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
     const keys = new Set(result.store.entries.map((entry) => `${entry.assessmentId}\u0000${entry.instrumentVersion}`));
     return [...keys].map((key) => {
       const [assessmentId, instrumentVersion] = key.split("\u0000");
-      return comparePersonalProfileHistory(result.store, assessmentId, instrumentVersion);
+      return comparePersonalProfileHistory(result.store, assessmentId, instrumentVersion, observedAt);
     }).filter((comparison) => comparison.status !== "insufficient-history");
-  }, [result]);
+  }, [observedAt, result]);
 
   if (!result) return null;
   const statusText = result.ux.state === "ready" || result.ux.state === "empty" ? null : t.status[result.ux.state];
@@ -131,7 +143,10 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
       {comparisons.map((comparison) => (
         <article key={`${comparison.assessmentId}:${comparison.instrumentVersion}`} className="mt-4 rounded-xl bg-slate-50 p-3">
           <h3 className="font-black text-slate-800">{comparison.assessmentId}</h3>
-          <p className="text-xs text-slate-500">{t.compare} · {comparison.instrumentVersion}</p>
+          <p className="text-xs text-slate-500">
+            {t.compare} · {comparison.instrumentVersion}
+            {comparison.newer && comparison.older ? ` · ${freshnessCopy.interval(Math.max(0, Math.round((Date.parse(comparison.newer.measuredAt) - Date.parse(comparison.older.measuredAt)) / 86_400_000)))}` : ""}
+          </p>
           {comparison.status === "scoring-version-mismatch" ? (
             <p className="mt-2 text-sm text-amber-800">{t.scoringMismatch}</p>
           ) : (
@@ -151,8 +166,13 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
       {result.store.entries.length > 0 && (
         <div className="mt-4 space-y-2">
           {result.store.entries.map((entry) => (
-            <div key={entry.historyId} className="flex flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 px-3 py-2 text-xs">
-              <span><strong>{entry.assessmentId}</strong> · {t.measured} {entry.measuredAt.slice(0, 10)} · {entry.instrumentVersion}</span>
+            <div key={entry.historyId} className="flex min-h-11 flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 px-3 py-2 text-xs">
+              <span>
+                <strong>{entry.assessmentId}</strong> · {t.measured} {entry.measuredAt.slice(0, 10)} · {entry.instrumentVersion}
+                <span className={`ml-2 inline-flex rounded-full px-2 py-1 font-bold ${personalProfileHistoryFreshness(entry.measuredAt, observedAt).state === "stale" ? "bg-amber-100 text-amber-900" : "bg-emerald-100 text-emerald-800"}`}>
+                  {personalProfileHistoryFreshness(entry.measuredAt, observedAt).state === "stale" ? freshnessCopy.stale : freshnessCopy.current}
+                </span>
+              </span>
               <button type="button" onClick={() => setResult(deletePersonalProfileHistoryPoint(entry.historyId))} className="min-h-11 rounded-lg px-3 font-bold text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700">{t.delete}</button>
             </div>
           ))}
