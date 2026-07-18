@@ -7,6 +7,7 @@ import { RecommendationCards } from '../../../components/ontology/Recommendation
 import { OntologyExportPopover } from '../../../components/ontology/OntologyExportPopover';
 import { OntologySharedProfileBanner } from '../../../components/ontology/OntologySharedProfileBanner';
 import { AssessmentSignalSummary } from '../../../components/ontology/AssessmentSignalSummary';
+import { AssessmentProfileProjection } from '../../../components/ontology/AssessmentProfileProjection';
 import WikiDefinitionLink from '../../../components/shared/WikiDefinitionLink.astro';
 import { laneOf, LANE_META } from '../../../lib/ontology/registry/ontology-systems';
 import { LOCALES, getTranslations } from '../../../i18n';
@@ -48,6 +49,7 @@ const lm = LANE_META;
          never merges into the viewer's own profile — renders nothing when
          there is no shared link. -->
     <OntologySharedProfileBanner locale={locale} client:load />
+    <AssessmentProfileProjection locale={locale} client:load />
 
     <!-- Hero -->
     <header class="text-center">

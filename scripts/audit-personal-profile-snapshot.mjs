@@ -2,8 +2,15 @@ import { readFile } from "node:fs/promises";
 
 const path = new URL("../config/personal-profile-snapshot-v1.fixtures.json", import.meta.url);
 const fixture = JSON.parse(await readFile(path, "utf8"));
+const consumer = await readFile(new URL("../src/components/ontology/AssessmentProfileProjection.tsx", import.meta.url), "utf8");
+const ontologyRoute = await readFile(new URL("../src/pages/[locale]/ontology/index.astro", import.meta.url), "utf8");
 const expectedLanes = ["trait", "preference", "interest", "chosen-value", "reflective-signal"];
 const errors = [];
+
+for (const token of ["projectPersonalProfileSnapshot", "listAssessmentResults", "Read-only", "읽기 전용", "confidence", "freshness"]) {
+  if (!consumer.includes(token)) errors.push(`ontology projection consumer missing ${token}`);
+}
+if (!ontologyRoute.includes("<AssessmentProfileProjection locale={locale} client:load")) errors.push("ontology route does not mount read-only assessment projection");
 
 if (fixture.schema !== "oiyo.personal-profile-snapshot-fixtures" || fixture.schemaVersion !== 1) {
   errors.push("fixture schema/version mismatch");
