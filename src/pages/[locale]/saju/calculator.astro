@@ -231,6 +231,14 @@ const content: Record<Locale, {
 };
 
 const c = content[locale] ?? content.en;
+const astronomySourceBoundary: Record<Locale, string> = {
+  ko: '달력·천문·절기 입력을 확인하는 공식 참고입니다. 사주 해석의 예측 타당성을 뒷받침하지 않습니다.',
+  en: 'An official reference for calendar, astronomy, and solar-term inputs; it does not establish predictive validity for saju readings.',
+  ja: '暦・天文・節気の入力を確認する公式資料です。四柱推命の予測的妥当性を裏づけるものではありません。',
+  zh: '这是核对历法、天文与节气输入的官方参考，并不证明八字解读具有预测效度。',
+  fr: 'Une référence officielle pour les données calendaires, astronomiques et les termes solaires; elle ne valide pas les prédictions du Saju.',
+  es: 'Una referencia oficial para datos de calendario, astronomía y términos solares; no valida predicciones del Saju.',
+};
 
 const webApplicationJsonLd = {
   '@context': 'https://schema.org',
@@ -326,6 +334,10 @@ const faqJsonLd = {
 
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
       {c.disclaimer}
+    </p>
+    <p class="text-sm leading-6 text-violet-700">
+      <a class="underline underline-offset-2" href="https://astro.kasi.re.kr/" rel="noopener noreferrer" target="_blank">Korea Astronomy and Space Science Institute astronomy portal</a>
+      {' '}— {astronomySourceBoundary[locale]}
     </p>
       <MysticTrinity topic="saju" locale={locale} />
   <PrintReportButton locale={locale} />
