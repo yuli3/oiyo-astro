@@ -131,6 +131,25 @@ function topFacetEdges(sources, targets, kind, perSource) {
   return sources.flatMap((source) => [...targets].map((target) => ({ target, score: cosine(source.facets, target.facets) })).sort((left, right) => right.score - left.score || left.target.id.localeCompare(right.target.id, "en")).slice(0, perSource).map(({ target, score }) => derivedEdge(source, target, kind, score)));
 }
 
+function koreanTopicParticle(label) {
+  const last = [...label.trim()].at(-1);
+  if (!last) return "은";
+  const codePoint = last.codePointAt(0);
+  if (codePoint >= 0xac00 && codePoint <= 0xd7a3) {
+    return (codePoint - 0xac00) % 28 === 0 ? "는" : "은";
+  }
+  return "는";
+}
+
+function renderExplanationTemplate(template, label, locale) {
+  if (locale === "ko") {
+    return template
+      .replaceAll("{label}은", `${label}${koreanTopicParticle(label)}`)
+      .replaceAll("{label}", label);
+  }
+  return template.replaceAll("{label}", label);
+}
+
 const [conceptDocument, edgeDocument, hobbies, careers, curatedHobbyDocument, curatedActionDocument, expansionActionDocument, expansionActionDocumentII, expansionHobbyDocument, expansionHobbyDocumentII, expansionHobbyDocumentIII, workContextTaxonomyDocument, hobbyActivityFacetDocument, explanationTemplateDocument] = await Promise.all([
   readFile(resolve(PLATFORM_ROOT, "concepts.json"), "utf8").then(JSON.parse), readFile(resolve(PLATFORM_ROOT, "edges.json"), "utf8").then(JSON.parse),
   evaluateTsArray("src/manifest/ontology/shards/lifestyle/hobbies.ts", "HOBBIES"), evaluateTsArray("src/lib/data-layer/shards/careers.ts", "CAREERS"),
@@ -294,7 +313,7 @@ for (const concept of current.values()) {
   concept.explanation = {
     sourceIds: [explanationTemplateDocument.source.id],
     reviewedAt: explanationTemplateDocument.source.reviewedAt,
-    fields: Object.fromEntries(EXPLANATION_FIELDS.map((field) => [field, Object.fromEntries(LOCALES.map((locale) => [locale, template[field][locale].replaceAll("{label}", concept.labels[locale])]))]))
+    fields: Object.fromEntries(EXPLANATION_FIELDS.map((field) => [field, Object.fromEntries(LOCALES.map((locale) => [locale, renderExplanationTemplate(template[field][locale], concept.labels[locale], locale)]))]))
   };
 }
 const actionIds = conceptDocument.concepts.filter(({ kind }) => kind === "action").map(({ id }) => id).sort();
@@ -314,11 +333,16 @@ const actionConcepts = graphConcepts.filter(({ kind }) => kind === "action");
 const hobbyConcepts = graphConcepts.filter(({ kind }) => kind === "hobby");
 const contextConcepts = graphConcepts.filter(({ kind }) => kind === "work_context");
 const hobbyActionEdges = HOBBY_ACTION_EDGES.map(([hobby, action]) => ({ from: `hobby.${hobby}`, to: `action.${action}`, kind: "supports", weight: 0.72, evidenceClass: "expert_curated", confidence: 0.8, provenance: "curated", rationaleKey: `relations.editorial_action.${hobby}.${action}`, sourceIds: ["editorial:ontology-v1-actions"] }));
+const actionHobbyEdges = HOBBY_ACTION_EDGES.map(([hobby, action]) => ({ from: `action.${action}`, to: `hobby.${hobby}`, kind: "expressed_by", weight: 0.45, evidenceClass: "expert_curated", confidence: 0.8, provenance: "curated", rationaleKey: `relations.editorial_action.${hobby}.${action}`, sourceIds: ["editorial:ontology-v1-actions"] }));
 const actionContextEdges = topFacetEdges(actionConcepts, contextConcepts, "used_in", 2);
 const hobbyContextEdges = topFacetEdges(hobbyConcepts, contextConcepts, "transfers_to", 1);
-edgeDocument.edges = edgeDocument.edges.filter((candidate) => candidate.provenance !== "imported" && candidate.provenance !== "derived");
+edgeDocument.edges = edgeDocument.edges.filter((candidate) =>
+  candidate.provenance !== "imported" &&
+  candidate.provenance !== "derived" &&
+  !(candidate.kind === "expressed_by" && candidate.sourceIds?.includes("editorial:ontology-v1-actions"))
+);
 const keys = new Set(edgeDocument.edges.map(({ from, kind, to }) => `${from}|${kind}|${to}`));
-for (const candidate of [...SEED_EDGES, ...hobbyActionEdges, ...actionContextEdges, ...hobbyContextEdges, ...importedOccupationEdges, ...secondaryOccupationEdges, ...contextExampleEdges]) {
+for (const candidate of [...SEED_EDGES, ...hobbyActionEdges, ...actionHobbyEdges, ...actionContextEdges, ...hobbyContextEdges, ...importedOccupationEdges, ...secondaryOccupationEdges, ...contextExampleEdges]) {
   const key = `${candidate.from}|${candidate.kind}|${candidate.to}`;
   if (!keys.has(key)) {
     edgeDocument.edges.push(candidate);

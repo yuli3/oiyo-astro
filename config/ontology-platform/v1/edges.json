@@ -861,6 +861,643 @@
       ]
     },
     {
+      "from": "action.care",
+      "to": "hobby.gardening",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.gardening.care",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.care",
+      "to": "hobby.meditation",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.meditation.care",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.explore",
+      "to": "hobby.hiking",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.hiking.explore",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.cooking",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.cooking.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.coding",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.coding.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.record",
+      "to": "hobby.photography",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.photography.record",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.explore",
+      "to": "hobby.reading",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.reading.explore",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.care",
+      "to": "hobby.yoga",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.yoga.care",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.explore",
+      "to": "hobby.board_games",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.board_games.explore",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.write",
+      "to": "hobby.writing",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.writing.write",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.run_physical",
+      "to": "hobby.swimming",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.swimming.run_physical",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.explore",
+      "to": "hobby.astronomy",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.astronomy.explore",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.painting",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.painting.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.care",
+      "to": "hobby.volunteering",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.volunteering.care",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.explore",
+      "to": "hobby.chess",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.chess.explore",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.run_physical",
+      "to": "hobby.cycling",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.cycling.run_physical",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.pottery",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.pottery.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.run_physical",
+      "to": "hobby.dancing",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.dancing.run_physical",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.explore",
+      "to": "hobby.philosophy",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.philosophy.explore",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.run_physical",
+      "to": "hobby.rock_climbing",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.rock_climbing.run_physical",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.music_composition",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.music_composition.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.write",
+      "to": "hobby.debating",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.debating.write",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.record",
+      "to": "hobby.linguistics",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.linguistics.record",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.protect",
+      "to": "hobby.marchial_arts",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.marchial_arts.protect",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.run_physical",
+      "to": "hobby.running",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.running.run_physical",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.run_physical",
+      "to": "hobby.strength_training",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.strength_training.run_physical",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.care",
+      "to": "hobby.pilates",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.pilates.care",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.run_physical",
+      "to": "hobby.tennis",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.tennis.run_physical",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.run_physical",
+      "to": "hobby.badminton",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.badminton.run_physical",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.guitar",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.guitar.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.piano",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.piano.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.singing",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.singing.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.illustration",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.illustration.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.write",
+      "to": "hobby.calligraphy",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.calligraphy.write",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.knitting",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.knitting.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.repair",
+      "to": "hobby.sewing",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.sewing.repair",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.baking",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.baking.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.coffee_brewing",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.coffee_brewing.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.care",
+      "to": "hobby.tea_tasting",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.tea_tasting.care",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.fermentation",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.fermentation.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.explore",
+      "to": "hobby.camping",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.camping.explore",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.explore",
+      "to": "hobby.fishing",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.fishing.explore",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.explore",
+      "to": "hobby.birdwatching",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.birdwatching.explore",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.travel",
+      "to": "hobby.travel_planning",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.travel_planning.travel",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.explore",
+      "to": "hobby.language_learning",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.language_learning.explore",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.record",
+      "to": "hobby.journaling",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.journaling.record",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.record",
+      "to": "hobby.podcast_listening",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.podcast_listening.record",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.create",
+      "to": "hobby.open_source",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.open_source.create",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
+      "from": "action.repair",
+      "to": "hobby.home_repair",
+      "kind": "expressed_by",
+      "weight": 0.45,
+      "evidenceClass": "expert_curated",
+      "confidence": 0.8,
+      "provenance": "curated",
+      "rationaleKey": "relations.editorial_action.home_repair.repair",
+      "sourceIds": [
+        "editorial:ontology-v1-actions"
+      ]
+    },
+    {
       "from": "action.accompany",
       "to": "work_context.coaching_conversation",
       "kind": "used_in",

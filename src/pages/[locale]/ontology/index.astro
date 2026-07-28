@@ -9,6 +9,7 @@ import { OntologySharedProfileBanner } from '../../../components/ontology/Ontolo
 import { AssessmentSignalSummary } from '../../../components/ontology/AssessmentSignalSummary';
 import WikiDefinitionLink from '../../../components/shared/WikiDefinitionLink.astro';
 import { laneOf, LANE_META } from '../../../lib/ontology/registry/ontology-systems';
+import type { Lane, OntologySystem } from '../../../lib/ontology/registry/ontology-systems';
 import { LOCALES, getTranslations } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 
@@ -43,6 +44,10 @@ const u = ui[locale] ?? ui.en;
 const innate = laneOf('innate');
 const tests = laneOf('test');
 const lm = LANE_META;
+const visibleLanes = [
+  { lane: 'innate', items: innate },
+  { lane: 'test', items: tests },
+] satisfies Array<{ lane: Lane; items: OntologySystem[] }>;
 
 ---
 
@@ -85,7 +90,7 @@ const lm = LANE_META;
     </section>
 
     <!-- Lane 1: 타고난 것 / Lane 2: 테스트 -->
-    {[{ lane: 'innate', items: innate }, { lane: 'test', items: tests }].map((group) => (
+    {visibleLanes.map((group) => (
       <section class="mt-8">
         <div class="mb-3">
           <h2 class="flex items-center gap-2 text-lg font-black text-green-950">

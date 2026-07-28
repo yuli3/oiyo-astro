@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    ".astro/types.d.ts",
+    "src/env.d.ts",
+    "src/pages/**/*",
+    "src/layouts/**/*",
+    "worker-configuration.d.ts"
+  ],
+  "exclude": [
+    "dist",
+    ".tmp",
+    "config/ontology-platform/archive/**",
+    "scripts/**",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx",
+    "src/**/*.spec.ts",
+    "src/**/*.spec.tsx"
+  ]
+}

@@ -38,6 +38,7 @@ try {
     if (!((edge.from.startsWith("action.") && edge.to.startsWith("work_context.") && edge.kind === "used_in") || (edge.from.startsWith("hobby.") && edge.to.startsWith("work_context.") && edge.kind === "transfers_to"))) errors.push(`invalid derived exploration edge: ${edge.from} -> ${edge.to}`);
   }
   if (result.edges.filter((edge) => edge.sourceIds.includes("editorial:ontology-v1-actions")).length < 48) errors.push("curated hobby action coverage regressed");
+  if (result.edges.filter((edge) => edge.from.startsWith("action.") && edge.to.startsWith("hobby.") && edge.kind === "expressed_by" && edge.sourceIds.includes("editorial:ontology-v1-actions")).length < 49) errors.push("curated action-to-hobby navigation coverage regressed");
   for (const fixture of result.golden.cases) {
     const candidates = fixture.seedIds.flatMap((id) => adjacency[id] ?? []).sort((left, right) => right.weight - left.weight || left.to.localeCompare(right.to, "en"));
     if (candidates[0]?.to !== fixture.expectedTopId) errors.push(`golden recommendation mismatch: ${fixture.id}`);

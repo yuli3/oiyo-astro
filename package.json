@@ -10,6 +10,7 @@
     "build": "npm run build:ontology-platform:public && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "type-check:active": "astro check --tsconfig tsconfig.active.json --minimumSeverity error",
     "test": "vitest",
     "audit:mystic-seo": "python3 scripts/audit-mystic-seo.py",
     "audit:assessment-release-gates": "node scripts/audit-assessment-release-gates.mjs",

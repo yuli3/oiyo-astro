@@ -8,6 +8,16 @@ const LOCALES = ["ko", "en", "ja", "zh", "fr", "es"];
 const FIELDS = ["definition", "realWorldContext", "misconception", "uncertainty"];
 const readJson = (name) => readFile(resolve(PLATFORM_ROOT, name), "utf8").then(JSON.parse);
 const fail = (message) => { throw new Error(`Concept explanation audit failed: ${message}`); };
+const koreanTopicParticle = (label) => {
+  const last = [...label.trim()].at(-1);
+  if (!last) return "은";
+  const codePoint = last.codePointAt(0);
+  if (codePoint >= 0xac00 && codePoint <= 0xd7a3) return (codePoint - 0xac00) % 28 === 0 ? "는" : "은";
+  return "는";
+};
+const renderTemplate = (template, label, locale) => locale === "ko"
+  ? template.replaceAll("{label}은", `${label}${koreanTopicParticle(label)}`).replaceAll("{label}", label)
+  : template.replaceAll("{label}", label);
 
 const [templates, conceptsDocument] = await Promise.all([readJson("concept-explanation-templates-v1.json"), readJson("concepts.json")]);
 if (templates.schema !== "oiyo.ontology-concept-explanation-templates" || templates.schemaVersion !== 1 || templates.source?.id !== "editorial:ontology-concept-explanations-v1" || !/^\d{4}-\d{2}-\d{2}$/.test(templates.source?.reviewedAt ?? "") || JSON.stringify(templates.fields) !== JSON.stringify(FIELDS)) fail("template envelope mismatch");
@@ -20,8 +30,9 @@ for (const concept of conceptsDocument.concepts) {
   if (!template) { errors.push(`missing kind template: ${concept.id}`); continue; }
   for (const field of FIELDS) for (const locale of LOCALES) {
     const value = explanation.fields?.[field]?.[locale];
-    const expected = template[field]?.[locale]?.replaceAll("{label}", concept.labels[locale]);
+    const expected = renderTemplate(template[field]?.[locale] ?? "", concept.labels[locale], locale);
     if (typeof value !== "string" || !value.trim() || value.includes("{label}") || value !== expected) errors.push(`direct locale explanation mismatch: ${concept.id}.${field}.${locale}`);
+    if (locale === "ko" && /(?:하다|되다|이다)은/.test(value ?? "")) errors.push(`invalid Korean topic particle: ${concept.id}.${field}.${locale}`);
   }
   byKind.set(concept.kind, (byKind.get(concept.kind) ?? 0) + 1);
 }

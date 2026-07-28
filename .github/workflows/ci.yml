@@ -32,6 +32,11 @@ jobs:
       - name: Install type checker
         run: npm i --no-save @astrojs/check typescript
 
+      - name: Active production type check
+        run: npm run type-check:active
+        env:
+          NODE_OPTIONS: --max-old-space-size=3072
+
       - name: Legacy type diagnostics (advisory)
         id: legacy-typecheck
         # The migrated legacy/shim tree still has a large explicit baseline.
