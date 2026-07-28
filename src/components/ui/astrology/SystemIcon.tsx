@@ -22,8 +22,8 @@ const themeGlows: Record<string, string> = {
   earth: "text-amber-600 drop-shadow-[0_0_8px_rgba(217,119,6,0.5)]",
   fire: "text-red-500 drop-shadow-[0_0_8px_rgba(239,68,68,0.5)]",
   metal: "text-slate-400 drop-shadow-[0_0_8px_rgba(148,163,184,0.5)]",
-  mystic: "text-purple-500 drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]",
-  water: "text-blue-500 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]",
+  mystic: "text-green-500 drop-shadow-[0_0_8px_rgba(168,85,247,0.5)]",
+  water: "text-green-500 drop-shadow-[0_0_8px_rgba(59,130,246,0.5)]",
   wood: "text-green-500 drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]",
 };
 

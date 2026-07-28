@@ -3,6 +3,9 @@ import Layout from '../../layouts/Layout.astro';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 import StressResponseTest from '../../components/tests/StressResponseTest';
+import RelatedTools from '../../components/shared/RelatedTools.astro';
+import TestSourceNote from '../../components/shared/TestSourceNote.astro';
+import { TEST_SOURCE_NOTES } from '../../data/test-source-notes';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -41,5 +44,7 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <StressResponseTest locale={locale as any} client:load />
+    <RelatedTools locale={locale} tools={['stressType', 'stressEvents', 'burnout', 'anxiety']} current="stressResponse" />
+    <TestSourceNote locale={locale} note={TEST_SOURCE_NOTES['stress-response']} />
   </div>
 </Layout>

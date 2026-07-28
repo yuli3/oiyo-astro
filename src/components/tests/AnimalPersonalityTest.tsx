@@ -247,8 +247,8 @@ export default function AnimalPersonalityTest({ locale: lp = 'ko' }: Props) {
         <p className="text-sm text-muted-foreground leading-relaxed">{r.description}</p>
       </div>
       <div className="rounded-xl border bg-card p-4 space-y-2">
-        <h3 className="font-bold text-sm text-emerald-700">{lb.strengths}</h3>
-        <ul className="space-y-1">{r.strengths.map(s => <li key={s} className="text-sm text-muted-foreground flex gap-2"><span className="text-emerald-500 flex-none">→</span>{s}</li>)}</ul>
+        <h3 className="font-bold text-sm text-green-700">{lb.strengths}</h3>
+        <ul className="space-y-1">{r.strengths.map(s => <li key={s} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-500 flex-none">→</span>{s}</li>)}</ul>
       </div>
       <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 space-y-2">
         <h3 className="font-bold text-sm text-amber-700">{lb.shadow}</h3>

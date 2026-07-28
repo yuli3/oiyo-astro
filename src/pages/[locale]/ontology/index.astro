@@ -7,7 +7,6 @@ import { RecommendationCards } from '../../../components/ontology/Recommendation
 import { OntologyExportPopover } from '../../../components/ontology/OntologyExportPopover';
 import { OntologySharedProfileBanner } from '../../../components/ontology/OntologySharedProfileBanner';
 import { AssessmentSignalSummary } from '../../../components/ontology/AssessmentSignalSummary';
-import { AssessmentProfileProjection } from '../../../components/ontology/AssessmentProfileProjection';
 import WikiDefinitionLink from '../../../components/shared/WikiDefinitionLink.astro';
 import { laneOf, LANE_META } from '../../../lib/ontology/registry/ontology-systems';
 import { LOCALES, getTranslations } from '../../../i18n';
@@ -21,6 +20,11 @@ const { locale } = Astro.params as { locale: Locale };
 const t = await getTranslations(locale);
 
 // Shell copy (mobile-only green "존재론" dashboard).
+const encyclopediaLabel: Record<Locale, string> = {
+  ko: '사주 간지 백과사전', en: 'Saju Stem & Branch Encyclopedia', ja: '四柱干支百科事典',
+  zh: '八字干支百科', fr: 'Encyclopédie des tiges et branches du Saju', es: 'Enciclopedia de tallos y ramas del Saju',
+};
+
 const ui: Record<Locale, {
   eyebrow: string; title: string; sub: string; cta: string; ctaSub: string;
   progress: string; nextStep: string; deepTitle: string; deepSub: string;
@@ -49,7 +53,6 @@ const lm = LANE_META;
          never merges into the viewer's own profile — renders nothing when
          there is no shared link. -->
     <OntologySharedProfileBanner locale={locale} client:load />
-    <AssessmentProfileProjection locale={locale} client:load />
 
     <!-- Hero -->
     <header class="text-center">
@@ -165,9 +168,12 @@ const lm = LANE_META;
       <OntologyExportPopover locale={locale} client:visible />
     </section>
 
-    <!-- 심화 탐색 아일랜드는 프로덕션에서 제외(사용자 요청 2026-07-04) — 보관: /ontology/template/deep (noindex). -->
+    <!-- 심화 탐색 아일랜드(레거시 OntologyClient)는 프로덕션에서 제외(사용자 요청 2026-07-04) 후 2026-07-20 아카이브 처리됨(_archive/legacy-code/oiyo-legacy/ontology-client-2026-07-20/). /ontology/template/deep(noindex)은 이제 별개 프로토타입 워크벤치로 계속 사용됨. -->
 
-    <a href={`/${locale}`} class="mt-10 inline-flex items-center gap-1 text-sm font-black text-green-700 hover:text-green-900">{u.allTools} →</a>
+    <div class="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2">
+      <a href={`/${locale}`} class="inline-flex items-center gap-1 text-sm font-black text-green-700 hover:text-green-900">{u.allTools} →</a>
+      <a href={`/${locale}/ontology/encyclopedia`} class="inline-flex items-center gap-1 text-sm font-black text-green-700 hover:text-green-900">{encyclopediaLabel[locale]} →</a>
+    </div>
   </div>
 
   <script is:inline>
@@ -193,10 +199,10 @@ const lm = LANE_META;
           if (req === 'testResult') state = (testId && doneTests.has(testId)) ? 'recorded' : 'open';
           else if (req === 'none') state = 'open';
           else state = has[req] ? 'recorded' : 'locked';
-          card.classList.remove('bg-emerald-50/60', 'bg-amber-50/40', 'opacity-60');
+          card.classList.remove('bg-green-50/60', 'bg-amber-50/40', 'opacity-60');
           if (status) {
-            status.classList.remove('text-green-500', 'text-emerald-600', 'text-amber-600');
-            if (state === 'recorded') { status.textContent = card.getAttribute('data-recorded'); status.classList.add('text-emerald-600'); recorded++; card.classList.add('bg-emerald-50/60'); }
+            status.classList.remove('text-green-500', 'text-green-600', 'text-amber-600');
+            if (state === 'recorded') { status.textContent = card.getAttribute('data-recorded'); status.classList.add('text-green-600'); recorded++; card.classList.add('bg-green-50/60'); }
             else if (state === 'locked') { status.textContent = card.getAttribute('data-locked'); status.classList.add('text-amber-600'); card.classList.add('opacity-60'); if (!firstOpen) firstOpen = card; }
             else { status.textContent = card.getAttribute('data-open'); if (!firstOpen) firstOpen = card; }
           }

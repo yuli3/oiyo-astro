@@ -719,7 +719,7 @@ export default function LearningStyleTest({ locale: lp = 'ko' }: Props) {
             aria-valuemax={100}
             aria-label={lb.questionOf(current + 1, questions.length)}
           >
-            <div className="h-full bg-emerald-500 transition-all duration-300" style={{ width: `${progress}%` }} />
+            <div className="h-full bg-green-500 transition-all duration-300" style={{ width: `${progress}%` }} />
           </div>
         </div>
         <div className="rounded-xl border bg-card p-6 text-center">
@@ -731,7 +731,7 @@ export default function LearningStyleTest({ locale: lp = 'ko' }: Props) {
               key={i}
               onClick={() => pick(opt.type)}
               aria-label={opt.text}
-              className="w-full rounded-xl border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-emerald-400 transition-colors flex items-center gap-3"
+              className="w-full rounded-xl border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-green-400 transition-colors flex items-center gap-3"
             >
               <span
                 className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white flex-none"
@@ -798,11 +798,11 @@ export default function LearningStyleTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <div className="rounded-xl border bg-card p-4 space-y-2">
-        <h3 className="font-bold text-sm text-emerald-600">{lb.recommendation}</h3>
+        <h3 className="font-bold text-sm text-green-600">{lb.recommendation}</h3>
         <ul className="space-y-1">
           {STYLE_RESULTS[dominant][l].tips.map(tip => (
             <li key={tip} className="text-sm text-muted-foreground flex gap-2">
-              <span className="text-emerald-500">→</span>{tip}
+              <span className="text-green-500">→</span>{tip}
             </li>
           ))}
         </ul>
@@ -820,7 +820,7 @@ export default function LearningStyleTest({ locale: lp = 'ko' }: Props) {
         <button
           onClick={share}
           aria-label={lb.share}
-          className="flex-1 rounded-xl bg-emerald-600 text-white px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity"
+          className="flex-1 rounded-xl bg-green-600 text-white px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity"
         >
           {lb.share}
         </button>

@@ -202,7 +202,7 @@ export function GlobalSearch({ locale }: GlobalSearchProps) {
                                   item.type === "hub"
                                     ? "bg-amber-100 text-amber-700 border-amber-200"
                                     : item.type === "artifact"
-                                      ? "bg-indigo-100 text-indigo-700 border-indigo-200"
+                                      ? "bg-green-100 text-green-700 border-green-200"
                                       : "bg-green-100 text-green-700 border-green-200"
                                 }`}
                               >

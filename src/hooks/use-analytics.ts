@@ -6,24 +6,15 @@ interface TrackEventOptions {
   eventData?: Record<string, unknown>;
   eventType: string;
   pageUrl?: string;
-  referrer?: string;
-  sessionId?: string;
-  userId?: string;
 }
 
 export function useAnalytics() {
   const trackEvent = useCallback(async (options: TrackEventOptions) => {
     try {
-      // Get session ID from localStorage if not provided
-      const sessionId = options.sessionId || localStorage.getItem("sessionId");
-
       // Get current page URL if not provided
       const pageUrl =
         options.pageUrl ||
         (typeof window !== "undefined" ? window.location.href : undefined);
-      const referrer =
-        options.referrer ||
-        (typeof window !== "undefined" ? document.referrer : undefined);
 
       // Mirror to GA4 (family property G-915L6V38X6) so events/conversions are
       // visible alongside auto-captured utm_source=ahoxy funnel sessions.
@@ -39,18 +30,9 @@ export function useAnalytics() {
         );
       }
 
-      await fetch("/api/analytics/track", {
-        body: JSON.stringify({
-          eventData: options.eventData,
-          eventType: options.eventType,
-          pageUrl,
-          referrer,
-          sessionId,
-          userId: options.userId,
-        }),
-        headers: { "Content-Type": "application/json" },
-        method: "POST",
-      });
+      // OIYO is a static site and does not expose a first-party analytics API.
+      // Do not issue a guaranteed 404 or silently create a second data pipeline.
+      // GA4 collection itself remains subject to the separate consent/release gate.
     } catch (error) {
       console.error("Failed to track event:", error);
     }

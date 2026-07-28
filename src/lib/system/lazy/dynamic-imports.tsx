@@ -48,20 +48,6 @@ export const MotionDivLazy = dynamic(
   },
 );
 
-/**
- * Lazy load ResonanceMandala
- */
-export const ResonanceMandalaLazy = dynamic(
-  () =>
-    import("@/components/shared/ResonanceMandala").then(
-      (mod) => mod.ResonanceMandala,
-    ),
-  {
-    loading: () => <div className="absolute inset-0 bg-[#f0f9f1]" />,
-    ssr: false,
-  },
-);
-
 // html2canvas disabled in static build
 export const loadHtml2Canvas = async () => {
   throw new Error('Screenshot not available in static build');

@@ -1,0 +1,24 @@
+{
+  "schema": "oiyo.ontology-expansion-contract",
+  "schemaVersion": 1,
+  "id": "ontology-expansion-v2",
+  "status": "foundation",
+  "canonicalKinds": ["action", "hobby", "work_context", "occupation"],
+  "locales": ["ko", "en", "ja", "zh", "fr", "es"],
+  "targets": {"action": 250, "hobby": 600, "work_context": 80, "occupation": 1200, "sparseEdgesMin": 8000, "sparseEdgesMax": 15000},
+  "batchPlan": [
+    {"batch": 1, "title": "foundation", "canonicalMutation": false},
+    {"batch": 2, "title": "action vocabulary I", "targetKind": "action", "targetCount": 150},
+    {"batch": 3, "title": "action vocabulary II", "targetKind": "action", "targetCount": 250},
+    {"batch": 4, "title": "hobby catalog I", "targetKind": "hobby", "targetCount": 200},
+    {"batch": 5, "title": "hobby catalog II", "targetKind": "hobby", "targetCount": 350},
+    {"batch": 6, "title": "hobby catalog III", "targetKind": "hobby", "targetCount": 600},
+    {"batch": 7, "title": "work context taxonomy", "targetKind": "work_context", "targetCount": 80},
+    {"batch": 8, "title": "life signals", "canonicalMutation": false},
+    {"batch": 9, "title": "occupation catalog", "targetKind": "occupation", "targetCount": 1200},
+    {"batch": 10, "title": "integration quality", "canonicalMutation": false}
+  ],
+  "promotionRequirements": ["source_approved", "license_allowed", "canonical_id_and_alias_deduped", "six_locale_direct_copy", "facet_complete", "provenance_complete", "golden_or_quality_fixture", "archive_after_canonical_change"],
+  "nonGoals": ["public_indexability", "profile_storage", "kv_graph_source_of_truth", "public_recommender_replacement", "career_fit_or_hiring_verdict", "medical_or_psychological_diagnosis"],
+  "existingGates": ["occupation-secondary-10B-editorial-review", "high-specificity-15B-source-review", "public-activation-human-gate"]
+}

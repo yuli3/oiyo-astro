@@ -4,7 +4,7 @@
     {
       "id": "clear",
       "input": { "dataCoverage": 1, "dimensions": [{ "id": "explore", "score": 84, "confidence": 0.9 }, { "id": "focus", "score": 61, "confidence": 0.85 }, { "id": "connect", "score": 42, "confidence": 0.8 }] },
-      "expected": { "status": "clear", "roleAid": "neutral-pattern-01" }
+      "expected": { "status": "clear", "roleAid": "pioneer-v1" }
     },
     {
       "id": "mixed",

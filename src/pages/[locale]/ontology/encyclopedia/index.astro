@@ -12,6 +12,47 @@ export async function getStaticPaths() {
 const { locale } = Astro.params as { locale: Locale };
 const t = await getTranslations(locale);
 
+const meta: Record<Locale, { title: string; description: string; heading: string; subheading: string }> = {
+  ko: {
+    title: '오행 백과사전 — 사주 천간·지지',
+    description: '사주 명리학의 10천간과 12지지를 하나씩 찾아보는 오행 백과사전.',
+    heading: '📚 오행 백과사전',
+    subheading: '사주 천간·지지',
+  },
+  en: {
+    title: 'Encyclopedia — Saju Stems & Branches',
+    description: 'The Saju Stem & Branch Encyclopedia — look up each of the 10 Heavenly Stems and 12 Earthly Branches.',
+    heading: '📚 Encyclopedia',
+    subheading: 'Saju Stems & Branches',
+  },
+  ja: {
+    title: '五行百科事典 — 四柱推命 天干・地支',
+    description: '四柱推命の十天干・十二地支を一つずつ調べる五行百科事典。',
+    heading: '📚 五行百科事典',
+    subheading: '四柱推命 天干・地支',
+  },
+  zh: {
+    title: '五行百科全书 — 四柱天干地支',
+    description: '逐一查阅四柱命理的十天干与十二地支的五行百科全书。',
+    heading: '📚 五行百科全书',
+    subheading: '四柱天干地支',
+  },
+  fr: {
+    title: 'Encyclopédie — Tiges et branches du Saju',
+    description: 'L\'encyclopédie des tiges célestes et branches terrestres du Saju (astrologie coréenne).',
+    heading: '📚 Encyclopédie',
+    subheading: 'Tiges et branches du Saju',
+  },
+  es: {
+    title: 'Enciclopedia — Tallos y ramas del Saju',
+    description: 'La enciclopedia de los tallos celestes y ramas terrestres de la astrología Saju.',
+    heading: '📚 Enciclopedia',
+    subheading: 'Tallos y ramas del Saju',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+
 const namespaces = ['saju', 'ontology', 'common', 'nav', 'ui'];
 const messages: Record<string, unknown> = {};
 for (const ns of namespaces) {
@@ -24,14 +65,14 @@ for (const ns of namespaces) {
 ---
 
 <Layout
-  title="Encyclopedia"
-  description="The Saju Stem & Branch Encyclopedia"
+  title={m.title}
+  description={m.description}
   locale={locale}
 >
-  <section class="bg-gradient-to-b from-violet-50/50 to-white pt-16 pb-8 px-4 text-center">
+  <section class="bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
     <div class="max-w-2xl mx-auto animate-fadeInUp">
-      <h1 class="text-4xl font-serif font-black text-violet-950 mb-2">📚 Encyclopedia</h1>
-      <p class="text-violet-600">Saju Stems & Branches</p>
+      <h1 class="text-4xl font-serif font-black text-green-950 mb-2">{m.heading}</h1>
+      <p class="text-green-600">{m.subheading}</p>
     </div>
   </section>
 

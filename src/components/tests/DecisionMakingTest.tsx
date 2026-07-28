@@ -547,7 +547,7 @@ export default function DecisionMakingTest({ locale: localeProp }: Props) {
 
     return (
       <div className="space-y-6">
-        <div className="rounded-2xl bg-gradient-to-br from-blue-50 to-purple-50 p-6 text-center">
+        <div className="rounded-2xl bg-gradient-to-br from-green-50 to-green-50 p-6 text-center">
           <p className="mb-1 text-sm font-medium text-gray-500">{tx.resultTitle}</p>
           <div className="mb-2 text-5xl">{r.emoji}</div>
           <h2 className="text-2xl font-bold text-gray-900">{rd.title}</h2>
@@ -563,9 +563,9 @@ export default function DecisionMakingTest({ locale: localeProp }: Props) {
             <h3 className="font-semibold text-orange-600">⚠️ {tx.weakness}</h3>
             <p className="mt-1 text-sm text-gray-600">{rd.weakness}</p>
           </div>
-          <div className="rounded-lg bg-blue-50 p-4">
-            <h3 className="font-semibold text-blue-700">💡 {tx.tip}</h3>
-            <p className="mt-1 text-sm text-blue-800">{rd.tip}</p>
+          <div className="rounded-lg bg-green-50 p-4">
+            <h3 className="font-semibold text-green-700">💡 {tx.tip}</h3>
+            <p className="mt-1 text-sm text-green-800">{rd.tip}</p>
           </div>
         </div>
 
@@ -590,7 +590,7 @@ export default function DecisionMakingTest({ locale: localeProp }: Props) {
           </button>
           <button
             onClick={share}
-            className="flex-1 rounded-xl bg-blue-600 py-3 text-sm font-medium text-white transition hover:bg-blue-700"
+            className="flex-1 rounded-xl bg-green-600 py-3 text-sm font-medium text-white transition hover:bg-green-700"
           >
             {copied ? tx.copied : tx.share}
           </button>
@@ -612,7 +612,7 @@ export default function DecisionMakingTest({ locale: localeProp }: Props) {
       <div className="flex items-center gap-3">
         <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-100">
           <div
-            className="h-full rounded-full bg-blue-500 transition-all duration-300"
+            className="h-full rounded-full bg-green-500 transition-all duration-300"
             style={{ width: `${(idx / questions.length) * 100}%` }}
           />
         </div>
@@ -626,7 +626,7 @@ export default function DecisionMakingTest({ locale: localeProp }: Props) {
             <button
               key={i}
               onClick={() => pick(opt.type)}
-              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-left text-sm text-gray-700 transition hover:border-blue-300 hover:bg-blue-50"
+              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-left text-sm text-gray-700 transition hover:border-green-300 hover:bg-green-50"
             >
               {opt[locale]}
             </button>

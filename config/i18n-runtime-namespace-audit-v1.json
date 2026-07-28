@@ -1,0 +1,13 @@
+{
+  "schema": "oiyo.i18n-runtime-namespace-audit",
+  "schemaVersion": 1,
+  "policy": "A message namespace without a runtime consumer is not a feature or route. Do not create pages automatically; record it explicitly and require a review before wiring or removal.",
+  "knownUnwiredNamespaces": [
+    "addSubscription", "aiHoroscopeGenerator", "archives", "assetMap", "billing", "BlogIdeaGenerator", "budgetPlanner", "byEmotion", "cognitiveBias", "compoundInterest", "comprehensiveReport", "conflictSolver", "copingStrategies", "dailyOracle", "deepWork", "economicPersonality", "eligibility", "EmotionalExpression", "emotionSummary", "emptyState", "errorPage", "familyDynamics", "friendshipStyle", "GiftRecommendation", "giftTax", "habitAssistant", "habitQuest", "integrationFlow", "interviewScorer", "jeonseGuard", "levelCard", "lifeBlueprint", "lifeFocus", "lifepath", "lifeSimulator", "loading_legacy", "loveAdvisor", "loveCommunication", "mandalart", "mbtiSalary", "moneyHabits", "myTickets", "nextActions", "nJobler", "noble-persons", "nonRefundable", "notificationsPanel", "paymentFaq", "paymentMethods", "PremiumLock", "PremiumReport", "processingTime", "professionalGuidance", "pwa", "quickActions", "randomPrompts", "relationshipHub", "resonance-tags", "routineGenerator", "saju-gods", "salaryCalculator", "scopes", "selfDiscovery", "signIn", "signUp", "sleepPattern", "snsPersonality", "social-logic", "sohn", "sovereign", "static-wisdom", "subscriptionManager", "systemSynergy", "timeAgo", "timeManagement", "triggerFlow", "twelveWoonsung", "typesSection", "ValueScore", "workStyleLab"
+  ],
+  "reviewNotes": {
+    "salaryCalculator": "Six-locale JSON exists, but the Astro runtime has no consumer or route using this standalone namespace.",
+    "sleepPattern": "A French JSON exists, but the active sleep-type page uses its own locale table rather than this namespace.",
+    "allOthers": "These names are registry-loaded translation assets, not proof of an active feature. They require an explicit route/consumer decision before wiring or deletion."
+  }
+}

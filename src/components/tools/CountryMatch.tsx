@@ -91,27 +91,27 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
   const q = !done ? COUNTRY_QUESTIONS[step] : null;
 
   return (
-    <div className="rounded-2xl border border-emerald-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-emerald-950">{u("title")}</h1>
+    <div className="rounded-2xl border border-green-100 bg-white p-5">
+      <h1 className="text-2xl font-bold text-green-950">{u("title")}</h1>
       {!done && step === 0 && (
-        <p className="mt-2 leading-7 text-emerald-700">{u("intro")}</p>
+        <p className="mt-2 leading-7 text-green-700">{u("intro")}</p>
       )}
 
       {/* Quiz */}
       {q && (
         <div className="mt-5">
-          <div className="mb-3 flex items-center justify-between text-xs text-emerald-500">
+          <div className="mb-3 flex items-center justify-between text-xs text-green-500">
             <span>
               {u("question")} {step + 1} / {total}
             </span>
-            <div className="ml-3 h-1.5 flex-1 overflow-hidden rounded-full bg-emerald-100">
+            <div className="ml-3 h-1.5 flex-1 overflow-hidden rounded-full bg-green-100">
               <div
-                className="h-full bg-emerald-500"
+                className="h-full bg-green-500"
                 style={{ width: `${(step / total) * 100}%` }}
               />
             </div>
           </div>
-          <p className="text-lg font-semibold text-emerald-950">
+          <p className="text-lg font-semibold text-green-950">
             <span className="mr-1">{q.emoji}</span>
             {loc(q.text as LC, locale)}
           </p>
@@ -121,7 +121,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
                 key={opt.id}
                 type="button"
                 onClick={() => pick(q.id, opt.id)}
-                className="flex w-full items-center gap-3 rounded-xl border border-emerald-100 bg-emerald-50/40 px-4 py-3 text-left text-sm text-emerald-900 transition-colors hover:border-emerald-300 hover:bg-emerald-50"
+                className="flex w-full items-center gap-3 rounded-xl border border-green-100 bg-green-50/40 px-4 py-3 text-left text-sm text-green-900 transition-colors hover:border-green-300 hover:bg-green-50"
               >
                 <span className="text-lg">{opt.emoji}</span>
                 <span>{loc(opt.text as LC, locale)}</span>
@@ -134,43 +134,43 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
       {/* Result */}
       {done && result && (
         <div className="mt-5 space-y-5">
-          <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-            <p className="text-xs font-semibold text-emerald-600">
+          <div className="rounded-2xl border border-green-200 bg-green-50 p-4">
+            <p className="text-xs font-semibold text-green-600">
               {u("yourType")}
             </p>
-            <p className="mt-1 text-xl font-bold text-emerald-950">
+            <p className="mt-1 text-xl font-bold text-green-950">
               {tt(ARCHETYPE[result.primaryArchetype], locale)}
             </p>
           </div>
 
           <div>
-            <p className="mb-2 text-sm font-bold text-emerald-800">
+            <p className="mb-2 text-sm font-bold text-green-800">
               {u("topMatches")}
             </p>
             <div className="space-y-3">
               {result.topCountries.slice(0, 3).map(({ code, data, match }) => (
                 <div
                   key={code}
-                  className="rounded-2xl border border-emerald-100 bg-white p-4"
+                  className="rounded-2xl border border-green-100 bg-white p-4"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-emerald-950">
+                    <span className="text-lg font-bold text-green-950">
                       <span className="mr-2">{data.flag}</span>
                       {loc(data.name as LC, locale)}
                     </span>
-                    <span className="rounded-full bg-emerald-600 px-2.5 py-1 text-xs font-semibold text-white">
+                    <span className="rounded-full bg-green-600 px-2.5 py-1 text-xs font-semibold text-white">
                       {Math.round(match)}% {u("match")}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm leading-6 text-emerald-700">
+                  <p className="mt-2 text-sm leading-6 text-green-700">
                     {loc(data.vibe as LC, locale)}
                   </p>
                   <div className="mt-3 grid gap-2 sm:grid-cols-2">
                     <div>
-                      <p className="text-[11px] font-semibold text-emerald-600">
+                      <p className="text-[11px] font-semibold text-green-600">
                         ✓ {u("pros")}
                       </p>
-                      <ul className="mt-1 space-y-0.5 text-xs text-emerald-800">
+                      <ul className="mt-1 space-y-0.5 text-xs text-green-800">
                         {(data.pros as LC[]).slice(0, 3).map((p, i) => (
                           <li key={i}>· {loc(p, locale)}</li>
                         ))}
@@ -180,14 +180,14 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
                       <p className="text-[11px] font-semibold text-rose-500">
                         △ {u("cons")}
                       </p>
-                      <ul className="mt-1 space-y-0.5 text-xs text-emerald-800">
+                      <ul className="mt-1 space-y-0.5 text-xs text-green-800">
                         {(data.cons as LC[]).slice(0, 3).map((p, i) => (
                           <li key={i}>· {loc(p, locale)}</li>
                         ))}
                       </ul>
                     </div>
                   </div>
-                  <p className="mt-2 text-[11px] text-emerald-400">
+                  <p className="mt-2 text-[11px] text-green-400">
                     {u("metricsLabel")}: {data.metrics.qualityOfLife} /{" "}
                     {data.metrics.safety} / {data.metrics.healthcare}
                   </p>
@@ -199,11 +199,11 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
           <button
             type="button"
             onClick={restart}
-            className="rounded-full border border-emerald-300 px-5 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-50"
+            className="rounded-full border border-green-300 px-5 py-2 text-sm font-medium text-green-700 hover:bg-green-50"
           >
             {u("restart")}
           </button>
-          <p className="text-[11px] leading-5 text-emerald-400">
+          <p className="text-[11px] leading-5 text-green-400">
             {u("disclaimer")}
           </p>
         </div>

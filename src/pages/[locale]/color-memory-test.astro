@@ -9,8 +9,15 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.params as { locale: Locale };
-const meta: Record<string, { title: string; description: string }> = { en: { title: "color-memory-test", description: "" } };
-const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '색깔 기억력 테스트', description: '잠깐 보여주는 색상을 기억하고 맞혀보세요.' },
+  en: { title: 'Color Memory Test', description: 'Remember the briefly shown colors and pick them.' },
+  ja: { title: 'カラーメモリーテスト', description: '一瞬見せた色を記憶して答えてください。' },
+  zh: { title: '颜色记忆测试', description: '记住短暂显示的颜色并选出正确答案。' },
+  fr: { title: 'Test de Mémoire des Couleurs', description: 'Mémorisez les couleurs affichées brièvement.' },
+  es: { title: 'Prueba de Memoria de Colores', description: 'Recuerda los colores mostrados brevemente y selecciónalos.' },
+};
+const m = meta[locale] ?? meta.en;
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>

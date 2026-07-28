@@ -353,13 +353,13 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
         <div class="grid gap-4 sm:grid-cols-2">
           {axes.map((ax, i) => (
-            <div key={i} class={`rounded-xl border-2 p-4 ${ax.side === 'left' ? 'border-amber-300 bg-amber-50' : ax.side === 'right' ? 'border-sky-300 bg-sky-50' : 'border-slate-200 bg-slate-50'}`}>
+            <div key={i} class={`rounded-xl border-2 p-4 ${ax.side === 'left' ? 'border-amber-300 bg-amber-50' : ax.side === 'right' ? 'border-green-300 bg-green-50' : 'border-slate-200 bg-slate-50'}`}>
               <p class="text-xs font-bold uppercase tracking-widest text-slate-500">{ax.name}</p>
-              <p class={`mt-1 text-xl font-black ${ax.side === 'left' ? 'text-amber-800' : ax.side === 'right' ? 'text-sky-800' : 'text-slate-500'}`}>{ax.label}</p>
+              <p class={`mt-1 text-xl font-black ${ax.side === 'left' ? 'text-amber-800' : ax.side === 'right' ? 'text-green-800' : 'text-slate-500'}`}>{ax.label}</p>
               <div class="mt-2 flex items-center gap-1">
                 <span class="text-xs text-slate-400">{ax.left}</span>
                 <div class="relative mx-1 h-2 flex-1 rounded-full bg-slate-200">
-                  <div class={`absolute top-0 h-2 w-2 -translate-x-1/2 rounded-full border-2 border-white shadow ${ax.side === 'left' ? 'left-[20%] bg-amber-500' : ax.side === 'right' ? 'left-[80%] bg-sky-500' : 'left-[50%] bg-slate-400'}`} />
+                  <div class={`absolute top-0 h-2 w-2 -translate-x-1/2 rounded-full border-2 border-white shadow ${ax.side === 'left' ? 'left-[20%] bg-amber-500' : ax.side === 'right' ? 'left-[80%] bg-green-500' : 'left-[50%] bg-slate-400'}`} />
                 </div>
                 <span class="text-xs text-slate-400">{ax.right}</span>
               </div>
@@ -467,7 +467,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
                       class={`rounded-lg border-2 py-2 text-sm font-semibold transition ${
                         isSelected
                           ? vi === 0 ? 'border-amber-500 bg-amber-500 text-white'
-                            : vi === 2 ? 'border-sky-500 bg-sky-500 text-white'
+                            : vi === 2 ? 'border-green-500 bg-green-500 text-white'
                             : 'border-slate-500 bg-slate-500 text-white'
                           : 'border-slate-200 bg-white text-slate-600 hover:border-slate-400'
                       }`}

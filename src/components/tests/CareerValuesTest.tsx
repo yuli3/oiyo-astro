@@ -92,13 +92,13 @@ export default function CareerValuesTest({ locale: localeProp }: { locale?: stri
         </header>
         <div className="space-y-1">
           <div className="flex justify-between text-xs text-slate-500"><span>{copy.questionOf(current + 1, CAREER_VALUES_INSTRUMENT.items.length)}</span><span>{progress}%</span></div>
-          <div role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100} className="h-2 overflow-hidden rounded-full bg-slate-200"><div className="h-full bg-emerald-600 transition-all" style={{ width: `${progress}%` }} /></div>
+          <div role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100} className="h-2 overflow-hidden rounded-full bg-slate-200"><div className="h-full bg-green-600 transition-all" style={{ width: `${progress}%` }} /></div>
         </div>
         <div className="rounded-xl border bg-white p-6 text-center"><p className="text-lg font-bold">{prompts[current]}</p></div>
         <div className="grid gap-2">
           {copy.scaleLabels.map((label, index) => (
-            <button key={label} type="button" onClick={() => pick(index + 1)} className="flex w-full items-center gap-3 rounded-lg border bg-white px-4 py-3 text-left text-sm transition hover:border-emerald-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600">
-              <span className="flex h-6 w-6 flex-none items-center justify-center rounded-full border-2 border-emerald-600 text-xs font-bold text-emerald-700">{index + 1}</span>{label}
+            <button key={label} type="button" onClick={() => pick(index + 1)} className="flex w-full items-center gap-3 rounded-lg border bg-white px-4 py-3 text-left text-sm transition hover:border-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">
+              <span className="flex h-6 w-6 flex-none items-center justify-center rounded-full border-2 border-green-600 text-xs font-bold text-green-700">{index + 1}</span>{label}
             </button>
           ))}
         </div>
@@ -133,11 +133,11 @@ export default function CareerValuesTest({ locale: localeProp }: { locale?: stri
         {topGroup.map((id) => <article key={id} className="rounded-xl border bg-white p-5"><h3 className="text-lg font-bold" style={{ color: COLORS[id] }}>{copy.dimensions[id].name}</h3><p className="mt-2 text-sm leading-6 text-slate-700">{copy.dimensions[id].description}</p><h4 className="mt-4 text-sm font-semibold">{copy.environments}</h4><ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">{copy.dimensions[id].environments.map((item) => <li key={item}>{item}</li>)}</ul></article>)}
       </section>
 
-      <p className="rounded-xl bg-emerald-50 p-4 text-sm leading-6 text-emerald-950">{copy.reflection}</p>
+      <p className="rounded-xl bg-green-50 p-4 text-sm leading-6 text-green-950">{copy.reflection}</p>
       <p className="rounded-xl bg-amber-50 p-4 text-xs leading-5 text-amber-900">{copy.disclaimer}</p>
       <div className="flex flex-wrap justify-center gap-3">
         <button type="button" onClick={restart} className="rounded-lg border bg-white px-5 py-2.5 text-sm font-semibold">{copy.restart}</button>
-        <button type="button" onClick={share} className="rounded-lg bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white">{copy.share}</button>
+        <button type="button" onClick={share} className="rounded-lg bg-green-600 px-5 py-2.5 text-sm font-semibold text-white">{copy.share}</button>
       </div>
       <p aria-live="polite" className="text-center text-xs text-slate-600">{shareStatus === "copied" ? copy.copied : shareStatus === "failed" ? copy.shareFailed : ""}</p>
     </div>

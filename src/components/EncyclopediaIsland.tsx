@@ -20,7 +20,7 @@ export default function EncyclopediaIsland({ locale, messages }: Props) {
       <Suspense
         fallback={
           <div className="min-h-[50vh] flex items-center justify-center">
-            <div className="w-8 h-8 rounded-full border-2 border-violet-400 border-t-transparent animate-spin" />
+            <div className="w-8 h-8 rounded-full border-2 border-green-400 border-t-transparent animate-spin" />
           </div>
         }
       >

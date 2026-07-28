@@ -279,7 +279,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ],
       ko: ["엔터테인먼트", "이벤트", "마케팅", "PR", "여행"],
     },
-    color: "from-cyan-500 to-teal-600",
+    color: "from-green-500 to-green-600",
     compatibility: {
       best: ["fox", "dog"],
       challenging: ["owl", "wolf"],
@@ -361,7 +361,7 @@ export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
       ja: ["パイロット", "CEO", "投資", "研究", "戦略"],
       ko: ["파일럿", "CEO", "투자", "연구", "전략"],
     },
-    color: "from-teal-600 to-green-800",
+    color: "from-green-600 to-green-800",
     compatibility: {
       best: ["lion", "tiger"],
       challenging: ["cat", "bear"],

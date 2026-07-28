@@ -1,0 +1,37 @@
+{
+  "schema": "oiyo.ontology-occupation-promotion-handoff",
+  "schemaVersion": 1,
+  "status": "partial_human_review_approved_for_staging",
+  "canonicalMutation": false,
+  "currentCanonicalOccupationCount": 308,
+  "targetCanonicalOccupationCount": 1200,
+  "preparedReviewCohort": {"total": 892, "userApprovedStagedPilot": 12, "remainingReviewRequired": 880},
+  "requiredHumanGates": [
+    "golden_ranking_fixture_review_before_canonical_import"
+  ],
+  "satisfiedPilotGates": [
+    "user_language_review_for_12_direct_locale_label_packets",
+    "user_source_scoped_distinct_candidate_mapping_for_12_records",
+    "user_duplicate_and_granularity_decision_for_12_records",
+    "user_editorial_facet_rationale_review_for_12_records"
+  ],
+  "automaticActionsForbidden": ["promote_review_queue", "infer_equivalent_occupation_from_similarity", "add_canonical_alias_without_review", "infer_work_context_or_fit", "use_unreviewed_labels_as_fallback"],
+  "promotionSequence": [
+    "add 12 bounded golden ranking fixtures for the user-approved staged pilot",
+    "review the golden ranking fixtures",
+    "canonically import only staged candidates whose golden fixtures are approved",
+    "run canonical import and full ontology/archive regression gates",
+    "separately review the remaining 880 source-scoped records"
+  ],
+  "evidence": {
+    "sourceInventory": "occupation-source-inventory-v1",
+    "sourceIndex": "occupation-source-index-v1",
+    "reviewCohort": "occupation-candidate-cohort-v1",
+    "mappingReview": "occupation-alias-mapping-review-v1",
+    "localePacket": "occupation-locale-label-packet-v1",
+    "facetReadiness": "occupation-facet-readiness-v1",
+    "pilotApproval": "occupation-pilot-review-approval-v1",
+    "candidateStaging": "candidate-staging-v1"
+  },
+  "handoff": "Twelve user-approved ESCO records are in review_ready candidate staging only; canonical data remains unchanged and has no new work-context edges. The remaining 880 records are review_required. Resume from the promotionSequence only after golden fixture review for the staged pilot."
+}

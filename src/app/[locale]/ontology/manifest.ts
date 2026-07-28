@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-syntax */
-import { FeatureManifest } from "@/types/manifest";
+import type { FeatureManifest } from "@/types/manifest";
 
 export const ontologyManifest: FeatureManifest = {
   category: ["ontology"],

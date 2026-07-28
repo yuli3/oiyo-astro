@@ -812,7 +812,7 @@ export default function FearTypeTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <div className="rounded-2xl border bg-card p-4 space-y-2">
-        <h3 className="font-bold text-sm text-emerald-600">{lb.growth}</h3>
+        <h3 className="font-bold text-sm text-green-600">{lb.growth}</h3>
         <p className="text-sm text-muted-foreground leading-relaxed">{r.growth}</p>
       </div>
 

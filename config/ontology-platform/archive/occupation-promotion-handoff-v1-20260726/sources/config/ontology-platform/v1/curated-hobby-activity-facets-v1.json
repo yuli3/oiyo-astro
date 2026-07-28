@@ -1,0 +1,40 @@
+{
+  "schema": "oiyo.ontology-curated-hobby-activity-facets",
+  "schemaVersion": 1,
+  "source": {
+    "id": "editorial:curated-hobby-activity-facets-v1",
+    "method": "editorial activity taxonomy review",
+    "scope": "non-clinical exploration constraints; not health, skill, career, or personal-fit advice",
+    "reviewedAt": "2026-07-25"
+  },
+  "dimensions": {
+    "timeCommitment": ["micro", "short", "regular", "extended"],
+    "budget": ["free", "low", "moderate", "high"],
+    "space": ["minimal", "home", "outdoor", "venue"],
+    "physicalDemand": ["low", "moderate", "high"],
+    "socialMode": ["solo", "flexible", "social"],
+    "setting": ["indoor", "outdoor", "mixed"],
+    "entryDifficulty": ["accessible", "guided", "technical"],
+    "continuity": ["casual", "regular", "project"],
+    "outcomeModes": ["restore", "mastery", "connection"]
+  },
+  "profiles": {
+    "active_solo": {"timeCommitment":"regular","budget":"low","space":"outdoor","physicalDemand":"high","socialMode":"solo","setting":"outdoor","entryDifficulty":"accessible","continuity":"regular","outcomeModes":["mastery","restore"]},
+    "active_social": {"timeCommitment":"regular","budget":"moderate","space":"venue","physicalDemand":"high","socialMode":"social","setting":"mixed","entryDifficulty":"guided","continuity":"regular","outcomeModes":["connection","mastery"]},
+    "mindful_home": {"timeCommitment":"short","budget":"low","space":"home","physicalDemand":"low","socialMode":"solo","setting":"indoor","entryDifficulty":"accessible","continuity":"regular","outcomeModes":["restore","mastery"]},
+    "creative_home": {"timeCommitment":"regular","budget":"moderate","space":"home","physicalDemand":"low","socialMode":"solo","setting":"indoor","entryDifficulty":"guided","continuity":"project","outcomeModes":["mastery","restore"]},
+    "creative_social": {"timeCommitment":"regular","budget":"moderate","space":"venue","physicalDemand":"moderate","socialMode":"social","setting":"indoor","entryDifficulty":"guided","continuity":"regular","outcomeModes":["connection","mastery"]},
+    "analytical_indoor": {"timeCommitment":"regular","budget":"low","space":"minimal","physicalDemand":"low","socialMode":"solo","setting":"indoor","entryDifficulty":"accessible","continuity":"regular","outcomeModes":["mastery","restore"]},
+    "outdoor_exploration": {"timeCommitment":"extended","budget":"moderate","space":"outdoor","physicalDemand":"moderate","socialMode":"flexible","setting":"outdoor","entryDifficulty":"guided","continuity":"casual","outcomeModes":["restore","mastery"]},
+    "practical_home": {"timeCommitment":"regular","budget":"moderate","space":"home","physicalDemand":"moderate","socialMode":"solo","setting":"indoor","entryDifficulty":"guided","continuity":"project","outcomeModes":["mastery","restore"]},
+    "community_service": {"timeCommitment":"regular","budget":"low","space":"venue","physicalDemand":"moderate","socialMode":"social","setting":"mixed","entryDifficulty":"guided","continuity":"regular","outcomeModes":["connection","mastery"]},
+    "cultural_indoor": {"timeCommitment":"short","budget":"low","space":"minimal","physicalDemand":"low","socialMode":"solo","setting":"indoor","entryDifficulty":"accessible","continuity":"casual","outcomeModes":["restore","mastery"]},
+    "strategic_social": {"timeCommitment":"regular","budget":"low","space":"venue","physicalDemand":"low","socialMode":"social","setting":"indoor","entryDifficulty":"guided","continuity":"regular","outcomeModes":["mastery","connection"]},
+    "wellness_gentle": {"timeCommitment":"short","budget":"low","space":"home","physicalDemand":"moderate","socialMode":"flexible","setting":"indoor","entryDifficulty":"accessible","continuity":"regular","outcomeModes":["restore","mastery"]},
+    "travel_project": {"timeCommitment":"extended","budget":"high","space":"outdoor","physicalDemand":"moderate","socialMode":"flexible","setting":"mixed","entryDifficulty":"guided","continuity":"project","outcomeModes":["mastery","connection"]},
+    "technical_practice": {"timeCommitment":"regular","budget":"moderate","space":"minimal","physicalDemand":"low","socialMode":"solo","setting":"indoor","entryDifficulty":"technical","continuity":"regular","outcomeModes":["mastery","restore"]}
+  },
+  "hobbyProfiles": {
+    "astronomy":"outdoor_exploration","badminton":"active_social","baking":"practical_home","birdwatching":"outdoor_exploration","board_games":"strategic_social","brick_building":"creative_home","calligraphy":"creative_home","camping":"outdoor_exploration","chess":"strategic_social","coding":"technical_practice","coffee_brewing":"practical_home","cooking":"practical_home","cycling":"active_solo","dancing":"creative_social","debating":"strategic_social","fermentation":"practical_home","fishing":"outdoor_exploration","gardening":"outdoor_exploration","guitar":"creative_home","hiking":"outdoor_exploration","home_repair":"practical_home","illustration":"creative_home","journaling":"mindful_home","knitting":"creative_home","language_learning":"technical_practice","linguistics":"analytical_indoor","marchial_arts":"active_social","meditation":"mindful_home","music_composition":"creative_home","open_source":"technical_practice","painting":"creative_home","philosophy":"analytical_indoor","photography":"outdoor_exploration","piano":"creative_home","pilates":"wellness_gentle","podcast_listening":"cultural_indoor","pottery":"creative_home","reading":"cultural_indoor","rock_climbing":"active_social","running":"active_solo","sewing":"practical_home","singing":"creative_social","strength_training":"active_solo","swimming":"active_solo","tea_tasting":"mindful_home","tennis":"active_social","travel_planning":"travel_project","volunteering":"community_service","woodworking":"practical_home","writing":"creative_home","yoga":"wellness_gentle"
+  }
+}

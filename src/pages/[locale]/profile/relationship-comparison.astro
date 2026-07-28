@@ -1,0 +1,27 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import RelationshipComparisonPanel from '../../../components/profile/RelationshipComparisonPanel';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '커플·가족 비교 리포트 (파일럿)', description: '완료한 검사 근거만으로 두 사람이 함께 공통점과 차이를 확인하는 실험 도구입니다.' },
+  en: { title: 'Couple & Family Comparison Report (pilot)', description: 'A pilot tool for two people to review shared points and differences using completed assessment evidence.' },
+  ja: { title: 'カップル・家族比較レポート（試験版）', description: '完了した検査の根拠だけで二人が共通点と違いを確認する試験ツールです。' },
+  zh: { title: '情侣·家庭比较报告（试点）', description: '仅使用已完成测验的证据，供两人一起查看共同点与差异的试点工具。' },
+  fr: { title: 'Rapport de comparaison couple et famille (pilote)', description: 'Un outil pilote pour que deux personnes comparent leurs points communs et différences.' },
+  es: { title: 'Informe de comparación de pareja y familia (piloto)', description: 'Una herramienta piloto para que dos personas comparen puntos en común y diferencias.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale} noindex={true}>
+  <div class="mx-auto max-w-3xl px-4 py-10">
+    <RelationshipComparisonPanel client:load locale={locale} />
+  </div>
+</Layout>

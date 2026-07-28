@@ -135,7 +135,7 @@ const HEXACO_OPTIONS = [
     value: 4,
   },
   {
-    color: "bg-teal-500",
+    color: "bg-green-500",
     id: "5",
     text: {
       zh: "非常同意",

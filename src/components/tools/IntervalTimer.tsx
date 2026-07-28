@@ -38,7 +38,7 @@ const PHASE_COLOR: Record<Phase, string> = {
   idle: 'bg-green-50 text-green-800',
   prep: 'bg-amber-100 text-amber-900',
   work: 'bg-green-600 text-white',
-  rest: 'bg-blue-100 text-blue-900',
+  rest: 'bg-green-100 text-green-900',
   done: 'bg-green-100 text-green-900',
 };
 

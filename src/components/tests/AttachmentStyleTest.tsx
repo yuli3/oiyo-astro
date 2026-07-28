@@ -133,16 +133,16 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
         <h1 className="text-2xl font-bold">{t.title}</h1>
         <p className="text-sm text-muted-foreground">{t.subtitle}</p>
       </header>
-      {legacyType && <p className="rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm leading-6 text-blue-900">{t.legacy}</p>}
+      {legacyType && <p className="rounded-xl border border-green-100 bg-green-50 p-4 text-sm leading-6 text-green-900">{t.legacy}</p>}
       <p className="rounded-xl border bg-card p-4 text-sm leading-6 text-muted-foreground">{t.context}</p>
       <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">{t.safety}</p>
       <div className="space-y-1">
         <div className="flex justify-between text-xs text-muted-foreground"><span>{t.question(current + 1)}</span><span>{Math.round((current / 12) * 100)}%</span></div>
-        <div className="h-2 overflow-hidden rounded-full bg-muted"><div className="h-full bg-violet-600 transition-all" style={{ width: `${(current / 12) * 100}%` }} /></div>
+        <div className="h-2 overflow-hidden rounded-full bg-muted"><div className="h-full bg-green-600 transition-all" style={{ width: `${(current / 12) * 100}%` }} /></div>
       </div>
       <div className="rounded-xl border bg-card p-6 text-center"><p className="text-lg font-medium">{questions[current]}</p></div>
       <div className="grid gap-2 sm:grid-cols-5">
-        {t.scale.map((label, index) => <button key={label} onClick={() => answer(index + 1)} className="rounded-lg border bg-card px-3 py-3 text-sm transition-colors hover:border-violet-400 hover:bg-violet-50"><span className="block font-bold text-violet-700">{index + 1}</span><span className="mt-1 block text-xs text-muted-foreground">{label}</span></button>)}
+        {t.scale.map((label, index) => <button key={label} onClick={() => answer(index + 1)} className="rounded-lg border bg-card px-3 py-3 text-sm transition-colors hover:border-green-400 hover:bg-green-50"><span className="block font-bold text-green-700">{index + 1}</span><span className="mt-1 block text-xs text-muted-foreground">{label}</span></button>)}
       </div>
     </div>;
   }
@@ -159,14 +159,14 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
         const responseMean = (1 + (value * 4) / 100).toFixed(1);
         return <article key={id} className="rounded-2xl border bg-card p-5">
           <h2 className="font-bold">{label}</h2>
-          <div className="mt-4 h-3 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-violet-600" style={{ width: `${value}%` }} /></div>
-          <p className="mt-2 text-right text-sm font-bold text-violet-800">{responseMean} / 5.0</p>
+          <div className="mt-4 h-3 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-green-600" style={{ width: `${value}%` }} /></div>
+          <p className="mt-2 text-right text-sm font-bold text-green-800">{responseMean} / 5.0</p>
           <p className="mt-3 text-sm leading-6 text-muted-foreground">{RESPONSE_POSITION[locale]}</p>
         </article>;
       })}
     </div>
     <div className="rounded-xl border bg-card p-4 text-xs leading-6 text-muted-foreground"><p>{RESPONSE_POSITION[locale]}</p><p>{DRAFT_BASIS[locale]}</p><p>{new Intl.DateTimeFormat(locale, { dateStyle: "medium" }).format(new Date(result.observedAt))} · {ATTACHMENT_INSTRUMENT.version}</p></div>
-    <div className="rounded-xl border border-violet-100 bg-violet-50 p-4 text-sm leading-6 text-violet-950"><p>{t.next}</p><p className="mt-2">{t.retake}</p></div>
+    <div className="rounded-xl border border-green-100 bg-green-50 p-4 text-sm leading-6 text-green-950"><p>{t.next}</p><p className="mt-2">{t.retake}</p></div>
     <p className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm font-semibold leading-6 text-rose-950">{t.korea}</p>
     <details className="rounded-xl border border-rose-200 bg-rose-50 p-4"><summary className="cursor-pointer font-bold text-rose-950">{t.helpTitle}</summary><p className="mt-3 text-sm leading-6 text-rose-900">{t.help}</p></details>
     <ResultNextSteps locale={locale} links={[

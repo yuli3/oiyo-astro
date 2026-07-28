@@ -1,0 +1,15 @@
+{
+  "schema": "oiyo.ontology-golden",
+  "schemaVersion": 1,
+  "cases": [
+    {"id":"repair-to-troubleshooting","seedIds":["action.repair"],"expectedTopId":"work_context.troubleshooting"},
+    {"id":"care-to-clinical","seedIds":["action.care"],"expectedTopId":"work_context.clinical_care"},
+    {"id":"protect-to-emergency","seedIds":["action.protect"],"expectedTopId":"work_context.emergency_response"},
+    {"id":"create-to-bricks","seedIds":["action.create"],"expectedTopId":"hobby.brick_building"},
+    {"id":"advocacy-to-lawyer-example","seedIds":["work_context.client_advocacy"],"expectedTopId":"occupation.lawyer"},
+    {"id":"running-to-physical-action","seedIds":["hobby.running"],"expectedTopId":"action.run_physical"},
+    {"id":"guitar-to-create","seedIds":["hobby.guitar"],"expectedTopId":"action.create"},
+    {"id":"home-repair-to-repair","seedIds":["hobby.home_repair"],"expectedTopId":"action.repair"},
+    {"id":"open-source-to-create","seedIds":["hobby.open_source"],"expectedTopId":"action.create"}
+  ]
+}

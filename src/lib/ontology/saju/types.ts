@@ -1,4 +1,4 @@
-import { LocalizedStringArray, LocalizedText } from "@/types/manifest";
+import type { LocalizedStringArray, LocalizedText } from "@/types/manifest";
 export type { LocalizedStringArray, LocalizedText };
 
 export enum EarthlyBranch {

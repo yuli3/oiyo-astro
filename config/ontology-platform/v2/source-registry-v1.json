@@ -1,0 +1,15 @@
+{
+  "schema": "oiyo.ontology-source-registry",
+  "schemaVersion": 1,
+  "sources": [
+    {"id": "catalog:legacy-hobbies-v1", "kindScopes": ["hobby"], "status": "approved", "licenseStatus": "internal_project_source", "allowedClaims": ["label", "alias", "activity_taxonomy"], "refresh": "on-source-change"},
+    {"id": "catalog:legacy-careers-v1", "kindScopes": ["occupation"], "status": "approved", "licenseStatus": "internal_project_source", "allowedClaims": ["label", "legacy_identifier", "riasec_lineage", "work_context_example"], "refresh": "on-source-change"},
+    {"id": "editorial:ontology-actions-v1", "kindScopes": ["action"], "status": "approved", "licenseStatus": "editorial_internal", "allowedClaims": ["label", "alias", "facet_profile", "exploration_relation"], "refresh": "editorial-review"},
+    {"id": "editorial:ontology-hobbies-v1", "kindScopes": ["hobby"], "status": "approved", "licenseStatus": "editorial_internal", "allowedClaims": ["label", "alias", "activity_taxonomy"], "refresh": "editorial-review"},
+    {"id": "editorial:ontology-work-contexts-v2", "kindScopes": ["work_context"], "status": "approved", "licenseStatus": "editorial_internal", "allowedClaims": ["label", "facet_profile", "derived_exploration_navigation"], "refresh": "editorial-review"},
+    {"id": "external:isco-08", "kindScopes": ["occupation"], "status": "pending_license_and_mapping_review", "licenseStatus": "unverified", "allowedClaims": [], "refresh": "not-applicable-until-approved"},
+    {"id": "external:onet", "kindScopes": ["occupation", "work_context"], "status": "approved", "licenseStatus": "cc_by_4_0_with_usdol_eta_attribution_and_change_notice", "allowedClaims": ["occupation_label", "occupation_identifier", "occupation_taxonomy_reference"], "refresh": "quarterly_release_review"},
+    {"id": "external:esco", "kindScopes": ["occupation", "action", "skill"], "status": "approved", "licenseStatus": "cc_by_4_0_with_european_commission_attribution_and_change_notice", "allowedClaims": ["occupation_label", "occupation_identifier", "occupation_hierarchy_reference", "occupation_skill_relation_reference"], "refresh": "official_version_review"}
+  ],
+  "prohibitedWithoutSeparateReview": ["salary", "hiring_outlook", "licensure_requirement", "legal_requirement", "medical_claim", "psychological_claim", "career_fit_verdict"]
+}

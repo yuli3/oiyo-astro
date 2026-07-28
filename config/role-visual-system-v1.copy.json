@@ -12,7 +12,8 @@
       "low-flat": { "label": "낮고 평평한 분포", "body": "현재 답변에서는 뚜렷한 신호가 적습니다. 역할명을 부여하지 않습니다." },
       "uncertain": { "label": "해석할 근거가 아직 부족함", "body": "응답 범위 또는 신뢰도가 낮습니다. 점수 차이가 커 보여도 역할명을 부여하지 않습니다." }
     },
-    "score": "점수", "confidence": "신뢰도", "coverage": "응답 범위", "roleAid": "기억 보조", "neutralPattern": "중립 패턴 01",
+    "score": "점수", "confidence": "신뢰도", "coverage": "응답 범위", "roleAid": "기억 보조",
+    "roleAidNames": { "explore": "개척자형", "focus": "몰입가형", "connect": "연결자형" },
     "strengthTitle": "활용할 강점", "strength": "현재 가장 높은 신호가 요구되는 작은 상황에서 먼저 시험해 보세요.",
     "cautionTitle": "주의할 점", "caution": "한 번의 결과를 고정된 정체성이나 능력 판정으로 사용하지 마세요.",
     "actionTitle": "작은 행동", "action": "이번 주에 20분짜리 실험 하나를 하고 실제 느낌을 한 문장으로 기록하세요.",
@@ -31,7 +32,8 @@
       "low-flat": { "label": "Low, flat distribution", "body": "The current answers contain little distinct signal. No role label is assigned." },
       "uncertain": { "label": "Not enough evidence to interpret", "body": "Coverage or confidence is low. No role label is assigned even if the score gap looks large." }
     },
-    "score": "Score", "confidence": "Confidence", "coverage": "Response coverage", "roleAid": "Memory aid", "neutralPattern": "Neutral pattern 01",
+    "score": "Score", "confidence": "Confidence", "coverage": "Response coverage", "roleAid": "Memory aid",
+    "roleAidNames": { "explore": "Pioneer type", "focus": "Immersion type", "connect": "Connector type" },
     "strengthTitle": "Strength to use", "strength": "Try the strongest current signal first in one small situation that calls for it.",
     "cautionTitle": "Caution", "caution": "Do not use one result as a fixed identity or ability judgment.",
     "actionTitle": "Small action", "action": "Run one 20-minute experiment this week and write one sentence about how it felt.",
@@ -50,7 +52,8 @@
       "low-flat": { "label": "低く平坦な分布", "body": "現在の回答には明確な信号が少ないため、役割名を付けません。" },
       "uncertain": { "label": "解釈の根拠がまだ不足", "body": "回答範囲または信頼度が低いため、差が大きく見えても役割名を付けません。" }
     },
-    "score": "点数", "confidence": "信頼度", "coverage": "回答範囲", "roleAid": "記憶補助", "neutralPattern": "中立パターン01",
+    "score": "点数", "confidence": "信頼度", "coverage": "回答範囲", "roleAid": "記憶補助",
+    "roleAidNames": { "explore": "開拓者型", "focus": "没入型", "connect": "つながり型" },
     "strengthTitle": "活かす強み", "strength": "今もっとも高い信号が必要な小さな場面で、まず試してください。",
     "cautionTitle": "注意点", "caution": "一度の結果を固定した自己像や能力判断に使わないでください。",
     "actionTitle": "小さな行動", "action": "今週20分の実験を一つ行い、実際の感触を一文で記録してください。",
@@ -69,7 +72,8 @@
       "low-flat": { "label": "低而平坦的分布", "body": "当前回答中的明显信号较少，因此不分配角色名称。" },
       "uncertain": { "label": "解释依据仍不足", "body": "回答范围或可信度较低。即使分差看起来很大，也不分配角色名称。" }
     },
-    "score": "分数", "confidence": "可信度", "coverage": "回答范围", "roleAid": "记忆辅助", "neutralPattern": "中立模式01",
+    "score": "分数", "confidence": "可信度", "coverage": "回答范围", "roleAid": "记忆辅助",
+    "roleAidNames": { "explore": "开拓者型", "focus": "沉浸型", "connect": "连接者型" },
     "strengthTitle": "可运用的优势", "strength": "先在一个需要当前最高信号的小情境中尝试。",
     "cautionTitle": "注意", "caution": "不要把一次结果当作固定身份或能力判断。",
     "actionTitle": "小行动", "action": "本周做一次20分钟实验，并用一句话记录真实感受。",
@@ -88,7 +92,8 @@
       "low-flat": { "label": "Distribution faible et plate", "body": "Les réponses actuelles offrent peu de signal distinct. Aucun rôle n’est attribué." },
       "uncertain": { "label": "Pas assez d’éléments pour interpréter", "body": "La couverture ou la confiance est faible. Aucun rôle n’est attribué, même si l’écart paraît grand." }
     },
-    "score": "Note", "confidence": "Confiance", "coverage": "Couverture des réponses", "roleAid": "Aide-mémoire", "neutralPattern": "Motif neutre 01",
+    "score": "Note", "confidence": "Confiance", "coverage": "Couverture des réponses", "roleAid": "Aide-mémoire",
+    "roleAidNames": { "explore": "Type Pionnier", "focus": "Type Immersif", "connect": "Type Connecteur" },
     "strengthTitle": "Force à mobiliser", "strength": "Testez d’abord le signal actuel le plus fort dans une petite situation qui le demande.",
     "cautionTitle": "Attention", "caution": "N’utilisez pas un résultat comme identité fixe ou jugement de capacité.",
     "actionTitle": "Petite action", "action": "Faites une expérience de 20 minutes cette semaine et notez votre ressenti en une phrase.",
@@ -107,7 +112,8 @@
       "low-flat": { "label": "Distribución baja y plana", "body": "Las respuestas actuales contienen poca señal diferenciada. No se asigna un rol." },
       "uncertain": { "label": "Aún no hay evidencia suficiente", "body": "La cobertura o la confianza es baja. No se asigna un rol aunque la diferencia parezca grande." }
     },
-    "score": "Puntuación", "confidence": "Confianza", "coverage": "Cobertura de respuestas", "roleAid": "Ayuda de memoria", "neutralPattern": "Patrón neutro 01",
+    "score": "Puntuación", "confidence": "Confianza", "coverage": "Cobertura de respuestas", "roleAid": "Ayuda de memoria",
+    "roleAidNames": { "explore": "Tipo Pionero", "focus": "Tipo Inmersivo", "connect": "Tipo Conector" },
     "strengthTitle": "Fortaleza que usar", "strength": "Prueba primero la señal actual más alta en una situación pequeña que la necesite.",
     "cautionTitle": "Precaución", "caution": "No uses un resultado como identidad fija ni como juicio de capacidad.",
     "actionTitle": "Acción pequeña", "action": "Haz un experimento de 20 minutos esta semana y escribe una frase sobre cómo se sintió.",

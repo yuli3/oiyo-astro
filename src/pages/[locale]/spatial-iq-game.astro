@@ -9,8 +9,15 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.params as { locale: Locale };
-const meta: Record<string, { title: string; description: string }> = { en: { title: "spatial-iq-game", description: "" } };
-const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '공간지각 IQ 게임', description: '패턴의 규칙을 찾아 빠진 조각을 맞혀보세요.' },
+  en: { title: 'Spatial IQ Game', description: 'Find the pattern rule and choose the missing piece.' },
+  ja: { title: '空間IQゲーム', description: 'パターンのルールを見つけて欠けているピースを選んでください。' },
+  zh: { title: '空间IQ游戏', description: '找出图案规律并选择缺失的部分。' },
+  fr: { title: 'Jeu d\'IQ Spatial', description: 'Trouvez la règle du motif et choisissez la pièce manquante.' },
+  es: { title: 'Juego de IQ Espacial', description: 'Encuentra la regla del patrón y elige la pieza que falta.' },
+};
+const m = meta[locale] ?? meta.en;
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>

@@ -1,0 +1,41 @@
+{
+  "schema": "oiyo.ontology-life-signals-contract",
+  "schemaVersion": 1,
+  "status": "design_only",
+  "profileModel": "optional_ephemeral_exploration_inputs",
+  "signalFamilies": [
+    {"id": "goal", "meaning": "The outcome the person wants to explore now, not a predicted life direction.", "values": ["explore", "learn", "create", "connect", "recover", "contribute", "transition", "earn_supplemental_income"]},
+    {"id": "time", "meaning": "The time window currently available for an experiment, not a measure of commitment or productivity.", "values": ["under_20_minutes", "weekly_1_to_2_hours", "weekly_3_to_5_hours", "weekly_6_plus_hours"]},
+    {"id": "budget", "meaning": "The amount the person chooses to spend for this exploration, not financial capacity or advice.", "values": ["none", "low", "medium", "high"]},
+    {"id": "energy", "meaning": "A self-described amount of energy available today or this week; it is not a health, mood, or ability assessment.", "values": ["very_low", "low", "moderate", "high", "variable"]},
+    {"id": "access_space", "meaning": "The practical setting or access currently available for an activity, not a housing, disability, or socioeconomic classification.", "values": ["small_home", "shared_indoor", "outdoor", "specialized_space", "digital_only", "limited_access"]},
+    {"id": "social_preference", "meaning": "The amount and form of interaction preferred for this experiment, not a personality or relationship label.", "values": ["solo", "pair", "small_group", "large_group", "flexible"]},
+    {"id": "mobility", "meaning": "The practical travel range available for this experiment, not a medical or legal mobility assessment.", "values": ["home_based", "nearby", "local_transit_ok", "travel_ok", "variable"]},
+    {"id": "continuity", "meaning": "The desired duration and repeatability of this exploration, not persistence, reliability, or future intent.", "values": ["one_off", "short_trial", "seasonal", "ongoing", "flexible"]},
+    {"id": "transition_stage", "meaning": "A self-selected planning context for exploration, not a diagnosis, age category, or readiness verdict.", "values": ["stable_routine", "starting_something_new", "changing_role_or_schedule", "returning_after_pause", "caregiving_or_shared_responsibility", "uncertain_or_in_between"]}
+  ],
+  "selectionRules": {
+    "cardinality": "zero_or_one_per_family",
+    "omission": "Every family is optional. Missing values mean unknown or not selected and must not be inferred.",
+    "valueSource": "self_selected_only",
+    "temporalScope": "current_exploration_context_only",
+    "conflictHandling": "When selections conflict, preserve the selections and offer a smaller reversible experiment; do not resolve conflict by inferring a person-level trait."
+  },
+  "combinationBoundary": {
+    "allowedUse": ["filter_exploration_options", "describe_practical_tradeoffs", "suggest_reversible_small_experiments", "ask_for_optional_clarification"],
+    "prohibitedUse": ["infer_missing_signals", "rank_people", "create_personality_labels", "diagnose_health_or_mental_state", "issue_career_fit_or_employability_verdicts", "make_hiring_or_admissions_recommendations", "predict_income_or_outcomes", "determine_eligibility_or_access", "treat_any_combination_as_evidence_about_identity"],
+    "outputRequirement": "Any future output using two or more signals must state that it reflects selected exploration conditions, list material tradeoffs, and present at least one reversible next step or an explicit no-suggestion outcome.",
+    "combinationLimit": "No signal combination may produce a personal, medical, legal, financial, hiring, admissions, or career-fit conclusion."
+  },
+  "notSignals": ["diagnosis", "personality_label", "employability_score", "career_fit_verdict", "hiring_recommendation", "admissions_recommendation", "income_prediction", "health_clearance", "financial_capacity_assessment", "disability_assessment", "readiness_verdict"],
+  "storage": "no_user_storage_or_transmission_in_foundation",
+  "resultBoundary": "Signals may filter exploration options and suggest reversible small experiments; they may not issue a personal, career-fit, health, legal, financial, hiring, admissions, or identity verdict.",
+  "safetyCopy": {
+    "ko": {"uncertainty": "이 선택은 지금의 탐색 조건만 반영하며, 당신의 능력·성격·건강·미래를 판단하지 않습니다.", "nonDiagnostic": "의료·심리 진단이나 직업 적합성 판정이 아닙니다. 부담이 있으면 선택을 비워 두거나 더 작은 실험을 고르세요."},
+    "en": {"uncertainty": "These selections describe only your current exploration conditions; they do not judge your ability, personality, health, or future.", "nonDiagnostic": "This is not medical or psychological diagnosis, or a career-fit verdict. Leave a choice blank or choose a smaller experiment if it does not fit."},
+    "ja": {"uncertainty": "この選択は現在の探索条件だけを表し、能力・性格・健康・将来を判断するものではありません。", "nonDiagnostic": "医療・心理の診断や職業適性の判定ではありません。合わない場合は未選択のままにするか、より小さな実験を選んでください。"},
+    "zh": {"uncertainty": "这些选择只反映你当前的探索条件，不判断你的能力、性格、健康或未来。", "nonDiagnostic": "这不是医疗或心理诊断，也不是职业匹配结论。若不适合，可以留空或选择更小的尝试。"},
+    "fr": {"uncertainty": "Ces choix décrivent uniquement vos conditions d’exploration actuelles ; ils ne jugent ni vos capacités, ni votre personnalité, ni votre santé, ni votre avenir.", "nonDiagnostic": "Il ne s’agit pas d’un diagnostic médical ou psychologique, ni d’un verdict d’adéquation professionnelle. Laissez un choix vide ou choisissez une expérience plus petite si nécessaire."},
+    "es": {"uncertainty": "Estas elecciones solo describen tus condiciones actuales de exploración; no juzgan tu capacidad, personalidad, salud ni futuro.", "nonDiagnostic": "No es un diagnóstico médico o psicológico ni un veredicto de idoneidad profesional. Deja una opción vacía o elige un experimento más pequeño si no encaja."}
+  }
+}

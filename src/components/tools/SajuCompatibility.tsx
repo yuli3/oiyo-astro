@@ -46,7 +46,7 @@ const ELEM_COLORS: Record<Element, { bg: string; text: string; border: string }>
   Fire:  { bg: "bg-red-50",    text: "text-red-700",    border: "border-red-200" },
   Earth: { bg: "bg-amber-50",  text: "text-amber-700",  border: "border-amber-200" },
   Metal: { bg: "bg-gray-50",   text: "text-gray-700",   border: "border-gray-300" },
-  Water: { bg: "bg-blue-50",   text: "text-blue-700",   border: "border-blue-200" },
+  Water: { bg: "bg-green-50",   text: "text-green-700",   border: "border-green-200" },
 };
 
 const STEM_NAMES: Record<Locale, string[]> = {
@@ -334,7 +334,7 @@ export default function SajuCompatibility({ locale }: Props) {
                 <select
                   value={year ?? ""}
                   onChange={(e) => setYear(Number(e.target.value))}
-                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                  className="w-full border border-gray-300 rounded-xl px-4 py-3 text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-300"
                 >
                   <option value="">—</option>
                   {yearOptions.map((y) => <option key={y} value={y}>{y}</option>)}
@@ -345,7 +345,7 @@ export default function SajuCompatibility({ locale }: Props) {
           <button
             onClick={calculate}
             disabled={!year1 || !year2}
-            className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-gray-300 text-white font-semibold py-3 rounded-xl transition-colors"
+            className="w-full bg-green-600 hover:bg-green-700 disabled:bg-gray-300 text-white font-semibold py-3 rounded-xl transition-colors"
           >
             {ui.calcBtn}
           </button>

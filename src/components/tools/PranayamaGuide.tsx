@@ -267,17 +267,17 @@ export default function PranayamaGuide({ locale }: Props) {
   const size = 120 + scale * 100;
   const transition = phase === 'inhale' ? technique.inhale : phase === 'exhale' ? technique.exhale : 0.3;
   const phaseColor: Record<Phase, string> = {
-    inhale: 'from-emerald-400 to-green-500',
-    'hold-in': 'from-green-500 to-teal-600',
-    exhale: 'from-teal-400 to-green-500',
-    'hold-out': 'from-green-300 to-emerald-400',
-    idle: 'from-emerald-300 to-green-400',
+    inhale: 'from-green-400 to-green-500',
+    'hold-in': 'from-green-500 to-green-600',
+    exhale: 'from-green-400 to-green-500',
+    'hold-out': 'from-green-300 to-green-400',
+    idle: 'from-green-300 to-green-400',
   };
   const cue = phase === 'inhale' ? tt(technique.inhaleCue, locale)
     : phase === 'exhale' ? tt(technique.exhaleCue, locale) : undefined;
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-gradient-to-br from-emerald-50 to-green-50 p-5">
+    <div className="rounded-2xl border border-green-100 bg-gradient-to-br from-green-50 to-green-50 p-5">
       <h1 className="text-2xl font-bold text-green-950">{u('title')}</h1>
 
       {/* Technique selector */}

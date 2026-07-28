@@ -350,7 +350,7 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
           </div>
         </div>
         <div className="flex justify-center">
-          <span className={`text-xs px-3 py-1 rounded-full font-bold ${isFinancial ? 'bg-emerald-100 text-emerald-700' : 'bg-sky-100 text-sky-700'}`}>
+          <span className={`text-xs px-3 py-1 rounded-full font-bold ${isFinancial ? 'bg-green-100 text-green-700' : 'bg-green-100 text-green-700'}`}>
             {isFinancial ? (locale === 'ko' ? '금융 리스크' : locale === 'ja' ? '金融リスク' : 'Financial Risk') : (locale === 'ko' ? '인생 리스크' : locale === 'ja' ? 'ライフリスク' : 'Life Risk')}
           </span>
         </div>
@@ -430,22 +430,22 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <div className="rounded-2xl border bg-card p-4 space-y-2">
-        <h3 className="font-bold text-sm text-emerald-600">{lb.investmentAdvice}</h3>
+        <h3 className="font-bold text-sm text-green-600">{lb.investmentAdvice}</h3>
         <ul className="space-y-1">
           {r.investmentAdvice.map(a => (
             <li key={a} className="text-sm text-muted-foreground flex gap-2">
-              <span className="text-emerald-500">→</span>{a}
+              <span className="text-green-500">→</span>{a}
             </li>
           ))}
         </ul>
       </div>
 
       <div className="rounded-2xl border bg-card p-4 space-y-2">
-        <h3 className="font-bold text-sm text-sky-600">{lb.lifeAdvice}</h3>
+        <h3 className="font-bold text-sm text-green-600">{lb.lifeAdvice}</h3>
         <ul className="space-y-1">
           {r.lifeAdvice.map(a => (
             <li key={a} className="text-sm text-muted-foreground flex gap-2">
-              <span className="text-sky-500">→</span>{a}
+              <span className="text-green-500">→</span>{a}
             </li>
           ))}
         </ul>

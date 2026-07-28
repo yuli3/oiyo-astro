@@ -28,6 +28,15 @@ export interface RoleVisualInput {
   dataCoverage: number;
 }
 
+export type RoleAidIcon = "compass" | "target" | "users";
+
+export interface RoleAid {
+  id: string;
+  dimensionId: string;
+  icon: RoleAidIcon;
+  emoji: string;
+}
+
 export interface RoleVisualResult {
   schemaVersion: typeof ROLE_VISUAL_SCHEMA_VERSION;
   status: RoleVisualStatus;
@@ -36,9 +45,19 @@ export interface RoleVisualResult {
   spread: number | null;
   averageConfidence: number;
   dataCoverage: number;
-  roleAid: { id: "neutral-pattern-01"; icon: "compass"; emoji: "🧭" } | null;
+  roleAid: RoleAid | null;
   explanationPriority: readonly ["scores", "status", "uncertainty", "role-aid"];
 }
+
+/**
+ * Public role-aid identity per dimension. Names are original and non-diagnostic —
+ * a memory aid for the leading signal, not a fixed type verdict (see roleAid copy note).
+ */
+const ROLE_AID_BY_DIMENSION: Record<string, Omit<RoleAid, "dimensionId">> = {
+  explore: { id: "pioneer-v1", icon: "compass", emoji: "🧭" },
+  focus: { id: "immersion-v1", icon: "target", emoji: "🎯" },
+  connect: { id: "connector-v1", icon: "users", emoji: "🤝" },
+};
 
 function clamp(value: number, min: number, max: number): number {
   return Number.isFinite(value) ? Math.min(max, Math.max(min, value)) : min;
@@ -102,7 +121,9 @@ export function classifyRoleVisual(input: RoleVisualInput): RoleVisualResult {
     spread,
     averageConfidence,
     dataCoverage: coverage,
-    roleAid: status === "clear" ? { id: "neutral-pattern-01", icon: "compass", emoji: "🧭" } : null,
+    roleAid: status === "clear" && ROLE_AID_BY_DIMENSION[ranked[0].id]
+      ? { ...ROLE_AID_BY_DIMENSION[ranked[0].id], dimensionId: ranked[0].id }
+      : null,
     explanationPriority: ["scores", "status", "uncertainty", "role-aid"],
   };
 }

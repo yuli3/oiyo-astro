@@ -69,6 +69,10 @@ const TOOLS: Record<string, Tool> = {
     icon: '🌊', href: '/big5/test',
     label: { ko: '빅파이브', en: 'Big Five', ja: 'ビッグファイブ', zh: '大五人格', fr: 'Big Five', es: 'Cinco Grandes' },
   },
+  riasec: {
+    icon: '🧭', href: '/riasec-career-test',
+    label: { ko: 'RIASEC 직업흥미', en: 'RIASEC Career Interest', ja: 'RIASEC職業興味', zh: 'RIASEC职业兴趣', fr: 'Intérêt professionnel RIASEC', es: 'Interés vocacional RIASEC' },
+  },
   attachment: {
     icon: '💚', href: '/attachment-style/test',
     label: { ko: '애착유형', en: 'Attachment Style', ja: '愛着スタイル', zh: '依恋类型', fr: 'Style d’attachement', es: 'Estilo de apego' },
@@ -93,6 +97,18 @@ const TOOLS: Record<string, Tool> = {
   burnout: {
     icon: '🔥', href: '/burnout/test',
     label: { ko: '번아웃 검사', en: 'Burnout Test', ja: 'バーンアウト診断', zh: '倦怠测试', fr: 'Test de burnout', es: 'Test de burnout' },
+  },
+  stressResponse: {
+    icon: '⚡', href: '/stress-response-test',
+    label: { ko: '스트레스 반응 유형', en: 'Stress Response Type', ja: 'ストレス反応タイプ', zh: '压力反应类型', fr: 'Type de réaction au stress', es: 'Tipo de respuesta al estrés' },
+  },
+  stressType: {
+    icon: '🌪️', href: '/stress-type-test',
+    label: { ko: '스트레스 유형', en: 'Stress Type', ja: 'ストレスタイプ', zh: '压力类型', fr: 'Type de stress', es: 'Tipo de estrés' },
+  },
+  stressEvents: {
+    icon: '📋', href: '/stress-events/test',
+    label: { ko: '홈즈-라헤 스트레스 테스트', en: 'Holmes-Rahe Stress Test', ja: 'ホームズ・レイ ストレステスト', zh: '霍尔姆斯-拉赫压力测试', fr: 'Test de stress Holmes-Rahe', es: 'Test de estrés Holmes-Rahe' },
   },
   adhd: {
     icon: '🌀', href: '/adhd/test',
@@ -179,7 +195,7 @@ const items = tools
       {items.map((tool) => (
         <a
           href={`/${locale}${tool.href}`}
-          class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-indigo-300 hover:bg-indigo-50"
+          class="inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-green-300 hover:bg-green-50"
         >
           <span aria-hidden="true">{tool.icon}</span>
           {tool.label[locale]}

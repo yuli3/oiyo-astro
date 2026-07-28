@@ -1,4 +1,4 @@
-import { LocalizedContent } from "./manifest";
+import type { LocalizedContent } from "./manifest";
 
 export type LifeCategory =
   | "career"

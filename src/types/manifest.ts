@@ -1,7 +1,7 @@
-import React from "react";
+import type React from "react";
 
-import { CategoryId } from "@/config/categories";
-import { Locale } from "@/i18n";
+import type { CategoryId } from "@/config/categories";
+import type { Locale } from "@/i18n";
 
 export type { CategoryId };
 

@@ -12,6 +12,7 @@ import {
   mbtiTypeFromResponses,
   recordAssessmentResult,
 } from '@/assessments';
+import { interpretMBTIDeep } from '@/lib/engines/interpretation/engines/mbti-deep';
 
 export type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -38,6 +39,24 @@ interface Labels {
   viewResult: string
   retake: string
   note: string
+  deepTitle: string
+  strengthsTitle: string
+  challengesTitle: string
+  cognitiveStackTitle: string
+  growthTitle: string
+  lifeTitle: string
+  functionRole: { dominant: string; auxiliary: string; tertiary: string; inferior: string }
+}
+
+const COGNITIVE_STACK_BY_TYPE: Record<MbtiType, [string, string, string, string]> = {
+  ISTJ: ['Si', 'Te', 'Fi', 'Ne'], ISFJ: ['Si', 'Fe', 'Ti', 'Ne'],
+  INFJ: ['Ni', 'Fe', 'Ti', 'Se'], INTJ: ['Ni', 'Te', 'Fi', 'Se'],
+  ISTP: ['Ti', 'Se', 'Ni', 'Fe'], ISFP: ['Fi', 'Se', 'Ni', 'Te'],
+  INFP: ['Fi', 'Ne', 'Si', 'Te'], INTP: ['Ti', 'Ne', 'Si', 'Fe'],
+  ESTP: ['Se', 'Ti', 'Fe', 'Ni'], ESFP: ['Se', 'Fi', 'Te', 'Ni'],
+  ENFP: ['Ne', 'Fi', 'Te', 'Si'], ENTP: ['Ne', 'Ti', 'Fe', 'Si'],
+  ESTJ: ['Te', 'Si', 'Ne', 'Fi'], ESFJ: ['Fe', 'Si', 'Ne', 'Ti'],
+  ENFJ: ['Fe', 'Ni', 'Se', 'Ti'], ENTJ: ['Te', 'Ni', 'Se', 'Fi'],
 }
 
 const FALLBACK_LANG: SupportedLang = 'en'
@@ -46,6 +65,10 @@ function lang(locale?: string): SupportedLang {
   return (['ko', 'en', 'ja', 'zh', 'fr', 'es'] as const).includes(locale as SupportedLang)
     ? (locale as SupportedLang)
     : FALLBACK_LANG
+}
+
+function sl(value: Partial<Record<SupportedLang, string>>, locale: SupportedLang): string {
+  return value[locale] ?? value.en ?? value.ko ?? ''
 }
 
 const LABELS: Record<SupportedLang, Labels> = {
@@ -57,6 +80,13 @@ const LABELS: Record<SupportedLang, Labels> = {
     viewResult: '결과 보기',
     retake: '다시 하기',
     note: '이 테스트는 자기이해를 위한 간단한 성향 도구이며 전문 심리검사를 대체하지 않습니다.',
+    deepTitle: '더 깊은 해석',
+    strengthsTitle: '강점',
+    challengesTitle: '성장 과제',
+    cognitiveStackTitle: '인지기능 스택',
+    growthTitle: '성장 경로',
+    lifeTitle: '삶에 미치는 영향',
+    functionRole: { dominant: '주기능', auxiliary: '부기능', tertiary: '3차기능', inferior: '열등기능' },
   },
   en: {
     title: 'MBTI Personality Test',
@@ -66,6 +96,13 @@ const LABELS: Record<SupportedLang, Labels> = {
     viewResult: 'View Result',
     retake: 'Retake',
     note: 'This is a lightweight self-reflection tool and does not replace a professional psychological assessment.',
+    deepTitle: 'Deeper Interpretation',
+    strengthsTitle: 'Strengths',
+    challengesTitle: 'Growth Challenges',
+    cognitiveStackTitle: 'Cognitive Function Stack',
+    growthTitle: 'Growth Path',
+    lifeTitle: 'Life Implications',
+    functionRole: { dominant: 'Dominant', auxiliary: 'Auxiliary', tertiary: 'Tertiary', inferior: 'Inferior' },
   },
   ja: {
     title: 'MBTI 性格テスト',
@@ -75,6 +112,13 @@ const LABELS: Record<SupportedLang, Labels> = {
     viewResult: '結果を見る',
     retake: 'もう一度',
     note: 'このテストは自己理解のための簡易ツールであり、専門的な心理検査の代替ではありません。',
+    deepTitle: 'より深い解釈',
+    strengthsTitle: '強み',
+    challengesTitle: '成長課題',
+    cognitiveStackTitle: '認知機能スタック',
+    growthTitle: '成長への道',
+    lifeTitle: '人生への影響',
+    functionRole: { dominant: '主機能', auxiliary: '補助機能', tertiary: '第三機能', inferior: '劣等機能' },
   },
   zh: {
     title: 'MBTI 性格测试',
@@ -84,6 +128,13 @@ const LABELS: Record<SupportedLang, Labels> = {
     viewResult: '查看结果',
     retake: '重新测试',
     note: '本测试是用于自我理解的简易工具，不能替代专业心理评估。',
+    deepTitle: '更深层的解读',
+    strengthsTitle: '优势',
+    challengesTitle: '成长课题',
+    cognitiveStackTitle: '认知功能栈',
+    growthTitle: '成长路径',
+    lifeTitle: '对人生的影响',
+    functionRole: { dominant: '主导功能', auxiliary: '辅助功能', tertiary: '第三功能', inferior: '劣势功能' },
   },
   fr: {
     title: 'Test de Personnalité MBTI',
@@ -93,6 +144,13 @@ const LABELS: Record<SupportedLang, Labels> = {
     viewResult: 'Voir le résultat',
     retake: 'Recommencer',
     note: 'Ce test est un outil léger de réflexion personnelle et ne remplace pas une évaluation psychologique professionnelle.',
+    deepTitle: 'Interprétation approfondie',
+    strengthsTitle: 'Forces',
+    challengesTitle: 'Défis de croissance',
+    cognitiveStackTitle: 'Pile de fonctions cognitives',
+    growthTitle: 'Voie de croissance',
+    lifeTitle: 'Implications pour la vie',
+    functionRole: { dominant: 'Dominante', auxiliary: 'Auxiliaire', tertiary: 'Tertiaire', inferior: 'Inférieure' },
   },
   es: {
     title: 'Test de Personalidad MBTI',
@@ -102,6 +160,13 @@ const LABELS: Record<SupportedLang, Labels> = {
     viewResult: 'Ver resultado',
     retake: 'Repetir',
     note: 'Este test es una herramienta ligera de autoconocimiento y no reemplaza una evaluación psicológica profesional.',
+    deepTitle: 'Interpretación más profunda',
+    strengthsTitle: 'Fortalezas',
+    challengesTitle: 'Desafíos de crecimiento',
+    cognitiveStackTitle: 'Pila de funciones cognitivas',
+    growthTitle: 'Camino de crecimiento',
+    lifeTitle: 'Implicaciones para la vida',
+    functionRole: { dominant: 'Dominante', auxiliary: 'Auxiliar', tertiary: 'Terciaria', inferior: 'Inferior' },
   },
 }
 
@@ -206,6 +271,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
 
   const profile = TYPE_PROFILES[mbtiType]
   const title = l === 'ko' ? `${mbtiType} - ${profile?.ko}` : `${mbtiType} - ${profile?.en}`
+  const deep = interpretMBTIDeep(mbtiType, COGNITIVE_STACK_BY_TYPE[mbtiType], l)
 
   // Keep the URL in sync with the visible result so it is shareable/revisitable.
   useEffect(() => {
@@ -263,6 +329,49 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           ))}
         </div>
         <p className="mt-6 rounded-xl bg-blue-50 p-4 text-sm leading-6 text-blue-950">{labels.note}</p>
+
+        <section className="mt-8 border-t border-slate-200 pt-6">
+          <h3 className="text-xl font-black text-slate-950">{labels.deepTitle}</h3>
+          <p className="mt-3 leading-7 text-slate-700">{sl(deep.typeNarrative, l)}</p>
+          <p className="mt-3 leading-7 text-slate-600">{sl(deep.worldview, l)}</p>
+
+          <details className="group mt-5 rounded-xl border border-slate-200 p-4">
+            <summary className="cursor-pointer list-none font-bold text-slate-900">{labels.strengthsTitle} / {labels.challengesTitle}</summary>
+            <div className="mt-4 grid gap-4 sm:grid-cols-2">
+              <ul className="space-y-2 text-sm leading-6 text-slate-700">
+                {deep.strengths.map((s, i) => <li key={i}>· {sl(s, l)}</li>)}
+              </ul>
+              <ul className="space-y-2 text-sm leading-6 text-slate-700">
+                {deep.challenges.map((c, i) => <li key={i}>· {sl(c, l)}</li>)}
+              </ul>
+            </div>
+          </details>
+
+          <details className="group mt-3 rounded-xl border border-slate-200 p-4">
+            <summary className="cursor-pointer list-none font-bold text-slate-900">{labels.cognitiveStackTitle}</summary>
+            <div className="mt-4 grid gap-3 sm:grid-cols-4">
+              {([
+                ['dominant', deep.cognitiveStack.dominant],
+                ['auxiliary', deep.cognitiveStack.auxiliary],
+                ['tertiary', deep.cognitiveStack.tertiary],
+                ['inferior', deep.cognitiveStack.inferior],
+              ] as const).map(([role, fn]) => (
+                <div key={role} className="rounded-lg bg-slate-50 p-3 text-center">
+                  <p className="text-[11px] font-semibold text-slate-500">{labels.functionRole[role]}</p>
+                  <p className="mt-1 text-lg font-black text-slate-900">{fn.code}</p>
+                  <p className="mt-1 text-xs text-slate-600">{sl(fn.name, l)}</p>
+                </div>
+              ))}
+            </div>
+          </details>
+
+          <details className="group mt-3 rounded-xl border border-slate-200 p-4">
+            <summary className="cursor-pointer list-none font-bold text-slate-900">{labels.growthTitle} / {labels.lifeTitle}</summary>
+            <p className="mt-3 text-sm leading-6 text-slate-700">{sl(deep.growthPath, l)}</p>
+            <p className="mt-3 text-sm leading-6 text-slate-700">{sl(deep.lifeImplications, l)}</p>
+          </details>
+        </section>
+
         <ShareResultButton
           locale={l}
           heading={labels.title}

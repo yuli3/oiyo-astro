@@ -1,5 +1,6 @@
 import { useState } from "react";
 import type { Locale } from "../../lib/i18n";
+import { BirthDateField } from "../shared/BirthDateField";
 
 interface Props {
   locale: Locale;
@@ -792,11 +793,11 @@ export default function ZodiacPersonality({ locale }: Props) {
           </button>
           {showBirthday && (
             <div className="flex gap-2">
-              <input
-                type="date"
+              <BirthDateField
+                id="zodiac-birth-date"
                 value={birthday}
-                onChange={(e) => setBirthday((e.target as HTMLInputElement).value)}
-                className="flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm"
+                onChange={setBirthday}
+                className="flex-1"
               />
               <button
                 onClick={handleBirthdayLookup}

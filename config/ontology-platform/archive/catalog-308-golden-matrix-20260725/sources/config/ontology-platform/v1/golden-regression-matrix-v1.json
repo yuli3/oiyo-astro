@@ -1,0 +1,26 @@
+{
+  "schema": "oiyo.ontology-golden-regression-matrix",
+  "schemaVersion": 1,
+  "rankingContract": {
+    "minimumCases": 50,
+    "maximumCases": 100,
+    "minimumBySeedKind": {"action": 20, "hobby": 20, "work_context": 10}
+  },
+  "inputContracts": [
+    {"id":"empty-seed-rejected","seedIds":[],"expected":"reject"},
+    {"id":"unknown-seed-rejected","seedIds":["action.not_a_real_concept"],"expected":"reject"},
+    {"id":"duplicate-seed-idempotent","seedIds":["hobby.guitar","hobby.guitar"],"expectedTopId":"action.create"}
+  ],
+  "tieBreakContract": {
+    "id":"equal-weight-uses-stable-id-order",
+    "candidates":[{"to":"work_context.zeta","weight":0.5},{"to":"work_context.alpha","weight":0.5}],
+    "expectedTopId":"work_context.alpha"
+  },
+  "safetyContracts": {
+    "derivedWeightMaximum":0.54,
+    "derivedConfidenceMaximum":0.65,
+    "occupationOutgoingEdges":"forbidden",
+    "requiredExplanationLocales":["ko","en","ja","zh","fr","es"],
+    "requiredExplanationFields":["definition","realWorldContext","misconception","uncertainty"]
+  }
+}

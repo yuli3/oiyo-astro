@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
+import { BirthDateField } from '../shared/BirthDateField';
 import { civilDateToLocalNoon } from '../../lib/user/birth-record';
 import { differenceInCivilDays } from '../../lib/ontology/kernel/civil-date';
 import type { Locale } from '../../lib/i18n';
@@ -816,19 +817,11 @@ export default function BiorhythmCalculator({ locale }: Props) {
               boxShadow: '0 0 32px rgba(0,212,255,0.06)',
             }}
           >
-            <label
-              htmlFor="bio-birth-date"
-              className="block text-xs font-bold tracking-widest uppercase mb-3"
-              style={{ color: `${COLOR_PHYSICAL}aa` }}
-            >
-              {t('birthDateLabel', locale)}
-            </label>
-            <input
+            <BirthDateField
               id="bio-birth-date"
-              type="date"
+              label={t('birthDateLabel', locale)}
               value={birthDate}
-              onChange={(e) => {
-                const v = e.target.value;
+              onChange={(v) => {
                 setBirthDate(v);
                 if (/^\d{4}-\d{2}-\d{2}$/.test(v)) {
                   const [yy, mm, dd] = v.split('-').map(Number);
@@ -837,15 +830,6 @@ export default function BiorhythmCalculator({ locale }: Props) {
               }}
               min={minDate}
               max={maxDate}
-              aria-label={t('birthDateLabel', locale)}
-              className="w-full rounded-xl px-4 py-3 text-sm font-bold focus:outline-none"
-              style={{
-                background: 'rgba(0,212,255,0.07)',
-                border: `1px solid ${COLOR_PHYSICAL}33`,
-                color: '#e0f7ff',
-                caretColor: COLOR_PHYSICAL,
-                boxShadow: 'none',
-              }}
             />
           </div>
 

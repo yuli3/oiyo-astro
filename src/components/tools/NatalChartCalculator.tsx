@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import ShareResultButton from '../shared/ShareResultButton';
 import CopyResultLink from '../shared/CopyResultLink';
+import { BirthDateField, BirthTimeField } from '../shared/BirthDateField';
 import { computeNatalChart, type NatalChart } from '../../lib/ontology/natal/calculator';
 import { SIGN_INFO, CITIES, type NatalLocale } from '../../lib/ontology/natal/signs';
 // `readResultCode` is kept for one thing only: reading pre-T6 `?d=&c=&t=`
@@ -468,19 +469,16 @@ export default function NatalChartCalculator({ locale }: Props) {
       </header>
 
       <div className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
-        <label className="block">
-          <span className="text-sm font-bold text-slate-700">{t.dateLabel}</span>
-          <input
-            type="date"
-            value={form.date}
-            onChange={(e) => setForm((f) => ({ ...f, date: e.target.value }))}
-            className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"
-          />
-        </label>
+        <BirthDateField
+          id="natal-birth-date"
+          label={t.dateLabel}
+          value={form.date}
+          onChange={(v) => setForm((f) => ({ ...f, date: v }))}
+        />
 
         <div>
-          <div className="flex items-center justify-between">
-            <span className="text-sm font-bold text-slate-700">{t.timeLabel}</span>
+          <div className="mb-1 flex items-center justify-between">
+            <span className="text-[11px] font-black uppercase tracking-wider text-green-600">{t.timeLabel}</span>
             <label className="flex items-center gap-1.5 text-xs text-slate-500">
               <input
                 type="checkbox"
@@ -490,12 +488,11 @@ export default function NatalChartCalculator({ locale }: Props) {
               {t.unknownTime}
             </label>
           </div>
-          <input
-            type="time"
+          <BirthTimeField
+            id="natal-birth-time"
             value={form.time}
             disabled={form.unknown}
-            onChange={(e) => setForm((f) => ({ ...f, time: e.target.value }))}
-            className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm disabled:bg-slate-100 disabled:text-slate-400"
+            onChange={(v) => setForm((f) => ({ ...f, time: v }))}
           />
         </div>
 

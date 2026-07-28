@@ -85,6 +85,30 @@ describe("role visual system", () => {
     })).toMatchObject({ status: "tie", roleAid: null });
   });
 
+  it.each([
+    { leader: "focus", id: "immersion-v1", icon: "target" },
+    { leader: "connect", id: "connector-v1", icon: "users" },
+  ])("assigns the $leader archetype when $leader leads clearly", ({ leader, id, icon }) => {
+    const dimensions = ["explore", "focus", "connect"].map((dimId) => ({
+      id: dimId, score: dimId === leader ? 84 : 42, confidence: 0.9,
+    }));
+    const result = classifyRoleVisual({ dataCoverage: 1, dimensions });
+    expect(result.status).toBe("clear");
+    expect(result.roleAid).toEqual({ id, dimensionId: leader, icon, emoji: expect.any(String) });
+  });
+
+  it("falls back to no role aid for an unmapped dimension id even when clear", () => {
+    const result = classifyRoleVisual({
+      dataCoverage: 1,
+      dimensions: [
+        { id: "novel-dimension", score: 90, confidence: 0.9 },
+        { id: "focus", score: 40, confidence: 0.9 },
+      ],
+    });
+    expect(result.status).toBe("clear");
+    expect(result.roleAid).toBeNull();
+  });
+
   it("does not mutate the input", () => {
     const input = { dataCoverage: 1, dimensions: [{ id: "z", score: 10, confidence: 1 }, { id: "a", score: 80, confidence: 1 }] };
     const before = JSON.stringify(input);

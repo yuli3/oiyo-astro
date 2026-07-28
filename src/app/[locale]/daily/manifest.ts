@@ -1,4 +1,4 @@
-import { FeatureManifest } from "@/types/manifest";
+import type { FeatureManifest } from "@/types/manifest";
 
 export const dailyManifest: FeatureManifest = {
   category: ["fortune"],

@@ -35,14 +35,14 @@ export const ResultCard: React.FC<ResultCardProps> = ({
     amber: "from-amber-500/10 hover:from-amber-500/20",
     green: "from-green-500/10 hover:from-green-500/20",
     orange: "from-orange-500/10 hover:from-orange-500/20",
-    teal: "from-teal-500/10 hover:from-teal-500/20",
+    teal: "from-green-500/10 hover:from-green-500/20",
   };
 
   const textStyles = {
     amber: "text-amber-600",
     green: "text-green-600",
     orange: "text-orange-600",
-    teal: "text-teal-600",
+    teal: "text-green-600",
   };
 
   return (

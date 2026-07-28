@@ -783,7 +783,7 @@ function CategoryCard({ emoji, label, score, text }: { emoji: string; label: str
     score >= 4
       ? "from-amber-50 to-yellow-50 border-amber-200"
       : score >= 3
-      ? "from-blue-50 to-sky-50 border-blue-200"
+      ? "from-green-50 to-green-50 border-green-200"
       : "from-gray-50 to-slate-50 border-gray-200";
 
   return (

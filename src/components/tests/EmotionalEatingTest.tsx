@@ -434,11 +434,11 @@ export default function EmotionalEatingTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <div className="rounded-2xl border bg-card p-4 space-y-2">
-        <h3 className="font-bold text-sm text-emerald-600">{lb.strategies}</h3>
+        <h3 className="font-bold text-sm text-green-600">{lb.strategies}</h3>
         <ul className="space-y-2">
           {r.strategies.map(s => (
             <li key={s} className="text-sm text-muted-foreground flex gap-2 leading-relaxed">
-              <span className="text-emerald-500 mt-0.5 flex-none">→</span>{s}
+              <span className="text-green-500 mt-0.5 flex-none">→</span>{s}
             </li>
           ))}
         </ul>

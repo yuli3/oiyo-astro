@@ -221,7 +221,7 @@ export function CosmicIntroExperience() {
                 <h2 className="mb-4 text-2xl font-bold tracking-tight text-white sm:text-4xl">
                   {block.title}
                 </h2>
-                <p className="text-sm leading-relaxed text-violet-100/80 sm:text-lg">{block.body}</p>
+                <p className="text-sm leading-relaxed text-green-100/80 sm:text-lg">{block.body}</p>
               </div>
             </div>
           ))}

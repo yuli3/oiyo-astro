@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import type { Locale } from "../../lib/i18n";
 import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
+import { BirthDateField } from "../shared/BirthDateField";
 
 interface Props {
   locale: Locale;
@@ -794,15 +795,12 @@ export default function NumerologyCalculator({ locale }: Props) {
             className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
           />
         </div>
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">{ui.dateLabel}</label>
-          <input
-            type="date"
-            value={date}
-            onChange={(e) => setDate((e.target as HTMLInputElement).value)}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-        </div>
+        <BirthDateField
+          id="numerology-birth-date"
+          label={ui.dateLabel}
+          value={date}
+          onChange={setDate}
+        />
         <button
           onClick={result ? () => setResult(null) : calculate}
           disabled={!name.trim() || !date}

@@ -1,0 +1,60 @@
+{
+  "schema": "oiyo.ontology-platform-archive",
+  "schemaVersion": 1,
+  "id": "catalog-308-20260724",
+  "createdAt": "2026-07-24T12:29:44.419Z",
+  "immutable": true,
+  "sourceSchemaVersion": 1,
+  "counts": {
+    "concepts": 391,
+    "edges": 444
+  },
+  "files": [
+    {
+      "path": "config/ontology-platform/v1/concepts.json",
+      "sha256": "895181c4a70177fd2c813548bb8d822c93924a1455eaec08bd4e9ec85bfb6b11",
+      "bytes": 260760
+    },
+    {
+      "path": "config/ontology-platform/v1/edges.json",
+      "sha256": "14ea6cf1b3693f5f1b94cba5e04abb34a4257ab09ac299e528a137f6d75bdd97",
+      "bytes": 184569
+    },
+    {
+      "path": "config/ontology-platform/v1/golden.json",
+      "sha256": "14b6287db9875ea0fa0525d2ef8a9b5f4608e1b7a59d8f0155bd0da1f9e96b58",
+      "bytes": 1024
+    },
+    {
+      "path": "config/ontology-platform/v1/legacy-graph-compatibility-v1.json",
+      "sha256": "935c9bbbc1bf711f61032749d4240c1b5fdbb9021c73daf1b616e1ea43fb5a93",
+      "bytes": 646
+    },
+    {
+      "path": "config/ontology-platform/v1/curated-hobbies-v1.json",
+      "sha256": "479217ccd25177ba02a6080a93a5739c0f1cf84bf5a8d6ee5ddb4a256c92b674",
+      "bytes": 5818
+    },
+    {
+      "path": "src/manifest/ontology/shards/lifestyle/hobbies.ts",
+      "sha256": "e7a83f5142f125136e91a2cafcd88d38cc307be0e67a23149c28fe4c0700943f",
+      "bytes": 5314
+    },
+    {
+      "path": "src/lib/data-layer/shards/hobbies.ts",
+      "sha256": "10f6fecbe619b3ba431dd85003337bd321330729bc1e8e730cf73b77d612b811",
+      "bytes": 114844
+    },
+    {
+      "path": "src/lib/data-layer/shards/careers.ts",
+      "sha256": "b88132f2434624e556628d04c9d1942fc28d54c356e66c56e927f93b69bf18ab",
+      "bytes": 1403156
+    },
+    {
+      "path": "src/lib/ontology/lifestyle/data.ts",
+      "sha256": "ca980be60c41f6f2b38a16a9c6ab22d23c3e1e7606d6fe21684a7bb01f73c549",
+      "bytes": 5940
+    }
+  ],
+  "notes": "Local immutable snapshot of canonical ontology data and source catalogs. Never edit an existing archive; create a new archive for a new approved catalog state."
+}

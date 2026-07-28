@@ -1,4 +1,4 @@
-import { LocalizedContent } from "@/lib/system/i18n/locale-helper";
+import type { LocalizedContent } from "@/lib/system/i18n/locale-helper";
 
 import { APP_ROUTES } from "./routes";
 

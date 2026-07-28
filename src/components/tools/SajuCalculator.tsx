@@ -1,5 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
+import { BirthDateField, BirthTimeField } from '../shared/BirthDateField';
 import { analyzeLifeCategories } from '../../lib/ontology/saju/categories';
 import { birthCivilToInstant } from '../../lib/ontology/kernel/time';
 import { STEM_ORDER } from '../../manifest/data/saju/stems';
@@ -73,14 +74,14 @@ const ELEMENT_COLORS: Record<string, { bg: string; text: string; border: string 
   Fire: { bg: 'bg-red-50', text: 'text-red-700', border: 'border-red-200' },
   Earth: { bg: 'bg-yellow-50', text: 'text-yellow-700', border: 'border-yellow-200' },
   Metal: { bg: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-300' },
-  Water: { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-200' },
+  Water: { bg: 'bg-green-50', text: 'text-green-700', border: 'border-green-200' },
 };
 const ELEMENT_BAR_COLORS: Record<string, string> = {
   Wood: 'bg-green-500',
   Fire: 'bg-red-500',
   Earth: 'bg-yellow-500',
   Metal: 'bg-gray-500',
-  Water: 'bg-blue-500',
+  Water: 'bg-green-500',
 };
 const ELEMENT_EMOJIS: Record<string, string> = {
   Wood: '🌿', Fire: '🔥', Earth: '🌍', Metal: '⚙️', Water: '💧',
@@ -252,103 +253,94 @@ const LUCKY: Record<string, Record<Locale, { colors: string; numbers: string; di
 
 const L: Record<Locale, {
   title: string; subtitle: string;
-  birthYear: string; birthMonth: string; birthDay: string; birthHour: string;
+  birthDate: string; birthTime: string;
   calcBtn: string; resetBtn: string;
-  unknownHour: string;
+  unknownTime: string;
   fourPillars: string; yearPillar: string; monthPillar: string; dayPillar: string; hourPillar: string;
   stem: string; branch: string; animal: string; element: string;
   dominantElement: string; strengths: string; weaknesses: string; career: string;
   luckyColors: string; luckyNumbers: string; luckyDirections: string;
   disclaimer: string;
-  months: string[];
 }> = {
   ko: {
     title: '사주 계산기', subtitle: '사주팔자(四柱八字) — 생년월일시 기반 운명 분석',
-    birthYear: '태어난 해', birthMonth: '태어난 달', birthDay: '태어난 날', birthHour: '태어난 시간',
+    birthDate: '생년월일', birthTime: '태어난 시각',
     calcBtn: '사주 보기', resetBtn: '초기화',
-    unknownHour: '모름',
+    unknownTime: '모름',
     fourPillars: '사주 (四柱)', yearPillar: '년주(年柱)', monthPillar: '월주(月柱)', dayPillar: '일주(日柱)', hourPillar: '시주(時柱)',
     stem: '천간', branch: '지지', animal: '띠', element: '오행',
     dominantElement: '주요 오행', strengths: '강점', weaknesses: '약점', career: '적합 직업',
     luckyColors: '행운의 색', luckyNumbers: '행운의 숫자', luckyDirections: '행운의 방위',
     disclaimer: '사주는 동양의 전통적인 운명론으로, 과학적 근거가 없습니다. 재미와 자기 이해의 도구로만 활용하세요.',
-    months: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
   },
   en: {
     title: 'Saju Palja Calculator', subtitle: 'Free Korean Four Pillars birth chart reading',
-    birthYear: 'Birth Year', birthMonth: 'Birth Month', birthDay: 'Birth Day', birthHour: 'Birth Hour',
+    birthDate: 'Birth date', birthTime: 'Birth time',
     calcBtn: 'Read My Saju', resetBtn: 'Reset',
-    unknownHour: 'Unknown',
+    unknownTime: 'Unknown',
     fourPillars: 'Four Pillars (사주)', yearPillar: 'Year Pillar', monthPillar: 'Month Pillar', dayPillar: 'Day Pillar', hourPillar: 'Hour Pillar',
     stem: 'Heavenly Stem', branch: 'Earthly Branch', animal: 'Zodiac', element: 'Element',
     dominantElement: 'Dominant Element', strengths: 'Strengths', weaknesses: 'Weaknesses', career: 'Suited Careers',
     luckyColors: 'Lucky Colors', luckyNumbers: 'Lucky Numbers', luckyDirections: 'Lucky Directions',
     disclaimer: 'Saju is a traditional East Asian fortune-telling art with no scientific basis. Use it only for fun and self-reflection.',
-    months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
   },
   ja: {
     title: '四柱推命計算機', subtitle: '生年月日時から運命を分析',
-    birthYear: '生年', birthMonth: '生月', birthDay: '生日', birthHour: '生時',
+    birthDate: '生年月日', birthTime: '出生時刻',
     calcBtn: '四柱推命を見る', resetBtn: 'リセット',
-    unknownHour: '不明',
+    unknownTime: '不明',
     fourPillars: '四柱八字', yearPillar: '年柱', monthPillar: '月柱', dayPillar: '日柱', hourPillar: '時柱',
     stem: '天干', branch: '地支', animal: '干支', element: '五行',
     dominantElement: '主な五行', strengths: '長所', weaknesses: '短所', career: '適性',
     luckyColors: '幸運の色', luckyNumbers: '幸運の数字', luckyDirections: '幸運の方角',
     disclaimer: '四柱推命は東洋の伝統的な占術であり、科学的根拠はありません。楽しみと自己理解のツールとしてのみご利用ください。',
-    months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
   },
   fr: {
     title: 'Calculateur Saju (사주)', subtitle: "Quatre Piliers du Destin — Analyse de la carte natale",
-    birthYear: 'Année de naissance', birthMonth: 'Mois de naissance', birthDay: 'Jour de naissance', birthHour: 'Heure de naissance',
+    birthDate: 'Date de naissance', birthTime: 'Heure de naissance',
     calcBtn: 'Lire mon Saju', resetBtn: 'Réinitialiser',
-    unknownHour: 'Inconnu(e)',
+    unknownTime: 'Inconnu(e)',
     fourPillars: 'Quatre Piliers (사주)', yearPillar: 'Pilier Année', monthPillar: 'Pilier Mois', dayPillar: 'Pilier Jour', hourPillar: 'Pilier Heure',
     stem: 'Tige céleste', branch: 'Branche terrestre', animal: 'Zodiaque', element: 'Élément',
     dominantElement: 'Élément dominant', strengths: 'Points forts', weaknesses: 'Points faibles', career: 'Carrières adaptées',
     luckyColors: 'Couleurs porte-bonheur', luckyNumbers: 'Chiffres porte-bonheur', luckyDirections: 'Directions porte-bonheur',
     disclaimer: "Le Saju est un art divinatoire traditionnel est-asiatique sans base scientifique. Utilisez-le uniquement pour le plaisir et la réflexion personnelle.",
-    months: ['Jan', 'Fév', 'Mar', 'Avr', 'Mai', 'Juin', 'Juil', 'Août', 'Sep', 'Oct', 'Nov', 'Déc'],
   },
   es: {
     title: 'Calculadora Saju (사주)', subtitle: 'Cuatro Pilares del Destino — Análisis de carta natal',
-    birthYear: 'Año de nacimiento', birthMonth: 'Mes de nacimiento', birthDay: 'Día de nacimiento', birthHour: 'Hora de nacimiento',
+    birthDate: 'Fecha de nacimiento', birthTime: 'Hora de nacimiento',
     calcBtn: 'Leer mi Saju', resetBtn: 'Reiniciar',
-    unknownHour: 'Desconocido',
+    unknownTime: 'Desconocido',
     fourPillars: 'Cuatro Pilares (사주)', yearPillar: 'Pilar Año', monthPillar: 'Pilar Mes', dayPillar: 'Pilar Día', hourPillar: 'Pilar Hora',
     stem: 'Tronco celestial', branch: 'Rama terrestre', animal: 'Zodíaco', element: 'Elemento',
     dominantElement: 'Elemento dominante', strengths: 'Fortalezas', weaknesses: 'Debilidades', career: 'Carreras adecuadas',
     luckyColors: 'Colores de suerte', luckyNumbers: 'Números de suerte', luckyDirections: 'Direcciones de suerte',
     disclaimer: 'El Saju es un arte adivinatorio tradicional de Asia Oriental sin base científica. Úsalo solo para entretenimiento y reflexión.',
-    months: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'],
   },
   zh: {
     title: '四柱推命计算机', subtitle: '依生年月日时分析四柱八字',
-    birthYear: '出生年', birthMonth: '出生月', birthDay: '出生日', birthHour: '出生时辰',
+    birthDate: '出生日期', birthTime: '出生时间',
     calcBtn: '查看我的四柱', resetBtn: '重置',
-    unknownHour: '不知道',
+    unknownTime: '不知道',
     fourPillars: '四柱 (사주)', yearPillar: '年柱', monthPillar: '月柱', dayPillar: '日柱', hourPillar: '时柱',
     stem: '天干', branch: '地支', animal: '生肖', element: '五行',
     dominantElement: '主要五行', strengths: '优点', weaknesses: '缺点', career: '适合职业',
     luckyColors: '幸运颜色', luckyNumbers: '幸运数字', luckyDirections: '幸运方向',
     disclaimer: '四柱推命是东亚传统占术，没有科学依据。请仅用于娱乐和自我认识。',
-    months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
   },
   cn: {
     title: '四柱推命计算器', subtitle: '依生年月日时分析四柱八字',
-    birthYear: '出生年', birthMonth: '出生月', birthDay: '出生日', birthHour: '出生时辰',
+    birthDate: '出生日期', birthTime: '出生時間',
     calcBtn: '查看我的四柱', resetBtn: '重置',
-    unknownHour: '不知道',
+    unknownTime: '不知道',
     fourPillars: '四柱 (사주)', yearPillar: '年柱', monthPillar: '月柱', dayPillar: '日柱', hourPillar: '时柱',
     stem: '天干', branch: '地支', animal: '生肖', element: '五行',
     dominantElement: '主要五行', strengths: '优点', weaknesses: '缺点', career: '适合职业',
     luckyColors: '幸运颜色', luckyNumbers: '幸运数字', luckyDirections: '幸运方向',
     disclaimer: '四柱推命是东亚传统占术，没有科学依据。请仅用于娱乐和自我认识。',
-    months: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
   },
 };
 
-const HOURS = Array.from({ length: 24 }, (_, i) => i);
 const ELEMENT_ORDER = ['Wood', 'Fire', 'Earth', 'Metal', 'Water'] as const;
 
 const READING_COPY: Record<Locale, {
@@ -534,9 +526,25 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const [month, setMonth] = useState(6);
   const [day, setDay] = useState(15);
   const [hour, setHour] = useState<number | null>(null);
+  const dateValue = `${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+  const timeValue = hour !== null ? `${String(hour).padStart(2, '0')}:00` : '';
+  function handleDateChange(v: string) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v);
+    if (!m) return;
+    setYear(Number(m[1]));
+    setMonth(Number(m[2]));
+    setDay(Number(m[3]));
+    setDone(false);
+  }
+  function handleTimeChange(v: string) {
+    if (!v) return;
+    const m = /^(\d{2}):/.exec(v);
+    if (m) { setHour(Number(m[1])); setDone(false); }
+  }
   const [gender, setGender] = useState<'male' | 'female'>('male');
   const [done, setDone] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
+  const [imageSharing, setImageSharing] = useState(false);
 
   // 온톨로지에서 입력한 프로필(생년월일·시·성별)을 재사용 — 재입력 제거.
   const { profile, parsed, saveBirth } = useProfilePrefill();
@@ -582,6 +590,19 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
       setShareCopied(true);
       setTimeout(() => setShareCopied(false), 2500);
     }
+  }
+
+  async function shareImage() {
+    if (imageSharing) return;
+    setImageSharing(true);
+    try {
+      const { shareSajuCard } = await import('../../lib/saju-share-card');
+      const toPillar = (p: { label: string; stem: number; branch: number }) => ({ label: p.label, stem: STEMS[p.stem], branch: BRANCHES[p.branch], animal: BRANCH_ANIMALS[locale][p.branch], element: ELEMENTS[STEM_ELEMENT[p.stem]][locale] });
+      const known = result.pillars.map(toPillar);
+      const hour = known[3] ?? { label: t.hourPillar, stem: null, branch: null, animal: '', element: SHARE_LABELS[locale]?.privacyNote ?? 'Unknown time' };
+      await shareSajuCard({ locale, title: t.fourPillars, disclaimer: t.disclaimer, pillars: [known[0], known[1], known[2], hour] });
+      gaEvent('share_click', { test_id: 'saju', share_surface: 'image' });
+    } finally { setImageSharing(false); }
   }
 
   const result = useMemo(() => {
@@ -677,58 +698,32 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
       {/* Input */}
       <div className="bg-white rounded-2xl border border-gray-200 p-5 space-y-4">
-        {/* Year */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">{t.birthYear}</label>
-          <div className="flex items-center gap-3">
-            <input
-              type="range" min={1920} max={2024} step={1} value={year}
-              onChange={e => { setYear(Number(e.target.value)); setDone(false); }}
-              className="flex-1 accent-indigo-600"
-            />
-            <span className="w-16 text-right font-bold text-indigo-700 text-sm">{year}</span>
-          </div>
-        </div>
+        <BirthDateField
+          id="saju-birth-date"
+          label={t.birthDate}
+          value={dateValue}
+          onChange={handleDateChange}
+          max={new Date().toISOString().slice(0, 10)}
+        />
 
-        {/* Month + Day */}
-        <div className="grid grid-cols-2 gap-3">
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">{t.birthMonth}</label>
-            <select
-              value={month}
-              onChange={e => { setMonth(Number(e.target.value)); setDone(false); }}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-            >
-              {t.months.map((m, i) => <option key={i} value={i + 1}>{m}</option>)}
-            </select>
-          </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">{t.birthDay}</label>
-            <select
-              value={Math.min(day, daysInMonth)}
-              onChange={e => { setDay(Number(e.target.value)); setDone(false); }}
-              className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-            >
-              {Array.from({ length: daysInMonth }, (_, i) => i + 1).map(d => (
-                <option key={d} value={d}>{d}</option>
-              ))}
-            </select>
-          </div>
-        </div>
-
-        {/* Hour */}
         <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">{t.birthHour}</label>
-          <select
-            value={hour ?? ''}
-            onChange={e => { setHour(e.target.value === '' ? null : Number(e.target.value)); setDone(false); }}
-            className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-400"
-          >
-            <option value="">{t.unknownHour}</option>
-            {HOURS.map(h => (
-              <option key={h} value={h}>{String(h).padStart(2, '0')}:00</option>
-            ))}
-          </select>
+          <div className="mb-1 flex items-center justify-between">
+            <span className="text-[11px] font-black uppercase tracking-wider text-green-600">{t.birthTime}</span>
+            <label className="flex items-center gap-1.5 text-xs text-gray-500">
+              <input
+                type="checkbox"
+                checked={hour === null}
+                onChange={e => { setHour(e.target.checked ? null : 12); setDone(false); }}
+              />
+              {t.unknownTime}
+            </label>
+          </div>
+          <BirthTimeField
+            id="saju-birth-time"
+            value={timeValue}
+            disabled={hour === null}
+            onChange={handleTimeChange}
+          />
         </div>
 
         {/* Gender (for spouse-star analysis) */}
@@ -742,7 +737,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                 key={g}
                 type="button"
                 onClick={() => { setGender(g); setDone(false); }}
-                className={`rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${gender === g ? 'border-indigo-500 bg-indigo-50 text-indigo-700' : 'border-gray-300 text-gray-600'}`}
+                className={`rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${gender === g ? 'border-green-500 bg-green-50 text-green-700' : 'border-gray-300 text-gray-600'}`}
               >
                 {({ male: { ko: '남성', en: 'Male', ja: '男性', zh: '男', fr: 'Homme', es: 'Hombre' }, female: { ko: '여성', en: 'Female', ja: '女性', zh: '女', fr: 'Femme', es: 'Mujer' } } as Record<string, Record<Locale, string>>)[g][locale]}
               </button>
@@ -752,7 +747,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
         <button
           onClick={handleCalc}
-          className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-colors"
+          className="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
         >
           {t.calcBtn}
         </button>
@@ -763,7 +758,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
         <>
           {/* Four Pillars */}
           <div>
-            <h2 className="text-sm font-bold text-indigo-700 mb-3">{t.fourPillars}</h2>
+            <h2 className="text-sm font-bold text-green-700 mb-3">{t.fourPillars}</h2>
             <div className={`grid gap-3 ${result.pillars.length === 4 ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-3'}`}>
               {result.pillars.map(p => (
                 <PillarCard key={p.label} label={p.label} role={roles[p.key] ?? ''} stemIdx={p.stem} branchIdx={p.branch} />
@@ -786,7 +781,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             <div className="grid gap-3 sm:grid-cols-3">
               {reading.readSteps.map((step, index) => (
                 <div key={step} className="rounded-xl border border-gray-100 bg-gray-50 p-3">
-                  <p className="mb-1 text-[11px] font-bold text-indigo-600">0{index + 1}</p>
+                  <p className="mb-1 text-[11px] font-bold text-green-600">0{index + 1}</p>
                   <p className="text-xs leading-relaxed text-gray-700">{step}</p>
                 </div>
               ))}
@@ -870,7 +865,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                   <ul className="mt-2 space-y-1">
                     {reading.balanceQuestionItems.map((item) => (
                       <li key={item} className="flex gap-2 text-xs leading-relaxed text-gray-600">
-                        <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-indigo-400" />
+                        <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-green-400" />
                         <span>{item}</span>
                       </li>
                     ))}
@@ -941,16 +936,21 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             );
           })()}
 
-          <div className="rounded-2xl border border-indigo-100 bg-indigo-50 p-4">
-            <h2 className="text-sm font-semibold text-indigo-800">{reading.profileChanges}</h2>
-            <p className="mt-2 text-xs leading-relaxed text-indigo-900/75">{reading.profileChangesDesc}</p>
+          <div className="rounded-2xl border border-green-100 bg-green-50 p-4">
+            <h2 className="text-sm font-semibold text-green-800">{reading.profileChanges}</h2>
+            <p className="mt-2 text-xs leading-relaxed text-green-900/75">{reading.profileChangesDesc}</p>
           </div>
 
           <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
 
+          <button onClick={shareImage} disabled={imageSharing} className="w-full min-h-11 py-2.5 rounded-xl bg-green-600 text-sm font-bold text-white disabled:opacity-60">
+            {imageSharing ? '…' : '🖼️ 사주 이미지 저장·공유'}
+          </button>
+          <p className="text-xs text-gray-500 text-center">출생정보는 이미지에 포함되지 않습니다.</p>
+
           <button
             onClick={share}
-            className="w-full py-2.5 rounded-xl border-2 border-indigo-300 bg-indigo-50 text-sm font-bold text-indigo-700 hover:bg-indigo-100 transition-colors"
+            className="w-full py-2.5 rounded-xl border-2 border-green-300 bg-green-50 text-sm font-bold text-green-700 hover:bg-green-100 transition-colors"
           >
             {shareCopied ? `✅ ${(SHARE_LABELS[locale] ?? SHARE_LABELS.en).shareCopied}` : `🔗 ${(SHARE_LABELS[locale] ?? SHARE_LABELS.en).share}`}
           </button>

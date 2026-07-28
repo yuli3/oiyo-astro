@@ -75,26 +75,26 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
   const q = !done ? BALANCE_QUESTIONS[step] : null;
 
   return (
-    <div className="rounded-2xl border border-emerald-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-emerald-950">{u("title")}</h1>
-      {!done && step === 0 && <p className="mt-2 leading-7 text-emerald-700">{u("intro")}</p>}
+    <div className="rounded-2xl border border-green-100 bg-white p-5">
+      <h1 className="text-2xl font-bold text-green-950">{u("title")}</h1>
+      {!done && step === 0 && <p className="mt-2 leading-7 text-green-700">{u("intro")}</p>}
 
       {q && (
         <div className="mt-5">
-          <div className="mb-3 flex items-center gap-3 text-xs text-emerald-500">
+          <div className="mb-3 flex items-center gap-3 text-xs text-green-500">
             <span>{u("question")} {step + 1} / {total}</span>
-            <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-emerald-100">
-              <div className="h-full bg-emerald-500" style={{ width: `${(step / total) * 100}%` }} />
+            <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-green-100">
+              <div className="h-full bg-green-500" style={{ width: `${(step / total) * 100}%` }} />
             </div>
           </div>
-          <p className="text-xs font-semibold text-emerald-500">{tt(CAT[q.category], locale)}</p>
-          <p className="mt-1 text-lg font-semibold text-emerald-950">{loc(q.text as LC, locale)}</p>
+          <p className="text-xs font-semibold text-green-500">{tt(CAT[q.category], locale)}</p>
+          <p className="mt-1 text-lg font-semibold text-green-950">{loc(q.text as LC, locale)}</p>
           <div className="mt-3 space-y-2">
             {q.options.map((opt) => (
               <button key={opt.id} type="button" onClick={() => pick(q.id, opt.id)}
-                className="flex w-full items-center justify-between rounded-xl border border-emerald-100 bg-emerald-50/40 px-4 py-2.5 text-left text-sm text-emerald-900 transition-colors hover:border-emerald-300 hover:bg-emerald-50">
+                className="flex w-full items-center justify-between rounded-xl border border-green-100 bg-green-50/40 px-4 py-2.5 text-left text-sm text-green-900 transition-colors hover:border-green-300 hover:bg-green-50">
                 <span>{loc(opt.text as LC, locale)}</span>
-                <span className="text-xs text-emerald-400">{opt.score}</span>
+                <span className="text-xs text-green-400">{opt.score}</span>
               </button>
             ))}
           </div>
@@ -103,24 +103,24 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
 
       {done && result && (
         <div className="mt-5 space-y-5">
-          <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-center">
-            <p className="text-xs font-semibold text-emerald-600">{u("overall")}</p>
-            <p className="mt-1 text-4xl font-bold text-emerald-700">{Math.round(result.overallBalance)}</p>
-            <p className="mt-1 text-sm font-semibold text-emerald-800">{tt(LEVEL[result.balanceLevel], locale)}</p>
+          <div className="rounded-2xl border border-green-200 bg-green-50 p-4 text-center">
+            <p className="text-xs font-semibold text-green-600">{u("overall")}</p>
+            <p className="mt-1 text-4xl font-bold text-green-700">{Math.round(result.overallBalance)}</p>
+            <p className="mt-1 text-sm font-semibold text-green-800">{tt(LEVEL[result.balanceLevel], locale)}</p>
           </div>
 
           <div>
-            <p className="mb-2 text-sm font-bold text-emerald-800">{u("byArea")}</p>
+            <p className="mb-2 text-sm font-bold text-green-800">{u("byArea")}</p>
             <div className="space-y-1.5">
               {CAT_ORDER.map((k) => {
                 const v = Math.round((result.scores as Record<string, number>)[k] ?? 0);
                 return (
                   <div key={k} className="flex items-center gap-2">
-                    <span className="w-20 shrink-0 text-xs text-emerald-700">{tt(CAT[k], locale)}</span>
-                    <div className="h-2 flex-1 overflow-hidden rounded-full bg-emerald-100">
-                      <div className="h-full bg-emerald-500" style={{ width: `${v}%` }} />
+                    <span className="w-20 shrink-0 text-xs text-green-700">{tt(CAT[k], locale)}</span>
+                    <div className="h-2 flex-1 overflow-hidden rounded-full bg-green-100">
+                      <div className="h-full bg-green-500" style={{ width: `${v}%` }} />
                     </div>
-                    <span className="w-7 text-right text-xs text-emerald-500">{v}</span>
+                    <span className="w-7 text-right text-xs text-green-500">{v}</span>
                   </div>
                 );
               })}
@@ -128,9 +128,9 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
           </div>
 
           <div className="grid gap-3 sm:grid-cols-2">
-            <div className="rounded-xl border border-emerald-100 bg-emerald-50/50 p-3">
-              <p className="text-xs font-semibold text-emerald-600">✓ {u("strongest")}</p>
-              <p className="mt-1 text-sm text-emerald-900">{result.strongestAreas.map((a) => tt(CAT[a], locale)).join(", ")}</p>
+            <div className="rounded-xl border border-green-100 bg-green-50/50 p-3">
+              <p className="text-xs font-semibold text-green-600">✓ {u("strongest")}</p>
+              <p className="mt-1 text-sm text-green-900">{result.strongestAreas.map((a) => tt(CAT[a], locale)).join(", ")}</p>
             </div>
             <div className="rounded-xl border border-amber-100 bg-amber-50 p-3">
               <p className="text-xs font-semibold text-amber-700">△ {u("improve")}</p>
@@ -140,17 +140,17 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
 
           {result.recommendations.length > 0 && (
             <div>
-              <p className="mb-2 text-sm font-bold text-emerald-800">{u("recs")}</p>
+              <p className="mb-2 text-sm font-bold text-green-800">{u("recs")}</p>
               <ul className="space-y-1.5">
                 {result.recommendations.slice(0, 4).map((r, i) => (
-                  <li key={i} className="rounded-lg bg-emerald-50 px-3 py-2 text-sm leading-6 text-emerald-800">{loc(r as LC, locale)}</li>
+                  <li key={i} className="rounded-lg bg-green-50 px-3 py-2 text-sm leading-6 text-green-800">{loc(r as LC, locale)}</li>
                 ))}
               </ul>
             </div>
           )}
 
-          <button type="button" onClick={restart} className="rounded-full border border-emerald-300 px-5 py-2 text-sm font-medium text-emerald-700 hover:bg-emerald-50">{u("restart")}</button>
-          <p className="text-[11px] leading-5 text-emerald-400">{u("disclaimer")}</p>
+          <button type="button" onClick={restart} className="rounded-full border border-green-300 px-5 py-2 text-sm font-medium text-green-700 hover:bg-green-50">{u("restart")}</button>
+          <p className="text-[11px] leading-5 text-green-400">{u("disclaimer")}</p>
         </div>
       )}
     </div>

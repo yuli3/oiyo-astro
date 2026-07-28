@@ -1,0 +1,84 @@
+{
+  "schema": "oiyo.ontology-relation-vocabulary",
+  "schemaVersion": 1,
+  "source": {
+    "id": "editorial:ontology-relation-vocabulary-v1",
+    "method": "relation semantics and safety review",
+    "scope": "concept navigation only; never personal diagnosis, prediction, hiring, or health advice",
+    "reviewedAt": "2026-07-25"
+  },
+  "relations": [
+    {
+      "kind": "similar_to",
+      "status": "approved_for_curated_data",
+      "direction": "symmetric",
+      "allowedPairs": [["action","action"],["hobby","hobby"],["work_context","work_context"]],
+      "minimumEvidence": ["expert_curated","editorial","curated"],
+      "derivedAllowed": false,
+      "publicStatement": "두 활동 또는 개념을 같은 것으로 단정하지 않고, 비교해 볼 수 있는 관점으로만 제시한다."
+    },
+    {
+      "kind": "contrasts_with",
+      "status": "approved_for_curated_data",
+      "direction": "symmetric",
+      "allowedPairs": [["action","action"],["hobby","hobby"],["work_context","work_context"]],
+      "minimumEvidence": ["expert_curated","editorial","curated"],
+      "derivedAllowed": false,
+      "publicStatement": "선호나 개인의 성격을 반대라고 단정하지 않고, 활동 방식의 대비로만 설명한다."
+    },
+    {
+      "kind": "requires",
+      "status": "approved_for_curated_data",
+      "direction": "directed",
+      "allowedPairs": [["hobby","action"],["work_context","action"]],
+      "minimumEvidence": ["expert_curated","editorial","curated"],
+      "derivedAllowed": false,
+      "publicStatement": "모든 상황의 필수 조건이 아니라, 이 탐색 단위에서 보통 전제되는 행동으로 한정해 표현한다."
+    },
+    {
+      "kind": "develops",
+      "status": "approved_for_curated_data",
+      "direction": "directed",
+      "allowedPairs": [["hobby","action"],["work_context","action"]],
+      "minimumEvidence": ["research","expert_curated"],
+      "derivedAllowed": false,
+      "publicStatement": "능력 향상이나 결과를 보장하지 않으며, 연습 기회를 제공할 수 있다는 수준에서만 표현한다."
+    },
+    {
+      "kind": "drains",
+      "status": "deferred_human_review",
+      "direction": "directed",
+      "allowedPairs": [["hobby","action"],["work_context","action"]],
+      "minimumEvidence": ["research","expert_curated"],
+      "derivedAllowed": false,
+      "publicStatement": "개인의 에너지·건강·번아웃 결론으로 오용될 수 있어 사람 검토와 별도 표현 정책 전에는 data/UI에 쓰지 않는다."
+    },
+    {
+      "kind": "transitions_to",
+      "status": "approved_for_curated_data",
+      "direction": "directed",
+      "allowedPairs": [["hobby","hobby"],["work_context","work_context"]],
+      "minimumEvidence": ["expert_curated","editorial"],
+      "derivedAllowed": false,
+      "publicStatement": "전환의 성공·난이도·직업 결과를 약속하지 않고, 다음 탐색 후보라는 의미로만 제시한다."
+    },
+    {
+      "kind": "performed_in",
+      "status": "approved_for_curated_data",
+      "direction": "directed",
+      "allowedPairs": [["action","work_context"],["hobby","work_context"]],
+      "minimumEvidence": ["expert_curated","editorial","curated"],
+      "derivedAllowed": false,
+      "publicStatement": "현재의 used_in/transfers_to 관계를 대체하지 않으며, 구체적 근거가 있는 환경 설명에만 사용한다."
+    },
+    {
+      "kind": "often_combined_with",
+      "status": "approved_for_curated_data",
+      "direction": "symmetric",
+      "allowedPairs": [["hobby","hobby"],["action","action"]],
+      "minimumEvidence": ["expert_curated","editorial","curated"],
+      "derivedAllowed": false,
+      "publicStatement": "보편성·인과·개인 선호를 주장하지 않고, 함께 탐색할 수 있는 조합의 예시로만 제시한다."
+    }
+  ]
+}

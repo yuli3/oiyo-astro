@@ -118,6 +118,14 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     basis: ['Holland Occupational Themes (RIASEC)', "John Holland's theory of vocational personality types"],
     caution: 'reflection',
   },
+  'stress-response': {
+    basis: ["Fight-Flight-Freeze-Fawn (4F) stress response model concepts", "Cannon's fight-or-flight response theory"],
+    caution: 'reflection',
+  },
+  'stress-type': {
+    basis: ["Fight-Flight-Freeze-Fawn (4F) stress response model concepts", "Cannon's fight-or-flight response theory"],
+    caution: 'reflection',
+  },
   'riasec-quick': {
     basis: ['Holland Occupational Themes (RIASEC)', "John Holland's theory of vocational personality types"],
     caution: 'reflection',

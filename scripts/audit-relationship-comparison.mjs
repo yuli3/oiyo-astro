@@ -30,7 +30,16 @@ for (const field of ["answers", "responses", "raw", "legacy", "classifications",
 }
 
 if (contract.schema !== "oiyo.relationship-comparison-contract" || contract.schemaVersion !== 1) errors.push("contract envelope mismatch");
-if (contract.stage !== "non-public-foundation" || contract.publicRoutes?.length !== 0) errors.push("A5 foundation must expose no public route");
+if (!["non-public-foundation", "noindex-pilot"].includes(contract.stage)) errors.push("unknown A5 contract stage");
+if (contract.stage === "non-public-foundation" && contract.publicRoutes?.length !== 0) errors.push("A5 foundation must expose no public route");
+if (contract.stage === "noindex-pilot") {
+  if (!contract.publicRoutes?.length || contract.indexable !== false) errors.push("A5 noindex pilot must declare at least one non-indexable route");
+  for (const routePath of contract.publicRoutes ?? []) {
+    const routeSource = await readFile(new URL(routePath, root), "utf8").catch(() => "");
+    if (!routeSource.includes("noindex={true}")) errors.push(`A5 pilot route is not marked noindex: ${routePath}`);
+    if (!routeSource.includes("RelationshipComparisonPanel")) errors.push(`A5 pilot route does not render the engine's consent-gated panel: ${routePath}`);
+  }
+}
 if (contract.a3Compatibility?.acceptedSchema !== a3Compatibility.canonicalExportSchema || contract.a3Compatibility?.acceptedVersion !== a3Compatibility.canonicalExportVersion) errors.push("A3 compatibility drift");
 if (contract.a3Compatibility?.parser !== "parsePersonalProfileExportJson") errors.push("A3 canonical parser is not named");
 for (const field of ["rawResponsesIncluded", "userAuthoredIncluded", "sourceResultIdIncluded"]) {

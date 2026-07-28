@@ -708,11 +708,11 @@ export default function SpendingHabitsTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <div className="rounded-xl border bg-card p-4 space-y-2">
-        <h3 className="font-semibold text-sm text-emerald-600">{lb.strengthsLabel}</h3>
+        <h3 className="font-semibold text-sm text-green-600">{lb.strengthsLabel}</h3>
         <ul className="space-y-1">
           {r.strengths.map((s) => (
             <li key={s} className="text-sm text-muted-foreground flex gap-2">
-              <span className="text-emerald-500 flex-none">→</span>
+              <span className="text-green-500 flex-none">→</span>
               {s}
             </li>
           ))}

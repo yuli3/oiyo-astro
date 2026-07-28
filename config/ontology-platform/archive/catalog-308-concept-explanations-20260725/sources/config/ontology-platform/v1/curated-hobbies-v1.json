@@ -1,0 +1,37 @@
+{
+  "schema": "oiyo.ontology-curated-hobbies",
+  "schemaVersion": 1,
+  "source": {
+    "id": "editorial:curated-hobbies-v1",
+    "method": "editorial taxonomy review",
+    "scope": "non-clinical hobby exploration only",
+    "reviewedAt": "2026-07-24"
+  },
+  "hobbies": [
+    {"id":"running","labels":{"ko":"러닝","en":"Running","ja":"ランニング","zh":"跑步","fr":"Course à pied","es":"Correr"},"aliases":{"ko":["달리기"],"en":["jogging"]},"riasec":["R"]},
+    {"id":"strength_training","labels":{"ko":"근력 운동","en":"Strength training","ja":"筋力トレーニング","zh":"力量训练","fr":"Musculation","es":"Entrenamiento de fuerza"},"aliases":{"ko":["웨이트 트레이닝"],"en":["weight training"]},"riasec":["R"]},
+    {"id":"pilates","labels":{"ko":"필라테스","en":"Pilates","ja":"ピラティス","zh":"普拉提","fr":"Pilates","es":"Pilates"},"aliases":{"ko":[],"en":[]},"riasec":["R","S"]},
+    {"id":"tennis","labels":{"ko":"테니스","en":"Tennis","ja":"テニス","zh":"网球","fr":"Tennis","es":"Tenis"},"aliases":{"ko":[],"en":[]},"riasec":["R","S"]},
+    {"id":"badminton","labels":{"ko":"배드민턴","en":"Badminton","ja":"バドミントン","zh":"羽毛球","fr":"Badminton","es":"Bádminton"},"aliases":{"ko":[],"en":[]},"riasec":["R","S"]},
+    {"id":"guitar","labels":{"ko":"기타 연주","en":"Guitar","ja":"ギター演奏","zh":"吉他演奏","fr":"Guitare","es":"Guitarra"},"aliases":{"ko":["기타"],"en":["guitar playing"]},"riasec":["A"]},
+    {"id":"piano","labels":{"ko":"피아노 연주","en":"Piano","ja":"ピアノ演奏","zh":"钢琴演奏","fr":"Piano","es":"Piano"},"aliases":{"ko":["피아노"],"en":["piano playing"]},"riasec":["A"]},
+    {"id":"singing","labels":{"ko":"노래 부르기","en":"Singing","ja":"歌うこと","zh":"唱歌","fr":"Chant","es":"Canto"},"aliases":{"ko":["보컬"],"en":["vocal music"]},"riasec":["A","S"]},
+    {"id":"illustration","labels":{"ko":"일러스트","en":"Illustration","ja":"イラスト","zh":"插画","fr":"Illustration","es":"Ilustración"},"aliases":{"ko":["그림 그리기"],"en":["drawing"]},"riasec":["A"]},
+    {"id":"calligraphy","labels":{"ko":"캘리그래피","en":"Calligraphy","ja":"書道","zh":"书法","fr":"Calligraphie","es":"Caligrafía"},"aliases":{"ko":["손글씨"],"en":["hand lettering"]},"riasec":["A","C"]},
+    {"id":"knitting","labels":{"ko":"뜨개질","en":"Knitting","ja":"編み物","zh":"编织","fr":"Tricot","es":"Tejido"},"aliases":{"ko":[],"en":[]},"riasec":["A","R"]},
+    {"id":"sewing","labels":{"ko":"재봉","en":"Sewing","ja":"裁縫","zh":"缝纫","fr":"Couture","es":"Costura"},"aliases":{"ko":["바느질"],"en":[]},"riasec":["A","R"]},
+    {"id":"baking","labels":{"ko":"베이킹","en":"Baking","ja":"ベーキング","zh":"烘焙","fr":"Pâtisserie","es":"Repostería"},"aliases":{"ko":["제빵"],"en":[]},"riasec":["R","A"]},
+    {"id":"coffee_brewing","labels":{"ko":"커피 추출","en":"Coffee brewing","ja":"コーヒー抽出","zh":"咖啡冲煮","fr":"Préparation du café","es":"Preparación de café"},"aliases":{"ko":["홈카페"],"en":["home coffee"]},"riasec":["R","A"]},
+    {"id":"tea_tasting","labels":{"ko":"차 감상","en":"Tea tasting","ja":"お茶の鑑賞","zh":"品茶","fr":"Dégustation de thé","es":"Cata de té"},"aliases":{"ko":["티 테이스팅"],"en":[]},"riasec":["A","I"]},
+    {"id":"fermentation","labels":{"ko":"발효 음식 만들기","en":"Fermentation","ja":"発酵食品づくり","zh":"发酵食品制作","fr":"Fermentation","es":"Fermentación"},"aliases":{"ko":["발효"],"en":["fermented foods"]},"riasec":["R","I"]},
+    {"id":"camping","labels":{"ko":"캠핑","en":"Camping","ja":"キャンプ","zh":"露营","fr":"Camping","es":"Acampada"},"aliases":{"ko":[],"en":[]},"riasec":["R"]},
+    {"id":"fishing","labels":{"ko":"낚시","en":"Fishing","ja":"釣り","zh":"钓鱼","fr":"Pêche","es":"Pesca"},"aliases":{"ko":[],"en":[]},"riasec":["R"]},
+    {"id":"birdwatching","labels":{"ko":"조류 관찰","en":"Birdwatching","ja":"バードウォッチング","zh":"观鸟","fr":"Observation des oiseaux","es":"Observación de aves"},"aliases":{"ko":["새 관찰"],"en":["bird watching"]},"riasec":["I","R"]},
+    {"id":"travel_planning","labels":{"ko":"여행 계획","en":"Travel planning","ja":"旅行計画","zh":"旅行规划","fr":"Planification de voyage","es":"Planificación de viajes"},"aliases":{"ko":["여행"],"en":["trip planning"]},"riasec":["E","A"]},
+    {"id":"language_learning","labels":{"ko":"외국어 학습","en":"Language learning","ja":"語学学習","zh":"外语学习","fr":"Apprentissage des langues","es":"Aprendizaje de idiomas"},"aliases":{"ko":["언어 공부"],"en":["learning languages"]},"riasec":["I","S"]},
+    {"id":"journaling","labels":{"ko":"저널 쓰기","en":"Journaling","ja":"ジャーナリング","zh":"写日记","fr":"Tenue d'un journal","es":"Escritura de diario"},"aliases":{"ko":["일기 쓰기"],"en":["diary writing"]},"riasec":["A","I"]},
+    {"id":"podcast_listening","labels":{"ko":"팟캐스트 듣기","en":"Podcast listening","ja":"ポッドキャストを聴く","zh":"听播客","fr":"Écoute de podcasts","es":"Escuchar pódcast"},"aliases":{"ko":[],"en":["podcasts"]},"riasec":["I","A"]},
+    {"id":"open_source","labels":{"ko":"오픈소스 기여","en":"Open-source contribution","ja":"オープンソースへの貢献","zh":"开源贡献","fr":"Contribution open source","es":"Contribución de código abierto"},"aliases":{"ko":["오픈소스"],"en":["open source"]},"riasec":["I","C","S"]},
+    {"id":"home_repair","labels":{"ko":"집수리","en":"Home repair","ja":"DIY修理","zh":"家庭维修","fr":"Réparation domestique","es":"Reparación del hogar"},"aliases":{"ko":["DIY 수리"],"en":["DIY repair"]},"riasec":["R","I"]}
+  ]
+}

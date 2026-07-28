@@ -122,7 +122,7 @@ export const BreathingTimer: React.FC<BreathingTimerProps> = ({
       {/* Main Breathing Circle (The Pulse) */}
       <m.div
         animate={phase}
-        className="relative z-10 w-32 h-32 rounded-full bg-gradient-to-br from-green-400 to-teal-600 flex items-center justify-center shadow-2xl"
+        className="relative z-10 w-32 h-32 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center shadow-2xl"
         variants={circleVariants}
       >
         <div className="absolute inset-0 bg-white/20 rounded-full blur-md" />

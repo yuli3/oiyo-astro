@@ -2,9 +2,15 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-// Lane 3 "실제 나의 것": tactile chip-based profile builder (mindmap spirit).
-// Central "나" → categories → selectable chips. Avoids a blank text box.
-// Stored in oiyo:profile:v1 (new key, no collision with existing stores).
+// Lane 3 "실제 나의 것": radial explore-and-select profile builder.
+// Central "나" → fixed ring of 5 category nodes (always visible, angle math
+// shared with OntologyRelationOrbit). Tapping one reveals its chips in a
+// panel below the ring (accordion: only one category open at a time).
+// A polar "fan" layout for the chips themselves was tried and dropped —
+// with 6-7 chips per category the arc-length-per-chip is smaller than a
+// readable chip's width at any radius that still fits a 320px stage, so
+// they always overlapped (confirmed in-browser at 375px before this
+// version). Stored in oiyo:profile:v1 (unchanged from prior version).
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const KEY = "oiyo:profile:v1";
 
@@ -22,20 +28,25 @@ const CATS: Cat[] = [
     chips: { ko: ["성장", "안정", "자유", "영향력", "숙련", "연결", "의미"], en: ["Growth", "Stability", "Freedom", "Impact", "Mastery", "Connection", "Meaning"], ja: ["成長", "安定", "自由", "影響力", "熟達", "つながり", "意味"], zh: ["成长", "稳定", "自由", "影响力", "精通", "连接", "意义"], fr: ["Croissance", "Stabilité", "Liberté", "Impact", "Maîtrise", "Connexion", "Sens"], es: ["Crecimiento", "Estabilidad", "Libertad", "Impacto", "Maestría", "Conexión", "Sentido"] } },
 ];
 
-const UI: Record<Lang, { center: string; saved: string; count: (n: number) => string }> = {
-  ko: { center: "나", saved: "저장됨", count: (n) => `${n}개 선택` },
-  en: { center: "Me", saved: "Saved", count: (n) => `${n} selected` },
-  ja: { center: "私", saved: "保存", count: (n) => `${n}個選択` },
-  zh: { center: "我", saved: "已保存", count: (n) => `已选 ${n}` },
-  fr: { center: "Moi", saved: "Enregistré", count: (n) => `${n} choisis` },
-  es: { center: "Yo", saved: "Guardado", count: (n) => `${n} elegidos` },
+const UI: Record<Lang, { center: string; saved: string; count: (n: number) => string; hint: string }> = {
+  ko: { center: "나", saved: "저장됨", count: (n) => `${n}개 선택`, hint: "카테고리를 눌러 나를 채워보세요" },
+  en: { center: "Me", saved: "Saved", count: (n) => `${n} selected`, hint: "Tap a category to explore" },
+  ja: { center: "私", saved: "保存", count: (n) => `${n}個選択`, hint: "カテゴリーをタップして探索" },
+  zh: { center: "我", saved: "已保存", count: (n) => `已选 ${n}`, hint: "点击分类开始探索" },
+  fr: { center: "Moi", saved: "Enregistré", count: (n) => `${n} choisis`, hint: "Touchez une catégorie pour explorer" },
+  es: { center: "Yo", saved: "Guardado", count: (n) => `${n} elegidos`, hint: "Toca una categoría para explorar" },
 };
+
+const SIZE = 280;
+const CENTER = SIZE / 2;
+const RING_RADIUS = 92;
 
 export function ProfileMindmap({ locale }: { locale: string }) {
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
   const t = UI[lang];
   const [sel, setSel] = useState<Record<string, string[]>>({});
   const [hydrated, setHydrated] = useState(false);
+  const [openCat, setOpenCat] = useState<string | null>(null);
 
   useEffect(() => {
     try { const s = localStorage.getItem(KEY); if (s) { const p = JSON.parse(s); if (p && typeof p === "object" && p.chosen) setSel(p.chosen); } } catch {}
@@ -51,43 +62,94 @@ export function ProfileMindmap({ locale }: { locale: string }) {
   }, [sel, hydrated]);
 
   const total = useMemo(() => Object.values(sel).reduce((a, c) => a + c.length, 0), [sel]);
-  const toggle = (cat: string, chip: string) =>
+  const toggleChip = (cat: string, chip: string) =>
     setSel((s) => {
       const cur = s[cat] ?? [];
       return { ...s, [cat]: cur.includes(chip) ? cur.filter((x) => x !== chip) : [...cur, chip] };
     });
 
+  const ringPositions = useMemo(
+    () =>
+      CATS.map((cat, i) => {
+        const angle = (2 * Math.PI * i) / CATS.length - Math.PI / 2;
+        return { cat, angle, x: CENTER + RING_RADIUS * Math.cos(angle), y: CENTER + RING_RADIUS * Math.sin(angle) };
+      }),
+    [],
+  );
+
   return (
     <div className="rounded-[28px] border border-green-100 bg-white p-4 shadow-sm sm:p-5">
-      <div className="mb-4 flex items-center justify-between">
-        <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-green-700 text-sm font-black text-white">{t.center}</span>
+      <div className="mb-3 flex items-center justify-between">
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-700 text-sm font-black text-white">{t.center}</span>
         <span className="text-xs font-bold text-green-700">{total > 0 ? `✓ ${t.saved} · ${t.count(total)}` : t.count(0)}</span>
       </div>
-      <div className="space-y-4">
-        {CATS.map((cat) => (
-          <div key={cat.id}>
-            <p className="mb-1.5 text-[11px] font-black uppercase tracking-wider text-green-500">{cat.label[lang]}</p>
-            <div className="flex flex-wrap gap-2">
-              {cat.chips[lang].map((chip) => {
-                const on = (sel[cat.id] ?? []).includes(chip);
-                return (
-                  <button
-                    key={chip}
-                    type="button"
-                    onClick={() => toggle(cat.id, chip)}
-                    className={
-                      "rounded-full border px-3 py-1.5 text-xs font-bold transition " +
-                      (on ? "border-green-600 bg-green-600 text-white" : "border-green-200 bg-white text-green-800 hover:border-green-400")
-                    }
-                  >
-                    {chip}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-        ))}
+
+      <div className="relative mx-auto" style={{ width: SIZE, height: SIZE, maxWidth: "100%" }}>
+        <div className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-green-700 text-sm font-black text-white shadow-sm">
+          {t.center}
+        </div>
+
+        {ringPositions.map(({ cat, x, y }, i) => {
+          const label = cat.label[lang];
+          const count = (sel[cat.id] ?? []).length;
+          const isOpen = openCat === cat.id;
+          return (
+            <button
+              key={cat.id}
+              type="button"
+              aria-expanded={isOpen}
+              onClick={() => setOpenCat((c) => (c === cat.id ? null : cat.id))}
+              className="absolute flex w-16 -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 text-center transition-all duration-300 motion-reduce:transition-none motion-reduce:duration-0"
+              style={{ left: x, top: y }}
+            >
+              <span
+                className={
+                  "flex h-11 w-11 items-center justify-center rounded-full border text-sm font-black shadow-sm transition " +
+                  (isOpen ? "border-green-700 bg-green-700 text-white" : count > 0 ? "border-green-600 bg-white text-green-800" : "border-green-200 bg-white text-green-700 hover:border-green-400")
+                }
+              >
+                {i + 1}
+              </span>
+              <span className="line-clamp-2 text-[10px] font-bold leading-tight text-green-800">
+                {label}
+                {count > 0 ? ` · ${count}` : ""}
+              </span>
+            </button>
+          );
+        })}
       </div>
+
+      {openCat &&
+        (() => {
+          const cat = CATS.find((c) => c.id === openCat)!;
+          const chips = cat.chips[lang];
+          return (
+            <div className="mt-4 rounded-2xl border border-green-100 bg-green-50 p-3">
+              <p className="mb-2 text-[11px] font-black uppercase tracking-wider text-green-600">{cat.label[lang]}</p>
+              <div className="flex flex-wrap gap-2">
+                {chips.map((chip) => {
+                  const on = (sel[cat.id] ?? []).includes(chip);
+                  return (
+                    <button
+                      key={chip}
+                      type="button"
+                      aria-pressed={on}
+                      onClick={() => toggleChip(cat.id, chip)}
+                      className={
+                        "rounded-full border px-3 py-1.5 text-xs font-bold transition " +
+                        (on ? "border-green-600 bg-green-600 text-white" : "border-green-200 bg-white text-green-800 hover:border-green-400")
+                      }
+                    >
+                      {chip}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        })()}
+
+      {total === 0 && !openCat && <p className="mt-2 text-center text-xs font-bold text-green-500">{t.hint}</p>}
     </div>
   );
 }

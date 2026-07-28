@@ -60,13 +60,13 @@ export function OntologySharedProfileBanner({ locale }: { locale: string }) {
   const badges = signalBadges(signals);
 
   return (
-    <div className="mb-5 rounded-2xl border border-indigo-200 bg-indigo-50 p-4 text-indigo-900 shadow-sm">
-      <p className="text-[11px] font-black uppercase tracking-wider text-indigo-500">🔗 {t.badge}</p>
-      <p className="mt-1 text-xs leading-5 text-indigo-800">{t.body}</p>
+    <div className="mb-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-amber-900 shadow-sm">
+      <p className="text-[11px] font-black uppercase tracking-wider text-amber-600">🔗 {t.badge}</p>
+      <p className="mt-1 text-xs leading-5 text-amber-800">{t.body}</p>
       {badges.length > 0 && (
         <div className="mt-2.5 flex flex-wrap gap-1.5">
           {badges.map((b) => (
-            <span key={b.key} className="rounded-full bg-indigo-600 px-2.5 py-1 text-[11px] font-black text-white">
+            <span key={b.key} className="rounded-full bg-amber-600 px-2.5 py-1 text-[11px] font-black text-white">
               {b.text}
             </span>
           ))}

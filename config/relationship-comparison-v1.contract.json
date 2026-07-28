@@ -1,8 +1,10 @@
 {
   "schema": "oiyo.relationship-comparison-contract",
   "schemaVersion": 1,
-  "stage": "non-public-foundation",
-  "publicRoutes": [],
+  "stage": "noindex-pilot",
+  "stageDecision": "2026-07-19 세운이 동의/프라이버시 문구를 승인하고 구현을 지시(personal-ontology relationship-comparison 서브골). 공개 마케팅 명칭·색인 여부는 여전히 별도 사람 결정 대기 상태이므로 noindex를 유지한다.",
+  "publicRoutes": ["src/pages/[locale]/profile/relationship-comparison.astro"],
+  "indexable": false,
   "a3Compatibility": {
     "acceptedSchema": "oiyo.personal-profile-export",
     "acceptedVersion": 2,

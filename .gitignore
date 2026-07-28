@@ -2,6 +2,10 @@
 dist/
 # generated types
 .astro/
+.tmp/
+public/ontology-platform-v1/
+# Immutable source snapshots live in config/ontology-platform/archive/; generated runtime artifacts do not.
+.local-data/
 
 # dependencies
 node_modules/

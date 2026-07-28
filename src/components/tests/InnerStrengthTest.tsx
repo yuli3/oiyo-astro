@@ -198,7 +198,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
         <div className="text-center py-6">
           <div className="text-5xl mb-3">🧠</div>
           <h2 className="text-2xl font-bold text-slate-900">{lb.result}</h2>
-          <p className="text-slate-500 mt-1">{lb.totalLabel}: <span className="font-bold text-indigo-600 text-xl">{totalScore}/10</span></p>
+          <p className="text-slate-500 mt-1">{lb.totalLabel}: <span className="font-bold text-green-600 text-xl">{totalScore}/10</span></p>
         </div>
 
         <div className="grid grid-cols-1 gap-4">
@@ -220,7 +220,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
                   <div className="text-2xl font-black text-slate-700">{score}<span className="text-sm font-normal text-slate-400">/10</span></div>
                 </div>
                 <div className="w-full bg-slate-200 rounded-full h-2 mb-3">
-                  <div className={`h-2 rounded-full transition-all ${isStrength ? 'bg-green-500' : isGrowth ? 'bg-orange-400' : 'bg-indigo-500'}`} style={{ width: `${score * 10}%` }} />
+                  <div className={`h-2 rounded-full transition-all ${isStrength ? 'bg-green-500' : isGrowth ? 'bg-orange-400' : 'bg-green-500'}`} style={{ width: `${score * 10}%` }} />
                 </div>
                 <p className="text-xs text-slate-600">{score >= 7 ? dim.highAdvice[L] : dim.lowAdvice[L]}</p>
               </div>
@@ -264,7 +264,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
         />
         <RelatedReading locale={locale} topic="inner-strength" />
 
-        <button onClick={handleRestart} className="w-full py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors">
+        <button onClick={handleRestart} className="w-full py-3 rounded-xl bg-green-600 text-white font-bold hover:bg-green-700 transition-colors">
           {lb.restart}
         </button>
       </div>
@@ -286,13 +286,13 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
           <span>{Math.round(progress)}%</span>
         </div>
         <div className="w-full bg-slate-200 rounded-full h-2">
-          <div className="bg-indigo-500 h-2 rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
+          <div className="bg-green-500 h-2 rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
         </div>
       </div>
 
       {/* Dimension badge */}
       <div className="flex justify-center">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-indigo-50 text-indigo-700 text-xs font-bold rounded-full border border-indigo-100">
+        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full border border-green-100">
           {DIMENSIONS[q.dimension].icon} {DIMENSIONS[q.dimension].name[L]}
         </span>
       </div>
@@ -308,12 +308,12 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
               onClick={() => handleAnswer(idx)}
               className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border-2 transition-all text-left ${
                 answers[q.id] === idx
-                  ? 'border-indigo-500 bg-indigo-50 text-indigo-700 font-semibold'
-                  : 'border-slate-200 hover:border-indigo-300 hover:bg-slate-50'
+                  ? 'border-green-500 bg-green-50 text-green-700 font-semibold'
+                  : 'border-slate-200 hover:border-green-300 hover:bg-slate-50'
               }`}
             >
               <span className={`w-6 h-6 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
-                answers[q.id] === idx ? 'border-indigo-500 bg-indigo-500' : 'border-slate-300'
+                answers[q.id] === idx ? 'border-green-500 bg-green-500' : 'border-slate-300'
               }`}>
                 {answers[q.id] === idx && <span className="w-2 h-2 bg-white rounded-full" />}
               </span>
@@ -333,7 +333,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
         <button
           onClick={handleNext}
           disabled={answers[q.id] === undefined}
-          className="flex-1 py-3 rounded-xl bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+          className="flex-1 py-3 rounded-xl bg-green-600 text-white font-bold hover:bg-green-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
         >
           {current === total - 1 ? lb.submit : lb.next}
         </button>

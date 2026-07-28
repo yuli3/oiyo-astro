@@ -102,7 +102,7 @@ export default function GwansangReader({ locale: lp = 'ko' }: Props) {
                 {a.options.map((o) => (
                   <button key={o.key} onClick={() => setSel((s) => ({ ...s, [a.id]: o.key }))}
                     aria-pressed={sel[a.id] === o.key}
-                    className={`rounded-lg border px-2 py-3 text-center transition-colors ${sel[a.id] === o.key ? 'border-emerald-500 bg-emerald-50' : 'hover:bg-accent'}`}>
+                    className={`rounded-lg border px-2 py-3 text-center transition-colors ${sel[a.id] === o.key ? 'border-green-500 bg-green-50' : 'hover:bg-accent'}`}>
                     <div className="text-2xl mb-1">{o.emoji}</div>
                     <div className="text-xs font-medium">{o.label[l]}</div>
                   </button>
@@ -111,7 +111,7 @@ export default function GwansangReader({ locale: lp = 'ko' }: Props) {
             </div>
           ))}
           <button onClick={() => setDone(true)} disabled={!allPicked}
-            className="w-full rounded-xl bg-emerald-600 text-white px-4 py-3 text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-40">
+            className="w-full rounded-xl bg-green-600 text-white px-4 py-3 text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-40">
             {t.result}
           </button>
         </>
@@ -127,15 +127,15 @@ export default function GwansangReader({ locale: lp = 'ko' }: Props) {
                 <div key={a.id} className="rounded-xl border bg-card p-4 flex gap-3 items-start">
                   <span className="text-2xl flex-none">{o.emoji}</span>
                   <div>
-                    <p className="text-xs font-bold text-emerald-600">{a.label[l]} · {o.label[l]}</p>
+                    <p className="text-xs font-bold text-green-600">{a.label[l]} · {o.label[l]}</p>
                     <p className="text-sm text-muted-foreground leading-relaxed mt-0.5">{o.reading[l]}</p>
                   </div>
                 </div>
               )
             })}
           </div>
-          <div className="rounded-xl bg-emerald-50 border border-emerald-100 p-4">
-            <p className="text-sm text-emerald-900 leading-relaxed">{t.summary}</p>
+          <div className="rounded-xl bg-green-50 border border-green-100 p-4">
+            <p className="text-sm text-green-900 leading-relaxed">{t.summary}</p>
           </div>
           <button onClick={() => { setDone(false); setSel({}) }}
             className="w-full rounded-xl border bg-card px-4 py-2.5 text-sm font-bold hover:bg-accent transition-colors">

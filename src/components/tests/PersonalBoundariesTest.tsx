@@ -289,7 +289,7 @@ export default function PersonalBoundariesTest({ locale: lp = 'ko' }: Props) {
               key={i}
               onClick={() => pick(i)}
               aria-label={label}
-              className="w-full rounded-xl border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              className="w-full rounded-xl border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
             >
               <span className="w-7 h-7 rounded-full border-2 border-primary/30 flex items-center justify-center text-xs font-bold text-primary flex-none">{i + 1}</span>
               {label}
@@ -372,12 +372,12 @@ export default function PersonalBoundariesTest({ locale: lp = 'ko' }: Props) {
         })}
       </div>
 
-      <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4 space-y-2">
-        <h3 className="font-bold text-sm text-emerald-800">{lb.guidance}</h3>
+      <div className="rounded-2xl border border-green-200 bg-green-50 p-4 space-y-2">
+        <h3 className="font-bold text-sm text-green-800">{lb.guidance}</h3>
         <ul className="space-y-1">
           {r.guidance.map((g, i) => (
-            <li key={i} className="text-sm text-emerald-900 flex gap-2">
-              <span className="text-emerald-600 flex-none">→</span>{g}
+            <li key={i} className="text-sm text-green-900 flex gap-2">
+              <span className="text-green-600 flex-none">→</span>{g}
             </li>
           ))}
         </ul>
@@ -389,14 +389,14 @@ export default function PersonalBoundariesTest({ locale: lp = 'ko' }: Props) {
         <button
           onClick={restart}
           aria-label={lb.restart}
-          className="flex-1 rounded-xl border bg-card px-4 py-2 text-sm font-bold hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+          className="flex-1 rounded-xl border bg-card px-4 py-2 text-sm font-bold hover:bg-accent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
         >
           {lb.restart}
         </button>
         <button
           onClick={share}
           aria-label={lb.share}
-          className="flex-1 rounded-xl bg-emerald-600 text-white px-4 py-2 text-sm font-bold hover:bg-emerald-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+          className="flex-1 rounded-xl bg-green-600 text-white px-4 py-2 text-sm font-bold hover:bg-green-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
         >
           {lb.share}
         </button>

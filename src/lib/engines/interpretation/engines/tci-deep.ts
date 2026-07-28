@@ -62,6 +62,13 @@ export function interpretTCIDeep(scores: {
     return "high";
   };
 
+  const LEVEL_WORD: Record<"high" | "low" | "moderate", SixLangString> = {
+    high: { en: "high", es: "alta", fr: "élevée", ja: "高い", ko: "높은", zh: "较高的" },
+    low: { en: "low", es: "baja", fr: "faible", ja: "低い", ko: "낮은", zh: "较低的" },
+    moderate: { en: "moderate", es: "moderada", fr: "modérée", ja: "中程度の", ko: "보통 수준의", zh: "中等的" },
+  };
+  const levelWord = (score: number, locale: keyof SixLangString): string => LEVEL_WORD[getLevel(score)][locale] ?? LEVEL_WORD[getLevel(score)].en;
+
   const temperamentDimensions: TemperamentDimension[] = [
     {
       key: "NS",
@@ -167,12 +174,12 @@ export function interpretTCIDeep(scores: {
   ];
 
   const synthesis: SixLangString = {
-    en: `Your temperament blend (innate) shows ${getLevel(scores.NS)} novelty seeking, ${getLevel(scores.HA)} harm avoidance, ${getLevel(scores.RD)} reward dependence, and ${getLevel(scores.P)} persistence. Your character development includes ${getLevel(scores.SD)} self-directedness, ${getLevel(scores.C)} cooperativeness, and ${getLevel(scores.ST)} self-transcendence.`,
-    es: `Tu combinación de temperamento (innato) muestra ${getLevel(scores.NS)} búsqueda de novedad, ${getLevel(scores.HA)} evitación del daño, ${getLevel(scores.RD)} dependencia de la recompensa y ${getLevel(scores.P)} persistencia. El desarrollo de tu carácter incluye ${getLevel(scores.SD)} auto-dirección, ${getLevel(scores.C)} cooperatividad y ${getLevel(scores.ST)} auto-trascendencia.`,
-    fr: `Votre mélange de tempérament (inné) montre ${getLevel(scores.NS)} recherche de nouveauté, ${getLevel(scores.HA)} évitement du danger, ${getLevel(scores.RD)} dépendance à la récompense et ${getLevel(scores.P)} persistance. Le développement de votre caractère comprend ${getLevel(scores.SD)} autodétermination, ${getLevel(scores.C)} coopération et ${getLevel(scores.ST)} auto-transcendance.`,
-    ja: `気質（先天的）のブレンドは、${getLevel(scores.NS)}の新奇性追求、${getLevel(scores.HA)}の危害回避、${getLevel(scores.RD)}の報酬依存、${getLevel(scores.P)}の持続性を示しています。性格（後天的）の発達には、${getLevel(scores.SD)}の自己志向性、${getLevel(scores.C)}の協調性、${getLevel(scores.ST)}の自己超越が含まれます。`,
-    ko: `기질 조합(선천적)은 ${getLevel(scores.NS)} 자극 추구, ${getLevel(scores.HA)} 위험 회피, ${getLevel(scores.RD)} 보상 의존, ${getLevel(scores.P)} 인내력을 보입니다. 성격 발달은 ${getLevel(scores.SD)} 자기 주도성, ${getLevel(scores.C)} 협동성, ${getLevel(scores.ST)} 자기 초월을 포함합니다.`,
-    zh: `你的气质组合（先天）表现出 ${getLevel(scores.NS)} 追求新奇、${getLevel(scores.HA)} 回避伤害、${getLevel(scores.RD)} 奖励依赖和 ${getLevel(scores.P)} 持久性。你的性格发展包括 ${getLevel(scores.SD)} 自我导向、${getLevel(scores.C)} 合作性和 ${getLevel(scores.ST)} 自我超越。`,
+    en: `Your temperament blend (innate) shows ${levelWord(scores.NS, 'en')} novelty seeking, ${levelWord(scores.HA, 'en')} harm avoidance, ${levelWord(scores.RD, 'en')} reward dependence, and ${levelWord(scores.P, 'en')} persistence. Your character development includes ${levelWord(scores.SD, 'en')} self-directedness, ${levelWord(scores.C, 'en')} cooperativeness, and ${levelWord(scores.ST, 'en')} self-transcendence.`,
+    es: `Tu combinación de temperamento (innato) muestra búsqueda de novedad ${levelWord(scores.NS, 'es')}, evitación del daño ${levelWord(scores.HA, 'es')}, dependencia de la recompensa ${levelWord(scores.RD, 'es')} y persistencia ${levelWord(scores.P, 'es')}. El desarrollo de tu carácter incluye auto-dirección ${levelWord(scores.SD, 'es')}, cooperatividad ${levelWord(scores.C, 'es')} y auto-trascendencia ${levelWord(scores.ST, 'es')}.`,
+    fr: `Votre mélange de tempérament (inné) montre une recherche de nouveauté ${levelWord(scores.NS, 'fr')}, un évitement du danger ${levelWord(scores.HA, 'fr')}, une dépendance à la récompense ${levelWord(scores.RD, 'fr')} et une persistance ${levelWord(scores.P, 'fr')}. Le développement de votre caractère comprend une autodétermination ${levelWord(scores.SD, 'fr')}, une coopération ${levelWord(scores.C, 'fr')} et une auto-transcendance ${levelWord(scores.ST, 'fr')}.`,
+    ja: `気質（先天的）のブレンドは、${levelWord(scores.NS, 'ja')}新奇性追求、${levelWord(scores.HA, 'ja')}危害回避、${levelWord(scores.RD, 'ja')}報酬依存、${levelWord(scores.P, 'ja')}持続性を示しています。性格（後天的）の発達には、${levelWord(scores.SD, 'ja')}自己志向性、${levelWord(scores.C, 'ja')}協調性、${levelWord(scores.ST, 'ja')}自己超越が含まれます。`,
+    ko: `기질 조합(선천적)은 ${levelWord(scores.NS, 'ko')} 자극 추구, ${levelWord(scores.HA, 'ko')} 위험 회피, ${levelWord(scores.RD, 'ko')} 보상 의존, ${levelWord(scores.P, 'ko')} 인내력을 보입니다. 성격 발달은 ${levelWord(scores.SD, 'ko')} 자기 주도성, ${levelWord(scores.C, 'ko')} 협동성, ${levelWord(scores.ST, 'ko')} 자기 초월을 포함합니다.`,
+    zh: `你的气质组合（先天）表现出${levelWord(scores.NS, 'zh')}追求新奇、${levelWord(scores.HA, 'zh')}回避伤害、${levelWord(scores.RD, 'zh')}奖励依赖和${levelWord(scores.P, 'zh')}持久性。你的性格发展包括${levelWord(scores.SD, 'zh')}自我导向、${levelWord(scores.C, 'zh')}合作性和${levelWord(scores.ST, 'zh')}自我超越。`,
   };
 
   const lifeIntegration: SixLangString = {

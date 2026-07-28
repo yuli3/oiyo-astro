@@ -3,6 +3,7 @@ import Layout from '../../../layouts/Layout.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import SleepChronotypeTest from '../../../components/tests/SleepChronotypeTest';
+import SleepScheduleCalculator from '../../../components/tools/SleepScheduleCalculator';
 import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { buildQuizJsonLd } from '../../../lib/seo/quiz-json-ld';
 import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
@@ -18,7 +19,9 @@ const meta: Record<Locale, { title: string; description: string }> = {
   en: { title: 'Sleep Chronotype Test — Are You a Morning or Evening Person?', description: 'Discover your circadian rhythm chronotype and find your optimal sleep and productivity windows.' },
   ja: { title: '睡眠タイプテスト — 朝型か夜型か？', description: '自分のサーカディアンリズム（クロノタイプ）を知り、最適な睡眠と生産性の時間帯を把握しましょう。' },
   zh: { title: '睡眠类型测试 — 你是晨型人还是夜型人？', description: '了解你的昼夜节律（时间类型），找到最佳睡眠和生产力时间段。' },
-  fr: { title: 'Test de Chronotype — Êtes-vous du matin ou du soir?', description: 'Découvrez votre chronotype circadien et trouvez vos fenêtres optimales de sommeil et de productivité.' },
+  // fr 은 "calculateur de sommeil"(수면 계산기)로 검색된다. 페이지는 같은 일을 하면서
+  // "Test de Chronotype"이라고만 불러 어휘가 어긋나 있었다(0→21노출·27.8위).
+  fr: { title: 'Calculateur de Sommeil — Test de Chronotype', description: 'Calculateur de sommeil gratuit : découvrez votre chronotype circadien et trouvez vos fenêtres optimales de sommeil et de productivité.' },
   es: { title: 'Test de Cronotipo — ¿Eres madrugador/a o noctámbulo/a?', description: 'Descubre tu cronotipo circadiano y encuentra tus ventanas óptimas de sueño y productividad.' },
 };
 const m = meta[locale] ?? meta.en;
@@ -33,7 +36,9 @@ const content: Record<Locale, { introTitle: string; intro: string; conceptTitle:
 };
 
 const c = content[locale] ?? content.en;
-const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: c.faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) };
+const frenchFaqs = [{ question: 'Comment utiliser ce calculateur de sommeil ?', answer: 'Choisissez une heure de coucher ou de réveil, puis l’outil affiche des repères calculés à partir de 7 à 9 heures de sommeil.' }, { question: 'Combien d’heures de sommeil faut-il viser ?', answer: 'Ce calculateur affiche une plage de 7 à 9 heures à titre de repère. Les besoins peuvent varier selon l’âge, la santé et la situation.' }, { question: 'Ce calculateur peut-il diagnostiquer un trouble du sommeil ?', answer: 'Non. Il ne fournit pas de diagnostic. En cas de difficultés de sommeil persistantes ou de somnolence importante, demandez conseil à un professionnel de santé.' }];
+const faqs = locale === 'fr' ? frenchFaqs : c.faqs;
+const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) };
 const quizJsonLd = buildQuizJsonLd({
   name: m.title,
   description: m.description,
@@ -47,10 +52,11 @@ const quizJsonLd = buildQuizJsonLd({
   <script type="application/ld+json" set:html={JSON.stringify(quizJsonLd)} />
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="mx-auto max-w-2xl px-4 py-10">
-    <SleepChronotypeTest client:load locale={locale} />
-    <section class="mt-10 border-t border-violet-100 pt-8"><h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2><p class="mt-4 leading-8 text-violet-800">{c.intro}</p></section>
-    <section class="mt-10"><h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2><div class="mt-4 grid gap-4 md:grid-cols-3">{c.concepts.map((item) => (<article class="rounded-xl border border-violet-100 bg-white p-4"><h3 class="font-semibold text-violet-950">{item.title}</h3><p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p></article>))}</div></section>
-    <section class="mt-10"><h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2><div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">{c.faqs.map((faq) => (<details class="group p-4"><summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p></details>))}</div></section>
+    {locale === 'fr' && <><SleepScheduleCalculator client:load /><section class="mt-10"><h2 class="text-2xl font-bold text-green-950">Test de chronotype : matin ou soir ?</h2><div class="mt-5"><SleepChronotypeTest client:load locale={locale} showHeading={false} /></div><p class="mt-5 text-sm leading-6 text-green-800">Pour des conseils généraux sur le sommeil, consultez <a class="underline" href="https://www.ameli.fr/assure/sante/themes/insomnie-adulte/vivre-insomnie" rel="noopener noreferrer" target="_blank">ameli.fr</a> et <a class="underline" href="https://www.inserm.fr/dossier/sommeil/" rel="noopener noreferrer" target="_blank">l’Inserm</a>.</p></section></>}
+    {locale !== 'fr' && <SleepChronotypeTest client:load locale={locale} />}
+    <section class="mt-10 border-t border-green-100 pt-8"><h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2><p class="mt-4 leading-8 text-green-800">{c.intro}</p></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-green-950">{c.conceptTitle}</h2><div class="mt-4 grid gap-4 md:grid-cols-3">{c.concepts.map((item) => (<article class="rounded-xl border border-green-100 bg-white p-4"><h3 class="font-semibold text-green-950">{item.title}</h3><p class="mt-2 text-sm leading-6 text-green-700">{item.body}</p></article>))}</div></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-green-950">{c.faqTitle}</h2><div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">{faqs.map((faq) => (<details class="group p-4"><summary class="cursor-pointer list-none font-semibold text-green-950">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-green-700">{faq.answer}</p></details>))}</div></section>
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
     <RelatedTools locale={locale} tools={['lethargy','burnout','commuteMental','eq']} current="sleepType" />
   <PrintReportButton locale={locale} />

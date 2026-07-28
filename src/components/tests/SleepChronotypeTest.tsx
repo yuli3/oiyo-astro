@@ -632,9 +632,9 @@ const TYPE_COLORS: Record<Chronotype, string> = {
   dolphin: '#06b6d4',
 }
 
-interface Props { locale?: string }
+interface Props { locale?: string; showHeading?: boolean }
 
-export default function SleepChronotypeTest({ locale: lp = 'ko' }: Props) {
+export default function SleepChronotypeTest({ locale: lp = 'ko', showHeading = true }: Props) {
   const locale = lang(lp ?? 'ko')
   const lb = LABELS[locale]
   const questions = QUESTIONS[locale]
@@ -691,7 +691,7 @@ export default function SleepChronotypeTest({ locale: lp = 'ko' }: Props) {
     return (
       <div className="space-y-6">
         <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
+          {showHeading ? <h1 className="text-2xl font-bold">{lb.title}</h1> : <h2 className="text-2xl font-bold">{lb.title}</h2>}
           <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
         </div>
         <div className="space-y-1">
@@ -800,11 +800,11 @@ export default function SleepChronotypeTest({ locale: lp = 'ko' }: Props) {
       </div>
 
       <div className="rounded-2xl border bg-card p-4 space-y-2">
-        <h3 className="font-bold text-sm text-emerald-600">{lb.tips}</h3>
+        <h3 className="font-bold text-sm text-green-600">{lb.tips}</h3>
         <ul className="space-y-1">
           {r.tips.map(tip => (
             <li key={tip} className="text-sm text-muted-foreground flex gap-2">
-              <span className="text-emerald-500">→</span>{tip}
+              <span className="text-green-500">→</span>{tip}
             </li>
           ))}
         </ul>

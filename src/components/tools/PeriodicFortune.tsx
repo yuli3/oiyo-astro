@@ -1,16 +1,17 @@
 import { useMemo, useState, useEffect } from 'react';
 import { reading, periodKey, animalOf, signOf, elementOf, FIVE_ELEMENTS, type Locale, type Period } from '../../lib/fortune/periodic';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
+import { BirthDateField } from '../shared/BirthDateField';
 
 type Focus = 'trinity' | 'saju' | 'zodiac';
 
 const L: Record<Locale, {
-  birthPrompt: string; year: string; month: string; day: string; see: string;
+  birthPrompt: string; birthDate: string; see: string;
   saju: string; animal: string; sign: string; period: Record<Period, string>;
   periodTag: Record<Period, string>; note: string; elements: Record<string, string>;
   animals: string[]; signs: string[]; savedHint: string; focusIntro: Record<Focus, string>;
 }> = {
-  ko: { birthPrompt: '생년월일을 입력하면 사주 오행·12지신·별자리 세 관점의 운세가 나옵니다.', year: '년', month: '월', day: '일', see: '운세 보기',
+  ko: { birthPrompt: '생년월일을 입력하면 사주 오행·12지신·별자리 세 관점의 운세가 나옵니다.', birthDate: '생년월일', see: '운세 보기',
     saju: '사주 오행', animal: '12지신', sign: '별자리',
     period: { today: '오늘의 운세', weekly: '이번 주 운세', monthly: '이번 달 운세' },
     periodTag: { today: '오늘', weekly: '이번 주', monthly: '이번 달' },
@@ -19,7 +20,7 @@ const L: Record<Locale, {
     animals: ['쥐', '소', '호랑이', '토끼', '용', '뱀', '말', '양', '원숭이', '닭', '개', '돼지'],
     signs: ['양자리', '황소자리', '쌍둥이자리', '게자리', '사자자리', '처녀자리', '천칭자리', '전갈자리', '궁수자리', '염소자리', '물병자리', '물고기자리'], savedHint: '저장됨',
     focusIntro: { trinity: '세 관점을 함께 비교합니다.', saju: '사주 오행 흐름에 집중해 주기별 키워드를 봅니다.', zodiac: '태양 별자리 흐름에 집중해 주기별 키워드를 봅니다.' } },
-  en: { birthPrompt: 'Enter your birth date to see fortune from three angles: Saju five elements, Chinese zodiac, and star sign.', year: 'Y', month: 'M', day: 'D', see: 'See fortune',
+  en: { birthPrompt: 'Enter your birth date to see fortune from three angles: Saju five elements, Chinese zodiac, and star sign.', birthDate: 'Birth date', see: 'See fortune',
     saju: 'Saju Five Elements', animal: 'Chinese Zodiac', sign: 'Star Sign',
     period: { today: "Today's Fortune", weekly: 'This Week', monthly: 'This Month' },
     periodTag: { today: 'today', weekly: 'this week', monthly: 'this month' },
@@ -28,7 +29,7 @@ const L: Record<Locale, {
     animals: ['Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'],
     signs: ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'], savedHint: 'saved',
     focusIntro: { trinity: 'Compare the three symbolic lenses together.', saju: 'Focus on the Saju five-element rhythm for this cycle.', zodiac: 'Focus on your Sun-sign rhythm for this cycle.' } },
-  ja: { birthPrompt: '生年月日を入力すると四柱五行・十二支・星座の3つの視点で運勢が出ます。', year: '年', month: '月', day: '日', see: '運勢を見る',
+  ja: { birthPrompt: '生年月日を入力すると四柱五行・十二支・星座の3つの視点で運勢が出ます。', birthDate: '生年月日', see: '運勢を見る',
     saju: '四柱の五行', animal: '十二支', sign: '星座',
     period: { today: '今日の運勢', weekly: '今週の運勢', monthly: '今月の運勢' },
     periodTag: { today: '今日', weekly: '今週', monthly: '今月' },
@@ -37,7 +38,7 @@ const L: Record<Locale, {
     animals: ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'],
     signs: ['牡羊座', '牡牛座', '双子座', '蟹座', '獅子座', '乙女座', '天秤座', '蠍座', '射手座', '山羊座', '水瓶座', '魚座'], savedHint: '保存済み',
     focusIntro: { trinity: '三つの象徴体系を一緒に比較します。', saju: '四柱五行の周期的な流れに集中して読みます。', zodiac: '太陽星座の周期的な流れに集中して読みます。' } },
-  zh: { birthPrompt: '输入出生日期，从四柱五行、生肖、星座三个角度查看运势。', year: '年', month: '月', day: '日', see: '查看运势',
+  zh: { birthPrompt: '输入出生日期，从四柱五行、生肖、星座三个角度查看运势。', birthDate: '出生日期', see: '查看运势',
     saju: '四柱五行', animal: '生肖', sign: '星座',
     period: { today: '今日运势', weekly: '本周运势', monthly: '本月运势' },
     periodTag: { today: '今日', weekly: '本周', monthly: '本月' },
@@ -46,7 +47,7 @@ const L: Record<Locale, {
     animals: ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪'],
     signs: ['白羊座', '金牛座', '双子座', '巨蟹座', '狮子座', '处女座', '天秤座', '天蝎座', '射手座', '摩羯座', '水瓶座', '双鱼座'], savedHint: '已保存',
     focusIntro: { trinity: '同时比较三个象征视角。', saju: '聚焦四柱五行在本周期的关键词。', zodiac: '聚焦太阳星座在本周期的关键词。' } },
-  fr: { birthPrompt: 'Entrez votre date de naissance pour voir la fortune sous trois angles : cinq éléments Saju, zodiaque chinois et signe astral.', year: 'A', month: 'M', day: 'J', see: 'Voir',
+  fr: { birthPrompt: 'Entrez votre date de naissance pour voir la fortune sous trois angles : cinq éléments Saju, zodiaque chinois et signe astral.', birthDate: 'Date de naissance', see: 'Voir',
     saju: 'Cinq éléments Saju', animal: 'Zodiaque chinois', sign: 'Signe astral',
     period: { today: "Aujourd'hui", weekly: 'Cette semaine', monthly: 'Ce mois' },
     periodTag: { today: "aujourd'hui", weekly: 'cette semaine', monthly: 'ce mois' },
@@ -55,7 +56,7 @@ const L: Record<Locale, {
     animals: ['Rat', 'Bœuf', 'Tigre', 'Lapin', 'Dragon', 'Serpent', 'Cheval', 'Chèvre', 'Singe', 'Coq', 'Chien', 'Cochon'],
     signs: ['Bélier', 'Taureau', 'Gémeaux', 'Cancer', 'Lion', 'Vierge', 'Balance', 'Scorpion', 'Sagittaire', 'Capricorne', 'Verseau', 'Poissons'], savedHint: 'enregistré',
     focusIntro: { trinity: 'Comparez les trois lectures symboliques ensemble.', saju: 'Concentrez-vous sur le rythme Saju des cinq éléments pour ce cycle.', zodiac: 'Concentrez-vous sur le rythme de votre signe solaire pour ce cycle.' } },
-  es: { birthPrompt: 'Introduce tu fecha de nacimiento para ver la fortuna desde tres ángulos: cinco elementos Saju, zodiaco chino y signo.', year: 'A', month: 'M', day: 'D', see: 'Ver',
+  es: { birthPrompt: 'Introduce tu fecha de nacimiento para ver la fortuna desde tres ángulos: cinco elementos Saju, zodiaco chino y signo.', birthDate: 'Fecha de nacimiento', see: 'Ver',
     saju: 'Cinco elementos Saju', animal: 'Zodiaco chino', sign: 'Signo',
     period: { today: 'Hoy', weekly: 'Esta semana', monthly: 'Este mes' },
     periodTag: { today: 'hoy', weekly: 'esta semana', monthly: 'este mes' },
@@ -71,7 +72,7 @@ const ELEM_COLOR: Record<string, string> = { wood: '#16a34a', fire: '#dc2626', e
 export default function PeriodicFortune({ locale = 'ko', period = 'today', focus = 'trinity' }: { locale?: Locale; period?: Period; focus?: Focus }) {
   const t = L[locale] ?? L.en;
   const [birth, setBirth] = useState<{ y: number; m: number; d: number } | null>(null);
-  const [yy, setYy] = useState(''); const [mm, setMm] = useState(''); const [dd, setDd] = useState('');
+  const [dateInput, setDateInput] = useState('');
 
   // 온톨로지 프로필(생년월일)에서 자동 채움 — 재입력 제거.
   const { parsed, saveBirth } = useProfilePrefill();
@@ -80,7 +81,9 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
   }, [parsed]);
 
   const submit = () => {
-    const y = +yy, m = +mm, d = +dd;
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateInput);
+    if (!match) return;
+    const y = Number(match[1]), m = Number(match[2]), d = Number(match[3]);
     if (y >= 1900 && y <= 2100 && m >= 1 && m <= 12 && d >= 1 && d <= 31) {
       setBirth({ y, m, d });
       saveBirth({ year: y, month: m, day: d }); // 다른 도구로 전파
@@ -115,14 +118,16 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
     return (
       <div className="space-y-4">
         <p className="text-sm text-muted-foreground">{focus === 'trinity' ? t.birthPrompt : t.focusIntro[focus]}</p>
-        <div className="flex gap-2">
-          <input inputMode="numeric" placeholder={t.year} value={yy} onChange={(e) => setYy(e.target.value.replace(/\D/g, '').slice(0, 4))}
-            className="w-24 rounded-xl border bg-background px-3 py-2.5 text-center text-sm outline-none focus:border-primary" aria-label={t.year} />
-          <input inputMode="numeric" placeholder={t.month} value={mm} onChange={(e) => setMm(e.target.value.replace(/\D/g, '').slice(0, 2))}
-            className="w-16 rounded-xl border bg-background px-3 py-2.5 text-center text-sm outline-none focus:border-primary" aria-label={t.month} />
-          <input inputMode="numeric" placeholder={t.day} value={dd} onChange={(e) => setDd(e.target.value.replace(/\D/g, '').slice(0, 2))}
-            className="w-16 rounded-xl border bg-background px-3 py-2.5 text-center text-sm outline-none focus:border-primary" aria-label={t.day} />
-          <button onClick={submit} className="ml-auto rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground hover:opacity-90">{t.see}</button>
+        <div className="flex items-end gap-2">
+          <BirthDateField
+            id="periodic-birth-date"
+            label={t.birthDate}
+            value={dateInput}
+            onChange={setDateInput}
+            max={new Date().toISOString().slice(0, 10)}
+            className="flex-1"
+          />
+          <button onClick={submit} className="h-12 rounded-xl bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90">{t.see}</button>
         </div>
         <p className="text-[11px] text-muted-foreground">{t.note}</p>
       </div>

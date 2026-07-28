@@ -39,9 +39,9 @@ export function ExplorationRecommenderPrototype({ locale }: Props) {
     ...PROFILES[profile], accessibilityNeeds: [], budget, maxRisk: "low", socialMode, space, timeMinutes,
   }, 3, locale), [budget, locale, profile, socialMode, space, timeMinutes]);
 
-  return <section className="mt-8 rounded-3xl border border-indigo-200 bg-white p-4 text-slate-800 shadow-sm">
-    <h2 className="text-lg font-black text-indigo-950">🧪 {c.title}</h2>
-    <p className="mt-1 text-xs leading-5 text-indigo-700">{c.note}</p>
+  return <section className="mt-8 rounded-3xl border border-green-200 bg-white p-4 text-slate-800 shadow-sm">
+    <h2 className="text-lg font-black text-green-950">🧪 {c.title}</h2>
+    <p className="mt-1 text-xs leading-5 text-green-700">{c.note}</p>
     <div className="mt-4 grid gap-3 sm:grid-cols-2">
       <label className="text-xs font-bold">{c.profile}<select className="mt-1 w-full rounded-lg border p-2" value={profile} onChange={(event) => setProfile(event.target.value as keyof typeof PROFILES)}><option value="balanced">{c.balanced}</option><option value="maker">{c.maker}</option><option value="social">{c.social}</option></select></label>
       <label className="text-xs font-bold">{c.time}<select className="mt-1 w-full rounded-lg border p-2" value={timeMinutes} onChange={(event) => setTimeMinutes(Number(event.target.value))}><option value={20}>20m</option><option value={30}>30m</option><option value={60}>60m</option></select></label>
@@ -50,8 +50,8 @@ export function ExplorationRecommenderPrototype({ locale }: Props) {
       <label className="text-xs font-bold sm:col-span-2">{c.mode}<select className="mt-1 w-full rounded-lg border p-2" value={socialMode} onChange={(event) => setSocialMode(event.target.value as ExplorationSocialMode)}><option value="solo">{c.modes[0]}</option><option value="together">{c.modes[1]}</option></select></label>
     </div>
     <ol className="mt-5 space-y-3" aria-live="polite">
-      {result.recommendations.map((item, index) => <li key={item.id} className="rounded-2xl bg-indigo-50 p-3">
-        <div className="flex items-start justify-between gap-3"><h3 className="font-black">{index + 1}. {item.environmentToExplore}</h3><span className="shrink-0 rounded-full bg-indigo-700 px-2 py-1 text-xs font-black text-white">{c.score} {item.score}</span></div>
+      {result.recommendations.map((item, index) => <li key={item.id} className="rounded-2xl bg-green-50 p-3">
+        <div className="flex items-start justify-between gap-3"><h3 className="font-black">{index + 1}. {item.environmentToExplore}</h3><span className="shrink-0 rounded-full bg-green-700 px-2 py-1 text-xs font-black text-white">{c.score} {item.score}</span></div>
         <p className="mt-2 text-sm leading-6">{item.experiment20Minutes}</p>
         <p className="mt-2 text-xs"><b>{c.support}:</b> {item.supportingReasons.map((reason) => `${reason.text} (${reason.score})`).join(" · ")}</p>
         <p className="mt-1 text-xs"><b>{c.counter}:</b> {item.counterReasons.map((reason) => `${reason.text} (${reason.score})`).join(" · ")}</p>

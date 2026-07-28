@@ -542,7 +542,7 @@ export default function BoundaryStyleTest({ locale: localeProp }: Props) {
 
     return (
       <div className="space-y-6">
-        <div className="rounded-2xl bg-gradient-to-br from-green-50 to-purple-50 p-6 text-center">
+        <div className="rounded-2xl bg-gradient-to-br from-green-50 to-green-50 p-6 text-center">
           <p className="mb-1 text-sm font-medium text-gray-500">{tx.resultTitle}</p>
           <div className="mb-2 text-5xl">{r.emoji}</div>
           <h2 className="text-2xl font-bold text-gray-900">{rd.title}</h2>

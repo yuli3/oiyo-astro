@@ -69,7 +69,7 @@ const TCI_OPTIONS = [
     value: 4,
   },
   {
-    color: "bg-teal-500",
+    color: "bg-green-500",
     id: "5",
     textKey: "ontology.tci.options.5",
     value: 5,

@@ -102,7 +102,7 @@ export function DestinyConnectionView({
       case "metal":
         return <Zap className="w-5 h-5 text-slate-400" />;
       case "water":
-        return <Droplets className="w-5 h-5 text-blue-500" />;
+        return <Droplets className="w-5 h-5 text-green-500" />;
       case "wood":
         return <Sprout className="w-5 h-5 text-green-500" />;
       default:

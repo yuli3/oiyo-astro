@@ -54,13 +54,13 @@ export default function JourneyCourse({ locale, journey, steps }: Props) {
   const pct = steps.length ? Math.round((count / steps.length) * 100) : 0;
 
   return (
-    <div className="mt-6 rounded-2xl border border-violet-200 bg-violet-50/50 p-5">
+    <div className="mt-6 rounded-2xl border border-green-200 bg-green-50/50 p-5">
       <div className="flex items-center justify-between gap-2">
-        <p className="text-[11px] font-black uppercase tracking-widest text-violet-700">{t.heading}</p>
-        <span className="text-xs font-bold text-violet-500">{t.progress(count, steps.length)}</span>
+        <p className="text-[11px] font-black uppercase tracking-widest text-green-700">{t.heading}</p>
+        <span className="text-xs font-bold text-green-500">{t.progress(count, steps.length)}</span>
       </div>
-      <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-violet-100" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
-        <div className="h-2 rounded-full bg-violet-500 transition-all" style={{ width: `${pct}%` }} />
+      <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-green-100" role="progressbar" aria-valuenow={pct} aria-valuemin={0} aria-valuemax={100}>
+        <div className="h-2 rounded-full bg-green-500 transition-all" style={{ width: `${pct}%` }} />
       </div>
       <ul className="mt-4 space-y-2">
         {steps.map((s, i) => {
@@ -73,14 +73,14 @@ export default function JourneyCourse({ locale, journey, steps }: Props) {
                 aria-pressed={checked}
                 aria-label={`${s.label} — ${t.done}`}
                 className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold transition-colors ${
-                  checked ? 'border-violet-500 bg-violet-500 text-white' : 'border-violet-300 bg-white text-violet-300 hover:border-violet-500'
+                  checked ? 'border-green-500 bg-green-500 text-white' : 'border-green-300 bg-white text-green-300 hover:border-green-500'
                 }`}
               >
                 {checked ? '✓' : i + 1}
               </button>
               <a
                 href={s.href}
-                className={`text-sm font-medium transition-colors ${checked ? 'text-violet-400 line-through' : 'text-violet-900 hover:text-violet-600'}`}
+                className={`text-sm font-medium transition-colors ${checked ? 'text-green-400 line-through' : 'text-green-900 hover:text-green-600'}`}
               >
                 {s.label}
               </a>
@@ -89,13 +89,13 @@ export default function JourneyCourse({ locale, journey, steps }: Props) {
         })}
       </ul>
       {loaded && count === steps.length && steps.length > 0 && (
-        <p className="mt-4 text-sm font-bold text-violet-700">{t.complete}</p>
+        <p className="mt-4 text-sm font-bold text-green-700">{t.complete}</p>
       )}
       {count > 0 && (
         <button
           type="button"
           onClick={() => persist([])}
-          className="mt-3 text-xs text-violet-400 underline underline-offset-2 hover:text-violet-600"
+          className="mt-3 text-xs text-green-400 underline underline-offset-2 hover:text-green-600"
         >
           {t.reset}
         </button>

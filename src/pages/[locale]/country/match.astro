@@ -23,6 +23,18 @@ const meta: Record<string, { title: string; description: string }> = {
     title: '自分に合う国を探す — ライフスタイル国マッチング',
     description: '気候・都市・文化などの好みから、あなたに最も合う国を見つけるテスト。旅行・移住・一か月暮らしのヒントに。無料。',
   },
+  zh: {
+    title: '寻找最适合你的国家 — 生活方式国家测试',
+    description: '通过气候、城市、文化等几项偏好，为你找到最契合的国家。为旅行、移居或短居海外提供灵感。免费。',
+  },
+  fr: {
+    title: 'Trouvez votre pays idéal — Quiz de style de vie',
+    description: "Répondez à quelques préférences (climat, ville, culture) et découvrez les pays qui vous correspondent le mieux. Une inspiration pour voyager, s'expatrier ou vivre un mois à l'étranger. Gratuit.",
+  },
+  es: {
+    title: 'Encuentra tu país ideal — Test de estilo de vida',
+    description: 'Responde a algunas preferencias (clima, ciudad, cultura) y descubre los países que mejor encajan contigo. Inspiración para viajar, mudarte o vivir un mes en el extranjero. Gratis.',
+  },
 };
 const m = meta[locale] ?? meta.en;
 
@@ -48,6 +60,42 @@ const content: Record<string, {
       { href: '/strengths/keywords', label: 'Strength Keywords', desc: 'Know yourself through resonant words.' },
     ],
   },
+  ja: {
+    introTitle: '好みがあなたの行き先になる',
+    intro: 'どんな気候が好きか、都市と自然どちらに惹かれるか — いくつかのライフスタイルの好みだけで、あなたと相性の良い国を見つけます。旅行先選びや一か月暮らし、移住の想像に気軽に使ってみてください。',
+    relatedTitle: '合わせて見たいもの',
+    related: [
+      { href: '/saju/calculator', label: '四柱推命計算機', desc: 'あなたの気質に合う方角・気質。' },
+      { href: '/strengths/keywords', label: '強みキーワード', desc: '惹かれる言葉から自分を知る。' },
+    ],
+  },
+  zh: {
+    introTitle: '你的喜好就是你的目的地',
+    intro: '你喜欢什么样的气候，更偏爱城市还是自然——只需几项生活方式偏好，就能为你找到气质相符的国家。无论是选旅行地、体验一个月的海外生活，还是畅想移居，都可以轻松一试。',
+    relatedTitle: '搭配阅读',
+    related: [
+      { href: '/saju/calculator', label: '八字计算器', desc: '与你气场相合的方位与气质。' },
+      { href: '/strengths/keywords', label: '优势关键词', desc: '用触动你的词语了解自己。' },
+    ],
+  },
+  fr: {
+    introTitle: 'Vos goûts sont votre destination',
+    intro: "Le climat que vous aimez, la ville ou la nature qui vous attire — quelques préférences de style de vie suffisent pour révéler les pays qui vous correspondent. Idéal pour choisir une destination de voyage, imaginer un mois à l'étranger ou un déménagement.",
+    relatedTitle: 'À découvrir aussi',
+    related: [
+      { href: '/saju/calculator', label: 'Calculateur Saju', desc: 'Les directions et le tempérament qui correspondent à votre énergie.' },
+      { href: '/strengths/keywords', label: 'Mots-clés de force', desc: 'Apprenez à vous connaître à travers des mots qui résonnent.' },
+    ],
+  },
+  es: {
+    introTitle: 'Tu gusto es tu destino',
+    intro: 'El clima que te gusta, si te atrae más la ciudad o la naturaleza — bastan algunas preferencias de estilo de vida para descubrir los países que encajan contigo. Ideal para elegir un viaje, imaginar un mes en el extranjero o una mudanza.',
+    relatedTitle: 'Combina bien con',
+    related: [
+      { href: '/saju/calculator', label: 'Calculadora Saju', desc: 'Direcciones y temperamento que se ajustan a tu energía.' },
+      { href: '/strengths/keywords', label: 'Palabras clave de fortaleza', desc: 'Conócete a través de palabras que resuenan contigo.' },
+    ],
+  },
 };
 const c = content[locale] ?? content.en;
 const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
@@ -57,18 +105,18 @@ const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <CountryMatch locale={locale} client:load />
 
-    <section class="mt-10 border-t border-emerald-100 pt-8">
-      <h2 class="text-2xl font-bold text-emerald-950">{c.introTitle}</h2>
-      <p class="mt-4 leading-8 text-emerald-800">{c.intro}</p>
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-emerald-950">{c.relatedTitle}</h2>
+      <h2 class="text-xl font-bold text-green-950">{c.relatedTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {localizedRelated.map((item) => (
-          <a class="rounded-xl border border-emerald-100 bg-white p-4 transition-colors hover:border-emerald-300 hover:bg-emerald-50" href={item.href}>
-            <span class="font-semibold text-emerald-950">{item.label}</span>
-            <span class="mt-2 block text-sm leading-6 text-emerald-700">{item.desc}</span>
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href}>
+            <span class="font-semibold text-green-950">{item.label}</span>
+            <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
           </a>
         ))}
       </div>

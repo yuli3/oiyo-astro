@@ -176,9 +176,9 @@ const QUESTIONS: Record<Locale, Question[]> = {
 }
 
 const SCHOOL_COLORS: Record<School, string> = {
-  keynesian: 'bg-blue-50 border-blue-300 text-blue-800',
+  keynesian: 'bg-green-50 border-green-300 text-green-800',
   classical: 'bg-amber-50 border-amber-300 text-amber-800',
-  behavioral: 'bg-purple-50 border-purple-300 text-purple-800',
+  behavioral: 'bg-green-50 border-green-300 text-green-800',
   austrian: 'bg-orange-50 border-orange-300 text-orange-800',
   institutional: 'bg-green-50 border-green-300 text-green-800',
 }

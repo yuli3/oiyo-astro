@@ -9,8 +9,15 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.params as { locale: Locale };
-const meta: Record<string, { title: string; description: string }> = { en: { title: "typing-speed-test", description: "" } };
-const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '타이핑 속도 테스트', description: '1분간 얼마나 빠르고 정확하게 타이핑할 수 있나요?' },
+  en: { title: 'Typing Speed Test', description: 'How fast and accurately can you type in 1 minute?' },
+  ja: { title: 'タイピング速度テスト', description: '1分間でどれだけ速く正確にタイピングできますか？' },
+  zh: { title: '打字速度测试', description: '您在1分钟内能打多快多准确？' },
+  fr: { title: 'Test de Vitesse de Frappe', description: 'Combien de mots pouvez-vous taper en 1 minute, rapidement et sans erreur ?' },
+  es: { title: 'Prueba de Velocidad de Mecanografía', description: '¿Qué tan rápido y preciso puedes escribir en 1 minuto?' },
+};
+const m = meta[locale] ?? meta.en;
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>

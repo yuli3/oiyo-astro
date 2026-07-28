@@ -798,8 +798,8 @@ export const COUNTRY_QUESTIONS: CountryQuestion[] = [
 export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
   canada: {
     bestFor: [
-      { en: "Families", ko: "가족" },
-      { en: "Nature Lovers", ko: "자연 애호가" },
+      { zh: "家庭", en: "Families", es: "Familias", fr: "Familles", ja: "家族連れ", ko: "가족" },
+      { zh: "自然爱好者", en: "Nature Lovers", es: "Amantes de la naturaleza", fr: "Amoureux de la nature", ja: "自然愛好家", ko: "자연 애호가" },
     ],
     climate: {
       zh: "寒冷的冬天",
@@ -810,8 +810,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       ko: "추운 겨울",
     },
     cons: [
-      { en: "Cold winters", ko: "추운 겨울" },
-      { en: "High housing costs", ko: "높은 주거비" },
+      { zh: "寒冷的冬天", en: "Cold winters", es: "Inviernos fríos", fr: "Hivers froids", ja: "寒い冬", ko: "추운 겨울" },
+      { zh: "高昂的住房成本", en: "High housing costs", es: "Altos costos de vivienda", fr: "Coûts du logement élevés", ja: "高い住宅費", ko: "높은 주거비" },
     ],
     continent: "North America",
     currency: "CAD",
@@ -834,8 +834,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
     },
     population: "38m",
     pros: [
-      { en: "Welcoming society", ko: "환영하는 사회" },
-      { en: "Nature", ko: "대자연" },
+      { zh: "友好包容的社会", en: "Welcoming society", es: "Sociedad acogedora", fr: "Société accueillante", ja: "温かく迎え入れる社会", ko: "환영하는 사회" },
+      { zh: "大自然", en: "Nature", es: "Naturaleza", fr: "Nature", ja: "大自然", ko: "대자연" },
     ],
     vibe: {
       zh: "多元文化、辽阔、礼貌",
@@ -848,8 +848,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
   },
   italy: {
     bestFor: [
-      { en: "Foodies", ko: "미식가" },
-      { en: "Artists", ko: "예술가" },
+      { zh: "美食爱好者", en: "Foodies", es: "Amantes de la gastronomía", fr: "Amateurs de gastronomie", ja: "グルメ", ko: "미식가" },
+      { zh: "艺术家", en: "Artists", es: "Artistas", fr: "Artistes", ja: "アーティスト", ko: "예술가" },
     ],
     climate: {
       zh: "地中海气候",
@@ -860,8 +860,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       ko: "지중해성",
     },
     cons: [
-      { en: "Bureaucracy", ko: "관료주의" },
-      { en: "Economic instability", ko: "경제적 불안정" },
+      { zh: "官僚主义", en: "Bureaucracy", es: "Burocracia", fr: "Bureaucratie", ja: "官僚主義", ko: "관료주의" },
+      { zh: "经济不稳定", en: "Economic instability", es: "Inestabilidad económica", fr: "Instabilité économique", ja: "経済的不安定さ", ko: "경제적 불안정" },
     ],
     continent: "Europe",
     currency: "EUR",
@@ -884,8 +884,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
     },
     population: "59m",
     pros: [
-      { en: "World-renowned cuisine", ko: "세계적인 요리" },
-      { en: "Incomparable art & history", ko: "예술과 역사" },
+      { zh: "举世闻名的美食", en: "World-renowned cuisine", es: "Gastronomía de fama mundial", fr: "Une cuisine de renommée mondiale", ja: "世界的に有名な料理", ko: "세계적인 요리" },
+      { zh: "无与伦比的艺术与历史", en: "Incomparable art & history", es: "Arte e historia incomparables", fr: "Un art et une histoire incomparables", ja: "比類なき芸術と歴史", ko: "예술과 역사" },
     ],
     vibe: {
       zh: "历史悠久、热情、美味",
@@ -898,8 +898,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
   },
   japan: {
     bestFor: [
-      { en: "Foodies", ko: "미식가" },
-      { en: "Tech Lovers", ko: "기술 애호가" },
+      { zh: "美食爱好者", en: "Foodies", es: "Amantes de la gastronomía", fr: "Amateurs de gastronomie", ja: "グルメ", ko: "미식가" },
+      { zh: "科技爱好者", en: "Tech Lovers", es: "Amantes de la tecnología", fr: "Passionnés de technologie", ja: "テクノロジー愛好家", ko: "기술 애호가" },
     ],
     climate: {
       zh: "四季分明",
@@ -910,8 +910,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       ko: "사계절",
     },
     cons: [
-      { en: "Work culture", ko: "직장 문화" },
-      { en: "Language barrier", ko: "언어 장벽" },
+      { zh: "职场文化", en: "Work culture", es: "Cultura laboral", fr: "Culture du travail", ja: "労働文化", ko: "직장 문화" },
+      { zh: "语言障碍", en: "Language barrier", es: "Barrera del idioma", fr: "Barrière de la langue", ja: "言語の壁", ko: "언어 장벽" },
     ],
     continent: "Asia",
     currency: "JPY",
@@ -934,8 +934,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
     },
     population: "125m",
     pros: [
-      { en: "Safety", ko: "치안" },
-      { en: "Food & Culture", ko: "음식과 문화" },
+      { zh: "治安", en: "Safety", es: "Seguridad", fr: "Sécurité", ja: "治安の良さ", ko: "치안" },
+      { zh: "美食与文化", en: "Food & Culture", es: "Gastronomía y cultura", fr: "Gastronomie et culture", ja: "食文化", ko: "음식과 문화" },
     ],
     vibe: {
       zh: "传统、现代、有序",
@@ -948,8 +948,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
   },
   norway: {
     bestFor: [
-      { en: "Nature Lovers", ko: "자연 애호가" },
-      { en: "Families", ko: "가족" },
+      { zh: "自然爱好者", en: "Nature Lovers", es: "Amantes de la naturaleza", fr: "Amoureux de la nature", ja: "自然愛好家", ko: "자연 애호가" },
+      { zh: "家庭", en: "Families", es: "Familias", fr: "Familles", ja: "家族連れ", ko: "가족" },
     ],
     climate: {
       zh: "寒冷的冬天，温和的夏天",
@@ -960,8 +960,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       ko: "추운 겨울, 온화한 여름",
     },
     cons: [
-      { en: "Extremely high cost of living", ko: "극도로 높은 생활비" },
-      { en: "Cold winters", ko: "추운 겨울" },
+      { zh: "极高的生活成本", en: "Extremely high cost of living", es: "Costo de vida extremadamente alto", fr: "Coût de la vie extrêmement élevé", ja: "極めて高い生活費", ko: "극도로 높은 생활비" },
+      { zh: "寒冷的冬天", en: "Cold winters", es: "Inviernos fríos", fr: "Hivers froids", ja: "寒い冬", ko: "추운 겨울" },
     ],
     continent: "Europe",
     currency: "NOK",
@@ -984,8 +984,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
     },
     population: "5.4m",
     pros: [
-      { en: "Exceptional work-life balance", ko: "뛰어난 워라밸" },
-      { en: "Stunning natural beauty", ko: "멋진 자연 경관" },
+      { zh: "出色的工作与生活平衡", en: "Exceptional work-life balance", es: "Excelente equilibrio entre trabajo y vida", fr: "Un équilibre travail-vie exceptionnel", ja: "卓越したワークライフバランス", ko: "뛰어난 워라밸" },
+      { zh: "壮丽的自然风光", en: "Stunning natural beauty", es: "Belleza natural impresionante", fr: "Une beauté naturelle à couper le souffle", ja: "息をのむような自然の美しさ", ko: "멋진 자연 경관" },
     ],
     vibe: {
       zh: "宁静、壮丽、物价高",
@@ -998,8 +998,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
   },
   singapore: {
     bestFor: [
-      { en: "Finance Pros", ko: "금융 전문가" },
-      { en: "Families", ko: "가족" },
+      { zh: "金融专业人士", en: "Finance Pros", es: "Profesionales de las finanzas", fr: "Professionnels de la finance", ja: "金融専門家", ko: "금융 전문가" },
+      { zh: "家庭", en: "Families", es: "Familias", fr: "Familles", ja: "家族連れ", ko: "가족" },
     ],
     climate: {
       zh: "热带",
@@ -1010,8 +1010,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       ko: "열대",
     },
     cons: [
-      { en: "Expensive", ko: "비쌈" },
-      { en: "Humidity", ko: "습도" },
+      { zh: "物价高昂", en: "Expensive", es: "Caro", fr: "Coût élevé", ja: "物価が高い", ko: "비쌈" },
+      { zh: "湿度高", en: "Humidity", es: "Humedad", fr: "Humidité", ja: "高い湿度", ko: "습도" },
     ],
     continent: "Asia",
     currency: "SGD",
@@ -1034,8 +1034,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
     },
     population: "5.9m",
     pros: [
-      { en: "Safety & Cleanliness", ko: "안전과 청결" },
-      { en: "Global Hub", ko: "글로벌 허브" },
+      { zh: "安全与整洁", en: "Safety & Cleanliness", es: "Seguridad y limpieza", fr: "Sécurité et propreté", ja: "安全と清潔さ", ko: "안전과 청결" },
+      { zh: "全球枢纽", en: "Global Hub", es: "Centro global", fr: "Plaque tournante mondiale", ja: "グローバルハブ", ko: "글로벌 허브" },
     ],
     vibe: {
       zh: "现代、高效、多元文化",
@@ -1048,8 +1048,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
   },
   sweden: {
     bestFor: [
-      { en: "Tech Pros", ko: "기술 전문가" },
-      { en: "Designers", ko: "디자이너" },
+      { zh: "科技专业人士", en: "Tech Pros", es: "Profesionales de la tecnología", fr: "Professionnels de la technologie", ja: "テック専門家", ko: "기술 전문가" },
+      { zh: "设计师", en: "Designers", es: "Diseñadores", fr: "Designers", ja: "デザイナー", ko: "디자이너" },
     ],
     climate: {
       zh: "寒冷的冬天，宜人的夏天",
@@ -1060,8 +1060,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       ko: "추운 겨울, 쾌적한 여름",
     },
     cons: [
-      { en: "High taxes", ko: "높은 세금" },
-      { en: "Dark winters", ko: "어두운 겨울" },
+      { zh: "高税收", en: "High taxes", es: "Impuestos altos", fr: "Impôts élevés", ja: "高い税金", ko: "높은 세금" },
+      { zh: "漫长黑暗的冬天", en: "Dark winters", es: "Inviernos oscuros", fr: "Hivers sombres", ja: "暗い冬", ko: "어두운 겨울" },
     ],
     continent: "Europe",
     currency: "SEK",
@@ -1084,8 +1084,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
     },
     population: "10.4m",
     pros: [
-      { en: "Tech and innovation hub", ko: "기술 혁신 허브" },
-      { en: "Strong social benefits", ko: "강력한 사회 보장" },
+      { zh: "科技创新中心", en: "Tech and innovation hub", es: "Centro de tecnología e innovación", fr: "Un pôle technologique et d'innovation", ja: "テクノロジーとイノベーションの拠点", ko: "기술 혁신 허브" },
+      { zh: "强大的社会福利", en: "Strong social benefits", es: "Sólidos beneficios sociales", fr: "De solides prestations sociales", ja: "手厚い社会保障", ko: "강력한 사회 보장" },
     ],
     vibe: {
       zh: "创新、有格调、内敛",
@@ -1098,8 +1098,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
   },
   thailand: {
     bestFor: [
-      { en: "Digital Nomads", ko: "디지털 노마드" },
-      { en: "Budget Travelers", ko: "저예산 여행자" },
+      { zh: "数字游民", en: "Digital Nomads", es: "Nómadas digitales", fr: "Nomades numériques", ja: "デジタルノマド", ko: "디지털 노마드" },
+      { zh: "预算有限的旅行者", en: "Budget Travelers", es: "Viajeros con presupuesto limitado", fr: "Voyageurs à petit budget", ja: "予算重視の旅行者", ko: "저예산 여행자" },
     ],
     climate: {
       zh: "热带",
@@ -1110,8 +1110,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
       ko: "열대",
     },
     cons: [
-      { en: "Hot and humid", ko: "고온 다습" },
-      { en: "Traffic", ko: "교통 체증" },
+      { zh: "炎热潮湿", en: "Hot and humid", es: "Caluroso y húmedo", fr: "Chaud et humide", ja: "高温多湿", ko: "고온 다습" },
+      { zh: "交通拥堵", en: "Traffic", es: "Tráfico", fr: "Circulation", ja: "交通渋滞", ko: "교통 체증" },
     ],
     continent: "Asia",
     currency: "THB",
@@ -1134,8 +1134,8 @@ export const COUNTRIES_DATABASE: Record<string, CountryProfile> = {
     },
     population: "70m",
     pros: [
-      { en: "Low cost of living", ko: "저렴한 생활비" },
-      { en: "Delicious food", ko: "맛있는 음식" },
+      { zh: "低廉的生活成本", en: "Low cost of living", es: "Bajo costo de vida", fr: "Faible coût de la vie", ja: "低い生活費", ko: "저렴한 생활비" },
+      { zh: "美味的食物", en: "Delicious food", es: "Comida deliciosa", fr: "Une cuisine délicieuse", ja: "おいしい食べ物", ko: "맛있는 음식" },
     ],
     vibe: {
       zh: "充满活力、富有灵性、适合预算有限的人",

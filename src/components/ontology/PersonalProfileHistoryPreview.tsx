@@ -128,10 +128,10 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h2 id="profile-history-title" className="text-lg font-black text-slate-900">{t.title}</h2>
-          <p className="mt-1 text-xs font-semibold text-emerald-700">{t.local}</p>
+          <p className="mt-1 text-xs font-semibold text-green-700">{t.local}</p>
         </div>
         {result.ux.canRetry && (
-          <button type="button" onClick={retry} className="min-h-11 rounded-xl border border-slate-300 px-3 text-sm font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700">
+          <button type="button" onClick={retry} className="min-h-11 rounded-xl border border-slate-300 px-3 text-sm font-bold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">
             {t.retry}
           </button>
         )}
@@ -169,7 +169,7 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
             <div key={entry.historyId} className="flex min-h-11 flex-wrap items-center justify-between gap-2 rounded-xl border border-slate-200 px-3 py-2 text-xs">
               <span>
                 <strong>{entry.assessmentId}</strong> · {t.measured} {entry.measuredAt.slice(0, 10)} · {entry.instrumentVersion}
-                <span className={`ml-2 inline-flex rounded-full px-2 py-1 font-bold ${personalProfileHistoryFreshness(entry.measuredAt, observedAt).state === "stale" ? "bg-amber-100 text-amber-900" : "bg-emerald-100 text-emerald-800"}`}>
+                <span className={`ml-2 inline-flex rounded-full px-2 py-1 font-bold ${personalProfileHistoryFreshness(entry.measuredAt, observedAt).state === "stale" ? "bg-amber-100 text-amber-900" : "bg-green-100 text-green-800"}`}>
                   {personalProfileHistoryFreshness(entry.measuredAt, observedAt).state === "stale" ? freshnessCopy.stale : freshnessCopy.current}
                 </span>
               </span>
@@ -180,9 +180,9 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
       )}
 
       <div className="mt-4 flex flex-wrap gap-2">
-        <button type="button" onClick={capture} className="min-h-11 rounded-xl border border-emerald-300 px-4 text-sm font-bold text-emerald-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700">{t.capture}</button>
+        <button type="button" onClick={capture} className="min-h-11 rounded-xl border border-green-300 px-4 text-sm font-bold text-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">{t.capture}</button>
         {result.ux.canExport && (
-          <button type="button" onClick={exportHistory} className="min-h-11 rounded-xl bg-emerald-700 px-4 text-sm font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-700">{t.export}</button>
+          <button type="button" onClick={exportHistory} className="min-h-11 rounded-xl bg-green-700 px-4 text-sm font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">{t.export}</button>
         )}
         {result.ux.canClear && (
           <button type="button" onClick={() => setResult(clearPersonalProfileHistory())} className="min-h-11 rounded-xl border border-red-200 px-4 text-sm font-bold text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700">{t.clear}</button>

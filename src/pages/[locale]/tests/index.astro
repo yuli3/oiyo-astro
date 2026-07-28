@@ -4,6 +4,7 @@ import { LOCALES, localePath } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import WisdomNotes from '../../../components/shared/WisdomNotes.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import { TEST_DIRECTORY_EXTRA } from '../../../data/test-directory-extra';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -54,6 +55,15 @@ const startLabel: Record<Locale, string> = {
   zh: '开始 →',
   fr: 'Commencer →',
   es: 'Empezar →',
+};
+
+const moreTestsLabel: Record<Locale, string> = {
+  ko: '더 많은 테스트',
+  en: 'More Tests',
+  ja: 'その他のテスト',
+  zh: '更多测试',
+  fr: 'Plus de tests',
+  es: 'Más pruebas',
 };
 
 const categories = [
@@ -598,6 +608,28 @@ const categories = [
       </div>
     ))}
   </section>
+
+  <!-- More tests: 2026-07-20 IA audit found 90+ real test/tool pages with zero internal inbound
+       links (only discoverable via sitemap.xml). This grid closes that gap — see
+       src/data/test-directory-extra.ts and company-brain/.../ontology-ux-audit-and-jarvis-vision-2026-07-20.md. -->
+  <section class="max-w-5xl mx-auto px-4 pb-4">
+    <h2 class="text-sm font-bold text-green-500 uppercase tracking-widest mb-5">
+      {moreTestsLabel[locale]}
+    </h2>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+      {TEST_DIRECTORY_EXTRA.map((entry) => (
+        <a
+          href={localePath(locale, `/${entry.slug}`)}
+          class="group block bg-white rounded-xl border border-green-50 px-3 py-2.5 hover:border-green-200 transition-colors"
+        >
+          <h3 class="font-bold text-green-950 group-hover:text-green-700 transition-colors text-xs leading-snug">
+            {entry.title[locale] ?? entry.title.en}
+          </h3>
+        </a>
+      ))}
+    </div>
+  </section>
+
   <section class="max-w-5xl mx-auto px-4 pb-12">
     <MentalBoost locale={locale} />
     <WisdomNotes topic="test-hub" locale={locale} />

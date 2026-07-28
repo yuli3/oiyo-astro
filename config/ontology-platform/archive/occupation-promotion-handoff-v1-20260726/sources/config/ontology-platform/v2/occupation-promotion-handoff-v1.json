@@ -1,0 +1,33 @@
+{
+  "schema": "oiyo.ontology-occupation-promotion-handoff",
+  "schemaVersion": 1,
+  "status": "blocked_pending_human_review",
+  "canonicalMutation": false,
+  "currentCanonicalOccupationCount": 308,
+  "targetCanonicalOccupationCount": 1200,
+  "preparedReviewCohort": {"total": 892, "localeFacetReadyPilot": 12, "remainingWithoutLocalePacket": 880},
+  "requiredHumanGates": [
+    "language_review_for_each_non_english_direct_label",
+    "source_scoped_alias_or_mapping_decision_for_each_candidate",
+    "explicit_decision_for_any_canonical_duplicate_or_many_to_one_mapping",
+    "approval_of_editorial_facet_rationale_and_counterexample",
+    "golden_ranking_fixture_review_before_canonical_import"
+  ],
+  "automaticActionsForbidden": ["promote_review_queue", "infer_equivalent_occupation_from_similarity", "add_canonical_alias_without_review", "infer_work_context_or_fit", "use_unreviewed_labels_as_fallback"],
+  "promotionSequence": [
+    "human language and mapping review",
+    "move approved records to candidate staging with source-scoped aliases and review dates",
+    "add reviewed facets/rationale and bounded work-context examples only where justified",
+    "add golden ranking fixtures",
+    "run canonical import and full ontology/archive regression gates"
+  ],
+  "evidence": {
+    "sourceInventory": "occupation-source-inventory-v1",
+    "sourceIndex": "occupation-source-index-v1",
+    "reviewCohort": "occupation-candidate-cohort-v1",
+    "mappingReview": "occupation-alias-mapping-review-v1",
+    "localePacket": "occupation-locale-label-packet-v1",
+    "facetReadiness": "occupation-facet-readiness-v1"
+  },
+  "handoff": "No candidate is in canonical data or candidate staging. Resume only from the promotionSequence after the requiredHumanGates have evidence for the selected records."
+}

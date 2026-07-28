@@ -589,7 +589,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
             </div>
             <div className="h-2 rounded-full bg-gray-200 overflow-hidden">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-purple-400 to-pink-400 transition-all duration-500"
+                className="h-full rounded-full bg-gradient-to-r from-green-400 to-pink-400 transition-all duration-500"
                 style={{ width: `${(current / QUESTIONS.length) * 100}%` }}
               />
             </div>
@@ -605,7 +605,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
                 <button
                   key={i}
                   onClick={() => handleAnswer(opt.type)}
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3.5 text-left text-gray-800 hover:border-purple-400 hover:bg-purple-50 transition-all"
+                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3.5 text-left text-gray-800 hover:border-green-400 hover:bg-green-50 transition-all"
                 >
                   {opt.text[locale] ?? opt.text.en}
                 </button>
@@ -617,8 +617,8 @@ export default function BreakupRecoveryTest({ locale }: Props) {
         result && (
           <div className="space-y-4">
             {/* Result header */}
-            <div className="rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 p-6 text-center">
-              <p className="text-sm font-medium text-purple-500 uppercase tracking-wider mb-2">
+            <div className="rounded-2xl bg-gradient-to-br from-green-50 to-pink-50 border border-green-200 p-6 text-center">
+              <p className="text-sm font-medium text-green-500 uppercase tracking-wider mb-2">
                 {t.resultTitle}
               </p>
               <div className="text-5xl mb-3">{result.emoji}</div>
@@ -638,7 +638,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
               <ul className="space-y-2">
                 {(result.tips[locale] ?? result.tips.en).map((tip, i) => (
                   <li key={i} className="flex gap-2 text-sm text-gray-700">
-                    <span className="text-purple-400 font-bold">✓</span>
+                    <span className="text-green-400 font-bold">✓</span>
                     {tip}
                   </li>
                 ))}
@@ -667,7 +667,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
 
             <button
               onClick={handleRestart}
-              className="w-full rounded-xl border border-purple-300 py-3 text-sm font-semibold text-purple-600 hover:bg-purple-50 transition-colors"
+              className="w-full rounded-xl border border-green-300 py-3 text-sm font-semibold text-green-600 hover:bg-green-50 transition-colors"
             >
               {t.restartBtn}
             </button>

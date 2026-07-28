@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ShareResultButton from '../shared/ShareResultButton';
+import { interpretHexacoDeep } from '@/lib/engines/interpretation/engines/hexaco-deep';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 type DimKey = 'H' | 'E' | 'X' | 'A' | 'C' | 'O';
@@ -160,11 +161,13 @@ const L: Record<Locale, {
   yourProfile: string; disclaimer: string;
   lowLabel: string; highLabel: string;
   optionLabels: [string, string, string, string, string];
+  readMore: string; synthesisTitle: string;
 }> = {
   ko: {
     title: 'HEXACO 성격 검사', subtitle: '정직성부터 개방성까지 6차원 성격 분석',
     start: '검사 시작', prev: '이전', next: '다음', submit: '결과 보기', restart: '다시 하기',
     q: '문항', of: '/',
+    readMore: '더 깊은 해석 보기', synthesisTitle: '종합 해석',
     yourProfile: '나의 HEXACO 프로파일',
     disclaimer: '이 검사는 HEXACO-PI-R을 참고한 교육용 간략 버전입니다. 임상 진단을 대체하지 않습니다.',
     lowLabel: '낮음', highLabel: '높음',
@@ -174,6 +177,7 @@ const L: Record<Locale, {
     title: 'HEXACO Personality Test', subtitle: '6-Dimension Personality Analysis',
     start: 'Start Test', prev: 'Previous', next: 'Next', submit: 'See Results', restart: 'Restart',
     q: 'Q', of: '/',
+    readMore: 'See deeper interpretation', synthesisTitle: 'Synthesis',
     yourProfile: 'My HEXACO Profile',
     disclaimer: 'This is an abridged HEXACO-PI-R for educational purposes and does not replace clinical assessment.',
     lowLabel: 'Low', highLabel: 'High',
@@ -183,6 +187,7 @@ const L: Record<Locale, {
     title: 'HEXACO性格検査', subtitle: '6次元性格分析',
     start: '検査開始', prev: '前へ', next: '次へ', submit: '結果を見る', restart: 'やり直す',
     q: '問', of: '/',
+    readMore: 'より深い解釈を見る', synthesisTitle: '総合解釈',
     yourProfile: '私のHEXACOプロファイル',
     disclaimer: 'これは教育目的のHEXACO-PI-R簡略版であり、臨床診断の代わりにはなりません。',
     lowLabel: '低い', highLabel: '高い',
@@ -192,6 +197,7 @@ const L: Record<Locale, {
     title: 'Test de Personnalité HEXACO', subtitle: "Analyse de personnalité en 6 dimensions",
     start: 'Commencer', prev: 'Précédent', next: 'Suivant', submit: 'Voir les résultats', restart: 'Recommencer',
     q: 'Q', of: '/',
+    readMore: 'Voir une interprétation plus approfondie', synthesisTitle: 'Synthèse',
     yourProfile: 'Mon profil HEXACO',
     disclaimer: "Ceci est un HEXACO-PI-R abrégé à des fins éducatives et ne remplace pas une évaluation clinique.",
     lowLabel: 'Bas', highLabel: 'Haut',
@@ -201,6 +207,7 @@ const L: Record<Locale, {
     title: 'Test de Personalidad HEXACO', subtitle: "Análisis de personalidad en 6 dimensiones",
     start: 'Iniciar test', prev: 'Anterior', next: 'Siguiente', submit: 'Ver resultados', restart: 'Reiniciar',
     q: 'P', of: '/',
+    readMore: 'Ver interpretación más profunda', synthesisTitle: 'Síntesis',
     yourProfile: 'Mi perfil HEXACO',
     disclaimer: "Este es un HEXACO-PI-R abreviado con fines educativos y no reemplaza una evaluación clínica.",
     lowLabel: 'Bajo', highLabel: 'Alto',
@@ -210,6 +217,7 @@ const L: Record<Locale, {
     title: 'HEXACO人格測驗', subtitle: '6維度人格分析',
     start: '開始測驗', prev: '上一題', next: '下一題', submit: '查看結果', restart: '重新測驗',
     q: '題', of: '/',
+    readMore: '查看更深層的解讀', synthesisTitle: '綜合解讀',
     yourProfile: '我的HEXACO人格檔案',
     disclaimer: '本測驗為教育目的的簡短版HEXACO-PI-R，不能替代臨床評估。',
     lowLabel: '低', highLabel: '高',
@@ -219,6 +227,7 @@ const L: Record<Locale, {
     title: 'HEXACO人格测验', subtitle: '6维度人格分析',
     start: '开始测验', prev: '上一题', next: '下一题', submit: '查看结果', restart: '重新测验',
     q: '题', of: '/',
+    readMore: '查看更深层的解读', synthesisTitle: '综合解读',
     yourProfile: '我的HEXACO人格档案',
     disclaimer: '本测验为教育目的的简短版HEXACO-PI-R，不能替代临床评估。',
     lowLabel: '低', highLabel: '高',
@@ -253,6 +262,11 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
   const scores = Object.fromEntries(
     DIM_ORDER.map(d => [d, scoreForDim(d, answers)])
   ) as Record<DimKey, number>;
+
+  const deep = interpretHexacoDeep(scores);
+  const deepByKey = Object.fromEntries(deep.dimensions.map(d => [d.key, d])) as Record<DimKey, (typeof deep.dimensions)[number]>;
+  const sl = (v: Partial<Record<'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es', string>>): string =>
+    v[locale === 'cn' ? 'zh' : locale] ?? v.en ?? v.ko ?? '';
 
   function handleAnswer(val: number) {
     setAnswers(prev => ({ ...prev, [q.id]: val }));
@@ -295,6 +309,11 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
           <span>{info.low[locale]}</span>
           <span>{info.high[locale]}</span>
         </div>
+        <details className="group mt-2">
+          <summary className="cursor-pointer list-none text-xs font-semibold text-gray-500 underline">{t.readMore}</summary>
+          <p className="mt-2 text-xs leading-5 text-gray-700">{sl(deepByKey[dimKey].interpretation)}</p>
+          <p className="mt-2 text-xs leading-5 text-gray-600">{sl(deepByKey[dimKey].growthPath)}</p>
+        </details>
       </div>
     );
   };
@@ -339,6 +358,10 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           {DIM_ORDER.map(d => <DimCard key={d} dimKey={d} />)}
+        </div>
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-4 text-left">
+          <h2 className="text-sm font-bold text-gray-800">{t.synthesisTitle}</h2>
+          <p className="mt-2 text-sm leading-6 text-gray-700">{sl(deep.synthesis)}</p>
         </div>
         <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
         <ShareResultButton

@@ -1,0 +1,22 @@
+{
+  "schema": "oiyo.ontology-occupation-pilot-golden-fixture-draft",
+  "schemaVersion": 1,
+  "status": "draft_requires_human_review",
+  "scope": "12 review_ready ESCO candidates only; staging comparison, not canonical ranking",
+  "boundary": "No candidate is promoted, no work-context edge is created, and these fixtures do not claim career fit, hiring suitability, income, licensing, or a complete job analysis.",
+  "reviewRequirement": "Confirm each expected staged candidate before any canonical import.",
+  "fixtures": [
+    {"id":"pilot-accounting-manager","externalId":"http://data.europa.eu/esco/occupation/04f39bfa-bc03-4480-98bc-b18ce4fe4b4b","expectedCandidateId":"occupation.accounting_manager"},
+    {"id":"pilot-volunteer-manager","externalId":"http://data.europa.eu/esco/occupation/3d999108-f37a-4087-a936-b2911240b8c2","expectedCandidateId":"occupation.volunteer_manager"},
+    {"id":"pilot-advertising-manager","externalId":"http://data.europa.eu/esco/occupation/4ebf2dae-c326-4627-befe-fbc91410f432","expectedCandidateId":"occupation.advertising_manager"},
+    {"id":"pilot-restaurant-manager","externalId":"http://data.europa.eu/esco/occupation/d5eb6150-bbff-4a9c-9d0c-21eab4dbe2b6","expectedCandidateId":"occupation.restaurant_manager"},
+    {"id":"pilot-weather-forecaster","externalId":"http://data.europa.eu/esco/occupation/0809ea8a-4f77-4351-a7f1-b9a7b99b6c0b","expectedCandidateId":"occupation.weather_forecaster"},
+    {"id":"pilot-cosmetic-chemist","externalId":"http://data.europa.eu/esco/occupation/11b6390b-1e48-4903-a5df-d3e04b451a19","expectedCandidateId":"occupation.cosmetic_chemist"},
+    {"id":"pilot-hydrogeologist","externalId":"http://data.europa.eu/esco/occupation/6336c205-46bd-42f6-9e67-6b0be6e7618c","expectedCandidateId":"occupation.hydrogeologist"},
+    {"id":"pilot-telecommunications-analyst","externalId":"http://data.europa.eu/esco/occupation/c5d36eef-df20-47a8-a332-5b4358fa83e3","expectedCandidateId":"occupation.telecommunications_analyst"},
+    {"id":"pilot-footwear-designer","externalId":"http://data.europa.eu/esco/occupation/06f89f2c-c6e9-40c5-a4a5-0e34d5fbc184","expectedCandidateId":"occupation.footwear_designer"},
+    {"id":"pilot-child-care-coordinator","externalId":"http://data.europa.eu/esco/occupation/526ba8e1-fc71-4657-8d27-52f03e8ca81d","expectedCandidateId":"occupation.child_care_coordinator"},
+    {"id":"pilot-sport-administrator","externalId":"http://data.europa.eu/esco/occupation/20e39113-05f5-4184-94e2-f5e8e8c8d2ea","expectedCandidateId":"occupation.sport_administrator"},
+    {"id":"pilot-educational-researcher","externalId":"http://data.europa.eu/esco/occupation/5a282a39-5346-454a-b1ef-c1217c50e156","expectedCandidateId":"occupation.educational_researcher"}
+  ]
+}

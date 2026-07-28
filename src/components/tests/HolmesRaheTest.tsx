@@ -39,8 +39,8 @@ export default function HolmesRaheTest({ locale = 'ko' }: { locale?: Locale }) {
 
   const score = [...checked].reduce((s, i) => s + VALUES[i], 0);
   const band: 'low' | 'mid' | 'high' = score < 150 ? 'low' : score < 300 ? 'mid' : 'high';
-  const bandColor = band === 'low' ? 'text-emerald-600' : band === 'mid' ? 'text-amber-600' : 'text-red-600';
-  const barColor = band === 'low' ? 'bg-emerald-500' : band === 'mid' ? 'bg-amber-500' : 'bg-red-500';
+  const bandColor = band === 'low' ? 'text-green-600' : band === 'mid' ? 'text-amber-600' : 'text-red-600';
+  const barColor = band === 'low' ? 'bg-green-500' : band === 'mid' ? 'bg-amber-500' : 'bg-red-500';
 
   const toggle = (i: number) => {
     setChecked((prev) => {

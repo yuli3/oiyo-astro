@@ -1,5 +1,5 @@
 import { FEATURE_REGISTRY } from "@/registry";
-import { FeatureManifest } from "@/types/manifest";
+import type { FeatureManifest } from "@/types/manifest";
 
 /**
  * Helper to safely find a feature path or return root if not found.

@@ -1,4 +1,4 @@
-import { BookmarkCheck, Compass, Share2 } from "lucide-react";
+import { BookmarkCheck, Compass, Share2, Target, Users } from "lucide-react";
 import { useMemo, useReducer, useState } from "react";
 import type { CSSProperties } from "react";
 
@@ -9,9 +9,12 @@ import {
   resolveRoleVisualLiveMessage,
   ROLE_VISUAL_TOKENS,
   transitionRoleVisualInteraction,
+  type RoleAidIcon,
   type RoleVisualInput,
   type RoleVisualStatus,
 } from "../../lib/role-visual-system";
+
+const ROLE_AID_ICON: Record<RoleAidIcon, typeof Compass> = { compass: Compass, target: Target, users: Users };
 
 type Locale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 type ScenarioId = "clear" | "mixed" | "tie" | "low-flat" | "uncertain";
@@ -91,12 +94,21 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
         ))}
       </div>
 
-      {result.roleAid && (
-        <div className="mt-5 flex items-center gap-3 rounded-2xl border border-slate-300 bg-slate-50 p-3">
-          <span aria-hidden="true" className="text-2xl">{result.roleAid.emoji}</span>
-          <p className="text-sm text-slate-800"><strong>{text.roleAid}:</strong> {text.neutralPattern}</p>
-        </div>
-      )}
+      {result.roleAid && (() => {
+        const RoleIcon = ROLE_AID_ICON[result.roleAid.icon];
+        const name = text.roleAidNames[result.roleAid.dimensionId as keyof typeof text.roleAidNames];
+        return (
+          <div className="mt-5 flex items-center gap-3 rounded-2xl border border-slate-300 bg-slate-50 p-3">
+            <span aria-hidden="true" className="grid h-9 w-9 shrink-0 place-items-center rounded-xl bg-[var(--role-soft)] text-[var(--role-primary)]">
+              <RoleIcon size={18} strokeWidth={2} />
+            </span>
+            <p className="text-sm text-slate-800">
+              <span aria-hidden="true" className="mr-1">{result.roleAid.emoji}</span>
+              <strong>{text.roleAid}:</strong> {name}
+            </p>
+          </div>
+        );
+      })()}
 
       <dl className="mt-5 grid gap-3 sm:grid-cols-3">
         <div className="rounded-2xl border border-slate-300 bg-slate-50 p-3"><dt className="font-black text-slate-950">{text.strengthTitle}</dt><dd className="mt-1 text-sm leading-6 text-slate-700">{text.strength}</dd></div>

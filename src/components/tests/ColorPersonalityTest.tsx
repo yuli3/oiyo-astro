@@ -270,8 +270,8 @@ export default function ColorPersonalityTest({ locale: lp = 'ko' }: Props) {
         })}
       </div>
       <div className="rounded-xl border bg-card p-4 space-y-2">
-        <h3 className="font-bold text-sm text-emerald-700">{lb.strengths}</h3>
-        <ul className="space-y-1">{r.strengths.map(s => <li key={s} className="text-sm text-muted-foreground flex gap-2"><span className="text-emerald-500 flex-none">→</span>{s}</li>)}</ul>
+        <h3 className="font-bold text-sm text-green-700">{lb.strengths}</h3>
+        <ul className="space-y-1">{r.strengths.map(s => <li key={s} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-500 flex-none">→</span>{s}</li>)}</ul>
       </div>
       <div className="rounded-xl border bg-card p-4 space-y-2">
         <h3 className="font-bold text-sm text-amber-600">{lb.growth}</h3>

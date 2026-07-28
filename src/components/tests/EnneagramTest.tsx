@@ -79,8 +79,8 @@ const LABELS: Record<SupportedLang, {
     topScoresLabel: 'Top Scoring Types',
   },
   ja: {
-    title: 'エニアグラム性格テスト',
-    subtitle: '9つの性格タイプのどれかを見つけましょう',
+    title: '9タイプ性格診断（エニアグラム）',
+    subtitle: '27問で9つの性格タイプから自分の傾向を確認',
     questionOf: (c, t) => `${c} / ${t}`,
     scaleLabels: ['全く違う', 'どちらかといえば違う', 'どちらでもない', 'どちらかといえばそう', '非常にそう思う'],
     restart: 'もう一度',

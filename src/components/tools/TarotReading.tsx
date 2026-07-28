@@ -21,6 +21,17 @@ interface TarotCard {
   keywords: Record<Locale, string>;
 }
 
+// Small decorative corner ornament reused (rotated) on all 4 corners of a
+// flipped card face — a lightweight stand-in for full per-card illustration.
+function CardCornerFlourish({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" className={`h-3.5 w-3.5 ${className ?? ''}`} aria-hidden="true">
+      <path d="M2 12 V4 a2 2 0 0 1 2-2 H12" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+      <circle cx="2" cy="12" r="1.2" fill="currentColor" />
+    </svg>
+  );
+}
+
 const MAJOR_ARCANA: TarotCard[] = [
   {
     id: 0, symbol: '🌀',
@@ -365,8 +376,8 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
   const spreadBtnClass = (s: Spread) =>
     `flex-1 py-2 text-sm font-medium rounded-lg border transition-colors ${
       spread === s
-        ? 'bg-indigo-600 text-white border-indigo-600'
-        : 'bg-white text-gray-600 border-gray-300 hover:border-indigo-400'
+        ? 'bg-green-600 text-white border-green-600'
+        : 'bg-white text-gray-600 border-gray-300 hover:border-green-400'
     }`;
 
   return (
@@ -392,7 +403,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
       {/* Draw button */}
       <button
         onClick={handleDraw}
-        className="w-full py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-xl transition-colors"
+        className="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
       >
         {drawn ? t.redrawBtn : t.drawBtn}
       </button>
@@ -402,33 +413,60 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
         <div className={`grid gap-4 ${drawn.length === 1 ? 'grid-cols-1 max-w-xs mx-auto' : drawn.length === 3 ? 'grid-cols-3' : 'grid-cols-2 sm:grid-cols-3'}`}>
           {drawn.map((dc, i) => {
             const isFlipped = flipped.has(i);
+            const patternId = `tarot-back-pattern-${i}`;
             return (
               <div key={i} className="flex flex-col gap-2">
-                <p className="text-xs font-semibold text-center text-indigo-600">{dc.position}</p>
-                {/* Card face */}
+                <p className="text-xs font-semibold text-center text-green-600">{dc.position}</p>
+                {/* Card face — 3D flip: back-pattern <-> ornamented front */}
                 <button
                   onClick={() => flipCard(i)}
-                  className={`w-full aspect-[2/3] rounded-xl border-2 transition-all duration-300 flex flex-col items-center justify-center cursor-pointer ${
-                    isFlipped
-                      ? 'bg-white border-indigo-300 shadow-md'
-                      : 'bg-indigo-700 border-indigo-800 hover:bg-indigo-600'
-                  }`}
+                  aria-label={isFlipped ? dc.card.name[locale] : t.drawBtn}
+                  className="group relative w-full aspect-[2/3] cursor-pointer [perspective:1000px]"
                 >
-                  {isFlipped ? (
-                    <div className={`flex flex-col items-center gap-1 p-3 ${dc.reversed ? 'rotate-180' : ''}`}>
-                      <span className="text-3xl sm:text-4xl">{dc.card.symbol}</span>
-                      <span className="text-[10px] sm:text-xs font-bold text-gray-800 text-center leading-tight">
-                        {dc.card.name[locale]}
-                      </span>
-                      <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-semibold ${
-                        dc.reversed ? 'bg-rose-100 text-rose-600' : 'bg-green-100 text-green-600'
-                      }`}>
-                        {dc.reversed ? t.reversedLabel : t.uprightLabel}
-                      </span>
+                  <div
+                    className="relative h-full w-full transition-transform duration-500 motion-reduce:transition-none motion-reduce:duration-0 [transform-style:preserve-3d]"
+                    style={{ transform: isFlipped ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
+                  >
+                    {/* Back face */}
+                    <div className="absolute inset-0 flex items-center justify-center overflow-hidden rounded-xl border-2 border-green-900 bg-gradient-to-br from-green-600 to-green-950 [backface-visibility:hidden] group-hover:brightness-110">
+                      <svg className="absolute inset-0 h-full w-full opacity-30" aria-hidden="true">
+                        <defs>
+                          <pattern id={patternId} width="16" height="16" patternUnits="userSpaceOnUse">
+                            <path d="M8 0 L16 8 L8 16 L0 8 Z" fill="none" stroke="currentColor" strokeWidth="0.75" className="text-green-300" />
+                          </pattern>
+                        </defs>
+                        <rect width="100%" height="100%" fill={`url(#${patternId})`} />
+                      </svg>
+                      <span className="relative text-2xl text-green-200/80">✦</span>
                     </div>
-                  ) : (
-                    <span className="text-2xl opacity-40">✦</span>
-                  )}
+                    {/* Front face */}
+                    <div
+                      className={`absolute inset-0 flex flex-col items-center justify-center rounded-xl border-2 bg-white shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)] ${
+                        dc.reversed ? 'border-rose-300' : 'border-amber-300'
+                      }`}
+                    >
+                      <CardCornerFlourish className="absolute left-1 top-1 text-amber-400" />
+                      <CardCornerFlourish className="absolute right-1 top-1 rotate-90 text-amber-400" />
+                      <CardCornerFlourish className="absolute bottom-1 right-1 rotate-180 text-amber-400" />
+                      <CardCornerFlourish className="absolute bottom-1 left-1 -rotate-90 text-amber-400" />
+                      <div className={`flex flex-col items-center gap-1 p-3 ${dc.reversed ? 'rotate-180' : ''}`}>
+                        <div
+                          className="flex h-14 w-14 items-center justify-center rounded-full"
+                          style={{ background: 'radial-gradient(circle, rgba(251,191,36,0.28), transparent 70%)' }}
+                        >
+                          <span className="text-3xl sm:text-4xl">{dc.card.symbol}</span>
+                        </div>
+                        <span className="text-[10px] sm:text-xs font-bold text-gray-800 text-center leading-tight">
+                          {dc.card.name[locale]}
+                        </span>
+                        <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-semibold ${
+                          dc.reversed ? 'bg-rose-100 text-rose-600' : 'bg-green-100 text-green-600'
+                        }`}>
+                          {dc.reversed ? t.reversedLabel : t.uprightLabel}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </button>
                 {/* Interpretation */}
                 {isFlipped && (
@@ -460,7 +498,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
       {drawn && flipped.size === drawn.length && (
         <button
           onClick={share}
-          className="w-full py-2.5 rounded-xl border-2 border-indigo-300 bg-indigo-50 text-sm font-bold text-indigo-700 hover:bg-indigo-100 transition-colors"
+          className="w-full py-2.5 rounded-xl border-2 border-green-300 bg-green-50 text-sm font-bold text-green-700 hover:bg-green-100 transition-colors"
         >
           {shareCopied ? `✅ ${t.shareCopied}` : `🔗 ${t.shareBtn}`}
         </button>

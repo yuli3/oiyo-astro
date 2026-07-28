@@ -134,7 +134,7 @@ export default function ResultShareImage({ title, level, score, color, icon, loc
       onClick={generate}
       disabled={busy}
       aria-label={label}
-      className="w-full rounded-xl border border-emerald-200 bg-emerald-50 text-emerald-700 px-4 py-2.5 text-sm font-bold hover:bg-emerald-100 transition-colors disabled:opacity-60"
+      className="w-full rounded-xl border border-green-200 bg-green-50 text-green-700 px-4 py-2.5 text-sm font-bold hover:bg-green-100 transition-colors disabled:opacity-60"
     >
       {label}
     </button>

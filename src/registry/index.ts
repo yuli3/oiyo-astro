@@ -1,6 +1,6 @@
 import { dailyManifest } from "@/app/[locale]/daily/manifest";
 import { ontologyManifest } from "@/app/[locale]/ontology/manifest";
-import { FeatureManifest } from "@/types/manifest";
+import type { FeatureManifest } from "@/types/manifest";
 
 // Strength Keyword Finder — self-discovery word tool (#2).
 const strengthKeywordsManifest: FeatureManifest = {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ShareResultButton from '../shared/ShareResultButton';
+import { interpretTCIDeep } from '@/lib/engines/interpretation/engines/tci-deep';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 
@@ -142,11 +143,13 @@ const L: Record<Locale, {
   lowLabel: string; highLabel: string;
   yourProfile: string; disclaimer: string;
   optionLabels: [string, string, string, string, string];
+  readMore: string; synthesisTitle: string; lifeIntegrationTitle: string;
 }> = {
   ko: {
     title: 'TCI 기질 및 성격 검사', subtitle: '클로닌저의 7차원 성격 분석',
     start: '검사 시작', prev: '이전', next: '다음', submit: '결과 보기', restart: '다시 하기',
     q: '문항', of: '/',
+    readMore: '더 깊은 해석 보기', synthesisTitle: '종합 해석', lifeIntegrationTitle: '삶에서의 통합',
     temperament: '기질', character: '성격',
     lowLabel: '낮음', highLabel: '높음',
     yourProfile: '나의 TCI 프로파일',
@@ -157,6 +160,7 @@ const L: Record<Locale, {
     title: 'TCI Temperament & Character Test', subtitle: "Cloninger's 7-Dimension Personality Analysis",
     start: 'Start Test', prev: 'Previous', next: 'Next', submit: 'See Results', restart: 'Restart',
     q: 'Q', of: '/',
+    readMore: 'See deeper interpretation', synthesisTitle: 'Synthesis', lifeIntegrationTitle: 'Life Integration',
     temperament: 'Temperament', character: 'Character',
     lowLabel: 'Low', highLabel: 'High',
     yourProfile: 'My TCI Profile',
@@ -167,6 +171,7 @@ const L: Record<Locale, {
     title: 'TCI気質・性格検査', subtitle: 'クロニンジャーの7次元性格分析',
     start: '検査開始', prev: '前へ', next: '次へ', submit: '結果を見る', restart: 'やり直す',
     q: '問', of: '/',
+    readMore: 'より深い解釈を見る', synthesisTitle: '総合解釈', lifeIntegrationTitle: '人生への統合',
     temperament: '気質', character: '性格',
     lowLabel: '低い', highLabel: '高い',
     yourProfile: '私のTCIプロファイル',
@@ -177,6 +182,7 @@ const L: Record<Locale, {
     title: 'Test TCI Tempérament & Caractère', subtitle: "Analyse de personnalité en 7 dimensions de Cloninger",
     start: 'Commencer le test', prev: 'Précédent', next: 'Suivant', submit: 'Voir les résultats', restart: 'Recommencer',
     q: 'Q', of: '/',
+    readMore: 'Voir une interprétation plus approfondie', synthesisTitle: 'Synthèse', lifeIntegrationTitle: 'Intégration dans la vie',
     temperament: 'Tempérament', character: 'Caractère',
     lowLabel: 'Bas', highLabel: 'Haut',
     yourProfile: 'Mon profil TCI',
@@ -187,6 +193,7 @@ const L: Record<Locale, {
     title: 'Test TCI Temperamento y Carácter', subtitle: "Análisis de personalidad en 7 dimensiones de Cloninger",
     start: 'Iniciar test', prev: 'Anterior', next: 'Siguiente', submit: 'Ver resultados', restart: 'Reiniciar',
     q: 'P', of: '/',
+    readMore: 'Ver interpretación más profunda', synthesisTitle: 'Síntesis', lifeIntegrationTitle: 'Integración en la vida',
     temperament: 'Temperamento', character: 'Carácter',
     lowLabel: 'Bajo', highLabel: 'Alto',
     yourProfile: 'Mi perfil TCI',
@@ -197,6 +204,7 @@ const L: Record<Locale, {
     title: 'TCI氣質與性格測驗', subtitle: 'Cloninger 7維度人格分析',
     start: '開始測驗', prev: '上一題', next: '下一題', submit: '查看結果', restart: '重新測驗',
     q: '題', of: '/',
+    readMore: '查看更深層的解讀', synthesisTitle: '綜合解讀', lifeIntegrationTitle: '人生整合',
     temperament: '氣質', character: '性格',
     lowLabel: '低', highLabel: '高',
     yourProfile: '我的TCI個性檔案',
@@ -207,6 +215,7 @@ const L: Record<Locale, {
     title: 'TCI气质与性格测验', subtitle: 'Cloninger 7维度人格分析',
     start: '开始测验', prev: '上一题', next: '下一题', submit: '查看结果', restart: '重新测验',
     q: '题', of: '/',
+    readMore: '查看更深层的解读', synthesisTitle: '综合解读', lifeIntegrationTitle: '人生整合',
     temperament: '气质', character: '性格',
     lowLabel: '低', highLabel: '高',
     yourProfile: '我的TCI人格档案',
@@ -243,6 +252,14 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
   const scores = Object.fromEntries(
     (Object.keys(DIMENSIONS) as DimensionKey[]).map(d => [d, scoreForDim(d, answers)])
   ) as Record<DimensionKey, number>;
+
+  const deep = interpretTCIDeep(scores);
+  const deepByKey = Object.fromEntries(
+    [...deep.temperamentDimensions, ...deep.characterDimensions].map(d => [d.key, d])
+  ) as Record<DimensionKey, (typeof deep.temperamentDimensions)[number]>;
+
+  const sl = (v: Partial<Record<'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es', string>>): string =>
+    v[locale === 'cn' ? 'zh' : locale] ?? v.en ?? v.ko ?? '';
 
   function handleAnswer(val: number) {
     setAnswers(prev => ({ ...prev, [q.id]: val }));
@@ -290,6 +307,15 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
         <p className="mt-2 text-xs text-gray-600">
           {score >= 60 ? info.high[locale] : score <= 40 ? info.low[locale] : `${info.low[locale]} / ${info.high[locale]}`}
         </p>
+        <details className="group mt-2">
+          <summary className="cursor-pointer list-none text-xs font-semibold text-gray-500 underline">{t.readMore}</summary>
+          <p className="mt-2 text-xs leading-5 text-gray-700">{sl(deepByKey[dimKey].interpretation)}</p>
+          <p className="mt-2 text-xs leading-5 text-gray-600">
+            {sl((deepByKey[dimKey] as { challenges?: Record<string, string>; growthPath?: Record<string, string> }).challenges
+              ?? (deepByKey[dimKey] as { challenges?: Record<string, string>; growthPath?: Record<string, string> }).growthPath
+              ?? {})}
+          </p>
+        </details>
       </div>
     );
   };
@@ -356,6 +382,13 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {CHARACTER_DIMS.map(d => <DimBar key={d} dimKey={d} />)}
           </div>
+        </div>
+
+        <div className="rounded-xl border border-gray-200 bg-gray-50 p-4">
+          <h2 className="text-sm font-bold text-gray-800">{t.synthesisTitle}</h2>
+          <p className="mt-2 text-sm leading-6 text-gray-700">{sl(deep.synthesis)}</p>
+          <h2 className="mt-4 text-sm font-bold text-gray-800">{t.lifeIntegrationTitle}</h2>
+          <p className="mt-2 text-sm leading-6 text-gray-700">{sl(deep.lifeIntegration)}</p>
         </div>
 
         <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>

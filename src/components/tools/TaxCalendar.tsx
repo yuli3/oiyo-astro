@@ -141,7 +141,7 @@ export default function TaxCalendar({ locale }: Props) {
             key={p}
             onClick={() => setPayer(p)}
             className={`rounded-full border px-4 py-1.5 text-sm font-semibold transition-colors ${
-              payer === p ? 'border-emerald-600 bg-emerald-600 text-white' : 'border-gray-200 bg-white text-gray-600 hover:border-emerald-300'
+              payer === p ? 'border-green-600 bg-green-600 text-white' : 'border-gray-200 bg-white text-gray-600 hover:border-green-300'
             }`}
           >
             {t.payer[p]}
@@ -151,10 +151,10 @@ export default function TaxCalendar({ locale }: Props) {
 
       {/* next deadline */}
       {next && (
-        <div className="mx-auto max-w-md rounded-2xl bg-emerald-50 p-4 text-center">
-          <div className="text-xs font-bold uppercase tracking-wider text-emerald-700">{t.next}</div>
+        <div className="mx-auto max-w-md rounded-2xl bg-green-50 p-4 text-center">
+          <div className="text-xs font-bold uppercase tracking-wider text-green-700">{t.next}</div>
           <div className="mt-1 text-lg font-black text-gray-900">{next.ev.name[lang]}</div>
-          <div className="text-sm text-emerald-700">
+          <div className="text-sm text-green-700">
             {next.ev.window} · <b>{next.days === 0 ? t.today : `${t.dday}${next.days}`}</b>
           </div>
         </div>
@@ -178,13 +178,13 @@ export default function TaxCalendar({ locale }: Props) {
                     rel="noopener noreferrer"
                     className={`group rounded-lg border px-2.5 py-1.5 text-left transition-colors ${
                       e.kind === 'national'
-                        ? 'border-emerald-200 bg-emerald-50 hover:bg-emerald-100'
+                        ? 'border-green-200 bg-green-50 hover:bg-green-100'
                         : 'border-amber-200 bg-amber-50 hover:bg-amber-100'
                     }`}
                     title={e.note[lang]}
                   >
                     <div className="flex items-center gap-1.5">
-                      <span className={`rounded px-1 text-[10px] font-bold ${e.kind === 'national' ? 'bg-emerald-600 text-white' : 'bg-amber-500 text-white'}`}>
+                      <span className={`rounded px-1 text-[10px] font-bold ${e.kind === 'national' ? 'bg-green-600 text-white' : 'bg-amber-500 text-white'}`}>
                         {e.kind === 'national' ? t.national : t.local}
                       </span>
                       <span className="text-sm font-bold text-gray-800">{e.name[lang]}</span>

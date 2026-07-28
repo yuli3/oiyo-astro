@@ -203,14 +203,14 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
           <div className="flex gap-2">
             {(['female', 'male'] as const).map((g) => (
               <button key={g} onClick={() => { setGender(g); setDone(false) }}
-                className={`px-4 py-1.5 rounded-lg border text-sm font-medium transition-colors ${gender === g ? 'border-emerald-500 bg-emerald-50 text-emerald-700' : 'hover:bg-accent'}`}>
+                className={`px-4 py-1.5 rounded-lg border text-sm font-medium transition-colors ${gender === g ? 'border-green-500 bg-green-50 text-green-700' : 'hover:bg-accent'}`}>
                 {g === 'male' ? t.male : t.female}
               </button>
             ))}
           </div>
         </div>
         <button onClick={compute}
-          className="w-full rounded-xl bg-emerald-600 text-white px-4 py-3 text-sm font-bold hover:opacity-90 transition-opacity">
+          className="w-full rounded-xl bg-green-600 text-white px-4 py-3 text-sm font-bold hover:opacity-90 transition-opacity">
           {done ? t.recompute : t.calc}
         </button>
       </div>
@@ -243,7 +243,7 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
           </div>
 
           <div className="rounded-2xl border bg-card p-5 space-y-4">
-            <h2 className="font-bold text-emerald-600">{t.prescription}</h2>
+            <h2 className="font-bold text-green-600">{t.prescription}</h2>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
               <div className="rounded-xl border p-3 text-center">
                 <p className="text-[11px] text-muted-foreground mb-1">{t.colorLabel}</p>
@@ -279,11 +279,11 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
               <p className="text-[11px] text-muted-foreground mb-2">{t.itemsLabel}</p>
               <ul className="space-y-1">
                 {r.items.map((it) => (
-                  <li key={it} className="text-sm text-muted-foreground flex gap-2"><span className="text-emerald-500">→</span>{it}</li>
+                  <li key={it} className="text-sm text-muted-foreground flex gap-2"><span className="text-green-500">→</span>{it}</li>
                 ))}
               </ul>
             </div>
-            <p className="text-sm font-medium text-emerald-700 leading-relaxed">{r.advice}</p>
+            <p className="text-sm font-medium text-green-700 leading-relaxed">{r.advice}</p>
           </div>
         </>
       )}

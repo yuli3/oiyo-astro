@@ -9,8 +9,15 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.params as { locale: Locale };
-const meta: Record<string, { title: string; description: string }> = { en: { title: "biological-age-test", description: "" } };
-const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '생체 나이 계산기', description: '생활 습관으로 실제 건강 나이를 계산해보세요.' },
+  en: { title: 'Biological Age Calculator', description: 'Calculate your real health age based on lifestyle habits.' },
+  ja: { title: '生物学的年齢計算機', description: '生活習慣から実際の健康年齢を計算します。' },
+  zh: { title: '生物年龄计算器', description: '根据生活习惯计算您的真实健康年龄。' },
+  fr: { title: 'Calculateur d\'Âge Biologique', description: 'Calculez votre âge de santé réel basé sur vos habitudes de vie.' },
+  es: { title: 'Calculadora de Edad Biológica', description: 'Calcula tu edad de salud real basada en hábitos de vida.' },
+};
+const m = meta[locale] ?? meta.en;
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>

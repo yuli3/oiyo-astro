@@ -14,6 +14,7 @@ jobs:
   build-check:
     name: Build & Type Check
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -86,6 +87,9 @@ jobs:
   sitemap-submit:
     name: Submit Sitemap (GSC + Bing + IndexNow)
     runs-on: ubuntu-latest
+    # The exact-commit Cloudflare Pages gate may legitimately wait up to one
+    # hour; this job must outlive that gate plus the local build.
+    timeout-minutes: 80
     needs: build-check
     # Only run on pushes to main, not on PRs
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
