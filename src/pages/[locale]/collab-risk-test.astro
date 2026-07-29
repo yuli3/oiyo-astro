@@ -20,7 +20,7 @@ const meta: Record<string, { title: string; description: string }> = {
 const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
 ---
 
-<Layout title={m.title} description={m.description} locale={locale}>
+<Layout title={m.title} description={m.description} locale={locale} heading={m.title} intro={m.description}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <CollabRiskTest locale={locale as any} client:load />
   </div>

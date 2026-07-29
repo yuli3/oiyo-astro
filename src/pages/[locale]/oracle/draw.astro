@@ -401,7 +401,7 @@ const faqJsonLd = {
 };
 ---
 
-<Layout title={m.title} description={m.description} locale={locale}>
+<Layout title={m.title} description={m.description} locale={locale} heading={m.title} intro={m.description}>
   <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-6xl px-4 py-8">
     <OracleCardDraw client:load locale={locale} />

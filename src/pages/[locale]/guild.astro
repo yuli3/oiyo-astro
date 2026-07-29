@@ -160,7 +160,7 @@ const c = content[locale] ?? content.en;
 const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
 ---
 
-<Layout title={m.title} description={m.description} locale={locale}>
+<Layout title={m.title} description={m.description} locale={locale} heading={m.title} intro={m.description}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <AdventurerGuild locale={locale} client:load />
 

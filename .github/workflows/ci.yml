@@ -62,6 +62,10 @@ jobs:
       - name: Audit assessment release gates
         run: npm run audit:assessment-release-gates
 
+      - name: Audit page structure
+        run: npm run audit:page-structure
+
+
       - name: Audit assessment analytics contracts
         run: npm run audit:assessment-analytics
 

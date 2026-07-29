@@ -18,6 +18,11 @@ interface Props {
   noindex?: boolean;
   canonicalPath?: string;
   ogImage?: string;
+  // Opt-in server-rendered lead. Tool pages mount a client:load island, so
+  // without this the crawler sees a page with no h1 and no body text at all.
+  // Opt-in because pages whose island renders its own h1 would end up with two.
+  heading?: string;
+  intro?: string;
 }
 
 const BCP47: Record<string, string> = {
@@ -32,7 +37,7 @@ const descriptionDefaults: Record<string, string> = {
   es: 'OIYO — Explora tu personalidad y tu destino',
   zh: 'OIYO — 探索你的个性与命运',
 };
-const { title, locale, noindex = false, canonicalPath, ogImage } = Astro.props;
+const { title, locale, noindex = false, canonicalPath, ogImage, heading, intro } = Astro.props;
 
 // Crawl-budget policy — see astro.config.mjs. Reachable for users, out of the
 // index, the sitemap, and the hreflang cluster.
@@ -174,6 +179,12 @@ const themeColor = '#65a30d';
     </a>
     <Header locale={locale} />
     <main id="main-content">
+      {heading && (
+        <div class="mx-auto max-w-3xl px-4 pt-8">
+          <h1 class="text-2xl font-black tracking-tight text-foreground">{heading}</h1>
+          {intro && <p class="mt-2 text-sm leading-relaxed text-muted-foreground">{intro}</p>}
+        </div>
+      )}
       <slot />
       {relatedReading && <TestRelatedReading locale={locale} blog={relatedReading.blog} wiki={relatedReading.wiki} />}
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
