@@ -1,4 +1,4 @@
-import { PersonaId } from "./types";
+import type { PersonaId } from "./types";
 
 export interface AtomicBlock {
   content: Record<string, string>; // Localized text

@@ -1,6 +1,8 @@
 ---
-import Layout from '../../layouts/Layout.astro';
-import { LOCALES, getTranslations } from '../../i18n';
+// Merged into /support (2026-07-30, user decision): support.astro now hosts
+// the contact form directly. This route stays only as a redirect so existing
+// links/bookmarks to /contact keep working.
+import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
 
 export async function getStaticPaths() {
@@ -8,86 +10,30 @@ export async function getStaticPaths() {
 }
 
 const { locale } = Astro.params as { locale: Locale };
-const t = await getTranslations(locale);
+const target = `/${locale}/support/`;
+
+const label: Record<Locale, string> = {
+  ko: '고객지원 페이지로 이동',
+  en: 'Go to the support page',
+  ja: 'サポートページへ移動',
+  zh: '前往支持页面',
+  fr: 'Aller à la page d’assistance',
+  es: 'Ir a la página de soporte',
+};
+const m = label[locale] ?? label.en;
 ---
 
-<Layout
-  title={t('contact.title') || 'Contact'}
-  description={t('contact.meta.description')}
-  locale={locale}
->
-  <section class="relative bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
-    <div class="max-w-2xl mx-auto animate-fadeInUp">
-      <h1 class="text-4xl font-serif font-black text-green-950 mb-3">
-        {t('contact.title')}
-      </h1>
-      <p class="text-green-700">{t('contact.subtitle')}</p>
-    </div>
-  </section>
-
-  <section class="max-w-xl mx-auto px-4 py-10">
-    <div class="bg-white rounded-2xl border border-green-50 p-8">
-      <form
-        name="contact"
-        method="POST"
-        action="https://formspree.io/f/contact"
-        class="space-y-5"
-      >
-        <div>
-          <label class="block text-sm font-semibold text-green-800 mb-1.5" for="name">
-            {t('contact.name')}
-          </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-green-950 text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300"
-            placeholder={t('contact.name')}
-          />
-        </div>
-
-        <div>
-          <label class="block text-sm font-semibold text-green-800 mb-1.5" for="email">
-            Email
-          </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-green-950 text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300"
-            placeholder="hello@example.com"
-          />
-        </div>
-
-        <div>
-          <label class="block text-sm font-semibold text-green-800 mb-1.5" for="message">
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            required
-            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-green-950 text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300 resize-none"
-            placeholder={t('contact.subtitle')}
-          ></textarea>
-        </div>
-
-        <button
-          type="submit"
-          class="w-full py-3 rounded-xl bg-green-700 text-white font-semibold text-sm hover:bg-green-800 transition-colors"
-        >
-          {t('contact.test.submit')}
-        </button>
-      </form>
-    </div>
-
-    <div class="mt-6 text-center text-sm text-green-500">
-      <a href="mailto:support@oiyo.net" class="hover:text-green-700 transition-colors">
-        support@oiyo.net
-      </a>
-    </div>
-  </section>
-</Layout>
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, follow" />
+    <link rel="canonical" href={`https://oiyo.net${target}`} />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
+    <title>OIYO Support</title>
+  </head>
+  <body>
+    <a href={target}>{m}</a>
+  </body>
+</html>

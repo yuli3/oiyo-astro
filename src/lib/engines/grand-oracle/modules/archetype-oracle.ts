@@ -6,7 +6,7 @@ import {
   ENNEAGRAM_CORE_NARRATIVES,
   MBTI_COSMIC_ROLE,
 } from "../shards/archetype-narratives";
-import { OracleContext, OracleModule, UnifiedFateReport } from "../types";
+import type { OracleContext, OracleModule, UnifiedFateReport } from "../types";
 import { getLang } from "../weaver";
 
 export const ArchetypeOracle: OracleModule = {

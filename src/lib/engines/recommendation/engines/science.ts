@@ -1,4 +1,4 @@
-import { Recommendation, RecommendationContext } from "../contracts";
+import type { Recommendation, RecommendationContext } from "../contracts";
 import { SCIENCE_DEFINITIONS } from "../data/definitions";
 import { computeMatchScore, MIN_DISPLAY_SCORE } from "../scoring";
 

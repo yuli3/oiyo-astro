@@ -1,4 +1,4 @@
-import { Recommendation, RecommendationContext } from "../contracts";
+import type { Recommendation, RecommendationContext } from "../contracts";
 import { HOBBY_DEFINITIONS } from "../data/definitions";
 import { graphAdjacentRecommendations } from "../graph-fallback";
 import { computeMatchScore, MIN_DISPLAY_SCORE } from "../scoring";

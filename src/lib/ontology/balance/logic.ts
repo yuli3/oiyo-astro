@@ -1,11 +1,11 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { BALANCE_QUESTIONS, BalanceQuestion } from "./data";
+import { BALANCE_QUESTIONS, type BalanceQuestion } from "./data";
 import {
   BALANCE_CATEGORIES,
-  BalanceCategoryKey,
-  BalanceResult,
-  BalanceScores,
+  type BalanceCategoryKey,
+  type BalanceResult,
+  type BalanceScores,
 } from "./types";
 
 export function calculateBalance(

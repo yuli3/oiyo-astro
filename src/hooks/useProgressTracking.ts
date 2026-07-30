@@ -6,7 +6,7 @@ import type { TestResultData } from "@/lib/system/database/results";
 
 import { ProgressAnalyzer } from "@/lib/user/progress-tracking/analyzer";
 import { ProgressRepository } from "@/lib/user/progress-tracking/repository";
-import {
+import type {
   PersonalityScore,
   ProgressDashboard,
   TestProgress,

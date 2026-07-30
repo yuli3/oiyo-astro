@@ -1,6 +1,6 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { PerfectionismDimension, PerfectionismQuestion } from "./types";
+import type { PerfectionismDimension, PerfectionismQuestion } from "./types";
 
 const PERFECTIONISM_OPTIONS = [
   {

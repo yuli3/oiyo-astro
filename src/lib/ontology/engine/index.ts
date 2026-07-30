@@ -13,7 +13,7 @@
  */
 
 import { generateGrandOracleReport } from "@/lib/engines/grand-oracle/logic";
-import {
+import type {
   OntologyBranches,
   OntologyProfile,
   OntologyRoots,
@@ -21,7 +21,7 @@ import {
 } from "@/lib/ontology/types";
 
 import { calculateUniversalCorrelation } from "./logic";
-import { SocialAnalysis, UniversalInput, UniversalProfile } from "./types";
+import type { SocialAnalysis, UniversalInput, UniversalProfile } from "./types";
 
 export interface ProfileInput {
   civilDate: string;

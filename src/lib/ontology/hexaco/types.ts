@@ -1,5 +1,5 @@
-import { LikertScoreResult } from "@/lib/engines/likert-score";
-import { LocalizedText } from "@/types/manifest";
+import type { LikertScoreResult } from "@/lib/engines/likert-score";
+import type { LocalizedText } from "@/types/manifest";
 
 export type HEXACODimension =
   | "A" // Agreeableness

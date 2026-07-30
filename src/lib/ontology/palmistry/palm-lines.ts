@@ -17,7 +17,7 @@ export const PALM_LINES: PalmLine[] = [
   {
     id: 'heart',
     color: '#e11d48',
-    path: 'M 60 150 C 110 120, 170 120, 235 140',
+    path: 'M 95 232 C 130 210, 170 205, 212 218',
     name: { ko: '감정선', en: 'Heart Line', ja: '感情線', zh: '感情线', fr: 'Ligne de cœur', es: 'Línea del corazón' },
     meaning: {
       ko: '사랑·감정·인간관계의 방식을 상징합니다.',
@@ -39,7 +39,7 @@ export const PALM_LINES: PalmLine[] = [
   {
     id: 'head',
     color: '#2563eb',
-    path: 'M 60 185 C 115 175, 175 185, 225 205',
+    path: 'M 92 250 C 130 246, 165 252, 198 268',
     name: { ko: '두뇌선', en: 'Head Line', ja: '頭脳線', zh: '智慧线', fr: 'Ligne de tête', es: 'Línea de la cabeza' },
     meaning: {
       ko: '사고방식·지성·집중의 성향을 나타냅니다.',
@@ -61,7 +61,7 @@ export const PALM_LINES: PalmLine[] = [
   {
     id: 'life',
     color: '#16a34a',
-    path: 'M 95 120 C 80 175, 85 235, 130 285',
+    path: 'M 100 224 C 84 250, 76 282, 84 322',
     name: { ko: '생명선', en: 'Life Line', ja: '生命線', zh: '生命线', fr: 'Ligne de vie', es: 'Línea de la vida' },
     meaning: {
       ko: '수명이 아니라 생명력·활력·삶의 질을 상징합니다.',
@@ -83,7 +83,7 @@ export const PALM_LINES: PalmLine[] = [
   {
     id: 'fate',
     color: '#9333ea',
-    path: 'M 150 320 C 150 250, 155 190, 160 130',
+    path: 'M 155 332 C 152 292, 148 252, 144 216',
     name: { ko: '운명선', en: 'Fate Line', ja: '運命線', zh: '命运线', fr: 'Ligne de destin', es: 'Línea del destino' },
     meaning: {
       ko: '일·진로·삶의 방향을 상징합니다. 없어도 나쁜 게 아니라 자유로운 삶을 뜻합니다.',
@@ -104,28 +104,52 @@ export const PALM_LINES: PalmLine[] = [
   },
 ];
 
-// Stylized right-palm silhouette path for a 300×360 viewBox.
-export const PALM_OUTLINE =
-  // 손목 → 엄지쪽 손바닥
-  'M 78 342 ' +
-  'C 60 330, 52 300, 54 268 ' +
-  // 엄지 (자연스러운 각도로 벌어짐)
-  'C 40 258, 26 236, 26 214 C 26 198, 36 190, 48 194 ' +
-  'C 58 198, 62 210, 62 226 ' +
-  'C 66 208, 66 176, 70 150 ' +
-  // 검지 (긴 손가락, 둥근 끝)
-  'L 74 128 C 74 76, 76 46, 84 46 C 92 46, 96 76, 96 128 ' +
-  'L 100 126 ' +
-  // 중지 (가장 길다)
-  'C 100 66, 104 34, 114 34 C 124 34, 128 66, 128 126 ' +
-  'L 134 128 ' +
-  // 약지
-  'C 134 72, 138 42, 148 42 C 158 42, 162 72, 162 130 ' +
-  'L 168 134 ' +
-  // 새끼손가락 (짧다, 바깥으로)
-  'C 172 96, 178 82, 188 84 C 198 86, 202 100, 196 138 ' +
-  // 새끼쪽 손바닥 → 손목
-  'C 214 150, 228 172, 232 206 ' +
-  'C 238 250, 228 306, 200 338 ' +
-  'C 176 352, 100 352, 78 342 ' +
-  'Z';
+// Right-palm-facing-viewer silhouette for a 300×360 viewBox — thumb on the
+// left (as it appears when you hold up your own right palm), four fingers
+// with natural length variation (middle longest, pinky shortest) and rounded
+// webbing between them. Redrawn 2026-07-30 (previous shape read as "not like
+// a real hand" — this one was checked visually at each control point before
+// landing here; see [[palm-anatomy-svg-redesign-2026-07-30]]).
+export const PALM_OUTLINE = [
+  'M 108 345',
+  // wrist → thumb-side heel of palm
+  'C 90 340, 80 320, 80 298',
+  'C 78 280, 82 262, 90 250',
+  // thumb: outer edge up to a rounded tip, then back down the inner edge
+  'C 76 246, 55 232, 44 214',
+  'C 38 204, 37 196, 44 190',
+  'C 52 184, 62 192, 72 206',
+  'C 82 218, 92 228, 100 218',
+  // index finger
+  'C 100 195, 96 168, 88 148',
+  'C 82 132, 84 112, 92 108',
+  'C 100 105, 106 122, 108 148',
+  'C 110 168, 112 190, 114 212',
+  'L 120 210',
+  // middle finger (longest)
+  'C 118 175, 116 130, 118 90',
+  'C 119 68, 122 58, 128 58',
+  'C 134 58, 138 70, 138 92',
+  'C 138 128, 138 172, 140 208',
+  'L 146 206',
+  // ring finger
+  'C 145 182, 146 148, 150 118',
+  'C 152 100, 156 88, 162 90',
+  'C 168 92, 170 108, 168 130',
+  'C 165 158, 162 182, 162 204',
+  'L 168 200',
+  // pinky (shortest)
+  'C 170 178, 176 152, 184 138',
+  'C 190 128, 198 128, 202 138',
+  'C 206 150, 200 172, 190 190',
+  'C 182 204, 174 214, 172 222',
+  'L 190 232',
+  // pinky-side heel of palm → wrist — one smooth outward curve, not two, so
+  // it doesn't read as a stray 6th digit next to the pinky (2026-07-30 fix).
+  'C 203 225, 219 220, 226 226',
+  'C 233 232, 220 246, 194 252',
+  'C 202 264, 208 280, 206 300',
+  'C 204 320, 190 340, 170 346',
+  'C 150 350, 126 350, 108 345',
+  'Z',
+].join(' ');

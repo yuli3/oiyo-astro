@@ -1,7 +1,7 @@
 import {
   ENNEAGRAM_TYPES,
-  EnneagramType,
-  EnneagramTypeDetail,
+  type EnneagramType,
+  type EnneagramTypeDetail,
 } from "@/lib/data-layer/shards/personality-enneagram";
 
 export interface EnneagramResult {

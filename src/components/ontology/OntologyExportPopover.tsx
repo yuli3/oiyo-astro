@@ -267,7 +267,22 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
     URL.revokeObjectURL(url);
   }
 
-  if (!hydrated || !data) return null;
+  // Renders a placeholder instead of null while waiting to hydrate — this
+  // section used to render nothing at all here, which on a long page reads
+  // as "the export button doesn't exist" rather than "still loading."
+  if (!hydrated || !data) {
+    return (
+      <div className="animate-pulse rounded-[28px] border border-green-100 bg-white p-4 shadow-sm sm:p-5">
+        <div className="h-24 rounded-2xl bg-green-50" />
+        <div className="mt-3 flex flex-wrap gap-1.5">
+          {FORMATS.map((f) => (
+            <div key={f} className="h-7 w-16 rounded-md bg-green-50" />
+          ))}
+        </div>
+        <div className="mt-3 h-9 w-32 rounded-lg bg-green-100" />
+      </div>
+    );
+  }
 
   const topRecommendations = [...data.recommendations].sort((a, b) => b.matchScore - a.matchScore).slice(0, 3);
 

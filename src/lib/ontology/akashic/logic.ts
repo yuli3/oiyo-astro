@@ -1,4 +1,4 @@
-import { UniversalProfile } from "../engine/types";
+import type { UniversalProfile } from "../engine/types";
 
 export interface AkashicData {
   bio: {

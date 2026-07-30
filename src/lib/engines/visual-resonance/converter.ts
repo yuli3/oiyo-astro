@@ -1,6 +1,6 @@
 /* eslint-disable no-restricted-syntax */
-import { SajuAnalysis } from "../../ontology/saju/types";
-import { TCIResult } from "../../tci/types";
+import type { SajuAnalysis } from "../../ontology/saju/types";
+import type { TCIResult } from "../../tci/types";
 
 export interface ResonanceVisuals {
   "--resonance-blur": string;

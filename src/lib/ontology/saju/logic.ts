@@ -4,18 +4,8 @@ import { STEM_ORDER } from "@/manifest/data/saju/stems";
 
 import { getSolarLongitude, getSolarTermDate } from "../kernel/astronomy";
 import { earthlyBranches, heavenlyStems, SIXTY_GANZHI } from "./data";
-import {
-  EarthlyBranch,
-  ElementCompatibilityResult,
-  FiveElement,
-  HeavenlyStem,
-  // LocalizedText removed
-  SajuAnalysis,
-  SajuPillar,
-  SajuResult,
-  TenGod,
-  YinYang,
-} from "./types";
+import { EarthlyBranch, FiveElement, HeavenlyStem, TenGod, YinYang } from "./types";
+import type { ElementCompatibilityResult, SajuAnalysis, SajuPillar, SajuResult } from "./types";
 
 export function analyzeDayMasterStrength(saju: SajuResult): {
   dominantTenGod: null | TenGod;

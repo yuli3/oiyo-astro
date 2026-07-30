@@ -1,6 +1,6 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { BalanceCategoryKey } from "./types";
+import type { BalanceCategoryKey } from "./types";
 
 export interface BalanceQuestion {
   category: BalanceCategoryKey;

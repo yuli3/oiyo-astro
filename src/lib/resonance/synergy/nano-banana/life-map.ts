@@ -1,4 +1,4 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { GoogleGenAIService } from "@/lib/engines/ai/google-genai";
 
 // Input interface for generating a Life Map

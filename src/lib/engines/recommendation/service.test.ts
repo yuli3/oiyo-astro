@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { RecommendationContext } from "./contracts";
+import type { RecommendationContext } from "./contracts";
 import { RecommendationService } from "./service";
 
 describe("RecommendationService.generateRecommendations", () => {

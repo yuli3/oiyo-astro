@@ -1,6 +1,6 @@
 import { FiveElement } from "@/lib/ontology/saju/types";
 
-import { SixLangString } from "../../interpretation/engine.contract";
+import type { SixLangString } from "../../interpretation/engine.contract";
 
 /**
  * Saju Element x TCI Trait Matrix

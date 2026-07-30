@@ -1,8 +1,8 @@
 import { calculateLikertScores } from "@/lib/engines/likert-score";
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
 import { HSP_QUESTIONS } from "./data";
-import { HSPDimension, HSPResult } from "./types";
+import type { HSPDimension, HSPResult } from "./types";
 
 export function calculateHSP(answers: Record<string, number>): HSPResult {
   // Use generic engine for dimension scores

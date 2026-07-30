@@ -3,8 +3,8 @@ import {
   DECISION_MAKING_DESCRIPTIONS,
   DECISION_MAKING_STRENGTHS,
   DECISION_MAKING_TRAITS,
-  DecisionMakingResult,
-  DecisionMakingType,
+  type DecisionMakingResult,
+  type DecisionMakingType,
 } from "./types";
 
 export function calculateDecisionMakingResult(

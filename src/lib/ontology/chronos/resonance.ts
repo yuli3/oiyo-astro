@@ -7,8 +7,8 @@
 
 import { heavenlyStems } from "../saju/data";
 import { FiveElement as SajuElement } from "../saju/types";
-import { Element as ZiweiElement } from "../ziwei/types";
-import { UniversalChronosCoordinates } from "./types";
+import type { Element as ZiweiElement } from "../ziwei/types";
+import type { UniversalChronosCoordinates } from "./types";
 
 export interface NarrativeBlock {
   key: string;

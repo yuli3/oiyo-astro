@@ -13,10 +13,10 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { cn } from "@/lib/system/utils";
 
-import { DIMENSION_METADATA, DimensionResult } from "../types";
+import { DIMENSION_METADATA, type DimensionResult } from "../types";
 
 interface ResonanceMapProps {
   dimensions: DimensionResult[];

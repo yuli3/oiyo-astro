@@ -3,7 +3,7 @@
  * 취미 추천 데이터베이스
  */
 
-import { Hobby } from "@/lib/data-layer/types";
+import type { Hobby } from "@/lib/data-layer/types";
 
 export const HOBBIES: Hobby[] = [
   // Creative Hobbies

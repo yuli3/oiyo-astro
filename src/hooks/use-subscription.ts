@@ -4,7 +4,7 @@ import { useUser } from "@clerk/nextjs";
 import { useCallback, useEffect, useState } from "react";
 
 import { FREE_FEATURES, getFeaturesForTier } from "@/lib/user/payments/plans";
-import { SubscriptionStatus } from "@/lib/user/payments/types";
+import type { SubscriptionStatus } from "@/lib/user/payments/types";
 
 const DEFAULT_SUBSCRIPTION: SubscriptionStatus = {
   cancelAtPeriodEnd: false,

@@ -1,5 +1,5 @@
 import { getLanguageName } from "@/lib/system/i18n/locale-helper";
-import { Locale } from "@/types/manifest";
+import type { Locale } from "@/types/manifest";
 
 export const SYSTEM_PROMPT = (locale: Locale) => {
   const lang = getLanguageName(locale as Locale);

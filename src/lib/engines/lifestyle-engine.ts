@@ -2,7 +2,7 @@ import careersJson from "../ontology/lifestyle/careers.json";
 import {
   CAREER_METADATA,
   HOBBY_METADATA,
-  LifestyleMetadata,
+  type LifestyleMetadata,
 } from "../ontology/lifestyle/data";
 import hobbiesJson from "../ontology/lifestyle/hobbies.json";
 

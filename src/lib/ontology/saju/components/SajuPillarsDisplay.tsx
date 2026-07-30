@@ -23,7 +23,7 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/system/utils";
 
 import { earthlyBranches, heavenlyStems } from "../data";
-import { EarthlyBranch, FiveElement, HeavenlyStem, SajuResult } from "../types";
+import { EarthlyBranch, FiveElement, HeavenlyStem, type SajuResult } from "../types";
 
 type PillarType = "day" | "hour" | "month" | "year";
 

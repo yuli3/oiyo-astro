@@ -1,8 +1,8 @@
 import { calculateLikertScores } from "@/lib/engines/likert-score";
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
 import { HEXACO_QUESTIONS } from "./data";
-import { HEXACODimension, HEXACOFacet, HEXACOResult } from "./types";
+import type { HEXACODimension, HEXACOFacet, HEXACOResult } from "./types";
 
 export function calculateHEXACO(answers: Record<string, number>): HEXACOResult {
   const scores = calculateLikertScores<HEXACODimension>(answers, {

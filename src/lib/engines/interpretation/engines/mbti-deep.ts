@@ -1,4 +1,4 @@
-import { SixLangString } from "../engine.contract";
+import type { SixLangString } from "../engine.contract";
 import { getGlossaryHints } from "../glossary";
 import {
   COGNITIVE_FUNCTIONS,

@@ -20,7 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
   CorrelationEngine,
-  CorrelationInsight,
+  type CorrelationInsight,
 } from "@/lib/engines/correlation-engine";
 import { heavenlyStems } from "@/lib/ontology/saju/data";
 import { calculateSaju } from "@/lib/ontology/saju/logic";

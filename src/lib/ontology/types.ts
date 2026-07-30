@@ -1,5 +1,5 @@
-import { UniversalProfile } from "@/lib/ontology/engine/types";
-import { Locale } from "@/types/manifest";
+import type { UniversalProfile } from "@/lib/ontology/engine/types";
+import type { Locale } from "@/types/manifest";
 export interface AssessmentResult {
   completedAt: number;
   data: Record<string, unknown>;
@@ -9,9 +9,9 @@ export interface AssessmentResult {
   score?: number;
 }
 export type { Locale };
-import { Big5Result } from "@/lib/big5/types";
-import { SajuResult } from "@/lib/ontology/saju/types";
-import { TCIResult } from "@/lib/tci/types";
+import type { Big5Result } from "@/lib/big5/types";
+import type { SajuResult } from "@/lib/ontology/saju/types";
+import type { TCIResult } from "@/lib/tci/types";
 
 export interface ContextManagerConfig {
   cacheTimeout: number;
@@ -38,8 +38,8 @@ export interface ContextualInsightConfig {
   )[];
 }
 
-import { HSPResult } from "@/lib/ontology/hsp/types";
-import { PerfectionismResult } from "@/lib/ontology/perfectionism/types";
+import type { HSPResult } from "@/lib/ontology/hsp/types";
+import type { PerfectionismResult } from "@/lib/ontology/perfectionism/types";
 
 export interface CorrelationEdge {
   description: string;
@@ -61,7 +61,7 @@ export interface CorrelationNode {
   score?: number;
 }
 
-import { HEXACOResult } from "@/lib/ontology/hexaco/types";
+import type { HEXACOResult } from "@/lib/ontology/hexaco/types";
 
 export interface InsightAction {
   label: string;
@@ -96,8 +96,8 @@ export interface MBTIResult {
 // NEW TYPES FOR CONTEXTUAL ONTOLOGY INTEGRATION
 // ============================================================================
 
-import { EnneagramResult } from "@/lib/ontology/enneagram-core/engine";
-import { RiasecResult } from "@/lib/ontology/riasec/types";
+import type { EnneagramResult } from "@/lib/ontology/enneagram-core/engine";
+import type { RiasecResult } from "@/lib/ontology/riasec/types";
 
 export type MBTIType = string; // Placeholder
 

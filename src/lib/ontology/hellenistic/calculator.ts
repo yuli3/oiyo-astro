@@ -1,5 +1,5 @@
 import { TRIPLICITY_LORDS } from "./data";
-import { HellenisticCoordinates, Sect, TriplicityLords } from "./types";
+import type { HellenisticCoordinates, Sect, TriplicityLords } from "./types";
 import { getTrueSolarTime } from "../kernel/astronomy";
 
 /**

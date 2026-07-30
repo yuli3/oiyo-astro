@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 import React from "react";
 
 import { useAnalytics } from "@/hooks/use-analytics";
-import { SmartLinkProps } from "@/lib/ontology/types";
+import type { SmartLinkProps } from "@/lib/ontology/types";
 import { cn } from "@/lib/utils";
 import { ROUTES } from "@/registry/routes";
 

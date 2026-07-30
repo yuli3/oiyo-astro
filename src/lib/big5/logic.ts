@@ -1,8 +1,8 @@
 import { calculateLikertScores } from "@/lib/engines/likert-score";
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
 import { BIG5_INSIGHTS, BIG5_QUESTIONS } from "./data";
-import { Big5Dimension, Big5Result } from "./types";
+import type { Big5Dimension, Big5Result } from "./types";
 
 export function calculateBig5(answers: Record<string, number>): Big5Result {
   const scores = calculateLikertScores<Big5Dimension>(answers, {

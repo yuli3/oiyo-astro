@@ -1,5 +1,5 @@
-import { Birthflower, Birthstone, Hobby } from "./core/schemas";
-import { Faction } from "./shards/lifestyle/factions";
+import type { Birthflower, Birthstone, Hobby } from "./core/schemas";
+import type { Faction } from "./shards/lifestyle/factions";
 
 export const OntologyShardMap = {
   BIRTHFLOWERS: () =>

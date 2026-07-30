@@ -1,4 +1,4 @@
-import { UserResult } from "@/types/data-schema";
+import type { UserResult } from "@/types/data-schema";
 
 export interface ComprehensiveReport {
   career: { harmony?: number; title?: string }; // NEW

@@ -1,4 +1,4 @@
-import { ConflictResponseResult, ConflictStyleType } from "./types";
+import type { ConflictResponseResult, ConflictStyleType } from "./types";
 
 export function calculateConflictResponse(
   answers: Record<string, string>,

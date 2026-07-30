@@ -1,7 +1,7 @@
 import { calculateLikertScores } from "@/lib/engines/likert-score";
 
 import { TCI_DIMENSION_MAP, TCI_QUESTIONS } from "./data";
-import { TCIDimension, TCIResult, TCISubDimension } from "./types";
+import type { TCIDimension, TCIResult, TCISubDimension } from "./types";
 
 // Mapping hypothesis: Questions map to sub-dimensions.
 // Since specific mapping isn't in 'data' yet, we assume a spread or default structure.

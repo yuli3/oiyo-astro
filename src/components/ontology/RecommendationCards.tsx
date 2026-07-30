@@ -2,8 +2,8 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-import { RecommendationContext, RecommendationCategory, Recommendation } from "@/lib/engines/recommendation/contracts";
-import { explainMatch, findDefinition, MatchSignal } from "@/lib/engines/recommendation/reasoning";
+import type { RecommendationContext, RecommendationCategory, Recommendation } from "@/lib/engines/recommendation/contracts";
+import { explainMatch, findDefinition, type MatchSignal } from "@/lib/engines/recommendation/reasoning";
 import { RecommendationService } from "@/lib/engines/recommendation/service";
 import { resolveNodeLabel } from "@/lib/ontology/graph/label";
 import { getNode } from "@/lib/ontology/graph/nodes";

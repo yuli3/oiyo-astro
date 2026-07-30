@@ -1,4 +1,4 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 
 import { FOOD_PERSONALITY_QUESTIONS } from "./data";
 import {
@@ -6,9 +6,9 @@ import {
   FOOD_PERSONALITY_DESCRIPTIONS,
   FOOD_PERSONALITY_LABELS,
   FOOD_PERSONALITY_TRAITS,
-  FoodPersonalityQuestion,
-  FoodPersonalityResult,
-  FoodPersonalityType,
+  type FoodPersonalityQuestion,
+  type FoodPersonalityResult,
+  type FoodPersonalityType,
 } from "./types";
 
 // Map missing locales to English for questions if they are not defined

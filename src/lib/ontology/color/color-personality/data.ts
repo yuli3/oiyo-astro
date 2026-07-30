@@ -1,11 +1,11 @@
 /* eslint-disable no-restricted-syntax */
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 
 import {
   COLOR_PERSONALITY_DESCRIPTIONS,
   COLOR_PERSONALITY_LABELS,
-  ColorPersonalityQuestion,
-  ColorPersonalityResult,
+  type ColorPersonalityQuestion,
+  type ColorPersonalityResult,
 } from "./types";
 
 export const colorPersonalityQuestions = {

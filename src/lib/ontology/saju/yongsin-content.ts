@@ -54,7 +54,10 @@ export const YONGSIN_C = {
     balanced: { ko: "비교적 균형이 잡혀 있습니다. 부족한 쪽을 살짝 보완하는 오행이 이롭습니다.", en: "Fairly balanced. An element that gently fills the lacking side helps you.", ja: "比較的バランスが取れています。足りない側をそっと補う五行が有利です。", zh: "整体较为平衡。能轻轻补足不足一侧的五行对你有利。", fr: "L'ensemble est assez équilibré. Un élément qui comble doucement le côté manquant vous aide.", es: "Hay bastante equilibrio. Te ayuda un elemento que complete suavemente el lado que falta." } as L<string>,
     weak: { ko: "일간을 돕는 기운이 부족합니다. 나를 길러주는 오행이 이롭습니다.", en: "Your Day Master lacks support. Elements that nourish you help you.", ja: "日干を助ける気が不足しています。自分を育ててくれる五行が有利です。", zh: "日干缺少扶助。能滋养你的五行对你有利。", fr: "Votre Maître du jour manque de soutien. Les éléments qui vous nourrissent vous aident.", es: "A tu Maestro del Día le falta apoyo. Te ayudan los elementos que te nutren." } as L<string>,
   },
-  favorableHeading: { ko: "이로운 기운", en: "Favorable energy", ja: "有利な気", zh: "有利的能量", fr: "Énergie favorable", es: "Energía favorable" } as L<string>,
+  // Deliberately distinct from `heading` above (which also contains "이로운
+  // 기운") — this label sits directly under that title in the same card, and
+  // repeating the exact phrase read as a duplicate rather than two things.
+  favorableHeading: { ko: "도움 되는 오행", en: "Elements that help", ja: "助けになる五行", zh: "有帮助的五行", fr: "Éléments qui aident", es: "Elementos que ayudan" } as L<string>,
   unfavorableHeading: { ko: "주의할 기운", en: "Energy to watch", ja: "注意したい気", zh: "需要留意的能量", fr: "Énergie à surveiller", es: "Energía a vigilar" } as L<string>,
   yongsinLabel: { ko: "용신", en: "Yongsin (primary)", ja: "用神(主)", zh: "用神(主要)", fr: "Yongsin (principal)", es: "Yongsin (principal)" } as L<string>,
   huisinLabel: { ko: "희신", en: "Huisin (secondary)", ja: "喜神(補助)", zh: "喜神(辅助)", fr: "Huisin (secondaire)", es: "Huisin (secundario)" } as L<string>,

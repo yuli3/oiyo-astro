@@ -1,4 +1,4 @@
-import { GALACTIC_TONES, MayanKin, SOLAR_SEALS } from "./types";
+import { GALACTIC_TONES, type MayanKin, SOLAR_SEALS } from "./types";
 
 // Base Date: July 26, 1987 (Kin 34 - White Galactic Wizard)
 const BASE_DATE = new Date(1987, 6, 26); // Month is 0-indexed

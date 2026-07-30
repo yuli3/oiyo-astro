@@ -9,7 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import {
-  BiorhythmState,
+  type BiorhythmState,
   calculateBiorhythm,
   getBiorhythmInterpretation,
 } from "@/lib/ontology/saju/biorhythm";

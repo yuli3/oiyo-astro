@@ -435,19 +435,38 @@ export default function TarotDailyCard({ locale }: Props) {
                 <CardCornerFlourish className={`absolute right-1.5 top-1.5 rotate-90 ${isReversed ? "text-amber-500" : "text-green-300"}`} />
                 <CardCornerFlourish className={`absolute bottom-1.5 right-1.5 rotate-180 ${isReversed ? "text-amber-500" : "text-green-300"}`} />
                 <CardCornerFlourish className={`absolute bottom-1.5 left-1.5 -rotate-90 ${isReversed ? "text-amber-500" : "text-green-300"}`} />
-                <div style={{ position: "absolute", inset: "14px", border: `1px solid ${isReversed ? "rgba(217,119,6,0.3)" : "rgba(192,168,255,0.22)"}`, borderRadius: "3px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "8px" }}>
-                  <span style={{ fontSize: "10px", letterSpacing: "0.4em", color: isReversed ? "rgba(217,119,6,0.7)" : "rgba(192,168,255,0.6)", textTransform: "uppercase", fontFamily: "monospace" }}>{isReversed ? ui.reversed : ui.upright}</span>
-                  <div style={{ transform: isReversed ? "rotate(180deg)" : "none", textAlign: "center" }}>
-                    {card.suit ? (
-                      <span style={{ fontSize: "40px", display: "block", marginBottom: "8px" }}>{SUIT_SYMBOLS[card.suit] ?? "🔮"}</span>
-                    ) : (
-                      <span style={{ fontSize: "40px", display: "block", marginBottom: "8px" }}>🌟</span>
-                    )}
-                    <p style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "13px", letterSpacing: "0.2em", color: isReversed ? "#d97706" : "rgba(232,228,255,0.9)", textTransform: "uppercase" }}>
-                      {cardName}
-                    </p>
+                {card.number !== undefined && (card.suit ? SUIT_SYMBOLS[card.suit] !== undefined : true) ? (
+                  // Real Rider-Waite-Smith artwork (1909, public domain) — Major
+                  // Arcana from /images/tarot, Minor Arcana from /images/tarot-minor.
+                  <div style={{ position: "absolute", inset: "10px", borderRadius: "3px", overflow: "hidden", transform: isReversed ? "rotate(180deg)" : "none" }}>
+                    <img
+                      src={
+                        card.suit
+                          ? `/images/tarot-minor/${card.suit}-${String(card.number).padStart(2, '0')}.jpg`
+                          : `/images/tarot/tarot-${String(card.number).padStart(2, '0')}.jpg`
+                      }
+                      alt={cardName}
+                      loading="lazy"
+                      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                    />
+                    <div style={{ position: "absolute", insetInline: 0, bottom: 0, padding: "18px 6px 8px", background: "linear-gradient(to top, rgba(0,0,0,.88), transparent)" }}>
+                      <p style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "12px", letterSpacing: "0.15em", color: "#fff", textTransform: "uppercase", textAlign: "center" }}>
+                        {cardName}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                ) : (
+                  // Fallback for any card the data doesn't give a number for.
+                  <div style={{ position: "absolute", inset: "14px", border: `1px solid ${isReversed ? "rgba(217,119,6,0.3)" : "rgba(192,168,255,0.22)"}`, borderRadius: "3px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "8px" }}>
+                    <span style={{ fontSize: "10px", letterSpacing: "0.4em", color: isReversed ? "rgba(217,119,6,0.7)" : "rgba(192,168,255,0.6)", textTransform: "uppercase", fontFamily: "monospace" }}>{isReversed ? ui.reversed : ui.upright}</span>
+                    <div style={{ transform: isReversed ? "rotate(180deg)" : "none", textAlign: "center" }}>
+                      <span style={{ fontSize: "40px", display: "block", marginBottom: "8px" }}>{SUIT_SYMBOLS[card.suit ?? ""] ?? "🔮"}</span>
+                      <p style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "13px", letterSpacing: "0.2em", color: isReversed ? "#d97706" : "rgba(232,228,255,0.9)", textTransform: "uppercase" }}>
+                        {cardName}
+                      </p>
+                    </div>
+                  </div>
+                )}
                 {/* Iridescent on front too */}
                 <div style={{ position: "absolute", inset: 0, pointerEvents: "none", mixBlendMode: "screen", opacity: 0.5, background: "conic-gradient(from var(--iri-angle, 220deg) at var(--mx, 50%) var(--my, 50%), #b8e8ff, #f4d4ff, #ffe4d0, #d0fff4, #e0d4ff, #b8e8ff)", filter: "blur(16px)" }} />
                 <div style={{ position: "absolute", inset: 0, pointerEvents: "none", mixBlendMode: "screen", opacity: 0.45, background: "radial-gradient(160px 200px at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.45) 0%, rgba(255,255,255,.1) 30%, transparent 60%)" }} />

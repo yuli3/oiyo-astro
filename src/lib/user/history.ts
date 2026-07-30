@@ -1,4 +1,4 @@
-import { UserHistory, UserResult } from "@/types/data-schema";
+import type { UserHistory, UserResult } from "@/types/data-schema";
 
 const STORAGE_KEY = "oiyo_user_history_v1";
 

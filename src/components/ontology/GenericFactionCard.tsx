@@ -3,7 +3,7 @@
 import { BarChart, Landmark, Scale, Shield, Zap } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 
-import { GenericFactionAnalysis } from "@/lib/ontology/engine/factions";
+import type { GenericFactionAnalysis } from "@/lib/ontology/engine/factions";
 import { cn } from "@/lib/system/utils";
 
 interface GenericFactionCardProps {

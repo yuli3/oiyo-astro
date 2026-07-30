@@ -1,9 +1,9 @@
-import { ConsumptionResult } from "@/lib/ontology/consumption/types";
-import { OntologyProfile } from "@/lib/ontology/types";
-import { ConflictResponseResult } from "@/lib/resonance/conflict-response/types";
+import type { ConsumptionResult } from "@/lib/ontology/consumption/types";
+import type { OntologyProfile } from "@/lib/ontology/types";
+import type { ConflictResponseResult } from "@/lib/resonance/conflict-response/types";
 
 import {
-  ElementType,
+  type ElementType,
   getDailyLuckStatus,
   getLuckAttributes,
 } from "../data-layer/shards/luck-engine";

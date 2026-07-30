@@ -1,6 +1,6 @@
 import { CorrelationEngine } from "./correlation-engine";
 import { RichDisplayMapper } from "./display-mapper";
-import {
+import type {
   RichInterpretationResult,
   UniversalInterpretationResult,
 } from "./engine.contract";

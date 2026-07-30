@@ -1,10 +1,10 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { getTranslations } from "next-intl/server";
 
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { getLanguageName } from "@/lib/system/i18n/locale-helper";
 
-import { UniversalProfile } from "../../ontology/engine/types";
+import type { UniversalProfile } from "../../ontology/engine/types";
 
 // Initialize Gemini
 // Note: This requires GOOGLE_API_KEY in environment variables

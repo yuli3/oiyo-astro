@@ -7,7 +7,7 @@
  *           with Depth on anchor pairs (RIASEC-Hobby, TCI-Saju)
  */
 
-import { RiasecType } from "@/lib/ontology/riasec/types";
+import type { RiasecType } from "@/lib/ontology/riasec/types";
 import { FiveElement } from "@/lib/ontology/saju/types";
 
 // ─────────────────────────────────────────────────────────────

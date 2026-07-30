@@ -1,6 +1,6 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { NumerologyMeaning } from "./types";
+import type { NumerologyMeaning } from "./types";
 
 export const LETTER_TO_NUMBER: Record<string, number> = {
   A: 1,

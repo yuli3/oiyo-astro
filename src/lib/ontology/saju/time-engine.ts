@@ -1,5 +1,5 @@
 import { calculateSaju } from "./logic";
-import { SajuPillar, SajuResult } from "./types";
+import type { SajuPillar, SajuResult } from "./types";
 
 /**
  * Calculates the Saju pillars for the current moment.

@@ -1,9 +1,9 @@
 import { calculateBiorhythm } from "@/lib/engines/biorhythm-engine";
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
 import { getBirthAttributes } from "../../data-layer/shards/fate-birth-attributes";
 import {
-  BirthSymbol,
+  type BirthSymbol,
   FATE_SYMBOLS_DATA,
 } from "../../data-layer/shards/fate-symbols";
 import { calculateNumerology } from "../../ontology/numerology/logic";
@@ -14,7 +14,7 @@ import { getUniversalChronosCoordinates } from "../chronos/chronos-engine";
 import { civilDateToLocalNoon } from "../kernel/civil-date";
 import { calculateHellenisticCoordinates } from "../hellenistic/calculator";
 import { calculateMayanKin } from "../mayan/calculator";
-import { analyzeNameEnergy, PrimalElement } from "../onomancy/analysis";
+import { analyzeNameEnergy, type PrimalElement } from "../onomancy/analysis";
 import { BLOOD_TYPE_DATA } from "../traits/blood-type/data";
 import { calculateCelestialPosition } from "../western/calculator";
 import {
@@ -22,7 +22,7 @@ import {
   SYNERGY_TEMPLATES,
   WESTERN_ZODIAC_DATA,
 } from "./data";
-import { SocialAnalysis, UniversalInput, UniversalProfile } from "./types";
+import type { SocialAnalysis, UniversalInput, UniversalProfile } from "./types";
 
 /**
  * Basic Core Calculation (formerly Primal)

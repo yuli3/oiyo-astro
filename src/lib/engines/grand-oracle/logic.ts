@@ -8,7 +8,7 @@ import { SynthesisOracle } from "./modules/synthesis-oracle";
 import { VisualOracle } from "./modules/visual-oracle";
 import { VocationOracle } from "./modules/vocation-oracle";
 import { ORACLE_META } from "./shards/meta-narratives";
-import { GrandOracleInput, OracleContext, UnifiedFateReport } from "./types";
+import type { GrandOracleInput, OracleContext, UnifiedFateReport } from "./types";
 import { getLang } from "./weaver";
 
 export async function generateGrandOracleReport(

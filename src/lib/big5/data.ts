@@ -1,6 +1,6 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { Big5Dimension, Big5Question } from "./types";
+import type { Big5Dimension, Big5Question } from "./types";
 
 const BIG5_OPTIONS = [
   {

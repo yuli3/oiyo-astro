@@ -1,4 +1,4 @@
-import { RiasecQuestion, RiasecType } from "./types";
+import type { RiasecQuestion, RiasecType } from "./types";
 
 export const RIASEC_QUESTIONS: RiasecQuestion[] = [
   // 1. Realistic vs Social

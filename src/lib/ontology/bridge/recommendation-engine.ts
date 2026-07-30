@@ -1,7 +1,7 @@
 import { CAREERS } from "@/lib/data-layer/shards/careers";
-import { Career } from "@/lib/data-layer/types";
-import { RiasecType } from "@/lib/ontology/riasec/types";
-import {
+import type { Career } from "@/lib/data-layer/types";
+import type { RiasecType } from "@/lib/ontology/riasec/types";
+import type {
   MBTIType,
   OntologyBranches,
   OntologyContextState,

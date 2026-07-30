@@ -8,7 +8,7 @@ import {
 import { secureCache } from "@/lib/system/storage/secure-cache";
 
 import { ProgressAnalyzer } from "./analyzer";
-import {
+import type {
   PersonalityScore,
   PersonalityTrend,
   ProgressDashboard,

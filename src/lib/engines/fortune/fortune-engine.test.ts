@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { UniversalProfile } from "@/lib/ontology/engine/types";
+import type { UniversalProfile } from "@/lib/ontology/engine/types";
 
 import { FortuneEngine } from "./fortune-engine";
 

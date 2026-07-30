@@ -13,7 +13,7 @@
 
 import solarlunar from "solarlunar";
 
-import { EarthlyBranch, HeavenlyStem, SajuPillar } from "../saju/types";
+import { EarthlyBranch, HeavenlyStem, type SajuPillar } from "../saju/types";
 import { getLunarDate } from "./lunar-kernel";
 
 export interface FourPillars {

@@ -1,4 +1,4 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { features } from "@/registry/features";
 
 export type TestCategory =

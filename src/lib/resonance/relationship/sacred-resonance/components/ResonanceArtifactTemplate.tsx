@@ -3,9 +3,9 @@
 
 import React, { forwardRef } from "react";
 
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 
-import { TotalResonance } from "../types";
+import type { TotalResonance } from "../types";
 
 interface ResonanceArtifactTemplateProps {
   locale: Locale;

@@ -53,7 +53,7 @@ const meta: Record<Locale, { title: string; description: string; heading: string
 
 const m = meta[locale] ?? meta.en;
 
-const namespaces = ['saju', 'ontology', 'common', 'nav', 'ui'];
+const namespaces = ['saju', 'saju-daymaster', 'elements', 'ontology', 'common', 'nav', 'ui'];
 const messages: Record<string, unknown> = {};
 for (const ns of namespaces) {
   try {

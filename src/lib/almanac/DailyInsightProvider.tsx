@@ -17,7 +17,7 @@ import { aggregateOntology } from "@/lib/ontology/engine";
 import {
   calculateDailyEnergy,
   calculateResonanceScore,
-  DailyCosmicState,
+  type DailyCosmicState,
 } from "./engine";
 
 interface DailyInsightContextType {

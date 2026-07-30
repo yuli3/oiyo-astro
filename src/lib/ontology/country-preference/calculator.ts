@@ -2,10 +2,10 @@ import { COUNTRIES_DATABASE, COUNTRY_PREFERENCE_QUESTIONS } from "./data";
 import {
   COUNTRY_PREFERENCE_DESCRIPTIONS,
   COUNTRY_PREFERENCE_TRAITS,
-  CountryData,
-  CountryMatch,
-  CountryPreferenceResult,
-  CountryPreferenceType,
+  type CountryData,
+  type CountryMatch,
+  type CountryPreferenceResult,
+  type CountryPreferenceType,
 } from "./types";
 
 export function calculateCountryPreference(

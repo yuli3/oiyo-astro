@@ -3,7 +3,7 @@ import { FiveElement } from "@/lib/ontology/saju/types";
 
 import { NARRATIVE_REGISTRY } from "../../interpretation/narrative-registry";
 import { SOCIAL_MATRIX } from "../shards/social-narratives";
-import { OracleContext, OracleModule, UnifiedFateReport } from "../types";
+import type { OracleContext, OracleModule, UnifiedFateReport } from "../types";
 import { getLang } from "../weaver";
 
 export const SocialOracle: OracleModule = {

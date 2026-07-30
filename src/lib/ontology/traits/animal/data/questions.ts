@@ -1,4 +1,4 @@
-import { AnimalQuestion } from "../types";
+import type { AnimalQuestion } from "../types";
 
 export const ANIMAL_QUESTIONS: AnimalQuestion[] = [
   {

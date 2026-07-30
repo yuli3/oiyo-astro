@@ -1,4 +1,4 @@
-import { Birthflower } from "../../core/schemas";
+import type { Birthflower } from "../../core/schemas";
 
 export const BIRTHFLOWERS: Birthflower[] = [
   // January

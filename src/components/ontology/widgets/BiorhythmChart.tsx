@@ -12,7 +12,7 @@ import {
   YAxis,
 } from "recharts";
 
-import { BiorhythmData } from "@/lib/engines/biorhythm-engine";
+import type { BiorhythmData } from "@/lib/engines/biorhythm-engine";
 
 interface BiorhythmChartProps {
   data: BiorhythmData[];

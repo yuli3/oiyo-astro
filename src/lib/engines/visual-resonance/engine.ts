@@ -1,9 +1,9 @@
 /* eslint-disable no-restricted-syntax */
 import { earthlyBranches, heavenlyStems } from "../../ontology/saju/data";
 import { analyzeSaju } from "../../ontology/saju/logic";
-import { FiveElement, SajuResult } from "../../ontology/saju/types";
-import { TCIResult } from "../../tci/types";
-import { ResonanceAura, VisualResonanceState } from "./types";
+import { FiveElement, type SajuResult } from "../../ontology/saju/types";
+import type { TCIResult } from "../../tci/types";
+import type { ResonanceAura, VisualResonanceState } from "./types";
 
 const ELEMENT_COLORS = {
   earth: "#f59e0b", // Amber

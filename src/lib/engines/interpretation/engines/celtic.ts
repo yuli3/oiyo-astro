@@ -1,4 +1,4 @@
-import { CelticInterpretation } from "../engine.contract";
+import type { CelticInterpretation } from "../engine.contract";
 import { getGlossaryHints } from "../glossary";
 import { CELTIC_TREES } from "../shards/celtic-shards";
 

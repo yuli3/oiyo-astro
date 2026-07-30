@@ -19,7 +19,7 @@ import {
 // Let's rely on `analyzeSaju` to do the heavy lifting if I construct a fake pillar?
 // No, simpler to just expose `calculateTenGod` in `saju/logic.ts` in next step if needed.
 // Start by writing the file assuming import works, I will fix export in next step.
-import { OracleContext, OracleModule, UnifiedFateReport } from "../types";
+import type { OracleContext, OracleModule, UnifiedFateReport } from "../types";
 import { getLang } from "../weaver";
 
 // Temporary helper until I verify export

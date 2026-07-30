@@ -1,5 +1,5 @@
 import {
-  BiorhythmData,
+  type BiorhythmData,
   calculateBiorhythm as engineCalculate,
 } from "@/lib/engines/biorhythm-engine";
 import { FiveElement } from "@/lib/ontology/saju/types";

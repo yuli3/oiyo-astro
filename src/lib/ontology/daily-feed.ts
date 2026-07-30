@@ -1,6 +1,6 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { MayanEngine } from "@/lib/ontology/engines/mayan";
-import { WisdomInsight } from "@/lib/ontology/synapse/BaseEngineInterface";
+import type { WisdomInsight } from "@/lib/ontology/synapse/BaseEngineInterface";
 
 /**
  * OntologySynapse (Daily Feed Aggregator)

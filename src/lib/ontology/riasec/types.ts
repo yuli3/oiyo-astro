@@ -1,4 +1,4 @@
-import { LocalizedContent } from "@/types/manifest";
+import type { LocalizedContent } from "@/types/manifest";
 
 export type RiasecType =
   | "Artistic"
@@ -29,7 +29,7 @@ export interface RiasecQuestion {
   text: LocalizedContent;
 }
 
-import { Career } from "@/lib/data-layer/types";
+import type { Career } from "@/lib/data-layer/types";
 
 export interface RiasecResult {
   careers: (Career | LocalizedContent)[];

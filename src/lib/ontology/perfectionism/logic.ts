@@ -1,8 +1,8 @@
 import { calculateLikertScores } from "@/lib/engines/likert-score";
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
 import { FULL_PERFECTIONISM_QUESTIONS } from "./data";
-import { PerfectionismDimension, PerfectionismResult } from "./types";
+import type { PerfectionismDimension, PerfectionismResult } from "./types";
 
 export function calculatePerfectionism(
   answers: Record<string, number>,

@@ -19,10 +19,10 @@
  * safely resolves to 0 (never throws, never divides by zero).
  */
 
-import { ProfileSignals } from "@/lib/ontology/signals";
+import type { ProfileSignals } from "@/lib/ontology/signals";
 
-import { RecommendationContext } from "./contracts";
-import { RecommendationDefinition } from "./data/definitions";
+import type { RecommendationContext } from "./contracts";
+import type { RecommendationDefinition } from "./data/definitions";
 
 type ScoringRules = RecommendationDefinition["scoring"];
 

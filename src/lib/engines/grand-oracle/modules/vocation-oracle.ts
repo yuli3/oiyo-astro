@@ -5,7 +5,7 @@ import {
   TEN_GOD_RIASEC_SYNERGY,
   VOCATION_PATHWAYS,
 } from "../shards/vocation-narratives";
-import { OracleContext, OracleModule, UnifiedFateReport } from "../types";
+import type { OracleContext, OracleModule, UnifiedFateReport } from "../types";
 import { getLang } from "../weaver";
 
 export const VocationOracle: OracleModule = {

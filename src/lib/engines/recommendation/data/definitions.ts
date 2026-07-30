@@ -1,4 +1,4 @@
-import { RecommendationCategory } from "../contracts";
+import type { RecommendationCategory } from "../contracts";
 
 export interface RecommendationDefinition {
   category: RecommendationCategory;

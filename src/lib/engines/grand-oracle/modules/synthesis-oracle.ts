@@ -1,4 +1,4 @@
-import { OracleContext, OracleModule, UnifiedFateReport } from "../types";
+import type { OracleContext, OracleModule, UnifiedFateReport } from "../types";
 
 export const SynthesisOracle: OracleModule = {
   id: "synthesis",

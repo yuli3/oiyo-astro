@@ -1,7 +1,7 @@
 // Personal Progress Tracking Analyzer
 // Created: 2025-09-18
 
-import {
+import type {
   PersonalityTrend,
   ProgressInsight,
   ProgressMetrics,

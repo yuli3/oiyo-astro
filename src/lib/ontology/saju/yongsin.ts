@@ -14,7 +14,7 @@
 
 import { earthlyBranches, heavenlyStems } from "./data";
 import { calculateTenGod } from "./logic";
-import { FiveElement, SajuResult, TenGod } from "./types";
+import { FiveElement, type SajuResult, TenGod } from "./types";
 
 const E = FiveElement;
 

@@ -1,7 +1,7 @@
 // Community & Social Features Types
 // Comprehensive type system for personality-based social interactions and community building
 
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 
 // Achievement & Gamification System
 export interface Achievement {

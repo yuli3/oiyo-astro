@@ -7,7 +7,7 @@ import Link from "next/link";
 import React from "react";
 
 import { Button } from "@/components/ui/button";
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { ROUTES } from "@/registry/routes";
 
 export function PrimalArchetypeSection() {

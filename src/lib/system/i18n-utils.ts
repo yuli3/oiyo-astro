@@ -1,5 +1,5 @@
-import { Locale } from "@/i18n";
-import { StrictLocalized } from "@/lib/system/utils/localization";
+import type { Locale } from "@/i18n";
+import type { StrictLocalized } from "@/lib/system/utils/localization";
 
 export const commonTranslations = {
   finish: {

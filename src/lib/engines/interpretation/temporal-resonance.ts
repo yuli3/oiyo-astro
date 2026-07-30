@@ -1,4 +1,4 @@
-import { SixLangString } from "./engine.contract";
+import type { SixLangString } from "./engine.contract";
 import { calculateMayanKin, interpretMayan } from "./engines/mayan";
 import { TONE_ACTIONS } from "./shards/mayan-shards";
 import { calculateSonEobneuneNal } from "./universal-interpreter";

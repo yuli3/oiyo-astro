@@ -1,7 +1,7 @@
 /* eslint-disable no-restricted-syntax */
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { HEXACODimension, HEXACOQuestion } from "./types";
+import type { HEXACODimension, HEXACOQuestion } from "./types";
 
 export const HEXACO_DIMENSION_MAP: Record<
   HEXACODimension,

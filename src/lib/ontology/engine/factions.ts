@@ -1,5 +1,5 @@
-import { Faction } from "../../../manifest/ontology/shards/lifestyle/factions";
-import { ChosunFaction } from "../chosun-faction/logic";
+import type { Faction } from "../../../manifest/ontology/shards/lifestyle/factions";
+import type { ChosunFaction } from "../chosun-faction/logic";
 
 export interface GenericFactionAnalysis {
   behavioralFaction: Faction | null;

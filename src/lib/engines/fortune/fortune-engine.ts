@@ -1,12 +1,12 @@
 import { generateGrandOracleReport } from "@/lib/engines/grand-oracle/logic";
-import { GrandOracleInput } from "@/lib/engines/grand-oracle/types";
-import { UniversalProfile } from "@/lib/ontology/engine/types";
+import type { GrandOracleInput } from "@/lib/engines/grand-oracle/types";
+import type { UniversalProfile } from "@/lib/ontology/engine/types";
 import { heavenlyStems } from "@/lib/ontology/saju/data";
 import { getLanguageName } from "@/lib/system/i18n/locale-helper";
-import { Locale } from "@/types/manifest";
+import type { Locale } from "@/types/manifest";
 
 import { SYSTEM_PROMPT, TIER_INSTRUCTIONS } from "./prompts";
-import {
+import type {
   DailyFortuneResult,
   FortuneContext,
   FortuneRequest,

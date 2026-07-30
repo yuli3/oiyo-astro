@@ -1,5 +1,5 @@
-import { SajuResult } from "../../ontology/saju/types";
-import { TCIResult } from "../../tci/types";
+import type { SajuResult } from "../../ontology/saju/types";
+import type { TCIResult } from "../../tci/types";
 
 export interface ResonanceAura {
   accentColor: string;

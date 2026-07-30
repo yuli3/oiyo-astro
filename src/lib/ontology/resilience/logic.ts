@@ -1,5 +1,5 @@
 import { RESILIENCE_QUESTIONS, RESILIENCE_RESULTS } from "./data";
-import { ResilienceFactor, ResilienceResult } from "./types";
+import type { ResilienceFactor, ResilienceResult } from "./types";
 
 export function calculateResilience(
   answers: Record<string, string>,

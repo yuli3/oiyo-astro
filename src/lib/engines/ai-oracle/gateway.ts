@@ -2,7 +2,7 @@ import { UniversalCorrelationEngine } from "@/lib/ontology/chronos/chronos-engin
 
 import { consultOracle } from "./adapter";
 import { CombinatorialEngine } from "./combinatorial-engine";
-import { OracleInput, OracleResponse, PersonaId } from "./types";
+import type { OracleInput, OracleResponse, PersonaId } from "./types";
 
 /**
  * Narrative Gateway

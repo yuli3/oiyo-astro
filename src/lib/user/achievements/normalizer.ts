@@ -1,9 +1,9 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 
 import { ACHIEVEMENTS } from "./data";
 import {
-  Achievement,
-  AchievementDefinitionSummary,
+  type Achievement,
+  type AchievementDefinitionSummary,
   AchievementType,
   BadgeTier,
 } from "./types";

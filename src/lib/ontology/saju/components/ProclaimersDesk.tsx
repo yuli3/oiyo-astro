@@ -19,7 +19,7 @@ import {
 import { birthCivilToInstant } from "@/lib/ontology/kernel/time";
 import { earthlyBranches, heavenlyStems } from "@/lib/ontology/saju/data";
 import { analyzeSaju, calculateSaju } from "@/lib/ontology/saju/logic";
-import { SajuResult as SajuResultType } from "@/lib/ontology/saju/types";
+import type { SajuResult as SajuResultType } from "@/lib/ontology/saju/types";
 
 interface SajuResult extends SajuResultType {
   elements: Record<string, number>;

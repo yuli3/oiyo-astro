@@ -4,8 +4,8 @@ import { loadTossPayments } from "@tosspayments/payment-sdk";
 
 import {
   type PaymentErrorCode,
-  PaymentResult,
-  TossPaymentConfig,
+  type PaymentResult,
+  type TossPaymentConfig,
 } from "./types";
 
 // Toss Payments client key (test key for development)

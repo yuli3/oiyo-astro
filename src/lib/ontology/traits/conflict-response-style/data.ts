@@ -1,6 +1,6 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { ConflictResponseType } from "./types";
+import type { ConflictResponseType } from "./types";
 
 export interface ConflictResponseQuestion {
   emoji: string; // Emoji for visual context

@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 
 import { FiveElement, TenGod } from "@/lib/ontology/saju/types";
-import { OntologyProfile } from "@/lib/ontology/types";
+import type { OntologyProfile } from "@/lib/ontology/types";
 
 /**
  * A hook to safely select and memoize specific data points from the universal profile.

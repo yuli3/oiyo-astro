@@ -1,5 +1,5 @@
 import { RIASEC_QUESTIONS } from "./data";
-import { RiasecQuestion } from "./types";
+import type { RiasecQuestion } from "./types";
 
 // Generate 48 questions by duplicating and slightly modifying IDs
 // In a real app, these would be unique, distinct questions.

@@ -6,10 +6,10 @@
  * Follows SSOT principle - all engines must conform to these types.
  */
 
-import { LocalizedString } from "@/types/manifest";
+import type { LocalizedString } from "@/types/manifest";
 
-import { MBTIDeepInterpretation } from "./engines/mbti-deep";
-import { TCIDeepInterpretation } from "./engines/tci-deep";
+import type { MBTIDeepInterpretation } from "./engines/mbti-deep";
+import type { TCIDeepInterpretation } from "./engines/tci-deep";
 
 // ============================================================================
 // Core Six-Language String Type

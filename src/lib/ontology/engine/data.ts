@@ -1,6 +1,6 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { WesternZodiacSign } from "./types";
+import type { WesternZodiacSign } from "./types";
 
 export const WESTERN_ZODIAC_DATA: Record<string, WesternZodiacSign> = {
   aquarius: {

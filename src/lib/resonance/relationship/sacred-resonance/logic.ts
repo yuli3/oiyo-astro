@@ -1,6 +1,6 @@
 import { differenceInDays } from "date-fns";
 
-import { EnneagramTypeId } from "./data/shards/personality-enneagram";
+import type { EnneagramTypeId } from "./data/shards/personality-enneagram";
 
 /**
  * MAYAN KIN CALCULATION

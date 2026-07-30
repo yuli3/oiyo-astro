@@ -8,7 +8,7 @@ import { AuthStatus } from "@/components/auth/auth-status";
 import { GlobalSearch } from "@/components/ui/GlobalSearch";
 import { MobileNav } from "@/components/ui/mobile-nav";
 import { DESKTOP_NAV_ITEMS } from "@/config/navigation";
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { getLocalizedContent } from "@/lib/system/i18n/locale-utils";
 import { features } from "@/registry/features";
 import { ROUTES } from "@/registry/routes";

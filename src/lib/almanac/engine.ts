@@ -1,8 +1,8 @@
-import { DaySymbols } from "@/hooks/useAlmanac";
+import type { DaySymbols } from "@/hooks/useAlmanac";
 import { FiveElement, HeavenlyStem } from "@/lib/ontology/saju/types"; // Import legacy types
 
-import { getMoonPhase, getRetrogrades, MoonPhaseData } from "./astro-lookup";
-import { DailyPillar, Element, getDailyPillar } from "./saju-math";
+import { getMoonPhase, getRetrogrades, type MoonPhaseData } from "./astro-lookup";
+import { type DailyPillar, type Element, getDailyPillar } from "./saju-math";
 import { WISDOM_ARTICLES } from "./wisdom-data";
 
 export interface DailyCosmicState {

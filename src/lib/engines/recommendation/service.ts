@@ -1,4 +1,4 @@
-import { RecommendationContext, RecommendationResult } from "./contracts";
+import type { RecommendationContext, RecommendationResult } from "./contracts";
 import { CareerEngine } from "./engines/career";
 import { HobbyEngine } from "./engines/hobby";
 import { MythologyEngine } from "./engines/mythology";

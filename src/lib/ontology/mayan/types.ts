@@ -1,4 +1,4 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
 export type MayanColor = "blue" | "red" | "white" | "yellow";
 

@@ -1,4 +1,4 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { generateResonanceNarrative } from "@/lib/engines/ai/oracle-voice";
 import { calculateEgyptianCoordinates } from "@/lib/ontology/egyptian/calculator";
 import { analyzeSaju, calculateSaju } from "@/lib/ontology/saju/logic";
@@ -15,7 +15,7 @@ import {
   getCelticSignId,
 } from "./logic";
 import { normalizeScore, refineResonance } from "./refinery";
-import {
+import type {
   DimensionResult,
   PartnerPartialProfile,
   ResonanceDimensionId,

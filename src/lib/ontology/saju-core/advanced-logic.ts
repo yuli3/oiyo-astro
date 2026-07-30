@@ -1,8 +1,5 @@
-import {
-  EarthlyBranch,
-  HeavenlyStem,
-  SajuResult,
-} from "@/lib/ontology/saju/types";
+import { EarthlyBranch, HeavenlyStem } from "@/lib/ontology/saju/types";
+import type { SajuResult } from "@/lib/ontology/saju/types";
 
 // Simplified types for the logic engine
 export type Element = "Earth" | "Fire" | "Metal" | "Water" | "Wood";

@@ -1,4 +1,4 @@
-import { SixLangString } from "../engine.contract";
+import type { SixLangString } from "../engine.contract";
 import { HEXACO_DATA } from "../shards/hexaco-deep-shards";
 
 /**

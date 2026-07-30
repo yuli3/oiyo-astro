@@ -1,5 +1,5 @@
 import { FRIENDSHIP_QUESTIONS, FRIENDSHIP_STYLE_RESULTS } from "./data";
-import { FriendshipAttachmentType, FriendshipStyleResult } from "./types";
+import type { FriendshipAttachmentType, FriendshipStyleResult } from "./types";
 
 export function calculateFriendshipStyle(
   answers: Record<string, string>,

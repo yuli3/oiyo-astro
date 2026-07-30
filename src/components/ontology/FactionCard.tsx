@@ -3,7 +3,7 @@
 import { Landmark, Shield, Users, Zap } from "lucide-react";
 import { useTranslations } from "next-intl";
 
-import { FactionAnalysis } from "@/lib/ontology/chosun-faction/logic";
+import type { FactionAnalysis } from "@/lib/ontology/chosun-faction/logic";
 import { cn } from "@/lib/system/utils";
 
 interface FactionCardProps {

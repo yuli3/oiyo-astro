@@ -1,6 +1,6 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 
-import { FoodPersonalityQuestion } from "./types";
+import type { FoodPersonalityQuestion } from "./types";
 
 export const FOOD_PERSONALITY_QUESTIONS: Record<
   Locale,

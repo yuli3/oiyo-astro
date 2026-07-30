@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { RecommendationContext } from "./contracts";
+import type { RecommendationContext } from "./contracts";
 import { graphAdjacentRecommendations } from "./graph-fallback";
 
 function ctx(overrides: Partial<RecommendationContext> = {}): RecommendationContext {

@@ -1,4 +1,4 @@
-import { AnimalResult, AnimalType } from "../../ontology/traits/animal/types";
+import type { AnimalResult, AnimalType } from "../../ontology/traits/animal/types";
 
 export interface RelationshipAnalysis {
   activities: string[];

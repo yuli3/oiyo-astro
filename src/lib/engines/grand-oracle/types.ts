@@ -1,10 +1,10 @@
-import { BirthSymbol } from "../../data-layer/shards/fate-symbols";
-import { CelticTreeSign } from "../../ontology/celtic/types";
-import { EgyptianCoordinates } from "../../ontology/egyptian/types";
-import { SajuResult } from "../../ontology/saju/types";
-import { CelestialCoordinates } from "../../ontology/western/calculator";
-import { TCIResult } from "../../tci/types";
-import { VisualResonanceState } from "../visual-resonance/types";
+import type { BirthSymbol } from "../../data-layer/shards/fate-symbols";
+import type { CelticTreeSign } from "../../ontology/celtic/types";
+import type { EgyptianCoordinates } from "../../ontology/egyptian/types";
+import type { SajuResult } from "../../ontology/saju/types";
+import type { CelestialCoordinates } from "../../ontology/western/calculator";
+import type { TCIResult } from "../../tci/types";
+import type { VisualResonanceState } from "../visual-resonance/types";
 
 export interface GrandOracleInput {
   biorhythm?: null | {

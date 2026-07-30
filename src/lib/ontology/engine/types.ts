@@ -1,23 +1,23 @@
-import { BirthSymbol } from "@/lib/data-layer/shards/fate-symbols";
-import { CelticTreeSign } from "@/lib/ontology/celtic/types";
-import { EgyptianCoordinates } from "@/lib/ontology/egyptian/types";
-import { NumerologyResult } from "@/lib/ontology/numerology/types";
-import { NameAnalysisResult } from "@/lib/ontology/onomancy/analysis";
-import {
+import type { BirthSymbol } from "@/lib/data-layer/shards/fate-symbols";
+import type { CelticTreeSign } from "@/lib/ontology/celtic/types";
+import type { EgyptianCoordinates } from "@/lib/ontology/egyptian/types";
+import type { NumerologyResult } from "@/lib/ontology/numerology/types";
+import type { NameAnalysisResult } from "@/lib/ontology/onomancy/analysis";
+import type {
   LuckyAttributes,
   SajuAnalysis,
   SajuResult,
 } from "@/lib/ontology/saju/types";
-import { BloodTypePersonality } from "@/lib/ontology/traits/blood-type/types";
-import { CelestialCoordinates } from "@/lib/ontology/western/calculator";
-import { LocalizedText } from "@/types/manifest";
+import type { BloodTypePersonality } from "@/lib/ontology/traits/blood-type/types";
+import type { CelestialCoordinates } from "@/lib/ontology/western/calculator";
+import type { LocalizedText } from "@/types/manifest";
 
-import { HellenisticCoordinates } from "../hellenistic/types";
-import { KabbalahCoordinates } from "../kabbalah/types";
-import { MayanKin } from "../mayan/types";
-import { Rune } from "../nordic/types";
-import { VedicCoordinates } from "../vedic/types";
-import { ZiWeiCoordinates } from "../ziwei/types";
+import type { HellenisticCoordinates } from "../hellenistic/types";
+import type { KabbalahCoordinates } from "../kabbalah/types";
+import type { MayanKin } from "../mayan/types";
+import type { Rune } from "../nordic/types";
+import type { VedicCoordinates } from "../vedic/types";
+import type { ZiWeiCoordinates } from "../ziwei/types";
 
 export interface AnimalZodiacSign {
   element?: string;

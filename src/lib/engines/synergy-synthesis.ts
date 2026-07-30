@@ -1,10 +1,10 @@
 /* eslint-disable no-restricted-syntax */
 import { consultOracle } from "@/lib/engines/ai-oracle/adapter";
-import { NumerologyResult } from "@/lib/ontology/numerology/types";
-import { SajuResult } from "@/lib/ontology/saju/types";
-import { ConflictResponseResult } from "@/lib/resonance/conflict-response/types";
-import { FriendshipStyleResult } from "@/lib/resonance/friendship-style/types";
-import { LocalizedContent } from "@/types/manifest";
+import type { NumerologyResult } from "@/lib/ontology/numerology/types";
+import type { SajuResult } from "@/lib/ontology/saju/types";
+import type { ConflictResponseResult } from "@/lib/resonance/conflict-response/types";
+import type { FriendshipStyleResult } from "@/lib/resonance/friendship-style/types";
+import type { LocalizedContent } from "@/types/manifest";
 
 export interface SynergyInput {
   partner: {

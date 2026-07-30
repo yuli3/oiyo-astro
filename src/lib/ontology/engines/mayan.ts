@@ -1,6 +1,6 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { calculateMayanKin } from "@/lib/ontology/mayan/calculator";
-import {
+import type {
   BaseEngineInterface,
   WisdomInsight,
 } from "@/lib/ontology/synapse/BaseEngineInterface";

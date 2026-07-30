@@ -10,7 +10,7 @@
  * - Life Event Timing (大運 / Great Luck Cycles)
  */
 
-import { LocalizedString } from "@/types/manifest";
+import type { LocalizedString } from "@/types/manifest";
 
 import {
   BRANCH_ORDER,
@@ -22,7 +22,7 @@ import {
   EarthlyBranch,
   FiveElement,
   HeavenlyStem,
-  SajuResult,
+  type SajuResult,
   TenGod,
 } from "../types";
 

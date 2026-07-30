@@ -1,4 +1,4 @@
-import { CountryPreferenceType as _CountryPreferenceType } from "./types";
+import type { CountryPreferenceType as _CountryPreferenceType } from "./types";
 
 export const COUNTRY_PREFERENCE_QUESTIONS = {
   en: [

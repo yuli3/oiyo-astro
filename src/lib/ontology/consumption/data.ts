@@ -1,6 +1,6 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { ConsumptionTrait } from "./types";
+import type { ConsumptionTrait } from "./types";
 
 export const CONSUMPTION_QUESTIONS = [
   // 1. Shopping List

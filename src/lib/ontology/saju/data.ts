@@ -5,14 +5,8 @@
  * Refactored for pure i18n support.
  */
 
-import {
-  EarthlyBranch,
-  EarthlyBranchRegistryEntry,
-  FiveElement,
-  HeavenlyStem,
-  HeavenlyStemRegistryEntry,
-  YinYang,
-} from "./types";
+import { EarthlyBranch, FiveElement, HeavenlyStem, YinYang } from "./types";
+import type { EarthlyBranchRegistryEntry, HeavenlyStemRegistryEntry } from "./types";
 
 /**
  * Heavenly Stems Registry (Cheongan)

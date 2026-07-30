@@ -6,7 +6,7 @@
  * Provides cross-system resonance analysis and temporal guidance.
  */
 
-import { SixLangString } from "./engine.contract";
+import type { SixLangString } from "./engine.contract";
 import { interpretCeltic } from "./engines/celtic";
 import { interpretKabbalah } from "./engines/kabbalah";
 import { calculateMayanKin, interpretMayan } from "./engines/mayan";

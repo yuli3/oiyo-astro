@@ -1,4 +1,4 @@
-import { BiasDefinition, BiasType, Question } from "./types";
+import type { BiasDefinition, BiasType, Question } from "./types";
 
 export const questions: Question[] = [
   {

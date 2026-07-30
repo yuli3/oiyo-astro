@@ -8,7 +8,7 @@ import React from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ResultCard } from "@/components/ui/ResultCard";
-import { NumerologyResult } from "@/lib/ontology/numerology/types";
+import type { NumerologyResult } from "@/lib/ontology/numerology/types";
 import { cn } from "@/lib/system/utils";
 
 interface NumerologySectionProps {

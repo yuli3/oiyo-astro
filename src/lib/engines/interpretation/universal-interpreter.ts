@@ -1,4 +1,4 @@
-import { SixLangString } from "./engine.contract";
+import type { SixLangString } from "./engine.contract";
 import { interpretEgyptian } from "./engines/egyptian";
 import { interpretHellenistic } from "./engines/hellenistic";
 import { interpretMayan } from "./engines/mayan";

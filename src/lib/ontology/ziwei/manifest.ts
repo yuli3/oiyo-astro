@@ -1,6 +1,6 @@
 import { THEME_COLORS } from "@/lib/system/theme";
 
-import { DomainManifest } from "../manifest-types";
+import type { DomainManifest } from "../manifest-types";
 
 export const ziweiManifest: DomainManifest = {
   component: {

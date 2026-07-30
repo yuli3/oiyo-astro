@@ -7,6 +7,7 @@ import {
 
 export interface UserProfile {
   big5Type?: null | string;
+  birthCityId?: null | string;
   birthDate: null | string;
   birthRecord?: BirthRecordV2 | null;
   birthTime?: null | string;
@@ -47,6 +48,7 @@ export const useUserStore = create<UserState>()(
         set({
           profile: {
             big5Type: null,
+            birthCityId: null,
             birthDate: null,
             birthRecord: null,
             birthTime: null,
@@ -65,6 +67,7 @@ export const useUserStore = create<UserState>()(
 
       profile: {
         big5Type: null,
+        birthCityId: null,
         birthDate: null,
         birthRecord: null,
         birthTime: null,

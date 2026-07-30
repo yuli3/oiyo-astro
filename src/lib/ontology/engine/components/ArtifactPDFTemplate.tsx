@@ -3,8 +3,8 @@
 
 import React, { forwardRef } from "react";
 
-import { Locale } from "@/i18n";
-import { UniversalProfile } from "@/lib/ontology/engine/types";
+import type { Locale } from "@/i18n";
+import type { UniversalProfile } from "@/lib/ontology/engine/types";
 
 interface Styles {
   card: React.CSSProperties;

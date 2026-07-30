@@ -1,4 +1,4 @@
-import { ErrorCode, ErrorScope } from "./types";
+import { type ErrorCode, ErrorScope } from "./types";
 
 export interface AppErrorOptions {
   cause?: unknown;

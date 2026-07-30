@@ -4,7 +4,7 @@
  * 10 Heavenly Stems with their elemental associations.
  */
 
-import { ElementId } from "./elements";
+import type { ElementId } from "./elements";
 
 export const STEM_IDS = [
   "GAP",

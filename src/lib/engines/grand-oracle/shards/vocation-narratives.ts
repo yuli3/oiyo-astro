@@ -1,4 +1,4 @@
-import { SixLangString } from "../../interpretation/engine.contract";
+import type { SixLangString } from "../../interpretation/engine.contract";
 
 export const VOCATION_PATHWAYS: Record<string, SixLangString> = {
   // A - Artistic

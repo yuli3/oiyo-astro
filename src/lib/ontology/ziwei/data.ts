@@ -3,7 +3,7 @@
  * Transferred from JSON to TS for better type safety and import reliability.
  */
 
-import { Star } from "./types";
+import type { Star } from "./types";
 
 export const MAIN_STARS: Star[] = [
   {

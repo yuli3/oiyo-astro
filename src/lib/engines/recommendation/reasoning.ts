@@ -18,18 +18,18 @@
  * `OntologyRelationOrbit` straight to the signal that drove the match.
  */
 
-import { RecommendationContext } from "./contracts";
+import type { RecommendationContext } from "./contracts";
 import {
   CAREER_DEFINITIONS,
   HOBBY_DEFINITIONS,
   MYTHOLOGY_DEFINITIONS,
   PSYCHOLOGY_DEFINITIONS,
-  RecommendationDefinition,
+  type RecommendationDefinition,
   SCIENCE_DEFINITIONS,
   SPIRITUALITY_DEFINITIONS,
 } from "./data/definitions";
 import { RIASEC_LETTER_TO_NODE_ID } from "./graph-fallback";
-import { BIG5_HIGH_THRESHOLD, BIG5_LOW_THRESHOLD, CATEGORY_WEIGHT, resolveProfile, ResolvedProfile } from "./scoring";
+import { BIG5_HIGH_THRESHOLD, BIG5_LOW_THRESHOLD, CATEGORY_WEIGHT, resolveProfile, type ResolvedProfile } from "./scoring";
 
 type ScoringRules = RecommendationDefinition["scoring"];
 

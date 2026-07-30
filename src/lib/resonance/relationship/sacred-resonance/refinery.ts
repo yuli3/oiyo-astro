@@ -1,11 +1,11 @@
 import {
   calculateWeightedAverage as genericCalculateWeightedAverage,
   normalizeScore as genericNormalizeScore,
-  WeightedValue,
+  type WeightedValue,
 } from "@/lib/system/utils/normalization";
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { DimensionResult, ResonanceDimensionId, TotalResonance } from "./types";
+import type { DimensionResult, ResonanceDimensionId, TotalResonance } from "./types";
 
 /**
  * Generates a confidence score for the entire analysis (0-100).

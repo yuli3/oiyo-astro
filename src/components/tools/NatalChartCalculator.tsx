@@ -267,17 +267,20 @@ export default function NatalChartCalculator({ locale }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [result, setResult] = useState<{ chart: NatalChart; hasTime: boolean } | null>(null);
 
-  // 온톨로지 프로필의 생년월일·시를 재사용(URL 복원이 없을 때만) — 재입력 제거.
-  const { parsed, saveBirthRecord } = useProfilePrefill();
+  // 온톨로지 프로필의 생년월일·시·출생지를 재사용(URL 복원이 없을 때만) — 재입력 제거.
+  const { parsed, saveBirthRecord, profile, setProfile } = useProfilePrefill();
   useEffect(() => {
     if (!parsed) return;
     setForm((f) => {
       if (f.date || window.location.hash.startsWith('#r=') || readResultCode('d')) return f; // URL 복원(해시/레거시 쿼리)·기존 입력 우선
       const date = `${parsed.year}-${String(parsed.month).padStart(2, '0')}-${String(parsed.day).padStart(2, '0')}`;
       const hasHour = parsed.hour !== null;
-      return { ...f, date, time: hasHour ? `${String(parsed.hour).padStart(2, '0')}:${String(parsed.minute ?? 0).padStart(2, '0')}` : '', unknown: !hasHour };
+      const city = !f.city && profile.birthCityId && CITIES.some((x) => x.id === profile.birthCityId)
+        ? profile.birthCityId
+        : f.city;
+      return { ...f, date, time: hasHour ? `${String(parsed.hour).padStart(2, '0')}:${String(parsed.minute ?? 0).padStart(2, '0')}` : '', unknown: !hasHour, city };
     });
-  }, [parsed]);
+  }, [parsed, profile.birthCityId]);
 
   // Restore a shared chart on mount. Two sources, tried in order:
   // 1) `#r=` permalink hash (T6/#32) — the current scheme, never sent to the
@@ -353,6 +356,9 @@ export default function NatalChartCalculator({ locale }: Props) {
       utcOffsetMinutesAtBirth: resolution.offsetMinutes,
       zoneId: city.zoneId,
     }));
+    // Feeds back into the ontology profile so its birth-input card shows the
+    // same confirmed city rather than only date/time (2026-07-30 unification).
+    setProfile({ birthCityId: form.city });
     writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, { date: form.date, time: hasTime ? form.time : null, city: form.city });
     gaEvent('test_completed', { test_id: 'natal' });
   }

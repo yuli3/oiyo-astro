@@ -1,5 +1,5 @@
 // Hellenistic Astrology Types
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
 export interface HellenisticCoordinates {
   isDayChart: boolean;

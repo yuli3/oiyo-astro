@@ -1,4 +1,4 @@
-import { FriendshipStyleQuestion } from "./types";
+import type { FriendshipStyleQuestion } from "./types";
 
 export const FRIENDSHIP_STYLE_QUESTIONS: FriendshipStyleQuestion[] = [
   {

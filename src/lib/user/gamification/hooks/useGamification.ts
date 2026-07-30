@@ -6,8 +6,8 @@ import { useCallback, useEffect, useState } from "react";
 import { achievements } from "@/lib/user/achievements/achievements-data";
 import {
   gamificationEngine,
-  PointsAction,
-  UserStats,
+  type PointsAction,
+  type UserStats,
 } from "@/lib/user/gamification/lib/points-system";
 
 const STORAGE_KEY = "oiyo_user_gamification";

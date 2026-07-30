@@ -1,4 +1,4 @@
-import { SixLangString } from "../engine.contract";
+import type { SixLangString } from "../engine.contract";
 
 /**
  * MBTI Deep Shard Data

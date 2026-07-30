@@ -7,7 +7,7 @@
 
 import { getDayOfYear } from "../kernel/time";
 import { EGYPTIAN_DEITIES, EGYPTIAN_DEITY_DATES, RA_DEITY } from "./data";
-import { EgyptianCoordinates, EgyptianDecan } from "./types";
+import type { EgyptianCoordinates, EgyptianDecan } from "./types";
 
 /**
  * Main calculator function

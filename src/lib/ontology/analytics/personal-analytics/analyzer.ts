@@ -2,7 +2,7 @@
 
 import { secureCache } from "@/lib/system/storage/secure-cache";
 
-import {
+import type {
   AnalyticsMetrics,
   ComparisonData,
   PersonalityInsight,

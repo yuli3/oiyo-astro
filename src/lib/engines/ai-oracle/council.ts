@@ -1,4 +1,4 @@
-import { PersonaDefinition } from "./types";
+import type { PersonaDefinition } from "./types";
 
 export const COUNCIL_OF_SEVEN: PersonaDefinition[] = [
   {

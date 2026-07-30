@@ -6,7 +6,7 @@ export interface LoveLanguageQuestion {
   };
 }
 
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
 export interface LoveLanguageResult {
   primary: LoveLanguageType;

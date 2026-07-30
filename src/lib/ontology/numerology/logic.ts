@@ -4,7 +4,7 @@ import {
   PERSONAL_YEAR_MEANINGS,
   VOWELS,
 } from "./data";
-import { NumerologyInput, NumerologyReading } from "./types";
+import type { NumerologyInput, NumerologyReading } from "./types";
 
 export function calculateLifePathNumber(date: Date): number {
   const day = reduceToSingleDigit(date.getDate(), true);

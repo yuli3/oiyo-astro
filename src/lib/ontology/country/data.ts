@@ -1,4 +1,4 @@
-import { CountryProfile, CountryQuestion } from "./types";
+import type { CountryProfile, CountryQuestion } from "./types";
 
 export const COUNTRY_QUESTIONS: CountryQuestion[] = [
   {

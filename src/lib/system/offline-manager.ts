@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import {
   getSecureItem,
   removeSecureItem,

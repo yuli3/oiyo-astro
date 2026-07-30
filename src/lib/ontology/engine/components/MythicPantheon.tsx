@@ -5,9 +5,9 @@ import { Pyramid, Sparkles, TreeDeciduous } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
-import { BirthSymbol } from "@/lib/data-layer/shards/fate-symbols";
-import { CelticTreeSign } from "@/lib/ontology/celtic/types";
-import { EgyptianCoordinates } from "@/lib/ontology/egyptian/types";
+import type { BirthSymbol } from "@/lib/data-layer/shards/fate-symbols";
+import type { CelticTreeSign } from "@/lib/ontology/celtic/types";
+import type { EgyptianCoordinates } from "@/lib/ontology/egyptian/types";
 
 interface MythicPantheonProps {
   mythos: {

@@ -1,4 +1,4 @@
-import { CELTIC_TREES, CelticTreeSign } from "./types";
+import { CELTIC_TREES, type CelticTreeSign } from "./types";
 
 // Helper to check if date is within range
 // Ranges are Month/Day. 0-indexed Month.

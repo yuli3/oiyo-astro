@@ -1,7 +1,7 @@
-import { ProfileSignals } from "@/lib/ontology/signals";
+import type { ProfileSignals } from "@/lib/ontology/signals";
 
-import { SixLangString } from "../interpretation/engine.contract";
-import { UniversalInterpretationResult } from "../interpretation/engine.contract";
+import type { SixLangString } from "../interpretation/engine.contract";
+import type { UniversalInterpretationResult } from "../interpretation/engine.contract";
 
 /**
  * A single recommendation item.

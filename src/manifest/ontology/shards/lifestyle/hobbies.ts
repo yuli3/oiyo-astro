@@ -1,4 +1,4 @@
-import { Hobby } from "../../core/schemas";
+import type { Hobby } from "../../core/schemas";
 
 export const HOBBIES: Hobby[] = [
   {

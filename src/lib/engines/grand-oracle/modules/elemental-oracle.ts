@@ -8,7 +8,7 @@ import {
   STRENGTH_PATTERNS,
   TEN_GOD_NARRATIVES,
 } from "../shards/elemental-narratives";
-import { OracleContext, OracleModule, UnifiedFateReport } from "../types";
+import type { OracleContext, OracleModule, UnifiedFateReport } from "../types";
 import { getLang } from "../weaver";
 
 export const ElementalOracle: OracleModule = {

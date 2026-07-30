@@ -16,7 +16,7 @@ import { useRouter } from "next/navigation";
 import React, { useEffect, useMemo, useRef, useState } from "react";
 
 import { useUserHistory } from "@/hooks/useUserHistory";
-import { getSearchableItems, SearchResult } from "@/lib/system/search-data";
+import { getSearchableItems, type SearchResult } from "@/lib/system/search-data";
 
 interface GlobalSearchProps {
   locale: string;

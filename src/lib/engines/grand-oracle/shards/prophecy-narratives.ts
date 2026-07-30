@@ -1,4 +1,4 @@
-import { SixLangString } from "../../interpretation/engine.contract";
+import type { SixLangString } from "../../interpretation/engine.contract";
 
 export const PROPHECY_TEN_GOD_Focus: Record<string, SixLangString> = {
   bi_gyeon: {

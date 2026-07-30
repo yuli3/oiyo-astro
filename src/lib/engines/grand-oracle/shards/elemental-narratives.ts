@@ -1,4 +1,4 @@
-import { SixLangString } from "../../interpretation/engine.contract";
+import type { SixLangString } from "../../interpretation/engine.contract";
 
 export const ELEMENT_INTERACTIONS: Record<string, SixLangString> = {
   // Earth

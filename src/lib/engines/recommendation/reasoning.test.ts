@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { RecommendationContext } from "./contracts";
+import type { RecommendationContext } from "./contracts";
 import { CAREER_DEFINITIONS, HOBBY_DEFINITIONS } from "./data/definitions";
 import { explainMatch, findDefinition } from "./reasoning";
 

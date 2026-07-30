@@ -5,9 +5,9 @@ import { Orbit } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { CelestialCoordinates } from "../../western/calculator";
+import type { CelestialCoordinates } from "../../western/calculator";
 
 interface CosmicPrologueProps {
   data: CelestialCoordinates;

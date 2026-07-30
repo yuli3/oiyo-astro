@@ -1,4 +1,4 @@
-import { NumerologyInterpretation } from "../engine.contract";
+import type { NumerologyInterpretation } from "../engine.contract";
 import { getGlossaryHints } from "../glossary";
 import {
   LIFE_PATH_NARRATIVES,

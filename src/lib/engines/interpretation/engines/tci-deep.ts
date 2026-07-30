@@ -1,4 +1,4 @@
-import { SixLangString } from "../engine.contract";
+import type { SixLangString } from "../engine.contract";
 import { CHARACTER_DATA, TEMPERAMENT_DATA } from "../shards/tci-deep-shards";
 
 /**

@@ -1,5 +1,5 @@
 import { biasDefinitions } from "./data";
-import { BiasScoreResult, BiasType, TestAnswer } from "./types";
+import type { BiasScoreResult, BiasType, TestAnswer } from "./types";
 
 export function calculateResult(answers: TestAnswer[]): BiasScoreResult {
   const biasScores: Record<BiasType, number> = {

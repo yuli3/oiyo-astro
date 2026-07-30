@@ -1,4 +1,4 @@
-import { VedicInterpretation } from "../engine.contract";
+import type { VedicInterpretation } from "../engine.contract";
 import { getGlossaryHints } from "../glossary";
 import {
   DEFAULT_NAKSHATRA_NARRATIVE,

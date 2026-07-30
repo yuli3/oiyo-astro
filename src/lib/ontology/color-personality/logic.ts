@@ -1,7 +1,7 @@
 import { calculateWeightedScore } from "@/lib/engines/scoring-engine";
 
 import { COLOR_QUESTIONS } from "./data";
-import { ColorPersonalityResult, ColorType } from "./types";
+import type { ColorPersonalityResult, ColorType } from "./types";
 
 export function calculateColorPersonality(
   answers: Record<string, string>,

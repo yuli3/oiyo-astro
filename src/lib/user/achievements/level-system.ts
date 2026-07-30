@@ -16,7 +16,7 @@ export interface LevelingStats {
   totalUsers: number;
 }
 
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 
 export interface LevelPerk {
   description: Record<Locale, string>;

@@ -1,4 +1,4 @@
-import { ResilienceFactor, ResilienceQuestion } from "./types";
+import type { ResilienceFactor, ResilienceQuestion } from "./types";
 
 export const RESILIENCE_QUESTIONS: ResilienceQuestion[] = [
   {

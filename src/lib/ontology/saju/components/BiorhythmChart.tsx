@@ -15,7 +15,7 @@ import {
   YAxis,
 } from "recharts";
 
-import { BiorhythmValue } from "@/lib/ontology/saju-core/biorhythm";
+import type { BiorhythmValue } from "@/lib/ontology/saju-core/biorhythm";
 
 interface BiorhythmChartProps {
   data: BiorhythmValue[];

@@ -8,7 +8,7 @@
 import kabbalahData from "@/lib/ontology/kabbalah/data/paths.json";
 
 import { calculateLifePathNumber } from "../numerology/logic";
-import { KabbalahCoordinates, Sephira } from "./types";
+import type { KabbalahCoordinates, Sephira } from "./types";
 
 type SephiraKey = keyof typeof kabbalahData.shards.paths;
 

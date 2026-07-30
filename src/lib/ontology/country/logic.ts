@@ -1,5 +1,5 @@
 import { COUNTRIES_DATABASE, COUNTRY_QUESTIONS } from "./data";
-import {
+import type {
   CountryArchetype,
   CountryPreferenceResult,
   CountryProfile,

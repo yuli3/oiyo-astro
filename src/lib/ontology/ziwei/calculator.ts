@@ -14,7 +14,7 @@ import { getSexagenaryCycle } from "../calendar-systems/sexagenary";
 import { getTrueSolarTime } from "../kernel/astronomy";
 import { MAIN_STARS } from "./data";
 import { AUXILIARY_STARS, SHAR_DYNAMICS } from "./data_stars";
-import { Element, Palace, PalaceKey, Star, ZiWeiCoordinates } from "./types";
+import type { Element, Palace, PalaceKey, Star, ZiWeiCoordinates } from "./types";
 
 // ... (Existing constants and helper functions: getLifePalaceIndex, getBureau, etc. keep as is)
 // (Note: I will assume the previous implementation of helpers is stable or I will re-include them if line range allows)

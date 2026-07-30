@@ -32,9 +32,9 @@
  */
 
 import { neighbors } from "@/lib/ontology/graph/traverse";
-import { ProfileSignals } from "@/lib/ontology/signals";
+import type { ProfileSignals } from "@/lib/ontology/signals";
 
-import { Recommendation, RecommendationContext } from "./contracts";
+import type { Recommendation, RecommendationContext } from "./contracts";
 
 type GraphFallbackCategory = "career" | "hobby";
 

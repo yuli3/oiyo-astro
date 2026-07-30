@@ -1,5 +1,5 @@
-import { UniversalProfile } from "@/lib/ontology/engine/types";
-import { Locale } from "@/types/manifest";
+import type { UniversalProfile } from "@/lib/ontology/engine/types";
+import type { Locale } from "@/types/manifest";
 
 export interface DailyFortuneResult extends FortuneResponse {
   energy: {

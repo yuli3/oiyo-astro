@@ -1,6 +1,6 @@
-import { LocalizedContent } from "@/types/manifest";
+import type { LocalizedContent } from "@/types/manifest";
 
-import { SixLangString } from "./../interpretation/engine.contract";
+import type { SixLangString } from "./../interpretation/engine.contract";
 
 export type ConnectorKey =
   | "and"

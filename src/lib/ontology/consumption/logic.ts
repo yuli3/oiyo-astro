@@ -1,5 +1,5 @@
 import { CONSUMPTION_QUESTIONS, CONSUMPTION_RESULTS } from "./data";
-import { ConsumptionResult, ConsumptionTrait } from "./types";
+import type { ConsumptionResult, ConsumptionTrait } from "./types";
 
 export function calculateConsumptionStyle(
   answers: Record<string, string>,

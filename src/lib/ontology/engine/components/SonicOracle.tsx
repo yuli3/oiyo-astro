@@ -6,7 +6,7 @@ import { AudioWaveform, Equal, Waves } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
-import { NameAnalysisResult } from "@/lib/ontology/onomancy/analysis";
+import type { NameAnalysisResult } from "@/lib/ontology/onomancy/analysis";
 
 interface SonicOracleProps {
   missingElements: string[];

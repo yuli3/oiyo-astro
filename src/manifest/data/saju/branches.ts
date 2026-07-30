@@ -4,7 +4,7 @@
  * 12 Earthly Branches with zodiac animals and time associations.
  */
 
-import { ElementId } from "./elements";
+import type { ElementId } from "./elements";
 
 export const BRANCH_IDS = [
   "JA",

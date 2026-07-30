@@ -1,4 +1,4 @@
-import { SixLangString } from "../../interpretation/engine.contract";
+import type { SixLangString } from "../../interpretation/engine.contract";
 
 export const ENNEAGRAM_CORE_NARRATIVES: Record<string, SixLangString> = {
   type1: {

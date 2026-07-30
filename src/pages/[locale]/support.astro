@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { LOCALES, getTranslations, localePath } from '../../i18n';
+import { LOCALES, getTranslations } from '../../i18n';
 import type { Locale } from '../../i18n';
 
 export async function getStaticPaths() {
@@ -42,14 +42,69 @@ const t = await getTranslations(locale);
       ))}
     </div>
 
-    <div class="bg-green-50 rounded-2xl p-8 text-center">
+    <div class="bg-white rounded-2xl border border-green-50 p-8">
       <p class="font-semibold text-green-950 mb-1">{t('support.contact')}</p>
-      <p class="text-sm text-green-600 mb-4">{t('support.form.descriptionPlaceholder')}</p>
-      <a
-        href={localePath(locale, '/contact')}
-        class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-green-700 text-white text-sm font-semibold hover:bg-green-800 transition-colors"
+      <p class="text-sm text-green-600 mb-5">{t('support.form.descriptionPlaceholder')}</p>
+      <form
+        name="contact"
+        method="POST"
+        action="https://formspree.io/f/contact"
+        class="space-y-5"
       >
-        {t('nav.contact')} →
+        <div>
+          <label class="block text-sm font-semibold text-green-800 mb-1.5" for="name">
+            {t('contact.name')}
+          </label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            required
+            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-green-950 text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300"
+            placeholder={t('contact.name')}
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-green-800 mb-1.5" for="email">
+            Email
+          </label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            required
+            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-green-950 text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300"
+            placeholder="hello@example.com"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-green-800 mb-1.5" for="message">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            required
+            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-green-950 text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300 resize-none"
+            placeholder={t('contact.subtitle')}
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="w-full py-3 rounded-xl bg-green-700 text-white font-semibold text-sm hover:bg-green-800 transition-colors"
+        >
+          {t('contact.test.submit')}
+        </button>
+      </form>
+    </div>
+
+    <div class="mt-6 text-center text-sm text-green-500">
+      <a href="mailto:support@oiyo.net" class="hover:text-green-700 transition-colors">
+        support@oiyo.net
       </a>
     </div>
   </section>

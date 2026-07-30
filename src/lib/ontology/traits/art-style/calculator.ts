@@ -1,7 +1,7 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 
 import { getArtStyleProfile, getArtStyleQuestions } from "./data";
-import { ArtStyle, ArtStyleResult } from "./types";
+import type { ArtStyle, ArtStyleResult } from "./types";
 
 export function calculateArtStyleResult(
   answers: Record<string, string>,

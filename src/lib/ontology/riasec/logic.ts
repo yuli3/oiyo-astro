@@ -2,7 +2,7 @@ import { CAREERS } from "@/lib/data-layer/shards/careers";
 import { calculateWeightedScore } from "@/lib/engines/scoring-engine";
 
 import { RIASEC_QUESTIONS, RIASEC_RESULTS } from "./data";
-import { RIASEC_ORDER, RiasecResult, RiasecType } from "./types";
+import { RIASEC_ORDER, type RiasecResult, type RiasecType } from "./types";
 
 /**
  * Calculates RIASEC scores with Holland's Hexagon consistency logic.

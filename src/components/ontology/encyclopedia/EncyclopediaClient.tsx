@@ -1,19 +1,27 @@
 "use client";
 
-import { m } from "framer-motion";
+import { motion as m } from "framer-motion";
 import { BookOpen, Flower, Mountain, Sparkles } from "lucide-react";
-import { useMessages, useTranslations } from "next-intl";
-import { useState } from "react";
+import { useLocale, useMessages, useTranslations } from "next-intl";
+import { useMemo, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-
-// TODO : 이거 SSOT 위반 아닌가?
+import { BRANCH_IDS, BRANCHES } from "@/manifest/data/saju/branches";
 
 type Tab = "branches" | "stems";
+
+const SEASON_LABELS: Record<string, Record<string, string>> = {
+  ko: { WINTER: "겨울", SPRING: "봄", SUMMER: "여름", AUTUMN: "가을" },
+  en: { WINTER: "Winter", SPRING: "Spring", SUMMER: "Summer", AUTUMN: "Autumn" },
+  ja: { WINTER: "冬", SPRING: "春", SUMMER: "夏", AUTUMN: "秋" },
+  zh: { WINTER: "冬", SPRING: "春", SUMMER: "夏", AUTUMN: "秋" },
+  fr: { WINTER: "Hiver", SPRING: "Printemps", SUMMER: "Été", AUTUMN: "Automne" },
+  es: { WINTER: "Invierno", SPRING: "Primavera", SUMMER: "Verano", AUTUMN: "Otoño" },
+};
 
 const STEM_KEYS = [
   "GAP",
@@ -45,11 +53,31 @@ const BRANCH_KEYS = [
 export function EncyclopediaClient() {
   const t = useTranslations("universal");
   const messages = useMessages() as any;
+  const locale = useLocale();
   const [activeTab, setActiveTab] = useState<Tab>("stems");
 
-  // Safely access nested messages
-  const stemsData = messages["ontology"]?.["saju-daymaster"] || {};
-  const branchesData = messages["ontology"]?.["saju"]?.["branches"] || {};
+  // saju-daymaster.json is keyed directly by stem id (GAP, EUL, ...) at the top level.
+  const stemsData = messages["saju-daymaster"] || {};
+
+  // Earthly branches come from the manifest SSOT (branches.ts), not the i18n
+  // saju.json blob — that file's `branches` key uses pinyin ids (zi, chou, ...)
+  // and mistranslated placeholder names, not the JA/CHUK/... ids this page needs.
+  const elementDescriptions = messages["elements"] || {};
+  const branchesData = useMemo(() => {
+    const out: Record<string, { name: string; animal: string; season: string; time: string; meaning: string }> = {};
+    for (const id of BRANCH_IDS) {
+      const b = BRANCHES[id];
+      const seasonLabels = SEASON_LABELS[locale] ?? SEASON_LABELS.en;
+      out[id] = {
+        name: b.short[locale as keyof typeof b.short] ?? b.short.en,
+        animal: b.animal[locale as keyof typeof b.animal] ?? b.animal.en,
+        season: seasonLabels[b.season] ?? b.season,
+        time: b.timeRange,
+        meaning: elementDescriptions[b.element]?.description ?? "",
+      };
+    }
+    return out;
+  }, [locale, elementDescriptions]);
 
   return (
     <div className="min-h-screen bg-[#f0f9f1] p-6 lg:p-12 space-y-12">

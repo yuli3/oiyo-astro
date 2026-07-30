@@ -1,7 +1,7 @@
 /**
  * Rankings by points, streaks, referrals, and test completion
  */
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { getLocalizedText } from "@/lib/system/i18n/locale-helper";
 
 export type LeaderboardCategory =

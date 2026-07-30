@@ -1,6 +1,6 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { IChingOracle } from "./types";
+import type { IChingOracle } from "./types";
 
 /**
  * Calculates a Hexagram based on a name and optional timestamp.

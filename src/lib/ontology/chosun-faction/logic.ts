@@ -1,5 +1,5 @@
-import { UniversalProfile } from "../engine/types";
-import { SajuAnalysis } from "../saju/types";
+import type { UniversalProfile } from "../engine/types";
+import type { SajuAnalysis } from "../saju/types";
 
 export type ChosunFaction =
   | "bukin"

@@ -1,6 +1,6 @@
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
-import { HSPDimension, HSPQuestion } from "./types";
+import type { HSPDimension, HSPQuestion } from "./types";
 
 const HSP_OPTIONS = [
   {

@@ -3,9 +3,9 @@
 import { createCheckout } from "@lemonsqueezy/lemonsqueezy.js";
 
 import {
-  LemonSqueezyConfig,
+  type LemonSqueezyConfig,
   type PaymentErrorCode,
-  PaymentResult,
+  type PaymentResult,
 } from "./types";
 
 // LemonSqueezy configuration

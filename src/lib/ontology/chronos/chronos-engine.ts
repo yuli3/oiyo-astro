@@ -16,7 +16,7 @@ import type {
 } from "./types";
 
 import { calculateCelticTree } from "../celtic/calculator";
-import { CelticTreeSign } from "../celtic/types";
+import type { CelticTreeSign } from "../celtic/types";
 import { calculateEgyptianCoordinates } from "../egyptian/calculator";
 import { calculateHellenisticCoordinates } from "../hellenistic/calculator";
 import { calculateKabbalahCoordinates } from "../kabbalah/calculator";
@@ -24,7 +24,7 @@ import { normalizeAngle } from "../kernel/math";
 import { civilDateToLocalNoon } from "../kernel/civil-date";
 import { getJulianDay } from "../kernel/time";
 import { calculateMayanKin } from "../mayan/calculator";
-import { MayanKin } from "../mayan/types";
+import type { MayanKin } from "../mayan/types";
 import { calculateNordicRune } from "../nordic/calculator";
 import { calculateNumerology } from "../numerology/logic";
 import { calculateSaju } from "../saju/logic";

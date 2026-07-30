@@ -1,7 +1,7 @@
 import atomicShards from "@/lib/engines/ai-oracle/data/atomic-shards.json";
 
-import { AtomicBlock, NarrativeSlot, SynergyRule } from "./narrative-schema";
-import { PersonaId } from "./types";
+import type { AtomicBlock, NarrativeSlot, SynergyRule } from "./narrative-schema";
+import type { PersonaId } from "./types";
 
 /**
  * Combinatorial Narrative Engine

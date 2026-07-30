@@ -8,7 +8,7 @@ import React from "react";
 import type { Locale } from "@/i18n";
 
 import { Badge } from "@/components/ui/badge";
-import { RecommendationResult } from "@/lib/engines/lifestyle-engine";
+import type { RecommendationResult } from "@/lib/engines/lifestyle-engine";
 import careersJson from "@/lib/ontology/lifestyle/careers.json";
 import hobbiesJson from "@/lib/ontology/lifestyle/hobbies.json";
 import { cn } from "@/lib/system/utils";

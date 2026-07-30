@@ -3,7 +3,7 @@
  * Full 108+ Star system coordinates
  */
 
-import { Element, Polarity, Star, StarQuality } from "./types";
+import type { Element, Polarity, Star, StarQuality } from "./types";
 
 export const AUXILIARY_STARS: Partial<Star>[] = [
   // 6 Lucky Stars (Liu Ji)

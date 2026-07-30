@@ -1,4 +1,4 @@
-import { AnimalResult } from "../types";
+import type { AnimalResult } from "../types";
 
 export const ANIMAL_RESULTS: Record<string, AnimalResult> = {
   bear: {

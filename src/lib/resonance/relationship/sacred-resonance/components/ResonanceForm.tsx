@@ -24,7 +24,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { PartnerPartialProfile } from "../types";
+import type { PartnerPartialProfile } from "../types";
 
 interface ResonanceFormProps {
   isLoading?: boolean;

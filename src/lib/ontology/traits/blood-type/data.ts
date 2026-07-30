@@ -1,6 +1,6 @@
 import { THEME_COLORS } from "@/lib/system/theme";
 
-import { BloodType, BloodTypePersonality } from "./types";
+import type { BloodType, BloodTypePersonality } from "./types";
 
 export const BLOOD_TYPE_DATA: Record<BloodType, BloodTypePersonality> = {
   A: {

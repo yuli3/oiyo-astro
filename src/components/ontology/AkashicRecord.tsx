@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 import React, { useMemo, useState } from "react";
 
 import { extractAkashicData } from "@/lib/ontology/akashic/logic";
-import { UniversalProfile } from "@/lib/ontology/engine/types";
+import type { UniversalProfile } from "@/lib/ontology/engine/types";
 
 interface Props {
   locale?: string;

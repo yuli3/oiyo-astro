@@ -1,6 +1,6 @@
 import { buildSystemPrompt } from "./prompts";
 import { generateContent } from "./service";
-import { OracleInput, OracleResponse } from "./types";
+import type { OracleInput, OracleResponse } from "./types";
 
 /**
  * The Main Entry point for the AI Oracle.

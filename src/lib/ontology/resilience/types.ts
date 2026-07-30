@@ -1,4 +1,4 @@
-import { LocalizedContent } from "@/types/manifest";
+import type { LocalizedContent } from "@/types/manifest";
 
 export type ResilienceFactor =
   | "adaptability"

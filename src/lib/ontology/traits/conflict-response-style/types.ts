@@ -1,5 +1,5 @@
-import { Locale } from "@/i18n";
-import { LocalizedText } from "@/types/manifest";
+import type { Locale } from "@/i18n";
+import type { LocalizedText } from "@/types/manifest";
 
 export interface ConflictResponseQuestion {
   emoji: string;

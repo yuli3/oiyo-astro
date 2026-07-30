@@ -1,12 +1,12 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 
 import { FRIENDSHIP_STYLE_QUESTIONS } from "./data";
 import {
   FRIENDSHIP_STYLE_COMPATIBILITY,
   FRIENDSHIP_STYLE_DESCRIPTIONS,
   FRIENDSHIP_STYLE_TRAITS,
-  FriendshipStyle,
-  FriendshipStyleResult,
+  type FriendshipStyle,
+  type FriendshipStyleResult,
 } from "./types";
 
 export function calculateFriendshipStyleResult(

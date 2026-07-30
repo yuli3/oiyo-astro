@@ -4,7 +4,7 @@
  */
 
 import { createClient } from "@/lib/system/database/supabase";
-import {
+import type {
   CreateCheckoutRequest,
   CreateCheckoutResponse,
   TossPaymentRequest,

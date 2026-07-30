@@ -1,27 +1,27 @@
 // Auto-generated aggregator by scripts/generate-message-keys.ts
 // Sharded key paths for FAANG-level type performance
 
-import { _500Keys } from "./i18n/500";
-import { AccessGuardKeys, AccessGuard_actionsKeys } from "./i18n/AccessGuard";
-import {
+import type { _500Keys } from "./i18n/500";
+import type { AccessGuardKeys, AccessGuard_actionsKeys } from "./i18n/AccessGuard";
+import type {
   AncientCoordinateCardKeys,
   AncientCoordinateCard_celticKeys,
   AncientCoordinateCard_mayanKeys,
 } from "./i18n/AncientCoordinateCard";
-import {
+import type {
   BlogIdeaGeneratorKeys,
   BlogIdeaGenerator_categoriesKeys,
   BlogIdeaGenerator_heroKeys,
   BlogIdeaGenerator_metaKeys,
   BlogIdeaGenerator_resultKeys,
 } from "./i18n/BlogIdeaGenerator";
-import {
+import type {
   EmotionalExpressionKeys,
   EmotionalExpression_landingKeys,
   EmotionalExpression_metaKeys,
   EmotionalExpression_resultKeys,
 } from "./i18n/EmotionalExpression";
-import {
+import type {
   GiftRecommendationKeys,
   GiftRecommendation_ctaKeys,
   GiftRecommendation_dataKeys,
@@ -33,17 +33,17 @@ import {
   GiftRecommendation_resultKeys,
   GiftRecommendation_uiKeys,
 } from "./i18n/GiftRecommendation";
-import { PremiumLockKeys } from "./i18n/PremiumLock";
-import { PremiumReportKeys } from "./i18n/PremiumReport";
-import {
+import type { PremiumLockKeys } from "./i18n/PremiumLock";
+import type { PremiumReportKeys } from "./i18n/PremiumReport";
+import type {
   ValueScoreKeys,
   ValueScore_heroKeys,
   ValueScore_metaKeys,
   ValueScore_resultKeys,
   ValueScore_testKeys,
 } from "./i18n/ValueScore";
-import { AboutKeys } from "./i18n/about";
-import {
+import type { AboutKeys } from "./i18n/about";
+import type {
   AccountKeys,
   Account_achievementsKeys,
   Account_analyticsKeys,
@@ -57,8 +57,8 @@ import {
   Account_reportsKeys,
   Account_subscriptionManagerKeys,
 } from "./i18n/account";
-import { AccuracyKeys } from "./i18n/accuracy";
-import {
+import type { AccuracyKeys } from "./i18n/accuracy";
+import type {
   AchievementsKeys,
   Achievements_explorerKeys,
   Achievements_filtersKeys,
@@ -69,31 +69,31 @@ import {
   Achievements_pageKeys,
   Achievements_tenTestsKeys,
 } from "./i18n/achievements";
-import { ActionKeys } from "./i18n/action";
-import { ActionsKeys } from "./i18n/actions";
-import { AddSubscriptionKeys } from "./i18n/addSubscription";
-import { AdvisorKeys } from "./i18n/advisor";
-import { AffirmationsKeys } from "./i18n/affirmations";
-import { AiKeys } from "./i18n/ai";
-import {
+import type { ActionKeys } from "./i18n/action";
+import type { ActionsKeys } from "./i18n/actions";
+import type { AddSubscriptionKeys } from "./i18n/addSubscription";
+import type { AdvisorKeys } from "./i18n/advisor";
+import type { AffirmationsKeys } from "./i18n/affirmations";
+import type { AiKeys } from "./i18n/ai";
+import type {
   AiHoroscopeGeneratorKeys,
   AiHoroscopeGenerator_defaultsKeys,
   AiHoroscopeGenerator_fallbackKeys,
   AiHoroscopeGenerator_shareOptionalKeys,
   AiHoroscopeGenerator_weatherTipsKeys,
 } from "./i18n/aiHoroscopeGenerator";
-import {
+import type {
   AkashicKeys,
   Akashic_biologyKeys,
   Akashic_destinyKeys,
   Akashic_essenceKeys,
   Akashic_tabsKeys,
 } from "./i18n/akashic";
-import {
+import type {
   AnxietyReliefKeys,
   AnxietyRelief_affirmationsKeys,
 } from "./i18n/anxietyRelief";
-import {
+import type {
   AprilKeys,
   April_day_01Keys,
   April_day_02Keys,
@@ -126,13 +126,13 @@ import {
   April_day_29Keys,
   April_day_30Keys,
 } from "./i18n/april";
-import { ArchivesKeys, Archives_labelsKeys } from "./i18n/archives";
-import {
+import type { ArchivesKeys, Archives_labelsKeys } from "./i18n/archives";
+import type {
   AssessmentKeys,
   Assessment_mbtiKeys,
   Assessment_riasecKeys,
 } from "./i18n/assessment";
-import {
+import type {
   AssetMapKeys,
   AssetMap_benefitsKeys,
   AssetMap_faqKeys,
@@ -141,12 +141,12 @@ import {
   AssetMap_resultKeys,
   AssetMap_testKeys,
 } from "./i18n/assetMap";
-import {
+import type {
   AttachmentKeys,
   Attachment_attachmentKeys,
   Attachment_attachmentStyleKeys,
 } from "./i18n/attachment";
-import {
+import type {
   AugustKeys,
   August_day_01Keys,
   August_day_02Keys,
@@ -180,17 +180,17 @@ import {
   August_day_30Keys,
   August_day_31Keys,
 } from "./i18n/august";
-import {
+import type {
   BenefitsKeys,
   Benefits_homeScreenKeys,
   Benefits_notificationsKeys,
   Benefits_offlineKeys,
   Benefits_performanceKeys,
 } from "./i18n/benefits";
-import { Big5Keys, Big5_dimensionsKeys } from "./i18n/big5";
-import { BillingKeys } from "./i18n/billing";
-import { BiologyKeys } from "./i18n/biology";
-import {
+import type { Big5Keys, Big5_dimensionsKeys } from "./i18n/big5";
+import type { BillingKeys } from "./i18n/billing";
+import type { BiologyKeys } from "./i18n/biology";
+import type {
   BiorhythmKeys,
   Biorhythm_adviceKeys,
   Biorhythm_benefitsKeys,
@@ -202,21 +202,21 @@ import {
   Biorhythm_synthesisKeys,
   Biorhythm_testKeys,
 } from "./i18n/biorhythm";
-import {
+import type {
   BirthflowerKeys,
   Birthflower_inputsKeys,
   Birthflower_metaKeys,
   Birthflower_resultKeys,
   Birthflower_testKeys,
 } from "./i18n/birthflower";
-import {
+import type {
   BloodTypeKeys,
   BloodType_AKeys,
   BloodType_ABKeys,
   BloodType_BKeys,
   BloodType_OKeys,
 } from "./i18n/bloodType";
-import {
+import type {
   BranchesKeys,
   Branches_CHUKKeys,
   Branches_HAEKeys,
@@ -231,13 +231,13 @@ import {
   Branches_SULKeys,
   Branches_YUKeys,
 } from "./i18n/branches";
-import {
+import type {
   BridgeKeys,
   Bridge_bastionKeys,
   Bridge_catalystKeys,
   Bridge_travelerKeys,
 } from "./i18n/bridge";
-import {
+import type {
   BudgetPlannerKeys,
   BudgetPlanner_benefitsKeys,
   BudgetPlanner_categoriesKeys,
@@ -252,14 +252,14 @@ import {
   BudgetPlanner_tagsKeys,
   BudgetPlanner_testKeys,
 } from "./i18n/budgetPlanner";
-import { ByAreaKeys } from "./i18n/byArea";
-import { ByEmotionKeys } from "./i18n/byEmotion";
-import {
+import type { ByAreaKeys } from "./i18n/byArea";
+import type { ByEmotionKeys } from "./i18n/byEmotion";
+import type {
   CalculatorKeys,
   Calculator_labelsKeys,
   Calculator_unitsKeys,
 } from "./i18n/calculator";
-import {
+import type {
   CareerKeys,
   Career_benefitsKeys,
   Career_careerKeys,
@@ -271,7 +271,7 @@ import {
   Career_testKeys,
   Career_typesKeys,
 } from "./i18n/career";
-import {
+import type {
   CatalogKeys,
   Catalog_cardsKeys,
   Catalog_dialogsKeys,
@@ -281,18 +281,18 @@ import {
   Catalog_testsKeys,
   Catalog_todayInsightKeys,
 } from "./i18n/catalog";
-import { CategoriesKeys } from "./i18n/categories";
-import { CategoryKeys } from "./i18n/category";
-import { CelestialKeys } from "./i18n/celestial";
-import {
+import type { CategoriesKeys } from "./i18n/categories";
+import type { CategoryKeys } from "./i18n/category";
+import type { CelestialKeys } from "./i18n/celestial";
+import type {
   CelticKeys,
   Celtic_symbolsKeys,
   Celtic_treesKeys,
 } from "./i18n/celtic";
-import { CharactersKeys, Characters_traitsKeys } from "./i18n/characters";
-import { ChartKeys } from "./i18n/chart";
-import { ChosunKeys, Chosun_labelsKeys } from "./i18n/chosun";
-import {
+import type { CharactersKeys, Characters_traitsKeys } from "./i18n/characters";
+import type { ChartKeys } from "./i18n/chart";
+import type { ChosunKeys, Chosun_labelsKeys } from "./i18n/chosun";
+import type {
   CognitiveBiasKeys,
   CognitiveBias_metaKeys,
   CognitiveBias_optionsKeys,
@@ -300,20 +300,20 @@ import {
   CognitiveBias_recommendationsKeys,
   CognitiveBias_typesKeys,
 } from "./i18n/cognitiveBias";
-import { ColorKeys } from "./i18n/color";
-import {
+import type { ColorKeys } from "./i18n/color";
+import type {
   ColorPersonalityKeys,
   ColorPersonality_questionsKeys,
   ColorPersonality_resultsKeys,
 } from "./i18n/colorPersonality";
-import { ColumnsKeys } from "./i18n/columns";
-import {
+import type { ColumnsKeys } from "./i18n/columns";
+import type {
   CommerceKeys,
   Commerce_AccessGuardKeys,
   Commerce_grandOracleKeys,
   Commerce_plansKeys,
 } from "./i18n/commerce";
-import {
+import type {
   CommonKeys,
   Common_alertsKeys,
   Common_analysisKeys,
@@ -347,7 +347,7 @@ import {
   Common_viralKeys,
   Common_zodiacKeys,
 } from "./i18n/common";
-import {
+import type {
   CommunicationStyleKeys,
   CommunicationStyle_benefitsKeys,
   CommunicationStyle_ctaKeys,
@@ -359,19 +359,19 @@ import {
   CommunicationStyle_resultKeys,
   CommunicationStyle_testKeys,
 } from "./i18n/communicationStyle";
-import {
+import type {
   CommunityKeys,
   Community_errorsKeys,
   Community_pageKeys,
 } from "./i18n/community";
-import {
+import type {
   CompanyKeys,
   Company_aboutKeys,
   Company_legalKeys,
   Company_marketingKeys,
 } from "./i18n/company";
-import { ComparisonKeys } from "./i18n/comparison";
-import {
+import type { ComparisonKeys } from "./i18n/comparison";
+import type {
   CompatibilityKeys,
   Compatibility_analysisKeys,
   Compatibility_levelsKeys,
@@ -381,8 +381,8 @@ import {
   Compatibility_traitsKeys,
   Compatibility_typesKeys,
 } from "./i18n/compatibility";
-import { CompleteKeys, Complete_benefitsKeys } from "./i18n/complete";
-import {
+import type { CompleteKeys, Complete_benefitsKeys } from "./i18n/complete";
+import type {
   CompoundInterestKeys,
   CompoundInterest_benefitsKeys,
   CompoundInterest_faqKeys,
@@ -394,7 +394,7 @@ import {
   CompoundInterest_testKeys,
   CompoundInterest_tipKeys,
 } from "./i18n/compoundInterest";
-import {
+import type {
   ComprehensiveReportKeys,
   ComprehensiveReport_errorsKeys,
   ComprehensiveReport_metaKeys,
@@ -403,17 +403,17 @@ import {
   ComprehensiveReport_summaryKeys,
   ComprehensiveReport_testKeys,
 } from "./i18n/comprehensiveReport";
-import {
+import type {
   ConflictKeys,
   Conflict_introKeys,
   Conflict_questionsKeys,
   Conflict_resultsKeys,
 } from "./i18n/conflict";
-import {
+import type {
   Conflict_responseKeys,
   Conflict_response_resultsKeys,
 } from "./i18n/conflict_response";
-import {
+import type {
   ConflictSolverKeys,
   ConflictSolver_labelsKeys,
   ConflictSolver_metaKeys,
@@ -423,15 +423,15 @@ import {
   ConflictSolver_situationsKeys,
   ConflictSolver_testKeys,
 } from "./i18n/conflictSolver";
-import { ConnectorKeys } from "./i18n/connector";
-import {
+import type { ConnectorKeys } from "./i18n/connector";
+import type {
   ConsumptionKeys,
   Consumption_introKeys,
   Consumption_metaKeys,
   Consumption_questionsKeys,
   Consumption_resultsKeys,
 } from "./i18n/consumption";
-import {
+import type {
   ContactKeys,
   Contact_benefitsKeys,
   Contact_emailKeys,
@@ -440,14 +440,14 @@ import {
   Contact_responseKeys,
   Contact_testKeys,
 } from "./i18n/contact";
-import { ContentKeys, Content_tipsKeys } from "./i18n/content";
-import {
+import type { ContentKeys, Content_tipsKeys } from "./i18n/content";
+import type {
   CoordinatorKeys,
   Coordinator_dashboardKeys,
   Coordinator_resultKeys,
 } from "./i18n/coordinator";
-import { CopingStrategiesKeys } from "./i18n/copingStrategies";
-import {
+import type { CopingStrategiesKeys } from "./i18n/copingStrategies";
+import type {
   CoreKeys,
   Core_artStyleKeys,
   Core_astrologyHubKeys,
@@ -498,27 +498,27 @@ import {
   Core_writingPromptsKeys,
   Core_yearInReviewKeys,
 } from "./i18n/core";
-import { CorrelationKeys } from "./i18n/correlation";
-import { CosmicKeys } from "./i18n/cosmic";
-import { CountryKeys } from "./i18n/country";
-import { CreateKeys } from "./i18n/create";
-import { CtaKeys } from "./i18n/cta";
-import {
+import type { CorrelationKeys } from "./i18n/correlation";
+import type { CosmicKeys } from "./i18n/cosmic";
+import type { CountryKeys } from "./i18n/country";
+import type { CreateKeys } from "./i18n/create";
+import type { CtaKeys } from "./i18n/cta";
+import type {
   DailyKeys,
   Daily_dailyLuckyKeys,
   Daily_elementsKeys,
   Daily_oracleKeys,
   Daily_statusKeys,
 } from "./i18n/daily";
-import { DailyLuckyKeys, DailyLucky_testKeys } from "./i18n/dailyLucky";
-import {
+import type { DailyLuckyKeys, DailyLucky_testKeys } from "./i18n/dailyLucky";
+import type {
   DailyOracleKeys,
   DailyOracle_categoryKeys,
   DailyOracle_identifyKeys,
   DailyOracle_modalKeys,
   DailyOracle_sourceKeys,
 } from "./i18n/dailyOracle";
-import {
+import type {
   DashboardKeys,
   Dashboard_cardKeys,
   Dashboard_cardsKeys,
@@ -547,8 +547,8 @@ import {
   Dashboard_todayInsightKeys,
   Dashboard_vaultKeys,
 } from "./i18n/dashboard";
-import { DatingKeys, Dating_datingKeys } from "./i18n/dating";
-import {
+import type { DatingKeys, Dating_datingKeys } from "./i18n/dating";
+import type {
   DecemberKeys,
   December_day_01Keys,
   December_day_02Keys,
@@ -582,18 +582,18 @@ import {
   December_day_30Keys,
   December_day_31Keys,
 } from "./i18n/december";
-import { DeepWorkKeys, DeepWork_deepWorkKeys } from "./i18n/deepWork";
-import { DemoKeys } from "./i18n/demo";
-import { DemographicsKeys } from "./i18n/demographics";
-import { DestinyKeys } from "./i18n/destiny";
-import { DimensionsKeys } from "./i18n/dimensions";
-import { DiscoveryKeys } from "./i18n/discovery";
-import {
+import type { DeepWorkKeys, DeepWork_deepWorkKeys } from "./i18n/deepWork";
+import type { DemoKeys } from "./i18n/demo";
+import type { DemographicsKeys } from "./i18n/demographics";
+import type { DestinyKeys } from "./i18n/destiny";
+import type { DimensionsKeys } from "./i18n/dimensions";
+import type { DiscoveryKeys } from "./i18n/discovery";
+import type {
   DisplaysKeys,
   Displays_AncientCoordinateCardKeys,
 } from "./i18n/displays";
-import { DominantKeys } from "./i18n/dominant";
-import {
+import type { DominantKeys } from "./i18n/dominant";
+import type {
   DreamKeys,
   Dream_heroKeys,
   Dream_journalKeys,
@@ -603,19 +603,19 @@ import {
   Dream_tabsKeys,
   Dream_testKeys,
 } from "./i18n/dream";
-import { DurationKeys } from "./i18n/duration";
-import {
+import type { DurationKeys } from "./i18n/duration";
+import type {
   EconomicPersonalityKeys,
   EconomicPersonality_economicPersonalityKeys,
 } from "./i18n/economicPersonality";
-import {
+import type {
   EgentetoKeys,
   Egenteto_chartKeys,
   Egenteto_compatibilityKeys,
   Egenteto_dailyKeys,
   Egenteto_resultKeys,
 } from "./i18n/egenteto";
-import {
+import type {
   EgyptianKeys,
   Egyptian_cardsKeys,
   Egyptian_celticKeys,
@@ -631,7 +631,7 @@ import {
   Egyptian_systemsKeys,
   Egyptian_todayInsightKeys,
 } from "./i18n/egyptian";
-import {
+import type {
   ElementsKeys,
   Elements_cycleKeys,
   Elements_earthKeys,
@@ -643,12 +643,12 @@ import {
   Elements_waterKeys,
   Elements_woodKeys,
 } from "./i18n/elements";
-import { EligibilityKeys } from "./i18n/eligibility";
-import { EmailKeys } from "./i18n/email";
-import { EmotionSummaryKeys } from "./i18n/emotionSummary";
-import { EmptyKeys } from "./i18n/empty";
-import { EmptyStateKeys } from "./i18n/emptyState";
-import {
+import type { EligibilityKeys } from "./i18n/eligibility";
+import type { EmailKeys } from "./i18n/email";
+import type { EmotionSummaryKeys } from "./i18n/emotionSummary";
+import type { EmptyKeys } from "./i18n/empty";
+import type { EmptyStateKeys } from "./i18n/emptyState";
+import type {
   EncyclopediaKeys,
   Encyclopedia_advanced_interactionKeys,
   Encyclopedia_biorhythm_pulseKeys,
@@ -657,15 +657,15 @@ import {
   Encyclopedia_history_originKeys,
   Encyclopedia_mechanism_pillarsKeys,
 } from "./i18n/encyclopedia";
-import { EnneagramKeys, Enneagram_enneagramKeys } from "./i18n/enneagram";
-import { ErrorKeys } from "./i18n/error";
-import {
+import type { EnneagramKeys, Enneagram_enneagramKeys } from "./i18n/enneagram";
+import type { ErrorKeys } from "./i18n/error";
+import type {
   ErrorPageKeys,
   ErrorPage_404Keys,
   ErrorPage_500Keys,
 } from "./i18n/errorPage";
-import { EssenceKeys } from "./i18n/essence";
-import {
+import type { EssenceKeys } from "./i18n/essence";
+import type {
   FamilyDynamicsKeys,
   FamilyDynamics_benefitsKeys,
   FamilyDynamics_faqKeys,
@@ -676,8 +676,8 @@ import {
   FamilyDynamics_testKeys,
   FamilyDynamics_typesKeys,
 } from "./i18n/familyDynamics";
-import { FaqKeys, Faq_metaKeys, Faq_questionsKeys } from "./i18n/faq";
-import {
+import type { FaqKeys, Faq_metaKeys, Faq_questionsKeys } from "./i18n/faq";
+import type {
   FeaturesKeys,
   Features_aiKeys,
   Features_allowanceKeys,
@@ -738,7 +738,7 @@ import {
   Features_wisdom_libraryKeys,
   Features_worry_timeKeys,
 } from "./i18n/features";
-import {
+import type {
   FebruaryKeys,
   February_day_01Keys,
   February_day_02Keys,
@@ -770,16 +770,16 @@ import {
   February_day_28Keys,
   February_day_29Keys,
 } from "./i18n/february";
-import { FilterKeys, Filter_timeRangeKeys } from "./i18n/filter";
-import { FiltersKeys } from "./i18n/filters";
-import { FinalKeys, Final_freeKeys, Final_premiumKeys } from "./i18n/final";
-import {
+import type { FilterKeys, Filter_timeRangeKeys } from "./i18n/filter";
+import type { FiltersKeys } from "./i18n/filters";
+import type { FinalKeys, Final_freeKeys, Final_premiumKeys } from "./i18n/final";
+import type {
   FinanceKeys,
   Finance_salaryCalculatorKeys,
   Finance_taxKeys,
 } from "./i18n/finance";
-import { FormKeys } from "./i18n/form";
-import {
+import type { FormKeys } from "./i18n/form";
+import type {
   FortuneKeys,
   Fortune_chineseZodiacKeys,
   Fortune_dailyLuckyKeys,
@@ -794,26 +794,26 @@ import {
   Fortune_resultsKeys,
   Fortune_testKeys,
 } from "./i18n/fortune";
-import {
+import type {
   FriendshipKeys,
   Friendship_introKeys,
   Friendship_questionsKeys,
   Friendship_resultsKeys,
 } from "./i18n/friendship";
-import {
+import type {
   FriendshipStyleKeys,
   FriendshipStyle_heroKeys,
   FriendshipStyle_metaKeys,
   FriendshipStyle_resultKeys,
   FriendshipStyle_testKeys,
 } from "./i18n/friendshipStyle";
-import {
+import type {
   GamificationKeys,
   Gamification_levelKeys,
   Gamification_streakKeys,
 } from "./i18n/gamification";
-import { GenericKeys, Generic_genericKeys } from "./i18n/generic";
-import {
+import type { GenericKeys, Generic_genericKeys } from "./i18n/generic";
+import type {
   GiftKeys,
   Gift_labelsKeys,
   Gift_metaKeys,
@@ -822,7 +822,7 @@ import {
   Gift_testKeys,
   Gift_tipKeys,
 } from "./i18n/gift";
-import {
+import type {
   GiftTaxKeys,
   GiftTax_benefitsKeys,
   GiftTax_faqKeys,
@@ -831,7 +831,7 @@ import {
   GiftTax_resultKeys,
   GiftTax_testKeys,
 } from "./i18n/giftTax";
-import {
+import type {
   GlobalComparisonKeys,
   GlobalComparison_chartKeys,
   GlobalComparison_ctaKeys,
@@ -844,17 +844,17 @@ import {
   GlobalComparison_tabsKeys,
   GlobalComparison_testKeys,
 } from "./i18n/globalComparison";
-import { GoalsKeys, Goals_metaKeys } from "./i18n/goals";
-import { GridKeys } from "./i18n/grid";
-import { GrowthKeys, Growth_levelTitlesKeys } from "./i18n/growth";
-import {
+import type { GoalsKeys, Goals_metaKeys } from "./i18n/goals";
+import type { GridKeys } from "./i18n/grid";
+import type { GrowthKeys, Growth_levelTitlesKeys } from "./i18n/growth";
+import type {
   HabitAssistantKeys,
   HabitAssistant_habitAssistantKeys,
 } from "./i18n/habitAssistant";
-import { HabitQuestKeys, HabitQuest_habitQuestKeys } from "./i18n/habitQuest";
-import { HabitsKeys } from "./i18n/habits";
-import { HeaderKeys } from "./i18n/header";
-import {
+import type { HabitQuestKeys, HabitQuest_habitQuestKeys } from "./i18n/habitQuest";
+import type { HabitsKeys } from "./i18n/habits";
+import type { HeaderKeys } from "./i18n/header";
+import type {
   HealthKeys,
   Health_agingKeys,
   Health_detoxKeys,
@@ -864,13 +864,13 @@ import {
   Health_metaKeys,
   Health_sleepScoreKeys,
 } from "./i18n/health";
-import {
+import type {
   HellenisticKeys,
   Hellenistic_principlesKeys,
   Hellenistic_resonanceKeys,
   Hellenistic_sectKeys,
 } from "./i18n/hellenistic";
-import {
+import type {
   HeroKeys,
   Hero_ctaKeys,
   Hero_dailyKeys,
@@ -879,22 +879,22 @@ import {
   Hero_ontologyKeys,
   Hero_resonanceKeys,
 } from "./i18n/hero";
-import {
+import type {
   HexacoKeys,
   Hexaco_dimensionsKeys,
   Hexaco_labelsKeys,
   Hexaco_questionsKeys,
   Hexaco_resultsKeys,
 } from "./i18n/hexaco";
-import {
+import type {
   HighlightsKeys,
   Highlights_alignmentKeys,
   Highlights_compatibilityKeys,
   Highlights_innerWorkKeys,
 } from "./i18n/highlights";
-import { HobbiesKeys } from "./i18n/hobbies";
-import { HobbyKeys, Hobby_commonKeys } from "./i18n/hobby";
-import {
+import type { HobbiesKeys } from "./i18n/hobbies";
+import type { HobbyKeys, Hobby_commonKeys } from "./i18n/hobby";
+import type {
   HoroscopeKeys,
   Horoscope_heroKeys,
   Horoscope_metaKeys,
@@ -902,24 +902,24 @@ import {
   Horoscope_testKeys,
   Horoscope_zodiacKeys,
 } from "./i18n/horoscope";
-import { HspKeys } from "./i18n/hsp";
-import {
+import type { HspKeys } from "./i18n/hsp";
+import type {
   HubKeys,
   Hub_dashboardKeys,
   Hub_hubKeys,
   Hub_tabsKeys,
 } from "./i18n/hub";
-import { IncludesKeys } from "./i18n/includes";
-import { InfoKeys } from "./i18n/info";
-import {
+import type { IncludesKeys } from "./i18n/includes";
+import type { InfoKeys } from "./i18n/info";
+import type {
   InputKeys,
   Input_errorsKeys,
   Input_stageKeys,
   Input_timelineKeys,
 } from "./i18n/input";
-import { InputsKeys, Inputs_titleKeys } from "./i18n/inputs";
-import { InsightKeys, Insight_actionsKeys } from "./i18n/insight";
-import {
+import type { InputsKeys, Inputs_titleKeys } from "./i18n/inputs";
+import type { InsightKeys, Insight_actionsKeys } from "./i18n/insight";
+import type {
   InsightsKeys,
   Insights_ctaKeys,
   Insights_featuresKeys,
@@ -928,14 +928,14 @@ import {
   Insights_sectionsKeys,
   Insights_testKeys,
 } from "./i18n/insights";
-import {
+import type {
   IntegrationFlowKeys,
   IntegrationFlow_actionKeys,
   IntegrationFlow_alignmentKeys,
   IntegrationFlow_foundationKeys,
   IntegrationFlow_synthesisKeys,
 } from "./i18n/integrationFlow";
-import {
+import type {
   InteractionsKeys,
   Interactions_banghapKeys,
   Interactions_chungKeys,
@@ -945,19 +945,19 @@ import {
   Interactions_paKeys,
   Interactions_samhapKeys,
 } from "./i18n/interactions";
-import { InterestsKeys } from "./i18n/interests";
-import {
+import type { InterestsKeys } from "./i18n/interests";
+import type {
   InterpretationsKeys,
   Interpretations_mbtiKeys,
   Interpretations_sajuKeys,
 } from "./i18n/interpretations";
-import {
+import type {
   InterviewScorerKeys,
   InterviewScorer_resultKeys,
   InterviewScorer_testKeys,
 } from "./i18n/interviewScorer";
-import { InvestmentKeys, Investment_cardKeys } from "./i18n/investment";
-import {
+import type { InvestmentKeys, Investment_cardKeys } from "./i18n/investment";
+import type {
   JanuaryKeys,
   January_day_01Keys,
   January_day_02Keys,
@@ -991,7 +991,7 @@ import {
   January_day_30Keys,
   January_day_31Keys,
 } from "./i18n/january";
-import {
+import type {
   JeonseGuardKeys,
   JeonseGuard_benefitsKeys,
   JeonseGuard_checklistKeys,
@@ -1003,9 +1003,9 @@ import {
   JeonseGuard_resultKeys,
   JeonseGuard_testKeys,
 } from "./i18n/jeonseGuard";
-import { JobMatchKeys, JobMatch_jobMatchKeys } from "./i18n/jobMatch";
-import { JournalKeys, Journal_whatToRecordKeys } from "./i18n/journal";
-import {
+import type { JobMatchKeys, JobMatch_jobMatchKeys } from "./i18n/jobMatch";
+import type { JournalKeys, Journal_whatToRecordKeys } from "./i18n/journal";
+import type {
   JulyKeys,
   July_day_01Keys,
   July_day_02Keys,
@@ -1039,7 +1039,7 @@ import {
   July_day_30Keys,
   July_day_31Keys,
 } from "./i18n/july";
-import {
+import type {
   JuneKeys,
   June_day_01Keys,
   June_day_02Keys,
@@ -1072,26 +1072,26 @@ import {
   June_day_29Keys,
   June_day_30Keys,
 } from "./i18n/june";
-import { KabbalahKeys, Kabbalah_sephirotKeys } from "./i18n/kabbalah";
-import { KeywordsKeys } from "./i18n/keywords";
-import { LabelsKeys } from "./i18n/labels";
-import { LaborKeys, Labor_laborKeys } from "./i18n/labor";
-import { LackingKeys } from "./i18n/lacking";
-import {
+import type { KabbalahKeys, Kabbalah_sephirotKeys } from "./i18n/kabbalah";
+import type { KeywordsKeys } from "./i18n/keywords";
+import type { LabelsKeys } from "./i18n/labels";
+import type { LaborKeys, Labor_laborKeys } from "./i18n/labor";
+import type { LackingKeys } from "./i18n/lacking";
+import type {
   LandingKeys,
   Landing_archivesKeys,
   Landing_elementsKeys,
   Landing_heroKeys,
 } from "./i18n/landing";
-import {
+import type {
   LeaderboardKeys,
   Leaderboard_categoryKeys,
   Leaderboard_periodKeys,
   Leaderboard_statsKeys,
   Leaderboard_uiKeys,
 } from "./i18n/leaderboard";
-import { LeadershipKeys, Leadership_leadershipKeys } from "./i18n/leadership";
-import {
+import type { LeadershipKeys, Leadership_leadershipKeys } from "./i18n/leadership";
+import type {
   LearningKeys,
   Learning_heroKeys,
   Learning_learningKeys,
@@ -1099,7 +1099,7 @@ import {
   Learning_resultKeys,
   Learning_testKeys,
 } from "./i18n/learning";
-import {
+import type {
   LearningStyleKeys,
   LearningStyle_auditoryKeys,
   LearningStyle_kinestheticKeys,
@@ -1109,17 +1109,17 @@ import {
   LearningStyle_tipsKeys,
   LearningStyle_visualKeys,
 } from "./i18n/learningStyle";
-import { LegalKeys, Legal_privacyKeys, Legal_termsKeys } from "./i18n/legal";
-import { LevelKeys } from "./i18n/level";
-import { LevelCardKeys } from "./i18n/levelCard";
-import { LevelsKeys } from "./i18n/levels";
-import { LibraryKeys, Library_philosophyKeys } from "./i18n/library";
-import {
+import type { LegalKeys, Legal_privacyKeys, Legal_termsKeys } from "./i18n/legal";
+import type { LevelKeys } from "./i18n/level";
+import type { LevelCardKeys } from "./i18n/levelCard";
+import type { LevelsKeys } from "./i18n/levels";
+import type { LibraryKeys, Library_philosophyKeys } from "./i18n/library";
+import type {
   LifeBlueprintKeys,
   LifeBlueprint_dimensionsKeys,
 } from "./i18n/lifeBlueprint";
-import { LifeFocusKeys, LifeFocus_optionsKeys } from "./i18n/lifeFocus";
-import {
+import type { LifeFocusKeys, LifeFocus_optionsKeys } from "./i18n/lifeFocus";
+import type {
   LifeSimulatorKeys,
   LifeSimulator_ctaKeys,
   LifeSimulator_heroKeys,
@@ -1128,7 +1128,7 @@ import {
   LifeSimulator_statsKeys,
   LifeSimulator_testKeys,
 } from "./i18n/lifeSimulator";
-import {
+import type {
   LifepathKeys,
   Lifepath_heroKeys,
   Lifepath_inputKeys,
@@ -1139,9 +1139,9 @@ import {
   Lifepath_resultKeys,
   Lifepath_resultsKeys,
 } from "./i18n/lifepath";
-import { LifestyleKeys, Lifestyle_healthKeys } from "./i18n/lifestyle";
-import { ListKeys } from "./i18n/list";
-import {
+import type { LifestyleKeys, Lifestyle_healthKeys } from "./i18n/lifestyle";
+import type { ListKeys } from "./i18n/list";
+import type {
   LoadingKeys,
   Loading_globalErrorKeys,
   Loading_localeLoadingKeys,
@@ -1149,7 +1149,7 @@ import {
   Loading_notFoundKeys,
   Loading_rootLoadingKeys,
 } from "./i18n/loading";
-import {
+import type {
   Loading_legacyKeys,
   Loading_legacy_globalErrorKeys,
   Loading_legacy_localeLoadingKeys,
@@ -1157,18 +1157,18 @@ import {
   Loading_legacy_notFoundKeys,
   Loading_legacy_rootLoadingKeys,
 } from "./i18n/loading_legacy";
-import { Love_languageKeys } from "./i18n/love_language";
-import {
+import type { Love_languageKeys } from "./i18n/love_language";
+import type {
   LoveAdvisorKeys,
   LoveAdvisor_metaKeys,
   LoveAdvisor_modesKeys,
   LoveAdvisor_uiKeys,
 } from "./i18n/loveAdvisor";
-import {
+import type {
   LoveCommunicationKeys,
   LoveCommunication_introKeys,
 } from "./i18n/loveCommunication";
-import {
+import type {
   LuckKeys,
   Luck_adviceKeys,
   Luck_colorsKeys,
@@ -1180,9 +1180,9 @@ import {
   Luck_metaKeys,
   Luck_stemSeasonItemsKeys,
 } from "./i18n/luck";
-import { MandalartKeys, Mandalart_mandalartKeys } from "./i18n/mandalart";
-import { ManifestKeys, Manifest_manifestKeys } from "./i18n/manifest";
-import {
+import type { MandalartKeys, Mandalart_mandalartKeys } from "./i18n/mandalart";
+import type { ManifestKeys, Manifest_manifestKeys } from "./i18n/manifest";
+import type {
   MarchKeys,
   March_day_01Keys,
   March_day_02Keys,
@@ -1216,14 +1216,14 @@ import {
   March_day_30Keys,
   March_day_31Keys,
 } from "./i18n/march";
-import {
+import type {
   MarketingKeys,
   Marketing_aboutKeys,
   Marketing_homeKeys,
   Marketing_pricingKeys,
 } from "./i18n/marketing";
-import { MasterKeys } from "./i18n/master";
-import {
+import type { MasterKeys } from "./i18n/master";
+import type {
   MayKeys,
   May_day_01Keys,
   May_day_02Keys,
@@ -1257,7 +1257,7 @@ import {
   May_day_30Keys,
   May_day_31Keys,
 } from "./i18n/may";
-import {
+import type {
   MayanKeys,
   Mayan_celticKeys,
   Mayan_daily_wisdomKeys,
@@ -1265,7 +1265,7 @@ import {
   Mayan_sealsKeys,
   Mayan_tonesKeys,
 } from "./i18n/mayan";
-import {
+import type {
   MbtiKeys,
   Mbti_careerKeys,
   Mbti_genericKeys,
@@ -1274,7 +1274,7 @@ import {
   Mbti_resultKeys,
   Mbti_travelKeys,
 } from "./i18n/mbti";
-import {
+import type {
   MbtiSalaryKeys,
   MbtiSalary_benefitsKeys,
   MbtiSalary_faqKeys,
@@ -1285,21 +1285,21 @@ import {
   MbtiSalary_resultKeys,
   MbtiSalary_testKeys,
 } from "./i18n/mbtiSalary";
-import {
+import type {
   MentalKeys,
   Mental_moodAnalyzerKeys,
   Mental_moodCalendarKeys,
 } from "./i18n/mental";
-import { MetaKeys, Meta_heroKeys, Meta_testKeys } from "./i18n/meta";
-import { MetricsKeys } from "./i18n/metrics";
-import {
+import type { MetaKeys, Meta_heroKeys, Meta_testKeys } from "./i18n/meta";
+import type { MetricsKeys } from "./i18n/metrics";
+import type {
   MissionKeys,
   Mission_coordinatorKeys,
   Mission_counselorKeys,
   Mission_curatorKeys,
 } from "./i18n/mission";
-import { ModesKeys } from "./i18n/modes";
-import {
+import type { ModesKeys } from "./i18n/modes";
+import type {
   MoneyHabitsKeys,
   MoneyHabits_benefitsKeys,
   MoneyHabits_ctaKeys,
@@ -1310,9 +1310,9 @@ import {
   MoneyHabits_resultKeys,
   MoneyHabits_testKeys,
 } from "./i18n/moneyHabits";
-import { MoodsKeys } from "./i18n/moods";
-import { MyTicketsKeys } from "./i18n/myTickets";
-import {
+import type { MoodsKeys } from "./i18n/moods";
+import type { MyTicketsKeys } from "./i18n/myTickets";
+import type {
   NJoblerKeys,
   NJobler_benefitsKeys,
   NJobler_faqKeys,
@@ -1321,22 +1321,22 @@ import {
   NJobler_resultKeys,
   NJobler_testKeys,
 } from "./i18n/nJobler";
-import { NavKeys, Nav_categoriesKeys, Nav_priorityKeys } from "./i18n/nav";
-import { NavigationKeys } from "./i18n/navigation";
-import {
+import type { NavKeys, Nav_categoriesKeys, Nav_priorityKeys } from "./i18n/nav";
+import type { NavigationKeys } from "./i18n/navigation";
+import type {
   NextActionsKeys,
   NextActions_planKeys,
   NextActions_reflectKeys,
   NextActions_shareKeys,
 } from "./i18n/nextActions";
-import {
+import type {
   Noble_personsKeys,
   Noble_persons_rolesKeys,
 } from "./i18n/noble_persons";
-import { NonRefundableKeys } from "./i18n/nonRefundable";
-import { NordicKeys, Nordic_runesKeys } from "./i18n/nordic";
-import { NotFoundKeys } from "./i18n/notFound";
-import {
+import type { NonRefundableKeys } from "./i18n/nonRefundable";
+import type { NordicKeys, Nordic_runesKeys } from "./i18n/nordic";
+import type { NotFoundKeys } from "./i18n/notFound";
+import type {
   NotificationsKeys,
   Notifications_actionsKeys,
   Notifications_aiHoroscopeKeys,
@@ -1345,13 +1345,13 @@ import {
   Notifications_streakKeys,
   Notifications_testReminderKeys,
 } from "./i18n/notifications";
-import {
+import type {
   NotificationsPanelKeys,
   NotificationsPanel_emptyKeys,
   NotificationsPanel_timeKeys,
   NotificationsPanel_uiKeys,
 } from "./i18n/notificationsPanel";
-import {
+import type {
   NovemberKeys,
   November_day_01Keys,
   November_day_02Keys,
@@ -1384,7 +1384,7 @@ import {
   November_day_29Keys,
   November_day_30Keys,
 } from "./i18n/november";
-import {
+import type {
   NumerologyKeys,
   Numerology_benefitsKeys,
   Numerology_dataKeys,
@@ -1396,7 +1396,7 @@ import {
   Numerology_resultKeys,
   Numerology_resultsKeys,
 } from "./i18n/numerology";
-import {
+import type {
   OctoberKeys,
   October_day_01Keys,
   October_day_02Keys,
@@ -1430,7 +1430,7 @@ import {
   October_day_30Keys,
   October_day_31Keys,
 } from "./i18n/october";
-import {
+import type {
   OnboardingKeys,
   Onboarding_actionsKeys,
   Onboarding_completeKeys,
@@ -1439,12 +1439,12 @@ import {
   Onboarding_stepsKeys,
   Onboarding_welcomeKeys,
 } from "./i18n/onboarding";
-import {
+import type {
   OnomancyKeys,
   Onomancy_componentsKeys,
   Onomancy_resultKeys,
 } from "./i18n/onomancy";
-import {
+import type {
   OntologyKeys,
   Ontology_actionKeys,
   Ontology_akashicKeys,
@@ -1468,7 +1468,7 @@ import {
   Ontology_resonanceKeys,
   Ontology_universalKeys,
 } from "./i18n/ontology";
-import {
+import type {
   OperationsKeys,
   Operations_actionsKeys,
   Operations_alertsKeys,
@@ -1477,14 +1477,14 @@ import {
   Operations_searchKeys,
   Operations_statusKeys,
 } from "./i18n/operations";
-import {
+import type {
   OracleKeys,
   Oracle_archetypesKeys,
   Oracle_narrativeKeys,
   Oracle_suggestionsKeys,
   Oracle_synergiesKeys,
 } from "./i18n/oracle";
-import {
+import type {
   OriginKeys,
   Origin_biorhythmKeys,
   Origin_heroKeys,
@@ -1497,10 +1497,10 @@ import {
   Origin_synergyKeys,
   Origin_trinityKeys,
 } from "./i18n/origin";
-import { OverviewKeys } from "./i18n/overview";
-import { PageKeys } from "./i18n/page";
-import { PantheonKeys, Pantheon_symbolsKeys } from "./i18n/pantheon";
-import {
+import type { OverviewKeys } from "./i18n/overview";
+import type { PageKeys } from "./i18n/page";
+import type { PantheonKeys, Pantheon_symbolsKeys } from "./i18n/pantheon";
+import type {
   PaymentKeys,
   Payment_billingKeys,
   Payment_checkoutKeys,
@@ -1513,7 +1513,7 @@ import {
   Payment_successKeys,
   Payment_testKeys,
 } from "./i18n/payment";
-import {
+import type {
   PaymentFaqKeys,
   PaymentFaq_benefitsKeys,
   PaymentFaq_faqKeys,
@@ -1524,17 +1524,17 @@ import {
   PaymentFaq_resultKeys,
   PaymentFaq_testKeys,
 } from "./i18n/paymentFaq";
-import { PaymentMethodsKeys } from "./i18n/paymentMethods";
-import {
+import type { PaymentMethodsKeys } from "./i18n/paymentMethods";
+import type {
   PaymentsKeys,
   Payments_failKeys,
   Payments_successKeys,
 } from "./i18n/payments";
-import {
+import type {
   PerfectionismKeys,
   Perfectionism_classificationsKeys,
 } from "./i18n/perfectionism";
-import {
+import type {
   PerformanceKeys,
   Performance_actionsKeys,
   Performance_cardsKeys,
@@ -1547,34 +1547,34 @@ import {
   Performance_summaryKeys,
   Performance_tabsKeys,
 } from "./i18n/performance";
-import {
+import type {
   PersonalityKeys,
   Personality_egentetoKeys,
   Personality_personalityTwinKeys,
 } from "./i18n/personality";
-import {
+import type {
   PhasesKeys,
   Phases_foundationKeys,
   Phases_primeKeys,
   Phases_wisdomKeys,
 } from "./i18n/phases";
-import {
+import type {
   PillarsKeys,
   Pillars_dailyInsightKeys,
   Pillars_modernKeys,
   Pillars_viewModesKeys,
 } from "./i18n/pillars";
-import { PlansKeys } from "./i18n/plans";
-import { PreferencesKeys, Preferences_countryKeys } from "./i18n/preferences";
-import { PremiumKeys, Premium_reportGateKeys } from "./i18n/premium";
-import {
+import type { PlansKeys } from "./i18n/plans";
+import type { PreferencesKeys, Preferences_countryKeys } from "./i18n/preferences";
+import type { PremiumKeys, Premium_reportGateKeys } from "./i18n/premium";
+import type {
   PresetsKeys,
   Presets_allKeys,
   Presets_basicKeys,
   Presets_easternKeys,
   Presets_westernKeys,
 } from "./i18n/presets";
-import {
+import type {
   PricingKeys,
   Pricing_billingKeys,
   Pricing_columnsKeys,
@@ -1591,24 +1591,24 @@ import {
   Pricing_trustKeys,
   Pricing_upgradeKeys,
 } from "./i18n/pricing";
-import { PriorityKeys } from "./i18n/priority";
-import { ProcessKeys } from "./i18n/process";
-import { ProcessingTimeKeys } from "./i18n/processingTime";
-import { ProfessionalGuidanceKeys } from "./i18n/professionalGuidance";
-import {
+import type { PriorityKeys } from "./i18n/priority";
+import type { ProcessKeys } from "./i18n/process";
+import type { ProcessingTimeKeys } from "./i18n/processingTime";
+import type { ProfessionalGuidanceKeys } from "./i18n/professionalGuidance";
+import type {
   ProfileKeys,
   Profile_badgesKeys,
   Profile_labelsKeys,
 } from "./i18n/profile";
-import {
+import type {
   ProgressKeys,
   Progress_dashboardKeys,
   Progress_trendKeys,
 } from "./i18n/progress";
-import { PromptsKeys } from "./i18n/prompts";
-import { ProsperityKeys } from "./i18n/prosperity";
-import { PwaKeys, Pwa_benefitsKeys } from "./i18n/pwa";
-import {
+import type { PromptsKeys } from "./i18n/prompts";
+import type { ProsperityKeys } from "./i18n/prosperity";
+import type { PwaKeys, Pwa_benefitsKeys } from "./i18n/pwa";
+import type {
   QuestionsKeys,
   Questions_0Keys,
   Questions_1Keys,
@@ -1619,11 +1619,11 @@ import {
   Questions_6Keys,
   Questions_7Keys,
 } from "./i18n/questions";
-import { QuickActionsKeys } from "./i18n/quickActions";
-import { RandomPromptsKeys } from "./i18n/randomPrompts";
-import { RecentKeys } from "./i18n/recent";
-import { RecentTestsKeys } from "./i18n/recentTests";
-import {
+import type { QuickActionsKeys } from "./i18n/quickActions";
+import type { RandomPromptsKeys } from "./i18n/randomPrompts";
+import type { RecentKeys } from "./i18n/recent";
+import type { RecentTestsKeys } from "./i18n/recentTests";
+import type {
   RecommendationsKeys,
   Recommendations_actionsKeys,
   Recommendations_careerKeys,
@@ -1643,12 +1643,12 @@ import {
   Recommendations_titlesKeys,
   Recommendations_uiKeys,
 } from "./i18n/recommendations";
-import { RelKeys } from "./i18n/rel";
-import {
+import type { RelKeys } from "./i18n/rel";
+import type {
   Relationship_mbtiKeys,
   Relationship_mbti_mbtiResultKeys,
 } from "./i18n/relationship_mbti";
-import {
+import type {
   RelationshipHubKeys,
   RelationshipHub_errorKeys,
   RelationshipHub_faqKeys,
@@ -1659,8 +1659,8 @@ import {
   RelationshipHub_tabsKeys,
   RelationshipHub_typesKeys,
 } from "./i18n/relationshipHub";
-import { ResilienceKeys, Resilience_resultKeys } from "./i18n/resilience";
-import {
+import type { ResilienceKeys, Resilience_resultKeys } from "./i18n/resilience";
+import type {
   ResonanceKeys,
   Resonance_analysisKeys,
   Resonance_conflictKeys,
@@ -1674,13 +1674,13 @@ import {
   Resonance_statusKeys,
   Resonance_synergyKeys,
 } from "./i18n/resonance";
-import {
+import type {
   Resonance_tagsKeys,
   Resonance_tags_categoriesKeys,
   Resonance_tags_tagsKeys,
 } from "./i18n/resonance_tags";
-import { ResponseKeys } from "./i18n/response";
-import {
+import type { ResponseKeys } from "./i18n/response";
+import type {
   ResultKeys,
   Result_aiKeys,
   Result_ctaKeys,
@@ -1701,13 +1701,13 @@ import {
   Result_supportPartnersKeys,
   Result_tabsKeys,
 } from "./i18n/result";
-import { ResultsKeys } from "./i18n/results";
-import { RiasecKeys } from "./i18n/riasec";
-import {
+import type { ResultsKeys } from "./i18n/results";
+import type { RiasecKeys } from "./i18n/riasec";
+import type {
   RoutineGeneratorKeys,
   RoutineGenerator_routineGeneratorKeys,
 } from "./i18n/routineGenerator";
-import {
+import type {
   SajuKeys,
   Saju_branchesKeys,
   Saju_cardsKeys,
@@ -1722,7 +1722,7 @@ import {
   Saju_termsKeys,
   Saju_todayInsightKeys,
 } from "./i18n/saju";
-import {
+import type {
   Saju_daymasterKeys,
   Saju_daymaster_BYEONGKeys,
   Saju_daymaster_EULKeys,
@@ -1735,12 +1735,12 @@ import {
   Saju_daymaster_MUKeys,
   Saju_daymaster_SINKeys,
 } from "./i18n/saju_daymaster";
-import {
+import type {
   Saju_godsKeys,
   Saju_gods_fateStarsKeys,
   Saju_gods_godsKeys,
 } from "./i18n/saju_gods";
-import {
+import type {
   SalaryCalculatorKeys,
   SalaryCalculator_advisorKeys,
   SalaryCalculator_labelsKeys,
@@ -1748,16 +1748,16 @@ import {
   SalaryCalculator_metaKeys,
   SalaryCalculator_resultKeys,
 } from "./i18n/salaryCalculator";
-import { ScenarioKeys, Scenario_scenarioKeys } from "./i18n/scenario";
-import {
+import type { ScenarioKeys, Scenario_scenarioKeys } from "./i18n/scenario";
+import type {
   ScopesKeys,
   Scopes_dailyKeys,
   Scopes_monthlyKeys,
   Scopes_weeklyKeys,
   Scopes_yearlyKeys,
 } from "./i18n/scopes";
-import { SearchKeys } from "./i18n/search";
-import {
+import type { SearchKeys } from "./i18n/search";
+import type {
   SectionsKeys,
   Sections_conductKeys,
   Sections_ipKeys,
@@ -1765,8 +1765,8 @@ import {
   Sections_rightsKeys,
   Sections_usageKeys,
 } from "./i18n/sections";
-import { SelfDiscoveryKeys } from "./i18n/selfDiscovery";
-import {
+import type { SelfDiscoveryKeys } from "./i18n/selfDiscovery";
+import type {
   SelfSajuKeys,
   SelfSaju_heroKeys,
   SelfSaju_inputsKeys,
@@ -1774,8 +1774,8 @@ import {
   SelfSaju_resultKeys,
   SelfSaju_testKeys,
 } from "./i18n/selfSaju";
-import { SeoKeys } from "./i18n/seo";
-import {
+import type { SeoKeys } from "./i18n/seo";
+import type {
   SeptemberKeys,
   September_day_01Keys,
   September_day_02Keys,
@@ -1808,13 +1808,13 @@ import {
   September_day_29Keys,
   September_day_30Keys,
 } from "./i18n/september";
-import { SessionKeys } from "./i18n/session";
-import {
+import type { SessionKeys } from "./i18n/session";
+import type {
   SettingsKeys,
   Settings_sectionsKeys,
   Settings_subscriptionKeys,
 } from "./i18n/settings";
-import {
+import type {
   SeverancePayKeys,
   SeverancePay_basisKeys,
   SeverancePay_errorKeys,
@@ -1835,20 +1835,20 @@ import {
   SeverancePay_spendingStyleKeys,
   SeverancePay_testKeys,
 } from "./i18n/severancePay";
-import { SignInKeys } from "./i18n/signIn";
-import { SignUpKeys } from "./i18n/signUp";
-import {
+import type { SignInKeys } from "./i18n/signIn";
+import type { SignUpKeys } from "./i18n/signUp";
+import type {
   SleepPatternKeys,
   SleepPattern_landingKeys,
   SleepPattern_metaKeys,
   SleepPattern_resultKeys,
 } from "./i18n/sleepPattern";
-import {
+import type {
   SnsPersonalityKeys,
   SnsPersonality_heroKeys,
   SnsPersonality_metaKeys,
 } from "./i18n/snsPersonality";
-import {
+import type {
   SocialKeys,
   Social_emptyKeys,
   Social_gridKeys,
@@ -1857,35 +1857,35 @@ import {
   Social_shareKeys,
   Social_statusKeys,
 } from "./i18n/social";
-import {
+import type {
   Social_logicKeys,
   Social_logic_adviceKeys,
   Social_logic_skillsKeys,
 } from "./i18n/social_logic";
-import { SohnKeys, Sohn_sohnKeys } from "./i18n/sohn";
-import { SolutionsKeys } from "./i18n/solutions";
-import {
+import type { SohnKeys, Sohn_sohnKeys } from "./i18n/sohn";
+import type { SolutionsKeys } from "./i18n/solutions";
+import type {
   SovereignKeys,
   Sovereign_growthKeys,
   Sovereign_labelsKeys,
   Sovereign_sectionsKeys,
 } from "./i18n/sovereign";
-import {
+import type {
   SpendingStyleKeys,
   SpendingStyle_heroKeys,
   SpendingStyle_metaKeys,
 } from "./i18n/spendingStyle";
-import { StarsKeys, Stars_starsKeys } from "./i18n/stars";
-import {
+import type { StarsKeys, Stars_starsKeys } from "./i18n/stars";
+import type {
   Static_wisdomKeys,
   Static_wisdom_adviceKeys,
   Static_wisdom_elementsKeys,
   Static_wisdom_templatesKeys,
   Static_wisdom_zodiacsKeys,
 } from "./i18n/static_wisdom";
-import { StatsKeys } from "./i18n/stats";
-import { StatusKeys } from "./i18n/status";
-import {
+import type { StatsKeys } from "./i18n/stats";
+import type { StatusKeys } from "./i18n/status";
+import type {
   StemsKeys,
   Stems_BYEONGKeys,
   Stems_EULKeys,
@@ -1898,21 +1898,21 @@ import {
   Stems_MUKeys,
   Stems_SINKeys,
 } from "./i18n/stems";
-import {
+import type {
   StepsKeys,
   Steps_completeKeys,
   Steps_interestsKeys,
   Steps_welcomeKeys,
 } from "./i18n/steps";
-import { StoryKeys } from "./i18n/story";
-import { StreakKeys } from "./i18n/streak";
-import {
+import type { StoryKeys } from "./i18n/story";
+import type { StreakKeys } from "./i18n/streak";
+import type {
   StylingKeys,
   Styling_dashboardKeys,
   Styling_recommendationKeys,
   Styling_scannerKeys,
 } from "./i18n/styling";
-import {
+import type {
   SubscriptionManagerKeys,
   SubscriptionManager_addSubscriptionKeys,
   SubscriptionManager_emptyKeys,
@@ -1920,8 +1920,8 @@ import {
   SubscriptionManager_summaryKeys,
   SubscriptionManager_tipsKeys,
 } from "./i18n/subscriptionManager";
-import { SummaryKeys } from "./i18n/summary";
-import {
+import type { SummaryKeys } from "./i18n/summary";
+import type {
   SupportKeys,
   Support_categoriesKeys,
   Support_formKeys,
@@ -1929,14 +1929,14 @@ import {
   Support_metaKeys,
   Support_priorityKeys,
 } from "./i18n/support";
-import {
+import type {
   SymbolsKeys,
   Symbols_flowersKeys,
   Symbols_labelsKeys,
   Symbols_starsKeys,
   Symbols_stonesKeys,
 } from "./i18n/symbols";
-import {
+import type {
   SynergyKeys,
   Synergy_analysisKeys,
   Synergy_ctaKeys,
@@ -1946,16 +1946,16 @@ import {
   Synergy_selectionKeys,
   Synergy_statusKeys,
 } from "./i18n/synergy";
-import {
+import type {
   SystemSynergyKeys,
   SystemSynergy_chineseZodiacKeys,
   SystemSynergy_numerologyKeys,
   SystemSynergy_sajuKeys,
   SystemSynergy_tarotKeys,
 } from "./i18n/systemSynergy";
-import { SystemsKeys } from "./i18n/systems";
-import { TabsKeys } from "./i18n/tabs";
-import {
+import type { SystemsKeys } from "./i18n/systems";
+import type { TabsKeys } from "./i18n/tabs";
+import type {
   TarotKeys,
   Tarot_benefitsKeys,
   Tarot_faqKeys,
@@ -1963,13 +1963,13 @@ import {
   Tarot_marketingKeys,
   Tarot_metaKeys,
 } from "./i18n/tarot";
-import {
+import type {
   TciKeys,
   Tci_dimensionsKeys,
   Tci_optionsKeys,
   Tci_questionsKeys,
 } from "./i18n/tci";
-import {
+import type {
   TenGodsKeys,
   TenGods_BI_GYEONKeys,
   TenGods_GEOP_JAEKeys,
@@ -1982,10 +1982,10 @@ import {
   TenGods_SANG_GWANKeys,
   TenGods_SIK_SINKeys,
 } from "./i18n/tenGods";
-import { TermsKeys } from "./i18n/terms";
-import { TestKeys, Test_genderSelectionKeys } from "./i18n/test";
-import { TestHistoryKeys } from "./i18n/testHistory";
-import {
+import type { TermsKeys } from "./i18n/terms";
+import type { TestKeys, Test_genderSelectionKeys } from "./i18n/test";
+import type { TestHistoryKeys } from "./i18n/testHistory";
+import type {
   TestsKeys,
   Tests_animalKeys,
   Tests_bloodTypeKeys,
@@ -1996,28 +1996,28 @@ import {
   Tests_testGridKeys,
   Tests_travelKeys,
 } from "./i18n/tests";
-import { TierKeys } from "./i18n/tier";
-import { TimeKeys } from "./i18n/time";
-import { TimeAgoKeys } from "./i18n/timeAgo";
-import {
+import type { TierKeys } from "./i18n/tier";
+import type { TimeKeys } from "./i18n/time";
+import type { TimeAgoKeys } from "./i18n/timeAgo";
+import type {
   TimeManagementKeys,
   TimeManagement_landingKeys,
   TimeManagement_metaKeys,
 } from "./i18n/timeManagement";
-import { TipKeys } from "./i18n/tip";
-import { TipsKeys } from "./i18n/tips";
-import { ToolsKeys, Tools_handlessKeys } from "./i18n/tools";
-import { TrackKeys } from "./i18n/track";
-import { TrackingKeys } from "./i18n/tracking";
-import { TravelKeys, Travel_travelKeys } from "./i18n/travel";
-import { TriggerFlowKeys } from "./i18n/triggerFlow";
-import {
+import type { TipKeys } from "./i18n/tip";
+import type { TipsKeys } from "./i18n/tips";
+import type { ToolsKeys, Tools_handlessKeys } from "./i18n/tools";
+import type { TrackKeys } from "./i18n/track";
+import type { TrackingKeys } from "./i18n/tracking";
+import type { TravelKeys, Travel_travelKeys } from "./i18n/travel";
+import type { TriggerFlowKeys } from "./i18n/triggerFlow";
+import type {
   TrustKeys,
   Trust_instantKeys,
   Trust_satisfactionKeys,
   Trust_secureKeys,
 } from "./i18n/trust";
-import {
+import type {
   TwelveWoonsungKeys,
   TwelveWoonsung_byeongKeys,
   TwelveWoonsung_geunrokKeys,
@@ -2032,9 +2032,9 @@ import {
   TwelveWoonsung_taeKeys,
   TwelveWoonsung_yangKeys,
 } from "./i18n/twelveWoonsung";
-import { TypesKeys } from "./i18n/types";
-import { TypesSectionKeys } from "./i18n/typesSection";
-import {
+import type { TypesKeys } from "./i18n/types";
+import type { TypesSectionKeys } from "./i18n/typesSection";
+import type {
   UceKeys,
   Uce_archetypeKeys,
   Uce_cognitiveRisksKeys,
@@ -2047,8 +2047,8 @@ import {
   Uce_synergyKeys,
   Uce_typesKeys,
 } from "./i18n/uce";
-import { UclKeys, Ucl_sharedKeys } from "./i18n/ucl";
-import {
+import type { UclKeys, Ucl_sharedKeys } from "./i18n/ucl";
+import type {
   UiKeys,
   Ui_actionsKeys,
   Ui_breadcrumbsKeys,
@@ -2064,7 +2064,7 @@ import {
   Ui_statusKeys,
   Ui_testKeys,
 } from "./i18n/ui";
-import {
+import type {
   UniversalKeys,
   Universal_biologyKeys,
   Universal_destinyKeys,
@@ -2077,8 +2077,8 @@ import {
   Universal_systemsKeys,
   Universal_tabsKeys,
 } from "./i18n/universal";
-import { UpgradeKeys } from "./i18n/upgrade";
-import {
+import type { UpgradeKeys } from "./i18n/upgrade";
+import type {
   UserKeys,
   User_biologicalKeys,
   User_destinyKeys,
@@ -2088,38 +2088,38 @@ import {
   User_sanctumKeys,
   User_synergyKeys,
 } from "./i18n/user";
-import { ValuesKeys, Values_freeKeys, Values_privacyKeys } from "./i18n/values";
-import {
+import type { ValuesKeys, Values_freeKeys, Values_privacyKeys } from "./i18n/values";
+import type {
   VatKeys,
   Vat_labelsKeys,
   Vat_modesKeys,
   Vat_resultsKeys,
   Vat_tipKeys,
 } from "./i18n/vat";
-import { VaultKeys } from "./i18n/vault";
-import {
+import type { VaultKeys } from "./i18n/vault";
+import type {
   VedicKeys,
   Vedic_nakshatrasKeys,
   Vedic_resonanceKeys,
 } from "./i18n/vedic";
-import {
+import type {
   ViralKeys,
   Viral_comparisonKeys,
   Viral_referralKeys,
   Viral_shareKeys,
 } from "./i18n/viral";
-import {
+import type {
   VisualizationKeys,
   Visualization_cognitiveKeys,
 } from "./i18n/visualization";
-import { WelcomeKeys } from "./i18n/welcome";
-import { WisdomKeys, Wisdom_sanctuaryKeys } from "./i18n/wisdom";
-import {
+import type { WelcomeKeys } from "./i18n/welcome";
+import type { WisdomKeys, Wisdom_sanctuaryKeys } from "./i18n/wisdom";
+import type {
   WorkStyleLabKeys,
   WorkStyleLab_workStyleLabKeys,
 } from "./i18n/workStyleLab";
-import { ZiweiKeys, Ziwei_resonanceKeys, Ziwei_starsKeys } from "./i18n/ziwei";
-import {
+import type { ZiweiKeys, Ziwei_resonanceKeys, Ziwei_starsKeys } from "./i18n/ziwei";
+import type {
   ZodiacKeys,
   Zodiac_benefitsKeys,
   Zodiac_compatibilityKeys,

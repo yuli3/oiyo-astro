@@ -1,12 +1,12 @@
 import {
-  ComprehensiveSajuReading,
+  type ComprehensiveSajuReading,
   generateComprehensiveSajuReading,
 } from "@/lib/ontology/saju/fortune/engine";
-import { OntologyProfile } from "@/lib/ontology/types";
+import type { OntologyProfile } from "@/lib/ontology/types";
 
 import {
   INTERPRETATION_DEFINITIONS,
-  InterpretationDefinition,
+  type InterpretationDefinition,
 } from "./data/definitions";
 
 export interface DeepReading {

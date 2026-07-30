@@ -1,4 +1,4 @@
-import { Career } from "@/lib/data-layer/types";
+import type { Career } from "@/lib/data-layer/types";
 
 // Helper to ensure type safety while allowing us to write the data
 // (In a real scenario, this would be auto-generated or managed via CMS)

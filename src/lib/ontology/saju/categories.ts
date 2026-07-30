@@ -8,13 +8,13 @@
 
 import { earthlyBranches, heavenlyStems } from "./data";
 import { calculateTenGod } from "./logic";
-import { FiveElement, SajuResult, TenGod } from "./types";
+import { FiveElement, type SajuResult, TenGod } from "./types";
 import {
   computeDayMasterStrength,
   computeYongsin,
   elementRoles,
-  StrengthResult,
-  YongsinResult,
+  type StrengthResult,
+  type YongsinResult,
 } from "./yongsin";
 
 export type Level = "strong" | "moderate" | "weak" | "absent";

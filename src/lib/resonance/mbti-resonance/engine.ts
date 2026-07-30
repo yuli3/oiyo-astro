@@ -7,9 +7,9 @@ import {
 import {
   calculateWeightedAverage,
   normalizeScore,
-  WeightedValue,
+  type WeightedValue,
 } from "@/lib/system/utils/normalization";
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
 export interface MBTIResonanceResult {
   dimensions: {

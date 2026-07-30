@@ -1,4 +1,4 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { getLocalizedContent } from "@/lib/system/i18n/locale-utils";
 import { features } from "@/registry/features";
 

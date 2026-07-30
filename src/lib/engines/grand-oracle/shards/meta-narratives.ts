@@ -1,4 +1,4 @@
-import { SixLangString } from "../../interpretation/engine.contract";
+import type { SixLangString } from "../../interpretation/engine.contract";
 
 export const ORACLE_META: Record<string, SixLangString> = {
   section_cosmic_entry_default: {

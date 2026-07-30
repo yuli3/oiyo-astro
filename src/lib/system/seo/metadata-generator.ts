@@ -1,8 +1,8 @@
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
-import { Locale } from "@/i18n";
-import { FeatureManifest } from "@/types/manifest";
+import type { Locale } from "@/i18n";
+import type { FeatureManifest } from "@/types/manifest";
 
 export async function generateFeatureMetadata(
   manifest: FeatureManifest,

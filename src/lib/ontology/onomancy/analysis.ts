@@ -1,4 +1,4 @@
-import { LocalizedContent } from "@/types/manifest";
+import type { LocalizedContent } from "@/types/manifest";
 
 export interface NameAnalysisResult {
   balanceScore: number; // 0-100 indicating how well it complements Saju

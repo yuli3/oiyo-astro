@@ -6,7 +6,7 @@ import {
   LEARNING_STYLE_QUESTIONS,
   LEARNING_STYLE_STUDY_TIPS,
 } from "./data";
-import { LearningStyle, LearningStyleResult } from "./types";
+import type { LearningStyle, LearningStyleResult } from "./types";
 
 export function calculateLearningStyleResult(
   answers: Record<string, string>,

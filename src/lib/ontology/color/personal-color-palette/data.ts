@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-syntax */
-import {
+import type {
   ColorPalette,
   FontRecommendation,
   ImageMood,

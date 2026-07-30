@@ -1,7 +1,7 @@
-import { LikertQuestion } from "@/lib/engines/likert-score";
+import type { LikertQuestion } from "@/lib/engines/likert-score";
 import { THEME_COLORS } from "@/lib/system/theme";
 
-import { TCIDimension } from "./types";
+import type { TCIDimension } from "./types";
 
 export interface TCIQuestion extends LikertQuestion<TCIDimension> {
   options?: {

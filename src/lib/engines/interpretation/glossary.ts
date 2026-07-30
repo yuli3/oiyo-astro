@@ -6,7 +6,7 @@
  * Used for UI tooltips and educational content.
  */
 
-import { GlossaryHint, SixLangString } from "./engine.contract";
+import type { GlossaryHint, SixLangString } from "./engine.contract";
 
 // ============================================================================
 // SAJU Terminology

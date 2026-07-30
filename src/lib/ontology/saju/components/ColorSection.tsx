@@ -8,7 +8,7 @@ import React from "react";
 
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { ColorPersonalityResult } from "@/lib/ontology/color-personality/types";
+import type { ColorPersonalityResult } from "@/lib/ontology/color-personality/types";
 import { cn } from "@/lib/system/utils";
 
 interface ColorSectionProps {

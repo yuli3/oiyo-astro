@@ -5,7 +5,7 @@ import {
   SAJU_COMPATIBILITY_TRAITS,
 } from "@/lib/data-layer/shards/fate-saju";
 import { normalizeScore } from "@/lib/system/utils/normalization";
-import { LocalizedText } from "@/types/manifest";
+import type { LocalizedText } from "@/types/manifest";
 
 export interface SajuResonanceResult {
   harmonyLevel: "challenging" | "excellent" | "good" | "moderate";

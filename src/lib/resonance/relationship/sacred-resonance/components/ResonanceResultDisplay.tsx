@@ -18,7 +18,7 @@ import { AIStreamingOracle } from "@/components/ui/AIStreamingOracle";
 import { Button } from "@/components/ui/button";
 import { generateArtifactPDF } from "@/lib/ontology/primal-origin/export-engine";
 
-import { TotalResonance } from "../types";
+import type { TotalResonance } from "../types";
 import { ResonanceArtifactTemplate } from "./ResonanceArtifactTemplate";
 import { ResonanceDetails, ResonanceMap } from "./ResonanceMap";
 

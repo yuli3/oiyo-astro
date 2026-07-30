@@ -5,7 +5,7 @@ import {
   getHistory,
   saveResult as saveToStorage,
 } from "@/lib/user/history";
-import { UserResult } from "@/types/data-schema";
+import type { UserResult } from "@/types/data-schema";
 
 // Clerk removed — localStorage-only in static build
 export function useUserHistory() {

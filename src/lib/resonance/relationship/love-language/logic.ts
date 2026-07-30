@@ -1,4 +1,4 @@
-import { LoveLanguageResult, LoveLanguageType } from "./types";
+import type { LoveLanguageResult, LoveLanguageType } from "./types";
 
 export function calculateLoveLanguage(
   answers: Record<string, LoveLanguageType>,

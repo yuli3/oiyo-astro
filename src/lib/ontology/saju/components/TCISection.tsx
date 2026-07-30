@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { THEME_COLORS } from "@/lib/system/theme";
 import { TCI_DIMENSION_MAP } from "@/lib/tci/data";
-import { TCIDimension } from "@/lib/tci/types";
+import type { TCIDimension } from "@/lib/tci/types";
 
 export function TCISection({
   locale,

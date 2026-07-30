@@ -1,4 +1,4 @@
-import { Birthstone } from "../../core/schemas";
+import type { Birthstone } from "../../core/schemas";
 
 /* eslint-disable no-restricted-syntax */
 export const BIRTHSTONES: Birthstone[] = [

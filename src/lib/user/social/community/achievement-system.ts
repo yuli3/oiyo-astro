@@ -1,6 +1,6 @@
 import { THEME_COLORS } from "@/lib/system/theme";
 
-import {
+import type {
   Achievement,
   Badge,
   CommunityUser,

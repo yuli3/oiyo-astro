@@ -1,4 +1,4 @@
-import { LocalizedContent } from "@/types/manifest";
+import type { LocalizedContent } from "@/types/manifest";
 
 export const COSMIC_CONSTANTS = {
   DISTANCE_TO_GALACTIC_CENTER_LY: 26000,

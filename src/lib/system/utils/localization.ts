@@ -1,4 +1,4 @@
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 
 /**
  * Type-safe helper to access localized content from Record<string, string>

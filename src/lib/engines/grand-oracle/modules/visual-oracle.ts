@@ -1,6 +1,6 @@
 import { calculateVisualResonance } from "@/lib/engines/visual-resonance/engine";
 
-import { OracleContext, OracleModule, UnifiedFateReport } from "../types";
+import type { OracleContext, OracleModule, UnifiedFateReport } from "../types";
 
 export const VisualOracle: OracleModule = {
   id: "visual",

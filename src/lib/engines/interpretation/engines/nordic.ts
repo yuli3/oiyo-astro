@@ -5,7 +5,7 @@
  * Norse Mythology - The Elder Futhark Runes
  */
 
-import {
+import type {
   BaseInterpretation,
   NordicInterpretation,
   SixLangString,

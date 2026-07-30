@@ -1,4 +1,4 @@
-import { ColorQuestion, ColorType } from "./types";
+import type { ColorQuestion, ColorType } from "./types";
 
 export const COLOR_QUESTIONS: ColorQuestion[] = [
   {

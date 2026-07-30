@@ -1,4 +1,4 @@
-import { LifeCategory, UserResult } from "@/types/data-schema";
+import type { LifeCategory, UserResult } from "@/types/data-schema";
 
 export interface ConstellationStar {
   createdAt: number;

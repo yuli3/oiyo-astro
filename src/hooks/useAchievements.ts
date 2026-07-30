@@ -5,12 +5,12 @@ import { useCallback, useEffect, useState } from "react";
 import { getOrCreateSessionId } from "@/lib/system/supabase";
 import { ACHIEVEMENTS } from "@/lib/user/achievements/data";
 import {
-  AchievementDefinitionSummary,
-  AchievementNotification,
+  type AchievementDefinitionSummary,
+  type AchievementNotification,
   AchievementType,
   BadgeTier,
-  UserAchievement,
-  UserAchievementStats,
+  type UserAchievement,
+  type UserAchievementStats,
 } from "@/lib/user/achievements/types";
 
 interface UseAchievementsProps {

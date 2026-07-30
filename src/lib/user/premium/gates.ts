@@ -5,7 +5,7 @@ import type { Locale } from "@/i18n";
 import { getLocalizedContent } from "@/lib/system/i18n/locale-utils";
 
 import { FREE_FEATURES, getFeaturesForTier } from "../payments/plans";
-import { PremiumFeatures, SubscriptionStatus } from "../payments/types";
+import type { PremiumFeatures, SubscriptionStatus } from "../payments/types";
 
 export class PremiumGates {
   // Check if user can access advanced insights

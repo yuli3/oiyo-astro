@@ -2,14 +2,14 @@ import { useEffect, useMemo, useState } from "react";
 
 import {
   analyzeGenericFaction,
-  GenericFactionAnalysis,
+  type GenericFactionAnalysis,
 } from "@/lib/ontology/engine/factions";
-import {
+import type {
   Birthflower,
   Birthstone,
   Hobby,
 } from "@/manifest/ontology/core/schemas";
-import { loadOntologyShard, ShardData } from "@/manifest/ontology/loader";
+import { loadOntologyShard, type ShardData } from "@/manifest/ontology/loader";
 
 interface SynthesisResult {
   economicSchool: GenericFactionAnalysis | null;

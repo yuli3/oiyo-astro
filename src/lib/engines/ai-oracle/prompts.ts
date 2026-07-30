@@ -1,5 +1,5 @@
 import { getPersona } from "./council";
-import { OracleInput } from "./types";
+import type { OracleInput } from "./types";
 
 const DOMAIN_INSTRUCTIONS = {
   ontology: {

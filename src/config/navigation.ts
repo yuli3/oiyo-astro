@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-syntax */
-import { Locale } from "@/i18n";
+import type { Locale } from "@/i18n";
 import { features } from "@/registry/features";
 
 // Sister sites for family nav (footer + mobile drawer). news/ai are

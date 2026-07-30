@@ -1,7 +1,7 @@
-import { Locale } from "@/i18n";
-import { StrictLocalized } from "@/lib/system/utils/localization";
+import type { Locale } from "@/i18n";
+import type { StrictLocalized } from "@/lib/system/utils/localization";
 
-import { ArtStyle, ArtStyleProfile, ArtStyleQuestion } from "./types";
+import type { ArtStyle, ArtStyleProfile, ArtStyleQuestion } from "./types";
 
 // Constants
 export const ART_STYLE_EMOJIS: Record<ArtStyle, string> = {

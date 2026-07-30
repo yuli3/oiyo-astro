@@ -10,7 +10,7 @@
 import { normalizeAngle } from "../kernel/math";
 import { getJulianDay } from "../kernel/time";
 import { NAKSHATRAS, PADA_NAVAMSHA, RASHI_SIGNS } from "./data";
-import { Pada, VedicCoordinates } from "./types";
+import type { Pada, VedicCoordinates } from "./types";
 
 /**
  * Main calculator function

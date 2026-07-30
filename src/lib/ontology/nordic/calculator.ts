@@ -1,4 +1,4 @@
-import { Rune } from "./types";
+import type { Rune } from "./types";
 
 const RUNES: Rune[] = [
   {

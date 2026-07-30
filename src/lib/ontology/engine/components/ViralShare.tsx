@@ -8,7 +8,7 @@ import React, { useEffect, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { generateOracleProphecy } from "@/lib/engines/ai/oracle-voice";
-import { UniversalProfile } from "@/lib/ontology/engine/types";
+import type { UniversalProfile } from "@/lib/ontology/engine/types";
 
 interface ViralShareProps {
   profile: UniversalProfile;

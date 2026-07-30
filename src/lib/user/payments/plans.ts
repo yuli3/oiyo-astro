@@ -1,4 +1,4 @@
-import { PremiumFeatures, SubscriptionPlan } from "./types";
+import type { PremiumFeatures, SubscriptionPlan } from "./types";
 
 // Free tier features
 export const FREE_FEATURES: PremiumFeatures = {

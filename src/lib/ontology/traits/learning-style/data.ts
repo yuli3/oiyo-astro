@@ -1,4 +1,4 @@
-import { LearningStyle, LearningStyleQuestion } from "./types";
+import type { LearningStyle, LearningStyleQuestion } from "./types";
 
 export const LEARNING_STYLE_LABELS: Record<
   LearningStyle,

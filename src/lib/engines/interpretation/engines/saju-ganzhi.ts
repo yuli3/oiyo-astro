@@ -1,4 +1,4 @@
-import { SixLangString } from "../engine.contract";
+import type { SixLangString } from "../engine.contract";
 import {
   EARTHLY_BRANCH_NARRATIVES,
   GANZHI_COMBINATION_NARRATIVES,

@@ -1,8 +1,8 @@
 // Achievement System Data & Badge Definitions
 
 import {
-  Achievement,
-  AchievementCategory,
+  type Achievement,
+  type AchievementCategory,
   AchievementType,
   BadgeTier,
 } from "./types";

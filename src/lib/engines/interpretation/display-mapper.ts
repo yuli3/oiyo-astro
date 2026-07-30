@@ -1,4 +1,4 @@
-import {
+import type {
   RichInterpretationResult,
   UniversalInterpretationResult,
 } from "./engine.contract";
