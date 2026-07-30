@@ -62,8 +62,9 @@ export interface FeatureManifest {
   permalink?: boolean;
 
   searchKeywords?: Record<string, string[]> | string[]; // Legacy Support
-  // Localized Metadata (replaces seo.config.ts)
-  seo: {
+  // Localized Metadata (replaces seo.config.ts). Optional: metadata-generator.ts
+  // falls back to nameKey/name and descriptionKey/description when absent.
+  seo?: {
     description?: LocalizedString;
     descriptionKey?: string;
 
