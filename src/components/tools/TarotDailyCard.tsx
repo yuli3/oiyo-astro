@@ -322,7 +322,7 @@ export default function TarotDailyCard({ locale }: Props) {
                   className="absolute inset-0 rounded-xl border-2 border-green-200"
                   style={{
                     transform: `rotate(${(i - 1) * 3}deg)`,
-                    background: `linear-gradient(135deg, #4c1d95 0%, #1e1b4b ${50 + i * 10}%, #312e81 100%)`,
+                    background: `linear-gradient(135deg, oklch(0.443 0.086 123) 0%, oklch(0.221 0.04 126) ${50 + i * 10}%, oklch(0.311 0.055 125) 100%)`,
                     zIndex: i,
                   }}
                 >
@@ -344,7 +344,7 @@ export default function TarotDailyCard({ locale }: Props) {
 
       {phase === "loading" && (
         <div className="text-center py-12">
-          <div className="inline-block w-12 h-12 border-4 border-green-200 border-t-purple-600 rounded-full animate-spin mb-4" />
+          <div className="inline-block w-12 h-12 border-4 border-green-200 border-t-green-700 rounded-full animate-spin mb-4" />
           <p className="text-gray-500">{ui.drawingText}</p>
         </div>
       )}
@@ -380,8 +380,8 @@ export default function TarotDailyCard({ locale }: Props) {
                   backfaceVisibility: "hidden",
                   WebkitBackfaceVisibility: "hidden",
                   borderRadius: "8px",
-                  background: "linear-gradient(180deg, #0e0a1c 0%, #0a0716 60%, #07040e 100%)",
-                  border: "1px solid rgba(139,92,246,0.35)",
+                  background: "linear-gradient(180deg, oklch(0.10 0.03 126) 0%, oklch(0.07 0.025 126) 60%, oklch(0.05 0.02 126) 100%)",
+                  border: "1px solid oklch(0.523 0.101 122 / 0.35)",
                   boxShadow: "0 30px 60px -20px rgba(0,0,0,.9), 0 10px 20px -5px rgba(0,0,0,.7)",
                   overflow: "hidden",
                   display: "flex",
@@ -392,19 +392,19 @@ export default function TarotDailyCard({ locale }: Props) {
                 }}
               >
                 {/* Mystical back pattern */}
-                <div style={{ position: "absolute", inset: "14px", border: "1px solid rgba(192,168,255,0.22)", borderRadius: "3px", display: "grid", placeItems: "center" }}>
-                  <div style={{ position: "absolute", inset: "24px", border: "1px solid rgba(192,168,255,0.14)", borderRadius: "2px" }} />
-                  <div style={{ width: "60%", aspectRatio: "1", border: "1px solid rgba(192,168,255,0.28)", borderRadius: "50%", display: "grid", placeItems: "center", position: "relative" }}>
-                    <span style={{ position: "absolute", fontFamily: "serif", fontSize: "32px", color: "rgba(192,168,255,0.6)" }}>✦</span>
+                <div style={{ position: "absolute", inset: "14px", border: "1px solid oklch(0.806 0.078 119 / 0.22)", borderRadius: "3px", display: "grid", placeItems: "center" }}>
+                  <div style={{ position: "absolute", inset: "24px", border: "1px solid oklch(0.806 0.078 119 / 0.14)", borderRadius: "2px" }} />
+                  <div style={{ width: "60%", aspectRatio: "1", border: "1px solid oklch(0.806 0.078 119 / 0.28)", borderRadius: "50%", display: "grid", placeItems: "center", position: "relative" }}>
+                    <span style={{ position: "absolute", fontFamily: "serif", fontSize: "32px", color: "oklch(0.806 0.078 119 / 0.6)" }}>✦</span>
                   </div>
-                  <span style={{ position: "absolute", bottom: "10px", left: 0, right: 0, textAlign: "center", fontSize: "8px", letterSpacing: "0.36em", color: "rgba(192,168,255,0.45)", textTransform: "uppercase" }}>oracle</span>
+                  <span style={{ position: "absolute", bottom: "10px", left: 0, right: 0, textAlign: "center", fontSize: "8px", letterSpacing: "0.36em", color: "oklch(0.806 0.078 119 / 0.45)", textTransform: "uppercase" }}>oracle</span>
                 </div>
                 {/* Iridescent layers */}
-                <div style={{ position: "absolute", inset: 0, pointerEvents: "none", mixBlendMode: "screen", opacity: 0.7, background: "conic-gradient(from var(--iri-angle, 220deg) at var(--mx, 50%) var(--my, 50%), #b8e8ff, #f4d4ff, #ffe4d0, #d0fff4, #e0d4ff, #b8e8ff)", filter: "blur(14px) saturate(1.2)" }} />
+                <div style={{ position: "absolute", inset: 0, pointerEvents: "none", mixBlendMode: "screen", opacity: 0.7, background: "conic-gradient(from var(--iri-angle, 220deg) at var(--mx, 50%) var(--my, 50%), #c8f5d8, #e8f5c8, #fff3c4, #d4f0d0, #b8e8c8, #c8f5d8)", filter: "blur(14px) saturate(1.2)" }} />
                 <div style={{ position: "absolute", inset: 0, pointerEvents: "none", mixBlendMode: "overlay", opacity: 0.45, background: "radial-gradient(120% 140% at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.7), transparent 38%)", filter: "blur(18px)" }} />
                 <div style={{ position: "absolute", inset: 0, pointerEvents: "none", mixBlendMode: "screen", opacity: 0.6, background: "radial-gradient(180px 220px at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.5) 0%, rgba(255,255,255,.15) 30%, transparent 60%)" }} />
                 {!flipped && (
-                  <p style={{ position: "absolute", bottom: "44px", fontSize: "10px", letterSpacing: "0.2em", color: "rgba(192,168,255,0.6)", textTransform: "uppercase" }}>{ui.clickToReveal}</p>
+                  <p style={{ position: "absolute", bottom: "44px", fontSize: "10px", letterSpacing: "0.2em", color: "oklch(0.806 0.078 119 / 0.6)", textTransform: "uppercase" }}>{ui.clickToReveal}</p>
                 )}
               </div>
 
@@ -420,8 +420,8 @@ export default function TarotDailyCard({ locale }: Props) {
                   borderRadius: "8px",
                   background: isReversed
                     ? "linear-gradient(180deg, #1c1008 0%, #100a04 100%)"
-                    : "linear-gradient(180deg, #100a22 0%, #0a0716 60%, #08050f 100%)",
-                  border: `1px solid ${isReversed ? "rgba(217,119,6,0.4)" : "rgba(139,92,246,0.35)"}`,
+                    : "linear-gradient(180deg, oklch(0.10 0.03 126) 0%, oklch(0.07 0.025 126) 60%, oklch(0.05 0.02 126) 100%)",
+                  border: `1px solid ${isReversed ? "rgba(217,119,6,0.4)" : "oklch(0.523 0.101 122 / 0.35)"}`,
                   boxShadow: "0 30px 60px -20px rgba(0,0,0,.9)",
                   overflow: "hidden",
                   display: "flex",
@@ -457,18 +457,18 @@ export default function TarotDailyCard({ locale }: Props) {
                   </div>
                 ) : (
                   // Fallback for any card the data doesn't give a number for.
-                  <div style={{ position: "absolute", inset: "14px", border: `1px solid ${isReversed ? "rgba(217,119,6,0.3)" : "rgba(192,168,255,0.22)"}`, borderRadius: "3px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "8px" }}>
-                    <span style={{ fontSize: "10px", letterSpacing: "0.4em", color: isReversed ? "rgba(217,119,6,0.7)" : "rgba(192,168,255,0.6)", textTransform: "uppercase", fontFamily: "monospace" }}>{isReversed ? ui.reversed : ui.upright}</span>
+                  <div style={{ position: "absolute", inset: "14px", border: `1px solid ${isReversed ? "rgba(217,119,6,0.3)" : "oklch(0.806 0.078 119 / 0.22)"}`, borderRadius: "3px", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: "8px" }}>
+                    <span style={{ fontSize: "10px", letterSpacing: "0.4em", color: isReversed ? "rgba(217,119,6,0.7)" : "oklch(0.806 0.078 119 / 0.6)", textTransform: "uppercase", fontFamily: "monospace" }}>{isReversed ? ui.reversed : ui.upright}</span>
                     <div style={{ transform: isReversed ? "rotate(180deg)" : "none", textAlign: "center" }}>
                       <span style={{ fontSize: "40px", display: "block", marginBottom: "8px" }}>{SUIT_SYMBOLS[card.suit ?? ""] ?? "🔮"}</span>
-                      <p style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "13px", letterSpacing: "0.2em", color: isReversed ? "#d97706" : "rgba(232,228,255,0.9)", textTransform: "uppercase" }}>
+                      <p style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "13px", letterSpacing: "0.2em", color: isReversed ? "#d97706" : "oklch(0.941 0.038 118 / 0.9)", textTransform: "uppercase" }}>
                         {cardName}
                       </p>
                     </div>
                   </div>
                 )}
                 {/* Iridescent on front too */}
-                <div style={{ position: "absolute", inset: 0, pointerEvents: "none", mixBlendMode: "screen", opacity: 0.5, background: "conic-gradient(from var(--iri-angle, 220deg) at var(--mx, 50%) var(--my, 50%), #b8e8ff, #f4d4ff, #ffe4d0, #d0fff4, #e0d4ff, #b8e8ff)", filter: "blur(16px)" }} />
+                <div style={{ position: "absolute", inset: 0, pointerEvents: "none", mixBlendMode: "screen", opacity: 0.5, background: "conic-gradient(from var(--iri-angle, 220deg) at var(--mx, 50%) var(--my, 50%), #c8f5d8, #e8f5c8, #fff3c4, #d4f0d0, #b8e8c8, #c8f5d8)", filter: "blur(16px)" }} />
                 <div style={{ position: "absolute", inset: 0, pointerEvents: "none", mixBlendMode: "screen", opacity: 0.45, background: "radial-gradient(160px 200px at var(--mx, 50%) var(--my, 50%), rgba(255,255,255,.45) 0%, rgba(255,255,255,.1) 30%, transparent 60%)" }} />
               </div>
             </div>

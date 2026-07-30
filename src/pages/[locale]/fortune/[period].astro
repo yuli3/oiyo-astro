@@ -2,12 +2,13 @@
 import Layout from '../../../layouts/Layout.astro';
 import { LOCALES, type Locale } from '../../../i18n';
 import PeriodicFortune from '../../../components/tools/PeriodicFortune';
+import GenerationCompare from '../../../components/tools/GenerationCompare';
 
-const PERIODS = ['today', 'weekly', 'monthly'] as const;
+const PERIODS = ['today', 'weekly', 'monthly', 'yearly'] as const;
 type Period = typeof PERIODS[number];
 
 export function getStaticPaths() {
-  return LOCALES.flatMap((locale) => ['today', 'weekly', 'monthly'].map((period) => ({ params: { locale, period } })));
+  return LOCALES.flatMap((locale) => ['today', 'weekly', 'monthly', 'yearly'].map((period) => ({ params: { locale, period } })));
 }
 const { locale, period } = Astro.params as { locale: Locale; period: Period };
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).toString();
@@ -37,6 +38,14 @@ const META: Record<Period, Record<Locale, { title: string; description: string; 
     fr: { title: 'Ce mois — Saju, zodiaque & signe', description: 'La fortune du mois selon trois systèmes traditionnels. Mis à jour chaque mois.', h1: 'Ce mois', sub: 'Saju · zodiaque · signe' },
     es: { title: 'Este mes — Saju, zodiaco y signo', description: 'La fortuna del mes según tres sistemas tradicionales. Actualizado cada mes.', h1: 'Este mes', sub: 'Saju · zodiaco · signo' },
   },
+  yearly: {
+    ko: { title: '올해의 운세 — 사주 오행·12지신·별자리 종합', description: '올해 운세를 사주 오행·12지신·별자리로 종합. 해가 바뀌면 새로 갱신됩니다.', h1: '올해의 운세', sub: '사주 오행 · 12지신 · 별자리 — 올해 한 해의 흐름' },
+    en: { title: 'This Year — Saju, Chinese Zodiac & Star Sign', description: "This year's fortune across Saju five elements, Chinese zodiac, and star sign. Refreshed yearly.", h1: 'This Year', sub: 'Saju · Chinese zodiac · star sign' },
+    ja: { title: '今年の運勢 — 四柱・十二支・星座', description: '今年の運勢を四柱五行・十二支・星座で。毎年更新。', h1: '今年の運勢', sub: '四柱 · 十二支 · 星座' },
+    zh: { title: '今年运势 — 四柱·生肖·星座', description: '今年运势结合四柱五行、生肖与星座。每年更新。', h1: '今年运势', sub: '四柱 · 生肖 · 星座' },
+    fr: { title: "Cette année — Saju, zodiaque & signe", description: "La fortune de l'année selon trois systèmes traditionnels. Mis à jour chaque année.", h1: 'Cette année', sub: 'Saju · zodiaque · signe' },
+    es: { title: 'Este año — Saju, zodiaco y signo', description: 'La fortuna del año según tres sistemas tradicionales. Actualizado cada año.', h1: 'Este año', sub: 'Saju · zodiaco · signo' },
+  },
 };
 const m = META[period][locale] ?? META[period].en;
 
@@ -44,6 +53,7 @@ const PLABEL: Record<Period, Record<Locale, string>> = {
   today: { ko: '오늘', en: 'Today', ja: '今日', zh: '今日', fr: "Aujourd'hui", es: 'Hoy' },
   weekly: { ko: '이번 주', en: 'This Week', ja: '今週', zh: '本周', fr: 'Semaine', es: 'Semana' },
   monthly: { ko: '이번 달', en: 'This Month', ja: '今月', zh: '本月', fr: 'Mois', es: 'Mes' },
+  yearly: { ko: '올해', en: 'This Year', ja: '今年', zh: '今年', fr: 'Année', es: 'Año' },
 };
 
 type SeoContent = {
@@ -332,7 +342,7 @@ const breadcrumbJsonLd = {
     </div>
 
     <nav class="mb-6 flex justify-center gap-2">
-      {(['today', 'weekly', 'monthly'] as Period[]).map((p) => (
+      {PERIODS.map((p) => (
         <a href={`/${locale}/fortune/${p}`}
            class={`rounded-full px-4 py-1.5 text-sm font-bold ${p === period ? 'bg-primary text-primary-foreground' : 'border bg-card hover:bg-accent'}`}>
           {PLABEL[p][locale] ?? PLABEL[p].en}
@@ -342,6 +352,10 @@ const breadcrumbJsonLd = {
 
     <section class="rounded-3xl border border-green-100 bg-white p-5 shadow-sm">
       <PeriodicFortune client:load locale={locale} period={period} />
+    </section>
+
+    <section class="mt-6 rounded-3xl border border-green-100 bg-white p-5 shadow-sm">
+      <GenerationCompare client:visible locale={locale} period={period} />
     </section>
 
     <section class="mt-8 rounded-3xl border border-green-100 bg-green-50/60 p-5">

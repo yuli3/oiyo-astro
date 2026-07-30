@@ -2,11 +2,12 @@
 // period(오늘/이번주/이번달) × system(오행·12지신·별자리) × 사용자 기준(생년/사인)을
 // 해싱해 코퍼스에서 안정적으로 선택. 같은 주에는 같은 결과(재방문 신선도), 주가 바뀌면 갱신.
 export type Locale = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es';
-export type Period = 'today' | 'weekly' | 'monthly';
+export type Period = 'today' | 'weekly' | 'monthly' | 'yearly';
 
 // ── 결정론적 시드 ──
 export function periodKey(p: Period, d = new Date()): string {
   const y = d.getUTCFullYear();
+  if (p === 'yearly') return `${y}`;
   if (p === 'monthly') return `${y}-M${d.getUTCMonth() + 1}`;
   if (p === 'weekly') {
     // ISO 주차

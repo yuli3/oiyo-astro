@@ -1,6 +1,6 @@
 import type { Locale, Period } from './periodic';
 
-export const PERIODS = ['today', 'weekly', 'monthly'] as const satisfies readonly Period[];
+export const PERIODS = ['today', 'weekly', 'monthly', 'yearly'] as const satisfies readonly Period[];
 export type FortuneDomain = 'saju' | 'zodiac';
 
 type PageCopy = {
@@ -30,24 +30,25 @@ const periodLabel: Record<Period, Record<Locale, string>> = {
   today: { ko: '오늘', en: 'Today', ja: '今日', zh: '今日', fr: "Aujourd'hui", es: 'Hoy' },
   weekly: { ko: '이번 주', en: 'This Week', ja: '今週', zh: '本周', fr: 'Cette semaine', es: 'Esta semana' },
   monthly: { ko: '이번 달', en: 'This Month', ja: '今月', zh: '本月', fr: 'Ce mois', es: 'Este mes' },
+  yearly: { ko: '올해', en: 'This Year', ja: '今年', zh: '今年', fr: 'Cette année', es: 'Este año' },
 };
 
 const labels: Record<FortuneDomain, Record<Locale, { name: string; app: string; cycle: Record<Period, string> }>> = {
   saju: {
-    ko: { name: '사주', app: '사주 주기형 운세', cycle: { today: '오늘의 사주', weekly: '이번 주 사주', monthly: '이번 달 사주' } },
-    en: { name: 'Saju', app: 'Saju Periodic Fortune', cycle: { today: "Today's Saju", weekly: 'Weekly Saju', monthly: 'Monthly Saju' } },
-    ja: { name: '四柱推命', app: '四柱推命の周期運勢', cycle: { today: '今日の四柱推命', weekly: '今週の四柱推命', monthly: '今月の四柱推命' } },
-    zh: { name: '四柱', app: '四柱周期运势', cycle: { today: '今日四柱', weekly: '本周四柱', monthly: '本月四柱' } },
-    fr: { name: 'Saju', app: 'Fortune Saju périodique', cycle: { today: 'Saju du jour', weekly: 'Saju de la semaine', monthly: 'Saju du mois' } },
-    es: { name: 'Saju', app: 'Fortuna Saju periódica', cycle: { today: 'Saju de hoy', weekly: 'Saju semanal', monthly: 'Saju mensual' } },
+    ko: { name: '사주', app: '사주 주기형 운세', cycle: { today: '오늘의 사주', weekly: '이번 주 사주', monthly: '이번 달 사주', yearly: '올해의 사주' } },
+    en: { name: 'Saju', app: 'Saju Periodic Fortune', cycle: { today: "Today's Saju", weekly: 'Weekly Saju', monthly: 'Monthly Saju', yearly: 'Yearly Saju' } },
+    ja: { name: '四柱推命', app: '四柱推命の周期運勢', cycle: { today: '今日の四柱推命', weekly: '今週の四柱推命', monthly: '今月の四柱推命', yearly: '今年の四柱推命' } },
+    zh: { name: '四柱', app: '四柱周期运势', cycle: { today: '今日四柱', weekly: '本周四柱', monthly: '本月四柱', yearly: '今年四柱' } },
+    fr: { name: 'Saju', app: 'Fortune Saju périodique', cycle: { today: 'Saju du jour', weekly: 'Saju de la semaine', monthly: 'Saju du mois', yearly: "Saju de l'année" } },
+    es: { name: 'Saju', app: 'Fortuna Saju periódica', cycle: { today: 'Saju de hoy', weekly: 'Saju semanal', monthly: 'Saju mensual', yearly: 'Saju anual' } },
   },
   zodiac: {
-    ko: { name: '별자리', app: '별자리 주기형 운세', cycle: { today: '오늘의 별자리', weekly: '이번 주 별자리', monthly: '이번 달 별자리' } },
-    en: { name: 'Zodiac', app: 'Zodiac Periodic Horoscope', cycle: { today: "Today's Horoscope", weekly: 'Weekly Horoscope', monthly: 'Monthly Horoscope' } },
-    ja: { name: '星座', app: '星座の周期運勢', cycle: { today: '今日の星座占い', weekly: '今週の星座占い', monthly: '今月の星座占い' } },
-    zh: { name: '星座', app: '星座周期运势', cycle: { today: '今日星座运势', weekly: '本周星座运势', monthly: '本月星座运势' } },
-    fr: { name: 'Zodiaque', app: 'Horoscope périodique', cycle: { today: 'Horoscope du jour', weekly: 'Horoscope de la semaine', monthly: 'Horoscope du mois' } },
-    es: { name: 'Zodiaco', app: 'Horóscopo periódico', cycle: { today: 'Horóscopo de hoy', weekly: 'Horóscopo semanal', monthly: 'Horóscopo mensual' } },
+    ko: { name: '별자리', app: '별자리 주기형 운세', cycle: { today: '오늘의 별자리', weekly: '이번 주 별자리', monthly: '이번 달 별자리', yearly: '올해의 별자리' } },
+    en: { name: 'Zodiac', app: 'Zodiac Periodic Horoscope', cycle: { today: "Today's Horoscope", weekly: 'Weekly Horoscope', monthly: 'Monthly Horoscope', yearly: 'Yearly Horoscope' } },
+    ja: { name: '星座', app: '星座の周期運勢', cycle: { today: '今日の星座占い', weekly: '今週の星座占い', monthly: '今月の星座占い', yearly: '今年の星座占い' } },
+    zh: { name: '星座', app: '星座周期运势', cycle: { today: '今日星座运势', weekly: '本周星座运势', monthly: '本月星座运势', yearly: '今年星座运势' } },
+    fr: { name: 'Zodiaque', app: 'Horoscope périodique', cycle: { today: 'Horoscope du jour', weekly: 'Horoscope de la semaine', monthly: 'Horoscope du mois', yearly: "Horoscope de l'année" } },
+    es: { name: 'Zodiaco', app: 'Horóscopo periódico', cycle: { today: 'Horóscopo de hoy', weekly: 'Horóscopo semanal', monthly: 'Horóscopo mensual', yearly: 'Horóscopo anual' } },
   },
 };
 
