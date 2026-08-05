@@ -34,6 +34,20 @@ const heroSub = txt({
   es: 'Del MBTI al Saju — herramientas gratuitas de autoexploración a través de la psicología y la sabiduría oriental.',
 })
 
+// 검색 결과에 쓰는 설명은 히어로 문구와 다를 수 있다.
+//
+// `/en/` 이 최근 28일 GSC 에서 받은 쿼리는 **"ahoxy" 하나뿐이다**(40노출·3.5위·**0클릭**,
+// 직전 28일은 2노출). ahoxy.com 을 찾던 사람이 우리를 3위에서 보고 그냥 지나친다 —
+// 결과 어디에도 "ahoxy 가 여기로 왔다"가 없기 때문이다. 301 은 걸려 있지만 브랜드
+// 이전의 마지막 한 칸이 비어 있는 셈이다([[ahoxy-301-keep-and-pivot]]).
+//
+// 그래서 **en 에만** 이전 안내 한 문장을 붙인다. 다른 로케일에는 이 쿼리가 없어 노이즈다.
+// 히어로 문구(heroSub)는 건드리지 않는다 — 화면에 보이는 카피와 검색 스니펫은 목적이 다르다.
+// 리뷰: 2026-09-03(28일 후) CTR 확인. 여전히 0이면 title 로 올린다.
+const metaDescription = locale === 'en'
+  ? `${heroSub} ahoxy.com is now OIYO.`
+  : heroSub
+
 const statsData = [
   { value: '28+', label: txt({ ko: '자기 탐색 도구', en: 'Self-Discovery Tools', ja: '自己探索ツール', zh: '自我探索工具', fr: 'Outils d\'Exploration', es: 'Herramientas' }) },
   { value: '6', label: txt({ ko: '지원 언어', en: 'Languages', ja: '対応言語', zh: '支持语言', fr: 'Langues', es: 'Idiomas' }) },
@@ -149,8 +163,8 @@ const sectionMore = txt({ ko: '더 많은 도구', en: 'More Tools', ja: 'その
 ---
 
 <Layout
-  title={heroTitle + ' — OIYO'}
-  description={heroSub}
+  title={heroTitle}
+  description={metaDescription}
   locale={locale}
 >
   <!-- Hero -->
