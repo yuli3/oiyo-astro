@@ -112,7 +112,8 @@ for (const [foreground, background, minimum, label] of [
 
 for (const token of [
   'status = "uncertain"', 'status = "low-flat"', 'status = "tie"', 'status = "mixed"',
-  'status === "clear" ?', 'explanationPriority: ["scores", "status", "uncertainty", "role-aid"]',
+  // 2026-07-28 에 삼항에서 `&&` 가드로 바뀌었다(role aid 가 차원별이 되면서).
+  'status === "clear" &&', 'explanationPriority: ["scores", "status", "uncertainty", "role-aid"]',
 ]) if (!logic.includes(token)) errors.push(`logic priority contract missing: ${token}`);
 
 for (const token of [

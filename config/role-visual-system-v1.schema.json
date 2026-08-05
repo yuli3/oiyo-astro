@@ -4,49 +4,204 @@
   "title": "OIYO Role Visual System v1 specimen fixture",
   "type": "object",
   "additionalProperties": false,
-  "required": ["schemaVersion", "scenarios", "interactionStates"],
+  "required": [
+    "schemaVersion",
+    "scenarios",
+    "interactionStates"
+  ],
   "properties": {
-    "schemaVersion": { "const": "oiyo.role-visual.v1" },
+    "schemaVersion": {
+      "const": "oiyo.role-visual.v1"
+    },
     "scenarios": {
       "type": "array",
       "minItems": 5,
       "maxItems": 5,
       "allOf": [
-        { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "clear" } } }, "minContains": 1, "maxContains": 1 },
-        { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "mixed" } } }, "minContains": 1, "maxContains": 1 },
-        { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "tie" } } }, "minContains": 1, "maxContains": 1 },
-        { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "low-flat" } } }, "minContains": 1, "maxContains": 1 },
-        { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "uncertain" } } }, "minContains": 1, "maxContains": 1 }
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "const": "clear"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "const": "mixed"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "const": "tie"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "const": "low-flat"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        },
+        {
+          "contains": {
+            "type": "object",
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "const": "uncertain"
+              }
+            }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        }
       ],
       "items": {
         "type": "object",
         "additionalProperties": false,
-        "required": ["id", "input", "expected"],
+        "required": [
+          "id",
+          "input",
+          "expected"
+        ],
         "properties": {
-          "id": { "enum": ["clear", "mixed", "tie", "low-flat", "uncertain"] },
+          "id": {
+            "enum": [
+              "clear",
+              "mixed",
+              "tie",
+              "low-flat",
+              "uncertain"
+            ]
+          },
           "input": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["dataCoverage", "dimensions"],
+            "required": [
+              "dataCoverage",
+              "dimensions"
+            ],
             "properties": {
-              "dataCoverage": { "type": "number", "minimum": 0, "maximum": 1 },
+              "dataCoverage": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 1
+              },
               "dimensions": {
                 "type": "array",
                 "minItems": 3,
                 "maxItems": 3,
                 "allOf": [
-                  { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "explore" } } }, "minContains": 1, "maxContains": 1 },
-                  { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "focus" } } }, "minContains": 1, "maxContains": 1 },
-                  { "contains": { "type": "object", "required": ["id"], "properties": { "id": { "const": "connect" } } }, "minContains": 1, "maxContains": 1 }
+                  {
+                    "contains": {
+                      "type": "object",
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "id": {
+                          "const": "explore"
+                        }
+                      }
+                    },
+                    "minContains": 1,
+                    "maxContains": 1
+                  },
+                  {
+                    "contains": {
+                      "type": "object",
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "id": {
+                          "const": "focus"
+                        }
+                      }
+                    },
+                    "minContains": 1,
+                    "maxContains": 1
+                  },
+                  {
+                    "contains": {
+                      "type": "object",
+                      "required": [
+                        "id"
+                      ],
+                      "properties": {
+                        "id": {
+                          "const": "connect"
+                        }
+                      }
+                    },
+                    "minContains": 1,
+                    "maxContains": 1
+                  }
                 ],
                 "items": {
                   "type": "object",
                   "additionalProperties": false,
-                  "required": ["id", "score", "confidence"],
+                  "required": [
+                    "id",
+                    "score",
+                    "confidence"
+                  ],
                   "properties": {
-                    "id": { "enum": ["explore", "focus", "connect"] },
-                    "score": { "type": "number", "minimum": 0, "maximum": 100 },
-                    "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+                    "id": {
+                      "enum": [
+                        "explore",
+                        "focus",
+                        "connect"
+                      ]
+                    },
+                    "score": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 100
+                    },
+                    "confidence": {
+                      "type": "number",
+                      "minimum": 0,
+                      "maximum": 1
+                    }
                   }
                 }
               }
@@ -55,10 +210,33 @@
           "expected": {
             "type": "object",
             "additionalProperties": false,
-            "required": ["status", "roleAid"],
+            "required": [
+              "status",
+              "roleAid"
+            ],
             "properties": {
-              "status": { "enum": ["uncertain", "low-flat", "tie", "mixed", "clear"] },
-              "roleAid": { "type": ["string", "null"], "enum": ["neutral-pattern-01", null] }
+              "status": {
+                "enum": [
+                  "uncertain",
+                  "low-flat",
+                  "tie",
+                  "mixed",
+                  "clear"
+                ]
+              },
+              "roleAid": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "enum": [
+                  "pioneer-v1",
+                  "immersion-v1",
+                  "connector-v1",
+                  null
+                ],
+                "description": "src/lib/role-visual-system/index.ts 의 ROLE_AID_BY_DIMENSION 과 같은 집합. 2026-07-28 에 단일 neutral-pattern-01 에서 차원별(explore/focus/connect) 로 바뀌었는데 이 enum 만 남아 CI 가 8일간 빨간불이었다. 구현을 바꿀 때 여기도 같이 바꾼다."
+              }
             }
           }
         }
@@ -66,7 +244,13 @@
     },
     "interactionStates": {
       "type": "array",
-      "items": { "enum": ["idle", "saved", "shared"] },
+      "items": {
+        "enum": [
+          "idle",
+          "saved",
+          "shared"
+        ]
+      },
       "minItems": 3,
       "maxItems": 3,
       "uniqueItems": true
