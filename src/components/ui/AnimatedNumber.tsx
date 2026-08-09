@@ -1,19 +1,67 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from "react";
 
 interface Props {
-  value: number
-  suffix?: string
+  value: number;
+  format?: Intl.NumberFormatOptions;
+  locales?: string | string[];
+  prefix?: string;
+  suffix?: string;
+  className?: string;
 }
 
-/* Lazy-loads @number-flow/react only in browser to avoid
-   Cloudflare Workers SSR context crashing on HTMLElement. */
-export default function AnimatedNumber({ value, suffix = '' }: Props) {
-  const [NF, setNF] = useState<React.ComponentType<{ value: number }> | null>(null)
+type NumberFlowProps = Props & {
+  isolate?: boolean;
+  respectMotionPreference?: boolean;
+};
+
+/**
+ * SSR-safe NumberFlow wrapper. The custom element is loaded only in the
+ * browser; static HTML and unsupported clients keep an accessible number.
+ */
+export default function AnimatedNumber({
+  value,
+  format,
+  locales,
+  prefix = "",
+  suffix = "",
+  className,
+}: Props) {
+  const [NumberFlow, setNumberFlow] =
+    useState<React.ComponentType<NumberFlowProps> | null>(null);
 
   useEffect(() => {
-    import('@number-flow/react').then(m => setNF(() => m.default))
-  }, [])
+    let active = true;
+    import("@number-flow/react").then((module) => {
+      if (active)
+        setNumberFlow(
+          () => module.default as React.ComponentType<NumberFlowProps>,
+        );
+    });
+    return () => {
+      active = false;
+    };
+  }, []);
 
-  if (!NF) return <span>{value}{suffix}</span>
-  return <><NF value={value} />{suffix}</>
+  if (!NumberFlow) {
+    return (
+      <span className={className}>
+        {prefix}
+        {new Intl.NumberFormat(locales, format).format(value)}
+        {suffix}
+      </span>
+    );
+  }
+
+  return (
+    <NumberFlow
+      value={value}
+      format={format}
+      locales={locales}
+      prefix={prefix}
+      suffix={suffix}
+      className={className}
+      isolate
+      respectMotionPreference
+    />
+  );
 }

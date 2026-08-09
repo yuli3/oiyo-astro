@@ -10,6 +10,8 @@ import YongsinSection from './saju/YongsinSection';
 import LifeCategoriesSection from './saju/LifeCategoriesSection';
 import { decodeResult, writeResultHash } from '../../lib/result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 
@@ -25,13 +27,13 @@ interface PermalinkState {
   gender: 'male' | 'female';
 }
 
-const SHARE_LABELS: Record<Locale, { share: string; shareCopied: string; privacyNote: string }> = {
-  ko: { share: '결과 링크 공유', shareCopied: '링크를 복사했어요!', privacyNote: '이 링크에는 입력한 생년월일시 정보가 포함됩니다.' },
-  en: { share: 'Share result link', shareCopied: 'Link copied!', privacyNote: 'This link contains the birth date/time you entered.' },
-  ja: { share: '結果リンクを共有', shareCopied: 'リンクをコピーしました!', privacyNote: 'このリンクには入力した生年月日時の情報が含まれます。' },
-  fr: { share: 'Partager le lien du résultat', shareCopied: 'Lien copié !', privacyNote: 'Ce lien contient la date/heure de naissance saisie.' },
-  es: { share: 'Compartir enlace del resultado', shareCopied: '¡Enlace copiado!', privacyNote: 'Este enlace contiene la fecha/hora de nacimiento que ingresaste.' },
-  zh: { share: '分享结果链接', shareCopied: '链接已复制!', privacyNote: '此链接包含您输入的出生日期与时间信息。' },
+const SHARE_LABELS: Record<Locale, { share: string; shareCopied: string; privacyNote: string; imageShare: string; imageSharing: string; imagePrivacy: string; actions: string }> = {
+  ko: { share: '결과 링크 공유', shareCopied: '링크를 복사했어요!', privacyNote: '이 링크에는 입력한 생년월일시 정보가 포함됩니다.', imageShare: '사주 이미지 저장·공유', imageSharing: '이미지를 준비하고 있어요…', imagePrivacy: '출생정보는 이미지에 포함되지 않습니다.', actions: '결과 저장과 공유' },
+  en: { share: 'Share result link', shareCopied: 'Link copied!', privacyNote: 'This link contains the birth date/time you entered.', imageShare: 'Save or share result image', imageSharing: 'Preparing image…', imagePrivacy: 'Your birth details are not included in the image.', actions: 'Save and share your result' },
+  ja: { share: '結果リンクを共有', shareCopied: 'リンクをコピーしました!', privacyNote: 'このリンクには入力した生年月日時の情報が含まれます。', imageShare: '結果画像を保存・共有', imageSharing: '画像を準備中…', imagePrivacy: '生年月日時は画像に含まれません。', actions: '結果の保存と共有' },
+  fr: { share: 'Partager le lien du résultat', shareCopied: 'Lien copié !', privacyNote: 'Ce lien contient la date/heure de naissance saisie.', imageShare: "Enregistrer ou partager l’image", imageSharing: 'Préparation de l’image…', imagePrivacy: "Les données de naissance ne figurent pas dans l’image.", actions: 'Enregistrer et partager le résultat' },
+  es: { share: 'Compartir enlace del resultado', shareCopied: '¡Enlace copiado!', privacyNote: 'Este enlace contiene la fecha/hora de nacimiento que ingresaste.', imageShare: 'Guardar o compartir la imagen', imageSharing: 'Preparando la imagen…', imagePrivacy: 'Los datos de nacimiento no aparecen en la imagen.', actions: 'Guardar y compartir el resultado' },
+  zh: { share: '分享结果链接', shareCopied: '链接已复制!', privacyNote: '此链接包含您输入的出生日期与时间信息。', imageShare: '保存或分享结果图片', imageSharing: '正在生成图片…', imagePrivacy: '图片中不会包含出生信息。', actions: '保存并分享结果' },
 };
 
 // ─── Heavenly Stems (天干) ────────────────────────────────────────────────────
@@ -521,6 +523,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const t = L[locale] ?? L.ko;
   const reading = READING_COPY[locale] ?? READING_COPY.ko;
   const roles = PILLAR_ROLES[locale] ?? PILLAR_ROLES.ko;
+  const shareLabels = SHARE_LABELS[locale] ?? SHARE_LABELS.en;
 
   const [year, setYear] = useState(1990);
   const [month, setMonth] = useState(6);
@@ -690,14 +693,13 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
-        <p className="text-gray-500 mt-1">{t.subtitle}</p>
-      </div>
-
       {/* Input */}
-      <div className="bg-white rounded-2xl border border-gray-200 p-5 space-y-4">
+      <Card className="overflow-hidden border-primary/20 bg-gradient-to-br from-card to-primary/[0.04] shadow-md">
+        <CardHeader className="border-b border-primary/10 bg-primary/[0.03] text-center">
+          <CardTitle>{t.title}</CardTitle>
+          <CardDescription>{t.subtitle}</CardDescription>
+        </CardHeader>
+        <CardContent className="space-y-4 pt-5">
         <BirthDateField
           id="saju-birth-date"
           label={t.birthDate}
@@ -745,13 +747,15 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           </div>
         </div>
 
-        <button
+        <Button
           onClick={handleCalc}
-          className="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
+          className="w-full"
+          size="lg"
         >
           {t.calcBtn}
-        </button>
-      </div>
+        </Button>
+        </CardContent>
+      </Card>
 
       {/* Results */}
       {done && (
@@ -943,25 +947,26 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
           <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
 
-          <button onClick={shareImage} disabled={imageSharing} className="w-full min-h-11 py-2.5 rounded-xl bg-green-600 text-sm font-bold text-white disabled:opacity-60">
-            {imageSharing ? '…' : '🖼️ 사주 이미지 저장·공유'}
-          </button>
-          <p className="text-xs text-gray-500 text-center">출생정보는 이미지에 포함되지 않습니다.</p>
-
-          <button
-            onClick={share}
-            className="w-full py-2.5 rounded-xl border-2 border-green-300 bg-green-50 text-sm font-bold text-green-700 hover:bg-green-100 transition-colors"
-          >
-            {shareCopied ? `✅ ${(SHARE_LABELS[locale] ?? SHARE_LABELS.en).shareCopied}` : `🔗 ${(SHARE_LABELS[locale] ?? SHARE_LABELS.en).share}`}
-          </button>
-          <p className="text-xs text-amber-600 text-center">{(SHARE_LABELS[locale] ?? SHARE_LABELS.en).privacyNote}</p>
-
-          <button
-            onClick={() => setDone(false)}
-            className="w-full py-2 bg-gray-100 hover:bg-gray-200 text-gray-600 text-sm font-medium rounded-xl transition-colors"
-          >
-            {t.resetBtn}
-          </button>
+          <Card className="border-primary/20 bg-primary/[0.04] shadow-sm">
+            <CardHeader className="pb-3 text-center">
+              <CardTitle className="text-base">{shareLabels.actions}</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-2">
+              <Button onClick={shareImage} disabled={imageSharing} className="w-full">
+                {imageSharing ? shareLabels.imageSharing : `🖼️ ${shareLabels.imageShare}`}
+              </Button>
+              <p className="text-center text-xs text-muted-foreground">{shareLabels.imagePrivacy}</p>
+              <Button onClick={share} variant="outline" className="w-full border-primary/30 text-primary">
+                {shareCopied ? `✅ ${shareLabels.shareCopied}` : `🔗 ${shareLabels.share}`}
+              </Button>
+              <p className="text-center text-xs text-amber-700">{shareLabels.privacyNote}</p>
+            </CardContent>
+            <CardFooter>
+              <Button onClick={() => setDone(false)} variant="secondary" className="w-full">
+                {t.resetBtn}
+              </Button>
+            </CardFooter>
+          </Card>
         </>
       )}
     </div>
