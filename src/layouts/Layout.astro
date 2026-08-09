@@ -67,6 +67,8 @@ const xDefaultUrl = new URL(`/ko${alternateRouteWithoutLocale}`, Astro.site);
 const siteUrl = Astro.site?.toString() ?? 'https://oiyo.net';
 const faviconUrl = new URL('/favicon.svg', Astro.site).toString();
 const themeColor = '#65a30d';
+const isHomeRoute = routeWithoutLocale === '/';
+const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es: 'Inicio' } as Record<string, string>)[locale] ?? 'Home';
 ---
 
 <!doctype html>
@@ -178,6 +180,13 @@ const themeColor = '#65a30d';
       {locale === "ko" ? "본문 바로가기" : locale === "ja" ? "本文へスキップ" : locale === "zh" ? "跳至正文" : locale === "fr" ? "Aller au contenu" : locale === "es" ? "Saltar al contenido" : "Skip to content"}
     </a>
     <Header locale={locale} />
+    {!isHomeRoute && (
+      <nav aria-label="Breadcrumb" class="mx-auto flex max-w-6xl items-center gap-2 px-4 pt-5 text-xs text-muted-foreground">
+        <a href={`/${locale}/`} class="hover:text-primary hover:underline">{homeLabel}</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page" class="truncate">{title}</span>
+      </nav>
+    )}
     <main id="main-content">
       {heading && (
         <div class="mx-auto max-w-3xl px-4 pt-8">

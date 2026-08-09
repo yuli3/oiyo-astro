@@ -1,3 +1,11 @@
+import {
+  Item,
+  ItemActions,
+  ItemContent,
+  ItemGroup,
+  ItemTitle,
+} from '@/components/ui/item';
+
 type Locale = 'en' | 'ko' | 'ja' | 'zh' | 'fr' | 'es';
 
 export interface NextStepLink {
@@ -31,22 +39,22 @@ export default function ResultNextSteps({ locale, links }: Props) {
   if (visible.length === 0) return null;
 
   return (
-    <div className="mt-6 rounded-xl border border-lime-200 bg-lime-50/60 p-4">
-      <p className="text-[11px] font-black uppercase tracking-widest text-lime-700">
+    <section className="mt-6 rounded-xl border border-border bg-card p-4" aria-labelledby="result-next-steps-heading">
+      <p id="result-next-steps-heading" className="text-[11px] font-black uppercase tracking-widest text-primary">
         {HEADING[(locale as Locale)] ?? HEADING.en}
       </p>
-      <div className="mt-3 flex flex-wrap gap-2">
+      <ItemGroup className="mt-3 gap-2">
         {visible.map((l) => (
-          <a
-            key={l.href}
-            href={l.href}
-            {...(l.external ? { rel: 'noopener' } : {})}
-            className="inline-flex items-center rounded-lg border border-lime-300 bg-white px-3 py-1.5 text-sm font-medium text-lime-900 transition-colors hover:border-lime-500 hover:text-lime-700"
-          >
-            {l.label}
-          </a>
+          <Item key={l.href} asChild variant="outline" size="sm">
+            <a href={l.href} {...(l.external ? { rel: 'noopener' } : {})}>
+              <ItemContent>
+                <ItemTitle>{l.label}</ItemTitle>
+              </ItemContent>
+              <ItemActions aria-hidden="true">→</ItemActions>
+            </a>
+          </Item>
         ))}
-      </div>
-    </div>
+      </ItemGroup>
+    </section>
   );
 }

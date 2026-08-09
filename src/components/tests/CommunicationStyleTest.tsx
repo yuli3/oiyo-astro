@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ShareResultButton from '../shared/ShareResultButton'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import {
   RadarChart,
   Radar,
@@ -630,36 +631,14 @@ export default function CommunicationStyleTest({ locale: localeProp }: Props) {
   const q = questions[idx];
 
   return (
-    <div className="space-y-6">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">{tx.title}</h1>
-        <p className="mt-1 text-gray-500">{tx.subtitle}</p>
-      </div>
-
-      <div className="flex items-center gap-3">
-        <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-100">
-          <div
-            className="h-full rounded-full bg-green-500 transition-all duration-300"
-            style={{ width: `${(idx / questions.length) * 100}%` }}
-          />
-        </div>
-        <span className="text-sm text-gray-500">{tx.progress(idx + 1, questions.length)}</span>
-      </div>
-
-      <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-        <p className="mb-5 text-center text-lg font-medium text-gray-800">{q[locale]}</p>
-        <div className="space-y-3">
-          {q.options.map((opt, i) => (
-            <button
-              key={i}
-              onClick={() => handlePick(opt)}
-              className="w-full rounded-xl border border-gray-200 px-4 py-3 text-left text-sm text-gray-700 transition hover:border-green-300 hover:bg-green-50"
-            >
-              {opt[locale]}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
+    <Questionnaire
+      title={tx.title}
+      subtitle={tx.subtitle}
+      question={q[locale]}
+      questionLabel={tx.progress(idx + 1, questions.length)}
+      progress={(idx / questions.length) * 100}
+      options={q.options.map((opt, optionIndex) => ({ label: opt[locale], value: optionIndex + 1 }))}
+      onSelect={(value) => handlePick(q.options[value - 1])}
+    />
   );
 }

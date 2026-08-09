@@ -13,6 +13,7 @@ import {
 } from "@/assessments";
 import { gaEvent } from "@/lib/analytics/ga-event";
 import { recordTestResult } from "@/lib/user/test-results";
+import { Questionnaire } from "@/components/ui/questionnaire";
 
 const LOCALES: AssessmentLocale[] = ["ko", "en", "ja", "zh", "fr", "es"];
 const COLORS: Record<CareerValueId, string> = {
@@ -85,25 +86,19 @@ export default function CareerValuesTest({ locale: localeProp }: { locale?: stri
   if (!resultScores) {
     const progress = Math.round((current / CAREER_VALUES_INSTRUMENT.items.length) * 100);
     return (
-      <div className="space-y-6">
-        <header className="space-y-2 text-center">
-          <h1 className="text-2xl font-bold">{copy.title}</h1>
-          <p className="text-sm text-slate-600">{copy.subtitle}</p>
-        </header>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-slate-500"><span>{copy.questionOf(current + 1, CAREER_VALUES_INSTRUMENT.items.length)}</span><span>{progress}%</span></div>
-          <div role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100} className="h-2 overflow-hidden rounded-full bg-slate-200"><div className="h-full bg-green-600 transition-all" style={{ width: `${progress}%` }} /></div>
-        </div>
-        <div className="rounded-xl border bg-white p-6 text-center"><p className="text-lg font-bold">{prompts[current]}</p></div>
-        <div className="grid gap-2">
-          {copy.scaleLabels.map((label, index) => (
-            <button key={label} type="button" onClick={() => pick(index + 1)} className="flex w-full items-center gap-3 rounded-lg border bg-white px-4 py-3 text-left text-sm transition hover:border-green-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600">
-              <span className="flex h-6 w-6 flex-none items-center justify-center rounded-full border-2 border-green-600 text-xs font-bold text-green-700">{index + 1}</span>{label}
-            </button>
-          ))}
-        </div>
-        <p className="rounded-lg bg-amber-50 p-3 text-xs leading-5 text-amber-900">{copy.disclaimer}</p>
-      </div>
+      <Questionnaire
+        title={copy.title}
+        subtitle={copy.subtitle}
+        question={prompts[current]}
+        questionLabel={copy.questionOf(current + 1, CAREER_VALUES_INSTRUMENT.items.length)}
+        progress={progress}
+        options={copy.scaleLabels.map((label, index) => ({ label, value: index + 1 }))}
+        selectedValue={responses[CAREER_VALUES_INSTRUMENT.items[current].id]}
+        note={copy.disclaimer}
+        previousLabel={copy.previous}
+        onPrevious={current > 0 ? () => setCurrent((value) => value - 1) : undefined}
+        onSelect={pick}
+      />
     );
   }
 

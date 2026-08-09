@@ -11,66 +11,49 @@ const { locale } = Astro.props;
 const t = await getTranslations(locale);
 
 const year = new Date().getFullYear();
+const copy = {
+  en: { site: 'Tests', info: 'Information', family: 'OIYO family', knowledge: 'Knowledge index', support: 'Support OIYO' },
+  ko: { site: '테스트', info: '안내', family: 'OIYO 패밀리', knowledge: '지식 목록', support: 'OIYO 후원' },
+  ja: { site: 'テスト', info: 'ご案内', family: 'OIYOファミリー', knowledge: '知識一覧', support: 'OIYOを支援' },
+  zh: { site: '测试', info: '信息', family: 'OIYO 系列', knowledge: '知识索引', support: '支持 OIYO' },
+  fr: { site: 'Tests', info: 'Informations', family: 'Famille OIYO', knowledge: 'Index des connaissances', support: 'Soutenir OIYO' },
+  es: { site: 'Tests', info: 'Información', family: 'Familia OIYO', knowledge: 'Índice de conocimiento', support: 'Apoyar OIYO' },
+}[locale];
 ---
 
-<footer class="bg-green-950 text-green-200 mt-20">
-  <div class="max-w-6xl mx-auto px-4 py-12">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-      <!-- Brand -->
-      <div>
-        <a href={localePath(locale, '/')} class="font-black text-xl text-white">OIYO</a>
-        <p class="mt-2 text-sm text-green-400 leading-relaxed max-w-xs">
-          {t('nav.tagline')}
-        </p>
-        <div class="mt-4 flex items-center gap-3 text-sm">
-          <a href="https://paypal.me/chosean" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">PayPal</a>
-          <a href="https://ko-fi.com/tqqq3" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">Ko-fi</a>
-        </div>
-      </div>
-
-      <!-- Links -->
-      <div>
-        <h3 class="text-xs font-bold uppercase tracking-widest text-green-400 mb-3">Navigation</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href={localePath(locale, '/ontology')} class="hover:text-white transition-colors">{t('nav.ontology')}</a></li>
-          <li><a href={localePath(locale, '/about')} class="hover:text-white transition-colors">{t('nav.about')}</a></li>
-          <li><a href={localePath(locale, '/faq')} class="hover:text-white transition-colors">FAQ</a></li>
-          <li><a href={localePath(locale, '/contact')} class="hover:text-white transition-colors">{t('nav.contact')}</a></li>
-          <li><a href={localePath(locale, '/support')} class="hover:text-white transition-colors">Support</a></li>
-          <li><a href="/knowledge/" class="hover:text-white transition-colors">Knowledge</a></li>
-        </ul>
-      </div>
-
-      <!-- Legal -->
-      <div>
-        <h3 class="text-xs font-bold uppercase tracking-widest text-green-400 mb-3">Legal</h3>
-        <ul class="space-y-2 text-sm">
-          <li><a href={localePath(locale, '/methodology')} class="hover:text-white transition-colors">{locale === 'ko' ? '신뢰와 방법론' : locale === 'ja' ? '信頼と方法論' : locale === 'zh' ? '信任与方法论' : locale === 'fr' ? 'Méthodologie' : locale === 'es' ? 'Metodología' : 'Trust & Methodology'}</a></li>
-          <li><a href={localePath(locale, '/legal')} class="hover:text-white transition-colors">{t('nav.legal')}</a></li>
-          <li><a href={localePath(locale, '/legal/privacy')} class="hover:text-white transition-colors">{t('nav.privacy')}</a></li>
-          <li><a href={localePath(locale, '/legal/terms')} class="hover:text-white transition-colors">{t('nav.terms')}</a></li>
-        </ul>
-      </div>
-
-      <!-- Oiyo Family — 6 sites, localized -->
-      <div>
-        <h3 class="text-xs font-bold uppercase tracking-widest text-green-400 mb-3">Oiyo Family</h3>
-        <ul class="space-y-2 text-sm">
-          {FAMILY_SITES.map((f) => (
-            <li>
-              <a href={familySiteHref(f, locale, 'footer')}
-                 target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
-                {f.name} →
-                <span class="block text-[10px] text-gray-500">{familySiteTag(f, locale)}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-
-    <div class="border-t border-green-800 pt-6 text-xs text-green-500 text-center">
-      © {year} OIYO. All rights reserved.
-    </div>
+<footer class="mt-20 border-t border-border bg-muted/25 py-10 text-left">
+  <div class="mx-auto grid max-w-6xl gap-8 px-4 sm:grid-cols-2 lg:grid-cols-[0.8fr_1fr_2fr]">
+    <section>
+      <p class="mb-3 text-sm font-black tracking-tight">OIYO <span class="font-semibold lowercase text-primary">tests</span></p>
+      <nav aria-label={copy.site} class="grid gap-2 text-sm text-muted-foreground">
+        <a href={localePath(locale, '/tests')} class="hover:text-primary">{copy.site}</a>
+        <a href={localePath(locale, '/ontology')} class="hover:text-primary">{t('nav.ontology')}</a>
+        <a href={localePath(locale, '/about')} class="hover:text-primary">{t('nav.about')}</a>
+        <a href="/knowledge/" class="hover:text-primary">{copy.knowledge}</a>
+      </nav>
+    </section>
+    <section>
+      <p class="mb-3 text-xs font-bold uppercase tracking-widest text-foreground">{copy.info}</p>
+      <nav aria-label={copy.info} class="grid gap-2 text-sm text-muted-foreground">
+        <a href={localePath(locale, '/methodology')} class="hover:text-primary">{locale === 'ko' ? '신뢰와 방법론' : locale === 'ja' ? '信頼と方法論' : locale === 'zh' ? '信任与方法论' : locale === 'fr' ? 'Méthodologie' : locale === 'es' ? 'Metodología' : 'Trust & Methodology'}</a>
+        <a href={localePath(locale, '/legal/privacy')} class="hover:text-primary">{t('nav.privacy')}</a>
+        <a href={localePath(locale, '/legal/terms')} class="hover:text-primary">{t('nav.terms')}</a>
+        <a href={localePath(locale, '/contact')} class="hover:text-primary">{t('nav.contact')}</a>
+        <a href="https://paypal.me/chosean" target="_blank" rel="noopener noreferrer" class="hover:text-primary">{copy.support}</a>
+      </nav>
+    </section>
+    <section>
+      <p class="mb-3 text-xs font-bold uppercase tracking-widest text-foreground">{copy.family}</p>
+      <nav aria-label={copy.family} class="grid grid-cols-2 gap-x-5 gap-y-3 sm:grid-cols-3">
+        {FAMILY_SITES.map((f) => (
+          <a href={familySiteHref(f, locale, 'footer')} class="group min-w-0 text-sm font-semibold text-foreground hover:text-primary">
+            {f.name}<span class="block text-xs font-normal text-muted-foreground group-hover:text-primary/80">{familySiteTag(f, locale)}</span>
+          </a>
+        ))}
+      </nav>
+    </section>
+  </div>
+  <div class="mx-auto mt-8 flex max-w-6xl flex-wrap items-center justify-between gap-3 border-t border-border px-4 pt-5 text-xs text-muted-foreground">
+    <span>© {year} OIYO</span><a href="mailto:support@oiyo.net" class="hover:text-primary">support@oiyo.net</a>
   </div>
 </footer>
