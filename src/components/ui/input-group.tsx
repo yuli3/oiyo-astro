@@ -46,7 +46,7 @@ export function InputGroup({
       <div>
         {children}
         {error && (
-          <p className="text-xs text-rose-500 mt-1.5 font-medium">{error}</p>
+          <p className="text-xs text-destructive mt-1.5 font-medium">{error}</p>
         )}
       </div>
     </div>
