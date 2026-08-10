@@ -21,6 +21,7 @@ import {
 import { resolveNodeLabel } from "@/lib/ontology/graph/label";
 import { writeResultHash } from "@/lib/result-permalink";
 import { gaEvent } from "@/lib/analytics/ga-event";
+import { Skeleton } from "@/components/ui/skeleton";
 
 // Track D (Phase 1, step 5, final): export the full ontology profile —
 // signals + full test history + every >= MIN_DISPLAY_SCORE recommendation +
@@ -272,14 +273,17 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
   // as "the export button doesn't exist" rather than "still loading."
   if (!hydrated || !data) {
     return (
-      <div className="animate-pulse rounded-[28px] border border-green-100 bg-white p-4 shadow-sm sm:p-5">
-        <div className="h-24 rounded-2xl bg-green-50" />
+      <div
+        aria-busy="true"
+        className="rounded-[28px] border border-green-100 bg-white p-4 shadow-sm sm:p-5"
+      >
+        <Skeleton className="h-24 rounded-2xl bg-green-50" />
         <div className="mt-3 flex flex-wrap gap-1.5">
           {FORMATS.map((f) => (
-            <div key={f} className="h-7 w-16 rounded-md bg-green-50" />
+            <Skeleton key={f} className="h-7 w-16 bg-green-50" />
           ))}
         </div>
-        <div className="mt-3 h-9 w-32 rounded-lg bg-green-100" />
+        <Skeleton className="mt-3 h-9 w-32 rounded-lg bg-green-100" />
       </div>
     );
   }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { Locale } from "../../i18n";
 import { getDailyPillar } from "../../lib/almanac/saju-math";
 import type { Element } from "../../lib/almanac/saju-math";
+import { Skeleton } from "../ui/skeleton";
 
 interface Props {
   locale: Locale;
@@ -307,7 +308,7 @@ export default function DailyUniverse({ locale }: Props) {
                 </p>
               </>
             ) : (
-              <div className="h-16 rounded-lg bg-white/5 animate-pulse" aria-hidden="true" />
+              <Skeleton aria-hidden="true" className="h-16 rounded-lg bg-white/5" />
             )}
             <a
               href={`/${locale}/tarot/daily/`}

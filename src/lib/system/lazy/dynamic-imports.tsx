@@ -6,6 +6,8 @@
  */
 
 import dynamic from "next/dynamic";
+
+import { Skeleton } from "@/components/ui/skeleton";
 import React from "react";
 
 /**
@@ -16,11 +18,11 @@ export const RechartsRadarChartLazy = dynamic(
   () => import("recharts").then((mod) => ({ default: mod.RadarChart })),
   {
     loading: () => (
-      <div className="w-full h-64 bg-green-50 rounded-lg animate-pulse flex items-center justify-center">
-        <span className="text-green-600">
-          Loading chart...
-        </span>
-      </div>
+      <Skeleton
+        aria-label="Loading chart"
+        className="h-64 w-full bg-green-50"
+        role="status"
+      />
     ),
     ssr: false,
   },
