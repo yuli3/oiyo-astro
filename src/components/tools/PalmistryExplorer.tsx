@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { PALM_LINES, PALM_OUTLINE, type PalmLineId, type PalmLocale } from '../../lib/ontology/palmistry/palm-lines';
+import { PALM_LINES, type PalmLineId, type PalmLocale } from '../../lib/ontology/palmistry/palm-lines';
 
 interface Props {
   locale: string;
@@ -9,6 +9,7 @@ const COPY: Record<PalmLocale, {
   title: string;
   subtitle: string;
   tapHint: string;
+  imageAlt: string;
   variationsLabel: string;
   guideLink: string;
   zodiacLink: string;
@@ -18,6 +19,7 @@ const COPY: Record<PalmLocale, {
     title: '손금 탐색기 — 4대 주요 선',
     subtitle: '손 위의 선을 눌러 생명선·감정선·두뇌선·운명선의 의미를 살펴보세요.',
     tapHint: '👆 선을 눌러 보세요',
+    imageAlt: '오른손 손바닥 위에 네 가지 주요 손금 선이 표시된 안내 그림',
     variationsLabel: '이런 특징이라면',
     guideLink: '손금 보는 법 완전 가이드 →',
     zodiacLink: '별자리 성격도 보기 →',
@@ -27,6 +29,7 @@ const COPY: Record<PalmLocale, {
     title: 'Palm Explorer — The Four Major Lines',
     subtitle: 'Tap a line on the palm to explore the Heart, Head, Life, and Fate lines.',
     tapHint: '👆 Tap a line',
+    imageAlt: 'Guide illustration of a right palm with four major palm lines',
     variationsLabel: 'If your line looks like this',
     guideLink: 'Complete palm-reading guide →',
     zodiacLink: 'See zodiac personality too →',
@@ -36,6 +39,7 @@ const COPY: Record<PalmLocale, {
     title: '手相エクスプローラー — 四大主要線',
     subtitle: '手のひらの線をタップして、感情線・頭脳線・生命線・運命線の意味を見てみましょう。',
     tapHint: '👆 線をタップ',
+    imageAlt: '右手のひらに四大主要線を示したガイド画像',
     variationsLabel: 'こんな特徴なら',
     guideLink: '手相の見方 完全ガイド →',
     zodiacLink: '星座の性格も見る →',
@@ -45,6 +49,7 @@ const COPY: Record<PalmLocale, {
     title: '手相探索器 — 四大主线',
     subtitle: '点按手掌上的线，了解感情线、智慧线、生命线与命运线的含义。',
     tapHint: '👆 点按一条线',
+    imageAlt: '右手手掌四大主线示意图',
     variationsLabel: '若你的线是这样',
     guideLink: '手相完全指南 →',
     zodiacLink: '也看看星座性格 →',
@@ -54,6 +59,7 @@ const COPY: Record<PalmLocale, {
     title: 'Explorateur de paume — Les quatre lignes majeures',
     subtitle: 'Touchez une ligne de la paume pour explorer les lignes de cœur, de tête, de vie et de destin.',
     tapHint: '👆 Touchez une ligne',
+    imageAlt: 'Illustration d’une paume droite avec les quatre lignes majeures',
     variationsLabel: 'Si votre ligne ressemble à ceci',
     guideLink: 'Guide complet de la chiromancie →',
     zodiacLink: 'Voir aussi la personnalité du signe →',
@@ -63,6 +69,7 @@ const COPY: Record<PalmLocale, {
     title: 'Explorador de la palma — Las cuatro líneas principales',
     subtitle: 'Toca una línea de la palma para explorar las líneas del corazón, la cabeza, la vida y el destino.',
     tapHint: '👆 Toca una línea',
+    imageAlt: 'Ilustración de una palma derecha con las cuatro líneas principales',
     variationsLabel: 'Si tu línea se ve así',
     guideLink: 'Guía completa de quiromancia →',
     zodiacLink: 'Ver también la personalidad del signo →',
@@ -84,10 +91,17 @@ export default function PalmistryExplorer({ locale }: Props) {
       </header>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {/* Palm SVG */}
+        {/* Natural hand illustration with accessible interactive SVG overlays. */}
         <div className="flex flex-col items-center">
-          <svg viewBox="0 0 300 360" className="w-full max-w-[280px]" role="group" aria-label={t.title}>
-            <path d={PALM_OUTLINE} fill="#fff7ed" stroke="#fbcfe8" strokeWidth="2" />
+          <svg viewBox="0 0 300 375" className="w-full max-w-[300px] overflow-hidden rounded-[2rem] border border-primary/15 bg-[#fbf7ef] shadow-sm" role="group" aria-label={t.imageAlt}>
+            <image
+              href="/images/palmistry/palm-guide-hand-v1.webp"
+              x="0"
+              y="0"
+              width="300"
+              height="375"
+              preserveAspectRatio="xMidYMid slice"
+            />
             {PALM_LINES.map((l) => {
               const isActive = l.id === active;
               return (

@@ -4,7 +4,7 @@ export type PalmLineId = 'life' | 'heart' | 'head' | 'fate';
 export interface PalmLine {
   id: PalmLineId;
   color: string;
-  /** SVG path for the line on a 300×360 viewBox stylized right palm. */
+  /** SVG overlay path for the line on the 300×375 right-palm guide image. */
   path: string;
   name: Record<PalmLocale, string>;
   /** One-line meaning. */
@@ -17,7 +17,7 @@ export const PALM_LINES: PalmLine[] = [
   {
     id: 'heart',
     color: '#e11d48',
-    path: 'M 95 232 C 130 210, 170 205, 212 218',
+    path: 'M 90 171 C 128 157, 174 164, 224 190',
     name: { ko: '감정선', en: 'Heart Line', ja: '感情線', zh: '感情线', fr: 'Ligne de cœur', es: 'Línea del corazón' },
     meaning: {
       ko: '사랑·감정·인간관계의 방식을 상징합니다.',
@@ -39,7 +39,7 @@ export const PALM_LINES: PalmLine[] = [
   {
     id: 'head',
     color: '#2563eb',
-    path: 'M 92 250 C 130 246, 165 252, 198 268',
+    path: 'M 88 187 C 126 185, 171 201, 219 220',
     name: { ko: '두뇌선', en: 'Head Line', ja: '頭脳線', zh: '智慧线', fr: 'Ligne de tête', es: 'Línea de la cabeza' },
     meaning: {
       ko: '사고방식·지성·집중의 성향을 나타냅니다.',
@@ -61,7 +61,7 @@ export const PALM_LINES: PalmLine[] = [
   {
     id: 'life',
     color: '#16a34a',
-    path: 'M 100 224 C 84 250, 76 282, 84 322',
+    path: 'M 89 171 C 70 203, 79 264, 130 306',
     name: { ko: '생명선', en: 'Life Line', ja: '生命線', zh: '生命线', fr: 'Ligne de vie', es: 'Línea de la vida' },
     meaning: {
       ko: '수명이 아니라 생명력·활력·삶의 질을 상징합니다.',
@@ -83,7 +83,7 @@ export const PALM_LINES: PalmLine[] = [
   {
     id: 'fate',
     color: '#9333ea',
-    path: 'M 155 332 C 152 292, 148 252, 144 216',
+    path: 'M 154 293 C 155 252, 154 211, 150 177',
     name: { ko: '운명선', en: 'Fate Line', ja: '運命線', zh: '命运线', fr: 'Ligne de destin', es: 'Línea del destino' },
     meaning: {
       ko: '일·진로·삶의 방향을 상징합니다. 없어도 나쁜 게 아니라 자유로운 삶을 뜻합니다.',
