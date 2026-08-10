@@ -2,6 +2,7 @@
 
 import React, { Suspense, useMemo } from 'react';
 import { IntlProvider } from '@/lib/shims/next-intl';
+import { Spinner } from '@/components/ui/spinner';
 
 const EncyclopediaClient = React.lazy(() =>
   import('@/components/ontology/encyclopedia/EncyclopediaClient').then((m) => ({
@@ -20,7 +21,7 @@ export default function EncyclopediaIsland({ locale, messages }: Props) {
       <Suspense
         fallback={
           <div className="min-h-[50vh] flex items-center justify-center">
-            <div className="w-8 h-8 rounded-full border-2 border-green-400 border-t-transparent animate-spin" />
+            <Spinner className="size-8 text-green-400 motion-reduce:animate-none" />
           </div>
         }
       >

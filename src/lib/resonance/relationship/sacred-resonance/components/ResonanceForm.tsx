@@ -8,7 +8,6 @@ import {
   Infinity,
   Sparkles,
   User,
-  Zap,
 } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import React, { useEffect, useMemo, useState } from "react";
@@ -16,6 +15,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Spinner } from "@/components/ui/spinner";
 import {
   Select,
   SelectContent,
@@ -186,7 +186,7 @@ export function ResonanceForm({ isLoading, onCalculate }: ResonanceFormProps) {
           type="submit"
         >
           {isLoading ? (
-            <Zap className="w-6 h-6 animate-spin" />
+            <Spinner className="size-6 motion-reduce:animate-none" />
           ) : (
             <Infinity className="w-6 h-6 group-hover:scale-110 transition-transform" />
           )}

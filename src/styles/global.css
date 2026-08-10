@@ -121,23 +121,6 @@
   }
   .animate-fadeInUp { animation: fadeInUp 0.5s ease-out; }
 
-  /* Shared loading shimmer (Shimmer.astro / Skeleton.tsx / Spinner.tsx) */
-  @keyframes oiyo-shimmer-sweep {
-    100% { transform: translateX(100%); }
-  }
-  .oiyo-shimmer { position: relative; overflow: hidden; }
-  .oiyo-shimmer::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    transform: translateX(-100%);
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
-    animation: oiyo-shimmer-sweep 1.6s ease-in-out infinite;
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .oiyo-shimmer::after { animation: none; opacity: 0.5; }
-  }
-
   /* ── Text streaming animations (from Text Streaming design) ── */
 
   /* word-fade: opacity reveal per word */
