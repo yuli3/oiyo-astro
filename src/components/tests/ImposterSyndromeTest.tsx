@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import ShareResultButton from '../shared/ShareResultButton'
+import { Questionnaire } from '@/components/ui/questionnaire'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
 function lang(locale: string): SupportedLang {
@@ -260,13 +261,19 @@ export default function ImposterSyndromeTest({ locale: lp = 'ko' }: Props) {
   const [result, setResult] = useState<{ level: Level; score: number } | null>(null)
 
   function pick(val: number) {
-    const newAns = [...answers, val + 1]
+    const newAns = answers.slice(0, current)
+    newAns[current] = val
     if (current + 1 >= questions.length) {
       const score = newAns.reduce((s, v) => s + v, 0)
       setResult({ level: calcLevel(score), score })
     }
     setAnswers(newAns)
     setCurrent(current + 1)
+  }
+
+  function previous() {
+    if (current === 0) return
+    setCurrent(current - 1)
   }
 
   function restart() {
@@ -290,45 +297,19 @@ export default function ImposterSyndromeTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-sm text-muted-foreground">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div
-            className="h-2 rounded-full bg-muted overflow-hidden"
-            role="progressbar"
-            aria-valuenow={progress}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={lb.questionOf(current + 1, questions.length)}
-          >
-            <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <div className="rounded-xl border bg-card p-6 text-center">
-          <p className="text-lg font-medium">{q.text}</p>
-        </div>
-        <div className="grid gap-2">
-          {lb.scaleLabels.map((label, i) => (
-            <button
-              key={i}
-              onClick={() => pick(i)}
-              className="w-full rounded-lg border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-center gap-3"
-              aria-label={`${label} (${i + 1}점)`}
-            >
-              <span className="w-6 h-6 rounded-full border-2 border-primary/30 flex items-center justify-center text-xs font-bold text-primary flex-none">{i + 1}</span>
-              {label}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-      </div>
+      <Questionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
+        selectedValue={answers[current]}
+        note={lb.note}
+        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        onPrevious={current > 0 ? previous : undefined}
+        onSelect={pick}
+      />
     )
   }
 

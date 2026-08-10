@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import ShareResultButton from '../shared/ShareResultButton'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
@@ -162,7 +163,8 @@ export default function MotivationTypeTest({ locale: localeProp }: Props) {
   }, []);
 
   function pick(score: number) {
-    const next = [...answers, score];
+    const next = answers.slice(0, idx);
+    next[idx] = score;
     if (next.length < questions.length) { setAnswers(next); setTimeout(() => setIdx(next.length), 280); }
     else {
       const scores: Record<MotivationType, number> = { achievement: 0, affiliation: 0, power: 0, autonomy: 0 };
@@ -175,6 +177,11 @@ export default function MotivationTypeTest({ locale: localeProp }: Props) {
       url.searchParams.set("ms", (["achievement", "affiliation", "power", "autonomy"] as MotivationType[]).map((k) => scores[k]).join(","));
       window.history.replaceState({}, "", url.toString());
     }
+  }
+
+  function previous() {
+    if (idx === 0) return;
+    setIdx(idx - 1);
   }
 
   function restart() {
@@ -248,30 +255,18 @@ export default function MotivationTypeTest({ locale: localeProp }: Props) {
 
   const q = questions[idx];
   return (
-    <div className="space-y-6">
-      <div className="text-center space-y-1">
-        <h1 className="text-xl font-bold text-gray-900">{t.title}</h1>
-        <p className="text-sm text-gray-500">{t.subtitle}</p>
-      </div>
-      <div className="flex justify-between items-center text-sm text-gray-500">
-        <span>{t.progress} {idx + 1} / {questions.length}</span>
-        <div className="w-48 bg-gray-200 rounded-full h-1.5">
-          <div className="bg-amber-500 h-1.5 rounded-full" style={{ width: `${((idx + 1) / questions.length) * 100}%` }} />
-        </div>
-      </div>
-      <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4 shadow-sm">
-        <p className="text-base font-medium text-gray-800 leading-relaxed">{q[locale]}</p>
-        <p className="text-xs text-gray-400">{t.scale}</p>
-        <div className="space-y-2">
-          {scaleLabels[locale].map((label, i) => (
-            <button key={i} onClick={() => pick(i)}
-              className="w-full flex items-center gap-3 p-3 rounded-lg border border-gray-100 hover:border-amber-300 hover:bg-amber-50 transition-colors text-left">
-              <div className="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center text-xs font-bold text-gray-500">{i}</div>
-              <span className="text-sm text-gray-700">{label}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
+    <Questionnaire
+      title={t.title}
+      subtitle={t.subtitle}
+      question={q[locale]}
+      questionLabel={`${t.progress} ${idx + 1} / ${questions.length}`}
+      progress={Math.round(((idx + 1) / questions.length) * 100)}
+      options={scaleLabels[locale].map((label, i) => ({ label, value: i }))}
+      selectedValue={answers[idx]}
+      note={t.scale}
+      previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+      onPrevious={idx > 0 ? previous : undefined}
+      onSelect={pick}
+    />
   );
 }
