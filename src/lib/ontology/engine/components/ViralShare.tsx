@@ -99,9 +99,16 @@ export function ViralShare({ profile }: ViralShareProps) {
       <div className="relative aspect-[1.91/1] rounded-xl overflow-hidden border border-white/10 shadow-2xl bg-black group">
         {loading ? (
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="flex flex-col items-center gap-3">
-              <Sparkles className="w-8 h-8 text-green-400 animate-spin" />
-              <span className="text-xs text-green-300 animate-pulse">
+            <div
+              aria-live="polite"
+              className="flex flex-col items-center gap-3"
+              role="status"
+            >
+              <Sparkles
+                aria-hidden="true"
+                className="w-8 h-8 text-green-400 animate-spin motion-reduce:animate-none"
+              />
+              <span className="text-xs text-green-300 animate-pulse motion-reduce:animate-none">
                 Gemini invoking oracle...
               </span>
             </div>
