@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 import { recordTestResult } from '@/lib/user/test-results'
 import { gaEvent } from '@/lib/analytics/ga-event'
@@ -247,6 +248,14 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
     else { setScores(newScores); setCurrent(current + 1) }
   }
 
+  function previous() {
+    if (current === 0) return
+    const previousQuestion = questions[current - 1]
+    const previousValue = responses[previousQuestion.id] ?? 0
+    setScores({ ...scores, [previousQuestion.type]: scores[previousQuestion.type] - previousValue })
+    setCurrent(current - 1)
+  }
+
   function restart() { setScores({ R: 0, I: 0, A: 0, S: 0, E: 0, C: 0 }); setResponses({}); setCurrent(0); setDone(false) }
 
   // Record the result once, when the quiz is actually finished.
@@ -284,35 +293,19 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div className="h-2 rounded-full bg-muted overflow-hidden" role="progressbar" aria-valuenow={progress} aria-valuemin={0} aria-valuemax={100}>
-            <div className="h-full transition-all duration-300" style={{ width: `${progress}%`, backgroundColor: RIASEC_COLORS[q.type] }} />
-          </div>
-        </div>
-        <div className="rounded-xl border bg-card p-6 text-center">
-          <span className="text-xs font-bold px-2 py-1 rounded-full text-white mb-3 inline-block" style={{ backgroundColor: RIASEC_COLORS[q.type] }}>{lb.typeNames[q.type]}</span>
-          <p className="text-lg font-medium leading-relaxed mt-2">{q.text}</p>
-        </div>
-        <div className="grid gap-2">
-          {lb.scaleLabels.map((label, i) => (
-            <button key={i} onClick={() => pick(i + 1)} aria-label={label}
-              className="w-full rounded-xl border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-center gap-3">
-              <span className="w-7 h-7 rounded-full border-2 border-primary/30 flex items-center justify-center text-xs font-bold text-primary flex-none">{i + 1}</span>
-              {label}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-      </div>
+      <Questionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={`${lb.typeNames[q.type]} · ${q.text}`}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
+        selectedValue={responses[q.id]}
+        note={lb.note}
+        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        onPrevious={current > 0 ? previous : undefined}
+        onSelect={pick}
+      />
     )
   }
 

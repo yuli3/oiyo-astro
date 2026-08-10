@@ -10,26 +10,28 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/system/utils";
 
-export type QuestionnaireOption = {
+export type QuestionnaireValue = string | number;
+
+export type QuestionnaireOption<TValue extends QuestionnaireValue = number> = {
   label: string;
-  value: number;
+  value: TValue;
 };
 
-type QuestionnaireProps = {
+type QuestionnaireProps<TValue extends QuestionnaireValue = number> = {
   title: string;
   subtitle: string;
   question: string;
   questionLabel: string;
   progress: number;
-  options: QuestionnaireOption[];
-  selectedValue?: number;
+  options: QuestionnaireOption<TValue>[];
+  selectedValue?: TValue;
   note?: string;
   previousLabel?: string;
   onPrevious?: () => void;
-  onSelect: (value: number) => void;
+  onSelect: (value: TValue) => void;
 };
 
-export function Questionnaire({
+export function Questionnaire<TValue extends QuestionnaireValue = number>({
   title,
   subtitle,
   question,
@@ -41,7 +43,7 @@ export function Questionnaire({
   previousLabel,
   onPrevious,
   onSelect,
-}: QuestionnaireProps) {
+}: QuestionnaireProps<TValue>) {
   const legendRef = React.useRef<HTMLLegendElement>(null);
 
   React.useEffect(() => {
@@ -74,7 +76,7 @@ export function Questionnaire({
         <FieldLegend ref={legendRef} tabIndex={-1}>
           {question}
         </FieldLegend>
-        <FieldGroup className="mt-5" aria-label={question}>
+        <FieldGroup aria-label={question}>
           {options.map((option) => {
             const selected = option.value === selectedValue;
             return (
@@ -96,7 +98,7 @@ export function Questionnaire({
                     selected && "bg-green-600 text-white",
                   )}
                 >
-                  {option.value}
+                  {typeof option.value === "number" ? option.value : selected ? "✓" : ""}
                 </span>
                 <span>{option.label}</span>
               </button>

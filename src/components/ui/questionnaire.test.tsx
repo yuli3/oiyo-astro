@@ -31,4 +31,26 @@ describe("Questionnaire", () => {
     expect(html).toContain("Previous");
     expect(html).toContain("Reflection only");
   });
+
+  it("supports string-valued forced-choice questions", () => {
+    const html = renderToStaticMarkup(
+      <Questionnaire<"E" | "I">
+        title="MBTI"
+        subtitle="Choose one"
+        question="How do you recharge?"
+        questionLabel="1 / 16"
+        progress={0}
+        options={[
+          { label: "With people", value: "E" },
+          { label: "By myself", value: "I" },
+        ]}
+        selectedValue="E"
+        onSelect={vi.fn()}
+      />,
+    );
+
+    expect(html).toContain('aria-pressed="true"');
+    expect(html).toContain("With people");
+    expect(html).toContain("✓");
+  });
 });

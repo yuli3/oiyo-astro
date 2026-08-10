@@ -13,6 +13,7 @@ import {
   recordAssessmentResult,
 } from '@/assessments';
 import { interpretMBTIDeep } from '@/lib/engines/interpretation/engines/mbti-deep';
+import { Questionnaire } from '@/components/ui/questionnaire';
 
 export type SupportedLang = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es'
 type DimKey = 'EI' | 'SN' | 'TF' | 'JP'
@@ -249,6 +250,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
   const labels = LABELS[l]
   const questions = QUESTIONS[l].length > 0 ? QUESTIONS[l] : QUESTIONS.en
   const [answers, setAnswers] = useState<Record<string, DimValue>>({})
+  const [current, setCurrent] = useState(0)
   const [showResult, setShowResult] = useState(false)
   // A shared/revisited result type read from the URL (?type=INTJ), independent of answers.
   const [forcedType, setForcedType] = useState<MbtiType | null>(null)
@@ -272,6 +274,18 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
   const profile = TYPE_PROFILES[mbtiType]
   const title = l === 'ko' ? `${mbtiType} - ${profile?.ko}` : `${mbtiType} - ${profile?.en}`
   const deep = interpretMBTIDeep(mbtiType, COGNITIVE_STACK_BY_TYPE[mbtiType], l)
+
+  function pick(value: DimValue) {
+    const question = questions[current]
+    const next = { ...answers, [question.id]: value }
+    setAnswers(next)
+    if (current + 1 >= questions.length) setShowResult(true)
+    else setCurrent(current + 1)
+  }
+
+  function previous() {
+    if (current > 0) setCurrent(current - 1)
+  }
 
   // Keep the URL in sync with the visible result so it is shareable/revisitable.
   useEffect(() => {
@@ -392,7 +406,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
         <RelatedReading locale={l} topic="mbti" />
         <button
           type="button"
-          onClick={() => { setAnswers({}); setShowResult(false); setForcedType(null); clearResultCode('type') }}
+          onClick={() => { setAnswers({}); setCurrent(0); setShowResult(false); setForcedType(null); clearResultCode('type') }}
           className="mt-6 w-full rounded-xl bg-slate-950 px-5 py-3 text-sm font-bold text-white transition hover:bg-slate-800"
         >
           {labels.retake}
@@ -401,53 +415,19 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
     )
   }
 
+  const question = questions[current]
   return (
-    <section className="not-prose rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-      <div className="text-center">
-        <h2 className="text-3xl font-black text-slate-950">{labels.title}</h2>
-        <p className="mt-3 text-sm leading-6 text-slate-600">{labels.subtitle}</p>
-        <div className="mt-5 h-2 overflow-hidden rounded-full bg-slate-100">
-          <div className="h-full rounded-full bg-blue-600 transition-all" style={{ width: `${(answeredCount / questions.length) * 100}%` }} />
-        </div>
-        <p className="mt-2 text-xs font-semibold text-slate-500">{labels.progress(answeredCount, questions.length)}</p>
-      </div>
-
-      <div className="mt-8 space-y-6">
-        {questions.map((q, index) => (
-          <div key={q.id} className="rounded-xl border border-slate-200 p-4">
-            <p className="text-sm font-bold leading-6 text-slate-900">{index + 1}. {q.text}</p>
-            <div className="mt-3 grid gap-2 md:grid-cols-2">
-              {[q.a, q.b].map((option) => (
-                <button
-                  key={`${q.id}-${option.value}`}
-                  type="button"
-                  onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: option.value }))}
-                  className={`rounded-xl border px-4 py-3 text-left text-sm leading-6 transition ${
-                    answers[q.id] === option.value
-                      ? 'border-blue-600 bg-blue-600 font-bold text-white shadow-sm'
-                      : 'border-slate-200 bg-slate-50 text-slate-700 hover:border-blue-300 hover:bg-blue-50'
-                  }`}
-                >
-                  {option.text}
-                </button>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <button
-        type="button"
-        disabled={!isComplete}
-        onClick={() => setShowResult(true)}
-        className={`mt-8 w-full rounded-xl px-5 py-3 text-sm font-bold transition ${
-          isComplete
-            ? 'bg-slate-950 text-white hover:bg-slate-800'
-            : 'cursor-not-allowed bg-slate-200 text-slate-400'
-        }`}
-      >
-        {labels.viewResult}
-      </button>
-    </section>
+    <Questionnaire<DimValue>
+      title={labels.title}
+      subtitle={labels.subtitle}
+      question={question.text}
+      questionLabel={labels.progress(current + 1, questions.length)}
+      progress={Math.round((current / questions.length) * 100)}
+      options={[question.a, question.b].map((option) => ({ label: option.text, value: option.value }))}
+      selectedValue={answers[question.id]}
+      previousLabel={{ ko: '이전 질문', en: 'Previous question', ja: '前の質問', zh: '上一题', fr: 'Question précédente', es: 'Pregunta anterior' }[l]}
+      onPrevious={current > 0 ? previous : undefined}
+      onSelect={pick}
+    />
   )
 }
