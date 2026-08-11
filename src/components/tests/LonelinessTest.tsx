@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire';
+import { scoreLoneliness, type LonelinessLevel } from './loneliness-score';
 import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -6,7 +8,7 @@ function lang(locale: string): SupportedLang {
   return (['ko', 'en', 'ja'] as const).includes(locale as SupportedLang) ? (locale as SupportedLang) : 'en'
 }
 
-type Level = 'connected' | 'moderate' | 'high'
+type Level = LonelinessLevel
 
 interface Question { id: string; text: string; reversed?: boolean }
 interface ResultData {
@@ -203,19 +205,11 @@ export default function LonelinessTest({ locale: lp = 'ko' }: Props) {
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ level: Level; score: number } | null>(null)
 
-  function calcResult(ans: number[], qs: typeof questions): { level: Level; score: number } {
-    let score = 0
-    for (let i = 0; i < qs.length; i++) {
-      const raw = ans[i] + 1 // 1-4
-      score += qs[i].reversed ? (5 - raw) : raw
-    }
-    const level: Level = score >= 29 ? 'high' : score >= 20 ? 'moderate' : 'connected'
-    return { level, score }
-  }
-
   function pick(val: number) {
     const newAns = [...answers, val]
-    if (current + 1 >= questions.length) setResult(calcResult(newAns, questions))
+    if (current + 1 >= questions.length) {
+      setResult(scoreLoneliness(newAns, questions.map((question) => Boolean(question.reversed))))
+    }
     setAnswers(newAns)
     setCurrent(current + 1)
   }
@@ -236,45 +230,16 @@ export default function LonelinessTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div
-            className="h-2 rounded-full bg-muted overflow-hidden"
-            role="progressbar"
-            aria-valuenow={progress}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={lb.questionOf(current + 1, questions.length)}
-          >
-            <div className="h-full bg-green-500 transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <div className="rounded-2xl border bg-card p-6 text-center shadow-sm">
-          <p className="text-lg font-bold leading-snug">{q.text}</p>
-        </div>
-        <div className="grid gap-2" role="group" aria-label="Answer options">
-          {lb.scaleLabels.map((label, i) => (
-            <button
-              key={i}
-              onClick={() => pick(i)}
-              aria-label={label}
-              className="w-full rounded-xl border bg-card px-4 py-3 text-left text-sm hover:bg-green-50 hover:border-green-400 transition-colors flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
-            >
-              <span className="w-7 h-7 rounded-full border-2 border-green-400 flex items-center justify-center text-xs font-bold text-green-600 flex-none">{i + 1}</span>
-              {label}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-      </div>
+      <ScreeningQuestionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={lb.scaleLabels.map((label, value) => ({ label, value, indicator: value + 1 }))}
+        screeningNote={lb.note}
+        onSelect={pick}
+      />
     )
   }
 
