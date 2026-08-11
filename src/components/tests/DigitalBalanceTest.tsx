@@ -1,5 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import ShareResultButton from '../shared/ShareResultButton'
+import { QuestionnaireMatrix } from '@/components/ui/questionnaire-matrix'
 import type { Locale } from '../../i18n';
 
 interface Props { locale?: Locale }
@@ -101,10 +102,20 @@ const UI_TEXT: Record<Locale, UI> = {
   es: { title: "Test del índice de adicción digital", subtitle: "Una comprobación rápida para ver el estado de tu bienestar digital.", analyze: "Analizar resultados", resultLabel: "Tu resultado", actionTitle: "Acciones para empezar hoy:", actions: ["📅 No llevar el móvil al dormitorio", "📵 Alejar el móvil durante las comidas", "🔔 Desactivar todas las notificaciones no esenciales"], retry: "Volver a hacer el test", heading: "Mi índice de adicción digital" },
 };
 
+const MATRIX_TEXT: Record<Locale, { completed: string; unanswered: string; validation: string }> = {
+  ko: { completed: "응답", unanswered: "미응답", validation: "모든 문항에 응답해 주세요." },
+  en: { completed: "Answered", unanswered: "Unanswered", validation: "Please answer every question." },
+  ja: { completed: "回答済み", unanswered: "未回答", validation: "すべての質問に回答してください。" },
+  zh: { completed: "已回答", unanswered: "未回答", validation: "请回答所有问题。" },
+  fr: { completed: "Répondu", unanswered: "Sans réponse", validation: "Veuillez répondre à toutes les questions." },
+  es: { completed: "Respondidas", unanswered: "Sin responder", validation: "Responde todas las preguntas." },
+};
+
 const DigitalBalanceTest: React.FC<Props> = ({ locale = 'ko' }) => {
     const questions = QUESTIONS[locale] ?? QUESTIONS.en;
     const bands = BANDS[locale] ?? BANDS.en;
     const ui = UI_TEXT[locale] ?? UI_TEXT.en;
+    const matrixText = MATRIX_TEXT[locale] ?? MATRIX_TEXT.en;
 
     const [answers, setAnswers] = useState<Record<string, number>>({});
     const [showResults, setShowResults] = useState(false);
@@ -117,57 +128,31 @@ const DigitalBalanceTest: React.FC<Props> = ({ locale = 'ko' }) => {
         setAnswers(prev => ({ ...prev, [qId]: val }));
     };
 
-    const isComplete = Object.keys(answers).length === questions.length;
-
     const interpretation = score <= 6 ? bands[0] : score <= 15 ? bands[1] : bands[2];
+
+    if (!showResults) {
+      return (
+        <QuestionnaireMatrix
+          title={ui.title}
+          description={ui.subtitle}
+          questions={questions.map((question) => ({
+            id: question.id,
+            text: question.text,
+            options: question.options.map((label, value) => ({ label, value })),
+          }))}
+          answers={answers}
+          completedLabel={(completed, total) => `${matrixText.completed} ${completed}/${total}`}
+          unansweredLabel={(count) => `${matrixText.unanswered} ${count}`}
+          submitLabel={ui.analyze}
+          validationLabel={matrixText.validation}
+          onAnswer={handleSelect}
+          onSubmit={() => setShowResults(true)}
+        />
+      );
+    }
 
     return (
         <div className="not-prose my-12 p-8 bg-slate-50 border border-slate-200 rounded-3xl shadow-lg max-w-2xl mx-auto">
-            {!showResults ? (
-                <div className="space-y-8">
-                    <div className="text-center">
-                        <h3 className="text-2xl font-black text-slate-900">{ui.title}</h3>
-                        <p className="text-sm text-slate-500 mt-2">{ui.subtitle}</p>
-                    </div>
-
-                    <div className="space-y-8">
-                        {questions.map((q, idx) => (
-                            <div key={q.id} className="space-y-4">
-                                <p className="text-lg font-bold text-slate-800">{idx + 1}. {q.text}</p>
-                                <div className="flex flex-wrap gap-2 text-[10px] sm:text-xs">
-                                    {q.options.map((opt, val) => (
-                                        <button
-                                            key={val}
-                                            onClick={() => handleSelect(q.id, val)}
-                                            className={`flex-1 py-3 px-2 rounded-xl border transition-all ${
-                                                answers[q.id] === val
-                                                    ? 'bg-slate-900 border-slate-900 text-white font-bold'
-                                                    : 'bg-white border-slate-200 text-slate-600 hover:border-slate-400'
-                                            }`}
-                                        >
-                                            {opt}
-                                        </button>
-                                    ))}
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="pt-6 flex justify-center">
-                        <button
-                            disabled={!isComplete}
-                            onClick={() => setShowResults(true)}
-                            className={`px-10 py-4 rounded-full font-bold transition-all ${
-                                isComplete
-                                    ? 'bg-black text-white hover:scale-105 shadow-xl'
-                                    : 'bg-slate-200 text-slate-400 cursor-not-allowed'
-                            }`}
-                        >
-                            {ui.analyze}
-                        </button>
-                    </div>
-                </div>
-            ) : (
                 <div className="text-center space-y-8 py-6 animate-fade-in">
                     <div>
                         <span className="text-sm font-bold text-slate-400 uppercase tracking-widest">{ui.resultLabel}</span>
@@ -195,7 +180,6 @@ const DigitalBalanceTest: React.FC<Props> = ({ locale = 'ko' }) => {
                     </button>
                     <ShareResultButton locale={locale} heading={ui.heading} resultTitle={interpretation.title} />
                 </div>
-            )}
         </div>
     );
 };

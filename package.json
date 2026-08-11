@@ -58,7 +58,8 @@
     "audit:ontology-platform-archive": "node scripts/audit-ontology-platform-archive.mjs",
     "submit:indexing": "python3 ../docs/search-submit-all.py --site oiyo --new-only",
     "submit:indexing:dry": "python3 ../docs/search-submit-all.py --site oiyo --new-only --dry-run",
-    "audit:test-quiz-schema": "python3 scripts/audit-test-quiz-schema.py"
+    "audit:test-quiz-schema": "python3 scripts/audit-test-quiz-schema.py",
+    "audit:questionnaire": "node scripts/audit-questionnaire-cohorts.mjs --check"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.7",

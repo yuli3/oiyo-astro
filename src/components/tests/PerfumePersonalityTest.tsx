@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { QuestionnaireMatrix } from "@/components/ui/questionnaire-matrix";
 
 interface Props { locale?: string; }
 
@@ -72,7 +73,6 @@ export default function PerfumePersonalityTest({ locale: localeProp }: Props) {
   const scores = Object.fromEntries(types.map((s) => [s, 0])) as Record<ScentType, number>;
   t.questions.forEach((q) => { if (answers[q.id]) scores[q.type] += answers[q.id]; });
   const topType = (Object.entries(scores) as [ScentType, number][]).reduce((a, b) => (b[1] > a[1] ? b : a))[0];
-  const isComplete = Object.keys(answers).length === t.questions.length;
 
   if (phase === "result") {
     const r = t.results[topType];
@@ -91,41 +91,18 @@ export default function PerfumePersonalityTest({ locale: localeProp }: Props) {
   }
 
   return (
-    <div className="not-prose my-10 p-8 bg-white border border-slate-200 rounded-3xl shadow-xl max-w-2xl mx-auto space-y-8">
-      <div className="text-center">
-        <h3 className="text-2xl font-black text-slate-900">{t.title}</h3>
-        <p className="text-sm text-slate-500 mt-2">{t.description}</p>
-        <div className="mt-3 h-2 bg-slate-100 rounded-full">
-          <div className="h-2 bg-pink-500 rounded-full transition-all" style={{ width: `${(Object.keys(answers).length / t.questions.length) * 100}%` }} />
-        </div>
-      </div>
-      <div className="space-y-8">
-        {t.questions.map((q, i) => (
-          <div key={q.id} className="space-y-3">
-            <p className="font-semibold text-slate-800 leading-snug">{i + 1}. {q.text}</p>
-            <div className="grid grid-cols-5 gap-1">
-              {t.options.map((opt, v) => (
-                <button
-                  key={v}
-                  onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: v + 1 }))}
-                  className={`py-2 px-1 text-[10px] rounded-lg border transition-all ${answers[q.id] === v + 1 ? "bg-pink-600 border-pink-600 text-white font-bold shadow-md" : "bg-slate-50 border-slate-200 text-slate-500 hover:bg-slate-100"}`}
-                >
-                  {opt}
-                </button>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-center pt-4">
-        <button
-          disabled={!isComplete}
-          onClick={() => setPhase("result")}
-          className={`px-10 py-3 rounded-2xl font-bold text-base transition-all ${isComplete ? "bg-pink-600 text-white hover:bg-pink-700 shadow-lg" : "bg-slate-200 text-slate-400 cursor-not-allowed"}`}
-        >
-          {lang === "ko" ? "결과 보기" : "See Results"}
-        </button>
-      </div>
-    </div>
+    <QuestionnaireMatrix
+      title={t.title}
+      description={t.description}
+      questions={t.questions}
+      options={t.options}
+      answers={answers}
+      completedLabel={(completed, total) => lang === "ko" ? `${completed} / ${total} 응답` : `${completed} / ${total} answered`}
+      unansweredLabel={(count) => lang === "ko" ? `미응답 ${count}개` : `${count} unanswered`}
+      submitLabel={lang === "ko" ? "결과 보기" : "See Results"}
+      validationLabel={lang === "ko" ? "응답하지 않은 첫 문항으로 이동했습니다." : "Moved to the first unanswered question."}
+      onAnswer={(questionId, value) => setAnswers((prev) => ({ ...prev, [questionId]: value }))}
+      onSubmit={() => setPhase("result")}
+    />
   );
 }

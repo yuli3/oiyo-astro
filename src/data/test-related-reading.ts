@@ -126,7 +126,6 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/life-values-test": { blog: "/magazine-life-values-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/love-language/test": { blog: "/magazine-love-language-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/mbti-love-test": { blog: "/magazine-mbti-love-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
-  "/meeting-style-test": { blog: "/magazine-meeting-cost-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/money-personality-test": { blog: "/psychology-of-money/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
   "/motivation-type-test": { blog: "/magazine-motivation-type-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/narcissism/test": { blog: "/narcissism-psychology-guide/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
@@ -242,12 +241,6 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/color-aura-test": {
     blog: "/color-psychology-complete-guide/", blogLocales: ['ko', 'zh', 'fr', 'es'],
     wiki: "/meaning-of-color-psychology/",
-    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
-  },
-  "/commute-mental/test": {
-    blog: "/flow-state-happiness-psychology/",
-    blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
-    wiki: "/meaning-of-cognitive-load/",
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/inner-strength/test": {

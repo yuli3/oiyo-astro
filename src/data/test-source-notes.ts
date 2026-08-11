@@ -34,10 +34,6 @@ export const TEST_SOURCE_NOTES: Record<string, TestSourceNote> = {
     basis: ['Maslach Burnout Inventory (MBI) model', 'occupational stress and recovery literature'],
     caution: 'clinical',
   },
-  'commute-mental': {
-    basis: ['commuting stress research', 'work recovery and daily stress appraisal models'],
-    caution: 'reflection',
-  },
   depression: {
     basis: ['Patient Health Questionnaire-9 (PHQ-9)', 'brief depression screening literature'],
     caution: 'clinical',

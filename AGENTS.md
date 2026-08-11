@@ -35,12 +35,14 @@ It must not become a long-form blog or a wiki.
 - Do not reintroduce `cn`.
 - Do not touch dormant `/Users/seuncho/coding/oiyo-legacy` Next.js unless the user explicitly asks.
 - Do not deploy, commit, or push without user approval.
+- **Questionnaire work**: before creating, migrating, reviewing, or releasing any test question UI, read `/Users/seuncho/coding/company-brain/AI-Sessions/wiki/design/questionnaire-family-contract.md`. Classify the interaction as step, matrix, screening, or dedicated tool; run `npm run audit:questionnaire`; release only one approved engine cohort at a time.
 
 ## Verification
 
 Use the narrowest relevant checks first:
 
 ```bash
+npm run audit:questionnaire
 npm run audit:mystic-seo
 npm run build
 npm run test -- --run

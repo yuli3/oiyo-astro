@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import { QuestionnaireMatrix } from '@/components/ui/questionnaire-matrix'
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
 
@@ -50,8 +51,6 @@ export default function BiologicalAgeTest({ locale }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({})
   const [result, setResult] = useState<number | null>(null)
 
-  const allAnswered = FACTORS.filter(f => f.key !== 'age').every(f => answers[f.key] !== undefined)
-
   const bioAge = useMemo(() => {
     if (result === null) return null
     const total = Object.values(answers).reduce((s, v) => s + v, 0)
@@ -59,6 +58,43 @@ export default function BiologicalAgeTest({ locale }: Props) {
   }, [result, answers, chrono])
 
   const diff = bioAge !== null ? bioAge - chrono : 0
+
+  if (result === null) {
+    const questions = FACTORS.filter(f => f.key !== 'age').map(f => ({
+      id: f.key,
+      text: isKo ? f.question.ko : f.question.en,
+      options: f.options.map(opt => ({
+        label: isKo ? opt.label.ko : opt.label.en,
+        value: opt.delta,
+      })),
+    }))
+
+    return (
+      <QuestionnaireMatrix
+        title={l.title}
+        description={l.subtitle}
+        questions={questions}
+        answers={answers}
+        beforeQuestions={(
+          <div className="space-y-2 rounded-xl border bg-background p-4 sm:p-5">
+            <label htmlFor="biological-age-chrono" className="text-sm font-medium">
+              {isKo ? '현재 나이' : 'Current Age'}
+            </label>
+            <div className="flex items-center gap-3">
+              <input id="biological-age-chrono" type="range" min={15} max={80} value={chrono} onChange={e=>setChrono(+e.target.value)} className="min-h-11 flex-1 accent-primary" />
+              <span className="w-12 text-right text-base font-bold">{chrono}{isKo?'세':''}</span>
+            </div>
+          </div>
+        )}
+        completedLabel={(completed, total) => isKo ? `${completed} / ${total} 응답` : `${completed} / ${total} answered`}
+        unansweredLabel={(count) => isKo ? `미응답 ${count}개` : `${count} unanswered`}
+        submitLabel={l.calculate}
+        validationLabel={isKo ? '응답하지 않은 첫 문항으로 이동했습니다.' : 'Moved to the first unanswered question.'}
+        onAnswer={(questionId, value) => setAnswers(a => ({ ...a, [questionId]: value }))}
+        onSubmit={() => setResult(1)}
+      />
+    )
+  }
 
   return (
     <div className="space-y-5 py-4">
@@ -68,36 +104,7 @@ export default function BiologicalAgeTest({ locale }: Props) {
         <p className="text-sm text-muted-foreground">{l.subtitle}</p>
       </div>
 
-      {result === null ? (
-        <>
-          {/* Age input */}
-          <div className="space-y-1">
-            <label className="text-sm font-medium">{isKo ? '현재 나이' : 'Current Age'}</label>
-            <div className="flex items-center gap-3">
-              <input type="range" min={15} max={80} value={chrono} onChange={e=>setChrono(+e.target.value)} className="flex-1 accent-primary" />
-              <span className="text-base font-bold w-12 text-right">{chrono}{isKo?'세':''}</span>
-            </div>
-          </div>
-          {FACTORS.filter(f=>f.key!=='age').map(f => (
-            <div key={f.key} className="space-y-2">
-              <p className="text-sm font-medium">{isKo ? f.question.ko : f.question.en}</p>
-              <div className="grid grid-cols-2 gap-2">
-                {f.options.map((opt, i) => (
-                  <button key={i} onClick={() => setAnswers(a => ({ ...a, [f.key]: opt.delta }))}
-                    className={`text-left px-3 py-2.5 rounded-xl border text-xs transition-all ${answers[f.key] === opt.delta ? 'bg-primary text-primary-foreground border-primary' : 'hover:bg-accent'}`}>
-                    {isKo ? opt.label.ko : opt.label.en}
-                  </button>
-                ))}
-              </div>
-            </div>
-          ))}
-          <button onClick={() => setResult(1)} disabled={!allAnswered}
-            className="w-full py-3 bg-primary text-primary-foreground rounded-xl font-semibold disabled:opacity-50 hover:bg-primary/90 transition-colors">
-            {l.calculate}
-          </button>
-        </>
-      ) : (
-        <div className="space-y-5">
+      <div className="space-y-5">
           <div className="grid grid-cols-2 gap-3">
             <div className="rounded-xl border p-4 text-center">
               <p className="text-xs text-muted-foreground mb-1">{l.chronoAge}</p>
@@ -135,8 +142,7 @@ export default function BiologicalAgeTest({ locale }: Props) {
           </div>
           <p className="text-xs text-muted-foreground border-t pt-3">{l.note}</p>
           <button onClick={() => { setResult(null); setAnswers({}) }} className="w-full py-3 border rounded-xl text-sm font-medium hover:bg-accent transition-colors">{l.reset}</button>
-        </div>
-      )}
+      </div>
     </div>
   )
 }

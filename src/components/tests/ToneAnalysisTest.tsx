@@ -1,5 +1,6 @@
 'use client';
 import ShareResultButton from '../shared/ShareResultButton'
+import { QuestionnaireMatrix } from '@/components/ui/questionnaire-matrix'
 
 import { useState } from "react";
 
@@ -239,14 +240,13 @@ const data = {
 export default function ToneAnalysisTest({ locale: localeProp }: Props) {
   const lang = (localeProp === "en" ? "en" : "ko") as "ko" | "en";
   const t = data[lang];
-  const [answers, setAnswers] = useState<Record<string, ToneType>>({});
+  const [answers, setAnswers] = useState<Record<string, number>>({});
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
 
   const types: ToneType[] = ["sharp", "avoidant", "friendly", "neutral"];
   const scores = Object.fromEntries(types.map((s) => [s, 0])) as Record<ToneType, number>;
-  Object.values(answers).forEach((type) => { scores[type] += 1; });
+  Object.values(answers).forEach((typeIndex) => { scores[types[typeIndex]] += 1; });
   const topType = (Object.entries(scores) as [ToneType, number][]).reduce((a, b) => (b[1] > a[1] ? b : a))[0];
-  const isComplete = Object.keys(answers).length === t.questions.length;
 
   if (phase === "result") {
     const r = t.results[topType];
@@ -265,41 +265,22 @@ export default function ToneAnalysisTest({ locale: localeProp }: Props) {
   }
 
   return (
-    <div className="not-prose my-10 p-8 bg-white border border-slate-200 rounded-3xl shadow-xl max-w-2xl mx-auto space-y-8">
-      <div className="text-center">
-        <h3 className="text-2xl font-black text-slate-900">{t.title}</h3>
-        <p className="text-sm text-slate-500 mt-2">{t.description}</p>
-        <div className="mt-3 h-2 bg-slate-100 rounded-full">
-          <div className="h-2 bg-rose-500 rounded-full transition-all" style={{ width: `${(Object.keys(answers).length / t.questions.length) * 100}%` }} />
-        </div>
-      </div>
-      <div className="space-y-8">
-        {t.questions.map((q, i) => (
-          <div key={q.id} className="space-y-3">
-            <p className="font-semibold text-slate-800 leading-snug">{i + 1}. {q.text}</p>
-            <div className="space-y-2">
-              {q.options.map((opt, v) => (
-                <button
-                  key={v}
-                  onClick={() => setAnswers((prev) => ({ ...prev, [q.id]: opt.type }))}
-                  className={`w-full text-left py-2 px-3 text-sm rounded-lg border transition-all ${answers[q.id] === opt.type ? "bg-rose-600 border-rose-600 text-white font-bold shadow-md" : "bg-slate-50 border-slate-200 text-slate-600 hover:bg-slate-100"}`}
-                >
-                  {opt.text}
-                </button>
-              ))}
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="flex justify-center pt-4">
-        <button
-          disabled={!isComplete}
-          onClick={() => setPhase("result")}
-          className={`px-10 py-3 rounded-2xl font-bold text-base transition-all ${isComplete ? "bg-rose-600 text-white hover:bg-rose-700 shadow-lg" : "bg-slate-200 text-slate-400 cursor-not-allowed"}`}
-        >
-          {lang === "ko" ? "결과 보기" : "See Results"}
-        </button>
-      </div>
-    </div>
+    <QuestionnaireMatrix
+      title={t.title}
+      description={t.description}
+      questions={t.questions.map((question) => ({
+        id: question.id,
+        text: question.text,
+        columns: 1,
+        options: question.options.map((option, value) => ({ label: option.text, value })),
+      }))}
+      answers={answers}
+      completedLabel={(completed, total) => lang === "ko" ? `응답 ${completed}/${total}` : `Answered ${completed}/${total}`}
+      unansweredLabel={(count) => lang === "ko" ? `미응답 ${count}` : `Unanswered ${count}`}
+      submitLabel={lang === "ko" ? "결과 보기" : "See Results"}
+      validationLabel={lang === "ko" ? "모든 문항에 응답해 주세요." : "Please answer every question."}
+      onAnswer={(questionId, value) => setAnswers((prev) => ({ ...prev, [questionId]: value }))}
+      onSubmit={() => setPhase("result")}
+    />
   );
 }

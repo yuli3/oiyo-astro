@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import ShareResultButton from '../shared/ShareResultButton';
+import { QuestionnaireMatrix } from '@/components/ui/questionnaire-matrix';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 
@@ -198,6 +199,16 @@ const QUESTIONS: Question[] = [
 
 const SCALE = [1, 2, 3, 4, 5] as const;
 
+const MATRIX_COPY: Record<Locale, { unanswered: string; submit: string; validation: string }> = {
+  ko: { unanswered: '미응답', submit: '결과 보기', validation: '모든 문항에 응답해 주세요.' },
+  en: { unanswered: 'Unanswered', submit: 'See results', validation: 'Please answer every question.' },
+  ja: { unanswered: '未回答', submit: '結果を見る', validation: 'すべての質問に回答してください。' },
+  fr: { unanswered: 'Sans réponse', submit: 'Voir les résultats', validation: 'Veuillez répondre à toutes les questions.' },
+  es: { unanswered: 'Sin responder', submit: 'Ver resultados', validation: 'Responde todas las preguntas.' },
+  cn: { unanswered: '未回答', submit: '查看結果', validation: '請回答所有問題。' },
+  zh: { unanswered: '未回答', submit: '查看结果', validation: '请回答所有问题。' },
+};
+
 function calcLevel(total: number): 'high' | 'medium' | 'low' {
   const pct = total / (QUESTIONS.length * 5);
   if (pct >= 0.65) return 'high';
@@ -213,9 +224,9 @@ const LEVEL_COLORS = {
 
 export default function HspTest({ locale = 'en' }: { locale?: Locale }) {
   const t = LABELS[locale] ?? LABELS.en;
+  const matrixCopy = MATRIX_COPY[locale] ?? MATRIX_COPY.en;
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [showResult, setShowResult] = useState(false);
-  const current = Object.keys(answers).length;
 
   const handleAnswer = (id: string, val: number) => {
     const next = { ...answers, [id]: val };
@@ -301,60 +312,22 @@ export default function HspTest({ locale = 'en' }: { locale?: Locale }) {
     );
   }
 
-  const progress = (current / QUESTIONS.length) * 100;
-
   return (
-    <div className="not-prose mx-auto max-w-2xl py-8 px-4">
-      <div className="space-y-6">
-        {/* Header */}
-        <div className="text-center space-y-2">
-          <p className="text-[10px] font-black uppercase tracking-[0.2em] text-muted-foreground">{t.subtitle}</p>
-          <h1 className="text-2xl font-black">{t.title}</h1>
-          <p className="text-sm text-muted-foreground max-w-lg mx-auto">{t.desc}</p>
-        </div>
-
-        {/* Progress */}
-        <div className="space-y-1">
-          <div className="flex justify-between text-[10px] font-black text-muted-foreground uppercase">
-            <span>{t.questionOf(current, QUESTIONS.length)}</span>
-            <span>{Math.round(progress)}%</span>
-          </div>
-          <div className="w-full bg-muted rounded-full h-2">
-            <div className="h-2 rounded-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-
-        {/* Questions */}
-        <div className="space-y-8">
-          {QUESTIONS.map((q, i) => {
-            const answered = answers[q.id];
-            return (
-              <div key={q.id} className={`p-6 rounded-2xl border transition-all ${answered !== undefined ? 'border-primary/40 bg-primary/5' : 'border-border bg-card'}`}>
-                <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground mb-3">
-                  {i + 1}. {q.dim}
-                </p>
-                <p className="text-sm font-medium mb-5 leading-relaxed">{q.text[locale] ?? q.text.en}</p>
-                <div className="grid grid-cols-5 gap-2">
-                  {SCALE.map((val, si) => (
-                    <button
-                      key={val}
-                      onClick={() => handleAnswer(q.id, val)}
-                      className={`flex flex-col items-center gap-1.5 p-2 rounded-xl border-2 transition-all ${answered === val ? 'border-primary bg-primary/10' : 'border-border hover:border-primary/40 hover:bg-muted/40'}`}
-                    >
-                      <span className="text-lg font-black">{val}</span>
-                      <span className="text-[8px] font-bold text-muted-foreground text-center leading-tight hidden sm:block">{t.scaleLabels[si]}</span>
-                    </button>
-                  ))}
-                </div>
-                <div className="flex justify-between mt-2 sm:hidden">
-                  <span className="text-[9px] text-muted-foreground">{t.scaleLabels[0]}</span>
-                  <span className="text-[9px] text-muted-foreground">{t.scaleLabels[4]}</span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </div>
+    <QuestionnaireMatrix
+      title={t.title}
+      description={`${t.subtitle} — ${t.desc}`}
+      questions={QUESTIONS.map((question) => ({
+        id: question.id,
+        text: `${question.dim} — ${question.text[locale] ?? question.text.en}`,
+      }))}
+      options={SCALE.map((value, index) => `${value} · ${t.scaleLabels[index]}`)}
+      answers={answers}
+      completedLabel={(completed, totalQuestions) => t.questionOf(completed, totalQuestions)}
+      unansweredLabel={(count) => `${matrixCopy.unanswered} ${count}`}
+      submitLabel={matrixCopy.submit}
+      validationLabel={matrixCopy.validation}
+      onAnswer={handleAnswer}
+      onSubmit={() => setShowResult(true)}
+    />
   );
 }

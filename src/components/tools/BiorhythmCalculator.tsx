@@ -4,6 +4,7 @@ import { BirthDateField } from '../shared/BirthDateField';
 import { civilDateToLocalNoon } from '../../lib/user/birth-record';
 import { differenceInCivilDays } from '../../lib/ontology/kernel/civil-date';
 import type { Locale } from '../../lib/i18n';
+import AnimatedNumber from '../ui/AnimatedNumber';
 
 interface Props {
   locale: Locale;
@@ -262,43 +263,6 @@ function toPercent(val: number): number {
   return Math.round(((val + 1) / 2) * 100);
 }
 
-// ─── Animated Counter ────────────────────────────────────────────────────────
-
-function AnimatedCounter({ target, reducedMotion }: { target: number; reducedMotion: boolean }) {
-  const [display, setDisplay] = useState(reducedMotion ? target : 0);
-  const rafRef = useRef<number | null>(null);
-  const startRef = useRef<number | null>(null);
-
-  useEffect(() => {
-    if (reducedMotion) {
-      setDisplay(target);
-      return;
-    }
-    const duration = 900;
-    const startVal = 0;
-
-    function step(ts: number) {
-      if (startRef.current === null) startRef.current = ts;
-      const elapsed = ts - startRef.current;
-      const progress = Math.min(elapsed / duration, 1);
-      // ease-out cubic
-      const eased = 1 - Math.pow(1 - progress, 3);
-      setDisplay(Math.round(startVal + (target - startVal) * eased));
-      if (progress < 1) {
-        rafRef.current = requestAnimationFrame(step);
-      }
-    }
-
-    startRef.current = null;
-    rafRef.current = requestAnimationFrame(step);
-    return () => {
-      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current);
-    };
-  }, [target, reducedMotion]);
-
-  return <>{display}</>;
-}
-
 // ─── Circular Progress Card ──────────────────────────────────────────────────
 
 const RING_RADIUS = 36;
@@ -309,9 +273,10 @@ interface RingCardProps {
   value: number; // -1 to 1
   color: string;
   reducedMotion: boolean;
+  locale: Locale;
 }
 
-function RingCard({ label, value, color, reducedMotion }: RingCardProps) {
+function RingCard({ label, value, color, reducedMotion, locale }: RingCardProps) {
   const pct = toPercent(value);
   const offset = RING_CIRCUMFERENCE * (1 - pct / 100);
 
@@ -364,7 +329,7 @@ function RingCard({ label, value, color, reducedMotion }: RingCardProps) {
           style={{ color, textShadow: `0 0 10px ${color}` }}
           aria-label={`${label}: ${pct}%`}
         >
-          <AnimatedCounter target={pct} reducedMotion={reducedMotion} />%
+          <AnimatedNumber value={pct} locales={locale} suffix="%" />
         </span>
       </div>
       <span className="text-xs font-bold tracking-widest uppercase" style={{ color: `${color}cc` }}>
@@ -860,18 +825,21 @@ export default function BiorhythmCalculator({ locale }: Props) {
                     value={todayValues.physical}
                     color={COLOR_PHYSICAL}
                     reducedMotion={reducedMotion}
+                    locale={locale}
                   />
                   <RingCard
                     label={t('emotional', locale)}
                     value={todayValues.emotional}
                     color={COLOR_EMOTIONAL}
                     reducedMotion={reducedMotion}
+                    locale={locale}
                   />
                   <RingCard
                     label={t('intellectual', locale)}
                     value={todayValues.intellectual}
                     color={COLOR_INTELLECTUAL}
                     reducedMotion={reducedMotion}
+                    locale={locale}
                   />
                 </div>
               </div>

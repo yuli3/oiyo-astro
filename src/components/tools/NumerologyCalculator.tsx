@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import type { Locale } from "../../lib/i18n";
 import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
 import { BirthDateField } from "../shared/BirthDateField";
+import AnimatedNumber from "../ui/AnimatedNumber";
 
 interface Props {
   locale: Locale;
@@ -715,7 +716,11 @@ function NumberCard({
           </span>
         )}
       </div>
-      <div className={`text-5xl font-black ${m.color}`}>{number}</div>
+      <AnimatedNumber
+        value={number}
+        locales={locale}
+        className={`text-5xl font-black ${m.color}`}
+      />
       <div className="flex flex-wrap gap-1">
         {m.keywords[locale].map((k) => (
           <span key={k} className={`px-2 py-0.5 rounded-full text-xs font-medium bg-white/70 ${m.color}`}>

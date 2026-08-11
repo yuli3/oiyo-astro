@@ -109,10 +109,6 @@ export const ROUTES = {
   },
 
   INTERACTIVE: {
-    COMMUTE_WEATHER: {
-      metadata: { owner: "Psychology", role: "Assessment", tier: 2 },
-      path: (locale: Locale) => `/${locale}/commute-mental-weather/test`,
-    },
     EMOTION_THERMOMETER: {
       metadata: { owner: "Psychology", role: "Assessment", tier: 2 },
       path: (locale: Locale) => `/${locale}/emotion-thermometer`,

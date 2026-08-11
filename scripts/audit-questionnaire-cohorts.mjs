@@ -21,7 +21,7 @@
  * 이제 **회귀 감시용**이다 — 새 테스트가 공용 Questionnaire 를 안 쓰고 들어오면
  * candidates 의 step 이 0 이 아니게 된다.
  *
- * Usage: node scripts/audit-questionnaire-cohorts.mjs [--json] [--cohort <hash>]
+ * Usage: node scripts/audit-questionnaire-cohorts.mjs [--json] [--check] [--cohort <hash>]
  */
 import { createHash } from "node:crypto";
 import { readdirSync, readFileSync } from "node:fs";
@@ -30,11 +30,41 @@ import { join } from "node:path";
 const TESTS_DIR = new URL("../src/components/tests/", import.meta.url).pathname;
 
 // 의료·정신건강 screening 은 응답 편집·되돌리기 의미론이 제품적으로 다르다.
-const SCREENING =
-  /Screening|Depression|Anxiety|Adhd|Ptsd|Burnout|Codependency|EmotionalEating|DopamineDependency|Loneliness|SocialAnxiety|ToxicRelationship/;
+const SCREENING = new Set([
+  "AdhdScreeningTest.tsx",
+  "AnxietyScreeningTest.tsx",
+  "BurnoutTest.tsx",
+  "CodependencyTest.tsx",
+  "DepressionScreeningTest.tsx",
+  "DopamineDependencyTest.tsx",
+  "EmotionalEatingTest.tsx",
+  "LonelinessTest.tsx",
+  "SocialAnxietyTest.tsx",
+  "ToxicRelationshipTest.tsx",
+]);
 // 시간 측정·정답이 있는 인지 과제는 되돌리기가 결과를 무효화한다.
 // Chimp 는 타일을 순서대로 눌러 기억을 재는 과제라 문항이 아예 없다.
-const TIMED = /Typing|Reaction|IQTest|EnglishLevel|Memory|Chimp/;
+const TIMED = new Set([
+  "ChimpTest.tsx",
+  "ColorMemoryTest.tsx",
+  "EnglishLevelTest.tsx",
+  "IQTest.tsx",
+  "SpatialIQTest.tsx",
+  "TypingSpeedTest.tsx",
+  "TypingTest.tsx",
+]);
+
+// 선택 즉시 정답·오답과 해설을 공개하는 지식 퀴즈는 응답 수집 matrix가 아니다.
+// 일반 QuestionnaireMatrix로 바꾸면 피드백 순서와 학습 계약이 손실된다.
+const KNOWLEDGE_QUIZ = new Set([
+  "CritiQuestTest.tsx",
+]);
+
+// 여러 문항을 축별 페이지로 묶고 단계별 검증·이전 이동을 제공하는 도구는
+// 전 문항 단일 matrix와 상호작용 계약이 다르다.
+const GROUPED_STEP = new Set([
+  "PoliticalCompassTest.tsx",
+]);
 
 const md5 = (s) => createHash("md5").update(s).digest("hex").slice(0, 8);
 
@@ -157,27 +187,41 @@ for (const name of readdirSync(TESTS_DIR).filter((f) => f.endsWith(".tsx"))) {
   if (name.includes(".test.") || name.includes(".contract.")) continue;
   const src = readFileSync(join(TESTS_DIR, name), "utf8");
 
-  if (src.includes("ui/questionnaire")) {
-    rows.push({ name, status: "migrated" });
-    continue;
-  }
-
   const jsx = questionStepJsx(src);
-  const exclusion = SCREENING.test(name)
+  const exclusion = SCREENING.has(name)
     ? "screening"
-    : TIMED.test(name)
+    : TIMED.has(name)
       ? "timed"
+      : KNOWLEDGE_QUIZ.has(name)
+        ? "knowledge-quiz"
+      : GROUPED_STEP.has(name)
+        ? "grouped-step"
       : isMultiSelect(jsx)
         ? "multi-select"
         : isCardSort(src)
           ? "card-sort"
           : null;
+  const flow = flowModel(jsx, src);
+  const usesGenericQuestionnaire = /ui\/questionnaire["']/.test(src);
+  const usesMatrixQuestionnaire = /ui\/questionnaire-matrix["']/.test(src);
+  // 이관 뒤에는 결과 화면의 `.map()`까지 구조 서명에 잡혀 step을 matrix로 오인할 수
+  // 있다. flow 판정은 아직 shell을 쓰지 않는 candidate에만 release gate로 사용한다.
+  const violation = exclusion && (usesGenericQuestionnaire || usesMatrixQuestionnaire)
+    ? `questionnaire-family-on-${exclusion}`
+    : null;
   rows.push({
     name,
-    status: exclusion ? "excluded" : "candidate",
+    status: exclusion
+      ? "excluded"
+      : usesGenericQuestionnaire
+        ? "migrated"
+        : usesMatrixQuestionnaire
+          ? "matrix-migrated"
+          : "candidate",
     exclusion,
+    violation,
     answerShape: answerShape(src),
-    flow: flowModel(jsx, src),
+    flow,
     jsxHash: jsx ? md5(normalize(jsx.text)) : null,
     jsxLines: jsx ? jsx.text.split("\n").length : 0,
     back: hasBackAffordance(src),
@@ -185,8 +229,11 @@ for (const name of readdirSync(TESTS_DIR).filter((f) => f.endsWith(".tsx"))) {
 }
 
 const migrated = rows.filter((r) => r.status === "migrated");
+const matrixMigrated = rows.filter((r) => r.status === "matrix-migrated");
 const excluded = rows.filter((r) => r.status === "excluded");
 const candidates = rows.filter((r) => r.status === "candidate");
+const violations = rows.filter((r) => r.violation);
+const stepCandidates = candidates.filter((r) => r.flow === "step");
 
 const cohorts = new Map();
 for (const row of candidates) {
@@ -209,15 +256,18 @@ if (cohortArg !== -1) {
 }
 
 if (process.argv.includes("--json")) {
-  console.log(JSON.stringify({ migrated: migrated.length, excluded, candidates, cohorts: ranked }, null, 2));
+  console.log(JSON.stringify({ migrated: migrated.length, matrixMigrated: matrixMigrated.length, excluded, candidates, violations, cohorts: ranked }, null, 2));
   process.exit(0);
 }
 
 console.log("questionnaire cohort audit");
 console.log(`  migrated   ${migrated.length}`);
+console.log(`  matrix     ${matrixMigrated.length}`);
 console.log(`  excluded   ${excluded.length}  (${[...new Set(excluded.map((r) => r.exclusion))].join(", ")})`);
 const byFlow = candidates.reduce((a, r) => ((a[r.flow] = (a[r.flow] ?? 0) + 1), a), {});
 console.log(`  candidates ${candidates.length}  ${JSON.stringify(byFlow)}`);
+console.log(`  violations ${violations.length}`);
+for (const row of violations) console.log(`    ${row.name}: ${row.violation}`);
 console.log("  matrix = 전 문항 나열형. Questionnaire 이관은 UI 교체가 아니라 상호작용 재설계다.\n");
 console.log("후보 코호트 (같은 응답 구조 + 같은 질문 단계 JSX = 일괄 패치 가능):");
 for (const [key, members] of ranked) {
@@ -229,4 +279,11 @@ for (const [key, members] of ranked) {
   if (members.length <= 8) {
     console.log(`        ${members.map((m) => m.name.replace(/Test\.tsx$/, "")).join(", ")}`);
   }
+}
+
+if (process.argv.includes("--check") && (violations.length > 0 || stepCandidates.length > 0)) {
+  if (stepCandidates.length > 0) {
+    console.error(`\nstep candidates must use Questionnaire: ${stepCandidates.map((r) => r.name).join(", ")}`);
+  }
+  process.exit(1);
 }
