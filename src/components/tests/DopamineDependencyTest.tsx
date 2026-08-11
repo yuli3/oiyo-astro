@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
@@ -186,30 +187,18 @@ export default function DopamineDependencyTest({ locale }: Props) {
     )
   }
 
+  const progress = Math.round((current / questions.length) * 100)
+
   return (
-    <div className="space-y-6 py-4">
-      <div className="text-center space-y-2">
-        <div className="text-4xl">🧠</div>
-        <h1 className="text-xl font-bold">{l.title}</h1>
-        <p className="text-sm text-muted-foreground">{l.subtitle}</p>
-      </div>
-      <div className="flex items-center justify-between">
-        <span className="text-sm text-muted-foreground">{l.progress(current + 1, questions.length)}</span>
-        <div className="w-32 h-1.5 bg-muted rounded-full overflow-hidden">
-          <div className="h-full bg-primary rounded-full transition-all" style={{ width: `${((current + 1) / questions.length) * 100}%` }} />
-        </div>
-      </div>
-      <p className="text-base font-semibold text-center py-3">{questions[current]}</p>
-      <div className="grid grid-cols-5 gap-2">
-        {l.scaleLabels.map((label, i) => (
-          <button key={i} onClick={() => answer(i)}
-            className="flex flex-col items-center gap-1.5 p-2.5 rounded-xl border hover:bg-accent hover:border-primary transition-all text-center">
-            <span className="text-base font-bold">{i}</span>
-            <span className="text-[10px] text-muted-foreground leading-tight">{label}</span>
-          </button>
-        ))}
-      </div>
-      <p className="text-xs text-muted-foreground text-center">{l.note}</p>
-    </div>
+    <ScreeningQuestionnaire
+      title={l.title}
+      subtitle={l.subtitle}
+      question={questions[current]}
+      questionLabel={l.progress(current + 1, questions.length)}
+      progress={progress}
+      options={l.scaleLabels.map((label, value) => ({ label, value, indicator: value }))}
+      screeningNote={l.note}
+      onSelect={answer}
+    />
   )
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -506,39 +507,19 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
   }
 
   const q = questions[idx];
+  const progress = Math.round((idx / questions.length) * 100);
 
   return (
-    <div className="space-y-6">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">{tx.title}</h1>
-        <p className="mt-1 text-gray-500">{tx.subtitle}</p>
-        <p className="mt-2 text-xs text-gray-400">{tx.instruction}</p>
-      </div>
-
-      <div className="flex items-center gap-3">
-        <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-100">
-          <div
-            className="h-full rounded-full bg-orange-400 transition-all duration-300"
-            style={{ width: `${(idx / questions.length) * 100}%` }}
-          />
-        </div>
-        <span className="text-sm text-gray-500">{tx.progress(idx + 1, questions.length)}</span>
-      </div>
-
-      <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-        <p className="mb-6 text-center text-lg font-medium text-gray-800">{q[locale]}</p>
-        <div className="grid grid-cols-2 gap-3">
-          {scoreOptions.map((opt) => (
-            <button
-              key={opt.value}
-              onClick={() => pick(opt.value)}
-              className="rounded-xl border border-gray-200 px-4 py-4 text-center text-sm font-medium text-gray-700 transition hover:border-orange-300 hover:bg-orange-50"
-            >
-              {opt.label}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
+    <ScreeningQuestionnaire
+      title={tx.title}
+      subtitle={tx.subtitle}
+      question={q[locale]}
+      questionLabel={tx.progress(idx + 1, questions.length)}
+      progress={progress}
+      options={scoreOptions.map(({ label, value }) => ({ label, value }))}
+      screeningNote={tx.disclaimer}
+      supportMessage={tx.instruction}
+      onSelect={pick}
+    />
   );
 }
