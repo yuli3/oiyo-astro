@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire';
 import ShareResultButton from '../shared/ShareResultButton'
 
 type EatingLevel = 'low' | 'moderate' | 'high' | 'very_high'
@@ -342,47 +343,16 @@ export default function EmotionalEatingTest({ locale: lp = 'ko' }: Props) {
   if (!finished) {
     const q = questions[current]
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div
-            role="progressbar"
-            aria-valuenow={progress}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={lb.questionOf(current + 1, questions.length)}
-            className="h-2 rounded-full bg-muted overflow-hidden"
-          >
-            <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <div className="rounded-2xl border bg-card p-6 text-center">
-          <p className="text-lg font-bold">{q.text}</p>
-        </div>
-        <div className="grid gap-2">
-          {lb.scaleLabels.map((label, i) => (
-            <button
-              key={i}
-              onClick={() => pick(i)}
-              className="w-full rounded-xl border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-center gap-3"
-              aria-label={label}
-            >
-              <span className="w-6 h-6 rounded-full border-2 border-primary/30 flex items-center justify-center text-xs font-bold text-primary flex-none">
-                {i + 1}
-              </span>
-              {label}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-      </div>
+      <ScreeningQuestionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={lb.scaleLabels.map((label, value) => ({ label, value, indicator: value + 1 }))}
+        screeningNote={lb.note}
+        onSelect={pick}
+      />
     )
   }
 
