@@ -17,6 +17,10 @@
  * 같은 서명 = 같은 패치가 그대로 먹는다는 뜻이고, 그때만 가드형 일괄 이관을 한다.
  * 서명이 1개짜리로 흩어져 있으면 개별 이관이라는 뜻이며, 그 사실 자체가 판정이다.
  *
+ * 2026-08-11 로 step 형은 전부 이관됐다. 남은 후보는 전부 matrix 이며, 이 스크립트는
+ * 이제 **회귀 감시용**이다 — 새 테스트가 공용 Questionnaire 를 안 쓰고 들어오면
+ * candidates 의 step 이 0 이 아니게 된다.
+ *
  * Usage: node scripts/audit-questionnaire-cohorts.mjs [--json] [--cohort <hash>]
  */
 import { createHash } from "node:crypto";
@@ -29,7 +33,8 @@ const TESTS_DIR = new URL("../src/components/tests/", import.meta.url).pathname;
 const SCREENING =
   /Screening|Depression|Anxiety|Adhd|Ptsd|Burnout|Codependency|EmotionalEating|DopamineDependency|Loneliness|SocialAnxiety|ToxicRelationship/;
 // 시간 측정·정답이 있는 인지 과제는 되돌리기가 결과를 무효화한다.
-const TIMED = /Typing|Reaction|IQTest|EnglishLevel|Memory/;
+// Chimp 는 타일을 순서대로 눌러 기억을 재는 과제라 문항이 아예 없다.
+const TIMED = /Typing|Reaction|IQTest|EnglishLevel|Memory|Chimp/;
 
 const md5 = (s) => createHash("md5").update(s).digest("hex").slice(0, 8);
 
@@ -62,14 +67,57 @@ function questionStepJsx(src) {
   let m;
   while ((m = re.exec(src))) {
     const region = balanced(src, m.index + "return ".length, "(", ")");
-    if (region) regions.push(region);
+    if (region) regions.push({ text: region, at: m.index });
   }
   // 선택지를 그리는 map 과 그 선택을 받는 핸들러가 같이 있는 영역을 고른다.
-  const hits = regions.filter((r) => /\.map\(/.test(r) && /onClick=\{/.test(r));
+  const hits = regions.filter((r) => /\.map\(/.test(r.text) && /onClick=\{/.test(r.text));
   if (hits.length === 0) return null;
   // 가장 짧은 것 = 결과 화면까지 감싼 바깥 영역이 아니라 질문 단계 자체.
-  return hits.sort((a, b) => a.length - b.length)[0];
+  return hits.sort((a, b) => a.text.length - b.text.length)[0];
 }
+
+/**
+ * 질문 단계 JSX 가 **다른 map 의 콜백 안에서** 반환되는가.
+ *
+ * PoliticalCompass 는 `currentKeys.map((key, qi) => { ... return (문항카드) })` 로
+ * 한 화면에 여러 문항을 깐다. 문항 카드만 떼어 보면 step 과 구별되지 않아서
+ * `questions.map(` 이름 규칙에 걸리지 않았다. 반환 지점 바로 앞을 보면 드러난다.
+ */
+function returnedInsideMap(src, at) {
+  return /\.map\(\s*\(?[\w{}[\],\s]*\)?\s*=>\s*\{[^{}]*$/.test(src.slice(Math.max(0, at - 600), at));
+}
+
+/**
+ * 선택지 map 을 또 다른 map 이 **같은 영역 안에서** 감싸는가.
+ *
+ * returnedInsideMap 은 문항 카드를 별도 `return` 으로 빼는 형태를 잡고, 이쪽은
+ * BiologicalAge 처럼 `FACTORS.map(f => ... f.options.map(...))` 로 한 페이지에
+ * 전 문항을 인라인으로 까는 형태를 잡는다. 둘은 같은 사실(=matrix)의 다른 서식이다.
+ */
+function nestedOptionMap(jsx) {
+  const handler = jsx.indexOf("onClick={");
+  if (handler === -1) return false;
+  // 첫 onClick 앞에 열린 map 이 둘 이상이면 바깥쪽은 문항 목록이다.
+  return (jsx.slice(0, handler).match(/\.map\(/g) ?? []).length >= 2;
+}
+
+/**
+ * 한 화면에서 여러 항목을 켜고 끄는 체크리스트인가(HolmesRahe).
+ *
+ * 문항 단위 진행이 아예 없다 — 목록을 훑고 해당하는 것을 모두 고른 뒤 한 번 제출한다.
+ * Questionnaire 로 옮기는 것은 UI 교체가 아니라 도구 자체를 바꾸는 일이다.
+ */
+const isMultiSelect = (jsx) =>
+  !!jsx && /\b(checked|selected|picked)\.has\(/.test(jsx.text);
+
+/**
+ * 카드를 분류하고 순위를 매기는 도구인가(LifeValues).
+ *
+ * 문항·선택지가 없다 — 카드를 버킷에 넣고 상위 몇 개를 정렬한다. Questionnaire 로
+ * 옮길 대상이 아니라 애초에 다른 도구다.
+ */
+const isCardSort = (src) =>
+  /useState<ValueId\[\]>|setRanked\(|Partial<Record<ValueId, Bucket>>/.test(src);
 
 /**
  * 이관 가능성을 가르는 진짜 축은 응답 자료구조가 아니라 **상호작용 모델**이다.
@@ -81,10 +129,13 @@ function questionStepJsx(src) {
  * 처음에는 answerShape(record/array)로 갈랐는데 그건 증상이었다 — record 안에도
  * step 형이 있고 array 안에도 matrix 형이 있다.
  */
-function flowModel(jsx, src) {
-  if (jsx && /\bquestions\.map\(/.test(jsx)) return "matrix";
+function flowModel(region, src) {
+  if (region && /\bquestions\.map\(/.test(region.text)) return "matrix";
+  // 문항 목록 map 의 **이름**으로만 판정하면 놓친다 — returnedInsideMap 참고.
+  if (region && returnedInsideMap(src, region.at)) return "matrix";
+  if (region && nestedOptionMap(region.text)) return "matrix";
   if (/\bquestions\[(?:current|idx|step|i)\]/.test(src)) return "step";
-  return jsx && /\.map\(/.test(jsx) ? "step" : "unknown";
+  return region && /\.map\(/.test(region.text) ? "step" : "unknown";
 }
 
 function answerShape(src) {
@@ -94,15 +145,8 @@ function answerShape(src) {
   return "unknown";
 }
 
-/**
- * 문항마다 바뀌는 분류 배지(도메인·차원·카테고리)를 화면에 그리는가.
- *
- * 공용 Questionnaire 에는 문항별 카테고리 슬롯이 없다. `subtitle` 은 테스트 단위로
- * 고정이고 `note` 는 하단이라 대체가 안 된다. 그대로 옮기면 사용자가 보던 정보가
- * 사라진다 — 스타일 변경이 아니라 **내용 손실**이라 이관 대상에서 뺀다.
- */
-const hasPerQuestionBadge = (jsx) =>
-  !!jsx && /\{[^}]*\bq\.(domain|category|dim|subscale|type)\b[^}]*\}/.test(jsx);
+// 문항별 분류 배지는 한때 제외 사유였다. `subtitle` 에 합치면 정보가 보존된다는 것을
+// RiskTolerance·InnerStrength·Hexaco·Tci 에서 확인했으므로 더는 제외하지 않는다.
 
 /** 되돌아가기 UI 가 이미 제품 계약인지. 없으면 이관이 기능을 새로 추가하는 셈이다. */
 const hasBackAffordance = (src) =>
@@ -123,17 +167,19 @@ for (const name of readdirSync(TESTS_DIR).filter((f) => f.endsWith(".tsx"))) {
     ? "screening"
     : TIMED.test(name)
       ? "timed"
-      : hasPerQuestionBadge(jsx)
-        ? "per-question-badge"
-        : null;
+      : isMultiSelect(jsx)
+        ? "multi-select"
+        : isCardSort(src)
+          ? "card-sort"
+          : null;
   rows.push({
     name,
     status: exclusion ? "excluded" : "candidate",
     exclusion,
     answerShape: answerShape(src),
     flow: flowModel(jsx, src),
-    jsxHash: jsx ? md5(normalize(jsx)) : null,
-    jsxLines: jsx ? jsx.split("\n").length : 0,
+    jsxHash: jsx ? md5(normalize(jsx.text)) : null,
+    jsxLines: jsx ? jsx.text.split("\n").length : 0,
     back: hasBackAffordance(src),
   });
 }
