@@ -204,14 +204,19 @@ for (const name of readdirSync(TESTS_DIR).filter((f) => f.endsWith(".tsx"))) {
   const flow = flowModel(jsx, src);
   const usesGenericQuestionnaire = /ui\/questionnaire["']/.test(src);
   const usesMatrixQuestionnaire = /ui\/questionnaire-matrix["']/.test(src);
+  const usesScreeningQuestionnaire = /ui\/screening-questionnaire["']/.test(src);
   // 이관 뒤에는 결과 화면의 `.map()`까지 구조 서명에 잡혀 step을 matrix로 오인할 수
   // 있다. flow 판정은 아직 shell을 쓰지 않는 candidate에만 release gate로 사용한다.
   const violation = exclusion && (usesGenericQuestionnaire || usesMatrixQuestionnaire)
     ? `questionnaire-family-on-${exclusion}`
+    : usesScreeningQuestionnaire && exclusion !== "screening"
+      ? `screening-questionnaire-on-${exclusion ?? "standard"}`
     : null;
   rows.push({
     name,
-    status: exclusion
+    status: exclusion === "screening" && usesScreeningQuestionnaire
+      ? "screening-migrated"
+      : exclusion
       ? "excluded"
       : usesGenericQuestionnaire
         ? "migrated"
@@ -230,6 +235,7 @@ for (const name of readdirSync(TESTS_DIR).filter((f) => f.endsWith(".tsx"))) {
 
 const migrated = rows.filter((r) => r.status === "migrated");
 const matrixMigrated = rows.filter((r) => r.status === "matrix-migrated");
+const screeningMigrated = rows.filter((r) => r.status === "screening-migrated");
 const excluded = rows.filter((r) => r.status === "excluded");
 const candidates = rows.filter((r) => r.status === "candidate");
 const violations = rows.filter((r) => r.violation);
@@ -256,13 +262,14 @@ if (cohortArg !== -1) {
 }
 
 if (process.argv.includes("--json")) {
-  console.log(JSON.stringify({ migrated: migrated.length, matrixMigrated: matrixMigrated.length, excluded, candidates, violations, cohorts: ranked }, null, 2));
+  console.log(JSON.stringify({ migrated: migrated.length, matrixMigrated: matrixMigrated.length, screeningMigrated: screeningMigrated.length, excluded, candidates, violations, cohorts: ranked }, null, 2));
   process.exit(0);
 }
 
 console.log("questionnaire cohort audit");
 console.log(`  migrated   ${migrated.length}`);
 console.log(`  matrix     ${matrixMigrated.length}`);
+console.log(`  screening  ${screeningMigrated.length}`);
 console.log(`  excluded   ${excluded.length}  (${[...new Set(excluded.map((r) => r.exclusion))].join(", ")})`);
 const byFlow = candidates.reduce((a, r) => ((a[r.flow] = (a[r.flow] ?? 0) + 1), a), {});
 console.log(`  candidates ${candidates.length}  ${JSON.stringify(byFlow)}`);
