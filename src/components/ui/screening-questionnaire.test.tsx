@@ -25,4 +25,22 @@ describe("ScreeningQuestionnaire", () => {
     expect(html).toContain("This screening is not a diagnosis.");
     expect(html).toContain("Professional support is available.");
   });
+
+  it("does not render an empty support notice", () => {
+    const html = renderToStaticMarkup(
+      <ScreeningQuestionnaire
+        title="Burnout screening"
+        subtitle="Check your exhaustion"
+        question="Do you feel exhausted?"
+        questionLabel="1 / 10"
+        progress={0}
+        options={[{ label: "Never", value: 0 }]}
+        screeningNote="Seek professional support when symptoms are severe."
+        onSelect={vi.fn()}
+      />,
+    );
+
+    expect(html).not.toContain("border-green-200");
+    expect(html).toContain("Seek professional support when symptoms are severe.");
+  });
 });

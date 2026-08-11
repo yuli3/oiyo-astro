@@ -8,7 +8,7 @@ type ScreeningQuestionnaireProps = {
   progress: number;
   options: QuestionnaireOption<number>[];
   screeningNote: string;
-  supportMessage: string;
+  supportMessage?: string;
   onSelect: (value: number) => void;
 };
 
@@ -25,9 +25,11 @@ export function ScreeningQuestionnaire({
 }: ScreeningQuestionnaireProps) {
   return (
     <section className="space-y-4" aria-label={title}>
-      <div className="rounded-xl border border-green-200 bg-green-50 p-3 text-center">
-        <p className="text-xs leading-relaxed text-green-900">{supportMessage}</p>
-      </div>
+      {supportMessage ? (
+        <div className="rounded-xl border border-green-200 bg-green-50 p-3 text-center">
+          <p className="text-xs leading-relaxed text-green-900">{supportMessage}</p>
+        </div>
+      ) : null}
       <Questionnaire
         title={title}
         subtitle={subtitle}

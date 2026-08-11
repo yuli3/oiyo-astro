@@ -53,4 +53,20 @@ describe("Questionnaire", () => {
     expect(html).toContain("With people");
     expect(html).toContain("✓");
   });
+
+  it("can preserve a display scale that differs from the stored value", () => {
+    const html = renderToStaticMarkup(
+      <Questionnaire
+        title="ADHD screening"
+        subtitle="Recent experience"
+        question="How often?"
+        questionLabel="1 / 6"
+        progress={0}
+        options={[{ label: "Never", value: 0, indicator: 1 }]}
+        onSelect={vi.fn()}
+      />,
+    );
+
+    expect(html).toContain(">1</span>");
+  });
 });

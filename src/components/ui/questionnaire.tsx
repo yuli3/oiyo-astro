@@ -15,6 +15,7 @@ export type QuestionnaireValue = string | number;
 export type QuestionnaireOption<TValue extends QuestionnaireValue = number> = {
   label: string;
   value: TValue;
+  indicator?: React.ReactNode;
 };
 
 type QuestionnaireProps<TValue extends QuestionnaireValue = number> = {
@@ -98,7 +99,7 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
                     selected && "bg-green-600 text-white",
                   )}
                 >
-                  {typeof option.value === "number" ? option.value : selected ? "✓" : ""}
+                  {option.indicator ?? (typeof option.value === "number" ? option.value : selected ? "✓" : "")}
                 </span>
                 <span>{option.label}</span>
               </button>
