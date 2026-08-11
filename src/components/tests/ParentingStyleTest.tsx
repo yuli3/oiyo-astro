@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -797,48 +798,16 @@ export default function ParentingStyleTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div
-            className="h-2 rounded-full bg-muted overflow-hidden"
-            role="progressbar"
-            aria-valuenow={progress}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={lb.questionOf(current + 1, questions.length)}
-          >
-            <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <div className="rounded-xl border bg-card p-5 text-center">
-          <p className="text-lg font-medium">{q.text}</p>
-        </div>
-        <p className="text-center text-sm text-muted-foreground font-medium">{lb.chooseOne}</p>
-        <div className="grid gap-2">
-          {q.choices.map((choice, i) => (
-            <button
-              key={i}
-              onClick={() => pick(i)}
-              aria-label={choice}
-              className="w-full rounded-xl border bg-card px-5 py-4 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-start gap-3"
-            >
-              <span className="w-6 h-6 rounded-full border-2 border-primary/40 flex items-center justify-center text-xs font-bold text-primary flex-none mt-0.5">
-                {String.fromCharCode(65 + i)}
-              </span>
-              <span>{choice}</span>
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.disclaimer}</p>
-      </div>
+      <Questionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={q.choices.map((choice, i) => ({ label: choice, value: i + 1 }))}
+        note={lb.disclaimer}
+        onSelect={(value) => pick(value - 1)}
+      />
     )
   }
 

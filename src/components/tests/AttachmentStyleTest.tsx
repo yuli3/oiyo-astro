@@ -9,6 +9,7 @@ import {
   recordAssessmentResult,
   type AttachmentDimension,
 } from "@/assessments";
+import { Questionnaire } from "@/components/ui/questionnaire";
 import { gaEvent } from "@/lib/analytics/ga-event";
 import { recordTestResult } from "@/lib/user/test-results";
 import RelatedReading from "../shared/RelatedReading";
@@ -84,6 +85,7 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
   const t = COPY[locale];
   const questions = QUESTION_COPY[locale];
   const [answers, setAnswers] = useState<number[]>([]);
+  const [current, setCurrent] = useState(0);
   const [result, setResult] = useState<ResultState | null>(null);
   const legacyType = useMemo(() => typeof window !== "undefined" && new URLSearchParams(window.location.search).has("type"), []);
 
@@ -95,9 +97,14 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
     if (answers.length === 0) {
       gaEvent("test_started", { test_id: "adult_attachment", instrument_version: ATTACHMENT_INSTRUMENT.version });
     }
-    const next = [...answers, value];
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const next = answers.slice(0, current);
+    next[current] = value;
     setAnswers(next);
-    if (next.length !== ATTACHMENT_INSTRUMENT.items.length) return;
+    if (next.length !== ATTACHMENT_INSTRUMENT.items.length) {
+      setCurrent(current + 1);
+      return;
+    }
 
     const responses = attachmentResponsesFromAnswers(next);
     const isRetake = listAssessmentResults().some((item) => item.assessmentId === attachmentPlugin.id);
@@ -123,27 +130,27 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
 
   function restart() {
     setAnswers([]);
+    setCurrent(0);
     setResult(null);
   }
 
   if (!result) {
-    const current = answers.length;
     return <div className="space-y-6">
-      <header className="space-y-2 text-center">
-        <h1 className="text-2xl font-bold">{t.title}</h1>
-        <p className="text-sm text-muted-foreground">{t.subtitle}</p>
-      </header>
       {legacyType && <p className="rounded-xl border border-green-100 bg-green-50 p-4 text-sm leading-6 text-green-900">{t.legacy}</p>}
       <p className="rounded-xl border bg-card p-4 text-sm leading-6 text-muted-foreground">{t.context}</p>
       <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">{t.safety}</p>
-      <div className="space-y-1">
-        <div className="flex justify-between text-xs text-muted-foreground"><span>{t.question(current + 1)}</span><span>{Math.round((current / 12) * 100)}%</span></div>
-        <div className="h-2 overflow-hidden rounded-full bg-muted"><div className="h-full bg-green-600 transition-all" style={{ width: `${(current / 12) * 100}%` }} /></div>
-      </div>
-      <div className="rounded-xl border bg-card p-6 text-center"><p className="text-lg font-medium">{questions[current]}</p></div>
-      <div className="grid gap-2 sm:grid-cols-5">
-        {t.scale.map((label, index) => <button key={label} onClick={() => answer(index + 1)} className="rounded-lg border bg-card px-3 py-3 text-sm transition-colors hover:border-green-400 hover:bg-green-50"><span className="block font-bold text-green-700">{index + 1}</span><span className="mt-1 block text-xs text-muted-foreground">{label}</span></button>)}
-      </div>
+      <Questionnaire
+        title={t.title}
+        subtitle={t.subtitle}
+        question={questions[current]}
+        questionLabel={t.question(current + 1)}
+        progress={Math.round((current / questions.length) * 100)}
+        options={t.scale.map((label, index) => ({ label, value: index + 1 }))}
+        selectedValue={answers[current]}
+        previousLabel={locale === "ko" ? "이전 질문" : locale === "ja" ? "前の質問" : "Previous question"}
+        onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
+        onSelect={answer}
+      />
     </div>;
   }
 

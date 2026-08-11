@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from '../shared/ShareResultButton'
 import type { Locale } from "../../i18n";
 
@@ -570,6 +571,23 @@ export default function BreakupRecoveryTest({ locale }: Props) {
   const q = QUESTIONS[current];
   const result = resultType ? RESULTS[resultType] : null;
 
+  if (!done) {
+    return (
+      <Questionnaire<string>
+        title={t.title}
+        subtitle={t.subtitle}
+        question={q.text[locale] ?? q.text.en}
+        questionLabel={t.questionOf(current + 1, QUESTIONS.length)}
+        progress={Math.round((current / QUESTIONS.length) * 100)}
+        options={q.options.map((opt) => ({
+          label: opt.text[locale] ?? opt.text.en,
+          value: opt.type,
+        }))}
+        onSelect={(value) => handleAnswer(value as RecoveryType)}
+      />
+    );
+  }
+
   return (
     <div className="space-y-6">
       <div className="text-center">
@@ -579,41 +597,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
         <p className="mt-1 text-gray-500">{t.subtitle}</p>
       </div>
 
-      {!done ? (
-        <div className="space-y-4">
-          {/* Progress */}
-          <div className="space-y-1.5">
-            <div className="flex justify-between text-sm text-gray-500">
-              <span>{t.questionOf(current + 1, QUESTIONS.length)}</span>
-              <span>{Math.round(((current) / QUESTIONS.length) * 100)}%</span>
-            </div>
-            <div className="h-2 rounded-full bg-gray-200 overflow-hidden">
-              <div
-                className="h-full rounded-full bg-gradient-to-r from-green-400 to-pink-400 transition-all duration-500"
-                style={{ width: `${(current / QUESTIONS.length) * 100}%` }}
-              />
-            </div>
-          </div>
-
-          {/* Question */}
-          <div className="rounded-2xl border border-gray-200 bg-white p-6">
-            <p className="text-lg font-semibold text-gray-900 mb-5">
-              {q.text[locale] ?? q.text.en}
-            </p>
-            <div className="space-y-3">
-              {q.options.map((opt, i) => (
-                <button
-                  key={i}
-                  onClick={() => handleAnswer(opt.type)}
-                  className="w-full rounded-xl border border-gray-200 bg-gray-50 px-4 py-3.5 text-left text-gray-800 hover:border-green-400 hover:bg-green-50 transition-all"
-                >
-                  {opt.text[locale] ?? opt.text.en}
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      ) : (
+      {(
         result && (
           <div className="space-y-4">
             {/* Result header */}

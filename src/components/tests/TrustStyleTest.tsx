@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -266,48 +267,16 @@ export default function TrustStyleTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-sm" style={{ color: 'var(--muted-foreground, #6b7280)' }}>{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs" style={{ color: 'var(--muted-foreground, #6b7280)' }}>
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div
-            role="progressbar"
-            aria-valuenow={progress}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={lb.questionOf(current + 1, questions.length)}
-            className="h-2 rounded-full overflow-hidden"
-            style={{ backgroundColor: 'var(--muted, #e5e7eb)' }}
-          >
-            <div className="h-full transition-all duration-300" style={{ width: `${progress}%`, backgroundColor: 'var(--primary, #16a34a)' }} />
-          </div>
-        </div>
-        <div className="rounded-xl border p-6 text-center" style={{ backgroundColor: 'var(--card, #fff)' }}>
-          <p className="text-lg font-bold">{q.text}</p>
-        </div>
-        <div className="grid gap-2">
-          {q.choices.map((choice, i) => (
-            <button
-              key={i}
-              onClick={() => pick(i)}
-              aria-label={choice}
-              className="w-full rounded-lg border px-4 py-3 text-left text-sm transition-colors flex items-center gap-3"
-              style={{ backgroundColor: 'var(--card, #fff)' }}
-            >
-              <span className="w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold flex-none"
-                style={{ borderColor: 'var(--primary, #16a34a)', color: 'var(--primary, #16a34a)' }}>{i + 1}</span>
-              {choice}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs" style={{ color: 'var(--muted-foreground, #6b7280)' }}>{lb.note}</p>
-      </div>
+      <Questionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={q.choices.map((choice, i) => ({ label: choice, value: i + 1 }))}
+        note={lb.note}
+        onSelect={(value) => pick(value - 1)}
+      />
     )
   }
 

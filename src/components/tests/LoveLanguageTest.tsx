@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
@@ -360,7 +361,9 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
     if (selected !== null) return
     setSelected(side)
     const chosen = side === 'a' ? pairs[current].a.lang : pairs[current].b.lang
-    const newAns = [...answers, chosen]
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const newAns = answers.slice(0, current)
+    newAns[current] = chosen
     setTimeout(() => {
       if (current + 1 >= pairs.length) setResult(calcResult(newAns))
       setAnswers(newAns)
@@ -388,36 +391,26 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
     const pair = pairs[current]
     const progress = Math.round((current / pairs.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.pairOf(current + 1, pairs.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div className="h-2 rounded-full bg-muted overflow-hidden">
-            <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <p className="text-center text-sm text-muted-foreground font-medium">{lb.chooseOne}</p>
-        <div className="grid gap-3">
-          {(['a', 'b'] as const).map((side) => {
-            const opt = pair[side]
-            return (
-              <button key={side} onClick={() => pick(side)} disabled={selected !== null}
-                className={['w-full rounded-xl border px-5 py-4 text-left text-sm transition-colors',
-                  selected === side ? 'bg-primary text-primary-foreground border-primary'
-                    : 'bg-card hover:bg-accent hover:border-primary/50',
-                  selected !== null && selected !== side ? 'opacity-50' : ''].join(' ')}>
-                {opt.text}
-              </button>
-            )
-          })}
-        </div>
-      </div>
+      <Questionnaire<'a' | 'b'>
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={lb.chooseOne}
+        questionLabel={lb.pairOf(current + 1, pairs.length)}
+        progress={progress}
+        options={(['a', 'b'] as const).map((side) => ({ label: pair[side].text, value: side }))}
+        selectedValue={
+          selected !== null
+            ? selected
+            : answers[current] === pair.a.lang
+              ? 'a'
+              : answers[current] === pair.b.lang
+                ? 'b'
+                : undefined
+        }
+        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        onPrevious={current > 0 && selected === null ? () => setCurrent(current - 1) : undefined}
+        onSelect={pick}
+      />
     )
   }
 

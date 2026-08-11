@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -701,50 +702,16 @@ export default function LearningStyleTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div
-            className="h-2 rounded-full bg-muted overflow-hidden"
-            role="progressbar"
-            aria-valuenow={progress}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={lb.questionOf(current + 1, questions.length)}
-          >
-            <div className="h-full bg-green-500 transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <div className="rounded-xl border bg-card p-6 text-center">
-          <p className="text-lg font-bold">{q.text}</p>
-        </div>
-        <div className="grid gap-2">
-          {q.options.map((opt, i) => (
-            <button
-              key={i}
-              onClick={() => pick(opt.type)}
-              aria-label={opt.text}
-              className="w-full rounded-xl border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-green-400 transition-colors flex items-center gap-3"
-            >
-              <span
-                className="w-6 h-6 rounded-full flex items-center justify-center text-xs font-bold text-white flex-none"
-                style={{ backgroundColor: STYLE_COLORS[opt.type] }}
-              >
-                {opt.type[0].toUpperCase()}
-              </span>
-              {opt.text}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-      </div>
+      <Questionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={q.options.map((opt) => ({ label: opt.text, value: opt.type }))}
+        note={lb.note}
+        onSelect={pick}
+      />
     )
   }
 

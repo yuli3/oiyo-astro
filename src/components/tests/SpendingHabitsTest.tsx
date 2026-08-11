@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -598,7 +599,9 @@ export default function SpendingHabitsTest({ locale: lp = 'ko' }: Props) {
   const [result, setResult] = useState<{ type: SpendingType; counts: Record<SpendingType, number> } | null>(null)
 
   function pick(type: SpendingType) {
-    const newAns = [...answers, type]
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const newAns = answers.slice(0, current)
+    newAns[current] = type
     if (current + 1 >= questions.length) {
       const counts: Record<SpendingType, number> = { planner: 0, impulsive: 0, experiential: 0, value: 0 }
       for (const a of newAns) counts[a]++
@@ -628,37 +631,23 @@ export default function SpendingHabitsTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div className="h-2 rounded-full bg-muted overflow-hidden">
-            <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <div className="rounded-xl border bg-card p-5">
-          <p className="text-lg font-medium text-center">{q.text}</p>
-        </div>
-        <div className="grid gap-2">
-          {q.options.map((opt, i) => (
-            <button
-              key={i}
-              onClick={() => pick(opt.type)}
-              className="w-full rounded-lg border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors"
-              aria-label={opt.text}
-            >
-              {opt.text}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-      </div>
+      <Questionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={q.options.map((opt, i) => ({ label: opt.text, value: i + 1 }))}
+        selectedValue={
+          answers[current] === undefined
+            ? undefined
+            : q.options.findIndex((opt) => opt.type === answers[current]) + 1
+        }
+        note={lb.note}
+        previousLabel={l === 'ko' ? '이전 질문' : l === 'ja' ? '前の質問' : 'Previous question'}
+        onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
+        onSelect={(value) => pick(q.options[value - 1].type)}
+      />
     )
   }
 

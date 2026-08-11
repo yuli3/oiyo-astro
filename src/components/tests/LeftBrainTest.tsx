@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
@@ -527,7 +528,9 @@ const LeftBrainTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
   const [done, setDone] = useState(false);
 
   const handleAnswer = (choice: 'a' | 'b') => {
-    const newAnswers = [...answers, choice];
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const newAnswers = answers.slice(0, current);
+    newAnswers[current] = choice;
     setAnswers(newAnswers);
     if (newAnswers.length >= QUESTIONS.length) {
       setDone(true);
@@ -636,52 +639,21 @@ const LeftBrainTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
   const progress = ((current) / total) * 100;
 
   return (
-    <div className="not-prose my-8 p-6 sm:p-10 bg-card border border-border rounded-4xl shadow-sm max-w-2xl mx-auto">
-      {/* Header */}
-      <div className="mb-8">
-        <h2 className="text-2xl font-black">{t.title}</h2>
-        <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-foreground mt-1">{t.subtitle}</p>
-      </div>
-
-      {/* Progress */}
-      <div className="mb-8">
-        <div className="flex justify-between text-xs font-bold text-muted-foreground mb-2">
-          <span>{t.progress} {current + 1} / {total}</span>
-          <span>{Math.round(progress)}%</span>
-        </div>
-        <div className="w-full h-2 rounded-full bg-muted overflow-hidden">
-          <div
-            className="h-full bg-primary rounded-full transition-all duration-300"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-      </div>
-
-      {/* Question */}
-      <div className="mb-8">
-        <p className="text-lg font-bold leading-relaxed">{q.text[locale]}</p>
-      </div>
-
-      {/* Choices */}
-      <div className="space-y-3">
-        {(['a', 'b'] as const).map(choice => (
-          <button
-            key={choice}
-            onClick={() => handleAnswer(choice)}
-            className="w-full p-5 rounded-2xl border-2 border-border bg-muted/20 hover:border-primary hover:bg-primary/5 text-left transition-all group"
-          >
-            <div className="flex gap-4 items-start">
-              <span className={`shrink-0 w-8 h-8 rounded-xl flex items-center justify-center text-xs font-black border-2 border-current transition-colors ${choice === 'a' ? 'text-blue-500' : 'text-violet-500'}`}>
-                {choice.toUpperCase()}
-              </span>
-              <p className="text-sm leading-relaxed font-medium pt-1">
-                {choice === 'a' ? q.a[locale] : q.b[locale]}
-              </p>
-            </div>
-          </button>
-        ))}
-      </div>
-    </div>
+    <Questionnaire<'a' | 'b'>
+      title={t.title}
+      subtitle={t.subtitle}
+      question={q.text[locale]}
+      questionLabel={`${t.progress} ${current + 1} / ${total}`}
+      progress={Math.round(progress)}
+      options={(['a', 'b'] as const).map(choice => ({
+        label: choice === 'a' ? q.a[locale] : q.b[locale],
+        value: choice,
+      }))}
+      selectedValue={answers[current]}
+      previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+      onPrevious={current > 0 ? () => setCurrent(c => c - 1) : undefined}
+      onSelect={handleAnswer}
+    />
   );
 };
 

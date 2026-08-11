@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 
 type Locale = 'ko' | 'en' | 'ja'
 type SensLevel = 'high' | 'moderate' | 'low'
@@ -177,7 +178,9 @@ export default function SensoryProcessingTest({ locale: lp = 'ko' }: Props) {
   function pick(val: number) {
     // val is 0-4 (index), score is 1-5
     const score = val + 1
-    const newAns = [...answers, score]
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const newAns = answers.slice(0, current)
+    newAns[current] = score
     if (current + 1 >= QUESTIONS.length) {
       const total = newAns.reduce((s, v) => s + v, 0)
       const level: SensLevel = total >= 50 ? 'high' : total >= 30 ? 'moderate' : 'low'
@@ -301,39 +304,18 @@ export default function SensoryProcessingTest({ locale: lp = 'ko' }: Props) {
   const progress = Math.round((current / QUESTIONS.length) * 100)
 
   return (
-    <div className="space-y-6">
-      <div className="text-center space-y-1">
-        <h1 className="text-2xl font-bold">{lb.title}</h1>
-        <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-      </div>
-      <div className="space-y-1">
-        <div className="flex justify-between text-xs text-muted-foreground">
-          <span>{lb.questionOf(current + 1, QUESTIONS.length)}</span>
-          <span>{progress}%</span>
-        </div>
-        <div className="h-2 rounded-full bg-muted overflow-hidden">
-          <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-        </div>
-      </div>
-      <div className="rounded-xl border bg-card p-6 text-center">
-        <p className="text-lg font-medium">{q.text[locale]}</p>
-      </div>
-      <div className="grid gap-2">
-        {lb.scaleLabels.map((label, i) => (
-          <button
-            key={i}
-            onClick={() => pick(i)}
-            aria-label={`${label} (${i + 1}점)`}
-            className="w-full rounded-lg border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-center gap-3"
-          >
-            <span className="w-6 h-6 rounded-full border-2 border-primary/30 flex items-center justify-center text-xs font-bold text-primary flex-none">
-              {i + 1}
-            </span>
-            {label}
-          </button>
-        ))}
-      </div>
-      <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-    </div>
+    <Questionnaire
+      title={lb.title}
+      subtitle={lb.subtitle}
+      question={q.text[locale]}
+      questionLabel={lb.questionOf(current + 1, QUESTIONS.length)}
+      progress={progress}
+      options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
+      selectedValue={answers[current]}
+      note={lb.note}
+      previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+      onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
+      onSelect={(value) => pick(value - 1)}
+    />
   )
 }

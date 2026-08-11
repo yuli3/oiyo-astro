@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type MoneyType = 'saver' | 'spender' | 'investor' | 'minimalist'
@@ -265,7 +266,9 @@ export default function MoneyPersonalityTest({ locale: lp = 'ko' }: Props) {
   }
 
   function pick(val: number) {
-    const newAns = [...answers, val]
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const newAns = answers.slice(0, current)
+    newAns[current] = val
     if (current + 1 >= questions.length) setResult(calcResult(newAns))
     setAnswers(newAns)
     setCurrent(current + 1)
@@ -293,47 +296,19 @@ export default function MoneyPersonalityTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div className="h-2 rounded-full bg-muted overflow-hidden">
-            <div
-              className="h-full bg-primary transition-all duration-300"
-              style={{ width: `${progress}%` }}
-              role="progressbar"
-              aria-valuenow={progress}
-              aria-valuemin={0}
-              aria-valuemax={100}
-            />
-          </div>
-        </div>
-        <div className="rounded-xl border bg-card p-6 text-center">
-          <p className="text-lg font-bold">{q.text}</p>
-        </div>
-        <div className="grid gap-2">
-          {lb.scaleLabels.map((label, i) => (
-            <button
-              key={i}
-              onClick={() => pick(i + 1)}
-              className="w-full rounded-lg border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-center gap-3"
-              aria-label={label}
-            >
-              <span className="w-6 h-6 rounded-full border-2 border-primary/30 flex items-center justify-center text-xs font-bold text-primary flex-none">
-                {i + 1}
-              </span>
-              {label}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-      </div>
+      <Questionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
+        selectedValue={answers[current]}
+        note={lb.note}
+        previousLabel={l === 'ko' ? '이전 질문' : l === 'ja' ? '前の質問' : 'Previous question'}
+        onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
+        onSelect={pick}
+      />
     )
   }
 

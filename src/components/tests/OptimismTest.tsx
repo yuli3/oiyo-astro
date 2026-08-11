@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from "../shared/ShareResultButton";
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
@@ -414,11 +415,13 @@ export default function OptimismTest({ locale: localeProp }: Props) {
   function pick(rawScore: number) {
     const q = questions[idx];
     const score = q.reverse ? 6 - rawScore : rawScore;
-    const next = [...answers, score];
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const next = answers.slice(0, idx);
+    next[idx] = score;
 
     if (next.length < questions.length) {
       setAnswers(next);
-      setTimeout(() => setIdx(next.length), 280);
+      setTimeout(() => setIdx(idx + 1), 280);
     } else {
       const total = next.reduce((a, b) => a + b, 0);
       const level = getLevel(total);
@@ -501,29 +504,20 @@ export default function OptimismTest({ locale: localeProp }: Props) {
   const q = questions[idx];
 
   return (
-    <div className="space-y-6">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">{tx.title}</h1>
-        <p className="mt-1 text-gray-500">{tx.subtitle}</p>
-        <p className="mt-2 text-xs text-gray-400">{tx.instruction}</p>
-      </div>
-      <div className="flex items-center gap-3">
-        <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-100">
-          <div className="h-full rounded-full bg-amber-400 transition-all duration-300" style={{ width: `${(idx / questions.length) * 100}%` }} />
-        </div>
-        <span className="text-sm text-gray-500">{tx.progress(idx + 1, questions.length)}</span>
-      </div>
-      <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-        <p className="mb-6 text-center text-lg font-medium text-gray-800">{q[locale]}</p>
-        <div className="grid grid-cols-5 gap-2">
-          {scoreOpts.map((opt) => (
-            <button key={opt.value} onClick={() => pick(opt.value)}
-              className="rounded-xl border border-gray-200 px-2 py-3 text-center text-xs font-medium text-gray-700 transition hover:border-amber-300 hover:bg-amber-50">
-              {opt.label}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
+    <Questionnaire
+      title={tx.title}
+      subtitle={tx.subtitle}
+      question={q[locale]}
+      questionLabel={tx.progress(idx + 1, questions.length)}
+      progress={Math.round((idx / questions.length) * 100)}
+      options={scoreOpts.map((opt) => ({ label: opt.label, value: opt.value }))}
+      selectedValue={
+        answers[idx] === undefined ? undefined : q.reverse ? 6 - answers[idx] : answers[idx]
+      }
+      note={tx.instruction}
+      previousLabel={locale === "ko" ? "이전 질문" : locale === "ja" ? "前の質問" : "Previous question"}
+      onPrevious={idx > 0 ? () => setIdx(idx - 1) : undefined}
+      onSelect={pick}
+    />
   );
 }

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -374,31 +375,15 @@ export default function AngerStyleTest({ locale: localeProp }: Props) {
 
   const s = scenarios[idx];
   return (
-    <div className="space-y-6">
-      <div className="text-center space-y-1">
-        <h1 className="text-xl font-bold text-gray-900">{t.title}</h1>
-        <p className="text-sm text-gray-500">{t.subtitle}</p>
-      </div>
-      <div className="flex justify-between items-center text-sm text-gray-500">
-        <span>{t.progress} {idx + 1} / {scenarios.length}</span>
-        <div className="w-48 bg-gray-200 rounded-full h-1.5">
-          <div className="bg-red-400 h-1.5 rounded-full" style={{ width: `${((idx + 1) / scenarios.length) * 100}%` }} />
-        </div>
-      </div>
-      <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-4 shadow-sm">
-        <p className="text-sm font-semibold text-gray-500">📍 {t.progress} {idx + 1}</p>
-        <p className="text-base font-medium text-gray-800 leading-relaxed">{s[locale]}</p>
-        <p className="text-xs text-gray-400">{t.choose}</p>
-        <div className="space-y-2">
-          {s.choices[locale].map((choice, i) => (
-            <button key={i} onClick={() => pick(i)}
-              className="w-full flex items-start gap-3 p-3 rounded-lg border border-gray-100 hover:border-red-300 hover:bg-red-50 transition-colors text-left">
-              <div className="mt-0.5 w-5 h-5 rounded-full border-2 border-gray-300 flex items-center justify-center text-xs font-bold text-gray-400 shrink-0">{i + 1}</div>
-              <span className="text-sm text-gray-700">{choice}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
+    <Questionnaire
+      title={t.title}
+      subtitle={t.subtitle}
+      question={s[locale]}
+      questionLabel={`${t.progress} ${idx + 1} / ${scenarios.length}`}
+      progress={Math.round(((idx + 1) / scenarios.length) * 100)}
+      options={s.choices[locale].map((label, i) => ({ label, value: i + 1 }))}
+      note={t.choose}
+      onSelect={(value) => pick(value - 1)}
+    />
   );
 }

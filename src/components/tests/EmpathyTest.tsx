@@ -1,4 +1,5 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
+import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -351,8 +352,6 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
   const [result, setResult] = useState<EmpathyResult | null>(null);
   const [sharedSummary, setSharedSummary] = useState(false);
   const [copied, setCopied] = useState(false);
-  const questionRef = useRef<HTMLParagraphElement>(null);
-
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const em = params.get("em") as EmpathyResult | null;
@@ -362,15 +361,13 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
     }
   }, []);
 
-  useEffect(() => {
-    if (answers.length > 0 && !result) questionRef.current?.focus();
-  }, [idx, answers.length, result]);
-
   function pick(score: number) {
-    const next = [...answers, score];
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const next = answers.slice(0, idx);
+    next[idx] = score;
     if (next.length < questions.length) {
       setAnswers(next);
-      setIdx(next.length);
+      setIdx(idx + 1);
     } else {
       const scores = scoreEmpathyAnswers(next, questions.map((q) => q.type));
       if (!scores) return;
@@ -388,8 +385,6 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
 
   function goBack() {
     if (idx === 0 || result) return;
-    const next = answers.slice(0, -1);
-    setAnswers(next);
     setIdx(idx - 1);
   }
 
@@ -550,54 +545,18 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
   const q = questions[idx];
 
   return (
-    <div className="space-y-6">
-      <div className="text-center space-y-1">
-        <h1 className="text-xl font-bold text-gray-900">{t.title}</h1>
-        <p className="text-sm text-gray-500">{t.subtitle}</p>
-      </div>
-
-      <div className="flex items-center gap-3 text-sm text-gray-500">
-        <span className="shrink-0">{t.progress} {idx + 1} / {questions.length}</span>
-        <div
-          className="h-1.5 min-w-0 flex-1 rounded-full bg-gray-200 sm:max-w-48"
-          role="progressbar"
-          aria-label={rt.progressLabel}
-          aria-valuemin={1}
-          aria-valuemax={questions.length}
-          aria-valuenow={idx + 1}
-          aria-valuetext={`${idx + 1} / ${questions.length}`}
-        >
-          <div className="bg-pink-500 h-1.5 rounded-full transition-all"
-            style={{ width: `${((idx + 1) / questions.length) * 100}%` }} />
-        </div>
-      </div>
-
-      <div className="bg-white border border-gray-200 rounded-xl p-6 space-y-5 shadow-sm">
-        <div aria-live="polite" aria-atomic="true">
-          <p ref={questionRef} tabIndex={-1} className="text-base font-medium text-gray-800 leading-relaxed focus:outline-none">{q[locale]}</p>
-        </div>
-        <p className="text-xs text-gray-400">{t.scale}</p>
-        <div className="space-y-2">
-          {scaleLabels[locale].map((label, i) => (
-            <button key={i} type="button" onClick={() => pick(i)}
-              className="min-h-11 w-full flex items-center gap-3 p-3 rounded-lg border border-gray-100 hover:border-pink-300 hover:bg-pink-50 transition-colors text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-pink-600">
-              <div className="w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center text-xs font-bold text-gray-500">
-                {i}
-              </div>
-              <span className="text-sm text-gray-700">{label}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-      {idx > 0 && (
-        <button
-          type="button"
-          onClick={goBack}
-          className="min-h-11 rounded-full px-4 py-2 text-sm font-medium text-gray-700 underline-offset-4 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-700"
-        >
-          ← {rt.back}
-        </button>
-      )}
-    </div>
+    <Questionnaire
+      title={t.title}
+      subtitle={t.subtitle}
+      question={q[locale]}
+      questionLabel={`${t.progress} ${idx + 1} / ${questions.length}`}
+      progress={Math.round(((idx + 1) / questions.length) * 100)}
+      options={scaleLabels[locale].map((label, i) => ({ label, value: i + 1 }))}
+      selectedValue={answers[idx] === undefined ? undefined : answers[idx] + 1}
+      note={t.scale}
+      previousLabel={rt.back}
+      onPrevious={idx > 0 ? goBack : undefined}
+      onSelect={(value) => pick(value - 1)}
+    />
   );
 }

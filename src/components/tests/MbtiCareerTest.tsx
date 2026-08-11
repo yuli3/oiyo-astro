@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -1073,7 +1074,9 @@ export default function MbtiCareerTest({ locale: localeProp = 'ko' }: Props) {
     return 0
   })
   const [selected, setSelected] = useState<number | null>(null)
-  const [answers, setAnswers] = useState<Partial<Score>[]>([])
+  // 고른 선택지의 인덱스를 남긴다. 점수 객체만 쌓으면 어느 항목을 골랐는지 복원할 수 없어
+  // 되돌아갔을 때 선택 표시가 되지 않는다.
+  const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ type: MBTIType; scores: Score } | null>(() => {
     if (typeof window !== 'undefined') {
       const p = new URLSearchParams(window.location.search)
@@ -1091,10 +1094,11 @@ export default function MbtiCareerTest({ locale: localeProp = 'ko' }: Props) {
   function pickOption(idx: number) {
     if (selected !== null) return
     setSelected(idx)
-    const newAnswers = [...answers, questions[current].options[idx].score]
+    const newAnswers = answers.slice(0, current)
+    newAnswers[current] = idx
     setTimeout(() => {
       if (current + 1 >= questions.length) {
-        setResult(calcMBTI(newAnswers))
+        setResult(calcMBTI(newAnswers.map((optIdx, i) => questions[i].options[optIdx].score)))
       }
       setAnswers(newAnswers)
       setCurrent(current + 1)
@@ -1128,45 +1132,20 @@ export default function MbtiCareerTest({ locale: localeProp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div className="h-2 rounded-full bg-muted overflow-hidden">
-            <div
-              className="h-full bg-primary transition-all duration-300"
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-        </div>
-        <div className="rounded-xl border bg-card p-6 text-center">
-          <p className="text-lg font-medium">{q.text}</p>
-        </div>
-        <div className="grid gap-3">
-          {q.options.map((opt, i) => (
-            <button
-              key={i}
-              onClick={() => pickOption(i)}
-              disabled={selected !== null}
-              className={[
-                'w-full rounded-lg border px-4 py-3 text-left text-sm transition-colors',
-                selected === i
-                  ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-card hover:bg-accent hover:border-primary/50',
-                selected !== null && selected !== i ? 'opacity-50' : '',
-              ].join(' ')}
-            >
-              {opt.text}
-            </button>
-          ))}
-        </div>
-      </div>
+      <Questionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={q.options.map((opt, i) => ({ label: opt.text, value: i + 1 }))}
+        selectedValue={
+          selected !== null ? selected + 1 : answers[current] === undefined ? undefined : answers[current] + 1
+        }
+        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        onPrevious={current > 0 && selected === null ? () => setCurrent(current - 1) : undefined}
+        onSelect={(value) => pickOption(value - 1)}
+      />
     )
   }
 

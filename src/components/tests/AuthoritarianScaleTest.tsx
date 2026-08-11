@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -255,38 +256,19 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
   const progress = Math.round((current / QUESTIONS.length) * 100);
 
   return (
-    <div class="space-y-6">
-      <div class="text-center">
-        <h1 class="text-2xl font-black text-slate-900">{ui.title}</h1>
-        <p class="mt-1 text-sm text-slate-500">{ui.subtitle}</p>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <div class="h-2 flex-1 rounded-full bg-slate-100">
-          <div class="h-2 rounded-full bg-slate-700 transition-all" style={{ width: `${progress}%` }} />
-        </div>
-        <span class="text-xs font-mono text-slate-400">{ui.progress(current + 1, QUESTIONS.length)}</span>
-      </div>
-
-      <div class="rounded-2xl border-2 border-slate-200 bg-white p-6">
-        <p class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
-          {DIMS[q.dim].icon} {DIMS[q.dim].name[l]}
-        </p>
-        <p class="text-base font-bold leading-relaxed text-slate-900">{q.text[l]}</p>
-      </div>
-
-      <div class="grid grid-cols-5 gap-2">
-        {SCALE[l].map((label, i) => (
-          <button
-            key={i}
-            onClick={() => choose(i + 1)}
-            class="flex flex-col items-center gap-1 rounded-xl border-2 border-slate-200 bg-white p-2 transition hover:border-slate-600 hover:bg-slate-50 active:scale-95"
-          >
-            <span class="text-lg font-black text-slate-700">{i + 1}</span>
-            <span class="text-center text-[10px] leading-tight text-slate-500">{label}</span>
-          </button>
-        ))}
-      </div>
-    </div>
+    /* 문항별 차원 배지는 Questionnaire 에 슬롯이 없어 subtitle 로 합친다.
+       배지를 그냥 버리면 사용자가 보던 정보가 사라진다. */
+    <Questionnaire
+      title={ui.title}
+      subtitle={`${ui.subtitle} · ${DIMS[q.dim].icon} ${DIMS[q.dim].name[l]}`}
+      question={q.text[l]}
+      questionLabel={ui.progress(current + 1, QUESTIONS.length)}
+      progress={progress}
+      options={SCALE[l].map((label, i) => ({ label, value: i + 1 }))}
+      selectedValue={answers[q.id]}
+      previousLabel={l === 'ko' ? '이전 질문' : l === 'ja' ? '前の質問' : 'Previous question'}
+      onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
+      onSelect={choose}
+    />
   );
 }

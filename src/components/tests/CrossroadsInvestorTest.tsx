@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -222,7 +223,6 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [current, setCurrent] = useState(0);
   const [done, setDone] = useState(false);
-  const [selected, setSelected] = useState<number | null>(null);
   // A shared/revisited result type read from the URL (?type=tech).
   const [forcedType, setForcedType] = useState<InvestorType | null>(null);
 
@@ -235,27 +235,16 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
   const total = QUESTIONS.length;
   const progress = ((current + 1) / total) * 100;
 
-  const handleAnswer = (optionIdx: number) => { setSelected(optionIdx); };
-
-  const handleNext = () => {
-    if (selected === null) return;
-    setAnswers(prev => ({ ...prev, [q.id]: selected }));
-    setSelected(null);
+  // 고르면 바로 다음 문항으로 넘어간다 — 공용 Questionnaire 와 같은 모델이라
+  // 선택 후 "다음"을 한 번 더 누르던 2단계 확인은 없앴다. 답은 문항 id 로 남으므로
+  // 뒤로 가면 고른 값이 그대로 표시된다.
+  const pick = (optionIdx: number) => {
+    setAnswers(prev => ({ ...prev, [q.id]: optionIdx }));
     if (current < total - 1) setCurrent(c => c + 1);
-    else {
-      const finalAnswers = { ...answers, [q.id]: selected };
-      setAnswers(finalAnswers);
-      setDone(true);
-    }
+    else setDone(true);
   };
 
-  const handlePrev = () => {
-    if (selected !== null) setAnswers(prev => ({ ...prev, [q.id]: selected }));
-    setSelected(null);
-    if (current > 0) setCurrent(c => c - 1);
-  };
-
-  const handleRestart = () => { setAnswers({}); setCurrent(0); setDone(false); setSelected(null); setForcedType(null); clearResultCode('type'); };
+  const handleRestart = () => { setAnswers({}); setCurrent(0); setDone(false); setForcedType(null); clearResultCode('type'); };
 
   const computeResult = (): InvestorType => {
     const totals: Record<InvestorType, number> = { geopolitical: 0, macro: 0, tech: 0, dollar: 0, balanced: 0 };
@@ -332,61 +321,20 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
   }
 
   const prevAnswer = answers[q.id];
-  const displaySelected = selected !== null ? selected : (prevAnswer !== undefined ? prevAnswer : null);
 
   return (
-    <div className="max-w-xl mx-auto space-y-6">
-      <div className="text-center">
-        <div className="text-3xl mb-2">💹</div>
-        <h1 className="text-2xl font-bold text-slate-900">{lb.title}</h1>
-        <p className="text-slate-500 text-sm mt-1">{lb.subtitle}</p>
-      </div>
-
-      <div>
-        <div className="flex justify-between text-xs text-slate-500 mb-1">
-          <span>{current + 1} / {total}</span>
-          <span>{Math.round(progress)}%</span>
-        </div>
-        <div className="w-full bg-slate-200 rounded-full h-2">
-          <div className="bg-emerald-500 h-2 rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
-        </div>
-      </div>
-
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <p className="text-lg font-semibold text-slate-800 leading-relaxed mb-6">{q.text[L]}</p>
-        <div className="space-y-3">
-          {q.options.map((opt, idx) => (
-            <button
-              key={idx}
-              onClick={() => handleAnswer(idx)}
-              className={`w-full text-left px-4 py-3 rounded-xl border-2 transition-all text-sm ${
-                displaySelected === idx
-                  ? 'border-emerald-500 bg-emerald-50 text-emerald-800 font-semibold'
-                  : 'border-slate-200 hover:border-emerald-300 hover:bg-slate-50'
-              }`}
-            >
-              <span className={`inline-block w-6 h-6 rounded-full border-2 mr-2 align-middle flex-shrink-0 ${displaySelected === idx ? 'border-emerald-500 bg-emerald-500' : 'border-slate-300'}`} />
-              {opt.text[L]}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      <div className="flex gap-3">
-        {current > 0 && (
-          <button onClick={handlePrev} className="flex-1 py-3 rounded-xl border-2 border-slate-200 text-slate-700 font-bold hover:bg-slate-50">
-            {lb.prev}
-          </button>
-        )}
-        <button
-          onClick={handleNext}
-          disabled={displaySelected === null}
-          className="flex-1 py-3 rounded-xl bg-emerald-600 text-white font-bold hover:bg-emerald-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          {current === total - 1 ? lb.submit : lb.next}
-        </button>
-      </div>
-      <p className="text-center text-xs text-slate-400">{lb.instruction}</p>
-    </div>
+    <Questionnaire
+      title={lb.title}
+      subtitle={lb.subtitle}
+      question={q.text[L]}
+      questionLabel={`${current + 1} / ${total}`}
+      progress={Math.round(progress)}
+      options={q.options.map((opt, idx) => ({ label: opt.text[L], value: idx + 1 }))}
+      selectedValue={prevAnswer === undefined ? undefined : prevAnswer + 1}
+      note={lb.instruction}
+      previousLabel={lb.prev}
+      onPrevious={current > 0 ? () => setCurrent(c => c - 1) : undefined}
+      onSelect={(value) => pick(value - 1)}
+    />
   );
 }

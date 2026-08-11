@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { Questionnaire } from "@/components/ui/questionnaire";
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
@@ -152,10 +153,12 @@ export default function ResilienceBoostTest({ locale: localeProp }: Props) {
 
   function pick(value: number) {
     const score = questions[idx].reversed ? 6 - value : value;
-    const next = [...answers, score];
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const next = answers.slice(0, idx);
+    next[idx] = score;
     if (next.length < questions.length) {
       setAnswers(next);
-      setTimeout(() => setIdx(next.length), 280);
+      setTimeout(() => setIdx(idx + 1), 280);
     } else {
       setAnswers(next);
       setShowResult(true);
@@ -238,27 +241,23 @@ export default function ResilienceBoostTest({ locale: localeProp }: Props) {
   const opts = likertOptions[locale];
 
   return (
-    <div className="space-y-6">
-      <div className="text-center">
-        <h1 className="text-2xl font-bold text-gray-900">{tx.title}</h1>
-        <p className="mt-1 text-gray-500">{tx.subtitle}</p>
-      </div>
-      <div className="flex items-center gap-3">
-        <div className="h-2 flex-1 overflow-hidden rounded-full bg-gray-100">
-          <div className="h-full rounded-full bg-green-500 transition-all duration-300" style={{ width: `${(idx / questions.length) * 100}%` }} />
-        </div>
-        <span className="text-sm text-gray-500">{tx.progress(idx + 1, questions.length)}</span>
-      </div>
-      <div className="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
-        <p className="mb-5 text-center text-lg font-medium text-gray-800">{q[locale]}</p>
-        <div className="space-y-2">
-          {opts.map((opt, i) => (
-            <button key={i} onClick={() => pick(i + 1)} className="w-full rounded-xl border border-gray-200 px-4 py-3 text-left text-sm text-gray-700 transition hover:border-green-300 hover:bg-green-50">
-              <span className="font-medium text-green-600 mr-2">{i + 1}.</span>{opt}
-            </button>
-          ))}
-        </div>
-      </div>
-    </div>
+    <Questionnaire
+      title={tx.title}
+      subtitle={tx.subtitle}
+      question={q[locale]}
+      questionLabel={tx.progress(idx + 1, questions.length)}
+      progress={Math.round((idx / questions.length) * 100)}
+      options={opts.map((label, i) => ({ label, value: i + 1 }))}
+      selectedValue={
+        answers[idx] === undefined
+          ? undefined
+          : questions[idx].reversed
+            ? 6 - answers[idx]
+            : answers[idx]
+      }
+      previousLabel={locale === "ko" ? "이전 질문" : locale === "ja" ? "前の質問" : "Previous question"}
+      onPrevious={idx > 0 ? () => setIdx(idx - 1) : undefined}
+      onSelect={pick}
+    />
   );
 }

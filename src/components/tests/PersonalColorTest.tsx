@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -1083,23 +1084,23 @@ export default function PersonalColorTest({ locale }: Props) {
     if (result) writeResultCode('type', result);
   }, [result]);
 
+  // 고르면 바로 다음 문항으로 넘어간다 — 공용 Questionnaire 와 같은 모델이라
+  // 선택 후 "다음"을 한 번 더 누르던 2단계 확인은 없앴다. 답은 문항 인덱스에 남으므로
+  // 뒤로 가면 고른 값이 그대로 표시된다.
   function selectAnswer(optIdx: number) {
     const next = [...answers];
     next[current] = optIdx;
     setAnswers(next);
-  }
-
-  function goNext() {
-    if (current < total - 1) setCurrent(current + 1);
+    if (current < total - 1) {
+      setCurrent(current + 1);
+      return;
+    }
+    setResult(calcResult(next));
+    setPhase("result");
   }
 
   function goPrev() {
     if (current > 0) setCurrent(current - 1);
-  }
-
-  function showResult() {
-    setResult(calcResult(answers));
-    setPhase("result");
   }
 
   function retake() {
@@ -1144,74 +1145,25 @@ export default function PersonalColorTest({ locale }: Props) {
 
   // ── Test ──
   if (phase === "test") {
-    const canNext = answers[current] !== null;
-    const isLast = current === total - 1;
     return (
-      <div className="space-y-5">
-        {/* Header */}
-        <div className="flex items-center justify-between">
-          <span className="text-xs font-medium text-gray-400">{ui.questionOf(current + 1, total)}</span>
-          <span className="text-xs font-medium text-gray-400">{Math.round(progress)}%</span>
-        </div>
-        {/* Progress bar */}
-        <div className="h-1.5 bg-gray-100 rounded-full overflow-hidden">
-          <div
-            className="h-full bg-indigo-500 rounded-full transition-all duration-300"
-            style={{ width: `${progress}%` }}
-          />
-        </div>
-        {/* Question */}
-        <p className="text-base font-semibold text-gray-800 leading-snug">{q.text[locale]}</p>
-        {/* Options */}
-        <div className="space-y-2">
-          {q.options.map((opt, i) => {
-            const isAnswered = answers[current] === i;
-            // Handle both string and string[] (defensive for ja edge case)
-            const txt = Array.isArray(opt.text[locale]) ? (opt.text[locale] as unknown as string[])[0] : opt.text[locale];
-            return (
-              <button
-                key={i}
-                onClick={() => selectAnswer(i)}
-                className={`w-full text-left px-4 py-3 rounded-xl border-2 text-sm transition-all ${
-                  isAnswered
-                    ? "border-indigo-500 bg-indigo-50 text-indigo-800 font-medium"
-                    : "border-gray-200 bg-white hover:border-gray-300 hover:bg-gray-50 text-gray-700"
-                }`}
-              >
-                {txt as string}
-              </button>
-            );
-          })}
-        </div>
-        {/* Navigation */}
-        <div className="flex gap-2">
-          {current > 0 && (
-            <button
-              onClick={goPrev}
-              className="flex-1 py-2.5 rounded-xl border-2 border-gray-200 text-gray-600 text-sm font-medium hover:bg-gray-50"
-            >
-              ← {ui.prevBtn}
-            </button>
-          )}
-          {!isLast ? (
-            <button
-              onClick={goNext}
-              disabled={!canNext}
-              className="flex-1 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-            >
-              {ui.nextBtn} →
-            </button>
-          ) : (
-            <button
-              onClick={showResult}
-              disabled={!canNext}
-              className="flex-1 py-2.5 rounded-xl bg-indigo-600 text-white text-sm font-semibold hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
-            >
-              {ui.resultBtn} ✨
-            </button>
-          )}
-        </div>
-      </div>
+      <Questionnaire
+        title={ui.title}
+        subtitle={ui.subtitle}
+        question={q.text[locale]}
+        questionLabel={ui.questionOf(current + 1, total)}
+        progress={Math.round(progress)}
+        options={q.options.map((opt, i) => ({
+          // ja 로케일 일부 항목이 배열로 들어오는 것을 방어한다.
+          label: (Array.isArray(opt.text[locale])
+            ? (opt.text[locale] as unknown as string[])[0]
+            : opt.text[locale]) as string,
+          value: i + 1,
+        }))}
+        selectedValue={answers[current] === null ? undefined : (answers[current] as number) + 1}
+        previousLabel={ui.prevBtn}
+        onPrevious={current > 0 ? goPrev : undefined}
+        onSelect={(value) => selectAnswer(value - 1)}
+      />
     );
   }
 

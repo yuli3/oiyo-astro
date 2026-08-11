@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip
 } from 'recharts'
@@ -960,7 +961,9 @@ export default function MbtiLoveTest({ locale = 'ko' }: Props) {
 
   const [step, setStep] = useState<'test' | 'result'>('test')
   const [current, setCurrent] = useState(0)
-  const [answers, setAnswers] = useState<Partial<Score>[]>([])
+  // 고른 선택지의 인덱스를 남긴다. 점수 객체만 쌓으면 어느 항목을 골랐는지 복원할 수 없어
+  // 되돌아갔을 때 선택 표시가 되지 않는다.
+  const [answers, setAnswers] = useState<number[]>([])
   const [selected, setSelected] = useState<number | null>(null)
   const [result, setResult] = useState<{ type: MBTIType; scores: Score } | null>(null)
   const [copied, setCopied] = useState(false)
@@ -970,7 +973,8 @@ export default function MbtiLoveTest({ locale = 'ko' }: Props) {
   function pick(idx: number) {
     if (selected !== null) return
     setSelected(idx)
-    const newAnswers = [...answers, q.options[idx].score]
+    const newAnswers = answers.slice(0, current)
+    newAnswers[current] = idx
 
     setTimeout(() => {
       if (current + 1 < questions.length) {
@@ -978,7 +982,7 @@ export default function MbtiLoveTest({ locale = 'ko' }: Props) {
         setAnswers(newAnswers)
         setSelected(null)
       } else {
-        const r = calcMBTI(newAnswers)
+        const r = calcMBTI(newAnswers.map((optIdx, i) => questions[i].options[optIdx].score))
         setResult(r)
         setStep('result')
       }
@@ -1150,29 +1154,20 @@ export default function MbtiLoveTest({ locale = 'ko' }: Props) {
         </div>
       </div>
 
-      {/* Question */}
-      <div className="space-y-4">
-        <h2 className="text-lg font-bold leading-snug">{q.text}</h2>
-        <div className="space-y-2">
-          {q.options.map((opt, idx) => (
-            <button
-              key={idx}
-              onClick={() => pick(idx)}
-              disabled={selected !== null}
-              className={[
-                'w-full text-left rounded-xl border px-5 py-4 text-sm leading-snug transition-colors',
-                selected === idx
-                  ? 'border-primary bg-primary/10 text-primary font-medium'
-                  : selected !== null
-                  ? 'border-border bg-card text-muted-foreground opacity-50'
-                  : 'border-border bg-card hover:border-primary/50 hover:bg-muted/50',
-              ].join(' ')}
-            >
-              {opt.text}
-            </button>
-          ))}
-        </div>
-      </div>
+      <Questionnaire
+        title={t.title}
+        subtitle={t.instructions}
+        question={q.text}
+        questionLabel={t.progress(current + 1, questions.length)}
+        progress={progress}
+        options={q.options.map((opt, idx) => ({ label: opt.text, value: idx + 1 }))}
+        selectedValue={
+          selected !== null ? selected + 1 : answers[current] === undefined ? undefined : answers[current] + 1
+        }
+        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        onPrevious={current > 0 && selected === null ? () => setCurrent(c => c - 1) : undefined}
+        onSelect={(value) => pick(value - 1)}
+      />
     </div>
   )
 }

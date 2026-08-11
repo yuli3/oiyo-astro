@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Questionnaire } from '@/components/ui/questionnaire';
 import type { Locale } from "../../i18n";
 
 interface Props { locale?: Locale; }
@@ -237,35 +238,17 @@ export default function LoveProfileTest({ locale = "ko" }: Props) {
   const qText = q ? (lang === "ja" ? q.ja : lang === "en" ? q.en : q.ko) : "";
 
   return (
-    <div className="max-w-xl mx-auto p-4">
-      <div className="mb-4">
-        <div className="flex justify-between text-xs text-gray-400 mb-1">
-          <span className="text-xs text-gray-500">{sectionLabel}</span>
-          <span>{ui.progress(step, total)}</span>
-        </div>
-        <div className="w-full bg-gray-100 rounded-full h-2">
-          <div className="h-2 rounded-full bg-gradient-to-r from-rose-400 to-pink-500 transition-all" style={{width:`${progress}%`}} />
-        </div>
-      </div>
-      <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-4 min-h-[90px] flex items-center">
-        <p className="text-base text-gray-800 leading-relaxed">{qText}</p>
-      </div>
-      <div className="grid grid-cols-5 gap-2 mb-4">
-        {[1,2,3,4,5].map(n => (
-          <button key={n} onClick={() => answer(n)}
-            className={`flex flex-col items-center py-3 rounded-xl border-2 transition-all
-              ${answers[q?.id] === n ? "bg-rose-600 border-rose-600 text-white scale-105" : "bg-white border-gray-100 hover:border-rose-300 text-gray-600"}`}>
-            <span className="text-lg font-bold">{n}</span>
-          </button>
-        ))}
-      </div>
-      <div className="flex gap-2">
-        {step > 1 && <button onClick={() => setStep(s => s-1)} className="flex-1 py-3 rounded-xl border border-gray-200 text-gray-600 hover:bg-gray-50">← {ui.prevBtn}</button>}
-        {step === total && <button onClick={submit} className="flex-1 py-3 rounded-xl bg-gradient-to-r from-rose-500 to-pink-600 text-white font-bold">{ui.submitBtn} →</button>}
-      </div>
-      <div className="mt-3 flex justify-between text-[10px] text-gray-400">
-        <span>1 = {ui.scale[0]}</span><span>5 = {ui.scale[4]}</span>
-      </div>
-    </div>
+    <Questionnaire
+      title={ui.title}
+      subtitle={sectionLabel}
+      question={qText}
+      questionLabel={ui.progress(step, total)}
+      progress={progress}
+      options={ui.scale.map((label, i) => ({ label, value: i + 1 }))}
+      selectedValue={q ? answers[q.id] : undefined}
+      previousLabel={ui.prevBtn}
+      onPrevious={step > 1 ? () => setStep(s => s - 1) : undefined}
+      onSelect={answer}
+    />
   );
 }

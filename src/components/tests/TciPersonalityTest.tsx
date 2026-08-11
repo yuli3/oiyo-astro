@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import { interpretTCIDeep } from '@/lib/engines/interpretation/engines/tci-deep';
 
@@ -261,16 +262,13 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
   const sl = (v: Partial<Record<'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es', string>>): string =>
     v[locale === 'cn' ? 'zh' : locale] ?? v.en ?? v.ko ?? '';
 
+  // 고르면 바로 다음 문항으로 넘어간다 — 공용 Questionnaire 와 같은 모델이라
+  // 선택 후 "다음"을 한 번 더 누르던 2단계 확인은 없앴다. 답은 문항 id 로 남으므로
+  // 뒤로 가면 고른 값이 그대로 표시된다.
   function handleAnswer(val: number) {
     setAnswers(prev => ({ ...prev, [q.id]: val }));
-  }
-
-  function handleNext() {
-    if (current < QUESTIONS.length - 1) {
-      setCurrent(c => c + 1);
-    } else {
-      setDone(true);
-    }
+    if (current < QUESTIONS.length - 1) setCurrent(c => c + 1);
+    else setDone(true);
   }
 
   function handlePrev() {
@@ -410,76 +408,20 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
   }
 
   return (
-    <div className="space-y-6">
-      <div className="text-center">
-        <h1 className="text-xl font-bold text-gray-900">{t.title}</h1>
-      </div>
-
-      {/* Progress */}
-      <div>
-        <div className="flex justify-between text-xs text-gray-500 mb-1">
-          <span>{t.q} {current + 1} {t.of} {QUESTIONS.length}</span>
-          <span>{progress}%</span>
-        </div>
-        <div className="h-2 bg-gray-200 rounded-full">
-          <div className="h-2 bg-indigo-500 rounded-full transition-all" style={{ width: `${progress}%` }} />
-        </div>
-      </div>
-
-      {/* Question card */}
-      <div className="bg-white rounded-2xl border border-gray-200 p-6 min-h-[160px]">
-        <div className="flex items-center gap-2 mb-3">
-          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-700">
-            {DIMENSIONS[q.dimension].emoji} {DIMENSIONS[q.dimension].label[locale]}
-          </span>
-        </div>
-        <p className="text-gray-800 font-medium leading-relaxed">{q.text[locale]}</p>
-      </div>
-
-      {/* Options */}
-      <div className="grid grid-cols-5 gap-2">
-        {OPTIONS.map((val, idx) => {
-          const selected = answers[q.id] === val;
-          return (
-            <button
-              key={val}
-              onClick={() => handleAnswer(val)}
-              className={`flex flex-col items-center gap-1 p-3 rounded-xl border-2 transition-colors ${
-                selected
-                  ? 'bg-indigo-600 border-indigo-600 text-white'
-                  : 'bg-white border-gray-200 text-gray-600 hover:border-indigo-300'
-              }`}
-            >
-              <span className="text-lg font-bold">{val}</span>
-              <span className="text-[10px] leading-tight text-center hidden sm:block">
-                {t.optionLabels[idx]}
-              </span>
-            </button>
-          );
-        })}
-      </div>
-      <div className="flex justify-between text-xs text-gray-400">
-        <span>{t.optionLabels[0]}</span>
-        <span>{t.optionLabels[4]}</span>
-      </div>
-
-      {/* Nav */}
-      <div className="flex gap-3">
-        <button
-          onClick={handlePrev}
-          disabled={current === 0}
-          className="flex-1 py-3 bg-gray-100 hover:bg-gray-200 disabled:opacity-40 text-gray-700 font-semibold rounded-xl transition-colors"
-        >
-          {t.prev}
-        </button>
-        <button
-          onClick={handleNext}
-          disabled={!answered}
-          className="flex-2 flex-[2] py-3 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 text-white font-semibold rounded-xl transition-colors"
-        >
-          {current === QUESTIONS.length - 1 ? t.submit : t.next}
-        </button>
-      </div>
-    </div>
+    /* 차원 배지는 Questionnaire 에 문항별 슬롯이 없어 subtitle 로 합친다.
+       배지를 그냥 버리면 사용자가 보던 정보가 사라진다. */
+    <Questionnaire
+      title={t.title}
+      subtitle={`${DIMENSIONS[q.dimension].emoji} ${DIMENSIONS[q.dimension].label[locale]}`}
+      question={q.text[locale]}
+      questionLabel={`${t.q} ${current + 1} ${t.of} ${QUESTIONS.length}`}
+      progress={progress}
+      options={OPTIONS.map((val, idx) => ({ label: t.optionLabels[idx], value: val }))}
+      selectedValue={answers[q.id]}
+      note={t.disclaimer}
+      previousLabel={t.prev}
+      onPrevious={current > 0 ? handlePrev : undefined}
+      onSelect={handleAnswer}
+    />
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -157,11 +158,11 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
   const q = QUESTIONS[current];
   const total = QUESTIONS.length;
 
+  // 고르면 바로 다음 문항으로 넘어간다 — 공용 Questionnaire 와 같은 모델이라
+  // 선택 후 "다음"을 한 번 더 누르던 2단계 확인은 없앴다. 답은 문항 id 로 남으므로
+  // 뒤로 가면 고른 값이 그대로 표시된다.
   const handleAnswer = (val: number) => {
     setAnswers(prev => ({ ...prev, [q.id]: val }));
-  };
-
-  const handleNext = () => {
     if (current < total - 1) setCurrent(c => c + 1);
     else setDone(true);
   };
@@ -272,74 +273,20 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
   }
 
   return (
-    <div className="max-w-xl mx-auto space-y-6">
-      <div className="text-center">
-        <div className="text-3xl mb-2">🧠</div>
-        <h1 className="text-2xl font-bold text-slate-900">{lb.title}</h1>
-        <p className="text-slate-500 text-sm mt-1">{lb.subtitle}</p>
-      </div>
-
-      {/* Progress bar */}
-      <div>
-        <div className="flex justify-between text-xs text-slate-500 mb-1">
-          <span>{current + 1} / {total}</span>
-          <span>{Math.round(progress)}%</span>
-        </div>
-        <div className="w-full bg-slate-200 rounded-full h-2">
-          <div className="bg-green-500 h-2 rounded-full transition-all duration-300" style={{ width: `${progress}%` }} />
-        </div>
-      </div>
-
-      {/* Dimension badge */}
-      <div className="flex justify-center">
-        <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-green-50 text-green-700 text-xs font-bold rounded-full border border-green-100">
-          {DIMENSIONS[q.dimension].icon} {DIMENSIONS[q.dimension].name[L]}
-        </span>
-      </div>
-
-      {/* Question card */}
-      <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-6">
-        <p className="text-lg font-semibold text-slate-800 text-center leading-relaxed mb-6">{q.text[L]}</p>
-
-        <div className="space-y-3">
-          {lb.scale.map((label, idx) => (
-            <button
-              key={idx}
-              onClick={() => handleAnswer(idx)}
-              className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border-2 transition-all text-left ${
-                answers[q.id] === idx
-                  ? 'border-green-500 bg-green-50 text-green-700 font-semibold'
-                  : 'border-slate-200 hover:border-green-300 hover:bg-slate-50'
-              }`}
-            >
-              <span className={`w-6 h-6 rounded-full border-2 flex-shrink-0 flex items-center justify-center ${
-                answers[q.id] === idx ? 'border-green-500 bg-green-500' : 'border-slate-300'
-              }`}>
-                {answers[q.id] === idx && <span className="w-2 h-2 bg-white rounded-full" />}
-              </span>
-              <span className="text-sm">{label}</span>
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Navigation */}
-      <div className="flex gap-3">
-        {current > 0 && (
-          <button onClick={handlePrev} className="flex-1 py-3 rounded-xl border-2 border-slate-200 text-slate-700 font-bold hover:bg-slate-50 transition-colors">
-            {lb.prev}
-          </button>
-        )}
-        <button
-          onClick={handleNext}
-          disabled={answers[q.id] === undefined}
-          className="flex-1 py-3 rounded-xl bg-green-600 text-white font-bold hover:bg-green-700 transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          {current === total - 1 ? lb.submit : lb.next}
-        </button>
-      </div>
-
-      <p className="text-center text-xs text-slate-400">{lb.instruction}</p>
-    </div>
+    /* 차원 배지는 Questionnaire 에 문항별 슬롯이 없어 subtitle 로 합친다.
+       배지를 그냥 버리면 사용자가 보던 정보가 사라진다. */
+    <Questionnaire
+      title={lb.title}
+      subtitle={`${lb.subtitle} · ${DIMENSIONS[q.dimension].icon} ${DIMENSIONS[q.dimension].name[L]}`}
+      question={q.text[L]}
+      questionLabel={`${current + 1} / ${total}`}
+      progress={Math.round(progress)}
+      options={lb.scale.map((label, idx) => ({ label, value: idx + 1 }))}
+      selectedValue={answers[q.id] === undefined ? undefined : answers[q.id] + 1}
+      note={lb.instruction}
+      previousLabel={lb.prev}
+      onPrevious={current > 0 ? handlePrev : undefined}
+      onSelect={(value) => handleAnswer(value - 1)}
+    />
   );
 }

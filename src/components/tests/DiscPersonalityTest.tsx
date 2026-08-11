@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip
 } from 'recharts'
@@ -648,7 +649,9 @@ export default function DiscPersonalityTest({ locale: lp = 'ko' }: Props) {
   function pick(idx: number) {
     if (selected !== null) return
     setSelected(idx)
-    const newAns = [...answers, questions[current].options[idx].disc]
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const newAns = answers.slice(0, current)
+    newAns[current] = questions[current].options[idx].disc
     setTimeout(() => {
       if (current + 1 >= questions.length) setResult(calcResult(newAns))
       setAnswers(newAns)
@@ -676,35 +679,24 @@ export default function DiscPersonalityTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div className="h-2 rounded-full bg-muted overflow-hidden">
-            <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <div className="rounded-xl border bg-card p-6 text-center">
-          <p className="text-lg font-medium">{q.text}</p>
-        </div>
-        <div className="grid gap-3">
-          {q.options.map((opt, i) => (
-            <button key={i} onClick={() => pick(i)} disabled={selected !== null}
-              className={['w-full rounded-lg border px-4 py-3 text-left text-sm transition-colors',
-                selected === i ? 'bg-primary text-primary-foreground border-primary'
-                  : 'bg-card hover:bg-accent hover:border-primary/50',
-                selected !== null && selected !== i ? 'opacity-50' : ''].join(' ')}>
-              {opt.text}
-            </button>
-          ))}
-        </div>
-      </div>
+      <Questionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={q.options.map((opt, i) => ({ label: opt.text, value: i + 1 }))}
+        selectedValue={
+          selected !== null
+            ? selected + 1
+            : answers[current] === undefined
+              ? undefined
+              : q.options.findIndex((opt) => opt.disc === answers[current]) + 1
+        }
+        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        onPrevious={current > 0 && selected === null ? () => setCurrent(current - 1) : undefined}
+        onSelect={(value) => pick(value - 1)}
+      />
     )
   }
 

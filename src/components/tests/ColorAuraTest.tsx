@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type Locale = 'ko' | 'en' | 'ja'
@@ -552,43 +553,16 @@ export default function ColorAuraTest({ locale: lp = 'ko' }: Props) {
     const q = QUESTIONS[current]
     const progress = Math.round((current / QUESTIONS.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, QUESTIONS.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div className="h-2 rounded-full bg-muted overflow-hidden">
-            <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <div className="rounded-xl border bg-card p-6 text-center">
-          <p className="text-lg font-medium">{q.text[locale]}</p>
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.choose}</p>
-        <div className="grid gap-2">
-          {q.options.map((opt) => (
-            <button
-              key={opt.color}
-              onClick={() => pick(opt.color)}
-              aria-label={opt.text[locale]}
-              className="w-full rounded-lg border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-center gap-3"
-            >
-              <span
-                className="w-4 h-4 rounded-full flex-none"
-                style={{ backgroundColor: AURA_DATA[opt.color][locale].hex }}
-                aria-hidden="true"
-              />
-              {opt.text[locale]}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-      </div>
+      <Questionnaire<string>
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text[locale]}
+        questionLabel={lb.questionOf(current + 1, QUESTIONS.length)}
+        progress={progress}
+        options={q.options.map((opt) => ({ label: opt.text[locale], value: opt.color }))}
+        note={lb.note}
+        onSelect={(value) => pick(value as AuraColor)}
+      />
     )
   }
 

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -223,31 +224,14 @@ export default function LazyPerfectionistTest({ locale: rawLocale = 'ko' }: Prop
   const progress = Math.round((current / questions.length) * 100)
 
   return (
-    <div className="space-y-6">
-      <div className="text-center space-y-2">
-        <h1 className="text-2xl font-black text-green-950">{labels.title}</h1>
-        <p className="text-sm text-muted-foreground">{labels.subtitle}</p>
-      </div>
-      <div className="space-y-1">
-        <div className="flex justify-between text-xs text-muted-foreground">
-          <span>{labels.progress(current + 1, questions.length)}</span>
-          <span>{progress}%</span>
-        </div>
-        <div className="h-2 rounded-full bg-muted overflow-hidden">
-          <div className="h-full bg-primary transition-all" style={{ width: `${progress}%` }} />
-        </div>
-      </div>
-      <div className="rounded-xl border bg-card p-6 text-center">
-        <p className="text-lg font-bold leading-relaxed">{question.text}</p>
-      </div>
-      <div className="grid gap-2">
-        {OPTIONS[locale].map((option, index) => (
-          <button key={option} onClick={() => pick(index)} className="rounded-xl border bg-card px-4 py-3 text-left text-sm hover:border-primary/50 hover:bg-accent">
-            <span className="mr-2 text-xs font-bold text-primary">{labels.next}</span>
-            {option}
-          </button>
-        ))}
-      </div>
-    </div>
+    <Questionnaire
+      title={labels.title}
+      subtitle={labels.subtitle}
+      question={question.text}
+      questionLabel={labels.progress(current + 1, questions.length)}
+      progress={progress}
+      options={OPTIONS[locale].map((label, index) => ({ label, value: index + 1 }))}
+      onSelect={(value) => pick(value - 1)}
+    />
   )
 }

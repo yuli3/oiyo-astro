@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import { Questionnaire } from '@/components/ui/questionnaire'
+
 type Locale = 'ko' | 'en' | 'ja'
 type Dimension = 'communication' | 'values' | 'lifestyle' | 'emotional'
 type Phase = 'self' | 'partner' | 'result'
@@ -270,8 +272,10 @@ export default function CompatibilityTest({ locale: lp = 'ko' }: Props) {
   const [dimScores, setDimScores] = useState<Record<Dimension, number> | null>(null)
 
   function pick(optIdx: number) {
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
     if (phase === 'self') {
-      const newAns = [...selfAnswers, optIdx]
+      const newAns = selfAnswers.slice(0, current)
+      newAns[current] = optIdx
       setSelfAnswers(newAns)
       if (current + 1 >= QUESTIONS.length) {
         setCurrent(0)
@@ -280,7 +284,8 @@ export default function CompatibilityTest({ locale: lp = 'ko' }: Props) {
         setCurrent(current + 1)
       }
     } else {
-      const newAns = [...partnerAnswers, optIdx]
+      const newAns = partnerAnswers.slice(0, current)
+      newAns[current] = optIdx
       setPartnerAnswers(newAns)
       if (current + 1 >= QUESTIONS.length) {
         setDimScores(calcCompatibility(selfAnswers, newAns))
@@ -288,6 +293,18 @@ export default function CompatibilityTest({ locale: lp = 'ko' }: Props) {
       } else {
         setCurrent(current + 1)
       }
+    }
+  }
+
+  // 파트너 단계 첫 문항에서 뒤로 가면 자기 단계 마지막 문항으로 돌아간다.
+  function previous() {
+    if (current > 0) {
+      setCurrent(current - 1)
+      return
+    }
+    if (phase === 'partner') {
+      setPhase('self')
+      setCurrent(QUESTIONS.length - 1)
     }
   }
 
@@ -382,43 +399,21 @@ export default function CompatibilityTest({ locale: lp = 'ko' }: Props) {
   const totalAnswered = phase === 'self' ? current : QUESTIONS.length + current
   const totalQ = QUESTIONS.length * 2
   const progress = Math.round((totalAnswered / totalQ) * 100)
+  const selected = phase === 'self' ? selfAnswers[current] : partnerAnswers[current]
 
   return (
-    <div className="space-y-6">
-      <div className="text-center space-y-1">
-        <h1 className="text-2xl font-bold">{lb.title}</h1>
-        <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        <p className="text-xs font-medium text-primary">{phaseTitle}</p>
-      </div>
-      <div className="space-y-1">
-        <div className="flex justify-between text-xs text-muted-foreground">
-          <span>{lb.questionOf(totalAnswered + 1, totalQ)}</span>
-          <span>{progress}%</span>
-        </div>
-        <div className="h-2 rounded-full bg-muted overflow-hidden">
-          <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-        </div>
-      </div>
-      <div className="rounded-xl border bg-card p-6 text-center">
-        <p className="text-lg font-medium">{qText}</p>
-      </div>
-      <p className="text-center text-xs text-muted-foreground">{lb.choose}</p>
-      <div className="grid gap-2">
-        {q.options[locale].map((opt, i) => (
-          <button
-            key={i}
-            onClick={() => pick(i)}
-            aria-label={opt}
-            className="w-full rounded-lg border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-center gap-3"
-          >
-            <span className="w-6 h-6 rounded-full border-2 border-primary/30 flex items-center justify-center text-xs font-bold text-primary flex-none">
-              {i + 1}
-            </span>
-            {opt}
-          </button>
-        ))}
-      </div>
-      <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-    </div>
+    <Questionnaire
+      title={lb.title}
+      subtitle={`${lb.subtitle} · ${phaseTitle}`}
+      question={qText}
+      questionLabel={lb.questionOf(totalAnswered + 1, totalQ)}
+      progress={progress}
+      options={q.options[locale].map((label, i) => ({ label, value: i + 1 }))}
+      selectedValue={selected === undefined ? undefined : selected + 1}
+      note={lb.note}
+      previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+      onPrevious={current > 0 || phase === 'partner' ? previous : undefined}
+      onSelect={(value) => pick(value - 1)}
+    />
   )
 }

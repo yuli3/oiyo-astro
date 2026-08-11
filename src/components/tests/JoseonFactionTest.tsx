@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import { markOntologyCoordinateRecorded } from '@/lib/ontology/progress'
 import { recordTestResult } from '@/lib/user/test-results'
 import ShareResultButton from '../shared/ShareResultButton'
@@ -319,24 +320,15 @@ export default function JoseonFactionTest({ locale }: Props) {
 
   const q = questions[current]
   return (
-    <div className="space-y-6 py-4">
-      <div className="flex items-center justify-between">
-        <span className="text-sm text-muted-foreground">{l.progress(current + 1, questions.length)}</span>
-        <div className="w-32 h-1.5 bg-muted rounded-full overflow-hidden">
-          <div className="h-full bg-primary rounded-full transition-all" style={{ width: `${((current + 1) / questions.length) * 100}%` }} />
-        </div>
-      </div>
-      <div className="text-center py-4">
-        <p className="text-lg font-semibold">{q.text}</p>
-      </div>
-      <div className="space-y-3">
-        {q.options.map(opt => (
-          <button key={opt.value} onClick={() => choose(opt.value)}
-            className="w-full text-left px-5 py-4 rounded-xl border hover:bg-accent hover:border-primary transition-all text-sm font-medium">
-            {opt.label}
-          </button>
-        ))}
-      </div>
-    </div>
+    <Questionnaire<string>
+      title={l.title}
+      subtitle={l.subtitle}
+      question={q.text}
+      questionLabel={l.progress(current + 1, questions.length)}
+      progress={Math.round(((current + 1) / questions.length) * 100)}
+      options={q.options.map((opt) => ({ label: opt.label, value: opt.value }))}
+      note={l.note}
+      onSelect={(value) => choose(value as FactionKey)}
+    />
   )
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
 import RelatedReading from '../shared/RelatedReading';
@@ -308,43 +309,19 @@ export default function NarcissismTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div
-            className="h-2 rounded-full bg-muted overflow-hidden"
-            role="progressbar"
-            aria-valuenow={progress}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={lb.questionOf(current + 1, questions.length)}
-          >
-            <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <p className="text-center text-sm font-medium text-muted-foreground">{lb.chooseOne}</p>
-        <div className="grid gap-3">
-          {(['a', 'b'] as const).map((choice) => (
-            <button
-              key={choice}
-              onClick={() => pick(choice)}
-              aria-label={choice === 'a' ? q.a : q.b}
-              className="w-full rounded-xl border bg-card px-5 py-4 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors"
-            >
-              <span className="font-bold text-primary mr-2">{choice.toUpperCase()}.</span>
-              {choice === 'a' ? q.a : q.b}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.disclaimer}</p>
-      </div>
+      <Questionnaire<'a' | 'b'>
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={lb.chooseOne}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={(['a', 'b'] as const).map((choice) => ({
+          label: choice === 'a' ? q.a : q.b,
+          value: choice,
+        }))}
+        note={lb.disclaimer}
+        onSelect={pick}
+      />
     )
   }
 

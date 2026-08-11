@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -228,7 +229,9 @@ export default function MindfulnessTest({ locale: lp = 'ko' }: Props) {
   function pick(val: number) {
     // val is index 0–5; score value is index+1 (1=Almost Always to 6=Almost Never)
     const scoreVal = val + 1
-    const newAns = [...answers, scoreVal]
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const newAns = answers.slice(0, current)
+    newAns[current] = scoreVal
     if (current + 1 >= questions.length) {
       const total = newAns.reduce((s, v) => s + v, 0)
       setResult({ level: getLevel(total), score: total })
@@ -253,50 +256,19 @@ export default function MindfulnessTest({ locale: lp = 'ko' }: Props) {
     const q = questions[current]
     const progress = Math.round((current / questions.length) * 100)
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-sm" style={{ color: 'var(--muted-foreground, #6b7280)' }}>{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs" style={{ color: 'var(--muted-foreground, #6b7280)' }}>
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div
-            role="progressbar"
-            aria-valuenow={progress}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={lb.questionOf(current + 1, questions.length)}
-            className="h-2 rounded-full overflow-hidden"
-            style={{ backgroundColor: 'var(--muted, #e5e7eb)' }}
-          >
-            <div className="h-full transition-all duration-300" style={{ width: `${progress}%`, backgroundColor: 'var(--primary, #16a34a)' }} />
-          </div>
-        </div>
-        <div className="rounded-xl border p-6 text-center" style={{ backgroundColor: 'var(--card, #fff)' }}>
-          <p className="text-lg font-bold">{q.text}</p>
-        </div>
-        <div className="grid gap-2">
-          {lb.scaleLabels.map((label, i) => (
-            <button
-              key={i}
-              onClick={() => pick(i)}
-              aria-label={label}
-              className="w-full rounded-lg border px-4 py-3 text-left text-sm transition-colors flex items-center gap-3"
-              style={{ backgroundColor: 'var(--card, #fff)' }}
-            >
-              <span
-                className="w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold flex-none"
-                style={{ borderColor: 'var(--primary, #16a34a)', color: 'var(--primary, #16a34a)' }}
-              >{i + 1}</span>
-              {label}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs" style={{ color: 'var(--muted-foreground, #6b7280)' }}>{lb.note}</p>
-      </div>
+      <Questionnaire
+        title={lb.title}
+        subtitle={lb.subtitle}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
+        selectedValue={answers[current]}
+        note={lb.note}
+        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
+        onSelect={(value) => pick(value - 1)}
+      />
     )
   }
 

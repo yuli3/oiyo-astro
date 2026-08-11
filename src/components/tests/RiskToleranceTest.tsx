@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
 type RiskLevel = 'conservative' | 'moderate' | 'balanced' | 'adventurous'
@@ -305,7 +306,9 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
   }
 
   function pick(val: number) {
-    const newAns = [...answers, val]
+    // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
+    const newAns = answers.slice(0, current)
+    newAns[current] = val
     if (current + 1 >= questions.length) setResult(calcResult(newAns))
     setAnswers(newAns)
     setCurrent(current + 1)
@@ -327,53 +330,25 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
   if (!finished) {
     const q = questions[current]
     const isFinancial = q.subscale === 'financial'
+    const riskCategoryLabel = isFinancial
+      ? locale === 'ko' ? '금융 리스크' : locale === 'ja' ? '金融リスク' : 'Financial Risk'
+      : locale === 'ko' ? '인생 리스크' : locale === 'ja' ? 'ライフリスク' : 'Life Risk'
     return (
-      <div className="space-y-6">
-        <div className="text-center space-y-1">
-          <h1 className="text-2xl font-bold">{lb.title}</h1>
-          <p className="text-muted-foreground text-sm">{lb.subtitle}</p>
-        </div>
-        <div className="space-y-1">
-          <div className="flex justify-between text-xs text-muted-foreground">
-            <span>{lb.questionOf(current + 1, questions.length)}</span>
-            <span>{progress}%</span>
-          </div>
-          <div
-            role="progressbar"
-            aria-valuenow={progress}
-            aria-valuemin={0}
-            aria-valuemax={100}
-            aria-label={lb.questionOf(current + 1, questions.length)}
-            className="h-2 rounded-full bg-muted overflow-hidden"
-          >
-            <div className="h-full bg-primary transition-all duration-300" style={{ width: `${progress}%` }} />
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <span className={`text-xs px-3 py-1 rounded-full font-bold ${isFinancial ? 'bg-green-100 text-green-700' : 'bg-green-100 text-green-700'}`}>
-            {isFinancial ? (locale === 'ko' ? '금융 리스크' : locale === 'ja' ? '金融リスク' : 'Financial Risk') : (locale === 'ko' ? '인생 리스크' : locale === 'ja' ? 'ライフリスク' : 'Life Risk')}
-          </span>
-        </div>
-        <div className="rounded-2xl border bg-card p-6 text-center">
-          <p className="text-lg font-bold">{q.text}</p>
-        </div>
-        <div className="grid gap-2">
-          {lb.scaleLabels.map((label, i) => (
-            <button
-              key={i}
-              onClick={() => pick(i)}
-              className="w-full rounded-xl border bg-card px-4 py-3 text-left text-sm hover:bg-accent hover:border-primary/50 transition-colors flex items-center gap-3"
-              aria-label={label}
-            >
-              <span className="w-6 h-6 rounded-full border-2 border-primary/30 flex items-center justify-center text-xs font-bold text-primary flex-none">
-                {i + 1}
-              </span>
-              {label}
-            </button>
-          ))}
-        </div>
-        <p className="text-center text-xs text-muted-foreground">{lb.note}</p>
-      </div>
+      /* 금융/인생 리스크 배지는 Questionnaire 에 문항별 슬롯이 없어 subtitle 로 합친다.
+         배지를 그냥 버리면 사용자가 보던 정보가 사라진다. */
+      <Questionnaire
+        title={lb.title}
+        subtitle={`${lb.subtitle} · ${riskCategoryLabel}`}
+        question={q.text}
+        questionLabel={lb.questionOf(current + 1, questions.length)}
+        progress={progress}
+        options={lb.scaleLabels.map((label, i) => ({ label, value: i + 1 }))}
+        selectedValue={answers[current] === undefined ? undefined : answers[current] + 1}
+        note={lb.note}
+        previousLabel={locale === 'ko' ? '이전 질문' : locale === 'ja' ? '前の質問' : 'Previous question'}
+        onPrevious={current > 0 ? () => setCurrent(current - 1) : undefined}
+        onSelect={(value) => pick(value - 1)}
+      />
     )
   }
 
