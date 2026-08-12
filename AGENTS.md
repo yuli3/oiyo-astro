@@ -24,7 +24,7 @@ It must not become a long-form blog or a wiki.
 3. `/Users/seuncho/coding/docs/SEO_BARE_PAGES_INVENTORY_2026-06-14.md`
 4. `/Users/seuncho/coding/docs/route-ownership.json`
 5. `/Users/seuncho/coding/docs/knowledge/topics.json`
-6. `docs/oiyo-three-domain-content-architecture.md`
+6. `/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/oiyo/docs/oiyo-three-domain-content-architecture.md`
 
 ## Working Rules
 
