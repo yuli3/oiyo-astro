@@ -10,6 +10,13 @@ permissions:
   contents: read
   checks: read
 
+# Pushes land in bursts here, and every superseded run used to build the whole
+# site to completion. Cloudflare Pages deploys from its own git integration, so
+# cancelling a run never cancels a deployment.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build-check:
     name: Build & Type Check
@@ -93,12 +100,21 @@ jobs:
       - name: Audit affiliate category/disclosure/click-payload gates
         run: npm run audit:affiliate
 
+      # sitemap-submit only reads dist/sitemap*.xml. Handing those over costs a
+      # few hundred KB and saves that job a second full site build.
+      - name: Upload sitemap XML for the submit job
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: sitemap-xml
+          path: dist/sitemap*.xml
+          retention-days: 1
+
   sitemap-submit:
     name: Submit Sitemap (GSC + Bing + IndexNow)
     runs-on: ubuntu-latest
-    # The exact-commit Cloudflare Pages gate may legitimately wait up to one
-    # hour; this job must outlive that gate plus the local build.
-    timeout-minutes: 80
+    # No build and no hour-long wait any more, so this is now a short job.
+    timeout-minutes: 20
     needs: build-check
     # Only run on pushes to main, not on PRs
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -107,28 +123,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v6
+      # IndexNow URL collection reads the sitemap XML from disk rather than
+      # HTTP-fetching the live site, which Cloudflare 403s from CI (gotcha #10).
+      # build-check already built this commit — and already ran the assessment
+      # release gates against that same dist — so take the sitemaps from it
+      # instead of building the site a second time.
+      - name: Download sitemap XML from build-check
+        uses: actions/download-artifact@v4
         with:
-          node-version: '22'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Build
-        # Produces dist/sitemap-index.xml + dist/sitemap-*.xml so IndexNow URL
-        # collection can read them from disk instead of HTTP-fetching the live
-        # site from CI (Cloudflare 403s that self-fetch — see gotcha #10).
-        # NODE_OPTIONS raises V8's old-space ceiling — the site's grown past
-        # Node's default limit on the 7GB GH-hosted runner (OOM'd at ~2GB on
-        # 2026-07-09, run 29054228016).
-        run: npm run build
-        env:
-          NODE_OPTIONS: --max-old-space-size=6144
-
-      - name: Audit assessment release gates
-        run: npm run audit:assessment-release-gates
+          name: sitemap-xml
+          path: dist
 
       - name: Setup Python
         uses: actions/setup-python@v6
@@ -139,12 +143,14 @@ jobs:
         run: pip install requests python-dotenv google-api-python-client google-auth
 
       - name: Wait for Cloudflare Pages deployment
-        # Search submission must follow the deployment for this exact commit,
-        # not a blind delay that may still leave the previous build live.
+        # Waiting up to an hour for this exact commit was 59% of the Actions
+        # bill. Five minutes covers a normal deploy; then submit regardless —
+        # the engines fetch the sitemap URL on their own schedule anyway.
+        continue-on-error: true
         run: python scripts/wait-cloudflare-check.py
         env:
           GITHUB_TOKEN: ${{ github.token }}
-          CLOUDFLARE_CHECK_TIMEOUT: "3600"
+          CLOUDFLARE_CHECK_TIMEOUT: "300"
 
       - name: Submit sitemap to all engines
         run: python scripts/sitemap-submit.py
