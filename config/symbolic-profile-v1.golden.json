@@ -1,0 +1,54 @@
+{
+  "schema": "oiyo.symbolic-profile-goldens",
+  "schemaVersion": 1,
+  "profiles": [
+    {
+      "id": "before-ipchun-2024",
+      "birth": {
+        "civilDate": "2024-02-03",
+        "civilTime": "18:00",
+        "longitude": 135,
+        "utcOffsetMinutes": 540
+      },
+      "expected": {
+        "yearPillar": "GYE-MYO",
+        "monthPillar": "EUL-CHUK",
+        "chineseZodiac": "MYO",
+        "sunSign": "aquarius",
+        "timeStatus": "known"
+      }
+    },
+    {
+      "id": "after-ipchun-2024",
+      "birth": {
+        "civilDate": "2024-02-04",
+        "civilTime": "18:00",
+        "longitude": 135,
+        "utcOffsetMinutes": 540
+      },
+      "expected": {
+        "yearPillar": "GAP-JIN",
+        "monthPillar": "BYEONG-IN",
+        "chineseZodiac": "JIN",
+        "sunSign": "aquarius",
+        "timeStatus": "known"
+      }
+    },
+    {
+      "id": "unknown-time-2000",
+      "birth": {
+        "civilDate": "2000-05-15",
+        "civilTime": null,
+        "longitude": 135,
+        "utcOffsetMinutes": 540
+      },
+      "expected": {
+        "yearPillar": "GYEONG-JIN",
+        "monthPillar": "SIN-SA",
+        "chineseZodiac": "JIN",
+        "sunSign": "taurus",
+        "timeStatus": "unknown"
+      }
+    }
+  ]
+}

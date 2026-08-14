@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "oiyo-astro",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-08-06",
+  "kv_namespaces": [
+    {
+      "binding": "SYMBOLIC_SHARE_KV",
+      "id": "cdf8ad423f7d40f0a9851b8bd8be6f3b"
+    }
+  ],
+  "env": {
+    "preview": {
+      "kv_namespaces": [
+        {
+          "binding": "SYMBOLIC_SHARE_KV",
+          "id": "3258afc189c547ccb3e73ff83cd1430a"
+        }
+      ]
+    }
+  }
+}

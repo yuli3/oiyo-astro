@@ -1,0 +1,27 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import SymbolicCompatibilityPilot from '../../../components/profile/SymbolicCompatibilityPilot';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '친구와 나의 상징 궁합 (파일럿)', description: '생년월일시로 계산한 사주·오행·음양·띠·태양궁을 네 가지 독립 관점으로 비교합니다.' },
+  en: { title: 'Symbolic Compatibility with a Friend (pilot)', description: 'Compare Saju, elements, yin-yang, Chinese zodiac, and sun signs through four independent lenses.' },
+  ja: { title: '友だちとの象徴的な相性（試験版）', description: '生年月日時から四柱・五行・陰陽・干支・太陽星座を4つの独立した視点で比較します。' },
+  zh: { title: '我和朋友的象征性合拍度（试点）', description: '根据出生日期时间，以四个独立视角比较八字、五行、阴阳、生肖与太阳星座。' },
+  fr: { title: 'Compatibilité symbolique avec un ami (pilote)', description: 'Comparez Saju, éléments, yin-yang, zodiaque chinois et signes solaires selon quatre angles indépendants.' },
+  es: { title: 'Compatibilidad simbólica con un amigo (piloto)', description: 'Compara Saju, elementos, yin-yang, zodiaco chino y signos solares desde cuatro perspectivas independientes.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale} noindex={true}>
+  <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
+    <SymbolicCompatibilityPilot client:load locale={locale} />
+  </div>
+</Layout>
