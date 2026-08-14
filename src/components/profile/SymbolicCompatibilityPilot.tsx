@@ -1,8 +1,9 @@
 "use client";
 
-import { ArrowRight, CalendarDays, Check, Link2, MapPin, RotateCcw, Share2, ShieldCheck, Sparkles, TriangleAlert } from "lucide-react";
+import { ArrowRight, CalendarDays, Check, Link2, MapPin, Network, RotateCcw, Share2, ShieldCheck, Sparkles, TriangleAlert } from "lucide-react";
 import { useEffect, useState } from "react";
 
+import SymbolicGroupSnapshotPanel from "@/components/profile/SymbolicGroupSnapshotPanel";
 import { CITIES } from "@/lib/ontology/natal/signs";
 import { resolveZonedCivilTime } from "@/lib/user/birth-record";
 import {
@@ -24,6 +25,7 @@ import {
   readEncryptedShortShare,
   type EncryptedShortShare,
 } from "@/lib/symbolic-tradition/short-share";
+import { decodeSymbolicGroupSnapshot, type SymbolicGroupSnapshot } from "@/lib/symbolic-tradition/group-snapshot";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 type PersonForm = { cityId: string; date: string; name: string; time: string };
@@ -96,6 +98,7 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
   const [a, setA] = useState<PersonForm>(INITIAL_PERSON);
   const [b, setB] = useState<PersonForm>(INITIAL_PERSON);
   const [receivedProfile, setReceivedProfile] = useState<SymbolicComparisonProfile | null>(null);
+  const [receivedGroup, setReceivedGroup] = useState<SymbolicGroupSnapshot | null>(null);
   const [shortShare, setShortShare] = useState<EncryptedShortShare | null>(null);
   const [shareState, setShareState] = useState<"copied" | "damaged" | "deleted" | "fallback" | "idle" | "loading">("idle");
   const [result, setResult] = useState<null | { a: SymbolicProfile; b: SymbolicComparisonProfile; bFull: SymbolicProfile | null; report: SymbolicCompatibilityReport }>(null);
@@ -103,6 +106,10 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
 
   useEffect(() => {
     const readFragment = async () => {
+      const groupEncoded = new URLSearchParams(window.location.hash.replace(/^#/, "")).get("group");
+      const group = groupEncoded ? decodeSymbolicGroupSnapshot(groupEncoded) : null;
+      setReceivedGroup(group);
+      if (group) return;
       const decoded = readSymbolicShareFragment(window.location.hash);
       setReceivedProfile(null);
       setShareState("idle");
@@ -177,6 +184,17 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
     }
   };
 
+  if (receivedGroup) {
+    return <main>
+      <header className="text-center">
+        <span className="inline-flex items-center gap-2 rounded-full bg-lime-100 px-3 py-1 text-xs font-black text-green-800"><Network className="h-3.5 w-3.5" />GROUP SNAPSHOT · NOINDEX</span>
+        <h1 className="mt-4 text-3xl font-black tracking-tight text-green-950 sm:text-4xl">{copy.title}</h1>
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-600">{copy.disclaimer}</p>
+      </header>
+      <SymbolicGroupSnapshotPanel initialSnapshot={receivedGroup} locale={lang} />
+    </main>;
+  }
+
   if (result) {
     const uncertain = result.a.source.timeStatus === "unknown" || result.b.fiveElements.observedCoordinates === 6;
     return <main>
@@ -217,6 +235,13 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
         {shareState === "deleted" && <p role="status" className="mt-3 inline-flex items-center gap-1 text-xs font-black text-green-800"><Check className="h-4 w-4" />{shareCopy.deleted}</p>}
         {shortShare && <button type="button" onClick={() => void deleteShortShare()} className="mt-3 min-h-11 rounded-full px-4 text-xs font-black text-red-700 underline underline-offset-4">{shareCopy.delete}</button>}
       </section>
+      <SymbolicGroupSnapshotPanel
+        initial={[
+          { label: a.name.trim() || copy.me, profile: result.a },
+          { label: receivedProfile ? copy.friend : b.name.trim() || copy.friend, profile: result.b },
+        ]}
+        locale={lang}
+      />
       <button type="button" onClick={() => setResult(null)} className="mx-auto mt-7 flex min-h-12 items-center gap-2 rounded-full border border-green-700 px-6 text-sm font-black text-green-800"><RotateCcw className="h-4 w-4" />{copy.reset}</button>
     </main>;
   }
