@@ -26,8 +26,6 @@ TARGETS = [
     "src/pages/[locale]/saju/fortune.astro",
     "src/pages/[locale]/zodiac/compatibility.astro",
     "src/pages/[locale]/zodiac/fortune.astro",
-    "src/pages/[locale]/oracle/draw.astro",
-    "src/pages/[locale]/oracle/sages.astro",
     "src/pages/[locale]/palmistry/explore.astro",
     "src/pages/[locale]/chinese-zodiac/index.astro",
     "src/pages/[locale]/chinese-zodiac/compatibility.astro",
