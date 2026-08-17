@@ -100,21 +100,24 @@ const popularTests = [
   },
 ]
 
-const oracleSectionTitle = txt({
-  ko: '오라클 카드 뽑기',
-  en: 'Oracle Card Reading',
-  ja: 'オラクルカードリーディング',
-  zh: '神谕牌占卜',
-  fr: 'Tirage Oracle',
-  es: 'Lectura Oracle',
+// 이 자리에 있던 오라클 카드 뽑기는 2026-08-17에 접었다. 타로와 하는 일이 겹쳐
+// 방문자가 둘을 구분하지 못했고, 실제로 더 쓸모 있는 쪽은 78장 타로다. 슬롯을
+// 비우는 대신 타로 데일리로 돌렸다.
+const tarotSectionTitle = txt({
+  ko: '오늘의 타로 한 장',
+  en: "Today's Tarot Card",
+  ja: '今日のタロット一枚',
+  zh: '今日塔罗一张',
+  fr: 'Votre Tarot du Jour',
+  es: 'Tu Tarot del Día',
 })
-const oracleSectionDesc = txt({
-  ko: '발타자르 그라시안의 22개 지혜 카드. 오늘 나에게 필요한 메시지를 뽑아보세요.',
-  en: '22 wisdom cards from Baltasar Gracián. Draw the message you need today.',
-  ja: 'バルタサル・グラシアンの22枚の知恵カード。今日必要なメッセージを引いてみましょう。',
-  zh: '巴尔塔萨·格拉西安的22张智慧牌。抽取你今天需要的讯息。',
-  fr: '22 cartes de sagesse de Baltasar Gracián. Tirez le message dont vous avez besoin aujourd\'hui.',
-  es: '22 cartas de sabiduría de Baltasar Gracián. Saca el mensaje que necesitas hoy.',
+const tarotSectionDesc = txt({
+  ko: '78장 정통 타로에서 오늘의 카드를 한 장. 키워드와 메시지, 오늘의 확언까지.',
+  en: 'One card from the full 78-card tarot deck — keywords, message, and an affirmation for today.',
+  ja: '78枚の本格タロットから今日の一枚。キーワードとメッセージ、今日のアファメーションまで。',
+  zh: '从78张正统塔罗中抽取今日一张 — 关键词、讯息与今日的肯定语。',
+  fr: 'Une carte du jeu complet de 78 cartes — mots-clés, message et affirmation du jour.',
+  es: 'Una carta de la baraja completa de 78 — palabras clave, mensaje y afirmación del día.',
 })
 
 const quickTests = [
@@ -212,7 +215,7 @@ const personalMap = {
       <!-- 대표 자산 빠른 진입 (오라클·존재론·타로·주기형 운세) -->
       <div class="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 max-w-2xl mx-auto">
         {[
-          { href: '/oracle/draw', icon: '✦', label: txt({ ko: '오라클 뽑기', en: 'Oracle Draw', ja: 'オラクル', zh: '神谕牌', fr: 'Oracle', es: 'Oráculo' }) },
+          
           { href: '/tarot/reading', icon: '🃏', label: txt({ ko: '타로 리딩', en: 'Tarot Reading', ja: 'タロット', zh: '塔罗牌', fr: 'Tarot', es: 'Tarot' }) },
           { href: '/ontology', icon: '🧭', label: txt({ ko: '존재론', en: 'Ontology', ja: '存在論', zh: '存在论', fr: 'Ontologie', es: 'Ontología' }) },
           { href: '/fortune/today', icon: '☀️', label: txt({ ko: '오늘의 운세', en: "Today's Fortune", ja: '今日の運勢', zh: '今日运势', fr: 'Aujourd’hui', es: 'Hoy' }) },
@@ -341,7 +344,7 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- Oracle Card Teaser -->
+  <!-- Daily Tarot Teaser -->
   <section class="relative overflow-hidden mx-4 md:mx-auto max-w-6xl rounded-3xl mb-10"
     style="background: linear-gradient(135deg, #07050d 0%, #0a0716 50%, #07050d 100%);">
     <div class="absolute inset-0 pointer-events-none opacity-50" aria-hidden="true"
@@ -361,20 +364,20 @@ const personalMap = {
       </div>
       <div class="text-center md:text-left">
         <div class="inline-block font-mono text-xs tracking-widest text-amber-400/70 uppercase mb-3">
-          ✦ {txt({ ko: '신규', en: 'New', ja: '新着', zh: '新功能', fr: 'Nouveau', es: 'Nuevo' })}
+          ✦ {txt({ ko: '매일 한 장', en: 'Daily', ja: '毎日一枚', zh: '每日一张', fr: 'Chaque jour', es: 'Cada día' })}
         </div>
         <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-100 mb-3">
-          {oracleSectionTitle}
+          {tarotSectionTitle}
         </h2>
         <p class="text-white/60 text-sm leading-relaxed max-w-md mb-6">
-          {oracleSectionDesc}
+          {tarotSectionDesc}
         </p>
         <a
-          href={localePath(locale, '/oracle/draw')}
+          href={localePath(locale, '/tarot/daily')}
           class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm text-amber-900"
           style="background: #c9a55c;"
         >
-          {txt({ ko: '카드 뽑기 →', en: 'Draw Cards →', ja: 'カードを引く →', zh: '抽牌 →', fr: 'Tirer les Cartes →', es: 'Sacar Cartas →' })}
+          {txt({ ko: '타로 카드 뽑기 →', en: 'Draw Your Card →', ja: 'タロットを引く →', zh: '抽塔罗牌 →', fr: 'Tirer ma Carte →', es: 'Sacar mi Carta →' })}
         </a>
       </div>
     </div>

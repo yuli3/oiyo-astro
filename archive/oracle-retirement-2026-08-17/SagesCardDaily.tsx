@@ -9,10 +9,7 @@ interface Props {
 
 const DECK_EMOJI: Record<string, string> = {
   '그라시안 처세': '🎴',
-  '스토아 평정': '🏛️',
-  '손자병법': '⚔️',
   '노자 도덕경': '🌿',
-  '한국 속담': '🪶',
 };
 
 const COPY: Record<Locale, {
@@ -26,7 +23,7 @@ const COPY: Record<Locale, {
 }> = {
   ko: {
     title: '오늘의 현인의 카드',
-    subtitle: '동서양 현인의 지혜 451장에서 오늘 한 장을 펼칩니다.',
+    subtitle: '동서양 현인의 지혜 318장에서 오늘 한 장을 펼칩니다.',
     todayLabel: '오늘의 카드',
     draw: '오늘의 카드 펼치기',
     redraw: '다른 카드 뽑기',
@@ -35,7 +32,7 @@ const COPY: Record<Locale, {
   },
   en: {
     title: "Today's Sage Card",
-    subtitle: 'Draw one of 451 cards of wisdom from East and West sages.',
+    subtitle: 'Draw one of 318 cards of wisdom from East and West sages.',
     todayLabel: "Today's card",
     draw: "Reveal today's card",
     redraw: 'Draw another',
@@ -44,7 +41,7 @@ const COPY: Record<Locale, {
   },
   ja: {
     title: '今日の賢者カード',
-    subtitle: '東西の賢者の知恵451枚から、今日の一枚をめくります。',
+    subtitle: '東西の賢者の知恵318枚から、今日の一枚をめくります。',
     todayLabel: '今日のカード',
     draw: '今日のカードをめくる',
     redraw: '別のカードを引く',
@@ -53,7 +50,7 @@ const COPY: Record<Locale, {
   },
   zh: {
     title: '今日贤者卡',
-    subtitle: '从东西方贤者的451张智慧卡中，翻开今天的一张。',
+    subtitle: '从东西方贤者的318张智慧卡中，翻开今天的一张。',
     todayLabel: '今日卡片',
     draw: '翻开今日卡片',
     redraw: '再抽一张',
@@ -62,7 +59,7 @@ const COPY: Record<Locale, {
   },
   fr: {
     title: 'Carte du Sage du Jour',
-    subtitle: "Tirez l'une des 451 cartes de sagesse des sages d'Orient et d'Occident.",
+    subtitle: "Tirez l'une des 318 cartes de sagesse des sages d'Orient et d'Occident.",
     todayLabel: 'Carte du jour',
     draw: 'Révéler la carte du jour',
     redraw: 'Tirer une autre',
@@ -71,7 +68,7 @@ const COPY: Record<Locale, {
   },
   es: {
     title: 'Carta del Sabio del Día',
-    subtitle: 'Saca una de las 451 cartas de sabiduría de los sabios de Oriente y Occidente.',
+    subtitle: 'Saca una de las 318 cartas de sabiduría de los sabios de Oriente y Occidente.',
     todayLabel: 'Carta del día',
     draw: 'Revelar la carta de hoy',
     redraw: 'Sacar otra',
