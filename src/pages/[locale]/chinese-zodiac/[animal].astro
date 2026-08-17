@@ -1,0 +1,282 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import { ZODIACS, ZODIAC_ORDER, type ZodiacAnimal } from '../../../components/tools/ChineseZodiac';
+
+export async function getStaticPaths() {
+  const animals = Object.keys(ZODIACS) as ZodiacAnimal[];
+  const paths: { params: { locale: string; animal: string }; props: { locale: Locale; animal: ZodiacAnimal } }[] = [];
+  for (const locale of LOCALES) {
+    for (const animal of animals) {
+      paths.push({ params: { locale, animal }, props: { locale, animal } });
+    }
+  }
+  return paths;
+}
+
+const { locale, animal } = Astro.props as { locale: Locale; animal: ZodiacAnimal };
+const z = ZODIACS[animal];
+const name = z.name[locale] ?? z.name.en;
+
+const L: Record<Locale, {
+  traitsTitle: string;
+  strengthsTitle: string;
+  weaknessesTitle: string;
+  matchTitle: string;
+  bestMatch: string;
+  worstMatch: string;
+  luckyTitle: string;
+  luckyNumbers: string;
+  luckyColors: string;
+  careerTitle: string;
+  loveTitle: string;
+  famousTitle: string;
+  yearsTitle: string;
+  otherAnimalsTitle: string;
+  calculatorCta: string;
+  disclaimer: string;
+  breadcrumbHome: string;
+  breadcrumbZodiac: string;
+  elementLabel: Record<string, string>;
+}> = {
+  ko: {
+    traitsTitle: '성격 특성', strengthsTitle: '강점', weaknessesTitle: '약점',
+    matchTitle: '궁합', bestMatch: '최고 궁합', worstMatch: '주의할 궁합',
+    luckyTitle: '행운의 상징', luckyNumbers: '행운의 숫자', luckyColors: '행운의 색',
+    careerTitle: '적성·직업', loveTitle: '연애·관계', famousTitle: '같은 띠의 유명인',
+    yearsTitle: '해당 연도', otherAnimalsTitle: '다른 띠 보기',
+    calculatorCta: '내 띠 계산하기 →',
+    disclaimer: '띠 성격 설명은 전통 상징 체계에 기반한 참고 자료이며, 개인의 성격을 단정하는 과학적 진단이 아닙니다.',
+    breadcrumbHome: '홈', breadcrumbZodiac: '띠',
+    elementLabel: { wood: '목(木)', fire: '화(火)', earth: '토(土)', metal: '금(金)', water: '수(水)' },
+  },
+  en: {
+    traitsTitle: 'Personality Traits', strengthsTitle: 'Strengths', weaknessesTitle: 'Weaknesses',
+    matchTitle: 'Compatibility', bestMatch: 'Best Match', worstMatch: 'Watch Out For',
+    luckyTitle: 'Lucky Symbols', luckyNumbers: 'Lucky Numbers', luckyColors: 'Lucky Colors',
+    careerTitle: 'Career Fit', loveTitle: 'Love & Relationships', famousTitle: 'Famous People Born in This Year',
+    yearsTitle: 'Birth Years', otherAnimalsTitle: 'Explore Other Signs',
+    calculatorCta: 'Calculate my sign →',
+    disclaimer: 'This personality description is a reference based on a traditional symbolic system, not a scientific diagnosis of individual character.',
+    breadcrumbHome: 'Home', breadcrumbZodiac: 'Chinese Zodiac',
+    elementLabel: { wood: 'Wood', fire: 'Fire', earth: 'Earth', metal: 'Metal', water: 'Water' },
+  },
+  ja: {
+    traitsTitle: '性格特性', strengthsTitle: '強み', weaknessesTitle: '弱み',
+    matchTitle: '相性', bestMatch: '最高の相性', worstMatch: '注意すべき相性',
+    luckyTitle: '幸運のシンボル', luckyNumbers: 'ラッキーナンバー', luckyColors: 'ラッキーカラー',
+    careerTitle: '適職', loveTitle: '恋愛・人間関係', famousTitle: '同じ干支の有名人',
+    yearsTitle: '生まれ年', otherAnimalsTitle: '他の干支を見る',
+    calculatorCta: '自分の干支を調べる →',
+    disclaimer: 'この性格解説は伝統的な象徴体系に基づく参考資料であり、個人の性格を断定する科学的診断ではありません。',
+    breadcrumbHome: 'ホーム', breadcrumbZodiac: '十二支',
+    elementLabel: { wood: '木', fire: '火', earth: '土', metal: '金', water: '水' },
+  },
+  zh: {
+    traitsTitle: '性格特征', strengthsTitle: '优势', weaknessesTitle: '弱点',
+    matchTitle: '生肖配对', bestMatch: '最佳配对', worstMatch: '需注意的配对',
+    luckyTitle: '幸运象征', luckyNumbers: '幸运数字', luckyColors: '幸运颜色',
+    careerTitle: '适合职业', loveTitle: '爱情与人际关系', famousTitle: '同生肖名人',
+    yearsTitle: '出生年份', otherAnimalsTitle: '查看其他生肖',
+    calculatorCta: '计算我的生肖 →',
+    disclaimer: '此性格说明基于传统象征体系，仅供参考，并非对个人性格的科学诊断。',
+    breadcrumbHome: '首页', breadcrumbZodiac: '生肖',
+    elementLabel: { wood: '木', fire: '火', earth: '土', metal: '金', water: '水' },
+  },
+  fr: {
+    traitsTitle: 'Traits de personnalité', strengthsTitle: 'Points forts', weaknessesTitle: 'Points faibles',
+    matchTitle: 'Compatibilité', bestMatch: 'Meilleure compatibilité', worstMatch: 'À surveiller',
+    luckyTitle: 'Symboles porte-bonheur', luckyNumbers: 'Chiffres porte-bonheur', luckyColors: 'Couleurs porte-bonheur',
+    careerTitle: 'Carrière', loveTitle: 'Amour et relations', famousTitle: 'Personnalités nées cette année',
+    yearsTitle: 'Années de naissance', otherAnimalsTitle: 'Explorer les autres signes',
+    calculatorCta: 'Calculer mon signe →',
+    disclaimer: "Cette description de personnalité est une référence basée sur un système symbolique traditionnel, pas un diagnostic scientifique.",
+    breadcrumbHome: 'Accueil', breadcrumbZodiac: 'Zodiaque chinois',
+    elementLabel: { wood: 'Bois', fire: 'Feu', earth: 'Terre', metal: 'Métal', water: 'Eau' },
+  },
+  es: {
+    traitsTitle: 'Rasgos de personalidad', strengthsTitle: 'Fortalezas', weaknessesTitle: 'Debilidades',
+    matchTitle: 'Compatibilidad', bestMatch: 'Mejor compatibilidad', worstMatch: 'Ten cuidado con',
+    luckyTitle: 'Símbolos de suerte', luckyNumbers: 'Números de la suerte', luckyColors: 'Colores de la suerte',
+    careerTitle: 'Aptitud profesional', loveTitle: 'Amor y relaciones', famousTitle: 'Personas famosas nacidas este año',
+    yearsTitle: 'Años de nacimiento', otherAnimalsTitle: 'Explorar otros signos',
+    calculatorCta: 'Calcular mi signo →',
+    disclaimer: 'Esta descripción de personalidad es una referencia basada en un sistema simbólico tradicional, no un diagnóstico científico.',
+    breadcrumbHome: 'Inicio', breadcrumbZodiac: 'Zodiaco chino',
+    elementLabel: { wood: 'Madera', fire: 'Fuego', earth: 'Tierra', metal: 'Metal', water: 'Agua' },
+  },
+};
+const c = L[locale] ?? L.en;
+
+function localePath(path: string) {
+  return `/${locale}${path}`;
+}
+
+const metaTitle: Record<Locale, string> = {
+  ko: `${name}띠 성격·궁합·운세 완전 해설 — ${z.chineseChar}`,
+  en: `${name} Chinese Zodiac Sign — Personality, Compatibility & Fortune`,
+  ja: `${name}年生まれ（${z.chineseChar}）完全解説 — 性格・相性・運勢`,
+  zh: `${name}年生肖完整解析（${z.chineseChar}）— 性格·配对·运势`,
+  fr: `Signe du ${name} — Personnalité, compatibilité et fortune`,
+  es: `Signo de ${name} — Personalidad, compatibilidad y fortuna`,
+};
+const metaDescription: Record<Locale, string> = {
+  ko: `${name}띠(${z.chineseChar})의 성격 특성, 강점과 약점, 궁합이 좋은 띠, 행운의 숫자·색, 어울리는 직업을 정리했습니다.`,
+  en: `A complete guide to the ${name} sign of the Chinese zodiac: personality traits, strengths, weaknesses, best compatibility, lucky numbers and colors, and career fit.`,
+  ja: `${name}年（${z.chineseChar}）生まれの性格特性、強みと弱み、相性の良い干支、ラッキーナンバー・カラー、適職をまとめました。`,
+  zh: `完整解析生肖${name}（${z.chineseChar}）：性格特征、优势与弱点、最佳配对、幸运数字与颜色、适合职业。`,
+  fr: `Un guide complet du signe ${name} du zodiaque chinois : traits de personnalité, forces, faiblesses, meilleure compatibilité, chiffres et couleurs porte-bonheur.`,
+  es: `Una guía completa del signo ${name} del zodiaco chino: rasgos de personalidad, fortalezas, debilidades, mejor compatibilidad, números y colores de la suerte.`,
+};
+const m = { title: metaTitle[locale] ?? metaTitle.en, description: metaDescription[locale] ?? metaDescription.en };
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: m.title,
+  description: m.description,
+  inLanguage: locale,
+};
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: c.breadcrumbHome, item: `https://oiyo.net/${locale}/` },
+    { '@type': 'ListItem', position: 2, name: c.breadcrumbZodiac, item: `https://oiyo.net${localePath('/chinese-zodiac/')}` },
+    { '@type': 'ListItem', position: 3, name, item: `https://oiyo.net${localePath(`/chinese-zodiac/${animal}`)}` },
+  ],
+};
+
+const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
+---
+
+<Layout title={m.title} description={m.description} locale={locale} heading={`${z.emoji} ${name} (${z.chineseChar})`} intro={m.description}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <div class="mx-auto max-w-2xl px-4 py-10">
+
+    <section class="mt-2 flex flex-wrap gap-2 text-xs font-bold text-green-700">
+      <span class="rounded-full bg-green-100 px-3 py-1">{c.elementLabel[z.element]}</span>
+      <span class="rounded-full bg-green-100 px-3 py-1">{z.yin ? '陰' : '陽'}</span>
+    </section>
+
+    <section class="mt-6">
+      <h2 class="text-xl font-bold text-green-950">{c.traitsTitle}</h2>
+      <div class="mt-3 flex flex-wrap gap-2">
+        {(z.traits[locale] ?? z.traits.en).map((t) => (
+          <span class="rounded-full border border-green-200 bg-white px-3 py-1.5 text-sm font-semibold text-green-800">{t}</span>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10 grid gap-4 sm:grid-cols-2">
+      <div>
+        <h2 class="text-lg font-bold text-green-950">{c.strengthsTitle}</h2>
+        <ul class="mt-3 space-y-2">
+          {(z.strengths[locale] ?? z.strengths.en).map((s) => (
+            <li class="flex gap-2 text-sm leading-6 text-green-800">
+              <span class="text-green-500" aria-hidden="true">✓</span><span>{s}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-lg font-bold text-green-950">{c.weaknessesTitle}</h2>
+        <ul class="mt-3 space-y-2">
+          {(z.weaknesses[locale] ?? z.weaknesses.en).map((s) => (
+            <li class="flex gap-2 text-sm leading-6 text-amber-800">
+              <span class="text-amber-500" aria-hidden="true">•</span><span>{s}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.matchTitle}</h2>
+      <div class="mt-4 grid gap-3 sm:grid-cols-2">
+        <div class="rounded-xl border border-green-200 bg-green-50 p-4">
+          <p class="text-xs font-bold uppercase tracking-widest text-green-700">{c.bestMatch}</p>
+          <p class="mt-2 flex flex-wrap gap-2">
+            {z.bestMatch.map((a) => (
+              <a href={localePath(`/chinese-zodiac/${a}`)} class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-green-800 hover:bg-green-100">
+                {ZODIACS[a].emoji} {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
+              </a>
+            ))}
+          </p>
+        </div>
+        <div class="rounded-xl border border-amber-200 bg-amber-50 p-4">
+          <p class="text-xs font-bold uppercase tracking-widest text-amber-700">{c.worstMatch}</p>
+          <p class="mt-2 flex flex-wrap gap-2">
+            {z.worstMatch.map((a) => (
+              <a href={localePath(`/chinese-zodiac/${a}`)} class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-amber-800 hover:bg-amber-100">
+                {ZODIACS[a].emoji} {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
+              </a>
+            ))}
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.careerTitle}</h2>
+      <p class="mt-3 leading-8 text-green-800">{z.career[locale] ?? z.career.en}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.loveTitle}</h2>
+      <p class="mt-3 leading-8 text-green-800">{z.love[locale] ?? z.love.en}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.luckyTitle}</h2>
+      <div class="mt-3 flex flex-wrap gap-4 text-sm">
+        <p><span class="font-semibold text-green-950">{c.luckyNumbers}:</span> {z.luckyNumbers.join(', ')}</p>
+        <p><span class="font-semibold text-green-950">{c.luckyColors}:</span> {(z.luckyColors[locale] ?? z.luckyColors.en).join(', ')}</p>
+      </div>
+    </section>
+
+    {z.famous.length > 0 && (
+      <section class="mt-10">
+        <h2 class="text-xl font-bold text-green-950">{c.famousTitle}</h2>
+        <p class="mt-3 text-sm leading-7 text-green-800">{z.famous.join(' · ')}</p>
+      </section>
+    )}
+
+    <section class="mt-6">
+      <h2 class="text-sm font-bold text-green-950">{c.yearsTitle}</h2>
+      <p class="mt-2 text-sm text-green-700">{z.years.join(', ')}</p>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+
+    <div class="mt-8 text-center">
+      <a
+        href={localePath('/chinese-zodiac/')}
+        class="inline-flex items-center gap-1 rounded-full bg-green-800 px-6 py-3 text-sm font-bold text-white hover:bg-green-900"
+      >
+        {c.calculatorCta}
+      </a>
+    </div>
+
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-lg font-bold text-green-950">{c.otherAnimalsTitle}</h2>
+      <div class="mt-4 grid grid-cols-4 gap-2">
+        {otherAnimals.map((a) => (
+          <a
+            href={localePath(`/chinese-zodiac/${a}`)}
+            class="rounded-lg border border-green-100 bg-white px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-green-50"
+          >
+            {ZODIACS[a].emoji} {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <MysticTrinity topic="chinese-zodiac" locale={locale} />
+    <MentalBoost locale={locale} />
+  </div>
+</Layout>

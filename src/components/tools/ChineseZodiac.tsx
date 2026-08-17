@@ -7,13 +7,13 @@ interface Props {
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
-type ZodiacAnimal =
+export type ZodiacAnimal =
   | "rat" | "ox" | "tiger" | "rabbit" | "dragon" | "snake"
   | "horse" | "goat" | "monkey" | "rooster" | "dog" | "pig";
 
 type Element = "wood" | "fire" | "earth" | "metal" | "water";
 
-interface ZodiacData {
+export interface ZodiacData {
   animal: ZodiacAnimal;
   emoji: string;
   chineseChar: string;
@@ -236,7 +236,7 @@ const ELEMENT_COLORS: Record<Element, { bg: string; text: string; badge: string;
 
 // ─── Zodiac data ──────────────────────────────────────────────────────────────
 
-const ZODIAC_ORDER: ZodiacAnimal[] = [
+export const ZODIAC_ORDER: ZodiacAnimal[] = [
   "rat","ox","tiger","rabbit","dragon","snake",
   "horse","goat","monkey","rooster","dog","pig"
 ];
@@ -255,7 +255,7 @@ function getElementFromYear(year: number): Element {
   return elements[idx];
 }
 
-const ZODIACS: Record<ZodiacAnimal, ZodiacData> = {
+export const ZODIACS: Record<ZodiacAnimal, ZodiacData> = {
   rat: {
     animal: "rat",
     emoji: "🐭",

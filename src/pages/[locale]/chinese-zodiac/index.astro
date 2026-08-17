@@ -5,6 +5,7 @@ import RelatedTools from '../../../components/shared/RelatedTools.astro';
 import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import ChineseZodiac from '../../../components/tools/ChineseZodiac';
+import { ZODIACS, ZODIAC_ORDER } from '../../../components/tools/ChineseZodiac';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -406,6 +407,11 @@ const content: Record<Locale, {
 
 const c = content[locale] ?? content.en;
 
+const browseAllTitle: Record<Locale, string> = {
+  ko: '12띠 전체 보기', en: 'Browse All 12 Signs', ja: '十二支をすべて見る',
+  zh: '查看全部十二生肖', fr: 'Explorer les 12 signes', es: 'Explorar los 12 signos',
+};
+
 const webApplicationJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
@@ -437,6 +443,22 @@ const faqJsonLd = {
   <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-2xl px-4 py-10">
     <ChineseZodiac client:load locale={locale} />
+
+    <section class="mt-10">
+      <h2 class="text-lg font-bold text-violet-950">{browseAllTitle[locale] ?? browseAllTitle.en}</h2>
+      <div class="mt-4 grid grid-cols-3 gap-2 sm:grid-cols-4">
+        {ZODIAC_ORDER.map((animal) => (
+          <a
+            href={`/${locale}/chinese-zodiac/${animal}`}
+            class="flex flex-col items-center gap-1 rounded-xl border border-violet-100 bg-white px-2 py-3 text-center hover:border-violet-300 hover:bg-violet-50"
+          >
+            <span class="text-2xl" aria-hidden="true">{ZODIACS[animal].emoji}</span>
+            <span class="text-xs font-bold text-violet-900">{ZODIACS[animal].name[locale] ?? ZODIACS[animal].name.en}</span>
+          </a>
+        ))}
+      </div>
+    </section>
+
     <RelatedTools locale={locale} tools={['fortunePeriodic', 'saju', 'natal', 'zodiac']} current="chineseZodiac" />
 
     <section class="mt-10 border-t border-violet-100 pt-8">
