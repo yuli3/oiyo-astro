@@ -398,6 +398,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
         <ResultNextSteps
           locale={l}
           links={[
+            { href: `/${l}/mbti/${mbtiType.toLowerCase()}`, label: l === 'ko' ? `🧭 ${mbtiType} 완전 해설 보기` : `🧭 Read the full ${mbtiType} guide` },
             { href: `https://wiki.oiyo.net/ko/mbti-dict-${mbtiType.toLowerCase()}/`, label: `📖 ${mbtiType} 유형 사전`, external: true, locales: ['ko'] },
             { href: `/${l}/mbti/hobbies`, label: l === 'ko' ? `✨ ${mbtiType} 추천 취미` : `✨ ${mbtiType} hobbies` },
             { href: `https://blog.oiyo.net/${l}/mbti-compatibility/`, label: l === 'ko' ? '💞 유형 궁합 보기' : '💞 Type compatibility', external: true },

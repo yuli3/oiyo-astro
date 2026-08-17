@@ -1,0 +1,269 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import MentalBoost from '../../../components/shared/MentalBoost.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import { MBTI_DEEP_DATA, COGNITIVE_FUNCTIONS } from '../../../lib/engines/interpretation/shards/mbti-deep-shards';
+import { TYPE_PROFILES } from '../../../components/tests/MbtiPersonalityTest';
+import type { SixLangString } from '../../../lib/engines/interpretation/engine.contract';
+
+const COGNITIVE_STACK_BY_TYPE: Record<string, [string, string, string, string]> = {
+  ISTJ: ['Si', 'Te', 'Fi', 'Ne'], ISFJ: ['Si', 'Fe', 'Ti', 'Ne'],
+  INFJ: ['Ni', 'Fe', 'Ti', 'Se'], INTJ: ['Ni', 'Te', 'Fi', 'Se'],
+  ISTP: ['Ti', 'Se', 'Ni', 'Fe'], ISFP: ['Fi', 'Se', 'Ni', 'Te'],
+  INFP: ['Fi', 'Ne', 'Si', 'Te'], INTP: ['Ti', 'Ne', 'Si', 'Fe'],
+  ESTP: ['Se', 'Ti', 'Fe', 'Ni'], ESFP: ['Se', 'Fi', 'Te', 'Ni'],
+  ENFP: ['Ne', 'Fi', 'Te', 'Si'], ENTP: ['Ne', 'Ti', 'Fe', 'Si'],
+  ESTJ: ['Te', 'Si', 'Ne', 'Fi'], ESFJ: ['Fe', 'Si', 'Ne', 'Ti'],
+  ENFJ: ['Fe', 'Ni', 'Se', 'Ti'], ENTJ: ['Te', 'Ni', 'Se', 'Fi'],
+};
+
+export async function getStaticPaths() {
+  const types = Object.keys(MBTI_DEEP_DATA) as (keyof typeof MBTI_DEEP_DATA)[];
+  const paths: { params: { locale: string; type: string }; props: { locale: Locale; type: string } }[] = [];
+  for (const locale of LOCALES) {
+    for (const type of types) {
+      paths.push({ params: { locale, type: type.toLowerCase() }, props: { locale, type } });
+    }
+  }
+  return paths;
+}
+
+const { locale, type } = Astro.props as { locale: Locale; type: string };
+const data = MBTI_DEEP_DATA[type as keyof typeof MBTI_DEEP_DATA];
+const profile = TYPE_PROFILES[type as keyof typeof TYPE_PROFILES];
+const stack = COGNITIVE_STACK_BY_TYPE[type];
+
+function t(s: SixLangString): string {
+  return s[locale] ?? s.en;
+}
+const typeName = locale === 'ko' ? profile.ko : profile.en;
+
+const L: Record<Locale, {
+  cognitiveStackTitle: string;
+  worldviewTitle: string;
+  strengthsTitle: string;
+  challengesTitle: string;
+  growthTitle: string;
+  lifeTitle: string;
+  otherTypesTitle: string;
+  testCta: string;
+  disclaimer: string;
+  breadcrumbHome: string;
+  breadcrumbMbti: string;
+}> = {
+  ko: {
+    cognitiveStackTitle: '인지기능 스택',
+    worldviewTitle: '세상을 보는 방식',
+    strengthsTitle: '강점',
+    challengesTitle: '주의할 점',
+    growthTitle: '성장 방향',
+    lifeTitle: '삶과 관계에 미치는 영향',
+    otherTypesTitle: '다른 유형 보기',
+    testCta: '내 MBTI 유형 확인하기 →',
+    disclaimer: '이 설명은 자기 이해를 돕는 참고 자료이며, 공식 MBTI 진단이나 채용·진로의 단정적 근거로 사용하지 마세요.',
+    breadcrumbHome: '홈',
+    breadcrumbMbti: 'MBTI',
+  },
+  en: {
+    cognitiveStackTitle: 'Cognitive Function Stack',
+    worldviewTitle: 'How This Type Sees the World',
+    strengthsTitle: 'Strengths',
+    challengesTitle: 'Common Challenges',
+    growthTitle: 'Growth Path',
+    lifeTitle: 'Life & Relationship Implications',
+    otherTypesTitle: 'Explore Other Types',
+    testCta: 'Find your MBTI type →',
+    disclaimer: 'This description is a reference for self-understanding. Do not use it as a formal MBTI diagnosis or as a definitive basis for hiring or career decisions.',
+    breadcrumbHome: 'Home',
+    breadcrumbMbti: 'MBTI',
+  },
+  ja: {
+    cognitiveStackTitle: '認知機能スタック',
+    worldviewTitle: 'この型が世界を見る方法',
+    strengthsTitle: '強み',
+    challengesTitle: '気をつけたい点',
+    growthTitle: '成長の方向',
+    lifeTitle: '人生と人間関係への影響',
+    otherTypesTitle: '他のタイプを見る',
+    testCta: '自分のMBTIタイプを調べる →',
+    disclaimer: 'この説明は自己理解のための参考資料です。正式なMBTI診断や採用・進路の断定的な根拠として使用しないでください。',
+    breadcrumbHome: 'ホーム',
+    breadcrumbMbti: 'MBTI',
+  },
+  zh: {
+    cognitiveStackTitle: '认知功能栈',
+    worldviewTitle: '这个类型如何看世界',
+    strengthsTitle: '优势',
+    challengesTitle: '需要注意的地方',
+    growthTitle: '成长方向',
+    lifeTitle: '对生活与人际关系的影响',
+    otherTypesTitle: '查看其他类型',
+    testCta: '测出我的MBTI类型 →',
+    disclaimer: '此说明仅供自我理解参考，请勿作为正式MBTI诊断或招聘、职业决策的决定性依据。',
+    breadcrumbHome: '首页',
+    breadcrumbMbti: 'MBTI',
+  },
+  fr: {
+    cognitiveStackTitle: 'Pile de fonctions cognitives',
+    worldviewTitle: 'Comment ce type voit le monde',
+    strengthsTitle: 'Points forts',
+    challengesTitle: 'Points de vigilance',
+    growthTitle: 'Piste de développement',
+    lifeTitle: 'Implications pour la vie et les relations',
+    otherTypesTitle: 'Explorer les autres types',
+    testCta: 'Découvrir mon type MBTI →',
+    disclaimer: "Cette description est une référence pour la connaissance de soi. Ne l'utilisez pas comme un diagnostic MBTI formel ni comme base décisive pour le recrutement ou la carrière.",
+    breadcrumbHome: 'Accueil',
+    breadcrumbMbti: 'MBTI',
+  },
+  es: {
+    cognitiveStackTitle: 'Pila de funciones cognitivas',
+    worldviewTitle: 'Cómo ve el mundo este tipo',
+    strengthsTitle: 'Fortalezas',
+    challengesTitle: 'Puntos a cuidar',
+    growthTitle: 'Camino de crecimiento',
+    lifeTitle: 'Implicaciones para la vida y las relaciones',
+    otherTypesTitle: 'Explorar otros tipos',
+    testCta: 'Descubre mi tipo MBTI →',
+    disclaimer: 'Esta descripción es una referencia para el autoconocimiento. No la uses como diagnóstico MBTI formal ni como base decisiva para contratación o carrera.',
+    breadcrumbHome: 'Inicio',
+    breadcrumbMbti: 'MBTI',
+  },
+};
+const c = L[locale] ?? L.en;
+
+const metaTitle: Record<Locale, string> = {
+  ko: `${type} (${profile.ko}) 완전 해설 — 인지기능·강점·성장 방향`,
+  en: `${type} (${profile.en}) Explained — Cognitive Functions, Strengths & Growth`,
+  ja: `${type}（${profile.en}）完全解説 — 認知機能・強み・成長`,
+  zh: `${type}（${profile.en}）完整解析 — 认知功能·优势·成长方向`,
+  fr: `${type} (${profile.en}) expliqué — fonctions cognitives, forces et croissance`,
+  es: `${type} (${profile.en}) explicado — funciones cognitivas, fortalezas y crecimiento`,
+};
+const metaDescription: Record<Locale, string> = {
+  ko: `${type} 유형의 인지기능 스택(Dominant~Inferior), 강점과 주의할 점, 성장 방향을 정리했습니다.`,
+  en: `A deep dive into the ${type} personality type: cognitive function stack, strengths, challenges, and growth path.`,
+  ja: `${type}タイプの認知機能スタック、強み、注意点、成長の方向をまとめました。`,
+  zh: `深入解析${type}人格类型：认知功能栈、优势、挑战与成长方向。`,
+  fr: `Une analyse approfondie du type ${type} : pile de fonctions cognitives, forces, défis et croissance.`,
+  es: `Un análisis profundo del tipo ${type}: pila de funciones cognitivas, fortalezas, desafíos y crecimiento.`,
+};
+const m = { title: metaTitle[locale] ?? metaTitle.en, description: metaDescription[locale] ?? metaDescription.en };
+
+function localePath(path: string) {
+  return `/${locale}${path}`;
+}
+
+const cognitiveStack = stack.map((code, i) => ({
+  role: ['dominant', 'auxiliary', 'tertiary', 'inferior'][i],
+  code,
+  name: t(COGNITIVE_FUNCTIONS[code].name),
+  narrative: t(COGNITIVE_FUNCTIONS[code].narrative),
+}));
+
+const otherTypes = (Object.keys(MBTI_DEEP_DATA) as (keyof typeof MBTI_DEEP_DATA)[]).filter((x) => x !== type);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: m.title,
+  description: m.description,
+  inLanguage: locale,
+};
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: c.breadcrumbHome, item: `https://oiyo.net/${locale}/` },
+    { '@type': 'ListItem', position: 2, name: c.breadcrumbMbti, item: `https://oiyo.net${localePath('/mbti/test')}` },
+    { '@type': 'ListItem', position: 3, name: type, item: `https://oiyo.net${localePath(`/mbti/${type.toLowerCase()}`)}` },
+  ],
+};
+---
+
+<Layout title={m.title} description={m.description} locale={locale} heading={`${profile.emoji} ${type} — ${typeName}`} intro={t(data.typeNarrative)}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+  <div class="mx-auto max-w-2xl px-4 py-10">
+
+    <section class="mt-2">
+      <h2 class="text-xl font-bold text-green-950">{c.worldviewTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{t(data.worldview)}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.cognitiveStackTitle}</h2>
+      <div class="mt-4 grid gap-3">
+        {cognitiveStack.map((f) => (
+          <article class="rounded-xl border border-green-100 bg-white p-4">
+            <p class="text-[10px] font-bold uppercase tracking-widest text-green-600">{f.role}</p>
+            <h3 class="mt-1 font-semibold text-green-950">{f.code} — {f.name}</h3>
+            <p class="mt-2 text-sm leading-6 text-green-700">{f.narrative}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.strengthsTitle}</h2>
+      <ul class="mt-4 space-y-2">
+        {data.strengths.map((s) => (
+          <li class="flex gap-2 text-sm leading-6 text-green-800">
+            <span class="text-green-500" aria-hidden="true">✓</span>
+            <span>{t(s)}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.challengesTitle}</h2>
+      <ul class="mt-4 space-y-2">
+        {data.challenges.map((s) => (
+          <li class="flex gap-2 text-sm leading-6 text-amber-800">
+            <span class="text-amber-500" aria-hidden="true">•</span>
+            <span>{t(s)}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.growthTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{t(data.growthPath)}</p>
+    </section>
+
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-green-950">{c.lifeTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{t(data.lifeImplications)}</p>
+    </section>
+
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+
+    <div class="mt-8 text-center">
+      <a
+        href={localePath('/mbti/test')}
+        class="inline-flex items-center gap-1 rounded-full bg-green-800 px-6 py-3 text-sm font-bold text-white hover:bg-green-900"
+      >
+        {c.testCta}
+      </a>
+    </div>
+
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-lg font-bold text-green-950">{c.otherTypesTitle}</h2>
+      <div class="mt-4 grid grid-cols-4 gap-2">
+        {otherTypes.map((ot) => (
+          <a
+            href={localePath(`/mbti/${ot.toLowerCase()}`)}
+            class="rounded-lg border border-green-100 bg-white px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-green-50"
+          >
+            {TYPE_PROFILES[ot as keyof typeof TYPE_PROFILES].emoji} {ot}
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <MentalBoost locale={locale} />
+  </div>
+</Layout>
