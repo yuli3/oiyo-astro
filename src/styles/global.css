@@ -27,6 +27,15 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
+  /* Categorical series — for places where colour carries information (blood
+     types, elements, chart series). Anchored to the olive/green primary and
+     stepped by hue and lightness so five categories stay distinguishable
+     without any of them reading as a second brand theme. */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -80,6 +89,11 @@
   --border: oklch(0.93 0.007 106.5);
   --input: oklch(0.93 0.007 106.5);
   --ring: oklch(0.737 0.021 106.9);
+  --chart-1: oklch(0.523 0.101 122);
+  --chart-2: oklch(0.606 0.094 146);
+  --chart-3: oklch(0.664 0.101 96);
+  --chart-4: oklch(0.446 0.075 134);
+  --chart-5: oklch(0.706 0.062 112);
   --radius: 0.625rem;
 }
 

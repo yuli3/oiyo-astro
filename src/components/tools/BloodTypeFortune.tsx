@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import type { Locale } from "../../i18n";
+import { useUserStore } from "@/lib/user/store/user-store";
 
 interface Props {
   locale: Locale;
@@ -804,11 +805,24 @@ export default function BloodTypeFortune({ locale }: Props) {
   const ui = UI[locale] ?? UI.en;
   const names = BLOOD_TYPE_NAMES[locale] ?? BLOOD_TYPE_NAMES.en;
   const [selected, setSelected] = useState<BloodType | null>(null);
+  const storedBloodType = useUserStore((state) => state.profile.bloodType);
+  const setProfile = useUserStore((state) => state.setProfile);
   const [result, setResult] = useState<FortuneResult | null>(null);
+
+  // Choosing a blood type is this tool's whole interaction, so the buttons
+  // stay. What changes is that the answer no longer dies here: a blood type
+  // already in the profile arrives selected, and a new pick is written back so
+  // the next tool does not ask again.
+  useEffect(() => {
+    if (!selected && storedBloodType && (BLOOD_TYPES as string[]).includes(storedBloodType)) {
+      handleSelect(storedBloodType as BloodType);
+    }
+  }, [storedBloodType]);
 
   function handleSelect(bt: BloodType) {
     setSelected(bt);
     setResult(generateFortune(bt, locale));
+    if (storedBloodType !== bt) setProfile({ bloodType: bt });
   }
 
   function handleReset() {

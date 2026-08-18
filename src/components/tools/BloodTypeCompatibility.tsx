@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useUserStore } from "@/lib/user/store/user-store";
 import type { Locale } from "../../i18n";
 
 interface Props {
@@ -704,6 +705,19 @@ function getScoreColor(score: number): string {
 
 export default function BloodTypeCompatibility({ locale }: Props) {
   const [type1, setType1] = useState<BloodType | "">("");
+  const storedBloodType = useUserStore((state) => state.profile.bloodType);
+  const setProfile = useUserStore((state) => state.setProfile);
+
+  // Only the first slot is the visitor; the second is whoever they are
+  // comparing against, so it is never prefilled or written back.
+  useEffect(() => {
+    if (!type1 && storedBloodType) setType1(storedBloodType as BloodType);
+  }, [storedBloodType]);
+
+  const chooseMine = (t: BloodType) => {
+    setType1(t);
+    if (storedBloodType !== t) setProfile({ bloodType: t });
+  };
   const [type2, setType2] = useState<BloodType | "">("");
   const [result, setResult] = useState<CompatData | null>(null);
 
@@ -739,7 +753,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
                 {TYPES.map((t) => (
                   <button
                     key={t}
-                    onClick={() => setType1(t)}
+                    onClick={() => chooseMine(t)}
                     className={`py-2 rounded-lg text-sm font-bold border transition-all ${
                       type1 === t
                         ? "bg-red-500 text-white border-red-500"

@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useUserStore } from "@/lib/user/store/user-store";
 import type { Locale } from "../../i18n";
 
 interface Props {
@@ -129,9 +130,9 @@ interface TypeData {
 const TYPE_DATA: Record<BloodType, TypeData> = {
   A: {
     emoji: "🌸",
-    color: "text-rose-700",
-    bg: "bg-rose-50",
-    border: "border-rose-200",
+    color: "text-chart-1",
+    bg: "bg-chart-1/10",
+    border: "border-chart-1/30",
     description: {
       ko: "A형은 꼼꼼하고 책임감이 강한 완벽주의자입니다. 규칙과 질서를 중시하며, 타인의 감정에 세심하게 반응합니다.",
       en: "Type A individuals are meticulous perfectionists with a strong sense of responsibility. They value rules and order, and are highly sensitive to others' emotions.",
@@ -181,9 +182,9 @@ const TYPE_DATA: Record<BloodType, TypeData> = {
   },
   B: {
     emoji: "🔥",
-    color: "text-orange-700",
-    bg: "bg-orange-50",
-    border: "border-orange-200",
+    color: "text-chart-3",
+    bg: "bg-chart-3/10",
+    border: "border-chart-3/30",
     description: {
       ko: "B형은 창의적이고 자유분방한 개인주의자입니다. 호기심이 많고 열정적이며, 자신만의 방식을 고집하는 경향이 있습니다.",
       en: "Type B individuals are creative, free-spirited individualists. Curious and passionate, they tend to follow their own path.",
@@ -233,9 +234,9 @@ const TYPE_DATA: Record<BloodType, TypeData> = {
   },
   O: {
     emoji: "🌊",
-    color: "text-blue-700",
-    bg: "bg-blue-50",
-    border: "border-blue-200",
+    color: "text-chart-2",
+    bg: "bg-chart-2/10",
+    border: "border-chart-2/30",
     description: {
       ko: "O형은 사교적이고 리더십이 강한 행동파입니다. 목표 지향적이고 경쟁심이 강하며, 타인을 이끄는 데 탁월한 능력을 보입니다.",
       en: "Type O individuals are sociable, action-oriented leaders. Goal-driven and competitive, they excel at guiding others.",
@@ -285,9 +286,9 @@ const TYPE_DATA: Record<BloodType, TypeData> = {
   },
   AB: {
     emoji: "✨",
-    color: "text-purple-700",
-    bg: "bg-purple-50",
-    border: "border-purple-200",
+    color: "text-chart-4",
+    bg: "bg-chart-4/10",
+    border: "border-chart-4/30",
     description: {
       ko: "AB형은 이성적이고 독창적인 양면성의 소유자입니다. A형의 꼼꼼함과 B형의 자유로움을 동시에 지니며, 복잡하고 신비로운 성격을 가집니다.",
       en: "Type AB individuals are rational, original, and dual-natured. They blend Type A's meticulousness with Type B's freedom, creating a complex, enigmatic personality.",
@@ -349,6 +350,20 @@ const COMPAT_LABEL: Record<Locale, { best: string; good: string; challenging: st
 
 export default function BloodTypePersonality({ locale }: Props) {
   const [selected, setSelected] = useState<BloodType | null>(null);
+  const storedBloodType = useUserStore((state) => state.profile.bloodType);
+  const setProfile = useUserStore((state) => state.setProfile);
+
+  // The picker is the tool, so it stays — but a blood type the visitor has
+  // already given arrives selected, and a new pick is written back so the
+  // next tool does not ask for it again.
+  useEffect(() => {
+    if (!selected && storedBloodType) setSelected(storedBloodType as BloodType);
+  }, [storedBloodType]);
+
+  const choose = (type: BloodType) => {
+    setSelected(type);
+    if (storedBloodType !== type) setProfile({ bloodType: type });
+  };
   const ui = UI[locale];
   const compatLabel = COMPAT_LABEL[locale];
 
@@ -370,7 +385,7 @@ export default function BloodTypePersonality({ locale }: Props) {
             return (
               <button
                 key={type}
-                onClick={() => setSelected(type)}
+                onClick={() => choose(type)}
                 className={`flex flex-col items-center justify-center p-8 rounded-2xl border-2 ${data.bg} ${data.border} hover:shadow-md transition-all hover:scale-105 cursor-pointer`}
               >
                 <span className="text-5xl mb-3">{data.emoji}</span>
@@ -420,8 +435,8 @@ export default function BloodTypePersonality({ locale }: Props) {
 
       {/* Strengths & Weaknesses */}
       <div className="grid grid-cols-2 gap-4">
-        <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
-          <h2 className="text-sm font-semibold text-emerald-700 mb-3">✅ {ui.strengthsLabel}</h2>
+        <div className="rounded-xl border border-green-200 bg-green-50 p-4">
+          <h2 className="text-sm font-semibold text-green-700 mb-3">✅ {ui.strengthsLabel}</h2>
           <ul className="space-y-1">
             {data.strengths[locale].map((s) => (
               <li key={s} className="text-sm text-gray-700">• {s}</li>
