@@ -409,7 +409,7 @@ export default function IntroExtroTest({ locale: localeProp }: Props) {
             <span>내향 / Introvert</span>
             <span>외향 / Extrovert</span>
           </div>
-          <div className="relative w-full h-4 rounded-full overflow-hidden bg-gradient-to-r from-indigo-200 via-emerald-200 to-red-200">
+          <div className="relative w-full h-4 rounded-full overflow-hidden bg-gradient-to-r from-green-200 via-emerald-200 to-red-200">
             <div className="absolute top-0 h-4 w-1 bg-gray-800 rounded-full transition-all"
               style={{ left: `calc(${pct}% - 2px)` }} />
           </div>

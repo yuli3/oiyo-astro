@@ -819,10 +819,10 @@ export default function IQTest({ locale }: Props) {
         <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
         <p className="text-gray-500 text-sm">{t.subtitle}</p>
         <div className="grid grid-cols-2 gap-3 max-w-xs mx-auto text-sm">
-          <div className="bg-indigo-50 rounded-xl p-3 text-indigo-700 font-medium">
+          <div className="bg-green-50 rounded-xl p-3 text-green-700 font-medium">
             📋 {QUESTIONS.length} Questions
           </div>
-          <div className="bg-purple-50 rounded-xl p-3 text-purple-700 font-medium">
+          <div className="bg-green-50 rounded-xl p-3 text-green-700 font-medium">
             ⏱ {Math.floor(TOTAL_TIME / 60)} min
           </div>
           {(["number", "pattern", "logic", "spatial", "verbal"] as QuestionType[]).map((type) => (
@@ -833,7 +833,7 @@ export default function IQTest({ locale }: Props) {
         </div>
         <button
           onClick={() => setPhase("test")}
-          className="px-8 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors"
+          className="px-8 py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-colors"
         >
           {t.startBtn}
         </button>
@@ -867,7 +867,7 @@ export default function IQTest({ locale }: Props) {
         {/* Progress bar */}
         <div className="w-full h-2 bg-gray-100 rounded-full overflow-hidden">
           <div
-            className="h-full bg-indigo-500 rounded-full transition-all duration-300"
+            className="h-full bg-green-500 rounded-full transition-all duration-300"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -875,7 +875,7 @@ export default function IQTest({ locale }: Props) {
         {/* Question card */}
         <div className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm space-y-4">
           {/* Type badge */}
-          <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-indigo-50 text-indigo-600 font-medium">
+          <span className="inline-block text-xs px-2 py-0.5 rounded-full bg-green-50 text-green-600 font-medium">
             {t.typeLabels[q.type]}
           </span>
 
@@ -899,7 +899,7 @@ export default function IQTest({ locale }: Props) {
                   onClick={() => select(i)}
                   className={`w-full text-left px-4 py-3 rounded-xl border-2 transition-all text-sm font-medium ${
                     isSelected
-                      ? "border-indigo-500 bg-indigo-50 text-indigo-700"
+                      ? "border-green-500 bg-green-50 text-green-700"
                       : "border-gray-100 bg-white text-gray-700 hover:border-gray-300"
                   }`}
                 >
@@ -924,7 +924,7 @@ export default function IQTest({ locale }: Props) {
             onClick={next}
             className={`flex-1 py-2.5 rounded-xl font-semibold transition-colors text-sm ${
               selected !== null
-                ? "bg-indigo-600 text-white hover:bg-indigo-700"
+                ? "bg-green-600 text-white hover:bg-green-700"
                 : "bg-gray-100 text-gray-400 cursor-not-allowed"
             }`}
             disabled={selected === null}
@@ -941,9 +941,9 @@ export default function IQTest({ locale }: Props) {
               onClick={() => setCurrentIndex(i)}
               className={`w-6 h-6 rounded-full text-xs font-bold transition-colors ${
                 i === currentIndex
-                  ? "bg-indigo-600 text-white"
+                  ? "bg-green-600 text-white"
                   : answers[i] !== null
-                  ? "bg-indigo-200 text-indigo-700"
+                  ? "bg-green-200 text-green-700"
                   : "bg-gray-100 text-gray-400"
               }`}
             >
@@ -964,16 +964,16 @@ export default function IQTest({ locale }: Props) {
     const correctCount = QUESTIONS.filter((q, i) => answers[i] === q.answer).length;
 
     const iqColor =
-      iq >= 130 ? "text-violet-600" :
-      iq >= 120 ? "text-indigo-600" :
+      iq >= 130 ? "text-green-600" :
+      iq >= 120 ? "text-green-600" :
       iq >= 110 ? "text-blue-600" :
       iq >= 90  ? "text-green-600" :
       iq >= 80  ? "text-amber-600" :
       "text-red-500";
 
     const bgGrad =
-      iq >= 130 ? "from-violet-50 to-purple-50 border-violet-200" :
-      iq >= 120 ? "from-indigo-50 to-blue-50 border-indigo-200" :
+      iq >= 130 ? "from-green-50 to-green-50 border-green-200" :
+      iq >= 120 ? "from-green-50 to-blue-50 border-green-200" :
       iq >= 110 ? "from-blue-50 to-cyan-50 border-blue-200" :
       iq >= 90  ? "from-green-50 to-emerald-50 border-green-200" :
       iq >= 80  ? "from-amber-50 to-yellow-50 border-amber-200" :
@@ -1022,7 +1022,7 @@ export default function IQTest({ locale }: Props) {
           </button>
           <button
             onClick={() => setPhase("review")}
-            className="flex-1 py-2.5 bg-indigo-600 text-white rounded-xl text-sm font-semibold hover:bg-indigo-700 transition-colors"
+            className="flex-1 py-2.5 bg-green-600 text-white rounded-xl text-sm font-semibold hover:bg-green-700 transition-colors"
           >
             {t.reviewBtn}
           </button>
@@ -1040,7 +1040,7 @@ export default function IQTest({ locale }: Props) {
         <h2 className="text-lg font-bold text-gray-800">{t.reviewBtn}</h2>
         <button
           onClick={() => setPhase("result")}
-          className="text-sm text-indigo-600 hover:underline"
+          className="text-sm text-green-600 hover:underline"
         >
           ← {t.yourScore}
         </button>
@@ -1100,7 +1100,7 @@ export default function IQTest({ locale }: Props) {
       })}
       <button
         onClick={reset}
-        className="w-full py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition-colors"
+        className="w-full py-3 bg-green-600 text-white rounded-xl font-semibold hover:bg-green-700 transition-colors"
       >
         {t.retakeBtn}
       </button>

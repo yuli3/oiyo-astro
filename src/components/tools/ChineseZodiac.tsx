@@ -1111,13 +1111,13 @@ export default function ChineseZodiac({ locale }: Props) {
             onChange={(e) => { setYearInput(e.target.value); setError(""); }}
             onKeyDown={(e) => e.key === "Enter" && handleFind()}
             placeholder={t.yearPlaceholder}
-            className="flex-1 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300"
+            className="flex-1 border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-green-300"
             min={1900}
             max={2100}
           />
           <button
             onClick={handleFind}
-            className="px-5 py-2.5 bg-indigo-600 text-white rounded-xl font-semibold text-sm hover:bg-indigo-700 transition-colors"
+            className="px-5 py-2.5 bg-green-600 text-white rounded-xl font-semibold text-sm hover:bg-green-700 transition-colors"
           >
             {t.findBtn}
           </button>
@@ -1170,7 +1170,7 @@ export default function ChineseZodiac({ locale }: Props) {
                   {data.yin ? "☯ Yin" : "☯ Yang"}
                 </span>
                 {yearElement && (
-                  <span className={`text-xs px-2 py-0.5 rounded-full font-semibold bg-indigo-100 text-indigo-700`}>
+                  <span className={`text-xs px-2 py-0.5 rounded-full font-semibold bg-green-100 text-green-700`}>
                     {t.elementLabel}: {t.elements[yearElement]}
                   </span>
                 )}

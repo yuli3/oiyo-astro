@@ -41,16 +41,16 @@ export default function YongsinSection({
       </div>
 
       {/* Strength badge */}
-      <div className="rounded-xl bg-indigo-50 border border-indigo-100 p-4">
+      <div className="rounded-xl bg-green-50 border border-green-100 p-4">
         <div className="flex items-center gap-2">
-          <span className="rounded-full bg-indigo-600 px-3 py-1 text-xs font-bold text-white">
+          <span className="rounded-full bg-green-600 px-3 py-1 text-xs font-bold text-white">
             {tt(C.strengthLabel[strength.category], locale)}
           </span>
-          <span className="text-xs text-indigo-700">
+          <span className="text-xs text-green-700">
             {Math.round(strength.ratio * 100)}% {locale === "ko" ? "신강도" : "self-strength"}
           </span>
         </div>
-        <p className="mt-2 text-sm leading-relaxed text-indigo-900">
+        <p className="mt-2 text-sm leading-relaxed text-green-900">
           {tt(C.strengthDesc[strength.category], locale)}
         </p>
       </div>

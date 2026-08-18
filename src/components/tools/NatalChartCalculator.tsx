@@ -254,7 +254,7 @@ const ELEMENT_BG: Record<string, string> = {
   fire: 'bg-orange-50 border-orange-200',
   earth: 'bg-amber-50 border-amber-200',
   air: 'bg-sky-50 border-sky-200',
-  water: 'bg-indigo-50 border-indigo-200',
+  water: 'bg-green-50 border-green-200',
 };
 
 interface FormState { date: string; time: string; unknown: boolean; city: string; }
@@ -398,7 +398,7 @@ export default function NatalChartCalculator({ locale }: Props) {
     return (
       <section className="mx-auto w-full max-w-xl">
         <header className="mb-5 text-center">
-          <h2 className="text-2xl font-extrabold text-indigo-900">{t.resultHeading}</h2>
+          <h2 className="text-2xl font-extrabold text-green-900">{t.resultHeading}</h2>
         </header>
         <div className="space-y-3">
           {rows.map((r) => {
@@ -427,7 +427,7 @@ export default function NatalChartCalculator({ locale }: Props) {
                 </p>
                 <p className="mt-1 text-sm text-slate-600">{info.trait[loc]}</p>
                 {r.wiki && (
-                  <a href={r.wiki} className="mt-2 inline-block text-xs font-bold text-indigo-700 hover:underline">{t.readMore}</a>
+                  <a href={r.wiki} className="mt-2 inline-block text-xs font-bold text-green-700 hover:underline">{t.readMore}</a>
                 )}
               </article>
             );
@@ -450,7 +450,7 @@ export default function NatalChartCalculator({ locale }: Props) {
         <p className="mt-1.5 text-center text-xs text-amber-600">{PRIVACY_NOTE[loc]}</p>
 
         <div className="mt-5 text-center text-sm">
-          <a href={`/${loc}/zodiac/personality`} className="font-semibold text-indigo-600 hover:underline">{t.zodiacLink}</a>
+          <a href={`/${loc}/zodiac/personality`} className="font-semibold text-green-600 hover:underline">{t.zodiacLink}</a>
         </div>
 
         <p className="mt-5 rounded-xl bg-slate-50 p-3 text-center text-xs text-slate-500">{t.method}</p>
@@ -470,7 +470,7 @@ export default function NatalChartCalculator({ locale }: Props) {
   return (
     <section className="mx-auto w-full max-w-xl">
       <header className="mb-6 text-center">
-        <h2 className="text-2xl font-extrabold text-indigo-900">{t.title}</h2>
+        <h2 className="text-2xl font-extrabold text-green-900">{t.title}</h2>
         <p className="mt-2 text-sm text-slate-600">{t.subtitle}</p>
       </header>
 
@@ -522,7 +522,7 @@ export default function NatalChartCalculator({ locale }: Props) {
         <button
           type="button"
           onClick={onSubmit}
-          className="w-full rounded-xl bg-indigo-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-indigo-800"
+          className="w-full rounded-xl bg-green-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-green-800"
         >
           ✨ {t.submit}
         </button>

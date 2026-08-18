@@ -630,9 +630,9 @@ export default function EgogramTest({ locale: localeProp }: Props) {
             <p className="text-sm text-blue-700">{p.advice[locale]}</p>
           </div>
 
-          <div className="bg-purple-50 rounded-lg p-4 text-center">
-            <p className="text-sm text-purple-600 italic">"{p.affirmation[locale]}"</p>
-            <p className="text-xs text-purple-400 mt-1">{t.affirmation}</p>
+          <div className="bg-green-50 rounded-lg p-4 text-center">
+            <p className="text-sm text-green-600 italic">"{p.affirmation[locale]}"</p>
+            <p className="text-xs text-green-400 mt-1">{t.affirmation}</p>
           </div>
         </div>
 
@@ -652,7 +652,7 @@ export default function EgogramTest({ locale: localeProp }: Props) {
             {t.restart}
           </button>
           <button onClick={share}
-            className="px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-full font-medium transition-colors text-sm">
+            className="px-5 py-2 bg-green-600 hover:bg-green-700 text-white rounded-full font-medium transition-colors text-sm">
             {copied ? t.copied : t.share}
           </button>
         </div>

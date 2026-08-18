@@ -572,9 +572,9 @@ const LeftBrainTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
       title: t.rightTitle,
       desc: t.rightDesc,
       traits: t.rightTraits,
-      barColor: 'bg-violet-500',
-      badgeBg: 'bg-violet-100 text-violet-800',
-      cardBg: 'bg-violet-50 border-violet-200',
+      barColor: 'bg-green-500',
+      badgeBg: 'bg-green-100 text-green-800',
+      cardBg: 'bg-green-50 border-green-200',
     },
     balanced: {
       emoji: '⚖️',
@@ -601,11 +601,11 @@ const LeftBrainTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
         <div className="mb-8">
           <div className="flex justify-between text-xs font-black mb-2">
             <span className="text-blue-600">🧠 {locale === 'ko' ? '좌뇌' : 'Left'} {leftPct}%</span>
-            <span className="text-violet-600">{rightPct}% {locale === 'ko' ? '우뇌' : 'Right'} 🎨</span>
+            <span className="text-green-600">{rightPct}% {locale === 'ko' ? '우뇌' : 'Right'} 🎨</span>
           </div>
           <div className="w-full h-4 rounded-full bg-muted overflow-hidden flex">
             <div className="h-full bg-blue-500 transition-all duration-700" style={{ width: `${leftPct}%` }} />
-            <div className="h-full bg-violet-500 transition-all duration-700" style={{ width: `${rightPct}%` }} />
+            <div className="h-full bg-green-500 transition-all duration-700" style={{ width: `${rightPct}%` }} />
           </div>
         </div>
 

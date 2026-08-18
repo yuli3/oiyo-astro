@@ -18,9 +18,12 @@ export const THEME_COLORS = {
   danger: "#EF4444", // red-500
   gold: "#FFD700", // Gold
   indigo: "#4F46E5", // indigo-600
-  info: "#3B82F6", // teal-500 (Note: blue-500 actually)
-  // Primary / Brand
-  primary: "#8B5CF6", // green-500 (Note: violet-500 actually)
+  info: "#3B82F6", // blue-500
+  // Primary / Brand — the olive-green --primary from global.css
+  // (oklch(0.523 0.101 122)). It was #8B5CF6, a violet, under a comment
+  // claiming it was green: anything drawing a "brand" colour on a canvas or
+  // chart was drawing violet.
+  primary: "#607329",
   secondary: "#EC4899", // pink-500
   // Neutrals (Standard Slate)
   slate: {

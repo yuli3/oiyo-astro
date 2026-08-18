@@ -874,9 +874,9 @@ export default function DailyHoroscope({ locale }: Props) {
               <button
                 key={s}
                 onClick={() => handleSelect(s)}
-                className={`flex flex-col items-center rounded-xl border py-3 px-2 transition-all hover:border-violet-400 hover:bg-violet-50 ${
+                className={`flex flex-col items-center rounded-xl border py-3 px-2 transition-all hover:border-green-400 hover:bg-green-50 ${
                   selected === s
-                    ? "border-violet-500 bg-violet-50"
+                    ? "border-green-500 bg-green-50"
                     : "border-gray-200 bg-white"
                 }`}
               >
@@ -915,16 +915,16 @@ export default function DailyHoroscope({ locale }: Props) {
           </div>
 
           {/* Lucky section */}
-          <div className="rounded-2xl border border-violet-200 bg-gradient-to-br from-violet-50 to-purple-50 p-5">
-            <h3 className="mb-3 text-center font-bold text-violet-800">✨ {ui.luckySection}</h3>
+          <div className="rounded-2xl border border-green-200 bg-gradient-to-br from-green-50 to-green-50 p-5">
+            <h3 className="mb-3 text-center font-bold text-green-800">✨ {ui.luckySection}</h3>
             <div className="flex justify-center gap-10">
               <div className="text-center">
-                <p className="text-xs text-violet-500 mb-1">{ui.luckyColor}</p>
-                <p className="text-lg font-semibold text-violet-700">{result.luckyColor}</p>
+                <p className="text-xs text-green-500 mb-1">{ui.luckyColor}</p>
+                <p className="text-lg font-semibold text-green-700">{result.luckyColor}</p>
               </div>
               <div className="text-center">
-                <p className="text-xs text-violet-500 mb-1">{ui.luckyNumber}</p>
-                <p className="text-2xl font-bold text-violet-700">{result.luckyNumber}</p>
+                <p className="text-xs text-green-500 mb-1">{ui.luckyNumber}</p>
+                <p className="text-2xl font-bold text-green-700">{result.luckyNumber}</p>
               </div>
             </div>
           </div>

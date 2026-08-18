@@ -369,7 +369,7 @@ function getScoreColor(score: number): string {
 
 const RELATION_COLORS: Record<RelationType, string> = {
   triad: "bg-pink-100 text-pink-700",
-  sixharmony: "bg-purple-100 text-purple-700",
+  sixharmony: "bg-green-100 text-green-700",
   neutral: "bg-gray-100 text-gray-700",
   harm: "bg-yellow-100 text-yellow-700",
   conflict: "bg-orange-100 text-orange-700",
@@ -764,7 +764,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
               <select
                 value={year2}
                 onChange={(e) => setYear2(e.target.value === "" ? "" : Number(e.target.value))}
-                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-purple-400"
+                className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:border-green-400"
               >
                 <option value="">{ui.yearPlaceholder}</option>
                 {YEARS.map((y) => (
@@ -776,7 +776,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
               {animal2 && (
                 <div className="mt-2 text-center">
                   <span className="text-3xl">{ANIMAL_EMOJI[animal2]}</span>
-                  <p className="text-sm font-semibold text-purple-500 mt-1">{ui.animals[animal2]}</p>
+                  <p className="text-sm font-semibold text-green-500 mt-1">{ui.animals[animal2]}</p>
                 </div>
               )}
             </div>
@@ -794,7 +794,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
           <button
             onClick={calculate}
             disabled={!animal1 || !animal2}
-            className="w-full py-3 rounded-xl bg-gradient-to-r from-red-500 to-purple-500 text-white font-bold text-base disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90 transition-opacity"
+            className="w-full py-3 rounded-xl bg-gradient-to-r from-red-500 to-green-500 text-white font-bold text-base disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-90 transition-opacity"
           >
             {ui.calcBtn}
           </button>
@@ -814,7 +814,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
               <span className="text-2xl text-gray-300">✦</span>
               <div>
                 <span className="text-5xl">{ANIMAL_EMOJI[result.animal2]}</span>
-                <p className="text-sm font-bold text-purple-500 mt-1">
+                <p className="text-sm font-bold text-green-500 mt-1">
                   {ui.animals[result.animal2]}
                   <span className="text-gray-400 font-normal ml-1">({year2})</span>
                 </p>
@@ -849,9 +849,9 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
           </div>
 
           {/* Relation description */}
-          <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-5">
-            <h3 className="font-bold text-indigo-800 text-sm mb-2">{ui.relationLabel}</h3>
-            <p className="text-sm text-indigo-700">{ui.relationDesc[result.relation]}</p>
+          <div className="bg-green-50 border border-green-100 rounded-2xl p-5">
+            <h3 className="font-bold text-green-800 text-sm mb-2">{ui.relationLabel}</h3>
+            <p className="text-sm text-green-700">{ui.relationDesc[result.relation]}</p>
           </div>
 
           {/* Detailed description */}

@@ -70,7 +70,7 @@ const TYPES: TypeEntry[] = [
   {
     num: 4, name: { ko: '개인주의자', en: 'The Individualist', ja: '個人主義者', zh: '个人主义者', fr: "L'Individualiste", es: 'El Individualista' },
     core: { ko: '독특한 정체성과 진정성을 갈망하는 낭만가', en: 'The romantic who craves unique identity and authenticity', ja: '独自のアイデンティティと真正性を渇望するロマンチスト', zh: '渴望独特身份和真实性的浪漫主义者', fr: 'Le romantique qui aspire à une identité unique et à l\'authenticité', es: 'El romántico que anhela identidad única y autenticidad' },
-    color: 'border-purple-300 bg-purple-50',
+    color: 'border-green-300 bg-green-50',
     hobbies: [
       { ko: '시 창작·감성 산문 쓰기', en: 'Poetry writing / lyrical prose', ja: '詩の創作·感性的な散文執筆', zh: '诗歌创作·情感散文写作', fr: 'Écriture poétique / prose lyrique', es: 'Escritura poética / prosa lírica' },
       { ko: '그림·수채화·콜라주 아트', en: 'Painting, watercolor, collage art', ja: '絵画·水彩·コラージュアート', zh: '绘画、水彩、拼贴艺术', fr: 'Peinture, aquarelle, collage', es: 'Pintura, acuarela, arte de collage' },
@@ -404,13 +404,13 @@ const faqJsonLd = {
     </div>
 
     <div class="mt-10 text-center">
-      <a href={localePath(locale, '/enneagram/test')} class="inline-flex items-center gap-2 rounded-xl border-2 border-indigo-700 bg-indigo-700 px-6 py-3 font-bold text-white transition hover:bg-indigo-800">
+      <a href={localePath(locale, '/enneagram/test')} class="inline-flex items-center gap-2 rounded-xl border-2 border-green-700 bg-green-700 px-6 py-3 font-bold text-white transition hover:bg-green-800">
         {txt({ ko: '내 에니어그램 유형 테스트하기', en: 'Take the Enneagram Test', ja: 'エニアグラムテストを受ける', zh: '做九型人格测试', fr: 'Passer le test Ennéagramme', es: 'Hacer el test Eneagrama' })} →
       </a>
     </div>
     <RelatedTools locale={locale} tools={['enneagram', 'mbti', 'big5', 'attachment']} current="enneagram-hobbies" />
 
-    <section class="mt-8 border-t border-indigo-100 pt-8">
+    <section class="mt-8 border-t border-green-100 pt-8">
       <h2 class="text-2xl font-bold text-slate-950">{c.introTitle}</h2>
       <p class="mt-4 leading-8 text-slate-700">{c.intro}</p>
     </section>
@@ -419,7 +419,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.concepts.map((item) => (
-          <article class="rounded-xl border border-indigo-100 bg-white p-4">
+          <article class="rounded-xl border border-green-100 bg-white p-4">
             <h3 class="font-semibold text-slate-950">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
@@ -431,7 +431,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.useCases.map((item) => (
-          <article class="rounded-xl bg-indigo-50 p-4">
+          <article class="rounded-xl bg-green-50 p-4">
             <h3 class="font-semibold text-slate-950">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
@@ -441,7 +441,7 @@ const faqJsonLd = {
 
     <section class="mt-10">
       <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
-      <div class="mt-4 divide-y divide-indigo-100 rounded-xl border border-indigo-100 bg-white">
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">
         {c.faqs.map((faq) => (
           <details class="group p-4">
             <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
@@ -455,7 +455,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {c.reading.map((item) => (
-          <a class="rounded-xl border border-indigo-100 bg-white p-4 transition-colors hover:border-indigo-300 hover:bg-indigo-50" href={item.href} rel="noopener noreferrer" target="_blank">
+          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
             <span class="font-semibold text-slate-950">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
           </a>

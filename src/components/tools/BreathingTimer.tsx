@@ -337,7 +337,7 @@ export default function BreathingTimer({ locale }: Props) {
 
   const phaseColor: Record<Phase, string> = {
     inhale: 'from-teal-400 to-cyan-500',
-    'hold-in': 'from-blue-400 to-indigo-500',
+    'hold-in': 'from-blue-400 to-green-500',
     exhale: 'from-sky-400 to-blue-500',
     'hold-out': 'from-slate-400 to-slate-500',
     idle: 'from-teal-300 to-cyan-400',

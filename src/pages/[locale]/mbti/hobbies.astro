@@ -62,7 +62,7 @@ interface MBTIEntry {
 }
 
 const TYPES: MBTIEntry[] = [
-  { type: 'INTJ', color: 'bg-violet-100 border-violet-300',
+  { type: 'INTJ', color: 'bg-green-100 border-green-300',
     hobbies: txt({ ko: '체스·바둑, 코딩·프로그래밍, SF 소설, 전략 보드게임, 투자 분석, 철학 독서', en: 'Chess, coding, sci-fi novels, strategy board games, investment analysis, philosophy reading', ja: 'チェス·囲碁、コーディング、SF小説、戦略ボードゲーム、投資分析', zh: '国际象棋、编程、科幻小说、战略棋盘游戏、投资分析、哲学阅读', fr: 'Échecs, programmation, romans SF, jeux de stratégie, analyse d\'investissement', es: 'Ajedrez, programación, novelas de ciencia ficción, juegos de estrategia, análisis de inversión' }),
     why: { ko: '장기적 패턴과 전략 설계를 즐기는 INTJ에게 최적', en: 'Perfect for INTJs who enjoy long-term pattern recognition and strategic planning', ja: '長期的パターンと戦略設計を楽しむINTJに最適', zh: '对于享受长期模式识别和战略规划的INTJ来说是最佳选择', fr: 'Parfait pour les INTJ qui apprécient la reconnaissance de patterns et la planification stratégique', es: 'Perfecto para INTJs que disfrutan el reconocimiento de patrones a largo plazo' } },
   { type: 'INTP', color: 'bg-sky-100 border-sky-300',
@@ -74,7 +74,7 @@ const TYPES: MBTIEntry[] = [
   { type: 'ENTP', color: 'bg-orange-100 border-orange-300',
     hobbies: txt({ ko: '즉흥 연기·임프로브, 브레인스토밍 세션, 팟캐스트 제작, 스타트업 프로젝트, 과학 실험', en: 'Improv comedy, brainstorming sessions, podcast creation, startup projects, science experiments', ja: 'インプロバイゼーション、ブレインストーミング、ポッドキャスト制作、スタートアッププロジェクト', zh: '即兴表演、头脑风暴、播客制作、创业项目、科学实验', fr: 'Comédie improvisée, séances de brainstorming, création de podcasts, projets de startup', es: 'Comedia improvisada, sesiones de brainstorming, creación de podcasts, proyectos de startup' }),
     why: { ko: '새로운 아이디어와 논쟁을 즐기는 ENTP에게 최적의 창의적 출구', en: 'Perfect creative outlet for ENTPs who enjoy new ideas and intellectual debate', ja: '新しいアイデアと議論を楽しむENTPに最適な創造的な出口', zh: '对于喜欢新想法和智识辩论的ENTP来说是完美的创意出口', fr: 'Exutoire créatif parfait pour les ENTP qui apprécient les nouvelles idées et les débats intellectuels', es: 'Salida creativa perfecta para ENTPs que disfrutan nuevas ideas y debates intelectuales' } },
-  { type: 'INFJ', color: 'bg-purple-100 border-purple-300',
+  { type: 'INFJ', color: 'bg-green-100 border-green-300',
     hobbies: txt({ ko: '일기·에세이 쓰기, 심리학·철학 독서, 아트저널링, 명상, 자원봉사, 시 창작', en: 'Journaling/essay writing, psychology & philosophy reading, art journaling, meditation, volunteering, poetry', ja: '日記·エッセイ書き、心理学·哲学読書、アートジャーナリング、瞑想', zh: '日记写作、心理学哲学阅读、艺术日志、冥想、志愿服务、诗歌创作', fr: 'Journalisation/écriture d\'essais, lecture de psychologie et philosophie, journal artistique, méditation', es: 'Journaling/escritura de ensayos, lectura de psicología y filosofía, journal artístico, meditación' }),
     why: { ko: '내면 세계를 탐구하고 의미를 찾는 INFJ에게 깊은 만족을 주는 활동', en: 'Activities that give INFJs deep satisfaction in exploring the inner world and finding meaning', ja: '内面世界を探求し意味を見つけるINFJに深い満足をもたらす活動', zh: '给喜欢探索内心世界和寻找意义的INFJ带来深度满足的活动', fr: 'Activités qui donnent aux INFJ une profonde satisfaction dans l\'exploration du monde intérieur', es: 'Actividades que dan a los INFJ satisfacción profunda en explorar el mundo interior' } },
   { type: 'INFP', color: 'bg-pink-100 border-pink-300',
@@ -107,7 +107,7 @@ const TYPES: MBTIEntry[] = [
   { type: 'ESTP', color: 'bg-red-100 border-orange-300',
     hobbies: txt({ ko: '격투기·스파링, 스케이트보드, 포커·도박 전략, 부동산·플리핑, 이벤트 MC, 자동차 레이싱', en: 'Martial arts/sparring, skateboarding, poker/strategy gambling, real estate flipping, event MCing, car racing', ja: '格闘技·スパーリング、スケートボード、ポーカー、不動産フリッピング、イベントMC', zh: '格斗武术、滑板、扑克策略、房产翻修、活动主持、赛车', fr: 'Arts martiaux/combat, skateboard, poker/jeux de stratégie, retournement immobilier, animation d\'événements', es: 'Artes marciales/sparring, skateboarding, póker/juegos de estrategia, flipping inmobiliario, animación de eventos' }),
     why: { ko: '스릴과 즉각적인 행동, 현실적 결과에서 에너지를 얻는 ESTP에게 최적', en: 'Optimal for ESTPs who gain energy from thrill, immediate action, and tangible results', ja: 'スリルと即座の行動、現実的な結果からエネルギーを得るESTPに最適', zh: '对于从刺激、即时行动和实际结果中获得能量的ESTP来说是最佳选择', fr: 'Optimal pour les ESTP qui gagnent de l\'énergie du frisson, de l\'action immédiate et des résultats tangibles', es: 'Óptimo para ESTPs que ganan energía del emoción, la acción inmediata y los resultados tangibles' } },
-  { type: 'ESFP', color: 'bg-fuchsia-100 border-fuchsia-300',
+  { type: 'ESFP', color: 'bg-green-100 border-green-300',
     hobbies: txt({ ko: '댄스·케이팝, 유튜브·틱톡 창작, 파티·이벤트 기획, 패션·스타일링, 노래(보컬 레슨)', en: 'Dance/K-pop, YouTube/TikTok creation, party/event organizing, fashion/styling, singing (vocal lessons)', ja: 'ダンス·K-POP、YouTube·TikTok創作、パーティー·イベント企画、ファッション·スタイリング', zh: '舞蹈K-pop、YouTube/TikTok创作、派对活动组织、时尚造型、唱歌声乐课', fr: 'Danse/K-pop, création YouTube/TikTok, organisation de fêtes/événements, mode/stylisme, chant', es: 'Baile/K-pop, creación YouTube/TikTok, organización de fiestas/eventos, moda/estilismo, canto' }),
     why: { ko: '삶 자체를 즐기고 사람들을 즐겁게 하는 것에서 기쁨을 찾는 ESFP에게 완벽한 출구', en: 'Perfect outlet for ESFPs who find joy in enjoying life itself and making others happy', ja: '人生自体を楽しみ、人々を喜ばせることに喜びを見つけるESFPにとって完璧な出口', zh: '对于从享受生活本身和让他人快乐中找到喜悦的ESFP来说是完美的出口', fr: 'Exutoire parfait pour les ESFP qui trouvent de la joie dans l\'appréciation de la vie et la joie des autres', es: 'Salida perfecta para ESFPs que encuentran alegría en disfrutar la vida y hacer felices a los demás' } },
 ];

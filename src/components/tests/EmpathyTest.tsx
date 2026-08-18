@@ -472,9 +472,9 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         )}
 
         {profile?.isClose && (
-          <div className="rounded-xl border border-violet-200 bg-violet-50 p-4" role="note">
-            <h2 className="font-semibold text-violet-950">{rt.mixedTitle}</h2>
-            <p className="mt-1 text-sm leading-6 text-violet-800">{rt.mixedBody.replace("{gap}", String(profile.closeGap))}</p>
+          <div className="rounded-xl border border-green-200 bg-green-50 p-4" role="note">
+            <h2 className="font-semibold text-green-950">{rt.mixedTitle}</h2>
+            <p className="mt-1 text-sm leading-6 text-green-800">{rt.mixedBody.replace("{gap}", String(profile.closeGap))}</p>
           </div>
         )}
 

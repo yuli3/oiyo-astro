@@ -210,7 +210,7 @@ const COLORS: Record<string, string> = {
   amber: 'bg-amber-100 border-amber-300 text-amber-800',
   green: 'bg-green-100 border-green-300 text-green-800',
   red: 'bg-red-100 border-red-300 text-red-800',
-  purple: 'bg-purple-100 border-purple-300 text-purple-800',
+  purple: 'bg-green-100 border-green-300 text-green-800',
   teal: 'bg-teal-100 border-teal-300 text-teal-800',
 }
 

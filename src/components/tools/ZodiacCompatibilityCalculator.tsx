@@ -277,21 +277,21 @@ const SIGN_DATES: Record<ZodiacSign, string> = {
 };
 
 const ELEMENT_COLOR: Record<Element, string> = {
-  fire:"text-orange-500",earth:"text-emerald-600",air:"text-sky-500",water:"text-indigo-500",
+  fire:"text-orange-500",earth:"text-emerald-600",air:"text-sky-500",water:"text-green-500",
 };
 
 const ELEMENT_BG: Record<Element, string> = {
   fire:"bg-orange-50 border-orange-200",earth:"bg-emerald-50 border-emerald-200",
-  air:"bg-sky-50 border-sky-200",water:"bg-indigo-50 border-indigo-200",
+  air:"bg-sky-50 border-sky-200",water:"bg-green-50 border-green-200",
 };
 
 const COMPAT_COLOR: Record<CompatType, string> = {
-  excellent:"text-pink-600",great:"text-purple-600",good:"text-blue-600",
+  excellent:"text-pink-600",great:"text-green-600",good:"text-blue-600",
   neutral:"text-gray-500",challenging:"text-orange-600",
 };
 
 const COMPAT_BG: Record<CompatType, string> = {
-  excellent:"bg-pink-100 text-pink-700",great:"bg-purple-100 text-purple-700",
+  excellent:"bg-pink-100 text-pink-700",great:"bg-green-100 text-green-700",
   good:"bg-blue-100 text-blue-700",neutral:"bg-gray-100 text-gray-600",
   challenging:"bg-orange-100 text-orange-700",
 };
@@ -354,7 +354,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
 
   function getBarColor(score: number) {
     if (score >= 85) return "bg-pink-500";
-    if (score >= 75) return "bg-purple-500";
+    if (score >= 75) return "bg-green-500";
     if (score >= 65) return "bg-blue-500";
     if (score >= 55) return "bg-gray-400";
     return "bg-orange-500";
@@ -407,7 +407,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
             onClick={calculate}
             disabled={!sign1 || !sign2}
             className="w-full py-3.5 rounded-2xl font-bold text-white text-base transition-all
-              bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700
+              bg-gradient-to-r from-pink-500 to-green-600 hover:from-pink-600 hover:to-green-700
               disabled:opacity-40 disabled:cursor-not-allowed shadow-md hover:shadow-lg active:scale-95"
           >
             {ui.calcBtn}
@@ -449,7 +449,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
           </div>
 
           {/* Aspect */}
-          <div className="bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-100 rounded-2xl p-4">
+          <div className="bg-gradient-to-r from-pink-50 to-green-50 border border-pink-100 rounded-2xl p-4">
             <p className="text-xs font-semibold text-gray-500 mb-1">{ui.aspectLabel}</p>
             <p className="font-bold text-gray-800">{result.aspect}</p>
           </div>
@@ -471,9 +471,9 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
           </div>
 
           {/* Advice */}
-          <div className="bg-indigo-50 border border-indigo-100 rounded-2xl p-4">
-            <p className="text-xs font-semibold text-indigo-600 mb-1">💡 {ui.adviceLabel}</p>
-            <p className="text-sm text-indigo-800 italic">"{result.advice}"</p>
+          <div className="bg-green-50 border border-green-100 rounded-2xl p-4">
+            <p className="text-xs font-semibold text-green-600 mb-1">💡 {ui.adviceLabel}</p>
+            <p className="text-sm text-green-800 italic">"{result.advice}"</p>
           </div>
 
           <button

@@ -476,7 +476,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   7: {
-    color: "text-violet-700", bg: "bg-violet-50 border-violet-200",
+    color: "text-green-700", bg: "bg-green-50 border-green-200",
     keywords: {
       ko: ["지혜", "분석", "영성", "내향성"],
       en: ["Wisdom", "Analysis", "Spirituality", "Introspection"],
@@ -593,7 +593,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   11: {
-    color: "text-indigo-700", bg: "bg-indigo-50 border-indigo-200",
+    color: "text-green-700", bg: "bg-green-50 border-green-200",
     keywords: {
       ko: ["영감", "직관", "이상주의", "영성"],
       en: ["Inspiration", "Intuition", "Idealism", "Spirituality"],
@@ -671,7 +671,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   33: {
-    color: "text-purple-700", bg: "bg-purple-50 border-purple-200",
+    color: "text-green-700", bg: "bg-green-50 border-green-200",
     keywords: {
       ko: ["마스터 교사", "무조건적 사랑", "희생", "치유"],
       en: ["Master Teacher", "Unconditional Love", "Sacrifice", "Healing"],

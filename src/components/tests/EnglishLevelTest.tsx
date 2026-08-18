@@ -536,7 +536,7 @@ export default function EnglishLevelTest({ locale }: Props) {
         </div>
         <button
           onClick={handleStart}
-          className="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 py-3 font-semibold text-white shadow-md hover:from-indigo-700 hover:to-violet-700 transition-all"
+          className="w-full rounded-xl bg-gradient-to-r from-green-600 to-green-600 py-3 font-semibold text-white shadow-md hover:from-green-700 hover:to-green-700 transition-all"
         >
           {t.startBtn}
         </button>
@@ -556,7 +556,7 @@ export default function EnglishLevelTest({ locale }: Props) {
         </div>
         <div className="h-2 rounded-full bg-gray-200">
           <div
-            className="h-2 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 transition-all duration-300"
+            className="h-2 rounded-full bg-gradient-to-r from-green-500 to-green-500 transition-all duration-300"
             style={{ width: `${progress}%` }}
           />
         </div>
@@ -567,7 +567,7 @@ export default function EnglishLevelTest({ locale }: Props) {
             {currentQ.options.map((opt, i) => {
               let cls = "w-full text-left rounded-xl border px-4 py-3 text-sm transition-all ";
               if (selected === null) {
-                cls += "border-gray-200 bg-gray-50 hover:border-indigo-400 hover:bg-indigo-50 text-gray-800";
+                cls += "border-gray-200 bg-gray-50 hover:border-green-400 hover:bg-green-50 text-gray-800";
               } else if (i === currentQ.answer) {
                 cls += "border-green-500 bg-green-50 text-green-800 font-medium";
               } else if (i === selected) {
@@ -594,7 +594,7 @@ export default function EnglishLevelTest({ locale }: Props) {
         <button
           onClick={handleNext}
           disabled={selected === null}
-          className="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 py-3 font-semibold text-white shadow-md hover:from-indigo-700 hover:to-violet-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
+          className="w-full rounded-xl bg-gradient-to-r from-green-600 to-green-600 py-3 font-semibold text-white shadow-md hover:from-green-700 hover:to-green-700 disabled:opacity-40 disabled:cursor-not-allowed transition-all"
         >
           {isLast ? t.submitBtn : t.nextBtn}
         </button>
@@ -617,7 +617,7 @@ export default function EnglishLevelTest({ locale }: Props) {
         </p>
         <div className="h-3 rounded-full bg-gray-200 mx-4">
           <div
-            className="h-3 rounded-full bg-gradient-to-r from-indigo-500 to-violet-500 transition-all"
+            className="h-3 rounded-full bg-gradient-to-r from-green-500 to-green-500 transition-all"
             style={{ width: `${(score / totalQ) * 100}%` }}
           />
         </div>
@@ -661,7 +661,7 @@ export default function EnglishLevelTest({ locale }: Props) {
 
       <button
         onClick={handleStart}
-        className="w-full rounded-xl bg-gradient-to-r from-indigo-600 to-violet-600 py-3 font-semibold text-white shadow-md hover:from-indigo-700 hover:to-violet-700 transition-all"
+        className="w-full rounded-xl bg-gradient-to-r from-green-600 to-green-600 py-3 font-semibold text-white shadow-md hover:from-green-700 hover:to-green-700 transition-all"
       >
         {t.retakeBtn}
       </button>

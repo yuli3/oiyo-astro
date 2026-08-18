@@ -787,7 +787,7 @@ export default function ZodiacPersonality({ locale }: Props) {
         <div className="rounded-xl border border-gray-200 p-4 space-y-3">
           <button
             onClick={() => setShowBirthday((v) => !v)}
-            className="text-sm text-indigo-600 font-medium hover:underline"
+            className="text-sm text-green-600 font-medium hover:underline"
           >
             {ui.orEnterBirthday} ▾
           </button>
@@ -802,7 +802,7 @@ export default function ZodiacPersonality({ locale }: Props) {
               />
               <button
                 onClick={handleBirthdayLookup}
-                className="px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-lg hover:bg-indigo-700 transition-colors"
+                className="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
               >
                 {ui.lookupBtn}
               </button>
