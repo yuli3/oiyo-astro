@@ -16,9 +16,19 @@ export function calculateLifePathNumber(date: Date): number {
 export function calculateNumerology(input: NumerologyInput): NumerologyReading {
   const { birthDate, fullName } = input;
   const lifePath = calculateLifePathNumber(birthDate);
-  const expression = calculateExpressionNumber(fullName);
-  const soulUrge = calculateSoulUrgeNumber(fullName);
-  const personality = calculatePersonalityNumber(fullName);
+  // Three of the numbers come from the name, and the Pythagorean table only
+  // covers A-Z. A name with none of those letters has no expression, soul
+  // urge or personality number to give, so we return null rather than the 0
+  // these functions used to produce — 0 has no meaning entry, and callers
+  // ended up rendering a blank or silently dropping the card.
+  //
+  // We do not romanise automatically. Korean alone has competing systems
+  // (Revised Romanization vs. whatever is on a passport), and choosing one
+  // silently would return a confidently wrong number instead of nothing.
+  const hasLatinLetters = latinLetters(fullName).length > 0;
+  const expression = hasLatinLetters ? calculateExpressionNumber(fullName) : null;
+  const soulUrge = hasLatinLetters ? calculateSoulUrgeNumber(fullName) : null;
+  const personality = hasLatinLetters ? calculatePersonalityNumber(fullName) : null;
   const birthday = birthDate.getDate();
   const personalYear = calculatePersonalYearNumber(birthDate);
 
@@ -28,6 +38,10 @@ export function calculateNumerology(input: NumerologyInput): NumerologyReading {
       NUMEROLOGY_MEANINGS[reduceToSingleDigit(num, false)]
     );
   };
+  // Kept separate so lifePath and birthday — which always exist — do not
+  // inherit the null the name-derived numbers can carry.
+  const getMeaningOrNull = (num: null | number) =>
+    num === null ? null : getMeaning(num);
 
   const lpMeaning = getMeaning(lifePath);
 
@@ -39,13 +53,13 @@ export function calculateNumerology(input: NumerologyInput): NumerologyReading {
     lifePath,
     meanings: {
       birthdayMeaning: getMeaning(birthday),
-      expressionMeaning: getMeaning(expression),
+      expressionMeaning: getMeaningOrNull(expression),
       lifePathMeaning: lpMeaning,
-      personalityMeaning: getMeaning(personality),
+      personalityMeaning: getMeaningOrNull(personality),
       personalYearMeaning:
         PERSONAL_YEAR_MEANINGS[personalYear] ||
         PERSONAL_YEAR_MEANINGS[reduceToSingleDigit(personalYear)],
-      soulUrgeMeaning: getMeaning(soulUrge),
+      soulUrgeMeaning: getMeaningOrNull(soulUrge),
     },
     // Detailed analysis
     numbers: {
@@ -57,7 +71,9 @@ export function calculateNumerology(input: NumerologyInput): NumerologyReading {
       soulUrgeNumber: soulUrge,
     },
     overallAnalysis: {
-      dominantNumbers: [lifePath, expression].filter((n) => n > 0),
+      dominantNumbers: [lifePath, expression].filter(
+        (n): n is number => n !== null && n > 0,
+      ),
       lifeTheme: lpMeaning.name,
       personalYear: {
         description: PERSONAL_YEAR_MEANINGS[personalYear]?.description || {
@@ -86,19 +102,20 @@ export function calculateNumerology(input: NumerologyInput): NumerologyReading {
   };
 }
 
+/** The letters the Pythagorean table can actually map, uppercased. */
+function latinLetters(name: string): string {
+  return name.toUpperCase().replace(/[^A-Z]/g, "");
+}
+
 function calculateExpressionNumber(name: string): number {
-  const total = name
-    .toUpperCase()
-    .replace(/[^A-Z]/g, "")
+  const total = latinLetters(name)
     .split("")
     .reduce((sum, char) => sum + (LETTER_TO_NUMBER[char] || 0), 0);
   return reduceToSingleDigit(total, true);
 }
 
 function calculatePersonalityNumber(name: string): number {
-  const total = name
-    .toUpperCase()
-    .replace(/[^A-Z]/g, "")
+  const total = latinLetters(name)
     .split("")
     .filter((char) => !VOWELS.includes(char))
     .reduce((sum, char) => sum + (LETTER_TO_NUMBER[char] || 0), 0);
@@ -114,8 +131,7 @@ function calculatePersonalYearNumber(birthDate: Date): number {
 }
 
 function calculateSoulUrgeNumber(name: string): number {
-  const total = name
-    .toUpperCase()
+  const total = latinLetters(name)
     .split("")
     .filter((char) => VOWELS.includes(char))
     .reduce((sum, char) => sum + (LETTER_TO_NUMBER[char] || 0), 0);

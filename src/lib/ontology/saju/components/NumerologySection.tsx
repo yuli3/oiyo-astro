@@ -45,6 +45,11 @@ export function NumerologySection({
         </p>
       </m.div>
 
+      {/*
+        Only lifePath is always present. The other three come from the name and
+        are null when it has no Latin letters to map (a Hangul or kana name, for
+        instance), so they are omitted rather than rendered as a meaningless 0.
+      */}
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <ResultCard
           description={result.meanings.lifePathMeaning?.description?.en}
@@ -54,33 +59,39 @@ export function NumerologySection({
           value={result.numbers.lifePathNumber.toString()}
           variant="green"
         />
-        <ResultCard
-          delay={0.1}
-          description={result.meanings.expressionMeaning?.description?.en}
-          icon={<Sparkles className="w-6 h-6" />}
-          subtitle={result.meanings.expressionMeaning?.name?.en || "..."}
-          title={t("results.expression")}
-          value={result.numbers.expressionNumber.toString()}
-          variant="amber"
-        />
-        <ResultCard
-          delay={0.2}
-          description={result.meanings.soulUrgeMeaning?.description?.en}
-          icon={<Heart className="w-6 h-6" />}
-          subtitle={result.meanings.soulUrgeMeaning?.name?.en || "..."}
-          title={t("results.soulUrge")}
-          value={result.numbers.soulUrgeNumber.toString()}
-          variant="teal"
-        />
-        <ResultCard
-          delay={0.3}
-          description={result.meanings.personalityMeaning?.description?.en}
-          icon={<User className="w-6 h-6" />}
-          subtitle={result.meanings.personalityMeaning?.name?.en || "..."}
-          title={t("results.personality")}
-          value={result.numbers.personalityNumber.toString()}
-          variant="orange"
-        />
+        {result.numbers.expressionNumber !== null && (
+          <ResultCard
+            delay={0.1}
+            description={result.meanings.expressionMeaning?.description?.en}
+            icon={<Sparkles className="w-6 h-6" />}
+            subtitle={result.meanings.expressionMeaning?.name?.en || "..."}
+            title={t("results.expression")}
+            value={result.numbers.expressionNumber.toString()}
+            variant="amber"
+          />
+        )}
+        {result.numbers.soulUrgeNumber !== null && (
+          <ResultCard
+            delay={0.2}
+            description={result.meanings.soulUrgeMeaning?.description?.en}
+            icon={<Heart className="w-6 h-6" />}
+            subtitle={result.meanings.soulUrgeMeaning?.name?.en || "..."}
+            title={t("results.soulUrge")}
+            value={result.numbers.soulUrgeNumber.toString()}
+            variant="teal"
+          />
+        )}
+        {result.numbers.personalityNumber !== null && (
+          <ResultCard
+            delay={0.3}
+            description={result.meanings.personalityMeaning?.description?.en}
+            icon={<User className="w-6 h-6" />}
+            subtitle={result.meanings.personalityMeaning?.name?.en || "..."}
+            title={t("results.personality")}
+            value={result.numbers.personalityNumber.toString()}
+            variant="orange"
+          />
+        )}
       </div>
 
       {result.overallAnalysis.vibrationalResonance && (

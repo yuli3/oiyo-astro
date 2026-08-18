@@ -16,11 +16,17 @@ export interface NumerologyMeaning {
 
 export interface NumerologyNumbers {
   birthdayNumber: number;
-  expressionNumber: number;
+  /**
+   * null when the name has no Latin letters to map. The Pythagorean table
+   * covers A-Z only, so a Hangul, kana or Hanzi name used to reduce to 0 —
+   * a number with no meaning entry, which callers then rendered as a blank
+   * or dropped card. Absent is the honest answer; 0 is not.
+   */
+  expressionNumber: null | number;
   lifePathNumber: number;
-  personalityNumber: number;
+  personalityNumber: null | number;
   personalYearNumber: number;
-  soulUrgeNumber: number;
+  soulUrgeNumber: null | number;
 }
 
 export interface NumerologyPersonalityProfile {
@@ -38,16 +44,17 @@ export interface NumerologyPersonalityProfile {
 export interface NumerologyReading {
   birthDate: string; // ISO string for storage
   birthdayNumber: number;
-  expression: number;
+  /** null when the name has no Latin letters — see NumerologyNumbers. */
+  expression: null | number;
   // Persistence fields
   lifePath: number;
   meanings: {
     birthdayMeaning: Partial<NumerologyMeaning>;
-    expressionMeaning: Partial<NumerologyMeaning>;
+    expressionMeaning: null | Partial<NumerologyMeaning>;
     lifePathMeaning: Partial<NumerologyMeaning>;
-    personalityMeaning: Partial<NumerologyMeaning>;
+    personalityMeaning: null | Partial<NumerologyMeaning>;
     personalYearMeaning?: any;
-    soulUrgeMeaning: Partial<NumerologyMeaning>;
+    soulUrgeMeaning: null | Partial<NumerologyMeaning>;
   };
   // Detailed analysis
   numbers: NumerologyNumbers;
@@ -67,8 +74,8 @@ export interface NumerologyReading {
     };
   };
 
-  personality: number;
-  soulUrge: number;
+  personality: null | number;
+  soulUrge: null | number;
   userName: string;
 }
 
