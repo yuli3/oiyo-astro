@@ -1,6 +1,6 @@
 {
   "schema": "oiyo.ontology-platform-archive",
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "catalog-308-secondary-contexts-20260724",
   "createdAt": "2026-07-24T12:54:44.636Z",
   "immutable": true,
@@ -13,48 +13,58 @@
     {
       "path": "config/ontology-platform/v1/concepts.json",
       "sha256": "895181c4a70177fd2c813548bb8d822c93924a1455eaec08bd4e9ec85bfb6b11",
-      "bytes": 260760
+      "bytes": 260760,
+      "gitBlob": "595fc10f21f6dd5793c69e686337db8e1a7c13f6"
     },
     {
       "path": "config/ontology-platform/v1/edges.json",
       "sha256": "8a70495530bc91b15d31e29f4ddc241ab9aca7a15031b75d80b0de08a471bd77",
-      "bytes": 334227
+      "bytes": 334227,
+      "gitBlob": "f18f2a6c8acfad354c76b093298d3e26e878519d"
     },
     {
       "path": "config/ontology-platform/v1/golden.json",
       "sha256": "14b6287db9875ea0fa0525d2ef8a9b5f4608e1b7a59d8f0155bd0da1f9e96b58",
-      "bytes": 1024
+      "bytes": 1024,
+      "gitBlob": "28dc5513f6cf9e1fe42be04e9f6b733309fe70fa"
     },
     {
       "path": "config/ontology-platform/v1/legacy-graph-compatibility-v1.json",
       "sha256": "935c9bbbc1bf711f61032749d4240c1b5fdbb9021c73daf1b616e1ea43fb5a93",
-      "bytes": 646
+      "bytes": 646,
+      "gitBlob": "bfe54dad77d6b22905cf4d45842b34865abbd8a6"
     },
     {
       "path": "config/ontology-platform/v1/curated-hobbies-v1.json",
       "sha256": "479217ccd25177ba02a6080a93a5739c0f1cf84bf5a8d6ee5ddb4a256c92b674",
-      "bytes": 5818
+      "bytes": 5818,
+      "gitBlob": "a541c8f44fd5e4580827132c28fd1165a6792c12"
     },
     {
       "path": "src/manifest/ontology/shards/lifestyle/hobbies.ts",
       "sha256": "e7a83f5142f125136e91a2cafcd88d38cc307be0e67a23149c28fe4c0700943f",
-      "bytes": 5314
+      "bytes": 5314,
+      "gitBlob": "4cc67726bbc9304e1ba842d4c5235d925616108b"
     },
     {
       "path": "src/lib/data-layer/shards/hobbies.ts",
       "sha256": "10f6fecbe619b3ba431dd85003337bd321330729bc1e8e730cf73b77d612b811",
-      "bytes": 114844
+      "bytes": 114844,
+      "gitBlob": "575449c7272d6ecf84a24f93ccef8b0e34e8ffd8"
     },
     {
       "path": "src/lib/data-layer/shards/careers.ts",
       "sha256": "fee14ea8375ca80c1503293931fc851b34b892873d8e03c2e1098fba4aab31b3",
-      "bytes": 1403156
+      "bytes": 1403156,
+      "gitBlob": "174f2e186c187338e9b8d99e985f1a5196fdccd8"
     },
     {
       "path": "src/lib/ontology/lifestyle/data.ts",
       "sha256": "ca980be60c41f6f2b38a16a9c6ab22d23c3e1e7606d6fe21684a7bb01f73c549",
-      "bytes": 5940
+      "bytes": 5940,
+      "gitBlob": "7817264ad40f3218be7324e509f13a48eca283e3"
     }
   ],
-  "notes": "Local immutable snapshot of canonical ontology data and source catalogs. Never edit an existing archive; create a new archive for a new approved catalog state."
+  "notes": "Immutable snapshot of canonical ontology data and source catalogs, recorded as git blob ids rather than copied files. Restore any entry with `git cat-file -p <gitBlob>`. Never edit an existing archive; create a new one for a new approved catalog state. Converted from schemaVersion 1 (full copies) on 2026-08-18: 21 archives duplicated a 4.7MB concepts.json each, 103MB in all, and every byte was already in git history.",
+  "migratedAt": "2026-08-18T04:34:39.529Z"
 }

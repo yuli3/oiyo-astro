@@ -1,7 +1,9 @@
+import { execFile } from "node:child_process";
 import { mkdtemp, readFile, rm } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { promisify } from "node:util";
 
 import { buildOntologyPlatform } from "./build-ontology-platform.mjs";
 
@@ -11,6 +13,13 @@ const ARCHIVE_ROOT = resolve(ROOT, "config/ontology-platform/archive");
 const readJson = (name) => readFile(resolve(PLATFORM_ROOT, name), "utf8").then(JSON.parse);
 const topCandidate = (adjacency, seedIds) => seedIds.flatMap((id) => adjacency[id] ?? []).sort((left, right) => right.weight - left.weight || left.to.localeCompare(right.to, "en"))[0]?.to;
 const fail = (message) => { throw new Error(`Ontology golden matrix audit failed: ${message}`); };
+// Archives record git blob ids instead of copied files (schemaVersion 2), so
+// the archived bytes come out of the object database rather than off disk.
+const execFileAsync = promisify(execFile);
+const readArchived = async (gitBlob) => {
+  const { stdout } = await execFileAsync("git", ["cat-file", "blob", gitBlob], { cwd: ROOT, encoding: "buffer", maxBuffer: 1 << 28 });
+  return stdout;
+};
 
 const [matrix, conceptsDocument, legacyContract, currentArchive] = await Promise.all([
   readJson("golden-regression-matrix-v1.json"),
@@ -57,9 +66,11 @@ try {
   }
   const archiveManifest = JSON.parse(await readFile(resolve(ARCHIVE_ROOT, currentArchive.id, "manifest.json"), "utf8"));
   for (const relativePath of matrix.archiveBuildContract?.requiredCurrentArchiveSources ?? []) {
-    const archived = await readFile(resolve(ARCHIVE_ROOT, currentArchive.id, "sources", relativePath));
+    const entry = archiveManifest.files.find(({ path }) => path === relativePath);
+    if (!entry) { errors.push(`archive/build source drift: ${relativePath}`); continue; }
+    const archived = await readArchived(entry.gitBlob);
     const current = await readFile(resolve(ROOT, relativePath));
-    if (!archiveManifest.files.some(({ path }) => path === relativePath) || !archived.equals(current)) errors.push(`archive/build source drift: ${relativePath}`);
+    if (!archived.equals(current)) errors.push(`archive/build source drift: ${relativePath}`);
   }
   const legacy = matrix.legacyIsolationContract ?? {};
   if (Object.keys(legacyContract.mapped ?? {}).length !== legacy.mappedCount || Object.keys(legacyContract.deferred ?? {}).length !== legacy.deferredCount) errors.push("legacy compatibility contract count mismatch");

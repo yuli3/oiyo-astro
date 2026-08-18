@@ -1,6 +1,6 @@
 {
   "schema": "oiyo.ontology-platform-archive",
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "id": "occupation-promotion-handoff-v1-20260726",
   "createdAt": "2026-07-26T05:04:04.565Z",
   "immutable": true,
@@ -13,153 +13,184 @@
     {
       "path": "config/ontology-platform/v1/concepts.json",
       "sha256": "be28f74b0104506784b1d8515b6629fa76744f9564e0833d17d02e645f34e1e6",
-      "bytes": 4918944
+      "bytes": 4918944,
+      "gitBlob": "3fae140d6aa8b8e914fd415eef7276cde4f76690"
     },
     {
       "path": "config/ontology-platform/v1/edges.json",
       "sha256": "147a8737f092e3a611694d1c2fa3232883632c1c27f121a13d138447d169b79f",
-      "bytes": 770897
+      "bytes": 770897,
+      "gitBlob": "28043871db89ade59891deae4559826d51a134e3"
     },
     {
       "path": "config/ontology-platform/v1/golden.json",
       "sha256": "96689694247b5dc3dd10e35ae771e4f045344aa5df8c85e2393c07c8cca7468f",
-      "bytes": 6785
+      "bytes": 6785,
+      "gitBlob": "53a6dc132d2886fa48d0d5980880d6de5c8366e0"
     },
     {
       "path": "config/ontology-platform/v1/golden-regression-matrix-v1.json",
       "sha256": "1087236b4e4a89d77caf47ba80c02c9a762416a334a1e854f21f62c5b441decb",
-      "bytes": 1346
+      "bytes": 1346,
+      "gitBlob": "322d773ee39b47b1c7eb22f67ca2d02676954a8d"
     },
     {
       "path": "config/ontology-platform/v1/legacy-graph-compatibility-v1.json",
       "sha256": "935c9bbbc1bf711f61032749d4240c1b5fdbb9021c73daf1b616e1ea43fb5a93",
-      "bytes": 646
+      "bytes": 646,
+      "gitBlob": "bfe54dad77d6b22905cf4d45842b34865abbd8a6"
     },
     {
       "path": "config/ontology-platform/v1/curated-hobbies-v1.json",
       "sha256": "479217ccd25177ba02a6080a93a5739c0f1cf84bf5a8d6ee5ddb4a256c92b674",
-      "bytes": 5818
+      "bytes": 5818,
+      "gitBlob": "a541c8f44fd5e4580827132c28fd1165a6792c12"
     },
     {
       "path": "config/ontology-platform/v1/curated-actions-v1.json",
       "sha256": "074a657acaedb436f244489d014f108ce6aae4e957a7be9a35c21762c960db21",
-      "bytes": 6881
+      "bytes": 6881,
+      "gitBlob": "27f2a2979785f1e45f299ffec17a17ff7b38c56d"
     },
     {
       "path": "config/ontology-platform/v1/curated-hobby-activity-facets-v1.json",
       "sha256": "dbc9ebf769bbf1cf0bf06b2d55200afb0aeb4d8b6bc10deb5205ec6810c06346",
-      "bytes": 5836
+      "bytes": 5836,
+      "gitBlob": "e3dc3ba2a7bef35f28b3256dc17ca7b361468af8"
     },
     {
       "path": "config/ontology-platform/v1/relation-vocabulary-v1.json",
       "sha256": "32f805ca7283bff17f3a638465a7df104aef407a0f958de785b9faf63a97a380",
-      "bytes": 3885
+      "bytes": 3885,
+      "gitBlob": "7b702661ea931e50788b71ab8cb6b7cae3eaf61a"
     },
     {
       "path": "config/ontology-platform/v1/concept-explanation-templates-v1.json",
       "sha256": "0d2769bbfbd3d589b04dbaee80a85c1a7d0f096b0d2d6f52e8b8ffeb0ac6d44e",
-      "bytes": 10458
+      "bytes": 10458,
+      "gitBlob": "1e3a10a36eb6f6454811affebb5f696a941c21e2"
     },
     {
       "path": "config/ontology-platform/v2/action-vocabulary-i-v1.json",
       "sha256": "bf9172c70f77ae904e214dbf2ddbb84d12e20d404970932034a75e57497170b8",
-      "bytes": 17849
+      "bytes": 17849,
+      "gitBlob": "61e9b62caeb3882af9bc2d27079c0529cf8ac749"
     },
     {
       "path": "config/ontology-platform/v2/action-vocabulary-ii-v1.json",
       "sha256": "0cb98bdc6b96e0064f1e4fba13ba6f34fdfcb213332c4fc9b05c1b1f1da080b0",
-      "bytes": 19723
+      "bytes": 19723,
+      "gitBlob": "36f85a88fd255a32a14c2da8997b96c36f75b655"
     },
     {
       "path": "config/ontology-platform/v2/hobby-catalog-i-v1.json",
       "sha256": "143769439e1fefdc519ac8a609e0501937201634570896aaaff3bdf306f2940e",
-      "bytes": 33528
+      "bytes": 33528,
+      "gitBlob": "649ee80ecd56cd2679faecc008c37104debf73e8"
     },
     {
       "path": "config/ontology-platform/v2/hobby-catalog-ii-v1.json",
       "sha256": "8e34d07e73d575a5faee2915abc1f135338594af71d4aae508a74ab10f6409ee",
-      "bytes": 3321
+      "bytes": 3321,
+      "gitBlob": "4fecf078432e6e4d3326d6e568a9883d715a37bc"
     },
     {
       "path": "config/ontology-platform/v2/hobby-catalog-iii-v1.json",
       "sha256": "3d07947d52c566a9ce449a932140522ce12b9eeaa44127868306b0806c3a4695",
-      "bytes": 5674
+      "bytes": 5674,
+      "gitBlob": "a1855505bf988b2bac97c4ed9810725fe28199c6"
     },
     {
       "path": "config/ontology-platform/v2/work-context-taxonomy-v2.json",
       "sha256": "7fa4f4d83f968ca341dfc2d6433883f2bd6e8a3d5e3b3a6c3abfdc5250a2a566",
-      "bytes": 12340
+      "bytes": 12340,
+      "gitBlob": "61f827c6270c9e24390145d7f74eea339d10185b"
     },
     {
       "path": "config/ontology-platform/v2/life-signals-contract-v1.json",
       "sha256": "1a121c9dd609c36885112ed5e949b58963ab323e5600a1ee96d08987658fa13b",
-      "bytes": 6287
+      "bytes": 6287,
+      "gitBlob": "6257b2e1c6ee1db2226ea9aa2a4493f02555a2af"
     },
     {
       "path": "config/ontology-platform/v2/occupation-source-mapping-review-v1.json",
       "sha256": "91152a030bb5e550aba211573ce01580184a696edb84173a40074a89c9042f67",
-      "bytes": 4140
+      "bytes": 4140,
+      "gitBlob": "a6095d95281a3527d434fd557d303efdf1558512"
     },
     {
       "path": "config/ontology-platform/v2/life-coordinator-integration-v1.json",
       "sha256": "a102351f5cdd55588fa7abae8c30e05bd5e778a78f67848a1c7a3742d6c7d4fc",
-      "bytes": 3470
+      "bytes": 3470,
+      "gitBlob": "576dc289d06853a1a7a309fb0d2e70bcf6e47b03"
     },
     {
       "path": "config/ontology-platform/v2/occupation-source-inventory-v1.json",
       "sha256": "cf17c26b73025bec5f1eb390c697c34891ac100a689daa41f85ed17b32e06da3",
-      "bytes": 2736
+      "bytes": 2736,
+      "gitBlob": "2635e97d2cbb67ca91e1088bac3c1de57a47b08c"
     },
     {
       "path": "config/ontology-platform/v2/occupation-source-index-v1.json",
       "sha256": "a14ec150a8a615b3eb67fcc3288d9755fbd42ca03fc63dc78c3a0eaf04ee1e81",
-      "bytes": 2427461
+      "bytes": 2427461,
+      "gitBlob": "56fffd9b26ca0298c99e717d41cba1f440dd6c53"
     },
     {
       "path": "config/ontology-platform/v2/occupation-candidate-cohort-v1.json",
       "sha256": "be7008342485678f751024cea7b24d103bc46c5d9f50c03258559411dd1de6d5",
-      "bytes": 729902
+      "bytes": 729902,
+      "gitBlob": "09926818d9ea8eb8f6cccade57986c4f29776b63"
     },
     {
       "path": "config/ontology-platform/v2/occupation-alias-mapping-review-v1.json",
       "sha256": "6ad411bfb30ccad1d5a78fbab3d3829dfa166ed4fb9419dfa2082a7ee4367bb9",
-      "bytes": 456999
+      "bytes": 456999,
+      "gitBlob": "c8bb83c58c0808831ddb7c39b094e66518cd121a"
     },
     {
       "path": "config/ontology-platform/v2/occupation-locale-label-packet-v1.json",
       "sha256": "8e617fcbd04ff45cd5f7149ff3a21a1174d49b4204a7b2d9637844f6c34d506f",
-      "bytes": 4226
+      "bytes": 4226,
+      "gitBlob": "d3d735adabc4e833e7a1794709265be995369c3c"
     },
     {
       "path": "config/ontology-platform/v2/occupation-facet-readiness-v1.json",
       "sha256": "3fc35fcacc16e4e20d0e90c382e8f427e44793cb306dbf4d0905a71f18a4ce45",
-      "bytes": 8654
+      "bytes": 8654,
+      "gitBlob": "65000c50c29d88d84f4624593384e49cf36bce82"
     },
     {
       "path": "config/ontology-platform/v2/occupation-promotion-handoff-v1.json",
       "sha256": "c6621977ce5248ca988db7678a2d2e57f1d960a47740e77c172db0eaf01cfc97",
-      "bytes": 1804
+      "bytes": 1804,
+      "gitBlob": "108e7739904af54ea21bb4d717bcd61905fa0d11"
     },
     {
       "path": "src/manifest/ontology/shards/lifestyle/hobbies.ts",
       "sha256": "e7a83f5142f125136e91a2cafcd88d38cc307be0e67a23149c28fe4c0700943f",
-      "bytes": 5314
+      "bytes": 5314,
+      "gitBlob": "4cc67726bbc9304e1ba842d4c5235d925616108b"
     },
     {
       "path": "src/lib/data-layer/shards/hobbies.ts",
       "sha256": "10f6fecbe619b3ba431dd85003337bd321330729bc1e8e730cf73b77d612b811",
-      "bytes": 114844
+      "bytes": 114844,
+      "gitBlob": "575449c7272d6ecf84a24f93ccef8b0e34e8ffd8"
     },
     {
       "path": "src/lib/data-layer/shards/careers.ts",
       "sha256": "fee14ea8375ca80c1503293931fc851b34b892873d8e03c2e1098fba4aab31b3",
-      "bytes": 1403156
+      "bytes": 1403156,
+      "gitBlob": "174f2e186c187338e9b8d99e985f1a5196fdccd8"
     },
     {
       "path": "src/lib/ontology/lifestyle/data.ts",
       "sha256": "ca980be60c41f6f2b38a16a9c6ab22d23c3e1e7606d6fe21684a7bb01f73c549",
-      "bytes": 5940
+      "bytes": 5940,
+      "gitBlob": "7817264ad40f3218be7324e509f13a48eca283e3"
     }
   ],
-  "notes": "Local immutable snapshot of canonical ontology data and source catalogs. Never edit an existing archive; create a new archive for a new approved catalog state."
+  "notes": "Immutable snapshot of canonical ontology data and source catalogs, recorded as git blob ids rather than copied files. Restore any entry with `git cat-file -p <gitBlob>`. Never edit an existing archive; create a new one for a new approved catalog state. Converted from schemaVersion 1 (full copies) on 2026-08-18: 21 archives duplicated a 4.7MB concepts.json each, 103MB in all, and every byte was already in git history.",
+  "migratedAt": "2026-08-18T04:34:41.736Z"
 }

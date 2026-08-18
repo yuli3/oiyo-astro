@@ -54,12 +54,13 @@
     "audit:ontology-occupation-promotion-handoff": "node scripts/audit-ontology-occupation-promotion-handoff.mjs",
     "audit:ontology-occupation-pilot-staging": "node scripts/audit-ontology-occupation-pilot-staging.mjs",
     "audit:i18n-runtime-namespaces": "node scripts/audit-i18n-runtime-namespaces.mjs",
-    "archive:ontology-platform": "node scripts/archive-ontology-platform.mjs --id catalog-308-20260724",
+    "archive:ontology-platform": "node scripts/archive-ontology-platform.mjs",
     "audit:ontology-platform-archive": "node scripts/audit-ontology-platform-archive.mjs",
     "submit:indexing": "python3 ../docs/search-submit-all.py --site oiyo --new-only",
     "submit:indexing:dry": "python3 ../docs/search-submit-all.py --site oiyo --new-only --dry-run",
     "audit:test-quiz-schema": "python3 scripts/audit-test-quiz-schema.py",
-    "audit:questionnaire": "node scripts/audit-questionnaire-cohorts.mjs --check"
+    "audit:questionnaire": "node scripts/audit-questionnaire-cohorts.mjs --check",
+    "restore:ontology-archive": "node scripts/restore-ontology-archive.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.7",
