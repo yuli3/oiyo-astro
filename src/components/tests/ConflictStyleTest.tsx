@@ -12,7 +12,7 @@ interface ResultData { title: string; subtitle: string; description: string; str
 
 const COLORS: Record<Style, string> = {
   compete: '#ef4444', collaborate: '#22c55e', compromise: '#3b82f6',
-  avoid: '#a855f7', accommodate: '#f59e0b',
+  avoid: '#435D31', accommodate: '#f59e0b',
 }
 
 const LABELS: Record<Locale, {

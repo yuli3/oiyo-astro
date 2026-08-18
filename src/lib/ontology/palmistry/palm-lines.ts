@@ -82,7 +82,7 @@ export const PALM_LINES: PalmLine[] = [
   },
   {
     id: 'fate',
-    color: '#9333ea',
+    color: '#A1A578',
     path: 'M 154 293 C 155 252, 154 211, 150 177',
     name: { ko: '운명선', en: 'Fate Line', ja: '運命線', zh: '命运线', fr: 'Ligne de destin', es: 'Línea del destino' },
     meaning: {

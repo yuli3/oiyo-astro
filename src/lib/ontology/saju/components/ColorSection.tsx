@@ -28,7 +28,7 @@ export function ColorSection({ className, result }: ColorSectionProps) {
     gray: "#94A3B8",
     green: "#10B981",
     red: "#EF4444",
-    violet: "#8B5CF6",
+    violet: "#435D31",
     yellow: "#F59E0B",
   };
 

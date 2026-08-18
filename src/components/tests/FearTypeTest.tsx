@@ -656,8 +656,8 @@ const TYPE_COLORS: Record<FearType, string> = {
   rejection: '#f43f5e',
   failure: '#f59e0b',
   loss: '#06b6d4',
-  unknown: '#6366f1',
-  judgment: '#a855f7',
+  unknown: '#5B915F',
+  judgment: '#607329',
 }
 
 interface Props { locale?: string }

@@ -188,7 +188,7 @@ const LEVELS: Record<OptimismLevel, {
   },
   moderate_pessimism: {
     emoji: "🌧️",
-    color: "#8b5cf6",
+    color: "#435D31",
     scoreRange: "14–21",
     ko: {
       title: "온건한 비관주의자",

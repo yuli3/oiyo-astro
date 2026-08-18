@@ -111,7 +111,7 @@ const TYPE_DATA: Record<BizType, Record<Locale, TypeData>> = {
   analyst: {
     ko: {
       name: '분석가', keyword: 'Analyst',
-      color: '#6366f1',
+      color: '#607329',
       description: '당신은 데이터와 사실에 기반해 의사결정을 내립니다. 시장 조사, 재무 분석, 전략 수립에 탁월하며, 리스크를 최소화하는 방식으로 사업을 운영합니다.',
       strengths: ['데이터 기반 의사결정', '리스크 관리 능력', '전략적 사고', '정확한 시장 분석'],
       challenges: ['결정 지연 (과분석)', '감으로 움직이는 상황에 불안감', '지나치게 보수적 접근'],
@@ -120,7 +120,7 @@ const TYPE_DATA: Record<BizType, Record<Locale, TypeData>> = {
     },
     en: {
       name: 'Analyst', keyword: 'Analyst',
-      color: '#6366f1',
+      color: '#607329',
       description: 'You make decisions based on data and facts. You excel at market research, financial analysis, and strategy, running businesses in a risk-minimizing way.',
       strengths: ['Data-driven decision making', 'Risk management', 'Strategic thinking', 'Precise market analysis'],
       challenges: ['Decision delays from over-analysis', 'Discomfort in gut-feeling situations', 'Overly conservative approach'],
@@ -129,7 +129,7 @@ const TYPE_DATA: Record<BizType, Record<Locale, TypeData>> = {
     },
     ja: {
       name: 'アナリスト', keyword: 'Analyst',
-      color: '#6366f1',
+      color: '#607329',
       description: 'あなたはデータと事実に基づいて意思決定を行います。市場調査、財務分析、戦略立案に優れ、リスクを最小化する方法でビジネスを運営します。',
       strengths: ['データ主導の意思決定', 'リスク管理能力', '戦略的思考', '精確な市場分析'],
       challenges: ['過分析による決断の遅れ', '感覚に頼る状況での不安', '過度に保守的なアプローチ'],

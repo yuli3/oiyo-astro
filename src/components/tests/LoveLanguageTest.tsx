@@ -25,7 +25,7 @@ const LANG_COLORS: Record<Lang, string> = {
   words: '#3b82f6',
   acts: '#22c55e',
   gifts: '#f59e0b',
-  time: '#a855f7',
+  time: '#435D31',
   touch: '#ef4444',
 }
 

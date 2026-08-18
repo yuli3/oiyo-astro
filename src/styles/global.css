@@ -36,6 +36,10 @@
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
+  --color-chart-9: var(--chart-9);
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
@@ -94,6 +98,14 @@
   --chart-3: oklch(0.664 0.101 96);
   --chart-4: oklch(0.446 0.075 134);
   --chart-5: oklch(0.706 0.062 112);
+  /* Extended to nine so the widest categorical set on the site — the
+     enneagram's nine types — has one token each. Hues deliberately skip the
+     250-320 band: that is where violet and indigo live, and the whole point
+     of this series is that no member of it reads as a second brand theme. */
+  --chart-6: oklch(0.620 0.095 180);
+  --chart-7: oklch(0.660 0.110 62);
+  --chart-8: oklch(0.560 0.090 210);
+  --chart-9: oklch(0.600 0.105 35);
   --radius: 0.625rem;
 }
 

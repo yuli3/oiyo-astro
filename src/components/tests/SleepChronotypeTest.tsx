@@ -629,7 +629,7 @@ const RESULTS: Record<Chronotype, Record<SupportedLang, ResultData>> = {
 const TYPE_COLORS: Record<Chronotype, string> = {
   lion: '#f59e0b',
   bear: '#84cc16',
-  wolf: '#6366f1',
+  wolf: '#5B915F',
   dolphin: '#06b6d4',
 }
 

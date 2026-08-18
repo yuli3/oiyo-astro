@@ -433,7 +433,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         <div className="text-center space-y-2">
           <h1 className="text-2xl font-bold text-gray-900">{t.resultTitle}</h1>
           <div className="inline-flex max-w-full justify-center whitespace-normal px-4 py-2 rounded-2xl text-white font-semibold text-lg"
-            style={{ backgroundColor: info?.color ?? "#7c3aed" }}>
+            style={{ backgroundColor: info?.color ?? "#A1A578" }}>
             {resultLabel}
           </div>
         </div>

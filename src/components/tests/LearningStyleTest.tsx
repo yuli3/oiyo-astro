@@ -656,7 +656,7 @@ const QUESTIONS: Record<SupportedLang, Question[]> = {
 const STYLE_COLORS: Record<StyleType, string> = {
   visual: '#10b981',
   auditory: '#3b82f6',
-  reading: '#8b5cf6',
+  reading: '#435D31',
   kinesthetic: '#f59e0b',
 }
 

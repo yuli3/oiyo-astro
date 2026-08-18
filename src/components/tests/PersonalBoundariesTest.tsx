@@ -13,7 +13,7 @@ type OverallLevel = 'porous' | 'developing' | 'balanced' | 'firm'
 interface Question { id: string; text: string; domain: Domain }
 
 const DOMAIN_COLORS: Record<Domain, string> = {
-  emotional: '#a855f7',
+  emotional: '#435D31',
   physical: '#22c55e',
   time: '#3b82f6',
   digital: '#f97316',

@@ -20,7 +20,7 @@ export const HEXACO_DIMENSION_MAP: Record<
     labelKey: "dimensions.A",
   },
   C: {
-    color: "#818cf8", // Indigo
+    color: "#435D31", // chart-4
     label: {
       zh: "尽责性",
       en: "Conscientiousness",
@@ -56,7 +56,7 @@ export const HEXACO_DIMENSION_MAP: Record<
     labelKey: "dimensions.H",
   },
   O: {
-    color: "#c084fc", // Purple
+    color: "#359988", // chart-6
     label: {
       zh: "开放性",
       en: "Openness",

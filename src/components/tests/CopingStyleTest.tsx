@@ -185,7 +185,7 @@ const results: Record<CopingStyle, {
   },
   emotion_focused: {
     emoji: "🌊",
-    color: "#8b5cf6",
+    color: "#435D31",
     ko: {
       title: "감정 중심 대처",
       description: "스트레스로 인한 감정을 조절하고 관리하는 방식입니다. 이완 기법, 감정 표현, 긍정적 재구성을 활용합니다. 통제하기 어려운 상황에서 특히 효과적입니다.",

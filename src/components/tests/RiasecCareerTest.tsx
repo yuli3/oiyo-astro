@@ -25,7 +25,7 @@ function lang(locale: string): SupportedLang {
 interface Question { id: string; text: string; type: RiasecType }
 
 export const RIASEC_COLORS: Record<RiasecType, string> = {
-  R: '#f97316', I: '#3b82f6', A: '#a855f7', S: '#22c55e', E: '#ef4444', C: '#eab308'
+  R: '#f97316', I: '#3b82f6', A: '#435D31', S: '#22c55e', E: '#ef4444', C: '#eab308'
 }
 
 const LABELS: Record<SupportedLang, {

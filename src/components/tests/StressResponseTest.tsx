@@ -82,7 +82,7 @@ const TYPE_DATA: Record<ResponseType, Record<Locale, TypeData>> = {
   freeze: {
     ko: {
       name: '경직 반응', keyword: '얼어붙음',
-      color: '#6366f1',
+      color: '#607329',
       emoji: '🧊',
       description: '당신은 스트레스 상황에서 얼어붙거나 멈추는 반응을 보입니다. 압도적인 상황에서 몸과 마음이 일시 정지되며, 해리감, 무감각, 결정 마비가 나타날 수 있습니다.',
       bodySignals: ['몸이 굳어지거나 무거워짐', '멍하거나 해리감', '결정 불가능 상태', '시간이 느리게 흐르는 느낌'],
@@ -91,7 +91,7 @@ const TYPE_DATA: Record<ResponseType, Record<Locale, TypeData>> = {
     },
     en: {
       name: 'Freeze Response', keyword: 'Freeze',
-      color: '#6366f1',
+      color: '#607329',
       emoji: '🧊',
       description: 'You tend to freeze or stop when stressed. In overwhelming situations, your body and mind temporarily pause, which can manifest as dissociation, numbness, or decision paralysis.',
       bodySignals: ['Body stiffening or feeling heavy', 'Dazed or dissociated', 'Unable to make decisions', 'Feeling time moves slowly'],
@@ -100,7 +100,7 @@ const TYPE_DATA: Record<ResponseType, Record<Locale, TypeData>> = {
     },
     ja: {
       name: '凍結反応', keyword: '固まり',
-      color: '#6366f1',
+      color: '#607329',
       emoji: '🧊',
       description: 'あなたはストレス状況で固まったり止まったりする反応を示します。圧倒的な状況で体と心が一時停止し、解離感、無感覚、決断の麻痺として現れることがあります。',
       bodySignals: ['体が固まる・重くなる', '멍하거나멍해지る・解離感', '決断できない状態', '時間がゆっくり流れる感覚'],

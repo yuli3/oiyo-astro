@@ -57,7 +57,7 @@ const spectrumData: Record<Spectrum, SpectrumData> = {
   deep_introvert: {
     label: { ko: "깊은 내향인", en: "Deep Introvert", ja: "深い内向型", zh: "深度内向者", fr: "Introverti profond", es: "Introvertido profundo" },
     emoji: "🌿",
-    color: "#6366f1",
+    color: "#435D31",
     description: {
       ko: "당신은 깊은 내향인으로, 혼자만의 시간에서 에너지를 회복하고 내면의 풍요로운 세계를 가집니다. 소수와 깊은 관계를 선호하며, 생각하고 관찰하는 것을 사랑합니다. 내향성은 성격의 결함이 아니라, 다르게 충전하는 방식입니다.",
       en: "You are a deep introvert who recharges in solitude and has a rich inner world. You prefer deep relationships with a few people and love to think and observe. Introversion is not a personality flaw — it's simply a different way of recharging.",
@@ -102,7 +102,7 @@ const spectrumData: Record<Spectrum, SpectrumData> = {
   introvert: {
     label: { ko: "내향인", en: "Introvert", ja: "内向型", zh: "内向者", fr: "Introverti", es: "Introvertido" },
     emoji: "🌙",
-    color: "#8b5cf6",
+    color: "#5B915F",
     description: {
       ko: "당신은 내향인으로, 주로 혼자 있거나 소수와 함께할 때 에너지를 충전합니다. 사회적 상황을 즐길 수 있지만, 사람들과 많은 시간을 보내면 지칩니다. 생각을 행동보다 먼저 하는 경향이 있으며, 신중하고 관찰력이 뛰어납니다.",
       en: "You're an introvert who primarily recharges alone or with a small group. You can enjoy social situations but feel drained after much time with people. You tend to think before acting and are thoughtful and observant.",

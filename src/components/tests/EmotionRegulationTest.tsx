@@ -320,7 +320,7 @@ const results: Record<RegStrategy, {
   },
   problem_solving: {
     emoji: "🔧",
-    color: "#8b5cf6",
+    color: "#435D31",
     effectiveness: "높음 (통제 가능 시)",
     ko: {
       title: "문제 해결형",

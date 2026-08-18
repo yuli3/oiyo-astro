@@ -41,9 +41,9 @@ interface DimMeta {
 
 const DIM_META: Record<Dim, Record<SupportedLang, DimMeta>> = {
   O: {
-    ko: { label: '개방성', color: '#8b5cf6' },
-    en: { label: 'Openness', color: '#8b5cf6' },
-    ja: { label: '開放性', color: '#8b5cf6' },
+    ko: { label: '개방성', color: '#435D31' },
+    en: { label: 'Openness', color: '#435D31' },
+    ja: { label: '開放性', color: '#435D31' },
   },
   C: {
     ko: { label: '성실성', color: '#3b82f6' },

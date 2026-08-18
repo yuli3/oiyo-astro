@@ -197,7 +197,7 @@ const categoryResults: Record<
     es: { title: "Conciencia emocional", high: "Reconoces claramente las emociones cuando aparecen.", medium: "Tienes una conciencia emocional moderada.", low: "Hay margen para desarrollar más tu conciencia emocional." },
   },
   understanding: {
-    color: "#6366f1",
+    color: "#435D31",
     ko: { title: "감정 이해", high: "감정의 원인과 영향을 탁월하게 이해합니다.", medium: "감정에 대한 좋은 이해력을 가지고 있습니다.", low: "감정 패턴에 대한 더 깊은 이해가 도움이 됩니다." },
     en: { title: "Emotional Understanding", high: "You have excellent understanding of emotions and their causes.", medium: "You have good emotional understanding.", low: "Deeper understanding of emotional patterns would help." },
     ja: { title: "感情理解", high: "感情とその原因を優れて理解しています。", medium: "感情についての良い理解があります。", low: "感情パターンへの深い理解が助けになります。" },

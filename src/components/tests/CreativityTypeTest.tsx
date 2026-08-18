@@ -134,7 +134,7 @@ const results: Record<CreativityType, {
 }> = {
   divergent: {
     emoji: "🌐",
-    color: "#8b5cf6",
+    color: "#435D31",
     ko: { title: "발산적 창의형", description: "당신은 연결의 달인입니다. 서로 무관해 보이는 것들을 연결하고 예상치 못한 조합으로 새로운 아이디어를 만들어냅니다. 다양한 관심사와 지식이 창의성의 원천입니다.", strengths: ["광범위한 아이디어 생성", "교차 분야 혁신", "풍부한 상상력"], famous: "레오나르도 다빈치, 일론 머스크", tip: "아이디어를 기록하는 습관이 중요합니다. 뛰어난 아이디어는 종종 잊혀집니다. 아이디어 일기나 노트를 항상 가지고 다니세요." },
     en: { title: "Divergent Creative", description: "You're a master of connections. You link seemingly unrelated things and create new ideas through unexpected combinations. Diverse interests and knowledge are your creative fuel.", strengths: ["Wide idea generation", "Cross-domain innovation", "Rich imagination"], famous: "Leonardo da Vinci, Elon Musk", tip: "Habitually recording ideas is crucial. Great ideas are often forgotten. Always carry an idea journal or notepad." },
     ja: { title: "発散型クリエイティブ", description: "あなたはつながりの達人です。一見無関係に見えるものをつなぎ、予想外の組み合わせで新しいアイデアを生み出します。多様な興味と知識が創造性の源です。", strengths: ["広範なアイデア生成", "クロスドメイン革新", "豊かな想像力"], famous: "レオナルド・ダ・ヴィンチ、イーロン・マスク", tip: "アイデアを記録する習慣が重要です。優れたアイデアはよく忘れられます。アイデア日記やノートを常に持ち歩きましょう。" },

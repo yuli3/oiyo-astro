@@ -208,7 +208,7 @@ export default function SensoryProcessingTest({ locale: lp = 'ko' }: Props) {
   const finished = current >= QUESTIONS.length
 
   if (finished && result) {
-    const levelColor = result.level === 'high' ? '#6366f1' : result.level === 'moderate' ? '#22c55e' : '#f97316'
+    const levelColor = result.level === 'high' ? '#607329' : result.level === 'moderate' ? '#22c55e' : '#f97316'
     const pct = Math.round((result.score / 75) * 100)
 
     return (

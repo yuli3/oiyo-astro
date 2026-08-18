@@ -54,12 +54,12 @@ const stateInfo: Record<EgoState, Record<SupportedLocale, { name: string; color:
     es: { name: "Niño libre (FC)", color: "#f59e0b" },
   },
   AC: {
-    ko: { name: "순응하는 아이(AC)", color: "#8b5cf6" },
-    en: { name: "Adapted Child (AC)", color: "#8b5cf6" },
-    ja: { name: "順応した子供(AC)", color: "#8b5cf6" },
-    zh: { name: "适应型儿童(AC)", color: "#8b5cf6" },
-    fr: { name: "Enfant adapté (AC)", color: "#8b5cf6" },
-    es: { name: "Niño adaptado (AC)", color: "#8b5cf6" },
+    ko: { name: "순응하는 아이(AC)", color: "#435D31" },
+    en: { name: "Adapted Child (AC)", color: "#435D31" },
+    ja: { name: "順応した子供(AC)", color: "#435D31" },
+    zh: { name: "适应型儿童(AC)", color: "#435D31" },
+    fr: { name: "Enfant adapté (AC)", color: "#435D31" },
+    es: { name: "Niño adaptado (AC)", color: "#435D31" },
   },
 };
 
@@ -588,8 +588,8 @@ export default function EgogramTest({ locale: localeProp }: Props) {
             <RadarChart data={radarData}>
               <PolarGrid />
               <PolarAngleAxis dataKey="subject" tick={{ fontSize: 11 }} />
-              <Radar name="score" dataKey="value" stroke="#6366f1"
-                fill="#6366f1" fillOpacity={0.4} />
+              <Radar name="score" dataKey="value" stroke="#5B915F"
+                fill="#5B915F" fillOpacity={0.4} />
               <Tooltip />
             </RadarChart>
           </ResponsiveContainer>

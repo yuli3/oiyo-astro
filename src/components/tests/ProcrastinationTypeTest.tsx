@@ -157,7 +157,7 @@ const results: Record<
 > = {
   perfectionist: {
     emoji: "🎯",
-    color: "#8b5cf6",
+    color: "#435D31",
     ko: {
       title: "완벽주의형",
       description: "당신의 미루기는 '잘 못할까봐'에서 시작됩니다. 완벽하지 않으면 시작하기 싫고, 시작해도 계속 수정하며 제출을 망설입니다. 높은 기준이 강점이지만, 완벽함을 추구하다 아무것도 완성 못 하는 역설에 빠지기 쉽습니다.",

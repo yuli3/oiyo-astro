@@ -354,7 +354,7 @@ export default function InnerChildTest({ locale: lp = 'ko' }: Props) {
     nurtured: '#10b981',
     aware: '#14b8a6',
     wounded: '#f59e0b',
-    frozen: '#6366f1',
+    frozen: '#435D31',
   }
   const color = levelColors[level]
 

@@ -59,7 +59,7 @@ const factorInfo: Record<ResilienceFactor, {
 }> = {
   self_efficacy: {
     emoji: "💪",
-    color: "#6366f1",
+    color: "#435D31",
     ko: { title: "자기 효능감", high: "장애물을 극복하는 능력에 강한 자신감이 있습니다.", medium: "일반적으로 자신의 능력을 믿지만 특정 상황에서 의심할 수 있습니다.", low: "자신의 능력에 더 많은 자신감을 갖는 것이 도움이 됩니다." },
     en: { title: "Self-Efficacy", high: "You have strong confidence in your ability to overcome obstacles.", medium: "You generally trust your abilities but may doubt yourself in certain situations.", low: "Building more confidence in your abilities will help you face challenges." },
     ja: { title: "自己効力感", high: "障害を克服する能力に強い自信があります。", medium: "一般的に自分の能力を信じますが、特定の状況では疑うことがあります。", low: "自分の能力にもっと自信を持つことが挑戦に直面するのに役立ちます。" },

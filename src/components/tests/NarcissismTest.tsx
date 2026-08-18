@@ -328,7 +328,7 @@ export default function NarcissismTest({ locale: lp = 'ko' }: Props) {
   const key = getResultKey(score)
   const r = RESULTS[key][l]
   const pct = Math.round((score / 16) * 100)
-  const levelColor = key === 'high' ? '#ef4444' : key === 'confident' ? '#f59e0b' : key === 'balanced' ? '#22c55e' : '#6366f1'
+  const levelColor = key === 'high' ? '#ef4444' : key === 'confident' ? '#f59e0b' : key === 'balanced' ? '#22c55e' : '#435D31'
 
   return (
     <div className="space-y-6">

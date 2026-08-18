@@ -44,7 +44,7 @@ const questions: Question[] = [
 ];
 
 const dimInfo: Record<Dimension, { name: Record<SupportedLocale, string>; color: string }> = {
-  self_awareness: { name: { ko: "자기인식", en: "Self-Awareness", ja: "自己認識", zh: "自我觉察", fr: "Conscience de soi", es: "Autoconciencia" }, color: "#6366f1" },
+  self_awareness: { name: { ko: "자기인식", en: "Self-Awareness", ja: "自己認識", zh: "自我觉察", fr: "Conscience de soi", es: "Autoconciencia" }, color: "#435D31" },
   self_regulation: { name: { ko: "자기조절", en: "Self-Regulation", ja: "自己調節", zh: "自我调节", fr: "Autorégulation", es: "Autorregulación" }, color: "#10b981" },
   motivation: { name: { ko: "동기부여", en: "Motivation", ja: "動機付け", zh: "动机", fr: "Motivation", es: "Motivación" }, color: "#f59e0b" },
   empathy: { name: { ko: "공감", en: "Empathy", ja: "共感", zh: "共情", fr: "Empathie", es: "Empatía" }, color: "#ec4899" },
@@ -312,7 +312,7 @@ export default function EmotionalIntelligenceTest({ locale: localeProp }: Props)
             <RadarChart data={radarData}>
               <PolarGrid />
               <PolarAngleAxis dataKey="subject" tick={{ fontSize: 11 }} />
-              <Radar dataKey="value" stroke="#6366f1" fill="#6366f1" fillOpacity={0.4} />
+              <Radar dataKey="value" stroke="#435D31" fill="#435D31" fillOpacity={0.4} />
               <Tooltip />
             </RadarChart>
           </ResponsiveContainer>

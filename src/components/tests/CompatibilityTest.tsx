@@ -328,7 +328,7 @@ export default function CompatibilityTest({ locale: lp = 'ko' }: Props) {
   if (phase === 'result' && dimScores) {
     const overall = Math.round(Object.values(dimScores).reduce((a, b) => a + b, 0) / 4)
     const level = overall >= 70 ? 'high' : overall >= 45 ? 'medium' : 'low'
-    const levelColor = level === 'high' ? '#22c55e' : level === 'medium' ? '#f59e0b' : '#6366f1'
+    const levelColor = level === 'high' ? '#22c55e' : level === 'medium' ? '#f59e0b' : '#435D31'
     const levelLabel = level === 'high' ? lb.compatible : level === 'medium' ? lb.moderate : lb.different
     const dims: Dimension[] = ['communication', 'values', 'lifestyle', 'emotional']
 
@@ -350,7 +350,7 @@ export default function CompatibilityTest({ locale: lp = 'ko' }: Props) {
           <h3 className="font-semibold text-sm">{lb.overallLabel}</h3>
           {dims.map(dim => {
             const score = dimScores[dim]
-            const barColor = score >= 70 ? '#22c55e' : score >= 45 ? '#f59e0b' : '#6366f1'
+            const barColor = score >= 70 ? '#22c55e' : score >= 45 ? '#f59e0b' : '#435D31'
             return (
               <div key={dim} className="space-y-1">
                 <div className="flex justify-between items-center text-xs">

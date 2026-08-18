@@ -281,7 +281,7 @@ export default function GratitudeStyleTest({ locale: lp = 'ko' }: Props) {
   const color = levelColors[result.level]
   const maxPerDim = 15 // 3 questions * 5 max
   const dimColors: Record<DimKey, string> = {
-    intensity: '#8b5cf6', frequency: '#3b82f6', span: '#22c55e', density: '#f59e0b',
+    intensity: '#435D31', frequency: '#3b82f6', span: '#22c55e', density: '#f59e0b',
   }
 
   return (

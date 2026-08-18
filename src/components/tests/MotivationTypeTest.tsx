@@ -32,7 +32,7 @@ const questions: Question[] = [
 const typeInfo: Record<MotivationType, { name: Record<SupportedLocale, string>; color: string; description: Record<SupportedLocale, string>; strengths: Record<SupportedLocale, string[]>; fit: Record<SupportedLocale, string>; watch: Record<SupportedLocale, string>; affirmation: Record<SupportedLocale, string> }> = {
   achievement: {
     name: { ko: "성취 동기형", en: "Achievement", ja: "達成動機型", zh: "成就动机型", fr: "Accomplissement", es: "Logro" },
-    color: "#6366f1",
+    color: "#435D31",
     description: {
       ko: "당신은 뛰어난 성과와 목표 달성에서 가장 큰 만족을 얻습니다. 도전을 즐기고, 지속적인 개선을 추구하며, 자신의 성과를 측정하는 것을 좋아합니다. 데이비드 맥클리랜드(David McClelland)의 연구에 따르면 이 동기 유형은 기업가와 혁신가에게서 자주 나타납니다.",
       en: "You find greatest satisfaction in outstanding performance and goal achievement. You enjoy challenges, seek continuous improvement, and like measuring your results. David McClelland's research shows this motivation type is common in entrepreneurs and innovators.",

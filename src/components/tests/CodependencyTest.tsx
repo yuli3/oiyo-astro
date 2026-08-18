@@ -312,7 +312,7 @@ export default function CodependencyTest({ locale: lp = 'ko' }: Props) {
   if (!result) return null
   const r = RESULTS[result.key][l]
   const pct = Math.round((result.score / 60) * 100)
-  const levelColor = result.key === 'strong' ? '#ef4444' : result.key === 'notable' ? '#f59e0b' : result.key === 'some' ? '#6366f1' : '#22c55e'
+  const levelColor = result.key === 'strong' ? '#ef4444' : result.key === 'notable' ? '#f59e0b' : result.key === 'some' ? '#435D31' : '#22c55e'
 
   return (
     <div className="space-y-6">

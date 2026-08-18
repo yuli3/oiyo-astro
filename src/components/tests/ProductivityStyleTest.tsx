@@ -129,7 +129,7 @@ const results: Record<ProductivityType, {
 }> = {
   deepwork: {
     emoji: "🎯",
-    color: "#6366f1",
+    color: "#435D31",
     ko: { title: "몰입형 전사", subtitle: "집중력의 대가", description: "방해받지 않는 긴 시간 동안 집중할 때 최상의 성과를 냅니다. 복잡한 문제를 깊이 파고들 때 최고의 역량을 발휘합니다. 알림은 당신의 적이며, 플로우 상태는 당신의 초능력입니다.", traits: ["방해 요소가 최소화된 환경에서 최고 효율", "높은 인지력이 필요한 복잡한 업무를 위해 전용 시간 블록 활용", "단일 업무에 대한 지속적이고 집중적인 몰입으로 성과 달성"] },
     en: { title: "Deep Work Warrior", subtitle: "Master of Focus", description: "You perform at your best when you can focus for long uninterrupted blocks. You excel at diving deep into complex problems. Notifications are your enemy and flow state is your superpower.", traits: ["Peak efficiency in environments with minimal distractions", "Uses dedicated time blocks for complex tasks requiring high cognition", "Achieves results through sustained, intense focus on a single task"] },
     ja: { title: "没入型ウォリアー", subtitle: "集中の達人", description: "邪魔されない長い時間集中できるとき最高のパフォーマンスを発揮します。複雑な問題に深く入り込むとき最高の能力を発揮します。通知はあなたの敵で、フロー状態はあなたの超能力です。", traits: ["妨害要素が最小化された環境で最高効率", "高い認知力が必要な複雑な作業のための専用タイムブロック活用", "単一タスクへの持続的な集中でパフォーマンス達成"] },

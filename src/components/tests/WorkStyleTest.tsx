@@ -161,7 +161,7 @@ const results: Record<WorkStyle, {
   },
   collaborator: {
     emoji: "🤝",
-    color: "#8b5cf6",
+    color: "#435D31",
     ko: { title: "협력 중심형", description: "당신은 팀워크에서 에너지를 얻고, 함께 만드는 것의 가치를 압니다. 관계 구축과 공동 문제 해결에 탁월합니다.", ideal: "팀 프로젝트, 크로스 펑셔널 협업, 고객 관계 업무", challenge: "혼자 해야 하는 업무에 어려움, 의견 충돌 시 결정이 늦어질 수 있음", tip: "혼자 하는 시간에도 가치 있는 것들을 찾아보세요. 독립적 작업 능력은 협력을 더 강하게 만듭니다." },
     en: { title: "Collaboration-Centered", description: "You gain energy from teamwork and understand the value of creating things together. You excel at relationship building and collaborative problem-solving.", ideal: "Team projects, cross-functional collaboration, customer relationship work", challenge: "Difficulty with solo tasks; decisions may slow down during disagreements", tip: "Find value in solo work too. Independent work capacity makes collaboration even stronger." },
     ja: { title: "協力中心型", description: "チームワークからエネルギーを得て、一緒に作ることの価値を理解しています。関係構築と共同問題解決に優れています。", ideal: "チームプロジェクト、クロスファンクショナルな協力、顧客関係業務", challenge: "一人でやる業務に困難、意見の対立時に決定が遅れることがある", tip: "一人でする時間にも価値あるものを見つけましょう。独立した作業能力は協力をより強くします。" },

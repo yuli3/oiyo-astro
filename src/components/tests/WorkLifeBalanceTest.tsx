@@ -16,7 +16,7 @@ const DOMAIN_COLORS: Record<Domain, string> = {
   workDemand: '#ef4444',
   personalTime: '#3b82f6',
   recovery: '#22c55e',
-  meaning: '#a855f7',
+  meaning: '#1C8292',
 }
 
 const LABELS: Record<SupportedLang, {

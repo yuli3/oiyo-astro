@@ -18,7 +18,7 @@ import { Questionnaire } from "@/components/ui/questionnaire";
 const LOCALES: AssessmentLocale[] = ["ko", "en", "ja", "zh", "fr", "es"];
 const COLORS: Record<CareerValueId, string> = {
   security: "#2563eb", achievement: "#dc2626", autonomy: "#d97706",
-  service: "#16a34a", creativity: "#7c3aed", status: "#ea580c",
+  service: "#16a34a", creativity: "#435D31", status: "#ea580c",
 };
 const ANALYTICS_PARAMS = { test_id: "career-values", instrument_version: CAREER_VALUES_INSTRUMENT.version } as const;
 

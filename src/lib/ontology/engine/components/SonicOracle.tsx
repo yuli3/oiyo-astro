@@ -22,7 +22,7 @@ export function SonicOracle({ missingElements, onomancy }: SonicOracleProps) {
     <div className="relative overflow-hidden rounded-[2rem] bg-[#0c0f16] border border-white/5 p-8 md:p-12">
       {/* Animated Wave Background */}
       <div className="absolute inset-x-0 bottom-0 h-48 opacity-20 pointer-events-none">
-        <WaveformAnimation color="#8b5cf6" speed={1} />
+        <WaveformAnimation color="#A69345" speed={1} />
       </div>
 
       <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">

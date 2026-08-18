@@ -17,7 +17,7 @@ export const ziweiManifest: DomainManifest = {
   i18nNamespace: "ontology.ziwei",
   id: "ziwei",
   styling: {
-    auraColor: THEME_COLORS.indigo, // Indigo
+    auraColor: THEME_COLORS.chart[7], // categorical series, was indigo
     frequency: 1.2,
   },
   version: "1.0.0",

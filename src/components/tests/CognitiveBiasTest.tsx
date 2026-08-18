@@ -310,7 +310,7 @@ export default function CognitiveBiasTest({ locale: lp = 'ko' }: Props) {
   }
 
   const dimColors: Record<BiasDim, string> = {
-    confirmation: '#6366f1',
+    confirmation: '#435D31',
     dunningKruger: '#f59e0b',
     availability: '#22c55e',
     lossAversion: '#ef4444',

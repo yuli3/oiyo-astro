@@ -29,8 +29,8 @@ export function getResonanceStyles(
   },
 ): ResonanceVisuals {
   // Default values
-  let color = "#A78BFA"; // Violet-400
-  let secondaryColor = "#8B5CF6"; // Violet-500
+  let color = "#435D31"; // Violet-400
+  let secondaryColor = "#5B915F"; // Violet-500
   let speed = "10s";
   let blur = "60px";
   let scale = "1";

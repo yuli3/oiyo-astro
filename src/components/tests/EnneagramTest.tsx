@@ -531,8 +531,8 @@ const TYPE_RESULTS: Record<EnneaType, Record<SupportedLang, TypeResult>> = {
 }
 
 const ENNEAGRAM_COLORS: Record<EnneaType, string> = {
-  '1': '#6366f1', '2': '#ec4899', '3': '#f59e0b',
-  '4': '#8b5cf6', '5': '#3b82f6', '6': '#14b8a6',
+  '1': '#435D31', '2': '#ec4899', '3': '#f59e0b',
+  '4': '#A1A578', '5': '#3b82f6', '6': '#14b8a6',
   '7': '#f97316', '8': '#ef4444', '9': '#22c55e',
 }
 

@@ -141,7 +141,7 @@ const styleInfo: Record<AngerStyle, {
     affirmation: { ko: "나는 나의 분노를 인정하되, 그것이 나를 지배하게 두지 않습니다.", en: "I acknowledge my anger but don't let it control me.", ja: "私は怒りを認めますが、それに支配されることはありません。", zh: "我承认自己的愤怒，但不让它控制我。", fr: "Je reconnais ma colère sans la laisser me contrôler.", es: "Reconozco mi ira, pero no dejo que me controle." },
   },
   suppressor: {
-    name: { ko: "억압형", en: "Suppressor", ja: "抑圧型", zh: "压抑型", fr: "Répressif", es: "Represor" }, color: "#6366f1", emoji: "🧊",
+    name: { ko: "억압형", en: "Suppressor", ja: "抑圧型", zh: "压抑型", fr: "Répressif", es: "Represor" }, color: "#607329", emoji: "🧊",
     description: {
       ko: "당신은 분노를 겉으로 드러내지 않고 내면에 쌓아두는 경향이 있습니다. 평화를 유지하려는 마음은 이해되지만, 감정을 계속 억압하면 신체화 증상(두통, 소화 장애)이나 우울감으로 이어질 수 있습니다. 표현하지 않은 분노는 사라지지 않고 쌓입니다.",
       en: "You tend to bottle up anger without showing it externally. Your desire to keep the peace is understandable, but continually suppressing emotions can lead to somatic symptoms (headaches, digestive issues) or depression. Unexpressed anger doesn't disappear — it accumulates.",
@@ -169,7 +169,7 @@ const styleInfo: Record<AngerStyle, {
     affirmation: { ko: "나의 감정을 표현하는 것은 자기 존중입니다.", en: "Expressing my feelings is an act of self-respect.", ja: "感情を表現することは自己尊重です。", zh: "表达我的感受，是一种自我尊重。", fr: "Exprimer mes émotions est un acte de respect envers moi-même.", es: "Expresar lo que siento es un acto de respeto propio." },
   },
   passive_aggressive: {
-    name: { ko: "수동-공격형", en: "Passive-Aggressive", ja: "受動攻撃型", zh: "被动攻击型", fr: "Passif-agressif", es: "Pasivo-agresivo" }, color: "#8b5cf6", emoji: "🌫️",
+    name: { ko: "수동-공격형", en: "Passive-Aggressive", ja: "受動攻撃型", zh: "被动攻击型", fr: "Passif-agressif", es: "Pasivo-agresivo" }, color: "#5B915F", emoji: "🌫️",
     description: {
       ko: "당신은 분노를 직접 표현하지 않지만, 간접적인 행동(비꼬기, 지연, 방해)으로 드러내는 경향이 있습니다. 갈등을 피하고 싶지만 감정도 표현하고 싶은 두 마음의 타협입니다. 그러나 이 방식은 상대방을 혼란스럽게 하고 문제를 해결하지 못합니다.",
       en: "You don't express anger directly but tend to show it through indirect behavior (sarcasm, delays, obstruction). It's a compromise between wanting to avoid conflict and wanting to express feelings. But this approach confuses others and doesn't solve problems.",

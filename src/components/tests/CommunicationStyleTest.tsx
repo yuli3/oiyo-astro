@@ -251,7 +251,7 @@ const results: Record<
   },
   passive: {
     emoji: "🌸",
-    color: "#a78bfa",
+    color: "#435D31",
     ko: {
       title: "수동형 (Passive)",
       description: "당신은 갈등을 피하고 관계의 조화를 중시합니다. 상대방의 필요를 자신보다 앞세우는 경향이 있으며, 속마음을 잘 드러내지 않습니다. 좋은 사람으로 여겨지지만 내면에 불만이 쌓일 수 있습니다.",

@@ -190,7 +190,7 @@ const results: Record<
   },
   intuitive: {
     emoji: "✨",
-    color: "#8b5cf6",
+    color: "#435D31",
     ko: {
       title: "직관적 감지형",
       description: "당신은 축적된 경험과 패턴 인식에서 나오는 직관을 신뢰합니다. 논리적 분석보다 '느낌'이나 '감이 온다'는 신호를 중시하며, 빠르게 결정할 수 있습니다.",

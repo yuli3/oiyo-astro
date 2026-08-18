@@ -87,7 +87,7 @@ export function calculateVisualResonance(
     // Intensity based on Persistence (P)
     aura.glowIntensity = 0.3 + (P / 100) * 0.7;
     // Main Accent
-    aura.accentColor = RD > 70 ? "#f472b6" : "#a78bfa";
+    aura.accentColor = RD > 70 ? "#f472b6" : "#435D31";
   }
 
   // RIASEC modulation

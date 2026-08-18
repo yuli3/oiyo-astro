@@ -507,7 +507,7 @@ function calcResult(answers: PersonalityType[]): PersonalityType {
 }
 
 const TYPE_COLORS: Record<PersonalityType, string> = {
-  creator: '#8b5cf6',
+  creator: '#435D31',
   performer: '#f59e0b',
   lurker: '#64748b',
   connector: '#22c55e',

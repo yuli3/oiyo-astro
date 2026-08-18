@@ -23,7 +23,7 @@ const LABELS: Record<Locale, {
 const COLORS = [
   { name: '빨강/Red', hex: '#EF4444' }, { name: '파랑/Blue', hex: '#3B82F6' },
   { name: '초록/Green', hex: '#22C55E' }, { name: '노랑/Yellow', hex: '#EAB308' },
-  { name: '보라/Purple', hex: '#A855F7' }, { name: '주황/Orange', hex: '#F97316' },
+  { name: '보라/Purple', hex: '#359988' }, { name: '주황/Orange', hex: '#F97316' },
   { name: '분홍/Pink', hex: '#EC4899' }, { name: '하늘/Sky', hex: '#06B6D4' },
   { name: '갈색/Brown', hex: '#92400E' }, { name: '연두/Lime', hex: '#84CC16' },
   { name: '남색/Navy', hex: '#1E3A5F' }, { name: '자주/Magenta', hex: '#C026D3' },

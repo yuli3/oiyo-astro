@@ -353,8 +353,8 @@ export default function ShadowSelfTest({ locale: lp = 'ko' }: Props) {
   const levelColors: Record<ShadowLevel, string> = {
     integrated: '#10b981',
     aware: '#14b8a6',
-    projecting: '#8b5cf6',
-    submerged: '#6d28d9',
+    projecting: '#B66854',
+    submerged: '#435D31',
   }
   const color = levelColors[level]
 

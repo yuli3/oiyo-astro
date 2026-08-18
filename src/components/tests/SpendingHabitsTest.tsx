@@ -577,7 +577,7 @@ const RESULTS: Record<SpendingType, Record<SupportedLang, ResultData>> = {
 const TYPE_COLORS: Record<SpendingType, string> = {
   planner: '#22c55e',
   impulsive: '#ef4444',
-  experiential: '#8b5cf6',
+  experiential: '#607329',
   value: '#3b82f6',
 }
 
