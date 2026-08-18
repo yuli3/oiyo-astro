@@ -48,7 +48,7 @@ export const ELEMENT_INTERACTIONS: Record<string, SixLangString> = {
     en: "Metal chops wood. You are the pruner of unnecessary growth. Your decisiveness clears the path for true progress, though it may seem harsh to others.",
     es: "El metal corta la madera. Eres el podador del crecimiento innecesario. Tu decisión despeja el camino para el verdadero progreso, aunque pueda parecer duro para los demás.",
     fr: "Le métal coupe le bois. Vous êtes l'élagueur des croissances inutiles. Votre esprit de décision ouvre la voie au véritable progrès, même si cela peut sembler dur aux autres.",
-    ja: "金は木を切り倒します。あなたは不必要な成長を剪定する人です。あなたの決단力は真の進歩への道を切り拓きますが、他者には厳しく映るかもしれません。",
+    ja: "金は木を切り倒します。あなたは不必要な成長を剪定する人です。あなたの決断力は真の進歩への道を切り拓きますが、他者には厳しく映るかもしれません。",
     ko: "쇠는 나무를 다듬습니다. 당신은 불필요한 성장을 가지치기하는 정원사입니다. 당신의 결단력은 타인에게 냉정해 보일 수 있으나 진보를 위한 길을 틔웁니다.",
     zh: "金克木。你是多余生长的修剪者。你的果断为真正的进步清除了道路，尽管这在他人看来可能有些严苛。",
   },

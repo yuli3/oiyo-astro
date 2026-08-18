@@ -195,7 +195,7 @@ export const mayanData: MayanShard = {
           en: "Life Force",
           es: "Fuerza Vital",
           fr: "Force Vitale",
-          ja: "生命력",
+          ja: "生命力",
           ko: "생명력",
         },
       ],

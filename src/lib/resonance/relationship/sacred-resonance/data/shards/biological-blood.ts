@@ -397,7 +397,7 @@ export const bloodTypeData: BloodTypeShard = {
           en: "Ambitious",
           es: "Ambicioso",
           fr: "Ambitieux",
-          ja: "意欲적",
+          ja: "意欲的",
           ko: "의욕적",
         },
         {

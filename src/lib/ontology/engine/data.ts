@@ -556,7 +556,7 @@ export const ANIMAL_ZODIAC_DATA: Record<
         en: "Sprightly",
         es: "Vivaz",
         fr: "Vif",
-        ja: "活발",
+        ja: "活発",
         ko: "재기발랄한",
       },
     ],

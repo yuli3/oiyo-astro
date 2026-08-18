@@ -105,8 +105,8 @@ function getHexagramData(num: number): IChingOracle {
       zh: "新的相遇伴随着成长的痛苦，但光明即将到来。",
       en: "New encounters come with growing pains, but light will follow.",
       es: "Los nuevos encuentros vienen con dolores de crecimiento, pero la luz seguirá.",
-      fr: "Les nouvelles rencontres s'accompagnent de douleurs de croissance，mais la lumière suivra。",
-      ja: "新しい出会이에는 痛みが 伴いませんが、やがて光が見えるでしょう。",
+      fr: "Les nouvelles rencontres s'accompagnent de douleurs de croissance, mais la lumière suivra.",
+      ja: "新しい出会いには痛みが伴いますが、やがて光が見えるでしょう。",
       ko: "새로운 만남에는 진통이 따르나 곧 광명을 찾을 것입니다.",
     },
   };

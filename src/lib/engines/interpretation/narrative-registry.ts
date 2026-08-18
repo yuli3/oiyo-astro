@@ -14,7 +14,7 @@ export const NARRATIVE_REGISTRY: Record<
       en: "Psychological Persona & Cosmic Role",
       es: "Persona Psicológica y Rol Cósmico",
       fr: "Persona Psychologique et Rôle Cosmique",
-      ja: "心理的ペルソナと宇宙적役割",
+      ja: "心理的ペルソナと宇宙的役割",
       ko: "심리적 페르소나와 우주적 역할",
       zh: "心理人格与宇宙角色",
     },

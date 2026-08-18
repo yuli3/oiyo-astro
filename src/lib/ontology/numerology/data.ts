@@ -70,7 +70,7 @@ export const NUMEROLOGY_MEANINGS: Record<number, NumerologyMeaning> = {
       en: "The number of the peacemaker, representing the core essence of this vibration.",
       es: "El número del mediador, que representa la esencia central de esta vibración.",
       fr: "Le nombre du pacificateur, représentant l'essence même de cette vibration.",
-      ja: "平和主義者の数で、調和と協力の核心的な本질を表します。",
+      ja: "平和主義者の数で、調和と協力の核心的な本質を表します。",
       ko: "평화 중재자의 숫자로, 조화와 협력의 핵심 본질을 나타냅니다.",
     },
     element: "water",
