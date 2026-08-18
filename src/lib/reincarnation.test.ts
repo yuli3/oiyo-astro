@@ -1,12 +1,19 @@
 import { describe, expect, it } from "vitest";
 import {
+  byIso2,
+  countryRank,
   countryShare,
+  defaultHomeIso2,
   displayCountryName,
+  oneIn,
   pickCountry,
   pickMany,
   projectOrthographic,
+  ranked,
   tallyIso3,
+  vsHome,
   weightTotal,
+  yawToCenter,
 } from "./reincarnation";
 
 describe("reincarnation weights", () => {
@@ -38,5 +45,24 @@ describe("reincarnation weights", () => {
   it("tallies repeats", () => {
     const first = pickCountry("births", () => 0);
     expect(tallyIso3([first, first])[0]).toEqual({ iso3: first.iso3, count: 2 });
+  });
+
+  it("ranks India first by births", () => {
+    const india = byIso2("IN");
+    expect(india).toBeTruthy();
+    expect(ranked("births")[0].iso2).toBe("IN");
+    expect(countryRank(india!, "births")).toBe(1);
+  });
+
+  it("says one-in and Korea vs India", () => {
+    expect(oneIn(0.25)).toBe(4);
+    expect(defaultHomeIso2("ko")).toBe("KR");
+    const india = byIso2("IN")!;
+    const korea = byIso2("KR")!;
+    expect(vsHome(india, korea, "births")).toBeGreaterThan(10);
+  });
+
+  it("centers the globe on a longitude", () => {
+    expect(yawToCenter(-120)).toBe(240);
   });
 });

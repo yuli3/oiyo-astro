@@ -91,3 +91,44 @@ export function tallyIso3(rows: ReincarnationCountry[]): { iso3: string; count: 
     .map(([iso3, count]) => ({ iso3, count }))
     .sort((a, b) => b.count - a.count);
 }
+
+const HOME_ISO2: Record<string, string> = {
+  ko: "KR",
+  ja: "JP",
+  zh: "CN",
+  fr: "FR",
+  es: "ES",
+  en: "US",
+};
+
+export function defaultHomeIso2(locale: string): string {
+  return HOME_ISO2[locale] ?? "KR";
+}
+
+export function byIso2(iso2: string): ReincarnationCountry | undefined {
+  const code = iso2.trim().toUpperCase();
+  return REINCARNATION_COUNTRIES.find((row) => row.iso2 === code);
+}
+
+export function ranked(mode: WeightMode): ReincarnationCountry[] {
+  return [...REINCARNATION_COUNTRIES].sort((a, b) => b[mode] - a[mode] || a.iso3.localeCompare(b.iso3));
+}
+
+export function countryRank(row: ReincarnationCountry, mode: WeightMode): number {
+  return ranked(mode).findIndex((item) => item.iso3 === row.iso3) + 1;
+}
+
+export function oneIn(share: number): number {
+  if (share <= 0) return Number.POSITIVE_INFINITY;
+  return Math.max(1, Math.round(1 / share));
+}
+
+export function vsHome(row: ReincarnationCountry, home: ReincarnationCountry, mode: WeightMode): number {
+  const base = countryShare(home, mode);
+  if (base <= 0) return 0;
+  return countryShare(row, mode) / base;
+}
+
+export function yawToCenter(lon: number): number {
+  return ((lon % 360) + 360) % 360;
+}
