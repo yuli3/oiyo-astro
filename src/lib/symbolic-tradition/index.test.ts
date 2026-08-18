@@ -1,7 +1,7 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
-import { compareSymbolicProfiles, deriveSymbolicProfile } from "./index";
+import { compareSymbolicProfiles, deriveSymbolicProfile, HARMONY_INDEX_TABLE } from "./index";
 import type { BirthMoment, SymbolicProfile } from "./types";
 
 interface GoldenCase {
@@ -68,7 +68,36 @@ describe("symbolic tradition module", () => {
     expect(ab.lenses).toEqual(ba.lenses);
     expect(ab).not.toHaveProperty("score");
     expect(ab).not.toHaveProperty("compatibilityJudgment");
-    expect(ab.lenses.every((lens) => lens.harmonyIndex === null)).toBe(true);
+    // Per-lens indices are on (2026-08-18); a single total is still absent.
+    expect(ab.lenses.every((lens) => typeof lens.harmonyIndex === "number")).toBe(true);
+    expect(ab.lenses.every((lens) => lens.harmonyIndex >= 0 && lens.harmonyIndex <= 100)).toBe(true);
+    expect(ab.policy.aggregateJudgment).toBe("none");
+    expect(ab).not.toHaveProperty("harmonyIndex");
+    expect(ab).not.toHaveProperty("total");
+  });
+
+  it("has a harmony index for every relation the lenses can emit", () => {
+    // The lens functions throw on an unmapped relation, so walking every pair
+    // in the golden set is what proves the table covers the vocabulary rather
+    // than just the cases the other tests happen to hit.
+    const profiles = golden.profiles.map((p: { birth: BirthMoment }) => deriveSymbolicProfile(p.birth));
+    const seen = new Set<string>();
+    for (const a of profiles) {
+      for (const b of profiles) {
+        for (const lens of compareSymbolicProfiles(a, b).lenses) {
+          seen.add(`${lens.id}/${lens.relation}`);
+          expect(typeof lens.harmonyIndex).toBe("number");
+        }
+      }
+    }
+    expect(seen.size).toBeGreaterThan(0);
+    for (const [id, table] of Object.entries(HARMONY_INDEX_TABLE)) {
+      for (const value of Object.values(table)) {
+        expect(value).toBeGreaterThanOrEqual(0);
+        expect(value).toBeLessThanOrEqual(100);
+      }
+      expect(Object.keys(table).length).toBeGreaterThan(1);
+    }
   });
 
   it("rejects invalid civil dates and offsets instead of normalizing them", () => {

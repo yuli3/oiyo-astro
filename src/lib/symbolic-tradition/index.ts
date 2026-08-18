@@ -183,9 +183,36 @@ function zodiacRelation(a: EarthlyBranch, b: EarthlyBranch): string {
   return trines.some((group) => group.has(a) && group.has(b)) ? "same-trine" : "distinct";
 }
 
+/**
+ * How each categorical relation renders as a 0-100 index.
+ *
+ * The ordering follows the tradition each lens comes from — 상생 above 비화
+ * above 상극, 삼합 above 충 — and nothing else. These are not measurements,
+ * and the bands are deliberately narrow where the tradition does not draw a
+ * strong line: two people with contrasting yin-yang balance are read as
+ * complementary, not incompatible, so that lens spans 60-75 rather than
+ * 35-90.
+ *
+ * Every relation string the lens functions can return must appear here, and
+ * a test asserts that.
+ */
+const HARMONY_INDEX: Record<CompatibilityLensId, Record<string, number>> = {
+  "five-elements": { "generating-cycle": 85, same: 65, "controlling-cycle": 40 },
+  "yin-yang": { "same-balance": 75, "near-balance": 70, "contrasting-balance": 60 },
+  "chinese-zodiac": { "same-trine": 90, same: 70, distinct: 55, opposite: 35 },
+  "sun-sign": { "same-element": 85, "same-sign": 75, "same-modality": 55, distinct: 50 },
+};
+
 function lens(id: SymbolicCompatibilityLens["id"], relation: string): SymbolicCompatibilityLens {
-  return { harmonyIndex: null, id, relation };
+  const harmonyIndex = HARMONY_INDEX[id][relation];
+  if (harmonyIndex === undefined) {
+    throw new TypeError(`no harmony index for ${id}/${relation}; add it to HARMONY_INDEX`);
+  }
+  return { harmonyIndex, id, relation };
 }
+
+/** Exported for the contract test that walks every relation a lens can emit. */
+export const HARMONY_INDEX_TABLE = HARMONY_INDEX;
 
 export function compareSymbolicProfiles(
   a: SymbolicComparisonProfile,
@@ -211,7 +238,7 @@ export function compareSymbolicProfiles(
     ],
     policy: {
       aggregateJudgment: "none",
-      harmonyIndexActivation: "human-gated",
+      harmonyIndexActivation: "human-approved-2026-08-18",
       purpose: "reflection-and-entertainment",
     },
   };

@@ -15,6 +15,8 @@ export interface SymbolicGroupParticipant {
 
 export interface SymbolicGroupEdge {
   from: string;
+  /** 0-100, from the lens. Drives line weight; see SymbolicCompatibilityLens. */
+  harmonyIndex: number;
   lens: CompatibilityLensId;
   relation: string;
   to: string;
@@ -62,7 +64,7 @@ export function createSymbolicGroupSnapshot(
   for (let left = 0; left < participants.length; left += 1) {
     for (let right = left + 1; right < participants.length; right += 1) {
       const report = compareSymbolicProfiles(participants[left].profile, participants[right].profile);
-      for (const lens of report.lenses) edges.push({ from: participants[left].id, lens: lens.id, relation: lens.relation, to: participants[right].id });
+      for (const lens of report.lenses) edges.push({ from: participants[left].id, harmonyIndex: lens.harmonyIndex, lens: lens.id, relation: lens.relation, to: participants[right].id });
     }
   }
   return {

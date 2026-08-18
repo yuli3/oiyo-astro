@@ -75,7 +75,16 @@ export interface SymbolicComparisonProfile {
 }
 
 export interface SymbolicCompatibilityLens {
-  harmonyIndex: null;
+  /**
+   * 0-100 rendering of this lens's categorical relation, ordered by how
+   * favourable the tradition considers it. Not a probability, not a measured
+   * scale, and not a prediction about a relationship — it exists so a graph
+   * can vary a line's weight and a bar can have a length.
+   *
+   * Activated 2026-08-18 on seuncho's decision, per-lens only. There is
+   * deliberately no total: see policy.aggregateJudgment.
+   */
+  harmonyIndex: number;
   id: CompatibilityLensId;
   relation: string;
 }
@@ -85,8 +94,9 @@ export interface SymbolicCompatibilityReport {
   schemaVersion: 1;
   lenses: SymbolicCompatibilityLens[];
   policy: {
+    /** Still none. Per-lens numbers exist; a single verdict does not. */
     aggregateJudgment: "none";
-    harmonyIndexActivation: "human-gated";
+    harmonyIndexActivation: "human-approved-2026-08-18";
     purpose: "reflection-and-entertainment";
   };
 }

@@ -31,8 +31,18 @@ type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 type PersonForm = { cityId: string; date: string; name: string; time: string };
 
 const INITIAL_PERSON: PersonForm = { cityId: "", date: "", name: "", time: "" };
-const NO_SCORE: Record<Lang, string> = {
-  ko: "점수 미사용", en: "No score", ja: "点数なし", zh: "不使用分数", fr: "Sans score", es: "Sin puntuación",
+const NO_TOTAL: Record<Lang, string> = {
+  ko: "총점 없음", en: "No total", ja: "総合点なし", zh: "无总分", fr: "Pas de total", es: "Sin total",
+};
+
+/** Shown under the bars, so a reader knows what the number is and is not. */
+const INDEX_NOTE: Record<Lang, string> = {
+  ko: "각 관점의 전통적 관계를 0–100으로 표현한 값입니다. 확률도, 관계 예측도 아닙니다.",
+  en: "A 0–100 rendering of each tradition's relation. Not a probability, not a prediction.",
+  ja: "各観点の伝統的な関係を0–100で表した値です。確率でも予測でもありません。",
+  zh: "把各视角的传统关系表示为 0–100 的数值，既非概率也非预测。",
+  fr: "Une expression de 0 à 100 de la relation propre à chaque tradition. Ni probabilité, ni prédiction.",
+  es: "Una expresión de 0 a 100 de la relación de cada tradición. Ni probabilidad ni predicción.",
 };
 
 const SHARE_COPY: Record<Lang, { copied: string; damaged: string; delete: string; deleted: string; expires: string; fallback: string; loading: string; received: string; shareFriend: string; shareMe: string; warning: string }> = {
@@ -214,10 +224,15 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
           {result.report.lenses.map((lens, index) => <article key={lens.id} className="rounded-2xl border border-lime-100 bg-white p-4 shadow-sm">
             <div className="flex items-start justify-between gap-3">
               <div><p className="text-xs font-black uppercase tracking-wider text-lime-700">0{index + 1} · {copy.lenses[lens.id]}</p><p className="mt-2 text-base font-black text-green-950">{relationText(lens.relation)}</p></div>
-              <span className="rounded-full bg-stone-100 px-2 py-1 text-[10px] font-bold text-stone-500">{NO_SCORE[lang]}</span>
+              <span className="text-sm font-black text-green-800">{lens.harmonyIndex}</span>
+            </div>
+            <div className="mt-3 h-2 overflow-hidden rounded-full bg-lime-50">
+              <div className="h-full rounded-full bg-green-700 transition-[width] duration-700 ease-out" style={{ width: `${lens.harmonyIndex}%` }} />
             </div>
           </article>)}
         </div>
+        <p className="mt-3 text-xs leading-5 text-stone-500 [word-break:keep-all]">{INDEX_NOTE[lang]}</p>
+        <p className="mt-1 text-[11px] font-bold uppercase tracking-wider text-stone-400">{NO_TOTAL[lang]}</p>
       </section>
 
       <section className="mt-5 grid gap-4 sm:grid-cols-2">
