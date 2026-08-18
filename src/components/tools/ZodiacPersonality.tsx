@@ -6,7 +6,7 @@ interface Props {
   locale: Locale;
 }
 
-type ZodiacKey =
+export type ZodiacKey =
   | "aries" | "taurus" | "gemini" | "cancer"
   | "leo" | "virgo" | "libra" | "scorpio"
   | "sagittarius" | "capricorn" | "aquarius" | "pisces";
@@ -149,9 +149,9 @@ const UI: Record<Locale, {
   },
 };
 
-type Element = "fire" | "earth" | "air" | "water";
+export type Element = "fire" | "earth" | "air" | "water";
 
-const ELEMENT_LABEL: Record<Element, Record<Locale, string>> = {
+export const ELEMENT_LABEL: Record<Element, Record<Locale, string>> = {
   fire:  { ko: "🔥 불", en: "🔥 Fire",  ja: "🔥 火", fr: "🔥 Feu",  es: "🔥 Fuego", cn: "🔥 火", zh: "🔥 火" },
   earth: { ko: "🌍 흙", en: "🌍 Earth", ja: "🌍 土", fr: "🌍 Terre", es: "🌍 Tierra", cn: "🌍 土", zh: "🌍 土" },
   air:   { ko: "💨 공기", en: "💨 Air", ja: "💨 風", fr: "💨 Air",   es: "💨 Aire",  cn: "💨 風", zh: "💨 风" },
@@ -172,7 +172,7 @@ const ELEMENT_COLOR: Record<Element, string> = {
   water: "text-blue-700",
 };
 
-interface ZodiacData {
+export interface ZodiacData {
   emoji: string;
   element: Element;
   ruler: Record<Locale, string>;
@@ -186,7 +186,9 @@ interface ZodiacData {
   challenging: ZodiacKey[];
 }
 
-const ZODIAC: Record<ZodiacKey, ZodiacData> = {
+// /zodiac/fortune 이 별자리별 섹션에 그대로 쓴다. 사본을 만들지 말 것 —
+// 12별자리 데이터가 두 벌이 되면 한쪽만 고쳐지는 순간 두 페이지가 다른 말을 한다.
+export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
   aries: {
     emoji: "♈",
     element: "fire",
