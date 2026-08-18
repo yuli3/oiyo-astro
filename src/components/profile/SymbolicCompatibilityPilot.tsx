@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, CalendarDays, Check, Link2, MapPin, Network, RotateCcw, Share2, ShieldCheck, Sparkles, TriangleAlert } from "lucide-react";
+import { ArrowRight, CalendarDays, Check, Link2, MapPin, RotateCcw, Share2, ShieldCheck, TriangleAlert } from "lucide-react";
 import { useEffect, useState } from "react";
 
 import SymbolicGroupSnapshotPanel from "@/components/profile/SymbolicGroupSnapshotPanel";
@@ -45,13 +45,13 @@ const INDEX_NOTE: Record<Lang, string> = {
   es: "Una expresión de 0 a 100 de la relación de cada tradición. Ni probabilidad ni predicción.",
 };
 
-const SHARE_COPY: Record<Lang, { copied: string; damaged: string; delete: string; deleted: string; expires: string; fallback: string; loading: string; received: string; shareFriend: string; shareMe: string; warning: string }> = {
-  ko: { copied: "암호화 링크를 복사했어요", damaged: "공유 링크가 만료되었거나 손상되었습니다.", delete: "이 링크 삭제", deleted: "짧은 링크를 삭제했어요", expires: "7일 뒤 자동 삭제", fallback: "짧은 링크를 만들 수 없어 서버 없는 직접 링크로 전환했어요.", loading: "암호화된 친구 지도를 여는 중…", received: "친구의 지도를 받았어요. 내 정보만 입력하면 바로 비교합니다.", shareFriend: "친구 지도 공유", shareMe: "내 지도 공유", warning: "프로필은 브라우저에서 암호화되며 복호화 키는 링크의 # 뒤에만 있습니다. 링크 전체를 가진 사람은 볼 수 있습니다." },
-  en: { copied: "Encrypted link copied", damaged: "This share link is expired or damaged.", delete: "Delete this link", deleted: "Short link deleted", expires: "Deleted automatically in 7 days", fallback: "Short-link storage was unavailable, so a serverless direct link was used.", loading: "Opening the encrypted map…", received: "A friend's map arrived. Enter only your details to compare.", shareFriend: "Share friend's map", shareMe: "Share my map", warning: "The profile is encrypted in your browser. Its key stays after # in the link. Anyone with the full link can view it." },
-  ja: { copied: "暗号化リンクをコピーしました", damaged: "共有リンクは期限切れか破損しています。", delete: "このリンクを削除", deleted: "短縮リンクを削除しました", expires: "7日後に自動削除", fallback: "短縮リンクを作れないため、サーバーなしの直接リンクに切り替えました。", loading: "暗号化された地図を開いています…", received: "友だちの地図を受け取りました。自分の情報だけで比較できます。", shareFriend: "友だちの地図を共有", shareMe: "自分の地図を共有", warning: "プロフィールはブラウザで暗号化され、鍵はリンクの#以降だけにあります。完全なリンクを持つ人は閲覧できます。" },
-  zh: { copied: "加密链接已复制", damaged: "分享链接已过期或损坏。", delete: "删除此链接", deleted: "短链接已删除", expires: "7天后自动删除", fallback: "无法创建短链接，已改用无服务器直链。", loading: "正在打开加密地图…", received: "已收到朋友的地图。只需填写你的信息即可比较。", shareFriend: "分享朋友地图", shareMe: "分享我的地图", warning: "资料在浏览器中加密，密钥只位于链接#之后。持有完整链接的人可以查看。" },
-  fr: { copied: "Lien chiffré copié", damaged: "Ce lien a expiré ou est endommagé.", delete: "Supprimer ce lien", deleted: "Lien court supprimé", expires: "Suppression automatique dans 7 jours", fallback: "Le lien court étant indisponible, un lien direct sans serveur a été utilisé.", loading: "Ouverture de la carte chiffrée…", received: "La carte d’un ami est arrivée. Saisissez seulement vos informations.", shareFriend: "Partager sa carte", shareMe: "Partager ma carte", warning: "Le profil est chiffré dans votre navigateur. La clé reste après #. Toute personne ayant le lien complet peut le voir." },
-  es: { copied: "Enlace cifrado copiado", damaged: "El enlace caducó o está dañado.", delete: "Eliminar este enlace", deleted: "Enlace corto eliminado", expires: "Se elimina automáticamente en 7 días", fallback: "No se pudo crear el enlace corto; se usó un enlace directo sin servidor.", loading: "Abriendo el mapa cifrado…", received: "Recibiste el mapa de una amistad. Ingresa solo tus datos para comparar.", shareFriend: "Compartir su mapa", shareMe: "Compartir mi mapa", warning: "El perfil se cifra en tu navegador. La clave queda tras #. Quien tenga el enlace completo puede verlo." },
+const SHARE_COPY: Record<Lang, { copied: string; damaged: string; delete: string; deleted: string; expires: string; fallback: string; invite: string; inviteHint: string; loading: string; received: string; shareFriend: string; shareMe: string; warning: string }> = {
+  ko: { copied: "초대 링크를 복사했어요", damaged: "공유 링크가 만료되었거나 손상되었습니다.", delete: "이 링크 삭제", deleted: "짧은 링크를 삭제했어요", expires: "7일 뒤 자동 삭제", fallback: "짧은 링크를 만들 수 없어 서버 없는 직접 링크로 전환했어요.", invite: "친구 부르기", inviteHint: "내 생년월일만 있으면 링크를 던질 수 있어요. 친구는 자기 것만 적습니다.", loading: "초대를 여는 중…", received: "친구가 초대했어요. 내 정보만 넣으면 둘이 바로 보여요.", shareFriend: "친구 지도 공유", shareMe: "친구 부르기", warning: "프로필은 브라우저에서 암호화되며 복호화 키는 링크의 # 뒤에만 있습니다. 링크 전체를 가진 사람은 볼 수 있습니다." },
+  en: { copied: "Invite link copied", damaged: "This share link is expired or damaged.", delete: "Delete this link", deleted: "Short link deleted", expires: "Deleted automatically in 7 days", fallback: "Short-link storage was unavailable, so a serverless direct link was used.", invite: "Invite a friend", inviteHint: "Your birth date is enough to send a link. Your friend only enters theirs.", loading: "Opening the invite…", received: "A friend invited you. Enter only your details to see the two of you.", shareFriend: "Share friend's map", shareMe: "Invite a friend", warning: "The profile is encrypted in your browser. Its key stays after # in the link. Anyone with the full link can view it." },
+  ja: { copied: "招待リンクをコピーしました", damaged: "共有リンクは期限切れか破損しています。", delete: "このリンクを削除", deleted: "短縮リンクを削除しました", expires: "7日後に自動削除", fallback: "短縮リンクを作れないため、サーバーなしの直接リンクに切り替えました。", invite: "友だちを呼ぶ", inviteHint: "自分の生年月日だけでリンクを送れます。友だちは自分の情報だけ入力します。", loading: "招待を開いています…", received: "友だちに招待されました。自分の情報だけで二人のつながりが見られます。", shareFriend: "友だちの地図を共有", shareMe: "友だちを呼ぶ", warning: "プロフィールはブラウザで暗号化され、鍵はリンクの#以降だけにあります。完全なリンクを持つ人は閲覧できます。" },
+  zh: { copied: "邀请链接已复制", damaged: "分享链接已过期或损坏。", delete: "删除此链接", deleted: "短链接已删除", expires: "7天后自动删除", fallback: "无法创建短链接，已改用无服务器直链。", invite: "邀请朋友", inviteHint: "只需你的出生日期就能发链接。朋友只填自己的信息。", loading: "正在打开邀请…", received: "朋友邀请了你。只需填写你的信息即可看到两人。", shareFriend: "分享朋友地图", shareMe: "邀请朋友", warning: "资料在浏览器中加密，密钥只位于链接#之后。持有完整链接的人可以查看。" },
+  fr: { copied: "Lien d’invitation copié", damaged: "Ce lien a expiré ou est endommagé.", delete: "Supprimer ce lien", deleted: "Lien court supprimé", expires: "Suppression automatique dans 7 jours", fallback: "Le lien court étant indisponible, un lien direct sans serveur a été utilisé.", invite: "Inviter un ami", inviteHint: "Votre date de naissance suffit pour envoyer un lien. L’ami ne saisit que la sienne.", loading: "Ouverture de l’invitation…", received: "Un ami vous a invité. Saisissez seulement vos informations.", shareFriend: "Partager sa carte", shareMe: "Inviter un ami", warning: "Le profil est chiffré dans votre navigateur. La clé reste après #. Toute personne ayant le lien complet peut le voir." },
+  es: { copied: "Enlace de invitación copiado", damaged: "El enlace caducó o está dañado.", delete: "Eliminar este enlace", deleted: "Enlace corto eliminado", expires: "Se elimina automáticamente en 7 días", fallback: "No se pudo crear el enlace corto; se usó un enlace directo sin servidor.", invite: "Invitar a una amistad", inviteHint: "Con tu fecha de nacimiento basta para enviar el enlace. La otra persona solo pone la suya.", loading: "Abriendo la invitación…", received: "Te invitaron. Ingresa solo tus datos para ver a los dos.", shareFriend: "Compartir su mapa", shareMe: "Invitar a una amistad", warning: "El perfil se cifra en tu navegador. La clave queda tras #. Quien tenga el enlace completo puede verlo." },
 };
 
 const COPY = {
@@ -62,6 +62,12 @@ const COPY = {
   fr: { title: "Où êtes-vous reliés, votre ami et vous ?", sub: "Observez deux naissances selon quatre traditions symboliques, sans réduire la relation à un score.", me: "Vous", friend: "Ami", name: "Surnom", nameHint: "Utilisé seulement ici", date: "Date de naissance", time: "Heure de naissance", timeHint: "Laissez vide si inconnue", city: "Ville de naissance", cityHint: "Choisir une ville", action: "Voir les liens", reset: "Recommencer", local: "Aucun envoi ni stockage serveur", disclaimer: "Une lecture ludique fondée sur des symboles traditionnels. Elle ne prédit ni réussite relationnelle, ni avenir, ni compatibilité scientifique.", result: "Vos quatre liens", evidence: "Base du calcul", uncertainty: "Précision", noUncertainty: "Heure et ville confirmées pour les deux personnes.", unknownTime: "Une heure inconnue exclut le pilier horaire et utilise six coordonnées.", error: "Vérifiez les dates et villes de naissance.", lenses: { "five-elements": "Cinq éléments", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiaque chinois", "sun-sign": "Signe solaire" }, relations: {} },
   es: { title: "¿Dónde conectan tú y tu amistad?", sub: "Mira dos nacimientos desde cuatro tradiciones simbólicas, sin reducir la relación a una puntuación.", me: "Tú", friend: "Amistad", name: "Apodo", nameHint: "Solo se usa aquí", date: "Fecha de nacimiento", time: "Hora de nacimiento", timeHint: "Déjala vacía si no la sabes", city: "Ciudad de nacimiento", cityHint: "Elige una ciudad", action: "Ver conexiones", reset: "Comparar de nuevo", local: "Sin envío ni almacenamiento", disclaimer: "Una lectura lúdica basada en símbolos tradicionales. No predice éxito, futuro ni compatibilidad científica.", result: "Sus cuatro conexiones", evidence: "Base del cálculo", uncertainty: "Nota de precisión", noUncertainty: "Hora y ciudad confirmadas para ambas personas.", unknownTime: "Una hora desconocida excluye el pilar horario y usa seis coordenadas.", error: "Comprueba las fechas y ciudades de nacimiento.", lenses: { "five-elements": "Cinco elementos", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiaco chino", "sun-sign": "Signo solar" }, relations: {} },
 } as const;
+
+function withJoin(url: string): string {
+  const parsed = new URL(url);
+  parsed.searchParams.set("join", "1");
+  return parsed.toString();
+}
 
 function toBirthMoment(form: PersonForm): BirthMoment {
   const city = CITIES.find((item) => item.id === form.cityId);
@@ -167,16 +173,16 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
     try {
       const created = await createEncryptedShortShare(profile, { locale: lang, origin: window.location.origin });
       setShortShare(created);
-      url = created.url;
+      url = withJoin(created.url);
     } catch {
       const artifact = createSymbolicShareArtifact(profile);
       const base = `${window.location.origin}${window.location.pathname}`;
-      url = `${base}${symbolicShareFragment(artifact)}`;
+      url = withJoin(`${base}${symbolicShareFragment(artifact)}`);
       setShareState("fallback");
     }
     if (navigator.share) {
       try {
-        await navigator.share({ title: copy.title, text: shareCopy.received, url });
+        await navigator.share({ title: copy.title, text: shareCopy.inviteHint, url });
         return;
       } catch (shareError) {
         if (shareError instanceof DOMException && shareError.name === "AbortError") return;
@@ -194,10 +200,18 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
     }
   };
 
+  const inviteFromForm = async () => {
+    try {
+      await shareProfile(deriveSymbolicProfile(toBirthMoment(a)));
+      setError("");
+    } catch {
+      setError(copy.error);
+    }
+  };
+
   if (receivedGroup) {
     return <main>
       <header className="text-center">
-        <span className="inline-flex items-center gap-2 rounded-full bg-lime-100 px-3 py-1 text-xs font-black text-green-800"><Network className="h-3.5 w-3.5" />GROUP SNAPSHOT · NOINDEX</span>
         <h1 className="mt-4 text-3xl font-black tracking-tight text-green-950 sm:text-4xl">{copy.title}</h1>
         <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-600">{copy.disclaimer}</p>
       </header>
@@ -209,7 +223,6 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
     const uncertain = result.a.source.timeStatus === "unknown" || result.b.fiveElements.observedCoordinates === 6;
     return <main>
       <header className="text-center">
-        <span className="inline-flex items-center gap-2 rounded-full bg-lime-100 px-3 py-1 text-xs font-black text-green-800"><Sparkles className="h-3.5 w-3.5" />PILOT · NOINDEX</span>
         <h1 className="mt-4 text-3xl font-black tracking-tight text-green-950 sm:text-4xl">{copy.result}</h1>
         <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-600">{copy.disclaimer}</p>
       </header>
@@ -263,7 +276,6 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
 
   return <main>
     <header className="text-center">
-      <span className="inline-flex items-center gap-2 rounded-full bg-lime-100 px-3 py-1 text-xs font-black text-green-800"><Sparkles className="h-3.5 w-3.5" />PILOT · NOINDEX</span>
       <h1 className="mt-4 text-3xl font-black tracking-tight text-green-950 sm:text-4xl">{copy.title}</h1>
       <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-600">{copy.sub}</p>
       <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-green-700"><ShieldCheck className="h-4 w-4" />{copy.local}</p>
@@ -275,6 +287,10 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
       <div className={`grid gap-4 ${receivedProfile ? "mx-auto max-w-xl" : "sm:grid-cols-2"}`}><PersonCard copy={copy} form={a} label={copy.me} lang={lang} onChange={setA} />{!receivedProfile && <PersonCard copy={copy} form={b} label={copy.friend} lang={lang} onChange={setB} />}</div>
       {error && <p role="alert" className="mt-4 rounded-2xl bg-red-50 px-4 py-3 text-sm font-bold text-red-700">{error}</p>}
       <button type="submit" className="mt-5 flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-green-800 px-6 text-base font-black text-white shadow-lg shadow-green-900/10 transition hover:bg-green-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800">{copy.action}<ArrowRight className="h-5 w-5" /></button>
+      {!receivedProfile && <button type="button" onClick={() => void inviteFromForm()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl border border-green-700 bg-white px-6 text-sm font-black text-green-800"><Share2 className="h-4 w-4" />{shareCopy.invite}</button>}
+      {!receivedProfile && <p className="mt-2 text-center text-xs leading-5 text-stone-500">{shareCopy.inviteHint}</p>}
+      {shareState === "copied" && <p role="status" className="mt-3 text-center text-xs font-black text-green-800"><Check className="mr-1 inline h-4 w-4" />{shareCopy.copied}</p>}
+      {shareState === "fallback" && <p role="status" className="mt-3 text-center text-xs font-bold text-amber-800">{shareCopy.fallback}</p>}
     </form>
     <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-5 text-stone-500">{copy.disclaimer}</p>
   </main>;
