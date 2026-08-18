@@ -6,7 +6,10 @@ const route = await readFile(new URL("../src/pages/[locale]/profile/export.astro
 const matrix = JSON.parse(await readFile(new URL("personal-profile-export-v2.compatibility.json", root), "utf8"));
 const fixture = JSON.parse(await readFile(new URL("personal-profile-export-v2.fixture.json", root), "utf8"));
 const errors = [];
-const expectedFormats = new Set(["json", "markdown", "soul", "obsidian"]);
+// soul was removed from the product export formats (2026-08-14); the matrix
+// now carries three.
+const expectedFormats = new Set(["json", "markdown", "obsidian"]);
+const expectedFormatCount = expectedFormats.size;
 const forbidden = new Set(["answers", "classifications", "legacy", "raw", "responses"]);
 
 function walk(value, path = "$") {
@@ -20,7 +23,7 @@ function walk(value, path = "$") {
 
 if (matrix.canonicalExportSchema !== "oiyo.personal-profile-export" || matrix.canonicalExportVersion !== 2) errors.push("matrix canonical schema/version mismatch");
 if (!Array.isArray(matrix.existingSurfaces) || matrix.existingSurfaces.length !== 2 || matrix.existingSurfaces.some((item) => !item.id || !item.currentContract || !item.decision)) errors.push("existing export surface decisions incomplete");
-if (!Array.isArray(matrix.formats) || matrix.formats.length !== expectedFormats.size) errors.push("matrix must contain four formats");
+if (!Array.isArray(matrix.formats) || matrix.formats.length !== expectedFormatCount) errors.push(`matrix must contain ${expectedFormatCount} formats`);
 for (const format of matrix.formats ?? []) {
   if (!expectedFormats.delete(format.format)) errors.push(`duplicate/unknown format: ${format.format}`);
   if (format.rawResponsesIncluded !== false) errors.push(`raw response policy mismatch: ${format.format}`);
@@ -47,4 +50,4 @@ if (errors.length) {
   for (const error of errors) console.error(`- ${error}`);
   process.exit(1);
 }
-console.log("Personal profile export audit PASS: 4 formats, public v2 consumer, 6 locales, provenance complete, raw responses absent");
+console.log(`Personal profile export audit PASS: ${expectedFormatCount} formats, public v2 consumer, 6 locales, provenance complete, raw responses absent`);

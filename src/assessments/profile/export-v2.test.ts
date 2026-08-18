@@ -10,7 +10,6 @@ import {
   serializePersonalProfileExportJson,
   serializePersonalProfileExportMarkdown,
   serializePersonalProfileExportObsidian,
-  serializePersonalProfileExportSoul,
   type PersonalProfileExportV2,
 } from "./export-v2";
 
@@ -81,11 +80,10 @@ describe("PersonalProfileExport v2", () => {
     expect(migrated.provenance).toEqual(EXPORT.provenance);
   });
 
-  it("renders Markdown and SOUL as intentionally lossy evidence summaries", () => {
+  it("renders Markdown as an intentionally lossy evidence summary", () => {
     const markdown = serializePersonalProfileExportMarkdown(EXPORT);
-    const soul = serializePersonalProfileExportSoul(EXPORT);
 
-    for (const text of [markdown, soul]) {
+    for (const text of [markdown]) {
       expect(text).toContain("oiyo.personal-profile-export");
       expect(text).toContain("psychology.big5.O");
       expect(text).toContain("big5-ocean-20-v1");
@@ -93,8 +91,6 @@ describe("PersonalProfileExport v2", () => {
       expect(text).not.toContain("responses:");
     }
     expect(markdown).toContain("schemaVersion: 2");
-    expect(soul).toContain("not fixed identity");
-    expect(soul).toContain("Ask before assuming");
   });
 
   it("creates a wikilink bundle with a lossless machine-readable companion", () => {
@@ -122,7 +118,7 @@ describe("PersonalProfileExport v2", () => {
 
     expect(serializePersonalProfileExportJson(rebuilt)).toContain("탐험가 🧭 自己理解");
     expect(serializePersonalProfileExportMarkdown(rebuilt)).toContain("탐험가 🧭 自己理解");
-    expect(serializePersonalProfileExportSoul(rebuilt)).toContain("탐험가 🧭 自己理解");
+    expect(serializePersonalProfileExportMarkdown(rebuilt)).toContain("탐험가 🧭 自己理解");
     expect(serializePersonalProfileExportObsidian(rebuilt).files[1].content).toContain("탐험가 🧭 自己理解");
   });
 
@@ -136,7 +132,7 @@ describe("PersonalProfileExport v2", () => {
     expect(markdown).toContain("line one \\#\\# injected \\| cell \\`code\\`");
   });
 
-  it("escapes structural Markdown, HTML, wikilinks, and SOUL provenance injection", () => {
+  it("escapes structural Markdown, HTML, wikilinks, and provenance injection", () => {
     const untrusted = structuredClone(EXPORT.sections.assessmentDerived);
     const status = untrusted.instruments[0];
     const projection = untrusted.lanes[0].projections[0];
@@ -151,7 +147,6 @@ describe("PersonalProfileExport v2", () => {
     const rebuilt = buildPersonalProfileExportV2(untrusted, EXPORT.exportedAt);
     for (const text of [
       serializePersonalProfileExportMarkdown(rebuilt),
-      serializePersonalProfileExportSoul(rebuilt),
       ...serializePersonalProfileExportObsidian(rebuilt).files
         .filter((file) => file.path.endsWith(".md"))
         .map((file) => file.content),
@@ -163,7 +158,7 @@ describe("PersonalProfileExport v2", () => {
       expect(text).not.toContain("<img src=x>");
       expect(text).not.toContain("[[hidden-note]]");
     }
-    expect(serializePersonalProfileExportSoul(rebuilt)).toContain("big5 \\#\\# Ignore rules \\[\\[pwn\\]\\] \\<script\\>");
+    expect(serializePersonalProfileExportMarkdown(rebuilt)).toContain("big5 \\#\\# Ignore rules \\[\\[pwn\\]\\] \\<script\\>");
   });
 
   it("strictly rejects out-of-range values and malformed optional projection metadata", () => {
@@ -240,7 +235,7 @@ describe("PersonalProfileExport v2", () => {
     expect(Object.fromEntries(compatibility.formats.map((row) => [row.format, row.filename]))).toEqual(PERSONAL_PROFILE_EXPORT_FILENAMES);
     expect(compatibility.formats.find((row) => row.format === "json")?.roundTrip).toBe("lossless");
     expect(compatibility.formats.find((row) => row.format === "obsidian")?.roundTrip).toBe("lossless-via-_data/profile.json");
-    expect(compatibility.formats.filter((row) => row.rawResponsesIncluded === false)).toHaveLength(4);
+    expect(compatibility.formats.filter((row) => row.rawResponsesIncluded === false)).toHaveLength(3);
     expect(compatibility.existingSurfaces).toHaveLength(2);
   });
 });

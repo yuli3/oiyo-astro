@@ -37,16 +37,6 @@
       "mobileFallback": "deliverPersonalProfileExport: UTF-8 Blob download, then copy fallback"
     },
     {
-      "format": "soul",
-      "filename": "SOUL.md",
-      "mime": "text/markdown;charset=utf-8",
-      "role": "AI personalization evidence",
-      "roundTrip": "lossy-by-design",
-      "provenance": "visible-summary",
-      "rawResponsesIncluded": false,
-      "mobileFallback": "deliverPersonalProfileExport: UTF-8 Blob download, then copy fallback"
-    },
-    {
       "format": "obsidian",
       "filename": "oiyo-personal-profile-obsidian-v2",
       "mime": "application/x-directory",

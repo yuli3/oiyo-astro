@@ -12,7 +12,7 @@ export const careerValuesPlugin: AssessmentPlugin = {
   id: "career-values", schemaVersion: 2, instrument: CAREER_VALUES_INSTRUMENT, scorer: careerValuesScorer,
   interpreter: { compose, version: "career-values-top-tie-group-v1" }, locale: careerValuesLocaleBundle(), migrations: [],
   manifest: { id: "career-values", analyticsId: "career_values", category: "self-understanding", clinical: false, evidenceTier: "reflective-framework", estimatedMinutes: 4, indexable: CAREER_VALUES_RELEASE_GATE.indexable, kind: "preference", routes: { execution: CAREER_VALUES_RELEASE_GATE.executionRoutePattern }, status: CAREER_VALUES_RELEASE_GATE.assessmentStatus, tags: ["work-values", "career-reflection", "oiyo-original-items"] },
-  exportPolicy: { allowedFormats: ["json", "csv", "markdown", "soul"], includeResponsesByDefault: false, permalinkConstructs: [], sensitiveConstructs: [] },
+  exportPolicy: { allowedFormats: ["json", "csv", "markdown"], includeResponsesByDefault: false, permalinkConstructs: [], sensitiveConstructs: [] },
   ontology: {
     edges: [], nodes: CAREER_VALUE_IDS.map((id) => ({ id: `values.work.${id}`, kind: "work-value", labelKey: `dimensions.${id}.name` })),
     toSignals: (result) => topCareerValueGroup(result.scores.normalized).map((id) => ({ id: `${result.resultId}:${id}`, sourceAssessmentId: "career-values", constructId: `values.work.${id}`, value: result.scores.normalized[id] ?? 0, scale: { min: 0, max: 100 }, confidence: 0.35, evidenceTier: "reflective-framework", observedAt: result.completedAt, expiresAt: new Date(new Date(result.completedAt).getTime() + ONE_YEAR_MS).toISOString(), provenance: { resultId: result.resultId, instrumentVersion: result.versions.instrument, scoringVersion: result.versions.scoring } })),

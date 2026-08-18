@@ -15,7 +15,6 @@ import {
   serializeExportCsv,
   serializeExportJson,
   serializeExportMarkdown,
-  serializeExportSoul,
   type ExportLabels,
 } from "@/lib/ontology/export-serializers";
 import { resolveNodeLabel } from "@/lib/ontology/graph/label";
@@ -32,10 +31,10 @@ import { Skeleton } from "@/components/ui/skeleton";
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const LANGS: Lang[] = ["ko", "en", "ja", "zh", "fr", "es"];
 
-type Format = "json" | "csv" | "md" | "soul";
-const FORMATS: Format[] = ["md", "soul", "json", "csv"];
-const FORMAT_EXT: Record<Format, string> = { json: "json", csv: "csv", md: "md", soul: "md" };
-const FORMAT_MIME: Record<Format, string> = { json: "application/json", csv: "text/csv", md: "text/markdown", soul: "text/markdown" };
+type Format = "json" | "csv" | "md";
+const FORMATS: Format[] = ["md", "json", "csv"];
+const FORMAT_EXT: Record<Format, string> = { json: "json", csv: "csv", md: "md" };
+const FORMAT_MIME: Record<Format, string> = { json: "application/json", csv: "text/csv", md: "text/markdown" };
 
 const UI: Record<
   Lang,
@@ -59,7 +58,7 @@ const UI: Record<
   ko: {
     title: "내 존재론 프로필 내보내기",
     sub: "지금까지 모은 신호·테스트 기록·추천·관계 스냅샷을 통째로 저장하세요.",
-    formats: { md: "리포트", soul: "SOUL.md (AI용)", json: "JSON", csv: "CSV" },
+    formats: { md: "리포트", json: "JSON", csv: "CSV" },
     copy: "복사",
     copied: "복사됨",
     download: "다운로드",
@@ -75,7 +74,7 @@ const UI: Record<
   en: {
     title: "Export my ontology profile",
     sub: "Save every signal, test history, recommendation, and relationship snapshot you've gathered so far.",
-    formats: { md: "Report", soul: "SOUL.md (for AI)", json: "JSON", csv: "CSV" },
+    formats: { md: "Report", json: "JSON", csv: "CSV" },
     copy: "Copy",
     copied: "Copied",
     download: "Download",
@@ -91,7 +90,7 @@ const UI: Record<
   ja: {
     title: "存在論プロフィールを書き出す",
     sub: "これまでの信号・テスト履歴・おすすめ・関係スナップショットをまとめて保存します。",
-    formats: { md: "レポート", soul: "SOUL.md (AI用)", json: "JSON", csv: "CSV" },
+    formats: { md: "レポート", json: "JSON", csv: "CSV" },
     copy: "コピー",
     copied: "コピーしました",
     download: "ダウンロード",
@@ -107,7 +106,7 @@ const UI: Record<
   zh: {
     title: "导出我的存在论资料",
     sub: "保存到目前为止收集的所有信号、测试记录、推荐与关系快照。",
-    formats: { md: "报告", soul: "SOUL.md（AI用）", json: "JSON", csv: "CSV" },
+    formats: { md: "报告", json: "JSON", csv: "CSV" },
     copy: "复制",
     copied: "已复制",
     download: "下载",
@@ -123,7 +122,7 @@ const UI: Record<
   fr: {
     title: "Exporter mon profil ontologique",
     sub: "Enregistrez tous les signaux, l'historique des tests, les recommandations et l'aperçu relationnel accumulés.",
-    formats: { md: "Rapport", soul: "SOUL.md (pour l’IA)", json: "JSON", csv: "CSV" },
+    formats: { md: "Rapport", json: "JSON", csv: "CSV" },
     copy: "Copier",
     copied: "Copié",
     download: "Télécharger",
@@ -139,7 +138,7 @@ const UI: Record<
   es: {
     title: "Exportar mi perfil ontológico",
     sub: "Guarda todas las señales, el historial de tests, las recomendaciones y el resumen de relaciones reunidos hasta ahora.",
-    formats: { md: "Informe", soul: "SOUL.md (para IA)", json: "JSON", csv: "CSV" },
+    formats: { md: "Informe", json: "JSON", csv: "CSV" },
     copy: "Copiar",
     copied: "Copiado",
     download: "Descargar",
@@ -183,7 +182,7 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
     setHydrated(true);
   }, []);
 
-  // Resolve every i18nKey/title-key the md/soul serializers might render
+  // Resolve every i18nKey/title-key the md serializer might render
   // (`collectExportLabelKeys`), same batch-resolve pattern as
   // RecommendationCards/OntologyRelationOrbit.
   useEffect(() => {
@@ -210,8 +209,6 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
         return serializeExportCsv(data);
       case "md":
         return serializeExportMarkdown(data, labels);
-      case "soul":
-        return serializeExportSoul(data, labels);
     }
   }, [data, format, labels]);
 
@@ -226,7 +223,7 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
 
   function handleDownload() {
     gaEvent("ontology_export", { format });
-    const filename = `oiyo-ontology${format === "soul" ? "-SOUL" : ""}.${FORMAT_EXT[format]}`;
+    const filename = `oiyo-ontology.${FORMAT_EXT[format]}`;
     download(content, filename, FORMAT_MIME[format]);
   }
 

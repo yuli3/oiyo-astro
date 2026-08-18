@@ -29,7 +29,7 @@ function compose(result: CanonicalAssessmentResult): InterpretationFragment[] {
 
 export const mbtiPlugin: AssessmentPlugin = {
   exportPolicy: {
-    allowedFormats: ["json", "csv", "markdown", "soul", "png", "permalink"],
+    allowedFormats: ["json", "csv", "markdown", "png", "permalink"],
     includeResponsesByDefault: false,
     permalinkConstructs: MBTI_AXES.map((axis) => `personality.mbti.preference.${axis}`),
     sensitiveConstructs: [],

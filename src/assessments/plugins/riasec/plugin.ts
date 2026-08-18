@@ -62,7 +62,7 @@ function createPlugin(
   const confidence = quick ? 0.5 : 0.65;
   return {
     exportPolicy: {
-      allowedFormats: ["json", "csv", "markdown", "soul", "png", "permalink"],
+      allowedFormats: ["json", "csv", "markdown", "png", "permalink"],
       includeResponsesByDefault: false,
       permalinkConstructs: RIASEC_DIMENSIONS.map((dimension) => `vocation.riasec.${dimension}`),
       sensitiveConstructs: [],

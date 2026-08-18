@@ -3,8 +3,7 @@ export type ExportFormat =
   | "json"
   | "markdown"
   | "permalink"
-  | "png"
-  | "soul";
+  | "png";
 
 export interface ExportPolicy {
   allowedFormats: ExportFormat[];

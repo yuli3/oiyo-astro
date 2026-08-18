@@ -7,7 +7,6 @@ import {
   serializeExportCsv,
   serializeExportJson,
   serializeExportMarkdown,
-  serializeExportSoul,
 } from "./export-serializers";
 
 const EMPTY: OntologyExport = {
@@ -115,33 +114,6 @@ describe("serializeExportMarkdown", () => {
   });
 });
 
-describe("serializeExportSoul", () => {
-  it("follows the AI-persona spec headings", () => {
-    const soul = serializeExportSoul(RICH);
-    expect(soul).toContain("## Identity signals");
-    expect(soul).toContain("## Preferences");
-    expect(soul).toContain("## How to treat me");
-    expect(soul).toContain("## Assessment provenance");
-    expect(soul).toContain("big5-ocean-20-v1");
-  });
-
-  it("generates reasonable tone hints from mbti/big5/enneagram/saju signals", () => {
-    const soul = serializeExportSoul(RICH);
-    // ENTJ -> E, N, T, J hint lines should all be present.
-    expect(soul).toContain("real time"); // E
-    expect(soul).toContain("big picture"); // N
-    expect(soul).toContain("direct, unpadded feedback"); // T
-    expect(soul).toContain("clear plans"); // J
-    expect(soul).toContain("Openness"); // big5 O >= 60
-    expect(soul).toContain("direct with me"); // enneagram 8
-    expect(soul).toContain("Fire"); // saju element
-  });
-
-  it("falls back to a blank-slate line for an empty profile instead of crashing", () => {
-    const soul = serializeExportSoul(EMPTY);
-    expect(soul).toContain("No signals recorded yet");
-  });
-});
 
 describe("collectExportLabelKeys", () => {
   it("collects zodiac/saju node keys, every graph-snapshot i18nKey, and every recommendation title key", () => {

@@ -21,7 +21,7 @@ function compose(result: CanonicalAssessmentResult): InterpretationFragment[] {
 
 export const attachmentPlugin: AssessmentPlugin = {
   exportPolicy: {
-    allowedFormats: ["json", "csv", "markdown", "soul"],
+    allowedFormats: ["json", "csv", "markdown"],
     includeResponsesByDefault: false,
     permalinkConstructs: [],
     sensitiveConstructs: ATTACHMENT_DIMENSIONS.map((dimension) => `relationship.attachment.${dimension}`),

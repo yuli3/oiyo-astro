@@ -13,7 +13,7 @@ import {
 export const PERSONAL_PROFILE_EXPORT_SCHEMA = "oiyo.personal-profile-export" as const;
 export const PERSONAL_PROFILE_EXPORT_SCHEMA_VERSION = 2 as const;
 
-export type PersonalProfileExportFormat = "json" | "markdown" | "soul" | "obsidian";
+export type PersonalProfileExportFormat = "json" | "markdown" | "obsidian";
 
 export interface PersonalProfileExportSource {
   assessmentId: string;
@@ -341,10 +341,6 @@ export function serializePersonalProfileExportMarkdown(data: PersonalProfileExpo
   return `---\nschema: ${safe.schema}\nschemaVersion: ${safe.schemaVersion}\nsourceSchema: ${safe.source.schema}\nsourceSchemaVersion: ${safe.source.schemaVersion}\nexportedAt: ${safe.exportedAt}\nrawResponsesIncluded: false\n---\n\n# OIYO Personal Profile\n\n> Assessment-derived evidence only. No user-authored claims are included in v2. Raw item responses are excluded.\n\n${safe.sections.assessmentDerived.lanes.map((lane) => `## ${lane.id}\n\n${laneMarkdown(lane)}`).join("\n\n")}\n`;
 }
 
-export function serializePersonalProfileExportSoul(data: PersonalProfileExportV2): string {
-  const safe = parsePersonalProfileExportJson(JSON.stringify(data));
-  return `# SOUL.md\n\n> Schema ${safe.schema} v${safe.schemaVersion}, exported ${safe.exportedAt}.\n> This file contains assessment-derived, point-in-time evidence—not fixed identity or user-authored instructions. Ask before assuming.\n> Raw item responses are excluded. Stale or low-confidence evidence must be treated cautiously.\n\n## Evidence lanes\n\n${safe.sections.assessmentDerived.lanes.map((lane) => `### ${lane.id}\n\n${laneMarkdown(lane)}`).join("\n\n")}\n\n## Provenance\n\n${safe.provenance.map((source) => `- ${markdownText(source.assessmentId)}: ${markdownText(source.instrumentVersion)}; scoring ${markdownText(source.scoringVersion)}; measured ${source.measuredAt}`).join("\n") || "- No assessment sources recorded."}\n`;
-}
 
 export function serializePersonalProfileExportObsidian(data: PersonalProfileExportV2): PersonalProfileObsidianBundle {
   const safe = parsePersonalProfileExportJson(JSON.stringify(data));
@@ -367,13 +363,11 @@ export const PERSONAL_PROFILE_EXPORT_FILENAMES: Record<PersonalProfileExportForm
   json: "oiyo-personal-profile-v2.json",
   markdown: "oiyo-personal-profile-v2.md",
   obsidian: "oiyo-personal-profile-obsidian-v2",
-  soul: "SOUL.md",
 };
 
 const PERSONAL_PROFILE_EXPORT_MIME: Record<Exclude<PersonalProfileExportFormat, "obsidian">, string> = {
   json: "application/json;charset=utf-8",
   markdown: "text/markdown;charset=utf-8",
-  soul: "text/markdown;charset=utf-8",
 };
 
 function serializeTextFormat(
@@ -381,8 +375,7 @@ function serializeTextFormat(
   data: PersonalProfileExportV2,
 ): string {
   if (format === "json") return serializePersonalProfileExportJson(data);
-  if (format === "markdown") return serializePersonalProfileExportMarkdown(data);
-  return serializePersonalProfileExportSoul(data);
+  return serializePersonalProfileExportMarkdown(data);
 }
 
 async function tryAdapterAction(action: (() => boolean | Promise<boolean>) | undefined): Promise<boolean> {

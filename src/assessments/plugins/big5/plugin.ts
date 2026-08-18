@@ -71,7 +71,7 @@ function compose(result: CanonicalAssessmentResult): InterpretationFragment[] {
 
 export const bigFivePlugin: AssessmentPlugin = {
   exportPolicy: {
-    allowedFormats: ["json", "csv", "markdown", "soul", "png", "permalink"],
+    allowedFormats: ["json", "csv", "markdown", "png", "permalink"],
     includeResponsesByDefault: false,
     permalinkConstructs: BIG5_DIMENSIONS.map((dimension) => `psychology.big5.${dimension}`),
     sensitiveConstructs: [],
