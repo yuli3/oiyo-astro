@@ -83,6 +83,9 @@ const currentPath = isLocalized ? Astro.url.pathname.replace(LOCALE_PREFIX, '') 
       <a href={localePath(locale, '/tests')} class="px-3 py-2.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
         {{ ko: '테스트', en: 'Tests', ja: 'テスト', zh: '测试', fr: 'Tests', es: 'Tests' }[locale] ?? 'Tests'}
       </a>
+      <a href={localePath(locale, '/fortune/today')} class="px-3 py-2.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
+        {{ ko: '오늘의 운세', en: "Today's fortune", ja: '今日の運勢', zh: '今日运势', fr: 'Fortune du jour', es: 'Fortuna de hoy' }[locale] ?? "Today's fortune"}
+      </a>
       <a href={localePath(locale, '/ontology')} class="px-3 py-2.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
         {t('nav.ontology')}
       </a>
