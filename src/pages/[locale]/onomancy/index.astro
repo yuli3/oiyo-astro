@@ -1,0 +1,103 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
+import NameEnergyReading from '../../../components/tools/NameEnergyReading';
+import { LOCALES, getTranslations } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+// The six-locale verdict copy lives in i18n/messages/<locale>/onomancy.json.
+// It is read here and handed to the island as props rather than fetched in the
+// browser, so the strings ship with the page and the island stays free of the
+// message loader.
+const t = await getTranslations(locale);
+const copy = {
+  verdicts: {
+    excellent: t('onomancy.result.excellent'),
+    good: t('onomancy.result.good'),
+    fair: t('onomancy.result.fair'),
+    caution: t('onomancy.result.caution'),
+  },
+  narrative: t('onomancy.narrative'),
+  missingForce: t('onomancy.missingForce'),
+};
+
+const meta: Record<Locale, { title: string; description: string; heading: string; intro: string }> = {
+  ko: {
+    title: '성명학 — 이름의 소리 오행 읽기',
+    description: '이름의 각 글자 첫소리를 오행으로 분류해 어떤 기운을 지녔는지 읽고, 사주에서 비어 있는 기운을 채우는지 함께 봅니다.',
+    heading: '이름의 소리에는 오행이 담깁니다',
+    intro: '성명학은 이름을 부를 때 나는 소리를 목·화·토·금·수 다섯 기운으로 나누어 읽는 해석 방식입니다. 이 도구는 이름의 첫소리를 분류해 어떤 기운이 있고 없는지 보여주고, 생년월일이 있으면 사주에서 비어 있는 기운을 이름이 채우는지 함께 확인합니다.',
+  },
+  en: {
+    title: 'Name Reading — The Five Elements in Your Name',
+    description: "Classify each syllable's initial sound into the five elements to see which energies your name carries, and whether it supplies what your chart lacks.",
+    heading: 'Your name carries elements in its sounds',
+    intro: 'Name reading sorts the sounds of a name into the five elements — wood, fire, earth, metal and water. This tool classifies the initial sound of each syllable to show which elements are present and which are not, and, if you add a birth date, whether the name supplies what the chart is missing.',
+  },
+  ja: {
+    title: '姓名判断 — 名前の音の五行',
+    description: '名前の各文字の頭音を五行に分類し、どの気を持つかを読み、四柱で欠けている気を補うかも併せて確認します。',
+    heading: '名前の音には五行が宿ります',
+    intro: '姓名判断は、名前を呼ぶときの音を木・火・土・金・水の五つの気に分けて読む解釈です。このツールは各文字の頭音を分類して、どの気があり、どの気がないかを示し、生年月日があれば四柱で欠けた気を名前が補うかも確認します。',
+  },
+  zh: {
+    title: '姓名学 — 姓名读音的五行',
+    description: '将姓名中每个字的声母归入五行，看你的名字带有哪些气，并对照八字所缺。',
+    heading: '姓名的读音里藏着五行',
+    intro: '姓名学把念名字时的声音分为木、火、土、金、水五种气。本工具按每个字的声母分类，显示名字具备与缺少的气；若填写出生日期，还会对照八字所缺，看姓名是否补足。',
+  },
+  fr: {
+    title: 'Onomancie — Les cinq éléments dans votre nom',
+    description: "Classez l'attaque de chaque syllabe selon les cinq éléments pour voir quelles énergies porte votre nom, et s'il apporte ce qui manque à votre thème.",
+    heading: 'Les sons de votre nom portent des éléments',
+    intro: "L'onomancie répartit les sons d'un nom entre cinq éléments : bois, feu, terre, métal et eau. Cet outil classe l'attaque de chaque syllabe pour montrer quels éléments sont présents ou absents, et, si vous ajoutez une date de naissance, si le nom apporte ce qui manque au thème.",
+  },
+  es: {
+    title: 'Onomancia — Los cinco elementos en tu nombre',
+    description: 'Clasifica el sonido inicial de cada sílaba según los cinco elementos para ver qué energías lleva tu nombre y si aporta lo que le falta a tu carta.',
+    heading: 'Los sonidos de tu nombre llevan elementos',
+    intro: 'La onomancia reparte los sonidos de un nombre entre cinco elementos: madera, fuego, tierra, metal y agua. Esta herramienta clasifica el sonido inicial de cada sílaba para mostrar qué elementos están presentes y cuáles no, y, si añades una fecha de nacimiento, si el nombre aporta lo que falta en la carta.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+
+const limits: Record<Locale, { title: string; body: string }> = {
+  ko: { title: '이 도구가 보지 않는 것', body: '발음오행 한 축만 봅니다. 획수(수리오행)·자원오행·음양·한자의 뜻은 계산에 넣지 않으며, 개명을 권하지 않습니다. 결과는 오락과 자기 성찰 목적입니다.' },
+  en: { title: 'What this tool does not look at', body: 'It reads one axis only: the element of each initial sound. Stroke count, the character-origin element, yin-yang balance and Hanja meaning are not part of the calculation, and nothing here recommends changing your name. Results are for entertainment and reflection.' },
+  ja: { title: 'このツールが見ないもの', body: '発音五行という一つの軸だけを見ます。画数（数理五行）・字源五行・陰陽・漢字の意味は計算に含まず、改名を勧めるものでもありません。結果は娯楽と自己省察のためのものです。' },
+  zh: { title: '本工具不考虑的部分', body: '仅看发音五行一个维度。笔画（数理五行）、字源五行、阴阳与汉字含义均不纳入计算，也不建议改名。结果仅供娱乐与自我省思。' },
+  fr: { title: "Ce que cet outil ne regarde pas", body: "Il ne lit qu'un axe : l'élément du son initial. Le nombre de traits, l'élément d'origine du caractère, l'équilibre yin-yang et le sens des Hanja n'entrent pas dans le calcul, et rien ici n'invite à changer de nom. Les résultats sont à but ludique et introspectif." },
+  es: { title: 'Lo que esta herramienta no mira', body: 'Lee un solo eje: el elemento del sonido inicial. El número de trazos, el elemento de origen del carácter, el equilibrio yin-yang y el significado de los Hanja no entran en el cálculo, y nada de esto sugiere cambiar de nombre. Los resultados son de entretenimiento y reflexión.' },
+};
+
+const l = limits[locale] ?? limits.en;
+---
+
+<Layout
+  title={m.title}
+  description={m.description}
+  locale={locale}
+  heading={m.heading}
+  intro={m.intro}
+  canonicalPath={`/${locale}/onomancy/`}
+>
+  <div class="mx-auto w-full max-w-3xl px-4 py-8 sm:py-12">
+    <NameEnergyReading client:load locale={locale} copy={copy} />
+
+    <section class="mx-auto mt-10 w-full max-w-md rounded-[28px] border border-amber-200 bg-amber-50/60 p-5">
+      <h2 class="text-sm font-black text-amber-900">{l.title}</h2>
+      <p class="mt-2 text-sm leading-6 text-amber-900/90 [word-break:keep-all]">{l.body}</p>
+    </section>
+
+    <div class="mx-auto mt-10 w-full max-w-md">
+      <RelatedTools locale={locale} tools={['saju', 'numerology', 'natal', 'chineseZodiac']} />
+    </div>
+  </div>
+</Layout>

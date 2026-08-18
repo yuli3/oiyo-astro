@@ -44,7 +44,7 @@ const INNATE: OntologySystem[] = [
   { id: 'mayan', lane: 'innate', emoji: '🗿', requires: 'birthDate', name: L('마야 달력', 'Mayan (Tzolkin)', 'マヤ暦', '玛雅历', 'Maya (Tzolkin)', 'Maya (Tzolkin)') },
   { id: 'celtic', lane: 'innate', emoji: '🌲', requires: 'birthDate', name: L('켈트 나무점', 'Celtic Tree', 'ケルト樹木', '凯尔特树历', 'Arbre celtique', 'Árbol celta') },
   { id: 'biorhythm', lane: 'innate', emoji: '📈', requires: 'birthDate', href: (l) => `/${l}/today`, name: L('바이오리듬', 'Biorhythm', 'バイオリズム', '生物节律', 'Biorythme', 'Biorritmo') },
-  { id: 'onomancy', lane: 'innate', emoji: '✍️', requires: 'name', name: L('성명학(이름)', 'Name (Onomancy)', '姓名判断', '姓名学', 'Onomancie (nom)', 'Onomancia (nombre)') },
+  { id: 'onomancy', lane: 'innate', emoji: '✍️', requires: 'name', href: (l) => `/${l}/onomancy`, name: L('성명학(이름)', 'Name (Onomancy)', '姓名判断', '姓名学', 'Onomancie (nom)', 'Onomancia (nombre)') },
   { id: 'blood-type', lane: 'innate', emoji: '🩸', requires: 'bloodType', href: (l) => `/${l}/blood-type`, wikiSlug: 'meaning-of-blood-type-a', name: L('혈액형', 'Blood Type', '血液型', '血型', 'Groupe sanguin', 'Grupo sanguíneo') },
   { id: 'palmistry', lane: 'innate', emoji: '🖐️', requires: 'none', href: (l) => `/${l}/palmistry/explore`, wikiSlug: 'meaning-of-palmistry', name: L('손금·관상', 'Palmistry', '手相', '手相', 'Chiromancie', 'Quiromancia') },
   { id: 'tarot', lane: 'innate', emoji: '🃏', requires: 'none', href: (l) => `/${l}/tarot/reading`, wikiSlug: 'meaning-of-tarot', name: L('타로', 'Tarot', 'タロット', '塔罗', 'Tarot', 'Tarot') },
