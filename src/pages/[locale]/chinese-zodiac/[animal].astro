@@ -35,6 +35,8 @@ const L: Record<Locale, {
   loveTitle: string;
   famousTitle: string;
   yearsTitle: string;
+  yinLabel: string;
+  yangLabel: string;
   otherAnimalsTitle: string;
   calculatorCta: string;
   disclaimer: string;
@@ -48,6 +50,7 @@ const L: Record<Locale, {
     luckyTitle: '행운의 상징', luckyNumbers: '행운의 숫자', luckyColors: '행운의 색',
     careerTitle: '적성·직업', loveTitle: '연애·관계', famousTitle: '같은 띠의 유명인',
     yearsTitle: '해당 연도', otherAnimalsTitle: '다른 띠 보기',
+    yinLabel: '음(陰)', yangLabel: '양(陽)',
     calculatorCta: '내 띠 계산하기 →',
     disclaimer: '띠 성격 설명은 전통 상징 체계에 기반한 참고 자료이며, 개인의 성격을 단정하는 과학적 진단이 아닙니다.',
     breadcrumbHome: '홈', breadcrumbZodiac: '띠',
@@ -59,6 +62,7 @@ const L: Record<Locale, {
     luckyTitle: 'Lucky Symbols', luckyNumbers: 'Lucky Numbers', luckyColors: 'Lucky Colors',
     careerTitle: 'Career Fit', loveTitle: 'Love & Relationships', famousTitle: 'Famous People Born in This Year',
     yearsTitle: 'Birth Years', otherAnimalsTitle: 'Explore Other Signs',
+    yinLabel: 'Yin', yangLabel: 'Yang',
     calculatorCta: 'Calculate my sign →',
     disclaimer: 'This personality description is a reference based on a traditional symbolic system, not a scientific diagnosis of individual character.',
     breadcrumbHome: 'Home', breadcrumbZodiac: 'Chinese Zodiac',
@@ -70,6 +74,7 @@ const L: Record<Locale, {
     luckyTitle: '幸運のシンボル', luckyNumbers: 'ラッキーナンバー', luckyColors: 'ラッキーカラー',
     careerTitle: '適職', loveTitle: '恋愛・人間関係', famousTitle: '同じ干支の有名人',
     yearsTitle: '生まれ年', otherAnimalsTitle: '他の干支を見る',
+    yinLabel: '陰', yangLabel: '陽',
     calculatorCta: '自分の干支を調べる →',
     disclaimer: 'この性格解説は伝統的な象徴体系に基づく参考資料であり、個人の性格を断定する科学的診断ではありません。',
     breadcrumbHome: 'ホーム', breadcrumbZodiac: '十二支',
@@ -81,6 +86,7 @@ const L: Record<Locale, {
     luckyTitle: '幸运象征', luckyNumbers: '幸运数字', luckyColors: '幸运颜色',
     careerTitle: '适合职业', loveTitle: '爱情与人际关系', famousTitle: '同生肖名人',
     yearsTitle: '出生年份', otherAnimalsTitle: '查看其他生肖',
+    yinLabel: '阴', yangLabel: '阳',
     calculatorCta: '计算我的生肖 →',
     disclaimer: '此性格说明基于传统象征体系，仅供参考，并非对个人性格的科学诊断。',
     breadcrumbHome: '首页', breadcrumbZodiac: '生肖',
@@ -92,6 +98,7 @@ const L: Record<Locale, {
     luckyTitle: 'Symboles porte-bonheur', luckyNumbers: 'Chiffres porte-bonheur', luckyColors: 'Couleurs porte-bonheur',
     careerTitle: 'Carrière', loveTitle: 'Amour et relations', famousTitle: 'Personnalités nées cette année',
     yearsTitle: 'Années de naissance', otherAnimalsTitle: 'Explorer les autres signes',
+    yinLabel: 'Yin', yangLabel: 'Yang',
     calculatorCta: 'Calculer mon signe →',
     disclaimer: "Cette description de personnalité est une référence basée sur un système symbolique traditionnel, pas un diagnostic scientifique.",
     breadcrumbHome: 'Accueil', breadcrumbZodiac: 'Zodiaque chinois',
@@ -103,6 +110,7 @@ const L: Record<Locale, {
     luckyTitle: 'Símbolos de suerte', luckyNumbers: 'Números de la suerte', luckyColors: 'Colores de la suerte',
     careerTitle: 'Aptitud profesional', loveTitle: 'Amor y relaciones', famousTitle: 'Personas famosas nacidas este año',
     yearsTitle: 'Años de nacimiento', otherAnimalsTitle: 'Explorar otros signos',
+    yinLabel: 'Yin', yangLabel: 'Yang',
     calculatorCta: 'Calcular mi signo →',
     disclaimer: 'Esta descripción de personalidad es una referencia basada en un sistema simbólico tradicional, no un diagnóstico científico.',
     breadcrumbHome: 'Inicio', breadcrumbZodiac: 'Zodiaco chino',
@@ -160,7 +168,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
 
     <section class="mt-2 flex flex-wrap gap-2 text-xs font-bold text-green-700">
       <span class="rounded-full bg-green-100 px-3 py-1">{c.elementLabel[z.element]}</span>
-      <span class="rounded-full bg-green-100 px-3 py-1">{z.yin ? '陰' : '陽'}</span>
+      <span class="rounded-full bg-green-100 px-3 py-1">{z.yin ? c.yinLabel : c.yangLabel}</span>
     </section>
 
     <section class="mt-6">

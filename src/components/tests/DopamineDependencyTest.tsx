@@ -102,7 +102,7 @@ const RESULTS: Record<Level, Record<Locale, { title: string; color: string; bg: 
     fr: { title: 'Équilibré 🌿', color: 'text-green-700', bg: 'bg-green-50 border-green-200', symptoms: ['Bonne autorégulation', 'Moins dépendant de la stimulation instantanée', 'Tolère bien l\'ennui'], tips: ['Maintenir l\'équilibre actuel', 'Continuer les habitudes de bien-être numérique', 'Profiter des activités hors ligne'] },
     es: { title: 'Equilibrado 🌿', color: 'text-green-700', bg: 'bg-green-50 border-green-200', symptoms: ['Buena autorregulación', 'Menos dependiente de la estimulación instantánea', 'Tolera bien el aburrimiento'], tips: ['Mantener el equilibrio actual', 'Continuar hábitos de bienestar digital', 'Disfrutar actividades sin pantallas'] },
     cn: { title: '平衡型 🌿', color: 'text-green-700', bg: 'bg-green-50 border-green-200', symptoms: ['自我調節能力良好', '對即時刺激依賴較少', '能夠忍受無聊'], tips: ['維持現有平衡', '繼續數字健康習慣', '享受線下活動'] },
-    zh: { title: '平衡型 🌿', color: 'text-green-700', bg: 'bg-green-50 border-green-200', symptoms: ['自我调节能力良好', '对即时刺激依赖较少', '能够忍受无聊'], tips: ['维持现有平衡', '继续数字健康习慣', '享受线下活动'] },
+    zh: { title: '平衡型 🌿', color: 'text-green-700', bg: 'bg-green-50 border-green-200', symptoms: ['自我调节能力良好', '对即时刺激依赖较少', '能够忍受无聊'], tips: ['维持现有平衡', '继续数字健康习惯', '享受线下活动'] },
   },
   medium: {
     ko: { title: '주의 필요형 🟡', color: 'text-amber-700', bg: 'bg-amber-50 border-amber-200', symptoms: ['스마트폰을 습관적으로 확인', '지루할 때 즉각적 자극 찾기', '집중 시간이 점점 짧아짐'], tips: ['스마트폰 알림 30%만 켜두기', '하루 1시간 "지루함 시간" 갖기', '식사 중 스마트폰 내려놓기', '보상을 미루는 연습하기'] },
@@ -129,7 +129,7 @@ const RESULTS: Record<Level, Record<Locale, { title: string; color: string; bg: 
     fr: { title: 'Dépendance critique ⚠️', color: 'text-green-700', bg: 'bg-green-50 border-green-200', symptoms: ['Difficulté à fonctionner sans stimulation instantanée', 'Sevrage sévère quand l\'accès numérique est limité', 'Rythmes de vie de base perturbés', 'Prioriser les relations numériques sur les réelles'], tips: ['Consulter un spécialiste en addiction comportementale', 'Tenter une détox numérique complète d\'une semaine', 'Utiliser activement le soutien des proches', 'Vérifier si anxiété ou dépression sous-jacente'] },
     es: { title: 'Dependencia crítica ⚠️', color: 'text-green-700', bg: 'bg-green-50 border-green-200', symptoms: ['Dificultad para funcionar sin estimulación instantánea', 'Síndrome de abstinencia severo cuando el acceso digital es limitado', 'Ritmos de vida básicos perturbados', 'Priorizar relaciones digitales sobre reales'], tips: ['Consultar a un especialista en adicciones conductuales', 'Intentar una desintoxicación digital completa de una semana', 'Utilizar activamente el apoyo de personas cercanas', 'Verificar si hay ansiedad o depresión subyacente'] },
     cn: { title: '嚴重依賴 ⚠️', color: 'text-green-700', bg: 'bg-green-50 border-green-200', symptoms: ['沒有即時刺激就難以正常運作', '限制數字使用時出現嚴重戒斷症狀', '基本生活節奏（睡眠、飲食）被打亂', '優先考慮數字關係而非現實關係'], tips: ['建議諮詢行為成癮專科醫生', '嘗試一週完全數字排毒', '積極利用身邊人的支持', '檢查潛在的焦慮或抑鬱症'] },
-    zh: { title: '严重依赖 ⚠️', color: 'text-green-700', bg: 'bg-green-50 border-green-200', symptoms: ['没有即时刺激就难以正常运作', '限制数字使用时出现严重戒断症状', '基本生活节奏（睡眠、饮食）被打乱', '优先考虑数字关系而非现实关系'], tips: ['建议咨询行为成瘾专科医生', '尝试一周完全数字排毒', '积极利用身边人的支持', '检查潜在的焦虑或抑鬱症'] },
+    zh: { title: '严重依赖 ⚠️', color: 'text-green-700', bg: 'bg-green-50 border-green-200', symptoms: ['没有即时刺激就难以正常运作', '限制数字使用时出现严重戒断症状', '基本生活节奏（睡眠、饮食）被打乱', '优先考虑数字关系而非现实关系'], tips: ['建议咨询行为成瘾专科医生', '尝试一周完全数字排毒', '积极利用身边人的支持', '检查潜在的焦虑或抑郁症'] },
   },
 }
 

@@ -247,7 +247,7 @@ export const ZODIAC: Record<ZodiacKey, ZodiacData> = {
       fr: "Le Taureau est un pragmatique fiable qui recherche la stabilité. Il possède une volonté et une patience remarquables pour mener les choses à bien.",
       es: "Tauro es un pragmático confiable que busca la estabilidad. Posee una notable fuerza de voluntad y paciencia para llevar las cosas a término.",
       cn: "金牛座是可靠、追求穩定的實用主義者。一旦決定的事，會以強大的意志力和耐心貫徹始終。",
-      zh: "金牛座是可靠、追求稳定的实用主义者。一旦决定的事，会以强大的意志力和耐心贯徹始终。",
+      zh: "金牛座是可靠、追求稳定的实用主义者。一旦决定的事，会以强大的意志力和耐心贯彻始终。",
     },
     traits: {
       ko: ["신뢰성", "인내심", "실용적", "고집스러움", "감각적", "물질적", "충성스러움"],

@@ -975,7 +975,7 @@ const SEASONS: Record<Season, SeasonData> = {
       fr: ["Lèvres : rouge brique, terracotta, nude brun", "Blush : terracotta, brun orangé", "Fards à paupières : or, cuivre, olive, brun", "Fond de teint : beige chaud, beige doré"],
       es: ["Labios: rojo ladrillo, terracota, nude marrón", "Colorete: terracota, marrón naranja", "Sombra de ojos: dorado, cobre, oliva, marrón", "Base: beige cálido, beige dorado"],
       cn: ["唇色：磚紅、磚紅色、裸棕系", "腮紅：磚紅、橙棕色", "眼影：金色、銅色、橄欖色、棕色", "粉底：暖米色、金米色"],
-      zh: ["唇色：砖红、磚紅色、裸棕系", "腮红：砖红、橙棕色", "眼影：金色、铜色、橄榄色、棕色", "粉底：暖米色、金米色"],
+      zh: ["唇色：砖红、砖红色、裸棕系", "腮红：砖红、橙棕色", "眼影：金色、铜色、橄榄色、棕色", "粉底：暖米色、金米色"],
     },
     fashion: {
       ko: ["어스톤·올리브·머스터드 계열", "가죽·스웨이드 소재", "골드 앤틱 액세서리", "따뜻한 레이어드 스타일"],
