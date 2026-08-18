@@ -40,7 +40,7 @@ export const YONGSIN_C = {
     ko: "출생 시(時)를 입력하지 않아 정오 기준 근사값입니다. 시를 입력하면 더 정확합니다.",
     en: "Birth hour not entered — approximated at noon. Enter your hour for higher accuracy.",
     ja: "出生時刻(時)が未入力のため、正午基準の近似値です。時刻を入力すると精度が上がります。",
-    zh: "未输入出生时辰(時)，因此按正午近似计算。输入时辰后会更准确。",
+    zh: "未输入出生时辰(时)，因此按正午近似计算。输入时辰后会更准确。",
     fr: "L'heure de naissance n'a pas été saisie : l'estimation est faite à midi. Saisissez l'heure pour plus de précision.",
     es: "No se ingresó la hora de nacimiento: se aproxima al mediodía. Ingresa la hora para mayor precisión.",
   } as L<string>,
@@ -64,8 +64,8 @@ export const YONGSIN_C = {
   gisinLabel: { ko: "기신", en: "Gisin (avoid)", ja: "忌神(避ける)", zh: "忌神(避免)", fr: "Gisin (à éviter)", es: "Gisin (evitar)" } as L<string>,
   gusinLabel: { ko: "구신", en: "Gusin (secondary)", ja: "仇神(補助)", zh: "仇神(次要)", fr: "Gusin (secondaire)", es: "Gusin (secundario)" } as L<string>,
   reason: {
-    "strong-drain": { ko: "일간이 강해 식상(食傷)으로 기운을 자연스럽게 풀어주는 것이 좋습니다.", en: "Your self is strong, so the Output element that releases energy suits you best.", ja: "日干が強いため、食傷(食傷)で気を自然に発散させるのがよいでしょう。", zh: "日干偏强，适合用食伤(食傷)自然地释放能量。", fr: "Votre soi est fort ; l'élément Production (食傷), qui libère l'énergie, vous convient le mieux.", es: "Tu yo es fuerte, por eso te conviene el elemento de Producción (食傷), que libera la energía." } as L<string>,
-    "strong-wealth": { ko: "인성이 강해 일간이 단단하니, 재성(財星)으로 자원을 다스리는 것이 좋습니다.", en: "A resource-heavy strong self is best balanced by the Wealth element.", ja: "印星が強く日干がしっかりしているため、財星(財星)で資源を扱うのがよいでしょう。", zh: "印星较强使日干稳固，适合用财星(財星)来管理资源。", fr: "Un soi fort, très soutenu par la Ressource, s'équilibre le mieux avec l'élément Richesse (財星).", es: "Un yo fuerte con mucho Recurso se equilibra mejor con el elemento Riqueza (財星)." } as L<string>,
+    "strong-drain": { ko: "일간이 강해 식상(食傷)으로 기운을 자연스럽게 풀어주는 것이 좋습니다.", en: "Your self is strong, so the Output element that releases energy suits you best.", ja: "日干が強いため、食傷(食傷)で気を自然に発散させるのがよいでしょう。", zh: "日干偏强，适合用食伤(食伤)自然地释放能量。", fr: "Votre soi est fort ; l'élément Production (食傷), qui libère l'énergie, vous convient le mieux.", es: "Tu yo es fuerte, por eso te conviene el elemento de Producción (食傷), que libera la energía." } as L<string>,
+    "strong-wealth": { ko: "인성이 강해 일간이 단단하니, 재성(財星)으로 자원을 다스리는 것이 좋습니다.", en: "A resource-heavy strong self is best balanced by the Wealth element.", ja: "印星が強く日干がしっかりしているため、財星(財星)で資源を扱うのがよいでしょう。", zh: "印星较强使日干稳固，适合用财星(财星)来管理资源。", fr: "Un soi fort, très soutenu par la Ressource, s'équilibre le mieux avec l'élément Richesse (財星).", es: "Un yo fuerte con mucho Recurso se equilibra mejor con el elemento Riqueza (財星)." } as L<string>,
     "strong-control": { ko: "비겁이 강하니, 관성(官星)으로 절제와 질서를 더하는 것이 좋습니다.", en: "With strong peers, the Authority element that adds discipline suits you.", ja: "比劫が強いため、官星(官星)で節制と秩序を加えるのがよいでしょう。", zh: "比劫偏强，适合用官星(官星)增加节制与秩序。", fr: "Avec des Pairs forts, l'élément Autorité (官星), qui ajoute discipline et ordre, vous convient.", es: "Con Pares fuertes, te conviene el elemento Autoridad (官星), que aporta disciplina y orden." } as L<string>,
     "weak-resource": { ko: "일간이 약하니, 인성(印星)으로 나를 길러 채우는 것이 좋습니다.", en: "A weak self is best nourished by the Resource element.", ja: "日干が弱いため、印星(印星)で自分を育て補うのがよいでしょう。", zh: "日干偏弱，适合用印星(印星)来滋养并补足自己。", fr: "Un soi faible est mieux nourri par l'élément Ressource (印星).", es: "Un yo débil se nutre mejor con el elemento Recurso (印星)." } as L<string>,
     "weak-peer": { ko: "일간이 약하니, 비겁(比劫)으로 같은 편의 힘을 더하는 것이 좋습니다.", en: "A weak self is reinforced by the Peer element.", ja: "日干が弱いため、比劫(比劫)で同じ側の力を加えるのがよいでしょう。", zh: "日干偏弱，适合用比劫(比劫)增强同类的力量。", fr: "Un soi faible est renforcé par l'élément Pair (比劫).", es: "Un yo débil se refuerza con el elemento Par (比劫)." } as L<string>,
@@ -119,7 +119,7 @@ export const YONGSIN_C = {
 export const CATEGORIES_C = {
   sectionHeading: { ko: "항목별 사주 분석", en: "Life-Domain Analysis", ja: "項目別四柱分析", zh: "分项四柱分析", fr: "Analyse par domaines de vie", es: "Análisis por áreas de vida" } as L<string>,
   roleName: {
-    bigyeop: { ko: "비겁(比劫)", en: "Peer", ja: "比劫(比劫)", zh: "比劫(比劫)", fr: "Pair (比劫)", es: "Par (比劫)" }, insung: { ko: "인성(印星)", en: "Resource", ja: "印星(印星)", zh: "印星(印星)", fr: "Ressource (印星)", es: "Recurso (印星)" }, siksang: { ko: "식상(食傷)", en: "Output", ja: "食傷(食傷)", zh: "食伤(食傷)", fr: "Production (食傷)", es: "Producción (食傷)" }, jaesung: { ko: "재성(財星)", en: "Wealth", ja: "財星(財星)", zh: "财星(財星)", fr: "Richesse (財星)", es: "Riqueza (財星)" }, gwansung: { ko: "관성(官星)", en: "Authority", ja: "官星(官星)", zh: "官星(官星)", fr: "Autorité (官星)", es: "Autoridad (官星)" },
+    bigyeop: { ko: "비겁(比劫)", en: "Peer", ja: "比劫(比劫)", zh: "比劫(比劫)", fr: "Pair (比劫)", es: "Par (比劫)" }, insung: { ko: "인성(印星)", en: "Resource", ja: "印星(印星)", zh: "印星(印星)", fr: "Ressource (印星)", es: "Recurso (印星)" }, siksang: { ko: "식상(食傷)", en: "Output", ja: "食傷(食傷)", zh: "食伤(食伤)", fr: "Production (食傷)", es: "Producción (食傷)" }, jaesung: { ko: "재성(財星)", en: "Wealth", ja: "財星(財星)", zh: "财星(财星)", fr: "Richesse (財星)", es: "Riqueza (財星)" }, gwansung: { ko: "관성(官星)", en: "Authority", ja: "官星(官星)", zh: "官星(官星)", fr: "Autorité (官星)", es: "Autoridad (官星)" },
   } as Record<string, L<string>>,
   level: {
     strong: { ko: "강함", en: "Strong", ja: "強い", zh: "强", fr: "Fort", es: "Fuerte" }, moderate: { ko: "보통", en: "Moderate", ja: "普通", zh: "中等", fr: "Modéré", es: "Moderado" }, weak: { ko: "약함", en: "Weak", ja: "弱い", zh: "弱", fr: "Faible", es: "Débil" }, absent: { ko: "없음", en: "Absent", ja: "なし", zh: "缺失", fr: "Absent", es: "Ausente" },
@@ -129,7 +129,7 @@ export const CATEGORIES_C = {
   } as Record<string, L<string>>,
   wealth: {
     title: { ko: "재물운", en: "Wealth", ja: "財運", zh: "财运", fr: "Richesse", es: "Riqueza" } as L<string>,
-    intro: { ko: "재물은 재성(財星)으로 봅니다.", en: "Wealth is read through the Wealth star (財星).", ja: "財は財星(財星)で読みます。", zh: "财富通过财星(財星)来看。", fr: "La richesse se lit à travers l'étoile de Richesse (財星).", es: "La riqueza se interpreta mediante la estrella de Riqueza (財星)." } as L<string>,
+    intro: { ko: "재물은 재성(財星)으로 봅니다.", en: "Wealth is read through the Wealth star (財星).", ja: "財は財星(財星)で読みます。", zh: "财富通过财星(财星)来看。", fr: "La richesse se lit à travers l'étoile de Richesse (財星).", es: "La riqueza se interpreta mediante la estrella de Riqueza (財星)." } as L<string>,
     guide: {
       favorable: { ko: "재성이 용신과 어울려 노력이 재물로 잘 이어집니다. 실속 있는 투자·관리에 강점이 있습니다.", en: "Wealth aligns with your favorable element, so effort converts to money well. You manage and invest substantively.", ja: "財星が用神と調和し、努力が財につながりやすい配置です。実のある投資や管理に強みがあります。", zh: "财星与用神相合，努力容易转化为财富。你在务实投资与管理上有优势。", fr: "La Richesse s'accorde avec votre élément favorable, donc l'effort se convertit bien en argent. Vous avez des forces en gestion et en investissement concrets.", es: "La Riqueza se alinea con tu elemento favorable, por eso el esfuerzo se convierte bien en dinero. Tienes fortaleza para invertir y gestionar con sentido práctico." } as L<string>,
       unfavorable: { ko: "재물 욕심이 균형을 흔들 수 있습니다. 무리한 확장보다 분수에 맞는 관리가 유리합니다.", en: "Chasing money may unbalance you. Steady management beats overreach.", ja: "財への欲がバランスを揺らしやすいです。無理な拡大より、身の丈に合った管理が有利です。", zh: "对财富的欲望可能扰乱平衡。与其过度扩张，不如按自身条件稳健管理。", fr: "La poursuite de l'argent peut vous déséquilibrer. Une gestion régulière vaut mieux qu'une expansion excessive.", es: "Perseguir el dinero puede desequilibrarte. Una gestión constante supera el exceso de ambición." } as L<string>,

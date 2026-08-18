@@ -2011,7 +2011,7 @@ export const CAREERS: Career[] = [
       ],
       pros: [
         {
-          zh: "高影響のケア",
+          zh: "高影响のケア",
           en: "High impact care",
           es: "Atención de alto impacto",
           fr: "Soins à fort impact",
@@ -4649,7 +4649,7 @@ export const CAREERS: Career[] = [
     tradeoffs: {
       cons: [
         {
-          zh: "理論不足",
+          zh: "理论不足",
           en: "Less theory",
           es: "Menos teoría",
           fr: "Moins de théorie",
@@ -8809,7 +8809,7 @@ export const CAREERS: Career[] = [
       },
       {
         activity: {
-          zh: "測定/切断",
+          zh: "测定/切断",
           en: "Measuring/Cutting",
           es: "Medición/Corte",
           fr: "Mesure/Coupe",
@@ -12863,7 +12863,7 @@ export const CAREERS: Career[] = [
       ],
       educationPaths: [
         {
-          zh: "訓練营 / 计算机学位",
+          zh: "训练营 / 计算机学位",
           en: "Bootcamp / CS Degree",
           es: "Bootcamp / Grado CS",
           fr: "Bootcamp / Diplôme CS",
@@ -20976,7 +20976,7 @@ export const CAREERS: Career[] = [
       },
       {
         activity: {
-          zh: "銀行会議",
+          zh: "银行会议",
           en: "Bank Meetings",
           es: "Reuniones bancos",
           fr: "Réunions banques",
@@ -28765,7 +28765,7 @@ export const CAREERS: Career[] = [
       },
       {
         activity: {
-          zh: "望遠鏡時間",
+          zh: "望远镜时间",
           en: "Telescope Time",
           es: "Tiempo telescopio",
           fr: "Temps télescope",
@@ -29336,7 +29336,7 @@ export const CAREERS: Career[] = [
         },
       ],
       realityCheck: {
-        zh: "熔岩很熱。",
+        zh: "熔岩很热。",
         en: "Lava is hot.",
         es: "La lava está caliente.",
         fr: "La lave est chaude.",
@@ -30207,7 +30207,7 @@ export const CAREERS: Career[] = [
       },
       {
         activity: {
-          zh: "記録",
+          zh: "记录",
           en: "Records",
           es: "Registros",
           fr: "Dossiers",
@@ -41108,7 +41108,7 @@ export const CAREERS: Career[] = [
       },
       {
         activity: {
-          zh: "道具準備",
+          zh: "道具准备",
           en: "Prop Prep",
           es: "Prep utilería",
           fr: "Prép accessoires",
@@ -42600,7 +42600,7 @@ export const CAREERS: Career[] = [
     guidance: {
       commonBarriers: [
         {
-          zh: "資金",
+          zh: "资金",
           en: "Funding",
           es: "Financiación",
           fr: "Financement",
@@ -45878,7 +45878,7 @@ export const CAREERS: Career[] = [
       },
       {
         activity: {
-          zh: "終了",
+          zh: "终了",
           en: "Finish",
           es: "Fin",
           fr: "Fin",
