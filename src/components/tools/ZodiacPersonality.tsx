@@ -795,6 +795,7 @@ export default function ZodiacPersonality({ locale }: Props) {
             <div className="flex gap-2">
               <BirthDateField
                 id="zodiac-birth-date"
+          locale={locale}
                 value={birthday}
                 onChange={setBirthday}
                 className="flex-1"

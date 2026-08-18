@@ -477,6 +477,7 @@ export default function NatalChartCalculator({ locale }: Props) {
       <div className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
         <BirthDateField
           id="natal-birth-date"
+          locale={locale}
           label={t.dateLabel}
           value={form.date}
           onChange={(v) => setForm((f) => ({ ...f, date: v }))}

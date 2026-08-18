@@ -121,6 +121,7 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
         <div className="flex items-end gap-2">
           <BirthDateField
             id="periodic-birth-date"
+          locale={locale}
             label={t.birthDate}
             value={dateInput}
             onChange={setDateInput}

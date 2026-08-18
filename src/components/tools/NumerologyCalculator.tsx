@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import type { Locale } from "../../lib/i18n";
 import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
-import { BirthDateField } from "../shared/BirthDateField";
+import { BirthDateField, ProfileNameField } from "../shared/BirthDateField";
 import AnimatedNumber from "../ui/AnimatedNumber";
 
 interface Props {
@@ -816,18 +816,16 @@ export default function NumerologyCalculator({ locale }: Props) {
 
       {/* Inputs */}
       <div className="rounded-xl border border-gray-200 p-4 space-y-4">
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">{ui.nameLabel}</label>
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName((e.target as HTMLInputElement).value)}
-            placeholder={ui.namePlaceholder}
-            className="w-full rounded-lg border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-        </div>
+        <ProfileNameField
+          label={ui.nameLabel}
+          locale={locale}
+          value={name}
+          onChange={setName}
+          warning={latinLetters(name) ? undefined : ui.latinRequired}
+        />
         <BirthDateField
           id="numerology-birth-date"
+          locale={locale}
           label={ui.dateLabel}
           value={date}
           onChange={setDate}
@@ -835,7 +833,7 @@ export default function NumerologyCalculator({ locale }: Props) {
         <button
           onClick={result ? () => setResult(null) : calculate}
           disabled={!name.trim() || !date}
-          className="w-full py-2.5 bg-indigo-600 text-white text-sm font-semibold rounded-lg hover:bg-indigo-700 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="w-full py-2.5 bg-green-700 text-white text-sm font-semibold rounded-lg hover:bg-green-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {result ? ui.resetBtn : ui.calcBtn}
         </button>

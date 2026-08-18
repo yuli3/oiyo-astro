@@ -702,6 +702,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
         <CardContent className="space-y-4 pt-5">
         <BirthDateField
           id="saju-birth-date"
+          locale={locale}
           label={t.birthDate}
           value={dateValue}
           onChange={handleDateChange}

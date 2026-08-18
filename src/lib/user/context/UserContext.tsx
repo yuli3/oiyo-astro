@@ -65,44 +65,32 @@ export function UserProvider({ children }: { children: React.ReactNode }) {
   );
 }
 
-// Guest/Fallback Context for when Provider is missing or hydration fails
-const GUEST_CONTEXT: UserContextType = {
-  clearProfile: () =>
-    console.warn("UserProvider missing: clearProfile ignored"),
-  isInitialized: false,
-  profile: {
-    big5Type: null,
-    birthDate: null,
-    birthRecord: null,
-    birthTime: null,
-    bloodType: null,
-    gender: null,
-    hspType: null,
-    mbtiType: null,
-    name: null,
-    riasecCode: null,
-    tciType: null,
-    tier: "FREE",
-    zodiacSign: null,
-  },
-  saveBirthRecord: () =>
-    console.warn("UserProvider missing: saveBirthRecord ignored"),
-  setBirthDate: () =>
-    console.warn("UserProvider missing: setBirthDate ignored"),
-  setMbtiType: () => console.warn("UserProvider missing: setMbtiType ignored"),
-  setProfileData: () =>
-    console.warn("UserProvider missing: setProfileData ignored"),
-  setRiasecCode: () =>
-    console.warn("UserProvider missing: setRiasecCode ignored"),
-  setZodiacSign: () =>
-    console.warn("UserProvider missing: setZodiacSign ignored"),
-};
-
-export function useUserProfile() {
+/**
+ * Works with or without a UserProvider.
+ *
+ * The fallback used to be a frozen guest object whose setters only called
+ * console.warn, so any consumer rendered outside the provider — and the
+ * provider is mounted in exactly one island — saved nothing and said nothing.
+ * A visitor could fill in the birth form, watch it close, and lose the input.
+ *
+ * The provider is only a thin wrapper over the same zustand store, so the
+ * fallback now reads and writes that store directly. Both paths persist.
+ */
+export function useUserProfile(): UserContextType {
   const context = useContext(UserContext);
-  if (context === undefined) {
-    // Graceful fallback instead of crashing
-    return GUEST_CONTEXT;
-  }
-  return context;
+  const store = useUserStore();
+
+  const fallback: UserContextType = {
+    clearProfile: store.clearProfile,
+    isInitialized: store.isInitialized,
+    profile: store.profile,
+    saveBirthRecord: store.saveBirthRecord,
+    setBirthDate: store.setBirthDate,
+    setMbtiType: store.setMbtiType,
+    setProfileData: store.setProfile,
+    setRiasecCode: store.setRiasecCode,
+    setZodiacSign: store.setZodiacSign,
+  };
+
+  return context ?? fallback;
 }

@@ -24,7 +24,14 @@ const COPY: Record<Lang, Copy> = {
 
 const BLOODS = ["A", "B", "O", "AB"] as const;
 
-export function OntologyBirthInput({ locale }: { locale: string }) {
+export function OntologyBirthInput({
+  locale,
+  onSaved,
+}: {
+  locale: string;
+  /** Called after a successful save — lets a host dialog close itself. */
+  onSaved?: () => void;
+}) {
   const { profile, saveBirthRecord, setProfileData } = useUserProfile();
   const birthRecord = resolveBirthRecord(profile);
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
@@ -72,6 +79,7 @@ export function OntologyBirthInput({ locale }: { locale: string }) {
     });
     setEditing(false);
     window.dispatchEvent(new Event("oiyo:ontology-progress-updated"));
+    onSaved?.();
   };
 
   const cityLabel = (id: string) => CITIES.find((c) => c.id === id)?.label[lang];

@@ -784,6 +784,7 @@ export default function BiorhythmCalculator({ locale }: Props) {
           >
             <BirthDateField
               id="bio-birth-date"
+          locale={locale}
               label={t('birthDateLabel', locale)}
               value={birthDate}
               onChange={(v) => {
