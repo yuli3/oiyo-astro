@@ -20,4 +20,12 @@ describe("short-share invite bridge", () => {
     });
     expect(response.headers.get("Location")).toBe("/ja/profile/symbolic-compatibility/?share=abcdefghijklmnopqrstuv");
   });
+
+  it("sends circle=1 to the gathering page", () => {
+    const response = onRequest({
+      params: { id: "abcdefghijklmnopqrstuv" },
+      request: new Request("https://oiyo.net/c/abcdefghijklmnopqrstuv?l=ko&circle=1"),
+    });
+    expect(response.headers.get("Location")).toBe("/ko/profile/circle/?share=abcdefghijklmnopqrstuv");
+  });
 });

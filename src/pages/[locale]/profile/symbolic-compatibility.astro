@@ -24,6 +24,6 @@ const m = meta[locale] ?? meta.en;
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
     <SymbolicCompatibilityPilot client:load locale={locale} />
-    <RelatedTools locale={locale} tools={['fortunePeriodic', 'sajuPeriodic', 'chineseZodiac', 'saju']} current="compat" />
+    <RelatedTools locale={locale} tools={['circle', 'fortunePeriodic', 'sajuPeriodic', 'chineseZodiac', 'saju']} current="compat" />
   </div>
 </Layout>

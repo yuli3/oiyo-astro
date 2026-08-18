@@ -13,11 +13,13 @@ export function onRequest({ params, request }: Context): Response {
   const requestedLocale = requested.get("l") ?? "ko";
   const locale = LOCALES.has(requestedLocale) ? requestedLocale : "ko";
   const join = requested.get("join") === "1" ? "&join=1" : "";
+  const circle = requested.get("circle") === "1";
+  const dest = circle ? `/${locale}/profile/circle/?share=${id}${join}` : `/${locale}/profile/symbolic-compatibility/?share=${id}${join}`;
   return new Response(null, {
     status: 302,
     headers: {
       "Cache-Control": "no-store",
-      Location: `/${locale}/profile/symbolic-compatibility/?share=${id}${join}`,
+      Location: dest,
       "Referrer-Policy": "no-referrer",
       "X-Robots-Tag": "noindex, nofollow",
     },

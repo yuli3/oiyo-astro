@@ -1,0 +1,29 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import CircleGathering from '../../../components/profile/CircleGathering';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '우리 원 — 여러 친구와 상징 궁합', description: '3명에서 10명까지 생년월일로 오행·음양·띠·태양궁을 원에 그립니다. 총점과 순위는 없습니다.' },
+  en: { title: 'Our circle — symbolic match for friends', description: 'Map three to ten friends through five elements, yin-yang, zodiac, and sun signs. No group total or ranking.' },
+  ja: { title: 'みんなの円 — 友だちとの象徴的な相性', description: '3〜10人の生年月日から五行・陰陽・干支・太陽星座を円に描きます。総合点や順位はありません。' },
+  zh: { title: '我们的圆 — 多个朋友的象征合拍', description: '用三到十人的出生日期画出五行、阴阳、生肖与太阳星座。没有总分或排名。' },
+  fr: { title: 'Notre cercle — compatibilité entre amis', description: 'Placez 3 à 10 amis selon cinq éléments, yin-yang, zodiaque et signe. Pas de total ni de classement.' },
+  es: { title: 'Nuestro círculo — compatibilidad entre amistades', description: 'Dibuja de 3 a 10 personas con cinco elementos, yin-yang, zodiaco y signo. Sin total ni ranking.' },
+};
+const m = meta[locale] ?? meta.en;
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="mx-auto max-w-4xl px-4 py-8 sm:py-12">
+    <CircleGathering client:load locale={locale} />
+    <RelatedTools locale={locale} tools={['compat', 'fortunePeriodic', 'sajuPeriodic', 'chineseZodiac']} current="circle" />
+  </div>
+</Layout>

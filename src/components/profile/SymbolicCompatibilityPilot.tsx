@@ -263,13 +263,7 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
         {shareState === "deleted" && <p role="status" className="mt-3 inline-flex items-center gap-1 text-xs font-black text-green-800"><Check className="h-4 w-4" />{shareCopy.deleted}</p>}
         {shortShare && <button type="button" onClick={() => void deleteShortShare()} className="mt-3 min-h-11 rounded-full px-4 text-xs font-black text-red-700 underline underline-offset-4">{shareCopy.delete}</button>}
       </section>
-      <SymbolicGroupSnapshotPanel
-        initial={[
-          { label: a.name.trim() || copy.me, profile: result.a },
-          { label: receivedProfile ? copy.friend : b.name.trim() || copy.friend, profile: result.b },
-        ]}
-        locale={lang}
-      />
+      <a href={`/${lang}/profile/circle/`} className="mx-auto mt-5 flex min-h-12 max-w-md items-center justify-center rounded-2xl border border-lime-300 bg-lime-50 text-sm font-black text-green-900">우리 원에서 더 부르기 →</a>
       <button type="button" onClick={() => setResult(null)} className="mx-auto mt-7 flex min-h-12 items-center gap-2 rounded-full border border-green-700 px-6 text-sm font-black text-green-800"><RotateCcw className="h-4 w-4" />{copy.reset}</button>
     </main>;
   }
