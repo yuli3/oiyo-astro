@@ -813,7 +813,7 @@ export const CAREERS: Career[] = [
       },
       {
         activity: {
-          zh: "トレンドリサーチ",
+          zh: "趋势研究",
           en: "Trend Research",
           es: "Investigación de tendencias",
           fr: "Recherche de tendances",
@@ -2011,7 +2011,7 @@ export const CAREERS: Career[] = [
       ],
       pros: [
         {
-          zh: "高影响のケア",
+          zh: "高影响力的护理",
           en: "High impact care",
           es: "Atención de alto impacto",
           fr: "Soins à fort impact",
@@ -13677,7 +13677,7 @@ export const CAREERS: Career[] = [
     guidance: {
       commonBarriers: [
         {
-          zh: "トレンドの変化が早い",
+          zh: "趋势变化快",
           en: "Trends change fast",
           es: "Tendencias cambian rápido",
           fr: "Les tendances changent vite",
@@ -14352,7 +14352,7 @@ export const CAREERS: Career[] = [
     mbtiTrends: ["ISTJ", "ESTJ", "ISTP"],
     outlook: {
       description: {
-        zh: "接続は不可欠。",
+        zh: "连接性必不可少。",
         en: "Connectivity essential.",
         es: "Conectividad esencial.",
         fr: "Connectivité essentielle.",
@@ -49239,7 +49239,7 @@ export const CAREERS: Career[] = [
         },
       ],
       timeToEntry: {
-        zh: "3-6개월",
+        zh: "3-6个月",
         en: "3-6 months",
         es: "3-6 meses",
         fr: "3-6 mois",
@@ -49445,7 +49445,7 @@ export const CAREERS: Career[] = [
         },
       ],
       timeToEntry: {
-        zh: "4년",
+        zh: "4年",
         en: "4 years",
         es: "4 años",
         fr: "4 ans",
@@ -50138,7 +50138,7 @@ export const CAREERS: Career[] = [
     tradeoffs: {
       cons: [
         {
-          zh: "立ち仕事",
+          zh: "站立工作",
           en: "Standing",
           es: "De pie",
           fr: "Debout",
@@ -50269,7 +50269,7 @@ export const CAREERS: Career[] = [
         },
       ],
       timeToEntry: {
-        zh: "1-2년",
+        zh: "1-2年",
         en: "1-2 years",
         es: "1-2 años",
         fr: "1-2 ans",
@@ -55015,7 +55015,7 @@ export const CAREERS: Career[] = [
         },
       ],
       timeToEntry: {
-        zh: "3-6년",
+        zh: "3-6年",
         en: "3-6 years",
         es: "3-6 años",
         fr: "3-6 ans",
