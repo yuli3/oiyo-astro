@@ -16,8 +16,14 @@ export interface OntologySystem {
   requires: Requires;
   /** test-results kind or testId to detect completion (lane 'test'). */
   testId?: string;
-  /** ontology tool/route to open (locale-prefixed at render). */
-  href: (l: Locale) => string;
+  /**
+   * Ontology tool/route to open (locale-prefixed at render). Omit it when no
+   * such route exists yet: four cards used to point at /ontology itself, so
+   * clicking them reloaded the page the user was already on. A card with
+   * nowhere to go now renders as an unclickable "planned" row instead, and is
+   * left out of the completion denominator.
+   */
+  href?: (l: Locale) => string;
   /** wiki definition slug for the explanation bridge (P1-C / Lever 4). */
   wikiSlug?: string;
   name: Record<Locale, string>;
@@ -33,12 +39,12 @@ const INNATE: OntologySystem[] = [
   { id: 'astrology', lane: 'innate', emoji: '♈', requires: 'birthDate', href: (l) => `/${l}/zodiac/personality`, wikiSlug: 'meaning-of-astrology', name: L('서양 점성술', 'Western Astrology', '西洋占星術', '西方占星', 'Astrologie occidentale', 'Astrología occidental') },
   { id: 'natal', lane: 'innate', emoji: '🌌', requires: 'birthTime', href: (l) => `/${l}/natal/chart`, wikiSlug: 'meaning-of-astrology', name: L('출생 차트', 'Natal Chart', '出生図', '出生星盘', 'Thème natal', 'Carta natal') },
   { id: 'chinese-zodiac', lane: 'innate', emoji: '🐉', requires: 'birthDate', href: (l) => `/${l}/chinese-zodiac`, wikiSlug: 'meaning-of-chinese-zodiac-dragon', name: L('띠(십이지)', 'Chinese Zodiac', '干支・十二支', '生肖', 'Zodiaque chinois', 'Zodíaco chino') },
-  { id: 'ziwei', lane: 'innate', emoji: '⭐', requires: 'birthTime', href: (l) => `/${l}/ontology`, name: L('자미두수', 'Zi Wei Dou Shu', '紫微斗数', '紫微斗数', 'Zi Wei Dou Shu', 'Zi Wei Dou Shu') },
+  { id: 'ziwei', lane: 'innate', emoji: '⭐', requires: 'birthTime', name: L('자미두수', 'Zi Wei Dou Shu', '紫微斗数', '紫微斗数', 'Zi Wei Dou Shu', 'Zi Wei Dou Shu') },
   { id: 'numerology', lane: 'innate', emoji: '🔢', requires: 'birthDate', href: (l) => `/${l}/numerology/calculator`, wikiSlug: 'meaning-of-numerology', name: L('수비학', 'Numerology', '数秘術', '数字命理', 'Numérologie', 'Numerología') },
-  { id: 'mayan', lane: 'innate', emoji: '🗿', requires: 'birthDate', href: (l) => `/${l}/ontology`, name: L('마야 달력', 'Mayan (Tzolkin)', 'マヤ暦', '玛雅历', 'Maya (Tzolkin)', 'Maya (Tzolkin)') },
-  { id: 'celtic', lane: 'innate', emoji: '🌲', requires: 'birthDate', href: (l) => `/${l}/ontology`, name: L('켈트 나무점', 'Celtic Tree', 'ケルト樹木', '凯尔特树历', 'Arbre celtique', 'Árbol celta') },
+  { id: 'mayan', lane: 'innate', emoji: '🗿', requires: 'birthDate', name: L('마야 달력', 'Mayan (Tzolkin)', 'マヤ暦', '玛雅历', 'Maya (Tzolkin)', 'Maya (Tzolkin)') },
+  { id: 'celtic', lane: 'innate', emoji: '🌲', requires: 'birthDate', name: L('켈트 나무점', 'Celtic Tree', 'ケルト樹木', '凯尔特树历', 'Arbre celtique', 'Árbol celta') },
   { id: 'biorhythm', lane: 'innate', emoji: '📈', requires: 'birthDate', href: (l) => `/${l}/today`, name: L('바이오리듬', 'Biorhythm', 'バイオリズム', '生物节律', 'Biorythme', 'Biorritmo') },
-  { id: 'onomancy', lane: 'innate', emoji: '✍️', requires: 'name', href: (l) => `/${l}/ontology`, name: L('성명학(이름)', 'Name (Onomancy)', '姓名判断', '姓名学', 'Onomancie (nom)', 'Onomancia (nombre)') },
+  { id: 'onomancy', lane: 'innate', emoji: '✍️', requires: 'name', name: L('성명학(이름)', 'Name (Onomancy)', '姓名判断', '姓名学', 'Onomancie (nom)', 'Onomancia (nombre)') },
   { id: 'blood-type', lane: 'innate', emoji: '🩸', requires: 'bloodType', href: (l) => `/${l}/blood-type`, wikiSlug: 'meaning-of-blood-type-a', name: L('혈액형', 'Blood Type', '血液型', '血型', 'Groupe sanguin', 'Grupo sanguíneo') },
   { id: 'palmistry', lane: 'innate', emoji: '🖐️', requires: 'none', href: (l) => `/${l}/palmistry/explore`, wikiSlug: 'meaning-of-palmistry', name: L('손금·관상', 'Palmistry', '手相', '手相', 'Chiromancie', 'Quiromancia') },
   { id: 'tarot', lane: 'innate', emoji: '🃏', requires: 'none', href: (l) => `/${l}/tarot/reading`, wikiSlug: 'meaning-of-tarot', name: L('타로', 'Tarot', 'タロット', '塔罗', 'Tarot', 'Tarot') },

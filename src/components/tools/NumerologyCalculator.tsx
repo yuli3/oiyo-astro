@@ -41,9 +41,25 @@ function calcLifePath(dateStr: string): number {
   return reduceToDigit(reduceToDigit(m) + reduceToDigit(day) + reduceToDigit(y));
 }
 
+/**
+ * The Pythagorean map above only covers a-z, so a name written in Hangul,
+ * kana or Hanzi reduces to an empty string. That used to flow through as 0,
+ * and MEANINGS[0] does not exist, so three of the four result cards returned
+ * null and simply vanished with no explanation. Callers now check this first
+ * and say so instead.
+ *
+ * Deliberately NOT romanising automatically: Korean has competing systems
+ * (Revised Romanization vs. the spelling on a passport), and picking one
+ * silently would hand back a confidently wrong number, which is worse than
+ * the missing cards it replaces.
+ */
+function latinLetters(name: string): string {
+  return name.toLowerCase().replace(/[^a-z]/g, "");
+}
+
 /** Expression = sum of all letters in full name */
 function calcExpression(name: string): number {
-  const n = name.toLowerCase().replace(/[^a-z]/g, "");
+  const n = latinLetters(name);
   return reduceToDigit(digitSum(n.split("").map((c) => String(LETTER_MAP[c] || 0)).join("")));
 }
 
@@ -78,6 +94,7 @@ const UI: Record<Locale, {
   meaningLabel: string;
   challengeLabel: string;
   giftLabel: string;
+  latinRequired: string;
 }> = {
   ko: {
     title: "수비학 계산기",
@@ -96,6 +113,7 @@ const UI: Record<Locale, {
     meaningLabel: "의미",
     challengeLabel: "과제",
     giftLabel: "재능",
+    latinRequired: "표현수·영혼수·성격수는 로마자 표기로 계산합니다. 이름을 영문으로 입력하면 함께 보여드릴게요. 생명수는 생년월일만으로 계산되어 아래에 그대로 나옵니다.",
   },
   en: {
     title: "Numerology Calculator",
@@ -114,6 +132,7 @@ const UI: Record<Locale, {
     meaningLabel: "Meaning",
     challengeLabel: "Challenge",
     giftLabel: "Gift",
+    latinRequired: "Expression, Soul Urge, and Personality are calculated from Latin letters. Enter your name in Latin script to see them. Life Path comes from your birth date alone and is shown below.",
   },
   ja: {
     title: "数秘術計算機",
@@ -132,6 +151,7 @@ const UI: Record<Locale, {
     meaningLabel: "意味",
     challengeLabel: "課題",
     giftLabel: "才能",
+    latinRequired: "表現数・魂の数・個性数はローマ字表記から計算します。お名前をローマ字で入力すると表示されます。ライフパスは生年月日だけで計算されるため、下にそのまま表示されます。",
   },
   fr: {
     title: "Calculateur de Numérologie",
@@ -150,6 +170,7 @@ const UI: Record<Locale, {
     meaningLabel: "Signification",
     challengeLabel: "Défi",
     giftLabel: "Don",
+    latinRequired: "Les nombres d'Expression, d'Âme et de Personnalité se calculent à partir de l'alphabet latin. Saisissez votre nom en caractères latins pour les afficher. Le Chemin de Vie ne dépend que de la date de naissance et reste affiché ci-dessous.",
   },
   es: {
     title: "Calculadora de Numerología",
@@ -168,6 +189,7 @@ const UI: Record<Locale, {
     meaningLabel: "Significado",
     challengeLabel: "Desafío",
     giftLabel: "Don",
+    latinRequired: "Los números de Expresión, Deseo del Alma y Personalidad se calculan con el alfabeto latino. Escribe tu nombre en caracteres latinos para verlos. El Camino de Vida solo depende de la fecha de nacimiento y aparece abajo.",
   },
   cn: {
     title: "數字命理計算機",
@@ -186,6 +208,7 @@ const UI: Record<Locale, {
     meaningLabel: "含義",
     challengeLabel: "挑戰",
     giftLabel: "天賦",
+    latinRequired: "表達數、靈魂衝動數與個性數以拉丁字母計算。請以英文拼寫輸入姓名即可顯示。生命靈數僅依出生日期計算，仍會顯示於下方。",
   },
   zh: {
     title: "数字命理计算器",
@@ -204,6 +227,7 @@ const UI: Record<Locale, {
     meaningLabel: "含义",
     challengeLabel: "挑战",
     giftLabel: "天赋",
+    latinRequired: "表达数、灵魂冲动数与个性数以拉丁字母计算。请用英文拼写输入姓名即可显示。生命灵数仅依出生日期计算，仍会显示在下方。",
   },
 };
 
@@ -750,9 +774,10 @@ export default function NumerologyCalculator({ locale }: Props) {
   const [date, setDate] = useState("");
   const [result, setResult] = useState<{
     lifePath: number;
-    expression: number;
-    soulUrge: number;
-    personality: number;
+    // null when the name carries no Latin letters — see latinLetters().
+    expression: null | number;
+    soulUrge: null | number;
+    personality: null | number;
   } | null>(null);
   const ui = UI[locale];
 
@@ -760,7 +785,7 @@ export default function NumerologyCalculator({ locale }: Props) {
   const { profile, parsed, saveBirth, setProfile } = useProfilePrefill();
   useEffect(() => {
     if (parsed) setDate((d) => d || `${parsed.year}-${String(parsed.month).padStart(2, "0")}-${String(parsed.day).padStart(2, "0")}`);
-    if (profile.name) setName((n) => n || profile.name!);
+    if (profile.name && latinLetters(profile.name)) setName((n) => n || profile.name!);
   }, [parsed, profile.name]);
 
   function calculate() {
@@ -771,11 +796,12 @@ export default function NumerologyCalculator({ locale }: Props) {
       saveBirth({ year: yy, month: mm, day: dd });
     }
     if (name.trim()) setProfile({ name: name.trim() });
+    const hasLetters = latinLetters(name).length > 0;
     setResult({
       lifePath: calcLifePath(date),
-      expression: calcExpression(name),
-      soulUrge: calcSoulUrge(name),
-      personality: calcPersonality(name),
+      expression: hasLetters ? calcExpression(name) : null,
+      soulUrge: hasLetters ? calcSoulUrge(name) : null,
+      personality: hasLetters ? calcPersonality(name) : null,
     });
   }
 
@@ -825,6 +851,12 @@ export default function NumerologyCalculator({ locale }: Props) {
             locale={locale}
             isMaster={MASTER.has(result.lifePath)}
           />
+          {result.expression === null && (
+            <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-relaxed text-amber-900 [word-break:keep-all]">
+              {ui.latinRequired}
+            </p>
+          )}
+          {result.expression !== null && (
           <NumberCard
             label={ui.expressionLabel}
             number={result.expression}
@@ -832,6 +864,8 @@ export default function NumerologyCalculator({ locale }: Props) {
             locale={locale}
             isMaster={MASTER.has(result.expression)}
           />
+          )}
+          {result.soulUrge !== null && (
           <NumberCard
             label={ui.soulUrgeLabel}
             number={result.soulUrge}
@@ -839,6 +873,8 @@ export default function NumerologyCalculator({ locale }: Props) {
             locale={locale}
             isMaster={MASTER.has(result.soulUrge)}
           />
+          )}
+          {result.personality !== null && (
           <NumberCard
             label={ui.personalityLabel}
             number={result.personality}
@@ -846,6 +882,7 @@ export default function NumerologyCalculator({ locale }: Props) {
             locale={locale}
             isMaster={MASTER.has(result.personality)}
           />
+          )}
         </div>
       )}
     </div>

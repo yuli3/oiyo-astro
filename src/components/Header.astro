@@ -14,6 +14,13 @@ const LOCALE_PREFIX = /^\/(?:en|ko|ja|zh|fr|es)(?=\/|$)/;
 const isLocalized = LOCALE_PREFIX.test(Astro.url.pathname);
 // Locale-less pages (e.g. /knowledge) have no per-locale equivalent → switch to locale home.
 const currentPath = isLocalized ? Astro.url.pathname.replace(LOCALE_PREFIX, '') || '/' : '/';
+
+// NAV_AT_EVERY_WIDTH — why the menu button and nav panel below carry no
+// md:hidden. The product's design rules make mobile-only a constitution and
+// forbid a desktop-only navigation, so this one menu is the nav at every
+// width. Until 2026-08-18 both the button and the panel were hidden from md
+// up, which left desktop visitors with no links in the header at all.
+// (Frontmatter, not an HTML comment: Astro ships HTML comments to every page.)
 ---
 
 <header class="sticky top-0 z-50 border-b border-border bg-background">
@@ -56,16 +63,22 @@ const currentPath = isLocalized ? Astro.url.pathname.replace(LOCALE_PREFIX, '') 
       </div>
     </div>
 
-    <!-- Mobile menu button -->
-    <button id="mobile-menu-btn" class="rounded-lg p-2 text-primary hover:bg-primary/5 md:hidden" aria-label="Open menu">
+    <!-- Menu button (see NAV_AT_EVERY_WIDTH above) -->
+    <button
+      id="mobile-menu-btn"
+      class="rounded-lg p-2 text-primary hover:bg-primary/5"
+      aria-label="Open menu"
+      aria-controls="mobile-nav"
+      aria-expanded="false"
+    >
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
   </div>
 
-  <!-- Mobile nav -->
-  <div id="mobile-nav" class="hidden border-t border-border bg-background md:hidden">
+  <!-- Nav panel (see NAV_AT_EVERY_WIDTH above) -->
+  <div id="mobile-nav" class="hidden border-t border-border bg-background">
     <nav class="max-w-6xl mx-auto px-4 py-3 flex flex-col gap-1">
       <a href={localePath(locale, '/tests')} class="px-3 py-2.5 rounded-lg text-sm font-medium text-green-700 hover:bg-green-50">
         {{ ko: '테스트', en: 'Tests', ja: 'テスト', zh: '测试', fr: 'Tests', es: 'Tests' }[locale] ?? 'Tests'}
@@ -107,7 +120,8 @@ const currentPath = isLocalized ? Astro.url.pathname.replace(LOCALE_PREFIX, '') 
   });
 
   mobileBtn?.addEventListener('click', () => {
-    mobileNav?.classList.toggle('hidden');
+    const open = mobileNav?.classList.toggle('hidden') === false;
+    mobileBtn.setAttribute('aria-expanded', String(open));
   });
 
   localeLinks?.forEach((link) => {

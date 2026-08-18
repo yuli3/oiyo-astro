@@ -29,16 +29,16 @@ const encyclopediaLabel: Record<Locale, string> = {
 const ui: Record<Locale, {
   eyebrow: string; title: string; sub: string; cta: string; ctaSub: string;
   progress: string; nextStep: string; deepTitle: string; deepSub: string;
-  recorded: string; open: string; locked: string; allTools: string;
+  recorded: string; open: string; locked: string; planned: string; allTools: string;
   orbitTitle: string; orbitSub: string; cardsTitle: string; cardsSub: string;
   exportTitle: string; exportSub: string;
 }> = {
-  ko: { eyebrow: '존재론 · 나의 지도', title: '나를 하나로 줄이지 않는 존재 지도', sub: '타고난 것 · 테스트로 드러난 것 · 내가 고른 것을 한곳에서. 모든 기록은 이 브라우저에만 저장됩니다.', cta: '내 프로필 정리하기', ctaSub: '생년월일부터 시작해 좌표를 채워가세요', progress: '완성도', nextStep: '다음 한 걸음', deepTitle: '심화 탐색 — 모든 좌표를 한 화면에서', deepSub: '사주·자미두수·바이오리듬 등 모든 엔진을 겹쳐 읽는 작업대', recorded: '기록됨', open: '해보기', locked: '입력 필요', allTools: 'oiyo의 모든 도구', orbitTitle: '관계 궤도 — 나에서 뻗어나가는 것들', orbitSub: '신호에서 시작해 한 걸음씩 관계를 따라가 보세요', cardsTitle: '당신을 위한 추천', cardsSub: '지금까지 모은 신호를 바탕으로 골라봤어요', exportTitle: '내보내기 — 나의 모든 것을 한 파일로', exportSub: '신호·테스트 기록·추천·관계 스냅샷 전체를 리포트/JSON/CSV/AI용 SOUL.md로' },
-  en: { eyebrow: 'Ontology · your map', title: 'A map of being that never reduces you to one type', sub: 'What you were born with · what tests reveal · what you choose — in one place. Everything stays in this browser only.', cta: 'Organize my profile', ctaSub: 'Start with your birth date and fill in your coordinates', progress: 'Completion', nextStep: 'Next step', deepTitle: 'Deep dive — every coordinate on one canvas', deepSub: 'A workbench layering Saju, Zi Wei, biorhythm and more', recorded: 'Recorded', open: 'Try it', locked: 'Input needed', allTools: 'All oiyo tools', orbitTitle: 'Relation orbit — what radiates from you', orbitSub: 'Start from your signals and follow one connection at a time', cardsTitle: 'Recommended for you', cardsSub: 'Picked from the signals you’ve shared so far', exportTitle: 'Export — everything about you, one file', exportSub: 'Every signal, test record, recommendation, and relationship snapshot as a report / JSON / CSV / AI-ready SOUL.md' },
-  ja: { eyebrow: '存在論 · 私の地図', title: '一つのタイプに縮めない存在地図', sub: '生まれ持ったもの・テストで分かるもの・自分で選ぶものを一つに。すべてこのブラウザだけに保存。', cta: 'プロフィールを整理', ctaSub: '生年月日から座標を埋めていく', progress: '完成度', nextStep: '次の一歩', deepTitle: '深掘り — すべての座標を一画面で', deepSub: '四柱・紫微・バイオリズムなどを重ねる作業台', recorded: '記録済み', open: '試す', locked: '入力必要', allTools: 'oiyoの全ツール', orbitTitle: '関係の軌道 — 私から広がるもの', orbitSub: 'シグナルから始めて、一歩ずつ関係をたどってみましょう', cardsTitle: 'あなたへのおすすめ', cardsSub: 'これまでの信号から選びました', exportTitle: '書き出し — すべてを1つのファイルに', exportSub: '信号・テスト履歴・おすすめ・関係スナップショットをレポート/JSON/CSV/AI用SOUL.mdで' },
-  zh: { eyebrow: '存在论 · 我的地图', title: '不把你缩成单一类型的存在地图', sub: '与生俱来 · 测验揭示 · 你的选择，集于一处。全部只保存在此浏览器。', cta: '整理我的资料', ctaSub: '从出生日期开始填充坐标', progress: '完成度', nextStep: '下一步', deepTitle: '深入 — 所有坐标在一个画面', deepSub: '叠加八字、紫微、生物节律等的工作台', recorded: '已记录', open: '试试', locked: '需输入', allTools: 'oiyo 所有工具', orbitTitle: '关系轨道 — 从我延伸出去的一切', orbitSub: '从你的信号出发，一步步追踪关联', cardsTitle: '为你推荐', cardsSub: '根据你目前的信号挑选', exportTitle: '导出 — 把一切装进一个文件', exportSub: '把信号、测试记录、推荐与关系快照导出为报告/JSON/CSV/AI用 SOUL.md' },
-  fr: { eyebrow: 'Ontologie · votre carte', title: 'Une carte de l’être qui ne vous réduit jamais', sub: 'L’inné · ce que révèlent les tests · ce que vous choisissez — en un lieu. Tout reste dans ce navigateur.', cta: 'Organiser mon profil', ctaSub: 'Commencez par votre date de naissance', progress: 'Progression', nextStep: 'Étape suivante', deepTitle: 'Exploration — toutes les coordonnées sur une toile', deepSub: 'Un atelier superposant Saju, Zi Wei, biorythme et plus', recorded: 'Enregistré', open: 'Essayer', locked: 'Saisie requise', allTools: 'Tous les outils oiyo', orbitTitle: 'Orbite relationnelle — ce qui rayonne de vous', orbitSub: 'Partez de vos signaux et suivez les liens un par un', cardsTitle: 'Recommandé pour vous', cardsSub: 'Choisi à partir des signaux que vous avez partagés', exportTitle: 'Exporter — tout vous, en un seul fichier', exportSub: 'Chaque signal, historique de test, recommandation et aperçu relationnel en rapport / JSON / CSV / SOUL.md pour IA' },
-  es: { eyebrow: 'Ontología · tu mapa', title: 'Un mapa del ser que nunca te reduce', sub: 'Lo innato · lo que revelan los tests · lo que eliges — en un lugar. Todo queda en este navegador.', cta: 'Organizar mi perfil', ctaSub: 'Empieza con tu fecha de nacimiento', progress: 'Progreso', nextStep: 'Siguiente paso', deepTitle: 'Exploración — todas las coordenadas en un lienzo', deepSub: 'Un taller que superpone Saju, Zi Wei, biorritmo y más', recorded: 'Registrado', open: 'Probar', locked: 'Falta dato', allTools: 'Todas las herramientas oiyo', orbitTitle: 'Órbita de relaciones — lo que irradia de ti', orbitSub: 'Parte de tus señales y sigue las conexiones paso a paso', cardsTitle: 'Recomendado para ti', cardsSub: 'Elegido a partir de las señales que compartiste', exportTitle: 'Exportar — todo tú, en un solo archivo', exportSub: 'Cada señal, historial de tests, recomendación y resumen de relaciones como informe / JSON / CSV / SOUL.md para IA' },
+  ko: { eyebrow: '존재론 · 나의 지도', title: '나를 하나로 줄이지 않는 존재 지도', sub: '타고난 것 · 테스트로 드러난 것 · 내가 고른 것을 한곳에서. 모든 기록은 이 브라우저에만 저장됩니다.', cta: '내 프로필 정리하기', ctaSub: '생년월일부터 시작해 좌표를 채워가세요', progress: '완성도', nextStep: '다음 한 걸음', deepTitle: '심화 탐색 — 모든 좌표를 한 화면에서', deepSub: '사주·자미두수·바이오리듬 등 모든 엔진을 겹쳐 읽는 작업대', recorded: '기록됨', open: '해보기', locked: '입력 필요', planned: '준비 중', allTools: 'oiyo의 모든 도구', orbitTitle: '관계 궤도 — 나에서 뻗어나가는 것들', orbitSub: '신호에서 시작해 한 걸음씩 관계를 따라가 보세요', cardsTitle: '당신을 위한 추천', cardsSub: '지금까지 모은 신호를 바탕으로 골라봤어요', exportTitle: '내보내기 — 나의 모든 것을 한 파일로', exportSub: '신호·테스트 기록·추천·관계 스냅샷 전체를 리포트/JSON/CSV로' },
+  en: { eyebrow: 'Ontology · your map', title: 'A map of being that never reduces you to one type', sub: 'What you were born with · what tests reveal · what you choose — in one place. Everything stays in this browser only.', cta: 'Organize my profile', ctaSub: 'Start with your birth date and fill in your coordinates', progress: 'Completion', nextStep: 'Next step', deepTitle: 'Deep dive — every coordinate on one canvas', deepSub: 'A workbench layering Saju, Zi Wei, biorhythm and more', recorded: 'Recorded', open: 'Try it', locked: 'Input needed', planned: 'Planned', allTools: 'All oiyo tools', orbitTitle: 'Relation orbit — what radiates from you', orbitSub: 'Start from your signals and follow one connection at a time', cardsTitle: 'Recommended for you', cardsSub: 'Picked from the signals you’ve shared so far', exportTitle: 'Export — everything about you, one file', exportSub: 'Every signal, test record, recommendation, and relationship snapshot as a report / JSON / CSV' },
+  ja: { eyebrow: '存在論 · 私の地図', title: '一つのタイプに縮めない存在地図', sub: '生まれ持ったもの・テストで分かるもの・自分で選ぶものを一つに。すべてこのブラウザだけに保存。', cta: 'プロフィールを整理', ctaSub: '生年月日から座標を埋めていく', progress: '完成度', nextStep: '次の一歩', deepTitle: '深掘り — すべての座標を一画面で', deepSub: '四柱・紫微・バイオリズムなどを重ねる作業台', recorded: '記録済み', open: '試す', locked: '入力必要', planned: '準備中', allTools: 'oiyoの全ツール', orbitTitle: '関係の軌道 — 私から広がるもの', orbitSub: 'シグナルから始めて、一歩ずつ関係をたどってみましょう', cardsTitle: 'あなたへのおすすめ', cardsSub: 'これまでの信号から選びました', exportTitle: '書き出し — すべてを1つのファイルに', exportSub: '信号・テスト履歴・おすすめ・関係スナップショットをレポート/JSON/CSVで' },
+  zh: { eyebrow: '存在论 · 我的地图', title: '不把你缩成单一类型的存在地图', sub: '与生俱来 · 测验揭示 · 你的选择，集于一处。全部只保存在此浏览器。', cta: '整理我的资料', ctaSub: '从出生日期开始填充坐标', progress: '完成度', nextStep: '下一步', deepTitle: '深入 — 所有坐标在一个画面', deepSub: '叠加八字、紫微、生物节律等的工作台', recorded: '已记录', open: '试试', locked: '需输入', planned: '筹备中', allTools: 'oiyo 所有工具', orbitTitle: '关系轨道 — 从我延伸出去的一切', orbitSub: '从你的信号出发，一步步追踪关联', cardsTitle: '为你推荐', cardsSub: '根据你目前的信号挑选', exportTitle: '导出 — 把一切装进一个文件', exportSub: '把信号、测试记录、推荐与关系快照导出为报告/JSON/CSV' },
+  fr: { eyebrow: 'Ontologie · votre carte', title: 'Une carte de l’être qui ne vous réduit jamais', sub: 'L’inné · ce que révèlent les tests · ce que vous choisissez — en un lieu. Tout reste dans ce navigateur.', cta: 'Organiser mon profil', ctaSub: 'Commencez par votre date de naissance', progress: 'Progression', nextStep: 'Étape suivante', deepTitle: 'Exploration — toutes les coordonnées sur une toile', deepSub: 'Un atelier superposant Saju, Zi Wei, biorythme et plus', recorded: 'Enregistré', open: 'Essayer', locked: 'Saisie requise', planned: 'À venir', allTools: 'Tous les outils oiyo', orbitTitle: 'Orbite relationnelle — ce qui rayonne de vous', orbitSub: 'Partez de vos signaux et suivez les liens un par un', cardsTitle: 'Recommandé pour vous', cardsSub: 'Choisi à partir des signaux que vous avez partagés', exportTitle: 'Exporter — tout vous, en un seul fichier', exportSub: 'Chaque signal, historique de test, recommandation et aperçu relationnel en rapport / JSON / CSV' },
+  es: { eyebrow: 'Ontología · tu mapa', title: 'Un mapa del ser que nunca te reduce', sub: 'Lo innato · lo que revelan los tests · lo que eliges — en un lugar. Todo queda en este navegador.', cta: 'Organizar mi perfil', ctaSub: 'Empieza con tu fecha de nacimiento', progress: 'Progreso', nextStep: 'Siguiente paso', deepTitle: 'Exploración — todas las coordenadas en un lienzo', deepSub: 'Un taller que superpone Saju, Zi Wei, biorritmo y más', recorded: 'Registrado', open: 'Probar', locked: 'Falta dato', planned: 'En preparación', allTools: 'Todas las herramientas oiyo', orbitTitle: 'Órbita de relaciones — lo que irradia de ti', orbitSub: 'Parte de tus señales y sigue las conexiones paso a paso', cardsTitle: 'Recomendado para ti', cardsSub: 'Elegido a partir de las señales que compartiste', exportTitle: 'Exportar — todo tú, en un solo archivo', exportSub: 'Cada señal, historial de tests, recomendación y resumen de relaciones como informe / JSON / CSV' },
 };
 const u = ui[locale] ?? ui.en;
 const innate = laneOf('innate');
@@ -103,15 +103,26 @@ const visibleLanes = [
         <ul class="divide-y divide-green-50 overflow-hidden rounded-2xl border border-green-100 bg-white">
           {group.items.map((s) => (
             <li data-sys={s.id} data-req={s.requires} data-testid={s.testId ?? ''}
-                data-open={u.open} data-recorded={u.recorded} data-locked={u.locked}
+                data-planned={s.href ? '' : '1'}
+                data-open={u.open} data-recorded={u.recorded} data-locked={u.locked} data-planned-label={u.planned}
                 class="flex items-center gap-3 px-3 py-2.5 transition-colors hover:bg-green-50/50">
-              <a href={s.href(locale)} class="group flex min-w-0 flex-1 items-center gap-3">
-                <span class="text-xl" aria-hidden="true">{s.emoji}</span>
-                <span class="min-w-0">
-                  <span class="block truncate text-sm font-black text-green-950 group-hover:text-green-700">{s.name[locale]}</span>
-                  <span data-status class="text-[10px] font-black text-green-500">{u.open}</span>
+              {s.href ? (
+                <a href={s.href(locale)} class="group flex min-w-0 flex-1 items-center gap-3">
+                  <span class="text-xl" aria-hidden="true">{s.emoji}</span>
+                  <span class="min-w-0">
+                    <span data-title class="block truncate text-sm font-black text-green-950 group-hover:text-green-700">{s.name[locale]}</span>
+                    <span data-status class="text-[10px] font-black text-green-500">{u.open}</span>
+                  </span>
+                </a>
+              ) : (
+                <span class="flex min-w-0 flex-1 items-center gap-3">
+                  <span class="text-xl" aria-hidden="true">{s.emoji}</span>
+                  <span class="min-w-0">
+                    <span data-title class="block truncate text-sm font-black text-green-950">{s.name[locale]}</span>
+                    <span data-status class="text-[10px] font-black text-green-500">{u.planned}</span>
+                  </span>
                 </span>
-              </a>
+              )}
               <span class="shrink-0">
                 {s.wikiSlug ? <WikiDefinitionLink slug={s.wikiSlug} locale={locale} compact /> : <span class="text-green-300" aria-hidden="true">›</span>}
               </span>
@@ -195,9 +206,20 @@ const visibleLanes = [
           ...(Array.isArray(assessments) ? assessments.map((r) => r && r.assessmentId).filter(Boolean) : []),
         ]);
         const cards = Array.from(document.querySelectorAll('[data-sys]'));
+        // Two kinds of card can never be "recorded" from stored signals, so
+        // counting them made completion top out below 100%: cards with no
+        // route yet (data-planned) and always-available tools (requires
+        // 'none', e.g. palmistry/tarot). Both are shown, neither is counted.
+        const counted = cards.filter((c) => !c.getAttribute('data-planned') && c.getAttribute('data-req') !== 'none');
         let recorded = 0, firstOpen = null;
         cards.forEach((card) => {
           const req = card.getAttribute('data-req');
+          if (card.getAttribute('data-planned')) {
+            const ps = card.querySelector('[data-status]');
+            if (ps) ps.textContent = card.getAttribute('data-planned-label');
+            card.classList.add('opacity-60');
+            return;
+          }
           const testId = card.getAttribute('data-testid');
           const status = card.querySelector('[data-status]');
           let state = 'open';
@@ -220,12 +242,12 @@ const visibleLanes = [
         const chosenCount = profile && profile.chosen
           ? Object.values(profile.chosen).reduce((a, c) => a + (Array.isArray(c) ? c.length : 0), 0) : 0;
         const chosenRecorded = chosenCount > 0 ? 1 : 0;
-        const total = (cards.length || 1) + 1; // +1 for the mindmap lane
+        const total = (counted.length || 1) + 1; // +1 for the mindmap lane
         const pct = Math.round(((recorded + chosenRecorded) / total) * 100);
         const bar = document.getElementById('ont-bar'); if (bar) bar.style.width = pct + '%';
         const pe = document.getElementById('ont-pct'); if (pe) pe.textContent = pct + '%';
         const nx = document.getElementById('ont-next');
-        if (nx && firstOpen) { const h = firstOpen.querySelector('h3'); nx.textContent = '→ ' + (h ? h.textContent : ''); }
+        if (nx && firstOpen) { const h = firstOpen.querySelector('[data-title]'); nx.textContent = h ? '→ ' + h.textContent.trim() : ''; }
         else if (nx) nx.textContent = '';
       };
       apply();
