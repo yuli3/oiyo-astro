@@ -955,7 +955,8 @@ function dimPct(a: number, b: number) {
 interface Props { locale?: string }
 
 export default function MbtiLoveTest({ locale = 'ko' }: Props) {
-  const lang = (['ko', 'en', 'ja'].includes(locale) ? locale : 'ko') as Locale
+  // 없는 로케일은 en 으로 (ko 로 떨어뜨리면 타 로케일에 한국어가 노출된다)
+  const lang = (['ko', 'en', 'ja'].includes(locale) ? locale : 'en') as Locale
   const t = LABELS[lang]
   const questions = QUESTIONS[lang]
 

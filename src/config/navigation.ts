@@ -54,7 +54,7 @@ const COLOR_MAP: Record<string, string> = {
   slate: "#64748B",
   stone: "#78716C",
   teal: "#14B8A6",
-  violet: "#8B5CF6",
+  violet: "#5B915F",
   yellow: "#EAB308",
   zinc: "#71717A",
 };
@@ -98,7 +98,7 @@ export const MOBILE_NAV_ITEMS: MobileNavItem[] = [
     translationKey: "saju", // Keep translation key if 'Destiny' is desired, or change to 'ontology'
   },
   {
-    color: getColor(resonance?.color) || "#8B5CF6",
+    color: getColor(resonance?.color) || "#5B915F",
     featureId: resonance?.id,
     href: resonance?.path || "/resonance",
     icon: "Waves",

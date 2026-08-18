@@ -3,7 +3,7 @@ import type { FeatureManifest } from "@/types/manifest";
 
 export const ontologyManifest: FeatureManifest = {
   category: ["ontology"],
-  color: "#8b5cf6",
+  color: "#607329",
   description: {
     zh: "命运与身份的最终融合。宏大的统一报告。",
     en: "The ultimate synthesis of your destiny and ontology. A grand unified report.",

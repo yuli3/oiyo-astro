@@ -1062,7 +1062,9 @@ function dimPct(a: number, b: number): number {
 interface Props { locale?: string }
 
 export default function MbtiCareerTest({ locale: localeProp = 'ko' }: Props) {
-  const locale: Locale = (['ko', 'en', 'ja'].includes(localeProp) ? localeProp : 'ko') as Locale
+  // zh/fr/es 카피가 아직 없다. 없는 로케일은 en 으로 떨어뜨린다 —
+  // 'ko' 로 떨어뜨리면 중국어·프랑스어·스페인어 사용자에게 한국어가 그대로 나간다.
+  const locale: Locale = (['ko', 'en', 'ja'].includes(localeProp) ? localeProp : 'en') as Locale
   const lb = LABELS[locale]
   const questions = QUESTIONS[locale]
 

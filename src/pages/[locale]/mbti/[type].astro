@@ -5,6 +5,7 @@ import { LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import { MBTI_DEEP_DATA, COGNITIVE_FUNCTIONS } from '../../../lib/engines/interpretation/shards/mbti-deep-shards';
 import { TYPE_PROFILES } from '../../../components/tests/MbtiPersonalityTest';
+import { MBTI_LIFE_KO } from '../../../lib/engines/interpretation/shards/mbti-life-ko';
 import type { SixLangString } from '../../../lib/engines/interpretation/engine.contract';
 
 const COGNITIVE_STACK_BY_TYPE: Record<string, [string, string, string, string]> = {
@@ -33,6 +34,11 @@ const { locale, type } = Astro.props as { locale: Locale; type: string };
 const data = MBTI_DEEP_DATA[type as keyof typeof MBTI_DEEP_DATA];
 const profile = TYPE_PROFILES[type as keyof typeof TYPE_PROFILES];
 const stack = COGNITIVE_STACK_BY_TYPE[type];
+
+// 직업 적성·관계 해설은 한국어 원문만 존재한다(wiki 48편 흡수, 기계번역 안 함).
+// locale 이 ko 가 아니면 undefined 라 아래 두 섹션이 통째로 렌더되지 않는다 —
+// 이 가드를 지우면 전 로케일에 한국어가 노출된다.
+const lifeKo = locale === 'ko' ? MBTI_LIFE_KO[type] : undefined;
 
 function t(s: SixLangString): string {
   return s[locale] ?? s.en;
@@ -238,6 +244,78 @@ const breadcrumbJsonLd = {
       <h2 class="text-xl font-bold text-green-950">{c.lifeTitle}</h2>
       <p class="mt-4 leading-8 text-green-800">{t(data.lifeImplications)}</p>
     </section>
+
+    {lifeKo && (
+      <section class="mt-10">
+        <h2 class="text-xl font-bold text-green-950">직업 적성</h2>
+        <dl class="mt-4 grid gap-2 rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm">
+          <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">대표 직군</dt><dd class="text-green-800">{lifeKo.career.keywords}</dd></div>
+          <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">살아나는 환경</dt><dd class="text-green-800">{lifeKo.career.thrives}</dd></div>
+          <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">시드는 환경</dt><dd class="text-green-800">{lifeKo.career.wilts}</dd></div>
+        </dl>
+        <h3 class="mt-6 font-semibold text-green-950">강점이 살아나는 직군</h3>
+        <ul class="mt-3 space-y-2">
+          {lifeKo.career.roles.map((r) => (
+            <li class="text-sm leading-6 text-green-800"><strong class="font-semibold text-green-950">{r.name}</strong> — {r.desc}</li>
+          ))}
+        </ul>
+        <h3 class="mt-6 font-semibold text-green-950">피해야 할 환경</h3>
+        {lifeKo.career.avoid.map((p) => <p class="mt-3 text-sm leading-7 text-green-800">{p}</p>)}
+        <h3 class="mt-6 font-semibold text-green-950">커리어 성장 팁</h3>
+        <p class="mt-3 text-sm leading-7 text-green-800">{lifeKo.career.growth}</p>
+      </section>
+    )}
+
+    {lifeKo && (
+      <section class="mt-10">
+        <h2 class="text-xl font-bold text-green-950">관계와 연애</h2>
+        <dl class="mt-4 grid gap-2 rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm">
+          <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">사랑의 언어</dt><dd class="text-green-800">{lifeKo.relationship.loveLanguage}</dd></div>
+          <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">설레는 순간</dt><dd class="text-green-800">{lifeKo.relationship.spark}</dd></div>
+          <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">식는 순간</dt><dd class="text-green-800">{lifeKo.relationship.cool}</dd></div>
+        </dl>
+        <h3 class="mt-6 font-semibold text-green-950">사랑할 때의 모습</h3>
+        {lifeKo.relationship.loveStyle.map((p) => <p class="mt-3 text-sm leading-7 text-green-800">{p}</p>)}
+        <h3 class="mt-6 font-semibold text-green-950">편안하다고 자주 언급되는 유형</h3>
+        <ul class="mt-3 space-y-2">
+          {lifeKo.relationship.matches.map((r) => (
+            <li class="text-sm leading-6 text-green-800"><strong class="font-semibold text-green-950">{r.name}</strong> — {r.desc}</li>
+          ))}
+        </ul>
+        <p class="mt-3 text-xs leading-6 text-green-600">고정된 궁합표는 없습니다. 같은 유형끼리도 잘 맞을 수 있고, 목록에 없는 조합도 좋은 관계를 만듭니다.</p>
+        <h3 class="mt-6 font-semibold text-green-950">부딪히기 쉬운 지점</h3>
+        {lifeKo.relationship.friction.map((p) => <p class="mt-3 text-sm leading-7 text-green-800">{p}</p>)}
+        <h3 class="mt-6 font-semibold text-green-950">관계를 오래 가게 하는 실천</h3>
+        <ul class="mt-3 space-y-2">
+          {lifeKo.relationship.tips.map((x) => (
+            <li class="flex gap-2 text-sm leading-6 text-green-800"><span class="text-green-500" aria-hidden="true">·</span><span>{x}</span></li>
+          ))}
+        </ul>
+      </section>
+    )}
+
+    {lifeKo && (
+      <section class="mt-10">
+        <h2 class="text-xl font-bold text-green-950">공부법</h2>
+        <dl class="mt-4 grid gap-2 rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm">
+          <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">맞는 리듬</dt><dd class="text-green-800">{lifeKo.study.rhythm}</dd></div>
+          <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">집중을 돕는 것</dt><dd class="text-green-800">{lifeKo.study.helps}</dd></div>
+          <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">피해야 할 방식</dt><dd class="text-green-800">{lifeKo.study.avoid}</dd></div>
+        </dl>
+        {lifeKo.study.focus.map((p) => <p class="mt-3 text-sm leading-7 text-green-800">{p}</p>)}
+        <h3 class="mt-6 font-semibold text-green-950">추천 학습 루틴</h3>
+        <ol class="mt-3 space-y-2">
+          {lifeKo.study.steps.map((x, i) => (
+            <li class="flex gap-3 text-sm leading-6 text-green-800">
+              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-800 text-[11px] font-bold text-white">{i + 1}</span>
+              <span><strong class="font-semibold text-green-950">{x.name}</strong> — {x.desc}</span>
+            </li>
+          ))}
+        </ol>
+        <h3 class="mt-6 font-semibold text-green-950">피해야 할 학습 함정</h3>
+        {lifeKo.study.traps.map((p) => <p class="mt-3 text-sm leading-7 text-green-800">{p}</p>)}
+      </section>
+    )}
 
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
 

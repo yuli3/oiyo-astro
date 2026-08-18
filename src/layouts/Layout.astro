@@ -199,7 +199,7 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
       {testSourceNote && <TestSourceNote locale={locale} note={testSourceNote} />}
     </main>
     <Footer locale={locale} />
-    <AhoxyWelcome />
+    <AhoxyWelcome locale={locale} />
     <script>
       import { removeStoredTestInputs } from '../lib/user/test-results';
       removeStoredTestInputs('political-compass');
