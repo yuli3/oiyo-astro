@@ -274,6 +274,33 @@ const countryMatchManifest: FeatureManifest = {
   },
 };
 
+const reincarnationCountryManifest: FeatureManifest = {
+  badge: "new",
+  category: ["ontology"],
+  color: "#059669",
+  domain: "ontology",
+  icon: "Globe",
+  id: "reincarnation-country",
+  path: "/reincarnation-country",
+  status: "production",
+  name: {
+    zh: "如果再出生会在哪国",
+    en: "If you were born again",
+    es: "Si nacieras de nuevo",
+    fr: "Si vous renaissiez",
+    ja: "生まれ変わるとしたら",
+    ko: "다시 태어난다면 어느 나라",
+  },
+  description: {
+    zh: "按当前新生儿或当前人口加权抽取下一个国家。可独立抽取多次。",
+    en: "A weighted draw of your next country using current births or current population.",
+    es: "Sorteo ponderado del siguiente país según nacimientos o población actuales.",
+    fr: "Tirage pondéré du prochain pays selon les naissances ou la population.",
+    ja: "いまの出生または人口の重みで、次に生まれる国を抽選します。",
+    ko: "지금 태어나는 아이 기준 또는 현재 인구 기준으로 환생 국가를 가중 추첨합니다.",
+  },
+};
+
 // 삶의 균형 진단 — surfaces the balance (Wheel of Life) ontology engine.
 const balanceWheelManifest: FeatureManifest = {
   badge: "new",
@@ -454,6 +481,7 @@ export const FEATURE_REGISTRY: FeatureManifest[] = [
   pranayamaManifest,
   foreignAccountManifest,
   countryMatchManifest,
+  reincarnationCountryManifest,
   balanceWheelManifest,
   cashflowManifest,
   overseasStockTaxManifest,

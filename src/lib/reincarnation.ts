@@ -50,3 +50,44 @@ export function projectLonLat(lon: number, lat: number): { x: number; y: number 
     y: 50 - (lat / 90) * 34,
   };
 }
+
+const DISPLAY_LOCALE: Record<string, string> = {
+  ko: "ko",
+  en: "en",
+  ja: "ja",
+  zh: "zh-CN",
+  fr: "fr",
+  es: "es",
+};
+
+export function displayCountryName(iso2: string, locale: string, fallback: string): string {
+  try {
+    const names = new Intl.DisplayNames([DISPLAY_LOCALE[locale] ?? locale], { type: "region" });
+    return names.of(iso2.toUpperCase()) ?? fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+export function projectOrthographic(
+  lon: number,
+  lat: number,
+  yawDeg = 10,
+): { x: number; y: number; visible: boolean } {
+  const yaw = (yawDeg * Math.PI) / 180;
+  const lam = (lon * Math.PI) / 180 - yaw;
+  const phi = (lat * Math.PI) / 180;
+  const x = Math.cos(phi) * Math.sin(lam);
+  const y = Math.sin(phi);
+  const z = Math.cos(phi) * Math.cos(lam);
+  if (z < 0) return { x: 50, y: 35, visible: false };
+  return { x: 50 + x * 32, y: 35 - y * 32, visible: true };
+}
+
+export function tallyIso3(rows: ReincarnationCountry[]): { iso3: string; count: number }[] {
+  const counts = new Map<string, number>();
+  for (const row of rows) counts.set(row.iso3, (counts.get(row.iso3) ?? 0) + 1);
+  return [...counts.entries()]
+    .map(([iso3, count]) => ({ iso3, count }))
+    .sort((a, b) => b.count - a.count);
+}
