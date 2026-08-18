@@ -14,6 +14,7 @@ import {
   vsHome,
   weightTotal,
   yawToCenter,
+  latLonToCartesian,
 } from "./reincarnation";
 
 describe("reincarnation weights", () => {
@@ -64,5 +65,18 @@ describe("reincarnation weights", () => {
 
   it("centers the globe on a longitude", () => {
     expect(yawToCenter(-120)).toBe(240);
+  });
+
+  it("maps equator/prime meridian onto +X", () => {
+    const [x, y, z] = latLonToCartesian(0, 0);
+    expect(x).toBeCloseTo(1);
+    expect(y).toBeCloseTo(0);
+    expect(z).toBeCloseTo(0);
+  });
+
+  it("keeps Korea and 200+ countries in the World Bank snapshot", () => {
+    expect(byIso2("KR")).toBeTruthy();
+    expect(byIso2("KR")!.population).toBeGreaterThan(40_000_000);
+    expect(byIso2("KR")!.births).toBeGreaterThan(100_000);
   });
 });

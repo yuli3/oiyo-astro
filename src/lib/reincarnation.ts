@@ -132,3 +132,13 @@ export function vsHome(row: ReincarnationCountry, home: ReincarnationCountry, mo
 export function yawToCenter(lon: number): number {
   return ((lon % 360) + 360) % 360;
 }
+
+export function latLonToCartesian(lat: number, lon: number, radius = 1): [number, number, number] {
+  const phi = ((90 - lat) * Math.PI) / 180;
+  const theta = ((lon + 180) * Math.PI) / 180;
+  return [
+    -radius * Math.sin(phi) * Math.cos(theta),
+    radius * Math.cos(phi),
+    radius * Math.sin(phi) * Math.sin(theta),
+  ];
+}

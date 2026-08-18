@@ -10,14 +10,13 @@ import {
   displayCountryName,
   oneIn,
   pickMany,
-  projectOrthographic,
   ranked,
   tallyIso3,
   vsHome,
-  yawToCenter,
   type ReincarnationCountry as Country,
   type WeightMode,
 } from "../../lib/reincarnation";
+import ReincarnationGlobe from "./ReincarnationGlobe";
 
 interface Props {
   locale: Locale;
@@ -91,7 +90,7 @@ export default function ReincarnationCountry({ locale }: Props) {
   const home = byIso2(homeIso2) ?? byIso2("KR")!;
   const latest = results[results.length - 1] ?? focus;
   const counts = useMemo(() => tallyIso3(results), [results]);
-  const hit = useMemo(() => new Set(results.map((row) => row.iso3)), [results]);
+  const hitIso3 = useMemo(() => results.map((row) => row.iso3), [results]);
   const top = useMemo(() => ranked(mode).slice(0, 10), [mode]);
   const options = useMemo(
     () =>
@@ -102,27 +101,12 @@ export default function ReincarnationCountry({ locale }: Props) {
     [locale],
   );
 
-  const dots = useMemo(
-    () =>
-      REINCARNATION_COUNTRIES.flatMap((row) => {
-        if (row.lon == null || row.lat == null) return [];
-        const point = projectOrthographic(row.lon, row.lat, yaw);
-        return point.visible ? [{ ...row, ...point }] : [];
-      }),
-    [yaw],
-  );
-
   useEffect(() => {
     const incoming = readQuery();
     setMode(incoming.mode);
     if (incoming.iso2) setFocus(byIso2(incoming.iso2) ?? null);
     setReady(true);
   }, []);
-
-  useEffect(() => {
-    if (!latest?.lon) return;
-    setYaw(yawToCenter(latest.lon));
-  }, [latest?.iso3]);
 
   useEffect(() => {
     if (!ready || typeof window === "undefined") return;
@@ -244,29 +228,18 @@ export default function ReincarnationCountry({ locale }: Props) {
         </datalist>
       </label>
 
-      <svg viewBox="0 0 100 70" role="img" aria-label="globe" className="w-full rounded-2xl bg-slate-950">
-        <defs>
-          <radialGradient id="reincarnation-globe" cx="38%" cy="32%" r="65%">
-            <stop offset="0%" stopColor="#1e3a5f" />
-            <stop offset="100%" stopColor="#020617" />
-          </radialGradient>
-        </defs>
-        <circle cx="50" cy="35" r="32" fill="url(#reincarnation-globe)" stroke="#334155" strokeWidth="0.4" />
-        {dots.map((dot) => {
-          const active = latest?.iso3 === dot.iso3 || hit.has(dot.iso3);
-          const isHome = home.iso3 === dot.iso3;
-          return (
-            <circle
-              key={dot.iso3}
-              cx={dot.x}
-              cy={dot.y}
-              r={active ? 1.2 : isHome ? 0.7 : 0.35}
-              fill={active ? "#34d399" : isHome ? "#fbbf24" : "#64748b"}
-              opacity={active || isHome ? 1 : 0.5}
-            />
-          );
-        })}
-      </svg>
+      <ReincarnationGlobe
+        focusIso3={latest?.iso3}
+        homeIso3={home.iso3}
+        hitIso3={hitIso3}
+        yaw={yaw}
+        onSelect={(iso2) => {
+          const row = byIso2(iso2);
+          if (!row) return;
+          setFocus(row);
+          setResults([]);
+        }}
+      />
 
       {latest ? (
         <div className="rounded-2xl border border-slate-200 bg-white p-5">
