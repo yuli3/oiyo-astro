@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -148,6 +149,7 @@ export default function DopamineDependencyTest({ locale }: Props) {
   const [answers, setAnswers] = useState<number[]>([])
   const [current, setCurrent] = useState(0)
   const [result, setResult] = useState<Level | null>(null)
+  useRecordFinishedTest({ testId: "dopamine-dependency", title: "DopamineDependencyTest", finished: Boolean(result) });
 
   const answer = (val: number) => {
     const next = [...answers, val]

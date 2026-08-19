@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { QuestionnaireMatrix } from "@/components/ui/questionnaire-matrix";
 
 interface Props { locale?: string; }
@@ -62,10 +63,12 @@ const data = {
 };
 
 export default function MindEaseTest({ locale: localeProp }: Props) {
+
   const lang = (localeProp === "en" ? "en" : "ko") as "ko" | "en";
   const t = data[lang];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
+  useRecordFinishedTest({ testId: "mind-ease", title: "MindEaseTest", finished: phase === "result" });
 
   const totalScore = t.questions.reduce((sum, q) => {
     const raw = answers[q.id] ?? 0;

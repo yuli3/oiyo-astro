@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import { interpretTCIDeep } from '@/lib/engines/interpretation/engines/tci-deep';
@@ -239,12 +240,14 @@ function scoreForDim(dim: DimensionKey, answers: Record<number, number>): number
 }
 
 export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale }) {
+
   const t = L[locale] ?? L.ko;
 
   const [started, setStarted] = useState(false);
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [done, setDone] = useState(false);
+  useRecordFinishedTest({ testId: "tci-personality", title: "TciPersonalityTest", finished: Boolean(done) });
 
   const q = QUESTIONS[current];
   const progress = Math.round(((current) / QUESTIONS.length) * 100);

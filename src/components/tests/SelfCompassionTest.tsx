@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import {
@@ -341,6 +342,7 @@ function getLevel(score: number): SCLevel {
 }
 
 export default function SelfCompassionTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
@@ -348,6 +350,7 @@ export default function SelfCompassionTest({ locale: localeProp }: Props) {
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [result, setResult] = useState<{ level: SCLevel; score: number; dims: Record<string, number> } | null>(null);
+  useRecordFinishedTest({ testId: "self-compassion", title: "SelfCompassionTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

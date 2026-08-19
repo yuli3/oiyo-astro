@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
 
@@ -60,6 +61,7 @@ export default function SpatialIQTest({ locale }: Props) {
   const [current, setCurrent] = useState(0)
   const [selected, setSelected] = useState<string | null>(null)
   const [score, setScore] = useState(0)
+  useRecordFinishedTest({ testId: "spatial-i-q", title: "SpatialIQTest", finished: score != null });
   const [finished, setFinished] = useState(false)
   const [history, setHistory] = useState<boolean[]>([])
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -672,6 +673,7 @@ export default function FearTypeTest({ locale: lp = 'ko' }: Props) {
     rejection: 0, failure: 0, loss: 0, unknown: 0, judgment: 0,
   })
   const [result, setResult] = useState<FearType | null>(null)
+  useRecordFinishedTest({ testId: "fear-type", title: "FearTypeTest", finished: Boolean(result) });
 
   function calcResult(c: Record<FearType, number>): FearType {
     const types: FearType[] = ['rejection', 'failure', 'loss', 'unknown', 'judgment']

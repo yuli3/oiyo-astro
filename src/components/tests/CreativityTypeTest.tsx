@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
@@ -278,6 +279,7 @@ const t: Record<SupportedLocale, {
 };
 
 export default function CreativityTypeTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
@@ -285,6 +287,7 @@ export default function CreativityTypeTest({ locale: localeProp }: Props) {
   const [idx, setIdx] = useState(0);
   const [scores, setScores] = useState<Record<CreativityType, number>>({ divergent: 0, convergent: 0, narrative: 0, systems: 0, aesthetic: 0 });
   const [result, setResult] = useState<CreativityType | null>(null);
+  useRecordFinishedTest({ testId: "creativity-type", title: "CreativityTypeTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

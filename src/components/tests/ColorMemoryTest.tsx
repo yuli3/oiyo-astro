@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
 type Phase = 'intro' | 'show' | 'recall' | 'result'
@@ -49,6 +50,7 @@ export default function ColorMemoryTest({ locale }: Props) {
   const [round, setRound] = useState(0)
   const [rounds, setRounds] = useState<Round[]>([])
   const [score, setScore] = useState(0)
+  useRecordFinishedTest({ testId: "color-memory", title: "ColorMemoryTest", finished: phase === "result" || score != null });
   const [showTime, setShowTime] = useState(3)
   const [feedback, setFeedback] = useState<'correct' | 'wrong' | null>(null)
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)

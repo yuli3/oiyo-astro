@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from '../shared/ShareResultButton'
 import {
@@ -456,6 +457,7 @@ const t = {
 };
 
 export default function BoundaryStyleTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
@@ -470,6 +472,7 @@ export default function BoundaryStyleTest({ locale: localeProp }: Props) {
   });
   const [answered, setAnswered] = useState(0);
   const [result, setResult] = useState<BoundaryStyle | null>(null);
+  useRecordFinishedTest({ testId: "boundary-style", title: "BoundaryStyleTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

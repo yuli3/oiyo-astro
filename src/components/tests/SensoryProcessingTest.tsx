@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 
 type Locale = 'ko' | 'en' | 'ja'
@@ -174,6 +175,7 @@ export default function SensoryProcessingTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ level: SensLevel; score: number } | null>(null)
+  useRecordFinishedTest({ testId: "sensory-processing", title: "SensoryProcessingTest", finished: Boolean(result) });
 
   function pick(val: number) {
     // val is 0-4 (index), score is 1-5

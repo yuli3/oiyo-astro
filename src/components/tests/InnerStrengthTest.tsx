@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -148,12 +149,14 @@ const LABELS = {
 interface Props { locale?: string; }
 
 export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
+
   const L = lang(lp);
   const locale = L;
   const lb = LABELS[L];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [current, setCurrent] = useState(0);
   const [done, setDone] = useState(false);
+  useRecordFinishedTest({ testId: "inner-strength", title: "InnerStrengthTest", finished: Boolean(done) });
 
   const q = QUESTIONS[current];
   const total = QUESTIONS.length;

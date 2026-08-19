@@ -1,4 +1,5 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { QuestionnaireMatrix } from '@/components/ui/questionnaire-matrix'
 import type { Locale } from '../../i18n';
@@ -119,6 +120,7 @@ const DigitalBalanceTest: React.FC<Props> = ({ locale = 'ko' }) => {
 
     const [answers, setAnswers] = useState<Record<string, number>>({});
     const [showResults, setShowResults] = useState(false);
+  useRecordFinishedTest({ testId: "digital-balance", title: "DigitalBalanceTest", finished: Boolean(showResults) });
 
     const score = useMemo(() => {
         return Object.values(answers).reduce((acc, curr) => acc + curr, 0);

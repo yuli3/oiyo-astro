@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire';
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -314,6 +315,7 @@ export default function EmotionalEatingTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ level: EatingLevel; score: number } | null>(null)
+  useRecordFinishedTest({ testId: "emotional-eating", title: "EmotionalEatingTest", finished: Boolean(result) });
 
   function calcResult(ans: number[]): { level: EatingLevel; score: number } {
     const score = ans.reduce((s, v) => s + (v + 1), 0)

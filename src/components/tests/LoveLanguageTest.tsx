@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
 import ShareResultButton from '../shared/ShareResultButton'
@@ -349,6 +350,7 @@ export default function LoveLanguageTest({ locale: lp = 'ko' }: Props) {
   const [selected, setSelected] = useState<'a' | 'b' | null>(null)
   const [answers, setAnswers] = useState<Lang[]>([])
   const [result, setResult] = useState<{ primary: Lang; scores: Scores } | null>(initResult)
+  useRecordFinishedTest({ testId: "love-language", title: "LoveLanguageTest", finished: Boolean(result) });
 
   function calcResult(ans: Lang[]): { primary: Lang; scores: Scores } {
     const scores: Scores = { words: 0, acts: 0, gifts: 0, time: 0, touch: 0 }

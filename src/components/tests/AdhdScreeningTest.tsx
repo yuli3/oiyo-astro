@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -316,6 +317,7 @@ export default function AdhdScreeningTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ level: FlagLevel; score: number; flags: number } | null>(null)
+  useRecordFinishedTest({ testId: "adhd-screening", title: "AdhdScreeningTest", finished: Boolean(result) });
 
   function pick(val: number) {
     // val is 0-based index from scaleLabels, convert to 1-based score

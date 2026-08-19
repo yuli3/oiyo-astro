@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -369,6 +370,7 @@ function getLevel(score: number): AnxietyLevel {
 }
 
 export default function SocialAnxietyTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
@@ -376,6 +378,7 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [result, setResult] = useState<{ level: AnxietyLevel; score: number } | null>(null);
+  useRecordFinishedTest({ testId: "social-anxiety", title: "SocialAnxietyTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

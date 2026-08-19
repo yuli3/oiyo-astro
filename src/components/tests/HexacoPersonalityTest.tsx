@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import { interpretHexacoDeep } from '@/lib/engines/interpretation/engines/hexaco-deep';
@@ -249,12 +250,14 @@ function scoreForDim(dim: DimKey, answers: Record<number, number>): number {
 }
 
 export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Locale }) {
+
   const t = L[locale] ?? L.ko;
 
   const [started, setStarted] = useState(false);
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<Record<number, number>>({});
   const [done, setDone] = useState(false);
+  useRecordFinishedTest({ testId: "hexaco-personality", title: "HexacoPersonalityTest", finished: Boolean(done) });
 
   const q = QUESTIONS[current];
   const progress = Math.round((current / QUESTIONS.length) * 100);

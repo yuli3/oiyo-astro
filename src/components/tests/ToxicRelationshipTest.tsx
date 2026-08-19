@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -225,6 +226,7 @@ export default function ToxicRelationshipTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ level: Level; score: number } | null>(null)
+  useRecordFinishedTest({ testId: "toxic-relationship", title: "ToxicRelationshipTest", finished: Boolean(result) });
 
   function pick(val: number) {
     const newAns = [...answers, val]

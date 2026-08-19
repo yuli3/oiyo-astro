@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -217,12 +218,14 @@ const COLOR_MAP: Record<string, { bg: string; border: string; badge: string; tex
 interface Props { locale?: string; }
 
 export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
+
   const L = lang(lp);
   const locale = L;
   const lb = LABELS[L];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [current, setCurrent] = useState(0);
   const [done, setDone] = useState(false);
+  useRecordFinishedTest({ testId: "crossroads-investor", title: "CrossroadsInvestorTest", finished: Boolean(done) });
   // A shared/revisited result type read from the URL (?type=tech).
   const [forcedType, setForcedType] = useState<InvestorType | null>(null);
 

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -481,6 +482,7 @@ export default function CoffeePersonalityTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [votes, setVotes] = useState<CoffeeType[]>([])
   const [result, setResult] = useState<CoffeeType | null>(null)
+  useRecordFinishedTest({ testId: "coffee-personality", title: "CoffeePersonalityTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false)
 
   function calcResult(v: CoffeeType[]): CoffeeType {

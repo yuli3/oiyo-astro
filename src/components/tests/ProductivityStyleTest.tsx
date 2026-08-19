@@ -3,6 +3,7 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
@@ -179,6 +180,7 @@ const ui = {
 };
 
 export default function ProductivityStyleTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = ui[locale];
@@ -186,6 +188,7 @@ export default function ProductivityStyleTest({ locale: localeProp }: Props) {
   const [idx, setIdx] = useState(0);
   const [scores, setScores] = useState<Record<ProductivityType, number>>({ deepwork: 0, multitasker: 0, collaborator: 0, flexible: 0 });
   const [result, setResult] = useState<ProductivityType | null>(null);
+  useRecordFinishedTest({ testId: "productivity-style", title: "ProductivityStyleTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   function pick(type: ProductivityType) {

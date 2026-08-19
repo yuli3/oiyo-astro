@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -171,6 +172,7 @@ export default function ColorPersonalityTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [scores, setScores] = useState<Record<ColorType, number>>({ red: 0, blue: 0, yellow: 0, green: 0, purple: 0 })
   const [result, setResult] = useState<ColorType | null>(null)
+  useRecordFinishedTest({ testId: "color-personality", title: "ColorPersonalityTest", finished: Boolean(result) });
 
   function pick(color: ColorType) {
     const newScores = { ...scores, [color]: scores[color] + 1 }

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -144,6 +145,7 @@ export default function LazyPerfectionistTest({ locale: rawLocale = 'ko' }: Prop
   const [current, setCurrent] = useState(0)
   const [scores, setScores] = useState<Record<ResultKey, number>>({ starter: 0, planner: 0, critic: 0, recovering: 0 })
   const [result, setResult] = useState<ResultKey | null>(restored)
+  useRecordFinishedTest({ testId: "lazy-perfectionist", title: "LazyPerfectionistTest", finished: Boolean(result) });
 
   // Keep the URL in sync with the result so it is shareable/revisitable.
   useEffect(() => {

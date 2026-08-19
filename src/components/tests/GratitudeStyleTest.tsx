@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -225,6 +226,7 @@ export default function GratitudeStyleTest({ locale: lp = 'ko' }: Props) {
     () => ({ intensity: 0, frequency: 0, span: 0, density: 0 })
   )
   const [result, setResult] = useState<{ level: Level; total: number } | null>(null)
+  useRecordFinishedTest({ testId: "gratitude-style", title: "GratitudeStyleTest", finished: Boolean(result) });
 
   function pick(val: number) {
     const q = questions[current]

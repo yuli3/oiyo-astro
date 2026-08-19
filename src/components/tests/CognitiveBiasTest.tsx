@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
@@ -275,6 +276,7 @@ export default function CognitiveBiasTest({ locale: lp = 'ko' }: Props) {
     confirmation: 0, dunningKruger: 0, availability: 0, lossAversion: 0, attribution: 0,
   })
   const [done, setDone] = useState(false)
+  useRecordFinishedTest({ testId: "cognitive-bias", title: "CognitiveBiasTest", finished: Boolean(done) });
 
   function pick(val: number) {
     const q = questions[current]

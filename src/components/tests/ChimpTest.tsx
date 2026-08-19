@@ -1,4 +1,5 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 
 const ChimpTest: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) => {
     const t = {
@@ -33,6 +34,7 @@ const ChimpTest: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) => {
     const [tiles, setTiles] = useState<{ id: number; num: number; x: number; y: number; clicked: boolean }[]>([]);
     const [nextNum, setNextNum] = useState(1);
     const [bestLevel, setBestLevel] = useState(0);
+    useRecordFinishedTest({ testId: "chimp", title: "ChimpTest", finished: status === "result" });
 
     const initLevel = useCallback((lv: number) => {
         const count = lv + 3;

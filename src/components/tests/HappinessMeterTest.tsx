@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from "@/components/ui/questionnaire";
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
@@ -150,6 +151,7 @@ function getOptionSet(qIdx: number, locale: SupportedLocale) {
 }
 
 export default function HappinessMeterTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const ui = tx[locale];
@@ -158,6 +160,7 @@ export default function HappinessMeterTest({ locale: localeProp }: Props) {
   const [answers, setAnswers] = useState<number[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [copied, setCopied] = useState(false);
+  useRecordFinishedTest({ testId: "happiness-meter", title: "HappinessMeterTest", finished: Boolean(showResult) });
 
   function pick(value: number) {
     const actualValue = questions[idx].reversed ? 8 - value : value;

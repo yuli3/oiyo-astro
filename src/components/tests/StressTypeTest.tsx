@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
@@ -600,6 +601,7 @@ export default function StressTypeTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<StressType[]>([])
   const [result, setResult] = useState<StressType | null>(null)
+  useRecordFinishedTest({ testId: "stress-type", title: "StressTypeTest", finished: Boolean(result) });
 
   function pick(type: StressType) {
     const newAnswers = answers.slice(0, current)

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import type { Locale } from "../../i18n";
 
 interface Props {
@@ -481,11 +482,13 @@ const LEVEL_BG: Record<CEFRLevel, string> = {
 type Stage = "intro" | "test" | "result";
 
 export default function EnglishLevelTest({ locale }: Props) {
+
   const t = UI[locale] ?? UI.en;
   const [stage, setStage] = useState<Stage>("intro");
   const [currentIdx, setCurrentIdx] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(QUESTIONS.length).fill(null));
   const [selected, setSelected] = useState<number | null>(null);
+  useRecordFinishedTest({ testId: "english-level", title: "EnglishLevelTest", finished: stage === "result" });
 
   const totalQ = QUESTIONS.length;
   const currentQ = QUESTIONS[currentIdx];

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
@@ -523,6 +524,7 @@ export default function SocialMediaPersonalityTest({ locale: lp = 'ko' }: Props)
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<PersonalityType[]>([])
   const [result, setResult] = useState<PersonalityType | null>(null)
+  useRecordFinishedTest({ testId: "social-media-personality", title: "SocialMediaPersonalityTest", finished: Boolean(result) });
 
   function pick(type: PersonalityType) {
     const newAnswers = answers.slice(0, current)

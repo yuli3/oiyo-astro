@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
@@ -469,6 +470,7 @@ const t = {
 };
 
 export default function ProcrastinationTypeTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
@@ -482,6 +484,7 @@ export default function ProcrastinationTypeTest({ locale: localeProp }: Props) {
     indecisive: 0,
   });
   const [result, setResult] = useState<ProcrastinationType | null>(null);
+  useRecordFinishedTest({ testId: "procrastination-type", title: "ProcrastinationTypeTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

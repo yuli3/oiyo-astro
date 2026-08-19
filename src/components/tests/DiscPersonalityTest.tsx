@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip
@@ -638,6 +639,7 @@ export default function DiscPersonalityTest({ locale: lp = 'ko' }: Props) {
   const [selected, setSelected] = useState<number | null>(null)
   const [answers, setAnswers] = useState<DiscType[]>([])
   const [result, setResult] = useState<{ type: DiscType; scores: Scores } | null>(initResult)
+  useRecordFinishedTest({ testId: "disc-personality", title: "DiscPersonalityTest", finished: Boolean(result) });
 
   function calcResult(ans: DiscType[]): { type: DiscType; scores: Scores } {
     const scores: Scores = { D: 0, I: 0, S: 0, C: 0 }

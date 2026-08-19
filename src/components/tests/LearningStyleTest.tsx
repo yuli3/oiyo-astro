@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -672,6 +673,7 @@ export default function LearningStyleTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [scores, setScores] = useState<Record<StyleType, number>>({ visual: 0, auditory: 0, reading: 0, kinesthetic: 0 })
   const [done, setDone] = useState(false)
+  useRecordFinishedTest({ testId: "learning-style", title: "LearningStyleTest", finished: Boolean(done) });
 
   function pick(type: StyleType) {
     const next = { ...scores, [type]: scores[type] + 1 }

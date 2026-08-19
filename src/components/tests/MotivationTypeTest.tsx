@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip } from "recharts";
@@ -143,6 +144,7 @@ const ui: Record<SupportedLocale, { title: string; subtitle: string; scale: stri
 };
 
 export default function MotivationTypeTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const t = ui[locale];
@@ -150,6 +152,7 @@ export default function MotivationTypeTest({ locale: localeProp }: Props) {
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [result, setResult] = useState<{ type: MotivationType; scores: Record<MotivationType, number> } | null>(null);
+  useRecordFinishedTest({ testId: "motivation-type", title: "MotivationTypeTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

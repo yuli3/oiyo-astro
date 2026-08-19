@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -251,6 +252,7 @@ export default function WorkLifeBalanceTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [domainScores, setDomainScores] = useState<Record<Domain, number>>({ workDemand: 0, personalTime: 0, recovery: 0, meaning: 0 })
   const [done, setDone] = useState(false)
+  useRecordFinishedTest({ testId: "work-life-balance", title: "WorkLifeBalanceTest", finished: Boolean(done) });
 
   function pick(val: number) {
     const q = questions[current]

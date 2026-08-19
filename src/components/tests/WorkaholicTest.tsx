@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultShareImage from '../shared/ResultShareImage'
 import { decodeResult, writeResultHash } from '../../lib/result-permalink'
@@ -290,6 +291,7 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [done, setDone] = useState(false)
+  useRecordFinishedTest({ testId: "workaholic", title: "WorkaholicTest", finished: Boolean(done) });
 
   // T6/#32: entering via a shared #r= permalink restores the result view
   // directly, skipping the question flow. Safe no-op if there is no hash,

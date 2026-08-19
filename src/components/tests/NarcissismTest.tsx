@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -281,6 +282,7 @@ export default function NarcissismTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [score, setScore] = useState(0)
   const [done, setDone] = useState(false)
+  useRecordFinishedTest({ testId: "narcissism", title: "NarcissismTest", finished: Boolean(done) || score != null });
 
   function pick(choice: 'a' | 'b') {
     const q = questions[current]

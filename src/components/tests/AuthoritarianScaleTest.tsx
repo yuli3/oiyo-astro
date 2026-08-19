@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -163,11 +164,13 @@ function overallLevel(score: number, l: SupportedLang): { label: string; color: 
 }
 
 export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
+
   const l = lang(locale);
   const ui = UI[l];
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [done, setDone] = useState(false);
+  useRecordFinishedTest({ testId: "authoritarian-scale", title: "AuthoritarianScaleTest", finished: Boolean(done) });
 
   const q = QUESTIONS[current];
 

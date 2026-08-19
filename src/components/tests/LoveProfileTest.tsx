@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import type { Locale } from "../../i18n";
 
@@ -144,6 +145,7 @@ const LOVE_EMOJI:   Record<LoveLang,string>   = {words:"💬",acts:"🛠️",gif
 const CONF_EMOJI:   Record<ConflictStyle,string> = {collaborate:"🤝",compromise:"⚖️",accommodate:"🕊️",avoid:"🏃",compete:"🥊"};
 
 export default function LoveProfileTest({ locale = "ko" }: Props) {
+
   const lang: Lang = locale === "ja" ? "ja" : locale === "en" ? "en" : "ko";
   const ui = UI_TEXT[lang];
   const total = QUESTIONS.length;
@@ -151,6 +153,7 @@ export default function LoveProfileTest({ locale = "ko" }: Props) {
   const [answers, setAnswers] = useState<Record<number,number>>({});
   const [step, setStep] = useState(0);
   const [result, setResult] = useState<{attach:AttachType; love:LoveLang; conflict:ConflictStyle}|null>(null);
+  useRecordFinishedTest({ testId: "love-profile", title: "LoveProfileTest", finished: Boolean(result) });
 
   const current = step - 1;
   const q = QUESTIONS[current];

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -342,6 +343,7 @@ const resultUi: Record<SupportedLocale, {
 };
 
 export default function EmpathyTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const t = ui[locale];
@@ -350,8 +352,10 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [result, setResult] = useState<EmpathyResult | null>(null);
+  useRecordFinishedTest({ testId: "empathy", title: "EmpathyTest", finished: Boolean(result) });
   const [sharedSummary, setSharedSummary] = useState(false);
   const [copied, setCopied] = useState(false);
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const em = params.get("em") as EmpathyResult | null;

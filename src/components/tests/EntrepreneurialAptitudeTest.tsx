@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ResultShareImage from '../shared/ResultShareImage'
@@ -284,6 +285,7 @@ export default function EntrepreneurialAptitudeTest({ locale: lp = 'ko' }: Props
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [done, setDone] = useState(false)
+  useRecordFinishedTest({ testId: "entrepreneurial-aptitude", title: "EntrepreneurialAptitudeTest", finished: Boolean(done) });
 
   function pick(val: number) {
     const next = answers.slice(0, current)

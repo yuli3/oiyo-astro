@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { QuestionnaireMatrix } from "@/components/ui/questionnaire-matrix";
 
 interface Props { locale?: string; }
@@ -72,10 +73,12 @@ const data = {
 };
 
 export default function ProblemSolverTest({ locale: localeProp }: Props) {
+
   const lang = (localeProp === "en" ? "en" : "ko") as "ko" | "en";
   const t = data[lang];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
+  useRecordFinishedTest({ testId: "problem-solver", title: "ProblemSolverTest", finished: phase === "result" });
 
   const types: SolverStyle[] = ["analytical", "creative", "practical", "collaborative", "strategic"];
   const scores = Object.fromEntries(types.map((s) => [s, 0])) as Record<SolverStyle, number>;

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -753,6 +754,7 @@ export default function ParentingStyleTest({ locale: lp = 'ko' }: Props) {
     authoritative: 0, authoritarian: 0, permissive: 0, uninvolved: 0,
   })
   const [done, setDone] = useState(false)
+  useRecordFinishedTest({ testId: "parenting-style", title: "ParentingStyleTest", finished: Boolean(done) });
 
   function pick(choiceIdx: number) {
     const q = questions[current]

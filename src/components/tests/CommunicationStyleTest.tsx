@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 import {
@@ -485,6 +486,7 @@ const t: Record<SupportedLocale, UiText> = {
 };
 
 export default function CommunicationStyleTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
@@ -498,6 +500,7 @@ export default function CommunicationStyleTest({ locale: localeProp }: Props) {
     analytical: 0,
   });
   const [result, setResult] = useState<CommStyle | null>(null);
+  useRecordFinishedTest({ testId: "communication-style", title: "CommunicationStyleTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

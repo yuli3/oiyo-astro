@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -518,6 +519,7 @@ export default function ColorAuraTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [counts, setCounts] = useState<Partial<Record<AuraColor, number>>>({})
   const [result, setResult] = useState<AuraColor | null>(null)
+  useRecordFinishedTest({ testId: "color-aura", title: "ColorAuraTest", finished: Boolean(result) });
 
   function pick(color: AuraColor) {
     const newCounts = { ...counts, [color]: (counts[color] ?? 0) + 1 }

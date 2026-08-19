@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { ScreeningQuestionnaire } from '@/components/ui/screening-questionnaire';
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
@@ -179,6 +180,7 @@ export default function BurnoutTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ level: Level; score: number } | null>(null)
+  useRecordFinishedTest({ testId: "burnout", title: "BurnoutTest", finished: Boolean(result) });
 
   function calcResult(ans: number[]): { level: Level; score: number } {
     const score = ans.reduce((s, v) => s + v, 0)

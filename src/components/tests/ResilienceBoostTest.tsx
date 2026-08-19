@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from "@/components/ui/questionnaire";
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
@@ -142,6 +143,7 @@ const ui = {
 };
 
 export default function ResilienceBoostTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = ui[locale];
@@ -150,6 +152,7 @@ export default function ResilienceBoostTest({ locale: localeProp }: Props) {
   const [answers, setAnswers] = useState<number[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [copied, setCopied] = useState(false);
+  useRecordFinishedTest({ testId: "resilience-boost", title: "ResilienceBoostTest", finished: Boolean(showResult) });
 
   function pick(value: number) {
     const score = questions[idx].reversed ? 6 - value : value;

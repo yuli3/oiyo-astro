@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import type { Locale } from "../../i18n";
 import ShareResultButton from "../shared/ShareResultButton";
 
@@ -748,6 +749,7 @@ function getPercentile(iq: number): string {
 type Phase = "intro" | "test" | "result" | "review";
 
 export default function IQTest({ locale }: Props) {
+
   const t = UI[locale] ?? UI.en;
 
   const [phase, setPhase] = useState<Phase>("intro");
@@ -755,6 +757,8 @@ export default function IQTest({ locale }: Props) {
   const [answers, setAnswers] = useState<(number | null)[]>(Array(QUESTIONS.length).fill(null));
   const [timeLeft, setTimeLeft] = useState(TOTAL_TIME);
   const [score, setScore] = useState(0);
+  useRecordFinishedTest({ testId: "i-q", title: "IQTest", finished: phase === "result" || score != null });
+
   const timerRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
 
   // Timer

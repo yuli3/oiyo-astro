@@ -1,4 +1,5 @@
 import { useState, useMemo } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { QuestionnaireMatrix } from '@/components/ui/questionnaire-matrix'
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn'
@@ -50,6 +51,7 @@ export default function BiologicalAgeTest({ locale }: Props) {
   const [chrono, setChrono] = useState(30)
   const [answers, setAnswers] = useState<Record<string, number>>({})
   const [result, setResult] = useState<number | null>(null)
+  useRecordFinishedTest({ testId: "biological-age", title: "BiologicalAgeTest", finished: Boolean(result) });
 
   const bioAge = useMemo(() => {
     if (result === null) return null

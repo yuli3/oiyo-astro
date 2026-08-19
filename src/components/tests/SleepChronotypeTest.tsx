@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
@@ -649,6 +650,7 @@ export default function SleepChronotypeTest({ locale: lp = 'ko', showHeading = t
   const [current, setCurrent] = useState(restored ? questions.length : 0)
   const [counts, setCounts] = useState<Record<Chronotype, number>>({ lion: 0, bear: 0, wolf: 0, dolphin: 0 })
   const [result, setResult] = useState<Chronotype | null>(restored)
+  useRecordFinishedTest({ testId: "sleep-chronotype", title: "SleepChronotypeTest", finished: Boolean(result) });
 
   function calcResult(c: Record<Chronotype, number>): Chronotype {
     const types: Chronotype[] = ['lion', 'bear', 'wolf', 'dolphin']

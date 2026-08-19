@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire';
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -1066,6 +1067,7 @@ function calcResult(answers: (number | null)[]): Season {
 // ─── Main component ───────────────────────────────────────────────────────────
 
 export default function PersonalColorTest({ locale }: Props) {
+
   // Restore a shared result directly from the URL (?type=spring).
   const initSeason = (): Season | null => {
     const c = readResultCode('type');
@@ -1076,6 +1078,8 @@ export default function PersonalColorTest({ locale }: Props) {
   const [current, setCurrent] = useState(0);
   const [answers, setAnswers] = useState<(number | null)[]>(Array(QUESTIONS.length).fill(null));
   const [result, setResult] = useState<Season | null>(restored);
+  useRecordFinishedTest({ testId: "personal-color", title: "PersonalColorTest", finished: Boolean(result) || phase === "result" });
+
   const ui = UI[locale];
   const total = QUESTIONS.length;
 

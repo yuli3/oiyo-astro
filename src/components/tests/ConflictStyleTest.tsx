@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 import { Bar, BarChart, XAxis, YAxis, ResponsiveContainer, Tooltip } from 'recharts'
@@ -124,6 +125,7 @@ export default function ConflictStyleTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<Style[]>([])
   const [result, setResult] = useState<{ style: Style; scores: Scores } | null>(null)
+  useRecordFinishedTest({ testId: "conflict-style", title: "ConflictStyleTest", finished: Boolean(result) });
 
   function calcResult(ans: Style[]): { style: Style; scores: Scores } {
     const scores: Scores = { compete: 0, collaborate: 0, compromise: 0, avoid: 0, accommodate: 0 }

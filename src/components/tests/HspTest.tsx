@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton';
 import { QuestionnaireMatrix } from '@/components/ui/questionnaire-matrix';
 
@@ -223,10 +224,12 @@ const LEVEL_COLORS = {
 };
 
 export default function HspTest({ locale = 'en' }: { locale?: Locale }) {
+
   const t = LABELS[locale] ?? LABELS.en;
   const matrixCopy = MATRIX_COPY[locale] ?? MATRIX_COPY.en;
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [showResult, setShowResult] = useState(false);
+  useRecordFinishedTest({ testId: "hsp", title: "HspTest", finished: Boolean(showResult) });
 
   const handleAnswer = (id: string, val: number) => {
     const next = { ...answers, [id]: val };

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -229,6 +230,7 @@ const relatedLabels: Record<SupportedLocale, {
 };
 
 export default function EmotionalIntelligenceTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const t = ui[locale];
@@ -237,6 +239,7 @@ export default function EmotionalIntelligenceTest({ locale: localeProp }: Props)
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [result, setResult] = useState<{ level: EqLevel; total: number; scores: Record<Dimension, number> } | null>(null);
+  useRecordFinishedTest({ testId: "emotional-intelligence", title: "EmotionalIntelligenceTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

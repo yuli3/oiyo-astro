@@ -3,6 +3,7 @@ import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
@@ -179,6 +180,7 @@ const ui: Record<SupportedLocale, { title: string; subtitle: string; progress: (
 };
 
 export default function ThinkingPatternsTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = ui[locale];
@@ -186,6 +188,7 @@ export default function ThinkingPatternsTest({ locale: localeProp }: Props) {
   const [idx, setIdx] = useState(0);
   const [scores, setScores] = useState<Record<ThinkingType, number>>({ analytical: 0, creative: 0, practical: 0, relational: 0 });
   const [result, setResult] = useState<ThinkingType | null>(null);
+  useRecordFinishedTest({ testId: "thinking-patterns", title: "ThinkingPatternsTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   function pick(type: ThinkingType) {

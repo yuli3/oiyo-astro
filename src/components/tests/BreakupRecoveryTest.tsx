@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from "@/components/ui/questionnaire";
 import ShareResultButton from '../shared/ShareResultButton'
 import type { Locale } from "../../i18n";
@@ -537,12 +538,14 @@ const UI_LABELS: Record<
 };
 
 export default function BreakupRecoveryTest({ locale }: Props) {
+
   const t = UI_LABELS[locale] ?? UI_LABELS.en;
   const [current, setCurrent] = useState(0);
   const [scores, setScores] = useState<Record<RecoveryType, number>>({
     stormy: 0, growth: 0, solitary: 0, transformer: 0,
   });
   const [done, setDone] = useState(false);
+  useRecordFinishedTest({ testId: "breakup-recovery", title: "BreakupRecoveryTest", finished: Boolean(done) });
   const [resultType, setResultType] = useState<RecoveryType | null>(null);
 
   const handleAnswer = useCallback((type: RecoveryType) => {

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
@@ -259,6 +260,7 @@ export default function ImposterSyndromeTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ level: Level; score: number } | null>(null)
+  useRecordFinishedTest({ testId: "imposter-syndrome", title: "ImposterSyndromeTest", finished: Boolean(result) });
 
   function pick(val: number) {
     const newAns = answers.slice(0, current)

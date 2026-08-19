@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -274,6 +275,7 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{
+  useRecordFinishedTest({ testId: "risk-tolerance", title: "RiskToleranceTest", finished: Boolean(result) });
     overall: RiskLevel
     financialScore: number
     lifeScore: number

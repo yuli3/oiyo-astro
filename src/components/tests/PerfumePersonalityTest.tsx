@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { QuestionnaireMatrix } from "@/components/ui/questionnaire-matrix";
 
 interface Props { locale?: string; }
@@ -64,10 +65,12 @@ const data = {
 };
 
 export default function PerfumePersonalityTest({ locale: localeProp }: Props) {
+
   const lang = (localeProp === "en" ? "en" : "ko") as "ko" | "en";
   const t = data[lang];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
+  useRecordFinishedTest({ testId: "perfume-personality", title: "PerfumePersonalityTest", finished: phase === "result" });
 
   const types: ScentType[] = ["floral", "woody", "fresh", "oriental"];
   const scores = Object.fromEntries(types.map((s) => [s, 0])) as Record<ScentType, number>;

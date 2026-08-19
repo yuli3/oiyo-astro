@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import ShareResultButton from '../shared/ShareResultButton'
 import { Questionnaire } from '@/components/ui/questionnaire'
 
@@ -255,6 +256,7 @@ export default function HumorStyleTest({ locale: lp = 'ko' }: Props) {
     affiliative: 0, selfEnhancing: 0, aggressive: 0, selfDefeating: 0,
   })
   const [done, setDone] = useState(false)
+  useRecordFinishedTest({ testId: "humor-style", title: "HumorStyleTest", finished: Boolean(done) });
 
   function pick(val: number) {
     const q = questions[current]

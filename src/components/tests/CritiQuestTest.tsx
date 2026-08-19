@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 
 interface Props { locale?: string; }
 
@@ -172,11 +173,13 @@ const data = {
 };
 
 export default function CritiQuestTest({ locale: localeProp }: Props) {
+
   const lang = (localeProp === "en" ? "en" : "ko") as "ko" | "en";
   const t = data[lang];
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [revealed, setRevealed] = useState<Record<string, boolean>>({});
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
+  useRecordFinishedTest({ testId: "criti-quest", title: "CritiQuestTest", finished: phase === "result" });
 
   const correctCount = t.questions.filter((q) => {
     const correct = q.options.find((o) => o.isCorrect);

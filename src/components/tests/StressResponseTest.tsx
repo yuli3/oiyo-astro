@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -441,6 +442,7 @@ export default function StressResponseTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [counts, setCounts] = useState<Partial<Record<ResponseType, number>>>({})
   const [result, setResult] = useState<ResponseType | null>(null)
+  useRecordFinishedTest({ testId: "stress-response", title: "StressResponseTest", finished: Boolean(result) });
 
   function pick(type: ResponseType) {
     const newCounts = { ...counts, [type]: (counts[type] ?? 0) + 1 }

@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { QuestionnaireMatrix } from "@/components/ui/questionnaire-matrix";
 
 interface Props { locale?: string; }
@@ -206,10 +207,12 @@ const data = {
 };
 
 export default function CollabRiskTest({ locale: localeProp }: Props) {
+
   const lang = (localeProp === "en" ? "en" : "ko") as "ko" | "en";
   const t = data[lang];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
+  useRecordFinishedTest({ testId: "collab-risk", title: "CollabRiskTest", finished: phase === "result" });
 
   const totalScore = Object.values(answers).reduce((sum, v) => sum + v, 0);
   const maxScore = t.questions.length * 4;

@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from "@/components/ui/questionnaire";
 
 type SupportedLocale = "ko" | "en" | "ja" | "zh" | "fr" | "es";
@@ -213,6 +214,7 @@ const ui = {
 };
 
 export default function FocusBlockerTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = ui[locale];
@@ -221,6 +223,7 @@ export default function FocusBlockerTest({ locale: localeProp }: Props) {
   const [answers, setAnswers] = useState<{ category: BlockerCategory; score: number }[]>([]);
   const [showResult, setShowResult] = useState(false);
   const [copied, setCopied] = useState(false);
+  useRecordFinishedTest({ testId: "focus-blocker", title: "FocusBlockerTest", finished: Boolean(showResult) });
 
   function pick(category: BlockerCategory, score: number) {
     // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.

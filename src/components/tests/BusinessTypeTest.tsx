@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -419,6 +420,7 @@ export default function BusinessTypeTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [counts, setCounts] = useState<Partial<Record<BizType, number>>>({})
   const [result, setResult] = useState<BizType | null>(null)
+  useRecordFinishedTest({ testId: "business-type", title: "BusinessTypeTest", finished: Boolean(result) });
 
   function pick(type: BizType) {
     const newCounts = { ...counts, [type]: (counts[type] ?? 0) + 1 }

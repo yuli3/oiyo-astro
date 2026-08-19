@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 import ResultNextSteps from '../shared/ResultNextSteps'
@@ -243,6 +244,7 @@ export default function SelfEsteemTest({ locale: lp = 'ko' }: Props) {
   })
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ level: Level; score: number } | null>(initResult)
+  useRecordFinishedTest({ testId: "self-esteem", title: "SelfEsteemTest", finished: Boolean(result) });
 
   function calcResult(ans: number[]): { level: Level; score: number } {
     let score = 0

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -244,6 +245,7 @@ export default function MoneyPersonalityTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<MoneyType | null>(null)
+  useRecordFinishedTest({ testId: "money-personality", title: "MoneyPersonalityTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false)
 
   const moneyTypes: MoneyType[] = ['saver', 'spender', 'investor', 'minimalist']

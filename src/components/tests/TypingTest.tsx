@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 
@@ -55,6 +56,7 @@ const TypingTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
   const [errors, setErrors] = useState(0);
   const [finalWPM, setFinalWPM] = useState(0);
   const [finalAcc, setFinalAcc] = useState(100);
+  useRecordFinishedTest({ testId: "typing", title: "TypingTest", finished: state === 'done' });
   const inputRef = useRef<HTMLInputElement>(null);
   const timerRef = useRef<ReturnType<typeof setInterval>>(undefined);
 

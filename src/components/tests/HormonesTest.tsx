@@ -2,6 +2,7 @@
 import ShareResultButton from '../shared/ShareResultButton'
 
 import { useState } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { QuestionnaireMatrix } from "@/components/ui/questionnaire-matrix";
 
 interface Props { locale?: string; }
@@ -74,10 +75,12 @@ const data = {
 };
 
 export default function HormonesTest({ locale: localeProp }: Props) {
+
   const lang = (localeProp === "en" ? "en" : "ko") as "ko" | "en";
   const t = data[lang];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
+  useRecordFinishedTest({ testId: "hormones", title: "HormonesTest", finished: phase === "result" });
 
   const hormoneTypes: HormoneType[] = ["dopamine", "serotonin", "testosterone", "estrogen", "endorphin", "oxytocin", "cortisol"];
   const scores = Object.fromEntries(hormoneTypes.map((h) => [h, 0])) as Record<HormoneType, number>;

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -238,6 +239,7 @@ export default function TrustStyleTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [scores, setScores] = useState<Record<StyleKey, number>>({ quick: 0, earned: 0, cautious: 0, guarded: 0 })
   const [result, setResult] = useState<StyleKey | null>(null)
+  useRecordFinishedTest({ testId: "trust-style", title: "TrustStyleTest", finished: Boolean(result) });
 
   function pick(choiceIndex: number) {
     const style = STYLE_ORDER[choiceIndex]

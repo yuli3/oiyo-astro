@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -221,6 +222,7 @@ export default function PersonalBoundariesTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [domainScores, setDomainScores] = useState<Record<Domain, number>>({ emotional: 0, physical: 0, time: 0, digital: 0 })
   const [done, setDone] = useState(false)
+  useRecordFinishedTest({ testId: "personal-boundaries", title: "PersonalBoundariesTest", finished: Boolean(done) });
 
   function pick(val: number) {
     const q = questions[current]

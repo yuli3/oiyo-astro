@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import {
   Radar, RadarChart, PolarGrid, PolarAngleAxis, ResponsiveContainer, Tooltip
@@ -967,6 +968,7 @@ export default function MbtiLoveTest({ locale = 'ko' }: Props) {
   const [answers, setAnswers] = useState<number[]>([])
   const [selected, setSelected] = useState<number | null>(null)
   const [result, setResult] = useState<{ type: MBTIType; scores: Score } | null>(null)
+  useRecordFinishedTest({ testId: "mbti-love", title: "MbtiLoveTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false)
 
   const q = questions[current]

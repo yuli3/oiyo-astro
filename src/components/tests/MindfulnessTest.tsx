@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -225,6 +226,7 @@ export default function MindfulnessTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ level: Level; score: number } | null>(null)
+  useRecordFinishedTest({ testId: "mindfulness", title: "MindfulnessTest", finished: Boolean(result) });
 
   function pick(val: number) {
     // val is index 0–5; score value is index+1 (1=Almost Always to 6=Almost Never)

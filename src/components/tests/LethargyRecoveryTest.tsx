@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton';
 import ResultNextSteps from '../shared/ResultNextSteps';
@@ -137,6 +138,7 @@ export default function LethargyRecoveryTest({ locale: rawLocale = 'ko' }: Props
   const [current, setCurrent] = useState(0)
   const [scores, setScores] = useState<Record<ResultKey, number>>({ rest: 0, activation: 0, meaning: 0, support: 0 })
   const [result, setResult] = useState<ResultKey | null>(null)
+  useRecordFinishedTest({ testId: "lethargy-recovery", title: "LethargyRecoveryTest", finished: Boolean(result) });
 
   function pick(value: number) {
     const next = { ...scores }

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 
 import { Questionnaire } from '@/components/ui/questionnaire'
 
@@ -266,6 +267,7 @@ export default function CompatibilityTest({ locale: lp = 'ko' }: Props) {
   const lb = LABELS[locale]
 
   const [phase, setPhase] = useState<Phase>('self')
+  useRecordFinishedTest({ testId: "compatibility", title: "CompatibilityTest", finished: phase === "result" });
   const [selfAnswers, setSelfAnswers] = useState<number[]>([])
   const [partnerAnswers, setPartnerAnswers] = useState<number[]>([])
   const [current, setCurrent] = useState(0)

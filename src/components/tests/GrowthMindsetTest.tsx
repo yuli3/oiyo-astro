@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
 import ShareResultButton from "../shared/ShareResultButton";
 import { Questionnaire } from "@/components/ui/questionnaire";
@@ -327,6 +328,7 @@ function getType(score: number): MindsetType {
 }
 
 export default function GrowthMindsetTest({ locale: localeProp }: Props) {
+
   const lp = (localeProp ?? "en").toLowerCase();
   const locale: SupportedLocale = (["ko", "en", "ja", "zh", "fr", "es"].includes(lp) ? lp : "en") as SupportedLocale;
   const tx = t[locale];
@@ -334,6 +336,7 @@ export default function GrowthMindsetTest({ locale: localeProp }: Props) {
   const [idx, setIdx] = useState(0);
   const [answers, setAnswers] = useState<number[]>([]);
   const [result, setResult] = useState<{ type: MindsetType; score: number } | null>(null);
+  useRecordFinishedTest({ testId: "growth-mindset", title: "GrowthMindsetTest", finished: Boolean(result) });
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {

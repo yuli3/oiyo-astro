@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
 import { Questionnaire } from '@/components/ui/questionnaire'
 import ShareResultButton from '../shared/ShareResultButton'
 
@@ -177,6 +178,7 @@ export default function AnimalPersonalityTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [scores, setScores] = useState<Record<AnimalType, number>>({ eagle: 0, wolf: 0, fox: 0, bear: 0, dolphin: 0, owl: 0, tiger: 0, rabbit: 0 })
   const [result, setResult] = useState<AnimalType | null>(null)
+  useRecordFinishedTest({ testId: "animal-personality", title: "AnimalPersonalityTest", finished: Boolean(result) });
 
   function pick(animal: AnimalType) {
     const newScores = { ...scores, [animal]: scores[animal] + 1 }
