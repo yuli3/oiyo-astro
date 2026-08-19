@@ -1,0 +1,137 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import ZodiacYearFinder from '../../../components/tools/ZodiacYearFinder';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const pageUrl = `https://oiyo.net/${locale}/chinese-zodiac/year/`;
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: {
+    title: '띠 조견표 — 생년월일로 확정하는 12간지, 입춘·음력설 기준까지',
+    description: '연도만 적힌 조견표는 1·2월생에게 서로 다른 답을 냅니다. 양력·입춘·음력설 세 기준을 모두 계산해 그 해의 입춘과 설날 날짜까지 함께 보여줍니다.',
+  },
+  en: {
+    title: 'Chinese Zodiac Year Finder — Solar, Lichun and Lunar New Year',
+    description: 'Year-only tables disagree for January and February births. This computes all three conventions and shows that year’s actual lichun and lunar new year dates.',
+  },
+  ja: {
+    title: '干支早見表 — 生年月日で確定、立春・旧正月基準まで',
+    description: '年だけの早見表は1月・2月生まれに違う答えを出します。新暦・立春・旧正月の三基準をすべて計算し、その年の立春と旧正月の日付も示します。',
+  },
+  zh: {
+    title: '生肖对照表 — 按出生日期确定，含立春与农历新年算法',
+    description: '只写年份的对照表，对一月和二月出生者会给出不同答案。这里计算公历、立春、农历新年三种算法，并显示当年的立春与春节日期。',
+  },
+  fr: {
+    title: 'Année du zodiaque chinois — solaire, lichun et nouvel an lunaire',
+    description: 'Les tableaux par année se contredisent pour les naissances de janvier et février. Ici les trois conventions sont calculées, avec les dates réelles de lichun et du nouvel an lunaire.',
+  },
+  es: {
+    title: 'Año del zodiaco chino — solar, lichun y año nuevo lunar',
+    description: 'Las tablas por año se contradicen para nacimientos de enero y febrero. Aquí se calculan las tres convenciones, con las fechas reales de lichun y año nuevo lunar.',
+  },
+};
+
+const m = meta[locale] ?? meta.en;
+
+type Faq = { question: string; answer: string };
+const faqs: Record<Locale, Faq[]> = {
+  ko: [
+    { question: '1월생인데 조견표마다 띠가 다릅니다. 어느 것이 맞나요?', answer: '셋 다 각자의 쓰임에서 맞습니다. 사주를 볼 때는 입춘 기준, 설·춘절을 셀 때는 음력설 기준, 서류상 연도로 말할 때는 양력 기준입니다. 목적이 정해지면 답도 하나로 정해집니다.' },
+    { question: '입춘은 매년 같은 날인가요?', answer: '2월 3일에서 5일 사이에서 조금씩 움직입니다. 태양 황경이 315°가 되는 순간이라 해마다 몇 시간씩 어긋나고, 그래서 어떤 해는 3일이 됩니다.' },
+    { question: '음력 설날은 왜 매년 크게 움직이나요?', answer: '달의 삭에 맞추기 때문입니다. 설날은 언제나 1월 21일과 2월 20일 사이에 오고, 그 구간에 드는 삭이 하나뿐이라 그것이 그 해의 설날이 됩니다.' },
+    { question: '2월 21일 이후에 태어났으면 어떻게 되나요?', answer: '세 기준이 모두 같은 해를 가리킵니다. 그 뒤로는 어느 조견표를 봐도 답이 같습니다.' },
+  ],
+  en: [
+    { question: 'I was born in January and tables disagree. Which is right?', answer: 'All three are right for their own use. Saju and bazi count from lichun, the holiday counts from lunar new year, and paperwork counts from 1 January. Fix the purpose and the answer becomes single.' },
+    { question: 'Is lichun always the same date?', answer: 'It drifts between 3 and 5 February. It is the moment the sun reaches 315° of ecliptic longitude, which shifts by hours each year, so some years it lands on the 3rd.' },
+    { question: 'Why does lunar new year move so much?', answer: 'It follows the new moon. The date always falls between 21 January and 20 February, and exactly one new moon lands in that window, which is the one that starts the year.' },
+    { question: 'What if I was born after 21 February?', answer: 'All three conventions point at the same year, so every table agrees from then on.' },
+  ],
+  ja: [
+    { question: '1月生まれですが早見表ごとに干支が違います。どれが正しいですか。', answer: 'それぞれの用途で三つとも正しいです。四柱推命は立春から、節句は旧正月から、書類上は1月1日から数えます。目的が決まれば答えも一つになります。' },
+    { question: '立春は毎年同じ日ですか。', answer: '2月3日から5日の間で少しずつ動きます。太陽黄経が315°になる瞬間で、年ごとに数時間ずれるため3日になる年もあります。' },
+    { question: '旧正月はなぜ大きく動くのですか。', answer: '朔に合わせるからです。旧正月は必ず1月21日から2月20日の間に来て、その区間に入る朔は一つだけなので、それがその年の旧正月になります。' },
+    { question: '2月21日以降に生まれた場合は。', answer: '三つの基準がすべて同じ年を指します。それ以降はどの早見表でも答えが同じです。' },
+  ],
+  zh: [
+    { question: '我是一月出生，各家对照表说法不一。哪个才对？', answer: '就各自的用途而言三者都对。四柱八字从立春起算，节日从农历新年起算，证件上则从1月1日起算。用途一旦确定，答案也就唯一了。' },
+    { question: '立春每年都是同一天吗？', answer: '在2月3日至5日之间浮动。它是太阳黄经到达 315° 的时刻，每年相差数小时，因此有些年份会落在3日。' },
+    { question: '农历新年为什么变动这么大？', answer: '因为它跟随朔日。春节总在1月21日至2月20日之间，而这段区间内只有一个朔日，那便是当年的正月初一。' },
+    { question: '2月21日之后出生怎么算？', answer: '三种算法指向同一年，此后任何对照表的答案都一致。' },
+  ],
+  fr: [
+    { question: 'Né en janvier, les tableaux se contredisent. Lequel est juste ?', answer: 'Les trois sont justes dans leur usage. Le saju et le bazi comptent depuis lichun, la fête depuis le nouvel an lunaire, les papiers depuis le 1er janvier. Fixez l’usage et la réponse devient unique.' },
+    { question: 'Lichun tombe-t-il toujours à la même date ?', answer: 'Il oscille entre le 3 et le 5 février. C’est l’instant où le soleil atteint 315° de longitude écliptique, décalé de quelques heures chaque année.' },
+    { question: 'Pourquoi le nouvel an lunaire bouge-t-il autant ?', answer: 'Il suit la nouvelle lune. La date tombe toujours entre le 21 janvier et le 20 février, et une seule nouvelle lune entre dans cette fenêtre.' },
+    { question: 'Et si je suis né après le 21 février ?', answer: 'Les trois conventions désignent la même année : tous les tableaux concordent à partir de là.' },
+  ],
+  es: [
+    { question: 'Nací en enero y las tablas discrepan. ¿Cuál es la correcta?', answer: 'Las tres son correctas en su propio uso. El saju y el bazi cuentan desde lichun, la festividad desde el año nuevo lunar y los papeles desde el 1 de enero. Fijado el uso, la respuesta es única.' },
+    { question: '¿Lichun cae siempre en la misma fecha?', answer: 'Oscila entre el 3 y el 5 de febrero. Es el instante en que el sol alcanza los 315° de longitud eclíptica, desplazado unas horas cada año.' },
+    { question: '¿Por qué se mueve tanto el año nuevo lunar?', answer: 'Sigue a la luna nueva. La fecha cae siempre entre el 21 de enero y el 20 de febrero, y solo una luna nueva entra en esa ventana.' },
+    { question: '¿Y si nací después del 21 de febrero?', answer: 'Las tres convenciones señalan el mismo año, así que desde entonces todas las tablas coinciden.' },
+  ],
+};
+
+const f = faqs[locale] ?? faqs.en;
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    '@id': `${pageUrl}#app`,
+    name: m.title,
+    url: pageUrl,
+    applicationCategory: 'UtilitiesApplication',
+    operatingSystem: 'Web',
+    description: m.description,
+    isAccessibleForFree: true,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    '@id': `${pageUrl}#faq`,
+    mainEntity: f.map((x) => ({
+      '@type': 'Question',
+      name: x.question,
+      acceptedAnswer: { '@type': 'Answer', text: x.answer },
+    })),
+  },
+];
+---
+
+<Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  <div class="mx-auto max-w-3xl px-4 py-10">
+    <ZodiacYearFinder client:load locale={locale} />
+
+    <section class="mt-12">
+      <h2 class="text-xl font-bold text-slate-900">
+        {locale === 'ko' ? '자주 묻는 질문'
+          : locale === 'ja' ? 'よくある質問'
+          : locale === 'zh' ? '常见问题'
+          : locale === 'fr' ? 'Questions fréquentes'
+          : locale === 'es' ? 'Preguntas frecuentes'
+          : 'Frequently asked questions'}
+      </h2>
+      <div class="mt-4 divide-y divide-slate-200 rounded-xl border border-slate-200 bg-white">
+        {f.map((x) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-slate-900">{x.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-slate-700">{x.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+
+    <RelatedTools locale={locale} tools={['saju', 'natal', 'zodiac', 'fortunePeriodic']} current="chineseZodiac" />
+  </div>
+</Layout>
