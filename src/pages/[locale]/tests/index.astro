@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 const { locale } = Astro.params as { locale: Locale };
 
 const title: Record<Locale, string> = {
-  ko: '성격·운세 테스트 허브 — OIYO',
+  ko: '성격 검사와 운세 — OIYO',
   en: 'Personality & Fortune Tests — OIYO',
   ja: '性格・占いテストハブ — OIYO',
   zh: '性格与运势测试中心 — OIYO',
@@ -32,7 +32,7 @@ const title: Record<Locale, string> = {
 };
 
 const description: Record<Locale, string> = {
-  ko: 'MBTI, 에니어그램, 빅파이브, 사주, 수비학, 별자리 등 다양한 성격·운세 테스트를 한 곳에서 무료로 이용하세요.',
+  ko: 'MBTI, 에니어그램, 빅파이브, 사주, 수비학, 별자리. 한 페이지에 모아 두었다.',
   en: 'Free personality and fortune tests including MBTI, Enneagram, Big Five, Saju, Numerology, and Zodiac — all in one place.',
   ja: 'MBTI、エニアグラム、ビッグファイブ、四柱、数秘術、星座など様々な性格・占いテストを無料でご利用いただけます。',
   zh: '免费使用MBTI、九型人格、大五人格、四柱、数字命理、星座等各种性格与运势测试。',
@@ -41,7 +41,7 @@ const description: Record<Locale, string> = {
 };
 
 const heading: Record<Locale, string> = {
-  ko: '성격 & 운세 테스트',
+  ko: '성격 검사와 운세',
   en: 'Personality & Fortune Tests',
   ja: '性格 & 占いテスト',
   zh: '性格与运势测试',
@@ -50,7 +50,7 @@ const heading: Record<Locale, string> = {
 };
 
 const subheading: Record<Locale, string> = {
-  ko: '나를 더 깊이 이해하는 과학적·전통적 방법들을 한 곳에서',
+  ko: '검사도 있고 사주도 있다.',
   en: 'Science-backed and traditional methods to understand yourself better',
   ja: '科学的・伝統的方法で自分をより深く理解する',
   zh: '科学与传统方法，更深入地了解自己',
@@ -102,7 +102,7 @@ const categories = [
         bg: 'bg-green-50',
         badge: '9 types',
         title: { ko: '에니어그램 테스트', en: 'Enneagram Test', ja: 'エニアグラムテスト', zh: '九型人格测试', fr: 'Test Ennéagramme', es: 'Test Eneagrama' },
-        desc: { ko: '나의 핵심 동기와 두려움을 탐색하세요', en: 'Explore your core motivations and fears', ja: '核心的な動機と恐怖を探求', zh: '探索你的核心动机与恐惧', fr: 'Explorez vos motivations et craintes profondes', es: 'Explora tus motivaciones y miedos centrales' },
+        desc: { ko: '왜 그렇게 반응하는지', en: 'Explore your core motivations and fears', ja: '核心的な動機と恐怖を探求', zh: '探索你的核心动机与恐惧', fr: 'Explorez vos motivations et craintes profondes', es: 'Explora tus motivaciones y miedos centrales' },
         href: localePath(locale, '/enneagram/test'),
       },
       {

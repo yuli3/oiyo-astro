@@ -17,7 +17,7 @@ type L = Locale
 const txt = (map: Record<L, string>) => map[locale] ?? map.en
 
 const heroTitle = txt({
-  ko: '나를 알아가는 가장 쉬운 방법',
+  ko: '나에 대해 알고 싶을 때',
   en: 'Know Yourself, Deeply',
   ja: '自分を深く知る、最も簡単な方法',
   zh: '了解自己，最简单的方式',
@@ -26,7 +26,7 @@ const heroTitle = txt({
 })
 
 const heroSub = txt({
-  ko: 'MBTI부터 사주까지, 심리학과 동양 철학으로 나를 탐색하는 무료 도구 모음.',
+  ko: 'MBTI도 있고 사주도 있다. 가입 없이 본다.',
   en: 'From MBTI to Saju — free tools for self-exploration through psychology and Eastern wisdom.',
   ja: 'MBTIから四柱推命まで — 心理学と東洋哲学で自分を探る無料ツール集。',
   zh: '从MBTI到四柱推命 — 通过心理学与东方智慧免费探索自我。',
@@ -49,9 +49,9 @@ const metaDescription = locale === 'en'
   : heroSub
 
 const statsData = [
-  { value: '28+', label: txt({ ko: '자기 탐색 도구', en: 'Self-Discovery Tools', ja: '自己探索ツール', zh: '自我探索工具', fr: 'Outils d\'Exploration', es: 'Herramientas' }) },
+  { value: '28+', label: txt({ ko: '검사·계산기', en: 'Self-Discovery Tools', ja: '自己探索ツール', zh: '自我探索工具', fr: 'Outils d\\'Exploration', es: 'Herramientas' }) },
   { value: '6', label: txt({ ko: '지원 언어', en: 'Languages', ja: '対応言語', zh: '支持语言', fr: 'Langues', es: 'Idiomas' }) },
-  { value: '100%', label: txt({ ko: '완전 무료', en: 'Free Forever', ja: '完全無料', zh: '完全免费', fr: 'Totalement Gratuit', es: 'Totalmente Gratis' }) },
+  { value: '100%', label: txt({ ko: '무료', en: 'Free Forever', ja: '完全無料', zh: '完全免费', fr: 'Totalement Gratuit', es: 'Totalmente Gratis' }) },
   { value: '22', label: txt({ ko: '오라클 카드', en: 'Oracle Cards', ja: 'オラクルカード', zh: '神谕牌', fr: 'Cartes Oracle', es: 'Cartas Oráculo' }) },
 ]
 
@@ -65,19 +65,19 @@ const popularTests = [
   {
     icon: '🔮', badge: '9 types', bg: 'bg-green-50', border: 'border-green-100',
     title: txt({ ko: '에니어그램', en: 'Enneagram', ja: 'エニアグラム', zh: '九型人格', fr: 'Ennéagramme', es: 'Eneagrama' }),
-    desc: txt({ ko: '핵심 동기와 두려움 탐색', en: 'Core motivations & fears', ja: '核心的動機と恐怖を探求', zh: '探索核心动机与恐惧', fr: 'Motivations et peurs profondes', es: 'Motivaciones y miedos centrales' }),
+    desc: txt({ ko: '왜 그렇게 반응하는지', en: 'Core motivations & fears', ja: '核心的動機と恐怖を探求', zh: '探索核心动机与恐惧', fr: 'Motivations et peurs profondes', es: 'Motivaciones y miedos centrales' }),
     href: localePath(locale, '/enneagram/test'),
   },
   {
     icon: '🌊', badge: 'OCEAN', bg: 'bg-cyan-50', border: 'border-cyan-100',
     title: txt({ ko: '빅파이브 성격', en: 'Big Five Personality', ja: 'ビッグファイブ', zh: '大五人格', fr: 'Big Five', es: 'Cinco Grandes' }),
-    desc: txt({ ko: '5가지 차원으로 성격 분석', en: '5-dimension personality profile', ja: '5次元の性格プロファイル', zh: '5维度性格分析', fr: 'Profil de personnalité 5 dimensions', es: 'Perfil de personalidad 5 dimensiones' }),
+    desc: txt({ ko: '성격 다섯 축', en: '5-dimension personality profile', ja: '5次元の性格プロファイル', zh: '5维度性格分析', fr: 'Profil de personnalité 5 dimensions', es: 'Perfil de personalidad 5 dimensiones' }),
     href: localePath(locale, '/big5/test'),
   },
   {
     icon: '☯️', badge: txt({ ko: '명리학', en: 'BaZi', ja: '四柱推命', zh: '八字', fr: 'BaZi', es: 'BaZi' }), bg: 'bg-amber-50', border: 'border-amber-100',
     title: txt({ ko: '사주 계산기', en: 'Saju Calculator', ja: '四柱推命', zh: '四柱八字', fr: 'Calculateur Saju', es: 'Calculadora Saju' }),
-    desc: txt({ ko: '생년월일로 사주팔자 분석', en: 'BaZi analysis from your birth date', ja: '生年月日で四柱推命を分析', zh: '根据出生日期分析八字', fr: 'Analyse BaZi selon votre date de naissance', es: 'Análisis BaZi con tu fecha de nacimiento' }),
+    desc: txt({ ko: '생년월일로 사주', en: 'BaZi analysis from your birth date', ja: '生年月日で四柱推命を分析', zh: '根据出生日期分析八字', fr: 'Analyse BaZi selon votre date de naissance', es: 'Análisis BaZi con tu fecha de nacimiento' }),
     href: localePath(locale, '/saju/calculator'),
   },
   {
@@ -89,7 +89,7 @@ const popularTests = [
   {
     icon: '💚', badge: txt({ ko: '애착', en: 'Attachment', ja: '愛着', zh: '依恋', fr: 'Attachement', es: 'Apego' }), bg: 'bg-green-50', border: 'border-green-100',
     title: txt({ ko: '애착유형 테스트', en: 'Attachment Style Test', ja: '愛着スタイルテスト', zh: '依恋类型测试', fr: 'Test de Style d\'Attachement', es: 'Test de Estilo de Apego' }),
-    desc: txt({ ko: '나의 관계 방식 이해하기', en: 'Understand your relationship patterns', ja: '自分の関係スタイルを理解する', zh: '了解你的关系模式', fr: 'Comprendre vos modèles relationnels', es: 'Entiende tus patrones relacionales' }),
+    desc: txt({ ko: '가까운 사람과 어떻게 붙는지', en: 'Understand your relationship patterns', ja: '自分の関係スタイルを理解する', zh: '了解你的关系模式', fr: 'Comprendre vos modèles relationnels', es: 'Entiende tus patrones relacionales' }),
     href: localePath(locale, '/attachment-style/test'),
   },
   {
@@ -112,7 +112,7 @@ const tarotSectionTitle = txt({
   es: 'Tu Tarot del Día',
 })
 const tarotSectionDesc = txt({
-  ko: '78장 정통 타로에서 오늘의 카드를 한 장. 키워드와 메시지, 오늘의 확언까지.',
+  ko: '78장 중에서 오늘 한 장. 키워드랑 짧은 말.',
   en: 'One card from the full 78-card tarot deck — keywords, message, and an affirmation for today.',
   ja: '78枚の本格タロットから今日の一枚。キーワードとメッセージ、今日のアファメーションまで。',
   zh: '从78张正统塔罗中抽取今日一张 — 关键词、讯息与今日的肯定语。',
@@ -142,7 +142,7 @@ const quickTests = [
 ]
 
 const fortuneSectionTitle = txt({
-  ko: '오늘의 운세, 바로 확인',
+  ko: '오늘 운세',
   en: "Check Today's Fortune",
   ja: '今日の運勢をすぐ確認',
   zh: '立即查看今日运势',
@@ -150,7 +150,7 @@ const fortuneSectionTitle = txt({
   es: 'Consulta la fortuna de hoy',
 })
 const fortuneSectionSub = txt({
-  ko: '생년월일만 입력하면 사주 오행·12지신·별자리를 한 번에 비교합니다.',
+  ko: '생일만 넣으면 사주·띠·별자리를 같이 본다.',
   en: 'Enter your birth date to compare Saju five elements, Chinese zodiac, and star sign at a glance.',
   ja: '生年月日を入力するだけで四柱五行・十二支・星座を一度に比較できます。',
   zh: '只需输入出生日期，即可一次比较四柱五行、生肖与星座。',
@@ -195,7 +195,7 @@ const personalMap = {
     <div class="relative z-10 max-w-3xl mx-auto text-center animate-fadeInUp">
       <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-green-100 text-green-700 text-xs font-bold mb-6 shadow-sm">
         <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-        OIYO — {txt({ ko: '무료 자기 탐색', en: 'Free Self-Discovery', ja: '無料自己探索', zh: '免费自我探索', fr: 'Autodécouverte Gratuite', es: 'Autodescubrimiento Gratuito' })}
+        OIYO — {txt({ ko: '검사와 사주', en: 'Free Self-Discovery', ja: '無料自己探索', zh: '免费自我探索', fr: 'Autodécouverte Gratuite', es: 'Autodescubrimiento Gratuito' })}
       </div>
       <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-green-950 mb-5 tracking-tight leading-tight">
         {heroTitle}
