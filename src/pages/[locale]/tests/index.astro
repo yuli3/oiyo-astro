@@ -569,6 +569,11 @@ const categories = [
       <p class="text-green-700 text-sm md:text-base leading-relaxed">
         {subheading[locale]}
       </p>
+      <p class="mt-3">
+        <a href={localePath(locale, '/achievements/')} class="text-sm font-bold text-green-800 underline">
+          {locale === 'ko' ? '테스트 업적' : locale === 'ja' ? 'テスト実績' : locale === 'zh' ? '测试成就' : locale === 'fr' ? 'Succès des tests' : locale === 'es' ? 'Logros de tests' : 'Test achievements'}
+        </a>
+      </p>
     </div>
   </section>
 

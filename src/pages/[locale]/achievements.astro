@@ -1,0 +1,24 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { LOCALES } from '../../i18n';
+import type { Locale } from '../../i18n';
+import TestAchievements from '../../components/shared/TestAchievements';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+const title: Record<Locale, string> = {
+  ko: '테스트 업적 — OIYO',
+  en: 'Test achievements — OIYO',
+  ja: 'テスト実績 — OIYO',
+  zh: '测试成就 — OIYO',
+  fr: 'Succès des tests — OIYO',
+  es: 'Logros de tests — OIYO',
+};
+---
+
+<Layout locale={locale} title={title[locale] ?? title.en} description={title[locale] ?? title.en}>
+  <TestAchievements client:load locale={locale} />
+</Layout>

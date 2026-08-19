@@ -10,6 +10,7 @@ import { getTestSourceNote } from '../data/test-source-notes';
 import TestRelatedReading from '../components/shared/TestRelatedReading.astro';
 import { getRelatedReading } from '../data/test-related-reading';
 import AhoxyWelcome from '../components/shared/AhoxyWelcome.astro';
+import TestPlayBeacon from '../components/shared/TestPlayBeacon';
 
 interface Props {
   title: string;
@@ -68,6 +69,8 @@ const siteUrl = Astro.site?.toString() ?? 'https://oiyo.net';
 const faviconUrl = new URL('/favicon.svg', Astro.site).toString();
 const themeColor = '#65a30d';
 const isHomeRoute = routeWithoutLocale === '/';
+const looksLikeTest = routeWithoutLocale !== '/achievements' && (Boolean(testSourceNote) || /test/.test(routeWithoutLocale));
+const testId = routeWithoutLocale.replace(/^\/+|\/+$/g, '') || 'home';
 const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es: 'Inicio' } as Record<string, string>)[locale] ?? 'Home';
 ---
 
@@ -188,6 +191,7 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
       </nav>
     )}
     <main id="main-content">
+      {looksLikeTest && <TestPlayBeacon client:load testId={testId} />}
       {heading && (
         <div class="mx-auto max-w-3xl px-4 pt-8">
           <h1 class="text-2xl font-black tracking-tight text-foreground">{heading}</h1>
