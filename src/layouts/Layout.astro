@@ -162,12 +162,22 @@ const homeLabel = ({ ko: '홈', ja: 'ホーム', zh: '首页', fr: 'Accueil', es
 
     <!-- GA4 — same family property as blog/wiki (G-915L6V38X6), split by hostname -->
     <link rel="preconnect" href="https://www.googletagmanager.com" />
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-915L6V38X6"></script>
     <script is:inline>
+      // Local hosts must not report to the production property. Dev and local
+      // preview were reaching it: 173 sessions and 2,295 pageviews in 28 days,
+      // about a quarter of blog's real volume, which inflated every
+      // pageview-based number we reasoned from (2026-08-19).
+      // window.gtag is defined either way so callers never have to branch.
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-915L6V38X6');
+      window.gtag = function () { window.dataLayer.push(arguments); };
+      if (!/^(localhost|127\.0\.0\.1|0\.0\.0\.0|\[::1\])$/.test(location.hostname)) {
+        gtag('js', new Date());
+        gtag('config', 'G-915L6V38X6');
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + 'G-915L6V38X6';
+        document.head.appendChild(s);
+      }
     </script>
 
     <!-- Google AdSense Auto Ads — same publisher as blog/wiki (ca-pub-9541920090543312) -->

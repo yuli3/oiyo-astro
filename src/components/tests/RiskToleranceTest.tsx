@@ -275,12 +275,12 @@ export default function RiskToleranceTest({ locale: lp = 'ko' }: Props) {
   const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{
-  useRecordFinishedTest({ testId: "risk-tolerance", title: "RiskToleranceTest", finished: Boolean(result) });
     overall: RiskLevel
     financialScore: number
     lifeScore: number
     overallScore: number
   } | null>(null)
+  useRecordFinishedTest({ testId: "risk-tolerance", title: "RiskToleranceTest", finished: Boolean(result) });
 
   function calcResult(ans: number[]): typeof result {
     let fSum = 0

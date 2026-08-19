@@ -1081,7 +1081,6 @@ export default function MbtiCareerTest({ locale: localeProp = 'ko' }: Props) {
   // 되돌아갔을 때 선택 표시가 되지 않는다.
   const [answers, setAnswers] = useState<number[]>([])
   const [result, setResult] = useState<{ type: MBTIType; scores: Score } | null>(() => {
-  useRecordFinishedTest({ testId: "mbti-career", title: "MbtiCareerTest", finished: Boolean(result) });
     if (typeof window !== 'undefined') {
       const p = new URLSearchParams(window.location.search)
       const t = p.get('type') as MBTIType | null
@@ -1092,6 +1091,7 @@ export default function MbtiCareerTest({ locale: localeProp = 'ko' }: Props) {
     }
     return null
   })
+  useRecordFinishedTest({ testId: "mbti-career", title: "MbtiCareerTest", finished: Boolean(result) });
 
   const finished = current >= questions.length
 
