@@ -1,6 +1,7 @@
 import { useState, useRef, useCallback } from "react";
 import type { Locale } from "../../i18n";
 import { Spinner } from "../ui/spinner";
+import { TarotCardFace, romanMajor } from "./TarotCardFace";
 
 interface Props {
   locale: Locale;
@@ -436,25 +437,15 @@ export default function TarotDailyCard({ locale }: Props) {
                 <CardCornerFlourish className={`absolute right-1.5 top-1.5 rotate-90 ${isReversed ? "text-amber-500" : "text-green-300"}`} />
                 <CardCornerFlourish className={`absolute bottom-1.5 right-1.5 rotate-180 ${isReversed ? "text-amber-500" : "text-green-300"}`} />
                 <CardCornerFlourish className={`absolute bottom-1.5 left-1.5 -rotate-90 ${isReversed ? "text-amber-500" : "text-green-300"}`} />
-                {card.number !== undefined && (card.suit ? SUIT_SYMBOLS[card.suit] !== undefined : true) ? (
-                  // Real Rider-Waite-Smith artwork (1909, public domain) — Major
-                  // Arcana from /images/tarot, Minor Arcana from /images/tarot-minor.
-                  <div style={{ position: "absolute", inset: "10px", borderRadius: "3px", overflow: "hidden", transform: isReversed ? "rotate(180deg)" : "none" }}>
-                    <img
-                      src={
-                        card.suit
-                          ? `/images/tarot-minor/${card.suit}-${String(card.number).padStart(2, '0')}.jpg`
-                          : `/images/tarot/tarot-${String(card.number).padStart(2, '0')}.jpg`
-                      }
-                      alt={cardName}
-                      loading="lazy"
-                      style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }}
+                {card.number !== undefined || card.suit ? (
+                  <div style={{ position: "absolute", inset: "10px", borderRadius: "3px", overflow: "hidden" }}>
+                    <TarotCardFace
+                      name={cardName}
+                      suit={card.suit}
+                      rank={card.number}
+                      roman={!card.suit && card.number !== undefined ? romanMajor(card.number) : undefined}
+                      reversed={isReversed}
                     />
-                    <div style={{ position: "absolute", insetInline: 0, bottom: 0, padding: "18px 6px 8px", background: "linear-gradient(to top, rgba(0,0,0,.88), transparent)" }}>
-                      <p style={{ fontFamily: "serif", fontWeight: "bold", fontSize: "12px", letterSpacing: "0.15em", color: "#fff", textTransform: "uppercase", textAlign: "center" }}>
-                        {cardName}
-                      </p>
-                    </div>
                   </div>
                 ) : (
                   // Fallback for any card the data doesn't give a number for.

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { decodeResult, writeResultHash } from '../../lib/result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
+import { TarotCardFace, romanMajor } from './TarotCardFace';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 type Spread = 1 | 3 | 5;
@@ -443,32 +444,20 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
                         The whole image+caption block rotates together for a
                         reversed draw; the frame corners stay fixed. */}
                     <div
-                      className={`absolute inset-0 overflow-hidden rounded-xl border-2 bg-black shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)] ${
+                      className={`absolute inset-0 overflow-hidden rounded-xl border-2 bg-[#f7f1e1] shadow-md [backface-visibility:hidden] [transform:rotateY(180deg)] ${
                         dc.reversed ? 'border-rose-300' : 'border-amber-300'
                       }`}
                     >
-                      <div className={`relative h-full w-full ${dc.reversed ? 'rotate-180' : ''}`}>
-                        <img
-                          src={`/images/tarot/tarot-${String(dc.card.id).padStart(2, '0')}.jpg`}
-                          alt={dc.card.name[locale]}
-                          loading="lazy"
-                          className="absolute inset-0 h-full w-full object-cover"
-                        />
-                        <div className="absolute inset-x-0 bottom-0 flex flex-col items-center gap-1 bg-gradient-to-t from-black/85 via-black/40 to-transparent px-2 pb-1.5 pt-6">
-                          <span className="text-[10px] sm:text-xs font-bold text-white text-center leading-tight drop-shadow">
-                            {dc.card.name[locale]}
-                          </span>
-                          <span className={`text-[8px] px-1.5 py-0.5 rounded-full font-semibold ${
-                            dc.reversed ? 'bg-rose-100 text-rose-600' : 'bg-green-100 text-green-600'
-                          }`}>
-                            {dc.reversed ? t.reversedLabel : t.uprightLabel}
-                          </span>
-                        </div>
-                      </div>
-                      <CardCornerFlourish className="absolute left-1 top-1 text-amber-300" />
-                      <CardCornerFlourish className="absolute right-1 top-1 rotate-90 text-amber-300" />
-                      <CardCornerFlourish className="absolute bottom-1 right-1 rotate-180 text-amber-300" />
-                      <CardCornerFlourish className="absolute bottom-1 left-1 -rotate-90 text-amber-300" />
+                      <TarotCardFace
+                        name={dc.card.name[locale]}
+                        symbol={dc.card.symbol}
+                        roman={romanMajor(dc.card.id)}
+                        reversed={dc.reversed}
+                      />
+                      <CardCornerFlourish className="absolute left-1 top-1 text-amber-700" />
+                      <CardCornerFlourish className="absolute right-1 top-1 rotate-90 text-amber-700" />
+                      <CardCornerFlourish className="absolute bottom-1 right-1 rotate-180 text-amber-700" />
+                      <CardCornerFlourish className="absolute bottom-1 left-1 -rotate-90 text-amber-700" />
                     </div>
                   </div>
                 </button>
