@@ -1,8 +1,10 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { OrbitControls } from "@react-three/drei";
-import { useMemo, useRef } from "react";
+import { OrbitControls, useTexture } from "@react-three/drei";
+import { Suspense, useMemo, useRef } from "react";
 import * as THREE from "three";
 import { REINCARNATION_COUNTRIES, latLonToCartesian, type ReincarnationCountry } from "../../lib/reincarnation";
+
+const EARTH_MAP = "/textures/earth-blue-marble.jpg";
 
 interface Props {
   focusIso3?: string;
@@ -10,6 +12,27 @@ interface Props {
   hitIso3: string[];
   yaw: number;
   onSelect: (iso2: string) => void;
+}
+
+function BareEarth() {
+  return (
+    <mesh>
+      <sphereGeometry args={[1, 64, 64]} />
+      <meshStandardMaterial color="#0f2744" roughness={0.85} metalness={0.1} />
+    </mesh>
+  );
+}
+
+function TexturedEarth() {
+  const map = useTexture(EARTH_MAP);
+  map.colorSpace = THREE.SRGBColorSpace;
+  map.anisotropy = 4;
+  return (
+    <mesh>
+      <sphereGeometry args={[1, 64, 64]} />
+      <meshStandardMaterial map={map} roughness={0.92} metalness={0.04} />
+    </mesh>
+  );
 }
 
 function lookQuaternion(lat: number, lon: number, yawDeg: number): THREE.Quaternion {
@@ -57,10 +80,9 @@ function Earth({
 
   return (
     <group ref={group}>
-      <mesh>
-        <sphereGeometry args={[1, 64, 64]} />
-        <meshStandardMaterial color="#0f2744" roughness={0.85} metalness={0.1} />
-      </mesh>
+      <Suspense fallback={<BareEarth />}>
+        <TexturedEarth />
+      </Suspense>
       <mesh>
         <sphereGeometry args={[1.04, 32, 32]} />
         <meshBasicMaterial color="#38bdf8" transparent opacity={0.08} />
@@ -91,14 +113,25 @@ export default function ReincarnationGlobe({ focusIso3, homeIso3, hitIso3, yaw, 
   const hit = useMemo(() => new Set(hitIso3), [hitIso3]);
 
   return (
-    <div className="h-80 w-full overflow-hidden rounded-2xl bg-slate-950 sm:h-96">
-      <Canvas camera={{ position: [0, 0, 2.6], fov: 40 }} dpr={[1, 1.5]}>
-        <color attach="background" args={["#020617"]} />
-        <ambientLight intensity={0.7} />
-        <directionalLight position={[3, 2, 4]} intensity={1.2} />
-        <Earth focus={focus} homeIso3={homeIso3} hit={hit} yaw={yaw} onSelect={onSelect} />
-        <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={0.6} />
-      </Canvas>
+    <div>
+      <div className="h-80 w-full overflow-hidden rounded-2xl bg-slate-950 sm:h-96">
+        <Canvas camera={{ position: [0, 0, 2.6], fov: 40 }} dpr={[1, 1.5]}>
+          <color attach="background" args={["#020617"]} />
+          <ambientLight intensity={0.55} />
+          <directionalLight position={[3, 2, 4]} intensity={1.35} />
+          <Earth focus={focus} homeIso3={homeIso3} hit={hit} yaw={yaw} onSelect={onSelect} />
+          <OrbitControls enablePan={false} enableZoom={false} rotateSpeed={0.6} />
+        </Canvas>
+      </div>
+      <p className="mt-2 text-[11px] leading-5 text-slate-400">
+        <a
+          className="underline decoration-slate-300 underline-offset-2 hover:text-slate-600"
+          href="https://visibleearth.nasa.gov/images/57752/blue-marble-land-surface-shallow-water-and-shaded-topography"
+        >
+          NASA Blue Marble
+        </a>
+        {" · "}NASA / GSFC / Reto Stöckli · public domain
+      </p>
     </div>
   );
 }
