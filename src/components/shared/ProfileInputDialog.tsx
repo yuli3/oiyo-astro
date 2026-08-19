@@ -18,13 +18,13 @@ import { OntologyBirthInput } from "@/components/ontology/OntologyBirthInput";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 
-const COPY: Record<Lang, { close: string; heading: string }> = {
-  ko: { close: "닫기", heading: "내 정보" },
-  en: { close: "Close", heading: "Your info" },
-  ja: { close: "閉じる", heading: "あなたの情報" },
-  zh: { close: "关闭", heading: "你的信息" },
-  fr: { close: "Fermer", heading: "Vos infos" },
-  es: { close: "Cerrar", heading: "Tus datos" },
+const COPY: Record<Lang, { close: string; heading: string; page: string }> = {
+  ko: { close: "닫기", heading: "내 정보", page: "온톨로지에서 입력" },
+  en: { close: "Close", heading: "Your info", page: "Enter on Ontology" },
+  ja: { close: "閉じる", heading: "あなたの情報", page: "存在論で入力" },
+  zh: { close: "关闭", heading: "你的信息", page: "到存在论填写" },
+  fr: { close: "Fermer", heading: "Vos infos", page: "Saisir dans Ontologie" },
+  es: { close: "Cerrar", heading: "Tus datos", page: "Completar en Ontología" },
 };
 
 export const asLang = (locale: string): Lang =>
@@ -64,6 +64,12 @@ export function ProfileInputDialog({
       <div className="max-h-[85vh] overflow-y-auto rounded-[28px] bg-white">
         <OntologyBirthInput locale={locale} onSaved={onClose} />
         <div className="px-4 pb-4 sm:px-5">
+          <a
+            href={`/${asLang(locale)}/ontology/`}
+            className="mb-2 flex h-11 w-full items-center justify-center rounded-2xl text-sm font-bold text-green-800 underline underline-offset-4"
+          >
+            {c.page}
+          </a>
           <button
             type="button"
             onClick={onClose}

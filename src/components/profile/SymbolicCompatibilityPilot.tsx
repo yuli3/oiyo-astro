@@ -4,6 +4,7 @@ import { ArrowRight, CalendarDays, Check, Link2, MapPin, RotateCcw, Share2, Shie
 import { useEffect, useState } from "react";
 
 import SymbolicGroupSnapshotPanel from "@/components/profile/SymbolicGroupSnapshotPanel";
+import { BirthDateField, ProfileNameField, ProfilePlaceField, ProfileTimeField } from "@/components/shared/BirthDateField";
 import { CITIES } from "@/lib/ontology/natal/signs";
 import { resolveZonedCivilTime } from "@/lib/user/birth-record";
 import {
@@ -83,26 +84,37 @@ function toBirthMoment(form: PersonForm): BirthMoment {
   };
 }
 
-function PersonCard({ copy, form, label, lang, onChange }: { copy: typeof COPY[Lang]; form: PersonForm; label: string; lang: Lang; onChange: (next: PersonForm) => void }) {
+function PersonCard({ copy, form, label, lang, onChange, self }: { copy: typeof COPY[Lang]; form: PersonForm; label: string; lang: Lang; onChange: (next: PersonForm) => void; self?: boolean }) {
   const inputClass = "mt-1 h-12 w-full rounded-2xl border border-stone-200 bg-stone-50 px-4 text-base font-semibold text-stone-900 outline-none focus:border-green-600 focus:bg-white focus:ring-4 focus:ring-green-600/10";
   return <fieldset className="rounded-[1.75rem] border border-lime-200 bg-white p-4 shadow-sm sm:p-5">
     <legend className="px-2 text-sm font-black text-green-900">{label}</legend>
     <div className="space-y-4">
-      <label className="block text-xs font-bold text-stone-600">{copy.name} <span className="font-normal text-stone-400">· {copy.nameHint}</span>
-        <input className={inputClass} value={form.name} maxLength={24} autoComplete="off" onChange={(e) => onChange({ ...form, name: e.target.value })} />
-      </label>
-      <label className="block text-xs font-bold text-stone-600"><CalendarDays className="mr-1 inline h-3.5 w-3.5" />{copy.date}
-        <input className={inputClass} required type="date" value={form.date} onChange={(e) => onChange({ ...form, date: e.target.value })} />
-      </label>
-      <label className="block text-xs font-bold text-stone-600">{copy.time} <span className="font-normal text-stone-400">· {copy.timeHint}</span>
-        <input className={inputClass} type="time" value={form.time} onChange={(e) => onChange({ ...form, time: e.target.value })} />
-      </label>
-      <label className="block text-xs font-bold text-stone-600"><MapPin className="mr-1 inline h-3.5 w-3.5" />{copy.city}
-        <select className={inputClass} required value={form.cityId} onChange={(e) => onChange({ ...form, cityId: e.target.value })}>
-          <option value="">{copy.cityHint}</option>
-          {CITIES.map((city) => <option key={city.id} value={city.id}>{city.label[lang]}</option>)}
-        </select>
-      </label>
+      {self ? (
+        <>
+          <ProfileNameField locale={lang} label={copy.name} value={form.name} onChange={(name) => onChange({ ...form, name })} />
+          <BirthDateField id="compat-me-date" locale={lang} label={copy.date} value={form.date} onChange={(date) => onChange({ ...form, date })} />
+          <ProfileTimeField locale={lang} label={copy.time} value={form.time} onChange={(time) => onChange({ ...form, time })} />
+          <ProfilePlaceField locale={lang} label={copy.city} value={form.cityId} onChange={(cityId) => onChange({ ...form, cityId })} />
+        </>
+      ) : (
+        <>
+          <label className="block text-xs font-bold text-stone-600">{copy.name} <span className="font-normal text-stone-400">· {copy.nameHint}</span>
+            <input className={inputClass} value={form.name} maxLength={24} autoComplete="off" onChange={(e) => onChange({ ...form, name: e.target.value })} />
+          </label>
+          <label className="block text-xs font-bold text-stone-600"><CalendarDays className="mr-1 inline h-3.5 w-3.5" />{copy.date}
+            <input className={inputClass} required type="date" value={form.date} onChange={(e) => onChange({ ...form, date: e.target.value })} />
+          </label>
+          <label className="block text-xs font-bold text-stone-600">{copy.time} <span className="font-normal text-stone-400">· {copy.timeHint}</span>
+            <input className={inputClass} type="time" value={form.time} onChange={(e) => onChange({ ...form, time: e.target.value })} />
+          </label>
+          <label className="block text-xs font-bold text-stone-600"><MapPin className="mr-1 inline h-3.5 w-3.5" />{copy.city}
+            <select className={inputClass} required value={form.cityId} onChange={(e) => onChange({ ...form, cityId: e.target.value })}>
+              <option value="">{copy.cityHint}</option>
+              {CITIES.map((city) => <option key={city.id} value={city.id}>{city.label[lang]}</option>)}
+            </select>
+          </label>
+        </>
+      )}
     </div>
   </fieldset>;
 }
@@ -278,7 +290,7 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
     {shareState === "loading" && <p role="status" className="mt-6 rounded-2xl border border-lime-200 bg-lime-50 px-4 py-3 text-center text-sm font-bold text-green-900">{shareCopy.loading}</p>}
     {receivedProfile && <p role="status" className="mt-6 rounded-2xl border border-lime-200 bg-lime-50 px-4 py-3 text-center text-sm font-bold text-green-900">{shareCopy.received}</p>}
     <form className="mt-8" onSubmit={submit}>
-      <div className={`grid gap-4 ${receivedProfile ? "mx-auto max-w-xl" : "sm:grid-cols-2"}`}><PersonCard copy={copy} form={a} label={copy.me} lang={lang} onChange={setA} />{!receivedProfile && <PersonCard copy={copy} form={b} label={copy.friend} lang={lang} onChange={setB} />}</div>
+      <div className={`grid gap-4 ${receivedProfile ? "mx-auto max-w-xl" : "sm:grid-cols-2"}`}><PersonCard copy={copy} form={a} label={copy.me} lang={lang} onChange={setA} self />{!receivedProfile && <PersonCard copy={copy} form={b} label={copy.friend} lang={lang} onChange={setB} />}</div>
       {error && <p role="alert" className="mt-4 rounded-2xl bg-red-50 px-4 py-3 text-sm font-bold text-red-700">{error}</p>}
       <button type="submit" className="mt-5 flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-green-800 px-6 text-base font-black text-white shadow-lg shadow-green-900/10 transition hover:bg-green-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800">{copy.action}<ArrowRight className="h-5 w-5" /></button>
       {!receivedProfile && <button type="button" onClick={() => void inviteFromForm()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl border border-green-700 bg-white px-6 text-sm font-black text-green-800"><Share2 className="h-4 w-4" />{shareCopy.invite}</button>}

@@ -41,12 +41,12 @@ interface BirthDateFieldProps {
 }
 
 const COPY = {
-  ko: { using: "내 정보", edit: "수정", missing: "생년월일이 아직 없어요", enter: "내 정보 입력" },
-  en: { using: "Your info", edit: "Edit", missing: "No birth date saved yet", enter: "Enter your info" },
-  ja: { using: "あなたの情報", edit: "編集", missing: "生年月日がまだありません", enter: "情報を入力" },
-  zh: { using: "你的信息", edit: "修改", missing: "尚未填写出生日期", enter: "填写信息" },
-  fr: { using: "Vos infos", edit: "Modifier", missing: "Aucune date de naissance enregistrée", enter: "Saisir vos infos" },
-  es: { using: "Tus datos", edit: "Editar", missing: "Aún no hay fecha de nacimiento", enter: "Introducir tus datos" },
+  ko: { using: "내 정보", edit: "수정", missing: "생년월일이 아직 없어요", enter: "내 정보 입력", page: "온톨로지에서 입력" },
+  en: { using: "Your info", edit: "Edit", missing: "No birth date saved yet", enter: "Enter your info", page: "Enter on Ontology" },
+  ja: { using: "あなたの情報", edit: "編集", missing: "生年月日がまだありません", enter: "情報を入力", page: "存在論で入力" },
+  zh: { using: "你的信息", edit: "修改", missing: "尚未填写出生日期", enter: "填写信息", page: "到存在论填写" },
+  fr: { using: "Vos infos", edit: "Modifier", missing: "Aucune date de naissance enregistrée", enter: "Saisir vos infos", page: "Saisir dans Ontologie" },
+  es: { using: "Tus datos", edit: "Editar", missing: "Aún no hay fecha de nacimiento", enter: "Introducir tus datos", page: "Completar en Ontología" },
 } as const;
 
 function BirthDateInput({ id, label, value, onChange, min, max, className }: BirthDateFieldProps) {
@@ -123,6 +123,9 @@ export function BirthDateField(props: BirthDateFieldProps) {
           >
             {c.enter}
           </button>
+          <a href={`/${lang}/ontology/`} className="mt-2 inline-block text-xs font-bold text-green-800 underline underline-offset-4">
+            {COPY[lang].page}
+          </a>
         </div>
       )}
       <ProfileInputDialog locale={lang} onClose={() => setDialogOpen(false)} open={dialogOpen} />
@@ -200,6 +203,9 @@ export function ProfileNameField({ className, label, locale, onChange, value, wa
           >
             {c.enter}
           </button>
+          <a href={`/${lang}/ontology/`} className="mt-2 inline-block text-xs font-bold text-green-800 underline underline-offset-4">
+            {COPY[lang].page}
+          </a>
         </div>
       )}
       {name && warning && (
@@ -240,7 +246,7 @@ export function BirthTimeField({ id, label, value, onChange, hint, disabled }: B
   );
 }
 
-type ChipCopy = { using: string; edit: string; missing: string; enter: string };
+type ChipCopy = { using: string; edit: string; missing: string; enter: string; page: string };
 
 function ProfileChip({
   className,
@@ -294,6 +300,9 @@ function ProfileChip({
           >
             {c.enter}
           </button>
+          <a href={`/${lang}/ontology/`} className="mt-2 inline-block text-xs font-bold text-green-800 underline underline-offset-4">
+            {c.page}
+          </a>
         </div>
       )}
       <ProfileInputDialog locale={lang} onClose={() => setDialogOpen(false)} open={dialogOpen} />

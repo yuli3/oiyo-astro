@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/BirthDateField'
 import { birthCivilToInstant } from '../../lib/ontology/kernel/time'
 import { calculateSaju, analyzeSaju } from '../../lib/ontology/saju/logic'
 import { FiveElement } from '../../lib/ontology/saju/types'
@@ -169,46 +170,37 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
       </div>
 
       <div className="rounded-2xl border bg-card p-5 space-y-4">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <label className="text-sm font-medium">
-            <span className="block mb-1 text-muted-foreground">{t.year}</span>
-            <input type="number" min={1920} max={now.getFullYear()} value={year}
-              onChange={(e) => { setYear(Number(e.target.value)); setDone(false) }}
-              className="w-full rounded-lg border bg-background px-3 py-2 text-sm" />
-          </label>
-          <label className="text-sm font-medium">
-            <span className="block mb-1 text-muted-foreground">{t.month}</span>
-            <input type="number" min={1} max={12} value={month}
-              onChange={(e) => { setMonth(Number(e.target.value)); setDone(false) }}
-              className="w-full rounded-lg border bg-background px-3 py-2 text-sm" />
-          </label>
-          <label className="text-sm font-medium">
-            <span className="block mb-1 text-muted-foreground">{t.day}</span>
-            <input type="number" min={1} max={daysInMonth} value={day}
-              onChange={(e) => { setDay(Number(e.target.value)); setDone(false) }}
-              className="w-full rounded-lg border bg-background px-3 py-2 text-sm" />
-          </label>
-          <label className="text-sm font-medium">
-            <span className="block mb-1 text-muted-foreground">{t.hour}</span>
-            <select value={hour ?? ''}
-              onChange={(e) => { setHour(e.target.value === '' ? null : Number(e.target.value)); setDone(false) }}
-              className="w-full rounded-lg border bg-background px-3 py-2 text-sm">
-              <option value="">{t.hourUnknown}</option>
-              {Array.from({ length: 24 }, (_, i) => <option key={i} value={i}>{String(i).padStart(2, '0')}:00</option>)}
-            </select>
-          </label>
-        </div>
-        <div className="flex items-center gap-3">
-          <span className="text-sm font-medium text-muted-foreground">{t.gender}</span>
-          <div className="flex gap-2">
-            {(['female', 'male'] as const).map((g) => (
-              <button key={g} onClick={() => { setGender(g); setDone(false) }}
-                className={`px-4 py-1.5 rounded-lg border text-sm font-medium transition-colors ${gender === g ? 'border-green-500 bg-green-50 text-green-700' : 'hover:bg-accent'}`}>
-                {g === 'male' ? t.male : t.female}
-              </button>
-            ))}
-          </div>
-        </div>
+        <BirthDateField
+          id="elemental-birth-date"
+          locale={l}
+          value={`${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`}
+          onChange={(v) => {
+            const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v)
+            if (!m) return
+            setYear(Number(m[1]))
+            setMonth(Number(m[2]))
+            setDay(Number(m[3]))
+            setDone(false)
+          }}
+        />
+        <ProfileTimeField
+          locale={l}
+          value={hour === null ? '' : `${String(hour).padStart(2, '0')}:00`}
+          onChange={(v) => {
+            if (!v) { setHour(null); setDone(false); return }
+            const m = /^(\d{2}):/.exec(v)
+            if (m) { setHour(Number(m[1])); setDone(false) }
+          }}
+        />
+        <ProfileGenderField
+          locale={l}
+          label={t.gender}
+          value={gender}
+          onChange={(g) => {
+            if (g === 'male' || g === 'female') setGender(g)
+            setDone(false)
+          }}
+        />
         <button onClick={compute}
           className="w-full rounded-xl bg-green-600 text-white px-4 py-3 text-sm font-bold hover:opacity-90 transition-opacity">
           {done ? t.recompute : t.calc}
