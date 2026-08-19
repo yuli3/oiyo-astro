@@ -121,4 +121,13 @@ describe("yongsin engine (부억용신)", () => {
       }
     }
   });
+
+  it("yongsin card titles do not repeat the same 이로운 기운 phrase", () => {
+    const heading = YONGSIN_C.heading.ko ?? "";
+    const attrs = YONGSIN_C.attrsHeading.ko ?? "";
+    const phrase = "이로운 기운";
+    expect(heading.includes(phrase) && attrs.includes(phrase)).toBe(false);
+    expect(heading.length).toBeGreaterThan(0);
+    expect(attrs.length).toBeGreaterThan(0);
+  });
 });

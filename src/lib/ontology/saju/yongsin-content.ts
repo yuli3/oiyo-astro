@@ -19,7 +19,7 @@ export const ELEMENT_NAME: Record<FiveElement, L<string>> = {
 
 // ── 용신 섹션 콘텐츠 ──
 export const YONGSIN_C = {
-  heading: { ko: "용신 — 나에게 이로운 기운", en: "Yongsin — Your Favorable Energy", ja: "用神 — あなたに有利な気", zh: "用神 — 对你有利的能量", fr: "Yongsin — Votre énergie favorable", es: "Yongsin — Tu energía favorable" } as L<string>,
+  heading: { ko: "용신(用神) — 사주를 균형 잡는 오행", en: "Yongsin — the element that balances the chart", ja: "用神 — 命式を整える五行", zh: "用神 — 平衡八字的五行", fr: "Yongsin — l'élément qui équilibre le thème", es: "Yongsin — el elemento que equilibra la carta" } as L<string>,
   concept: {
     ko: "용신(用神)은 사주 전체의 균형을 잡아주는 가장 이로운 오행입니다. 일간(나)의 강약을 보고, 너무 강하면 덜어내고 너무 약하면 북돋우는 오행을 고릅니다. 이 기운을 생활에서 가까이하면 흐름이 부드러워집니다.",
     en: "Yongsin is the element that best balances your whole chart. We read whether your Day Master (you) is strong or weak, then pick the element that drains an over-strong self or supports an over-weak one. Leaning into this energy smooths your flow.",
@@ -85,7 +85,7 @@ export const YONGSIN_C = {
     metal: { ko: "과하면 냉정·경직으로 흐를 수 있어 부드러움이 필요합니다.", en: "In excess it can turn cold and rigid; soften it.", ja: "過ぎると冷たさや硬直に流れやすいため、柔らかさが必要です。", zh: "过多时容易变得冷淡僵硬，需要柔和下来。", fr: "En excès, elle peut devenir froide et rigide ; adoucissez-la.", es: "En exceso, puede volverse fría y rígida; suavízala." } as L<string>,
     water: { ko: "과하면 불안·우유부단으로 흐를 수 있어 중심이 필요합니다.", en: "In excess it can drift into worry and indecision; find your center.", ja: "過ぎると不安や優柔不断に流れやすいため、中心軸が必要です。", zh: "过多时容易流向不安与优柔寡断，需要找回中心。", fr: "En excès, elle peut dériver vers l'inquiétude et l'indécision ; retrouvez votre centre.", es: "En exceso, puede derivar en preocupación e indecisión; encuentra tu centro." } as L<string>,
   } as Record<string, L<string>>,
-  attrsHeading: { ko: "이로운 기운을 부르는 생활 가이드", en: "Everyday guide to invite favorable energy", ja: "有利な気を招く暮らしのガイド", zh: "招来有利能量的生活指南", fr: "Guide quotidien pour inviter l'énergie favorable", es: "Guía diaria para invitar la energía favorable" } as L<string>,
+  attrsHeading: { ko: "용신을 키우는 일상", en: "Everyday ways to lean into Yongsin", ja: "用神を育てる暮らし", zh: "在日常中养用神", fr: "Le quotidien pour nourrir le Yongsin", es: "El día a día para cultivar el Yongsin" } as L<string>,
   labels: {
     color: { ko: "색", en: "Color", ja: "色", zh: "颜色", fr: "Couleur", es: "Color" } as L<string>,
     direction: { ko: "방위", en: "Direction", ja: "方位", zh: "方位", fr: "Direction", es: "Dirección" } as L<string>,

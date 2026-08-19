@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import ShareResultButton from '../shared/ShareResultButton';
 import CopyResultLink from '../shared/CopyResultLink';
-import { BirthDateField, BirthTimeField } from '../shared/BirthDateField';
+import { BirthDateField, ProfilePlaceField, ProfileTimeField } from '../shared/BirthDateField';
 import { computeNatalChart, type NatalChart } from '../../lib/ontology/natal/calculator';
 import { SIGN_INFO, CITIES, type NatalLocale } from '../../lib/ontology/natal/signs';
 // `readResultCode` is kept for one thing only: reading pre-T6 `?d=&c=&t=`
@@ -483,39 +483,19 @@ export default function NatalChartCalculator({ locale }: Props) {
           onChange={(v) => setForm((f) => ({ ...f, date: v }))}
         />
 
-        <div>
-          <div className="mb-1 flex items-center justify-between">
-            <span className="text-[11px] font-black uppercase tracking-wider text-green-600">{t.timeLabel}</span>
-            <label className="flex items-center gap-1.5 text-xs text-slate-500">
-              <input
-                type="checkbox"
-                checked={form.unknown}
-                onChange={(e) => setForm((f) => ({ ...f, unknown: e.target.checked }))}
-              />
-              {t.unknownTime}
-            </label>
-          </div>
-          <BirthTimeField
-            id="natal-birth-time"
-            value={form.time}
-            disabled={form.unknown}
-            onChange={(v) => setForm((f) => ({ ...f, time: v }))}
-          />
-        </div>
+        <ProfileTimeField
+          locale={locale}
+          label={t.timeLabel}
+          value={form.unknown ? "" : form.time}
+          onChange={(v) => setForm((f) => ({ ...f, time: v, unknown: !v }))}
+        />
 
-        <label className="block">
-          <span className="text-sm font-bold text-slate-700">{t.cityLabel}</span>
-          <select
-            value={form.city}
-            onChange={(e) => setForm((f) => ({ ...f, city: e.target.value }))}
-            className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm"
-          >
-            <option value="">{t.cityPlaceholder}</option>
-            {CITIES.map((c) => (
-              <option key={c.id} value={c.id}>{c.label[loc]}</option>
-            ))}
-          </select>
-        </label>
+        <ProfilePlaceField
+          locale={locale}
+          label={t.cityLabel}
+          value={form.city}
+          onChange={(v) => setForm((f) => ({ ...f, city: v }))}
+        />
 
         {error && <p className="text-sm font-semibold text-rose-600">{error}</p>}
 

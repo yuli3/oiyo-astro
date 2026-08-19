@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
-import { BirthDateField, BirthTimeField } from '../shared/BirthDateField';
+import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/BirthDateField';
 import { analyzeLifeCategories } from '../../lib/ontology/saju/categories';
 import { birthCivilToInstant } from '../../lib/ontology/kernel/time';
 import { STEM_ORDER } from '../../manifest/data/saju/stems';
@@ -540,7 +540,11 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     setDone(false);
   }
   function handleTimeChange(v: string) {
-    if (!v) return;
+    if (!v) {
+      setHour(null);
+      setDone(false);
+      return;
+    }
     const m = /^(\d{2}):/.exec(v);
     if (m) { setHour(Number(m[1])); setDone(false); }
   }
@@ -709,44 +713,22 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           max={new Date().toISOString().slice(0, 10)}
         />
 
-        <div>
-          <div className="mb-1 flex items-center justify-between">
-            <span className="text-[11px] font-black uppercase tracking-wider text-green-600">{t.birthTime}</span>
-            <label className="flex items-center gap-1.5 text-xs text-gray-500">
-              <input
-                type="checkbox"
-                checked={hour === null}
-                onChange={e => { setHour(e.target.checked ? null : 12); setDone(false); }}
-              />
-              {t.unknownTime}
-            </label>
-          </div>
-          <BirthTimeField
-            id="saju-birth-time"
-            value={timeValue}
-            disabled={hour === null}
-            onChange={handleTimeChange}
-          />
-        </div>
+        <ProfileTimeField
+          locale={locale}
+          label={t.birthTime}
+          value={timeValue}
+          onChange={handleTimeChange}
+        />
 
-        {/* Gender (for spouse-star analysis) */}
-        <div>
-          <label className="block text-sm font-medium text-gray-700 mb-1">
-            {({ ko: '성별', en: 'Gender', ja: '性別', zh: '性别', fr: 'Sexe', es: 'Sexo' } as Record<Locale, string>)[locale]}
-          </label>
-          <div className="grid grid-cols-2 gap-2">
-            {(['male', 'female'] as const).map(g => (
-              <button
-                key={g}
-                type="button"
-                onClick={() => { setGender(g); setDone(false); }}
-                className={`rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${gender === g ? 'border-green-500 bg-green-50 text-green-700' : 'border-gray-300 text-gray-600'}`}
-              >
-                {({ male: { ko: '남성', en: 'Male', ja: '男性', zh: '男', fr: 'Homme', es: 'Hombre' }, female: { ko: '여성', en: 'Female', ja: '女性', zh: '女', fr: 'Femme', es: 'Mujer' } } as Record<string, Record<Locale, string>>)[g][locale]}
-              </button>
-            ))}
-          </div>
-        </div>
+        <ProfileGenderField
+          locale={locale}
+          label={({ ko: '성별', en: 'Gender', ja: '性別', zh: '性别', fr: 'Sexe', es: 'Sexo' } as Record<Locale, string>)[locale]}
+          value={gender}
+          onChange={(g) => {
+            if (g === 'male' || g === 'female') setGender(g);
+            setDone(false);
+          }}
+        />
 
         <Button
           onClick={handleCalc}

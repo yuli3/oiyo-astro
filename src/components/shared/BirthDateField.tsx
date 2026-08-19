@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { Pencil } from "lucide-react";
 
 import { ProfileInputDialog, asLang } from "@/components/shared/ProfileInputDialog";
+import { CITIES } from "@/lib/ontology/natal/signs";
 import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import { useUserStore } from "@/lib/user/store/user-store";
 
@@ -236,5 +237,207 @@ export function BirthTimeField({ id, label, value, onChange, hint, disabled }: B
         className={FIELD_CLASS}
       />
     </div>
+  );
+}
+
+type ChipCopy = { using: string; edit: string; missing: string; enter: string };
+
+function ProfileChip({
+  className,
+  display,
+  label,
+  locale,
+  missing,
+  present,
+  unlock,
+}: {
+  className?: string;
+  display: string;
+  label?: string;
+  locale?: string;
+  missing: string;
+  present: boolean;
+  unlock?: string;
+}) {
+  const [dialogOpen, setDialogOpen] = useState(false);
+  const lang = asLang(locale ?? "en");
+  const c = COPY[lang] as ChipCopy;
+  return (
+    <div className={className}>
+      {label && (
+        <span className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600">{label}</span>
+      )}
+      {present ? (
+        <div className="flex items-center justify-between gap-3 rounded-2xl border border-green-100 bg-green-50 px-4 py-3">
+          <span className="min-w-0 truncate text-sm font-black text-green-900">
+            <span className="text-green-600">{c.using}</span>
+            <span className="mx-2 text-green-300">·</span>
+            {display}
+          </span>
+          <button
+            type="button"
+            onClick={() => setDialogOpen(true)}
+            className="inline-flex shrink-0 items-center gap-1 rounded-xl border border-green-200 bg-white px-3 py-1.5 text-xs font-bold text-green-800 transition hover:border-green-300"
+          >
+            <Pencil className="h-3.5 w-3.5" />
+            {c.edit}
+          </button>
+        </div>
+      ) : (
+        <div className="rounded-2xl border border-dashed border-green-200 bg-white px-4 py-4 text-center">
+          <p className="text-sm font-bold text-slate-500">{missing}</p>
+          {unlock && <p className="mt-1 text-xs leading-5 text-slate-400">{unlock}</p>}
+          <button
+            type="button"
+            onClick={() => setDialogOpen(true)}
+            className="mt-3 h-11 w-full rounded-2xl bg-green-700 text-sm font-black text-white transition hover:bg-green-800 active:scale-[0.98]"
+          >
+            {c.enter}
+          </button>
+        </div>
+      )}
+      <ProfileInputDialog locale={lang} onClose={() => setDialogOpen(false)} open={dialogOpen} />
+    </div>
+  );
+}
+
+const TIME_COPY = {
+  ko: { missing: "태어난 시각이 아직 없어요", unlock: "시각을 알려 주면 시주와 상승궁이 열립니다." },
+  en: { missing: "No birth time saved yet", unlock: "Add a time to unlock the hour pillar and rising sign." },
+  ja: { missing: "出生時刻がまだありません", unlock: "時刻を入れると時柱と上昇宮が開きます。" },
+  zh: { missing: "尚未填写出生时间", unlock: "补上时间后会打开时柱和上升宫。" },
+  fr: { missing: "Aucune heure de naissance", unlock: "Ajoutez l'heure pour ouvrir le pilier de l'heure et l'ascendant." },
+  es: { missing: "Aún no hay hora de nacimiento", unlock: "Añade la hora para abrir el pilar de la hora y el ascendente." },
+} as const;
+
+const PLACE_COPY = {
+  ko: { missing: "출생지가 아직 없어요", unlock: "도시를 알려 주면 시간대와 상승궁이 열립니다." },
+  en: { missing: "No birthplace saved yet", unlock: "Add a city to unlock timezone and the rising sign." },
+  ja: { missing: "出生地がまだありません", unlock: "都市を入れると時差と上昇宮が開きます。" },
+  zh: { missing: "尚未填写出生地", unlock: "补上城市后会打开时区和上升宫。" },
+  fr: { missing: "Aucun lieu de naissance", unlock: "Ajoutez une ville pour le fuseau et l'ascendant." },
+  es: { missing: "Aún no hay lugar de nacimiento", unlock: "Añade una ciudad para zona horaria y ascendente." },
+} as const;
+
+const GENDER_COPY = {
+  ko: { missing: "성별이 아직 없어요", unlock: "성별을 알려 주면 배우자궁이 열립니다.", male: "남성", female: "여성" },
+  en: { missing: "No gender saved yet", unlock: "Add gender to unlock spouse-palace reading.", male: "Male", female: "Female" },
+  ja: { missing: "性別がまだありません", unlock: "性別を入れると配偶者宮が開きます。", male: "男性", female: "女性" },
+  zh: { missing: "尚未填写性别", unlock: "补上性别后会打开配偶宫。", male: "男", female: "女" },
+  fr: { missing: "Aucun genre enregistré", unlock: "Ajoutez le genre pour ouvrir le palais du conjoint.", male: "Homme", female: "Femme" },
+  es: { missing: "Aún no hay género", unlock: "Añade el género para abrir el palacio del cónyuge.", male: "Hombre", female: "Mujer" },
+} as const;
+
+export function ProfileTimeField({
+  className,
+  label,
+  locale,
+  onChange,
+  value,
+}: {
+  className?: string;
+  label?: string;
+  locale?: string;
+  onChange: (value: string) => void;
+  value: string;
+}) {
+  const { parsed } = useProfilePrefill();
+  const lang = asLang(locale ?? "en");
+  const c = TIME_COPY[lang];
+  const profileTime =
+    parsed?.hour !== null && parsed?.hour !== undefined
+      ? `${String(parsed.hour).padStart(2, "0")}:${String(parsed.minute ?? 0).padStart(2, "0")}`
+      : "";
+
+  useEffect(() => {
+    if (profileTime !== value) onChange(profileTime);
+  }, [profileTime]);
+
+  return (
+    <ProfileChip
+      className={className}
+      display={profileTime}
+      label={label}
+      locale={locale}
+      missing={c.missing}
+      present={!!profileTime}
+      unlock={c.unlock}
+    />
+  );
+}
+
+export function ProfilePlaceField({
+  className,
+  label,
+  locale,
+  onChange,
+  value,
+}: {
+  className?: string;
+  label?: string;
+  locale?: string;
+  onChange: (value: string) => void;
+  value: string;
+}) {
+  const cityId = useUserStore((s) => s.profile.birthCityId) ?? "";
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => setHydrated(true), []);
+  const id = hydrated ? cityId : "";
+  const lang = asLang(locale ?? "en");
+  const c = PLACE_COPY[lang];
+  const city = CITIES.find((x) => x.id === id);
+  const display = city?.label[lang] ?? id;
+
+  useEffect(() => {
+    if (id !== value) onChange(id);
+  }, [id]);
+
+  return (
+    <ProfileChip
+      className={className}
+      display={display}
+      label={label}
+      locale={locale}
+      missing={c.missing}
+      present={!!id}
+      unlock={c.unlock}
+    />
+  );
+}
+
+export function ProfileGenderField({
+  className,
+  label,
+  locale,
+  onChange,
+  value,
+}: {
+  className?: string;
+  label?: string;
+  locale?: string;
+  onChange: (value: "female" | "male" | "") => void;
+  value: string;
+}) {
+  const gender = useUserStore((s) => s.profile.gender) ?? "";
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => setHydrated(true), []);
+  const g = hydrated && (gender === "male" || gender === "female") ? gender : "";
+  const lang = asLang(locale ?? "en");
+  const c = GENDER_COPY[lang];
+
+  useEffect(() => {
+    if (g !== value) onChange(g);
+  }, [g]);
+
+  return (
+    <ProfileChip
+      className={className}
+      display={g === "male" ? c.male : g === "female" ? c.female : ""}
+      label={label}
+      locale={locale}
+      missing={c.missing}
+      present={!!g}
+      unlock={c.unlock}
+    />
   );
 }
