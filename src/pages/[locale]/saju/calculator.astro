@@ -55,6 +55,15 @@ const meta: Record<Locale, { title: string; description: string }> = {
   },
 };
 
+const headings: Record<Locale, string> = {
+  ko: '사주 계산기',
+  en: 'Saju Palja Test & Calculator',
+  ja: '四柱計算機',
+  zh: '四柱计算器',
+  fr: 'Calculateur Saju',
+  es: 'Calculadora Saju',
+};
+
 const m = meta[locale] ?? meta.en;
 
 const content: Record<Locale, {
@@ -114,6 +123,7 @@ const content: Record<Locale, {
     ],
     faqTitle: 'Frequently asked questions',
     faqs: [
+      { question: 'What is a saju palja test?', answer: 'A saju palja test (사주팔자) is a Korean Four Pillars reading. Enter your birth date and time; this calculator shows the eight characters, your Day Master, and the Five Elements. It is a symbolic reading, not a scientific diagnosis.' },
       { question: 'What does Saju Palja mean?', answer: 'Saju means the four pillars of your birth year, month, day, and hour. Palja means the eight characters formed by the Heavenly Stem and Earthly Branch of those four pillars. Together, Saju Palja is the Korean name for a Four Pillars birth chart.' },
       { question: 'Is saju scientific?', answer: 'No. Saju is a symbolic interpretation system based on solar terms and the stem–branch cycle, not a scientific prediction. Use it for reflection and conversation.' },
       { question: 'Do I need my exact birth time?', answer: 'The Hour pillar needs your birth time to be precise. Without it you can still see your Day Master and overall elemental flow from the year, month, and day pillars.' },
@@ -275,7 +285,7 @@ const faqJsonLd = {
 };
 ---
 
-<Layout title={m.title} description={m.description} locale={locale}>
+<Layout title={m.title} description={m.description} locale={locale} heading={headings[locale] ?? headings.en}>
   <script type="application/ld+json" set:html={JSON.stringify([webApplicationJsonLd, faqJsonLd])} />
   <div class="mx-auto max-w-2xl px-4 py-10 space-y-6">
     {/* Display-only widget (no interactive elements, self-updating clock) — defer hydration to viewport entry. */}
