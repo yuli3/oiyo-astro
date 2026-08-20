@@ -3,7 +3,9 @@ import ShareResultButton from '../shared/ShareResultButton';
 import CopyResultLink from '../shared/CopyResultLink';
 import { BirthDateField, ProfilePlaceField, ProfileTimeField } from '../shared/BirthDateField';
 import { computeNatalChart, type NatalChart } from '../../lib/ontology/natal/calculator';
+import { computeAstroCartoMeridians, type CartoMeridian } from '../../lib/ontology/natal/astrocartography';
 import { SIGN_INFO, CITIES, type NatalLocale } from '../../lib/ontology/natal/signs';
+import AstroCartoMap from './AstroCartoMap';
 // `readResultCode` is kept for one thing only: reading pre-T6 `?d=&c=&t=`
 // share links that may still be circulating, so they never 404. Natal no
 // longer *writes* the query-param scheme — see the hash migration effect
@@ -265,7 +267,12 @@ export default function NatalChartCalculator({ locale }: Props) {
 
   const [form, setForm] = useState<FormState>({ date: '', time: '', unknown: false, city: '' });
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<{ chart: NatalChart; hasTime: boolean } | null>(null);
+  const [result, setResult] = useState<{
+    chart: NatalChart;
+    hasTime: boolean;
+    lines: CartoMeridian[];
+    city: (typeof CITIES)[number];
+  } | null>(null);
 
   // 온톨로지 프로필의 생년월일·시·출생지를 재사용(URL 복원이 없을 때만) — 재입력 제거.
   const { parsed, saveBirthRecord, profile, setProfile } = useProfilePrefill();
@@ -333,7 +340,8 @@ export default function NatalChartCalculator({ locale }: Props) {
       return null;
     }
     const chart = computeNatalChart({ date: resolution.instant, latitude: city.lat, longitude: city.lon });
-    setResult({ chart, hasTime });
+    const lines = computeAstroCartoMeridians(resolution.instant);
+    setResult({ chart, hasTime, lines, city });
     return resolution;
   }
 
@@ -433,6 +441,10 @@ export default function NatalChartCalculator({ locale }: Props) {
             );
           })}
         </div>
+
+        {result.hasTime && (
+          <AstroCartoMap locale={loc} lines={result.lines} city={result.city} />
+        )}
 
         {!hasTime && (
           <p className="mt-4 rounded-xl bg-amber-50 p-3 text-center text-xs text-amber-800">{t.moonNote}</p>
