@@ -1,6 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { computeAstroCartoMeridians, eclipticLongitudeToRA, mcLongitudeEast } from './astrocartography';
+import { computeAstroCartoMeridians, computeHorizonCurves, bodyAltitude, eclipticLongitudeToRA, mcLongitudeEast } from './astrocartography';
 import { getGMST } from './calculator';
+import { getSolarLongitude } from '../kernel/astronomy';
 
 const wrap = (a: number) => ((a + 180) % 360 + 360) % 360 - 180;
 
@@ -25,5 +26,20 @@ describe('astrocartography meridians', () => {
     expect(lines.map((l) => l.body)).toEqual([
       'sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn',
     ]);
+  });
+});
+
+describe('astrocartography horizon curves', () => {
+  it('ASC/DSC points sit on the horizon', () => {
+    const date = new Date(Date.UTC(1990, 4, 20, 6, 30, 0));
+    const lam = getSolarLongitude(date);
+    const sun = computeHorizonCurves(date).find((c) => c.body === 'sun');
+    expect(sun).toBeTruthy();
+    expect(sun!.asc.length).toBeGreaterThan(20);
+    let max = 0;
+    for (const p of [...sun!.asc, ...sun!.dsc]) {
+      max = Math.max(max, Math.abs(bodyAltitude(lam, date, p.lat, p.lon)));
+    }
+    expect(max).toBeLessThan(0.05);
   });
 });

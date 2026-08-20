@@ -3,7 +3,7 @@ import ShareResultButton from '../shared/ShareResultButton';
 import CopyResultLink from '../shared/CopyResultLink';
 import { BirthDateField, ProfilePlaceField, ProfileTimeField } from '../shared/BirthDateField';
 import { computeNatalChart, type NatalChart } from '../../lib/ontology/natal/calculator';
-import { computeAstroCartoMeridians, type CartoMeridian } from '../../lib/ontology/natal/astrocartography';
+import { computeAstroCartoMeridians, computeHorizonCurves, type CartoMeridian, type CartoHorizon } from '../../lib/ontology/natal/astrocartography';
 import { SIGN_INFO, CITIES, type NatalLocale } from '../../lib/ontology/natal/signs';
 import AstroCartoMap from './AstroCartoMap';
 // `readResultCode` is kept for one thing only: reading pre-T6 `?d=&c=&t=`
@@ -271,6 +271,7 @@ export default function NatalChartCalculator({ locale }: Props) {
     chart: NatalChart;
     hasTime: boolean;
     lines: CartoMeridian[];
+    curves: CartoHorizon[];
     city: (typeof CITIES)[number];
   } | null>(null);
 
@@ -341,7 +342,8 @@ export default function NatalChartCalculator({ locale }: Props) {
     }
     const chart = computeNatalChart({ date: resolution.instant, latitude: city.lat, longitude: city.lon });
     const lines = computeAstroCartoMeridians(resolution.instant);
-    setResult({ chart, hasTime, lines, city });
+    const curves = computeHorizonCurves(resolution.instant);
+    setResult({ chart, hasTime, lines, curves, city });
     return resolution;
   }
 
@@ -443,7 +445,7 @@ export default function NatalChartCalculator({ locale }: Props) {
         </div>
 
         {result.hasTime && (
-          <AstroCartoMap locale={loc} lines={result.lines} city={result.city} />
+          <AstroCartoMap locale={loc} lines={result.lines} curves={result.curves} city={result.city} />
         )}
 
         {!hasTime && (

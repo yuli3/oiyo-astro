@@ -1,7 +1,7 @@
 import { useMemo, useState } from 'react';
 import type { NatalLocale } from '../../lib/ontology/natal/signs';
 import type { City } from '../../lib/ontology/natal/signs';
-import type { CartoBody, CartoMeridian } from '../../lib/ontology/natal/astrocartography';
+import type { CartoBody, CartoMeridian, CartoHorizon } from '../../lib/ontology/natal/astrocartography';
 
 const W = 720;
 const H = 360;
@@ -16,53 +16,66 @@ const LINE: Record<CartoBody, { color: string; label: Record<NatalLocale, string
   saturn: { color: '#44403c', label: { ko: '토성', en: 'Saturn', ja: '土星', zh: '土星', fr: 'Saturne', es: 'Saturno' } },
 };
 
-const COPY: Record<NatalLocale, { heading: string; hint: string; disclaimer: string; mc: string; ic: string }> = {
+const COPY: Record<NatalLocale, { heading: string; hint: string; disclaimer: string; mc: string; ic: string; asc: string; dsc: string }> = {
   ko: {
-    heading: '아스트로카토그래피 — 중천(MC) 선',
-    hint: '세로선은 출생 순간에 그 행성이 중천(MC) 또는 천저(IC)에 있던 경도입니다. 거주 추천이 아닙니다.',
+    heading: '아스트로카토그래피 — MC·ASC 선',
+    hint: '세로선은 중천(MC)·천저(IC). 곡선은 떠오름(ASC)·짐(DSC). 거주 추천이 아닙니다.',
     disclaimer: '상징 지도입니다. 이주·여행 결정을 대신하지 않습니다.',
-    mc: 'MC',
-    ic: 'IC',
+    mc: 'MC', ic: 'IC', asc: 'ASC', dsc: 'DSC',
   },
   en: {
-    heading: 'Astrocartography — Midheaven (MC) lines',
-    hint: 'Vertical lines are longitudes where that planet was on the MC or IC at birth. Not a relocation ranking.',
+    heading: 'Astrocartography — MC & ASC lines',
+    hint: 'Verticals are MC/IC meridians. Curves are rising (ASC) and setting (DSC). Not a relocation ranking.',
     disclaimer: 'A symbolic map. It does not replace a move or travel decision.',
-    mc: 'MC',
-    ic: 'IC',
+    mc: 'MC', ic: 'IC', asc: 'ASC', dsc: 'DSC',
   },
   ja: {
-    heading: 'アストロカートグラフィー — 中天(MC)線',
-    hint: '縦線は出生瞬間にその惑星が中天(MC)または天底(IC)にあった経度です。移住の推薦ではありません。',
+    heading: 'アストロカートグラフィー — MC・ASC線',
+    hint: '縦線は中天(MC)と天底(IC)。曲線は上昇(ASC)と下降(DSC)。移住の推薦ではありません。',
     disclaimer: '象徴の地図です。移住・旅行の判断の代わりにはなりません。',
-    mc: 'MC',
-    ic: 'IC',
+    mc: 'MC', ic: 'IC', asc: 'ASC', dsc: 'DSC',
   },
   zh: {
-    heading: '星图地理 — 中天(MC)线',
-    hint: '竖线是出生瞬间该行星位于中天(MC)或天底(IC)的经度。不是移居排名。',
+    heading: '星图地理 — MC·ASC 线',
+    hint: '竖线是中天(MC)与天底(IC)。曲线是升起(ASC)与落下(DSC)。不是移居排名。',
     disclaimer: '象征地图。不能代替迁居或旅行决定。',
-    mc: 'MC',
-    ic: 'IC',
+    mc: 'MC', ic: 'IC', asc: 'ASC', dsc: 'DSC',
   },
   fr: {
-    heading: 'Astrocartographie — lignes du Milieu du Ciel (MC)',
-    hint: 'Les verticales sont les longitudes où la planète était au MC ou à l’IC à la naissance. Pas un classement de villes.',
+    heading: 'Astrocartographie — lignes MC et ASC',
+    hint: 'Les verticales sont MC/IC. Les courbes sont l’ASC (lever) et le DSC (coucher). Pas un classement de villes.',
     disclaimer: 'Carte symbolique. Elle ne remplace pas une décision de déménagement.',
-    mc: 'MC',
-    ic: 'IC',
+    mc: 'MC', ic: 'IC', asc: 'ASC', dsc: 'DSC',
   },
   es: {
-    heading: 'Astrocartografía — líneas del Medio Cielo (MC)',
-    hint: 'Las verticales son longitudes donde ese planeta estaba en el MC o IC al nacer. No es un ranking de mudanza.',
+    heading: 'Astrocartografía — líneas MC y ASC',
+    hint: 'Las verticales son MC/IC. Las curvas son ASC (salida) y DSC (puesta). No es un ranking de mudanza.',
     disclaimer: 'Mapa simbólico. No sustituye una decisión de viaje o mudanza.',
-    mc: 'MC',
-    ic: 'IC',
+    mc: 'MC', ic: 'IC', asc: 'ASC', dsc: 'DSC',
   },
 };
 
 function xOf(lon: number): number {
   return ((lon + 180) / 360) * W;
+}
+function yOf(lat: number): number {
+  return ((90 - lat) / 180) * H;
+}
+function curvePaths(pts: { lat: number; lon: number }[]): string[] {
+  const segs: { lat: number; lon: number }[][] = [];
+  let cur: { lat: number; lon: number }[] = [];
+  for (const p of pts) {
+    if (cur.length && Math.abs(p.lon - cur[cur.length - 1].lon) > 180) {
+      segs.push(cur);
+      cur = [p];
+    } else {
+      cur.push(p);
+    }
+  }
+  if (cur.length) segs.push(cur);
+  return segs.filter((s) => s.length >= 2).map((s) =>
+    s.map((p, i) => `${i ? 'L' : 'M'}${xOf(p.lon).toFixed(1)},${yOf(p.lat).toFixed(1)}`).join(' '),
+  );
 }
 
 const DEFAULT_ON: CartoBody[] = ['sun', 'moon', 'venus'];
@@ -70,10 +83,12 @@ const DEFAULT_ON: CartoBody[] = ['sun', 'moon', 'venus'];
 export default function AstroCartoMap({
   locale,
   lines,
+  curves,
   city,
 }: {
   locale: NatalLocale;
   lines: CartoMeridian[];
+  curves: CartoHorizon[];
   city: City;
 }) {
   const t = COPY[locale] ?? COPY.en;
@@ -118,10 +133,17 @@ export default function AstroCartoMap({
           const c = LINE[l.body].color;
           const xm = xOf(l.mcLon);
           const xi = xOf(l.icLon);
+          const hz = curves.find((h) => h.body === l.body);
           return (
             <g key={l.body}>
               <line x1={xm} y1={0} x2={xm} y2={H} stroke={c} strokeWidth="2.5" />
               <line x1={xi} y1={0} x2={xi} y2={H} stroke={c} strokeWidth="1.5" strokeDasharray="5 4" opacity="0.7" />
+              {hz?.asc && curvePaths(hz.asc).map((d, i) => (
+                <path key={`a${i}`} d={d} fill="none" stroke={c} strokeWidth="1.6" />
+              ))}
+              {hz?.dsc && curvePaths(hz.dsc).map((d, i) => (
+                <path key={`d${i}`} d={d} fill="none" stroke={c} strokeWidth="1.2" strokeDasharray="4 3" opacity="0.75" />
+              ))}
               <text x={xm + 4} y={14} fill={c} fontSize="10" fontWeight="700">{LINE[l.body].label[locale]} {t.mc}</text>
               <text x={xi + 4} y={H - 8} fill={c} fontSize="9" opacity="0.8">{t.ic}</text>
             </g>
