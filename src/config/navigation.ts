@@ -15,8 +15,11 @@ export const FAMILY_SITES = [
 
 export type FamilySite = (typeof FAMILY_SITES)[number];
 
-export const familySiteHref = (f: FamilySite, locale: Locale, medium: string) =>
-  `https://${f.host}/${f.localePath ? `${locale}/` : ""}?utm_source=oiyo&utm_medium=${medium}&utm_campaign=family_nav`;
+export const familySiteHref = (f: FamilySite, locale: Locale, medium: string) => {
+  // news home is unknown to Google. /radar/ is the durable indexable page.
+  const path = f.host === "news.oiyo.net" ? "radar/" : f.localePath ? `${locale}/` : "";
+  return `https://${f.host}/${path}?utm_source=oiyo&utm_medium=${medium}&utm_campaign=family_nav`;
+};
 
 export const familySiteTag = (f: FamilySite, locale: Locale) =>
   f.tag[locale as keyof typeof f.tag] ?? f.tag.en;
