@@ -4,6 +4,7 @@ import { ArrowRight, CalendarDays, Check, Link2, MapPin, RotateCcw, Share2, Shie
 import { useEffect, useState } from "react";
 
 import SymbolicGroupSnapshotPanel from "@/components/profile/SymbolicGroupSnapshotPanel";
+import CompatibilityOrbit from "@/components/profile/CompatibilityOrbit";
 import { BirthDateField, ProfileNameField, ProfilePlaceField, ProfileTimeField } from "@/components/shared/BirthDateField";
 import { CITIES } from "@/lib/ontology/natal/signs";
 import { resolveZonedCivilTime } from "@/lib/user/birth-record";
@@ -258,6 +259,14 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
         </div>
         <p className="mt-3 text-xs leading-5 text-stone-500 [word-break:keep-all]">{INDEX_NOTE[lang]}</p>
         <p className="mt-1 text-[11px] font-bold uppercase tracking-wider text-stone-400">{NO_TOTAL[lang]}</p>
+        <CompatibilityOrbit
+          locale={lang}
+          mode="pair"
+          people={[
+            { id: "person-a", label: a.name.trim() || copy.me, score: Math.round(result.report.lenses.reduce((sum, lens) => sum + lens.harmonyIndex, 0) / result.report.lenses.length) },
+            { id: "person-b", label: receivedProfile ? copy.friend : b.name.trim() || copy.friend, score: Math.round(result.report.lenses.reduce((sum, lens) => sum + lens.harmonyIndex, 0) / result.report.lenses.length) },
+          ]}
+        />
       </section>
 
       <section className="mt-5 grid gap-4 sm:grid-cols-2">
