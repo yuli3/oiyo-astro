@@ -15,6 +15,8 @@ import {
 } from "@/lib/symbolic-tradition/group-snapshot";
 import { readSymbolicShareFragment } from "@/lib/symbolic-tradition/share-artifact";
 import { readEncryptedShortShare } from "@/lib/symbolic-tradition/short-share";
+import CompatibilityOrbit from "@/components/profile/CompatibilityOrbit";
+import { scoreAgainstCenter } from "@/lib/symbolic-tradition/orbit-layout";
 import type { CompatibilityLensId, SymbolicComparisonProfile } from "@/lib/symbolic-tradition";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
@@ -253,6 +255,16 @@ export default function CircleGathering({ locale }: { locale: string }) {
           })}
         </svg>
       </div>
+      <CompatibilityOrbit
+        locale={locale}
+        mode="system"
+        centerId={centerId || people[0]?.id}
+        people={people.map((item) => ({
+          id: item.id,
+          label: item.label,
+          score: scoreAgainstCenter(snapshot.edges, centerId || people[0]?.id, item.id, lens),
+        }))}
+      />
       {pairCopy && pickedEdge && <article className="mt-4 rounded-3xl bg-white p-4">
         <p className="text-xs font-black uppercase tracking-wider text-lime-700">{copy.pair} · {pickedEdge.harmonyIndex}</p>
         <h2 className="mt-1 text-lg font-black text-green-950">{pairCopy.label}</h2>
