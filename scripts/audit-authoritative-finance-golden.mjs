@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 import { computeSubtotals } from "../src/lib/finance/income-statement.ts";
-import { computeRatioPercent } from "../src/lib/finance/financial-ratios.ts";
 
 const input = await new Promise((resolve, reject) => {
   let body = "";
@@ -18,12 +17,6 @@ const FIXTURE_FIELDS = new Set([
   "operation", "inputs", "expected", "tolerance",
 ]);
 const ENGINES = {
-  "oiyo.compute-ratio-percent": {
-    module: "src/lib/finance/financial-ratios.ts",
-    export: "computeRatioPercent",
-    sourceImplementation: "src/components/tools/FinancialRatioExplorer.tsx",
-    operations: new Set(["divide-percent"]),
-  },
   "oiyo.compute-income-statement-subtotals": {
     module: "src/lib/finance/income-statement.ts",
     export: "computeSubtotals",
@@ -59,9 +52,7 @@ for (const fixture of fixtures.fixtures ?? []) {
       throw new Error("fixture engine/source binding mismatch");
     }
     let actual;
-    if (fixture.operation === "divide-percent") {
-      actual = computeRatioPercent(fixture.inputs.numerator, fixture.inputs.denominator);
-    } else if (fixture.operation === "income-statement") {
+    if (fixture.operation === "income-statement") {
       const i = fixture.inputs;
       actual = computeSubtotals([
         { id: "fixture-revenue", name: {}, amount: i.revenue, line: "revenue" },
