@@ -105,9 +105,9 @@ const content: Record<Locale, {
     ],
     "reading": [
       {
-        "href": "https://blog.oiyo.net/ko/tool-blood-type-calculator/",
-        "label": "혈액형 성격 계산기 가이드",
-        "desc": "혈액형 성격설을 문화 콘텐츠로 읽는 법입니다."
+        "href": "https://blog.oiyo.net/ko/blood-type-personality-complete/",
+        "label": "혈액형 성격설 완전 정리",
+        "desc": "혈액형 성격설이 어디서 왔고 왜 근거가 약한지 읽어 봅니다."
       }
     ],
     "disclaimer": "혈액형 결과는 오락과 자기 성찰 목적입니다. 개인의 성격, 능력, 관계를 단정하거나 차별을 정당화하지 않습니다."
@@ -162,11 +162,6 @@ const content: Record<Locale, {
       }
     ],
     "reading": [
-      {
-        "href": "https://blog.oiyo.net/en/tool-blood-type-calculator/",
-        "label": "Blood type calculator guide",
-        "desc": "How to read blood type personality as cultural content."
-      }
     ],
     "disclaimer": "Blood type results are for entertainment and self-reflection. They do not define personality, ability, relationships, or justify discrimination."
   },
@@ -220,11 +215,6 @@ const content: Record<Locale, {
       }
     ],
     "reading": [
-      {
-        "href": "https://blog.oiyo.net/ja/tool-blood-type-calculator/",
-        "label": "血液型性格ガイド",
-        "desc": "血液型性格を文化コンテンツとして読む方法です。"
-      }
     ],
     "disclaimer": "血液型の結果は娯楽と自己省察のためのものです。性格、能力、関係を断定したり差別を正当化したりしません。"
   },
@@ -278,11 +268,6 @@ const content: Record<Locale, {
       }
     ],
     "reading": [
-      {
-        "href": "https://blog.oiyo.net/zh/tool-blood-type-calculator/",
-        "label": "血型性格计算器指南",
-        "desc": "把血型性格说作为文化内容阅读。"
-      }
     ],
     "disclaimer": "血型结果仅供娱乐与自我反思，不定义性格、能力或关系，也不正当化歧视。"
   },
@@ -336,11 +321,6 @@ const content: Record<Locale, {
       }
     ],
     "reading": [
-      {
-        "href": "https://blog.oiyo.net/fr/tool-blood-type-calculator/",
-        "label": "Guide du groupe sanguin",
-        "desc": "Lire cette idée comme contenu culturel."
-      }
     ],
     "disclaimer": "Les résultats par groupe sanguin servent au divertissement et à la réflexion. Ils ne définissent ni personnalité, ni capacité, ni relation."
   },
@@ -394,11 +374,6 @@ const content: Record<Locale, {
       }
     ],
     "reading": [
-      {
-        "href": "https://blog.oiyo.net/es/tool-blood-type-calculator/",
-        "label": "Guía de tipo de sangre",
-        "desc": "Cómo leer esta idea como contenido cultural."
-      }
     ],
     "disclaimer": "Los resultados por tipo de sangre son para entretenimiento y reflexión. No definen personalidad, capacidad ni relaciones."
   }
@@ -510,6 +485,7 @@ const details = detailOrder
       </div>
     </section>
 
+    {c.reading.length > 0 && (
     <section class="mt-10">
       <h2 class="text-xl font-bold text-green-950">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-2">
@@ -520,7 +496,7 @@ const details = detailOrder
           </a>
         ))}
       </div>
-    </section>
+    </section>)}
 
     <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
       {c.disclaimer}

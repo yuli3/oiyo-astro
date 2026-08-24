@@ -805,7 +805,7 @@
     "improvementAreas": "改善が必要な分野",
     "chartTitle": "あなたのライフバランス・ホイール",
     "shareCopied": "結果をクリップボードにコピーしました！",
-    "shareText": "私のライフバランススコア：{score}/100 - {level}！あなたのバランスもチェック：https://oiyo.net/ja/life-balance-wheel",
+    "shareText": "私のライフバランススコア：{score}/100 - {level}！あなたのバランスもチェック：https://oiyo.net/ja/life-balance",
     "howItWorksTitle": "診断の仕組み",
     "step1Title": "興味を分析",
     "step1Description": "あなたのプロフィールを理解する",

@@ -60,7 +60,6 @@ class LemonSqueezyService {
         preview: false,
         productOptions: {
           description: "Oiyo.net Premium Subscription",
-          media: ["https://oiyo.net/images/premium-preview.jpg"],
           name: config.checkoutData?.name,
         },
         testMode: process.env.NODE_ENV !== "production",

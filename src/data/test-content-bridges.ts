@@ -552,14 +552,6 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
       fr: 'https://blog.oiyo.net/fr/meaning-of-perfectionism',
       es: 'https://blog.oiyo.net/es/meaning-of-perfectionism',
     },
-    wikiTargets: {
-      ko: 'https://wiki.oiyo.net/ko/meaning-of-neuroplasticity',
-      en: 'https://wiki.oiyo.net/en/meaning-of-neuroplasticity',
-      ja: 'https://wiki.oiyo.net/ja/meaning-of-neuroplasticity',
-      zh: 'https://wiki.oiyo.net/en/meaning-of-neuroplasticity',
-      fr: 'https://wiki.oiyo.net/en/meaning-of-neuroplasticity',
-      es: 'https://wiki.oiyo.net/en/meaning-of-neuroplasticity',
-    },
   },
   lethargy: {
     content: {
@@ -656,14 +648,6 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
       fr: 'https://blog.oiyo.net/fr/sisyphus-burnout',
       es: 'https://blog.oiyo.net/es/sisyphus-burnout',
     },
-    wikiTargets: {
-      ko: 'https://wiki.oiyo.net/ko/meaning-of-lazy-perfectionism',
-      en: 'https://wiki.oiyo.net/en/meaning-of-lazy-perfectionism',
-      ja: 'https://wiki.oiyo.net/ja/meaning-of-lazy-perfectionism',
-      zh: 'https://wiki.oiyo.net/en/meaning-of-lazy-perfectionism',
-      fr: 'https://wiki.oiyo.net/en/meaning-of-lazy-perfectionism',
-      es: 'https://wiki.oiyo.net/en/meaning-of-lazy-perfectionism',
-    },
   },
   'habit-builder': {
     content: {
@@ -759,14 +743,6 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
       zh: 'https://blog.oiyo.net/zh/neuroplasticity-habit-formation',
       fr: 'https://blog.oiyo.net/fr/neuroplasticity-habit-formation',
       es: 'https://blog.oiyo.net/es/neuroplasticity-habit-formation',
-    },
-    wikiTargets: {
-      ko: 'https://wiki.oiyo.net/ko/meaning-of-lazy-perfectionism',
-      en: 'https://wiki.oiyo.net/en/meaning-of-lazy-perfectionism',
-      ja: 'https://wiki.oiyo.net/ja/meaning-of-lazy-perfectionism',
-      zh: 'https://wiki.oiyo.net/en/meaning-of-lazy-perfectionism',
-      fr: 'https://wiki.oiyo.net/en/meaning-of-lazy-perfectionism',
-      es: 'https://wiki.oiyo.net/en/meaning-of-lazy-perfectionism',
     },
   },
   burnout: {

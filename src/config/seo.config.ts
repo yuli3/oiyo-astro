@@ -19,6 +19,6 @@ export interface RouteMetadata {
 export const SITE_CONFIG = {
   keywords: ["personality test", "saju", "fortune", "mbti", "ai"],
   name: "Oiyo",
-  ogImage: "https://oiyo.net/og.png",
+  ogImage: "https://oiyo.net/og-image.png",
   url: "https://oiyo.net",
 };
