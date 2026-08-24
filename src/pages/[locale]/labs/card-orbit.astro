@@ -1,0 +1,30 @@
+---
+// 카드 공전 애셋 프리뷰 — 점성술/사주/팔자/켈트/마야/성명학 등 온톨로지 하위 페이지에
+// 나중에 붙일 재사용 컴포넌트(CardOrbit)를 눈으로 확인하기 위한 sandbox.
+// noindex, nav 미노출. 실제 페이지 편입 전 검토용.
+import '../../../styles/global.css';
+import { LOCALES, type Locale } from '../../../i18n';
+import { CardOrbitDemo } from '../../../components/labs/CardOrbitDemo';
+
+export function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Card Orbit (labs preview) | OIYO</title>
+    <meta name="theme-color" content="#0b1220" />
+    <style>
+      html, body { background: #0b1220; margin: 0; }
+    </style>
+  </head>
+  <body>
+    <CardOrbitDemo client:only="react" />
+  </body>
+</html>
