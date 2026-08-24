@@ -30,6 +30,15 @@ const CATEGORY_RESULT_KEY: Record<string, keyof ReturnType<typeof Recommendation
 };
 const CATEGORY_ORDER: RecommendationCategory[] = ["career", "hobby", "psychology", "mythology", "science", "spirituality"];
 
+const EMPTY_COPY: Record<Lang, { title: string; description: string }> = {
+  ko: { title: "아직 추천할 게 없어요", description: "생년월일을 저장하거나 테스트를 하나 완료하면 맞춤 추천이 열립니다." },
+  en: { title: "Nothing to recommend yet", description: "Save your birth date or finish a test to unlock personal picks." },
+  ja: { title: "まだおすすめがありません", description: "生年月日を保存するかテストを完了すると、おすすめが開きます。" },
+  zh: { title: "暂时还没有推荐", description: "保存出生日期或完成一项测试后即可获得个性化推荐。" },
+  fr: { title: "Rien à recommander pour l'instant", description: "Enregistrez votre naissance ou terminez un test pour débloquer les suggestions." },
+  es: { title: "Aún no hay recomendaciones", description: "Guarda tu fecha de nacimiento o completa un test para recibir sugerencias." },
+};
+
 interface CardEntry {
   rec: Recommendation;
   /** Signals behind the match, ranked by contribution — `[]` for graph-fallback recommendations (no backing `RecommendationDefinition` to explain). */
@@ -145,8 +154,8 @@ export function RecommendationCards({ locale }: { locale: string }) {
   if (hydrated && cards.length === 0) {
     return (
       <div className="rounded-[28px] border border-green-100 bg-white p-5 text-center shadow-sm">
-        <p className="text-sm font-black text-green-900">{tt("recommendations.cards.emptyTitle")}</p>
-        <p className="mt-1 text-xs text-green-600">{tt("recommendations.cards.emptyDescription")}</p>
+        <p className="text-sm font-black text-green-900">{texts["recommendations.cards.emptyTitle"] ?? EMPTY_COPY[lang].title}</p>
+        <p className="mt-1 text-xs text-green-600">{texts["recommendations.cards.emptyDescription"] ?? EMPTY_COPY[lang].description}</p>
       </div>
     );
   }

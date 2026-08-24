@@ -21,7 +21,6 @@ TARGETS = [
     "src/pages/[locale]/natal/chart.astro",
     "src/pages/[locale]/zodiac/personality.astro",
     "src/pages/[locale]/tarot/reading.astro",
-    "src/pages/[locale]/tarot/daily.astro",
     "src/pages/[locale]/saju/compatibility.astro",
     "src/pages/[locale]/saju/fortune.astro",
     "src/pages/[locale]/zodiac/compatibility.astro",

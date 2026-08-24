@@ -1,6 +1,6 @@
 "use client";
 
-import { Copy, Download, Image as ImageIcon, Share2 } from "lucide-react";
+import { Copy, FileText, Image as ImageIcon, Printer, Share2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 
 import {
@@ -51,6 +51,8 @@ const UI: Record<
     png: string;
     pngBusy: string;
     pngUnavailable: string;
+    pdf: string;
+    text: string;
     privacyNote: string;
     localOnly: string;
   }
@@ -58,16 +60,17 @@ const UI: Record<
   ko: {
     title: "내 존재론 프로필 내보내기",
     sub: "지금까지 모은 신호·테스트 기록·추천·관계 스냅샷을 통째로 저장하세요.",
-    formats: { md: "리포트", json: "JSON", csv: "CSV" },
-    copy: "복사",
+    formats: { md: "MD", json: "JSON", csv: "CSV" },
+    copy: "복사하기",
     copied: "복사됨",
     download: "다운로드",
-    share: "공유 링크",
+    share: "공유링크",
     shareCopied: "링크를 복사했어요!",
     shareUnavailable: "공유 링크를 만들기엔 신호가 너무 많아요. 다운로드로 공유해 주세요.",
-    png: "카드 이미지 저장",
+    png: "이미지로 내보내기",
     pngBusy: "이미지 만드는 중…",
     pngUnavailable: "이미지를 만들지 못했어요. 다시 시도해 주세요.",
+    pdf: "PDF로 내보내기", text: "텍스트로 내보내기",
     privacyNote: "이 파일/링크에는 생년월일 등 입력한 정보가 포함될 수 있습니다.",
     localOnly: "🔒 이 브라우저에서만 생성 · 서버 전송 없음",
   },
@@ -84,6 +87,7 @@ const UI: Record<
     png: "Save card as image",
     pngBusy: "Generating image…",
     pngUnavailable: "Couldn't generate the image — try again.",
+    pdf: "Export as PDF", text: "Export as text",
     privacyNote: "This file/link may contain information you entered, such as your birth date.",
     localOnly: "🔒 Generated locally in this browser only — nothing is uploaded",
   },
@@ -100,6 +104,7 @@ const UI: Record<
     png: "カード画像を保存",
     pngBusy: "画像を作成中…",
     pngUnavailable: "画像を作成できませんでした。もう一度お試しください。",
+    pdf: "PDFで書き出す", text: "テキストで書き出す",
     privacyNote: "このファイル・リンクには生年月日など入力した情報が含まれる場合があります。",
     localOnly: "🔒 このブラウザ内でのみ生成 · サーバー送信なし",
   },
@@ -116,6 +121,7 @@ const UI: Record<
     png: "保存卡片图片",
     pngBusy: "正在生成图片…",
     pngUnavailable: "图片生成失败，请重试。",
+    pdf: "导出为 PDF", text: "导出为文本",
     privacyNote: "此文件/链接可能包含您输入的信息，例如出生日期。",
     localOnly: "🔒 仅在此浏览器本地生成 · 不会上传",
   },
@@ -132,6 +138,7 @@ const UI: Record<
     png: "Enregistrer la carte en image",
     pngBusy: "Génération de l’image…",
     pngUnavailable: "Impossible de générer l’image — réessayez.",
+    pdf: "Exporter en PDF", text: "Exporter en texte",
     privacyNote: "Ce fichier/lien peut contenir les informations saisies, comme votre date de naissance.",
     localOnly: "🔒 Généré localement dans ce navigateur uniquement — rien n’est envoyé",
   },
@@ -148,6 +155,7 @@ const UI: Record<
     png: "Guardar tarjeta como imagen",
     pngBusy: "Generando imagen…",
     pngUnavailable: "No se pudo generar la imagen — inténtalo de nuevo.",
+    pdf: "Exportar como PDF", text: "Exportar como texto",
     privacyNote: "Este archivo/enlace puede contener información que ingresaste, como tu fecha de nacimiento.",
     localOnly: "🔒 Generado localmente en este navegador únicamente — nada se envía",
   },
@@ -265,6 +273,11 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
     URL.revokeObjectURL(url);
   }
 
+  function handlePdf() {
+    gaEvent("ontology_export", { format: "pdf" });
+    window.print();
+  }
+
   // Renders a placeholder instead of null while waiting to hydrate — this
   // section used to render nothing at all here, which on a long page reads
   // as "the export button doesn't exist" rather than "still loading."
@@ -316,37 +329,23 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
         )}
       </div>
 
-      {/* Format picker + actions */}
-      <div className="mt-3 flex flex-wrap items-center gap-1.5">
-        {FORMATS.map((f) => (
-          <button
-            key={f}
-            type="button"
-            onClick={() => setFormat(f)}
-            className={`rounded-md px-2.5 py-1 text-xs font-bold transition-colors ${
-              format === f ? "bg-green-700 text-white" : "border border-green-200 text-green-800 hover:bg-green-50"
-            }`}
-          >
-            {t.formats[f]}
-          </button>
-        ))}
-        <span className="ml-auto text-[10px] text-green-400">{t.localOnly}</span>
-      </div>
-
-      <div className="mt-3 flex flex-wrap gap-2">
+      <div className="mt-3 grid gap-2 sm:grid-cols-2">
+        <button type="button" onClick={handlePdf} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-green-200 px-3 py-2 text-xs font-bold text-green-800 hover:bg-green-50"><Printer className="h-4 w-4" /> {t.pdf}</button>
+        <button type="button" onClick={handleDownloadPng} disabled={pngState === "busy"} className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-green-200 px-3 py-2 text-xs font-bold text-green-800 hover:bg-green-50 disabled:opacity-50"><ImageIcon className="h-4 w-4" /> {pngState === "busy" ? t.pngBusy : t.png}</button>
+        <div className="flex min-h-12 items-center rounded-xl border border-green-200 p-1">
+          <button type="button" onClick={handleDownload} className="inline-flex flex-1 items-center justify-center gap-1.5 px-2 text-xs font-bold text-green-800"><FileText className="h-4 w-4" /> {t.text}</button>
+          <select aria-label={t.text} value={format} onChange={(event) => setFormat(event.target.value as Format)} className="rounded-lg bg-green-50 px-2 py-2 text-xs font-black text-green-800 outline-none">
+            {FORMATS.map((f) => <option key={f} value={f}>{t.formats[f]}</option>)}
+          </select>
+        </div>
         <button type="button" onClick={handleCopy} className="inline-flex items-center gap-1.5 rounded-lg border border-green-200 px-3 py-2 text-xs font-bold text-green-800 hover:bg-green-50">
           <Copy className="h-3.5 w-3.5" /> {copied ? t.copied : t.copy}
-        </button>
-        <button type="button" onClick={handleDownload} className="inline-flex items-center gap-1.5 rounded-lg bg-green-700 px-3 py-2 text-xs font-bold text-white hover:bg-green-800">
-          <Download className="h-3.5 w-3.5" /> {t.download}
         </button>
         <button type="button" onClick={handleShare} className="inline-flex items-center gap-1.5 rounded-lg border border-green-200 px-3 py-2 text-xs font-bold text-green-800 hover:bg-green-50">
           <Share2 className="h-3.5 w-3.5" /> {shareState === "copied" ? t.shareCopied : t.share}
         </button>
-        <button type="button" onClick={handleDownloadPng} disabled={pngState === "busy"} className="inline-flex items-center gap-1.5 rounded-lg border border-green-200 px-3 py-2 text-xs font-bold text-green-800 hover:bg-green-50 disabled:opacity-50">
-          <ImageIcon className="h-3.5 w-3.5" /> {pngState === "busy" ? t.pngBusy : t.png}
-        </button>
       </div>
+      <p className="mt-2 text-[10px] text-green-400">{t.localOnly}</p>
 
       {shareState === "unavailable" && <p className="mt-2 text-xs text-amber-600">{t.shareUnavailable}</p>}
       {pngState === "failed" && <p className="mt-2 text-xs text-amber-600">{t.pngUnavailable}</p>}

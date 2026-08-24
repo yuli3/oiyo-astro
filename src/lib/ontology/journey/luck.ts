@@ -51,10 +51,8 @@ export function luckContent(locale: Locale): JourneyContent {
         tests: {
           heading: '이어서 해볼 탐구',
           items: [
-            { href: l('/tarot/daily'), emoji: '🃏', label: '오늘의 타로' },
             { href: l('/zodiac/fortune'), emoji: '✨', label: '별자리 운세' },
             { href: l('/blood-type/fortune'), emoji: '🩸', label: '혈액형 운세' },
-            { href: l('/tarot/daily'), emoji: '🃏', label: '오늘의 타로 카드' },
             { href: l('/sleep-type/test'), emoji: '🌙', label: '수면 유형 검사' },
           ],
         },
@@ -139,10 +137,8 @@ export function luckContent(locale: Locale): JourneyContent {
         tests: {
           heading: '続けての探求',
           items: [
-            { href: l('/tarot/daily'), emoji: '🃏', label: '今日のタロット' },
             { href: l('/zodiac/fortune'), emoji: '✨', label: '星座占い' },
             { href: l('/blood-type/fortune'), emoji: '🩸', label: '血液型占い' },
-            { href: l('/tarot/daily'), emoji: '🃏', label: '今日のタロット' },
             { href: l('/sleep-type/test'), emoji: '🌙', label: '睡眠タイプ診断' },
           ],
         },
@@ -225,10 +221,8 @@ export function luckContent(locale: Locale): JourneyContent {
         tests: {
           heading: '接着探索',
           items: [
-            { href: l('/tarot/daily'), emoji: '🃏', label: '今日塔罗' },
             { href: l('/zodiac/fortune'), emoji: '✨', label: '星座运势' },
             { href: l('/blood-type/fortune'), emoji: '🩸', label: '血型运势' },
-            { href: l('/tarot/daily'), emoji: '🃏', label: '每日塔罗牌' },
             { href: l('/sleep-type/test'), emoji: '🌙', label: '睡眠类型测试' },
           ],
         },
@@ -311,10 +305,8 @@ export function luckContent(locale: Locale): JourneyContent {
         tests: {
           heading: 'Explorations suivantes',
           items: [
-            { href: l('/tarot/daily'), emoji: '🃏', label: 'Tarot du jour' },
             { href: l('/zodiac/fortune'), emoji: '✨', label: 'Horoscope' },
             { href: l('/blood-type/fortune'), emoji: '🩸', label: 'Fortune par groupe sanguin' },
-            { href: l('/tarot/daily'), emoji: '🃏', label: 'Tarot du jour' },
             { href: l('/sleep-type/test'), emoji: '🌙', label: 'Chronotype de sommeil' },
           ],
         },
@@ -397,10 +389,8 @@ export function luckContent(locale: Locale): JourneyContent {
         tests: {
           heading: 'Exploraciones siguientes',
           items: [
-            { href: l('/tarot/daily'), emoji: '🃏', label: 'Tarot del día' },
             { href: l('/zodiac/fortune'), emoji: '✨', label: 'Horóscopo' },
             { href: l('/blood-type/fortune'), emoji: '🩸', label: 'Fortuna por grupo sanguíneo' },
-            { href: l('/tarot/daily'), emoji: '🃏', label: 'Tarot del día' },
             { href: l('/sleep-type/test'), emoji: '🌙', label: 'Cronotipo de sueño' },
           ],
         },
@@ -483,10 +473,8 @@ export function luckContent(locale: Locale): JourneyContent {
         tests: {
           heading: 'Explore next',
           items: [
-            { href: l('/tarot/daily'), emoji: '🃏', label: 'Daily tarot' },
             { href: l('/zodiac/fortune'), emoji: '✨', label: 'Zodiac fortune' },
             { href: l('/blood-type/fortune'), emoji: '🩸', label: 'Blood type fortune' },
-            { href: l('/tarot/daily'), emoji: '🃏', label: 'Daily tarot card' },
             { href: l('/sleep-type/test'), emoji: '🌙', label: 'Sleep chronotype' },
           ],
         },

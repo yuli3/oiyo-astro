@@ -29,6 +29,7 @@ const PIP_SLOTS: Record<number, [number, number][]> = {
 
 export function TarotCardFace({
   name,
+  imageSrc,
   symbol,
   roman,
   suit,
@@ -36,6 +37,7 @@ export function TarotCardFace({
   reversed,
 }: {
   name: string;
+  imageSrc?: string;
   symbol?: string;
   roman?: string;
   suit?: string;
@@ -55,7 +57,15 @@ export function TarotCardFace({
           <span style={{ color }}>{knownSuit ? SUIT_MARK[knownSuit] : "✦"}</span>
         </header>
         <div className="relative mx-2 min-h-0 flex-1 overflow-hidden rounded-sm bg-[#fffaf0]">
-          {pips ? (
+          {imageSrc ? (
+            <img
+              src={imageSrc}
+              alt=""
+              className="h-full w-full object-cover"
+              loading="lazy"
+              decoding="async"
+            />
+          ) : pips ? (
             <PipField color={color} pips={pips} mark={SUIT_MARK[knownSuit!]} />
           ) : (
             <MajorGlyph symbol={symbol ?? "✦"} color={color} />
@@ -102,4 +112,8 @@ function MajorGlyph({ symbol, color }: { symbol: string; color: string }) {
 export function romanMajor(id: number): string {
   const map = ["0", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X", "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX", "XXI"];
   return map[id] ?? String(id);
+}
+
+export function tarotMajorImageSrc(id: number): string {
+  return `/images/tarot-webp/tarot-${String(id).padStart(2, "0")}.webp`;
 }

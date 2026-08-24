@@ -1,6 +1,5 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import MyOntologySummary from '../../components/shared/MyOntologySummary.astro';
 import PeriodicFortune from '../../components/tools/PeriodicFortune';
 import { LOCALES, getTranslations, localePath } from '../../i18n';
 import type { Locale } from '../../i18n';
@@ -99,26 +98,6 @@ const popularTests = [
     href: localePath(locale, '/personal-color/test'),
   },
 ]
-
-// 이 자리에 있던 오라클 카드 뽑기는 2026-08-17에 접었다. 타로와 하는 일이 겹쳐
-// 방문자가 둘을 구분하지 못했고, 실제로 더 쓸모 있는 쪽은 78장 타로다. 슬롯을
-// 비우는 대신 타로 데일리로 돌렸다.
-const tarotSectionTitle = txt({
-  ko: '오늘의 타로 한 장',
-  en: "Today's Tarot Card",
-  ja: '今日のタロット一枚',
-  zh: '今日塔罗一张',
-  fr: 'Votre Tarot du Jour',
-  es: 'Tu Tarot del Día',
-})
-const tarotSectionDesc = txt({
-  ko: '78장 정통 타로에서 오늘의 카드를 한 장. 키워드와 메시지, 오늘의 확언까지.',
-  en: 'One card from the full 78-card tarot deck — keywords, message, and an affirmation for today.',
-  ja: '78枚の本格タロットから今日の一枚。キーワードとメッセージ、今日のアファメーションまで。',
-  zh: '从78张正统塔罗中抽取今日一张 — 关键词、讯息与今日的肯定语。',
-  fr: 'Une carte du jeu complet de 78 cartes — mots-clés, message et affirmation du jour.',
-  es: 'Una carta de la baraja completa de 78 — palabras clave, mensaje y afirmación del día.',
-})
 
 const quickTests = [
   { icon: '🌌', title: txt({ ko: '오늘의 우주', en: "Today's Universe", ja: '今日の宇宙', zh: '今日宇宙', fr: "L'Univers du Jour", es: 'El Universo de Hoy' }), href: localePath(locale, '/today') },
@@ -347,45 +326,6 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- Daily Tarot Teaser -->
-  <section class="relative overflow-hidden mx-4 md:mx-auto max-w-6xl rounded-3xl mb-10"
-    style="background: linear-gradient(135deg, #07050d 0%, #0a0716 50%, #07050d 100%);">
-    <div class="absolute inset-0 pointer-events-none opacity-50" aria-hidden="true"
-      style="background-image: radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,.6), transparent 60%), radial-gradient(1px 1px at 40% 70%, rgba(255,255,255,.4), transparent 60%), radial-gradient(1px 1px at 65% 15%, rgba(255,255,255,.55), transparent 60%), radial-gradient(1px 1px at 80% 60%, rgba(255,255,255,.45), transparent 60%), radial-gradient(1px 1px at 25% 85%, rgba(255,255,255,.5), transparent 60%);"/>
-    </div>
-    <div class="relative z-10 px-8 py-12 md:px-16 flex flex-col md:flex-row items-center gap-8">
-      <!-- Card previews -->
-      <div class="flex gap-3 shrink-0">
-        {['✦', '⬡', '◯', '◈'].map((g, i) => (
-          <div
-            class="w-14 h-22 rounded-lg border border-white/20 flex items-center justify-center"
-            style={`background: linear-gradient(180deg, #0e0a1c 0%, #0a0716 100%); transform: rotate(${(i-1.5)*4}deg); height: 88px;`}
-          >
-            <span style="color: rgba(232,236,255,0.6); font-size: 20px;">{g}</span>
-          </div>
-        ))}
-      </div>
-      <div class="text-center md:text-left">
-        <div class="inline-block font-mono text-xs tracking-widest text-amber-400/70 uppercase mb-3">
-          ✦ {txt({ ko: '매일 한 장', en: 'Daily', ja: '毎日一枚', zh: '每日一张', fr: 'Chaque jour', es: 'Cada día' })}
-        </div>
-        <h2 class="text-2xl md:text-3xl font-serif font-bold text-amber-100 mb-3">
-          {tarotSectionTitle}
-        </h2>
-        <p class="text-white/60 text-sm leading-relaxed max-w-md mb-6">
-          {tarotSectionDesc}
-        </p>
-        <a
-          href={localePath(locale, '/tarot/daily')}
-          class="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-sm text-amber-900"
-          style="background: #c9a55c;"
-        >
-          {txt({ ko: '타로 카드 뽑기 →', en: 'Draw Your Card →', ja: 'タロットを引く →', zh: '抽塔罗牌 →', fr: 'Tirer ma Carte →', es: 'Sacar mi Carta →' })}
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- Quick test pills -->
   <section class="max-w-6xl mx-auto px-4 pb-14">
     <h2 class="text-xl font-bold text-green-950 mb-5">{sectionMore}</h2>
@@ -431,8 +371,4 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- Returning-visitor continuity: their records -> ontology map (personalized) -->
-  <section class="max-w-4xl mx-auto px-4 pb-14">
-    <MyOntologySummary locale={locale} />
-  </section>
 </Layout>

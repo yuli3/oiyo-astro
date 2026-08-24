@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { OntologyBirthInput } from "@/components/ontology/OntologyBirthInput";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
 
 /**
  * The one place a visitor types their birth info, reachable from anywhere.
@@ -39,29 +40,13 @@ export function ProfileInputDialog({
   onClose: () => void;
   open: boolean;
 }) {
-  const ref = useRef<HTMLDialogElement>(null);
   const c = COPY[asLang(locale)];
 
-  useEffect(() => {
-    const dialog = ref.current;
-    if (!dialog) return;
-    if (open && !dialog.open) dialog.showModal();
-    if (!open && dialog.open) dialog.close();
-  }, [open]);
-
   return (
-    <dialog
-      ref={ref}
-      aria-label={c.heading}
-      onClose={onClose}
-      onClick={(event) => {
-        // Native <dialog> puts the backdrop on the element itself, so a click
-        // that lands on the dialog box but not its contents is a backdrop click.
-        if (event.target === ref.current) onClose();
-      }}
-      className="w-[min(28rem,calc(100vw-2rem))] rounded-[28px] border border-green-100 bg-transparent p-0 backdrop:bg-slate-900/40 backdrop:backdrop-blur-sm"
-    >
-      <div className="max-h-[85vh] overflow-y-auto rounded-[28px] bg-white">
+    <Dialog open={open} onOpenChange={(next) => { if (!next) onClose(); }}>
+      <DialogContent className="max-h-[90dvh] w-[calc(100vw-2rem)] max-w-md overflow-y-auto rounded-[28px] border-green-100 bg-white p-0 shadow-2xl">
+        <DialogTitle className="sr-only">{c.heading}</DialogTitle>
+        <DialogDescription className="sr-only">{c.page}</DialogDescription>
         <OntologyBirthInput locale={locale} onSaved={onClose} />
         <div className="px-4 pb-4 sm:px-5">
           <a
@@ -78,8 +63,8 @@ export function ProfileInputDialog({
             {c.close}
           </button>
         </div>
-      </div>
-    </dialog>
+      </DialogContent>
+    </Dialog>
   );
 }
 

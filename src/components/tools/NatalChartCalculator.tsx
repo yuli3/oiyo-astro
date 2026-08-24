@@ -389,21 +389,18 @@ export default function NatalChartCalculator({ locale }: Props) {
 
   if (result) {
     const { chart, hasTime } = result;
-    // Astrology dictionary pages exist in ko (all), en & ja (all 10 planets).
-    // Use the reader's locale when a translation exists, else fall back to ko.
-    const wikiLoc = loc === 'en' || loc === 'ja' ? loc : 'ko';
-    const rows: { key: string; label: string; sub: string; signKey: typeof chart.sun.sign; deg: number; show: boolean; wiki?: string; retro?: boolean }[] = [
-      { key: 'sun', label: t.sun, sub: t.sunSub, signKey: chart.sun.sign, deg: chart.sun.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/${wikiLoc}/meaning-of-astro-sun-in-${chart.sun.sign}/` },
-      { key: 'moon', label: t.moon, sub: t.moonSub, signKey: chart.moon.sign, deg: chart.moon.degreeInSign, show: true, wiki: `https://wiki.oiyo.net/${wikiLoc}/meaning-of-astro-moon-in-${chart.moon.sign}/` },
+    const rows: { key: string; label: string; sub: string; signKey: typeof chart.sun.sign; deg: number; show: boolean; retro?: boolean }[] = [
+      { key: 'sun', label: t.sun, sub: t.sunSub, signKey: chart.sun.sign, deg: chart.sun.degreeInSign, show: true },
+      { key: 'moon', label: t.moon, sub: t.moonSub, signKey: chart.moon.sign, deg: chart.moon.degreeInSign, show: true },
       { key: 'asc', label: t.asc, sub: t.ascSub, signKey: chart.ascendant.sign, deg: chart.ascendant.degreeInSign, show: hasTime },
-      { key: 'mercury', label: t.mercury, sub: t.mercurySub, signKey: chart.mercury.sign, deg: chart.mercury.degreeInSign, show: true, retro: chart.mercury.retrograde, wiki: `https://wiki.oiyo.net/${wikiLoc}/meaning-of-astro-mercury-in-${chart.mercury.sign}/` },
-      { key: 'venus', label: t.venus, sub: t.venusSub, signKey: chart.venus.sign, deg: chart.venus.degreeInSign, show: true, retro: chart.venus.retrograde, wiki: `https://wiki.oiyo.net/${wikiLoc}/meaning-of-astro-venus-in-${chart.venus.sign}/` },
-      { key: 'mars', label: t.mars, sub: t.marsSub, signKey: chart.mars.sign, deg: chart.mars.degreeInSign, show: true, retro: chart.mars.retrograde, wiki: `https://wiki.oiyo.net/${wikiLoc}/meaning-of-astro-mars-in-${chart.mars.sign}/` },
-      { key: 'jupiter', label: t.jupiter, sub: t.jupiterSub, signKey: chart.jupiter.sign, deg: chart.jupiter.degreeInSign, show: true, retro: chart.jupiter.retrograde, wiki: `https://wiki.oiyo.net/${wikiLoc}/meaning-of-astro-jupiter-in-${chart.jupiter.sign}/` },
-      { key: 'saturn', label: t.saturn, sub: t.saturnSub, signKey: chart.saturn.sign, deg: chart.saturn.degreeInSign, show: true, retro: chart.saturn.retrograde, wiki: `https://wiki.oiyo.net/${wikiLoc}/meaning-of-astro-saturn-in-${chart.saturn.sign}/` },
-      { key: 'uranus', label: t.uranus, sub: t.uranusSub, signKey: chart.uranus.sign, deg: chart.uranus.degreeInSign, show: true, retro: chart.uranus.retrograde, wiki: `https://wiki.oiyo.net/${wikiLoc}/meaning-of-astro-uranus-in-${chart.uranus.sign}/` },
-      { key: 'neptune', label: t.neptune, sub: t.neptuneSub, signKey: chart.neptune.sign, deg: chart.neptune.degreeInSign, show: true, retro: chart.neptune.retrograde, wiki: `https://wiki.oiyo.net/${wikiLoc}/meaning-of-astro-neptune-in-${chart.neptune.sign}/` },
-      { key: 'pluto', label: t.pluto, sub: t.plutoSub, signKey: chart.pluto.sign, deg: chart.pluto.degreeInSign, show: true, retro: chart.pluto.retrograde, wiki: `https://wiki.oiyo.net/${wikiLoc}/meaning-of-astro-pluto-in-${chart.pluto.sign}/` },
+      { key: 'mercury', label: t.mercury, sub: t.mercurySub, signKey: chart.mercury.sign, deg: chart.mercury.degreeInSign, show: true, retro: chart.mercury.retrograde },
+      { key: 'venus', label: t.venus, sub: t.venusSub, signKey: chart.venus.sign, deg: chart.venus.degreeInSign, show: true, retro: chart.venus.retrograde },
+      { key: 'mars', label: t.mars, sub: t.marsSub, signKey: chart.mars.sign, deg: chart.mars.degreeInSign, show: true, retro: chart.mars.retrograde },
+      { key: 'jupiter', label: t.jupiter, sub: t.jupiterSub, signKey: chart.jupiter.sign, deg: chart.jupiter.degreeInSign, show: true, retro: chart.jupiter.retrograde },
+      { key: 'saturn', label: t.saturn, sub: t.saturnSub, signKey: chart.saturn.sign, deg: chart.saturn.degreeInSign, show: true, retro: chart.saturn.retrograde },
+      { key: 'uranus', label: t.uranus, sub: t.uranusSub, signKey: chart.uranus.sign, deg: chart.uranus.degreeInSign, show: true, retro: chart.uranus.retrograde },
+      { key: 'neptune', label: t.neptune, sub: t.neptuneSub, signKey: chart.neptune.sign, deg: chart.neptune.degreeInSign, show: true, retro: chart.neptune.retrograde },
+      { key: 'pluto', label: t.pluto, sub: t.plutoSub, signKey: chart.pluto.sign, deg: chart.pluto.degreeInSign, show: true, retro: chart.pluto.retrograde },
     ];
     return (
       <section className="mx-auto w-full max-w-xl">
@@ -435,10 +432,7 @@ export default function NatalChartCalculator({ locale }: Props) {
                     <span className="ml-2 align-middle rounded bg-rose-100 px-1.5 py-0.5 text-xs font-bold text-rose-700" title={t.retro}>℞ {t.retro}</span>
                   )}
                 </p>
-                <p className="mt-1 text-sm text-slate-600">{info.trait[loc]}</p>
-                {r.wiki && (
-                  <a href={r.wiki} className="mt-2 inline-block text-xs font-bold text-green-700 hover:underline">{t.readMore}</a>
-                )}
+                <p className="mt-2 border-t border-slate-900/5 pt-2 text-xs leading-5 text-slate-500">{r.sub}: {info.trait[loc]}</p>
               </article>
             );
           })}

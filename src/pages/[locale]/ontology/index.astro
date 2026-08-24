@@ -7,6 +7,7 @@ import { RecommendationCards } from '../../../components/ontology/Recommendation
 import { OntologyExportPopover } from '../../../components/ontology/OntologyExportPopover';
 import { OntologySharedProfileBanner } from '../../../components/ontology/OntologySharedProfileBanner';
 import { AssessmentSignalSummary } from '../../../components/ontology/AssessmentSignalSummary';
+import { HeritageCoordinates } from '../../../components/ontology/HeritageCoordinates';
 import WikiDefinitionLink from '../../../components/shared/WikiDefinitionLink.astro';
 import { laneOf, LANE_META } from '../../../lib/ontology/registry/ontology-systems';
 import type { Lane, OntologySystem } from '../../../lib/ontology/registry/ontology-systems';
@@ -131,6 +132,8 @@ const visibleLanes = [
         </ul>
       </section>
     ))}
+
+    <HeritageCoordinates locale={locale} client:visible />
 
     <!-- Canonical V2 assessment signals. Traits, preferences, and interests
          remain separate and retain evidence/confidence/time provenance. -->

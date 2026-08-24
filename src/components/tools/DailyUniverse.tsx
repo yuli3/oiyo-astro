@@ -311,7 +311,7 @@ export default function DailyUniverse({ locale }: Props) {
               <Skeleton aria-hidden="true" className="h-16 rounded-lg bg-white/5" />
             )}
             <a
-              href={`/${locale}/tarot/daily/`}
+              href={`/${locale}/tarot/reading/`}
               className="mt-auto text-xs font-semibold text-amber-300 hover:text-amber-200 transition-colors"
             >
               {ui.fullReading} →

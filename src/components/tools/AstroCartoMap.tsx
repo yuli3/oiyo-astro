@@ -80,6 +80,18 @@ function curvePaths(pts: { lat: number; lon: number }[]): string[] {
 
 const DEFAULT_ON: CartoBody[] = ['sun', 'moon', 'venus'];
 
+// Lightweight equirectangular land silhouettes. The previous chart had only a
+// grid, so the computed lines floated over a blank rectangle and did not read
+// as a map at all.
+const LAND_PATHS = [
+  'M55 75 L95 45 145 38 190 62 205 100 178 120 165 155 130 162 112 132 78 120 Z',
+  'M188 172 L225 182 245 220 236 278 212 330 192 294 183 238 Z',
+  'M330 70 L382 44 458 50 505 72 585 60 660 92 645 128 590 140 552 122 510 150 470 142 425 112 380 118 350 98 Z',
+  'M380 132 L430 142 454 186 445 244 412 292 382 252 365 196 Z',
+  'M585 230 L630 220 668 246 652 282 605 290 578 262 Z',
+  'M272 54 L300 38 318 62 302 86 278 80 Z',
+];
+
 export default function AstroCartoMap({
   locale,
   lines,
@@ -123,6 +135,9 @@ export default function AstroCartoMap({
       </div>
       <svg viewBox={`0 0 ${W} ${H}`} className="mt-3 w-full rounded-xl" role="img" aria-label={t.heading}>
         <rect width={W} height={H} fill="#eef2e6" />
+        <g fill="#c8d6b8" stroke="#9db28b" strokeWidth="1.2">
+          {LAND_PATHS.map((path, index) => <path key={`land-${index}`} d={path} />)}
+        </g>
         {Array.from({ length: 12 }, (_, i) => (
           <line key={`g${i}`} x1={(i * W) / 12} y1={0} x2={(i * W) / 12} y2={H} stroke="#d6dcc8" strokeWidth="1" />
         ))}
