@@ -3,6 +3,12 @@ import Layout from '../../layouts/Layout.astro';
 import PeriodicFortune from '../../components/tools/PeriodicFortune';
 import { LOCALES, getTranslations, localePath } from '../../i18n';
 import type { Locale } from '../../i18n';
+// 2026-08-25 impeccable critique P2: one coherent icon language instead of
+// four unrelated emoji vocabularies (doors/tests/map/value-props each used
+// their own set). lucide-react is already a project dependency; these are
+// static SVGs, no client directive needed.
+import { Compass, Heart, Moon, Brain, Waves, Sparkles, Wand2, Sun, ClipboardCheck, Star, FlaskConical, Lock } from 'lucide-react';
+import type { ComponentType } from 'react';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -63,12 +69,12 @@ const pageRole = txt({
   es: 'Responde preguntas aquí. Encuéntralo todo en tu mapa.',
 })
 
-type Door = { key: string; icon: string; label: string; sub: string; href: string; primary?: boolean }
+type Door = { key: string; icon: ComponentType<{ size?: number; strokeWidth?: number; className?: string }>; label: string; sub: string; href: string; primary?: boolean }
 
 const doors: Door[] = [
   {
     key: 'personality',
-    icon: '🧭',
+    icon: Compass,
     label: txt({ ko: '성격이 궁금하다', en: "I'm curious about my personality", ja: '性格が気になる', zh: '我想了解我的性格', fr: 'Ma personnalité m\'intrigue', es: 'Tengo curiosidad por mi personalidad' }),
     sub: txt({
       ko: '16문항. 결과는 유형 하나가 아니라, 내 지도에 쌓이는 신호입니다.',
@@ -83,7 +89,7 @@ const doors: Door[] = [
   },
   {
     key: 'relationships',
-    icon: '💚',
+    icon: Heart,
     label: txt({ ko: '관계가 궁금하다', en: "I'm curious about my relationships", ja: '人間関係が気になる', zh: '我想了解我的人际关系', fr: 'Mes relations m\'intriguent', es: 'Tengo curiosidad por mis relaciones' }),
     sub: txt({
       ko: '12문항. 애착유형 — 가까운 사람과 반복되는 패턴을 봅니다.',
@@ -97,7 +103,7 @@ const doors: Door[] = [
   },
   {
     key: 'birth',
-    icon: '🌙',
+    icon: Moon,
     label: txt({ ko: '태어난 날이 궁금하다', en: "I'm curious what my birth date says", ja: '生まれた日が気になる', zh: '我想知道出生日期说明什么', fr: 'Ma date de naissance m\'intrigue', es: 'Tengo curiosidad por mi fecha de nacimiento' }),
     sub: txt({
       ko: '지도로 이동합니다 — 검사가 아니에요.',
@@ -111,7 +117,7 @@ const doors: Door[] = [
   },
 ]
 
-type PsychTest = { icon: string; title: string; questions: number; minutes: number; href: string }
+type PsychTest = { icon: ComponentType<{ size?: number; strokeWidth?: number; className?: string }>; title: string; questions: number; minutes: number; href: string }
 
 const questionsMinutesLabel = (n: number, m: number) => txt({
   ko: `${n}문항 · ${m}분`,
@@ -124,32 +130,36 @@ const questionsMinutesLabel = (n: number, m: number) => txt({
 
 const psychTests: PsychTest[] = [
   {
-    icon: '🧠',
+    icon: Brain,
     title: txt({ ko: 'MBTI', en: 'MBTI', ja: 'MBTI', zh: 'MBTI', fr: 'MBTI', es: 'MBTI' }),
     questions: 16, minutes: 3,
     href: localePath(locale, '/mbti/test'),
   },
   {
-    icon: '🌊',
+    icon: Waves,
     title: txt({ ko: '빅파이브', en: 'Big Five', ja: 'ビッグファイブ', zh: '大五人格', fr: 'Big Five', es: 'Cinco Grandes' }),
     questions: 20, minutes: 4,
     href: localePath(locale, '/big5/test'),
   },
   {
-    icon: '🔮',
+    icon: Sparkles,
     title: txt({ ko: '에니어그램', en: 'Enneagram', ja: 'エニアグラム', zh: '九型人格', fr: 'Ennéagramme', es: 'Eneagrama' }),
     questions: 27, minutes: 5,
     href: localePath(locale, '/enneagram/test'),
   },
   {
-    icon: '💚',
+    icon: Heart,
     title: txt({ ko: '애착유형', en: 'Attachment', ja: '愛着タイプ', zh: '依恋类型', fr: 'Attachement', es: 'Apego' }),
     questions: 12, minutes: 2,
     href: localePath(locale, '/attachment-style/test'),
   },
 ]
 
-const sectionPsychTitle = txt({ ko: '심리검사', en: 'Psychology Tests', ja: '心理テスト', zh: '心理测试', fr: 'Tests de psychologie', es: 'Tests de psicología' })
+// 2026-08-25 impeccable critique P2: doors[0]/doors[1]과 psychTests[0]/[3]가
+// 같은 URL(MBTI/애착)을 5줄 차이로 두 번 보여줘서 "실수처럼" 읽힌다는 지적.
+// 목적지를 바꾸지 않고(위 문의 기본값은 확정 사양), 이 섹션이 "전체 목록"임을
+// 제목으로 명시해 위의 문과 겹치는 게 의도된 레이아웃임을 알린다.
+const sectionPsychTitle = txt({ ko: '심리검사 전체', en: 'All Psychology Tests', ja: '心理テスト一覧', zh: '全部心理测试', fr: 'Tous les tests de psychologie', es: 'Todos los tests de psicología' })
 const ctaStart = txt({ ko: '시작하기', en: 'Start', ja: '始める', zh: '开始', fr: 'Commencer', es: 'Comenzar' })
 
 const fortuneSectionTitle = txt({
@@ -202,14 +212,13 @@ const personalMap = {
     </div>
 
     <div class="relative z-10 max-w-2xl mx-auto text-center animate-fadeInUp">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-green-100 text-green-700 text-xs font-bold mb-5 shadow-sm">
-        <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+      <div class="inline-flex items-center px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-green-100 text-green-700 text-xs font-bold mb-5 shadow-sm">
         OIYO
       </div>
       <h1 class="text-3xl md:text-4xl font-serif font-black text-green-950 mb-3 tracking-tight leading-tight">
         {pageRole}
       </h1>
-      <p class="text-green-700/80 font-medium text-sm md:text-base max-w-lg mx-auto leading-relaxed">
+      <p class="text-green-700 font-medium text-sm md:text-base max-w-lg mx-auto leading-relaxed">
         {heroSub}
       </p>
     </div>
@@ -225,8 +234,8 @@ const personalMap = {
         href={d.href}
         class="group flex items-center gap-4 rounded-2xl bg-green-700 text-white p-5 shadow-lg shadow-green-200 hover:bg-green-800 transition-colors"
       >
-        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/15 text-xl">
-          {d.icon}
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/15">
+          <d.icon size={22} strokeWidth={2} aria-hidden="true" />
         </span>
         <span class="min-w-0 flex-1">
           <span class="block font-bold text-base text-white">{d.label}</span>
@@ -241,12 +250,12 @@ const personalMap = {
           href={d.href}
           class="group flex items-center gap-4 py-3.5 hover:bg-green-50/60 -mx-2 px-2 rounded-lg transition-colors"
         >
-          <span class="flex h-9 w-9 shrink-0 items-center justify-center text-lg" aria-hidden="true">
-            {d.icon}
+          <span class="flex h-9 w-9 shrink-0 items-center justify-center text-green-700">
+            <d.icon size={20} strokeWidth={2} aria-hidden="true" />
           </span>
           <span class="min-w-0 flex-1">
             <span class="block font-bold text-sm text-green-950">{d.label}</span>
-            <span class="block text-xs mt-0.5 leading-relaxed text-green-700/70">{d.sub}</span>
+            <span class="block text-xs mt-0.5 leading-relaxed text-green-800">{d.sub}</span>
           </span>
           <span class="shrink-0 text-green-400 group-hover:text-green-700 transition-colors" aria-hidden="true">→</span>
         </a>
@@ -263,14 +272,16 @@ const personalMap = {
           href={test.href}
           class="group flex items-center gap-3 py-3.5 hover:bg-green-50/60 -mx-2 px-2 rounded-lg transition-colors"
         >
-          <span class="w-8 shrink-0 text-lg leading-none" aria-hidden="true">{test.icon}</span>
+          <span class="w-8 shrink-0 text-green-700">
+            <test.icon size={20} strokeWidth={2} aria-hidden="true" />
+          </span>
           <span class="min-w-0 flex-1">
             <span class="block font-bold text-green-950 text-sm group-hover:text-green-700 transition-colors">
               {test.title}
             </span>
-            <span class="block text-xs text-green-600 mt-0.5">{questionsMinutesLabel(test.questions, test.minutes)}</span>
+            <span class="block text-xs text-green-700 mt-0.5">{questionsMinutesLabel(test.questions, test.minutes)}</span>
           </span>
-          <span class="shrink-0 text-xs font-semibold text-green-500 group-hover:text-green-700 transition-colors">
+          <span class="shrink-0 text-xs font-semibold text-green-700 group-hover:text-green-900 transition-colors">
             {ctaStart} →
           </span>
         </a>
@@ -279,8 +290,8 @@ const personalMap = {
   </section>
 
   <!-- 4. 지도 한 줄 -->
-  <section class="mx-auto max-w-6xl px-4 pt-10" aria-labelledby="personal-map-title">
-    <div class="relative overflow-hidden rounded-[2rem] border border-lime-200 bg-[#f7f8ed] px-5 py-7 shadow-[0_18px_50px_-32px_rgba(54,83,20,0.5)] sm:px-8 sm:py-9 lg:px-10">
+  <section class="mx-auto max-w-4xl px-4 pt-10" aria-labelledby="personal-map-title">
+    <div class="relative overflow-hidden rounded-[2rem] bg-[#f7f8ed] px-5 py-7 sm:px-8 sm:py-9 lg:px-10">
       <div class="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-lime-200/50 blur-3xl" aria-hidden="true"></div>
       <div class="relative grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
@@ -297,8 +308,8 @@ const personalMap = {
             >
               {personalMap.cta}<span class="ml-2" aria-hidden="true">→</span>
             </a>
-            <p class="inline-flex items-center gap-1.5 text-xs font-semibold text-green-800/65">
-              <span aria-hidden="true">⌁</span>{personalMap.privacy}
+            <p class="inline-flex items-center gap-1.5 text-xs font-semibold text-green-800">
+              <Lock size={12} strokeWidth={2.5} aria-hidden="true" />{personalMap.privacy}
             </p>
           </div>
         </div>
@@ -306,15 +317,15 @@ const personalMap = {
         <div aria-label={personalMap.title}>
           <div class="grid gap-5 sm:grid-cols-3 sm:divide-x sm:divide-lime-300/70">
             {[
-              { icon: '◉', title: personalMap.born, detail: personalMap.bornDetail },
-              { icon: '◇', title: personalMap.measured, detail: personalMap.measuredDetail },
-              { icon: '✦', title: personalMap.chosen, detail: personalMap.chosenDetail },
+              { icon: Sun, title: personalMap.born, detail: personalMap.bornDetail },
+              { icon: ClipboardCheck, title: personalMap.measured, detail: personalMap.measuredDetail },
+              { icon: Star, title: personalMap.chosen, detail: personalMap.chosenDetail },
             ].map((item) => (
               <div class="flex items-start gap-3 sm:flex-col sm:gap-2 sm:px-5 sm:first:pl-0">
-                <span class="text-base font-black text-lime-700 leading-none" aria-hidden="true">{item.icon}</span>
+                <item.icon size={18} strokeWidth={2.25} className="text-lime-700 shrink-0" aria-hidden="true" />
                 <div>
                   <p class="text-sm font-black text-green-950">{item.title}</p>
-                  <p class="mt-1 text-xs leading-5 text-green-700/70">{item.detail}</p>
+                  <p class="mt-1 text-xs leading-5 text-green-800">{item.detail}</p>
                 </div>
               </div>
             ))}
@@ -329,12 +340,12 @@ const personalMap = {
     <div class="flex items-center justify-between mb-4">
       <h2 class="text-lg font-bold text-green-950">{fortuneSectionTitle}</h2>
       <a href={tarotCard.href} class="group inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-900 transition-colors">
-        <span aria-hidden="true">🃏</span>{tarotCard.title}
-        <span class="text-green-400 group-hover:translate-x-0.5 transition-transform" aria-hidden="true">→</span>
+        <Wand2 size={16} strokeWidth={2} aria-hidden="true" />{tarotCard.title}
+        <span class="text-green-500 group-hover:translate-x-0.5 transition-transform" aria-hidden="true">→</span>
       </a>
     </div>
-    <div class="rounded-3xl border border-green-100 bg-white p-5 shadow-sm">
-      <p class="text-xs font-bold text-green-700/70 uppercase tracking-wide mb-2">{fortuneWidgetTitle}</p>
+    <div class="rounded-3xl bg-green-50/60 p-5">
+      <p class="text-xs font-bold text-green-700 uppercase tracking-wide mb-2">{fortuneWidgetTitle}</p>
       <PeriodicFortune client:visible locale={locale} period="today" />
     </div>
   </section>
@@ -363,25 +374,25 @@ const personalMap = {
     <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
       {[
         {
-          icon: '🔬',
+          icon: FlaskConical,
           title: txt({ ko: '심리학 기반', en: 'Psychology-Based', ja: '心理学ベース', zh: '基于心理学', fr: 'Basé sur la Psychologie', es: 'Basado en Psicología' }),
           desc: txt({ ko: 'OCEAN·애착이론 등 검증된 연구 기반', en: 'OCEAN, attachment theory & validated research', ja: 'OCEAN・愛着理論などの検証済み研究に基づく', zh: '基于OCEAN、依恋理论等经验证的研究', fr: 'OCEAN, théorie de l\'attachement & recherche validée', es: 'OCEAN, teoría del apego e investigación validada' }),
         },
         {
-          icon: '☯️',
+          icon: Sun,
           title: txt({ ko: '동양 철학', en: 'Eastern Wisdom', ja: '東洋哲学', zh: '东方智慧', fr: 'Sagesse Orientale', es: 'Sabiduría Oriental' }),
           desc: txt({ ko: '사주·수비학·별자리 등 전통 지혜 통합', en: 'Saju, numerology, zodiac & traditional wisdom', ja: '四柱推命・数秘術・星座など伝統的知恵を統合', zh: '四柱推命、数字命理、星座等传统智慧整合', fr: 'Saju, numérologie, zodiaque & sagesse traditionnelle', es: 'Saju, numerología, zodíaco & sabiduría tradicional' }),
         },
         {
-          icon: '🔒',
+          icon: Lock,
           title: txt({ ko: '개인정보 보호', en: 'Privacy First', ja: 'プライバシー優先', zh: '隐私优先', fr: 'Confidentialité d\'Abord', es: 'Privacidad Primero' }),
           desc: txt({ ko: '결과는 기기에만 저장. 서버 전송 없음', en: 'Results stay on your device. No server uploads.', ja: '結果はデバイスのみに保存。サーバー送信なし', zh: '结果仅保存在您的设备上。不上传至服务器', fr: 'Les résultats restent sur votre appareil. Pas d\'envoi serveur.', es: 'Los resultados permanecen en tu dispositivo. Sin envíos al servidor.' }),
         },
       ].map(v => (
         <div class="flex flex-col items-center gap-3">
-          <div class="text-3xl">{v.icon}</div>
+          <v.icon size={28} strokeWidth={1.75} className="text-green-700" aria-hidden="true" />
           <h3 class="font-bold text-green-950">{v.title}</h3>
-          <p class="text-sm text-green-600 leading-relaxed">{v.desc}</p>
+          <p class="text-sm text-green-700 leading-relaxed">{v.desc}</p>
         </div>
       ))}
     </div>

@@ -80,6 +80,12 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
     if (parsed) setBirth({ y: parsed.year, m: parsed.month, d: parsed.day });
   }, [parsed]);
 
+  // 2026-08-25 impeccable critique P1: "See fortune" gave zero feedback when
+  // clicked with no/invalid birth date — silent no-op. Disable the button
+  // instead so the failure state is visible rather than discoverable only
+  // by clicking and nothing happening.
+  const isValidDate = /^\d{4}-\d{2}-\d{2}$/.test(dateInput);
+
   const submit = () => {
     const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dateInput);
     if (!match) return;
@@ -128,7 +134,11 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
             max={new Date().toISOString().slice(0, 10)}
             className="flex-1"
           />
-          <button onClick={submit} className="h-12 rounded-xl bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90">{t.see}</button>
+          <button
+            onClick={submit}
+            disabled={!isValidDate}
+            className="h-12 rounded-xl bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:opacity-40"
+          >{t.see}</button>
         </div>
         <p className="text-[11px] text-muted-foreground">{t.note}</p>
       </div>
