@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import PeriodicFortune from '../../components/tools/PeriodicFortune';
+import { ProfileMindmap } from '../../components/ontology/ProfileMindmap';
 import { LOCALES, getTranslations, localePath } from '../../i18n';
 import type { Locale } from '../../i18n';
 // 2026-08-25 impeccable critique P2: one coherent icon language instead of
@@ -59,6 +60,14 @@ const metaDescription = locale === 'en'
 // 2026-08-25 /grill-me 개편: 홈이 카탈로그가 아니라 세 문이 되도록 재구성.
 // company-brain/AI-Sessions/wiki/design/oiyo-landing-ux-consistency-2026-08-25.md 참조.
 // 없앤 것: 통계 띠("28+" 등), 히어로 8칸 격자, 인기 7 + 빠른 18 이중 목록, teal 블러.
+//
+// 2026-08-25 (세운 지시): 세 문/문장위저드를 넣었다 뺐다 한 끝에, 온톨로지 페이지의
+// "타고난 것 / 검사로 본 것 / 내가 고른 것" 세 갈래 자체를 홈에서 바로 작동하게
+// 만드는 쪽으로 확정. 아래 3개 구간은 단순 티저가 아니라 실제 기능 위젯이다 —
+// PeriodicFortune(생년월일 입력→사주 오행·12지신·별자리)과 ProfileMindmap
+// (관심/활동/환경/관계/목표 칩 선택)은 둘 다 /ontology 에서 쓰던 컴포넌트를
+// 그대로 가져왔고 저장 위치(localStorage)도 같아서, 홈에서 입력해도 /ontology
+// 지도에 그대로 반영된다.
 
 const pageRole = txt({
   ko: '질문은 여기서. 모아둔 건 지도에서.',
@@ -71,11 +80,9 @@ const pageRole = txt({
 
 // 2026-08-25: tried "three doors" then a sentence-wizard variant as the
 // entry question above the psych-test list; user's call was that both felt
-// thin, and the psych-test list right below already does the same job (of
-// the 3 destinations doors/wizard offered, 2 were literally the same URLs
-// as items already in that list). So the picker section is gone — the
-// psych-4 list is the entry point, and the map section further down still
-// covers the 3rd destination (birth date -> /ontology) with its own CTA.
+// thin. Settled on skipping a separate picker entirely — the 검사로 본 것
+// lane below (see personalMap.measured) is the entry point for tests, and
+// 타고난 것/내가 고른 것 lanes cover the other two destinations directly.
 
 type PsychTest = { icon: ComponentType<{ size?: number; strokeWidth?: number; className?: string }>; title: string; questions: number; minutes: number; href: string }
 
@@ -115,29 +122,12 @@ const psychTests: PsychTest[] = [
   },
 ]
 
-const sectionPsychTitle = txt({ ko: '심리검사', en: 'Psychology Tests', ja: '心理テスト', zh: '心理测试', fr: 'Tests de psychologie', es: 'Tests de psicología' })
 const ctaStart = txt({ ko: '시작하기', en: 'Start', ja: '始める', zh: '开始', fr: 'Commencer', es: 'Comenzar' })
 
-const fortuneSectionTitle = txt({
-  ko: '오늘',
-  en: 'Today',
-  ja: '今日',
-  zh: '今日',
-  fr: "Aujourd'hui",
-  es: 'Hoy',
-})
 const tarotCard = {
   title: txt({ ko: '타로 리딩', en: 'Tarot Reading', ja: 'タロットリーディング', zh: '塔罗牌解读', fr: 'Tirage de Tarot', es: 'Lectura de Tarot' }),
   href: localePath(locale, '/tarot/reading'),
 }
-const fortuneWidgetTitle = txt({
-  ko: '오늘의 운세',
-  en: "Today's Fortune",
-  ja: '今日の運勢',
-  zh: '今日运势',
-  fr: 'La fortune du jour',
-  es: 'La fortuna de hoy',
-})
 
 const moreSectionTitle = txt({ ko: '더 보기', en: 'More', ja: 'もっと見る', zh: '更多', fr: 'Voir plus', es: 'Ver más' })
 const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テスト', zh: '所有测试', fr: 'Tous les Tests', es: 'Todos los Tests' })
@@ -180,109 +170,98 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- 2. 심리검사 — 진입 질문 섹션 없이 바로 목록 (2026-08-25: doors/wizard 둘 다
-       심리검사 목록과 내용이 겹쳐서 제거, 이 목록 자체가 진입점) -->
-  <section class="max-w-3xl mx-auto px-4 pt-4">
-    <h2 class="text-lg font-bold text-green-950 mb-2">{sectionPsychTitle}</h2>
-    <div class="divide-y divide-green-100 border-t border-green-100">
-      {psychTests.map((test) => (
-        <a
-          href={test.href}
-          class="group flex items-center gap-3 py-3.5 hover:bg-green-50/60 -mx-2 px-2 rounded-lg transition-colors"
-        >
-          <span class="w-8 shrink-0 text-green-700">
-            <test.icon size={20} strokeWidth={2} aria-hidden="true" />
-          </span>
-          <span class="min-w-0 flex-1">
-            <span class="block font-bold text-green-950 text-sm group-hover:text-green-700 transition-colors">
-              {test.title}
-            </span>
-            <span class="block text-xs text-green-700 mt-0.5">{questionsMinutesLabel(test.questions, test.minutes)}</span>
-          </span>
-          <span class="shrink-0 text-xs font-semibold text-green-700 group-hover:text-green-900 transition-colors">
-            {ctaStart} →
-          </span>
-        </a>
-      ))}
-    </div>
-  </section>
+  <!-- 2. 세 갈래: 타고난 것 / 검사로 본 것 / 내가 고른 것 (실제 작동하는 위젯,
+       /ontology 와 같은 컴포넌트·저장소를 그대로 씀) -->
+  <section class="max-w-3xl mx-auto px-4 pt-6" aria-labelledby="three-lanes-title">
+    <h2 id="three-lanes-title" class="text-2xl font-black leading-tight text-green-950 text-center max-w-xl mx-auto">
+      {personalMap.title}
+    </h2>
+    <p class="mt-2 text-sm leading-6 text-green-800/75 text-center max-w-xl mx-auto">
+      {personalMap.description}
+    </p>
 
-  <!-- 3. 지도 한 줄 -->
-  <section class="mx-auto max-w-4xl px-4 pt-10" aria-labelledby="personal-map-title">
-    <div class="relative overflow-hidden rounded-[2rem] bg-[#f7f8ed] px-5 py-7 sm:px-8 sm:py-9 lg:px-10">
-      <div class="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-lime-200/50 blur-3xl" aria-hidden="true"></div>
-      <div class="relative grid items-center gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-        <div>
-          <h2 id="personal-map-title" class="max-w-xl text-2xl font-black leading-tight text-green-950 sm:text-3xl">
-            {personalMap.title}
-          </h2>
-          <p class="mt-3 max-w-xl text-sm leading-6 text-green-800/75 sm:text-base">
-            {personalMap.description}
-          </p>
-          <div class="mt-6 flex flex-col items-start gap-3 sm:flex-row sm:items-center">
-            <a
-              href={localePath(locale, '/ontology')}
-              class="inline-flex min-h-12 items-center justify-center rounded-full bg-green-800 px-6 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-green-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800"
-            >
-              {personalMap.cta}<span class="ml-2" aria-hidden="true">→</span>
-            </a>
-            <p class="inline-flex items-center gap-1.5 text-xs font-semibold text-green-800">
-              <Lock size={12} strokeWidth={2.5} aria-hidden="true" />{personalMap.privacy}
-            </p>
-          </div>
+    <div class="mt-10 space-y-12">
+      <!-- 2a. 타고난 것 -->
+      <div>
+        <div class="flex items-center gap-2">
+          <Sun size={18} strokeWidth={2.25} className="text-green-700 shrink-0" aria-hidden="true" />
+          <h3 class="text-lg font-bold text-green-950">{personalMap.born}</h3>
         </div>
-
-        <div aria-label={personalMap.title}>
-          <div class="grid gap-5 sm:grid-cols-3 sm:divide-x sm:divide-lime-300/70">
-            {[
-              { icon: Sun, title: personalMap.born, detail: personalMap.bornDetail },
-              { icon: ClipboardCheck, title: personalMap.measured, detail: personalMap.measuredDetail },
-              { icon: Star, title: personalMap.chosen, detail: personalMap.chosenDetail },
-            ].map((item) => (
-              <div class="flex items-start gap-3 sm:flex-col sm:gap-2 sm:px-5 sm:first:pl-0">
-                <item.icon size={18} strokeWidth={2.25} className="text-lime-700 shrink-0" aria-hidden="true" />
-                <div>
-                  <p class="text-sm font-black text-green-950">{item.title}</p>
-                  <p class="mt-1 text-xs leading-5 text-green-800">{item.detail}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+        <p class="mt-0.5 mb-4 text-xs font-semibold text-green-600">{personalMap.bornDetail}</p>
+        <div class="rounded-3xl bg-green-50/60 p-5">
+          <PeriodicFortune client:visible locale={locale} period="today" />
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- 4. 오늘 둘 (타로, 오늘의 운세) -->
-  <section class="max-w-3xl mx-auto px-4 pt-14">
-    <div class="flex items-center justify-between mb-4">
-      <h2 class="text-lg font-bold text-green-950">{fortuneSectionTitle}</h2>
-      <a href={tarotCard.href} class="group inline-flex items-center gap-1.5 text-sm font-semibold text-green-700 hover:text-green-900 transition-colors">
-        <Wand2 size={16} strokeWidth={2} aria-hidden="true" />{tarotCard.title}
-        <span class="text-green-500 group-hover:translate-x-0.5 transition-transform" aria-hidden="true">→</span>
+      <!-- 2b. 검사로 본 것 -->
+      <div>
+        <div class="flex items-center gap-2">
+          <ClipboardCheck size={18} strokeWidth={2.25} className="text-green-700 shrink-0" aria-hidden="true" />
+          <h3 class="text-lg font-bold text-green-950">{personalMap.measured}</h3>
+        </div>
+        <p class="mt-0.5 mb-2 text-xs font-semibold text-green-600">{personalMap.measuredDetail}</p>
+        <div class="divide-y divide-green-100 border-t border-green-100">
+          {psychTests.map((test) => (
+            <a
+              href={test.href}
+              class="group flex items-center gap-3 py-3.5 hover:bg-green-50/60 -mx-2 px-2 rounded-lg transition-colors"
+            >
+              <span class="w-8 shrink-0 text-green-700">
+                <test.icon size={20} strokeWidth={2} aria-hidden="true" />
+              </span>
+              <span class="min-w-0 flex-1">
+                <span class="block font-bold text-green-950 text-sm group-hover:text-green-700 transition-colors">
+                  {test.title}
+                </span>
+                <span class="block text-xs text-green-700 mt-0.5">{questionsMinutesLabel(test.questions, test.minutes)}</span>
+              </span>
+              <span class="shrink-0 text-xs font-semibold text-green-700 group-hover:text-green-900 transition-colors">
+                {ctaStart} →
+              </span>
+            </a>
+          ))}
+        </div>
+      </div>
+
+      <!-- 2c. 내가 고른 것 -->
+      <div>
+        <div class="flex items-center gap-2">
+          <Star size={18} strokeWidth={2.25} className="text-green-700 shrink-0" aria-hidden="true" />
+          <h3 class="text-lg font-bold text-green-950">{personalMap.chosen}</h3>
+        </div>
+        <p class="mt-0.5 mb-4 text-xs font-semibold text-green-600">{personalMap.chosenDetail}</p>
+        <ProfileMindmap client:visible locale={locale} />
+      </div>
+    </div>
+
+    <div class="mt-10 flex flex-col items-center gap-2 text-center">
+      <a
+        href={localePath(locale, '/ontology')}
+        class="inline-flex min-h-12 items-center justify-center rounded-full bg-green-800 px-6 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-green-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800"
+      >
+        {personalMap.cta}<span class="ml-2" aria-hidden="true">→</span>
       </a>
-    </div>
-    <div class="rounded-3xl bg-green-50/60 p-5">
-      <p class="text-xs font-bold text-green-700 uppercase tracking-wide mb-2">{fortuneWidgetTitle}</p>
-      <PeriodicFortune client:visible locale={locale} period="today" />
+      <p class="inline-flex items-center gap-1.5 text-xs font-semibold text-green-800">
+        <Lock size={12} strokeWidth={2.5} aria-hidden="true" />{personalMap.privacy}
+      </p>
     </div>
   </section>
 
-  <!-- 5. 더 보기 -->
-  <section class="max-w-3xl mx-auto px-4 pt-10 pb-14">
+  <!-- 3. 기타 내용들 (타로, 전체 검사) -->
+  <section class="max-w-3xl mx-auto px-4 pt-14 pb-14">
     <h2 class="sr-only">{moreSectionTitle}</h2>
     <div class="flex flex-wrap justify-center gap-3">
+      <a
+        href={tarotCard.href}
+        class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white border border-green-200 text-green-800 text-sm font-semibold hover:bg-green-50 hover:border-green-300 transition-all shadow-sm"
+      >
+        <Wand2 size={16} strokeWidth={2} aria-hidden="true" />{tarotCard.title} →
+      </a>
       <a
         href={localePath(locale, '/tests')}
         class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white border border-green-200 text-green-800 text-sm font-semibold hover:bg-green-50 hover:border-green-300 transition-all shadow-sm"
       >
         {ctaAllTests} →
-      </a>
-      <a
-        href={localePath(locale, '/ontology')}
-        class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white border border-green-200 text-green-800 text-sm font-semibold hover:bg-green-50 hover:border-green-300 transition-all shadow-sm"
-      >
-        {personalMap.cta} →
       </a>
     </div>
   </section>
