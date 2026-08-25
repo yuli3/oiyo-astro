@@ -1,8 +1,11 @@
 // SSR-friendly catalog of ontology systems, grouped by the 3+4 IA lanes.
 // This is the declarative "그릇" backbone: the dashboard maps over it instead of
 // hand-wiring cards. Heavy per-system engines/narratives stay in OntologyClient
-// (deep dive); this catalog drives the crawlable lane grid + input gating + the
-// wiki/blog explanation bridge.
+// (deep dive); this catalog drives the crawlable lane grid + input gating.
+//
+// 2026-08-26 (세운 지시): each system's own subpage explains it natively now —
+// dropped the wiki-definition explanation bridge (wikiSlug) entirely rather
+// than sending visitors to wiki.oiyo.net from here.
 import type { Locale } from '../../../i18n';
 
 export type Lane = 'innate' | 'test' | 'chosen';
@@ -24,8 +27,6 @@ export interface OntologySystem {
    * left out of the completion denominator.
    */
   href?: (l: Locale) => string;
-  /** wiki definition slug for the explanation bridge (P1-C / Lever 4). */
-  wikiSlug?: string;
   name: Record<Locale, string>;
 }
 
@@ -34,29 +35,29 @@ const L = (ko: string, en: string, ja: string, zh: string, fr: string, es: strin
 
 // ── Lane 1: 타고난 것 (input-derived from birthdate/name/bloodtype) ──
 const INNATE: OntologySystem[] = [
-  { id: 'saju', lane: 'innate', emoji: '🔮', requires: 'birthDate', href: (l) => `/${l}/saju/calculator`, wikiSlug: 'meaning-of-saju-60gapja', name: L('사주팔자', 'Saju (Four Pillars)', '四柱推命', '四柱八字', 'Saju (Quatre Piliers)', 'Saju (Cuatro Pilares)') },
+  { id: 'saju', lane: 'innate', emoji: '🔮', requires: 'birthDate', href: (l) => `/${l}/saju/calculator`, name: L('사주팔자', 'Saju (Four Pillars)', '四柱推命', '四柱八字', 'Saju (Quatre Piliers)', 'Saju (Cuatro Pilares)') },
   { id: 'ohaeng', lane: 'innate', emoji: '🌳', requires: 'birthDate', href: (l) => `/${l}/saju/calculator`, name: L('오행·십성', 'Five Elements', '五行・十神', '五行十神', 'Cinq Éléments', 'Cinco Elementos') },
-  { id: 'astrology', lane: 'innate', emoji: '♈', requires: 'birthDate', href: (l) => `/${l}/zodiac/personality`, wikiSlug: 'meaning-of-astrology', name: L('서양 점성술', 'Western Astrology', '西洋占星術', '西方占星', 'Astrologie occidentale', 'Astrología occidental') },
-  { id: 'natal', lane: 'innate', emoji: '🌌', requires: 'birthTime', href: (l) => `/${l}/natal/chart`, wikiSlug: 'meaning-of-astrology', name: L('출생 차트', 'Natal Chart', '出生図', '出生星盘', 'Thème natal', 'Carta natal') },
-  { id: 'chinese-zodiac', lane: 'innate', emoji: '🐉', requires: 'birthDate', href: (l) => `/${l}/chinese-zodiac`, wikiSlug: 'meaning-of-chinese-zodiac-dragon', name: L('띠(십이지)', 'Chinese Zodiac', '干支・十二支', '生肖', 'Zodiaque chinois', 'Zodíaco chino') },
-  { id: 'ziwei', lane: 'innate', emoji: '⭐', requires: 'birthTime', href: (l) => `/${l}/ontology#heritage-coordinates`, name: L('자미두수', 'Zi Wei Dou Shu', '紫微斗数', '紫微斗数', 'Zi Wei Dou Shu', 'Zi Wei Dou Shu') },
-  { id: 'numerology', lane: 'innate', emoji: '🔢', requires: 'birthDate', href: (l) => `/${l}/numerology/calculator`, wikiSlug: 'meaning-of-numerology', name: L('수비학', 'Numerology', '数秘術', '数字命理', 'Numérologie', 'Numerología') },
-  { id: 'mayan', lane: 'innate', emoji: '🗿', requires: 'birthDate', href: (l) => `/${l}/ontology#heritage-coordinates`, name: L('마야 달력', 'Mayan (Tzolkin)', 'マヤ暦', '玛雅历', 'Maya (Tzolkin)', 'Maya (Tzolkin)') },
-  { id: 'celtic', lane: 'innate', emoji: '🌲', requires: 'birthDate', href: (l) => `/${l}/ontology#heritage-coordinates`, name: L('켈트 나무점', 'Celtic Tree', 'ケルト樹木', '凯尔特树历', 'Arbre celtique', 'Árbol celta') },
+  { id: 'astrology', lane: 'innate', emoji: '♈', requires: 'birthDate', href: (l) => `/${l}/zodiac/personality`, name: L('서양 점성술', 'Western Astrology', '西洋占星術', '西方占星', 'Astrologie occidentale', 'Astrología occidental') },
+  { id: 'natal', lane: 'innate', emoji: '🌌', requires: 'birthTime', href: (l) => `/${l}/natal/chart`, name: L('출생 차트', 'Natal Chart', '出生図', '出生星盘', 'Thème natal', 'Carta natal') },
+  { id: 'chinese-zodiac', lane: 'innate', emoji: '🐉', requires: 'birthDate', href: (l) => `/${l}/chinese-zodiac`, name: L('띠(십이지)', 'Chinese Zodiac', '干支・十二支', '生肖', 'Zodiaque chinois', 'Zodíaco chino') },
+  { id: 'ziwei', lane: 'innate', emoji: '⭐', requires: 'birthTime', href: (l) => `/${l}/ziwei/reading`, name: L('자미두수', 'Zi Wei Dou Shu', '紫微斗数', '紫微斗数', 'Zi Wei Dou Shu', 'Zi Wei Dou Shu') },
+  { id: 'numerology', lane: 'innate', emoji: '🔢', requires: 'birthDate', href: (l) => `/${l}/numerology/calculator`, name: L('수비학', 'Numerology', '数秘術', '数字命理', 'Numérologie', 'Numerología') },
+  { id: 'mayan', lane: 'innate', emoji: '🗿', requires: 'birthDate', href: (l) => `/${l}/mayan/reading`, name: L('마야 달력', 'Mayan (Tzolkin)', 'マヤ暦', '玛雅历', 'Maya (Tzolkin)', 'Maya (Tzolkin)') },
+  { id: 'celtic', lane: 'innate', emoji: '🌲', requires: 'birthDate', href: (l) => `/${l}/celtic/reading`, name: L('켈트 나무점', 'Celtic Tree', 'ケルト樹木', '凯尔特树历', 'Arbre celtique', 'Árbol celta') },
   { id: 'biorhythm', lane: 'innate', emoji: '📈', requires: 'birthDate', href: (l) => `/${l}/today`, name: L('바이오리듬', 'Biorhythm', 'バイオリズム', '生物节律', 'Biorythme', 'Biorritmo') },
   { id: 'onomancy', lane: 'innate', emoji: '✍️', requires: 'name', href: (l) => `/${l}/onomancy`, name: L('성명학(이름)', 'Name (Onomancy)', '姓名判断', '姓名学', 'Onomancie (nom)', 'Onomancia (nombre)') },
-  { id: 'blood-type', lane: 'innate', emoji: '🩸', requires: 'bloodType', href: (l) => `/${l}/blood-type`, wikiSlug: 'meaning-of-blood-type-a', name: L('혈액형', 'Blood Type', '血液型', '血型', 'Groupe sanguin', 'Grupo sanguíneo') },
-  { id: 'palmistry', lane: 'innate', emoji: '🖐️', requires: 'none', href: (l) => `/${l}/palmistry/explore`, wikiSlug: 'meaning-of-palmistry', name: L('손금·관상', 'Palmistry', '手相', '手相', 'Chiromancie', 'Quiromancia') },
-  { id: 'tarot', lane: 'innate', emoji: '🃏', requires: 'none', href: (l) => `/${l}/tarot/reading`, wikiSlug: 'meaning-of-tarot', name: L('타로', 'Tarot', 'タロット', '塔罗', 'Tarot', 'Tarot') },
+  { id: 'blood-type', lane: 'innate', emoji: '🩸', requires: 'bloodType', href: (l) => `/${l}/blood-type`, name: L('혈액형', 'Blood Type', '血液型', '血型', 'Groupe sanguin', 'Grupo sanguíneo') },
+  { id: 'palmistry', lane: 'innate', emoji: '🖐️', requires: 'none', href: (l) => `/${l}/palmistry/explore`, name: L('손금·관상', 'Palmistry', '手相', '手相', 'Chiromancie', 'Quiromancia') },
+  { id: 'tarot', lane: 'innate', emoji: '🃏', requires: 'none', href: (l) => `/${l}/tarot/reading`, name: L('타로', 'Tarot', 'タロット', '塔罗', 'Tarot', 'Tarot') },
 ];
 
 // ── Lane 2: 테스트로 드러난 것 (require a questionnaire) ──
 const TEST: OntologySystem[] = [
-  { id: 'mbti', lane: 'test', emoji: '🧠', requires: 'testResult', testId: 'mbti', href: (l) => `/${l}/mbti/test`, wikiSlug: 'meaning-of-mbti', name: L('MBTI', 'MBTI', 'MBTI', 'MBTI', 'MBTI', 'MBTI') },
+  { id: 'mbti', lane: 'test', emoji: '🧠', requires: 'testResult', testId: 'mbti', href: (l) => `/${l}/mbti/test`, name: L('MBTI', 'MBTI', 'MBTI', 'MBTI', 'MBTI', 'MBTI') },
   { id: 'big5', lane: 'test', emoji: '🌊', requires: 'testResult', testId: 'big5', href: (l) => `/${l}/big5/test`, name: L('빅파이브', 'Big Five', 'ビッグファイブ', '大五人格', 'Big Five', 'Big Five') },
-  { id: 'enneagram', lane: 'test', emoji: '🔵', requires: 'testResult', testId: 'enneagram', href: (l) => `/${l}/enneagram/test`, wikiSlug: 'meaning-of-enneagram', name: L('에니어그램', 'Enneagram', 'エニアグラム', '九型人格', 'Ennéagramme', 'Eneagrama') },
-  { id: 'riasec', lane: 'test', emoji: '🧭', requires: 'testResult', testId: 'riasec', href: (l) => `/${l}/riasec-career-test`, wikiSlug: 'meaning-of-riasec', name: L('직업흥미(RIASEC)', 'RIASEC', 'RIASEC', 'RIASEC 霍兰德', 'RIASEC', 'RIASEC') },
-  { id: 'riasec-quick', lane: 'test', emoji: '🧭', requires: 'testResult', testId: 'riasec-quick', href: (l) => `/${l}/riasec-quick`, wikiSlug: 'meaning-of-riasec', name: L('직업흥미 빠른검사', 'RIASEC (Quick)', 'RIASEC(クイック)', 'RIASEC 快速版', 'RIASEC (rapide)', 'RIASEC (rápido)') },
+  { id: 'enneagram', lane: 'test', emoji: '🔵', requires: 'testResult', testId: 'enneagram', href: (l) => `/${l}/enneagram/test`, name: L('에니어그램', 'Enneagram', 'エニアグラム', '九型人格', 'Ennéagramme', 'Eneagrama') },
+  { id: 'riasec', lane: 'test', emoji: '🧭', requires: 'testResult', testId: 'riasec', href: (l) => `/${l}/riasec-career-test`, name: L('직업흥미(RIASEC)', 'RIASEC', 'RIASEC', 'RIASEC 霍兰德', 'RIASEC', 'RIASEC') },
+  { id: 'riasec-quick', lane: 'test', emoji: '🧭', requires: 'testResult', testId: 'riasec-quick', href: (l) => `/${l}/riasec-quick`, name: L('직업흥미 빠른검사', 'RIASEC (Quick)', 'RIASEC(クイック)', 'RIASEC 快速版', 'RIASEC (rapide)', 'RIASEC (rápido)') },
   { id: 'tci', lane: 'test', emoji: '🧬', requires: 'testResult', testId: 'tci', href: (l) => `/${l}/tci-personality-test`, name: L('기질·성격(TCI)', 'TCI', 'TCI気質', 'TCI气质', 'TCI', 'TCI') },
   { id: 'hexaco', lane: 'test', emoji: '⬡', requires: 'testResult', testId: 'hexaco', href: (l) => `/${l}/hexaco-personality-test`, name: L('HEXACO', 'HEXACO', 'HEXACO', 'HEXACO', 'HEXACO', 'HEXACO') },
   { id: 'political', lane: 'test', emoji: '🗳️', requires: 'testResult', testId: 'political', href: (l) => `/${l}/political/test`, name: L('정치성향', 'Political Values', '政治的傾向', '政治倾向', 'Valeurs politiques', 'Valores políticos') },

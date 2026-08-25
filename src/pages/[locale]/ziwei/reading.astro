@@ -1,0 +1,144 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import ZiweiReading from '../../../components/tools/ZiweiReading';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '자미두수 — 명궁으로 읽는 나의 기질', description: '생년월일시로 계산하는 자미두수, 오행국과 명궁으로 타고난 기질을 읽습니다.' },
+  en: { title: 'Zi Wei Dou Shu — Reading Your Temperament Through the Life Palace', description: 'Calculate your Zi Wei Dou Shu chart from your birth date and time, and read your innate temperament through the five-element bureau and life palace.' },
+  ja: { title: '紫微斗数 — 命宮で読む気質', description: '生年月日時から紫微斗数を計算し、五行局と命宮で生まれ持った気質を読みます。' },
+  zh: { title: '紫微斗数 — 用命宫解读你的气质', description: '根据出生日期和时间计算紫微斗数，通过五行局与命宫解读天生的气质。' },
+  fr: { title: 'Zi Wei Dou Shu — Lire votre tempérament par le palais de vie', description: 'Calculez votre thème Zi Wei Dou Shu à partir de votre date et heure de naissance, et lisez votre tempérament inné à travers le bureau des cinq éléments et le palais de vie.' },
+  es: { title: 'Zi Wei Dou Shu — Leer tu temperamento a través del palacio de vida', description: 'Calcula tu carta de Zi Wei Dou Shu a partir de tu fecha y hora de nacimiento, y lee tu temperamento innato a través de la oficina de cinco elementos y el palacio de vida.' },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string; intro: string; conceptTitle: string; concepts: { title: string; body: string }[];
+  faqTitle: string; faqs: { question: string; answer: string }[]; disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '자미두수는 태어난 순간의 하늘을 12개의 방으로 나눠 읽는 언어입니다',
+    intro: '자미두수(紫微斗數)는 생년월일시를 기준으로 인생을 12개의 영역(궁)으로 나누고, 그 안에 별을 배치해 기질과 흐름을 읽는 중국 점성술입니다. 태어난 시각(시진)까지 있어야 명궁의 위치가 정확히 정해집니다.',
+    conceptTitle: '자미두수를 읽는 세 가지 개념',
+    concepts: [
+      { title: '12궁', body: '인생을 명궁·형제궁·부부궁 등 12개 영역으로 나눈 방입니다. 각 궁이 삶의 다른 측면을 담당합니다.' },
+      { title: '명궁의 별', body: '명궁에 자리한 별이 타고난 기질의 중심입니다. 주성(主星)은 큰 성격, 보조성은 결을 더합니다.' },
+      { title: '오행국', body: '별이 궁을 옮겨가는 속도와 리듬을 정하는 기준으로, 인생 전개의 빠르기를 상징합니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '왜 태어난 시각까지 필요한가요?', answer: '자미두수는 하루를 12개의 시진(2시간 단위)으로 나누고, 그 시진을 기준으로 명궁의 위치를 정하기 때문에 시각 없이는 정확한 계산이 어렵습니다.' },
+      { question: '사주(팔자)와 결과가 다른데 왜죠?', answer: '사주와 자미두수는 계산 방식이 다른 별개의 상징 체계입니다. 같은 생년월일시라도 서로 다른 언어로 해석하기 때문에 결과가 다르게 느껴질 수 있습니다.' },
+      { question: '이 결과를 어떻게 활용하면 좋나요?', answer: '정답을 정해주는 진단이 아니라, 자기 성찰을 위한 참고 자료로 활용해 보세요.' },
+    ],
+    disclaimer: '자미두수 결과는 전통 상징 체계에 기반한 자기 성찰용 콘텐츠이며, 성격이나 운명을 단정하지 않습니다.',
+  },
+  en: {
+    introTitle: 'Zi Wei Dou Shu reads the sky at the moment of your birth through 12 rooms',
+    intro: 'Zi Wei Dou Shu (紫微斗數) divides life into 12 areas ("palaces") based on your birth date and time, then places stars into each palace to read temperament and life flow. Your birth time (down to a two-hour block) is required to fix the life palace precisely.',
+    conceptTitle: 'Three concepts for reading Zi Wei Dou Shu',
+    concepts: [
+      { title: '12 Palaces', body: 'Life is divided into 12 areas — life, siblings, marriage, and more — each palace covering a different facet of life.' },
+      { title: 'Stars in the Life Palace', body: 'The star occupying your life palace is the center of your innate temperament. Main stars shape the big picture; auxiliary stars add nuance.' },
+      { title: 'Five-Element Bureau', body: 'Sets the pace and rhythm at which stars move through the palaces — a symbol for how quickly life unfolds.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Why is my birth time required?', answer: 'Zi Wei Dou Shu divides the day into 12 two-hour blocks, and the life palace is fixed based on which block you were born in — without it, precise calculation isn’t possible.' },
+      { question: 'Why is this different from my Saju result?', answer: 'Saju and Zi Wei Dou Shu are separate symbolic systems with different calculation methods. The same birth date and time can read differently through each language.' },
+      { question: 'How should I use this result?', answer: 'Treat it as a prompt for self-reflection rather than a fixed diagnosis.' },
+    ],
+    disclaimer: 'Zi Wei Dou Shu results are content for self-reflection based on a traditional symbolic system; they do not determine personality or fate.',
+  },
+  ja: {
+    introTitle: '紫微斗数は生まれた瞬間の空を12の部屋に分けて読む占星術です',
+    intro: '紫微斗数（しびとすう）は生年月日時をもとに人生を12の領域（宮）に分け、そこに星を配置して気質と流れを読む中国占星術です。正確な命宮の位置には出生時刻（時辰）が必要です。',
+    conceptTitle: '紫微斗数を読む三つの概念',
+    concepts: [
+      { title: '十二宮', body: '命宮・兄弟宮・夫婦宮など、人生を12の領域に分けた部屋です。それぞれが異なる側面を担当します。' },
+      { title: '命宮の星', body: '命宮にある星が生まれ持った気質の中心です。主星が大きな性格を、補助星が細かなニュアンスを加えます。' },
+      { title: '五行局', body: '星が宮を移動する速さとリズムを決める基準で、人生の展開の速さを象徴します。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'なぜ出生時刻が必要ですか？', answer: '紫微斗数は一日を12の時辰（2時間単位）に分け、その時辰をもとに命宮の位置を定めるため、時刻がないと正確な計算ができません。' },
+      { question: '四柱推命の結果と違うのはなぜですか？', answer: '四柱推命と紫微斗数は計算方法が異なる別々の象徴体系です。同じ生年月日時でも異なる言語で読むため、結果の印象が変わります。' },
+      { question: 'この結果はどう活用すればいいですか？', answer: '断定的な診断ではなく、内省のための参考として活用してください。' },
+    ],
+    disclaimer: '紫微斗数の結果は伝統的な象徴体系に基づく自己省察のためのコンテンツであり、性格や運命を断定するものではありません。',
+  },
+  zh: {
+    introTitle: '紫微斗数用12个宫位解读你出生那一刻的天象',
+    intro: '紫微斗数根据出生日期和时间，将人生划分为12个领域（宫位），并在其中安放星曜，以解读气质与人生走向。精确的命宫位置需要出生时间（时辰）。',
+    conceptTitle: '解读紫微斗数的三个概念',
+    concepts: [
+      { title: '十二宫', body: '命宫、兄弟宫、夫妻宫等，把人生分为12个领域的房间，各宫负责不同的人生层面。' },
+      { title: '命宫之星', body: '坐落在命宫的星曜是天生气质的核心。主星塑造大格局，辅星增添细腻之处。' },
+      { title: '五行局', body: '决定星曜在各宫之间移动速度与节奏的基准，象征人生展开的快慢。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '为什么需要出生时间？', answer: '紫微斗数将一天分为12个时辰（每个2小时），命宫的位置正是根据所在时辰确定的，没有时间就难以精确计算。' },
+      { question: '为什么结果和八字不一样？', answer: '八字与紫微斗数是计算方式不同的两套独立象征体系，即使是同一出生日期时间，用不同语言解读也会呈现不同结果。' },
+      { question: '应该如何使用这个结果？', answer: '请把它当作自我反思的参考，而不是定论式的诊断。' },
+    ],
+    disclaimer: '紫微斗数结果是基于传统象征体系的自我省察内容，不对性格或命运做出定论。',
+  },
+  fr: {
+    introTitle: 'Le Zi Wei Dou Shu lit le ciel au moment de votre naissance à travers 12 pièces',
+    intro: 'Le Zi Wei Dou Shu divise la vie en 12 domaines (« palais ») selon votre date et heure de naissance, puis y place des étoiles pour lire votre tempérament et le cours de votre vie. L’heure de naissance (par tranche de deux heures) est nécessaire pour fixer précisément le palais de vie.',
+    conceptTitle: 'Trois concepts pour lire le Zi Wei Dou Shu',
+    concepts: [
+      { title: 'Les 12 palais', body: 'La vie est divisée en 12 domaines — vie, fratrie, mariage, etc. — chaque palais couvrant une facette différente.' },
+      { title: 'Étoiles du palais de vie', body: 'L’étoile occupant votre palais de vie est le centre de votre tempérament inné. Les étoiles principales façonnent l’ensemble ; les étoiles auxiliaires ajoutent des nuances.' },
+      { title: 'Bureau des cinq éléments', body: 'Fixe le rythme auquel les étoiles se déplacent entre les palais — un symbole de la vitesse à laquelle la vie se déroule.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Pourquoi mon heure de naissance est-elle nécessaire ?', answer: 'Le Zi Wei Dou Shu divise la journée en 12 tranches de deux heures, et le palais de vie est fixé selon la tranche de votre naissance — sans elle, un calcul précis est impossible.' },
+      { question: 'Pourquoi le résultat diffère-t-il de mon Saju ?', answer: 'Le Saju et le Zi Wei Dou Shu sont deux systèmes symboliques distincts, avec des méthodes de calcul différentes.' },
+      { question: 'Comment utiliser ce résultat ?', answer: 'Considérez-le comme une piste de réflexion, pas comme un diagnostic figé.' },
+    ],
+    disclaimer: 'Les résultats du Zi Wei Dou Shu sont un contenu de réflexion basé sur un système symbolique traditionnel ; ils ne déterminent ni la personnalité ni le destin.',
+  },
+  es: {
+    introTitle: 'Zi Wei Dou Shu lee el cielo en el momento de tu nacimiento a través de 12 habitaciones',
+    intro: 'Zi Wei Dou Shu divide la vida en 12 áreas («palacios») según tu fecha y hora de nacimiento, y coloca estrellas en cada palacio para leer el temperamento y el rumbo de la vida. Se necesita la hora de nacimiento (en bloques de dos horas) para fijar con precisión el palacio de vida.',
+    conceptTitle: 'Tres conceptos para leer Zi Wei Dou Shu',
+    concepts: [
+      { title: 'Los 12 palacios', body: 'La vida se divide en 12 áreas —vida, hermanos, matrimonio y más— cada palacio cubre una faceta distinta.' },
+      { title: 'Estrellas del palacio de vida', body: 'La estrella que ocupa tu palacio de vida es el centro de tu temperamento innato. Las estrellas principales dan forma al conjunto; las auxiliares añaden matices.' },
+      { title: 'Oficina de cinco elementos', body: 'Determina el ritmo al que las estrellas se mueven entre los palacios, un símbolo de la velocidad con la que se despliega la vida.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Por qué se necesita mi hora de nacimiento?', answer: 'Zi Wei Dou Shu divide el día en 12 bloques de dos horas, y el palacio de vida se fija según el bloque en que naciste — sin ella no es posible un cálculo preciso.' },
+      { question: '¿Por qué difiere de mi resultado de Saju?', answer: 'Saju y Zi Wei Dou Shu son sistemas simbólicos independientes con métodos de cálculo distintos.' },
+      { question: '¿Cómo debo usar este resultado?', answer: 'Trátalo como una guía para la reflexión personal, no como un diagnóstico fijo.' },
+    ],
+    disclaimer: 'Los resultados de Zi Wei Dou Shu son contenido de autorreflexión basado en un sistema simbólico tradicional; no determinan la personalidad ni el destino.',
+  },
+};
+const c = content[locale] ?? content.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="mx-auto max-w-2xl px-4 py-10">
+    <h1 class="text-2xl font-bold text-violet-950">{m.title}</h1>
+    <div class="mt-6">
+      <ZiweiReading client:visible locale={locale} />
+    </div>
+    <section class="mt-10 border-t border-violet-100 pt-8"><h2 class="text-2xl font-bold text-violet-950">{c.introTitle}</h2><p class="mt-4 leading-8 text-violet-800">{c.intro}</p></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-violet-950">{c.conceptTitle}</h2><div class="mt-4 grid gap-4 md:grid-cols-3">{c.concepts.map((item) => (<article class="rounded-xl border border-violet-100 bg-white p-4"><h3 class="font-semibold text-violet-950">{item.title}</h3><p class="mt-2 text-sm leading-6 text-violet-700">{item.body}</p></article>))}</div></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-violet-950">{c.faqTitle}</h2><div class="mt-4 divide-y divide-violet-100 rounded-xl border border-violet-100 bg-white">{c.faqs.map((faq) => (<details class="group p-4"><summary class="cursor-pointer list-none font-semibold text-violet-950">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-violet-700">{faq.answer}</p></details>))}</div></section>
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+    <RelatedTools locale={locale} tools={['saju', 'zodiac', 'numerology']} current="ziwei" />
+  </div>
+</Layout>

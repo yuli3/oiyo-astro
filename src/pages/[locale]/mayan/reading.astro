@@ -1,0 +1,144 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import MayanReading from '../../../components/tools/MayanReading';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '마야 촐킨 — 나의 킨으로 읽는 에너지', description: '260일 주기의 마야 신성 달력 촐킨으로 태어난 날의 톤과 인장을 읽습니다.' },
+  en: { title: 'Mayan Tzolkin — Reading Your Energy Through Your Kin', description: 'Read the tone and seal of your birth day through the 260-day sacred Mayan calendar, the Tzolkin.' },
+  ja: { title: 'マヤ・ツォルキン — KINで読むエネルギー', description: '260日周期のマヤ神聖暦ツォルキンで、生まれた日の音と紋章を読みます。' },
+  zh: { title: '玛雅卓尔金历 — 用KIN解读能量', description: '通过260天周期的玛雅神圣历卓尔金历，解读你出生日的音调与印记。' },
+  fr: { title: 'Tzolkin maya — Lire votre énergie par votre Kin', description: 'Découvrez le ton et le sceau de votre jour de naissance grâce au calendrier sacré maya de 260 jours, le Tzolkin.' },
+  es: { title: 'Tzolkin maya — Leer tu energía a través de tu Kin', description: 'Descubre el tono y el sello de tu día de nacimiento a través del calendario sagrado maya de 260 días, el Tzolkin.' },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string; intro: string; conceptTitle: string; concepts: { title: string; body: string }[];
+  faqTitle: string; faqs: { question: string; answer: string }[]; disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '촐킨은 260일이 지나면 처음으로 되돌아오는 마야의 신성한 달력입니다',
+    intro: '촐킨(Tzolkin)은 13개의 은하의 톤과 20개의 인장(날 부호)이 조합되어 만들어지는 260일 주기의 마야 달력입니다. 두 축이 겹쳐 총 260개의 고유한 조합, 즉 킨(Kin)이 생기고, 태어난 날의 킨이 그 사람의 에너지 서명이 됩니다.',
+    conceptTitle: '촐킨을 읽는 세 가지 개념',
+    concepts: [
+      { title: '킨(Kin)', body: '톤과 인장이 결합해 만들어지는 260가지 조합 중 하나로, 태어난 날을 나타내는 고유 번호이자 이름입니다.' },
+      { title: '은하의 톤', body: '1부터 13까지의 리듬으로, 그 킨이 가진 에너지의 강도와 성질을 나타냅니다.' },
+      { title: '인장(날 부호)', body: '20개의 상징 중 하나로, 킨의 핵심 주제이자 원형적 에너지를 나타냅니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '왜 260일 주기인가요?', answer: '13개의 톤과 20개의 인장을 곱하면 260이 되며, 이는 마야 문명에서 인간의 임신 기간과도 연결 지어 해석되어 온 신성한 숫자입니다.' },
+      { question: '서양 별자리와는 어떻게 다른가요?', answer: '태양의 위치가 아니라, 마야 고유의 260일 순환 달력 안에서의 위치로 에너지를 읽는다는 점이 다릅니다.' },
+      { question: '이 결과를 어떻게 활용하면 좋나요?', answer: '정답을 정해주는 진단이 아니라, 자기 성찰을 위한 참고 자료로 활용해 보세요.' },
+    ],
+    disclaimer: '마야 촐킨 결과는 전통 상징 체계에 기반한 자기 성찰용 콘텐츠이며, 성격이나 운명을 단정하지 않습니다.',
+  },
+  en: {
+    introTitle: 'The Tzolkin is the sacred Mayan calendar that returns to its start every 260 days',
+    intro: 'The Tzolkin is a 260-day Mayan calendar made from 13 galactic tones combined with 20 seals (day signs). The two cycles overlapping create 260 unique combinations, or "Kin," and the Kin of your birth day becomes your personal energy signature.',
+    conceptTitle: 'Three concepts for reading the Tzolkin',
+    concepts: [
+      { title: 'Kin', body: 'One of 260 combinations formed by a tone and a seal — the unique number and name for your birth day.' },
+      { title: 'Galactic Tone', body: 'A rhythm from 1 to 13 that shows the intensity and quality of energy your Kin carries.' },
+      { title: 'Seal (Day Sign)', body: 'One of 20 symbols representing the core theme and archetypal energy of your Kin.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'Why a 260-day cycle?', answer: '13 tones multiplied by 20 seals equals 260 — a number the Maya also linked to the human gestation period.' },
+      { question: 'How is this different from Western astrology?', answer: 'Instead of the sun’s position, it reads energy through your position in the Maya’s own 260-day cycle.' },
+      { question: 'How should I use this result?', answer: 'Treat it as a prompt for self-reflection rather than a fixed diagnosis.' },
+    ],
+    disclaimer: 'Mayan Tzolkin results are content for self-reflection based on a traditional symbolic system; they do not determine personality or fate.',
+  },
+  ja: {
+    introTitle: 'ツォルキンは260日で最初に戻るマヤの神聖暦です',
+    intro: 'ツォルキンは13の銀河の音と20の紋章（日の印）が組み合わさってできる260日周期のマヤ暦です。二つの周期が重なり260通りの組み合わせ「KIN」が生まれ、生まれた日のKINがその人のエネルギーの署名になります。',
+    conceptTitle: 'ツォルキンを読む三つの概念',
+    concepts: [
+      { title: 'KIN', body: '音と紋章が組み合わさってできる260通りのうちの一つで、生まれた日を表す固有の番号であり名前です。' },
+      { title: '銀河の音', body: '1から13までのリズムで、そのKINが持つエネルギーの強さと性質を表します。' },
+      { title: '紋章（日の印）', body: '20の象徴のうちの一つで、KINの中心テーマであり元型的エネルギーを表します。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: 'なぜ260日周期なのですか？', answer: '13の音と20の紋章をかけると260になり、マヤ文明では人間の妊娠期間とも結び付けられてきた神聖な数字です。' },
+      { question: '西洋の星座とはどう違いますか？', answer: '太陽の位置ではなく、マヤ独自の260日周期暦の中での位置でエネルギーを読む点が異なります。' },
+      { question: 'この結果はどう活用すればいいですか？', answer: '断定的な診断ではなく、内省のための参考として活用してください。' },
+    ],
+    disclaimer: 'マヤ・ツォルキンの結果は伝統的な象徴体系に基づく自己省察のためのコンテンツであり、性格や運命を断定するものではありません。',
+  },
+  zh: {
+    introTitle: '卓尔金历是每260天循环回到起点的玛雅神圣历法',
+    intro: '卓尔金历是由13个银河音调与20个印记（日徽）组合而成的260天周期玛雅历法。两个周期重叠产生260种独特组合，即「KIN」，你出生那天的KIN成为你专属的能量签名。',
+    conceptTitle: '解读卓尔金历的三个概念',
+    concepts: [
+      { title: 'KIN', body: '由音调与印记组合而成的260种之一，是代表你出生日的专属编号与名称。' },
+      { title: '银河音调', body: '1到13的节奏，表示该KIN所带能量的强度与性质。' },
+      { title: '印记（日徽）', body: '20个象征之一，代表KIN的核心主题与原型能量。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '为什么是260天周期？', answer: '13个音调乘以20个印记等于260，这个数字在玛雅文明中也与人类孕期相联系。' },
+      { question: '这和西方星座有什么不同？', answer: '它不是根据太阳的位置，而是根据你在玛雅独有的260天循环历中的位置来解读能量。' },
+      { question: '应该如何使用这个结果？', answer: '请把它当作自我反思的参考，而不是定论式的诊断。' },
+    ],
+    disclaimer: '玛雅卓尔金历结果是基于传统象征体系的自我省察内容，不对性格或命运做出定论。',
+  },
+  fr: {
+    introTitle: 'Le Tzolkin est le calendrier sacré maya qui revient à son point de départ tous les 260 jours',
+    intro: 'Le Tzolkin est un calendrier maya de 260 jours formé de 13 tons galactiques combinés à 20 sceaux (signes du jour). Le chevauchement des deux cycles crée 260 combinaisons uniques, ou « Kin », et le Kin de votre jour de naissance devient votre signature énergétique personnelle.',
+    conceptTitle: 'Trois concepts pour lire le Tzolkin',
+    concepts: [
+      { title: 'Kin', body: 'Une des 260 combinaisons formées par un ton et un sceau — le numéro et le nom uniques de votre jour de naissance.' },
+      { title: 'Ton galactique', body: 'Un rythme de 1 à 13 qui indique l’intensité et la qualité de l’énergie portée par votre Kin.' },
+      { title: 'Sceau (signe du jour)', body: 'Un des 20 symboles représentant le thème central et l’énergie archétypale de votre Kin.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Pourquoi un cycle de 260 jours ?', answer: '13 tons multipliés par 20 sceaux donnent 260 — un nombre que les Mayas associaient aussi à la durée de la gestation humaine.' },
+      { question: 'En quoi est-ce différent de l’astrologie occidentale ?', answer: 'Au lieu de la position du soleil, l’énergie est lue à travers votre position dans le cycle maya de 260 jours.' },
+      { question: 'Comment utiliser ce résultat ?', answer: 'Considérez-le comme une piste de réflexion, pas comme un diagnostic figé.' },
+    ],
+    disclaimer: 'Les résultats du Tzolkin maya sont un contenu de réflexion basé sur un système symbolique traditionnel ; ils ne déterminent ni la personnalité ni le destin.',
+  },
+  es: {
+    introTitle: 'El Tzolkin es el calendario sagrado maya que vuelve a su inicio cada 260 días',
+    intro: 'El Tzolkin es un calendario maya de 260 días formado por 13 tonos galácticos combinados con 20 sellos (signos del día). La superposición de ambos ciclos crea 260 combinaciones únicas, o «Kin», y el Kin de tu día de nacimiento se convierte en tu firma energética personal.',
+    conceptTitle: 'Tres conceptos para leer el Tzolkin',
+    concepts: [
+      { title: 'Kin', body: 'Una de las 260 combinaciones formadas por un tono y un sello: el número y nombre únicos de tu día de nacimiento.' },
+      { title: 'Tono galáctico', body: 'Un ritmo del 1 al 13 que indica la intensidad y cualidad de la energía que porta tu Kin.' },
+      { title: 'Sello (signo del día)', body: 'Uno de los 20 símbolos que representa el tema central y la energía arquetípica de tu Kin.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Por qué un ciclo de 260 días?', answer: '13 tonos multiplicados por 20 sellos dan 260, un número que los mayas también asociaban con la gestación humana.' },
+      { question: '¿En qué se diferencia de la astrología occidental?', answer: 'En lugar de la posición del sol, se lee la energía según tu posición en el ciclo maya de 260 días.' },
+      { question: '¿Cómo debo usar este resultado?', answer: 'Trátalo como una guía para la reflexión personal, no como un diagnóstico fijo.' },
+    ],
+    disclaimer: 'Los resultados del Tzolkin maya son contenido de autorreflexión basado en un sistema simbólico tradicional; no determinan la personalidad ni el destino.',
+  },
+};
+const c = content[locale] ?? content.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="mx-auto max-w-2xl px-4 py-10">
+    <h1 class="text-2xl font-bold text-amber-950">{m.title}</h1>
+    <div class="mt-6">
+      <MayanReading client:visible locale={locale} />
+    </div>
+    <section class="mt-10 border-t border-amber-100 pt-8"><h2 class="text-2xl font-bold text-amber-950">{c.introTitle}</h2><p class="mt-4 leading-8 text-amber-800">{c.intro}</p></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-amber-950">{c.conceptTitle}</h2><div class="mt-4 grid gap-4 md:grid-cols-3">{c.concepts.map((item) => (<article class="rounded-xl border border-amber-100 bg-white p-4"><h3 class="font-semibold text-amber-950">{item.title}</h3><p class="mt-2 text-sm leading-6 text-amber-700">{item.body}</p></article>))}</div></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-amber-950">{c.faqTitle}</h2><div class="mt-4 divide-y divide-amber-100 rounded-xl border border-amber-100 bg-white">{c.faqs.map((faq) => (<details class="group p-4"><summary class="cursor-pointer list-none font-semibold text-amber-950">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-amber-700">{faq.answer}</p></details>))}</div></section>
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+    <RelatedTools locale={locale} tools={['saju', 'zodiac', 'numerology']} current="mayan" />
+  </div>
+</Layout>

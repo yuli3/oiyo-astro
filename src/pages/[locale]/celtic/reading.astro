@@ -1,0 +1,144 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import CelticReading from '../../../components/tools/CelticReading';
+import RelatedTools from '../../../components/shared/RelatedTools.astro';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string }> = {
+  ko: { title: '켈트 나무점 — 나의 수호 나무 찾기', description: '고대 오검 문자를 바탕으로 태어난 날짜에 배정된 수호 나무를 찾습니다.' },
+  en: { title: 'Celtic Tree Astrology — Find Your Guardian Tree', description: 'Discover the guardian tree assigned to your birth date, based on the ancient Ogham alphabet.' },
+  ja: { title: 'ケルト樹木占い — 守護樹を見つける', description: '古代オガム文字にもとづき、生まれた日に割り当てられた守護樹を見つけます。' },
+  zh: { title: '凯尔特树历 — 寻找你的守护树', description: '根据古老的欧甘字母，找到与你出生日期对应的守护树。' },
+  fr: { title: 'Astrologie celtique des arbres — Trouvez votre arbre gardien', description: 'Découvrez l\'arbre gardien attribué à votre date de naissance, selon l\'ancien alphabet ogham.' },
+  es: { title: 'Astrología celta de árboles — Encuentra tu árbol guardián', description: 'Descubre el árbol guardián asignado a tu fecha de nacimiento, según el antiguo alfabeto ogham.' },
+};
+const m = meta[locale] ?? meta.en;
+
+const content: Record<Locale, {
+  introTitle: string; intro: string; conceptTitle: string; concepts: { title: string; body: string }[];
+  faqTitle: string; faqs: { question: string; answer: string }[]; disclaimer: string;
+}> = {
+  ko: {
+    introTitle: '켈트 나무 달력은 태어난 날짜에 나무를 배정하는 고대 드루이드의 상징 체계입니다',
+    intro: '켈트 나무 달력은 고대 켈트족의 문자 체계인 오검(Ogham)을 바탕으로, 태어난 날짜 구간마다 하나의 나무를 수호목으로 배정합니다. 각 나무는 자연에서 관찰되는 고유한 성질을 상징으로 담고 있습니다.',
+    conceptTitle: '켈트 나무점을 읽는 세 가지 개념',
+    concepts: [
+      { title: '수호 나무', body: '태어난 날짜 구간에 배정된 나무로, 그 사람의 상징적 기질을 나타냅니다.' },
+      { title: '오검 문자', body: '켈트족이 나무 이름을 따 만든 고대 문자로, 각 나무마다 고유한 오검 기호가 있습니다.' },
+      { title: '나무의 성질', body: '버드나무=직관과 유연함처럼, 각 나무는 자연에서 관찰한 고유한 상징적 의미를 지닙니다.' },
+    ],
+    faqTitle: '자주 묻는 질문',
+    faqs: [
+      { question: '나무는 어떻게 배정되나요?', answer: '태양의 움직임을 기준으로 한 해를 여러 구간으로 나누고, 각 구간에 하나의 나무를 배정하는 방식입니다.' },
+      { question: '서양 별자리와는 어떻게 다른가요?', answer: '별자리가 하늘의 별자리를 기준으로 한다면, 켈트 나무점은 땅에서 자라는 나무를 상징으로 삼습니다.' },
+      { question: '이 결과를 어떻게 활용하면 좋나요?', answer: '정답을 정해주는 진단이 아니라, 자기 성찰을 위한 참고 자료로 활용해 보세요.' },
+    ],
+    disclaimer: '켈트 나무점 결과는 전통 상징 체계에 기반한 자기 성찰용 콘텐츠이며, 성격이나 운명을 단정하지 않습니다.',
+  },
+  en: {
+    introTitle: 'The Celtic tree calendar is an ancient Druidic system that assigns a tree to your birth date',
+    intro: 'The Celtic tree calendar, based on the ancient Celtic Ogham alphabet, assigns one guardian tree to each birth-date range. Each tree carries a symbolic meaning drawn from qualities observed in nature.',
+    conceptTitle: 'Three concepts for reading Celtic tree astrology',
+    concepts: [
+      { title: 'Guardian Tree', body: 'The tree assigned to your birth-date range, representing your symbolic temperament.' },
+      { title: 'Ogham Alphabet', body: 'An ancient Celtic script named after trees — each tree has its own Ogham symbol.' },
+      { title: 'A Tree\'s Nature', body: 'Like the willow representing intuition and adaptability, each tree carries its own symbolic meaning observed in nature.' },
+    ],
+    faqTitle: 'Frequently asked questions',
+    faqs: [
+      { question: 'How is a tree assigned?', answer: 'The year is divided into ranges based on the sun\'s movement, and one tree is assigned to each range.' },
+      { question: 'How is this different from Western astrology?', answer: 'While zodiac signs are based on constellations in the sky, Celtic tree astrology uses trees that grow from the earth as its symbols.' },
+      { question: 'How should I use this result?', answer: 'Treat it as a prompt for self-reflection rather than a fixed diagnosis.' },
+    ],
+    disclaimer: 'Celtic tree results are content for self-reflection based on a traditional symbolic system; they do not determine personality or fate.',
+  },
+  ja: {
+    introTitle: 'ケルト樹木暦は生まれた日に木を割り当てる古代ドルイドの象徴体系です',
+    intro: 'ケルト樹木暦は、古代ケルト人の文字体系オガムにもとづき、生まれた日の期間ごとに一本の守護樹を割り当てます。それぞれの木は自然の中で観察された固有の性質を象徴として持っています。',
+    conceptTitle: 'ケルト樹木占いを読む三つの概念',
+    concepts: [
+      { title: '守護樹', body: '生まれた日の期間に割り当てられた木で、その人の象徴的な気質を表します。' },
+      { title: 'オガム文字', body: 'ケルト人が木の名前をもとに作った古代文字で、木ごとに固有のオガム記号があります。' },
+      { title: '木の性質', body: '柳=直感と柔軟性のように、それぞれの木が自然から観察された固有の象徴的意味を持ちます。' },
+    ],
+    faqTitle: 'よくある質問',
+    faqs: [
+      { question: '木はどう割り当てられますか？', answer: '太陽の動きをもとに一年をいくつかの期間に分け、各期間に一本の木を割り当てます。' },
+      { question: '西洋の星座とはどう違いますか？', answer: '星座が空の星座を基準にするのに対し、ケルト樹木占いは地に生える木を象徴とします。' },
+      { question: 'この結果はどう活用すればいいですか？', answer: '断定的な診断ではなく、内省のための参考として活用してください。' },
+    ],
+    disclaimer: 'ケルト樹木占いの結果は伝統的な象徴体系に基づく自己省察のためのコンテンツであり、性格や運命を断定するものではありません。',
+  },
+  zh: {
+    introTitle: '凯尔特树历是古代德鲁伊的象征体系，为你的出生日期分配一棵树',
+    intro: '凯尔特树历以古老的凯尔特欧甘字母为基础，为每个出生日期区间分配一棵守护树。每棵树都承载着从自然中观察到的独特象征意义。',
+    conceptTitle: '解读凯尔特树历的三个概念',
+    concepts: [
+      { title: '守护树', body: '分配给你出生日期区间的树，代表你的象征性气质。' },
+      { title: '欧甘字母', body: '凯尔特人以树木命名的古代文字，每棵树都有其专属的欧甘符号。' },
+      { title: '树的特质', body: '如柳树象征直觉与灵活，每棵树都承载着从自然中观察到的独特象征意义。' },
+    ],
+    faqTitle: '常见问题',
+    faqs: [
+      { question: '树是如何分配的？', answer: '根据太阳的运行将一年划分为若干区间，每个区间分配一棵树。' },
+      { question: '这和西方星座有什么不同？', answer: '星座以天空中的星座为基准，而凯尔特树历以生长于大地的树木为象征。' },
+      { question: '应该如何使用这个结果？', answer: '请把它当作自我反思的参考，而不是定论式的诊断。' },
+    ],
+    disclaimer: '凯尔特树历结果是基于传统象征体系的自我省察内容，不对性格或命运做出定论。',
+  },
+  fr: {
+    introTitle: 'Le calendrier celtique des arbres est un système druidique ancien qui attribue un arbre à votre date de naissance',
+    intro: 'Le calendrier celtique des arbres, basé sur l\'ancien alphabet celtique ogham, attribue un arbre gardien à chaque période de naissance. Chaque arbre porte une signification symbolique tirée de qualités observées dans la nature.',
+    conceptTitle: 'Trois concepts pour lire l\'astrologie celtique des arbres',
+    concepts: [
+      { title: 'Arbre gardien', body: 'L\'arbre attribué à votre période de naissance, représentant votre tempérament symbolique.' },
+      { title: 'Alphabet ogham', body: 'Une ancienne écriture celtique nommée d\'après les arbres — chaque arbre a son propre symbole ogham.' },
+      { title: 'La nature d\'un arbre', body: 'Comme le saule qui représente l\'intuition et l\'adaptabilité, chaque arbre porte sa propre signification symbolique observée dans la nature.' },
+    ],
+    faqTitle: 'Questions fréquentes',
+    faqs: [
+      { question: 'Comment un arbre est-il attribué ?', answer: 'L\'année est divisée en périodes selon le mouvement du soleil, et un arbre est attribué à chaque période.' },
+      { question: 'En quoi est-ce différent de l\'astrologie occidentale ?', answer: 'Alors que les signes du zodiaque se basent sur des constellations dans le ciel, l\'astrologie celtique des arbres utilise des arbres qui poussent de la terre.' },
+      { question: 'Comment utiliser ce résultat ?', answer: 'Considérez-le comme une piste de réflexion, pas comme un diagnostic figé.' },
+    ],
+    disclaimer: 'Les résultats de l\'astrologie celtique des arbres sont un contenu de réflexion basé sur un système symbolique traditionnel ; ils ne déterminent ni la personnalité ni le destin.',
+  },
+  es: {
+    introTitle: 'El calendario celta de árboles es un antiguo sistema druida que asigna un árbol a tu fecha de nacimiento',
+    intro: 'El calendario celta de árboles, basado en el antiguo alfabeto celta ogham, asigna un árbol guardián a cada rango de fecha de nacimiento. Cada árbol lleva un significado simbólico extraído de cualidades observadas en la naturaleza.',
+    conceptTitle: 'Tres conceptos para leer la astrología celta de árboles',
+    concepts: [
+      { title: 'Árbol guardián', body: 'El árbol asignado a tu rango de fecha de nacimiento, que representa tu temperamento simbólico.' },
+      { title: 'Alfabeto ogham', body: 'Una antigua escritura celta nombrada según los árboles: cada árbol tiene su propio símbolo ogham.' },
+      { title: 'La naturaleza de un árbol', body: 'Como el sauce que representa la intuición y la adaptabilidad, cada árbol lleva su propio significado simbólico observado en la naturaleza.' },
+    ],
+    faqTitle: 'Preguntas frecuentes',
+    faqs: [
+      { question: '¿Cómo se asigna un árbol?', answer: 'El año se divide en rangos según el movimiento del sol, y se asigna un árbol a cada rango.' },
+      { question: '¿En qué se diferencia de la astrología occidental?', answer: 'Mientras los signos zodiacales se basan en constelaciones del cielo, la astrología celta de árboles usa árboles que crecen de la tierra.' },
+      { question: '¿Cómo debo usar este resultado?', answer: 'Trátalo como una guía para la reflexión personal, no como un diagnóstico fijo.' },
+    ],
+    disclaimer: 'Los resultados de la astrología celta de árboles son contenido de autorreflexión basado en un sistema simbólico tradicional; no determinan la personalidad ni el destino.',
+  },
+};
+const c = content[locale] ?? content.en;
+---
+<Layout title={m.title} description={m.description} locale={locale}>
+  <div class="mx-auto max-w-2xl px-4 py-10">
+    <h1 class="text-2xl font-bold text-emerald-950">{m.title}</h1>
+    <div class="mt-6">
+      <CelticReading client:visible locale={locale} />
+    </div>
+    <section class="mt-10 border-t border-emerald-100 pt-8"><h2 class="text-2xl font-bold text-emerald-950">{c.introTitle}</h2><p class="mt-4 leading-8 text-emerald-800">{c.intro}</p></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-emerald-950">{c.conceptTitle}</h2><div class="mt-4 grid gap-4 md:grid-cols-3">{c.concepts.map((item) => (<article class="rounded-xl border border-emerald-100 bg-white p-4"><h3 class="font-semibold text-emerald-950">{item.title}</h3><p class="mt-2 text-sm leading-6 text-emerald-700">{item.body}</p></article>))}</div></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-emerald-950">{c.faqTitle}</h2><div class="mt-4 divide-y divide-emerald-100 rounded-xl border border-emerald-100 bg-white">{c.faqs.map((faq) => (<details class="group p-4"><summary class="cursor-pointer list-none font-semibold text-emerald-950">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-emerald-700">{faq.answer}</p></details>))}</div></section>
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{c.disclaimer}</p>
+    <RelatedTools locale={locale} tools={['saju', 'zodiac', 'numerology']} current="celtic" />
+  </div>
+</Layout>

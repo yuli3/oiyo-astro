@@ -11,6 +11,15 @@
         ],
         "createdAt": "2026-08-25T13:50:23.638Z",
         "reason": "violet/purple is this page's established palette pre-dating this edit — mystic/test surfaces on this site intentionally use vivid, non-olive palettes (see feedback_blog_design_token_convention: tool surfaces=olive+semantic, test/fortune surfaces=vivid, by design). My change only added a new section matching the page's existing violet classes, introduced no new color."
+      },
+      {
+        "rule": "ai-color-palette",
+        "value": "*",
+        "files": [
+          "src/pages/[locale]/ziwei/reading.astro"
+        ],
+        "createdAt": "2026-08-25T23:22:24.614Z",
+        "reason": "matches the site's pre-existing per-tradition accent color for Zi Wei Dou Shu (violet was already used for this exact system in the ontology card before this page existed) — not a new arbitrary AI palette choice."
       }
     ]
   }
