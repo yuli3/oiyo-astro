@@ -148,24 +148,6 @@ const secondaryNavLinks = [
       ))}
     </div>
   </nav>
-
-  <!-- Language switcher at bottom (flag + native name) -->
-  <div class="px-6 pb-6 pt-4 border-t border-border/40 shrink-0">
-    <p class="text-[11px] font-bold uppercase tracking-widest text-muted-foreground mb-3">Language</p>
-    <div class="flex flex-wrap gap-2">
-      {LANG_ITEMS.map(({ code, flag, name }) => (
-        <a
-          href={localePath(code, currentPath)}
-          data-locale={code}
-          aria-label={name}
-          class:list={[
-            'flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-bold border transition-colors',
-            code === locale ? 'bg-primary text-white border-primary' : 'border-border text-muted-foreground hover:text-primary hover:border-primary/40',
-          ]}
-        ><span aria-hidden="true">{flag}</span>{name}</a>
-      ))}
-    </div>
-  </div>
 </div>
 
 <script>
