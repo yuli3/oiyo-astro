@@ -34,10 +34,15 @@ const LANG_ITEMS: { code: Locale; flag: string; name: string }[] = [
 
 const currentLangItem = LANG_ITEMS.find((item) => item.code === locale) ?? LANG_ITEMS[0];
 
-const navLinks = [
-  { href: localePath(locale, '/tests'), label: { ko: '테스트', en: 'Tests', ja: 'テスト', zh: '测试', fr: 'Tests', es: 'Tests' }[locale] ?? 'Tests' },
-  { href: localePath(locale, '/fortune/today'), label: { ko: '오늘의 운세', en: "Today's fortune", ja: '今日の運勢', zh: '今日运势', fr: 'Fortune du jour', es: 'Fortuna de hoy' }[locale] ?? "Today's fortune" },
-  { href: localePath(locale, '/ontology'), label: t('nav.ontology') },
+// 2026-08-25 /grill-me: 방문자가 보는 이름은 검사 / 내 지도 / 오늘 세 개가 우선이고
+// (존재론은 부제로만 남김), 소개·FAQ는 같은 서랍 안에서 아래쪽 보조 그룹으로 내린다.
+// company-brain/AI-Sessions/wiki/design/oiyo-landing-ux-consistency-2026-08-25.md §4.1.
+const primaryNavLinks = [
+  { href: localePath(locale, '/tests'), label: { ko: '검사', en: 'Tests', ja: 'テスト', zh: '测试', fr: 'Tests', es: 'Tests' }[locale] ?? 'Tests' },
+  { href: localePath(locale, '/ontology'), label: { ko: '내 지도', en: 'My Map', ja: '私の地図', zh: '我的地图', fr: 'Ma carte', es: 'Mi mapa' }[locale] ?? 'My Map' },
+  { href: localePath(locale, '/fortune/today'), label: { ko: '오늘', en: 'Today', ja: '今日', zh: '今日', fr: "Aujourd'hui", es: 'Hoy' }[locale] ?? 'Today' },
+];
+const secondaryNavLinks = [
   { href: localePath(locale, '/about'), label: t('nav.about') },
   { href: localePath(locale, '/faq'), label: 'FAQ' },
 ];
@@ -47,7 +52,7 @@ const navLinks = [
   <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between gap-4">
     <!-- Logo -->
     <a href={localePath(locale, '/')} class="flex items-center gap-2 tracking-tight text-foreground hover:text-primary">
-      <span class="text-xl font-black">OIYO</span><span class="text-sm font-semibold lowercase tracking-wide text-primary">tests</span>
+      <span class="text-xl font-black">OIYO</span>
     </a>
 
     <!-- Language switcher (flag + label chips, same convention as blog) -->
@@ -96,7 +101,7 @@ const navLinks = [
   class="fixed top-0 right-0 h-full w-72 max-w-[85vw] z-[70] bg-background border-l border-border shadow-2xl translate-x-full transition-transform duration-300 ease-out flex flex-col"
 >
   <div class="flex items-center justify-between px-6 h-16 border-b border-border/40 shrink-0">
-    <span class="font-black text-lg tracking-tighter">OIYO <span class="font-semibold lowercase text-primary">tests</span></span>
+    <span class="font-black text-lg tracking-tighter">OIYO</span>
     <button
       id="menu-close"
       aria-label="Close menu"
@@ -109,9 +114,14 @@ const navLinks = [
   </div>
 
   <nav aria-label="Mobile navigation" class="flex-1 overflow-y-auto px-6 py-6 space-y-1">
-    {navLinks.map(({ href, label }) => (
-      <a href={href} class="flex items-center h-11 px-2 rounded-lg text-sm font-bold text-green-700 hover:bg-green-50 transition-colors">{label}</a>
+    {primaryNavLinks.map(({ href, label }) => (
+      <a href={href} class="flex items-center h-11 px-2 rounded-lg text-base font-bold text-green-700 hover:bg-green-50 transition-colors">{label}</a>
     ))}
+    <div class="pt-3 mt-1 border-t border-green-50 space-y-1">
+      {secondaryNavLinks.map(({ href, label }) => (
+        <a href={href} class="flex items-center h-9 px-2 rounded-lg text-sm font-semibold text-green-600/80 hover:bg-green-50 transition-colors">{label}</a>
+      ))}
+    </div>
     <div class="pt-2 border-t border-green-50 mt-4">
       <p class="px-2 pt-2 pb-1 text-[10px] font-bold uppercase tracking-widest text-green-400">Oiyo Family</p>
       {FAMILY_SITES.map((f) => (
