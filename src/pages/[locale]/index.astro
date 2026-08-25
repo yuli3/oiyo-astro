@@ -7,7 +7,7 @@ import type { Locale } from '../../i18n';
 // four unrelated emoji vocabularies (doors/tests/map/value-props each used
 // their own set). lucide-react is already a project dependency; these are
 // static SVGs, no client directive needed.
-import { Compass, Heart, Moon, Brain, Waves, Sparkles, Wand2, Sun, ClipboardCheck, Star, FlaskConical, Lock } from 'lucide-react';
+import { Heart, Brain, Waves, Sparkles, Wand2, Sun, ClipboardCheck, Star, FlaskConical, Lock, Square, SquareCheck } from 'lucide-react';
 import type { ComponentType } from 'react';
 
 export async function getStaticPaths() {
@@ -69,49 +69,55 @@ const pageRole = txt({
   es: 'Responde preguntas aquí. Encuéntralo todo en tu mapa.',
 })
 
-type Door = { key: string; icon: ComponentType<{ size?: number; strokeWidth?: number; className?: string }>; label: string; sub: string; href: string; primary?: boolean }
+// 2026-08-25: swapped "three doors" (3 button-cards) for the PRD's §5.1
+// sentence-wizard variant — one screen, first-person statements instead of
+// category labels, no pre-highlighted default. Same 3 destinations as
+// before (MBTI / attachment / ontology); only the presentation changed.
+type WizardStatement = { key: string; sentence: string; href: string }
 
-const doors: Door[] = [
+const wizardIntro = txt({
+  ko: '지금 가장 가까운 문장에 표시하세요',
+  en: 'Mark whichever sentence feels closest to you right now',
+  ja: '今、一番近いと感じる文に印をつけてください',
+  zh: '请勾选此刻最贴近你的一句话',
+  fr: 'Cochez la phrase qui vous ressemble le plus en ce moment',
+  es: 'Marca la frase que más se parezca a ti ahora mismo',
+})
+
+const wizardStatements: WizardStatement[] = [
   {
     key: 'personality',
-    icon: Compass,
-    label: txt({ ko: '성격이 궁금하다', en: "I'm curious about my personality", ja: '性格が気になる', zh: '我想了解我的性格', fr: 'Ma personnalité m\'intrigue', es: 'Tengo curiosidad por mi personalidad' }),
-    sub: txt({
-      ko: '16문항. 결과는 유형 하나가 아니라, 내 지도에 쌓이는 신호입니다.',
-      en: "16 questions. The result isn't one fixed type — it's a signal that builds your map.",
-      ja: '16問。結果はひとつの型ではなく、地図に積み重なる手がかりです。',
-      zh: '16题。结果不是一个固定类型，而是汇入你地图的信号。',
-      fr: 'Questions. Le résultat n\'est pas un type figé — c\'est un signal qui construit votre carte.',
-      es: '16 preguntas. El resultado no es un tipo fijo, es una señal que construye tu mapa.',
+    sentence: txt({
+      ko: '나는 내가 어떤 사람인지 잘 모르겠다',
+      en: "I don't really know what kind of person I am",
+      ja: '自分がどんな人間なのかよくわからない',
+      zh: '我不太清楚自己是什么样的人',
+      fr: 'Je ne sais pas vraiment quel genre de personne je suis',
+      es: 'No sé muy bien qué tipo de persona soy',
     }),
     href: localePath(locale, '/mbti/test'),
-    primary: true,
   },
   {
     key: 'relationships',
-    icon: Heart,
-    label: txt({ ko: '관계가 궁금하다', en: "I'm curious about my relationships", ja: '人間関係が気になる', zh: '我想了解我的人际关系', fr: 'Mes relations m\'intriguent', es: 'Tengo curiosidad por mis relaciones' }),
-    sub: txt({
-      ko: '12문항. 애착유형 — 가까운 사람과 반복되는 패턴을 봅니다.',
-      en: '12 questions. Attachment style — the patterns that repeat with people close to you.',
-      ja: '12問。愛着タイプ — 近しい人と繰り返すパターンを見ます。',
-      zh: '12题。依恋类型 — 看看你与亲近的人反复出现的模式。',
-      fr: '12 questions. Style d\'attachement — les schémas qui se répètent avec vos proches.',
-      es: '12 preguntas. Estilo de apego — los patrones que se repiten con las personas cercanas.',
+    sentence: txt({
+      ko: '가까운 사람과 반복해서 같은 패턴이 생긴다',
+      en: 'The same pattern keeps repeating with people close to me',
+      ja: '近しい人との間で同じパターンが繰り返される',
+      zh: '和亲近的人之间总是重复同样的模式',
+      fr: 'Le même schéma se répète avec mes proches',
+      es: 'El mismo patrón se repite con las personas cercanas',
     }),
     href: localePath(locale, '/attachment-style/test'),
   },
   {
     key: 'birth',
-    icon: Moon,
-    label: txt({ ko: '태어난 날이 궁금하다', en: "I'm curious what my birth date says", ja: '生まれた日が気になる', zh: '我想知道出生日期说明什么', fr: 'Ma date de naissance m\'intrigue', es: 'Tengo curiosidad por mi fecha de nacimiento' }),
-    sub: txt({
-      ko: '지도로 이동합니다 — 검사가 아니에요.',
-      en: 'Goes to your map — not a test.',
-      ja: '地図へ移動します — テストではありません。',
-      zh: '前往地图 — 不是测验。',
-      fr: 'Direction votre carte — pas un test.',
-      es: 'Va a tu mapa — no es un test.',
+    sentence: txt({
+      ko: '내 생년월일이 나를 어떻게 말하는지 궁금하다',
+      en: "I'm curious what my birth date says about me",
+      ja: '生まれた日が自分について何を語るのか気になる',
+      zh: '我想知道我的出生日期能说明什么',
+      fr: 'Je suis curieux(se) de ce que dit ma date de naissance',
+      es: 'Tengo curiosidad por lo que dice mi fecha de nacimiento',
     }),
     href: localePath(locale, '/ontology'),
   },
@@ -224,39 +230,22 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- 2. 세 문 — 성격이 기본 -->
-  <section class="max-w-3xl mx-auto px-4 pb-2" aria-label={txt({ ko: '지금 뭐가 궁금해요?', en: "What are you curious about right now?", ja: '今、何が気になりますか？', zh: '你现在想了解什么？', fr: "Qu'est-ce qui vous intrigue en ce moment ?", es: '¿Qué te da curiosidad ahora?' })}>
-    <h2 class="sr-only">
-      {txt({ ko: '지금 뭐가 궁금해요?', en: "What are you curious about right now?", ja: '今、何が気になりますか？', zh: '你现在想了解什么？', fr: "Qu'est-ce qui vous intrigue en ce moment ?", es: '¿Qué te da curiosidad ahora?' })}
-    </h2>
-    {doors.filter(d => d.primary).map((d) => (
-      <a
-        href={d.href}
-        class="group flex items-center gap-4 rounded-2xl bg-green-700 text-white p-5 shadow-lg shadow-green-200 hover:bg-green-800 transition-colors"
-      >
-        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white/15">
-          <d.icon size={22} strokeWidth={2} aria-hidden="true" />
-        </span>
-        <span class="min-w-0 flex-1">
-          <span class="block font-bold text-base text-white">{d.label}</span>
-          <span class="block text-xs mt-0.5 leading-relaxed text-green-50/85">{d.sub}</span>
-        </span>
-        <span class="shrink-0 text-white" aria-hidden="true">→</span>
-      </a>
-    ))}
-    <div class="mt-1 divide-y divide-green-100">
-      {doors.filter(d => !d.primary).map((d) => (
+  <!-- 2. 문장 위저드 — 세 문 대신 (PRD §5.1) -->
+  <section class="max-w-3xl mx-auto px-4 pb-2" aria-label={wizardIntro}>
+    <h2 class="text-sm font-bold text-green-800 mb-3">{wizardIntro}</h2>
+    <div class="divide-y divide-green-100 border-y border-green-100">
+      {wizardStatements.map((w) => (
         <a
-          href={d.href}
-          class="group flex items-center gap-4 py-3.5 hover:bg-green-50/60 -mx-2 px-2 rounded-lg transition-colors"
+          href={w.href}
+          class="group flex items-center gap-3 py-4 hover:bg-green-50/60 -mx-2 px-2 rounded-lg transition-colors"
         >
-          <span class="flex h-9 w-9 shrink-0 items-center justify-center text-green-700">
-            <d.icon size={20} strokeWidth={2} aria-hidden="true" />
+          <span class="shrink-0 text-green-300 group-hover:hidden">
+            <Square size={20} strokeWidth={2} aria-hidden="true" />
           </span>
-          <span class="min-w-0 flex-1">
-            <span class="block font-bold text-sm text-green-950">{d.label}</span>
-            <span class="block text-xs mt-0.5 leading-relaxed text-green-800">{d.sub}</span>
+          <span class="hidden shrink-0 text-green-700 group-hover:inline-flex">
+            <SquareCheck size={20} strokeWidth={2} aria-hidden="true" />
           </span>
+          <span class="min-w-0 flex-1 font-bold text-sm text-green-950">{w.sentence}</span>
           <span class="shrink-0 text-green-400 group-hover:text-green-700 transition-colors" aria-hidden="true">→</span>
         </a>
       ))}

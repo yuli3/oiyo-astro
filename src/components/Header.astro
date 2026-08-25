@@ -16,10 +16,17 @@ const isLocalized = LOCALE_PREFIX.test(Astro.url.pathname);
 const currentPath = isLocalized ? Astro.url.pathname.replace(LOCALE_PREFIX, '') || '/' : '/';
 
 // NAV_AT_EVERY_WIDTH — the menu button carries no md:hidden, so the same
-// hamburger drawer is the nav at every width (family-wide convention since
-// 2026-08-23: blog-style slide-in drawer, hamburger on mobile everywhere).
-// Until 2026-08-18 both the button and the panel were hidden from md up,
-// which left desktop visitors with no links in the header at all.
+// hamburger drawer stays reachable at every width (family-wide convention
+// since 2026-08-23: blog-style slide-in drawer, hamburger on mobile
+// everywhere). Until 2026-08-18 both the button and the panel were hidden
+// from md up, which left desktop visitors with no links in the header at
+// all — that's why the hamburger itself is never hidden.
+//
+// 2026-08-25 (oiyo only, user directive): on top of that, wide viewports
+// also get the 3 primary links (검사/내 지도/오늘) inline in the header bar
+// — `md:flex` below. The hamburger still opens the full drawer (secondary
+// links, family sites, language) on every width; it isn't the only way in
+// on desktop anymore, just no longer the only *entry point* is the change.
 
 // Language switcher flags + native names (family-wide convention: flag emoji
 // plus a visible text label so it is never icon-only).
@@ -54,6 +61,13 @@ const secondaryNavLinks = [
     <a href={localePath(locale, '/')} class="flex items-center gap-2 tracking-tight text-foreground hover:text-primary">
       <span class="text-xl font-black">OIYO</span>
     </a>
+
+    <!-- Primary nav, visible from md up (2026-08-25, oiyo only — see NAV_AT_EVERY_WIDTH) -->
+    <nav aria-label="Primary" class="hidden md:flex items-center gap-6 flex-1">
+      {primaryNavLinks.map(({ href, label }) => (
+        <a href={href} class="text-sm font-bold text-foreground hover:text-primary transition-colors">{label}</a>
+      ))}
+    </nav>
 
     <!-- Language switcher (flag + label chips, same convention as blog) -->
     <nav aria-label="Language" class="relative">
