@@ -7,7 +7,7 @@ import type { Locale } from '../../i18n';
 // four unrelated emoji vocabularies (doors/tests/map/value-props each used
 // their own set). lucide-react is already a project dependency; these are
 // static SVGs, no client directive needed.
-import { Heart, Brain, Waves, Sparkles, Wand2, Sun, ClipboardCheck, Star, FlaskConical, Lock, Square, SquareCheck } from 'lucide-react';
+import { Heart, Brain, Waves, Sparkles, Wand2, Sun, ClipboardCheck, Star, FlaskConical, Lock } from 'lucide-react';
 import type { ComponentType } from 'react';
 
 export async function getStaticPaths() {
@@ -69,59 +69,13 @@ const pageRole = txt({
   es: 'Responde preguntas aquí. Encuéntralo todo en tu mapa.',
 })
 
-// 2026-08-25: swapped "three doors" (3 button-cards) for the PRD's §5.1
-// sentence-wizard variant — one screen, first-person statements instead of
-// category labels, no pre-highlighted default. Same 3 destinations as
-// before (MBTI / attachment / ontology); only the presentation changed.
-type WizardStatement = { key: string; sentence: string; href: string }
-
-const wizardIntro = txt({
-  ko: '지금 가장 가까운 문장에 표시하세요',
-  en: 'Mark whichever sentence feels closest to you right now',
-  ja: '今、一番近いと感じる文に印をつけてください',
-  zh: '请勾选此刻最贴近你的一句话',
-  fr: 'Cochez la phrase qui vous ressemble le plus en ce moment',
-  es: 'Marca la frase que más se parezca a ti ahora mismo',
-})
-
-const wizardStatements: WizardStatement[] = [
-  {
-    key: 'personality',
-    sentence: txt({
-      ko: '나는 내가 어떤 사람인지 잘 모르겠다',
-      en: "I don't really know what kind of person I am",
-      ja: '自分がどんな人間なのかよくわからない',
-      zh: '我不太清楚自己是什么样的人',
-      fr: 'Je ne sais pas vraiment quel genre de personne je suis',
-      es: 'No sé muy bien qué tipo de persona soy',
-    }),
-    href: localePath(locale, '/mbti/test'),
-  },
-  {
-    key: 'relationships',
-    sentence: txt({
-      ko: '가까운 사람과 반복해서 같은 패턴이 생긴다',
-      en: 'The same pattern keeps repeating with people close to me',
-      ja: '近しい人との間で同じパターンが繰り返される',
-      zh: '和亲近的人之间总是重复同样的模式',
-      fr: 'Le même schéma se répète avec mes proches',
-      es: 'El mismo patrón se repite con las personas cercanas',
-    }),
-    href: localePath(locale, '/attachment-style/test'),
-  },
-  {
-    key: 'birth',
-    sentence: txt({
-      ko: '내 생년월일이 나를 어떻게 말하는지 궁금하다',
-      en: "I'm curious what my birth date says about me",
-      ja: '生まれた日が自分について何を語るのか気になる',
-      zh: '我想知道我的出生日期能说明什么',
-      fr: 'Je suis curieux(se) de ce que dit ma date de naissance',
-      es: 'Tengo curiosidad por lo que dice mi fecha de nacimiento',
-    }),
-    href: localePath(locale, '/ontology'),
-  },
-]
+// 2026-08-25: tried "three doors" then a sentence-wizard variant as the
+// entry question above the psych-test list; user's call was that both felt
+// thin, and the psych-test list right below already does the same job (of
+// the 3 destinations doors/wizard offered, 2 were literally the same URLs
+// as items already in that list). So the picker section is gone — the
+// psych-4 list is the entry point, and the map section further down still
+// covers the 3rd destination (birth date -> /ontology) with its own CTA.
 
 type PsychTest = { icon: ComponentType<{ size?: number; strokeWidth?: number; className?: string }>; title: string; questions: number; minutes: number; href: string }
 
@@ -161,11 +115,7 @@ const psychTests: PsychTest[] = [
   },
 ]
 
-// 2026-08-25 impeccable critique P2: doors[0]/doors[1]과 psychTests[0]/[3]가
-// 같은 URL(MBTI/애착)을 5줄 차이로 두 번 보여줘서 "실수처럼" 읽힌다는 지적.
-// 목적지를 바꾸지 않고(위 문의 기본값은 확정 사양), 이 섹션이 "전체 목록"임을
-// 제목으로 명시해 위의 문과 겹치는 게 의도된 레이아웃임을 알린다.
-const sectionPsychTitle = txt({ ko: '심리검사 전체', en: 'All Psychology Tests', ja: '心理テスト一覧', zh: '全部心理测试', fr: 'Tous les tests de psychologie', es: 'Todos los tests de psicología' })
+const sectionPsychTitle = txt({ ko: '심리검사', en: 'Psychology Tests', ja: '心理テスト', zh: '心理测试', fr: 'Tests de psychologie', es: 'Tests de psicología' })
 const ctaStart = txt({ ko: '시작하기', en: 'Start', ja: '始める', zh: '开始', fr: 'Commencer', es: 'Comenzar' })
 
 const fortuneSectionTitle = txt({
@@ -230,30 +180,9 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- 2. 문장 위저드 — 세 문 대신 (PRD §5.1) -->
-  <section class="max-w-3xl mx-auto px-4 pb-2" aria-label={wizardIntro}>
-    <h2 class="text-sm font-bold text-green-800 mb-3">{wizardIntro}</h2>
-    <div class="divide-y divide-green-100 border-y border-green-100">
-      {wizardStatements.map((w) => (
-        <a
-          href={w.href}
-          class="group flex items-center gap-3 py-4 hover:bg-green-50/60 -mx-2 px-2 rounded-lg transition-colors"
-        >
-          <span class="shrink-0 text-green-300 group-hover:hidden">
-            <Square size={20} strokeWidth={2} aria-hidden="true" />
-          </span>
-          <span class="hidden shrink-0 text-green-700 group-hover:inline-flex">
-            <SquareCheck size={20} strokeWidth={2} aria-hidden="true" />
-          </span>
-          <span class="min-w-0 flex-1 font-bold text-sm text-green-950">{w.sentence}</span>
-          <span class="shrink-0 text-green-400 group-hover:text-green-700 transition-colors" aria-hidden="true">→</span>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <!-- 3. 심리 네 개 -->
-  <section class="max-w-3xl mx-auto px-4 pt-10">
+  <!-- 2. 심리검사 — 진입 질문 섹션 없이 바로 목록 (2026-08-25: doors/wizard 둘 다
+       심리검사 목록과 내용이 겹쳐서 제거, 이 목록 자체가 진입점) -->
+  <section class="max-w-3xl mx-auto px-4 pt-4">
     <h2 class="text-lg font-bold text-green-950 mb-2">{sectionPsychTitle}</h2>
     <div class="divide-y divide-green-100 border-t border-green-100">
       {psychTests.map((test) => (
@@ -278,7 +207,7 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- 4. 지도 한 줄 -->
+  <!-- 3. 지도 한 줄 -->
   <section class="mx-auto max-w-4xl px-4 pt-10" aria-labelledby="personal-map-title">
     <div class="relative overflow-hidden rounded-[2rem] bg-[#f7f8ed] px-5 py-7 sm:px-8 sm:py-9 lg:px-10">
       <div class="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-lime-200/50 blur-3xl" aria-hidden="true"></div>
@@ -324,7 +253,7 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- 5. 오늘 둘 (타로, 오늘의 운세) -->
+  <!-- 4. 오늘 둘 (타로, 오늘의 운세) -->
   <section class="max-w-3xl mx-auto px-4 pt-14">
     <div class="flex items-center justify-between mb-4">
       <h2 class="text-lg font-bold text-green-950">{fortuneSectionTitle}</h2>
@@ -339,7 +268,7 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- 6. 더 보기 -->
+  <!-- 5. 더 보기 -->
   <section class="max-w-3xl mx-auto px-4 pt-10 pb-14">
     <h2 class="sr-only">{moreSectionTitle}</h2>
     <div class="flex flex-wrap justify-center gap-3">
