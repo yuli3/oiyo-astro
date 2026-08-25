@@ -1,15 +1,13 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import PeriodicFortune from '../../components/tools/PeriodicFortune';
-import { ProfileMindmap } from '../../components/ontology/ProfileMindmap';
+import FortuneWall from '../../components/tools/FortuneWall.astro';
 import { LOCALES, getTranslations, localePath } from '../../i18n';
 import type { Locale } from '../../i18n';
 // 2026-08-25 impeccable critique P2: one coherent icon language instead of
 // four unrelated emoji vocabularies (doors/tests/map/value-props each used
 // their own set). lucide-react is already a project dependency; these are
 // static SVGs, no client directive needed.
-import { Heart, Brain, Waves, Sparkles, Wand2, Sun, ClipboardCheck, Star, FlaskConical, Lock } from 'lucide-react';
-import type { ComponentType } from 'react';
+import { Wand2, Sun, ClipboardCheck, FlaskConical, Lock } from 'lucide-react';
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -57,75 +55,32 @@ const metaDescription = locale === 'en'
   ? `${heroSub} ahoxy.com is now OIYO.`
   : heroSub
 
-// 2026-08-25 /grill-me 개편: 홈이 카탈로그가 아니라 세 문이 되도록 재구성.
-// company-brain/AI-Sessions/wiki/design/oiyo-landing-ux-consistency-2026-08-25.md 참조.
-// 없앤 것: 통계 띠("28+" 등), 히어로 8칸 격자, 인기 7 + 빠른 18 이중 목록, teal 블러.
-//
-// 2026-08-25 (세운 지시): 세 문/문장위저드를 넣었다 뺐다 한 끝에, 온톨로지 페이지의
-// "타고난 것 / 검사로 본 것 / 내가 고른 것" 세 갈래 자체를 홈에서 바로 작동하게
-// 만드는 쪽으로 확정. 아래 3개 구간은 단순 티저가 아니라 실제 기능 위젯이다 —
-// PeriodicFortune(생년월일 입력→사주 오행·12지신·별자리)과 ProfileMindmap
-// (관심/활동/환경/관계/목표 칩 선택)은 둘 다 /ontology 에서 쓰던 컴포넌트를
-// 그대로 가져왔고 저장 위치(localStorage)도 같아서, 홈에서 입력해도 /ontology
-// 지도에 그대로 반영된다.
-
-// 2026-08-25 (세운 지시): 헤드라인에서 "질문은 여기서..." 를 빼고, life
-// coordinator 로서의 정체성을 바로 내비치는 문장으로 교체. "OIYO" 배지 칩도
-// AI-slop 느낌이라 삭제(hero 안에서 로고를 또 반복할 필요가 없다 — 헤더에 이미 있음).
+// 2026-08-26 (세운 지시): "타고난 것/검사로 본 것/내가 고른 것" 세 갈래는 /tests·
+// /ontology 와 내용이 겹친다는 게 세운 판단이라 홈에서 걷어냄. 대신 검색으로
+// 들어오는 방문자(예: "쥐띠 이번달 운세")가 원하는 답을 랜딩에서 바로 보게
+// 하는 쪽으로 방향을 바꿨다 — 생년월일 없이 12지신·별자리 전체를 기간별로
+// 보여주는 FortuneWall이 핵심 콘텐츠, 헤더는 짧은 훅 + 검사/온톨로지 CTA만.
+// 두 프로토타입(훅+도배 / 도배만) 비교 후 훅+도배 확정.
 const pageRole = txt({
-  ko: '우리는 당신의 인생을 설계해드립니다',
-  en: 'We help you design your life',
-  ja: 'あなたの人生を、私たちが設計します',
-  zh: '我们为您设计人生',
-  fr: 'Nous concevons votre vie pour vous',
-  es: 'Diseñamos tu vida por ti',
+  ko: '당신의 인생을 함께 설계하는 Life Coordinator',
+  en: 'The Life Coordinator that designs your life with you',
+  ja: 'あなたの人生を共に設計する Life Coordinator',
+  zh: '与您一起设计人生的 Life Coordinator',
+  fr: 'Le Life Coordinator qui conçoit votre vie avec vous',
+  es: 'El Life Coordinator que diseña tu vida contigo',
 })
 
-// 2026-08-25: tried "three doors" then a sentence-wizard variant as the
-// entry question above the psych-test list; user's call was that both felt
-// thin. Settled on skipping a separate picker entirely — the 검사로 본 것
-// lane below (see personalMap.measured) is the entry point for tests, and
-// 타고난 것/내가 고른 것 lanes cover the other two destinations directly.
-
-type PsychTest = { icon: ComponentType<{ size?: number; strokeWidth?: number; className?: string }>; title: string; questions: number; minutes: number; href: string }
-
-const questionsMinutesLabel = (n: number, m: number) => txt({
-  ko: `${n}문항 · ${m}분`,
-  en: `${n} questions · ${m} min`,
-  ja: `${n}問 · ${m}分`,
-  zh: `${n}题 · ${m}分钟`,
-  fr: `${n} questions · ${m} min`,
-  es: `${n} preguntas · ${m} min`,
+const heroSubDisplay = txt({
+  ko: '사주·별자리·심리검사로 오늘의 당신을 읽고, 내일의 방향을 함께 그립니다. 아래에서 오늘·이번 주·이번 달·올해의 운세를 바로 확인하세요.',
+  en: 'We read who you are today through Saju, zodiac, and psychology tests, and help shape where you go next. See today, this week, this month, and this year’s fortune below.',
+  ja: '四柱推命・星座・心理テストで今日のあなたを読み解き、明日の方向を共に描きます。下で今日・今週・今月・今年の運勢をすぐ確認できます。',
+  zh: '通过四柱推命、星座与心理测试解读今天的你，一起描绘明天的方向。请在下方查看今日、本周、本月与今年的运势。',
+  fr: 'Nous lisons qui vous êtes aujourd’hui grâce au Saju, au zodiaque et aux tests de psychologie, et dessinons ensemble votre prochaine direction. Découvrez ci-dessous la fortune du jour, de la semaine, du mois et de l’année.',
+  es: 'Leemos quién eres hoy a través del Saju, el zodiaco y los tests de psicología, y trazamos juntos tu próxima dirección. Descubre abajo la fortuna de hoy, esta semana, este mes y este año.',
 })
 
-const psychTests: PsychTest[] = [
-  {
-    icon: Brain,
-    title: txt({ ko: 'MBTI', en: 'MBTI', ja: 'MBTI', zh: 'MBTI', fr: 'MBTI', es: 'MBTI' }),
-    questions: 16, minutes: 3,
-    href: localePath(locale, '/mbti/test'),
-  },
-  {
-    icon: Waves,
-    title: txt({ ko: '빅파이브', en: 'Big Five', ja: 'ビッグファイブ', zh: '大五人格', fr: 'Big Five', es: 'Cinco Grandes' }),
-    questions: 20, minutes: 4,
-    href: localePath(locale, '/big5/test'),
-  },
-  {
-    icon: Sparkles,
-    title: txt({ ko: '에니어그램', en: 'Enneagram', ja: 'エニアグラム', zh: '九型人格', fr: 'Ennéagramme', es: 'Eneagrama' }),
-    questions: 27, minutes: 5,
-    href: localePath(locale, '/enneagram/test'),
-  },
-  {
-    icon: Heart,
-    title: txt({ ko: '애착유형', en: 'Attachment', ja: '愛着タイプ', zh: '依恋类型', fr: 'Attachement', es: 'Apego' }),
-    questions: 12, minutes: 2,
-    href: localePath(locale, '/attachment-style/test'),
-  },
-]
-
-const ctaStart = txt({ ko: '시작하기', en: 'Start', ja: '始める', zh: '开始', fr: 'Commencer', es: 'Comenzar' })
+const ctaStartTest = txt({ ko: '검사 시작하기', en: 'Start a Test', ja: '検査を始める', zh: '开始测试', fr: 'Commencer un test', es: 'Empezar un test' })
+const ctaSeeMap = txt({ ko: '내 지도 보기', en: 'See My Map', ja: '私の地図を見る', zh: '查看我的地图', fr: 'Voir ma carte', es: 'Ver mi mapa' })
 
 const tarotCard = {
   title: txt({ ko: '타로 리딩', en: 'Tarot Reading', ja: 'タロットリーディング', zh: '塔罗牌解读', fr: 'Tirage de Tarot', es: 'Lectura de Tarot' }),
@@ -135,18 +90,6 @@ const tarotCard = {
 const moreSectionTitle = txt({ ko: '더 보기', en: 'More', ja: 'もっと見る', zh: '更多', fr: 'Voir plus', es: 'Ver más' })
 const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テスト', zh: '所有测试', fr: 'Tous les Tests', es: 'Todos los Tests' })
 
-const personalMap = {
-  title: txt({ ko: '흩어진 결과를, 하나의 나의 지도로', en: 'Turn scattered results into your personal map', ja: '散らばった結果を、ひとつの「私の地図」へ', zh: '把零散的结果，汇成一张“我的地图”', fr: 'Transformez vos résultats en une carte personnelle', es: 'Convierte tus resultados en tu mapa personal' }),
-  description: txt({ ko: '생년월일로 계산한 것, 테스트로 발견한 것, 내가 직접 고른 것을 서로 섞지 않고 연결해 보세요.', en: 'Connect what birth data calculates, what assessments reveal, and what you choose—without mixing them into one score.', ja: '生年月日から分かること、テストで見つけたこと、自分で選んだことを、一つの点数に混ぜずにつなげます。', zh: '连接出生信息所计算的、测验所发现的，以及你亲自选择的内容，而不把它们混成一个分数。', fr: 'Reliez ce que calcule votre naissance, ce que révèlent les tests et ce que vous choisissez, sans tout fondre en un score.', es: 'Conecta lo que calcula tu nacimiento, lo que revelan los tests y lo que eliges, sin mezclarlo todo en una puntuación.' }),
-  born: txt({ ko: '타고난 것', en: 'Born with', ja: '生まれ持ったもの', zh: '天生的', fr: 'Données de naissance', es: 'Lo innato' }),
-  measured: txt({ ko: '검사로 본 것', en: 'Measured', ja: 'テストで見たもの', zh: '测验发现的', fr: 'Mesuré', es: 'Lo medido' }),
-  chosen: txt({ ko: '내가 고른 것', en: 'Chosen by me', ja: '自分で選んだもの', zh: '我选择的', fr: 'Choisi par moi', es: 'Lo que elijo' }),
-  bornDetail: txt({ ko: '사주 · 오행 · 별자리', en: 'Saju · elements · zodiac', ja: '四柱推命 · 五行 · 星座', zh: '八字 · 五行 · 星座', fr: 'Saju · éléments · zodiaque', es: 'Saju · elementos · zodiaco' }),
-  measuredDetail: txt({ ko: '성격 · 가치관 · 관계', en: 'Traits · values · relationships', ja: '性格 · 価値観 · 関係', zh: '性格 · 价值观 · 关系', fr: 'Traits · valeurs · relations', es: 'Rasgos · valores · relaciones' }),
-  chosenDetail: txt({ ko: '관심 · 활동 · 다음 행동', en: 'Interests · activities · next steps', ja: '関心 · 活動 · 次の一歩', zh: '兴趣 · 活动 · 下一步', fr: 'Intérêts · activités · prochaine étape', es: 'Intereses · actividades · próximos pasos' }),
-  cta: txt({ ko: '내 지도 열기', en: 'Open my map', ja: '私の地図を開く', zh: '打开我的地图', fr: 'Ouvrir ma carte', es: 'Abrir mi mapa' }),
-  privacy: txt({ ko: '로그인 없이 · 이 브라우저에만 저장', en: 'No login · stored only in this browser', ja: 'ログイン不要 · このブラウザだけに保存', zh: '无需登录 · 仅保存在此浏览器', fr: 'Sans connexion · stocké dans ce navigateur', es: 'Sin iniciar sesión · guardado en este navegador' }),
-}
 ---
 
 <Layout
@@ -154,8 +97,8 @@ const personalMap = {
   description={metaDescription}
   locale={locale}
 >
-  <!-- 1. 한 문장 역할 -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/80 to-white pt-16 pb-10 px-4">
+  <!-- 1. 한 문장 역할 + CTA -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/80 to-white pt-16 pb-12 px-4">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-green-200 rounded-full blur-3xl opacity-20" />
     </div>
@@ -165,86 +108,29 @@ const personalMap = {
         {pageRole}
       </h1>
       <p class="text-green-700 font-medium text-sm md:text-base max-w-lg mx-auto leading-relaxed">
-        {heroSub}
+        {heroSubDisplay}
       </p>
+      <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+        <a
+          href={localePath(locale, '/tests')}
+          class="inline-flex min-h-12 items-center justify-center rounded-full bg-green-800 px-6 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-green-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800"
+        >
+          {ctaStartTest} →
+        </a>
+        <a
+          href={localePath(locale, '/ontology')}
+          class="inline-flex min-h-12 items-center justify-center rounded-full border border-green-200 bg-white px-6 py-3 text-sm font-bold text-green-800 transition-colors hover:border-green-300 hover:bg-green-50"
+        >
+          {ctaSeeMap}
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- 2. 세 갈래: 타고난 것 / 검사로 본 것 / 내가 고른 것 (실제 작동하는 위젯,
-       /ontology 와 같은 컴포넌트·저장소를 그대로 씀) -->
-  <section class="max-w-3xl mx-auto px-4 pt-6" aria-labelledby="three-lanes-title">
-    <h2 id="three-lanes-title" class="text-2xl font-black leading-tight text-green-950 text-center max-w-xl mx-auto">
-      {personalMap.title}
-    </h2>
-    <p class="mt-2 text-sm leading-6 text-green-800/75 text-center max-w-xl mx-auto">
-      {personalMap.description}
-    </p>
-
-    <div class="mt-10 space-y-12">
-      <!-- 2a. 타고난 것 -->
-      <div>
-        <div class="flex items-center gap-2">
-          <Sun size={18} strokeWidth={2.25} className="text-green-700 shrink-0" aria-hidden="true" />
-          <h3 class="text-lg font-bold text-green-950">{personalMap.born}</h3>
-        </div>
-        <p class="mt-0.5 mb-4 text-xs font-semibold text-green-600">{personalMap.bornDetail}</p>
-        <div class="rounded-3xl bg-green-50/60 p-5">
-          <PeriodicFortune client:visible locale={locale} period="today" />
-        </div>
-      </div>
-
-      <!-- 2b. 검사로 본 것 -->
-      <div>
-        <div class="flex items-center gap-2">
-          <ClipboardCheck size={18} strokeWidth={2.25} className="text-green-700 shrink-0" aria-hidden="true" />
-          <h3 class="text-lg font-bold text-green-950">{personalMap.measured}</h3>
-        </div>
-        <p class="mt-0.5 mb-2 text-xs font-semibold text-green-600">{personalMap.measuredDetail}</p>
-        <div class="divide-y divide-green-100 border-t border-green-100">
-          {psychTests.map((test) => (
-            <a
-              href={test.href}
-              class="group flex items-center gap-3 py-3.5 hover:bg-green-50/60 -mx-2 px-2 rounded-lg transition-colors"
-            >
-              <span class="w-8 shrink-0 text-green-700">
-                <test.icon size={20} strokeWidth={2} aria-hidden="true" />
-              </span>
-              <span class="min-w-0 flex-1">
-                <span class="block font-bold text-green-950 text-sm group-hover:text-green-700 transition-colors">
-                  {test.title}
-                </span>
-                <span class="block text-xs text-green-700 mt-0.5">{questionsMinutesLabel(test.questions, test.minutes)}</span>
-              </span>
-              <span class="shrink-0 text-xs font-semibold text-green-700 group-hover:text-green-900 transition-colors">
-                {ctaStart} →
-              </span>
-            </a>
-          ))}
-        </div>
-      </div>
-
-      <!-- 2c. 내가 고른 것 -->
-      <div>
-        <div class="flex items-center gap-2">
-          <Star size={18} strokeWidth={2.25} className="text-green-700 shrink-0" aria-hidden="true" />
-          <h3 class="text-lg font-bold text-green-950">{personalMap.chosen}</h3>
-        </div>
-        <p class="mt-0.5 mb-4 text-xs font-semibold text-green-600">{personalMap.chosenDetail}</p>
-        <ProfileMindmap client:visible locale={locale} />
-      </div>
-    </div>
-
-    <div class="mt-10 flex flex-col items-center gap-2 text-center">
-      <a
-        href={localePath(locale, '/ontology')}
-        class="inline-flex min-h-12 items-center justify-center rounded-full bg-green-800 px-6 py-3 text-sm font-bold text-white shadow-sm transition-colors hover:bg-green-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800"
-      >
-        {personalMap.cta}<span class="ml-2" aria-hidden="true">→</span>
-      </a>
-      <p class="inline-flex items-center gap-1.5 text-xs font-semibold text-green-800">
-        <Lock size={12} strokeWidth={2.5} aria-hidden="true" />{personalMap.privacy}
-      </p>
-    </div>
+  <!-- 2. 운세 도배: 생년월일 없이 12지신·별자리 × 오늘/이번주/이번달/올해 전체 -->
+  <section class="pt-10 pb-4">
+    <h2 class="sr-only">{pageRole}</h2>
+    <FortuneWall locale={locale} />
   </section>
 
   <!-- 3. 기타 내용들 (타로, 전체 검사) — 세운 지시: 이미지(타로카드/전체검사) 붙일
