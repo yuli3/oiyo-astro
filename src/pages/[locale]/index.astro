@@ -69,13 +69,16 @@ const metaDescription = locale === 'en'
 // 그대로 가져왔고 저장 위치(localStorage)도 같아서, 홈에서 입력해도 /ontology
 // 지도에 그대로 반영된다.
 
+// 2026-08-25 (세운 지시): 헤드라인에서 "질문은 여기서..." 를 빼고, life
+// coordinator 로서의 정체성을 바로 내비치는 문장으로 교체. "OIYO" 배지 칩도
+// AI-slop 느낌이라 삭제(hero 안에서 로고를 또 반복할 필요가 없다 — 헤더에 이미 있음).
 const pageRole = txt({
-  ko: '질문은 여기서. 모아둔 건 지도에서.',
-  en: 'Answer questions here. See it all come together in your map.',
-  ja: '質問はここで。集めたものは地図で。',
-  zh: '问题在这里回答，汇总在地图里查看。',
-  fr: 'Répondez aux questions ici. Retrouvez tout dans votre carte.',
-  es: 'Responde preguntas aquí. Encuéntralo todo en tu mapa.',
+  ko: '우리는 당신의 인생을 설계해드립니다',
+  en: 'We help you design your life',
+  ja: 'あなたの人生を、私たちが設計します',
+  zh: '我们为您设计人生',
+  fr: 'Nous concevons votre vie pour vous',
+  es: 'Diseñamos tu vida por ti',
 })
 
 // 2026-08-25: tried "three doors" then a sentence-wizard variant as the
@@ -158,9 +161,6 @@ const personalMap = {
     </div>
 
     <div class="relative z-10 max-w-2xl mx-auto text-center animate-fadeInUp">
-      <div class="inline-flex items-center px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-green-100 text-green-700 text-xs font-bold mb-5 shadow-sm">
-        OIYO
-      </div>
       <h1 class="text-3xl md:text-4xl font-serif font-black text-green-950 mb-3 tracking-tight leading-tight">
         {pageRole}
       </h1>
@@ -247,21 +247,31 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- 3. 기타 내용들 (타로, 전체 검사) -->
-  <section class="max-w-3xl mx-auto px-4 pt-14 pb-14">
+  <!-- 3. 기타 내용들 (타로, 전체 검사) — 세운 지시: 이미지(타로카드/전체검사) 붙일
+       예정이라 작은 필로 두지 않고 큰 카드로 중앙정렬. 이미지 준비되면 아래
+       아이콘 원(rounded-full) 을 <img> 로 교체. -->
+  <section class="max-w-2xl mx-auto px-4 pt-14 pb-14">
     <h2 class="sr-only">{moreSectionTitle}</h2>
-    <div class="flex flex-wrap justify-center gap-3">
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
       <a
         href={tarotCard.href}
-        class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white border border-green-200 text-green-800 text-sm font-semibold hover:bg-green-50 hover:border-green-300 transition-all shadow-sm"
+        class="group flex flex-col items-center gap-3 rounded-3xl border border-green-200 bg-white px-6 py-10 text-center shadow-sm transition-all hover:border-green-300 hover:shadow-md"
       >
-        <Wand2 size={16} strokeWidth={2} aria-hidden="true" />{tarotCard.title} →
+        <span class="flex h-20 w-20 items-center justify-center rounded-full bg-green-50 text-green-700 transition-colors group-hover:bg-green-100">
+          <Wand2 size={36} strokeWidth={1.75} aria-hidden="true" />
+        </span>
+        <span class="text-base font-bold text-green-950">{tarotCard.title}</span>
+        <span class="text-sm font-semibold text-green-700">→</span>
       </a>
       <a
         href={localePath(locale, '/tests')}
-        class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white border border-green-200 text-green-800 text-sm font-semibold hover:bg-green-50 hover:border-green-300 transition-all shadow-sm"
+        class="group flex flex-col items-center gap-3 rounded-3xl border border-green-200 bg-white px-6 py-10 text-center shadow-sm transition-all hover:border-green-300 hover:shadow-md"
       >
-        {ctaAllTests} →
+        <span class="flex h-20 w-20 items-center justify-center rounded-full bg-green-50 text-green-700 transition-colors group-hover:bg-green-100">
+          <ClipboardCheck size={36} strokeWidth={1.75} aria-hidden="true" />
+        </span>
+        <span class="text-base font-bold text-green-950">{ctaAllTests}</span>
+        <span class="text-sm font-semibold text-green-700">→</span>
       </a>
     </div>
   </section>

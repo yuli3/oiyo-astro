@@ -8,14 +8,13 @@ type Focus = 'trinity' | 'saju' | 'zodiac';
 const L: Record<Locale, {
   birthPrompt: string; birthDate: string; see: string;
   saju: string; animal: string; sign: string; period: Record<Period, string>;
-  periodTag: Record<Period, string>; note: string; elements: Record<string, string>;
+  periodTag: Record<Period, string>; elements: Record<string, string>;
   animals: string[]; signs: string[]; savedHint: string; focusIntro: Record<Focus, string>;
 }> = {
   ko: { birthPrompt: '생년월일을 입력하면 사주 오행·12지신·별자리 세 관점의 운세가 나옵니다.', birthDate: '생년월일', see: '운세 보기',
     saju: '사주 오행', animal: '12지신', sign: '별자리',
     period: { today: '오늘의 운세', weekly: '이번 주 운세', monthly: '이번 달 운세', yearly: '올해의 운세' },
     periodTag: { today: '오늘', weekly: '이번 주', monthly: '이번 달', yearly: '올해' },
-    note: '전통 상징 체계에 기반한 자기 성찰용 콘텐츠이며 운명을 단정하지 않습니다. 모든 정보는 이 브라우저에만 저장됩니다.',
     elements: { wood: '목(木)', fire: '화(火)', earth: '토(土)', metal: '금(金)', water: '수(水)' },
     animals: ['쥐', '소', '호랑이', '토끼', '용', '뱀', '말', '양', '원숭이', '닭', '개', '돼지'],
     signs: ['양자리', '황소자리', '쌍둥이자리', '게자리', '사자자리', '처녀자리', '천칭자리', '전갈자리', '궁수자리', '염소자리', '물병자리', '물고기자리'], savedHint: '저장됨',
@@ -24,7 +23,6 @@ const L: Record<Locale, {
     saju: 'Saju Five Elements', animal: 'Chinese Zodiac', sign: 'Star Sign',
     period: { today: "Today's Fortune", weekly: 'This Week', monthly: 'This Month', yearly: 'This Year' },
     periodTag: { today: 'today', weekly: 'this week', monthly: 'this month', yearly: 'this year' },
-    note: 'Content for self-reflection based on traditional symbolic systems; it does not determine fate. Everything stays in this browser only.',
     elements: { wood: 'Wood', fire: 'Fire', earth: 'Earth', metal: 'Metal', water: 'Water' },
     animals: ['Rat', 'Ox', 'Tiger', 'Rabbit', 'Dragon', 'Snake', 'Horse', 'Goat', 'Monkey', 'Rooster', 'Dog', 'Pig'],
     signs: ['Aries', 'Taurus', 'Gemini', 'Cancer', 'Leo', 'Virgo', 'Libra', 'Scorpio', 'Sagittarius', 'Capricorn', 'Aquarius', 'Pisces'], savedHint: 'saved',
@@ -33,7 +31,6 @@ const L: Record<Locale, {
     saju: '四柱の五行', animal: '十二支', sign: '星座',
     period: { today: '今日の運勢', weekly: '今週の運勢', monthly: '今月の運勢', yearly: '今年の運勢' },
     periodTag: { today: '今日', weekly: '今週', monthly: '今月', yearly: '今年' },
-    note: '伝統的な象徴体系に基づく自己省察のための内容で、運命を断定しません。すべてこのブラウザだけに保存されます。',
     elements: { wood: '木', fire: '火', earth: '土', metal: '金', water: '水' },
     animals: ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'],
     signs: ['牡羊座', '牡牛座', '双子座', '蟹座', '獅子座', '乙女座', '天秤座', '蠍座', '射手座', '山羊座', '水瓶座', '魚座'], savedHint: '保存済み',
@@ -42,7 +39,6 @@ const L: Record<Locale, {
     saju: '四柱五行', animal: '生肖', sign: '星座',
     period: { today: '今日运势', weekly: '本周运势', monthly: '本月运势', yearly: '今年运势' },
     periodTag: { today: '今日', weekly: '本周', monthly: '本月', yearly: '今年' },
-    note: '基于传统象征体系的自我省察内容，不判定命运。所有信息仅保存在此浏览器中。',
     elements: { wood: '木', fire: '火', earth: '土', metal: '金', water: '水' },
     animals: ['鼠', '牛', '虎', '兔', '龙', '蛇', '马', '羊', '猴', '鸡', '狗', '猪'],
     signs: ['白羊座', '金牛座', '双子座', '巨蟹座', '狮子座', '处女座', '天秤座', '天蝎座', '射手座', '摩羯座', '水瓶座', '双鱼座'], savedHint: '已保存',
@@ -51,7 +47,6 @@ const L: Record<Locale, {
     saju: 'Cinq éléments Saju', animal: 'Zodiaque chinois', sign: 'Signe astral',
     period: { today: "Aujourd'hui", weekly: 'Cette semaine', monthly: 'Ce mois', yearly: 'Cette année' },
     periodTag: { today: "aujourd'hui", weekly: 'cette semaine', monthly: 'ce mois', yearly: 'cette année' },
-    note: 'Contenu de réflexion basé sur des systèmes symboliques traditionnels ; il ne détermine pas le destin. Tout reste dans ce navigateur.',
     elements: { wood: 'Bois', fire: 'Feu', earth: 'Terre', metal: 'Métal', water: 'Eau' },
     animals: ['Rat', 'Bœuf', 'Tigre', 'Lapin', 'Dragon', 'Serpent', 'Cheval', 'Chèvre', 'Singe', 'Coq', 'Chien', 'Cochon'],
     signs: ['Bélier', 'Taureau', 'Gémeaux', 'Cancer', 'Lion', 'Vierge', 'Balance', 'Scorpion', 'Sagittaire', 'Capricorne', 'Verseau', 'Poissons'], savedHint: 'enregistré',
@@ -60,7 +55,6 @@ const L: Record<Locale, {
     saju: 'Cinco elementos Saju', animal: 'Zodiaco chino', sign: 'Signo',
     period: { today: 'Hoy', weekly: 'Esta semana', monthly: 'Este mes', yearly: 'Este año' },
     periodTag: { today: 'hoy', weekly: 'esta semana', monthly: 'este mes', yearly: 'este año' },
-    note: 'Contenido de autorreflexión basado en sistemas simbólicos tradicionales; no determina el destino. Todo queda en este navegador.',
     elements: { wood: 'Madera', fire: 'Fuego', earth: 'Tierra', metal: 'Metal', water: 'Agua' },
     animals: ['Rata', 'Buey', 'Tigre', 'Conejo', 'Dragón', 'Serpiente', 'Caballo', 'Cabra', 'Mono', 'Gallo', 'Perro', 'Cerdo'],
     signs: ['Aries', 'Tauro', 'Géminis', 'Cáncer', 'Leo', 'Virgo', 'Libra', 'Escorpio', 'Sagitario', 'Capricornio', 'Acuario', 'Piscis'], savedHint: 'guardado',
@@ -124,7 +118,7 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
     return (
       <div className="space-y-4">
         <p className="text-sm text-muted-foreground">{focus === 'trinity' ? t.birthPrompt : t.focusIntro[focus]}</p>
-        <div className="flex items-end gap-2">
+        <div className="space-y-3">
           <BirthDateField
             id="periodic-birth-date"
           locale={locale}
@@ -132,15 +126,14 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
             value={dateInput}
             onChange={setDateInput}
             max={new Date().toISOString().slice(0, 10)}
-            className="flex-1"
+            className="w-full"
           />
           <button
             onClick={submit}
             disabled={!isValidDate}
-            className="h-12 rounded-xl bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:opacity-40"
+            className="h-12 w-full rounded-xl bg-primary px-5 text-sm font-bold text-primary-foreground hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:opacity-40"
           >{t.see}</button>
         </div>
-        <p className="text-[11px] text-muted-foreground">{t.note}</p>
       </div>
     );
   }
@@ -155,7 +148,6 @@ export default function PeriodicFortune({ locale = 'ko', period = 'today', focus
       {focus === 'trinity' && <Card title={`${t.animal} · ${t.animals[result.animal.idx]}`} r={result.animal.r} />}
       {(focus === 'trinity' || focus === 'zodiac') && <Card title={`${t.sign} · ${t.signs[result.sign.idx]}`} r={result.sign.r} />}
       <button onClick={() => setBirth(null)} className="w-full rounded-xl border bg-card px-4 py-2.5 text-sm font-bold hover:bg-accent">↺</button>
-      <p className="text-[11px] text-muted-foreground text-center">{t.note}</p>
     </div>
   );
 }
