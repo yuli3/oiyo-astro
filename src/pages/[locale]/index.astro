@@ -15,6 +15,9 @@ type L = Locale
 
 const txt = (map: Record<L, string>) => map[locale] ?? map.en
 
+// <title>/meta 는 SEO 카피 그대로 둔다 — 이번 개편은 화면에 보이는 구조 문제
+// (질문·랜딩부터 어디서 뭘 하는지 8번 바뀌는 문제)를 고치는 것이지 검색 카피 교체가
+// 아니다. 온페이지 h1 은 pageRole 로 별도 관리.
 const heroTitle = txt({
   ko: '나를 알아가는 가장 쉬운 방법',
   en: 'Know Yourself, Deeply',
@@ -47,101 +50,132 @@ const metaDescription = locale === 'en'
   ? `${heroSub} ahoxy.com is now OIYO.`
   : heroSub
 
-const statsData = [
-  { value: '28+', label: txt({ ko: '자기 탐색 도구', en: 'Self-Discovery Tools', ja: '自己探索ツール', zh: '自我探索工具', fr: 'Outils d\'Exploration', es: 'Herramientas' }) },
-  { value: '6', label: txt({ ko: '지원 언어', en: 'Languages', ja: '対応言語', zh: '支持语言', fr: 'Langues', es: 'Idiomas' }) },
-  { value: '100%', label: txt({ ko: '완전 무료', en: 'Free Forever', ja: '完全無料', zh: '完全免费', fr: 'Totalement Gratuit', es: 'Totalmente Gratis' }) },
-  { value: '22', label: txt({ ko: '오라클 카드', en: 'Oracle Cards', ja: 'オラクルカード', zh: '神谕牌', fr: 'Cartes Oracle', es: 'Cartas Oráculo' }) },
-]
+// 2026-08-25 /grill-me 개편: 홈이 카탈로그가 아니라 세 문이 되도록 재구성.
+// company-brain/AI-Sessions/wiki/design/oiyo-landing-ux-consistency-2026-08-25.md 참조.
+// 없앤 것: 통계 띠("28+" 등), 히어로 8칸 격자, 인기 7 + 빠른 18 이중 목록, teal 블러.
 
-const popularTests = [
+const pageRole = txt({
+  ko: '질문은 여기서. 모아둔 건 지도에서.',
+  en: 'Answer questions here. See it all come together in your map.',
+  ja: '質問はここで。集めたものは地図で。',
+  zh: '问题在这里回答，汇总在地图里查看。',
+  fr: 'Répondez aux questions ici. Retrouvez tout dans votre carte.',
+  es: 'Responde preguntas aquí. Encuéntralo todo en tu mapa.',
+})
+
+type Door = { key: string; icon: string; label: string; sub: string; href: string; primary?: boolean }
+
+const doors: Door[] = [
   {
-    icon: '🧠', badge: '16 types', bg: 'bg-blue-50', border: 'border-blue-100',
-    title: txt({ ko: 'MBTI 직업 적성', en: 'MBTI Career', ja: 'MBTI 職業適性', zh: 'MBTI职业', fr: 'MBTI Carrière', es: 'MBTI Carrera' }),
-    desc: txt({ ko: '나에게 맞는 직업 유형', en: 'Find your career type', ja: '最適な職業タイプを発見', zh: '找到适合你的职业类型', fr: 'Trouvez votre type de carrière', es: 'Encuentra tu tipo de carrera' }),
+    key: 'personality',
+    icon: '🧭',
+    label: txt({ ko: '성격이 궁금하다', en: "I'm curious about my personality", ja: '性格が気になる', zh: '我想了解我的性格', fr: 'Ma personnalité m\'intrigue', es: 'Tengo curiosidad por mi personalidad' }),
+    sub: txt({
+      ko: '16문항. 결과는 유형 하나가 아니라, 내 지도에 쌓이는 신호입니다.',
+      en: "16 questions. The result isn't one fixed type — it's a signal that builds your map.",
+      ja: '16問。結果はひとつの型ではなく、地図に積み重なる手がかりです。',
+      zh: '16题。结果不是一个固定类型，而是汇入你地图的信号。',
+      fr: 'Questions. Le résultat n\'est pas un type figé — c\'est un signal qui construit votre carte.',
+      es: '16 preguntas. El resultado no es un tipo fijo, es una señal que construye tu mapa.',
+    }),
     href: localePath(locale, '/mbti/test'),
+    primary: true,
   },
   {
-    icon: '🔮', badge: '9 types', bg: 'bg-green-50', border: 'border-green-100',
-    title: txt({ ko: '에니어그램', en: 'Enneagram', ja: 'エニアグラム', zh: '九型人格', fr: 'Ennéagramme', es: 'Eneagrama' }),
-    desc: txt({ ko: '핵심 동기와 두려움 탐색', en: 'Core motivations & fears', ja: '核心的動機と恐怖を探求', zh: '探索核心动机与恐惧', fr: 'Motivations et peurs profondes', es: 'Motivaciones y miedos centrales' }),
-    href: localePath(locale, '/enneagram/test'),
-  },
-  {
-    icon: '🌊', badge: 'OCEAN', bg: 'bg-cyan-50', border: 'border-cyan-100',
-    title: txt({ ko: '빅파이브 성격', en: 'Big Five Personality', ja: 'ビッグファイブ', zh: '大五人格', fr: 'Big Five', es: 'Cinco Grandes' }),
-    desc: txt({ ko: '5가지 차원으로 성격 분석', en: '5-dimension personality profile', ja: '5次元の性格プロファイル', zh: '5维度性格分析', fr: 'Profil de personnalité 5 dimensions', es: 'Perfil de personalidad 5 dimensiones' }),
-    href: localePath(locale, '/big5/test'),
-  },
-  {
-    icon: '☯️', badge: txt({ ko: '명리학', en: 'BaZi', ja: '四柱推命', zh: '八字', fr: 'BaZi', es: 'BaZi' }), bg: 'bg-amber-50', border: 'border-amber-100',
-    title: txt({ ko: '사주 계산기', en: 'Saju Palja Test', ja: '四柱推命', zh: '四柱八字', fr: 'Calculateur Saju', es: 'Calculadora Saju' }),
-    desc: txt({ ko: '생년월일로 사주팔자 분석', en: 'Saju Palja test from your birth date', ja: '生年月日で四柱推命を分析', zh: '根据出生日期分析八字', fr: 'Analyse BaZi selon votre date de naissance', es: 'Análisis BaZi con tu fecha de nacimiento' }),
-    href: localePath(locale, '/saju/calculator'),
-  },
-  {
-    icon: '🌙', badge: txt({ ko: '태양·달·상승', en: 'Sun·Moon·Asc', ja: '太陽·月·上昇', zh: '太阳·月亮·上升', fr: 'Soleil·Lune·Asc', es: 'Sol·Luna·Asc' }), bg: 'bg-green-50', border: 'border-green-100',
-    title: txt({ ko: '출생 차트 계산기', en: 'Natal Chart', ja: '出生図計算機', zh: '出生星盘', fr: 'Thème natal', es: 'Carta natal' }),
-    desc: txt({ ko: '태양·달·상승궁을 천문 계산으로', en: 'Sun, Moon & Rising by astronomy', ja: '太陽·月·上昇宮を天文計算で', zh: '以天文计算太阳·月亮·上升', fr: 'Soleil, Lune et Ascendant par l\'astronomie', es: 'Sol, Luna y Ascendente por astronomía' }),
-    href: localePath(locale, '/natal/chart'),
-  },
-  {
-    icon: '💚', badge: txt({ ko: '애착', en: 'Attachment', ja: '愛着', zh: '依恋', fr: 'Attachement', es: 'Apego' }), bg: 'bg-green-50', border: 'border-green-100',
-    title: txt({ ko: '애착유형 테스트', en: 'Attachment Style Test', ja: '愛着スタイルテスト', zh: '依恋类型测试', fr: 'Test de Style d\'Attachement', es: 'Test de Estilo de Apego' }),
-    desc: txt({ ko: '나의 관계 방식 이해하기', en: 'Understand your relationship patterns', ja: '自分の関係スタイルを理解する', zh: '了解你的关系模式', fr: 'Comprendre vos modèles relationnels', es: 'Entiende tus patrones relacionales' }),
+    key: 'relationships',
+    icon: '💚',
+    label: txt({ ko: '관계가 궁금하다', en: "I'm curious about my relationships", ja: '人間関係が気になる', zh: '我想了解我的人际关系', fr: 'Mes relations m\'intriguent', es: 'Tengo curiosidad por mis relaciones' }),
+    sub: txt({
+      ko: '12문항. 애착유형 — 가까운 사람과 반복되는 패턴을 봅니다.',
+      en: '12 questions. Attachment style — the patterns that repeat with people close to you.',
+      ja: '12問。愛着タイプ — 近しい人と繰り返すパターンを見ます。',
+      zh: '12题。依恋类型 — 看看你与亲近的人反复出现的模式。',
+      fr: '12 questions. Style d\'attachement — les schémas qui se répètent avec vos proches.',
+      es: '12 preguntas. Estilo de apego — los patrones que se repiten con las personas cercanas.',
+    }),
     href: localePath(locale, '/attachment-style/test'),
   },
   {
-    icon: '🌸', badge: txt({ ko: '색채', en: 'Color', ja: '色彩', zh: '色彩', fr: 'Couleur', es: 'Color' }), bg: 'bg-rose-50', border: 'border-rose-100',
-    title: txt({ ko: '퍼스널컬러 테스트', en: 'Personal Color Test', ja: 'パーソナルカラーテスト', zh: '个人色彩测试', fr: 'Test de Couleur Personnelle', es: 'Test de Color Personal' }),
-    desc: txt({ ko: '나에게 어울리는 색상 찾기', en: 'Find your most flattering colors', ja: '自分に似合う色を発見', zh: '找到最适合你的颜色', fr: 'Trouvez vos couleurs les plus flatteuses', es: 'Encuentra tus colores más favorecedores' }),
-    href: localePath(locale, '/personal-color/test'),
+    key: 'birth',
+    icon: '🌙',
+    label: txt({ ko: '태어난 날이 궁금하다', en: "I'm curious what my birth date says", ja: '生まれた日が気になる', zh: '我想知道出生日期说明什么', fr: 'Ma date de naissance m\'intrigue', es: 'Tengo curiosidad por mi fecha de nacimiento' }),
+    sub: txt({
+      ko: '지도로 이동합니다 — 검사가 아니에요.',
+      en: 'Goes to your map — not a test.',
+      ja: '地図へ移動します — テストではありません。',
+      zh: '前往地图 — 不是测验。',
+      fr: 'Direction votre carte — pas un test.',
+      es: 'Va a tu mapa — no es un test.',
+    }),
+    href: localePath(locale, '/ontology'),
   },
 ]
 
-const quickTests = [
-  { icon: '🌌', title: txt({ ko: '오늘의 우주', en: "Today's Universe", ja: '今日の宇宙', zh: '今日宇宙', fr: "L'Univers du Jour", es: 'El Universo de Hoy' }), href: localePath(locale, '/today') },
-  { icon: '😰', title: txt({ ko: '번아웃 테스트', en: 'Burnout Test', ja: 'バーンアウトテスト', zh: '倦怠测试', fr: 'Test de Burnout', es: 'Test de Burnout' }), href: localePath(locale, '/burnout/test') },
-  { icon: '💤', title: txt({ ko: '수면 유형', en: 'Sleep Type', ja: '睡眠タイプ', zh: '睡眠类型', fr: 'Type de Sommeil', es: 'Tipo de Sueño' }), href: localePath(locale, '/sleep-type/test') },
-  { icon: '❤️‍🔥', title: txt({ ko: '사랑의 언어', en: 'Love Language', ja: '愛の言語', zh: '爱的语言', fr: 'Langage d\'Amour', es: 'Lenguaje del Amor' }), href: localePath(locale, '/love-language/test') },
-  { icon: '🌟', title: txt({ ko: '자존감 테스트', en: 'Self-Esteem', ja: '自尊心テスト', zh: '自尊测试', fr: 'Estime de Soi', es: 'Autoestima' }), href: localePath(locale, '/self-esteem/test') },
-  { icon: '🧩', title: txt({ ko: '에니어그램', en: 'Enneagram', ja: 'エニアグラム', zh: '九型人格', fr: 'Ennéagramme', es: 'Eneagrama' }), href: localePath(locale, '/enneagram/test') },
-  { icon: '🩸', title: txt({ ko: '혈액형 성격', en: 'Blood Type', ja: '血液型性格', zh: '血型性格', fr: 'Type Sanguin', es: 'Tipo Sanguíneo' }), href: localePath(locale, '/blood-type') },
-  { icon: '🐉', title: txt({ ko: '띠 성격', en: 'Chinese Zodiac', ja: '干支性格', zh: '生肖性格', fr: 'Zodiaque Chinois', es: 'Zodíaco Chino' }), href: localePath(locale, '/chinese-zodiac') },
-  { icon: '✨', title: txt({ ko: '수비학', en: 'Numerology', ja: '数秘術', zh: '数字命理', fr: 'Numérologie', es: 'Numerología' }), href: localePath(locale, '/numerology/calculator') },
-  { icon: '🔥', title: txt({ ko: '워커홀릭', en: 'Workaholism', ja: 'ワーカホリック', zh: '工作狂', fr: 'Workaholisme', es: 'Adicción al Trabajo' }), href: localePath(locale, '/workaholic-test') },
-  { icon: '📲', title: txt({ ko: 'FOMO 척도', en: 'FOMO Scale', ja: 'FOMO尺度', zh: 'FOMO量表', fr: 'Échelle FOMO', es: 'Escala FOMO' }), href: localePath(locale, '/fomo-test') },
-  { icon: '🧗', title: txt({ ko: '자기효능감', en: 'Self-Efficacy', ja: '自己効力感', zh: '自我效能', fr: 'Auto-Efficacité', es: 'Autoeficacia' }), href: localePath(locale, '/self-efficacy-test') },
-  { icon: '🛡️', title: txt({ ko: '자기통제력', en: 'Self-Control', ja: '自己統制', zh: '自我控制', fr: 'Maîtrise de Soi', es: 'Autocontrol' }), href: localePath(locale, '/self-control-test') },
-  { icon: '🍂', title: txt({ ko: '연애 권태기', en: 'Relationship Boredom', ja: '恋愛倦怠期', zh: '恋爱倦怠', fr: 'Ennui Amoureux', es: 'Aburrimiento en Pareja' }), href: localePath(locale, '/relationship-boredom-test') },
-  { icon: '🎲', title: txt({ ko: '통제 위치', en: 'Locus of Control', ja: '統制の所在', zh: '控制点', fr: 'Lieu de Contrôle', es: 'Locus de Control' }), href: localePath(locale, '/locus-of-control-test') },
-  { icon: '🔭', title: txt({ ko: '호기심', en: 'Curiosity', ja: '好奇心', zh: '好奇心', fr: 'Curiosité', es: 'Curiosidad' }), href: localePath(locale, '/curiosity-test') },
-  { icon: '🎈', title: txt({ ko: '놀이성', en: 'Playfulness', ja: '遊び心', zh: '玩心', fr: 'Esprit Ludique', es: 'Jovialidad' }), href: localePath(locale, '/playfulness-test') },
-  { icon: '🌈', title: txt({ ko: '나의 보완 기운', en: 'Complementary Energy', ja: '私の補完する気', zh: '我的补充气场', fr: 'Énergie Complémentaire', es: 'Energía Complementaria' }), href: localePath(locale, '/elemental-remedy') },
+type PsychTest = { icon: string; title: string; questions: number; minutes: number; href: string }
+
+const questionsMinutesLabel = (n: number, m: number) => txt({
+  ko: `${n}문항 · ${m}분`,
+  en: `${n} questions · ${m} min`,
+  ja: `${n}問 · ${m}分`,
+  zh: `${n}题 · ${m}分钟`,
+  fr: `${n} questions · ${m} min`,
+  es: `${n} preguntas · ${m} min`,
+})
+
+const psychTests: PsychTest[] = [
+  {
+    icon: '🧠',
+    title: txt({ ko: 'MBTI', en: 'MBTI', ja: 'MBTI', zh: 'MBTI', fr: 'MBTI', es: 'MBTI' }),
+    questions: 16, minutes: 3,
+    href: localePath(locale, '/mbti/test'),
+  },
+  {
+    icon: '🌊',
+    title: txt({ ko: '빅파이브', en: 'Big Five', ja: 'ビッグファイブ', zh: '大五人格', fr: 'Big Five', es: 'Cinco Grandes' }),
+    questions: 20, minutes: 4,
+    href: localePath(locale, '/big5/test'),
+  },
+  {
+    icon: '🔮',
+    title: txt({ ko: '에니어그램', en: 'Enneagram', ja: 'エニアグラム', zh: '九型人格', fr: 'Ennéagramme', es: 'Eneagrama' }),
+    questions: 27, minutes: 5,
+    href: localePath(locale, '/enneagram/test'),
+  },
+  {
+    icon: '💚',
+    title: txt({ ko: '애착유형', en: 'Attachment', ja: '愛着タイプ', zh: '依恋类型', fr: 'Attachement', es: 'Apego' }),
+    questions: 12, minutes: 2,
+    href: localePath(locale, '/attachment-style/test'),
+  },
 ]
 
-const fortuneSectionTitle = txt({
-  ko: '오늘의 운세, 바로 확인',
-  en: "Check Today's Fortune",
-  ja: '今日の運勢をすぐ確認',
-  zh: '立即查看今日运势',
-  fr: 'Consultez la fortune du jour',
-  es: 'Consulta la fortuna de hoy',
-})
-const fortuneSectionSub = txt({
-  ko: '생년월일만 입력하면 사주 오행·12지신·별자리를 한 번에 비교합니다.',
-  en: 'Enter your birth date to compare Saju five elements, Chinese zodiac, and star sign at a glance.',
-  ja: '生年月日を入力するだけで四柱五行・十二支・星座を一度に比較できます。',
-  zh: '只需输入出生日期，即可一次比较四柱五行、生肖与星座。',
-  fr: 'Entrez votre date de naissance pour comparer cinq éléments Saju, zodiaque chinois et signe en un coup d\'œil.',
-  es: 'Introduce tu fecha de nacimiento para comparar cinco elementos Saju, zodiaco chino y signo de un vistazo.',
-})
-const fortuneSeeAll = txt({ ko: '다른 주기 보기 →', en: 'See other cycles →', ja: '他の周期を見る →', zh: '查看其他周期 →', fr: 'Voir les autres cycles →', es: 'Ver otros ciclos →' })
-
+const sectionPsychTitle = txt({ ko: '심리검사', en: 'Psychology Tests', ja: '心理テスト', zh: '心理测试', fr: 'Tests de psychologie', es: 'Tests de psicología' })
 const ctaStart = txt({ ko: '시작하기', en: 'Start', ja: '始める', zh: '开始', fr: 'Commencer', es: 'Comenzar' })
-const ctaAllTests = txt({ ko: '전체 테스트 보기', en: 'All Tests', ja: '全テスト', zh: '所有测试', fr: 'Tous les Tests', es: 'Todos los Tests' })
-const sectionPopular = txt({ ko: '인기 테스트', en: 'Popular Tests', ja: '人気テスト', zh: '热门测试', fr: 'Tests Populaires', es: 'Tests Populares' })
-const sectionMore = txt({ ko: '더 많은 도구', en: 'More Tools', ja: 'その他のツール', zh: '更多工具', fr: 'Plus d\'Outils', es: 'Más Herramientas' })
+
+const fortuneSectionTitle = txt({
+  ko: '오늘',
+  en: 'Today',
+  ja: '今日',
+  zh: '今日',
+  fr: "Aujourd'hui",
+  es: 'Hoy',
+})
+const tarotCard = {
+  title: txt({ ko: '타로 리딩', en: 'Tarot Reading', ja: 'タロットリーディング', zh: '塔罗牌解读', fr: 'Tirage de Tarot', es: 'Lectura de Tarot' }),
+  desc: txt({ ko: '카드 한 장으로 지금을 봅니다.', en: 'One card, a read on right now.', ja: 'カード一枚で、今を見る。', zh: '一张牌，看清当下。', fr: 'Une carte pour lire le moment présent.', es: 'Una carta para leer el ahora.' }),
+  href: localePath(locale, '/tarot/reading'),
+}
+const fortuneWidgetTitle = txt({
+  ko: '오늘의 운세',
+  en: "Today's Fortune",
+  ja: '今日の運勢',
+  zh: '今日运势',
+  fr: 'La fortune du jour',
+  es: 'La fortuna de hoy',
+})
+
+const moreSectionTitle = txt({ ko: '더 보기', en: 'More', ja: 'もっと見る', zh: '更多', fr: 'Voir plus', es: 'Ver más' })
+const ctaAllTests = txt({ ko: '전체 검사', en: 'All Tests', ja: '全テスト', zh: '所有测试', fr: 'Tous les Tests', es: 'Todos los Tests' })
 
 const personalMap = {
   eyebrow: txt({ ko: '나를 위한 두 번째 뇌', en: 'A second brain for yourself', ja: '自分のための第二の脳', zh: '属于你的第二大脑', fr: 'Un second cerveau pour vous', es: 'Un segundo cerebro para ti' }),
@@ -163,69 +197,80 @@ const personalMap = {
   description={metaDescription}
   locale={locale}
 >
-  <!-- Hero -->
-  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/80 via-teal-50/30 to-white pt-20 pb-14 px-4">
+  <!-- 1. 한 문장 역할 -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-green-50/80 to-white pt-16 pb-10 px-4">
     <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
       <div class="absolute -top-40 -left-40 w-[500px] h-[500px] bg-green-200 rounded-full blur-3xl opacity-20" />
-      <div class="absolute top-10 right-0 w-[600px] h-[500px] bg-teal-200 rounded-full blur-3xl opacity-15" />
-      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-32 bg-white/80 blur-2xl" />
     </div>
 
-    <div class="relative z-10 max-w-3xl mx-auto text-center animate-fadeInUp">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-green-100 text-green-700 text-xs font-bold mb-6 shadow-sm">
+    <div class="relative z-10 max-w-2xl mx-auto text-center animate-fadeInUp">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/70 backdrop-blur-sm border border-green-100 text-green-700 text-xs font-bold mb-5 shadow-sm">
         <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-        OIYO — {txt({ ko: '무료 자기 탐색', en: 'Free Self-Discovery', ja: '無料自己探索', zh: '免费自我探索', fr: 'Autodécouverte Gratuite', es: 'Autodescubrimiento Gratuito' })}
+        OIYO
       </div>
-      <h1 class="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-green-950 mb-5 tracking-tight leading-tight">
-        {heroTitle}
+      <h1 class="text-3xl md:text-4xl font-serif font-black text-green-950 mb-3 tracking-tight leading-tight">
+        {pageRole}
       </h1>
-      <p class="text-green-700/90 font-medium text-base md:text-lg max-w-xl mx-auto leading-relaxed">
+      <p class="text-green-700/80 font-medium text-sm md:text-base max-w-lg mx-auto leading-relaxed">
         {heroSub}
       </p>
-      <div class="mt-8 flex flex-wrap justify-center gap-3">
-        <a
-          href={localePath(locale, '/tests')}
-          class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-green-700 text-white font-semibold text-sm shadow-lg shadow-green-200 hover:bg-green-800 transition-all hover:-translate-y-0.5"
-        >
-          {ctaAllTests} →
-        </a>
-      </div>
-
-      <!-- 대표 자산 빠른 진입 (오라클·존재론·타로·주기형 운세) -->
-      <div class="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3 max-w-2xl mx-auto">
-        {[
-          
-          { href: '/tarot/reading', icon: '🃏', label: txt({ ko: '타로 리딩', en: 'Tarot Reading', ja: 'タロット', zh: '塔罗牌', fr: 'Tarot', es: 'Tarot' }) },
-          { href: '/ontology', icon: '🧭', label: txt({ ko: '존재론', en: 'Ontology', ja: '存在論', zh: '存在论', fr: 'Ontologie', es: 'Ontología' }) },
-          { href: '/fortune/today', icon: '☀️', label: txt({ ko: '오늘의 운세', en: "Today's Fortune", ja: '今日の運勢', zh: '今日运势', fr: 'Aujourd’hui', es: 'Hoy' }) },
-          { href: '/fortune/weekly', icon: '📅', label: txt({ ko: '이번주 운세', en: 'This Week', ja: '今週の運勢', zh: '本周运势', fr: 'Cette semaine', es: 'Esta semana' }) },
-          { href: '/fortune/monthly', icon: '🌙', label: txt({ ko: '이번달 운세', en: 'This Month', ja: '今月の運勢', zh: '本月运势', fr: 'Ce mois', es: 'Este mes' }) },
-          { href: '/fortune/yearly', icon: '🌿', label: txt({ ko: '올해의 운세', en: 'This Year', ja: '今年の運勢', zh: '今年运势', fr: 'Cette année', es: 'Este año' }) },
-          { href: '/profile/symbolic-compatibility', icon: '🤝', label: txt({ ko: '친구 궁합', en: 'Friend match', ja: '友だち相性', zh: '朋友合拍', fr: 'Compatibilité', es: 'Compatibilidad' }) },
-          { href: '/profile/circle', icon: '⭕', label: txt({ ko: '우리 원', en: 'Our circle', ja: 'みんなの円', zh: '我们的圆', fr: 'Notre cercle', es: 'Nuestro círculo' }) },
-        ].map((b) => (
-          <a href={localePath(locale, b.href)}
-             class="inline-flex items-center justify-center gap-1.5 px-4 py-3 rounded-2xl bg-white text-green-800 font-semibold text-sm border border-green-200 hover:border-green-400 hover:bg-green-50 transition-all shadow-sm">
-            <span>{b.icon}</span>{b.label}
-          </a>
-        ))}
-      </div>
     </div>
   </section>
 
-  <!-- Stats strip -->
-  <div class="bg-green-700 py-4 px-4">
-    <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-      {statsData.map(s => (
-        <div>
-          <div class="text-2xl font-black text-white">{s.value}</div>
-          <div class="text-green-200 text-xs font-medium mt-0.5">{s.label}</div>
-        </div>
+  <!-- 2. 세 문 — 성격이 기본 -->
+  <section class="max-w-3xl mx-auto px-4 pb-2" aria-label={txt({ ko: '지금 뭐가 궁금해요?', en: "What are you curious about right now?", ja: '今、何が気になりますか？', zh: '你现在想了解什么？', fr: "Qu'est-ce qui vous intrigue en ce moment ?", es: '¿Qué te da curiosidad ahora?' })}>
+    <h2 class="sr-only">
+      {txt({ ko: '지금 뭐가 궁금해요?', en: "What are you curious about right now?", ja: '今、何が気になりますか？', zh: '你现在想了解什么？', fr: "Qu'est-ce qui vous intrigue en ce moment ?", es: '¿Qué te da curiosidad ahora?' })}
+    </h2>
+    <div class="grid grid-cols-1 gap-3">
+      {doors.map((d) => (
+        <a
+          href={d.href}
+          class:list={[
+            'group flex items-center gap-4 rounded-2xl border p-5 transition-all',
+            d.primary
+              ? 'border-green-700 bg-green-700 text-white shadow-lg shadow-green-200 hover:bg-green-800'
+              : 'border-green-100 bg-white text-green-950 hover:border-green-300 hover:-translate-y-0.5 shadow-sm hover:shadow-md',
+          ]}
+        >
+          <span class:list={['flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-xl', d.primary ? 'bg-white/15' : 'bg-green-50']}>
+            {d.icon}
+          </span>
+          <span class="min-w-0 flex-1">
+            <span class:list={['block font-bold text-base', d.primary ? 'text-white' : 'text-green-950']}>{d.label}</span>
+            <span class:list={['block text-xs mt-0.5 leading-relaxed', d.primary ? 'text-green-50/85' : 'text-green-700/70']}>{d.sub}</span>
+          </span>
+          <span class:list={['shrink-0', d.primary ? 'text-white' : 'text-green-400 group-hover:text-green-700']} aria-hidden="true">→</span>
+        </a>
       ))}
     </div>
-  </div>
+  </section>
 
-  <!-- Flagship personal ontology entry -->
+  <!-- 3. 심리 네 개 -->
+  <section class="max-w-3xl mx-auto px-4 pt-10">
+    <h2 class="text-lg font-bold text-green-950 mb-4">{sectionPsychTitle}</h2>
+    <div class="grid grid-cols-2 gap-3">
+      {psychTests.map((test) => (
+        <a
+          href={test.href}
+          class="group block bg-white rounded-2xl border border-green-100 p-4 hover:border-green-300 hover:-translate-y-0.5 transition-all duration-200 shadow-sm hover:shadow-md"
+        >
+          <div class="w-9 h-9 rounded-lg bg-green-50 flex items-center justify-center text-lg mb-2.5">
+            {test.icon}
+          </div>
+          <h3 class="font-bold text-green-950 text-sm group-hover:text-green-700 transition-colors">
+            {test.title}
+          </h3>
+          <p class="text-xs text-green-600 mt-0.5">{questionsMinutesLabel(test.questions, test.minutes)}</p>
+          <div class="mt-2.5 text-xs font-semibold text-green-500 group-hover:text-green-700 transition-colors">
+            {ctaStart} →
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- 4. 지도 한 줄 -->
   <section class="mx-auto max-w-6xl px-4 pt-10" aria-labelledby="personal-map-title">
     <div class="relative overflow-hidden rounded-[2rem] border border-lime-200 bg-[#f7f8ed] px-5 py-7 shadow-[0_18px_50px_-32px_rgba(54,83,20,0.5)] sm:px-8 sm:py-9 lg:px-10">
       <div class="pointer-events-none absolute -right-20 -top-24 h-64 w-64 rounded-full bg-lime-200/50 blur-3xl" aria-hidden="true"></div>
@@ -276,69 +321,43 @@ const personalMap = {
     </div>
   </section>
 
-  <!-- Today's Fortune widget -->
+  <!-- 5. 오늘 둘 (타로, 오늘의 운세) -->
   <section class="max-w-3xl mx-auto px-4 pt-14">
-    <div class="flex items-center justify-between mb-5">
-      <div>
-        <h2 class="text-xl font-bold text-green-950">{fortuneSectionTitle}</h2>
-        <p class="mt-1 text-sm text-green-700/80">{fortuneSectionSub}</p>
-      </div>
-      <a href={localePath(locale, '/fortune/today')} class="hidden sm:inline text-sm font-semibold text-green-600 hover:text-green-800 transition-colors whitespace-nowrap">
-        {fortuneSeeAll}
+    <h2 class="text-lg font-bold text-green-950 mb-4">{fortuneSectionTitle}</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-[0.8fr_1.2fr] gap-4 items-start">
+      <a
+        href={tarotCard.href}
+        class="group flex sm:flex-col items-center sm:items-start gap-3 sm:gap-2 rounded-3xl border border-green-100 bg-white p-5 shadow-sm hover:border-green-300 hover:-translate-y-0.5 hover:shadow-md transition-all"
+      >
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-green-50 text-xl">🃏</span>
+        <span>
+          <span class="block font-bold text-green-950 text-sm group-hover:text-green-700 transition-colors">{tarotCard.title}</span>
+          <span class="block text-xs text-green-600 mt-0.5">{tarotCard.desc}</span>
+        </span>
       </a>
-    </div>
-    <div class="rounded-3xl border border-green-100 bg-white p-5 shadow-sm">
-      <PeriodicFortune client:visible locale={locale} period="today" />
+      <div class="rounded-3xl border border-green-100 bg-white p-5 shadow-sm">
+        <p class="text-xs font-bold text-green-700/70 uppercase tracking-wide mb-2">{fortuneWidgetTitle}</p>
+        <PeriodicFortune client:visible locale={locale} period="today" />
+      </div>
     </div>
   </section>
 
-  <!-- Popular Tests -->
-  <section class="max-w-6xl mx-auto px-4 pt-14 pb-10">
-    <div class="flex items-center justify-between mb-7">
-      <h2 class="text-xl font-bold text-green-950">{sectionPopular}</h2>
-      <a href={localePath(locale, '/tests')} class="text-sm font-semibold text-green-600 hover:text-green-800 transition-colors">
+  <!-- 6. 더 보기 -->
+  <section class="max-w-3xl mx-auto px-4 pt-10 pb-14">
+    <h2 class="sr-only">{moreSectionTitle}</h2>
+    <div class="flex flex-wrap justify-center gap-3">
+      <a
+        href={localePath(locale, '/tests')}
+        class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white border border-green-200 text-green-800 text-sm font-semibold hover:bg-green-50 hover:border-green-300 transition-all shadow-sm"
+      >
         {ctaAllTests} →
       </a>
-    </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-      {popularTests.map(test => (
-        <a
-          href={test.href}
-          class={`group block bg-white rounded-2xl border ${test.border} p-5 hover:border-green-300 hover:-translate-y-0.5 transition-all duration-200 shadow-sm hover:shadow-md`}
-        >
-          <div class="flex items-start justify-between mb-3">
-            <div class={`w-10 h-10 rounded-xl ${test.bg} flex items-center justify-center text-xl`}>
-              {test.icon}
-            </div>
-            <span class="text-xs font-semibold bg-green-50 text-green-600 px-2 py-0.5 rounded-full border border-green-100">
-              {test.badge}
-            </span>
-          </div>
-          <h3 class="font-bold text-green-950 mb-1 text-sm group-hover:text-green-700 transition-colors">
-            {test.title}
-          </h3>
-          <p class="text-xs text-green-600 leading-relaxed">{test.desc}</p>
-          <div class="mt-3 text-xs font-semibold text-green-500 group-hover:text-green-700 transition-colors">
-            {ctaStart} →
-          </div>
-        </a>
-      ))}
-    </div>
-  </section>
-
-  <!-- Quick test pills -->
-  <section class="max-w-6xl mx-auto px-4 pb-14">
-    <h2 class="text-xl font-bold text-green-950 mb-5">{sectionMore}</h2>
-    <div class="flex flex-wrap gap-2.5">
-      {quickTests.map(q => (
-        <a
-          href={q.href}
-          class="inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white border border-green-100 text-green-800 text-sm font-medium hover:bg-green-50 hover:border-green-300 transition-all shadow-sm"
-        >
-          <span>{q.icon}</span>
-          {q.title}
-        </a>
-      ))}
+      <a
+        href={localePath(locale, '/ontology')}
+        class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full bg-white border border-green-200 text-green-800 text-sm font-semibold hover:bg-green-50 hover:border-green-300 transition-all shadow-sm"
+      >
+        {personalMap.cta} →
+      </a>
     </div>
   </section>
 
