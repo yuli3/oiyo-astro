@@ -2,18 +2,25 @@ import { useEffect, useMemo, useState } from "react";
 import type { Locale } from "../../i18n";
 import {
   REINCARNATION_COUNTRIES,
+  REINCARNATION_HISTORY_KEY,
   REINCARNATION_META,
+  appendHistory,
   byIso2,
+  countriesFromIso2,
   countryRank,
   countryShare,
   defaultHomeIso2,
   displayCountryName,
+  formatShareIso2,
   oneIn,
+  parseHistory,
+  parseShareIso2,
   pickMany,
   ranked,
   tallyIso3,
   vsHome,
   type ReincarnationCountry as Country,
+  type ReincarnationHistoryEntry,
   type WeightMode,
 } from "../../lib/reincarnation";
 import ReincarnationGlobe from "./ReincarnationGlobe";
@@ -42,6 +49,14 @@ const COPY = {
   top: { ko: "상위 10", en: "Top 10", ja: "上位10", zh: "前10", fr: "Top 10", es: "Top 10" },
   share: { ko: "공유", en: "Share", ja: "共有", zh: "分享", fr: "Partager", es: "Compartir" },
   copied: { ko: "복사됨", en: "Copied", ja: "コピーしました", zh: "已复制", fr: "Copié", es: "Copiado" },
+  copyLink: { ko: "링크 복사", en: "Copy link", ja: "リンクをコピー", zh: "复制链接", fr: "Copier le lien", es: "Copiar enlace" },
+  copyText: { ko: "결과 복사", en: "Copy result", ja: "結果をコピー", zh: "复制结果", fr: "Copier le résultat", es: "Copiar resultado" },
+  history: { ko: "환생 기록", en: "Reincarnation history", ja: "転生の記録", zh: "投胎记录", fr: "Historique", es: "Historial" },
+  historyEmpty: { ko: "아직 기록이 없습니다. 환생하면 여기에 남습니다.", en: "No history yet. Draws are saved here.", ja: "まだ記録がありません。転生するとここに残ります。", zh: "还没有记录。抽取后会留在这里。", fr: "Pas encore d’historique. Les tirages s’y enregistrent.", es: "Aún no hay historial. Los sorteos se guardan aquí." },
+  clearHistory: { ko: "기록 지우기", en: "Clear history", ja: "記録を消す", zh: "清除记录", fr: "Effacer l’historique", es: "Borrar historial" },
+  restore: { ko: "이 기록 보기", en: "Show this draw", ja: "この記録を見る", zh: "查看这次抽取", fr: "Voir ce tirage", es: "Ver este sorteo" },
+  lives: { ko: "이번 환생", en: "This draw", ja: "今回の転生", zh: "这次投胎", fr: "Ce tirage", es: "Este sorteo" },
+  pinNote: { ko: "지구본 핀은 수도가 아니라 나라의 지리 중심입니다.", en: "Globe pins sit on the country’s geographic center, not the capital.", ja: "地球儀のピンは首都ではなく、国の地理的中心です。", zh: "地球仪图钉在国家地理中心，不是首都。", fr: "L’épingle est au centre géographique du pays, pas à la capitale.", es: "El pin está en el centro geográfico del país, no en la capital." },
 };
 
 function formatInt(n: number, locale: Locale): string {
@@ -68,12 +83,21 @@ function nameOf(row: Country, locale: Locale): string {
   return displayCountryName(row.iso2, locale, row.name);
 }
 
-function readQuery(): { mode: WeightMode; iso2?: string } {
-  if (typeof window === "undefined") return { mode: "births" };
+function readQuery(): { mode: WeightMode; iso2: string[] } {
+  if (typeof window === "undefined") return { mode: "births", iso2: [] };
   const params = new URLSearchParams(window.location.search);
   const mode = params.get("mode") === "population" ? "population" : "births";
-  const iso2 = params.get("c") ?? undefined;
-  return { mode, iso2 };
+  return { mode, iso2: parseShareIso2(params.get("c")) };
+}
+
+function shareMessage(locale: Locale, mode: WeightMode, rows: Country[]): string {
+  const names = rows.map((row) => displayCountryName(row.iso2, locale, row.name)).join(", ");
+  const weight = mode === "population" ? COPY.population[locale] : COPY.births[locale];
+  return `${weight} · ${names}`;
+}
+
+function newHistoryId() {
+  return `h-${Math.random().toString(36).slice(2, 10)}`;
 }
 
 export default function ReincarnationCountry({ locale }: Props) {
@@ -84,8 +108,9 @@ export default function ReincarnationCountry({ locale }: Props) {
   const [focus, setFocus] = useState<Country | null>(null);
   const [homeIso2, setHomeIso2] = useState(defaultHomeIso2(locale));
   const [query, setQuery] = useState("");
-  const [shared, setShared] = useState(false);
+  const [shared, setShared] = useState<"link" | "text" | "share" | null>(null);
   const [ready, setReady] = useState(false);
+  const [history, setHistory] = useState<ReincarnationHistoryEntry[]>([]);
 
   const home = byIso2(homeIso2) ?? byIso2("KR")!;
   const latest = results[results.length - 1] ?? focus;
@@ -104,7 +129,17 @@ export default function ReincarnationCountry({ locale }: Props) {
   useEffect(() => {
     const incoming = readQuery();
     setMode(incoming.mode);
-    if (incoming.iso2) setFocus(byIso2(incoming.iso2) ?? null);
+    const sharedRows = countriesFromIso2(incoming.iso2);
+    if (sharedRows.length) {
+      setResults(sharedRows);
+      setFocus(sharedRows[sharedRows.length - 1] ?? null);
+      setDraws(sharedRows.length);
+    }
+    try {
+      setHistory(parseHistory(window.localStorage.getItem(REINCARNATION_HISTORY_KEY)));
+    } catch {
+      setHistory([]);
+    }
     setReady(true);
   }, []);
 
@@ -112,37 +147,90 @@ export default function ReincarnationCountry({ locale }: Props) {
     if (!ready || typeof window === "undefined") return;
     const params = new URLSearchParams();
     if (mode !== "births") params.set("mode", mode);
-    if (latest) params.set("c", latest.iso2);
+    const codes = formatShareIso2((results.length ? results : latest ? [latest] : []).map((row) => row.iso2));
+    if (codes) params.set("c", codes);
     const next = `${window.location.pathname}${params.toString() ? `?${params}` : ""}`;
     window.history.replaceState(null, "", next);
-  }, [ready, mode, latest?.iso2]);
+  }, [ready, mode, results, latest?.iso2]);
 
   function lookUp(value: string) {
     setQuery(value);
     const match = options.find((item) => item.label === value || item.iso2 === value.toUpperCase());
     const row = match ? byIso2(match.iso2) : undefined;
-    if (row) {
-      setFocus(row);
-      setResults([]);
+    if (row) setFocus(row);
+  }
+
+  function persistHistory(next: Country[], nextMode: WeightMode) {
+    const entry: ReincarnationHistoryEntry = {
+      id: newHistoryId(),
+      at: new Date().toISOString(),
+      mode: nextMode,
+      iso2: next.map((row) => row.iso2),
+    };
+    setHistory((prev) => {
+      const merged = appendHistory(prev, entry);
+      try {
+        window.localStorage.setItem(REINCARNATION_HISTORY_KEY, JSON.stringify(merged));
+      } catch {
+        /* private mode */
+      }
+      return merged;
+    });
+  }
+
+  function restoreHistory(entry: ReincarnationHistoryEntry) {
+    const rows = countriesFromIso2(entry.iso2);
+    if (!rows.length) return;
+    setMode(entry.mode);
+    setDraws(rows.length);
+    setResults(rows);
+    setFocus(rows[rows.length - 1] ?? null);
+  }
+
+  function clearHistory() {
+    setHistory([]);
+    try {
+      window.localStorage.removeItem(REINCARNATION_HISTORY_KEY);
+    } catch {
+      /* private mode */
     }
   }
 
-  async function share() {
+  function flashShared(kind: "link" | "text" | "share") {
+    setShared(kind);
+    window.setTimeout(() => setShared(null), 1600);
+  }
+
+  async function shareNative() {
     if (!latest || typeof window === "undefined") return;
+    const rows = results.length ? results : [latest];
     const url = window.location.href;
     const title = nameOf(latest, locale);
+    const text = shareMessage(locale, mode, rows);
     try {
       if (navigator.share) {
-        await navigator.share({ title, url });
-      } else {
-        await navigator.clipboard.writeText(url);
-        setShared(true);
-        window.setTimeout(() => setShared(false), 1500);
+        await navigator.share({ title, text, url });
+        flashShared("share");
+        return;
       }
     } catch {
-      await navigator.clipboard.writeText(url);
-      setShared(true);
+      /* fall through to copy */
     }
+    await navigator.clipboard.writeText(`${text}\n${url}`);
+    flashShared("link");
+  }
+
+  async function copyLink() {
+    if (typeof window === "undefined") return;
+    await navigator.clipboard.writeText(window.location.href);
+    flashShared("link");
+  }
+
+  async function copyText() {
+    if (!latest) return;
+    const rows = results.length ? results : [latest];
+    await navigator.clipboard.writeText(`${shareMessage(locale, mode, rows)}\n${window.location.href}`);
+    flashShared("text");
   }
 
   return (
@@ -199,6 +287,7 @@ export default function ReincarnationCountry({ locale }: Props) {
             const next = pickMany(mode, draws);
             setResults(next);
             setFocus(next[next.length - 1] ?? null);
+            persistHistory(next, mode);
           }}
           className="rounded-full bg-emerald-600 px-4 py-2 text-sm font-bold text-white hover:bg-emerald-700"
         >
@@ -230,6 +319,7 @@ export default function ReincarnationCountry({ locale }: Props) {
 
       <ReincarnationGlobe
         focusIso3={latest?.iso3}
+        focusLabel={latest ? nameOf(latest, locale) : undefined}
         homeIso3={home.iso3}
         hitIso3={hitIso3}
         yaw={yaw}
@@ -237,9 +327,9 @@ export default function ReincarnationCountry({ locale }: Props) {
           const row = byIso2(iso2);
           if (!row) return;
           setFocus(row);
-          setResults([]);
         }}
       />
+      <p className="text-xs text-slate-500">{COPY.pinNote[locale]}</p>
 
       {latest ? (
         <div className="rounded-2xl border border-slate-200 bg-white p-5">
@@ -277,28 +367,50 @@ export default function ReincarnationCountry({ locale }: Props) {
               {formatX(vsHome(latest, home, "population"), locale)}
             </p>
           )}
-          <button
-            type="button"
-            onClick={share}
-            className="mt-4 rounded-full border border-slate-200 px-3 py-1.5 text-sm font-semibold text-slate-700"
-          >
-            {shared ? COPY.copied[locale] : COPY.share[locale]}
-          </button>
-          {results.length > 1 && (
-            <ol className="mt-4 grid gap-1 text-sm text-slate-700 sm:grid-cols-2">
-              {counts.map((row) => {
-                const country = REINCARNATION_COUNTRIES.find((item) => item.iso3 === row.iso3);
-                if (!country) return null;
-                return (
-                  <li key={row.iso3}>
-                    <button type="button" className="underline-offset-2 hover:underline" onClick={() => setFocus(country)}>
-                      {nameOf(country, locale)}
-                      {row.count > 1 ? ` ×${row.count}` : ""}
-                    </button>
-                  </li>
-                );
-              })}
+          <div className="mt-4 flex flex-wrap gap-2">
+            <button
+              type="button"
+              onClick={() => void shareNative()}
+              className="rounded-full border border-slate-200 px-3 py-1.5 text-sm font-semibold text-slate-700"
+            >
+              {shared === "share" ? COPY.copied[locale] : COPY.share[locale]}
+            </button>
+            <button
+              type="button"
+              onClick={() => void copyLink()}
+              className="rounded-full border border-slate-200 px-3 py-1.5 text-sm font-semibold text-slate-700"
+            >
+              {shared === "link" ? COPY.copied[locale] : COPY.copyLink[locale]}
+            </button>
+            <button
+              type="button"
+              onClick={() => void copyText()}
+              className="rounded-full border border-slate-200 px-3 py-1.5 text-sm font-semibold text-slate-700"
+            >
+              {shared === "text" ? COPY.copied[locale] : COPY.copyText[locale]}
+            </button>
+          </div>
+          {results.length > 0 && (
+            <ol className="mt-4 grid gap-1 text-sm text-slate-700 sm:grid-cols-2" aria-label={COPY.lives[locale]}>
+              {results.map((country, index) => (
+                <li key={`${country.iso3}-${index}`}>
+                  <button type="button" className="underline-offset-2 hover:underline" onClick={() => setFocus(country)}>
+                    {index + 1}. {nameOf(country, locale)}
+                  </button>
+                </li>
+              ))}
             </ol>
+          )}
+          {results.length > 1 && (
+            <p className="mt-2 text-xs text-slate-500">
+              {counts
+                .map((row) => {
+                  const country = REINCARNATION_COUNTRIES.find((item) => item.iso3 === row.iso3);
+                  return country ? `${nameOf(country, locale)}${row.count > 1 ? ` ×${row.count}` : ""}` : null;
+                })
+                .filter(Boolean)
+                .join(" · ")}
+            </p>
           )}
         </div>
       ) : (
@@ -314,7 +426,6 @@ export default function ReincarnationCountry({ locale }: Props) {
                 type="button"
                 onClick={() => {
                   setFocus(row);
-                  setResults([]);
                 }}
                 className="flex w-full items-center justify-between px-4 py-2 text-left text-sm hover:bg-slate-50"
               >
@@ -326,6 +437,43 @@ export default function ReincarnationCountry({ locale }: Props) {
             </li>
           ))}
         </ol>
+      </section>
+
+      <section className="rounded-2xl border border-slate-200 bg-white p-4">
+        <div className="flex items-center justify-between gap-2">
+          <h2 className="text-sm font-bold uppercase tracking-wide text-slate-400">{COPY.history[locale]}</h2>
+          {history.length > 0 && (
+            <button type="button" onClick={clearHistory} className="text-xs font-semibold text-slate-500 hover:underline">
+              {COPY.clearHistory[locale]}
+            </button>
+          )}
+        </div>
+        {history.length === 0 ? (
+          <p className="mt-2 text-sm text-slate-500">{COPY.historyEmpty[locale]}</p>
+        ) : (
+          <ol className="mt-2 divide-y divide-slate-100">
+            {history.map((entry) => {
+              const rows = countriesFromIso2(entry.iso2);
+              const stamp = new Date(entry.at);
+              const when = Number.isNaN(stamp.getTime())
+                ? entry.at
+                : stamp.toLocaleString(locale === "zh" ? "zh-CN" : locale, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+              return (
+                <li key={entry.id} className="flex items-center justify-between gap-2 py-2 text-sm">
+                  <button type="button" className="min-w-0 flex-1 text-left hover:underline" onClick={() => restoreHistory(entry)}>
+                    <span className="block truncate font-semibold text-slate-800">
+                      {rows.map((row) => nameOf(row, locale)).join(", ")}
+                    </span>
+                    <span className="text-xs text-slate-400">
+                      {when} · {COPY[entry.mode][locale]} · {rows.length}
+                    </span>
+                  </button>
+                  <span className="shrink-0 text-[11px] font-bold uppercase tracking-wide text-slate-400">{COPY.restore[locale]}</span>
+                </li>
+              );
+            })}
+          </ol>
+        )}
       </section>
 
       <p className="text-sm">

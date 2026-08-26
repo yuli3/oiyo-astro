@@ -16,37 +16,37 @@ const meta: Record<Locale, { title: string; description: string; heading: string
     title: "다시 태어난다면 어느 나라? — 신생아·인구 가중 추첨",
     description: "지금 태어나는 아이 기준 또는 현재 인구 기준으로, 환생 국가를 가중 추첨합니다. 여러 번도 가능합니다.",
     heading: "다시 태어난다면 어느 나라?",
-    intro: "점이 아닙니다. 세계은행 인구와 조출생률로 연간 출생 수를 추정한 뒤, 신생아 비중 또는 인구 비중으로 나라를 뽑습니다. 여러 번은 서로 독립입니다.",
+    intro: "점이 아닙니다. 인구는 세계은행, 출생은 유엔 WPP 2024 중위 시나리오입니다. 신생아 비중 또는 인구 비중으로 나라를 뽑습니다. 여러 번은 서로 독립입니다.",
   },
   en: {
     title: "If you were born again, which country? — Birth or population weights",
     description: "A weighted draw of your next country using current births or current population. Multiple independent lives are allowed.",
     heading: "If you were born again, which country?",
-    intro: "This is not a fortune. It draws a country with World Bank population and crude birth rates, using either today's births or today's population as the weight.",
+    intro: "This is not a fortune. Population is World Bank; births are UN WPP 2024 medium-variant counts. The draw uses either today's births or today's population as the weight.",
   },
   ja: {
     title: "生まれ変わるとしたらどの国？ — 出生または人口の重み",
     description: "いま生まれている子ども、またはいま生きている人の重みで次の国を抽選します。複数回も独立です。",
     heading: "生まれ変わるとしたらどの国？",
-    intro: "占いではありません。世界銀行の人口と粗出生率から出生数を推定し、出生または人口の比率で国を引きます。",
+    intro: "占いではありません。人口は世界銀行、出生は国連WPP 2024中位推計です。出生または人口の比率で国を引きます。",
   },
   zh: {
     title: "如果再出生会在哪个国家？ — 按新生儿或人口加权",
     description: "用当前出生数或当前人口做加权抽取。可以独立抽取多次。",
     heading: "如果再出生会在哪个国家？",
-    intro: "这不是占卜。用世界银行人口与粗出生率估算出生数，再按新生儿或人口比重抽国家。",
+    intro: "这不是占卜。人口用世界银行，出生用联合国 WPP 2024 中位方案。再按新生儿或人口比重抽国家。",
   },
   fr: {
     title: "Si vous renaissiez, dans quel pays ? — Naissances ou population",
     description: "Tirage pondéré du prochain pays selon les naissances actuelles ou la population actuelle. Plusieurs vies indépendantes sont possibles.",
     heading: "Si vous renaissiez, dans quel pays ?",
-    intro: "Ce n'est pas une voyance. Les poids viennent des indicateurs Banque mondiale : naissances estimées ou population.",
+    intro: "Ce n'est pas une voyance. La population vient de la Banque mondiale, les naissances du WPP 2024 (scénario moyen).",
   },
   es: {
     title: "Si nacieras de nuevo, ¿en qué país? — Nacimientos o población",
     description: "Sorteo ponderado del siguiente país según nacimientos actuales o población actual. Puedes repetir vidas independientes.",
     heading: "Si nacieras de nuevo, ¿en qué país?",
-    intro: "No es un horóscopo. Usa población y tasa bruta de natalidad del Banco Mundial, con peso de nacimientos o de población.",
+    intro: "No es un horóscopo. La población es del Banco Mundial; los nacimientos, del WPP 2024 (variante media).",
   },
 };
 
@@ -55,7 +55,7 @@ const m = meta[locale] ?? meta.en;
 const notes: Record<Locale, { title: string; p1: string; p2: string }> = {
   ko: {
     title: "이 숫자는 무엇인가",
-    p1: "신생아 모드는 지금 태어나는 아이 기준입니다. 인구 모드는 지금 살아 있는 사람 기준입니다. 행복도나 GDP로 확률을 바꾸지 않습니다.",
+    p1: "신생아 모드는 유엔 WPP 2024 출생 수 기준입니다. 인구 모드는 세계은행 인구 기준입니다. 행복도나 GDP로 확률을 바꾸지 않습니다.",
     p2: "여러 번은 서로 독립입니다. 같은 나라가 또 나와도 오류가 아닙니다.",
   },
   en: {
@@ -85,20 +85,97 @@ const notes: Record<Locale, { title: string; p1: string; p2: string }> = {
   },
 };
 const note = notes[locale] ?? notes.en;
+
+const faqs: Record<Locale, { title: string; items: { q: string; a: string }[] }> = {
+  ko: {
+    title: "자주 묻는 질문",
+    items: [
+      { q: "확률은 어떻게 정해지나요?", a: "신생아 모드는 유엔 WPP 2024 출생 수 비중, 인구 모드는 세계은행 인구 비중입니다. 코소보·채널제도처럼 WPP에 없는 지역만 세계은행 조출생률 추정을 씁니다. 행복도·GDP·취향은 당첨 확률을 바꾸지 않습니다." },
+      { q: "여러 번 환생하면 같은 나라가 또 나오나요?", a: "나옵니다. 각 횟수는 독립 추첨이라 같은 나라가 반복돼도 오류가 아닙니다. 기록에 순서대로 남습니다." },
+      { q: "지구본의 점은 수도인가요?", a: "아닙니다. 핀은 나라의 지리 중심에 둡니다. 러시아·호주처럼 수도가 한쪽에 치우친 나라가 지구본에서 나라 위치로 보이게 하기 위해서입니다." },
+      { q: "기록과 공유는 어디에 저장되나요?", a: "환생 기록은 이 브라우저의 로컬 저장소에만 남습니다. 공유 링크는 주소의 나라 코드만 담고, 계정은 없습니다." },
+    ],
+  },
+  en: {
+    title: "FAQ",
+    items: [
+      { q: "How are the odds set?", a: "Births mode uses UN WPP 2024 birth counts. Population mode uses World Bank population. A few territories missing from WPP keep a World Bank crude-birth-rate estimate. Happiness, GDP, and taste do not change the odds." },
+      { q: "Can the same country appear twice?", a: "Yes. Multiple lives are independent draws, so repeats are allowed and stored in order." },
+      { q: "Is the globe pin the capital?", a: "No. Pins sit on the country’s geographic center so large countries are not shown at a corner capital." },
+      { q: "Where is history stored?", a: "History stays in this browser’s local storage. A share link only carries country codes in the URL. There is no account." },
+    ],
+  },
+  ja: {
+    title: "よくある質問",
+    items: [
+      { q: "確率はどう決まりますか？", a: "新生児モードは年間出生の推計比率、人口モードは現在の人口比率です。幸福度やGDP、好みは確率を変えません。" },
+      { q: "同じ国が何度も出ますか？", a: "出ます。各回は独立した抽選なので、繰り返しは誤りではありません。記録には順番に残ります。" },
+      { q: "地球儀のピンは首都ですか？", a: "違います。ピンは国の地理的中心です。首都が端にある大きな国でも、地球儀上で国の位置に見えるようにするためです。" },
+      { q: "記録と共有はどこに保存されますか？", a: "転生の記録はこのブラウザのローカル保存だけです。共有リンクはURLの国コードのみで、アカウントはありません。" },
+    ],
+  },
+  zh: {
+    title: "常见问题",
+    items: [
+      { q: "概率怎么定？", a: "新生儿模式按估计年出生比重，人口模式按当前人口比重。幸福、GDP 和喜好不会改变中奖概率。" },
+      { q: "多次投胎会抽到同一个国家吗？", a: "会。每次抽取彼此独立，重复不是错误，会按顺序记在记录里。" },
+      { q: "地球仪图钉是首都吗？", a: "不是。图钉在国家地理中心，避免像俄罗斯、澳大利亚这样首都偏在一角的国家看起来像钉在角落。" },
+      { q: "记录和分享存在哪里？", a: "投胎记录只留在这个浏览器的本地存储。分享链接只带网址里的国家代码，没有账户。" },
+    ],
+  },
+  fr: {
+    title: "Questions fréquentes",
+    items: [
+      { q: "Comment les chances sont-elles fixées ?", a: "Le mode naissances utilise les naissances annuelles estimées. Le mode population utilise les personnes vivantes. Le bonheur, le PIB et les goûts ne changent pas les chances." },
+      { q: "Le même pays peut-il sortir deux fois ?", a: "Oui. Chaque vie est un tirage indépendant ; les répétitions sont permises et enregistrées dans l’ordre." },
+      { q: "L’épingle est-elle la capitale ?", a: "Non. Elle est au centre géographique du pays, pour que les grands pays ne soient pas collés à une capitale excentrée." },
+      { q: "Où est stocké l’historique ?", a: "L’historique reste dans le stockage local de ce navigateur. Le lien de partage ne porte que des codes pays. Il n’y a pas de compte." },
+    ],
+  },
+  es: {
+    title: "Preguntas frecuentes",
+    items: [
+      { q: "¿Cómo se fijan las probabilidades?", a: "El modo nacimientos usa nacimientos anuales estimados. El modo población usa a las personas vivas. La felicidad, el PIB y el gusto no cambian las chances." },
+      { q: "¿Puede salir el mismo país dos veces?", a: "Sí. Cada vida es un sorteo independiente; las repeticiones valen y se guardan en orden." },
+      { q: "¿El pin es la capital?", a: "No. Está en el centro geográfico del país, para que países grandes no aparezcan clavados en una capital de esquina." },
+      { q: "¿Dónde se guarda el historial?", a: "El historial queda en el almacenamiento local de este navegador. El enlace solo lleva códigos de país. No hay cuenta." },
+    ],
+  },
+};
+const faq = faqs[locale] ?? faqs.en;
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faq.items.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="container mx-auto max-w-3xl px-4 py-8">
     <h1 class="text-3xl font-black tracking-tight text-slate-900">{m.heading}</h1>
     <p class="mt-3 max-w-2xl text-base leading-relaxed text-slate-600">{m.intro}</p>
     <div class="mt-6">
       <ReincarnationCountry locale={locale} client:load />
     </div>
-    <RelatedTools locale={locale} tools={["countryMatch", "chineseZodiac", "numerology", "riasec"]} current="reincarnation" />
+    <RelatedTools locale={locale} tools={["countryMatch"]} current="reincarnation" />
     <section class="mt-10 text-sm leading-relaxed text-slate-600">
       <h2 class="text-lg font-bold text-slate-900">{note.title}</h2>
       <p class="mt-2">{note.p1}</p>
       <p class="mt-2">{note.p2}</p>
+    </section>
+    <section class="mt-10 text-sm leading-relaxed text-slate-600">
+      <h2 class="text-lg font-bold text-slate-900">{faq.title}</h2>
+      {faq.items.map((item) => (
+        <div class="mt-4">
+          <h3 class="font-bold text-slate-900">{item.q}</h3>
+          <p class="mt-1">{item.a}</p>
+        </div>
+      ))}
     </section>
   </div>
 </Layout>

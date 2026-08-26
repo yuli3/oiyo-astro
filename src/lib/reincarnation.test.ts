@@ -1,11 +1,19 @@
+import { existsSync, readFileSync } from "node:fs";
+import { dirname, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { describe, expect, it } from "vitest";
 import {
+  appendHistory,
   byIso2,
+  countriesFromIso2,
   countryRank,
   countryShare,
   defaultHomeIso2,
   displayCountryName,
+  formatShareIso2,
   oneIn,
+  parseHistory,
+  parseShareIso2,
   pickCountry,
   pickMany,
   projectOrthographic,
@@ -52,7 +60,11 @@ describe("reincarnation weights", () => {
     const india = byIso2("IN");
     expect(india).toBeTruthy();
     expect(ranked("births")[0].iso2).toBe("IN");
+    expect(ranked("births")[1].iso2).toBe("CN");
     expect(countryRank(india!, "births")).toBe(1);
+    expect(india!.birthsSource).toBe("wpp2024");
+    expect(india!.births).toBeGreaterThan(20_000_000);
+    expect(byIso2("CN")!.births).toBeLessThan(india!.births);
   });
 
   it("says one-in and Korea vs India", () => {
@@ -78,5 +90,53 @@ describe("reincarnation weights", () => {
     expect(byIso2("KR")).toBeTruthy();
     expect(byIso2("KR")!.population).toBeGreaterThan(40_000_000);
     expect(byIso2("KR")!.births).toBeGreaterThan(100_000);
+  });
+
+  it("pins large countries near their geographic centroid, not the capital", () => {
+    const australia = byIso2("AU")!;
+    const russia = byIso2("RU")!;
+    const usa = byIso2("US")!;
+    expect(australia.lat).toBeGreaterThan(-32);
+    expect(australia.lat).toBeLessThan(-20);
+    expect(australia.lon).toBeGreaterThan(120);
+    expect(russia.lon).toBeGreaterThan(60);
+    expect(usa.lon).toBeLessThan(-90);
+    expect(usa.lon).toBeGreaterThan(-110);
+  });
+
+  it("parses shared country codes including repeats", () => {
+    expect(parseShareIso2("in, ng, xx, IN")).toEqual(["IN", "NG", "IN"]);
+    expect(formatShareIso2(["in", "ng"])).toBe("IN,NG");
+    expect(countriesFromIso2(["IN", "ZZ", "KR"])).toHaveLength(2);
+  });
+
+  it("keeps a bounded reincarnation history", () => {
+    expect(parseHistory("not-json")).toEqual([]);
+    const first = parseHistory(
+      JSON.stringify([{ id: "a", at: "2026-08-26T00:00:00.000Z", mode: "births", iso2: ["IN", "NG"] }]),
+    );
+    expect(first).toHaveLength(1);
+    expect(first[0].iso2).toEqual(["IN", "NG"]);
+    let grown = first;
+    for (let i = 0; i < 30; i += 1) {
+      grown = appendHistory(grown, {
+        id: `h${i}`,
+        at: "2026-08-26T00:00:00.000Z",
+        mode: "births",
+        iso2: ["KR"],
+      });
+    }
+    expect(grown).toHaveLength(24);
+    expect(grown[0].id).toBe("h29");
+  });
+
+  it("ships simplified Natural Earth borders for large countries", () => {
+    const bordersPath = resolve(dirname(fileURLToPath(import.meta.url)), "../../public/data/reincarnation-borders.json");
+    expect(existsSync(bordersPath)).toBe(true);
+    const borders = JSON.parse(readFileSync(bordersPath, "utf8")) as Record<string, number[][][]>;
+    expect(Object.keys(borders).length).toBeGreaterThan(150);
+    expect(borders.IND?.length).toBeGreaterThan(0);
+    expect(borders.RUS?.length).toBeGreaterThan(0);
+    expect(borders.AUS?.[0].length).toBeGreaterThan(8);
   });
 });

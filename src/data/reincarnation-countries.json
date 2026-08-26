@@ -1,215 +1,253 @@
 {
-  "source": "World Bank WDI SP.POP.TOTL and SP.DYN.CBRT.IN. Births ≈ population × crude birth rate / 1000.",
-  "asOf": "2023-2024 latest available year per series",
+  "source": "Population: World Bank WDI SP.POP.TOTL. Births: United Nations World Population Prospects 2024, medium variant (year 2024); territories without a WPP series keep World Bank population × crude birth rate / 1000.",
+  "asOf": "WPP 2024 (births, 2024) · World Bank WDI (population, 2023–2024)",
   "countries": [
     {
       "iso2": "IN",
       "iso3": "IND",
       "name": "India",
       "population": 1450935791,
-      "births": 23187405,
+      "births": 23186978,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 77.225,
-      "lat": 28.6353
+      "lon": 81.173,
+      "lat": 23.5863,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CN",
       "iso3": "CHN",
       "name": "China",
       "population": 1408975000,
-      "births": 9538761,
+      "births": 8822056,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 116.286,
-      "lat": 40.0495
+      "lon": 104.6911,
+      "lat": 38.0733,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "NG",
       "iso3": "NGA",
       "name": "Nigeria",
       "population": 232679478,
-      "births": 7560454,
+      "births": 7560407,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 7.48906,
-      "lat": 9.05804
+      "lon": 8.1477,
+      "lat": 9.6103,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PK",
       "iso3": "PAK",
       "name": "Pakistan",
       "population": 251269164,
-      "births": 6887790,
+      "births": 6887798,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 72.8,
-      "lat": 30.5167
+      "lon": 69.0884,
+      "lat": 30.1162,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "ID",
       "iso3": "IDN",
       "name": "Indonesia",
       "population": 283487931,
-      "births": 4468337,
+      "births": 4468312,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 106.83,
-      "lat": -6.19752
+      "lon": 113.9654,
+      "lat": 0.1559,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CD",
       "iso3": "COD",
       "name": "Congo, Dem. Rep.",
       "population": 109276265,
-      "births": 4467760,
+      "births": 4467740,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 15.3222,
-      "lat": -4.325
+      "lon": 23.4198,
+      "lat": -3.3386,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "ET",
       "iso3": "ETH",
       "name": "Ethiopia",
       "population": 132059767,
-      "births": 4155789,
+      "births": 4155828,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 38.7468,
-      "lat": 9.02274
+      "lon": 39.9149,
+      "lat": 8.7294,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "US",
       "iso3": "USA",
       "name": "United States",
       "population": 340003797,
-      "births": 3604040,
+      "births": 3654449,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -77.032,
-      "lat": 38.8895
+      "lon": -96.3316,
+      "lat": 38.8208,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BD",
       "iso3": "BGD",
       "name": "Bangladesh",
       "population": 173562364,
-      "births": 3469165,
+      "births": 3469124,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 90.4113,
-      "lat": 23.7055
+      "lon": 90.4321,
+      "lat": 23.6737,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BR",
       "iso3": "BRA",
       "name": "Brazil",
       "population": 211998573,
-      "births": 2572179,
+      "births": 2572100,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -47.9292,
-      "lat": -15.7801
+      "lon": -54.3552,
+      "lat": -11.5246,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "EG",
       "iso3": "EGY",
       "name": "Egypt, Arab Rep.",
       "population": 116538258,
-      "births": 2437398,
+      "births": 2437410,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 31.2461,
-      "lat": 30.0982
+      "lon": 30.2401,
+      "lat": 26.6052,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TZ",
       "iso3": "TZA",
       "name": "Tanzania",
       "population": 68560157,
-      "births": 2385962,
+      "births": 2385984,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 35.7382,
-      "lat": -6.17486
+      "lon": 34.8183,
+      "lat": -6.3558,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MX",
       "iso3": "MEX",
       "name": "Mexico",
       "population": 130861007,
-      "births": 2023635,
+      "births": 2023623,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -99.1276,
-      "lat": 19.427
+      "lon": -101.554,
+      "lat": 23.8744,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PH",
       "iso3": "PHL",
       "name": "Philippines",
       "population": 115843670,
-      "births": 1841219,
+      "births": 1841191,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 121.035,
-      "lat": 14.5515
+      "lon": 121.8221,
+      "lat": 15.5865,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "UG",
       "iso3": "UGA",
       "name": "Uganda",
       "population": 50015092,
-      "births": 1722320,
+      "births": 1722321,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 32.5729,
-      "lat": 0.314269
+      "lon": 32.3437,
+      "lat": 1.2822,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SD",
       "iso3": "SDN",
       "name": "Sudan",
       "population": 50448963,
-      "births": 1664614,
+      "births": 1664612,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 32.5363,
-      "lat": 15.5932
+      "lon": 29.9515,
+      "lat": 15.6706,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KE",
       "iso3": "KEN",
       "name": "Kenya",
       "population": 56432944,
-      "births": 1521884,
+      "births": 1521907,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 36.8126,
-      "lat": -1.27975
+      "lon": 37.9531,
+      "lat": 0.6899,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AF",
       "iso3": "AFG",
       "name": "Afghanistan",
       "population": 42647492,
-      "births": 1492961,
+      "births": 1492956,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 69.1761,
-      "lat": 34.5228
+      "lon": 66.5922,
+      "lat": 34.134,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AO",
       "iso3": "AGO",
       "name": "Angola",
       "population": 37885849,
-      "births": 1407762,
+      "births": 1407760,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 13.242,
-      "lat": -8.81155
+      "lon": 17.6518,
+      "lat": -12.1674,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "YE",
@@ -219,602 +257,712 @@
       "births": 1394397,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 44.2075,
-      "lat": 15.352
+      "lon": 47.4682,
+      "lat": 16.0014,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "VN",
       "iso3": "VNM",
       "name": "Viet Nam",
       "population": 100987686,
-      "births": 1355558,
+      "births": 1355563,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 105.825,
-      "lat": 21.0069
+      "lon": 105.9134,
+      "lat": 16.5173,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MZ",
       "iso3": "MOZ",
       "name": "Mozambique",
       "population": 34631766,
-      "births": 1282345,
+      "births": 1282336,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 32.5713,
-      "lat": -25.9664
+      "lon": 35.2086,
+      "lat": -17.5252,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "RU",
       "iso3": "RUS",
       "name": "Russian Federation",
       "population": 143669648,
-      "births": 1206825,
+      "births": 1270354,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 37.6176,
-      "lat": 55.7558
+      "lon": 98.6705,
+      "lat": 59.0394,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "ZA",
       "iso3": "ZAF",
       "name": "South Africa",
       "population": 64007187,
-      "births": 1182853,
+      "births": 1182869,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 28.1871,
-      "lat": -25.746
+      "lon": 24.7525,
+      "lat": -28.5536,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "IQ",
       "iso3": "IRQ",
       "name": "Iraq",
       "population": 46042015,
-      "births": 1177755,
+      "births": 1177772,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 44.394,
-      "lat": 33.3302
+      "lon": 43.8325,
+      "lat": 33.1051,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "IR",
       "iso3": "IRN",
       "name": "Iran, Islamic Rep.",
       "population": 91567738,
-      "births": 1151098,
+      "births": 1151057,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 51.4447,
-      "lat": 35.6878
+      "lon": 54.2371,
+      "lat": 32.906,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "NE",
       "iso3": "NER",
       "name": "Niger",
       "population": 27032412,
-      "births": 1119683,
+      "births": 1119695,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 2.1073,
-      "lat": 13.514
+      "lon": 8.8686,
+      "lat": 17.0811,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MG",
       "iso3": "MDG",
       "name": "Madagascar",
       "population": 31964956,
-      "births": 1013737,
+      "births": 1013751,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 45.7167,
-      "lat": -20.4667
+      "lon": 46.6849,
+      "lat": -19.0416,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CI",
       "iso3": "CIV",
       "name": "Cote d'Ivoire",
       "population": 31934230,
-      "births": 1007972,
+      "births": 1007981,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -4.0305,
-      "lat": 5.332
+      "lon": -5.5717,
+      "lat": 7.5368,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CM",
       "iso3": "CMR",
       "name": "Cameroon",
       "population": 29123744,
-      "births": 971102,
+      "births": 971107,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 11.5174,
-      "lat": 3.8721
+      "lon": 12.9485,
+      "lat": 6.2942,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "ML",
       "iso3": "MLI",
       "name": "Mali",
       "population": 24478595,
-      "births": 967688,
+      "births": 967695,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -7.50034,
-      "lat": 13.5667
+      "lon": -4.3464,
+      "lat": 17.1681,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TR",
       "iso3": "TUR",
       "name": "Turkiye",
       "population": 85518661,
-      "births": 940705,
+      "births": 1060605,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 32.3606,
-      "lat": 39.7153
+      "lon": 35.5689,
+      "lat": 38.9321,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "UZ",
       "iso3": "UZB",
       "name": "Uzbekistan",
       "population": 36361859,
-      "births": 929300,
+      "births": 929292,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 69.269,
-      "lat": 41.3052
+      "lon": 63.8548,
+      "lat": 41.4879,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MM",
       "iso3": "MMR",
       "name": "Myanmar",
       "population": 54500091,
-      "births": 897289,
+      "births": 897269,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 95.9562,
-      "lat": 21.914
+      "lon": 97.0889,
+      "lat": 19.9012,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GH",
       "iso3": "GHA",
       "name": "Ghana",
       "population": 34427414,
-      "births": 892359,
+      "births": 892343,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -0.20795,
-      "lat": 5.57045
+      "lon": -1.2192,
+      "lat": 7.9453,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "DZ",
       "iso3": "DZA",
       "name": "Algeria",
       "population": 46814308,
-      "births": 881841,
+      "births": 881823,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 3.05097,
-      "lat": 36.7397
+      "lon": 2.6558,
+      "lat": 28.351,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TD",
       "iso3": "TCD",
       "name": "Chad",
       "population": 20299123,
-      "births": 878221,
+      "births": 878222,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 15.0445,
-      "lat": 12.1048
+      "lon": 18.4271,
+      "lat": 15.2835,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SO",
       "iso3": "SOM",
       "name": "Somalia, Fed. Rep.",
       "population": 19009151,
-      "births": 804962,
+      "births": 804966,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 45.3254,
-      "lat": 2.07515
+      "lon": 45.4004,
+      "lat": 6.5245,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BF",
       "iso3": "BFA",
       "name": "Burkina Faso",
       "population": 23548781,
-      "births": 737925,
+      "births": 737914,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -1.53395,
-      "lat": 12.3605
+      "lon": -1.6933,
+      "lat": 12.1087,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "JP",
       "iso3": "JPN",
       "name": "Japan",
       "population": 123975371,
-      "births": 706660,
+      "births": 750570,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 139.77,
-      "lat": 35.67
+      "lon": 137.4693,
+      "lat": 36.7674,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CO",
       "iso3": "COL",
       "name": "Colombia",
       "population": 52886363,
-      "births": 700797,
+      "births": 700784,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -74.082,
-      "lat": 4.60987
+      "lon": -72.6445,
+      "lat": 4.1878,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "ZM",
       "iso3": "ZMB",
       "name": "Zambia",
       "population": 21314956,
-      "births": 697511,
+      "births": 697518,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 28.2937,
-      "lat": -15.3982
+      "lon": 27.7552,
+      "lat": -13.1628,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GB",
       "iso3": "GBR",
       "name": "United Kingdom",
       "population": 69281000,
-      "births": 685328,
+      "births": 683910,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -0.126236,
-      "lat": 51.5002
+      "lon": -2.8529,
+      "lat": 53.9784,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "DE",
       "iso3": "DEU",
       "name": "Germany",
       "population": 83516593,
-      "births": 676484,
+      "births": 717268,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 13.4115,
-      "lat": 52.5235
+      "lon": 10.4262,
+      "lat": 51.083,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MW",
       "iso3": "MWI",
       "name": "Malawi",
       "population": 21655286,
-      "births": 674411,
+      "births": 674407,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 33.7703,
-      "lat": -13.9899
+      "lon": 34.2344,
+      "lat": -13.129,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "FR",
       "iso3": "FRA",
       "name": "France",
       "population": 68551653,
-      "births": 664951,
+      "births": 635995,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 2.35097,
-      "lat": 48.8566
+      "lon": 2.194,
+      "lat": 46.6424,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MA",
       "iso3": "MAR",
       "name": "Morocco",
       "population": 38081173,
-      "births": 624607,
+      "births": 624620,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -6.8704,
-      "lat": 33.9905
+      "lon": -8.8172,
+      "lat": 28.6876,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SA",
       "iso3": "SAU",
       "name": "Saudi Arabia",
       "population": 35300280,
-      "births": 582278,
+      "births": 560224,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 46.6977,
-      "lat": 24.6748
+      "lon": 44.601,
+      "lat": 24.136,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TH",
       "iso3": "THA",
       "name": "Thailand",
       "population": 71668011,
-      "births": 581658,
+      "births": 581635,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 100.521,
-      "lat": 13.7308
+      "lon": 101.0868,
+      "lat": 13.6622,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SY",
       "iso3": "SYR",
       "name": "Syrian Arab Republic",
       "population": 24672760,
-      "births": 571470,
+      "births": 571460,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 36.3119,
-      "lat": 33.5146
+      "lon": 38.5117,
+      "lat": 35.0975,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "NP",
       "iso3": "NPL",
       "name": "Nepal",
       "population": 29651054,
-      "births": 562243,
+      "births": 562232,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 85.3157,
-      "lat": 27.6939
+      "lon": 84.1339,
+      "lat": 28.3009,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SN",
       "iso3": "SEN",
       "name": "Senegal",
       "population": 18501984,
-      "births": 539962,
+      "births": 539970,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -17.4734,
-      "lat": 14.7247
+      "lon": -14.6109,
+      "lat": 14.2289,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PE",
       "iso3": "PER",
       "name": "Peru",
       "population": 34217848,
-      "births": 538965,
+      "births": 538952,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -77.0465,
-      "lat": -12.0931
+      "lon": -74.1142,
+      "lat": -8.5227,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AR",
       "iso3": "ARG",
       "name": "Argentina",
       "population": 45696159,
-      "births": 506588,
+      "births": 506609,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -58.4173,
-      "lat": -34.6118
+      "lon": -64.5324,
+      "lat": -35.6973,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "ZW",
       "iso3": "ZWE",
       "name": "Zimbabwe",
       "population": 16634373,
-      "births": 497218,
+      "births": 497215,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 31.0672,
-      "lat": -17.8312
+      "lon": 29.7178,
+      "lat": -18.927,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GN",
       "iso3": "GIN",
       "name": "Guinea",
       "population": 14754785,
-      "births": 491703,
+      "births": 491708,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -13.7,
-      "lat": 9.51667
+      "lon": -10.9869,
+      "lat": 10.256,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BJ",
       "iso3": "BEN",
       "name": "Benin",
       "population": 14462724,
-      "births": 483330,
+      "births": 483336,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 2.6323,
-      "lat": 6.4779
+      "lon": 2.3057,
+      "lat": 9.503,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BI",
       "iso3": "BDI",
       "name": "Burundi",
       "population": 14047786,
-      "births": 466541,
+      "births": 466545,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 29.3639,
-      "lat": -3.3784
+      "lon": 29.8852,
+      "lat": -3.2613,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MY",
       "iso3": "MYS",
       "name": "Malaysia",
       "population": 35557673,
-      "births": 439564,
+      "births": 439568,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 101.684,
-      "lat": 3.12433
+      "lon": 114.6333,
+      "lat": 3.6717,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "VE",
       "iso3": "VEN",
       "name": "Venezuela, RB",
       "population": 28405543,
-      "births": 432645,
+      "births": 432648,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -69.8371,
-      "lat": 9.08165
+      "lon": -66.3649,
+      "lat": 7.1483,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KZ",
       "iso3": "KAZ",
       "name": "Kazakhstan",
       "population": 20592571,
-      "births": 401988,
+      "births": 401985,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 71.4382,
-      "lat": 51.1879
+      "lon": 66.3759,
+      "lat": 47.6415,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "RW",
       "iso3": "RWA",
       "name": "Rwanda",
       "population": 14256567,
-      "births": 400068,
+      "births": 400062,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 30.0587,
-      "lat": -1.95325
+      "lon": 29.9194,
+      "lat": -2.0147,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GT",
       "iso3": "GTM",
       "name": "Guatemala",
       "population": 18406359,
-      "births": 379521,
+      "births": 379512,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -90.5328,
-      "lat": 14.6248
+      "lon": -90.3122,
+      "lat": 15.8209,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "IT",
       "iso3": "ITA",
       "name": "Italy",
       "population": 58952704,
-      "births": 371402,
+      "births": 384703,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 12.4823,
-      "lat": 41.8955
+      "lon": 12.7637,
+      "lat": 42.982,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CA",
       "iso3": "CAN",
       "name": "Canada",
       "population": 41262329,
-      "births": 367235,
+      "births": 361079,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -75.6919,
-      "lat": 45.4215
+      "lon": -98.4168,
+      "lat": 57.5505,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KH",
       "iso3": "KHM",
       "name": "Cambodia",
       "population": 17638801,
-      "births": 358226,
+      "births": 358220,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 104.874,
-      "lat": 11.5556
+      "lon": 105.0397,
+      "lat": 12.6992,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SS",
       "iso3": "SSD",
       "name": "South Sudan",
       "population": 11943408,
-      "births": 349010,
+      "births": 349013,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 31.6,
-      "lat": 4.85
+      "lon": 30.3852,
+      "lat": 7.6578,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KP",
       "iso3": "PRK",
       "name": "Korea, Dem. People's Rep.",
       "population": 26498823,
-      "births": 340722,
+      "births": 340728,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 125.754,
-      "lat": 39.0319
+      "lon": 127.338,
+      "lat": 40.192,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "ES",
       "iso3": "ESP",
       "name": "Spain",
       "population": 48848840,
-      "births": 317517,
+      "births": 333155,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -3.70327,
-      "lat": 40.4167
+      "lon": -3.6516,
+      "lat": 40.365,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AU",
       "iso3": "AUS",
       "name": "Australia",
       "population": 27194286,
-      "births": 290979,
+      "births": 304984,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 149.129,
-      "lat": -35.282
+      "lon": 134.0228,
+      "lat": -25.6973,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TG",
       "iso3": "TGO",
       "name": "Togo",
       "population": 8406558,
-      "births": 269523,
+      "births": 269520,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 1.2255,
-      "lat": 6.1228
+      "lon": 0.8991,
+      "lat": 8.6607,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "EC",
       "iso3": "ECU",
       "name": "Ecuador",
       "population": 18135478,
-      "births": 268768,
+      "births": 268769,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -78.5243,
-      "lat": -0.229498
+      "lon": -78.463,
+      "lat": -1.5643,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TJ",
       "iso3": "TJK",
       "name": "Tajikistan",
       "population": 10590927,
-      "births": 268300,
+      "births": 268304,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 68.7864,
-      "lat": 38.5878
+      "lon": 70.9422,
+      "lat": 38.5693,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BO",
       "iso3": "BOL",
       "name": "Bolivia",
       "population": 12413315,
-      "births": 261002,
+      "births": 261003,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -66.1936,
-      "lat": -13.9908
+      "lon": -64.4521,
+      "lat": -16.7312,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SL",
@@ -824,41 +972,49 @@
       "births": 260194,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -13.2134,
-      "lat": 8.4821
+      "lon": -11.7866,
+      "lat": 8.5613,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "HT",
       "iso3": "HTI",
       "name": "Haiti",
       "population": 11772557,
-      "births": 258337,
+      "births": 258340,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -72.3288,
-      "lat": 18.5392
+      "lon": -72.8929,
+      "lat": 18.8835,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PG",
       "iso3": "PNG",
       "name": "Papua New Guinea",
       "population": 10576502,
-      "births": 256914,
+      "births": 256911,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 147.194,
-      "lat": -9.47357
+      "lon": 144.8349,
+      "lat": -7.1569,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PL",
       "iso3": "POL",
       "name": "Poland",
       "population": 36559233,
-      "births": 252259,
+      "births": 309612,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 21.02,
-      "lat": 52.26
+      "lon": 19.4357,
+      "lat": 52.0685,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CF",
@@ -868,140 +1024,166 @@
       "births": 246241,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 21.6407,
-      "lat": 5.63056
+      "lon": 20.5207,
+      "lat": 6.3314,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KR",
       "iso3": "KOR",
       "name": "Korea, Rep.",
       "population": 51751065,
-      "births": 243230,
+      "births": 240982,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 126.957,
-      "lat": 37.5323
+      "lon": 127.7622,
+      "lat": 36.4024,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "JO",
       "iso3": "JOR",
       "name": "Jordan",
       "population": 11552876,
-      "births": 236279,
+      "births": 236284,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 35.9263,
-      "lat": 31.9497
+      "lon": 36.9573,
+      "lat": 31.3871,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "HN",
       "iso3": "HND",
       "name": "Honduras",
       "population": 10825703,
-      "births": 234366,
+      "births": 234369,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -87.4667,
-      "lat": 15.1333
+      "lon": -86.4925,
+      "lat": 14.7404,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LK",
       "iso3": "LKA",
       "name": "Sri Lanka",
       "population": 21916000,
-      "births": 221352,
+      "births": 320429,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 79.8528,
-      "lat": 6.92148
+      "lon": 80.6693,
+      "lat": 7.6966,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "UA",
       "iso3": "UKR",
       "name": "Ukraine",
       "population": 37860221,
-      "births": 206944,
+      "births": 206937,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 30.5038,
-      "lat": 50.4536
+      "lon": 31.2738,
+      "lat": 48.6575,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "DO",
       "iso3": "DOM",
       "name": "Dominican Republic",
       "population": 11427557,
-      "births": 201354,
+      "births": 201350,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -69.8908,
-      "lat": 18.479
+      "lon": -70.435,
+      "lat": 18.7795,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CG",
       "iso3": "COG",
       "name": "Congo, Rep.",
       "population": 6332961,
-      "births": 192674,
+      "births": 192673,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 15.2662,
-      "lat": -4.2767
+      "lon": 14.8797,
+      "lat": -0.7294,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "IL",
       "iso3": "ISR",
       "name": "Israel",
       "population": 10002200,
-      "births": 186041,
+      "births": 171566,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 35.2035,
-      "lat": 31.7717
+      "lon": 35.0279,
+      "lat": 31.5135,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MR",
       "iso3": "MRT",
       "name": "Mauritania",
       "population": 5169395,
-      "births": 175915,
+      "births": 175914,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -15.9824,
-      "lat": 18.2367
+      "lon": -10.4951,
+      "lat": 20.4667,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CL",
       "iso3": "CHL",
       "name": "Chile",
       "population": 19764771,
-      "births": 172408,
+      "births": 172406,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -70.6475,
-      "lat": -33.475
+      "lon": -70.7686,
+      "lat": -37.8294,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LR",
       "iso3": "LBR",
       "name": "Liberia",
       "population": 5612817,
-      "births": 171623,
+      "births": 171626,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -10.7957,
-      "lat": 6.30039
+      "lon": -9.259,
+      "lat": 6.5201,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "NL",
       "iso3": "NLD",
       "name": "Netherlands",
       "population": 17993485,
-      "births": 165540,
+      "births": 171524,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 4.89095,
-      "lat": 52.3738
+      "lon": 5.5541,
+      "lat": 52.1341,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TN",
@@ -1011,129 +1193,153 @@
       "births": 164145,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 10.21,
-      "lat": 36.7899
+      "lon": 9.6559,
+      "lat": 34.0864,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LA",
       "iso3": "LAO",
       "name": "Lao PDR",
       "population": 7769819,
-      "births": 162646,
+      "births": 162644,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 102.177,
-      "lat": 18.5826
+      "lon": 103.7638,
+      "lat": 18.1173,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TM",
       "iso3": "TKM",
       "name": "Turkmenistan",
       "population": 7494498,
-      "births": 156680,
+      "births": 156679,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 58.3794,
-      "lat": 37.9509
+      "lon": 58.4577,
+      "lat": 39.0607,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "RO",
       "iso3": "ROU",
       "name": "Romania",
       "population": 19051804,
-      "births": 142889,
+      "births": 180942,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 26.0979,
-      "lat": 44.4479
+      "lon": 25.0942,
+      "lat": 45.8245,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KG",
       "iso3": "KGZ",
       "name": "Kyrgyz Republic",
       "population": 7221868,
-      "births": 140104,
+      "births": 150335,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 74.6057,
-      "lat": 42.8851
+      "lon": 74.1753,
+      "lat": 41.357,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PS",
       "iso3": "PSE",
       "name": "West Bank and Gaza",
       "population": 5289152,
-      "births": 139977,
+      "births": 145440,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": null,
-      "lat": null
+      "lon": 35.2425,
+      "lat": 31.9308,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PY",
       "iso3": "PRY",
       "name": "Paraguay",
       "population": 6929153,
-      "births": 136698,
+      "births": 136695,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -57.6362,
-      "lat": -25.3005
+      "lon": -58.3891,
+      "lat": -23.4219,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "NI",
       "iso3": "NIC",
       "name": "Nicaragua",
       "population": 6916140,
-      "births": 132382,
+      "births": 132383,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -86.2734,
-      "lat": 12.1475
+      "lon": -85.0161,
+      "lat": 12.8936,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LY",
       "iso3": "LBY",
       "name": "Libya",
       "population": 7381023,
-      "births": 121750,
+      "births": 121747,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 13.1072,
-      "lat": 32.8578
+      "lon": 17.9113,
+      "lat": 27.2029,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BE",
       "iso3": "BEL",
       "name": "Belgium",
       "population": 11858610,
-      "births": 109099,
+      "births": 101368,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 4.36761,
-      "lat": 50.8371
+      "lon": 4.675,
+      "lat": 50.6182,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AE",
       "iso3": "ARE",
       "name": "United Arab Emirates",
       "population": 10986400,
-      "births": 107875,
+      "births": 108273,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 54.3705,
-      "lat": 24.4764
+      "lon": 54.2792,
+      "lat": 24.1825,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AZ",
       "iso3": "AZE",
       "name": "Azerbaijan",
       "population": 10202830,
-      "births": 102028,
+      "births": 121322,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 49.8932,
-      "lat": 40.3834
+      "lon": 48.6346,
+      "lat": 40.3921,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "ER",
@@ -1143,85 +1349,101 @@
       "births": 101539,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 38.9183,
-      "lat": 15.3315
+      "lon": 39.2672,
+      "lat": 15.0055,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SV",
       "iso3": "SLV",
       "name": "El Salvador",
       "population": 6338193,
-      "births": 98857,
+      "births": 98858,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -89.2073,
-      "lat": 13.7034
+      "lon": -88.8591,
+      "lat": 13.758,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SE",
       "iso3": "SWE",
       "name": "Sweden",
       "population": 10569709,
-      "births": 98298,
+      "births": 97489,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 18.0645,
-      "lat": 59.3327
+      "lon": 17.0624,
+      "lat": 62.7342,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CU",
       "iso3": "CUB",
       "name": "Cuba",
       "population": 10979783,
-      "births": 94646,
+      "births": 94650,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -82.3667,
-      "lat": 23.1333
+      "lon": -79.6982,
+      "lat": 21.4762,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LB",
       "iso3": "LBN",
       "name": "Lebanon",
       "population": 5805962,
-      "births": 92652,
+      "births": 92653,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 35.5134,
-      "lat": 33.8872
+      "lon": 35.8965,
+      "lat": 33.9116,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "OM",
       "iso3": "OMN",
       "name": "Oman",
       "population": 5281538,
-      "births": 88614,
+      "births": 88613,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 58.5874,
-      "lat": 23.6105
+      "lon": 55.8411,
+      "lat": 20.7243,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PT",
       "iso3": "PRT",
       "name": "Portugal",
       "population": 10694681,
-      "births": 84488,
+      "births": 86151,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -9.13552,
-      "lat": 38.7072
+      "lon": -7.9337,
+      "lat": 39.6753,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CZ",
       "iso3": "CZE",
       "name": "Czechia",
       "population": 10905028,
-      "births": 83969,
+      "births": 90211,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 14.4205,
-      "lat": 50.0878
+      "lon": 15.3833,
+      "lat": 49.7492,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GM",
@@ -1231,85 +1453,101 @@
       "births": 82405,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -16.5885,
-      "lat": 13.4495
+      "lon": -15.3834,
+      "lat": 13.4286,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "NA",
       "iso3": "NAM",
       "name": "Namibia",
       "population": 3030131,
-      "births": 78453,
+      "births": 78452,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 17.0931,
-      "lat": -22.5648
+      "lon": 18.1645,
+      "lat": -21.9086,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "HU",
       "iso3": "HUN",
       "name": "Hungary",
       "population": 9562065,
-      "births": 78409,
+      "births": 85003,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 19.0408,
-      "lat": 47.4984
+      "lon": 19.3962,
+      "lat": 47.2253,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CH",
       "iso3": "CHE",
       "name": "Switzerland",
       "population": 9005582,
-      "births": 78349,
+      "births": 82864,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 7.44821,
-      "lat": 46.948
+      "lon": 8.2869,
+      "lat": 46.7368,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AT",
       "iso3": "AUT",
       "name": "Austria",
       "population": 9177982,
-      "births": 77095,
+      "births": 76247,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 16.3798,
-      "lat": 48.2201
+      "lon": 13.7978,
+      "lat": 47.6319,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PA",
       "iso3": "PAN",
       "name": "Panama",
       "population": 4515577,
-      "births": 71649,
+      "births": 71650,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -79.5188,
-      "lat": 8.99427
+      "lon": -80.1443,
+      "lat": 8.4395,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GA",
       "iso3": "GAB",
       "name": "Gabon",
       "population": 2538952,
-      "births": 68874,
+      "births": 68875,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 9.45162,
-      "lat": 0.38832
+      "lon": 11.8394,
+      "lat": -0.6284,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GR",
       "iso3": "GRC",
       "name": "Greece",
       "population": 10405134,
-      "births": 68674,
+      "births": 71411,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 23.7166,
-      "lat": 37.9792
+      "lon": 23.1104,
+      "lat": 39.4201,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GW",
@@ -1319,85 +1557,101 @@
       "births": 65072,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -15.1804,
-      "lat": 11.8037
+      "lon": -14.9802,
+      "lat": 11.9801,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BY",
       "iso3": "BLR",
       "name": "Belarus",
       "population": 9132629,
-      "births": 64212,
+      "births": 63679,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 27.5766,
-      "lat": 53.9678
+      "lon": 27.9643,
+      "lat": 53.4679,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BW",
       "iso3": "BWA",
       "name": "Botswana",
       "population": 2521139,
-      "births": 61417,
+      "births": 61418,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 25.9201,
-      "lat": -24.6544
+      "lon": 23.8578,
+      "lat": -22.2366,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "RS",
       "iso3": "SRB",
       "name": "Serbia",
       "population": 6586476,
-      "births": 60596,
+      "births": 58988,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 20.4656,
-      "lat": 44.8024
+      "lon": 20.8568,
+      "lat": 44.0268,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MN",
       "iso3": "MNG",
       "name": "Mongolia",
       "population": 3524788,
-      "births": 59569,
+      "births": 63101,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 106.937,
-      "lat": 47.9129
+      "lon": 103.3987,
+      "lat": 47.0864,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "NZ",
       "iso3": "NZL",
       "name": "New Zealand",
       "population": 5290000,
-      "births": 58349,
+      "births": 59121,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 174.776,
-      "lat": -41.2865
+      "lon": 170.6904,
+      "lat": -43.8277,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "DK",
       "iso3": "DNK",
       "name": "Denmark",
       "population": 5976992,
-      "births": 56781,
+      "births": 58646,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 12.5681,
-      "lat": 55.6763
+      "lon": 9.3787,
+      "lat": 56.0012,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GQ",
       "iso3": "GNQ",
       "name": "Equatorial Guinea",
       "population": 1892516,
-      "births": 56764,
+      "births": 56763,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 8.7741,
-      "lat": 3.7523
+      "lon": 10.4255,
+      "lat": 1.5955,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LS",
@@ -1407,41 +1661,49 @@
       "births": 55542,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 27.7167,
-      "lat": -29.5208
+      "lon": 28.2448,
+      "lat": -29.6017,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "NO",
       "iso3": "NOR",
       "name": "Norway",
       "population": 5572279,
-      "births": 54051,
+      "births": 52516,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 10.7387,
-      "lat": 59.9138
+      "lon": 16.6703,
+      "lat": 64.9778,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "IE",
       "iso3": "IRL",
       "name": "Ireland",
       "population": 5395790,
-      "births": 53958,
+      "births": 52767,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -6.26749,
-      "lat": 53.3441
+      "lon": -8.2411,
+      "lat": 53.3049,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BG",
       "iso3": "BGR",
       "name": "Bulgaria",
       "population": 6441421,
-      "births": 53464,
+      "births": 61463,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 23.3238,
-      "lat": 42.7105
+      "lon": 25.2517,
+      "lat": 42.8204,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CR",
@@ -1451,118 +1713,140 @@
       "births": 51253,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -84.0089,
-      "lat": 9.63701
+      "lon": -84.1467,
+      "lat": 9.8635,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KW",
       "iso3": "KWT",
       "name": "Kuwait",
       "population": 4897263,
-      "births": 49071,
+      "births": 48132,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 47.9824,
-      "lat": 29.3721
+      "lon": 47.5631,
+      "lat": 29.2814,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SK",
       "iso3": "SVK",
       "name": "Slovak Republic",
       "population": 5422069,
-      "births": 46088,
+      "births": 51117,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 17.1073,
-      "lat": 48.1484
+      "lon": 19.581,
+      "lat": 48.6981,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SG",
       "iso3": "SGP",
       "name": "Singapore",
       "population": 6036860,
-      "births": 44673,
+      "births": 48802,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 103.85,
-      "lat": 1.28941
+      "lon": 103.8103,
+      "lat": 1.3528,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "FI",
       "iso3": "FIN",
       "name": "Finland",
       "population": 5619911,
-      "births": 43835,
+      "births": 43829,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 24.9525,
-      "lat": 60.1608
+      "lon": 25.6574,
+      "lat": 65.0158,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GE",
       "iso3": "GEO",
       "name": "Georgia",
       "population": 3812518,
-      "births": 43040,
+      "births": 42983,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 44.793,
-      "lat": 41.71
+      "lon": 43.3789,
+      "lat": 42.1799,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "HK",
       "iso3": "HKG",
       "name": "Hong Kong SAR, China",
       "population": 7524100,
-      "births": 36868,
+      "births": 40219,
       "popYear": 2024,
       "cbrYear": 2024,
       "lon": 114.109,
-      "lat": 22.3964
+      "lat": 22.3964,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AM",
       "iso3": "ARM",
       "name": "Armenia",
       "population": 3033500,
-      "births": 33672,
+      "births": 36278,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 44.509,
-      "lat": 40.1596
+      "lon": 45.0549,
+      "lat": 40.1784,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "UY",
       "iso3": "URY",
       "name": "Uruguay",
       "population": 3386588,
-      "births": 33195,
+      "births": 33196,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -56.0675,
-      "lat": -34.8941
+      "lon": -56.0192,
+      "lat": -32.782,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "JM",
       "iso3": "JAM",
       "name": "Jamaica",
       "population": 2839175,
-      "births": 32509,
+      "births": 32508,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -76.792,
-      "lat": 17.9927
+      "lon": -77.3036,
+      "lat": 18.1221,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "HR",
       "iso3": "HRV",
       "name": "Croatia",
       "population": 3866200,
-      "births": 32089,
+      "births": 31379,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 15.9614,
-      "lat": 45.8069
+      "lon": 16.6258,
+      "lat": 44.9119,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TL",
@@ -1572,8 +1856,10 @@
       "births": 30489,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 125.567,
-      "lat": -8.56667
+      "lon": 125.9502,
+      "lat": -8.8099,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SZ",
@@ -1583,30 +1869,36 @@
       "births": 29390,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 31.4659,
-      "lat": -26.5225
+      "lon": 31.5107,
+      "lat": -26.5625,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "QA",
       "iso3": "QAT",
       "name": "Qatar",
       "population": 2857822,
-      "births": 27218,
+      "births": 29034,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 51.5082,
-      "lat": 25.2948
+      "lon": 51.1979,
+      "lat": 25.3185,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MD",
       "iso3": "MDA",
       "name": "Moldova",
       "population": 2402306,
-      "births": 25440,
+      "births": 32140,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 28.8497,
-      "lat": 47.0167
+      "lon": 28.3911,
+      "lat": 47.0726,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KM",
@@ -1616,41 +1908,49 @@
       "births": 24467,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 43.2418,
-      "lat": -11.6986
+      "lon": 43.3483,
+      "lat": -11.6589,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "DJ",
       "iso3": "DJI",
       "name": "Djibouti",
       "population": 1168722,
-      "births": 24463,
+      "births": 24462,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 43.1425,
-      "lat": 11.5806
+      "lon": 42.6135,
+      "lat": 11.7502,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BA",
       "iso3": "BIH",
       "name": "Bosnia and Herzegovina",
       "population": 3164253,
-      "births": 24428,
+      "births": 24430,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 18.4214,
-      "lat": 43.8607
+      "lon": 17.8347,
+      "lat": 44.1442,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AL",
       "iso3": "ALB",
       "name": "Albania",
       "population": 2377128,
-      "births": 24083,
+      "births": 28283,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 19.8172,
-      "lat": 41.3317
+      "lon": 20.0611,
+      "lat": 41.1417,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SB",
@@ -1660,30 +1960,36 @@
       "births": 21878,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 159.949,
-      "lat": -9.42676
+      "lon": 160.1648,
+      "lat": -9.6131,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BH",
       "iso3": "BHR",
       "name": "Bahrain",
       "population": 1588670,
-      "births": 19116,
+      "births": 19338,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 50.5354,
-      "lat": 26.1921
+      "lon": 50.5407,
+      "lat": 26.048,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LT",
       "iso3": "LTU",
       "name": "Lithuania",
       "population": 2888278,
-      "births": 19063,
+      "births": 22186,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 25.2799,
-      "lat": 54.6896
+      "lon": 23.946,
+      "lat": 55.2944,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "XK",
@@ -1694,29 +2000,35 @@
       "popYear": 2024,
       "cbrYear": 2024,
       "lon": 20.926,
-      "lat": 42.565
+      "lat": 42.565,
+      "birthsYear": 2024,
+      "birthsSource": "wb-cbr-estimate"
     },
     {
       "iso2": "PR",
       "iso3": "PRI",
       "name": "Puerto Rico (US)",
       "population": 3202521,
-      "births": 18254,
+      "births": 19051,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -66.0,
-      "lat": 18.23
+      "lon": -66.4943,
+      "lat": 18.2162,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SI",
       "iso3": "SVN",
       "name": "Slovenia",
       "population": 2127400,
-      "births": 16806,
+      "births": 17563,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 14.5044,
-      "lat": 46.0546
+      "lon": 14.8906,
+      "lat": 46.1376,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "FJ",
@@ -1726,8 +2038,10 @@
       "births": 16592,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 178.399,
-      "lat": -18.1149
+      "lon": 177.9814,
+      "lat": -17.8225,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GY",
@@ -1737,30 +2051,36 @@
       "births": 16525,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -58.1548,
-      "lat": 6.80461
+      "lon": -58.9135,
+      "lat": 4.6821,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MK",
       "iso3": "MKD",
       "name": "North Macedonia",
       "population": 1824359,
-      "births": 16054,
+      "births": 16587,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 21.4361,
-      "lat": 42.0024
+      "lon": 21.71,
+      "lat": 41.594,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TT",
       "iso3": "TTO",
       "name": "Trinidad and Tobago",
       "population": 1368333,
-      "births": 14426,
+      "births": 15897,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -61.4789,
-      "lat": 10.6596
+      "lon": -61.3724,
+      "lat": 10.4155,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CY",
@@ -1770,30 +2090,36 @@
       "births": 14285,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 33.3736,
-      "lat": 35.1676
+      "lon": 33.3753,
+      "lat": 35.117,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LV",
       "iso3": "LVA",
       "name": "Latvia",
       "population": 1866124,
-      "births": 12876,
+      "births": 14017,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 24.1048,
-      "lat": 56.9465
+      "lon": 24.6937,
+      "lat": 56.8139,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MU",
       "iso3": "MUS",
       "name": "Mauritius",
       "population": 1245779,
-      "births": 12832,
+      "births": 11600,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 57.4977,
-      "lat": -20.1605
+      "lon": 57.5642,
+      "lat": -20.2814,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SR",
@@ -1803,8 +2129,10 @@
       "births": 10882,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -55.1679,
-      "lat": 5.8232
+      "lon": -55.8555,
+      "lat": 4.0987,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BT",
@@ -1814,19 +2142,23 @@
       "births": 9914,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 89.6177,
-      "lat": 27.5768
+      "lon": 90.4672,
+      "lat": 27.4216,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "EE",
       "iso3": "EST",
       "name": "Estonia",
       "population": 1372341,
-      "births": 9744,
+      "births": 10926,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 24.7586,
-      "lat": 59.4392
+      "lon": 25.9169,
+      "lat": 58.6481,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "VU",
@@ -1836,8 +2168,10 @@
       "births": 9063,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 168.321,
-      "lat": -17.7404
+      "lon": 166.8491,
+      "lat": -15.1891,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BZ",
@@ -1847,19 +2181,23 @@
       "births": 7529,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -88.7713,
-      "lat": 17.2534
+      "lon": -88.6827,
+      "lat": 17.2425,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "ME",
       "iso3": "MNE",
       "name": "Montenegro",
       "population": 623525,
-      "births": 6983,
+      "births": 7058,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 19.2595,
-      "lat": 42.4602
+      "lon": 19.2951,
+      "lat": 42.7369,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "ST",
@@ -1869,19 +2207,23 @@
       "births": 6617,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 6.6071,
-      "lat": 0.20618
+      "lon": 6.6062,
+      "lat": 0.2274,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LU",
       "iso3": "LUX",
       "name": "Luxembourg",
       "population": 677012,
-      "births": 6432,
+      "births": 6941,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 6.1296,
-      "lat": 49.61
+      "lon": 6.1032,
+      "lat": 49.7752,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CV",
@@ -1891,8 +2233,10 @@
       "births": 6415,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -23.5087,
-      "lat": 14.9218
+      "lon": -23.634,
+      "lat": 15.0764,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BN",
@@ -1902,8 +2246,10 @@
       "births": 6167,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 114.946,
-      "lat": 4.94199
+      "lon": 114.6431,
+      "lat": 4.5432,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MV",
@@ -1913,8 +2259,10 @@
       "births": 5588,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 73.5109,
-      "lat": 4.1742
+      "lon": 73.1008,
+      "lat": -0.6066,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "WS",
@@ -1924,19 +2272,23 @@
       "births": 5444,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -171.752,
-      "lat": -13.8314
+      "lon": -172.4411,
+      "lat": -13.6343,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MT",
       "iso3": "MLT",
       "name": "Malta",
       "population": 568847,
-      "births": 4380,
+      "births": 4212,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 14.5189,
-      "lat": 35.9042
+      "lon": 14.4419,
+      "lat": 35.8905,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BS",
@@ -1946,19 +2298,23 @@
       "births": 4341,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -77.339,
-      "lat": 25.0661
+      "lon": -78.0728,
+      "lat": 24.7216,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "IS",
       "iso3": "ISL",
       "name": "Iceland",
       "population": 386506,
-      "births": 4329,
+      "births": 4377,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -21.8952,
-      "lat": 64.1353
+      "lon": -19.0568,
+      "lat": 65.1236,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "NC",
@@ -1968,19 +2324,23 @@
       "births": 4106,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 166.464,
-      "lat": -22.2677
+      "lon": 165.5077,
+      "lat": -21.33,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MO",
       "iso3": "MAC",
       "name": "Macao SAR, China",
       "population": 687000,
-      "births": 3641,
+      "births": 4600,
       "popYear": 2024,
       "cbrYear": 2024,
       "lon": 113.55,
-      "lat": 22.1667
+      "lat": 22.1667,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KI",
@@ -1990,8 +2350,10 @@
       "births": 3405,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 172.979,
-      "lat": 1.32905
+      "lon": -157.3902,
+      "lat": 1.8677,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BB",
@@ -2001,8 +2363,10 @@
       "births": 3140,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -59.6105,
-      "lat": 13.0935
+      "lon": -59.5574,
+      "lat": 13.1832,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PF",
@@ -2012,8 +2376,10 @@
       "births": 3012,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -149.57,
-      "lat": -17.535
+      "lon": -149.4004,
+      "lat": -17.6747,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GU",
@@ -2023,8 +2389,10 @@
       "births": 2910,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 144.794,
-      "lat": 13.4443
+      "lon": 144.7802,
+      "lat": 13.4454,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "FM",
@@ -2034,8 +2402,10 @@
       "births": 2526,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 158.185,
-      "lat": 6.91771
+      "lon": 158.2292,
+      "lat": 6.8789,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TO",
@@ -2045,8 +2415,10 @@
       "births": 2400,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -175.216,
-      "lat": -21.136
+      "lon": -175.2042,
+      "lat": -21.1593,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LC",
@@ -2056,8 +2428,10 @@
       "births": 2015,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -60.9832,
-      "lat": 14.0
+      "lon": -60.969,
+      "lat": 13.8957,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "JG",
@@ -2067,8 +2441,10 @@
       "births": 1379,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": null,
-      "lat": null
+      "lon": -2.3528,
+      "lat": 49.3371,
+      "birthsYear": 2024,
+      "birthsSource": "wb-cbr-estimate"
     },
     {
       "iso2": "GD",
@@ -2078,19 +2454,23 @@
       "births": 1345,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -61.7449,
-      "lat": 12.0653
+      "lon": -61.6794,
+      "lat": 12.1129,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SC",
       "iso3": "SYC",
       "name": "Seychelles",
       "population": 121354,
-      "births": 1335,
+      "births": 1753,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 55.4466,
-      "lat": -4.6309
+      "lon": 55.4725,
+      "lat": -4.66,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "VC",
@@ -2100,30 +2480,36 @@
       "births": 1203,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -61.2653,
-      "lat": 13.2035
+      "lon": -61.1938,
+      "lat": 13.2548,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "VI",
       "iso3": "VIR",
       "name": "Virgin Islands (U.S.)",
       "population": 104377,
-      "births": 1159,
+      "births": 941,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -64.8963,
-      "lat": 18.3358
+      "lon": -64.7616,
+      "lat": 17.738,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "CW",
       "iso3": "CUW",
       "name": "Curacao",
       "population": 155967,
-      "births": 1123,
+      "births": 1399,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": null,
-      "lat": null
+      "lon": -68.9694,
+      "lat": 12.2,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AG",
@@ -2133,8 +2519,10 @@
       "births": 1102,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -61.8456,
-      "lat": 17.1175
+      "lon": -61.7853,
+      "lat": 17.0715,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KY",
@@ -2144,19 +2532,23 @@
       "births": 861,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -81.3857,
-      "lat": 19.3022
+      "lon": -81.252,
+      "lat": 19.3112,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AW",
       "iso3": "ABW",
       "name": "Aruba",
       "population": 107995,
-      "births": 820,
+      "births": 1022,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -70.0167,
-      "lat": 12.5167
+      "lon": -69.9756,
+      "lat": 12.5156,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MH",
@@ -2166,8 +2558,10 @@
       "births": 754,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 171.135,
-      "lat": 7.11046
+      "lon": 168.7202,
+      "lat": 7.3079,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "DM",
@@ -2177,8 +2571,10 @@
       "births": 727,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -61.39,
-      "lat": 15.2976
+      "lon": -61.3605,
+      "lat": 15.4293,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AS",
@@ -2188,8 +2584,10 @@
       "births": 701,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -170.691,
-      "lat": -14.2846
+      "lon": -170.7007,
+      "lat": -14.3057,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "IM",
@@ -2199,30 +2597,36 @@
       "births": 697,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -4.47928,
-      "lat": 54.1509
+      "lon": -4.533,
+      "lat": 54.2286,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GL",
       "iso3": "GRL",
       "name": "Greenland",
       "population": 56836,
-      "births": 682,
+      "births": 762,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -51.7214,
-      "lat": 64.1836
+      "lon": -42.0757,
+      "lat": 74.1685,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "FO",
       "iso3": "FRO",
       "name": "Faroe Islands",
       "population": 54640,
-      "births": 590,
+      "births": 705,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -6.91181,
-      "lat": 61.8926
+      "lon": -6.9811,
+      "lat": 62.1309,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "AD",
@@ -2232,8 +2636,10 @@
       "births": 561,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 1.5218,
-      "lat": 42.5075
+      "lon": 1.5802,
+      "lat": 42.5486,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "KN",
@@ -2243,8 +2649,10 @@
       "births": 550,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -62.7309,
-      "lat": 17.3
+      "lon": -62.7456,
+      "lat": 17.3147,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MP",
@@ -2254,8 +2662,10 @@
       "births": 536,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 145.765,
-      "lat": 15.1935
+      "lon": 145.7412,
+      "lat": 15.1781,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "BM",
@@ -2265,8 +2675,10 @@
       "births": 512,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -64.706,
-      "lat": 32.3293
+      "lon": -64.7459,
+      "lat": 32.3151,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TC",
@@ -2276,8 +2688,10 @@
       "births": 490,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -71.141389,
-      "lat": 21.4602778
+      "lon": -71.7406,
+      "lat": 21.7999,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "GI",
@@ -2287,8 +2701,10 @@
       "births": 480,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": null,
-      "lat": null
+      "lon": -5.3455,
+      "lat": 36.1402,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SX",
@@ -2298,8 +2714,10 @@
       "births": 394,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": null,
-      "lat": null
+      "lon": -63.0688,
+      "lat": 18.0394,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MF",
@@ -2309,8 +2727,10 @@
       "births": 393,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": null,
-      "lat": null
+      "lon": -63.0668,
+      "lat": 18.078,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "MC",
@@ -2320,19 +2740,23 @@
       "births": 369,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 7.41891,
-      "lat": 43.7325
+      "lon": 7.4128,
+      "lat": 43.748,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "LI",
       "iso3": "LIE",
       "name": "Liechtenstein",
       "population": 40450,
-      "births": 340,
+      "births": 371,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 9.52148,
-      "lat": 47.1411
+      "lon": 9.5477,
+      "lat": 47.1463,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "VG",
@@ -2342,8 +2766,10 @@
       "births": 324,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": -64.623056,
-      "lat": 18.431389
+      "lon": -64.6241,
+      "lat": 18.422,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "NR",
@@ -2353,8 +2779,10 @@
       "births": 293,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 166.920867,
-      "lat": -0.5477
+      "lon": 166.9294,
+      "lat": -0.5221,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "TV",
@@ -2364,8 +2792,10 @@
       "births": 212,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 179.089567,
-      "lat": -8.6314877
+      "lon": 179.2178,
+      "lat": -8.5147,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "PW",
@@ -2375,19 +2805,24 @@
       "births": 189,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 134.479,
-      "lat": 7.34194
+      "lon": 134.5797,
+      "lat": 7.5348,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     },
     {
       "iso2": "SM",
       "iso3": "SMR",
       "name": "San Marino",
       "population": 33977,
-      "births": 143,
+      "births": 196,
       "popYear": 2024,
       "cbrYear": 2024,
-      "lon": 12.4486,
-      "lat": 43.9322
+      "lon": 12.4613,
+      "lat": 43.9428,
+      "birthsYear": 2024,
+      "birthsSource": "wpp2024"
     }
-  ]
+  ],
+  "pinSource": "Globe pins use country centroids (gavinr/world-countries-centroids, Natural Earth derived), not capitals."
 }
