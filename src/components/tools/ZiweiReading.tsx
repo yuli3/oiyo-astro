@@ -4,6 +4,7 @@ import { calculateZiWeiCoordinates } from "@/lib/ontology/ziwei/calculator";
 import { CITIES } from "@/lib/ontology/natal/signs";
 import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import { BirthDateField } from "@/components/shared/BirthDateField";
+import ZiWeiWheel from "./ziwei/ZiWeiWheel";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const COPY: Record<Lang, { birthDate: string; needTime: string; bureau: string; life: string; auxTitle: string; star: string }> = {
@@ -44,6 +45,7 @@ export default function ZiweiReading({ locale = "ko" }: { locale?: string }) {
       <p className="text-sm font-black text-violet-950">{t.bureau} · {result.bureau.name}</p>
       <p className="mt-2 text-sm text-violet-800">{t.life} ({t.star}) · {result.lifePalace.earthlyBranch}</p>
       {namedStar && <p className="mt-1 text-sm text-violet-800">{t.auxTitle} · {namedStar.name}</p>}
+      <ZiWeiWheel locale={lang} palaces={result.palaces} lifeKey={result.lifePalace.key} />
     </div>
   );
 }

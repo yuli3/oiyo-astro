@@ -8,6 +8,7 @@ import { BRANCH_ORDER } from '../../manifest/data/saju/branches';
 import type { SajuResult, HeavenlyStem, EarthlyBranch } from '../../lib/ontology/saju/types';
 import YongsinSection from './saju/YongsinSection';
 import LifeCategoriesSection from './saju/LifeCategoriesSection';
+import FiveElementsOrbit from './saju/FiveElementsOrbit';
 import { decodeResult, writeResultHash } from '../../lib/result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
 import { Button } from '../ui/button';
@@ -363,10 +364,16 @@ const READING_COPY: Record<Locale, {
   controls: string;
   balanceQuestions: string;
   balanceQuestionItems: string[];
+  quickAnswerTitle: string;
+  quickAnswerBody: string;
+  monthlyCta: string;
 }> = {
   ko: {
     readingMap: '사주 해석 지도',
     readingMapDesc: '네 기둥은 한 줄의 결론보다 위치와 균형을 함께 볼 때 더 자연스럽게 읽힙니다.',
+    quickAnswerTitle: '내 오행 한눈에 보기',
+    quickAnswerBody: '당신의 사주에서 가장 강하게 드러나는 오행은 %s입니다.',
+    monthlyCta: '이번 달 사주 운세 보기',
     balanceTitle: '오행 균형',
     abundance: '강하게 드러나는 오행',
     scarcity: '보완하면 좋은 오행',
@@ -386,6 +393,9 @@ const READING_COPY: Record<Locale, {
   en: {
     readingMap: 'Saju Reading Map',
     readingMapDesc: 'The four pillars read best when position and balance are considered together.',
+    quickAnswerTitle: 'Your Five Elements at a Glance',
+    quickAnswerBody: 'The most strongly expressed element in your saju is %s.',
+    monthlyCta: "See this month's saju fortune",
     balanceTitle: 'Five Element Balance',
     abundance: 'Strongly expressed element',
     scarcity: 'Element to support',
@@ -405,6 +415,9 @@ const READING_COPY: Record<Locale, {
   ja: {
     readingMap: '四柱の読み方マップ',
     readingMapDesc: '四柱は結論だけでなく、位置と五行の均衡を合わせて見ると読みやすくなります。',
+    quickAnswerTitle: '五行をひと目で',
+    quickAnswerBody: 'あなたの四柱で最も強く出る五行は%sです。',
+    monthlyCta: '今月の四柱運勢を見る',
     balanceTitle: '五行バランス',
     abundance: '強く出る五行',
     scarcity: '補うとよい五行',
@@ -424,6 +437,9 @@ const READING_COPY: Record<Locale, {
   fr: {
     readingMap: 'Carte de lecture Saju',
     readingMapDesc: 'Les quatre piliers se lisent mieux en croisant position et équilibre.',
+    quickAnswerTitle: 'Vos cinq éléments en un coup d’œil',
+    quickAnswerBody: 'Dans votre Saju, l’élément le plus fortement exprimé est %s.',
+    monthlyCta: 'Voir la fortune Saju de ce mois',
     balanceTitle: 'Équilibre des cinq éléments',
     abundance: 'Élément fortement exprimé',
     scarcity: 'Élément à soutenir',
@@ -443,6 +459,9 @@ const READING_COPY: Record<Locale, {
   es: {
     readingMap: 'Mapa de lectura Saju',
     readingMapDesc: 'Los cuatro pilares se leen mejor al combinar posición y equilibrio.',
+    quickAnswerTitle: 'Tus cinco elementos de un vistazo',
+    quickAnswerBody: 'En tu Saju, el elemento más expresado es %s.',
+    monthlyCta: 'Ver la fortuna Saju de este mes',
     balanceTitle: 'Equilibrio de los cinco elementos',
     abundance: 'Elemento más expresado',
     scarcity: 'Elemento a reforzar',
@@ -462,6 +481,9 @@ const READING_COPY: Record<Locale, {
   zh: {
     readingMap: '四柱解读地图',
     readingMapDesc: '四柱不只看单一结论，也要合看位置与五行平衡。',
+    quickAnswerTitle: '一眼看懂我的五行',
+    quickAnswerBody: '你的四柱中最强的五行是%s。',
+    monthlyCta: '查看本月四柱运势',
     balanceTitle: '五行平衡',
     abundance: '较强的五行',
     scarcity: '可补足的五行',
@@ -751,6 +773,26 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                 <PillarCard key={p.label} label={p.label} role={roles[p.key] ?? ''} stemIdx={p.stem} branchIdx={p.branch} />
               ))}
             </div>
+          </div>
+
+          {/* Quick answer — 내 오행 한눈에 보기 (answer-first, before deeper reads) */}
+          <div className="bg-white rounded-2xl border border-gray-200 p-4">
+            <h2 className="text-sm font-semibold text-gray-800">{reading.quickAnswerTitle}</h2>
+            <p className="mt-1 text-sm leading-relaxed text-gray-700">
+              {reading.quickAnswerBody.replace('%s', ELEMENTS[result.sortedElements[0]][locale])}
+            </p>
+            <FiveElementsOrbit
+              locale={locale}
+              elementCount={result.elementCount}
+              dominantElement={result.sortedElements[0]}
+              missingElements={result.missingElements}
+            />
+            <a
+              href={`/${locale}/fortune/monthly`}
+              className="mt-3 inline-flex items-center justify-center rounded-xl bg-green-600 px-4 py-2 text-xs font-semibold text-white hover:bg-green-700"
+            >
+              {reading.monthlyCta}
+            </a>
           </div>
 
           {/* 용신/기신 — 이로운/해로운 기운 */}
