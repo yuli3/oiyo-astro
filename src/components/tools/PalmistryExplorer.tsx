@@ -13,7 +13,6 @@ const COPY: Record<PalmLocale, {
   variationsLabel: string;
   guideLink: string;
   zodiacLink: string;
-  disclaimer: string;
 }> = {
   ko: {
     title: '손금 탐색기 — 4대 주요 선',
@@ -23,7 +22,6 @@ const COPY: Record<PalmLocale, {
     variationsLabel: '이런 특징이라면',
     guideLink: '손금 보는 법 완전 가이드 →',
     zodiacLink: '별자리 성격도 보기 →',
-    disclaimer: '손금은 오랜 문화적 상징 체계로, 자기 성찰의 재미를 위한 것이며 건강·운명을 단정하지 않습니다.',
   },
   en: {
     title: 'Palm Explorer — The Four Major Lines',
@@ -33,7 +31,6 @@ const COPY: Record<PalmLocale, {
     variationsLabel: 'If your line looks like this',
     guideLink: 'Complete palm-reading guide →',
     zodiacLink: 'See zodiac personality too →',
-    disclaimer: 'Palmistry is a long-standing cultural symbol system meant for playful self-reflection — it does not determine health or destiny.',
   },
   ja: {
     title: '手相エクスプローラー — 四大主要線',
@@ -43,7 +40,6 @@ const COPY: Record<PalmLocale, {
     variationsLabel: 'こんな特徴なら',
     guideLink: '手相の見方 完全ガイド →',
     zodiacLink: '星座の性格も見る →',
-    disclaimer: '手相は長い文化的象徴の体系で、自己省察を楽しむためのものであり、健康や運命を断定しません。',
   },
   zh: {
     title: '手相探索器 — 四大主线',
@@ -53,7 +49,6 @@ const COPY: Record<PalmLocale, {
     variationsLabel: '若你的线是这样',
     guideLink: '手相完全指南 →',
     zodiacLink: '也看看星座性格 →',
-    disclaimer: '手相是源远流长的文化象征体系，用于趣味性的自我省思，并不决定健康或命运。',
   },
   fr: {
     title: 'Explorateur de paume — Les quatre lignes majeures',
@@ -63,7 +58,6 @@ const COPY: Record<PalmLocale, {
     variationsLabel: 'Si votre ligne ressemble à ceci',
     guideLink: 'Guide complet de la chiromancie →',
     zodiacLink: 'Voir aussi la personnalité du signe →',
-    disclaimer: 'La chiromancie est un système symbolique culturel ancien, destiné à une réflexion ludique — elle ne détermine ni la santé ni le destin.',
   },
   es: {
     title: 'Explorador de la palma — Las cuatro líneas principales',
@@ -73,7 +67,6 @@ const COPY: Record<PalmLocale, {
     variationsLabel: 'Si tu línea se ve así',
     guideLink: 'Guía completa de quiromancia →',
     zodiacLink: 'Ver también la personalidad del signo →',
-    disclaimer: 'La quiromancia es un sistema simbólico cultural antiguo, para una reflexión lúdica — no determina la salud ni el destino.',
   },
 };
 
@@ -165,8 +158,6 @@ export default function PalmistryExplorer({ locale }: Props) {
         <a href="https://blog.oiyo.net/ko/palm-reading-complete-guide/" className="font-bold text-rose-700 hover:underline">{t.guideLink}</a>
         <a href={`/${loc}/zodiac/personality`} className="font-semibold text-slate-600 hover:underline">{t.zodiacLink}</a>
       </div>
-
-      <p className="mt-5 text-center text-xs text-slate-400">{t.disclaimer}</p>
     </section>
   );
 }

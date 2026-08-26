@@ -615,7 +615,6 @@ const UI: Record<Locale, {
   luckySection: string;
   luckyColor: string;
   luckyNumber: string;
-  disclaimer: string;
   resetBtn: string;
 }> = {
   ko: {
@@ -630,7 +629,6 @@ const UI: Record<Locale, {
     luckySection: "오늘의 행운",
     luckyColor: "행운의 색",
     luckyNumber: "행운의 숫자",
-    disclaimer: "* 재미로 보는 운세입니다",
     resetBtn: "다시 선택",
   },
   en: {
@@ -645,7 +643,6 @@ const UI: Record<Locale, {
     luckySection: "Today's Lucky",
     luckyColor: "Lucky Color",
     luckyNumber: "Lucky Number",
-    disclaimer: "* For entertainment purposes only",
     resetBtn: "Change Type",
   },
   ja: {
@@ -660,7 +657,6 @@ const UI: Record<Locale, {
     luckySection: "今日のラッキー",
     luckyColor: "ラッキーカラー",
     luckyNumber: "ラッキーナンバー",
-    disclaimer: "* 占いは楽しみのためのものです",
     resetBtn: "選び直す",
   },
   zh: {
@@ -675,7 +671,6 @@ const UI: Record<Locale, {
     luckySection: "今日幸运",
     luckyColor: "幸运颜色",
     luckyNumber: "幸运数字",
-    disclaimer: "* 仅供娱乐参考",
     resetBtn: "重新选择",
   },
   fr: {
@@ -690,7 +685,6 @@ const UI: Record<Locale, {
     luckySection: "Chance du Jour",
     luckyColor: "Couleur Chanceuse",
     luckyNumber: "Numéro Chanceux",
-    disclaimer: "* À titre de divertissement uniquement",
     resetBtn: "Changer de Groupe",
   },
   es: {
@@ -705,7 +699,6 @@ const UI: Record<Locale, {
     luckySection: "Suerte del Día",
     luckyColor: "Color de Suerte",
     luckyNumber: "Número de Suerte",
-    disclaimer: "* Solo con fines de entretenimiento",
     resetBtn: "Cambiar Tipo",
   },
 };
@@ -900,8 +893,6 @@ export default function BloodTypeFortune({ locale }: Props) {
               </div>
             </div>
           </div>
-
-          <p className="text-center text-xs text-gray-400">{ui.disclaimer}</p>
         </div>
       )}
     </div>

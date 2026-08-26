@@ -26,7 +26,6 @@ const UI: Record<Locale, {
   rulerLabel: string;
   dateRangeLabel: string;
   resetBtn: string;
-  disclaimer: string;
 }> = {
   ko: {
     title: "별자리 성격 분석",
@@ -43,7 +42,6 @@ const UI: Record<Locale, {
     rulerLabel: "지배 행성",
     dateRangeLabel: "날짜 범위",
     resetBtn: "다시 선택",
-    disclaimer: "별자리 성격 분석은 오락 목적으로만 제공됩니다.",
   },
   en: {
     title: "Zodiac Personality",
@@ -60,7 +58,6 @@ const UI: Record<Locale, {
     rulerLabel: "Ruling Planet",
     dateRangeLabel: "Date Range",
     resetBtn: "Choose Again",
-    disclaimer: "Zodiac personality analysis is for entertainment purposes only.",
   },
   ja: {
     title: "星座性格分析",
@@ -77,7 +74,6 @@ const UI: Record<Locale, {
     rulerLabel: "支配星",
     dateRangeLabel: "日付範囲",
     resetBtn: "もう一度選ぶ",
-    disclaimer: "星座性格分析はエンタメ目的のみです。",
   },
   fr: {
     title: "Personnalité Astrologique",
@@ -94,7 +90,6 @@ const UI: Record<Locale, {
     rulerLabel: "Planète gouvernante",
     dateRangeLabel: "Plage de dates",
     resetBtn: "Choisir à nouveau",
-    disclaimer: "L'analyse de personnalité astrologique est uniquement à des fins de divertissement.",
   },
   es: {
     title: "Personalidad del Zodíaco",
@@ -111,7 +106,6 @@ const UI: Record<Locale, {
     rulerLabel: "Planeta regente",
     dateRangeLabel: "Rango de fechas",
     resetBtn: "Elegir de nuevo",
-    disclaimer: "El análisis de personalidad zodiacal es solo para entretenimiento.",
   },
   cn: {
     title: "星座性格分析",
@@ -128,7 +122,6 @@ const UI: Record<Locale, {
     rulerLabel: "守護星",
     dateRangeLabel: "日期範圍",
     resetBtn: "重新選擇",
-    disclaimer: "星座性格分析僅供娛樂目的。",
   },
   zh: {
     title: "星座性格分析",
@@ -145,7 +138,6 @@ const UI: Record<Locale, {
     rulerLabel: "守护星",
     dateRangeLabel: "日期范围",
     resetBtn: "重新选择",
-    disclaimer: "星座性格分析仅供娱乐目的。",
   },
 };
 
@@ -935,9 +927,6 @@ export default function ZodiacPersonality({ locale }: Props) {
       >
         ← {ui.resetBtn}
       </button>
-
-      {/* Disclaimer */}
-      <p className="text-center text-xs text-gray-400">{ui.disclaimer}</p>
     </div>
   );
 }

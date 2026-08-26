@@ -405,14 +405,14 @@ const UI: Record<Locale, {
   title: string; subtitle: string;
   birthYear: string; calcBtn: string; resetBtn: string;
   stemLabel: string; elemLabel: string;
-  disclaimer: string; todayLabel: string;
+  todayLabel: string;
 }> = {
-  ko: { title: "사주 오늘의 운세", subtitle: "생년으로 보는 오행 기반 오늘 운세", birthYear: "태어난 해", calcBtn: "운세 보기", resetBtn: "초기화", stemLabel: "연주(年柱)", elemLabel: "주요 오행", disclaimer: "사주 운세는 동양의 전통적 운명론으로 과학적 근거가 없습니다. 재미와 자기 이해의 도구로만 활용하세요.", todayLabel: "오늘" },
-  en: { title: "Saju Daily Fortune", subtitle: "Today's fortune based on your birth year element", birthYear: "Birth Year", calcBtn: "Read Fortune", resetBtn: "Reset", stemLabel: "Year Pillar", elemLabel: "Element", disclaimer: "Saju fortune is a traditional East Asian art with no scientific basis. Use it only for fun and self-reflection.", todayLabel: "Today" },
-  ja: { title: "四柱今日の運勢", subtitle: "生まれ年の五行に基づく今日の運勢", birthYear: "生まれ年", calcBtn: "運勢を見る", resetBtn: "リセット", stemLabel: "年柱", elemLabel: "主要五行", disclaimer: "四柱運勢は科学的根拠のない東洋の伝統的な運命論です。楽しみと自己理解のツールとしてのみ活用してください。", todayLabel: "今日" },
-  zh: { title: "四柱今日运势", subtitle: "根据出生年份五行推算今日运势", birthYear: "出生年份", calcBtn: "查看运势", resetBtn: "重置", stemLabel: "年柱", elemLabel: "五行", disclaimer: "四柱运势是没有科学依据的东方传统命理。仅供娱乐和自我了解之用。", todayLabel: "今天" },
-  fr: { title: "Fortune Saju du Jour", subtitle: "Fortune du jour basée sur l'élément de votre année de naissance", birthYear: "Année de naissance", calcBtn: "Lire la fortune", resetBtn: "Réinitialiser", stemLabel: "Pilier Année", elemLabel: "Élément", disclaimer: "La fortune Saju est un art traditionnel est-asiatique sans base scientifique. Utilisez-le uniquement pour le plaisir.", todayLabel: "Aujourd'hui" },
-  es: { title: "Fortuna Saju del Día", subtitle: "Fortuna de hoy basada en el elemento de tu año de nacimiento", birthYear: "Año de nacimiento", calcBtn: "Leer fortuna", resetBtn: "Reiniciar", stemLabel: "Pilar Año", elemLabel: "Elemento", disclaimer: "La fortuna Saju es un arte tradicional del este asiático sin base científica. Úsalo solo para entretenimiento.", todayLabel: "Hoy" },
+  ko: { title: "사주 오늘의 운세", subtitle: "생년으로 보는 오행 기반 오늘 운세", birthYear: "태어난 해", calcBtn: "운세 보기", resetBtn: "초기화", stemLabel: "연주(年柱)", elemLabel: "주요 오행", todayLabel: "오늘" },
+  en: { title: "Saju Daily Fortune", subtitle: "Today's fortune based on your birth year element", birthYear: "Birth Year", calcBtn: "Read Fortune", resetBtn: "Reset", stemLabel: "Year Pillar", elemLabel: "Element", todayLabel: "Today" },
+  ja: { title: "四柱今日の運勢", subtitle: "生まれ年の五行に基づく今日の運勢", birthYear: "生まれ年", calcBtn: "運勢を見る", resetBtn: "リセット", stemLabel: "年柱", elemLabel: "主要五行", todayLabel: "今日" },
+  zh: { title: "四柱今日运势", subtitle: "根据出生年份五行推算今日运势", birthYear: "出生年份", calcBtn: "查看运势", resetBtn: "重置", stemLabel: "年柱", elemLabel: "五行", todayLabel: "今天" },
+  fr: { title: "Fortune Saju du Jour", subtitle: "Fortune du jour basée sur l'élément de votre année de naissance", birthYear: "Année de naissance", calcBtn: "Lire la fortune", resetBtn: "Réinitialiser", stemLabel: "Pilier Année", elemLabel: "Élément", todayLabel: "Aujourd'hui" },
+  es: { title: "Fortuna Saju del Día", subtitle: "Fortuna de hoy basada en el elemento de tu año de nacimiento", birthYear: "Año de nacimiento", calcBtn: "Leer fortuna", resetBtn: "Reiniciar", stemLabel: "Pilar Año", elemLabel: "Elemento", todayLabel: "Hoy" },
 };
 
 const STEM_NAMES: Record<Locale, string[]> = {
@@ -507,8 +507,6 @@ export default function SajuFortune({ locale }: Props) {
               </div>
             );
           })}
-
-          <p className="text-xs text-gray-400 text-center">{ui.disclaimer}</p>
 
           <button
             onClick={() => { setResult(null); setYear(null); }}

@@ -462,7 +462,6 @@ export default function NatalChartCalculator({ locale }: Props) {
         </div>
 
         <p className="mt-5 rounded-xl bg-slate-50 p-3 text-center text-xs text-slate-500">{t.method}</p>
-        <p className="mt-2 text-center text-xs text-slate-400">{t.disclaimer}</p>
 
         <button
           type="button"

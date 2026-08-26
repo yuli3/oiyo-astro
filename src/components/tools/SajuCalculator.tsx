@@ -928,8 +928,6 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             <p className="mt-2 text-xs leading-relaxed text-green-900/75">{reading.profileChangesDesc}</p>
           </div>
 
-          <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
-
           <Card className="border-primary/20 bg-primary/[0.04] shadow-sm">
             <CardHeader className="pb-3 text-center">
               <CardTitle className="text-base">{shareLabels.actions}</CardTitle>

@@ -12,12 +12,12 @@ const t = await getTranslations(locale);
 
 const year = new Date().getFullYear();
 const copy = {
-  en: { site: 'Tests', info: 'Information', family: 'OIYO family', knowledge: 'Knowledge index', support: 'Support OIYO' },
-  ko: { site: '테스트', info: '안내', family: 'OIYO 패밀리', knowledge: '지식 목록', support: 'OIYO 후원' },
-  ja: { site: 'テスト', info: 'ご案内', family: 'OIYOファミリー', knowledge: '知識一覧', support: 'OIYOを支援' },
-  zh: { site: '测试', info: '信息', family: 'OIYO 系列', knowledge: '知识索引', support: '支持 OIYO' },
-  fr: { site: 'Tests', info: 'Informations', family: 'Famille OIYO', knowledge: 'Index des connaissances', support: 'Soutenir OIYO' },
-  es: { site: 'Tests', info: 'Información', family: 'Familia OIYO', knowledge: 'Índice de conocimiento', support: 'Apoyar OIYO' },
+  en: { site: 'Tests', info: 'Information', family: 'OIYO family', knowledge: 'Knowledge index', support: 'Support OIYO', disclaimer: 'All results across OIYO are for entertainment and self-reflection — symbolic tools, not a substitute for career, financial, medical, legal, or relationship decisions.', methodology: 'View methodology' },
+  ko: { site: '테스트', info: '안내', family: 'OIYO 패밀리', knowledge: '지식 목록', support: 'OIYO 후원', disclaimer: 'OIYO의 모든 결과는 오락과 자기 성찰을 위한 상징 도구이며, 진로·투자·의료·법률·관계 등 중요한 결정을 대신하지 않습니다.', methodology: '방법론 보기' },
+  ja: { site: 'テスト', info: 'ご案内', family: 'OIYOファミリー', knowledge: '知識一覧', support: 'OIYOを支援', disclaimer: 'OIYOのすべての結果は娯楽と自己省察のための象徴的なツールであり、進路・投資・医療・法律・人間関係などの重要な決定の代わりにはなりません。', methodology: '方法論を見る' },
+  zh: { site: '测试', info: '信息', family: 'OIYO 系列', knowledge: '知识索引', support: '支持 OIYO', disclaimer: 'OIYO 的所有结果均为娱乐与自我反思用的象征工具，不能替代职业、投资、医疗、法律或人际关系等重要决策。', methodology: '查看方法论' },
+  fr: { site: 'Tests', info: 'Informations', family: 'Famille OIYO', knowledge: 'Index des connaissances', support: 'Soutenir OIYO', disclaimer: "Tous les résultats d'OIYO sont des outils symboliques destinés au divertissement et à la réflexion — ils ne remplacent pas une décision professionnelle, financière, médicale, juridique ou relationnelle.", methodology: 'Voir la méthodologie' },
+  es: { site: 'Tests', info: 'Información', family: 'Familia OIYO', knowledge: 'Índice de conocimiento', support: 'Apoyar OIYO', disclaimer: 'Todos los resultados de OIYO son herramientas simbólicas de entretenimiento y reflexión — no sustituyen decisiones profesionales, financieras, médicas, legales o relacionales.', methodology: 'Ver metodología' },
 }[locale];
 ---
 
@@ -53,7 +53,14 @@ const copy = {
       </nav>
     </section>
   </div>
-  <div class="mx-auto mt-8 flex max-w-6xl flex-wrap items-center justify-between gap-3 border-t border-border px-4 pt-5 text-xs text-muted-foreground">
-    <span>© {year} OIYO</span><a href="mailto:support@oiyo.net" class="hover:text-primary">support@oiyo.net</a>
+  <div class="mx-auto mt-8 max-w-6xl border-t border-border px-4 pt-5">
+    <p class="text-xs leading-5 text-muted-foreground/80">
+      {copy.disclaimer}
+      {' '}
+      <a href={localePath(locale, '/methodology')} class="underline decoration-dotted underline-offset-2 hover:text-primary">{copy.methodology}</a>
+    </p>
+    <div class="mt-3 flex flex-wrap items-center justify-between gap-3 text-xs text-muted-foreground">
+      <span>© {year} OIYO</span><a href="mailto:support@oiyo.net" class="hover:text-primary">support@oiyo.net</a>
+    </div>
   </div>
 </footer>

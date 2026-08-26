@@ -224,7 +224,6 @@ const L: Record<Locale, {
   title: string; subtitle: string;
   spreadLabel: string; drawBtn: string; redrawBtn: string;
   uprightLabel: string; reversedLabel: string;
-  disclaimer: string;
   spreads: Record<Spread, string>;
   shareBtn: string; shareCopied: string;
 }> = {
@@ -233,7 +232,6 @@ const L: Record<Locale, {
     spreadLabel: '스프레드 선택',
     drawBtn: '카드 뽑기', redrawBtn: '다시 뽑기',
     uprightLabel: '정방향', reversedLabel: '역방향',
-    disclaimer: '타로는 오락 및 자기 성찰 목적으로 제작되었으며 미래를 예측하지 않습니다.',
     spreads: { 1: '1장 — 오늘의 메시지', 3: '3장 — 과거·현재·미래', 5: '5장 — 켈틱 크로스' },
     shareBtn: '결과 링크 공유', shareCopied: '링크를 복사했어요!',
   },
@@ -242,7 +240,6 @@ const L: Record<Locale, {
     spreadLabel: 'Choose Spread',
     drawBtn: 'Draw Cards', redrawBtn: 'Draw Again',
     uprightLabel: 'Upright', reversedLabel: 'Reversed',
-    disclaimer: 'Tarot is for entertainment and self-reflection only, and does not predict the future.',
     spreads: { 1: '1 Card — Daily Message', 3: '3 Cards — Past · Present · Future', 5: '5 Cards — Celtic Cross' },
     shareBtn: 'Share this reading', shareCopied: 'Link copied!',
   },
@@ -251,7 +248,6 @@ const L: Record<Locale, {
     spreadLabel: 'スプレッドを選択',
     drawBtn: 'カードを引く', redrawBtn: '引き直す',
     uprightLabel: '正位置', reversedLabel: '逆位置',
-    disclaimer: 'タロットはエンターテインメントと自己内省を目的としており、未来を予言するものではありません。',
     spreads: { 1: '1枚 — 今日のメッセージ', 3: '3枚 — 過去・現在・未来', 5: '5枚 — ケルト十字' },
     shareBtn: 'この結果を共有', shareCopied: 'リンクをコピーしました!',
   },
@@ -260,7 +256,6 @@ const L: Record<Locale, {
     spreadLabel: 'Choisir le tirage',
     drawBtn: 'Tirer les cartes', redrawBtn: 'Retirer',
     uprightLabel: 'Droit', reversedLabel: 'Renversé',
-    disclaimer: "Le tarot est uniquement pour le divertissement et la réflexion personnelle, et ne prédit pas l'avenir.",
     spreads: { 1: '1 Carte — Message du jour', 3: '3 Cartes — Passé · Présent · Futur', 5: '5 Cartes — Croix celtique' },
     shareBtn: 'Partager ce tirage', shareCopied: 'Lien copié !',
   },
@@ -269,7 +264,6 @@ const L: Record<Locale, {
     spreadLabel: 'Elegir tirada',
     drawBtn: 'Sacar cartas', redrawBtn: 'Sacar de nuevo',
     uprightLabel: 'Derecha', reversedLabel: 'Invertida',
-    disclaimer: 'El tarot es solo para entretenimiento y reflexión personal, y no predice el futuro.',
     spreads: { 1: '1 Carta — Mensaje del día', 3: '3 Cartas — Pasado · Presente · Futuro', 5: '5 Cartas — Cruz celta' },
     shareBtn: 'Compartir esta lectura', shareCopied: '¡Enlace copiado!',
   },
@@ -278,7 +272,6 @@ const L: Record<Locale, {
     spreadLabel: '選擇牌陣',
     drawBtn: '抽牌', redrawBtn: '重新抽牌',
     uprightLabel: '正位', reversedLabel: '逆位',
-    disclaimer: '塔羅牌僅用於娛樂和自我反思，並不能預測未來。',
     spreads: { 1: '1張 — 今日訊息', 3: '3張 — 過去·現在·未來', 5: '5張 — 凱爾特十字' },
     shareBtn: '分享這次占卜', shareCopied: '連結已複製!',
   },
@@ -287,7 +280,6 @@ const L: Record<Locale, {
     spreadLabel: '选择牌阵',
     drawBtn: '抽牌', redrawBtn: '重新抽牌',
     uprightLabel: '正位', reversedLabel: '逆位',
-    disclaimer: '塔罗牌仅用于娱乐和自我反思，并不能预测未来。',
     spreads: { 1: '1张 — 今日信息', 3: '3张 — 过去·现在·未来', 5: '5张 — 凯尔特十字' },
     shareBtn: '分享这次占卜', shareCopied: '链接已复制!',
   },
@@ -497,8 +489,6 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
           {shareCopied ? `✅ ${t.shareCopied}` : `🔗 ${t.shareBtn}`}
         </button>
       )}
-
-      <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
     </div>
   );
 }

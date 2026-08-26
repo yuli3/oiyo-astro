@@ -274,14 +274,14 @@ const UI: Record<Locale, {
   person1: string; person2: string;
   birthYear: string; calcBtn: string; resetBtn: string;
   score: string; relation: string; strength: string; advice: string;
-  elemLabel: string; disclaimer: string;
+  elemLabel: string;
 }> = {
-  ko: { title: "사주 궁합", subtitle: "오행 기반 두 사람의 사주 궁합 분석", person1: "첫 번째 사람", person2: "두 번째 사람", birthYear: "태어난 해", calcBtn: "궁합 보기", resetBtn: "다시 하기", score: "궁합 점수", relation: "오행 관계", strength: "강점", advice: "조언", elemLabel: "오행", disclaimer: "사주 궁합은 동양의 전통적 운명론으로 과학적 근거가 없습니다. 재미로만 활용하세요." },
-  en: { title: "Saju Compatibility", subtitle: "Five-element compatibility analysis for two people", person1: "Person 1", person2: "Person 2", birthYear: "Birth Year", calcBtn: "Check Compatibility", resetBtn: "Try Again", score: "Compatibility Score", relation: "Element Relationship", strength: "Strength", advice: "Advice", elemLabel: "Element", disclaimer: "Saju compatibility is a traditional East Asian art with no scientific basis. Use it only for fun." },
-  ja: { title: "四柱相性診断", subtitle: "五行に基づく二人の相性分析", person1: "1人目", person2: "2人目", birthYear: "生まれ年", calcBtn: "相性を見る", resetBtn: "やり直す", score: "相性スコア", relation: "五行の関係", strength: "強み", advice: "アドバイス", elemLabel: "五行", disclaimer: "四柱相性は科学的根拠のない東洋の伝統的な占術です。楽しみのためだけに活用してください。" },
-  zh: { title: "四柱合婚", subtitle: "基于五行的两人相性分析", person1: "第一人", person2: "第二人", birthYear: "出生年份", calcBtn: "查看合婚", resetBtn: "重新开始", score: "相性分数", relation: "五行关系", strength: "优势", advice: "建议", elemLabel: "五行", disclaimer: "四柱合婚是没有科学依据的东方传统命理。仅供娱乐之用。" },
-  fr: { title: "Compatibilité Saju", subtitle: "Analyse de compatibilité par les cinq éléments", person1: "Personne 1", person2: "Personne 2", birthYear: "Année de naissance", calcBtn: "Vérifier la compatibilité", resetBtn: "Réessayer", score: "Score de compatibilité", relation: "Relation élémentaire", strength: "Point fort", advice: "Conseil", elemLabel: "Élément", disclaimer: "La compatibilité Saju est un art traditionnel est-asiatique sans base scientifique. À utiliser uniquement pour le plaisir." },
-  es: { title: "Compatibilidad Saju", subtitle: "Análisis de compatibilidad por los cinco elementos", person1: "Persona 1", person2: "Persona 2", birthYear: "Año de nacimiento", calcBtn: "Ver compatibilidad", resetBtn: "Intentar de nuevo", score: "Puntuación de compatibilidad", relation: "Relación elemental", strength: "Fortaleza", advice: "Consejo", elemLabel: "Elemento", disclaimer: "La compatibilidad Saju es un arte tradicional del este asiático sin base científica. Úsalo solo para entretenimiento." },
+  ko: { title: "사주 궁합", subtitle: "오행 기반 두 사람의 사주 궁합 분석", person1: "첫 번째 사람", person2: "두 번째 사람", birthYear: "태어난 해", calcBtn: "궁합 보기", resetBtn: "다시 하기", score: "궁합 점수", relation: "오행 관계", strength: "강점", advice: "조언", elemLabel: "오행" },
+  en: { title: "Saju Compatibility", subtitle: "Five-element compatibility analysis for two people", person1: "Person 1", person2: "Person 2", birthYear: "Birth Year", calcBtn: "Check Compatibility", resetBtn: "Try Again", score: "Compatibility Score", relation: "Element Relationship", strength: "Strength", advice: "Advice", elemLabel: "Element" },
+  ja: { title: "四柱相性診断", subtitle: "五行に基づく二人の相性分析", person1: "1人目", person2: "2人目", birthYear: "生まれ年", calcBtn: "相性を見る", resetBtn: "やり直す", score: "相性スコア", relation: "五行の関係", strength: "強み", advice: "アドバイス", elemLabel: "五行" },
+  zh: { title: "四柱合婚", subtitle: "基于五行的两人相性分析", person1: "第一人", person2: "第二人", birthYear: "出生年份", calcBtn: "查看合婚", resetBtn: "重新开始", score: "相性分数", relation: "五行关系", strength: "优势", advice: "建议", elemLabel: "五行" },
+  fr: { title: "Compatibilité Saju", subtitle: "Analyse de compatibilité par les cinq éléments", person1: "Personne 1", person2: "Personne 2", birthYear: "Année de naissance", calcBtn: "Vérifier la compatibilité", resetBtn: "Réessayer", score: "Score de compatibilité", relation: "Relation élémentaire", strength: "Point fort", advice: "Conseil", elemLabel: "Élément" },
+  es: { title: "Compatibilidad Saju", subtitle: "Análisis de compatibilidad por los cinco elementos", person1: "Persona 1", person2: "Persona 2", birthYear: "Año de nacimiento", calcBtn: "Ver compatibilidad", resetBtn: "Intentar de nuevo", score: "Puntuación de compatibilidad", relation: "Relación elemental", strength: "Fortaleza", advice: "Consejo", elemLabel: "Elemento" },
 };
 
 interface Result {
@@ -392,8 +392,6 @@ export default function SajuCompatibility({ locale }: Props) {
               </div>
             </div>
           </div>
-
-          <p className="text-xs text-gray-400 text-center">{ui.disclaimer}</p>
 
           <button
             onClick={() => { setResult(null); setYear1(null); setYear2(null); }}
