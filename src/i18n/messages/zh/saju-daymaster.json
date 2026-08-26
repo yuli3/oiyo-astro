@@ -6,11 +6,11 @@
       "具有领导才能，很难服从下属。",
       "过于固执有时会导致自以为是，所以需要灵活变通。"
     ],
-    "strengths": ["驾驶", "诚实", "责任", "独立"],
+    "strengths": ["进取心", "诚实", "责任", "独立"],
     "weaknesses": ["缺乏灵活性", "傲慢", "教条主义"],
-    "name": "Gye (癸)",
-    "nature": "Humble and intellectual wave of rain and dew wetting all things",
-    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+    "name": "甲（Jiǎ）",
+    "nature": "正直挺拔——直冲云霄的参天大树之魂",
+    "lifePurpose": "开辟前所未有的道路，并通过自身成长成为他人的庇护所。"
   },
   "EUL": {
     "traits": [
@@ -19,11 +19,11 @@
       "富有创造力、理智、善于沟通、与他人和谐相处。",
       "缺乏果断力，容易被周围环境所左右。"
     ],
-    "strengths": ["适应性", "灵活性", "亲和力", "美味"],
+    "strengths": ["适应性", "灵活性", "亲和力", "细腻"],
     "weaknesses": ["反复无常", "依赖性", "优柔寡断"],
-    "name": "Gye (癸)",
-    "nature": "Humble and intellectual wave of rain and dew wetting all things",
-    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+    "name": "乙（Yǐ）",
+    "nature": "能弯而不折的野草与藤蔓的坚韧",
+    "lifePurpose": "即使身处逆境也要绽放属于自己的花朵，并与他人携手打造一座郁郁葱葱的花园。"
   },
   "BYEONG": {
     "traits": [
@@ -34,9 +34,9 @@
     ],
     "strengths": ["乐观", "表现力", "诚实", "活力"],
     "weaknesses": ["不耐烦", "虚荣", "情绪过度"],
-    "name": "Gye (癸)",
-    "nature": "Humble and intellectual wave of rain and dew wetting all things",
-    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+    "name": "丙（Bǐng）",
+    "nature": "照耀世界的太阳般灿烂的热情与公正",
+    "lifePurpose": "在黑暗之处点亮光明，用热情温暖他人的心。"
   },
   "JEONG": {
     "traits": [
@@ -46,10 +46,10 @@
       "想太多，折磨自己，或者会胆怯、敏感。"
     ],
     "strengths": ["洞察力", "奉献精神", "艺术性", "冷静"],
-    "weaknesses": ["灵敏度", "痴迷", "被动性"],
-    "name": "Gye (癸)",
-    "nature": "Humble and intellectual wave of rain and dew wetting all things",
-    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+    "weaknesses": ["敏感", "痴迷", "被动性"],
+    "name": "丁（Dīng）",
+    "nature": "照亮黑暗的一支蜡烛与内心炽热的火焰",
+    "lifePurpose": "探索无形的真理，用自己的温暖治愈受伤的灵魂。"
   },
   "MU": {
     "traits": [
@@ -58,11 +58,11 @@
       "保守，视信用如生命，追求稳定而不是变化。",
       "可能过于固执和直率，导致沟通失败。"
     ],
-    "strengths": ["稳定", "驾驶", "宽容", "相信"],
+    "strengths": ["稳定", "进取心", "宽容", "信任"],
     "weaknesses": ["固执", "不敏感", "干燥"],
-    "name": "Gye (癸)",
-    "nature": "Humble and intellectual wave of rain and dew wetting all things",
-    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+    "name": "戊（Wù）",
+    "nature": "包容万物的高山之厚重与信念",
+    "lifePurpose": "成为不可动摇的准则，成为生命得以在其怀抱中成长的根基。"
   },
   "GI": {
     "traits": [
@@ -73,9 +73,9 @@
     ],
     "strengths": ["勤勉", "包容性", "实用性", "仁"],
     "weaknesses": ["自我中心", "怀疑", "保守主义"],
-    "name": "Gye (癸)",
-    "nature": "Humble and intellectual wave of rain and dew wetting all things",
-    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+    "name": "己（Jǐ）",
+    "nature": "如大地般滋养万物的仁慈",
+    "lifePurpose": "如同将一粒种子培育成参天大树，把周围的可能性耕耘成真实的果实。"
   },
   "GYEONG": {
     "traits": [
@@ -85,10 +85,10 @@
       "可以过于尖锐地指出别人的错误或暴露出破坏性的倾向。"
     ],
     "strengths": ["果断", "正义", "忠诚", "头脑冷静"],
-    "weaknesses": ["批判的", "侵略", "缺乏灵活性"],
-    "name": "Gye (癸)",
-    "nature": "Humble and intellectual wave of rain and dew wetting all things",
-    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+    "weaknesses": ["批判的", "攻击性", "缺乏灵活性"],
+    "name": "庚（Gēng）",
+    "nature": "毫不妥协的正义与坚定的决断",
+    "lifePurpose": "在混乱中建立秩序，剪除不必要之物以巩固本质。"
   },
   "SIN": {
     "traits": [
@@ -98,10 +98,10 @@
       "可能会沉迷于小事或因过度的完美主义而感到疲惫。"
     ],
     "strengths": ["完美主义", "审美之眼", "明晰", "自我管理"],
-    "weaknesses": ["灵敏度", "玩世不恭", "狭窄的关系"],
-    "name": "Gye (癸)",
-    "nature": "Humble and intellectual wave of rain and dew wetting all things",
-    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+    "weaknesses": ["敏感", "玩世不恭", "狭窄的关系"],
+    "name": "辛（Xīn）",
+    "nature": "磨砺宝石的光辉与锋利的刀刃",
+    "lifePurpose": "不断磨砺自己，成为普照人间的宝石，并以敏锐的洞察力清除荒谬。"
   },
   "IM": {
     "traits": [
@@ -112,9 +112,9 @@
     ],
     "strengths": ["智慧", "亲和力", "创造力", "宽容"],
     "weaknesses": ["懒惰", "心计", "不稳定"],
-    "name": "Gye (癸)",
-    "nature": "Humble and intellectual wave of rain and dew wetting all things",
-    "lifePurpose": "To quench the world's thirst and thirst, and convey invisible principles of life through intellectual exploration."
+    "name": "壬（Rén）",
+    "nature": "无尽流淌的大海之浩瀚，以及让万物流动的智慧",
+    "lifePurpose": "让停滞之处重新流动，以博大的包容调和世间的一切价值。"
   },
   "GYE": {
     "traits": [
@@ -125,7 +125,7 @@
     ],
     "strengths": ["智力", "适应性", "坚持", "创意想象力"],
     "weaknesses": ["悲哀", "虚弱", "紧张"],
-    "name": "盖伊",
+    "name": "癸（Guǐ）",
     "nature": "谦卑知性的雨露滋润万物的波涛",
     "lifePurpose": "解世间的渴求，通过智力探索传递无形的人生道理。"
   }
