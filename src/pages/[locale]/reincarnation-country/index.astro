@@ -1,9 +1,9 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import { LOCALES } from "../../i18n";
-import type { Locale } from "../../i18n";
-import ReincarnationCountry from "../../components/tools/ReincarnationCountry";
-import RelatedTools from "../../components/shared/RelatedTools.astro";
+import Layout from "../../../layouts/Layout.astro";
+import { LOCALES, localePath } from "../../../i18n";
+import type { Locale } from "../../../i18n";
+import ReincarnationCountry from "../../../components/tools/ReincarnationCountry";
+import RelatedTools from "../../../components/shared/RelatedTools.astro";
 
 export async function getStaticPaths() {
   return LOCALES.map((locale) => ({ params: { locale } }));
@@ -93,6 +93,7 @@ const faqs: Record<Locale, { title: string; items: { q: string; a: string }[] }>
       { q: "확률은 어떻게 정해지나요?", a: "신생아 모드는 유엔 WPP 2024 출생 수 비중, 인구 모드는 세계은행 인구 비중입니다. 코소보·채널제도처럼 WPP에 없는 지역만 세계은행 조출생률 추정을 씁니다. 행복도·GDP·취향은 당첨 확률을 바꾸지 않습니다." },
       { q: "여러 번 환생하면 같은 나라가 또 나오나요?", a: "나옵니다. 각 횟수는 독립 추첨이라 같은 나라가 반복돼도 오류가 아닙니다. 기록에 순서대로 남습니다." },
       { q: "지구본의 점은 수도인가요?", a: "아닙니다. 핀은 나라의 지리 중심에 둡니다. 러시아·호주처럼 수도가 한쪽에 치우친 나라가 지구본에서 나라 위치로 보이게 하기 위해서입니다." },
+      { q: "대륙 필터를 켜면 환생 확률이 바뀌나요?", a: "아닙니다. 필터는 상위 목록과 검색만 줄입니다. 환생하기 버튼은 여전히 전 세계 출생·인구 비중으로 뽑습니다." },
       { q: "기록과 공유는 어디에 저장되나요?", a: "환생 기록은 이 브라우저의 로컬 저장소에만 남습니다. 공유 링크는 주소의 나라 코드만 담고, 계정은 없습니다." },
     ],
   },
@@ -102,6 +103,7 @@ const faqs: Record<Locale, { title: string; items: { q: string; a: string }[] }>
       { q: "How are the odds set?", a: "Births mode uses UN WPP 2024 birth counts. Population mode uses World Bank population. A few territories missing from WPP keep a World Bank crude-birth-rate estimate. Happiness, GDP, and taste do not change the odds." },
       { q: "Can the same country appear twice?", a: "Yes. Multiple lives are independent draws, so repeats are allowed and stored in order." },
       { q: "Is the globe pin the capital?", a: "No. Pins sit on the country’s geographic center so large countries are not shown at a corner capital." },
+      { q: "Does the region filter change the odds?", a: "No. It only shortens the ranking and search. Reincarnate still draws with worldwide birth or population weights." },
       { q: "Where is history stored?", a: "History stays in this browser’s local storage. A share link only carries country codes in the URL. There is no account." },
     ],
   },
@@ -154,7 +156,7 @@ const faqJsonLd = {
 };
 ---
 
-<Layout title={m.title} description={m.description} locale={locale}>
+<Layout title={m.title} description={m.description} locale={locale} canonicalPath={localePath(locale, "/reincarnation-country/")}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="container mx-auto max-w-3xl px-4 py-8">
     <h1 class="text-3xl font-black tracking-tight text-slate-900">{m.heading}</h1>
@@ -162,9 +164,26 @@ const faqJsonLd = {
     <div class="mt-6">
       <ReincarnationCountry locale={locale} client:load />
     </div>
+    <p class="mt-8 text-sm">
+      <a class="font-semibold text-emerald-700 hover:underline" href={localePath(locale, "/reincarnation-country/weights/")}>
+        {locale === "ko"
+          ? "이 숫자는 무엇인가"
+          : locale === "ja"
+            ? "この数字は何か"
+            : locale === "zh"
+              ? "这些数字是什么"
+              : locale === "fr"
+                ? "Ce que sont ces chiffres"
+                : locale === "es"
+                  ? "Qué son estos números"
+                  : "What these numbers are"}
+      </a>
+    </p>
     <RelatedTools locale={locale} tools={["countryMatch"]} current="reincarnation" />
     <section class="mt-10 text-sm leading-relaxed text-slate-600">
-      <h2 class="text-lg font-bold text-slate-900">{note.title}</h2>
+      <h2 class="text-lg font-bold text-slate-900">
+        <a class="hover:underline" href={localePath(locale, "/reincarnation-country/weights/")}>{note.title}</a>
+      </h2>
       <p class="mt-2">{note.p1}</p>
       <p class="mt-2">{note.p2}</p>
     </section>

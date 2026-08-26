@@ -16,9 +16,13 @@ import {
   parseHistory,
   parseShareIso2,
   pickMany,
+  CONTINENTS,
+  matchesContinent,
+  parseContinent,
   ranked,
   tallyIso3,
   vsHome,
+  type Continent,
   type ReincarnationCountry as Country,
   type ReincarnationHistoryEntry,
   type WeightMode,
@@ -57,6 +61,14 @@ const COPY = {
   restore: { ko: "이 기록 보기", en: "Show this draw", ja: "この記録を見る", zh: "查看这次抽取", fr: "Voir ce tirage", es: "Ver este sorteo" },
   lives: { ko: "이번 환생", en: "This draw", ja: "今回の転生", zh: "这次投胎", fr: "Ce tirage", es: "Este sorteo" },
   pinNote: { ko: "지구본 핀은 수도가 아니라 나라의 지리 중심입니다.", en: "Globe pins sit on the country’s geographic center, not the capital.", ja: "地球儀のピンは首都ではなく、国の地理的中心です。", zh: "地球仪图钉在国家地理中心，不是首都。", fr: "L’épingle est au centre géographique du pays, pas à la capitale.", es: "El pin está en el centro geográfico del país, no en la capital." },
+  region: { ko: "대륙", en: "Region", ja: "大陸", zh: "大洲", fr: "Région", es: "Región" },
+  allRegions: { ko: "전 세계", en: "World", ja: "世界", zh: "全世界", fr: "Monde", es: "Mundo" },
+  asia: { ko: "아시아", en: "Asia", ja: "アジア", zh: "亚洲", fr: "Asie", es: "Asia" },
+  africa: { ko: "아프리카", en: "Africa", ja: "アフリカ", zh: "非洲", fr: "Afrique", es: "África" },
+  europe: { ko: "유럽", en: "Europe", ja: "ヨーロッパ", zh: "欧洲", fr: "Europe", es: "Europa" },
+  americas: { ko: "아메리카", en: "Americas", ja: "アメリカ", zh: "美洲", fr: "Amériques", es: "Américas" },
+  oceania: { ko: "오세아니아", en: "Oceania", ja: "オセアニア", zh: "大洋洲", fr: "Océanie", es: "Oceanía" },
+  filterNote: { ko: "대륙 필터는 목록과 검색만 바꿉니다. 환생 추첨은 전 세계 출생·인구 비중 그대로입니다.", en: "The region filter changes the list and search only. The draw still uses worldwide birth and population weights.", ja: "大陸フィルターは一覧と検索だけを変えます。転生の抽選は世界の出生・人口比重のままです。", zh: "大洲筛选只改列表和搜索。投胎抽签仍按全世界出生与人口比重。", fr: "Le filtre régional ne change que la liste et la recherche. Le tirage garde les poids mondiaux.", es: "El filtro regional solo cambia la lista y la búsqueda. El sorteo sigue usando pesos mundiales." },
 };
 
 function formatInt(n: number, locale: Locale): string {
@@ -83,11 +95,11 @@ function nameOf(row: Country, locale: Locale): string {
   return displayCountryName(row.iso2, locale, row.name);
 }
 
-function readQuery(): { mode: WeightMode; iso2: string[] } {
-  if (typeof window === "undefined") return { mode: "births", iso2: [] };
+function readQuery(): { mode: WeightMode; iso2: string[]; continent: Continent | "all" } {
+  if (typeof window === "undefined") return { mode: "births", iso2: [], continent: "all" };
   const params = new URLSearchParams(window.location.search);
   const mode = params.get("mode") === "population" ? "population" : "births";
-  return { mode, iso2: parseShareIso2(params.get("c")) };
+  return { mode, iso2: parseShareIso2(params.get("c")), continent: parseContinent(params.get("region")) };
 }
 
 function shareMessage(locale: Locale, mode: WeightMode, rows: Country[]): string {
@@ -111,24 +123,31 @@ export default function ReincarnationCountry({ locale }: Props) {
   const [shared, setShared] = useState<"link" | "text" | "share" | null>(null);
   const [ready, setReady] = useState(false);
   const [history, setHistory] = useState<ReincarnationHistoryEntry[]>([]);
+  const [continent, setContinent] = useState<Continent | "all">("all");
 
   const home = byIso2(homeIso2) ?? byIso2("KR")!;
   const latest = results[results.length - 1] ?? focus;
   const counts = useMemo(() => tallyIso3(results), [results]);
   const hitIso3 = useMemo(() => results.map((row) => row.iso3), [results]);
-  const top = useMemo(() => ranked(mode).slice(0, 10), [mode]);
+  const top = useMemo(
+    () => ranked(mode).filter((row) => matchesContinent(row, continent)).slice(0, 10),
+    [mode, continent],
+  );
   const options = useMemo(
     () =>
-      REINCARNATION_COUNTRIES.map((row) => ({
-        iso2: row.iso2,
-        label: nameOf(row, locale),
-      })).sort((a, b) => a.label.localeCompare(b.label, locale === "zh" ? "zh-CN" : locale)),
-    [locale],
+      REINCARNATION_COUNTRIES.filter((row) => matchesContinent(row, continent))
+        .map((row) => ({
+          iso2: row.iso2,
+          label: nameOf(row, locale),
+        }))
+        .sort((a, b) => a.label.localeCompare(b.label, locale === "zh" ? "zh-CN" : locale)),
+    [locale, continent],
   );
 
   useEffect(() => {
     const incoming = readQuery();
     setMode(incoming.mode);
+    setContinent(incoming.continent);
     const sharedRows = countriesFromIso2(incoming.iso2);
     if (sharedRows.length) {
       setResults(sharedRows);
@@ -147,11 +166,12 @@ export default function ReincarnationCountry({ locale }: Props) {
     if (!ready || typeof window === "undefined") return;
     const params = new URLSearchParams();
     if (mode !== "births") params.set("mode", mode);
+    if (continent !== "all") params.set("region", continent);
     const codes = formatShareIso2((results.length ? results : latest ? [latest] : []).map((row) => row.iso2));
     if (codes) params.set("c", codes);
     const next = `${window.location.pathname}${params.toString() ? `?${params}` : ""}`;
     window.history.replaceState(null, "", next);
-  }, [ready, mode, results, latest?.iso2]);
+  }, [ready, mode, continent, results, latest?.iso2]);
 
   function lookUp(value: string) {
     setQuery(value);
@@ -300,6 +320,25 @@ export default function ReincarnationCountry({ locale }: Props) {
         >
           {COPY.spin[locale]}
         </button>
+      </div>
+
+      <div>
+        <p className="mb-2 text-xs font-bold uppercase tracking-wide text-slate-400">{COPY.region[locale]}</p>
+        <div className="flex flex-wrap gap-2">
+          {(["all", ...CONTINENTS] as const).map((key) => (
+            <button
+              key={key}
+              type="button"
+              onClick={() => setContinent(key)}
+              className={`rounded-full px-3 py-1.5 text-sm font-semibold ${
+                continent === key ? "bg-slate-900 text-white" : "border border-slate-200 text-slate-600"
+              }`}
+            >
+              {key === "all" ? COPY.allRegions[locale] : COPY[key][locale]}
+            </button>
+          ))}
+        </div>
+        <p className="mt-2 text-xs text-slate-500">{COPY.filterNote[locale]}</p>
       </div>
 
       <label className="block text-sm text-slate-600">

@@ -13,7 +13,9 @@ import {
   formatShareIso2,
   oneIn,
   parseHistory,
+  parseContinent,
   parseShareIso2,
+  matchesContinent,
   pickCountry,
   pickMany,
   projectOrthographic,
@@ -128,6 +130,19 @@ describe("reincarnation weights", () => {
     }
     expect(grown).toHaveLength(24);
     expect(grown[0].id).toBe("h29");
+  });
+
+  it("tags continents without changing world birth ranks", () => {
+    expect(parseContinent("asia")).toBe("asia");
+    expect(parseContinent("mars")).toBe("all");
+    expect(byIso2("KR")!.continent).toBe("asia");
+    expect(byIso2("NG")!.continent).toBe("africa");
+    expect(byIso2("BR")!.continent).toBe("americas");
+    expect(byIso2("DE")!.continent).toBe("europe");
+    expect(byIso2("AU")!.continent).toBe("oceania");
+    expect(matchesContinent(byIso2("IN")!, "asia")).toBe(true);
+    expect(matchesContinent(byIso2("IN")!, "africa")).toBe(false);
+    expect(ranked("births")[0].iso2).toBe("IN");
   });
 
   it("ships simplified Natural Earth borders for large countries", () => {

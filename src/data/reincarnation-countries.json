@@ -13,7 +13,8 @@
       "lon": 81.173,
       "lat": 23.5863,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "CN",
@@ -26,7 +27,8 @@
       "lon": 104.6911,
       "lat": 38.0733,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "NG",
@@ -39,7 +41,8 @@
       "lon": 8.1477,
       "lat": 9.6103,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "PK",
@@ -52,7 +55,8 @@
       "lon": 69.0884,
       "lat": 30.1162,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "ID",
@@ -65,7 +69,8 @@
       "lon": 113.9654,
       "lat": 0.1559,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "CD",
@@ -78,7 +83,8 @@
       "lon": 23.4198,
       "lat": -3.3386,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "ET",
@@ -91,7 +97,8 @@
       "lon": 39.9149,
       "lat": 8.7294,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "US",
@@ -104,7 +111,8 @@
       "lon": -96.3316,
       "lat": 38.8208,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "BD",
@@ -117,7 +125,8 @@
       "lon": 90.4321,
       "lat": 23.6737,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "BR",
@@ -130,7 +139,8 @@
       "lon": -54.3552,
       "lat": -11.5246,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "EG",
@@ -143,7 +153,8 @@
       "lon": 30.2401,
       "lat": 26.6052,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "TZ",
@@ -156,7 +167,8 @@
       "lon": 34.8183,
       "lat": -6.3558,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "MX",
@@ -169,7 +181,8 @@
       "lon": -101.554,
       "lat": 23.8744,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "PH",
@@ -182,7 +195,8 @@
       "lon": 121.8221,
       "lat": 15.5865,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "UG",
@@ -195,7 +209,8 @@
       "lon": 32.3437,
       "lat": 1.2822,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "SD",
@@ -208,7 +223,8 @@
       "lon": 29.9515,
       "lat": 15.6706,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "KE",
@@ -221,7 +237,8 @@
       "lon": 37.9531,
       "lat": 0.6899,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "AF",
@@ -234,7 +251,8 @@
       "lon": 66.5922,
       "lat": 34.134,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "AO",
@@ -247,7 +265,8 @@
       "lon": 17.6518,
       "lat": -12.1674,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "YE",
@@ -260,7 +279,8 @@
       "lon": 47.4682,
       "lat": 16.0014,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "VN",
@@ -273,7 +293,8 @@
       "lon": 105.9134,
       "lat": 16.5173,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "MZ",
@@ -286,7 +307,8 @@
       "lon": 35.2086,
       "lat": -17.5252,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "RU",
@@ -299,7 +321,8 @@
       "lon": 98.6705,
       "lat": 59.0394,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "ZA",
@@ -312,7 +335,8 @@
       "lon": 24.7525,
       "lat": -28.5536,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "IQ",
@@ -325,7 +349,8 @@
       "lon": 43.8325,
       "lat": 33.1051,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "IR",
@@ -338,7 +363,8 @@
       "lon": 54.2371,
       "lat": 32.906,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "NE",
@@ -351,7 +377,8 @@
       "lon": 8.8686,
       "lat": 17.0811,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "MG",
@@ -364,7 +391,8 @@
       "lon": 46.6849,
       "lat": -19.0416,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "CI",
@@ -377,7 +405,8 @@
       "lon": -5.5717,
       "lat": 7.5368,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "CM",
@@ -390,7 +419,8 @@
       "lon": 12.9485,
       "lat": 6.2942,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "ML",
@@ -403,7 +433,8 @@
       "lon": -4.3464,
       "lat": 17.1681,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "TR",
@@ -416,7 +447,8 @@
       "lon": 35.5689,
       "lat": 38.9321,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "UZ",
@@ -429,7 +461,8 @@
       "lon": 63.8548,
       "lat": 41.4879,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "MM",
@@ -442,7 +475,8 @@
       "lon": 97.0889,
       "lat": 19.9012,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "GH",
@@ -455,7 +489,8 @@
       "lon": -1.2192,
       "lat": 7.9453,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "DZ",
@@ -468,7 +503,8 @@
       "lon": 2.6558,
       "lat": 28.351,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "TD",
@@ -481,7 +517,8 @@
       "lon": 18.4271,
       "lat": 15.2835,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "SO",
@@ -494,7 +531,8 @@
       "lon": 45.4004,
       "lat": 6.5245,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "BF",
@@ -507,7 +545,8 @@
       "lon": -1.6933,
       "lat": 12.1087,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "JP",
@@ -520,7 +559,8 @@
       "lon": 137.4693,
       "lat": 36.7674,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "CO",
@@ -533,7 +573,8 @@
       "lon": -72.6445,
       "lat": 4.1878,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "ZM",
@@ -546,7 +587,8 @@
       "lon": 27.7552,
       "lat": -13.1628,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "GB",
@@ -559,7 +601,8 @@
       "lon": -2.8529,
       "lat": 53.9784,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "DE",
@@ -572,7 +615,8 @@
       "lon": 10.4262,
       "lat": 51.083,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "MW",
@@ -585,7 +629,8 @@
       "lon": 34.2344,
       "lat": -13.129,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "FR",
@@ -598,7 +643,8 @@
       "lon": 2.194,
       "lat": 46.6424,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "MA",
@@ -611,7 +657,8 @@
       "lon": -8.8172,
       "lat": 28.6876,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "SA",
@@ -624,7 +671,8 @@
       "lon": 44.601,
       "lat": 24.136,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "TH",
@@ -637,7 +685,8 @@
       "lon": 101.0868,
       "lat": 13.6622,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "SY",
@@ -650,7 +699,8 @@
       "lon": 38.5117,
       "lat": 35.0975,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "NP",
@@ -663,7 +713,8 @@
       "lon": 84.1339,
       "lat": 28.3009,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "SN",
@@ -676,7 +727,8 @@
       "lon": -14.6109,
       "lat": 14.2289,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "PE",
@@ -689,7 +741,8 @@
       "lon": -74.1142,
       "lat": -8.5227,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "AR",
@@ -702,7 +755,8 @@
       "lon": -64.5324,
       "lat": -35.6973,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "ZW",
@@ -715,7 +769,8 @@
       "lon": 29.7178,
       "lat": -18.927,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "GN",
@@ -728,7 +783,8 @@
       "lon": -10.9869,
       "lat": 10.256,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "BJ",
@@ -741,7 +797,8 @@
       "lon": 2.3057,
       "lat": 9.503,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "BI",
@@ -754,7 +811,8 @@
       "lon": 29.8852,
       "lat": -3.2613,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "MY",
@@ -767,7 +825,8 @@
       "lon": 114.6333,
       "lat": 3.6717,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "VE",
@@ -780,7 +839,8 @@
       "lon": -66.3649,
       "lat": 7.1483,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "KZ",
@@ -793,7 +853,8 @@
       "lon": 66.3759,
       "lat": 47.6415,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "RW",
@@ -806,7 +867,8 @@
       "lon": 29.9194,
       "lat": -2.0147,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "GT",
@@ -819,7 +881,8 @@
       "lon": -90.3122,
       "lat": 15.8209,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "IT",
@@ -832,7 +895,8 @@
       "lon": 12.7637,
       "lat": 42.982,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "CA",
@@ -845,7 +909,8 @@
       "lon": -98.4168,
       "lat": 57.5505,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "KH",
@@ -858,7 +923,8 @@
       "lon": 105.0397,
       "lat": 12.6992,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "SS",
@@ -871,7 +937,8 @@
       "lon": 30.3852,
       "lat": 7.6578,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "KP",
@@ -884,7 +951,8 @@
       "lon": 127.338,
       "lat": 40.192,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "ES",
@@ -897,7 +965,8 @@
       "lon": -3.6516,
       "lat": 40.365,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "AU",
@@ -910,7 +979,8 @@
       "lon": 134.0228,
       "lat": -25.6973,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "TG",
@@ -923,7 +993,8 @@
       "lon": 0.8991,
       "lat": 8.6607,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "EC",
@@ -936,7 +1007,8 @@
       "lon": -78.463,
       "lat": -1.5643,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "TJ",
@@ -949,7 +1021,8 @@
       "lon": 70.9422,
       "lat": 38.5693,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "BO",
@@ -962,7 +1035,8 @@
       "lon": -64.4521,
       "lat": -16.7312,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "SL",
@@ -975,7 +1049,8 @@
       "lon": -11.7866,
       "lat": 8.5613,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "HT",
@@ -988,7 +1063,8 @@
       "lon": -72.8929,
       "lat": 18.8835,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "PG",
@@ -1001,7 +1077,8 @@
       "lon": 144.8349,
       "lat": -7.1569,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "PL",
@@ -1014,7 +1091,8 @@
       "lon": 19.4357,
       "lat": 52.0685,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "CF",
@@ -1027,7 +1105,8 @@
       "lon": 20.5207,
       "lat": 6.3314,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "KR",
@@ -1040,7 +1119,8 @@
       "lon": 127.7622,
       "lat": 36.4024,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "JO",
@@ -1053,7 +1133,8 @@
       "lon": 36.9573,
       "lat": 31.3871,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "HN",
@@ -1066,7 +1147,8 @@
       "lon": -86.4925,
       "lat": 14.7404,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "LK",
@@ -1079,7 +1161,8 @@
       "lon": 80.6693,
       "lat": 7.6966,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "UA",
@@ -1092,7 +1175,8 @@
       "lon": 31.2738,
       "lat": 48.6575,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "DO",
@@ -1105,7 +1189,8 @@
       "lon": -70.435,
       "lat": 18.7795,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "CG",
@@ -1118,7 +1203,8 @@
       "lon": 14.8797,
       "lat": -0.7294,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "IL",
@@ -1131,7 +1217,8 @@
       "lon": 35.0279,
       "lat": 31.5135,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "MR",
@@ -1144,7 +1231,8 @@
       "lon": -10.4951,
       "lat": 20.4667,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "CL",
@@ -1157,7 +1245,8 @@
       "lon": -70.7686,
       "lat": -37.8294,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "LR",
@@ -1170,7 +1259,8 @@
       "lon": -9.259,
       "lat": 6.5201,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "NL",
@@ -1183,7 +1273,8 @@
       "lon": 5.5541,
       "lat": 52.1341,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "TN",
@@ -1196,7 +1287,8 @@
       "lon": 9.6559,
       "lat": 34.0864,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "LA",
@@ -1209,7 +1301,8 @@
       "lon": 103.7638,
       "lat": 18.1173,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "TM",
@@ -1222,7 +1315,8 @@
       "lon": 58.4577,
       "lat": 39.0607,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "RO",
@@ -1235,7 +1329,8 @@
       "lon": 25.0942,
       "lat": 45.8245,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "KG",
@@ -1248,7 +1343,8 @@
       "lon": 74.1753,
       "lat": 41.357,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "PS",
@@ -1261,7 +1357,8 @@
       "lon": 35.2425,
       "lat": 31.9308,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "PY",
@@ -1274,7 +1371,8 @@
       "lon": -58.3891,
       "lat": -23.4219,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "NI",
@@ -1287,7 +1385,8 @@
       "lon": -85.0161,
       "lat": 12.8936,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "LY",
@@ -1300,7 +1399,8 @@
       "lon": 17.9113,
       "lat": 27.2029,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "BE",
@@ -1313,7 +1413,8 @@
       "lon": 4.675,
       "lat": 50.6182,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "AE",
@@ -1326,7 +1427,8 @@
       "lon": 54.2792,
       "lat": 24.1825,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "AZ",
@@ -1339,7 +1441,8 @@
       "lon": 48.6346,
       "lat": 40.3921,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "ER",
@@ -1352,7 +1455,8 @@
       "lon": 39.2672,
       "lat": 15.0055,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "SV",
@@ -1365,7 +1469,8 @@
       "lon": -88.8591,
       "lat": 13.758,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "SE",
@@ -1378,7 +1483,8 @@
       "lon": 17.0624,
       "lat": 62.7342,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "CU",
@@ -1391,7 +1497,8 @@
       "lon": -79.6982,
       "lat": 21.4762,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "LB",
@@ -1404,7 +1511,8 @@
       "lon": 35.8965,
       "lat": 33.9116,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "OM",
@@ -1417,7 +1525,8 @@
       "lon": 55.8411,
       "lat": 20.7243,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "PT",
@@ -1430,7 +1539,8 @@
       "lon": -7.9337,
       "lat": 39.6753,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "CZ",
@@ -1443,7 +1553,8 @@
       "lon": 15.3833,
       "lat": 49.7492,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "GM",
@@ -1456,7 +1567,8 @@
       "lon": -15.3834,
       "lat": 13.4286,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "NA",
@@ -1469,7 +1581,8 @@
       "lon": 18.1645,
       "lat": -21.9086,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "HU",
@@ -1482,7 +1595,8 @@
       "lon": 19.3962,
       "lat": 47.2253,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "CH",
@@ -1495,7 +1609,8 @@
       "lon": 8.2869,
       "lat": 46.7368,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "AT",
@@ -1508,7 +1623,8 @@
       "lon": 13.7978,
       "lat": 47.6319,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "PA",
@@ -1521,7 +1637,8 @@
       "lon": -80.1443,
       "lat": 8.4395,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "GA",
@@ -1534,7 +1651,8 @@
       "lon": 11.8394,
       "lat": -0.6284,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "GR",
@@ -1547,7 +1665,8 @@
       "lon": 23.1104,
       "lat": 39.4201,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "GW",
@@ -1560,7 +1679,8 @@
       "lon": -14.9802,
       "lat": 11.9801,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "BY",
@@ -1573,7 +1693,8 @@
       "lon": 27.9643,
       "lat": 53.4679,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "BW",
@@ -1586,7 +1707,8 @@
       "lon": 23.8578,
       "lat": -22.2366,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "RS",
@@ -1599,7 +1721,8 @@
       "lon": 20.8568,
       "lat": 44.0268,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "MN",
@@ -1612,7 +1735,8 @@
       "lon": 103.3987,
       "lat": 47.0864,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "NZ",
@@ -1625,7 +1749,8 @@
       "lon": 170.6904,
       "lat": -43.8277,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "DK",
@@ -1638,7 +1763,8 @@
       "lon": 9.3787,
       "lat": 56.0012,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "GQ",
@@ -1651,7 +1777,8 @@
       "lon": 10.4255,
       "lat": 1.5955,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "LS",
@@ -1664,7 +1791,8 @@
       "lon": 28.2448,
       "lat": -29.6017,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "NO",
@@ -1677,7 +1805,8 @@
       "lon": 16.6703,
       "lat": 64.9778,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "IE",
@@ -1690,7 +1819,8 @@
       "lon": -8.2411,
       "lat": 53.3049,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "BG",
@@ -1703,7 +1833,8 @@
       "lon": 25.2517,
       "lat": 42.8204,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "CR",
@@ -1716,7 +1847,8 @@
       "lon": -84.1467,
       "lat": 9.8635,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "KW",
@@ -1729,7 +1861,8 @@
       "lon": 47.5631,
       "lat": 29.2814,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "SK",
@@ -1742,7 +1875,8 @@
       "lon": 19.581,
       "lat": 48.6981,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "SG",
@@ -1755,7 +1889,8 @@
       "lon": 103.8103,
       "lat": 1.3528,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "FI",
@@ -1768,7 +1903,8 @@
       "lon": 25.6574,
       "lat": 65.0158,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "GE",
@@ -1781,7 +1917,8 @@
       "lon": 43.3789,
       "lat": 42.1799,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "HK",
@@ -1794,7 +1931,8 @@
       "lon": 114.109,
       "lat": 22.3964,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "AM",
@@ -1807,7 +1945,8 @@
       "lon": 45.0549,
       "lat": 40.1784,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "UY",
@@ -1820,7 +1959,8 @@
       "lon": -56.0192,
       "lat": -32.782,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "JM",
@@ -1833,7 +1973,8 @@
       "lon": -77.3036,
       "lat": 18.1221,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "HR",
@@ -1846,7 +1987,8 @@
       "lon": 16.6258,
       "lat": 44.9119,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "TL",
@@ -1859,7 +2001,8 @@
       "lon": 125.9502,
       "lat": -8.8099,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "SZ",
@@ -1872,7 +2015,8 @@
       "lon": 31.5107,
       "lat": -26.5625,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "QA",
@@ -1885,7 +2029,8 @@
       "lon": 51.1979,
       "lat": 25.3185,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "MD",
@@ -1898,7 +2043,8 @@
       "lon": 28.3911,
       "lat": 47.0726,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "KM",
@@ -1911,7 +2057,8 @@
       "lon": 43.3483,
       "lat": -11.6589,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "DJ",
@@ -1924,7 +2071,8 @@
       "lon": 42.6135,
       "lat": 11.7502,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "BA",
@@ -1937,7 +2085,8 @@
       "lon": 17.8347,
       "lat": 44.1442,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "AL",
@@ -1950,7 +2099,8 @@
       "lon": 20.0611,
       "lat": 41.1417,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "SB",
@@ -1963,7 +2113,8 @@
       "lon": 160.1648,
       "lat": -9.6131,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "BH",
@@ -1976,7 +2127,8 @@
       "lon": 50.5407,
       "lat": 26.048,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "LT",
@@ -1989,7 +2141,8 @@
       "lon": 23.946,
       "lat": 55.2944,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "XK",
@@ -2002,7 +2155,8 @@
       "lon": 20.926,
       "lat": 42.565,
       "birthsYear": 2024,
-      "birthsSource": "wb-cbr-estimate"
+      "birthsSource": "wb-cbr-estimate",
+      "continent": "europe"
     },
     {
       "iso2": "PR",
@@ -2015,7 +2169,8 @@
       "lon": -66.4943,
       "lat": 18.2162,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "SI",
@@ -2028,7 +2183,8 @@
       "lon": 14.8906,
       "lat": 46.1376,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "FJ",
@@ -2041,7 +2197,8 @@
       "lon": 177.9814,
       "lat": -17.8225,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "GY",
@@ -2054,7 +2211,8 @@
       "lon": -58.9135,
       "lat": 4.6821,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "MK",
@@ -2067,7 +2225,8 @@
       "lon": 21.71,
       "lat": 41.594,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "TT",
@@ -2080,7 +2239,8 @@
       "lon": -61.3724,
       "lat": 10.4155,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "CY",
@@ -2093,7 +2253,8 @@
       "lon": 33.3753,
       "lat": 35.117,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "LV",
@@ -2106,7 +2267,8 @@
       "lon": 24.6937,
       "lat": 56.8139,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "MU",
@@ -2119,7 +2281,8 @@
       "lon": 57.5642,
       "lat": -20.2814,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "SR",
@@ -2132,7 +2295,8 @@
       "lon": -55.8555,
       "lat": 4.0987,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "BT",
@@ -2145,7 +2309,8 @@
       "lon": 90.4672,
       "lat": 27.4216,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "EE",
@@ -2158,7 +2323,8 @@
       "lon": 25.9169,
       "lat": 58.6481,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "VU",
@@ -2171,7 +2337,8 @@
       "lon": 166.8491,
       "lat": -15.1891,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "BZ",
@@ -2184,7 +2351,8 @@
       "lon": -88.6827,
       "lat": 17.2425,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "ME",
@@ -2197,7 +2365,8 @@
       "lon": 19.2951,
       "lat": 42.7369,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "ST",
@@ -2210,7 +2379,8 @@
       "lon": 6.6062,
       "lat": 0.2274,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "LU",
@@ -2223,7 +2393,8 @@
       "lon": 6.1032,
       "lat": 49.7752,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "CV",
@@ -2236,7 +2407,8 @@
       "lon": -23.634,
       "lat": 15.0764,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "BN",
@@ -2249,7 +2421,8 @@
       "lon": 114.6431,
       "lat": 4.5432,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "MV",
@@ -2262,7 +2435,8 @@
       "lon": 73.1008,
       "lat": -0.6066,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "WS",
@@ -2275,7 +2449,8 @@
       "lon": -172.4411,
       "lat": -13.6343,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "MT",
@@ -2288,7 +2463,8 @@
       "lon": 14.4419,
       "lat": 35.8905,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "BS",
@@ -2301,7 +2477,8 @@
       "lon": -78.0728,
       "lat": 24.7216,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "IS",
@@ -2314,7 +2491,8 @@
       "lon": -19.0568,
       "lat": 65.1236,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "NC",
@@ -2327,7 +2505,8 @@
       "lon": 165.5077,
       "lat": -21.33,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "MO",
@@ -2340,7 +2519,8 @@
       "lon": 113.55,
       "lat": 22.1667,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "asia"
     },
     {
       "iso2": "KI",
@@ -2353,7 +2533,8 @@
       "lon": -157.3902,
       "lat": 1.8677,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "BB",
@@ -2366,7 +2547,8 @@
       "lon": -59.5574,
       "lat": 13.1832,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "PF",
@@ -2379,7 +2561,8 @@
       "lon": -149.4004,
       "lat": -17.6747,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "GU",
@@ -2392,7 +2575,8 @@
       "lon": 144.7802,
       "lat": 13.4454,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "FM",
@@ -2405,7 +2589,8 @@
       "lon": 158.2292,
       "lat": 6.8789,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "TO",
@@ -2418,7 +2603,8 @@
       "lon": -175.2042,
       "lat": -21.1593,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "LC",
@@ -2431,7 +2617,8 @@
       "lon": -60.969,
       "lat": 13.8957,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "JG",
@@ -2444,7 +2631,8 @@
       "lon": -2.3528,
       "lat": 49.3371,
       "birthsYear": 2024,
-      "birthsSource": "wb-cbr-estimate"
+      "birthsSource": "wb-cbr-estimate",
+      "continent": "europe"
     },
     {
       "iso2": "GD",
@@ -2457,7 +2645,8 @@
       "lon": -61.6794,
       "lat": 12.1129,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "SC",
@@ -2470,7 +2659,8 @@
       "lon": 55.4725,
       "lat": -4.66,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "africa"
     },
     {
       "iso2": "VC",
@@ -2483,7 +2673,8 @@
       "lon": -61.1938,
       "lat": 13.2548,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "VI",
@@ -2496,7 +2687,8 @@
       "lon": -64.7616,
       "lat": 17.738,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "CW",
@@ -2509,7 +2701,8 @@
       "lon": -68.9694,
       "lat": 12.2,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "AG",
@@ -2522,7 +2715,8 @@
       "lon": -61.7853,
       "lat": 17.0715,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "KY",
@@ -2535,7 +2729,8 @@
       "lon": -81.252,
       "lat": 19.3112,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "AW",
@@ -2548,7 +2743,8 @@
       "lon": -69.9756,
       "lat": 12.5156,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "MH",
@@ -2561,7 +2757,8 @@
       "lon": 168.7202,
       "lat": 7.3079,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "DM",
@@ -2574,7 +2771,8 @@
       "lon": -61.3605,
       "lat": 15.4293,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "AS",
@@ -2587,7 +2785,8 @@
       "lon": -170.7007,
       "lat": -14.3057,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "IM",
@@ -2600,7 +2799,8 @@
       "lon": -4.533,
       "lat": 54.2286,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "GL",
@@ -2613,7 +2813,8 @@
       "lon": -42.0757,
       "lat": 74.1685,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "FO",
@@ -2626,7 +2827,8 @@
       "lon": -6.9811,
       "lat": 62.1309,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "AD",
@@ -2639,7 +2841,8 @@
       "lon": 1.5802,
       "lat": 42.5486,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "KN",
@@ -2652,7 +2855,8 @@
       "lon": -62.7456,
       "lat": 17.3147,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "MP",
@@ -2665,7 +2869,8 @@
       "lon": 145.7412,
       "lat": 15.1781,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "BM",
@@ -2678,7 +2883,8 @@
       "lon": -64.7459,
       "lat": 32.3151,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "TC",
@@ -2691,7 +2897,8 @@
       "lon": -71.7406,
       "lat": 21.7999,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "GI",
@@ -2704,7 +2911,8 @@
       "lon": -5.3455,
       "lat": 36.1402,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "SX",
@@ -2717,7 +2925,8 @@
       "lon": -63.0688,
       "lat": 18.0394,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "MF",
@@ -2730,7 +2939,8 @@
       "lon": -63.0668,
       "lat": 18.078,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "MC",
@@ -2743,7 +2953,8 @@
       "lon": 7.4128,
       "lat": 43.748,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "LI",
@@ -2756,7 +2967,8 @@
       "lon": 9.5477,
       "lat": 47.1463,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     },
     {
       "iso2": "VG",
@@ -2769,7 +2981,8 @@
       "lon": -64.6241,
       "lat": 18.422,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "americas"
     },
     {
       "iso2": "NR",
@@ -2782,7 +2995,8 @@
       "lon": 166.9294,
       "lat": -0.5221,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "TV",
@@ -2795,7 +3009,8 @@
       "lon": 179.2178,
       "lat": -8.5147,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "PW",
@@ -2808,7 +3023,8 @@
       "lon": 134.5797,
       "lat": 7.5348,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "oceania"
     },
     {
       "iso2": "SM",
@@ -2821,7 +3037,8 @@
       "lon": 12.4613,
       "lat": 43.9428,
       "birthsYear": 2024,
-      "birthsSource": "wpp2024"
+      "birthsSource": "wpp2024",
+      "continent": "europe"
     }
   ],
   "pinSource": "Globe pins use country centroids (gavinr/world-countries-centroids, Natural Earth derived), not capitals."

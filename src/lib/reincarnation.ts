@@ -14,6 +14,20 @@ export interface ReincarnationCountry {
   lat: number | null;
   birthsYear?: number;
   birthsSource?: "wpp2024" | "wb-cbr-estimate";
+  continent?: Continent;
+}
+
+export const CONTINENTS = ["asia", "africa", "europe", "americas", "oceania"] as const;
+export type Continent = (typeof CONTINENTS)[number];
+
+export function parseContinent(raw: string | null | undefined): Continent | "all" {
+  const value = (raw ?? "").trim().toLowerCase();
+  return (CONTINENTS as readonly string[]).includes(value) ? (value as Continent) : "all";
+}
+
+export function matchesContinent(row: ReincarnationCountry, continent: Continent | "all"): boolean {
+  if (continent === "all") return true;
+  return row.continent === continent;
 }
 
 export const REINCARNATION_META = {
