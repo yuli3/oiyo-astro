@@ -72,12 +72,153 @@ const data = {
     },
     retake: "Retake", resultLabel: "Your Dominant Hormone Type",
   },
+  ja: {
+    title: "ホルモン性格テスト：あなたを動かすホルモンは？",
+    description: "14の質問であなたの主導ホルモンタイプを調べましょう。",
+    questions: [
+      { id: "q1", text: "私はよく新しい経験を求め、新しい活動に興奮する。", type: "dopamine" as HormoneType },
+      { id: "q2", text: "課題を完了したり目標を達成したりすると、強い達成感を感じる。", type: "dopamine" as HormoneType },
+      { id: "q3", text: "構造化された日常と整理された環境を好む。", type: "serotonin" as HormoneType },
+      { id: "q4", text: "全体的に自分の人生に満足し、幸せを感じている。", type: "serotonin" as HormoneType },
+      { id: "q5", text: "競争を楽しみ、しばしば一番になろうと努力する。", type: "testosterone" as HormoneType },
+      { id: "q6", text: "責任を引き受け、グループのために決定を下すことが心地よい。", type: "testosterone" as HormoneType },
+      { id: "q7", text: "他人がどう感じているかを簡単に察知し、共感できる。", type: "estrogen" as HormoneType },
+      { id: "q8", text: "深い感情的なつながりと意味のある関係を大切にしている。", type: "estrogen" as HormoneType },
+      { id: "q9", text: "目標を達成するために身体的な不快感や痛みに耐えられる。", type: "endorphin" as HormoneType },
+      { id: "q10", text: "激しい身体活動や運動の後、自然な高揚感を感じる。", type: "endorphin" as HormoneType },
+      { id: "q11", text: "他人を助けたり、その幸福に貢献したりするとき最も満たされる。", type: "oxytocin" as HormoneType },
+      { id: "q12", text: "自分の関係において、身体的接触と親密さが重要だ。", type: "oxytocin" as HormoneType },
+      { id: "q13", text: "潜在的な問題やうまくいかないかもしれないことについて心配する傾向がある。", type: "cortisol" as HormoneType },
+      { id: "q14", text: "新しい状況や不確実な状況では、しばしば警戒し注意深くなる。", type: "cortisol" as HormoneType },
+    ],
+    options: ["全くそう思わない", "そう思わない", "普通", "そう思う", "非常にそう思う"],
+    results: {
+      dopamine: { emoji: "🎯", title: "ドーパミン型 (Dopamine)", desc: "あなたは好奇心、興奮、新しい経験の追求によって動かされます。脳の報酬系が非常に活発で、達成と承認によって動機づけられます。" },
+      serotonin: { emoji: "☯️", title: "セロトニン型 (Serotonin)", desc: "あなたは安定、日常、調和を大切にします。バランスの取れた性格で、ほとんどの状況で落ち着いて満足した状態を保ちます。" },
+      testosterone: { emoji: "🏆", title: "テストステロン型 (Testosterone)", desc: "あなたは本来自己主張が強く、競争的で、決断力があります。責任を引き受けることを楽しみ、目標達成のためにリスクを取ることを恐れません。" },
+      estrogen: { emoji: "💗", title: "エストロゲン型 (Estrogen)", desc: "あなたは非常に共感的で感情的知性が高いです。他人との深いつながりを大切にし、周囲の人の感情やニーズに自然に寄り添います。" },
+      endorphin: { emoji: "🏃", title: "エンドルフィン型 (Endorphin)", desc: "あなたは回復力が強く、高い痛みの閾値を持っています。身体活動に喜びを見出し、困難を克服する自然な力があります。" },
+      oxytocin: { emoji: "🤗", title: "オキシトシン型 (Oxytocin)", desc: "あなたは自然に深い絆とつながりを形成することに惹かれます。関係を育むことに達成感を見出し、しばしばグループをまとめる役割を果たします。" },
+      cortisol: { emoji: "🔍", title: "コルチゾール型 (Cortisol)", desc: "あなたは非常に警戒心が強く注意深く、潜在的な問題を予測する自然な力を持っています。計画と準備に優れています。" },
+    },
+    retake: "もう一度", resultLabel: "あなたの主導ホルモンタイプ",
+  },
+  zh: {
+    title: "激素性格测试：驱动你的激素是什么？",
+    description: "通过14个问题，找到你的主导激素类型。",
+    questions: [
+      { id: "q1", text: "我经常寻求新的体验，并对新活动感到兴奋。", type: "dopamine" as HormoneType },
+      { id: "q2", text: "完成任务或达成目标时，我会感到强烈的成就感。", type: "dopamine" as HormoneType },
+      { id: "q3", text: "我偏好有条理的日常和井然有序的环境。", type: "serotonin" as HormoneType },
+      { id: "q4", text: "总体而言，我对自己的生活感到满足和幸福。", type: "serotonin" as HormoneType },
+      { id: "q5", text: "我享受竞争，并常常努力争第一。", type: "testosterone" as HormoneType },
+      { id: "q6", text: "我很自在地承担责任，并为团队做决定。", type: "testosterone" as HormoneType },
+      { id: "q7", text: "我能轻易察觉他人的感受并产生共情。", type: "estrogen" as HormoneType },
+      { id: "q8", text: "我重视深厚的情感联系和有意义的关系。", type: "estrogen" as HormoneType },
+      { id: "q9", text: "为了达成目标，我能忍受身体上的不适或疼痛。", type: "endorphin" as HormoneType },
+      { id: "q10", text: "在剧烈运动或体力活动后，我会感到一种自然的愉悦感。", type: "endorphin" as HormoneType },
+      { id: "q11", text: "帮助他人或为他们的幸福做贡献时，我感到最充实。", type: "oxytocin" as HormoneType },
+      { id: "q12", text: "在我的人际关系中，身体接触和亲密感很重要。", type: "oxytocin" as HormoneType },
+      { id: "q13", text: "我倾向于担心潜在的问题或可能出错的事情。", type: "cortisol" as HormoneType },
+      { id: "q14", text: "在新的或不确定的情况下，我常常保持警惕和谨慎。", type: "cortisol" as HormoneType },
+    ],
+    options: ["完全不符合", "不符合", "一般", "符合", "非常符合"],
+    results: {
+      dopamine: { emoji: "🎯", title: "多巴胺型 (Dopamine)", desc: "你受好奇心、兴奋感和对新体验的追求所驱动。你大脑的奖励系统非常活跃，成就与认可能带给你强烈的动力。" },
+      serotonin: { emoji: "☯️", title: "血清素型 (Serotonin)", desc: "你重视稳定、规律和和谐。均衡的性格让你在大多数情况下都能保持冷静与满足。" },
+      testosterone: { emoji: "🏆", title: "睾酮型 (Testosterone)", desc: "你天生自信、好胜且果断。你喜欢主动承担责任，也不惧为达成目标而冒险。" },
+      estrogen: { emoji: "💗", title: "雌激素型 (Estrogen)", desc: "你极具同理心且情商很高。你重视与他人建立深厚的联系，也能自然地感知身边人的情绪与需求。" },
+      endorphin: { emoji: "🏃", title: "内啡肽型 (Endorphin)", desc: "你有很强的韧性和较高的痛觉阈值。你在身体活动中找到快乐，并天生具备克服挑战的能力。" },
+      oxytocin: { emoji: "🤗", title: "催产素型 (Oxytocin)", desc: "你天生倾向于建立深厚的纽带与联系。你在维系关系中找到成就感，常常是把团队凝聚在一起的人。" },
+      cortisol: { emoji: "🔍", title: "皮质醇型 (Cortisol)", desc: "你高度警觉且细心，天生具备预见潜在问题的能力。你擅长规划与准备。" },
+    },
+    retake: "重新测试", resultLabel: "你的主导激素类型",
+  },
+  fr: {
+    title: "Test de personnalité hormonale : quelle hormone vous fait avancer ?",
+    description: "Découvrez votre type hormonal dominant à travers 14 questions.",
+    questions: [
+      { id: "q1", text: "Je recherche souvent de nouvelles expériences et je m'enthousiasme pour des activités inédites.", type: "dopamine" as HormoneType },
+      { id: "q2", text: "Je ressens un fort sentiment d'accomplissement quand je termine une tâche ou atteins un objectif.", type: "dopamine" as HormoneType },
+      { id: "q3", text: "Je préfère une routine structurée et un environnement organisé.", type: "serotonin" as HormoneType },
+      { id: "q4", text: "En général, je me sens satisfait(e) et heureux(se) de ma vie.", type: "serotonin" as HormoneType },
+      { id: "q5", text: "J'aime la compétition et je m'efforce souvent d'être le/la meilleur(e).", type: "testosterone" as HormoneType },
+      { id: "q6", text: "Je suis à l'aise pour prendre les rênes et décider pour un groupe.", type: "testosterone" as HormoneType },
+      { id: "q7", text: "Je perçois facilement les sentiments des autres et j'éprouve de l'empathie envers eux.", type: "estrogen" as HormoneType },
+      { id: "q8", text: "Je valorise les connexions émotionnelles profondes et les relations significatives.", type: "estrogen" as HormoneType },
+      { id: "q9", text: "Je peux surmonter un inconfort ou une douleur physique pour atteindre mes objectifs.", type: "endorphin" as HormoneType },
+      { id: "q10", text: "Je ressens une euphorie naturelle après une activité physique intense.", type: "endorphin" as HormoneType },
+      { id: "q11", text: "Je me sens le plus épanoui(e) quand j'aide les autres ou contribue à leur bien-être.", type: "oxytocin" as HormoneType },
+      { id: "q12", text: "Le contact physique et la proximité sont importants pour moi dans mes relations.", type: "oxytocin" as HormoneType },
+      { id: "q13", text: "J'ai tendance à m'inquiéter de problèmes potentiels ou de ce qui pourrait mal tourner.", type: "cortisol" as HormoneType },
+      { id: "q14", text: "Je suis souvent vigilant(e) et sur mes gardes dans des situations nouvelles ou incertaines.", type: "cortisol" as HormoneType },
+    ],
+    options: ["Jamais", "Rarement", "Parfois", "Souvent", "Toujours"],
+    results: {
+      dopamine: { emoji: "🎯", title: "Type Dopamine", desc: "Vous êtes animé(e) par la curiosité, l'excitation et la recherche de nouvelles expériences. Le système de récompense de votre cerveau est très actif, vous motivant par l'accomplissement et la reconnaissance." },
+      serotonin: { emoji: "☯️", title: "Type Sérotonine", desc: "Vous valorisez la stabilité, la routine et l'harmonie. Votre nature équilibrée vous aide à rester calme et satisfait(e) dans la plupart des situations." },
+      testosterone: { emoji: "🏆", title: "Type Testostérone", desc: "Vous êtes naturellement assertif(ve), compétitif(ve) et décisif(ve). Vous aimez prendre les commandes et n'avez pas peur de prendre des risques pour atteindre vos objectifs." },
+      estrogen: { emoji: "💗", title: "Type Œstrogène", desc: "Vous êtes très empathique et émotionnellement intelligent(e). Vous valorisez les liens profonds avec les autres et êtes naturellement à l'écoute des sentiments et besoins de votre entourage." },
+      endorphin: { emoji: "🏃", title: "Type Endorphine", desc: "Vous êtes résilient(e) et avez un seuil de douleur élevé. Vous trouvez de la joie dans l'activité physique et avez une capacité naturelle à surmonter les défis." },
+      oxytocin: { emoji: "🤗", title: "Type Ocytocine", desc: "Vous êtes naturellement attiré(e) par la création de liens profonds. Vous trouvez de l'épanouissement à cultiver des relations et êtes souvent celui/celle qui soude un groupe." },
+      cortisol: { emoji: "🔍", title: "Type Cortisol", desc: "Vous êtes très vigilant(e) et attentif(ve), avec une capacité naturelle à anticiper les problèmes potentiels. Vous excellez dans la planification et la préparation." },
+    },
+    retake: "Recommencer", resultLabel: "Votre type hormonal dominant",
+  },
+  es: {
+    title: "Test de personalidad hormonal: ¿qué hormona te impulsa?",
+    description: "Descubre tu tipo hormonal dominante con 14 preguntas.",
+    questions: [
+      { id: "q1", text: "A menudo busco nuevas experiencias y me emociono con actividades novedosas.", type: "dopamine" as HormoneType },
+      { id: "q2", text: "Siento un fuerte sentido de logro cuando completo tareas o alcanzo metas.", type: "dopamine" as HormoneType },
+      { id: "q3", text: "Prefiero una rutina estructurada y un entorno organizado.", type: "serotonin" as HormoneType },
+      { id: "q4", text: "En general, me siento satisfecho(a) y contento(a) con mi vida.", type: "serotonin" as HormoneType },
+      { id: "q5", text: "Disfruto de la competencia y a menudo me esfuerzo por ser el/la mejor.", type: "testosterone" as HormoneType },
+      { id: "q6", text: "Me siento cómodo(a) tomando el mando y decidiendo por un grupo.", type: "testosterone" as HormoneType },
+      { id: "q7", text: "Puedo percibir fácilmente cómo se sienten los demás y empatizar con ellos.", type: "estrogen" as HormoneType },
+      { id: "q8", text: "Valoro las conexiones emocionales profundas y las relaciones significativas.", type: "estrogen" as HormoneType },
+      { id: "q9", text: "Puedo superar la incomodidad o el dolor físico para lograr mis metas.", type: "endorphin" as HormoneType },
+      { id: "q10", text: "Siento una euforia natural después de una actividad física intensa.", type: "endorphin" as HormoneType },
+      { id: "q11", text: "Me siento más pleno(a) cuando ayudo a otros o contribuyo a su bienestar.", type: "oxytocin" as HormoneType },
+      { id: "q12", text: "El contacto físico y la cercanía son importantes para mí en mis relaciones.", type: "oxytocin" as HormoneType },
+      { id: "q13", text: "Tiendo a preocuparme por problemas potenciales o por lo que podría salir mal.", type: "cortisol" as HormoneType },
+      { id: "q14", text: "A menudo estoy alerta y vigilante en situaciones nuevas o inciertas.", type: "cortisol" as HormoneType },
+    ],
+    options: ["Nunca", "Rara vez", "A veces", "A menudo", "Siempre"],
+    results: {
+      dopamine: { emoji: "🎯", title: "Tipo Dopamina", desc: "Te impulsan la curiosidad, la emoción y la búsqueda de nuevas experiencias. El sistema de recompensa de tu cerebro está muy activo, motivándote a través del logro y el reconocimiento." },
+      serotonin: { emoji: "☯️", title: "Tipo Serotonina", desc: "Valoras la estabilidad, la rutina y la armonía. Tu naturaleza equilibrada te ayuda a mantener la calma y la satisfacción en la mayoría de las situaciones." },
+      testosterone: { emoji: "🏆", title: "Tipo Testosterona", desc: "Eres naturalmente asertivo(a), competitivo(a) y decidido(a). Disfrutas tomando el mando y no temes asumir riesgos para lograr tus metas." },
+      estrogen: { emoji: "💗", title: "Tipo Estrógeno", desc: "Eres muy empático(a) e inteligente emocionalmente. Valoras las conexiones profundas con los demás y sintonizas de forma natural con los sentimientos y necesidades de quienes te rodean." },
+      endorphin: { emoji: "🏃", title: "Tipo Endorfina", desc: "Eres resiliente y tienes un alto umbral de dolor. Encuentras alegría en la actividad física y tienes una capacidad natural para superar desafíos." },
+      oxytocin: { emoji: "🤗", title: "Tipo Oxitocina", desc: "Te atrae de forma natural formar vínculos y conexiones profundas. Encuentras plenitud cultivando relaciones y a menudo eres quien mantiene unido a un grupo." },
+      cortisol: { emoji: "🔍", title: "Tipo Cortisol", desc: "Estás muy alerta y eres cauteloso(a), con una capacidad natural para anticipar problemas potenciales. Destacas en la planificación y la preparación." },
+    },
+    retake: "Repetir", resultLabel: "Tu tipo hormonal dominante",
+  },
+};
+
+type SupportedLocale = keyof typeof data;
+const SUPPORTED_LOCALES: SupportedLocale[] = ["ko", "en", "ja", "zh", "fr", "es"];
+const UI_LABELS: Record<SupportedLocale, {
+  completed: (completed: number, total: number) => string;
+  unanswered: (count: number) => string;
+  submit: string;
+  validation: string;
+}> = {
+  ko: { completed: (c, t) => `${c} / ${t} 응답`, unanswered: (c) => `미응답 ${c}개`, submit: "결과 보기", validation: "응답하지 않은 첫 문항으로 이동했습니다." },
+  en: { completed: (c, t) => `${c} / ${t} answered`, unanswered: (c) => `${c} unanswered`, submit: "See Results", validation: "Moved to the first unanswered question." },
+  ja: { completed: (c, t) => `${c} / ${t} 回答済み`, unanswered: (c) => `未回答 ${c}件`, submit: "結果を見る", validation: "未回答の最初の質問に移動しました。" },
+  zh: { completed: (c, t) => `已回答 ${c} / ${t}`, unanswered: (c) => `未回答 ${c} 题`, submit: "查看结果", validation: "已跳转到第一个未回答的问题。" },
+  fr: { completed: (c, t) => `${c} / ${t} réponses`, unanswered: (c) => `${c} sans réponse`, submit: "Voir les résultats", validation: "Vous avez été redirigé(e) vers la première question sans réponse." },
+  es: { completed: (c, t) => `${c} / ${t} respondidas`, unanswered: (c) => `${c} sin responder`, submit: "Ver resultados", validation: "Se te ha llevado a la primera pregunta sin responder." },
 };
 
 export default function HormonesTest({ locale: localeProp }: Props) {
 
-  const lang = (localeProp === "en" ? "en" : "ko") as "ko" | "en";
+  const lang = (SUPPORTED_LOCALES.includes(localeProp as SupportedLocale) ? localeProp : "en") as SupportedLocale;
   const t = data[lang];
+  const ui = UI_LABELS[lang];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
   useRecordFinishedTest({ testId: "hormones", title: "HormonesTest", finished: phase === "result" });
@@ -102,7 +243,7 @@ export default function HormonesTest({ locale: localeProp }: Props) {
           <p className="text-slate-700 text-base leading-relaxed">{r.desc}</p>
         </div>
         <button onClick={() => { setAnswers({}); setPhase("quiz"); }} className="text-slate-400 text-sm hover:underline">{t.retake}</button>
-        <ShareResultButton locale={localeProp ?? 'ko'} heading={t.title} resultTitle={r.title} emoji={r.emoji} />
+        <ShareResultButton locale={lang} heading={t.title} resultTitle={r.title} emoji={r.emoji} />
       </div>
     );
   }
@@ -114,10 +255,10 @@ export default function HormonesTest({ locale: localeProp }: Props) {
       questions={t.questions}
       options={t.options}
       answers={answers}
-      completedLabel={(completed, total) => lang === "ko" ? `${completed} / ${total} 응답` : `${completed} / ${total} answered`}
-      unansweredLabel={(count) => lang === "ko" ? `미응답 ${count}개` : `${count} unanswered`}
-      submitLabel={lang === "ko" ? "결과 보기" : "See Results"}
-      validationLabel={lang === "ko" ? "응답하지 않은 첫 문항으로 이동했습니다." : "Moved to the first unanswered question."}
+      completedLabel={ui.completed}
+      unansweredLabel={ui.unanswered}
+      submitLabel={ui.submit}
+      validationLabel={ui.validation}
       onAnswer={(questionId, value) => setAnswers((prev) => ({ ...prev, [questionId]: value }))}
       onSubmit={() => setPhase("result")}
     />

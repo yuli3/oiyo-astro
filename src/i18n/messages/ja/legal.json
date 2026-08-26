@@ -2,31 +2,31 @@
   "terms": {
     "sections": {
       "overview": {
-        "content": "OIYOはユーザーの権利保護のためにデータ保護法を遵守します。"
+        "content": "本規約は、OIYO Sanctuaryのご利用に適用されます。Void(深淵)へお入りいただいた時点で、これらの契約に同意したものとみなされます。利用者は真実の情報を提供し、診断結果を占術的な洞察として扱うものとし、当社の許可なく再配布・商用利用を行わないものとします。当社は、本サービスの内容や結果について一切の保証を行わず、法令に定める場合を除き、本サービスの利用により生じた損害について責任を負いません。本規約に関して紛争が生じた場合は、当社所在地を管轄する裁判所を第一審の専属的合意管轄とします。"
       }
     },
     "test": {
       "progress": "進捗",
       "next": "次へ",
       "previous": "前へ",
-      "submit": "確認",
-      "loading": "読み込み中",
+      "submit": "同意して続ける",
+      "loading": "処理中...",
       "selectOption": "選択してください",
       "insightBullets": ["主要規約"]
     },
     "result": {
-      "title": "個人情報保護方針",
-      "description": "OIYOはあなたの個人情報を大切にします。"
+      "title": "契約締結",
+      "description": "利用規約に同意しました。"
     },
     "meta": {
-      "title": "個人情報保護方針",
-      "description": "OIYOはあなたの個人情報を大切にします。",
-      "keywords": "個人情報, セキュリティ, データ保護"
+      "title": "利用規約",
+      "description": "OIYOの利用規約をご確認ください。",
+      "keywords": "利用規約, 規約, サービス"
     },
-    "title": "個人情報保護方針",
-    "description": "OIYOはあなたの個人情報を大切にします。",
-    "keywords": "個人情報, セキュリティ, データ保護",
-    "lastUpdated": "2024年1月1日"
+    "title": "利用規約",
+    "description": "Sanctuaryのご利用に関する規約です。",
+    "keywords": "利用規約, 規約, サービス, 条件",
+    "lastUpdated": "2026年1月1日"
   },
   "privacy": {
     "sections": {

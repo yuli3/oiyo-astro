@@ -1,7 +1,7 @@
 {
   "maxBarePages": 232,
-  "maxKoreanLeaks": 10,
+  "maxKoreanLeaks": 0,
   "recordedOn": "2026-08-26",
   "source": "company-brain/projects/oiyo-ecosystem/low-quality-content-full-audit-2026-08-26.md P1-1/P1-2/P1-6",
-  "note": "Ceiling, not a target. Existing bare pages and Korean-leak pages are NOT being bulk-fixed by this gate (see goals.json content-integrity-hardening-2026-08 guardrails). This gate only stops both counts from growing again."
+  "note": "Ceiling, not a target. Existing bare pages are NOT being bulk-fixed by this gate (see goals.json content-integrity-hardening-2026-08 guardrails); this gate only stops that count from growing again. The Korean-leak count WAS fixed on 2026-08-26 (all 11 locale-blind test components from P1-6 given ja/zh/fr/es text) and confirmed at 0 -- ceiling lowered from 10 to 0 accordingly. Do not raise it back up without a regression."
 }

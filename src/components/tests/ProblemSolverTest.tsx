@@ -70,12 +70,149 @@ const data = {
     },
     retake: "Retake", resultLabel: "Your Problem-Solving Style",
   },
+  ja: {
+    title: "問題解決者テスト：あなたの問題解決スタイルは？",
+    description: "15の質問であなただけの問題解決方法を発見しましょう。",
+    questions: [
+      { id: "q1", text: "新しい問題に出会ったとき、まずデータと事実を収集し分析する。", type: "analytical" as SolverStyle },
+      { id: "q2", text: "今までにない独創的なアイデアで問題を解決するのを楽しむ。", type: "creative" as SolverStyle },
+      { id: "q3", text: "複雑な理論よりすぐに実行できる現実的な解決策を好む。", type: "practical" as SolverStyle },
+      { id: "q4", text: "チームメンバーと一緒に頭を突き合わせて解決策を探すのが効果的だ。", type: "collaborative" as SolverStyle },
+      { id: "q5", text: "問題の根本原因を把握し、長期的な解決策を立てることが重要だ。", type: "strategic" as SolverStyle },
+      { id: "q6", text: "問題を段階的に分けて論理的にアプローチする方法が心地よい。", type: "analytical" as SolverStyle },
+      { id: "q7", text: "ブレインストーミングのような自由な発想から最高の解決策が生まれると思う。", type: "creative" as SolverStyle },
+      { id: "q8", text: "すぐに試してみて結果を見ながら修正する方法で問題を解決する。", type: "practical" as SolverStyle },
+      { id: "q9", text: "多様な視点を持つ人々の意見を集めて、より良い答えを見つける。", type: "collaborative" as SolverStyle },
+      { id: "q10", text: "問題を解決する前に、まず全体的な大きな絵と目標を設定する。", type: "strategic" as SolverStyle },
+      { id: "q11", text: "数字とパターンを分析すればほとんどの問題の答えが見える。", type: "analytical" as SolverStyle },
+      { id: "q12", text: "他人が思いつかなかった方法で問題を解決したとき、最も誇らしく感じる。", type: "creative" as SolverStyle },
+      { id: "q13", text: "完璧な計画よりも素早い実行とフィードバックの方が重要だ。", type: "practical" as SolverStyle },
+      { id: "q14", text: "一人よりチームで取り組むときの方がより創造的で良い結果が出る。", type: "collaborative" as SolverStyle },
+      { id: "q15", text: "目の前の問題よりも、この問題が及ぼす影響と波及効果を先に考える。", type: "strategic" as SolverStyle },
+    ],
+    options: ["全くそう思わない", "そう思わない", "普通", "そう思う", "非常にそう思う"],
+    results: {
+      analytical: { emoji: "🔬", title: "分析型解決者 (Analytical Solver)", desc: "あなたはデータと論理で問題を解決するアナリストです。パターンを発見し体系的にアプローチする能力に優れています。複雑な問題を段階的に分解して根拠のある解決策を導き出します。" },
+      creative: { emoji: "💡", title: "創造型解決者 (Creative Solver)", desc: "あなたは独創的なアイデアで問題を解決するイノベーターです。既存の枠を超えて新しい視点からアプローチし、予想外の創造的な解決策を生み出します。" },
+      practical: { emoji: "🔧", title: "実用型解決者 (Practical Solver)", desc: "あなたは即座の行動と実験で問題を解決する実行者です。理論よりも現場で学び、素早いフィードバックを通じて効率的に問題を克服します。" },
+      collaborative: { emoji: "🤝", title: "協力型解決者 (Collaborative Solver)", desc: "あなたはチームの集合知を活用する協力者です。多様な視点を統合し、人々の強みを調和させてより良い解決策を生み出します。" },
+      strategic: { emoji: "♟️", title: "戦略型解決者 (Strategic Solver)", desc: "あなたは大きな絵を見て長期的にアプローチする戦略家です。問題の根本原因と波及効果を分析し、持続可能で総合的な解決策を設計します。" },
+    },
+    retake: "もう一度", resultLabel: "あなたの問題解決スタイル",
+  },
+  zh: {
+    title: "问题解决者测试：你的解决问题风格是什么？",
+    description: "通过15个问题，发现你独特的解决问题方式。",
+    questions: [
+      { id: "q1", text: "遇到新问题时，我会先收集并分析数据和事实。", type: "analytical" as SolverStyle },
+      { id: "q2", text: "我喜欢用前所未有的独创想法来解决问题。", type: "creative" as SolverStyle },
+      { id: "q3", text: "比起复杂的理论，我更偏好能立即执行的现实解决方案。", type: "practical" as SolverStyle },
+      { id: "q4", text: "和团队成员一起集思广益寻找解决方案更有效。", type: "collaborative" as SolverStyle },
+      { id: "q5", text: "找出问题的根本原因并制定长期解决方案很重要。", type: "strategic" as SolverStyle },
+      { id: "q6", text: "把问题逐步拆解、逻辑地处理让我感到自在。", type: "analytical" as SolverStyle },
+      { id: "q7", text: "我认为最好的解决方案来自像头脑风暴那样自由的构思。", type: "creative" as SolverStyle },
+      { id: "q8", text: "我通过立即尝试并根据结果调整的方式来解决问题。", type: "practical" as SolverStyle },
+      { id: "q9", text: "我会收集不同视角的人的意见，找到更好的答案。", type: "collaborative" as SolverStyle },
+      { id: "q10", text: "在解决问题之前，我会先设定整体大局和目标。", type: "strategic" as SolverStyle },
+      { id: "q11", text: "分析数字和规律往往能看出大多数问题的答案。", type: "analytical" as SolverStyle },
+      { id: "q12", text: "用别人想不到的方法解决问题时，我最有成就感。", type: "creative" as SolverStyle },
+      { id: "q13", text: "比起完美的计划，快速执行和反馈更重要。", type: "practical" as SolverStyle },
+      { id: "q14", text: "团队合作比独自一人能产出更有创意、更好的结果。", type: "collaborative" as SolverStyle },
+      { id: "q15", text: "比起眼前的问题，我会先考虑这个问题的影响和连锁效应。", type: "strategic" as SolverStyle },
+    ],
+    options: ["完全不符合", "不符合", "一般", "符合", "非常符合"],
+    results: {
+      analytical: { emoji: "🔬", title: "分析型解决者 (Analytical Solver)", desc: "你是用数据和逻辑解决问题的分析者。你擅长发现规律并系统化地处理问题，能把复杂问题逐步拆解，得出有依据的解决方案。" },
+      creative: { emoji: "💡", title: "创意型解决者 (Creative Solver)", desc: "你是用独创想法解决问题的创新者。你打破常规、从新的角度切入，创造出意想不到的创意解决方案。" },
+      practical: { emoji: "🔧", title: "实用型解决者 (Practical Solver)", desc: "你是靠即时行动和实验解决问题的行动派。你更倾向于在实践中学习，通过快速反馈高效地克服问题。" },
+      collaborative: { emoji: "🤝", title: "协作型解决者 (Collaborative Solver)", desc: "你善于运用团队的集体智慧。你整合多元视角，将人们的优势和谐结合，创造出更好的解决方案。" },
+      strategic: { emoji: "♟️", title: "战略型解决者 (Strategic Solver)", desc: "你是着眼大局、以长期视角处理问题的战略家。你分析问题的根本原因和连锁效应，设计出可持续且全面的解决方案。" },
+    },
+    retake: "重新测试", resultLabel: "你的解决问题风格",
+  },
+  fr: {
+    title: "Test du résolveur de problèmes : quel est votre style de résolution de problèmes ?",
+    description: "Découvrez votre approche unique de résolution de problèmes à travers 15 questions.",
+    questions: [
+      { id: "q1", text: "Face à un nouveau problème, je collecte et analyse d'abord les données et les faits.", type: "analytical" as SolverStyle },
+      { id: "q2", text: "J'aime résoudre les problèmes avec des idées originales jamais essayées auparavant.", type: "creative" as SolverStyle },
+      { id: "q3", text: "Je préfère des solutions réalistes que je peux appliquer immédiatement plutôt que des théories complexes.", type: "practical" as SolverStyle },
+      { id: "q4", text: "Le brainstorming avec les membres de l'équipe est le moyen le plus efficace de trouver des solutions.", type: "collaborative" as SolverStyle },
+      { id: "q5", text: "Il est important d'identifier la cause profonde et de développer des solutions à long terme.", type: "strategic" as SolverStyle },
+      { id: "q6", text: "Décomposer les problèmes étape par étape et les aborder logiquement me vient naturellement.", type: "analytical" as SolverStyle },
+      { id: "q7", text: "Je pense que les meilleures solutions viennent de sessions de brainstorming libres.", type: "creative" as SolverStyle },
+      { id: "q8", text: "Je résous les problèmes en essayant immédiatement puis en ajustant selon les résultats.", type: "practical" as SolverStyle },
+      { id: "q9", text: "Je trouve de meilleures réponses en rassemblant des points de vue variés.", type: "collaborative" as SolverStyle },
+      { id: "q10", text: "Avant de résoudre un problème, je définis d'abord la vision d'ensemble et les objectifs.", type: "strategic" as SolverStyle },
+      { id: "q11", text: "Analyser les chiffres et les tendances révèle la réponse à la plupart des problèmes.", type: "analytical" as SolverStyle },
+      { id: "q12", text: "Je me sens le plus satisfait(e) en résolvant des problèmes d'une façon que d'autres n'ont pas envisagée.", type: "creative" as SolverStyle },
+      { id: "q13", text: "Une exécution rapide et le retour d'expérience comptent plus qu'un plan parfait.", type: "practical" as SolverStyle },
+      { id: "q14", text: "Les équipes produisent des résultats plus créatifs et meilleurs qu'en travaillant seul.", type: "collaborative" as SolverStyle },
+      { id: "q15", text: "Avant le problème immédiat, je pense à son impact plus large et à ses répercussions.", type: "strategic" as SolverStyle },
+    ],
+    options: ["Jamais", "Rarement", "Parfois", "Souvent", "Toujours"],
+    results: {
+      analytical: { emoji: "🔬", title: "Résolveur analytique (Analytical Solver)", desc: "Vous résolvez les problèmes avec des données et de la logique. Vous excellez à identifier des tendances et à aborder les choses de façon systématique. Vous décomposez les problèmes complexes étape par étape pour aboutir à des solutions fondées sur des preuves." },
+      creative: { emoji: "💡", title: "Résolveur créatif (Creative Solver)", desc: "Vous êtes un(e) innovateur(rice) qui résout les problèmes avec des idées originales. Vous rompez avec les conventions et abordez les choses sous de nouveaux angles, générant des solutions créatives inattendues." },
+      practical: { emoji: "🔧", title: "Résolveur pragmatique (Practical Solver)", desc: "Vous êtes une personne d'action qui résout les problèmes par l'action immédiate et l'expérimentation. Vous apprenez sur le terrain plutôt que dans la théorie et surmontez les problèmes efficacement grâce à un retour rapide." },
+      collaborative: { emoji: "🤝", title: "Résolveur collaboratif (Collaborative Solver)", desc: "Vous exploitez l'intelligence collective d'une équipe. Vous intégrez des points de vue variés et combinez harmonieusement les forces de chacun pour créer de meilleures solutions." },
+      strategic: { emoji: "♟️", title: "Résolveur stratégique (Strategic Solver)", desc: "Vous êtes un(e) stratège qui voit la vision d'ensemble et adopte une approche à long terme. Vous analysez les causes profondes et les répercussions pour concevoir des solutions durables et globales." },
+    },
+    retake: "Recommencer", resultLabel: "Votre style de résolution de problèmes",
+  },
+  es: {
+    title: "Test del solucionador de problemas: ¿cuál es tu estilo para resolver problemas?",
+    description: "Descubre tu enfoque único para resolver problemas a través de 15 preguntas.",
+    questions: [
+      { id: "q1", text: "Cuando me encuentro con un problema nuevo, primero recopilo y analizo datos y hechos.", type: "analytical" as SolverStyle },
+      { id: "q2", text: "Disfruto resolviendo problemas con ideas originales que no se han probado antes.", type: "creative" as SolverStyle },
+      { id: "q3", text: "Prefiero soluciones realistas que pueda aplicar de inmediato antes que teorías complejas.", type: "practical" as SolverStyle },
+      { id: "q4", text: "Hacer una lluvia de ideas con el equipo es la forma más eficaz de encontrar soluciones.", type: "collaborative" as SolverStyle },
+      { id: "q5", text: "Es importante identificar la causa raíz y desarrollar soluciones a largo plazo.", type: "strategic" as SolverStyle },
+      { id: "q6", text: "Descomponer los problemas paso a paso y abordarlos con lógica me resulta natural.", type: "analytical" as SolverStyle },
+      { id: "q7", text: "Creo que las mejores soluciones surgen de sesiones de lluvia de ideas libres.", type: "creative" as SolverStyle },
+      { id: "q8", text: "Resuelvo problemas probando cosas de inmediato y ajustando según los resultados.", type: "practical" as SolverStyle },
+      { id: "q9", text: "Encuentro mejores respuestas reuniendo perspectivas de personas con puntos de vista diversos.", type: "collaborative" as SolverStyle },
+      { id: "q10", text: "Antes de resolver un problema, primero defino el panorama general y los objetivos.", type: "strategic" as SolverStyle },
+      { id: "q11", text: "Analizar números y patrones revela la respuesta a la mayoría de los problemas.", type: "analytical" as SolverStyle },
+      { id: "q12", text: "Me siento más satisfecho(a) al resolver problemas de formas que otros no han pensado.", type: "creative" as SolverStyle },
+      { id: "q13", text: "La ejecución rápida y el feedback importan más que un plan perfecto.", type: "practical" as SolverStyle },
+      { id: "q14", text: "Los equipos producen resultados más creativos y mejores que trabajar en solitario.", type: "collaborative" as SolverStyle },
+      { id: "q15", text: "Antes del problema inmediato, pienso en su impacto más amplio y sus efectos colaterales.", type: "strategic" as SolverStyle },
+    ],
+    options: ["Nunca", "Rara vez", "A veces", "A menudo", "Siempre"],
+    results: {
+      analytical: { emoji: "🔬", title: "Solucionador analítico (Analytical Solver)", desc: "Resuelves problemas con datos y lógica. Destacas identificando patrones y abordando las cosas de forma sistemática. Descompones problemas complejos paso a paso para llegar a soluciones basadas en evidencia." },
+      creative: { emoji: "💡", title: "Solucionador creativo (Creative Solver)", desc: "Eres un(a) innovador(a) que resuelve problemas con ideas originales. Rompes con lo convencional y abordas las cosas desde nuevos ángulos, generando soluciones creativas inesperadas." },
+      practical: { emoji: "🔧", title: "Solucionador práctico (Practical Solver)", desc: "Eres una persona de acción que resuelve problemas mediante la acción inmediata y la experimentación. Aprendes sobre la marcha en lugar de en la teoría y superas los problemas de forma eficiente gracias al feedback rápido." },
+      collaborative: { emoji: "🤝", title: "Solucionador colaborativo (Collaborative Solver)", desc: "Aprovechas la inteligencia colectiva de un equipo. Integras perspectivas diversas y combinas armoniosamente las fortalezas de las personas para crear mejores soluciones." },
+      strategic: { emoji: "♟️", title: "Solucionador estratégico (Strategic Solver)", desc: "Eres un(a) estratega que ve el panorama general y adopta un enfoque a largo plazo. Analizas causas raíz y efectos colaterales para diseñar soluciones sostenibles e integrales." },
+    },
+    retake: "Repetir", resultLabel: "Tu estilo para resolver problemas",
+  },
+};
+
+type SupportedLocale = keyof typeof data;
+const SUPPORTED_LOCALES: SupportedLocale[] = ["ko", "en", "ja", "zh", "fr", "es"];
+const UI_LABELS: Record<SupportedLocale, {
+  completed: (completed: number, total: number) => string;
+  unanswered: (count: number) => string;
+  submit: string;
+  validation: string;
+}> = {
+  ko: { completed: (c, t) => `${c} / ${t} 응답`, unanswered: (c) => `미응답 ${c}개`, submit: "결과 보기", validation: "응답하지 않은 첫 문항으로 이동했습니다." },
+  en: { completed: (c, t) => `${c} / ${t} answered`, unanswered: (c) => `${c} unanswered`, submit: "See Results", validation: "Moved to the first unanswered question." },
+  ja: { completed: (c, t) => `${c} / ${t} 回答済み`, unanswered: (c) => `未回答 ${c}件`, submit: "結果を見る", validation: "未回答の最初の質問に移動しました。" },
+  zh: { completed: (c, t) => `已回答 ${c} / ${t}`, unanswered: (c) => `未回答 ${c} 题`, submit: "查看结果", validation: "已跳转到第一个未回答的问题。" },
+  fr: { completed: (c, t) => `${c} / ${t} réponses`, unanswered: (c) => `${c} sans réponse`, submit: "Voir les résultats", validation: "Vous avez été redirigé(e) vers la première question sans réponse." },
+  es: { completed: (c, t) => `${c} / ${t} respondidas`, unanswered: (c) => `${c} sin responder`, submit: "Ver resultados", validation: "Se te ha llevado a la primera pregunta sin responder." },
 };
 
 export default function ProblemSolverTest({ locale: localeProp }: Props) {
 
-  const lang = (localeProp === "en" ? "en" : "ko") as "ko" | "en";
+  const lang = (SUPPORTED_LOCALES.includes(localeProp as SupportedLocale) ? localeProp : "en") as SupportedLocale;
   const t = data[lang];
+  const ui = UI_LABELS[lang];
   const [answers, setAnswers] = useState<Record<string, number>>({});
   const [phase, setPhase] = useState<"quiz" | "result">("quiz");
   useRecordFinishedTest({ testId: "problem-solver", title: "ProblemSolverTest", finished: phase === "result" });
@@ -96,7 +233,7 @@ export default function ProblemSolverTest({ locale: localeProp }: Props) {
           <p className="text-slate-700 text-base leading-relaxed">{r.desc}</p>
         </div>
         <button onClick={() => { setAnswers({}); setPhase("quiz"); }} className="text-slate-400 text-sm hover:underline">{t.retake}</button>
-        <ShareResultButton locale={localeProp ?? 'ko'} heading={t.title} resultTitle={r.title} emoji={r.emoji} />
+        <ShareResultButton locale={lang} heading={t.title} resultTitle={r.title} emoji={r.emoji} />
       </div>
     );
   }
@@ -108,10 +245,10 @@ export default function ProblemSolverTest({ locale: localeProp }: Props) {
       questions={t.questions}
       options={t.options}
       answers={answers}
-      completedLabel={(completed, total) => lang === "ko" ? `${completed} / ${total} 응답` : `${completed} / ${total} answered`}
-      unansweredLabel={(count) => lang === "ko" ? `미응답 ${count}개` : `${count} unanswered`}
-      submitLabel={lang === "ko" ? "결과 보기" : "See Results"}
-      validationLabel={lang === "ko" ? "응답하지 않은 첫 문항으로 이동했습니다." : "Moved to the first unanswered question."}
+      completedLabel={ui.completed}
+      unansweredLabel={ui.unanswered}
+      submitLabel={ui.submit}
+      validationLabel={ui.validation}
       onAnswer={(questionId, value) => setAnswers((prev) => ({ ...prev, [questionId]: value }))}
       onSubmit={() => setPhase("result")}
     />
