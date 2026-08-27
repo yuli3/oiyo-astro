@@ -1,8 +1,10 @@
 "use client";
 
 import { calculateCelticTree } from "@/lib/ontology/celtic/calculator";
+import { CELTIC_TREES } from "@/lib/ontology/celtic/types";
 import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import { BirthDateField } from "@/components/shared/BirthDateField";
+import CelticWheel from "./celtic/CelticWheel";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const COPY: Record<Lang, { birthDate: string; tree: string }> = {
@@ -34,6 +36,11 @@ export default function CelticReading({ locale = "ko" }: { locale?: string }) {
     <div className="rounded-2xl bg-emerald-50 p-5">
       <p className="text-sm font-black text-emerald-950">{t.tree} · {result.name}</p>
       <p className="mt-2 text-sm text-emerald-800">{result.ogham} · {result.celticName}</p>
+      <CelticWheel
+        locale={lang}
+        total={CELTIC_TREES.length}
+        myIndex={CELTIC_TREES.findIndex((sign) => sign.id === result.id)}
+      />
     </div>
   );
 }
