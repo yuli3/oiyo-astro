@@ -1,8 +1,16 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState, useCallback, useEffect } from 'react'
 import { useRecordFinishedTest } from "@/lib/user/use-record-finished-test";
+import { isChimpLevelComplete } from '@/lib/chimp-test';
 
-const ChimpTest: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) => {
-    const t = {
+type Locale = 'ko' | 'en' | 'ja' | 'zh' | 'fr' | 'es';
+
+const BEST_LEVEL_KEY = 'oiyo:chimp-test:best-level:v1';
+
+const COPY: Record<Locale, {
+    title: string; desc: string; start: string; level: string; fail: string;
+    retry: string; success: string; next: string; best: string; ready: string;
+    completed: (level: number) => string; total: (level: number) => string;
+}> = {
         ko: {
             title: "침팬지 기억력 테스트",
             desc: "숫자를 순서대로 기억한 뒤, 숫자가 사라지면 순서대로 클릭하세요.",
@@ -13,7 +21,10 @@ const ChimpTest: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) => {
             retry: "다시 도전하기",
             success: "통과!",
             next: "다음 레벨로",
-            best: "최고 기록"
+            best: "최고 기록",
+            ready: "준비되면 바로 가리기",
+            completed: (level) => `레벨 ${level} 완료!`,
+            total: (level) => `최종 레벨: ${level}`,
         },
         en: {
             title: "Chimp Memory Test",
@@ -25,16 +36,62 @@ const ChimpTest: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) => {
             retry: "Try Again",
             success: "Success!",
             next: "Next Level",
-            best: "Best Level"
-        }
-    }[locale === 'ko' ? 'ko' : 'en'];
+            best: "Best Level",
+            ready: "Hide now when ready",
+            completed: (level) => `Level ${level} completed!`,
+            total: (level) => `Final level: ${level}`,
+        },
+        ja: {
+            title: "チンパンジー記憶テスト", desc: "数字の位置を覚え、隠れたら1から順に選んでください。",
+            start: "テスト開始", level: "レベル", fail: "テスト終了", retry: "もう一度挑戦",
+            success: "クリア！", next: "次のレベル", best: "最高記録", ready: "準備できたら数字を隠す",
+            completed: (level) => `レベル${level}クリア！`, total: (level) => `最終レベル：${level}`,
+        },
+        zh: {
+            title: "黑猩猩记忆测试", desc: "记住数字的位置，数字隐藏后从1开始依次点击。",
+            start: "开始测试", level: "关卡", fail: "测试结束", retry: "再次挑战",
+            success: "通过！", next: "下一关", best: "最高记录", ready: "准备好后隐藏数字",
+            completed: (level) => `第${level}关完成！`, total: (level) => `最终关卡：${level}`,
+        },
+        fr: {
+            title: "Test de mémoire du chimpanzé", desc: "Mémorisez la position des nombres, puis cliquez dans l'ordre après leur disparition.",
+            start: "Commencer", level: "Niveau", fail: "Test terminé", retry: "Réessayer",
+            success: "Réussi !", next: "Niveau suivant", best: "Meilleur niveau", ready: "Masquer les nombres maintenant",
+            completed: (level) => `Niveau ${level} réussi !`, total: (level) => `Niveau final : ${level}`,
+        },
+        es: {
+            title: "Test de memoria del chimpancé", desc: "Memoriza la posición de los números y púlsalos en orden cuando desaparezcan.",
+            start: "Empezar", level: "Nivel", fail: "Prueba terminada", retry: "Intentarlo de nuevo",
+            success: "¡Superado!", next: "Siguiente nivel", best: "Mejor nivel", ready: "Ocultar los números ahora",
+            completed: (level) => `¡Nivel ${level} completado!`, total: (level) => `Nivel final: ${level}`,
+        },
+    };
+
+const ChimpTest: React.FC<{ locale?: Locale }> = ({ locale = 'ko' }) => {
+    const t = COPY[locale] ?? COPY.en;
 
     const [status, setStatus] = useState<'idle' | 'memorize' | 'recall' | 'result'>('idle');
     const [level, setLevel] = useState(1);
     const [tiles, setTiles] = useState<{ id: number; num: number; x: number; y: number; clicked: boolean }[]>([]);
     const [nextNum, setNextNum] = useState(1);
     const [bestLevel, setBestLevel] = useState(0);
+    const [roundCleared, setRoundCleared] = useState(false);
     useRecordFinishedTest({ testId: "chimp", title: "ChimpTest", finished: status === "result" });
+
+    useEffect(() => {
+        try {
+            const saved = Number(localStorage.getItem(BEST_LEVEL_KEY));
+            if (Number.isFinite(saved) && saved > 0) setBestLevel(saved);
+        } catch {
+            // Storage can be unavailable in private browsing; the game still works.
+        }
+    }, []);
+
+    useEffect(() => {
+        if (status !== 'memorize') return;
+        const timer = window.setTimeout(() => setStatus('recall'), 5000);
+        return () => window.clearTimeout(timer);
+    }, [status, level]);
 
     const initLevel = useCallback((lv: number) => {
         const count = lv + 3;
@@ -52,6 +109,7 @@ const ChimpTest: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) => {
         }
         setTiles(newTiles);
         setNextNum(1);
+        setRoundCleared(false);
         setStatus('memorize');
     }, []);
 
@@ -64,13 +122,19 @@ const ChimpTest: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) => {
         if (tile.num === nextNum) {
             const updated = tiles.map(t => t.id === id ? { ...t, clicked: true } : t);
             setTiles(updated);
-            if (nextNum === tiles.length) {
+            if (isChimpLevelComplete(nextNum, tiles.length)) {
+                setRoundCleared(true);
+                setNextNum(nextNum + 1);
                 setStatus('result');
-                if (level > bestLevel) setBestLevel(level);
+                if (level > bestLevel) {
+                    setBestLevel(level);
+                    try { localStorage.setItem(BEST_LEVEL_KEY, String(level)); } catch { /* non-blocking */ }
+                }
             } else {
                 setNextNum(nextNum + 1);
             }
         } else {
+            setRoundCleared(false);
             setStatus('result');
         }
     };
@@ -132,7 +196,7 @@ const ChimpTest: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) => {
                                 onClick={() => setStatus('recall')}
                                 className="absolute top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground rounded-full text-[10px] font-bold shadow-lg"
                             >
-                                CLICK TO START
+                                {t.ready}
                             </button>
                         </div>
                     )}
@@ -141,11 +205,11 @@ const ChimpTest: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) => {
 
             {status === 'result' && (
                 <div className="h-80 flex flex-col items-center justify-center text-center space-y-6 animate-fade-in">
-                    {nextNum > tiles.length ? (
+                    {roundCleared ? (
                         <>
                             <div className="text-4xl text-primary">🎉</div>
                             <h4 className="text-2xl font-black text-primary">{t.success}</h4>
-                            <p className="text-muted-foreground font-medium">Level {level} Completed!</p>
+                            <p className="text-muted-foreground font-medium">{t.completed(level)}</p>
                             <button 
                                 onClick={() => { setLevel(level + 1); initLevel(level + 1); }}
                                 className="px-10 py-3 bg-primary text-primary-foreground rounded-full font-bold hover:opacity-90"
@@ -157,7 +221,7 @@ const ChimpTest: React.FC<{ locale?: 'ko' | 'en' }> = ({ locale = 'ko' }) => {
                         <>
                             <div className="text-4xl text-destructive">💀</div>
                             <h4 className="text-2xl font-black text-destructive">{t.fail}</h4>
-                            <p className="text-muted-foreground font-medium">Total Score: {level}</p>
+                            <p className="text-muted-foreground font-medium">{t.total(level)}</p>
                             <button 
                                 onClick={() => { setLevel(1); initLevel(1); }}
                                 className="px-10 py-3 bg-destructive text-destructive-foreground rounded-full font-bold hover:opacity-90"
