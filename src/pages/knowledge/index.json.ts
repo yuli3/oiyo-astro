@@ -3,7 +3,7 @@ import { SITE_CONFIG } from "../../config/seo.config";
 import { LOCALES } from "../../i18n";
 
 /**
- * Discovery manifest for the oiyo (execution layer) + the Oiyo knowledge network.
+ * Discovery manifest for OIYO interactive routes + the Oiyo knowledge network.
  * Output: /knowledge/index.json
  *
  * oiyo's interactive tools/tests are statically generated pages (not a content
@@ -14,10 +14,10 @@ import { LOCALES } from "../../i18n";
 export const GET: APIRoute = async () => {
   const base = SITE_CONFIG.url;
   const body = {
-    name: `${SITE_CONFIG.name} — Knowledge Layer`,
-    role: "execution",
+    name: `${SITE_CONFIG.name} — Interactive Tools`,
+    role: "interactive-tools",
     description:
-      "Interactive tools and tests (personality, saju, astrology, tarot, numerology, wellness). The execution layer of the Oiyo knowledge network.",
+      "Interactive tools and tests for personality, saju, astrology, tarot, numerology, and wellness.",
     publisher: { name: "Oiyo Tech", url: base },
     locales: LOCALES,
     resources: {
@@ -32,15 +32,15 @@ export const GET: APIRoute = async () => {
       },
     },
     network: {
-      description: "Part of the Oiyo knowledge network (definitions · explanations · tools).",
+      description: "Part of the Oiyo network. Canonical route owners are selected per user intent rather than by content format.",
       conceptGraph: {
         url: "https://wiki.oiyo.net/knowledge/relations.json",
         description: "Canonical cross-site concept graph (hub ownership, relations, cross-locale links).",
       },
       sites: [
-        { role: "definition", name: "Oiyo Wiki", url: "https://wiki.oiyo.net", knowledge: "https://wiki.oiyo.net/knowledge/index.json" },
-        { role: "explanation", name: "Oiyo Blog", url: "https://blog.oiyo.net", knowledge: "https://blog.oiyo.net/knowledge/index.json" },
-        { role: "execution", name: "Oiyo", url: "https://oiyo.net", knowledge: "https://oiyo.net/knowledge/index.json" },
+        { role: "reference-and-knowledge", name: "Oiyo Wiki", url: "https://wiki.oiyo.net", knowledge: "https://wiki.oiyo.net/knowledge/index.json" },
+        { role: "publishing-and-utility", name: "Oiyo Blog", url: "https://blog.oiyo.net", knowledge: "https://blog.oiyo.net/knowledge/index.json" },
+        { role: "interactive-tools", name: "Oiyo", url: "https://oiyo.net", knowledge: "https://oiyo.net/knowledge/index.json" },
       ],
     },
     citation: "Cite individual tools by their stable URL. Attribution: Oiyo (oiyo.net).",

@@ -6,27 +6,27 @@ import { LOCALES } from "../../i18n";
 
 const network = [
   {
-    role: "Definition",
+    role: "Reference",
     title: "Oiyo Wiki",
     href: "https://wiki.oiyo.net/knowledge/",
     summary: "Source-backed definitions and concept graphs.",
-    details: "Use this layer when you need stable terms, cited references, and machine-readable DefinedTerm data.",
+    details: "Use this catalog when you need stable terms, cited references, and machine-readable DefinedTerm data.",
     catalogs: [{ label: "topics.json", href: "https://wiki.oiyo.net/knowledge/topics.json" }],
   },
   {
-    role: "Explanation",
+    role: "Publishing",
     title: "Oiyo Blog",
     href: "https://blog.oiyo.net/knowledge/",
     summary: "Guides, lessons, comparisons, and long-form context.",
-    details: "Use this layer when a reader needs examples, study paths, or a practical explanation before using a tool.",
+    details: "Use this catalog for guides, lessons, references, and established utilities published on the blog.",
     catalogs: [{ label: "guides.json", href: "https://blog.oiyo.net/knowledge/guides.json" }],
   },
   {
-    role: "Execution",
+    role: "Interactive",
     title: "OIYO",
     href: "https://oiyo.net/knowledge/",
     summary: "Tests, calculators, results, and repeatable workflows.",
-    details: "Use this layer when the user wants to calculate, test, save a result, or turn knowledge into action.",
+    details: "Use this catalog when the user wants to calculate, test, save a result, or turn knowledge into action.",
     catalogs: [{ label: "tools.json", href: "/knowledge/tools.json" }],
     current: true,
   },
@@ -35,17 +35,17 @@ const network = [
 
 <!-- Layout 이 `| OIYO` 를 이미 붙인다. title 에 또 쓰면 `… | OIYO | OIYO` 가 된다(2026-08-05 라이브 실측). -->
 <Layout
-  title="Knowledge Layer — Interactive Tools Data"
-  description="The execution layer of the Oiyo knowledge network: interactive tools and tests, discoverable as machine-readable data."
+  title="Knowledge Network — Interactive Tools Data"
+  description="OIYO interactive tools and tests, discoverable as machine-readable data."
   locale="en"
 >
   <article class="py-24 max-w-3xl mx-auto px-6">
-    <p class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Knowledge Layer · Execution</p>
+    <p class="text-xs font-bold uppercase tracking-widest text-primary mb-4">Knowledge Network · Interactive Tools</p>
     <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-tight">
       Interactive tools, as citable data
     </h1>
     <p class="text-lg text-muted-foreground leading-relaxed mb-10">
-      OIYO is the <strong>execution layer</strong> of the Oiyo knowledge network: tests, calculators and
+      OIYO publishes interactive routes in the Oiyo knowledge network: tests, calculators and
       readings (personality, saju, astrology, tarot, numerology). The canonical URL index of these tools
       is the sitemap; a richer localized tools catalog is planned.
     </p>
@@ -67,9 +67,9 @@ const network = [
     </ul>
 
     <KnowledgeNetworkMap
-      eyebrow="Three layers"
+      eyebrow="Canonical catalogs"
       heading="The knowledge network"
-      intro="Start with the layer that matches the intent. Open the details only when you need the data contract behind it."
+      intro="Start with the canonical catalog that matches the task. A content format does not force a particular domain."
       layers={network}
     />
 
