@@ -22,13 +22,6 @@ TARGETS = {
         "QUESTIONS as MBTI_QUESTIONS",
         "TYPE_PROFILES",
     ],
-    "src/pages/[locale]/iq-test.astro": [
-        "buildQuizJsonLd",
-        "const quizJsonLd",
-        "<script type=\"application/ld+json\" set:html={JSON.stringify(quizJsonLd)} />",
-        "QUESTIONS as IQ_QUESTIONS",
-        "outcomeNames",
-    ],
 }
 
 HELPER_TARGETS = {

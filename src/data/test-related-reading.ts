@@ -53,7 +53,6 @@ function resolveLocale(locale: Locale, available: Locale[]): Locale {
 
 // key = route without locale prefix (e.g. "/iq-test")
 export const TEST_RELATED_READING: Record<string, RelatedReading> = {
-  "/iq-test": { blog: "/iq-test-free/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   "/hsp-test": { wiki: "/meaning-of-hsp/", wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
   "/procrastination-type-test": { blog: "/procrastination-type-test/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   // 긴급 5건 교체 2026-06-23: 기존 slug(404 위험) → 실존 slug
