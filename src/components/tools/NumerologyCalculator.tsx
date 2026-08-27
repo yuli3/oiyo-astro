@@ -3,6 +3,8 @@ import type { Locale } from "../../lib/i18n";
 import { useProfilePrefill } from "../../lib/user/useProfilePrefill";
 import { BirthDateField, ProfileNameField } from "../shared/BirthDateField";
 import AnimatedNumber from "../ui/AnimatedNumber";
+import NumerologyOrbit from "./numerology/NumerologyOrbit";
+import type { NumerologyNode } from "./numerology/NumerologyOrbitScene";
 
 interface Props {
   locale: Locale;
@@ -842,6 +844,12 @@ export default function NumerologyCalculator({ locale }: Props) {
       {/* Results */}
       {result && (
         <div className="space-y-4">
+          <NumerologyOrbit
+            locale={locale}
+            nodes={[result.lifePath, result.expression, result.soulUrge, result.personality]
+              .filter((n): n is number => n !== null)
+              .map((value): NumerologyNode => ({ value, isMaster: MASTER.has(value) }))}
+          />
           <NumberCard
             label={ui.lifePathLabel}
             number={result.lifePath}
