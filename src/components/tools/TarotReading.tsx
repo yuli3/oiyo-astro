@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { decodeResult, writeResultHash } from '../../lib/result-permalink';
 import { gaEvent } from '../../lib/analytics/ga-event';
 import { TarotCardFace, romanMajor, tarotMajorImageSrc } from './TarotCardFace';
+import TarotSpread from './tarot/TarotSpread';
 
 type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh' | 'cn';
 type Spread = 1 | 3 | 5;
@@ -467,6 +468,13 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
             );
           })}
         </div>
+      )}
+
+      {drawn && (
+        <TarotSpread
+          locale={locale}
+          cards={drawn.map((dc, i) => ({ reversed: dc.reversed, revealed: flipped.has(i) }))}
+        />
       )}
 
       {drawn && flipped.size < drawn.length && (
