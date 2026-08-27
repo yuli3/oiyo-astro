@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { PALM_LINES, type PalmLineId, type PalmLocale } from '../../lib/ontology/palmistry/palm-lines';
+import PalmLines3D from './palmistry/PalmLines3D';
 
 interface Props {
   locale: string;
@@ -118,6 +119,7 @@ export default function PalmistryExplorer({ locale }: Props) {
             })}
           </svg>
           <p className="mt-2 text-xs text-slate-400">{t.tapHint}</p>
+          <PalmLines3D locale={loc} lines={PALM_LINES} active={active} />
           <div className="mt-3 flex flex-wrap justify-center gap-2">
             {PALM_LINES.map((l) => (
               <button
