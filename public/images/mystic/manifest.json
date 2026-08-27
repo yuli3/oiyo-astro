@@ -1,0 +1,29 @@
+{
+  "generator": "OpenAI built-in image_gen",
+  "generatedOn": "2026-08-24",
+  "deliveryFormat": "webp",
+  "conversion": {
+    "tool": "cwebp",
+    "quality": 82,
+    "method": 6
+  },
+  "sharedPrompt": {
+    "useCase": "stylized-concept",
+    "assetType": "OIYO mystic service hero image, 16:9 landscape",
+    "scene": "warm ivory handmade paper with subtle grain",
+    "style": "quiet editorial illustration, flat geometric shapes, fine ochre construction lines, restrained letterpress texture",
+    "composition": "centered, mobile-first readability, strong silhouette, generous safe margins",
+    "mood": "calm, precise, reflective",
+    "palette": "warm olive green, muted terracotta, antique gold, stone gray, tiny navy accents",
+    "constraints": "no text, letters, numbers, logos, watermark, people, faces, deities, gradients, glossy 3D; sacred tree is a place landmark only",
+    "avoid": "neon, purple, cyan, dark background, photorealism, fantasy characters"
+  },
+  "assets": {
+    "saju-hero.webp": "Four balanced vertical pillars connected to the cycles of wood, fire, earth, metal, and water around a quiet circular landscape.",
+    "onomancy-hero.webp": "Abstract ink-like strokes become geometric sound waves and a branching name pattern without resembling readable writing.",
+    "numerology-hero.webp": "Unlabelled counting stones and nine circular orbit points form a precise spiral around the landscape landmark.",
+    "zodiac-hero.webp": "Twelve abstract constellation sectors form a celestial observational wheel above layered hills.",
+    "chinese-zodiac-hero.webp": "A twelve-part seasonal calendar uses abstract animal-track motifs instead of literal cartoon animals.",
+    "palmistry-hero.webp": "An anatomically plausible open palm whose major lines become landscape paths toward a distant tree."
+  }
+}
