@@ -7,6 +7,7 @@ import type { Locale } from '../../../i18n';
 import NatalChartCalculator from '../../../components/tools/NatalChartCalculator';
 import TestSourceNote from '../../../components/shared/TestSourceNote.astro';
 import PrintReportButton from '../../../components/shared/PrintReportButton.astro';
+import InterpretationDisclaimer from '../../../components/shared/InterpretationDisclaimer.astro';
 import { TEST_SOURCE_NOTES } from '../../../data/test-source-notes';
 
 export async function getStaticPaths() {
@@ -313,6 +314,8 @@ const faqJsonLd = {
         ))}
       </div>
     </section>
+
+    <InterpretationDisclaimer locale={locale} kind="symbolic-interpretation" />
 
     <div class="mt-10">
       <MysticTrinity topic="zodiac" locale={locale} />

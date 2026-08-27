@@ -41,7 +41,6 @@ REQUIRED_TOKENS = [
     "useTitle",
     "faqTitle",
     "readingTitle",
-    "disclaimer",
     "const faqJsonLd",
     "'@type': 'FAQPage'",
     '<script type="application/ld+json"',
@@ -49,6 +48,8 @@ REQUIRED_TOKENS = [
     "c.useCases.map",
     "c.faqs.map",
 ]
+
+DISCLAIMER_MARKERS = ("disclaimer", "<InterpretationDisclaimer")
 
 REQUIRED_LOCALES = ["ko", "en", "ja", "zh", "fr", "es"]
 
@@ -66,6 +67,11 @@ def main() -> int:
         for token in REQUIRED_TOKENS:
             if token not in text:
                 errors.append(f"{target}: missing token {token!r}")
+        if not any(marker in text for marker in DISCLAIMER_MARKERS):
+            errors.append(
+                f"{target}: missing rendered disclaimer "
+                f"(expected one of {DISCLAIMER_MARKERS!r})"
+            )
         for locale in REQUIRED_LOCALES:
             if not re.search(rf"(^|\n)\s*['\"]?{locale}['\"]?\s*:", text):
                 errors.append(f"{target}: missing localized content key {locale}")

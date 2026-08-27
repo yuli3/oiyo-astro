@@ -1,0 +1,125 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import RelatedTools from "../../../components/shared/RelatedTools.astro";
+import { LOCALES, localePath } from "../../../i18n";
+import type { Locale } from "../../../i18n";
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+
+const t = <T,>(map: Record<Locale, T>): T => map[locale] ?? map.en;
+
+const meta = {
+  title: t({
+    ko: "이 숫자는 무엇인가 — 환생 국가의 출생·인구 비중",
+    en: "What these numbers are — birth and population weights",
+    ja: "この数字は何か — 転生国家の出生と人口",
+    zh: "这些数字是什么 — 投胎国家的出生与人口比重",
+    fr: "Ce que sont ces chiffres — naissances et population",
+    es: "Qué son estos números — nacimientos y población",
+  }),
+  description: t({
+    ko: "점이 아닙니다. 유엔 WPP 출생 수와 세계은행 인구로 나라를 가중 추첨하는 방법, 대륙 필터가 확률을 바꾸지 않는 이유를 같은 도구 아래에서 설명합니다.",
+    en: "Not a fortune. How UN WPP births and World Bank population weight a country, and why the region filter does not change the draw — as a page under the same tool.",
+    ja: "占いではありません。国連WPPの出生と世界銀行の人口で国を重み抽選する方法を、同じツールの下のページで説明します。",
+    zh: "这不是算命。联合国 WPP 出生数和世界银行人口如何加权，以及大洲筛选为什么不改抽签 — 作为同一工具下的子页。",
+    fr: "Pas une voyance. Comment les naissances WPP et la population Banque mondiale pondèrent un pays, sous la même page d’outil.",
+    es: "No es un horóscopo. Cómo los nacimientos WPP y la población del Banco Mundial ponderan un país, en una subpágina de la misma herramienta.",
+  }),
+};
+
+const copy = {
+  kicker: t({ ko: "환생 국가", en: "Reincarnation country", ja: "転生する国", zh: "投胎国家", fr: "Pays de réincarnation", es: "País de reencarnación" }),
+  heading: t({ ko: "이 숫자는 무엇인가", en: "What these numbers are", ja: "この数字は何か", zh: "这些数字是什么", fr: "Ce que sont ces chiffres", es: "Qué son estos números" }),
+  cta: t({ ko: "환생하러 가기", en: "Go reincarnate", ja: "転生する", zh: "去投胎", fr: "Réincarner", es: "Reencarnar" }),
+  p1: t({
+    ko: "점을 보러 온 페이지가 아닙니다. 지금 태어나는 아이, 또는 지금 살아 있는 사람 기준으로 어느 나라에 속할 비중이 큰지를 숫자로 봅니다. 추첨은 한 단계 위 페이지에서 하고, 여기는 그 숫자가 어디서 오는지와 무엇을 말하지 않는지만 적습니다.",
+    en: "This is not a horoscope. It looks at which country you would land in if the weight were today’s births, or today’s living population. The draw is on the parent page. This page only says where the numbers come from, and what they refuse to say.",
+    ja: "占いのページではありません。いま生まれている子ども、またはいま生きている人を重みにして、どの国に属しやすいかを見ます。抽選は一つ上のページ、ここは数字の出所だけです。",
+    zh: "这不是算命页。它只看按今天的出生或今天活着的人，你会落在哪个国家的比重更大。抽签在上一页，这里只写数字从哪来。",
+    fr: "Ce n’est pas une voyance. Elle regarde le pays où vous tomberiez si le poids était les naissances d’aujourd’hui, ou les personnes vivantes. Le tirage est à la page parente.",
+    es: "Esto no es un horóscopo. Mira en qué país caerías si el peso fueran los nacimientos de hoy, o las personas vivas. El sorteo está en la página padre.",
+  }),
+  h2a: t({ ko: "신생아와 인구는 같은 목록이 아닙니다", en: "Births and population are not the same list", ja: "出生と人口は同じ名簿ではない", zh: "出生和人口不是同一张名单", fr: "Naissances et population ne sont pas la même liste", es: "Nacimientos y población no son la misma lista" }),
+  p2: t({
+    ko: "유엔 세계인구전망(WPP) 2024 중위 시나리오에서 2024년 출생은 인도가 가장 많고, 중국·나이지리아·파키스탄이 뒤를 잇습니다. 지금 살아 있는 인구로 보면 순서가 바뀝니다. 도구의 신생아 모드는 전자, 인구 모드는 후자입니다.",
+    en: "In UN WPP 2024 medium variant, India has the most births in 2024, then China, Nigeria, and Pakistan. Ranked by people alive now, the order changes. Births mode uses the first ranking. Population mode uses the second.",
+    ja: "国連WPP 2024の中位推計では、2024年の出生はインドが最も多く、中国・ナイジェリア・パキスタンが続きます。いま生きている人口で並べると順位は変わります。",
+    zh: "联合国 WPP 2024 中位方案里，2024 年出生最多的是印度，随后是中国、尼日利亚、巴基斯坦。按现有人口排序，名次会变。",
+    fr: "Dans le WPP 2024 (variante moyenne), l’Inde a le plus de naissances en 2024, puis la Chine, le Nigeria et le Pakistan. Classée par population vivante, l’ordre change.",
+    es: "En el WPP 2024 (variante media), la India tiene más nacimientos en 2024, luego China, Nigeria y Pakistán. Ordenada por población viva, la lista cambia.",
+  }),
+  h2b: t({ ko: "필터는 읽기용입니다", en: "The filter is for reading", ja: "フィルターは読む用です", zh: "筛选是用来读的", fr: "Le filtre sert à lire", es: "El filtro es para leer" }),
+  p3: t({
+    ko: "대륙 버튼을 눌러 아시아만 봐도 상위 목록이 짧아질 뿐, 환생하기는 전 세계 출생·인구 비중으로 뽑습니다. 행복도나 1인당 GDP로 확률을 고치지 않습니다. 코소보와 채널제도만 WPP가 없어 세계은행 조출생률 추정을 남깁니다. 지구본 핀은 수도가 아니라 나라의 지리 중심입니다.",
+    en: "Opening Asia shortens the ranking. Reincarnate still draws with worldwide weights. Happiness and GDP per person do not change the odds. A few territories missing from WPP keep a World Bank crude-birth-rate estimate. Globe pins sit on geographic centers, not capitals.",
+    ja: "大陸ボタンでアジアだけを見ても一覧が短くなるだけで、転生するボタンは世界の比重のままです。幸福度やGDPでは直しません。",
+    zh: "点开亚洲只会缩短榜单。投胎按钮仍按全世界比重抽取。幸福或人均 GDP 不会改概率。",
+    fr: "Le filtre Asie raccourcit le classement. Réincarner tire toujours avec des poids mondiaux. Le bonheur et le PIB ne changent pas les chances.",
+    es: "El filtro de Asia acorta la lista. Reencarnar sigue sorteando con pesos mundiales. La felicidad y el PIB no cambian las chances.",
+  }),
+  h2c: t({ ko: "취향 퀴즈와 합치지 마세요", en: "Do not merge this with the taste quiz", ja: "好みのクイズと足さないでください", zh: "不要和口味测验加在一起", fr: "Ne pas fusionner avec le quiz de goût", es: "No lo mezcles con el quiz de gusto" }),
+  p4: t({
+    ko: "같은 나라를 여러 번 뽑아도 오류가 아닙니다. 각 횟수는 독립 시행입니다. 기록은 이 브라우저에만 남고, 공유 링크는 주소의 나라 코드만 담습니다. 취향으로 나라를 고르고 싶다면 별도의 나라 찾기 퀴즈가 있습니다. 하나는 출생·인구의 무게이고, 하나는 선호입니다.",
+    en: "Drawing the same country twice is allowed. Each life is independent. History stays in this browser. A share link only carries country codes. For a country by taste, use the separate match quiz. One is mass. The other is preference.",
+    ja: "同じ国が何度出ても誤りではありません。各回は独立です。好みで国を選びたいなら別のクイズがあります。",
+    zh: "同一个国家抽到两次不是错误。每次独立。若想按喜好找国家，请用另一个测验。",
+    fr: "Tirer deux fois le même pays est permis. Chaque vie est indépendante. Pour un pays selon le goût, utilisez le quiz séparé.",
+    es: "Repetir el mismo país no es un error. Cada vida es independiente. Para un país por gusto, usa el quiz aparte.",
+  }),
+};
+
+const faqs = [
+  {
+    q: t({ ko: "확률은 어떻게 정해지나요?", en: "How are the odds set?", ja: "確率はどう決まりますか？", zh: "概率怎么定？", fr: "Comment les chances sont-elles fixées ?", es: "¿Cómo se fijan las probabilidades?" }),
+    a: t({ ko: "신생아 모드는 유엔 WPP 2024 출생 수 비중, 인구 모드는 세계은행 인구 비중입니다. 행복도·GDP·취향은 당첨 확률을 바꾸지 않습니다.", en: "Births mode uses UN WPP 2024 birth counts. Population mode uses World Bank population. Happiness, GDP, and taste do not change the odds.", ja: "新生児モードは国連WPP 2024の出生、人口モードは世界銀行の人口です。幸福度やGDPでは変わりません。", zh: "新生儿模式用联合国 WPP 2024 出生数，人口模式用世界银行人口。幸福或 GDP 不改概率。", fr: "Le mode naissances utilise le WPP 2024. Le mode population utilise la Banque mondiale. Le bonheur et le PIB ne changent pas les chances.", es: "El modo nacimientos usa WPP 2024. El modo población usa el Banco Mundial. Felicidad y PIB no cambian las chances." }),
+  },
+  {
+    q: t({ ko: "대륙 필터를 켜면 환생 확률이 바뀌나요?", en: "Does the region filter change the odds?", ja: "大陸フィルターで確率は変わりますか？", zh: "大洲筛选会改概率吗？", fr: "Le filtre régional change-t-il les chances ?", es: "¿El filtro regional cambia las chances?" }),
+    a: t({ ko: "아닙니다. 필터는 상위 목록과 검색만 줄입니다. 환생하기는 전 세계 비중으로 뽑습니다.", en: "No. It only shortens the ranking and search. Reincarnate still draws worldwide.", ja: "いいえ。一覧と検索だけが短くなります。抽選は世界のままです。", zh: "不会。只缩短榜单和搜索。抽签仍是全世界。", fr: "Non. Il raccourcit seulement la liste. Le tirage reste mondial.", es: "No. Solo acorta la lista y la búsqueda. El sorteo sigue siendo mundial." }),
+  },
+];
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((item) => ({
+    "@type": "Question",
+    name: item.q,
+    acceptedAnswer: { "@type": "Answer", text: item.a },
+  })),
+};
+
+const drawHref = localePath(locale, "/reincarnation-country/");
+---
+
+<Layout title={meta.title} description={meta.description} locale={locale} canonicalPath={localePath(locale, "/reincarnation-country/weights/")}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+  <div class="container mx-auto max-w-3xl px-4 py-8">
+    <p class="text-xs font-bold uppercase tracking-wide text-emerald-700">{copy.kicker}</p>
+    <h1 class="mt-2 text-3xl font-black tracking-tight text-slate-900">{copy.heading}</h1>
+    <p class="mt-4">
+      <a class="inline-flex min-h-11 items-center rounded-full bg-emerald-600 px-5 text-sm font-bold text-white hover:bg-emerald-700" href={drawHref}>{copy.cta}</a>
+    </p>
+    <p class="mt-6 max-w-2xl text-base leading-relaxed text-slate-600">{copy.p1}</p>
+    <h2 class="mt-10 text-lg font-bold text-slate-900">{copy.h2a}</h2>
+    <p class="mt-2 text-sm leading-relaxed text-slate-600">{copy.p2}</p>
+    <h2 class="mt-8 text-lg font-bold text-slate-900">{copy.h2b}</h2>
+    <p class="mt-2 text-sm leading-relaxed text-slate-600">{copy.p3}</p>
+    <h2 class="mt-8 text-lg font-bold text-slate-900">{copy.h2c}</h2>
+    <p class="mt-2 text-sm leading-relaxed text-slate-600">{copy.p4}</p>
+    <section class="mt-10 text-sm leading-relaxed text-slate-600">
+      <h2 class="text-lg font-bold text-slate-900">{t({ ko: "자주 묻는 질문", en: "FAQ", ja: "よくある質問", zh: "常见问题", fr: "Questions fréquentes", es: "Preguntas frecuentes" })}</h2>
+      {faqs.map((item) => (
+        <div class="mt-4">
+          <h3 class="font-bold text-slate-900">{item.q}</h3>
+          <p class="mt-1">{item.a}</p>
+        </div>
+      ))}
+    </section>
+    <RelatedTools locale={locale} tools={["countryMatch"]} current="reincarnation" />
+  </div>
+</Layout>

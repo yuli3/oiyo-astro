@@ -12,12 +12,32 @@ export interface ReincarnationCountry {
   cbrYear: number;
   lon: number | null;
   lat: number | null;
+  birthsYear?: number;
+  birthsSource?: "wpp2024" | "wb-cbr-estimate";
+  continent?: Continent;
+}
+
+export const CONTINENTS = ["asia", "africa", "europe", "americas", "oceania"] as const;
+export type Continent = (typeof CONTINENTS)[number];
+
+export function parseContinent(raw: string | null | undefined): Continent | "all" {
+  const value = (raw ?? "").trim().toLowerCase();
+  return (CONTINENTS as readonly string[]).includes(value) ? (value as Continent) : "all";
+}
+
+export function matchesContinent(row: ReincarnationCountry, continent: Continent | "all"): boolean {
+  if (continent === "all") return true;
+  return row.continent === continent;
 }
 
 export const REINCARNATION_META = {
   source: data.source,
   asOf: data.asOf,
+  pinSource: (data as { pinSource?: string }).pinSource,
 };
+
+export const REINCARNATION_HISTORY_KEY = "oiyo:reincarnation-history:v1";
+export const REINCARNATION_HISTORY_MAX = 24;
 
 export const REINCARNATION_COUNTRIES = data.countries as ReincarnationCountry[];
 
@@ -141,4 +161,79 @@ export function latLonToCartesian(lat: number, lon: number, radius = 1): [number
     radius * Math.cos(phi),
     radius * Math.sin(phi) * Math.sin(theta),
   ];
+}
+
+export function parseShareIso2(raw: string | null | undefined): string[] {
+  if (!raw) return [];
+  const out: string[] = [];
+  for (const part of raw.split(/[,\s]+/)) {
+    const code = part.trim().toUpperCase();
+    if (code.length !== 2 || !byIso2(code)) continue;
+    out.push(code);
+    if (out.length >= 20) break;
+  }
+  return out;
+}
+
+export function formatShareIso2(iso2: string[]): string {
+  return iso2
+    .map((code) => code.trim().toUpperCase())
+    .filter((code) => byIso2(code))
+    .slice(0, 20)
+    .join(",");
+}
+
+export type ReincarnationHistoryEntry = {
+  id: string;
+  at: string;
+  mode: WeightMode;
+  iso2: string[];
+};
+
+export function parseHistory(raw: unknown): ReincarnationHistoryEntry[] {
+  let value = raw;
+  if (typeof value === "string") {
+    try {
+      value = JSON.parse(value);
+    } catch {
+      return [];
+    }
+  }
+  if (!Array.isArray(value)) return [];
+  const out: ReincarnationHistoryEntry[] = [];
+  for (const item of value) {
+    if (!item || typeof item !== "object") continue;
+    const rec = item as Record<string, unknown>;
+    if (typeof rec.id !== "string" || typeof rec.at !== "string") continue;
+    const mode: WeightMode | null = rec.mode === "population" ? "population" : rec.mode === "births" ? "births" : null;
+    if (!mode) continue;
+    const iso2 = Array.isArray(rec.iso2)
+      ? rec.iso2
+          .filter((code): code is string => typeof code === "string")
+          .map((code) => code.trim().toUpperCase())
+          .filter((code) => byIso2(code))
+          .slice(0, 20)
+      : [];
+    if (!iso2.length) continue;
+    out.push({ id: rec.id.slice(0, 40), at: rec.at, mode, iso2 });
+    if (out.length >= REINCARNATION_HISTORY_MAX) break;
+  }
+  return out;
+}
+
+export function appendHistory(
+  list: ReincarnationHistoryEntry[],
+  entry: ReincarnationHistoryEntry,
+): ReincarnationHistoryEntry[] {
+  return [entry, ...list.filter((row) => row.id !== entry.id)].slice(0, REINCARNATION_HISTORY_MAX);
+}
+
+export function countriesFromIso2(iso2: string[]): ReincarnationCountry[] {
+  const rows: ReincarnationCountry[] = [];
+  for (const code of iso2) {
+    const row = byIso2(code);
+    if (row) rows.push(row);
+    if (rows.length >= 20) break;
+  }
+  return rows;
 }
