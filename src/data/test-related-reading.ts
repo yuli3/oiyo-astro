@@ -56,8 +56,8 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/hsp-test": { wiki: "/meaning-of-hsp/", wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },
   "/procrastination-type-test": { blog: "/procrastination-type-test/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   // 긴급 5건 교체 2026-06-23: 기존 slug(404 위험) → 실존 slug
-  "/communication-style-test": { blog: "/magazine-communication-style-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
-  "/conflict-style-test": { blog: "/magazine-conflict-style-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/communication-style-test": {},
+  "/conflict-style-test": {},
   "/stress-type-test": { blog: "/mbti-stress-type-test/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   "/resilience-test": { blog: "/resilience-test/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   "/grit-scale-test": { blog: "/resilience-science/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
@@ -86,7 +86,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/workaholic-test": { blog: "/magazine-workaholism-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   "/fomo-test": { blog: "/magazine-fomo-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   "/money-anxiety-test": { blog: "/magazine-money-anxiety-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
-  "/assertiveness-test": { blog: "/magazine-assertiveness-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
+  "/assertiveness-test": {},
   "/relationship-boredom-test": { blog: "/magazine-relationship-boredom-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   "/social-comparison-test": { blog: "/magazine-social-comparison-psychology/", blogLocales: ['ko', 'zh', 'fr', 'es'] },
   // 기존 매거진 가이드와 매칭
@@ -117,7 +117,7 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/creativity-type-test": { blog: "/magazine-creativity-type-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/disc-personality-test": { blog: "/magazine-disc-personality-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/egogram-test": { blog: "/magazine-egogram-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
-  "/empathy/test": { blog: "/magazine-empathy-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
+  "/empathy/test": {},
   "/growth-mindset-test": { blog: "/magazine-growth-mindset-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/introvert-extrovert-test": { blog: "/magazine-introvert-extrovert-psychology/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/investment-type/test": { blog: "/magazine-investment-psychology-guide/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
