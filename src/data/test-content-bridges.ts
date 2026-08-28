@@ -129,9 +129,9 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
       },
     },
     blogTargets: {
-      ko: 'https://blog.oiyo.net/ko/mbti-career-test',
+      ko: 'https://blog.oiyo.net/ko/magazine-mbti-career-psychology',
       en: 'https://blog.oiyo.net/en/magazine-mbti-career-psychology',
-      ja: 'https://blog.oiyo.net/ja/magazine-mbti-compass-test',
+      ja: 'https://blog.oiyo.net/ja/mbti-complete-deep-guide',
       zh: 'https://blog.oiyo.net/zh/meaning-of-mbti',
       fr: 'https://blog.oiyo.net/fr/meaning-of-mbti',
       es: 'https://blog.oiyo.net/es/meaning-of-mbti',
@@ -442,7 +442,7 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
     },
     blogTargets: {
       ko: 'https://blog.oiyo.net/ko/psychology-attachment-style-test',
-      en: 'https://blog.oiyo.net/en/magazine-attachment-test',
+      en: 'https://blog.oiyo.net/en/attachment-theory-love-patterns',
       ja: 'https://blog.oiyo.net/ja/attachment-theory-love-patterns',
       zh: 'https://blog.oiyo.net/zh/meaning-of-attachment-theory',
       fr: 'https://blog.oiyo.net/fr/meaning-of-attachment-theory',
@@ -737,8 +737,8 @@ const bridges: Record<TestBridgeTopic, TestBridgeEntry> = {
       },
     },
     blogTargets: {
-      ko: 'https://blog.oiyo.net/ko/magazine-habit-formation-guide',
-      en: 'https://blog.oiyo.net/en/magazine-habit-formation-guide',
+      ko: 'https://blog.oiyo.net/ko/habit-formation-science-guide',
+      en: 'https://blog.oiyo.net/en/habit-formation-science-guide',
       ja: 'https://blog.oiyo.net/ja/habit-neuroplasticity',
       zh: 'https://blog.oiyo.net/zh/neuroplasticity-habit-formation',
       fr: 'https://blog.oiyo.net/fr/neuroplasticity-habit-formation',
