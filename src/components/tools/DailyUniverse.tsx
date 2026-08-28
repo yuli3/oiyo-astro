@@ -144,7 +144,7 @@ const ZODIAC_LINE: Record<ZodiacElement, Partial<Record<string, string>>> = {
   },
 };
 
-// ─── Daily tarot (same seed/draw order as TarotDailyCard → same card) ────────
+// ─── Daily tarot (stable seed and draw order preserve the same daily card) ──
 interface TarotCard {
   name: Partial<Record<string, string>>;
   keywords: Partial<Record<string, string[]>>;
