@@ -3,7 +3,7 @@ import base64, json, os, urllib.request, urllib.error
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ENV = Path.home() / ".hermes/.env"
+ENV = Path(os.environ.get("OIYO_CREDENTIALS_FILE", "~/.config/oiyo/credentials.env")).expanduser()
 if ENV.exists():
     for line in ENV.read_text().splitlines():
         if "=" in line and not line.lstrip().startswith("#"):
