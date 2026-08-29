@@ -71,7 +71,6 @@ export function luckContent(locale: Locale): JourneyContent {
           items: [
             { href: w('meaning-of-saju-dictionary'), label: '사주 대사전 — 천간·지지·십신', external: true },
             { href: w('meaning-of-tarot-major-arcana'), label: '타로 메이저 아르카나', external: true },
-            { href: w('meaning-of-numerology'), label: '수비학이란 무엇인가', external: true },
             { href: w('meaning-of-color-psychology'), label: '색채 심리학이란', external: true },
           ],
         },
@@ -154,7 +153,6 @@ export function luckContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 概念辞典 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-numerology'), label: '数秘術とは何か', external: true },
             { href: w('meaning-of-color-psychology'), label: '色彩心理学とは', external: true },
             { href: w('meaning-of-archetypes'), label: 'アーキタイプ(元型)とは', external: true },
           ],
@@ -238,7 +236,6 @@ export function luckContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 概念词典 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-numerology'), label: '什么是数字命理', external: true },
             { href: w('meaning-of-color-psychology'), label: '什么是色彩心理学', external: true },
             { href: w('meaning-of-archetypes'), label: '什么是原型', external: true },
           ],
@@ -322,7 +319,6 @@ export function luckContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 Dictionnaire (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-numerology'), label: 'Qu\'est-ce que la numérologie', external: true },
             { href: w('meaning-of-color-psychology'), label: 'La psychologie des couleurs', external: true },
             { href: w('meaning-of-archetypes'), label: 'Que sont les archétypes', external: true },
           ],
@@ -406,7 +402,6 @@ export function luckContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 Diccionario (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-numerology'), label: 'Qué es la numerología', external: true },
             { href: w('meaning-of-color-psychology'), label: 'La psicología del color', external: true },
             { href: w('meaning-of-archetypes'), label: 'Qué son los arquetipos', external: true },
           ],
@@ -490,7 +485,6 @@ export function luckContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 Concept dictionary (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-numerology'), label: 'What is numerology', external: true },
             { href: w('meaning-of-color-psychology'), label: 'What is color psychology', external: true },
             { href: w('meaning-of-archetypes'), label: 'What are archetypes', external: true },
           ],

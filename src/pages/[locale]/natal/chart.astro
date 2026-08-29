@@ -48,6 +48,8 @@ const m = meta[locale] ?? meta.en;
 const content: Record<Locale, {
   introTitle: string;
   intro: string;
+  contextTitle: string;
+  context: string;
   conceptTitle: string;
   concepts: { title: string; body: string }[];
   useTitle: string;
@@ -60,6 +62,8 @@ const content: Record<Locale, {
   ko: {
     introTitle: '출생 차트는 태어난 순간 하늘을 천문 계산으로 되돌린 지도입니다',
     intro: '출생 차트(네이탈 차트)는 생년월일·시각·출생지를 기준으로 그 순간 태양·달·행성이 어느 별자리에 있었는지를 계산한 점성술의 기본 지도입니다. 이 계산기는 천문 알고리즘으로 태양·달·상승궁을 비롯한 배치를 직접 산출해, 외부 데이터에 의존하지 않고 나만의 별자리 조합을 정리해 줍니다.',
+    contextTitle: '천문 계산과 상징 해석은 다릅니다',
+    context: '출생 순간의 천체 위치를 계산하는 과정은 천문학에 속하지만, 그 배치에 성격·관계·삶의 의미를 부여하는 일은 오랜 점성술 전통의 상징 해석입니다. 현대에는 이를 운명의 확정표보다 자기 서사를 살펴보는 문화적 프레임으로 활용하기도 합니다. 계산값과 해석의 근거 수준을 구분해서 읽으세요.',
     conceptTitle: '계산되는 핵심 배치',
     concepts: [
       { title: '태양 별자리', body: '핵심 정체성과 의지를 상징합니다. 흔히 말하는 "별자리"가 바로 태양 별자리입니다.' },
@@ -81,13 +85,14 @@ const content: Record<Locale, {
     ],
     readingTitle: '더 깊게 읽기',
     reading: [
-      { href: 'https://wiki.oiyo.net/ko/meaning-of-astrology/', label: '점성술의 의미', desc: '별자리와 출생 차트의 기본 개념을 정리했습니다.' },
       { href: 'https://blog.oiyo.net/ko/western-astrology-vs-saju-comparison/', label: '점성술 vs 사주', desc: '서양 출생 차트와 동양 사주를 비교해 읽습니다.' },
     ],
   },
   en: {
     introTitle: 'A natal chart is a map of the sky at your birth, rebuilt by astronomy',
     intro: 'A natal (birth) chart maps where the Sun, Moon, and planets were among the zodiac signs at your exact birth moment, based on your date, time, and place. This calculator computes your Sun, Moon, Rising, and other placements directly with astronomical algorithms, so your chart is built from first principles rather than pulled from an external service.',
+    contextTitle: 'Astronomical calculation and symbolic interpretation are different',
+    context: 'Calculating where celestial bodies were at birth belongs to astronomy. Assigning personality, relationship, or life meaning to those placements belongs to the long cultural tradition of astrology. Some people use a chart as a framework for examining personal narratives rather than as a fixed script of fate. Keep the certainty of the calculation separate from the evidence for the interpretation.',
     conceptTitle: 'Core placements calculated',
     concepts: [
       { title: 'Sun sign', body: 'Your core identity and will. The "star sign" most people know is the Sun sign.' },
@@ -109,13 +114,14 @@ const content: Record<Locale, {
     ],
     readingTitle: 'Read more',
     reading: [
-      { href: 'https://wiki.oiyo.net/en/meaning-of-astrology/', label: 'Meaning of Astrology', desc: 'A guide to zodiac signs and the basics of the natal chart.' },
       { href: 'https://blog.oiyo.net/en/western-astrology-vs-saju-comparison/', label: 'Astrology vs Saju', desc: 'Compare the Western birth chart with East Asian saju.' },
     ],
   },
   ja: {
     introTitle: '出生図は、生まれた瞬間の空を天文計算で再現した地図です',
     intro: '出生図（ネイタルチャート）は、生年月日・時刻・出生地をもとに、その瞬間に太陽・月・惑星がどの星座にあったかを計算した占星術の基本地図です。この計算機は天文アルゴリズムで太陽・月・上昇宮などの配置を直接算出し、外部データに頼らずあなただけの星座の組み合わせを整理します。',
+    contextTitle: '天文計算と象徴解釈は別のものです',
+    context: '出生時の天体位置を求める過程は天文学ですが、その配置に性格・関係・人生の意味を与えるのは占星術という文化的な象徴解釈です。現代では運命の確定表ではなく、自分の物語を見つめる枠組みとして使われることもあります。計算値の確かさと解釈の根拠を分けて読んでください。',
     conceptTitle: '計算される主な配置',
     concepts: [
       { title: '太陽星座', body: '核となる自我と意志を象徴します。一般に言う「星座」がこの太陽星座です。' },
@@ -137,13 +143,14 @@ const content: Record<Locale, {
     ],
     readingTitle: '詳しく読む',
     reading: [
-      { href: 'https://wiki.oiyo.net/ja/meaning-of-astrology/', label: '占星術の意味', desc: '星座と出生図の基本概念を解説しています。' },
       { href: 'https://blog.oiyo.net/ja/western-astrology-vs-saju-comparison/', label: '占星術 vs 四柱推命', desc: '西洋の出生図と東洋の四柱推命を比較して読みます。' },
     ],
   },
   zh: {
     introTitle: '出生星盘是用天文计算还原你出生那一刻天空的地图',
     intro: '出生星盘（本命盘）以出生日期、时间与地点为准，计算那一刻太阳、月亮与行星各自落在哪个星座，是占星的基础地图。本计算器以天文算法直接推算太阳、月亮、上升等落点，不依赖外部数据，为你整理专属的星座组合。',
+    contextTitle: '天文计算与象征解释并不相同',
+    context: '计算出生时的天体位置属于天文学；把性格、关系或人生意义赋予这些位置，则属于占星传统的象征解释。现代使用者也会把星盘视为审视个人叙事的文化框架，而不是固定命运的剧本。阅读时请区分计算结果的精度与解释本身的证据程度。',
     conceptTitle: '核心计算落点',
     concepts: [
       { title: '太阳星座', body: '象征核心自我与意志。一般所说的「星座」即太阳星座。' },
@@ -165,13 +172,14 @@ const content: Record<Locale, {
     ],
     readingTitle: '延伸阅读',
     reading: [
-      { href: 'https://wiki.oiyo.net/zh/meaning-of-astrology/', label: '占星的意义', desc: '了解星座与出生星盘的基本概念。' },
       { href: 'https://blog.oiyo.net/zh/western-astrology-vs-saju-comparison/', label: '占星 vs 四柱八字', desc: '比较西方出生星盘与东方四柱八字。' },
     ],
   },
   fr: {
     introTitle: 'Le thème natal est une carte du ciel à votre naissance, reconstruite par l\'astronomie',
     intro: 'Un thème natal indique où se trouvaient le Soleil, la Lune et les planètes parmi les signes du zodiaque au moment exact de votre naissance, selon votre date, heure et lieu. Ce calculateur détermine vos positions Soleil, Lune et Ascendant directement par des algorithmes astronomiques, sans dépendre d\'un service externe.',
+    contextTitle: 'Le calcul astronomique et l’interprétation symbolique sont distincts',
+    context: 'Calculer la position des astres à la naissance relève de l’astronomie. Leur attribuer un sens pour la personnalité, les relations ou la vie relève de la tradition culturelle de l’astrologie. Certains utilisent le thème comme cadre pour examiner leur récit personnel plutôt que comme scénario fixe du destin. Distinguez la précision du calcul du niveau de preuve de l’interprétation.',
     conceptTitle: 'Positions principales calculées',
     concepts: [
       { title: 'Signe solaire', body: 'Votre identité centrale et votre volonté. Le « signe » que tout le monde connaît est le signe solaire.' },
@@ -193,12 +201,13 @@ const content: Record<Locale, {
     ],
     readingTitle: 'Lire plus',
     reading: [
-      { href: 'https://wiki.oiyo.net/fr/meaning-of-astrology/', label: 'Signification de l\'astrologie', desc: 'Un guide des signes du zodiaque et des bases du thème natal.' },
     ],
   },
   es: {
     introTitle: 'La carta natal es un mapa del cielo en tu nacimiento, reconstruido por la astronomía',
     intro: 'Una carta natal muestra dónde estaban el Sol, la Luna y los planetas entre los signos del zodiaco en tu momento exacto de nacimiento, según tu fecha, hora y lugar. Esta calculadora computa tus posiciones de Sol, Luna y Ascendente directamente con algoritmos astronómicos, sin depender de un servicio externo.',
+    contextTitle: 'El cálculo astronómico y la interpretación simbólica son distintos',
+    context: 'Calcular la posición de los astros al nacer pertenece a la astronomía. Atribuir personalidad, relaciones o significado vital a esas posiciones pertenece a la tradición cultural de la astrología. Algunas personas usan la carta como marco para examinar su narrativa personal, no como un guion fijo del destino. Distingue la precisión del cálculo del nivel de evidencia de la interpretación.',
     conceptTitle: 'Posiciones principales calculadas',
     concepts: [
       { title: 'Signo solar', body: 'Tu identidad central y voluntad. El "signo" que casi todos conocen es el signo solar.' },
@@ -220,7 +229,6 @@ const content: Record<Locale, {
     ],
     readingTitle: 'Leer más',
     reading: [
-      { href: 'https://wiki.oiyo.net/es/meaning-of-astrology/', label: 'Significado de la astrología', desc: 'Una guía de los signos del zodiaco y las bases de la carta natal.' },
     ],
   },
 };
@@ -263,6 +271,11 @@ const faqJsonLd = {
     <section class="mt-10 border-t border-green-100 pt-8">
       <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
       <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10 rounded-2xl bg-green-50 p-6">
+      <h2 class="text-xl font-bold text-green-950">{c.contextTitle}</h2>
+      <p class="mt-3 leading-7 text-green-800">{c.context}</p>
     </section>
 
     <section class="mt-10">

@@ -214,8 +214,6 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/career-values-test": {
     blog: "/psychology-career-values-test/",
     blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
-    wiki: "/meaning-of-work-values/",
-    wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/spending-habits-test": { blog: "/latte-factor-spending-habits/", blogLocales: ['ko', 'en', 'zh', 'fr', 'es'] },
   "/trust-style-test": { blog: "/trust-and-betrayal/", blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'] },

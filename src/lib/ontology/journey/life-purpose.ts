@@ -72,7 +72,6 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           items: [
             { href: w('meaning-of-archetypes'), label: '원형(아키타입)이란', external: true },
             { href: w('meaning-of-enneagram'), label: '에니어그램의 기원과 구조', external: true },
-            { href: w('meaning-of-numerology'), label: '수비학이란 무엇인가', external: true },
           ],
         },
         faq: {
@@ -158,7 +157,6 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           items: [
             { href: w('meaning-of-archetypes'), label: 'アーキタイプ(元型)とは', external: true },
             { href: w('meaning-of-enneagram'), label: 'エニアグラムの起源と構造', external: true },
-            { href: w('meaning-of-numerology'), label: '数秘術とは何か', external: true },
           ],
         },
         faq: {
@@ -244,7 +242,6 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           items: [
             { href: w('meaning-of-archetypes'), label: '什么是原型', external: true },
             { href: w('meaning-of-enneagram'), label: '九型人格的起源与结构', external: true },
-            { href: w('meaning-of-numerology'), label: '什么是数字命理', external: true },
           ],
         },
         faq: {
@@ -329,7 +326,6 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           items: [
             { href: w('meaning-of-archetypes'), label: 'Que sont les archétypes', external: true },
             { href: w('meaning-of-enneagram'), label: 'Origine et structure de l\'ennéagramme', external: true },
-            { href: w('meaning-of-numerology'), label: 'Qu\'est-ce que la numérologie', external: true },
           ],
         },
         faq: {
@@ -414,7 +410,6 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           items: [
             { href: w('meaning-of-archetypes'), label: 'Qué son los arquetipos', external: true },
             { href: w('meaning-of-enneagram'), label: 'Origen y estructura del eneagrama', external: true },
-            { href: w('meaning-of-numerology'), label: 'Qué es la numerología', external: true },
           ],
         },
         faq: {
@@ -500,7 +495,6 @@ export function lifePurposeContent(locale: Locale): JourneyContent {
           items: [
             { href: w('meaning-of-archetypes'), label: 'What are archetypes', external: true },
             { href: w('meaning-of-enneagram'), label: 'Origin & structure of the Enneagram', external: true },
-            { href: w('meaning-of-numerology'), label: 'What is numerology', external: true },
           ],
         },
         faq: {

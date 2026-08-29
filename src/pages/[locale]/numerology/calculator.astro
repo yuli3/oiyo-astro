@@ -43,6 +43,8 @@ const m = meta[locale] ?? meta.en;
 const content: Record<Locale, {
   introTitle: string;
   intro: string;
+  contextTitle: string;
+  context: string;
   numberTitle: string;
   numbers: { title: string; body: string }[];
   useTitle: string;
@@ -58,6 +60,8 @@ const content: Record<Locale, {
   ko: {
     introTitle: '숫자는 결론이 아니라 자기 이해의 언어입니다',
     intro: '수비학은 생년월일과 이름을 숫자로 환산해 반복되는 성향, 동기, 표현 방식을 상징적으로 읽는 해석 체계입니다. 이 계산기는 생명수, 표현수, 영혼수, 성격수를 한 번에 비교해 나의 강점과 과제를 대화하듯 살펴보도록 돕습니다.',
+    contextTitle: '수비학은 어디에서 왔나요?',
+    context: '숫자에 상징적 의미를 부여하는 전통은 여러 문화에 존재하지만, 오늘날 널리 쓰이는 서양식 수비학은 피타고라스의 이름을 빌린 근대적 체계입니다. 고대 피타고라스 학파의 수 철학과 현대의 이름·생년월일 계산법이 그대로 같은 것은 아닙니다. 따라서 결과는 역사적·문화적 상징 언어로 읽고, 검증된 심리 측정이나 미래 예측으로 받아들이지 않는 것이 좋습니다.',
     numberTitle: '계산되는 핵심 숫자',
     numbers: [
       { title: '생명수', body: '생년월일에서 계산하며 삶의 큰 방향과 반복되는 테마를 상징합니다.' },
@@ -78,7 +82,6 @@ const content: Record<Locale, {
     ],
     readingTitle: '더 깊게 읽기',
     reading: [
-      { href: 'https://wiki.oiyo.net/ko/meaning-of-numerology/', label: '수비학의 의미', desc: '숫자 상징과 수비학의 기본 구조를 더 자세히 정리했습니다.' },
       { href: 'https://blog.oiyo.net/ko/numerology-foundations-vibration/', label: '수비학 기초', desc: '생명수 계산과 숫자별 키워드를 실전형으로 읽어보세요.' },
     ],
     relatedTitle: '함께 쓰기 좋은 도구',
@@ -92,6 +95,8 @@ const content: Record<Locale, {
   en: {
     introTitle: 'Numbers are a language for reflection, not a final verdict',
     intro: 'Numerology translates your birth date and name into symbolic numbers that describe recurring themes, motives, and expression styles. This calculator compares Life Path, Expression, Soul Urge, and Personality numbers so you can explore strengths and challenges in one place.',
+    contextTitle: 'Where does numerology come from?',
+    context: 'Many cultures have assigned symbolic meaning to numbers. The Western system commonly used today is a modern tradition associated with the name of Pythagoras; it is not identical to the number philosophy practiced by the ancient Pythagorean school. Read the result as a historical and cultural language for reflection, not as validated psychological measurement or prediction.',
     numberTitle: 'Core numbers calculated',
     numbers: [
       { title: 'Life Path', body: 'Calculated from your birth date; used for broad life themes and recurring direction.' },
@@ -112,7 +117,6 @@ const content: Record<Locale, {
     ],
     readingTitle: 'Read more',
     reading: [
-      { href: 'https://wiki.oiyo.net/en/meaning-of-numerology/', label: 'Meaning of Numerology', desc: 'A deeper guide to number symbolism and the structure of numerology.' },
       { href: 'https://blog.oiyo.net/en/numerology-foundations-vibration/', label: 'Numerology Foundations', desc: 'A practical guide to Life Path calculation and number keywords.' },
     ],
     relatedTitle: 'Related tools',
@@ -126,6 +130,8 @@ const content: Record<Locale, {
   ja: {
     introTitle: '数字は結論ではなく、自己理解のための言語です',
     intro: '数秘術は生年月日と名前を数字に置き換え、繰り返されるテーマ、動機、表現スタイルを象徴的に読む体系です。この計算機ではライフパス、表現数、魂の数、個性数を一度に比較できます。',
+    contextTitle: '数秘術はどこから来たのでしょうか？',
+    context: '数字に象徴的な意味を与える伝統は多くの文化にあります。現在広く使われる西洋数秘術はピタゴラスの名と結びついた近代的な体系で、古代ピタゴラス学派の数の哲学と現代の氏名・生年月日計算法は同一ではありません。歴史的・文化的な自己省察の言語として読み、心理測定や未来予測とは区別してください。',
     numberTitle: '計算される主な数字',
     numbers: [
       { title: 'ライフパス', body: '生年月日から計算し、人生の大きな方向性やテーマを象徴します。' },
@@ -146,7 +152,6 @@ const content: Record<Locale, {
     ],
     readingTitle: '詳しく読む',
     reading: [
-      { href: 'https://wiki.oiyo.net/ja/meaning-of-numerology/', label: '数秘術の意味', desc: '数字の象徴と数秘術の構造を詳しく解説しています。' },
       { href: 'https://blog.oiyo.net/ja/numerology-foundations-vibration/', label: '数秘術の基礎', desc: 'ライフパス計算と数字別キーワードを実践的に読めます。' },
     ],
     relatedTitle: '関連ツール',
@@ -160,6 +165,8 @@ const content: Record<Locale, {
   zh: {
     introTitle: '数字不是结论，而是理解自己的语言',
     intro: '数字命理把出生日期和姓名转换为数字，用象征方式阅读反复出现的主题、动机和表达方式。本计算器可同时比较生命灵数、表达数、灵魂数和个性数。',
+    contextTitle: '数字命理从何而来？',
+    context: '许多文化都曾赋予数字象征意义。今天常见的西方数字命理是借用毕达哥拉斯之名发展的近现代体系，并不等同于古代毕达哥拉斯学派的数哲学。请把结果当作历史与文化中的自我反思语言，而不是经过验证的心理测量或未来预测。',
     numberTitle: '核心数字',
     numbers: [
       { title: '生命灵数', body: '由出生日期计算，象征人生的大方向和重复主题。' },
@@ -180,7 +187,6 @@ const content: Record<Locale, {
     ],
     readingTitle: '延伸阅读',
     reading: [
-      { href: 'https://blog.oiyo.net/zh/meaning-of-numerology/', label: '数字命理的意义', desc: '深入了解数字象征和数字命理结构。' },
     ],
     relatedTitle: '相关工具',
     related: [
@@ -193,6 +199,8 @@ const content: Record<Locale, {
   fr: {
     introTitle: 'Les nombres sont un langage de réflexion, pas un verdict',
     intro: "La numérologie transforme votre date de naissance et votre nom en nombres symboliques pour explorer thèmes récurrents, motivations et styles d'expression. Ce calculateur compare chemin de vie, expression, âme et personnalité.",
+    contextTitle: 'D’où vient la numérologie ?',
+    context: 'De nombreuses cultures ont attribué une valeur symbolique aux nombres. Le système occidental courant est une tradition moderne associée au nom de Pythagore; il ne correspond pas exactement à la philosophie des nombres de l’ancienne école pythagoricienne. Lisez le résultat comme un langage historique et culturel de réflexion, non comme une mesure psychologique validée ou une prédiction.',
     numberTitle: 'Nombres principaux',
     numbers: [
       { title: 'Chemin de vie', body: 'Calculé depuis la date de naissance; il symbolise les grands thèmes de vie.' },
@@ -213,7 +221,6 @@ const content: Record<Locale, {
     ],
     readingTitle: 'Lire plus',
     reading: [
-      { href: 'https://blog.oiyo.net/fr/meaning-of-numerology/', label: 'Signification de la numérologie', desc: 'Un guide plus profond des symboles numériques.' },
     ],
     relatedTitle: 'Outils liés',
     related: [
@@ -226,6 +233,8 @@ const content: Record<Locale, {
   es: {
     introTitle: 'Los números son lenguaje de reflexión, no sentencia final',
     intro: 'La numerología convierte fecha de nacimiento y nombre en números simbólicos para explorar temas repetidos, motivaciones y estilos de expresión. Esta calculadora compara Camino de Vida, Expresión, Deseo del Alma y Personalidad.',
+    contextTitle: '¿De dónde viene la numerología?',
+    context: 'Muchas culturas han atribuido significado simbólico a los números. El sistema occidental habitual es una tradición moderna asociada al nombre de Pitágoras; no es idéntico a la filosofía numérica de la antigua escuela pitagórica. Lee el resultado como un lenguaje histórico y cultural para reflexionar, no como una medición psicológica validada ni una predicción.',
     numberTitle: 'Números principales',
     numbers: [
       { title: 'Camino de Vida', body: 'Calculado desde la fecha de nacimiento; simboliza temas amplios y dirección vital.' },
@@ -246,7 +255,6 @@ const content: Record<Locale, {
     ],
     readingTitle: 'Leer más',
     reading: [
-      { href: 'https://blog.oiyo.net/es/meaning-of-numerology/', label: 'Significado de la numerología', desc: 'Una guía más profunda sobre símbolos numéricos.' },
     ],
     relatedTitle: 'Herramientas relacionadas',
     related: [
@@ -286,6 +294,11 @@ const faqJsonLd = {
     <section class="mt-10 border-t border-green-100 pt-8">
       <h2 class="text-2xl font-bold text-green-950">{c.introTitle}</h2>
       <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+
+    <section class="mt-10 rounded-2xl bg-green-50 p-6">
+      <h2 class="text-xl font-bold text-green-950">{c.contextTitle}</h2>
+      <p class="mt-3 leading-7 text-green-800">{c.context}</p>
     </section>
 
     <section class="mt-10">
