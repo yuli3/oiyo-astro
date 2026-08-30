@@ -1,71 +1,17 @@
-# AGENTS.md — oiyo
+# OIYO 작업 규칙
 
-This is the project harness for `oiyo.net`, the execution layer of the OIYO ecosystem.
+시작·안전·승인 계약은 `/Users/seuncho/coding/AGENTS.md`, 현재 작업은 `/Users/seuncho/coding/company-brain/NOW.md`를 따른다.
 
-Read `/Users/seuncho/coding/AGENTS.md` first, then this file.
+## 실행면
 
-## Role
+- 심리·자기이해·명리/상징 해석과 Life Coordinator 실행면을 다룬다. 행동 우선 화면에 결과 이해를 돕는 읽을거리를 결합할 수 있다. 형식만으로 설명을 다른 도메인으로 옮기지 않는다.
+- visible prose, 적절한 FAQ, 실제 본문과 맞는 JSON-LD, 관련 도구/읽기 링크를 제공한다. RelatedTools와 교차 사이트 링크는 실제 살아 있는 정본에만 연결한다.
+- 활성 로케일 ko/en/ja/zh/fr/es를 유지한다. YMYL·상징 해석은 적절한 한계·비진단 안내를 포함하고 canonical/로케일 가정을 검증한다.
+- 테스트 질문 UI를 생성·이관·검토·출시하기 전 `/Users/seuncho/coding/company-brain/AI-Sessions/wiki/design/questionnaire-family-contract.md`를 읽는다. step/matrix/screening/dedicated tool을 분류하고 승인된 engine cohort 하나씩 출시한다.
 
-`oiyo` owns:
+## 검증
 
-- tests
-- calculators
-- result experiences
-- sharing
-- return loops
-- interactive mystic and psychology tools
-
-It must not become a long-form blog or a wiki.
-
-## Source Of Truth
-
-1. `/Users/seuncho/coding/AGENTS.md`
-2. `/Users/seuncho/coding/company-brain/goals.json` and `NOW.md` (roadmap direction — supersedes the retired `docs/UNIFIED_ROADMAP_2026-06-14.md`, archived at `company-brain/AI-Sessions/raw/project-docs/root/docs/UNIFIED_ROADMAP_2026-06-14.md`)
-3. `/Users/seuncho/coding/company-brain/projects/oiyo-ecosystem/low-quality-content-full-audit-2026-08-26.md` (current bare-page status — supersedes the retired `docs/SEO_BARE_PAGES_INVENTORY_2026-06-14.md`, archived at `company-brain/AI-Sessions/raw/project-docs/root/docs/SEO_BARE_PAGES_INVENTORY_2026-06-14.md`)
-4. `/Users/seuncho/coding/company-brain/projects/oiyo-ecosystem/contracts/route-ownership.json`
-5. `/Users/seuncho/coding/company-brain/projects/oiyo-ecosystem/contracts/knowledge/topics.json`
-6. `/Users/seuncho/coding/company-brain/AI-Sessions/raw/project-docs/oiyo/docs/oiyo-three-domain-content-architecture.md`
-
-## Working Rules
-
-- Keep execution pages action-first.
-- Add visible prose, FAQ, JSON-LD, and related links to tool/test pages.
-- Use `RelatedTools` and cross-domain links to connect wiki/blog/oiyo.
-- Preserve locale coverage for active locales: `ko`, `en`, `ja`, `zh`, `fr`, `es`.
-- Do not reintroduce `cn`.
-- Do not touch dormant `/Users/seuncho/coding/oiyo-legacy` Next.js unless the user explicitly asks.
-- Do not deploy, commit, or push without user approval.
-- **Questionnaire work**: before creating, migrating, reviewing, or releasing any test question UI, read `/Users/seuncho/coding/company-brain/AI-Sessions/wiki/design/questionnaire-family-contract.md`. Classify the interaction as step, matrix, screening, or dedicated tool; run `npm run audit:questionnaire`; release only one approved engine cohort at a time.
-
-## Verification
-
-Use the narrowest relevant checks first:
-
-```bash
-npm run audit:questionnaire
-npm run audit:mystic-seo
-npm run build
-npm run audit:content-depth-baseline
-npm run test -- --run
-```
-
-`audit:content-depth-baseline` (run after build) fails if either count exceeds `config/content-depth-baseline.json`'s ceiling: (1) bare pages — no `<h2>`, <300 char body, no FAQ JSON-LD; (2) Korean-leak pages — a non-ko route whose rendered text is mostly Hangul (a locale-blind component ignoring the locale prop). Neither check fails on the existing baseline count — this exists to catch regrowth, not to force an immediate bulk fix (2026-06-21 reproduced the 06-14 bare-page inventory within a week because nothing checked for it). Lower a ceiling when a batch reduces that count; never raise one just to make a new violation pass.
-
-For route/topic changes, from `/Users/seuncho/coding`:
-
-```bash
-python3 company-brain/scripts/oiyo-ecosystem/audit-route-ownership.py
-```
-
-## Definition Of Done
-
-A page is not done until it has:
-
-- clear title and meta description
-- visible explanatory prose
-- FAQ when search intent benefits
-- JSON-LD matching visible content
-- related oiyo tools
-- related blog/wiki links when available
-- disclaimer for YMYL or symbolic interpretation
-- no broken locale/canonical assumptions
+- `npm run type-check:active`, `npm run audit:questionnaire`, `npm run audit:mystic-seo`, `npm run test -- --run`, `npm run build` 후 `npm run audit:content-depth-baseline`.
+- depth baseline은 bare 페이지와 외국어 경로의 한국어 누출 재증가를 막는다. 기존 수치를 일괄 수정할 의무가 아니라 ratchet이다. 위반을 통과시키기 위해 ceiling을 올리지 않고 개선 때 낮춘다.
+- route/topic 변경은 company-brain의 route-ownership.json·contracts/knowledge/topics.json을 갱신하고 루트에서 `python3 company-brain/scripts/oiyo-ecosystem/audit-route-ownership.py`를 실행한다.
+- 구조·로케일·YMYL 안내·관련 링크와 실제 검증 결과를 확인한 뒤 완료를 기록한다. 실행 명령은 package.json을 기준으로 한다.
