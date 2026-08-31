@@ -290,10 +290,10 @@ export function calculateSaju(
 
   // 3. Day Pillar
   // Absolute day count.
-  const baseDate = new Date(1900, 0, 1);
-  // Need to handle Timezone offset in diff calculation to avoid off-by-one due to DST/TZ
-  // Use UTC for diff
-  const utcBirth = Date.UTC(adjustedYear, month - 1, day);
+  // The day cycle follows the solar civil date continuously. adjustedYear
+  // belongs only to the year pillar: using it here repeats last year's dates
+  // before Ipchun and makes the day cycle jump at New Year and Ipchun.
+  const utcBirth = Date.UTC(year, month - 1, day);
   const utcBase = Date.UTC(1900, 0, 1);
   const diffDays = Math.floor((utcBirth - utcBase) / (1000 * 60 * 60 * 24));
 
@@ -301,7 +301,7 @@ export function calculateSaju(
   // Wait, let's verify 1900-01-01.
   // Reference: Jan 1 1900 is Gap-Sul.
   const baseDayIndex = 10;
-  const dayIndex = (baseDayIndex + diffDays) % 60;
+  const dayIndex = ((baseDayIndex + diffDays) % 60 + 60) % 60;
   const dayGanzhi = SIXTY_GANZHI[dayIndex];
 
   // 4. Hour Pillar
