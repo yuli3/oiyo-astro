@@ -4,6 +4,7 @@ import {
   birthRecordToCivilDate,
   civilDateToLocalNoon,
   createBirthRecord,
+  createBirthRecordFromParts,
   isBirthRecordV2,
   migrateLegacyBirth,
   resolveBirthInstant,
@@ -14,6 +15,25 @@ import { useUserStore } from "./store/user-store";
 const ORIGINAL_TZ = process.env.TZ;
 
 describe("BirthRecord V2", () => {
+  it("preserves minutes through the numeric tool adapter and store", () => {
+    const record = createBirthRecordFromParts({ year: 2000, month: 2, day: 29, hour: 14, minute: 37 });
+    const before = useUserStore.getState();
+    try {
+      before.saveBirthRecord(record);
+      expect(useUserStore.getState().profile.birthTime).toBe("14:37");
+    } finally {
+      useUserStore.setState(before, true);
+    }
+  });
+
+  it("keeps existing hour-only and unknown-time callers compatible", () => {
+    const date = { year: 2000, month: 2, day: 29 };
+    expect(createBirthRecordFromParts({ ...date, hour: 14 }).civilTime).toBe("14:00");
+    expect(createBirthRecordFromParts(date).civilTime).toBeNull();
+    expect(createBirthRecordFromParts({ ...date, hour: null, minute: 37 }).civilTime).toBeNull();
+    expect(() => createBirthRecordFromParts({ ...date, hour: 14, minute: 60 })).toThrow();
+  });
+
   afterEach(() => {
     process.env.TZ = ORIGINAL_TZ;
   });

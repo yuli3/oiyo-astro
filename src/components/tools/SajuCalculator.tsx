@@ -1,5 +1,6 @@
+import { parseSajuInputState, parseSajuTime, type SajuInputState } from '../../lib/ontology/saju/input-contract';
 import { getYearStem, getYearBranch, getMonthBranch, getMonthStem, getDayStem, getDayBranch, getHourBranch, getHourStem } from '../../lib/ontology/saju/calculator-civil';
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/BirthDateField';
 import { analyzeLifeCategories } from '../../lib/ontology/saju/categories';
@@ -21,13 +22,7 @@ type Locale = 'ko' | 'en' | 'ja' | 'fr' | 'es' | 'zh';
 const PERMALINK_TOOL_ID = 'saju-calculator';
 // Birth date/time/gender fully determine the result (see `result`/`analysis`
 // useMemo below), so that is all the permalink needs to encode.
-interface PermalinkState {
-  year: number;
-  month: number;
-  day: number;
-  hour: number | null;
-  gender: 'male' | 'female';
-}
+
 
 const SHARE_LABELS: Record<Locale, { share: string; shareCopied: string; privacyNote: string; imageShare: string; imageSharing: string; imagePrivacy: string; actions: string }> = {
   ko: { share: '결과 링크 공유', shareCopied: '링크를 복사했어요!', privacyNote: '이 링크에는 입력한 생년월일시 정보가 포함됩니다.', imageShare: '사주 이미지 저장·공유', imageSharing: '이미지를 준비하고 있어요…', imagePrivacy: '출생정보는 이미지에 포함되지 않습니다.', actions: '결과 저장과 공유' },
@@ -500,8 +495,9 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const [month, setMonth] = useState(6);
   const [day, setDay] = useState(15);
   const [hour, setHour] = useState<number | null>(null);
+  const [minute, setMinute] = useState<number | null>(null);
   const dateValue = `${String(year).padStart(4, '0')}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-  const timeValue = hour !== null ? `${String(hour).padStart(2, '0')}:00` : '';
+  const timeValue = hour !== null ? `${String(hour).padStart(2, '0')}:${String(minute ?? 0).padStart(2, '0')}` : '';
   function handleDateChange(v: string) {
     const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v);
     if (!m) return;
@@ -511,18 +507,17 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     setDone(false);
   }
   function handleTimeChange(v: string) {
-    if (!v) {
-      setHour(null);
-      setDone(false);
-      return;
-    }
-    const m = /^(\d{2}):/.exec(v);
-    if (m) { setHour(Number(m[1])); setDone(false); }
+    const time = parseSajuTime(v);
+    if (!time) return;
+    setHour(time.hour);
+    setMinute(time.minute);
+    setDone(false);
   }
   const [gender, setGender] = useState<'male' | 'female'>('male');
   const [done, setDone] = useState(false);
   const [shareCopied, setShareCopied] = useState(false);
   const [imageSharing, setImageSharing] = useState(false);
+  const restoredFromPermalink = useRef(false);
 
   // 온톨로지에서 입력한 프로필(생년월일·시·성별)을 재사용 — 재입력 제거.
   const { profile, parsed, saveBirth } = useProfilePrefill();
@@ -532,7 +527,8 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     setYear(parsed.year);
     setMonth(parsed.month);
     setDay(parsed.day);
-    if (parsed.hour !== null) setHour(parsed.hour);
+    setHour(parsed.hour);
+    setMinute(parsed.hour === null ? null : (parsed.minute ?? 0));
     if (profile.gender === 'male' || profile.gender === 'female') setGender(profile.gender);
     setPrefilled(true);
   }, [parsed, profile.gender, prefilled]);
@@ -543,14 +539,16 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   // the viewer's own locally-saved profile. Runs after the profile-prefill
   // effect above so a permalink always wins over the viewer's own saved data.
   useEffect(() => {
-    const decoded = decodeResult<PermalinkState>(window.location.hash);
+    const decoded = decodeResult<unknown>(window.location.hash);
     if (decoded?.toolId !== PERMALINK_TOOL_ID || !decoded.state) return;
-    const s = decoded.state;
-    if (typeof s.year !== 'number' || typeof s.month !== 'number' || typeof s.day !== 'number') return;
+    const s = parseSajuInputState(decoded.state);
+    if (!s) return;
+    restoredFromPermalink.current = true;
     setYear(s.year);
     setMonth(s.month);
     setDay(s.day);
-    setHour(typeof s.hour === 'number' ? s.hour : null);
+    setHour(s.hour);
+    setMinute(s.minute);
     if (s.gender === 'male' || s.gender === 'female') setGender(s.gender);
     setPrefilled(true); // block the profile-prefill effect above from overwriting this
     setDone(true);
@@ -559,8 +557,8 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
   function share() {
     gaEvent('share_click', { test_id: 'saju' });
-    const state: PermalinkState = { year, month, day, hour, gender };
-    const url = writeResultHash<PermalinkState>(PERMALINK_TOOL_ID, state) ?? window.location.href;
+    const state: SajuInputState = { schemaVersion: 2, year, month, day, hour, minute, gender };
+    const url = writeResultHash<SajuInputState>(PERMALINK_TOOL_ID, state) ?? window.location.href;
     if (navigator.share) {
       navigator.share({ title: t.title, url });
     } else {
@@ -625,7 +623,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     const S = (i: number) => STEM_ORDER[i] as unknown as HeavenlyStem;
     const B = (i: number) => BRANCH_ORDER[i] as unknown as EarthlyBranch;
     const saju: SajuResult = {
-      birthDate: birthCivilToInstant({ year, month, day, hour: hKnown ? (hour as number) : 12, minute: 0 }),
+      birthDate: birthCivilToInstant({ year, month, day, hour: hKnown ? (hour as number) : 12, minute: hKnown ? (minute ?? 0) : 0 }),
       year: { heavenlyStem: S(yStem), earthlyBranch: B(yBranch) },
       month: { heavenlyStem: S(mStem), earthlyBranch: B(mBranch) },
       day: { heavenlyStem: S(dStem), earthlyBranch: B(dBranch) },
@@ -635,7 +633,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
       isLunar: false,
     };
     return { data: analyzeLifeCategories(saju), hourKnown: hKnown };
-  }, [year, month, day, hour, gender]);
+  }, [year, month, day, hour, minute, gender]);
 
   const daysInMonth = new Date(year, month, 0).getDate();
 
@@ -643,7 +641,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     const clampedDay = Math.min(day, daysInMonth);
     if (day !== clampedDay) setDay(clampedDay);
     // 입력을 프로필에 저장 → 다른 도구(별자리·바이오리듬·주기형 운세)로 전파.
-    saveBirth({ year, month, day: clampedDay, hour, gender });
+    saveBirth({ year, month, day: clampedDay, hour, minute, gender });
     setDone(true);
     gaEvent('test_completed', { test_id: 'saju' });
   }
@@ -689,6 +687,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           label={t.birthTime}
           value={timeValue}
           onChange={handleTimeChange}
+          syncProfile={!restoredFromPermalink.current}
         />
 
         <ProfileGenderField

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import {
-  createBirthRecord,
+  createBirthRecordFromParts,
   resolveBirthRecord,
 } from "./birth-record";
 import { useUserStore, type UserProfile } from "./store/user-store";
@@ -49,17 +49,11 @@ export function useProfilePrefill() {
     month: number;
     day: number;
     hour?: number | null;
+    minute?: number | null;
     gender?: "male" | "female";
   }) {
-    const { year, month, day, hour, gender } = input;
-    const hasHour = hour !== null && hour !== undefined;
-    const civilDate = `${String(year).padStart(4, "0")}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
-    const record = createBirthRecord({
-      civilDate,
-      civilTime: hasHour ? `${String(hour).padStart(2, "0")}:00` : null,
-      needsConfirmation: true,
-      provenance: "user-confirmed-v2",
-    });
+    const { gender } = input;
+    const record = createBirthRecordFromParts(input);
     saveBirthRecord(record);
     if (gender) setProfile({ gender });
   }

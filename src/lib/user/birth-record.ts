@@ -11,6 +11,18 @@ export const BIRTH_RECORD_SCHEMA_VERSION = 2 as const;
 export const DEFAULT_BIRTH_LONGITUDE = 135;
 export const DEFAULT_BIRTH_UTC_OFFSET_MINUTES = 540;
 
+/** Adapter for existing numeric tool inputs; omitted minutes preserve legacy :00. */
+export function createBirthRecordFromParts(input: {
+  year: number; month: number; day: number;
+  hour?: number | null; minute?: number | null;
+}): BirthRecordV2 {
+  const { year, month, day, hour } = input;
+  const civilDate = `${String(year).padStart(4, "0")}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+  const civilTime = hour == null ? null
+    : `${String(hour).padStart(2, "0")}:${String(input.minute ?? 0).padStart(2, "0")}`;
+  return createBirthRecord({ civilDate, civilTime, needsConfirmation: true, provenance: "user-confirmed-v2" });
+}
+
 export interface BirthRecordV2 {
   schemaVersion: typeof BIRTH_RECORD_SCHEMA_VERSION;
   civilDate: string;

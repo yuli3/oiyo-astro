@@ -343,12 +343,14 @@ export function ProfileTimeField({
   locale,
   onChange,
   value,
+  syncProfile = true,
 }: {
   className?: string;
   label?: string;
   locale?: string;
   onChange: (value: string) => void;
   value: string;
+  syncProfile?: boolean;
 }) {
   const { parsed } = useProfilePrefill();
   const lang = asLang(locale ?? "en");
@@ -359,8 +361,8 @@ export function ProfileTimeField({
       : "";
 
   useEffect(() => {
-    if (profileTime !== value) onChange(profileTime);
-  }, [profileTime]);
+    if (syncProfile && profileTime !== value) onChange(profileTime);
+  }, [profileTime, syncProfile]);
 
   return (
     <ProfileChip
