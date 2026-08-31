@@ -111,7 +111,8 @@ export function OntologyBirthInput({
           </div>
           <div>
             <label className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600" htmlFor="ob-time">{c.time} <span className="font-medium text-slate-400 normal-case">· {c.timeHint}</span></label>
-            <input id="ob-time" type="time" value={time} onChange={(e) => setTime(e.target.value)}
+            <input id="ob-time" type="time" value={time}
+              onInput={(e) => setTime(e.currentTarget.value)} onChange={(e) => setTime(e.target.value)}
               className="h-12 w-full rounded-2xl border border-slate-200 bg-slate-50 px-4 text-base font-black text-slate-900 outline-none focus:border-green-500 focus:bg-white focus:ring-4 focus:ring-green-500/10" />
           </div>
           <div>
