@@ -325,6 +325,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
   const [scores, setScores] = useState<ScoreMap | null>(restored)
 
   function pick(val: number) {
+    if (answers.length === 0) gaEvent('test_started', { test_id: 'big5' })
     const newAns = answers.slice(0, current)
     newAns[current] = val
     if (current + 1 >= questions.length) {

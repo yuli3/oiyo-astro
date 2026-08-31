@@ -306,6 +306,7 @@ export default function WorkaholicTest({ locale: lp = 'ko' }: Props) {
   }, [])
 
   function pick(val: number) {
+    if (answers.length === 0) gaEvent('test_started', { test_id: 'workaholic' })
     const next = answers.slice(0, current)
     next[current] = val
     if (current + 1 >= questions.length) {

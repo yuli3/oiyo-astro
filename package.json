@@ -61,7 +61,8 @@
     "submit:indexing:dry": "python3 ../docs/search-submit-all.py --site oiyo --new-only --dry-run",
     "audit:test-quiz-schema": "python3 scripts/audit-test-quiz-schema.py",
     "audit:questionnaire": "node scripts/audit-questionnaire-cohorts.mjs --check",
-    "restore:ontology-archive": "node scripts/restore-ontology-archive.mjs"
+    "restore:ontology-archive": "node scripts/restore-ontology-archive.mjs",
+    "audit:test-funnel-events": "node scripts/audit-test-funnel-events.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.7",

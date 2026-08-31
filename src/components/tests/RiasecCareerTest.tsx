@@ -241,6 +241,7 @@ export default function RiasecCareerTest({ locale: lp = 'ko' }: Props) {
   const [done, setDone] = useState(false)
 
   function pick(val: number) {
+    if (Object.keys(responses).length === 0) gaEvent('test_started', { test_id: 'riasec' })
     const q = questions[current]
     const newScores = { ...scores, [q.type]: scores[q.type] + val }
     setResponses({ ...responses, [q.id]: val })

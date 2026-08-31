@@ -276,6 +276,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
   const deep = interpretMBTIDeep(mbtiType, COGNITIVE_STACK_BY_TYPE[mbtiType], l)
 
   function pick(value: DimValue) {
+    if (Object.keys(answers).length === 0) gaEvent('test_started', { test_id: 'mbti' })
     const question = questions[current]
     const next = { ...answers, [question.id]: value }
     setAnswers(next)

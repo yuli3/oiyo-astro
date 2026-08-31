@@ -366,6 +366,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
   }, []);
 
   function pick(score: number) {
+    if (answers.length === 0) gaEvent("test_started", { test_id: "empathy", instrument_version: "empathy-oiyo-12-v1" });
     // 되돌아가서 다시 고르면 그 뒤 응답은 버린다 — 이어붙이기(append)면 되돌리기가 성립하지 않는다.
     const next = answers.slice(0, idx);
     next[idx] = score;
