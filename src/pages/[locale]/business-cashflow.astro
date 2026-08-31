@@ -1,4 +1,5 @@
 ---
+import { withTrailingSlash } from '../../i18n';
 import Layout from "../../layouts/Layout.astro";
 import { LOCALES } from "../../i18n";
 import type { Locale } from "../../i18n";
@@ -65,7 +66,7 @@ const content: Record<string, {
   },
 };
 const c = content[locale] ?? content.en;
-const related = c.related.map((r) => ({ ...r, href: `/${locale}${r.href}` }));
+const related = c.related.map((r) => ({ ...r, href: withTrailingSlash(`/${locale}${r.href}`) }));
 
 const faqJsonLd = JSON.stringify({
   "@context": "https://schema.org",

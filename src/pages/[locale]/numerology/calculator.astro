@@ -1,7 +1,7 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
 import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
-import { LOCALES } from '../../../i18n';
+import { withTrailingSlash, LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import NumerologyCalculator from '../../../components/tools/NumerologyCalculator';
 
@@ -269,7 +269,7 @@ const content: Record<Locale, {
 const c = content[locale] ?? content.en;
 const localizedRelated = c.related.map((item) => ({
   ...item,
-  href: `/${locale}${item.href}`,
+  href: withTrailingSlash(`/${locale}${item.href}`),
 }));
 
 const faqJsonLd = {

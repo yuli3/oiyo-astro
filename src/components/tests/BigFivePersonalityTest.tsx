@@ -490,9 +490,9 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/mbti/test`, label: locale === 'ko' ? '🧠 MBTI 테스트' : locale === 'ja' ? '🧠 MBTIテスト' : '🧠 MBTI test' },
-          { href: `/${locale}/enneagram/test`, label: locale === 'ko' ? '🔮 에니어그램 테스트' : locale === 'ja' ? '🔮 エニアグラムテスト' : '🔮 Enneagram test' },
-          { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '💪 내면 강점 테스트' : locale === 'ja' ? '💪 内面の強みテスト' : '💪 Inner strength test' },
+          { href: `/${locale}/mbti/test/`, label: locale === 'ko' ? '🧠 MBTI 테스트' : locale === 'ja' ? '🧠 MBTIテスト' : '🧠 MBTI test' },
+          { href: `/${locale}/enneagram/test/`, label: locale === 'ko' ? '🔮 에니어그램 테스트' : locale === 'ja' ? '🔮 エニアグラムテスト' : '🔮 Enneagram test' },
+          { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '💪 내면 강점 테스트' : locale === 'ja' ? '💪 内面の強みテスト' : '💪 Inner strength test' },
         ]}
       />
       <RelatedReading locale={locale} topic="big5" />

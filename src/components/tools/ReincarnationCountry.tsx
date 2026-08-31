@@ -516,7 +516,7 @@ export default function ReincarnationCountry({ locale }: Props) {
       </section>
 
       <p className="text-sm">
-        <a className="font-semibold text-emerald-700 hover:underline" href={`/${locale}/country/match`}>
+        <a className="font-semibold text-emerald-700 hover:underline" href={`/${locale}/country/match/`}>
           {COPY.compare[locale]}
         </a>
       </p>

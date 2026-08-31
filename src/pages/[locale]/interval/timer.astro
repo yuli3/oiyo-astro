@@ -1,6 +1,6 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import { LOCALES } from '../../../i18n';
+import { withTrailingSlash, LOCALES } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import IntervalTimer from '../../../components/tools/IntervalTimer';
 
@@ -57,7 +57,7 @@ const content: Record<string, {
   },
 };
 const c = content[locale] ?? content.en;
-const localizedRelated = c.related.map((item) => ({ ...item, href: `/${locale}${item.href}` }));
+const localizedRelated = c.related.map((item) => ({ ...item, href: withTrailingSlash(`/${locale}${item.href}`) }));
 ---
 
 <Layout title={m.title} description={m.description} locale={locale}>

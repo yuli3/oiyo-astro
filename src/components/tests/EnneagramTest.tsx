@@ -739,8 +739,8 @@ export default function EnneagramTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={lp}
         links={[
-          { href: `/${lp}/enneagram/hobbies`, label: lp === 'ko' ? '✨ 유형별 추천 취미·운동' : '✨ Hobbies for your type' },
-          { href: `/${lp}/mbti/test`, label: lp === 'ko' ? '🧭 MBTI 테스트도 해보기' : '🧭 Try the MBTI test' },
+          { href: `/${lp}/enneagram/hobbies/`, label: lp === 'ko' ? '✨ 유형별 추천 취미·운동' : '✨ Hobbies for your type' },
+          { href: `/${lp}/mbti/test/`, label: lp === 'ko' ? '🧭 MBTI 테스트도 해보기' : '🧭 Try the MBTI test' },
         ]}
       />
       <RelatedReading locale={lp} topic="enneagram" />

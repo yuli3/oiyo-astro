@@ -62,7 +62,8 @@
     "audit:test-quiz-schema": "python3 scripts/audit-test-quiz-schema.py",
     "audit:questionnaire": "node scripts/audit-questionnaire-cohorts.mjs --check",
     "restore:ontology-archive": "node scripts/restore-ontology-archive.mjs",
-    "audit:test-funnel-events": "node scripts/audit-test-funnel-events.mjs"
+    "audit:test-funnel-events": "node scripts/audit-test-funnel-events.mjs",
+    "audit:internal-link-slashes": "node scripts/audit-internal-link-slashes.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.7",

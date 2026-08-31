@@ -359,9 +359,9 @@ export default function AnxietyScreeningTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
-          { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
-          { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+          { href: `/${locale}/breathing/timer/`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+          { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+          { href: `/${locale}/habit-builder/guide/`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
         ]}
       />
       <RelatedReading locale={locale} topic="anxiety" />

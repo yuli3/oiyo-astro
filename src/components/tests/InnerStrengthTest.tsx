@@ -261,9 +261,9 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${locale}/ontology/life-purpose`, label: locale === 'ko' ? '🧭 삶의 목적 온톨로지' : locale === 'ja' ? '🧭 人生の目的オントロジー' : '🧭 Life purpose ontology' },
-            { href: `/${locale}/self-esteem/test`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
-            { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+            { href: `/${locale}/ontology/life-purpose/`, label: locale === 'ko' ? '🧭 삶의 목적 온톨로지' : locale === 'ja' ? '🧭 人生の目的オントロジー' : '🧭 Life purpose ontology' },
+            { href: `/${locale}/self-esteem/test/`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
+            { href: `/${locale}/habit-builder/guide/`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
           ]}
         />
         <RelatedReading locale={locale} topic="inner-strength" />

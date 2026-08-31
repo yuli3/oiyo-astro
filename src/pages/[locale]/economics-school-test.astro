@@ -51,7 +51,7 @@ const ci = coordinateIntroMap[locale] ?? coordinateIntroMap.en;
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <section class="mb-6 rounded-3xl border border-green-200 bg-gradient-to-br from-green-50 to-white p-5 shadow-sm">
       <div class="flex flex-wrap items-center gap-2 text-xs font-black text-green-600">
-        <a href={`/${locale}/ontology`} class="hover:text-green-800">OIYO Ontology</a>
+        <a href={`/${locale}/ontology/`} class="hover:text-green-800">OIYO Ontology</a>
         <span>›</span>
         <span>{ci.badge}</span>
         <span class="ml-auto rounded-full bg-white px-2.5 py-1 text-green-700">{ci.status}</span>
@@ -68,9 +68,9 @@ const ci = coordinateIntroMap[locale] ?? coordinateIntroMap.en;
     <section class="mt-8 rounded-2xl border border-green-100 bg-green-50/60 p-5">
       <h2 class="font-black text-green-950">{ci.next}</h2>
       <ul class="mt-3 space-y-2 text-sm leading-6 text-green-800">
-        <li><a class="font-bold hover:underline" href={`/${locale}/political/test`}>→ {ci.links[0]}</a></li>
-        <li><a class="font-bold hover:underline" href={`/${locale}/joseon-faction-test`}>→ {ci.links[1]}</a></li>
-        <li><a class="font-bold hover:underline" href={`/${locale}/profile/export`}>→ {ci.links[2]}</a></li>
+        <li><a class="font-bold hover:underline" href={`/${locale}/political/test/`}>→ {ci.links[0]}</a></li>
+        <li><a class="font-bold hover:underline" href={`/${locale}/joseon-faction-test/`}>→ {ci.links[1]}</a></li>
+        <li><a class="font-bold hover:underline" href={`/${locale}/profile/export/`}>→ {ci.links[2]}</a></li>
       </ul>
     </section>
   </div>

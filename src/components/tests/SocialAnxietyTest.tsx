@@ -490,9 +490,9 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${locale}/breathing/timer`, label: nextLabels.breathing },
-            { href: `/${locale}/self-esteem/test`, label: nextLabels.selfEsteem },
-            { href: `/${locale}/inner-strength/test`, label: nextLabels.innerStrength },
+            { href: `/${locale}/breathing/timer/`, label: nextLabels.breathing },
+            { href: `/${locale}/self-esteem/test/`, label: nextLabels.selfEsteem },
+            { href: `/${locale}/inner-strength/test/`, label: nextLabels.innerStrength },
           ]}
         />
         <RelatedReading locale={locale} topic="social-anxiety" />

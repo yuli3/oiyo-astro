@@ -368,9 +368,9 @@ export default function SelfEsteemTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '💪 내면 강점 테스트' : locale === 'ja' ? '💪 内面の強みテスト' : '💪 Inner strength test' },
-          { href: `/${locale}/burnout/test`, label: locale === 'ko' ? '😰 번아웃 테스트' : locale === 'ja' ? '😰 バーンアウトテスト' : '😰 Burnout test' },
-          { href: `/${locale}/today`, label: locale === 'ko' ? '🌌 오늘의 우주' : locale === 'ja' ? '🌌 今日の宇宙' : "🌌 Today's Universe" },
+          { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '💪 내면 강점 테스트' : locale === 'ja' ? '💪 内面の強みテスト' : '💪 Inner strength test' },
+          { href: `/${locale}/burnout/test/`, label: locale === 'ko' ? '😰 번아웃 테스트' : locale === 'ja' ? '😰 バーンアウトテスト' : '😰 Burnout test' },
+          { href: `/${locale}/today/`, label: locale === 'ko' ? '🌌 오늘의 우주' : locale === 'ja' ? '🌌 今日の宇宙' : "🌌 Today's Universe" },
         ]}
       />
       <RelatedReading locale={locale} topic="self-esteem" />

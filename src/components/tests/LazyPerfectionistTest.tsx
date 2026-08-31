@@ -208,9 +208,9 @@ export default function LazyPerfectionistTest({ locale: rawLocale = 'ko' }: Prop
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
-            { href: `/${locale}/routine/builder`, label: locale === 'ko' ? '🗓️ 루틴 빌더' : locale === 'ja' ? '🗓️ ルーティンビルダー' : '🗓️ Routine builder' },
-            { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+            { href: `/${locale}/habit-builder/guide/`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+            { href: `/${locale}/routine/builder/`, label: locale === 'ko' ? '🗓️ 루틴 빌더' : locale === 'ja' ? '🗓️ ルーティンビルダー' : '🗓️ Routine builder' },
+            { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
           ]}
         />
         <RelatedReading locale={locale} topic="lazy-perfectionist" />

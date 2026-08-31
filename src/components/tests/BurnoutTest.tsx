@@ -273,9 +273,9 @@ export default function BurnoutTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
-          { href: `/${locale}/lethargy/test`, label: locale === 'ko' ? '🛌 무기력 회복 테스트' : locale === 'ja' ? '🛌 無気力回復テスト' : '🛌 Lethargy recovery test' },
-          { href: `/${locale}/sleep-type/test`, label: locale === 'ko' ? '💤 수면 유형 테스트' : locale === 'ja' ? '💤 睡眠タイプテスト' : '💤 Sleep type test' },
+          { href: `/${locale}/breathing/timer/`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+          { href: `/${locale}/lethargy/test/`, label: locale === 'ko' ? '🛌 무기력 회복 테스트' : locale === 'ja' ? '🛌 無気力回復テスト' : '🛌 Lethargy recovery test' },
+          { href: `/${locale}/sleep-type/test/`, label: locale === 'ko' ? '💤 수면 유형 테스트' : locale === 'ja' ? '💤 睡眠タイプテスト' : '💤 Sleep type test' },
         ]}
       />
       <RelatedReading locale={locale} topic="burnout" />

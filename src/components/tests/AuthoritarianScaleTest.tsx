@@ -240,8 +240,8 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${l}/political/test`, label: l === 'ko' ? '🗳️ 정치 나침반 테스트' : '🗳️ Political compass test' },
-            { href: `/${l}/big5/test`, label: l === 'ko' ? '🧪 빅파이브 성격 테스트' : '🧪 Big Five personality test' },
+            { href: `/${l}/political/test/`, label: l === 'ko' ? '🗳️ 정치 나침반 테스트' : '🗳️ Political compass test' },
+            { href: `/${l}/big5/test/`, label: l === 'ko' ? '🧪 빅파이브 성격 테스트' : '🧪 Big Five personality test' },
           ]}
         />
         <RelatedReading locale={locale} topic="authoritarian" />

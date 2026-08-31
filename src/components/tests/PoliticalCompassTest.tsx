@@ -398,9 +398,9 @@ export default function PoliticalCompassTest({ locale }: Props) {
         <ResultNextSteps
           locale={L}
           links={[
-            { href: `/${L}/authoritarian/test`, label: L === 'ko' ? '⚖️ 권위주의 성향 테스트' : L === 'ja' ? '⚖️ 権威主義傾向テスト' : '⚖️ Authoritarian scale test' },
-            { href: `/${L}/big5/test`, label: L === 'ko' ? '🧬 Big5 성격 테스트' : L === 'ja' ? '🧬 Big5性格テスト' : '🧬 Big Five personality test' },
-            { href: `/${L}/ontology/personality`, label: L === 'ko' ? '🧭 성격 온톨로지' : L === 'ja' ? '🧭 性格オントロジー' : '🧭 Personality ontology' },
+            { href: `/${L}/authoritarian/test/`, label: L === 'ko' ? '⚖️ 권위주의 성향 테스트' : L === 'ja' ? '⚖️ 権威主義傾向テスト' : '⚖️ Authoritarian scale test' },
+            { href: `/${L}/big5/test/`, label: L === 'ko' ? '🧬 Big5 성격 테스트' : L === 'ja' ? '🧬 Big5性格テスト' : '🧬 Big Five personality test' },
+            { href: `/${L}/ontology/personality/`, label: L === 'ko' ? '🧭 성격 온톨로지' : L === 'ja' ? '🧭 性格オントロジー' : '🧭 Personality ontology' },
           ]}
         />
         <RelatedReading locale={L} topic="political" />

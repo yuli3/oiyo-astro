@@ -158,7 +158,7 @@ export default function PalmistryExplorer({ locale }: Props) {
 
       <div className="mt-6 flex flex-col items-center gap-2 text-center text-sm">
         <a href="https://blog.oiyo.net/ko/palm-reading-complete-guide/" className="font-bold text-rose-700 hover:underline">{t.guideLink}</a>
-        <a href={`/${loc}/zodiac/personality`} className="font-semibold text-slate-600 hover:underline">{t.zodiacLink}</a>
+        <a href={`/${loc}/zodiac/personality/`} className="font-semibold text-slate-600 hover:underline">{t.zodiacLink}</a>
       </div>
     </section>
   );

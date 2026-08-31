@@ -177,8 +177,8 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
     <p className="rounded-xl border border-rose-200 bg-rose-50 p-4 text-sm font-semibold leading-6 text-rose-950">{t.korea}</p>
     <details className="rounded-xl border border-rose-200 bg-rose-50 p-4"><summary className="cursor-pointer font-bold text-rose-950">{t.helpTitle}</summary><p className="mt-3 text-sm leading-6 text-rose-900">{t.help}</p></details>
     <ResultNextSteps locale={locale} links={[
-      { href: `/${locale}/love-language/test`, label: locale === "ko" ? "사랑의 언어 살펴보기" : "Love language reflection" },
-      { href: `/${locale}/personal-boundaries-test`, label: locale === "ko" ? "관계 경계 살펴보기" : "Personal boundaries reflection" },
+      { href: `/${locale}/love-language/test/`, label: locale === "ko" ? "사랑의 언어 살펴보기" : "Love language reflection" },
+      { href: `/${locale}/personal-boundaries-test/`, label: locale === "ko" ? "관계 경계 살펴보기" : "Personal boundaries reflection" },
     ]} />
     <RelatedReading locale={locale} topic="attachment" />
     <button onClick={restart} className="w-full rounded-lg border bg-card px-4 py-3 text-sm font-medium hover:bg-accent">{t.restart}</button>

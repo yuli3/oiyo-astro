@@ -13,6 +13,7 @@
 
 - `npm run type-check:active`, `npm run audit:questionnaire`, `npm run audit:mystic-seo`, `npm run test -- --run`, `npm run build` 후 `npm run audit:content-depth-baseline`.
 - 검사 컴포넌트를 만들거나 고치면 `npm run audit:test-funnel-events`를 함께 돌린다. `test_completed`를 발화하는 문항형 검사에 `test_started`가 없으면 실패한다 — 2026-08-31 GA4 실측에서 완료 204건 대비 시작 14건이 나와 완주율의 분모가 없던 것이 원인이다. 계산기(`src/components/tools`)는 대상이 아니다: 계약상 `test_started`는 "첫 문항 응답"이라 입력→계산 화면엔 대응하는 순간이 없다.
+- 링크·내비게이션을 건드리면 `npm run audit:internal-link-slashes`를 함께 돌린다. 내부 링크는 서빙 형태(트레일링 슬래시)로 낸다 — `localePath()`나 `withTrailingSlash()`를 쓰고 308 리다이렉트에 의존하지 않는다. 네이버 Yeti는 리다이렉트된 페이지를 수집제한으로 분류해 목표를 색인하지 않는다(2026-08-30 서치어드바이저: 색인 0 / 수집제한 21 전부 리다이렉션). 래칫이므로 CEILING은 개선 때 낮추고 통과시키려고 올리지 않는다.
 - depth baseline은 bare 페이지와 외국어 경로의 한국어 누출 재증가를 막는다. 기존 수치를 일괄 수정할 의무가 아니라 ratchet이다. 위반을 통과시키기 위해 ceiling을 올리지 않고 개선 때 낮춘다.
 - route/topic 변경은 company-brain의 route-ownership.json·contracts/knowledge/topics.json을 갱신하고 루트에서 `python3 company-brain/scripts/oiyo-ecosystem/audit-route-ownership.py`를 실행한다.
 - 구조·로케일·YMYL 안내·관련 링크와 실제 검증 결과를 확인한 뒤 완료를 기록한다. 실행 명령은 package.json을 기준으로 한다.

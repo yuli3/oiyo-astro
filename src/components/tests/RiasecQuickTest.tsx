@@ -475,7 +475,7 @@ export default function RiasecQuickTest({ locale: lp = 'ko' }: Props) {
         description={resultProfile.isMixed ? lb.mixedBody : sorted.slice(0, 3).map(t => lb.typeNames[t]).join(' · ')}
       />
       <a
-        href={`/${locale}/riasec-career-test`}
+        href={`/${locale}/riasec-career-test/`}
         className="block rounded-xl border-2 border-dashed border-primary/30 bg-card px-4 py-3 text-center text-sm font-bold text-primary hover:bg-accent transition-colors"
       >
         {lb.detailedCta}

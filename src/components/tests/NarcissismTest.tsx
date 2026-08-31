@@ -383,9 +383,9 @@ export default function NarcissismTest({ locale: lp = 'ko' }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/self-esteem/test`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
-          { href: `/${locale}/inner-strength/test`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
-          { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
+          { href: `/${locale}/self-esteem/test/`, label: locale === 'ko' ? '🌿 자존감 테스트' : locale === 'ja' ? '🌿 自尊感情テスト' : '🌿 Self-esteem test' },
+          { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '🧠 내면 강점 테스트' : locale === 'ja' ? '🧠 内面の強さテスト' : '🧠 Inner strength test' },
+          { href: `/${locale}/habit-builder/guide/`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : '✅ Habit builder guide' },
         ]}
       />
       <RelatedReading locale={locale} topic="narcissism" />

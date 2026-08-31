@@ -362,9 +362,9 @@ export default function AngerStyleTest({ locale: localeProp }: Props) {
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : locale === 'zh' ? '🫁 呼吸计时器' : locale === 'fr' ? '🫁 Minuteur de respiration' : locale === 'es' ? '🫁 Temporizador de respiración' : '🫁 Breathing timer' },
-            { href: `/${locale}/eq/test`, label: locale === 'ko' ? '💛 감성 지능 테스트' : locale === 'ja' ? '💛 感情知性テスト' : locale === 'zh' ? '💛 情绪智力测试' : locale === 'fr' ? '💛 Test d’intelligence émotionnelle' : locale === 'es' ? '💛 Test de inteligencia emocional' : '💛 Emotional intelligence test' },
-            { href: `/${locale}/habit-builder/guide`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : locale === 'zh' ? '✅ 习惯养成指南' : locale === 'fr' ? '✅ Guide de création d’habitudes' : locale === 'es' ? '✅ Guía para crear hábitos' : '✅ Habit builder guide' },
+            { href: `/${locale}/breathing/timer/`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : locale === 'zh' ? '🫁 呼吸计时器' : locale === 'fr' ? '🫁 Minuteur de respiration' : locale === 'es' ? '🫁 Temporizador de respiración' : '🫁 Breathing timer' },
+            { href: `/${locale}/eq/test/`, label: locale === 'ko' ? '💛 감성 지능 테스트' : locale === 'ja' ? '💛 感情知性テスト' : locale === 'zh' ? '💛 情绪智力测试' : locale === 'fr' ? '💛 Test d’intelligence émotionnelle' : locale === 'es' ? '💛 Test de inteligencia emocional' : '💛 Emotional intelligence test' },
+            { href: `/${locale}/habit-builder/guide/`, label: locale === 'ko' ? '✅ 습관 만들기 가이드' : locale === 'ja' ? '✅ 習慣づくりガイド' : locale === 'zh' ? '✅ 习惯养成指南' : locale === 'fr' ? '✅ Guide de création d’habitudes' : locale === 'es' ? '✅ Guía para crear hábitos' : '✅ Habit builder guide' },
           ]}
         />
         <RelatedReading locale={locale} topic="anger" />

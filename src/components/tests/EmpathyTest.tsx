@@ -526,9 +526,9 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${locale}/eq/test`, label: locale === 'ko' ? '💛 감성 지능 테스트' : locale === 'ja' ? '💛 感情知性テスト' : locale === 'zh' ? '💛 情绪智力测试' : locale === 'fr' ? '💛 Test d’intelligence émotionnelle' : locale === 'es' ? '💛 Test de inteligencia emocional' : '💛 Emotional intelligence test' },
-            { href: `/${locale}/attachment-style/test`, label: locale === 'ko' ? '🔗 애착 유형 테스트' : locale === 'ja' ? '🔗 愛着スタイルテスト' : locale === 'zh' ? '🔗 依恋类型测试' : locale === 'fr' ? '🔗 Test du style d’attachement' : locale === 'es' ? '🔗 Test de estilo de apego' : '🔗 Attachment style test' },
-            { href: `/${locale}/ontology/personality`, label: locale === 'ko' ? '🧭 성격 온톨로지' : locale === 'ja' ? '🧭 性格オントロジー' : locale === 'zh' ? '🧭 人格本体论' : locale === 'fr' ? '🧭 Ontologie de la personnalité' : locale === 'es' ? '🧭 Ontología de la personalidad' : '🧭 Personality ontology' },
+            { href: `/${locale}/eq/test/`, label: locale === 'ko' ? '💛 감성 지능 테스트' : locale === 'ja' ? '💛 感情知性テスト' : locale === 'zh' ? '💛 情绪智力测试' : locale === 'fr' ? '💛 Test d’intelligence émotionnelle' : locale === 'es' ? '💛 Test de inteligencia emocional' : '💛 Emotional intelligence test' },
+            { href: `/${locale}/attachment-style/test/`, label: locale === 'ko' ? '🔗 애착 유형 테스트' : locale === 'ja' ? '🔗 愛着スタイルテスト' : locale === 'zh' ? '🔗 依恋类型测试' : locale === 'fr' ? '🔗 Test du style d’attachement' : locale === 'es' ? '🔗 Test de estilo de apego' : '🔗 Attachment style test' },
+            { href: `/${locale}/ontology/personality/`, label: locale === 'ko' ? '🧭 성격 온톨로지' : locale === 'ja' ? '🧭 性格オントロジー' : locale === 'zh' ? '🧭 人格本体论' : locale === 'fr' ? '🧭 Ontologie de la personnalité' : locale === 'es' ? '🧭 Ontología de la personalidad' : '🧭 Personality ontology' },
           ]}
         />
         <RelatedReading locale={locale} topic="empathy" />

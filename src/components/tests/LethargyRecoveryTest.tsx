@@ -193,9 +193,9 @@ export default function LethargyRecoveryTest({ locale: rawLocale = 'ko' }: Props
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${locale}/breathing/timer`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
-            { href: `/${locale}/habit-builder/30-days`, label: locale === 'ko' ? '✅ 30일 습관 만들기' : locale === 'ja' ? '✅ 30日習慣づくり' : '✅ 30-day habit builder' },
-            { href: `/${locale}/sleep-type/test`, label: locale === 'ko' ? '💤 수면 유형 테스트' : locale === 'ja' ? '💤 睡眠タイプテスト' : '💤 Sleep type test' },
+            { href: `/${locale}/breathing/timer/`, label: locale === 'ko' ? '🫁 호흡 타이머' : locale === 'ja' ? '🫁 呼吸タイマー' : '🫁 Breathing timer' },
+            { href: `/${locale}/habit-builder/30-days/`, label: locale === 'ko' ? '✅ 30일 습관 만들기' : locale === 'ja' ? '✅ 30日習慣づくり' : '✅ 30-day habit builder' },
+            { href: `/${locale}/sleep-type/test/`, label: locale === 'ko' ? '💤 수면 유형 테스트' : locale === 'ja' ? '💤 睡眠タイプテスト' : '💤 Sleep type test' },
           ]}
         />
         <RelatedReading locale={locale} topic="lethargy" />

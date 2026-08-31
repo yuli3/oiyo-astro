@@ -1264,9 +1264,9 @@ export default function PersonalColorTest({ locale }: Props) {
       <ResultNextSteps
         locale={locale}
         links={[
-          { href: `/${locale}/ontology/hobbies`, label: locale === 'ko' ? '🎨 취미 온톨로지' : locale === 'ja' ? '🎨 趣味オントロジー' : '🎨 Hobbies ontology' },
-          { href: `/${locale}/ontology/luck`, label: locale === 'ko' ? '🍀 운 온톨로지' : locale === 'ja' ? '🍀 運のオントロジー' : '🍀 Luck ontology' },
-          { href: `/${locale}/mbti/test`, label: locale === 'ko' ? '🧩 MBTI 성격 테스트' : locale === 'ja' ? '🧩 MBTI性格テスト' : '🧩 MBTI personality test' },
+          { href: `/${locale}/ontology/hobbies/`, label: locale === 'ko' ? '🎨 취미 온톨로지' : locale === 'ja' ? '🎨 趣味オントロジー' : '🎨 Hobbies ontology' },
+          { href: `/${locale}/ontology/luck/`, label: locale === 'ko' ? '🍀 운 온톨로지' : locale === 'ja' ? '🍀 運のオントロジー' : '🍀 Luck ontology' },
+          { href: `/${locale}/mbti/test/`, label: locale === 'ko' ? '🧩 MBTI 성격 테스트' : locale === 'ja' ? '🧩 MBTI性格テスト' : '🧩 MBTI personality test' },
         ]}
       />
       <RelatedReading locale={locale} topic="personal-color" />

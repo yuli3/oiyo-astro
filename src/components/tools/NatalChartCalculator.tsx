@@ -458,7 +458,7 @@ export default function NatalChartCalculator({ locale }: Props) {
         <p className="mt-1.5 text-center text-xs text-amber-600">{PRIVACY_NOTE[loc]}</p>
 
         <div className="mt-5 text-center text-sm">
-          <a href={`/${loc}/zodiac/personality`} className="font-semibold text-green-600 hover:underline">{t.zodiacLink}</a>
+          <a href={`/${loc}/zodiac/personality/`} className="font-semibold text-green-600 hover:underline">{t.zodiacLink}</a>
         </div>
 
         <p className="mt-5 rounded-xl bg-slate-50 p-3 text-center text-xs text-slate-500">{t.method}</p>

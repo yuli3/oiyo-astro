@@ -2,7 +2,7 @@
 import Layout from '../../../layouts/Layout.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import MysticTrinity from '../../../components/shared/MysticTrinity.astro';
-import { LOCALES } from '../../../i18n';
+import { LOCALES, withTrailingSlash } from '../../../i18n';
 import type { Locale } from '../../../i18n';
 import { ZODIACS, ZODIAC_ORDER, type ZodiacAnimal } from '../../../components/tools/ChineseZodiac';
 
@@ -120,7 +120,7 @@ const L: Record<Locale, {
 const c = L[locale] ?? L.en;
 
 function localePath(path: string) {
-  return `/${locale}${path}`;
+  return withTrailingSlash(`/${locale}${path}`);
 }
 
 const metaTitle: Record<Locale, string> = {

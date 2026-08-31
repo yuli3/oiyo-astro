@@ -354,9 +354,9 @@ export default function EmotionalIntelligenceTest({ locale: localeProp }: Props)
         <ResultNextSteps
           locale={locale}
           links={[
-            { href: `/${locale}/empathy/test`, label: related.empathy },
-            { href: `/${locale}/big5/test`, label: related.big5 },
-            { href: `/${locale}/ontology/personality`, label: related.ontology },
+            { href: `/${locale}/empathy/test/`, label: related.empathy },
+            { href: `/${locale}/big5/test/`, label: related.big5 },
+            { href: `/${locale}/ontology/personality/`, label: related.ontology },
           ]}
         />
         <RelatedReading locale={locale} topic="eq" />

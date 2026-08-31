@@ -1,5 +1,5 @@
 import { useState, useCallback } from 'react';
-import type { Locale } from '../../i18n';
+import { withTrailingSlash, type Locale } from '../../i18n';
 
 /**
  * Emotion Release — a short guided flow to let a feeling pass:
@@ -121,7 +121,7 @@ export default function EmotionReleaseTool({ locale }: Props) {
   const [custom, setCustom] = useState('');
   const [quote, setQuote] = useState<Quote | null>(null);
 
-  const localePath = (p: string) => `/${locale}${p}`;
+  const localePath = (p: string) => withTrailingSlash(`/${locale}${p}`);
 
   const pickQuote = useCallback(() => {
     setQuote(quotes[Math.floor(Math.random() * quotes.length)]);
