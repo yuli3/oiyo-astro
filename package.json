@@ -63,7 +63,9 @@
     "audit:questionnaire": "node scripts/audit-questionnaire-cohorts.mjs --check",
     "restore:ontology-archive": "node scripts/restore-ontology-archive.mjs",
     "audit:test-funnel-events": "node scripts/audit-test-funnel-events.mjs",
-    "audit:internal-link-slashes": "node scripts/audit-internal-link-slashes.mjs"
+    "audit:internal-link-slashes": "node scripts/audit-internal-link-slashes.mjs",
+    "audit:sitemap-noindex": "node scripts/audit-sitemap-noindex-consistency.mjs",
+    "audit:single-h1": "node scripts/audit-single-h1.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.7",

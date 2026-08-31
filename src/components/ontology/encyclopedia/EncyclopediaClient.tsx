@@ -91,14 +91,14 @@ export function EncyclopediaClient() {
           <BookOpen className="w-4 h-4" />
           <span>Saju Encyclopedia</span>
         </m.div>
-        <m.h1
+        <m.h2
           animate={{ opacity: 1, y: 0 }}
           className="text-4xl md:text-5xl font-black text-[#064e3b] font-serif tracking-tight"
           initial={{ opacity: 0, y: 20 }}
           transition={{ delay: 0.1 }}
         >
           Codex of Destiny
-        </m.h1>
+        </m.h2>
         <m.p
           animate={{ opacity: 1, y: 0 }}
           className="text-green-800/80 max-w-lg mx-auto"

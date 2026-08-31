@@ -8,6 +8,7 @@ import { fileURLToPath } from 'url';
 import path from 'path';
 import { readFileSync } from 'node:fs';
 import { isAssessmentRouteExcludedFromSitemap } from './config/assessment-release-gates.js';
+import { isNoindexRoute } from './config/noindex-routes.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -45,6 +46,8 @@ export default defineConfig({
         if (path.split('/').some((seg) => seg.startsWith('_'))) return false;
         if (/\/ontology\/template\//.test(path)) return false;
         if (isAssessmentRouteExcludedFromSitemap(path)) return false;
+        // noindex 페이지를 사이트맵에 올리면 모순 신호다.
+        if (isNoindexRoute(path)) return false;
         if (path.endsWith('/index/') || path === '/index') return false;
         // Exclude deindexed locales (crawl budget).
         const segs = path.split('/').filter(Boolean);
