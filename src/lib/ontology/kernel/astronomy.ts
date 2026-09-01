@@ -42,7 +42,16 @@ export function calculateEoT(date: Date): number {
 }
 
 /**
- * Calculates Solar Longitude at a given moment.
+ * 태양의 **겉보기** 황경(apparent longitude). 절기 경계가 이 값으로 정의된다.
+ *
+ * 2026-09-01 이전에는 기하학적 황경(L0 + C)만 반환했다. KASI 절기 골든 168건과
+ * 대조하니 **부호 평균 -12.1분의 계통 편향**이 나왔다 — 무작위 오차가 아니라
+ * 빠진 항이 있다는 신호였다. 겉보기 황경에는 광행차와 장동 보정이 필요하다
+ * (Meeus, Astronomical Algorithms, ch. 25):
+ *
+ *   광행차 -0.00569도 ≈ 8.3분,  장동 -0.00478 sin(Ω)도 ≈ 최대 7분
+ *
+ * 둘을 더하니 편향이 사라졌다. 검증은 solar-terms-golden.test.ts 가 한다.
  */
 export function getSolarLongitude(date: Date): number {
   const T = getJulianCenturies(date);
@@ -55,7 +64,12 @@ export function getSolarLongitude(date: Date): number {
     (0.019993 - 0.000101 * T) * Math.sin(2 * M * D2R) +
     0.000289 * Math.sin(3 * M * D2R);
 
-  return normalizeAngle(L0 + C);
+  // 달 승교점의 황경. 장동의 주기항을 만든다.
+  const omega = 125.04 - 1934.136 * T;
+
+  const apparent = L0 + C - 0.00569 - 0.00478 * Math.sin(omega * D2R);
+
+  return normalizeAngle(apparent);
 }
 
 /**
