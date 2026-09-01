@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { resolveYearStem } from "@/lib/ontology/saju/year-stem";
+import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import type { Locale } from "../../i18n";
 
 interface Props { locale: Locale; }
@@ -12,12 +14,6 @@ const CATEGORIES: Category[] = ["overall", "love", "money", "health"];
 const TIERS: Tier[] = ["great", "good", "mid", "low", "poor"];
 
 const STEM_ELEMENT: Element[] = ["Wood","Wood","Fire","Fire","Earth","Earth","Metal","Metal","Water","Water"];
-const SEXAGENARY_EPOCH = 1984;
-
-function getYearStemIdx(year: number): number {
-  return ((year - SEXAGENARY_EPOCH) % 10 + 10) % 10;
-}
-
 function seededRand(seed: number): () => number {
   let s = seed >>> 0;
   return () => {
@@ -406,13 +402,14 @@ const UI: Record<Locale, {
   birthYear: string; calcBtn: string; resetBtn: string;
   stemLabel: string; elemLabel: string;
   todayLabel: string;
+  yearOnlyNote: string;
 }> = {
-  ko: { title: "사주 오늘의 운세", subtitle: "생년으로 보는 오행 기반 오늘 운세", birthYear: "태어난 해", calcBtn: "운세 보기", resetBtn: "초기화", stemLabel: "연주(年柱)", elemLabel: "주요 오행", todayLabel: "오늘" },
-  en: { title: "Saju Daily Fortune", subtitle: "Today's fortune based on your birth year element", birthYear: "Birth Year", calcBtn: "Read Fortune", resetBtn: "Reset", stemLabel: "Year Pillar", elemLabel: "Element", todayLabel: "Today" },
-  ja: { title: "四柱今日の運勢", subtitle: "生まれ年の五行に基づく今日の運勢", birthYear: "生まれ年", calcBtn: "運勢を見る", resetBtn: "リセット", stemLabel: "年柱", elemLabel: "主要五行", todayLabel: "今日" },
-  zh: { title: "四柱今日运势", subtitle: "根据出生年份五行推算今日运势", birthYear: "出生年份", calcBtn: "查看运势", resetBtn: "重置", stemLabel: "年柱", elemLabel: "五行", todayLabel: "今天" },
-  fr: { title: "Fortune Saju du Jour", subtitle: "Fortune du jour basée sur l'élément de votre année de naissance", birthYear: "Année de naissance", calcBtn: "Lire la fortune", resetBtn: "Réinitialiser", stemLabel: "Pilier Année", elemLabel: "Élément", todayLabel: "Aujourd'hui" },
-  es: { title: "Fortuna Saju del Día", subtitle: "Fortuna de hoy basada en el elemento de tu año de nacimiento", birthYear: "Año de nacimiento", calcBtn: "Leer fortuna", resetBtn: "Reiniciar", stemLabel: "Pilar Año", elemLabel: "Elemento", todayLabel: "Hoy" },
+  ko: { title: "사주 오늘의 운세", subtitle: "생년으로 보는 오행 기반 오늘 운세", birthYear: "태어난 해", calcBtn: "운세 보기", resetBtn: "초기화", stemLabel: "연주(年柱)", elemLabel: "주요 오행", todayLabel: "오늘", yearOnlyNote: "태어난 해만으로 계산했습니다. 사주의 연주는 입춘(2월 4일 무렵)에 바뀌므로, 1~2월 초 출생이면 실제와 다를 수 있습니다. 정확한 값은 사주 계산기에서 생년월일로 확인하세요." },
+  en: { title: "Saju Daily Fortune", subtitle: "Today's fortune based on your birth year element", birthYear: "Birth Year", calcBtn: "Read Fortune", resetBtn: "Reset", stemLabel: "Year Pillar", elemLabel: "Element", todayLabel: "Today", yearOnlyNote: "Calculated from the birth year alone. The Saju year pillar turns at Ipchun (around February 4), so a birth in January or early February may differ. Use the Saju calculator with a full birth date for the accurate value." },
+  ja: { title: "四柱今日の運勢", subtitle: "生まれ年の五行に基づく今日の運勢", birthYear: "生まれ年", calcBtn: "運勢を見る", resetBtn: "リセット", stemLabel: "年柱", elemLabel: "主要五行", todayLabel: "今日", yearOnlyNote: "生まれ年のみで計算しました。四柱の年柱は立春（2月4日頃）に変わるため、1月〜2月初旬生まれは実際と異なる場合があります。正確な値は四柱計算機で生年月日からご確認ください。" },
+  zh: { title: "四柱今日运势", subtitle: "根据出生年份五行推算今日运势", birthYear: "出生年份", calcBtn: "查看运势", resetBtn: "重置", stemLabel: "年柱", elemLabel: "五行", todayLabel: "今天", yearOnlyNote: "仅根据出生年份计算。四柱的年柱在立春（2月4日前后）更替，因此1月至2月初出生者可能与实际不同。请在四柱计算器中输入完整出生日期以获得准确值。" },
+  fr: { title: "Fortune Saju du Jour", subtitle: "Fortune du jour basée sur l'élément de votre année de naissance", birthYear: "Année de naissance", calcBtn: "Lire la fortune", resetBtn: "Réinitialiser", stemLabel: "Pilier Année", elemLabel: "Élément", todayLabel: "Aujourd'hui", yearOnlyNote: "Calculé à partir de la seule année de naissance. Le pilier de l’année change à Ipchun (vers le 4 février) : une naissance en janvier ou début février peut donc différer. Utilisez le calculateur Saju avec la date complète." },
+  es: { title: "Fortuna Saju del Día", subtitle: "Fortuna de hoy basada en el elemento de tu año de nacimiento", birthYear: "Año de nacimiento", calcBtn: "Leer fortuna", resetBtn: "Reiniciar", stemLabel: "Pilar Año", elemLabel: "Elemento", todayLabel: "Hoy", yearOnlyNote: "Calculado solo con el año de nacimiento. El pilar del año cambia en Ipchun (hacia el 4 de febrero), así que un nacimiento en enero o principios de febrero puede diferir. Usa la calculadora Saju con la fecha completa." },
 };
 
 const STEM_NAMES: Record<Locale, string[]> = {
@@ -429,14 +426,17 @@ export default function SajuFortune({ locale }: Props) {
   const ui = UI[locale] ?? UI.en;
   const currentYear = new Date().getFullYear();
   const [year, setYear] = useState<number | null>(null);
-  const [result, setResult] = useState<{ el: Element; stemIdx: number; fortunes: Record<Category, { tier: Tier; text: string }> } | null>(null);
+  // 프로필에 생년월일이 있으면 연주를 절기 기준으로 정확히 낸다. 없으면 연도만
+  // 쓰므로 입춘 경계(1/1~2/4 출생)가 적용되지 않고, 그 사실을 결과에 알린다.
+  const { parsed } = useProfilePrefill();
+  const [result, setResult] = useState<{ el: Element; stemIdx: number; solarAccurate: boolean; fortunes: Record<Category, { tier: Tier; text: string }> } | null>(null);
   const [today, setToday] = useState("");
 
   const yearOptions = Array.from({ length: currentYear - 1923 }, (_, i) => currentYear - i);
 
   function calculate() {
     if (!year) return;
-    const stemIdx = getYearStemIdx(year);
+    const { stemIdx, solarAccurate } = resolveYearStem(year, parsed);
     const el = STEM_ELEMENT[stemIdx];
     const rand = seededRand(todaySeed(stemIdx));
     const pool = ALL_POOLS[locale] ?? ALL_POOLS.en;
@@ -449,7 +449,7 @@ export default function SajuFortune({ locale }: Props) {
       const text = texts[Math.floor(rand() * texts.length)];
       fortunes[cat] = { tier, text };
     }
-    setResult({ el, stemIdx, fortunes });
+    setResult({ el, stemIdx, solarAccurate, fortunes });
     setToday(getToday());
   }
 
@@ -492,6 +492,11 @@ export default function SajuFortune({ locale }: Props) {
             </div>
           </div>
 
+            {!result.solarAccurate && (
+              <p className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-[11px] leading-5 text-amber-900">
+                {ui.yearOnlyNote}
+              </p>
+            )}
           {/* Fortune cards */}
           {CATEGORIES.map((cat) => {
             const { tier, text } = result.fortunes[cat];

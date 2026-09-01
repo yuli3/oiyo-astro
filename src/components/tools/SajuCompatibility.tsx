@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { resolveYearStem } from "@/lib/ontology/saju/year-stem";
+import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import type { Locale } from "../../i18n";
 
 interface Props { locale: Locale; }
@@ -8,12 +10,6 @@ type Relation = "generates" | "generated_by" | "conquers" | "conquered_by" | "sa
 
 const ELEMENTS_LIST: Element[] = ["Wood", "Fire", "Earth", "Metal", "Water"];
 const STEM_ELEMENT: Element[] = ["Wood","Wood","Fire","Fire","Earth","Earth","Metal","Metal","Water","Water"];
-const SEXAGENARY_EPOCH = 1984;
-
-function getYearStemIdx(year: number): number {
-  return ((year - SEXAGENARY_EPOCH) % 10 + 10) % 10;
-}
-
 // Five-element generation cycle: Wood → Fire → Earth → Metal → Water → Wood
 const GENERATES: Record<Element, Element> = {
   Wood: "Fire", Fire: "Earth", Earth: "Metal", Metal: "Water", Water: "Wood",
@@ -275,13 +271,14 @@ const UI: Record<Locale, {
   birthYear: string; calcBtn: string; resetBtn: string;
   score: string; relation: string; strength: string; advice: string;
   elemLabel: string;
+  yearOnlyNote: string;
 }> = {
-  ko: { title: "사주 궁합", subtitle: "오행 기반 두 사람의 사주 궁합 분석", person1: "첫 번째 사람", person2: "두 번째 사람", birthYear: "태어난 해", calcBtn: "궁합 보기", resetBtn: "다시 하기", score: "궁합 점수", relation: "오행 관계", strength: "강점", advice: "조언", elemLabel: "오행" },
-  en: { title: "Saju Compatibility", subtitle: "Five-element compatibility analysis for two people", person1: "Person 1", person2: "Person 2", birthYear: "Birth Year", calcBtn: "Check Compatibility", resetBtn: "Try Again", score: "Compatibility Score", relation: "Element Relationship", strength: "Strength", advice: "Advice", elemLabel: "Element" },
-  ja: { title: "四柱相性診断", subtitle: "五行に基づく二人の相性分析", person1: "1人目", person2: "2人目", birthYear: "生まれ年", calcBtn: "相性を見る", resetBtn: "やり直す", score: "相性スコア", relation: "五行の関係", strength: "強み", advice: "アドバイス", elemLabel: "五行" },
-  zh: { title: "四柱合婚", subtitle: "基于五行的两人相性分析", person1: "第一人", person2: "第二人", birthYear: "出生年份", calcBtn: "查看合婚", resetBtn: "重新开始", score: "相性分数", relation: "五行关系", strength: "优势", advice: "建议", elemLabel: "五行" },
-  fr: { title: "Compatibilité Saju", subtitle: "Analyse de compatibilité par les cinq éléments", person1: "Personne 1", person2: "Personne 2", birthYear: "Année de naissance", calcBtn: "Vérifier la compatibilité", resetBtn: "Réessayer", score: "Score de compatibilité", relation: "Relation élémentaire", strength: "Point fort", advice: "Conseil", elemLabel: "Élément" },
-  es: { title: "Compatibilidad Saju", subtitle: "Análisis de compatibilidad por los cinco elementos", person1: "Persona 1", person2: "Persona 2", birthYear: "Año de nacimiento", calcBtn: "Ver compatibilidad", resetBtn: "Intentar de nuevo", score: "Puntuación de compatibilidad", relation: "Relación elemental", strength: "Fortaleza", advice: "Consejo", elemLabel: "Elemento" },
+  ko: { title: "사주 궁합", subtitle: "오행 기반 두 사람의 사주 궁합 분석", person1: "첫 번째 사람", person2: "두 번째 사람", birthYear: "태어난 해", calcBtn: "궁합 보기", resetBtn: "다시 하기", score: "궁합 점수", relation: "오행 관계", strength: "강점", advice: "조언", elemLabel: "오행", yearOnlyNote: "태어난 해만으로 계산했습니다. 사주의 연주는 입춘(2월 4일 무렵)에 바뀌므로, 1~2월 초 출생이면 실제와 다를 수 있습니다. 정확한 값은 사주 계산기에서 생년월일로 확인하세요." },
+  en: { title: "Saju Compatibility", subtitle: "Five-element compatibility analysis for two people", person1: "Person 1", person2: "Person 2", birthYear: "Birth Year", calcBtn: "Check Compatibility", resetBtn: "Try Again", score: "Compatibility Score", relation: "Element Relationship", strength: "Strength", advice: "Advice", elemLabel: "Element", yearOnlyNote: "Calculated from the birth year alone. The Saju year pillar turns at Ipchun (around February 4), so a birth in January or early February may differ. Use the Saju calculator with a full birth date for the accurate value." },
+  ja: { title: "四柱相性診断", subtitle: "五行に基づく二人の相性分析", person1: "1人目", person2: "2人目", birthYear: "生まれ年", calcBtn: "相性を見る", resetBtn: "やり直す", score: "相性スコア", relation: "五行の関係", strength: "強み", advice: "アドバイス", elemLabel: "五行", yearOnlyNote: "生まれ年のみで計算しました。四柱の年柱は立春（2月4日頃）に変わるため、1月〜2月初旬生まれは実際と異なる場合があります。正確な値は四柱計算機で生年月日からご確認ください。" },
+  zh: { title: "四柱合婚", subtitle: "基于五行的两人相性分析", person1: "第一人", person2: "第二人", birthYear: "出生年份", calcBtn: "查看合婚", resetBtn: "重新开始", score: "相性分数", relation: "五行关系", strength: "优势", advice: "建议", elemLabel: "五行", yearOnlyNote: "仅根据出生年份计算。四柱的年柱在立春（2月4日前后）更替，因此1月至2月初出生者可能与实际不同。请在四柱计算器中输入完整出生日期以获得准确值。" },
+  fr: { title: "Compatibilité Saju", subtitle: "Analyse de compatibilité par les cinq éléments", person1: "Personne 1", person2: "Personne 2", birthYear: "Année de naissance", calcBtn: "Vérifier la compatibilité", resetBtn: "Réessayer", score: "Score de compatibilité", relation: "Relation élémentaire", strength: "Point fort", advice: "Conseil", elemLabel: "Élément", yearOnlyNote: "Calculé à partir de la seule année de naissance. Le pilier de l’année change à Ipchun (vers le 4 février) : une naissance en janvier ou début février peut donc différer. Utilisez le calculateur Saju avec la date complète." },
+  es: { title: "Compatibilidad Saju", subtitle: "Análisis de compatibilidad por los cinco elementos", person1: "Persona 1", person2: "Persona 2", birthYear: "Año de nacimiento", calcBtn: "Ver compatibilidad", resetBtn: "Intentar de nuevo", score: "Puntuación de compatibilidad", relation: "Relación elemental", strength: "Fortaleza", advice: "Consejo", elemLabel: "Elemento", yearOnlyNote: "Calculado solo con el año de nacimiento. El pilar del año cambia en Ipchun (hacia el 4 de febrero), así que un nacimiento en enero o principios de febrero puede diferir. Usa la calculadora Saju con la fecha completa." },
 };
 
 interface Result {
@@ -290,11 +287,15 @@ interface Result {
   relation: Relation;
   score: number;
   compat: CompatText;
+  /** false 면 연도만으로 낸 값이라 입춘 경계가 적용되지 않았다. */
+  solarAccurate: boolean;
 }
 
 export default function SajuCompatibility({ locale }: Props) {
   const ui = UI[locale] ?? UI.en;
   const currentYear = new Date().getFullYear();
+  // 프로필에 생년월일이 있으면 연주를 절기 기준으로 정확히 낸다(본인 연도에 한해).
+  const { parsed } = useProfilePrefill();
   const [year1, setYear1] = useState<number | null>(null);
   const [year2, setYear2] = useState<number | null>(null);
   const [result, setResult] = useState<Result | null>(null);
@@ -303,8 +304,11 @@ export default function SajuCompatibility({ locale }: Props) {
 
   function calculate() {
     if (!year1 || !year2) return;
-    const si1 = getYearStemIdx(year1);
-    const si2 = getYearStemIdx(year2);
+    const r1 = resolveYearStem(year1, parsed);
+    const r2 = resolveYearStem(year2, parsed);
+    const si1 = r1.stemIdx, si2 = r2.stemIdx;
+    // 둘 중 하나라도 연도만으로 냈으면 한계를 알린다.
+    const solarAccurate = r1.solarAccurate && r2.solarAccurate;
     const el1 = STEM_ELEMENT[si1];
     const el2 = STEM_ELEMENT[si2];
     const relation = getRelation(el1, el2);
@@ -312,7 +316,7 @@ export default function SajuCompatibility({ locale }: Props) {
     const aName = ELEM_NAMES[el1][locale];
     const bName = ELEM_NAMES[el2][locale];
     const compat = (COMPAT_TEXTS[locale] ?? COMPAT_TEXTS.en)[relation](aName, bName);
-    setResult({ el1, stemIdx1: si1, el2, stemIdx2: si2, relation, score, compat });
+    setResult({ el1, stemIdx1: si1, el2, stemIdx2: si2, relation, score, compat, solarAccurate });
   }
 
   return (
@@ -372,6 +376,11 @@ export default function SajuCompatibility({ locale }: Props) {
 
           {/* Score */}
           <div className="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm space-y-1">
+            {!result.solarAccurate && (
+              <p className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-[11px] leading-5 text-amber-900">
+                {ui.yearOnlyNote}
+              </p>
+            )}
             <div className="text-sm text-gray-500">{ui.score}</div>
             <div className={`text-5xl font-black ${SCORE_COLOR(result.score)}`}>{result.score}</div>
             <div className="text-sm text-gray-500">/ 100</div>
