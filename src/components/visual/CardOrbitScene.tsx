@@ -14,6 +14,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import type { Group, MutableRefObject } from "three";
 import * as THREE from "three";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 export interface CardOrbitItem {
   id: string;
@@ -140,7 +141,12 @@ export interface CardOrbitSceneProps {
   maxDpr?: number;
 }
 
-export default function CardOrbitScene({ cards, animate = true, maxDpr = 2 }: CardOrbitSceneProps) {
+export default function CardOrbitScene({ cards, animate: animateProp = true, maxDpr = 2 }: CardOrbitSceneProps) {
+  // The CSS motion contract cannot reach inside a canvas — a scene that
+  // rotates every frame has to read the preference itself. This also drops
+  // the r3f frameloop to "demand", so nothing renders while idle.
+  const reducedMotion = useReducedMotion();
+  const animate = animateProp && !reducedMotion;
   const laidOut = useMemo(() => layoutCards(cards), [cards]);
   return (
     <Canvas

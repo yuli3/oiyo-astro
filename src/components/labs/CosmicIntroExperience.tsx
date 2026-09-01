@@ -15,6 +15,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { DnaHelix } from "./scenes/DnaHelix";
 import { BlackHole } from "./scenes/BlackHole";
 import { Galaxy } from "./scenes/Galaxy";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -144,13 +145,11 @@ export function CosmicIntroExperience() {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const progressRef = useRef(0);
   const textRefs = useRef<Array<HTMLDivElement | null>>([]);
-  const [reducedMotion, setReducedMotion] = useState(false);
+  const reducedMotion = useReducedMotion();
   const [quality, setQuality] = useState(1);
 
   useEffect(() => {
-    const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     const mobileQuery = window.matchMedia("(max-width: 768px)");
-    setReducedMotion(motionQuery.matches);
     setQuality(mobileQuery.matches ? 0.4 : 1);
   }, []);
 

@@ -22,9 +22,28 @@ const getServerSnapshot = () => {
   return false;
 };
 
+/**
+ * The store behind `useReducedMotion`, exported so the subscription can be
+ * tested without a DOM renderer — this repo tests components through
+ * `renderToStaticMarkup`, which never exercises a subscription.
+ *
+ * Worth testing directly: the eight private copies this hook replaced differed
+ * exactly here, and one of them never subscribed at all.
+ */
+export const reducedMotionStore = { subscribe, getSnapshot, getServerSnapshot };
+
 export const useReducedMotion = () => {
   return useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 };
+
+/**
+ * Non-hook read of the same preference, for event handlers and imperative code
+ * (smooth scrolling, canvas setup) that cannot call a hook.
+ *
+ * Returns false during SSR, matching `useReducedMotion`'s server snapshot.
+ */
+export const prefersReducedMotion = () =>
+  typeof window !== "undefined" && getSnapshot();
 
 export const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -74,7 +93,21 @@ export const useIntersectionObserver = (
   return { hasIntersected, isIntersecting };
 };
 
-export const useAnimationFrame = (callback: (time: number) => void) => {
+/**
+ * Per-frame callback that honours the motion contract: when the user asks for
+ * reduced motion the loop does not run at all.
+ *
+ * This is the JS half of the contract in src/styles/global.css — CSS cannot
+ * reach requestAnimationFrame. Pass `essential: true` only for a loop whose
+ * output carries information rather than decoration (the same bar as the
+ * `data-motion="essential"` attribute).
+ */
+export const useAnimationFrame = (
+  callback: (time: number) => void,
+  { essential = false }: { essential?: boolean } = {},
+) => {
+  const reducedMotion = useReducedMotion();
+  const paused = reducedMotion && !essential;
   const requestRef = useRef<number>(0);
   const previousTimeRef = useRef<number>(0);
   const animateRef = useRef<(time: number) => void>(undefined);
@@ -100,6 +133,7 @@ export const useAnimationFrame = (callback: (time: number) => void) => {
   }, [animate]);
 
   useEffect(() => {
+    if (paused) return;
     if (typeof window !== "undefined") {
       requestRef.current = window.requestAnimationFrame((t) =>
         animateRef.current?.(t),
@@ -110,7 +144,7 @@ export const useAnimationFrame = (callback: (time: number) => void) => {
         window.cancelAnimationFrame(requestRef.current);
       }
     };
-  }, []);
+  }, [paused]);
 };
 
 export const useDebounce = <T>(value: T, delay: number): T => {

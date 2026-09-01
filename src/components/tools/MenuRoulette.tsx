@@ -13,6 +13,7 @@ import {
   type SeasonKey,
   type WeatherKey,
 } from '../../lib/menu-roulette';
+import { useReducedMotion } from "@/hooks/useMotion";
 
 type CuisineKey = 'korean' | 'chinese' | 'japanese' | 'western' | 'asian' | 'light' | 'cafe';
 
@@ -123,7 +124,7 @@ export default function MenuRoulette({ locale }: Props) {
   const [treat, setTreat] = useState<string | null>(null);
   const [spinning, setSpinning] = useState(false);
   const [announcement, setAnnouncement] = useState('');
-  const [reduceMotion, setReduceMotion] = useState(false);
+  const reduceMotion = useReducedMotion();
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const filters: MenuFilters = { meal, cuisine, season, weather };
@@ -134,16 +135,7 @@ export default function MenuRoulette({ locale }: Props) {
     timerRef.current = null;
   }, []);
 
-  useEffect(() => {
-    const media = window.matchMedia('(prefers-reduced-motion: reduce)');
-    const update = () => setReduceMotion(media.matches);
-    update();
-    media.addEventListener('change', update);
-    return () => {
-      clearTimer();
-      media.removeEventListener('change', update);
-    };
-  }, [clearTimer]);
+  useEffect(() => clearTimer, [clearTimer]);
 
   const resetForFilter = useCallback(() => {
     clearTimer();

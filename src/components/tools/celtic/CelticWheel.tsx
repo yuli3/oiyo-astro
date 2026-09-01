@@ -9,6 +9,7 @@
  */
 
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const WheelScene = lazy(() => import("./CelticWheelScene"));
 
@@ -22,18 +23,6 @@ const COPY: Record<Lang, { hint: string }> = {
   fr: { hint: "Faites glisser pour explorer le calendrier des arbres celtiques. Le point lumineux est votre arbre." },
   es: { hint: "Arrastra para explorar el calendario de árboles celtas. El punto brillante es tu árbol." },
 };
-
-function useReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(false);
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(query.matches);
-    const onChange = (event: MediaQueryListEvent) => setReduced(event.matches);
-    query.addEventListener("change", onChange);
-    return () => query.removeEventListener("change", onChange);
-  }, []);
-  return reduced;
-}
 
 function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {
   const ref = useRef<T>(null);

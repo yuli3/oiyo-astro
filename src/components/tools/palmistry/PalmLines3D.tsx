@@ -11,6 +11,7 @@
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import type { PalmLineId } from "../../../lib/ontology/palmistry/palm-lines";
 import type { PalmLineDef } from "./PalmLinesScene";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const LinesScene = lazy(() => import("./PalmLinesScene"));
 
@@ -24,18 +25,6 @@ const COPY: Record<Lang, { hint: string }> = {
   fr: { hint: "La ligne sélectionnée s'avance et s'illumine — tracée depuis la vraie forme de la paume." },
   es: { hint: "La línea seleccionada se eleva y brilla, trazada desde la forma real de la palma." },
 };
-
-function useReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(false);
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(query.matches);
-    const onChange = (event: MediaQueryListEvent) => setReduced(event.matches);
-    query.addEventListener("change", onChange);
-    return () => query.removeEventListener("change", onChange);
-  }, []);
-  return reduced;
-}
 
 function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {
   const ref = useRef<T>(null);

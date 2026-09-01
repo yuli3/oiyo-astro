@@ -17,6 +17,7 @@ import {
   buildSystemLayout,
   type OrbitLayout,
 } from "@/lib/symbolic-tradition/orbit-layout";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const OrbitScene = lazy(() => import("./CompatibilityOrbitScene"));
 
@@ -45,18 +46,6 @@ interface Props {
   people: CompatibilityOrbitPerson[];
   /** "pair" for two-person views, "system" for 3+. */
   mode: "pair" | "system";
-}
-
-function useReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(false);
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(query.matches);
-    const onChange = (event: MediaQueryListEvent) => setReduced(event.matches);
-    query.addEventListener("change", onChange);
-    return () => query.removeEventListener("change", onChange);
-  }, []);
-  return reduced;
 }
 
 /** Mount children only once the placeholder scrolls into view. */

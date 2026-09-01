@@ -14,6 +14,7 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
 import type { PalmLineId } from "../../../lib/ontology/palmistry/palm-lines";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const VIEWBOX_W = 300;
 const VIEWBOX_H = 375;
@@ -121,7 +122,12 @@ export interface PalmLinesSceneProps {
   maxDpr?: number;
 }
 
-export default function PalmLinesScene({ lines, active, animate = true, maxDpr = 2 }: PalmLinesSceneProps) {
+export default function PalmLinesScene({ lines, active, animate: animateProp = true, maxDpr = 2 }: PalmLinesSceneProps) {
+  // The CSS motion contract cannot reach inside a canvas — a scene that
+  // rotates every frame has to read the preference itself. This also drops
+  // the r3f frameloop to "demand", so nothing renders while idle.
+  const reducedMotion = useReducedMotion();
+  const animate = animateProp && !reducedMotion;
   return (
     <Canvas
       camera={{ position: [0, 0, 6.5], fov: 40 }}

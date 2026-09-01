@@ -13,6 +13,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const RADIUS = 2.8;
 const BASE_SIZE = 0.2;
@@ -105,7 +106,12 @@ export interface CelticWheelSceneProps {
   maxDpr?: number;
 }
 
-export default function CelticWheelScene({ total, myIndex, animate = true, maxDpr = 2 }: CelticWheelSceneProps) {
+export default function CelticWheelScene({ total, myIndex, animate: animateProp = true, maxDpr = 2 }: CelticWheelSceneProps) {
+  // The CSS motion contract cannot reach inside a canvas — a scene that
+  // rotates every frame has to read the preference itself. This also drops
+  // the r3f frameloop to "demand", so nothing renders while idle.
+  const reducedMotion = useReducedMotion();
+  const animate = animateProp && !reducedMotion;
   return (
     <Canvas
       camera={{ position: [0, 0, 7], fov: 42 }}

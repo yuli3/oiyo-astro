@@ -136,14 +136,8 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
 
       <style>{`
         .role-score-bar { transition: width 240ms ease-out; }
-        @media (prefers-reduced-motion: reduce) {
-          .role-visual *, .role-visual *::before, .role-visual *::after {
-            animation-duration: 0.01ms !important;
-            animation-iteration-count: 1 !important;
-            scroll-behavior: auto !important;
-            transition-duration: 0.01ms !important;
-          }
-        }
+        /* The reduced-motion block that used to live here is now global —
+           see the motion contract in src/styles/global.css. */
       `}</style>
     </section>
   );

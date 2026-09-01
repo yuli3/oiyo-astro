@@ -9,6 +9,7 @@
  */
 
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const OrbitScene = lazy(() => import("./FiveElementsOrbitScene"));
 
@@ -22,18 +23,6 @@ const COPY: Record<Lang, { hint: string; legend: string }> = {
   fr: { hint: "Faites glisser pour explorer génération et contrôle.", legend: "Anneau extérieur = génère · étoile intérieure = contrôle" },
   es: { hint: "Arrastra para ver la generación y el control de los elementos.", legend: "Anillo exterior = genera · estrella interior = controla" },
 };
-
-function useReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(false);
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(query.matches);
-    const onChange = (event: MediaQueryListEvent) => setReduced(event.matches);
-    query.addEventListener("change", onChange);
-    return () => query.removeEventListener("change", onChange);
-  }, []);
-  return reduced;
-}
 
 function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {
   const ref = useRef<T>(null);

@@ -15,6 +15,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 
 import type { Palace, PalaceKey } from "@/lib/ontology/ziwei/types";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const RADIUS = 2.8;
 const BASE_SIZE = 0.16;
@@ -110,7 +111,12 @@ export interface ZiWeiWheelSceneProps {
   maxDpr?: number;
 }
 
-export default function ZiWeiWheelScene({ palaces, lifeKey, animate = true, maxDpr = 2 }: ZiWeiWheelSceneProps) {
+export default function ZiWeiWheelScene({ palaces, lifeKey, animate: animateProp = true, maxDpr = 2 }: ZiWeiWheelSceneProps) {
+  // The CSS motion contract cannot reach inside a canvas — a scene that
+  // rotates every frame has to read the preference itself. This also drops
+  // the r3f frameloop to "demand", so nothing renders while idle.
+  const reducedMotion = useReducedMotion();
+  const animate = animateProp && !reducedMotion;
   return (
     <Canvas
       camera={{ position: [0, 0, 7.5], fov: 42 }}

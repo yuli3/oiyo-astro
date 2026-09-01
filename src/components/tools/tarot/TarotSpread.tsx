@@ -9,6 +9,7 @@
  */
 
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const SpreadScene = lazy(() => import("./TarotSpreadScene"));
 
@@ -26,18 +27,6 @@ const COPY: Record<Lang, { hint: string }> = {
 interface SpreadCardState {
   reversed: boolean;
   revealed: boolean;
-}
-
-function useReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(false);
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(query.matches);
-    const onChange = (event: MediaQueryListEvent) => setReduced(event.matches);
-    query.addEventListener("change", onChange);
-    return () => query.removeEventListener("change", onChange);
-  }, []);
-  return reduced;
 }
 
 function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {

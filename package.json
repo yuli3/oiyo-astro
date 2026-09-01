@@ -22,6 +22,7 @@
     "audit:relationship-comparison": "node scripts/audit-relationship-comparison.mjs",
     "audit:profile-history": "node scripts/audit-personal-profile-history.mjs",
     "audit:role-visual": "node scripts/audit-role-visual-system.mjs",
+    "audit:motion-contract": "node scripts/audit-motion-contract.mjs",
     "audit:type-advice": "node scripts/audit-type-advice.mjs",
     "audit:sample-report": "node scripts/audit-sample-report.mjs",
     "audit:reflective-life-role-balance": "node scripts/audit-reflective-life-role-balance.mjs",

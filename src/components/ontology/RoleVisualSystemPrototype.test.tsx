@@ -42,6 +42,13 @@ describe("RoleVisualSystemPrototype", () => {
     expect(html).toContain('aria-pressed="false"');
     expect(html).toContain('aria-live="polite"');
     expect(html).toContain("Nothing has been saved or shared.");
-    expect(html).toContain("prefers-reduced-motion: reduce");
+
+    // This used to assert that the component inlined its own reduced-motion
+    // block. That block is now the global motion contract in
+    // src/styles/global.css, so the assertion is inverted: the component must
+    // *not* carry a private copy, because two copies drift.
+    // The contract itself is enforced by `npm run audit:motion-contract`.
+    expect(html).not.toContain("animation-duration: 0.01ms");
+    expect(html).toContain("transition: width 240ms ease-out");
   });
 });

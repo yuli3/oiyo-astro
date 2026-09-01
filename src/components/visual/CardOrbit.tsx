@@ -14,20 +14,9 @@
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 
 import type { CardOrbitItem } from "./CardOrbitScene";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const OrbitScene = lazy(() => import("./CardOrbitScene"));
-
-function useReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(false);
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(query.matches);
-    const onChange = (event: MediaQueryListEvent) => setReduced(event.matches);
-    query.addEventListener("change", onChange);
-    return () => query.removeEventListener("change", onChange);
-  }, []);
-  return reduced;
-}
 
 /** Mount the scene only once the placeholder scrolls into view. */
 function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {

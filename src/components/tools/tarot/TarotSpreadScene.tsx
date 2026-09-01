@@ -13,6 +13,7 @@ import { OrbitControls } from "@react-three/drei";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import * as THREE from "three";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const ARC_DEGREES = 100;
 const RADIUS = 3.1;
@@ -109,7 +110,12 @@ export interface TarotSpreadSceneProps {
   maxDpr?: number;
 }
 
-export default function TarotSpreadScene({ cards, animate = true, maxDpr = 2 }: TarotSpreadSceneProps) {
+export default function TarotSpreadScene({ cards, animate: animateProp = true, maxDpr = 2 }: TarotSpreadSceneProps) {
+  // The CSS motion contract cannot reach inside a canvas — a scene that
+  // rotates every frame has to read the preference itself. This also drops
+  // the r3f frameloop to "demand", so nothing renders while idle.
+  const reducedMotion = useReducedMotion();
+  const animate = animateProp && !reducedMotion;
   return (
     <Canvas
       camera={{ position: [0, 1.6, 6.2], fov: 42 }}

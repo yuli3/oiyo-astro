@@ -5,6 +5,7 @@ import { civilDateToLocalNoon } from '../../lib/user/birth-record';
 import { differenceInCivilDays } from '../../lib/ontology/kernel/civil-date';
 import type { Locale } from '../../lib/i18n';
 import AnimatedNumber from '../ui/AnimatedNumber';
+import { useReducedMotion } from "@/hooks/useMotion";
 
 interface Props {
   locale: Locale;
@@ -645,7 +646,7 @@ function DNAHelix({
 export default function BiorhythmCalculator({ locale }: Props) {
   const [birthDate, setBirthDate] = useState<string>('');
   const [scrollOffset, setScrollOffset] = useState(0);
-  const [reducedMotion, setReducedMotion] = useState(false);
+  const reducedMotion = useReducedMotion();
 
   // 온톨로지 프로필 생년월일 재사용 — 재입력 제거.
   const { parsed, saveBirth } = useProfilePrefill();
@@ -654,15 +655,6 @@ export default function BiorhythmCalculator({ locale }: Props) {
   }, [parsed]);
   const rafRef = useRef<number | null>(null);
   const startTimeRef = useRef<number | null>(null);
-
-  // Detect reduced motion preference (client-only to avoid SSR mismatch)
-  useEffect(() => {
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    setReducedMotion(mq.matches);
-    const handler = (e: MediaQueryListEvent) => setReducedMotion(e.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
-  }, []);
 
   const today = useMemo(() => {
     const d = new Date();

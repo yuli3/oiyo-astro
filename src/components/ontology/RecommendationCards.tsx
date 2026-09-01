@@ -8,6 +8,7 @@ import { RecommendationService } from "@/lib/engines/recommendation/service";
 import { resolveNodeLabel } from "@/lib/ontology/graph/label";
 import { getNode } from "@/lib/ontology/graph/nodes";
 import { collectSignals } from "@/lib/ontology/signals";
+import { prefersReducedMotion } from "@/hooks/useMotion";
 
 // Lane 5 "당신을 위한 추천": the result cards the design doc calls for —
 // matchScore + a "why" reasoning line built from the actual signals that
@@ -144,7 +145,10 @@ export function RecommendationCards({ locale }: { locale: string }) {
   const explore = (nodeId: string | undefined) => {
     if (!nodeId) return;
     window.dispatchEvent(new CustomEvent("oiyo:orbit-focus", { detail: { nodeId } }));
-    document.getElementById("relation-orbit")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById("relation-orbit")?.scrollIntoView({
+      behavior: prefersReducedMotion() ? "auto" : "smooth",
+      block: "start",
+    });
   };
 
   // First-time visitors with no signals yet: RecommendationService already

@@ -10,6 +10,7 @@
 
 import { Suspense, lazy, useEffect, useRef, useState } from "react";
 import type { NumerologyNode } from "./NumerologyOrbitScene";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const OrbitScene = lazy(() => import("./NumerologyOrbitScene"));
 
@@ -23,18 +24,6 @@ const COPY: Record<Lang, { hint: string }> = {
   fr: { hint: "Plus le nombre est grand, plus l'étoile est grande. Les étoiles dorées sont les nombres maîtres." },
   es: { hint: "Cuanto mayor sea el número, más grande será la estrella. Las estrellas doradas son números maestros." },
 };
-
-function useReducedMotion(): boolean {
-  const [reduced, setReduced] = useState(false);
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setReduced(query.matches);
-    const onChange = (event: MediaQueryListEvent) => setReduced(event.matches);
-    query.addEventListener("change", onChange);
-    return () => query.removeEventListener("change", onChange);
-  }, []);
-  return reduced;
-}
 
 function useInView<T extends HTMLElement>(): [React.RefObject<T>, boolean] {
   const ref = useRef<T>(null);

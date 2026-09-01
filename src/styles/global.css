@@ -120,8 +120,10 @@
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
   }
-  html {
-    scroll-behavior: smooth;
+  /* Smooth scrolling is opt-in on motion preference, not opt-out. A user who
+     asked for reduced motion should never get a page that scrolls itself. */
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; }
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-medium tracking-tight;
@@ -202,3 +204,34 @@
 /* Mobile overflow containment (FAANG audit 2026-07-05) — drawer-safe: no body overflow clipping */
 img, svg, video, canvas, iframe { max-width: 100%; }
 pre { max-width: 100%; overflow-x: auto; }
+
+/* ──────────────────────────────────────────────────────────────────────────
+   Motion contract (2026-09-01)
+
+   One global rule instead of per-component handling. Previously each component
+   decided for itself, so every new animation was a fresh chance to forget —
+   and one component had already inlined this exact block scoped to itself.
+
+   Duration is 0.01ms rather than `none` so that animationend/transitionend
+   still fire; code that waits on them keeps working.
+
+   Escape hatch: motion that carries *state* rather than decoration is exempt
+   via [data-motion="essential"] — a frozen spinner is indistinguishable from
+   a broken page. Vestibular risk comes from large-area movement, parallax and
+   scaling, not from a 16px progress indicator. Use it sparingly and only when
+   stopping the motion would remove information.
+
+   CSS cannot reach canvas/WebGL/rAF. That half of the contract lives in
+   `useReducedMotion()` / `prefersReducedMotion()` in src/hooks/useMotion.ts.
+   Both halves are enforced by `npm run audit:motion-contract`.
+   ────────────────────────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *:not([data-motion="essential"], [data-motion="essential"] *),
+  *:not([data-motion="essential"], [data-motion="essential"] *)::before,
+  *:not([data-motion="essential"], [data-motion="essential"] *)::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -12,6 +12,7 @@ import { useMemo, useRef } from "react";
 import * as THREE from "three";
 
 import type { OrbitLayout } from "@/lib/symbolic-tradition/orbit-layout";
+import { useReducedMotion } from "@/hooks/useMotion";
 
 const SUN_COLOR = "#f59e0b";
 
@@ -175,7 +176,12 @@ export interface CompatibilityOrbitSceneProps {
   maxDpr?: number;
 }
 
-export default function CompatibilityOrbitScene({ layout, animate = true, maxDpr = 2 }: CompatibilityOrbitSceneProps) {
+export default function CompatibilityOrbitScene({ layout, animate: animateProp = true, maxDpr = 2 }: CompatibilityOrbitSceneProps) {
+  // The CSS motion contract cannot reach inside a canvas — a scene that
+  // rotates every frame has to read the preference itself. This also drops
+  // the r3f frameloop to "demand", so nothing renders while idle.
+  const reducedMotion = useReducedMotion();
+  const animate = animateProp && !reducedMotion;
   return (
     <Canvas
       camera={{ position: [0, 6.5, 12], fov: 46 }}
