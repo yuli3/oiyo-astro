@@ -11,9 +11,11 @@ import { readFileSync } from "node:fs";
 const DATA = "src/data/ontology-concepts.ts";
 const PAGE = "src/pages/[locale]/ontology/index.astro";
 const BRIDGES = "src/data/ontology-wiki-bridges.ts";
+const SYMBOLIC_PROFILE = "src/components/ontology/AkashicSymbolicProfile.tsx";
 const data = readFileSync(DATA, "utf8");
 const page = readFileSync(PAGE, "utf8");
 const bridges = readFileSync(BRIDGES, "utf8");
+const symbolicProfile = readFileSync(SYMBOLIC_PROFILE, "utf8");
 
 const LOCALES = ["ko", "en", "ja", "zh", "fr", "es"];
 const LAYERS = ["historical", "faith", "modern"];
@@ -67,6 +69,15 @@ if (!section) fail("개념 절을 찾을 수 없다");
 else for (const attr of ["data-req", "data-locked", "client:load", "client:visible"]) {
   if (section.includes(attr)) fail(`개념 절에 '${attr}' 가 있다 — 개념은 입력·상태 없이 정적으로 읽혀야 한다`);
 }
+
+// 6) 상징 프로필은 개념 절과 분리된 로컬 작업대다. 출처를 지우거나 하나의
+//    운명 결론으로 합치지 않고, 교차표의 비검증 성격과 reduced-motion 경로를 둔다.
+if (!/<AkashicSymbolicProfile[^>]+client:visible/.test(page)) fail("아카식 상징 프로필 작업대가 /ontology 에 연결되지 않았다");
+if (!/buildSymbolicProfile\(collectSignals\(\)\)/.test(symbolicProfile)) fail("상징 프로필이 canonical local signal collector를 사용하지 않는다");
+if (!/oiyo:ontology-progress-updated/.test(symbolicProfile)) fail("상징 프로필이 온톨로지 저장 이벤트를 구독하지 않는다");
+if (!/editorial crosswalk|편집적 교차표/.test(symbolicProfile)) fail("상징 프로필에 비검증 교차표 안내가 없다");
+if (!/prefers-reduced-motion/.test(symbolicProfile)) fail("상징 프로필 애니메이션에 reduced-motion 경로가 없다");
+if (/fetch\(|axios|XMLHttpRequest/.test(symbolicProfile)) fail("상징 프로필이 네트워크 전송 코드를 포함한다 — 로컬 전용 계약 위반");
 
 for (const f of failures) console.error(`FAIL ${f}`);
 console.log(failures.length

@@ -8,6 +8,7 @@ import OntologyLayerMark from '../../../components/ontology/OntologyLayerMark.as
 import { OntologyExportPopover } from '../../../components/ontology/OntologyExportPopover';
 import { OntologySharedProfileBanner } from '../../../components/ontology/OntologySharedProfileBanner';
 import { AssessmentSignalSummary } from '../../../components/ontology/AssessmentSignalSummary';
+import { AkashicSymbolicProfile } from '../../../components/ontology/AkashicSymbolicProfile';
 import { ONTOLOGY_CONCEPTS, LAYER_LABELS, CONCEPT_SECTION } from '../../../data/ontology-concepts';
 import { DISCLAIMERS } from '../../../data/disclaimers';
 import { laneOf, LANE_META } from '../../../lib/ontology/registry/ontology-systems';
@@ -208,6 +209,12 @@ const ABOUT_LABEL: Record<Locale, string> = {
       <p class="mt-3 rounded-xl border border-amber-200 bg-amber-50 p-3 text-xs leading-6 text-amber-950">
         {DISCLAIMERS['symbolic-interpretation'][locale]}
       </p>
+    </section>
+
+    <!-- 상징 프로필 종합 작업대. 개념 카드의 역사·신앙·현대 구분은 정적으로
+         유지하고, 이 별도 섹션에서만 사용자의 로컬 신호를 비교한다. -->
+    <section class="mt-8">
+      <AkashicSymbolicProfile locale={locale} client:visible />
     </section>
 
     <section class="mt-8">
