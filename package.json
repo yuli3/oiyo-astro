@@ -68,7 +68,8 @@
     "audit:single-h1": "node scripts/audit-single-h1.mjs",
     "audit:tests-question-ia": "node scripts/audit-tests-question-ia.mjs",
     "audit:ontology-concepts": "node scripts/audit-ontology-concepts.mjs",
-    "audit:headers-collision": "node scripts/audit-headers-collision.mjs"
+    "audit:headers-collision": "node scripts/audit-headers-collision.mjs",
+    "audit:saju-longitude": "node scripts/audit-saju-longitude-explicit.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.7",

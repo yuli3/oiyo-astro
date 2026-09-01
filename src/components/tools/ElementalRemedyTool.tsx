@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/BirthDateField'
 import { birthCivilToInstant } from '../../lib/ontology/kernel/time'
-import { calculateSaju, analyzeSaju } from '../../lib/ontology/saju/logic'
+import { calculateSaju, analyzeSaju, STANDARD_MERIDIAN_KST } from '../../lib/ontology/saju/logic'
 import { FiveElement } from '../../lib/ontology/saju/types'
 
 type SupportedLang = 'ko' | 'en' | 'ja'
@@ -148,7 +148,7 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
         month,
         year,
       })
-      const saju = calculateSaju(birth, false, gender, 135.0)
+      const saju = calculateSaju(birth, false, gender, STANDARD_MERIDIAN_KST)
       analysis = analyzeSaju(saju)
     } catch {
       analysis = null

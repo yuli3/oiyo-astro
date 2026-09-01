@@ -5,7 +5,7 @@ import { useMemo, useState } from "react";
 import { ProfileNameField } from "@/components/shared/BirthDateField";
 import { ProfileInputDialog } from "@/components/shared/ProfileInputDialog";
 import { analyzeNameEnergy, type PrimalElement } from "@/lib/ontology/onomancy/analysis";
-import { analyzeSaju, calculateSaju } from "@/lib/ontology/saju/logic";
+import { analyzeSaju, calculateSaju, STANDARD_MERIDIAN_KST } from "@/lib/ontology/saju/logic";
 import { useProfilePrefill } from "@/lib/user/useProfilePrefill";
 import { useUserStore } from "@/lib/user/store/user-store";
 import type { Locale } from "@/i18n";
@@ -149,7 +149,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
     if (!parsed) return [];
     const birth = new Date(Date.UTC(parsed.year, parsed.month - 1, parsed.day, parsed.hour ?? 12, parsed.minute ?? 0));
     try {
-      const saju = calculateSaju(birth, false, gender === "female" ? "female" : "male");
+      const saju = calculateSaju(birth, false, gender === "female" ? "female" : "male", STANDARD_MERIDIAN_KST);
       return analyzeSaju(saju).missingElements as unknown as PrimalElement[];
     } catch {
       return [];

@@ -21,23 +21,36 @@ describe("Saju Logic Golden Suite", () => {
   describe("Layer 2.1: True Solar Time (TST) Correction", () => {
     // TC-03: Global Longitude Check
     it("should derive the solar clock from the birth longitude, not the runtime timezone", () => {
-      // Birth instant: 2024-01-01 11:40 KST (= 02:40 UTC).
+      // Birth instant: 2024-01-01 11:20 KST (= 02:20 UTC).
       // TST = UTC + longitude x 4min + EoT (EoT ~ -3.5min on Jan 1), and the TST
       // wall clock is carried in the returned Date's UTC fields.
-      // Hour branches here run on the 30-minute-shifted convention (Sa = 09:30-11:29,
-      // O = 11:30-13:29), so this instant straddles the Sa/O boundary:
-      //   Tokyo (135.0E): 02:40 + 9h00m - 3.5m ~ 11:36 -> O (Horse)
-      //   Seoul (127.0E): 02:40 + 8h28m - 3.5m ~ 11:04 -> Sa (Snake)
-      const birthDate = new Date("2024-01-01T11:40:00+09:00");
+      //
+      // 2026-09-01: 시각을 11:40 에서 11:20 으로 옮기고 기대값을 바꿨다. 이 테스트가
+      // **30분 밀린 시지 경계**(Sa = 09:30-11:29)를 전제하고 있었는데, 그 관례는
+      // 한국이 135도 표준시를 쓰는 데 대한 **경도 보정의 간이 대용**이다. 엔진은
+      // 이미 진태양시 보정을 적용한 시각을 쓰므로 30분을 또 미는 것은 이중 보정이다.
+      //
+      // 산술로 확인했다. 옛 기대값이 나오는 경로는 이중 보정 하나뿐이다:
+      //   방식A (30분 밀림, 보정 없음): 표준시 11:40 → 11:30 넘음 → O
+      //   방식B (진태양시, 정시 경계):  TST 11:04    → 11:00 넘음 → O
+      //   옛 코드 (진태양시 + 30분 밀림): TST 11:04  → 11:30 못 넘음 → Sa  ← 어느 쪽과도 다르다
+      // 두 단일 보정 방식이 같은 답(O)을 주고 옛 코드만 달랐다.
+      //
+      // 이 테스트의 의도(경도 32분 차가 시주를 옮긴다)는 그대로 지킨다. 정시 경계에서
+      // 그 성질이 드러나는 시각으로 옮겼을 뿐이다:
+      //   Tokyo (135.0E): 02:20 + 9h00m - 3.5m ~ 11:16 -> O (Horse)
+      //   Seoul (127.0E): 02:20 + 8h28m - 3.5m ~ 10:44 -> Sa (Snake)
+      // 근거: company-brain saju-engine-unification-policy-2026-09-01.md §2
+      const birthDate = new Date("2024-01-01T11:20:00+09:00");
 
       const tstTokyo = calculateTrueSolarTime(birthDate, 135.0);
       const tstSeoul = calculateTrueSolarTime(birthDate, 127.0);
 
       expect(tstTokyo.getUTCHours()).toBe(11);
-      expect(tstTokyo.getUTCMinutes()).toBe(36);
+      expect(tstTokyo.getUTCMinutes()).toBe(16);
 
-      expect(tstSeoul.getUTCHours()).toBe(11);
-      expect(tstSeoul.getUTCMinutes()).toBe(4);
+      expect(tstSeoul.getUTCHours()).toBe(10);
+      expect(tstSeoul.getUTCMinutes()).toBe(44);
 
       // The 32-minute Seoul/Tokyo meridian gap must still move the hour pillar.
       expect(calculateSaju(birthDate, false, "male", 135.0).hour.earthlyBranch).toBe(

@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/select";
 import { birthCivilToInstant } from "@/lib/ontology/kernel/time";
 import { earthlyBranches, heavenlyStems } from "@/lib/ontology/saju/data";
-import { analyzeSaju, calculateSaju } from "@/lib/ontology/saju/logic";
+import { analyzeSaju, calculateSaju, STANDARD_MERIDIAN_KST } from "@/lib/ontology/saju/logic";
 import type { SajuResult as SajuResultType } from "@/lib/ontology/saju/types";
 
 interface SajuResult extends SajuResultType {
@@ -55,7 +55,7 @@ export function ProclaimersDesk() {
     });
 
     // Use standard ontology engine
-    const saju = calculateSaju(date, false, "male");
+    const saju = calculateSaju(date, false, "male", STANDARD_MERIDIAN_KST);
     const analysis = analyzeSaju(saju);
 
     setResult({

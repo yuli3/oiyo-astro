@@ -1,4 +1,4 @@
-import { calculateSaju } from "./logic";
+import { calculateSaju, STANDARD_MERIDIAN_KST } from "./logic";
 import type { SajuPillar, SajuResult } from "./types";
 
 /**
@@ -9,7 +9,7 @@ export function getCurrentTimePillars(date: Date = new Date()): SajuResult {
   // Re-use the robust calculateSaju logic
   // We assume standard meridian (135) for simplicity or system server time context
   // In a real app, we might want user's timezone, but for "Universal Time" prophecy, standard KST/JST is often used in Saju apps.
-  return calculateSaju(date, false, "male", 135.0);
+  return calculateSaju(date, false, "male", STANDARD_MERIDIAN_KST);
 }
 
 /**

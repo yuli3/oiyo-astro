@@ -219,6 +219,19 @@ export function analyzeSaju(result: SajuResult): SajuAnalysis {
 }
 
 /**
+ * KST 표준자오선. 이 값을 경도로 넘기면 진태양시 보정이 0 이 된다 — 즉 **표준시
+ * 그대로** 본다는 뜻이다.
+ *
+ * 2026-09-01 정책: 사주 기본은 표준시다. 진태양시는 출생지가 입력됐을 때의 부가
+ * 정보로만 쓴다. 근거는 company-brain
+ * projects/oiyo-ecosystem/saju-engine-unification-policy-2026-09-01.md §3.
+ *
+ * **호출부는 이 값을 명시한다.** 기본 인자에 기대면 나중에 정책이 바뀔 때 어디가
+ * 영향받는지 알 수 없다. scripts/audit-saju-longitude-explicit.mjs 가 강제한다.
+ */
+export const STANDARD_MERIDIAN_KST = 135.0;
+
+/**
  * Calculates the Saju Pillars based on birth date.
  * Supports True Solar Time (TST) correction via longitude.
  */
@@ -313,21 +326,26 @@ export function calculateSaju(
 
   // We use standard rounding for Branch.
   // 23:30 - 01:29 = Ja.
-  // If hour >= 23 or hour < 1 (approx).
-  // Minute logic: total minutes from 00:00.
+  // 시지 경계는 **정시**다. 자시 23:00-01:00, 축시 01:00-03:00, …
+  //
+  // 2026-09-01 이전에는 30분 밀린 경계(자시 23:30-01:30)를 썼다. 그 관례가
+  // 존재하는 이유는 한국이 135도 표준시를 쓰기 때문(서울과 32분 차)이며,
+  // **그 자체가 경도 보정의 간이 대용**이다. 그런데 이 함수는 위에서 이미
+  // 진태양시 보정(calculateTrueSolarTime)을 적용한 시각을 받는다. 30분을 또
+  // 밀면 같은 보정을 두 번 하는 것이 된다.
+  //
+  // 옛 코드의 주석에는 물음표가 그대로 남아 있었다 — "Shift by 30 mins to align
+  // 23:30 to 00:00 boundary logic?" 확신 없이 들어온 자리였다.
+  //
+  // 보정은 경도 하나로만 한다. 근거: company-brain
+  // projects/oiyo-ecosystem/saju-engine-unification-policy-2026-09-01.md §2
   const totalMinutes = hour * 60 + minute;
-  // Shift by 30 mins to align 23:30 to 00:00 boundary logic?
-  // Let's simply implement:
-  // Ja: 23:30 - 01:29
-  // Chuk: 01:30 - 03:29
-  // ...
 
   let hourBranchIndex: number;
-  if (totalMinutes >= 23 * 60 + 30 || totalMinutes < 1 * 60 + 30) {
-    hourBranchIndex = 0; // Ja
+  if (totalMinutes >= 23 * 60 || totalMinutes < 60) {
+    hourBranchIndex = 0; // 자시 23:00-01:00 (자정을 가로지른다)
   } else {
-    // (TotalMin - 90) / 120 approx
-    hourBranchIndex = Math.floor((totalMinutes - 90) / 120) + 1;
+    hourBranchIndex = Math.floor((totalMinutes - 60) / 120) + 1;
   }
 
   const hourBranch = BRANCH_ORDER[hourBranchIndex % 12];
