@@ -4,7 +4,6 @@ import { Sparkles } from "lucide-react";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 
-import { AuthStatus } from "@/components/auth/auth-status";
 import { GlobalSearch } from "@/components/ui/GlobalSearch";
 import { MobileNav } from "@/components/ui/mobile-nav";
 import { DESKTOP_NAV_ITEMS } from "@/config/navigation";
@@ -40,7 +39,6 @@ export function HeaderClient({
               <span className="text-xl font-bold text-primary">Oiyo.net</span>
             </Link>
             <div className="flex items-center gap-2">
-              <AuthStatus locale={locale} />
               <MobileNav />
             </div>
           </div>
@@ -94,7 +92,6 @@ export function HeaderClient({
               <GlobalSearch locale={locale} />
             </div>
             <div className="flex items-center gap-2">
-              <AuthStatus locale={locale} />
               <MobileNav />
             </div>
           </div>
