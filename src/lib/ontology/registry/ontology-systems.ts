@@ -76,8 +76,17 @@ const CHOSEN: OntologySystem[] = [
 export const ONTOLOGY_SYSTEMS: OntologySystem[] = [...INNATE, ...TEST, ...CHOSEN];
 export const laneOf = (lane: Lane) => ONTOLOGY_SYSTEMS.filter((s) => s.lane === lane);
 
-export const LANE_META: Record<Lane, { emoji: string; name: Record<Locale, string>; sub: Record<Locale, string> }> = {
-  innate: { emoji: '🌱', name: L('타고난 것', 'What you were born with', '生まれ持ったもの', '与生俱来', 'Ce qui est inné', 'Lo innato'), sub: L('생년월일·시간·이름에서 계산되는 좌표', 'Coordinates from your birth date, time & name', '生年月日・時間・名前から', '来自生辰与姓名', 'À partir de votre naissance', 'A partir de tu nacimiento') },
-  test: { emoji: '🧪', name: L('테스트로 드러난 것', 'What tests reveal', 'テストで分かるもの', '测验揭示', 'Ce que les tests révèlent', 'Lo que revelan los tests'), sub: L('검사 결과로 확인되는 좌표', 'Coordinates confirmed by assessments', '検査結果で確認', '由测验确认', 'Confirmé par les tests', 'Confirmado por tests') },
-  chosen: { emoji: '🎨', name: L('실제 나의 것', 'What you choose', '実際の自分', '真实的我', 'Ce que vous choisissez', 'Lo que eliges'), sub: L('내가 직접 고르는 좌표', 'Coordinates you choose yourself', '自分で選ぶ', '你自己选择', 'Vous les choisissez', 'Tú los eliges') },
+// `part` 는 세 lane 을 한 그루의 나무로 읽게 하는 구조 이름이다. 이 페이지는
+// 이미 주어진 것 → 재어 본 것 → 직접 고른 것 순으로 쌓여 있으므로, 순서가
+// 이미 뿌리에서 잎이다. 넷째 시각화를 그리는 대신 그 사실에 이름을 준다.
+//
+// 신화 고유명사(이그드라실 등)는 화면에 쓰지 않는다 — 컨셉이지 라벨이 아니다.
+// 화면에 나오는 것은 어느 문화권에서나 통하는 보통명사뿐이다.
+export const LANE_META: Record<
+  Lane,
+  { emoji: string; mark: 'root' | 'trunk' | 'leaf'; part: Record<Locale, string>; name: Record<Locale, string>; sub: Record<Locale, string> }
+> = {
+  innate: { emoji: '🌱', mark: 'root', part: L('뿌리', 'Roots', '根', '根', 'Racines', 'Raíces'), name: L('타고난 것', 'What you were born with', '生まれ持ったもの', '与生俱来', 'Ce qui est inné', 'Lo innato'), sub: L('생년월일·시간·이름에서 계산되는 좌표', 'Coordinates from your birth date, time & name', '生年月日・時間・名前から', '来自生辰与姓名', 'À partir de votre naissance', 'A partir de tu nacimiento') },
+  test: { emoji: '🧪', mark: 'trunk', part: L('줄기', 'Trunk', '幹', '干', 'Tronc', 'Tronco'), name: L('테스트로 드러난 것', 'What tests reveal', 'テストで分かるもの', '测验揭示', 'Ce que les tests révèlent', 'Lo que revelan los tests'), sub: L('검사 결과로 확인되는 좌표', 'Coordinates confirmed by assessments', '検査結果で確認', '由测验确认', 'Confirmé par les tests', 'Confirmado por tests') },
+  chosen: { emoji: '🎨', mark: 'leaf', part: L('잎', 'Leaves', '葉', '叶', 'Feuilles', 'Hojas'), name: L('실제 나의 것', 'What you choose', '実際の自分', '真实的我', 'Ce que vous choisissez', 'Lo que eliges'), sub: L('내가 직접 고르는 좌표', 'Coordinates you choose yourself', '自分で選ぶ', '你自己选择', 'Vous les choisissez', 'Tú los eliges') },
 };

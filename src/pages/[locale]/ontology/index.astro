@@ -4,6 +4,7 @@ import OntologyBirthIsland from '../../../components/OntologyBirthIsland';
 import { ProfileMindmap } from '../../../components/ontology/ProfileMindmap';
 import { OntologyRelationOrbit } from '../../../components/ontology/OntologyRelationOrbit';
 import { RecommendationCards } from '../../../components/ontology/RecommendationCards';
+import OntologyLayerMark from '../../../components/ontology/OntologyLayerMark.astro';
 import { OntologyExportPopover } from '../../../components/ontology/OntologyExportPopover';
 import { OntologySharedProfileBanner } from '../../../components/ontology/OntologySharedProfileBanner';
 import { AssessmentSignalSummary } from '../../../components/ontology/AssessmentSignalSummary';
@@ -29,18 +30,18 @@ const encyclopediaLabel: Record<Locale, string> = {
 };
 
 const ui: Record<Locale, {
-  eyebrow: string; title: string; sub: string; cta: string; ctaSub: string;
+  eyebrow: string; title: string; sub: string; cta: string; ctaSub: string; layers: string;
   progress: string; nextStep: string; deepTitle: string; deepSub: string;
   recorded: string; open: string; locked: string; planned: string; allTools: string;
   orbitTitle: string; orbitSub: string; cardsTitle: string; cardsSub: string;
   exportTitle: string; exportSub: string;
 }> = {
-  ko: { eyebrow: '존재론 · 나의 지도', title: '나를 하나로 줄이지 않는 존재 지도', sub: '타고난 것 · 테스트로 드러난 것 · 내가 고른 것을 한곳에서. 모든 기록은 이 브라우저에만 저장됩니다.', cta: '내 프로필 정리하기', ctaSub: '생년월일부터 시작해 좌표를 채워가세요', progress: '완성도', nextStep: '다음 한 걸음', deepTitle: '심화 탐색 — 모든 좌표를 한 화면에서', deepSub: '사주·자미두수·바이오리듬 등 모든 엔진을 겹쳐 읽는 작업대', recorded: '기록됨', open: '해보기', locked: '입력 필요', planned: '준비 중', allTools: 'oiyo의 모든 도구', orbitTitle: '관계 궤도 — 나에서 뻗어나가는 것들', orbitSub: '신호에서 시작해 한 걸음씩 관계를 따라가 보세요', cardsTitle: '당신을 위한 추천', cardsSub: '지금까지 모은 신호를 바탕으로 골라봤어요', exportTitle: '내보내기 — 나의 모든 것을 한 파일로', exportSub: '신호·테스트 기록·추천·관계 스냅샷 전체를 리포트/JSON/CSV로' },
-  en: { eyebrow: 'Ontology · your map', title: 'A map of being that never reduces you to one type', sub: 'What you were born with · what tests reveal · what you choose — in one place. Everything stays in this browser only.', cta: 'Organize my profile', ctaSub: 'Start with your birth date and fill in your coordinates', progress: 'Completion', nextStep: 'Next step', deepTitle: 'Deep dive — every coordinate on one canvas', deepSub: 'A workbench layering Saju, Zi Wei, biorhythm and more', recorded: 'Recorded', open: 'Try it', locked: 'Input needed', planned: 'Planned', allTools: 'All oiyo tools', orbitTitle: 'Relation orbit — what radiates from you', orbitSub: 'Start from your signals and follow one connection at a time', cardsTitle: 'Recommended for you', cardsSub: 'Picked from the signals you’ve shared so far', exportTitle: 'Export — everything about you, one file', exportSub: 'Every signal, test record, recommendation, and relationship snapshot as a report / JSON / CSV' },
-  ja: { eyebrow: '存在論 · 私の地図', title: '一つのタイプに縮めない存在地図', sub: '生まれ持ったもの・テストで分かるもの・自分で選ぶものを一つに。すべてこのブラウザだけに保存。', cta: 'プロフィールを整理', ctaSub: '生年月日から座標を埋めていく', progress: '完成度', nextStep: '次の一歩', deepTitle: '深掘り — すべての座標を一画面で', deepSub: '四柱・紫微・バイオリズムなどを重ねる作業台', recorded: '記録済み', open: '試す', locked: '入力必要', planned: '準備中', allTools: 'oiyoの全ツール', orbitTitle: '関係の軌道 — 私から広がるもの', orbitSub: 'シグナルから始めて、一歩ずつ関係をたどってみましょう', cardsTitle: 'あなたへのおすすめ', cardsSub: 'これまでの信号から選びました', exportTitle: '書き出し — すべてを1つのファイルに', exportSub: '信号・テスト履歴・おすすめ・関係スナップショットをレポート/JSON/CSVで' },
-  zh: { eyebrow: '存在论 · 我的地图', title: '不把你缩成单一类型的存在地图', sub: '与生俱来 · 测验揭示 · 你的选择，集于一处。全部只保存在此浏览器。', cta: '整理我的资料', ctaSub: '从出生日期开始填充坐标', progress: '完成度', nextStep: '下一步', deepTitle: '深入 — 所有坐标在一个画面', deepSub: '叠加八字、紫微、生物节律等的工作台', recorded: '已记录', open: '试试', locked: '需输入', planned: '筹备中', allTools: 'oiyo 所有工具', orbitTitle: '关系轨道 — 从我延伸出去的一切', orbitSub: '从你的信号出发，一步步追踪关联', cardsTitle: '为你推荐', cardsSub: '根据你目前的信号挑选', exportTitle: '导出 — 把一切装进一个文件', exportSub: '把信号、测试记录、推荐与关系快照导出为报告/JSON/CSV' },
-  fr: { eyebrow: 'Ontologie · votre carte', title: 'Une carte de l’être qui ne vous réduit jamais', sub: 'L’inné · ce que révèlent les tests · ce que vous choisissez — en un lieu. Tout reste dans ce navigateur.', cta: 'Organiser mon profil', ctaSub: 'Commencez par votre date de naissance', progress: 'Progression', nextStep: 'Étape suivante', deepTitle: 'Exploration — toutes les coordonnées sur une toile', deepSub: 'Un atelier superposant Saju, Zi Wei, biorythme et plus', recorded: 'Enregistré', open: 'Essayer', locked: 'Saisie requise', planned: 'À venir', allTools: 'Tous les outils oiyo', orbitTitle: 'Orbite relationnelle — ce qui rayonne de vous', orbitSub: 'Partez de vos signaux et suivez les liens un par un', cardsTitle: 'Recommandé pour vous', cardsSub: 'Choisi à partir des signaux que vous avez partagés', exportTitle: 'Exporter — tout vous, en un seul fichier', exportSub: 'Chaque signal, historique de test, recommandation et aperçu relationnel en rapport / JSON / CSV' },
-  es: { eyebrow: 'Ontología · tu mapa', title: 'Un mapa del ser que nunca te reduce', sub: 'Lo innato · lo que revelan los tests · lo que eliges — en un lugar. Todo queda en este navegador.', cta: 'Organizar mi perfil', ctaSub: 'Empieza con tu fecha de nacimiento', progress: 'Progreso', nextStep: 'Siguiente paso', deepTitle: 'Exploración — todas las coordenadas en un lienzo', deepSub: 'Un taller que superpone Saju, Zi Wei, biorritmo y más', recorded: 'Registrado', open: 'Probar', locked: 'Falta dato', planned: 'En preparación', allTools: 'Todas las herramientas oiyo', orbitTitle: 'Órbita de relaciones — lo que irradia de ti', orbitSub: 'Parte de tus señales y sigue las conexiones paso a paso', cardsTitle: 'Recomendado para ti', cardsSub: 'Elegido a partir de las señales que compartiste', exportTitle: 'Exportar — todo tú, en un solo archivo', exportSub: 'Cada señal, historial de tests, recomendación y resumen de relaciones como informe / JSON / CSV' },
+  ko: { eyebrow: '존재론 · 나의 지도', title: '나를 하나로 줄이지 않는 존재 지도', sub: '타고난 것 · 테스트로 드러난 것 · 내가 고른 것을 한곳에서. 모든 기록은 이 브라우저에만 저장됩니다.', cta: '내 프로필 정리하기', ctaSub: '생년월일부터 시작해 좌표를 채워가세요', progress: '완성도', nextStep: '다음 한 걸음', layers: '아래 세 층은 한 그루입니다. 고르지 않은 것이 뿌리, 답해서 얻은 것이 줄기, 직접 고르는 것이 잎입니다.', deepTitle: '심화 탐색 — 모든 좌표를 한 화면에서', deepSub: '사주·자미두수·바이오리듬 등 모든 엔진을 겹쳐 읽는 작업대', recorded: '기록됨', open: '해보기', locked: '입력 필요', planned: '준비 중', allTools: 'oiyo의 모든 도구', orbitTitle: '관계 궤도 — 나에서 뻗어나가는 것들', orbitSub: '신호에서 시작해 한 걸음씩 관계를 따라가 보세요', cardsTitle: '당신을 위한 추천', cardsSub: '지금까지 모은 신호를 바탕으로 골라봤어요', exportTitle: '내보내기 — 나의 모든 것을 한 파일로', exportSub: '신호·테스트 기록·추천·관계 스냅샷 전체를 리포트/JSON/CSV로' },
+  en: { eyebrow: 'Ontology · your map', title: 'A map of being that never reduces you to one type', sub: 'What you were born with · what tests reveal · what you choose — in one place. Everything stays in this browser only.', cta: 'Organize my profile', ctaSub: 'Start with your birth date and fill in your coordinates', progress: 'Completion', nextStep: 'Next step', layers: 'The three layers below are one tree: what you didn\'t choose is the roots, what you answered for is the trunk, what you pick is the leaves.', deepTitle: 'Deep dive — every coordinate on one canvas', deepSub: 'A workbench layering Saju, Zi Wei, biorhythm and more', recorded: 'Recorded', open: 'Try it', locked: 'Input needed', planned: 'Planned', allTools: 'All oiyo tools', orbitTitle: 'Relation orbit — what radiates from you', orbitSub: 'Start from your signals and follow one connection at a time', cardsTitle: 'Recommended for you', cardsSub: 'Picked from the signals you’ve shared so far', exportTitle: 'Export — everything about you, one file', exportSub: 'Every signal, test record, recommendation, and relationship snapshot as a report / JSON / CSV' },
+  ja: { eyebrow: '存在論 · 私の地図', title: '一つのタイプに縮めない存在地図', sub: '生まれ持ったもの・テストで分かるもの・自分で選ぶものを一つに。すべてこのブラウザだけに保存。', cta: 'プロフィールを整理', ctaSub: '生年月日から座標を埋めていく', progress: '完成度', nextStep: '次の一歩', layers: '下の三つの層はひとつの木です。選ばなかったものが根、答えて得たものが幹、自分で選ぶものが葉です。', deepTitle: '深掘り — すべての座標を一画面で', deepSub: '四柱・紫微・バイオリズムなどを重ねる作業台', recorded: '記録済み', open: '試す', locked: '入力必要', planned: '準備中', allTools: 'oiyoの全ツール', orbitTitle: '関係の軌道 — 私から広がるもの', orbitSub: 'シグナルから始めて、一歩ずつ関係をたどってみましょう', cardsTitle: 'あなたへのおすすめ', cardsSub: 'これまでの信号から選びました', exportTitle: '書き出し — すべてを1つのファイルに', exportSub: '信号・テスト履歴・おすすめ・関係スナップショットをレポート/JSON/CSVで' },
+  zh: { eyebrow: '存在论 · 我的地图', title: '不把你缩成单一类型的存在地图', sub: '与生俱来 · 测验揭示 · 你的选择，集于一处。全部只保存在此浏览器。', cta: '整理我的资料', ctaSub: '从出生日期开始填充坐标', progress: '完成度', nextStep: '下一步', layers: '下面三层是一棵树：没有选择的是根，回答得来的是干，自己挑选的是叶。', deepTitle: '深入 — 所有坐标在一个画面', deepSub: '叠加八字、紫微、生物节律等的工作台', recorded: '已记录', open: '试试', locked: '需输入', planned: '筹备中', allTools: 'oiyo 所有工具', orbitTitle: '关系轨道 — 从我延伸出去的一切', orbitSub: '从你的信号出发，一步步追踪关联', cardsTitle: '为你推荐', cardsSub: '根据你目前的信号挑选', exportTitle: '导出 — 把一切装进一个文件', exportSub: '把信号、测试记录、推荐与关系快照导出为报告/JSON/CSV' },
+  fr: { eyebrow: 'Ontologie · votre carte', title: 'Une carte de l’être qui ne vous réduit jamais', sub: 'L’inné · ce que révèlent les tests · ce que vous choisissez — en un lieu. Tout reste dans ce navigateur.', cta: 'Organiser mon profil', ctaSub: 'Commencez par votre date de naissance', progress: 'Progression', nextStep: 'Étape suivante', layers: 'Les trois couches ci-dessous forment un seul arbre : ce que vous n\'avez pas choisi est la racine, ce que vous avez obtenu en répondant est le tronc, ce que vous choisissez est le feuillage.', deepTitle: 'Exploration — toutes les coordonnées sur une toile', deepSub: 'Un atelier superposant Saju, Zi Wei, biorythme et plus', recorded: 'Enregistré', open: 'Essayer', locked: 'Saisie requise', planned: 'À venir', allTools: 'Tous les outils oiyo', orbitTitle: 'Orbite relationnelle — ce qui rayonne de vous', orbitSub: 'Partez de vos signaux et suivez les liens un par un', cardsTitle: 'Recommandé pour vous', cardsSub: 'Choisi à partir des signaux que vous avez partagés', exportTitle: 'Exporter — tout vous, en un seul fichier', exportSub: 'Chaque signal, historique de test, recommandation et aperçu relationnel en rapport / JSON / CSV' },
+  es: { eyebrow: 'Ontología · tu mapa', title: 'Un mapa del ser que nunca te reduce', sub: 'Lo innato · lo que revelan los tests · lo que eliges — en un lugar. Todo queda en este navegador.', cta: 'Organizar mi perfil', ctaSub: 'Empieza con tu fecha de nacimiento', progress: 'Progreso', nextStep: 'Siguiente paso', layers: 'Las tres capas de abajo son un solo árbol: lo que no elegiste es la raíz, lo que obtuviste respondiendo es el tronco, lo que eliges es la hoja.', deepTitle: 'Exploración — todas las coordenadas en un lienzo', deepSub: 'Un taller que superpone Saju, Zi Wei, biorritmo y más', recorded: 'Registrado', open: 'Probar', locked: 'Falta dato', planned: 'En preparación', allTools: 'Todas las herramientas oiyo', orbitTitle: 'Órbita de relaciones — lo que irradia de ti', orbitSub: 'Parte de tus señales y sigue las conexiones paso a paso', cardsTitle: 'Recomendado para ti', cardsSub: 'Elegido a partir de las señales que compartiste', exportTitle: 'Exportar — todo tú, en un solo archivo', exportSub: 'Cada señal, historial de tests, recomendación y resumen de relaciones como informe / JSON / CSV' },
 };
 const u = ui[locale] ?? ui.en;
 const innate = laneOf('innate');
@@ -91,12 +92,27 @@ const visibleLanes = [
       </div>
     </section>
 
+    <!-- 셸 — 세 lane 을 한 그루로 읽게 하는 한 줄. 표식만 있으면 뿌리·줄기·잎이
+         서로 무관한 세 단어로 읽힌다. 새 시각화 대신 이름과 표식으로 세운다
+         (결정: company-brain AI-Sessions/wiki/decisions/world-tree-shell-replaces-nothing). -->
+    <p class="mt-8 flex items-start gap-2 text-sm leading-relaxed text-green-800">
+      <span class="mt-0.5 flex shrink-0 items-center gap-1.5 text-green-700">
+        <OntologyLayerMark mark="root" />
+        <OntologyLayerMark mark="trunk" />
+        <OntologyLayerMark mark="leaf" />
+      </span>
+      <span>{u.layers}</span>
+    </p>
+
     <!-- Lane 1: 타고난 것 / Lane 2: 테스트 -->
     {visibleLanes.map((group) => (
       <section class="mt-8">
         <div class="mb-3">
           <h2 class="flex items-center gap-2 text-lg font-black text-green-950">
-            <span aria-hidden="true">{lm[group.lane].emoji}</span>{lm[group.lane].name[locale]}
+            <OntologyLayerMark mark={lm[group.lane].mark} class="shrink-0 text-green-700" />
+            <span class="text-sm font-bold text-green-700">{lm[group.lane].part[locale]}</span>
+            <span aria-hidden="true" class="text-green-300">·</span>
+            {lm[group.lane].name[locale]}
           </h2>
           <p class="text-xs text-green-600">{lm[group.lane].sub[locale]}</p>
         </div>
@@ -141,7 +157,10 @@ const visibleLanes = [
     <section id="profile-builder" class="mt-8 scroll-mt-4">
       <div class="mb-3">
         <h2 class="flex items-center gap-2 text-lg font-black text-green-950">
-          <span aria-hidden="true">{lm.chosen.emoji}</span>{lm.chosen.name[locale]}
+          <OntologyLayerMark mark={lm.chosen.mark} class="shrink-0 text-green-700" />
+          <span class="text-sm font-bold text-green-700">{lm.chosen.part[locale]}</span>
+          <span aria-hidden="true" class="text-green-300">·</span>
+          {lm.chosen.name[locale]}
         </h2>
         <p class="text-xs text-green-600">{lm.chosen.sub[locale]}</p>
       </div>
