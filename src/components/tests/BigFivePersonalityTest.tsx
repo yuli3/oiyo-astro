@@ -312,18 +312,19 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
   const lb = LABELS[locale]
   const questions = QUESTIONS[locale]
 
-  // Restore a shared full profile from the URL (?b=O-C-E-A-N, each 0–100).
-  const initScores = (): ScoreMap | null => {
-    const code = readResultCode('b')
-    if (!code) return null
-    const parts = code.split('-').map((n) => parseInt(n, 10))
-    if (parts.length !== 5 || parts.some((n) => Number.isNaN(n) || n < 0 || n > 100)) return null
-    return { O: parts[0], C: parts[1], E: parts[2], A: parts[3], N: parts[4] }
-  }
-  const restored = initScores()
-  const [current, setCurrent] = useState(restored ? questions.length : 0)
+  const [current, setCurrent] = useState(0)
   const [answers, setAnswers] = useState<number[]>([])
-  const [scores, setScores] = useState<ScoreMap | null>(restored)
+  const [scores, setScores] = useState<ScoreMap | null>(null)
+
+  // Restore after hydration so SSR and the browser's first render use the same tree.
+  useEffect(() => {
+    const code = readResultCode('b')
+    if (!code) return
+    const parts = code.split('-').map((n) => parseInt(n, 10))
+    if (parts.length !== 5 || parts.some((n) => Number.isNaN(n) || n < 0 || n > 100)) return
+    setScores({ O: parts[0], C: parts[1], E: parts[2], A: parts[3], N: parts[4] })
+    setCurrent(questions.length)
+  }, [questions.length])
 
   function pick(val: number) {
     if (answers.length === 0) gaEvent('test_started', { test_id: 'big5' })
@@ -348,7 +349,7 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
     }
   }, [scores])
 
-  // Record the result once, only for an actual completion (not a shared-link restore via `restored`).
+  // Record the result once, only for an actual completion (not a shared-link restore).
   useEffect(() => {
     if (!scores || answers.length !== questions.length) return
     const dimKeys: Dim[] = ['O', 'C', 'E', 'A', 'N']
