@@ -13,6 +13,13 @@ export const WIKI_DEF_LOCALES: Record<string, string[]> = {
   // Verified live 2026-07-05 (wiki 3b0269e deploy).
   'meaning-of-ohaeng': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
   'meaning-of-disc': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
+  // 2026-09-01 실측: wiki/src/content/blog/{en,es,fr,ja,ko,zh}/meaning-of-akashic-records.mdx
+  // 6로케일 전부 라이브 200. 다만 **현재 이 항목을 렌더하는 화면은 없다** —
+  // WikiDefinitionLink 를 쓰는 페이지가 disc-personality-test 하나뿐이고
+  // 아카식은 ontology-systems 레지스트리에도 없다. 개념 표면이 생길 때
+  // 바로 연결되도록 데이터만 먼저 맞춰 둔다. 표면 없이 이 줄은 무해하지만
+  // 아무 일도 하지 않는다.
+  'meaning-of-akashic-records': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
 };
 
 export function wikiDefUrl(slug: string, locale: string): string | null {
