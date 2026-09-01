@@ -1,16 +1,18 @@
 ---
 import type { Locale } from '../../i18n';
 import type { JourneyContent } from '../../lib/ontology/journey/types';
+import { journeyNavigation, type JourneyId } from '../../lib/ontology/journey/navigation';
 import JourneyCourse from '../shared/JourneyCourse';
 
 interface Props {
   locale: Locale;
   content: JourneyContent;
   /** localStorage namespace for the course tracker (#33) */
-  journeyId: string;
+  journeyId: JourneyId;
 }
 
 const { locale, content: c, journeyId } = Astro.props;
+const navigation = journeyNavigation(locale, journeyId);
 
 const courseSteps = c.tools.items.map((t) => ({
   id: t.href.replace(/^\/[a-z]{2}\//, ''),
@@ -30,8 +32,21 @@ const faqJsonLd = JSON.stringify({
 ---
 
 <article class="mx-auto max-w-3xl px-4 pb-16">
+  <nav class="mt-6 flex min-h-11 flex-wrap items-center justify-between gap-x-4 gap-y-2 text-sm" aria-label={navigation.zoneLabel}>
+    <a
+      href={navigation.mapHref}
+      class="inline-flex min-h-11 items-center gap-2 rounded-lg px-2 font-semibold text-green-800 underline decoration-green-300 underline-offset-4 transition-colors hover:text-green-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
+    >
+      <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+        <path d="m12.5 4.5-5 5 5 5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+      {navigation.mapLabel}
+    </a>
+    <span class="font-bold text-green-950">{navigation.zoneLabel}</span>
+  </nav>
+
   <!-- Hero -->
-  <header class="relative overflow-hidden rounded-3xl bg-gradient-to-b from-green-50/80 to-white px-6 pt-12 pb-8 text-center mt-6">
+  <header class="relative mt-3 overflow-hidden rounded-3xl bg-gradient-to-b from-green-50/80 to-white px-6 pt-12 pb-8 text-center">
     <div class="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
       <div class="absolute -top-16 left-1/2 -translate-x-1/2 w-[420px] h-[240px] bg-green-300 rounded-full blur-3xl"></div>
     </div>
