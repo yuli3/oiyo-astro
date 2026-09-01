@@ -4,6 +4,7 @@ import { Calendar, Check, Pencil } from "lucide-react";
 import { useState } from "react";
 import { useUserProfile } from "@/lib/user/context/UserContext";
 import { createBirthRecord, resolveBirthRecord } from "@/lib/user/birth-record";
+import { searchCities, parseSynthesizedId, type CitySearchHit } from "@/lib/ontology/natal/city-search";
 import { CITIES } from "@/lib/ontology/natal/signs";
 
 type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
@@ -12,14 +13,15 @@ type Copy = {
   date: string; time: string; timeHint: string; gender: string; male: string; female: string;
   blood: string; unknown: string; opens: string; precision: string; name: string; nameHint: string;
   place: string; placePlaceholder: string;
+  searchTitle: string; searchPlaceholder: string; searchHint: string; searchEmpty: string;
 };
 const COPY: Record<Lang, Copy> = {
-  ko: { cancel: "취소", edit: "수정", prompt: "정보를 입력할수록 더 많은 좌표가 열립니다. 모두 이 브라우저에만 저장됩니다.", save: "저장", saved: "프로필이 기록되었습니다", title: "나의 출생 정보", date: "생년월일", time: "태어난 시각", timeHint: "모르면 비워두세요", gender: "성별", male: "남성", female: "여성", blood: "혈액형", unknown: "모름", opens: "사주·출생차트·오행·별자리 등에 사용됩니다", precision: "정밀 사주·천문 계산은 출생지 확인이 추가로 필요합니다.", name: "이름", nameHint: "이름풀이·수비학에 사용", place: "출생지", placePlaceholder: "도시 선택 (선택)" },
-  en: { cancel: "Cancel", edit: "Edit", prompt: "The more you enter, the more coordinates unlock. All stays in this browser.", save: "Save", saved: "Profile saved", title: "Your birth info", date: "Birth date", time: "Birth time", timeHint: "Leave blank if unknown", gender: "Gender", male: "Male", female: "Female", blood: "Blood type", unknown: "Unknown", opens: "Used for Saju, natal chart, Five Elements, zodiac & more", precision: "Precise Saju and astronomy calculations also require a confirmed birthplace.", name: "Name", nameHint: "Used for name reading & numerology", place: "Birthplace", placePlaceholder: "Select a city (optional)" },
-  ja: { cancel: "キャンセル", edit: "編集", prompt: "入力するほど多くの座標が開きます。すべてこのブラウザだけに保存。", save: "保存", saved: "プロフィールを記録しました", title: "出生情報", date: "生年月日", time: "出生時刻", timeHint: "不明なら空欄", gender: "性別", male: "男性", female: "女性", blood: "血液型", unknown: "不明", opens: "四柱・出生図・五行・星座などに使用", precision: "精密な四柱・天文計算には出生地の確認も必要です。", name: "名前", nameHint: "姓名判断・数秘術に使用", place: "出生地", placePlaceholder: "都市を選択（任意）" },
-  zh: { cancel: "取消", edit: "修改", prompt: "输入越多，解锁的坐标越多。全部只保存在此浏览器。", save: "保存", saved: "资料已记录", title: "出生信息", date: "出生日期", time: "出生时间", timeHint: "不知道可留空", gender: "性别", male: "男", female: "女", blood: "血型", unknown: "未知", opens: "用于八字、星盘、五行、星座等", precision: "精确的八字与天文计算还需要确认出生地。", name: "姓名", nameHint: "用于姓名学·数字命理", place: "出生地", placePlaceholder: "选择城市（可选）" },
-  fr: { cancel: "Annuler", edit: "Modifier", prompt: "Plus vous saisissez, plus de coordonnées se débloquent. Tout reste dans ce navigateur.", save: "Enregistrer", saved: "Profil enregistré", title: "Vos infos de naissance", date: "Date de naissance", time: "Heure de naissance", timeHint: "Laissez vide si inconnu", gender: "Genre", male: "Homme", female: "Femme", blood: "Groupe sanguin", unknown: "Inconnu", opens: "Utilisé pour Saju, thème natal, Cinq Éléments, zodiaque…", precision: "Les calculs précis de Saju et d’astronomie exigent aussi un lieu de naissance confirmé.", name: "Prénom", nameHint: "Pour l'onomancie et la numérologie", place: "Lieu de naissance", placePlaceholder: "Choisir une ville (optionnel)" },
-  es: { cancel: "Cancelar", edit: "Editar", prompt: "Cuanto más ingreses, más coordenadas se desbloquean. Todo queda en este navegador.", save: "Guardar", saved: "Perfil guardado", title: "Tus datos de nacimiento", date: "Fecha de nacimiento", time: "Hora de nacimiento", timeHint: "Déjalo vacío si no lo sabes", gender: "Género", male: "Hombre", female: "Mujer", blood: "Grupo sanguíneo", unknown: "Desconocido", opens: "Se usa para Saju, carta natal, Cinco Elementos, zodiaco…", precision: "Los cálculos precisos de Saju y astronomía también requieren confirmar el lugar de nacimiento.", name: "Nombre", nameHint: "Para onomancia y numerología", place: "Lugar de nacimiento", placePlaceholder: "Elige una ciudad (opcional)" },
+  ko: { cancel: "취소", edit: "수정", prompt: "정보를 입력할수록 더 많은 좌표가 열립니다. 모두 이 브라우저에만 저장됩니다.", save: "저장", saved: "프로필이 기록되었습니다", title: "나의 출생 정보", date: "생년월일", time: "태어난 시각", timeHint: "모르면 비워두세요", gender: "성별", male: "남성", female: "여성", blood: "혈액형", unknown: "모름", opens: "사주·출생차트·오행·별자리 등에 사용됩니다", precision: "정밀 사주·천문 계산은 출생지 확인이 추가로 필요합니다.", name: "이름", nameHint: "이름풀이·수비학에 사용", place: "출생지", placePlaceholder: "도시 선택 (선택)" , searchTitle: "찾는 도시가 없나요?", searchPlaceholder: "도시 이름으로 검색", searchHint: "한글로 안 나오면 로마자로도 찾아보세요", searchEmpty: "검색 결과 없음"},
+  en: { cancel: "Cancel", edit: "Edit", prompt: "The more you enter, the more coordinates unlock. All stays in this browser.", save: "Save", saved: "Profile saved", title: "Your birth info", date: "Birth date", time: "Birth time", timeHint: "Leave blank if unknown", gender: "Gender", male: "Male", female: "Female", blood: "Blood type", unknown: "Unknown", opens: "Used for Saju, natal chart, Five Elements, zodiac & more", precision: "Precise Saju and astronomy calculations also require a confirmed birthplace.", name: "Name", nameHint: "Used for name reading & numerology", place: "Birthplace", placePlaceholder: "Select a city (optional)" , searchTitle: "City not listed?", searchPlaceholder: "Search by city name", searchHint: "If a local spelling finds nothing, try the Latin name", searchEmpty: "No matches"},
+  ja: { cancel: "キャンセル", edit: "編集", prompt: "入力するほど多くの座標が開きます。すべてこのブラウザだけに保存。", save: "保存", saved: "プロフィールを記録しました", title: "出生情報", date: "生年月日", time: "出生時刻", timeHint: "不明なら空欄", gender: "性別", male: "男性", female: "女性", blood: "血液型", unknown: "不明", opens: "四柱・出生図・五行・星座などに使用", precision: "精密な四柱・天文計算には出生地の確認も必要です。", name: "名前", nameHint: "姓名判断・数秘術に使用", place: "出生地", placePlaceholder: "都市を選択（任意）" , searchTitle: "都市が見つかりませんか？", searchPlaceholder: "都市名で検索", searchHint: "現地表記で出ない場合はローマ字でもお試しください", searchEmpty: "該当なし"},
+  zh: { cancel: "取消", edit: "修改", prompt: "输入越多，解锁的坐标越多。全部只保存在此浏览器。", save: "保存", saved: "资料已记录", title: "出生信息", date: "出生日期", time: "出生时间", timeHint: "不知道可留空", gender: "性别", male: "男", female: "女", blood: "血型", unknown: "未知", opens: "用于八字、星盘、五行、星座等", precision: "精确的八字与天文计算还需要确认出生地。", name: "姓名", nameHint: "用于姓名学·数字命理", place: "出生地", placePlaceholder: "选择城市（可选）" , searchTitle: "找不到城市？", searchPlaceholder: "按城市名搜索", searchHint: "本地写法找不到时可试拉丁拼写", searchEmpty: "无结果"},
+  fr: { cancel: "Annuler", edit: "Modifier", prompt: "Plus vous saisissez, plus de coordonnées se débloquent. Tout reste dans ce navigateur.", save: "Enregistrer", saved: "Profil enregistré", title: "Vos infos de naissance", date: "Date de naissance", time: "Heure de naissance", timeHint: "Laissez vide si inconnu", gender: "Genre", male: "Homme", female: "Femme", blood: "Groupe sanguin", unknown: "Inconnu", opens: "Utilisé pour Saju, thème natal, Cinq Éléments, zodiaque…", precision: "Les calculs précis de Saju et d’astronomie exigent aussi un lieu de naissance confirmé.", name: "Prénom", nameHint: "Pour l'onomancie et la numérologie", place: "Lieu de naissance", placePlaceholder: "Choisir une ville (optionnel)" , searchTitle: "Ville absente de la liste ?", searchPlaceholder: "Rechercher une ville", searchHint: "Si l'orthographe locale ne donne rien, essayez le nom latin", searchEmpty: "Aucun résultat"},
+  es: { cancel: "Cancelar", edit: "Editar", prompt: "Cuanto más ingreses, más coordenadas se desbloquean. Todo queda en este navegador.", save: "Guardar", saved: "Perfil guardado", title: "Tus datos de nacimiento", date: "Fecha de nacimiento", time: "Hora de nacimiento", timeHint: "Déjalo vacío si no lo sabes", gender: "Género", male: "Hombre", female: "Mujer", blood: "Grupo sanguíneo", unknown: "Desconocido", opens: "Se usa para Saju, carta natal, Cinco Elementos, zodiaco…", precision: "Los cálculos precisos de Saju y astronomía también requieren confirmar el lugar de nacimiento.", name: "Nombre", nameHint: "Para onomancia y numerología", place: "Lugar de nacimiento", placePlaceholder: "Elige una ciudad (opcional)" , searchTitle: "¿No está tu ciudad?", searchPlaceholder: "Buscar por nombre de ciudad", searchHint: "Si la grafía local no da resultados, prueba el nombre latino", searchEmpty: "Sin resultados"},
 };
 
 const BLOODS = ["A", "B", "O", "AB"] as const;
@@ -45,6 +47,12 @@ export function OntologyBirthInput({
   const [blood, setBlood] = useState<string>("");
   const [name, setName] = useState("");
   const [cityId, setCityId] = useState("");
+  // 검색으로 고른 도시. CITIES 에 없으므로 따로 들고 있어야 저장 때 경도·시간대를
+  // 실어 보낼 수 있다. 번들은 이 상태가 처음 필요해질 때 받는다.
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchHits, setSearchHits] = useState<CitySearchHit[]>([]);
+  const [searchBusy, setSearchBusy] = useState(false);
+  const [pickedCity, setPickedCity] = useState<null | CitySearchHit>(null);
 
   const seed = () => {
     setDate(birthRecord?.civilDate ?? "");
@@ -62,7 +70,9 @@ export function OntologyBirthInput({
     // needs, so `needsConfirmation` can drop to false exactly like the natal
     // calculator's own submit path — otherwise it stays true (birthplace
     // unconfirmed) as before.
-    const city = CITIES.find((c) => c.id === cityId);
+    // 큐레이션 목록 우선, 없으면 검색으로 고른 도시. 둘 다 City 형태라 아래는 동일하다.
+    const city = CITIES.find((c) => c.id === cityId)
+      ?? (pickedCity && pickedCity.city.id === cityId ? pickedCity.city : undefined);
     saveBirthRecord(createBirthRecord({
       civilDate: d,
       civilTime: time || null,
@@ -82,7 +92,15 @@ export function OntologyBirthInput({
     onSaved?.();
   };
 
-  const cityLabel = (id: string) => CITIES.find((c) => c.id === id)?.label[lang];
+  const cityLabel = (id: string) => {
+    const curated = CITIES.find((c) => c.id === id)?.label[lang];
+    if (curated) return curated;
+    if (pickedCity && pickedCity.city.id === id) return pickedCity.city.label[lang];
+    // 새로고침 뒤에는 이름이 없다. 계산에 쓰이는 경도·시간대는 BirthRecord 에
+    // 따로 저장돼 있으므로 결과는 그대로다 — 여기서는 좌표를 보여 준다.
+    const coords = parseSynthesizedId(id);
+    return coords ? `${coords.lat}, ${coords.lon}` : undefined;
+  };
 
   const showForm = !has || editing;
   const pill = (active: boolean) =>
@@ -130,6 +148,49 @@ export function OntologyBirthInput({
                 <option key={city.id} value={city.id}>{city.label[lang]}</option>
               ))}
             </select>
+            <details className="mt-2">
+              <summary className="cursor-pointer text-[11px] font-bold text-green-700">{c.searchTitle}</summary>
+              <div className="mt-2 space-y-2">
+                <input
+                  type="search"
+                  value={searchQuery}
+                  placeholder={c.searchPlaceholder}
+                  aria-label={c.searchPlaceholder}
+                  onChange={async (e) => {
+                    const q = e.target.value;
+                    setSearchQuery(q);
+                    if (q.trim().length < 2) { setSearchHits([]); return; }
+                    // 번들은 여기서 처음 받는다. 검색을 열지 않으면 한 바이트도 받지 않는다.
+                    setSearchBusy(true);
+                    try { setSearchHits(await searchCities(q, 12)); }
+                    catch { setSearchHits([]); }
+                    finally { setSearchBusy(false); }
+                  }}
+                  className="w-full rounded-lg border border-green-200 px-3 py-2 text-sm"
+                />
+                <p className="text-[11px] leading-5 text-green-600">{c.searchHint}</p>
+                {searchBusy && <p className="text-[11px] text-green-500">…</p>}
+                {!searchBusy && searchQuery.trim().length >= 2 && searchHits.length === 0 && (
+                  <p className="text-[11px] text-green-500">{c.searchEmpty}</p>
+                )}
+                {searchHits.length > 0 && (
+                  <ul className="max-h-48 divide-y divide-green-50 overflow-y-auto rounded-lg border border-green-100">
+                    {searchHits.map((hit) => (
+                      <li key={hit.city.id}>
+                        <button
+                          type="button"
+                          onClick={() => { setPickedCity(hit); setCityId(hit.city.id); setSearchHits([]); setSearchQuery(""); }}
+                          className="flex w-full items-center justify-between gap-2 px-3 py-2 text-left text-sm hover:bg-green-50"
+                        >
+                          <span className="truncate">{hit.city.label[lang]}</span>
+                          <span className="shrink-0 text-[11px] text-green-500">{hit.countryCode}</span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            </details>
           </div>
           <div>
             <span className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600">{c.gender}</span>

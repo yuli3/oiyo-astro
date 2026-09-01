@@ -8,7 +8,11 @@ public/ontology-platform-v1/
 .local-data/
 
 # dependencies
-node_modules/
+# 슬래시가 있으면 디렉터리만 막는다. 이 repo 의 표준 worktree 절차는
+# node_modules 를 **심볼릭 링크**로 만들기 때문에(agent 핸드오프 문서 참조)
+# 슬래시가 있으면 링크가 추적 후보로 남고, git add -A 한 번에 딸려 들어간다.
+# 2026-09-01 실제로 한 번 커밋됐다가 amend 로 걷어냈다.
+node_modules
 
 # logs
 npm-debug.log*
