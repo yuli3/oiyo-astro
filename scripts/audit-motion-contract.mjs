@@ -14,7 +14,7 @@
 //
 // usage: node scripts/audit-motion-contract.mjs
 import { readFileSync, readdirSync, statSync } from "node:fs";
-import { join } from "node:path";
+import { dirname, join, relative, resolve } from "node:path";
 
 const GLOBAL_CSS = "src/styles/global.css";
 // 상태를 전달하는 모션만 담요에서 빠진다. 이 한도를 올리기 전에, 그 모션이
@@ -22,6 +22,7 @@ const GLOBAL_CSS = "src/styles/global.css";
 const ESSENTIAL_BUDGET = 6;
 
 const failures = [];
+let framerSummary = "";
 
 function walk(dir, exts) {
   const out = [];
@@ -113,31 +114,104 @@ if (/@view-transition/.test(css)) {
   }
 }
 
-// ── 7. framer-motion — 아직 닫히지 않은 구멍 ───────────────────────────────
-// framer 는 transform 을 rAF 로 굴리므로 CSS 담요가 닿지 않는다. 그리고
-// framer 의 기본값은 사용자 선호를 **무시한다** — MotionConfigContext 의
-// 기본 `reducedMotion` 이 "never" 다. 지키게 하려면 각 React 섬 루트를
-// `<MotionConfig reducedMotion="user">` 로 감싸야 한다("user" 는 transform 은
-// 끄고 opacity 는 남기는데, 이게 정확히 맞는 의미다).
+// ── 7. framer-motion — 하이드레이트되는 섬만이 문제다 ─────────────────────
+// framer 는 transform 을 rAF 로 굴려 CSS 담요가 닿지 않고, 기본값
+// (`MotionConfigContext` 의 "never")이 사용자 선호를 **무시한다**.
 //
-// 2026-09-01 실측: framer 사용 31개 중 30개가 선호를 전혀 읽지 않는다.
-// 그중 transform 계열(y·scale·rotate·x) 26건이 전정기관 위험에 해당한다.
-// 감싸야 할 섬 루트는 25곳이고, 그중 다수는 살아 있는지부터 확인해야 한다.
-// 기계적 변환이 아니라 판단이 드는 일이라 별건으로 남긴다.
+// 2026-09-01 첫 시도에서 "framer 를 import 하는 파일 수"를 예산으로 잡았다.
+// 그건 노출이 아니었다. 실제로 세어 보니 30개 중 브라우저에서 하이드레이트되는
+// 것은 **하나뿐**이었고(빌드 294개 청크 중 framer 런타임을 담은 청크가 하나),
+// 나머지 29개는 아무 데서도 import 되지 않는 죽은 코드였다.
 //
-// 그때까지 **자라지는 못하게** 잠근다. 이 숫자가 늘면 실패한다.
-const FRAMER_UNGUARDED_BUDGET = 30;
-const framerFiles = walk("src", /\.tsx?$/).filter((f) => {
-  const src = readFileSync(f, "utf8");
-  return /from ["']framer-motion["']/.test(src) && !/[rR]educedMotion|MotionConfig/.test(src);
-});
-if (framerFiles.length > FRAMER_UNGUARDED_BUDGET) {
-  const added = framerFiles.length - FRAMER_UNGUARDED_BUDGET;
-  failures.push(
-    `framer-motion 을 쓰면서 감축 선호를 읽지 않는 파일이 ${framerFiles.length}개다(기록된 ${FRAMER_UNGUARDED_BUDGET}개보다 ${added}개 늘었다).\n` +
-      `    framer 의 기본값은 선호를 무시한다. 새 컴포넌트는 섬 루트를 <MotionConfig reducedMotion="user"> 로 감싼다.\n` +
-      `    기존 구멍을 닫았다면 이 숫자를 줄여서 잠근다 — 늘리지 않는다.`,
-  );
+// 그래서 세는 대상을 바꾼다. import 수가 아니라 **섬 루트에서의 도달성**이다.
+// `.astro` 에서 `client:*` 로 하이드레이트되는 컴포넌트가 framer 에 닿으면,
+// 그 섬 루트는 <MotionConfig reducedMotion="user"> 로 감싸야 한다.
+{
+  const files = [...walk("src", /\.(tsx?|astro)$/)];
+  const text = new Map(files.map((f) => [f, readFileSync(f, "utf8")]));
+
+  const resolveImport = (from, spec) => {
+    let base;
+    if (spec.startsWith("@/")) base = join("src", spec.slice(2));
+    else if (spec.startsWith(".")) base = relative(process.cwd(), resolve(dirname(from), spec));
+    else return null;
+    for (const ext of ["", ".tsx", ".ts", ".astro", "/index.tsx", "/index.ts"]) {
+      if (text.has(base + ext)) return base + ext;
+    }
+    return null;
+  };
+
+  const deps = new Map();
+  for (const [f, s] of text) {
+    const set = new Set();
+    for (const m of s.matchAll(/from\s+["']([^"']+)["']|import\(\s*["']([^"']+)["']\s*\)/g)) {
+      const t = resolveImport(f, m[1] || m[2]);
+      if (t) set.add(t);
+    }
+    deps.set(f, set);
+  }
+
+  // 섬 루트: .astro 안에서 client:* 지시자와 함께 쓰인 컴포넌트
+  const islandRoots = new Set();
+  for (const [f, s] of text) {
+    if (!f.endsWith(".astro")) continue;
+    const local = new Map();
+    for (const m of s.matchAll(/import\s+(?:(\w+)|{([^}]+)})\s+from\s+["']([^"']+)["']/g)) {
+      const t = resolveImport(f, m[3]);
+      if (!t) continue;
+      if (m[1]) local.set(m[1], t);
+      if (m[2]) for (const part of m[2].split(",")) {
+        const name = part.trim().split(/\s+as\s+/).pop().trim();
+        if (name) local.set(name, t);
+      }
+    }
+    for (const m of s.matchAll(/<([A-Z][\w.]*)((?:[^>]|\n)*?)\/?>/g)) {
+      if (!/client:(load|visible|idle|only|media)/.test(m[2])) continue;
+      const t = local.get(m[1].split(".")[0]);
+      if (t && /\.tsx?$/.test(t)) islandRoots.add(t);
+    }
+  }
+
+  const usesFramer = (f) => /from ["']framer-motion["']/.test(text.get(f) ?? "");
+  const reachable = (root) => {
+    const seen = new Set();
+    const stack = [root];
+    while (stack.length) {
+      const cur = stack.pop();
+      if (seen.has(cur)) continue;
+      seen.add(cur);
+      for (const d of deps.get(cur) ?? []) stack.push(d);
+    }
+    return seen;
+  };
+
+  const live = [];
+  for (const root of islandRoots) {
+    const seen = reachable(root);
+    if (![...seen].some(usesFramer)) continue;
+    live.push(root);
+    // import 줄에도 `MotionConfig` 라는 글자는 있다. 실제로 **렌더하는지**를 본다.
+    if (!/<MotionConfig[^>]*reducedMotion=["']user["']/.test(text.get(root))) {
+      failures.push(
+        `${root}: 하이드레이트되는 섬이면서 framer-motion 에 닿는데 ` +
+          `<MotionConfig reducedMotion="user"> 로 감싸지 않았다. ` +
+          `framer 의 기본값(MotionConfigContext 의 "never")은 사용자 선호를 무시한다.`,
+      );
+    }
+  }
+
+  // 어느 섬에서도 닿지 않는 framer 파일은 접근성 문제가 아니라 죽은 코드다.
+  // 실패시키지는 않되 세어 둔다 — 늘어나면 정리 대상이 늘었다는 뜻이다.
+  const covered = new Set(live.flatMap((r) => [...reachable(r)]));
+  const unreachable = files.filter((f) => usesFramer(f) && !covered.has(f));
+  const UNREACHABLE_BUDGET = 29;
+  if (unreachable.length > UNREACHABLE_BUDGET) {
+    failures.push(
+      `어느 섬에서도 도달하지 않는 framer 파일이 ${unreachable.length}개다(기록된 ${UNREACHABLE_BUDGET}개보다 늘었다).\n` +
+        `    브라우저에서 돌지 않으므로 접근성 문제는 아니지만, 죽은 채로 계약 밖에 있는 코드다. 늘리지 않는다.`,
+    );
+  }
+  framerSummary = `framer 섬 ${live.length}곳 전부 MotionConfig, 미도달 ${unreachable.length}/${UNREACHABLE_BUDGET}개`;
 }
 
 // ── 8. 탈출구는 좁게 유지한다 ───────────────────────────────────────────────
@@ -159,5 +233,5 @@ if (failures.length) {
 console.log(
   `모션 계약 감사 PASS — 전역 담요 있음, smooth 스크롤 가드됨, 로컬 사본 0건, ` +
     `useFrame·스크롤은 선호 인지, 선호를 읽는 곳은 공유 훅 하나, ` +
-    `탈출구 ${essential.length}/${ESSENTIAL_BUDGET}개, framer 미가드 ${framerFiles.length}/${FRAMER_UNGUARDED_BUDGET}개(미해결·잠금).`,
+    `탈출구 ${essential.length}/${ESSENTIAL_BUDGET}개, ${framerSummary}.`,
 );
