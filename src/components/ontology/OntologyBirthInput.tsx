@@ -3,7 +3,7 @@
 import { Calendar, Check, Pencil } from "lucide-react";
 import { useState } from "react";
 import { useUserProfile } from "@/lib/user/context/UserContext";
-import { createBirthRecord, resolveBirthRecord } from "@/lib/user/birth-record";
+import { createBirthRecord, resolveBirthRecord, resolveZonedCivilTime } from "@/lib/user/birth-record";
 import { searchCities, parseSynthesizedId, type CitySearchHit } from "@/lib/ontology/natal/city-search";
 import { CITIES } from "@/lib/ontology/natal/signs";
 
@@ -73,12 +73,17 @@ export function OntologyBirthInput({
     // 큐레이션 목록 우선, 없으면 검색으로 고른 도시. 둘 다 City 형태라 아래는 동일하다.
     const city = CITIES.find((c) => c.id === cityId)
       ?? (pickedCity && pickedCity.city.id === cityId ? pickedCity.city : undefined);
+    const zoneResolution = city
+      ? resolveZonedCivilTime({ civilDate: d, civilTime: time || "12:00", zoneId: city.zoneId })
+      : null;
+    const offsetMinutes = zoneResolution?.status === "resolved" ? zoneResolution.offsetMinutes : null;
     saveBirthRecord(createBirthRecord({
       civilDate: d,
       civilTime: time || null,
       longitude: city?.lon ?? null,
       zoneId: city?.zoneId ?? null,
-      needsConfirmation: !city,
+      utcOffsetMinutesAtBirth: offsetMinutes,
+      needsConfirmation: !city || offsetMinutes === null,
       provenance: "user-confirmed-v2",
     }));
     setProfileData({
