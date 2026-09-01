@@ -5,6 +5,7 @@ import type { Locale } from '../../../i18n';
 import WisdomNotes from '../../../components/shared/WisdomNotes.astro';
 import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import { TEST_DIRECTORY_EXTRA } from '../../../data/test-directory-extra';
+import { QUESTION_LANES, LANE_BY_PATH, MOOD_BOUNDARY } from '../../../data/test-question-lanes';
 import { Card, CardContent, CardHeader } from '../../../components/ui/card';
 import {
   Item,
@@ -23,39 +24,39 @@ export async function getStaticPaths() {
 const { locale } = Astro.params as { locale: Locale };
 
 const title: Record<Locale, string> = {
-  ko: '성격·운세 테스트 허브 — OIYO',
-  en: 'Personality & Fortune Tests — OIYO',
-  ja: '性格・占いテストハブ — OIYO',
-  zh: '性格与运势测试中心 — OIYO',
-  fr: 'Tests de Personnalité & Destin — OIYO',
-  es: 'Pruebas de Personalidad y Destino — OIYO',
+  ko: '나를 알아보는 검사 — OIYO',
+  en: 'Tests to Understand Yourself — OIYO',
+  ja: '自分を知るテスト — OIYO',
+  zh: '了解自己的测试 — OIYO',
+  fr: 'Tests pour Mieux se Connaître — OIYO',
+  es: 'Tests para Conocerte — OIYO',
 };
 
 const description: Record<Locale, string> = {
-  ko: 'MBTI, 에니어그램, 빅파이브, 사주, 수비학, 별자리 등 다양한 성격·운세 테스트를 한 곳에서 무료로 이용하세요.',
-  en: 'Free personality and fortune tests including MBTI, Enneagram, Big Five, Saju, Numerology, and Zodiac — all in one place.',
-  ja: 'MBTI、エニアグラム、ビッグファイブ、四柱、数秘術、星座など様々な性格・占いテストを無料でご利用いただけます。',
-  zh: '免费使用MBTI、九型人格、大五人格、四柱、数字命理、星座等各种性格与运势测试。',
-  fr: 'Tests gratuits de personnalité et de destinée: MBTI, Ennéagramme, Big Five, Saju, Numérologie, Zodiaque.',
-  es: 'Pruebas gratuitas de personalidad y destino: MBTI, Eneagrama, Big Five, Saju, Numerología, Zodíaco.',
+  ko: '성격, 관계, 일, 지금 마음 — 궁금한 질문에서 시작하는 무료 검사. MBTI, 에니어그램, 빅파이브, 애착유형 등.',
+  en: 'Free tests that start from your question — personality, relationships, work, and how you are doing lately. MBTI, Enneagram, Big Five, attachment style.',
+  ja: '性格・関係・仕事・今の心 — 気になる質問から始める無料テスト。MBTI、エニアグラム、ビッグファイブ、愛着タイプなど。',
+  zh: '性格、关系、工作、此刻心情 — 从你的问题开始的免费测试。MBTI、九型人格、大五人格、依恋类型等。',
+  fr: 'Tests gratuits qui partent de votre question : personnalité, relations, travail, état du moment. MBTI, Ennéagramme, Big Five, attachement.',
+  es: 'Tests gratuitos que parten de tu pregunta: personalidad, relaciones, trabajo y cómo estás. MBTI, Eneagrama, Big Five, apego.',
 };
 
 const heading: Record<Locale, string> = {
-  ko: '성격 & 운세 테스트',
-  en: 'Personality & Fortune Tests',
-  ja: '性格 & 占いテスト',
-  zh: '性格与运势测试',
-  fr: 'Tests de Personnalité & Destin',
-  es: 'Pruebas de Personalidad y Destino',
+  ko: '무엇이 궁금하세요?',
+  en: 'What do you want to know?',
+  ja: '何が気になりますか？',
+  zh: '你想了解什么？',
+  fr: 'Que voulez-vous savoir ?',
+  es: '¿Qué quieres saber?',
 };
 
 const subheading: Record<Locale, string> = {
-  ko: '나를 더 깊이 이해하는 과학적·전통적 방법들을 한 곳에서',
-  en: 'Science-backed and traditional methods to understand yourself better',
-  ja: '科学的・伝統的方法で自分をより深く理解する',
-  zh: '科学与传统方法，更深入地了解自己',
-  fr: 'Méthodes scientifiques et traditionnelles pour mieux se connaître',
-  es: 'Métodos científicos y tradicionales para conocerte mejor',
+  ko: '척도 이름이 아니라 지금 궁금한 질문에서 시작하세요',
+  en: 'Start from the question you have, not the name of a scale',
+  ja: '尺度の名前ではなく、今の疑問から始めましょう',
+  zh: '从你此刻的疑问开始，而不是量表的名字',
+  fr: 'Partez de votre question, pas du nom d’une échelle',
+  es: 'Empieza por tu pregunta, no por el nombre de una escala',
 };
 
 const startLabel: Record<Locale, string> = {
@@ -370,7 +371,7 @@ const categories = [
         bg: 'bg-orange-50',
         badge: '',
         title: { ko: '번아웃 테스트', en: 'Burnout Test', ja: 'バーンアウトテスト', zh: '职业倦怠测试', fr: 'Test de Burnout', es: 'Test de Burnout' },
-        desc: { ko: '감정 소진·이인화·성취감 저하 3차원 번아웃 진단', en: 'Measure burnout across 3 dimensions with recovery tips', ja: '3次元でバーンアウトリスクを測定', zh: '从3个维度测量倦怠风险', fr: 'Mesurez le burnout selon 3 dimensions avec conseils', es: 'Mide el burnout en 3 dimensiones con consejos de recuperación' },
+        desc: { ko: '감정 소진·이인화·성취감 저하 세 축으로 살펴봅니다', en: 'Measure burnout across 3 dimensions with recovery tips', ja: '3次元でバーンアウトリスクを測定', zh: '从3个维度测量倦怠风险', fr: 'Mesurez le burnout selon 3 dimensions avec conseils', es: 'Mide el burnout en 3 dimensiones con consejos de recuperación' },
         href: localePath(locale, '/burnout/test'),
       },
       {
@@ -432,7 +433,7 @@ const categories = [
         bg: 'bg-blue-50',
         badge: 'PHQ-9',
         title: { ko: '우울감 선별 테스트', en: 'Depression Screening', ja: 'うつ病スクリーニング', zh: '抑郁筛查测试', fr: 'Dépistage Dépression', es: 'Detección Depresión' },
-        desc: { ko: 'PHQ-9 기반 우울감 수준 자가진단', en: 'PHQ-9 based depression self-assessment', ja: 'PHQ-9に基づくうつ病レベル自己診断', zh: '基于PHQ-9的抑郁程度自我评估', fr: 'Auto-évaluation dépression PHQ-9', es: 'Autoevaluación depresión PHQ-9' },
+        desc: { ko: '요즘 기분이 얼마나 가라앉아 있는지 살펴봅니다', en: 'See how low your mood has been lately', ja: '最近の気分の落ち込みを確認します', zh: '看看你最近的情绪低落程度', fr: 'Observez à quel point votre humeur est basse ces temps-ci', es: 'Observa cuánto ha bajado tu ánimo últimamente' },
         href: localePath(locale, '/depression/test'),
       },
       {
@@ -440,7 +441,7 @@ const categories = [
         bg: 'bg-yellow-50',
         badge: 'GAD-7',
         title: { ko: '불안감 선별 테스트', en: 'Anxiety Screening', ja: '不安スクリーニング', zh: '焦虑筛查测试', fr: 'Dépistage Anxiété', es: 'Detección Ansiedad' },
-        desc: { ko: 'GAD-7 기반 불안 수준 자가진단', en: 'GAD-7 based anxiety self-assessment', ja: 'GAD-7に基づく不安レベル自己診断', zh: '基于GAD-7的焦虑程度自我评估', fr: 'Auto-évaluation anxiété GAD-7', es: 'Autoevaluación ansiedad GAD-7' },
+        desc: { ko: '요즘 걱정과 긴장이 얼마나 잦은지 살펴봅니다', en: 'See how often worry and tension show up lately', ja: '最近の心配や緊張の頻度を確認します', zh: '看看你最近担忧与紧张的频率', fr: 'Voyez à quelle fréquence l’inquiétude revient', es: 'Observa con qué frecuencia aparecen preocupación y tensión' },
         href: localePath(locale, '/anxiety/test'),
       },
       {
@@ -448,7 +449,7 @@ const categories = [
         bg: 'bg-green-50',
         badge: '',
         title: { ko: '사회불안 테스트', en: 'Social Anxiety Test', ja: '社交不安テスト', zh: '社交焦虑测试', fr: 'Anxiété Sociale', es: 'Ansiedad Social' },
-        desc: { ko: '사회적 상황의 불안·회피 수준 자가진단', en: 'Measure anxiety and avoidance in social situations', ja: '社会的状況での不安・回避レベル測定', zh: '测量社交场合的焦虑和回避程度', fr: "Mesurez l'anxiété sociale", es: 'Mide la ansiedad social' },
+        desc: { ko: '사람들 앞에서의 불안과 회피를 살펴봅니다', en: 'Measure anxiety and avoidance in social situations', ja: '社会的状況での不安・回避レベル測定', zh: '测量社交场合的焦虑和回避程度', fr: "Mesurez l'anxiété sociale", es: 'Mide la ansiedad social' },
         href: localePath(locale, '/social-anxiety/test'),
       },
       {
@@ -456,7 +457,7 @@ const categories = [
         bg: 'bg-orange-50',
         badge: 'WHO ASRS',
         title: { ko: '성인 ADHD 스크리닝', en: 'Adult ADHD Screening', ja: '成人ADHDスクリーニング', zh: '成人ADHD筛查', fr: 'Dépistage TDAH Adulte', es: 'Detección TDAH Adulto' },
-        desc: { ko: 'WHO ASRS 기반 집중력·충동성 패턴 자가진단', en: 'WHO ASRS based self-assessment for focus and impulsivity patterns', ja: 'WHO ASRSに基づく集中力・衝動性パターン自己診断', zh: '基于WHO ASRS的注意力和冲动性模式自我评估', fr: 'Auto-évaluation WHO ASRS pour les patterns de concentration et impulsivité', es: 'Autoevaluación WHO ASRS para patrones de concentración e impulsividad' },
+        desc: { ko: '집중과 충동의 패턴이 어떤지 살펴봅니다', en: 'See what your focus and impulsivity patterns look like', ja: '集中と衝動のパターンを確認します', zh: '看看你的注意力与冲动模式', fr: 'Observez vos schémas de concentration et d’impulsivité', es: 'Observa tus patrones de concentración e impulsividad' },
         href: localePath(locale, '/adhd/test'),
       },
       {
@@ -554,7 +555,29 @@ const categories = [
     ],
   },
 ];
+
+// 질문 분류 view model. `categories` 를 복제하지 않고 **재배열만** 한다 —
+// 검사 항목의 정본은 위 배열 하나로 유지된다. 운세·전통(fortune·traditional)은
+// LANE_BY_PATH 에 없으므로 자연히 빠진다: 허브에서 내리는 것이지 삭제가 아니며
+// 각 canonical route 는 그대로 살아 있다.
+const testsByPath = new Map(
+  categories.flatMap((cat) => cat.tests.map((test) => [test.href, test] as const)),
+);
+
+const lanes = QUESTION_LANES.map((lane) => ({
+  ...lane,
+  tests: Object.entries(LANE_BY_PATH)
+    .filter(([, id]) => id === lane.id)
+    .map(([path]) => testsByPath.get(localePath(locale, path)))
+    .filter((test): test is NonNullable<typeof test> => Boolean(test)),
+}));
+
+// 빈 분류는 렌더하지 않는다. 다만 조용히 비면 매핑이 끊긴 것이므로 빌드에서
+// 드러나야 한다 — scripts/audit-tests-question-ia.mjs 가 이 계약을 강제한다.
+const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
+
 ---
+
 
 <Layout title={title[locale]} description={description[locale]} locale={locale}>
   <!-- Hero -->
@@ -579,17 +602,20 @@ const categories = [
 
   <!-- Test categories -->
   <section class="max-w-5xl mx-auto px-4 py-10 grid gap-6 lg:grid-cols-2 lg:items-start">
-    {categories.map((cat) => (
+    {visibleLanes.map((lane) => (
       <Card className="border-primary/10 bg-card/95 shadow-sm">
         <CardHeader className="border-b border-primary/10 pb-4">
           <h2 class="text-base font-semibold text-foreground">
-            {cat.label[locale]}
+            {lane.question[locale]}
           </h2>
-          <p class="text-xs text-muted-foreground">{cat.tests.length} OIYO Tests</p>
+          <p class="text-xs text-muted-foreground">{lane.label[locale]} · {lane.tests.length}</p>
+          {lane.id === 'mood' && (
+            <p class="mt-2 text-xs leading-relaxed text-muted-foreground">{MOOD_BOUNDARY[locale]}</p>
+          )}
         </CardHeader>
         <CardContent className="p-3">
           <ItemGroup className="gap-1">
-            {cat.tests.map((test) => (
+            {lane.tests.map((test) => (
               <Item role="listitem" size="sm" className="p-0 hover:bg-primary/5 focus-within:ring-2 focus-within:ring-ring/40">
                 <a href={test.href} class="group flex min-w-0 flex-1 items-start gap-3 rounded-md px-3 py-3 outline-none">
                   <ItemMedia className={`size-10 rounded-md ${test.bg} text-lg`} aria-hidden="true">
@@ -602,11 +628,6 @@ const categories = [
                     <ItemDescription className="text-xs">
                       {test.desc[locale]}
                     </ItemDescription>
-                    {test.badge && (
-                      <span class="mt-1 w-fit rounded-full border border-primary/10 bg-primary/5 px-2 py-0.5 text-[11px] font-medium text-primary">
-                        {test.badge}
-                      </span>
-                    )}
                   </ItemContent>
                   <ItemActions className="self-center text-sm font-medium text-primary" aria-hidden="true">
                     →
