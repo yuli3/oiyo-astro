@@ -254,6 +254,15 @@ const DIMENSIONS: Record<DimKey, [DimValue, DimValue]> = {
   JP: ['J', 'P'],
 }
 
+const FRIEND_COMPARE_LABEL: Record<SupportedLang, string> = {
+  ko: '친구와 검사 결과 비교',
+  en: 'Compare results with a friend',
+  ja: '友だちと検査結果を比較',
+  zh: '与朋友比较测验结果',
+  fr: 'Comparer les résultats avec un ami',
+  es: 'Comparar resultados con un amigo',
+}
+
 export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
   const l = lang(locale)
   const labels = LABELS[l]
@@ -415,6 +424,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
         <ResultNextSteps
           locale={l}
           links={[
+            { href: `/${l}/profile/relationship-comparison/`, label: FRIEND_COMPARE_LABEL[l] },
             { href: `https://wiki.oiyo.net/ko/mbti-dict-${mbtiType.toLowerCase()}/`, label: `📖 ${mbtiType} 유형 사전`, external: true, locales: ['ko'] },
             { href: `/${l}/mbti/hobbies/`, label: l === 'ko' ? `✨ ${mbtiType} 추천 취미` : `✨ ${mbtiType} hobbies` },
             { href: `https://blog.oiyo.net/${l}/mbti-compatibility/`, label: l === 'ko' ? '💞 유형 궁합 보기' : '💞 Type compatibility', external: true },

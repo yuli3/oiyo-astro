@@ -6,13 +6,15 @@ const root = new URL("../", import.meta.url);
 const readJson = async (url) => JSON.parse(await readFile(url, "utf8"));
 const errors = [];
 
-const [schema, contract, fixture, a3Compatibility, engine, profileIndex] = await Promise.all([
+const [schema, contract, fixture, a3Compatibility, engine, profileIndex, panel, mbtiResult] = await Promise.all([
   readJson(new URL("config/relationship-comparison-v1.schema.json", root)),
   readJson(new URL("config/relationship-comparison-v1.contract.json", root)),
   readJson(new URL("config/relationship-comparison-v1.fixture.json", root)),
   readJson(new URL("config/personal-profile-export-v2.compatibility.json", root)),
   readFile(new URL("src/assessments/profile/relationship-comparison.ts", root), "utf8"),
   readFile(new URL("src/assessments/profile/index.ts", root), "utf8"),
+  readFile(new URL("src/components/profile/RelationshipComparisonPanel.tsx", root), "utf8"),
+  readFile(new URL("src/components/tests/MbtiPersonalityTest.tsx", root), "utf8"),
 ]);
 
 if (schema.$defs?.resultCode?.properties?.schema?.const !== "oiyo.relationship-result-code") errors.push("result-code schema identity mismatch");
@@ -52,6 +54,8 @@ if (contract.integrity?.artifact !== "unsigned-self-asserted-local" || contract.
 
 const expectedContexts = ["couple", "family", "friend"];
 if (JSON.stringify(contract.eligibility?.allowedContexts) !== JSON.stringify(expectedContexts)) errors.push("allowed relationship contexts drift");
+if (!panel.includes('useState<RelationshipContext>("friend")')) errors.push("friend must remain the comparison panel's first-use context");
+if (!mbtiResult.includes('href: `/${l}/profile/relationship-comparison/`')) errors.push("MBTI result must link to the relationship comparison route");
 for (const blocked of ["minor", "political-signal", "health-signal", "workplace-evaluation", "employment", "hiring"]) {
   if (!contract.eligibility?.blocked?.includes(blocked)) errors.push(`missing blocked context/signal: ${blocked}`);
 }

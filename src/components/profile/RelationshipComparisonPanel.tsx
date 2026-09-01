@@ -58,8 +58,8 @@ interface Copy {
 
 const COPY: Record<Lang, Copy> = {
   ko: {
-    title: "커플·가족 비교 리포트 (파일럿)",
-    description: "각자 완료한 검사에서 나온 근거만으로, 같은 자리에 있는 두 사람이 공통점·차이·대화 질문을 함께 확인합니다.",
+    title: "친구·커플·가족 비교 리포트 (파일럿)",
+    description: "친구를 포함해 각자 완료한 검사 근거만으로, 같은 자리에 있는 두 사람이 공통점·차이·대화 질문을 함께 확인합니다.",
     boundary: "서버로 전송되지 않고 저장도 되지 않습니다 — 이 브라우저 탭을 벗어나면 사라집니다. 새로고침하면 처음부터 다시 시작해야 합니다.",
     guardrailsTitle: "이 도구가 하지 않는 것",
     guardrails: [
@@ -78,7 +78,7 @@ const COPY: Record<Lang, Copy> = {
     evidenceReady: (n) => `${n}개 근거로 코드를 만들 수 있습니다.`,
     myCodeTitle: "내 코드 만들기",
     generateButton: "내 코드 생성",
-    myCodeExpiry: (date) => `이 코드는 ${date}에 만료됩니다. 상대방에게 직접 전달하세요(문자·메신저 등).`,
+    myCodeExpiry: (date) => `이 코드는 ${date}에 만료됩니다. 비교할 사람에게 직접 전달하세요(문자·메신저 등).`,
     copyButton: "코드 복사",
     copiedMsg: "복사했습니다.",
     partnerCodeTitle: "상대방 코드 붙여넣기",
@@ -103,8 +103,8 @@ const COPY: Record<Lang, Copy> = {
     },
   },
   en: {
-    title: "Couple & Family Comparison Report (pilot)",
-    description: "Using only evidence from assessments each person has completed, two people in the same room can see shared points, differences, and conversation prompts.",
+    title: "Friend, Couple & Family Comparison Report (pilot)",
+    description: "Friends and other pairs can use only evidence from assessments each person has completed to see shared points, differences, and conversation prompts.",
     boundary: "Nothing is sent to a server or saved — it disappears when you leave this tab. Refreshing starts over from the beginning.",
     guardrailsTitle: "What this tool does not do",
     guardrails: [
@@ -123,7 +123,7 @@ const COPY: Record<Lang, Copy> = {
     evidenceReady: (n) => `${n} evidence coordinates ready for a code.`,
     myCodeTitle: "Generate your code",
     generateButton: "Generate my code",
-    myCodeExpiry: (date) => `This code expires on ${date}. Share it directly with your partner (text, messenger, etc).`,
+    myCodeExpiry: (date) => `This code expires on ${date}. Share it directly with the person you are comparing with (text, messenger, etc).`,
     copyButton: "Copy code",
     copiedMsg: "Copied.",
     partnerCodeTitle: "Paste partner's code",
@@ -148,8 +148,8 @@ const COPY: Record<Lang, Copy> = {
     },
   },
   ja: {
-    title: "カップル・家族比較レポート（試験版）",
-    description: "各自が完了した検査の根拠だけを使い、同じ場にいる二人が共通点・違い・会話のきっかけを一緒に確認します。",
+    title: "友人・カップル・家族比較レポート（試験版）",
+    description: "友人を含む二人が、各自の完了した検査の根拠だけを使って共通点・違い・会話のきっかけを確認します。",
     boundary: "サーバーには送信されず保存もされません — このタブを離れると消えます。更新すると最初からやり直しになります。",
     guardrailsTitle: "このツールがしないこと",
     guardrails: [
@@ -193,8 +193,8 @@ const COPY: Record<Lang, Copy> = {
     },
   },
   zh: {
-    title: "情侣·家庭比较报告（试点）",
-    description: "只使用各自已完成测验的证据，同处一室的两个人可以一起查看共同点、差异和对话话题。",
+    title: "朋友·情侣·家庭比较报告（试点）",
+    description: "朋友和其他两人组合只使用各自已完成测验的证据，一起查看共同点、差异和对话话题。",
     boundary: "不会发送到服务器也不会保存 — 离开此标签页即消失。刷新页面需要从头开始。",
     guardrailsTitle: "此工具不会做的事",
     guardrails: [
@@ -238,8 +238,8 @@ const COPY: Record<Lang, Copy> = {
     },
   },
   fr: {
-    title: "Rapport de comparaison couple et famille (pilote)",
-    description: "En utilisant uniquement les preuves des évaluations que chacun a complétées, deux personnes réunies peuvent voir leurs points communs, différences et sujets de conversation.",
+    title: "Rapport de comparaison entre amis, couples et familles (pilote)",
+    description: "Des amis ou deux proches utilisent uniquement les preuves des évaluations complétées par chacun pour voir leurs points communs, différences et sujets de conversation.",
     boundary: "Rien n'est envoyé à un serveur ni enregistré — tout disparaît en quittant cet onglet. Un rafraîchissement recommence depuis le début.",
     guardrailsTitle: "Ce que cet outil ne fait pas",
     guardrails: [
@@ -258,7 +258,7 @@ const COPY: Record<Lang, Copy> = {
     evidenceReady: (n) => `${n} coordonnées de preuve prêtes pour un code.`,
     myCodeTitle: "Générer votre code",
     generateButton: "Générer mon code",
-    myCodeExpiry: (date) => `Ce code expire le ${date}. Partagez-le directement avec votre partenaire (SMS, messagerie, etc).`,
+    myCodeExpiry: (date) => `Ce code expire le ${date}. Partagez-le directement avec la personne comparée (SMS, messagerie, etc).`,
     copyButton: "Copier le code",
     copiedMsg: "Copié.",
     partnerCodeTitle: "Coller le code du partenaire",
@@ -283,8 +283,8 @@ const COPY: Record<Lang, Copy> = {
     },
   },
   es: {
-    title: "Informe de comparación de pareja y familia (piloto)",
-    description: "Usando solo evidencia de evaluaciones que cada persona completó, dos personas en el mismo lugar pueden ver puntos en común, diferencias y temas de conversación.",
+    title: "Informe de comparación entre amigos, parejas y familias (piloto)",
+    description: "Amigos u otras dos personas usan solo evidencia de evaluaciones completadas por cada uno para ver puntos en común, diferencias y temas de conversación.",
     boundary: "Nada se envía a un servidor ni se guarda — desaparece al salir de esta pestaña. Al actualizar la página se empieza de nuevo.",
     guardrailsTitle: "Lo que esta herramienta no hace",
     guardrails: [
@@ -303,7 +303,7 @@ const COPY: Record<Lang, Copy> = {
     evidenceReady: (n) => `${n} coordenadas de evidencia listas para un código.`,
     myCodeTitle: "Genera tu código",
     generateButton: "Generar mi código",
-    myCodeExpiry: (date) => `Este código expira el ${date}. Compártelo directamente con tu pareja (mensaje, chat, etc).`,
+    myCodeExpiry: (date) => `Este código expira el ${date}. Compártelo directamente con la persona que vas a comparar (mensaje, chat, etc).`,
     copyButton: "Copiar código",
     copiedMsg: "Copiado.",
     partnerCodeTitle: "Pegar el código de tu pareja",
@@ -407,7 +407,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
   const laneQuestions = LANE_QUESTIONS[lang];
 
   const [step, setStep] = useState<Step>("consent");
-  const [context, setContext] = useState<RelationshipContext>("couple");
+  const [context, setContext] = useState<RelationshipContext>("friend");
   const [adultConfirmed, setAdultConfirmed] = useState(false);
   const [reflectionAck, setReflectionAck] = useState(false);
 

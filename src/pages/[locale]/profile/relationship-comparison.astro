@@ -10,12 +10,12 @@ export async function getStaticPaths() {
 
 const { locale } = Astro.params as { locale: Locale };
 const meta: Record<Locale, { title: string; description: string }> = {
-  ko: { title: '커플·가족 비교 리포트 (파일럿)', description: '완료한 검사 근거만으로 두 사람이 함께 공통점과 차이를 확인하는 실험 도구입니다.' },
-  en: { title: 'Couple & Family Comparison Report (pilot)', description: 'A pilot tool for two people to review shared points and differences using completed assessment evidence.' },
-  ja: { title: 'カップル・家族比較レポート（試験版）', description: '完了した検査の根拠だけで二人が共通点と違いを確認する試験ツールです。' },
-  zh: { title: '情侣·家庭比较报告（试点）', description: '仅使用已完成测验的证据，供两人一起查看共同点与差异的试点工具。' },
-  fr: { title: 'Rapport de comparaison couple et famille (pilote)', description: 'Un outil pilote pour que deux personnes comparent leurs points communs et différences.' },
-  es: { title: 'Informe de comparación de pareja y familia (piloto)', description: 'Una herramienta piloto para que dos personas comparen puntos en común y diferencias.' },
+  ko: { title: '친구·커플·가족 비교 리포트 (파일럿)', description: '완료한 검사 근거만으로 친구를 포함한 두 사람이 함께 공통점과 차이를 확인하는 실험 도구입니다.' },
+  en: { title: 'Friend, Couple & Family Comparison Report (pilot)', description: 'A pilot tool for friends and other pairs to review shared points and differences using completed assessment evidence.' },
+  ja: { title: '友人・カップル・家族比較レポート（試験版）', description: '完了した検査の根拠だけで友人を含む二人が共通点と違いを確認する試験ツールです。' },
+  zh: { title: '朋友·情侣·家庭比较报告（试点）', description: '仅使用已完成测验的证据，供朋友和其他两人组合一起查看共同点与差异。' },
+  fr: { title: 'Comparaison entre amis, couples et familles (pilote)', description: 'Un outil pilote pour que des amis ou deux proches comparent leurs points communs et différences.' },
+  es: { title: 'Comparación entre amigos, parejas y familias (piloto)', description: 'Una herramienta piloto para que amigos u otras dos personas comparen puntos en común y diferencias.' },
 };
 const m = meta[locale] ?? meta.en;
 ---
