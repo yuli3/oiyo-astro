@@ -1,5 +1,10 @@
 import { parseSajuInputState, parseSajuTime, type SajuInputState } from '../../lib/ontology/saju/input-contract';
-import { getYearStem, getYearBranch, getMonthBranch, getMonthStem, getDayStem, getDayBranch, getHourBranch, getHourStem } from '../../lib/ontology/saju/calculator-civil';
+import { getDayStem, getDayBranch, getHourBranch, getHourStem } from '../../lib/ontology/saju/calculator-civil';
+// 연·월주는 절기 기반이다. 역법상 연도·월 번호를 쓰면 월주가 연중 2지지
+// 어긋나고 입춘 이전 출생의 연주가 한 해 밀린다(2026-09-01 실측).
+// 일·시주는 calculator-civil 그대로다 — KASI 일주 20건과 일치하고, 시주는
+// 두 엔진이 합의했다.
+import { getSolarYearPillar, getSolarMonthPillar } from '../../lib/ontology/saju/calculator-solar';
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/BirthDateField';
@@ -582,10 +587,10 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   }
 
   const result = useMemo(() => {
-    const yStem = getYearStem(year);
-    const yBranch = getYearBranch(year);
-    const mBranch = getMonthBranch(month);
-    const mStem = getMonthStem(yStem, month);
+    const yp = getSolarYearPillar(year, month, day, hour);
+    const mp = getSolarMonthPillar(year, month, day, hour);
+    const yStem = yp.stem, yBranch = yp.branch;
+    const mStem = mp.stem, mBranch = mp.branch;
     const dStem = getDayStem(year, month, day);
     const dBranch = getDayBranch(year, month, day);
     const hBranch = hour !== null ? getHourBranch(hour) : null;
@@ -614,8 +619,10 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
 
   // ── 용신/항목별 구조 분석 (bridge index pillars → SajuResult enum) ──
   const analysis = useMemo(() => {
-    const yStem = getYearStem(year), yBranch = getYearBranch(year);
-    const mBranch = getMonthBranch(month), mStem = getMonthStem(yStem, month);
+    const yp2 = getSolarYearPillar(year, month, day, hour);
+    const mp2 = getSolarMonthPillar(year, month, day, hour);
+    const yStem = yp2.stem, yBranch = yp2.branch;
+    const mStem = mp2.stem, mBranch = mp2.branch;
     const dStem = getDayStem(year, month, day), dBranch = getDayBranch(year, month, day);
     const hKnown = hour !== null;
     const hB = getHourBranch(hKnown ? (hour as number) : 12);

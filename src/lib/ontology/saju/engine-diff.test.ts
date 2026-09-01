@@ -5,10 +5,11 @@
 // "골든이 확보되기 전에는 수식을 통합하지 않는다"는 게이트 아래에서 안전하게
 // 만들 수 있는 유일한 것이다(수식을 바꾸지 않고 재기만 한다).
 import { describe, expect, it } from "vitest";
-import {
-  getYearStem, getYearBranch, getMonthBranch, getMonthStem,
-  getDayStem, getDayBranch, getHourBranch, getHourStem,
-} from "./calculator-civil";
+import { getDayStem, getDayBranch, getHourBranch, getHourStem } from "./calculator-civil";
+// 2026-09-01: 공개 계산기가 연·월주를 절기 산식으로 교체했다. 이 행렬도 실제
+// 구성을 재야 하므로 같은 함수를 쓴다. calculator-civil 의 옛 연·월주 함수를
+// 계속 재면 아무도 쓰지 않는 코드를 재는 셈이다.
+import { getSolarYearPillar, getSolarMonthPillar } from "./calculator-solar";
 import { calculateSaju } from "./logic";
 import { birthCivilToInstant } from "../kernel/time";
 import { STEM_ORDER } from "../../../manifest/data/saju/stems";
@@ -21,8 +22,10 @@ const KST_MERIDIAN = 135.0;
 interface Pillars { y: string; m: string; d: string; h: string }
 
 function publicEngine(year: number, month: number, day: number, hour: number): Pillars {
-  const yS = getYearStem(year), yB = getYearBranch(year);
-  const mB = getMonthBranch(month), mS = getMonthStem(yS, month);
+  const yp = getSolarYearPillar(year, month, day, hour);
+  const mp = getSolarMonthPillar(year, month, day, hour);
+  const yS = yp.stem, yB = yp.branch;
+  const mS = mp.stem, mB = mp.branch;
   const dS = getDayStem(year, month, day), dB = getDayBranch(year, month, day);
   const hB = getHourBranch(hour), hS = getHourStem(dS, hB);
   const S = (i: number) => STEM_ORDER[i], B = (i: number) => BRANCH_ORDER[i];
@@ -71,9 +74,15 @@ describe("사주 엔진 차이 행렬 (측정 전용)", () => {
       }
     }
     const n = rows.length;
-    // **현재 상태의 스냅샷이지 목표치가 아니다.** 수식을 바꾸면 여기가 깨지고,
-    // 그때 이 숫자를 의식적으로 갱신하면서 무엇이 왜 달라졌는지 적게 된다.
-    expect({ n, ...diff }).toEqual({ n: 73, y: 7, m: 73, d: 0, h: 0 });
+    // **2026-09-01: 네 기둥 전부 0 이 됐다.** 두 엔진이 합의했다는 뜻이다.
+    //
+    // 여정: 시작은 연주 7 · 월주 73(100%) · 일주 0 · 시주 46 이었다.
+    //   시지 이중 보정 제거 → 시주 46 → 0
+    //   연·월주를 절기 산식으로 교체 → 연주 7 → 0, 월주 73 → 0
+    //
+    // 이제 이 테스트는 "차이 행렬"이 아니라 **합의 유지 감시**다. 어느 쪽 엔진을
+    // 건드려 둘이 갈라지면 여기가 먼저 깨진다.
+    expect({ n, ...diff }).toEqual({ n: 73, y: 0, m: 0, d: 0, h: 0 });
     // 일주가 정오에서 0 인 것이 중요하다 — 두 엔진 모두 KASI 일주와 일치한다
     // (reference-calendar.test.ts). 즉 일주 차이는 수식이 아니라 자정 관례다.
     expect(diff.d).toBe(0);
