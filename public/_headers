@@ -40,6 +40,18 @@
   Cache-Control: public, max-age=86400
   X-Content-Type-Options: nosniff
 
+# ──────────────────────────────────────────
+# 데이터 번들 — 자주 바뀌지 않고 크다
+# ──────────────────────────────────────────
+# geonames-cities.json 은 brotli 로도 약 950KB 다. 기본 정책은
+# `max-age=0, s-maxage=300` 이라 브라우저가 캐시하지 않고, 검색을 열 때마다
+# 조건부 재요청(304)이 왕복한다. 데이터는 GeoNames 릴리스 주기(연 단위)로만
+# 바뀌므로 일주일 브라우저 캐시가 맞다. immutable 은 쓰지 않는다 — 파일명에
+# 버전이 없어서 갱신했을 때 되돌릴 방법이 없어진다.
+/data/*
+  Cache-Control: public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400
+  X-Content-Type-Options: nosniff
+
 /sitemap*.xml
   Cache-Control: public, max-age=3600, s-maxage=86400
 
