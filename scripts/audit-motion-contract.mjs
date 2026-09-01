@@ -98,7 +98,34 @@ for (const file of walk("src", /\.tsx?$/)) {
   }
 }
 
-// ── 6. 탈출구는 좁게 유지한다 ───────────────────────────────────────────────
+// ── 6. framer-motion — 아직 닫히지 않은 구멍 ───────────────────────────────
+// framer 는 transform 을 rAF 로 굴리므로 CSS 담요가 닿지 않는다. 그리고
+// framer 의 기본값은 사용자 선호를 **무시한다** — MotionConfigContext 의
+// 기본 `reducedMotion` 이 "never" 다. 지키게 하려면 각 React 섬 루트를
+// `<MotionConfig reducedMotion="user">` 로 감싸야 한다("user" 는 transform 은
+// 끄고 opacity 는 남기는데, 이게 정확히 맞는 의미다).
+//
+// 2026-09-01 실측: framer 사용 31개 중 30개가 선호를 전혀 읽지 않는다.
+// 그중 transform 계열(y·scale·rotate·x) 26건이 전정기관 위험에 해당한다.
+// 감싸야 할 섬 루트는 25곳이고, 그중 다수는 살아 있는지부터 확인해야 한다.
+// 기계적 변환이 아니라 판단이 드는 일이라 별건으로 남긴다.
+//
+// 그때까지 **자라지는 못하게** 잠근다. 이 숫자가 늘면 실패한다.
+const FRAMER_UNGUARDED_BUDGET = 30;
+const framerFiles = walk("src", /\.tsx?$/).filter((f) => {
+  const src = readFileSync(f, "utf8");
+  return /from ["']framer-motion["']/.test(src) && !/[rR]educedMotion|MotionConfig/.test(src);
+});
+if (framerFiles.length > FRAMER_UNGUARDED_BUDGET) {
+  const added = framerFiles.length - FRAMER_UNGUARDED_BUDGET;
+  failures.push(
+    `framer-motion 을 쓰면서 감축 선호를 읽지 않는 파일이 ${framerFiles.length}개다(기록된 ${FRAMER_UNGUARDED_BUDGET}개보다 ${added}개 늘었다).\n` +
+      `    framer 의 기본값은 선호를 무시한다. 새 컴포넌트는 섬 루트를 <MotionConfig reducedMotion="user"> 로 감싼다.\n` +
+      `    기존 구멍을 닫았다면 이 숫자를 줄여서 잠근다 — 늘리지 않는다.`,
+  );
+}
+
+// ── 7. 탈출구는 좁게 유지한다 ───────────────────────────────────────────────
 const essential = walk("src", /\.(tsx|astro)$/).filter((f) =>
   /data-motion=["']essential["']/.test(readFileSync(f, "utf8")),
 );
@@ -116,5 +143,6 @@ if (failures.length) {
 
 console.log(
   `모션 계약 감사 PASS — 전역 담요 있음, smooth 스크롤 가드됨, 로컬 사본 0건, ` +
-    `JS 구동 모션 전부 선호 인지, 선호를 읽는 곳은 공유 훅 하나, 탈출구 ${essential.length}/${ESSENTIAL_BUDGET}개.`,
+    `useFrame·스크롤은 선호 인지, 선호를 읽는 곳은 공유 훅 하나, ` +
+    `탈출구 ${essential.length}/${ESSENTIAL_BUDGET}개, framer 미가드 ${framerFiles.length}/${FRAMER_UNGUARDED_BUDGET}개(미해결·잠금).`,
 );
