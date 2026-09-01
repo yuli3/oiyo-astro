@@ -33,16 +33,23 @@ const fail = (m) => failures.push(m);
 
 // 경로 글롭이 어떤 자산 예시에 매칭되는지 본다. 전수 대조가 아니라, 충돌이
 // 실제로 일어나는 대표 경로만 확인한다.
+// 대표 경로. repo 마다 구조가 달라도 이 형태들은 공통이라 충돌을 드러낸다.
+// 실제 파일 존재 여부와 무관하게 **규칙 매칭**만 본다 — 파일이 나중에 생겨도
+// 충돌은 그때 발생하므로 미리 막는 것이 목적이다.
 const SAMPLES = [
   "/_astro/app.abc123.js",
   "/fonts/x.woff2",
+  "/img/a.webp",
   "/img/a.png",
   "/favicon-32x32.png",
   "/robots.txt",
+  "/ads.txt",
   "/manifest.json",
-  "/data/geonames-cities.json",
+  "/brand-facts.json",
+  "/data/x.json",
   "/sitemap-index.xml",
-  "/ko/ontology/",
+  "/ko/anything/",
+  "/2026-01-01/",
 ];
 
 function matches(glob, path) {
