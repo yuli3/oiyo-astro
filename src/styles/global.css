@@ -225,6 +225,38 @@ pre { max-width: 100%; overflow-x: auto; }
    `useReducedMotion()` / `prefersReducedMotion()` in src/hooks/useMotion.ts.
    Both halves are enforced by `npm run audit:motion-contract`.
    ────────────────────────────────────────────────────────────────────────── */
+/* ──────────────────────────────────────────────────────────────────────────
+   Cross-document view transitions (2026-09-01)
+
+   Native MPA transitions — no router, no JS. Deliberately NOT Astro's
+   <ClientRouter />: that intercepts navigation and swaps the DOM in JS, which
+   changes island hydration and script lifecycle across 1,516 pages. This is
+   pure CSS, so a browser that does not support it simply navigates as before
+   and nothing else about the site changes.
+
+   The site header is named so it persists across a navigation instead of
+   cross-fading with the rest of the page — the chrome stays put while the
+   content changes underneath. One named pair to start; add more only after
+   watching this one behave.
+   ────────────────────────────────────────────────────────────────────────── */
+@view-transition {
+  navigation: auto;
+}
+
+[data-site-header] {
+  view-transition-name: site-header;
+}
+
+/* The blanket below cannot reach these: ::view-transition-* are pseudo-elements
+   on the document root, not descendants matched by `*`. A reduced-motion user
+   would still get the full-page cross-fade. Turn the navigation off instead of
+   trying to out-specify the UA animations. */
+@media (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *:not([data-motion="essential"], [data-motion="essential"] *),
   *:not([data-motion="essential"], [data-motion="essential"] *)::before,

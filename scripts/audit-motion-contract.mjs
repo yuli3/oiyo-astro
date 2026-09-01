@@ -98,7 +98,22 @@ for (const file of walk("src", /\.tsx?$/)) {
   }
 }
 
-// ── 6. framer-motion — 아직 닫히지 않은 구멍 ───────────────────────────────
+// ── 6. view transition 은 담요 밖에 있다 ──────────────────────────────────
+// `::view-transition-old/new/group` 은 문서 루트의 의사 요소라 `*` 담요가
+// 잡지 못한다. 감축을 요청한 사람에게 전체 화면 크로스페이드가 그대로 간다.
+// UA 애니메이션을 특이도로 이기려 하지 말고 navigation 자체를 끈다.
+if (/@view-transition/.test(css)) {
+  const reduceBlock = css.slice(css.search(/@media \(prefers-reduced-motion: reduce\)/));
+  if (!/@view-transition\s*\{[^}]*navigation:\s*none/.test(reduceBlock)) {
+    failures.push(
+      `${GLOBAL_CSS}: @view-transition 을 켰는데 감축 선호일 때 끄지 않는다. ` +
+        `::view-transition-* 는 담요가 못 잡으므로 @media (prefers-reduced-motion: reduce) 안에 ` +
+        `@view-transition { navigation: none; } 를 둔다.`,
+    );
+  }
+}
+
+// ── 7. framer-motion — 아직 닫히지 않은 구멍 ───────────────────────────────
 // framer 는 transform 을 rAF 로 굴리므로 CSS 담요가 닿지 않는다. 그리고
 // framer 의 기본값은 사용자 선호를 **무시한다** — MotionConfigContext 의
 // 기본 `reducedMotion` 이 "never" 다. 지키게 하려면 각 React 섬 루트를
@@ -125,7 +140,7 @@ if (framerFiles.length > FRAMER_UNGUARDED_BUDGET) {
   );
 }
 
-// ── 7. 탈출구는 좁게 유지한다 ───────────────────────────────────────────────
+// ── 8. 탈출구는 좁게 유지한다 ───────────────────────────────────────────────
 const essential = walk("src", /\.(tsx|astro)$/).filter((f) =>
   /data-motion=["']essential["']/.test(readFileSync(f, "utf8")),
 );
