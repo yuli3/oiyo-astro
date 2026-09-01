@@ -118,11 +118,19 @@ for (const token of [
 
 for (const token of [
   "Compass", "aria-hidden=\"true\"", "role=\"progressbar\"", "aria-valuenow", "aria-valuetext",
-  "aria-live=\"polite\"", "min-h-11", "focus-visible:outline", "prefers-reduced-motion: reduce",
+  "aria-live=\"polite\"", "min-h-11", "focus-visible:outline",
   "strengthTitle", "cautionTitle", "actionTitle", "aria-pressed", "ROLE_VISUAL_TOKENS",
 ]) if (!component.includes(token)) errors.push(`accessible visual consumer contract missing: ${token}`);
 for (const forbidden of ["localStorage", "sessionStorage", "navigator.share", "fetch(", "XMLHttpRequest"]) {
   if (component.includes(forbidden)) errors.push(`no-storage/no-network specimen violated: ${forbidden}`);
+}
+// 2026-09-01: 이 목록에는 `prefers-reduced-motion: reduce` 가 있었다. 이 표본이
+// 감축 모션을 지킨다는 뜻이었고 그 의도는 유효하지만, 표본이 **자기 사본**을
+// 들고 있으라는 요구가 돼 버렸다. 계약은 src/styles/global.css 로 옮겼으므로
+// 요구를 뒤집는다 — 사본이 없어야 한다. 전역 계약 자체는
+// `npm run audit:motion-contract` 가 검사한다.
+if (component.includes("animation-duration: 0.01ms")) {
+  errors.push("표본이 전역 담요 규칙을 로컬에 복사했다 — src/styles/global.css 의 모션 계약이 이미 덮는다");
 }
 if (/(#[0-9a-f]{3,8})/i.test(component)) errors.push("component contains ad-hoc color outside the one-primary-plus-neutral token contract");
 
