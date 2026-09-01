@@ -171,6 +171,15 @@ const LABELS: Record<SupportedLang, Labels> = {
   },
 }
 
+const PRIMARY_GUIDE_LABEL: Record<SupportedLang, (type: MbtiType) => string> = {
+  ko: (type) => `${type} 유형 상세 해설 보기`,
+  en: (type) => `Read the full ${type} guide`,
+  ja: (type) => `${type}タイプの詳しい解説を見る`,
+  zh: (type) => `查看 ${type} 类型详细解析`,
+  fr: (type) => `Lire le guide complet du type ${type}`,
+  es: (type) => `Leer la guía completa del tipo ${type}`,
+}
+
 export const QUESTIONS: Record<SupportedLang, Question[]> = {
   ko: [
     { id: 'q1', dim: 'EI', text: '에너지가 떨어졌을 때 나는 보통...', a: { text: '사람들과 만나 이야기하며 회복한다', value: 'E' }, b: { text: '혼자 조용히 쉬며 회복한다', value: 'I' } },
@@ -396,10 +405,16 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
           onShareClick={() => gaEvent('share_click', { test_id: 'mbti' })}
         />
         <CopyResultLink locale={l} onCopyClick={() => gaEvent('share_click', { test_id: 'mbti' })} />
+        <a
+          href={`/${l}/mbti/${mbtiType.toLowerCase()}`}
+          className="mt-6 flex min-h-12 w-full items-center justify-between rounded-xl bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300"
+        >
+          <span>{PRIMARY_GUIDE_LABEL[l](mbtiType)}</span>
+          <span aria-hidden="true">→</span>
+        </a>
         <ResultNextSteps
           locale={l}
           links={[
-            { href: `/${l}/mbti/${mbtiType.toLowerCase()}`, label: l === 'ko' ? `🧭 ${mbtiType} 완전 해설 보기` : `🧭 Read the full ${mbtiType} guide` },
             { href: `https://wiki.oiyo.net/ko/mbti-dict-${mbtiType.toLowerCase()}/`, label: `📖 ${mbtiType} 유형 사전`, external: true, locales: ['ko'] },
             { href: `/${l}/mbti/hobbies/`, label: l === 'ko' ? `✨ ${mbtiType} 추천 취미` : `✨ ${mbtiType} hobbies` },
             { href: `https://blog.oiyo.net/${l}/mbti-compatibility/`, label: l === 'ko' ? '💞 유형 궁합 보기' : '💞 Type compatibility', external: true },
