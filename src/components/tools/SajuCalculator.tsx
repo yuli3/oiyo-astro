@@ -213,6 +213,7 @@ const L: Record<Locale, {
   dominantElement: string; strengths: string; weaknesses: string; career: string;
   luckyColors: string; luckyNumbers: string; luckyDirections: string;
   disclaimer: string;
+  methodNote: string;
 }> = {
   ko: {
     title: '사주 계산기', subtitle: '사주팔자(四柱八字) — 생년월일시 기반 운명 분석',
@@ -224,6 +225,12 @@ const L: Record<Locale, {
     dominantElement: '주요 오행', strengths: '강점', weaknesses: '약점', career: '적합 직업',
     luckyColors: '행운의 색', luckyNumbers: '행운의 숫자', luckyDirections: '행운의 방위',
     disclaimer: '사주는 동양의 전통적인 운명론으로, 과학적 근거가 없습니다. 재미와 자기 이해의 도구로만 활용하세요.',
+    methodNote: 'Desde septiembre de 2026, los pilares de año y mes siguen los términos solares. Antes se usaban el año y el mes del calendario, así que un resultado que guardaste o compartiste puede diferir.',
+    methodNote: 'Depuis septembre 2026, les piliers de l’année et du mois suivent les termes solaires. Les versions précédentes utilisaient l’année et le mois du calendrier : un résultat enregistré ou partagé auparavant peut différer.',
+    methodNote: '自2026年9月起，年柱与月柱按节气计算。此前使用历法上的年份与月份，因此与您先前保存或分享的结果可能不同。',
+    methodNote: '2026年9月より年柱・月柱を節気基準で計算します。以前は暦上の年・月を用いていたため、過去に保存・共有した結果と異なる場合があります。',
+    methodNote: 'Since September 2026, the year and month pillars follow solar terms. Earlier versions used the calendar year and month, so a result you saved or shared before may differ.',
+    methodNote: '2026년 9월부터 연주·월주를 절기(節氣) 기준으로 계산합니다. 이전에는 달력상 연도·월을 썼기 때문에 예전에 저장하거나 공유한 결과와 다를 수 있습니다.',
   },
   en: {
     title: 'Saju Palja Calculator', subtitle: 'Free Korean Four Pillars birth chart reading',
@@ -723,6 +730,12 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           {/* Four Pillars */}
           <div>
             <h2 className="text-sm font-bold text-green-700 mb-3">{t.fourPillars}</h2>
+            {/* 2026-09-01: 연·월주 산식이 역법 기준에서 절기 기준으로 바뀌었다.
+                월주는 사실상 모든 출생에서 값이 달라지므로, 예전 결과를 저장·공유한
+                사람이 어긋난 값을 보게 된다. 조용히 바꾸지 않는다. */}
+            <p className="mb-3 rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-[11px] leading-5 text-amber-900">
+              {t.methodNote}
+            </p>
             <div className={`grid gap-3 ${result.pillars.length === 4 ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-3'}`}>
               {result.pillars.map(p => (
                 <PillarCard key={p.label} label={p.label} role={roles[p.key] ?? ''} stemIdx={p.stem} branchIdx={p.branch} />
