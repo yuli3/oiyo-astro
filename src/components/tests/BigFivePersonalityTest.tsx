@@ -8,6 +8,7 @@ import CopyResultLink from '../shared/CopyResultLink';
 import { readResultCode, writeResultCode, clearResultCode } from '../../lib/result-url';
 import { recordTestResult } from '@/lib/user/test-results';
 import { gaEvent } from '@/lib/analytics/ga-event';
+import { getBigFiveResultSummary } from './big-five-result-summary'
 import {
   bigFiveClassifications,
   bigFivePlugin,
@@ -418,12 +419,14 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
   const sorted = [...dimKeys].sort((a, b) => scores[b] - scores[a])
   const dominant = sorted[0]
   const secondary = sorted[1]
+  const resultSummary = getBigFiveResultSummary(scores, lp)
 
   return (
     <div className="space-y-6 animate-fadeInUp">
       <div className="text-center space-y-2">
         <p className="text-sm text-muted-foreground">{lb.yourProfile}</p>
         <h1 className="text-2xl font-bold">{lb.title}</h1>
+        <p className="mx-auto max-w-2xl text-base leading-7 text-foreground/80">{resultSummary.conclusion}</p>
       </div>
 
       <div className="grid grid-cols-2 gap-3">
@@ -487,12 +490,18 @@ export default function BigFivePersonalityTest({ locale: lp = 'ko' }: Props) {
         description={`${lb.secondaryTrait}: ${DIM_META[secondary][locale].label} ${scores[secondary]}%`}
       />
       <CopyResultLink locale={locale} />
+      <a
+        href={resultSummary.primaryHref}
+        className="flex min-h-12 w-full items-center justify-between rounded-xl bg-blue-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-blue-800 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-300"
+      >
+        <span>{resultSummary.primaryAction}</span>
+        <span aria-hidden="true">→</span>
+      </a>
       <ResultNextSteps
         locale={locale}
         links={[
           { href: `/${locale}/mbti/test/`, label: locale === 'ko' ? '🧠 MBTI 테스트' : locale === 'ja' ? '🧠 MBTIテスト' : '🧠 MBTI test' },
           { href: `/${locale}/enneagram/test/`, label: locale === 'ko' ? '🔮 에니어그램 테스트' : locale === 'ja' ? '🔮 エニアグラムテスト' : '🔮 Enneagram test' },
-          { href: `/${locale}/inner-strength/test/`, label: locale === 'ko' ? '💪 내면 강점 테스트' : locale === 'ja' ? '💪 内面の強みテスト' : '💪 Inner strength test' },
         ]}
       />
       <RelatedReading locale={locale} topic="big5" />
