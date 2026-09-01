@@ -24,7 +24,13 @@
   Cache-Control: public, max-age=604800, s-maxage=604800
   X-Content-Type-Options: nosniff
 
-/img/*
+# `/img/*` 규칙은 2026-09-01 에 제거했다. `public/img/` 가 존재하지 않아 죽은
+# 규칙이었고, 동시에 `/*.png` 와 겹쳐 파일이 생기는 순간 Cache-Control 이 중복될
+# 자리였다. 이미지는 확장자 규칙으로 덮는다.
+/*.jpg
+  Cache-Control: public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400
+
+/*.webp
   Cache-Control: public, max-age=604800, s-maxage=604800, stale-while-revalidate=86400
 
 # ──────────────────────────────────────────
@@ -56,13 +62,53 @@
   Cache-Control: public, max-age=3600, s-maxage=86400
 
 # ──────────────────────────────────────────
-# ALL PAGES — security headers
+# HTML — 엣지에서만 캐시하고 브라우저는 매번 재검증
+# ──────────────────────────────────────────
+# 이 정책은 예전에 아래 `/*` 블록에 있었다. 그런데 **Cloudflare Pages 는 매칭되는
+# 규칙을 전부 적용하고 같은 헤더를 이어 붙인다.** 그래서 `/_astro/*.js` 는
+# `/_astro/*` 와 `/*` 에 둘 다 걸려
+#   `public, max-age=31536000, immutable, public, max-age=0, s-maxage=300, …`
+# 처럼 `max-age` 가 두 개인 헤더를 받았다. RFC 9111 은 반복 지시어 처리를 구현에
+# 맡기므로 실효 정책이 모호해진다. 1년 불변 캐시를 의도한 해시 자산이 그 이점을
+# 못 받고 있었다(2026-09-01 실측: 네 사이트 전부).
+#
+# 증거: 같은 이유로 `X-Content-Type-Options: nosniff` 도 두 번 나왔다.
+#
+# 그래서 캐시 정책을 `/*` 에서 떼어 **HTML 경로에만** 건다. 로케일 디렉터리 안은
+# 전부 HTML 이고 자산은 최상위(`/_astro`, `/img`, `/fonts`, `*.png`)에 있어 겹치지
+# 않는다. 보안 헤더는 `/*` 에 그대로 둔다 — 값이 같아 중복돼도 해가 없고, 새 경로가
+# 생겨도 자동으로 덮인다.
+/
+  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+
+/ko/*
+  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+
+/en/*
+  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+
+/ja/*
+  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+
+/zh/*
+  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+
+/fr/*
+  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+
+/es/*
+  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
+
+# ──────────────────────────────────────────
+# ALL PAGES — security headers (캐시 정책은 여기 두지 않는다)
 # CSP intentionally omitted (2026-06-14): static, no-auth, no-user-data site — CSP has no
 # high-value target here and a mis-allowlisted CSP silently breaks ads/analytics. Clickjacking,
 # MIME-sniffing, and HTTPS protections remain via the headers below.
+#
+# **이 블록에 Cache-Control 을 다시 넣지 말 것.** 모든 경로에 매칭되므로 위의
+# 자산별 정책과 충돌하는 헤더를 만든다. audit:headers-collision 이 막는다.
 # ──────────────────────────────────────────
 /*
-  Cache-Control: public, max-age=0, s-maxage=300, stale-while-revalidate=600
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
