@@ -13,7 +13,7 @@
 //          prefersReducedMotion() 으로 각자 처리해야 한다.
 //
 // usage: node scripts/audit-motion-contract.mjs
-import { readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
 import { dirname, join, relative, resolve } from "node:path";
 
 const GLOBAL_CSS = "src/styles/global.css";
@@ -23,6 +23,7 @@ const ESSENTIAL_BUDGET = 6;
 
 const failures = [];
 let framerSummary = "";
+let viewTransitionSummary = "";
 
 function walk(dir, exts) {
   const out = [];
@@ -114,7 +115,41 @@ if (/@view-transition/.test(css)) {
   }
 }
 
-// ── 7. framer-motion — 하이드레이트되는 섬만이 문제다 ─────────────────────
+// ── 7. view-transition-name 은 문서 안에서 유일해야 한다 ──────────────────
+// 한 문서에 같은 이름이 둘 있으면 브라우저는 그 전환을 **통째로 건너뛴다**.
+// 조용히 아무 일도 일어나지 않으므로 눈으로는 "지원 안 되나 보다"와 구분되지
+// 않는다. 그래서 소스가 아니라 **빌드 산출물**에서 센다.
+if (existsSync("dist")) {
+  const pages = [];
+  const collect = (dir) => {
+    for (const name of readdirSync(dir)) {
+      const p = join(dir, name);
+      if (statSync(p).isDirectory()) collect(p);
+      else if (name.endsWith(".html")) pages.push(p);
+    }
+  };
+  collect("dist");
+  let checked = 0;
+  for (const page of pages) {
+    const html = readFileSync(page, "utf8");
+    const names = [...html.matchAll(/view-transition-name:\s*([a-zA-Z][\w-]*)/g)].map((m) => m[1]);
+    if (!names.length) continue;
+    checked++;
+    const seen = new Map();
+    for (const n of names) seen.set(n, (seen.get(n) ?? 0) + 1);
+    // `route-*` 는 CSS 규칙 한 줄로 두 선택자에 걸리므로 문서에 한 번만 나온다.
+    // 인라인 스타일로 같은 이름이 여러 요소에 붙으면 그때가 충돌이다.
+    const dupes = [...seen].filter(([, n]) => n > 1).map(([k]) => k);
+    if (dupes.length) {
+      failures.push(`${page}: view-transition-name 이 중복이다(${dupes.join(", ")}). 이름이 겹치면 브라우저는 전환 전체를 건너뛴다.`);
+    }
+  }
+  viewTransitionSummary = `이름 있는 페이지 ${checked}곳 중복 0`;
+} else {
+  viewTransitionSummary = "이름 중복 미검사(dist 없음 — npm run build 후 다시 돌린다)";
+}
+
+// ── 8. framer-motion — 하이드레이트되는 섬만이 문제다 ─────────────────────
 // framer 는 transform 을 rAF 로 굴려 CSS 담요가 닿지 않고, 기본값
 // (`MotionConfigContext` 의 "never")이 사용자 선호를 **무시한다**.
 //
@@ -214,7 +249,7 @@ if (/@view-transition/.test(css)) {
   framerSummary = `framer 섬 ${live.length}곳 전부 MotionConfig, 미도달 ${unreachable.length}/${UNREACHABLE_BUDGET}개`;
 }
 
-// ── 8. 탈출구는 좁게 유지한다 ───────────────────────────────────────────────
+// ── 9. 탈출구는 좁게 유지한다 ───────────────────────────────────────────────
 const essential = walk("src", /\.(tsx|astro)$/).filter((f) =>
   /data-motion=["']essential["']/.test(readFileSync(f, "utf8")),
 );
@@ -233,5 +268,5 @@ if (failures.length) {
 console.log(
   `모션 계약 감사 PASS — 전역 담요 있음, smooth 스크롤 가드됨, 로컬 사본 0건, ` +
     `useFrame·스크롤은 선호 인지, 선호를 읽는 곳은 공유 훅 하나, ` +
-    `탈출구 ${essential.length}/${ESSENTIAL_BUDGET}개, ${framerSummary}.`,
+    `탈출구 ${essential.length}/${ESSENTIAL_BUDGET}개, ${framerSummary}, ${viewTransitionSummary}.`,
 );

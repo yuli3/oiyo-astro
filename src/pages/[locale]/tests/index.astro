@@ -7,6 +7,7 @@ import MentalBoost from '../../../components/shared/MentalBoost.astro';
 import { TEST_DIRECTORY_EXTRA } from '../../../data/test-directory-extra';
 import { QUESTION_LANES, LANE_BY_PATH, MOOD_BOUNDARY } from '../../../data/test-question-lanes';
 import { Card, CardContent, CardHeader } from '../../../components/ui/card';
+import { routeTransitionName } from '../../../lib/system/view-transition-name';
 import {
   Item,
   ItemActions,
@@ -622,7 +623,10 @@ const visibleLanes = lanes.filter((lane) => lane.tests.length > 0);
                     {test.icon}
                   </ItemMedia>
                   <ItemContent className="min-w-0">
-                    <ItemTitle className="text-foreground group-hover:text-primary">
+                    <ItemTitle
+                      className="text-foreground group-hover:text-primary"
+                      style={{ viewTransitionName: routeTransitionName(test.href) }}
+                    >
                       {test.title[locale]}
                     </ItemTitle>
                     <ItemDescription className="text-xs">
