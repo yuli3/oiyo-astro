@@ -180,7 +180,7 @@ export default function MenuRoulette({ locale }: Props) {
 
   const optionClass = (active: boolean) =>
     `min-h-11 rounded-full border px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 ${
-      active ? 'border-green-700 bg-green-700 text-white' : 'border-green-200 bg-card text-green-900 hover:border-green-500'
+      active ? 'border-green-700 bg-primary text-primary-foreground' : 'border-green-200 bg-card text-green-900 hover:border-green-500'
     }`;
 
   const choose = <T,>(setter: (value: T) => void, value: T) => {
@@ -241,7 +241,7 @@ export default function MenuRoulette({ locale }: Props) {
       </div>
       <output className="sr-only" aria-live="polite" aria-atomic="true">{announcement}</output>
 
-      <button type="button" onClick={spin} disabled={spinning || pool.length === 0} className="mt-5 min-h-12 w-full rounded-full bg-green-700 px-5 py-3 text-base font-bold text-white transition-colors hover:bg-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 disabled:cursor-not-allowed disabled:opacity-60">
+      <button type="button" onClick={spin} disabled={spinning || pool.length === 0} className="mt-5 min-h-12 w-full rounded-full bg-primary px-5 py-3 text-base font-bold text-primary-foreground transition-colors hover:bg-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 disabled:cursor-not-allowed disabled:opacity-60">
         {result ? t.again : t.spin}
       </button>
 

@@ -211,7 +211,7 @@ export function OntologyBirthInput({
           <p className="text-[11px] leading-5 text-amber-700">{c.precision}</p>
           <div className="flex items-center gap-2">
             <button onClick={save} disabled={!(date || birthRecord?.civilDate)}
-              className="h-12 flex-1 rounded-2xl bg-green-700 text-sm font-black text-white transition hover:bg-green-800 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50">{c.save}</button>
+              className="h-12 flex-1 rounded-2xl bg-primary text-sm font-black text-primary-foreground transition hover:bg-green-800 active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50">{c.save}</button>
             {has && (
               <button onClick={() => setEditing(false)} className="h-12 rounded-2xl px-4 text-xs font-bold text-slate-500 hover:bg-slate-50">{c.cancel}</button>
             )}

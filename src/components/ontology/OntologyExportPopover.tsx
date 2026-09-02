@@ -308,9 +308,9 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
       <div id="ontology-export-summary-card" className="mt-3 rounded-2xl border border-green-100 bg-gradient-to-b from-green-50 to-white p-4">
         <p className="text-[10px] font-black uppercase tracking-wider text-green-500">OIYO · {data.exportedAt.slice(0, 10)}</p>
         <div className="mt-2 flex flex-wrap gap-1.5">
-          {data.signals.mbti && <span className="rounded-full bg-green-700 px-2.5 py-1 text-[11px] font-black text-white">{data.signals.mbti.type}</span>}
-          {data.signals.riasec && <span className="rounded-full bg-green-700 px-2.5 py-1 text-[11px] font-black text-white">{data.signals.riasec.code}</span>}
-          {data.signals.enneagram && <span className="rounded-full bg-green-700 px-2.5 py-1 text-[11px] font-black text-white">Ennea {data.signals.enneagram}</span>}
+          {data.signals.mbti && <span className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-black text-primary-foreground">{data.signals.mbti.type}</span>}
+          {data.signals.riasec && <span className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-black text-primary-foreground">{data.signals.riasec.code}</span>}
+          {data.signals.enneagram && <span className="rounded-full bg-primary px-2.5 py-1 text-[11px] font-black text-primary-foreground">Ennea {data.signals.enneagram}</span>}
           {data.signals.zodiac && <span className="rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-black text-green-800">{data.signals.zodiac}</span>}
           {data.signals.saju && <span className="rounded-full bg-green-100 px-2.5 py-1 text-[11px] font-black text-green-800">{data.signals.saju.element}</span>}
           {!data.signals.mbti && !data.signals.riasec && !data.signals.enneagram && !data.signals.zodiac && !data.signals.saju && (

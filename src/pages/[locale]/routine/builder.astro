@@ -310,7 +310,7 @@ const faqJsonLd = {
       <p class="mb-3 text-sm font-bold text-green-800">{txt({ ko: '관련 도구', en: 'Related Tools', ja: '関連ツール', zh: '相关工具', fr: 'Outils connexes', es: 'Herramientas relacionadas' })}</p>
       <div class="flex flex-wrap gap-2">
         {links.map(({ href, label }) => (
-          <a href={localePath(locale, href)} class="rounded-full border-2 border-green-300 bg-card px-4 py-1.5 text-sm font-semibold text-green-700 transition hover:bg-green-700 hover:text-white">
+          <a href={localePath(locale, href)} class="rounded-full border-2 border-green-300 bg-card px-4 py-1.5 text-sm font-semibold text-green-700 transition hover:bg-primary hover:text-primary-foreground">
             {label}
           </a>
         ))}

@@ -80,12 +80,12 @@ export function ProfileMindmap({ locale }: { locale: string }) {
   return (
     <div className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
       <div className="mb-3 flex items-center justify-between">
-        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-green-700 text-sm font-black text-white">{t.center}</span>
+        <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-sm font-black text-primary-foreground">{t.center}</span>
         <span className="text-xs font-bold text-green-700">{total > 0 ? `✓ ${t.saved} · ${t.count(total)}` : t.count(0)}</span>
       </div>
 
       <div className="relative mx-auto" style={{ width: SIZE, height: SIZE, maxWidth: "100%" }}>
-        <div className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-green-700 text-sm font-black text-white shadow-sm">
+        <div className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-primary text-sm font-black text-primary-foreground shadow-sm">
           {t.center}
         </div>
 
@@ -105,7 +105,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
               <span
                 className={
                   "flex h-11 w-11 items-center justify-center rounded-full border text-sm font-black shadow-sm transition " +
-                  (isOpen ? "border-green-700 bg-green-700 text-white" : count > 0 ? "border-green-600 bg-card text-green-800" : "border-green-200 bg-card text-green-700 hover:border-green-400")
+                  (isOpen ? "border-green-700 bg-primary text-primary-foreground" : count > 0 ? "border-green-600 bg-card text-green-800" : "border-green-200 bg-card text-green-700 hover:border-green-400")
                 }
               >
                 {i + 1}

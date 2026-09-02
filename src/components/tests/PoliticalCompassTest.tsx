@@ -407,7 +407,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
         <button
           onClick={handleRestart}
-          class="w-full rounded-xl border-2 border-green-700 bg-card py-3 font-bold text-green-700 transition hover:bg-green-700 hover:text-white"
+          class="w-full rounded-xl border-2 border-green-700 bg-card py-3 font-bold text-green-700 transition hover:bg-primary hover:text-primary-foreground"
         >
           {ui.restart}
         </button>
@@ -428,7 +428,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
       {/* 스텝 인디케이터 */}
       <div class="flex items-center gap-1">
         {POLITICAL_STEP_KEYS.map((_, i) => (
-          <div key={i} class={`h-2 flex-1 rounded-full transition-all ${i < step ? 'bg-green-500' : i === step ? 'bg-green-700' : 'bg-slate-200'}`} />
+          <div key={i} class={`h-2 flex-1 rounded-full transition-all ${i < step ? 'bg-green-500' : i === step ? 'bg-primary' : 'bg-slate-200'}`} />
         ))}
       </div>
       <p class="text-center text-sm font-semibold text-green-700">
@@ -494,7 +494,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
         {step < 3 ? (
           <button
             onClick={handleNext}
-            class="flex-1 rounded-xl border-2 border-green-700 bg-green-700 py-3 font-bold text-white transition hover:bg-green-800"
+            class="flex-1 rounded-xl border-2 border-green-700 bg-primary py-3 font-bold text-primary-foreground transition hover:bg-green-800"
           >
             {ui.next}
           </button>
@@ -502,7 +502,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
           <button
             onClick={handleSubmit}
             disabled={loading}
-            class="flex-1 rounded-xl border-2 border-green-700 bg-green-700 py-3 font-bold text-white transition hover:bg-green-800 disabled:opacity-60"
+            class="flex-1 rounded-xl border-2 border-green-700 bg-primary py-3 font-bold text-primary-foreground transition hover:bg-green-800 disabled:opacity-60"
           >
             {loading ? ui.loading : ui.submit}
           </button>

@@ -204,7 +204,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
                 <button
                   type="button"
                   onClick={() => setDialogOpen(true)}
-                  className="mt-3 h-11 w-full rounded-2xl bg-green-700 text-sm font-black text-white transition hover:bg-green-800 active:scale-[0.98]"
+                  className="mt-3 h-11 w-full rounded-2xl bg-primary text-sm font-black text-primary-foreground transition hover:bg-green-800 active:scale-[0.98]"
                 >
                   {ui.addBirth}
                 </button>
@@ -220,7 +220,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
                   <span className="text-[11px] font-black uppercase tracking-wider text-green-600">{ui.scoreLabel}</span>
                   <div className="h-2 flex-1 overflow-hidden rounded-full bg-surface-subtle">
                     <div
-                      className="h-full rounded-full bg-green-700 transition-[width] duration-700 ease-out"
+                      className="h-full rounded-full bg-primary transition-[width] duration-700 ease-out"
                       style={{ width: `${reading.balanceScore}%` }}
                     />
                   </div>

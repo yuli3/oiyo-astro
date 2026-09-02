@@ -796,7 +796,7 @@ export default function ZodiacPersonality({ locale }: Props) {
               />
               <button
                 onClick={handleBirthdayLookup}
-                className="px-4 py-2 bg-green-600 text-white text-sm font-medium rounded-lg hover:bg-green-700 transition-colors"
+                className="px-4 py-2 bg-green-600 text-primary-foreground text-sm font-medium rounded-lg hover:bg-primary transition-colors"
               >
                 {ui.lookupBtn}
               </button>

@@ -407,7 +407,7 @@ export default function WorkLifeBalanceTest({ locale: lp = 'ko' }: Props) {
         <button
           onClick={share}
           aria-label={lb.share}
-          className="flex-1 rounded-xl bg-green-600 text-white px-4 py-2 text-sm font-bold hover:bg-green-700 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
+          className="flex-1 rounded-xl bg-green-600 text-primary-foreground px-4 py-2 text-sm font-bold hover:bg-primary transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500"
         >
           {lb.share}
         </button>

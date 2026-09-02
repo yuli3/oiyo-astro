@@ -43,13 +43,13 @@ export function OntologyPlatformReadOnlyPilot({ locale }: { locale: OntologyPlat
   return (
     <section className="mt-8 rounded-3xl border border-green-200 bg-green-50/60 p-4 text-slate-950 shadow-sm sm:p-6" aria-labelledby="ontology-platform-pilot-title">
       <div className="flex items-start gap-3">
-        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-green-700 text-white" aria-hidden="true"><Compass size={23} /></span>
+        <span className="grid h-11 w-11 shrink-0 place-items-center rounded-2xl bg-primary text-primary-foreground" aria-hidden="true"><Compass size={23} /></span>
         <div><h2 id="ontology-platform-pilot-title" className="text-lg font-black">{text.title}</h2><p className="mt-1 text-sm leading-6 text-slate-700">{text.note}</p></div>
       </div>
       <fieldset className="mt-5"><legend className="text-sm font-bold text-slate-900">{text.choose}</legend><div className="mt-2 flex flex-wrap gap-2">
         {READ_ONLY_PILOT_SEEDS.map((id) => {
           const option = views[id];
-          return <button key={id} type="button" disabled={!option} onClick={() => setSeedId(id)} aria-pressed={id === seedId} className="min-h-11 rounded-xl border border-green-700 bg-card px-3 text-sm font-bold text-green-900 disabled:cursor-wait disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 aria-pressed:bg-green-700 aria-pressed:text-white">{option?.seed.label ?? text.loading}</button>;
+          return <button key={id} type="button" disabled={!option} onClick={() => setSeedId(id)} aria-pressed={id === seedId} className="min-h-11 rounded-xl border border-green-700 bg-card px-3 text-sm font-bold text-green-900 disabled:cursor-wait disabled:opacity-60 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800 aria-pressed:bg-primary aria-pressed:text-primary-foreground">{option?.seed.label ?? text.loading}</button>;
         })}
       </div></fieldset>
       {view ? <div className="mt-5 grid gap-4 sm:grid-cols-2">

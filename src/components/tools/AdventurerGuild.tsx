@@ -241,7 +241,7 @@ export default function AdventurerGuild({ locale }: Props) {
         <div className="flex shrink-0 items-center gap-1">
           <a href={withTrailingSlash(`/${locale}${q.href}`)} className="rounded-full border border-green-200 px-3 py-1 text-xs font-medium text-green-700 hover:border-green-400">{t.open}</a>
           <button type="button" onClick={() => complete(q)} disabled={done}
-            className={`rounded-full px-3 py-1 text-xs font-semibold ${done ? 'bg-green-200 text-green-700' : 'bg-green-700 text-white hover:opacity-90'}`}>
+            className={`rounded-full px-3 py-1 text-xs font-semibold ${done ? 'bg-green-200 text-green-700' : 'bg-primary text-primary-foreground hover:opacity-90'}`}>
             {done ? '✓ ' + t.done : t.do}
           </button>
         </div>
@@ -286,7 +286,7 @@ export default function AdventurerGuild({ locale }: Props) {
       ) : (
         <div className="mt-2 flex flex-wrap gap-2">
           {s.badges.map((b) => (
-            <span key={b} className="rounded-full bg-green-700 px-3 py-1 text-sm font-semibold text-white">{BADGES[b]?.[locale === 'ko' ? 'ko' : 'en'] ?? b}</span>
+            <span key={b} className="rounded-full bg-primary px-3 py-1 text-sm font-semibold text-primary-foreground">{BADGES[b]?.[locale === 'ko' ? 'ko' : 'en'] ?? b}</span>
           ))}
         </div>
       )}

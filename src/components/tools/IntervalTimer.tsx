@@ -123,9 +123,9 @@ export default function IntervalTimer({ locale }: Props) {
 
       <div className="mt-4 flex gap-2">
         {st.phase === 'idle' || st.phase === 'done' ? (
-          <button type="button" onClick={start} className="flex-1 rounded-full bg-green-700 px-5 py-3 font-bold text-white hover:opacity-90">{t.start}</button>
+          <button type="button" onClick={start} className="flex-1 rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground hover:opacity-90">{t.start}</button>
         ) : (
-          <button type="button" onClick={() => setRunning((v) => !v)} className="flex-1 rounded-full bg-green-700 px-5 py-3 font-bold text-white hover:opacity-90">{running ? t.pause : t.resume}</button>
+          <button type="button" onClick={() => setRunning((v) => !v)} className="flex-1 rounded-full bg-primary px-5 py-3 font-bold text-primary-foreground hover:opacity-90">{running ? t.pause : t.resume}</button>
         )}
         <button type="button" onClick={reset} className="rounded-full border border-green-200 bg-card px-5 py-3 font-semibold text-green-800 hover:border-green-400">{t.reset}</button>
       </div>

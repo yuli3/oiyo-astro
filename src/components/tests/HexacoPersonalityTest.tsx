@@ -346,7 +346,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
           <p className="text-xs text-gray-400 text-center mt-4">{t.disclaimer}</p>
         </div>
         <button onClick={() => setStarted(true)}
-          className="px-8 py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors">
+          className="px-8 py-3 bg-green-600 hover:bg-primary text-primary-foreground font-semibold rounded-xl transition-colors">
           {t.start} ({QUESTIONS.length} {t.q})
         </button>
       </div>

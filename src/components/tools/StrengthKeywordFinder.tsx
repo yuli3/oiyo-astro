@@ -194,7 +194,7 @@ export default function StrengthKeywordFinder({ locale }: Props) {
         <button
           type="button"
           onClick={() => setRevealed(true)}
-          className="rounded-full bg-green-700 px-5 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90"
+          className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
         >
           {t.reveal}
         </button>
@@ -222,7 +222,7 @@ export default function StrengthKeywordFinder({ locale }: Props) {
               <p className="mt-1 text-sm text-green-700">{t.cardLead}</p>
               <div className="mt-3 flex flex-wrap gap-2">
                 {chosen.map((w) => (
-                  <span key={w} className="rounded-full bg-green-700 px-3 py-1 text-sm font-semibold text-white">
+                  <span key={w} className="rounded-full bg-primary px-3 py-1 text-sm font-semibold text-primary-foreground">
                     {w}
                   </span>
                 ))}

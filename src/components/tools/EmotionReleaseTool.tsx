@@ -163,7 +163,7 @@ export default function EmotionReleaseTool({ locale }: Props) {
             type="button"
             disabled={!chosen}
             onClick={() => setStep(2)}
-            className="mt-4 rounded-full bg-green-700 px-5 py-2 text-sm font-semibold text-white disabled:opacity-40"
+            className="mt-4 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground disabled:opacity-40"
           >
             {t.toBreath}
           </button>
@@ -179,7 +179,7 @@ export default function EmotionReleaseTool({ locale }: Props) {
             <div className="rounded-xl bg-surface-subtle py-3 text-green-700">⏸️ {t.hold}</div>
             <div className="rounded-xl bg-green-100 py-3 font-semibold text-green-900">🌬️ {t.breatheOut}</div>
           </div>
-          <button type="button" onClick={pickQuote} className="mt-5 rounded-full bg-green-700 px-5 py-2 text-sm font-semibold text-white">
+          <button type="button" onClick={pickQuote} className="mt-5 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground">
             {t.toQuote}
           </button>
         </div>
@@ -193,7 +193,7 @@ export default function EmotionReleaseTool({ locale }: Props) {
             <p className="text-lg font-semibold leading-8 text-foreground">“{quote.text}”</p>
             <footer className="mt-3 text-sm text-green-600">— {quote.author}</footer>
           </blockquote>
-          <button type="button" onClick={() => setStep(4)} className="mt-5 rounded-full bg-green-700 px-5 py-2 text-sm font-semibold text-white">
+          <button type="button" onClick={() => setStep(4)} className="mt-5 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground">
             {t.toRelease}
           </button>
         </div>

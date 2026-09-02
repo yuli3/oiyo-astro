@@ -51,7 +51,7 @@ export function ExplorationRecommenderPrototype({ locale }: Props) {
     </div>
     <ol className="mt-5 space-y-3" aria-live="polite">
       {result.recommendations.map((item, index) => <li key={item.id} className="rounded-2xl bg-surface-subtle p-3">
-        <div className="flex items-start justify-between gap-3"><h3 className="font-black">{index + 1}. {item.environmentToExplore}</h3><span className="shrink-0 rounded-full bg-green-700 px-2 py-1 text-xs font-black text-white">{c.score} {item.score}</span></div>
+        <div className="flex items-start justify-between gap-3"><h3 className="font-black">{index + 1}. {item.environmentToExplore}</h3><span className="shrink-0 rounded-full bg-primary px-2 py-1 text-xs font-black text-primary-foreground">{c.score} {item.score}</span></div>
         <p className="mt-2 text-sm leading-6">{item.experiment20Minutes}</p>
         <p className="mt-2 text-xs"><b>{c.support}:</b> {item.supportingReasons.map((reason) => `${reason.text} (${reason.score})`).join(" · ")}</p>
         <p className="mt-1 text-xs"><b>{c.counter}:</b> {item.counterReasons.map((reason) => `${reason.text} (${reason.score})`).join(" · ")}</p>

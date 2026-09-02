@@ -253,7 +253,7 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
               <span className="text-sm font-black text-green-800">{lens.harmonyIndex}</span>
             </div>
             <div className="mt-3 h-2 overflow-hidden rounded-full bg-lime-50">
-              <div className="h-full rounded-full bg-green-700 transition-[width] duration-700 ease-out" style={{ width: `${lens.harmonyIndex}%` }} />
+              <div className="h-full rounded-full bg-primary transition-[width] duration-700 ease-out" style={{ width: `${lens.harmonyIndex}%` }} />
             </div>
           </article>)}
         </div>

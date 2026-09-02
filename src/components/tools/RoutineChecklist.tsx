@@ -130,11 +130,11 @@ export default function RoutineChecklist({ locale }: Props) {
 
       <div className="mt-4 flex flex-wrap gap-2">
         <button type="button" onClick={() => addTemplate(t.morningItems)}
-          className="rounded-full border-2 border-green-300 bg-surface-subtle px-3 py-1.5 text-xs font-semibold text-green-700 transition hover:bg-green-700 hover:text-white">
+          className="rounded-full border-2 border-green-300 bg-surface-subtle px-3 py-1.5 text-xs font-semibold text-green-700 transition hover:bg-primary hover:text-primary-foreground">
           {t.templates.morning}
         </button>
         <button type="button" onClick={() => addTemplate(t.eveningItems)}
-          className="rounded-full border-2 border-green-300 bg-surface-subtle px-3 py-1.5 text-xs font-semibold text-green-700 transition hover:bg-green-700 hover:text-white">
+          className="rounded-full border-2 border-green-300 bg-surface-subtle px-3 py-1.5 text-xs font-semibold text-green-700 transition hover:bg-primary hover:text-primary-foreground">
           {t.templates.evening}
         </button>
       </div>
@@ -179,7 +179,7 @@ export default function RoutineChecklist({ locale }: Props) {
           maxLength={60}
           className="min-w-0 flex-1 rounded-xl border-2 border-slate-200 px-3 py-2 text-sm focus:border-green-400 focus:outline-none"
         />
-        <button type="submit" className="rounded-xl bg-green-600 px-4 py-2 text-sm font-bold text-white transition hover:bg-green-700">
+        <button type="submit" className="rounded-xl bg-green-600 px-4 py-2 text-sm font-bold text-primary-foreground transition hover:bg-primary">
           {t.add}
         </button>
       </form>

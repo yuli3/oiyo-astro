@@ -178,7 +178,7 @@ export function RecommendationCards({ locale }: { locale: string }) {
                 </p>
                 <p className="mt-0.5 truncate text-sm font-black text-foreground">{tt(rec.title)}</p>
               </div>
-              <span className="shrink-0 rounded-full bg-green-700 px-2.5 py-1 text-[11px] font-black text-white">
+              <span className="shrink-0 rounded-full bg-primary px-2.5 py-1 text-[11px] font-black text-primary-foreground">
                 {tt("recommendations.cards.matchLabel")} {rec.matchScore}
               </span>
             </div>

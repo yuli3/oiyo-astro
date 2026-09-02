@@ -595,7 +595,7 @@ export default function BoundaryStyleTest({ locale: localeProp }: Props) {
           </button>
           <button
             onClick={share}
-            className="flex-1 rounded-xl bg-green-600 py-3 text-sm font-medium text-white transition hover:bg-green-700"
+            className="flex-1 rounded-xl bg-green-600 py-3 text-sm font-medium text-primary-foreground transition hover:bg-primary"
           >
             {copied ? tx.copied : tx.share}
           </button>

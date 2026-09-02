@@ -104,7 +104,7 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
     <div id="relation-orbit" className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
       <div className="relative mx-auto" style={{ width: SIZE, height: SIZE }}>
         <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 text-center">
-          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-green-700 text-2xl text-white shadow-sm transition-all duration-300">
+          <span className="flex h-16 w-16 items-center justify-center rounded-full bg-primary text-2xl text-primary-foreground shadow-sm transition-all duration-300">
             {centerIcon}
           </span>
           <span className="max-w-[92px] text-[11px] font-black leading-tight text-green-900 transition-all duration-300">

@@ -509,7 +509,7 @@ export default function NatalChartCalculator({ locale }: Props) {
         <button
           type="button"
           onClick={onSubmit}
-          className="w-full rounded-xl bg-green-700 px-5 py-3 text-sm font-bold text-white transition hover:bg-green-800"
+          className="w-full rounded-xl bg-primary px-5 py-3 text-sm font-bold text-primary-foreground transition hover:bg-green-800"
         >
           ✨ {t.submit}
         </button>

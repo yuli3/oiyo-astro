@@ -397,7 +397,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
       {/* Draw button */}
       <button
         onClick={handleDraw}
-        className="w-full py-3 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-xl transition-colors"
+        className="w-full py-3 bg-green-600 hover:bg-primary text-primary-foreground font-semibold rounded-xl transition-colors"
       >
         {drawn ? t.redrawBtn : t.drawBtn}
       </button>

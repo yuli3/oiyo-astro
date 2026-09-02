@@ -170,7 +170,7 @@ export default function JournalingTool({ locale }: Props) {
           type="button"
           onClick={save}
           disabled={!text.trim()}
-          className="rounded-full bg-green-700 px-5 py-2 text-sm font-semibold text-white transition-opacity hover:opacity-90 disabled:opacity-40"
+          className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-40"
         >
           {justSaved ? t.saved : t.save}
         </button>

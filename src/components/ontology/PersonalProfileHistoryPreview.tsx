@@ -182,7 +182,7 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
       <div className="mt-4 flex flex-wrap gap-2">
         <button type="button" onClick={capture} className="min-h-11 rounded-xl border border-green-300 px-4 text-sm font-bold text-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">{t.capture}</button>
         {result.ux.canExport && (
-          <button type="button" onClick={exportHistory} className="min-h-11 rounded-xl bg-green-700 px-4 text-sm font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">{t.export}</button>
+          <button type="button" onClick={exportHistory} className="min-h-11 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700">{t.export}</button>
         )}
         {result.ux.canClear && (
           <button type="button" onClick={() => setResult(clearPersonalProfileHistory())} className="min-h-11 rounded-xl border border-red-200 px-4 text-sm font-bold text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-700">{t.clear}</button>
