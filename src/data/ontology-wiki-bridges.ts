@@ -21,7 +21,8 @@ export const WIKI_DEF_LOCALES: Record<string, string[]> = {
   // 아카식은 ontology-systems 레지스트리에도 없다. 개념 표면이 생길 때
   // 바로 연결되도록 데이터만 먼저 맞춰 둔다. 표면 없이 이 줄은 무해하지만
   // 아무 일도 하지 않는다.
-  'meaning-of-akashic-records': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
+  // 2026-09-03: 아카식 해설은 oiyo /{locale}/akashic-records/about 으로 옮겼다.
+  // 이 레지스트리는 wiki 에 실존하는 정의만 담는다.
 };
 
 export function wikiDefUrl(slug: string, locale: string): string | null {

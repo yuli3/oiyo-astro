@@ -16,6 +16,11 @@ export interface OntologyConcept {
   emoji: string;
   /** ontology-wiki-bridges 의 WIKI_DEF_LOCALES 키. 살아 있는 정의만 등재된다. */
   wikiSlug: string;
+  /**
+   * oiyo 안의 해설 경로(로케일 접두사 없이). 있으면 wiki 대신 이쪽으로 잇는다.
+   * 2026-09-03: 아카식 해설이 wiki 에서 oiyo 로 옮겨졌다.
+   */
+  aboutPath?: string;
   name: Record<Locale, string>;
   /** 한 문장 요약. 단정하지 않는다. */
   summary: Record<Locale, string>;
@@ -44,6 +49,7 @@ export const ONTOLOGY_CONCEPTS: OntologyConcept[] = [
     id: 'akashic-records',
     emoji: '📜',
     wikiSlug: 'meaning-of-akashic-records',
+    aboutPath: '/akashic-records/about',
     name: {
       ko: '아카식 레코드', en: 'Akashic Records', ja: 'アカシックレコード',
       zh: '阿卡西记录', fr: 'Annales akashiques', es: 'Registros akáshicos',

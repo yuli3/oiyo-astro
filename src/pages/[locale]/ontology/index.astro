@@ -52,6 +52,12 @@ const visibleLanes = [
   { lane: 'test', items: tests },
 ] satisfies Array<{ lane: Lane; items: OntologySystem[] }>;
 
+
+// 개념 해설이 oiyo 안에 있을 때 쓰는 라벨.
+const ABOUT_LABEL: Record<Locale, string> = {
+  ko: '자세히 읽기', en: 'Read in depth', ja: '詳しく読む',
+  zh: '深入阅读', fr: 'Lire en détail', es: 'Leer en detalle',
+};
 ---
 
 <Layout title={t('hero.ontology.title') || u.title} description={u.sub} locale={locale}>
@@ -193,7 +199,12 @@ const visibleLanes = [
                 </div>
               ))}
             </dl>
-            <WikiDefinitionLink slug={c.wikiSlug} locale={locale} compact />
+            {c.aboutPath ? (
+              <a class="mt-3 inline-block text-sm text-primary-strong underline underline-offset-4"
+                 href={`/${locale}${c.aboutPath}/`}>{ABOUT_LABEL[locale] ?? ABOUT_LABEL.en}</a>
+            ) : (
+              <WikiDefinitionLink slug={c.wikiSlug} locale={locale} compact />
+            )}
           </li>
         ))}
       </ul>
