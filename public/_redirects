@@ -22,3 +22,35 @@
 /fr/financial-ratios/ https://blog.oiyo.net/fr/financial-ratios/ 301
 /es/financial-ratios https://blog.oiyo.net/es/financial-ratios/ 301
 /es/financial-ratios/ https://blog.oiyo.net/es/financial-ratios/ 301
+
+# ── wiki 에서 넘어온 meaning-of-* 를 실제 페이지로 보낸다 (2026-09-03) ──
+# wiki 는 /:lang/meaning-of-* 한 줄로 이쪽에 넘긴다. 주제별 목적지 매핑을
+# 거기 두면 wiki 의 규칙 예산을 먹어 뒤쪽 정적 규칙이 죽었다(실측). oiyo 는
+# 규칙이 적어 여유가 있으므로 매핑을 여기서 맡는다.
+#
+# 끝의 * 는 슬래시 유무를 함께 받기 위한 것이다. 긴 슬러그가 먼저 와야
+# dream* 이 dream-water 를 삼키지 않는다 — 먼저 매칭이 이긴다.
+/:lang/meaning-of-implementation-intention*  /:lang/habit-builder/about  301
+/:lang/meaning-of-dream-teeth-falling-out*  /:lang/dream/teeth  301
+/:lang/meaning-of-emotion-regulation*  /:lang/emotion-regulation/about  301
+/:lang/meaning-of-saju-stage-geonrok*  /:lang/saju/calculator/  301
+/:lang/meaning-of-attachment-theory*  /:lang/attachment-style/about  301
+/:lang/meaning-of-cognitive-biases*  /:lang/cognitive-bias/about  301
+/:lang/meaning-of-chinese-zodiac*  /:lang/chinese-zodiac/  301
+/:lang/meaning-of-dream-falling*  /:lang/dream/falling  301
+/:lang/meaning-of-jeolgi-chubun*  /:lang/jeolgi/chubun  301
+/:lang/meaning-of-jeolgi-daehan*  /:lang/jeolgi/daehan  301
+/:lang/meaning-of-perfectionism*  /:lang/perfectionism/about  301
+/:lang/meaning-of-dream-water*  /:lang/dream/water  301
+/:lang/meaning-of-biorhythms*  /:lang/biorhythm/calculator/  301
+/:lang/meaning-of-blood-type*  /:lang/blood-type/  301
+/:lang/meaning-of-jeolgi-usu*  /:lang/jeolgi/usu  301
+/:lang/meaning-of-24-jeolgi*  /:lang/jeolgi/about  301
+/:lang/meaning-of-enneagram*  /:lang/enneagram/test/  301
+/:lang/meaning-of-burnout*  /:lang/burnout/about  301
+/:lang/meaning-of-hexaco*  /:lang/hexaco/about  301
+/:lang/meaning-of-dream*  /:lang/dream/about  301
+/:lang/meaning-of-big5*  /:lang/big5/about  301
+/:lang/meaning-of-mbti*  /:lang/mbti/about  301
+/:lang/meaning-of-hsp*  /:lang/hsp-test/  301
+/:lang/meaning-of-tci*  /:lang/tci/about  301
