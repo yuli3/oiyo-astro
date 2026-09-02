@@ -434,7 +434,7 @@ export default function BloodTypePersonality({ locale }: Props) {
 
       {/* Strengths & Weaknesses */}
       <div className="grid grid-cols-2 gap-4">
-        <div className="rounded-xl border border-green-200 bg-green-50 p-4">
+        <div className="rounded-xl border border-green-200 bg-surface-subtle p-4">
           <h2 className="text-sm font-semibold text-green-700 mb-3">✅ {ui.strengthsLabel}</h2>
           <ul className="space-y-1">
             {data.strengths[locale].map((s) => (

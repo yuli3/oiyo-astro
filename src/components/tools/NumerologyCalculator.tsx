@@ -361,7 +361,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   4: {
-    color: "text-green-700", bg: "bg-green-50 border-green-200",
+    color: "text-green-700", bg: "bg-surface-subtle border-green-200",
     keywords: {
       ko: ["안정", "실용성", "성실함", "체계적"],
       en: ["Stability", "Practicality", "Diligence", "Systematic"],
@@ -478,7 +478,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   7: {
-    color: "text-green-700", bg: "bg-green-50 border-green-200",
+    color: "text-green-700", bg: "bg-surface-subtle border-green-200",
     keywords: {
       ko: ["지혜", "분석", "영성", "내향성"],
       en: ["Wisdom", "Analysis", "Spirituality", "Introspection"],
@@ -595,7 +595,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   11: {
-    color: "text-green-700", bg: "bg-green-50 border-green-200",
+    color: "text-green-700", bg: "bg-surface-subtle border-green-200",
     keywords: {
       ko: ["영감", "직관", "이상주의", "영성"],
       en: ["Inspiration", "Intuition", "Idealism", "Spirituality"],
@@ -673,7 +673,7 @@ const MEANINGS: Record<number, NumberMeaning> = {
     },
   },
   33: {
-    color: "text-green-700", bg: "bg-green-50 border-green-200",
+    color: "text-green-700", bg: "bg-surface-subtle border-green-200",
     keywords: {
       ko: ["마스터 교사", "무조건적 사랑", "희생", "치유"],
       en: ["Master Teacher", "Unconditional Love", "Sacrifice", "Healing"],

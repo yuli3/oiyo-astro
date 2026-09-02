@@ -206,7 +206,7 @@ export function ProclaimersDesk() {
                         >
                           {t(`result.${el}`)}
                         </span>
-                        <div className="flex-1 h-4 bg-green-50 rounded-full overflow-hidden">
+                        <div className="flex-1 h-4 bg-surface-subtle rounded-full overflow-hidden">
                           <m.div
                             animate={{ width: `${(count / 8) * 100}%` }}
                             className={`h-full ${getElementBg(el)}`}
@@ -224,7 +224,7 @@ export function ProclaimersDesk() {
 
               <div className="flex justify-center pt-8">
                 <Button
-                  className="rounded-full hover:bg-green-50 text-green-700"
+                  className="rounded-full hover:bg-surface-subtle text-green-700"
                   onClick={() => setResult(null)}
                   variant="ghost"
                 >

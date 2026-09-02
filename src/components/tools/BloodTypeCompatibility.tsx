@@ -851,7 +851,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
 
           {/* Strengths & Cautions */}
           <div className="grid grid-cols-2 gap-3">
-            <div className="bg-green-50 rounded-2xl p-4">
+            <div className="bg-surface-subtle rounded-2xl p-4">
               <h3 className="font-bold text-green-700 text-sm mb-2">{ui.strengthsLabel}</h3>
               <ul className="space-y-1">
                 {result.strengths[locale]?.map((s, i) => (

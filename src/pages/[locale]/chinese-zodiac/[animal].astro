@@ -206,7 +206,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
     <section class="mt-10">
       <h2 class="text-xl font-bold text-foreground">{c.matchTitle}</h2>
       <div class="mt-4 grid gap-3 sm:grid-cols-2">
-        <div class="rounded-xl border border-green-200 bg-green-50 p-4">
+        <div class="rounded-xl border border-green-200 bg-surface-subtle p-4">
           <p class="text-xs font-bold uppercase tracking-widest text-green-700">{c.bestMatch}</p>
           <p class="mt-2 flex flex-wrap gap-2">
             {z.bestMatch.map((a) => (
@@ -276,7 +276,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
         {otherAnimals.map((a) => (
           <a
             href={localePath(`/chinese-zodiac/${a}`)}
-            class="rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-green-50"
+            class="rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
           >
             {ZODIACS[a].emoji} {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
           </a>

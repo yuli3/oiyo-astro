@@ -273,7 +273,7 @@ const faqJsonLd = {
       <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
     </section>
 
-    <section class="mt-10 rounded-2xl bg-green-50 p-6">
+    <section class="mt-10 rounded-2xl bg-surface-subtle p-6">
       <h2 class="text-xl font-bold text-foreground">{c.contextTitle}</h2>
       <p class="mt-3 leading-7 text-green-800">{c.context}</p>
     </section>
@@ -294,7 +294,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-foreground">{c.useTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.useCases.map((item) => (
-          <article class="rounded-xl bg-green-50 p-4">
+          <article class="rounded-xl bg-surface-subtle p-4">
             <h3 class="font-semibold text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-green-800">{item.body}</p>
           </article>
@@ -320,7 +320,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-foreground">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-2">
         {c.reading.map((item) => (
-          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
             <span class="font-semibold text-foreground">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
           </a>

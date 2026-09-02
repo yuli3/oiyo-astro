@@ -83,7 +83,7 @@ export function ResonanceResultDisplay({
 
             <div className="flex flex-wrap gap-6 justify-center lg:justify-start">
               <Button
-                className="h-14 rounded-full border-green-200 text-green-900 hover:bg-green-50 gap-2 px-8 font-sans"
+                className="h-14 rounded-full border-green-200 text-green-900 hover:bg-surface-subtle gap-2 px-8 font-sans"
                 onClick={onReset}
                 variant="outline"
               >
@@ -221,7 +221,7 @@ export function ResonanceResultDisplay({
               <Link2 className="w-6 h-6" /> {t("cta.share")}
             </Button>
             <Button
-              className="h-20 px-12 rounded-full border-green-200 text-green-900 hover:bg-green-50 gap-4 font-black text-xl"
+              className="h-20 px-12 rounded-full border-green-200 text-green-900 hover:bg-surface-subtle gap-4 font-black text-xl"
               onClick={handleDownloadPDF}
               variant="outline"
             >

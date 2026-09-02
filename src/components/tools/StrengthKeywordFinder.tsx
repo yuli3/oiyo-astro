@@ -213,7 +213,7 @@ export default function StrengthKeywordFinder({ locale }: Props) {
       </div>
 
       {revealed && (
-        <div className="mt-6 rounded-2xl border border-green-200 bg-green-50 p-5">
+        <div className="mt-6 rounded-2xl border border-green-200 bg-surface-subtle p-5">
           {chosen.length === 0 ? (
             <p className="text-green-800">{t.empty}</p>
           ) : (

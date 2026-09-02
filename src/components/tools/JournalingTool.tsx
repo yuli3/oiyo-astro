@@ -143,7 +143,7 @@ export default function JournalingTool({ locale }: Props) {
       <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
 
-      <div className="mt-5 rounded-xl bg-green-50 p-4">
+      <div className="mt-5 rounded-xl bg-surface-subtle p-4">
         <div className="flex items-center justify-between gap-3">
           <span className="text-xs font-bold uppercase tracking-wider text-green-700">{t.todaysPrompt}</span>
           <button
@@ -202,7 +202,7 @@ export default function JournalingTool({ locale }: Props) {
         )}
       </div>
 
-      <p className="mt-5 rounded-xl bg-green-50 px-4 py-3 text-xs leading-5 text-green-700">{t.privacy}</p>
+      <p className="mt-5 rounded-xl bg-surface-subtle px-4 py-3 text-xs leading-5 text-green-700">{t.privacy}</p>
     </div>
   );
 }

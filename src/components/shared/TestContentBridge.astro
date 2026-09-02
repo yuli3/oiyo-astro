@@ -26,12 +26,12 @@ const { content, blogUrl, wikiUrl } = Astro.props;
 
   <h3 class="mt-8 text-lg font-semibold text-green-900">{content.linksTitle}</h3>
   <div class:list={['mt-3 grid gap-3', wikiUrl && 'sm:grid-cols-2']}>
-    <a href={blogUrl} class="rounded-lg border border-green-100 bg-green-50/60 p-4 transition hover:border-green-300 hover:bg-green-50">
+    <a href={blogUrl} class="rounded-lg border border-green-100 bg-green-50/60 p-4 transition hover:border-green-300 hover:bg-surface-subtle">
       <span class="text-xs font-semibold uppercase tracking-wide text-green-700">{content.blogLabel}</span>
       <p class="mt-2 text-sm leading-6 text-slate-700">{content.blogText}</p>
     </a>
     {wikiUrl && (
-      <a href={wikiUrl} class="rounded-lg border border-green-100 bg-slate-50 p-4 transition hover:border-green-300 hover:bg-green-50">
+      <a href={wikiUrl} class="rounded-lg border border-green-100 bg-slate-50 p-4 transition hover:border-green-300 hover:bg-surface-subtle">
         <span class="text-xs font-semibold uppercase tracking-wide text-green-700">{content.wikiLabel}</span>
         <p class="mt-2 text-sm leading-6 text-slate-700">{content.wikiText}</p>
       </a>

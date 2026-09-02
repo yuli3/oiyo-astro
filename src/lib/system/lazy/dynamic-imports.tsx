@@ -20,7 +20,7 @@ export const RechartsRadarChartLazy = dynamic(
     loading: () => (
       <Skeleton
         aria-label="Loading chart"
-        className="h-64 w-full bg-green-50"
+        className="h-64 w-full bg-surface-subtle"
         role="status"
       />
     ),

@@ -634,7 +634,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
 
             {/* Best match + Caution */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <div className="rounded-2xl border border-green-200 bg-green-50 p-4">
+              <div className="rounded-2xl border border-green-200 bg-surface-subtle p-4">
                 <h3 className="font-semibold text-green-700 mb-2 text-sm">
                   {t.bestMatchLabel}
                 </h3>
@@ -654,7 +654,7 @@ export default function BreakupRecoveryTest({ locale }: Props) {
 
             <button
               onClick={handleRestart}
-              className="w-full rounded-xl border border-green-300 py-3 text-sm font-semibold text-green-600 hover:bg-green-50 transition-colors"
+              className="w-full rounded-xl border border-green-300 py-3 text-sm font-semibold text-green-600 hover:bg-surface-subtle transition-colors"
             >
               {t.restartBtn}
             </button>

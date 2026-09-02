@@ -108,10 +108,10 @@ function AssessmentMeta({ signals, lang, t }: { signals: OntologySignal[]; lang:
   const date = observedAt ? new Intl.DateTimeFormat(lang, { dateStyle: "medium" }).format(new Date(observedAt)) : "—";
   return (
     <div className="mt-3 flex flex-wrap gap-1.5 text-[10px] font-bold text-green-700">
-      <span className="rounded-full bg-green-50 px-2 py-1">{t.evidence}: {evidence}</span>
-      <span className="rounded-full bg-green-50 px-2 py-1">{t.strength}: {strengthLabel(confidence, t)}</span>
-      <span className="rounded-full bg-green-50 px-2 py-1">{t.observed}: {date} · {t.latest}</span>
-      {itemCount && <span className="rounded-full bg-green-50 px-2 py-1">{itemCount}Q</span>}
+      <span className="rounded-full bg-surface-subtle px-2 py-1">{t.evidence}: {evidence}</span>
+      <span className="rounded-full bg-surface-subtle px-2 py-1">{t.strength}: {strengthLabel(confidence, t)}</span>
+      <span className="rounded-full bg-surface-subtle px-2 py-1">{t.observed}: {date} · {t.latest}</span>
+      {itemCount && <span className="rounded-full bg-surface-subtle px-2 py-1">{itemCount}Q</span>}
     </div>
   );
 }
@@ -201,7 +201,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
 
         {groups.riasec.length === RIASEC.length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.riasecRole}</p>
-          <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.riasec} <span className="ml-1 rounded-full bg-green-50 px-2 py-0.5 text-sm text-green-800">{riasecCode}</span></h3>
+          <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.riasec} <span className="ml-1 rounded-full bg-surface-subtle px-2 py-0.5 text-sm text-green-800">{riasecCode}</span></h3>
           <div className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2">{RIASEC.map((dimension) => <Bar key={dimension} label={dimension} value={valueOf(byConstruct(groups.riasec, `vocation.riasec.${dimension}`)) ?? 0} />)}</div>
           <AssessmentMeta signals={groups.riasec} lang={lang} t={t} />
           <p className="mt-3 text-[11px] leading-5 text-slate-500">{t.riasecCaveat}</p>

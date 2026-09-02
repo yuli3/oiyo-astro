@@ -38,11 +38,11 @@ const RELATION_SCORE: Record<Relation, number> = {
 const ELEM_EMOJIS: Record<Element, string> = { Wood: "🌿", Fire: "🔥", Earth: "🌍", Metal: "⚙️", Water: "💧" };
 
 const ELEM_COLORS: Record<Element, { bg: string; text: string; border: string }> = {
-  Wood:  { bg: "bg-green-50",  text: "text-green-700",  border: "border-green-200" },
+  Wood:  { bg: "bg-surface-subtle",  text: "text-green-700",  border: "border-green-200" },
   Fire:  { bg: "bg-red-50",    text: "text-red-700",    border: "border-red-200" },
   Earth: { bg: "bg-amber-50",  text: "text-amber-700",  border: "border-amber-200" },
   Metal: { bg: "bg-gray-50",   text: "text-gray-700",   border: "border-gray-300" },
-  Water: { bg: "bg-green-50",   text: "text-green-700",   border: "border-green-200" },
+  Water: { bg: "bg-surface-subtle",   text: "text-green-700",   border: "border-green-200" },
 };
 
 const STEM_NAMES: Record<Locale, string[]> = {

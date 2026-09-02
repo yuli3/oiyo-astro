@@ -128,7 +128,7 @@ export default function CareerValuesTest({ locale: localeProp }: { locale?: stri
         {topGroup.map((id) => <article key={id} className="rounded-xl border bg-card p-5"><h3 className="text-lg font-bold" style={{ color: COLORS[id] }}>{copy.dimensions[id].name}</h3><p className="mt-2 text-sm leading-6 text-slate-700">{copy.dimensions[id].description}</p><h4 className="mt-4 text-sm font-semibold">{copy.environments}</h4><ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">{copy.dimensions[id].environments.map((item) => <li key={item}>{item}</li>)}</ul></article>)}
       </section>
 
-      <p className="rounded-xl bg-green-50 p-4 text-sm leading-6 text-foreground">{copy.reflection}</p>
+      <p className="rounded-xl bg-surface-subtle p-4 text-sm leading-6 text-foreground">{copy.reflection}</p>
       <p className="rounded-xl bg-amber-50 p-4 text-xs leading-5 text-amber-900">{copy.disclaimer}</p>
       <div className="flex flex-wrap justify-center gap-3">
         <button type="button" onClick={restart} className="rounded-lg border bg-card px-5 py-2.5 text-sm font-semibold">{copy.restart}</button>

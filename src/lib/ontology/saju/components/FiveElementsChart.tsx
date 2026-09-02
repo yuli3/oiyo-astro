@@ -347,7 +347,7 @@ export function FiveElementsChart({
                 </div>
 
                 <div className="space-y-2">
-                  <div className="w-full bg-green-50 rounded-full h-2">
+                  <div className="w-full bg-surface-subtle rounded-full h-2">
                     <m.div
                       animate={{
                         width: `${Math.min((item.value / 40) * 100, 100)}%`,
@@ -409,7 +409,7 @@ export function FiveElementsChart({
                 {Object.entries(elementRelationships.generation).map(
                   ([from, to]) => (
                     <div
-                      className="flex items-center gap-3 p-2 bg-green-50 rounded"
+                      className="flex items-center gap-3 p-2 bg-surface-subtle rounded"
                       key={`${from}-${to}`}
                     >
                       <div className="flex items-center gap-2">
@@ -474,7 +474,7 @@ export function FiveElementsChart({
             {t("elements.interpretation.title")}
           </h4>
           <div className="space-y-3">
-            <div className="p-3 bg-green-50 rounded-lg">
+            <div className="p-3 bg-surface-subtle rounded-lg">
               <div className="flex items-center gap-2 mb-1">
                 {getElementIcon(dominantElement, "sm")}
                 <span className="text-sm font-medium text-green-900">

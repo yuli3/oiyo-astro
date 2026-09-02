@@ -256,7 +256,7 @@ const ELEMENT_BG: Record<string, string> = {
   fire: 'bg-orange-50 border-orange-200',
   earth: 'bg-amber-50 border-amber-200',
   air: 'bg-sky-50 border-sky-200',
-  water: 'bg-green-50 border-green-200',
+  water: 'bg-surface-subtle border-green-200',
 };
 
 interface FormState { date: string; time: string; unknown: boolean; city: string; }

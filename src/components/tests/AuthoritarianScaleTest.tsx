@@ -140,19 +140,19 @@ function computeScore(answers: Record<string, number>, dim: 1 | 2 | 3 | 4): numb
 function overallLevel(score: number, l: SupportedLang): { label: string; color: string; desc: string } {
   const levels: Record<SupportedLang, [string, string, string][]> = {
     ko: [
-      ['낮음 (자율적)', 'text-green-700 bg-green-50 border-green-200', '권위에 덜 의존하고 독립적·비판적으로 판단합니다.'],
+      ['낮음 (자율적)', 'text-green-700 bg-surface-subtle border-green-200', '권위에 덜 의존하고 독립적·비판적으로 판단합니다.'],
       ['보통', 'text-yellow-700 bg-yellow-50 border-yellow-200', '상황에 따라 권위를 따르기도, 독립적으로 판단하기도 합니다.'],
       ['높음 (권위 의존적)', 'text-orange-700 bg-orange-50 border-orange-200', '권위와 관습에 의존하는 경향이 강합니다.'],
       ['매우 높음', 'text-red-700 bg-red-50 border-red-200', '권위·관습·처벌에 대한 의존이 매우 강합니다.'],
     ],
     en: [
-      ['Low (Autonomous)', 'text-green-700 bg-green-50 border-green-200', 'You rely less on authority and judge independently and critically.'],
+      ['Low (Autonomous)', 'text-green-700 bg-surface-subtle border-green-200', 'You rely less on authority and judge independently and critically.'],
       ['Moderate', 'text-yellow-700 bg-yellow-50 border-yellow-200', 'You sometimes defer to authority and sometimes judge independently.'],
       ['High (Authority-Dependent)', 'text-orange-700 bg-orange-50 border-orange-200', 'You show a strong tendency to rely on authority and convention.'],
       ['Very High', 'text-red-700 bg-red-50 border-red-200', 'You show very strong dependence on authority, convention, and punishment.'],
     ],
     ja: [
-      ['低い（自律的）', 'text-green-700 bg-green-50 border-green-200', '権威への依存が少なく、独立的・批判的に判断します。'],
+      ['低い（自律的）', 'text-green-700 bg-surface-subtle border-green-200', '権威への依存が少なく、独立的・批判的に判断します。'],
       ['普通', 'text-yellow-700 bg-yellow-50 border-yellow-200', '状況によって権威に従ったり、独立的に判断したりします。'],
       ['高い（権威依存的）', 'text-orange-700 bg-orange-50 border-orange-200', '権威や慣習に依存する傾向が強いです。'],
       ['非常に高い', 'text-red-700 bg-red-50 border-red-200', '権威・慣習・処罰への依存が非常に強いです。'],

@@ -98,7 +98,7 @@ export function BirthDateField(props: BirthDateFieldProps) {
         <span className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600">{label}</span>
       )}
       {profileDate ? (
-        <div className="flex items-center justify-between gap-3 rounded-2xl border border-green-100 bg-green-50 px-4 py-3">
+        <div className="flex items-center justify-between gap-3 rounded-2xl border border-green-100 bg-surface-subtle px-4 py-3">
           <span className="min-w-0 text-sm font-black text-green-900">
             <span className="text-green-600">{c.using}</span>
             <span className="mx-2 text-green-300">·</span>
@@ -178,7 +178,7 @@ export function ProfileNameField({ className, label, locale, onChange, value, wa
         <span className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600">{label}</span>
       )}
       {name ? (
-        <div className="flex items-center justify-between gap-3 rounded-2xl border border-green-100 bg-green-50 px-4 py-3">
+        <div className="flex items-center justify-between gap-3 rounded-2xl border border-green-100 bg-surface-subtle px-4 py-3">
           <span className="min-w-0 truncate text-sm font-black text-green-900">
             <span className="text-green-600">{c.using}</span>
             <span className="mx-2 text-green-300">·</span>
@@ -274,7 +274,7 @@ function ProfileChip({
         <span className="mb-1 block text-[11px] font-black uppercase tracking-wider text-green-600">{label}</span>
       )}
       {present ? (
-        <div className="flex items-center justify-between gap-3 rounded-2xl border border-green-100 bg-green-50 px-4 py-3">
+        <div className="flex items-center justify-between gap-3 rounded-2xl border border-green-100 bg-surface-subtle px-4 py-3">
           <span className="min-w-0 truncate text-sm font-black text-green-900">
             <span className="text-green-600">{c.using}</span>
             <span className="mx-2 text-green-300">·</span>

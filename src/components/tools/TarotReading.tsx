@@ -492,7 +492,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
       {drawn && flipped.size === drawn.length && (
         <button
           onClick={share}
-          className="w-full py-2.5 rounded-xl border-2 border-green-300 bg-green-50 text-sm font-bold text-green-700 hover:bg-green-100 transition-colors"
+          className="w-full py-2.5 rounded-xl border-2 border-green-300 bg-surface-subtle text-sm font-bold text-green-700 hover:bg-green-100 transition-colors"
         >
           {shareCopied ? `✅ ${t.shareCopied}` : `🔗 ${t.shareBtn}`}
         </button>

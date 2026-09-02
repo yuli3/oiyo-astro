@@ -159,7 +159,7 @@ export default function ColorMemoryTest({ locale }: Props) {
         <div className="space-y-4">
           <p className="text-center text-sm font-semibold">{l.nowPick}</p>
           {feedback && (
-            <div className={`text-center text-sm font-bold py-2 rounded-xl ${feedback === 'correct' ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+            <div className={`text-center text-sm font-bold py-2 rounded-xl ${feedback === 'correct' ? 'bg-surface-subtle text-green-700' : 'bg-red-50 text-red-700'}`}>
               {feedback === 'correct' ? l.correct : l.wrong}
             </div>
           )}

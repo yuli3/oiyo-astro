@@ -150,7 +150,7 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
                   <button
                     key={task}
                     onClick={() => toggle(dayIndex)}
-                    className={`flex items-center gap-3 rounded-lg border px-3 py-2 text-left text-sm transition-colors ${checked[dayIndex] ? 'border-green-200 bg-green-50 text-green-900' : 'bg-card hover:bg-accent'}`}
+                    className={`flex items-center gap-3 rounded-lg border px-3 py-2 text-left text-sm transition-colors ${checked[dayIndex] ? 'border-green-200 bg-surface-subtle text-green-900' : 'bg-card hover:bg-accent'}`}
                   >
                     <span className={`flex h-7 w-7 flex-none items-center justify-center rounded-full border text-xs font-bold ${checked[dayIndex] ? 'border-green-500 bg-green-500 text-white' : 'border-muted-foreground/30 text-muted-foreground'}`}>
                       {dayIndex + 1}
@@ -163,7 +163,7 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
           </section>
         ))}
       </div>
-      <p className="rounded-xl border border-green-100 bg-green-50 p-4 text-xs leading-relaxed text-green-800">{labels.tip}</p>
+      <p className="rounded-xl border border-green-100 bg-surface-subtle p-4 text-xs leading-relaxed text-green-800">{labels.tip}</p>
       <button onClick={reset} className="w-full rounded-xl border bg-card px-4 py-3 text-sm font-bold hover:bg-accent">{labels.reset}</button>
     </div>
   )

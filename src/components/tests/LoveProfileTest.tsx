@@ -274,7 +274,7 @@ export default function LoveProfileTest({ locale }: Props) {
         <h2 className="text-xl font-bold text-center text-gray-800">{ui.resultTitle}</h2>
 
         {/* Attach */}
-        <div className="bg-green-50 border border-green-100 rounded-2xl p-4">
+        <div className="bg-surface-subtle border border-green-100 rounded-2xl p-4">
           <p className="text-xs font-semibold text-green-600 mb-1">🔐 {ui.attachLabel}</p>
           <p className="font-bold text-green-800 text-lg">{ATTACH_EMOJI[result.attach]} {ad.name}</p>
           <p className="text-sm text-green-700 mt-1">{ad.desc}</p>

@@ -152,7 +152,7 @@ export const ELEMENT_LABEL: Record<Element, Record<Locale, string>> = {
 
 const ELEMENT_BG: Record<Element, string> = {
   fire:  "bg-orange-50 border-orange-200",
-  earth: "bg-green-50 border-green-200",
+  earth: "bg-surface-subtle border-green-200",
   air:   "bg-sky-50 border-sky-200",
   water: "bg-blue-50 border-blue-200",
 };

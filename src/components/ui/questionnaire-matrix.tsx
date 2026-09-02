@@ -119,7 +119,7 @@ export function QuestionnaireMatrix({
                       onClick={() => { onAnswer(question.id, value); setShowValidation(false); }}
                       className={cn(
                         "min-h-12 rounded-lg border bg-muted/40 px-2 py-2 text-xs text-muted-foreground outline-none transition-colors motion-reduce:transition-none",
-                        "hover:border-green-500 hover:bg-green-50 focus-visible:border-green-600 focus-visible:ring-2 focus-visible:ring-green-600/30",
+                        "hover:border-green-500 hover:bg-surface-subtle focus-visible:border-green-600 focus-visible:ring-2 focus-visible:ring-green-600/30",
                         selected && "border-green-600 bg-green-600 font-semibold text-white hover:bg-green-700",
                       )}
                     >

@@ -92,7 +92,7 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
           <div className="mt-3 space-y-2">
             {q.options.map((opt) => (
               <button key={opt.id} type="button" onClick={() => pick(q.id, opt.id)}
-                className="flex w-full items-center justify-between rounded-xl border border-green-100 bg-green-50/40 px-4 py-2.5 text-left text-sm text-green-900 transition-colors hover:border-green-300 hover:bg-green-50">
+                className="flex w-full items-center justify-between rounded-xl border border-green-100 bg-green-50/40 px-4 py-2.5 text-left text-sm text-green-900 transition-colors hover:border-green-300 hover:bg-surface-subtle">
                 <span>{loc(opt.text as LC, locale)}</span>
                 <span className="text-xs text-green-400">{opt.score}</span>
               </button>
@@ -103,7 +103,7 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
 
       {done && result && (
         <div className="mt-5 space-y-5">
-          <div className="rounded-2xl border border-green-200 bg-green-50 p-4 text-center">
+          <div className="rounded-2xl border border-green-200 bg-surface-subtle p-4 text-center">
             <p className="text-xs font-semibold text-green-600">{u("overall")}</p>
             <p className="mt-1 text-4xl font-bold text-green-700">{Math.round(result.overallBalance)}</p>
             <p className="mt-1 text-sm font-semibold text-green-800">{tt(LEVEL[result.balanceLevel], locale)}</p>
@@ -143,13 +143,13 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
               <p className="mb-2 text-sm font-bold text-green-800">{u("recs")}</p>
               <ul className="space-y-1.5">
                 {result.recommendations.slice(0, 4).map((r, i) => (
-                  <li key={i} className="rounded-lg bg-green-50 px-3 py-2 text-sm leading-6 text-green-800">{loc(r as LC, locale)}</li>
+                  <li key={i} className="rounded-lg bg-surface-subtle px-3 py-2 text-sm leading-6 text-green-800">{loc(r as LC, locale)}</li>
                 ))}
               </ul>
             </div>
           )}
 
-          <button type="button" onClick={restart} className="rounded-full border border-green-300 px-5 py-2 text-sm font-medium text-green-700 hover:bg-green-50">{u("restart")}</button>
+          <button type="button" onClick={restart} className="rounded-full border border-green-300 px-5 py-2 text-sm font-medium text-green-700 hover:bg-surface-subtle">{u("restart")}</button>
           <p className="text-[11px] leading-5 text-green-400">{u("disclaimer")}</p>
         </div>
       )}

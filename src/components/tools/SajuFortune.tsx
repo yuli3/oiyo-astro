@@ -43,11 +43,11 @@ const ELEM_NAMES: Record<Element, Record<Locale, string>> = {
 const ELEM_EMOJIS: Record<Element, string> = { Wood: "🌿", Fire: "🔥", Earth: "🌍", Metal: "⚙️", Water: "💧" };
 
 const ELEM_COLORS: Record<Element, { bg: string; text: string; border: string; star: string }> = {
-  Wood:  { bg: "bg-green-50",  text: "text-green-700",  border: "border-green-200",  star: "text-green-500" },
+  Wood:  { bg: "bg-surface-subtle",  text: "text-green-700",  border: "border-green-200",  star: "text-green-500" },
   Fire:  { bg: "bg-red-50",    text: "text-red-700",    border: "border-red-200",    star: "text-red-500" },
   Earth: { bg: "bg-amber-50",  text: "text-amber-700",  border: "border-amber-200",  star: "text-amber-500" },
   Metal: { bg: "bg-gray-50",   text: "text-gray-700",   border: "border-gray-300",   star: "text-gray-500" },
-  Water: { bg: "bg-green-50",   text: "text-green-700",   border: "border-green-200",   star: "text-green-500" },
+  Water: { bg: "bg-surface-subtle",   text: "text-green-700",   border: "border-green-200",   star: "text-green-500" },
 };
 
 const TIER_STARS: Record<Tier, string> = {

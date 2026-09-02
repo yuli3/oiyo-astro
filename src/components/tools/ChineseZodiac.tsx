@@ -227,7 +227,7 @@ const UI: Record<
 // ─── Element colors ───────────────────────────────────────────────────────────
 
 const ELEMENT_COLORS: Record<Element, { bg: string; text: string; badge: string; border: string }> = {
-  wood:  { bg: "bg-green-50",  text: "text-green-800",  badge: "bg-green-100 text-green-700",  border: "border-green-300" },
+  wood:  { bg: "bg-surface-subtle",  text: "text-green-800",  badge: "bg-green-100 text-green-700",  border: "border-green-300" },
   fire:  { bg: "bg-red-50",    text: "text-red-800",    badge: "bg-red-100 text-red-700",      border: "border-red-300" },
   earth: { bg: "bg-yellow-50", text: "text-yellow-800", badge: "bg-yellow-100 text-yellow-700",border: "border-yellow-300" },
   metal: { bg: "bg-gray-50",   text: "text-gray-800",   badge: "bg-gray-100 text-gray-700",    border: "border-gray-300" },

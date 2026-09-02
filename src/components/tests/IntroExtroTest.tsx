@@ -423,7 +423,7 @@ export default function IntroExtroTest({ locale: localeProp }: Props) {
           <p className="text-gray-700 leading-relaxed">{d.description[locale]}</p>
 
           <div className="grid grid-cols-1 gap-3">
-            <div className="bg-green-50 rounded-lg p-3">
+            <div className="bg-surface-subtle rounded-lg p-3">
               <h3 className="font-semibold text-green-800 text-sm mb-1">✓ {t.strengths}</h3>
               <ul className="space-y-1">
                 {d.strengths[locale].map((s, i) => <li key={i} className="text-sm text-green-700">• {s}</li>)}

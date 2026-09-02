@@ -282,7 +282,7 @@ const ELEMENT_COLOR: Record<Element, string> = {
 
 const ELEMENT_BG: Record<Element, string> = {
   fire:"bg-orange-50 border-orange-200",earth:"bg-emerald-50 border-emerald-200",
-  air:"bg-sky-50 border-sky-200",water:"bg-green-50 border-green-200",
+  air:"bg-sky-50 border-sky-200",water:"bg-surface-subtle border-green-200",
 };
 
 const COMPAT_COLOR: Record<CompatType, string> = {
@@ -455,7 +455,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
           </div>
 
           {/* Strengths */}
-          <div className="bg-green-50 border border-green-100 rounded-2xl p-4">
+          <div className="bg-surface-subtle border border-green-100 rounded-2xl p-4">
             <p className="text-xs font-semibold text-green-700 mb-2">✅ {ui.strengthLabel}</p>
             {result.strengths.map((s, i) => (
               <p key={i} className="text-sm text-green-800">{s}</p>
@@ -471,7 +471,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
           </div>
 
           {/* Advice */}
-          <div className="bg-green-50 border border-green-100 rounded-2xl p-4">
+          <div className="bg-surface-subtle border border-green-100 rounded-2xl p-4">
             <p className="text-xs font-semibold text-green-600 mb-1">💡 {ui.adviceLabel}</p>
             <p className="text-sm text-green-800 italic">"{result.advice}"</p>
           </div>

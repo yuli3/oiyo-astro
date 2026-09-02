@@ -121,7 +121,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
                 key={opt.id}
                 type="button"
                 onClick={() => pick(q.id, opt.id)}
-                className="flex w-full items-center gap-3 rounded-xl border border-green-100 bg-green-50/40 px-4 py-3 text-left text-sm text-green-900 transition-colors hover:border-green-300 hover:bg-green-50"
+                className="flex w-full items-center gap-3 rounded-xl border border-green-100 bg-green-50/40 px-4 py-3 text-left text-sm text-green-900 transition-colors hover:border-green-300 hover:bg-surface-subtle"
               >
                 <span className="text-lg">{opt.emoji}</span>
                 <span>{loc(opt.text as LC, locale)}</span>
@@ -134,7 +134,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
       {/* Result */}
       {done && result && (
         <div className="mt-5 space-y-5">
-          <div className="rounded-2xl border border-green-200 bg-green-50 p-4">
+          <div className="rounded-2xl border border-green-200 bg-surface-subtle p-4">
             <p className="text-xs font-semibold text-green-600">
               {u("yourType")}
             </p>
@@ -199,7 +199,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
           <button
             type="button"
             onClick={restart}
-            className="rounded-full border border-green-300 px-5 py-2 text-sm font-medium text-green-700 hover:bg-green-50"
+            className="rounded-full border border-green-300 px-5 py-2 text-sm font-medium text-green-700 hover:bg-surface-subtle"
           >
             {u("restart")}
           </button>

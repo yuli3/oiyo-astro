@@ -175,8 +175,8 @@ export default function EmotionReleaseTool({ locale }: Props) {
         <div className="mt-6 text-center">
           <h2 className="font-semibold text-foreground">{t.step2}</h2>
           <div className="mt-5 space-y-3">
-            <div className="rounded-xl bg-green-50 py-3 text-green-800">🫁 {t.breatheIn}</div>
-            <div className="rounded-xl bg-green-50 py-3 text-green-700">⏸️ {t.hold}</div>
+            <div className="rounded-xl bg-surface-subtle py-3 text-green-800">🫁 {t.breatheIn}</div>
+            <div className="rounded-xl bg-surface-subtle py-3 text-green-700">⏸️ {t.hold}</div>
             <div className="rounded-xl bg-green-100 py-3 font-semibold text-green-900">🌬️ {t.breatheOut}</div>
           </div>
           <button type="button" onClick={pickQuote} className="mt-5 rounded-full bg-green-700 px-5 py-2 text-sm font-semibold text-white">
@@ -189,7 +189,7 @@ export default function EmotionReleaseTool({ locale }: Props) {
       {step === 3 && quote && (
         <div className="mt-6">
           <h2 className="font-semibold text-foreground">{t.step3}</h2>
-          <blockquote className="mt-4 rounded-2xl border border-green-200 bg-green-50 p-6 text-center">
+          <blockquote className="mt-4 rounded-2xl border border-green-200 bg-surface-subtle p-6 text-center">
             <p className="text-lg font-semibold leading-8 text-foreground">“{quote.text}”</p>
             <footer className="mt-3 text-sm text-green-600">— {quote.author}</footer>
           </blockquote>

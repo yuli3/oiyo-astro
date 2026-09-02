@@ -477,7 +477,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
         )}
 
         {profile?.isClose && (
-          <div className="rounded-xl border border-green-200 bg-green-50 p-4" role="note">
+          <div className="rounded-xl border border-green-200 bg-surface-subtle p-4" role="note">
             <h2 className="font-semibold text-foreground">{rt.mixedTitle}</h2>
             <p className="mt-1 text-sm leading-6 text-green-800">{rt.mixedBody.replace("{gap}", String(profile.closeGap))}</p>
           </div>
@@ -489,7 +489,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
           <p className="text-gray-700 leading-relaxed">{info.description[locale]}</p>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="bg-green-50 rounded-lg p-4">
+            <div className="bg-surface-subtle rounded-lg p-4">
               <h3 className="font-semibold text-green-800 mb-2">✓ {rt.strengths}</h3>
               <ul className="space-y-1">
                 {info.strengths[locale].map((s, i) => (

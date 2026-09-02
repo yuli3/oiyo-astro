@@ -110,7 +110,7 @@ export function OntologyBirthInput({
   return (
     <section className="mx-auto w-full max-w-md rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
       <div className="flex items-start gap-3">
-        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-green-50 text-green-800">
+        <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-surface-subtle text-green-800">
           <Calendar className="h-5 w-5" />
         </div>
         <div className="min-w-0 flex-1">
@@ -180,7 +180,7 @@ export function OntologyBirthInput({
                         <button
                           type="button"
                           onClick={() => { setPickedCity(hit); setCityId(hit.city.id); setSearchHits([]); setSearchQuery(""); }}
-                          className="flex w-full items-center justify-between gap-2 px-3 py-2 text-left text-sm hover:bg-green-50"
+                          className="flex w-full items-center justify-between gap-2 px-3 py-2 text-left text-sm hover:bg-surface-subtle"
                         >
                           <span className="truncate">{hit.city.label[lang]}</span>
                           <span className="shrink-0 text-[11px] text-green-500">{hit.countryCode}</span>
@@ -218,7 +218,7 @@ export function OntologyBirthInput({
           </div>
         </div>
       ) : (
-        <div className="mt-4 flex items-center justify-between gap-3 rounded-2xl bg-green-50 px-3 py-3">
+        <div className="mt-4 flex items-center justify-between gap-3 rounded-2xl bg-surface-subtle px-3 py-3">
           <p className="flex min-w-0 flex-col gap-0.5 text-xs leading-5 text-green-800">
             <span className="flex items-center gap-1.5 font-black"><Check className="h-4 w-4 shrink-0" />{c.saved}</span>
             <span className="text-green-700">

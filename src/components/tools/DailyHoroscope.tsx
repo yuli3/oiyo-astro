@@ -867,9 +867,9 @@ export default function DailyHoroscope({ locale }: Props) {
               <button
                 key={s}
                 onClick={() => handleSelect(s)}
-                className={`flex flex-col items-center rounded-xl border py-3 px-2 transition-all hover:border-green-400 hover:bg-green-50 ${
+                className={`flex flex-col items-center rounded-xl border py-3 px-2 transition-all hover:border-green-400 hover:bg-surface-subtle ${
                   selected === s
-                    ? "border-green-500 bg-green-50"
+                    ? "border-green-500 bg-surface-subtle"
                     : "border-gray-200 bg-card"
                 }`}
               >

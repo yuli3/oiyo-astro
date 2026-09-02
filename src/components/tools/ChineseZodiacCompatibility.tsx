@@ -849,7 +849,7 @@ export default function ChineseZodiacCompatibility({ locale }: Props) {
           </div>
 
           {/* Relation description */}
-          <div className="bg-green-50 border border-green-100 rounded-2xl p-5">
+          <div className="bg-surface-subtle border border-green-100 rounded-2xl p-5">
             <h3 className="font-bold text-green-800 text-sm mb-2">{ui.relationLabel}</h3>
             <p className="text-sm text-green-700">{ui.relationDesc[result.relation]}</p>
           </div>

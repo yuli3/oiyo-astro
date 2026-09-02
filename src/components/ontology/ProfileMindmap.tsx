@@ -124,7 +124,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
           const cat = CATS.find((c) => c.id === openCat)!;
           const chips = cat.chips[lang];
           return (
-            <div className="mt-4 rounded-2xl border border-green-100 bg-green-50 p-3">
+            <div className="mt-4 rounded-2xl border border-green-100 bg-surface-subtle p-3">
               <p className="mb-2 text-[11px] font-black uppercase tracking-wider text-green-600">{cat.label[lang]}</p>
               <div className="flex flex-wrap gap-2">
                 {chips.map((chip) => {

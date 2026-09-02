@@ -306,7 +306,7 @@ const faqJsonLd = {
 
     <RoutineChecklist client:visible locale={locale} />
 
-    <div class="mt-10 rounded-2xl border-2 border-green-100 bg-green-50 p-5">
+    <div class="mt-10 rounded-2xl border-2 border-green-100 bg-surface-subtle p-5">
       <p class="mb-3 text-sm font-bold text-green-800">{txt({ ko: '관련 도구', en: 'Related Tools', ja: '関連ツール', zh: '相关工具', fr: 'Outils connexes', es: 'Herramientas relacionadas' })}</p>
       <div class="flex flex-wrap gap-2">
         {links.map(({ href, label }) => (
@@ -339,7 +339,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.useCases.map((item) => (
-          <article class="rounded-xl bg-green-50 p-4">
+          <article class="rounded-xl bg-surface-subtle p-4">
             <h3 class="font-semibold text-slate-950">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
@@ -363,7 +363,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {c.reading.map((item) => (
-          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
             <span class="font-semibold text-slate-950">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
           </a>

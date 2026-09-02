@@ -15,7 +15,7 @@ export function DynamicIcon({ name, ...props }: DynamicIconProps) {
     () =>
       dynamic(dynamicIconImports[name as keyof typeof dynamicIconImports], {
         loading: () => (
-          <div className="w-6 h-6 bg-green-50 rounded animate-pulse" />
+          <div className="w-6 h-6 bg-surface-subtle rounded animate-pulse" />
         ),
       }),
     [name],

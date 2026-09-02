@@ -383,7 +383,7 @@ export default function WorkLifeBalanceTest({ locale: lp = 'ko' }: Props) {
         </span>
       </div>
 
-      <div className="rounded-2xl border border-green-200 bg-green-50 p-4 space-y-2">
+      <div className="rounded-2xl border border-green-200 bg-surface-subtle p-4 space-y-2">
         <h3 className="font-bold text-sm text-green-800">{lb.guidance}</h3>
         <ul className="space-y-1">
           {r.guidance.map((g, i) => (

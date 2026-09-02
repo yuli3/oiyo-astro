@@ -30,7 +30,7 @@ const t = await getTranslations(locale);
       <!-- Categories -->
       {(['technical', 'general', 'feature_request'] as const).map((cat) => (
         <div class="bg-card rounded-2xl border border-green-50 p-5 flex items-start gap-4">
-          <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-lg shrink-0">
+          <div class="w-10 h-10 rounded-xl bg-surface-subtle flex items-center justify-center text-lg shrink-0">
             {cat === 'technical' ? '⚙️' : cat === 'feature_request' ? '💡' : '💬'}
           </div>
           <div>

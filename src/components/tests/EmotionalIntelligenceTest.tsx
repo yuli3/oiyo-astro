@@ -331,7 +331,7 @@ export default function EmotionalIntelligenceTest({ locale: localeProp }: Props)
 
         <div className="bg-card border border-gray-200 rounded-xl p-5 space-y-4">
           <p className="text-gray-700 leading-relaxed">{ld.description[locale]}</p>
-          <div className="bg-green-50 rounded-lg p-4">
+          <div className="bg-surface-subtle rounded-lg p-4">
             <h3 className="font-semibold text-green-800 mb-2">🌱 {t.growth}</h3>
             <ul className="space-y-1">
               {ld.growth[locale].map((s, i) => <li key={i} className="text-sm text-green-700">• {s}</li>)}

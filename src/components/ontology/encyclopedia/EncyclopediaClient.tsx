@@ -143,7 +143,7 @@ export function EncyclopediaClient() {
                     <div className="flex flex-wrap gap-2">
                       {data.strengths?.slice(0, 3).map((s: string) => (
                         <Badge
-                          className="text-[10px] border-green-200 bg-green-50 text-green-700"
+                          className="text-[10px] border-green-200 bg-surface-subtle text-green-700"
                           key={s}
                           variant="outline"
                         >
@@ -193,17 +193,17 @@ export function EncyclopediaClient() {
                       {data.name} ({data.animal})
                     </h3>
                     <div className="grid gap-4 text-green-800">
-                      <div className="p-4 bg-green-50 rounded-xl">
+                      <div className="p-4 bg-surface-subtle rounded-xl">
                         <p className="font-bold text-green-900 mb-1">
                           Time of Day
                         </p>
                         <p>{data.time}</p>
                       </div>
-                      <div className="p-4 bg-green-50 rounded-xl">
+                      <div className="p-4 bg-surface-subtle rounded-xl">
                         <p className="font-bold text-green-900 mb-1">Season</p>
                         <p>{data.season}</p>
                       </div>
-                      <div className="p-4 bg-green-50 rounded-xl">
+                      <div className="p-4 bg-surface-subtle rounded-xl">
                         <p className="font-bold text-green-900 mb-1">
                           Archetype
                         </p>
@@ -346,7 +346,7 @@ function TabButton({ active, icon: Icon, label, onClick }: any) {
         "flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 border shadow-sm",
         active
           ? "bg-[#064e3b] text-white border-[#064e3b] shadow-green-900/20 shadow-lg scale-105"
-          : "bg-card text-green-900 border-white hover:bg-green-50 hover:border-green-200",
+          : "bg-card text-green-900 border-white hover:bg-surface-subtle hover:border-green-200",
       )}
       onClick={onClick}
     >

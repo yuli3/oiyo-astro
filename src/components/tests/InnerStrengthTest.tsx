@@ -212,7 +212,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
             const isStrength = score >= 7;
             const isGrowth = score < 5;
             return (
-              <div key={d} className={`rounded-2xl border p-5 ${isStrength ? 'border-green-200 bg-green-50' : isGrowth ? 'border-orange-200 bg-orange-50' : 'border-slate-200 bg-card'}`}>
+              <div key={d} className={`rounded-2xl border p-5 ${isStrength ? 'border-green-200 bg-surface-subtle' : isGrowth ? 'border-orange-200 bg-orange-50' : 'border-slate-200 bg-card'}`}>
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl">{dim.icon}</span>
@@ -233,7 +233,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
         </div>
 
         {strengths.length > 0 && (
-          <div className="bg-green-50 rounded-2xl p-5 border border-green-200">
+          <div className="bg-surface-subtle rounded-2xl p-5 border border-green-200">
             <div className="font-bold text-green-800 mb-2">✨ {lb.strengthLabel}</div>
             <div className="flex flex-wrap gap-2">
               {strengths.map(d => <span key={d} className="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full">{DIMENSIONS[d].icon} {DIMENSIONS[d].name[L]}</span>)}

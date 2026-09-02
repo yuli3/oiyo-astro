@@ -57,7 +57,7 @@ const levelData: Record<ResLevel, LevelData> = {
   high: {
     label: { ko: "높은 회복탄력성", en: "High Resilience", ja: "高い回復力", zh: "高复原力", fr: "Résilience élevée", es: "Alta resiliencia" },
     color: "#10b981",
-    bg: "bg-green-50",
+    bg: "bg-surface-subtle",
     border: "border-green-200",
     description: {
       ko: "당신은 삶의 역경 속에서도 회복하고 성장하는 능력이 뛰어납니다. 어려운 상황을 받아들이고, 지지 자원을 잘 활용하며, 긍정적인 시각을 유지합니다. 이 힘은 타고난 것이기도 하지만, 의식적인 노력과 경험을 통해 키워온 것이기도 합니다.",
@@ -391,7 +391,7 @@ export default function ResilienceTest({ locale: localeProp }: Props) {
             </ul>
           </div>
 
-          <div className="bg-green-50 rounded-lg p-4">
+          <div className="bg-surface-subtle rounded-lg p-4">
             <h3 className="font-semibold text-green-800 mb-2">🌱 {t.strategies}</h3>
             <ul className="space-y-1">
               {d.strategies[locale].map((s, i) => (

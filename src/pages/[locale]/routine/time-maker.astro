@@ -267,7 +267,7 @@ const faqJsonLd = {
     </div>
 
     <div class="mt-10 grid gap-3 sm:grid-cols-2">
-      <a href={localePath(locale, '/routine/builder')} class="flex items-center gap-2 rounded-xl border-2 border-green-200 bg-green-50 p-4 transition hover:border-green-400">
+      <a href={localePath(locale, '/routine/builder')} class="flex items-center gap-2 rounded-xl border-2 border-green-200 bg-surface-subtle p-4 transition hover:border-green-400">
         <span class="text-2xl">📋</span>
         <div>
           <p class="font-bold text-green-800">{txt({ ko: '루틴 만들기 가이드', en: 'Routine Builder Guide', ja: 'ルーティン設計ガイド', zh: '例程设计指南', fr: 'Guide de construction de routine', es: 'Guía de construcción de rutina' })}</p>
@@ -305,7 +305,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.useCases.map((item) => (
-          <article class="rounded-xl bg-green-50 p-4">
+          <article class="rounded-xl bg-surface-subtle p-4">
             <h3 class="font-semibold text-slate-950">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
@@ -329,7 +329,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {c.reading.map((item) => (
-          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
             <span class="font-semibold text-slate-950">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
           </a>

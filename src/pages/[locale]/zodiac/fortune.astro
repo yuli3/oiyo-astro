@@ -471,7 +471,7 @@ const signs = SIGN_ORDER.map((key) => {
       <p class="mt-2 text-sm leading-6 text-green-700">{periodDescription[locale] ?? periodDescription.en}</p>
       <div class="mt-4 flex flex-wrap gap-2">
         {PERIODS.map((p) => (
-          <a href={`/${locale}/zodiac/${p}/`} class="rounded-full border border-green-100 px-4 py-2 text-sm font-bold text-green-900 transition-colors hover:border-green-300 hover:bg-green-50">
+          <a href={`/${locale}/zodiac/${p}/`} class="rounded-full border border-green-100 px-4 py-2 text-sm font-bold text-green-900 transition-colors hover:border-green-300 hover:bg-surface-subtle">
             {periodName(p, locale)}
           </a>
         ))}
@@ -499,7 +499,7 @@ const signs = SIGN_ORDER.map((key) => {
       <h2 class="text-xl font-bold text-foreground">{c.useTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.useCases.map((item) => (
-          <article class="rounded-xl bg-green-50 p-4">
+          <article class="rounded-xl bg-surface-subtle p-4">
             <h3 class="font-semibold text-foreground">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-green-800">{item.body}</p>
           </article>
@@ -547,7 +547,7 @@ const signs = SIGN_ORDER.map((key) => {
       <h2 class="text-xl font-bold text-foreground">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-2">
         {c.reading.map((item) => (
-          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
             <span class="font-semibold text-foreground">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
           </a>

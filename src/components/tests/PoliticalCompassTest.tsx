@@ -343,7 +343,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
     return (
       <div class="space-y-6">
-        <div class="rounded-2xl border border-green-200 bg-green-50 p-6 text-center">
+        <div class="rounded-2xl border border-green-200 bg-surface-subtle p-6 text-center">
           <p class="text-xs font-semibold uppercase tracking-widest text-green-600">{info.resultTitle}</p>
           <p class="mt-1 text-sm text-green-700">{info.resultSub}</p>
           <div class="mt-4 inline-flex rounded-xl border-2 border-green-800 bg-card px-6 py-3">
@@ -353,7 +353,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
         <div class="grid gap-4 sm:grid-cols-2">
           {axes.map((ax, i) => (
-            <div key={i} class={`rounded-xl border-2 p-4 ${ax.side === 'left' ? 'border-amber-300 bg-amber-50' : ax.side === 'right' ? 'border-green-300 bg-green-50' : 'border-slate-200 bg-slate-50'}`}>
+            <div key={i} class={`rounded-xl border-2 p-4 ${ax.side === 'left' ? 'border-amber-300 bg-amber-50' : ax.side === 'right' ? 'border-green-300 bg-surface-subtle' : 'border-slate-200 bg-slate-50'}`}>
               <p class="text-xs font-bold uppercase tracking-widest text-slate-500">{ax.name}</p>
               <p class={`mt-1 text-xl font-black ${ax.side === 'left' ? 'text-amber-800' : ax.side === 'right' ? 'text-green-800' : 'text-slate-500'}`}>{ax.label}</p>
               <div class="mt-2 flex items-center gap-1">
@@ -434,7 +434,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
       <p class="text-center text-sm font-semibold text-green-700">
         {ui.stepOf(step + 1, 4)} — {stepLabels[step]}
       </p>
-      <p class="rounded-xl border border-green-100 bg-green-50 p-3 text-xs leading-5 text-green-900">
+      <p class="rounded-xl border border-green-100 bg-surface-subtle p-3 text-xs leading-5 text-green-900">
         {ui.privacy}
       </p>
 

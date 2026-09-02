@@ -74,11 +74,11 @@ const ELEMENTS: Record<string, Record<Locale, string>> = {
   Water: { ko: '수(水)', en: 'Water 水', ja: '水', fr: 'Eau 水', es: 'Agua 水', zh: '水', cn: '水' },
 };
 const ELEMENT_COLORS: Record<string, { bg: string; text: string; border: string }> = {
-  Wood: { bg: 'bg-green-50', text: 'text-green-700', border: 'border-green-200' },
+  Wood: { bg: 'bg-surface-subtle', text: 'text-green-700', border: 'border-green-200' },
   Fire: { bg: 'bg-red-50', text: 'text-red-700', border: 'border-red-200' },
   Earth: { bg: 'bg-yellow-50', text: 'text-yellow-700', border: 'border-yellow-200' },
   Metal: { bg: 'bg-gray-50', text: 'text-gray-700', border: 'border-gray-300' },
-  Water: { bg: 'bg-green-50', text: 'text-green-700', border: 'border-green-200' },
+  Water: { bg: 'bg-surface-subtle', text: 'text-green-700', border: 'border-green-200' },
 };
 const ELEMENT_BAR_COLORS: Record<string, string> = {
   Wood: 'bg-green-500',
@@ -933,7 +933,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             );
           })()}
 
-          <div className="rounded-2xl border border-green-100 bg-green-50 p-4">
+          <div className="rounded-2xl border border-green-100 bg-surface-subtle p-4">
             <h2 className="text-sm font-semibold text-green-800">{reading.profileChanges}</h2>
             <p className="mt-2 text-xs leading-relaxed text-green-900/75">{reading.profileChangesDesc}</p>
           </div>

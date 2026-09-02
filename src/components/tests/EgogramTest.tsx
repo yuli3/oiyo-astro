@@ -610,7 +610,7 @@ export default function EgogramTest({ locale: localeProp }: Props) {
           <p className="text-gray-700 leading-relaxed">{p.description[locale]}</p>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="bg-green-50 rounded-lg p-4">
+            <div className="bg-surface-subtle rounded-lg p-4">
               <h3 className="font-semibold text-green-800 mb-2">✓ {t.strengths}</h3>
               <ul className="space-y-1">
                 {p.strengths[locale].map((s, i) => (
@@ -633,7 +633,7 @@ export default function EgogramTest({ locale: localeProp }: Props) {
             <p className="text-sm text-blue-700">{p.advice[locale]}</p>
           </div>
 
-          <div className="bg-green-50 rounded-lg p-4 text-center">
+          <div className="bg-surface-subtle rounded-lg p-4 text-center">
             <p className="text-sm text-green-600 italic">"{p.affirmation[locale]}"</p>
             <p className="text-xs text-green-400 mt-1">{t.affirmation}</p>
           </div>

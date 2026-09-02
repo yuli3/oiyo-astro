@@ -128,7 +128,7 @@ export default function LottoWinSimulator({ locale }: Props) {
       </div>
 
       {/* Balance bar */}
-      <div className="sticky top-2 z-10 mt-4 rounded-2xl border border-green-200 bg-green-50 p-4">
+      <div className="sticky top-2 z-10 mt-4 rounded-2xl border border-green-200 bg-surface-subtle p-4">
         <div className="flex items-baseline justify-between">
           <span className="text-sm font-semibold text-green-800">{t.balance}</span>
           <span className={`font-mono text-2xl font-extrabold ${balance < 0 ? 'text-red-600' : 'text-green-900'}`}>{fmt(balance)}{currency}</span>
@@ -164,7 +164,7 @@ export default function LottoWinSimulator({ locale }: Props) {
 
       {/* Result */}
       {owned.length > 0 && (
-        <div className="mt-6 rounded-2xl border border-green-200 bg-green-50 p-5">
+        <div className="mt-6 rounded-2xl border border-green-200 bg-surface-subtle p-5">
           <div className="flex items-center justify-between">
             <h2 className="font-bold text-foreground">{t.result}</h2>
             <button type="button" onClick={() => setCart({})} className="text-xs text-green-600 hover:text-green-800">{t.reset}</button>

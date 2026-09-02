@@ -401,7 +401,7 @@ export default function CognitiveBiasTest({ locale: lp = 'ko' }: Props) {
               <p className="text-xs font-medium text-muted-foreground">{lb.exampleLabel}</p>
               <p className="text-sm">{r.example}</p>
             </div>
-            <div className="rounded-lg bg-green-50 border border-green-200 p-3 space-y-1">
+            <div className="rounded-lg bg-surface-subtle border border-green-200 p-3 space-y-1">
               <p className="text-xs font-medium text-green-700">{lb.mitigationLabel}</p>
               <p className="text-sm text-green-700">{r.mitigation}</p>
             </div>

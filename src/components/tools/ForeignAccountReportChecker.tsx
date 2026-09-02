@@ -150,10 +150,10 @@ export default function ForeignAccountReportChecker({ locale }: Props) {
           </div>
         ))}
       </div>
-      <button type="button" onClick={addAcct} className="mt-3 rounded-full border border-green-300 px-4 py-1.5 text-sm font-medium text-green-700 hover:bg-green-50">{t('add')}</button>
+      <button type="button" onClick={addAcct} className="mt-3 rounded-full border border-green-300 px-4 py-1.5 text-sm font-medium text-green-700 hover:bg-surface-subtle">{t('add')}</button>
 
       {/* Total + verdict */}
-      <div className={`mt-5 rounded-2xl border p-4 ${over ? 'border-amber-300 bg-amber-50' : 'border-green-200 bg-green-50'}`}>
+      <div className={`mt-5 rounded-2xl border p-4 ${over ? 'border-amber-300 bg-amber-50' : 'border-green-200 bg-surface-subtle'}`}>
         <div className="flex items-baseline justify-between">
           <span className="text-sm font-semibold text-green-800">{t('total')}</span>
           <span className="text-2xl font-bold text-foreground">₩{fmt(total)}</span>

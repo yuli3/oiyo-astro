@@ -133,10 +133,10 @@ const COLOR_MAP: Record<string, { bg: string; border: string; text: string; bar:
   blue: { bg: 'bg-blue-50', border: 'border-blue-200', text: 'text-blue-700', bar: 'bg-blue-500', badge: 'bg-blue-100 text-blue-700' },
   orange: { bg: 'bg-orange-50', border: 'border-orange-200', text: 'text-orange-700', bar: 'bg-orange-500', badge: 'bg-orange-100 text-orange-700' },
   pink: { bg: 'bg-pink-50', border: 'border-pink-200', text: 'text-pink-700', bar: 'bg-pink-500', badge: 'bg-pink-100 text-pink-700' },
-  green: { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
-  indigo: { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
+  green: { bg: 'bg-surface-subtle', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
+  indigo: { bg: 'bg-surface-subtle', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
   teal: { bg: 'bg-teal-50', border: 'border-teal-200', text: 'text-teal-700', bar: 'bg-teal-500', badge: 'bg-teal-100 text-teal-700' },
-  violet: { bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
+  violet: { bg: 'bg-surface-subtle', border: 'border-green-200', text: 'text-green-700', bar: 'bg-green-500', badge: 'bg-green-100 text-green-700' },
 };
 
 const L: Record<Locale, {
@@ -330,7 +330,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
         </div>
         <div className="bg-card rounded-2xl border border-gray-200 p-6 text-left space-y-4">
           <div className="grid grid-cols-2 gap-4">
-            <div className="bg-green-50 rounded-xl p-4">
+            <div className="bg-surface-subtle rounded-xl p-4">
               <p className="text-xs font-semibold text-green-600 mb-2">{t.temperament}</p>
               <div className="space-y-1">
                 {TEMPERAMENT_DIMS.map(d => (
@@ -341,7 +341,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
                 ))}
               </div>
             </div>
-            <div className="bg-green-50 rounded-xl p-4">
+            <div className="bg-surface-subtle rounded-xl p-4">
               <p className="text-xs font-semibold text-green-600 mb-2">{t.character}</p>
               <div className="space-y-1">
                 {CHARACTER_DIMS.map(d => (

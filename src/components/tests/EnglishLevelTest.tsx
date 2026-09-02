@@ -473,7 +473,7 @@ const LEVEL_COLORS: Record<CEFRLevel, string> = {
 const LEVEL_BG: Record<CEFRLevel, string> = {
   A1: "bg-gray-50",
   A2: "bg-blue-50",
-  B1: "bg-green-50",
+  B1: "bg-surface-subtle",
   B2: "bg-yellow-50",
   C1: "bg-orange-50",
   C2: "bg-red-50",
@@ -570,9 +570,9 @@ export default function EnglishLevelTest({ locale }: Props) {
             {currentQ.options.map((opt, i) => {
               let cls = "w-full text-left rounded-xl border px-4 py-3 text-sm transition-all ";
               if (selected === null) {
-                cls += "border-gray-200 bg-gray-50 hover:border-green-400 hover:bg-green-50 text-gray-800";
+                cls += "border-gray-200 bg-gray-50 hover:border-green-400 hover:bg-surface-subtle text-gray-800";
               } else if (i === currentQ.answer) {
-                cls += "border-green-500 bg-green-50 text-green-800 font-medium";
+                cls += "border-green-500 bg-surface-subtle text-green-800 font-medium";
               } else if (i === selected) {
                 cls += "border-red-400 bg-red-50 text-red-700";
               } else {

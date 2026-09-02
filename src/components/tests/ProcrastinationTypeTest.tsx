@@ -568,7 +568,7 @@ export default function ProcrastinationTypeTest({ locale: localeProp }: Props) {
             <h3 className="font-semibold text-orange-600">⚠️ {tx.weakness}</h3>
             <p className="mt-1 text-sm text-gray-600">{rd.weakness}</p>
           </div>
-          <div className="rounded-lg bg-green-50 p-4">
+          <div className="rounded-lg bg-surface-subtle p-4">
             <h3 className="font-semibold text-green-700">💡 {tx.tip}</h3>
             <p className="mt-1 text-sm text-green-800">{rd.tip}</p>
           </div>

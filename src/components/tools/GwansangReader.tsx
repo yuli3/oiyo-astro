@@ -102,7 +102,7 @@ export default function GwansangReader({ locale: lp = 'ko' }: Props) {
                 {a.options.map((o) => (
                   <button key={o.key} onClick={() => setSel((s) => ({ ...s, [a.id]: o.key }))}
                     aria-pressed={sel[a.id] === o.key}
-                    className={`rounded-lg border px-2 py-3 text-center transition-colors ${sel[a.id] === o.key ? 'border-green-500 bg-green-50' : 'hover:bg-accent'}`}>
+                    className={`rounded-lg border px-2 py-3 text-center transition-colors ${sel[a.id] === o.key ? 'border-green-500 bg-surface-subtle' : 'hover:bg-accent'}`}>
                     <div className="text-2xl mb-1">{o.emoji}</div>
                     <div className="text-xs font-medium">{o.label[l]}</div>
                   </button>
@@ -134,7 +134,7 @@ export default function GwansangReader({ locale: lp = 'ko' }: Props) {
               )
             })}
           </div>
-          <div className="rounded-xl bg-green-50 border border-green-100 p-4">
+          <div className="rounded-xl bg-surface-subtle border border-green-100 p-4">
             <p className="text-sm text-green-900 leading-relaxed">{t.summary}</p>
           </div>
           <button onClick={() => { setDone(false); setSel({}) }}

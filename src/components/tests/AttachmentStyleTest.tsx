@@ -146,7 +146,7 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
 
   if (!result) {
     return <div className="space-y-6">
-      {legacyType && <p className="rounded-xl border border-green-100 bg-green-50 p-4 text-sm leading-6 text-green-900">{t.legacy}</p>}
+      {legacyType && <p className="rounded-xl border border-green-100 bg-surface-subtle p-4 text-sm leading-6 text-green-900">{t.legacy}</p>}
       <p className="rounded-xl border bg-card p-4 text-sm leading-6 text-muted-foreground">{t.context}</p>
       <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-950">{t.safety}</p>
       <Questionnaire
@@ -189,7 +189,7 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
       })}
     </div>
     <div className="rounded-xl border bg-card p-4 text-xs leading-6 text-muted-foreground"><p>{RESPONSE_POSITION[locale]}</p><p>{DRAFT_BASIS[locale]}</p><p>{new Intl.DateTimeFormat(locale, { dateStyle: "medium" }).format(new Date(result.observedAt))} · {ATTACHMENT_INSTRUMENT.version}</p></div>
-    <div className="rounded-xl border border-green-200 bg-green-50 p-5 text-foreground">
+    <div className="rounded-xl border border-green-200 bg-surface-subtle p-5 text-foreground">
       <p className="text-xs font-bold uppercase tracking-wider text-green-700">{t.nextLabel}</p>
       <p className="mt-2 text-base leading-7 font-medium">{t.next}</p>
     </div>

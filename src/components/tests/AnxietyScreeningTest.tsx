@@ -333,7 +333,7 @@ export default function AnxietyScreeningTest({ locale: lp = 'ko' }: Props) {
         </div>
       )}
       {(result.level === 'minimal' || result.level === 'mild') && (
-        <div className="rounded-xl border border-green-200 bg-green-50 p-4 space-y-2">
+        <div className="rounded-xl border border-green-200 bg-surface-subtle p-4 space-y-2">
           <h3 className="font-bold text-sm text-green-700">{lb.resources}</h3>
           <ul className="space-y-1">
             {r.resources.map(res => (

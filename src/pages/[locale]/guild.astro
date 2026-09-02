@@ -173,7 +173,7 @@ const localizedRelated = c.related.map((item) => ({ ...item, href: withTrailingS
       <h2 class="text-xl font-bold text-foreground">{c.howTitle}</h2>
       <ul class="mt-4 space-y-3">
         {c.how.map((w) => (
-          <li class="rounded-xl bg-green-50 px-4 py-3 text-sm leading-6 text-green-800">{w}</li>
+          <li class="rounded-xl bg-surface-subtle px-4 py-3 text-sm leading-6 text-green-800">{w}</li>
         ))}
       </ul>
     </section>
@@ -182,7 +182,7 @@ const localizedRelated = c.related.map((item) => ({ ...item, href: withTrailingS
       <h2 class="text-xl font-bold text-foreground">{c.relatedTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {localizedRelated.map((item) => (
-          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href}>
+          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href}>
             <span class="font-semibold text-foreground">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-green-700">{item.desc}</span>
           </a>

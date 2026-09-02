@@ -151,7 +151,7 @@ export default function TaxCalendar({ locale }: Props) {
 
       {/* next deadline */}
       {next && (
-        <div className="mx-auto max-w-md rounded-2xl bg-green-50 p-4 text-center">
+        <div className="mx-auto max-w-md rounded-2xl bg-surface-subtle p-4 text-center">
           <div className="text-xs font-bold uppercase tracking-wider text-green-700">{t.next}</div>
           <div className="mt-1 text-lg font-black text-gray-900">{next.ev.name[lang]}</div>
           <div className="text-sm text-green-700">
@@ -178,7 +178,7 @@ export default function TaxCalendar({ locale }: Props) {
                     rel="noopener noreferrer"
                     className={`group rounded-lg border px-2.5 py-1.5 text-left transition-colors ${
                       e.kind === 'national'
-                        ? 'border-green-200 bg-green-50 hover:bg-green-100'
+                        ? 'border-green-200 bg-surface-subtle hover:bg-green-100'
                         : 'border-amber-200 bg-amber-50 hover:bg-amber-100'
                     }`}
                     title={e.note[lang]}

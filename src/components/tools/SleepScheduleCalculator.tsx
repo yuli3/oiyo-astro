@@ -11,7 +11,7 @@ export default function SleepScheduleCalculator() {
   const invalid = submitted && !schedule;
   const label = direction === "bedtime" ? "Je veux me réveiller à" : "Je veux me coucher à";
   const resultLabel = direction === "bedtime" ? "Heures de coucher indicatives" : "Heures de réveil indicatives";
-  return <section className="rounded-2xl border border-green-100 bg-green-50 p-5" aria-labelledby="sleep-calculator-title">
+  return <section className="rounded-2xl border border-green-100 bg-surface-subtle p-5" aria-labelledby="sleep-calculator-title">
     <h1 id="sleep-calculator-title" className="text-2xl font-bold text-foreground">Calculateur de sommeil : heure de coucher et de réveil</h1>
     <p className="mt-2 text-sm leading-6 text-green-800">Entrez une heure pour obtenir des repères de coucher ou de réveil basés sur 7 à 9 heures de sommeil.</p>
     <fieldset className="mt-4"><legend className="font-semibold text-foreground">Choisissez un repère</legend><div className="mt-2 flex flex-wrap gap-3">

@@ -130,11 +130,11 @@ export default function RoutineChecklist({ locale }: Props) {
 
       <div className="mt-4 flex flex-wrap gap-2">
         <button type="button" onClick={() => addTemplate(t.morningItems)}
-          className="rounded-full border-2 border-green-300 bg-green-50 px-3 py-1.5 text-xs font-semibold text-green-700 transition hover:bg-green-700 hover:text-white">
+          className="rounded-full border-2 border-green-300 bg-surface-subtle px-3 py-1.5 text-xs font-semibold text-green-700 transition hover:bg-green-700 hover:text-white">
           {t.templates.morning}
         </button>
         <button type="button" onClick={() => addTemplate(t.eveningItems)}
-          className="rounded-full border-2 border-green-300 bg-green-50 px-3 py-1.5 text-xs font-semibold text-green-700 transition hover:bg-green-700 hover:text-white">
+          className="rounded-full border-2 border-green-300 bg-surface-subtle px-3 py-1.5 text-xs font-semibold text-green-700 transition hover:bg-green-700 hover:text-white">
           {t.templates.evening}
         </button>
       </div>

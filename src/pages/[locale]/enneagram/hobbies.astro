@@ -70,7 +70,7 @@ const TYPES: TypeEntry[] = [
   {
     num: 4, name: { ko: '개인주의자', en: 'The Individualist', ja: '個人主義者', zh: '个人主义者', fr: "L'Individualiste", es: 'El Individualista' },
     core: { ko: '독특한 정체성과 진정성을 갈망하는 낭만가', en: 'The romantic who craves unique identity and authenticity', ja: '独自のアイデンティティと真正性を渇望するロマンチスト', zh: '渴望独特身份和真实性的浪漫主义者', fr: 'Le romantique qui aspire à une identité unique et à l\'authenticité', es: 'El romántico que anhela identidad única y autenticidad' },
-    color: 'border-green-300 bg-green-50',
+    color: 'border-green-300 bg-surface-subtle',
     hobbies: [
       { ko: '시 창작·감성 산문 쓰기', en: 'Poetry writing / lyrical prose', ja: '詩の創作·感性的な散文執筆', zh: '诗歌创作·情感散文写作', fr: 'Écriture poétique / prose lyrique', es: 'Escritura poética / prosa lírica' },
       { ko: '그림·수채화·콜라주 아트', en: 'Painting, watercolor, collage art', ja: '絵画·水彩·コラージュアート', zh: '绘画、水彩、拼贴艺术', fr: 'Peinture, aquarelle, collage', es: 'Pintura, acuarela, arte de collage' },
@@ -135,7 +135,7 @@ const TYPES: TypeEntry[] = [
   {
     num: 9, name: { ko: '평화주의자', en: 'The Peacemaker', ja: '平和主義者', zh: '和平缔造者', fr: 'Le Pacificateur', es: 'El Pacificador' },
     core: { ko: '조화와 평화를 위해 자신을 지우는 중재자', en: 'The mediator who erases themselves for harmony and peace', ja: '調和と平和のために自分を消す仲介者', zh: '为了和谐与和平而消除自我的调解者', fr: "Le médiateur qui s'efface pour l'harmonie et la paix", es: 'El mediador que se borra a sí mismo por la armonía y la paz' },
-    color: 'border-green-300 bg-green-50',
+    color: 'border-green-300 bg-surface-subtle',
     hobbies: [
       { ko: '명상·요가·기공 — 내면 평화 유지', en: 'Meditation, yoga, qi gong — maintaining inner peace', ja: '瞑想·ヨガ·気功 — 内なる平和の維持', zh: '冥想·瑜伽·气功 — 维持内在平静', fr: 'Méditation, yoga, qi gong — maintenir la paix intérieure', es: 'Meditación, yoga, qi gong — mantener la paz interior' },
       { ko: '자연 산책·버드워칭·별 관측', en: 'Nature walks, birdwatching, stargazing', ja: '自然散策·バードウォッチング·星観測', zh: '自然散步·观鸟·观星', fr: 'Promenades en nature, observation des oiseaux, astronomie amateur', es: 'Paseos en la naturaleza, observación de aves, observación de estrellas' },
@@ -431,7 +431,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.useTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.useCases.map((item) => (
-          <article class="rounded-xl bg-green-50 p-4">
+          <article class="rounded-xl bg-surface-subtle p-4">
             <h3 class="font-semibold text-slate-950">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
@@ -455,7 +455,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {c.reading.map((item) => (
-          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-surface-subtle" href={item.href} rel="noopener noreferrer" target="_blank">
             <span class="font-semibold text-slate-950">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
           </a>

@@ -233,7 +233,7 @@ export default function AdventurerGuild({ locale }: Props) {
   const questRow = (q: Quest) => {
     const done = isDone(q);
     return (
-      <div key={q.id} className={`flex items-center justify-between gap-3 rounded-xl border p-3 ${done ? 'border-green-300 bg-green-50' : 'border-green-100 bg-card'}`}>
+      <div key={q.id} className={`flex items-center justify-between gap-3 rounded-xl border p-3 ${done ? 'border-green-300 bg-surface-subtle' : 'border-green-100 bg-card'}`}>
         <div className="min-w-0">
           <div className={`font-semibold ${done ? 'text-green-700 line-through' : 'text-foreground'}`}>{q.emoji} {q.label}</div>
           <div className="text-xs text-green-600">+{q.xp} XP</div>
@@ -255,7 +255,7 @@ export default function AdventurerGuild({ locale }: Props) {
       <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
 
       {/* Profile */}
-      <div className="mt-5 rounded-2xl border border-green-200 bg-green-50 p-5">
+      <div className="mt-5 rounded-2xl border border-green-200 bg-surface-subtle p-5">
         <input value={s.name} onChange={(e) => persist({ ...s, name: e.target.value })}
           placeholder={t.namePlaceholder}
           className="w-full bg-transparent text-lg font-bold text-foreground placeholder:text-green-400 focus:outline-none" />

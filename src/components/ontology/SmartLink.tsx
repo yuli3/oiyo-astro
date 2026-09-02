@@ -56,7 +56,7 @@ export const SmartLink: React.FC<SmartLinkProps & { className?: string }> = ({
       <m.div
         className={cn(
           "flex items-center justify-between p-4 rounded-2xl transition-all duration-300",
-          "bg-green-50 hover:bg-green-100 border border-green-200/50 hover:border-green-300 shadow-sm",
+          "bg-surface-subtle hover:bg-green-100 border border-green-200/50 hover:border-green-300 shadow-sm",
           premium && "border-amber-200 bg-amber-50/50 hover:bg-amber-100/50",
           className,
         )}

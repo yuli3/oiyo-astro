@@ -228,7 +228,7 @@ export default function MenuRoulette({ locale }: Props) {
       </div>
 
       <p className="mt-5 text-sm text-green-700">{pool.length} {t.available}</p>
-      <div className="mt-3 min-h-48 rounded-2xl border border-green-200 bg-green-50 p-6 text-center sm:p-8">
+      <div className="mt-3 min-h-48 rounded-2xl border border-green-200 bg-surface-subtle p-6 text-center sm:p-8">
         {pool.length === 0 ? (
           <p className="mx-auto max-w-md py-10 font-semibold leading-7 text-amber-800">{t.empty}</p>
         ) : (

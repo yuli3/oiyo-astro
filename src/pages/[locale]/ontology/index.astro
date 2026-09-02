@@ -288,8 +288,8 @@ const visibleLanes = [
             else { status.textContent = card.getAttribute('data-open'); if (!firstOpen) firstOpen = card; }
           }
         });
-        cards.forEach((c) => c.classList.remove('bg-green-50', 'ring-1', 'ring-inset', 'ring-green-300'));
-        if (firstOpen) firstOpen.classList.add('bg-green-50', 'ring-1', 'ring-inset', 'ring-green-300');
+        cards.forEach((c) => c.classList.remove('bg-surface-subtle', 'ring-1', 'ring-inset', 'ring-green-300'));
+        if (firstOpen) firstOpen.classList.add('bg-surface-subtle', 'ring-1', 'ring-inset', 'ring-green-300');
         // Lane 3 (실제 나의 것): count the mindmap as one recorded coordinate when
         // the user has chosen any keyword — so the builder feeds completion too.
         const profile = read('oiyo:profile:v1');

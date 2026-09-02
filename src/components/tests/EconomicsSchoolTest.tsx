@@ -177,11 +177,11 @@ const QUESTIONS: Record<Locale, Question[]> = {
 }
 
 const SCHOOL_COLORS: Record<School, string> = {
-  keynesian: 'bg-green-50 border-green-300 text-green-800',
+  keynesian: 'bg-surface-subtle border-green-300 text-green-800',
   classical: 'bg-amber-50 border-amber-300 text-amber-800',
-  behavioral: 'bg-green-50 border-green-300 text-green-800',
+  behavioral: 'bg-surface-subtle border-green-300 text-green-800',
   austrian: 'bg-orange-50 border-orange-300 text-orange-800',
-  institutional: 'bg-green-50 border-green-300 text-green-800',
+  institutional: 'bg-surface-subtle border-green-300 text-green-800',
 }
 
 interface Props { locale: Locale }

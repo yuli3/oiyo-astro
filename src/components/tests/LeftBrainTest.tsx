@@ -576,7 +576,7 @@ const LeftBrainTest: React.FC<{ locale?: Locale }> = ({ locale = 'en' }) => {
       traits: t.rightTraits,
       barColor: 'bg-green-500',
       badgeBg: 'bg-green-100 text-green-800',
-      cardBg: 'bg-green-50 border-green-200',
+      cardBg: 'bg-surface-subtle border-green-200',
     },
     balanced: {
       emoji: '⚖️',

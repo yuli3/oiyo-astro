@@ -112,12 +112,12 @@ export default function BiologicalAgeTest({ locale }: Props) {
               <p className="text-xs text-muted-foreground mb-1">{l.chronoAge}</p>
               <p className="text-3xl font-black">{chrono}</p>
             </div>
-            <div className={`rounded-xl border p-4 text-center ${diff > 0 ? 'bg-red-50 border-red-200' : 'bg-green-50 border-green-200'}`}>
+            <div className={`rounded-xl border p-4 text-center ${diff > 0 ? 'bg-red-50 border-red-200' : 'bg-surface-subtle border-green-200'}`}>
               <p className="text-xs text-muted-foreground mb-1">{l.bioAge}</p>
               <p className={`text-3xl font-black ${diff > 0 ? 'text-red-600' : 'text-green-600'}`}>{bioAge}</p>
             </div>
           </div>
-          <div className={`rounded-2xl p-4 text-center ${diff > 0 ? 'bg-red-50 border border-red-200' : diff < 0 ? 'bg-green-50 border border-green-200' : 'bg-secondary border'}`}>
+          <div className={`rounded-2xl p-4 text-center ${diff > 0 ? 'bg-red-50 border border-red-200' : diff < 0 ? 'bg-surface-subtle border border-green-200' : 'bg-secondary border'}`}>
             <p className="text-lg font-bold">
               {Math.abs(diff)} {l.diff} {diff > 0 ? `→ ${l.older}` : diff < 0 ? `→ ${l.younger}` : '= 나이와 동일'}
             </p>

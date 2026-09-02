@@ -50,7 +50,7 @@ export function ExplorationRecommenderPrototype({ locale }: Props) {
       <label className="text-xs font-bold sm:col-span-2">{c.mode}<select className="mt-1 w-full rounded-lg border p-2" value={socialMode} onChange={(event) => setSocialMode(event.target.value as ExplorationSocialMode)}><option value="solo">{c.modes[0]}</option><option value="together">{c.modes[1]}</option></select></label>
     </div>
     <ol className="mt-5 space-y-3" aria-live="polite">
-      {result.recommendations.map((item, index) => <li key={item.id} className="rounded-2xl bg-green-50 p-3">
+      {result.recommendations.map((item, index) => <li key={item.id} className="rounded-2xl bg-surface-subtle p-3">
         <div className="flex items-start justify-between gap-3"><h3 className="font-black">{index + 1}. {item.environmentToExplore}</h3><span className="shrink-0 rounded-full bg-green-700 px-2 py-1 text-xs font-black text-white">{c.score} {item.score}</span></div>
         <p className="mt-2 text-sm leading-6">{item.experiment20Minutes}</p>
         <p className="mt-2 text-xs"><b>{c.support}:</b> {item.supportingReasons.map((reason) => `${reason.text} (${reason.score})`).join(" · ")}</p>

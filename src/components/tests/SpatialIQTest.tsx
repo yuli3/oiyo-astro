@@ -141,14 +141,14 @@ export default function SpatialIQTest({ locale }: Props) {
         {p.options.map(opt => {
           let cls = 'border rounded-xl py-3 text-2xl text-center transition-all'
           if (selected === null) cls += ' hover:bg-accent hover:border-primary cursor-pointer'
-          else if (opt === p.grid[8]) cls += ' bg-green-50 border-green-400'
+          else if (opt === p.grid[8]) cls += ' bg-surface-subtle border-green-400'
           else if (opt === selected) cls += ' bg-red-50 border-red-400 opacity-70'
           else cls += ' opacity-50'
           return <button key={opt} onClick={() => pick(opt)} className={cls}>{opt}</button>
         })}
       </div>
       {selected && (
-        <div className={`rounded-xl p-3 text-sm ${isCorrect ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'}`}>
+        <div className={`rounded-xl p-3 text-sm ${isCorrect ? 'bg-surface-subtle border border-green-200' : 'bg-red-50 border border-red-200'}`}>
           <p className={`font-semibold mb-0.5 ${isCorrect ? 'text-green-700' : 'text-red-700'}`}>
             {isCorrect ? l.correct : `${l.wrong} ${l.correctIs} ${p.grid[8]}`}
           </p>

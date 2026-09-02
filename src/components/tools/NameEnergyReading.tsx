@@ -218,7 +218,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
 
                 <div className="mt-5 flex items-center gap-3">
                   <span className="text-[11px] font-black uppercase tracking-wider text-green-600">{ui.scoreLabel}</span>
-                  <div className="h-2 flex-1 overflow-hidden rounded-full bg-green-50">
+                  <div className="h-2 flex-1 overflow-hidden rounded-full bg-surface-subtle">
                     <div
                       className="h-full rounded-full bg-green-700 transition-[width] duration-700 ease-out"
                       style={{ width: `${reading.balanceScore}%` }}
@@ -230,7 +230,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
                   {filled.length}/{missing.length}
                 </p>
 
-                <p className="mt-5 rounded-2xl bg-green-50 px-4 py-3 text-sm font-bold leading-6 text-green-900 [word-break:keep-all]">
+                <p className="mt-5 rounded-2xl bg-surface-subtle px-4 py-3 text-sm font-bold leading-6 text-green-900 [word-break:keep-all]">
                   {copy.verdicts[verdictKey(reading.balanceScore)]}
                 </p>
               </>

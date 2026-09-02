@@ -300,7 +300,7 @@ export default function LonelinessTest({ locale: lp = 'ko' }: Props) {
         </ul>
       </div>
 
-      <div className="rounded-2xl border border-green-200 bg-green-50 p-4 space-y-1">
+      <div className="rounded-2xl border border-green-200 bg-surface-subtle p-4 space-y-1">
         <h3 className="font-bold text-sm text-green-800">{lb.affirmation}</h3>
         <p className="text-sm text-green-900 leading-relaxed">"{r.affirmation}"</p>
       </div>

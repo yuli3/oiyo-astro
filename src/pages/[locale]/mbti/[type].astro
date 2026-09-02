@@ -334,7 +334,7 @@ const breadcrumbJsonLd = {
         {otherTypes.map((ot) => (
           <a
             href={localePath(`/mbti/${ot.toLowerCase()}`)}
-            class="rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-green-50"
+            class="rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-surface-subtle"
           >
             {TYPE_PROFILES[ot as keyof typeof TYPE_PROFILES].emoji} {ot}
           </a>
