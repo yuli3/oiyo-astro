@@ -11,20 +11,24 @@ export async function getStaticPaths() {
 }
 const { locale } = Astro.params as { locale: Locale };
 
+// 사전 항목은 데이터에 있으면 전부 싣는다. 긴 해설이 따로 있는 상징만
+// explainers 를 확인해 '자세히' 표시를 붙인다.
 const entries = await getCollection('explainers', (e) => e.data.locale === locale);
-const haveSymbol = new Set(
+const haveArticle = new Set(
   entries.filter((e) => e.data.topic.startsWith('dream-')).map((e) => e.data.topic.slice(6)),
 );
 const haveHub = entries.some((e) => e.data.topic === 'dream');
-const symbols = DREAM_SYMBOLS.filter((s) => haveSymbol.has(s.id));
+const symbols = DREAM_SYMBOLS;
 
-const L: Record<Locale, { title: string; lead: string; note: string; hub: string; empty: string }> = {
+const L: Record<Locale, { title: string; lead: string; note: string; hub: string; empty: string; more: string; tool: string }> = {
   ko: {
     title: '꿈 상징 사전',
     lead: '꿈에 나온 상징을 골라 전통 해몽과 심리학적 읽기를 나란히 봅니다.',
     note: '해몽은 상징 해석의 문화적 전통이며 앞일을 알려 주지 않습니다. 결정의 근거로 삼지 마세요.',
     hub: '해몽이란 무엇인가',
     empty: '아직 등재된 상징이 없습니다.',
+    more: '자세히',
+    tool: '해몽 도구로 읽기',
   },
   en: {
     title: 'Dream symbol index',
@@ -32,6 +36,8 @@ const L: Record<Locale, { title: string; lead: string; note: string; hub: string
     note: 'Dream reading is a cultural tradition of symbol interpretation, not a forecast. Do not use it to make decisions.',
     hub: 'What dream reading is',
     empty: 'No symbols listed yet.',
+    more: 'in depth',
+    tool: 'Open the reading tool',
   },
   ja: {
     title: '夢の象徴事典',
@@ -39,6 +45,8 @@ const L: Record<Locale, { title: string; lead: string; note: string; hub: string
     note: '夢解きは象徴解釈の文化的伝統であり、先のことを告げるものではありません。判断の根拠にはしないでください。',
     hub: '夢解きとは何か',
     empty: 'まだ登録された象徴はありません。',
+    more: '詳しく',
+    tool: '夢占いツールで読む',
   },
   zh: {
     title: '梦境象征词典',
@@ -46,6 +54,8 @@ const L: Record<Locale, { title: string; lead: string; note: string; hub: string
     note: '解梦是象征解释的文化传统，并不预告将来。请勿作为决策依据。',
     hub: '什么是解梦',
     empty: '暂无收录的象征。',
+    more: '详解',
+    tool: '用解梦工具阅读',
   },
   fr: {
     title: 'Index des symboles oniriques',
@@ -53,6 +63,8 @@ const L: Record<Locale, { title: string; lead: string; note: string; hub: string
     note: "L'interprétation des rêves est une tradition culturelle de lecture des symboles, non une prédiction. Ne fondez pas vos décisions dessus.",
     hub: "Ce qu'est l'interprétation des rêves",
     empty: 'Aucun symbole répertorié pour le moment.',
+    more: 'en détail',
+    tool: "Ouvrir l'outil de lecture",
   },
   es: {
     title: 'Índice de símbolos oníricos',
@@ -60,6 +72,8 @@ const L: Record<Locale, { title: string; lead: string; note: string; hub: string
     note: 'La interpretación de sueños es una tradición cultural de lectura de símbolos, no un pronóstico. No la uses como base para decidir.',
     hub: 'Qué es la interpretación de sueños',
     empty: 'Aún no hay símbolos registrados.',
+    more: 'en detalle',
+    tool: 'Abrir la herramienta',
   },
 };
 const t = L[locale] ?? L.en;
@@ -72,11 +86,12 @@ const byCategory = (['body', 'nature', 'motion', 'creature'] as DreamCategory[])
   <div class="mx-auto max-w-2xl px-4 py-10">
     <p class="rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{t.note}</p>
 
-    {haveHub && (
-      <p class="mt-6">
+    <p class="mt-6 flex flex-wrap gap-4">
+      <a class="text-sm font-semibold text-primary-strong underline underline-offset-4" href={`/${locale}/dream/reading/`}>{t.tool}</a>
+      {haveHub && (
         <a class="text-sm font-semibold text-primary-strong underline underline-offset-4" href={`/${locale}/dream/about/`}>{t.hub}</a>
-      </p>
-    )}
+      )}
+    </p>
 
     {byCategory.length === 0 ? (
       <p class="mt-8 text-muted-foreground">{t.empty}</p>
@@ -93,10 +108,13 @@ const byCategory = (['body', 'nature', 'motion', 'creature'] as DreamCategory[])
                    href={`/${locale}/dream/${s.id}/`}>
                   <span class="text-2xl" aria-hidden="true">{s.emoji}</span>
                   <span>
-                    <span class="block font-semibold text-foreground">{s.name[locale] ?? s.name.en}</span>
+                    <span class="block font-semibold text-foreground">{(s.l10n[locale] ?? s.l10n.en).name}</span>
                     <span class="mt-1 block text-xs leading-5 text-muted-foreground">
-                      {(s.keywords[locale] ?? s.keywords.en).slice(0, 3).join(' · ')}
+                      {(s.l10n[locale] ?? s.l10n.en).keywords.slice(0, 3).join(' · ')}
                     </span>
+                    {haveArticle.has(s.id) && (
+                      <span class="mt-1 block text-[10px] uppercase tracking-wider text-primary-strong">{t.more}</span>
+                    )}
                   </span>
                 </a>
               </li>

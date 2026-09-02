@@ -1,0 +1,51 @@
+---
+// 해몽 도구. 규칙 기반 읽기가 본체이고, Chrome 내장 모델은 있을 때만 붙는다.
+import Layout from '../../../layouts/Layout.astro';
+import DreamReading from '../../../components/tools/DreamReading';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const meta: Record<Locale, { title: string; description: string; lead: string }> = {
+  ko: {
+    title: '꿈 해몽 — 상징을 골라 전통 해석과 꿈 연구를 함께 읽기',
+    description: '꿈에 나온 상징과 깨어난 뒤 감정을 고르면 전통 해몽과 꿈 연구의 관점을 나란히 읽어 드립니다. 앞일을 알려 주지 않습니다.',
+    lead: '꿈에 나온 것을 고르면 전해 오는 해석과 연구의 관점을 나란히 보여 드립니다.',
+  },
+  en: {
+    title: 'Dream reading — pick your symbols, see tradition and research side by side',
+    description: 'Choose the symbols from your dream and how you felt on waking, and read the traditional interpretation alongside what dream research says. It does not foretell anything.',
+    lead: 'Pick what appeared in your dream and see the handed-down reading next to the research view.',
+  },
+  ja: {
+    title: '夢占い — 象徴を選んで伝統的な読みと夢研究を並べて見る',
+    description: '夢に出た象徴と目覚めたときの気分を選ぶと、伝統的な夢解きと夢研究の観点を並べて読めます。先のことは告げません。',
+    lead: '夢に出たものを選ぶと、伝わってきた読みと研究の観点を並べて表示します。',
+  },
+  zh: {
+    title: '解梦 — 选出象征，并列查看传统读法与梦的研究',
+    description: '选出梦中的象征与醒来时的心情，并列阅读传统解梦与梦研究的观点。本工具不预告将来。',
+    lead: '选出梦里出现的东西，并列查看流传下来的读法与研究的观点。',
+  },
+  fr: {
+    title: "Lecture de rêve — choisissez vos symboles, tradition et recherche côte à côte",
+    description: "Choisissez les symboles de votre rêve et votre état au réveil, puis lisez l'interprétation traditionnelle à côté de ce que dit la recherche. Cet outil ne prédit rien.",
+    lead: "Choisissez ce qui est apparu dans votre rêve : la lecture transmise et le regard de la recherche s'affichent côte à côte.",
+  },
+  es: {
+    title: 'Lectura de sueños — elige tus símbolos y compara tradición e investigación',
+    description: 'Elige los símbolos de tu sueño y cómo despertaste, y lee la interpretación tradicional junto a lo que dice la investigación. Esta herramienta no predice nada.',
+    lead: 'Elige lo que apareció en tu sueño y verás la lectura heredada junto a la mirada de la investigación.',
+  },
+};
+const m = meta[locale] ?? meta.en;
+---
+<Layout title={m.title} description={m.description} locale={locale} heading={m.title} intro={m.lead}>
+  <div class="mx-auto max-w-2xl px-4 py-10">
+    <DreamReading client:load locale={locale} />
+  </div>
+</Layout>
