@@ -202,7 +202,7 @@ export default function ElementalRemedyTool({ locale: lp = 'ko' }: Props) {
           }}
         />
         <button onClick={compute}
-          className="w-full rounded-xl bg-green-600 text-white px-4 py-3 text-sm font-bold hover:opacity-90 transition-opacity">
+          className="w-full rounded-xl bg-primary text-primary-foreground px-4 py-3 text-sm font-bold hover:opacity-90 transition-opacity">
           {done ? t.recompute : t.calc}
         </button>
       </div>

@@ -356,7 +356,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
           <p className="text-xs text-gray-400 text-center">{t.disclaimer}</p>
         </div>
         <button onClick={() => setStarted(true)}
-          className="px-8 py-3 bg-green-600 hover:bg-primary text-primary-foreground font-semibold rounded-xl transition-colors">
+          className="px-8 py-3 bg-primary hover:bg-primary-hover text-primary-foreground font-semibold rounded-xl transition-colors">
           {t.start} ({QUESTIONS.length} {t.q})
         </button>
       </div>

@@ -137,7 +137,7 @@ export function ProfileMindmap({ locale }: { locale: string }) {
                       onClick={() => toggleChip(cat.id, chip)}
                       className={
                         "rounded-full border px-3 py-1.5 text-xs font-bold transition " +
-                        (on ? "border-green-600 bg-green-600 text-white" : "border-green-200 bg-card text-green-800 hover:border-green-400")
+                        (on ? "border-green-600 bg-primary text-primary-foreground" : "border-green-200 bg-card text-green-800 hover:border-green-400")
                       }
                     >
                       {chip}

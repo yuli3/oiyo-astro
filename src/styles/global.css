@@ -16,6 +16,7 @@
   --color-foreground: var(--foreground);
   --color-card: var(--card);
   --color-surface-subtle: var(--surface-subtle);
+  --color-primary-hover: var(--primary-hover);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
@@ -100,6 +101,8 @@
   --popover: oklch(0.985 0.007 124.4);
   --popover-foreground: oklch(0.207 0.020 138.8);
   --primary: oklch(0.470 0.095 133.2);
+  /* primary 를 바탕으로 쓰는 곳의 호버. SSOT: shared/tokens/oiyo-light.css */
+  --primary-hover: oklch(0.410 0.095 133.2);
   --primary-foreground: oklch(0.986 0.022 118);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);

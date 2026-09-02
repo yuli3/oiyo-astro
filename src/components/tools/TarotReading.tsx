@@ -370,7 +370,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
   const spreadBtnClass = (s: Spread) =>
     `flex-1 py-2 text-sm font-medium rounded-lg border transition-colors ${
       spread === s
-        ? 'bg-green-600 text-white border-green-600'
+        ? 'bg-primary text-primary-foreground border-green-600'
         : 'bg-card text-gray-600 border-gray-300 hover:border-green-400'
     }`;
 
@@ -397,7 +397,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
       {/* Draw button */}
       <button
         onClick={handleDraw}
-        className="w-full py-3 bg-green-600 hover:bg-primary text-primary-foreground font-semibold rounded-xl transition-colors"
+        className="w-full py-3 bg-primary hover:bg-primary-hover text-primary-foreground font-semibold rounded-xl transition-colors"
       >
         {drawn ? t.redrawBtn : t.drawBtn}
       </button>

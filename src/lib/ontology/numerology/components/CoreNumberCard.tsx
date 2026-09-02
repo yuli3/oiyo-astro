@@ -16,7 +16,7 @@ interface CoreNumberCardProps {
 }
 
 export function CoreNumberCard({
-  color = "bg-green-600",
+  color = "bg-primary",
   delay = 0,
   description,
   isMasterNumber = false,

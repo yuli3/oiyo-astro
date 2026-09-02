@@ -158,7 +158,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
                       <span className="mr-2">{data.flag}</span>
                       {loc(data.name as LC, locale)}
                     </span>
-                    <span className="rounded-full bg-green-600 px-2.5 py-1 text-xs font-semibold text-white">
+                    <span className="rounded-full bg-primary px-2.5 py-1 text-xs font-semibold text-primary-foreground">
                       {Math.round(match)}% {u("match")}
                     </span>
                   </div>

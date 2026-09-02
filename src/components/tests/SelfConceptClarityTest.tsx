@@ -449,7 +449,7 @@ export default function SelfConceptClarityTest({ locale: lp = 'ko' }: Props) {
         <button
           onClick={share}
           aria-label={lb.share}
-          className="flex-1 rounded-xl bg-green-600 text-white px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity"
+          className="flex-1 rounded-xl bg-primary text-primary-foreground px-4 py-2 text-sm font-bold hover:opacity-90 transition-opacity"
         >
           {lb.share}
         </button>

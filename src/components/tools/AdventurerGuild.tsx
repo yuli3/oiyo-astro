@@ -265,7 +265,7 @@ export default function AdventurerGuild({ locale }: Props) {
           <span className="text-xs font-semibold text-orange-600">🔥 {s.streak}{t.streakUnit}</span>
         </div>
         <div className="mt-2 h-2 overflow-hidden rounded-full bg-green-200">
-          <div className="h-full bg-green-600" style={{ width: `${pct}%` }}></div>
+          <div className="h-full bg-primary" style={{ width: `${pct}%` }}></div>
         </div>
         {next && <div className="mt-1 text-right text-xs text-green-600">{t.toNext}: {toNext} XP</div>}
       </div>

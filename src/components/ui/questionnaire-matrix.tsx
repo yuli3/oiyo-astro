@@ -83,7 +83,7 @@ export function QuestionnaireMatrix({
           <span aria-live="polite">{completedLabel(status.completed, questions.length)}</span>
           <span>{status.progress}%</span>
         </div>
-        <Progress value={status.progress} aria-label={completedLabel(status.completed, questions.length)} className="bg-muted" indicatorClassName="bg-green-600 motion-reduce:transition-none" />
+        <Progress value={status.progress} aria-label={completedLabel(status.completed, questions.length)} className="bg-muted" indicatorClassName="bg-primary motion-reduce:transition-none" />
         <p className="text-right text-xs text-muted-foreground">{unansweredLabel(unanswered)}</p>
       </div>
 
@@ -120,7 +120,7 @@ export function QuestionnaireMatrix({
                       className={cn(
                         "min-h-12 rounded-lg border bg-muted/40 px-2 py-2 text-xs text-muted-foreground outline-none transition-colors motion-reduce:transition-none",
                         "hover:border-green-500 hover:bg-surface-subtle focus-visible:border-green-600 focus-visible:ring-2 focus-visible:ring-green-600/30",
-                        selected && "border-green-600 bg-green-600 font-semibold text-primary-foreground hover:bg-primary",
+                        selected && "border-green-600 bg-primary font-semibold text-primary-foreground hover:bg-primary-hover",
                       )}
                     >
                       {option.label}

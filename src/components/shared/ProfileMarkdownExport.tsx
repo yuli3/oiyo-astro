@@ -611,7 +611,7 @@ ${listLines(form.nextExperiments)}
               <span className="text-xs font-bold text-green-700">{filled}/{items.length} · {pct}%</span>
             </div>
             <div className="mb-3 h-2 overflow-hidden rounded-full bg-green-100">
-              <div className="h-full rounded-full bg-green-600 transition-all" style={{ width: `${pct}%` }} />
+              <div className="h-full rounded-full bg-primary transition-all" style={{ width: `${pct}%` }} />
             </div>
             <div className="flex flex-wrap gap-2">
               {items.map((it) => {

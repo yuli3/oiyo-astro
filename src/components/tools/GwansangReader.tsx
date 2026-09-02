@@ -111,7 +111,7 @@ export default function GwansangReader({ locale: lp = 'ko' }: Props) {
             </div>
           ))}
           <button onClick={() => setDone(true)} disabled={!allPicked}
-            className="w-full rounded-xl bg-green-600 text-white px-4 py-3 text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-40">
+            className="w-full rounded-xl bg-primary text-primary-foreground px-4 py-3 text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-40">
             {t.result}
           </button>
         </>

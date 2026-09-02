@@ -182,7 +182,7 @@ export default function AttachmentStyleTest({ locale: rawLocale = "ko" }: Props)
         const responseMean = (1 + (value * 4) / 100).toFixed(1);
         return <article key={id} className="rounded-2xl border bg-card p-5">
           <h2 className="font-bold">{label}</h2>
-          <div className="mt-4 h-3 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-green-600" style={{ width: `${value}%` }} /></div>
+          <div className="mt-4 h-3 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-primary" style={{ width: `${value}%` }} /></div>
           <p className="mt-2 text-right text-sm font-bold text-green-800">{responseMean} / 5.0 · {t.level[level]}</p>
           <p className="mt-3 text-sm leading-6 text-muted-foreground">{t.descriptions[id][level]}</p>
         </article>;

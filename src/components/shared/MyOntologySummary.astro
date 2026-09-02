@@ -23,7 +23,7 @@ const c = copy[locale] ?? copy.en;
         <p class="text-sm font-black text-foreground">{c.title}</p>
         <p class="text-xs text-green-600">{c.sub}</p>
       </div>
-      <a href={`/${locale}/ontology/`} class="shrink-0 rounded-full bg-green-600 px-4 py-2 text-sm font-black text-primary-foreground transition hover:bg-primary">{c.cta} →</a>
+      <a href={`/${locale}/ontology/`} class="shrink-0 rounded-full bg-primary px-4 py-2 text-sm font-black text-primary-foreground transition hover:bg-primary-hover">{c.cta} →</a>
     </div>
     <div id="my-ontology-chips" data-empty={c.empty} class="mt-3 flex flex-wrap gap-2">
       <span class="text-sm text-green-500">{c.empty}</span>

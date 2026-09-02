@@ -136,7 +136,7 @@ export default function EmotionReleaseTool({ locale }: Props) {
       type="button"
       onClick={() => { setEmotion(e); setCustom(''); }}
       className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
-        emotion === e ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-card text-green-800 hover:border-green-400'
+        emotion === e ? 'border-green-600 bg-primary text-primary-foreground' : 'border-green-200 bg-card text-green-800 hover:border-green-400'
       }`}
     >
       {e}

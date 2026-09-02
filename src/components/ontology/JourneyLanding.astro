@@ -107,7 +107,7 @@ const faqJsonLd = JSON.stringify({
     <ol class="space-y-4">
       {c.interpret.steps.map((s, i) => (
         <li class="flex gap-3">
-          <span class="flex-shrink-0 w-7 h-7 rounded-full bg-green-600 text-white text-sm font-bold flex items-center justify-center" aria-hidden="true">{i + 1}</span>
+          <span class="flex-shrink-0 w-7 h-7 rounded-full bg-primary text-primary-foreground text-sm font-bold flex items-center justify-center" aria-hidden="true">{i + 1}</span>
           <div>
             <h3 class="font-bold text-green-900">{s.title}</h3>
             <p class="text-sm text-gray-600 leading-relaxed mt-0.5">{s.body}</p>

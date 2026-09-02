@@ -43,7 +43,7 @@ export default function YongsinSection({
       {/* Strength badge */}
       <div className="rounded-xl bg-surface-subtle border border-green-100 p-4">
         <div className="flex items-center gap-2">
-          <span className="rounded-full bg-green-600 px-3 py-1 text-xs font-bold text-white">
+          <span className="rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">
             {tt(C.strengthLabel[strength.category], locale)}
           </span>
           <span className="text-xs text-green-700">

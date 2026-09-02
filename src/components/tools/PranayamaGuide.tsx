@@ -286,7 +286,7 @@ export default function PranayamaGuide({ locale }: Props) {
         {TECHNIQUES.map((tch, i) => (
           <button key={tch.id} type="button" onClick={() => pick(i)}
             className={`rounded-xl px-4 py-2.5 text-left text-sm transition-all ${
-              selected === i ? 'bg-green-600 text-white shadow-sm' : 'bg-card text-green-800 hover:bg-green-100'
+              selected === i ? 'bg-primary text-primary-foreground shadow-sm' : 'bg-card text-green-800 hover:bg-green-100'
             }`}>
             <span className="font-semibold">{tt(tch.name, locale)}</span>
             <span className={`ml-1 block text-xs ${selected === i ? 'text-green-100' : 'text-green-500'}`}>
@@ -317,7 +317,7 @@ export default function PranayamaGuide({ locale }: Props) {
       </div>
       <div className="flex justify-center gap-3">
         <button type="button" onClick={startPause}
-          className={`rounded-xl px-8 py-3 font-semibold text-primary-foreground shadow-sm transition-all ${isRunning ? 'bg-amber-500 hover:bg-amber-600' : 'bg-green-600 hover:bg-primary'}`}>
+          className={`rounded-xl px-8 py-3 font-semibold text-primary-foreground shadow-sm transition-all ${isRunning ? 'bg-amber-500 hover:bg-amber-600' : 'bg-primary hover:bg-primary-hover'}`}>
           {isRunning ? u('pause') : u('start')}
         </button>
         <button type="button" onClick={reset}

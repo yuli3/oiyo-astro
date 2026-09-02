@@ -158,7 +158,7 @@ export default function StrengthKeywordFinder({ locale }: Props) {
         aria-pressed={on}
         className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
           on
-            ? 'border-green-600 bg-green-600 text-white'
+            ? 'border-green-600 bg-primary text-primary-foreground'
             : 'border-green-200 bg-card text-green-800 hover:border-green-400'
         }`}
       >

@@ -69,7 +69,7 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
           value={progress}
           aria-label={questionLabel}
           className="bg-muted"
-          indicatorClassName="bg-green-600 motion-reduce:transition-none"
+          indicatorClassName="bg-primary motion-reduce:transition-none"
         />
       </div>
 
@@ -96,7 +96,7 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
                   aria-hidden="true"
                   className={cn(
                     "flex size-6 flex-none items-center justify-center rounded-full border-2 border-green-600 text-xs font-bold text-green-700",
-                    selected && "bg-green-600 text-white",
+                    selected && "bg-primary text-primary-foreground",
                   )}
                 >
                   {option.indicator ?? (typeof option.value === "number" ? option.value : selected ? "✓" : "")}

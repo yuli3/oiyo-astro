@@ -1117,7 +1117,7 @@ export default function ChineseZodiac({ locale }: Props) {
           />
           <button
             onClick={handleFind}
-            className="px-5 py-2.5 bg-green-600 text-primary-foreground rounded-xl font-semibold text-sm hover:bg-primary transition-colors"
+            className="px-5 py-2.5 bg-primary text-primary-foreground rounded-xl font-semibold text-sm hover:bg-primary-hover transition-colors"
           >
             {t.findBtn}
           </button>

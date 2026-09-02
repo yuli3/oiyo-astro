@@ -86,10 +86,10 @@ export default function MoneyParkingGuide({ locale }: Props) {
         <span className="text-sm font-bold uppercase tracking-wider text-green-800">{t.goalQ}</span>
         <div className="mt-2 flex flex-wrap gap-2">
           <button type="button" onClick={() => setGoal('')}
-            className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${goal === '' ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-card text-green-800 hover:border-green-400'}`}>{t.all}</button>
+            className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${goal === '' ? 'border-green-600 bg-primary text-primary-foreground' : 'border-green-200 bg-card text-green-800 hover:border-green-400'}`}>{t.all}</button>
           {t.goals.map((g) => (
             <button key={g.key} type="button" onClick={() => setGoal(g.key)}
-              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${goal === g.key ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-card text-green-800 hover:border-green-400'}`}>{g.label}</button>
+              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${goal === g.key ? 'border-green-600 bg-primary text-primary-foreground' : 'border-green-200 bg-card text-green-800 hover:border-green-400'}`}>{g.label}</button>
           ))}
         </div>
       </div>

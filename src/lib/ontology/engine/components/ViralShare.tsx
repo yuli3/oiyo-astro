@@ -131,7 +131,7 @@ export function ViralShare({ profile }: ViralShareProps) {
       {/* Actions */}
       <div className="flex gap-4 justify-center">
         <Button
-          className="bg-green-600 hover:bg-green-500 text-white rounded-full px-8"
+          className="bg-primary hover:bg-green-500 text-primary-foreground rounded-full px-8"
           onClick={handleShare}
         >
           <Share2 className="w-4 h-4 mr-2" />

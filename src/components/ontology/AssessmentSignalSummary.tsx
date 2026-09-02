@@ -120,7 +120,7 @@ function Bar({ label, value, suffix }: { label: string; value: number; suffix?: 
   return (
     <div>
       <div className="mb-1 flex justify-between text-[11px] font-black text-slate-600"><span>{label}</span><span>{Math.round(value)}%{suffix}</span></div>
-      <div className="h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-green-600" style={{ width: `${value}%` }} /></div>
+      <div className="h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-primary" style={{ width: `${value}%` }} /></div>
     </div>
   );
 }
@@ -130,7 +130,7 @@ function AttachmentBar({ label, value }: { label: string; value: number }) {
   return (
     <div>
       <div className="mb-1 flex justify-between text-[11px] font-black text-slate-600"><span>{label}</span><span>{mean} / 5.0</span></div>
-      <div className="h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-green-600" style={{ width: `${value}%` }} /></div>
+      <div className="h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-primary" style={{ width: `${value}%` }} /></div>
     </div>
   );
 }

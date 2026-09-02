@@ -132,7 +132,7 @@ export default function CareerValuesTest({ locale: localeProp }: { locale?: stri
       <p className="rounded-xl bg-amber-50 p-4 text-xs leading-5 text-amber-900">{copy.disclaimer}</p>
       <div className="flex flex-wrap justify-center gap-3">
         <button type="button" onClick={restart} className="rounded-lg border bg-card px-5 py-2.5 text-sm font-semibold">{copy.restart}</button>
-        <button type="button" onClick={share} className="rounded-lg bg-green-600 px-5 py-2.5 text-sm font-semibold text-white">{copy.share}</button>
+        <button type="button" onClick={share} className="rounded-lg bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground">{copy.share}</button>
       </div>
       <p aria-live="polite" className="text-center text-xs text-slate-600">{shareStatus === "copied" ? copy.copied : shareStatus === "failed" ? copy.shareFailed : ""}</p>
     </div>

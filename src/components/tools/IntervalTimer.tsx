@@ -37,7 +37,7 @@ const L: Partial<Record<Locale, UiLabels>> = {
 const PHASE_COLOR: Record<Phase, string> = {
   idle: 'bg-surface-subtle text-green-800',
   prep: 'bg-amber-100 text-amber-900',
-  work: 'bg-green-600 text-white',
+  work: 'bg-primary text-primary-foreground',
   rest: 'bg-green-100 text-green-900',
   done: 'bg-green-100 text-green-900',
 };

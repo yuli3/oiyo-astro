@@ -105,7 +105,7 @@ export function OntologyBirthInput({
   const showForm = !has || editing;
   const pill = (active: boolean) =>
     "rounded-xl border px-3 py-2 text-sm font-bold transition " +
-    (active ? "border-green-600 bg-green-600 text-white" : "border-slate-200 bg-card text-slate-700 hover:border-green-400");
+    (active ? "border-green-600 bg-primary text-primary-foreground" : "border-slate-200 bg-card text-slate-700 hover:border-green-400");
 
   return (
     <section className="mx-auto w-full max-w-md rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">

@@ -120,7 +120,7 @@ export default function LottoWinSimulator({ locale }: Props) {
           {jackpots.map((j) => (
             <button key={j.label} type="button"
               onClick={() => { setJackpot(j.amount); setCart({}); }}
-              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${jackpot === j.amount ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-card text-green-800 hover:border-green-400'}`}>
+              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${jackpot === j.amount ? 'border-green-600 bg-primary text-primary-foreground' : 'border-green-200 bg-card text-green-800 hover:border-green-400'}`}>
               {j.label}
             </button>
           ))}
@@ -134,7 +134,7 @@ export default function LottoWinSimulator({ locale }: Props) {
           <span className={`font-mono text-2xl font-extrabold ${balance < 0 ? 'text-red-600' : 'text-green-900'}`}>{fmt(balance)}{currency}</span>
         </div>
         <div className="mt-2 h-2 overflow-hidden rounded-full bg-green-200">
-          <div className="h-full bg-green-600" style={{ width: `${Math.max(0, Math.min(100, (balance / jackpot) * 100))}%` }}></div>
+          <div className="h-full bg-primary" style={{ width: `${Math.max(0, Math.min(100, (balance / jackpot) * 100))}%` }}></div>
         </div>
         <div className="mt-1 text-right text-xs text-green-600">{t.spent}: {fmt(spent)}{currency}</div>
       </div>
@@ -155,7 +155,7 @@ export default function LottoWinSimulator({ locale }: Props) {
                   <button type="button" onClick={() => remove(it)} className="h-8 w-8 rounded-full border border-green-200 text-green-700 hover:border-green-400">−</button>
                 )}
                 <button type="button" onClick={() => add(it)} disabled={cant}
-                  className="h-8 w-8 rounded-full bg-green-600 text-white hover:opacity-90 disabled:opacity-30">+</button>
+                  className="h-8 w-8 rounded-full bg-primary text-primary-foreground hover:opacity-90 disabled:opacity-30">+</button>
               </div>
             </div>
           );
