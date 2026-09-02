@@ -1,0 +1,71 @@
+---
+// 개념 해설 본문 렌더러. explainers 컬렉션의 마크다운을 받아 한 벌의 산문 스타일로 그린다.
+//
+// 스타일이 `is:global` 인 이유: <Content /> 가 주입하는 HTML 은 Astro 의 스코프
+// 해시를 받지 않는다. 래퍼 클래스(.explainer-prose)로 범위를 좁혀 전역 누출을 막는다.
+import { render, type CollectionEntry } from 'astro:content';
+import type { Locale } from '../../i18n';
+
+interface Props {
+  entry: CollectionEntry<'explainers'>;
+  locale: Locale;
+  /** 같은 주제의 테스트 경로. 로케일 접두사 없이 준다. */
+  testPath: string;
+}
+const { entry, locale, testPath } = Astro.props;
+const { Content } = await render(entry);
+
+const UI: Record<Locale, { cta: string; ctaNote: string; updated: string }> = {
+  ko: { cta: '테스트로 내 결과 보기', ctaNote: '읽은 개념을 내 답변에 대입해 봅니다.', updated: '마지막 검토' },
+  en: { cta: 'Take the test', ctaNote: 'Apply what you just read to your own answers.', updated: 'Last reviewed' },
+  ja: { cta: 'テストで確かめる', ctaNote: '読んだ概念を自分の回答に当てはめてみます。', updated: '最終確認' },
+  zh: { cta: '去做测试', ctaNote: '把刚读到的概念用在自己的回答上。', updated: '最后审阅' },
+  fr: { cta: 'Faire le test', ctaNote: 'Appliquez ce que vous venez de lire à vos propres réponses.', updated: 'Dernière révision' },
+  es: { cta: 'Hacer el test', ctaNote: 'Aplica lo que acabas de leer a tus propias respuestas.', updated: 'Última revisión' },
+};
+const ui = UI[locale] ?? UI.en;
+const updated = entry.data.updated.toISOString().slice(0, 10);
+---
+
+<article class="mx-auto max-w-2xl px-4 py-10">
+  <h1 class="text-3xl font-bold leading-snug text-foreground" data-route-title>{entry.data.title}</h1>
+  <p class="mt-4 leading-8 text-muted-foreground">{entry.data.definition}</p>
+
+  <div class="explainer-prose mt-10"><Content /></div>
+
+  <aside class="mt-12 rounded-xl border border-border bg-surface-subtle p-5">
+    <p class="text-sm leading-6 text-muted-foreground">{ui.ctaNote}</p>
+    <a
+      class="mt-3 inline-block rounded-lg bg-primary px-4 py-2 font-semibold text-primary-foreground transition-colors hover:bg-primary-strong"
+      href={`/${locale}${testPath}`}>{ui.cta}</a>
+  </aside>
+
+  <p class="mt-8 text-sm text-muted-foreground">{ui.updated}: <time datetime={updated}>{updated}</time></p>
+</article>
+
+<style is:global>
+  .explainer-prose { color: var(--foreground); line-height: 1.9; }
+  .explainer-prose > * + * { margin-top: 1.15rem; }
+  .explainer-prose h2 {
+    margin-top: 2.75rem; margin-bottom: 0.25rem;
+    font-size: 1.35rem; font-weight: 700; line-height: 1.5;
+    border-top: 1px solid var(--border); padding-top: 1.75rem;
+  }
+  .explainer-prose h2:first-child { margin-top: 0; border-top: 0; padding-top: 0; }
+  .explainer-prose h3 { margin-top: 2rem; font-size: 1.1rem; font-weight: 700; }
+  .explainer-prose strong { font-weight: 700; color: var(--primary-strong); }
+  .explainer-prose a { color: var(--primary-strong); text-decoration: underline; text-underline-offset: 3px; }
+  .explainer-prose ul, .explainer-prose ol { padding-left: 1.35rem; }
+  .explainer-prose ul { list-style: disc; }
+  .explainer-prose ol { list-style: decimal; }
+  .explainer-prose li + li { margin-top: 0.45rem; }
+  .explainer-prose blockquote {
+    border-left: 3px solid var(--primary); padding-left: 1rem;
+    color: var(--muted-foreground); font-style: italic;
+  }
+  /* 표는 좁은 화면에서 페이지를 밀지 않고 스스로 스크롤한다. */
+  .explainer-prose table { display: block; overflow-x: auto; width: 100%; border-collapse: collapse; font-size: 0.925rem; }
+  .explainer-prose th, .explainer-prose td { border: 1px solid var(--border); padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
+  .explainer-prose th { background: var(--muted); font-weight: 700; }
+  .explainer-prose hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
+</style>
