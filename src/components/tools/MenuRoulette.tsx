@@ -180,7 +180,7 @@ export default function MenuRoulette({ locale }: Props) {
 
   const optionClass = (active: boolean) =>
     `min-h-11 rounded-full border px-4 py-2 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 ${
-      active ? 'border-green-700 bg-green-700 text-white' : 'border-green-200 bg-white text-green-900 hover:border-green-500'
+      active ? 'border-green-700 bg-green-700 text-white' : 'border-green-200 bg-card text-green-900 hover:border-green-500'
     }`;
 
   const choose = <T,>(setter: (value: T) => void, value: T) => {
@@ -189,8 +189,8 @@ export default function MenuRoulette({ locale }: Props) {
   };
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-4 sm:p-6">
-      <h1 className="text-2xl font-bold text-green-950">{t.title}</h1>
+    <div className="rounded-2xl border border-green-100 bg-card p-4 sm:p-6">
+      <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
 
       <div className="mt-6 space-y-5">
@@ -234,7 +234,7 @@ export default function MenuRoulette({ locale }: Props) {
         ) : (
           <>
             <div aria-hidden="true" className={`text-6xl ${spinning ? 'motion-safe:animate-pulse' : ''}`}>{result?.emoji ?? '🍽️'}</div>
-            <div className="mt-3 min-h-9 text-2xl font-extrabold text-green-950">{result ? result.names[locale] : '—'}</div>
+            <div className="mt-3 min-h-9 text-2xl font-extrabold text-foreground">{result ? result.names[locale] : '—'}</div>
             {result && !spinning && <p className="mt-1 text-sm font-semibold text-green-700">{t.result}</p>}
           </>
         )}
@@ -246,7 +246,7 @@ export default function MenuRoulette({ locale }: Props) {
       </button>
 
       {treat && !spinning && (
-        <div className="mt-6 rounded-2xl border border-green-200 bg-white p-5">
+        <div className="mt-6 rounded-2xl border border-green-200 bg-card p-5">
           <h2 className="text-sm font-bold text-green-900">{t.treatTitle}</h2>
           <p className="mt-1 text-sm text-green-700">{t.treatLead}</p>
           <p className="mt-2 text-lg font-bold text-green-800">{treat}</p>

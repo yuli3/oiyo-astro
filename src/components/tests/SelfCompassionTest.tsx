@@ -445,12 +445,12 @@ export default function SelfCompassionTest({ locale: localeProp }: Props) {
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
           <p className="text-sm text-gray-700 leading-relaxed">{ld.description}</p>
         </div>
 
         {radarData.every(d => d.score > 0) && (
-          <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+          <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
             <h3 className="mb-4 font-semibold text-gray-700">{tx.dimTitle}</h3>
             <ResponsiveContainer width="100%" height={220}>
               <RadarChart data={radarData}>
@@ -463,7 +463,7 @@ export default function SelfCompassionTest({ locale: localeProp }: Props) {
           </div>
         )}
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm space-y-4">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm space-y-4">
           <div>
             <h3 className="font-semibold text-gray-700">📊 {tx.impact}</h3>
             <p className="mt-1 text-sm text-gray-600">{ld.impact}</p>

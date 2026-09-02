@@ -208,7 +208,7 @@ export default function ResilienceBoostTest({ locale: localeProp }: Props) {
           <p className="mt-3 text-sm text-gray-600">{overallLevel.description}</p>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
           <h3 className="mb-3 font-semibold text-gray-700">{tx.factorLabel}</h3>
           <div className="space-y-4">
             {(Object.keys(factorAvg) as ResilienceFactor[]).map((factor) => {

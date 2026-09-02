@@ -18,7 +18,7 @@ const t = await getTranslations(locale);
 >
   <section class="bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
     <div class="max-w-2xl mx-auto animate-fadeInUp">
-      <h1 class="text-4xl font-serif font-black text-green-950 mb-2">
+      <h1 class="text-4xl font-serif font-black text-foreground mb-2">
         {t('legal.terms.title')}
       </h1>
       <p class="text-xs text-green-500">{t('legal.terms.lastUpdated')}</p>
@@ -27,9 +27,9 @@ const t = await getTranslations(locale);
 
   <section class="max-w-2xl mx-auto px-4 py-8">
     <div class="prose prose-green max-w-none">
-      <div class="bg-white rounded-2xl border border-green-50 p-8 space-y-6">
+      <div class="bg-card rounded-2xl border border-green-50 p-8 space-y-6">
         <div>
-          <h2 class="text-lg font-bold text-green-950 mb-2">Overview</h2>
+          <h2 class="text-lg font-bold text-foreground mb-2">Overview</h2>
           <p class="text-sm text-green-700 leading-relaxed">
             {t('legal.terms.sections.overview.content')}
           </p>

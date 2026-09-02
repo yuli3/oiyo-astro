@@ -17,7 +17,7 @@ export function FactionCard({ analysis, className }: FactionCardProps) {
   return (
     <div
       className={cn(
-        "bg-white rounded-[40px] border border-slate-100 shadow-lg p-8 group hover:shadow-2xl transition-all duration-500 overflow-hidden relative",
+        "bg-card rounded-[40px] border border-slate-100 shadow-lg p-8 group hover:shadow-2xl transition-all duration-500 overflow-hidden relative",
         className,
       )}
     >

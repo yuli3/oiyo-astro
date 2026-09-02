@@ -350,7 +350,7 @@ const faqJsonLd = {
       </p>
       <a
         href={localePath(locale, '/mbti/test')}
-        class="inline-flex items-center gap-2 rounded-xl border-2 border-green-700 bg-white px-6 py-3 font-bold text-green-700 transition hover:bg-green-700 hover:text-white"
+        class="inline-flex items-center gap-2 rounded-xl border-2 border-green-700 bg-card px-6 py-3 font-bold text-green-700 transition hover:bg-green-700 hover:text-white"
       >
         {txt({ ko: '무료 MBTI 테스트 하기', en: 'Take the Free MBTI Test', ja: '無料MBTIテストを受ける', zh: '参加免费MBTI测试', fr: 'Passer le test MBTI gratuit', es: 'Hacer el test MBTI gratis' })} →
       </a>
@@ -366,7 +366,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.conceptTitle}</h2>
       <div class="mt-4 grid gap-4 md:grid-cols-3">
         {c.concepts.map((item) => (
-          <article class="rounded-xl border border-green-100 bg-white p-4">
+          <article class="rounded-xl border border-green-100 bg-card p-4">
             <h3 class="font-semibold text-slate-950">{item.title}</h3>
             <p class="mt-2 text-sm leading-6 text-slate-700">{item.body}</p>
           </article>
@@ -388,7 +388,7 @@ const faqJsonLd = {
 
     <section class="mt-10">
       <h2 class="text-xl font-bold text-slate-950">{c.faqTitle}</h2>
-      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-card">
         {c.faqs.map((faq) => (
           <details class="group p-4">
             <summary class="cursor-pointer list-none font-semibold text-slate-950">{faq.question}</summary>
@@ -402,7 +402,7 @@ const faqJsonLd = {
       <h2 class="text-xl font-bold text-slate-950">{c.readingTitle}</h2>
       <div class="mt-4 grid gap-3 md:grid-cols-3">
         {c.reading.map((item) => (
-          <a class="rounded-xl border border-green-100 bg-white p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
+          <a class="rounded-xl border border-green-100 bg-card p-4 transition-colors hover:border-green-300 hover:bg-green-50" href={item.href} rel="noopener noreferrer" target="_blank">
             <span class="font-semibold text-slate-950">{item.label}</span>
             <span class="mt-2 block text-sm leading-6 text-slate-700">{item.desc}</span>
           </a>

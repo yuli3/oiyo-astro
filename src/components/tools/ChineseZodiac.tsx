@@ -1102,7 +1102,7 @@ export default function ChineseZodiac({ locale }: Props) {
       </div>
 
       {/* Year input */}
-      <div className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm space-y-3">
+      <div className="bg-card border border-gray-100 rounded-2xl p-5 shadow-sm space-y-3">
         <label className="text-sm font-medium text-gray-700">{t.enterYear}</label>
         <div className="flex gap-2">
           <input
@@ -1140,7 +1140,7 @@ export default function ChineseZodiac({ locale }: Props) {
                 className={`flex flex-col items-center gap-1 p-2 rounded-xl border-2 transition-all ${
                   isSelected
                     ? `${c.bg} ${c.border} ring-2 ring-offset-1`
-                    : "bg-white border-gray-100 hover:border-gray-300"
+                    : "bg-card border-gray-100 hover:border-gray-300"
                 }`}
               >
                 <span className="text-2xl">{z.emoji}</span>
@@ -1183,7 +1183,7 @@ export default function ChineseZodiac({ locale }: Props) {
             <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-1">Years</p>
             <div className="flex flex-wrap gap-1">
               {data.years.map((y) => (
-                <span key={y} className="text-xs bg-white bg-opacity-70 px-2 py-0.5 rounded-full text-gray-600 border border-white">
+                <span key={y} className="text-xs bg-card bg-opacity-70 px-2 py-0.5 rounded-full text-gray-600 border border-white">
                   {y}
                 </span>
               ))}
@@ -1204,7 +1204,7 @@ export default function ChineseZodiac({ locale }: Props) {
 
           {/* Strengths / Weaknesses */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div className="bg-white bg-opacity-60 rounded-xl p-3">
+            <div className="bg-card bg-opacity-60 rounded-xl p-3">
               <p className="text-xs font-semibold text-emerald-600 mb-2">✅ {t.strengthsLabel}</p>
               <ul className="space-y-1">
                 {data.strengths[locale].map((s) => (
@@ -1212,7 +1212,7 @@ export default function ChineseZodiac({ locale }: Props) {
                 ))}
               </ul>
             </div>
-            <div className="bg-white bg-opacity-60 rounded-xl p-3">
+            <div className="bg-card bg-opacity-60 rounded-xl p-3">
               <p className="text-xs font-semibold text-rose-500 mb-2">⚠️ {t.weaknessesLabel}</p>
               <ul className="space-y-1">
                 {data.weaknesses[locale].map((w) => (
@@ -1224,7 +1224,7 @@ export default function ChineseZodiac({ locale }: Props) {
 
           {/* Compatibility */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div className="bg-white bg-opacity-60 rounded-xl p-3">
+            <div className="bg-card bg-opacity-60 rounded-xl p-3">
               <p className="text-xs font-semibold text-emerald-600 mb-2">💚 {t.bestMatchLabel}</p>
               <div className="flex flex-wrap gap-1.5">
                 {data.bestMatch.map((m) => {
@@ -1241,7 +1241,7 @@ export default function ChineseZodiac({ locale }: Props) {
                 })}
               </div>
             </div>
-            <div className="bg-white bg-opacity-60 rounded-xl p-3">
+            <div className="bg-card bg-opacity-60 rounded-xl p-3">
               <p className="text-xs font-semibold text-rose-500 mb-2">⚡ {t.worstMatchLabel}</p>
               <div className="flex flex-wrap gap-1.5">
                 {data.worstMatch.map((m) => {
@@ -1261,7 +1261,7 @@ export default function ChineseZodiac({ locale }: Props) {
           </div>
 
           {/* Lucky */}
-          <div className="bg-white bg-opacity-60 rounded-xl p-3">
+          <div className="bg-card bg-opacity-60 rounded-xl p-3">
             <p className={`text-xs font-semibold mb-2 ${elemColors.text}`}>🍀 {t.luckyLabel}</p>
             <div className="flex flex-wrap gap-4 text-xs text-gray-700">
               <span>🔢 {data.luckyNumbers.join(", ")}</span>
@@ -1271,22 +1271,22 @@ export default function ChineseZodiac({ locale }: Props) {
 
           {/* Career / Love */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div className="bg-white bg-opacity-60 rounded-xl p-3">
+            <div className="bg-card bg-opacity-60 rounded-xl p-3">
               <p className={`text-xs font-semibold mb-1 ${elemColors.text}`}>💼 {t.careerLabel}</p>
               <p className="text-xs text-gray-700 leading-relaxed">{data.career[locale]}</p>
             </div>
-            <div className="bg-white bg-opacity-60 rounded-xl p-3">
+            <div className="bg-card bg-opacity-60 rounded-xl p-3">
               <p className={`text-xs font-semibold mb-1 ${elemColors.text}`}>💕 {t.loveLabel}</p>
               <p className="text-xs text-gray-700 leading-relaxed">{data.love[locale]}</p>
             </div>
           </div>
 
           {/* Famous */}
-          <div className="bg-white bg-opacity-60 rounded-xl p-3">
+          <div className="bg-card bg-opacity-60 rounded-xl p-3">
             <p className={`text-xs font-semibold mb-2 ${elemColors.text}`}>⭐ {t.famousLabel}</p>
             <div className="flex flex-wrap gap-1.5">
               {data.famous.map((f) => (
-                <span key={f} className="text-xs bg-white px-2 py-0.5 rounded-full border text-gray-600">
+                <span key={f} className="text-xs bg-card px-2 py-0.5 rounded-full border text-gray-600">
                   {f}
                 </span>
               ))}

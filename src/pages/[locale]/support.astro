@@ -18,7 +18,7 @@ const t = await getTranslations(locale);
 >
   <section class="relative bg-gradient-to-b from-green-50/50 to-white pt-16 pb-8 px-4 text-center">
     <div class="max-w-2xl mx-auto animate-fadeInUp">
-      <h1 class="text-4xl font-serif font-black text-green-950 mb-3">
+      <h1 class="text-4xl font-serif font-black text-foreground mb-3">
         {t('support.hero.title')}
       </h1>
       <p class="text-green-700">{t('support.hero.subtitle')}</p>
@@ -29,12 +29,12 @@ const t = await getTranslations(locale);
     <div class="grid gap-4 mb-8">
       <!-- Categories -->
       {(['technical', 'general', 'feature_request'] as const).map((cat) => (
-        <div class="bg-white rounded-2xl border border-green-50 p-5 flex items-start gap-4">
+        <div class="bg-card rounded-2xl border border-green-50 p-5 flex items-start gap-4">
           <div class="w-10 h-10 rounded-xl bg-green-50 flex items-center justify-center text-lg shrink-0">
             {cat === 'technical' ? '⚙️' : cat === 'feature_request' ? '💡' : '💬'}
           </div>
           <div>
-            <h3 class="font-semibold text-green-950 text-sm">
+            <h3 class="font-semibold text-foreground text-sm">
               {t(`support.categories.${cat}`)}
             </h3>
           </div>
@@ -42,8 +42,8 @@ const t = await getTranslations(locale);
       ))}
     </div>
 
-    <div class="bg-white rounded-2xl border border-green-50 p-8">
-      <p class="font-semibold text-green-950 mb-1">{t('support.contact')}</p>
+    <div class="bg-card rounded-2xl border border-green-50 p-8">
+      <p class="font-semibold text-foreground mb-1">{t('support.contact')}</p>
       <p class="text-sm text-green-600 mb-5">{t('support.form.descriptionPlaceholder')}</p>
       <form
         name="contact"
@@ -60,7 +60,7 @@ const t = await getTranslations(locale);
             name="name"
             type="text"
             required
-            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-green-950 text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300"
+            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300"
             placeholder={t('contact.name')}
           />
         </div>
@@ -74,7 +74,7 @@ const t = await getTranslations(locale);
             name="email"
             type="email"
             required
-            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-green-950 text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300"
+            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300"
             placeholder="hello@example.com"
           />
         </div>
@@ -88,7 +88,7 @@ const t = await getTranslations(locale);
             name="message"
             rows="4"
             required
-            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-green-950 text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300 resize-none"
+            class="w-full px-4 py-2.5 rounded-xl border border-green-100 bg-green-50/30 text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-green-300 placeholder:text-green-300 resize-none"
             placeholder={t('contact.subtitle')}
           ></textarea>
         </div>

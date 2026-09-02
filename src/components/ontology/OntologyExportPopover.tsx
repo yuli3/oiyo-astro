@@ -285,7 +285,7 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
     return (
       <div
         aria-busy="true"
-        className="rounded-[28px] border border-green-100 bg-white p-4 shadow-sm sm:p-5"
+        className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5"
       >
         <Skeleton className="h-24 rounded-2xl bg-green-50" />
         <div className="mt-3 flex flex-wrap gap-1.5">
@@ -301,7 +301,7 @@ export function OntologyExportPopover({ locale }: { locale: string }) {
   const topRecommendations = [...data.recommendations].sort((a, b) => b.matchScore - a.matchScore).slice(0, 3);
 
   return (
-    <div className="rounded-[28px] border border-green-100 bg-white p-4 shadow-sm sm:p-5">
+    <div className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
       {/* PNG capture target — a compact visual summary, deliberately separate
           from the controls/raw-text preview below so the exported image
           isn't cluttered with buttons. */}

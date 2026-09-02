@@ -327,7 +327,7 @@ export default function SajuCompatibility({ locale }: Props) {
       </div>
 
       {!result ? (
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 space-y-5">
+        <div className="bg-card border border-gray-200 rounded-2xl p-6 space-y-5">
           {([1, 2] as const).map((n) => {
             const year = n === 1 ? year1 : year2;
             const setYear = n === 1 ? setYear1 : setYear2;
@@ -375,7 +375,7 @@ export default function SajuCompatibility({ locale }: Props) {
           </div>
 
           {/* Score */}
-          <div className="bg-white border border-gray-100 rounded-2xl p-5 text-center shadow-sm space-y-1">
+          <div className="bg-card border border-gray-100 rounded-2xl p-5 text-center shadow-sm space-y-1">
             {!result.solarAccurate && (
               <p className="rounded-lg border border-amber-200 bg-amber-50 px-3 py-2 text-[11px] leading-5 text-amber-900">
                 {ui.yearOnlyNote}
@@ -387,7 +387,7 @@ export default function SajuCompatibility({ locale }: Props) {
           </div>
 
           {/* Compatibility detail */}
-          <div className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm space-y-4">
+          <div className="bg-card border border-gray-100 rounded-2xl p-5 shadow-sm space-y-4">
             <h3 className="font-bold text-gray-800 text-base">{result.compat.title}</h3>
             <p className="text-sm text-gray-700 leading-relaxed">{result.compat.summary}</p>
             <div className="space-y-2">

@@ -670,7 +670,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
         <div className="text-xs text-gray-500 mb-1">{STEM_NAMES[locale][stemIdx]}</div>
         <div className="text-2xl font-bold text-gray-900 mb-0.5">{BRANCHES[branchIdx]}</div>
         <div className="text-xs text-gray-500 mb-1">{BRANCH_EMOJIS[branchIdx]} {BRANCH_ANIMALS[locale][branchIdx]}</div>
-        <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${c.text} bg-white bg-opacity-60`}>
+        <span className={`text-[10px] font-semibold px-1.5 py-0.5 rounded-full ${c.text} bg-card bg-opacity-60`}>
           {ELEMENTS[elem][locale]}
         </span>
         <p className="mt-2 min-h-[2.25rem] text-[11px] leading-relaxed text-gray-600">{role}</p>
@@ -744,7 +744,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           </div>
 
           {/* Quick answer — 내 오행 한눈에 보기 (answer-first, before deeper reads) */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-4">
+          <div className="bg-card rounded-2xl border border-gray-200 p-4">
             <h2 className="text-sm font-semibold text-gray-800">{reading.quickAnswerTitle}</h2>
             <p className="mt-1 text-sm leading-relaxed text-gray-700">
               {reading.quickAnswerBody.replace('%s', ELEMENTS[result.sortedElements[0]][locale])}
@@ -770,7 +770,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           <LifeCategoriesSection locale={locale} analysis={analysis.data} />
 
           {/* Reading map */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-4">
+          <div className="bg-card rounded-2xl border border-gray-200 p-4">
             <div className="mb-4">
               <h2 className="text-sm font-semibold text-gray-800">{reading.readingMap}</h2>
               <p className="mt-1 text-xs leading-relaxed text-gray-500">{reading.readingMapDesc}</p>
@@ -786,7 +786,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
           </div>
 
           {/* Element balance */}
-          <div className="bg-white rounded-2xl border border-gray-200 p-4">
+          <div className="bg-card rounded-2xl border border-gray-200 p-4">
             <h2 className="text-sm font-semibold text-gray-700 mb-3">{reading.balanceTitle}</h2>
             <div className="space-y-2">
               {ELEMENT_ORDER.map(el => {
@@ -834,7 +834,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
             const supportColor = ELEMENT_COLORS[support];
             const regulateColor = ELEMENT_COLORS[regulate];
             return (
-              <div className="bg-white rounded-2xl border border-gray-200 p-4">
+              <div className="bg-card rounded-2xl border border-gray-200 p-4">
                 <div className="mb-4">
                   <h2 className="text-sm font-semibold text-gray-800">{reading.relationTitle}</h2>
                   <p className="mt-1 text-xs leading-relaxed text-gray-500">{reading.relationDesc}</p>
@@ -922,7 +922,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                     { label: t.luckyNumbers, value: lucky.numbers, icon: '🔢' },
                     { label: t.luckyDirections, value: lucky.directions, icon: '🧭' },
                   ].map(item => (
-                    <div key={item.label} className="bg-white bg-opacity-60 rounded-lg p-2 text-center">
+                    <div key={item.label} className="bg-card bg-opacity-60 rounded-lg p-2 text-center">
                       <p className="text-base mb-0.5">{item.icon}</p>
                       <p className="text-[10px] text-gray-500 mb-0.5">{item.label}</p>
                       <p className="text-xs font-semibold text-gray-800">{item.value}</p>

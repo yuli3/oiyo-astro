@@ -172,17 +172,17 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
     </section>
 
     <section class="mt-6">
-      <h2 class="text-xl font-bold text-green-950">{c.traitsTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.traitsTitle}</h2>
       <div class="mt-3 flex flex-wrap gap-2">
         {(z.traits[locale] ?? z.traits.en).map((t) => (
-          <span class="rounded-full border border-green-200 bg-white px-3 py-1.5 text-sm font-semibold text-green-800">{t}</span>
+          <span class="rounded-full border border-green-200 bg-card px-3 py-1.5 text-sm font-semibold text-green-800">{t}</span>
         ))}
       </div>
     </section>
 
     <section class="mt-10 grid gap-4 sm:grid-cols-2">
       <div>
-        <h2 class="text-lg font-bold text-green-950">{c.strengthsTitle}</h2>
+        <h2 class="text-lg font-bold text-foreground">{c.strengthsTitle}</h2>
         <ul class="mt-3 space-y-2">
           {(z.strengths[locale] ?? z.strengths.en).map((s) => (
             <li class="flex gap-2 text-sm leading-6 text-green-800">
@@ -192,7 +192,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
         </ul>
       </div>
       <div>
-        <h2 class="text-lg font-bold text-green-950">{c.weaknessesTitle}</h2>
+        <h2 class="text-lg font-bold text-foreground">{c.weaknessesTitle}</h2>
         <ul class="mt-3 space-y-2">
           {(z.weaknesses[locale] ?? z.weaknesses.en).map((s) => (
             <li class="flex gap-2 text-sm leading-6 text-amber-800">
@@ -204,13 +204,13 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-green-950">{c.matchTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.matchTitle}</h2>
       <div class="mt-4 grid gap-3 sm:grid-cols-2">
         <div class="rounded-xl border border-green-200 bg-green-50 p-4">
           <p class="text-xs font-bold uppercase tracking-widest text-green-700">{c.bestMatch}</p>
           <p class="mt-2 flex flex-wrap gap-2">
             {z.bestMatch.map((a) => (
-              <a href={localePath(`/chinese-zodiac/${a}`)} class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-green-800 hover:bg-green-100">
+              <a href={localePath(`/chinese-zodiac/${a}`)} class="rounded-full bg-card px-3 py-1 text-sm font-semibold text-green-800 hover:bg-green-100">
                 {ZODIACS[a].emoji} {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
               </a>
             ))}
@@ -220,7 +220,7 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
           <p class="text-xs font-bold uppercase tracking-widest text-amber-700">{c.worstMatch}</p>
           <p class="mt-2 flex flex-wrap gap-2">
             {z.worstMatch.map((a) => (
-              <a href={localePath(`/chinese-zodiac/${a}`)} class="rounded-full bg-white px-3 py-1 text-sm font-semibold text-amber-800 hover:bg-amber-100">
+              <a href={localePath(`/chinese-zodiac/${a}`)} class="rounded-full bg-card px-3 py-1 text-sm font-semibold text-amber-800 hover:bg-amber-100">
                 {ZODIACS[a].emoji} {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
               </a>
             ))}
@@ -230,32 +230,32 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-green-950">{c.careerTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.careerTitle}</h2>
       <p class="mt-3 leading-8 text-green-800">{z.career[locale] ?? z.career.en}</p>
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-green-950">{c.loveTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.loveTitle}</h2>
       <p class="mt-3 leading-8 text-green-800">{z.love[locale] ?? z.love.en}</p>
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-green-950">{c.luckyTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.luckyTitle}</h2>
       <div class="mt-3 flex flex-wrap gap-4 text-sm">
-        <p><span class="font-semibold text-green-950">{c.luckyNumbers}:</span> {z.luckyNumbers.join(', ')}</p>
-        <p><span class="font-semibold text-green-950">{c.luckyColors}:</span> {(z.luckyColors[locale] ?? z.luckyColors.en).join(', ')}</p>
+        <p><span class="font-semibold text-foreground">{c.luckyNumbers}:</span> {z.luckyNumbers.join(', ')}</p>
+        <p><span class="font-semibold text-foreground">{c.luckyColors}:</span> {(z.luckyColors[locale] ?? z.luckyColors.en).join(', ')}</p>
       </div>
     </section>
 
     {z.famous.length > 0 && (
       <section class="mt-10">
-        <h2 class="text-xl font-bold text-green-950">{c.famousTitle}</h2>
+        <h2 class="text-xl font-bold text-foreground">{c.famousTitle}</h2>
         <p class="mt-3 text-sm leading-7 text-green-800">{z.famous.join(' · ')}</p>
       </section>
     )}
 
     <section class="mt-6">
-      <h2 class="text-sm font-bold text-green-950">{c.yearsTitle}</h2>
+      <h2 class="text-sm font-bold text-foreground">{c.yearsTitle}</h2>
       <p class="mt-2 text-sm text-green-700">{z.years.join(', ')}</p>
     </section>
 
@@ -271,12 +271,12 @@ const otherAnimals = ZODIAC_ORDER.filter((a) => a !== animal);
     </div>
 
     <section class="mt-10 border-t border-green-100 pt-8">
-      <h2 class="text-lg font-bold text-green-950">{c.otherAnimalsTitle}</h2>
+      <h2 class="text-lg font-bold text-foreground">{c.otherAnimalsTitle}</h2>
       <div class="mt-4 grid grid-cols-4 gap-2">
         {otherAnimals.map((a) => (
           <a
             href={localePath(`/chinese-zodiac/${a}`)}
-            class="rounded-lg border border-green-100 bg-white px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-green-50"
+            class="rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-green-50"
           >
             {ZODIACS[a].emoji} {ZODIACS[a].name[locale] ?? ZODIACS[a].name.en}
           </a>

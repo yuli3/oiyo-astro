@@ -91,8 +91,8 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
   const q = !done ? COUNTRY_QUESTIONS[step] : null;
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-green-950">{u("title")}</h1>
+    <div className="rounded-2xl border border-green-100 bg-card p-5">
+      <h1 className="text-2xl font-bold text-foreground">{u("title")}</h1>
       {!done && step === 0 && (
         <p className="mt-2 leading-7 text-green-700">{u("intro")}</p>
       )}
@@ -111,7 +111,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
               />
             </div>
           </div>
-          <p className="text-lg font-semibold text-green-950">
+          <p className="text-lg font-semibold text-foreground">
             <span className="mr-1">{q.emoji}</span>
             {loc(q.text as LC, locale)}
           </p>
@@ -138,7 +138,7 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
             <p className="text-xs font-semibold text-green-600">
               {u("yourType")}
             </p>
-            <p className="mt-1 text-xl font-bold text-green-950">
+            <p className="mt-1 text-xl font-bold text-foreground">
               {tt(ARCHETYPE[result.primaryArchetype], locale)}
             </p>
           </div>
@@ -151,10 +151,10 @@ export default function CountryMatch({ locale = "ko" }: { locale?: Locale }) {
               {result.topCountries.slice(0, 3).map(({ code, data, match }) => (
                 <div
                   key={code}
-                  className="rounded-2xl border border-green-100 bg-white p-4"
+                  className="rounded-2xl border border-green-100 bg-card p-4"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-lg font-bold text-green-950">
+                    <span className="text-lg font-bold text-foreground">
                       <span className="mr-2">{data.flag}</span>
                       {loc(data.name as LC, locale)}
                     </span>

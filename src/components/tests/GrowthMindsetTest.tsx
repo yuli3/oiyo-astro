@@ -438,11 +438,11 @@ export default function GrowthMindsetTest({ locale: localeProp }: Props) {
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
           <p className="text-sm text-gray-700 leading-relaxed">{td.description}</p>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
           <h3 className="mb-3 font-semibold text-gray-700">🔍 {tx.traits}</h3>
           <div className="flex flex-wrap gap-2">
             {td.traits.map((trait, i) => (
@@ -453,7 +453,7 @@ export default function GrowthMindsetTest({ locale: localeProp }: Props) {
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
           <ResponsiveContainer width="100%" height={120}>
             <BarChart data={chartData} layout="vertical" margin={{ left: 16 }}>
               <XAxis type="number" domain={[0, maxScore]} tick={{ fontSize: 11 }} />

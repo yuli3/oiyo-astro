@@ -45,7 +45,7 @@ export function ResonanceDetails({
             "group relative p-5 rounded-2xl border transition-all duration-500 overflow-hidden",
             d.isSimulated
               ? "bg-slate-50 border-green-50 border-dashed"
-              : "bg-white border-green-100 hover:border-amber-500/30 hover:bg-green-50 shadow-sm",
+              : "bg-card border-green-100 hover:border-amber-500/30 hover:bg-green-50 shadow-sm",
           )}
           initial={{ opacity: 0, y: 10 }}
           key={d.id}

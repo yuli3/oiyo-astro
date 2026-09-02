@@ -73,7 +73,7 @@ export default function JourneyCourse({ locale, journey, steps }: Props) {
                 aria-pressed={checked}
                 aria-label={`${s.label} — ${t.done}`}
                 className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full border-2 text-xs font-bold transition-colors ${
-                  checked ? 'border-green-500 bg-green-500 text-white' : 'border-green-300 bg-white text-green-300 hover:border-green-500'
+                  checked ? 'border-green-500 bg-green-500 text-white' : 'border-green-300 bg-card text-green-300 hover:border-green-500'
                 }`}
               >
                 {checked ? '✓' : i + 1}

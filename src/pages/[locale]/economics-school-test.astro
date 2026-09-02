@@ -54,19 +54,19 @@ const ci = coordinateIntroMap[locale] ?? coordinateIntroMap.en;
         <a href={`/${locale}/ontology/`} class="hover:text-green-800">OIYO Ontology</a>
         <span>›</span>
         <span>{ci.badge}</span>
-        <span class="ml-auto rounded-full bg-white px-2.5 py-1 text-green-700">{ci.status}</span>
+        <span class="ml-auto rounded-full bg-card px-2.5 py-1 text-green-700">{ci.status}</span>
       </div>
-      <h2 class="mt-3 text-2xl font-black text-green-950">{ci.title}</h2>
+      <h2 class="mt-3 text-2xl font-black text-foreground">{ci.title}</h2>
       <p class="mt-3 text-sm leading-7 text-green-700">{ci.body}</p>
       <div class="mt-4 flex flex-wrap gap-2 text-xs font-bold text-slate-600">
-        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-green-100">{ci.time}</span>
-        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-green-100">{ci.count}</span>
-        <span class="rounded-full bg-white px-3 py-1 ring-1 ring-green-100">{ci.cta}</span>
+        <span class="rounded-full bg-card px-3 py-1 ring-1 ring-green-100">{ci.time}</span>
+        <span class="rounded-full bg-card px-3 py-1 ring-1 ring-green-100">{ci.count}</span>
+        <span class="rounded-full bg-card px-3 py-1 ring-1 ring-green-100">{ci.cta}</span>
       </div>
     </section>
     <EconomicsSchoolTest locale={locale as any} client:load />
     <section class="mt-8 rounded-2xl border border-green-100 bg-green-50/60 p-5">
-      <h2 class="font-black text-green-950">{ci.next}</h2>
+      <h2 class="font-black text-foreground">{ci.next}</h2>
       <ul class="mt-3 space-y-2 text-sm leading-6 text-green-800">
         <li><a class="font-bold hover:underline" href={`/${locale}/political/test/`}>→ {ci.links[0]}</a></li>
         <li><a class="font-bold hover:underline" href={`/${locale}/joseon-faction-test/`}>→ {ci.links[1]}</a></li>

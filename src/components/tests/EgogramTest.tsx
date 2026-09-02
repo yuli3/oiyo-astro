@@ -606,7 +606,7 @@ export default function EgogramTest({ locale: localeProp }: Props) {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
+        <div className="bg-card border border-gray-200 rounded-xl p-5 space-y-4">
           <p className="text-gray-700 leading-relaxed">{p.description[locale]}</p>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">

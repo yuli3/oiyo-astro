@@ -112,8 +112,8 @@ export default function ForeignAccountReportChecker({ locale }: Props) {
   const removeAcct = (id: number) => setAccounts((p) => (p.length > 1 ? p.filter((a) => a.id !== id) : p));
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-green-950">{t('title')}</h1>
+    <div className="rounded-2xl border border-green-100 bg-card p-5">
+      <h1 className="text-2xl font-bold text-foreground">{t('title')}</h1>
       <p className="mt-3 leading-7 text-green-800">{t('intro')}</p>
 
       {/* Accounts */}
@@ -127,23 +127,23 @@ export default function ForeignAccountReportChecker({ locale }: Props) {
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
               <label className="text-xs text-green-700">
                 {t('type')}
-                <select value={a.type} onChange={(e) => update(a.id, 'type', e.target.value)} className="mt-1 w-full rounded-lg border border-green-200 bg-white px-2 py-1.5 text-sm text-green-950">
+                <select value={a.type} onChange={(e) => update(a.id, 'type', e.target.value)} className="mt-1 w-full rounded-lg border border-green-200 bg-card px-2 py-1.5 text-sm text-foreground">
                   {types.map((ty) => <option key={ty.key} value={ty.key}>{ty.label}</option>)}
                 </select>
               </label>
               <label className="text-xs text-green-700">
                 {t('currency')}
-                <select value={a.currency} onChange={(e) => update(a.id, 'currency', e.target.value)} className="mt-1 w-full rounded-lg border border-green-200 bg-white px-2 py-1.5 text-sm text-green-950">
+                <select value={a.currency} onChange={(e) => update(a.id, 'currency', e.target.value)} className="mt-1 w-full rounded-lg border border-green-200 bg-card px-2 py-1.5 text-sm text-foreground">
                   {CURRENCIES.map((c) => <option key={c} value={c}>{c}</option>)}
                 </select>
               </label>
               <label className="text-xs text-green-700">
                 {t('fx')}
-                <input inputMode="decimal" value={a.fx} onChange={(e) => update(a.id, 'fx', e.target.value)} className="mt-1 w-full rounded-lg border border-green-200 bg-white px-2 py-1.5 text-sm text-green-950" />
+                <input inputMode="decimal" value={a.fx} onChange={(e) => update(a.id, 'fx', e.target.value)} className="mt-1 w-full rounded-lg border border-green-200 bg-card px-2 py-1.5 text-sm text-foreground" />
               </label>
               <label className="text-xs text-green-700">
                 {t('amount')}
-                <input inputMode="decimal" value={a.amount} onChange={(e) => update(a.id, 'amount', e.target.value)} placeholder="0" className="mt-1 w-full rounded-lg border border-green-200 bg-white px-2 py-1.5 text-sm text-green-950" />
+                <input inputMode="decimal" value={a.amount} onChange={(e) => update(a.id, 'amount', e.target.value)} placeholder="0" className="mt-1 w-full rounded-lg border border-green-200 bg-card px-2 py-1.5 text-sm text-foreground" />
               </label>
             </div>
             <div className="mt-2 text-right text-sm text-green-600">{t('krw')}: <span className="font-semibold text-green-800">₩{fmt(krwOf(a))}</span></div>
@@ -156,7 +156,7 @@ export default function ForeignAccountReportChecker({ locale }: Props) {
       <div className={`mt-5 rounded-2xl border p-4 ${over ? 'border-amber-300 bg-amber-50' : 'border-green-200 bg-green-50'}`}>
         <div className="flex items-baseline justify-between">
           <span className="text-sm font-semibold text-green-800">{t('total')}</span>
-          <span className="text-2xl font-bold text-green-950">₩{fmt(total)}</span>
+          <span className="text-2xl font-bold text-foreground">₩{fmt(total)}</span>
         </div>
         <p className="mt-1 text-xs text-green-600">{t('thresholdNote')}</p>
         <p className={`mt-2 text-sm font-medium ${over ? 'text-amber-800' : 'text-green-700'}`}>{over ? t('over') : t('under')}</p>
@@ -173,13 +173,13 @@ export default function ForeignAccountReportChecker({ locale }: Props) {
             {months.map((m, i) => (
               <label key={i} className="text-xs text-green-700">
                 {locale === 'ko' ? MONTHS_KO[i] : `${i + 1} ${t('monthEnd')}`}
-                <input inputMode="decimal" value={m} onChange={(e) => setMonths((prev) => prev.map((x, j) => (j === i ? e.target.value : x)))} placeholder="₩0" className="mt-1 w-full rounded-lg border border-green-200 bg-white px-2 py-1.5 text-sm text-green-950" />
+                <input inputMode="decimal" value={m} onChange={(e) => setMonths((prev) => prev.map((x, j) => (j === i ? e.target.value : x)))} placeholder="₩0" className="mt-1 w-full rounded-lg border border-green-200 bg-card px-2 py-1.5 text-sm text-foreground" />
               </label>
             ))}
           </div>
           {anyMonthEntered && (
-            <div className="mt-3 rounded-xl bg-white p-3 text-sm">
-              <p className="text-green-700">{t('peakResult')}: <span className="font-bold text-green-950">₩{fmt(peak.maxVal)}</span> ({locale === 'ko' ? MONTHS_KO[peak.maxIdx] : `${peak.maxIdx + 1} ${t('monthEnd')}`})</p>
+            <div className="mt-3 rounded-xl bg-card p-3 text-sm">
+              <p className="text-green-700">{t('peakResult')}: <span className="font-bold text-foreground">₩{fmt(peak.maxVal)}</span> ({locale === 'ko' ? MONTHS_KO[peak.maxIdx] : `${peak.maxIdx + 1} ${t('monthEnd')}`})</p>
               <p className={`mt-1 font-semibold ${peakOver ? 'text-amber-800' : 'text-green-700'}`}>{peakOver ? `✅ ${t('reportYes')}` : `${t('reportNo')}`}</p>
               {peakOver && <p className="mt-1 text-xs leading-5 text-green-700">{t('basisDate')}: {locale === 'ko' ? MONTHS_KO[peak.maxIdx] : `${peak.maxIdx + 1} ${t('monthEnd')}`} · {t('reportYesDesc')}</p>}
               {!peakOver && <p className="mt-1 text-xs leading-5 text-green-700">{t('reportNoDesc')}</p>}

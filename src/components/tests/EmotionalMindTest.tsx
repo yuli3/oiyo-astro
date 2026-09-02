@@ -334,7 +334,7 @@ export default function EmotionalMindTest({ locale: localeProp }: Props) {
           <p className="mt-3 text-sm text-gray-600">{overallLevel.description}</p>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm space-y-4">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm space-y-4">
           {(["awareness", "understanding", "expression", "strategies"] as EQCategory[]).map((cat) => {
             const r = categoryResults[cat];
             const avg = categoryAvg[cat];

@@ -346,7 +346,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
         <div class="rounded-2xl border border-green-200 bg-green-50 p-6 text-center">
           <p class="text-xs font-semibold uppercase tracking-widest text-green-600">{info.resultTitle}</p>
           <p class="mt-1 text-sm text-green-700">{info.resultSub}</p>
-          <div class="mt-4 inline-flex rounded-xl border-2 border-green-800 bg-white px-6 py-3">
+          <div class="mt-4 inline-flex rounded-xl border-2 border-green-800 bg-card px-6 py-3">
             <span class="font-mono text-3xl font-black tracking-[0.3em] text-green-900">{chars.slice(0,4).join('')}</span>
           </div>
         </div>
@@ -407,7 +407,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
 
         <button
           onClick={handleRestart}
-          class="w-full rounded-xl border-2 border-green-700 bg-white py-3 font-bold text-green-700 transition hover:bg-green-700 hover:text-white"
+          class="w-full rounded-xl border-2 border-green-700 bg-card py-3 font-bold text-green-700 transition hover:bg-green-700 hover:text-white"
         >
           {ui.restart}
         </button>
@@ -452,7 +452,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
           const isUnanswered = unanswered.includes(key)
           const current = answers[key]
           return (
-            <div key={key} class={`rounded-xl border-2 p-4 transition ${isUnanswered ? 'border-red-300 bg-red-50' : 'border-slate-200 bg-white'}`}>
+            <div key={key} class={`rounded-xl border-2 p-4 transition ${isUnanswered ? 'border-red-300 bg-red-50' : 'border-slate-200 bg-card'}`}>
               <p class="mb-3 font-medium leading-relaxed text-slate-800">
                 <span class="mr-2 font-black text-green-600">{qi + 1}.</span>{q}
               </p>
@@ -469,7 +469,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
                           ? vi === 0 ? 'border-amber-500 bg-amber-500 text-white'
                             : vi === 2 ? 'border-green-500 bg-green-500 text-white'
                             : 'border-slate-500 bg-slate-500 text-white'
-                          : 'border-slate-200 bg-white text-slate-600 hover:border-slate-400'
+                          : 'border-slate-200 bg-card text-slate-600 hover:border-slate-400'
                       }`}
                     >
                       {labels[vi]}

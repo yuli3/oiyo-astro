@@ -336,7 +336,7 @@ export default function MbtiPersonalityTest({ locale }: { locale?: string }) {
 
   if (showResult && (isComplete || forcedType) && profile) {
     return (
-      <section className="not-prose rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+      <section className="not-prose rounded-2xl border border-slate-200 bg-card p-6 shadow-sm md:p-8">
         <div className="text-center">
           <p className="text-xs font-bold uppercase tracking-widest text-blue-600">{labels.resultLabel}</p>
           <div className="mt-4 text-6xl" aria-hidden="true">{profile.emoji}</div>

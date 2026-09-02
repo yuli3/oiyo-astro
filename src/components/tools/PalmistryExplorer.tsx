@@ -138,7 +138,7 @@ export default function PalmistryExplorer({ locale }: Props) {
         </div>
 
         {/* Detail panel */}
-        <article className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+        <article className="rounded-2xl border border-slate-200 bg-card p-5 shadow-sm">
           <div className="flex items-center gap-2">
             <span className="inline-block h-4 w-4 rounded-full" style={{ backgroundColor: line.color }} aria-hidden="true" />
             <h3 className="text-xl font-black text-slate-900">{line.name[loc]}</h3>

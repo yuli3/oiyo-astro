@@ -328,7 +328,7 @@ export default function TciPersonalityTest({ locale = 'ko' }: { locale?: Locale 
           <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
           <p className="text-gray-500 mt-1">{t.subtitle}</p>
         </div>
-        <div className="bg-white rounded-2xl border border-gray-200 p-6 text-left space-y-4">
+        <div className="bg-card rounded-2xl border border-gray-200 p-6 text-left space-y-4">
           <div className="grid grid-cols-2 gap-4">
             <div className="bg-green-50 rounded-xl p-4">
               <p className="text-xs font-semibold text-green-600 mb-2">{t.temperament}</p>

@@ -860,7 +860,7 @@ export default function DailyHoroscope({ locale }: Props) {
 
       {/* Sign selector */}
       {!result ? (
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 space-y-4">
+        <div className="rounded-2xl border border-gray-200 bg-card p-5 space-y-4">
           <p className="text-sm font-medium text-gray-700">{ui.selectLabel}</p>
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-4">
             {SIGNS.map((s) => (
@@ -870,7 +870,7 @@ export default function DailyHoroscope({ locale }: Props) {
                 className={`flex flex-col items-center rounded-xl border py-3 px-2 transition-all hover:border-green-400 hover:bg-green-50 ${
                   selected === s
                     ? "border-green-500 bg-green-50"
-                    : "border-gray-200 bg-white"
+                    : "border-gray-200 bg-card"
                 }`}
               >
                 <span className="text-2xl">{SIGN_EMOJI[s]}</span>

@@ -103,13 +103,13 @@ export default function IntervalTimer({ locale }: Props) {
       <span className="text-xs font-bold uppercase tracking-wider text-green-800">{label}</span>
       <input type="number" min={min} value={val} disabled={st.phase !== 'idle'}
         onChange={(e) => set(Math.max(min, parseInt(e.target.value, 10) || min))}
-        className="mt-1 w-full rounded-md border border-green-200 bg-white px-3 py-2 text-green-900 disabled:opacity-50 focus:outline-2 focus:outline-green-500" />
+        className="mt-1 w-full rounded-md border border-green-200 bg-card px-3 py-2 text-green-900 disabled:opacity-50 focus:outline-2 focus:outline-green-500" />
     </label>
   );
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-green-950">{t.title}</h1>
+    <div className="rounded-2xl border border-green-100 bg-card p-5">
+      <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
 
       <div className={`mt-5 rounded-2xl p-8 text-center transition-colors ${PHASE_COLOR[st.phase]}`}>
@@ -127,14 +127,14 @@ export default function IntervalTimer({ locale }: Props) {
         ) : (
           <button type="button" onClick={() => setRunning((v) => !v)} className="flex-1 rounded-full bg-green-700 px-5 py-3 font-bold text-white hover:opacity-90">{running ? t.pause : t.resume}</button>
         )}
-        <button type="button" onClick={reset} className="rounded-full border border-green-200 bg-white px-5 py-3 font-semibold text-green-800 hover:border-green-400">{t.reset}</button>
+        <button type="button" onClick={reset} className="rounded-full border border-green-200 bg-card px-5 py-3 font-semibold text-green-800 hover:border-green-400">{t.reset}</button>
       </div>
 
       <div className="mt-4 flex flex-wrap gap-2">
         <button type="button" disabled={st.phase !== 'idle'} onClick={() => { setPrep(10); setWork(20); setRest(10); setRounds(8); }}
-          className="rounded-full border border-green-200 bg-white px-3 py-1.5 text-xs font-semibold text-green-800 hover:border-green-400 disabled:opacity-50">{t.presetTabata}</button>
+          className="rounded-full border border-green-200 bg-card px-3 py-1.5 text-xs font-semibold text-green-800 hover:border-green-400 disabled:opacity-50">{t.presetTabata}</button>
         <button type="button" disabled={st.phase !== 'idle'} onClick={() => { setPrep(10); setWork(40); setRest(20); setRounds(5); }}
-          className="rounded-full border border-green-200 bg-white px-3 py-1.5 text-xs font-semibold text-green-800 hover:border-green-400 disabled:opacity-50">{t.presetCustom}</button>
+          className="rounded-full border border-green-200 bg-card px-3 py-1.5 text-xs font-semibold text-green-800 hover:border-green-400 disabled:opacity-50">{t.presetCustom}</button>
       </div>
 
       <div className="mt-5 grid grid-cols-2 gap-3 sm:grid-cols-4">

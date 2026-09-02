@@ -110,13 +110,13 @@ export default function PersonalProfileExportV2Panel({ locale }: { locale: strin
       <div className="mt-4 flex flex-wrap gap-2" aria-label={t.title}>
         {FORMATS.map((item) => (
           <button key={item} type="button" onClick={() => setFormat(item)} aria-pressed={format === item}
-            className={`min-h-11 rounded-lg px-3 py-2 text-sm font-bold ${format === item ? "bg-green-700 text-white" : "border border-green-200 bg-white text-green-800"}`}>
+            className={`min-h-11 rounded-lg px-3 py-2 text-sm font-bold ${format === item ? "bg-green-700 text-white" : "border border-green-200 bg-card text-green-800"}`}>
             {item === "obsidian" ? "Obsidian" : item.toUpperCase()}
           </button>
         ))}
       </div>
       <div className="mt-3 flex flex-wrap gap-2">
-        <button type="button" onClick={() => deliver(false)} disabled={!data} className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-green-300 bg-white px-4 py-2 text-sm font-bold text-green-800 disabled:opacity-50"><Copy className="h-4 w-4" aria-hidden="true" />{t.copy}</button>
+        <button type="button" onClick={() => deliver(false)} disabled={!data} className="inline-flex min-h-11 items-center gap-2 rounded-lg border border-green-300 bg-card px-4 py-2 text-sm font-bold text-green-800 disabled:opacity-50"><Copy className="h-4 w-4" aria-hidden="true" />{t.copy}</button>
         <button type="button" onClick={() => deliver(true)} disabled={!data} className="inline-flex min-h-11 items-center gap-2 rounded-lg bg-green-700 px-4 py-2 text-sm font-bold text-white disabled:opacity-50"><Download className="h-4 w-4" aria-hidden="true" />{t.save}</button>
       </div>
       {message && <p className="mt-3 text-sm font-semibold text-slate-700" role="status">{message}</p>}

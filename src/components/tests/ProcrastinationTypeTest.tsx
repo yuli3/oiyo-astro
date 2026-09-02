@@ -559,7 +559,7 @@ export default function ProcrastinationTypeTest({ locale: localeProp }: Props) {
           <p className="mt-3 text-gray-600">{rd.description}</p>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm space-y-4">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm space-y-4">
           <div>
             <h3 className="font-semibold text-green-700">✅ {tx.strength}</h3>
             <p className="mt-1 text-sm text-gray-600">{rd.strength}</p>
@@ -574,7 +574,7 @@ export default function ProcrastinationTypeTest({ locale: localeProp }: Props) {
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
           <h3 className="mb-4 font-semibold text-gray-700">{tx.scoreLabel}</h3>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={chartData} layout="vertical" margin={{ left: 16 }}>

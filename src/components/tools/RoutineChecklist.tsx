@@ -119,7 +119,7 @@ export default function RoutineChecklist({ locale }: Props) {
   const doneCount = items.filter((i) => checked.includes(i.id)).length;
 
   return (
-    <div className="mt-10 rounded-2xl border-2 border-green-200 bg-white p-6">
+    <div className="mt-10 rounded-2xl border-2 border-green-200 bg-card p-6">
       <div className="flex items-center justify-between gap-2">
         <h2 className="text-lg font-black text-slate-900">✅ {t.heading}</h2>
         {items.length > 0 && (
@@ -149,7 +149,7 @@ export default function RoutineChecklist({ locale }: Props) {
               <li key={i.id} className="flex items-center gap-3">
                 <button type="button" onClick={() => toggle(i.id)} aria-pressed={isDone} aria-label={i.label}
                   className={`flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md border-2 text-xs font-bold transition-colors ${
-                    isDone ? 'border-green-500 bg-green-500 text-white' : 'border-slate-300 bg-white text-transparent hover:border-green-500'
+                    isDone ? 'border-green-500 bg-green-500 text-white' : 'border-slate-300 bg-card text-transparent hover:border-green-500'
                   }`}>
                   ✓
                 </button>

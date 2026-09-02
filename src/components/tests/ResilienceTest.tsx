@@ -379,7 +379,7 @@ export default function ResilienceTest({ locale: localeProp }: Props) {
           </div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
+        <div className="bg-card border border-gray-200 rounded-xl p-5 space-y-4">
           <p className="text-gray-700 leading-relaxed">{d.description[locale]}</p>
 
           <div>

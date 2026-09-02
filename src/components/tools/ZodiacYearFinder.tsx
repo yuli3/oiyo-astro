@@ -251,7 +251,7 @@ export default function ZodiacYearFinder({ locale = "ko" }: { locale?: Locale })
       <h2 className="text-2xl font-bold text-slate-900">{t.title}</h2>
       <p className="mt-2 leading-7 text-slate-600">{t.subtitle}</p>
 
-      <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-5">
+      <div className="mt-6 rounded-2xl border border-slate-200 bg-card p-5">
         <label className="text-xs font-semibold uppercase tracking-wide text-slate-500">
           {t.birth}
         </label>

@@ -196,7 +196,7 @@ export default function AdventurerGuild({ locale }: Props) {
     try { localStorage.setItem(KEY, JSON.stringify(next)); } catch { /* ignore */ }
   }, []);
 
-  if (!s) return <div className="rounded-2xl border border-green-100 bg-white p-5 text-green-700">…</div>;
+  if (!s) return <div className="rounded-2xl border border-green-100 bg-card p-5 text-green-700">…</div>;
 
   const tierIdx = tiers.reduce((acc, tr, i) => (s.xp >= tr.min ? i : acc), 0);
   const tier = tiers[tierIdx];
@@ -233,9 +233,9 @@ export default function AdventurerGuild({ locale }: Props) {
   const questRow = (q: Quest) => {
     const done = isDone(q);
     return (
-      <div key={q.id} className={`flex items-center justify-between gap-3 rounded-xl border p-3 ${done ? 'border-green-300 bg-green-50' : 'border-green-100 bg-white'}`}>
+      <div key={q.id} className={`flex items-center justify-between gap-3 rounded-xl border p-3 ${done ? 'border-green-300 bg-green-50' : 'border-green-100 bg-card'}`}>
         <div className="min-w-0">
-          <div className={`font-semibold ${done ? 'text-green-700 line-through' : 'text-green-950'}`}>{q.emoji} {q.label}</div>
+          <div className={`font-semibold ${done ? 'text-green-700 line-through' : 'text-foreground'}`}>{q.emoji} {q.label}</div>
           <div className="text-xs text-green-600">+{q.xp} XP</div>
         </div>
         <div className="flex shrink-0 items-center gap-1">
@@ -250,15 +250,15 @@ export default function AdventurerGuild({ locale }: Props) {
   };
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-green-950">{t.title}</h1>
+    <div className="rounded-2xl border border-green-100 bg-card p-5">
+      <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
 
       {/* Profile */}
       <div className="mt-5 rounded-2xl border border-green-200 bg-green-50 p-5">
         <input value={s.name} onChange={(e) => persist({ ...s, name: e.target.value })}
           placeholder={t.namePlaceholder}
-          className="w-full bg-transparent text-lg font-bold text-green-950 placeholder:text-green-400 focus:outline-none" />
+          className="w-full bg-transparent text-lg font-bold text-foreground placeholder:text-green-400 focus:outline-none" />
         <div className="mt-2 flex flex-wrap items-baseline gap-x-4 gap-y-1">
           <span className="text-sm font-semibold text-green-800">{tier.title}</span>
           <span className="text-xs text-green-600">{t.level} {tierIdx + 1} · {s.xp} XP</span>

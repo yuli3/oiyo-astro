@@ -529,7 +529,7 @@ export default function EnglishLevelTest({ locale }: Props) {
           <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
           <p className="mt-2 text-gray-500">{t.subtitle}</p>
         </div>
-        <div className="rounded-2xl border border-gray-200 bg-white p-6 text-left space-y-3">
+        <div className="rounded-2xl border border-gray-200 bg-card p-6 text-left space-y-3">
           {["A1", "A2", "B1", "B2", "C1", "C2"].map((lvl) => (
             <div key={lvl} className="flex items-center gap-3">
               <span className={`w-10 text-center rounded-lg py-0.5 text-sm font-bold ${LEVEL_COLORS[lvl as CEFRLevel]}`}>{lvl}</span>
@@ -564,7 +564,7 @@ export default function EnglishLevelTest({ locale }: Props) {
           />
         </div>
 
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 space-y-4">
+        <div className="rounded-2xl border border-gray-200 bg-card p-5 space-y-4">
           <p className="text-base font-medium text-gray-900">{currentQ.question}</p>
           <div className="space-y-2">
             {currentQ.options.map((opt, i) => {
@@ -627,7 +627,7 @@ export default function EnglishLevelTest({ locale }: Props) {
       </div>
 
       {/* Study tips */}
-      <div className="rounded-2xl border border-gray-200 bg-white p-5 space-y-3">
+      <div className="rounded-2xl border border-gray-200 bg-card p-5 space-y-3">
         <p className="text-sm font-semibold text-gray-700">Study Tips</p>
         <ol className="space-y-2 list-decimal list-inside">
           {t.cefrDesc[cefr].tips.map((tip, i) => (

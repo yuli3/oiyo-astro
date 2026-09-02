@@ -744,7 +744,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
       </div>
 
       {!result ? (
-        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
+        <div className="bg-card rounded-2xl shadow-sm border border-gray-100 p-6">
           <div className="grid grid-cols-2 gap-6 mb-6">
             {/* Person 1 */}
             <div>
@@ -757,7 +757,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
                     className={`py-2 rounded-lg text-sm font-bold border transition-all ${
                       type1 === t
                         ? "bg-red-500 text-white border-red-500"
-                        : "bg-white text-gray-700 border-gray-200 hover:border-red-300"
+                        : "bg-card text-gray-700 border-gray-200 hover:border-red-300"
                     }`}
                   >
                     {ui.types[t]}
@@ -776,7 +776,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
                     className={`py-2 rounded-lg text-sm font-bold border transition-all ${
                       type2 === t
                         ? "bg-green-500 text-white border-green-500"
-                        : "bg-white text-gray-700 border-gray-200 hover:border-green-300"
+                        : "bg-card text-gray-700 border-gray-200 hover:border-green-300"
                     }`}
                   >
                     {ui.types[t]}
@@ -810,7 +810,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
       ) : (
         <div className="space-y-4">
           {/* Score card */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 text-center">
+          <div className="bg-card rounded-2xl shadow-sm border border-gray-100 p-6 text-center">
             <div className="flex items-center justify-center gap-4 mb-4">
               <span className="text-3xl font-black text-red-500">{ui.types[type1 as BloodType]}</span>
               <span className="text-2xl">❤️</span>
@@ -837,7 +837,7 @@ export default function BloodTypeCompatibility({ locale }: Props) {
           </div>
 
           {/* Description */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+          <div className="bg-card rounded-2xl shadow-sm border border-gray-100 p-5">
             <h3 className="font-bold text-gray-800 mb-3">{ui.descLabel}</h3>
             <ul className="space-y-2">
               {result.desc[locale]?.map((line, i) => (

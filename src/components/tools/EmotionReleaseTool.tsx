@@ -136,7 +136,7 @@ export default function EmotionReleaseTool({ locale }: Props) {
       type="button"
       onClick={() => { setEmotion(e); setCustom(''); }}
       className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
-        emotion === e ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-white text-green-800 hover:border-green-400'
+        emotion === e ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-card text-green-800 hover:border-green-400'
       }`}
     >
       {e}
@@ -144,20 +144,20 @@ export default function EmotionReleaseTool({ locale }: Props) {
   );
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-green-950">{t.title}</h1>
+    <div className="rounded-2xl border border-green-100 bg-card p-5">
+      <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
 
       {/* Step 1 */}
       {step === 1 && (
         <div className="mt-6">
-          <h2 className="font-semibold text-green-950">{t.step1}</h2>
+          <h2 className="font-semibold text-foreground">{t.step1}</h2>
           <div className="mt-3 flex flex-wrap gap-2">{t.emotions.map(chip)}</div>
           <input
             value={custom}
             onChange={(e) => { setCustom(e.target.value); setEmotion(''); }}
             placeholder={t.customPlaceholder}
-            className="mt-3 w-full rounded-xl border border-green-200 bg-white px-3 py-2 text-green-900 focus:outline-2 focus:outline-green-500"
+            className="mt-3 w-full rounded-xl border border-green-200 bg-card px-3 py-2 text-green-900 focus:outline-2 focus:outline-green-500"
           />
           <button
             type="button"
@@ -173,7 +173,7 @@ export default function EmotionReleaseTool({ locale }: Props) {
       {/* Step 2 */}
       {step === 2 && (
         <div className="mt-6 text-center">
-          <h2 className="font-semibold text-green-950">{t.step2}</h2>
+          <h2 className="font-semibold text-foreground">{t.step2}</h2>
           <div className="mt-5 space-y-3">
             <div className="rounded-xl bg-green-50 py-3 text-green-800">🫁 {t.breatheIn}</div>
             <div className="rounded-xl bg-green-50 py-3 text-green-700">⏸️ {t.hold}</div>
@@ -188,9 +188,9 @@ export default function EmotionReleaseTool({ locale }: Props) {
       {/* Step 3 */}
       {step === 3 && quote && (
         <div className="mt-6">
-          <h2 className="font-semibold text-green-950">{t.step3}</h2>
+          <h2 className="font-semibold text-foreground">{t.step3}</h2>
           <blockquote className="mt-4 rounded-2xl border border-green-200 bg-green-50 p-6 text-center">
-            <p className="text-lg font-semibold leading-8 text-green-950">“{quote.text}”</p>
+            <p className="text-lg font-semibold leading-8 text-foreground">“{quote.text}”</p>
             <footer className="mt-3 text-sm text-green-600">— {quote.author}</footer>
           </blockquote>
           <button type="button" onClick={() => setStep(4)} className="mt-5 rounded-full bg-green-700 px-5 py-2 text-sm font-semibold text-white">
@@ -202,21 +202,21 @@ export default function EmotionReleaseTool({ locale }: Props) {
       {/* Step 4 */}
       {step === 4 && (
         <div className="mt-6 text-center">
-          <h2 className="font-semibold text-green-950">{t.step4}</h2>
+          <h2 className="font-semibold text-foreground">{t.step4}</h2>
           <p className="mt-3 leading-7 text-green-700">{t.releaseLead}</p>
           <p className="mt-5 text-xl font-bold text-green-800">{chosen ? `『${chosen}』 — ` : ''}{t.releaseLine}</p>
           <div className="mt-6 flex flex-wrap justify-center gap-2">
             <button
               type="button"
               onClick={() => { setStep(1); setEmotion(''); setCustom(''); setQuote(null); }}
-              className="rounded-full border border-green-200 bg-white px-4 py-2 text-sm font-medium text-green-800 hover:border-green-400"
+              className="rounded-full border border-green-200 bg-card px-4 py-2 text-sm font-medium text-green-800 hover:border-green-400"
             >
               {t.restart}
             </button>
-            <a href={localePath('/journal/today')} className="rounded-full border border-green-200 bg-white px-4 py-2 text-sm font-medium text-green-800 hover:border-green-400">
+            <a href={localePath('/journal/today')} className="rounded-full border border-green-200 bg-card px-4 py-2 text-sm font-medium text-green-800 hover:border-green-400">
               {t.journalCta}
             </a>
-            <a href={localePath('/breathing/timer')} className="rounded-full border border-green-200 bg-white px-4 py-2 text-sm font-medium text-green-800 hover:border-green-400">
+            <a href={localePath('/breathing/timer')} className="rounded-full border border-green-200 bg-card px-4 py-2 text-sm font-medium text-green-800 hover:border-green-400">
               {t.breathCta}
             </a>
           </div>

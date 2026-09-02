@@ -124,7 +124,7 @@ export function PersonalProfileHistoryPreview({ locale }: { locale: Lang }) {
   const retry = result.ux.state === "export-failed" ? exportHistory : sync;
 
   return (
-    <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm" aria-labelledby="profile-history-title">
+    <section className="mt-8 rounded-2xl border border-slate-200 bg-card p-4 shadow-sm" aria-labelledby="profile-history-title">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h2 id="profile-history-title" className="text-lg font-black text-slate-900">{t.title}</h2>

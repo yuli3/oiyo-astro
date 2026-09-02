@@ -75,8 +75,8 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
   const q = !done ? BALANCE_QUESTIONS[step] : null;
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-green-950">{u("title")}</h1>
+    <div className="rounded-2xl border border-green-100 bg-card p-5">
+      <h1 className="text-2xl font-bold text-foreground">{u("title")}</h1>
       {!done && step === 0 && <p className="mt-2 leading-7 text-green-700">{u("intro")}</p>}
 
       {q && (
@@ -88,7 +88,7 @@ export default function BalanceWheel({ locale = "ko" }: { locale?: Locale }) {
             </div>
           </div>
           <p className="text-xs font-semibold text-green-500">{tt(CAT[q.category], locale)}</p>
-          <p className="mt-1 text-lg font-semibold text-green-950">{loc(q.text as LC, locale)}</p>
+          <p className="mt-1 text-lg font-semibold text-foreground">{loc(q.text as LC, locale)}</p>
           <div className="mt-3 space-y-2">
             {q.options.map((opt) => (
               <button key={opt.id} type="button" onClick={() => pick(q.id, opt.id)}

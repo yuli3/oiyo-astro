@@ -481,7 +481,7 @@ export default function NatalChartCalculator({ locale }: Props) {
         <p className="mt-2 text-sm text-slate-600">{t.subtitle}</p>
       </header>
 
-      <div className="space-y-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+      <div className="space-y-4 rounded-2xl border border-slate-200 bg-card p-5 shadow-sm">
         <BirthDateField
           id="natal-birth-date"
           locale={locale}

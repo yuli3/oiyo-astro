@@ -118,7 +118,7 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
   return (
     <div className="space-y-6">
       <div className="text-center space-y-2">
-        <h1 className="text-2xl font-black text-green-950">{labels.title}</h1>
+        <h1 className="text-2xl font-black text-foreground">{labels.title}</h1>
         <p className="text-sm text-muted-foreground">{labels.subtitle}</p>
       </div>
       <label className="block space-y-2">
@@ -132,7 +132,7 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
       </label>
       <div className="rounded-xl border bg-card p-4 space-y-2">
         <div className="flex items-center justify-between text-sm">
-          <span className="font-bold text-green-950">{count}/30 {labels.completed}</span>
+          <span className="font-bold text-foreground">{count}/30 {labels.completed}</span>
           <span className="text-green-700 font-bold">{percent}%</span>
         </div>
         <div className="h-3 rounded-full bg-muted overflow-hidden">
@@ -150,7 +150,7 @@ export default function HabitFormationAssistant({ locale: rawLocale = 'ko' }: Pr
                   <button
                     key={task}
                     onClick={() => toggle(dayIndex)}
-                    className={`flex items-center gap-3 rounded-lg border px-3 py-2 text-left text-sm transition-colors ${checked[dayIndex] ? 'border-green-200 bg-green-50 text-green-900' : 'bg-white hover:bg-accent'}`}
+                    className={`flex items-center gap-3 rounded-lg border px-3 py-2 text-left text-sm transition-colors ${checked[dayIndex] ? 'border-green-200 bg-green-50 text-green-900' : 'bg-card hover:bg-accent'}`}
                   >
                     <span className={`flex h-7 w-7 flex-none items-center justify-center rounded-full border text-xs font-bold ${checked[dayIndex] ? 'border-green-500 bg-green-500 text-white' : 'border-muted-foreground/30 text-muted-foreground'}`}>
                       {dayIndex + 1}

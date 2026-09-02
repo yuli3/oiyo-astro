@@ -31,7 +31,7 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
 
   return (
     <section
-      className="role-visual mt-8 rounded-3xl border bg-white p-4 text-slate-950 shadow-sm sm:p-6"
+      className="role-visual mt-8 rounded-3xl border bg-card p-4 text-slate-950 shadow-sm sm:p-6"
       style={{
         "--role-primary": ROLE_VISUAL_TOKENS.primary,
         "--role-soft": ROLE_VISUAL_TOKENS.primarySoft,
@@ -53,7 +53,7 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
       <label className="mt-5 block text-sm font-bold text-slate-900">
         {text.scenarioLabel}
         <select
-          className="mt-2 min-h-11 w-full rounded-xl border border-slate-400 bg-white px-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--role-focus)]"
+          className="mt-2 min-h-11 w-full rounded-xl border border-slate-400 bg-card px-3 text-base focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--role-focus)]"
           value={scenarioId}
           onChange={(event) => {
             setScenarioId(event.target.value as ScenarioId);
@@ -125,7 +125,7 @@ export function RoleVisualSystemPrototype({ locale }: { locale: Locale }) {
         ><BookmarkCheck size={18} aria-hidden="true" />{text.save}</button>
         <button
           type="button"
-          className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border-2 border-[var(--role-primary)] bg-white px-4 font-bold text-[var(--role-primary)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--role-focus)]"
+          className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-xl border-2 border-[var(--role-primary)] bg-card px-4 font-bold text-[var(--role-primary)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--role-focus)]"
           aria-pressed={interactionState === "shared"}
           onClick={() => dispatchInteraction({ type: "activate", target: "shared", trigger: "click" })}
         ><Share2 size={18} aria-hidden="true" />{text.share}</button>

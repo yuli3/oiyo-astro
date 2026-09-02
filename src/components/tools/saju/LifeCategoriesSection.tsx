@@ -14,7 +14,7 @@ const C = CATEGORIES_C;
 const STANCE_STYLE: Record<string, string> = {
   favorable: "border-emerald-200 bg-emerald-50",
   unfavorable: "border-amber-200 bg-amber-50",
-  neutral: "border-gray-200 bg-white",
+  neutral: "border-gray-200 bg-card",
 };
 
 export default function LifeCategoriesSection({
@@ -44,7 +44,7 @@ export default function LifeCategoriesSection({
   const careerAttrs = YONGSIN_ATTRS[analysis.yongsin.yongsin];
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-5 space-y-4">
+    <div className="bg-card rounded-2xl border border-gray-200 p-5 space-y-4">
       <h2 className="text-xl font-bold text-gray-900">{tt(C.sectionHeading, locale)}</h2>
 
       <div className="grid gap-3 sm:grid-cols-2">
@@ -67,7 +67,7 @@ export default function LifeCategoriesSection({
           <p className="mt-2 text-[11px] font-semibold text-gray-500">{tt(C.career.fieldsLabel, locale)}</p>
           <div className="mt-1 flex flex-wrap gap-1">
             {careerAttrs.careerKeys.slice(0, 4).map((k) => (
-              <span key={k} className="rounded-full bg-white border border-gray-200 px-2 py-0.5 text-[11px] text-gray-700">
+              <span key={k} className="rounded-full bg-card border border-gray-200 px-2 py-0.5 text-[11px] text-gray-700">
                 {tt(YONGSIN_C.careerName[k], locale)}
               </span>
             ))}
@@ -85,7 +85,7 @@ export default function LifeCategoriesSection({
         </div>
 
         {/* 건강 */}
-        <div className="rounded-xl border border-gray-200 bg-white p-4">
+        <div className="rounded-xl border border-gray-200 bg-card p-4">
           <p className="text-sm font-bold text-gray-900">🌿 {tt(C.health.title, locale)}</p>
           <div className="mt-1 flex flex-wrap items-center gap-1.5 text-[11px]">
             <span className="rounded bg-white/70 border border-gray-200 px-1.5 py-0.5 font-medium text-gray-700">{el(health.focusElement)}</span>

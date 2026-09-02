@@ -65,7 +65,7 @@ const visibleLanes = [
     <!-- Hero -->
     <header class="text-center">
       <p class="text-[11px] font-black uppercase tracking-[0.2em] text-green-600">{u.eyebrow}</p>
-      <h1 class="mt-2 text-2xl font-black leading-tight text-green-950 md:text-3xl">{u.title}</h1>
+      <h1 class="mt-2 text-2xl font-black leading-tight text-foreground md:text-3xl">{u.title}</h1>
       <p class="mx-auto mt-2 max-w-md text-sm leading-6 text-green-700/90">{u.sub}</p>
     </header>
 
@@ -108,7 +108,7 @@ const visibleLanes = [
     {visibleLanes.map((group) => (
       <section class="mt-8">
         <div class="mb-3">
-          <h2 class="flex items-center gap-2 text-lg font-black text-green-950">
+          <h2 class="flex items-center gap-2 text-lg font-black text-foreground">
             <OntologyLayerMark mark={lm[group.lane].mark} class="shrink-0 text-green-700" />
             <span class="text-sm font-bold text-green-700">{lm[group.lane].part[locale]}</span>
             <span aria-hidden="true" class="text-green-300">·</span>
@@ -119,7 +119,7 @@ const visibleLanes = [
         <!-- Row layout: left = system (name + status), right = chevron.
              2026-09-01: 이 주석이 오래 "right = definition link" 라고 적고 있었으나
              실제로 렌더되는 것은 셰브론뿐이다. 정의 링크는 아래 개념 절에 있다. -->
-        <ul class="divide-y divide-green-50 overflow-hidden rounded-2xl border border-green-100 bg-white">
+        <ul class="divide-y divide-green-50 overflow-hidden rounded-2xl border border-green-100 bg-card">
           {group.items.map((s) => (
             <li data-sys={s.id} data-req={s.requires} data-testid={s.testId ?? ''}
                 data-planned={s.href ? '' : '1'}
@@ -129,7 +129,7 @@ const visibleLanes = [
                 <a href={s.href(locale)} class="group flex min-w-0 flex-1 items-center gap-3">
                   <span class="text-xl" aria-hidden="true">{s.emoji}</span>
                   <span class="min-w-0">
-                    <span data-title class="block truncate text-sm font-black text-green-950 group-hover:text-green-700">{s.name[locale]}</span>
+                    <span data-title class="block truncate text-sm font-black text-foreground group-hover:text-green-700">{s.name[locale]}</span>
                     <span data-status class="text-[10px] font-black text-green-500">{u.open}</span>
                   </span>
                 </a>
@@ -137,7 +137,7 @@ const visibleLanes = [
                 <span class="flex min-w-0 flex-1 items-center gap-3">
                   <span class="text-xl" aria-hidden="true">{s.emoji}</span>
                   <span class="min-w-0">
-                    <span data-title class="block truncate text-sm font-black text-green-950">{s.name[locale]}</span>
+                    <span data-title class="block truncate text-sm font-black text-foreground">{s.name[locale]}</span>
                     <span data-status class="text-[10px] font-black text-green-500">{u.planned}</span>
                   </span>
                 </span>
@@ -156,7 +156,7 @@ const visibleLanes = [
     <!-- Lane 3: 실제 나의 것 (mindmap builder) -->
     <section id="profile-builder" class="mt-8 scroll-mt-4">
       <div class="mb-3">
-        <h2 class="flex items-center gap-2 text-lg font-black text-green-950">
+        <h2 class="flex items-center gap-2 text-lg font-black text-foreground">
           <OntologyLayerMark mark={lm.chosen.mark} class="shrink-0 text-green-700" />
           <span class="text-sm font-bold text-green-700">{lm.chosen.part[locale]}</span>
           <span aria-hidden="true" class="text-green-300">·</span>
@@ -175,13 +175,13 @@ const visibleLanes = [
          없음)을 여기서 만족시킨다. -->
     <section class="mt-8">
       <div class="mb-3">
-        <h2 class="text-lg font-black text-green-950">{CONCEPT_SECTION[locale].title}</h2>
+        <h2 class="text-lg font-black text-foreground">{CONCEPT_SECTION[locale].title}</h2>
         <p class="text-xs text-green-600">{CONCEPT_SECTION[locale].sub}</p>
       </div>
       <ul class="space-y-3">
         {ONTOLOGY_CONCEPTS.map((c) => (
-          <li class="rounded-2xl border border-green-100 bg-white p-4">
-            <h3 class="flex items-center gap-2 text-sm font-black text-green-950">
+          <li class="rounded-2xl border border-green-100 bg-card p-4">
+            <h3 class="flex items-center gap-2 text-sm font-black text-foreground">
               <span aria-hidden="true">{c.emoji}</span>{c.name[locale]}
             </h3>
             <p class="mt-2 text-sm leading-6 text-green-900">{c.summary[locale]}</p>
@@ -204,7 +204,7 @@ const visibleLanes = [
 
     <section class="mt-8">
       <div class="mb-3">
-        <h2 class="flex items-center gap-2 text-lg font-black text-green-950">
+        <h2 class="flex items-center gap-2 text-lg font-black text-foreground">
           <span aria-hidden="true">🧭</span>{u.orbitTitle}
         </h2>
         <p class="text-xs text-green-600">{u.orbitSub}</p>
@@ -215,7 +215,7 @@ const visibleLanes = [
     <!-- Lane 5: 당신을 위한 추천 (matchScore + 신호 기반 reasoning + 다음 탐색 딥링크) -->
     <section class="mt-8">
       <div class="mb-3">
-        <h2 class="flex items-center gap-2 text-lg font-black text-green-950">
+        <h2 class="flex items-center gap-2 text-lg font-black text-foreground">
           <span aria-hidden="true">✨</span>{u.cardsTitle}
         </h2>
         <p class="text-xs text-green-600">{u.cardsSub}</p>
@@ -230,7 +230,7 @@ const visibleLanes = [
          lives instead (2026-07-09 scope decision). -->
     <section class="mt-8">
       <div class="mb-3">
-        <h2 class="flex items-center gap-2 text-lg font-black text-green-950">
+        <h2 class="flex items-center gap-2 text-lg font-black text-foreground">
           <span aria-hidden="true">📤</span>{u.exportTitle}
         </h2>
         <p class="text-xs text-green-600">{u.exportSub}</p>

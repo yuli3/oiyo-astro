@@ -280,7 +280,7 @@ export default function CrossroadsInvestorTest({ locale: lp = 'ko' }: Props) {
           <p className="text-slate-600 leading-relaxed">{info.desc[L]}</p>
         </div>
 
-        <div className="bg-white rounded-2xl border border-slate-200 p-6">
+        <div className="bg-card rounded-2xl border border-slate-200 p-6">
           <h3 className="font-bold text-slate-900 mb-4">📋 {lb.strategy}</h3>
           <ul className="space-y-2">
             {info.strategy[L].map((s, i) => (

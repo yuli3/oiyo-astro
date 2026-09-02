@@ -581,7 +581,7 @@ ${listLines(form.nextExperiments)}
     <section className="mx-auto max-w-6xl px-4 py-10">
       <div className="mb-8">
         <p className="text-xs font-black uppercase tracking-widest text-green-700">Markdown Export</p>
-        <h1 className="mt-2 text-3xl font-black text-green-950">{text.title}</h1>
+        <h1 className="mt-2 text-3xl font-black text-foreground">{text.title}</h1>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-700">{text.desc}</p>
         <p className="mt-3 inline-flex rounded-lg bg-green-50 px-3 py-2 text-xs font-semibold text-green-800">
           {text.saved}
@@ -607,7 +607,7 @@ ${listLines(form.nextExperiments)}
         return (
           <div className="mb-6 rounded-xl border border-green-100 bg-green-50/50 p-4">
             <div className="mb-2 flex items-center justify-between gap-3">
-              <span className="flex items-center gap-2 text-sm font-black text-green-950"><Sparkles className="h-4 w-4" /> {m.title}</span>
+              <span className="flex items-center gap-2 text-sm font-black text-foreground"><Sparkles className="h-4 w-4" /> {m.title}</span>
               <span className="text-xs font-bold text-green-700">{filled}/{items.length} · {pct}%</span>
             </div>
             <div className="mb-3 h-2 overflow-hidden rounded-full bg-green-100">
@@ -618,7 +618,7 @@ ${listLines(form.nextExperiments)}
                 const has = !!form[it.key as keyof ProfileForm];
                 if (has) return <span key={it.key} className="rounded-md bg-green-100 px-2 py-1 text-[11px] font-semibold text-green-800">✓ {it.label}</span>;
                 return it.href
-                  ? <a key={it.key} href={it.href} className="rounded-md border border-green-300 bg-white px-2 py-1 text-[11px] font-semibold text-green-700 hover:bg-green-50">{it.label} · {m.go} →</a>
+                  ? <a key={it.key} href={it.href} className="rounded-md border border-green-300 bg-card px-2 py-1 text-[11px] font-semibold text-green-700 hover:bg-green-50">{it.label} · {m.go} →</a>
                   : <span key={it.key} className="rounded-md bg-slate-100 px-2 py-1 text-[11px] font-medium text-slate-400">{it.label}</span>;
               })}
             </div>
@@ -638,8 +638,8 @@ ${listLines(form.nextExperiments)}
 
       <div className="grid gap-6 lg:grid-cols-[1.3fr_1fr]">
         <div className="space-y-5">
-          <div className="rounded-lg border border-green-100 bg-white p-5 shadow-sm">
-            <h2 className="mb-4 flex items-center gap-2 text-lg font-black text-green-950">
+          <div className="rounded-lg border border-green-100 bg-card p-5 shadow-sm">
+            <h2 className="mb-4 flex items-center gap-2 text-lg font-black text-foreground">
               <FileText className="h-5 w-5" /> {text.profile}
             </h2>
             <div className="grid gap-3 sm:grid-cols-2">
@@ -657,8 +657,8 @@ ${listLines(form.nextExperiments)}
             </div>
           </div>
 
-          <div className="rounded-lg border border-green-100 bg-white p-5 shadow-sm">
-            <h2 className="mb-4 text-lg font-black text-green-950">{text.inputs}</h2>
+          <div className="rounded-lg border border-green-100 bg-card p-5 shadow-sm">
+            <h2 className="mb-4 text-lg font-black text-foreground">{text.inputs}</h2>
             {narrativeFields.map(({ key, rows }) => (
               <label key={key} className="mb-3 block text-sm font-semibold text-slate-700">
                 {labels[key]}
@@ -673,9 +673,9 @@ ${listLines(form.nextExperiments)}
           </div>
         </div>
 
-        <div className="rounded-lg border border-green-100 bg-white p-5 shadow-sm">
+        <div className="rounded-lg border border-green-100 bg-card p-5 shadow-sm">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-            <h2 className="text-lg font-black text-green-950">{text.output}</h2>
+            <h2 className="text-lg font-black text-foreground">{text.output}</h2>
             <div className="flex gap-2">
               <button onClick={copyMarkdown} className="inline-flex items-center gap-1.5 rounded-lg border border-green-200 px-3 py-2 text-sm font-bold text-green-800 hover:bg-green-50">
                 <Copy className="h-4 w-4" /> {copied ? text.copied : text.copy}

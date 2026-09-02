@@ -109,8 +109,8 @@ export default function LottoWinSimulator({ locale }: Props) {
   const owned = catalog.filter((it) => (cart[it.name] ?? 0) > 0);
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-green-950">{t.title}</h1>
+    <div className="rounded-2xl border border-green-100 bg-card p-5">
+      <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
 
       {/* Jackpot picker */}
@@ -120,7 +120,7 @@ export default function LottoWinSimulator({ locale }: Props) {
           {jackpots.map((j) => (
             <button key={j.label} type="button"
               onClick={() => { setJackpot(j.amount); setCart({}); }}
-              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${jackpot === j.amount ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-white text-green-800 hover:border-green-400'}`}>
+              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${jackpot === j.amount ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-card text-green-800 hover:border-green-400'}`}>
               {j.label}
             </button>
           ))}
@@ -145,9 +145,9 @@ export default function LottoWinSimulator({ locale }: Props) {
           const cnt = cart[it.name] ?? 0;
           const cant = balance < it.price;
           return (
-            <div key={it.name} className="flex items-center justify-between rounded-xl border border-green-100 bg-white p-3">
+            <div key={it.name} className="flex items-center justify-between rounded-xl border border-green-100 bg-card p-3">
               <div className="min-w-0">
-                <div className="truncate font-semibold text-green-950">{it.emoji} {it.name}</div>
+                <div className="truncate font-semibold text-foreground">{it.emoji} {it.name}</div>
                 <div className="text-xs text-green-600">{fmt(it.price)}{currency}{cnt > 0 ? ` · ×${cnt}` : ''}</div>
               </div>
               <div className="flex items-center gap-1">
@@ -166,7 +166,7 @@ export default function LottoWinSimulator({ locale }: Props) {
       {owned.length > 0 && (
         <div className="mt-6 rounded-2xl border border-green-200 bg-green-50 p-5">
           <div className="flex items-center justify-between">
-            <h2 className="font-bold text-green-950">{t.result}</h2>
+            <h2 className="font-bold text-foreground">{t.result}</h2>
             <button type="button" onClick={() => setCart({})} className="text-xs text-green-600 hover:text-green-800">{t.reset}</button>
           </div>
           <ul className="mt-3 space-y-1 text-sm text-green-800">

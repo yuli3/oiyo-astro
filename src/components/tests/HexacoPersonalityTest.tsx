@@ -329,7 +329,7 @@ export default function HexacoPersonalityTest({ locale = 'ko' }: { locale?: Loca
           <h1 className="text-2xl font-bold text-gray-900">{t.title}</h1>
           <p className="text-gray-500 mt-1">{t.subtitle}</p>
         </div>
-        <div className="bg-white rounded-2xl border border-gray-200 p-5 text-left">
+        <div className="bg-card rounded-2xl border border-gray-200 p-5 text-left">
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {DIM_ORDER.map(d => {
               const info = DIM_INFO[d];

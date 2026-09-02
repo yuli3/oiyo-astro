@@ -71,7 +71,7 @@ export function ProclaimersDesk() {
       earthlyBranches[p.earthlyBranch as keyof typeof earthlyBranches];
 
     return (
-      <div className="flex flex-col items-center bg-white p-4 rounded-xl shadow-sm border border-green-50/50 min-w-[80px]">
+      <div className="flex flex-col items-center bg-card p-4 rounded-xl shadow-sm border border-green-50/50 min-w-[80px]">
         <div className="text-xs text-green-600/60 font-bold uppercase mb-2">
           {label}
         </div>
@@ -105,7 +105,7 @@ export function ProclaimersDesk() {
       case "wood":
         return "text-green-600";
       default:
-        return "text-green-950";
+        return "text-foreground";
     }
   };
 

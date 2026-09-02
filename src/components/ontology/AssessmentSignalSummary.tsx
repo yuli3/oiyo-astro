@@ -174,10 +174,10 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
 
   return (
     <section className="mt-8 rounded-[28px] border border-green-100 bg-green-50/40 p-4 shadow-sm">
-      <h2 className="text-lg font-black text-green-950">🧩 {t.title}</h2>
+      <h2 className="text-lg font-black text-foreground">🧩 {t.title}</h2>
       <p className="mt-1 text-xs leading-5 text-green-700">{t.subtitle}</p>
       <div className="mt-4 grid gap-3 md:grid-cols-3">
-        {groups.big5.length === BIG5.length && <article className="rounded-2xl border border-green-100 bg-white p-4">
+        {groups.big5.length === BIG5.length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.big5Role}</p>
           <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.big5}</h3>
           <div className="mt-3 space-y-2">{BIG5.map((dimension) => <Bar key={dimension} label={dimension} value={valueOf(byConstruct(groups.big5, `psychology.big5.${dimension}`)) ?? 0} />)}</div>
@@ -186,7 +186,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
           <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.big5[0].provenance.instrumentVersion}</p></details>
         </article>}
 
-        {groups.mbti.length === Object.keys(MBTI).length && <article className="rounded-2xl border border-green-100 bg-white p-4">
+        {groups.mbti.length === Object.keys(MBTI).length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.mbtiRole}</p>
           <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.mbti} <span className="ml-1 rounded-full bg-slate-100 px-2 py-0.5 text-sm">{mbtiType}</span></h3>
           <div className="mt-3 space-y-2">{Object.entries(MBTI).map(([axis, poles]) => {
@@ -199,7 +199,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
           <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.mbti[0].provenance.instrumentVersion}</p></details>
         </article>}
 
-        {groups.riasec.length === RIASEC.length && <article className="rounded-2xl border border-green-100 bg-white p-4">
+        {groups.riasec.length === RIASEC.length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.riasecRole}</p>
           <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.riasec} <span className="ml-1 rounded-full bg-green-50 px-2 py-0.5 text-sm text-green-800">{riasecCode}</span></h3>
           <div className="mt-3 grid grid-cols-2 gap-x-3 gap-y-2">{RIASEC.map((dimension) => <Bar key={dimension} label={dimension} value={valueOf(byConstruct(groups.riasec, `vocation.riasec.${dimension}`)) ?? 0} />)}</div>
@@ -208,7 +208,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
           <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.riasec[0].provenance.instrumentVersion}</p></details>
         </article>}
 
-        {groups.attachment.length === ATTACHMENT.length && <article className="rounded-2xl border border-green-100 bg-white p-4">
+        {groups.attachment.length === ATTACHMENT.length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.attachmentRole}</p>
           <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.attachment}</h3>
           <div className="mt-3 space-y-3">
@@ -220,7 +220,7 @@ export function AssessmentSignalSummary({ locale }: { locale: string }) {
           <details className="mt-2 text-[10px] text-slate-400"><summary className="cursor-pointer font-bold">{t.details}</summary><p className="mt-1 break-all">{groups.attachment[0].provenance.instrumentVersion}</p></details>
         </article>}
 
-        {groups.careerValues.length === CAREER_VALUES.length && <article className="rounded-2xl border border-green-100 bg-white p-4">
+        {groups.careerValues.length === CAREER_VALUES.length && <article className="rounded-2xl border border-green-100 bg-card p-4">
           <p className="text-[10px] font-black uppercase tracking-wider text-green-600">{t.careerValuesRole}</p>
           <h3 className="mt-0.5 text-lg font-black text-slate-900">{t.careerValues}</h3>
           <div className="mt-3 space-y-2">{CAREER_VALUES.map((dimension) => <Bar key={dimension} label={CAREER_VALUE_LABELS[lang][dimension]} value={valueOf(byConstruct(groups.careerValues, `values.work.${dimension}`)) ?? 0} />)}</div>

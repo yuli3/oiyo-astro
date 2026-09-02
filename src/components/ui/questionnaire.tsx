@@ -89,7 +89,7 @@ export function Questionnaire<TValue extends QuestionnaireValue = number>({
                 className={cn(
                   "flex min-h-12 w-full items-center gap-3 rounded-lg border bg-background px-4 py-3 text-left text-sm outline-none transition-colors motion-reduce:transition-none",
                   "hover:border-green-500 hover:bg-green-50 focus-visible:border-green-600 focus-visible:ring-2 focus-visible:ring-green-600/30",
-                  selected && "border-green-600 bg-green-50 text-green-950",
+                  selected && "border-green-600 bg-green-50 text-foreground",
                 )}
               >
                 <span

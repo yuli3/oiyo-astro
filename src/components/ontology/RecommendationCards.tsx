@@ -157,7 +157,7 @@ export function RecommendationCards({ locale }: { locale: string }) {
   // legitimately empty — show guidance instead of fabricating a match.
   if (hydrated && cards.length === 0) {
     return (
-      <div className="rounded-[28px] border border-green-100 bg-white p-5 text-center shadow-sm">
+      <div className="rounded-[28px] border border-green-100 bg-card p-5 text-center shadow-sm">
         <p className="text-sm font-black text-green-900">{texts["recommendations.cards.emptyTitle"] ?? EMPTY_COPY[lang].title}</p>
         <p className="mt-1 text-xs text-green-600">{texts["recommendations.cards.emptyDescription"] ?? EMPTY_COPY[lang].description}</p>
       </div>
@@ -170,13 +170,13 @@ export function RecommendationCards({ locale }: { locale: string }) {
         const { rec } = entry;
         const isOpen = !!openWhy[rec.id];
         return (
-          <div key={rec.id} className="rounded-[28px] border border-green-100 bg-white p-4 shadow-sm sm:p-5">
+          <div key={rec.id} className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
             <div className="flex items-start justify-between gap-3">
               <div className="min-w-0">
                 <p className="text-[10px] font-black uppercase tracking-wider text-green-500">
                   {tt(`recommendations.cards.categories.${rec.category}`)}
                 </p>
-                <p className="mt-0.5 truncate text-sm font-black text-green-950">{tt(rec.title)}</p>
+                <p className="mt-0.5 truncate text-sm font-black text-foreground">{tt(rec.title)}</p>
               </div>
               <span className="shrink-0 rounded-full bg-green-700 px-2.5 py-1 text-[11px] font-black text-white">
                 {tt("recommendations.cards.matchLabel")} {rec.matchScore}

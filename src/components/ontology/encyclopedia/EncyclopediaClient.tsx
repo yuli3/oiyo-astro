@@ -346,7 +346,7 @@ function TabButton({ active, icon: Icon, label, onClick }: any) {
         "flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 border shadow-sm",
         active
           ? "bg-[#064e3b] text-white border-[#064e3b] shadow-green-900/20 shadow-lg scale-105"
-          : "bg-white text-green-900 border-white hover:bg-green-50 hover:border-green-200",
+          : "bg-card text-green-900 border-white hover:bg-green-50 hover:border-green-200",
       )}
       onClick={onClick}
     >

@@ -121,7 +121,7 @@ export default function AstroCartoMap({
   }, [lines]);
 
   return (
-    <section className="mt-6 rounded-2xl border border-slate-200 bg-white p-4">
+    <section className="mt-6 rounded-2xl border border-slate-200 bg-card p-4">
       <h3 className="text-center text-sm font-bold text-green-900">{t.heading}</h3>
       <p className="mt-1 text-center text-xs text-slate-500">{t.hint}</p>
       <div className="mt-3 flex flex-wrap justify-center gap-1.5">

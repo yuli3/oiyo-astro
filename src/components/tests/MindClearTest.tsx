@@ -202,7 +202,7 @@ export default function MindClearTest({ locale: localeProp }: Props) {
     const r = t.results[level];
     const barPct = Math.round(pct * 100);
     return (
-      <div className="not-prose my-10 p-8 bg-white border border-slate-200 rounded-3xl shadow-xl max-w-2xl mx-auto text-center space-y-6">
+      <div className="not-prose my-10 p-8 bg-card border border-slate-200 rounded-3xl shadow-xl max-w-2xl mx-auto text-center space-y-6">
         <p className="text-xs font-bold text-green-500 uppercase tracking-widest">{t.resultLabel}</p>
         <div className="text-6xl">{r.emoji}</div>
         <h3 className="text-3xl font-black text-slate-900">{r.title}</h3>

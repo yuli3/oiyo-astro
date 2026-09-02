@@ -100,7 +100,7 @@ export function SajuInputForm({
 
   const containerClasses = isDrawer
     ? "w-full max-w-xl mx-auto p-0 relative"
-    : "w-full max-w-md mx-auto bg-white rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12 relative overflow-hidden";
+    : "w-full max-w-md mx-auto bg-card rounded-3xl shadow-xl border border-slate-100 p-8 md:p-12 relative overflow-hidden";
 
   return (
     <m.div
@@ -252,7 +252,7 @@ export function SajuInputForm({
                 "py-4 rounded-2xl border font-black text-xs uppercase tracking-widest transition-all focus:outline-none focus:ring-4 focus:ring-green-500/20",
                 formData.gender === "female"
                   ? "bg-slate-900 text-white border-slate-900 shadow-lg shadow-slate-900/10"
-                  : "bg-slate-50 text-slate-500 border-slate-200 hover:bg-white hover:border-slate-300 shadow-sm",
+                  : "bg-slate-50 text-slate-500 border-slate-200 hover:bg-card hover:border-slate-300 shadow-sm",
               )}
               onClick={() =>
                 setFormData((prev) => ({ ...prev, gender: "female" }))
@@ -268,7 +268,7 @@ export function SajuInputForm({
                 "py-4 rounded-2xl border font-black text-xs uppercase tracking-widest transition-all focus:outline-none focus:ring-4 focus:ring-green-500/20",
                 formData.gender === "male"
                   ? "bg-slate-900 text-white border-slate-900 shadow-lg shadow-slate-900/10"
-                  : "bg-slate-50 text-slate-500 border-slate-200 hover:bg-white hover:border-slate-300 shadow-sm",
+                  : "bg-slate-50 text-slate-500 border-slate-200 hover:bg-card hover:border-slate-300 shadow-sm",
               )}
               onClick={() =>
                 setFormData((prev) => ({ ...prev, gender: "male" }))

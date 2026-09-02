@@ -139,8 +139,8 @@ export default function JournalingTool({ locale }: Props) {
   const remove = (i: number) => persist(entries.filter((_, idx) => idx !== i));
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-green-950">{t.title}</h1>
+    <div className="rounded-2xl border border-green-100 bg-card p-5">
+      <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
 
       <div className="mt-5 rounded-xl bg-green-50 p-4">
@@ -149,12 +149,12 @@ export default function JournalingTool({ locale }: Props) {
           <button
             type="button"
             onClick={() => setPromptIdx((i) => (i + 1) % prompts.length)}
-            className="rounded-full border border-green-200 bg-white px-3 py-1 text-xs font-semibold text-green-800 hover:border-green-400"
+            className="rounded-full border border-green-200 bg-card px-3 py-1 text-xs font-semibold text-green-800 hover:border-green-400"
           >
             {t.shuffle}
           </button>
         </div>
-        <p className="mt-2 text-lg font-semibold text-green-950">{prompts[promptIdx]}</p>
+        <p className="mt-2 text-lg font-semibold text-foreground">{prompts[promptIdx]}</p>
       </div>
 
       <textarea
@@ -162,7 +162,7 @@ export default function JournalingTool({ locale }: Props) {
         onChange={(e) => setText(e.target.value)}
         placeholder={t.placeholder}
         rows={6}
-        className="mt-4 w-full rounded-xl border border-green-200 bg-white p-3 text-green-900 focus:outline-2 focus:outline-offset-2 focus:outline-green-500"
+        className="mt-4 w-full rounded-xl border border-green-200 bg-card p-3 text-green-900 focus:outline-2 focus:outline-offset-2 focus:outline-green-500"
       />
 
       <div className="mt-3 flex items-center gap-3">

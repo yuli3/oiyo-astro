@@ -419,7 +419,7 @@ export default function IntroExtroTest({ locale: localeProp }: Props) {
           <div className="text-center text-xs text-gray-400">{t.score}: {result.score} / {maxScore}</div>
         </div>
 
-        <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
+        <div className="bg-card border border-gray-200 rounded-xl p-5 space-y-4">
           <p className="text-gray-700 leading-relaxed">{d.description[locale]}</p>
 
           <div className="grid grid-cols-1 gap-3">

@@ -208,7 +208,7 @@ export default function HappinessMeterTest({ locale: localeProp }: Props) {
           <p className="mt-3 text-sm text-gray-600">{level.description}</p>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
           <h3 className="font-semibold text-gray-700 mb-3">{ui.tipsTitle}</h3>
           <div className="space-y-2">
             {tips[locale].map((tip, i) => (

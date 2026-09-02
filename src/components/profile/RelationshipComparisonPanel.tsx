@@ -515,7 +515,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
         </div>
       </div>
 
-      <div className="mt-4 rounded-xl border border-rose-100 bg-white p-4">
+      <div className="mt-4 rounded-xl border border-rose-100 bg-card p-4">
         <h3 className="flex items-center gap-2 text-sm font-bold text-slate-950"><ShieldCheck className="h-4 w-4 text-rose-700" aria-hidden="true" />{t.guardrailsTitle}</h3>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-xs leading-5 text-slate-700">
           {t.guardrails.map((item) => <li key={item}>{item}</li>)}
@@ -529,7 +529,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
             <div className="mt-2 flex flex-wrap gap-2" role="group" aria-label={t.contextLabel}>
               {(Object.keys(t.contexts) as RelationshipContext[]).map((key) => (
                 <button key={key} type="button" onClick={() => setContext(key)} aria-pressed={context === key}
-                  className={`min-h-11 rounded-lg px-3 py-2 text-sm font-bold ${context === key ? "bg-rose-700 text-white" : "border border-rose-200 bg-white text-rose-800"}`}>
+                  className={`min-h-11 rounded-lg px-3 py-2 text-sm font-bold ${context === key ? "bg-rose-700 text-white" : "border border-rose-200 bg-card text-rose-800"}`}>
                   {t.contexts[key]}
                 </button>
               ))}
@@ -552,7 +552,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
 
       {step === "codes" && (
         <div className="mt-4 space-y-6">
-          <div className="rounded-xl border border-rose-100 bg-white p-4">
+          <div className="rounded-xl border border-rose-100 bg-card p-4">
             <h3 className="text-sm font-bold text-slate-950">{t.myCodeTitle}</h3>
             <p className="mt-1 text-xs text-slate-600" aria-live="polite">{evidenceCount ? t.evidenceReady(evidenceCount) : t.evidenceEmpty}</p>
             {!myCodeString ? (
@@ -564,7 +564,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
               <div className="mt-3">
                 <p className="break-all rounded-lg bg-slate-100 p-3 font-mono text-xs text-slate-800">{myCodeString}</p>
                 <p className="mt-2 text-xs text-slate-600">{myCode && t.myCodeExpiry(formatDate(myCode.expiresAt, locale))}</p>
-                <button type="button" onClick={copyMyCode} className="mt-2 min-h-11 rounded-lg border border-rose-300 bg-white px-4 py-2 text-sm font-bold text-rose-800">
+                <button type="button" onClick={copyMyCode} className="mt-2 min-h-11 rounded-lg border border-rose-300 bg-card px-4 py-2 text-sm font-bold text-rose-800">
                   {t.copyButton}
                 </button>
                 {copyMsg && <span className="ml-3 text-xs text-slate-600" role="status">{copyMsg}</span>}
@@ -573,7 +573,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
           </div>
 
           {myCodeString && (
-            <div className="rounded-xl border border-rose-100 bg-white p-4">
+            <div className="rounded-xl border border-rose-100 bg-card p-4">
               <h3 className="text-sm font-bold text-slate-950">{t.partnerCodeTitle}</h3>
               <textarea value={partnerInput} onChange={(event) => setPartnerInput(event.target.value)} placeholder={t.partnerCodePlaceholder}
                 rows={3} className="mt-2 w-full rounded-lg border border-rose-200 p-2 font-mono text-xs" />
@@ -597,7 +597,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
             {report.shared.length === 0 ? <p className="mt-1 text-xs text-slate-600">{t.emptySection}</p> : (
               <ul className="mt-2 space-y-1">
                 {report.shared.map((item) => (
-                  <li key={`${item.lane}:${item.constructId}`} className="rounded-lg bg-white px-3 py-2 text-xs text-slate-800">
+                  <li key={`${item.lane}:${item.constructId}`} className="rounded-lg bg-card px-3 py-2 text-xs text-slate-800">
                     <span className="font-bold">{laneLabels[item.lane]}</span> · {constructLabel(item.constructId)}
                   </li>
                 ))}
@@ -609,7 +609,7 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
             {report.differences.length === 0 ? <p className="mt-1 text-xs text-slate-600">{t.emptySection}</p> : (
               <ul className="mt-2 space-y-1">
                 {report.differences.map((item) => (
-                  <li key={`${item.lane}:${item.constructId}`} className="rounded-lg bg-white px-3 py-2 text-xs text-slate-800">
+                  <li key={`${item.lane}:${item.constructId}`} className="rounded-lg bg-card px-3 py-2 text-xs text-slate-800">
                     <span className="font-bold">{laneLabels[item.lane]}</span> · {constructLabel(item.constructId)}: {item.participantAValue} / {item.participantBValue}
                   </li>
                 ))}
@@ -626,16 +626,16 @@ export default function RelationshipComparisonPanel({ locale }: { locale: string
             <h3 className="text-sm font-bold text-slate-950">{t.questionsTitle}</h3>
             <ul className="mt-2 space-y-2">
               {[...new Set(report.questions.map((q) => q.lane))].map((lane) => (
-                <li key={lane} className="rounded-lg bg-white px-3 py-2 text-xs leading-5 text-slate-800">
+                <li key={lane} className="rounded-lg bg-card px-3 py-2 text-xs leading-5 text-slate-800">
                   <span className="font-bold">{laneLabels[lane]}:</span> {laneQuestions[lane]}
                 </li>
               ))}
             </ul>
           </section>
           <div className="flex flex-wrap gap-2">
-            <button type="button" onClick={() => withdraw("A")} className="min-h-11 rounded-lg border border-rose-300 bg-white px-4 py-2 text-sm font-bold text-rose-800">{t.withdrawMine}</button>
-            <button type="button" onClick={() => withdraw("B")} className="min-h-11 rounded-lg border border-rose-300 bg-white px-4 py-2 text-sm font-bold text-rose-800">{t.withdrawPartner}</button>
-            <button type="button" onClick={startOver} className="min-h-11 rounded-lg border border-slate-300 bg-white px-4 py-2 text-sm font-bold text-slate-700">{t.startOver}</button>
+            <button type="button" onClick={() => withdraw("A")} className="min-h-11 rounded-lg border border-rose-300 bg-card px-4 py-2 text-sm font-bold text-rose-800">{t.withdrawMine}</button>
+            <button type="button" onClick={() => withdraw("B")} className="min-h-11 rounded-lg border border-rose-300 bg-card px-4 py-2 text-sm font-bold text-rose-800">{t.withdrawPartner}</button>
+            <button type="button" onClick={startOver} className="min-h-11 rounded-lg border border-slate-300 bg-card px-4 py-2 text-sm font-bold text-slate-700">{t.startOver}</button>
           </div>
         </div>
       )}

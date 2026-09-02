@@ -36,9 +36,9 @@ const appJsonLd = { '@context': 'https://schema.org', '@type': 'WebApplication',
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
   <div class="container mx-auto max-w-3xl px-4 py-8">
     <CareerValuesTest locale={locale} client:load />
-    <section class="mt-12 border-t border-green-100 pt-8"><h2 class="text-2xl font-bold text-green-950">{c.heading}</h2><p class="mt-4 leading-8 text-green-900">{c.intro}</p><p class="mt-4 leading-8 text-green-900">{c.method}</p></section>
+    <section class="mt-12 border-t border-green-100 pt-8"><h2 class="text-2xl font-bold text-foreground">{c.heading}</h2><p class="mt-4 leading-8 text-green-900">{c.intro}</p><p class="mt-4 leading-8 text-green-900">{c.method}</p></section>
     <section class="mt-8 rounded-xl border border-amber-100 bg-amber-50 p-5 text-sm leading-7 text-amber-950">{c.limits}</section>
-    <section class="mt-10"><h2 class="text-xl font-bold text-green-950">{c.faqTitle}</h2><div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-white">{c.faqs.map((faq) => <details class="p-4"><summary class="cursor-pointer font-semibold text-green-950">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-green-800">{faq.answer}</p></details>)}</div></section>
+    <section class="mt-10"><h2 class="text-xl font-bold text-foreground">{c.faqTitle}</h2><div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-card">{c.faqs.map((faq) => <details class="p-4"><summary class="cursor-pointer font-semibold text-foreground">{faq.question}</summary><p class="mt-3 text-sm leading-6 text-green-800">{faq.answer}</p></details>)}</div></section>
     <BlogArticleLink testId="career-values-test" locale={locale} />
   </div>
 </Layout>

@@ -78,18 +78,18 @@ export default function MoneyParkingGuide({ locale }: Props) {
   const shown = goal ? vehicles.filter((v) => v.goals.includes(goal)) : vehicles;
 
   return (
-    <div className="rounded-2xl border border-green-100 bg-white p-5">
-      <h1 className="text-2xl font-bold text-green-950">{t.title}</h1>
+    <div className="rounded-2xl border border-green-100 bg-card p-5">
+      <h1 className="text-2xl font-bold text-foreground">{t.title}</h1>
       <p className="mt-2 leading-7 text-green-700">{t.subtitle}</p>
 
       <div className="mt-5">
         <span className="text-sm font-bold uppercase tracking-wider text-green-800">{t.goalQ}</span>
         <div className="mt-2 flex flex-wrap gap-2">
           <button type="button" onClick={() => setGoal('')}
-            className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${goal === '' ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-white text-green-800 hover:border-green-400'}`}>{t.all}</button>
+            className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${goal === '' ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-card text-green-800 hover:border-green-400'}`}>{t.all}</button>
           {t.goals.map((g) => (
             <button key={g.key} type="button" onClick={() => setGoal(g.key)}
-              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${goal === g.key ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-white text-green-800 hover:border-green-400'}`}>{g.label}</button>
+              className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${goal === g.key ? 'border-green-600 bg-green-600 text-white' : 'border-green-200 bg-card text-green-800 hover:border-green-400'}`}>{g.label}</button>
           ))}
         </div>
       </div>
@@ -97,8 +97,8 @@ export default function MoneyParkingGuide({ locale }: Props) {
       {goal && <p className="mt-4 text-sm font-semibold text-green-800">{t.recFor}:</p>}
       <div className="mt-3 grid gap-3">
         {shown.map((v) => (
-          <div key={v.key} className="rounded-xl border border-green-100 bg-white p-4">
-            <div className="font-bold text-green-950">{v.name}</div>
+          <div key={v.key} className="rounded-xl border border-green-100 bg-card p-4">
+            <div className="font-bold text-foreground">{v.name}</div>
             <div className="mt-1 flex flex-wrap gap-x-4 gap-y-1 text-xs text-green-600">
               <span>{t.liquidity}: <b className="text-green-800">{v.liquidity}</b></span>
               <span>{t.risk}: <b className="text-green-800">{v.risk}</b></span>

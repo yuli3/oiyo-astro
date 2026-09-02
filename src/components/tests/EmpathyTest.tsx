@@ -465,7 +465,7 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
             </div>
             <dl className="mt-3 grid gap-2 sm:grid-cols-3">
               {chartData.map((item) => (
-                <div key={item.dimension} className="rounded-lg border border-gray-200 bg-white px-3 py-2">
+                <div key={item.dimension} className="rounded-lg border border-gray-200 bg-card px-3 py-2">
                   <dt className="text-xs font-medium text-gray-600">{item.name}</dt>
                   <dd className="mt-1 font-bold text-gray-900">
                     {item.value} {rt.outOf} <span className="text-xs font-medium text-gray-500">({item.percent}%)</span>
@@ -478,13 +478,13 @@ export default function EmpathyTest({ locale: localeProp }: Props) {
 
         {profile?.isClose && (
           <div className="rounded-xl border border-green-200 bg-green-50 p-4" role="note">
-            <h2 className="font-semibold text-green-950">{rt.mixedTitle}</h2>
+            <h2 className="font-semibold text-foreground">{rt.mixedTitle}</h2>
             <p className="mt-1 text-sm leading-6 text-green-800">{rt.mixedBody.replace("{gap}", String(profile.closeGap))}</p>
           </div>
         )}
 
         {info && !profile?.isClose && (
-        <div className="bg-white border border-gray-200 rounded-xl p-5 space-y-4">
+        <div className="bg-card border border-gray-200 rounded-xl p-5 space-y-4">
           <p className="rounded-lg bg-slate-50 p-3 text-sm leading-6 text-slate-700">{rt.clearProfileNote}</p>
           <p className="text-gray-700 leading-relaxed">{info.description[locale]}</p>
 

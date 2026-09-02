@@ -235,7 +235,7 @@ export default function ThinkingPatternsTest({ locale: localeProp }: Props) {
           <p className="mt-3 text-sm text-gray-600">{rd.description}</p>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm space-y-4">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm space-y-4">
           <div>
             <h3 className="font-semibold text-gray-700 mb-2">{tx.traitsLabel}</h3>
             <div className="space-y-1">

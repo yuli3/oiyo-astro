@@ -116,7 +116,7 @@ export default function CareerValuesTest({ locale: localeProp }: { locale?: stri
         <p className="text-xs text-slate-500">{copy.tieNote}</p>
       </header>
 
-      <section className="space-y-3 rounded-xl border bg-white p-5">
+      <section className="space-y-3 rounded-xl border bg-card p-5">
         <h3 className="font-bold">{copy.profile}</h3>
         {sorted.map((id) => {
           const score = resultScores[id] ?? 0;
@@ -125,13 +125,13 @@ export default function CareerValuesTest({ locale: localeProp }: { locale?: stri
       </section>
 
       <section className="grid gap-4 md:grid-cols-2">
-        {topGroup.map((id) => <article key={id} className="rounded-xl border bg-white p-5"><h3 className="text-lg font-bold" style={{ color: COLORS[id] }}>{copy.dimensions[id].name}</h3><p className="mt-2 text-sm leading-6 text-slate-700">{copy.dimensions[id].description}</p><h4 className="mt-4 text-sm font-semibold">{copy.environments}</h4><ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">{copy.dimensions[id].environments.map((item) => <li key={item}>{item}</li>)}</ul></article>)}
+        {topGroup.map((id) => <article key={id} className="rounded-xl border bg-card p-5"><h3 className="text-lg font-bold" style={{ color: COLORS[id] }}>{copy.dimensions[id].name}</h3><p className="mt-2 text-sm leading-6 text-slate-700">{copy.dimensions[id].description}</p><h4 className="mt-4 text-sm font-semibold">{copy.environments}</h4><ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-slate-700">{copy.dimensions[id].environments.map((item) => <li key={item}>{item}</li>)}</ul></article>)}
       </section>
 
-      <p className="rounded-xl bg-green-50 p-4 text-sm leading-6 text-green-950">{copy.reflection}</p>
+      <p className="rounded-xl bg-green-50 p-4 text-sm leading-6 text-foreground">{copy.reflection}</p>
       <p className="rounded-xl bg-amber-50 p-4 text-xs leading-5 text-amber-900">{copy.disclaimer}</p>
       <div className="flex flex-wrap justify-center gap-3">
-        <button type="button" onClick={restart} className="rounded-lg border bg-white px-5 py-2.5 text-sm font-semibold">{copy.restart}</button>
+        <button type="button" onClick={restart} className="rounded-lg border bg-card px-5 py-2.5 text-sm font-semibold">{copy.restart}</button>
         <button type="button" onClick={share} className="rounded-lg bg-green-600 px-5 py-2.5 text-sm font-semibold text-white">{copy.share}</button>
       </div>
       <p aria-live="polite" className="text-center text-xs text-slate-600">{shareStatus === "copied" ? copy.copied : shareStatus === "failed" ? copy.shareFailed : ""}</p>

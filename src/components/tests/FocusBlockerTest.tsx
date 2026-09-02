@@ -276,7 +276,7 @@ export default function FocusBlockerTest({ locale: localeProp }: Props) {
           <p className="mt-2 text-sm text-gray-600">{locale === "ko" ? "가장 큰 방해 요소" : locale === "ja" ? "最大の妨害要素" : locale === "zh" ? "最大的干扰因素" : locale === "fr" ? "Votre principal obstacle" : locale === "es" ? "Tu principal bloqueador" : "Your biggest blocker"}</p>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
           <h3 className="mb-3 font-semibold text-gray-700">{tx.scoreLabel}</h3>
           <div className="space-y-3">
             {sorted.map((cat) => {
@@ -296,7 +296,7 @@ export default function FocusBlockerTest({ locale: localeProp }: Props) {
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
           <h3 className="mb-3 font-semibold text-gray-700">{tx.actionPlanLabel}</h3>
           <div className="space-y-2">
             {sorted.slice(0, 3).map((cat, rank) => {

@@ -161,7 +161,7 @@ const DigitalBalanceTest: React.FC<Props> = ({ locale = 'ko' }) => {
                         <h3 className={`text-5xl font-black mt-2 ${interpretation.color}`}>{interpretation.title}</h3>
                     </div>
 
-                    <div className="p-6 bg-white rounded-2xl border border-slate-100 shadow-inner">
+                    <div className="p-6 bg-card rounded-2xl border border-slate-100 shadow-inner">
                         <p className="text-slate-700 leading-relaxed font-medium">
                             {interpretation.desc}
                         </p>

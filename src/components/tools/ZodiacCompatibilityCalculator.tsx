@@ -385,7 +385,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
                         className={`flex flex-col items-center py-2 px-1 rounded-xl border-2 transition-all text-xs
                           ${isSelected
                             ? `${ELEMENT_BG[el]} border-current font-bold scale-105 shadow-sm`
-                            : "bg-white border-gray-100 hover:border-gray-300 hover:bg-gray-50"
+                            : "bg-card border-gray-100 hover:border-gray-300 hover:bg-gray-50"
                           }`}
                       >
                         <span className={`text-xl ${isSelected ? ELEMENT_COLOR[el] : "text-gray-600"}`}>
@@ -416,7 +416,7 @@ export default function ZodiacCompatibilityCalculator({ locale = "ko" }: Props) 
       ) : (
         <div className="space-y-4">
           {/* Sign display */}
-          <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 text-center">
+          <div className="bg-card rounded-2xl shadow-sm border border-gray-100 p-6 text-center">
             <div className="flex items-center justify-center gap-6 mb-5">
               {[sign1, sign2].map((s, i) => {
                 const el = SIGN_ELEMENT[s as ZodiacSign];

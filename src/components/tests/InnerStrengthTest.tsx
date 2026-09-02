@@ -212,7 +212,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
             const isStrength = score >= 7;
             const isGrowth = score < 5;
             return (
-              <div key={d} className={`rounded-2xl border p-5 ${isStrength ? 'border-green-200 bg-green-50' : isGrowth ? 'border-orange-200 bg-orange-50' : 'border-slate-200 bg-white'}`}>
+              <div key={d} className={`rounded-2xl border p-5 ${isStrength ? 'border-green-200 bg-green-50' : isGrowth ? 'border-orange-200 bg-orange-50' : 'border-slate-200 bg-card'}`}>
                 <div className="flex items-center justify-between mb-2">
                   <div className="flex items-center gap-2">
                     <span className="text-2xl">{dim.icon}</span>

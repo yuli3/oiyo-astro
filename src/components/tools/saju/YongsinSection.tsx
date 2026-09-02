@@ -34,7 +34,7 @@ export default function YongsinSection({
   );
 
   return (
-    <div className="bg-white rounded-2xl border border-gray-200 p-5 space-y-5">
+    <div className="bg-card rounded-2xl border border-gray-200 p-5 space-y-5">
       <div>
         <h2 className="text-xl font-bold text-gray-900">{tt(C.heading, locale)}</h2>
         <p className="mt-2 text-sm leading-relaxed text-gray-600">{tt(C.concept, locale)}</p>
@@ -88,7 +88,7 @@ export default function YongsinSection({
           <p className="text-xs font-semibold text-gray-500 mb-1">{tt(C.labels.career, locale)}</p>
           <div className="flex flex-wrap gap-1.5">
             {attrs.careerKeys.map((k) => (
-              <span key={k} className="rounded-full bg-white border border-gray-200 px-2.5 py-0.5 text-xs text-gray-700">
+              <span key={k} className="rounded-full bg-card border border-gray-200 px-2.5 py-0.5 text-xs text-gray-700">
                 {tt(C.careerName[k], locale)}
               </span>
             ))}

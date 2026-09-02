@@ -95,14 +95,14 @@ export function GlobalSearch({ locale }: GlobalSearchProps) {
     <>
       <button
         aria-label="Search the sanctuary (⌘K)"
-        className="flex items-center gap-2 px-3 py-1.5 bg-white hover:bg-green-50 text-green-950 rounded-full transition-all border border-green-100 hover:border-green-200 shadow-sm group"
+        className="flex items-center gap-2 px-3 py-1.5 bg-card hover:bg-green-50 text-foreground rounded-full transition-all border border-green-100 hover:border-green-200 shadow-sm group"
         onClick={() => setIsOpen(true)}
       >
         <Search className="w-4 h-4 group-hover:text-green-600 transition-colors" />
         <span className="text-xs font-black hidden md:inline uppercase tracking-widest text-[#064e3b]">
           Search
         </span>
-        <kbd className="hidden md:flex h-5 select-none items-center gap-1 rounded border border-green-200 bg-green-50 px-1.5 font-mono text-[10px] font-medium text-green-950 opacity-100">
+        <kbd className="hidden md:flex h-5 select-none items-center gap-1 rounded border border-green-200 bg-green-50 px-1.5 font-mono text-[10px] font-medium text-foreground opacity-100">
           <span className="text-xs">⌘</span>K
         </kbd>
       </button>
@@ -139,7 +139,7 @@ export function GlobalSearch({ locale }: GlobalSearchProps) {
                   className="p-2 hover:bg-green-100 rounded-2xl transition-colors"
                   onClick={() => setIsOpen(false)}
                 >
-                  <X className="w-5 h-5 text-green-950" />
+                  <X className="w-5 h-5 text-foreground" />
                 </button>
               </div>
 
@@ -153,7 +153,7 @@ export function GlobalSearch({ locale }: GlobalSearchProps) {
                           className={`flex items-center gap-4 p-4 rounded-2xl cursor-pointer transition-all border ${
                             isSelected
                               ? "bg-[#064e3b] border-[#064e3b] text-white shadow-lg shadow-green-900/20"
-                              : "bg-white border-green-100 text-green-800 hover:bg-green-50"
+                              : "bg-card border-green-100 text-green-800 hover:bg-green-50"
                           }`}
                           key={`${item.id}-${index}`}
                           onClick={() => handleSelect(item)}
@@ -246,10 +246,10 @@ export function GlobalSearch({ locale }: GlobalSearchProps) {
 
               <div className="p-5 bg-green-50 text-[10px] font-black uppercase tracking-[0.2em] text-[#064e3b]/40 flex items-center justify-between border-t border-green-100">
                 <div className="flex gap-6">
-                  <span className="flex items-center gap-2 px-2 py-1 bg-white border border-green-100 rounded-md shadow-sm">
+                  <span className="flex items-center gap-2 px-2 py-1 bg-card border border-green-100 rounded-md shadow-sm">
                     <Command className="w-3 h-3" /> Enter to select
                   </span>
-                  <span className="flex items-center gap-2 px-2 py-1 bg-white border border-green-100 rounded-md shadow-sm">
+                  <span className="flex items-center gap-2 px-2 py-1 bg-card border border-green-100 rounded-md shadow-sm">
                     <ArrowRight className="w-3 h-3 rotate-90" /> Navigate
                   </span>
                 </div>

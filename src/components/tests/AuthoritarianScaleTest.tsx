@@ -197,7 +197,7 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
 
     return (
       <div class="space-y-6">
-        <div class="rounded-2xl border-2 border-slate-200 bg-white p-6 text-center">
+        <div class="rounded-2xl border-2 border-slate-200 bg-card p-6 text-center">
           <p class="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">{ui.result}</p>
           <div class={`inline-flex items-center gap-2 rounded-full border-2 px-4 py-2 text-base font-black ${level.color}`}>
             {level.label}
@@ -206,7 +206,7 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
           <div class="mt-3 text-2xl font-black text-slate-800">{overall}<span class="text-sm font-normal text-slate-400"> / 100</span></div>
         </div>
 
-        <div class="rounded-2xl border-2 border-slate-100 bg-white p-5">
+        <div class="rounded-2xl border-2 border-slate-100 bg-card p-5">
           <p class="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">{ui.dimScores}</p>
           <div class="space-y-4">
             {dimScores.map(({ d, score }) => {
@@ -248,7 +248,7 @@ export default function AuthoritarianScaleTest({ locale }: { locale: string }) {
 
         <button
           onClick={restart}
-          class="w-full rounded-xl border-2 border-slate-200 bg-white py-3 font-bold text-slate-600 transition hover:border-slate-400"
+          class="w-full rounded-xl border-2 border-slate-200 bg-card py-3 font-bold text-slate-600 transition hover:border-slate-400"
         >
           {ui.restart}
         </button>

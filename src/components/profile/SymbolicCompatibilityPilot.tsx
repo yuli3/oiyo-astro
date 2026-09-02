@@ -86,8 +86,8 @@ function toBirthMoment(form: PersonForm): BirthMoment {
 }
 
 function PersonCard({ copy, form, label, lang, onChange, self }: { copy: typeof COPY[Lang]; form: PersonForm; label: string; lang: Lang; onChange: (next: PersonForm) => void; self?: boolean }) {
-  const inputClass = "mt-1 h-12 w-full rounded-2xl border border-stone-200 bg-stone-50 px-4 text-base font-semibold text-stone-900 outline-none focus:border-green-600 focus:bg-white focus:ring-4 focus:ring-green-600/10";
-  return <fieldset className="rounded-[1.75rem] border border-lime-200 bg-white p-4 shadow-sm sm:p-5">
+  const inputClass = "mt-1 h-12 w-full rounded-2xl border border-stone-200 bg-stone-50 px-4 text-base font-semibold text-stone-900 outline-none focus:border-green-600 focus:bg-card focus:ring-4 focus:ring-green-600/10";
+  return <fieldset className="rounded-[1.75rem] border border-lime-200 bg-card p-4 shadow-sm sm:p-5">
     <legend className="px-2 text-sm font-black text-green-900">{label}</legend>
     <div className="space-y-4">
       {self ? (
@@ -225,7 +225,7 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
   if (receivedGroup) {
     return <main>
       <header className="text-center">
-        <h1 className="mt-4 text-3xl font-black tracking-tight text-green-950 sm:text-4xl">{copy.title}</h1>
+        <h1 className="mt-4 text-3xl font-black tracking-tight text-foreground sm:text-4xl">{copy.title}</h1>
         <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-600">{copy.disclaimer}</p>
       </header>
       <SymbolicGroupSnapshotPanel initialSnapshot={receivedGroup} locale={lang} />
@@ -236,20 +236,20 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
     const uncertain = result.a.source.timeStatus === "unknown" || result.b.fiveElements.observedCoordinates === 6;
     return <main>
       <header className="text-center">
-        <h1 className="mt-4 text-3xl font-black tracking-tight text-green-950 sm:text-4xl">{copy.result}</h1>
+        <h1 className="mt-4 text-3xl font-black tracking-tight text-foreground sm:text-4xl">{copy.result}</h1>
         <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-600">{copy.disclaimer}</p>
       </header>
 
       <section className="mt-8 rounded-[2rem] border border-lime-200 bg-[#f7f8ed] p-4 sm:p-7" aria-label={copy.result}>
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-3 text-center">
-          <div className="rounded-2xl bg-white px-3 py-4 font-black text-green-950 shadow-sm">{a.name.trim() || copy.me}</div>
+          <div className="rounded-2xl bg-card px-3 py-4 font-black text-foreground shadow-sm">{a.name.trim() || copy.me}</div>
           <Link2 className="h-6 w-6 text-lime-600" aria-hidden="true" />
-          <div className="rounded-2xl bg-white px-3 py-4 font-black text-green-950 shadow-sm">{b.name.trim() || copy.friend}</div>
+          <div className="rounded-2xl bg-card px-3 py-4 font-black text-foreground shadow-sm">{b.name.trim() || copy.friend}</div>
         </div>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          {result.report.lenses.map((lens, index) => <article key={lens.id} className="rounded-2xl border border-lime-100 bg-white p-4 shadow-sm">
+          {result.report.lenses.map((lens, index) => <article key={lens.id} className="rounded-2xl border border-lime-100 bg-card p-4 shadow-sm">
             <div className="flex items-start justify-between gap-3">
-              <div><p className="text-xs font-black uppercase tracking-wider text-lime-700">0{index + 1} · {copy.lenses[lens.id]}</p><p className="mt-2 text-base font-black text-green-950">{relationText(lens.relation)}</p></div>
+              <div><p className="text-xs font-black uppercase tracking-wider text-lime-700">0{index + 1} · {copy.lenses[lens.id]}</p><p className="mt-2 text-base font-black text-foreground">{relationText(lens.relation)}</p></div>
               <span className="text-sm font-black text-green-800">{lens.harmonyIndex}</span>
             </div>
             <div className="mt-3 h-2 overflow-hidden rounded-full bg-lime-50">
@@ -270,14 +270,14 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
       </section>
 
       <section className="mt-5 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-3xl border border-stone-200 bg-white p-5"><h2 className="text-sm font-black text-stone-900">{copy.evidence}</h2><p className="mt-3 text-xs leading-6 text-stone-600">{a.name.trim() || copy.me}: {result.a.saju.year.heavenlyStem}-{result.a.saju.year.earthlyBranch} · {result.a.fiveElements.dominant} · {result.a.sunSign.sign}</p><p className="text-xs leading-6 text-stone-600">{receivedProfile ? copy.friend : b.name.trim() || copy.friend}: {result.bFull ? `${result.bFull.saju.year.heavenlyStem}-${result.bFull.saju.year.earthlyBranch} · ` : ""}{result.b.fiveElements.dominant} · {result.b.sunSign.sign}</p></div>
+        <div className="rounded-3xl border border-stone-200 bg-card p-5"><h2 className="text-sm font-black text-stone-900">{copy.evidence}</h2><p className="mt-3 text-xs leading-6 text-stone-600">{a.name.trim() || copy.me}: {result.a.saju.year.heavenlyStem}-{result.a.saju.year.earthlyBranch} · {result.a.fiveElements.dominant} · {result.a.sunSign.sign}</p><p className="text-xs leading-6 text-stone-600">{receivedProfile ? copy.friend : b.name.trim() || copy.friend}: {result.bFull ? `${result.bFull.saju.year.heavenlyStem}-${result.bFull.saju.year.earthlyBranch} · ` : ""}{result.b.fiveElements.dominant} · {result.b.sunSign.sign}</p></div>
         <div className="rounded-3xl border border-amber-200 bg-amber-50 p-5"><h2 className="text-sm font-black text-amber-900">{copy.uncertainty}</h2><p className="mt-3 text-xs leading-6 text-amber-800">{uncertain ? copy.unknownTime : copy.noUncertainty}</p></div>
       </section>
       <section className="mt-5 rounded-3xl border border-lime-200 bg-lime-50 p-5 text-center">
         <p className="text-xs font-bold text-stone-600">{shareCopy.expires} · {shareCopy.warning}</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
           <button type="button" onClick={() => void shareProfile(result.a)} className="flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-green-800 px-5 text-sm font-black text-white"><Share2 className="h-4 w-4" />{shareCopy.shareMe}</button>
-          {result.bFull && <button type="button" onClick={() => void shareProfile(result.bFull!)} className="flex min-h-12 items-center justify-center gap-2 rounded-2xl border border-green-700 bg-white px-5 text-sm font-black text-green-800"><Share2 className="h-4 w-4" />{shareCopy.shareFriend}</button>}
+          {result.bFull && <button type="button" onClick={() => void shareProfile(result.bFull!)} className="flex min-h-12 items-center justify-center gap-2 rounded-2xl border border-green-700 bg-card px-5 text-sm font-black text-green-800"><Share2 className="h-4 w-4" />{shareCopy.shareFriend}</button>}
         </div>
         {shareState === "copied" && <p role="status" className="mt-3 inline-flex items-center gap-1 text-xs font-black text-green-800"><Check className="h-4 w-4" />{shareCopy.copied}</p>}
         {shareState === "fallback" && <p role="status" className="mt-3 text-xs font-bold text-amber-800">{shareCopy.fallback}</p>}
@@ -291,7 +291,7 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
 
   return <main>
     <header className="text-center">
-      <h1 className="mt-4 text-3xl font-black tracking-tight text-green-950 sm:text-4xl">{copy.title}</h1>
+      <h1 className="mt-4 text-3xl font-black tracking-tight text-foreground sm:text-4xl">{copy.title}</h1>
       <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-600">{copy.sub}</p>
       <p className="mt-3 inline-flex items-center gap-1.5 text-xs font-bold text-green-700"><ShieldCheck className="h-4 w-4" />{copy.local}</p>
     </header>
@@ -302,7 +302,7 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
       <div className={`grid gap-4 ${receivedProfile ? "mx-auto max-w-xl" : "sm:grid-cols-2"}`}><PersonCard copy={copy} form={a} label={copy.me} lang={lang} onChange={setA} self />{!receivedProfile && <PersonCard copy={copy} form={b} label={copy.friend} lang={lang} onChange={setB} />}</div>
       {error && <p role="alert" className="mt-4 rounded-2xl bg-red-50 px-4 py-3 text-sm font-bold text-red-700">{error}</p>}
       <button type="submit" className="mt-5 flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-green-800 px-6 text-base font-black text-white shadow-lg shadow-green-900/10 transition hover:bg-green-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800">{copy.action}<ArrowRight className="h-5 w-5" /></button>
-      {!receivedProfile && <button type="button" onClick={() => void inviteFromForm()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl border border-green-700 bg-white px-6 text-sm font-black text-green-800"><Share2 className="h-4 w-4" />{shareCopy.invite}</button>}
+      {!receivedProfile && <button type="button" onClick={() => void inviteFromForm()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl border border-green-700 bg-card px-6 text-sm font-black text-green-800"><Share2 className="h-4 w-4" />{shareCopy.invite}</button>}
       {!receivedProfile && <p className="mt-2 text-center text-xs leading-5 text-stone-500">{shareCopy.inviteHint}</p>}
       {shareState === "copied" && <p role="status" className="mt-3 text-center text-xs font-black text-green-800"><Check className="mr-1 inline h-4 w-4" />{shareCopy.copied}</p>}
       {shareState === "fallback" && <p role="status" className="mt-3 text-center text-xs font-bold text-amber-800">{shareCopy.fallback}</p>}

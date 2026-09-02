@@ -44,7 +44,7 @@ export function ProfileInputDialog({
 
   return (
     <Dialog open={open} onOpenChange={(next) => { if (!next) onClose(); }}>
-      <DialogContent className="max-h-[90dvh] w-[calc(100vw-2rem)] max-w-md overflow-y-auto rounded-[28px] border-green-100 bg-white p-0 shadow-2xl">
+      <DialogContent className="max-h-[90dvh] w-[calc(100vw-2rem)] max-w-md overflow-y-auto rounded-[28px] border-green-100 bg-card p-0 shadow-2xl">
         <DialogTitle className="sr-only">{c.heading}</DialogTitle>
         <DialogDescription className="sr-only">{c.page}</DialogDescription>
         <OntologyBirthInput locale={locale} onSaved={onClose} />

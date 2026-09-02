@@ -278,7 +278,7 @@ export default function PranayamaGuide({ locale }: Props) {
 
   return (
     <div className="rounded-2xl border border-green-100 bg-gradient-to-br from-green-50 to-green-50 p-5">
-      <h1 className="text-2xl font-bold text-green-950">{u('title')}</h1>
+      <h1 className="text-2xl font-bold text-foreground">{u('title')}</h1>
 
       {/* Technique selector */}
       <p className="mt-4 text-sm font-semibold text-green-800">{u('technique')}</p>
@@ -286,7 +286,7 @@ export default function PranayamaGuide({ locale }: Props) {
         {TECHNIQUES.map((tch, i) => (
           <button key={tch.id} type="button" onClick={() => pick(i)}
             className={`rounded-xl px-4 py-2.5 text-left text-sm transition-all ${
-              selected === i ? 'bg-green-600 text-white shadow-sm' : 'bg-white text-green-800 hover:bg-green-100'
+              selected === i ? 'bg-green-600 text-white shadow-sm' : 'bg-card text-green-800 hover:bg-green-100'
             }`}>
             <span className="font-semibold">{tt(tch.name, locale)}</span>
             <span className={`ml-1 block text-xs ${selected === i ? 'text-green-100' : 'text-green-500'}`}>

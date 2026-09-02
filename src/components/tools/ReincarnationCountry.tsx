@@ -255,7 +255,7 @@ export default function ReincarnationCountry({ locale }: Props) {
 
   return (
     <div className="space-y-5">
-      <div className="rounded-2xl border border-slate-200 bg-white p-4 text-sm text-slate-600">
+      <div className="rounded-2xl border border-slate-200 bg-card p-4 text-sm text-slate-600">
         <label className="flex flex-wrap items-center gap-2">
           <span className="font-semibold text-slate-800">{COPY.home[locale]}</span>
           <select
@@ -278,7 +278,7 @@ export default function ReincarnationCountry({ locale }: Props) {
       </div>
 
       <div className="flex flex-wrap items-center gap-3">
-        <div className="inline-flex rounded-full border border-slate-200 bg-white p-1 text-sm font-semibold">
+        <div className="inline-flex rounded-full border border-slate-200 bg-card p-1 text-sm font-semibold">
           {(["births", "population"] as const).map((key) => (
             <button
               key={key}
@@ -371,7 +371,7 @@ export default function ReincarnationCountry({ locale }: Props) {
       <p className="text-xs text-slate-500">{COPY.pinNote[locale]}</p>
 
       {latest ? (
-        <div className="rounded-2xl border border-slate-200 bg-white p-5">
+        <div className="rounded-2xl border border-slate-200 bg-card p-5">
           <p className="text-3xl font-black tracking-tight text-slate-900">{nameOf(latest, locale)}</p>
           <dl className="mt-3 grid gap-2 text-sm text-slate-600 sm:grid-cols-2">
             <div>
@@ -458,7 +458,7 @@ export default function ReincarnationCountry({ locale }: Props) {
 
       <section>
         <h2 className="text-sm font-bold uppercase tracking-wide text-slate-400">{COPY.top[locale]} · {COPY[mode][locale]}</h2>
-        <ol className="mt-2 divide-y divide-slate-100 rounded-2xl border border-slate-200 bg-white">
+        <ol className="mt-2 divide-y divide-slate-100 rounded-2xl border border-slate-200 bg-card">
           {top.map((row, i) => (
             <li key={row.iso3}>
               <button
@@ -478,7 +478,7 @@ export default function ReincarnationCountry({ locale }: Props) {
         </ol>
       </section>
 
-      <section className="rounded-2xl border border-slate-200 bg-white p-4">
+      <section className="rounded-2xl border border-slate-200 bg-card p-4">
         <div className="flex items-center justify-between gap-2">
           <h2 className="text-sm font-bold uppercase tracking-wide text-slate-400">{COPY.history[locale]}</h2>
           {history.length > 0 && (

@@ -101,7 +101,7 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
   const showEmpty = hydrated && focus === null && seedIds.length === 0;
 
   return (
-    <div id="relation-orbit" className="rounded-[28px] border border-green-100 bg-white p-4 shadow-sm sm:p-5">
+    <div id="relation-orbit" className="rounded-[28px] border border-green-100 bg-card p-4 shadow-sm sm:p-5">
       <div className="relative mx-auto" style={{ width: SIZE, height: SIZE }}>
         <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 text-center">
           <span className="flex h-16 w-16 items-center justify-center rounded-full bg-green-700 text-2xl text-white shadow-sm transition-all duration-300">
@@ -125,7 +125,7 @@ export function OntologyRelationOrbit({ locale }: { locale: string }) {
               className="absolute flex w-16 -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1 text-center transition-all duration-300"
               style={{ left: x, top: y }}
             >
-              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-green-100 bg-white text-lg shadow-sm transition hover:border-green-400 hover:shadow">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-green-100 bg-card text-lg shadow-sm transition hover:border-green-400 hover:shadow">
                 {node?.icon ?? "✨"}
               </span>
               <span className="line-clamp-2 text-[10px] font-bold leading-tight text-green-800">

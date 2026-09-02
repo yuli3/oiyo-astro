@@ -464,11 +464,11 @@ export default function SocialAnxietyTest({ locale: localeProp }: Props) {
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm">
           <p className="text-sm text-gray-700 leading-relaxed">{ld.description}</p>
         </div>
 
-        <div className="rounded-xl border border-gray-100 bg-white p-5 shadow-sm space-y-4">
+        <div className="rounded-xl border border-gray-100 bg-card p-5 shadow-sm space-y-4">
           <div>
             <h3 className="font-semibold text-gray-700">📊 {tx.impact}</h3>
             <p className="mt-1 text-sm text-gray-600">{ld.impact}</p>

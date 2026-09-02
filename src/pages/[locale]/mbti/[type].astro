@@ -194,17 +194,17 @@ const breadcrumbJsonLd = {
   <div class="mx-auto max-w-2xl px-4 py-10">
 
     <section class="mt-2">
-      <h2 class="text-xl font-bold text-green-950">{c.worldviewTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.worldviewTitle}</h2>
       <p class="mt-4 leading-8 text-green-800">{t(data.worldview)}</p>
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-green-950">{c.cognitiveStackTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.cognitiveStackTitle}</h2>
       <div class="mt-4 grid gap-3">
         {cognitiveStack.map((f) => (
-          <article class="rounded-xl border border-green-100 bg-white p-4">
+          <article class="rounded-xl border border-green-100 bg-card p-4">
             <p class="text-[10px] font-bold uppercase tracking-widest text-green-600">{f.role}</p>
-            <h3 class="mt-1 font-semibold text-green-950">{f.code} — {f.name}</h3>
+            <h3 class="mt-1 font-semibold text-foreground">{f.code} — {f.name}</h3>
             <p class="mt-2 text-sm leading-6 text-green-700">{f.narrative}</p>
           </article>
         ))}
@@ -212,7 +212,7 @@ const breadcrumbJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-green-950">{c.strengthsTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.strengthsTitle}</h2>
       <ul class="mt-4 space-y-2">
         {data.strengths.map((s) => (
           <li class="flex gap-2 text-sm leading-6 text-green-800">
@@ -224,7 +224,7 @@ const breadcrumbJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-green-950">{c.challengesTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.challengesTitle}</h2>
       <ul class="mt-4 space-y-2">
         {data.challenges.map((s) => (
           <li class="flex gap-2 text-sm leading-6 text-amber-800">
@@ -236,56 +236,56 @@ const breadcrumbJsonLd = {
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-green-950">{c.growthTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.growthTitle}</h2>
       <p class="mt-4 leading-8 text-green-800">{t(data.growthPath)}</p>
     </section>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-green-950">{c.lifeTitle}</h2>
+      <h2 class="text-xl font-bold text-foreground">{c.lifeTitle}</h2>
       <p class="mt-4 leading-8 text-green-800">{t(data.lifeImplications)}</p>
     </section>
 
     {lifeKo && (
       <section class="mt-10">
-        <h2 class="text-xl font-bold text-green-950">직업 적성</h2>
+        <h2 class="text-xl font-bold text-foreground">직업 적성</h2>
         <dl class="mt-4 grid gap-2 rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm">
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">대표 직군</dt><dd class="text-green-800">{lifeKo.career.keywords}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">살아나는 환경</dt><dd class="text-green-800">{lifeKo.career.thrives}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">시드는 환경</dt><dd class="text-green-800">{lifeKo.career.wilts}</dd></div>
         </dl>
-        <h3 class="mt-6 font-semibold text-green-950">강점이 살아나는 직군</h3>
+        <h3 class="mt-6 font-semibold text-foreground">강점이 살아나는 직군</h3>
         <ul class="mt-3 space-y-2">
           {lifeKo.career.roles.map((r) => (
-            <li class="text-sm leading-6 text-green-800"><strong class="font-semibold text-green-950">{r.name}</strong> — {r.desc}</li>
+            <li class="text-sm leading-6 text-green-800"><strong class="font-semibold text-foreground">{r.name}</strong> — {r.desc}</li>
           ))}
         </ul>
-        <h3 class="mt-6 font-semibold text-green-950">피해야 할 환경</h3>
+        <h3 class="mt-6 font-semibold text-foreground">피해야 할 환경</h3>
         {lifeKo.career.avoid.map((p) => <p class="mt-3 text-sm leading-7 text-green-800">{p}</p>)}
-        <h3 class="mt-6 font-semibold text-green-950">커리어 성장 팁</h3>
+        <h3 class="mt-6 font-semibold text-foreground">커리어 성장 팁</h3>
         <p class="mt-3 text-sm leading-7 text-green-800">{lifeKo.career.growth}</p>
       </section>
     )}
 
     {lifeKo && (
       <section class="mt-10">
-        <h2 class="text-xl font-bold text-green-950">관계와 연애</h2>
+        <h2 class="text-xl font-bold text-foreground">관계와 연애</h2>
         <dl class="mt-4 grid gap-2 rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm">
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">사랑의 언어</dt><dd class="text-green-800">{lifeKo.relationship.loveLanguage}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">설레는 순간</dt><dd class="text-green-800">{lifeKo.relationship.spark}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">식는 순간</dt><dd class="text-green-800">{lifeKo.relationship.cool}</dd></div>
         </dl>
-        <h3 class="mt-6 font-semibold text-green-950">사랑할 때의 모습</h3>
+        <h3 class="mt-6 font-semibold text-foreground">사랑할 때의 모습</h3>
         {lifeKo.relationship.loveStyle.map((p) => <p class="mt-3 text-sm leading-7 text-green-800">{p}</p>)}
-        <h3 class="mt-6 font-semibold text-green-950">편안하다고 자주 언급되는 유형</h3>
+        <h3 class="mt-6 font-semibold text-foreground">편안하다고 자주 언급되는 유형</h3>
         <ul class="mt-3 space-y-2">
           {lifeKo.relationship.matches.map((r) => (
-            <li class="text-sm leading-6 text-green-800"><strong class="font-semibold text-green-950">{r.name}</strong> — {r.desc}</li>
+            <li class="text-sm leading-6 text-green-800"><strong class="font-semibold text-foreground">{r.name}</strong> — {r.desc}</li>
           ))}
         </ul>
         <p class="mt-3 text-xs leading-6 text-green-600">고정된 궁합표는 없습니다. 같은 유형끼리도 잘 맞을 수 있고, 목록에 없는 조합도 좋은 관계를 만듭니다.</p>
-        <h3 class="mt-6 font-semibold text-green-950">부딪히기 쉬운 지점</h3>
+        <h3 class="mt-6 font-semibold text-foreground">부딪히기 쉬운 지점</h3>
         {lifeKo.relationship.friction.map((p) => <p class="mt-3 text-sm leading-7 text-green-800">{p}</p>)}
-        <h3 class="mt-6 font-semibold text-green-950">관계를 오래 가게 하는 실천</h3>
+        <h3 class="mt-6 font-semibold text-foreground">관계를 오래 가게 하는 실천</h3>
         <ul class="mt-3 space-y-2">
           {lifeKo.relationship.tips.map((x) => (
             <li class="flex gap-2 text-sm leading-6 text-green-800"><span class="text-green-500" aria-hidden="true">·</span><span>{x}</span></li>
@@ -296,23 +296,23 @@ const breadcrumbJsonLd = {
 
     {lifeKo && (
       <section class="mt-10">
-        <h2 class="text-xl font-bold text-green-950">공부법</h2>
+        <h2 class="text-xl font-bold text-foreground">공부법</h2>
         <dl class="mt-4 grid gap-2 rounded-xl border border-green-100 bg-green-50/60 p-4 text-sm">
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">맞는 리듬</dt><dd class="text-green-800">{lifeKo.study.rhythm}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">집중을 돕는 것</dt><dd class="text-green-800">{lifeKo.study.helps}</dd></div>
           <div class="flex gap-2"><dt class="shrink-0 font-semibold text-green-900">피해야 할 방식</dt><dd class="text-green-800">{lifeKo.study.avoid}</dd></div>
         </dl>
         {lifeKo.study.focus.map((p) => <p class="mt-3 text-sm leading-7 text-green-800">{p}</p>)}
-        <h3 class="mt-6 font-semibold text-green-950">추천 학습 루틴</h3>
+        <h3 class="mt-6 font-semibold text-foreground">추천 학습 루틴</h3>
         <ol class="mt-3 space-y-2">
           {lifeKo.study.steps.map((x, i) => (
             <li class="flex gap-3 text-sm leading-6 text-green-800">
               <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-800 text-[11px] font-bold text-white">{i + 1}</span>
-              <span><strong class="font-semibold text-green-950">{x.name}</strong> — {x.desc}</span>
+              <span><strong class="font-semibold text-foreground">{x.name}</strong> — {x.desc}</span>
             </li>
           ))}
         </ol>
-        <h3 class="mt-6 font-semibold text-green-950">피해야 할 학습 함정</h3>
+        <h3 class="mt-6 font-semibold text-foreground">피해야 할 학습 함정</h3>
         {lifeKo.study.traps.map((p) => <p class="mt-3 text-sm leading-7 text-green-800">{p}</p>)}
       </section>
     )}
@@ -329,12 +329,12 @@ const breadcrumbJsonLd = {
     </div>
 
     <section class="mt-10 border-t border-green-100 pt-8">
-      <h2 class="text-lg font-bold text-green-950">{c.otherTypesTitle}</h2>
+      <h2 class="text-lg font-bold text-foreground">{c.otherTypesTitle}</h2>
       <div class="mt-4 grid grid-cols-4 gap-2">
         {otherTypes.map((ot) => (
           <a
             href={localePath(`/mbti/${ot.toLowerCase()}`)}
-            class="rounded-lg border border-green-100 bg-white px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-green-50"
+            class="rounded-lg border border-green-100 bg-card px-2 py-2 text-center text-xs font-bold text-green-800 hover:border-green-300 hover:bg-green-50"
           >
             {TYPE_PROFILES[ot as keyof typeof TYPE_PROFILES].emoji} {ot}
           </a>

@@ -20,7 +20,7 @@ const c = copy[locale] ?? copy.en;
   <div class="rounded-2xl border border-green-200 bg-green-50/50 p-5">
     <div class="flex flex-wrap items-center justify-between gap-3">
       <div>
-        <p class="text-sm font-black text-green-950">{c.title}</p>
+        <p class="text-sm font-black text-foreground">{c.title}</p>
         <p class="text-xs text-green-600">{c.sub}</p>
       </div>
       <a href={`/${locale}/ontology/`} class="shrink-0 rounded-full bg-green-600 px-4 py-2 text-sm font-black text-white transition hover:bg-green-700">{c.cta} →</a>
@@ -43,7 +43,7 @@ const c = copy[locale] ?? copy.en;
           const href = r && typeof r.sourcePath === 'string' ? r.sourcePath : '';
           const el = document.createElement(href ? 'a' : 'span');
           if (href) el.setAttribute('href', href);
-          el.className = 'inline-flex items-center rounded-full border border-green-200 bg-white px-3 py-1 text-xs font-bold text-green-800 transition hover:border-green-400';
+          el.className = 'inline-flex items-center rounded-full border border-green-200 bg-card px-3 py-1 text-xs font-bold text-green-800 transition hover:border-green-400';
           const t = r && r.title ? String(r.title) : '';
           const v = r && r.resultLabel ? String(r.resultLabel) : '';
           el.textContent = v ? `${t} · ${v}` : t;

@@ -371,7 +371,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
     `flex-1 py-2 text-sm font-medium rounded-lg border transition-colors ${
       spread === s
         ? 'bg-green-600 text-white border-green-600'
-        : 'bg-white text-gray-600 border-gray-300 hover:border-green-400'
+        : 'bg-card text-gray-600 border-gray-300 hover:border-green-400'
     }`;
 
   return (
@@ -457,7 +457,7 @@ export default function TarotReading({ locale = 'ko' }: { locale?: Locale }) {
                 </button>
                 {/* Interpretation */}
                 {isFlipped && (
-                  <div className="bg-white rounded-xl border border-gray-200 p-3 space-y-1.5">
+                  <div className="bg-card rounded-xl border border-gray-200 p-3 space-y-1.5">
                     <p className="text-[10px] font-semibold text-gray-500">{dc.card.keywords[locale]}</p>
                     <p className="text-xs text-gray-700 leading-relaxed">
                       {dc.reversed ? dc.card.reversed[locale] : dc.card.upright[locale]}

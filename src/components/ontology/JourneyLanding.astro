@@ -35,14 +35,14 @@ const faqJsonLd = JSON.stringify({
   <nav class="mt-6 flex min-h-11 flex-wrap items-center justify-between gap-x-4 gap-y-2 text-sm" aria-label={navigation.zoneLabel}>
     <a
       href={navigation.mapHref}
-      class="inline-flex min-h-11 items-center gap-2 rounded-lg px-2 font-semibold text-green-800 underline decoration-green-300 underline-offset-4 transition-colors hover:text-green-950 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
+      class="inline-flex min-h-11 items-center gap-2 rounded-lg px-2 font-semibold text-green-800 underline decoration-green-300 underline-offset-4 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
     >
       <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
         <path d="m12.5 4.5-5 5 5 5" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
       {navigation.mapLabel}
     </a>
-    <span class="font-bold text-green-950">{navigation.zoneLabel}</span>
+    <span class="font-bold text-foreground">{navigation.zoneLabel}</span>
   </nav>
 
   <!-- Hero -->
@@ -54,7 +54,7 @@ const faqJsonLd = JSON.stringify({
       <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-100 text-green-700 text-xs font-bold mb-4">
         {c.badge}
       </span>
-      <h1 class="text-3xl md:text-4xl font-serif font-black text-green-950 mb-3 tracking-tight">
+      <h1 class="text-3xl md:text-4xl font-serif font-black text-foreground mb-3 tracking-tight">
         {c.title}
       </h1>
       <p class="text-green-700 text-lg leading-relaxed max-w-xl mx-auto">{c.intro}</p>
@@ -63,13 +63,13 @@ const faqJsonLd = JSON.stringify({
 
   <!-- 1. The question -->
   <section class="mt-10">
-    <h2 class="text-xl font-black text-green-950 mb-3">{c.question.heading}</h2>
+    <h2 class="text-xl font-black text-foreground mb-3">{c.question.heading}</h2>
     {c.question.body.map((p) => <p class="text-gray-700 leading-relaxed mb-3">{p}</p>)}
   </section>
 
   <!-- 2. Core concepts -->
   <section class="mt-10">
-    <h2 class="text-xl font-black text-green-950 mb-4">{c.concepts.heading}</h2>
+    <h2 class="text-xl font-black text-foreground mb-4">{c.concepts.heading}</h2>
     <div class="grid gap-4 sm:grid-cols-2">
       {c.concepts.items.map((it) => (
         <div class="rounded-2xl border border-green-100 bg-green-50/40 p-5">
@@ -82,17 +82,17 @@ const faqJsonLd = JSON.stringify({
 
   <!-- 3. Tools -->
   <section class="mt-10">
-    <h2 class="text-xl font-black text-green-950 mb-2">{c.tools.heading}</h2>
+    <h2 class="text-xl font-black text-foreground mb-2">{c.tools.heading}</h2>
     <p class="text-gray-600 mb-4">{c.tools.desc}</p>
     <div class="grid gap-3 sm:grid-cols-2">
       {c.tools.items.map((t) => (
         <a
           href={t.href}
-          class="group flex items-start gap-3 rounded-2xl border border-green-200 bg-white p-4 transition-all hover:border-green-400 hover:shadow-md"
+          class="group flex items-start gap-3 rounded-2xl border border-green-200 bg-card p-4 transition-all hover:border-green-400 hover:shadow-md"
         >
           <span class="text-2xl" aria-hidden="true">{t.emoji}</span>
           <span>
-            <span class="block font-bold text-green-950 group-hover:text-green-700">{t.label}</span>
+            <span class="block font-bold text-foreground group-hover:text-green-700">{t.label}</span>
             {t.desc && <span class="block text-sm text-gray-500 mt-0.5">{t.desc}</span>}
           </span>
         </a>
@@ -103,7 +103,7 @@ const faqJsonLd = JSON.stringify({
 
   <!-- 4. How to interpret -->
   <section class="mt-10">
-    <h2 class="text-xl font-black text-green-950 mb-4">{c.interpret.heading}</h2>
+    <h2 class="text-xl font-black text-foreground mb-4">{c.interpret.heading}</h2>
     <ol class="space-y-4">
       {c.interpret.steps.map((s, i) => (
         <li class="flex gap-3">
@@ -119,12 +119,12 @@ const faqJsonLd = JSON.stringify({
 
   <!-- 5. Related tests -->
   <section class="mt-10">
-    <h2 class="text-xl font-black text-green-950 mb-3">{c.tests.heading}</h2>
+    <h2 class="text-xl font-black text-foreground mb-3">{c.tests.heading}</h2>
     <div class="flex flex-wrap gap-2">
       {c.tests.items.map((t) => (
         <a
           href={t.href}
-          class="inline-flex items-center gap-1.5 rounded-xl border border-green-200 bg-white px-3.5 py-2 text-sm font-medium text-green-900 transition-colors hover:border-green-500 hover:text-green-700"
+          class="inline-flex items-center gap-1.5 rounded-xl border border-green-200 bg-card px-3.5 py-2 text-sm font-medium text-green-900 transition-colors hover:border-green-500 hover:text-green-700"
         >
           {t.emoji && <span aria-hidden="true">{t.emoji}</span>}
           {t.label}
@@ -163,11 +163,11 @@ const faqJsonLd = JSON.stringify({
 
   <!-- 8. FAQ -->
   <section class="mt-10">
-    <h2 class="text-xl font-black text-green-950 mb-4">{c.faq.heading}</h2>
+    <h2 class="text-xl font-black text-foreground mb-4">{c.faq.heading}</h2>
     <div class="space-y-3">
       {c.faq.items.map((f) => (
-        <details class="group rounded-2xl border border-green-100 bg-white p-4">
-          <summary class="cursor-pointer font-bold text-green-950 list-none flex items-center justify-between gap-2">
+        <details class="group rounded-2xl border border-green-100 bg-card p-4">
+          <summary class="cursor-pointer font-bold text-foreground list-none flex items-center justify-between gap-2">
             {f.q}
             <span class="text-green-400 transition-transform group-open:rotate-45" aria-hidden="true">＋</span>
           </summary>

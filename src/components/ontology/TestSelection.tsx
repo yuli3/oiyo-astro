@@ -41,7 +41,7 @@ export function TestSelection({ availableTests, results }: TestSelectionProps) {
         return (
           <m.div
             animate={{ opacity: 1, y: 0 }}
-            className={`group relative overflow-hidden rounded-[2.5rem] border border-black/5 bg-white transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/10 ${
+            className={`group relative overflow-hidden rounded-[2.5rem] border border-black/5 bg-card transition-all duration-500 hover:shadow-2xl hover:shadow-green-500/10 ${
               isFeatured
                 ? "lg:col-span-2 lg:row-span-2"
                 : isWide
@@ -71,7 +71,7 @@ export function TestSelection({ availableTests, results }: TestSelectionProps) {
                     {test.subtitle}
                   </p>
                   <h3
-                    className={`font-serif italic font-black text-green-950 tracking-tighter leading-tight ${isFeatured ? "text-3xl" : "text-xl"}`}
+                    className={`font-serif italic font-black text-foreground tracking-tighter leading-tight ${isFeatured ? "text-3xl" : "text-xl"}`}
                   >
                     {test.title}
                   </h3>

@@ -225,20 +225,20 @@ export default function CircleGathering({ locale }: { locale: string }) {
 
   return <main>
     <header className="text-center">
-      <h1 className="text-3xl font-black tracking-tight text-green-950 sm:text-4xl">{copy.title}</h1>
+      <h1 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">{copy.title}</h1>
       <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-600">{copy.sub}</p>
       <a href={`/${locale}/profile/symbolic-compatibility/`} className="mt-3 inline-block text-sm font-black text-green-800 underline underline-offset-4">{copy.two}</a>
     </header>
 
     {snapshot && <section className="mt-8 rounded-[2rem] border border-lime-200 bg-[#f7f8ed] p-4 sm:p-7">
       <div className="flex gap-2 overflow-x-auto pb-1">{(Object.keys(LENS[lang]) as CompatibilityLensId[]).map((id) => (
-        <button key={id} type="button" onClick={() => setLens(id)} className={`min-h-11 shrink-0 rounded-full px-4 text-xs font-black ${lens === id ? "bg-green-800 text-white" : "border border-lime-200 bg-white text-green-900"}`}>{LENS[lang][id]}</button>
+        <button key={id} type="button" onClick={() => setLens(id)} className={`min-h-11 shrink-0 rounded-full px-4 text-xs font-black ${lens === id ? "bg-green-800 text-white" : "border border-lime-200 bg-card text-green-900"}`}>{LENS[lang][id]}</button>
       ))}</div>
       <div className="mt-3 grid grid-cols-2 gap-2">
-        <button type="button" onClick={() => setView("star")} className={`min-h-11 rounded-xl text-xs font-black ${view === "star" ? "bg-lime-200 text-green-950" : "bg-white text-stone-600"}`}><Star className="mr-1 inline h-4 w-4" />{copy.star}</button>
-        <button type="button" onClick={() => setView("all")} className={`min-h-11 rounded-xl text-xs font-black ${view === "all" ? "bg-lime-200 text-green-950" : "bg-white text-stone-600"}`}><Network className="mr-1 inline h-4 w-4" />{copy.all}</button>
+        <button type="button" onClick={() => setView("star")} className={`min-h-11 rounded-xl text-xs font-black ${view === "star" ? "bg-lime-200 text-foreground" : "bg-card text-stone-600"}`}><Star className="mr-1 inline h-4 w-4" />{copy.star}</button>
+        <button type="button" onClick={() => setView("all")} className={`min-h-11 rounded-xl text-xs font-black ${view === "all" ? "bg-lime-200 text-foreground" : "bg-card text-stone-600"}`}><Network className="mr-1 inline h-4 w-4" />{copy.all}</button>
       </div>
-      <div className="mt-4 aspect-square max-h-[32rem] w-full overflow-hidden rounded-3xl border border-lime-100 bg-white">
+      <div className="mt-4 aspect-square max-h-[32rem] w-full overflow-hidden rounded-3xl border border-lime-100 bg-card">
         <svg viewBox="0 0 100 100" className="h-full w-full">
           {edges.map((edge) => {
             const from = at(edge.from);
@@ -265,9 +265,9 @@ export default function CircleGathering({ locale }: { locale: string }) {
           score: scoreAgainstCenter(snapshot.edges, centerId || people[0]?.id, item.id, lens),
         }))}
       />
-      {pairCopy && pickedEdge && <article className="mt-4 rounded-3xl bg-white p-4">
+      {pairCopy && pickedEdge && <article className="mt-4 rounded-3xl bg-card p-4">
         <p className="text-xs font-black uppercase tracking-wider text-lime-700">{copy.pair} · {pickedEdge.harmonyIndex}</p>
-        <h2 className="mt-1 text-lg font-black text-green-950">{pairCopy.label}</h2>
+        <h2 className="mt-1 text-lg font-black text-foreground">{pairCopy.label}</h2>
         <p className="mt-2 text-sm"><span className="font-black">{copy.help}.</span> {pairCopy.help}</p>
         <p className="mt-1 text-sm"><span className="font-black">{copy.care}.</span> {pairCopy.care}</p>
         <p className="mt-1 text-sm"><span className="font-black">{copy.ask}.</span> {pairCopy.ask}</p>
@@ -280,13 +280,13 @@ export default function CircleGathering({ locale }: { locale: string }) {
     {!snapshot && <p className="mt-8 rounded-2xl bg-lime-50 px-4 py-3 text-center text-sm font-bold text-green-900">{copy.need}</p>}
 
     <ul className="mt-5 space-y-2">{people.map((item) => (
-      <li key={item.id} className="flex min-h-12 items-center gap-3 rounded-2xl bg-white px-4">
-        <button type="button" onClick={() => setCenterId(item.id)} className="min-w-0 flex-1 truncate text-left text-sm font-black text-green-950">{item.id === centerId ? "◎ " : "○ "}{item.label}</button>
+      <li key={item.id} className="flex min-h-12 items-center gap-3 rounded-2xl bg-card px-4">
+        <button type="button" onClick={() => setCenterId(item.id)} className="min-w-0 flex-1 truncate text-left text-sm font-black text-foreground">{item.id === centerId ? "◎ " : "○ "}{item.label}</button>
         <button type="button" aria-label="remove" onClick={() => setPeople((current) => current.filter((row) => row.id !== item.id))} className="h-11 w-11 text-stone-400"><Trash2 className="mx-auto h-4 w-4" /></button>
       </li>
     ))}</ul>
 
-    {people.length < 10 && <div className="mt-5 space-y-3 rounded-3xl border border-lime-200 bg-white p-4">
+    {people.length < 10 && <div className="mt-5 space-y-3 rounded-3xl border border-lime-200 bg-card p-4">
       <input aria-label={copy.alias} placeholder={copy.alias} value={alias} maxLength={24} onChange={(event) => setAlias(event.target.value)} className={field} />
       <input aria-label={copy.date} type="date" value={date} onChange={(event) => setDate(event.target.value)} className={field} />
       <input aria-label={copy.time} type="time" value={time} onChange={(event) => setTime(event.target.value)} className={field} />

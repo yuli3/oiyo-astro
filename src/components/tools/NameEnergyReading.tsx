@@ -174,12 +174,12 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
       <ProfileNameField label={ui.nameLabel} locale={locale} value={name} onChange={setName} />
 
       {!reading ? (
-        <p className="rounded-2xl border border-dashed border-green-200 bg-white px-4 py-6 text-center text-sm font-bold text-slate-500">
+        <p className="rounded-2xl border border-dashed border-green-200 bg-card px-4 py-6 text-center text-sm font-bold text-slate-500">
           {ui.empty}
         </p>
       ) : (
         <>
-          <section className="rounded-[28px] border border-green-100 bg-white p-5">
+          <section className="rounded-[28px] border border-green-100 bg-card p-5">
             <h2 className="text-sm font-black text-slate-950">{ui.soundTitle}</h2>
             <p className="mt-1 text-xs leading-5 text-slate-500">{ui.soundSub}</p>
 
@@ -194,7 +194,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
             </div>
           </section>
 
-          <section className="rounded-[28px] border border-green-100 bg-white p-5">
+          <section className="rounded-[28px] border border-green-100 bg-card p-5">
             <h2 className="text-sm font-black text-slate-950">{ui.fillTitle}</h2>
             <p className="mt-1 text-xs leading-5 text-slate-500">{ui.fillSub}</p>
 

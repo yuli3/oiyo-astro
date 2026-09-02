@@ -84,7 +84,7 @@ export default function TestAchievements({ locale }: { locale: string }) {
         {rows.map((row) => {
           const copy = t.names[row.id as keyof typeof t.names];
           return (
-            <li key={row.id} className={`rounded-2xl border p-4 ${row.unlocked ? "bg-lime-50" : "bg-white"}`}>
+            <li key={row.id} className={`rounded-2xl border p-4 ${row.unlocked ? "bg-lime-50" : "bg-card"}`}>
               <p className="font-black">
                 {row.icon} {copy?.title ?? row.id}
               </p>

@@ -833,7 +833,7 @@ export default function BloodTypeFortune({ locale }: Props) {
 
       {/* Blood type selector */}
       {!result ? (
-        <div className="rounded-2xl border border-gray-200 bg-white p-5 space-y-4">
+        <div className="rounded-2xl border border-gray-200 bg-card p-5 space-y-4">
           <p className="text-sm font-medium text-gray-700">{ui.selectLabel}</p>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
             {BLOOD_TYPES.map((bt) => (
@@ -843,7 +843,7 @@ export default function BloodTypeFortune({ locale }: Props) {
                 className={`flex flex-col items-center rounded-xl border py-4 px-3 transition-all hover:border-red-400 hover:bg-red-50 ${
                   selected === bt
                     ? "border-red-500 bg-red-50"
-                    : "border-gray-200 bg-white"
+                    : "border-gray-200 bg-card"
                 }`}
               >
                 <span className="text-3xl">{BLOOD_TYPE_EMOJI[bt]}</span>

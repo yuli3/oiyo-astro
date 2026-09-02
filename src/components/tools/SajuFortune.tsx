@@ -463,7 +463,7 @@ export default function SajuFortune({ locale }: Props) {
       </div>
 
       {!result ? (
-        <div className="bg-white border border-gray-200 rounded-2xl p-6 space-y-4">
+        <div className="bg-card border border-gray-200 rounded-2xl p-6 space-y-4">
           <label className="block text-sm font-medium text-gray-700">{ui.birthYear}</label>
           <select
             value={year ?? ""}
@@ -501,7 +501,7 @@ export default function SajuFortune({ locale }: Props) {
           {CATEGORIES.map((cat) => {
             const { tier, text } = result.fortunes[cat];
             return (
-              <div key={cat} className="bg-white border border-gray-100 rounded-2xl p-5 shadow-sm space-y-2">
+              <div key={cat} className="bg-card border border-gray-100 rounded-2xl p-5 shadow-sm space-y-2">
                 <div className="flex items-center justify-between">
                   <span className="font-semibold text-gray-800">
                     {CAT_ICONS[cat]} {CAT_LABELS[locale][cat]}

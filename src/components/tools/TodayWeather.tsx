@@ -44,13 +44,13 @@ export default function TodayWeather({ locale, lat, lon }: { locale: Locale; lat
   if (err) return null;
   if (!text) {
     return (
-      <div className="rounded-xl border border-slate-200 bg-white p-3">
+      <div className="rounded-xl border border-slate-200 bg-card p-3">
         <Skeleton className="h-6 w-24" />
       </div>
     );
   }
   return (
-    <div className="rounded-xl border border-primary/20 bg-white px-4 py-3 text-center">
+    <div className="rounded-xl border border-primary/20 bg-card px-4 py-3 text-center">
       <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">{t.heading}</p>
       <p className="text-2xl font-black text-green-900">{text}</p>
       <p className="text-[10px] text-slate-400">{t.source}</p>
