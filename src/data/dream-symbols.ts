@@ -185,7 +185,7 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
     },
   },
   {
-    id: 'teeth', emoji: '🦷', category: 'body', related: ['falling', 'snake', 'death'], hasArticle: true,
+    id: 'teeth', emoji: '🦷', category: 'body', related: ['falling', 'snake', 'death', 'naked', 'blood'], hasArticle: true,
     l10n: {
       ko: {
         name: '이빨 빠짐', keywords: ['상실', '노화', '말', '가족'],
@@ -250,7 +250,7 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
     },
   },
   {
-    id: 'snake', emoji: '🐍', category: 'creature', related: ['water', 'teeth'], hasArticle: true,
+    id: 'snake', emoji: '🐍', category: 'creature', related: ['water', 'teeth', 'baby', 'pig'], hasArticle: true,
     l10n: {
       ko: {
         name: '뱀', keywords: ['재물', '태몽', '변화', '허물벗기'],
@@ -380,7 +380,7 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
     },
   },
   {
-    id: 'chased', emoji: '🏃', category: 'motion', related: ['falling', 'fire'],
+    id: 'chased', emoji: '🏃', category: 'motion', related: ['falling', 'fire', 'exam'],
     l10n: {
       ko: {
         name: '쫓기는 꿈', keywords: ['회피', '압박', '마감', '두려움'],
@@ -445,7 +445,7 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
     },
   },
   {
-    id: 'death', emoji: '⚰️', category: 'life', related: ['teeth', 'flying'],
+    id: 'death', emoji: '⚰️', category: 'life', related: ['teeth', 'flying', 'baby'],
     l10n: {
       ko: {
         name: '죽음', keywords: ['전환', '끝맺음', '역몽', '두려움'],
@@ -570,6 +570,526 @@ export const DREAM_SYMBOLS: DreamSymbol[] = [
           { when: 'Vuelas alto y libre', reads: 'Se tomaba como ambición que se despliega y buenas nuevas.' },
           { when: 'Vuelas pero te hundes', reads: 'Leído como desajuste entre intención y circunstancias.' },
           { when: 'Quieres volar y no puedes', reads: 'Se tomaba como una situación bloqueada.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'house', emoji: '🏠', category: 'place', related: ['money', 'lost'],
+    l10n: {
+      ko: {
+        name: '집', keywords: ['기반', '가정', '자기 자신', '상태'],
+        traditional: '해몽서에서 집은 나 자신과 가정의 형편으로 읽혔습니다. 집의 상태가 곧 그 사람의 형편이라는 유비입니다.',
+        psych: '집은 꿈에 자주 나오는 배경입니다. 특정한 뜻보다 그 집이 어디였는지(어릴 적 집인지 지금 집인지)가 더 많은 것을 말해 줍니다.',
+        scenes: [
+          { when: '넓고 밝은 집에 있다', reads: '형편이 펴진다고 보았습니다.' },
+          { when: '집이 무너지거나 새어 든다', reads: '기반이 흔들린다는 경고로 읽혔습니다.' },
+          { when: '모르는 방을 발견한다', reads: '몰랐던 몫이 생긴다고 보았습니다.' },
+        ],
+      },
+      en: {
+        name: 'House', keywords: ['foundation', 'family', 'the self', 'condition'],
+        traditional: 'Manuals read the house as yourself and the state of your household — the condition of the house standing in for the condition of the person.',
+        psych: 'Houses are a frequent dream setting. Which house it was — childhood or current — usually tells you more than any fixed meaning.',
+        scenes: [
+          { when: 'You are in a large, bright house', reads: 'Taken as circumstances opening up.' },
+          { when: 'The house collapses or leaks', reads: 'Read as a warning that your footing is unsteady.' },
+          { when: 'You find a room you did not know', reads: 'Taken as a share you did not know you had.' },
+        ],
+      },
+      ja: {
+        name: '家', keywords: ['基盤', '家庭', '自分自身', '状態'],
+        traditional: '夢占書では家を自分自身と家庭の有様として読みました。家の状態がその人の状態だという類比です。',
+        psych: '家は夢によく出る舞台です。固定した意味より、それがどの家だったか（幼い頃の家か今の家か）のほうが多くを語ります。',
+        scenes: [
+          { when: '広く明るい家にいる', reads: '暮らし向きが開けると見ました。' },
+          { when: '家が崩れる・雨漏りする', reads: '基盤が揺らぐ警告と読まれました。' },
+          { when: '知らない部屋を見つける', reads: '知らなかった分け前ができると見ました。' },
+        ],
+      },
+      zh: {
+        name: '房子', keywords: ['根基', '家庭', '自我', '状态'],
+        traditional: '解梦书把房子读作自身与家庭的状况——屋况即人况的类比。',
+        psych: '房子是梦中常见的场景。比起固定含义，那是哪一处房子（童年的还是现在的）往往说明更多。',
+        scenes: [
+          { when: '身处宽敞明亮的房子', reads: '视为境况转好。' },
+          { when: '房屋倒塌或漏雨', reads: '读作根基不稳的警示。' },
+          { when: '发现从不知道的房间', reads: '视为多出一份未知的份额。' },
+        ],
+      },
+      fr: {
+        name: 'La maison', keywords: ['fondation', 'famille', 'le soi', 'état'],
+        traditional: "Les manuels lisent la maison comme vous-même et l'état de votre foyer : l'état de la maison vaut pour celui de la personne.",
+        psych: "La maison est un décor fréquent. Laquelle c'était — celle de l'enfance ou celle d'aujourd'hui — en dit souvent plus qu'un sens fixe.",
+        scenes: [
+          { when: 'Vous êtes dans une maison vaste et claire', reads: 'Tenu pour une situation qui se dégage.' },
+          { when: "La maison s'effondre ou prend l'eau", reads: 'Lu comme un avertissement sur votre assise.' },
+          { when: 'Vous découvrez une pièce inconnue', reads: 'Tenu pour une part que vous ignoriez avoir.' },
+        ],
+      },
+      es: {
+        name: 'La casa', keywords: ['base', 'familia', 'el yo', 'estado'],
+        traditional: 'Los manuales leen la casa como uno mismo y el estado del hogar: el estado de la casa vale por el de la persona.',
+        psych: 'La casa es un escenario frecuente. Cuál era —la de la infancia o la actual— suele decir más que cualquier sentido fijo.',
+        scenes: [
+          { when: 'Estás en una casa amplia y luminosa', reads: 'Se tomaba como circunstancias que se abren.' },
+          { when: 'La casa se derrumba o gotea', reads: 'Leído como aviso sobre tu base.' },
+          { when: 'Encuentras una habitación desconocida', reads: 'Se tomaba como una parte que no sabías que tenías.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'money', emoji: '💰', category: 'place', related: ['house', 'pig', 'blood'],
+    l10n: {
+      ko: {
+        name: '돈', keywords: ['재물', '가치', '역몽', '불안'],
+        traditional: '해몽에서 돈은 자주 역몽으로 읽혔습니다. 돈을 줍는 꿈은 오히려 나가는 일로, 잃는 꿈은 드는 일로 보는 관습이 있습니다.',
+        psych: '돈 꿈이 실제 수입과 이어진다는 근거는 없습니다. 다만 돈 걱정이 큰 시기에 보고가 늘어나는 것은 연속성 가설로 설명됩니다.',
+        scenes: [
+          { when: '돈을 줍는다', reads: '역몽으로 보아 지출을 조심하라고 읽혔습니다.' },
+          { when: '돈을 잃어버린다', reads: '오히려 들어올 일이 있다고 보았습니다.' },
+          { when: '돈을 세고 또 센다', reads: '마음이 놓이지 않는 상태로 읽혔습니다.' },
+        ],
+      },
+      en: {
+        name: 'Money', keywords: ['fortune', 'value', 'reverse dream', 'worry'],
+        traditional: 'Money is often read in reverse: picking money up is taken as money going out, losing it as money coming in.',
+        psych: 'No evidence links money dreams to actual income. That reports rise when money worries are heavy fits the continuity hypothesis.',
+        scenes: [
+          { when: 'You pick up money', reads: 'Read in reverse as a warning to watch spending.' },
+          { when: 'You lose money', reads: 'Taken as something coming in instead.' },
+          { when: 'You count it over and over', reads: 'Read as a mind that will not settle.' },
+        ],
+      },
+      ja: {
+        name: 'お金', keywords: ['財', '価値', '逆夢', '不安'],
+        traditional: '夢解きでお金はしばしば逆夢として読まれます。拾う夢は出ていく事、失う夢は入る事と見る慣習があります。',
+        psych: 'お金の夢が実際の収入と結びつく根拠はありません。金銭の心配が重い時期に報告が増えるのは連続性仮説で説明されます。',
+        scenes: [
+          { when: 'お金を拾う', reads: '逆夢と見て出費に気をつけよと読まれました。' },
+          { when: 'お金を失くす', reads: 'むしろ入る事があると見ました。' },
+          { when: '何度も数え直す', reads: '心が落ち着かない状態と読まれました。' },
+        ],
+      },
+      zh: {
+        name: '钱', keywords: ['财运', '价值', '反梦', '忧虑'],
+        traditional: '解梦中钱常作反梦读：拾钱视为破财，丢钱反视为进财。',
+        psych: '没有证据表明梦见钱与实际收入相关。金钱压力大时报告增多，可用连续性假说解释。',
+        scenes: [
+          { when: '捡到钱', reads: '作反梦读，提醒留心开支。' },
+          { when: '丢了钱', reads: '反而视为有进项。' },
+          { when: '反复数钱', reads: '读作心神难安。' },
+        ],
+      },
+      fr: {
+        name: "L'argent", keywords: ['fortune', 'valeur', 'rêve inversé', 'souci'],
+        traditional: "L'argent se lit souvent à l'envers : le ramasser vaut pour de l'argent qui sort, le perdre pour de l'argent qui entre.",
+        psych: "Rien ne relie les rêves d'argent aux revenus réels. Que les récits augmentent en période de soucis d'argent relève de l'hypothèse de continuité.",
+        scenes: [
+          { when: "Vous ramassez de l'argent", reads: 'Lu à rebours : surveillez vos dépenses.' },
+          { when: "Vous perdez de l'argent", reads: "Tenu au contraire pour une rentrée." },
+          { when: 'Vous le recomptez sans fin', reads: "Lu comme un esprit qui ne se pose pas." },
+        ],
+      },
+      es: {
+        name: 'El dinero', keywords: ['fortuna', 'valor', 'sueño inverso', 'preocupación'],
+        traditional: 'El dinero suele leerse al revés: recogerlo vale por dinero que sale; perderlo, por dinero que entra.',
+        psych: 'Nada liga los sueños de dinero con los ingresos reales. Que los relatos aumenten en épocas de apuros encaja con la hipótesis de continuidad.',
+        scenes: [
+          { when: 'Recoges dinero', reads: 'Leído al revés: vigila los gastos.' },
+          { when: 'Pierdes dinero', reads: 'Se tomaba, al contrario, como un ingreso.' },
+          { when: 'Lo cuentas una y otra vez', reads: 'Leído como una mente que no se asienta.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'pig', emoji: '🐷', category: 'creature', related: ['money', 'snake'],
+    l10n: {
+      ko: {
+        name: '돼지', keywords: ['재물', '복', '태몽', '풍요'],
+        traditional: '한국에서 돼지꿈은 재물의 대표 상징입니다. 돼지를 안거나 집에 들이는 꿈을 특히 좋게 보았습니다.',
+        psych: '돼지꿈과 실제 재물이 이어진다는 근거는 없습니다. 이 상징이 유독 강한 것은 한국 문화 안에서의 위치 때문입니다.',
+        scenes: [
+          { when: '돼지를 안는다', reads: '재물이 들어온다고 보았습니다.' },
+          { when: '돼지가 집에 들어온다', reads: '복이 들어온다고 읽혔습니다.' },
+          { when: '돼지를 놓친다', reads: '기회를 흘린다는 경고로 보았습니다.' },
+        ],
+      },
+      en: {
+        name: 'Pig', keywords: ['fortune', 'luck', 'conception dream', 'abundance'],
+        traditional: 'In Korea the pig is the headline symbol of fortune. Holding one, or letting one into the house, was read especially well.',
+        psych: 'No evidence connects pig dreams to actual gain. The symbol is unusually strong because of its place in Korean culture, not because of the animal.',
+        scenes: [
+          { when: 'You hold a pig', reads: 'Taken as fortune coming in.' },
+          { when: 'A pig enters the house', reads: 'Read as good luck arriving.' },
+          { when: 'A pig gets away from you', reads: 'Taken as letting an opportunity slip.' },
+        ],
+      },
+      ja: {
+        name: '豚', keywords: ['財', '福', '胎夢', '豊かさ'],
+        traditional: '韓国では豚の夢が財の代表的な象徴です。豚を抱く、家に入れる夢を特に良いと見ました。',
+        psych: '豚の夢と実際の利得が結びつく根拠はありません。この象徴が際立って強いのは韓国文化の中での位置によります。',
+        scenes: [
+          { when: '豚を抱く', reads: '財が入ると見ました。' },
+          { when: '豚が家に入ってくる', reads: '福が入ると読まれました。' },
+          { when: '豚を逃がす', reads: '機会を逃す警告と見ました。' },
+        ],
+      },
+      zh: {
+        name: '猪', keywords: ['财运', '福气', '胎梦', '丰饶'],
+        traditional: '在朝鲜半岛，猪梦是财运的头号象征。抱猪、猪入门的梦尤被视为吉。',
+        psych: '没有证据把猪梦与实际获利相连。这个象征之所以格外有力，来自它在韩国文化中的位置，而非动物本身。',
+        scenes: [
+          { when: '抱住猪', reads: '视为财运临门。' },
+          { when: '猪进家门', reads: '读作福气进门。' },
+          { when: '让猪跑掉', reads: '视为错失机会的警示。' },
+        ],
+      },
+      fr: {
+        name: 'Le cochon', keywords: ['fortune', 'chance', 'rêve de conception', 'abondance'],
+        traditional: "En Corée, le cochon est le symbole phare de la fortune. Le tenir, ou le faire entrer chez soi, se lisait particulièrement bien.",
+        psych: "Rien ne relie les rêves de cochon à un gain réel. Le symbole est si fort à cause de sa place dans la culture coréenne, non de l'animal.",
+        scenes: [
+          { when: 'Vous tenez un cochon', reads: 'Tenu pour une fortune qui arrive.' },
+          { when: 'Un cochon entre dans la maison', reads: 'Lu comme une chance qui vient.' },
+          { when: "Un cochon vous échappe", reads: 'Tenu pour une occasion laissée filer.' },
+        ],
+      },
+      es: {
+        name: 'El cerdo', keywords: ['fortuna', 'suerte', 'sueño de concepción', 'abundancia'],
+        traditional: 'En Corea el cerdo es el símbolo estrella de la fortuna. Sostenerlo, o dejarlo entrar en casa, se leía especialmente bien.',
+        psych: 'Nada conecta los sueños de cerdo con una ganancia real. El símbolo es tan fuerte por su lugar en la cultura coreana, no por el animal.',
+        scenes: [
+          { when: 'Sostienes un cerdo', reads: 'Se tomaba como fortuna que llega.' },
+          { when: 'Un cerdo entra en casa', reads: 'Leído como suerte que viene.' },
+          { when: 'Se te escapa un cerdo', reads: 'Se tomaba como dejar escapar una oportunidad.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'baby', emoji: '👶', category: 'life', related: ['snake', 'death'],
+    l10n: {
+      ko: {
+        name: '아기', keywords: ['태몽', '시작', '돌봄', '책임'],
+        traditional: '아기 꿈은 태몽으로 자주 읽혔고, 그 밖에는 새로 시작하는 일이나 돌봐야 할 것이 생긴다는 뜻으로 보았습니다.',
+        psych: '태몽의 힘은 적중률이 아니라 가족이 아이를 맞이하는 이야기를 만드는 데 있습니다. 그 기능은 꿈이 맞든 아니든 작동합니다.',
+        scenes: [
+          { when: '아기를 안는다', reads: '새로 맡을 일이 생긴다고 보았습니다.' },
+          { when: '아기가 웃는다', reads: '좋은 시작으로 읽혔습니다.' },
+          { when: '아기가 우는데 달랠 수 없다', reads: '감당하기 벅찬 책임으로 보았습니다.' },
+        ],
+      },
+      en: {
+        name: 'Baby', keywords: ['conception dream', 'beginning', 'care', 'responsibility'],
+        traditional: 'Baby dreams were often read as conception dreams; otherwise as something new starting, or something arriving that needs care.',
+        psych: 'The power of a conception dream is not accuracy but the story it gives a family for welcoming a child. That works whether or not the dream is right.',
+        scenes: [
+          { when: 'You hold a baby', reads: 'Taken as a new charge coming to you.' },
+          { when: 'The baby smiles', reads: 'Read as a good beginning.' },
+          { when: 'The baby cries and will not settle', reads: 'Taken as a responsibility beyond your capacity.' },
+        ],
+      },
+      ja: {
+        name: '赤ん坊', keywords: ['胎夢', '始まり', '世話', '責任'],
+        traditional: '赤ん坊の夢は胎夢としてよく読まれ、それ以外では新しく始まる事や世話すべきものができる意と見ました。',
+        psych: '胎夢の力は的中率ではなく、家族が子を迎える物語を作る点にあります。その働きは夢が当たるかどうかと関係なく生じます。',
+        scenes: [
+          { when: '赤ん坊を抱く', reads: '新たに引き受ける事ができると見ました。' },
+          { when: '赤ん坊が笑う', reads: '良い始まりと読まれました。' },
+          { when: '泣き止ませられない', reads: '抱えきれない責任と見ました。' },
+        ],
+      },
+      zh: {
+        name: '婴儿', keywords: ['胎梦', '开始', '照料', '责任'],
+        traditional: '婴儿之梦常读作胎梦；此外也视为新事将起，或有需要照料之物到来。',
+        psych: '胎梦的力量不在准不准，而在于它为家庭迎接孩子提供了一段故事。这一功能与梦是否应验无关。',
+        scenes: [
+          { when: '抱着婴儿', reads: '视为将有新的担子。' },
+          { when: '婴儿在笑', reads: '读作好的开端。' },
+          { when: '婴儿哭闹哄不住', reads: '视为力不能及的责任。' },
+        ],
+      },
+      fr: {
+        name: 'Le bébé', keywords: ['rêve de conception', 'commencement', 'soin', 'responsabilité'],
+        traditional: "Les rêves de bébé se lisaient souvent comme rêves de conception ; sinon comme un commencement, ou quelque chose qui arrive et demande des soins.",
+        psych: "La force d'un rêve de conception n'est pas son exactitude mais le récit qu'il donne à une famille pour accueillir un enfant. Cela opère qu'il dise vrai ou non.",
+        scenes: [
+          { when: 'Vous tenez un bébé', reads: 'Tenu pour une charge nouvelle qui vous revient.' },
+          { when: 'Le bébé sourit', reads: 'Lu comme un bon commencement.' },
+          { when: 'Le bébé pleure sans se calmer', reads: 'Tenu pour une responsabilité au-dessus de vos forces.' },
+        ],
+      },
+      es: {
+        name: 'El bebé', keywords: ['sueño de concepción', 'comienzo', 'cuidado', 'responsabilidad'],
+        traditional: 'Los sueños de bebé se leían a menudo como sueños de concepción; si no, como algo que empieza o que llega y pide cuidado.',
+        psych: 'La fuerza del sueño de concepción no está en acertar, sino en el relato que da a una familia para recibir a un hijo. Eso funciona acierte o no.',
+        scenes: [
+          { when: 'Sostienes a un bebé', reads: 'Se tomaba como un nuevo encargo que te llega.' },
+          { when: 'El bebé sonríe', reads: 'Leído como un buen comienzo.' },
+          { when: 'El bebé llora y no se calma', reads: 'Se tomaba como una responsabilidad que te supera.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'exam', emoji: '📝', category: 'life', related: ['chased', 'lost', 'naked'],
+    l10n: {
+      ko: {
+        name: '시험', keywords: ['평가', '준비 부족', '압박', '오래된 기억'],
+        traditional: '해몽서는 시험 꿈을 앞둔 관문과 남의 평가로 읽었습니다.',
+        psych: '학교를 떠난 지 오래인 사람도 자주 꾸는 대표적인 꿈입니다. 지금 평가받는다고 느끼는 상황이 옛 장면을 빌려 나타나는 것으로 봅니다.',
+        scenes: [
+          { when: '준비 없이 시험장에 앉는다', reads: '준비 부족에 대한 경고로 읽혔습니다.' },
+          { when: '시험지가 백지다', reads: '내놓을 것이 없다는 압박으로 보았습니다.' },
+          { when: '시간이 모자란다', reads: '쫓기는 일정과 겹쳐 읽혔습니다.' },
+        ],
+      },
+      en: {
+        name: 'Exam', keywords: ['assessment', 'unprepared', 'pressure', 'old memory'],
+        traditional: 'Manuals read the exam dream as a gate ahead and the judgement of others.',
+        psych: 'A classic dream reported by people who left school decades ago. It is treated as a present feeling of being judged borrowing an old scene.',
+        scenes: [
+          { when: 'You sit down unprepared', reads: 'Read as a warning about being unready.' },
+          { when: 'The paper is blank', reads: 'Taken as the pressure of having nothing to show.' },
+          { when: 'You run out of time', reads: 'Read alongside a schedule that is chasing you.' },
+        ],
+      },
+      ja: {
+        name: '試験', keywords: ['評価', '準備不足', '重圧', '古い記憶'],
+        traditional: '夢占書は試験の夢を、前に控えた関門と他者の評価として読みました。',
+        psych: '学校を離れて久しい人もよく見る代表的な夢です。いま評価されていると感じる状況が、古い場面を借りて現れると見ます。',
+        scenes: [
+          { when: '準備なしで席に着く', reads: '準備不足への警告と読まれました。' },
+          { when: '答案が白紙', reads: '出せるものが無い重圧と見ました。' },
+          { when: '時間が足りない', reads: '追われる日程と重ねて読まれました。' },
+        ],
+      },
+      zh: {
+        name: '考试', keywords: ['评价', '准备不足', '压力', '旧记忆'],
+        traditional: '解梦书把考试之梦读作眼前的关口与他人的评断。',
+        psych: '离开学校多年的人也常做的典型梦。它被视为当下"被评价"之感借用了旧场景。',
+        scenes: [
+          { when: '毫无准备地坐进考场', reads: '读作准备不足的警示。' },
+          { when: '试卷一片空白', reads: '视为拿不出东西的压力。' },
+          { when: '时间不够用', reads: '与被追赶的日程叠着读。' },
+        ],
+      },
+      fr: {
+        name: "L'examen", keywords: ['évaluation', 'impréparation', 'pression', 'vieux souvenir'],
+        traditional: "Les manuels lisent le rêve d'examen comme une porte à franchir et le jugement d'autrui.",
+        psych: "Un classique, rapporté par des gens sortis de l'école depuis des décennies. On y voit un sentiment présent d'être jugé qui emprunte une vieille scène.",
+        scenes: [
+          { when: "Vous vous asseyez sans avoir révisé", reads: "Lu comme un avertissement sur votre impréparation." },
+          { when: 'La copie est blanche', reads: "Tenu pour la pression de n'avoir rien à montrer." },
+          { when: 'Le temps vous manque', reads: 'Lu avec un agenda qui vous poursuit.' },
+        ],
+      },
+      es: {
+        name: 'El examen', keywords: ['evaluación', 'falta de preparación', 'presión', 'recuerdo antiguo'],
+        traditional: 'Los manuales leen el sueño de examen como una puerta por pasar y el juicio ajeno.',
+        psych: 'Un clásico que reportan personas que dejaron la escuela hace décadas. Se ve como una sensación actual de ser juzgado que toma prestada una escena vieja.',
+        scenes: [
+          { when: 'Te sientas sin haber estudiado', reads: 'Leído como aviso sobre tu falta de preparación.' },
+          { when: 'La hoja está en blanco', reads: 'Se tomaba como la presión de no tener qué mostrar.' },
+          { when: 'Se te acaba el tiempo', reads: 'Leído junto a una agenda que te persigue.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'lost', emoji: '🧭', category: 'motion', related: ['house', 'exam'],
+    l10n: {
+      ko: {
+        name: '길 잃음', keywords: ['방향', '선택', '지연', '낯섦'],
+        traditional: '해몽서는 길을 잃는 꿈을 갈피를 못 잡는 형편과 늦어지는 일로 읽었습니다.',
+        psych: '목적지에 닿지 못하는 꿈은 자주 보고되는 형태입니다. 어디로 가려 했는지가 그 사람의 관심사를 드러냅니다.',
+        scenes: [
+          { when: '아는 길인데 낯설다', reads: '익숙하던 일이 달라졌다고 보았습니다.' },
+          { when: '가도 가도 도착하지 못한다', reads: '지연되는 일로 읽혔습니다.' },
+          { when: '길을 물어도 통하지 않는다', reads: '도움을 청하기 어려운 처지로 보았습니다.' },
+        ],
+      },
+      en: {
+        name: 'Getting lost', keywords: ['direction', 'choice', 'delay', 'unfamiliarity'],
+        traditional: 'Manuals read losing your way as circumstances you cannot get a grip on, and as things running late.',
+        psych: 'Never arriving is a frequently reported dream shape. Where you were trying to get to says more about you than the being-lost does.',
+        scenes: [
+          { when: 'A familiar road feels strange', reads: 'Taken as something familiar having changed.' },
+          { when: 'You walk on and never arrive', reads: 'Read as a matter being delayed.' },
+          { when: 'You ask directions and are not understood', reads: 'Taken as being in a place where help is hard to reach.' },
+        ],
+      },
+      ja: {
+        name: '道に迷う', keywords: ['方向', '選択', '遅れ', '不慣れ'],
+        traditional: '夢占書は道に迷う夢を、見当がつかない状況と遅れる物事として読みました。',
+        psych: '目的地に着けない夢はよく報告される型です。どこへ行こうとしていたかが、その人の関心を映します。',
+        scenes: [
+          { when: '知っている道なのに見知らぬ', reads: '慣れた事が変わったと見ました。' },
+          { when: '行っても行っても着かない', reads: '遅れる物事と読まれました。' },
+          { when: '道を尋ねても通じない', reads: '助けを求めにくい立場と見ました。' },
+        ],
+      },
+      zh: {
+        name: '迷路', keywords: ['方向', '选择', '延迟', '陌生'],
+        traditional: '解梦书把迷路读作摸不着头绪的处境与拖延之事。',
+        psych: '"到不了目的地"是常见的梦型。你本想去哪里，比"迷路"本身更能说明你的关切。',
+        scenes: [
+          { when: '熟路却觉陌生', reads: '视为熟悉之事已然改变。' },
+          { when: '走了又走仍到不了', reads: '读作事情被拖延。' },
+          { when: '问路却说不通', reads: '视为难以求助的处境。' },
+        ],
+      },
+      fr: {
+        name: 'Se perdre', keywords: ['direction', 'choix', 'retard', 'étrangeté'],
+        traditional: "Les manuels lisent l'égarement comme une situation qu'on ne maîtrise pas et des affaires qui traînent.",
+        psych: "Ne jamais arriver est une forme fréquemment rapportée. Où vous vouliez aller en dit plus que le fait d'être perdu.",
+        scenes: [
+          { when: 'Une route connue devient étrange', reads: "Tenu pour du familier qui a changé." },
+          { when: "Vous marchez sans jamais arriver", reads: 'Lu comme une affaire qui prend du retard.' },
+          { when: "Vous demandez votre chemin sans être compris", reads: "Tenu pour un endroit où l'aide est hors de portée." },
+        ],
+      },
+      es: {
+        name: 'Perderse', keywords: ['dirección', 'elección', 'retraso', 'extrañeza'],
+        traditional: 'Los manuales leen perderse como una situación que no logras asir y asuntos que se demoran.',
+        psych: 'No llegar nunca es una forma muy reportada. Adónde ibas dice más de ti que el hecho de estar perdido.',
+        scenes: [
+          { when: 'Un camino conocido se vuelve extraño', reads: 'Se tomaba como algo familiar que cambió.' },
+          { when: 'Andas y andas sin llegar', reads: 'Leído como un asunto que se retrasa.' },
+          { when: 'Preguntas y no te entienden', reads: 'Se tomaba como estar donde la ayuda no alcanza.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'naked', emoji: '🫥', category: 'body', related: ['teeth', 'exam'],
+    l10n: {
+      ko: {
+        name: '알몸', keywords: ['수치', '드러남', '준비 부족', '평가'],
+        traditional: '해몽서는 남 앞에서 벗은 꿈을 감추던 것이 드러나는 일로 읽었습니다.',
+        psych: '문화를 가리지 않고 보고되는 꿈입니다. 특징은 꿈속 남들이 대개 무심하다는 점인데, 수치는 보는 쪽이 아니라 꾸는 쪽에서 나옵니다.',
+        scenes: [
+          { when: '남들 앞에서 벗고 있다', reads: '감추던 것이 드러난다고 보았습니다.' },
+          { when: '아무도 신경 쓰지 않는다', reads: '걱정이 실제보다 크다는 뜻으로 읽혔습니다.' },
+          { when: '가릴 것을 찾는다', reads: '준비가 덜 됐다는 신호로 보았습니다.' },
+        ],
+      },
+      en: {
+        name: 'Being naked', keywords: ['shame', 'exposure', 'unprepared', 'judgement'],
+        traditional: 'Manuals read being undressed in public as something hidden coming to light.',
+        psych: 'Reported across cultures. What is telling is that the onlookers are usually indifferent — the shame comes from the dreamer, not the crowd.',
+        scenes: [
+          { when: 'You are undressed in front of others', reads: 'Taken as something concealed being revealed.' },
+          { when: 'Nobody seems to notice', reads: 'Read as the worry being larger than the reality.' },
+          { when: 'You search for something to cover up', reads: 'Taken as a sign of not being ready.' },
+        ],
+      },
+      ja: {
+        name: '裸', keywords: ['羞恥', '露見', '準備不足', '評価'],
+        traditional: '夢占書は人前で裸の夢を、隠していたものが露わになる事として読みました。',
+        psych: '文化を問わず報告される夢です。特徴は夢の中の他人がたいてい無関心なことで、羞恥は見る側でなく見る本人から出ています。',
+        scenes: [
+          { when: '人前で裸でいる', reads: '隠していたものが露わになると見ました。' },
+          { when: '誰も気にしていない', reads: '心配が実際より大きいと読まれました。' },
+          { when: '隠すものを探す', reads: '準備が足りない印と見ました。' },
+        ],
+      },
+      zh: {
+        name: '赤身', keywords: ['羞耻', '暴露', '准备不足', '评价'],
+        traditional: '解梦书把当众赤身之梦读作所藏之事被揭。',
+        psych: '这是跨文化都会报告的梦。值得注意的是梦里旁人多半毫不在意——羞耻来自做梦者，而非人群。',
+        scenes: [
+          { when: '在人前赤身', reads: '视为所藏之事被揭。' },
+          { when: '没人在意', reads: '读作忧虑大过实情。' },
+          { when: '四处找东西遮挡', reads: '视为尚未准备好的信号。' },
+        ],
+      },
+      fr: {
+        name: 'Être nu', keywords: ['honte', 'exposition', 'impréparation', 'jugement'],
+        traditional: "Les manuels lisent la nudité en public comme une chose cachée qui vient au jour.",
+        psych: "Rapporté dans toutes les cultures. Fait notable : les témoins y sont le plus souvent indifférents — la honte vient du rêveur, pas de la foule.",
+        scenes: [
+          { when: 'Vous êtes nu devant les autres', reads: 'Tenu pour du dissimulé qui se révèle.' },
+          { when: "Personne n'y prête attention", reads: "Lu comme un souci plus grand que la réalité." },
+          { when: 'Vous cherchez de quoi vous couvrir', reads: "Tenu pour un signe que vous n'êtes pas prêt." },
+        ],
+      },
+      es: {
+        name: 'Estar desnudo', keywords: ['vergüenza', 'exposición', 'falta de preparación', 'juicio'],
+        traditional: 'Los manuales leen la desnudez en público como algo oculto que sale a la luz.',
+        psych: 'Se reporta en todas las culturas. Lo llamativo es que los presentes suelen ser indiferentes: la vergüenza viene del soñante, no del público.',
+        scenes: [
+          { when: 'Estás desnudo ante otros', reads: 'Se tomaba como lo escondido que se revela.' },
+          { when: 'Nadie parece notarlo', reads: 'Leído como una preocupación mayor que la realidad.' },
+          { when: 'Buscas con qué cubrirte', reads: 'Se tomaba como señal de no estar listo.' },
+        ],
+      },
+    },
+  },
+  {
+    id: 'blood', emoji: '🩸', category: 'body', related: ['teeth', 'money'],
+    l10n: {
+      ko: {
+        name: '피', keywords: ['재물', '생명력', '손상', '역몽'],
+        traditional: '한국 해몽에서 피는 흔히 재물로 읽혔습니다. 피를 보는 꿈을 나쁘게만 보지 않는 것이 이 전통의 특징입니다.',
+        psych: '피는 강한 정서를 부르는 이미지라 잘 기억됩니다. 몸 어딘가가 아픈 상태가 꿈에 섞여 드는 경우도 있습니다.',
+        scenes: [
+          { when: '피를 많이 본다', reads: '재물이 든다고 보았습니다.' },
+          { when: '피가 옷에 묻는다', reads: '뜻밖의 이득으로 읽히기도 했습니다.' },
+          { when: '피가 멎지 않는다', reads: '기운이 새어 나가는 상태로 보았습니다.' },
+        ],
+      },
+      en: {
+        name: 'Blood', keywords: ['fortune', 'vitality', 'injury', 'reverse dream'],
+        traditional: 'Korean practice often reads blood as fortune. That the sight of blood is not taken as simply bad is distinctive to this tradition.',
+        psych: 'Blood is a high-affect image and is well remembered. Pain somewhere in the body can also bleed into the dream.',
+        scenes: [
+          { when: 'You see a great deal of blood', reads: 'Taken as fortune coming in.' },
+          { when: 'Blood stains your clothes', reads: 'Sometimes read as an unexpected gain.' },
+          { when: 'The bleeding will not stop', reads: 'Taken as vitality draining away.' },
+        ],
+      },
+      ja: {
+        name: '血', keywords: ['財', '生命力', '損傷', '逆夢'],
+        traditional: '韓国の夢解きでは血をしばしば財として読みます。血を見る夢を悪いとだけ見ないのがこの伝統の特徴です。',
+        psych: '血は強い情動を呼ぶ像で記憶に残りやすいものです。体のどこかの痛みが夢に混じることもあります。',
+        scenes: [
+          { when: '血をたくさん見る', reads: '財が入ると見ました。' },
+          { when: '血が服につく', reads: '思わぬ利得と読まれることもありました。' },
+          { when: '血が止まらない', reads: '気力が漏れ出る状態と見ました。' },
+        ],
+      },
+      zh: {
+        name: '血', keywords: ['财运', '生命力', '损伤', '反梦'],
+        traditional: '朝鲜半岛的解梦常把血读作财。见血之梦不被一概视为凶，是这一传统的特点。',
+        psych: '血是情绪强度高的意象，容易被记住。身体某处的疼痛也可能混入梦境。',
+        scenes: [
+          { when: '见到大量的血', reads: '视为财运进门。' },
+          { when: '血沾到衣服上', reads: '有时读作意外之得。' },
+          { when: '血止不住', reads: '视为气力外泄之状。' },
+        ],
+      },
+      fr: {
+        name: 'Le sang', keywords: ['fortune', 'vitalité', 'blessure', 'rêve inversé'],
+        traditional: "L'usage coréen lit souvent le sang comme fortune. Que la vue du sang ne soit pas tenue pour simplement néfaste est propre à cette tradition.",
+        psych: "Le sang est une image à forte charge, bien mémorisée. Une douleur quelque part dans le corps peut aussi s'infiltrer dans le rêve.",
+        scenes: [
+          { when: 'Vous voyez beaucoup de sang', reads: 'Tenu pour une fortune qui arrive.' },
+          { when: 'Du sang tache vos vêtements', reads: 'Parfois lu comme un gain inattendu.' },
+          { when: "Le saignement ne s'arrête pas", reads: 'Tenu pour une vitalité qui se vide.' },
+        ],
+      },
+      es: {
+        name: 'La sangre', keywords: ['fortuna', 'vitalidad', 'herida', 'sueño inverso'],
+        traditional: 'La práctica coreana suele leer la sangre como fortuna. Que ver sangre no se tome como simplemente malo distingue a esta tradición.',
+        psych: 'La sangre es una imagen de alta carga y se recuerda bien. Un dolor en alguna parte del cuerpo también puede colarse en el sueño.',
+        scenes: [
+          { when: 'Ves mucha sangre', reads: 'Se tomaba como fortuna que llega.' },
+          { when: 'La sangre mancha tu ropa', reads: 'A veces leído como una ganancia inesperada.' },
+          { when: 'La hemorragia no para', reads: 'Se tomaba como vitalidad que se escapa.' },
         ],
       },
     },
