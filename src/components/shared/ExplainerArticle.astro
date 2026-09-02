@@ -9,10 +9,12 @@ import type { Locale } from '../../i18n';
 interface Props {
   entry: CollectionEntry<'explainers'>;
   locale: Locale;
-  /** 같은 주제의 테스트 경로. 로케일 접두사 없이 준다. */
+  /** 이어지는 도구 경로. 로케일 접두사 없이 준다. */
   testPath: string;
+  /** CTA 문구 종류. 개념 해설이 테스트가 아닌 도구로 이어질 때 쓴다. */
+  ctaKind?: 'test' | 'saju';
 }
-const { entry, locale, testPath } = Astro.props;
+const { entry, locale, testPath, ctaKind = 'test' } = Astro.props;
 const { Content } = await render(entry);
 
 const UI: Record<Locale, { cta: string; ctaNote: string; updated: string }> = {
@@ -23,7 +25,16 @@ const UI: Record<Locale, { cta: string; ctaNote: string; updated: string }> = {
   fr: { cta: 'Faire le test', ctaNote: 'Appliquez ce que vous venez de lire à vos propres réponses.', updated: 'Dernière révision' },
   es: { cta: 'Hacer el test', ctaNote: 'Aplica lo que acabas de leer a tus propias respuestas.', updated: 'Última revisión' },
 };
-const ui = UI[locale] ?? UI.en;
+const SAJU_UI: Record<Locale, { cta: string; ctaNote: string }> = {
+  ko: { cta: '내 사주 월주 확인하기', ctaNote: '글에서 본 절입 경계가 내 사주에 어떻게 적용되는지 봅니다.' },
+  en: { cta: 'Check my month pillar', ctaNote: 'See how the entry-moment boundary applies to your own chart.' },
+  ja: { cta: '自分の月柱を確認する', ctaNote: '記事で見た節入りの境界が自分の命式にどう効くかを見ます。' },
+  zh: { cta: '查看我的月柱', ctaNote: '看看文中的交节分界如何落到自己的八字上。' },
+  fr: { cta: 'Voir mon pilier du mois', ctaNote: "Voyez comment la limite d'entrée s'applique à votre propre thème." },
+  es: { cta: 'Ver mi pilar del mes', ctaNote: 'Comprueba cómo se aplica el instante de entrada a tu propia carta.' },
+};
+const base = UI[locale] ?? UI.en;
+const ui = ctaKind === 'saju' ? { ...base, ...(SAJU_UI[locale] ?? SAJU_UI.en) } : base;
 const updated = entry.data.updated.toISOString().slice(0, 10);
 ---
 
