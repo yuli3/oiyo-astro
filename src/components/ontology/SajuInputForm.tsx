@@ -282,7 +282,7 @@ export function SajuInputForm({
         </div>
 
         <button
-          className="w-full py-5 bg-primary text-primary-foreground rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] md:text-xs hover:bg-primary-hover transition-all shadow-xl shadow-green-600/20 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed mt-10"
+          className="w-full py-5 bg-primary text-primary-foreground rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] md:text-xs hover:bg-primary-strong transition-all shadow-xl shadow-green-600/20 active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed mt-10"
           disabled={isSubmitting}
         >
           {isSubmitting ? "..." : t("beginJourney")}

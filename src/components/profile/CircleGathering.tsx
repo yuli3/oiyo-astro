@@ -232,7 +232,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
 
     {snapshot && <section className="mt-8 rounded-[2rem] border border-lime-200 bg-[#f7f8ed] p-4 sm:p-7">
       <div className="flex gap-2 overflow-x-auto pb-1">{(Object.keys(LENS[lang]) as CompatibilityLensId[]).map((id) => (
-        <button key={id} type="button" onClick={() => setLens(id)} className={`min-h-11 shrink-0 rounded-full px-4 text-xs font-black ${lens === id ? "bg-green-800 text-white" : "border border-lime-200 bg-card text-green-900"}`}>{LENS[lang][id]}</button>
+        <button key={id} type="button" onClick={() => setLens(id)} className={`min-h-11 shrink-0 rounded-full px-4 text-xs font-black ${lens === id ? "bg-primary-strong text-white" : "border border-lime-200 bg-card text-green-900"}`}>{LENS[lang][id]}</button>
       ))}</div>
       <div className="mt-3 grid grid-cols-2 gap-2">
         <button type="button" onClick={() => setView("star")} className={`min-h-11 rounded-xl text-xs font-black ${view === "star" ? "bg-lime-200 text-foreground" : "bg-card text-stone-600"}`}><Star className="mr-1 inline h-4 w-4" />{copy.star}</button>
@@ -273,7 +273,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
         <p className="mt-1 text-sm"><span className="font-black">{copy.ask}.</span> {pairCopy.ask}</p>
       </article>}
       <p className="mt-3 text-center text-[11px] font-bold uppercase tracking-wider text-stone-400">{copy.noTotal}</p>
-      <button type="button" onClick={() => void share()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-green-800 text-sm font-black text-white"><Share2 className="h-4 w-4" />{copy.share}</button>
+      <button type="button" onClick={() => void share()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-primary-strong text-sm font-black text-white"><Share2 className="h-4 w-4" />{copy.share}</button>
       {copied && <p className="mt-2 text-center text-xs font-black text-green-800">{copy.copied}</p>}
     </section>}
 
@@ -294,7 +294,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
         <option value="">{copy.city}</option>
         {CITIES.map((city) => <option key={city.id} value={city.id}>{city.label[lang]}</option>)}
       </select>
-      <button type="button" onClick={addByDate} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-green-800 text-sm font-black text-white"><Plus className="h-4 w-4" />{copy.add}</button>
+      <button type="button" onClick={addByDate} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-primary-strong text-sm font-black text-white"><Plus className="h-4 w-4" />{copy.add}</button>
       <input aria-label={copy.link} placeholder={copy.link} value={link} onChange={(event) => setLink(event.target.value)} className={field} />
       <button type="button" onClick={() => void addByLink()} className="min-h-11 w-full rounded-2xl border border-green-700 text-sm font-black text-green-800">{copy.link}</button>
       {error && <p role="alert" className="text-sm font-bold text-red-700">{error}</p>}

@@ -307,7 +307,7 @@ const breadcrumbJsonLd = {
         <ol class="mt-3 space-y-2">
           {lifeKo.study.steps.map((x, i) => (
             <li class="flex gap-3 text-sm leading-6 text-green-800">
-              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-green-800 text-[11px] font-bold text-white">{i + 1}</span>
+              <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary-strong text-[11px] font-bold text-white">{i + 1}</span>
               <span><strong class="font-semibold text-foreground">{x.name}</strong> — {x.desc}</span>
             </li>
           ))}
@@ -322,7 +322,7 @@ const breadcrumbJsonLd = {
     <div class="mt-8 text-center">
       <a
         href={localePath('/mbti/test')}
-        class="inline-flex items-center gap-1 rounded-full bg-green-800 px-6 py-3 text-sm font-bold text-white hover:bg-green-900"
+        class="inline-flex items-center gap-1 rounded-full bg-primary-strong px-6 py-3 text-sm font-bold text-white hover:bg-green-900"
       >
         {c.testCta}
       </a>

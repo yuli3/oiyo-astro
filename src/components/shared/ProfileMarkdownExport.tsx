@@ -680,7 +680,7 @@ ${listLines(form.nextExperiments)}
               <button onClick={copyMarkdown} className="inline-flex items-center gap-1.5 rounded-lg border border-green-200 px-3 py-2 text-sm font-bold text-green-800 hover:bg-surface-subtle">
                 <Copy className="h-4 w-4" /> {copied ? text.copied : text.copy}
               </button>
-              <button onClick={downloadMarkdown} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-bold text-primary-foreground hover:bg-green-800">
+              <button onClick={downloadMarkdown} className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-2 text-sm font-bold text-primary-foreground hover:bg-primary-strong">
                 <Download className="h-4 w-4" /> {text.download}
               </button>
               <button onClick={resetForm} className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 px-3 py-2 text-sm font-bold text-slate-700 hover:bg-slate-50">

@@ -149,7 +149,7 @@ export default function LifeValuesTest({ locale: localeProp }: { locale?: string
     <div className="text-center"><p className="text-sm font-semibold text-green-700">VALUE CARDS</p><h1 className="mt-2 text-3xl font-bold text-slate-950">{t.title}</h1><p className="mt-2 text-slate-600">{t.subtitle}</p></div>
     <p className="rounded-2xl bg-surface-subtle p-4 text-sm leading-7 text-foreground">{t.intro}</p>
     <p className="text-sm leading-6 text-slate-500">{t.disclaimer}</p><p className="text-xs leading-5 text-slate-500">{t.private}</p>
-    <button type="button" onClick={start} className="w-full rounded-xl bg-primary px-5 py-3 font-semibold text-primary-foreground hover:bg-green-800 focus:outline-none focus:ring-2 focus:ring-green-500">{t.start}</button>
+    <button type="button" onClick={start} className="w-full rounded-xl bg-primary px-5 py-3 font-semibold text-primary-foreground hover:bg-primary-strong focus:outline-none focus:ring-2 focus:ring-green-500">{t.start}</button>
   </section>;
 
   if (stage === "sort") return <section className="space-y-6">

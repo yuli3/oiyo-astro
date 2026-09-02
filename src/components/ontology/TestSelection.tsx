@@ -117,7 +117,7 @@ export function TestSelection({ availableTests, results }: TestSelectionProps) {
 
               <CardFooter className="p-6 pt-0 mt-auto">
                 <SmartLink
-                  className="flex items-center justify-between w-full p-4 bg-primary text-primary-foreground hover:bg-primary-hover rounded-2xl text-[11px] font-black uppercase tracking-[0.2em] transition-all group/btn shadow-lg shadow-green-600/20 border-none"
+                  className="flex items-center justify-between w-full p-4 bg-primary text-primary-foreground hover:bg-primary-strong rounded-2xl text-[11px] font-black uppercase tracking-[0.2em] transition-all group/btn shadow-lg shadow-green-600/20 border-none"
                   contextHints={[test.id as any]}
                   displayText={tU("labels.takeTest")}
                   targetRoute={`/${locale}${test.link}`}

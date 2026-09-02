@@ -835,7 +835,7 @@ export default function NumerologyCalculator({ locale }: Props) {
         <button
           onClick={result ? () => setResult(null) : calculate}
           disabled={!name.trim() || !date}
-          className="w-full py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:bg-green-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          className="w-full py-2.5 bg-primary text-primary-foreground text-sm font-semibold rounded-lg hover:bg-primary-strong disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
         >
           {result ? ui.resetBtn : ui.calcBtn}
         </button>

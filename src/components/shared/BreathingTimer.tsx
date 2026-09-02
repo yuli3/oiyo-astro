@@ -164,7 +164,7 @@ export const BreathingTimer: React.FC<BreathingTimerProps> = ({
         <div className="pt-12">
           {!isActive ? (
             <m.button
-              className="px-12 py-5 bg-[#064e3b] text-white rounded-full font-black tracking-widest uppercase text-[10px] shadow-xl shadow-green-900/20 hover:bg-green-800 transition-all font-sans"
+              className="px-12 py-5 bg-[#064e3b] text-white rounded-full font-black tracking-widest uppercase text-[10px] shadow-xl shadow-green-900/20 hover:bg-primary-strong transition-all font-sans"
               onClick={toggleTimer}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

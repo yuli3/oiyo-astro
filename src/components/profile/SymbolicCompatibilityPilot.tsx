@@ -276,7 +276,7 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
       <section className="mt-5 rounded-3xl border border-lime-200 bg-lime-50 p-5 text-center">
         <p className="text-xs font-bold text-stone-600">{shareCopy.expires} · {shareCopy.warning}</p>
         <div className="mt-4 grid gap-3 sm:grid-cols-2">
-          <button type="button" onClick={() => void shareProfile(result.a)} className="flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-green-800 px-5 text-sm font-black text-white"><Share2 className="h-4 w-4" />{shareCopy.shareMe}</button>
+          <button type="button" onClick={() => void shareProfile(result.a)} className="flex min-h-12 items-center justify-center gap-2 rounded-2xl bg-primary-strong px-5 text-sm font-black text-white"><Share2 className="h-4 w-4" />{shareCopy.shareMe}</button>
           {result.bFull && <button type="button" onClick={() => void shareProfile(result.bFull!)} className="flex min-h-12 items-center justify-center gap-2 rounded-2xl border border-green-700 bg-card px-5 text-sm font-black text-green-800"><Share2 className="h-4 w-4" />{shareCopy.shareFriend}</button>}
         </div>
         {shareState === "copied" && <p role="status" className="mt-3 inline-flex items-center gap-1 text-xs font-black text-green-800"><Check className="h-4 w-4" />{shareCopy.copied}</p>}
@@ -301,7 +301,7 @@ export default function SymbolicCompatibilityPilot({ locale }: { locale: string 
     <form className="mt-8" onSubmit={submit}>
       <div className={`grid gap-4 ${receivedProfile ? "mx-auto max-w-xl" : "sm:grid-cols-2"}`}><PersonCard copy={copy} form={a} label={copy.me} lang={lang} onChange={setA} self />{!receivedProfile && <PersonCard copy={copy} form={b} label={copy.friend} lang={lang} onChange={setB} />}</div>
       {error && <p role="alert" className="mt-4 rounded-2xl bg-red-50 px-4 py-3 text-sm font-bold text-red-700">{error}</p>}
-      <button type="submit" className="mt-5 flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-green-800 px-6 text-base font-black text-white shadow-lg shadow-green-900/10 transition hover:bg-green-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800">{copy.action}<ArrowRight className="h-5 w-5" /></button>
+      <button type="submit" className="mt-5 flex min-h-14 w-full items-center justify-center gap-2 rounded-2xl bg-primary-strong px-6 text-base font-black text-white shadow-lg shadow-green-900/10 transition hover:bg-green-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-800">{copy.action}<ArrowRight className="h-5 w-5" /></button>
       {!receivedProfile && <button type="button" onClick={() => void inviteFromForm()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl border border-green-700 bg-card px-6 text-sm font-black text-green-800"><Share2 className="h-4 w-4" />{shareCopy.invite}</button>}
       {!receivedProfile && <p className="mt-2 text-center text-xs leading-5 text-stone-500">{shareCopy.inviteHint}</p>}
       {shareState === "copied" && <p role="status" className="mt-3 text-center text-xs font-black text-green-800"><Check className="mr-1 inline h-4 w-4" />{shareCopy.copied}</p>}

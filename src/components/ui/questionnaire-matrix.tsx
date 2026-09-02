@@ -120,7 +120,7 @@ export function QuestionnaireMatrix({
                       className={cn(
                         "min-h-12 rounded-lg border bg-muted/40 px-2 py-2 text-xs text-muted-foreground outline-none transition-colors motion-reduce:transition-none",
                         "hover:border-green-500 hover:bg-surface-subtle focus-visible:border-green-600 focus-visible:ring-2 focus-visible:ring-green-600/30",
-                        selected && "border-green-600 bg-primary font-semibold text-primary-foreground hover:bg-primary-hover",
+                        selected && "border-green-600 bg-primary font-semibold text-primary-foreground hover:bg-primary-strong",
                       )}
                     >
                       {option.label}

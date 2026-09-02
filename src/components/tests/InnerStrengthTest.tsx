@@ -268,7 +268,7 @@ export default function InnerStrengthTest({ locale: lp = 'ko' }: Props) {
         />
         <RelatedReading locale={locale} topic="inner-strength" />
 
-        <button onClick={handleRestart} className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary-hover transition-colors">
+        <button onClick={handleRestart} className="w-full py-3 rounded-xl bg-primary text-primary-foreground font-bold hover:bg-primary-strong transition-colors">
           {lb.restart}
         </button>
       </div>

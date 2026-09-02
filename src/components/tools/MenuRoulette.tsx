@@ -241,7 +241,7 @@ export default function MenuRoulette({ locale }: Props) {
       </div>
       <output className="sr-only" aria-live="polite" aria-atomic="true">{announcement}</output>
 
-      <button type="button" onClick={spin} disabled={spinning || pool.length === 0} className="mt-5 min-h-12 w-full rounded-full bg-primary px-5 py-3 text-base font-bold text-primary-foreground transition-colors hover:bg-green-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 disabled:cursor-not-allowed disabled:opacity-60">
+      <button type="button" onClick={spin} disabled={spinning || pool.length === 0} className="mt-5 min-h-12 w-full rounded-full bg-primary px-5 py-3 text-base font-bold text-primary-foreground transition-colors hover:bg-primary-strong focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-700 disabled:cursor-not-allowed disabled:opacity-60">
         {result ? t.again : t.spin}
       </button>
 

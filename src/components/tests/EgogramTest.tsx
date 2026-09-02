@@ -655,7 +655,7 @@ export default function EgogramTest({ locale: localeProp }: Props) {
             {t.restart}
           </button>
           <button onClick={share}
-            className="px-5 py-2 bg-primary hover:bg-primary-hover text-primary-foreground rounded-full font-medium transition-colors text-sm">
+            className="px-5 py-2 bg-primary hover:bg-primary-strong text-primary-foreground rounded-full font-medium transition-colors text-sm">
             {copied ? t.copied : t.share}
           </button>
         </div>

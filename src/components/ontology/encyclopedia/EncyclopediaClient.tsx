@@ -299,7 +299,7 @@ function StemDetail({ data }: { data: any }) {
             <div className="flex flex-wrap gap-2">
               {data.strengths?.map((s: string) => (
                 <Badge
-                  className="bg-[#064e3b] text-white hover:bg-green-800"
+                  className="bg-[#064e3b] text-white hover:bg-primary-strong"
                   key={s}
                 >
                   {s}

@@ -204,7 +204,7 @@ export default function NameEnergyReading({ copy, locale }: { copy: OnomancyCopy
                 <button
                   type="button"
                   onClick={() => setDialogOpen(true)}
-                  className="mt-3 h-11 w-full rounded-2xl bg-primary text-sm font-black text-primary-foreground transition hover:bg-green-800 active:scale-[0.98]"
+                  className="mt-3 h-11 w-full rounded-2xl bg-primary text-sm font-black text-primary-foreground transition hover:bg-primary-strong active:scale-[0.98]"
                 >
                   {ui.addBirth}
                 </button>

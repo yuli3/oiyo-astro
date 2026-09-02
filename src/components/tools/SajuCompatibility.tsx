@@ -349,7 +349,7 @@ export default function SajuCompatibility({ locale }: Props) {
           <button
             onClick={calculate}
             disabled={!year1 || !year2}
-            className="w-full bg-primary hover:bg-primary-hover disabled:bg-gray-300 text-primary-foreground font-semibold py-3 rounded-xl transition-colors"
+            className="w-full bg-primary hover:bg-primary-strong disabled:bg-gray-300 text-primary-foreground font-semibold py-3 rounded-xl transition-colors"
           >
             {ui.calcBtn}
           </button>

@@ -317,7 +317,7 @@ export default function PranayamaGuide({ locale }: Props) {
       </div>
       <div className="flex justify-center gap-3">
         <button type="button" onClick={startPause}
-          className={`rounded-xl px-8 py-3 font-semibold text-primary-foreground shadow-sm transition-all ${isRunning ? 'bg-amber-500 hover:bg-amber-600' : 'bg-primary hover:bg-primary-hover'}`}>
+          className={`rounded-xl px-8 py-3 font-semibold text-primary-foreground shadow-sm transition-all ${isRunning ? 'bg-amber-500 hover:bg-amber-600' : 'bg-primary hover:bg-primary-strong'}`}>
           {isRunning ? u('pause') : u('start')}
         </button>
         <button type="button" onClick={reset}

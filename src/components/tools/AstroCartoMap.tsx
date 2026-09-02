@@ -149,7 +149,7 @@ export default function AstroCartoMap({
             type="button"
             onClick={() => setView(v)}
             className={`rounded-full border px-3 py-1 text-[11px] font-semibold ${
-              view === v ? 'border-green-800 bg-green-800 text-white' : 'border-slate-200 text-slate-400'
+              view === v ? 'border-green-800 bg-primary-strong text-white' : 'border-slate-200 text-slate-400'
             }`}
           >
             {v === 'flat' ? t.mapView : t.globeView}

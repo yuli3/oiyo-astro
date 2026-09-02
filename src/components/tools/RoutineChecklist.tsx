@@ -179,7 +179,7 @@ export default function RoutineChecklist({ locale }: Props) {
           maxLength={60}
           className="min-w-0 flex-1 rounded-xl border-2 border-slate-200 px-3 py-2 text-sm focus:border-green-400 focus:outline-none"
         />
-        <button type="submit" className="rounded-xl bg-primary px-4 py-2 text-sm font-bold text-primary-foreground transition hover:bg-primary-hover">
+        <button type="submit" className="rounded-xl bg-primary px-4 py-2 text-sm font-bold text-primary-foreground transition hover:bg-primary-strong">
           {t.add}
         </button>
       </form>

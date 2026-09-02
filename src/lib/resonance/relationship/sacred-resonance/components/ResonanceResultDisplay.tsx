@@ -90,7 +90,7 @@ export function ResonanceResultDisplay({
                 <ArrowLeft className="w-4 h-4" /> {t("backButton")}
               </Button>
               <Button
-                className="h-14 rounded-full bg-[#064e3b] text-white hover:bg-green-800 gap-2 font-black px-12 text-lg font-sans"
+                className="h-14 rounded-full bg-[#064e3b] text-white hover:bg-primary-strong gap-2 font-black px-12 text-lg font-sans"
                 onClick={handleCopyLink}
               >
                 <Share2 className="w-4 h-4" /> {t("shareButton")}
@@ -215,7 +215,7 @@ export function ResonanceResultDisplay({
 
           <div className="flex flex-wrap gap-6 justify-center font-sans">
             <Button
-              className="h-20 px-12 rounded-full bg-[#064e3b] hover:bg-green-800 text-white gap-4 font-black text-xl shadow-xl shadow-green-900/20"
+              className="h-20 px-12 rounded-full bg-[#064e3b] hover:bg-primary-strong text-white gap-4 font-black text-xl shadow-xl shadow-green-900/20"
               onClick={handleCopyLink}
             >
               <Link2 className="w-6 h-6" /> {t("cta.share")}

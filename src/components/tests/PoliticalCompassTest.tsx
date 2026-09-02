@@ -494,7 +494,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
         {step < 3 ? (
           <button
             onClick={handleNext}
-            class="flex-1 rounded-xl border-2 border-green-700 bg-primary py-3 font-bold text-primary-foreground transition hover:bg-green-800"
+            class="flex-1 rounded-xl border-2 border-green-700 bg-primary py-3 font-bold text-primary-foreground transition hover:bg-primary-strong"
           >
             {ui.next}
           </button>
@@ -502,7 +502,7 @@ export default function PoliticalCompassTest({ locale }: Props) {
           <button
             onClick={handleSubmit}
             disabled={loading}
-            class="flex-1 rounded-xl border-2 border-green-700 bg-primary py-3 font-bold text-primary-foreground transition hover:bg-green-800 disabled:opacity-60"
+            class="flex-1 rounded-xl border-2 border-green-700 bg-primary py-3 font-bold text-primary-foreground transition hover:bg-primary-strong disabled:opacity-60"
           >
             {loading ? ui.loading : ui.submit}
           </button>

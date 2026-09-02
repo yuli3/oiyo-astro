@@ -476,7 +476,7 @@ export default function SajuFortune({ locale }: Props) {
           <button
             onClick={calculate}
             disabled={!year}
-            className="w-full bg-primary hover:bg-primary-hover disabled:bg-gray-300 text-primary-foreground font-semibold py-3 rounded-xl transition-colors"
+            className="w-full bg-primary hover:bg-primary-strong disabled:bg-gray-300 text-primary-foreground font-semibold py-3 rounded-xl transition-colors"
           >
             {ui.calcBtn}
           </button>

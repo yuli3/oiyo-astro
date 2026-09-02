@@ -621,7 +621,7 @@ export default function CommunicationStyleTest({ locale: localeProp }: Props) {
           </button>
           <button
             onClick={share}
-            className="flex-1 rounded-xl bg-primary py-3 text-sm font-medium text-primary-foreground transition hover:bg-primary-hover"
+            className="flex-1 rounded-xl bg-primary py-3 text-sm font-medium text-primary-foreground transition hover:bg-primary-strong"
           >
             {copied ? tx.copied : tx.share}
           </button>
