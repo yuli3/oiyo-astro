@@ -21,10 +21,16 @@ export interface RelatedReading {
   blogLocales?: Locale[];
   /** wiki 타깃이 실존하는 로케일 화이트리스트. 미지정 = ['ko']. */
   wikiLocales?: Locale[];
+  /**
+   * 개념 정의를 가진 사이트. 미지정 = 'wiki'.
+   * 2026-09-02: 심리 6개 주제의 해설이 oiyo 로 옮겨졌다 — 그 항목은 'oiyo'.
+   */
+  defSite?: 'wiki' | 'oiyo';
 }
 
 const BLOG_HOST = "https://blog.oiyo.net";
 const WIKI_HOST = "https://wiki.oiyo.net";
+const OIYO_HOST = "https://oiyo.net";
 
 /**
  * blog/wiki 콘텐츠 로케일 pass-through.
@@ -147,13 +153,15 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/burnout/test": {
     blog: "/magazine-burnout-psychology/",
     blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
-    wiki: "/meaning-of-burnout/",
+    wiki: "/burnout/about/",
+    defSite: 'oiyo',
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/attachment-style/test": {
     blog: "/magazine-attachment-test/",
     blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
-    wiki: "/meaning-of-attachment-theory/",
+    wiki: "/attachment-style/about/",
+    defSite: 'oiyo',
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/enneagram/test": {
@@ -163,7 +171,8 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   },
   "/mbti/test": {
     blog: "/mbti-career-test/", blogLocales: ['ko', 'zh', 'fr', 'es'],
-    wiki: "/meaning-of-mbti/",
+    wiki: "/mbti/about/",
+    defSite: 'oiyo',
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/sleep-type/test": {
@@ -177,7 +186,8 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/perfectionism/test": {
     blog: "/magazine-perfectionism-psychology/",
     blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
-    wiki: "/meaning-of-perfectionism/",
+    wiki: "/perfectionism/about/",
+    defSite: 'oiyo',
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/riasec-career-test": {
@@ -232,7 +242,8 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/big5/test": {
     blog: "/psychology-big-five-test/",
     blogLocales: ['ko', 'en', 'zh', 'fr', 'es'],
-    wiki: "/meaning-of-big5/",
+    wiki: "/big5/about/",
+    defSite: 'oiyo',
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/color-aura-test": {
@@ -255,13 +266,15 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
   "/love-profile-test": {
     blog: "/five-love-languages-connection/",
     blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
-    wiki: "/meaning-of-attachment-theory/",
+    wiki: "/attachment-style/about/",
+    defSite: 'oiyo',
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/political/test": {
     blog: "/abilene-paradox-groupthink/",
     blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
-    wiki: "/meaning-of-cognitive-biases/",
+    wiki: "/cognitive-bias/about/",
+    defSite: 'oiyo',
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   // --- B등급 10종 (한쪽만) ---
@@ -274,7 +287,8 @@ export const TEST_RELATED_READING: Record<string, RelatedReading> = {
     blogLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/compatibility-test": {
-    wiki: "/meaning-of-attachment-theory/",
+    wiki: "/attachment-style/about/",
+    defSite: 'oiyo',
     wikiLocales: ['ko', 'en', 'ja', 'zh', 'fr', 'es'],
   },
   "/depression/test": {
@@ -325,8 +339,13 @@ export function getRelatedReading(
     out.blog = `${BLOG_HOST}/${loc}${entry.blog}`;
   }
   if (entry.wiki) {
-    const loc = resolveLocale(cl, entry.wikiLocales ?? ['ko']);
-    out.wiki = `${WIKI_HOST}/${loc}${entry.wiki}`;
+    // oiyo 자체 해설은 6로케일 전부 있으므로 화이트리스트를 타지 않는다.
+    if (entry.defSite === 'oiyo') {
+      out.wiki = `${OIYO_HOST}/${locale}${entry.wiki}`;
+    } else {
+      const loc = resolveLocale(cl, entry.wikiLocales ?? ['ko']);
+      out.wiki = `${WIKI_HOST}/${loc}${entry.wiki}`;
+    }
   }
   return (out.blog || out.wiki) ? out : null;
 }
@@ -342,6 +361,8 @@ export function getRelatedReading(
 //   zh/fr/es 모두 존재 (25개 전부):
 //   meaning-of-hsp, meaning-of-self-compassion, meaning-of-learning-styles,
 //   meaning-of-emotion-regulation, meaning-of-adhd, meaning-of-anxiety,
+//   (2026-09-02: mbti·attachment-theory·burnout·perfectionism·cognitive-biases·big5
+//    6개는 oiyo 로 이관됐다. 아래 목록은 그 이전 시점의 wiki 실측 기록이다.)
 //   meaning-of-burnout, meaning-of-attachment-theory, meaning-of-enneagram,
 //   meaning-of-mbti, meaning-of-chronotypes, meaning-of-perfectionism,
 //   meaning-of-riasec, meaning-of-self-efficacy, meaning-of-executive-function,

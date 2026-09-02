@@ -49,7 +49,7 @@ export const mbtiPlugin: AssessmentPlugin = {
     kind: "preference",
     routes: {
       execution: "/{locale}/mbti/test",
-      wiki: "https://wiki.oiyo.net/{locale}/meaning-of-mbti/",
+      wiki: "https://oiyo.net/{locale}/mbti/about/",
     },
     status: "review",
     tags: ["mbti", "preference", "reflection", "oiyo-original-items"],

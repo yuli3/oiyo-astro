@@ -1,12 +1,13 @@
 import type { Locale } from '../../../i18n';
 import { localePath } from '../../../i18n';
-import { blogUrl, wikiUrl } from './types';
+import { blogUrl, oiyoUrl, wikiUrl } from './types';
 import type { JourneyContent } from './types';
 
 export function hobbiesContent(locale: Locale): JourneyContent {
   const l = (p: string) => localePath(locale, p);
   const b = (s: string) => blogUrl(locale, s);
   const w = (s: string) => wikiUrl(locale, s);
+  const o = (s: string) => oiyoUrl(locale, s);
 
   switch (locale) {
     case 'ko':
@@ -71,8 +72,8 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           heading: '📚 개념 사전 (wiki.oiyo.net)',
           items: [
             { href: w('meaning-of-color-psychology'), label: '색채 심리학이란', external: true },
-            { href: w('meaning-of-mbti'), label: 'MBTI란 무엇인가', external: true },
-            { href: w('meaning-of-big5'), label: '빅파이브와 개방성', external: true },
+            { href: o('mbti/about'), label: 'MBTI란 무엇인가', external: false },
+            { href: o('big5/about'), label: '빅파이브와 개방성', external: false },
             { href: w('meaning-of-enneagram'), label: '에니어그램의 욕망 구조', external: true },
           ],
         },
@@ -158,8 +159,8 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           heading: '📚 概念辞典 (wiki.oiyo.net)',
           items: [
             { href: w('meaning-of-color-psychology'), label: '色彩心理学とは', external: true },
-            { href: w('meaning-of-mbti'), label: 'MBTIとは何か', external: true },
-            { href: w('meaning-of-big5'), label: 'ビッグファイブと開放性', external: true },
+            { href: o('mbti/about'), label: 'MBTIとは何か', external: false },
+            { href: o('big5/about'), label: 'ビッグファイブと開放性', external: false },
             { href: w('meaning-of-enneagram'), label: 'エニアグラムの欲望構造', external: true },
           ],
         },
@@ -245,8 +246,8 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           heading: '📚 概念词典 (wiki.oiyo.net)',
           items: [
             { href: w('meaning-of-color-psychology'), label: '什么是色彩心理学', external: true },
-            { href: w('meaning-of-mbti'), label: '什么是MBTI', external: true },
-            { href: w('meaning-of-big5'), label: '大五人格与开放性', external: true },
+            { href: o('mbti/about'), label: '什么是MBTI', external: false },
+            { href: o('big5/about'), label: '大五人格与开放性', external: false },
             { href: w('meaning-of-enneagram'), label: '九型人格的欲望结构', external: true },
           ],
         },
@@ -332,8 +333,8 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           heading: '📚 Dictionnaire (wiki.oiyo.net)',
           items: [
             { href: w('meaning-of-color-psychology'), label: 'La psychologie des couleurs', external: true },
-            { href: w('meaning-of-mbti'), label: 'Qu\'est-ce que le MBTI', external: true },
-            { href: w('meaning-of-big5'), label: 'Big Five et ouverture', external: true },
+            { href: o('mbti/about'), label: 'Qu\'est-ce que le MBTI', external: true },
+            { href: o('big5/about'), label: 'Big Five et ouverture', external: false },
             { href: w('meaning-of-enneagram'), label: 'La structure des désirs de l\'ennéagramme', external: true },
           ],
         },
@@ -419,8 +420,8 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           heading: '📚 Diccionario (wiki.oiyo.net)',
           items: [
             { href: w('meaning-of-color-psychology'), label: 'La psicología del color', external: true },
-            { href: w('meaning-of-mbti'), label: 'Qué es el MBTI', external: true },
-            { href: w('meaning-of-big5'), label: 'Big Five y apertura', external: true },
+            { href: o('mbti/about'), label: 'Qué es el MBTI', external: false },
+            { href: o('big5/about'), label: 'Big Five y apertura', external: false },
             { href: w('meaning-of-enneagram'), label: 'La estructura de deseos del eneagrama', external: true },
           ],
         },
@@ -506,8 +507,8 @@ export function hobbiesContent(locale: Locale): JourneyContent {
           heading: '📚 Concept dictionary (wiki.oiyo.net)',
           items: [
             { href: w('meaning-of-color-psychology'), label: 'What is color psychology', external: true },
-            { href: w('meaning-of-mbti'), label: 'What is MBTI', external: true },
-            { href: w('meaning-of-big5'), label: 'Big Five and openness', external: true },
+            { href: o('mbti/about'), label: 'What is MBTI', external: false },
+            { href: o('big5/about'), label: 'Big Five and openness', external: false },
             { href: w('meaning-of-enneagram'), label: 'The Enneagram\'s desire structure', external: true },
           ],
         },

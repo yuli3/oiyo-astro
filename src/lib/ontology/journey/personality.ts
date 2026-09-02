@@ -1,12 +1,13 @@
 import type { Locale } from '../../../i18n';
 import { localePath } from '../../../i18n';
-import { blogUrl, wikiUrl } from './types';
+import { blogUrl, oiyoUrl, wikiUrl } from './types';
 import type { JourneyContent } from './types';
 
 export function personalityContent(locale: Locale): JourneyContent {
   const l = (p: string) => localePath(locale, p);
   const b = (s: string) => blogUrl(locale, s);
   const w = (s: string) => wikiUrl(locale, s);
+  const o = (s: string) => oiyoUrl(locale, s);
 
   switch (locale) {
     case 'ko':
@@ -72,8 +73,8 @@ export function personalityContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 개념 사전 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-mbti'), label: 'MBTI란 무엇인가', external: true },
-            { href: w('meaning-of-big5'), label: '빅파이브 5요인 모델', external: true },
+            { href: o('mbti/about'), label: 'MBTI란 무엇인가', external: false },
+            { href: o('big5/about'), label: '빅파이브 5요인 모델', external: false },
             { href: w('meaning-of-enneagram'), label: '에니어그램의 기원과 구조', external: true },
             { href: w('meaning-of-archetypes'), label: '원형(아키타입)이란', external: true },
           ],
@@ -160,8 +161,8 @@ export function personalityContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 概念辞典 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-mbti'), label: 'MBTIとは何か', external: true },
-            { href: w('meaning-of-big5'), label: 'ビッグファイブ5因子モデル', external: true },
+            { href: o('mbti/about'), label: 'MBTIとは何か', external: false },
+            { href: o('big5/about'), label: 'ビッグファイブ5因子モデル', external: false },
             { href: w('meaning-of-enneagram'), label: 'エニアグラムの起源と構造', external: true },
             { href: w('meaning-of-archetypes'), label: 'アーキタイプ(元型)とは', external: true },
           ],
@@ -248,8 +249,8 @@ export function personalityContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 概念词典 (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-mbti'), label: '什么是MBTI', external: true },
-            { href: w('meaning-of-big5'), label: '大五人格五因子模型', external: true },
+            { href: o('mbti/about'), label: '什么是MBTI', external: false },
+            { href: o('big5/about'), label: '大五人格五因子模型', external: false },
             { href: w('meaning-of-enneagram'), label: '九型人格的起源与结构', external: true },
             { href: w('meaning-of-archetypes'), label: '什么是原型', external: true },
           ],
@@ -336,8 +337,8 @@ export function personalityContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 Dictionnaire (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-mbti'), label: 'Qu\'est-ce que le MBTI', external: true },
-            { href: w('meaning-of-big5'), label: 'Le modèle Big Five', external: true },
+            { href: o('mbti/about'), label: 'Qu\'est-ce que le MBTI', external: true },
+            { href: o('big5/about'), label: 'Le modèle Big Five', external: false },
             { href: w('meaning-of-enneagram'), label: 'Origine et structure de l\'ennéagramme', external: true },
             { href: w('meaning-of-archetypes'), label: 'Que sont les archétypes', external: true },
           ],
@@ -424,8 +425,8 @@ export function personalityContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 Diccionario (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-mbti'), label: 'Qué es el MBTI', external: true },
-            { href: w('meaning-of-big5'), label: 'El modelo Big Five', external: true },
+            { href: o('mbti/about'), label: 'Qué es el MBTI', external: false },
+            { href: o('big5/about'), label: 'El modelo Big Five', external: false },
             { href: w('meaning-of-enneagram'), label: 'Origen y estructura del eneagrama', external: true },
             { href: w('meaning-of-archetypes'), label: 'Qué son los arquetipos', external: true },
           ],
@@ -512,8 +513,8 @@ export function personalityContent(locale: Locale): JourneyContent {
         wiki: {
           heading: '📚 Concept dictionary (wiki.oiyo.net)',
           items: [
-            { href: w('meaning-of-mbti'), label: 'What is MBTI', external: true },
-            { href: w('meaning-of-big5'), label: 'The Big Five model', external: true },
+            { href: o('mbti/about'), label: 'What is MBTI', external: false },
+            { href: o('big5/about'), label: 'The Big Five model', external: false },
             { href: w('meaning-of-enneagram'), label: 'Origin & structure of the Enneagram', external: true },
             { href: w('meaning-of-archetypes'), label: 'What are archetypes', external: true },
           ],

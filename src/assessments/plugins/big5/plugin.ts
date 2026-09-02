@@ -92,7 +92,7 @@ export const bigFivePlugin: AssessmentPlugin = {
     routes: {
       blog: "https://blog.oiyo.net/{locale}/psychology-big-five-test/",
       execution: "/{locale}/big5/test",
-      wiki: "https://wiki.oiyo.net/{locale}/meaning-of-big5/",
+      wiki: "https://oiyo.net/{locale}/big5/about/",
     },
     status: "review",
     tags: ["personality", "big-five", "ocean"],

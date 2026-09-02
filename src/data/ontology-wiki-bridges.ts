@@ -2,7 +2,9 @@
 // Recheck live routes before adding entries: stale astrology and numerology entries were removed 2026-08-29.
 // Render a link only where the page exists (404-safe).
 export const WIKI_DEF_LOCALES: Record<string, string[]> = {
-  'meaning-of-mbti': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
+  // 2026-09-02: meaning-of-mbti 는 oiyo /{locale}/mbti/about 으로 옮겨졌다.
+  // 이 레지스트리는 **wiki 에 실존하는** 정의만 담는다 — 301 로 튕기는 항목을
+  // 남겨 두면 여기 있다는 사실이 곧 거짓이 된다.
   'meaning-of-riasec': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
   'meaning-of-enneagram': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],
   'meaning-of-tarot': ['en', 'es', 'fr', 'ja', 'ko', 'zh'],

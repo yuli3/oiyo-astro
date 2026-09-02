@@ -19,6 +19,10 @@ const L: Record<string, { title: string; guide: string; def: string }> = {
   es: { title: "Leer más", guide: "📖 Leer la guía", def: "📚 Definición" },
 };
 const t = L[locale] ?? L.en;
+
+// 호스트 라벨은 링크에서 끌어온다. 2026-09-02 에 일부 개념 정의가 oiyo 로 옮겨져
+// "wiki.oiyo.net" 을 못 박아 두면 화면이 실제 목적지와 다른 말을 하게 된다.
+const hostOf = (href: string) => (href.startsWith('http') ? new URL(href).host : 'oiyo.net');
 ---
 {(blog || wiki) && (
   <aside class="mx-auto mt-8 max-w-3xl rounded-xl border border-border bg-card/60 px-5 py-4" aria-label="Read deeper">
@@ -26,12 +30,12 @@ const t = L[locale] ?? L.en;
     <div class="flex flex-wrap gap-2">
       {blog && (
         <a href={blog} rel="noopener" class="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary">
-          <span>{t.guide}</span><span class="text-[10px] uppercase tracking-wider text-muted-foreground">· blog.oiyo.net</span>
+          <span>{t.guide}</span><span class="text-[10px] uppercase tracking-wider text-muted-foreground">· {hostOf(blog)}</span>
         </a>
       )}
       {wiki && (
         <a href={wiki} rel="noopener" class="inline-flex items-center gap-1.5 rounded-lg border border-border px-3 py-1.5 text-sm font-medium transition-colors hover:border-primary/50 hover:text-primary">
-          <span>{t.def}</span><span class="text-[10px] uppercase tracking-wider text-muted-foreground">· wiki.oiyo.net</span>
+          <span>{t.def}</span><span class="text-[10px] uppercase tracking-wider text-muted-foreground">· {hostOf(wiki)}</span>
         </a>
       )}
     </div>

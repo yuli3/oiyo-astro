@@ -42,7 +42,7 @@ export const attachmentPlugin: AssessmentPlugin = {
     routes: {
       blog: "https://blog.oiyo.net/{locale}/psychology-attachment-style-test/",
       execution: "/{locale}/attachment-style/test",
-      wiki: "https://wiki.oiyo.net/{locale}/meaning-of-attachment-theory/",
+      wiki: "https://oiyo.net/{locale}/attachment-style/about/",
     },
     status: ADULT_ATTACHMENT_RELEASE_GATE.assessmentStatus,
     tags: ["adult-attachment", "relationships", "anxiety", "avoidance", "oiyo-original-items"],

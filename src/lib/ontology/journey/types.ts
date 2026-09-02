@@ -43,3 +43,8 @@ export function wikiUrl(locale: Locale, slug: string): string {
   const l = locale === 'ko' || locale === 'ja' ? locale : 'en';
   return `https://wiki.oiyo.net/${l}/${slug}/`;
 }
+
+/** oiyo 자체 개념 해설. 6로케일 전부 존재하므로 en 으로 접지 않는다. */
+export function oiyoUrl(locale: Locale, path: string): string {
+  return `/${locale}/${path}/`;
+}

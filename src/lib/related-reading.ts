@@ -7,7 +7,7 @@
 type L3 = { ko: string; en: string; ja: string };
 
 export interface ReadingLink {
-  site: 'blog' | 'wiki';
+  site: 'blog' | 'wiki' | 'oiyo';
   slug: string;
   label: L3;
   /** restrict to these UI locales (e.g. slug missing in ja) */
@@ -23,9 +23,11 @@ export type ReadingTopic =
 
 // Shared link constants (reused across topics)
 const W = (slug: string, label: L3, locales?: string[]): ReadingLink => ({ site: 'wiki', slug, label, locales });
+/** oiyo 자체 해설. 2026-09-02 에 wiki 에서 넘겨받은 6개 주제가 여기 속한다. */
+const O = (slug: string, label: L3, locales?: string[]): ReadingLink => ({ site: 'oiyo', slug, label, locales });
 const B = (slug: string, label: L3, locales?: string[]): ReadingLink => ({ site: 'blog', slug, label, locales });
 
-const wikiMbti = W('meaning-of-mbti', { ko: 'MBTI란 무엇인가', en: 'What is MBTI', ja: 'MBTIとは何か' });
+const wikiMbti = O('mbti/about', { ko: 'MBTI란 무엇인가', en: 'What is MBTI', ja: 'MBTIとは何か' });
 const wikiSelfCompassion = W('meaning-of-self-compassion', { ko: '자기 자비란', en: 'What is self-compassion', ja: 'セルフコンパッションとは' });
 const wikiSelfEfficacy = W('meaning-of-self-efficacy', { ko: '자기효능감이란', en: 'What is self-efficacy', ja: '自己効力感とは' });
 const wikiEmotionReg = W('meaning-of-emotion-regulation', { ko: '감정 조절이란', en: 'What is emotion regulation', ja: '感情調節とは' });
@@ -33,9 +35,9 @@ const wikiRumination = W('meaning-of-rumination', { ko: '반추 사고란', en: 
 const wikiDopamine = W('meaning-of-dopamine-loop', { ko: '도파민 루프란', en: 'The dopamine loop', ja: 'ドーパミンループとは' });
 const wikiHelplessness = W('meaning-of-learned-helplessness', { ko: '학습된 무기력이란', en: 'Learned helplessness', ja: '学習性無力感とは' });
 const wikiBehavioralAct = W('meaning-of-behavioral-activation', { ko: '행동 활성화 기법', en: 'Behavioral activation', ja: '行動活性化とは' });
-const wikiBiases = W('meaning-of-cognitive-biases', { ko: '인지 편향 사전', en: 'Cognitive biases', ja: '認知バイアスとは' });
+const wikiBiases = O('cognitive-bias/about', { ko: '인지 편향 사전', en: 'Cognitive biases', ja: '認知バイアスとは' });
 const wikiDecisionFatigue = W('meaning-of-decision-fatigue', { ko: '결정 피로란', en: 'Decision fatigue', ja: '決定疲れとは' });
-const wikiAttachment = W('meaning-of-attachment-theory', { ko: '애착 이론이란', en: 'Attachment theory', ja: '愛着理論とは' });
+const wikiAttachment = O('attachment-style/about', { ko: '애착 이론이란', en: 'Attachment theory', ja: '愛着理論とは' });
 const wikiAnxiety = W('meaning-of-anxiety', { ko: '불안이란 무엇인가', en: 'What is anxiety', ja: '不安とは何か' });
 
 const blogDarkTriad = B('dark-triad-human-nature-shadow', { ko: '다크 트라이어드 — 인간 본성의 그림자', en: 'The Dark Triad — shadow of human nature', ja: 'ダークトライアド — 人間性の影' });
@@ -57,7 +59,7 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
     wikiMbti,
   ],
   big5: [
-    W('meaning-of-big5', { ko: '빅파이브 5요인 모델', en: 'The Big Five model', ja: 'ビッグファイブ5因子モデル' }),
+    O('big5/about', { ko: '빅파이브 5요인 모델', en: 'The Big Five model', ja: 'ビッグファイブ5因子モデル' }),
     W('meaning-of-hexaco', { ko: 'HEXACO 6요인 모델', en: 'The HEXACO model', ja: 'HEXACO 6因子モデル' }),
     B('evolving-self-saju-mbti', { ko: '사주와 MBTI로 보는 진화하는 나', en: 'The evolving self: Saju & MBTI', ja: '四柱とMBTIで見る進化する自分' }),
   ],
@@ -81,7 +83,7 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
     wikiSelfEfficacy,
     wikiSelfCompassion,
   ],
-  burnout: [blogBurnoutDopamine, W('meaning-of-burnout', { ko: '번아웃이란 무엇인가', en: 'What is burnout', ja: 'バーンアウトとは' }), wikiDopamine],
+  burnout: [blogBurnoutDopamine, O('burnout/about', { ko: '번아웃이란 무엇인가', en: 'What is burnout', ja: 'バーンアウトとは' }), wikiDopamine],
   sleep: [
     B('chronotypes-sleep-biology-optimization', { ko: '크로노타입 — 수면 생물학 최적화', en: 'Chronotypes & sleep biology', ja: 'クロノタイプと睡眠生物学' }),
     W('meaning-of-chronotypes', { ko: '크로노타입이란', en: 'What are chronotypes', ja: 'クロノタイプとは' }),
@@ -145,7 +147,8 @@ const TOPICS: Record<ReadingTopic, ReadingLink[]> = {
   ],
 };
 
-const HOSTS = { blog: 'https://blog.oiyo.net', wiki: 'https://wiki.oiyo.net' } as const;
+const HOSTS = { blog: 'https://blog.oiyo.net', wiki: 'https://wiki.oiyo.net', oiyo: '' } as const;
+const ICONS = { blog: '📖', wiki: '📚', oiyo: '🌳' } as const;
 
 /** Content locale on blog/wiki: ko→ko, ja→ja, everything else → en. */
 function contentLocale(locale: string): 'ko' | 'en' | 'ja' {
@@ -156,8 +159,12 @@ export function getRelatedReading(topic: ReadingTopic, locale: string): { href: 
   const cl = contentLocale(locale);
   return (TOPICS[topic] ?? [])
     .filter((l) => !l.locales || l.locales.includes(locale))
-    .map((l) => ({
-      href: `${HOSTS[l.site]}/${cl}/${l.slug}/`,
-      label: `${l.site === 'blog' ? '📖' : '📚'} ${l.label[cl] || l.label.en}`,
-    }));
+    .map((l) => {
+      // oiyo 내부 해설은 6로케일 전부 존재한다 — blog/wiki 처럼 en 으로 접지 않는다.
+      const target = l.site === 'oiyo' ? locale : cl;
+      return {
+        href: `${HOSTS[l.site]}/${target}/${l.slug}/`,
+        label: `${ICONS[l.site]} ${l.label[cl] || l.label.en}`,
+      };
+    });
 }
