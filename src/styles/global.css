@@ -74,25 +74,42 @@
   --color-emerald-950: oklch(0.221 0.040 126);
 }
 
+/* 한글 본문 서체. 지금까지 body 는 `system-ui` 였고, 그러면 한글은 OS 가
+   고른다 — Mac 은 Apple SD Gothic Neo, Windows 는 맑은 고딕, Android 는 Noto.
+   본문의 대부분이 한글인데 아무도 고르지 않은 얼굴이었다.
+
+   KS X 1001 완성형 2,350자로 자른 191KB 서브셋(원본 8.2MB). 콘텐츠가 늘어도
+   재생성이 필요 없다. 재생성은 `bash scripts/build-korean-subset.sh`.
+
+   이 서체에는 한자·가나 글리프가 없다. oiyo 는 6로케일이고 한자 3,651자를
+   쓰는데 그중 어느 것도 담기지 않는다 — ko 만 개선되고 ja·zh 는 지금과 같다. */
+@font-face {
+  font-family: 'Gowun Batang';
+  src: url('/fonts/GowunBatang-ks-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: oklch(0.988 0.003 106.5);
-  --foreground: oklch(0.153 0.006 107.1);
-  --card: oklch(0.99 0.005 106.5);
-  --card-foreground: oklch(0.153 0.006 107.1);
-  --popover: oklch(0.99 0.005 106.5);
-  --popover-foreground: oklch(0.153 0.006 107.1);
-  --primary: oklch(0.523 0.101 122);
+  --background: oklch(0.951 0.011 123.5);
+  --foreground: oklch(0.207 0.020 138.8);
+  --card: oklch(0.985 0.007 124.4);
+  --card-foreground: oklch(0.207 0.020 138.8);
+  --popover: oklch(0.985 0.007 124.4);
+  --popover-foreground: oklch(0.207 0.020 138.8);
+  --primary: oklch(0.470 0.095 133.2);
   --primary-foreground: oklch(0.986 0.022 118);
   --secondary: oklch(0.967 0.001 286.375);
   --secondary-foreground: oklch(0.21 0.006 285.885);
-  --muted: oklch(0.97 0.01 106.5);
-  --muted-foreground: oklch(0.58 0.031 107.3);
-  --accent: oklch(0.97 0.01 106.5);
+  --muted: oklch(0.926 0.020 125.8);
+  --muted-foreground: oklch(0.52 0.028 132.3);
+  --accent: oklch(0.915 0.038 125.2);
   --accent-foreground: oklch(0.228 0.013 107.4);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.93 0.007 106.5);
-  --input: oklch(0.93 0.007 106.5);
-  --ring: oklch(0.737 0.021 106.9);
+  --border: oklch(0.857 0.030 126.0);
+  --input: oklch(0.857 0.030 126.0);
+  --ring: oklch(0.640 0.055 130.0);
   --chart-1: oklch(0.523 0.101 122);
   --chart-2: oklch(0.606 0.094 146);
   --chart-3: oklch(0.664 0.101 96);
@@ -116,7 +133,7 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: system-ui, -apple-system, sans-serif;
+    font-family: 'Gowun Batang', Georgia, serif;
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
   }
