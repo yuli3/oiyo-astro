@@ -7,14 +7,9 @@ definition: "우리는 우리가 합리적이라고 믿습니다."
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="요약 (Abstract)">
-  왜 우리는 듣고 싶은 것만 듣고(확증 편향), 남 탓만 할까요(이기적 편향)?{" "}
-  <Term definition="뇌가 정보를 처리할 때 사용하는 일종의 '생각의 지름길(Heuristics)'. 복잡한 문제를 빨리 해결하게 해주지만, 종종 비합리적인 판단을 내리게 만드는 원인입니다.">
-    인지 편향 (Cognitive Biases)
-  </Term>
-  은 고장 난 게 아닙니다. 원시 시대 생존을 위해 발달한 본능이 현대 사회와
-  충돌하는 것입니다.
-</HighlightBox>
+> **요약 (Abstract)**
+>
+> 왜 우리는 듣고 싶은 것만 듣고(확증 편향), 남 탓만 할까요(이기적 편향)? <abbr title="뇌가 정보를 처리할 때 사용하는 일종의 '생각의 지름길(Heuristics)'. 복잡한 문제를 빨리 해결하게 해주지만, 종종 비합리적인 판단을 내리게 만드는 원인입니다.">인지 편향 (Cognitive Biases)</abbr>은 고장 난 게 아닙니다. 원시 시대 생존을 위해 발달한 본능이 현대 사회와 충돌하는 것입니다.
 
 ## 1. 확증 편향 (Confirmation Bias): "답정너"
 
@@ -45,16 +40,8 @@ updated: 2026-01-18
 
 ### 참고 문헌 목록
 
-<ResearchReference
-  author="Daniel Kahneman"
-  year="2011"
-  source="Thinking, Fast and Slow"
-/>
-<ResearchReference
-  author="Amos Tversky & Daniel Kahneman"
-  year="1974"
-  source="Judgment under Uncertainty: Heuristics and Biases"
-/>
+> **Daniel Kahneman** (2011) *Thinking, Fast and Slow*
+> **Amos Tversky & Daniel Kahneman** (1974) *Judgment under Uncertainty: Heuristics and Biases*
 
 ---
 

@@ -7,20 +7,15 @@ definition: "Cherchez-vous vraiment la perfection, ou avez-vous peur d'échouer 
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Résumé (Abstract)">
-  Nous avons grandi en entendant l'injonction : "sois parfait". Mais en psychologie, le{" "}
-  <Term definition="Tendance a se fixer des standards excessivement élèves et a se critiquer durement lorsque l'on ne les atteint pas. Elle peut pousser a réussir, mais lorsqu'elle devient severe, elle favorise depression et troubles obsessionnels.">
-    perfectionnisme (Perfectionism)
-  </Term>
-  n'est pas la cle du succes : c'est un poison qui ronge l'estime de soi. Ce n'est pas
-  le simple desir de mieux faire, mais un mecanisme de defense pour eviter la critique.
-</HighlightBox>
+> **Résumé (Abstract)**
+>
+> Nous avons grandi en entendant l'injonction : "sois parfait". Mais en psychologie, le <abbr title="Tendance a se fixer des standards excessivement élèves et a se critiquer durement lorsque l'on ne les atteint pas. Elle peut pousser a réussir, mais lorsqu'elle devient severe, elle favorise depression et troubles obsessionnels.">perfectionnisme (Perfectionism)</abbr> n'est pas la cle du succes : c'est un poison qui ronge l'estime de soi. Ce n'est pas le simple desir de mieux faire, mais un mecanisme de defense pour eviter la critique.
 
 ## 1. Les trois visages du perfectionnisme (modele de Hewitt & Flett)
 
-1.  **Oriente vers soi (Self-Oriented) :** "Je dois être parfait." La personne ne cesse de se fouetter interieurement. Les performances peuvent être élèvees, mais le risque de depression aussi.
-2.  **Orienté vers les autres (Other-Oriented) :** "Tu dois être parfait." La personne impose aux autres des critères stricts. Les relations se détériorent facilement.
-3.  **Socialement prescrit (Socially Prescribed) :** "Les gens attendent de moi que je sois parfait." La personne surveille excessivement le regard d'autrui et joue sans cesse un role. C'est le type le plus dangereux.
+1. **Oriente vers soi (Self-Oriented) :** "Je dois être parfait." La personne ne cesse de se fouetter interieurement. Les performances peuvent être élèvees, mais le risque de depression aussi.
+2. **Orienté vers les autres (Other-Oriented) :** "Tu dois être parfait." La personne impose aux autres des critères stricts. Les relations se détériorent facilement.
+3. **Socialement prescrit (Socially Prescribed) :** "Les gens attendent de moi que je sois parfait." La personne surveille excessivement le regard d'autrui et joue sans cesse un role. C'est le type le plus dangereux.
 
 ## 2. La difference entre "effort" et "perfectionnisme"
 
@@ -46,16 +41,8 @@ Vos erreurs, vos manques, vos blessures... ce sont precisement ces traits qui vo
 
 ### References
 
-<ResearchReference
-  author="Paul Hewitt & Gordon Flett"
-  year="1991"
-  source="Dimensions of Perfectionism"
-/>
-<ResearchReference
-  author="Brene Brown"
-  year="2010"
-  source="The Gifts of Imperfection"
-/>
+> **Paul Hewitt & Gordon Flett** (1991) *Dimensions of Perfectionism*
+> **Brene Brown** (2010) *The Gifts of Imperfection*
 
 ---
 

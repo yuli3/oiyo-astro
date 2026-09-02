@@ -7,14 +7,9 @@ definition: "E 与 I、T 与 F……短短四个字母里藏着我的心理代�
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="摘要 (Abstract)">
-  “你是 T 吗？”在韩国，这个问题几乎成了寒暄。{" "}
-  <Term definition="Myers-Briggs Type Indicator（迈尔斯-布里格斯类型指标）。基于 Carl Jung 的心理类型理论建立的人格测验。它组合 4 个维度，将人格分为 16 种类型。">
-    MBTI
-  </Term>
-  已经不只是流行，而成了理解彼此差异的共同语言。只有理解被网络梗遮住的
-  MBTI 深层心理学根源，我们才真正能够尊重他人。
-</HighlightBox>
+> **摘要 (Abstract)**
+>
+> “你是 T 吗？”在韩国，这个问题几乎成了寒暄。 <abbr title="Myers-Briggs Type Indicator（迈尔斯-布里格斯类型指标）。基于 Carl Jung 的心理类型理论建立的人格测验。它组合 4 个维度，将人格分为 16 种类型。">MBTI</abbr> 已经不只是流行，而成了理解彼此差异的共同语言。只有理解被网络梗遮住的 MBTI 深层心理学根源，我们才真正能够尊重他人。
 
 ## 1. 起源：Jung 的洞察与两位女性的奉献
 
@@ -66,16 +61,8 @@ MBTI 不应该变成一句“你就是这种人”的监狱。它应该是一扇
 
 ### 参考文献列表
 
-<ResearchReference
-  author="Isabel Briggs Myers"
-  year="1980"
-  source="Gifts Differing: Understanding Personality Type"
-/>
-<ResearchReference
-  author="Carl Jung"
-  year="1921"
-  source="Psychological Types"
-/>
+> **Isabel Briggs Myers** (1980) *Gifts Differing: Understanding Personality Type*
+> **Carl Jung** (1921) *Psychological Types*
 
 ---
 

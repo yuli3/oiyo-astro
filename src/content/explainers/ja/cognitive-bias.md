@@ -7,13 +7,9 @@ definition: "私たちは自分が合理的だと信じています。しかし�
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="要約 (Abstract)">
-  なぜ私たちは聞きたいことだけ聞いて（確証バイアス）、人のせいにするのでしょうか（利己的バイアス）？
-  <Term definition="脳が情報を処理する時に使用する一種の「思考の近道(Heuristics)」。複雑な問題を早く解決させてくれますが、しばしば非合理的な判断を下させる原因になります。">
-    認知バイアス (Cognitive Biases)
-  </Term>
-  は壊れているのではありません。原始時代の生存のために発達した本能が現代社会と衝突しているのです。
-</HighlightBox>
+> **要約 (Abstract)**
+>
+> なぜ私たちは聞きたいことだけ聞いて（確証バイアス）、人のせいにするのでしょうか（利己的バイアス）？ <abbr title="脳が情報を処理する時に使用する一種の「思考の近道(Heuristics)」。複雑な問題を早く解決させてくれますが、しばしば非合理的な判断を下させる原因になります。">認知バイアス (Cognitive Biases)</abbr> は壊れているのではありません。原始時代の生存のために発達した本能が現代社会と衝突しているのです。
 
 ## 1. 確証バイアス (Confirmation Bias)：「答えは決まっている」
 
@@ -44,16 +40,8 @@ updated: 2026-01-18
 
 ### 参考文献
 
-<ResearchReference
-  author="Daniel Kahneman"
-  year="2011"
-  source="Thinking, Fast and Slow"
-/>
-<ResearchReference
-  author="Amos Tversky & Daniel Kahneman"
-  year="1974"
-  source="Judgment under Uncertainty: Heuristics and Biases"
-/>
+> **Daniel Kahneman** (2011) *Thinking, Fast and Slow*
+> **Amos Tversky & Daniel Kahneman** (1974) *Judgment under Uncertainty: Heuristics and Biases*
 
 ---
 

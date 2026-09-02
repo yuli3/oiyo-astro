@@ -7,14 +7,9 @@ definition: "为什么每次恋爱都会不安，或想要逃开？童年与父�
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="摘要 (Abstract)">
-  我们都为了被爱而出生。但每个人爱的方式并不相同。{" "}
-  <Term definition="英国心理学家约翰·鲍尔比提出的理论。它认为婴幼儿期与主要照护者形成的情感联结，会对成年后的人际关系和恋爱方式产生决定性影响。">
-    依恋理论（Attachment Theory）
-  </Term>
-  告诉你，为什么你的爱会疼，或者为什么你的爱显得冷。它不是为了责怪谁，而是
-  为了疗愈。
-</HighlightBox>
+> **摘要 (Abstract)**
+>
+> 我们都为了被爱而出生。但每个人爱的方式并不相同。 <abbr title="英国心理学家约翰·鲍尔比提出的理论。它认为婴幼儿期与主要照护者形成的情感联结，会对成年后的人际关系和恋爱方式产生决定性影响。">依恋理论（Attachment Theory）</abbr> 告诉你，为什么你的爱会疼，或者为什么你的爱显得冷。它不是为了责怪谁，而是 为了疗愈。
 
 ## 1. 安全型（Secure）：温暖的港湾
 
@@ -47,20 +42,10 @@ updated: 2026-01-18
 
 ### 参考文献列表
 
-<ResearchReference
-  author="John Bowlby"
-  year="1969"
-  source="Attachment and Loss"
-/>
-<ResearchReference
-  author="Amir Levine & Rachel Heller"
-  year="2010"
-  source="Attached"
-/>
+> **John Bowlby** (1969) *Attachment and Loss*
+> **Amir Levine & Rachel Heller** (2010) *Attached*
 
 ---
-
-<TermCatalog set="attachment" />
 
 ### 常见问题（FAQ）
 

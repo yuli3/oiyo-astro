@@ -7,14 +7,9 @@ definition: "Why do you push people away?"
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Abstract">
-  Love is not a mystery; it is a biological imperative mapped by **Attachment
-  Theory**. Originated by John Bowlby and codified by Mary Ainsworth, this
-  framework explains how our early interactions with caregivers create a
-  lifelong "blueprint" for intimacy. This research paper explores the three
-  primary styles—Secure, Anxious, and Avoidant—and how to earn "Earned
-  Security."
-</HighlightBox>
+> **Abstract**
+>
+> Love is not a mystery; it is a biological imperative mapped by **Attachment Theory**. Originated by John Bowlby and codified by Mary Ainsworth, this framework explains how our early interactions with caregivers create a lifelong "blueprint" for intimacy. This research paper explores the three primary styles—Secure, Anxious, and Avoidant—and how to earn "Earned Security."
 
 ## 1. Genesis: The Strange Situation
 
@@ -57,11 +52,9 @@ The path to healing:
 - **For Anxious:** Learn self-soothing. Stop protesting for attention (text bombing) and express needs directly.
 - **For Avoidant:** Learn to tolerate vulnerability. Recognize that needing others is human, not weak.
 
-<HighlightBox type="insight" title="Scholarly Insight">
-  **Co-Regulation:** Humans are not designed to self-regulate in isolation. We
-  are *obligatory gregarious species*. A healthy relationship functions as a
-  shared nervous system where partners down-regulate each other's stress.
-</HighlightBox>
+> **Scholarly Insight**
+>
+> **Co-Regulation:** Humans are not designed to self-regulate in isolation. We are *obligatory gregarious species*. A healthy relationship functions as a shared nervous system where partners down-regulate each other's stress.
 
 ## 5. Conclusion: The Secure Base
 
@@ -71,20 +64,10 @@ The goal of life is not total independence, but **effective dependence**. When w
 
 ### References
 
-<ResearchReference
-  author="John Bowlby"
-  year="1969"
-  source="Attachment and Loss, Vol. 1: Attachment"
-/>
-<ResearchReference
-  author="Levine & Heller"
-  year="2010"
-  source="Attached: The New Science of Adult Attachment"
-/>
+> **John Bowlby** (1969) *Attachment and Loss, Vol. 1: Attachment*
+> **Levine & Heller** (2010) *Attached: The New Science of Adult Attachment*
 
 ---
-
-<TermCatalog set="attachment" />
 
 ### FAQ
 

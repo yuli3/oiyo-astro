@@ -7,14 +7,9 @@ definition: "¿Por qué en cada relación amorosa te sientes ansioso o quieres e
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Resumen (Abstract)">
-  Todos nacemos para ser amados. Pero cada persona ama de una manera distinta.{" "}
-  <Term definition="Teoría propuesta por el psicólogo británico John Bowlby. Sostiene que el vínculo emocional formado con el cuidador principal durante la infancia influye de manera decisiva en las relaciones interpersonales y amorosas en la adultez.">
-    teoría del apego (Attachment Theory)
-  </Term>
-  ofrece una respuesta a por qué tu amor duele o por qué se vuelve frío. No sirve para culpar,
-  sino para sanar.
-</HighlightBox>
+> **Resumen (Abstract)**
+>
+> Todos nacemos para ser amados. Pero cada persona ama de una manera distinta. <abbr title="Teoría propuesta por el psicólogo británico John Bowlby. Sostiene que el vínculo emocional formado con el cuidador principal durante la infancia influye de manera decisiva en las relaciones interpersonales y amorosas en la adultez.">teoría del apego (Attachment Theory)</abbr> ofrece una respuesta a por qué tu amor duele o por qué se vuelve frío. No sirve para culpar, sino para sanar.
 
 ## 1. Seguro (Secure): un puerto cálido
 
@@ -47,20 +42,10 @@ El estilo de apego no es un destino. Existe la expresión "seguro adquirido (Ear
 
 ### Lista de referencias
 
-<ResearchReference
-  author="John Bowlby"
-  year="1969"
-  source="Attachment and Loss"
-/>
-<ResearchReference
-  author="Amir Levine & Rachel Heller"
-  year="2010"
-  source="Attached"
-/>
+> **John Bowlby** (1969) *Attachment and Loss*
+> **Amir Levine & Rachel Heller** (2010) *Attached*
 
 ---
-
-<TermCatalog set="attachment" />
 
 ### Preguntas frecuentes (FAQ)
 

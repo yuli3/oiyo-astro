@@ -59,6 +59,12 @@ const updated = entry.data.updated.toISOString().slice(0, 10);
   .explainer-prose ul { list-style: disc; }
   .explainer-prose ol { list-style: decimal; }
   .explainer-prose li + li { margin-top: 0.45rem; }
+  /* 원문 MDX 의 <Term> 을 옮긴 것. 정의가 달려 있다는 표시가 없으면 아무도 올려 보지 않는다. */
+  .explainer-prose abbr[title] {
+    text-decoration: underline dotted var(--primary);
+    text-underline-offset: 3px;
+    cursor: help;
+  }
   .explainer-prose blockquote {
     border-left: 3px solid var(--primary); padding-left: 1rem;
     color: var(--muted-foreground); font-style: italic;

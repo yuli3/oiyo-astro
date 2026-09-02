@@ -7,13 +7,9 @@ definition: "我们相信自己很理性。但大脑为了节省能量，会不�
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="摘要（Abstract）">
-  为什么我们只听自己想听的话（确认偏差），又常常把问题推给别人（自利偏差）？{" "}
-  <Term definition="大脑处理信息时使用的一种“思考捷径（Heuristics）”。它能帮助我们快速解决复杂问题，却也常常导致非理性判断。">
-    认知偏差（Cognitive Biases）
-  </Term>
-  并不是大脑坏掉了。它是为原始时代生存而发展出的本能，与现代社会发生了碰撞。
-</HighlightBox>
+> **摘要（Abstract）**
+>
+> 为什么我们只听自己想听的话（确认偏差），又常常把问题推给别人（自利偏差）？ <abbr title="大脑处理信息时使用的一种“思考捷径（Heuristics）”。它能帮助我们快速解决复杂问题，却也常常导致非理性判断。">认知偏差（Cognitive Biases）</abbr> 并不是大脑坏掉了。它是为原始时代生存而发展出的本能，与现代社会发生了碰撞。
 
 ## 1. 确认偏差（Confirmation Bias）：“答案早就定好了”
 
@@ -44,16 +40,8 @@ updated: 2026-01-18
 
 ### 参考文献列表
 
-<ResearchReference
-  author="Daniel Kahneman"
-  year="2011"
-  source="Thinking, Fast and Slow"
-/>
-<ResearchReference
-  author="Amos Tversky & Daniel Kahneman"
-  year="1974"
-  source="Judgment under Uncertainty: Heuristics and Biases"
-/>
+> **Daniel Kahneman** (2011) *Thinking, Fast and Slow*
+> **Amos Tversky & Daniel Kahneman** (1974) *Judgment under Uncertainty: Heuristics and Biases*
 
 ---
 

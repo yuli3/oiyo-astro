@@ -7,13 +7,9 @@ definition: "EとI、TとF..."
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="要約 (Abstract)">
-  「あなたのMBTIは何？」この質問は、今や新しい挨拶となりました。
-  <Term definition="マイヤーズ・ブリッグス・タイプ指標(Myers-Briggs Type Indicator)。カール・ユングの心理学的タイプ論を元に作られた性格検査。4つの指標を組み合わせて16のタイプに分類します。">
-    MBTI
-  </Term>
-  は単なる流行を超え、お互いの違いを理解するための共通言語となっています。しかし、インターネット上のミーム(Meme)に隠されたMBTIの深い心理学的ルーツを理解した時、私たちは初めて他者を心から尊重できるようになります。
-</HighlightBox>
+> **要約 (Abstract)**
+>
+> 「あなたのMBTIは何？」この質問は、今や新しい挨拶となりました。 <abbr title="マイヤーズ・ブリッグス・タイプ指標(Myers-Briggs Type Indicator)。カール・ユングの心理学的タイプ論を元に作られた性格検査。4つの指標を組み合わせて16のタイプに分類します。">MBTI</abbr> は単なる流行を超え、お互いの違いを理解するための共通言語となっています。しかし、インターネット上のミーム(Meme)に隠されたMBTIの深い心理学的ルーツを理解した時、私たちは初めて他者を心から尊重できるようになります。
 
 ## 1. 起源：ユングの洞察と二人の女性の献身
 
@@ -65,16 +61,8 @@ MBTIは「あなたはこういう人だ」と決めつける檻になっては�
 
 ### 参考文献
 
-<ResearchReference
-  author="Isabel Briggs Myers"
-  year="1980"
-  source="Gifts Differing: Understanding Personality Type"
-/>
-<ResearchReference
-  author="Carl Jung"
-  year="1921"
-  source="Psychological Types"
-/>
+> **Isabel Briggs Myers** (1980) *Gifts Differing: Understanding Personality Type*
+> **Carl Jung** (1921) *Psychological Types*
 
 ---
 

@@ -7,15 +7,9 @@ definition: "El estándar de oro del análisis de personalidad, considerado más
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Resumen (Abstract)">
-  El modelo de personalidad más confiable en psicología,{" "}
-  <Term definition="Modelo psicológico que clasifica la personalidad en cinco factores: apertura, responsabilidad, extraversión, amabilidad y neuroticismo. Ha sido validado por décadas de investigación estadística.">
-    Big 5 (modelo de cinco factores)
-  </Term>
-  , no divide a las personas en "tipos (Type)", sino que las describe mediante rasgos
-  graduados (Trait). No eres una persona introvertida: eres una persona con baja puntuación en
-  extraversión. Esa diferencia sutil te describe con mayor precisión.
-</HighlightBox>
+> **Resumen (Abstract)**
+>
+> El modelo de personalidad más confiable en psicología, <abbr title="Modelo psicológico que clasifica la personalidad en cinco factores: apertura, responsabilidad, extraversión, amabilidad y neuroticismo. Ha sido validado por décadas de investigación estadística.">Big 5 (modelo de cinco factores)</abbr> , no divide a las personas en "tipos (Type)", sino que las describe mediante rasgos graduados (Trait). No eres una persona introvertida: eres una persona con baja puntuación en extraversión. Esa diferencia sutil te describe con mayor precisión.
 
 ## 1. Origen: la personalidad escondida en el lenguaje
 
@@ -70,20 +64,10 @@ Conocer mi personalidad es como sentarme en la cabina de mando de mi mente. Si s
 
 ### Lista de referencias
 
-<ResearchReference
-  author="Paul Costa & Robert McCrae"
-  year="1992"
-  source="NEO PI-R Professional Manual"
-/>
-<ResearchReference
-  author="Lewis Goldberg"
-  year="1993"
-  source="The Structure of Phenotypic Personality Traits"
-/>
+> **Paul Costa & Robert McCrae** (1992) *NEO PI-R Professional Manual*
+> **Lewis Goldberg** (1993) *The Structure of Phenotypic Personality Traits*
 
 ---
-
-<TermCatalog set="big5" />
 
 ### Preguntas frecuentes (FAQ)
 

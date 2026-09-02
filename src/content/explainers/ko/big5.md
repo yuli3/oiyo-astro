@@ -7,15 +7,9 @@ definition: "혈액형이나 MBTI보다 더 과학적이라고 평가받는 성�
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="요약 (Abstract)">
-  심리학계에서 가장 신뢰하는 성격 모델인{" "}
-  <Term definition="성격을 개방성, 성실성, 외향성, 우호성, 신경성의 5가지 요인으로 분류하는 심리학 모델. 수십 년간의 통계적 연구로 검증되었습니다.">
-    Big 5 (5요인 모델)
-  </Term>
-  는 사람을 '유형(Type)'으로 나누지 않고 '수치(Trait)'로 설명합니다. 당신은
-  내향적인 사람이 아니라, 외향성 점수가 낮은 사람입니다. 이 미묘한 차이가 당신을
-  더 정확하게 설명해줍니다.
-</HighlightBox>
+> **요약 (Abstract)**
+>
+> 심리학계에서 가장 신뢰하는 성격 모델인 <abbr title="성격을 개방성, 성실성, 외향성, 우호성, 신경성의 5가지 요인으로 분류하는 심리학 모델. 수십 년간의 통계적 연구로 검증되었습니다.">Big 5 (5요인 모델)</abbr>는 사람을 '유형(Type)'으로 나누지 않고 '수치(Trait)'로 설명합니다. 당신은 내향적인 사람이 아니라, 외향성 점수가 낮은 사람입니다. 이 미묘한 차이가 당신을 더 정확하게 설명해줍니다.
 
 ## 1. 기원: 언어 속에 숨은 성격
 
@@ -70,18 +64,8 @@ MBTI는 사람을 16개의 방에 가듭니다. "당신은 T(이성)입니다"�
 
 ### 참고 문헌 목록
 
-<ResearchReference
-  author="Paul Costa & Robert McCrae"
-  year="1992"
-  source="NEO PI-R Professional Manual"
-/>
-<ResearchReference
-  author="Lewis Goldberg"
-  year="1993"
-  source="The Structure of Phenotypic Personality Traits"
-/>
-
-<TermCatalog set="big5" />
+> **Paul Costa & Robert McCrae** (1992) *NEO PI-R Professional Manual*
+> **Lewis Goldberg** (1993) *The Structure of Phenotypic Personality Traits*
 
 ---
 

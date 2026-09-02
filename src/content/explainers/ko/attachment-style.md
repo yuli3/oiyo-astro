@@ -7,9 +7,9 @@ definition: "애착 이론은 위협이나 불안 상황에서 가까운 사람�
 updated: 2026-08-29
 ---
 
-<HighlightBox type="abstract" title="요약 (Abstract)">
-  애착 이론은 존 볼비와 메리 에인스워스의 연구에서 발전했습니다. 초기 양육 경험은 이후 관계와 관련될 수 있지만 성인의 연애 방식을 결정하는 운명표는 아닙니다. 연구에서는 범주형 ‘유형’과 함께 애착 불안과 회피라는 연속적 차원을 사용합니다.
-</HighlightBox>
+> **요약 (Abstract)**
+>
+> 애착 이론은 존 볼비와 메리 에인스워스의 연구에서 발전했습니다. 초기 양육 경험은 이후 관계와 관련될 수 있지만 성인의 연애 방식을 결정하는 운명표는 아닙니다. 연구에서는 범주형 ‘유형’과 함께 애착 불안과 회피라는 연속적 차원을 사용합니다.
 
 ## 핵심 개념
 
@@ -33,11 +33,9 @@ updated: 2026-08-29
 
 ### 참고 문헌 목록
 
-<ResearchReference author="John Bowlby" year="1969" source="Attachment and Loss, Vol. 1" />
-<ResearchReference author="R. Chris Fraley" year="2019" source="Attachment in Adulthood: Recent Developments, Emerging Debates, and Future Directions" />
-<ResearchReference author="Pinquart, Feussner & Ahnert" year="2013" source="Meta-analytic evidence for stability in attachments from infancy to early adulthood" />
-
-<TermCatalog set="attachment" />
+> **John Bowlby** (1969) *Attachment and Loss, Vol. 1*
+> **R. Chris Fraley** (2019) *Attachment in Adulthood: Recent Developments, Emerging Debates, and Future Directions*
+> **Pinquart, Feussner & Ahnert** (2013) *Meta-analytic evidence for stability in attachments from infancy to early adulthood*
 
 ### 자주 묻는 질문 (FAQ)
 

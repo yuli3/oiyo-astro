@@ -7,15 +7,9 @@ definition: "E와 I, T와 F..."
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="요약 (Abstract)">
-  "너 T야?" 한국에서 이 질문은 인사가 되었습니다.{" "}
-  <Term definition="마이어스-브릭스 유형 지표(Myers-Briggs Type Indicator). 칼 융의 심리 유형론을 바탕으로 만든 성격 검사. 4가지 척도를 조합해 16가지 유형으로 분류합니다.">
-    MBTI
-  </Term>
-  는 단순한 유행을 넘어, 서로의 다름을 이해하는 공용어가 되었습니다. 하지만
-  인터넷 밈(Meme)에 가려진 MBTI의 깊은 심리학적 뿌리를 이해할 때, 우리는 비로소
-  타인을 진정으로 존중할 수 있습니다.
-</HighlightBox>
+> **요약 (Abstract)**
+>
+> "너 T야?" 한국에서 이 질문은 인사가 되었습니다. <abbr title="마이어스-브릭스 유형 지표(Myers-Briggs Type Indicator). 칼 융의 심리 유형론을 바탕으로 만든 성격 검사. 4가지 척도를 조합해 16가지 유형으로 분류합니다.">MBTI</abbr>는 단순한 유행을 넘어, 서로의 다름을 이해하는 공용어가 되었습니다. 하지만 인터넷 밈(Meme)에 가려진 MBTI의 깊은 심리학적 뿌리를 이해할 때, 우리는 비로소 타인을 진정으로 존중할 수 있습니다.
 
 ## 1. 기원: 융의 통찰과 두 여인의 헌신
 
@@ -67,16 +61,8 @@ MBTI는 "너는 이런 사람이야"라고 단정 짓는 감옥이 되어서는 
 
 ### 참고 문헌 목록
 
-<ResearchReference
-  author="Isabel Briggs Myers"
-  year="1980"
-  source="Gifts Differing: Understanding Personality Type"
-/>
-<ResearchReference
-  author="Carl Jung"
-  year="1921"
-  source="Psychological Types"
-/>
+> **Isabel Briggs Myers** (1980) *Gifts Differing: Understanding Personality Type*
+> **Carl Jung** (1921) *Psychological Types*
 
 ---
 

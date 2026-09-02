@@ -7,13 +7,9 @@ definition: "血液型やMBTIよりも科学的だと評価される性格分析
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="要約 (Abstract)">
-  心理学界で最も信頼されている性格モデルである
-  <Term definition="性格を開放性、誠実性、外向性、協調性、神経症傾向の5つの因子で分類する心理学モデル。数十年の統計的研究で検証されています。">
-    ビッグファイブ (Big 5)
-  </Term>
-  は、人を「タイプ」で分けるのではなく、「数値(Trait)」で説明します。あなたは内向的な人ではありません。「外向性のスコアが低い人」です。この微妙な違いが、あなたをより正確に説明してくれます。
-</HighlightBox>
+> **要約 (Abstract)**
+>
+> 心理学界で最も信頼されている性格モデルである <abbr title="性格を開放性、誠実性、外向性、協調性、神経症傾向の5つの因子で分類する心理学モデル。数十年の統計的研究で検証されています。">ビッグファイブ (Big 5)</abbr> は、人を「タイプ」で分けるのではなく、「数値(Trait)」で説明します。あなたは内向的な人ではありません。「外向性のスコアが低い人」です。この微妙な違いが、あなたをより正確に説明してくれます。
 
 ## 1. 起源：言葉の中に隠れた性格
 
@@ -68,20 +64,10 @@ MBTIは人を16の部屋に閉じ込めます。「あなたはT（思考）で�
 
 ### 参考文献
 
-<ResearchReference
-  author="Paul Costa & Robert McCrae"
-  year="1992"
-  source="NEO PI-R Professional Manual"
-/>
-<ResearchReference
-  author="Lewis Goldberg"
-  year="1993"
-  source="The Structure of Phenotypic Personality Traits"
-/>
+> **Paul Costa & Robert McCrae** (1992) *NEO PI-R Professional Manual*
+> **Lewis Goldberg** (1993) *The Structure of Phenotypic Personality Traits*
 
 ---
-
-<TermCatalog set="big5" />
 
 ### よくある質問 (FAQ)
 

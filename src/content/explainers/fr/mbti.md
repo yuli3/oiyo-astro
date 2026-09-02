@@ -7,15 +7,9 @@ definition: "E et I, T et F..."
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Résumé (Abstract)">
-  "Tu es T ?" En Corée, cette question est presque devenue une formule de salutation.{" "}
-  <Term definition="Indicateur typologique de Myers-Briggs (Myers-Briggs Type Indicator). Test de personnalité fondé sur la typologie psychologique de Carl Jung. Il combine quatre axes pour classer les personnes en 16 types.">
-    Le MBTI
-  </Term>
-  a depassé le simple effet de mode : il est devenu une langue commune pour comprendre
-  nos differences. Mais c'est en regardant au-dela des mêmes Internet et en comprenant
-  ses racines psychologiques que nous pouvons vraiment respecter les autres.
-</HighlightBox>
+> **Résumé (Abstract)**
+>
+> "Tu es T ?" En Corée, cette question est presque devenue une formule de salutation. <abbr title="Indicateur typologique de Myers-Briggs (Myers-Briggs Type Indicator). Test de personnalité fondé sur la typologie psychologique de Carl Jung. Il combine quatre axes pour classer les personnes en 16 types.">Le MBTI</abbr> a depassé le simple effet de mode : il est devenu une langue commune pour comprendre nos differences. Mais c'est en regardant au-dela des mêmes Internet et en comprenant ses racines psychologiques que nous pouvons vraiment respecter les autres.
 
 ## 1. Origine : l'intuition de Jung et le devouement de deux femmes
 
@@ -67,16 +61,8 @@ Le MBTI ne doit pas devenir une prison qui declare : "Tu es comme ca." Il doit �
 
 ### References
 
-<ResearchReference
-  author="Isabel Briggs Myers"
-  year="1980"
-  source="Gifts Differing: Understanding Personality Type"
-/>
-<ResearchReference
-  author="Carl Jung"
-  year="1921"
-  source="Psychological Types"
-/>
+> **Isabel Briggs Myers** (1980) *Gifts Differing: Understanding Personality Type*
+> **Carl Jung** (1921) *Psychological Types*
 
 ---
 

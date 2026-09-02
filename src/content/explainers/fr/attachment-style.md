@@ -7,14 +7,9 @@ definition: "Pourquoi devenons-nous anxieux ou avons-nous envie de fuir à chaqu
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Résumé (Abstract)">
-  Nous sommes tous nés pour être aimés. Mais chacun apprend à aimer d'une manière différente.{" "}
-  <Term definition="Théorie proposée par le psychologue britannique John Bowlby. Elle explique que le lien affectif formé avec le principal donneur de soins durant la petite enfance influence de façon décisive les relations interpersonnelles et amoureuses à l'âge adulte.">
-    la théorie de l'attachement (Attachment Theory)
-  </Term>
-  explique pourquoi votre amour peut faire mal, ou pourquoi il peut sembler froid. Elle ne sert pas
-  à blâmer, mais à guérir.
-</HighlightBox>
+> **Résumé (Abstract)**
+>
+> Nous sommes tous nés pour être aimés. Mais chacun apprend à aimer d'une manière différente. <abbr title="Théorie proposée par le psychologue britannique John Bowlby. Elle explique que le lien affectif formé avec le principal donneur de soins durant la petite enfance influence de façon décisive les relations interpersonnelles et amoureuses à l'âge adulte.">la théorie de l'attachement (Attachment Theory)</abbr> explique pourquoi votre amour peut faire mal, ou pourquoi il peut sembler froid. Elle ne sert pas à blâmer, mais à guérir.
 
 ## 1. Sécure (Secure) : un port chaleureux
 
@@ -47,20 +42,10 @@ Le style d'attachement n'est pas un destin. On parle d'"attachement sécure acqu
 
 ### Références
 
-<ResearchReference
-  author="John Bowlby"
-  year="1969"
-  source="Attachment and Loss"
-/>
-<ResearchReference
-  author="Amir Levine & Rachel Heller"
-  year="2010"
-  source="Attached"
-/>
+> **John Bowlby** (1969) *Attachment and Loss*
+> **Amir Levine & Rachel Heller** (2010) *Attached*
 
 ---
-
-<TermCatalog set="attachment" />
 
 ### Questions fréquentes (FAQ)
 

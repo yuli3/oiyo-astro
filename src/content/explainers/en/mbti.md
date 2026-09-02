@@ -7,14 +7,9 @@ definition: "Beyond the memes lies a rigorous system of cognitive processing."
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Abstract">
-  The Myers-Briggs Type Indicator (MBTI) is the most famous personality test in
-  the world, yet the most misunderstood. It is often reduced to four letters
-  (e.g., INTJ), but its true power lies in the **Cognitive Functions** beneath
-  the letters. This whitepaper moves beyond the "E vs I" stereotypes to explore
-  the 8 mental processes that form the "Operating System" of the 16 personality
-  types.
-</HighlightBox>
+> **Abstract**
+>
+> The Myers-Briggs Type Indicator (MBTI) is the most famous personality test in the world, yet the most misunderstood. It is often reduced to four letters (e.g., INTJ), but its true power lies in the **Cognitive Functions** beneath the letters. This whitepaper moves beyond the "E vs I" stereotypes to explore the 8 mental processes that form the "Operating System" of the 16 personality types.
 
 ## 1. Genesis: Jung's Psychological Types
 
@@ -26,27 +21,27 @@ Your type is not a static box; it is a hierarchy of four functions.
 
 ### The Perception Axes (How you see)
 
-1.  **Se (Extroverted Sensing):** "What is." Living in the moment, physics, action. (The Athlete)
-2.  **Si (Introverted Sensing):** "What was." Memory, routine, tradition, detail. (The Historian)
-3.  **Ne (Extroverted Intuition):** "What could be." Brainstorming, patterns, possibilities. (The Innovator)
-4.  **Ni (Introverted Intuition):** "What will be." Vision, condensation, synthesis. (The Prophet)
+1. **Se (Extroverted Sensing):** "What is." Living in the moment, physics, action. (The Athlete)
+2. **Si (Introverted Sensing):** "What was." Memory, routine, tradition, detail. (The Historian)
+3. **Ne (Extroverted Intuition):** "What could be." Brainstorming, patterns, possibilities. (The Innovator)
+4. **Ni (Introverted Intuition):** "What will be." Vision, condensation, synthesis. (The Prophet)
 
 ### The Judgment Axes (How you decide)
 
-1.  **Te (Extroverted Thinking):** "Does it work?" Efficiency, logic, systems, tribal realism. (The CEO)
-2.  **Ti (Introverted Thinking):** "Is it true?" Accuracy, internal logic, frameworks. (The Architect)
-3.  **Fe (Extroverted Feeling):** "How do we feel?" Harmony, social norms, connection. (The Diplomat)
-4.  **Fi (Introverted Feeling):** "How do I feel?" Authenticity, values, individualism. (The Artist)
+1. **Te (Extroverted Thinking):** "Does it work?" Efficiency, logic, systems, tribal realism. (The CEO)
+2. **Ti (Introverted Thinking):** "Is it true?" Accuracy, internal logic, frameworks. (The Architect)
+3. **Fe (Extroverted Feeling):** "How do we feel?" Harmony, social norms, connection. (The Diplomat)
+4. **Fi (Introverted Feeling):** "How do I feel?" Authenticity, values, individualism. (The Artist)
 
 ## 3. The Functional Stack
 
 Every type has a "Hero" (Dominant), "Parent" (Auxiliary), "Child" (Tertiary), and "Inferior" function.
 
 - **Example: INTP**
-  - **Hero (Ti):** Obsessed with logical accuracy.
-  - **Parent (Ne):** Explores possibilities to feed the logic.
-  - **Child (Si):** Nostalgic and comfort-seeking.
-  - **Inferior (Fe):** Anxious about social rejection.
+ - **Hero (Ti):** Obsessed with logical accuracy.
+ - **Parent (Ne):** Explores possibilities to feed the logic.
+ - **Child (Si):** Nostalgic and comfort-seeking.
+ - **Inferior (Fe):** Anxious about social rejection.
 
 The drama of life is the struggle to balance the Hero and the Inferior.
 
@@ -59,12 +54,9 @@ MBTI is the language of **Cognitive Diversity**. It teaches us that conflicts ar
 
 Understanding this allows us to move from judgment ("You are annoying") to appreciation ("You are processing data differently").
 
-<HighlightBox type="insight" title="Scholarly Insight">
-  **Ambiversion:** The MBTI says everyone is an "Ambivert." If your Dominant
-  function is Introverted (e.g., Ti), your Auxiliary MUST be Extroverted (e.g.,
-  Se or Ne). No one is purely Introverted or Extroverted; we all must engage
-  with both the inner and outer worlds to survive.
-</HighlightBox>
+> **Scholarly Insight**
+>
+> **Ambiversion:** The MBTI says everyone is an "Ambivert." If your Dominant function is Introverted (e.g., Ti), your Auxiliary MUST be Extroverted (e.g., Se or Ne). No one is purely Introverted or Extroverted; we all must engage with both the inner and outer worlds to survive.
 
 ## 5. Conclusion: The Hero's Journey
 
@@ -74,21 +66,9 @@ Your type is your starting point, unique "stats" suitable for a specific class o
 
 ### References
 
-<ResearchReference
-  author="C.G. Jung"
-  year="1921"
-  source="Psychological Types"
-/>
-<ResearchReference
-  author="Isabel Briggs Myers"
-  year="1980"
-  source="Gifts Differing: Understanding Personality Type"
-/>
-<ResearchReference
-  author="Linda Berens"
-  year="1999"
-  source="Understanding Yourself and Others: An Introduction to the Personality Type Code"
-/>
+> **C.G. Jung** (1921) *Psychological Types*
+> **Isabel Briggs Myers** (1980) *Gifts Differing: Understanding Personality Type*
+> **Linda Berens** (1999) *Understanding Yourself and Others: An Introduction to the Personality Type Code*
 
 ---
 

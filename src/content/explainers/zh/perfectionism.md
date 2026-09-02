@@ -7,20 +7,15 @@ definition: "你是在追求完美，还是害怕失败？这篇文章写给那�
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="摘要 (Abstract)">
-  我们从小听着“要做到完美”的咒语长大。但心理学所说的{" "}
-  <Term definition="为自己设定过高标准，并在达不到标准时严厉批评自己的倾向。它有时会成为成就的动力，但严重时也可能导致抑郁和强迫症。">
-    完美主义（Perfectionism）
-  </Term>
-  并不是成功的钥匙，而是侵蚀自尊的毒。它不是“想做得更好”的欲望，而是
-  “为了不被批评”的防御机制。
-</HighlightBox>
+> **摘要 (Abstract)**
+>
+> 我们从小听着“要做到完美”的咒语长大。但心理学所说的 <abbr title="为自己设定过高标准，并在达不到标准时严厉批评自己的倾向。它有时会成为成就的动力，但严重时也可能导致抑郁和强迫症。">完美主义（Perfectionism）</abbr> 并不是成功的钥匙，而是侵蚀自尊的毒。它不是“想做得更好”的欲望，而是 “为了不被批评”的防御机制。
 
 ## 1. 完美主义的三张面孔（Hewitt & Flett 模型）
 
-1.  **自我导向型（Self-Oriented）：** “我必须完美。” 不停鞭策自己。成就水平可能很高，但抑郁风险也高。
-2.  **他人导向型（Other-Oriented）：** “你必须完美。” 用严格标准要求别人。人际关系很容易破裂。
-3.  **社会规定型（Socially Prescribed）：** “人们期待我完美。” 过度在意他人的目光，总是戴着面具表演。（最危险的类型）
+1. **自我导向型（Self-Oriented）：** “我必须完美。” 不停鞭策自己。成就水平可能很高，但抑郁风险也高。
+2. **他人导向型（Other-Oriented）：** “你必须完美。” 用严格标准要求别人。人际关系很容易破裂。
+3. **社会规定型（Socially Prescribed）：** “人们期待我完美。” 过度在意他人的目光，总是戴着面具表演。（最危险的类型）
 
 ## 2. “努力”和“完美主义”的差异
 
@@ -46,16 +41,8 @@ updated: 2026-01-18
 
 ### 参考文献列表
 
-<ResearchReference
-  author="Paul Hewitt & Gordon Flett"
-  year="1991"
-  source="Dimensions of Perfectionism"
-/>
-<ResearchReference
-  author="Brene Brown"
-  year="2010"
-  source="The Gifts of Imperfection"
-/>
+> **Paul Hewitt & Gordon Flett** (1991) *Dimensions of Perfectionism*
+> **Brene Brown** (2010) *The Gifts of Imperfection*
 
 ---
 

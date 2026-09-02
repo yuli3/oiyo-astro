@@ -7,16 +7,9 @@ definition: "Nous aimons croire que nous sommes rationnels."
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Résumé (Abstract)">
-  Pourquoi n’entendons-nous que ce que nous voulons entendre, comme dans le biais de
-  confirmation, et pourquoi rejetons-nous si facilement la faute sur les autres,
-  comme dans le biais d’autocomplaisance ?{" "}
-  <Term definition="Raccourcis de pensée, ou heuristiques, utilisés par le cerveau pour traiter l’information. Ils aident à résoudre rapidement des problèmes complexes, mais conduisent souvent à des jugements irrationnels.">
-    Les biais cognitifs (Cognitive Biases)
-  </Term>
-  ne sont pas une panne. Ce sont des instincts développés pour survivre dans un
-  monde primitif, qui entrent aujourd’hui en conflit avec la société moderne.
-</HighlightBox>
+> **Résumé (Abstract)**
+>
+> Pourquoi n’entendons-nous que ce que nous voulons entendre, comme dans le biais de confirmation, et pourquoi rejetons-nous si facilement la faute sur les autres, comme dans le biais d’autocomplaisance ? <abbr title="Raccourcis de pensée, ou heuristiques, utilisés par le cerveau pour traiter l’information. Ils aident à résoudre rapidement des problèmes complexes, mais conduisent souvent à des jugements irrationnels.">Les biais cognitifs (Cognitive Biases)</abbr> ne sont pas une panne. Ce sont des instincts développés pour survivre dans un monde primitif, qui entrent aujourd’hui en conflit avec la société moderne.
 
 ## 1. Biais de confirmation (Confirmation Bias) : « j’ai déjà ma réponse »
 
@@ -47,16 +40,8 @@ Nous sommes tous biaisés. Le reconnaître suffit déjà à nous rendre un peu p
 
 ### Liste des références
 
-<ResearchReference
-  author="Daniel Kahneman"
-  year="2011"
-  source="Thinking, Fast and Slow"
-/>
-<ResearchReference
-  author="Amos Tversky & Daniel Kahneman"
-  year="1974"
-  source="Judgment under Uncertainty: Heuristics and Biases"
-/>
+> **Daniel Kahneman** (2011) *Thinking, Fast and Slow*
+> **Amos Tversky & Daniel Kahneman** (1974) *Judgment under Uncertainty: Heuristics and Biases*
 
 ---
 

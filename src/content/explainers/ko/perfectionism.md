@@ -7,20 +7,15 @@ definition: "당신은 완벽을 추구하나요, 아니면 실패를 두려워�
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="요약 (Abstract)">
-  우리는 "완벽해져라"라는 주문을 듣고 자랐습니다. 하지만 심리학에서 말하는{" "}
-  <Term definition="자신에 대해 지나치게 높은 기준을 설정하고, 그 기준에 도달하지 못했을 때 자신을 가혹하게 비판하는 성향. 성취의 원동력이 되기도 하지만, 심하면 우울증과 강박증의 원인이 됩니다.">
-    완벽주의 (Perfectionism)
-  </Term>
-  는 성공의 열쇠가 아니라, 자존감을 갉아먹는 독입니다. 그것은 '더 잘하고 싶은
-  욕구'가 아니라, '비난받지 않으려는 방어기제'입니다.
-</HighlightBox>
+> **요약 (Abstract)**
+>
+> 우리는 "완벽해져라"라는 주문을 듣고 자랐습니다. 하지만 심리학에서 말하는 <abbr title="자신에 대해 지나치게 높은 기준을 설정하고, 그 기준에 도달하지 못했을 때 자신을 가혹하게 비판하는 성향. 성취의 원동력이 되기도 하지만, 심하면 우울증과 강박증의 원인이 됩니다.">완벽주의 (Perfectionism)</abbr>는 성공의 열쇠가 아니라, 자존감을 갉아먹는 독입니다. 그것은 '더 잘하고 싶은 욕구'가 아니라, '비난받지 않으려는 방어기제'입니다.
 
 ## 1. 완벽주의의 세 가지 얼굴 (Hewitt & Flett 모델)
 
-1.  **자기 지향적 (Self-Oriented):** "나는 완벽해야 해." 스스로에게 채찍질을 멈추지 않습니다. 성취도는 높지만 우울증 위험도 높습니다.
-2.  **타인 지향적 (Other-Oriented):** "너는 완벽해야 해." 남에게 엄격한 잣대를 들이댑니다. 인간관계가 파탄 나기 쉽습니다.
-3.  **사회 부과적 (Socially Prescribed):** "사람들은 내가 완벽하기를 기대해." 타인의 시선을 과도하게 의식하며, 늘 가면을 쓰고 연기합니다. (가장 위험한 유형)
+1. **자기 지향적 (Self-Oriented):** "나는 완벽해야 해." 스스로에게 채찍질을 멈추지 않습니다. 성취도는 높지만 우울증 위험도 높습니다.
+2. **타인 지향적 (Other-Oriented):** "너는 완벽해야 해." 남에게 엄격한 잣대를 들이댑니다. 인간관계가 파탄 나기 쉽습니다.
+3. **사회 부과적 (Socially Prescribed):** "사람들은 내가 완벽하기를 기대해." 타인의 시선을 과도하게 의식하며, 늘 가면을 쓰고 연기합니다. (가장 위험한 유형)
 
 ## 2. '노력'과 '완벽주의'의 차이
 
@@ -46,16 +41,8 @@ updated: 2026-01-18
 
 ### 참고 문헌 목록
 
-<ResearchReference
-  author="Paul Hewitt & Gordon Flett"
-  year="1991"
-  source="Dimensions of Perfectionism"
-/>
-<ResearchReference
-  author="Brene Brown"
-  year="2010"
-  source="The Gifts of Imperfection"
-/>
+> **Paul Hewitt & Gordon Flett** (1991) *Dimensions of Perfectionism*
+> **Brene Brown** (2010) *The Gifts of Imperfection*
 
 ---
 

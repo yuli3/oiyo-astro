@@ -7,14 +7,9 @@ definition: "被认为比血型或MBTI更具科学性的性格分析黄金标准
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="摘要 (Abstract)">
-  心理学界最信赖的人格模型{" "}
-  <Term definition="将人格分为开放性、尽责性、外向性、宜人性和神经质五个因素的心理学模型。它经过了数十年的统计研究验证。">
-    Big 5（五因素模型）
-  </Term>
-  并不把人划进“类型（Type）”，而是用“特质（Trait）”的数值来说明。你不是
-  一个内向的人，而是外向性得分较低的人。这个微妙差异能更准确地描述你。
-</HighlightBox>
+> **摘要 (Abstract)**
+>
+> 心理学界最信赖的人格模型 <abbr title="将人格分为开放性、尽责性、外向性、宜人性和神经质五个因素的心理学模型。它经过了数十年的统计研究验证。">Big 5（五因素模型）</abbr> 并不把人划进“类型（Type）”，而是用“特质（Trait）”的数值来说明。你不是 一个内向的人，而是外向性得分较低的人。这个微妙差异能更准确地描述你。
 
 ## 1. 起源：藏在语言里的性格
 
@@ -69,20 +64,10 @@ MBTI把人关进16个房间。它会断言：“你是T（理性）。”
 
 ### 参考文献列表
 
-<ResearchReference
-  author="Paul Costa & Robert McCrae"
-  year="1992"
-  source="NEO PI-R Professional Manual"
-/>
-<ResearchReference
-  author="Lewis Goldberg"
-  year="1993"
-  source="The Structure of Phenotypic Personality Traits"
-/>
+> **Paul Costa & Robert McCrae** (1992) *NEO PI-R Professional Manual*
+> **Lewis Goldberg** (1993) *The Structure of Phenotypic Personality Traits*
 
 ---
-
-<TermCatalog set="big5" />
 
 ### 常见问题（FAQ）
 

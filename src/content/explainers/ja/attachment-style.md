@@ -7,13 +7,9 @@ definition: "恋愛するたびになぜ不安になったり逃げ出したく�
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="要約 (Abstract)">
-  私たちは皆、愛されるために生まれてきました。しかし愛する方法は人それぞれです。
-  <Term definition="イギリスの心理学者ジョン・ボウルビィが提案した理論。乳幼児期に主たる養育者と結んだ絆（愛着）が、成人後の対人関係や恋愛の方式に決定的な影響を及ぼすという理論です。">
-    愛着理論 (Attachment Theory)
-  </Term>
-  は、あなたの愛がなぜ痛いのか、あるいはなぜ冷たいのかに対する答えをくれます。これは責めるためではなく、癒すためのものです。
-</HighlightBox>
+> **要約 (Abstract)**
+>
+> 私たちは皆、愛されるために生まれてきました。しかし愛する方法は人それぞれです。 <abbr title="イギリスの心理学者ジョン・ボウルビィが提案した理論。乳幼児期に主たる養育者と結んだ絆（愛着）が、成人後の対人関係や恋愛の方式に決定的な影響を及ぼすという理論です。">愛着理論 (Attachment Theory)</abbr> は、あなたの愛がなぜ痛いのか、あるいはなぜ冷たいのかに対する答えをくれます。これは責めるためではなく、癒すためのものです。
 
 ## 1. 安定型 (Secure)：暖かい港
 
@@ -46,20 +42,10 @@ updated: 2026-01-18
 
 ### 参考文献
 
-<ResearchReference
-  author="John Bowlby"
-  year="1969"
-  source="Attachment and Loss"
-/>
-<ResearchReference
-  author="Amir Levine & Rachel Heller"
-  year="2010"
-  source="Attached"
-/>
+> **John Bowlby** (1969) *Attachment and Loss*
+> **Amir Levine & Rachel Heller** (2010) *Attached*
 
 ---
-
-<TermCatalog set="attachment" />
 
 ### よくある質問 (FAQ)
 

@@ -7,16 +7,9 @@ definition: "Why do smart people make stupid decisions?"
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Abstract">
-  The human brain is not a logic machine; it is a survival machine. To process
-  millions of bits of data per second, it relies on{" "}
-  <Term definition="Mental shortcuts or 'rules of thumb' that allow us to solve problems and make judgments quickly and efficiently, though often irrationally.">
-    Heuristics
-  </Term>
-  . Often these shortcuts work, but frequently they lead to systematic errors
-  known as **Cognitive Biases**. This whitepaper explores the "Bugs" in our
-  operating system identified by Nobel laureate Daniel Kahneman.
-</HighlightBox>
+> **Abstract**
+>
+> The human brain is not a logic machine; it is a survival machine. To process millions of bits of data per second, it relies on <abbr title="Mental shortcuts or 'rules of thumb' that allow us to solve problems and make judgments quickly and efficiently, though often irrationally.">Heuristics</abbr> . Often these shortcuts work, but frequently they lead to systematic errors known as **Cognitive Biases**. This whitepaper explores the "Bugs" in our operating system identified by Nobel laureate Daniel Kahneman.
 
 ## 1. Genesis: System 1 vs. System 2
 
@@ -55,11 +48,9 @@ Biases occur because System 1 is in charge 95% of the time. It jumps to conclusi
 Perhaps the most dangerous bias: **Incompetent people overestimate their competence.**
 Because they lack the knowledge to know how much they don't know, they feel confident. Conversely, experts often underestimate their competence because they assume what is easy for them is easy for everyone.
 
-<HighlightBox type="insight" title="Scholarly Insight">
-  **Naive Realism:** The belief that "I see the world as it is, and those who
-  disagree are biased." The moment you think you are unbiased, you are
-  exhibiting Naive Realism.
-</HighlightBox>
+> **Scholarly Insight**
+>
+> **Naive Realism:** The belief that "I see the world as it is, and those who disagree are biased." The moment you think you are unbiased, you are exhibiting Naive Realism.
 
 ## 4. Modern Relevance: The Algorithms of Anger
 
@@ -73,21 +64,9 @@ You cannot remove your biases; they are part of your biology. But you can become
 
 ### References
 
-<ResearchReference
-  author="Daniel Kahneman"
-  year="2011"
-  source="Thinking, Fast and Slow"
-/>
-<ResearchReference
-  author="Tversky & Kahneman"
-  year="1974"
-  source="Judgment under Uncertainty: Heuristics and Biases"
-/>
-<ResearchReference
-  author="Dan Ariely"
-  year="2008"
-  source="Predictably Irrational"
-/>
+> **Daniel Kahneman** (2011) *Thinking, Fast and Slow*
+> **Tversky & Kahneman** (1974) *Judgment under Uncertainty: Heuristics and Biases*
+> **Dan Ariely** (2008) *Predictably Irrational*
 
 ---
 

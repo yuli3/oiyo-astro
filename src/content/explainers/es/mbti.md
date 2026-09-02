@@ -7,15 +7,9 @@ definition: "E e I, T y F..."
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Resumen (Abstract)">
-  "¿Eres T?" En Corea, esta pregunta se volvió casi un saludo.{" "}
-  <Term definition="Indicador de tipo Myers-Briggs (Myers-Briggs Type Indicator). Prueba de personalidad basada en la teoría de tipos psicológicos de Carl Jung. Combina cuatro escalas para clasificar a las personas en 16 tipos.">
-    MBTI
-  </Term>
-  dejó de ser una moda pasajera y se convirtió en un lenguaje común para entender
-  nuestras diferencias. Pero solo cuando miramos las raíces psicológicas que hay detrás
-  de los memes de internet podemos respetar de verdad a otras personas.
-</HighlightBox>
+> **Resumen (Abstract)**
+>
+> "¿Eres T?" En Corea, esta pregunta se volvió casi un saludo. <abbr title="Indicador de tipo Myers-Briggs (Myers-Briggs Type Indicator). Prueba de personalidad basada en la teoría de tipos psicológicos de Carl Jung. Combina cuatro escalas para clasificar a las personas en 16 tipos.">MBTI</abbr> dejó de ser una moda pasajera y se convirtió en un lenguaje común para entender nuestras diferencias. Pero solo cuando miramos las raíces psicológicas que hay detrás de los memes de internet podemos respetar de verdad a otras personas.
 
 ## 1. Origen: la intuición de Jung y la dedicación de dos mujeres
 
@@ -67,16 +61,8 @@ El MBTI no debe convertirse en una cárcel que diga "tú eres así". Debe ser un
 
 ### Referencias
 
-<ResearchReference
-  author="Isabel Briggs Myers"
-  year="1980"
-  source="Gifts Differing: Understanding Personality Type"
-/>
-<ResearchReference
-  author="Carl Jung"
-  year="1921"
-  source="Psychological Types"
-/>
+> **Isabel Briggs Myers** (1980) *Gifts Differing: Understanding Personality Type*
+> **Carl Jung** (1921) *Psychological Types*
 
 ---
 

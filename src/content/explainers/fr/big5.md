@@ -7,15 +7,9 @@ definition: "Le standard de référence de l'analyse de la personnalité, souven
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Résumé (Abstract)">
-  Le modèle de personnalité le plus respecté en psychologie,{" "}
-  <Term definition="Modèle psychologique qui classe la personnalité selon cinq facteurs : ouverture, conscienciosité, extraversion, agréabilité et névrosisme. Il a été validé par des décennies de recherches statistiques.">
-    Big 5 (modèle des cinq facteurs)
-  </Term>
-  , ne divise pas les personnes en "types" (Type) ; il les décrit par des "traits" (Trait). Vous
-  n'êtes pas simplement une personne introvertie, mais une personne dont le score d'extraversion est
-  bas. Cette nuance vous décrit avec plus de précision.
-</HighlightBox>
+> **Résumé (Abstract)**
+>
+> Le modèle de personnalité le plus respecté en psychologie, <abbr title="Modèle psychologique qui classe la personnalité selon cinq facteurs : ouverture, conscienciosité, extraversion, agréabilité et névrosisme. Il a été validé par des décennies de recherches statistiques.">Big 5 (modèle des cinq facteurs)</abbr> , ne divise pas les personnes en "types" (Type) ; il les décrit par des "traits" (Trait). Vous n'êtes pas simplement une personne introvertie, mais une personne dont le score d'extraversion est bas. Cette nuance vous décrit avec plus de précision.
 
 ## 1. Origine : la personnalité cachée dans le langage
 
@@ -70,20 +64,10 @@ Connaître sa personnalité, c'est s'asseoir dans le poste de pilotage de son es
 
 ### Références
 
-<ResearchReference
-  author="Paul Costa & Robert McCrae"
-  year="1992"
-  source="NEO PI-R Professional Manual"
-/>
-<ResearchReference
-  author="Lewis Goldberg"
-  year="1993"
-  source="The Structure of Phenotypic Personality Traits"
-/>
+> **Paul Costa & Robert McCrae** (1992) *NEO PI-R Professional Manual*
+> **Lewis Goldberg** (1993) *The Structure of Phenotypic Personality Traits*
 
 ---
-
-<TermCatalog set="big5" />
 
 ### Questions fréquentes (FAQ)
 

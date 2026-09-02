@@ -7,18 +7,13 @@ definition: "Known as the 'Gold Standard' of modern psychology, the Big Five (OC
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Abstract">
-  While systems like MBTI categorize people into "types," academic psychology
-  relies on the **Big Five (OCEAN)** model, which measures personality as a
-  spectrum of five fundamental traits. This whitepaper details why the Big Five
-  is considered the "Gold Standard" of personality science and how understanding
-  your unique mix of Openness, Conscientiousness, Extraversion, Agreeableness,
-  and Neuroticism can predict life outcomes.
-</HighlightBox>
+> **Abstract**
+>
+> While systems like MBTI categorize people into "types," academic psychology relies on the **Big Five (OCEAN)** model, which measures personality as a spectrum of five fundamental traits. This whitepaper details why the Big Five is considered the "Gold Standard" of personality science and how understanding your unique mix of Openness, Conscientiousness, Extraversion, Agreeableness, and Neuroticism can predict life outcomes.
 
 ## 1. Genesis: The Lexical Hypothesis
 
-The Big Five didn't come from a single theorist's imagination. It emerged from the <Term definition="The idea that the most important personality traits have become encoded in natural language.">Lexical Hypothesis</Term>. In the 1930s, researchers Gordon Allport and Henry Odbert combed through the dictionary and found over 4,500 words describing personality. Through decades of statistical analysis (Factor Analysis), these thousands of words were distilled down to five independent clusters that appear universally across cultures.
+The Big Five didn't come from a single theorist's imagination. It emerged from the <abbr title="The idea that the most important personality traits have become encoded in natural language.">Lexical Hypothesis</abbr>. In the 1930s, researchers Gordon Allport and Henry Odbert combed through the dictionary and found over 4,500 words describing personality. Through decades of statistical analysis (Factor Analysis), these thousands of words were distilled down to five independent clusters that appear universally across cultures.
 
 ## 2. Core Logic: The OCEAN Model
 
@@ -58,11 +53,9 @@ The power of the Big Five lies in its predictive validity.
 - **High A** predicts relationship satisfaction but lower earnings in competitive fields.
 - **High N** predicts health anxiety but also vigilance to danger.
 
-<HighlightBox type="insight" title="Scholarly Insight">
-  **Plasticity vs. Stability:** Research suggests that personality is not fixed.
-  While there is a genetic baseline, traits like Conscientiousness and
-  Agreeableness tend to increase with age (the "Maturity Principle").
-</HighlightBox>
+> **Scholarly Insight**
+>
+> **Plasticity vs. Stability:** Research suggests that personality is not fixed. While there is a genetic baseline, traits like Conscientiousness and Agreeableness tend to increase with age (the "Maturity Principle").
 
 ## 4. Modern Relevance: Beyond the Label
 
@@ -76,25 +69,11 @@ We are not boxes; we are spectrums. The Big Five teaches us that there are no "b
 
 ### References
 
-<ResearchReference
-  author="Costa, P. T., & McCrae, R. R."
-  year="1992"
-  source="NEO-PI-R Professional Manual"
-/>
-<ResearchReference
-  author="Lewis Goldberg"
-  year="1990"
-  source="An Alternative 'Description of Personality': The Big-Five Factor Structure"
-/>
-<ResearchReference
-  author="Daniel Nettle"
-  year="2007"
-  source="Personality: What Makes You the Way You Are"
-/>
+> **Costa, P. T., & McCrae, R. R.** (1992) *NEO-PI-R Professional Manual*
+> **Lewis Goldberg** (1990) *An Alternative 'Description of Personality': The Big-Five Factor Structure*
+> **Daniel Nettle** (2007) *Personality: What Makes You the Way You Are*
 
 ---
-
-<TermCatalog set="big5" />
 
 ### FAQ
 

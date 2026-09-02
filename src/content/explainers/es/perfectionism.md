@@ -7,20 +7,15 @@ definition: "¿Buscas la perfección o temes fracasar?"
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Resumen (Abstract)">
-  Crecimos escuchando el mandato de "ser perfectos". Pero en psicología, el{" "}
-  <Term definition="Tendencia a fijarse estándares excesivamente altos y criticarse con dureza cuando no se alcanzan. Puede impulsar logros, pero en exceso se relaciona con depresión y conductas obsesivas.">
-    perfeccionismo
-  </Term>
-  no es la llave del éxito, sino un veneno que desgasta la autoestima. No es simplemente
-  "querer hacerlo mejor"; es un mecanismo de defensa para evitar la crítica.
-</HighlightBox>
+> **Resumen (Abstract)**
+>
+> Crecimos escuchando el mandato de "ser perfectos". Pero en psicología, el <abbr title="Tendencia a fijarse estándares excesivamente altos y criticarse con dureza cuando no se alcanzan. Puede impulsar logros, pero en exceso se relaciona con depresión y conductas obsesivas.">perfeccionismo</abbr> no es la llave del éxito, sino un veneno que desgasta la autoestima. No es simplemente "querer hacerlo mejor"; es un mecanismo de defensa para evitar la crítica.
 
 ## 1. Tres rostros del perfeccionismo (modelo de Hewitt & Flett)
 
-1.  **Orientado a uno mismo (Self-Oriented):** "Tengo que ser perfecto." La persona no deja de exigirse. Puede lograr mucho, pero también aumenta el riesgo de depresión.
-2.  **Orientado a otras personas (Other-Oriented):** "Tú tienes que ser perfecto." Aplica criterios rígidos a los demás. Las relaciones pueden romperse con facilidad.
-3.  **Socialmente impuesto (Socially Prescribed):** "La gente espera que yo sea perfecto." Vive demasiado pendiente de la mirada ajena y actúa detrás de una máscara. Es el tipo más peligroso.
+1. **Orientado a uno mismo (Self-Oriented):** "Tengo que ser perfecto." La persona no deja de exigirse. Puede lograr mucho, pero también aumenta el riesgo de depresión.
+2. **Orientado a otras personas (Other-Oriented):** "Tú tienes que ser perfecto." Aplica criterios rígidos a los demás. Las relaciones pueden romperse con facilidad.
+3. **Socialmente impuesto (Socially Prescribed):** "La gente espera que yo sea perfecto." Vive demasiado pendiente de la mirada ajena y actúa detrás de una máscara. Es el tipo más peligroso.
 
 ## 2. La diferencia entre esfuerzo y perfeccionismo
 
@@ -46,16 +41,8 @@ Tus errores, tus carencias, tus heridas... precisamente eso puede ser el oro que
 
 ### Referencias
 
-<ResearchReference
-  author="Paul Hewitt & Gordon Flett"
-  year="1991"
-  source="Dimensions of Perfectionism"
-/>
-<ResearchReference
-  author="Brene Brown"
-  year="2010"
-  source="The Gifts of Imperfection"
-/>
+> **Paul Hewitt & Gordon Flett** (1991) *Dimensions of Perfectionism*
+> **Brene Brown** (2010) *The Gifts of Imperfection*
 
 ---
 

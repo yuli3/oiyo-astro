@@ -7,15 +7,9 @@ definition: "Creemos que somos racionales."
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Resumen (Abstract)">
-  ¿Por qué solo escuchamos lo que queremos escuchar, como en el sesgo de
-  confirmación, y por qué culpamos a otros, como en el sesgo egoísta?{" "}
-  <Term definition="Una especie de atajo mental o heurístico que el cerebro usa al procesar información. Permite resolver problemas complejos con rapidez, pero a menudo provoca juicios irracionales.">
-    Sesgos cognitivos (Cognitive Biases)
-  </Term>
-  no significa que el cerebro esté averiado. Es un instinto desarrollado para
-  sobrevivir en tiempos primitivos que choca con la sociedad moderna.
-</HighlightBox>
+> **Resumen (Abstract)**
+>
+> ¿Por qué solo escuchamos lo que queremos escuchar, como en el sesgo de confirmación, y por qué culpamos a otros, como en el sesgo egoísta? <abbr title="Una especie de atajo mental o heurístico que el cerebro usa al procesar información. Permite resolver problemas complejos con rapidez, pero a menudo provoca juicios irracionales.">Sesgos cognitivos (Cognitive Biases)</abbr> no significa que el cerebro esté averiado. Es un instinto desarrollado para sobrevivir en tiempos primitivos que choca con la sociedad moderna.
 
 ## 1. Sesgo de confirmación (Confirmation Bias): "ya decidí la respuesta"
 
@@ -46,16 +40,8 @@ Todos somos seres sesgados. Reconocerlo ya nos vuelve un poco más sabios. No ca
 
 ### Lista de referencias
 
-<ResearchReference
-  author="Daniel Kahneman"
-  year="2011"
-  source="Thinking, Fast and Slow"
-/>
-<ResearchReference
-  author="Amos Tversky & Daniel Kahneman"
-  year="1974"
-  source="Judgment under Uncertainty: Heuristics and Biases"
-/>
+> **Daniel Kahneman** (2011) *Thinking, Fast and Slow*
+> **Amos Tversky & Daniel Kahneman** (1974) *Judgment under Uncertainty: Heuristics and Biases*
 
 ---
 

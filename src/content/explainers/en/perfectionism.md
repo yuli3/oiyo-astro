@@ -7,16 +7,9 @@ definition: "Is your high standard a pursuit of excellence or a defense mechanis
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="Abstract">
-  Society often praises perfectionism as "high standards," but clinical
-  psychology defines it as a form of{" "}
-  <Term definition="A personality trait characterized by a person's striving for flawlessness and setting high performance standards, accompanied by critical self-evaluations and concerns regarding others' evaluations.">
-    Anxiety
-  </Term>
-  . It is not the pursuit of excellence; it is the avoidance of shame. This
-  whitepaper explores the three dimensions of perfectionism and the path from
-  "Perfect" to "Healthy."
-</HighlightBox>
+> **Abstract**
+>
+> Society often praises perfectionism as "high standards," but clinical psychology defines it as a form of <abbr title="A personality trait characterized by a person's striving for flawlessness and setting high performance standards, accompanied by critical self-evaluations and concerns regarding others' evaluations.">Anxiety</abbr> . It is not the pursuit of excellence; it is the avoidance of shame. This whitepaper explores the three dimensions of perfectionism and the path from "Perfect" to "Healthy."
 
 ## 1. Genesis: The Conditional Self
 
@@ -52,12 +45,9 @@ Perfectionism kills productivity.
 - **Procrastination:** "If I can't do it perfectly, I won't do it at all."
 - **Diminishing Returns:** Spending 10 hours to improve a project from 95% to 98%, when that time could have been used for a new project.
 
-<HighlightBox type="insight" title="Scholarly Insight">
-  **Adaptive vs. Maladaptive:** Research distinguishes between "Adaptive
-  Perfectionism" (Healthy Striving) and "Maladaptive Perfectionism" (Neurotic
-  Concerns). The key difference is how you handle failure. The healthy striver
-  learns; the neurotic striver spirals.
-</HighlightBox>
+> **Scholarly Insight**
+>
+> **Adaptive vs. Maladaptive:** Research distinguishes between "Adaptive Perfectionism" (Healthy Striving) and "Maladaptive Perfectionism" (Neurotic Concerns). The key difference is how you handle failure. The healthy striver learns; the neurotic striver spirals.
 
 ## 4. Modern Relevance: The Instagram Trap
 
@@ -72,16 +62,8 @@ We must embrace the concept of the **"Good Enough"** parent, partner, and employ
 
 ### References
 
-<ResearchReference
-  author="Brené Brown"
-  year="2010"
-  source="The Gifts of Imperfection"
-/>
-<ResearchReference
-  author="Hewitt & Flett"
-  year="1991"
-  source="Perfectionism in the Self and Social Contexts"
-/>
+> **Brené Brown** (2010) *The Gifts of Imperfection*
+> **Hewitt & Flett** (1991) *Perfectionism in the Self and Social Contexts*
 
 ---
 

@@ -7,19 +7,15 @@ definition: "あなたは完璧を追求していますか、それとも失敗�
 updated: 2026-01-18
 ---
 
-<HighlightBox type="abstract" title="要約 (Abstract)">
-  私たちは「完璧になれ」という呪文を聞いて育ちました。しかし心理学で言う
-  <Term definition="自分に対して過度に高い基準を設定し、その基準に到達できなかった時に自分を苛酷に批判する傾向。成就の原動力にもなりますが、酷いと鬱病や強迫症の原因になります。">
-    完璧主義 (Perfectionism)
-  </Term>
-  は成功の鍵ではなく、自尊心を蝕む毒です。それは「もっと上手くやりたい欲求」ではなく、「非難されないための防御機制」なのです。
-</HighlightBox>
+> **要約 (Abstract)**
+>
+> 私たちは「完璧になれ」という呪文を聞いて育ちました。しかし心理学で言う <abbr title="自分に対して過度に高い基準を設定し、その基準に到達できなかった時に自分を苛酷に批判する傾向。成就の原動力にもなりますが、酷いと鬱病や強迫症の原因になります。">完璧主義 (Perfectionism)</abbr> は成功の鍵ではなく、自尊心を蝕む毒です。それは「もっと上手くやりたい欲求」ではなく、「非難されないための防御機制」なのです。
 
 ## 1. 完璧主義の三つの顔 (Hewitt & Flett モデル)
 
-1.  **自己志向的 (Self-Oriented)：** 「私は完璧でなければならない。」自分への鞭打ちを止めません。成就度は高いですが鬱病のリスクも高いです。
-2.  **他者志向的 (Other-Oriented)：** 「あなたは完璧でなければならない。」他人に厳しい定規を突きつけます。人間関係が破綻しやすいです。
-3.  **社会付加的 (Socially Prescribed)：** 「人々は私が完璧であることを期待している。」他人の視線を過度に意識し、いつも仮面を被って演技します。（最も危険なタイプ）
+1. **自己志向的 (Self-Oriented)：** 「私は完璧でなければならない。」自分への鞭打ちを止めません。成就度は高いですが鬱病のリスクも高いです。
+2. **他者志向的 (Other-Oriented)：** 「あなたは完璧でなければならない。」他人に厳しい定規を突きつけます。人間関係が破綻しやすいです。
+3. **社会付加的 (Socially Prescribed)：** 「人々は私が完璧であることを期待している。」他人の視線を過度に意識し、いつも仮面を被って演技します。（最も危険なタイプ）
 
 ## 2. 「努力」と「完璧主義」の違い
 
@@ -45,16 +41,8 @@ updated: 2026-01-18
 
 ### 参考文献
 
-<ResearchReference
-  author="Paul Hewitt & Gordon Flett"
-  year="1991"
-  source="Dimensions of Perfectionism"
-/>
-<ResearchReference
-  author="Brene Brown"
-  year="2010"
-  source="The Gifts of Imperfection"
-/>
+> **Paul Hewitt & Gordon Flett** (1991) *Dimensions of Perfectionism*
+> **Brene Brown** (2010) *The Gifts of Imperfection*
 
 ---
 
