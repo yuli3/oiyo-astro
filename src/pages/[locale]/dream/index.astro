@@ -1,0 +1,109 @@
+---
+// 꿈 상징 사전 색인. 본문이 있는 상징만 싣는다 — 없는 칸을 링크하면 404 가 된다.
+import Layout from '../../../layouts/Layout.astro';
+import { DREAM_SYMBOLS, DREAM_CATEGORY_LABELS, type DreamCategory } from '../../../data/dream-symbols';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  return LOCALES.map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+
+const entries = await getCollection('explainers', (e) => e.data.locale === locale);
+const haveSymbol = new Set(
+  entries.filter((e) => e.data.topic.startsWith('dream-')).map((e) => e.data.topic.slice(6)),
+);
+const haveHub = entries.some((e) => e.data.topic === 'dream');
+const symbols = DREAM_SYMBOLS.filter((s) => haveSymbol.has(s.id));
+
+const L: Record<Locale, { title: string; lead: string; note: string; hub: string; empty: string }> = {
+  ko: {
+    title: '꿈 상징 사전',
+    lead: '꿈에 나온 상징을 골라 전통 해몽과 심리학적 읽기를 나란히 봅니다.',
+    note: '해몽은 상징 해석의 문화적 전통이며 앞일을 알려 주지 않습니다. 결정의 근거로 삼지 마세요.',
+    hub: '해몽이란 무엇인가',
+    empty: '아직 등재된 상징이 없습니다.',
+  },
+  en: {
+    title: 'Dream symbol index',
+    lead: 'Pick a symbol from your dream and read the traditional and the psychological account side by side.',
+    note: 'Dream reading is a cultural tradition of symbol interpretation, not a forecast. Do not use it to make decisions.',
+    hub: 'What dream reading is',
+    empty: 'No symbols listed yet.',
+  },
+  ja: {
+    title: '夢の象徴事典',
+    lead: '夢に出た象徴を選び、伝統的な夢解きと心理学的な読みを並べて見ます。',
+    note: '夢解きは象徴解釈の文化的伝統であり、先のことを告げるものではありません。判断の根拠にはしないでください。',
+    hub: '夢解きとは何か',
+    empty: 'まだ登録された象徴はありません。',
+  },
+  zh: {
+    title: '梦境象征词典',
+    lead: '选一个梦中出现的象征，并列查看传统解梦与心理学的读法。',
+    note: '解梦是象征解释的文化传统，并不预告将来。请勿作为决策依据。',
+    hub: '什么是解梦',
+    empty: '暂无收录的象征。',
+  },
+  fr: {
+    title: 'Index des symboles oniriques',
+    lead: "Choisissez un symbole de votre rêve et lisez côte à côte la lecture traditionnelle et la lecture psychologique.",
+    note: "L'interprétation des rêves est une tradition culturelle de lecture des symboles, non une prédiction. Ne fondez pas vos décisions dessus.",
+    hub: "Ce qu'est l'interprétation des rêves",
+    empty: 'Aucun symbole répertorié pour le moment.',
+  },
+  es: {
+    title: 'Índice de símbolos oníricos',
+    lead: 'Elige un símbolo de tu sueño y lee en paralelo la lectura tradicional y la psicológica.',
+    note: 'La interpretación de sueños es una tradición cultural de lectura de símbolos, no un pronóstico. No la uses como base para decidir.',
+    hub: 'Qué es la interpretación de sueños',
+    empty: 'Aún no hay símbolos registrados.',
+  },
+};
+const t = L[locale] ?? L.en;
+
+const byCategory = (['body', 'nature', 'motion', 'creature'] as DreamCategory[])
+  .map((c) => ({ category: c, items: symbols.filter((s) => s.category === c) }))
+  .filter((g) => g.items.length > 0);
+---
+<Layout title={t.title} description={t.lead} locale={locale} heading={t.title} intro={t.lead}>
+  <div class="mx-auto max-w-2xl px-4 py-10">
+    <p class="rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">{t.note}</p>
+
+    {haveHub && (
+      <p class="mt-6">
+        <a class="text-sm font-semibold text-primary-strong underline underline-offset-4" href={`/${locale}/dream/about/`}>{t.hub}</a>
+      </p>
+    )}
+
+    {byCategory.length === 0 ? (
+      <p class="mt-8 text-muted-foreground">{t.empty}</p>
+    ) : (
+      byCategory.map((g) => (
+        <section class="mt-8">
+          <h2 class="text-sm font-bold uppercase tracking-widest text-muted-foreground">
+            {DREAM_CATEGORY_LABELS[g.category][locale] ?? DREAM_CATEGORY_LABELS[g.category].en}
+          </h2>
+          <ul class="mt-3 grid gap-3 sm:grid-cols-2">
+            {g.items.map((s) => (
+              <li>
+                <a class="flex items-start gap-3 rounded-xl border border-border bg-card p-4 transition-colors hover:border-primary/50"
+                   href={`/${locale}/dream/${s.id}/`}>
+                  <span class="text-2xl" aria-hidden="true">{s.emoji}</span>
+                  <span>
+                    <span class="block font-semibold text-foreground">{s.name[locale] ?? s.name.en}</span>
+                    <span class="mt-1 block text-xs leading-5 text-muted-foreground">
+                      {(s.keywords[locale] ?? s.keywords.en).slice(0, 3).join(' · ')}
+                    </span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))
+    )}
+  </div>
+</Layout>

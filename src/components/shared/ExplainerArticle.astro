@@ -12,7 +12,7 @@ interface Props {
   /** 이어지는 도구 경로. 로케일 접두사 없이 준다. */
   testPath: string;
   /** CTA 문구 종류. 개념 해설이 테스트가 아닌 도구로 이어질 때 쓴다. */
-  ctaKind?: 'test' | 'saju';
+  ctaKind?: 'test' | 'saju' | 'dream';
 }
 const { entry, locale, testPath, ctaKind = 'test' } = Astro.props;
 const { Content } = await render(entry);
@@ -33,8 +33,17 @@ const SAJU_UI: Record<Locale, { cta: string; ctaNote: string }> = {
   fr: { cta: 'Voir mon pilier du mois', ctaNote: "Voyez comment la limite d'entrée s'applique à votre propre thème." },
   es: { cta: 'Ver mi pilar del mes', ctaNote: 'Comprueba cómo se aplica el instante de entrada a tu propia carta.' },
 };
+const DREAM_UI: Record<Locale, { cta: string; ctaNote: string }> = {
+  ko: { cta: '다른 상징 찾아보기', ctaNote: '꿈에 함께 나온 상징을 사전에서 이어 봅니다.' },
+  en: { cta: 'Browse other symbols', ctaNote: 'Look up the other symbols that appeared in the same dream.' },
+  ja: { cta: '他の象徴を見る', ctaNote: '同じ夢に出た他の象徴も事典で辿ります。' },
+  zh: { cta: '浏览其他象征', ctaNote: '继续查阅同一个梦里出现的其他象征。' },
+  fr: { cta: "Voir d'autres symboles", ctaNote: 'Retrouvez les autres symboles apparus dans le même rêve.' },
+  es: { cta: 'Ver otros símbolos', ctaNote: 'Busca los demás símbolos que aparecieron en el mismo sueño.' },
+};
 const base = UI[locale] ?? UI.en;
-const ui = ctaKind === 'saju' ? { ...base, ...(SAJU_UI[locale] ?? SAJU_UI.en) } : base;
+const EXTRA = { saju: SAJU_UI, dream: DREAM_UI } as const;
+const ui = ctaKind === 'test' ? base : { ...base, ...(EXTRA[ctaKind][locale] ?? EXTRA[ctaKind].en) };
 const updated = entry.data.updated.toISOString().slice(0, 10);
 ---
 
