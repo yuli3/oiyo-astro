@@ -1,0 +1,22 @@
+---
+// circadian-rhythm 개념 해설. 본문은 explainers 컬렉션(src/content/explainers/<locale>/circadian-rhythm.md).
+// 재창조가 로케일마다 순차로 올라가므로 원고가 있는 로케일만 경로를 낸다.
+import Layout from '../../../layouts/Layout.astro';
+import ExplainerArticle from '../../../components/shared/ExplainerArticle.astro';
+import { LOCALES } from '../../../i18n';
+import type { Locale } from '../../../i18n';
+import { getCollection, getEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const have = new Set(
+    (await getCollection('explainers', (e) => e.data.topic === 'circadian-rhythm')).map((e) => e.data.locale),
+  );
+  return LOCALES.filter((l) => have.has(l)).map((locale) => ({ params: { locale } }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const entry = await getEntry('explainers', `${locale}/circadian-rhythm`);
+if (!entry) throw new Error(`explainers 항목 없음: ${locale}/circadian-rhythm`);
+---
+<Layout title={entry.data.title} description={entry.data.description} locale={locale}>
+  <ExplainerArticle entry={entry} locale={locale} testPath="/sleep-type/test" />
+</Layout>
