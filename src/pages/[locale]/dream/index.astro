@@ -78,7 +78,15 @@ const L: Record<Locale, { title: string; lead: string; note: string; hub: string
 };
 const t = L[locale] ?? L.en;
 
-const byCategory = (['body', 'nature', 'motion', 'creature'] as DreamCategory[])
+// 표시 순서. 여기 없는 카테고리는 뒤에 붙인다 — 목록을 하드코딩했더니 life 와
+// place 가 사전에서 조용히 빠져 있었다(2026-09-03 발견, 죽음·시험·집·돈·아기가
+// 어느 묶음에도 들어가지 못했다). 새 카테고리가 늘어도 다시 사라지지 않게 한다.
+const ORDER = ['body', 'nature', 'motion', 'creature', 'person', 'life', 'place'] as DreamCategory[];
+const allCategories = [
+  ...ORDER,
+  ...([...new Set(symbols.map((s) => s.category))].filter((c) => !ORDER.includes(c))),
+];
+const byCategory = allCategories
   .map((c) => ({ category: c, items: symbols.filter((s) => s.category === c) }))
   .filter((g) => g.items.length > 0);
 ---
