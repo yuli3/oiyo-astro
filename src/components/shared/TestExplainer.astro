@@ -1,0 +1,76 @@
+---
+/**
+ * 테스트 페이지 아래에 붙는 해설 블록.
+ *
+ * 왜 있나: oiyo 테스트 페이지가 두 갈래로 갈려 있었다. burnout·enneagram·empathy
+ * 처럼 도입·개념·FAQ 를 갖춘 것과, 위젯 하나만 있는 27줄짜리 깡통이 8개였다.
+ * 깡통 쪽은 blog 에 같은 주제의 해설이 따로 살아 있었고(2026-09-03 주제 정렬에서
+ * 확인), 그 글이 oiyo 테스트와 검색에서 경쟁하고 있었다. 해설을 이쪽으로 들여와
+ * 한 URL 로 합친다.
+ *
+ * 마크업을 페이지마다 복제하지 않으려고 컴포넌트로 뺐다 — burnout/test.astro 의
+ * 구조를 그대로 따른다. FAQ JSON-LD 도 여기서 낸다.
+ */
+import type { Locale } from '../../i18n';
+
+export interface TestExplainerContent {
+  introTitle: string;
+  intro: string;
+  conceptTitle: string;
+  concepts: { title: string; body: string }[];
+  faqTitle: string;
+  faqs: { question: string; answer: string }[];
+  disclaimer: string;
+}
+
+interface Props {
+  content: Partial<Record<Locale, TestExplainerContent>>;
+  locale: Locale;
+}
+const { content, locale } = Astro.props;
+const c = content[locale] ?? content.en;
+const faqJsonLd = c && {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: c.faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+  })),
+};
+---
+
+{c && (
+  <>
+    <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+    <section class="mt-10 border-t border-green-100 pt-8">
+      <h2 class="text-2xl font-bold text-foreground">{c.introTitle}</h2>
+      <p class="mt-4 leading-8 text-green-800">{c.intro}</p>
+    </section>
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-foreground">{c.conceptTitle}</h2>
+      <div class="mt-4 grid gap-4 md:grid-cols-3">
+        {c.concepts.map((item) => (
+          <article class="rounded-xl border border-green-100 bg-card p-4">
+            <h3 class="font-semibold text-foreground">{item.title}</h3>
+            <p class="mt-2 text-sm leading-6 text-green-700">{item.body}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+    <section class="mt-10">
+      <h2 class="text-xl font-bold text-foreground">{c.faqTitle}</h2>
+      <div class="mt-4 divide-y divide-green-100 rounded-xl border border-green-100 bg-card">
+        {c.faqs.map((faq) => (
+          <details class="group p-4">
+            <summary class="cursor-pointer list-none font-semibold text-foreground">{faq.question}</summary>
+            <p class="mt-3 text-sm leading-6 text-green-700">{faq.answer}</p>
+          </details>
+        ))}
+      </div>
+    </section>
+    <p class="mt-8 rounded-xl border border-amber-100 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-900">
+      {c.disclaimer}
+    </p>
+  </>
+)}

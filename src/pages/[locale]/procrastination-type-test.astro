@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { LOCALES } from '../../i18n';
 import type { Locale } from '../../i18n';
+import TestExplainer from '../../components/shared/TestExplainer.astro';
+import { TEST_EXPLAINERS } from '../../data/test-explainers';
 import ProcrastinationTypeTest from '../../components/tests/ProcrastinationTypeTest';
 
 export async function getStaticPaths() {
@@ -23,5 +25,6 @@ const m = meta[locale] ?? meta.en ?? Object.values(meta)[0];
 <Layout title={m.title} description={m.description} locale={locale}>
   <div class="container mx-auto px-4 py-8 max-w-3xl">
     <ProcrastinationTypeTest locale={locale as any} client:load />
+    <TestExplainer content={TEST_EXPLAINERS['procrastination-type']} locale={locale} />
   </div>
 </Layout>
