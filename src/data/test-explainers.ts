@@ -748,6 +748,111 @@ export const TEST_EXPLAINERS: Record<string, TestExplainerMap> = {
     },
   },
 
+  'cognitive-dissonance': {
+    ko: {
+      introTitle: '부조화는 신념이 틀려서가 아니라 신념과 행동이 함께 있어서 생긴다',
+      intro: '레온 페스팅거는 1957년, 서로 맞지 않는 두 인지를 동시에 들고 있을 때 사람은 불편을 느끼고 그 불편을 줄이는 쪽으로 움직인다고 보았다. 핵심은 어느 쪽이 참인지가 아니다. 그 신념이 나에게 중요할수록, 그리고 행동을 설명할 다른 이유가 적을수록 긴장이 커진다.',
+      conceptTitle: '긴장을 키우거나 줄이는 것',
+      concepts: [
+        { title: '중요도', body: '그 신념이 나에게 하찮다면 아무리 어긋나도 긴장이 생기지 않는다. 부조화는 중요한 자리에서만 아프다.' },
+        { title: '다른 이유', body: '행동을 설명할 이유가 충분하면 긴장이 줄어든다. 페스팅거와 칼스미스의 1959년 실험에서 20달러를 받은 쪽이 태도를 덜 바꾼 이유다 — 이미 충분한 이유가 있었다.' },
+        { title: '줄이는 네 갈래', body: '행동을 바꾸거나, 신념을 바꾸거나, 중요도를 낮추거나, 새 이유를 더한다. 넷 다 긴장은 줄지만 남는 결과가 다르다.' },
+      ],
+      faqTitle: '자주 묻는 질문',
+      faqs: [
+        { question: '화면의 숫자는 무엇인가요?', answer: '측정값이 아니라 관계를 보여 주는 예시입니다. 페스팅거가 말한 "부조화 인지의 비율에 중요도를 가중한다"는 형태를 그대로 계산해 슬라이더로 만든 것입니다.' },
+        { question: '태도를 바꾸는 것이 나쁜 건가요?', answer: '반드시 그렇지는 않습니다. 새로 알게 된 것이 있어 신념을 고치는 일은 학습입니다. 문제는 행동을 이미 해 버린 뒤 그 행동에 맞추려고 신념을 고칠 때입니다.' },
+        { question: '왜 합리화를 하게 되나요?', answer: '"새 이유 더하기"가 가장 싸게 긴장을 줄이는 길이기 때문입니다. 행동도 신념도 건드리지 않아도 되니, 사람은 자주 이쪽을 고릅니다.' },
+      ],
+      disclaimer: '이 랩은 개념을 눈으로 보기 위한 도구입니다. 개인을 진단하거나 평가하지 않습니다.',
+    },
+    en: {
+      introTitle: 'Dissonance arises not because a belief is wrong but because belief and action are held together',
+      intro: 'In 1957 Leon Festinger argued that holding two cognitions that do not fit produces discomfort, and that people move to reduce it. The point is not which side is true. Tension grows the more the belief matters to you, and the fewer other reasons there are that explain the action.',
+      conceptTitle: 'What raises or lowers the tension',
+      concepts: [
+        { title: 'Importance', body: 'If the belief is trivial to you, no tension appears however large the gap. Dissonance only hurts where something matters.' },
+        { title: 'Other reasons', body: 'Enough justification lowers the tension. That is why, in Festinger and Carlsmith’s 1959 study, those paid twenty dollars changed their attitude less — they already had reason enough.' },
+        { title: 'Four ways out', body: 'Change the action, change the belief, trivialise the belief, or add a new reason. All four lower tension, but they leave different things behind.' },
+      ],
+      faqTitle: 'Frequently asked questions',
+      faqs: [
+        { question: 'What is the number on screen?', answer: 'Not a measurement but an illustration of a relationship. It computes the form Festinger described — the proportion of dissonant cognitions, weighted by importance — and puts it on sliders.' },
+        { question: 'Is changing your attitude a bad thing?', answer: 'Not necessarily. Revising a belief because you learned something is learning. The problem is revising it after the fact to fit an action you already took.' },
+        { question: 'Why do people rationalise?', answer: 'Because adding a reason is the cheapest way to lower the tension. It requires touching neither the action nor the belief, so people reach for it often.' },
+      ],
+      disclaimer: 'This lab is a tool for seeing a concept. It does not diagnose or evaluate anyone.',
+    },
+    ja: {
+      introTitle: '不協和は信念が誤っているからではなく、信念と行動が同時にあるから生じる',
+      intro: 'レオン・フェスティンガーは1957年、噛み合わない二つの認知を同時に抱えると人は不快を感じ、それを減らす方へ動くとみた。要点はどちらが正しいかではない。その信念が自分にとって重要なほど、そして行動を説明する他の理由が少ないほど緊張は大きくなる。',
+      conceptTitle: '緊張を上げるもの・下げるもの',
+      concepts: [
+        { title: '重要度', body: 'その信念が自分にとって取るに足らないなら、どれだけずれても緊張は生じない。不協和は大事な場所でだけ痛む。' },
+        { title: '他の理由', body: '行動を説明する理由が十分なら緊張は下がる。フェスティンガーとカールスミスの1959年の実験で20ドルを受け取った側が態度を変えなかったのはそのためだ — すでに十分な理由があった。' },
+        { title: '四つの出口', body: '行動を変える、信念を変える、重要度を下げる、新しい理由を足す。四つとも緊張は下がるが、あとに残るものが違う。' },
+      ],
+      faqTitle: 'よくある質問',
+      faqs: [
+        { question: '画面の数値は何ですか？', answer: '測定値ではなく関係を示す例です。フェスティンガーが述べた「不協和認知の比率を重要度で重みづけする」形をそのまま計算し、スライダーにしたものです。' },
+        { question: '態度を変えるのは悪いことですか？', answer: '必ずしもそうではありません。新しく知ったことがあって信念を直すのは学習です。問題は、すでにしてしまった行動に合わせて後から直すときです。' },
+        { question: 'なぜ人は合理化するのですか？', answer: '「理由を足す」が最も安く緊張を下げる道だからです。行動も信念も触らずに済むので、人はよくこちらを選びます。' },
+      ],
+      disclaimer: 'このラボは概念を目で見るための道具です。個人を診断したり評価したりしません。',
+    },
+    zh: {
+      introTitle: '失调不是因为信念错了，而是因为信念与行为同时存在',
+      intro: '1957年，利昂·费斯廷格提出：同时持有两个不相容的认知会带来不适，人会朝着减少这种不适的方向移动。关键不在于哪一边是对的。信念对你越重要、能解释该行为的其他理由越少，张力就越大。',
+      conceptTitle: '什么会抬高或降低张力',
+      concepts: [
+        { title: '重要度', body: '如果这个信念对你无关紧要，落差再大也不会产生张力。失调只在重要的地方才痛。' },
+        { title: '其他理由', body: '足够的理由会降低张力。这正是费斯廷格与卡尔史密斯1959年研究中，拿到二十美元的一组态度改变更少的原因——他们已经有足够的理由。' },
+        { title: '四个出口', body: '改变行为、改变信念、降低重要性，或增加新理由。四者都能降低张力，但留下的东西不同。' },
+      ],
+      faqTitle: '常见问题',
+      faqs: [
+        { question: '屏幕上的数字是什么？', answer: '不是测量值，而是关系的示例。它按费斯廷格描述的形式计算——失调认知所占比例，再以重要度加权——并做成滑块。' },
+        { question: '改变态度是坏事吗？', answer: '不一定。因为学到新东西而修正信念，那是学习。问题在于事后为了配合已经做出的行为而修正它。' },
+        { question: '人为什么会合理化？', answer: '因为"增加理由"是降低张力最便宜的路径。既不用动行为也不用动信念，所以人们经常选它。' },
+      ],
+      disclaimer: '这个实验室是用来把概念看见的工具，不诊断也不评价任何人。',
+    },
+    fr: {
+      introTitle: "La dissonance naît non parce qu'une croyance est fausse mais parce que croyance et acte coexistent",
+      intro: "En 1957, Leon Festinger avança que tenir ensemble deux cognitions qui ne s'accordent pas produit un inconfort, et que l'on agit pour le réduire. L'enjeu n'est pas de savoir qui a raison. La tension croît d'autant plus que la croyance vous importe et que les autres raisons expliquant l'acte sont rares.",
+      conceptTitle: 'Ce qui augmente ou diminue la tension',
+      concepts: [
+        { title: 'Importance', body: "Si la croyance vous est indifférente, aucune tension n'apparaît, quel que soit l'écart. La dissonance ne fait mal que là où quelque chose compte." },
+        { title: 'Autres raisons', body: "Une justification suffisante abaisse la tension. C'est pourquoi, dans l'étude de Festinger et Carlsmith (1959), ceux payés vingt dollars ont moins changé d'attitude : ils avaient déjà une raison suffisante." },
+        { title: 'Quatre sorties', body: "Changer l'acte, changer la croyance, banaliser la croyance, ou ajouter une raison. Les quatre baissent la tension, mais ne laissent pas la même chose derrière." },
+      ],
+      faqTitle: 'Questions fréquentes',
+      faqs: [
+        { question: "Que représente le nombre affiché ?", answer: "Pas une mesure, mais l'illustration d'une relation. Il calcule la forme décrite par Festinger — la proportion de cognitions dissonantes, pondérée par l'importance — et la met sur des curseurs." },
+        { question: "Changer d'attitude est-il mauvais ?", answer: "Pas nécessairement. Réviser une croyance parce qu'on a appris quelque chose, c'est apprendre. Le problème est de la réviser après coup pour l'ajuster à un acte déjà commis." },
+        { question: 'Pourquoi rationalise-t-on ?', answer: "Parce qu'ajouter une raison est la manière la moins coûteuse de baisser la tension : ni l'acte ni la croyance ne bougent. On y recourt donc souvent." },
+      ],
+      disclaimer: "Ce labo sert à voir un concept. Il ne diagnostique ni n'évalue personne.",
+    },
+    es: {
+      introTitle: 'La disonancia surge no porque una creencia sea falsa sino porque creencia y acto conviven',
+      intro: 'En 1957 Leon Festinger sostuvo que sostener a la vez dos cogniciones que no encajan produce incomodidad, y que la persona se mueve para reducirla. La cuestión no es cuál de las dos es cierta. La tensión crece cuanto más importa la creencia y cuantas menos razones existen para explicar el acto.',
+      conceptTitle: 'Qué sube o baja la tensión',
+      concepts: [
+        { title: 'Importancia', body: 'Si la creencia te resulta indiferente, no aparece tensión por grande que sea la distancia. La disonancia solo duele donde algo importa.' },
+        { title: 'Otras razones', body: 'Una justificación suficiente baja la tensión. Por eso, en el estudio de Festinger y Carlsmith (1959), quienes cobraron veinte dólares cambiaron menos de actitud: ya tenían razón suficiente.' },
+        { title: 'Cuatro salidas', body: 'Cambiar el acto, cambiar la creencia, restarle importancia o añadir una razón. Las cuatro bajan la tensión, pero dejan cosas distintas detrás.' },
+      ],
+      faqTitle: 'Preguntas frecuentes',
+      faqs: [
+        { question: '¿Qué es el número en pantalla?', answer: 'No una medición, sino la ilustración de una relación. Calcula la forma que describió Festinger —la proporción de cogniciones disonantes, ponderada por la importancia— y la pone en controles deslizantes.' },
+        { question: '¿Cambiar de actitud es malo?', answer: 'No necesariamente. Revisar una creencia porque aprendiste algo es aprender. El problema es revisarla después para encajar con un acto ya realizado.' },
+        { question: '¿Por qué racionalizamos?', answer: 'Porque añadir una razón es la vía más barata para bajar la tensión: no hay que tocar ni el acto ni la creencia. Por eso se recurre a ella con frecuencia.' },
+      ],
+      disclaimer: 'Este laboratorio sirve para ver un concepto. No diagnostica ni evalúa a nadie.',
+    },
+  },
+
   'procrastination-type': {
     ko: {
       introTitle: '미루기는 게으름이 아니라 감정을 다루는 방식이다',
