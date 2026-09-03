@@ -1,0 +1,36 @@
+---
+/**
+ * 본문 중간에서 oiyo 테스트로 보내는 카드.
+ *
+ * blog 에서 옮겨 오면서 두 가지를 바꿨다(2026-09-03 4단계):
+ *  - 목적지를 oiyo 라우트로 해석한다(test-cta-targets).
+ *  - 색을 green-200/green-50/green-600 하드코딩에서 토큰으로 바꿨다.
+ * 못 찾으면 아무것도 그리지 않는 원본의 안전장치는 그대로 둔다.
+ */
+import { resolveTestHref } from '../../lib/test-cta-targets';
+import type { Locale } from '../../i18n';
+
+interface Props { test?: string; tool?: string; title: string; description?: string; locale?: Locale }
+const { test, tool, title, description, locale = 'ko' } = Astro.props;
+const LABEL: Record<string, string> = {
+  ko: '테스트 해보기 →', en: 'Take the test →', ja: 'テストを受ける →',
+  zh: '去做测试 →', fr: 'Faire le test →', es: 'Hacer el test →',
+};
+const href = await resolveTestHref(test ?? tool, locale);
+---
+{href && (
+  <aside class="not-prose my-8 rounded-2xl border border-primary/25 bg-surface-subtle shadow-sm">
+    <a href={href} class="group flex items-center justify-between gap-4 px-6 py-5">
+      <span class="flex min-w-0 items-center gap-4">
+        <span class="shrink-0 text-3xl" aria-hidden="true">🧠</span>
+        <span class="min-w-0">
+          <span class="block text-base font-bold leading-snug text-foreground">{title}</span>
+          {description && <span class="mt-0.5 block text-sm leading-relaxed text-muted-foreground">{description}</span>}
+        </span>
+      </span>
+      <span class="shrink-0 whitespace-nowrap rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-colors group-hover:bg-primary-strong">
+        {LABEL[locale] ?? LABEL.en}
+      </span>
+    </a>
+  </aside>
+)}

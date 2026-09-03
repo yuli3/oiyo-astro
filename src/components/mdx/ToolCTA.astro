@@ -1,0 +1,38 @@
+---
+/**
+ * blog 의 ToolCTA 는 도구 20종의 이름·설명을 자체 표로 들고 있었다. 옮겨 온
+ * 글에서 실제로 쓰인 값은 전부 심리 테스트 키였으므로(riasec·mbti·disc·
+ * attachment-style 등), oiyo 에서는 TestCTA 와 같은 해석기를 쓰고 표를 버린다.
+ * 이름은 MDX 쪽 호출을 고치지 않으려고 유지한다.
+ */
+import { resolveTestHref } from '../../lib/test-cta-targets';
+import type { Locale } from '../../i18n';
+
+interface Props { tool?: string; test?: string; title?: string; description?: string; locale?: Locale }
+const { tool, test, title, description, locale = 'ko' } = Astro.props;
+const LABEL: Record<string, string> = {
+  ko: '바로 해보기 →', en: 'Open the tool →', ja: '使ってみる →',
+  zh: '立即使用 →', fr: "Ouvrir l'outil →", es: 'Abrir la herramienta →',
+};
+const FALLBACK: Record<string, string> = {
+  ko: '이어서 해볼 수 있는 검사', en: 'A test you can take next', ja: '続けて試せる検査',
+  zh: '可以接着做的测试', fr: 'Un test à faire ensuite', es: 'Un test para hacer después',
+};
+const href = await resolveTestHref(tool ?? test, locale);
+---
+{href && (
+  <aside class="not-prose my-8 rounded-2xl border border-border bg-card shadow-sm">
+    <a href={href} class="group flex items-center justify-between gap-4 px-6 py-5">
+      <span class="flex min-w-0 items-center gap-4">
+        <span class="shrink-0 text-3xl" aria-hidden="true">🧭</span>
+        <span class="min-w-0">
+          <span class="block text-base font-bold leading-snug text-foreground">{title ?? (FALLBACK[locale] ?? FALLBACK.en)}</span>
+          {description && <span class="mt-0.5 block text-sm leading-relaxed text-muted-foreground">{description}</span>}
+        </span>
+      </span>
+      <span class="shrink-0 whitespace-nowrap rounded-lg border border-primary px-4 py-2 text-sm font-semibold text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+        {LABEL[locale] ?? LABEL.en}
+      </span>
+    </a>
+  </aside>
+)}

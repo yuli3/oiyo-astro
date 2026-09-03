@@ -10,11 +10,34 @@ import Callout from '../mdx/Callout.astro';
 import HighlightBox from '../mdx/HighlightBox.astro';
 import Term from '../mdx/Term.astro';
 import ResearchReference from '../mdx/ResearchReference.astro';
+import TestCTA from '../mdx/TestCTA.astro';
+import ToolCTA from '../mdx/ToolCTA.astro';
+import Quiz from '../mdx/Quiz.astro';
+import CompareTable from '../mdx/CompareTable.astro';
+import StatCards from '../mdx/StatCards.astro';
+import RadarChart from '../mdx/RadarChart.astro';
+import BarChart from '../mdx/BarChart.astro';
+import LineChart from '../mdx/LineChart.astro';
+import FormulaBox from '../mdx/FormulaBox.astro';
+import StepFlow from '../mdx/StepFlow.astro';
+import Timeline from '../mdx/Timeline.astro';
+import FaqAccordion from '../mdx/FaqAccordion.astro';
+import SajuPillarCards from '../mdx/SajuPillarCards.astro';
+import LuckTimeline from '../mdx/LuckTimeline.astro';
+import FiveElementsWheel from '../mdx/FiveElementsWheel.astro';
+import { LectureTable, LectureProcess, LectureBarChart, LecturePieChart } from '../mdx/LectureVisuals';
 
 // 원본 570편 중 상당수가 이 넷을 import 없이 쓴다 — blog 는 mdx-component-registry
 // 로 주입했다. 주입하지 않으면 "Expected component HighlightBox to be defined" 로
 // 빌드가 멈춘다. 여기서 같은 역할을 한다.
-const mdxComponents = { Callout, HighlightBox, Term, ResearchReference };
+const mdxComponents = {
+  Callout, HighlightBox, Term, ResearchReference,
+  TestCTA, ToolCTA, Quiz,
+  CompareTable, StatCards, RadarChart, BarChart, LineChart,
+  FormulaBox, StepFlow, Timeline, FaqAccordion,
+  SajuPillarCards, LuckTimeline, FiveElementsWheel,
+  LectureTable, LectureProcess, LectureBarChart, LecturePieChart,
+};
 
 interface Props {
   entry: CollectionEntry<'articles'>;

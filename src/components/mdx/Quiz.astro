@@ -1,0 +1,18 @@
+---
+/** 본문 안 짧은 확인 문제. blog 판은 번역 파일에서 제목을 끌어왔는데, oiyo 로
+ * 옮기면서 제목만 이 파일에 담는다 — 이 컴포넌트 하나 때문에 번역 키를
+ * 늘리지 않는다. */
+import type { Locale } from '../../i18n';
+interface Props { locale?: Locale }
+const { locale = 'ko' } = Astro.props;
+const TITLE: Record<string, string> = {
+  ko: '이해했는지 확인하기', en: 'Knowledge check', ja: '理解度チェック',
+  zh: '知识检查', fr: 'Vérification', es: 'Comprobación',
+};
+---
+<div class="my-6 rounded-xl border border-primary/20 bg-primary/5 p-6">
+  <h3 class="mb-4 flex items-center gap-2 text-lg font-bold text-primary-strong">
+    <span aria-hidden="true">🧠</span> {TITLE[locale] ?? TITLE.en}
+  </h3>
+  <div class="prose-sm max-w-none"><slot /></div>
+</div>
