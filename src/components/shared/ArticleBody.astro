@@ -1,0 +1,56 @@
+---
+// 신비 계열 글 본문. ExplainerArticle 과 같은 산문 규칙을 쓰되, 이쪽은 MDX 라
+// 컴포넌트가 본문 안에서 직접 렌더된다.
+//
+// 스타일이 is:global 인 이유는 ExplainerArticle 과 같다 — <Content /> 가 주입하는
+// HTML 은 Astro 스코프 해시를 받지 않는다. .article-prose 로 범위를 좁힌다.
+import { render, type CollectionEntry } from 'astro:content';
+import type { Locale } from '../../i18n';
+import Callout from '../mdx/Callout.astro';
+import HighlightBox from '../mdx/HighlightBox.astro';
+import Term from '../mdx/Term.astro';
+import ResearchReference from '../mdx/ResearchReference.astro';
+
+// 원본 570편 중 상당수가 이 넷을 import 없이 쓴다 — blog 는 mdx-component-registry
+// 로 주입했다. 주입하지 않으면 "Expected component HighlightBox to be defined" 로
+// 빌드가 멈춘다. 여기서 같은 역할을 한다.
+const mdxComponents = { Callout, HighlightBox, Term, ResearchReference };
+
+interface Props {
+  entry: CollectionEntry<'articles'>;
+  locale: Locale;
+}
+const { entry, locale } = Astro.props;
+const { Content } = await render(entry);
+
+const UPDATED: Record<Locale, string> = {
+  ko: '마지막 검토', en: 'Last reviewed', ja: '最終確認',
+  zh: '最后审阅', fr: 'Dernière révision', es: 'Última revisión',
+};
+const shown = entry.data.updatedDate ?? entry.data.pubDate;
+const stamp = shown.toISOString().slice(0, 10);
+---
+
+<article class="article-prose mx-auto max-w-2xl px-4 py-10">
+  <h1 class="text-2xl font-bold leading-snug text-foreground sm:text-3xl">{entry.data.title}</h1>
+  <p class="mt-3 text-muted-foreground">{entry.data.description}</p>
+  <p class="mt-2 text-sm text-muted-foreground">{UPDATED[locale] ?? UPDATED.en} {stamp}</p>
+  <div class="mt-8">
+    <Content components={mdxComponents} />
+  </div>
+</article>
+
+<style is:global>
+  .article-prose h2 { margin-top: 2rem; margin-bottom: .75rem; font-size: 1.25rem; font-weight: 700; }
+  .article-prose h3 { margin-top: 1.5rem; margin-bottom: .5rem; font-size: 1.05rem; font-weight: 700; }
+  .article-prose p { margin-bottom: 1rem; line-height: 1.75; }
+  .article-prose ul, .article-prose ol { margin: 0 0 1rem 1.25rem; line-height: 1.75; }
+  .article-prose ul { list-style: disc; }
+  .article-prose ol { list-style: decimal; }
+  .article-prose li { margin-bottom: .35rem; }
+  .article-prose a { text-decoration: underline; text-underline-offset: 3px; }
+  .article-prose table { width: 100%; margin: 1.25rem 0; border-collapse: collapse; font-size: .95rem; }
+  .article-prose th, .article-prose td { border: 1px solid var(--border); padding: .5rem .625rem; text-align: left; }
+  .article-prose blockquote { margin: 1.25rem 0; padding-left: 1rem; border-left: 3px solid var(--primary); color: var(--muted-foreground); }
+  .article-prose code { font-size: .9em; }
+</style>

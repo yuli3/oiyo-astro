@@ -3,6 +3,9 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
+import mdx from '@astrojs/mdx';
+import remarkGfm from 'remark-gfm';
+import remarkCjkFriendly from 'remark-cjk-friendly';
 import robotsTxt from 'astro-robots-txt';
 import { fileURLToPath } from 'url';
 import path from 'path';
@@ -26,8 +29,15 @@ const SITEMAP_ENTRY_LIMIT = 100;
 export default defineConfig({
   site: 'https://oiyo.net',
   output: 'static',
+  // 한글·CJK 본문의 **강조**는 기본 파서가 인식하지 못한다 — 별표가 글자 그대로
+  // 남는다. blog 가 같은 이유로 remark-cjk-friendly 를 쓰고 audit:emphasis 로
+  // 지킨다. 표는 gfm 이 필요하다.
+  markdown: {
+    remarkPlugins: [remarkGfm, remarkCjkFriendly],
+  },
   integrations: [
     react(),
+    mdx(),
     sitemap({
       entryLimit: SITEMAP_ENTRY_LIMIT,
       i18n: {

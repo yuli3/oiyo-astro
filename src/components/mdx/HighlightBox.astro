@@ -1,0 +1,37 @@
+---
+interface Props {
+  type?: "abstract" | "insight" | "info" | string;
+  title?: string;
+}
+
+const { type = "info", title } = Astro.props;
+
+// blog 원본은 green-500 / amber-500 을 직접 썼다. oiyo 는 팔레트를 토큰으로
+// 관리하므로 같은 역할의 토큰으로 바꾼다 — 색을 다시 하드코딩하지 않는다.
+const typeStyles = {
+  abstract: "bg-primary/10 border-primary/25 text-foreground",
+  insight: "bg-accent/15 border-accent/30 text-foreground",
+  info: "bg-muted/30 border-border/40 text-foreground",
+};
+
+const currentStyle =
+  typeStyles[type as keyof typeof typeStyles] || typeStyles.info;
+---
+
+<div
+  class:list={[
+    "my-8 p-6 rounded-2xl border backdrop-blur-sm",
+    currentStyle,
+  ]}
+>
+  {
+    title && (
+      <div class="font-bold text-sm tracking-widest uppercase mb-4 opacity-70">
+        {title}
+      </div>
+    )
+  }
+  <div class="prose-sm max-w-none [&>p]:last:mb-0">
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,24 @@
+---
+// blog 에서 넘어온 신비 계열 글. 경로는 blog 시절 그대로 /{locale}/{slug} 다.
+//
+// 이 라우트는 동적이라 같은 이름의 정적 라우트가 있으면 그쪽이 이긴다(Astro 규칙).
+// 이관 전 슬러그 226개와 기존 라우트 196개를 대조해 충돌 0을 확인했다 —
+// 새 글을 넣을 때도 그 확인을 먼저 한다.
+import Layout from '../../layouts/Layout.astro';
+import ArticleBody from '../../components/shared/ArticleBody.astro';
+import { getCollection } from 'astro:content';
+import type { Locale } from '../../i18n';
+
+export async function getStaticPaths() {
+  const entries = await getCollection('articles');
+  return entries.map((entry) => ({
+    params: { locale: entry.data.locale, article: entry.id.split('/').pop()!.replace(/\.mdx$/, '') },
+    props: { entry },
+  }));
+}
+const { locale } = Astro.params as { locale: Locale };
+const { entry } = Astro.props;
+---
+<Layout title={entry.data.title} description={entry.data.description} locale={locale}>
+  <ArticleBody entry={entry} locale={locale} />
+</Layout>
