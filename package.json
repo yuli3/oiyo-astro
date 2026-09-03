@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "npm run build:ontology-platform:public && astro build",
+    "build": "npm run build:ontology-platform:public && NODE_OPTIONS=--max-old-space-size=6144 astro build",
     "preview": "astro preview",
     "astro": "astro",
     "type-check:active": "astro check --tsconfig tsconfig.active.json --minimumSeverity error",
