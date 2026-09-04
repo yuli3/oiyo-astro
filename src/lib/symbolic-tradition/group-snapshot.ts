@@ -4,7 +4,12 @@ import { compareSymbolicProfiles } from "./index";
 import type { CompatibilityLensId, SymbolicComparisonProfile } from "./types";
 
 export const SYMBOLIC_GROUP_SCHEMA_VERSION = 1 as const;
-export const SYMBOLIC_GROUP_MIN_PARTICIPANTS = 3;
+/**
+ * 2026-09-04: 3 → 2. 2인 전용이던 탐색 페이지(profile/symbolic-compatibility)를
+ * 걷어내고 이 원 하나로 2인 이상을 모두 받는다. 쌍 순회는 원래 n≥2 에서
+ * 동작했고, 하한 3 은 UI 분기를 위한 제약이었지 계산의 요구가 아니었다.
+ */
+export const SYMBOLIC_GROUP_MIN_PARTICIPANTS = 2;
 export const SYMBOLIC_GROUP_MAX_PARTICIPANTS = 10;
 
 export interface SymbolicGroupParticipant {
@@ -49,7 +54,9 @@ export function createSymbolicGroupSnapshot(
   options: { centerId?: string; now?: Date; ttlDays?: number } = {},
 ): SymbolicGroupSnapshot {
   if (participants.length < SYMBOLIC_GROUP_MIN_PARTICIPANTS || participants.length > SYMBOLIC_GROUP_MAX_PARTICIPANTS) {
-    throw new RangeError("A group snapshot requires 3 to 10 participants");
+    throw new RangeError(
+      `A group snapshot requires ${SYMBOLIC_GROUP_MIN_PARTICIPANTS} to ${SYMBOLIC_GROUP_MAX_PARTICIPANTS} participants`,
+    );
   }
   const ids = new Set(participants.map(({ id }) => id));
   if (ids.size !== participants.length || participants.some(({ id, label, profile }) => !ID.test(id) || !label.trim() || label.length > 24 || !validProfile(profile))) {

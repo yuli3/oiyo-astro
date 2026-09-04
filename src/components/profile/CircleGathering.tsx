@@ -24,7 +24,7 @@ type Lang = "ko" | "en" | "ja" | "zh" | "fr" | "es";
 const COPY = {
   ko: {
     title: "우리 원",
-    sub: "3명부터 10명까지. 생년월일을 적거나 친구 링크를 넣으면 이 브라우저에서만 원이 그려집니다.",
+    sub: "2명부터 10명까지. 생년월일을 적거나 친구 링크를 넣으면 이 브라우저에서만 원이 그려집니다.",
     me: "나",
     friend: "친구",
     alias: "별칭",
@@ -33,7 +33,7 @@ const COPY = {
     city: "도시 · 모르면 비움",
     add: "원에 넣기",
     link: "또는 친구 공유 링크",
-    need: "원이 그려지려면 3명이 필요합니다. 2명은 친구 궁합에서 보세요.",
+    need: "원이 그려지려면 2명이 필요합니다.",
     star: "나 중심",
     all: "전체 연결",
     share: "이 원 공유",
@@ -44,12 +44,11 @@ const COPY = {
     ask: "오늘 물어볼 것",
     noTotal: "모임 총점·순위 없음",
     disclaimer: "전통 상징을 대화 소재로 보는 놀이입니다. 관계의 성공을 예측하지 않습니다.",
-    two: "둘이서만 →",
     error: "날짜를 확인해 주세요.",
   },
   en: {
     title: "Our circle",
-    sub: "Three to ten people. Add a birth date or a friend link. The circle stays in this browser.",
+    sub: "Two to ten people. Add a birth date or a friend link. The circle stays in this browser.",
     me: "You",
     friend: "Friend",
     alias: "Nickname",
@@ -58,7 +57,7 @@ const COPY = {
     city: "City · leave blank if unknown",
     add: "Add to the circle",
     link: "Or a friend share link",
-    need: "The circle starts at 3 people. For two, use friend match.",
+    need: "The circle needs 2 people to draw.",
     star: "Centered on you",
     all: "All links",
     share: "Share this circle",
@@ -69,7 +68,6 @@ const COPY = {
     ask: "Ask today",
     noTotal: "No group total or ranking",
     disclaimer: "A playful reading of traditional symbols. It does not predict a relationship.",
-    two: "Just two →",
     error: "Check the date.",
   },
 } as const;
@@ -147,7 +145,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
   }, [copy.friend]);
 
   const snapshot = useMemo(
-    () => (people.length >= 3 ? createSymbolicGroupSnapshot(people, { centerId: centerId || people[0]?.id }) : null),
+    () => (people.length >= 2 ? createSymbolicGroupSnapshot(people, { centerId: centerId || people[0]?.id }) : null),
     [centerId, people],
   );
   const edges = snapshot ? (view === "star" ? starEdges(snapshot, lens) : allPairEdges(snapshot, lens)) : [];
@@ -227,7 +225,6 @@ export default function CircleGathering({ locale }: { locale: string }) {
     <header className="text-center">
       <h1 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">{copy.title}</h1>
       <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-600">{copy.sub}</p>
-      <a href={`/${locale}/profile/symbolic-compatibility/`} className="mt-3 inline-block text-sm font-black text-green-800 underline underline-offset-4">{copy.two}</a>
     </header>
 
     {snapshot && <section className="mt-8 rounded-[2rem] border border-lime-200 bg-[#f7f8ed] p-4 sm:p-7">

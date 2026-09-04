@@ -13,7 +13,7 @@ const profile = (seed: number): SymbolicComparisonProfile => ({
 const people = (count: number) => Array.from({ length: count }, (_, index) => ({ id: `p-${index}`, label: `Person ${index}`, profile: profile(index) }));
 
 describe("symbolic group snapshot", () => {
-  it.each([[3, 3], [5, 10], [10, 45]])("creates %i participants with %i pairs", (count, pairs) => {
+  it.each([[2, 1], [3, 3], [5, 10], [10, 45]])("creates %i participants with %i pairs", (count, pairs) => {
     const snapshot = createSymbolicGroupSnapshot(people(count), { now: new Date("2026-08-14T00:00:00Z") });
     expect(snapshot.edges).toHaveLength(pairs * 4);
     expect(starEdges(snapshot, "five-elements")).toHaveLength(count - 1);
@@ -28,8 +28,10 @@ describe("symbolic group snapshot", () => {
     expect(decodeSymbolicGroupSnapshot(encodeSymbolicGroupSnapshot(changed), new Date("2026-08-15T00:00:00Z"))).toBeNull();
   });
 
-  it("rejects groups outside 3 to 10 people and expired snapshots", () => {
-    expect(() => createSymbolicGroupSnapshot(people(2))).toThrow();
+  it("rejects groups outside 2 to 10 people and expired snapshots", () => {
+    // 2026-09-04: 하한이 3 → 2 로 내려갔다. 2인 전용 페이지를 걷어내고 이
+    // 원 하나가 2인 이상을 모두 받는다. 1인은 비교 대상이 없어 여전히 막는다.
+    expect(() => createSymbolicGroupSnapshot(people(1))).toThrow();
     expect(() => createSymbolicGroupSnapshot(people(11))).toThrow();
     const snapshot = createSymbolicGroupSnapshot(people(3), { now: new Date("2026-08-14T00:00:00Z") });
     expect(decodeSymbolicGroupSnapshot(encodeSymbolicGroupSnapshot(snapshot), new Date("2026-08-22T00:00:01Z"))).toBeNull();
