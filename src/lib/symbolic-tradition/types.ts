@@ -2,11 +2,25 @@ import type { EarthlyBranch, FiveElement, HeavenlyStem } from "@/lib/ontology/sa
 
 export const SYMBOLIC_PROFILE_SCHEMA_VERSION = 1 as const;
 
-export type CompatibilityLensId =
-  | "chinese-zodiac"
-  | "five-elements"
-  | "sun-sign"
-  | "yin-yang";
+/**
+ * 궁합 관점(렌즈)의 단일 목록.
+ *
+ * 2026-09-04: 유니온 타입만 있고 목록이 없었다. 그래서 렌즈 개수가 필요한
+ * 곳마다 숫자가 박혔다 — `group-snapshot.test.ts` 의 `pairs * 4` 가 그 예다.
+ * 렌즈를 더할 때 그 숫자를 같이 못 고치면 테스트가 "왜" 깨졌는지 말해주지
+ * 않고, 4를 5로 바꾸면 그냥 통과한다.
+ *
+ * 이제 목록이 진실이고 타입이 거기서 파생된다. 새 렌즈는 여기 한 줄만
+ * 더하면 타입·개수가 따라온다.
+ */
+export const COMPATIBILITY_LENSES = [
+  "five-elements",
+  "yin-yang",
+  "chinese-zodiac",
+  "sun-sign",
+] as const;
+
+export type CompatibilityLensId = (typeof COMPATIBILITY_LENSES)[number];
 
 export interface BirthMoment {
   civilDate: string;

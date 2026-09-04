@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import { EarthlyBranch, FiveElement } from "@/lib/ontology/saju/types";
-import type { SymbolicComparisonProfile } from "./types";
+import { COMPATIBILITY_LENSES, type SymbolicComparisonProfile } from "./types";
 import { allPairEdges, createSymbolicGroupSnapshot, decodeSymbolicGroupSnapshot, encodeSymbolicGroupSnapshot, starEdges } from "./group-snapshot";
 
 const profile = (seed: number): SymbolicComparisonProfile => ({
@@ -15,7 +15,8 @@ const people = (count: number) => Array.from({ length: count }, (_, index) => ({
 describe("symbolic group snapshot", () => {
   it.each([[2, 1], [3, 3], [5, 10], [10, 45]])("creates %i participants with %i pairs", (count, pairs) => {
     const snapshot = createSymbolicGroupSnapshot(people(count), { now: new Date("2026-08-14T00:00:00Z") });
-    expect(snapshot.edges).toHaveLength(pairs * 4);
+    // 렌즈 개수를 숫자로 박지 않는다 — 목록에서 센다(2026-09-04).
+    expect(snapshot.edges).toHaveLength(pairs * COMPATIBILITY_LENSES.length);
     expect(starEdges(snapshot, "five-elements")).toHaveLength(count - 1);
     expect(allPairEdges(snapshot, "five-elements")).toHaveLength(pairs);
     expect(snapshot.edges.every((edge) => !("score" in edge))).toBe(true);

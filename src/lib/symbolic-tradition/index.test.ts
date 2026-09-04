@@ -2,6 +2,7 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 import { compareSymbolicProfiles, deriveSymbolicProfile, HARMONY_INDEX_TABLE } from "./index";
+import { COMPATIBILITY_LENSES } from "./types";
 import type { BirthMoment, SymbolicProfile } from "./types";
 
 interface GoldenCase {
@@ -74,6 +75,15 @@ describe("symbolic tradition module", () => {
     expect(ab.policy.aggregateJudgment).toBe("none");
     expect(ab).not.toHaveProperty("harmonyIndex");
     expect(ab).not.toHaveProperty("total");
+  });
+
+  it("emits every lens in COMPATIBILITY_LENSES, and no others", () => {
+    // 목록에 id 를 더해 놓고 compareSymbolicProfiles 에 lens(...) 를 안 넣는
+    // 실수를 막는다. 타입은 통과하고 화면에서만 관점 하나가 조용히 빠진다.
+    const a = deriveSymbolicProfile(golden.profiles[0].birth as BirthMoment);
+    const b = deriveSymbolicProfile(golden.profiles[1].birth as BirthMoment);
+    const emitted = compareSymbolicProfiles(a, b).lenses.map((lens) => lens.id).sort();
+    expect(emitted).toEqual([...COMPATIBILITY_LENSES].sort());
   });
 
   it("has a harmony index for every relation the lenses can emit", () => {
