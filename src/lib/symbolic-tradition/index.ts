@@ -203,6 +203,24 @@ const HARMONY_INDEX: Record<CompatibilityLensId, Record<string, number>> = {
   "sun-sign": { "same-element": 85, "same-sign": 75, "same-modality": 55, distinct: 50 },
 };
 
+/**
+ * 음양 균형 거리 → 관계.
+ *
+ * 2026-09-04: 임계가 `0 / ≤2 / 그 외` 였는데 **`near-balance` 가 한 번도 나올
+ * 수 없었다.** 60갑자는 양간-양지·음간-음지만 조합하므로 기둥 하나가 양 2 또는
+ * 음 2 를 기여한다. 그래서 개인 델타는 항상 짝수(-6·-2·2·6)이고 쌍 거리는
+ * 0·4·8·12 만 나온다 — 거리 1~2 는 존재하지 않는다.
+ *
+ * 388명·75,078쌍 실측 분포: 0 → 31.2% · 4 → 47.1% · 8 → 18.7% · 12 → 3.1%.
+ * 임계를 그 분포에 맞춰 가운데 칸이 실제로 쓰이게 했다. 최빈 관계 점유율이
+ * 68.8% → 47.1% 로 내려가 오행 다음으로 고른 렌즈가 된다.
+ */
+function yinYangRelation(distance: number): string {
+  if (distance === 0) return "same-balance";
+  if (distance <= 4) return "near-balance";
+  return "contrasting-balance";
+}
+
 function lens(id: SymbolicCompatibilityLens["id"], relation: string): SymbolicCompatibilityLens {
   const harmonyIndex = HARMONY_INDEX[id][relation];
   if (harmonyIndex === undefined) {
@@ -232,7 +250,7 @@ export function compareSymbolicProfiles(
     schemaVersion: 1,
     lenses: [
       lens("five-elements", elementRelation(a.fiveElements.dominant, b.fiveElements.dominant)),
-      lens("yin-yang", yinYangDistance === 0 ? "same-balance" : yinYangDistance <= 2 ? "near-balance" : "contrasting-balance"),
+      lens("yin-yang", yinYangRelation(yinYangDistance)),
       lens("chinese-zodiac", zodiacRelation(a.chineseZodiac.branch, b.chineseZodiac.branch)),
       lens("sun-sign", sunRelation),
     ],
