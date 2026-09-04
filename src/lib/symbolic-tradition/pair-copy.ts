@@ -30,6 +30,11 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
     "chinese-zodiac:distinct": { label: "다른 결", help: "겹치지 않는 시야가 있습니다.", care: "번역이 필요합니다.", ask: "내가 모르는 네 세계는 뭐야?" },
     "chinese-zodiac:same": { label: "같은 띠", help: "같은 해의 기운이라 서로를 설명할 필요가 적습니다.", care: "닮은 만큼 서로의 버릇도 못 봅니다.", ask: "우리가 서로 안 짚어주는 습관은?" },
     "sun-sign:distinct": { label: "다른 별자리 결", help: "계절도 원소도 달라 시야가 겹치지 않습니다.", care: "당연한 걸 설명해야 할 때가 옵니다.", ask: "너한테는 당연한데 나는 모르는 게 뭐야?" },
+    "element-complement:deep-mutual": { label: "깊이 채우는 사이", help: "서로 비어 있던 자리를 여러 칸 메웁니다.", care: "채워주는 데 익숙해지면 스스로 기르기를 미룹니다.", ask: "네가 없으면 내가 못 하게 된 건 뭐야?" },
+    "element-complement:mutual-complement": { label: "서로 채우는 사이", help: "내게 없는 것을 상대가 갖고 있고, 그 반대도 그렇습니다.", care: "역할이 굳으면 바꿔 보기 어려워집니다.", ask: "네가 나에게 채워주는 게 뭘까?" },
+    "element-complement:one-way-complement": { label: "한쪽이 채운다", help: "한 사람이 상대의 빈 자리를 메웁니다.", care: "주는 쪽만 계속 주면 지칩니다.", ask: "요즘 내가 너에게 기대고 있는 건 뭐야?" },
+    "element-complement:shared-gap": { label: "같은 곳이 비었다", help: "없는 자리가 같아 서로를 잘 이해합니다.", care: "둘 다 없는 것은 아무도 채워주지 않습니다.", ask: "우리 둘 다 약한 건 어떻게 메울까?" },
+    "element-complement:no-gap": { label: "둘 다 고르다", help: "각자 빈 자리 없이 갖췄습니다.", care: "채울 일이 없으면 서로를 찾을 이유도 옅어집니다.", ask: "우리가 굳이 함께 하는 이유는 뭘까?" },
 
   },
   en: {
@@ -47,6 +52,11 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
     "chinese-zodiac:distinct": { label: "Different grain", help: "You have views that do not overlap.", care: "It needs translating.", ask: "What part of your world do I not know?" },
     "chinese-zodiac:same": { label: "Same zodiac year", help: "The same year-energy, so you explain yourselves less.", care: "Being alike, you miss each other's habits.", ask: "What habit do we never point out to each other?" },
     "sun-sign:distinct": { label: "Different sign grain", help: "Different season and element, so your views do not overlap.", care: "You will have to explain the obvious.", ask: "What is obvious to you that I do not get?" },
+    "element-complement:deep-mutual": { label: "Filling each other deeply", help: "You cover several of each other's empty places.", care: "Getting used to being filled, you put off growing it yourself.", ask: "What can I no longer do without you?" },
+    "element-complement:mutual-complement": { label: "Filling each other", help: "You hold what the other lacks, and the other way round.", care: "Once the roles set, they are hard to swap.", ask: "What do you fill in for me?" },
+    "element-complement:one-way-complement": { label: "One side fills", help: "One of you covers the other's empty place.", care: "The giver alone tires out.", ask: "What am I leaning on you for lately?" },
+    "element-complement:shared-gap": { label: "The same place is empty", help: "You lack the same thing, so you understand each other.", care: "What neither has, nobody fills.", ask: "How do we cover what we are both short on?" },
+    "element-complement:no-gap": { label: "Both are even", help: "Each of you is complete, with no empty place.", care: "With nothing to fill, the reason to seek each other thins.", ask: "Why do we choose to be together?" },
 
   },
   ja: {
@@ -64,6 +74,11 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
     "chinese-zodiac:distinct": { label: "違う手ざわり", help: "重ならない視野があります。", care: "翻訳が要ります。", ask: "わたしの知らないあなたの世界は？" },
     "chinese-zodiac:same": { label: "同じ干支", help: "同じ年の気なので、説明しなくても通じます。", care: "似ている分、相手の癖が見えません。", ask: "おたがい指摘しない癖は？" },
     "sun-sign:distinct": { label: "違う星座の質", help: "季節も元素も違い、視野が重なりません。", care: "当たり前を説明する場面が来ます。", ask: "あなたには当然で、わたしが知らないことは？" },
+    "element-complement:deep-mutual": { label: "深く満たし合う", help: "たがいの空いた場所をいくつも埋めます。", care: "満たされることに慣れると、自分で育てるのを後回しにします。", ask: "あなたがいないとできなくなったことは？" },
+    "element-complement:mutual-complement": { label: "満たし合う", help: "わたしにないものを相手が持ち、その逆もあります。", care: "役割が固まると入れ替えにくくなります。", ask: "あなたがわたしに補ってくれるものは？" },
+    "element-complement:one-way-complement": { label: "片方が満たす", help: "一方が相手の空いた場所を埋めます。", care: "与える側だけが続くと疲れます。", ask: "最近わたしがあなたに頼っていることは？" },
+    "element-complement:shared-gap": { label: "同じ場所が空いている", help: "欠けているところが同じで、よく分かり合えます。", care: "二人ともないものは、誰も埋めてくれません。", ask: "二人とも弱いところはどう補う？" },
+    "element-complement:no-gap": { label: "どちらも整っている", help: "それぞれ空きなく揃っています。", care: "埋めることがないと、たがいを求める理由も薄れます。", ask: "それでも一緒にいる理由は何だろう？" },
 
   },
   zh: {
@@ -81,6 +96,11 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
     "chinese-zodiac:distinct": { label: "不同的质地", help: "有彼此不重叠的视野。", care: "需要翻译。", ask: "你有哪一块世界是我不知道的？" },
     "chinese-zodiac:same": { label: "同一生肖", help: "同一年的气，彼此不太需要解释。", care: "越像，越看不见对方的习惯。", ask: "我们从不互相点破的习惯是什么？" },
     "sun-sign:distinct": { label: "不同星座的质地", help: "季节和元素都不同，视野不重叠。", care: "会有需要解释理所当然之事的时候。", ask: "对你理所当然、我却不懂的是什么？" },
+    "element-complement:deep-mutual": { label: "深深互补", help: "彼此空缺的地方被填上好几处。", care: "习惯被填满，就会把自己养成的事往后拖。", ask: "没有你我就做不到的事是什么？" },
+    "element-complement:mutual-complement": { label: "互相填补", help: "我没有的你有，反过来也是。", care: "角色一旦固定就难以对调。", ask: "你替我补上的是什么？" },
+    "element-complement:one-way-complement": { label: "一方填补", help: "一个人填上对方空着的地方。", care: "只有给的一方会累。", ask: "最近我在依赖你的是什么？" },
+    "element-complement:shared-gap": { label: "空的地方相同", help: "缺的东西一样，所以彼此很懂。", care: "两个人都没有的，谁也补不上。", ask: "我们都弱的地方要怎么补？" },
+    "element-complement:no-gap": { label: "两边都齐全", help: "各自都没有空缺。", care: "没有可填的，彼此寻找的理由也会变淡。", ask: "那我们在一起的理由是什么？" },
 
   },
   fr: {
@@ -98,6 +118,11 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
     "chinese-zodiac:distinct": { label: "Grain différent", help: "Vous avez des vues qui ne se recouvrent pas.", care: "Il faut traduire.", ask: "Quelle part de ton monde m'échappe ?" },
     "chinese-zodiac:same": { label: "Même signe chinois", help: "La même énergie d'année : vous vous expliquez moins.", care: "À se ressembler, vous ne voyez plus vos manies.", ask: "Quelle habitude ne se signale-t-on jamais ?" },
     "sun-sign:distinct": { label: "Grain de signe différent", help: "Saison et élément différents : vos vues ne se recouvrent pas.", care: "Il faudra expliquer l'évidence.", ask: "Qu'est-ce qui est évident pour toi et m'échappe ?" },
+    "element-complement:deep-mutual": { label: "Se combler en profondeur", help: "Vous comblez plusieurs des vides de l'autre.", care: "À force d'être comblé, on remet à plus tard de le cultiver soi-même.", ask: "Que suis-je devenu incapable de faire sans toi ?" },
+    "element-complement:mutual-complement": { label: "Se compléter", help: "Tu as ce qui me manque, et inversement.", care: "Une fois les rôles pris, ils s'échangent mal.", ask: "Qu'est-ce que tu complètes chez moi ?" },
+    "element-complement:one-way-complement": { label: "L'un comble", help: "L'un de vous comble le vide de l'autre.", care: "Celui qui donne seul s'épuise.", ask: "Sur quoi est-ce que je m'appuie sur toi en ce moment ?" },
+    "element-complement:shared-gap": { label: "Le même vide", help: "Il vous manque la même chose : vous vous comprenez.", care: "Ce qui manque aux deux, personne ne le comble.", ask: "Comment couvrir ce qui nous manque à tous les deux ?" },
+    "element-complement:no-gap": { label: "Complets tous les deux", help: "Chacun est au complet, sans vide.", care: "Sans rien à combler, la raison de se chercher s'amincit.", ask: "Pourquoi choisit-on d'être ensemble ?" },
 
   },
   es: {
@@ -115,6 +140,11 @@ export const PAIR_COPY: Record<Locale, Record<`${CompatibilityLensId}:${string}`
     "chinese-zodiac:distinct": { label: "Otra textura", help: "Tenéis miradas que no se solapan.", care: "Hace falta traducir.", ask: "¿Qué parte de tu mundo no conozco?" },
     "chinese-zodiac:same": { label: "El mismo signo chino", help: "La misma energía de año: os explicáis menos.", care: "De tan parecidos, no veis las manías del otro.", ask: "¿Qué costumbre nunca nos señalamos?" },
     "sun-sign:distinct": { label: "Otra textura de signo", help: "Estación y elemento distintos: vuestras miradas no se solapan.", care: "Habrá que explicar lo evidente.", ask: "¿Qué es obvio para ti y yo no capto?" },
+    "element-complement:deep-mutual": { label: "Se llenan a fondo", help: "Cubrís varios de los huecos del otro.", care: "Acostumbrarse a que te llenen aplaza cultivarlo por tu cuenta.", ask: "¿Qué he dejado de poder hacer sin ti?" },
+    "element-complement:mutual-complement": { label: "Se complementan", help: "Tienes lo que a mí me falta, y al revés.", care: "Cuando los papeles se fijan, cuesta cambiarlos.", ask: "¿Qué me completas tú a mí?" },
+    "element-complement:one-way-complement": { label: "Uno llena", help: "Uno de los dos cubre el hueco del otro.", care: "Quien solo da acaba cansándose.", ask: "¿En qué me estoy apoyando en ti últimamente?" },
+    "element-complement:shared-gap": { label: "El mismo hueco", help: "Os falta lo mismo, así que os entendéis.", care: "Lo que no tiene ninguno, no lo llena nadie.", ask: "¿Cómo cubrimos aquello en lo que ambos flojeamos?" },
+    "element-complement:no-gap": { label: "Los dos completos", help: "Cada uno está completo, sin huecos.", care: "Sin nada que llenar, la razón de buscarse se adelgaza.", ask: "¿Por qué elegimos estar juntos?" },
 
   },
 };

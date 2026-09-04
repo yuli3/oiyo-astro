@@ -54,18 +54,15 @@ describe("symbolic tradition module", () => {
     }
   });
 
-  it("returns four independent, symmetric lenses without an aggregate judgment", () => {
+  it("returns independent, symmetric lenses without an aggregate judgment", () => {
     const a = deriveSymbolicProfile(golden.profiles[0].birth);
     const b = deriveSymbolicProfile(golden.profiles[2].birth);
     const ab = compareSymbolicProfiles(a, b);
     const ba = compareSymbolicProfiles(b, a);
 
-    expect(ab.lenses.map((lens) => lens.id)).toEqual([
-      "five-elements",
-      "yin-yang",
-      "chinese-zodiac",
-      "sun-sign",
-    ]);
+    // 목록에서 파생한다 — 렌즈가 늘 때마다 여기를 고치지 않는다. 순서는
+    // 검증한다(방출 순서가 UI 의 관점 버튼 순서다).
+    expect(ab.lenses.map((lens) => lens.id)).toEqual([...COMPATIBILITY_LENSES]);
     expect(ab.lenses).toEqual(ba.lenses);
     expect(ab).not.toHaveProperty("score");
     expect(ab).not.toHaveProperty("compatibilityJudgment");

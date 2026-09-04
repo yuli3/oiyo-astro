@@ -201,7 +201,39 @@ const HARMONY_INDEX: Record<CompatibilityLensId, Record<string, number>> = {
   "yin-yang": { "same-balance": 75, "near-balance": 70, "contrasting-balance": 60 },
   "chinese-zodiac": { "same-trine": 90, same: 70, distinct: 55, opposite: 35 },
   "sun-sign": { "same-element": 85, "same-sign": 75, "same-modality": 55, distinct: 50 },
+  "element-complement": { "deep-mutual": 88, "mutual-complement": 78, "one-way-complement": 62, "no-gap": 58, "shared-gap": 45 },
 };
+
+/**
+ * 오행 결핍 보완 — "네가 나에게 없는 것을 갖고 있는가".
+ *
+ * 기존 오행 렌즈는 `dominant`(가장 많은 원소)끼리 상생·상극을 본다. 이쪽은
+ * `counts` 가 0인 원소(없는 것)를 본다. 같은 분포에서 나오지만 다른 질문이라
+ * 실측 상관이 -0.020 에 그친다(388명·75,078쌍).
+ *
+ * 관계를 "채웠는가"로만 가르면 55.5% 가 mutual 한 칸에 몰린다. 거의 모두에게
+ * "서로를 채운다"고 말하는 건 성찰이 아니라 아첨이다. **몇 칸을 채우는가**로
+ * 갈라 깊은 보완이 실제로 드물게 만든다.
+ *
+ *   one-way 37.0% · deep-mutual 27.9% · mutual 27.6% · shared-gap 6.4% · no-gap 1.0%
+ */
+const FIVE_ELEMENTS: FiveElement[] = [
+  FiveElement.EARTH, FiveElement.FIRE, FiveElement.METAL, FiveElement.WATER, FiveElement.WOOD,
+];
+
+function elementComplementRelation(
+  a: Record<FiveElement, number>,
+  b: Record<FiveElement, number>,
+): string {
+  const gapsA = FIVE_ELEMENTS.filter((e) => !a[e]);
+  const gapsB = FIVE_ELEMENTS.filter((e) => !b[e]);
+  if (!gapsA.length && !gapsB.length) return "no-gap";
+  const filledA = gapsA.filter((e) => b[e] > 0).length;
+  const filledB = gapsB.filter((e) => a[e] > 0).length;
+  if (filledA === 0 && filledB === 0) return "shared-gap";
+  if (filledA > 0 && filledB > 0) return filledA + filledB >= 3 ? "deep-mutual" : "mutual-complement";
+  return "one-way-complement";
+}
 
 /**
  * 음양 균형 거리 → 관계.
@@ -253,6 +285,7 @@ export function compareSymbolicProfiles(
       lens("yin-yang", yinYangRelation(yinYangDistance)),
       lens("chinese-zodiac", zodiacRelation(a.chineseZodiac.branch, b.chineseZodiac.branch)),
       lens("sun-sign", sunRelation),
+      lens("element-complement", elementComplementRelation(a.fiveElements.counts, b.fiveElements.counts)),
     ],
     policy: {
       aggregateJudgment: "none",

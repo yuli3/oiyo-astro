@@ -23,6 +23,7 @@ export function comparisonFromCivil(input: {
   return {
     chineseZodiac: profile.chineseZodiac,
     fiveElements: {
+      counts: profile.fiveElements.counts,
       dominant: profile.fiveElements.dominant,
       observedCoordinates: profile.fiveElements.observedCoordinates,
     },

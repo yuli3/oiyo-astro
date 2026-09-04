@@ -18,6 +18,7 @@ export const COMPATIBILITY_LENSES = [
   "yin-yang",
   "chinese-zodiac",
   "sun-sign",
+  "element-complement",
 ] as const;
 
 export type CompatibilityLensId = (typeof COMPATIBILITY_LENSES)[number];
@@ -83,7 +84,7 @@ export interface SymbolicProfile {
 
 export interface SymbolicComparisonProfile {
   chineseZodiac: SymbolicProfile["chineseZodiac"];
-  fiveElements: Pick<SymbolicProfile["fiveElements"], "dominant" | "observedCoordinates">;
+  fiveElements: Pick<SymbolicProfile["fiveElements"], "counts" | "dominant" | "observedCoordinates">;
   sunSign: SymbolicProfile["sunSign"];
   yinYang: SymbolicProfile["yinYang"];
 }

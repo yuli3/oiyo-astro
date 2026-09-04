@@ -17,6 +17,7 @@ import { readSymbolicShareFragment } from "@/lib/symbolic-tradition/share-artifa
 import { readEncryptedShortShare } from "@/lib/symbolic-tradition/short-share";
 import CompatibilityOrbit from "@/components/profile/CompatibilityOrbit";
 import { scoreAgainstCenter } from "@/lib/symbolic-tradition/orbit-layout";
+import { gaEvent } from "@/lib/analytics/ga-event";
 import { PAIR_COPY } from "@/lib/symbolic-tradition/pair-copy";
 import type { CompatibilityLensId, SymbolicComparisonProfile } from "@/lib/symbolic-tradition";
 
@@ -172,12 +173,12 @@ const COPY = {
 const FALLBACK = COPY.en;
 
 const LENS: Record<Lang, Record<CompatibilityLensId, string>> = {
-  ko: { "five-elements": "오행", "yin-yang": "음양", "chinese-zodiac": "띠", "sun-sign": "태양궁" },
-  en: { "five-elements": "Five elements", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiac", "sun-sign": "Sun sign" },
-  ja: { "five-elements": "五行", "yin-yang": "陰陽", "chinese-zodiac": "干支", "sun-sign": "太陽星座" },
-  zh: { "five-elements": "五行", "yin-yang": "阴阳", "chinese-zodiac": "生肖", "sun-sign": "太阳星座" },
-  fr: { "five-elements": "Cinq éléments", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiaque", "sun-sign": "Signe" },
-  es: { "five-elements": "Cinco elementos", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiaco", "sun-sign": "Signo" },
+  ko: { "five-elements": "오행", "yin-yang": "음양", "chinese-zodiac": "띠", "sun-sign": "태양궁", "element-complement": "채움" },
+  en: { "five-elements": "Five elements", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiac", "sun-sign": "Sun sign", "element-complement": "Filling in" },
+  ja: { "five-elements": "五行", "yin-yang": "陰陽", "chinese-zodiac": "干支", "sun-sign": "太陽星座", "element-complement": "補い" },
+  zh: { "five-elements": "五行", "yin-yang": "阴阳", "chinese-zodiac": "生肖", "sun-sign": "太阳星座", "element-complement": "互补" },
+  fr: { "five-elements": "Cinq éléments", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiaque", "sun-sign": "Signe", "element-complement": "Complément" },
+  es: { "five-elements": "Cinco elementos", "yin-yang": "Yin–yang", "chinese-zodiac": "Zodiaco", "sun-sign": "Signo", "element-complement": "Complemento" },
 };
 
 
@@ -279,6 +280,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
   };
 
   const share = async () => {
+    gaEvent("circle_share", { people: String(people.length) });
     if (!snapshot) return;
     const url = `${window.location.origin}/${locale}/profile/circle/${symbolicGroupFragment(snapshot)}`;
     if (navigator.share) {
@@ -317,7 +319,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
 
     {snapshot && <section className="mt-8 rounded-[2rem] border border-border bg-[var(--surface-subtle)] p-4 sm:p-7">
       <div className="flex gap-2 overflow-x-auto pb-1">{(Object.keys(LENS[lang]) as CompatibilityLensId[]).map((id) => (
-        <button key={id} type="button" onClick={() => setLens(id)} className={`min-h-11 shrink-0 rounded-full px-4 text-xs font-black ${lens === id ? "bg-primary-strong text-white" : "border border-border bg-card text-foreground"}`}>{LENS[lang][id]}</button>
+        <button key={id} type="button" onClick={() => { setLens(id); gaEvent("circle_lens_select", { lens: id }); }} className={`min-h-11 shrink-0 rounded-full px-4 text-xs font-black ${lens === id ? "bg-primary-strong text-white" : "border border-border bg-card text-foreground"}`}>{LENS[lang][id]}</button>
       ))}</div>
       <div className="mt-3 grid grid-cols-2 gap-2">
         <button type="button" onClick={() => setView("star")} className={`min-h-11 rounded-xl text-xs font-black ${view === "star" ? "bg-accent text-foreground" : "bg-card text-muted-foreground"}`}><Star className="mr-1 inline h-4 w-4" />{copy.star}</button>
@@ -328,7 +330,7 @@ export default function CircleGathering({ locale }: { locale: string }) {
           {edges.map((edge) => {
             const from = at(edge.from);
             const to = at(edge.to);
-            return <line key={`${edge.from}-${edge.to}`} x1={from.x} y1={from.y} x2={to.x} y2={to.y} stroke="var(--primary)" strokeOpacity={0.45 + (edge.harmonyIndex / 100) * 0.55} strokeWidth={0.35 + (edge.harmonyIndex / 100) * 1.15} className="cursor-pointer" onClick={() => setPicked({ from: edge.from, to: edge.to })} />;
+            return <line key={`${edge.from}-${edge.to}`} x1={from.x} y1={from.y} x2={to.x} y2={to.y} stroke="var(--primary)" strokeOpacity={0.45 + (edge.harmonyIndex / 100) * 0.55} strokeWidth={0.35 + (edge.harmonyIndex / 100) * 1.15} className="cursor-pointer" onClick={() => { setPicked({ from: edge.from, to: edge.to }); gaEvent("circle_pair_open", { lens: edge.lens, relation: edge.relation }); }} />;
           })}
           {positions.map((point) => {
             const who = people.find((item) => item.id === point.id)!;

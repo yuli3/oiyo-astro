@@ -6,7 +6,17 @@ import { allPairEdges, createSymbolicGroupSnapshot, decodeSymbolicGroupSnapshot,
 
 const profile = (seed: number): SymbolicComparisonProfile => ({
   chineseZodiac: { branch: ([EarthlyBranch.JA, EarthlyBranch.CHUK, EarthlyBranch.IN, EarthlyBranch.MYO] as const)[seed % 4] },
-  fiveElements: { dominant: ([FiveElement.WOOD, FiveElement.FIRE, FiveElement.EARTH, FiveElement.METAL, FiveElement.WATER] as const)[seed % 5], observedCoordinates: seed % 2 ? 6 : 8 },
+  // 결핍 렌즈가 counts 를 읽는다. seed 로 빈 원소가 갈리게 만들어 관계가
+  // 한 값으로 뭉치지 않게 한다.
+  fiveElements: {
+    counts: {
+      [FiveElement.EARTH]: seed % 2, [FiveElement.FIRE]: (seed + 1) % 3,
+      [FiveElement.METAL]: seed % 3, [FiveElement.WATER]: (seed + 2) % 2,
+      [FiveElement.WOOD]: (seed + 1) % 2,
+    },
+    dominant: ([FiveElement.WOOD, FiveElement.FIRE, FiveElement.EARTH, FiveElement.METAL, FiveElement.WATER] as const)[seed % 5],
+    observedCoordinates: seed % 2 ? 6 : 8,
+  },
   sunSign: { element: (["air", "earth", "fire", "water"] as const)[seed % 4], modality: (["cardinal", "fixed", "mutable"] as const)[seed % 3], sign: (["aries", "taurus", "gemini", "cancer"] as const)[seed % 4] },
   yinYang: { yang: seed % 5, yin: 8 - (seed % 5) },
 });
