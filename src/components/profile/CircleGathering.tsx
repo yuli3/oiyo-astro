@@ -70,6 +70,102 @@ const COPY = {
     disclaimer: "A playful reading of traditional symbols. It does not predict a relationship.",
     error: "Check the date.",
   },
+  ja: {
+    title: "みんなの円",
+    sub: "2人から10人まで。生年月日を入れるか友だちのリンクを貼ると、このブラウザの中だけで円が描かれます。",
+    me: "わたし",
+    friend: "友だち",
+    alias: "ニックネーム",
+    date: "生年月日",
+    time: "時刻 · わからなければ空欄",
+    city: "都市 · わからなければ空欄",
+    add: "円に入れる",
+    link: "または友だちの共有リンク",
+    need: "円を描くには2人が必要です。",
+    star: "わたし中心",
+    all: "すべてのつながり",
+    share: "この円を共有",
+    copied: "円のリンクをコピーしました",
+    pair: "この二人",
+    help: "支え合えるところ",
+    care: "気をつけるところ",
+    ask: "今日たずねてみること",
+    noTotal: "総合点・順位はありません",
+    disclaimer: "伝統的な象徴を話のきっかけとして楽しむものです。関係の成否を予測するものではありません。",
+    error: "日付を確認してください。",
+  },
+  zh: {
+    title: "我们的圆",
+    sub: "两人到十人。填写出生日期或粘贴朋友的链接，圆只会画在这个浏览器里。",
+    me: "我",
+    friend: "朋友",
+    alias: "昵称",
+    date: "出生日期",
+    time: "时间 · 不清楚可留空",
+    city: "城市 · 不清楚可留空",
+    add: "加入圆中",
+    link: "或朋友的分享链接",
+    need: "要画出圆需要两个人。",
+    star: "以我为中心",
+    all: "全部连线",
+    share: "分享这个圆",
+    copied: "已复制圆的链接",
+    pair: "这两位",
+    help: "彼此帮得上的地方",
+    care: "需要留意的地方",
+    ask: "今天可以问问看",
+    noTotal: "没有总分与排名",
+    disclaimer: "这是把传统象征当作聊天话题的玩法，并不预测关系的成败。",
+    error: "请检查日期。",
+  },
+  fr: {
+    title: "Notre cercle",
+    sub: "De deux à dix personnes. Saisissez une date de naissance ou collez le lien d'un ami : le cercle reste dans ce navigateur.",
+    me: "Moi",
+    friend: "Ami",
+    alias: "Surnom",
+    date: "Date de naissance",
+    time: "Heure · laissez vide si inconnue",
+    city: "Ville · laissez vide si inconnue",
+    add: "Ajouter au cercle",
+    link: "Ou le lien partagé d'un ami",
+    need: "Il faut deux personnes pour tracer le cercle.",
+    star: "Centré sur moi",
+    all: "Tous les liens",
+    share: "Partager ce cercle",
+    copied: "Lien du cercle copié",
+    pair: "Ces deux-là",
+    help: "Ce qu'ils s'apportent",
+    care: "À surveiller",
+    ask: "À demander aujourd'hui",
+    noTotal: "Ni total ni classement",
+    disclaimer: "Une lecture ludique de symboles traditionnels. Elle ne prédit pas une relation.",
+    error: "Vérifiez la date.",
+  },
+  es: {
+    title: "Nuestro círculo",
+    sub: "De dos a diez personas. Escribe una fecha de nacimiento o pega el enlace de una amistad: el círculo se queda en este navegador.",
+    me: "Yo",
+    friend: "Amistad",
+    alias: "Apodo",
+    date: "Fecha de nacimiento",
+    time: "Hora · déjalo vacío si no la sabes",
+    city: "Ciudad · déjalo vacío si no la sabes",
+    add: "Añadir al círculo",
+    link: "O el enlace compartido de una amistad",
+    need: "Hacen falta dos personas para dibujar el círculo.",
+    star: "Centrado en mí",
+    all: "Todas las conexiones",
+    share: "Compartir este círculo",
+    copied: "Enlace del círculo copiado",
+    pair: "Estas dos",
+    help: "En qué se apoyan",
+    care: "Qué vigilar",
+    ask: "Qué preguntar hoy",
+    noTotal: "Sin total ni clasificación",
+    disclaimer: "Una lectura lúdica de símbolos tradicionales. No predice una relación.",
+    error: "Revisa la fecha.",
+  },
 } as const;
 
 const FALLBACK = COPY.en;
@@ -104,7 +200,10 @@ function person(label: string, profile: SymbolicComparisonProfile): SymbolicGrou
 
 export default function CircleGathering({ locale }: { locale: string }) {
   const lang = (["ko", "en", "ja", "zh", "fr", "es"].includes(locale) ? locale : "en") as Lang;
-  const copy = lang === "ko" ? COPY.ko : FALLBACK;
+  // 2026-09-04: `lang === "ko" ? COPY.ko : FALLBACK` 이었다. COPY 에 ko·en 만
+  // 있던 시절의 분기라, ja·zh·fr·es 를 채워도 영어가 나갔다. 이제 로케일을
+  // 그대로 찾고, 없는 것만 영어로 떨군다.
+  const copy = COPY[lang] ?? FALLBACK;
   const [people, setPeople] = useState<SymbolicGroupParticipant[]>([]);
   const [centerId, setCenterId] = useState("");
   const [lens, setLens] = useState<CompatibilityLensId>("five-elements");
@@ -219,35 +318,35 @@ export default function CircleGathering({ locale }: { locale: string }) {
     : null;
   const pairCopy = pickedEdge ? PAIR[pickedEdge.relation] ?? PAIR.distinct : null;
 
-  const field = "h-12 w-full rounded-2xl border border-stone-200 bg-stone-50 px-4 text-base font-semibold text-stone-900";
+  const field = "h-12 w-full rounded-2xl border border-border bg-surface-subtle px-4 text-base font-semibold text-foreground";
 
   return <main>
     <header className="text-center">
       <h1 className="text-3xl font-black tracking-tight text-foreground sm:text-4xl">{copy.title}</h1>
-      <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-stone-600">{copy.sub}</p>
+      <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-muted-foreground">{copy.sub}</p>
     </header>
 
-    {snapshot && <section className="mt-8 rounded-[2rem] border border-lime-200 bg-[#f7f8ed] p-4 sm:p-7">
+    {snapshot && <section className="mt-8 rounded-[2rem] border border-border bg-[var(--surface-subtle)] p-4 sm:p-7">
       <div className="flex gap-2 overflow-x-auto pb-1">{(Object.keys(LENS[lang]) as CompatibilityLensId[]).map((id) => (
-        <button key={id} type="button" onClick={() => setLens(id)} className={`min-h-11 shrink-0 rounded-full px-4 text-xs font-black ${lens === id ? "bg-primary-strong text-white" : "border border-lime-200 bg-card text-green-900"}`}>{LENS[lang][id]}</button>
+        <button key={id} type="button" onClick={() => setLens(id)} className={`min-h-11 shrink-0 rounded-full px-4 text-xs font-black ${lens === id ? "bg-primary-strong text-white" : "border border-border bg-card text-foreground"}`}>{LENS[lang][id]}</button>
       ))}</div>
       <div className="mt-3 grid grid-cols-2 gap-2">
-        <button type="button" onClick={() => setView("star")} className={`min-h-11 rounded-xl text-xs font-black ${view === "star" ? "bg-lime-200 text-foreground" : "bg-card text-stone-600"}`}><Star className="mr-1 inline h-4 w-4" />{copy.star}</button>
-        <button type="button" onClick={() => setView("all")} className={`min-h-11 rounded-xl text-xs font-black ${view === "all" ? "bg-lime-200 text-foreground" : "bg-card text-stone-600"}`}><Network className="mr-1 inline h-4 w-4" />{copy.all}</button>
+        <button type="button" onClick={() => setView("star")} className={`min-h-11 rounded-xl text-xs font-black ${view === "star" ? "bg-accent text-foreground" : "bg-card text-muted-foreground"}`}><Star className="mr-1 inline h-4 w-4" />{copy.star}</button>
+        <button type="button" onClick={() => setView("all")} className={`min-h-11 rounded-xl text-xs font-black ${view === "all" ? "bg-accent text-foreground" : "bg-card text-muted-foreground"}`}><Network className="mr-1 inline h-4 w-4" />{copy.all}</button>
       </div>
-      <div className="mt-4 aspect-square max-h-[32rem] w-full overflow-hidden rounded-3xl border border-lime-100 bg-card">
+      <div className="mt-4 aspect-square max-h-[32rem] w-full overflow-hidden rounded-3xl border border-border bg-card">
         <svg viewBox="0 0 100 100" className="h-full w-full">
           {edges.map((edge) => {
             const from = at(edge.from);
             const to = at(edge.to);
-            return <line key={`${edge.from}-${edge.to}`} x1={from.x} y1={from.y} x2={to.x} y2={to.y} stroke="#84a844" strokeOpacity={0.45 + (edge.harmonyIndex / 100) * 0.55} strokeWidth={0.35 + (edge.harmonyIndex / 100) * 1.15} className="cursor-pointer" onClick={() => setPicked({ from: edge.from, to: edge.to })} />;
+            return <line key={`${edge.from}-${edge.to}`} x1={from.x} y1={from.y} x2={to.x} y2={to.y} stroke="var(--primary)" strokeOpacity={0.45 + (edge.harmonyIndex / 100) * 0.55} strokeWidth={0.35 + (edge.harmonyIndex / 100) * 1.15} className="cursor-pointer" onClick={() => setPicked({ from: edge.from, to: edge.to })} />;
           })}
           {positions.map((point) => {
             const who = people.find((item) => item.id === point.id)!;
             const isCenter = point.id === (centerId || people[0]?.id);
             return <g key={point.id} onClick={() => setCenterId(point.id)} className="cursor-pointer">
-              <circle cx={point.x} cy={point.y} r={isCenter ? 7 : 5.5} fill={isCenter ? "#166534" : "#ecfccb"} stroke="#3f6212" strokeWidth="0.6" />
-              <text x={point.x} y={point.y + 0.8} textAnchor="middle" fontSize="3" fontWeight="800" fill={isCenter ? "white" : "#14532d"}>{who.label.slice(0, 8)}</text>
+              <circle cx={point.x} cy={point.y} r={isCenter ? 7 : 5.5} fill={isCenter ? "var(--primary-strong)" : "var(--accent)"} stroke="var(--primary-strong)" strokeWidth="0.6" />
+              <text x={point.x} y={point.y + 0.8} textAnchor="middle" fontSize="3" fontWeight="800" fill={isCenter ? "white" : "var(--foreground)"}>{who.label.slice(0, 8)}</text>
             </g>;
           })}
         </svg>
@@ -263,27 +362,27 @@ export default function CircleGathering({ locale }: { locale: string }) {
         }))}
       />
       {pairCopy && pickedEdge && <article className="mt-4 rounded-3xl bg-card p-4">
-        <p className="text-xs font-black uppercase tracking-wider text-lime-700">{copy.pair} · {pickedEdge.harmonyIndex}</p>
+        <p className="text-xs font-black uppercase tracking-wider text-primary">{copy.pair} · {pickedEdge.harmonyIndex}</p>
         <h2 className="mt-1 text-lg font-black text-foreground">{pairCopy.label}</h2>
         <p className="mt-2 text-sm"><span className="font-black">{copy.help}.</span> {pairCopy.help}</p>
         <p className="mt-1 text-sm"><span className="font-black">{copy.care}.</span> {pairCopy.care}</p>
         <p className="mt-1 text-sm"><span className="font-black">{copy.ask}.</span> {pairCopy.ask}</p>
       </article>}
-      <p className="mt-3 text-center text-[11px] font-bold uppercase tracking-wider text-stone-400">{copy.noTotal}</p>
+      <p className="mt-3 text-center text-[11px] font-bold uppercase tracking-wider text-muted-foreground">{copy.noTotal}</p>
       <button type="button" onClick={() => void share()} className="mt-3 flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-primary-strong text-sm font-black text-white"><Share2 className="h-4 w-4" />{copy.share}</button>
-      {copied && <p className="mt-2 text-center text-xs font-black text-green-800">{copy.copied}</p>}
+      {copied && <p className="mt-2 text-center text-xs font-black text-primary">{copy.copied}</p>}
     </section>}
 
-    {!snapshot && <p className="mt-8 rounded-2xl bg-lime-50 px-4 py-3 text-center text-sm font-bold text-green-900">{copy.need}</p>}
+    {!snapshot && <p className="mt-8 rounded-2xl bg-surface-subtle px-4 py-3 text-center text-sm font-bold text-foreground">{copy.need}</p>}
 
     <ul className="mt-5 space-y-2">{people.map((item) => (
       <li key={item.id} className="flex min-h-12 items-center gap-3 rounded-2xl bg-card px-4">
         <button type="button" onClick={() => setCenterId(item.id)} className="min-w-0 flex-1 truncate text-left text-sm font-black text-foreground">{item.id === centerId ? "◎ " : "○ "}{item.label}</button>
-        <button type="button" aria-label="remove" onClick={() => setPeople((current) => current.filter((row) => row.id !== item.id))} className="h-11 w-11 text-stone-400"><Trash2 className="mx-auto h-4 w-4" /></button>
+        <button type="button" aria-label="remove" onClick={() => setPeople((current) => current.filter((row) => row.id !== item.id))} className="h-11 w-11 text-muted-foreground"><Trash2 className="mx-auto h-4 w-4" /></button>
       </li>
     ))}</ul>
 
-    {people.length < 10 && <div className="mt-5 space-y-3 rounded-3xl border border-lime-200 bg-card p-4">
+    {people.length < 10 && <div className="mt-5 space-y-3 rounded-3xl border border-border bg-card p-4">
       <input aria-label={copy.alias} placeholder={copy.alias} value={alias} maxLength={24} onChange={(event) => setAlias(event.target.value)} className={field} />
       <input aria-label={copy.date} type="date" value={date} onChange={(event) => setDate(event.target.value)} className={field} />
       <input aria-label={copy.time} type="time" value={time} onChange={(event) => setTime(event.target.value)} className={field} />
@@ -293,10 +392,10 @@ export default function CircleGathering({ locale }: { locale: string }) {
       </select>
       <button type="button" onClick={addByDate} className="flex min-h-12 w-full items-center justify-center gap-2 rounded-2xl bg-primary-strong text-sm font-black text-white"><Plus className="h-4 w-4" />{copy.add}</button>
       <input aria-label={copy.link} placeholder={copy.link} value={link} onChange={(event) => setLink(event.target.value)} className={field} />
-      <button type="button" onClick={() => void addByLink()} className="min-h-11 w-full rounded-2xl border border-green-700 text-sm font-black text-green-800">{copy.link}</button>
+      <button type="button" onClick={() => void addByLink()} className="min-h-11 w-full rounded-2xl border border-primary text-sm font-black text-primary">{copy.link}</button>
       {error && <p role="alert" className="text-sm font-bold text-red-700">{error}</p>}
     </div>}
 
-    <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-5 text-stone-500">{copy.disclaimer}</p>
+    <p className="mx-auto mt-6 max-w-2xl text-center text-xs leading-5 text-muted-foreground">{copy.disclaimer}</p>
   </main>;
 }
