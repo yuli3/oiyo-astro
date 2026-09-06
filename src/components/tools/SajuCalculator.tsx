@@ -5,6 +5,7 @@ import { getDayStem, getDayBranch, getHourBranch, getHourStem } from '../../lib/
 // 일·시주는 calculator-civil 그대로다 — KASI 일주 20건과 일치하고, 시주는
 // 두 엔진이 합의했다.
 import { getSolarYearPillar, getSolarMonthPillar } from '../../lib/ontology/saju/calculator-solar';
+import { resolveJeolgiBadge } from '../../lib/ontology/saju/jeolgi-badge';
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { useProfilePrefill } from '../../lib/user/useProfilePrefill';
 import { BirthDateField, ProfileGenderField, ProfileTimeField } from '../shared/BirthDateField';
@@ -225,11 +226,6 @@ const L: Record<Locale, {
     dominantElement: '주요 오행', strengths: '강점', weaknesses: '약점', career: '적합 직업',
     luckyColors: '행운의 색', luckyNumbers: '행운의 숫자', luckyDirections: '행운의 방위',
     disclaimer: '사주는 동양의 전통적인 운명론으로, 과학적 근거가 없습니다. 재미와 자기 이해의 도구로만 활용하세요.',
-    methodNote: 'Desde septiembre de 2026, los pilares de año y mes siguen los términos solares. Antes se usaban el año y el mes del calendario, así que un resultado que guardaste o compartiste puede diferir.',
-    methodNote: 'Depuis septembre 2026, les piliers de l’année et du mois suivent les termes solaires. Les versions précédentes utilisaient l’année et le mois du calendrier : un résultat enregistré ou partagé auparavant peut différer.',
-    methodNote: '自2026年9月起，年柱与月柱按节气计算。此前使用历法上的年份与月份，因此与您先前保存或分享的结果可能不同。',
-    methodNote: '2026年9月より年柱・月柱を節気基準で計算します。以前は暦上の年・月を用いていたため、過去に保存・共有した結果と異なる場合があります。',
-    methodNote: 'Since September 2026, the year and month pillars follow solar terms. Earlier versions used the calendar year and month, so a result you saved or shared before may differ.',
     methodNote: '2026년 9월부터 연주·월주를 절기(節氣) 기준으로 계산합니다. 이전에는 달력상 연도·월을 썼기 때문에 예전에 저장하거나 공유한 결과와 다를 수 있습니다.',
   },
   en: {
@@ -242,6 +238,7 @@ const L: Record<Locale, {
     dominantElement: 'Dominant Element', strengths: 'Strengths', weaknesses: 'Weaknesses', career: 'Suited Careers',
     luckyColors: 'Lucky Colors', luckyNumbers: 'Lucky Numbers', luckyDirections: 'Lucky Directions',
     disclaimer: 'Saju is a traditional East Asian fortune-telling art with no scientific basis. Use it only for fun and self-reflection.',
+    methodNote: 'Since September 2026, the year and month pillars follow solar terms. Earlier versions used the calendar year and month, so a result you saved or shared before may differ.',
   },
   ja: {
     title: '四柱推命計算機', subtitle: '生年月日時から運命を分析',
@@ -253,6 +250,7 @@ const L: Record<Locale, {
     dominantElement: '主な五行', strengths: '長所', weaknesses: '短所', career: '適性',
     luckyColors: '幸運の色', luckyNumbers: '幸運の数字', luckyDirections: '幸運の方角',
     disclaimer: '四柱推命は東洋の伝統的な占術であり、科学的根拠はありません。楽しみと自己理解のツールとしてのみご利用ください。',
+    methodNote: '2026年9月より年柱・月柱を節気基準で計算します。以前は暦上の年・月を用いていたため、過去に保存・共有した結果と異なる場合があります。',
   },
   fr: {
     title: 'Calculateur Saju (사주)', subtitle: "Quatre Piliers du Destin — Analyse de la carte natale",
@@ -264,6 +262,7 @@ const L: Record<Locale, {
     dominantElement: 'Élément dominant', strengths: 'Points forts', weaknesses: 'Points faibles', career: 'Carrières adaptées',
     luckyColors: 'Couleurs porte-bonheur', luckyNumbers: 'Chiffres porte-bonheur', luckyDirections: 'Directions porte-bonheur',
     disclaimer: "Le Saju est un art divinatoire traditionnel est-asiatique sans base scientifique. Utilisez-le uniquement pour le plaisir et la réflexion personnelle.",
+    methodNote: 'Depuis septembre 2026, les piliers de l’année et du mois suivent les termes solaires. Les versions précédentes utilisaient l’année et le mois du calendrier : un résultat enregistré ou partagé auparavant peut différer.',
   },
   es: {
     title: 'Calculadora Saju (사주)', subtitle: 'Cuatro Pilares del Destino — Análisis de carta natal',
@@ -275,6 +274,7 @@ const L: Record<Locale, {
     dominantElement: 'Elemento dominante', strengths: 'Fortalezas', weaknesses: 'Debilidades', career: 'Carreras adecuadas',
     luckyColors: 'Colores de suerte', luckyNumbers: 'Números de suerte', luckyDirections: 'Direcciones de suerte',
     disclaimer: 'El Saju es un arte adivinatorio tradicional de Asia Oriental sin base científica. Úsalo solo para entretenimiento y reflexión.',
+    methodNote: 'Desde septiembre de 2026, los pilares de año y mes siguen los términos solares. Antes se usaban el año y el mes del calendario, así que un resultado que guardaste o compartiste puede diferir.',
   },
   zh: {
     title: '四柱推命计算机', subtitle: '依生年月日时分析四柱八字',
@@ -286,6 +286,7 @@ const L: Record<Locale, {
     dominantElement: '主要五行', strengths: '优点', weaknesses: '缺点', career: '适合职业',
     luckyColors: '幸运颜色', luckyNumbers: '幸运数字', luckyDirections: '幸运方向',
     disclaimer: '四柱推命是东亚传统占术，没有科学依据。请仅用于娱乐和自我认识。',
+    methodNote: '自2026年9月起，年柱与月柱按节气计算。此前使用历法上的年份与月份，因此与您先前保存或分享的结果可能不同。',
   },
   cn: {
     title: '四柱推命计算器', subtitle: '依生年月日时分析四柱八字',
@@ -297,10 +298,51 @@ const L: Record<Locale, {
     dominantElement: '主要五行', strengths: '优点', weaknesses: '缺点', career: '适合职业',
     luckyColors: '幸运颜色', luckyNumbers: '幸运数字', luckyDirections: '幸运方向',
     disclaimer: '四柱推命是东亚传统占术，没有科学依据。请仅用于娱乐和自我认识。',
+    methodNote: '自2026年9月起，年柱与月柱按节气计算。此前使用历法上的年份与月份，因此与您先前保存或分享的结果可能不同。',
   },
 };
 
 const ELEMENT_ORDER = ['Wood', 'Fire', 'Earth', 'Metal', 'Water'] as const;
+
+/** Localized display names for the 24 절기 (keyed by Korean canonical name). */
+const JEOLGI_LABELS: Record<Locale, Record<string, string>> = {
+  ko: {
+    입춘: '입춘', 우수: '우수', 경칩: '경칩', 춘분: '춘분', 청명: '청명', 곡우: '곡우',
+    입하: '입하', 소만: '소만', 망종: '망종', 하지: '하지', 소서: '소서', 대서: '대서',
+    입추: '입추', 처서: '처서', 백로: '백로', 추분: '추분', 한로: '한로', 상강: '상강',
+    입동: '입동', 소설: '소설', 대설: '대설', 동지: '동지', 소한: '소한', 대한: '대한',
+  },
+  en: {
+    입춘: 'Ipchun (Start of Spring)', 우수: 'Usu (Rain Water)', 경칩: 'Gyeongchip (Awakening of Insects)', 춘분: 'Chunbun (Spring Equinox)', 청명: 'Cheongmyeong (Clear and Bright)', 곡우: 'Gogu (Grain Rain)',
+    입하: 'Ipha (Start of Summer)', 소만: 'Soman (Grain Full)', 망종: 'Mangjong (Grain in Ear)', 하지: 'Haji (Summer Solstice)', 소서: 'Soseo (Minor Heat)', 대서: 'Daeseo (Major Heat)',
+    입추: 'Ipchu (Start of Autumn)', 처서: 'Cheoseo (End of Heat)', 백로: 'Baekro (White Dew)', 추분: 'Chubun (Autumn Equinox)', 한로: 'Hanro (Cold Dew)', 상강: 'Sanggang (Frost Descent)',
+    입동: 'Ipdong (Start of Winter)', 소설: 'Soseol (Minor Snow)', 대설: 'Daeseol (Major Snow)', 동지: 'Dongji (Winter Solstice)', 소한: 'Sohan (Minor Cold)', 대한: 'Daehan (Major Cold)',
+  },
+  ja: {
+    입춘: '立春', 우수: '雨水', 경칩: '啓蟄', 춘분: '春分', 청명: '清明', 곡우: '穀雨',
+    입하: '立夏', 소만: '小満', 망종: '芒種', 하지: '夏至', 소서: '小暑', 대서: '大暑',
+    입추: '立秋', 처서: '処暑', 백로: '白露', 추분: '秋分', 한로: '寒露', 상강: '霜降',
+    입동: '立冬', 소설: '小雪', 대설: '大雪', 동지: '冬至', 소한: '小寒', 대한: '大寒',
+  },
+  fr: {
+    입춘: 'Début du printemps', 우수: 'Eau de pluie', 경칩: 'Réveil des insectes', 춘분: 'Équinoxe de printemps', 청명: 'Clarté pure', 곡우: 'Pluie des céréales',
+    입하: 'Début de l’été', 소만: 'Petites pleines', 망종: 'Grains en épi', 하지: 'Solstice d’été', 소서: 'Petite chaleur', 대서: 'Grande chaleur',
+    입추: 'Début de l’automne', 처서: 'Fin de la chaleur', 백로: 'Rosée blanche', 추분: 'Équinoxe d’automne', 한로: 'Rosée froide', 상강: 'Descente du givre',
+    입동: 'Début de l’hiver', 소설: 'Petite neige', 대설: 'Grande neige', 동지: 'Solstice d’hiver', 소한: 'Petit froid', 대한: 'Grand froid',
+  },
+  es: {
+    입춘: 'Inicio de la primavera', 우수: 'Agua de lluvia', 경칩: 'Despertar de insectos', 춘분: 'Equinoccio de primavera', 청명: 'Claridad pura', 곡우: 'Lluvia de grano',
+    입하: 'Inicio del verano', 소만: 'Grano lleno', 망종: 'Grano en espiga', 하지: 'Solsticio de verano', 소서: 'Calor menor', 대서: 'Calor mayor',
+    입추: 'Inicio del otoño', 처서: 'Fin del calor', 백로: 'Rocío blanco', 추분: 'Equinoccio de otoño', 한로: 'Rocío frío', 상강: 'Descenso de la escarcha',
+    입동: 'Inicio del invierno', 소설: 'Nieve menor', 대설: 'Nieve mayor', 동지: 'Solsticio de invierno', 소한: 'Frío menor', 대한: 'Frío mayor',
+  },
+  zh: {
+    입춘: '立春', 우수: '雨水', 경칩: '惊蛰', 춘분: '春分', 청명: '清明', 곡우: '谷雨',
+    입하: '立夏', 소만: '小满', 망종: '芒种', 하지: '夏至', 소서: '小暑', 대서: '大暑',
+    입추: '立秋', 처서: '处暑', 백로: '白露', 추분: '秋分', 한로: '寒露', 상강: '霜降',
+    입동: '立冬', 소설: '小雪', 대설: '大雪', 동지: '冬至', 소한: '小寒', 대한: '大寒',
+  },
+};
 
 const READING_COPY: Record<Locale, {
   readingMap: string;
@@ -323,6 +365,11 @@ const READING_COPY: Record<Locale, {
   quickAnswerTitle: string;
   quickAnswerBody: string;
   monthlyCta: string;
+  jeolgiBadgeLabel: string;
+  jeolgiOnsetLabel: string;
+  jeolgiSourceKasi: string;
+  jeolgiSourceLocal: string;
+  jeolgiUnavailable: string;
 }> = {
   ko: {
     readingMap: '사주 해석 지도',
@@ -330,6 +377,11 @@ const READING_COPY: Record<Locale, {
     quickAnswerTitle: '내 오행 한눈에 보기',
     quickAnswerBody: '당신의 사주에서 가장 강하게 드러나는 오행은 %s입니다.',
     monthlyCta: '이번 달 사주 운세 보기',
+    jeolgiBadgeLabel: '해당·직전 절기',
+    jeolgiOnsetLabel: '절입일',
+    jeolgiSourceKasi: '한국천문연구원 특일 정보',
+    jeolgiSourceLocal: '절기 계산(로컬)',
+    jeolgiUnavailable: '미제공',
     balanceTitle: '오행 균형',
     abundance: '강하게 드러나는 오행',
     scarcity: '보완하면 좋은 오행',
@@ -352,6 +404,11 @@ const READING_COPY: Record<Locale, {
     quickAnswerTitle: 'Your Five Elements at a Glance',
     quickAnswerBody: 'The most strongly expressed element in your saju is %s.',
     monthlyCta: "See this month's saju fortune",
+    jeolgiBadgeLabel: 'Current / preceding solar term',
+    jeolgiOnsetLabel: 'Term onset',
+    jeolgiSourceKasi: 'KASI Special Days (SpcdeInfo)',
+    jeolgiSourceLocal: 'Local solar-term calculation',
+    jeolgiUnavailable: 'Not available',
     balanceTitle: 'Five Element Balance',
     abundance: 'Strongly expressed element',
     scarcity: 'Element to support',
@@ -374,6 +431,11 @@ const READING_COPY: Record<Locale, {
     quickAnswerTitle: '五行をひと目で',
     quickAnswerBody: 'あなたの四柱で最も強く出る五行は%sです。',
     monthlyCta: '今月の四柱運勢を見る',
+    jeolgiBadgeLabel: '該当・直前の節気',
+    jeolgiOnsetLabel: '節入日',
+    jeolgiSourceKasi: '韓国天文研究院 特日情報',
+    jeolgiSourceLocal: '節気のローカル計算',
+    jeolgiUnavailable: '未提供',
     balanceTitle: '五行バランス',
     abundance: '強く出る五行',
     scarcity: '補うとよい五行',
@@ -396,6 +458,11 @@ const READING_COPY: Record<Locale, {
     quickAnswerTitle: 'Vos cinq éléments en un coup d’œil',
     quickAnswerBody: 'Dans votre Saju, l’élément le plus fortement exprimé est %s.',
     monthlyCta: 'Voir la fortune Saju de ce mois',
+    jeolgiBadgeLabel: 'Terme solaire courant / précédent',
+    jeolgiOnsetLabel: 'Date d’entrée',
+    jeolgiSourceKasi: 'Jours spéciaux KASI (SpcdeInfo)',
+    jeolgiSourceLocal: 'Calcul local des termes solaires',
+    jeolgiUnavailable: 'Non fourni',
     balanceTitle: 'Équilibre des cinq éléments',
     abundance: 'Élément fortement exprimé',
     scarcity: 'Élément à soutenir',
@@ -418,6 +485,11 @@ const READING_COPY: Record<Locale, {
     quickAnswerTitle: 'Tus cinco elementos de un vistazo',
     quickAnswerBody: 'En tu Saju, el elemento más expresado es %s.',
     monthlyCta: 'Ver la fortuna Saju de este mes',
+    jeolgiBadgeLabel: 'Término solar actual / previo',
+    jeolgiOnsetLabel: 'Inicio del término',
+    jeolgiSourceKasi: 'Días especiales KASI (SpcdeInfo)',
+    jeolgiSourceLocal: 'Cálculo local de términos solares',
+    jeolgiUnavailable: 'No disponible',
     balanceTitle: 'Equilibrio de los cinco elementos',
     abundance: 'Elemento más expresado',
     scarcity: 'Elemento a reforzar',
@@ -440,6 +512,11 @@ const READING_COPY: Record<Locale, {
     quickAnswerTitle: '一眼看懂我的五行',
     quickAnswerBody: '你的四柱中最强的五行是%s。',
     monthlyCta: '查看本月四柱运势',
+    jeolgiBadgeLabel: '对应／直前节气',
+    jeolgiOnsetLabel: '节气交节日',
+    jeolgiSourceKasi: '韩国天文研究院特日信息',
+    jeolgiSourceLocal: '本地节气计算',
+    jeolgiUnavailable: '未提供',
     balanceTitle: '五行平衡',
     abundance: '较强的五行',
     scarcity: '可补足的五行',
@@ -530,6 +607,7 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
   const [shareCopied, setShareCopied] = useState(false);
   const [imageSharing, setImageSharing] = useState(false);
   const restoredFromPermalink = useRef(false);
+  const resultTopRef = useRef<HTMLDivElement>(null);
 
   // 온톨로지에서 입력한 프로필(생년월일·시·성별)을 재사용 — 재입력 제거.
   const { profile, parsed, saveBirth } = useProfilePrefill();
@@ -649,6 +727,11 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     return { data: analyzeLifeCategories(saju), hourKnown: hKnown };
   }, [year, month, day, hour, minute, gender]);
 
+  const jeolgiBadge = useMemo(
+    () => resolveJeolgiBadge(year, month, day, hour),
+    [year, month, day, hour],
+  );
+
   const daysInMonth = new Date(year, month, 0).getDate();
 
   function handleCalc() {
@@ -658,6 +741,10 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
     saveBirth({ year, month, day: clampedDay, hour, minute, gender });
     setDone(true);
     gaEvent('test_completed', { test_id: 'saju' });
+    // Direct answer must land first in the viewport after calculate.
+    requestAnimationFrame(() => {
+      resultTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
   }
 
   const PillarCard = ({ label, role, stemIdx, branchIdx }: { label: string; role: string; stemIdx: number; branchIdx: number }) => {
@@ -727,6 +814,54 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
       {/* Results */}
       {done && (
         <>
+          {/* Direct answer FIRST — sticky highlight, before orbit / pillars / 용신 */}
+          <div
+            ref={resultTopRef}
+            className="sticky top-0 z-20 -mx-1 rounded-2xl border-2 border-primary/40 bg-gradient-to-br from-primary/[0.12] via-card to-card p-4 shadow-md backdrop-blur-sm supports-[backdrop-filter]:bg-card/95"
+            role="status"
+            aria-live="polite"
+          >
+            <h2 className="text-base font-bold text-gray-900 sm:text-lg">{reading.quickAnswerTitle}</h2>
+            <p className="mt-1 text-sm font-medium leading-relaxed text-gray-800 sm:text-base">
+              {reading.quickAnswerBody.replace('%s', ELEMENTS[result.sortedElements[0]][locale])}
+            </p>
+            {jeolgiBadge && (
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] leading-5 text-gray-600 sm:text-xs">
+                <span className="inline-flex items-center rounded-full border border-emerald-200 bg-emerald-50 px-2.5 py-1 font-semibold text-emerald-900">
+                  {reading.jeolgiBadgeLabel}
+                  {': '}
+                  {jeolgiBadge.status === 'unavailable'
+                    ? reading.jeolgiUnavailable
+                    : (JEOLGI_LABELS[locale]?.[jeolgiBadge.nameKo] ?? jeolgiBadge.nameKo)}
+                </span>
+                {jeolgiBadge.status === 'ok' && jeolgiBadge.onsetDate && (
+                  <span className="text-gray-500">
+                    {reading.jeolgiOnsetLabel} {jeolgiBadge.onsetDate}
+                    {jeolgiBadge.onsetKst ? ` ${jeolgiBadge.onsetKst}` : ''}
+                  </span>
+                )}
+                {jeolgiBadge.status === 'ok' && (
+                  <span className="text-gray-400">
+                    · {jeolgiBadge.source === 'kasi' ? reading.jeolgiSourceKasi : reading.jeolgiSourceLocal}
+                  </span>
+                )}
+              </div>
+            )}
+            <a
+              href={`/${locale}/fortune/monthly/`}
+              className="mt-3 inline-flex items-center justify-center rounded-xl bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground hover:bg-primary-strong"
+            >
+              {reading.monthlyCta}
+            </a>
+          </div>
+
+          <FiveElementsOrbit
+            locale={locale}
+            elementCount={result.elementCount}
+            dominantElement={result.sortedElements[0]}
+            missingElements={result.missingElements}
+          />
+
           {/* Four Pillars */}
           <div>
             <h2 className="text-sm font-bold text-green-700 mb-3">{t.fourPillars}</h2>
@@ -741,26 +876,6 @@ export default function SajuCalculator({ locale = 'ko' }: { locale?: Locale }) {
                 <PillarCard key={p.label} label={p.label} role={roles[p.key] ?? ''} stemIdx={p.stem} branchIdx={p.branch} />
               ))}
             </div>
-          </div>
-
-          {/* Quick answer — 내 오행 한눈에 보기 (answer-first, before deeper reads) */}
-          <div className="bg-card rounded-2xl border border-gray-200 p-4">
-            <h2 className="text-sm font-semibold text-gray-800">{reading.quickAnswerTitle}</h2>
-            <p className="mt-1 text-sm leading-relaxed text-gray-700">
-              {reading.quickAnswerBody.replace('%s', ELEMENTS[result.sortedElements[0]][locale])}
-            </p>
-            <FiveElementsOrbit
-              locale={locale}
-              elementCount={result.elementCount}
-              dominantElement={result.sortedElements[0]}
-              missingElements={result.missingElements}
-            />
-            <a
-              href={`/${locale}/fortune/monthly/`}
-              className="mt-3 inline-flex items-center justify-center rounded-xl bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground hover:bg-primary-strong"
-            >
-              {reading.monthlyCta}
-            </a>
           </div>
 
           {/* 용신/기신 — 이로운/해로운 기운 */}
